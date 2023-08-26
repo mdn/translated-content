@@ -3,7 +3,9 @@ title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
+{{HTTPSidebar}}
+
+Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
 
 Em um corpo `multipart/form-data`, o cabeçalho geral HTTP **`Content-Disposition`** é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, `Content-Disposition` não tem efeito.
 
@@ -95,8 +97,8 @@ value2
 
 ## Especificações
 
-| Especificação        | Título                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
+| Especificação   | Título                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
 | {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
 | {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
@@ -107,7 +109,7 @@ value2
 
 ## Notas de compatibilidade
 
-- Firefox 5 lida com o cabeçalho de resposta HTTP `Content-Disposition` mais efetivamente se ambos parâmetros `filename` e `filename*` são providos; ele olha através de todos os nomes providenciados, usando o parâmetro `filename*` se um estiver disponível, mesmo se o parâmetro `filename` estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja {{bug(588781)}}.
+- Firefox 5 lida com o cabeçalho de resposta HTTP `Content-Disposition` mais efetivamente se ambos parâmetros `filename` e `filename*` são providos; ele olha através de todos os nomes providenciados, usando o parâmetro `filename*` se um estiver disponível, mesmo se o parâmetro `filename` estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja [Erro do Firefox 588781](https://bugzil.la/588781).
 
 ## Veja também
 

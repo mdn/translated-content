@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Keyed_collections
 
 ECMAScript 6에서 값들을 매핑하기 위한 새로운 데이터 구조를 소개 하고 있다. 그중 하나인 Map객체는 간단한 키와 값을 서로 연결(매핑)시켜 저장하며 저장된 순서대로 각 요소들을 반복적으로 접근할 수 있도록 한다.
 
-다음 코드는 Map이 제공하는 기본적인 기능들을 보여 주고 있다. 더 많은 예제와 모든 기능에 대한 API를 볼려면 {{jsxref("Map")}} 페이지를 참고하면 된다. Map객체에 저장되어 있는 각 요소들을 \[키, 값] 형태의 배열로 반복적으로 반환해주는 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 를 사용할 수 있다.
+다음 코드는 Map이 제공하는 기본적인 기능들을 보여 주고 있다. 더 많은 예제와 모든 기능에 대한 API를 볼려면 {{jsxref("Map")}} 페이지를 참고하면 된다. Map객체에 저장되어 있는 각 요소들을 \[키, 값] 형태의 배열로 반복적으로 반환해주는 [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 를 사용할 수 있다.
 
 ```js
 var sayings = new Map();
@@ -99,13 +99,13 @@ for (let item of mySet) console.log(item);
 
 ### 배열과 Set의 상호 변환
 
-{{jsxref("Array.from")}} 혹은 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 통해 Set객체를 가지고 {{jsxref("Array")}}을 생성할 수 있다. 또한 Set 생성자는 배열을 인자로 받을 수 있고 해당 배열을 Set객체의 요소로 저장한다. 한번 더 상기시키면 Set객체는 중복된 값을 저장하지 않기때문에 주어진 배열내의 중복된 요소들을 제거되어 Set으로 변환된다.
+{{jsxref("Array.from")}} 혹은 [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 통해 Set객체를 가지고 {{jsxref("Array")}}을 생성할 수 있다. 또한 Set 생성자는 배열을 인자로 받을 수 있고 해당 배열을 Set객체의 요소로 저장한다. 한번 더 상기시키면 Set객체는 중복된 값을 저장하지 않기때문에 주어진 배열내의 중복된 요소들을 제거되어 Set으로 변환된다.
 
 ```js
 Array.from(mySet);
 [...mySet2];
 
-mySet2 = new Set([1,2,3,4]);
+mySet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### 배열과 Set비교

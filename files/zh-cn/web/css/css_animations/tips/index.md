@@ -18,8 +18,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 首先，让我们定义一个我们想要添加动画的元素{{HTMLElement("div")}} 以及一个“播放”或“重播”动画的按钮。
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -40,14 +39,21 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -72,8 +78,8 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -86,7 +92,7 @@ function play() {
 
 1. box 的 CSS 类列表被重置为 `"box"`。这么做的效果是移除了在这个 box 上的其他类属性，包括处理动画的 `"changing"` 类。换句话说，我们从 box 元素上删除了动画效果。然而，改变类属性列表在样式被重新计算完成或者发生刷新事件之前并不会生效。
 2. 为了确保样式被重新计算我们使用 {{domxref("window.requestAnimationFrame()")}}，同时设置了一个回调。我们的回调在下一次重绘页面之前被调用。问题是由于它在重绘之前被调用，而此时样式还没有被真正重新计算。
-3. 我们的回调聪明地调用了 `requestAnimationFrame()` 方法！这一次，回调在下一次重绘之前被调用，这发成在样式被重新计算之后。回调在 box 元素上添加 `"changing"` 类，使得重绘后重新触发动画。
+3. 我们的回调聪明地调用了 `requestAnimationFrame()` 方法！这一次，回调在下一次重绘之前被调用，这发生在样式被重新计算之后。回调在 box 元素上添加 `"changing"` 类，使得重绘后重新触发动画。
 
 当然，我们同样需要在“播放”按钮上添加事件处理方法使其生效：
 

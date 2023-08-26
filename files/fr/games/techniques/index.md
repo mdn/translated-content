@@ -1,7 +1,6 @@
 ---
 title: Techniques pour le développement de jeux vidéo
 slug: Games/Techniques
-translation_of: Games/Techniques
 ---
 
 {{GamesSidebar}}
@@ -11,7 +10,7 @@ Cette page liste un ensemble de techniques utiles à toute personne qui voudrait
 - [Utiliser des scripts asynchrones pour asm.js](/fr/docs/Games/Techniques/Async_scripts)
   - : Principalement pour la création de jeux de moyenne ou de grande taille, les scripts asynchrones sont une technique essentielle dont il faut tirer avantage, ainsi le JavaScript de votre jeux pourra être compilé hors du thread principal et mis en cache pour la future exécution du jeux, résultant en une amélioration significative des performances pour vos utilisateurs. Cet article vous explique comment.
 - [Optimiser les performances au démarrage](/fr/Apps/Fundamentals/Performance/Optimizing_startup_performance)
-  - : Comment vous assurez que votre jeu se lancera rapidement, en douceur et sans avoir l’air de bloquer le navigateur ou le périphérique de l’utilisateur.
+  - : Comment vous assurez que votre jeu se lancera rapidement, en douceur et sans avoir l'air de bloquer le navigateur ou le périphérique de l'utilisateur.
 - [Utiliser les canaux de données pair-à-pair WebRTC](/fr/docs/Games/Techniques/WebRTC_data_channels)
   - : En plus de prendre en charge les communications audio et vidéo, WebRTC permet de mettre en place des canaux de données pair-à-pair pour échanger activement des données texte ou binaires entre deux joueurs. Cet article explique ce que cela vous apporte et montre comment utiliser les bibliothèques qui rendent cela facile.
 - [Animations efficaces pour les jeux web](/fr/docs/Games/Techniques/Efficient_animation_for_web_games)

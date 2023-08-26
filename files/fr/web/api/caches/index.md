@@ -1,10 +1,6 @@
 ---
 title: caches
 slug: Web/API/caches
-page-type: web-api-global-property
-translation_of: Web/API/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
-browser-compat: api.caches
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
@@ -20,22 +16,22 @@ Un objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage).
 L'exemple suivant montre comment mettre en cache un contexte de [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```

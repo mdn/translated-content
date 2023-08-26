@@ -14,11 +14,23 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 代替スタイルシートはふつう、次のように {{HTMLElement("link")}} 要素に `rel="alternate stylesheet"` およびび `title="..."` 属性を使用することで指定されます。
 
 ```html
-<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="reset.css" rel="stylesheet" type="text/css" />
 
-<link href="default.css" rel="stylesheet" type="text/css" title="既定のスタイル">
-<link href="fancy.css" rel="alternate stylesheet" type="text/css" title="ファンシー">
-<link href="basic.css" rel="alternate stylesheet" type="text/css" title="基本">
+<link
+  href="default.css"
+  rel="stylesheet"
+  type="text/css"
+  title="既定のスタイル" />
+<link
+  href="fancy.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="ファンシー" />
+<link
+  href="basic.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="基本" />
 ```
 
 この例では、*スタイルシート*のサブメニューに「既定のスタイル」「ファンシー」「基本」という項目が追加され、「既定のスタイル」が選択されています。ユーザーがスタイルを選択すると、ページはそのスタイルシートを使って即座に再描画されます。

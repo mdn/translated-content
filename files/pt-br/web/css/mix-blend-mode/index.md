@@ -51,14 +51,16 @@ mix-blend-mode: unset;
 
 ```html
 <svg>
-  <circle cx="40" cy="40" r="40" fill="red"/>
-  <circle cx="80" cy="40" r="40" fill="lightgreen"/>
-  <circle cx="60" cy="80" r="40" fill="blue"/>
+  <circle cx="40" cy="40" r="40" fill="red" />
+  <circle cx="80" cy="40" r="40" fill="lightgreen" />
+  <circle cx="60" cy="80" r="40" fill="blue" />
 </svg>
 ```
 
 ```css
-circle { mix-blend-mode: screen; }
+circle {
+  mix-blend-mode: screen;
+}
 ```
 
 ### Resultado
@@ -67,8 +69,8 @@ circle { mix-blend-mode: screen; }
 
 ## Especificações
 
-| Specification                                                                            | Status                               | Comment                |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| Specification                                                      | Status                     | Comment                |
+| ------------------------------------------------------------------ | -------------------------- | ---------------------- |
 | {{ SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode') }} | {{ Spec2('Compositing') }} | Initial specification. |
 
 ## Compatibilidade de navegadores

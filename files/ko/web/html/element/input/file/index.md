@@ -9,8 +9,6 @@ slug: Web/HTML/Element/input/file
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -30,15 +28,15 @@ slug: Web/HTML/Element/input/file
       <td>
         <p><strong>지원하는 공통 특성</strong></p>
       </td>
-      <td>{{htmlattrxref("required", "input")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>추가 특성</strong></td>
       <td>
-        {{htmlattrxref("accept", "input/file")}},
-        {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("files", "input/file")}},
-        {{htmlattrxref("multiple", "input/file")}}
+        <a href="/ko/docs/Web/HTML/Element/input/file#accept"><code>accept</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input/file#capture"><code>capture</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input/file#files"><code>files</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input/file#multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>
@@ -60,7 +58,7 @@ slug: Web/HTML/Element/input/file
 
 ## 값
 
-파일 입력 칸의 {{htmlattrxref("value", "input")}} 특성은 선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
+파일 입력 칸의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
 
 > **참고:**1. 아직 아무런 파일도 선택하지 않은 경우 빈 문자열(`""`)을 사용합니다. 2. 악의적인 소프트웨어가 사용자의 파일 구조를 알아내는 것을 방지하기 위해, 값 문자열은 항상 [C:\fakepath\를 앞에 포함](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)합니다.
 
@@ -72,7 +70,7 @@ slug: Web/HTML/Element/input/file
 | ----------------------- | ----------------------------------------------------------------------------------------- |
 | [`accept`](#accept)     | 허용하는 파일 유형을 나타내는 하나 이상의 [고유 파일 유형 지정자](#고유_파일_유형_지정자) |
 | [`capture`](#capture)   | 이미지 또는 비디오 데이터를 캡처할 때 사용할 방법                                         |
-| [`files`](#files)       | 선택한 파일을 나열하는 {{domxref("FileList")}}                                   |
+| [`files`](#files)       | 선택한 파일을 나열하는 {{domxref("FileList")}}                                            |
 | [`multiple`](#multiple) | 지정할 경우 사용자가 여러 개의 파일을 선택할 수 있음                                      |
 
 ### {{htmlattrdef("accept")}}
@@ -82,8 +80,10 @@ slug: Web/HTML/Element/input/file
 예를 들어, Microsoft Word 파일을 식별하는 방법은 여러가지이므로, Word 파일을 허용하는 `<input>`은 다음과 같은 형태를 갖게 됩니다.
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 ### {{htmlattrdef("capture")}}
@@ -94,7 +94,7 @@ slug: Web/HTML/Element/input/file
 
 ### {{htmlattrdef("files")}}
 
-선택한 모든 파일을 나열하는 {{domxref("FileList")}} 객체입니다. {{htmlattrxref("multiple", "input/file")}} 특성을 지정하지 않았다면 두 개 이상의 파일을 포함하지 않습니다.
+선택한 모든 파일을 나열하는 {{domxref("FileList")}} 객체입니다. [`multiple`](/ko/docs/Web/HTML/Element/input/file#multiple) 특성을 지정하지 않았다면 두 개 이상의 파일을 포함하지 않습니다.
 
 ### {{htmlattrdef("multiple")}}
 
@@ -127,7 +127,7 @@ slug: Web/HTML/Element/input/file
 `accept` 특성이 고유 파일 유형 지정자를 값으로 받습니다. 쉼표로 구분하면 여러 개의 지정자도 사용할 수 있습니다. 예를 들어, 표준 이미지 형식 뿐만 아니라 PDF 파일도 받을 수 있어야 하는 입력 칸은 다음 코드처럼 작성할 수 있습니다.
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## 파일 입력 칸 사용하기
@@ -136,13 +136,13 @@ slug: Web/HTML/Element/input/file
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Submit</button>
- </div>
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -160,7 +160,7 @@ div {
 
 사용자의 장치와 운영체제에 상관없이, 파일 입력 칸은 사용자가 파일을 선택할 수 있도록 파일 선택 대화창을 여는 하나의 버튼을 제공합니다.
 
-예제 코드와 같이 {{htmlattrxref("multiple", "input/file")}} 특성을 지정한 경우 파일 여러 개를 한 번에 선택할 수 있습니다. 사용자는 플랫폼이 허용하는 방법(<kbd>Shift</kbd>, <kbd>Ctrl</kbd> 누르기 등)을 통해 파일 선택 창에서 두 개 이상의 파일을 선택합니다. `<input>` 하나에 파일 하나씩만 선택을 허용하고 싶은 경우 `multiple` 특성을 제거하세요.
+예제 코드와 같이 [`multiple`](/ko/docs/Web/HTML/Element/input/file#multiple) 특성을 지정한 경우 파일 여러 개를 한 번에 선택할 수 있습니다. 사용자는 플랫폼이 허용하는 방법(<kbd>Shift</kbd>, <kbd>Ctrl</kbd> 누르기 등)을 통해 파일 선택 창에서 두 개 이상의 파일을 선택합니다. `<input>` 하나에 파일 하나씩만 선택을 허용하고 싶은 경우 `multiple` 특성을 제거하세요.
 
 ### 선택한 파일의 정보 가져오기
 
@@ -179,7 +179,7 @@ div {
 - `type`
   - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
-  - : {{htmlattrxref("webkitdirectory", "input/file")}} 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
+  - : [`webkitdirectory`](/ko/docs/Web/HTML/Element/input/file#webkitdirectory) 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
 
 <div class="hidden note"><p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).</p></div>
 
@@ -187,7 +187,7 @@ div {
 
 종종, 사용자가 아무 파일이나 선택하지 못하도록 제한하고, 받을 수 있는 파일의 유형을 정해두고 싶을 때가 있습니다. 예를 들어, 프로필 사진을 받는 입력 칸의 경우, {{glossary("JPEG")}}, {{glossary("PNG")}}처럼 웹 호환 가능한 이미지 형식을 선택하도록 해야 할 것입니다.
 
-허용하는 파일 유형은 {{htmlattrxref("accept","input/file")}} 특성을 사용해 지정할 수 있으며, 허용할 파일 확장자나 MIME 유형을 쉼표로 구분한 값을 제공해야 합니다. 다음은 몇 가지 예시입니다.
+허용하는 파일 유형은 [`accept`](/ko/docs/Web/HTML/Element/input/file#accept) 특성을 사용해 지정할 수 있으며, 허용할 파일 확장자나 MIME 유형을 쉼표로 구분한 값을 제공해야 합니다. 다음은 몇 가지 예시입니다.
 
 - `accept="image/png"` or `accept=".png"` — PNG 파일을 허용합니다.
 - `accept="image/png, image/jpeg"` 또는 `accept=".png, .jpg, .jpeg"` — PNG와 JPEG를 허용합니다.
@@ -200,8 +200,11 @@ div {
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choose file to upload</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Submit</button>
@@ -233,10 +236,10 @@ div {
 
 1. 파일 입력 칸의 값을 스크립트에서 설정할 수는 없습니다. 따라서 다음 코드는 아무런 효과도 내지 않습니다.
 
-    ```js
-    const input = document.querySelector("input[type=file]");
-    input.value = "foo";
-    ```
+   ```js
+   const input = document.querySelector("input[type=file]");
+   input.value = "foo";
+   ```
 
 2. `<input type="file">` 로 선택한 원본 파일의 실제 경로는 명확한 보안상 문제로 인해 알 수 없습니다. 대신 앞에 `C:\fakepath\` 를 붙인 파일 이름을 경로로 보여줍니다. 하필 이런 모습이 된 것에는 역사적인 이유가 있지만 이 동작은 모든 최신 브라우저에서 지원하고 있으며, 사실 [명세에도 포함](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)되어 있습니다.
 
@@ -252,7 +255,12 @@ div {
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
-    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+    <input
+      type="file"
+      id="image_uploads"
+      name="image_uploads"
+      accept=".jpg, .jpeg, .png"
+      multiple />
   </div>
   <div class="preview">
     <p>No files currently selected for upload</p>
@@ -280,7 +288,8 @@ form ol {
   padding-left: 0;
 }
 
-form li, div > p {
+form li,
+div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -299,8 +308,9 @@ form p {
   padding-left: 10px;
 }
 
-form label, form button {
-  background-color: #7F9CCB;
+form label,
+form button {
+  background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px ridge black;
@@ -308,13 +318,15 @@ form label, form button {
   height: auto;
 }
 
-form label:hover, form button:hover {
-  background-color: #2D5BA3;
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
   color: white;
 }
 
-form label:active, form button:active {
-  background-color: #0D3F8F;
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
   color: white;
 }
 ```
@@ -326,8 +338,8 @@ form label:active, form button:active {
 우선 양식의 파일 입력 칸과, `.preview` 클래스를 가진 {{htmlelement("div")}} 요소에 대한 참조를 가져옵니다. 그 후, {{htmlelement("input")}} 요소를 숨겨버립니다. 파일 입력 칸은 보통 못생겼고, 스타일을 적용하기도 어려우며 브라우저마다 디자인이 다르기 때문입니다. `<input>`은 연결된 {{htmlelement("label")}}을 클릭해도 활성화할 수 있으므로, 시각적으로 `<input>`을 숨긴 후 레이블에 버튼처럼 스타일을 적용해서, 파일을 업로드하고 싶은 경우 레이블을 누르라는 것을 알려주는 편이 낫습니다.
 
 ```js
-var input = document.querySelector('input');
-var preview = document.querySelector('.preview');
+var input = document.querySelector("input");
+var preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -337,7 +349,7 @@ input.style.opacity = 0;
 그 다음으로는 입력 칸에 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener)를 부착해 그 값이 달라지는지(예제의 경우, 파일을 선택할 때) 지켜봅니다. 이벤트 수신기는 밑에서 만들 `updateImageDisplay()` 함수를 호출하게 됩니다.
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 `updateImageDisplay()` 함수를 호출하면 다음 작업을 수행하게 됩니다.
@@ -350,31 +362,33 @@ input.addEventListener('change', updateImageDisplay);
 - 올바른 파일이라면,
 
   - `<div>` 안의 목록에 해당 파일의 이름과 크기를 항목으로 추가합니다. 이름은 `file.name`과 `file.size`로 가져옵니다. 또 다른 함수인 `returnFileSize()`는 파일 크기를 보기 좋게 바이트/KB/MB로 서식해 출력합니다. (브라우저는 바이트 크기로만 알려줍니다)
-  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 {{htmlattrxref("src", "img")}}에 지정한 후, 이미지도 목록의 항목에 추가합니다.
+  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 [`src`](/ko/docs/Web/HTML/Element/img#src)에 지정한 후, 이미지도 목록의 항목에 추가합니다.
 
 - 파일 유형이 유효하지 않은 경우 사용자에게 다른 파일을 선택해야 한다고 알려주는 메시지를 표시합니다.
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   const curFiles = input.files;
-  if(curFiles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+  if (curFiles.length === 0) {
+    const para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    const list = document.createElement('ol');
+    const list = document.createElement("ol");
     preview.appendChild(list);
 
-    for(const file of curFiles) {
-      const listItem = document.createElement('li');
-      const para = document.createElement('p');
-      if(validFileType(file)) {
-        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
-        const image = document.createElement('img');
+    for (const file of curFiles) {
+      const listItem = document.createElement("li");
+      const para = document.createElement("p");
+      if (validFileType(file)) {
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(
+          file.size,
+        )}.`;
+        const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 
         listItem.appendChild(image);
@@ -393,7 +407,7 @@ function updateImageDisplay() {
 `validFileType()` 함수는 매개변수로 {{domxref("File")}} 객체를 받아서, 그 파일의 `type`이 `fileTypes`의 아무 값과 동일한지 판별합니다. {{jsxref("Array.prototype.includes()")}}를 사용하여 type과 일치하는 값이 존재하면 `true`, 아니면 `false`를 반환합니다.
 
 ```js
-// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/ko/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",
@@ -404,7 +418,7 @@ const fileTypes = [
   "image/svg+xml",
   "image/tiff",
   "image/webp",
-  "image/x-icon"
+  "image/x-icon",
 ];
 
 function validFileType(file) {
@@ -416,12 +430,12 @@ function validFileType(file) {
 
 ```js
 function returnFileSize(number) {
-  if(number < 1024) {
-    return number + 'bytes';
-  } else if(number >= 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + 'KB';
-  } else if(number >= 1048576) {
-    return (number/1048576).toFixed(1) + 'MB';
+  if (number < 1024) {
+    return number + "bytes";
+  } else if (number >= 1024 && number < 1048576) {
+    return (number / 1024).toFixed(1) + "KB";
+  } else if (number >= 1048576) {
+    return (number / 1048576).toFixed(1) + "MB";
   }
 }
 ```

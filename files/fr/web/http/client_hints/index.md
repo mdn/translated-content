@@ -1,14 +1,6 @@
 ---
 title: Indications du client (client hints)
 slug: Web/HTTP/Client_hints
-tags:
-  - Client hints
-  - Glossary
-  - Performance
-  - Reference
-  - Web Performance
-translation_of: Glossary/Client_hints
-original_slug: Glossary/Client_hints
 ---
 
 Les **indications du client** (_client hints_ en anglais) sont un ensemble d'[en-têtes de requêtes HTTP](/fr/docs/Web/HTTP/Headers) qu'un serveur peut demander de façon proactive à un client afin de connaître les caractéristiques spécifiques à l'appareil du client et aux préférences utilisées dans l'agent utilisateur. L'ensemble des en-têtes pour ces « indications » sont listées dans [En-têtes HTTP > Indications du client](/fr/docs/Web/HTTP/Headers#client_hints).
@@ -25,9 +17,8 @@ Le serveur peut alors utiliser ces informations du client pour déterminer les r
 
 > **Note :** Les indications du client peuvent aussi être formulées en HTML à l'aide de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#attr-http-equiv) :
 >
->
 > ```html
-> <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink">
+> <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink" />
 > ```
 
 ## Client Hints Infrastructures variables

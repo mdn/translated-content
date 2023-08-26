@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.upper
 slug: Web/API/IDBKeyRange/upper
-page-type: web-api-instance-propert
 l10n:
   sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---
@@ -29,22 +28,22 @@ function displayData() {
   const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upper);
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('全エントリーを表示しました。');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("全エントリーを表示しました。");
+    }
   };
+}
 ```
 
 ## 仕様書

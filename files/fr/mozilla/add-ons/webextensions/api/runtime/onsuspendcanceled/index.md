@@ -1,7 +1,6 @@
 ---
 title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'applica
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspendCanceled.addListener(listener)
-browser.runtime.onSuspendCanceled.removeListener(listener)
-browser.runtime.onSuspendCanceled.hasListener(listener)
+browser.runtime.onSuspendCanceled.addListener(listener);
+browser.runtime.onSuspendCanceled.removeListener(listener);
+browser.runtime.onSuspendCanceled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

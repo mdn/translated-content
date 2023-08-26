@@ -1,19 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-original_slug: >-
-  Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/resolvedOptions
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 ---
 
 {{JSRef}}
@@ -25,7 +12,7 @@ La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un
 ## Syntaxe
 
 ```js
-relativeTimeFormat.resolvedOptions()
+relativeTimeFormat.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -59,12 +46,12 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 ## Exemples
 
 ```js
-var de = new Intl.RelativeTimeFormat('de-DE');
+var de = new Intl.RelativeTimeFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;          // "de-DE"
-usedOptions.style;           // "long"
-usedOptions.numeric;         // "always"
+usedOptions.locale; // "de-DE"
+usedOptions.style; // "long"
+usedOptions.numeric; // "always"
 usedOptions.numberingSystem; // "latn"
 ```
 

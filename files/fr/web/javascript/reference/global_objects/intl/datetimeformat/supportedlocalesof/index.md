@@ -1,16 +1,6 @@
 ---
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/supportedLocalesOf
 ---
 
 {{JSRef}}
@@ -52,8 +42,10 @@ Si on dispose d'un environnement qui supporte les locales indonésienne et allem
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "));
+var options = { localeMatcher: "lookup" };
+console.log(
+  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
 // → "id-u-co-pinyin, de-ID"
 ```
 

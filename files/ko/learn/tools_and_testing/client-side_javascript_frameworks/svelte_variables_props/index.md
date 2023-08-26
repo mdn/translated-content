@@ -1,8 +1,6 @@
 ---
 title: "Svelte의 동적인 동작: 변수와 props 작용"
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
-
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
 l10n:
   sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
 ---
@@ -83,7 +81,7 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/c
      let todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+       { id: 3, name: "Complete the rest of the tutorial", completed: false },
      ];
      let totalTodos = todos.length;
      let completedTodos = todos.filter((todo) => todo.completed).length;
@@ -95,7 +93,9 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/c
 2. 상태 메시지를 표시하는 것으로 시작하겠습니다. `id`가 `list-heading`인 `<h2>` 제목을 찾아 하드코딩된 활성 및 완료된 작업 수를 동적 표현식으로 바꿉니다.
 
    ```html
-   <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
+   <h2 id="list-heading">
+     {completedTodos} out of {totalTodos} items completed
+   </h2>
    ```
 
 3. 앱으로 이동하면 이전과 같이 "3개 항목 중 2개 완료됨" 메시지를 볼 수 있지만, 이번에는 `todos` 배열에서 정보가 제공된 것입니다.
@@ -113,13 +113,12 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 
    ```html
    <ul>
-   {#each todos as todo, index (todo.id)}
+     {#each todos as todo, index (todo.id)}
      <li>
-       <input type="checkbox" checked={todo.completed}/> {index}. {todo.name} (id: {todo.id})
+       <input type="checkbox" checked="{todo.completed}" /> {index}. {todo.name}
+       (id: {todo.id})
      </li>
-   {:else}
-     Nothing to do here!
-   {/each}
+     {:else} Nothing to do here! {/each}
    </ul>
    ```
 
@@ -139,7 +138,7 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
            <input
              type="checkbox"
              id="todo-{todo.id}"
-             checked={todo.completed} />
+             checked="{todo.completed}" />
            <label for="todo-{todo.id}" class="todo-label"> {todo.name} </label>
          </div>
          <div class="btn-group">
@@ -169,7 +168,7 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 1. `Todos.svelte`에서 기존 `let todos = …` 블록을 `export let todos = []`로 대체합니다.
 
    ```js
-   export let todos = []
+   export let todos = [];
    ```
 
    처음에는 조금 이상하게 느껴질 수 있습니다. 그것은 JavaScript 모듈에서 `export`가 일반적으로 작동하는 방식이 아닙니다! 이것은 Svelte가 유효한 구문을 사용하고 새로운 목적을 부여하여 JavaScript를 '확장'하는 방법입니다. 이 경우 Svelte는 'export' 키워드를 사용하여 변수 선언을 속성 또는 prop으로 표시합니다. 이는 컴포넌트 사용자가 접근 할 수 있음을 의미합니다.
@@ -181,14 +180,14 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 2. 앱을 보면 "여기서 할 일이 없습니다!"라는 메시지가 표시됩니다. 메시지. 이는 현재 `App.svelte`에서 어떤 값도 전달하지 않아 기본값을 사용하고 있기 때문입니다.
 3. 이제 해야 할 일을 `App.svelte`로 이동하고 `Todos.svelte` 컴포넌트에 prop으로 전달합니다. 다음과 같이 `src/App.svelte`를 업데이트합니다.
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
 
      let todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+       { id: 3, name: "Complete the rest of the tutorial", completed: false },
      ];
    </script>
 
@@ -197,7 +196,7 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 
 4. 속성과 변수의 이름이 같은 경우, Svelte를 사용하면 변수를 편리한 바로 가기로 지정할 수 있으므로 마지막 줄을 이와 같이 다시 작성할 수 있습니다. 바로 시도해 보세요.
 
-   ```html
+   ```svelte
    <Todos {todos} />
    ```
 
@@ -209,7 +208,7 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 
 1. 다음과 같이 `src/components/Todos.svelte` 내부의 `<input type="checkbox">` 요소를 업데이트합니다.
 
-   ```html
+   ```svelte
    <input type="checkbox" id="todo-{todo.id}"
      on:click={() => todo.completed = !todo.completed}
      checked={todo.completed}
@@ -220,13 +219,13 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 
    ```js
    function removeTodo(todo) {
-     todos = todos.filter((t) => t.id !== todo.id)
+     todos = todos.filter((t) => t.id !== todo.id);
    }
    ```
 
 3. _Delete_ 버튼을 통해 호출하겠습니다. 다음과 같이 `click` 이벤트로 업데이트하세요.
 
-   ```html
+   ```svelte
    <button type="button" class="btn btn__danger"
      on:click={() => removeTodo(todo)}
    >
@@ -249,8 +248,8 @@ HTML에는 조건문 및 루프와 같은 논리를 표현하는 방법이 없�
 그러나 `totalTodos` 및 `completedTodos`의 경우에는 그렇지 않습니다. 다음 코드에서는 컴포넌트가 인스턴스화되고 스크립트가 실행될 때 값이 할당되지만 그 후에는 해당 값이 수정되지 않습니다.
 
 ```js
-let totalTodos = todos.length
-let completedTodos = todos.filter((todo) => todo.completed).length
+let totalTodos = todos.length;
+let completedTodos = todos.filter((todo) => todo.completed).length;
 ```
 
 할 일을 토글링하고 제거한 후에 다시 계산할 수 있지만 더 쉬운 방법이 있습니다.
@@ -262,8 +261,8 @@ Svelte에게 `totalTodos` 및 `completedTodos` 변수에 `$:` 접두사를 붙�
 `src/components/Todos.svelte` 내부의 `totalTodos` 및 `completedTodos` 변수 정의를 다음과 같이 업데이트하세요.
 
 ```js
-$: totalTodos = todos.length
-$: completedTodos = todos.filter((todo) => todo.completed).length
+$: totalTodos = todos.length;
+$: completedTodos = todos.filter((todo) => todo.completed).length;
 ```
 
 이제 앱을 확인하면 할 일이 완료되거나 삭제될 때 제목의 숫자가 업데이트되는 것을 볼 수 있습니다. 멋지네요!
@@ -277,12 +276,12 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 1. 먼저 새 할 일의 텍스트를 저장할 변수를 만듭니다. `Todos.svelte` 파일의 `<script>` 섹션에 다음 선언을 추가합니다.
 
    ```js
-   let newTodoName = ''
+   let newTodoName = "";
    ```
 
 2. 이제 `<input>`에서 이 값을 사용하여 새 작업을 추가합니다. 그렇게 하려면 `newTodoName` 변수를 `todo-0` 입력에 바인딩해야 `newTodoName` 변수 값이 입력의 `value` 속성과 동기화 상태를 유지합니다. 다음과 같이 할 수 있습니다.
 
-   ```html
+   ```svelte
    <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
    ```
 
@@ -290,13 +289,13 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    이는 입력에 대한 양방향 데이터 바인딩을 수동으로 구현한 것입니다. 하지만 이렇게 할 필요는 없습니다 왜냐하면 Svelte는 [`bind:property`](https://svelte.dev/docs#bind_element_property) 지시문을 사용하여 모든 속성을 변수에 바인딩하는 더 쉬운 방법을 제공합니다.
 
-   ```html
+   ```svelte
    <input bind:value={newTodoName} />
    ```
 
    자, 이것을 구현해 봅시다. 다음과 같이 `todo-0` 입력을 변경하세요.
 
-   ```html
+   ```svelte
    <input
      bind:value={newTodoName}
      type="text"
@@ -308,7 +307,7 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 3. 이것이 동작하는지 테스트하는 쉬운 방법은 `newTodoName`의 내용을 기록하는 반응형 구문을 추가하는 것입니다. `<script>` 섹션 끝에 이 스니펫을 추가합니다.
 
    ```js
-   $: console.log('newTodoName: ', newTodoName)
+   $: console.log("newTodoName: ", newTodoName);
    ```
 
    > **참고:** 아시다시피 반응형 구문은 변수 선언으로 제한되지 않습니다. `$:` 기호 뒤에 _any_ JavaScript 문을 넣을 수 있습니다.
@@ -318,8 +317,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    ```js
    function addTodo() {
-     todos.push({ id: 999, name: newTodoName, completed: false })
-     newTodoName = ''
+     todos.push({ id: 999, name: newTodoName, completed: false });
+     newTodoName = "";
    }
    ```
 
@@ -327,7 +326,7 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
 6. 이제 폼이 제출(submit)될 때마다 `addTodo()`를 호출하도록 HTML을 업데이트하려고 합니다. NewTodo 폼의 여는 태그를 다음과 같이 업데이트하세요.
 
-   ```html
+   ```svelte
    <form on:submit|preventDefault={addTodo}>
    ```
 
@@ -343,8 +342,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    ```js
    function addTodo() {
-     todos = [...todos, { id: 999, name: newTodoName, completed: false }]
-     newTodoName = ''
+     todos = [...todos, { id: 999, name: newTodoName, completed: false }];
+     newTodoName = "";
    }
    ```
 
@@ -355,14 +354,14 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 1. 할 일의 수에 1을 더한 값으로 계산된 `newTodoId` 변수를 선언하고 반응형으로 만들어 봅시다. `<script>` 섹션에 다음 스니펫을 추가합니다.
 
    ```js
-   let newTodoId
-     $: {
-       if (totalTodos === 0) {
-         newTodoId = 1;
-       } else {
-         newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
-       }
+   let newTodoId;
+   $: {
+     if (totalTodos === 0) {
+       newTodoId = 1;
+     } else {
+       newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
      }
+   }
    ```
 
    > **참고:** 보시다시피 반응형 구문은 한 줄로 제한되지 않습니다. 다음 구문은 정상 작동하지만 가독성이 약간 떨어집니다. `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
@@ -373,8 +372,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    ```js
    function addTodo() {
-     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }]
-     newTodoName = ''
+     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }];
+     newTodoName = "";
    }
    ```
 
@@ -385,11 +384,13 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 1. `<script>` 섹션 하단에 다음을 추가합니다.
 
    ```js
-   let filter = 'all'
+   let filter = "all";
    const filterTodos = (filter, todos) =>
-     filter === 'active' ? todos.filter((t) => !t.completed) :
-     filter === 'completed' ? todos.filter((t) => t.completed) :
-     todos
+     filter === "active"
+       ? todos.filter((t) => !t.completed)
+       : filter === "completed"
+       ? todos.filter((t) => t.completed)
+       : todos;
    ```
 
    활성 필터(_all_, _active_ 또는 _completed_)를 제어하기 위해 `filter` 변수를 사용합니다. 이 값 중 하나를 필터 변수에 할당하기만 하면 필터가 활성화되고 할 일 목록이 업데이트됩니다. 이를 달성하는 방법을 살펴보겠습니다.
@@ -398,7 +399,7 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
 2. 필터 버튼 마크업을 변경하여 동적으로 만들고 사용자가 필터 버튼 중 하나를 누를 때 필터 상태를 변경하겠습니다. 다음과 같이 변경하세요.
 
-   ```html
+   ```svelte
    <div class="filters btn-group stack-exception">
      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
        <span class="visually-hidden">Show</span>
@@ -430,7 +431,7 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
 3. 이제 `{#each}` 루프에서 도우미 함수를 사용해야 합니다. 다음과 같이 업데이트하세요.
 
-   ```html
+   ```svelte
    …
      <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each filterTodos(filter, todos) as todo (todo.id)}

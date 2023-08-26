@@ -1,7 +1,6 @@
 ---
 title: カスタム要素の使用
 slug: Web/API/Web_components/Using_custom_elements
-original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -21,7 +20,7 @@ original_slug: Web/Web_Components/Using_custom_elements
 例えば、カスタムの [word-count 要素](https://mdn.github.io/web-components-examples/word-count-web-component/)を定義するには次のようにします。
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 `word-count` 要素は `WordCount` クラスのオブジェクトで、 {{htmlelement("p")}} 要素を拡張します。
@@ -79,42 +78,47 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // シャドウルートを生成
-this.attachShadow({mode: 'open'}); // 'this.shadowRoot' を設定して返す
+this.attachShadow({ mode: "open" }); // 'this.shadowRoot' を設定して返す
 
 // (内部の) span 要素を生成
-const wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-const icon = wrapper.appendChild(document.createElement('span'));
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
+const wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+const icon = wrapper.appendChild(document.createElement("span"));
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
 // アイコンを、定義された属性または既定のアイコンから挿入
-const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+const img = icon.appendChild(document.createElement("img"));
+img.src = this.hasAttribute("img")
+  ? this.getAttribute("img")
+  : "img/default.png";
 
-const info = wrapper.appendChild(document.createElement('span'));
-info.setAttribute('class','info');
+const info = wrapper.appendChild(document.createElement("span"));
+info.setAttribute("class", "info");
 // 属性の中身を取得し、 info の span の中に入れる
-info.textContent = this.getAttribute('data-text');
+info.textContent = this.getAttribute("data-text");
 
 // CSS を作成しシャドウ DOM に割り当てる
-const style = document.createElement('style');
-style.textContent = '.wrapper {' +
-// 簡略化のために CSS は省略
+const style = document.createElement("style");
+style.textContent =
+  ".wrapper {" +
+  // 簡略化のために CSS は省略
 
-// 生成された要素をシャドウ DOM に添付する
-this.shadowRoot.append(style,wrapper);
+  // 生成された要素をシャドウ DOM に添付する
+  this.shadowRoot.append(style, wrapper);
 ```
 
 最後に、カスタム要素を `CustomElementRegistry` に登録します。前述の `define()` を使用して、引数で要素名とその機能を定義するクラス名を指定します。
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 これによって要素がページで使えるようになりました。 HTML 中で下記のように使用することができます。
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -129,9 +133,9 @@ customElements.define('popup-info', PopUpInfo);
 
 ```js
 // 外部スタイルシートをシャドウ DOM に適用
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 生成された要素をシャドウ DOM に添付
 shadow.appendChild(linkElem);
@@ -145,7 +149,7 @@ shadow.appendChild(linkElem);
 
 ここで、もう 1 つの組み込み要素の例を見てみましょう。 [expanding-list](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) ([ライブでも確認してください](https://mdn.github.io/web-components-examples/expanding-list-web-component/)) です。 これにより番号なしリストが展開・縮小するメニューになります。
 
- まず始めに、これまでと同様の方法でクラス要素を定義します。
+まず始めに、これまでと同様の方法でクラス要素を定義します。
 
 ```js
 class ExpandingList extends HTMLUListElement {
@@ -162,19 +166,17 @@ class ExpandingList extends HTMLUListElement {
 
 ここでは要素の詳細な機能については説明しませんが、ソースコードからどのように動作するのか確認することができます。これまでと唯一違う点は、 {{domxref("HTMLUListElement")}} インターフェースを継承しており、 {{domxref("HTMLElement")}} ではないことです。そのため、独立した要素ではなく、 {{htmlelement("ul")}} 要素の特徴を備えた上に、定義した機能を持ちます。これこそが、自律カスタム要素ではなくカスタマイズされた組み込み要素である理由です。
 
- 次に、以前と同様に `define()` を用いて要素を登録しますが、今回はこのカスタム要素がどの要素から継承したのかという情報をオプションとして渡しています。
+次に、以前と同様に `define()` を用いて要素を登録しますが、今回はこのカスタム要素がどの要素から継承したのかという情報をオプションとして渡しています。
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 ウェブ文書内で組み込み要素を使用する場合とはやや異なります。
 
 ```html
 <ul is="expanding-list">
-
   ...
-
 </ul>
 ```
 
@@ -203,10 +205,10 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 クラスのコンストラクターは非常に単純です。ここでは、要素にシャドウ DOM を割り当て、空の {{htmlelement("div")}} および {{htmlelement("style")}} 要素をシャドウルートに追加します。
 
 ```js
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
-const div = document.createElement('div');
-const style = document.createElement('style');
+const div = document.createElement("div");
+const style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -216,11 +218,11 @@ shadow.appendChild(div);
 ```js
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
+  shadow.querySelector("style").textContent = `
     div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
   `;
 }

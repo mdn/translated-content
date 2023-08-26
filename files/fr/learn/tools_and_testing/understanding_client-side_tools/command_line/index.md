@@ -1,16 +1,6 @@
 ---
 title: Cours express sur la ligne de commande
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - CLI
-  - Côté client
-  - Débutant
-  - Outils
-  - Terminal
-  - ligne de commande
-  - npm
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -203,7 +193,7 @@ ls -l
 
 Avec `ls`, l'option `-l` (_tiret l, "dash ell_" en anglais) vous donne une liste avec un fichier ou répertoire par ligne et pas mal d'autres informations. Les répertoires ("directories") sont repérés pas la lettre "d" au tout début de la ligne. Nous pouvons y entrer avec la commande `cd`.
 
-Voici ci-dessous une copie d'écran avec un terminal macOS “vanilla” en haut, et en bas un terminal personnalisé avec quelques icônes supplémentaires et des couleurs pour le rendre plus vivant — les deux affichent le résultat de la commande `ls -l` :
+Voici ci-dessous une copie d'écran avec un terminal macOS "vanilla" en haut, et en bas un terminal personnalisé avec quelques icônes supplémentaires et des couleurs pour le rendre plus vivant — les deux affichent le résultat de la commande `ls -l` :
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
@@ -281,7 +271,7 @@ En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'
 Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 
 ```bash
-curl https://developer.mozilla.org/fr/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 Nous devons dire explicitement à `curl` de suivre les redirections en utilisant l'option `-L`.
@@ -297,10 +287,10 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
 Votre sortie devrait ressembler à ceci (`curl` va d'abord afficher des compteurs et autres informations de téléchargement) :
 
 ```bash
-location: /fr/docs/Web/API/fetch
-location: /fr/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /fr/docs/Web/API/GlobalFetch/fetch
-location: /fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+location: /en-US/docs/Web/API/fetch
+location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
+location: /en-US/docs/Web/API/GlobalFetch/fetch
+location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
 Bien que ce résultat soit artificiel, nous pourrions le pousser un peu plus loin et remplacer `location:` par le nom de domaine, de façon à avoir des URLs complètes. Pour cela, nous allons ajouter `awk` à notre formule (il s'agit d'un langage de programmation tout comme JavaScript, Ruby ou Python, mais beaucoup plus ancien !).
@@ -308,7 +298,7 @@ Bien que ce résultat soit artificiel, nous pourrions le pousser un peu plus loi
 Essayez de lancer cette commande :
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+curl https://developer.mozilla.org/fr/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
 ```
 
 Votre sortie finale devrait ressembler à ceci :
@@ -405,9 +395,13 @@ Ensuite collez le code suivant dans un fichier que vous enregistrez dans ce rép
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 Nous pouvons exécuter prettier sur un code source simplement pour vérifier s'il nécessite une correction. Passez dans votre répertoire avec `cd` et essayez de lancer cette commande :

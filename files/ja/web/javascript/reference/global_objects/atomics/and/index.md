@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ## 構文
 
 ```js
-Atomics.and(typedArray, index, value)
+Atomics.and(typedArray, index, value);
 ```
 
 ### 引数
@@ -63,7 +63,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // 古い値である 5 を返す
-Atomics.load(ta, 0);  // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## 仕様書

@@ -47,19 +47,23 @@ min-height: inherit
 ## Exemplos
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Especificações
 
-| Especificação                                                                                | Status                                   | Comentário                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'min-height') }} | {{ Spec2('CSS3 Sizing') }}     | Adds the `max-content`, `min-content`, `fit-content`, and `fill-available` keywords. _Both CSS3 Box and CSS3 Writing Modes drafts defined at some point these keywords. These drafts are superseded by this spec._                                                                                                                                                                                         |
-| {{ SpecName('CSS3 Flexbox', '#min-auto', 'min-height') }}                 | {{ Spec2('CSS3 Flexbox') }}     | An [earlier revision of the spec](https://www.w3.org/TR/2012/CR-css3-flexbox-20120918/) added the `auto` keyword and used it as the initial value. The CSSWG subsequently resolved to revert this change, however. As of March 29, 2013, the latest [Editor's Draft](http://dev.w3.org/csswg/css-flexbox/) doesn't modify the `min-width` property anymore (i.e. it no longer introduces the `auto` value). |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'min-height') }}     | {{ Spec2('CSS3 Transitions') }} | Defines `min-height` as animatable.                                                                                                                                                                                                                                                                                                                                                                        |
-| {{ SpecName('CSS2.1', 'visudet.html#min-max-heights', 'min-height') }} | {{ Spec2('CSS2.1') }}             | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                        |
+| Especificação                                                          | Status                          | Comentário                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'min-height') }}  | {{ Spec2('CSS3 Sizing') }}      | Adds the `max-content`, `min-content`, `fit-content`, and `fill-available` keywords. _Both CSS3 Box and CSS3 Writing Modes drafts defined at some point these keywords. These drafts are superseded by this spec._                                                                                                                                                                                          |
+| {{ SpecName('CSS3 Flexbox', '#min-auto', 'min-height') }}              | {{ Spec2('CSS3 Flexbox') }}     | An [earlier revision of the spec](https://www.w3.org/TR/2012/CR-css3-flexbox-20120918/) added the `auto` keyword and used it as the initial value. The CSSWG subsequently resolved to revert this change, however. As of March 29, 2013, the latest [Editor's Draft](http://dev.w3.org/csswg/css-flexbox/) doesn't modify the `min-width` property anymore (i.e. it no longer introduces the `auto` value). |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'min-height') }}    | {{ Spec2('CSS3 Transitions') }} | Defines `min-height` as animatable.                                                                                                                                                                                                                                                                                                                                                                         |
+| {{ SpecName('CSS2.1', 'visudet.html#min-max-heights', 'min-height') }} | {{ Spec2('CSS2.1') }}           | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ## Navegadores compatíveis
 

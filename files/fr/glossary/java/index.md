@@ -1,7 +1,6 @@
 ---
 title: Java
 slug: Glossary/Java
-translation_of: Glossary/Java
 ---
 
 Java est un langage de {{Glossary("OOP","programmation orientée objet")}} basé sur des {{Glossary("Class","classes")}}, de {{Glossary("Computer Programming","programmation informatique")}} conçu pour être indépendant de l'implémentation.
@@ -10,4 +9,4 @@ Java est un langage de {{Glossary("OOP","programmation orientée objet")}} basé
 
 ### Culture générale
 
-- [Java](https://fr.wikipedia.org/wiki/Java_(langage)) sur Wikipédia
+- [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>) sur Wikipédia

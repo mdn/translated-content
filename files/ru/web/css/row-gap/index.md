@@ -1,46 +1,40 @@
 ---
-title: row-gap (grid-row-gap)
+title: row-gap
 slug: Web/CSS/row-gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - row-gap
-browser-compat: css.properties.row-gap
 ---
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`row-gap`** устанавливает промежуток ({{glossary("gutters","интервал")}}) между рядами.
+Свойство [CSS](/ru/docs/Web/CSS) **`row-gap`** задаёт отступ ({{glossary("gutters","gutter")}}) между рядами.
 
 {{EmbedInteractiveExample("pages/css/row-gap.html")}}
 
 ## Синтаксис
 
 ```css
-/* Значения типа <length> */
+/* <length> values */
 row-gap: 20px;
 row-gap: 1em;
 row-gap: 3vmin;
 row-gap: 0.5cm;
 
-/* Значения типа <percentage> */
+/* <percentage> value */
 row-gap: 10%;
 
-/* Глобальные значения */
+/* Global values */
 row-gap: inherit;
 row-gap: initial;
 row-gap: revert;
+row-gap: revert-layer;
 row-gap: unset;
 ```
+
+Обратите внимание, что `grid-row-gap` является псевдонимом для этого свойства.
 
 ### Значения
 
 - `<length-percentage>`
-  - : Ширина интервала, разделяющего ряды. {{CSSxRef("&lt;percentage&gt;", "Процентные")}} значения рассчитываются относительно размера грид-элемента.
+  - : Ширина отступа, разделяющего ряды. {{CSSxRef("&lt;percentage&gt;", "Процентные")}} значения рассчитываются относительно размера грид-элемента.
 
 ## Формальное определение
 
@@ -125,7 +119,7 @@ row-gap: unset;
 
 ## Спецификации
 
-{{Specifications("css.properties.row-gap.grid_context")}}
+{{Specifications}}
 
 ## Поддержка браузерами
 
@@ -134,4 +128,4 @@ row-gap: unset;
 ## Смотрите также
 
 - Похожие CSS-свойства: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Интервалы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

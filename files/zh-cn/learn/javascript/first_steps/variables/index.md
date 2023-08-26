@@ -1,28 +1,28 @@
 ---
-title: 如何存储你需要的信息 — 变量
+title: 如何存储你需要的信息——变量
 slug: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
-在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术（HTML，CSS）协同工作的，以及它有哪些主要特性。在本章节，我们将开始学习 JavaScript 的基础，了解如何使用 -- 变量。
+在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术协同工作的，以及从上层来看，它有哪些主要特性。在本文中，我们将深入了解真正的基础知识，学习如何使用 JavaScript 最基础的构建单元——变量。
 
 <table class="learn-box">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>电脑基础知识，了解基本的 HTML 和 CSS，了解 JavaScript 是什么。</td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>熟悉 JavaScript 的变量使用</td>
+      <td>熟悉 JavaScript 变量的基础知识。</td>
     </tr>
   </tbody>
 </table>
 
 ## 需要的工具
 
-在本章中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 终端，(参考 [什么是浏览器开发工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 查看如何使用这些工具)。
+在本文中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 控制台（参考[什么是浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)以查看如何使用这些工具）。
 
 当然，我们也提供了一个简单的 JavaScript 终端，嵌入在下文的页面中，以便你更容易的输入和测试这些代码。
 
@@ -35,12 +35,12 @@ slug: Learn/JavaScript/First_steps/Variables
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
-}
+button.onclick = function () {
+  let name = prompt("What is your name?");
+  alert("Hello " + name + ", nice to see you!");
+};
 ```
 
 {{ EmbedLiveSample('变量是什么？', '100%', 50) }}
@@ -67,9 +67,9 @@ if (name === 'Adam') {
 // ... and so on ...
 ```
 
-你可能暂时还没有完全理解这些代码和语法，但是你应该能够理解到 -- 如果我们没有变量，我们就不得不写大量的代码去枚举和检查输入的名字，然后去显示它们。这样做显然是低效率和不可行的 -- 你没有办法列举出所有可能的输入。
+你可能暂时还没有完全理解这些代码和语法，但是你应该能够理解到——如果我们没有变量，我们就不得不写大量的代码去枚举和检查输入的名字，然后去显示它们。这样做显然是低效率和不可行的——你没有办法列举出所有可能的输入。
 
-变量的另一个特性就是它们能够存储任何的东西 -- 不只是字符串和数字。变量可以存储更复杂的数据，甚至是函数。你将在后续的内容中体验到这些用法。
+变量的另一个特性就是它们能够存储任何的东西——不只是字符串和数字。变量可以存储更复杂的数据，甚至是函数。你将在后续的内容中体验到这些用法。
 
 我们说，变量是用来存储数值的，那么有一个重要的概念需要区分。变量不是数值本身，它们仅仅是一个用于存储数值的容器。你可以把变量想象成一个个用来装东西的纸箱子。
 
@@ -77,7 +77,7 @@ if (name === 'Adam') {
 
 ## 声明变量
 
-要想使用变量，你需要做的第一步就是创建它 -- 更准确的说，是声明一个变量。声明一个变量的语法是在 `var` 或 `let` 关键字之后加上这个变量的名字：
+要想使用变量，你需要做的第一步就是创建它——更准确的说，是声明一个变量。声明一个变量的语法是在 `var` 或 `let` 关键字之后加上这个变量的名字：
 
 ```js
 let myName;
@@ -87,10 +87,10 @@ let myAge;
 在这里我们声明了两个变量 `myName` 和 `myAge`. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端 (你也可以在另一个独立的标签页或窗口 [open this consol](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ). 此外，你也可以多声明几个变量。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -98,7 +98,7 @@ let myAge;
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -132,60 +132,55 @@ let myAge;
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     let geval = eval;
     function createInput() {
-      let inputDiv = document.createElement('div');
-      let inputPara = document.createElement('p');
-      let inputForm = document.createElement('input');
+      let inputDiv = document.createElement("div");
+      let inputPara = document.createElement("p");
+      let inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         let result = geval(e.target.value);
-      } catch(e) {
-        let result = 'error — ' + e.message;
+      } catch (e) {
+        let result = "error — " + e.message;
       }
 
-      let outputDiv = document.createElement('div');
-      let outputPara = document.createElement('p');
+      let outputDiv = document.createElement("div");
+      let outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -214,7 +209,7 @@ scoobyDoo;
 一旦你定义了一个变量，你就能够初始化它。方法如下，在变量名之后跟上一个“=”，然后是数值：
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -228,7 +223,7 @@ myAge;
 你可以像这样在声明变量的时候给变量初始化：
 
 ```js
-let myName = 'Chris';
+let myName = "Chris";
 ```
 
 这可能是大多数时间你都会使用的方式，因为它要比在单独的两行上做两次操作要快。
@@ -246,7 +241,7 @@ let myName = 'Chris';
 首先，如果你编写一个声明并初始化变量的多行 JavaScript 程序，你可以在初始化一个变量之后用 `var` 声明它，它仍然可以工作。例如：
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
 function logName() {
   console.log(myName);
@@ -266,22 +261,22 @@ var myName;
 其次，当你使用 `var` 时，可以根据需要多次声明相同名称的变量，但是 `let` 不能。以下将有效：
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 但是以下内容会在第二行引发错误：
 
 ```js example-bad
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 你必须这样做：
 
 ```js
-let myName = 'Chris';
-myName = 'Bob';
+let myName = "Chris";
+myName = "Bob";
 ```
 
 同样，这是一个明智的语言决定。没有理由重新声明变量——这只会让事情变得更加混乱。
@@ -295,7 +290,7 @@ myName = 'Bob';
 一旦变量赋值，您可以通过简单地给它一个不同的值来更新它。试试在你的控制台中输入下面几行：
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -360,7 +355,7 @@ let myAge = 17;
 字符串是文本的一部分。当你给一个变量赋值为字符串时，你需要用单引号或者双引号把值给包起来，否则 JavaScript 将会把这个字符串值理解成别的变量名。
 
 ```js
-let dolphinGoodbye = 'So long and thanks for all the fish';
+let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### Boolean
@@ -384,8 +379,8 @@ let test = 6 < 3;
 数组是一个单个对象，其中包含很多值，方括号括起来，并用逗号分隔。尝试在您的控制台输入以下行：
 
 ```js
-let myNameArray = ['Chris', 'Bob', 'Jim'];
-let myNumberArray = [10,15,40];
+let myNameArray = ["Chris", "Bob", "Jim"];
+let myNumberArray = [10, 15, 40];
 ```
 
 当数组被定义后，您可以使用如下所示的语法来访问各自的值，例如下行：
@@ -406,13 +401,13 @@ myNumberArray[2]; // should return 40
 尝试在您的控制台输入以下行：
 
 ```js
-let dog = { name : 'Spot', breed : 'Dalmatian' };
+let dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 要检索存储在对象中的信息，可以使用以下语法：
 
 ```js
-dog.name
+dog.name;
 ```
 
 我们现在不会看对象了 - 您可以在将来的模块中了解更多关于这些对象的信息。
@@ -424,16 +419,16 @@ JavaScript 是一种“动态类型语言”，这意味着不同于其他一些
 例如，如果你声明一个变量并给它一个带引号的值，浏览器就会知道它是一个字符串：
 
 ```js
-let myString = 'Hello';
+let myString = "Hello";
 ```
 
 即使它包含数字，但它仍然是一个字符串，所以要小心：
 
 ```js
-let myNumber = '500'; // oops, this is still a string
+let myNumber = "500"; // oops, this is still a string
 typeof myNumber;
 myNumber = 500; // much better — now this is a number
-typeof myNumber
+typeof myNumber;
 ```
 
 尝试依次将上述代码输入您的控制台，看看结果是什么（无须输入//之后的注释）。我们使用了一个名为`typeof`的特殊的操作符 ——它会返回所传递给它的变量的数据类型。第一次在上面的代码中调用它，它应该返回 string，因为此时 myNumber 变量包含一个字符串'500'。看看它第二次将返回什么。

@@ -57,6 +57,7 @@ display: unset;
 ### 外側
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
+
   - : これらのキーワードは、本質的に要素のフローレイアウトにおける役割を表す、要素の外側の表示種別を指定します。
 
     - `block`
@@ -70,6 +71,7 @@ display: unset;
 ### 内側
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
+
   - : これらのキーワードは、要素の内側の表示種別を指定します。これは、要素 (置換要素ではないものとする) の内容物をレイアウトする整形コンテキストの種類を定義します。
 
     - `flow` {{Experimental_Inline}}
@@ -107,6 +109,7 @@ display: unset;
 ### 内部
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
+
   - : `table` や `ruby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。
     この節ではこれらを「内部」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。
 
@@ -138,9 +141,11 @@ display: unset;
 ### ボックス
 
 - {{CSSxRef("&lt;display-box&gt;")}}
+
   - : これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。
 
     - `contents`
+
       - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 CSS Display Level 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 CSS ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) を参照してください。
 
         _ブラウザーのバグにより、現在のところ、この値を使用するとアクセシビリティツリーから要素を削除します。 — 読み上げソフトは中に何があるかを見ません。詳しくは後述の[アクセシビリティの考慮](#アクセシビリティの考慮)の節をご覧ください。_
@@ -152,6 +157,7 @@ display: unset;
 ### 旧来のもの
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
+
   - : CSS 2 では `display` プロパティで単一のキーワードによる構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。
 
     - `inline-block`
@@ -171,6 +177,7 @@ display: unset;
       - : 要素は、インライン要素のようにふるまいつつ、その内容物をフレックスボックスモデルに従ってレイアウトします。
 
         これは `inline flex` と等価です。
+
     - `inline-grid`
 
       - : 要素は、インライン要素のようにふるまいつつ、その内容物をグリッドモデルに従ってレイアウトします。
@@ -340,12 +347,14 @@ article span {
   margin: 1px;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
 
-article, div {
+article,
+div {
   margin: 20px;
 }
 ```
@@ -353,8 +362,8 @@ article, div {
 #### JavaScript
 
 ```js
-const articles = document.querySelectorAll('.container');
-const select = document.querySelector('select');
+const articles = document.querySelectorAll(".container");
+const select = document.querySelector("select");
 
 function updateDisplay() {
   articles.forEach((article) => {
@@ -362,7 +371,7 @@ function updateDisplay() {
   });
 }
 
-select.addEventListener('change', updateDisplay);
+select.addEventListener("change", updateDisplay);
 
 updateDisplay();
 ```

@@ -1,17 +1,6 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
-tags:
-  - API
-  - Add
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Worker
-  - Service worker API
-  - ServiceWorker
-translation_of: Web/API/Cache/add
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -19,12 +8,12 @@ translation_of: Web/API/Cache/add
 La méthode **`add()`** de l'interface {{domxref("Cache")}} accepte une URL, la récupère, et ajoute l'objet réponse qui en résulte dans le cache. La méthode `add()` est équivalent au code suivant :
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('bad response status');
+    throw new TypeError("bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 Pour des opérations plus complexes, il faut utiliser {{domxref("Cache.put","Cache.put()")}} directement.
@@ -34,7 +23,7 @@ Pour des opérations plus complexes, il faut utiliser {{domxref("Cache.put","Cac
 ## Syntaxe
 
 ```js
-cache.add(request).then(function() {
+cache.add(request).then(function () {
   //request a été ajoutée au cache
 });
 ```
@@ -80,11 +69,11 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
 Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser {{domxref("Cache.add")}} pour y ajouter des ressources.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.add('/sw-test/index.html');
-    })
+    caches.open("v1").then(function (cache) {
+      return cache.add("/sw-test/index.html");
+    }),
   );
 });
 ```

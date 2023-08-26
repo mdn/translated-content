@@ -1,12 +1,6 @@
 ---
 title: Sélecteurs de classe
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Class_selectors
-original_slug: Web/CSS/Sélecteurs_de_classe
 ---
 
 {{CSSRef}}
@@ -39,7 +33,7 @@ L'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) est une liste de
 .nomdeclasse { déclarations CSS }
 ```
 
-Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) de la façon suivante :
+Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/Sélecteurs_d_attribut) de la façon suivante :
 
 ```
 [class~=nomdeclasse] { déclarations CSS }
@@ -54,7 +48,7 @@ Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/
   background-color: skyblue;
 }
 .toto {
- font-weight: bold;
+  font-weight: bold;
 }
 ```
 
@@ -62,7 +56,10 @@ Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/
 
 ```html
 <div class="classy">Voici un div avec du texte.</div>
-<div class="toto classy truc">Les éléments peuvent avoir plusieurs classes, le sélecteur fonctionnera tout de même !</div>
+<div class="toto classy truc">
+  Les éléments peuvent avoir plusieurs classes, le sélecteur fonctionnera tout
+  de même !
+</div>
 <div>En voilà un autre.</div>
 ```
 

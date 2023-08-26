@@ -1,207 +1,161 @@
 ---
-title: ':is() (:matches(), :any())'
+title: ":is()"
 slug: Web/CSS/:is
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-  - Web
-translation_of: Web/CSS/:is
+l10n:
+  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
 
-La plupart des navigateurs prennent encore en charge cette fonctionnalité via `:matches()`, ou via la pseudo-classe préfixée — `:any()` (anciennes versions de Chrome, Firefox et Safari). `:any()` fonctionne exactement comme `:matches()` et `:is()` mais nécessite l'utilisation de préfixes et ne prend pas en charge [les sélecteurs complexes](/fr/docs/Learn/CSS/Building_blocks/Selectors).
+> **Note :** Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-> **Note :** `:matches()` a été renommé en `is()` d'après [l'_issue_ 3258 du CSSWG](https://github.com/w3c/csswg-drafts/issues/3258).
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 
-```css
-/* Sélectionne n'importe quel paragraphe survolé
-   qui se trouve au sein d'un header, main, ou
-   footer */
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
+Les pseudo-éléments ne peuvent pas être utilisés dans la liste de sélecteurs passée à `:is()`.
 
-/* La notation précédente est équivalente à */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
+### Différence entre `:is()` et `:where()`
 
+Contrairement à [`:where()`](/fr/docs/Web/CSS/:where) dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique)). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/:where#examples).
 
-/* La version rétro-compatible avec :-*-any()  */
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:-webkit-any(header, main, footer) p:hover{
-  color: red;
-  cursor: pointer;
-}
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+### Analyse permissive de la liste des sélecteurs
 
-## Syntaxe
+`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
 
-{{csssyntax}}
-
-## Exemples
-
-### Exemple fonctionnant pour les différents navigateurs
-
-#### HTML
-
-```html
-<header>
-  <p>Voici un paragraphe dans un en-tête.</p>
-</header>
-
-<main>
-  <ul>
-    <li><p>Mon premier élément de</p><p>liste</p></li>
-    <li><p>Mon deuxième élément de</p><p>liste</p></li>
-  </ul>
-</main>
-
-<footer>
-  <p>Et un paragraphe de pied de page</p>
-</footer>
-```
-
-#### CSS
+En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient intégralement invalide dès que l'un des sélecteurs est invalide. En utilisant `:is()` ou `:where()`, si la liste contient un sélecteur incorrect ou qui n'est pas pris en charge, celui-ci sera ignoré et les autres seront utilisés.
 
 ```css
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+:is(:valid, :non-pris-en-charge) {
+  /* … */
 }
 ```
 
-#### JavaScript
-
-```js
-let matchedItems;
-
-try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
-  try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
-    try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
-      try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Votre navigateur ne prend pas en charge :is(), :matches() ou :any()');
-      }
-    }
-  }
-}
-
-for(let i = 0; i < matchedItems.length; i++) {
-  applyHandler(matchedItems[i]);
-}
-
-function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('Ce paragraphe est à l\'intérieur d\'un élément ' + e.target.parentNode.nodeName);
-  });
-}
-```
-
-{{EmbedLiveSample('Exemple_fonctionnant_pour_les_différents_navigateurs', '100%', '300')}}
-
-### Simplifier les listes de sélecteurs
-
-La pseudo-classe `:matches()` permet de simplifier largement les sélecteurs CSS. Ainsi, la règle suivante :
+Le fragment qui précède sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
 
 ```css
-/* les listes non ordonnées sur 3 niveaux ou plus */
-/* utilisent un carré comme puce */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+:valid,
+:non-pris-en-charge {
+  /* … */
+}
+```
+
+Sera ignoré pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, même s'ils prennent en charge `:valid`.
+
+## Exemple
+
+### Simplifier une liste de sélecteurs
+
+La pseudo-classe `:is()` peut grandement simplifier les sélecteurs CSS. Prenons par exemple, ce fragment CSS&nbsp;:
+
+```css
+/* Pour les listes non-ordonnées de 3 niveaux (ou plus), on utilisera un carré */
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
 
-pourra être remplacée par :
+On pourra remplacer ce bloc avec&nbsp;:
 
 ```css
-/* les listes non ordonnées sur 3 niveaux ou plus */
-/* utilisent un carré comme puce */
-:matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) ul,
-:matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) menu,
-:matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) dir {
-  list-style-type: square;
-}
-```
-
-En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section qui suit sur les performances](#issues_with_performance_and_specificity)) :
-
-```css
-:matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) :matches(ul, menu, dir) {
+/* Pour les listes non-ordonnées de 3 niveaux (ou plus), on utilisera un carré */
+:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
 }
 ```
 
 ### Simplifier les sélecteurs de section
 
-La pseudo-classe `:matches` est particulièrement utile lorsqu'on manipule les [sections et en-têtes](/fr/docs/Sections_and_Outlines_of_an_HTML5_document) HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans `:matches()`) s'avèrerait plutôt compliqué.
+La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Element/Heading_Elements). En effet, les éléments [`<section>`](/fr/docs/Web/HTML/Element/section), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside) et [`<nav>`](/fr/docs/Web/HTML/Element/nav) sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
 
-Par exemple, pour mettre en forme les éléments {{HTMLElement("h1")}} à différents niveaux sans utiliser `:matches()`, on obtient ces règles plutôt compliquées :
+Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) situés à différentes profondeurs&nbsp;:
 
 ```css
 /* Niveau 0 */
 h1 {
   font-size: 30px;
 }
+
 /* Niveau 1 */
-section h1, article h1, aside h1, nav h1 {
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
+
 /* Niveau 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1 {
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
+
 /* Niveau 3 */
-/* … j'ai abandonné */
+/* Nous n'osons même pas y penser */
 ```
 
-Avec `:is()`, c'est plus simple :
+Avec `:is()`, c'est plus facile&nbsp;:
 
 ```css
 /* Niveau 0 */
@@ -213,63 +167,52 @@ h1 {
   font-size: 25px;
 }
 /* Niveau 2 */
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
   font-size: 20px;
 }
 /* Niveau 3 */
 :is(section, article, aside, nav)
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+  :is(section, article, aside, nav)
+  :is(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```
 
-### Éviter l'invalidation d'une liste de sélecteur
+### `:is()` ne cible pas les pseudo-éléments
 
-À la différence des listes de sélecteurs, la pseudo-classe `:is()` ne devient pas invalide lorsqu'un des sélecteurs passés en argument n'est pas pris en charge par le navigateur.
+La pseudo-classe `:is()` ne permet pas de cibler les pseudo-éléments. Aussi, plutôt que d'écrire&nbsp;:
 
-```css
-:is(:valid, :incompatible) {
-  ...
+```css example-bad
+un-element:is(::before, ::after) {
+  display: block;
 }
 ```
 
-Le sélecteur ci-dessus sera analysé sans problème et permettra de cibler `:valid` même si les navigateurs ne prennent pas en charge le sélecteur `:incompatible`. En revanche :
+ou ceci&nbsp;:
 
-```css
-:valid, :incompatible {
-  ...
+```css example-bad
+:is(un-element::before, un-element::after) {
+  display: block;
 }
 ```
 
-L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pas en charge `:incompatible`, même si `:valid` est bien pris en charge.
+On écrira plutôt&nbsp;:
 
-## Notes
-
-### Problèmes de performances avec `any():` et la spécificité
-
-[bug Firefox 561154](https://bugzil.la/561154) suit un problème de spécificité relatif à `:-moz-any()`. L'implémentation place `:-moz-any()` dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.
-
-Ainsi :
-
-```css
-.a > :-moz-any(.b, .c)
+```css example-good
+un-element::before,
+un-element::after {
+  display: block;
+}
 ```
 
-sera plus lent que
+## Syntaxe
 
-```css
-.a > .b, .a > .c
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* … */
+}
 ```
-
-et cette dernière version sera plus rapide :
-
-```css
-:-moz-any(.a, .d) > .b, :-moz-any(.a, .d) > .c
-```
-
-`:is()` doit permettre de corriger de tels problèmes.
 
 ## Spécifications
 
@@ -281,5 +224,6 @@ et cette dernière version sera plus rapide :
 
 ## Voir aussi
 
-- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - se comporte comme `is()`, avec une spécificité nulle
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [`:where()`](/fr/docs/Web/CSS/:where)&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/Specificity) qui vaut 0.
+- [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
+- [Composants web](/fr/docs/Web/API/Web_components)

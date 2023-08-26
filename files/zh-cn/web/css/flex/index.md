@@ -25,47 +25,53 @@ flex: auto;
 flex: initial;
 flex: none;
 
-/* 一个值，无单位数字：flex-grow */
+/* 单值，无单位数字：flex-grow
+flex-basis 此时等于 0。 */
 flex: 2;
 
-/* 一个值，width/height: flex-basis */
+/* 单值，宽度/高度：flex-basis */
 flex: 10em;
 flex: 30px;
 flex: min-content;
 
-/* 两个值：flex-grow | flex-basis */
+/* 双值：flex-grow | flex-basis */
 flex: 1 30px;
 
-/* 两个值：flex-grow | flex-shrink */
+/* 双值：flex-grow | flex-shrink */
 flex: 2 2;
 
-/* 三个值：flex-grow | flex-shrink | flex-basis */
+/* 三值：flex-grow | flex-shrink | flex-basis */
 flex: 2 2 10%;
 
-/*全局属性值 */
+/* 全局值 */
 flex: inherit;
 flex: initial;
+flex: revert;
+flex: revert-layer;
 flex: unset;
 ```
 
-可以使用一个，两个或三个值来指定 `flex`属性。
+可以使用一个，两个或三个值来指定 `flex` 属性。
 
-**单值语法**: 值必须为以下其中之一：
+- **单值语法**：值必须是以下之一：
 
-- 一个无单位**数 ({{cssxref("&lt;number&gt;")}})**: 它会被当作 `flex:<number> 1 0;` [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
-- 一个有效的 **宽度 ({{cssxref("width")}})** 值：它会被当作 `<flex-basis>` 的值。
-- 关键字[`none`](/zh-CN/docs/Web/CSS/flex#none)，[`auto`](/zh-CN/docs/Web/CSS/flex#auto)或`initial`.
+  - 一个 {{cssxref("&lt;flex-grow&gt;")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> 1 0`。
+  - 一个 {{cssxref("&lt;flex-basis&gt;")}} 的有效值：此时简写会扩展为 `flex: 1 1 <flex-basis>`。
+  - 关键字 `none` 或者全局关键字之一。
 
-**双值语法**: 第一个值必须为一个无单位数，并且它会被当作 [`<flex-grow>`](/zh-CN/docs/Web/CSS/flex-grow) 的值。第二个值必须为以下之一：
+- **双值语法**：
 
-- 一个无单位数：它会被当作 [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink) 的值。
-- 一个有效的宽度值：它会被当作 [`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值。
+  - 第一个值必须是一个 {{cssxref("flex-grow")}} 的有效值。
+  - 第二个值必须是以下之一：
 
-**三值语法：**
+    - 一个 {{cssxref("flex-shrink")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> <flex-shrink> 0`。
+    - 一个 {{cssxref("flex-basis")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> 1 <flex-basis>`。
 
-- 第一个值必须为一个无单位数，并且它会被当作 [`<flex-grow>`](/zh-CN/docs/Web/CSS/flex-grow) 的值。
-- 第二个值必须为一个无单位数，并且它会被当作 [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink) 的值。
-- 第三个值必须为一个有效的宽度值，并且它会被当作 [`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值。
+- **三值语法**：值必须按照以下顺序指定：
+
+  1. 一个 {{cssxref("flex-grow")}} 的有效值。
+  2. 一个 {{cssxref("flex-shrink")}} 的有效值。
+  3. 一个 {{cssxref("flex-basis")}} 的有效值。
 
 ### 取值
 
@@ -124,7 +130,7 @@ flex: unset;
 }
 
 .flex-container {
-  background-color: #F4F7F8;
+  background-color: #f4f7f8;
   resize: horizontal;
   overflow: hidden;
   display: flex;
@@ -136,7 +142,7 @@ flex: unset;
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1B5385;
+  background-color: #1b5385;
   color: white;
   font-family: monospace;
   font-size: 13px;
@@ -212,7 +218,7 @@ flex: unset;
 ```js hidden
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```

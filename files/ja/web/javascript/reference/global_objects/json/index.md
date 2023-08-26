@@ -24,9 +24,9 @@ JSON は、オブジェクト、配列、数値、文字列、論理値、そし
 {{jsxref("JSON.parse()")}} が文字列を JSON として解釈し、{{jsxref("Global_Objects/eval", "eval")}} が文字列を JavaScript として実行するこの例を考えてみてください。
 
 ```js
-let code = '"\u2028\u2029"'
-JSON.parse(code)  // どのエンジンでも "\u2028\u2029" と評価される
-eval(code)        // 古いエンジンでは SyntaxError が発生する
+let code = '"\u2028\u2029"';
+JSON.parse(code); // どのエンジンでも "\u2028\u2029" と評価される
+eval(code); // 古いエンジンでは SyntaxError が発生する
 ```
 
 他の違いとしては、二重引用符で囲まれた文字列のみを許可していることや、 {{jsxref("undefined")}} やコメントの規定がないことなどが挙げられます。 JSON に基づいたより人間に優しい設定フォーマットを使いたい場合、 Babel コンパイラーによって使われる [JSON5](https://json5.org/) と、より一般的に使われる [YAML](https://ja.wikipedia.org/wiki/YAML) があります。

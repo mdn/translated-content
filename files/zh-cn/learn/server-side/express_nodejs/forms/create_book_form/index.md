@@ -10,8 +10,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 打开 **/controllers/bookController.js**，并在文件顶部添加以下行：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 ## 控制器—get 路由
@@ -20,21 +20,28 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // Display book create form on GET.
-exports.book_create_get = function(req, res, next) {
-
-    // Get all authors and genres, which we can use for adding to our book.
-    async.parallel({
-        authors: function(callback) {
-            Author.find(callback);
-        },
-        genres: function(callback) {
-            Genre.find(callback);
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        res.render('book_form', { title: 'Create Book', authors: results.authors, genres: results.genres });
-    });
-
+exports.book_create_get = function (req, res, next) {
+  // Get all authors and genres, which we can use for adding to our book.
+  async.parallel(
+    {
+      authors: function (callback) {
+        Author.find(callback);
+      },
+      genres: function (callback) {
+        Genre.find(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      res.render("book_form", {
+        title: "Create Book",
+        authors: results.authors,
+        genres: results.genres,
+      });
+    },
+  );
 };
 ```
 
@@ -47,74 +54,83 @@ exports.book_create_get = function(req, res, next) {
 ```js
 // Handle book create on POST.
 exports.book_create_post = [
-    // Convert the genre to an array.
-    (req, res, next) => {
-        if(!(req.body.genre instanceof Array)){
-            if(typeof req.body.genre==='undefined')
-            req.body.genre=[];
-            else
-            req.body.genre=new Array(req.body.genre);
-        }
-        next();
-    },
-
-    // Validate fields.
-    body('title', 'Title must not be empty.').isLength({ min: 1 }).trim(),
-    body('author', 'Author must not be empty.').isLength({ min: 1 }).trim(),
-    body('summary', 'Summary must not be empty.').isLength({ min: 1 }).trim(),
-    body('isbn', 'ISBN must not be empty').isLength({ min: 1 }).trim(),
-
-    // Sanitize fields (using wildcard).
-    sanitizeBody('*').trim().escape(),
-    sanitizeBody('genre.*').escape(),
-    // Process request after validation and sanitization.
-    (req, res, next) => {
-
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        // Create a Book object with escaped and trimmed data.
-        var book = new Book(
-          { title: req.body.title,
-            author: req.body.author,
-            summary: req.body.summary,
-            isbn: req.body.isbn,
-            genre: req.body.genre
-           });
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render form again with sanitized values/error messages.
-
-            // Get all authors and genres for form.
-            async.parallel({
-                authors: function(callback) {
-                    Author.find(callback);
-                },
-                genres: function(callback) {
-                    Genre.find(callback);
-                },
-            }, function(err, results) {
-                if (err) { return next(err); }
-
-                // Mark our selected genres as checked.
-                for (let i = 0; i < results.genres.length; i++) {
-                    if (book.genre.indexOf(results.genres[i]._id) > -1) {
-                        results.genres[i].checked='true';
-                    }
-                }
-                res.render('book_form', { title: 'Create Book',authors:results.authors, genres:results.genres, book: book, errors: errors.array() });
-            });
-            return;
-        }
-        else {
-            // Data from form is valid. Save book.
-            book.save(function (err) {
-                if (err) { return next(err); }
-                   //successful - redirect to new book record.
-                   res.redirect(book.url);
-                });
-        }
+  // Convert the genre to an array.
+  (req, res, next) => {
+    if (!(req.body.genre instanceof Array)) {
+      if (typeof req.body.genre === "undefined") req.body.genre = [];
+      else req.body.genre = new Array(req.body.genre);
     }
+    next();
+  },
+
+  // Validate fields.
+  body("title", "Title must not be empty.").isLength({ min: 1 }).trim(),
+  body("author", "Author must not be empty.").isLength({ min: 1 }).trim(),
+  body("summary", "Summary must not be empty.").isLength({ min: 1 }).trim(),
+  body("isbn", "ISBN must not be empty").isLength({ min: 1 }).trim(),
+
+  // Sanitize fields (using wildcard).
+  sanitizeBody("*").trim().escape(),
+  sanitizeBody("genre.*").escape(),
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
+
+    // Create a Book object with escaped and trimmed data.
+    var book = new Book({
+      title: req.body.title,
+      author: req.body.author,
+      summary: req.body.summary,
+      isbn: req.body.isbn,
+      genre: req.body.genre,
+    });
+
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/error messages.
+
+      // Get all authors and genres for form.
+      async.parallel(
+        {
+          authors: function (callback) {
+            Author.find(callback);
+          },
+          genres: function (callback) {
+            Genre.find(callback);
+          },
+        },
+        function (err, results) {
+          if (err) {
+            return next(err);
+          }
+
+          // Mark our selected genres as checked.
+          for (let i = 0; i < results.genres.length; i++) {
+            if (book.genre.indexOf(results.genres[i]._id) > -1) {
+              results.genres[i].checked = "true";
+            }
+          }
+          res.render("book_form", {
+            title: "Create Book",
+            authors: results.authors,
+            genres: results.genres,
+            book: book,
+            errors: errors.array(),
+          });
+        },
+      );
+      return;
+    } else {
+      // Data from form is valid. Save book.
+      book.save(function (err) {
+        if (err) {
+          return next(err);
+        }
+        //successful - redirect to new book record.
+        res.redirect(book.url);
+      });
+    }
+  },
 ];
 ```
 
@@ -152,10 +168,10 @@ sanitizeBody('genre.*').trim().escape(),
 ```js
 // Mark our selected genres as checked.
 for (let i = 0; i < results.genres.length; i++) {
-    if (book.genre.indexOf(results.genres[i]._id) > -1) {
-        // Current genre is selected. Set "checked" flag.
-        results.genres[i].checked='true';
-    }
+  if (book.genre.indexOf(results.genres[i]._id) > -1) {
+    // Current genre is selected. Set "checked" flag.
+    results.genres[i].checked = "true";
+  }
 }
 ```
 
@@ -213,7 +229,7 @@ block content
 
 ## 它看起來像是？
 
-运行应用程序，将浏览器打开到[http://localhost:3000](http://localhost:3000/)，然后选择 Create new book 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后您将进入图书详细信息页面。
+运行应用程序，将浏览器打开到 `http://localhost:3000/`，然后选择 Create new book 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后您将进入图书详细信息页面。
 
 ![](locallibary_express_book_create_empty.png)
 

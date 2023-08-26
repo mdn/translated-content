@@ -1,7 +1,6 @@
 ---
 title: Web Component
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -44,6 +43,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - {{domxref("Window.customElements")}}
   - : 返回 `CustomElementRegistry` 对象的引用。
 - [生命周期回调](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#Using_the_lifecycle_callbacks)
+
   - : 定义在自定义元素的类定义中的特殊回调函数，影响其行为：
     - `connectedCallback`：当自定义元素第一次被连接到文档 DOM 时被调用。
     - `disconnectedCallback`：当自定义元素与文档 DOM 断开连接时被调用。

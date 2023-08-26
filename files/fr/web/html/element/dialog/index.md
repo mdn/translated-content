@@ -1,16 +1,6 @@
 ---
-title: '<dialog> : l''élément de boîte de dialogue'
+title: "<dialog> : l'élément de boîte de dialogue"
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
-translation_of: Web/HTML/Element/dialog
-browser-compat: html.elements.dialog
 ---
 
 {{HTMLSidebar}}
@@ -122,14 +112,17 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <!-- Boîte de dialogue contextuelle simple contenant un formulaire -->
 <dialog id="favDialog">
   <form method="dialog">
-    <p><label>Animal préféré :
-      <select>
-        <option></option>
-        <option>Crevette en saumure</option>
-        <option>Panda rouge</option>
-        <option>Singe-araignée</option>
-      </select>
-    </label></p>
+    <p>
+      <label
+        >Animal préféré :
+        <select>
+          <option></option>
+          <option>Crevette en saumure</option>
+          <option>Panda rouge</option>
+          <option>Singe-araignée</option>
+        </select>
+      </label>
+    </p>
     <menu>
       <button value="cancel">Annuler</button>
       <button id="confirmBtn" value="default">Confirmer</button>
@@ -147,28 +140,31 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 #### JavaScript
 
 ```js
-let updateButton = document.getElementById('updateDetails');
-let favDialog = document.getElementById('favDialog');
-let outputBox = document.querySelector('output');
-let selectEl = document.querySelector('select');
-let confirmBtn = document.getElementById('confirmBtn');
+let updateButton = document.getElementById("updateDetails");
+let favDialog = document.getElementById("favDialog");
+let outputBox = document.querySelector("output");
+let selectEl = document.querySelector("select");
+let confirmBtn = document.getElementById("confirmBtn");
 
 // Le bouton "Mettre à jour les détails" ouvre le <dialogue> ; modulaire
-updateButton.addEventListener('click', function onOpen() {
+updateButton.addEventListener("click", function onOpen() {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    console.error("L'API <dialog> n'est pas prise en charge par ce navigateur.");
+    console.error(
+      "L'API <dialog> n'est pas prise en charge par ce navigateur.",
+    );
   }
 });
 // L'entrée "Animal favori" définit la valeur du bouton d'envoi.
-selectEl.addEventListener('change', function onSelect(e) {
+selectEl.addEventListener("change", function onSelect(e) {
   confirmBtn.value = selectEl.value;
 });
 // Le bouton "Confirmer" du formulaire déclenche la fermeture
 // de la boîte de dialogue en raison de [method="dialog"]
-favDialog.addEventListener('close', function onClose() {
-  outputBox.value = favDialog.returnValue + " bouton cliqué - " + (new Date()).toString();
+favDialog.addEventListener("close", function onClose() {
+  outputBox.value =
+    favDialog.returnValue + " bouton cliqué - " + new Date().toString();
 });
 ```
 

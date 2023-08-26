@@ -1,7 +1,6 @@
 ---
 title: 为“弹球”示例添加新功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -34,38 +33,39 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 程序最终会像这样：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>弹球</title>
     <style>
-body {
-    margin: 0;
-    overflow: hidden;
-    font-family: 'PingFangSC-Regular', '微软雅黑', sans-serif;
-    height: 100%;
-}
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: "PingFangSC-Regular", "微软雅黑", sans-serif;
+        height: 100%;
+      }
 
-h1 {
-    font-size: 2rem;
-    letter-spacing: -1px;
-    position: absolute;
-    margin: 0;
-    top: -4px;
-    right: 5px;
+      h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        position: absolute;
+        margin: 0;
+        top: -4px;
+        right: 5px;
 
-    color: transparent;
-    text-shadow: 0 0 4px white;
-  }
+        color: transparent;
+        text-shadow: 0 0 4px white;
+      }
 
-p {
-    position: absolute;
-    margin: 0;
-    top: 35px;
-    right: 5px;
-    color: #aaa;
-}    </style>
+      p {
+        position: absolute;
+        margin: 0;
+        top: 35px;
+        right: 5px;
+        color: #aaa;
+      }
+    </style>
   </head>
 
   <body>
@@ -74,216 +74,221 @@ p {
     <canvas></canvas>
 
     <script>
-const BALLS_COUNT = 25;
-const BALL_SIZE_MIN = 10;
-const BALL_SIZE_MAX = 20;
-const BALL_SPEED_MAX = 7;
+      const BALLS_COUNT = 25;
+      const BALL_SIZE_MIN = 10;
+      const BALL_SIZE_MAX = 20;
+      const BALL_SPEED_MAX = 7;
 
-class Shape {
-    constructor(x, y, velX, velY, exists) {
-        this.x = x;
-        this.y = y;
-        this.velX = velX;
-        this.velY = velY;
-        this.exists = exists;
-    }
-}
+      class Shape {
+        constructor(x, y, velX, velY, exists) {
+          this.x = x;
+          this.y = y;
+          this.velX = velX;
+          this.velY = velY;
+          this.exists = exists;
+        }
+      }
 
-class Ball extends Shape {
-    constructor(x, y, velX, velY, color, size, exists) {
-        super(x, y, velX, velY, exists);
+      class Ball extends Shape {
+        constructor(x, y, velX, velY, color, size, exists) {
+          super(x, y, velX, velY, exists);
 
-        this.color = color;
-        this.size = size;
-    }
-
-    draw() {
-        ctx.beginPath();
-        ctx.fillStyle = this.color;
-        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-        ctx.fill();
-    }
-
-    update() {
-        if ((this.x + this.size) >= width) {
-            this.velX = -(this.velX);
+          this.color = color;
+          this.size = size;
         }
 
-        if ((this.x - this.size) <= 0) {
-            this.velX = -(this.velX);
+        draw() {
+          ctx.beginPath();
+          ctx.fillStyle = this.color;
+          ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+          ctx.fill();
         }
 
-        if ((this.y + this.size) >= height) {
-            this.velY = -(this.velY);
+        update() {
+          if (this.x + this.size >= width) {
+            this.velX = -this.velX;
+          }
+
+          if (this.x - this.size <= 0) {
+            this.velX = -this.velX;
+          }
+
+          if (this.y + this.size >= height) {
+            this.velY = -this.velY;
+          }
+
+          if (this.y - this.size <= 0) {
+            this.velY = -this.velY;
+          }
+
+          this.x += this.velX;
+          this.y += this.velY;
         }
 
-        if ((this.y - this.size) <= 0) {
-            this.velY = -(this.velY);
-        }
+        collisionDetect() {
+          for (let j = 0; j < balls.length; j++) {
+            if (!(this === balls[j])) {
+              const dx = this.x - balls[j].x;
+              const dy = this.y - balls[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
 
-        this.x += this.velX;
-        this.y += this.velY;
-    }
-
-    collisionDetect() {
-        for (let j = 0; j < balls.length; j++) {
-            if ( ! (this === balls[j]) ) {
-                const dx = this.x - balls[j].x;
-                const dy = this.y - balls[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < this.size + balls[j].size && balls[j].exists) {
-                    balls[j].color = this.color = randomColor();
-                }
+              if (distance < this.size + balls[j].size && balls[j].exists) {
+                balls[j].color = this.color = randomColor();
+              }
             }
+          }
         }
-    }
-}
+      }
 
-class EvilCircle extends Shape {
-    constructor(x, y, exists) {
-        super(x, y, exists);
+      class EvilCircle extends Shape {
+        constructor(x, y, exists) {
+          super(x, y, exists);
 
-        this.velX = BALL_SPEED_MAX;
-        this.velY = BALL_SPEED_MAX;
-        this.color = "white";
-        this.size = 10;
-        this.setControls();
-    }
+          this.velX = BALL_SPEED_MAX;
+          this.velY = BALL_SPEED_MAX;
+          this.color = "white";
+          this.size = 10;
+          this.setControls();
+        }
 
-    draw() {
-        ctx.beginPath();
-        ctx.strokeStyle = this.color;
-        ctx.lineWidth = 3;
-        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-        ctx.stroke();
-    }
+        draw() {
+          ctx.beginPath();
+          ctx.strokeStyle = this.color;
+          ctx.lineWidth = 3;
+          ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+          ctx.stroke();
+        }
 
-    checkBounds() {
-        if ((this.x + this.size) >= width) {
+        checkBounds() {
+          if (this.x + this.size >= width) {
             this.x -= this.size;
-        }
+          }
 
-        if ((this.x - this.size) <= 0) {
+          if (this.x - this.size <= 0) {
             this.x += this.size;
-        }
+          }
 
-        if ((this.y + this.size) >= height) {
+          if (this.y + this.size >= height) {
             this.y -= this.size;
-        }
+          }
 
-        if ((this.y - this.size) <= 0) {
+          if (this.y - this.size <= 0) {
             this.y += this.size;
+          }
         }
-    }
 
-    setControls() {
-        window.onkeydown = (e) => {
-            switch(e.key) {
-                case 'a':
-                case 'A':
-                case 'ArrowLeft':
-                    this.x -= this.velX;
-                    break;
-                case 'd':
-                case 'D':
-                case 'ArrowRight':
-                    this.x += this.velX;
-                    break;
-                case 'w':
-                case 'W':
-                case 'ArrowUp':
-                    this.y -= this.velY;
-                    break;
-                case 's':
-                case 'S':
-                case 'ArrowDown':
-                    this.y += this.velY;
-                    break;
+        setControls() {
+          window.onkeydown = (e) => {
+            switch (e.key) {
+              case "a":
+              case "A":
+              case "ArrowLeft":
+                this.x -= this.velX;
+                break;
+              case "d":
+              case "D":
+              case "ArrowRight":
+                this.x += this.velX;
+                break;
+              case "w":
+              case "W":
+              case "ArrowUp":
+                this.y -= this.velY;
+                break;
+              case "s":
+              case "S":
+              case "ArrowDown":
+                this.y += this.velY;
+                break;
             }
-        };
-    }
+          };
+        }
 
-    collisionDetect() {
-        for (let j = 0; j < balls.length; j++) {
+        collisionDetect() {
+          for (let j = 0; j < balls.length; j++) {
             if (balls[j].exists) {
-                const dx = this.x - balls[j].x;
-                const dy = this.y - balls[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
+              const dx = this.x - balls[j].x;
+              const dy = this.y - balls[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < this.size + balls[j].size) {
-                    balls[j].exists = false;
-                    count--;
-                    para.textContent = '还剩 ' + count + ' 个球';
-                }
+              if (distance < this.size + balls[j].size) {
+                balls[j].exists = false;
+                count--;
+                para.textContent = "还剩 " + count + " 个球";
+              }
             }
+          }
         }
-    }
-}
+      }
 
-const para = document.querySelector('p');
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+      const para = document.querySelector("p");
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
 
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+      const width = (canvas.width = window.innerWidth);
+      const height = (canvas.height = window.innerHeight);
 
-const balls = [];
-let count = 0;
+      const balls = [];
+      let count = 0;
 
-const evilBall = new EvilCircle(
-    random(0, width),
-    random(0, height),
-    true
-);
+      const evilBall = new EvilCircle(
+        random(0, width),
+        random(0, height),
+        true,
+      );
 
-loop();
+      loop();
 
-function random(min,max) {
-    return Math.floor(Math.random()*(max-min)) + min;
-}
+      function random(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
 
-function randomColor() {
-    return 'rgb(' +
-           random(0, 255) + ', ' +
-           random(0, 255) + ', ' +
-           random(0, 255) + ')';
-}
+      function randomColor() {
+        return (
+          "rgb(" +
+          random(0, 255) +
+          ", " +
+          random(0, 255) +
+          ", " +
+          random(0, 255) +
+          ")"
+        );
+      }
 
-function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-    ctx.fillRect(0, 0, width, height);
+      function loop() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+        ctx.fillRect(0, 0, width, height);
 
-    while (balls.length < BALLS_COUNT) {
-        const size = random(BALL_SIZE_MIN, BALL_SIZE_MAX);
-        const ball = new Ball(
+        while (balls.length < BALLS_COUNT) {
+          const size = random(BALL_SIZE_MIN, BALL_SIZE_MAX);
+          const ball = new Ball(
             random(0 + size, width - size),
             random(0 + size, height - size),
             random(-BALL_SPEED_MAX, BALL_SPEED_MAX),
             random(-BALL_SPEED_MAX, BALL_SPEED_MAX),
             randomColor(),
             size,
-            true
-        );
-        balls.push(ball);
-        count++;
-        para.textContent = '还剩 ' + count + ' 个球';
-    }
+            true,
+          );
+          balls.push(ball);
+          count++;
+          para.textContent = "还剩 " + count + " 个球";
+        }
 
-    for (let i = 0; i < balls.length; i++) {
-        if (balls[i].exists) {
+        for (let i = 0; i < balls.length; i++) {
+          if (balls[i].exists) {
             balls[i].draw();
             balls[i].update();
             balls[i].collisionDetect();
+          }
         }
-    }
 
-    evilBall.draw();
-    evilBall.checkBounds();
-    evilBall.collisionDetect();
+        evilBall.draw();
+        evilBall.checkBounds();
+        evilBall.collisionDetect();
 
-    requestAnimationFrame(loop);
-}
+        requestAnimationFrame(loop);
+      }
     </script>
   </body>
 </html>
@@ -351,18 +356,18 @@ function loop() {
 这个方法将会一个 `onkeydown` 的事件监听器给 `window` 对象，这样当特定的键盘按键按下的时候，我们就可以移动恶魔圈。下面的代码块应该放在方法的定义里：
 
 ```js
-window.onkeydown = e => {
-  switch(e.key) {
-    case 'a':
+window.onkeydown = (e) => {
+  switch (e.key) {
+    case "a":
       this.x -= this.velX;
       break;
-    case 'd':
+    case "d":
       this.x += this.velX;
       break;
-    case 'w':
+    case "w":
       this.y -= this.velY;
       break;
-    case 's':
+    case "s":
       this.y += this.velY;
       break;
   }
@@ -397,22 +402,22 @@ window.onkeydown = e => {
 1. 在你的 HTML 文件中添加一个{{HTMLElement("p")}} 元素到 {{HTMLElement("h1")}} 元素的下面，其中包含文本 "还剩多少个球"。
 2. 在你的 CSS 文件中，添加下面的代码到底部：
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. 在你的 JavaScript 文件中，做下列的修改：
 
-    - 创建一个变量存储段落的引用。
-    - 以同样的方式在屏幕上显示小球的数量。
-    - 增加球数并在每次将球添加到屏幕里时显示更新的球数量。
-    - 减少球数并在每次恶魔吃球时显示更新的球数（因为被吃掉的球不存在了）
+   - 创建一个变量存储段落的引用。
+   - 以同样的方式在屏幕上显示小球的数量。
+   - 增加球数并在每次将球添加到屏幕里时显示更新的球数量。
+   - 减少球数并在每次恶魔吃球时显示更新的球数（因为被吃掉的球不存在了）
 
 ## 提示
 

@@ -1,8 +1,6 @@
 ---
 title: NavigatorID.appCodeName
 slug: orphaned/Web/API/NavigatorID/appCodeName
-translation_of: Web/API/NavigatorID/appCodeName
-original_slug: Web/API/NavigatorID/appCodeName
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}

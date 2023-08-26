@@ -1,11 +1,6 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/time-percentage
 ---
 
 {{CSSRef}}

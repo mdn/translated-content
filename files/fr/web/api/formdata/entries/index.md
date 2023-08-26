@@ -1,15 +1,6 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - Entries
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/FormData/entries
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -34,12 +25,12 @@ Retourne un {{jsxref("Les_protocoles_iteration","iterateur")}}.
 ```js
 // Creation d'un objet FormData
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Affichage des paires clefs/valeurs
-for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (var pair of formData.entries()) {
+  console.log(pair[0] + ", " + pair[1]);
 }
 ```
 

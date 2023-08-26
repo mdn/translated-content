@@ -1,19 +1,6 @@
 ---
 title: Основы редактирования текста в HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-tags:
-  - Guide
-  - HTML
-  - Абзацы
-  - Введение в HTML
-  - Изучение
-  - Начинающий
-  - Параграфы
-  - Руководство
-  - Семантика
-  - Текст
-translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
@@ -51,21 +38,24 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 Например, в рассказе `<h1>` будет представлять заглавие рассказа, `<h2>` обозначит название каждой главы, `<h3>` будет обозначать подзаголовки в каждой главе и так далее.
 
 ```html
-<h1> Сокрушительная скука </ h1>
+<h1>Сокрушительная скука</h1>
 
-<p> Крис Миллс </ p>
+<p>Крис Миллс</p>
 
-<h2> Глава 1: Тёмная ночь </ h2>
+<h2>Глава 1: Тёмная ночь</h2>
 
-<p> Это была тёмная ночь. Где-то кричала сова. Дождь обрушился на ... </ p>
+<p>Это была тёмная ночь. Где-то кричала сова. Дождь обрушился на ...</p>
 
-<h2> Глава 2: Вечное молчание </ h2>
+<h2>Глава 2: Вечное молчание</h2>
 
-<p> Наш главный герой ничего не мог, когда шёпот из тёмной фигуры ... </ p>
+<p>Наш главный герой ничего не мог, когда шёпот из тёмной фигуры ...</p>
 
-<h3> Призрак говорит </ h3>
+<h3>Призрак говорит</h3>
 
-<p> Прошло ещё несколько часов, когда внезапно призрак выпрямился и воскликнул: «Пожалуйста, помилуй мою душу!» </ p>
+<p>
+  Прошло ещё несколько часов, когда внезапно призрак выпрямился и воскликнул:
+  «Пожалуйста, помилуй мою душу!»
+</p>
 ```
 
 Всё это действительно зависит от вас — что именно будут представлять собой элементы, пока существует иерархия. Вам просто нужно иметь в виду несколько хороших правил при создании таких структур.
@@ -100,25 +90,28 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">Моя мини-история
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+Моя мини-история
 Я полицейский, и моё имя Триш.
-Мои ноги сделаны из картона, и мой муж — рыба.</textarea>
+Мои ноги сделаны из картона, и мой муж — рыба.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -126,7 +119,8 @@ body {
   background: #f5f9fa;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 6em;
   padding: 10px;
@@ -151,10 +145,10 @@ h2 {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -162,35 +156,36 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Моя мини-история</h1>\n<p>Я полицейский, и моё имя Триш.</p>\n<p>Мои ноги сделаны из картона, и мой муж — рыба.</p>';
+var htmlSolution =
+  "<h1>Моя мини-история</h1>\n<p>Я полицейский, и моё имя Триш.</p>\n<p>Мои ноги сделаны из картона, и мой муж — рыба.</p>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -202,8 +197,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -212,8 +210,8 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-textarea.onkeyup = function(){
-  if(solution.value === 'Показать решение') {
+textarea.onkeyup = function () {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -240,7 +238,9 @@ textarea.onkeyup = function(){
 С другой стороны, вы можете сделать любой элемент похожим на заголовок верхнего уровня. Рассмотрим следующее:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Это заголовок верхнего уровня?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Это заголовок верхнего уровня?</span
+>
 ```
 
 Это элемент {{htmlelement ("span")}}. У него нет семантики. Вы используете его, когда хотите применить к контенту CSS (или сделать что-то с ним с помощью JavaScript), не придавая ему никакого дополнительного значения (об этом вы узнаете позже). Мы применили CSS, чтобы он выглядел как заголовок верхнего уровня, но поскольку он не имеет семантического значения, он не получит никаких дополнительных преимуществ, описанных выше. Рекомендуется использовать соответствующий элемент HTML на практике.
@@ -280,26 +280,29 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">молоко
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+молоко
 яйца
 хлеб
-хумус</textarea>
+хумус</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -307,7 +310,8 @@ body {
   background: #f5f9fa;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 6em;
   padding: 10px;
@@ -332,10 +336,10 @@ h2 {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -343,35 +347,36 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<ul>\n<li>молоко</li>\n<li>яйца</li>\n<li>хлеб</li>\n<li>хумус</li>\n</ul>';
+var htmlSolution =
+  "<ul>\n<li>молоко</li>\n<li>яйца</li>\n<li>хлеб</li>\n<li>хумус</li>\n</ul>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -383,8 +388,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -393,8 +401,8 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-textarea.onkeyup = function(){
-  if(solution.value === 'Показать решение') {
+textarea.onkeyup = function () {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -422,11 +430,11 @@ textarea.onkeyup = function(){
 
 ```html
 <ol>
-   <li>Двигайтесь до конца дороги</li>
-   <li>Поверните направо</li>
-   <li>Езжайте прямо через первые два перекрёстка с круговым движением</li>
-   <li>Поверните налево на третьем перекрёстке</li>
-   <li>Школа справа от вас, в 300 метрах вверх по дороге</li>
+  <li>Двигайтесь до конца дороги</li>
+  <li>Поверните направо</li>
+  <li>Езжайте прямо через первые два перекрёстка с круговым движением</li>
+  <li>Поверните налево на третьем перекрёстке</li>
+  <li>Школа справа от вас, в 300 метрах вверх по дороге</li>
 </ol>
 ```
 
@@ -436,26 +444,29 @@ textarea.onkeyup = function(){
 
 ```html hidden
 <h2>Результат</h2>
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Двигайтесь до конца дороги
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Двигайтесь до конца дороги
 Поверните направо
 Езжайте прямо через первые два перекрёстка с круговым движением
 Поверните налево на третьем перекрёстке
-Школа справа от вас, 300 метров вверх по дороге</textarea>
+Школа справа от вас, 300 метров вверх по дороге</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -463,7 +474,8 @@ body {
   background: #f5f9fa;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 6em;
   padding: 10px;
@@ -488,10 +500,10 @@ h2 {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -499,35 +511,36 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<ol>\n<li>Двигайтесь до конца дороги</li>\n<li>Поверните направо</li>\n<li>Езжайте прямо через первые два перекрёстка с круговым движением</li>\n<li>Поверните налево на третьем перекрёстке</li>\n<li>Школа справа от вас, 300 метров вверх по дороге</li>\n</ol>';
+var htmlSolution =
+  "<ol>\n<li>Двигайтесь до конца дороги</li>\n<li>Поверните направо</li>\n<li>Езжайте прямо через первые два перекрёстка с круговым движением</li>\n<li>Поверните налево на третьем перекрёстке</li>\n<li>Школа справа от вас, 300 метров вверх по дороге</li>\n</ol>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -539,8 +552,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -549,8 +565,8 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-textarea.onkeyup = function(){
-  if(solution.value === 'Показать решение>') {
+textarea.onkeyup = function () {
+  if (solution.value === "Показать решение>") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -569,13 +585,15 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Рецепт быстрого приготовления хумуса.
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Рецепт быстрого приготовления хумуса.
 
   Хумус — быстро, вкусно, — и ничего лишнего. Этот рецепт был составлен из других рецептов, которые мне попадались в течение многих лет.
 
@@ -606,17 +624,18 @@ textarea.onkeyup = function(){
 
   Храните хумус в запечатанном контейнере в холодильнике. Хумус хранится примерно неделю после приготовления. Если он начнёт пениться, выкидывайте его.
 
-  Хумус можно хранить в морозильном отделении 2–3 месяца.</textarea>
+  Хумус можно хранить в морозильном отделении 2–3 месяца.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -624,7 +643,8 @@ body {
   background: #f5f9fa;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 6em;
   padding: 10px;
@@ -649,10 +669,10 @@ h2 {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -660,35 +680,36 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Рецепт быстрого приготовления хумуса.</h1>\n\n<p>Хумус — быстро, вкусно, — и ничего лишнего. Этот рецепт был составлен из других рецептов, которые мне попадались в течение многих лет.</p>\n\n<p>Хумус — это вкусная густая паста, широко используемая в Греческих и Ближневосточных блюдах. Очень вкусно есть его с салатами, мясом на гриле и питой.</p>\n\n<h2>Ингредиенты</h2>\n\n<ul>\n<li>1 банка (400г) турецкого гороха (или бараньего гороха)</li>\n<li>175г тахани</li>\n<li>6 вяленых томатов</li>\n<li>Половинка красного перца</li>\n<li>Щепотка кайенского перца</li>\n<li>1 зубчик чеснока</li>\n<li>Чуть-чуть оливкового масла</li>\n</ul>\n\n<h2>Рецепт</h2>\n\n<ol>\n<li>Очистите чеснок от кожуры и крупно нарежьте.</li>\n<li>Удалите стебель и семена у перца; крупно нарежьте.</li>\n<li>Добавьте все ингредиенты в пищевой комбайн.</li>\n<li>Измельчите все ингредиенты до состояния пасты.</li>\n<li>Если вы хотите "грубый" хумус, измельчайте пару минут.</li>\n<li>Если вам нужен гладкий хумус, измельчайте дольше.</li>\n</ol>\n\n<p>По вкусу можете добавить в небольших количествах лимон и кориандский перец, лайм и чипотле, хариссу и мяту или шпинат и брынзу. Попробуйте и решите, что подходит вам.</p>\n\n<h2>Хранение</h2>\n\n<p>Храните хумус в запечатанном контейнере в холодильнике. Хумус хранится примерно неделю после приготовления. Если он начнёт пениться, выкидывайте его.</p>\n\n<p>Хумус можно хранить в морозильном отделении 2–3 месяца.</p>';
+var htmlSolution =
+  '<h1>Рецепт быстрого приготовления хумуса.</h1>\n\n<p>Хумус — быстро, вкусно, — и ничего лишнего. Этот рецепт был составлен из других рецептов, которые мне попадались в течение многих лет.</p>\n\n<p>Хумус — это вкусная густая паста, широко используемая в Греческих и Ближневосточных блюдах. Очень вкусно есть его с салатами, мясом на гриле и питой.</p>\n\n<h2>Ингредиенты</h2>\n\n<ul>\n<li>1 банка (400г) турецкого гороха (или бараньего гороха)</li>\n<li>175г тахани</li>\n<li>6 вяленых томатов</li>\n<li>Половинка красного перца</li>\n<li>Щепотка кайенского перца</li>\n<li>1 зубчик чеснока</li>\n<li>Чуть-чуть оливкового масла</li>\n</ul>\n\n<h2>Рецепт</h2>\n\n<ol>\n<li>Очистите чеснок от кожуры и крупно нарежьте.</li>\n<li>Удалите стебель и семена у перца; крупно нарежьте.</li>\n<li>Добавьте все ингредиенты в пищевой комбайн.</li>\n<li>Измельчите все ингредиенты до состояния пасты.</li>\n<li>Если вы хотите "грубый" хумус, измельчайте пару минут.</li>\n<li>Если вам нужен гладкий хумус, измельчайте дольше.</li>\n</ol>\n\n<p>По вкусу можете добавить в небольших количествах лимон и кориандский перец, лайм и чипотле, хариссу и мяту или шпинат и брынзу. Попробуйте и решите, что подходит вам.</p>\n\n<h2>Хранение</h2>\n\n<p>Храните хумус в запечатанном контейнере в холодильнике. Хумус хранится примерно неделю после приготовления. Если он начнёт пениться, выкидывайте его.</p>\n\n<p>Хумус можно хранить в морозильном отделении 2–3 месяца.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -700,8 +721,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -710,8 +734,8 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-textarea.onkeyup = function(){
-  if(solution.value === 'Показать решение') {
+textarea.onkeyup = function () {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -747,7 +771,8 @@ textarea.onkeyup = function(){
   <li>Очистите чеснок от кожуры и крупно нарежьте.</li>
   <li>Удалите стебель и семена у перца; крупно нарежьте перец.</li>
   <li>Добавьте все ингредиенты в пищевой комбайн.</li>
-  <li>Измельчите все ингредиенты до состояния пасты.
+  <li>
+    Измельчите все ингредиенты до состояния пасты.
     <ul>
       <li>Если вы хотите "грубый" хумус, измельчайте пару минут.</li>
       <li>Если вам нужен гладкий хумус, измельчайте дольше.</li>
@@ -797,8 +822,11 @@ textarea.onkeyup = function(){
 При желании вы можете вложить важные и акцентированные слова друг в друга:
 
 ```html
-<p>Эта жидкость <strong>очень токсична</strong> —
-если ты выпьешь её, <strong>то можешь <em>умереть</em></strong>.</p>
+<p>
+  Эта жидкость <strong>очень токсична</strong> — если ты выпьешь её,
+  <strong>то можешь <em>умереть</em></strong
+  >.
+</p>
 ```
 
 ### Активное изучение: Давайте будем важны!
@@ -808,24 +836,27 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%"><h1>Важное объявление</h1>
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+<h1>Важное объявление</h1>
 <p>9 января 2010 года, в воскресенье,
 банда вандалов была обнаружена за кражей нескольких
 садовых гномов из торгового центра в центре Милуоки. На них были
 надеты зелёные спортивные костюмы и глупые шляпы, и,
 по-видимому, они были в нетрезвом состоянии. Если у кого-то
 есть какая-либо информация об этом инциденте, пожалуйста,
-позвоните в полицию немедленно.</p></textarea>
+позвоните в полицию немедленно.</p></textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -852,10 +883,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -863,38 +894,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Важное объявление</h1>\n<p><strong>9 января 2010 года, в воскресенье</strong>, банда <em>вандалов</em> была обнаружена за кражей <strong><em>нескольких</em> садовых гномов</strong> торговом центре в центре <strong>Милуоки</strong>. На них были надеты <em>зелёные спортивные костюмы</em> и <em>глупые шляпы</em>, и, по-видимому, они были в нетрезвом состоянии. Если у кого-то есть <strong>какая-либо</strong> информация об этом инциденте, пожалуйста, позвоните в полицию <strong>немедленно</strong>.</p>';
+var htmlSolution =
+  "<h1>Важное объявление</h1>\n<p><strong>9 января 2010 года, в воскресенье</strong>, банда <em>вандалов</em> была обнаружена за кражей <strong><em>нескольких</em> садовых гномов</strong> торговом центре в центре <strong>Милуоки</strong>. На них были надеты <em>зелёные спортивные костюмы</em> и <em>глупые шляпы</em>, и, по-видимому, они были в нетрезвом состоянии. Если у кого-то есть <strong>какая-либо</strong> информация об этом инциденте, пожалуйста, позвоните в полицию <strong>немедленно</strong>.</p>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -906,8 +938,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -918,10 +953,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -933,7 +968,7 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Playable_code_5', 700, 500) }}
 
-### Курсив, жирный шрифт, подчеркивание...
+### Курсив, жирный шрифт, подчеркивание
 
 Элементы, которые мы обсуждали до сих пор, имеют чёткую привязку к семантике. Ситуация с {{htmlelement ("b")}}, {{htmlelement ("i")}} и {{htmlelement ("u")}} несколько сложнее. Они появились в эпоху, когда CSS поддерживался плохо или вообще не поддерживался, чтобы люди могли писать **жирный** текст, _курсив_ или **подчёркнутый** текст. Такие элементы, которые влияют только на внешний вид, а не на семантику, известны как элементы представления и больше не должны использоваться, поскольку, как мы видели ранее, семантика очень важна для доступности людям с ограниченными возможностями, SEO и так далее.
 
@@ -950,8 +985,8 @@ HTML5 переопределил \<b>, \<i> и \<u> с новыми, неско�
 ```html
 <!-- Научные наименования -->
 <p>
-  Колибри обыкновенный (<i>архилоус обыкновенный</i>) —
-наиболее часто встречающийся вид колибри в северо-восточной Америке.
+  Колибри обыкновенный (<i>архилоус обыкновенный</i>) — наиболее часто
+  встречающийся вид колибри в северо-восточной Америке.
 </p>
 
 <!-- Иностранные слова -->
@@ -961,18 +996,12 @@ HTML5 переопределил \<b>, \<i> и \<u> с новыми, неско�
 </p>
 
 <!-- Явно неправильное произношение или написание -->
-<p>
-  Когда-нибудь я узнаю, как <u>гаварить</u> без ошибок.
-</p>
+<p>Когда-нибудь я узнаю, как <u>гаварить</u> без ошибок.</p>
 
 <!-- Выделение ключевых слов в инструкциях -->
 <ol>
-  <li>
-    <b>Отрежьте</b> два ломтика хлеба.
-  </li>
-  <li>
-    <b>Добавьте</b> кусочек помидора и лист латука между ломтями хлеба.
-  </li>
+  <li><b>Отрежьте</b> два ломтика хлеба.</li>
+  <li><b>Добавьте</b> кусочек помидора и лист латука между ломтями хлеба.</li>
 </ol>
 ```
 

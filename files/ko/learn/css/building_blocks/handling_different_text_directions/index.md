@@ -1,7 +1,6 @@
 ---
 title: 텍스트 표시 방향 제어하기
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -25,11 +24,11 @@ CSS 학습에서 지금까지 경험한 많은 속성과 값은 화면의 크기
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -50,7 +49,7 @@ CSS 쓰기 모드는 텍스트가 가로 또는 세로로 표시되는지 여부
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/en-US/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
+[`writing-mode`](/ko/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
 
 - `horizontal-tb`: 블록의 표시 방향은 위에서 아래 입니다. 문장은 가로로 표시됩니다.
 - `vertical-rl`: 블록의 표시 방향은 오른쪽에서 왼쪽입니다. 문장은 수직으로 표시됩니다.
@@ -80,7 +79,7 @@ CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면
 
 쓰기 모드 외에 텍스트 방향도 있습니다. 위에서 언급한 것처럼, 아랍어와 같은 일부 언어는 가로로 작성되지만, 오른쪽에서 왼쪽으로 작성됩니다. 이것은 창의적 의미에서 사용할 가능성이 있는 것이 아닙니다 — 단순히 오른쪽에 무언가를 정렬하려면 다른 방법이 있습니다 — 그러나 CSS 의 특성의 일부로 이것을 이해하는 것이 중요합니다. 웹은 왼쪽에서 오른쪽으로 표시되는 언어만을 위한 것이 아닙니다!
 
-쓰기 모드와 텍스트 방향이 변경될 수 있기 때문에, 최신 CSS 레이아웃 방법은 왼쪽과 오른쪽, 위와 아래를 참조하지 않습니다. 대신에 그들은 인라인과 블록이라는 아이디어와 함께 ***시작** *과 ***끝** *에 대해 이야기할 것입니다. 지금 그것에 대해 너무 걱정하지 말고 레이아웃을 살펴보기 시작할 때, 이러한 아이디어를 명심하십시오. CSS 에 대한 이해에 도움이 될 것입니다.
+쓰기 모드와 텍스트 방향이 변경될 수 있기 때문에, 최신 CSS 레이아웃 방법은 왼쪽과 오른쪽, 위와 아래를 참조하지 않습니다. 대신에 그들은 인라인과 블록이라는 아이디어와 함께 _시작_ 과 _끝_ 에 대해 이야기할 것입니다. 지금 그것에 대해 너무 걱정하지 말고 레이아웃을 살펴보기 시작할 때, 이러한 아이디어를 명심하십시오. CSS 에 대한 이해에 도움이 될 것입니다.
 
 ## 논리적 속성 및 값
 

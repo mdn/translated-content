@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - graphique
-translation_of: Web/API/CanvasRenderingContext2D
 ---
 
 {{APIRef}}
@@ -16,15 +10,15 @@ L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectang
 Pour obtenir un objet de cette interface, appelez {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "2d" comme argument :
 
 ```js
-var canevas = document.getElementById('tutorial'); // dans votre HTML, cet élément apparaît comme <canvas id="monCanevas"></canvas>
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("tutorial"); // dans votre HTML, cet élément apparaît comme <canvas id="monCanevas"></canvas>
+var ctx = canevas.getContext("2d");
 ```
 
 Une fois que vous avez le contexte de rendu 2D pour un canevas, vous pouvez dessiner à l'intérieur. Par exemple :
 
 ```js
 ctx.fillStyle = "rgb(200,0,0)"; // définit la couleur de remplissage du rectangle
-ctx.fillRect(10, 10, 55, 50);   // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
+ctx.fillRect(10, 10, 55, 50); // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
 ```
 
 Voir les propriétés et les méthodes dans la barre latérale et plus bas. Le [tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial) a davantage d'informations, d'exemples et de ressources également.
@@ -38,7 +32,7 @@ Il existe trois méthodes qui dessinent immédiatement des rectangles sur la bit
 - {{domxref("CanvasRenderingContext2D.fillRect()")}}
   - : Dessine un rectangle rempli à la position _(x, y)_ dont la taille est déterminée par _largeur_ et _hauteur_.
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-  - : Peint un rectangle ayant un point de départ en *(x, y)*, une largeur *l* et une hauteur _h_ sur le canevas, en utilisant le style de trait en cours.
+  - : Peint un rectangle ayant un point de départ en _(x, y)_, une largeur _l_ et une hauteur _h_ sur le canevas, en utilisant le style de trait en cours.
 
 ## Dessiner du texte
 
@@ -72,16 +66,16 @@ Les méthodes et propriétés suivantes controllent comment les lignes sont dess
 
 ## Styles de texte
 
-Les propriétés suivantes contrôlent la manière dont le texte est rendu à l’affichage.
+Les propriétés suivantes contrôlent la manière dont le texte est rendu à l'affichage.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
   - : Paramètre de fonte dont la valeur par défaut est `10px sans-serif`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : Paramètre d’alignement horizontal. Ses valeurs possibles sont : `start` (par défaut), `end`, `left`, `right` et `center`.
+  - : Paramètre d'alignement horizontal. Ses valeurs possibles sont : `start` (par défaut), `end`, `left`, `right` et `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : Paramètre d’alignement vertical par rapport à la ligne de base du texte. Ses valeurs possibles sont : `top`, `hanging`, `middle`, `alphabetic` (par défaut), `ideographic`, `bottom`.
+  - : Paramètre d'alignement vertical par rapport à la ligne de base du texte. Ses valeurs possibles sont : `top`, `hanging`, `middle`, `alphabetic` (par défaut), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : Direction d’affichage. Ses valeurs possibles sont : `ltr, rtl`, `inherit` (par défaut).
+  - : Direction d'affichage. Ses valeurs possibles sont : `ltr, rtl`, `inherit` (par défaut).
 
 ## Fill and stroke styles
 
@@ -129,13 +123,13 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
   - : Adds a quadratic Bézier curve to the current path.
 - {{domxref("CanvasRenderingContext2D.arc()")}}
-  - : Adds an arc to the path which is centered at *(x, y)* position with radius *r* starting at *startAngle* and ending at *endAngle* going in the given direction by *anticlockwise* (defaulting to clockwise).
+  - : Adds an arc to the path which is centered at _(x, y)_ position with radius _r_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.arcTo()")}}
   - : Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.
 - {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
-  - : Adds an ellipse to the path which is centered at *(x, y)* position with the radii *radiusX* and *radiusY* starting at *startAngle* and ending at *endAngle* going in the given direction by *anticlockwise* (defaulting to clockwise).
+  - : Adds an ellipse to the path which is centered at _(x, y)_ position with the radii _radiusX_ and _radiusY_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.rect()")}}
-  - : Creates a path for a rectangle at position *(x, y)* with a size that is determined by *width* and *height*.
+  - : Creates a path for a rectangle at position _(x, y)_ with a size that is determined by _width_ and _height_.
 
 ## Drawing paths
 
@@ -192,7 +186,7 @@ See also the {{domxref("ImageData")}} object.
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
   - : Creates a new, blank {{domxref("ImageData")}} object with the specified dimensions. All of the pixels in the new object are transparent black.
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at *(sx, sy)* and has an *sw* width and *sh* height.
+  - : Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at _(sx, sy)_ and has an _sw_ width and _sh_ height.
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
   - : Paints data from the given {{domxref("ImageData")}} object onto the bitmap. If a dirty rectangle is provided, only the pixels from that rectangle are painted.
 

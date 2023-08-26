@@ -12,7 +12,11 @@ slug: Web/SVG/Attribute/id
 ## 示例
 
 ```html
-<svg width="120" height="120" viewPort="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="120"
+  height="120"
+  viewPort="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
   <style type="text/css">
     <![CDATA[
       #smallRect {
@@ -30,12 +34,13 @@ slug: Web/SVG/Attribute/id
 
 ## 用法说明
 
-| 值     | \<id>   |
+| 值     | \<id>  |
 | ------ | ------ |
 | 默认值 | _None_ |
 | 可动画 | No     |
 
 - \<id>
+
   - : 指定元素的 ID。该 ID 在节点树中必须是唯一的，不能为空字符串，并且不能包含任何空格字符。
 
     > **备注：** 应当避免使用会被解析为 SVG 视图规范的 `id` 值（如 `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`），或被解析为用作 URL 目标片段的基本媒体片段的 `id` 值。

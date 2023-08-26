@@ -13,7 +13,7 @@ slug: Web/API/HTMLImageElement/decode
 ## 構文
 
 ```js
-decode()
+decode();
 ```
 
 ### 引数

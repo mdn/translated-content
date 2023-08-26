@@ -1,8 +1,6 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
-translation_of: Web/HTTP/Status/402
-browser-compat: http.status.402
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

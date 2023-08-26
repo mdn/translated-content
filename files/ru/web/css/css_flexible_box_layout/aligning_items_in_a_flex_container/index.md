@@ -1,8 +1,6 @@
 ---
 title: Выравнивание элементов во Flex контейнере
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере
 ---
 
 {{CSSRef}}
@@ -24,7 +22,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 - {{cssxref("justify-content")}} — управляет выравниванием элементов по главной оси.
 - {{cssxref("align-items")}} — управляет выравниванием элементов по перекрёстной оси.
 - {{cssxref("align-self")}} — управляет выравниванием конкретного flex элемента по перекрёстной оси.
-- {{cssxref("align-content")}} — описывается в спецификации как “упаковка flex строк”; управляет промежутками между flex строками по перекрёстной оси.
+- {{cssxref("align-content")}} — описывается в спецификации как "упаковка flex строк"; управляет промежутками между flex строками по перекрёстной оси.
 
 Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.
 

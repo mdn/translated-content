@@ -1,7 +1,6 @@
 ---
 title: Sémantique
 slug: Glossary/Semantics
-translation_of: Glossary/Semantics
 ---
 
 En programmation, la **sémantique** fait référence au sens d'une partie de code — par exemple "quel effet aura l'exécution de cette ligne de JavaScript ?", ou "quel est le rôle ou le but de cet élément HTML" (plutôt que "à quoi ressemble-t-il ?".)
@@ -17,7 +16,9 @@ Par défaut, il se verra attribué une police de caractères plus grande pour le
 Par ailleurs, vous pouvez faire _ressembler_ n'importe quel élément à un titre de premier niveau. Considérons le code suivant :
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Est-ce un titre de premier niveau ?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Est-ce un titre de premier niveau ?</span
+>
 ```
 
 Cela sera affiché comme un titre de premier niveau mais sans en avoir la valeur sémantique, il n'y aura donc aucun des bénéfices supplémentaires tels que ceux décrits ci-dessus. Il vaut donc mieux utiliser l'élément HTML correct pour la tâche recherchée.
@@ -45,6 +46,6 @@ Ce sont quelques-uns des éléments sémantiques ([source](http://www.w3schools.
 ### Culture générale
 
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Inline_text_semantics) sur MDN
-- [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Probl%C3%A8mes_r%C3%A9solus_par_HTML5) sur MDN
+- [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Problèmes_résolus_par_HTML5) sur MDN
 - [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) sur w3schools
-- [Sémantique des langages de programmation](https://fr.wikipedia.org/wiki/S%C3%A9mantique_des_langages_de_programmation) sur Wikipédia
+- [Sémantique des langages de programmation](https://fr.wikipedia.org/wiki/Sémantique_des_langages_de_programmation) sur Wikipédia

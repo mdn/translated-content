@@ -1,7 +1,6 @@
 ---
 title: Lignes directrices du CSS
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-translation_of: MDN/Guidelines/Code_guidelines/CSS
 ---
 
 {{MDNSidebar}}
@@ -16,7 +15,7 @@ Les directives suivantes couvrent la manière d'écrire les CSS pour les exemple
   - [N'utilisez pas de méthodologies CSS spécifiques](#dont_use_specific_css_methodologies)
   - [Utiliser des unités flexibles/relatives](#use_flexiblerelative_units)
   - [Ne pas utiliser de réinitialisation](#dont_use_resets)
-  - [Planifiez votre CSS — évitez les surcharges](#plan_your_css_%e2%80%94_avoid_overriding)
+  - [Planifiez votre CSS — évitez les surcharges](#plan_your_css_—_avoid_overriding)
 
 - [Style général de codage CSS](#general_css_coding_style)
 
@@ -79,7 +78,7 @@ p {
 
 Pas cela :
 
-```css example-bad
+```css-nolint example-bad
 p { color: white; background-color: black; padding: 1rem; }
 ```
 
@@ -258,7 +257,7 @@ h3 {
 
 Pas ça :
 
-```css example-bad
+```css-nolint example-bad
 h1, h2, h3 {
   font-family: sans-serif;
   text-align: center;

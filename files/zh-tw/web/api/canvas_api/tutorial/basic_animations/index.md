@@ -91,7 +91,7 @@ function draw() {
   var time = new Date();
   ctx.rotate(
     ((2 * Math.PI) / 60) * time.getSeconds() +
-      ((2 * Math.PI) / 60000) * time.getMilliseconds()
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
   );
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 50, 24); // Shadow
@@ -101,7 +101,7 @@ function draw() {
   ctx.save();
   ctx.rotate(
     ((2 * Math.PI) / 6) * time.getSeconds() +
-      ((2 * Math.PI) / 6000) * time.getMilliseconds()
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
   );
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
@@ -185,7 +185,7 @@ function clock() {
   // write Hours
   ctx.save();
   ctx.rotate(
-    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec
+    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
   );
   ctx.lineWidth = 14;
   ctx.beginPath();

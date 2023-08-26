@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ## 構文
 
 ```js
-browser.i18n.getUILanguage()
+browser.i18n.getUILanguage();
 ```
 
 ### 引数

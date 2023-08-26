@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: seeked イベント'
+title: "HTMLMediaElement: seeked イベント"
 slug: Web/API/HTMLMediaElement/seeked_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('seeked', (event) => {});
+addEventListener("seeked", (event) => {});
 
-onseeked = (event) => { };
+onseeked = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onseeked = (event) => { };
 `addEventListener()` を使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('seeked', (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+video.addEventListener("seeked", (event) => {
+  console.log("動画が探していた再生位置を見つけました。");
 });
 ```
 
 `onseeked` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onseeked = (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+  console.log("動画が探していた再生位置を見つけました。");
 };
 ```
 

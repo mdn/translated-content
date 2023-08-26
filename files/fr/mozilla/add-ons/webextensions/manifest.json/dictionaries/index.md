@@ -1,7 +1,6 @@
 ---
 title: dictionaries
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
 ---
 
 {{AddonSidebar}}

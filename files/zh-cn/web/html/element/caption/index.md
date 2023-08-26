@@ -37,6 +37,7 @@ slug: Web/HTML/Element/caption
 本元素包含了所有 [全局特性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `align` {{Deprecated_inline}}
+
   - : 这个可枚举属性表明了 caption 相对于 table 应该如何排列。它可能有以下几个值：
 
     - `left`, 展示在表格左边

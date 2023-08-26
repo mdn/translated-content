@@ -1,7 +1,6 @@
 ---
 title: Cabeçalho HTTP
 slug: Glossary/HTTP_header
-original_slug: Glossario/Cabecalho_HTTP
 ---
 
 Um **Cabeçalho HTTP** é um campo de uma requisição ou resposta HTTP que passa informações adicionais, alterando ou melhorando a precisão da semântica da mensagem ou do corpo. Cabeçalhos são _case-insensitive_, iniciam-se no começo da linha e são seguidos imediamente por um `':'` e um valor dependendo do cabeçalho em si. O valor termina no próximo CRLF ou no fim da mensagem.
@@ -47,20 +46,20 @@ X-Cache-Info: cached
 
 1. Especificações
 
-    1. Sintaxe dos [cabeçalhos](https://tools.ietf.org/html/rfc7230#section-3.2) na especificação HTTP.
+   1. Sintaxe dos [cabeçalhos](https://tools.ietf.org/html/rfc7230#section-3.2) na especificação HTTP.
 
 2. Referência Técnica
 
-    1. [Lista de todos os cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
+   1. [Lista de todos os cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
 
 3. [Glossário](/pt-BR/docs/Glossario)
 
-    1. {{Glossary("HTTP header")}}
-    2. {{Glossary("General header")}}
-    3. {{Glossary("Request header")}}
-    4. {{Glossary("Response header")}}
-    5. {{Glossary("Entity header")}}
-    6. {{Glossary("Forbidden header name")}}
-    7. {{Glossary("Forbidden response header name")}}
-    8. {{Glossary("CORS-safelisted request header")}}
-    9. {{Glossary("CORS-safelisted response header")}}
+   1. {{Glossary("HTTP header")}}
+   2. {{Glossary("General header")}}
+   3. {{Glossary("Request header")}}
+   4. {{Glossary("Response header")}}
+   5. {{Glossary("Entity header")}}
+   6. {{Glossary("Forbidden header name")}}
+   7. {{Glossary("Forbidden response header name")}}
+   8. {{Glossary("CORS-safelisted request header")}}
+   9. {{Glossary("CORS-safelisted response header")}}

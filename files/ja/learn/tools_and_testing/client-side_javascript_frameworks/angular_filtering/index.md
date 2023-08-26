@@ -49,31 +49,31 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 <!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
  -->
 
-  <!-- Buttons that show all, still to do, or done items on click -->
-  <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'all'"
-      (click)="filter = 'all'">
-      All
-    </button>
+<!-- Buttons that show all, still to do, or done items on click -->
+<div class="btn-wrapper">
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'all'"
+    (click)="filter = 'all'">
+    All
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'active'"
-      (click)="filter = 'active'">
-      To Do
-    </button>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'active'"
+    (click)="filter = 'active'">
+    To Do
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'done'"
-      (click)="filter = 'done'">
-      Done
-    </button>
-  </div>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'done'"
+    (click)="filter = 'done'">
+    Done
+  </button>
+</div>
 
-  <!-- <h2>\{{items.length}} item(s)</h2>
+<!-- <h2>\{{items.length}} item(s)</h2>
         <ul>... -->
 ```
 
@@ -81,7 +81,7 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 
 - ユーザーが **All** ボタンをクリックすると、すべてのアイテムが表示されます。
 - ユーザーが **To do** ボタンをクリックすると、 `done` の値が `false` のアイテムが表示されます。
-- ユーザーが **Done** ボタンをクリックすると、 `done`  値が `true` のアイテムが表示されます。
+- ユーザーが **Done** ボタンをクリックすると、 `done` 値が `true` のアイテムが表示されます。
 
 角括弧 `[]` を使用したクラス属性バインディングは、ボタンのテキストの色を制御します。
 クラスバインディング `[class.active]` は、 `filter` の値が式と一致する場合に `active` クラスを適用します。

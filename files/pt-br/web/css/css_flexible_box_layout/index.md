@@ -70,8 +70,8 @@ A propriedade `align-content`, `align-self`, `align-items` e `justify-content` a
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
+| Especificação                  | Status                      | Comentário         |
+| ------------------------------ | --------------------------- | ------------------ |
 | {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Definição inicial. |
 
 ## Veja também

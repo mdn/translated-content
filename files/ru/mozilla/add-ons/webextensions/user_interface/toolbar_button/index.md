@@ -1,10 +1,6 @@
 ---
 title: Кнопка в панели инструментов
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
-tags:
-  - Кнопка панели инструментов
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
 
 {{AddonSidebar}}
@@ -20,7 +16,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 ## Объявление в manifest.json
 
-За кнопку на панели инструментов отвечает свойство манифеста [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action):
+За кнопку на панели инструментов отвечает свойство манифеста [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action):
 
 ```json
 "browser_action": {
@@ -44,7 +40,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 Если же указать в качестве реакции на нажатие всплывающее окно, то событие передано не будет. Вместо этого около кнопки отобразится всплывающее окно - отдельная маленькая страница, дальнейшее взаимодействие с пользователем берёт на себя она. Подробнее этот сценарий описан на отдельной странице, посвящённой [всплывающим окнам](/en-US/Add-ons/WebExtensions/Popups).
 
-Все свойства кнопки на панели инструментов можно изменить программно через API [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+Все свойства кнопки на панели инструментов можно изменить программно через API [`browserAction`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 
 ## Примеры
 

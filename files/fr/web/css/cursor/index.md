@@ -1,8 +1,6 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
 
 {{CSSRef}}
@@ -22,8 +20,12 @@ cursor: auto;
 cursor: url(hand.cur), pointer;
 
 /* Une valeur d'URL avec des coordonnées et un mot-clé par défaut */
-cursor: url(cursor1.png) 4 12, auto;
-cursor: url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* Valeurs globales */
 cursor: inherit;
@@ -38,7 +40,10 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
 Par exemple, on peut indiquer deux images grâce à deux valeurs `<url>` et fournir des coordonnées `<x><y>` pour la deuxième. Si aucune des images n'a pu être chargée, on recourt au mot-clé `progress` :
 
 ```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
+cursor:
+  url(one.svg),
+  url(two.svg) 5 5,
+  progress;
 ```
 
 ### Valeurs
@@ -385,13 +390,9 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 ### HTML
 
 ```html
-<p class="toto">
-  On dirait qu'on pourrait sélectionner une zone.
-</p>
+<p class="toto">On dirait qu'on pourrait sélectionner une zone.</p>
 
-<p class="truc">
-  Et là on peut zoomer.
-</p>
+<p class="truc">Et là on peut zoomer.</p>
 ```
 
 ### Résultat

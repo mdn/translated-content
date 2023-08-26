@@ -1,5 +1,5 @@
 ---
-title: ':read-only'
+title: ":read-only"
 slug: Web/CSS/:read-only
 ---
 
@@ -36,8 +36,8 @@ input:read-only {
 ### HTML
 
 ```html
-<input type="text" value="Aquí puedes poner lo que quieras.">
-<input type="text" value="Campo de solo lectura." readonly>
+<input type="text" value="Aquí puedes poner lo que quieras." />
+<input type="text" value="Campo de solo lectura." readonly />
 <p>Este es un párrafo normal.</p>
 <p contenteditable="true">Puedes editar este párrafo, ¡inténtalo!</p>
 ```
@@ -45,13 +45,25 @@ input:read-only {
 ### CSS
 
 ```css
-input { min-width: 25em; }
-input:-moz-read-only { background: cyan; }
-input:read-only { background: cyan; }
+input {
+  min-width: 25em;
+}
+input:-moz-read-only {
+  background: cyan;
+}
+input:read-only {
+  background: cyan;
+}
 
-p:-moz-read-only { background: lightgray; }
-p:read-only { background: lightgray; }
-p[contenteditable="true"] { color: blue; }
+p:-moz-read-only {
+  background: lightgray;
+}
+p:read-only {
+  background: lightgray;
+}
+p[contenteditable="true"] {
+  color: blue;
+}
 ```
 
 ### Resultado

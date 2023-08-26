@@ -1,8 +1,6 @@
 ---
 title: compositionend
 slug: Web/API/Element/compositionend_event
-translation_of: Web/API/Element/compositionend_event
-original_slug: Web/Events/compositionend
 ---
 
 L'événement **`compositionend`** est déclenché lorsque la composition d'un texte via {{glossary("input method editor", "méthode de saisie")}} est terminée ou annulée (démarre avec des caractères spéciaux qui requièrent une séquence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mot sur mobile).
@@ -36,8 +34,11 @@ Par exemple, cette événement pourrait être déclanché quand un utilisateur s
 
 ```html
 <div class="control">
-  <label for="name">Sur macOS, cliquez sur la boîte de texte,<br> puis appuyez sur <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd>:</label>
-  <input type="text" id="example" name="example">
+  <label for="name"
+    >Sur macOS, cliquez sur la boîte de texte,<br />
+    puis appuyez sur <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd>:</label
+  >
+  <input type="text" id="example" name="example" />
 </div>
 
 <div class="event-log">
@@ -49,7 +50,7 @@ Par exemple, cette événement pourrait être déclanché quand un utilisateur s
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -66,12 +67,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {
@@ -85,20 +87,20 @@ kbd {
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector('.event-log-contents');
-const clearLog = document.querySelector('.clear-log');
+const log = document.querySelector(".event-log-contents");
+const clearLog = document.querySelector(".clear-log");
 
-clearLog.addEventListener('click', () => {
-    log.textContent = '';
+clearLog.addEventListener("click", () => {
+  log.textContent = "";
 });
 
 function handleEvent(event) {
-    log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
+  log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener('compositionstart', handleEvent);
-inputElement.addEventListener('compositionupdate', handleEvent);
-inputElement.addEventListener('compositionend', handleEvent);
+inputElement.addEventListener("compositionstart", handleEvent);
+inputElement.addEventListener("compositionupdate", handleEvent);
+inputElement.addEventListener("compositionend", handleEvent);
 ```
 
 ### Resultat

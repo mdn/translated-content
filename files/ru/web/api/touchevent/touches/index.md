@@ -1,7 +1,6 @@
 ---
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
-translation_of: Web/API/TouchEvent/touches
 ---
 
 {{ APIRef("Touch Events") }}
@@ -28,16 +27,28 @@ var touches = touchEvent.touches;
 В следующем фрагменте кода обработчик события {{event("touchstart")}} проверяет длину списка {{domxref("TouchEvent.touches")}} для определения количества точек касаний, которые были активированы, а затем вызывает разные обработчики в зависимости от количества таких точек.
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
-   // Вызов определённого обработчика, в зависимости от
-   // количества точек касания
-   switch (e.touches.length) {
-     case 1: handle_one_touch(e); break;
-     case 2: handle_two_touches(e); break;
-     case 3: handle_three_touches(e); break;
-     default: console.log("Not supported"); break;
-   }
- }, false);
+someElement.addEventListener(
+  "touchstart",
+  function (e) {
+    // Вызов определённого обработчика, в зависимости от
+    // количества точек касания
+    switch (e.touches.length) {
+      case 1:
+        handle_one_touch(e);
+        break;
+      case 2:
+        handle_two_touches(e);
+        break;
+      case 3:
+        handle_three_touches(e);
+        break;
+      default:
+        console.log("Not supported");
+        break;
+    }
+  },
+  false,
+);
 ```
 
 ## Спецификации

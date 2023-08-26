@@ -1,29 +1,28 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 ---
 
 {{JSRef}}
 
 La función **`Math.trunc()`** devuelve la parte entera de un numero removiendo cualquier dígito decimal (dígitos situados después de la coma).
 
-## Sintaxis.
+## Sintaxis
 
 ```
 Math.trunc(x)
 ```
 
-### Parámetros.
+### Parámetros
 
 - `x`
   - : Un número.
 
-### Valor de retorno.
+### Valor de retorno
 
 La parte entera del número dado.
 
-## Descripción.
+## Descripción
 
 A diferencia de los otros tres métodos de `Math`: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} y {{jsxref("Math.round()")}}, la forma en que `Math.trunc()` funciona es muy simple. _trunca_ (corta) el punto y los dígitos a la derecha de él, sin importar si el argumento es un número positivo o negativo.
 
@@ -33,27 +32,29 @@ El argumento pasado a este método será convertido a un tipo numérico entero.
 
 Debido a que `trunc()` es un método estático de `Math`, siempre úsalo como `Math.trunc()`, en lugar de como un método de un objeto `Math` que hayas creado (`Math` no es un constructor).
 
-## Ejemplos.
+## Ejemplos
 
 ### Usando `Math.trunc()`
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
-## Polyfill.
+## Polyfill
 
 ```js
-Math.trunc = Math.trunc || function (x) {
-    return (x < 0 ? Math.ceil(x) : Math.floor(x));
-}
+Math.trunc =
+  Math.trunc ||
+  function (x) {
+    return x < 0 ? Math.ceil(x) : Math.floor(x);
+  };
 ```
 
 ## Especificaciones
@@ -64,7 +65,7 @@ Math.trunc = Math.trunc || function (x) {
 
 {{Compat}}
 
-## Vea también.
+## Vea también
 
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}

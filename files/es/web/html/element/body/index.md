@@ -1,7 +1,6 @@
 ---
-title: '<body>: El elemento body del documento'
+title: "<body>: El elemento body del documento"
 slug: Web/HTML/Element/body
-original_slug: Web/HTML/Elemento/body
 ---
 
 {{HTMLSidebar}}
@@ -18,7 +17,7 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5"
+          href="/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5"
           >Secciones en HTML5</a
         >
       </td>

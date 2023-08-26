@@ -1,12 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 
 {{JSRef}}
@@ -40,7 +34,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 ```js
 // this:
-const x = Error('I was created using a function call!');
+const x = Error("I was created using a function call!");
 // Такая же функциональность:
 const y = new Error('I was constructed via the "new" keyword!');
 ```
@@ -93,9 +87,9 @@ const y = new Error('I was constructed via the "new" keyword!');
 
 ```js
 try {
-  throw new Error('Уупс!');
+  throw new Error("Уупс!");
 } catch (e) {
-  console.log(e.name + ': ' + e.message);
+  console.log(e.name + ": " + e.message);
 }
 ```
 
@@ -108,9 +102,9 @@ try {
   foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.log(e.name + ': ' + e.message);
+    console.log(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.log(e.name + ': ' + e.message);
+    console.log(e.name + ": " + e.message);
   }
   // ... и т.д.
 }
@@ -127,9 +121,9 @@ try {
 ```js
 // Создаём новый объект, затем через прототип делаем его наследником конструктора Error.
 function MyError(message) {
-  this.name = 'MyError';
-  this.message = message || 'Сообщение по умолчанию';
-  this.stack = (new Error()).stack;
+  this.name = "MyError";
+  this.message = message || "Сообщение по умолчанию";
+  this.stack = new Error().stack;
 }
 MyError.prototype = Object.create(Error.prototype);
 MyError.prototype.constructor = MyError;
@@ -137,15 +131,15 @@ MyError.prototype.constructor = MyError;
 try {
   throw new MyError();
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'Сообщение по умолчанию'
+  console.log(e.name); // 'MyError'
+  console.log(e.message); // 'Сообщение по умолчанию'
 }
 
 try {
-  throw new MyError('пользовательское сообщение');
+  throw new MyError("пользовательское сообщение");
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'пользовательское сообщение'
+  console.log(e.name); // 'MyError'
+  console.log(e.message); // 'пользовательское сообщение'
 }
 ```
 

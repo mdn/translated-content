@@ -85,11 +85,11 @@ Express Application Generator 允許您配置許多流行的視圖/模板引擎�
 
 - 具備生產力之前所需要花費的時間 — 如果您的團隊已經有模板語言的經驗，那麼使用該語言可能會更快地提高生產力。如果不是，那麼你應該考慮候選模板引擎的相對學習曲線（即以投入時間與得到的生產力為 XY 座標所繪製的曲線）。
 - 人氣和活躍 — 回顧引擎的普及程度以及它是否擁有活躍的社區。當您在網站的生命週期中遇到問題時，能夠獲得對引擎的支持非常重要。
-- 風格 — 某些模板引擎使用特定的標記，來指示在 “普通” HTML 內插入的內容，而其他模板引擎使用不同的語法（例如，使用縮進和區塊名稱）構造 HTML。
+- 風格 — 某些模板引擎使用特定的標記，來指示在 「普通」 HTML 內插入的內容，而其他模板引擎使用不同的語法（例如，使用縮進和區塊名稱）構造 HTML。
 - 性能/渲染時間。
 - 特點 — 你應該考慮你看中的引擎是否具有以下功能：
 
-  - 佈局繼承：允許您定義基本模板，然後 “繼承” 它的一部分，使特定頁面可以有不同的呈現。比起通過包含大量必需組件，或每次從頭開始構建模板，這通常是更好的方式。
+  - 佈局繼承：允許您定義基本模板，然後 「繼承」 它的一部分，使特定頁面可以有不同的呈現。比起通過包含大量必需組件，或每次從頭開始構建模板，這通常是更好的方式。
   - "Include" 支持：允許您通過包含其他模板，來構建模板。
   - 簡潔的變量和循環控制語法。
   - 能夠在模板級別過濾變量值（例如，將變量設置為大寫，或格式化日期值）。
@@ -179,15 +179,15 @@ express express-locallibrary-tutorial --view=pug
      DEBUG=express-locallibrary-tutorial:* npm start
      ```
 
-3. 然後在瀏覽器中加載 <http://localhost:3000/> ，以訪問該應用程序。
+3. 然後在瀏覽器中加載 `http://localhost:3000/`，以訪問該應用程序。
 
 你應該會看到一個瀏覽器頁面，就像這樣:
 
 ![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
-你有一個能工作的 Express 應用了，讓它在 [http://localhost:3000/](http://localhost:3000/) 服務。
+你有一個能工作的 Express 應用了，讓它在 `http://localhost:3000/` 服務。
 
-> **備註：** 您也可以使用 `npm start`命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
+> **備註：** 你也可以使用 `npm start` 命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
 >
 > ```bash
 > >SET DEBUG=express-locallibrary-tutorial:* & npm start
@@ -205,7 +205,7 @@ express express-locallibrary-tutorial --view=pug
 
 在您重新啟動服務器之前，您對 Express 網站所做的任何更改，目前都不可見。每次進行更改時，必須停止並重新啟動服務器，很快變得非常煩人，因此值得花時間使服務器在需要時，自動重新啟動。
 
-這種工具中，最簡單的之一就是 [nodemon](https://github.com/remy/nodemon)。這通常是全局安裝的（因為它是一個“工具”），但在這裡，我們將在本地安裝和使用它，作為開發人員依賴項，以便任何使用該項目的開發人員，在安裝應用程序時自動獲取它。在骨架項目的根目錄中，使用以下命令：
+這種工具中，最簡單的之一就是 [nodemon](https://github.com/remy/nodemon)。這通常是全局安裝的（因為它是一個「工具」），但在這裡，我們將在本地安裝和使用它，作為開發人員依賴項，以便任何使用該項目的開發人員，在安裝應用程序時自動獲取它。在骨架項目的根目錄中，使用以下命令：
 
 ```bash
 npm install --save-dev nodemon
@@ -244,7 +244,7 @@ npm install --save-dev nodemon
 
 > **備註：** 現在，如果您編輯項目中的任何文件，服務器將重新啟動（或者您可以隨時在命令提示符下，鍵入`rs`來重新啟動它）。您仍需要重新加載瀏覽器，以刷新頁面。
 >
-> 我們現在必須調用“`npm run <scriptname>`”而不是 `npm start`，因為“start”實際上是映射到指定腳本的 NPM 命令。我們可以在啟動腳本中替換該命令，但我們只想在開發期間使用 nodemon，因此創建新的腳本命令是有意義的。
+> 我們現在必須調用「`npm run <scriptname>`」而不是 `npm start`，因為「start」實際上是映射到指定腳本的 NPM 命令。我們可以在啟動腳本中替換該命令，但我們只想在開發期間使用 nodemon，因此創建新的腳本命令是有意義的。
 
 ## 從產生器得到的項目
 
@@ -252,7 +252,7 @@ npm install --save-dev nodemon
 
 ### 目錄結構
 
-從產生器得到的生成項目，現在已經安裝了依賴項，具有以下文件結構 （**不帶**前綴 “/” 的項目，表示文件）。 **package.json** 文件定義了應用程序依賴項，和其他信息。它還定義了一個啟動腳本，它將調用應用程序入口點 JavaScript 文件 **/bin/www**。這設置了一些應用程序的錯誤處理，然後加載 **app.js** ，來完成剩下的工作。應用程序路徑，存儲在 **/routes** 目錄下的單獨模塊中。模板存儲在 **/views** 目錄下。
+從產生器得到的生成項目，現在已經安裝了依賴項，具有以下文件結構 （**不帶**前綴 「/」 的項目，表示文件）。 **package.json** 文件定義了應用程序依賴項，和其他信息。它還定義了一個啟動腳本，它將調用應用程序入口點 JavaScript 文件 **/bin/www**。這設置了一些應用程序的錯誤處理，然後加載 **app.js** ，來完成剩下的工作。應用程序路徑，存儲在 **/routes** 目錄下的單獨模塊中。模板存儲在 **/views** 目錄下。
 
 ```plain
 /express-locallibrary-tutorial
@@ -314,7 +314,7 @@ npm install --save-dev nodemon
 - [morgan](https://www.npmjs.com/package/morgan): 搭配 node 使用的 HTTP 請求記錄器中間層軟件。
 - [serve-favicon](https://www.npmjs.com/package/serve-favicon): 用於提供收藏圖標 [favicon](https://en.wikipedia.org/wiki/Favicon) 的 node 中間層軟件（這是用於表示瀏覽器選項卡、書籤等網站內的圖標）。
 
-腳本部分，定義了一個“開始” "start" 腳本，當我們調用 `npm start` 來啟動服務器時，這就是我們所調用的腳本。從腳本定義中，您可以看到這實際上用 node 啟動了 JavaScript 文件 **./bin/www**。它還定義了一個“devstart” 腳本，我們在調用 `npm run devstart` 時調用它。這將啟動相同的 **./bin/www** 文件，但使用 nodemon 調用而不是 node 。
+腳本部分，定義了一個「開始」 "start" 腳本，當我們調用 `npm start` 來啟動服務器時，這就是我們所調用的腳本。從腳本定義中，您可以看到這實際上用 node 啟動了 JavaScript 文件 **./bin/www**。它還定義了一個「devstart」 腳本，我們在調用 `npm run devstart` 時調用它。這將啟動相同的 **./bin/www** 文件，但使用 nodemon 調用而不是 node 。
 
 ```json
   "scripts": {
@@ -325,7 +325,7 @@ npm install --save-dev nodemon
 
 ### www 文件
 
-文件 **/bin/www** 是應用程序入口點！它做的第一件事是 `require()` “真正的” 應用程序入口點（即項目根目錄中的 app.js ），**app.js** 會設置並返回 [`express()`](http://expressjs.com/en/api.html)應用程序的對象。
+文件 **/bin/www** 是應用程序入口點！它做的第一件事是 `require()` 「真正的」 應用程序入口點（即項目根目錄中的 app.js ），**app.js** 會設置並返回 [`express()`](http://expressjs.com/en/api.html)應用程序的對象。
 
 ```js
 #!/usr/bin/env node
@@ -339,7 +339,7 @@ var app = require("../app");
 
 > **備註：** `require()` 是一個全局 node 函數，用於將模塊導入當前文件。這裡我們使用相對路徑指定 **app.js** 模塊，並省略可選的（**.js**）文件擴展名。
 
-此文件中的其餘代碼，將設置一個 node 運行的 HTTP 服務器，並將應用 app 設置為特定的端口（在環境變量中定義，如果變量未定義，則定義為 3000），並開始監聽和報告服務器錯誤和連接。現在你並不需要知道代碼的其他內容（這個文件中的所有內容都是 “樣板文件” ），但如果你感興趣，可以隨時查看它。
+此文件中的其餘代碼，將設置一個 node 運行的 HTTP 服務器，並將應用 app 設置為特定的端口（在環境變量中定義，如果變量未定義，則定義為 3000），並開始監聽和報告服務器錯誤和連接。現在你並不需要知道代碼的其他內容（這個文件中的所有內容都是 「樣板文件」 ），但如果你感興趣，可以隨時查看它。
 
 ### app.js
 
@@ -365,7 +365,7 @@ var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 ```
 
-然後我們用 `require()`導入來自我們的路由目錄的模塊。這些模塊/文件包含用於處理特定的相關“路由”集合（URL 路徑）的代碼。當我們擴展骨架應用程序，例如列出圖書館中的所有書籍時，我們將添加一個新文件，來處理與書籍相關的路由。
+然後我們用 `require()`導入來自我們的路由目錄的模塊。這些模塊/文件包含用於處理特定的相關「路由」集合（URL 路徑）的代碼。當我們擴展骨架應用程序，例如列出圖書館中的所有書籍時，我們將添加一個新文件，來處理與書籍相關的路由。
 
 ```js
 var indexRouter = require("./routes/index");
@@ -374,7 +374,7 @@ var usersRouter = require("./routes/users");
 
 > **備註：** 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。
 
-接下來，我們使用導入的 express 模塊 ，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 “pug” ）。
+接下來，我們使用導入的 express 模塊 ，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 「pug」 ）。
 
 ```js
 var app = express();
@@ -478,7 +478,7 @@ block content
 
 ## 挑戰自己
 
-在 **/routes/users.js** 中創建一個新路由，它將在 `/users/cool/`上顯示文本 “You're so cool”。通過運行服務器，並在瀏覽器中訪問 <http://localhost:3000/users/cool/> 來測試它。
+在 **/routes/users.js** 中創建一個新路由，它將在 `/users/cool/`上顯示文本 「You're so cool」。通過運行服務器，並在瀏覽器中訪問 <http://localhost:3000/users/cool/> 來測試它。
 
 ## 總結
 

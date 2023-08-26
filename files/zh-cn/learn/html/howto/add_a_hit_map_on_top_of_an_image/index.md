@@ -51,10 +51,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 你将需要一个特殊的 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性。为图像映射提供一个唯一标识，这个标识不能包含空格。将这个标识 (preceded by a hash) 作为 `usemap` 属性的值：
 
 ```html
-<img
-  src="image-map.png"
-  alt=""
-  usemap="#example-map-1" />
+<img src="image-map.png" alt="" usemap="#example-map-1" />
 ```
 
 ### 步骤 2: 激活你的热点
@@ -62,9 +59,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 在这一步中，将所有代码放置 {{htmlelement('map')}} 标签中。`<map>` 只需要一个属性，设置 [`name`](/zh-CN/docs/Web/HTML/Element/map#name) 和上面 `usemap` 属性一样的 map 值：
 
 ```html
-<map name="example-map-1">
-
-</map>
+<map name="example-map-1"> </map>
 ```
 
 `在<map>` 元素中，我们需要嵌套 {{htmlelement('area')}} 元素。一个 `<area>` 元素对应一个热点.。为保持键盘导航的直观，请确保`<area>` 的源顺序和视觉上的热点顺序一致。
@@ -90,13 +85,17 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 ```html
 <map name="example-map-1">
-  <area shape="circle" coords="200,250,25"
-    href="page-2.html" alt="circle example" />
+  <area
+    shape="circle"
+    coords="200,250,25"
+    href="page-2.html"
+    alt="circle example" />
 
-
-  <area shape="rect" coords="10, 5, 20, 15"
-    href="page-3.html" alt="rectangle example" />
-
+  <area
+    shape="rect"
+    coords="10, 5, 20, 15"
+    href="page-3.html"
+    alt="rectangle example" />
 </map>
 ```
 

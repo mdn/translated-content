@@ -1,5 +1,5 @@
 ---
-title: '<h1>–<h6>: HTML 구획 제목 요소'
+title: "<h1>–<h6>: HTML 구획 제목 요소"
 slug: Web/HTML/Element/Heading_Elements
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/Heading_Elements
 **HTML `<h1>`–`<h6>` 요소**는 6단계의 구획 제목을 나타냅니다. 구획 단계는 `<h1>`이 가장 높고 `<h6>`은 가장 낮습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -136,29 +134,29 @@ slug: Web/HTML/Element/Heading_Elements
 
 1. `h1` Beetles
 
-    1. `h2` Etymology
-    2. `h2` Distribution and Diversity
-    3. `h2` Evolution
+   1. `h2` Etymology
+   2. `h2` Distribution and Diversity
+   3. `h2` Evolution
 
-        1. `h3` Late Paleozoic
-        2. `h3` Jurassic
-        3. `h3` Cretaceous
-        4. `h3` Cenozoic
+      1. `h3` Late Paleozoic
+      2. `h3` Jurassic
+      3. `h3` Cretaceous
+      4. `h3` Cenozoic
 
-    4. `h2` External Morphology
+   4. `h2` External Morphology
 
-        1. `h3` Head
+      1. `h3` Head
 
-            1. `h4` Mouthparts
+         1. `h4` Mouthparts
 
-        2. `h3` Thorax
+      2. `h3` Thorax
 
-            1. `h4` Prothorax
-            2. `h4` Pterothorax
+         1. `h4` Prothorax
+         2. `h4` Pterothorax
 
-        3. `h3` Legs
-        4. `h3` Wings
-        5. `h3` Abdomen
+      3. `h3` Legs
+      4. `h3` Wings
+      5. `h3` Abdomen
 
 중첩 제목에서, 하위 구획을 닫을 땐 제목 단계를 위로 "건너뛸" 수 있습니다.
 
@@ -174,7 +172,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 스크린 리더 사용자가 자주 사용하는 다른 기술은 [콘텐츠 구획](/ko/docs/Web/HTML/Element#콘텐츠_구획)의 목록을 생성한 후, 이를 통해 페이지 레이아웃을 파악하는 것입니다.
 
-콘텐츠 구획에는 [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 {{htmlattrxref("id")}} 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
+콘텐츠 구획에는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
 
 #### 예제
 

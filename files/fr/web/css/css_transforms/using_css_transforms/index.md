@@ -1,8 +1,6 @@
 ---
 title: Utilisation des transformations CSS
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
-original_slug: Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS
 ---
 
 {{CSSRef}}
@@ -33,9 +31,10 @@ Voici une version originale du logo MDN&nbsp;:
 Ici, on le tourne de 90 degrés depuis le coin inférieur gauche&nbsp;:
 
 ```html
-<img style="transform: rotate(90deg);
+<img
+  style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="logo.png">
+  src="logo.png" />
 ```
 
 {{EmbedLiveSample('', 'auto', 250)}}
@@ -45,9 +44,10 @@ Ici, on le tourne de 90 degrés depuis le coin inférieur gauche&nbsp;:
 Ici, on applique une distorsion de 10 degrés et on translate l'image de 150 pixels sur l'axe des abscisses&nbsp;:
 
 ```html
-<img style="transform: skewx(10deg) translatex(150px);
+<img
+  style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="logo.png">
+  src="logo.png" />
 ```
 
 {{EmbedLiveSample('')}}
@@ -72,10 +72,8 @@ Le fragment HTML qui suit crée quatre copies de la même boîte, chacune ayant 
 <table>
   <tbody>
     <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
+      <th><code>perspective: 250px;</code></th>
+      <th><code>perspective: 350px;</code></th>
     </tr>
     <tr>
       <td>
@@ -104,10 +102,8 @@ Le fragment HTML qui suit crée quatre copies de la même boîte, chacune ayant 
       </td>
     </tr>
     <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
+      <th><code>perspective: 500px;</code></th>
+      <th><code>perspective: 650px;</code></th>
     </tr>
     <tr>
       <td>
@@ -223,8 +219,10 @@ Ce fragment de code CSS utilise des classes pour chacune des perspectives et d'a
 }
 
 /* Et on rend le tableau un peu plus joli */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -245,175 +243,173 @@ Dans cet exemple, on illustre les valeurs les plus communes `perspective-origin`
 
 ```html
 <section>
-
-<figure>
-  <figcaption><code>perspective-origin: top left;</code></figcaption>
+  <figure>
+    <figcaption><code>perspective-origin: top left;</code></figcaption>
     <div class="container">
-     <div class="cube potl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-     </div>
+      <div class="cube potl">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: top;</code></figcaption>
-   <div class="container">
-    <div class="cube potm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: top;</code></figcaption>
+    <div class="container">
+      <div class="cube potm">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: top right;</code></figcaption>
-  <div class="container">
-    <div class="cube potr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: top right;</code></figcaption>
+    <div class="container">
+      <div class="cube potr">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: left;</code></figcaption>
-  <div class="container">
-    <div class="cube poml">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: left;</code></figcaption>
+    <div class="container">
+      <div class="cube poml">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
-  <div class="container">
-    <div class="cube pomm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
+    <div class="container">
+      <div class="cube pomm">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: right;</code></figcaption>
-  <div class="container">
-    <div class="cube pomr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: right;</code></figcaption>
+    <div class="container">
+      <div class="cube pomr">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: bottom left;</code></figcaption>
-  <div class="container">
-    <div class="cube pobl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: bottom left;</code></figcaption>
+    <div class="container">
+      <div class="cube pobl">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: bottom;</code></figcaption>
-  <div class="container">
-    <div class="cube pobm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: bottom;</code></figcaption>
+    <div class="container">
+      <div class="cube pobm">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: bottom right;</code></figcaption>
-  <div class="container">
-    <div class="cube pobr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: bottom right;</code></figcaption>
+    <div class="container">
+      <div class="cube pobr">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200neg">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
+    <div class="container">
+      <div class="cube po200200neg">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200pos">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
+    <div class="container">
+      <div class="cube po200200pos">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
+    <div class="container">
+      <div class="cube po200200">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
-
+  </figure>
 </section>
 ```
 
@@ -516,7 +512,7 @@ Dans cet exemple, on illustre les valeurs les plus communes `perspective-origin`
 
 /* On agence le tout de façon plus agréable */
 section {
-  background-color: #EEE;
+  background-color: #eee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

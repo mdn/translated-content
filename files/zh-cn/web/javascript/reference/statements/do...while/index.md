@@ -35,13 +35,13 @@ while (condition);
 ### JavaScript 内容
 
 ```js
-var result = '';
+var result = "";
 var i = 0;
 do {
-   i += 1;
-   result += i + ' ';
+  i += 1;
+  result += i + " ";
 } while (i < 5);
-document.getElementById('example').innerHTML = result;
+document.getElementById("example").innerHTML = result;
 ```
 
 ### 结果

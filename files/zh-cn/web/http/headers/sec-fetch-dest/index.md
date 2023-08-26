@@ -30,7 +30,7 @@ slug: Web/HTTP/Headers/Sec-Fetch-Dest
 
 ## 语法
 
- ```
+```
 Sec-Fetch-Dest: audio
 Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document

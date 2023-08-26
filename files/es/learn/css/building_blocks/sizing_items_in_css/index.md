@@ -1,7 +1,6 @@
 ---
 title: Dimensionar elementos en CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
-original_slug: Learn/CSS/Building_blocks/Dimensionar_elementos_en_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

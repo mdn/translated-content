@@ -1,15 +1,6 @@
 ---
 title: Мета-программирование
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Meta
-  - Meta programming
-  - Proxy
-  - Reflect
-  - Метапрограммирование
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -22,9 +13,10 @@ translation_of: Web/JavaScript/Guide/Meta_programming
 
 ```js
 var handler = {
-  get: function(target, name) {
+  get: function (target, name) {
     return name in target ? target[name] : 42;
-}};
+  },
+};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
@@ -363,20 +355,23 @@ console.log(p.a, p.b); // 1, 42
 Метод {{jsxref("Proxy.revocable()")}} создаёт отзываемый объект `Proxy`. Такой прокси объект может быть отозван функцией `revoke`, которая отключает все ловушки-обработчики. После этого любые операции над прокси объектом вызовут ошибку {{jsxref("TypeError")}}.
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]';
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
-console.log(proxy.foo);  // ошибка TypeError
-proxy.foo = 1;           // снова ошибка TypeError
-delete proxy.foo;        // опять TypeError
-typeof proxy;            // "object", для метода typeof нет ловушек
+console.log(proxy.foo); // ошибка TypeError
+proxy.foo = 1; // снова ошибка TypeError
+delete proxy.foo; // опять TypeError
+typeof proxy; // "object", для метода typeof нет ловушек
 ```
 
 ## Рефлексия
@@ -388,7 +383,7 @@ typeof proxy;            // "object", для метода typeof нет лову
 Например, метод {{jsxref("Reflect.has()")}} это тот же [`оператор in`](/ru/docs/Web/JavaScript/Reference/Operators/in) но в виде функции:
 
 ```js
-Reflect.has(Object, 'assign'); // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### Улучшенная функция `apply`
@@ -408,10 +403,10 @@ Reflect.apply(Math.floor, undefined, [1.75]);
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index;
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3]);
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 

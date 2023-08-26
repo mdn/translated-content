@@ -1,12 +1,11 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
 
 {{AddonSidebar}}
 
-L’API de la [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permet à une extension d’interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l’utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.
+L'API de la [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permet à une extension d'interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l'utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.
 
 Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « bookmarks » dans son fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
 
@@ -17,18 +16,18 @@ Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le 
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
   - : Représente un marque-page ou un dossier dans l'arborescence des marque-pages.
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
-  - : Un énumérateur {{jsxref("String")}} qui décrit si un nœud de l’arbre est un marque-page, un dossier ou un séparateur.
+  - : Un énumérateur {{jsxref("String")}} qui décrit si un nœud de l'arbre est un marque-page, un dossier ou un séparateur.
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
-  - : Un {{jsxref("String")}} énumère ce qui spécifie pourquoi un marque-page ou un dossier n’est pas possible.
+  - : Un {{jsxref("String")}} énumère ce qui spécifie pourquoi un marque-page ou un dossier n'est pas possible.
 - {{WebExtAPIRef("bookmarks.CreateDetails")}}
-  - : Contient des informations passées à la fonction {{WebExtAPIRef("bookmarks.create()")}} lors de la création d’un nouveau marque-page.
+  - : Contient des informations passées à la fonction {{WebExtAPIRef("bookmarks.create()")}} lors de la création d'un nouveau marque-page.
 
 ## Les fonctions
 
 - {{WebExtAPIRef("bookmarks.create()")}}
   - : Créer un marque-page ou un dossier.
 - {{WebExtAPIRef("bookmarks.get()")}}
-  - : Récupère un ou plusieurs {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, compte tenu d’un identifiant de marque-page ou d’un ensemble d’identifiants de marque-pages.
+  - : Récupère un ou plusieurs {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, compte tenu d'un identifiant de marque-page ou d'un ensemble d'identifiants de marque-pages.
 - {{WebExtAPIRef("bookmarks.getChildren()")}}
   - : Récupère les enfants spécifiés {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
 - {{WebExtAPIRef("bookmarks.getRecent()")}}
@@ -36,34 +35,34 @@ Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le 
 - {{WebExtAPIRef("bookmarks.getSubTree()")}}
   - : Récupère un nombre demandé de favoris récemment ajoutés.
 - {{WebExtAPIRef("bookmarks.getTree()")}}
-  - : Récupère l’intégralité de l’arborescence des marques pages dans un tableau d’objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+  - : Récupère l'intégralité de l'arborescence des marques pages dans un tableau d'objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
 - {{WebExtAPIRef("bookmarks.move()")}}
-  - : Déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} vers un nouvel emplacement dans l’arborescence de marque-pages.
+  - : Déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} vers un nouvel emplacement dans l'arborescence de marque-pages.
 - {{WebExtAPIRef("bookmarks.remove()")}}
-  - : Supprime un marque page ou un dossier de marque-pages vide, en fonction de l’ID du noeud.
+  - : Supprime un marque page ou un dossier de marque-pages vide, en fonction de l'ID du noeud.
 - {{WebExtAPIRef("bookmarks.removeTree()")}}
-  - : Supprime de manière récursive un dossier de marque-pages ; c’est-à-dire, étant donné l’ID d’un noeud de dossier, supprime ce noeud et tous ses descendants.
+  - : Supprime de manière récursive un dossier de marque-pages ; c'est-à-dire, étant donné l'ID d'un noeud de dossier, supprime ce noeud et tous ses descendants.
 - {{WebExtAPIRef("bookmarks.search()")}}
   - : Recherche {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} une correspondant à un ensemble de critères spécifié.
 - {{WebExtAPIRef("bookmarks.update()")}}
-  - : Met à jour le titre et/ou l’URL d’un marque-page, ou un nom de dossier de marque-pages, en fonction de l’ID d’un marque-page.
+  - : Met à jour le titre et/ou l'URL d'un marque-page, ou un nom de dossier de marque-pages, en fonction de l'ID d'un marque-page.
 
 ## Events
 
 - {{WebExtAPIRef("bookmarks.onCreated")}}
-  - : Déclenché lorsqu’un marque-page ou un dossier est créé.
+  - : Déclenché lorsqu'un marque-page ou un dossier est créé.
 - {{WebExtAPIRef("bookmarks.onRemoved")}}
-  - : Déclenché lorsqu’un marque-page ou un dossier est supprimé. Lorsqu’un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.
+  - : Déclenché lorsqu'un marque-page ou un dossier est supprimé. Lorsqu'un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.
 - {{WebExtAPIRef("bookmarks.onChanged")}}
-  - : Déclenché lorsqu’un marque-page ou un dossier change. Actuellement, seuls les changements de titre et d’URL déclenchent ce type d’événement.
+  - : Déclenché lorsqu'un marque-page ou un dossier change. Actuellement, seuls les changements de titre et d'URL déclenchent ce type d'événement.
 - {{WebExtAPIRef("bookmarks.onMoved")}}
-  - : Déclenché lorsqu’un marque-page ou un dossier est déplacé vers un dossier parent différent ou vers un nouveau décalage dans son dossier.
+  - : Déclenché lorsqu'un marque-page ou un dossier est déplacé vers un dossier parent différent ou vers un nouveau décalage dans son dossier.
 - {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
-  - : Déclenché lorsque l’utilisateur a trié les enfants d’un dossier dans l’interface utilisateur du navigateur. Ceci n’est pas déclenché par un appel {{WebExtAPIRef("bookmarks.move", "move()")}}.
+  - : Déclenché lorsque l'utilisateur a trié les enfants d'un dossier dans l'interface utilisateur du navigateur. Ceci n'est pas déclenché par un appel {{WebExtAPIRef("bookmarks.move", "move()")}}.
 - {{WebExtAPIRef("bookmarks.onImportBegan")}}
-  - : Déclenché lorsqu’une session d’importation de marque-pages est commencée. Les observateurs coûteux doivent ignorer les {{WebExtAPIRef("bookmarks.onCreated")}} mises à jour jusqu’à ce que {{WebExtAPIRef("bookmarks.onImportEnded")}} soit déclenché. Les observateurs doivent toujours gérer d’autres notifications immédiatement.
+  - : Déclenché lorsqu'une session d'importation de marque-pages est commencée. Les observateurs coûteux doivent ignorer les {{WebExtAPIRef("bookmarks.onCreated")}} mises à jour jusqu'à ce que {{WebExtAPIRef("bookmarks.onImportEnded")}} soit déclenché. Les observateurs doivent toujours gérer d'autres notifications immédiatement.
 - {{WebExtAPIRef("bookmarks.onImportEnded")}}
-  - : Déclenché lorsqu’une session d’importation de marque-pages est terminée.
+  - : Déclenché lorsqu'une session d'importation de marque-pages est terminée.
 
 ## Compatibilité des navigateurs
 
@@ -73,7 +72,7 @@ Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le 
 
 > **Note :**
 >
-> Cette API est basée sur l’API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

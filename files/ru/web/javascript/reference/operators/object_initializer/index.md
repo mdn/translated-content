@@ -1,26 +1,27 @@
 ---
 title: Инициализация объектов
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 
 {{JsSidebar("Операторы")}}
 
-Объекты могут быть инициализированы с помощью [`new Object()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object),` Object.create() `или _литеральной_ (_инициирующей_) нотации. Инициализатор объекта это разделённый запятыми список ноль или более пар имён свойств и ассоциируемых с ними значений, заключённых в фигурные скобки (`{}`).
+Объекты могут быть инициализированы с помощью [`new Object()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()` или _литеральной_ (_инициирующей_) нотации. Инициализатор объекта это разделённый запятыми список ноль или более пар имён свойств и ассоциируемых с ними значений, заключённых в фигурные скобки (`{}`).
 
 ## Синтаксис
 
 ```js
 var o = {};
-var o = {a: 'foo', b: 42, c: {}};
+var o = { a: "foo", b: 42, c: {} };
 
-var a = 'foo', b = 42, c = {};
-var o = {a: a, b: b, c: c};
+var a = "foo",
+  b = 42,
+  c = {};
+var o = { a: a, b: b, c: c };
 
 var o = {
   property: function ([parameters]) {},
   get property() {},
-  set property(value) {}
+  set property(value) {},
 };
 ```
 
@@ -30,19 +31,21 @@ var o = {
 
 ```js
 // Сокращение имён свойств (ES2015)
-var a = 'foo', b = 42, c = {};
-var o = {a, b, c};
+var a = "foo",
+  b = 42,
+  c = {};
+var o = { a, b, c };
 
 // Сокращение имён методов (ES2015)
 var o = {
-  property([parameters]) {}
+  property([parameters]) {},
 };
 
 // Вычисление имён свойств (ES2015)
-var prop = 'foo';
+var prop = "foo";
 var o = {
-  [prop]: 'hey',
-  ['b' + 'ar']: 'there'
+  [prop]: "hey",
+  ["b" + "ar"]: "there",
 };
 ```
 
@@ -62,10 +65,10 @@ var object = {};
 
 ```js
 var object = {
-  foo: 'bar',
+  foo: "bar",
   age: 42,
-  baz: {myProp: 12}
-}
+  baz: { myProp: 12 },
+};
 ```
 
 ### Доступность свойств
@@ -74,9 +77,9 @@ var object = {
 
 ```js
 object.foo; // "bar"
-object['age']; // 42
+object["age"]; // 42
 
-object.foo = 'baz';
+object.foo = "baz";
 ```
 
 ### Определение свойств
@@ -84,29 +87,29 @@ object.foo = 'baz';
 Мы уже рассмотрели, как объявить свойства, используя синтаксис инициализации. Зачастую, в коде появляются свойства, которые вы захотите поместить в объект. Вы увидите следующий код:
 
 ```js
-var a = 'foo',
-    b = 42,
-    c = {};
+var a = "foo",
+  b = 42,
+  c = {};
 
 var o = {
   a: a,
   b: b,
-  c: c
+  c: c,
 };
 ```
 
 С ECMAScript 2015 появилась короткая нотация, способная достичь того же:
 
 ```js
-var a = 'foo',
-    b = 42,
-    c = {};
+var a = "foo",
+  b = 42,
+  c = {};
 
 // Сокращение имён свойств (ES2015)
-var o = {a, b, c};
+var o = { a, b, c };
 
 // Иначе говоря,
-console.log((o.a === {a}.a)); // true
+console.log(o.a === { a }.a); // true
 ```
 
 #### Повторение имён свойств
@@ -114,7 +117,7 @@ console.log((o.a === {a}.a)); // true
 Когда используются одинаковые имена свойств, второе свойство перезапишет первое.
 
 ```js
-var a = {x: 1, x: 2};
+var a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
@@ -122,13 +125,13 @@ console.log(a); // {x: 2}
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
-  'use strict';
+  "use strict";
   try {
-    ({prop: 1, prop: 2});
+    ({ prop: 1, prop: 2 });
 
     // Не будет ошибки, повторение имён доступно в строгом режиме
     return true;
-  } catch(e) {
+  } catch (e) {
     // Будет ошибка, дубликаты запрещены в строгом режиме
     return false;
   }
@@ -143,7 +146,7 @@ function haveES2015DuplicatePropertySemantics() {
 var o = {
   property: function ([parameters]) {},
   get property() {},
-  set property(value) {}
+  set property(value) {},
 };
 ```
 
@@ -153,7 +156,7 @@ var o = {
 // Сокращение имён методов (ES2015)
 var o = {
   property([parameters]) {},
-  *generator() {}
+  *generator() {},
 };
 ```
 
@@ -187,19 +190,19 @@ var o = {
 // Вычисляемое имя свойства (ES2015)
 var i = 0;
 var a = {
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i
+  ["foo" + ++i]: i,
+  ["foo" + ++i]: i,
+  ["foo" + ++i]: i,
 };
 
 console.log(a.foo1); // 1
 console.log(a.foo2); // 2
 console.log(a.foo3); // 3
 
-var param = 'size';
+var param = "size";
 var config = {
   [param]: 12,
-  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
 };
 
 console.log(config); // {size: 12, mobileSize: 4}
@@ -212,8 +215,8 @@ console.log(config); // {size: 12, mobileSize: 4}
 Поверхностное копирование (исключая prototype) или слияние объектов теперь возможно с помощью более короткого синтаксиса, чем {{jsxref("Object.assign()")}}.
 
 ```js
-var obj1 = { foo: 'bar', x: 42 };
-var obj2 = { foo: 'baz', y: 13 };
+var obj1 = { foo: "bar", x: 42 };
+var obj2 = { foo: "baz", y: 13 };
 
 var clonedObj = { ...obj1 };
 // Объект { foo: "bar", x: 42 }
@@ -232,16 +235,16 @@ var mergedObj = { ...obj1, ...obj2 };
 var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
 
-var obj2 = {__proto__: null};
+var obj2 = { __proto__: null };
 assert(Object.getPrototypeOf(obj2) === null);
 
 var protoObj = {};
-var obj3 = {'__proto__': protoObj};
+var obj3 = { __proto__: protoObj };
 assert(Object.getPrototypeOf(obj3) === protoObj);
 
-var obj4 = {__proto__: 'not an object or null'};
+var obj4 = { __proto__: "not an object or null" };
 assert(Object.getPrototypeOf(obj4) === Object.prototype);
-assert(!obj4.hasOwnProperty('__proto__'));
+assert(!obj4.hasOwnProperty("__proto__"));
 ```
 
 Только одно изменение prototype разрешено через литеральное объявление объекта: несколько изменений prototype вызовут синтаксическую ошибку.
@@ -249,17 +252,21 @@ assert(!obj4.hasOwnProperty('__proto__'));
 Объявление свойства не через "двоеточие" не изменит значения prototype: это описание будет выглядеть идентично такому же объявлению свойства с использованием любого другого имени.
 
 ```js
-var __proto__ = 'variable';
+var __proto__ = "variable";
 
-var obj1 = {__proto__};
+var obj1 = { __proto__ };
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
-assert(obj1.hasOwnProperty('__proto__'));
-assert(obj1.__proto__ === 'variable');
+assert(obj1.hasOwnProperty("__proto__"));
+assert(obj1.__proto__ === "variable");
 
-var obj2 = {__proto__() { return 'hello'; }};
-assert(obj2.__proto__() === 'hello');
+var obj2 = {
+  __proto__() {
+    return "hello";
+  },
+};
+assert(obj2.__proto__() === "hello");
 
-var obj3 = {['__prot' + 'o__']: 17};
+var obj3 = { ["__prot" + "o__"]: 17 };
 assert(obj3.__proto__ === 17);
 ```
 
@@ -284,6 +291,6 @@ assert(obj3.__proto__ === 17);
 ## See also
 
 - [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/ru/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ru/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

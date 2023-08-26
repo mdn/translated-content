@@ -30,10 +30,10 @@ delete(property)
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // スタイル属性から background-image を削除
-buttonEl.attributeStyleMap.delete('background-image');
+buttonEl.attributeStyleMap.delete("background-image");
 ```
 
 ## 仕様書

@@ -1,13 +1,8 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -38,17 +33,17 @@ Math.atan(x)
 ### Пример: использование метода `Math.atan()`
 
 ```js
-Math.atan(1);  // 0.7853981633974483
-Math.atan(0);  // 0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
 ```
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                        | Статус             | Комментарии                                            |
+| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                             | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.4', 'Math.atan')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}} | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}}  | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

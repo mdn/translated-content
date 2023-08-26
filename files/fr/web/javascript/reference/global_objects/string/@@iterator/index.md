@@ -1,16 +1,6 @@
 ---
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/@@iterator
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/W
 ## Syntaxe
 
 ```js
-chaîneDeCaractères[Symbol.iterator]
+chaîneDeCaractères[Symbol.iterator];
 ```
 
 ### Valeur de retour

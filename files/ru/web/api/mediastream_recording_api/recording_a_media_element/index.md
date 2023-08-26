@@ -1,7 +1,6 @@
 ---
 title: Запись медиа элемента
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
-translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -11,21 +10,20 @@ translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ## HTML содержимое
 
 ```html hidden
-<p>Click the "Start" button to begin video recording for a few seconds. You can stop
-   the video by clicking the creatively-named "Stop" button. The "Download"
-   button will download the received data (although it's in a raw, unwrapped form
-   that isn't very useful).
+<p>
+  Click the "Start" button to begin video recording for a few seconds. You can
+  stop the video by clicking the creatively-named "Stop" button. The "Download"
+  button will download the received data (although it's in a raw, unwrapped form
+  that isn't very useful).
 </p>
-<br>
+<br />
 ```
 
 Рассмотрим ключевые моменты кода HTML. Это только небольшой отрывок, относящийся к информационной части приложения.
 
 ```html
 <div class="left">
-  <div id="startButton" class="button">
-    Start
-  </div>
+  <div id="startButton" class="button">Start</div>
   <h2>Preview</h2>
   <video id="preview" width="160" height="120" autoplay muted></video>
 </div>
@@ -35,14 +33,10 @@ translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 
 ```html
 <div class="right">
-  <div id="stopButton" class="button">
-    Stop
-  </div>
+  <div id="stopButton" class="button">Stop</div>
   <h2>Recording</h2>
   <video id="recording" width="160" height="120" controls></video>
-  <a id="downloadButton" class="button">
-    Download
-  </a>
+  <a id="downloadButton" class="button"> Download </a>
 </div>
 ```
 
@@ -58,7 +52,10 @@ translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -139,7 +136,7 @@ function log(msg) {
 
 ```js
 function wait(delayInMS) {
-  return new Promise(resolve => setTimeout(resolve, delayInMS));
+  return new Promise((resolve) => setTimeout(resolve, delayInMS));
 }
 ```
 
@@ -154,24 +151,20 @@ function startRecording(stream, lengthInMS) {
   let recorder = new MediaRecorder(stream);
   let data = [];
 
-  recorder.ondataavailable = event => data.push(event.data);
+  recorder.ondataavailable = (event) => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+  log(recorder.state + " for " + lengthInMS / 1000 + " seconds...");
 
   let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;
-    recorder.onerror = event => reject(event.name);
+    recorder.onerror = (event) => reject(event.name);
   });
 
   let recorded = wait(lengthInMS).then(
-    () => recorder.state == "recording" && recorder.stop()
+    () => recorder.state == "recording" && recorder.stop(),
   );
 
-  return Promise.all([
-    stopped,
-    recorded
-  ])
-  .then(() => data);
+  return Promise.all([stopped, recorded]).then(() => data);
 }
 ```
 
@@ -198,7 +191,7 @@ The `stop()` function simply stops the input media:
 
 ```js
 function stop(stream) {
-  stream.getTracks().forEach(track => track.stop());
+  stream.getTracks().forEach((track) => track.stop());
 }
 ```
 
@@ -209,27 +202,40 @@ This works by calling {{domxref("MediaStream.getTracks()")}}, using {{jsxref("Ar
 Now let's look at the most intricate piece of code in this example: our event handler for clicks on the start button:
 
 ```js
-startButton.addEventListener("click", function() {
-  navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
-  }).then(stream => {
-    preview.srcObject = stream;
-    downloadButton.href = stream;
-    preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise(resolve => preview.onplaying = resolve);
-  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
-  .then (recordedChunks => {
-    let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-    recording.src = URL.createObjectURL(recordedBlob);
-    downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
+startButton.addEventListener(
+  "click",
+  function () {
+    navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+        audio: true,
+      })
+      .then((stream) => {
+        preview.srcObject = stream;
+        downloadButton.href = stream;
+        preview.captureStream =
+          preview.captureStream || preview.mozCaptureStream;
+        return new Promise((resolve) => (preview.onplaying = resolve));
+      })
+      .then(() => startRecording(preview.captureStream(), recordingTimeMS))
+      .then((recordedChunks) => {
+        let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+        recording.src = URL.createObjectURL(recordedBlob);
+        downloadButton.href = recording.src;
+        downloadButton.download = "RecordedVideo.webm";
 
-    log("Successfully recorded " + recordedBlob.size + " bytes of " +
-        recordedBlob.type + " media.");
-  })
-  .catch(log);
-}, false);
+        log(
+          "Successfully recorded " +
+            recordedBlob.size +
+            " bytes of " +
+            recordedBlob.type +
+            " media.",
+        );
+      })
+      .catch(log);
+  },
+  false,
+);
 ```
 
 When a {{event("click")}} event occurs, here's what happens:
@@ -256,9 +262,13 @@ When a {{event("click")}} event occurs, here's what happens:
 The last bit of code adds a handler for the {{event("click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-stopButton.addEventListener("click", function() {
-  stop(preview.srcObject);
-}, false);
+stopButton.addEventListener(
+  "click",
+  function () {
+    stop(preview.srcObject);
+  },
+  false,
+);
 ```
 
 This simply calls the [`stop()`](#stopping_the_input_stream) function we covered earlier.

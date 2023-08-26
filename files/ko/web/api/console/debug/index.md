@@ -2,6 +2,7 @@
 title: console.debug()
 slug: Web/API/console/debug
 ---
+
 {{APIRef("Console API")}}
 
 **`console.debug()`** 메서드는 메시지를 "디버그" 중요도로 콘솔에 출력합니다. 디버그 중요도 메시지는 별도 설정 없이는 보이지 않습니다. 대부분의 경우 로그 수준은 콘솔 UI 내에서 구성됩니다. 이 로그 수준은 \`Debug\` 또는 \`Verbose\` 로그 수준에 해당할 수 있습니다.

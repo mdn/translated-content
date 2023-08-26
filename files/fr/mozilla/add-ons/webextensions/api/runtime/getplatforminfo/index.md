@@ -1,7 +1,6 @@
 ---
 title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var getting = browser.runtime.getPlatformInfo()
+var getting = browser.runtime.getPlatformInfo();
 ```
 
 ### Paramètres

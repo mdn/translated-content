@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
-translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 
 {{APIRef("WebGL")}}
@@ -47,8 +46,8 @@ Only one target can be bound to a given {{domxref("WebGLBuffer")}}. An attempt t
 ### Binding a buffer to a target
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
@@ -65,12 +64,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 ## Specifications
 
-| Specification                                                                            | Status                               | Comment                                                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "bindBuffer")}}                             | {{Spec2('WebGL')}}             | Initial definition for WebGL.                                                                                                                                                                                  |
-| {{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}} | {{Spec2('OpenGL ES 2.0')}} | Man page of the (similar) OpenGL ES 2 API.                                                                                                                                                                     |
-| {{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}                             | {{Spec2('WebGL2')}}             | Updated definition for WebGL 2.Adds new `target` buffers: `gl.COPY_READ_BUFFER`, `gl.COPY_WRITE_BUFFER`, `gl.TRANSFORM_FEEDBACK_BUFFER`, `gl.UNIFORM_BUFFER`, `gl.PIXEL_PACK_BUFFER`, `gl.PIXEL_UNPACK_BUFFER` |
-| {{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}} | {{Spec2('OpenGL ES 3.0')}} | Man page of the (similar) OpenGL ES 3 API.                                                                                                                                                                     |
+{{Specifications}}
 
 ## Browser compatibility
 

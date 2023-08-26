@@ -1,8 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-translation_of: Web/HTTP/Headers/Content-Language
-original_slug: Web/HTTP/Заголовки/Content-Language
 ---
 
 {{HTTPSidebar}}
@@ -60,17 +58,17 @@ Content-Language: de-DE, en-CA
 
 ### Указание использованного языка документа
 
-Глобальный атрибут [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) используется на HTML-элементах для указания языка всего HTML документа или его частей.
+Глобальный атрибут [`lang`](/ru/docs/Web/HTML/Global_attributes/lang) используется на HTML-элементах для указания языка всего HTML документа или его частей.
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 **Не** используйте этот мета элемент как здесь для констатирования языка документа:
 
 ```html example-bad
 <!-- /!\ Это плохая практика -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### Указание целевой аудитории для ресурса
@@ -83,8 +81,8 @@ Content-Language: de, en
 
 ## Спецификации
 
-| Спецификация                                                 | Заголовок                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Спецификация                                   | Заголовок                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Совместимость с браузерами

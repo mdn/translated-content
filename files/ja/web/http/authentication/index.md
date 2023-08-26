@@ -61,7 +61,7 @@ WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
-ここで、 `<type>` は認証方式です ("Basic" は最も一般的な方式であり、[以下で紹介](#basic_認証方式)します)。 *realm* は保護された領域を説明するため、または保護の範囲を示すために使用されます。これは、「ステージングサイトへのアクセス」などのようなメッセージにすることができ、それによってユーザーが、どの領域にアクセスしようとしているかを知ることができます。
+ここで、 `<type>` は認証方式です ("Basic" は最も一般的な方式であり、[以下で紹介](#basic_認証方式)します)。 _realm_ は保護された領域を説明するため、または保護の範囲を示すために使用されます。これは、「ステージングサイトへのアクセス」などのようなメッセージにすることができ、それによってユーザーが、どの領域にアクセスしようとしているかを知ることができます。
 
 ### Authorization および Proxy-Authorization ヘッダー
 
@@ -152,7 +152,7 @@ https://username:password@www.example.com/
 ```
 
 **これらの URL の使用は推奨されていません。**
-Chrome ではセキュリティ上の理由から、URL の `username:password@` 部分が[削除されます](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)。 Firefox ではサイトが実際に認証を要求するかどうかをチェックし、そうでない場合 Firefox はユーザーに「“www\.example\.com” というサイトに “username” というユーザー名でログインしようとしていますが、このウェブサイトは認証を必要としません。これはあなたを騙そうとしている可能性があります。」と警告します。
+Chrome ではセキュリティ上の理由から、URL の `username:password@` 部分が[削除されます](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)。 Firefox ではサイトが実際に認証を要求するかどうかをチェックし、そうでない場合 Firefox はユーザーに「"www\.example\.com" というサイトに "username" というユーザー名でログインしようとしていますが、このウェブサイトは認証を必要としません。これはあなたを騙そうとしている可能性があります。」と警告します。
 
 ## 関連情報
 

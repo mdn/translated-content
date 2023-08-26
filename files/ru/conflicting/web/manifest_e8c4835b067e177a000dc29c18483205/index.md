@@ -1,11 +1,6 @@
 ---
 title: iarc_rating_id
 slug: conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205
-tags:
-  - Manifest
-  - Web
-  - iarc_rating_id
-translation_of: Web/Manifest/iarc_rating_id
 original_slug: Web/Manifest/iarc_rating_id
 ---
 

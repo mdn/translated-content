@@ -1,7 +1,6 @@
 ---
 title: 量词
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
-original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -140,8 +139,8 @@ var loooongWord = /\b\w{13,}\b/g;
 var sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"] 可选可选字符
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "I", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord)); // ["multiplication"] 可选可选字符
 ```
 
 ### 可选字符

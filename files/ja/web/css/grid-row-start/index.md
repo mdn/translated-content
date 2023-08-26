@@ -52,7 +52,7 @@ grid-row-start: unset;
 
     > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
 
- そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
+そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
 - `<integer> && <custom-ident>?`
 
@@ -120,7 +120,9 @@ grid-row-start: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

@@ -9,7 +9,7 @@ Esto supone que cualquier trabajo que use un elemento con licencia GPL **tiene l
 
 LGPL es usado habitualmente para licencias de componentes compartidos como por ejemplo librerías (`.dll`, `.so`, `.jar`, etc.).
 
-## Para saber más...
+## Para saber más
 
 ### Cultura General
 

@@ -1,7 +1,6 @@
 ---
 title: Headers.forEach()
 slug: Web/API/Headers/forEach
-page-type: web-api-instance-method
 l10n:
   sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
@@ -60,7 +59,7 @@ myHeaders.append("compression", "gzip");
 // キーと値の組を表示
 myHeaders.forEach((value, key) => {
   console.log(`${key} ==> ${value}`);
-})
+});
 ```
 
 結果は次の通りです。

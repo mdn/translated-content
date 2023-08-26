@@ -1,5 +1,5 @@
 ---
-title: 'RTCPeerConnection: icecandidate 事件'
+title: "RTCPeerConnection: icecandidate 事件"
 slug: Web/API/RTCPeerConnection/icecandidate_event
 ---
 
@@ -18,11 +18,11 @@ slug: Web/API/RTCPeerConnection/icecandidate_event
 ```js
 rtcPeerConnection.onicecandidate = (event) => {
   if (event.candidate) {
-    sendCandidateToRemotePeer(event.candidate)
+    sendCandidateToRemotePeer(event.candidate);
   } else {
     /* 在此次协商中，没有更多的候选了 */
   }
-}
+};
 ```
 
 远程的节点在接受到候选后，将通过调用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 的方式将候选加入候选池中，并传入通过信令服务器得到的 {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} 字符串（作为参数）。
@@ -44,8 +44,8 @@ rtcPeerConnection.onicecandidate = (event) => {
 如果你需要执行任何特别的动作，当没有更多的期待的候选，你最好通过观察 {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} 事件来观察 ICE 收集状态。
 
 ```js
-pc.addEventListener("icegatheringstatechange", ev => {
-  switch(pc.iceGatheringState) {
+pc.addEventListener("icegatheringstatechange", (ev) => {
+  switch (pc.iceGatheringState) {
     case "new":
       /* gathering is either just starting or has been reset */
       break;
@@ -70,20 +70,25 @@ pc.addEventListener("icegatheringstatechange", ev => {
 首先，一个使用 addEventListener() 的例子：
 
 ```js
-pc.addEventListener("icecandidate",ev=> {
-      if(ev.candidate){
-        sendMessage({type:"new-ice-candidate",candidate:event.candidate});
-      }},false);
+pc.addEventListener(
+  "icecandidate",
+  (ev) => {
+    if (ev.candidate) {
+      sendMessage({ type: "new-ice-candidate", candidate: event.candidate });
+    }
+  },
+  false,
+);
 ```
 
 你也可以直接设定 {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 事件处理器的属性：
 
 ```js
-pc.onicecandidate = ev => {
-      if(ev.candidate){
-        sendMessage({type:"new-ice-candidate",candidate:event.candidate});
-      }
-     };
+pc.onicecandidate = (ev) => {
+  if (ev.candidate) {
+    sendMessage({ type: "new-ice-candidate", candidate: event.candidate });
+  }
+};
 ```
 
 ## 概述

@@ -14,7 +14,9 @@ slug: Web/API/Screen_Capture_API
 画面から動画をキャプチャするには、 `getDisplayMedia()` を `Media` `navigator.mediaDevices` のインスタンス上で呼び出してください。
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captureStream = await navigator.mediaDevices.getDisplayMedia(
+  displayMediaOptions,
+);
 ```
 
 {{jsxref("Promise")}} が `getDisplayMedia()` から返され、これはキャプチャされたメディアをストリーミングする {{domxref("MediaStream")}} で解決します。
@@ -72,10 +74,10 @@ captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions
 
 ## 機能ポリシーの検証
 
- {{Glossary("User agent", "ユーザーエージェント")}}のうち（HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーまたは {{HTMLElement("iframe")}} 属性を使用する）機能ポリシーをに対応するものは、ポリシー制御ディレクティブ `display-capture` によってが画面キャプチャ API 使用の希望を指定することができます。
+{{Glossary("User agent", "ユーザーエージェント")}}のうち（HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーまたは {{HTMLElement("iframe")}} 属性を使用する）機能ポリシーをに対応するものは、ポリシー制御ディレクティブ `display-capture` によってが画面キャプチャ API 使用の希望を指定することができます。
 
 ```html
-<iframe allow="display-capture" src="/some-other-document.html">
+<iframe allow="display-capture" src="/some-other-document.html"></iframe>
 ```
 
 既定の許可リストは `self` で、文書内の任意のコンテンツに画面キャプチャを使用させることができます。
@@ -84,7 +86,7 @@ captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions
 
 ## 仕様書
 
-| 仕様書                                                      |
+| 仕様書                                                             |
 | ------------------------------------------------------------------ |
 | [Screen Capture](https://w3c.github.io/mediacapture-screen-share/) |
 

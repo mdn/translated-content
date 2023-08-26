@@ -29,9 +29,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ## 예제
 
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
 ```
@@ -41,10 +41,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 `fromIndex` 가 배열의 길이보다 같거나 크다면, `false` 를 반환합니다. 배열은 검색되지 않을 것입니다.
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 
-arr.includes('c', 3);   // false
-arr.includes('c', 100); // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### 0보다 작은 인덱스의 계산
@@ -56,12 +56,12 @@ arr.includes('c', 100); // false
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 
-arr.includes('a', -100); // true
-arr.includes('b', -100); // true
-arr.includes('c', -100); // true
-arr.includes('a', -2); // false
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
 ### 제네릭 메소드로 사용되는 `includes()`
@@ -69,10 +69,10 @@ arr.includes('a', -2); // false
 `includes()` 메서드는 의도적으로 제네릭입니다. 배열 객체가 되기 위한 `this` 값을 요구하지 않아, 다른 종류의 객체에 적용될 수 있습니다 (e.g. 유사 배열 객체). 아래 예시는 이 함수의 [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체로 호출되는 `includes()` 메소드를 보여줍니다.
 
 ```js
-(function() {
-  console.log([].includes.call(arguments, 'a')); // true
-  console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');
+(function () {
+  console.log([].includes.call(arguments, "a")); // true
+  console.log([].includes.call(arguments, "d")); // false
+})("a", "b", "c");
 ```
 
 ## 폴리필
@@ -80,9 +80,8 @@ arr.includes('a', -2); // false
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, 'includes', {
-    value: function(searchElement, fromIndex) {
-
+  Object.defineProperty(Array.prototype, "includes", {
+    value: function (searchElement, fromIndex) {
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -110,7 +109,13 @@ if (!Array.prototype.includes) {
       var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
       function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
+        return (
+          x === y ||
+          (typeof x === "number" &&
+            typeof y === "number" &&
+            isNaN(x) &&
+            isNaN(y))
+        );
       }
 
       // 7. Repeat, while k < len
@@ -126,7 +131,7 @@ if (!Array.prototype.includes) {
 
       // 8. Return false
       return false;
-    }
+    },
   });
 }
 ```

@@ -1,8 +1,8 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-translation_of: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Types) **`<percentage>`** представляет значение в процентах. Оно часто используется, чтобы определить размер относительно родительского элемента. Проценты используются в различных свойствах, таких как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, и {{Cssxref("font-size")}}.

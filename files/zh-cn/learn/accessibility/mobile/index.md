@@ -186,11 +186,11 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 如果你尝试通过键盘或触摸来控制我们的 [simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) 示例（[查看实时示例](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)），你将发现问题。它发生的原因是我们用了下面的代码：
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = function () {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -198,12 +198,12 @@ document.onmouseup = stopMove;
 要启用其他形式的控制，你需要使用其他等效的事件代替，比如在触屏设备上用 touch 事件：
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = function (e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```

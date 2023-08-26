@@ -1,7 +1,6 @@
 ---
 title: Manejando diferentes direcciones de texto
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/Manejando_diferentes_direcciones_de_texto
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -55,7 +54,7 @@ Los tres valores posibles para la propiedad [`writing-mode`](/es/docs/Web/CSS/wr
 
 Así, la propiedad `writing-mode` está configurando en realidad la direccion en que los elementos de nivel bloque son desplegados en la página - ya sea de arriba abajo, derecha a izquierda, o de izquierda a derecha. Luego señala la dirección del flujo de texto en las frases.
 
-## Modos de escritura y diseño en bloque y lineal.
+## Modos de escritura y diseño en bloque y lineal
 
 Ya hemos visto el diseño en bloque y lineal, y el hecho de que algunas cosas se muestran como elementos de bloque y otras como elementos lineales. Ésto se encuentra ligado al modo de escritura del documento, y no de la pantalla física. Los bloques sólo se presentan desde la parte superior a la inferior de la página si estas usando un modo de escritura que presente el texto horizontalmente, como el español.
 

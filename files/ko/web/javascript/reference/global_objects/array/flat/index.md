@@ -2,6 +2,7 @@
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
+
 {{JSRef}}
 
 **`flat()`** 메서드는 모든 하위 배열 요소를 지정한 깊이까지 재귀적으로 이어붙인 새로운 배열을 생성합니다.
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ## 구문
 
 ```js
-    const newArr = arr.flat([depth])
+const newArr = arr.flat([depth]);
 ```
 
 ### 매개변수
@@ -67,7 +68,7 @@ arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // or with decomposition syntax
-const flattened = arr => [].concat(...arr);
+const flattened = (arr) => [].concat(...arr);
 ```
 
 ### `reduce` + `concat` + `isArray` + 재귀
@@ -77,9 +78,14 @@ const arr = [1, 2, [3, 4, [5, 6]]];
 
 // to enable deep level flatten use recursion with reduce and concat
 function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
+  return d > 0
+    ? arr.reduce(
+        (acc, val) =>
+          acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+        [],
+      )
+    : arr.slice();
+}
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
@@ -94,10 +100,10 @@ flatDeep(arr, Infinity);
 function flatten(input) {
   const stack = [...input];
   const res = [];
-  while(stack.length) {
+  while (stack.length) {
     // pop value from stack
     const next = stack.pop();
-    if(Array.isArray(next)) {
+    if (Array.isArray(next)) {
       // push back array items, won't modify the original input
       stack.push(...next);
     } else {
@@ -117,16 +123,16 @@ flatten(arr);
 
 ```js
 function* flatten(array, depth) {
-    if(depth === undefined) {
-      depth = 1;
+  if (depth === undefined) {
+    depth = 1;
+  }
+  for (const item of array) {
+    if (Array.isArray(item) && depth > 0) {
+      yield* flatten(item, depth - 1);
+    } else {
+      yield item;
     }
-    for(const item of array) {
-        if(Array.isArray(item) && depth > 0) {
-          yield* flatten(item, depth - 1);
-        } else {
-          yield item;
-        }
-    }
+  }
 }
 
 const arr = [1, 2, [3, 4, [5, 6]]];

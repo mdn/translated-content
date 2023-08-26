@@ -1,7 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-original_slug: Web/HTML/Elemento/object
 ---
 
 {{HTMLSidebar}}
@@ -16,29 +15,29 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/es/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >;
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >;
-        <a href="/en-US/docs/Web/HTML/Content_categories#Embedded_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
           >embedded content</a
         >, palpable content; if the element has a
         <a href="/es/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Interactive_content"
           >interactive content</a
         >;
-        <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a
+        <a href="/es/docs/Web/HTML/Content_categories#Form_listed">listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Form_submittable"
+        <a href="/es/docs/Web/HTML/Content_categories#Form_submittable"
           >submittable</a
         >
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Form-associated_content"
+          href="/es/docs/Web/HTML/Content_categories#Form-associated_content"
           >form-associated</a
         >
         element.
@@ -49,7 +48,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
       <td>
         cero o más elementos {{HTMLElement("param")}} , luego
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model"
+          href="/es/docs/Web/HTML/Content_categories#Transparent_content_model"
           >transparent</a
         >.
       </td>
@@ -62,7 +61,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/en-US/docs/Web/HTML/Content_categories#Embedded_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
           >embedded content</a
         >
         (contenido incrustado).
@@ -103,7 +102,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `form`
   - : El elemento form, si es que hay alguno, al que el objeto está asociado (su _form propietario_). El valor de este atributo debe ser el ID de un elemento {{HTMLElement("form")}} del mismo documento.
 - `height`
-  - : La altura del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : La altura del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - `name`
   - : El nombre de un contexto de navegación válido (HTML5), o el nombre del control (HTML4).
 - `standby` only {{deprecated_inline}}
@@ -117,7 +116,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `usemap`
   - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
 - `width`
-  - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## Ejemplos
 
@@ -125,12 +124,11 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ```html
 <!-- Incrustar una película flash -->
-<object data="movie.swf"
-  type="application/x-shockwave-flash"></object>
+<object data="movie.swf" type="application/x-shockwave-flash"></object>
 
 <!-- Incrustar una película flash con parámetros -->
 <object data="movie.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+  <param name="foo" value="bar" />
 </object>
 ```
 

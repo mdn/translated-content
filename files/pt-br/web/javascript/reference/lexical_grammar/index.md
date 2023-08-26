@@ -54,7 +54,7 @@ O primeiro é com o uso de duas barras `//`; isso faz com que qualquer coisa esc
 ```js
 function comment() {
   // Isto é um comentário de uma linha em JavaScript
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -66,7 +66,7 @@ Por exemplo, você pode usá-lo em uma única linha:
 ```js
 function comment() {
   /* Isto é um comentário de uma linha em JavaScript */
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -77,7 +77,7 @@ Ou pode fazer um comentário de várias linhas, desta forma:
 function comment() {
   /* Este é um comentário de várias linhas. Observe que
  não precisamos encerrar o comentário até terminar. */
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -86,9 +86,9 @@ Você também pode usá-lo no meio de uma linha, se quiser, porém isto pode tor
 
 ```js
 function comment(x) {
-  console.log('Hello ' + x /* insira o valor de x */ + ' !');
+  console.log("Hello " + x /* insira o valor de x */ + " !");
 }
-comment('world');
+comment("world");
 ```
 
 Além disso, você pode usá-lo para desativar algum código para evitar que seja executado, envolvendo o código em um comentário, assim:
@@ -209,7 +209,7 @@ function import() {} // Proibido.
 Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) para mais informações.
 
 ```js
-null
+null;
 ```
 
 ### Booleanos
@@ -217,8 +217,8 @@ null
 Veja também [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean) para mais informações.
 
 ```js
-true
-false
+true;
+false;
 ```
 
 ### Números
@@ -226,24 +226,24 @@ false
 #### Decimal
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Cuidado com o uso precedido de zero:
-0888 // 888 convertido como decimal
-0777 // Convertido como octal, 511 em decimal
+0888; // 888 convertido como decimal
+0777; // Convertido como octal, 511 em decimal
 ```
 
-Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix).
+Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja [Erro do Firefox 957513](https://bugzil.la/957513). Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix).
 
 #### Binário
 
 Números binários em JavaScript são iniciados em zero seguido da letra "B" em maiúsculo ou minúsculo (`0b` ou `0B`). Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se o dígito seguinte ao `0b` não for 0 ou 1, o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é disparado: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 #### Octal
@@ -251,12 +251,12 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 Números octais em JavaScript são escritos com zero inicial seguido da letra "O" em maiúsculo ou minúsculo (`0o` ou `0O)`. Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se os dígitos após o `0o não forem octais válidos` (01234567), o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado: "Missing octal digits after 0o".
 
 ```js
-var n = 0O755; // 493
+var n = 0o755; // 493
 var m = 0o644; // 420
 
 // Também é possível com apenas um zero no início (veja sobre decimais acima)
-0755
-0644
+0755;
+0644;
 ```
 
 #### Hexadecimal
@@ -264,9 +264,9 @@ var m = 0o644; // 420
 Números hexadecimais em JavaScript são iniciados com zero seguido da letra "X" em maiúsculo ou minúsculo (`0x` ou `0X)`. Se os dígitos após o 0x não forem hexadecimais válidos (0123456789ABCDEF), o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado: "Identifier starts immediately after numeric literal".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### Objetos
@@ -274,11 +274,13 @@ Números hexadecimais em JavaScript são iniciados com zero seguido da letra "X"
 Veja também {{jsxref("Object")}} e [Object initializer](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) para mais informações.
 
 ```js
-var o = { a: 'foo', b: 'bar', c: 42 };
+var o = { a: "foo", b: "bar", c: 42 };
 
 // Notação curta. Novidade no ES2015
-var a = 'foo', b = 'bar', c = 42;
-var o = {a, b, c};
+var a = "foo",
+  b = "bar",
+  c = 42;
+var o = { a, b, c };
 
 // instead of
 var o = { a: a, b: b, c: c };
@@ -289,20 +291,20 @@ var o = { a: a, b: b, c: c };
 Veja também {{jsxref("Array")}} para mais informações.
 
 ```js
-[1954, 1974, 1990, 2014]
+[1954, 1974, 1990, 2014];
 ```
 
 ### Strings
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 #### Caracteres de escape em hexadecimal
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Caracteres de escape em Unicode
@@ -310,7 +312,7 @@ Veja também {{jsxref("Array")}} para mais informações.
 A representação de caracteres de escape em Unicode requer ao menos quatro caracteres após o `\u`.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Codificação de caracteres Unicode
@@ -320,10 +322,10 @@ Novidade no ECMAScript 2015. Com a codificação de caracteres Unicode qualquer 
 Veja também {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // O mesmo usando apenas Unicode
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Expressões regulares
@@ -344,14 +346,14 @@ Veja também [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegE
 Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) para mais informações .
 
 ```js
-`texto`
+`texto`;
 
 `linha de texto 1
- linha de texto 2`
+ linha de texto 2`;
 
-`texto ${expressão} texto`
+`texto ${expressão} texto`;
 
-tag `texto ${expressão} texto`
+tag`texto ${expressão} texto`;
 ```
 
 ## Inserção automática de ponto e vírgula
@@ -382,7 +384,7 @@ A especificação ECMAScript menciona [três regras para inserção de ponto e v
 
 Aqui o `++ não é interpretado como operador de incremento aplicado à variável b por que há um finalizador de linha entre o b e ++` .
 
-```js
+```js-nolint
 a = b
 ++c
 
@@ -401,7 +403,7 @@ a = b;
 - `yield`, `yield*`
 - `module`
 
-```js
+```js-nolint
 return
 a + b
 
@@ -413,11 +415,11 @@ a + b;
 
 ## Especificações
 
-| Specification                                                                                                        | Status                       | Comment                                                              |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2("ES1")}}         | Definição inicial.                                                   |
-| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                             | {{Spec2('ES5.1')}}     |                                                                      |
-| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}         | {{Spec2('ES6')}}         | Adicionado: números Binarios e Octais, Unicode code point, Templates |
+| Specification                                                                          | Status               | Comment                                                              |
+| -------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                    | {{Spec2("ES1")}}     | Definição inicial.                                                   |
+| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                 | {{Spec2('ES5.1')}}   |                                                                      |
+| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}     | {{Spec2('ES6')}}     | Adicionado: números Binarios e Octais, Unicode code point, Templates |
 | {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}} | {{Spec2('ESDraft')}} |                                                                      |
 
 ## Compatibilidade com navegadores

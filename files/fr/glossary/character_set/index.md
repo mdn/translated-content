@@ -1,7 +1,6 @@
 ---
 title: Jeu de caractères
 slug: Glossary/Character_set
-translation_of: Glossary/character_set
 ---
 
 Un **jeu de caractères** est un système d'encodage qui permet aux ordinateurs de savoir comment interpréter les [caractères](/fr/docs/Glossary/Character), comme les lettres, les nombres, les signes de ponctuation, les espaces.
@@ -14,10 +13,10 @@ Si un jeu de caractères est mal utilisé (par exemple, si l'on utilise Unicode 
 
 1. Articles Wikipédia
 
-    1. [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res)
-    2. [Mojibake](https://fr.wikipedia.org/wiki/Mojibake)
+   1. [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères)
+   2. [Mojibake](https://fr.wikipedia.org/wiki/Mojibake)
 
 2. [Glossaire](/fr/docs/Glossary)
 
-    1. [Caractère](/fr/docs/Glossary/Character)
-    2. [Unicode](/fr/docs/Glossary/Unicode)
+   1. [Caractère](/fr/docs/Glossary/Character)
+   2. [Unicode](/fr/docs/Glossary/Unicode)

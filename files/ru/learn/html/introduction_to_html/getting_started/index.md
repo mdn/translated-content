@@ -1,20 +1,8 @@
 ---
 title: Начало работы с HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Guide
-  - HTML
-  - Атрибуты
-  - Для начинающих
-  - Комментарии
-  - Пробелы
-  - Программирование
-  - Руководство
-  - Урок
-  - элементы
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
-original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}
 
 В этой статье мы охватим азы HTML, необходимые для начала работы. Дадим определение «элементам», «атрибутам», «тегам» и прочим важным понятиям, о которых вы, возможно, слышали, а также об их роли в языке. Мы также покажем, как устроены HTML-элементы, типичная HTML-страница, и объясним другие важные аспекты языка. По ходу дела, чтобы вы не заскучали, мы поиграем с настоящей HTML-страницей!
@@ -60,11 +48,12 @@ original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
 
 ```html hidden
 <h2>Результат</h2>
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из области кода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из области кода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
   Это мой текст.
@@ -78,7 +67,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -99,10 +88,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -110,38 +99,38 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<em>Это мой текст.</em>';
+var htmlSolution = "<em>Это мой текст.</em>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -153,8 +142,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -165,10 +157,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -185,7 +177,7 @@ textarea.onkeyup = function(){
 Вы также можете вкладывать элементы внутрь других элементов — это называется **вложенностью**. Если мы хотим подчеркнуть, что наш кот **очень** сердитый, мы можем заключить слово "очень" в элемент {{htmlelement("strong")}} , который означает, что это слово крайне важно в данном контексте:
 
 ```html
-<p>Мой кот <strong>очень</strong>  сердитый.</p>
+<p>Мой кот <strong>очень</strong> сердитый.</p>
 ```
 
 Вы должны удостовериться, что элементы вложены должным образом: в следующем примере мы открываем `p` элемент первым, затем элемент `strong`, затем мы закрываем элемент `strong` первым, затем `p`. Следующее писать неправильно:
@@ -206,9 +198,13 @@ textarea.onkeyup = function(){
 Посмотрите на следующий пример:
 
 ```html
-<em>Первый</em><em>второй</em><em>третий</em>
+<em>Первый</em>
+<em>второй</em>
+<em>третий</em>
 
-<p>четвёртый</p><p>пятый</p><p>шестой</p>
+<p>четвёртый</p>
+<p>пятый</p>
+<p>шестой</p>
 ```
 
 {{htmlelement("em")}} — это строчный элемент, так что, как вы здесь видите, первые три элемента находятся на одной строке друг с другом без пробелов между ними. С другой стороны, {{htmlelement("p")}} — это элемент блочного уровня, так что каждый элемент находится на новой строке, с пространством выше и ниже каждого (этот интервал определяется [CSS-оформлением](/ru/docs/Learn/CSS/First_steps) по умолчанию, которое браузеры применяют к абзацам).
@@ -226,7 +222,8 @@ textarea.onkeyup = function(){
 Не все элементы соответствуют вышеупомянутому шаблону: открывающий тег, контент, закрывающий тег. Некоторые элементы состоят из одного тега и обычно используются для вставки чего-либо в то место документа, где размещены. Например, элемент {{htmlelement("img")}} вставляет картинку на страницу в том самом месте, где он расположен:
 
 ```html
-<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
 ```
 
 Это выведет на вашу страницу следующее:
@@ -239,7 +236,7 @@ textarea.onkeyup = function(){
 
 У элементов также могут быть атрибуты, которые выглядят так:
 
-![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](grumpy-cat-attribute-small.png)
+![My cat is very grumpy](grumpy-cat-attribute-small.png)
 
 Атрибуты содержат дополнительную информацию об элементе, которая, по вашему мнению, не должна отображаться в содержимом элемента. В данном случае атрибут `class` позволяет вам дать элементу идентификационное имя, которое в дальнейшем может быть использовано для обращения к элементу с информацией о стиле и прочими вещами.
 
@@ -267,19 +264,20 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из области кода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из области кода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
   &lt;p&gt;Ссылка на мой любимый веб-сайт.&lt;/p&gt;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -306,10 +304,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -317,38 +315,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<p>Ссылка на мой <a href="https://www.mozilla.org/" title="Домашняя страница Mozilla" target="_blank">любимый веб-сайт</a>.</p>';
+var htmlSolution =
+  '<p>Ссылка на мой <a href="https://www.mozilla.org/" title="Домашняя страница Mozilla" target="_blank">любимый веб-сайт</a>.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -360,8 +359,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -372,10 +374,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -398,9 +400,9 @@ textarea.onkeyup = function(){
 Для краткости совершенно допустимо записывать их следующим образом (мы также для справки разместили не деактивированный элемент input, чтобы дать вам большее понимание происходящего):
 
 ```html
-<input type="text" disabled>
+<input type="text" disabled />
 
-<input type="text">
+<input type="text" />
 ```
 
 На выходе оба варианта будут выглядеть следующим образом:
@@ -434,7 +436,7 @@ textarea.onkeyup = function(){
 ```html
 <a href="http://www.example.com">Ссылка к моему примеру.</a>
 
-<a href='http://www.example.com'>Ссылка к моему примеру.</a>
+<a href="http://www.example.com">Ссылка к моему примеру.</a>
 ```
 
 Однако вы должны убедиться, что не смешиваете их вместе. Следующее будет неверным!
@@ -446,7 +448,9 @@ textarea.onkeyup = function(){
 Если вы используете один тип кавычек в своём HTML, то вы можете поместить внутрь их кавычки другого типа, не вызывая никаких проблем:
 
 ```html
-<a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="http://www.example.com" title="Isn't this fun?"
+  >A link to my example.</a
+>
 ```
 
 Если вы хотите вставить кавычки того же типа, то вы должны использовать [объекты HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html). Например, это работать не будет:
@@ -458,7 +462,9 @@ textarea.onkeyup = function(){
 Поэтому вам нужно сделать так:
 
 ```html
-<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+<a href="http://www.example.com" title="Isn&#39;t this fun?"
+  >A link to my example.</a
+>
 ```
 
 ## Структура HTML документа
@@ -466,10 +472,10 @@ textarea.onkeyup = function(){
 Ниже дан пример оборачивания основных, самостоятельных HTML-элементов, которые сами по себе не очень полезны. Давайте посмотрим, как самостоятельные элементы объединяются для формирования всей HTML страницы:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Тестовая страница</title>
   </head>
   <body>
@@ -482,12 +488,11 @@ textarea.onkeyup = function(){
 
 1. `<!DOCTYPE html>`: Объявление типа документа. Очень давно, ещё когда HTML был молод (1991/2), типы документов использовались в качестве ссылок на набор правил, которым HTML-страница должна была следовать, чтобы она считалась хорошей, что может означать автоматическую проверку ошибок и другие полезные вещи. Объявление типа документа выглядело примерно вот так:
 
-    ```
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    ```
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    Однако в наши дни никто особо не думает о них, и типы документа стали историческим артефактом, которые должны быть включены везде, чтобы всё работало правильно. `<!DOCTYPE html>` — это самый короткий вид типа документа, который считается действующим. На самом деле это всё, что нужно вам знать о типах документов .
+   Однако в наши дни никто особо не думает о них, и типы документа стали историческим артефактом, которые должны быть включены везде, чтобы всё работало правильно. `<!DOCTYPE html>` — это самый короткий вид типа документа, который считается действующим. На самом деле это всё, что нужно вам знать о типах документов .
 
 2. `<html></html>`: Элемент {{htmlelement("html")}} содержит в себе всё содержимое на всей странице, и иногда его называют "корневой элемент".
 3. `<head></head>`: Элемент {{htmlelement("head")}}. Данный элемент выступает в качестве контейнера для всего содержимого, которое вы хотите включить в HTML документ, но не хотите показывать посетителям вашей страницы. Он включает такие вещи, как ключевые слова и описание страницы, которые вы хотели бы показывать в поисковых запросах, CSS для стилизирования вашего контента, объявление поддерживаемого набора символов и многое другое. Вы узнаете больше об этом из следующей статьи данного руководства.
@@ -522,19 +527,20 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из области кода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из области кода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
   &lt;p&gt;Это — моя страница&lt;/p&gt;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -565,10 +571,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -576,38 +582,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<p>Мне очень нравится <strong>играть на барабанах</strong>. Мой любимый барабанщик — Нил Пирт, который\ играет в группе <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">"Rush"</a>.\ Мой любимый альбом Rush — <a href="http://www.deezer.com/album/942295">"Moving Pictures"</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
+var htmlSolution =
+  '<p>Мне очень нравится <strong>играть на барабанах</strong>. Мой любимый барабанщик — Нил Пирт, который играет в группе <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">"Rush"</a>. Мой любимый альбом Rush — <a href="http://www.deezer.com/album/942295">"Moving Pictures"</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -619,8 +626,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -631,10 +641,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -650,7 +660,7 @@ textarea.onkeyup = function(){
 
 Вы могли заметить, что в примерах кода из этой статьи много пробелов. Это вовсе не обязательно — следующие два примера эквивалентны:
 
-```html
+```html-nolint
 <p>Собаки глупы.</p>
 
 <p>Собаки
@@ -675,7 +685,7 @@ textarea.onkeyup = function(){
 
 В следующем примере вы видите два абзаца, которые рассказывают о веб-технологиях:
 
-```html
+```html-nolint
 <p>В HTML вы определяете параграф элементом <p>.</p>
 
 <p>В HTML вы определяете параграф элементом &lt;p&gt;.</p>
@@ -694,7 +704,7 @@ textarea.onkeyup = function(){
 Чтобы превратить часть содержимого HTML-файла в комментарий, нужно поместить её в специальные маркеры `<!--` и `-->`, например:
 
 ```html
-<p> Меня нет в комментариях( </p>
+<p>Меня нет в комментариях(</p>
 
 <!-- <p>А теперь есть!</p> -->
 ```

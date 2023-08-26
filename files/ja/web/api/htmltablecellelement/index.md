@@ -1,21 +1,23 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
+l10n:
+  sourceCommit: 0387e3e9f49863cc1f8bba5164e1697778cba593
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTableCellElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて）表のセルのレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
+**`HTMLTableCellElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて）表のセル（見出しセル {{HTMLElement("th")}} またはデータセル {{HTMLElement("td")}}）のレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLTableCellElement.abbr")}}
   - : 文字列で、 `<th>` 要素上（{{HTMLElement("td")}} 上ではない）で使用可能であり、見出しセルの代替ラベルを指定します。この代替ラベルは、データセルに適用される見出しを記述するときなど、他のコンテキストで使用することができます。これは、特にスクリーンリーダーが使用するための短い用語を提供するために使用され、貴重なアクセシビリティツールとなります。通常、 `abbr` の値は省略形や頭字語ですが、文脈に応じて適切なテキストを指定することができます。
-- {{domxref("HTMLTableCellElement.cellIndex")}} {{readonlyInline}}
+- {{domxref("HTMLTableCellElement.cellIndex")}} {{ReadOnlyInline}}
   - : 長整数値で、セルが含まれる {{HTMLElement("tr")}} の {{domxref("HTMLTableRowElement.cells", "cells")}} コレクション内での位置を表します。セルが `<tr>` に属さない場合は、 `-1` を返します。
 - {{domxref("HTMLTableCellElement.colSpan")}}
   - : 符号なし整数で、このセルがまたがらなければならない列の数を示します。これは [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を反映したものです。
@@ -38,7 +40,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
     - The empty string (`""`)
       - : 見出しセルは事前に定義された範囲を持ちません。ユーザーエージェントは文脈の手がかりに基づいて範囲を確立します。
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
@@ -51,11 +53,11 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
   - : 仮想的にセルをグループ化する名前を含む文字列。これは、廃止された [`axis`](/ja/docs/Web/HTML/Element/td#axis) 属性を反映しています。
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
-  - : 文字列で、セルの背景色です。これは、廃止された [`bgColor`](/ja/docs/Web/HTML/Element/td#bgColor) 属性を反映したものです。
+  - : 文字列で、セルの背景色です。これは、廃止された [`bgColor`](/ja/docs/Web/HTML/Element/td#bgcolor) 属性を反映したものです。
 - {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
   - : 文字列で、 1 つの文字を含みます。この文字は、列の全てのセルを揃えるための文字です。これは [`char`](/ja/docs/Web/HTML/Element/td#char) を反映し、既定では言語に関連付けられた小数点の値、例えば英語なら `'.'`、フランス語なら `','` となります。このプロパティはオプションであり、あまり対応されていませんでした。
 - {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
-  - : 文字列で、 `HTMLTableCellElement.ch` で定義された文字の右側（左書きの場合。右書きの場合は左側）に何文字残さなければならないかを示す整数です。このプロパティはオプションであり、あまり対応されていませんでした。
+  - : 文字列で、`HTMLTableCellElement.ch` で定義された文字の右側（左書きの場合。右書きの場合は左側）に何文字残さなければならないかを示す整数です。このプロパティはオプションであり、あまり対応されていませんでした。
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}
   - : 文字列で、セルのヒントとなる高さのピクセル数が入ります。これは、廃止された [`height`](/ja/docs/Web/HTML/Element/td#height) 属性を反映します。
 - {{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}

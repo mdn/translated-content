@@ -1,14 +1,13 @@
 ---
 title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/set
 ---
 
 {{AddonSidebar()}}
 
 La méthode **`set()`** de l'API {{WebExtAPIRef("cookies")}} définit un cookie contenant des données précises de cookie. Cette méthode équivaut à l'émission d'un en-tête HTTP `Set-Cookie` lors d'une requête à une URL donnée.
 
-L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour l'URL indiquée dans son manifest. L’URL donnée a également besoin des permissions nécessaires pour créer un cookie avec les paramètres donnés.
+L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour l'URL indiquée dans son manifest. L'URL donnée a également besoin des permissions nécessaires pour créer un cookie avec les paramètres donnés.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -16,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var setting = browser.cookies.set(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -25,31 +24,31 @@ var setting = browser.cookies.set(
 - `details`
   - : Un `objet` contenant les détails du cookie que vous souhaitez définir. Il peut avoir les propriétés suivantes :
 - `domain`{{optional_inline}}
-  - : Une `chaîne` représentant le domaine du cookie. S’il est omis, le cookie devient un cookie hôte uniquement.
+  - : Une `chaîne` représentant le domaine du cookie. S'il est omis, le cookie devient un cookie hôte uniquement.
 - `expirationDate`{{optional_inline}}
-  - : Un `nombre` qui représente la date d'expiration du cookie en tant que nombre de secondes écoulées depuis l'époque UNIX. S’il est omis, le cookie devient un cookie de session.
+  - : Un `nombre` qui représente la date d'expiration du cookie en tant que nombre de secondes écoulées depuis l'époque UNIX. S'il est omis, le cookie devient un cookie de session.
 - `firstPartyDomain`{{optional_inline}}
   - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie sera associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
 - `httpOnly`{{optional_inline}}
-  - : Un `booléen` qui spécifie si le cookie doit être marqué comme HttpOnly (`true`), ou pas (false). S’il est omis, la valeur par défaut est `false`.
+  - : Un `booléen` qui spécifie si le cookie doit être marqué comme HttpOnly (`true`), ou pas (false). S'il est omis, la valeur par défaut est `false`.
 - `name`{{optional_inline}}
-  - : Une `chaîne` représentant le nom du cookie. S’il est omis, il est vide par défaut.
+  - : Une `chaîne` représentant le nom du cookie. S'il est omis, il est vide par défaut.
 - `path`{{optional_inline}}
-  - : Une `chaîne` représentant le chemin du cookie. S’il est omis, la valeur par défaut est la partie du chemin du paramètre de l'URL.
+  - : Une `chaîne` représentant le chemin du cookie. S'il est omis, la valeur par défaut est la partie du chemin du paramètre de l'URL.
 - `sameSite{{optional_inline}}`
-  - : Une valeur {{WebExtAPIRef("cookies.SameSiteStatus")}} qui indique l’état SameSite du cookie. Si omis, la valeur par défaut 0, 'no_restriction'.
+  - : Une valeur {{WebExtAPIRef("cookies.SameSiteStatus")}} qui indique l'état SameSite du cookie. Si omis, la valeur par défaut 0, 'no_restriction'.
 - `secure`{{optional_inline}}
-  - : Un `booléen` qui spécifie si le cookie doit être marqué comme sécurisé (`true`), ou pas (false). S’il est omis, la valeur par défaut est `false`.
+  - : Un `booléen` qui spécifie si le cookie doit être marqué comme sécurisé (`true`), ou pas (false). S'il est omis, la valeur par défaut est `false`.
 - `storeId`{{optional_inline}}
-  - : Une `chaîne` représentant l’ID du cookie store dans lequel défini le cookie. S’il est omiS, le cookie est défini par défaut dans le cookie store du contexte d'exécution actuel.
+  - : Une `chaîne` représentant l'ID du cookie store dans lequel défini le cookie. S'il est omiS, le cookie est défini par défaut dans le cookie store du contexte d'exécution actuel.
 - `url`
-  - : Une `chaîne` représentant l'URI de requête à associer au cookie. Cette valeur peut affecter les valeurs par défaut du cookie créé. Si les autorisations d'hôte pour cette URL ne sont pas spécifiées dans le fichier manifest, l’appel de la méthode échouera.
+  - : Une `chaîne` représentant l'URI de requête à associer au cookie. Cette valeur peut affecter les valeurs par défaut du cookie créé. Si les autorisations d'hôte pour cette URL ne sont pas spécifiées dans le fichier manifest, l'appel de la méthode échouera.
 - `value`{{optional_inline}}
-  - : Une `chaîne` représentant la valeur du cookie. S’il est omis, c’est vide par défaut.
+  - : Une `chaîne` représentant la valeur du cookie. S'il est omis, c'est vide par défaut.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les détails sur le cookie qui a été défini. Si l'appel échoue pour une quelconque raison, la promesse sera rejetée avec un message d’erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les détails sur le cookie qui a été défini. Si l'appel échoue pour une quelconque raison, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -60,14 +59,14 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 Cet exemple définit un cookie pour le document hébergé par l'onglet actuellement actif :
 
 ```js
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+var getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(setCookie);
 
 function setCookie(tabs) {
   browser.cookies.set({
     url: tabs[0].url,
     name: "favourite-colour",
-    value: "red"
+    value: "red",
   });
 }
 ```

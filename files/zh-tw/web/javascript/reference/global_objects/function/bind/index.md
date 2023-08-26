@@ -198,7 +198,7 @@ if (!Function.prototype.bind) {
       // closest thing possible to the ECMAScript 5
       // internal IsCallable function
       throw new TypeError(
-        "Function.prototype.bind - what is trying to be bound is not callable"
+        "Function.prototype.bind - what is trying to be bound is not callable",
       );
     }
 
@@ -208,7 +208,7 @@ if (!Function.prototype.bind) {
       fBound = function () {
         return fToBind.apply(
           this instanceof fNOP ? this : oThis,
-          aArgs.concat(Array.prototype.slice.call(arguments))
+          aArgs.concat(Array.prototype.slice.call(arguments)),
         );
       };
 

@@ -41,29 +41,30 @@ rootNode = node.rootNode;
 ```html
 <!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
 <div class="js-parent">
-    <div class="js-child"></div>
+  <div class="js-child"></div>
 </div>
 <div class="js-shadowHost"></div>
 <script>
-    // work on Chrome 54+，Opera41+
+  // work on Chrome 54+，Opera41+
 
-    var parent = document.querySelector('.js-parent'),
-        child = document.querySelector('.js-child'),
-        shadowHost = document.querySelector('.js-shadowHost');
+  var parent = document.querySelector(".js-parent"),
+    child = document.querySelector(".js-child"),
+    shadowHost = document.querySelector(".js-shadowHost");
 
-    console.log(parent.getRootNode().nodeName); // #document
-    console.log(child.getRootNode().nodeName); // #document
+  console.log(parent.getRootNode().nodeName); // #document
+  console.log(child.getRootNode().nodeName); // #document
 
-    // create a ShadowRoot
-    var shadowRoot = shadowHost.attachShadow({mode:'open'});
-    shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-        + '<div class="js-shadowChild">content</div>';
-    var shadowChild = shadowRoot.querySelector('.js-shadowChild');
+  // create a ShadowRoot
+  var shadowRoot = shadowHost.attachShadow({ mode: "open" });
+  shadowRoot.innerHTML =
+    "<style>div{background:#2bb8aa;}</style>" +
+    '<div class="js-shadowChild">content</div>';
+  var shadowChild = shadowRoot.querySelector(".js-shadowChild");
 
-    // The default value of composed is false
-    console.log(shadowChild.getRootNode() === shadowRoot); // true
-    console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
-    console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
+  // The default value of composed is false
+  console.log(shadowChild.getRootNode() === shadowRoot); // true
+  console.log(shadowChild.getRootNode({ composed: false }) === shadowRoot); // true
+  console.log(shadowChild.getRootNode({ composed: true }).nodeName); // #document
 </script>
 ```
 

@@ -1,11 +1,8 @@
 ---
 title: Захват кадров с WebRTC
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Захват WebRTC
-translation_of: Web/API/WebRTC_API/Taking_still_photos
-original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 В этой статье объясняется как использовать WebRTC для получения доступа к камере компьютера или мобильного устройства, и захвата кадров с их помощью. [Ознакомьтесь с примером,](https://mdn-samples.mozilla.org/s/webrtc-capturestill) а затем узнайте как это работает.
@@ -29,7 +26,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Все это просто, и мы увидим как они связаны между собой, когда обратимся к коду JavaScript .
 
-В разметке имеется элемент {{HTMLElement("canvas")}} , который сохраняет захваченный кадр, который может быть дополнительно обработан и конвертируется в выходной файл изображения. Элемент` canvas `является скрытым, в его стиле свойство {{cssxref("display")}}`:none`, во избежании поломки интерфейса, где пользователю совершенно не обязательно видеть служебные элементы.
+В разметке имеется элемент {{HTMLElement("canvas")}} , который сохраняет захваченный кадр, который может быть дополнительно обработан и конвертируется в выходной файл изображения. Элемент`canvas`является скрытым, в его стиле свойство {{cssxref("display")}}`:none`, во избежании поломки интерфейса, где пользователю совершенно не обязательно видеть служебные элементы.
 
 Для отображения пользователю результата захвата кадра, в интерфейсе расположен элемент {{HTMLElement("img")}}.
 
@@ -116,13 +113,13 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Успешное выполнение промиса передаёт объект потока( `stream` ) в качестве параметра функции метода `then()`., который присваивается свойству `srcObject` элемента {{HTMLElement("video")}}, направляя поток в него.
 
-Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play).
+Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play).
 
 Метод обработки ошибки промиса вызывается в случае, если получение потока окажется неудачным, к примеру, когда к устройству подключена несовместимая камера, или пользователь запретил к ней доступ.
 
 #### Обработка события начала воспроизведения
 
-После момента вызова метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
+После момента вызова метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
 
 ```
     video.addEventListener('canplay', function(ev){
@@ -232,5 +229,5 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 - [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
 - [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- [Использование изображений](/ru/docs/Web/API/Canvas_API/Tutorial/Using_images)
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

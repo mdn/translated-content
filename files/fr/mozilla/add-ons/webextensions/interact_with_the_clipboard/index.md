@@ -1,7 +1,6 @@
 ---
 title: Interagir avec le presse-papier
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
 
 {{AddonSidebar}}
@@ -33,7 +32,7 @@ L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier 
 Pour les scripts de page, la permission `"clipboard-write"` doit être demandée via l'API [`navigator.permissions`](/fr/docs/Web/API/Permissions). Cette permission peut ensuite être vérifiée avec [`navigator.permissions.query()`](/fr/docs/Web/API/Permissions/query)&nbsp;:
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then(result => {
+navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
   if (result.state == "granted" || result.state == "prompt") {
     /* On peut alors écrire dans le presse-papier */
   }
@@ -46,11 +45,14 @@ La fonction qui suit prend en argument une chaîne de caractères et l'écrit da
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
-    /* le presse-papier est correctement paramétré */
-  }, function() {
-    /* l'écriture dans le presse-papier a échoué */
-  });
+  navigator.clipboard.writeText(newClip).then(
+    function () {
+      /* le presse-papier est correctement paramétré */
+    },
+    function () {
+      /* l'écriture dans le presse-papier a échoué */
+    },
+  );
 }
 ```
 
@@ -61,8 +63,7 @@ Les commandes `"cut"` et `"copy"`, fournies par la méthode [`document.execComma
 Prenons comme exemple une fenêtre contenant le fragment de HTML suivant&nbsp;:
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copier</button>
+<input id="input" type="text" /> <button id="copy">Copier</button>
 ```
 
 Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input), on pourra utiliser un code comme celui-ci&nbsp;:
@@ -89,7 +90,7 @@ function copy() {
 }
 
 browser.alarms.create({
-  delayInMinutes: 0.1
+  delayInMinutes: 0.1,
 });
 
 browser.alarms.onAlarm.addListener(copy);
@@ -124,8 +125,9 @@ Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web
 Une fois que la permission `"clipboard-read"` a été demandée via [l'API Permissions](/fr/docs/Web/API/Permissions_API), il est possible de lire depuis le presse-papier. Ce fragment de code illustre la récupération du texte depuis le presse-papier et remplace le contenu de l'élément ayant l'identifiant `"outbox"` avec ce texte.
 
 ```js
-navigator.clipboard.readText().then(clipText =>
-  document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ### Utiliser `execCommand()`
@@ -135,8 +137,7 @@ Pour utiliser [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCo
 Prenons ce fragment de HTML&nbsp;:
 
 ```html
-<textarea id="output"></textarea>
-<button id="paste">Coller</button>
+<textarea id="output"></textarea> <button id="paste">Coller</button>
 ```
 
 Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Element/Button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:

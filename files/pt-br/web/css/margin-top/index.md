@@ -17,9 +17,9 @@ Essa propriedade não tem efeito em _elementos non-replaced_ inline elements, co
 
 ```css
 /* Valores <length> */
-margin-top: 10px;        /* An absolute length */
-margin-top: 1em;         /* A length relative to the text size */
-margin-top: 5%;          /* A margin relative to the nearest block container's width */
+margin-top: 10px; /* An absolute length */
+margin-top: 1em; /* A length relative to the text size */
+margin-top: 5%; /* A margin relative to the nearest block container's width */
 
 /* Valores padrão */
 margin-top: auto;
@@ -46,20 +46,28 @@ margin-top: unset;
 ## Exemplos
 
 ```css
-.content { margin-top:   5%; }
-.sidebox { margin-top: 10px; }
-.logo    { margin-top: -5px; }
-#footer  { margin-top:  1em; }
+.content {
+  margin-top: 5%;
+}
+.sidebox {
+  margin-top: 10px;
+}
+.logo {
+  margin-top: -5px;
+}
+#footer {
+  margin-top: 1em;
+}
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Status                                   | Comentário                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Sem mudança significativa.              |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | Define `margin-top` como animável.      |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | Remove esse efeito em elementos inline. |
-| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Definição inicial.                      |
+| Especificação                                                      | Status                        | Comentário                              |
+| ------------------------------------------------------------------ | ----------------------------- | --------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}              | {{Spec2('CSS3 Box')}}         | Sem mudança significativa.              |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}}  | {{Spec2('CSS3 Transitions')}} | Define `margin-top` como animável.      |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}           | Remove esse efeito em elementos inline. |
+| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                  | {{Spec2('CSS1')}}             | Definição inicial.                      |
 
 ## Compatibilidade de navegadores
 

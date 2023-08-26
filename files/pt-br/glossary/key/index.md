@@ -1,7 +1,6 @@
 ---
 title: Key
 slug: Glossary/Key
-original_slug: Glossario/Key
 ---
 
 Uma key é uma parte de informação utilizada por um {{Glossary("cipher")}} para {{Glossary("encryption")}} e/ou {{Glossary("decryption")}}.Mensagens criptografadas devem permanecer seguras mesmo se tudo envolvendo o {{Glossary("cryptosystem")}}, com exceção da key, for de caráter público.
@@ -12,6 +11,6 @@ Em {{Glossary("symmetric-key cryptography")}}, a mesma chave é utilizada para c
 
 - [Kerckhoffs's principle](http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) na Wikipedia
 
-### Dicionário:
+### Dicionário
 
 "Key": "Chave"

@@ -1,7 +1,6 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-original_slug: Web/HTML/Element/Input/data
 ---
 
 Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o `horário`. Os tipos de entrada [time](/pt-BR/docs/Web/HTML/Element/input/time) e [`datetime-local`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) permitem informar horário e data/hora.
@@ -9,7 +8,7 @@ Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada 
 A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja [Browser compatibility](#browser_compatibility) para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text) simples.
 
 ```html
-<input id="date" type="date">
+<input id="date" type="date" />
 ```
 
 {{ EmbedLiveSample('Basic_example', 600, 40) }}
@@ -73,7 +72,7 @@ O controle de data do Firefox se parece assim:
 Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value), como:
 
 ```html
-<input id="date" type="date" value="2017-06-01">
+<input id="date" type="date" value="2017-06-01" />
 ```
 
 {{ EmbedLiveSample('Value', 600, 40) }}
@@ -84,7 +83,7 @@ Você pode, além disso, obter e definir o valor da data em JavaScript usando a 
 
 ```js
 var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2017-06-01';
+dateControl.value = "2017-06-01";
 ```
 
 Este código localiza o primeiro elemento {{HTMLElement("input")}} que o `type` é `date` e define seu valor para a data 2017-06-01 (1 de junho de 2017).
@@ -114,7 +113,7 @@ O uso mais simples de `<input type="date">` envolve a combinação de um `<input
 <form>
   <div>
     <label for="diaa">Informe a data do seu aniversário:</label>
-    <input type="date" id="diaa" name="diaa">
+    <input type="date" id="diaa" name="diaa" />
   </div>
 </form>
 ```
@@ -129,7 +128,12 @@ Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [
 <form>
   <div>
     <label for="festa">Escolha a sua data preferida da festa:</label>
-    <input type="date" id="festa" name="festa" min="2017-04-01" max="2017-04-30">
+    <input
+      type="date"
+      id="festa"
+      name="festa"
+      min="2017-04-01"
+      max="2017-04-30" />
   </div>
 </form>
 ```
@@ -157,12 +161,21 @@ Vamos dar uma olhada em um exemplo — aqui nós definimos datas mínima e máxi
 ```html
 <form>
   <div>
-    <label for="festa">Escolha sua data preferida da festa (obrigatório, de 1º a 20 de abril):</label>
-    <input type="date" id="festa" name="festa" min="2017-04-01" max="2017-04-20" required>
+    <label for="festa"
+      >Escolha sua data preferida da festa (obrigatório, de 1º a 20 de
+      abril):</label
+    >
+    <input
+      type="date"
+      id="festa"
+      name="festa"
+      min="2017-04-01"
+      max="2017-04-20"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -179,9 +192,9 @@ Aqui tem o CSS utilizado no exemplo acima. Nós usamos as propriedades CSS {{css
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -189,14 +202,14 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span:after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span:after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
@@ -225,11 +238,16 @@ Um jeito de contornar isso é colocar um atributo [`pattern`](/pt-BR/docs/Web/HT
 <form>
   <div>
     <label for="diaa">Informe a data do seu aniversário:</label>
-    <input type="date" id="bday" name="diaa" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+    <input
+      type="date"
+      id="bday"
+      name="diaa"
+      required
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -248,7 +266,7 @@ input:invalid + span {
 }
 
 input:invalid + span:after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -258,7 +276,7 @@ input:valid + span {
 }
 
 input:valid + span:after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -355,7 +373,7 @@ Beside the attributes listed below, this element can have any of the [global att
 To create a widget to display a date, use:
 
 ```html
-<input type="date">
+<input type="date" />
 ```
 
 ## Navegadores compatíveis

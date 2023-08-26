@@ -1,7 +1,6 @@
 ---
 title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
-original_slug: Web/API/NavigatorID/appVersion
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
@@ -13,7 +12,7 @@ original_slug: Web/API/NavigatorID/appVersion
 ## 構文
 
 ```js
-window.navigator.appVersion
+window.navigator.appVersion;
 ```
 
 ### 値
@@ -23,7 +22,11 @@ window.navigator.appVersion
 ## 例
 
 ```js
-alert("このブラウザーのバージョンは " + navigator.appVersion + " と報告されています。");
+alert(
+  "このブラウザーのバージョンは " +
+    navigator.appVersion +
+    " と報告されています。",
+);
 ```
 
 ## 注

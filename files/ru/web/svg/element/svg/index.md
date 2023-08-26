@@ -1,9 +1,8 @@
 ---
 title: <svg>
 slug: Web/SVG/Element/svg
-translation_of: Web/SVG/Element/svg
-original_slug: Web/SVG/Элемент/svg
 ---
+
 {{SVGRef}}
 
 Элемент `svg` является контейнером, который определяет новую систему координат и [область просмотра](/ru/docs/Web/SVG/Attribute/viewBox). Он используется, как самый внешний элемент документов SVG, но также может использоваться для встраивания фрагмента SVG в документ SVG или HTML.
@@ -13,11 +12,19 @@ original_slug: Web/SVG/Элемент/svg
 ## Пример
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 

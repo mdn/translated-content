@@ -1,7 +1,6 @@
 ---
 title: SLD
 slug: Glossary/SLD
-translation_of: Glossary/SLD
 ---
 
 Un SLD (Second Level Domain) est un domaine qui est hiérarchiquement directement sous un {{Glossary("TLD")}}.
@@ -14,4 +13,4 @@ Autre exemple, dans `developer.mozilla.org`, le SLD `developer` sert à indiquer
 
 ### Culture générale
 
-- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxi%C3%A8me_niveau) sur Wikipédia
+- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxième_niveau) sur Wikipédia

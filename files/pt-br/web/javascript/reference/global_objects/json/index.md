@@ -15,10 +15,10 @@ O Objeto **`JSON`** contém métodos para parsing [JavaScript Object Notation](h
 
 JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript.
 
-| JavaScript tipo  | JSON diferenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objetos e Arrays | Os nomes das propriedades devem ser strings com aspas duplas; as vírgulas à direita são proibidas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Números          | Zeros à esquerda são proibidos; um ponto decimal deve ser seguido por pelo menos um dígito.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| JavaScript tipo  | JSON diferenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetos e Arrays | Os nomes das propriedades devem ser strings com aspas duplas; as vírgulas à direita são proibidas.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Números          | Zeros à esquerda são proibidos; um ponto decimal deve ser seguido por pelo menos um dígito.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Strings          | Apenas um conjunto limitado de caracteres pode ser escapado; certos caracteres de controle são proibidos; o separador de linha Unicode ([U+2028](http://unicode-table.com/en/2028/)) e o separador de parágrafo ([U+2029](http://unicode-table.com/en/2029/)) caracteres são permitidos; strings devem ter aspas duplas.Veja o exemplo a seguir, onde {{jsxref("JSON.parse()")}} funciona bem e um {{jsxref("SyntaxError")}} é lançado ao avaliar o código como JavaScript: var code = '"\u2028\u2029"'; JSON.parse(code); // works fine eval(code); // fails |
 
 A sintaxe completa do JSON é a seguinte:
@@ -91,50 +91,69 @@ O algoritmo a seguir é uma imitação do objeto nativo JSON:
 ```js
 if (!window.JSON) {
   window.JSON = {
-    parse: function(sJSON) { return eval('(' + sJSON + ')'); },
+    parse: function (sJSON) {
+      return eval("(" + sJSON + ")");
+    },
     stringify: (function () {
       var toString = Object.prototype.toString;
-      var isArray = Array.isArray || function (a) { return toString.call(a) === '[object Array]'; };
-      var escMap = {'"': '\\"', '\\': '\\\\', '\b': '\\b', '\f': '\\f', '\n': '\\n', '\r': '\\r', '\t': '\\t'};
-      var escFunc = function (m) { return escMap[m] || '\\u' + (m.charCodeAt(0) + 0x10000).toString(16).substr(1); };
+      var isArray =
+        Array.isArray ||
+        function (a) {
+          return toString.call(a) === "[object Array]";
+        };
+      var escMap = {
+        '"': '\\"',
+        "\\": "\\\\",
+        "\b": "\\b",
+        "\f": "\\f",
+        "\n": "\\n",
+        "\r": "\\r",
+        "\t": "\\t",
+      };
+      var escFunc = function (m) {
+        return (
+          escMap[m] ||
+          "\\u" + (m.charCodeAt(0) + 0x10000).toString(16).substr(1)
+        );
+      };
       var escRE = /[\\"\u0000-\u001F\u2028\u2029]/g;
       return function stringify(value) {
         if (value == null) {
-          return 'null';
-        } else if (typeof value === 'number') {
-          return isFinite(value) ? value.toString() : 'null';
-        } else if (typeof value === 'boolean') {
+          return "null";
+        } else if (typeof value === "number") {
+          return isFinite(value) ? value.toString() : "null";
+        } else if (typeof value === "boolean") {
           return value.toString();
-        } else if (typeof value === 'object') {
-          if (typeof value.toJSON === 'function') {
+        } else if (typeof value === "object") {
+          if (typeof value.toJSON === "function") {
             return stringify(value.toJSON());
           } else if (isArray(value)) {
-            var res = '[';
+            var res = "[";
             for (var i = 0; i < value.length; i++)
-              res += (i ? ', ' : '') + stringify(value[i]);
-            return res + ']';
-          } else if (toString.call(value) === '[object Object]') {
+              res += (i ? ", " : "") + stringify(value[i]);
+            return res + "]";
+          } else if (toString.call(value) === "[object Object]") {
             var tmp = [];
             for (var k in value) {
               if (value.hasOwnProperty(k))
-                tmp.push(stringify(k) + ': ' + stringify(value[k]));
+                tmp.push(stringify(k) + ": " + stringify(value[k]));
             }
-            return '{' + tmp.join(', ') + '}';
+            return "{" + tmp.join(", ") + "}";
           }
         }
         return '"' + value.toString().replace(escRE, escFunc) + '"';
       };
-    })()
+    })(),
   };
 }
 ```
 
 ## Especificações
 
-| Especificação                                                    | Status                   | Comentário |
-| ---------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}         | {{Spec2('ES5.1')}} |            |
-| {{SpecName('ES6', '#sec-json-object', 'JSON')}} | {{Spec2('ES6')}}     |            |
+| Especificação                                   | Status             | Comentário |
+| ----------------------------------------------- | ------------------ | ---------- |
+| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}     | {{Spec2('ES5.1')}} |            |
+| {{SpecName('ES6', '#sec-json-object', 'JSON')}} | {{Spec2('ES6')}}   |            |
 
 ## Navegador compatível
 

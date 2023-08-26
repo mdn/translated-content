@@ -1,7 +1,6 @@
 ---
 title: Entendiendo el colapso de margen
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
-original_slug: Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing
 ---
 
 {{CSSRef}}
@@ -30,11 +29,23 @@ Cosas a tener en cuenta:
 
 ```html
 <p>El margen inferior de este párrafo está colapsado ....</p>
-<p>... con el margen superior de este párrafo, lo que deja un margen de<code>1.2rem</code> entre ellos.</p>
+<p>
+  ... con el margen superior de este párrafo, lo que deja un margen de<code
+    >1.2rem</code
+  >
+  entre ellos.
+</p>
 
-<div>Este elemento padre contiene dos párrafos!
-  <p>Este párrafo tiene un margen de <code>.4rem</code>  entre él y el texto anterior.</p>
-  <p>Mi margen inferior se colapsa con mi padre, produciendo un margen inferior de <code>2rem</code>.</p>
+<div>
+  Este elemento padre contiene dos párrafos!
+  <p>
+    Este párrafo tiene un margen de <code>.4rem</code> entre él y el texto
+    anterior.
+  </p>
+  <p>
+    Mi margen inferior se colapsa con mi padre, produciendo un margen inferior
+    de <code>2rem</code>.
+  </p>
 </div>
 
 <p>Estoy <code>2rem</code> por debajo del elemento de arriba.</p>
@@ -49,7 +60,7 @@ div {
 }
 
 p {
-  margin: .4rem 0 1.2rem 0;
+  margin: 0.4rem 0 1.2rem 0;
   background: yellow;
 }
 ```

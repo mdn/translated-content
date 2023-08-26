@@ -1,8 +1,6 @@
 ---
 title: Construire des dispositions courantes avec des grilles CSS
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -22,12 +20,17 @@ Ici, on crée une disposition avec des zones nommées comme on a pu le voir _[da
 Dans le document on a un conteneur qui contient un en-tête, un pied de page, du contenu principal, une barre de navigation, une barre latérale et un bloc dans lequel on souhaite placer de la publicité.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
 .wrapper > * {
@@ -57,11 +60,10 @@ nav ul {
   <article class="content">
     <h1>L'article principal</h1>
     <p>
-       Dans cette disposition, on affiche les zones dans le même
-       ordre que dans le document pour les écrans dont la largeur
-       est inférieure à 500 pixels. On passe à une disposition sur
-       deux colonnes ou trois colonnes en redéfinissant la grille
-       et le placement des objets sur la grille.
+      Dans cette disposition, on affiche les zones dans le même ordre que dans
+      le document pour les écrans dont la largeur est inférieure à 500 pixels.
+      On passe à une disposition sur deux colonnes ou trois colonnes en
+      redéfinissant la grille et le placement des objets sur la grille.
     </p>
   </article>
   <aside class="side">Barre latérale</aside>
@@ -140,11 +142,11 @@ Enfin, on ajoute une autre requête de média pour la disposition avec trois col
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -164,7 +166,10 @@ Si vous travaillez avec un _framework_ ou avec un système de grille, vous êtes
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -187,9 +192,15 @@ Pour voir comment ce système fonctionne, on place quatre éléments dans le con
 ```html
 <div class="wrapper">
   <div class="item1">Début à la première colonne, s'étend sur 3 colonnes.</div>
-  <div class="item2">Début à la colonne 6, s'étend sur 4 colonnes et deux lignes.</div>
-  <div class="item3">Début à la colonne 2 de la ligne 2, s'étend sur 2 colonnes.</div>
-  <div class="item4">Début à la colonne 3, s'étend jusqu'à la fin de la grille.</div>
+  <div class="item2">
+    Début à la colonne 6, s'étend sur 4 colonnes et deux lignes.
+  </div>
+  <div class="item3">
+    Début à la colonne 2 de la ligne 2, s'étend sur 2 colonnes.
+  </div>
+  <div class="item4">
+    Début à la colonne 3, s'étend jusqu'à la fin de la grille.
+  </div>
 </div>
 ```
 
@@ -200,7 +211,7 @@ Et on place ces éléments sur la grille en utilisant les noms utilisés précé
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -228,12 +239,17 @@ Il y a certainement certaines différences fondamentales avec les systèmes que 
 Pour voir comment cette méthode fonctionne en pratique, nous allons créé le même plan que celui que nous avons vu avec les zones nommées et {{cssxref("grid-template-areas")}} mais en utilisant désormais ce système à 12 colonnes. Commençons avec la même structure que celle utilisée plus haut avec les zones nommées :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
 .wrapper > * {
@@ -263,11 +279,10 @@ nav ul {
   <article class="content">
     <h1>L'article principal</h1>
     <p>
-       Dans cette disposition, on affiche les zones dans le même
-       ordre que dans le document pour les écrans dont la largeur
-       est inférieure à 500 pixels. On passe à une disposition sur
-       deux colonnes ou trois colonnes en redéfinissant la grille
-       et le placement des objets sur la grille.
+      Dans cette disposition, on affiche les zones dans le même ordre que dans
+      le document pour les écrans dont la largeur est inférieure à 500 pixels.
+      On passe à une disposition sur deux colonnes ou trois colonnes en
+      redéfinissant la grille et le placement des objets sur la grille.
     </p>
   </article>
   <aside class="side">Barre latérale</aside>
@@ -310,7 +325,8 @@ Le panneau dédié à la publicité est affiché sous la barre latérale et comm
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -370,40 +386,51 @@ Le document utilisé contient une liste d'objets non ordonnée. Pour chaque prod
     <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
     <div class="cta"><a href="">Faire quelque chose !</a></div>
   </li>
-   <li>
-     <h2>Produit n°2</h2>
-     <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
-     <div class="cta"><a href="">Faire quelque chose !</a></div>
-   </li>
-   <li class="wide">
-     <h2>Produit n°3</h2>
-     <div class="body"><p>Le descriptif du produit sera écrit ici.</p>
-     <p>Ce produit possède un descriptif beaucoup plus long.</p>
-     <p>Vraiment plus long</p>
-     <p>Peut-être faudrait-il le gérer différemment ?</p></div>
-     <div class="cta"><a href="">Faire quelque chose !</a></div>
-    </li>
-    <li>
-     <h2>Produit n°4</h2>
-     <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
-     <div class="cta"><a href="">Faire quelque chose !</a></div>
-    </li>
-     <li>
-     <h2>Produit n°5</h2>
-     <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
-      <div class="cta"><a href="">Faire quelque chose !</a></div>
-    </li>
+  <li>
+    <h2>Produit n°2</h2>
+    <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
+    <div class="cta"><a href="">Faire quelque chose !</a></div>
+  </li>
+  <li class="wide">
+    <h2>Produit n°3</h2>
+    <div class="body">
+      <p>Le descriptif du produit sera écrit ici.</p>
+      <p>Ce produit possède un descriptif beaucoup plus long.</p>
+      <p>Vraiment plus long</p>
+      <p>Peut-être faudrait-il le gérer différemment ?</p>
+    </div>
+    <div class="cta"><a href="">Faire quelque chose !</a></div>
+  </li>
+  <li>
+    <h2>Produit n°4</h2>
+    <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
+    <div class="cta"><a href="">Faire quelque chose !</a></div>
+  </li>
+  <li>
+    <h2>Produit n°5</h2>
+    <div class="body"><p>Le descriptif du produit sera écrit ici.</p></div>
+    <div class="cta"><a href="">Faire quelque chose !</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-img {max-width: 100%; display: block;}
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
 body {
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   color: #f08c00;
 }
@@ -425,7 +452,7 @@ Nous allons créer une grille avec un nombre de colonnes adaptable et chacune de
   margin: 2em;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -470,39 +497,50 @@ Si on veut éviter ces trous, on peut utiliser la règle {{cssxref("grid-auto-fl
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-img {max-width: 100%; display: block;}
-body {
-  font: 1.2em Helvetica, arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
-a:link, a:visited {
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
   text-decoration: none;
   color: #f08c00;
 }
@@ -537,7 +575,7 @@ h2 {
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;

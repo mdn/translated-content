@@ -1,7 +1,6 @@
 ---
 title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingFrames = browser.webNavigation.getAllFrames(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -64,19 +63,19 @@ function onError(error) {
 }
 
 function logAllFrames(tabs) {
-  var gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
+  var gettingAllFrames = browser.webNavigation.getAllFrames({
+    tabId: tabs[0].id,
+  });
   gettingAllFrames.then(logFrameInfo, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-
+browser.browserAction.onClicked.addListener(function () {
   var querying = browser.tabs.query({
     currentWindow: true,
-    active: true
+    active: true,
   });
 
   querying.then(logAllFrames, onError);
-
 });
 ```
 

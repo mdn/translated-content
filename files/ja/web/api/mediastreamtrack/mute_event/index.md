@@ -1,5 +1,5 @@
 ---
-title: 'MediaStreamTrack: mute イベント'
+title: "MediaStreamTrack: mute イベント"
 slug: Web/API/MediaStreamTrack/mute_event
 ---
 
@@ -20,9 +20,9 @@ slug: Web/API/MediaStreamTrack/mute_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('mute', event => { });
+addEventListener("mute", (event) => {});
 
-onmute = event => { };
+onmute = (event) => {};
 ```
 
 ## イベント型
@@ -34,13 +34,21 @@ onmute = event => { };
 この例では、イベントハンドラーを `mute` および {{domxref("MediaStreamTrack/unmute_event", "unmute")}} の各イベントに設定し、 {{domxref("MediaStreamTrack")}} が入った変数 `musicTrack` のソースからメディアが流れていない場合を検出しています。
 
 ```js
-musicTrack.addEventListener("mute", event => {
-  document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
-}, false);
+musicTrack.addEventListener(
+  "mute",
+  (event) => {
+    document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
+  },
+  false,
+);
 
-musicTrack.addEventListener("unmute", event => {
- document.getElementById("timeline-widget").style.backgroundColor = "#fff";
-}, false);
+musicTrack.addEventListener(
+  "unmute",
+  (event) => {
+    document.getElementById("timeline-widget").style.backgroundColor = "#fff";
+  },
+  false,
+);
 ```
 
 これらのイベントハンドラーのある場面で、トラック `musicTrack` が {{domxref("MediaStreamTrack.muted", "muted")}} の状態になったとき、 `timeline-widget` の ID を持った要素の背景色が `#aaa` に変化します。トラックのミュート状態を抜けたことを — `unmute` イベントが到着したことによって — 検出すると、背景色は白に戻ります。
@@ -63,11 +71,11 @@ musicTrack.onunmute = event = > {
 
 ```js
 // Peer 1 (Receiver)
-audioTrack.addEventListener('mute', event => {
+audioTrack.addEventListener("mute", (event) => {
   // Do something in UI
 });
 
-videoTrack.addEventListener('mute', event => {
+videoTrack.addEventListener("mute", (event) => {
   // Do something in UI
 });
 
@@ -75,10 +83,10 @@ videoTrack.addEventListener('mute', event => {
 const transceivers = peer.getTransceivers();
 
 const audioTrack = transceivers[0];
-audioTrack.direction = 'recvonly';
+audioTrack.direction = "recvonly";
 
 const videoTrack = transceivers[1];
-videoTrack.direction = 'recvonly';
+videoTrack.direction = "recvonly";
 ```
 
 `transceivers` は {{domxref("RTCRtpTransceiver")}} の配列で、送受信される音声または映像トラックを見つけることができます。詳しくは {{domxref("RTCRtpTransceiver.direction", "direction")}} の記事を参照してください。

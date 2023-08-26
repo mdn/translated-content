@@ -1,7 +1,6 @@
 ---
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
 
 {{AddonSidebar()}}
@@ -12,9 +11,9 @@ Cette méthode permet de créer une nouvelle alarme pour la session de navigatio
 
 ```js
 browser.alarms.create(
-  name,        // une valeur string optionnelle
-  alarmInfo    // une valeur object optionnelle
-)
+  name, // une valeur string optionnelle
+  alarmInfo, // une valeur object optionnelle
+);
 ```
 
 ### Paramètres
@@ -44,7 +43,7 @@ browser.alarms.create(
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -56,7 +55,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -68,7 +67,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 

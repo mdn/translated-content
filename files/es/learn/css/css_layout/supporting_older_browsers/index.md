@@ -1,7 +1,6 @@
 ---
 title: Soporte a navegadores antiguos
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-original_slug: Learn/CSS/CSS_layout/Soporte_a_navegadores_antiguos
 ---
 
 {{LearnSidebar}}
@@ -64,10 +63,12 @@ Las especificaciones CSS contienen información que explica qué hace el navegad
 En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` para que se muestren en una fila. Cualquier navegador que no sea compatible con el método de compaginación [CSS Grid](/es/docs/Learn/CSS/CSS_layout/Grids) verá la hilera de cajas como un diseño con el método de flotación. Un elemento de flotación que se convierte en un elemento de cuadrícula pierde el comportamiento de flotación, lo que significa que al convertir el contenedor en un contenedor de cuadrícula, los elementos de flotación se convierten en elementos de cuadrícula. Si el navegador admite el diseño de cuadrícula, muestra la vista de cuadrícula; si no, ignora las propiedades relacionadas con el diseño de cuadrícula y utiliza el diseño de flotación.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -77,7 +78,7 @@ En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` 
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -114,10 +115,12 @@ Observa que si usas el CSS de esta manera puedes proporcionar una experiencia de
 En la compaginación de flotación, el porcentaje se calcula con respecto al contenedor: 33,333% es un tercio del ancho del contenedor. Sin embargo, en el método Grid ese 33,333% se calcula con respecto al área de la cuadrícula en la que el elemento está ubicado, por lo que en realidad se convierte en un tercio del tamaño que queremos una vez que se introduce la compaginación en cuadrícula.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -127,7 +130,7 @@ En la compaginación de flotación, el porcentaje se calcula con respecto al con
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -152,10 +155,12 @@ Consultar las propiedades te permite comprobar si un navegador admite alguna car
 Si añadimos al ejemplo anterior una consulta de las propiedades, podemos usarla para volver a establecer a `auto` los anchos de nuestros elementos, si sabemos que hay compatibilidad para la compaginación en cuadrícula.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -165,14 +170,14 @@ Si añadimos al ejemplo anterior una consulta de las propiedades, podemos usarla
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```

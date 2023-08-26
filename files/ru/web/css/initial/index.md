@@ -1,18 +1,8 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Default state
-  - Initial state
-  - Layout
-  - Reference
-  - initial
-  - Справка
-translation_of: Web/CSS/initial
 ---
+
 {{CSSRef}}
 
 Ключевое слово **`initial`** (CSS) устанавливает свойство элемента в [начальное (или по умолчанию) значение](/ru/docs/Web/CSS/initial_value). Это может быть применимо к любому свойству CSS. Это относится также к CSS-свойству {{cssxref("all")}}, с которым `initial` может быть использовано для восстановления всех CSS-свойств до их начальных значений.

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
 
@@ -27,7 +27,7 @@ Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 
 ([`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) のような) 条件式内では、単純な代入を行わないことをお勧めします。コードを一目見たときに、代入は等価と混同しやすいからです。たとえば、以下のコードは使用しないでください。
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // 正しいことを実行する
 }
