@@ -87,7 +87,9 @@ ctx.fillText(textString, x, y);
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 #container {
