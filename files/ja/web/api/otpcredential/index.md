@@ -31,15 +31,18 @@ _このインターフェイスは、{{domxref("Credential")}} からもプロ�
 以下のコードは、SMS の受信時にブラウザーの許可手続きを起動します。許可が得られると、{{jsxref("Promise")}} が `OTPCredential` オブジェクトで解決します。[このコードをシンプルなデモの一部として見る](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8)
 
 ```js
-navigator.credentials.get({
-  otp: { transport:['sms'] },
-  signal: ac.signal
-}).then((otp) => {
-  input.value = otp.code;
-  if (form) form.submit();
-}).catch((err) => {
-  console.error(err);
-});
+navigator.credentials
+  .get({
+    otp: { transport: ["sms"] },
+    signal: ac.signal,
+  })
+  .then((otp) => {
+    input.value = otp.code;
+    if (form) form.submit();
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## 仕様書

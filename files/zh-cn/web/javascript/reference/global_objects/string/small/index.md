@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/small
 
 {{JSRef}} {{deprecated_header}}
 
-{{jsxref("String")}} 值的 **`small()`** 方法创建一个 {{HTMLElement("small")}} 元素字符串，并将调用字符串嵌入其中（`<small>str</small>`），从而使该字符串以小号字体显示。
+{{jsxref("String")}} 值的 **`small()`** 方法创建一个 {{HTMLElement("small")}} 元素字符串，其中嵌入了调用的字符串（`<small>str</small>`），从而使该字符串以小号字体显示。
 
 > **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 

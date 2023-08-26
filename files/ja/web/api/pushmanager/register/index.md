@@ -26,14 +26,14 @@ var request = navigator.push.register();
 ```js
 var req = navigator.push.register();
 
-req.onsuccess = function(e) {
+req.onsuccess = function (e) {
   var endpoint = req.result;
-  debug("New endpoint: " + endpoint );
-}
+  debug("New endpoint: " + endpoint);
+};
 
-req.onerror = function(e) {
+req.onerror = function (e) {
   debug("Error getting a new endpoint: " + JSON.stringify(e));
-}
+};
 ```
 
 ## 仕様書

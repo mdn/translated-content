@@ -14,17 +14,22 @@ slug: Web/API/Web_components/Using_shadow_DOM
 この記事は、すでにあなたが [DOM (Document Object Model)](/ja/docs/Web/API/Document_Object_Model/Introduction) の概念を理解していることを想定しています。これはツリー上の構造で、接続されたノードがマークアップ文書（ウェブ文書の場合は通常 HTML 文書）に現れるさまざまな要素や文字列を表します。例として、以下のような HTML の断片を考えてみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -53,8 +58,8 @@ _シャドウ_ DOM により、通常の DOM ツリーの要素の下に隠れ�
 任意の要素にシャドウルートを取り付けるには {{domxref("Element.attachShadow()")}} メソッドを使用します。このメソッドはオプションオブジェクトを引数として取り、その中にはオプションが 1 つ、 `mode` オプションを `open` または `closed` の値で取ります。
 
 ```js
-let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});
+let shadow = elementRef.attachShadow({ mode: "open" });
+let shadow = elementRef.attachShadow({ mode: "closed" });
 ```
 
 `open` の場合は、シャドウ DOM にメインページに書かれた JavaScript からアクセスできます。以下のように {{domxref("Element.shadowRoot")}} プロパティを利用してアクセスできます。
@@ -70,13 +75,13 @@ let myShadowDom = myCustomElem.shadowRoot;
 シャドウ DOM をカスタム要素のコンストラクターの一部として取り付けた場合（シャドウ DOM の最も有用な用途です）、次のような方法を使用することになります。
 
 ```js
-let shadow = this.attachShadow({mode: 'open'});
+let shadow = this.attachShadow({ mode: "open" });
 ```
 
 シャドウ DOM を要素に取り付けた場合、その操作は通常の DOM 操作と同じ DOM API を使うだけでよいのです。
 
 ```js
-let para = document.createElement('p');
+let para = document.createElement("p");
 shadow.appendChild(para);
 // etc.
 ```
@@ -106,7 +111,7 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // シャドウルートを生成
-let shadow = this.attachShadow({mode: 'open'});
+let shadow = this.attachShadow({ mode: "open" });
 ```
 
 ### シャドウ DOM 構造の作成
@@ -115,26 +120,26 @@ let shadow = this.attachShadow({mode: 'open'});
 
 ```js
 // spans の生成
-let wrapper = document.createElement('span');
-wrapper.setAttribute('class', 'wrapper');
-let icon = document.createElement('span');
-icon.setAttribute('class', 'icon');
-icon.setAttribute('tabindex', 0);
-let info = document.createElement('span');
-info.setAttribute('class', 'info');
+let wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+let icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+let info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // 属性の中身を取得し、 info の span の中に入れる
-let text = this.getAttribute('data-text');
+let text = this.getAttribute("data-text");
 info.textContent = text;
 
 // アイコンを挿入
 let imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-let img = document.createElement('img');
+let img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 ```
@@ -145,7 +150,7 @@ icon.appendChild(img);
 
 ```js
 // CSS を生成してシャドウ DOM に適用
-let style = document.createElement('style');
+let style = document.createElement("style");
 
 style.textContent = `
 .wrapper {
@@ -195,13 +200,15 @@ wrapper.appendChild(info);
 
 ```js
 // 新しい要素を定義
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+                                    numbers on the back of your card."></popup-info>
 ```
 
 ### 内部スタイルと外部スタイル
@@ -212,9 +219,9 @@ customElements.define('popup-info', PopUpInfo);
 
 ```js
 // 外部スタイルシートをシャドウ DOM に適用
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 生成された要素をシャドウ DOM に添付
 shadow.appendChild(linkElem);

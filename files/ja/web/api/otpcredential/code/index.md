@@ -18,15 +18,18 @@ l10n:
 以下のコードは、`code` の値で入力フォームの要素を埋めます。[シンプルなデモの一部としてこのコードを見る](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8)
 
 ```js
-navigator.credentials.get({
-  otp: { transport:['sms'] },
-  signal: ac.signal
-}).then((otp) => {
-  input.value = otp.code;
-  if (form) form.submit();
-}).catch((err) => {
-  console.error(err);
-});
+navigator.credentials
+  .get({
+    otp: { transport: ["sms"] },
+    signal: ac.signal,
+  })
+  .then((otp) => {
+    input.value = otp.code;
+    if (form) form.submit();
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## 仕様書

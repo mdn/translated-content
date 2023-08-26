@@ -49,7 +49,7 @@ function init() {
 addEventListener() 関数を使用してハンドラーを設定することもできます。
 
 ```js
-performance.addEventListener('resourcetimingbufferfull', buffer_full);
+performance.addEventListener("resourcetimingbufferfull", buffer_full);
 ```
 
 ## 仕様書
