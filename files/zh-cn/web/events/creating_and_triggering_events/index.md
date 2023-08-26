@@ -21,12 +21,12 @@ elem.dispatchEvent(event);
 
 上述代码使用了 [EventTarget.dispatchEvent()](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法。
 
-绝大多数现代浏览器中都会支持这个构造函数。要了解更为复杂的方法，可参考下面的 [过时的方式](#过时的方式) 一节。
+绝大多数现代浏览器中都会支持这个构造函数。要了解更为复杂的方法，可参考下面的[过时的方式](#过时的方式)一节。
 
 ### 添加自定义数据 – CustomEvent()
 
 要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，**detail** 属性可用于传递自定义数据。
-例如，event 可以创建如下：
+例如，可以创建如下 event：
 
 ```js
 const event = new CustomEvent("build", { detail: elem.dataset.time });
@@ -46,22 +46,22 @@ function eventHandler(e) {
 
 ```js
 // Create the event.
-var event = document.createEvent("Event");
+const event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
 event.initEvent("build", true, true);
 
 // Listen for the event.
-document.addEventListener(
+elem.addEventListener(
   "build",
-  function (e) {
-    // e.target matches document from above
+  (e) => {
+    // e.target matches elem
   },
   false
 );
 
 // target can be any Element or other EventTarget.
-document.dispatchEvent(event);
+elem.dispatchEvent(event);
 ```
 
 ### 事件冒泡
@@ -78,7 +78,7 @@ document.dispatchEvent(event);
 const form = document.querySelector("form");
 const textarea = document.querySelector("textarea");
 
-// Create a new event, allow bubbling, and provide any data you want to pass to the "details" property
+// Create a new event, allow bubbling, and provide any data you want to pass to the "detail" property
 const eventAwesome = new CustomEvent("awesome", {
   bubbles: true,
   detail: { text: () => textarea.value },
@@ -125,13 +125,14 @@ textarea.addEventListener("input", function () {
 
 ```js
 function simulateClick() {
-  var event = new MouseEvent("click", {
+  const event = new MouseEvent("click", {
     view: window,
     bubbles: true,
     cancelable: true,
   });
-  var cb = document.getElementById("checkbox");
-  var cancelled = !cb.dispatchEvent(event);
+  const cb = document.getElementById("checkbox");
+  const cancelled = !cb.dispatchEvent(event);
+
   if (cancelled) {
     // A handler called preventDefault.
     alert("cancelled");
@@ -149,3 +150,11 @@ function simulateClick() {
 - {{domxref("Event.initEvent()")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
 - {{domxref("EventTarget.addEventListener()")}}
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Web/Events/Event_handlers">事件处理（概述）</a></li>
+    <li><a href="/zh-CN/docs/Web/Events">事件参考</a></li>
+  </ol>
+</section>
