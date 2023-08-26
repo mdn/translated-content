@@ -13,14 +13,14 @@ slug: Web/API/Clipboard/write
 
 ## 语法
 
-```
-var promise = navigator.clipboard.write(dataTransfer)
+```js
+var promise = navigator.clipboard.write(data)
 ```
 
 ### 参数
 
-- `dataTransfer`
-  - : {{domxref("DataTransfer")}} 对象包含了要写入剪贴板的数据。
+- `data`
+  - : 包含要写入剪贴板的数据的 {{domxref("ClipboardItem")}} 对象数组。
 
 ### 返回值
 
@@ -28,25 +28,30 @@ var promise = navigator.clipboard.write(dataTransfer)
 
 ## 示例
 
-这个例子展示了如何将当前剪贴板的内容替换为给定的内容。
+以下示例代码将展示如何将剪贴板的内容替换为指定的字符串。
 
 ```js
 function setClipboard(text) {
-  let data = new DataTransfer();
+  const type = "text/plain";
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
 
-  data.items.add("text/plain", text);
   navigator.clipboard.write(data).then(
-    function () {
+    () => {
       /* success */
     },
-    function () {
+    () => {
       /* failure */
     },
   );
 }
 ```
 
-代码创建了一个 {{domxref("DataTransfer")}} 对象，要替换的内容存储在这里。执行 {{domxref("DataTransferItemList.add()")}} 将数据写入进去，然后执行 `write()` 方法，指定执行成功或错误的结果。
+代码首先创建了一个新的 {{domxref("Blob")}} 对象，此对象是构造一个 {{domxref("ClipboardItem")}} 对象、并写入到剪贴板所必需的。{{domxref("Blob")}} 构造函数接收我们要复制的内容及类型，一个 {{domxref("Blob")}} 对象可以有不同的来源（例如：{{domxref("canvas")}} 画布）。
+
+接下来，我们创建一个新的 {{domxref("ClipboardItem")}} 对象，并在其中放置 blob，以写入到剪贴板。传递给 {{domxref("ClipboardItem")}} 构造函数的对象，其键名为 MIME 内容类型，值为复制内容。然后通过调用 `write()`，浏览器根据复制成功与否分别进入到成功和失败的回调函数中。
+
+> **注意：** 一次只能传入一个剪贴板项目。
 
 ## 规范
 
