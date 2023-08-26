@@ -21,28 +21,28 @@ elem.dispatchEvent(event);
 
 上述代码使用了 [EventTarget.dispatchEvent()](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法。
 
-绝大多数现代浏览器中都会支持这个构造函数（Internet Explorer 例外）。要了解更为复杂的方法，可参考下面的 [过时的方式](#The_old-fashioned_way) 一节。
+绝大多数现代浏览器中都会支持这个构造函数。要了解更为复杂的方法，可参考下面的 [过时的方式](#过时的方式) 一节。
 
 ### 添加自定义数据 – CustomEvent()
 
-要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，detail 属性可用于传递自定义数据。
+要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，**detail** 属性可用于传递自定义数据。
 例如，event 可以创建如下：
 
 ```js
-var event = new CustomEvent("build", { detail: elem.dataset.time });
+const event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
 下面的代码允许你在事件监听器中访问更多的数据：
 
 ```js
 function eventHandler(e) {
-  log("The time is: " + e.detail);
+  console.log(`The time is: ${e.detail}`);
 }
 ```
 
 ### 过时的方式
 
-早期的创建事件的方法使用了受 Java 启发的 API。下面展示了一个示例：
+早期的创建事件的方法使用了受 Java 启发的 API。下面是一个使用 {{domxref("document.createEvent()")}} 的示例：
 
 ```js
 // Create the event.
@@ -57,7 +57,7 @@ document.addEventListener(
   function (e) {
     // e.target matches document from above
   },
-  false,
+  false
 );
 
 // target can be any Element or other EventTarget.
@@ -114,7 +114,7 @@ textarea.addEventListener("input", function () {
     new CustomEvent("awesome", {
       bubbles: true,
       detail: { text: () => textarea.value },
-    }),
+    })
   );
 });
 ```
