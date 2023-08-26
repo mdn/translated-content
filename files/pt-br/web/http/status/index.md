@@ -1,8 +1,6 @@
 ---
 title: Códigos de status de respostas HTTP
 slug: Web/HTTP/Status
-page-type: landing-page
-browser-compat: http.status
 ---
 
 {{HTTPSidebar}}
@@ -202,7 +200,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
 - {{HTTPStatus(511, "511 Network Authentication Required")}}
   - : Indica que o cliente precisa se autenticar para obter acesso à rede.
 
-## Compatibilidade de browsers
+## Compatibilidade com navegadores
 
 {{Compat}}
 
