@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 如果你想尝试这些示例，请克隆存储库，然后使用以下选项之一安装并运行扩展：：
 
-- 通过[“临时载入附加组件”](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)功能直接从源文件夹中载入扩展组件。
+- 通过["临时载入附加组件"](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)功能直接从源文件夹中载入扩展组件。
 - 安装 [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)，在命令行打开扩展的源文件夹，然后使用 `web-ext run`。
 
 该扩展会在你重新启动 Firefox 之前保持加载状态。
