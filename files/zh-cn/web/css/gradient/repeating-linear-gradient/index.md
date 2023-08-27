@@ -38,14 +38,14 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 ### 值
 
 - `<side-or-corner>`
-  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键词：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
-    `to top`、`to bottom`、`to left` 和 `to right` 等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
+  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键字的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
+    `to top`、`to bottom`、`to left` 和 `to right` 分别等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
 - {{cssxref("&lt;angle&gt;")}}
   - : 渐变线的方向的角度。`0deg` 等价于 `to top`，增加值相当于顺时针旋转。
 - `<linear-color-stop>`
   - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，代表渐变的开始，`100%` 代表 100% 的图像尺寸，也就是说渐变不会重复。
 - `<color-hint>`
-  - : 颜色提示（color-hint）是插值提示，定义了在相邻色标之间的渐变如何进行。这个长度定义了渐变色应在两个色标之间的哪一点到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色标之间的中点。
+  - : 颜色提示（color-hint）是一种插值提示，定义了渐变色在相邻色标之间的渐变方式。长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略此值，颜色过渡的中点就是两个色标之间的中点。
 
 > **备注：** [CSS 渐变中的色标](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
 
@@ -73,7 +73,7 @@ body {
     black 20px,
     black 40px
   );
-  /* with multiple color stop lengths */
+  /* 包括多个色标长度 */
   background-image: repeating-linear-gradient(
     -45deg,
     transparent 0 20px,
@@ -106,7 +106,7 @@ body {
 
 {{EmbedLiveSample('十个重复水平线', 120, 120)}}
 
-因为最后一个色标是 10%，且渐变是竖直的，因为重复渐变的每个渐变都是高度的 10%，正好满足 10 个水平线。
+由于最后一个色标是 10%，且渐变是竖直的，因此重复渐变中的每个渐变都是高度的 10%，正好满足 10 个水平线。
 
 > **备注：** 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 

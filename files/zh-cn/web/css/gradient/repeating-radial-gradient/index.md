@@ -5,13 +5,13 @@ slug: Web/CSS/gradient/repeating-radial-gradient
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上无限重复颜色，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 并且采用相同的参数，但是它会在所有方向上无限重复颜色，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
 
 每次重复时，色标（color stop）的位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的颜色应该与第一个颜色的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果，可以将第一个色标重复添加到最后一个中来解决。
 
-与其他渐变一样，径向重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，径向重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在可以使用 `<image>` 的地方。因此，`repeating-radial-gradient()` 在{{Cssxref("background-color")}} 以及其他使用 {{cssxref("&lt;color&gt;")}} 数据类型上不起作用。
 
@@ -83,10 +83,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 ```
 
 {{EmbedLiveSample('黑白相间的渐变', '300px', '120px', '')}}
-
-```css
-background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-```
 
 ### Farthest-corner 渐变
 
