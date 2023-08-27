@@ -47,7 +47,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
     | `farthest-side`   | 与 `closest-side` 相反，结束形状与容器距离渐变中心点最远的一边（或最远的垂直和水平边）相切。                       |
     | `farthest-corner` | 渐变结束形状与容器距离渐变中心点最远的一个角相交。                                                                 |
 
-    > **备注：** 早期的草案中还包含其他关键字 (`cover` and `contain`) ，分别相当于标准关键字 `farthest-corner` 和 `closest-side`,。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
+    > **备注：** 早期的函数实现中还包含其他关键字（`cover` 和 `contain`），分别相当于标准关键字 `farthest-corner` 和 `closest-side`。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
 
 - `<color-stop>`
   - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，表示渐变中心点；百分比值 `100%` 表示渐变射线与结束形状相交的点。其间的百分比值线性对应渐变射线上的点。
@@ -114,7 +114,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 }
 ```
 
-{{EmbedLiveSample('Farthest-corner 渐变', '300px', '120px', '')}}
+{{EmbedLiveSample('Farthest-corner 渐变', 120, 120)}}
 
 这个椭圆形渐变会位于左上角靠中心 20% 的位置，在中心和最远角（右下角）之间重复 10 次。支持多位置色标的浏览器会显示为红色和绿色条纹的椭圆形。不支持这个语法的浏览器仍会从红色到黑色再由蓝色到绿色的渐变。
 
