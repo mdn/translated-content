@@ -47,7 +47,7 @@ background: conic-gradient(
 
 ## 描述
 
-与其他渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 要创建重复的锥形渐变来填充 360 度旋转，应该使用 {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数。
 
