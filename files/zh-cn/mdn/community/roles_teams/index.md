@@ -33,7 +33,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 - 出席社区活动。
 - 帮助推荐 MDN 项目。
 
-**需求：**
+**要求：**
 
 如果想要成为一名贡献者，你需要遵循：
 
@@ -51,7 +51,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 
 [组织成员](https://github.com/orgs/mdn/people)是受到认可的[贡献者](#贡献者)，他们定期参与 MDN Web 文档项目并作出贡献。他们的行为应符合项目的利益。
 
-**需求：**
+**要求：**
 
 如果想要成为一名组织成员，你必须至少满足以下需求之一：
 
@@ -82,7 +82,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
   - 内容改进
   - 流程改进
 
-**需求：**
+**要求：**
 
 你必须满足以下一项或多项要求，才有资格成为维护者：
 
@@ -105,7 +105,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 
 > **备注：** 所有者角色目前仅限于 Mozilla 员工。
 
-**需求：**
+**要求：**
 
 - 遵守并执行 MDN 团队规范，包括[社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)和 [Mozilla 政策](https://www.mozilla.org/zh-CN/about/governance/policies/)。
 - 遵守 MDN 组织政策并以身作则。
@@ -154,7 +154,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 
 当拉取请求在受邀专家的主题领域被提出时，会自动分配专家进行审查。如果一个主题领域有多个专家，则会使用[负载平衡策略](https://docs.github.com/zh/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team#about-auto-assignment)
 
-**需求：**
+**要求：**
 
 如果想要成为一名特邀专家，你必须至少满足以下需求之一：
 
