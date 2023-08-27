@@ -198,7 +198,9 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{ EmbedLiveSample('The_fr_unit', '220', '180') }}
+{{ EmbedLiveSample('fr 单位', '220', '180') }}
+
+### 大小不等
 
 在下面的这个例子中，我们创建定义了一个`2fr`轨道和两个`1fr`轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
 
@@ -239,7 +241,9 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{ EmbedLiveSample('Unequal_sizes', '220', '140') }}
+{{ EmbedLiveSample('大小不等', '220', '140') }}
+
+### 混合尺寸
 
 在最后这个例子中，我们混合了绝对尺寸的轨道与分数单位轨道。第一个轨道是 500 像素，这个固定宽度被从可用空间中取走。剩下的空间被分为三份，按比例分配给了两个弹性尺寸轨道。
 
@@ -280,7 +284,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{ EmbedLiveSample('Mixing_flexible_and_absolute_sizes', '220', '140') }}
+{{ EmbedLiveSample('混合尺寸', '220', '140') }}
 
 ### 在轨道清单中使用 `repeat()`
 
