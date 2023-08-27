@@ -53,22 +53,22 @@ color: revert-layer;
 color: unset;
 ```
 
-`color` 属性被指定为一个单个的 {{cssxref("&lt;color&gt;")}} 值。
+`color` 属性被指定为 {{cssxref("&lt;color&gt;")}} 类型的单值。
 
-注意值必须是规则的 {{cssxref("color")}}。它不可以是{{cssxref("&lt;gradient&gt;")}}（实际上为{{cssxref("&lt;image&gt;")}}的一部分）。
+注意值必须是一致的 {{cssxref("color")}}。它不可以是 {{cssxref("&lt;gradient&gt;")}}（实际上为 {{cssxref("&lt;image&gt;")}} 的一部分）。
 
 ### 值
 
 - {{cssxref("&lt;color&gt;")}}
   - : 设置元素的文本和装饰部分的颜色。
 - [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字)
-  - : 将颜色设置为元素的 `color` 属性值。然后，对于设置为 `color` 的值，那么 `currentcolor` 会视为 `inherit`。
+  - : 将颜色设置为元素的 `color` 属性值。但是，如果设置为 `color` 的值，`currentcolor` 将被视为 `inherit`。
 
 ## 无障碍考虑
 
 有一点很重要，要确保文本颜色与文本所在背景之间的对比度足够高，以便低视力的人群能够阅读页面内容。
 
-颜色的对比度是通过比较文本和背景颜色值的亮度确定的。要符合当前的 [网页内容无障碍指南（WCAG）](https://www.w3.org/WAI/intro/wcag)，文本至少要有 4.5:1 的比例，大文本（比如标题）至少要有 3:1 的比例。大文本的定义是，18.66px 且[加粗](/zh-CN/docs/Web/CSS/font-weight)或者更大，或者 24px 或者更大。
+颜色的对比度是通过比较文本和背景颜色值的亮度确定的。要符合当前的 [网页内容无障碍指南（WCAG）](https://www.w3.org/WAI/intro/wcag)，文本至少要有 4.5:1 的比例，大文本（比如标题）至少要有 3:1 的比例。具有[加粗](/zh-CN/docs/Web/CSS/font-weight)和至少 18.66px 大小，或者具有至少 24px 大小的文本称为大文本。
 
 - [WebAIM：颜色对比度检查器](https://webaim.org/resources/contrastchecker/)
 - [MDN 理解 WCAG，指南 1.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
