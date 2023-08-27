@@ -2,6 +2,7 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환합니다.
@@ -47,7 +48,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 다음 예제는 두 개의 배열을 이어붙입니다.
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const alpha = ["a", "b", "c"];
 const numeric = [1, 2, 3];
 
 alpha.concat(numeric);
@@ -72,7 +73,7 @@ num1.concat(num2, num3);
 다음 코드는 배열에 세 개의 값을 이어붙입니다.
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const alpha = ["a", "b", "c"];
 
 alpha.concat(1, [2, 3]);
 // 결과: ['a', 'b', 'c', 1, 2, 3]

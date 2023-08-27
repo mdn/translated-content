@@ -1,7 +1,6 @@
 ---
 title: "<bdo> : l'élément de remplacement bidirectionnelle"
 slug: Web/HTML/Element/bdo
-translation_of: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}

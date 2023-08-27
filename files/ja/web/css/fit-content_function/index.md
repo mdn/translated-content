@@ -1,7 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-original_slug: Web/CSS/fit-content()
 ---
 
 {{CSSRef}}
@@ -10,7 +9,7 @@ original_slug: Web/CSS/fit-content()
 
 {{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
 
-この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法 (すなわち [`minmax(auto, max-content)`](/ja/docs/Web/CSS/minmax())) で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
+この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法 (すなわち [`minmax(auto, max-content)`](</ja/docs/Web/CSS/minmax()>)) で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
 
 `max-content` および `auto` キーワードについての詳細は、 {{cssxref("grid-template-columns")}} ページを参照してください。
 
@@ -51,8 +50,8 @@ fit-content(40%)
 <div id="container">
   Item as wide as the content.
   <div>
-    Item with more text in it. Because the contents of it are
-    wider than the maximum width, it is clamped at 300 pixels.
+    Item with more text in it. Because the contents of it are wider than the
+    maximum width, it is clamped at 300 pixels.
   </div>
   Flexible item
 </div>

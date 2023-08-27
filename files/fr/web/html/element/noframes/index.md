@@ -1,7 +1,6 @@
 ---
 title: "<noframes> : l'élément alternatif aux frames (obsolete)"
 slug: Web/HTML/Element/noframes
-translation_of: Web/HTML/Element/noframes
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

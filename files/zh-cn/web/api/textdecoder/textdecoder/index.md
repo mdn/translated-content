@@ -9,7 +9,7 @@ slug: Web/API/TextDecoder/TextDecoder
 
 ## 语法
 
-```js
+```js-nolint
 new TextDecoder()
 new TextDecoder(utfLabel)
 new TextDecoder(utfLabel, options)

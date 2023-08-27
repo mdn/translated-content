@@ -62,7 +62,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 ## Flex 容器
 
-文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
+文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。由于所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
 
 - 元素排列为一行 (`flex-direction` 属性的初始值是 `row`)。
 - 元素从主轴的起始线开始。

@@ -28,11 +28,11 @@ cursor.advance(count);
 
 このメソッドは次のいずれかの {{domxref("DOMException")}} を発生することがあります:
 
-| 例外                       | 説明                                                    |
-| -------------------------- | ------------------------------------------------------- |
+| 例外                       | 説明                                                      |
+| -------------------------- | --------------------------------------------------------- |
 | `TransactionInactiveError` | この `IDBCursor` のトランザクションは活性化していません。 |
-| `TypeError`                | `count` パラメーターに渡された値がゼロや負の数です。    |
-| `InvalidStateError`        | カーソルは現在繰り返し中か、最後を過ぎています。        |
+| `TypeError`                | `count` パラメーターに渡された値がゼロや負の数です。      |
+| `InvalidStateError`        | カーソルは現在繰り返し中か、最後を過ぎています。          |
 
 ## 例
 
@@ -42,22 +42,26 @@ cursor.advance(count);
 
 ```js
 function advanceResult() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  list.innerHTML = "";
+  var transaction = db.transaction(["rushAlbumList"], "readonly");
+  var objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" +
+        cursor.value.albumTitle +
+        "</strong>, " +
+        cursor.value.year;
       list.appendChild(listItem);
       cursor.advance(2);
     } else {
-      console.log('全エントリーを 1 つおきに表示しました。');
+      console.log("全エントリーを 1 つおきに表示しました。");
     }
   };
-};
+}
 ```
 
 ## 仕様書

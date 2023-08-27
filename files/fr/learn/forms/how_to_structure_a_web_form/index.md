@@ -1,7 +1,6 @@
 ---
 title: Comment structurer un formulaire HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-translation_of: Learn/Forms/How_to_structure_a_web_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}

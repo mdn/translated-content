@@ -1,25 +1,30 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
-translation_of: Web/SVG/Element/foreignObject
-original_slug: Web/SVG/Элемент/foreignObject
 ---
+
 {{SVGRef}}
 Элемент **`<foreignObject>`** [SVG](/ru/docs/Web/SVG) позволяет включать другое пространство имён XML.
 В контексте браузера это, скорее всего, XHTML / HTML.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <style>
-    polygon { fill: black }
+    polygon {
+      fill: black;
+    }
 
     div {
       color: white;
-      font:18px serif;
+      font: 18px serif;
       height: 100%;
       overflow: auto;
     }
@@ -29,15 +34,14 @@ html,body,svg { height:100% }
 
   <!-- Типичный пример использования: встраивание HTML-текста в SVG -->
   <foreignObject x="20" y="20" width="160" height="160">
-  <!--
+    <!--
 В контексте SVG, внедрённого в HTML, пространство имён XHTML может и следует избегать,
 но это обязательно в контексте документа SVG
    -->
     <div xmlns="http://www.w3.org/1999/xhtml">
-    - Смолчал хозяин, да и то, что мог сказать
-    - Мне невдомёк, но во владениях чертога
-    Поможет дом срубить да судьбы вам связать.
-    Не веришь ежли - испроси у Бога...
+      - Смолчал хозяин, да и то, что мог сказать - Мне невдомёк, но во владениях
+      чертога Поможет дом срубить да судьбы вам связать. Не веришь ежли -
+      испроси у Бога...
     </div>
   </foreignObject>
 </svg>
@@ -85,9 +89,9 @@ html,body,svg { height:100% }
 
 ## Характеристики
 
-| Specification                                                                                                    | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |                    |
+| Specification                                                                       | Status              | Comment            |
+| ----------------------------------------------------------------------------------- | ------------------- | ------------------ |
+| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}}   |                    |
 | {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Совместимость браузера

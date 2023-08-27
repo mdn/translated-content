@@ -1,14 +1,8 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Navigation Timing
-  - NeedsTranslation
-  - Performance
-  - TopicStub
-translation_of: Web/API/Performance
 ---
+
 {{APIRef("Navigation Timing")}}
 
 Интерфейс **`Performance`** представляет информацию о производительности страницы с временными метками.

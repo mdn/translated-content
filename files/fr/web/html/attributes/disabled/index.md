@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : disabled"
 slug: Web/HTML/Attributes/disabled
-translation_of: Web/HTML/Attributes/disabled
 ---
 
 {{HTMLSidebar}}

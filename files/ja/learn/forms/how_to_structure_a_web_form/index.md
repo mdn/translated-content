@@ -3,7 +3,6 @@ title: フォームの構築方法
 slug: Learn/Forms/How_to_structure_a_web_form
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
-original_slug: Learn/Forms/How_to_structure_an_HTML_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}

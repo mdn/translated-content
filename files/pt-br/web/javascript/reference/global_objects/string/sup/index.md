@@ -28,20 +28,20 @@ O método `sup()` cria uma string dentro de uma tag `<sup>`: `"<sup>str</sup>"`
 O exemplo a seguir usa os métodos {{jsxref("String.prototype.sub()", "sub()")}} e `sup()` para formatar uma string:
 
 ```js
-var superText = 'superscript';
-var supText = 'supscript';
+var superText = "superscript";
+var supText = "supscript";
 
-console.log('This is what a ' + superText.sup() + ' looks like.');
+console.log("This is what a " + superText.sup() + " looks like.");
 // "This is what a <sup>superscript</sup> looks like."
 
-console.log('This is what a ' + supText.sup() + ' looks like.');
+console.log("This is what a " + supText.sup() + " looks like.");
 // "This is what a <sup>supscript</sup> looks like."
 ```
 
 ## Especificações
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
+| Specification                                                                |
+| ---------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}} |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: "<u> : l'élément d'annotation non textuelle"
 slug: Web/HTML/Element/u
-translation_of: Web/HTML/Element/u
 ---
 
 {{HTMLSidebar}}

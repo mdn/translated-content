@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
-translation_of: Web/API/WebGLRenderingContext/generateMipmap
 ---
 
 {{APIRef("WebGL")}}

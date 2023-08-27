@@ -1,7 +1,6 @@
 ---
 title: "-webkit-animation"
 slug: Web/CSS/@media/-webkit-animation
-translation_of: Web/CSS/@media/-webkit-animation
 ---
 
 {{CSSRef}}{{Non-standard_header}}

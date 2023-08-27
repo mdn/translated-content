@@ -1,9 +1,6 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
-tags:
-  - Пространства имён
-translation_of: Web/CSS/@namespace
 ---
 
 {{ CSSRef() }}
@@ -17,13 +14,16 @@ translation_of: Web/CSS/@namespace
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* This matches all XHTML <a> elements, as XHTML is the default unprefixed namespace */
-a {}
+a {
+}
 
 /* This matches all SVG <a> elements */
-svg|a {}
+svg|a {
+}
 
 /* This matches both XHTML and SVG <a> elements */
-*|a {}
+*|a {
+}
 ```
 
 Любое `@namespace` правило обязано следовать всем [@charset](/ru/docs/Web/CSS/%40charset) и [@import](/ru/docs/Web/CSS/%40import) правилам, а так же всем [описаниям стилей](/ru/docs/Web/API/CSSStyleDeclaration) в таблице стилей.

@@ -1,7 +1,6 @@
 ---
 title: Formatando texto
 slug: Web/JavaScript/Guide/Text_formatting
-original_slug: Web/JavaScript/Guide/Formatando_texto
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
@@ -16,9 +15,9 @@ O tipo {{Glossary("String")}} do JavaScript é usado para representar informaç�
 
 Você pode criar strings usando aspas simples ou aspas duplas:
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 Strings mais avançadas podem ser criadas usando [sequências de escape](https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_escape):
@@ -28,7 +27,7 @@ Strings mais avançadas podem ser criadas usando [sequências de escape](https:/
 O número depois de \x é interpretado como um número [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Sequências de escape unicode
@@ -36,7 +35,7 @@ O número depois de \x é interpretado como um número [hexadecimal](https://en.
 As sequências de escape unicode requerem no mínimo quatro caracteres depois do `\u`.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Sequências de escape Unicode code point
@@ -46,10 +45,10 @@ As sequências de escape unicode requerem no mínimo quatro caracteres depois do
 Veja também {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // o mesmo com escapes Unicode simples
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Objetos String
@@ -84,21 +83,21 @@ Um objeto `String` possui uma variedade de métodos: por exemplo aqueles que ret
 
 A tabela a seguir lista os métodos de objetos {{jsxref("String")}}.
 
-| Método                                                                                                                                                                           | Descrição                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Método                                                                                                                                | Descrição                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}} | Retorna o código do caractere ou o caractere em uma posição específica na string.                                                                |
-| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                                           | Retorna a posição de uma substring específica na string ou a última posição da substring específica, respectivamente.                            |
-| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}} | Retorna se uma string começa, termina ou contém uma outra string específica.                                                                     |
-| {{jsxref("String.concat", "concat")}}                                                                                                                                 | Concatena o texto de duas strings e retorna uma nova string.                                                                                     |
-| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                           | Cria uma string a partir de uma sequência específica de valores Unicode. Esse é um método da classe String, não de uma instância do tipo String. |
-| {{jsxref("String.split", "split")}}                                                                                                                                 | Separa um objeto `String` em um array de strings, separando a string em substrings.                                                              |
-| {{jsxref("String.slice", "slice")}}                                                                                                                                 | Extrai uma seção de uma string e retorna uma nova string.                                                                                        |
-| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                                       | Retorna um subconjunto específico de uma string, definindo os índices inicial e final, ou definindo um índice e um tamanho.                      |
-| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                         | Trabalha com expressões regulares.                                                                                                               |
-| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                               | Retorna a string com todos caracteres em minúsculo, ou maiúsculo, respectivamente.                                                               |
-| {{jsxref("String.normalize", "normalize")}}                                                                                                                         | Retorna a Forma Normalizada Unicode (Unicode Normalization Form) da string que chama o método.                                                   |
-| {{jsxref("String.repeat", "repeat")}}                                                                                                                                 | Retorna uma string contendo os elementos do objeto repetidos pela quantidade de vezes dada.                                                      |
-| {{jsxref("String.trim", "trim")}}                                                                                                                                     | Retira espaços em branco no começo e no final da string.                                                                                         |
+| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                              | Retorna a posição de uma substring específica na string ou a última posição da substring específica, respectivamente.                            |
+| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}}   | Retorna se uma string começa, termina ou contém uma outra string específica.                                                                     |
+| {{jsxref("String.concat", "concat")}}                                                                                                 | Concatena o texto de duas strings e retorna uma nova string.                                                                                     |
+| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                | Cria uma string a partir de uma sequência específica de valores Unicode. Esse é um método da classe String, não de uma instância do tipo String. |
+| {{jsxref("String.split", "split")}}                                                                                                   | Separa um objeto `String` em um array de strings, separando a string em substrings.                                                              |
+| {{jsxref("String.slice", "slice")}}                                                                                                   | Extrai uma seção de uma string e retorna uma nova string.                                                                                        |
+| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                    | Retorna um subconjunto específico de uma string, definindo os índices inicial e final, ou definindo um índice e um tamanho.                      |
+| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                   | Trabalha com expressões regulares.                                                                                                               |
+| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                      | Retorna a string com todos caracteres em minúsculo, ou maiúsculo, respectivamente.                                                               |
+| {{jsxref("String.normalize", "normalize")}}                                                                                           | Retorna a Forma Normalizada Unicode (Unicode Normalization Form) da string que chama o método.                                                   |
+| {{jsxref("String.repeat", "repeat")}}                                                                                                 | Retorna uma string contendo os elementos do objeto repetidos pela quantidade de vezes dada.                                                      |
+| {{jsxref("String.trim", "trim")}}                                                                                                     | Retira espaços em branco no começo e no final da string.                                                                                         |
 
 ### Template strings com várias linhas
 
@@ -111,8 +110,10 @@ Template strings são declaradas com o acento grave (\`\`) ao invés de aspas si
 Qualquer caractere de nova linha ( `'\n'` ) inserido na string também faz parte das template string. Usando strings normais, você teria que usar a sintaxe a seguir para conseguir uma string de várias linhas
 
 ```js
-console.log("linha de texto 1\n\
-linha de texto 2");
+console.log(
+  "linha de texto 1\n\
+linha de texto 2",
+);
 // "linha de texto 1
 // linha de texto 2"
 ```
@@ -164,8 +165,14 @@ var msPorDia = 24 * 60 * 60 * 1000; // número de milisegundos em um dia
 // July 17, 2014 00:00:00 UTC.
 var july172014 = new Date(msPorDia * (44 * 365 + 11 + 197));
 
-var opcoes = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+var opcoes = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
 var americanDateTime = new Intl.DateTimeFormat("en-US", opcoes).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -176,14 +183,18 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 O objeto {{jsxref("NumberFormat")}} é útil para formatar números, por exemplo unidade monetária.
 
 ```js
-var precoGasolina = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+var precoGasolina = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(precoGasolina.format(5.259)); // $5.259
 
-var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 ```

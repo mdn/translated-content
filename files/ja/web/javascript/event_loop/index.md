@@ -1,7 +1,6 @@
 ---
 title: 並行モデルとイベントループ
 slug: Web/JavaScript/Event_loop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}
@@ -21,12 +20,12 @@ JavaScript は、"event loop"に基づく同時実行モデルを持ちます。
 関数呼び出しはフレームのスタックを形成します。
 
 ```js
-function foo(b){
+function foo(b) {
   var a = 10;
   return a + b + 11;
 }
 
-function bar(x){
+function bar(x) {
   var y = 3;
   return foo(x * y);
 }
@@ -49,7 +48,7 @@ JavaScript ランタイムはメッセージキューを含んでいます。メ
 `event loop`という名前は、それが一般的にどのように実装されたかに従って付けられました。これは通常、次のものに似ています。
 
 ```js
-while(queue.waitForMessage()){
+while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
 ```

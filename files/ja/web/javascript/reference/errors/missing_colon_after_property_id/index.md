@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
@@ -23,7 +23,7 @@ SyntaxError: missing : after property id (Firefox)
 [オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)構文でオブジェクトを生成する場合、オブジェクトのプロパティのキーと値をコロン (`:`) で区切ります。
 
 ```js
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 ```
 
 ## 例
@@ -40,12 +40,12 @@ var obj = { propertyKey = 'value' };
 正しくはコロンを使用するか、オブジェクトを生成した後に角括弧を使用して新しいプロパティを割り当てます。
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 
 // または
 
-var obj = { };
-obj['propertyKey'] = 'value';
+var obj = {};
+obj["propertyKey"] = "value";
 ```
 
 ### 空のプロパティ
@@ -75,7 +75,7 @@ var obj = { 'b'+'ar': 'foo' };
 式を括弧 `[]` に入れてください。
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+var obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## 関連項目

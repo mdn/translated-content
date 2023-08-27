@@ -1,7 +1,6 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
-translation_of: Web/API/Worker/terminate
 ---
 
 {{ apiref("Worker") }}

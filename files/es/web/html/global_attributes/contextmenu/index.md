@@ -1,7 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-original_slug: Web/HTML/Atributos_Globales/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}

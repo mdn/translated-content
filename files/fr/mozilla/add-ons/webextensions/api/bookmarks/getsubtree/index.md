@@ -1,7 +1,6 @@
 ---
 title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: color
 slug: Web/CSS/@media/color
-translation_of: Web/CSS/@media/color
 ---
 
 {{CSSRef}}

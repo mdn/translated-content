@@ -1,7 +1,6 @@
 ---
 title: difference
 slug: Web/EXSLT/set/difference
-translation_of: Web/EXSLT/set/difference
 ---
 
 {{ XsltRef() }}

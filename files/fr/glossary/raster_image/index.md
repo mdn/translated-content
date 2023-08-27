@@ -1,7 +1,6 @@
 ---
 title: Image matricielle
 slug: Glossary/Raster_image
-translation_of: Glossary/Raster_image
 ---
 
 Une image matricielle (_raster_) est un fichier image défini comme une grille de pixels. Elles sont également appelées des "cartes de points" (_bitmaps_). Les formats d'image matricielle communs sur le web sont [JPEG](/fr/docs/Glossary/jpeg), [PNG](/fr/docs/Glossary/PNG), [GIF](/fr/docs/Glossary/gif) et [ICO](<https://en.wikipedia.org/wiki/ICO_(file_format)>).

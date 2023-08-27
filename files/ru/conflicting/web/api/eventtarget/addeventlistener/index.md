@@ -1,7 +1,6 @@
 ---
 title: EventListener
 slug: conflicting/Web/API/EventTarget/addEventListener
-translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
 
@@ -74,6 +73,10 @@ buttonElement.addEventListener('click', {
 
 {{EmbedLiveSample('Пример')}}
 
-## Смотрите также
+## Спецификации
 
-- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

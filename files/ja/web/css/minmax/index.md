@@ -1,7 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-original_slug: Web/CSS/minmax()
 ---
 
 {{CSSRef}}
@@ -99,15 +98,9 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ```html
 <div id="container">
-  <div>
-    Item as wide as the content, but at most 300 pixels.
-  </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>Item as wide as the content, but at most 300 pixels.</div>
+  <div>Item with flexible width but a minimum of 200 pixels.</div>
+  <div>Inflexible item of 150 pixels width.</div>
 </div>
 ```
 
@@ -125,6 +118,6 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ## 関連情報
 
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#トラックのサイズ指定と_minmax())
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](</ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#トラックのサイズ指定と_minmax()>)
 - [CSS グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
 - 動画チュートリアル: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_

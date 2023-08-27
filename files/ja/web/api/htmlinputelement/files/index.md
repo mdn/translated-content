@@ -38,7 +38,7 @@ for (const file of fileInput.files) {
   let fileDate = new Date(file.lastModified);
   console.log(fileDate.toLocaleDateString()); // 日付を表示
   console.log(
-    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB"
+    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB",
   );
   console.log(file.type); // MIME タイプを表示
 }

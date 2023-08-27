@@ -20,8 +20,8 @@ slug: Web/API/CanvasRenderingContext2D
 このキャンバスの二次元描画コンテキストを取得するには、引数に `'2d'` を指定して {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} を `<canvas>` に対して呼び出します。
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 二次元描画コンテキストを取得した後は、好きなように描画できます。以下のコードは家を描画します。

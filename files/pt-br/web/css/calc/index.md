@@ -1,7 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}
@@ -91,8 +90,8 @@ Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da jan
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```
@@ -131,8 +130,8 @@ Isso garante que o tamanho do texto será redimensionado se a página for amplia
 
 ## Especificações
 
-| Especificação                                                            | Status                           | Comentário        |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------- |
+| Especificação                                           | Status                   | Comentário        |
+| ------------------------------------------------------- | ------------------------ | ----------------- |
 | {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} | Definição inicial |
 
 ## Compatibilidade com navegadores

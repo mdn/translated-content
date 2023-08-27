@@ -1,7 +1,6 @@
 ---
 title: AudioScheduledSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
-original_slug: Web/API/AudioBufferSourceNode/stop
 l10n:
   sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---

@@ -1,7 +1,6 @@
 ---
 title: PositionOptions
 slug: conflicting/Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/PositionOptions
 original_slug: Web/API/PositionOptions
 ---
 

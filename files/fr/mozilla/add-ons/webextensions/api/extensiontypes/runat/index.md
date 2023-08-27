@@ -1,7 +1,6 @@
 ---
 title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
 
 {{AddonSidebar()}}

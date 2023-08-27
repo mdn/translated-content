@@ -1,7 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-translation_of: Web/CSS/float
 ---
 
 Свойство float CSS указывает, что элемент должен быть взят из нормального потока и помещён вдоль левой или правой стороны его контейнера, где текст и встроенные элементы будут обтекать его.{{CSSRef}}
@@ -64,16 +63,21 @@ float: inherit;
 
 ```html
 <style type="text/css">
-  div { border: solid red;  max-width: 70ex; }
-  h4  { float: left;  margin: 0; }
+  div {
+    border: solid red;
+    max-width: 70ex;
+  }
+  h4 {
+    float: left;
+    margin: 0;
+  }
 </style>
 
 <div>
   <h4>HELLO!</h4>
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
 </div>
 ```
 
@@ -96,7 +100,9 @@ In the example above, the floated elements are shorter vertically than the block
 The simplest way to clear the floats in this example is to add the {{Cssxref("clear")}} property to the new heading we want to be sure is aligned left:
 
 ```css
-h2.secondHeading { clear: both; }
+h2.secondHeading {
+  clear: both;
+}
 ```
 
 However, this method only works if there are no other elements within the same [block formatting context](/ru/docs/Web/CSS/block_formatting_context) that we _do_ want the heading to continue to appear next to horizontally. If our `H2` has siblings which are a sidebars floated to the left and right, using `clear` will force it to appear below both sidebars, which is probably not what we want.
@@ -104,18 +110,21 @@ However, this method only works if there are no other elements within the same [
 If clearing floats on an element below them is not an option, another approach is to limit the block formatting context of the floats' container. Referring to the example above again, it appears that all three red boxes are within a `P` element. We can set the {{Cssxref("overflow")}} property on that P to `hidden` or `auto` to cause it to expand to contain them, but not allow them to drop out the bottom of it:
 
 ```css
-p.withRedBoxes { overflow: hidden; height: auto; }
+p.withRedBoxes {
+  overflow: hidden;
+  height: auto;
+}
 ```
 
 > **Примечание:** Setting `overflow` to `scroll` will also contain any floated child elements, but will show scrollbars no matter the height of the content. Here we're setting `height` to `auto` even though that's the default to indicate that the container should grow to accommodate its content.
 
 ## Specifications
 
-| Specification                                                                        | Status                       | Comment                                                                                                                                                 |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                             | {{Spec2('CSS3 Box')}} | Lots of new values, not all clearly defined yet. Any differences in behavior unrelated to new features are expected to be unintentional; please report. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}} | {{Spec2('CSS2.1')}}     | No change.                                                                                                                                              |
-| {{SpecName('CSS1', '#float', 'float')}}                                 | {{Spec2('CSS1')}}     | Initial definition.                                                                                                                                     |
+| Specification                                                  | Status                | Comment                                                                                                                                                 |
+| -------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#float', 'float')}}                    | {{Spec2('CSS3 Box')}} | Lots of new values, not all clearly defined yet. Any differences in behavior unrelated to new features are expected to be unintentional; please report. |
+| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}} | {{Spec2('CSS2.1')}}   | No change.                                                                                                                                              |
+| {{SpecName('CSS1', '#float', 'float')}}                        | {{Spec2('CSS1')}}     | Initial definition.                                                                                                                                     |
 
 ## Browser compatibility
 

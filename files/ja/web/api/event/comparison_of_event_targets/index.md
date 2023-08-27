@@ -117,7 +117,7 @@ l10n:
 ### 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -208,10 +208,10 @@ l10n:
 
 `mouseover` イベントの `relatedTarget` プロパティは、マウスが以前乗っていたノードを保持します。 `mouseout` イベントでは、マウスが移動した先のノードが保持されます。
 
-| イベント種別  | [event.target](/ja/docs/Web/API/Event/target)  | [event.relatedTarget](/ja/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | ------------------------------------------------- | ------------------------------------------------------------------- |
-| `mouseover` | ポインティングデバイスが入った EventTarget | ポインティングデバイスが出た EventTarget                    |
-| `mouseout`  | ポインティングデバイスが出た EventTarget  | ポインティングデバイスが入った EventTarget                   |
+| イベント種別 | [event.target](/ja/docs/Web/API/Event/target) | [event.relatedTarget](/ja/docs/Web/API/MouseEvent/relatedTarget) |
+| ------------ | --------------------------------------------- | ---------------------------------------------------------------- |
+| `mouseover`  | ポインティングデバイスが入った EventTarget    | ポインティングデバイスが出た EventTarget                         |
+| `mouseout`   | ポインティングデバイスが出た EventTarget      | ポインティングデバイスが入った EventTarget                       |
 
 #### 例
 

@@ -1,7 +1,6 @@
 ---
 title: Constructeur Uint16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 ---
 
 {{JSRef}}

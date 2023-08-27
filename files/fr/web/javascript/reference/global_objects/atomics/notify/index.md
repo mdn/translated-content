@@ -1,7 +1,6 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
 ---
 
 {{AddonSidebar()}}

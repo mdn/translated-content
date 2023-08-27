@@ -1,8 +1,6 @@
 ---
-title: ':host()'
+title: ":host()"
 slug: Web/CSS/:host_function
-translation_of: Web/CSS/:host()
-original_slug: Web/CSS/:host()
 ---
 
 {{CSSRef}}
@@ -34,26 +32,29 @@ original_slug: Web/CSS/:host()
 В этом примере у нас есть простой пользовательский элемент — `<context-span>` — который мы оборачиваем вокруг текста:
 
 ```html
-<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+<h1>
+  Host selectors <a href="#"><context-span>example</context-span></a>
+</h1>
 ```
 
 Внутри конструктора элемента мы создаём элементы `style` и `span`, заполняем `span` контентом пользовательского элемента и заполняем элемент `style` CSS-правилами:
 
 ```js
-let style = document.createElement('style');
-let span = document.createElement('span');
+let style = document.createElement("style");
+let span = document.createElement("span");
 span.textContent = this.textContent;
 
-const shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({ mode: "open" });
 shadowRoot.appendChild(style);
 shadowRoot.appendChild(span);
 
-style.textContent = 'span:hover { text-decoration: underline; }' +
-                    ':host-context(h1) { font-style: italic; }' +
-                    ':host-context(h1):after { content: " - no links in headers!" }' +
-                    ':host-context(article, aside) { color: gray; }' +
-                    ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 Правило `:host(.footer) { color : red; }` стилизует все экземпляры элемента `<context-span>` (shadow хост в данном случае) в документе, которые имеют класс `footer` — мы использовали его, чтобы дать экземплярам элемента внутри {{htmlelement("footer")}} особый цвет.

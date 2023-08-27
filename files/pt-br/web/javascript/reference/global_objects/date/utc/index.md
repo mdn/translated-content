@@ -57,11 +57,11 @@ var dataUniversal = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES6', '#sec-date.utc', 'Date.UTC')}}     | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                      | Status             | Comentário                                         |
+| -------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES6', '#sec-date.utc', 'Date.UTC')}}   | {{Spec2('ES6')}}   |                                                    |
 | {{SpecName('ES5.1', '#sec-15.9.4.3', 'Date.UTC')}} | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES1')}}                                | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.0. |
 
 ## Compatibilidade com navegadores
 

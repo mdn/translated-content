@@ -1,7 +1,6 @@
 ---
 title: u
 slug: Web/HTML/Element/u
-original_slug: Web/HTML/Elemento/u
 ---
 
 ### Definición

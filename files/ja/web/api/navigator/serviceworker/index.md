@@ -24,7 +24,7 @@ var workerContainerInstance = navigator.serviceWorker;
 このコードは、ブラウザーがサービスワーカーに対応しているかをチェックします。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Supported!
 }
 ```

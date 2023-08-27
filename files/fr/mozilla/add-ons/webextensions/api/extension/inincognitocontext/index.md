@@ -1,7 +1,6 @@
 ---
 title: extension.inIncognitoContext
 slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 ---
 
 {{AddonSidebar()}}

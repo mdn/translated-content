@@ -1,7 +1,6 @@
 ---
 title: Svelte 시작하기
-slug: >-
-    Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 ---
 
 {{LearnSidebar}}
@@ -189,7 +188,8 @@ moz-todo-svelte
 <main>
   <h1>안녕! {name}!</h1>
   <p>
-    <a href="https://svelte.dev/tutorial">Svelte 튜토리얼</a>에 방문해서 Svelte 앱을 반드는 방법을 배워보세요.
+    <a href="https://svelte.dev/tutorial">Svelte 튜토리얼</a>에 방문해서 Svelte
+    앱을 반드는 방법을 배워보세요.
   </p>
 </main>
 
@@ -236,7 +236,8 @@ Svelte는 [`export`](/ko/docs/Web/JavaScript/Reference/Statements/export) 키워
 <main>
   <h1>안녕 {name}!</h1>
   <p>
-    <a href="https://svelte.dev/tutorial">Svelte 튜토리얼</a>에 방문해서 Svelte 앱을 반드는 방법을 배워보세요.
+    <a href="https://svelte.dev/tutorial">Svelte 튜토리얼</a>에 방문해서 Svelte
+    앱을 반드는 방법을 배워보세요.
   </p>
 </main>
 ```
@@ -275,7 +276,7 @@ CSS 작업 경험이 있는 경우 다음 스니펫을 쉽게 이해할 수 있�
 
 Svelte에서 컴포넌트의 `<style>` 블록 내부 CSS는 해당 컴포넌트로만 범위가 지정됩니다. 이는 컴포넌트 스타일의 해시를 기반으로 하는 선택한 요소에 클래스를 추가하여 작동합니다.
 
-새 브라우저 탭에서 `localhost:8080`을 열고 _HELLO WORLD!_ 레이블을 마우스 오른쪽/<kbd>Ctrl</kbd>-클릭하고 _Inspect_를 선택하여 작동 중인 것을 확인할 수 있습니다.
+새 브라우저 탭에서 `localhost:8080`을 열고 _HELLO WORLD!_ 레이블을 마우스 오른쪽/<kbd>Ctrl</kbd>-클릭하고 *Inspect*를 선택하여 작동 중인 것을 확인할 수 있습니다.
 
 ![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
@@ -319,7 +320,8 @@ Svelte에서 반응성은 컴포넌트의 최상위 변수에 새 값을 할당�
   <h1>안녕! {name}!</h1>
   <button on:click="{toggleName}">토글 name</button>
   <p>
-    <a href="https://svelte.dev/tutorial">Svelte 튜토리얼</a>에 방문해서 Svelte 앱을 반드는 방법을 배워보세요.
+    <a href="https://svelte.dev/tutorial">Svelte 튜토리얼</a>에 방문해서 Svelte
+    앱을 반드는 방법을 배워보세요.
   </p>
 </main>
 ```
@@ -363,7 +365,7 @@ Svelte 컴파일러는 모든 컴포넌트의 `<style>` 섹션을 처리하고 `
 마지막으로 `public/index.html` 파일에는 생성된 `bundle.css` 및 `bundle.js` 파일이 포함됩니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

@@ -42,25 +42,25 @@ Se o `numObj` for negativo, o sinal é preservado. Isto acontece mesmo se a raiz
 ```js
 var count = 10;
 
-console.log(count.toString());    // displays '10'
-console.log((17).toString());     // displays '17'
+console.log(count.toString()); // displays '10'
+console.log((17).toString()); // displays '17'
 
 var x = 6;
 
-console.log(x.toString(2));       // displays '110'
-console.log((254).toString(16));  // displays 'fe'
+console.log(x.toString(2)); // displays '110'
+console.log((254).toString(16)); // displays 'fe'
 
-console.log((-10).toString(2));   // displays '-1010'
+console.log((-10).toString(2)); // displays '-1010'
 console.log((-0xff).toString(2)); // displays '-11111111'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                | Status                   | Comentários                                        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1ª edição.                                                                                        | Standard                 | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                      | Status             | Comentários                                        |
+| ---------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1ª edição.                                                              | Standard           | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}                | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

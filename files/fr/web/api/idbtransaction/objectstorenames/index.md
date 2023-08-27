@@ -1,7 +1,6 @@
 ---
 title: IDBTransaction.objectStoreNames
 slug: Web/API/IDBTransaction/ObjectStoreNames
-translation_of: Web/API/IDBTransaction/ObjectStoreNames
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}

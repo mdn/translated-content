@@ -1,11 +1,8 @@
 ---
 title: a
 slug: Web/SVG/Element/a
-tags:
-  - SVG
-translation_of: Web/SVG/Element/a
-original_slug: Web/SVG/Элемент/a
 ---
+
 {{SVGRef}}
 
 SVG элемент **\<a>** создаёт гиперссылку на другие веб-страницы, файлы, позиции в этом же документе, email-адреса или другие URL. Очень похож на элемент HTML {{htmlelement("a")}}.
@@ -14,21 +11,23 @@ SVG элемент **\<a>** создаёт гиперссылку на друг�
 
 ```css hidden
 @namespace svg url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Ссылка в фигуре -->
   <a href="/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- Ссылка в тексте -->
   <a href="/docs/Web/SVG/Element/text">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```

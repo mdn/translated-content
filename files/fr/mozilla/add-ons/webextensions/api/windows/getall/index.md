@@ -1,7 +1,6 @@
 ---
 title: windows.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 ---
 
 {{AddonSidebar()}}

@@ -2,8 +2,9 @@
 title: 동등 연산자(==)
 slug: Web/JavaScript/Reference/Operators/Equality
 l10n:
-  sourceCommit:3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
+  sourceCommit: 3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
 ---
+
 {{jsSidebar("Operators")}}
 
 동등 연산자(==)는 두 개의 피연산자가 동일한지 확인하며, 불리언 결과를 반환합니다. [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)와는 다르게 다른 타입의 피연산자들끼리의 비교를 시도합니다.
@@ -48,41 +49,41 @@ x == y
 ### 타입변환 없이 비교
 
 ```js
-1 == 1;              // true
-"hello" == "hello";  // true
+1 == 1; // true
+"hello" == "hello"; // true
 ```
 
 ### 타입변환을 이용한 비교
 
 ```js
-"1" ==  1;            // true
-1 == "1";             // true
-0 == false;           // true
-0 == null;            // false
-0 == undefined;       // false
-0 == !!null;          // true, look at Logical NOT operator
-0 == !!undefined;     // true, look at Logical NOT operator
-null == undefined;    // true
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true, look at Logical NOT operator
+0 == !!undefined; // true, look at Logical NOT operator
+null == undefined; // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 == 3;         // true
-number1 == number2;   // false
+number1 == 3; // true
+number1 == number2; // false
 ```
 
 ### 객체들 간의 비교
 
 ```js
 const object1 = {
-  "key": "value",
-}
-
-const object2 = {
-  "key": "value",
+  key: "value",
 };
 
-console.log(object1 == object2) // false
-console.log(object1 == object1) // true
+const object2 = {
+  key: "value",
+};
+
+console.log(object1 == object2); // false
+console.log(object1 == object1); // true
 ```
 
 ### String과 String objects의 비교
@@ -105,9 +106,9 @@ console.log(string4 == string4); // true
 ### Dates와 문자열의 비교
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true
+console.log(d == s); //true
 ```
 
 ### 배열과 문자열의 비교
@@ -132,6 +133,6 @@ c == d; // true
 
 ## See also
 
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

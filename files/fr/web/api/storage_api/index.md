@@ -1,7 +1,6 @@
 ---
 title: Storage API
 slug: Web/API/Storage_API
-translation_of: Web/API/Storage_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}

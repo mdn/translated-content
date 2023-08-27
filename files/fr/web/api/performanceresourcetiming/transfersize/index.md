@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
-translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
 
 {{APIRef("Resource Timing API")}}

@@ -43,7 +43,7 @@ getYear()
 2 行目の文は、変数 `year` に 95 を代入します。
 
 ```js
-const xmas = new Date('December 25, 1995 23:15:00');
+const xmas = new Date("December 25, 1995 23:15:00");
 const year = xmas.getYear(); // 95 を返す
 ```
 
@@ -52,7 +52,7 @@ const year = xmas.getYear(); // 95 を返す
 2 行目の文は、変数 `year` に 100 を代入します。
 
 ```js
-const xmas = new Date('December 25, 2000 23:15:00');
+const xmas = new Date("December 25, 2000 23:15:00");
 const year = xmas.getYear(); // 100 を返す
 ```
 
@@ -61,7 +61,7 @@ const year = xmas.getYear(); // 100 を返す
 2 行目の文は、変数 `year` に -100 を代入します。
 
 ```js
-const xmas = new Date('December 25, 1800 23:15:00');
+const xmas = new Date("December 25, 1800 23:15:00");
 const year = xmas.getYear(); // -100 を返す
 ```
 
@@ -70,7 +70,7 @@ const year = xmas.getYear(); // -100 を返す
 3 行目の文は、変数 `year` に 1995 年を表す 95 を代入します。
 
 ```js
-const xmas = new Date('December 25, 2015 23:15:00');
+const xmas = new Date("December 25, 2015 23:15:00");
 xmas.setYear(95);
 const year = xmas.getYear(); // 95 を返す
 ```

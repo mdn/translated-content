@@ -32,7 +32,7 @@ Se a `radix` é menor que `2` ou maior que `36`, e o primeiro caracter que não 
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
+  Number.parseInt = window.parseInt;
 }
 ```
 
@@ -43,15 +43,15 @@ if (Number.parseInt === undefined) {
 Este método tem a mesma funcionalidade que o método global {{jsxref("parseInt", "parseInt()")}}:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). Por favor veja {{jsxref("parseInt", "parseInt()")}} para mais detalhes e exemplos.
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
+| Especificação                                                      |
+| ------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} |
 
 ## Compatibilidade com navegadores

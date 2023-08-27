@@ -30,7 +30,9 @@ l10n:
 const title = "Walk dog";
 
 // 通常通りトランザクションを開始します
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // 指定の title をタイトルとして持つ TO-DO リストのオブジェクトを取得します
 const objectStoreTitleRequest = objectStore.get(title);

@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.onThemeChanged
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 ---
 
 {{AddonSidebar()}}

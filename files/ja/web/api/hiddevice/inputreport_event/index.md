@@ -1,5 +1,5 @@
 ---
-title: 'HIDDevice: inputreport イベント'
+title: "HIDDevice: inputreport イベント"
 slug: Web/API/HIDDevice/inputreport_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -14,9 +14,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('inputreport', (event) => { });
+addEventListener("inputreport", (event) => {});
 
-oninputreport = (event) => { };
+oninputreport = (event) => {};
 ```
 
 ## イベント型

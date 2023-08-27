@@ -1,7 +1,6 @@
 ---
 title: Sloppy mode
 slug: Glossary/Sloppy_mode
-translation_of: Glossary/Sloppy_mode
 ---
 
 En {{Glossary ("ECMAScript")}} 5 et plus tard, les scripts optent pour un nouveau [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), qui modifie la sémantique de JavaScript de plusieurs façons pour améliorer sa résilience et qui facilite la compréhension de ce qui se passe en cas de problème .

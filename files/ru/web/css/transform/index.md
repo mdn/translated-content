@@ -1,16 +1,8 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - transform
-  - Вёрстка
-  - Свойство CSS
-  - наклон
-  - поворот
-  - трансформация
-translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`transform`** позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS [визуальной форматируемой модели](/ru/docs/Web/CSS/Visual_formatting_model).
@@ -28,11 +20,11 @@ translation_of: Web/CSS/transform
 transform: none;
 
 /* Значения функций */
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: matrix(1, 2, 3, 4, 5, 6);
 transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 transform: perspective(17px);
 transform: rotate(0.5turn);
-transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotate3d(1, 2, 3, 10deg);
 transform: rotateX(10deg);
 transform: rotateY(10deg);
 transform: rotateZ(10deg);

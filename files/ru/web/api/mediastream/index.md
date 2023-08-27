@@ -1,16 +1,8 @@
 ---
 title: MediaStream
 slug: Web/API/MediaStream
-tags:
-  - API
-  - Media Streams API
-  - MediaStream
-  - Reference
-  - TopicStub
-  - WebRTC
-  - Интерфейс
-translation_of: Web/API/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Интерфейс **`MediaStream`** представляет поток медиа данных. Поток состоит из нескольких **треков**, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.
@@ -92,7 +84,7 @@ _Этот интерфейс наследует методы своего род
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

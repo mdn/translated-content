@@ -1,13 +1,6 @@
 ---
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - Reference
-translation_of: Web/API/HTMLTableElement/insertRow
 ---
 
 {{APIRef("HTML DOM")}}
@@ -31,30 +24,28 @@ var row = HTMLTableElement.insertRow(optional index = -1);
 
 ```html
 <table id="TableA">
-<tr>
-<td>Old top row</td>
-</tr>
+  <tr>
+    <td>Old top row</td>
+  </tr>
 </table>
 <script type="text/javascript">
+  function addRow(tableID) {
+    // Get a reference to the table
+    var tableRef = document.getElementById(tableID);
 
-function addRow(tableID) {
-  // Get a reference to the table
-  var tableRef = document.getElementById(tableID);
+    // Insert a row in the table at row index 0
+    var newRow = tableRef.insertRow(0);
 
-  // Insert a row in the table at row index 0
-  var newRow = tableRef.insertRow(0);
+    // Insert a cell in the row at index 0
+    var newCell = newRow.insertCell(0);
 
-  // Insert a cell in the row at index 0
-  var newCell = newRow.insertCell(0);
+    // Append a text node to the cell
+    var newText = document.createTextNode("New top row");
+    newCell.appendChild(newText);
+  }
 
-  // Append a text node to the cell
-  var newText = document.createTextNode('New top row');
-  newCell.appendChild(newText);
-}
-
-// Call addRow() with the ID of a table
-addRow('TableA');
-
+  // Call addRow() with the ID of a table
+  addRow("TableA");
 </script>
 ```
 

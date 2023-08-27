@@ -1,7 +1,6 @@
 ---
 title: HTML Импорты
 slug: conflicting/Web/Web_Components
-translation_of: Web/Web_Components/HTML_Imports
 original_slug: Web/Web_Components/HTML_Imports
 ---
 

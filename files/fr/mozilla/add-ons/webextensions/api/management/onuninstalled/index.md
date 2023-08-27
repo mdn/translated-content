@@ -1,7 +1,6 @@
 ---
 title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 ---
 
 {{AddonSidebar()}}

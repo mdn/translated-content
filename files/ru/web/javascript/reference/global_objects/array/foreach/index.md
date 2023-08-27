@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - forEach
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 Метод **`forEach()`** выполняет указанную функцию один раз для каждого элемента в массиве.
@@ -80,15 +71,15 @@ arr.forEach(function callback(currentValue, index, array) {
 ### Нет операции для неинициализированных значений (разреженные массивы)
 
 ```js
-const arraySparse = [1,3,,7]
-let numCallbackRuns = 0
+const arraySparse = [1, 3, , 7];
+let numCallbackRuns = 0;
 
 arraySparse.forEach((element) => {
-  console.log(element)
-  numCallbackRuns++
-})
+  console.log(element);
+  numCallbackRuns++;
+});
 
-console.log("numCallbackRuns: ", numCallbackRuns)
+console.log("numCallbackRuns: ", numCallbackRuns);
 
 // 1
 // 3
@@ -100,18 +91,18 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 ### Конвертируем цикл for в forEach
 
 ```js
-const items = ['item1', 'item2', 'item3']
-const copy = []
+const items = ["item1", "item2", "item3"];
+const copy = [];
 
 // до
 for (let i = 0; i < items.length; i++) {
-  copy.push(items[i])
+  copy.push(items[i]);
 }
 
 // после
-items.forEach(function(item){
-  copy.push(item)
-})
+items.forEach(function (item) {
+  copy.push(item);
+});
 ```
 
 ### Печать содержимого массива
@@ -124,7 +115,7 @@ items.forEach(function(item){
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+  console.log("a[" + index + "] = " + element);
 }
 
 // Обратите внимание на пропуск по индексу 2, там нет элемента, поэтому он не посещается
@@ -141,22 +132,22 @@ function logArrayElements(element, index, array) {
 
 ```js
 function Counter() {
-  this.sum = 0
-  this.count = 0
+  this.sum = 0;
+  this.count = 0;
 }
-Counter.prototype.add = function(array) {
+Counter.prototype.add = function (array) {
   array.forEach((entry) => {
-    this.sum += entry
-    ++this.count
-  }, this)
+    this.sum += entry;
+    ++this.count;
+  }, this);
   // ^---- Note
-}
+};
 
-const obj = new Counter()
-obj.add([2, 5, 9])
-obj.count
+const obj = new Counter();
+obj.add([2, 5, 9]);
+obj.count;
 // 3
-obj.sum
+obj.sum;
 // 16
 ```
 
@@ -173,30 +164,30 @@ var THRESHOLD = 12;
 var v = [5, 2, 16, 4, 3, 18, 20];
 var res;
 
-res = v.every(function(element, index, array) {
-  console.log('element:', element);
+res = v.every(function (element, index, array) {
+  console.log("element:", element);
   if (element >= THRESHOLD) {
     return false;
   }
 
   return true;
 });
-console.log('res:', res);
+console.log("res:", res);
 // логи:
 // element: 5
 // element: 2
 // element: 16
 // res: false
 
-res = v.some(function(element, index, array) {
-  console.log('element:', element);
+res = v.some(function (element, index, array) {
+  console.log("element:", element);
   if (element >= THRESHOLD) {
     return true;
   }
 
   return false;
 });
-console.log('res:', res);
+console.log("res:", res);
 // логи:
 // element: 5
 // element: 2
@@ -213,7 +204,7 @@ function copy(o) {
   var copy = Object.create(Object.getPrototypeOf(o));
   var propNames = Object.getOwnPropertyNames(o);
 
-  propNames.forEach(function(name) {
+  propNames.forEach(function (name) {
     var desc = Object.getOwnPropertyDescriptor(o, name);
     Object.defineProperty(copy, name, desc);
   });
@@ -234,13 +225,13 @@ var o2 = copy(o1); // теперь o2 выглядит также, как и o1
 `forEach()` не делает копию массива перед итерацией.
 
 ```js
-let words = ['one', 'two', 'three', 'four']
+let words = ["one", "two", "three", "four"];
 words.forEach((word) => {
-  console.log(word)
-  if (word === 'two') {
-    words.shift()
+  console.log(word);
+  if (word === "two") {
+    words.shift();
   }
-})
+});
 // one
 // two
 // four
@@ -252,23 +243,23 @@ words.forEach((word) => {
 
 ```js
 function flatten(arr) {
-  const result = []
+  const result = [];
 
   arr.forEach((i) => {
     if (Array.isArray(i)) {
-      result.push(...flatten(i))
+      result.push(...flatten(i));
     } else {
-      result.push(i)
+      result.push(i);
     }
-  })
+  });
 
-  return result
+  return result;
 }
 
 // Usage
-const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
+const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 
-flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+flatten(nested); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ## Полифил
@@ -280,13 +271,11 @@ flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // Ссылка (en): http://es5.github.io/#x15.4.4.18
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.18
 if (!Array.prototype.forEach) {
-
   Array.prototype.forEach = function (callback, thisArg) {
-
     var T, k;
 
     if (this == null) {
-      throw new TypeError(' this is null or not defined');
+      throw new TypeError(" this is null or not defined");
     }
 
     // 1. Положим O равным результату вызова ToObject passing the |this| value as the argument.
@@ -298,8 +287,8 @@ if (!Array.prototype.forEach) {
 
     // 4. Если IsCallable(callback) равен false, выкинем исключение TypeError.
     // Смотрите: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-        throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
@@ -312,7 +301,6 @@ if (!Array.prototype.forEach) {
 
     // 7. Пока k < len, будем повторять
     while (k < len) {
-
       var kValue;
 
       // a. Положим Pk равным ToString(k).
@@ -321,7 +309,6 @@ if (!Array.prototype.forEach) {
       //   Этот шаг может быть объединён с шагом c
       // c. Если kPresent равен true, то
       if (k in O) {
-
         // i. Положим kValue равным результату вызова внутреннего метода Get объекта O с аргументом Pk.
         kValue = O[k];
 

@@ -93,7 +93,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -111,7 +111,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-KW", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -137,7 +137,7 @@ window.crypto.subtle
       length: 256,
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then((secretKey) => wrapCryptoKey(secretKey))
   .then((wrappedKey) => console.log(wrappedKey));
@@ -163,7 +163,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -181,7 +181,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -214,7 +214,7 @@ window.crypto.subtle
       hash: "SHA-256",
     },
     true,
-    ["sign", "verify"]
+    ["sign", "verify"],
   )
   .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
   .then((wrappedKey) => {
@@ -242,7 +242,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -260,7 +260,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-CBC", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -293,7 +293,7 @@ window.crypto.subtle
       hash: "SHA-256",
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then((keyPair) => wrapCryptoKey(keyPair.publicKey))
   .then((wrappedKey) => console.log(wrappedKey));
@@ -319,7 +319,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -337,7 +337,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -367,7 +367,7 @@ window.crypto.subtle
       namedCurve: "P-384",
     },
     true,
-    ["sign", "verify"]
+    ["sign", "verify"],
   )
   .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
   .then((wrappedKey) => console.log(wrappedKey));

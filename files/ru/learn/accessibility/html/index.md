@@ -1,19 +1,6 @@
 ---
 title: "HTML: Хорошая основа для доступности"
 slug: Learn/Accessibility/HTML
-tags:
-  - HTML
-  - a11y
-  - Клавиатура
-  - Кнопки
-  - Начинающий
-  - Семантика
-  - Ссылки
-  - Формы
-  - вспомогательные технологии
-  - доступность
-translation_of: Learn/Accessibility/HTML
-original_slug: Learn/Доступность/HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

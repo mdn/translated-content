@@ -1,7 +1,6 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
-translation_of: Web/CSS/content-visibility
 ---
 
 {{CSSRef}}

@@ -10,7 +10,7 @@ slug: Web/API/NDEFRecord/recordType
 ## 構文
 
 ```js
-NDEFRecord.recordType
+NDEFRecord.recordType;
 ```
 
 ### 値

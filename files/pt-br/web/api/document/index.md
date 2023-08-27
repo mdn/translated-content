@@ -272,18 +272,18 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 
 ## Specifications
 
-| Specification                                                                                            | Status                           | Comment                                                                                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('DOM1','#i-Document','Document')}}                                             | {{Spec2('DOM1')}}         | Initial definition for the interface                                                   |
-| {{SpecName('DOM2 Core','#i-Document','Document')}}                                     | {{Spec2('DOM2 Core')}}     | Supersede DOM 1                                                                        |
-| {{SpecName('DOM3 Core','#i-Document','Document')}}                                     | {{Spec2('DOM3 Core')}}     | Supersede DOM 2                                                                        |
-| {{SpecName('DOM WHATWG','#interface-document','Document')}}                         | {{Spec2('DOM WHATWG')}} | Intend to supersede DOM 3                                                              |
-| {{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}             | {{Spec2('HTML WHATWG')}} | Turn the {{domxref("HTMLDocument")}} interface into a `Document` extension.   |
-| {{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}         | {{Spec2('DOM3 XPath')}} | Define the {{domxref("XPathEvaluator")}} interface which extend `Document`. |
-| {{SpecName('HTML Editing','#dom-document-getselection','Document')}}             | {{Spec2('HTML Editing')}} | Extend the `Document` interface                                                        |
-| {{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}} | {{Spec2('CSSOM View')}} | Extend the `Document` interface                                                        |
-| {{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}         | {{Spec2('CSSOM')}}         | Extend the `Document` interface                                                        |
-| {{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extend the `Document` interface                                                        |
+| Specification                                                                   | Status                    | Comment                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------------- |
+| {{SpecName('DOM1','#i-Document','Document')}}                                   | {{Spec2('DOM1')}}         | Initial definition for the interface                                        |
+| {{SpecName('DOM2 Core','#i-Document','Document')}}                              | {{Spec2('DOM2 Core')}}    | Supersede DOM 1                                                             |
+| {{SpecName('DOM3 Core','#i-Document','Document')}}                              | {{Spec2('DOM3 Core')}}    | Supersede DOM 2                                                             |
+| {{SpecName('DOM WHATWG','#interface-document','Document')}}                     | {{Spec2('DOM WHATWG')}}   | Intend to supersede DOM 3                                                   |
+| {{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}           | {{Spec2('HTML WHATWG')}}  | Turn the {{domxref("HTMLDocument")}} interface into a `Document` extension. |
+| {{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}         | {{Spec2('DOM3 XPath')}}   | Define the {{domxref("XPathEvaluator")}} interface which extend `Document`. |
+| {{SpecName('HTML Editing','#dom-document-getselection','Document')}}            | {{Spec2('HTML Editing')}} | Extend the `Document` interface                                             |
+| {{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}}   | {{Spec2('CSSOM View')}}   | Extend the `Document` interface                                             |
+| {{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}        | {{Spec2('CSSOM')}}        | Extend the `Document` interface                                             |
+| {{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extend the `Document` interface                                             |
 
 ## Compatibilidade com navegadores
 

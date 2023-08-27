@@ -1,7 +1,6 @@
 ---
 title: CSS Positioning
 slug: Web/CSS/CSS_positioned_layout
-original_slug: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}
@@ -30,7 +29,7 @@ original_slug: Web/CSS/CSS_Positioning
 
 ## Especificações
 
-| Especificação                                        | Status                                   | Comentário |
-| ---------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |            |
-| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |            |
+| Especificação                            | Status                          | Comentário |
+| ---------------------------------------- | ------------------------------- | ---------- |
+| {{ SpecName('CSS3 Positioning') }}       | {{ Spec2('CSS3 Positioning') }} |            |
+| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}           |            |

@@ -122,6 +122,7 @@ l10n:
 
     - 空文字列または `yes`: 要素が翻訳対象になることを示します。
     - `no`: 要素が翻訳対象にならないことを示します。
+
 - [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
 
   - : [列挙型](/ja/docs/Glossary/Enumerated)属性で、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性を使用している要素について、タブレットや携帯電話など、ハードウェアキーボードが利用できない可能性のある機器上で画面の内側への仮想キーボード動作を制御するために使用されます。

@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -42,11 +35,11 @@ var UTCstring = today.toUTCString();
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                         | Статус             | Комментарии                                            |
+| ------------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                              | Стандарт           | Изначальное определение. Реализована в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}                | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -34,8 +34,8 @@ l10n:
       for (let i = 0; i < document.styleSheets.length; i++) {
         console.log(
           `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media
-          )}`
+            document.styleSheets[i].media,
+          )}`,
         );
         if (iSheetIndex === 0)
           document.styleSheets[i].media.appendMedium("handheld");
@@ -43,8 +43,8 @@ l10n:
           document.styleSheets[i].media.deleteMedium("print");
         console.log(
           `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media
-          )}`
+            document.styleSheets[i].media,
+          )}`,
         );
       }
       // This will log:

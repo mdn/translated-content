@@ -1,16 +1,6 @@
 ---
 title: Как использовать GitHub Pages?
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
-tags:
-  - Beginner
-  - GitHub
-  - Guide
-  - Web
-  - gh-pages
-  - git
-  - publish
-translation_of: Learn/Common_questions/Using_Github_pages
-original_slug: Learn/Common_questions/Using_Github_pages
 ---
 
 [GitHub](https://github.com/) — это сайт «социальной разработки». Он позволяет загружать репозитории кода для хранения **в системе управления версиями** [Git](http://git-scm.com/). После загрузки вы можете сотрудничать с другими участниками для работы над общим проектом, а ещё это система с открытым исходным кодом по умолчанию: любой человек в мире может найти ваш код на GitHub, использовать его, учиться по нему и улучшать его. Вы тоже можете взаимодействовать с кодом других людей! В этой статье представлено базовое руководство по публикации контента с использованием функции gh-pages Github.

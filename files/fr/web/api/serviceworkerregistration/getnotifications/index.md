@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
-translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
 
 {{APIRef("Service Workers API")}}

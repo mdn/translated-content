@@ -1,5 +1,5 @@
 ---
-title: '<output>: 출력 요소'
+title: "<output>: 출력 요소"
 slug: Web/HTML/Element/output
 ---
 
@@ -61,11 +61,13 @@ slug: Web/HTML/Element/output
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("for")}}
-  - : 스페이스로 구분한, 다른 여러 요소 {{htmlattrxref("id")}}의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.
+  - : 스페이스로 구분한, 다른 여러 요소 [`id`](/ko/docs/Web/HTML/Global_attributes#id)의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.
 - {{htmlattrdef("form")}}
-  - : `<output>`과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 {{htmlattrxref("id")}} 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
+
+  - : `<output>`과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
 
   `form` 특성을 사용하면 `<output>`을 `<form>` 요소에 넣지 않고도 연결할 수 있고, 조상 중 `<form>`이 있더라도 소유자를 재정의할 수 있습니다.
+
 - {{htmlattrdef("name")}}
   - : 요소의 이름. {{domxref("HTMLFormElement.elements", "form.elements")}} API에서 사용합니다.
 

@@ -57,8 +57,7 @@ background-clip: unset;
 
 ```css
 p {
-
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -85,8 +84,7 @@ p {
 
 ```css
 p {
-
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -113,7 +111,7 @@ p {
 
 ```css
 p {
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -140,7 +138,7 @@ p {
 
 ```css
 p {
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -151,7 +149,7 @@ p {
   /* Note a necessidade de adicionar trânsparência ao texto*/
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0,0,0,.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -161,8 +159,8 @@ p {
 
 ## Especificações
 
-| Especificação                                                                                        | Estado                                   | Comentário |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| Especificação                                                               | Estado                        | Comentário |
+| --------------------------------------------------------------------------- | ----------------------------- | ---------- |
 | {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} |            |
 
 ## Compatibilidade com navegadores

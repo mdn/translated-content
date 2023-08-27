@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 ---
 
 {{JSRef}}

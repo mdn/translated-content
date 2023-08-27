@@ -1,7 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-original_slug: Web/CSS/transform-function/translate()
 ---
 
 {{CSSRef}}
@@ -141,7 +140,9 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* translateX(10px) または translate(10px, 0) と同じ */
+  transform: translate(
+    10px
+  ); /* translateX(10px) または translate(10px, 0) と同じ */
   background-color: pink;
 }
 ```

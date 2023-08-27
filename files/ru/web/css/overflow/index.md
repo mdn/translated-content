@@ -1,7 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-translation_of: Web/CSS/overflow
 ---
 
 {{ CSSRef() }}
@@ -53,10 +52,10 @@ overflow: inherit
 
 ```css
 p {
-     width: 12em;
-     height: 6em;
-     border: dotted;
-     overflow: visible; /* содержимое не обрезается */
+  width: 12em;
+  height: 6em;
+  border: dotted;
+  overflow: visible; /* содержимое не обрезается */
 }
 ```
 
@@ -64,21 +63,27 @@ p {
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: hidden; /* полосы прокрутки не предоставляются */ }
+p {
+  overflow: hidden; /* полосы прокрутки не предоставляются */
+}
 ```
 
 `overflow: hidden`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: scroll; /* всегда показывать полосы прокрутки */ }
+p {
+  overflow: scroll; /* всегда показывать полосы прокрутки */
+}
 ```
 
 `overflow: scroll`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: auto; /* добавить полосы прокрутки, если это необходимо */ }
+p {
+  overflow: auto; /* добавить полосы прокрутки, если это необходимо */
+}
 ```
 
 `overflow: auto`
@@ -86,11 +91,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                               | Комментарий                                                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------- |
+| Спецификация                                                   | Статус                     | Комментарий                                                     |
+| -------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------- |
 | {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | Changed syntax to allow one or two keywords instead of only one |
-| {{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}         | {{Spec2('CSS3 Box')}}         | Без изменений                                                   |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Initial definition.                                             |
+| {{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}      | {{Spec2('CSS3 Box')}}      | Без изменений                                                   |
+| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}     | {{Spec2('CSS2.1')}}        | Initial definition.                                             |
 
 ## Совместимость браузера
 

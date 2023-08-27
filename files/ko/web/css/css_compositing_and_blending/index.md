@@ -1,7 +1,6 @@
 ---
 title: Compositing and Blending
 slug: Web/CSS/CSS_compositing_and_blending
-original_slug: Web/CSS/Compositing_and_Blending
 ---
 
 {{CSSRef}}
@@ -23,7 +22,3 @@ original_slug: Web/CSS/Compositing_and_Blending
 ## 명세서
 
 {{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}

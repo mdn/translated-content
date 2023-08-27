@@ -1,7 +1,6 @@
 ---
 title: 대열과 탈대열
 slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
-original_slug: Web/CSS/CSS_Flow_Layout/대열과_탈대열
 ---
 
 {{CSSRef}}

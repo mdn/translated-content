@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-meter-even-less-good-value"
 slug: Web/CSS/::-webkit-meter-even-less-good-value
-translation_of: Web/CSS/::-webkit-meter-even-less-good-value
 ---
 
 {{CSSRef}}{{Non-standard_header}}

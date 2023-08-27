@@ -1,7 +1,6 @@
 ---
 title: 多媒体无障碍
 slug: Learn/Accessibility/Multimedia
-original_slug: learn/Accessibility/多媒体
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
