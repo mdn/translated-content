@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-reverse()
+reverse();
 ```
 
 ### 返値
@@ -46,7 +46,7 @@ console.log(items); // [3, 2, 1]
 次の例は、3 つの要素と length プロパティを含む配列風オブジェクト `obj` を作成し、その配列風オブジェクトを反転させます。`reverse()` の呼び出しは、反転した配列風オブジェクト `obj` への参照を返します。
 
 ```js
-const obj = {0: 1, 1: 2, 2: 3, length: 3};
+const obj = { 0: 1, 1: 2, 2: 3, length: 3 };
 console.log(obj); // {0: 1, 1: 2, 2: 3, length: 3}
 
 Array.prototype.reverse.call(obj); //apply() を使用するのと同じ構文

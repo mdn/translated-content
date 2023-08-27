@@ -17,7 +17,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 ### 准备工作
 
-1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
+1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
 2. 确保本机使用的是支持 webassembly 的浏览器。Firefox 52+ 和 Chrome 57+ 是默认支持 webassembly 的。
 3. 然后，创建一个简单的 HTML 文件命名为 index.html 和并且你的本机的 wasm 文件处于同一目录下 ( 如果你没有模板可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) ).
 4. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示 (也可以在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式)见到):
@@ -136,7 +136,7 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 
 ### 更复杂的内存示例
 
-让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在这里[memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)找到示例。
+让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在 [memory.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm) 中找到示例。
 
 1. 像前面那样在相同的目录下复制一份 memory.wasm。
 
@@ -188,7 +188,7 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 ### 表格示例
 
-让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在[table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm)中找到该示例。
+让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在 [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm) 中找到该示例。
 
 1. 在一个新的目录中复制一份 table.wasm。
 

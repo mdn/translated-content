@@ -32,11 +32,30 @@ pattern の正規表現は、値に一致したときに、先頭が文字列の
 
 ```html
 <p>
- <label>Enter your phone number in the format (123)456-7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label
+    >Enter your phone number in the format (123)456-7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />)-
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
@@ -64,8 +83,14 @@ input:invalid {
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}"
+      title="4 to 8 lowercase letters" />
     <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
@@ -90,15 +115,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

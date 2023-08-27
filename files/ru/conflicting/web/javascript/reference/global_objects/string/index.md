@@ -1,9 +1,6 @@
 ---
 title: ByteString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Строки
-translation_of: Web/API/ByteString
 original_slug: Web/API/ByteString
 ---
 

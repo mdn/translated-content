@@ -24,7 +24,7 @@ l10n:
 次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使用して（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを作成し、そのリクエストの `redirect` の値を変数に保存します。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myCred = myRequest.redirect;
 ```
 

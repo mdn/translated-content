@@ -35,7 +35,7 @@ new Promise((resolveOuter) => {
   resolveOuter(
     new Promise((resolveInner) => {
       setTimeout(resolveInner, 1000);
-    })
+    }),
   );
 });
 ```
@@ -342,13 +342,16 @@ function testPromise() {
     // プロミスを解決または拒否する機能を持つ実行関数が呼び出されます
     log.insertAdjacentHTML(
       "beforeend",
-      `${thisPromiseCount}) Promise コンストラクター<br>`
+      `${thisPromiseCount}) Promise コンストラクター<br>`,
     );
     // これは単に非同期にするための例に過ぎません
-    setTimeout(() => {
-      // プロミスを履行させます
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // プロミスを履行させます
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // プロミスが解決されたときの処理を then() の呼び出しで定義します。
@@ -385,7 +388,7 @@ btn.addEventListener("click", testPromise);
 これをもう少し詳しく説明するために、文書に埋め込まれた [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) がホストとどのように通信するかを見てみましょう。すべての Web API は現行の設定オブジェクトを認識しているため、以下のようにすればすべてのブラウザーで動作します。
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- ここが領域です -->
 <script>
   // ここも同様に領域です
@@ -401,7 +404,7 @@ btn.addEventListener("click", testPromise);
 同じ概念をプロミスに適用します。上の例を少し変えてみると、こうなります。
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- ここが領域です -->
 <script>
   // ここも同様に領域です
@@ -418,7 +421,7 @@ btn.addEventListener("click", testPromise);
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
@@ -428,7 +431,7 @@ btn.addEventListener("click", testPromise);
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
   window.addEventListener(
     "message",
@@ -437,7 +440,7 @@ btn.addEventListener("click", testPromise);
       // このコードは現行の設定オブジェクトを追跡するブラウザーでしか動作しません
       console.log(event);
     },
-    false
+    false,
   );
 </script>
 ```

@@ -117,9 +117,7 @@ colorWell.select();
 HTMLはかなり単純です。数段落の説明的な素材と、 ID が `colorWell` で `color` 型の {{HTMLElement("input")}} があり、これを使用して段落のテキストの色を変更することになります。
 
 ```html
-<p>
-  <code>&lt;input type="color"&gt;</code> コントロールを使用する例です。
-</p>
+<p><code>&lt;input type="color"&gt;</code> コントロールを使用する例です。</p>
 
 <label for="colorWell">色:</label>
 <input type="color" value="#ff0000" id="colorWell" />

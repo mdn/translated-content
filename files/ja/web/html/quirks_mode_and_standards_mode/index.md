@@ -16,14 +16,13 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 [HTML](/ja/docs/HTML) 文書については、ブラウザーは文書の先頭にある DOCTYPE を使用して、後方互換モードで処理するか、標準準拠モードで処理するかを決定します。ページで確実に完全標準準拠モードが使用されるようにするには、以下のサンプルのような DOCTYPE を使用するようにしてください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -45,4 +44,4 @@ HTML5 では、DOCTYPE の用途は完全標準準拠モードを適用させる
 
 Firefox では、コンテキストメニューで*ページの情報を表示*を選択して、*描画モード*を確認してください。（[Firefox のページ情報ウィンドウ](https://support.mozilla.org/ja/kb/firefox-page-info-window)）
 
-Internet Explorer では、*F12* を押下して、*ドキュメントモード*を確認してください。
+Internet Explorer では、_F12_ を押下して、*ドキュメントモード*を確認してください。

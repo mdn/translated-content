@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Permissions API")}}
 
- **`Permissions.query()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、グローバルスコープに対するユーザーの権限の状態を返します。
+**`Permissions.query()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、グローバルスコープに対するユーザーの権限の状態を返します。
 
 ## 構文
 
@@ -58,13 +58,13 @@ query(permissionDescriptor)
 ## 例
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((result) => {
- if (result.state === 'granted') {
-   showLocalNewsWithGeolocation();
- } else if (result.state === 'prompt') {
-   showButtonToEnableLocalNews();
- }
- // 権限が拒否された場合は何もしないでください。
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
+  if (result.state === "granted") {
+    showLocalNewsWithGeolocation();
+  } else if (result.state === "prompt") {
+    showButtonToEnableLocalNews();
+  }
+  // 権限が拒否された場合は何もしないでください。
 });
 ```
 

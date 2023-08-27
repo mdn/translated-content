@@ -28,17 +28,17 @@ void で完了する{{jsxref("Promise")}}。コンテキストが既に閉じて
 次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。suspend/resume ボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし`running`ならば、{{domxref("AudioContext.suspend()", "suspend()")}}が呼ばれます。`suspended`ならば、`resume()`が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。
 
 ```js
-susresBtn.onclick = function() {
-  if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
-      susresBtn.textContent = 'Resume context';
+susresBtn.onclick = function () {
+  if (audioCtx.state === "running") {
+    audioCtx.suspend().then(function () {
+      susresBtn.textContent = "Resume context";
     });
-  } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
-      susresBtn.textContent = 'Suspend context';
+  } else if (audioCtx.state === "suspended") {
+    audioCtx.resume().then(function () {
+      susresBtn.textContent = "Suspend context";
     });
   }
-}
+};
 ```
 
 ## 仕様

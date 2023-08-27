@@ -26,7 +26,7 @@ slug: Web/API/VTTCue/VTTCue
 
 ```js
 // 2から3秒の間に表示するキューを作成し、指定されたテキストを使用します。
-var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');
+var cue = new VTTCue(2, 3, "かっこいい文章を表示する");
 ```
 
 ## 仕様

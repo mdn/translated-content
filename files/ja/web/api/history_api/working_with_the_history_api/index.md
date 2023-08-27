@@ -18,10 +18,10 @@ l10n:
 
 ```js
 let stateObj = {
-    foo: "bar",
-}
+  foo: "bar",
+};
 
-history.pushState(stateObj, "page 2", "bar.html")
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 これにより URL バーには `https://mozilla.org/bar.html` と表示されますが、ブラウザーは `bar.html` を読み込むことはなくまたその存在をチェックすることはありません。
@@ -68,8 +68,8 @@ history.pushState(stateObj, "page 2", "bar.html")
 `https://mozilla.org/foo.html` で次の JavaScript を実行したとします。
 
 ```js
-let stateObj = { foo: "bar" }
-history.pushState(stateObj, "page 2", "bar.html")
+let stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 上記2行の説明は、上記の _[pushState() メソッドの例](#pushstate_の例)_ の部分で得ることができます。
@@ -77,7 +77,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 次に、`https://mozilla.org/bar.html` で次の JavaScript を実行したとします。
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html")
+history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
 これによって URL バーには `https://mozilla.org/bar2.html` が表示されますが、ブラウザーは `bar2.html` の読み込みを行わず、`bar2.html` が存在するかどうかもチェックしません。
@@ -97,7 +97,7 @@ history.replaceState(stateObj, "page 3", "bar2.html")
 このように {{DOMxRef("History.state","history.state")}} プロパティを用いることで、 `popstate` イベントを待つことなく現在の履歴項目の状態を読み取ることができます。
 
 ```js
-let currentState = history.state
+let currentState = history.state;
 ```
 
 ## 関連情報

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ## 構文
 
 ```js
-Atomics.sub(typedArray, index, value)
+Atomics.sub(typedArray, index, value);
 ```
 
 ### 引数
