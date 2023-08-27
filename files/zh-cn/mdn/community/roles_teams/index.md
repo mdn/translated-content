@@ -30,7 +30,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 - 提交缺陷报告。查看 MDN [`content`](https://github.com/mdn/content) 仓库中[你可以提出议题的类型](https://github.com/mdn/content/issues/new/choose)。如果你发现了平台的缺陷，你可以在 MDN 的 `yari` 仓库中[提出议题](https://github.com/mdn/yari/issues/new/choose)。
 - 对问题发表评论，推动对话取得丰硕成果。
 - 通过提交[拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)来解决开启的议题（例如，在 [`content`](https://github.com/mdn/content/issues) 仓库中）。
-- 出席社区活动。
+- 参与社区活动。
 - 帮助推荐 MDN 项目。
 
 **要求：**
