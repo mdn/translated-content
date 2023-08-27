@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_images/Using_CSS_gradients
 
 {{CSSRef}}
 
-**CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。你可以选择三种类型的渐变：线性（由 {{cssxref("linear-gradient")}} 函数创建）、径向（由 {{cssxref("radial-gradient")}} 函数创建）和锥形（由 {{cssxref("conic-gradient")}} 函数创建）。你还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。
+**CSS 渐变**由 {{cssxref("&lt;gradient&gt;")}} 数据类型表示，它是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，由两种或多种颜色之间的渐变过渡构成。你可以选择三种类型的渐变：_线性_（由 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 函数创建）、_径向_（由 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 函数创建）和*锥形*（由 {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 函数创建）。你还可以使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 和 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数创建重复渐变。
 
 渐变可以在任何使用 `<image>` 的地方使用，例如在背景中。由于渐变是动态生成的，因此可以消除对传统用于实现类似效果的栅格图像文件的需求。此外，由于渐变是由浏览器生成的，因此在放大时看起来比栅格图像更好，并且可以动态调整大小。
 
@@ -163,7 +163,7 @@ div {
 
 ### 创建硬线
 
-要在两种颜色之间创建一条硬线，即创建一个条纹而不是逐渐过渡，可以将相邻的颜色停止设置为相同的位置。在此示例中，两种颜色在 50% 标记处共享一个颜色停止点，即渐变的一半：
+要在两种颜色之间创建一条硬线，即创建一个条纹而不是逐渐过渡，可以将相邻的颜色停止设置为相同的位置。在此示例中，两种颜色在 `50%` 标记处共享一个颜色停止点，即渐变的一半：
 
 ```html hidden
 <div class="striped"></div>
@@ -215,7 +215,7 @@ div {
 
 ### 创建色带和条纹
 
-要在渐变中包含一个实心的非过渡颜色区域，请包含颜色起止点的两个位置。颜色起止点可以有两个位置，这相当于两个连续颜色在不同位置具有相同的颜色起止点。颜色将在第一个颜色起止点时达到完全饱和，保持该饱和度到第二个颜色起止点，并通过相邻颜色起止点的第一个位置过渡到相邻颜色起止点的颜色。
+要在渐变中包含一个实心的非过渡颜色区域，请包含色标的两个位置。色标可以有两个位置，这相当于两个连续颜色在不同位置具有相同的色标。颜色将在第一个色标时达到完全饱和，保持该饱和度到第二个色标，并通过相邻色标的第一个位置过渡到相邻色标的颜色。
 
 ```html hidden
 <div class="multiposition-stops"></div>
@@ -281,7 +281,7 @@ div {
 
 ### 控制渐变的进程
 
-默认情况下，渐变在两个相邻的色标之间都是均匀推进的，两个色标之间的中点是颜色值的中点。你可以控制两个色标之间的插值（{{Glossary("interpolation")}}），或者过程，方法是添加一个颜色提示位置。在这个例子中，颜色在渐变过程的 20% 而不是 50% 的位置到达黄绿色和青色之间的中点。第二个例子没有提示，因此可以通过对比看出颜色提示的效果。
+默认情况下，渐变在两个相邻的色标之间都是均匀推进的，两个色标之间的中点是颜色值的中点。你可以控制两个色标之间的{{Glossary("interpolation","插值")}}，或者过程，方法是添加一个颜色提示位置。在这个例子中，颜色在渐变过程的 20% 而不是 50% 的位置到达黄绿色和青色之间的中点。第二个例子没有提示，因此可以通过对比看出颜色提示的效果。
 
 ```html hidden
 <div class="colorhint-gradient"></div>
@@ -311,7 +311,7 @@ div {
 
 ### 叠加渐变
 
-渐变支持透明，所以你可以将多个背景叠加起来以实现一些非常好看的效果。背景是从顶部到底部堆叠的，指定的第一个就是顶部。
+渐变支持透明度，所以你可以将多个背景叠加起来以实现一些非常好看的效果。背景是从顶部到底部堆叠的，指定的第一个就是顶部。
 
 ```html hidden
 <div class="layered-image"></div>
@@ -467,7 +467,7 @@ div {
 
 {{ EmbedLiveSample('示例：椭圆最近一侧', 240, 100) }}
 
-#### 示例：椭圆最远一侧
+#### 示例：椭圆形渐变最远一侧
 
 这个例子和前一个类似，但是其大小是以 `farthest-cornet` 指定的，这会将渐变的大小设置为从开始点到包围盒的距离开始点的最远角的距离设置的。
 
@@ -496,7 +496,7 @@ div {
 
 {{ EmbedLiveSample('示例：椭圆最远一侧', 240, 100) }}
 
-#### 示例：圆最近一侧
+#### 示例：圆形渐变最近一侧
 
 这个例子使用了 `closest-side`，使得圆的半径是渐变中心到最近一侧的距离。在这个例子中，半径是中心到底部的距离，因为渐变位于左侧 25%、底部 25% 的位置，而 div 元素的高度小于宽度。
 
@@ -525,7 +525,7 @@ div {
 
 {{ EmbedLiveSample('示例：圆最近一侧', 240, 120) }}
 
-#### 示例：椭圆长度或百分比
+#### 示例：椭圆形渐变长度或百分比
 
 对于椭圆，你可以使用长度或者百分比来设置其大小，第一个值代表了水平半径，第二个值是竖直半径，你可以使用百分比以表示相对于盒在那个维度上的的大小的值。在下面这个例子中，我使用了百分比以表示水平半径。
 
@@ -554,7 +554,7 @@ div {
 
 {{ EmbedLiveSample('示例：椭圆长度或百分比', 240, 120) }}
 
-#### 示例：圆的长度
+#### 示例：圆形渐变的长度
 
 对于圆，尺寸可以用 [\<length>](/zh-CN/docs/Web/CSS/length) 提供，这就是圆的尺寸。
 
@@ -626,7 +626,7 @@ div {
 
 ### 基本的锥形渐变
 
-和线性和径向的渐变类似，你创建锥形渐变所需要的就是两个颜色。默认情况下，渐变的中心位于 50% 50% 的位置，渐变的开始点是朝上的。
+和线性和径向的渐变类似，创建锥形渐变所需要的就是两个颜色。默认情况下，渐变的中心位于 50% 50% 的位置，渐变的开始点是朝上的。
 
 ```html hidden
 <div class="simple-conic"></div>
@@ -693,7 +693,7 @@ div {
 
 {{ EmbedLiveSample('改变角度', 120, 120) }}
 
-## 使用重复的渐变
+## 使用重复渐变
 
 {{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}} 和 {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 函数不支持自动重复的色标。但是，{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 和 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数可以用于提供此功能。
 
@@ -730,7 +730,7 @@ div {
 
 ### 多个线性渐变
 
-和常规的线性和径向渐变类似，你可以包含多个渐变，一个在另一个的顶部。这只有在渐变部分透明时有效，以允许的后续的渐变穿透透明区域显示，或者你为每个渐变图像指定不同的 [background-sizes](/zh-CN/docs/Web/CSS/background-size)，还可以有不同的 [background-position](/zh-CN/docs/Web/CSS/background-position) 属性值。我们使用透明。
+和常规的线性和径向渐变类似，你可以包含多个渐变，一个在另一个的顶部。这只有在渐变部分透明时有效，以允许的后续的渐变穿透透明区域显示，或者你为每个渐变图像指定不同的 [background-size](/zh-CN/docs/Web/CSS/background-size)，还可以有不同的 [background-position](/zh-CN/docs/Web/CSS/background-position) 属性值。我们使用透明。
 
 在这个例子中，渐变线的长度为 300px、230px 和 300px。
 

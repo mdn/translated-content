@@ -27,11 +27,11 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 
 - `A` {{optional_inline}}
 
-  - : {{CSSXref("&lt;alpha-value&gt;")}}，其中 `1` 对应 `100%`（完全不透明）。
+  - : {{CSSXref("&lt;alpha-value&gt;")}} 值，其中 `1` 对应 `100%`（完全不透明）。
 
 - `color` {{optional_inline}}
 
-  - : 可选的后备 {{CSSXref("&lt;color&gt;")}}，当用户代理不知道如何将 CMYK 颜色转换为 RGB 颜色时使用。
+  - : 可选的后备 {{CSSXref("&lt;color&gt;")}} 值，当用户代理不知道如何将 CMYK 颜色转换为 RGB 颜色时使用。
 
 ### 形式语法
 

@@ -20,7 +20,7 @@ color-contrast(#008080 vs olive, var(--myColor), #d2691e)
 
 - `color`
 
-  - : 任何有效的 {{CSSXref("&lt;color&gt;")}}。
+  - : 任何有效的 {{CSSXref("&lt;color&gt;")}} 值。
 
 - `vs`
 

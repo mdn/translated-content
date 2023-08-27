@@ -11,9 +11,9 @@ slug: Web/CSS/color_value/hsl
 
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
-使用 `hsl()` 来定义 _互补色_ 可以用一个公式来完成，因为它们在 {{glossary("color wheel")}} 中位于同一直径上。如果一个颜色的色相度是 `θ`，那么其互补色的色相角就是 `180deg - θ`。
+使用 `hsl()` 来定义*互补色*可以用一个公式来完成，因为它们位于{{glossary("color wheel","色环")}}中同一直径上。如果一个颜色的色相度是 `θ`，那么其互补色的色相角就是 `180deg - θ`。
 
-## Syntax
+## 语法
 
 ```css
 hsl(120deg 75% 25%)
@@ -27,15 +27,15 @@ hsl(120deg 75% 25% / 0.6)
 函数标记：`hsl(H S L[ / A])`
 
 - `H`
-  - : {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;angle&gt;")}} 或者关键词 `none`，代表色相角。关于此类型的更多细节可以见于 {{CSSXref("&lt;hue&gt;")}} 参考资料。
+  - : {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;angle&gt;")}} 或者关键字 `none`，代表色相角。关于此类型的更多细节可以参见 {{CSSXref("&lt;hue&gt;")}} 文档。
 - `S`
-  - : {{CSSXref("&lt;percentage&gt;")}} 或者关键词 `none`，代表饱和度。在这里，`100%` 是完全饱和，而 `0%` 是完全不饱和（灰色）。
+  - : {{CSSXref("&lt;percentage&gt;")}} 或者关键字 `none`，代表饱和度。在这里，`100%` 是完全饱和，而 `0%` 是完全不饱和（灰色）。
 - `L`
-  - : {{CSSXref("&lt;percentage&gt;")}} 或者关键词 `none`，代表明度。在这里，`100%` 是白色，`0%` 是黑色，`50%` 是“正常”。
+  - : {{CSSXref("&lt;percentage&gt;")}} 或者关键字 `none`，代表明度。在这里，`100%` 是白色，`0%` 是黑色，`50%` 是“正常”。
 - `A` {{optional_inline}}
-  - : {{CSSXref("&lt;alpha-value&gt;")}} 或者关键词 `none`，其中数字 `1` 代表 `100%`（完全不透明）。
+  - : {{CSSXref("&lt;alpha-value&gt;")}} 或者关键字 `none`，其中数字 `1` 代表 `100%`（完全不透明）。
 
-> **备注：** 参见 [缺失颜色成分](/zh-CN/docs/Web/CSS/color_value#missing_color_components) 以了解 `none` 的效果。
+> **备注：** 参见[缺失颜色成分](/zh-CN/docs/Web/CSS/color_value#缺失颜色成分) 以了解 `none` 的效果。
 
 ### 形式语法
 
@@ -78,7 +78,7 @@ div {
 
 ### 旧版语法：逗号分隔值
 
-由于旧版的原因，`hsl()` 接受所有值用逗号分隔的形式。
+由于历史原因，`hsl()` 函数接受所有值用逗号分隔的形式。
 
 #### HTML
 

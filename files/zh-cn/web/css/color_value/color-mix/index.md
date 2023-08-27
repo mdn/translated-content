@@ -22,15 +22,15 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 - `method`
 
-  - : {{CSSXref("&lt;color-interpolation-method&gt;")}}，指定插值的颜色空间。
+  - : 指定插值颜色空间的 {{CSSXref("&lt;color-interpolation-method&gt;")}} 值。
 
 - `color1`、`color2`
 
-  - : {{CSSXref("&lt;color&gt;")}} 需要混合的颜色值。
+  - : 需要混合的 {{CSSXref("&lt;color&gt;")}} 值。
 
 - `p1`、`p2` {{optional_inline}}
 
-  - : `0%` 到 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}} 值，指定每个颜色混合的数量。这两个值会以以下的方式规范化：
+  - : `0%` 到 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}} 值，指定每个颜色混合的数量。这两个值会按照以下的方式规范化：
 
     - 如果 `p1` 和 `p2` 都省略了，那么 `p1 = p2 = 50%`。
     - 如果 `p1` 省略，那么 `p1 = 100% - p2`。
@@ -111,7 +111,7 @@ li:nth-child(6) {
 
 #### 结果
 
-{{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
+{{EmbedLiveSample("混合两个颜色", "100%", 150)}}
 
 ### 在 color-mix() 中使用色相插值
 
@@ -122,10 +122,10 @@ li:nth-child(6) {
 更多信息请参考 {{cssxref("&lt;hue-interpolation-method&gt;")}}。
 
 ```html
-<div class="color-one">color one</div>
-<div class="color-two">color two</div>
-<div class="shorter">mixed shorter</div>
-<div class="longer">mixed longer</div>
+<div class="color-one">颜色一</div>
+<div class="color-two">颜色二</div>
+<div class="shorter">shorter 混合</div>
+<div class="longer">longer 混合</div>
 ```
 
 #### CSS
