@@ -57,7 +57,7 @@ elem.addEventListener(
   (e) => {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 // target can be any Element or other EventTarget.
@@ -114,7 +114,7 @@ textarea.addEventListener("input", function () {
     new CustomEvent("awesome", {
       bubbles: true,
       detail: { text: () => textarea.value },
-    })
+    }),
   );
 });
 ```
