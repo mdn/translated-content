@@ -159,7 +159,7 @@ async function registerSync() {
 
 ### 处理同步事件
 
-一旦设备有网络连接，`sync` 事件就会在 service worker 范围内触发。 service worker 检查任务的名称并运行适当的函数，在这种情况下是 `sendMessage()`：
+一旦设备有网络连接，`sync` 事件就会在 service worker 范围内触发。service worker 检查任务的名称并运行适当的函数，在这种情况下是 `sendMessage()`：
 
 ```js
 // service-worker.js
@@ -171,11 +171,11 @@ self.addEventListener("sync", (event) => {
 });
 ```
 
-注意我们将 `sendMessage()` 函数的结果传递给事件的 {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} 方法。`waitUntil()` 方法接受一个 {{jsxref("Promise")}} 作为参数，并要求浏览器不要停止 service worker ，直到 promise 已经解决。这也是浏览器知道操作是否成功的方式：如果 promise 拒绝，那么浏览器可能会通过再次触发 `sync` 事件来重试。
+注意我们将 `sendMessage()` 函数的结果传递给事件的 {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} 方法。`waitUntil()` 方法接受一个 {{jsxref("Promise")}} 作为参数，并要求浏览器不要停止 service worker，直到 promise 已经解决。这也是浏览器知道操作是否成功的方式：如果 promise 拒绝，那么浏览器可能会通过再次触发 `sync` 事件来重试。
 
 `waitUntil()` 方法是不能保证浏览器不会停止 service worker 的：如果操作花费太长时间，service worker 仍然会被停止。如果发生这种情况，那么操作将被中止，并且下次触发 `sync` 事件时，处理程序将再次从头开始运行——它不会从它停止的地方继续。
 
-“太长时间”是多长是由浏览器决定的。对于 Chrome，如果满足以下条件之一，则可能关闭 service worker ：
+“太长时间”是多长是由浏览器决定的。对于 Chrome，如果满足以下条件之一，则可能关闭 service worker：
 
 - 它已经空闲了 30 秒
 - 它已经运行同步 JavaScript 30 秒
@@ -348,7 +348,7 @@ self.addEventListener("periodicsync", (event) => {
 });
 ```
 
-在 `updateNews()` 内部， service worker 可以抓取和缓存最新的文章。`updateNews()` 函数应该相对快速完成：如果 service worker 花太长时间更新其内容，浏览器将停止它。
+在 `updateNews()` 内部，service worker 可以抓取和缓存最新的文章。`updateNews()` 函数应该相对快速完成：如果 service worker 花太长时间更新其内容，浏览器将停止它。
 
 ### 注销周期性同步
 
@@ -389,7 +389,7 @@ async function registerPeriodicSync() {
 
   - 将应用服务器的公钥作为参数：推送服务将用此来验证来自应用服务器的消息签名。
     
-  - 返回一个解析为一个 {{domxref("PushSubscription")}} 对象的 `Promise`。 这个对象包括：
+  - 返回一个解析为一个 {{domxref("PushSubscription")}} 对象的 `Promise`。这个对象包括：
   
     - 推送服务的[端点](/zh-CN/docs/Web/API/PushSubscription/endpoint): 这是应用服务器了解在何处发送推送消息的方式。
     - 你的服务器将用来加密发向推送服务的消息的[公开加密密钥](/zh-CN/docs/Web/API/PushSubscription/getKey)。
@@ -409,9 +409,9 @@ async function registerPeriodicSync() {
 3. 推送服务检查消息上的签名，如果签名有效，推送服务将消息排队以便交付。
 4. 当设备有网络连接时，推送服务会将加密消息交付到浏览器。
 5. 当浏览器接收到加密消息时，它会解密消息。
-6. 浏览器会启动 service worker（如果需要）, 并在 service worker 的全局作用域中触发一个名为 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 的事件。 事件处理程序被传递一个 {{domxref("PushEvent")}} 对象，其中包含消息数据。
-7. 在其事件处理程序中， service worker 执行对消息的任何处理。 如往常一样，事件处理程序调用 `event.waitUntil()` 来要求浏览器使 service worker 继续运行。
-8. 在其事件处理程序中， service worker 使用 {{domxref("ServiceWorkerRegistration/showNotification", "registration.showNotification()")}} 创建一个通知。
+6. 浏览器会启动 service worker（如果需要）, 并在 service worker 的全局作用域中触发一个名为 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 的事件。事件处理程序被传递一个 {{domxref("PushEvent")}} 对象，其中包含消息数据。
+7. 在其事件处理程序中，service worker 执行对消息的任何处理。 如往常一样，事件处理程序调用 `event.waitUntil()` 来要求浏览器使 service worker 继续运行。
+8. 在其事件处理程序中，service worker 使用 {{domxref("ServiceWorkerRegistration/showNotification", "registration.showNotification()")}} 创建一个通知。
 9. 如果用户点击通知或关闭它，会分别在 service worker 的全局作用域中触发 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 和 {{domxref("ServiceWorkerGlobalScope.notificationclose_event", "notificationclose")}} 事件。这使应用程序能够处理用户对通知的响应。
 
 ## 权限和限制
