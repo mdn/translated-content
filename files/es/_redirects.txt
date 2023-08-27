@@ -112,6 +112,7 @@
 /es/docs/CSS/min-height	/es/docs/Web/CSS/min-height
 /es/docs/CSS/min-width	/es/docs/Web/CSS/min-width
 /es/docs/CSS/none	/es/docs/Web/CSS/float
+/es/docs/CSS/number	/es/docs/Web/CSS/number
 /es/docs/CSS/opacity	/es/docs/Web/CSS/opacity
 /es/docs/CSS/overflow	/es/docs/Web/CSS/overflow
 /es/docs/CSS/perspective	/es/docs/Web/CSS/perspective
@@ -183,6 +184,7 @@
 /es/docs/CSS:min-height	/es/docs/Web/CSS/min-height
 /es/docs/CSS:min-width	/es/docs/Web/CSS/min-width
 /es/docs/CSS:none	/es/docs/Web/CSS/float
+/es/docs/CSS:number	/es/docs/Web/CSS/number
 /es/docs/CSS:position	/es/docs/Web/CSS/position
 /es/docs/CSS:right	/es/docs/Web/CSS/right
 /es/docs/CSS:top	/es/docs/Web/CSS/top
@@ -212,6 +214,7 @@
 /es/docs/DHTML	/es/docs/Glossary
 /es/docs/DOM/CSS	/es/docs/Web/CSS
 /es/docs/DOM/CssRule	/es/docs/Web/API/CSSRule
+/es/docs/DOM/CssRule.cssText	/es/docs/Web/API/CSSRule/cssText
 /es/docs/DOM/CssRule.selectorText	/es/docs/Web/API/CSSStyleRule/selectorText
 /es/docs/DOM/Document.styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/DOM/Element.setAttribute	/es/docs/Web/API/Element/setAttribute
@@ -240,6 +243,7 @@
 /es/docs/DOM/Selection/removeRange	/es/docs/Web/API/Selection/removeRange
 /es/docs/DOM/Selection/selectAllChildren	/es/docs/Web/API/Selection/selectAllChildren
 /es/docs/DOM/Selection/toString	/es/docs/Web/API/Selection/toString
+/es/docs/DOM/Style.media	/es/docs/Web/API/StyleSheet/media
 /es/docs/DOM/Style.type	/es/docs/Web/API/StyleSheet/type
 /es/docs/DOM/Stylesheet	/es/docs/Web/API/StyleSheet
 /es/docs/DOM/Stylesheet.cssRules	/es/docs/Web/API/CSSStyleSheet/insertRule
@@ -247,17 +251,20 @@
 /es/docs/DOM/Stylesheet.disabled	/es/docs/Web/API/StyleSheet/disabled
 /es/docs/DOM/Stylesheet.href	/es/docs/Web/API/StyleSheet/href
 /es/docs/DOM/Stylesheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
+/es/docs/DOM/Stylesheet.media	/es/docs/Web/API/StyleSheet/media
 /es/docs/DOM/Stylesheet.ownerNode	/es/docs/Web/API/StyleSheet/ownerNode
 /es/docs/DOM/Stylesheet.ownerRule	/es/docs/Web/API/CSSStyleSheet/ownerRule
 /es/docs/DOM/Stylesheet.parentStyleSheet	/es/docs/Web/API/StyleSheet/parentStyleSheet
 /es/docs/DOM/Stylesheet.title	/es/docs/Web/API/StyleSheet/title
 /es/docs/DOM/Stylesheet.type	/es/docs/Web/API/StyleSheet/type
+/es/docs/DOM/Stylesheet_object	/es/docs/Web/API/CSSStyleSheet
 /es/docs/DOM/Touch_events	/es/docs/Web/API/Touch_events
 /es/docs/DOM/Window.getComputedStyle	/es/docs/Web/API/Window/getComputedStyle
 /es/docs/DOM/document	/es/docs/Web/API/Document
 /es/docs/DOM/document.URL	/es/docs/Web/API/Document/URL
 /es/docs/DOM/document.alinkColor	/es/docs/Web/API/Document/alinkColor
 /es/docs/DOM/document.anchors	/es/docs/Web/API/Document/anchors
+/es/docs/DOM/document.applets	/es/docs/Web/API/Document/applets
 /es/docs/DOM/document.bgColor	/es/docs/Web/API/Document/bgColor
 /es/docs/DOM/document.body	/es/docs/Web/API/Document/body
 /es/docs/DOM/document.characterSet	/es/docs/Web/API/Document/characterSet
@@ -268,6 +275,7 @@
 /es/docs/DOM/document.getElementById	/es/docs/Web/API/Document/getElementById
 /es/docs/DOM/document.getElementsByTagName	/es/docs/Web/API/Document/getElementsByTagName
 /es/docs/DOM/document.getElementsByTagNameNS	/es/docs/Web/API/Document/getElementsByTagNameNS
+/es/docs/DOM/document.hasFocus	/es/docs/Web/API/Document/hasFocus
 /es/docs/DOM/element	/es/docs/Web/API/Element
 /es/docs/DOM/element.clientLeft	/es/docs/Web/API/Element/clientLeft
 /es/docs/DOM/element.clientTop	/es/docs/Web/API/Element/clientTop
@@ -275,6 +283,7 @@
 /es/docs/DOM/element.getBoundingClientRect	/es/docs/Web/API/Element/getBoundingClientRect
 /es/docs/DOM/element.getClientRects	/es/docs/Web/API/Element/getClientRects
 /es/docs/DOM/element.getElementsByTagName	/es/docs/Web/API/Element/getElementsByTagName
+/es/docs/DOM/element.hasFocus	/es/docs/Web/API/Document/hasFocus
 /es/docs/DOM/element.innerHTML	/es/docs/Web/API/Element/innerHTML
 /es/docs/DOM/element.nodeName	/es/docs/Web/API/Node/nodeName
 /es/docs/DOM/element.tagName	/es/docs/Web/API/Element/tagName
@@ -324,6 +333,7 @@
 /es/docs/DOM:document.URL	/es/docs/Web/API/Document/URL
 /es/docs/DOM:document.alinkColor	/es/docs/Web/API/Document/alinkColor
 /es/docs/DOM:document.anchors	/es/docs/Web/API/Document/anchors
+/es/docs/DOM:document.applets	/es/docs/Web/API/Document/applets
 /es/docs/DOM:document.bgColor	/es/docs/Web/API/Document/bgColor
 /es/docs/DOM:document.body	/es/docs/Web/API/Document/body
 /es/docs/DOM:document.characterSet	/es/docs/Web/API/Document/characterSet
@@ -334,6 +344,7 @@
 /es/docs/DOM:document.getElementById	/es/docs/Web/API/Document/getElementById
 /es/docs/DOM:document.getElementsByTagName	/es/docs/Web/API/Document/getElementsByTagName
 /es/docs/DOM:document.getElementsByTagNameNS	/es/docs/Web/API/Document/getElementsByTagNameNS
+/es/docs/DOM:document.hasFocus	/es/docs/Web/API/Document/hasFocus
 /es/docs/DOM:element	/es/docs/Web/API/Element
 /es/docs/DOM:element.clientLeft	/es/docs/Web/API/Element/clientLeft
 /es/docs/DOM:element.clientTop	/es/docs/Web/API/Element/clientTop
@@ -341,6 +352,7 @@
 /es/docs/DOM:element.getBoundingClientRect	/es/docs/Web/API/Element/getBoundingClientRect
 /es/docs/DOM:element.getClientRects	/es/docs/Web/API/Element/getClientRects
 /es/docs/DOM:element.getElementsByTagName	/es/docs/Web/API/Element/getElementsByTagName
+/es/docs/DOM:element.hasFocus	/es/docs/Web/API/Document/hasFocus
 /es/docs/DOM:element.nodeName	/es/docs/Web/API/Node/nodeName
 /es/docs/DOM:element.tagName	/es/docs/Web/API/Element/tagName
 /es/docs/DOM:event	/es/docs/Web/API/Event
@@ -439,6 +451,7 @@
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /es/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/es/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
+/es/docs/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
 /es/docs/Glossary/404	/es/docs/conflicting/Web/HTTP/Status/404
 /es/docs/Glossary/502	/es/docs/conflicting/Web/HTTP/Status/502
 /es/docs/Glossary/AOM	/es/docs/Glossary/Accessibility_tree
@@ -1036,6 +1049,7 @@
 /es/docs/JavaScript/Referencia/Objetos_globales/String/toLowerCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /es/docs/JavaScript/Referencia/Objetos_globales/String/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/JavaScript/Referencia/Objetos_globales/String/toUpperCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+/es/docs/JavaScript/Referencia/Objetos_globales/String/valueOf	/es/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /es/docs/JavaScript/Referencia/Objetos_globales/eval	/es/docs/Web/JavaScript/Reference/Global_Objects/eval
 /es/docs/JavaScript/Referencia/Objetos_globales/parseFloat	/es/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /es/docs/JavaScript/Referencia/Objetos_globlales	/es/docs/Web/JavaScript/Reference/Global_Objects
@@ -1366,6 +1380,7 @@
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/String/toLowerCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/String/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/String/toUpperCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/String/valueOf	/es/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globlales	/es/docs/Web/JavaScript/Reference/Global_Objects
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globlales/Function/arguments	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments
 /es/docs/Referencia_de_JavaScript_1.5/Operadores	/es/docs/Web/JavaScript/Reference/Operators
@@ -1472,6 +1487,7 @@
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:String:toLowerCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:String:toString	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:String:toUpperCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+/es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:String:valueOf	/es/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globlales:Function:arguments	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments
 /es/docs/Referencia_de_JavaScript_1.5:Operadores	/es/docs/Web/JavaScript/Reference/Operators
 /es/docs/Referencia_de_JavaScript_1.5:Operadores:Especiales:function	/es/docs/Web/JavaScript/Reference/Operators/function
@@ -1504,6 +1520,7 @@
 /es/docs/SVG/Tutorial/Getting_Started	/es/docs/Web/SVG/Tutorial/Getting_Started
 /es/docs/SVG_en_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Seguridad_en_Firefox_2	/es/docs/Mozilla/Firefox/Releases/2/Security_changes
+/es/docs/Server-sent_events	/es/docs/Web/API/Server-sent_events
 /es/docs/Server-sent_events/utilizando_server_sent_events_sse	/es/docs/Web/API/Server-sent_events/Using_server-sent_events
 /es/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /es/docs/Tools/Accesos_directos	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html
@@ -1570,6 +1587,7 @@
 /es/docs/Usar_la_Geolocalización	/es/docs/Web/API/Geolocation_API
 /es/docs/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Using_geolocation	/es/docs/Web/API/Geolocation_API
+/es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
 /es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/API/API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
@@ -1607,10 +1625,13 @@
 /es/docs/Web/API/Document/dragover_event	/es/docs/Web/API/HTMLElement/dragover_event
 /es/docs/Web/API/Document/height	/es/docs/web/api/element/clientheight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
+/es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/API/Document/registerElement	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
+/es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
+/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
 /es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
@@ -1625,6 +1646,7 @@
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/web/api/file/name
+/es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
@@ -1633,6 +1655,7 @@
 /es/docs/Web/API/GlobalEventHandlers/onblur	/es/docs/Web/API/Window/blur_event
 /es/docs/Web/API/GlobalEventHandlers/onchange	/es/docs/conflicting/Web/API/HTMLElement/change_event
 /es/docs/Web/API/GlobalEventHandlers/onclick	/es/docs/conflicting/Web/API/Element/click_event
+/es/docs/Web/API/GlobalEventHandlers/onclose	/es/docs/Web/API/HTMLDialogElement/close_event
 /es/docs/Web/API/GlobalEventHandlers/onerror	/es/docs/Web/API/Window/error_event
 /es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
 /es/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
@@ -1641,11 +1664,14 @@
 /es/docs/Web/API/GlobalEventHandlers/onkeyup	/es/docs/conflicting/Web/API/Element/keyup_event
 /es/docs/Web/API/GlobalEventHandlers/onload	/es/docs/conflicting/Web/API/Window/load_event
 /es/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/es/docs/Web/API/Element/lostpointercapture_event
+/es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
 /es/docs/Web/API/GlobalEventHandlers/onscroll	/es/docs/Web/API/Element/scroll_event
 /es/docs/Web/API/GlobalEventHandlers/onselect	/es/docs/Web/API/HTMLInputElement/select_event
 /es/docs/Web/API/GlobalEventHandlers/onselectstart	/es/docs/Web/API/Node/selectstart_event
+/es/docs/Web/API/GlobalEventHandlers/onsubmit	/es/docs/Web/API/HTMLFormElement/submit_event
 /es/docs/Web/API/GlobalEventHandlers/ontouchstart	/es/docs/Web/API/Element/touchstart_event
 /es/docs/Web/API/GlobalEventHandlers/onwheel	/es/docs/conflicting/Web/API/Element/wheel_event
+/es/docs/Web/API/HTMLElement/animationend_event	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLElement/transitioncancel_event	/es/docs/Web/API/Element/transitioncancel_event
@@ -1667,6 +1693,7 @@
 /es/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/es/docs/Web/API/Navigator/onLine
 /es/docs/Web/API/NavigatorOnLine/onLine	/es/docs/Web/API/Navigator/onLine
 /es/docs/Web/API/Node.nextSibling	/es/docs/Web/API/Node/nextSibling
+/es/docs/Web/API/Node/elementoPadre	/es/docs/Web/API/Node/parentElement
 /es/docs/Web/API/Node/insertarAntes	/es/docs/Web/API/Node/insertBefore
 /es/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/es/docs/Web/API/Element/nextElementSibling
 /es/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/es/docs/Web/API/Element/previousElementSibling
@@ -1686,6 +1713,7 @@
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /es/docs/Web/API/WebRTC_API/Taking_still_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
+/es/docs/Web/API/WebSocket/onerror	/es/docs/Web/API/WebSocket/error_event
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /es/docs/Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API	/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
@@ -1710,6 +1738,7 @@
 /es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/createImageBitmap
 /es/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/es/docs/Web/API/fetch
 /es/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/es/docs/Web/API/indexedDB
+/es/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/es/docs/Web/API/isSecureContext
 /es/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/es/docs/Web/API/setInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/WindowTimers/clearInterval	/es/docs/Web/API/clearInterval
@@ -1749,6 +1778,7 @@
 /es/docs/Web/CSS/-moz-box-ordinal-group	/es/docs/Web/CSS/box-ordinal-group
 /es/docs/Web/CSS/-moz-box-pack	/es/docs/Web/CSS/box-pack
 /es/docs/Web/CSS/-moz-context-properties	/es/docs/orphaned/Web/CSS/-moz-context-properties
+/es/docs/Web/CSS/-moz-font-language-override	/es/docs/Web/CSS/font-language-override
 /es/docs/Web/CSS/-moz-outline-radius	/es/docs/Web/CSS/outline
 /es/docs/Web/CSS/-moz-outline-radius-bottomleft	/es/docs/conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2
 /es/docs/Web/CSS/-moz-outline-radius-bottomright	/es/docs/conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9
@@ -1772,9 +1802,12 @@
 /es/docs/Web/CSS/::-webkit-file-upload-button	/es/docs/Web/CSS/::file-selector-button
 /es/docs/Web/CSS/:any	/es/docs/Web/CSS/:is
 /es/docs/Web/CSS/:not()	/es/docs/Web/CSS/:not
+/es/docs/Web/CSS/@media/altura	/es/docs/Web/CSS/@media/height
+/es/docs/Web/CSS/@media/resolución	/es/docs/Web/CSS/@media/resolution
 /es/docs/Web/CSS/CSS_Animations/Detectar_soporte_de_animación_CSS	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_animations/Using_CSS_animations
+/es/docs/Web/CSS/CSS_Background_and_Borders	/es/docs/Web/CSS/CSS_backgrounds_and_borders
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generador	/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
@@ -1887,17 +1920,22 @@
 /es/docs/Web/CSS/url()	/es/docs/Web/CSS/url
 /es/docs/Web/CSS/var()	/es/docs/Web/CSS/var
 /es/docs/Web/Demos_of_open_web_technologies	/es/docs/Web/Demos
+/es/docs/Web/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event
 /es/docs/Web/Events/canplay	/es/docs/Web/API/HTMLMediaElement/canplay_event
+/es/docs/Web/Events/click	/es/docs/Web/API/Element/click_event
+/es/docs/Web/Events/close_websocket	/es/docs/Web/API/WebSocket/close_event
 /es/docs/Web/Events/dragover	/es/docs/Web/API/HTMLElement/dragover_event
 /es/docs/Web/Events/hashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/Events/keydown	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/Events/load	/es/docs/Web/API/Window/load_event
+/es/docs/Web/Events/loadend	/es/docs/Web/API/XMLHttpRequest/loadend_event
 /es/docs/Web/Events/mousedown	/es/docs/Web/API/Element/mousedown_event
 /es/docs/Web/Events/offline	/es/docs/Web/API/Window/offline_event
 /es/docs/Web/Events/pointerlockchange	/es/docs/Web/API/Document/pointerlockchange_event
 /es/docs/Web/Events/scroll	/es/docs/Web/API/Document/scroll_event
+/es/docs/Web/Events/tecla	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/Events/timeupdate	/es/docs/Web/API/HTMLMediaElement/timeupdate_event
 /es/docs/Web/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
@@ -2110,6 +2148,7 @@
 /es/docs/Web/HTML/Elemento/wbr	/es/docs/Web/HTML/Element/wbr
 /es/docs/Web/HTML/Elemento/xmp	/es/docs/Web/HTML/Element/xmp
 /es/docs/Web/HTML/Elementos_en_línea	/es/docs/orphaned/Web/HTML/Inline_elements
+/es/docs/Web/HTML/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
 /es/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey	/es/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /es/docs/Web/HTML/Imagen_con_CORS_habilitado	/es/docs/Web/HTML/CORS_enabled_image
 /es/docs/Web/HTML/Index	/es/docs/Web/HTML
@@ -2131,7 +2170,9 @@
 /es/docs/Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x	/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /es/docs/Web/HTTP/Peticiones_condicionales	/es/docs/Web/HTTP/Conditional_requests
 /es/docs/Web/HTTP/Sesión	/es/docs/Web/HTTP/Session
+/es/docs/Web/HTTP/Status/8080	/es/docs/Web/HTTP/Status/413
 /es/docs/Web/HTTP/mecanismo_actualizacion_protocolo	/es/docs/Web/HTTP/Protocol_upgrade_mechanism
+/es/docs/Web/HTTP/recursos_y_especificaciones	/es/docs/Web/HTTP/Resources_and_specifications
 /es/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/es/docs/Web/JavaScript/Language_overview
 /es/docs/Web/JavaScript/About_JavaScript	/es/docs/conflicting/Web/JavaScript
 /es/docs/Web/JavaScript/Acerca_de_JavaScript	/es/docs/conflicting/Web/JavaScript
@@ -2256,6 +2297,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
@@ -2307,6 +2349,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/concat	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/entries	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/entries
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/every	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/fill	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -2336,9 +2379,11 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/some	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/unshift	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/values	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/values
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
@@ -2354,6 +2399,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getMilliseconds	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getMinutes	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getMonth	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getSeconds	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getTime	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getUTCFullYear	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/now	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/now
@@ -2398,6 +2444,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/InternalError/Constructor_InternalError	/es/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Intl	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/format	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeFormat	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON	/es/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON/parse	/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
@@ -2414,6 +2461,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/abs	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/acos	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/acos
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/acosh	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/asin	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/asin
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/asinh	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/asinh
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/atan	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/atan
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/atan2	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2
@@ -2425,6 +2473,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/expm1	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/floor	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/hypot	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/log	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/log
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/log10	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/log10
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/log2	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/log2
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/max	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/max
@@ -2451,11 +2500,14 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isSafeInteger	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/parseFloat	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/parseInt	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/toFixed	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/toPrecision	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/valueOf	/es/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/NumberFormat	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/NumberFormat/format	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object	/es/docs/Web/JavaScript/Reference/Global_Objects/Object
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/__defineGetter__	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
@@ -2463,10 +2515,12 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/create	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/freeze	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptors	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyNames	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertySymbols	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/getPrototypeOf	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/hasOwnProperty	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
@@ -2509,6 +2563,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set	/es/docs/Web/JavaScript/Reference/Global_Objects/Set
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/add	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/add
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/clear	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/clear
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/delete	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/delete
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/entries	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/entries
@@ -2523,6 +2578,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/bold	/es/docs/Web/JavaScript/Reference/Global_Objects/String/bold
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charAt	/es/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt	/es/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/codePointAt	/es/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/concat	/es/docs/Web/JavaScript/Reference/Global_Objects/String/concat
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/constructor	/es/docs/Web/JavaScript/Reference/Global_Objects/String
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/endsWith	/es/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
@@ -2562,6 +2618,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toUpperCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/trimEnd	/es/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/valueOf	/es/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Symbol	/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Symbol/for	/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/for
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Symbol/hasInstance	/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
@@ -2688,16 +2745,21 @@
 /es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
+/es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Reference/Events/blur	/es/docs/Web/API/Element/blur_event
 /es/docs/Web/Reference/Events/canplay	/es/docs/Web/API/HTMLMediaElement/canplay_event
+/es/docs/Web/Reference/Events/click	/es/docs/Web/API/Element/click_event
+/es/docs/Web/Reference/Events/close_websocket	/es/docs/Web/API/WebSocket/close_event
 /es/docs/Web/Reference/Events/dragover	/es/docs/Web/API/HTMLElement/dragover_event
 /es/docs/Web/Reference/Events/hashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/Reference/Events/keydown	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/Reference/Events/load	/es/docs/Web/API/Window/load_event
+/es/docs/Web/Reference/Events/loadend	/es/docs/Web/API/XMLHttpRequest/loadend_event
 /es/docs/Web/Reference/Events/mousedown	/es/docs/Web/API/Element/mousedown_event
 /es/docs/Web/Reference/Events/pointerlockchange	/es/docs/Web/API/Document/pointerlockchange_event
 /es/docs/Web/Reference/Events/scroll	/es/docs/Web/API/Document/scroll_event
+/es/docs/Web/Reference/Events/tecla	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/Reference/Events/timeupdate	/es/docs/Web/API/HTMLMediaElement/timeupdate_event
 /es/docs/Web/Reference/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/Reference/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
