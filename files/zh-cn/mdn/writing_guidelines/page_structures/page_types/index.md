@@ -124,9 +124,9 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 ### 示例
 
 - [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)
-- [CSS basic user interface](/zh-CN/docs/Web/CSS/CSS_basic_user_interface)
+- [CSS 基本用户接口](/zh-CN/docs/Web/CSS/CSS_basic_user_interface)
 - [CSS 滤镜效果](/zh-CN/docs/Web/CSS/CSS_filter_effects)
-- [CSS scroll snap](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
+- [CSS 滚动界限](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
 
 ### 模板
 
