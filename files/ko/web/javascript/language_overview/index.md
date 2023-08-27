@@ -1,5 +1,5 @@
 ---
-title: JavaScript 재입문하기 (JS 튜토리얼)
+title: JavaScript 언어 개요
 slug: Web/JavaScript/Language_overview
 l10n:
   sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
@@ -13,7 +13,7 @@ JavaScript는 타입 및 연산자, 표준 내장 객체 및 메소드를 포함
 
 ## 데이터 타입
 
-모든 언어의 구성 요소인 타입을 살펴보는 것으로 시작하겠습니다. JavaScript 프로그램은 값을 수정하며, 이러한 값은 모두 타입에 속합니다. JavaScript는 7가지 기본 유형을 제공합니다.
+모든 언어의 구성 요소인 타입을 살펴보는 것으로 시작하겠습니다. JavaScript 프로그램은 값을 조작하며, 이러한 값은 모두 타입에 속합니다. JavaScript는 7가지 기본 유형을 제공합니다.
 
 - [Number](/ko/docs/Web/JavaScript/Data_structures#number_type): 매우 큰 정수를 제외한 모든 숫자값(정수 및 부동 소수점)에 사용됩니다.
 - [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type): 임의의 큰 정수에 사용됩니다.
@@ -33,11 +33,11 @@ JavaScript는 타입 및 연산자, 표준 내장 객체 및 메소드를 포함
 
 함수는 JavaScript의 특별한 데이터 구조가 아닙니다. 호출할 수 있는 특별한 타입의 객체일 뿐입니다.
 
-## 수 (Numbers)
+### 수 (Numbers)
 
 JavaScript에는 Number와 BigInt라는 두 가지 내장 숫자 타입이 있습니다.
 
-숫자 타입은 ["이중정밀도 64비트 형식 IEEE 754 값"](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)이며, 즉, [-(2<sup >53</sup> − 1)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER)와 [2<sup>53</sup> − 1](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)사이에서 정수를 손실 없이 안전하게 표현할 수 있습니다. 정밀도 및 부동 소수점 숫자는 최대 [1.79 × 10<sup>308</sup>](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE)까지 저장할 수 있습니다. 숫자 내에서 JavaScript는 부동 소수점 숫자와 정수를 구분하지 않습니다.
+숫자 타입은 [이중정밀도 64비트 부동소수점 형식(IEEE 754)의 값](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)이며, 즉, [-(2<sup >53</sup> − 1)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER)와 [2<sup>53</sup> − 1](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)사이에서 정수를 손실 없이 안전하게 표현할 수 있습니다. 정밀도 및 부동 소수점 숫자는 최대 [1.79 × 10<sup>308</sup>](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE)까지 저장할 수 있습니다. 숫자 내에서 JavaScript는 부동 소수점 숫자와 정수를 구분하지 않습니다.
 
 ```js
 console.log(3 / 2); // 1.5, not 1
@@ -83,13 +83,13 @@ const circumference = 2 * Math.PI * r;
 
 [단항 더하기 `+`](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)를 `Number()`의 줄임말로 사용할 수도 있습니다.
 
-숫자 값에는 {{jsxref("NaN")}}("Not a Number"의 줄임말) 및 {{jsxref("Infinity")}}도 포함됩니다. 많은 "잘못된 수학" 연산은 `NaN`을 반환합니다. 예를 들어, 숫자가 아닌 문자열을 구문 분석하려고 하거나 [`Math.log()`](/ko/docs/Web/JavaScript/Reference/ Global_Objects/Math/log)를 음수 값으로 지정합니다. 0으로 나누면 'Infinity'(양수 또는 음수)가 생성됩니다.
+숫자 값에는 {{jsxref("NaN")}}("Not a Number"의 줄임말) 및 {{jsxref("Infinity")}}도 포함됩니다. 많은 "잘못된 수학" 연산은 `NaN`을 반환합니다. 예를 들어, 숫자가 아닌 문자열을 구문 분석하려고 하거나 [`Math.log()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/log)를 음수 값으로 지정합니다. 0으로 나누면 'Infinity'(양수 또는 음수)가 생성됩니다.
 
 `NaN`은 전염성이 있습니다. 수학 연산의 피연산자로 제공하면 결과도 `NaN`이 됩니다. `NaN`은 자체와 같지 않은 JavaScript의 유일한 값입니다(IEEE 754 명세에 따름).
 
-## 문자열 (Strings)
+### 문자열 (Strings)
 
-JavaScript의 문자열은 유니코드 문자의 시퀀스입니다. 이것은 국제화를 다루어야 했던 모든 사람에게 반가운 소식이 될 것입니다. 더 정확하게는 [UTF-16 encoded](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)입니다.
+JavaScript의 문자열은 유니코드 문자의 시퀀스입니다. 이는 국제화를 다루어야 했던 모든 사람에게 반가운 소식이 될 것입니다. 더 정확하게는 [UTF-16 encoded](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 사용합니다.
 
 ```js
 console.log("Hello, world");
@@ -114,9 +114,9 @@ console.log("I am " + age + " years old."); // 문자열 연결
 console.log(`I am ${age} years old.`); // 템플릿 리터럴
 ```
 
-## 이외의 타입들
+### 이외의 타입들
 
-JavaScript는 의도적으로 값이 없음을 나타내는(`null` 키워드를 통해서만 접근할 수 있음) 값인 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)과 값이 없음을 나타내는 `undefined`를 구분합니다. `undefined`을 얻을 수 있는 방법에는 여러 가지가 있습니다.
+JavaScript는 의도적으로 값이 없음을 나타내는 (그리고 `null` 키워드를 통해서만 접근할 수 있는) 값인 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)과 값이 없음을 나타내는 `undefined`를 구분합니다. `undefined`을 얻을 수 있는 방법에는 여러 가지가 있습니다.
 
 - 값이 없는 [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return)문 (`return;`)은 암시적으로 `undefined`를 반환합니다.
 - 존재하지 않는 [object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object) (`obj.iDontExist`)에 접근하면 `undefined`를 반환합니다.
@@ -124,7 +124,7 @@ JavaScript는 의도적으로 값이 없음을 나타내는(`null` 키워드를 
 
 JavaScript에는 `true` 및 `false` 값이 가능한 불리언(Boolean) 타입이 있습니다. 둘 다 키워드입니다. 다음 규칙에 따라 모든 값을 불리언 값으로 변환할 수 있습니다.
 
-1. `false`, `0`, 빈 문자열 (`""`), 수가 아님을 뜻하는 `NaN`, `null`, 와 `undefined`은 모두 `false`가 됩니다.
+1. `false`, `0`, 빈 문자열 (`""`),`NaN`, `null`, 와 `undefined`은 모두 `false`가 됩니다.
 2. 다른 모든 값은 `true`가 됩니다.
 
 이 변환은 [`Boolean()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean) 함수를 써서 명시적으로 이 작업을 수행하실 수 있습니다.
@@ -134,9 +134,9 @@ Boolean(""); // false
 Boolean(234); // true
 ```
 
-하지만 이렇게 할 필요는 거의 없습니다. JavaScript는 이러한 변환 작업을 `if` 문([제어 구조](#control_structures) 참고)과 같이 불리언 값이 필요한 경우를 만나게 되면 자동으로 변환하기 때문입니다. 이러한 이유로 인해 우리는 때때로 "[참 같은 값(truthy)](/ko/docs/Glossary/Truthy)"와 "[거짓 같은 값(falsy)](/ko/docs/Glossary/Falsy)" (불리언 컨텍스트에서 사용될 때 각각 `true`, `false`가 됩니다)에 대해 이야기할 것입니다.
+하지만 이렇게 할 필요는 거의 없습니다. JavaScript는 이러한 변환 작업을 `if` 문([제어 구조](#제어_구조) 참고)과 같이 불리언 값이 필요한 경우를 만나게 되면 자동으로 변환하기 때문입니다. 이러한 이유로 인해 우리는 때때로 불리언 컨텍스트에서 사용될 때 각각 `true`, `false`가 되는 "[참 같은 값(truthy)](/ko/docs/Glossary/Truthy)"와 "[거짓 같은 값(falsy)](/ko/docs/Glossary/Falsy)" 에 대해 이야기할 것입니다.
 
-불리언 연산자는 논리 연산자 `&&` (논리합), `||` (논리곱), 그리고 `!` (부정)이 지원됩니다. [연산자](#operators)를 참조하세요.
+불리언 연산자는 논리 연산자 `&&` (논리합), `||` (논리곱), 그리고 `!` (부정)이 지원됩니다. [연산자](#연산자)를 참조하세요.
 
 기호(Symbol) 타입은 종종 고유한 식별자를 만드는 데 사용됩니다. [`Symbol()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 함수로 만든 모든 기호(Symbol)는 고유함을 보장합니다. 또한, 공유 상수인 등록된 기호와 특정 작업에 대한 "프로토콜"로 언어에서 사용되는 잘 알려진 기호가 있습니다. [기호 참조](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)에서 자세한 내용을 읽을 수 있습니다.
 
@@ -181,7 +181,7 @@ obj.a = 1; // 에러 없음
 console.log(obj); // { a: 1 }
 ```
 
-`var` 선언은 놀라운 동작(예: 블록 범위가 아님)을 가질 수 있으며, 최신 JavaScript 코드에서는 권장되지 않습니다.
+`var` 선언은 경악할 만한 동작(예: 블록 범위가 아님)을 가질 수 있으며, 최신 JavaScript 코드에서는 권장되지 않습니다.
 
 값을 할당하지 않고 변수를 선언하면, 그 값은 `undefined`입니다. 어차피 나중에 변경할 수 없기 때문에, 초기화해주는 것없이 `const` 변수를 선언할 수 없습니다.
 
@@ -199,16 +199,16 @@ function foo(x, condition) {
 foo(1, true);
 ```
 
-대부분의 다른 언어에서, `const x = 2` 행 이전에 `x`가 여전히 상위 범위의 매개변수 `x`를 참조해야 하기 때문에 "1"과 "2"를 기록합니다. JavaScript에서는 각 선언이 전체 범위를 차지하기 때문에 첫 번째 `console.log`에 "초기화 전에 'x'에 접근할 수 없습니다." 라는 오류가 발생합니다. 자세한 내용은 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 페이지를 참조합니다.
+대부분의 다른 언어에서, `const x = 2` 행 이전에 `x`가 여전히 상위 범위의 매개변수 `x`를 참조해야 하기 때문에 "1"과 "2"를 기록합니다. JavaScript에서는 각 선언이 전체 범위를 차지하기 때문에 첫 번째 `console.log`에 "초기화 전에 'x'에 접근할 수 없습니다." 라는 오류가 발생합니다. 자세한 내용은 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 페이지를 참조하세요.
 
-JavaScript는 동적 타입 언어입니다. 타입 ([이전 섹션](#data_types)에서 설명한 대로)은 변수가 아닌 값과만 연결됩니다. `let` 선언 변수의 경우 항상 재할당을 통해 타입을 변경할 수 있습니다.
+JavaScript는 동적 타입 언어입니다. 타입 ([이전 섹션](#데이터_타입)에서 설명한 대로)은 변수가 아닌 값과만 연결됩니다. `let` 선언 변수의 경우 항상 재할당을 통해 타입을 변경할 수 있습니다.
 
 ```js
 let a = 1;
 a = "foo";
 ```
 
-## 연산자 (Operators)
+## 연산자
 
 JavaScript의 산술 연산자로는 `+`, `-`, `*`, `/`, `%`(나머지 연산자), `**`(지수 연산자)가 있습니다. 값은 `=` 연산자로 할당할 수 있고, `+=` 와 `-=`와 같은 복합 할당 연산자를 통해서도 할당할 수 있습니다. 이렇게 쓰인 연산자는 `x = x 연산자 y`와 같은 결과를 나타냅니다.
 
@@ -234,7 +234,7 @@ x = x + 5;
 
 무언가에 빈 문자열을 추가하는 것은 해당 값을 문자열로 바꾸는 요령입니다.
 
-JavaScript의 [비교](/ko/docs/Web/JavaScript/Reference/Operators#relational_operators)는 `<`, `>`, `<=` 및 `>=` 를 사용해 만들 수 있고, 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 동등성을 위해 [`==` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality)는 다른 타입을 제공하는 경우 타입 강제 변환을 수행하며, 때로는 흥미로운 결과를 보여줍니다. 반면에, [`===` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)는 타입 강제 변환을 시도하지 않으며 일반적으로 선호하는 방법입니다.
+JavaScript의 [비교](/ko/docs/Web/JavaScript/Reference/Operators#relational_operators)는 `<`, `>`, `<=` 및 `>=` 를 사용해 만들 수 있고, 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 동등성을 위해 [이중 등호 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality)는 다른 타입을 제공하는 경우 타입 강제 변환을 수행하며, 때로는 흥미로운 결과를 보여줍니다. 반면에, [삼중 등호 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)는 타입 강제 변환을 시도하지 않으며 일반적으로 선호하는 방법입니다.
 
 ```js
 123 == "123"; // true
@@ -272,14 +272,14 @@ const name = cachedName || (cachedName = getName());
 JavaScript 문법은 C 계열과 매우 유사합니다. 언급할 가치가 있는 몇 가지 사항이 있습니다.
 
 - [식별자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)는 유니코드 문자를 포함할 수 있지만, [예약어](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) 중 하나일 수는 없습니다.
-- [주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#comments)은 일반적으로 `//` 또는 `/* */`이며, Perl, Python, and Bash와 같은 다른 많은 스크립팅 언어는 `#`을 사용합니다.
-- 세미콜론은 JavaScript에서 선택 사항입니다. 언어는 필요할 때 [자동으로 삽입](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)합니다. 그러나 Python가 달리 세미콜론은 여전히 문법의 일부이므로 주의해야 할 특정 주의사항이 있습니다.
+- [주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#comments)은 일반적으로 `//` 또는 `/* */`을 사용합니다. `#`을 사용하는 Perl, Python, and Bash와 같은 다른 많은 스크립팅 언어와는 다릅니다.
+- 세미콜론은 JavaScript에서 선택 사항입니다. 언어는 필요할 때 [자동으로 삽입](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)합니다. 그러나 Python과 달리 세미콜론은 여전히 문법의 일부이므로 주의해야 할 사항이 있습니다.
 
 JavaScript 문법에 대한 자세한 내용은 [어휘 문법 참조 페이지](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)를 참조하세요.
 
 ## 제어 구조
 
-JavaScript는 C 계열의 다른 언어들과 비슷한 제어 구조를 가지고 있습니다. 조건문은 [`if` 및 `else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else)에서 지원합니다. 함께 연결할 수 있습니다.
+JavaScript는 C 계열의 다른 언어들과 비슷한 제어 구조를 가지고 있습니다. 조건문은 [`if` 및 `else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else)로 지원되며, 함께 연결할 수 있습니다.
 
 ```js
 let name = "kittens";
@@ -295,7 +295,7 @@ name === "kittens meow";
 
 JavaScript에는 `elif`가 없으며, `else if`는 단일 `if` 문으로 구성된 `else` 분기에 불과합니다.
 
-JavaScript는 [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 반복문과 [`do...while`](/ko/docs/Web/JavaScript/Reference/Statements/do...while) 반복문도 사용할 수 있습니다. 첫 번째 것은 기본 반복에 유용하게 사용할 수 있고, 두 번째 것은 반복문을 적어도 한번 이상은 실행하고 싶을 때 사용할 수 있습니다.
+JavaScript는 [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 반복문과 [`do...while`](/ko/docs/Web/JavaScript/Reference/Statements/do...while) 반복문도 사용할 수 있습니다. 전자는 기본 반복에 유용하게 사용할 수 있고, 후자는 반복문을 적어도 한번 이상은 실행하고 싶을 때 사용할 수 있습니다.
 
 ```js
 while (true) {
@@ -459,7 +459,7 @@ console.log(stillMe.x); // 1
 
 객체 및 프로토타입에 대한 자세한 내용은, [`객체` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)를 참조하세요. 객체 초기화 구문에 대한 자세한 내용은 [참조 페이지](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)를 참고하세요.
 
-일반적으로 기본 메커니즘(난해하다고 들었을 수 있습니다)을 건드리지 않고 [클래스](#classes)를 사용하여 상속을 달성할 수 있기 때문에, 이 페이지에서는 객체 프로토타입 및 상속에 대한 모든 세부 정보를 생략했습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 참조하세요.
+일반적으로 (난해하다고 들었을 수 있는) 기본 메커니즘을 건드리지 않고 [클래스](#클래스)를 사용하여 상속을 달성할 수 있기 때문에, 이 페이지에서는 객체 프로토타입 및 상속에 대한 모든 세부 정보를 생략했습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 참조하세요.
 
 ## 배열 (Arrays)
 
@@ -472,8 +472,7 @@ const a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
-JavaScript 배열은 여전히 객체입니다. 임의의 숫자 인덱스를 포함하여 배열에 속성을 할당할 수 있습니다. 유일한 "마법"
-은 특정 인덱스를 설정할 때 `길이`가 자동으로 업데이트 된다는 것입니다.
+JavaScript 배열은 여전히 객체입니다. 임의의 숫자 인덱스를 포함하여 배열에 속성을 할당할 수 있습니다. 유일한 "마법"은 특정 인덱스를 설정할 때 `length`가 자동으로 업데이트 된다는 것입니다.
 
 ```js
 const a = ["dog", "cat", "hen"];
@@ -540,14 +539,10 @@ JavaScript 함수는 0개 이상의 이름이 있는 매개변수를 가질 수 
 ```js
 add(); // NaN
 // add(undefined, undefined)와 동등합니다.
-```
 
-```js
 add(2, 3, 4); // 5
 // 처음의 두 수가 더해집니다. 4는 무시됩니다.
 ```
-
-이 예는 조금 어리석어 보이지만, 함수는 추가적로 전달한 매개변수를 함수 내부에서 접근할 수 있습니다. 이 [`arguments`](/ko/docs/Web/JavaScript/Reference/Functions/arguments)라는 객체는 매개변수로 전달한 모든 값을 가지고 있는 배열과 비슷한 객체입니다. 우리가 원하는만큼 값을 처리하는 add 함수로 다시 작성해보겠습니다.
 
 사용할 수 있는 다른 여러 매개변수 구문이 있습니다. 예를 들어, [rest 매개변수 구문](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)을 사용하면 Python의 `*args`와 유사하게 호출자가 전달한 모든 추가 매개변수를 배열로 수집할 수 있습니다(JS는 언어 수준에서 명명된 매개변수가 없기 때문에, `**kwargs`가 없습니다).
 
@@ -569,7 +564,7 @@ avg(2, 3, 4, 5); // 3.5
 
 함수가 인수 목록을 허용하고 이미 배열을 보유하고 있는 경우, 함수 호출에서 [전개 연산자 문법(spread syntax)](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)을 사용하여 배열을 요소 목록으로 _spread_ 할 수 있습니다. 예를 들어, `avg(...numbers)`
 
-JavaScript에는 명명된 매개 변수가 없다고 언급했습니다. 하지만 객체를 편리하게 하나로 합치고, 분해할 수 있는 [(객체 분해)object destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)를 사용하여 구현할 수 있습니다.
+JavaScript에는 명명된 매개 변수가 없다고 언급했습니다. 하지만 객체를 편리하게 하나로 합치고, 분해할 수 있는 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용하여 구현할 수 있습니다.
 
 ```js
 // 중괄호({ })에 유의하세요. 객체를 분해합니다.
@@ -581,7 +576,7 @@ function area({ width, height }) {
 console.log(area({ width: 2, height: 3 }));
 ```
 
-[기본 파라미터(_default parameter_)](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 구문도 있는데, 생략된 매개변수(또는 `undefined`로 전달된 매개변수)가 기본값을 갖도록 허용합니다.
+[기본값 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 구문도 있는데, 생략된 매개변수(또는 `undefined`로 전달된 매개변수)가 기본값을 갖도록 허용합니다.
 
 ```js
 function avg(firstValue, secondValue, thirdValue = 0) {
@@ -606,9 +601,9 @@ const avg = function (...args) {
 };
 ```
 
-위에 정의된 익명 함수는 인수와 함께 `avg()`와 같은 형태로 실행할 수 있습니다. 즉, `function avg()`와 같이 이름을 붙인 함수 선언과 의미적으로 같습니다.
+위에 정의된 익명 함수는 인수와 함께 `avg()`와 같은 형태로 실행할 수 있습니다. 즉, `function avg() {}`와 같이 이름을 붙인 함수 선언과 의미적으로 같습니다.
 
-[화살표 함수 표현식(arrow function expression)](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하여 익명 함수를 정의하는 또 다른 방법이 있습니다.
+[화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용하여 익명 함수를 정의하는 또 다른 방법이 있습니다.
 
 ```js
 // 괄호 앞에 함수명이 없음을 주목해주세요.
@@ -626,7 +621,7 @@ const sum = (a, b, c) => a + b + c;
 
 화살표 함수는 의미적으로 함수 표현식과 동일하지 않습니다. 자세한 내용은 [참조 페이지](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 참조하세요.
 
-익명 함수가 유용할 수 있는 또 다른 방법이 있습니다. [즉시 실행 함수 표현식(IIFE, Immediately Invoked Function Expressions)](/ko/docs/Glossary/IIFE)라는 단일 표현식에서 익명 함수를 동시에 선언하고 호출할 수 있습니다.
+익명 함수가 유용할 수 있는 또 다른 방법이 있습니다. [즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expressions)](/ko/docs/Glossary/IIFE)이라는 단일 표현식에서 익명 함수를 동시에 선언하고 호출할 수 있습니다.
 
 ```js
 (function () {
@@ -689,7 +684,7 @@ JavaScript 함수는 JavaScript의 다른 모든 것과 마찬가지로 그 자�
 
 ### 내장 함수 (Inner functions)
 
-JavaScript의 함수 선언은 다른 함수 내부에서도 가능합니다. JavaScript의 중첩 함수(nested functions)에서는 부모 함수 범위에 있는 변수에 접근이 가능하다는게 중요합니다.
+JavaScript의 함수 선언은 다른 함수 내부에서도 가능합니다. JavaScript의 중첩 함수에서는 부모 함수 범위에 있는 변수에 접근이 가능하다는 게 중요합니다.
 
 ```js
 function parentFunc() {
@@ -740,13 +735,13 @@ class Admin extends withAuthentication(Person) {
 }
 ```
 
-정적 속성은 `정적`을 추가하여 생성됩니다. Private 속성은 hash(`#`) (`private` 키워드가 아닙니다)를 앞에 추가하여 생성됩니다. 이 해시는 속성 이름의 필수적인 부분입니다(Python에서 `#`을 `_`로 생각하세요). 대부분의 다른 언어와 달리, 클래스 본체 외부에서 Private 속성을 읽을 수 있는 방법이 전혀 없습니다. 파생 클래스(derived classes)에서도 마찬가지입니다.
+정적 속성은 `static`을 추가하여 생성됩니다. Private 속성은 hash(`#`) (`private` 키워드가 아닙니다)를 앞에 추가하여 생성됩니다. 이 해시는 속성 이름의 필수적인 부분입니다. (Python에서 `#`을 `_`로 생각하세요.) 대부분의 다른 언어와 달리, 클래스 본체 외부에서 Private 속성을 읽을 수 있는 방법이 전혀 없습니다. 파생 클래스(derived classes)에서도 마찬가지입니다.
 
 다양한 클래스 기능에 대한 자세한 안내는 [guide page](/ko/docs/Web/JavaScript/Guide/Using_classes)를 참조하세요.
 
-### 비동기 프로그래밍(Asynchronous Programming)
+## 비동기 프로그래밍
 
-JavaScript는 본질적으로 단일 스레드입니다. [병렬화(paralleling)](https://en.wikipedia.org/wiki/Parallel_computing)가 없고, [동시성(concurrency)](https://en.wikipedia.org/wiki/Concurrent_computing)만 가능합니다. 비동기 프로그래밍은 [이벤트 루프](/ko/docs/Web/JavaScript/Event_loop)에 의해 구동되며, 이를 통해 일련의 작업을 대기하고 완료를 위해 폴링(polling)할 수 있습니다.
+JavaScript는 본질적으로 단일 스레드입니다. [병렬화](https://en.wikipedia.org/wiki/Parallel_computing)가 없고, [동시성](https://en.wikipedia.org/wiki/Concurrent_computing)만 가능합니다. 비동기 프로그래밍은 [이벤트 루프](/ko/docs/Web/JavaScript/Event_loop)에 의해 구동되며, 이를 통해 일련의 작업을 대기하고 완료를 위해 폴링(polling)할 수 있습니다.
 
 JavaScript에서 비동기 코드를 작성하는 세 가지의 관용적인 방법이 있습니다.
 
@@ -785,7 +780,7 @@ async function readFile(filename) {
 }
 ```
 
-언어의 중요한 부분은 어떠한 비동기 프로그래밍 기능을 특정하지 않지만, [사용자 권한 요청](/ko/docs/Web/API/Permissions_API)부터, [데이터 가져오기(fetch)](/ko/docs/Web/API/Fetch_API/Using_Fetch) 및 [파일 읽기](https://nodejs.org/api/fs.html)까지 외부 환경과 상호작용을 할 때 중요합니다. 잠재적으로 오래 실행되는 작업을 비동기식으로 유지하면, 이 프로세스가 대기하는 동안 다른 프로세스가 계속 실행될 수 있습니다. 예를 들어, 사용자가 권한을 부여하기 위해 버튼을 클릭하기를 기다리는 동안, 브라우저가 정지되지 않습니다.
+언어의 중요한 부분은 어떠한 비동기 프로그래밍 기능을 특정하지 않지만, [사용자 권한 요청](/ko/docs/Web/API/Permissions_API)부터, [데이터 가져오기](/ko/docs/Web/API/Fetch_API/Using_Fetch) 및 [파일 읽기](https://nodejs.org/api/fs.html)까지 외부 환경과 상호작용을 할 때 중요합니다. 잠재적으로 오래 실행되는 작업을 비동기식으로 유지하면, 이 프로세스가 대기하는 동안 다른 프로세스가 계속 실행될 수 있습니다. 예를 들어, 사용자가 권한을 부여하기 위해 버튼을 클릭하기를 기다리는 동안, 브라우저가 정지되지 않습니다.
 
 비동기 값이 있는 경우, 해당 값을 동기적으로 가져올 수 없습니다. 예를 들어, 프로미스(Promise)가 있는 경우, [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 통해서만 최종 결과에 접근할 수 있습니다. 마찬가지로, [`await`](/ko/docs/Web/JavaScript/Reference/Operators/await)는 일반적으로 비동기 함수 또는 모듈인, 비동기 컨텍스트(맥락)에서만 사용할 수 있습니다. Promise는 절대로 "차단"되지 않습니다. Promise의 결과에 따라 달라지는 논리만 연기됩니다. 그 동안 다른 모든 작업은 계속 실행됩니다. 함수형 프로그래머라면, Promise를 `then()`으로 매핑할 수 있는 [모나드(monads)](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>)로 생각할 수 있습니다(하지만, 적절한 모나드가 아닌 이유는 자동 평면화되기 때문입니다. 즉, `Promise<Promise<T>>`를 가질 수 없습니다).
 
@@ -793,15 +788,14 @@ async function readFile(filename) {
 
 비동기 프로그래밍에 대해 자세히 알아보려면, [promises 사용](/ko/docs/Web/JavaScript/Guide/Using_promises)에 대해 읽어보거나 [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous) 자습서를 읽어보세요.
 
-## 모듈(Modules)
+## 모듈
 
-JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by its file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
-JavaScript는 또한 대부분의 런타임에서 지원하는 모듈 시스템을 사용합니다. 모듈은 일반적으로 파일 경로 또는 URL로 식별되는 파일입니다. [`import`](/ko/docs/Web/JavaScript/Reference/Statements/import) 및 [`export`](/ko/docs/Web/JavaScript/Reference/Statements/export)를 모듈 간에 데이터를 교환하는 명령문으로 사용할 수 있습니다.
+또한 JavaScript는 대부분의 런타임에서 지원하는 모듈 시스템을 사용합니다. 모듈은 일반적으로 파일 경로 또는 URL로 식별되는 파일입니다. [`import`](/ko/docs/Web/JavaScript/Reference/Statements/import) 및 [`export`](/ko/docs/Web/JavaScript/Reference/Statements/export)를 모듈 간에 데이터를 교환하는 명령문으로 사용할 수 있습니다.
 
 ```js
 import { foo } from "./foo.js";
 
-// 내보내기(export) 하지 않은 변수는 모듈 내에서 로컬 변수 범위를 가집니다.
+// export 하지 않은 변수는 모듈 내에서 지역 변수 범위를 가집니다.
 const b = 2;
 
 export const a = 1;
@@ -809,19 +803,19 @@ export const a = 1;
 
 Haskell, Python, Java 등과 달리 JavaScript 모듈 해석은 전적으로 호스트 정의입니다. 일반적으로 URL 또는 파일 경로를 기반으로 하므로, 상대 파일 경로는 "작동"하고 일부 프로젝트 루트 경로 대신 현재 모듈의 경로에 상대적입니다.
 
-그러나, JavaScript 언어는 표준 라이브러리 모듈을 제공하지 않습니다. 대신 모든 핵심 기능은 [`Math`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math) 및 [`Intl`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl)과 같은 전역 변수로 구동됩니다. 이것은 모듈 시스템이 없는 JavaScript의 오랜 역사와 모듈 시스템을 선택하면 런타임 설정에 대한 일부 변경이 포함된다는 사실 때문입니다.
+그러나, JavaScript 언어는 표준 라이브러리 모듈을 제공하지 않습니다. 대신 모든 핵심 기능은 [`Math`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math) 및 [`Intl`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl)과 같은 전역 변수로 구동됩니다. 이것은 모듈 시스템이 없는 JavaScript의 오랜 역사와, 모듈 시스템을 선택한다면 런타임 설정에 대한 일부 변경이 포함된다는 사실 때문입니다.
 
 다른 런타임은 다른 모듈 시스템을 사용할 수 있습니다. 예를 들어, [Node.js](https://nodejs.org/ko/)는 패키지 관리자 [npm](https://www.npmjs.com/)을 사용하고, 대부분 파일 시스템 기반인 반면, [Deno](https://deno.land/) 및 브라우저는 완전한 URL 기반이며 모듈은 HTTP URL에서 확인할 수 있습니다.
 
 자세한 내용은 [모듈 가이드 페이지](/ko/docs/Web/JavaScript/Guide/Modules)를 참조하세요.
 
-### 언어 및 런타임
+## 언어 및 런타임
 
 이 페이지 전체에 걸쳐, 특정 기능은 "언어 수준"이고 다른 기능은 "런타임 수준"이라고 지속적으로 언급이 되었습니다.
 
 JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
 
-런타임 또는 호스트는 JavaScript 엔진(인터프리터)에 데이터를 공급하고 추가 전역 속성을 제공하며, 엔진이 외부 세계와 상호 작용할 수 있도록 훅을 제공합니다. 모듈 확인, 데이터 읽기, 메시지 인쇄, 네트워크 요청 보내기 등은 모두 런타임 수준 작업입니다. JavaScript는 처음부터 브라우저([DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 API를 제공합니다), Node.js([파일 시스템 접근](https://nodejs.org/api/fs.html)과 같은 API를 제공합니다)와 같은 다양한 환경에서 채택되었습니다. JavaScript는 웹(주요 목적), 모바일 앱, 데스크탑 앱, 서버 측 앱, 서버리스, 임베디드 시스템 등에 성공적으로 통합되었습니다. JavaScript 핵심 기능에 대해 배우는 동안, 지식을 사용하기 위해 호스트에서 제공하는 기능을 이해하는 것도 중요합니다. 예를 들어, 브라우저 및 경우에 따라 비브라우저에 의해 구현되는 모든 [웹 플랫폼 API](/ko/docs/Web/API)에 대해 읽어볼 수 있습니다.
+런타임 또는 호스트는 JavaScript 엔진(인터프리터)에 데이터를 공급하고 추가 전역 속성을 제공하며, 엔진이 외부 세계와 상호 작용할 수 있도록 훅을 제공합니다. 모듈 확인, 데이터 읽기, 메시지 인쇄, 네트워크 요청 보내기 등은 모두 런타임 수준 작업입니다. JavaScript는 처음부터 브라우저([DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 API를 제공합니다), Node.js([파일 시스템 접근](https://nodejs.org/api/fs.html)과 같은 API를 제공합니다)와 같은 다양한 환경에서 채택되었습니다. JavaScript는 (가장 주요 목적인) 웹, 모바일 앱, 데스크탑 앱, 서버 측 앱, 서버리스, 임베디드 시스템 등에 성공적으로 통합되었습니다. JavaScript 핵심 기능에 대해 배우는 동안, 지식을 사용하기 위해 호스트에서 제공하는 기능을 이해하는 것도 중요합니다. 예를 들어, 브라우저 및 경우에 따라 비브라우저에 의해 구현되는 모든 [웹 플랫폼 API](/ko/docs/Web/API)에 대해 읽어볼 수 있습니다.
 
 ## 추가적인 탐색
 
@@ -829,7 +823,7 @@ JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/do
 
 작성 공간과 복잡성으로 인해 생략된 언어의 일부 필수 부분이 있지만, 직접 찾아볼 수 있습니다.
 
-- [상속 및 프로토타입 체인(Inheritance and the prototype chain)](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [클로저(Closures)](/ko/docs/Web/JavaScript/Closures)
-- [정규표현식(Regular expressions)](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
+- [정규표현식](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - [반복(Iteration)](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)
