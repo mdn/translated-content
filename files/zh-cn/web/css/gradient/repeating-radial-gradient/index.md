@@ -118,7 +118,7 @@ background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
 }
 ```
 
-{{EmbedLiveSample('Farthest-corner 渐变', '300px', '120px', '')}}
+{{EmbedLiveSample('Farthest-corner 渐变', 120, 120)}}
 
 这个椭圆形渐变会位于左上角靠中心 20% 的位置，在中心和最远角（右下角）之间重复 10 次。支持多位置色标的浏览器会显示为红色和绿色条纹的椭圆形。不支持这个语法的浏览器仍会从红色到黑色再由蓝色到绿色的渐变。
 
