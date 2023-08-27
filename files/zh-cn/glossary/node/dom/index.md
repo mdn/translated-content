@@ -5,7 +5,7 @@ slug: Glossary/Node/DOM
 
 {{GlossarySidebar}}
 
-在上下文 {{Glossary("DOM")}} 中，节点是节点树中的单个点。包括文档本身、元素、文本以及注释都属于是节点。
+在 {{Glossary("DOM")}} 的上下文中，节点（Node）是节点树中的单个点。包括文档本身、元素、文本以及注释都属于是节点。
 
 ## 参见
 
