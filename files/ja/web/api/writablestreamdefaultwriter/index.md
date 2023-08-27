@@ -2,7 +2,7 @@
 title: WritableStreamDefaultWriter
 slug: Web/API/WritableStreamDefaultWriter
 l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -41,33 +41,26 @@ l10n:
 ```js
 const list = document.querySelector("ul");
 
-function sendMessage(message, writableStream) {
-  // defaultWriter は WritableStreamDefaultWriter 型です
+async function sendMessage(message, writableStream) {
+   // defaultWriter は WritableStreamDefaultWriter 型です
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) => {
-    defaultWriter.ready
-      .then(() => defaultWriter.write(chunk))
-      .then(() => {
-        console.log("Chunk written to sink.");
-      })
-      .catch((err) => {
-        console.log("Chunk error:", err);
-      });
-  });
-  // ライターを閉じる前にすべてのチャンクが
-  // 確実に書き込まれるように、ready を再度呼び出します。
-  defaultWriter.ready
-    .then(() => {
-      defaultWriter.close();
-    })
-    .then(() => {
-      console.log("All chunks written");
-    })
-    .catch((err) => {
-      console.log("Stream error:", err);
-    });
+  const encoded = encoder.encode(message);
+
+  try {
+    for (const chunk of encoded) {
+      await defaultWriter.ready;
+      await defaultWriter.write(chunk);
+      console.log("Chunk written to sink.");
+    }
+   // ライターを閉じる前にすべてのチャンクが確実に
+   // 書き込まれるように、ready を再度呼び出します。
+    await defaultWriter.ready;
+    await defaultWriter.close();
+    console.log("All chunks written");
+  } catch (err) {
+    console.log("Error:", err);
+  }
 }
 
 const decoder = new TextDecoder("utf-8");

@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.closed
+title: "WritableStreamDefaultWriter: closed プロパティ"
+short-title: closed
 slug: Web/API/WritableStreamDefaultWriter/closed
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}

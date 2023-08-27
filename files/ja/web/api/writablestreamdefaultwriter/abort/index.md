@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.abort()
+title: "WritableStreamDefaultWriter: abort() メソッド"
+short-title: abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
 l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
