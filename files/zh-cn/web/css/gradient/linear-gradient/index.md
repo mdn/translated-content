@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/linear-gradient
 
 {{CSSRef}}
 
-**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) 创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
+**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) 创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
 
@@ -18,35 +18,35 @@ linear-gradient(45deg, blue, red);
 /* 从右下到左上、从蓝色渐变到红色 */
 linear-gradient(to left top, blue, red);
 
-/* 从下到上，从蓝色开始渐变、到高度 40% 位置是绿色渐变开始、最后以红色结束 */
+/* 色标：从下到上，从蓝色开始渐变，到高度 40% 位置是绿色渐变开始，最后以红色结束 */
 linear-gradient(0deg, blue, green 40%, red);
 
-/* 颜色提示：从左到右的渐变，由红色开始，沿着渐变长度到 10% 的位置，然后剩下的长度中变成蓝色 */
+/* 颜色提示：从左到右的渐变，由红色开始，沿着渐变长度到 10% 的位置，然后在剩余的 90% 长度中变成蓝色 */
 linear-gradient(.25turn, red, 10%, blue);
 
-/* 多位置色标：45% 倾斜的渐变，左下半部分为红色，右下半部分为蓝色，中间有一条硬，在这里渐变由红色转变为蓝色 */
+/* 多位置色标：45% 倾斜的渐变，左下半部分为红色，右下半部分为蓝色，中间有一条硬线，在这里渐变由红色转变为蓝色 */
 linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ```
 
 ### 值
 
 - `<side-or-corner>`
-  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键词：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
-    `to top`、`to bottom`、`to left` 和 `to right` 等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
+  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
+    `to top`、`to bottom`、`to left` 和 `to right` 分别等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
 - {{CSSxRef("&lt;angle&gt;")}}
   - : 渐变线的方向的角度。`0deg` 等价于 `to top`，增加值相当于顺时针旋转。
 - `<linear-color-stop>`
-  - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。
+  - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 值或 {{cssxref("&lt;length&gt;")}} 值）。
 - `<color-hint>`
-  - : 颜色提示（color-hint）是插值提示，定义了在相邻色标之间的渐变如何进行。这个长度定义了渐变色应在两个色标之间的哪一点到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色标之间的中点。
+  - : 插值提示，定义渐变色在相邻色标之间的渐变过程。其中的长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略该值，颜色过渡的中点就是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的色标](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#线性渐变的构成) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
 
 ## 描述
 
-和其他渐变一样，线性渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+和其他渐变一样，线性渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
-要创建一个能够填满窗口的渐变，请使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数。
+要创建一个能够重复填满容器的线性渐变，请使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数。
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 [`<image>`](/zh-CN/docs/Web/CSS/image) 的地方。因此，`linear-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
@@ -58,11 +58,11 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 渐变线由包含渐变图形的容器的中心点和一个角度来定义的。渐变线上的颜色值是由不同的点来定义，包括起始点、终点，以及两者之间的可选的中间点（中间点可以有多个）。
 
-*起始点*是渐变线上代表起始颜色值的点。*终点*是渐变线上代表最终颜色值的点。这两个点都是由渐变线和从最近的顶点发出的垂直线之间的交叉点定义的，然而从起始点的对称点来定义终点是更容易理解的一种方式，因为终点是起点关于容器的中心点的反射点。这一复杂的定义导致了一个有趣的效果，有时称为 _magic colors_：起点附近的点具有跟起点相同的颜色值，终点附近的点具有跟终点相同的颜色值。
+*起始点*是渐变线上代表起始颜色值的点。*终点*是渐变线上代表最终颜色值的点。这两个点都是由渐变线和从最近的顶点发出的垂直线之间的交叉点定义的，然而从起始点的对称点来定义终点是更容易理解的一种方式，因为终点是起点关于容器的中心点的反射点。这一复杂的定义导致了一个有趣的效果，有时称为 _magic corners_：起点附近的点具有跟起点相同的颜色值，终点附近的点具有跟终点相同的颜色值。
 
 #### 自定义渐变
 
-通过提供额外的色标，你可以创建多个颜色之间的高度自定义的过渡。色标的位置可以由 {{CSSxRef("&lt;length&gt;")}} 清晰地指定，也可以使用 {{CSSxRef("&lt;percentage&gt;")}} 指定。如果你不指定颜色的位置，那么将会位于前面的点和后面的点的中间。以及两个渐变是等价的。
+通过提供额外的色标，可以在多种颜色之间创建高度个性化的过渡效果。色标的位置可以由 {{CSSxRef("&lt;length&gt;")}} 值或 {{CSSxRef("&lt;percentage&gt;")}} 值清晰地指定。如果你不指定颜色的位置，那么将会位于前面和后面两点的中点。以下两个渐变是等价的：
 
 ```css
 linear-gradient(red, orange, yellow, green, blue);
@@ -71,7 +71,7 @@ linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
 
 如果两个或者多个色标位于同一个位置，那么过渡会在这个位置的第一个和最后一个颜色之间产生一条硬线。
 
-色标应该以递增的顺序列出。后面的更低值的色标会覆盖前面的值并创建硬线。两面这个儒 40% 的位置将红色变成黄色，然后在渐变的 25% 的范围内由黄色墨迹为蓝色。
+色标应该以递增的顺序列出。后面的更低值的色标会覆盖前面的值并创建硬过渡线。下面的渐变在 40% 处由红色变为黄色，然后在 25% 处由黄色变为蓝色：
 
 ```css
 linear-gradient(red 40%, yellow 30%, blue 65%);
@@ -129,7 +129,7 @@ body {
 
 ### 有多位置色标的渐变
 
-这个例子使用了多位置的色标，两个相邻的颜色有相同的色标值，创建一个条纹效果。
+这个示例使用了多位置的色标，两个相邻的颜色有相同的色标值，形成了条纹效果。
 
 ```css hidden
 body {
@@ -175,4 +175,4 @@ body {
 - {{cssxref("image/image-set","image-set()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - [CSS 图像模块](/zh-CN/docs/Web/CSS/CSS_images)
-- [新函数、和 CSS 颜色中的色相（级别 4）](/zh-CN/blog/css-color-module-level-4/) on MDN blog (2023)
+- MDN 博客中的文章[新函数、和 CSS 颜色中的色相（级别 4）](/en-US/blog/css-color-module-level-4/)（2023 年）

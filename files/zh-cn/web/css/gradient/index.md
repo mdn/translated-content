@@ -9,7 +9,7 @@ slug: Web/CSS/gradient
 
 {{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
-CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 ## 语法
 
@@ -23,9 +23,9 @@ CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就�
 
 径向渐变从一个中间点（原点）开始过渡颜色。径向渐变是由 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 函数产生的。
 
-### 重复的渐变
+### 重复渐变
 
-重复的渐变会尽可能重复渐变以填满指定的区域。重复渐变是使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 和 {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 函数生成的。
+重复渐变可根据需要复制渐变，以填充指定区域。重复渐变是使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 和 {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 函数生成的。
 
 ### 锥形渐变
 
@@ -75,7 +75,7 @@ div {
 
 ### 径向渐变示例
 
-简单的径向渐变
+简单的径向渐变。
 
 ```html hidden
 <div class="radial-gradient">径向渐变</div>
@@ -98,7 +98,7 @@ div {
 
 ### 重复渐变示例
 
-简单的重复的线性和径向渐变示例。
+简单的重复线性和径向渐变示例。
 
 ```html hidden
 <div class="linear-repeat">重复的线性渐变</div>
@@ -169,7 +169,7 @@ div {
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/CSS/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
 - [CSS 单位和值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
