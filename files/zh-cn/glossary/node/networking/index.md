@@ -9,4 +9,4 @@ slug: Glossary/Node/networking
 
 ## 参见
 
-- 维基百科上的 [Node](<https://en.wikipedia.org/wiki/Node_(networking)>)
+- 维基百科上的[节点](<https://zh.wikipedia.org/wiki/节点_(电信网络)>)

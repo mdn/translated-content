@@ -5,7 +5,7 @@ slug: Glossary/Node
 
 {{GlossarySidebar}}
 
-术语 **节点（Node）** 根据不同的上下文，可以是多种不同的意思。他可能是：
+术语**节点**（Node）根据不同的上下文，可以是多种不同的意思。它可能是：
 
 {{GlossaryDisambiguation}}
 
