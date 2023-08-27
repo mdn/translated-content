@@ -21,7 +21,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 ## 值
 
 - {{cssxref("&lt;position&gt;")}}
-  - : 渐变的位置，和 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}} 以相同方式解析。如果没有指定，默认为 `center`。
+  - : 渐变的位置，和解析 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}} 的方式相同。如果没有指定，默认为 `center`。
 - `<ending-shape>`
   - : 渐变的结束形状。值可以是 `circle`（圆形，渐变的形状是一个半径不变的正圆）或 `ellipse`（椭圆，轴对称椭圆）。如果没有指定，默认为 `ellipse`。
 - `<size>`
