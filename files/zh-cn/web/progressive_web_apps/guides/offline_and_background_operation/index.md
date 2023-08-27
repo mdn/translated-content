@@ -47,7 +47,7 @@ slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 
 离线操作允许 PWA 即使在设备没有网络连接时也能提供良好的用户体验。这是通过向应用程序添加 service worker 来实现的。
 
-service worker_控制_应用的部分或全部页面。在 service worker 安装后，它可以从服务器获取它控制的页面的资源（包括页面、样式、脚本和图片等），并将它们添加到本地缓存中。使用 {{domxref("Cache")}} 接口将资源添加到缓存中。在 service worker 全局范围内，可以通过 {{domxref("caches")}} 属性访问 `Cache` 实例。
+service worker*控制*应用的部分或全部页面。在 service worker 安装后，它可以从服务器获取它控制的页面的资源（包括页面、样式、脚本和图片等），并将它们添加到本地缓存中。使用 {{domxref("Cache")}} 接口将资源添加到缓存中。在 service worker 全局范围内，可以通过 {{domxref("caches")}} 属性访问 `Cache` 实例。
 
 然后，每当应用程序请求一个资源（例如，因为用户打开了应用程序或点击了内部链接），浏览器在 service worker 的全局范围内触发一个名为 {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} 的事件。通过监听此事件，service worker 可以拦截请求。
 
@@ -118,7 +118,7 @@ self.addEventListener("fetch", (event) => {
 
 > **备注：** 这里描述的策略只是 service worker 实现缓存的一种方式。具体来说，在缓存优先策略中，我们先从缓存中查找响应，然后再尝试从网络中获取，这意味着我们更有可能返回一个快速的响应而无需承担网络成本，但也更有可能返回一个过期的响应。
 >
-> 另一种策略是_网络优先_策略，即首先尝试从服务器获取资源，如果设备离线，则回退到缓存。
+> 另一种策略是*网络优先*策略，即首先尝试从服务器获取资源，如果设备离线，则回退到缓存。
 >
 > 最佳的缓存策略取决于特定的 Web 应用程序及其使用方式。
 
@@ -325,7 +325,7 @@ async function registerPeriodicSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.periodicSync.register("update-news", {
     // 尝试每 24 小时更新一次
-    minInterval: 24 * 60 * 60 * 1000, 
+    minInterval: 24 * 60 * 60 * 1000,
   });
 }
 ```
@@ -336,7 +336,7 @@ async function registerPeriodicSync() {
 
 当浏览器决定生成周期性同步事件时，模式如下：它启动 service worker（如果需要），并在 service worker 的全局作用域中触发 {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicSync")}} 事件。
 
- service worker 的事件处理程序检查事件的名称，并在事件的 {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} 方法内调用适当的函数：
+service worker 的事件处理程序检查事件的名称，并在事件的 {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} 方法内调用适当的函数：
 
 ```js
 // service-worker.js
@@ -358,8 +358,8 @@ self.addEventListener("periodicsync", (event) => {
 // main.js
 
 async function registerPeriodicSync() {
- const swRegistration = await navigator.serviceWorker.ready;
- swRegistration.periodicSync.unregister("update-news"); 
+  const swRegistration = await navigator.serviceWorker.ready;
+  swRegistration.periodicSync.unregister("update-news");
 }
 ```
 
@@ -433,7 +433,7 @@ async function registerPeriodicSync() {
 ### 参考资料
 
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [后台同步 API](/zh-CN/docs/Web/API/Background_Synchronization_API) 
+- [后台同步 API](/zh-CN/docs/Web/API/Background_Synchronization_API)
 - [后台获取 API](/zh-CN/docs/Web/API/Background_Fetch_API)
 - [周期性后台同步 API](/zh-CN/docs/Web/API/Web_Periodic_Background_Synchronization_API)
 - [推送 API](/zh-CN/docs/Web/API/Push_API)
@@ -443,6 +443,6 @@ async function registerPeriodicSync() {
 
 - web.dev 上的[介绍后台同步](https://developer.chrome.com/blog/background-sync/) (2017)
 - web.dev 上的[介绍后台获取](https://developer.chrome.com/blog/background-fetch/) (2022)
-- web.dev 上的[周期性后台同步 API](https://developer.chrome.com/articles/periodic-background-sync/) (2020)  
+- web.dev 上的[周期性后台同步 API](https://developer.chrome.com/articles/periodic-background-sync/) (2020)
 - web.dev 上的[通知](https://web.dev/notifications/)
 - web.dev 上的[具有离线流媒体的 PWA](https://web.dev/pwa-with-offline-streaming/) (2021)
