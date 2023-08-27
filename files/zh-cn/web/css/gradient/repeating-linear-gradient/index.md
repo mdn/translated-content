@@ -11,7 +11,7 @@ slug: Web/CSS/gradient/repeating-linear-gradient
 
 每次重复时，色标（color stop）位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的颜色应该与第一个色标的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果。这可以通过将第一个颜色值重复添加到最后一个颜色值中来修改。
 
-与其他渐变一样，线形重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，线形重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在可以使用 `<image>` 的地方。因此，`repeating-linear-gradient()` 在{{Cssxref("background-color")}} 以及其他使用 {{cssxref("&lt;color&gt;")}} 数据类型上不起作用。
 
