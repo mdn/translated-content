@@ -90,7 +90,7 @@ CSS3 のプロパティを含む詳しい情報は、 {{cssxref("background")}} 
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
@@ -98,7 +98,9 @@ font-family: Arial, sans-serif;
 この 5 つの発言は、以下のように短くまとめることができます。
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 この一括指定宣言は、実際には上記の個別指定宣言に加えて、 `font-variant: normal` と `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3) と等価になります。

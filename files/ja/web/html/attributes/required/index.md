@@ -42,14 +42,14 @@ slug: Web/HTML/Attributes/required
 ```html
 <form>
   <div class="group">
-    <input type="text">
+    <input type="text" />
     <label>Normal</label>
   </div>
   <div class="group">
-    <input type="text" required="required">
+    <input type="text" required="required" />
     <label>Required</label>
   </div>
-  <input type="submit">
+  <input type="submit" />
 </form>
 ```
 

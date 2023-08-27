@@ -25,7 +25,7 @@ l10n:
 
 - `loneProperty`
 
-  - : 単独の Unicode プロパティ名または値で、`value` と同じ構文に従います。``General_Category`` プロパティの値、または[バイナリープロパティ名](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties)を指定します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) モードでは、[文字列のバイナリー Unicode プロパティ](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings)にもなります。
+  - : 単独の Unicode プロパティ名または値で、`value` と同じ構文に従います。`General_Category` プロパティの値、または[バイナリープロパティ名](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties)を指定します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) モードでは、[文字列のバイナリー Unicode プロパティ](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings)にもなります。
 
     > **メモ:** [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) 構文では `Script` プロパティ名も同様に省略することができますが、JavaScript では `Script` よりも `Script_Extensions` の方が有益な場合が多いため、対応していません。
 

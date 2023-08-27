@@ -55,8 +55,12 @@ padding-bottom: unset;
 ### ピクセル数とパーセント値で下パディングを設定
 
 ```css
-.content { padding-bottom: 5%; }
-.sidebox { padding-bottom: 10px; }
+.content {
+  padding-bottom: 5%;
+}
+.sidebox {
+  padding-bottom: 10px;
+}
 ```
 
 ## 仕様書

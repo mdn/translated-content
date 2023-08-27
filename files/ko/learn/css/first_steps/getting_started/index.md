@@ -1,7 +1,6 @@
 ---
 title: CSS 로 시작하기
 slug: Learn/CSS/First_steps/Getting_started
-page-type: learn-module-chapter
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
