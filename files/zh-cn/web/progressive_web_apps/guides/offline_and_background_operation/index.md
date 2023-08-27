@@ -388,12 +388,9 @@ async function registerPeriodicSync() {
 2. 在设备上，应用程序使用 {{domxref("PushManager.subscribe()")}} 方法订阅来自服务器的消息。`subscribe()` 方法：
 
    - 将应用服务器的公钥作为参数：推送服务将用此来验证来自应用服务器的消息签名。
-    
    - 返回一个解析为一个 {{domxref("PushSubscription")}} 对象的 `Promise`。这个对象包括：
-  
      - 推送服务的[端点](/zh-CN/docs/Web/API/PushSubscription/endpoint): 这是应用服务器了解在何处发送推送消息的方式。
      - 你的服务器将用来加密发向推送服务的消息的[公开加密密钥](/zh-CN/docs/Web/API/PushSubscription/getKey)。
-    
 3. 应用程序将端点和公开加密密钥发送到你的服务器（例如，使用 {{domxref("fetch()")}}）。
 
 在此之后，应用服务器就可以开始发送推送消息了。
