@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t redefine non-configurable property "x"(Тип ошибки: не удаётся переопределить настраиваемое свойство "x")'
+title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 ---
 

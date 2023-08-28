@@ -1,5 +1,5 @@
 ---
-title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (SyntaxError: применение оператора 'delete' к неполному имени не рекомендуется)"
+title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
 
