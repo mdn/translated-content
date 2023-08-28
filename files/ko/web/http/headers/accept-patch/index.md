@@ -41,7 +41,7 @@ Accept-Patch: application/merge-patch+json
 
 ## 디렉티브
 
-업습니다.
+없습니다.
 
 ## 예제
 
