@@ -10,11 +10,11 @@ slug: Glossary/Browser
 ## 参见
 
 - 维基百科上的[浏览器](https://zh.wikipedia.org/wiki/浏览器)
-- {{Glossary("user agent")}}（术语）
+- {{Glossary("user agent", "用户代理")}}（术语）
 - {{HTTPHeader("User-agent")}}（HTTP 标头）
 - 下载一个浏览器
 
   - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
   - [Google Chrome](https://www.google.com/chrome/)
-  - [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+  - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
   - [Opera Browser](https://www.opera.com/)
