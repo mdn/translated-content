@@ -14,7 +14,7 @@ slug: Web/API/VRDisplay/getPose
 ## 構文
 
 ```js
-getPose()
+getPose();
 ```
 
 ### 引数

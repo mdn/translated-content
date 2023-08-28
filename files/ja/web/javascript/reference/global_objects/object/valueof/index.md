@@ -79,7 +79,7 @@ myObj + 3; // 7
 +{}; // NaN
 +[]; // 0 (toString() は空の文字列リストを返す)
 +[1]; // 1
-+[1,2]; // NaN
++[1, 2]; // NaN
 +new Set([1]); // NaN
 +BigInt(1); // Uncaught TypeError: Cannot convert a BigInt value to a number
 +undefined; // NaN

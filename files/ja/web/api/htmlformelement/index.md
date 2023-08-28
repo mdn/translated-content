@@ -183,7 +183,7 @@ f.submit(); // フォームの submit() メソッド
 `<form>` を新しいウィンドウへ送信します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
