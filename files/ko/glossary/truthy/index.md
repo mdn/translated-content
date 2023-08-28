@@ -25,10 +25,6 @@ JavaScript는 불리언 문맥에서 {{Glossary("Type_Conversion", "형 변환")
     if (-Infinity)
 ```
 
-## 명세서
-
-{{Specifications}}
-
 ## 같이 보기
 
 - {{Glossary("Falsy", "거짓 같은 값")}}

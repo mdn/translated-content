@@ -10,13 +10,13 @@ CSS の **`font-variant-numeric`** プロパティは、日本語と中国語の
 ```css
 font-variant-east-asian: normal;
 font-variant-east-asian: ruby;
-font-variant-east-asian: jis78;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis83;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis90;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis04;              /* <east-asian-variant-values> */
-font-variant-east-asian: simplified;         /* <east-asian-variant-values> */
-font-variant-east-asian: traditional;        /* <east-asian-variant-values> */
-font-variant-east-asian: full-width;         /* <east-asian-width-values> */
+font-variant-east-asian: jis78; /* <east-asian-variant-values> */
+font-variant-east-asian: jis83; /* <east-asian-variant-values> */
+font-variant-east-asian: jis90; /* <east-asian-variant-values> */
+font-variant-east-asian: jis04; /* <east-asian-variant-values> */
+font-variant-east-asian: simplified; /* <east-asian-variant-values> */
+font-variant-east-asian: traditional; /* <east-asian-variant-values> */
+font-variant-east-asian: full-width; /* <east-asian-width-values> */
 font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
 font-variant-east-asian: ruby full-width jis83;
 
@@ -39,14 +39,14 @@ font-variant-east-asian: unset;
 
   - : これらの値は、表示に使用される字形の違いのセットを指定します。利用可能な値は以下の通りです。
 
-    | キーワード    | 標準による形状の定義                                                | OpenType の対応 |
-    | ------------- | --------------------------------------------------------------------------- | ------------------- |
-    | `jis78`       | [JIS X 0208:1978](http://ja.wikipedia.org/wiki/JIS_X_0208#第1次規格)  | `jp78`              |
-    | `jis83`       | [JIS X 0208:1983](http://ja.wikipedia.org/wiki/JIS_X_0208#第2次規格) | `jp83`              |
-    | `jis90`       | [JIS X 0208:1990](http://ja.wikipedia.org/wiki/JIS_X_0208#第3次規格)  | `jp90`              |
-    | `jis04`       | [JIS X 0213:2004](http://ja.wikipedia.org/wiki/JIS_X_0213)                 | `jp04`              |
-    | `simplified`  | なし。簡体字中国語の字形を使用                                     | `smpl`              |
-    | `traditional` | なし。繁体字中国語の字形を使用                                    | `trad`              |
+    | キーワード    | 標準による形状の定義                                                 | OpenType の対応 |
+    | ------------- | -------------------------------------------------------------------- | --------------- |
+    | `jis78`       | [JIS X 0208:1978](http://ja.wikipedia.org/wiki/JIS_X_0208#第1次規格) | `jp78`          |
+    | `jis83`       | [JIS X 0208:1983](http://ja.wikipedia.org/wiki/JIS_X_0208#第2次規格) | `jp83`          |
+    | `jis90`       | [JIS X 0208:1990](http://ja.wikipedia.org/wiki/JIS_X_0208#第3次規格) | `jp90`          |
+    | `jis04`       | [JIS X 0213:2004](http://ja.wikipedia.org/wiki/JIS_X_0213)           | `jp04`          |
+    | `simplified`  | なし。簡体字中国語の字形を使用                                       | `smpl`          |
+    | `traditional` | なし。繁体字中国語の字形を使用                                       | `trad`          |
 
 - `<east-asian-width-values>`
 
@@ -73,37 +73,37 @@ font-variant-east-asian: unset;
 
 ```html
 <table>
-<thead></thead>
-<tbody style="border:0;">
-  <tr>
-    <th>normal/jis78:</th>
-    <td>麹町</td>
-    <td class="jis78">麹町</td>
-  </tr>
-  <tr>
-    <th>normal/ruby:</th>
-    <td>しんかんせん</td>
-    <td class="ruby">しんかんせん</td>
-  </tr>
-  <tr>
-    <th>normal/traditional:</th>
-    <td>大学</td>
-    <td class="traditional">大学</td>
-  </tr>
-</tbody>
+  <thead></thead>
+  <tbody style="border:0;">
+    <tr>
+      <th>normal/jis78:</th>
+      <td>麹町</td>
+      <td class="jis78">麹町</td>
+    </tr>
+    <tr>
+      <th>normal/ruby:</th>
+      <td>しんかんせん</td>
+      <td class="ruby">しんかんせん</td>
+    </tr>
+    <tr>
+      <th>normal/traditional:</th>
+      <td>大学</td>
+      <td class="traditional">大学</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### CSS
 
 ```css
-td{
-  font-family:"Yu Gothic";
-  font-size:20px;
+td {
+  font-family: "Yu Gothic";
+  font-size: 20px;
 }
-th{
-  color:grey;
-  padding-right:10px;
+th {
+  color: grey;
+  padding-right: 10px;
 }
 
 .ruby {
@@ -114,7 +114,7 @@ th{
   font-variant-east-asian: jis78;
 }
 
-.traditional{
+.traditional {
   font-variant-east-asian: traditional;
 }
 ```

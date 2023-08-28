@@ -31,11 +31,11 @@ getLog10e(); // 0.4342944819032518
 
 ## Especificações
 
-| Specification                                                                | Status                       | Comment                                            |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specification                                              | Status               | Comment                                            |
+| ---------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                        | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}}      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-math.log10e', 'Math.LOG10E')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

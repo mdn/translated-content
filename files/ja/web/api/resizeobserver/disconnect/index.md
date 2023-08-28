@@ -10,7 +10,7 @@ slug: Web/API/ResizeObserver/disconnect
 ## 構文
 
 ```js
-disconnect()
+disconnect();
 ```
 
 ### 引数
@@ -28,9 +28,9 @@ disconnect()
 ## 例
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   resizeObserver.disconnect();
-})
+});
 ```
 
 ## 仕様書

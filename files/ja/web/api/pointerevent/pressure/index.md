@@ -32,7 +32,7 @@ someElement.addEventListener(
       process_pressure(event);
     }
   },
-  false
+  false,
 );
 ```
 

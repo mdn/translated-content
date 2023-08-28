@@ -20,8 +20,10 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+    captureStream = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions,
+    );
+  } catch (err) {
     console.error("Error: " + err);
   }
   return captureStream;
@@ -34,8 +36,12 @@ async function startCapture(displayMediaOptions) {
 
 ```js
 function startCapture(displayMediaOptions) {
- return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+  return navigator.mediaDevices
+    .getDisplayMedia(displayMediaOptions)
+    .catch((err) => {
+      console.error("Error:" + err);
+      return null;
+    });
 }
 ```
 
@@ -88,8 +94,8 @@ function startCapture(displayMediaOptions) {
 ```js
 const gdmOptions = {
   video: true,
-  audio: true
-}
+  audio: true,
+};
 ```
 
 これにより、ユーザーエージェントが対応する範囲内で、ユーザーが希望するものを自由に選択することができます。これは、 `audio` と `video` のそれぞれに追加の情報を指定することで、さらに改良することができます。
@@ -97,14 +103,14 @@ const gdmOptions = {
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100
-  }
-}
+    sampleRate: 44100,
+  },
+};
 ```
 
 この例では、カーソルは常にキャプチャで表示され、音声トラックはノイズ抑制とエコーキャンセル機能を有効にし、音声のサンプリングレートは 44.1kHz が理想的です。
@@ -163,19 +169,27 @@ const stopElem = document.getElementById("stop");
 
 var displayMediaOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
   },
-  audio: false
+  audio: false,
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
-  startCapture();
-}, false);
+startElem.addEventListener(
+  "click",
+  function (evt) {
+    startCapture();
+  },
+  false,
+);
 
-stopElem.addEventListener("click", function(evt) {
-  stopCapture();
-}, false);
+stopElem.addEventListener(
+  "click",
+  function (evt) {
+    stopCapture();
+  },
+  false,
+);
 ```
 
 ##### 内容のログ出力
@@ -183,10 +197,13 @@ stopElem.addEventListener("click", function(evt) {
 エラーやその他の問題のログを簡単に取るために、この例では特定の {{domxref("console")}} メソッドをオーバーライドして、そのメッセージを ID が `log` である {{HTMLElement("pre")}} ブロックに出力しています。
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => (logElem.innerHTML += `${msg}<br>`);
+console.error = (msg) =>
+  (logElem.innerHTML += `<span class="error">${msg}</span><br>`);
+console.warn = (msg) =>
+  (logElem.innerHTML += `<span class="warn">${msg}<span><br>`);
+console.info = (msg) =>
+  (logElem.innerHTML += `<span class="info">${msg}</span><br>`);
 ```
 
 これにより、おなじみの {{domxref("console.log()")}} や {{domxref("console.error()")}} などを使って、ドキュメント内のログボックスに情報を記録することができるようになります。
@@ -200,9 +217,11 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions,
+    );
     dumpOptionsInfo();
-  } catch(err) {
+  } catch (err) {
     console.error("Error: " + err);
   }
 }
@@ -224,7 +243,7 @@ async function startCapture() {
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```
@@ -251,16 +270,22 @@ function dumpOptionsInfo() {
 HTML は簡単な紹介文から始まり、本題に入ります。
 
 ```html
-<p>This example shows you the contents of the selected part of your display.
-Click the Start Capture button to begin.</p>
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
 
-<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
 
 <video id="video" autoplay></video>
-<br>
+<br />
 
 <strong>Log:</strong>
-<br>
+<br />
 <pre id="log"></pre>
 ```
 
@@ -316,8 +341,7 @@ Feature-Policy: display-capture 'self'
 もし `<iframe>` 内で画面キャプチャを行うのであれば、そのフレームに対してのみ許可を要求することができ、より一般的な許可を要求するよりも明らかに安全です。
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture">
-</iframe>
+<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
 ## ブラウザーの互換性

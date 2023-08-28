@@ -79,9 +79,9 @@ console.log(A() && B());
 Оператор И имеет более высокий приоритет, чем оператор ИЛИ, поэтому оператор `&&` выполнится раньше оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-false || true && true; // вернёт true
+false || (true && true); // вернёт true
 true && (false || false); // вернёт false
-(2 == 3) || (4 < 0) && (1 == 1); // вернёт false
+2 == 3 || (4 < 0 && 1 == 1); // вернёт false
 ```
 
 ## Примеры

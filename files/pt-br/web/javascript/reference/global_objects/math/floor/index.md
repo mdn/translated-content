@@ -29,7 +29,7 @@ Por `floor` ser um método estático de `Math`, você sempre irá usar como `Mat
 ### Exemplo: Usando `Math.floor`
 
 ```js
-Math.floor( 45.95); //  45
+Math.floor(45.95); //  45
 Math.floor(-45.95); // -46
 ```
 
@@ -37,8 +37,7 @@ Math.floor(-45.95); // -46
 
 ```js
 // Closure
-(function(){
-
+(function () {
   /**
    * Decimal adjustment of a number.
    *
@@ -49,42 +48,41 @@ Math.floor(-45.95); // -46
    */
   function decimalAdjust(type, value, exp) {
     // If the exp is undefined or zero...
-    if (typeof exp === 'undefined' || +exp === 0) {
+    if (typeof exp === "undefined" || +exp === 0) {
       return Math[type](value);
     }
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
-    value = value.toString().split('e');
-    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    value = value.toString().split("e");
+    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
     // Shift back
-    value = value.toString().split('e');
-    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+    value = value.toString().split("e");
+    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
   }
 
   // Decimal round
   if (!Math.round10) {
-    Math.round10 = function(value, exp) {
-      return decimalAdjust('round', value, exp);
+    Math.round10 = function (value, exp) {
+      return decimalAdjust("round", value, exp);
     };
   }
   // Decimal floor
   if (!Math.floor10) {
-    Math.floor10 = function(value, exp) {
-      return decimalAdjust('floor', value, exp);
+    Math.floor10 = function (value, exp) {
+      return decimalAdjust("floor", value, exp);
     };
   }
   // Decimal ceil
   if (!Math.ceil10) {
-    Math.ceil10 = function(value, exp) {
-      return decimalAdjust('ceil', value, exp);
+    Math.ceil10 = function (value, exp) {
+      return decimalAdjust("ceil", value, exp);
     };
   }
-
 })();
 
 // Round
@@ -110,11 +108,11 @@ Math.ceil10(-59, 1); // -50
 
 ## Especificações
 
-| Specification                                                        | Status                   | Comment             |
-| -------------------------------------------------------------------- | ------------------------ | ------------------- |
-| ECMAScript 1st Edition. Implemented in JavaScript 1.0                | Standard                 | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.8.2.9', 'Math.floor')}} | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-math.floor', 'Math.floor')}} | {{Spec2('ES6')}}     |                     |
+| Specification                                         | Status             | Comment             |
+| ----------------------------------------------------- | ------------------ | ------------------- |
+| ECMAScript 1st Edition. Implemented in JavaScript 1.0 | Standard           | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.8.2.9', 'Math.floor')}}  | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-math.floor', 'Math.floor')}}  | {{Spec2('ES6')}}   |                     |
 
 ## Compatibilidade com navegadores
 

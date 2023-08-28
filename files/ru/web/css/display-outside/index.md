@@ -32,8 +32,7 @@ slug: Web/CSS/display-outside
 ### `HTML`
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### `CSS`

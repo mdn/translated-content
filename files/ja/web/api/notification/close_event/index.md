@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('close', (event) => { });
+addEventListener("close", (event) => {});
 
-onclose = (event) => { };
+onclose = (event) => {};
 ```
 
 ## イベント型

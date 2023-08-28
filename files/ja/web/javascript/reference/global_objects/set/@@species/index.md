@@ -40,7 +40,9 @@ Set[Symbol.species]; // Set() 関数
 ```js
 class MySet extends Set {
   // MySet species を親である Set コンストラクターにオーバーライド。
-  static get [Symbol.species]() { return Set; }
+  static get [Symbol.species]() {
+    return Set;
+  }
 }
 ```
 

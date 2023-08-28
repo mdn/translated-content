@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 ## 문법
 
-```js
-    [rv] = yield [expression];
+```js-nolint
+[rv] = yield [expression];
 ```
 
 - `expression`
@@ -40,11 +40,12 @@ generator 코드 경로, yield연산자, {{jsxref("Generator.prototype.next()")}
 다음 코드는 제너레이터 함수의 선언의 예시이다.
 
 ```js
-function* foo(){
+function* foo() {
   var index = 0;
-  while (index <= 2) // when index reaches 3,
-                     // yield's done will be true
-                     // and its value will be undefined;
+  while (index <= 2)
+    // when index reaches 3,
+    // yield's done will be true
+    // and its value will be undefined;
     yield index++;
 }
 ```

@@ -10,8 +10,8 @@ slug: Web/API/WebGLRenderingContext
 このインターフェースを取得するためには、 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} を `<canvas>` 要素に対して、 "webgl" の引数を与えて呼び出します。
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
 ```
 
 キャンバスの WebGL 描画コンテキストを取得すると、そのキャンバス内で描画を行うことができます。 [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)には、 WebGL を使い始めるための詳細な情報、例、リソースが掲載されています。

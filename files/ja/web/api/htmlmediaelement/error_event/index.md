@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => {});
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -28,14 +28,14 @@ onerror = (event) => { };
 ## 例
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://path/to/video.webm";
 
-video.addEventListener('error', () => {
+video.addEventListener("error", () => {
   console.error(`Error loading: ${videoSrc}`);
 });
 
-video.setAttribute('src', videoSrc);
+video.setAttribute("src", videoSrc);
 ```
 
 ## 仕様書

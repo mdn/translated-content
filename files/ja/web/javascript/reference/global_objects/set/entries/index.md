@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 ## 構文
 
 ```js
-entries()
+entries();
 ```
 
 ### 返値
@@ -25,9 +25,9 @@ entries()
 
 ```js
 var mySet = new Set();
-mySet.add('foobar');
+mySet.add("foobar");
 mySet.add(1);
-mySet.add('baz');
+mySet.add("baz");
 
 var setIter = mySet.entries();
 

@@ -18,10 +18,12 @@ l10n:
 この例では video 要素を設けて、それにエラーハンドラーを追加しています。エラーハンドラーは単に詳細をコンソールに記録します。
 
 ```js
-const videoElement = document.createElement('video');
+const videoElement = document.createElement("video");
 videoElement.onerror = () => {
-  console.error(`Error ${videoElement.error.code}; details: ${videoElement.error.message}`);
-}
+  console.error(
+    `Error ${videoElement.error.code}; details: ${videoElement.error.message}`,
+  );
+};
 videoElement.src = "https://example.com/bogusvideo.mp4";
 ```
 

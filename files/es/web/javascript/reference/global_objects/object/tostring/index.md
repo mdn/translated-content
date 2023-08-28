@@ -51,15 +51,7 @@ El siguiente código crea y asigna `perroToString` para sobreescribir el método
 
 ```js
 Perro.prototype.toString = function perroToString() {
-  var retorno =
-    "Perro " +
-    this.nombre +
-    " es " +
-    this.sexo +
-    " " +
-    this.color +
-    " " +
-    this.criadero;
+  var retorno = `Perro ${this.nombre} es ${this.sexo} ${this.color} ${this.criadero}`;
   return retorno;
 };
 ```

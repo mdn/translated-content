@@ -50,7 +50,8 @@ b.length = b.length + 1; // definir la propiedad de longitud a 2^32
 ### Casos válidos
 
 ```js example-good
-[Math.pow(2, 40)][-1]; // [ 1099511627776 ] // [ -1 ]
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1);
 new ArrayBuffer(0);
 
