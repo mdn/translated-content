@@ -41,7 +41,7 @@ File API를 사용하면 웹 애플리케이션이 파일과 그 콘텐츠에 �
 
 ### 파일 읽기
 
-이 예제에서는 [file `<input>` element](/ko/docs/Web/HTML/Element/input/file)를 제공하고, 사용자가 파일을 선택하면 선택한 첫 번째 파일의 내용을 텍스트로 읽고 그 결과를 {{HTMLElement("div")}}에 표시합니다.
+이 예제에서는 [파일 `<input>` 요소](/ko/docs/Web/HTML/Element/input/file)를 제공하고, 사용자가 파일을 선택하면 선택한 첫 번째 파일의 내용을 텍스트로 읽고 그 결과를 {{HTMLElement("div")}}에 표시합니다.
 
 #### HTML
 
