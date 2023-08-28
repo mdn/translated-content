@@ -13,7 +13,7 @@ l10n:
 
 엔티티 헤더가 요청이나 응답 헤더가 아님에도 불구하고, 이러한 용어로 종종 포함됩니다.
 
-다음 예제에서, {{HTTPHeader("Content-Length")}}는 엔티티 헤더지만, {{HTTPHeader("Host")}}와 {{HTTPHeader("User-Agent")}}는 request 헤더입니다:
+다음 예제에서, {{HTTPHeader("Content-Length")}}는 엔티티 헤더지만, {{HTTPHeader("Host")}}와 {{HTTPHeader("User-Agent")}}는 request 헤더입니다.
 
 ```http
 POST /myform.html HTTP/1.1
