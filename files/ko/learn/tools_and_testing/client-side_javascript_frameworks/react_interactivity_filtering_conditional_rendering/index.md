@@ -1,5 +1,5 @@
 ---
-title: React 상호작용: 편집, 필터링, 조건부 렌더링
+title: "React 상호작용: 편집, 필터링, 조건부 렌더링"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
