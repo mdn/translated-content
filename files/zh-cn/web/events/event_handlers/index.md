@@ -1,31 +1,31 @@
 ---
-title: Event handling (overview)
+title: 事件处理（概述）
 slug: Web/Events/Event_handlers
 ---
 
-Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. Programmers can create _event handler_ code that will run when an event fires, allowing web pages to respond appropriately to change.
+事件是浏览器窗口内触发的信号，用于通知浏览器或操作系统环境的变化。程序员可以创建*事件处理程序*代码，在事件触发时运行，使网页能够适当地响应变化。
 
-This page provides a very brief "reminder" of how to work with events and event handlers. New developers should instead read [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events).
+本页非常简要地 "提醒 "了如何使用事件和事件处理程序。新开发人员应阅读 [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)。
 
-## What are the available events?
+## 有哪些可用事件？
 
-Events are documented in and/or below the pages for the JavaScript objects that emit them. For example, to find out events fired on the browser window or the current document see the events sections in [`Window`](/en-US/docs/Web/API/Window#events) and [`Document`](/en-US/docs/Web/API/Document#events).
+事件记录在发布事件的 JavaScript 对象的页面中和/或页面下方。例如，要了解浏览器窗口或当前文档触发的事件，请参阅 [`Window`](/zh-CN/docs/Web/API/Window#事件) 和 [`Document`](/zh-CN/docs/Web/API/Document#事件) 中的事件部分。
 
-You can use the [Event reference](/en-US/docs/Web/Events#event_index) to find out what JavaScript objects fire events for particular APIs, e.g. animation, media, and so on.
+您可以使用[事件参考](/zh-CN/docs/Web/Events#事件索引)查找哪些 JavaScript 对象会触发特定 API 的事件，例如动画、媒体等。
 
-## Registering event handlers
+## 注册事件处理程序
 
-There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered by assigning it to the target element's corresponding _onevent_ property, or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case the handler will receive an object that conforms to the [`Event` interface](/en-US/docs/Web/API/Event) (or a [derived interface](/en-US/docs/Web/API/Event#introduction)). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.
+注册处理程序有两种推荐方法。可以将事件处理程序代码赋值给目标元素对应的 _onevent_ 属性，或使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理程序注册为元素的监听器，从而在事件触发时运行事件处理程序代码。无论哪种情况，处理程序都将接收一个符合 [`Event`接口](/zh-CN/docs/Web/API/Event) 的对象。主要区别在于可以使用事件监听器方法添加（或删除）多个事件处理程序。
 
-> **Warning:** A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see [Inline event handlers](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these).
+> **警告：** 不推荐使用 HTML onevent 属性设置事件处理程序的第三种方法！它们会使标记膨胀，降低可读性，增加调试难度。有关详细信息，请参阅 [内联事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#内联事件处理器——不要使用)。
 
-### Using onevent properties
+### 使用 onevent 属性
 
-By convention, JavaScript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
+按照惯例，触发事件的 JavaScript 对象都有相应的 "onevent "属性（以事件名称的前缀 "on "命名）。当事件触发时，这些属性会被调用来运行相关的处理程序代码，也可能被你自己的代码直接调用。
 
-To set event handler code you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed the handler can be replaced by assigning another function to the same property.
+要设置事件处理程序代码，只需将其分配给相应的 onevent 属性即可。一个元素中的每个事件只能分配一个事件处理程序。如果需要，可以通过将另一个函数赋值给相同的属性来替换处理程序。
 
-Below we show how to set a simple `greet()` function for the `click` event using the `onclick` property.
+下面我们将展示如何使用 `onclick` 属性为 `click` 事件设置一个简单的 `greet()` 函数。
 
 ```js
 const btn = document.querySelector("button");
@@ -37,15 +37,15 @@ function greet(event) {
 btn.onclick = greet;
 ```
 
-Note that an object representing the event is passed as the first argument to the event handler. This event object either implements or is derived from the {{domxref("Event")}} interface.
+请注意，代表事件的对象作为第一个参数传递给事件处理程序。此事件对象实现或派生自 {{domxref("Event")}} 接口。
 
 ### EventTarget.addEventListener
 
-The most flexible way to set an event handler on an element is to use the {{domxref("EventTarget.addEventListener")}} method. This approach allows multiple listeners to be assigned to an element, and for listeners to be _removed_ if needed (using {{domxref("EventTarget.removeEventListener")}}).
+在元素上设置事件处理程序最灵活的方法是使用 {{domxref("EventTarget.addEventListener")}} 方法。这种方法允许为一个元素分配多个监听器，并在需要时删除监听器（使用 {{domxref("EventTarget.removeEventListener")}} 方法）。
 
-> **Note:** The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs cleaning up old/unused event handlers can improve efficiency.
+** 备注：** 添加和删除事件处理程序的功能允许您在不同情况下执行不同的操作，例如，让同一个按钮执行不同的操作。此外，在更复杂的程序中，清理旧的/未使用的事件处理程序可以提高效率。
 
-Below we show how a simple `greet()` function can be set as a listener/event handler for the `click` event (you could use a lambda function instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
+下面我们展示了如何将一个简单的 `greet()` 函数设置为 `click` 事件的监听器/事件处理程序（如果需要，您可以使用 lambda 函数代替命名函数）。请再次注意，事件作为第一个参数传递给事件处理程序。
 
 ```js
 const btn = document.querySelector("button");
@@ -57,13 +57,13 @@ function greet(event) {
 btn.addEventListener("click", greet);
 ```
 
-The method can also take additional arguments/options to control aspects of how the events are captured and removed. More information can be found on the {{domxref("EventTarget.addEventListener")}} reference page.
+该方法还可以使用其他参数/选项来控制捕获和删除事件的方式。更多信息请参阅 {{domxref("EventTarget.addEventListener")}} 参考页面。
 
-#### Using an Abort Signal
+#### 使用终止信号
 
-A notable event listener feature is the ability to use an abort signal to clean up multiple event handlers at the same time.
+事件监听器的一个显著特点是可以使用终止信号同时清理多个事件处理程序。
 
-This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("EventTarget/addEventListener()", "addEventListener()")}} call for all the event handlers that you want to be able to remove together. You can then call {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`, and it will remove all event handlers that were added with that signal. For example, to add an event handler that we can remove with an `AbortSignal`:
+具体做法是将相同的 {{domxref("AbortSignal")}} 传递给 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 调用，以便同时删除所有事件处理程序。然后，您可以在拥有 "AbortSignal"（终止信号）的控制器上调用 {{domxref("AbortController/abort()", "abort()")}} ，这样就能移除通过该信号添加的所有事件处理程序。例如，要添加一个可以使用 AbortSignal 移除的事件处理程序：
 
 ```js
 const controller = new AbortController();
@@ -74,18 +74,18 @@ btn.addEventListener(
     console.log("greet:", event);
   },
   { signal: controller.signal }
-); // pass an AbortSignal to this handler
+); // 将 AbortSignal 传递给该处理程序
 ```
 
-Then the event handler created by the code above can be removed like this:
+然后，通过上面代码创建的事件处理程序可以这样移除：
 
 ```js
-controller.abort(); // removes any/all event handlers associated with this controller
+controller.abort(); // 移除与此控制器关联的任何/所有事件处理程序
 ```
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
-    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Web/Events">事件参考</a></li>
   </ol>
 </section>
