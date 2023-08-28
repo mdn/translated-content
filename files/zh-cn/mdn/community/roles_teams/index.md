@@ -59,7 +59,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 - 已经为 MDN Web 文档项目贡献了至少两个月。
 - 至少为一个项目领域做出了积极贡献。
 
-以下两个需求是必须满足的：
+以下两个要求是必须满足的：
 
 - 在你的 GitHub 账户开启[双因素身份验证](https://docs.github.com/zh/authentication/securing-your-account-with-two-factor-authentication-2fa)。
 - 启用[对提交进行签名](https://docs.github.com/zh/authentication/managing-commit-signature-verification/signing-commits)。
