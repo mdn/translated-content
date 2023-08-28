@@ -14,7 +14,7 @@ slug: Glossary/Browser
 - {{HTTPHeader("User-agent")}}（HTTP 标头）
 - 下载一个浏览器
 
-  - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
+  - [Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/)
   - [Google Chrome](https://www.google.com/chrome/)
   - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
   - [Opera Browser](https://www.opera.com/)
