@@ -179,9 +179,9 @@ return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 
 이 코드를 사용하면 할 일 항목에서 "편집" 및 "취소" 버튼을 눌러 템플릿 간에 전환할 수 있습니다.
 
-![The eat todo item showing the view template, with edit and delete buttons available](view.png)
+![view](https://github.com/poiu03290/translated-content/assets/82810259/187b262d-dffe-4164-a4fc-f76ca19ab2ab)
 
-![The eat todo item showing the edit template, with an input field to enter a new name, and cancel and save buttons available](edit.png)
+![edit](https://github.com/poiu03290/translated-content/assets/82810259/13dc166a-ef3d-4a7e-bf8c-deb0269da909)
 
 다음 단계는 실제로 편집 기능이 작동하도록 만드는 것입니다.
 
@@ -358,7 +358,7 @@ function FilterButton(props) {
 
 브라우저를 다시 방문하세요. 서로 다른 버튼에 각각의 이름이 부여되어 있음을 확인해야 합니다. 필터 버튼을 누르면 텍스트에 새로운 윤곽선이 적용되는 것을 볼 수 있습니다. 이는 필터 버튼이 선택되었음을 의미합니다. 그리고 버튼을 클릭하는 동안 개발도구 페이지 검사기를 보면 `aria-pressed` 속성 값이 그에 따라 변경되는 것을 볼 수 있습니다.
 
-![The three filter buttons of the app - all, active, and completed - with a focus highlight around completed](filter-buttons.png)
+![filter-buttons](https://github.com/poiu03290/translated-content/assets/82810259/c2d5c71e-3d66-407c-8b7e-6effc39859e3)
 
 그러나 우리의 버튼은 여전히 ​​UI의 할 일을 실제로 필터링하지 않습니다. 이걸 끝내자.
 
@@ -388,7 +388,7 @@ const taskList = tasks
 
 이제 브라우저에서 필터를 선택하면 해당 기준을 충족하지 않는 작업이 제거됩니다. 목록 위 제목의 개수도 목록을 반영하여 변경됩니다!
 
-![The app with the filter buttons in place. Active is highlighted, so only the active todo items are being shown.](filtered-todo-list.png)
+![filtered-todo-list](https://github.com/poiu03290/translated-content/assets/82810259/eacd7cd9-9229-4647-bb59-4db3be84f8bb)
 
 ## 요약
 
