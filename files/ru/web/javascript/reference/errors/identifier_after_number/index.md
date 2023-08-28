@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 
 {{JSSidebar("Errors")}}
 
-Исключение "identifier starts immediately after numeric literal" возникает, если имя переменной, свойства или имя начинается с цифры. По правилам имя может начинаться только с буквы, подчеркивания (\_) или знака доллара ($).
+Исключение "identifier starts immediately after numeric literal" возникает, если имя переменной, свойства или функции начинается с цифры. По правилам имя может начинаться только с буквы, подчеркивания (\_) или знака доллара ($).
 
 ## Сообщение
 

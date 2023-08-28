@@ -31,7 +31,7 @@ Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 //# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
 ```
 
-Или, в качестве альтернативы, вы можете установить заголовок, на ваш JavaScript файл :
+Или, в качестве альтернативы, вы можете установить заголовок на ваш JavaScript-файл:
 
 ```http example-good
 X-SourceMap: /path/to/file.js.map
