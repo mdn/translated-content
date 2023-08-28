@@ -21,28 +21,28 @@ GLSL には 3 種類の「変数」またはデータストレージがあり、
 
 ```js
 //init colors
-    var vertexColors = [
-        vec4( 0.0, 0.0, 0.0, 1.0 ),  // black
-        vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
-        vec4( 1.0, 1.0, 0.0, 1.0 ),  // yellow
-        vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
-        vec4( 0.0, 0.0, 0.0, 1.0 ),  // black
-        vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
-        vec4( 1.0, 1.0, 0.0, 1.0 ),  // yellow
-        vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
-    ];
-    var cBuffer = gl.createBuffer();
+var vertexColors = [
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
+];
+var cBuffer = gl.createBuffer();
 ```
 
 ```js
 //continued
 //create buffer to store colors and reference it to "vColor" which is in GLSL
-    gl.bindBuffer( gl.ARRAY_BUFFER, cBuffer );
-    gl.bufferData( gl.ARRAY_BUFFER, flatten(vertexColors), gl.STATIC_DRAW );
+gl.bindBuffer(gl.ARRAY_BUFFER, cBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, flatten(vertexColors), gl.STATIC_DRAW);
 
-    var vColor = gl.getAttribLocation( program, "vColor" );
-    gl.vertexAttribPointer( vColor, 4, gl.FLOAT, false, 0, 0 );
-    gl.enableVertexAttribArray( vColor );
+var vColor = gl.getAttribLocation(program, "vColor");
+gl.vertexAttribPointer(vColor, 4, gl.FLOAT, false, 0, 0);
+gl.enableVertexAttribArray(vColor);
 ```
 
 ```cpp
@@ -58,7 +58,7 @@ fColor = vColor;
 
 ### Varyings
 
-**Varyings** は頂点シェーダーによって宣言され、頂点シェーダーからフラグメントシェーダーにデータを渡すために使用される変数です。これは、頂点シェーダーによって計算された後、頂点の [normal vector](https://en.wikipedia.org/wiki/Normal_(geometry)) を共有するために通常使用されます。
+**Varyings** は頂点シェーダーによって宣言され、頂点シェーダーからフラグメントシェーダーにデータを渡すために使用される変数です。これは、頂点シェーダーによって計算された後、頂点の [normal vector](<https://en.wikipedia.org/wiki/Normal_(geometry)>) を共有するために通常使用されます。
 
 <<使用方法>>
 

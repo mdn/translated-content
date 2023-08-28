@@ -70,29 +70,39 @@ slug: Web/API/Window/popstate_event
 `http://example.com/example.html` にあるページで以下のコードを実行すると、書かれている通りのログを出力します。
 
 ```js
-window.addEventListener('popstate', (event) => {
-  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+window.addEventListener("popstate", (event) => {
+  console.log(
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
+  );
 });
-history.pushState({page: 1}, "title 1", "?page=1");
-history.pushState({page: 2}, "title 2", "?page=2");
-history.replaceState({page: 3}, "title 3", "?page=3");
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
 history.back(); // "location: http://example.com/example.html?page=1, state: {"page":1}" と出力
 history.back(); // "location: http://example.com/example.html, state: null" と出力
-history.go(2);  // "location: http://example.com/example.html?page=3, state: {"page":3}" と出力
+history.go(2); // "location: http://example.com/example.html?page=3, state: {"page":3}" と出力
 ```
 
 同じ例で、 `onpopstate` イベントハンドラープロパティを使用したものです。
 
 ```js
-window.onpopstate = function(event) {
-  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+window.onpopstate = function (event) {
+  console.log(
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
+  );
 };
-history.pushState({page: 1}, "title 1", "?page=1");
-history.pushState({page: 2}, "title 2", "?page=2");
-history.replaceState({page: 3}, "title 3", "?page=3");
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
 history.back(); // "location: http://example.com/example.html?page=1, state: {"page":1}" と出力
 history.back(); // "location: http://example.com/example.html, state: null" と出力
-history.go(2);  // "location: http://example.com/example.html?page=3, state: {"page":3}" と出力
+history.go(2); // "location: http://example.com/example.html?page=3, state: {"page":3}" と出力
 ```
 
 元のの履歴項目（`http://example.com/example.html`）には、状態オブジェクトが関連付けられていませんが、 2 回目の `history.back()` の呼び出しの後にその項目をアクティブにすると、 `popstate` イベントが発生することに注意してください。

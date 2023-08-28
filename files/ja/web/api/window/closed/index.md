@@ -50,7 +50,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // 新しいウィンドウを開きます。
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```

@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```js
-const inputEvent = new InputEvent('syntheticInput', false);
+const inputEvent = new InputEvent("syntheticInput", false);
 console.log(inputEvent.isComposing); // return false
 ```
 
