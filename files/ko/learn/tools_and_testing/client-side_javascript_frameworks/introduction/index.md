@@ -258,12 +258,12 @@ JavaScript와 브라우저의 기본 기능을 사용하여 라우터를 만드�
 
 새 프로젝트를 선택할 때, 프레임워크의 지원 매트릭스와 DSL을 진지하게 고려해야 합니다. 일치하지 않는 브라우저 지원은 사용자에게 장벽이 될 수 있습니다. 일치하지 않는 DSL 지원은 당신과 당신의 팀원에게 장벽이 될 수 있습니다.
 
-| 프레임워크 | 브라우저 지원                     | 선호하는 DSL | 지원되는 DSL들         | 참고자료                                                                        |
-| --------- | ----------------------------------- | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
-| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [공식 문서](https://angular.io/guide/browser-support)                       |
-| React     | Modern                              | JSX           | JSX; TypeScript        | [공식 문서](https://reactjs.org/docs/react-dom.html#browser-support)        |
-| Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [공식 문서](https://cli.vuejs.org/guide/browser-compatibility.html)         |
-| Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [공식 문서](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
+| 프레임워크 | 브라우저 지원                       | 선호하는 DSL | 지원되는 DSL들         | 참고자료                                                                    |
+| ---------- | ----------------------------------- | ------------ | ---------------------- | --------------------------------------------------------------------------- |
+| Angular    | Modern                              | TypeScript   | HTML-based; TypeScript | [공식 문서](https://angular.io/guide/browser-support)                       |
+| React      | Modern                              | JSX          | JSX; TypeScript        | [공식 문서](https://reactjs.org/docs/react-dom.html#browser-support)        |
+| Vue        | Modern (IE9+ in Vue 2)              | HTML-based   | HTML-based, JSX, Pug   | [공식 문서](https://cli.vuejs.org/guide/browser-compatibility.html)         |
+| Ember      | Modern (IE9+ in Ember version 2.18) | Handlebars   | Handlebars, TypeScript | [공식 문서](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
 
 > **참고:** 우리가 "HTML-based"이라고 설명한 DSL에는 공식 이름이 없습니다. 실제 DSL은 아니지만 비표준 HTML이므로, 강조할 가치가 있다고 생각합니다.
 
