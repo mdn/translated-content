@@ -21,7 +21,7 @@ javaEnabled()
 
 ### 返値
 
-{{jsxref("boolean")}} 値 `false` です。
+論理値 `false` です。
 
 ## 例
 
