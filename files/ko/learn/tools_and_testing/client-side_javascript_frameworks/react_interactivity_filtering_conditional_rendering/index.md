@@ -1,8 +1,8 @@
 ---
-title: "React 상호작용: 편집, 필터링, 조건부 렌더링"
+title: "React 상호작용: 편집하기, 필터링, 조건부 렌더링"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering
 l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -43,7 +43,7 @@ React 여정이 거의 끝나감에 따라(적어도 지금은), Todo 목록 애
 ```jsx
 function editTask(id, newName) {
   const editedTaskList = tasks.map((task) => {
-    // if this task has the same ID as the edited task
+    // 이 할 일이 편집된 작업과 동일한 ID를 갖는 경우
     if (id === task.id) {
       //
       return { ...task, name: newName };
@@ -74,7 +74,7 @@ const taskList = tasks.map((task) => (
 
 ## 편집을 위한 UI
 
-사용자가 할 일을 편집할 수 있도록 하려면, 그렇게 할 수 있는 사용자 인터페이스를 제공해야 합니다. 먼저 `App` 컴포넌트에서 이전에 했던 것처럼 `useState`를 `Todo` 컴포넌트로 가져옵니다. 첫 번째 가져오기(import) 문을 다음과 같이 업데이트합니다.
+사용자가 할 일을 편집할 수 있도록 하려면, 그렇게 할 수 있는 사용자 인터페이스를 제공해야 합니다. 먼저 `App` 컴포넌트에서 이전에 했던 것처럼 `useState`를 `Todo` 컴포넌트로 가져옵니다. 첫 번째 import 문을 다음과 같이 업데이트합니다.
 
 ```jsx
 import React, { useState } from "react";
@@ -98,18 +98,18 @@ const editingTemplate = (
   <form className="stack-small">
     <div className="form-group">
       <label className="todo-label" htmlFor={props.id}>
-        New name for {props.name}
+        {props.name}의 새로운 이름
       </label>
       <input id={props.id} className="todo-text" type="text" />
     </div>
     <div className="btn-group">
       <button type="button" className="btn todo-cancel">
-        Cancel
-        <span className="visually-hidden">renaming {props.name}</span>
+        취소
+        <span className="visually-hidden">{props.name} 이름 바꾸기</span>
       </button>
       <button type="submit" className="btn btn__primary todo-edit">
-        Save
-        <span className="visually-hidden">new name for {props.name}</span>
+        저장
+        <span className="visually-hidden">{props.name}의 새로운 이름</span>
       </button>
     </div>
   </form>
@@ -129,26 +129,26 @@ const viewTemplate = (
     </div>
     <div className="btn-group">
       <button type="button" className="btn">
-        Edit <span className="visually-hidden">{props.name}</span>
+        편집 <span className="visually-hidden">{props.name}</span>
       </button>
       <button
         type="button"
         className="btn btn__danger"
         onClick={() => props.deleteTask(props.id)}>
-        Delete <span className="visually-hidden">{props.name}</span>
+        삭제 <span className="visually-hidden">{props.name}</span>
       </button>
     </div>
   </div>
 );
 ```
 
-이제 두 개의 서로 다른 상수 내에 정의된, "편집" 및 "보기"라는 두 가지 템플릿 구조가 있습니다. 이는 `<Todo />`의 `return` 문이 이제 반복된다는 것을 의미합니다. 또한 "view" 템플릿의 정의도 포함됩니다. 컴포넌트가 반환하는 템플릿을 결정하기 위해 **조건부 렌더링**을 사용하여 이를 정리할 수 있으므로, UI에서 렌더링됩니다.
+이제 두 개의 서로 다른 상수 내에 정의된, "편집" 및 "보기"라는 두 가지 템플릿 구조가 있습니다. 이는 `<Todo />`의 `return` 문이 이제 반복된다는 것을 의미합니다. 또한 "보기" 템플릿의 정의도 포함됩니다. 컴포넌트가 반환하는 템플릿을 결정하기 위해 **조건부 렌더링**을 사용하여 이를 정리할 수 있으므로, UI에서 렌더링됩니다.
 
 ## 조건부 렌더링
 
 JSX에서는, 조건을 사용하여 브라우저에서 렌더링되는 내용을 변경할 수 있습니다. JSX에서 조건을 작성하려면, [삼항 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)를 사용할 수 있습니다.
 
-`<Todo />` 컴포넌트의 경우, 조건은 "이 할 일을 편집 중입니까?"입니다. `Todo()` 내부의 `return` 문을 다음과 같이 변경합니다.
+`<Todo />` 컴포넌트의 경우, 우리의 조건은 "이 할 일이 편집되고 있는가?"입니다. `Todo()` 내부의 `return` 문을 다음과 같이 변경합니다.
 
 ```jsx
 return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
@@ -164,11 +164,11 @@ return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 
 ```jsx
 <button type="button" className="btn" onClick={() => setEditing(true)}>
-  Edit <span className="visually-hidden">{props.name}</span>
+  편집 <span className="visually-hidden">{props.name}</span>
 </button>
 ```
 
-이제 동일한 `onClick` 핸들러를 `editingTemplate`의 "Cancel" 버튼에 추가하지만, 이번에는 `isEditing`을 `false`로 설정하여 보기 템플릿으로 다시 전환합니다.
+이제 동일한 `onClick` 핸들러를 `editingTemplate`의 "Cancel" 버튼에 추가하지만, 이번에는 `isEditing`을 `false`로 설정하여 "보기" 템플릿으로 다시 전환합니다.
 
 다음과 같이 `editingTemplate`에서 "취소" 버튼을 업데이트합니다.
 
@@ -177,14 +177,14 @@ return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
   type="button"
   className="btn todo-cancel"
   onClick={() => setEditing(false)}>
-  Cancel
-  <span className="visually-hidden">renaming {props.name}</span>
+  취소
+  <span className="visually-hidden">{props.name} 이름 바꾸기</span>
 </button>
 ```
 
 이 코드를 사용하면, 할 일 항목에서 "편집" 및 "취소" 버튼을 눌러 템플릿 간에 전환할 수 있어야 합니다.
 
-![사용 가능한 편집 및 삭제 버튼이 있는 view 템플릿을 보여주는 eat todo 항목](view.png)
+![사용 가능한 편집 및 삭제 버튼이 있는 보기 템플릿을 보여주는 eat todo 항목](view.png)
 
 ![새 이름을 입력할 수 있는 입력 필드와 사용 가능한 취소 및 저장 버튼이 있는 편집 템플릿을 보여주는 eat todo 항목](edit.png)
 
@@ -200,7 +200,7 @@ return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 const [newName, setNewName] = useState("");
 ```
 
-다음으로, 새 이름을 설정할 `handleChange()` 함수를 만듭니다. 훅 아래에 있지만 템플릿 앞에 넣으세요.
+다음으로, 새 이름을 설정할 `handleChange()` 함수를 만듭니다. 이 함수를 훅과 템플릿의 사이에 넣으세요.
 
 ```jsx
 function handleChange(e) {
@@ -246,7 +246,7 @@ function handleSubmit(e) {
 이제 주요 기능이 완성되었으니, 필터 버튼에 대해 생각해볼 수 있습니다. 현재, 필터 버튼은 "All" 레이블을 반복하며, 아무런 기능도 없습니다! 여기에는 `<Todo />` 컴포넌트에서 사용했던 몇 가지 기술을 다시 적용할 것입니다.
 
 - 활성된 필터를 저장하기 위한 훅을 만듭니다.
-- 사용자가 활성 필터를 모두, 완료됨, 완료되지 않음으로 변경할 수 있는 `<필터 버튼 />` 요소의 배열을 렌더링합니다.
+- 사용자가 활성 필터를 모두, 완료됨, 완료되지 않음으로 변경할 수 있는 `<FilterButton />` 요소의 배열을 렌더링합니다.
 
 ### 필터 훅 추가하기
 
@@ -265,7 +265,7 @@ const [filter, setFilter] = useState("All");
 
 JavaScript 객체는 이름과 행위를 연결하는 좋은 방법입니다. 각 키는 필터의 이름입니다. 각 속성은 해당 이름과 관련된 행위입니다.
 
-`App.js` 상단에, import 문들(가져오기) 아래에 있지만 `App()` 함수 위에, `FILTER_MAP` 이라는 객체를 추가해보겠습니다.
+`App.js` 상단에, import 문들 아래에 있지만 `App()` 함수 위에, `FILTER_MAP` 이라는 객체를 추가해보겠습니다.
 
 ```jsx
 const FILTER_MAP = {
@@ -309,7 +309,7 @@ const filterList = FILTER_NAMES.map((name) => (
 <FilterButton />
 ```
 
-이 코드로:
+이 코드로 변경해주세요.
 
 ```jsx-nolint
 {filterList}
@@ -353,9 +353,9 @@ function FilterButton(props) {
       className="btn toggle-btn"
       aria-pressed={props.isPressed}
       onClick={() => props.setFilter(props.name)}>
-      <span className="visually-hidden">Show </span>
+      <span className="visually-hidden">보여주다</span>
       <span>{props.name}</span>
-      <span className="visually-hidden"> tasks</span>
+      <span className="visually-hidden">할 일들</span>
     </button>
   );
 }
