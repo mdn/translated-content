@@ -70,6 +70,227 @@ slug: Web/MathML/Attribute
       <td><code>close</code>  {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mfenced") }}</td>
       <td>用于结尾分隔符的字符串。</td>
+    </tr>
+    </tr>
+    <tr>
+      <td><code>columnspacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格列间距。</td>
+    </tr>
+    <tr>
+      <td><code>columnspan</code></td>
+      <td>{{ MathMLElement("mtd") }}</td>
+      <td>
+        一个非负整数值，表示单元格扩展到多少表格列。
+      </td>
+    </tr>
+    <tr>
+      <td><code>denomalign</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>分数下分母的对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>depth</code></td>
+      <td>{{ MathMLElement("mpadded") }}</td>
+      <td>
+       一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的深度（基线以下）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>dir</code></td>
+      <td>
+        <a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a>
+      </td>
+      <td>
+        文本方向，可能的值为 <code>ltr</code>（从左到右）或 <code>rtl</code>（从右到左）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>display</code></td>
+      <td>{{ MathMLElement("math") }}</td>
+      <td>
+        指定渲染模式，允许的值为 <code>block</code> 和 <code>inline</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>displaystyle</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        <p>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>fence</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定运算符是否为分隔符（如括号）。该属性没有视觉效果。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontfamily</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-family"><code>font-family</code> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontsize</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontstyle</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontweight</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-weight"><code>font-weight</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>frame</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>
+        指定整个 {{ MathMLElement("mtable") }} 的边框显示。可能的值为 <code>none</code>（默认）、<code>solid</code> 和 <code>dashed</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>framespacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>
+        指定在表格和 <code>frame</code> 之间添加的额外空间。
+      </td>
+    </tr>
+    <tr>
+      <td><code>height</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }}、{{ MathMLElement("mspace") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的高度（基线之上）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>用于设置指向指定 URI 的超链接。</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>设置与元素相关的唯一标识符。</td>
+    </tr>
+    <tr>
+      <td><code>linethickness</code></td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示水平分数线的厚度。</td>
+    </tr>
+    <tr>
+      <td><code>lspace</code></td>
+      <td>
+        {{ MathMLElement("mo") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符前的空间大小。
+      </td>
+    </tr>
+    <tr>
+      <td><code>lspace</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示子内容的定位点相对于元素定位点的水平位置。
+      </td>
+    </tr>
+    <tr>
+      <td><code>lquote</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("ms") }}</td>
+      <td>
+        包含内容的起始引号，默认值为 <code>&amp;quot;</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathbackground</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        元素的 <a href="/zh-CN/docs/Web/CSS/background-color">background-color</a> 值。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathcolor</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        元素的 <a href="/zh-CN/docs/Web/CSS/color">color</a> 值。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathsize</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，作为元素的 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 值。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathvariant</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>标记元素的逻辑类别，在排版上有所不同。</td>
+    </tr>
+    <tr>
+      <td><code>maxsize</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符在拉伸状态下的最大尺寸。</td>
+    </tr>
+    <tr>
+      <td><code>minsize</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符在拉伸状态下的最小尺寸。</td>
+    </tr>
+    <tr>
+      <td><code>movablelimits</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下标和上标位置。
+      </td>
+    </tr>
+    <tr>
+      <td><code>notation</code></td>
+      <td>{{ MathMLElement("menclose") }}</td>
+      <td>
+        应用于子元素的符号列表，以空白符分隔。
+      </td>
+    </tr>
+    <tr>
+      <td><code>numalign</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>分数中分子的对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>open</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>用于起始分隔符的字符串。</td>
+    </tr>
+    <tr>
+      <td><code>rowalign</code></td>
+      <td>
+        {{ MathMLElement("mtable") }}、{{ MathMLElement("mtd") }}、{{ MathMLElement("mtr") }}
+      </td>
+      <td>指定单元格的垂直对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>rowlines</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格行的边框大小。</td>
+    </tr>
     <tr>
       <td><code>rowspacing</code></td>
       <td>{{ MathMLElement("mtable") }}</td>
@@ -91,7 +312,7 @@ slug: Web/MathML/Attribute
       <td><code>rquote</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("ms") }}</td>
       <td>
-        结尾引语，用于包含内容。默认值为 <code>&amp;quot;</code>。
+        包含内容的结尾引号，默认值为 <code>&amp;quot;</code>。
       </td>
     </tr>
     <tr>
