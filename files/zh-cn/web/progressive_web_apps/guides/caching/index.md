@@ -44,11 +44,11 @@ service worker 是 PWA 的一部分：它是在其自己的线程中运行的单
 
 PWA 可以在任何时候缓存资源，但在实践中，大多数 PWA 选择在以下几个时间点缓存它们：
 
-- **在 service worker 的 `install` 事件处理程序中（预缓存）**：当 service worker 被安装时，浏览器会在 service worker 的全局作用域中触发一个名为 {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} 的事件。此时，service worker 可以_预缓存_资源，从网络获取它们并将它们存储在缓存中。
+- **在 service worker 的 `install` 事件处理程序中（预缓存）**：当 service worker 被安装时，浏览器会在 service worker 的全局作用域中触发一个名为 {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} 的事件。此时，service worker 可以*预缓存*资源，从网络获取它们并将它们存储在缓存中。
 
- > **备注：** service worker 的安装时间与 PWA 的安装时间不同。一个 service worker 的 `install` 事件会在 service worker 被下载和执行后立即触发，这通常会发生在用户首次访问你的网站时。
- >
- > 即使用户从未将你的网站安装为 PWA，其 service worker 也会被安装和激活。
+> **备注：** service worker 的安装时间与 PWA 的安装时间不同。一个 service worker 的 `install` 事件会在 service worker 被下载和执行后立即触发，这通常会发生在用户首次访问你的网站时。
+>
+> 即使用户从未将你的网站安装为 PWA，其 service worker 也会被安装和激活。
 
 - **在 service worker 的 `fetch` 事件处理程序中**：当 service worker 的 `fetch` 事件被触发时，service worker 可以将请求转发到网络，并缓存结果响应，无论缓存中是否已经包含了响应，亦或是用较新的响应来更新缓存中的响应。
 
@@ -82,12 +82,12 @@ const cacheName = "MyCache_1";
 const precachedResources = ["/", "/app.js", "/style.css"];
 
 async function precache() {
- const cache = await caches.open(cacheName);
- return cache.addAll(precachedResources);
+  const cache = await caches.open(cacheName);
+  return cache.addAll(precachedResources);
 }
 
 self.addEventListener("install", (event) => {
- event.waitUntil(precache());
+  event.waitUntil(precache());
 });
 ```
 
@@ -97,26 +97,26 @@ self.addEventListener("install", (event) => {
 
 ```js
 async function cacheFirst(request) {
- const cachedResponse = await caches.match(request);
- if (cachedResponse) {
-   return cachedResponse;
- }
- try {
-   const networkResponse = await fetch(request);
-   if (networkResponse.ok) {
-     const cache = await caches.open("MyCache_1");
-     cache.put(request, networkResponse.clone());
-   }
-   return networkResponse;
- } catch (error) {
-   return Response.error();
- }
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open("MyCache_1");
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    return Response.error();
+  }
 }
 
 self.addEventListener("fetch", (event) => {
- if (precachedResources.includes(url.pathname)) {
-   event.respondWith(cacheFirst(event.request));
- }
+  if (precachedResources.includes(url.pathname)) {
+    event.respondWith(cacheFirst(event.request));
+  }
 });
 ```
 
@@ -138,8 +138,8 @@ self.addEventListener("fetch", (event) => {
 
 ```js
 function isCacheable(request) {
- const url = new URL(request.url);
- return !url.pathname.endsWith(".json");
+  const url = new URL(request.url);
+  return !url.pathname.endsWith(".json");
 }
 
 async function cacheFirstWithRefresh(request) {
@@ -205,7 +205,7 @@ PWA 应该在 service worker 的 {{domxref("ServiceWorkerGlobalScope.activate_ev
 ## 参见
 
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [存储配额和驱逐标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 - [service worker 缓存策略](https://developer.chrome.com/docs/workbox/caching-strategies-overview/) on developer.chrome.com (2021)
 - [离线应用程序开发指南](https://web.dev/offline-cookbook/) on web.dev (2020)
