@@ -694,7 +694,7 @@ aside {
 
 ## 실력을 체크해 보세요
 
-이 글의 마지막까지 읽었지만 가장 중요한 정보를 기억할 수 있나요? 계속 진행하기 전에 이 정보를 기억하고 있는지 확인할 수 있는 몇 가지 추가 테스트가 있습니다. [Test your skills: Grid](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
+이 글의 마지막까지 읽었지만 가장 중요한 정보를 기억할 수 있나요? 계속 진행하기 전에 이 정보를 기억하고 있는지 확인할 수 있는 몇 가지 추가 테스트가 있습니다. [Test your skills: Grid](/ko/docs/Learn/CSS/CSS_layout/Grid_skills).
 
 ## 요약
 
