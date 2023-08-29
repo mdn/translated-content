@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('durationchange', (event) => { });
+addEventListener("durationchange", (event) => {});
 
-ondurationchange = (event) => { };
+ondurationchange = (event) => {};
 ```
 
 ## イベント型
@@ -30,20 +30,20 @@ ondurationchange = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('durationchange', (event) => {
-  console.log('理由はわかりませんが、動画の再生時間が変わりました。');
+video.addEventListener("durationchange", (event) => {
+  console.log("理由はわかりませんが、動画の再生時間が変わりました。");
 });
 ```
 
 `ondurationchange` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ondurationchange = (event) => {
-  console.log('理由はわかりませんが、動画の再生時間が変わりました。');
+  console.log("理由はわかりませんが、動画の再生時間が変わりました。");
 };
 ```
 

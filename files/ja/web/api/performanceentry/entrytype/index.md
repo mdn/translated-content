@@ -21,13 +21,13 @@ var type = entry.entryType;
 
 ### パフォーマンスエントリタイプの名前
 
-| 値                    | サブタイプ                                                                                                 | name プロパティのタイプ          | name プロパティの説明                                                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}         | ドキュメントのアドレス                                                                                                             |
-| `resource`            | {{domxref('PerformanceResourceTiming')}}                                                       | {{domxref("URL")}}         | リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。                                 |
-| `mark`                | {{domxref('PerformanceMark')}}                                                                   | {{domxref("DOMString")}} | {{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前              |
-| `measure`             | {{domxref('PerformanceMeasure')}}                                                               | {{domxref("DOMString")}} | メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前 |
-| `paint`               | {{domxref('PerformancePaintTiming')}}                                                           | {{domxref("DOMString")}} | `'first-paint'` もしくは `'first-contentful-paint'` のいずれか                                                                     |
+| 値                    | サブタイプ                                                                        | name プロパティのタイプ  | name プロパティの説明                                                                                            |
+| --------------------- | --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}       | ドキュメントのアドレス                                                                                           |
+| `resource`            | {{domxref('PerformanceResourceTiming')}}                                          | {{domxref("URL")}}       | リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。               |
+| `mark`                | {{domxref('PerformanceMark')}}                                                    | {{domxref("DOMString")}} | {{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前            |
+| `measure`             | {{domxref('PerformanceMeasure')}}                                                 | {{domxref("DOMString")}} | メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前 |
+| `paint`               | {{domxref('PerformancePaintTiming')}}                                             | {{domxref("DOMString")}} | `'first-paint'` もしくは `'first-contentful-paint'` のいずれか                                                   |
 
 ## 例
 
@@ -35,7 +35,6 @@ var type = entry.entryType;
 
 ```js
 function run_PerformanceEntry() {
-
   // check for feature support before continuing
   if (performance.mark === undefined) {
     console.log("performance.mark not supported");
@@ -47,11 +46,10 @@ function run_PerformanceEntry() {
 
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
-  for (var i=0; i < entriesNamedBegin.length; i++) {
-      var typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
+  for (var i = 0; i < entriesNamedBegin.length; i++) {
+    var typeOfEntry = entriesNamedBegin[i].entryType;
+    console.log("Entry is type: " + typeOfEntry);
   }
-
 }
 ```
 

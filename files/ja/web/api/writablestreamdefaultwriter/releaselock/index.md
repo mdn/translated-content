@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.releaseLock()
+title: "WritableStreamDefaultWriter: releaseLock() メソッド"
+short-title: releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
 l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -26,17 +27,20 @@ releaseLock()
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 

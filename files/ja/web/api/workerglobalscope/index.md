@@ -104,7 +104,7 @@ _このインターフェイスは、{{domxref("EventTarget")}} インターフ�
 コード内で `WorkerGlobalScope` に直接アクセスすることはありません。しかし、プロパティやメソッドが {{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}} のような特化されたグローバルスコープに継承されています。たとえば、ワーカーがほかのスクリプトをインポートした場合、ワーカースコープの `navigator` オブジェクトの内容を以下の 2 行で表示することができます。
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 console.log(navigator);
 ```
 
