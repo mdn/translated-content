@@ -14,9 +14,9 @@ l10n:
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('message', (event) => { })
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { }
+onmessage = (event) => {};
 ```
 
 ## イベント型
@@ -44,11 +44,11 @@ _以下に示したプロパティに加え、親インターフェイスであ�
 
 ```js
 // Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Listen for messages
-socket.addEventListener('message', (event) => {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
 });
 ```
 

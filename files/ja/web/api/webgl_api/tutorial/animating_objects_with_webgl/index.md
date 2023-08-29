@@ -29,7 +29,7 @@ mvRotate(squareRotation, [1, 0, 1]);
 描画後は、元の行列に戻さなければなりません:
 
 ```js
-  mvPopMatrix();
+mvPopMatrix();
 ```
 
 後に描画する別のオブジェクトを回転させてしまうことを防ぐために、元の行列を保存および復元します。今回の例では他に描画するものがありませんので、これは役目がありません。
@@ -37,14 +37,14 @@ mvRotate(squareRotation, [1, 0, 1]);
 実際に動かすために、時間がたつにつれて `squareRotation` の値を変えていくコードを追加しなければなりません。これは最後にアニメーションを行った時刻を追跡する新たな変数 (`lastSquareUpdateTime` と呼びましょう) を作成することで実現できるので、`drawScene()` 関数の末尾に以下のコードを追加します。:
 
 ```js
-  var currentTime = Date.now();
-  if (lastSquareUpdateTime) {
-    var delta = currentTime - lastSquareUpdateTime;
+var currentTime = Date.now();
+if (lastSquareUpdateTime) {
+  var delta = currentTime - lastSquareUpdateTime;
 
-    squareRotation += (30 * delta) / 1000.0;
-  }
+  squareRotation += (30 * delta) / 1000.0;
+}
 
-  lastSquareUpdateTime = currentTime;
+lastSquareUpdateTime = currentTime;
 ```
 
 このコードは正方形をどれだけ回転させるかを決めるために、最後に `squareRotation` の値を更新してから経過した時間を使用しています。
@@ -72,15 +72,15 @@ var zIncValue = 0.3;
 そして先ほどの回転させるサンプルコードを、以下のコードを追加して更新します:
 
 ```js
-    squareXOffset += xIncValue * ((30 * delta) / 1000.0);
-    squareYOffset += yIncValue * ((30 * delta) / 1000.0);
-    squareZOffset += zIncValue * ((30 * delta) / 1000.0);
+squareXOffset += xIncValue * ((30 * delta) / 1000.0);
+squareYOffset += yIncValue * ((30 * delta) / 1000.0);
+squareZOffset += zIncValue * ((30 * delta) / 1000.0);
 
-    if (Math.abs(squareYOffset) > 2.5) {
-      xIncValue = -xIncValue;
-      yIncValue = -yIncValue;
-      zIncValue = -zIncValue;
-    }
+if (Math.abs(squareYOffset) > 2.5) {
+  xIncValue = -xIncValue;
+  yIncValue = -yIncValue;
+  zIncValue = -zIncValue;
+}
 ```
 
 最後に、以下のコードを `drawScene()` 関数に追加します:
@@ -113,7 +113,7 @@ function mvPushMatrix(m) {
 
 function mvPopMatrix() {
   if (!mvMatrixStack.length) {
-    throw("空の行列スタックからポップすることはできません。");
+    throw "空の行列スタックからポップすることはできません。";
   }
 
   mvMatrix = mvMatrixStack.pop();
@@ -121,7 +121,7 @@ function mvPopMatrix() {
 }
 
 function mvRotate(angle, v) {
-  var inRadians = angle * Math.PI / 180.0;
+  var inRadians = (angle * Math.PI) / 180.0;
 
   var m = Matrix.Rotation(inRadians, $V([v[0], v[1], v[2]])).ensure4x4();
   multMatrix(m);

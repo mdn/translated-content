@@ -234,7 +234,7 @@ function invite(evt) {
 
     if (clickedUsername === myUsername) {
       alert(
-        "I'm afraid I can't let you talk to yourself. That would be weird."
+        "I'm afraid I can't let you talk to yourself. That would be weird.",
       );
       return;
     }
@@ -283,7 +283,7 @@ function handleGetUserMediaError(e) {
     case "NotFoundError":
       alert(
         "Unable to open your call because no camera and/or microphone" +
-          "were found."
+          "were found.",
       );
       break;
     case "SecurityError":

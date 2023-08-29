@@ -45,31 +45,28 @@ let wakeLock = null;
 // 起動ロックを要求するための非同期関数を作成
 const requestWakeLock = async () => {
   try {
-    wakeLock = await navigator.wakeLock.request('screen');
+    wakeLock = await navigator.wakeLock.request("screen");
 
     // release イベントを待ち受け
-    wakeLock.addEventListener('release', () => {
+    wakeLock.addEventListener("release", () => {
       // 起動ロックが解放されたら、それに合わせて UI を変更する
     });
-
   } catch (err) {
     // 起動ロックに失敗した場合 - ふつうはバッテリーなどシステム関連
-
   }
-}
+};
 
-wakeLockOnButton.addEventListener('click', () => {
+wakeLockOnButton.addEventListener("click", () => {
   requestWakeLock();
-})
+});
 
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   if (wakeLock !== null) {
-    wakeLock.release()
-      .then(() => {
-        wakeLock = null;
-      })
+    wakeLock.release().then(() => {
+      wakeLock = null;
+    });
   }
-})
+});
 ```
 
 ## 仕様書

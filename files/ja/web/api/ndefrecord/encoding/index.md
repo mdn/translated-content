@@ -10,7 +10,7 @@ slug: Web/API/NDEFRecord/encoding
 ## 構文
 
 ```js
-NDEFRecord.encoding
+NDEFRecord.encoding;
 ```
 
 ### 値

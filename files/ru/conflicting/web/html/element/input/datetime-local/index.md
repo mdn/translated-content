@@ -1,17 +1,6 @@
 ---
 title: <input type="datetime">
 slug: conflicting/Web/HTML/Element/input/datetime-local
-tags:
-  - Element
-  - HTML
-  - HTML формы
-  - Reference
-  - datetime
-  - Устаревший
-  - Формы
-  - Элемент
-  - Элемент ввода
-translation_of: Web/HTML/Element/input/datetime
 original_slug: Web/HTML/Element/Input/datetime
 ---
 {{HTMLSidebar}}

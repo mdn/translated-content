@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-new Worker(aURL)
-new Worker(aURL, options)
+new Worker(aURL);
+new Worker(aURL, options);
 ```
 
 ### 引数
@@ -47,12 +47,12 @@ new Worker(aURL, options)
 次のコードスニペットは `Worker()` コンストラクターを使って {{domxref("Worker")}} オブジェクトを作成し、続いてそのオブジェクトの使い方を表しています。
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 完全な例を見るには、[基本的な専用ワーカーの例](https://github.com/mdn/simple-web-worker)（[専用ワーカーを実行](https://mdn.github.io/simple-web-worker/)）を参照してください。

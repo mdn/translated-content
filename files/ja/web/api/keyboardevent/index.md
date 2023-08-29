@@ -233,32 +233,40 @@ GTK を用いた環境の中には、自動リピート時にネイティブの 
 ## 例
 
 ```js
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
 
-  if (keyName === 'Control') {
-    // do not alert when only Control key is pressed.
-    return;
-  }
+    if (keyName === "Control") {
+      // do not alert when only Control key is pressed.
+      return;
+    }
 
-  if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
-}, false);
+    if (event.ctrlKey) {
+      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+      alert(`Combination of ctrlKey + ${keyName}`);
+    } else {
+      alert(`Key pressed ${keyName}`);
+    }
+  },
+  false,
+);
 
-document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keyup",
+  (event) => {
+    const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
-}, false);
+    // As the user releases the Ctrl key, the key is no longer active,
+    // so event.ctrlKey is false.
+    if (keyName === "Control") {
+      alert("Control key was released");
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書

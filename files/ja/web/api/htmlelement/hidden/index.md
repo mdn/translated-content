@@ -49,7 +49,11 @@ l10n:
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -57,7 +61,11 @@ l10n:
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
@@ -78,7 +86,7 @@ document.getElementById("okButton").addEventListener(
     document.getElementById("welcome").hidden = true;
     document.getElementById("awesome").hidden = false;
   },
-  false
+  false,
 );
 ```
 

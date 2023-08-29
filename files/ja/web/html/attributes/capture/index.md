@@ -11,10 +11,10 @@ slug: Web/HTML/Attributes/capture
 
 `capture` 属性は、 [accept](accept) 属性が画像や動画データの入力に使用するカメラの種類を指定する文字列を値とするものです。
 
-| 値         | 説明                                                |
-| ------------- | ---------------------------------------------------------- |
-| `user`        | ユーザー側のカメラやマイクを使用します。   |
-| `environment` | 外向きのカメラやマイクを使用します。 |
+| 値            | 説明                                     |
+| ------------- | ---------------------------------------- |
+| `user`        | ユーザー側のカメラやマイクを使用します。 |
+| `environment` | 外向きのカメラやマイクを使用します。     |
 
 > **メモ:** capture は、以前は論理属性で、存在する場合、ファイル入力を要求する代わりに、カメラやマイクなどの機器のメディアキャプチャ機器を使用するように要求していました。
 
@@ -25,16 +25,16 @@ slug: Web/HTML/Attributes/capture
 ```html
 <p>
   <label for="soundFile">What does your voice sound like?:</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*">
-  </p>
-  <p>
+  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+</p>
+<p>
   <label for="videoFile">Upload a video:</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*">
-  </p>
-  <p>
+  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+</p>
+<p>
   <label for="imageFile">Upload a photo of yourself:</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*">
-  </p>
+  <input type="file" id="imageFile" capture="user" accept="image/*" />
+</p>
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
