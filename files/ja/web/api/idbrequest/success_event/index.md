@@ -38,28 +38,28 @@ slug: Web/API/IDBRequest/success_event
 
 ```js
 // データベースをオープンする
-const openRequest = window.indexedDB.open('toDoList', 4);
+const openRequest = window.indexedDB.open("toDoList", 4);
 
 openRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('データベースの作成中にエラー発生');
+    console.log("データベースの作成中にエラー発生");
   };
 
   // オブジェクトストアを作成する
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // オブジェクトストアが保有するデータを定義する
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
-openRequest.addEventListener('success', (event) => {
-  console.log('データベースを正常に開きました！');
+openRequest.addEventListener("success", (event) => {
+  console.log("データベースを正常に開きました！");
 });
 ```
 
@@ -67,28 +67,28 @@ openRequest.addEventListener('success', (event) => {
 
 ```js
 // データベースをオープンする
-const openRequest = window.indexedDB.open('toDoList', 4);
+const openRequest = window.indexedDB.open("toDoList", 4);
 
 openRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('データベースの作成中にエラー発生');
+    console.log("データベースの作成中にエラー発生");
   };
 
   // オブジェクトストアを作成する
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // オブジェクトストアが保有するデータを定義する
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 openRequest.onsuccess = (event) => {
-  console.log('データベースを正常に開きました!');
+  console.log("データベースを正常に開きました!");
 };
 ```
 

@@ -14,10 +14,11 @@ slug: Web/HTML/Attributes/minlength
 `minlength="5"` を追加すると、値は空か 5 文字以上でないと有効にはならなくなります。
 
 ```html
-<label for="fruit">Enter a fruit name that is at least 5 letters long</label> <input type="text" minlength="5" id="fruit">
+<label for="fruit">Enter a fruit name that is at least 5 letters long</label>
+<input type="text" minlength="5" id="fruit" />
 ```
 
-擬似クラスを使用すると、要素を値が有効かどうかによってスタイル付けすることができます。この値は null (空欄) または 5 文字以上であれば有効になります。*ライム色*は無効であり、*レモン色は有効です*。
+擬似クラスを使用すると、要素を値が有効かどうかによってスタイル付けすることができます。この値は null (空欄) または 5 文字以上であれば有効になります。*ライム色*は無効であり、_レモン色は有効です_。
 
 ```css
 input {

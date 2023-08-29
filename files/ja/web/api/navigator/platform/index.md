@@ -10,7 +10,7 @@ slug: Web/API/Navigator/platform
 ## 構文
 
 ```js
-platform = navigator.platform
+platform = navigator.platform;
 ```
 
 ### 値

@@ -42,7 +42,7 @@ orphans: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div>
   <p>これは幾らかのテキストを含む最初の段落です。</p>
   <p>

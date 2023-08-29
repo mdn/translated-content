@@ -73,7 +73,9 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 ```js
 document.querySelector("#myButton").addEventListener("click", async () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
-    console.log("selectAudioOutput() に未対応か、安全なコンテキストではありません。");
+    console.log(
+      "selectAudioOutput() に未対応か、安全なコンテキストではありません。",
+    );
     return;
   }
 
