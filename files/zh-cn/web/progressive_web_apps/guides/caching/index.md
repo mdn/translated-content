@@ -30,7 +30,7 @@ Fetch API 定义了一个全局函数 {{domxref("fetch()")}}，用于获取网�
 
 service worker 是 PWA 的一部分：它是在其自己的线程中运行的单独脚本，与应用的主线程分离。
 
-一旦 service worker 激活，当应用请求一个由 service worker 控制的网络资源时，浏览器会在 service worker 的全局作用域内触发一个称为 {{domxref("ServiceWorkerGlobalScope.fetch_event"， "fetch")}} 的事件。这个事件不仅会在主线程显式调用 `fetch()` 时触发，而且在浏览器因页面导航而隐式请求加载页面和子资源（如 JavaScript、CSS 和图片）时也会触发。
+一旦 service worker 激活，当应用请求一个由 service worker 控制的网络资源时，浏览器会在 service worker 的全局作用域内触发一个称为 {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} 的事件。这个事件不仅会在主线程显式调用 `fetch()` 时触发，而且在浏览器因页面导航而隐式请求加载页面和子资源（如 JavaScript、CSS 和图片）时也会触发。
 
 通过监听 `fetch` 事件，service worker 可以拦截请求并返回一个定制的 `Response`。特别是，它可以返回一个本地缓存的响应，而不是总是去网络，或者在设备离线时返回一个本地缓存的响应。
 
