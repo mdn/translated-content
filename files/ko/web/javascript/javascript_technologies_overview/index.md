@@ -34,12 +34,11 @@ JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/
 
 ### 표준화 과정
 
-ECMAScript editions are approved and published as a standard by the ECMA General Assembly on a yearly basis. All development is public on the [Ecma TC39 GitHub organization](https://github.com/tc39), which hosts proposals, the official specification text, and meeting notes.
 ECMAScript 판들은 매년 ECMA 총회에서 표준으로 승인되고 게시됩니다. 모든 개발은 제안, 공식 명세서 문서 및 회의 노트를 호스팅하는 [Ecma TC39 GitHub 조직](https://github.com/tc39)에 공개됩니다.
 
-ECMAScript 6판(ES6이라고 함) 이전에는, 명세가 몇 년에 한 번씩 게시되었으며, 일반적으로 주요 버전 번호로(ES3, ES5 등)로 참조됩니다. ES6 이후에는 명세의 이름이 게시 연도인 ES2017, ES2018 등으로 지정됩니다. ES6는 ES2015와 동의어입니다. _ESNext_는 작성 당시의 다음 버전을 나타내는 동적인 이름입니다. 정의에 따라, 명세가 아직 확정되지 않았기 때문에, ESNext 기능은 제안이라고 부르는 것이 더 정확합니다.
+ECMAScript 6판(ES6이라고 함) 이전에는, 명세가 몇 년에 한 번씩 게시되었으며, 일반적으로 메이저 버전 번호로(ES3, ES5 등)로 참조됩니다. ES6 이후에는 명세의 이름이 게시 연도인 ES2017, ES2018 등으로 지정됩니다. ES6는 ES2015와 동의어입니다. _ESNext_는 작성 당시의 다음 버전을 나타내는 동적인 이름입니다. 정의에 따라, 명세가 아직 확정되지 않았기 때문에, ESNext 기능은 제안이라고 부르는 것이 더 정확합니다.
 
-ECMA-262의 현재 위원회 승인 스냅샷은 [PDF 형식](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) 및 [HTML 형식](https://262.ecma-international.org/13.0/)에서 찾을 수 있습니다. [ECMA-262](https://tc39.es/ecma262/) 및 [ECMA-402](https://tc39.es/ecma402/) 버전은 명세 편집기에서 지속적으로 유지관리 되고 최신 상태로 유지됩니다. TC39 웹사이트는 최신 [ECMA-262](https://tc39.es/ecma262/) 및 [ECMA-402](https://tc39.es/ecma402/) 버전을 호스팅합니다.
+ECMA-262의 현재 위원회 승인 스냅샷은 [PDF 형식](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) 및 [HTML 형식](https://262.ecma-international.org/13.0/)에서 찾을 수 있습니다. [ECMA-262](https://tc39.es/ecma262/) 및 [ECMA-402](https://tc39.es/ecma402/) 버전은 명세 편집자들이 최신 상태로 유지합니다. TC39 웹사이트는 최신 [ECMA-262](https://tc39.es/ecma262/) 및 [ECMA-402](https://tc39.es/ecma402/) 버전을 호스팅합니다.
 
 새로운 문법 및 API 도입, 기존 동작 수정 등 새로운 언어 기능은 제안 형식으로 논의됩니다. 각 제안은 [4단계 프로세스](https://tc39.es/process-document/)를 거치며, 일반적으로 3단계 또는 4단계에서 JavavScript 엔진에 의해 구현되므로 공개적으로 사용할 수 있습니다.
 
@@ -47,7 +46,7 @@ ECMAScript 기록에 대한 자세한 내용은 [Wikipedia ECMAScript 항목](ht
 
 ### 국제화 API
 
-[ECMAScript 국제화 API 사양](https://402.ecma-international.org/1.0/)은 Ecma TC39에서 역시 표준화한 ECMAScript 언어 명세에 추가된 것입니다. 국제화 API는 JavaScript 애플리케이션을 위한 콜레이션(문자열 비교), 숫자 형식 및 날짜 및 시간 형식을 제공하여, 애플리케이션이 언어를 선택하고 필요에 맞게 기능을 적용할 수 있는 방법입니다. 초기 표준안은 2012년 12월에 통과했으며 브라우저 구현 상태는 {{jsxref("Intl")}} 객체 문서에서 추적 중입니다. 최근에는 국제화 명세도 매년 비준하고 있으며 브라우저 구현도 계속하여 향상 중입니다.
+[ECMAScript 국제화 API 명세](https://402.ecma-international.org/1.0/)은 Ecma TC39에서 표준화된 것과 같이 ECMAScript 언어 명세에 추가된 것입니다. 국제화 API는 JavaScript 애플리케이션을 위한 콜레이션(문자열 비교), 숫자 형식 및 날짜 및 시간 형식을 제공하여, 애플리케이션이 언어를 선택하고 필요에 맞게 기능을 적용할 수 있는 방법입니다. 초기 표준안은 2012년 12월에 통과했으며 브라우저 구현 상태는 {{jsxref("Intl")}} 객체 문서에서 추적 중입니다. 최근에는 국제화 명세도 매년 비준하고 있으며 브라우저 구현도 계속하여 개선 중입니다.
 
 ### 관련된 참고 자료
 
@@ -79,11 +78,11 @@ ECMAScript의 관점에서, DOM 명세에 정의된 객체는 "호스트 객체"
 
 ### HTML DOM
 
-웹 마크업 언어인 [HTML](https://html.spec.whatwg.org/multipage/)은 DOM 코어에 정의된 추상화 개념에 엘리먼트의 의미를 더한 레이어라고 할 수 있습니다. HTML DOM은 HTML 요소의 `className` 같은 속성과 [`document.body`](/ko/docs/Web/API/Document/body) 같은 API도 포함한다.
+웹 마크업 언어인 [HTML](https://html.spec.whatwg.org/multipage/)은 DOM 코어에 정의된 추상화 개념에 엘리먼트의 의미를 더한 레이어라고 할 수 있습니다. HTML DOM은 HTML 요소의 `className` 같은 속성과 [`document.body`](/ko/docs/Web/API/Document/body) 같은 API도 포함합니다.
 
-HTML 명세는 문서의 제약도 정의한다. 예를 들어, 순서가 없는 리스트를 나타내는 [`<ul>`](/ko/docs/Web/HTML/Element/ul) 요소의 모든 자식들은 리스트 요소를 나타내는 [`<li>`](/ko/docs/Web/HTML/Element/li) 요소여야 한다. 또한 표준에 정의되지 않은 요소와 속성을 사용하는 것도 금지된다.
+HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없는 리스트를 나타내는 [`<ul>`](/ko/docs/Web/HTML/Element/ul) 요소의 모든 자식들은 리스트 요소를 나타내는 [`<li>`](/ko/docs/Web/HTML/Element/li) 요소여야 합니다. 또한 표준에 정의되지 않은 요소와 속성을 사용하는 것도 금지됩니다.
 
-[`Document`](/ko/docs/Web/API/Document) 객체, [`Window`](/ko/docs/Web/API/Window) 객체, and 다른 DOM 요소들을 찾아보았나요? [DOM 문서](/ko/docs/Web/API/Document_Object_Model)을 읽어보세요
+[`Document`](/ko/docs/Web/API/Document) 객체, [`Window`](/ko/docs/Web/API/Window) 객체나 다른 DOM 요소들을 찾아보았나요? [DOM 문서](/ko/docs/Web/API/Document_Object_Model)을 읽어보세요
 
 ## 알아둘만한 다른 API
 
