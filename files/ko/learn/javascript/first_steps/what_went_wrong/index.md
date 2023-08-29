@@ -51,7 +51,7 @@ l10n:
 앞선 과정에서 [JavaScript 개발자 도구 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 간단한 JavaScript 명령을 입력해 보았습니다. 콘솔을 여는 방법이 기억나지 않으면 이전 링크를 따라 알아보시면 됩니다. 하지만 콘솔은 단순히 명령을 입력하는 기능보다 유용한데, 브라우저의 JavaScript 엔진이 읽은 JavaScript 안에 구문 오류가 존재하면 콘솔에 그 오류가 기록되기 때문입니다. 이제 오류를 잡아 볼 것입니다.
 
 1. `number-game-errors.html`을 연 탭으로 이동해서 JavaScript 콘솔을 엽니다. 스크린샷과 비슷한 내용의 오류 메시지를 볼 수 있어야 합니다.
-   ![](not-a-function.png)
+   ![Firefox의 "숫자 알아맞히기 게임" 데모 페이지입니다. JavaScript 콘솔에 한 가지 오류가 표시됩니다. "X TypeError: guessSubmit.addeventListener is not a function [자세히 알아보기](number-game-errors.html:86:3)".](not-a-function.png)
 2. 오류 메시지의 첫 줄은 다음과 같습니다.
 
    ```plain
@@ -59,7 +59,7 @@ l10n:
    number-game-errors.html:86:15
    ```
 
-   - 첫 번째 부분인 `Uncaught TypeError: guessSubmit.addeventListener`가 함수가 아님에서 무엇이 잘못되었는지를 알 수 있습니다.
+   - 첫 번째 부분인 `Uncaught TypeError: guessSubmit.addeventListener is not a function`에서 무엇이 잘못되었는지를 알 수 있습니다.
    - 두 번째 부분인 `number-game-errors.html:86:15`는 코드에서 오류가 발생한 위치를 알려줍니다. "number-game-errors.html" 파일의 86번째 줄, 15번째 문자입니다.
 
 3. 코드 편집기에서 86번째 줄을 보면 다음과 같은 줄을 찾을 수 있습니다.
@@ -70,7 +70,7 @@ l10n:
    guessSubmit.addeventListener("click", checkGuess);
    ```
 
-4. 오류 메시지 "guessSubmit.addeventListener is not a function"은 우리가 호출한 함수를 JavaScript 인터프리터가 인식하지 못했다는 뜻입니다. 보통 이 오류는 철자를 잘못 적은 경우 발생합니다. 구문의 올바른 철자가 확실하지 않을 땐 MDN에서 기능 참고서를 살펴보는 게 도움이 됩니다. 선호하는 검색 엔진에서 "mdn '기능 이름'"을 검색해 보시면 됩니다. 이 경우 시간을 절약할 수 있는 단축키는 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)입니다.
+4. 오류 메시지 "guessSubmit.addeventListener is not a function"은 우리가 호출한 함수를 JavaScript 인터프리터가 인식하지 못했다는 뜻입니다. 보통 이 오류는 철자를 잘못 적은 경우 발생합니다. 구문의 올바른 철자가 확실하지 않을 땐 MDN에서 기능 참고서를 살펴보는 게 도움이 됩니다. 현재 가장 좋은 방법은 자주 사용하는 검색 엔진에서 "mdn '기능 이름'"으로 검색하는 것입니다. 이 상황에서 시간을 절약하는 방법은 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)입니다.
 
 5. `addEventListener()` 페이지를 보면 함수 이름의 철자가 잘못되어 오류가 발생한 것으로 보입니다. JavaScript는 대소문자를 구분하므로 철자는 물론 대소문자도 잘못 적으면 오류가 발생합니다. `addeventListener`를 `addEventListener`로 수정하면 이 문제가 해결됩니다. 지금 변경해 보세요.
 
@@ -80,7 +80,7 @@ l10n:
 
 1. 페이지를 저장하고 새로고침하면 오류가 사라진 것을 확인할 수 있습니다.
 2. 이제 숫자를 입력하고 Submit guess 버튼을 누르면 또 다른 오류가 표시됩니다.
-   ![](variable-is-null.png)
+   ![동일한 "숫자 알아맞히기 게임" 데모의 스크린샷입니다. 이번에는 콘솔에 다른 오류가 표시되며 "X TypeError: lowOrHi is null"라는 메시지가 표시됩니다.](variable-is-null.png)
 
 3. 이번 오류는 다음과 같습니다.
 
@@ -121,7 +121,7 @@ l10n:
    이 코드는 49번째 줄에서 설정하려고 시도한 후 콘솔에 `lowOrHi`값을 출력합니다. 자세한 내용은[`console.log()`](/ko/docs/Web/API/console/log)를 참조하세요.
 
 7. 저장하고 새로고침하면 `console.log()`가 콘솔에 기록한 결과를 볼 수 있습니다.
-   ![](console-log-output.png)
+   ![동일한 데모의 스크린샷입니다. 콘솔에 단순히 "null"을 읽는 하나의 로그 문이 표시됩니다.](console-log-output.png)
    이 시점에서 `lowOrHi`의 값은 `null`이며, 이는 Firefox 오류 메시지인 `lowOrHi is null`과 일치합니다. 따라서 49번 줄에 확실한 문제가 있습니다. [null](/ko/docs/Web/JavaScript/Reference/Operators/null) 값은 "아무것도 없음" 또는 "값 없음"을 의미합니다. 따라서 요소에 `lowOrHi`를 설정하는 코드 부분이 잘못되었습니다.
 
 8. 어떤 문제일지 생각해 봅시다. 48번째 줄은 [`document.querySelector()`](/ko/docs/Web/API/Document/querySelector) 메서드를 사용해, CSS 선택자로 선택한 요소에 대한 참조를 가져옵니다. 우리 파일의 더 위쪽에서 우리가 찾으려는 문단을 볼 수 있습니다.
@@ -144,7 +144,6 @@ l10n:
 ## 논리 오류
 
 여기까지 왔으면 게임이 정상적으로 플레이되지만, 몇 번 플레이하고 나면 게임이 항상 1을 "무작위" 숫자로 선택한다는 사실을 알게 될 것입니다. 확실히 저희가 원하는 게임 방식이 아닙니다!
-Open in DeepL.com
 
 게임 논리 어딘가에 확실히 문제가 있습니다. 오류를 반환하진 않지만, 정상적인 동작을 하지 못하기 때문입니다.
 
@@ -270,7 +269,7 @@ function checkGuess( {
 
 ## 요약
 
-지금까지 간단한 자바스크립트 프로그램에서 오류를 파악하는 기본 사항을 알아봤습니다. 코드에서 무엇이 잘못되었는지 알아내는 것이 항상 그렇게 간단하지는 않겠지만, 적어도 이렇게 하면 몇 시간의 잠을 절약할 수 있고 특히 학습 여정의 초기 단계에서 일이 제대로 풀리지 않을 때 조금 더 빠르게 진행할 수 있습니다.
+지금까지 간단한 JavaScript 프로그램에서 오류를 파악하는 기본 사항을 알아봤습니다. 코드에서 무엇이 잘못되었는지 알아내는 것이 항상 그렇게 간단하지는 않겠지만, 적어도 이렇게 하면 몇 시간의 잠을 절약할 수 있고 특히 학습 여정의 초기 단계에서 일이 제대로 풀리지 않을 때 조금 더 빠르게 진행할 수 있습니다.
 
 ## 같이 보기
 
