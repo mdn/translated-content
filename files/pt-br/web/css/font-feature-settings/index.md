@@ -27,7 +27,9 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* Global values */
 font-feature-settings: inherit;
@@ -51,25 +53,39 @@ font-feature-settings: unset;
 
 ```css
 /* use small-cap alternate glyphs */
-.smallcaps { font-feature-settings: "smcp" on; }
+.smallcaps {
+  font-feature-settings: "smcp" on;
+}
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
-.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+.allsmallcaps {
+  font-feature-settings: "c2sc", "smcp";
+}
 
 /* enable historical forms */
-.hist { font-feature-settings: "hist"; }
+.hist {
+  font-feature-settings: "hist";
+}
 
 /* disable common ligatures, usually on by default */
-.noligs { font-feature-settings: "liga" 0; }
+.noligs {
+  font-feature-settings: "liga" 0;
+}
 
 /* enable tabular (monospaced) figures */
-td.tabular { font-feature-settings: "tnum"; }
+td.tabular {
+  font-feature-settings: "tnum";
+}
 
 /* enable automatic fractions */
-.fractions { font-feature-settings: "frac"; }
+.fractions {
+  font-feature-settings: "frac";
+}
 
 /* use the second available swash character */
-.swash { font-feature-settings: "swsh" 2; }
+.swash {
+  font-feature-settings: "swsh" 2;
+}
 
 /* enable stylistic set 7 */
 .fancystyle {
@@ -80,8 +96,8 @@ td.tabular { font-feature-settings: "tnum"; }
 
 ## Especificações
 
-| Especificacão                                                                                                    | Estado                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Especificacão                                                                         | Estado                  | Comment            |
+| ------------------------------------------------------------------------------------- | ----------------------- | ------------------ |
 | {{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
 ## Compatibilidade com navegadores

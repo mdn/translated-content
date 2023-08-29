@@ -58,9 +58,7 @@ slug: Web/HTML/Element/rtc
 <div class="info">
   <ruby>
     <rbc>
-      <rb>旧</rb><rt>jiù</rt>
-      <rb>金</rb><rt>jīn</rt>
-      <rb>山</rb><rt>shān</rt>
+      <rb>旧</rb><rt>jiù</rt> <rb>金</rb><rt>jīn</rt> <rb>山</rb><rt>shān</rt>
     </rbc>
     <rtc>San Francisco</rtc>
   </ruby>

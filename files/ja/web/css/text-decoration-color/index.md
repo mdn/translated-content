@@ -58,8 +58,10 @@ text-decoration-color: unset;
 ### 基本的な例
 
 ```html
-<p>This paragraph has <s>some erroneous text</s>
-    inside it that I want to call attention to.</p>
+<p>
+  This paragraph has <s>some erroneous text</s> inside it that I want to call
+  attention to.
+</p>
 ```
 
 ```css

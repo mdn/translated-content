@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ## 構文
 
 ```js
-add(value)
+add(value);
 ```
 
 ### 引数
@@ -32,7 +32,7 @@ add(value)
 var mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // 連鎖可能
+mySet.add(5).add("some text"); // 連鎖可能
 
 console.log(mySet);
 // Set [1, 5, "some text"]

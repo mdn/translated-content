@@ -137,7 +137,7 @@ video.addEventListener(
       streaming = true;
     }
   },
-  false
+  false,
 );
 ```
 
@@ -158,7 +158,7 @@ startbutton.addEventListener(
     takepicture();
     ev.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -385,7 +385,7 @@ function takepicture() {
           streaming = true;
         }
       },
-      false
+      false,
     );
 
     startbutton.addEventListener(
@@ -394,7 +394,7 @@ function takepicture() {
         takepicture();
         ev.preventDefault();
       },
-      false
+      false,
     );
 
     clearphoto();

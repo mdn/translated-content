@@ -298,10 +298,7 @@ HTML は次のようになります。
     <span class="validity"></span>
   </div>
   <div>
-    <input
-      type="button"
-      class="meters"
-      value="身長をフィートとインチで入力" />
+    <input type="button" class="meters" value="身長をフィートとインチで入力" />
   </div>
   <div>
     <input type="submit" value="フォームを送信" />

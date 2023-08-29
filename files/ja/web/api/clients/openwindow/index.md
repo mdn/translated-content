@@ -40,7 +40,7 @@ if (self.Notification.permission === "granted") {
   };
   self.registration.showNotification(
     "メッセージがあります！",
-    notificationObject
+    notificationObject,
   );
 }
 
@@ -55,14 +55,14 @@ self.addEventListener("notificationclick", (e) => {
       const hadWindowToFocus = clientsArr.some((windowClient) =>
         windowClient.url === e.notification.data.url
           ? (windowClient.focus(), true)
-          : false
+          : false,
       );
       // それ以外の場合は、適切な URL への新しいタブを開いてフォーカスします。
       if (!hadWindowToFocus)
         clients
           .openWindow(e.notification.data.url)
           .then((windowClient) => (windowClient ? windowClient.focus() : null));
-    })
+    }),
   );
 });
 ```
