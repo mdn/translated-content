@@ -1,13 +1,13 @@
 ---
-title: 仅限于安全上下文的功能
+title: 仅限于安全上下文的特性
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
 
-本参考列出了仅在安全上下文中可用的网络平台功能，有关定义和更多详情，请参阅[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。
+本参考列出了仅在安全上下文中可用的 web 平台的特性，有关定义和更多详情，请参阅[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。
 
-## 当前仅在安全上下文中可用的功能
+## 当前仅在安全上下文中可用的特性
 
 本节列出了根据规范要求仅在安全上下文中提供的 API。
 
@@ -25,7 +25,7 @@ slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 - [演示 API](/zh-CN/docs/Web/API/Presentation_API)
 - [推送 API](/zh-CN/docs/Web/API/Push_API)
 - [报告 API](/zh-CN/docs/Web/API/Reporting_API)
-- [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API)
+- [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)
 - [存储 API](/zh-CN/docs/Web/API/Storage_API)
 - [Web 验证 API](/zh-CN/docs/Web/API/Web_Authentication_API)
 - [Web 蓝牙](/zh-CN/docs/Web/API/Web_Bluetooth_API)
@@ -42,4 +42,4 @@ slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 ## 参见
 
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
-- [在 Chrome Platform Status 上搜索 “secure context”](https://chromestatus.com/features#secure%20context)
+- [在 Chrome Platform Status 上搜索“secure context”](https://chromestatus.com/features#secure%20context)
