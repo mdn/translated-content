@@ -5,18 +5,16 @@ slug: Glossary/Browser
 
 {{GlossarySidebar}}
 
-网页浏览器是一种从 {{Glossary("World Wide Web","Web")}} 获取和显示页面的程序，并且让用户通过 {{Glossary("hyperlink","超链接")}} 访问更多页面。
+**网络浏览器**或**浏览器**是一种从 {{Glossary("World Wide Web","Web")}} 获取和显示页面的程序，并且让用户通过{{Glossary("hyperlink","超链接")}}访问更多页面。浏览器是最常见的一种用户代理。
 
-## 获悉更多
-
-### 基础知识
+## 参见
 
 - 维基百科上的[浏览器](https://zh.wikipedia.org/wiki/浏览器)
-- [网络的演变](http://www.evolutionoftheweb.com/?hl=zh-cn)
+- {{Glossary("user agent", "用户代理")}}（术语）
+- {{HTTPHeader("User-agent")}}（HTTP 标头）
+- 下载一个浏览器
 
-### 下载一个浏览器
-
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/features/)
-- [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/browser-ie)
-- [Opera Browser](https://www.opera.com/)
+  - [Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/)
+  - [Google Chrome](https://www.google.com/chrome/)
+  - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
+  - [Opera Browser](https://www.opera.com/)
