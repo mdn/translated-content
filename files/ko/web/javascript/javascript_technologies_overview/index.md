@@ -36,7 +36,7 @@ JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/
 
 ECMAScript 판들은 매년 ECMA 총회에서 표준으로 승인되고 게시됩니다. 모든 개발은 제안, 공식 명세서 문서 및 회의 노트를 호스팅하는 [Ecma TC39 GitHub 조직](https://github.com/tc39)에 공개됩니다.
 
-ECMAScript 6판(ES6이라고 함) 이전에는, 명세가 몇 년에 한 번씩 게시되었으며, 일반적으로 메이저 버전 번호로(ES3, ES5 등)로 참조됩니다. ES6 이후에는 명세의 이름이 게시 연도인 ES2017, ES2018 등으로 지정됩니다. ES6는 ES2015와 동의어입니다. _ESNext_는 작성 당시의 다음 버전을 나타내는 동적인 이름입니다. 정의에 따라, 명세가 아직 확정되지 않았기 때문에, ESNext 기능은 제안이라고 부르는 것이 더 정확합니다.
+ECMAScript 6판(ES6이라고 함) 이전에는, 명세가 몇 년에 한 번씩 게시되었으며, 일반적으로 메이저 버전 번호로(ES3, ES5 등)로 참조됩니다. ES6 이후에는 명세의 이름이 게시 연도인 ES2017, ES2018 등으로 지정됩니다. ES6는 ES2015와 동의어입니다. "ESNext"는 작성 당시의 다음 버전을 나타내는 동적인 이름입니다. 정의에 따라, 명세가 아직 확정되지 않았기 때문에, ESNext 기능은 제안이라고 부르는 것이 더 정확합니다.
 
 ECMA-262의 현재 위원회 승인 스냅샷은 [PDF 형식](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) 및 [HTML 형식](https://262.ecma-international.org/13.0/)에서 찾을 수 있습니다. [ECMA-262](https://tc39.es/ecma262/) 및 [ECMA-402](https://tc39.es/ecma402/) 버전은 명세 편집자들이 최신 상태로 유지합니다. TC39 웹사이트는 최신 [ECMA-262](https://tc39.es/ecma262/) 및 [ECMA-402](https://tc39.es/ecma402/) 버전을 호스팅합니다.
 
