@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
-때로는 CSS를 작성할 때 CSS가 예상한 대로 동작하지 않는 문제가 발생합니다. 아마도 특정 선택자가 요소와 일치해야 하지만, 아무일도 일어나지 않거나 박스의 크기가 예상과 다릅니다. 이 기사에서는 CSS 문제를 디버깅하는 방법에 대한 지침을 제공하고 모든 최신 브라우저에 포함된 DevTools가 진행 상황을 찾는 데 어떻게 도움이 되는지 보여줍니다.
+때로는 CSS를 작성할 때 CSS가 예상한 대로 동작하지 않는 문제가 발생합니다. 아마도 특정 선택자가 요소와 일치해야 하지만, 아무 일도 일어나지 않거나 박스의 크기가 예상과 다릅니다. 이 기사에서는 CSS 문제를 디버깅하는 방법에 대한 지침을 제공하고 모든 최신 브라우저에 포함된 DevTools가 진행 상황을 찾는 데 어떻게 도움이 되는지 보여줍니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -47,23 +47,23 @@ l10n:
 
 ## 브라우저 개발자 도구 (DevTools) 사용 방법
 
-[브라우저 개발자 도구란](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 기사는 다양한 브라우저 및 플랫폼에서 도구를 사용하는 방법을 설명하는 최신 안내서입니다. 대부분 특정 브라우저에서 개발하도록 선택할 수 있으므로, 해당 브라우저에 포함된 도구에 가장 익숙해지지만, 다른 브라우저에서 해당 도구에 액세스하는 방법을 알아야합니다. 여러 브라우저간에 다른 렌더링이 표시되는 경우 도움이됩니다.
+[브라우저 개발자 도구란](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 기사는 다양한 브라우저 및 플랫폼에서 도구를 사용하는 방법을 설명하는 최신 안내서입니다. 대부분 특정 브라우저에서 개발하도록 선택할 수 있으므로, 해당 브라우저에 포함된 도구에 가장 익숙해지지만, 다른 브라우저에서 해당 도구에 액세스하는 방법을 알아야 합니다. 여러 브라우저 간에 다른 렌더링이 표시되는 경우 도움이 됩니다.
 
-또한 DevTools를 만들 때 브라우저가 다른 영역에 집중하도록 선택했음을 알 수 있습니다. 예를 들어, Firefox에는 CSS 레이아웃으로 시각적으로 작업하기위한 훌륭한 도구가 있으며, [그리드 레이아웃](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/ko/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) 및 [Shapes](/ko/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)를 검사하고 편집할 수 있습니다. 그러나, 모든 브라우저마다 유사한 기본 도구가 있습니다. 예: 페이지의 요소에 적용된 속성 및 값을 검사하고 편집기에서 변경하는 데 사용됩니다.
+또한 DevTools를 만들 때 브라우저가 다른 영역에 집중하도록 선택했음을 알 수 있습니다. 예를 들어, Firefox에는 CSS 레이아웃으로 시각적으로 작업하기 위한 훌륭한 도구가 있으며, [그리드 레이아웃](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/ko/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) 및 [Shapes](/ko/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)를 검사하고 편집할 수 있습니다. 그러나, 모든 브라우저마다 유사한 기본 도구가 있습니다. 예: 페이지의 요소에 적용된 속성 및 값을 검사하고 편집기에서 변경하는 데 사용됩니다.
 
-이 수업에서는 CSS 작업을 위한 Firefox DevTools의 유용한 기능을 살펴봅니다. 이를 위해 [예제 파일](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html)을 사용하겠습니다. 따라하고 싶다면, 새 탭에 로드하고 위에 링크된 기사에 설명된대로 DevTools를 여세요.
+이 수업에서는 CSS 작업을 위한 Firefox DevTools의 유용한 기능을 살펴봅니다. 이를 위해 [예제 파일](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html)을 사용하겠습니다. 따라 하고 싶다면, 새 탭에 로드하고 위에 링크된 기사에 설명된 대로 DevTools를 여세요.
 
 ## DOM vs 소스 보기
 
 새로운 사용자를 개발자 도구 (DevTools)로 체험할 수 있는 것은 웹 페이지의 [소스 보기](/ko/docs/Tools/View_source) 를 보거나 서버에 넣은 HTML 파일을 볼 때 표시되는 것과 개발자 도구의 [HTML 창](/ko/docs/Tools/Page_Inspector/UI_Tour#HTML_pane)에서 볼 수 있는 것의 차이입니다. 소스 보기를 통해 볼 수 있는 것과 거의 비슷해 보이지만 몇 가지 차이점이 있습니다.
 
-렌더링 된 DOM에서 브라우저가 잘못 작성된 HTML를 수정했을 수 있습니다. `<h2>`를 열고 `</h3>`로 닫는 등의 요소를 잘못 닫은 경우, 브라우저는 수행하려는 작업을 파악하고 DOM의 HTML은 `<h2>`를 `</h2>`로 올바르게 닫습니다. 또한 브라우저에서는 모든 HTML을 표준화하고, DOM은 JavaScript로 변경한 내용도 표시합니다.
+렌더링 된 DOM에서 브라우저가 잘못 작성된 HTML을 수정했을 수 있습니다. `<h2>`를 열고 `</h3>`로 닫는 등의 요소를 잘못 닫은 경우, 브라우저는 수행하려는 작업을 파악하고 DOM의 HTML은 `<h2>`를 `</h2>`로 올바르게 닫습니다. 또한 브라우저에서는 모든 HTML을 표준화하고, DOM은 JavaScript로 변경한 내용도 표시합니다.
 
 소스 보기는 서버에 저장된 HTML 소스 코드입니다. 개발자 도구의 [HTML tree](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree)는 특정 시점에 브라우저가 렌더링하는 내용을 정확하게 보여주므로, 실제로 어떤 일이 일어나고 있는지 파악할 수 있습니다.
 
 ## 적용된 CSS 검사
 
-페이지에서 요소를 마우스 오른쪽/ctrl 키를 누른 채 클릭하고 **검사 (Inspect)** 를 선택하거나, 개발자 도구 디스플레이 왼쪽의 HTML tree 에서 요소를 선택하세요. `box1` 클래스의 요소를 선택하세요. 이것은 테두리 박스가 그려진 페이지의 첫 번째 요소입니다.
+페이지에서 요소를 마우스 오른쪽/ctrl 키를 누른 채 클릭하고 **검사 (Inspect)** 를 선택하거나, 개발자 도구 디스플레이 왼쪽의 HTML tree에서 요소를 선택하세요. `box1` 클래스의 요소를 선택하세요. 이것은 테두리 박스가 그려진 페이지의 첫 번째 요소입니다.
 
 ![DevTools가 열려 있는 이 튜토리얼의 예제 페이지](inspecting1.png)
 
@@ -75,7 +75,7 @@ HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)
 
 **해당 패널이 활성 상태일 때 규칙 보기에서 값을 켜고 끌 수 있습니다. 이 패널 위에 마우스를 가져가면 확인란이 나타납니다. `border-radius`와 같은 규칙의 확인란을 선택 취소하면 CSS가 적용을 중지합니다.**
 
-예를 들어 레이아웃이 잘못되어 어떤 속성이 문제일때 이것을 사용하여 A/B 비교를 수행하여 규칙을 적용했을 때 더 나은지 여부를 결정하고 디버그에 도움을 줄 수 있습니다.
+예를 들어 레이아웃이 잘못되어 어떤 속성이 문제일 때 이것을 사용하여 A/B 비교를 수행하여 규칙을 적용했을 때 더 나은지 여부를 결정하고 디버그에 도움을 줄 수 있습니다.
 
 다음 비디오는 Firefox DevTools를 사용하여 CSS를 디버그하는 데 유용한 팁을 제공합니다.
 
@@ -103,7 +103,7 @@ DevTools를 사용하여 속성을 추가할 수 있습니다. 상자가 `<body>
 
 이전 강의에서 [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)과 변경되는 대체 박스 모델이 있다는 사실에 대해 논의했습니다. 요소의 크기가 요소에 제공한 크기와 패딩 및 테두리를 기반으로 계산되는 방식입니다. DevTools는 요소의 크기가 어떻게 계산되는지 이해하는 데 실제로 도움이 될 수 있습니다.
 
-[레이아웃 보기](/ko/docs/Tools/Page_Inspector/UI_Tour#Layout_view)는 선택한 요소의 박스 모델 다이어그램과 함께 요소가 배치되는 방식을 변경하는 속성 및 값에 대한 설명이 표시됩니다. 여기에는 요소에 명시적으로 사용하지 않았지만 초기 값이 설정된 속성에 대한 설명이 포함됩니다.
+[레이아웃 보기](/ko/docs/Tools/Page_Inspector/UI_Tour#Layout_view)는 선택한 요소의 박스 모델 다이어그램과 함께 요소가 배치되는 방식을 변경하는 속성 및 값에 대한 설명이 표시됩니다. 여기에는 요소에 명시적으로 사용하지 않았지만, 초기 값이 설정된 속성에 대한 설명이 포함됩니다.
 
 이 패널에서 세부 속성 중 하나는 요소가 사용하는 박스 모델을 제어하는 `box-sizing` 속성입니다.
 
@@ -163,7 +163,7 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 ### 테스트 중인 브라우저에서 속성과 값을 지원하나요?
 
-브라우저는 이해하지 못하는 CSS를 무시합니다. 사용 중인 속성이나 값이 테스트 중인 브라우저에서 지원되지 않으면 아무 것도 중단되지 않지만 해당 CSS는 적용되지 않습니다. DevTools는 일반적으로 어떤 방식으로든 지원되지 않는 속성과 값을 강조 표시합니다. 아래 스크린샷에서 브라우저는 {{cssxref("grid-template-columns")}}의 하위 그리드 값을 지원하지 않습니다.
+브라우저는 이해하지 못하는 CSS를 무시합니다. 사용 중인 속성이나 값이 테스트 중인 브라우저에서 지원되지 않으면 아무것도 중단되지 않지만, 해당 CSS는 적용되지 않습니다. DevTools는 일반적으로 어떤 방식으로든 지원되지 않는 속성과 값을 강조 표시합니다. 아래 스크린샷에서 브라우저는 {{cssxref("grid-template-columns")}}의 하위 그리드 값을 지원하지 않습니다.
 
 ![grid-template-columns: subgrid 값이 지원되지 않아 subgrid가 제외된 브라우저 DevTools의 이미지](no-support.png)
 
@@ -171,7 +171,7 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 ### 다른 요소가 CSS를 재정의하고 있나요?
 
-여기서 특이성에 대해 배운 정보가 매우 유용할 것입니다. 당신이 하려고 하는 것을 재정의하는 더 구체적인 무언가가 있다면, 당신은 무엇을 하려고 하는지 알아내려는 매우 좌절감을 주는 게임에 빠질 수 있습니다. 그러나 위에서 설명한대로, DevTools는 적용되는 CSS를 보여주며, 새 선택자를 충분히 구체적으로 만들어 재정의할 수 있도록 할 수 있습니다.
+여기서 특이성에 대해 배운 정보가 매우 유용할 것입니다. 당신이 하려고 하는 것을 재정의하는 더 구체적인 무언가가 있다면, 당신은 무엇을 하려고 하는지 알아내려는 매우 좌절감을 주는 게임에 빠질 수 있습니다. 그러나 위에서 설명한 대로, DevTools는 적용되는 CSS를 보여주며, 새 선택자를 충분히 구체적으로 만들어 재정의할 수 있도록 할 수 있습니다.
 
 ### 문제의 축소된 테스트 사례 만들기
 
