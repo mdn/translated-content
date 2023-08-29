@@ -5,7 +5,7 @@ slug: Glossary/PHP
 
 {{GlossarySidebar}}
 
-PHP（PHP: Hypertext Preprocessor 的递归首字母缩写）是一个开源服务器端脚本语言，可嵌入在 HTML 中，以构建网络应用程序和动态网站。
+PHP（PHP: Hypertext Preprocessor 的递归缩写）是一个开源服务器端脚本语言，可嵌入在 HTML 中，以构建网络应用程序和动态网站。
 
 ## 示例
 
