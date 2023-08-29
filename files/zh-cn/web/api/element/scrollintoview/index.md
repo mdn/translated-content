@@ -29,7 +29,10 @@ scrollIntoView(scrollIntoViewOptions)
   - : 一个包含下列属性的对象：
 
     - `behavior` {{optional_inline}}
-      - : 定义动画过渡效果，`auto` 或 `smooth` 之一。默认为 `auto`。
+      - 定义动画过渡效果，默认为 `auto`。 
+        - `smooth`：平滑滚动。
+        - `instant`：立即滚动。
+        - `auto`：滚动行为由{{cssxref("scroll-behavior")}}决定，通常情况下是`instant`。
     - `block` {{optional_inline}}
       - : 定义垂直方向的对齐，`start`、`center`、`end` 或 `nearest` 之一。默认为 `start`。
     - `inline` {{optional_inline}}
