@@ -5,7 +5,7 @@ slug: Web/Events/Event_handlers
 
 事件是浏览器窗口内触发的信号，用于通知浏览器或操作系统环境的变化。程序员可以创建*事件处理程序*代码，在事件触发时运行，使网页能够适当地响应变化。
 
-本页非常简要地 "提醒 "了如何使用事件和事件处理程序。新开发人员应阅读[事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)。
+本页非常简要地“提醒”了如何使用事件和事件处理程序。新开发人员应阅读[事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)。
 
 ## 有哪些可用事件？
 
@@ -21,7 +21,7 @@ slug: Web/Events/Event_handlers
 
 ### 使用 onevent 属性
 
-按照惯例，触发事件的 JavaScript 对象都有相应的 "onevent "属性（以事件名称的前缀 "on "命名）。当事件触发时，这些属性会被调用来运行相关的处理程序代码，也可能被你自己的代码直接调用。
+按照惯例，触发事件的 JavaScript 对象都有相应的“onevent”属性（以事件名称的前缀“on”命名）。当事件触发时，这些属性会被调用来运行相关的处理程序代码，也可能被你自己的代码直接调用。
 
 要设置事件处理程序代码，只需将其分配给相应的 onevent 属性即可。一个元素中的每个事件只能分配一个事件处理程序。如果需要，可以通过将另一个函数赋值给相同的属性来替换处理程序。
 
@@ -63,7 +63,7 @@ btn.addEventListener("click", greet);
 
 事件监听器的一个显著特点是可以使用终止信号同时清理多个事件处理程序。
 
-具体做法是将相同的 {{domxref("AbortSignal")}} 传递给 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 调用，以便同时删除所有事件处理程序。然后，您可以在拥有 "AbortSignal"（终止信号）的控制器上调用 {{domxref("AbortController/abort()", "abort()")}} ，这样就能移除通过该信号添加的所有事件处理程序。例如，要添加一个可以使用 AbortSignal 移除的事件处理程序：
+具体做法是将相同的 {{domxref("AbortSignal")}} 传递给 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 调用，以便同时删除所有事件处理程序。然后，您可以在拥有“AbortSignal”（终止信号）的控制器上调用 {{domxref("AbortController/abort()", "abort()")}} ，这样就能移除通过该信号添加的所有事件处理程序。例如，要添加一个可以使用 AbortSignal 移除的事件处理程序：
 
 ```js
 const controller = new AbortController();
@@ -73,7 +73,7 @@ btn.addEventListener(
   (event) => {
     console.log("greet:", event);
   },
-  { signal: controller.signal }
+  { signal: controller.signal },
 ); // 将 AbortSignal 传递给该处理程序
 ```
 
