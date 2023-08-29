@@ -32,9 +32,9 @@ Fetch の本文オブジェクトをストリームとして消費し、自分�
 
 ```js
 // 元の画像を読み取る
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // その body を ReadableStream として取得
-  .then((response) => response.body)
+  .then((response) => response.body);
 ```
 
 これにより、 {{domxref("ReadableStream")}} オブジェクトが提供されます。
@@ -45,7 +45,7 @@ fetch('./tortoise.png')
 
 ```js
 // 元の画像をフェッチ
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // その body を ReadableStream として取得
   .then((response) => response.body)
   .then((body) => {
@@ -60,7 +60,7 @@ fetch('./tortoise.png')
 
 ```js
 // 元の画像をフェッチ
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // その body を ReadableStream として取得
   .then((response) => {
     const reader = response.body.getReader();
@@ -74,7 +74,7 @@ fetch('./tortoise.png')
 
 ```js
 // 元の画像を取得
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // 本体を ReadableStream として取得
   .then((response) => {
     const reader = response.body.getReader();
@@ -93,8 +93,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   })
   // 新しいレスポンスをストリームの外に作成
   .then((stream) => new Response(stream))
@@ -102,14 +102,16 @@ fetch('./tortoise.png')
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
   // Update image
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
 `read()` の使用方法を詳しく見てみましょう。 上記の `pump()` 関数では、最初に結果オブジェクトを含むプロミスを返す `read()` を呼び出します。 結果オブジェクトには、次のように読み取りの結果が `{ done, value }` の形式で含まれています。
 
 ```js
-reader.read().then(({ done, value }) => { /* … */ });
+reader.read().then(({ done, value }) => {
+  /* … */
+});
 ```
 
 結果は、次の 3 つの異なる形式のいずれかになります。
@@ -157,22 +159,19 @@ Fetch の場合のように、ブラウザーが提供したストリームか�
 一般的な構文の骨組みは次のようになります。
 
 ```js
-const stream = new ReadableStream({
-  start(controller) {
-
+const stream = new ReadableStream(
+  {
+    start(controller) {},
+    pull(controller) {},
+    cancel() {},
+    type,
+    autoAllocateChunkSize,
   },
-  pull(controller) {
-
+  {
+    highWaterMark: 3,
+    size: () => 1,
   },
-  cancel() {
-
-  },
-  type,
-  autoAllocateChunkSize,
-}, {
-  highWaterMark: 3,
-  size: () => 1,
-});
+);
 ```
 
 コンストラクターは、引数として 2 つのオブジェクトを取ります。 最初のオブジェクトは必須であり、データの読み取り元である基になるソースのモデルを JavaScript で作成します。 2 番目のオブジェクトはオプションであり、ストリームに使用する[カスタムのキューイング戦略](/ja/docs/Web/API/Streams_API/Concepts#内部キューとキューイング戦略)を指定できます。 これを行う必要はほとんどないため、ここでは最初のものに集中します。
@@ -188,7 +187,7 @@ const stream = new ReadableStream({
 
 ```js
 // 元の画像をフェッチ
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // 本体を ReadableStream として取得
   .then((response) => {
     const reader = response.body.getReader();
@@ -207,8 +206,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   });
 ```
 
@@ -229,7 +228,7 @@ readableStream
   .then((stream) => new Response(stream))
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
@@ -247,15 +246,15 @@ const stream = new ReadableStream({
       // ストリームに文字列を追加
       controller.enqueue(string);
       // それを画面に表示
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       readStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // この例では実際には pull は必要ありません
@@ -264,7 +263,7 @@ const stream = new ReadableStream({
     // リーダーがキャンセルされた場合に呼び出されるため、
     // 文字列の生成を停止する必要があります
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -274,7 +273,7 @@ const stream = new ReadableStream({
 function readStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
-  let result = '';
+  let result = "";
 
   // read() は、値を受け取ったときに解決するプロミスを返します
   reader.read().then(function processText({ done, value }) {
@@ -289,7 +288,7 @@ function readStream() {
 
     charsReceived += value.length;
     const chunk = value;
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -331,13 +330,13 @@ function teeStream() {
 
 ```js
 // 元の画像をフェッチ
-fetch('png-logo.png')
+fetch("png-logo.png")
   // その body を ReadableStream として取得
   .then((response) => response.body)
   // 元の画像からグレースケール PNG ストリームを作成
-  .then((rs) => logReadableStream('Fetch Response Stream', rs))
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
   .then((body) => body.pipeThrough(new PNGTransformStream()))
-  .then((rs) => logReadableStream('PNG Chunk Stream', rs))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 {{domxref("TransformStream")}} を使用する例は、まだありません。

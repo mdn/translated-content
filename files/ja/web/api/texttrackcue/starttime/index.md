@@ -18,11 +18,11 @@ l10n:
 以下の例では、 0.1 秒から始まり 0.9 秒で終わる新しい {{domxref("VTTCue")}} （`TextTrackCue` を継承したもの）が作成されます。そして、 `startTime` プロパティがコンソールに表示されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0.1, 0.9, 'Hildy!');
+let cue1 = new VTTCue(0.1, 0.9, "Hildy!");
 console.log(cue1.startTime); // 0.1
 track.addCue(cue1);
 ```

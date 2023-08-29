@@ -27,12 +27,12 @@ _親の {{domxref("Event")}} から継承したプロパティも実装してい
   - : 音声が再生される時間を表す `double` の値です。{{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} の時間として定義されます。
 - `inputBuffer` {{ReadOnlyInline}}
   - : 処理対象の入力音声データが格納されたバッファーの {{domxref("AudioBuffer")}} です。
-      チャンネル数はファクトリーメソッド {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}} の引数 `numberOfInputChannels` で指定した数です。
-      返される `AudioBuffer` はイベントハンドラーのスコープでのみ有効であることに注意してください。
+    チャンネル数はファクトリーメソッド {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}} の引数 `numberOfInputChannels` で指定した数です。
+    返される `AudioBuffer` はイベントハンドラーのスコープでのみ有効であることに注意してください。
 - `outputBuffer` {{ReadOnlyInline}}
   - : 出力音声データを格納する先であるバッファーの {{domxref("AudioBuffer")}} です。
-      チャンネル数はファクトリーメソッド {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}} の引数 `numberOfOutputChannels` で指定した数です。
-      返される `AudioBuffer` はイベントハンドラーのスコープでのみ有効であることに注意してください。
+    チャンネル数はファクトリーメソッド {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}} の引数 `numberOfOutputChannels` で指定した数です。
+    返される `AudioBuffer` はイベントハンドラーのスコープでのみ有効であることに注意してください。
 
 ## 例
 

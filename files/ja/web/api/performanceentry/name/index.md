@@ -19,13 +19,13 @@ var name = entry.name;
 
 以下の表に示すように、返値は `PerformanceEntry` オブジェクトのサブタイプと {{domxref("PerformanceEntry.entryType")}} の値によって異なります。
 
-| 値                               | サブタイプ                                                                                                 | entryType の値        | 説明                                                                                                                                 |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{domxref("URL")}}         | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | `frame`, `navigation` | ドキュメントのアドレス                                                                                                               |
-| {{domxref("URL")}}         | {{domxref('PerformanceResourceTiming')}}                                                       | `resource`            | リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。                                   |
-| {{domxref("DOMString")}} | {{domxref('PerformanceMark')}}                                                                   | `mark`                | {{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前。              |
-| {{domxref("DOMString")}} | {{domxref('PerformanceMeasure')}}                                                               | `measure`             | メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前。 |
-| {{domxref("DOMString")}} | {{domxref('PerformancePaintTiming')}}                                                           | `paint`               | `'first-paint'` もしくは `'first-contentful-paint'` のいずれか                                                                       |
+| 値                       | サブタイプ                                                                        | entryType の値        | 説明                                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| {{domxref("URL")}}       | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | `frame`, `navigation` | ドキュメントのアドレス                                                                                             |
+| {{domxref("URL")}}       | {{domxref('PerformanceResourceTiming')}}                                          | `resource`            | リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。                 |
+| {{domxref("DOMString")}} | {{domxref('PerformanceMark')}}                                                    | `mark`                | {{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前。            |
+| {{domxref("DOMString")}} | {{domxref('PerformanceMeasure')}}                                                 | `measure`             | メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前。 |
+| {{domxref("DOMString")}} | {{domxref('PerformancePaintTiming')}}                                             | `paint`               | `'first-paint'` もしくは `'first-contentful-paint'` のいずれか                                                     |
 
 ## 例
 
@@ -47,7 +47,7 @@ function run_PerformanceEntry() {
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -56,15 +56,13 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (var i = 0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
+    if (supported) log("..." + properties[i] + " = " + obj[properties[i]]);
+    else log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i < methods.length; i++) {
+  for (var i = 0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {

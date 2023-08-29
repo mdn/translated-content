@@ -56,7 +56,9 @@ slug: Web/HTML/Attributes/crossorigin
 以下の {{HTMLElement("script")}} 要素を使用すると、ユーザー資格情報を送信せずに `https://example.com/example-framework.js` スクリプトを実行します。
 
 ```html
-<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous"></script>
 ```
 
 ### 例: 資格情報付きのウェブマニフェスト
@@ -64,7 +66,7 @@ slug: Web/HTML/Attributes/crossorigin
 資格情報を必要とするマニフェストを読み取るときは、同じオリジンからのファイル読み取りであっても `use-credentials` の値を使用する必要があります。
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
 ## 仕様書

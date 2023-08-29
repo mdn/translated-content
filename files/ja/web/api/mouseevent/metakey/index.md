@@ -26,15 +26,17 @@ l10n:
 ### HTML
 
 ```html
-<p><code>metaKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p>
+  <code>metaKey</code> プロパティを試験するためにどこかをクリックしてください。
+</p>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `Meta キーの押下状態: ${e.metaKey}`;

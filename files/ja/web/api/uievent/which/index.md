@@ -45,7 +45,7 @@ l10n:
             `keyCode property: ${evt.keyCode}\n` +
             `which property: ${evt.which}\n` +
             `charCode property: ${evt.charCode}\n` +
-            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`
+            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
         );
       }
 
@@ -53,7 +53,7 @@ l10n:
         alert(
           `onkeydown handler:\n` +
             `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n`
+            `which property: ${evt.which}\n`,
         );
       }
     </script>

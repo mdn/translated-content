@@ -192,7 +192,9 @@ div {
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="image_uploads">アップロードする画像を選択してください (PNG, JPG)</label>
+    <label for="image_uploads"
+      >アップロードする画像を選択してください (PNG, JPG)</label
+    >
     <input
       type="file"
       id="image_uploads"

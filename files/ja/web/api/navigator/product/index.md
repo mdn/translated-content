@@ -12,7 +12,7 @@ slug: Web/API/Navigator/product
 ## 構文
 
 ```js
-productName = navigator.product
+productName = navigator.product;
 ```
 
 ### 値

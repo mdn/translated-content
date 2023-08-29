@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('emptied', (event) => {});
+addEventListener("emptied", (event) => {});
 
-onemptied = (event) => { };
+onemptied = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onemptied = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('emptied', (event) => {
-  console.log('ええっと。メディアが空です。 load() を呼び出しましたか？');
+video.addEventListener("emptied", (event) => {
+  console.log("ええっと。メディアが空です。 load() を呼び出しましたか？");
 });
 ```
 
 `onemptied` イベントハンドラプロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onemptied = (event) => {
-  console.log('ええっと。メディアが空です。 load() を呼び出しましたか？');
+  console.log("ええっと。メディアが空です。 load() を呼び出しましたか？");
 };
 ```
 

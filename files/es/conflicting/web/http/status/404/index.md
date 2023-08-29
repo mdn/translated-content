@@ -1,5 +1,5 @@
 ---
-title: '404'
+title: "404"
 slug: conflicting/Web/HTTP/Status/404
 original_slug: Glossary/404
 ---

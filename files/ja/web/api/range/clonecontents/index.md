@@ -14,7 +14,7 @@ slug: Web/API/Range/cloneContents
 ## 構文
 
 ```js
-cloneContents()
+cloneContents();
 ```
 
 ### 引数

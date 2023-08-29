@@ -22,15 +22,17 @@ l10n:
 ### HTML
 
 ```html
-<p><code>ctrlKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p>
+  <code>ctrlKey</code> プロパティを試験するためにどこかをクリックしてください。
+</p>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `Ctrl キーの押下状態: ${e.ctrlKey}`;
