@@ -1,6 +1,8 @@
 ---
 title: proxy.unregister()
-slug: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
+slug: >-
+  conflicting/Mozilla/Add-ons/WebExtensions/API/proxy_6bfba3c56cbdfed2cc9726f8b30cc651
+original_slug: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
 ---
 
 {{AddonSidebar()}}{{deprecated_header}}

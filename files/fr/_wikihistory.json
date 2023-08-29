@@ -4963,17 +4963,9 @@
     "modified": "2020-10-15T22:04:59.176Z",
     "contributors": ["hellosct1"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/proxy/register": {
-    "modified": "2020-10-15T22:02:15.003Z",
-    "contributors": ["hellosct1", "wbamberg"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/proxy/settings": {
     "modified": "2020-10-15T22:04:59.888Z",
     "contributors": ["hellosct1"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/proxy/unregister": {
-    "modified": "2020-10-15T22:02:18.835Z",
-    "contributors": ["hellosct1", "wbamberg"]
   },
   "Mozilla/Add-ons/WebExtensions/API/runtime": {
     "modified": "2020-10-15T21:57:48.381Z",
@@ -27537,5 +27529,13 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Mozilla/Add-ons/WebExtensions/API/proxy": {
+    "modified": "2020-10-15T22:02:15.003Z",
+    "contributors": ["hellosct1", "wbamberg"]
+  },
+  "conflicting/Mozilla/Add-ons/WebExtensions/API/proxy_6bfba3c56cbdfed2cc9726f8b30cc651": {
+    "modified": "2020-10-15T22:02:18.835Z",
+    "contributors": ["hellosct1", "wbamberg"]
   }
 }

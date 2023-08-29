@@ -3115,6 +3115,8 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/createProperties	/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()	/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 /fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError	/fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onError
+/fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register	/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/proxy
+/fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister	/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/proxy_6bfba3c56cbdfed2cc9726f8b30cc651
 /fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()	/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 /fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts	/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
 /fr/docs/Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outils	/fr/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
