@@ -1,7 +1,7 @@
 ---
 title: 웹 성능 측정하기
 slug: Learn/Performance/Measuring_performance
-i10n:
+l10n:
   commitSource: 79b1494aa78ef35b13ee8c028f6d4838478a6420
 ---
 
