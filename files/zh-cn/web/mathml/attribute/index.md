@@ -67,10 +67,26 @@ slug: Web/MathML/Attribute
       </td>
     </tr>
     <tr>
-      <td><code>close</code>  {{deprecated_inline}}</td>
+      <td><code>close</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mfenced") }}</td>
       <td>用于结尾分隔符的字符串。</td>
     </tr>
+    <tr>
+      <td><code>color</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>请使用 CSS <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 代替。</td>
+    </tr>
+    <tr>
+      <td><code>columnalign</code></td>
+      <td>
+        {{ MathMLElement("mtable") }}、{{ MathMLElement("mtd") }}、{{ MathMLElement("mtr") }}
+      </td>
+      <td>指定表格单元格的水平对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>columnlines</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格列边框。</td>
     </tr>
     <tr>
       <td><code>columnspacing</code></td>
@@ -132,7 +148,7 @@ slug: Web/MathML/Attribute
       <td><code>fontfamily</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-family"><code>font-family</code> 代替。
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-family"><code>font-family</code></a> 代替。
       </td>
     </tr>
     <tr>
@@ -390,8 +406,11 @@ slug: Web/MathML/Attribute
     <tr>
       <td><code>voffset</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
-      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示子内容的定位点相对于元素定位点的垂直位置。
-</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"
+          ><code>&lt;length-percentage&gt;</code></a
+        > 值，表示子内容的定位点相对于元素定位点的垂直位置。
+      </td>
     </tr>
     <tr>
       <td><code>width</code></td>
