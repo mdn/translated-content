@@ -282,7 +282,7 @@ console.log(a, b, c); // "aaa" "b" "cc"
 - {{jsxref("Statements/const", "const")}}
 - [变量提升](/zh-CN/docs/Glossary/Hoisting)
 - [深入 ES6：`let` 和 `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)——hacks.mozilla.org（2015）
-- [Firefox 44 中 `let` 和 `const` 的惊人变化](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)——blog.mozilla.org（2015）
+- [Firefox 44 中 `let` 和 `const` 的破坏性变更](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)——blog.mozilla.org（2015）
 - [你不懂 JS：作用域和闭包 第三章：函数对决块作用域](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)——Kyle Simpson
 - [什么是暂时性死区？](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850)——Stack Overflow
 - [`let` 和 `var` 在用法上有什么不同？](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)——Stack Overflow
