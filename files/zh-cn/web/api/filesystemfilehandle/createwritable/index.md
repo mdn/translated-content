@@ -20,10 +20,10 @@ createWritable(options)
 
 - `options` {{optional_inline}}
 
-  - : 一个包含以下属性的对象:
+  - : 一个包含以下属性的对象：
 
     - `keepExistingData`
-      - : {{jsxref('Boolean', '布尔值')}}，默认为 `false`。当设为 `true` 时，如果文件存在， 则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
+      - : {{jsxref('Boolean', '布尔值')}}，默认为 `false`。当设为 `true` 时，如果文件存在，则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
 
 ### 返回值
 
