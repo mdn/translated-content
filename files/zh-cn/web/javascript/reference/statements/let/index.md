@@ -42,7 +42,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 相较于 {{jsxref("Statements/var", "var")}}，`let` 声明有以下不同点：
 
 - `let` 声明的作用域是块或函数。
-- `let` 声明只能在执行到声明书写处之后才能被访问（参见[暂时性死区](#暂时性死区)）。因此，`let` 声明通常被视为是[非提升的](/zh-CN/docs/Glossary/Hoisting)。
+- `let` 声明的变量只能在执行到声明书写处之后才能被访问（参见[暂时性死区](#暂时性死区)）。因此，`let` 声明通常被视为是[非提升的](/zh-CN/docs/Glossary/Hoisting)。
 - `let` 声明在脚本的顶级作用域上声明变量时不会在{{jsxref("globalThis", "全局对象", "", 1)}}上创建属性。
 - `let` 声明的变量不能被同一个作用域中的任何其他声明[重复声明](#重复声明)。
 - `let` [是*声明*，而不是*语句*](/zh-CN/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations)的开头。这意味着，你不能将单独的 `let` 声明当做块的主体使用（因为这样做会让变量无法被访问）。
@@ -59,7 +59,7 @@ if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a sing
 
 ### 暂时性死区
 
-用 `let`、`const` 或 `class` 声明的变量可以称其从代码块的开始一直到代码指定到变量声明的位置并被初始化前，都处于一个“暂时性死区”（Temporal dead zone，TDZ）中。
+用 `let`、`const` 或 `class` 声明的变量可以称其从代码块的开始一直到代码执行到变量声明的位置并被初始化前，都处于一个“暂时性死区”（Temporal dead zone，TDZ）中。
 
 当变量处于暂时性死区之中时，其尚未被初始化，并且任何访问其的尝试都将导致抛出 {{jsxref("ReferenceError")}}。当代码执行到变量被声明的位置时，变量会被初始化为一个值。如果变量声明中未指定初始值，则变量将被初始化为 `undefined`。
 
