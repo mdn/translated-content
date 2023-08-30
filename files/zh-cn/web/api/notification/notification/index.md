@@ -55,7 +55,7 @@ new Notification(title, options)
         使用 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 事件中的 `event.action` 构建适当的响应。
 
     - `silent`
-      - : 一个布尔值，指定通知是否静音（不发出声音或振动），无论设备设置如何。默认值为 `false`，这意味着它不会保持静音。如果被设置为 `true`，那么 `vibrate` 参数不能被传递。
+      - : 一个布尔值，指定通知是否静音（不发出声音或振动），无论设备设置如何。默认值为 `false`，这意味着它不会保持静音。如果被设置为 `true`，那么不能同时传递 `vibrate` 参数。
 
 ### 异常
 
