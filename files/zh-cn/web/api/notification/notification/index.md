@@ -61,7 +61,7 @@ new Notification(title, options)
 
 - {{jsxref("TypeError")}}
   - : 如果满足以下条件之一，则抛出该异常：
-    - `options.silent` 是 `true` 并且 `options.vibrate` 被指定。
+    - `options.silent` 是 `true` 且同时指定了 `options.vibrate`。
     - `options.renotify` 是 `true` 但是 `options.tag` 为空字符串。
 
 ## 示例
