@@ -1,13 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/select
 ---
 
 {{HTMLSidebar}}
@@ -83,7 +76,8 @@ Pour plus d'informations sur la mise en forme de `<select>` :
 L'exemple qui suit est légèrement plus complexe et illustre certaines fonctionnalités qui peuvent être utilisées avec un élément `<select>` :
 
 ```html
-<label>Veuillez choisir un ou plusieurs animaux :
+<label
+  >Veuillez choisir un ou plusieurs animaux :
   <select name="pets" multiple size="4">
     <optgroup label="Animaux à 4-jambes">
       <option value="Chien">Chien</option>
@@ -199,7 +193,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_interactif"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
           >contenu interactif</a
         >,
         <a

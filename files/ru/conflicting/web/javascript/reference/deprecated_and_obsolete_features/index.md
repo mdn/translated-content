@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.clear()
 slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 original_slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
 

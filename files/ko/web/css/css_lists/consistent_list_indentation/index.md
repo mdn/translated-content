@@ -1,7 +1,6 @@
 ---
 title: 일관성있는 리스트 들여쓰기
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
-original_slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}
@@ -78,7 +77,7 @@ ul {margin-left: 40px; padding-left: 0;}
 
 라고 쓰면 됩니다.
 
-물론, 자기 자신이 선호하는 값을 써 넣을 수도 있습니다. 원한다면 둘다 `1.25em`로 정해 줄 수도 있습니다 -- 픽셀에 기반한 들여쓰기에만 묶여있을 이유는 없습니다. 만일 리스트들이 들여쓰기를 하지 않도록 리셋하고 싶으면, 패딩과 마진 값을 0으로 정해 주어야만 합니다.
+물론, 자기 자신이 선호하는 값을 써 넣을 수도 있습니다. 원한다면 둘다 `1.25em`로 정해 줄 수도 있습니다 — 픽셀에 기반한 들여쓰기에만 묶여있을 이유는 없습니다. 만일 리스트들이 들여쓰기를 하지 않도록 리셋하고 싶으면, 패딩과 마진 값을 0으로 정해 주어야만 합니다.
 
 ```
 ul {margin-left: 0; padding-left: 0;}

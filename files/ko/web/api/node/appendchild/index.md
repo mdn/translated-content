@@ -2,6 +2,7 @@
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.appendChild()`** 메소드는 한 노드를 특정 부모 노드의 자식 노드 리스트 중 마지막 자식으로 붙입니다. 만약 주어진 노드가 이미 문서에 존재하는 노드를 참조하고 있다면 `appendChild()` 메소드는 노드를 현재 위치에서 새로운 위치로 이동시킵니다. (문서에 존재하는 노드를 다른 곳으로 붙이기 전에 부모 노드로 부터 지워버릴 필요는 없습니다.)

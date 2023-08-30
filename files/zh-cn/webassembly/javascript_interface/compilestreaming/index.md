@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 
 {{WebAssemblySidebar}}
@@ -33,11 +32,11 @@ Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 下面的例子（在 GitHub 上查看我们的 [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) 示例或者直接[在线预览](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)）直接从流式源传输一个 .wasm 模块然后将其编译为一个 {{jsxref("WebAssembly.Module")}} 对象。因为 `compileStreaming()` 方法可以接受一个结果为 {{domxref("Response")}} 对象的 promise，因此你可以直接用 {{domxref("fetch()")}} 的调用结果来调用该方法。
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(module => WebAssembly.instantiate(module, importObject))
-.then(instance => instance.exports.exported_func());
+WebAssembly.compileStreaming(fetch("simple.wasm"))
+  .then((module) => WebAssembly.instantiate(module, importObject))
+  .then((instance) => instance.exports.exported_func());
 ```
 
 得到的 module 实例接下来通过 {{jsxref("WebAssembly.instantiate()")}} 方法被实例化了，然后调用模块导出的函数。

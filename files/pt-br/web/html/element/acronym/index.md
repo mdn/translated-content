@@ -22,7 +22,10 @@ Este elemento implementa a interface {{domxref('HTMLElement')}}.
 ## Exemplo
 
 ```html
-<p>A <acronym title="World Wide Web">WWW</acronym> é somente um dos componentes da Internet.</p>
+<p>
+  A <acronym title="World Wide Web">WWW</acronym> é somente um dos componentes
+  da Internet.
+</p>
 ```
 
 ## Estilo padrão

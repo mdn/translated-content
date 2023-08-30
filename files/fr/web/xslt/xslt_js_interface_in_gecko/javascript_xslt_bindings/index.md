@@ -1,10 +1,6 @@
 ---
 title: Les liaisons JavaScript/XSLT
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
-tags:
-  - Traduction_à_relire
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
-original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Les_liaisons_JavaScript_XSLT
 ---
 
 ## Les liaisons JavaScript/XSLT

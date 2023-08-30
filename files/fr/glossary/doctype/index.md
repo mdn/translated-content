@@ -1,10 +1,9 @@
 ---
 title: Doctype
 slug: Glossary/Doctype
-translation_of: Glossary/Doctype
 ---
 
-En {{Glossary("HTML")}}, le doctype est le préambule "`<!DOCTYPE html>`" requis en haut de tous les documents. Son seul but est d'empêcher un {{Glossary("Browser","navigateur")}} de passer en soi-disant [“quirks mode”](/fr/docs/Mode_quirks_de_Mozilla) lors du rendu d'un document ; c'est-à-dire que le doctype "`<!DOCTYPE html>`" garantit que le navigateur fait de son mieux pour suivre les spécifications pertinentes, plutôt que d'utiliser un mode de rendu différent incompatible avec certaines spécifications.
+En {{Glossary("HTML")}}, le doctype est le préambule "`<!DOCTYPE html>`" requis en haut de tous les documents. Son seul but est d'empêcher un {{Glossary("Browser","navigateur")}} de passer en soi-disant ["quirks mode"](/fr/docs/Mode_quirks_de_Mozilla) lors du rendu d'un document ; c'est-à-dire que le doctype "`<!DOCTYPE html>`" garantit que le navigateur fait de son mieux pour suivre les spécifications pertinentes, plutôt que d'utiliser un mode de rendu différent incompatible avec certaines spécifications.
 
 ## Voir aussi
 

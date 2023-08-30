@@ -20,8 +20,11 @@ namespace = element.namespaceURI
 在这段代码中，我们检查了元素的{{domxref("localName")}}和`namespaceURI`。如果 `namespaceURI` 返回 XUL 命名空间， `localName` 返回"browser"，于是这个节点被理解为是一个 XUL `<browser/>`。
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  element.localName == "browser" &&
+  element.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // this is a XUL browser
 }
 ```

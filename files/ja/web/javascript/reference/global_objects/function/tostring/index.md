@@ -28,13 +28,13 @@ function.toString()
 `this` 値のオブジェクトが `Function` オブジェクトでない場合、 `toString()` メソッドは {{jsxref("TypeError")}} 例外 ("Function.prototype.toString called on incompatible object") を発生します。
 
 ```js example-bad
-Function.prototype.toString.call('foo'); // TypeError
+Function.prototype.toString.call("foo"); // TypeError
 ```
 
 `toString()` メソッドが組込み関数オブジェクトや `Function.prototype.bind` 作成された関数に対して呼び出されると、 `toString()` は、次のような*ネイティブ関数文字列*を返します。
 
 ```js
-"function () {\n    [native code]\n}"
+"function () {\n    [native code]\n}";
 ```
 
 `toString()` メソッドが `Function` コンストラクターで生成された関数に対して呼び出されると、 `toString()` は "anonymous" という名前の関数宣言に、提供された引数と関数の本体を合成したソースコードを返します。
@@ -42,8 +42,10 @@ Function.prototype.toString.call('foo'); // TypeError
 `+` 演算子を使用して、関数の文字列表現を明示的に取得することもできます。
 
 ```js
-function foo() { return 'bar' }
-console.log(foo + ''); // "function foo() { return 'bar' }"
+function foo() {
+  return "bar";
+}
+console.log(foo + ""); // "function foo() { return 'bar' }"
 ```
 
 ## 例

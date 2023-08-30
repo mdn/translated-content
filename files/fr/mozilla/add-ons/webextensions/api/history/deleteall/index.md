@@ -1,7 +1,6 @@
 ---
 title: history.deleteAll()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 ---
 
 {{AddonSidebar()}}
@@ -15,7 +14,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var deletingAll = browser.history.deleteAll()
+var deletingAll = browser.history.deleteAll();
 ```
 
 ### Paramètres

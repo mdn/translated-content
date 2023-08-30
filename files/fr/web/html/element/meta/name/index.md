@@ -1,8 +1,6 @@
 ---
 title: Noms des métadonnées standard
 slug: Web/HTML/Element/meta/name
-translation_of: Web/HTML/Element/meta/name
-browser-compat: html.elements.meta.name
 ---
 
 {{HTMLSidebar}}
@@ -14,6 +12,7 @@ L'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) permet de fournir des mé
 La spécification HTML définit les noms de métadonnées standard suivants&nbsp;:
 
 - `application-name`
+
   - : Le nom de l'application qui s'exécute sur la page web.
 
     > **Note :**
@@ -30,6 +29,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 - `keywords`
   - : Les mots-clés pertinents pour décrire le contenu de la page, séparés par des virgules.
 - `referrer`
+
   - : Contrôle l'en-tête HTTP [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) pour les requêtes envoyées depuis le document&nbsp;:
 
     <table class="standard-table">
@@ -78,6 +78,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 - [`theme-color`](/fr/docs/Web/HTML/Element/meta/name/theme-color)
   - : Fournit une suggestion de couleur que les agents utilisateur peuvent utiliser afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` doit contenir une couleur CSS valide (voir la page sur le type [`<color>`](/fr/docs/Web/CSS/color_value).
 - `color-scheme`
+
   - : Définit un ou plusieurs schémas de couleurs avec lesquels le document est compatible.
 
     Le navigateur utilisera cette information en complément des réglages du navigateur et du système sous-jacent pour déterminer les couleurs à utiliser en arrière-plan et en premier plan pour les contrôles de formulaire et les barres de défilement. L'utilisation principale de `<meta name="color-scheme">` consiste à indiquer la compatibilité avec les modes de thèmes clair ou sombre et l'ordre de préférence associé.
@@ -94,7 +95,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
     Ainsi, pour indiquer qu'un document préfère être affiché en mode sombre tout en étant aussi compatible avec un mode clair, on aura&nbsp;:
 
     ```html
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="dark light" />
     ```
 
     Cela fonctionne au niveau du document, de la même façon que la propriété [`color-scheme`](/fr/docs/Web/CSS/color-scheme) permet à des éléments individuels d'indiquer leurs schémas de couleurs préférés et acceptables. Pour adapter la mise en forme en fonction du schéma de couleurs, on pourra utiliser la caractéristique média [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme).
@@ -104,6 +105,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 La spécification CSS sur l'adaptation des appareils (<i lang="en">Device Adaptation</i>) définit les noms de métadonnées suivants&nbsp;:
 
 - `viewport`
+
   - : Fournit une indication à propos de la taille initiale de la zone d'affichage ([<i lang="en">viewport</i>](/fr/docs/Glossary/Viewport)).
 
     <table class="fullwidth-table">
@@ -167,10 +169,6 @@ Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeu
 - [Guide MDN pour la compréhension de WCAG, règle de bonne pratique 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Guide W3C pour la compréhension de WCAG 2.0 — Comprendre les critères de succès 1.4.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-##### Voir aussi
-
-La règle-@ [`@viewport`](/fr/docs/Web/CSS/@viewport).
-
 ### Autres noms de métadonnées
 
 [La page wiki du WHATWG sur les MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) contient un large ensemble de noms de métadonnées qui n'ont pas encore été formellement acceptées, mais dont certains sont déjà utilisés en pratique et dont une partie est présentée ici&nbsp;:
@@ -182,20 +180,21 @@ La règle-@ [`@viewport`](/fr/docs/Web/CSS/@viewport).
 - `publisher`
   - : Le nom de l'éditrice ou de l'éditeur (pour la publication) du document.
 - `robots`
+
   - : Le comportement que les robots d'indexation devraient suivre sur la page. Il s'agit d'une liste de valeurs séparées par des virgules et qui sont décrites dans le tableau suivant&nbsp;:
 
-    | Valeur         | Description                                                                                   | Utilisée par                                                                                                                                                                                                                                                                                     |
-    | -------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `index`        | Permet au robot d'indexer la page (valeur par défaut).                                        | Tous                                                                                                                                                                                                                                                                                             |
-    | `noindex`      | Demande au robot de ne pas indexer la page.                                                   | Tous                                                                                                                                                                                                                                                                                             |
-    | `follow`       | Permet au robot de suivre les liens de la page (valeur par défaut).                           | Tous                                                                                                                                                                                                                                                                                             |
-    | `nofollow`     | Demande au robot de ne pas suivre les liens de la page.                                       | Tous                                                                                                                                                                                                                                                                                             |
-    | `all`          | Équivalent à `index, follow`                                                                  | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965067987211-415685194&rd=1)                                                                                                                                                                    |
-    | `none`         | Équivalent à `noindex, nofollow`                                                              | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                                                                    |
-    | `noarchive`    | Demande au moteur de recherche de ne pas mettre en cache le contenu de la page.               | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                           |
-    | `nosnippet`    | Empêche l'affichage d'une description de la page dans les résultats d'un moteur de recherche. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                               |
-    | `noimageindex` | Demande à ce que cette page n'apparaisse pas comme page référente d'une image indexée.        | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                                                              |
-    | `nocache`      | Synonyme de `noarchive`.                                                                      | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                                                                    |
+    | Valeur         | Description                                                                                   | Utilisée par                                                                                                                                                                                                                                           |
+    | -------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `index`        | Permet au robot d'indexer la page (valeur par défaut).                                        | Tous                                                                                                                                                                                                                                                   |
+    | `noindex`      | Demande au robot de ne pas indexer la page.                                                   | Tous                                                                                                                                                                                                                                                   |
+    | `follow`       | Permet au robot de suivre les liens de la page (valeur par défaut).                           | Tous                                                                                                                                                                                                                                                   |
+    | `nofollow`     | Demande au robot de ne pas suivre les liens de la page.                                       | Tous                                                                                                                                                                                                                                                   |
+    | `all`          | Équivalent à `index, follow`                                                                  | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965067987211-415685194&rd=1)                                                                                                                          |
+    | `none`         | Équivalent à `noindex, nofollow`                                                              | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                          |
+    | `noarchive`    | Demande au moteur de recherche de ne pas mettre en cache le contenu de la page.               | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
+    | `nosnippet`    | Empêche l'affichage d'une description de la page dans les résultats d'un moteur de recherche. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
+    | `noimageindex` | Demande à ce que cette page n'apparaisse pas comme page référente d'une image indexée.        | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                    |
+    | `nocache`      | Synonyme de `noarchive`.                                                                      | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                          |
 
   > **Note :**
   >

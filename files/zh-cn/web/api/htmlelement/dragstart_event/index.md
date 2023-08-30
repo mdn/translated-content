@@ -12,9 +12,9 @@ slug: Web/API/HTMLElement/dragstart_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('dragstart', (event) => {});
+addEventListener("dragstart", (event) => {});
 
-ondragstart = (event) => { };
+ondragstart = (event) => {};
 ```
 
 ## 事件类型

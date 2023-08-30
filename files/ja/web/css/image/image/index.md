@@ -1,7 +1,6 @@
 ---
 title: image()
 slug: Web/CSS/image/image
-original_slug: Web/CSS/image/image()
 l10n:
   sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---
@@ -91,7 +90,9 @@ ul {
 ### 背景画像のある範囲の表示
 
 ```html
-<div class="box">この上にカーソルを移動してください。どのように見えますか？</div>
+<div class="box">
+  この上にカーソルを移動してください。どのように見えますか？
+</div>
 ```
 
 ```css

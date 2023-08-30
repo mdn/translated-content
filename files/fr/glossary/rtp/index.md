@@ -1,7 +1,6 @@
 ---
 title: RTP (Real-time Transport Protocol) and SRTP (Secure RTP)
 slug: Glossary/RTP
-translation_of: Glossary/RTP
 ---
 
 Le **Real-time Transport Protocol** (**RTP**) est un protocole réseau qui décrit comment transmettre divers médias (audio, vidéo) d'un point de terminaison à un autre en temps réel. RTP convient aux applications de streaming vidéo, à la téléphonie sur {{glossary ("IP")}} comme Skype et aux technologies de conférence.

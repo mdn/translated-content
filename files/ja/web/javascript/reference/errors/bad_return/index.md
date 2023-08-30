@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
-original_slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 
 {{jsSidebar("Errors")}}
@@ -44,12 +43,12 @@ var cheer = function(score) {
 一見すると、中括弧は正しく見えますが、このコードスニペットでは、最初の `if` 文の後の `{` を忘れています。正しくは以下のようにします。
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
-    return 'Maximum!';
+    return "Maximum!";
   }
   if (score > 100) {
-    return 'Century!';
+    return "Century!";
   }
 };
 ```

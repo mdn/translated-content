@@ -14,39 +14,45 @@ slug: Web/API/WebGL_API/Matrix_math_for_the_web
 虽然存在许多类型的矩阵，但我们感兴趣的是三维变换矩阵。这种矩阵由一个 4x4 方阵，共 16 个值组成。在 JavaScript 中，可以很方便的用数组表示矩阵。比如典型的单位矩阵。单位阵乘上一个点或者矩阵，其结果保持不变。
 
 ```js
-var identityMatrix = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1
-];
+var identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 ```
 
-说到乘法，这种运算用于矩阵是什么样的呢？最简单的例子是矩阵乘一个点。你可能注意到，三维空间中的点和一个 4x4 矩阵并不匹配，为此我们加上了额外的第四维 W。一般来说，把 W 设为 1 就可以了。W 维度还有一些额外的用途超出本文的讨论范围。查看[WebGL model view projection](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection)看它有哪些用途。
+说到乘法，这种运算用于矩阵是什么样的呢？最简单的例子是矩阵乘一个点。你可能注意到，三维空间中的点和一个 4x4 矩阵并不匹配，为此我们加上了额外的第四维 W。一般来说，把 W 设为 1 就可以了。W 维度还有一些额外的用途超出本文的讨论范围。
 
 注意矩阵和点的对齐方式：
 
-```js
+```js-nolint
 [1, 0, 0, 0,
  0, 1, 0, 0,
  0, 0, 1, 0,
  0, 0, 0, 1]
 
-[4, 3, 2, 1]
+[4, 3, 2, 1] // 在 [x, y, z, w] 处求点积
 ```
 
 ### 定义相乘函数
 
-我们在示例代码中定义了一个乘法函数 — `multiplyMatrixAndPoint()`:
+我们在示例代码中定义了一个乘法函数——`multiplyMatrixAndPoint()`：
 
 ```js
 function multiplyMatrixAndPoint(matrix, point) {
-
   // 给矩阵的每一部分一个简单的变量名，列数（c）与行数（r）
-  var c0r0 = matrix[ 0], c1r0 = matrix[ 1], c2r0 = matrix[ 2], c3r0 = matrix[ 3];
-  var c0r1 = matrix[ 4], c1r1 = matrix[ 5], c2r1 = matrix[ 6], c3r1 = matrix[ 7];
-  var c0r2 = matrix[ 8], c1r2 = matrix[ 9], c2r2 = matrix[10], c3r2 = matrix[11];
-  var c0r3 = matrix[12], c1r3 = matrix[13], c2r3 = matrix[14], c3r3 = matrix[15];
+  var c0r0 = matrix[0],
+    c1r0 = matrix[1],
+    c2r0 = matrix[2],
+    c3r0 = matrix[3];
+  var c0r1 = matrix[4],
+    c1r1 = matrix[5],
+    c2r1 = matrix[6],
+    c3r1 = matrix[7];
+  var c0r2 = matrix[8],
+    c1r2 = matrix[9],
+    c2r2 = matrix[10],
+    c3r2 = matrix[11];
+  var c0r3 = matrix[12],
+    c1r3 = matrix[13],
+    c2r3 = matrix[14],
+    c3r3 = matrix[15];
 
   // 定义点坐标
   var x = point[0];
@@ -55,18 +61,18 @@ function multiplyMatrixAndPoint(matrix, point) {
   var w = point[3];
 
   // 点坐标和第一列对应相乘，再求和
-  var resultX = (x * c0r0) + (y * c0r1) + (z * c0r2) + (w * c0r3);
+  var resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
 
   // 点坐标和第二列对应相乘，再求和
-  var resultY = (x * c1r0) + (y * c1r1) + (z * c1r2) + (w * c1r3);
+  var resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
 
   // 点坐标和第三列对应相乘，再求和
-  var resultZ = (x * c2r0) + (y * c2r1) + (z * c2r2) + (w * c2r3);
+  var resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
 
   // 点坐标和第四列对应相乘，再求和
-  var resultW = (x * c3r0) + (y * c3r1) + (z * c3r2) + (w * c3r3);
+  var resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
 
-  return [resultX, resultY, resultZ, resultW]
+  return [resultX, resultY, resultZ, resultW];
 }
 ```
 
@@ -74,7 +80,7 @@ function multiplyMatrixAndPoint(matrix, point) {
 
 ```js
 // identityResult 等于 [4,3,2,1]
-var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]);
+var identityResult = multiplyMatrixAndPoint(identityMatrix, [4, 3, 2, 1]);
 ```
 
 返回同一个点并没有什么用处，但还有一些其他的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
@@ -85,7 +91,6 @@ var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]);
 
 ```js
 function multiplyMatrices(matrixA, matrixB) {
-
   // 将第二个矩阵按列切片
   var column0 = [matrixB[0], matrixB[4], matrixB[8], matrixB[12]];
   var column1 = [matrixB[1], matrixB[5], matrixB[9], matrixB[13]];
@@ -93,18 +98,30 @@ function multiplyMatrices(matrixA, matrixB) {
   var column3 = [matrixB[3], matrixB[7], matrixB[11], matrixB[15]];
 
   // 将每列分别和矩阵相乘
-  var result0 = multiplyMatrixAndPoint( matrixA, column0 );
-  var result1 = multiplyMatrixAndPoint( matrixA, column1 );
-  var result2 = multiplyMatrixAndPoint( matrixA, column2 );
-  var result3 = multiplyMatrixAndPoint( matrixA, column3 );
+  var result0 = multiplyMatrixAndPoint(matrixA, column0);
+  var result1 = multiplyMatrixAndPoint(matrixA, column1);
+  var result2 = multiplyMatrixAndPoint(matrixA, column2);
+  var result3 = multiplyMatrixAndPoint(matrixA, column3);
 
   // 把结果重新组合成矩阵
   return [
-    result0[0], result1[0], result2[0], result3[0],
-    result0[1], result1[1], result2[1], result3[1],
-    result0[2], result1[2], result2[2], result3[2],
-    result0[3], result1[3], result2[3], result3[3]
-  ]
+    result0[0],
+    result1[0],
+    result2[0],
+    result3[0],
+    result0[1],
+    result1[1],
+    result2[1],
+    result3[1],
+    result0[2],
+    result1[2],
+    result2[2],
+    result3[2],
+    result0[3],
+    result1[3],
+    result2[3],
+    result3[3],
+  ];
 }
 ```
 
@@ -113,19 +130,9 @@ function multiplyMatrices(matrixA, matrixB) {
 让我们看一看实际使用：
 
 ```js
-var someMatrix = [
-  4, 0, 0, 0,
-  0, 3, 0, 0,
-  0, 0, 5, 0,
-  4, 8, 4, 1
-]
+var someMatrix = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1];
 
-var identityMatrix = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1
-];
+var identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
 // 返回 someMatrix 的数组表示
 var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
@@ -144,12 +151,7 @@ var x = 50;
 var y = 100;
 var z = 0;
 
-var translationMatrix = [
-    1,    0,    0,   0,
-    0,    1,    0,   0,
-    0,    0,    1,   0,
-    x,    y,    z,   1
-];
+var translationMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, x, y, z, 1];
 ```
 
 ## 用矩阵操作 DOM
@@ -157,7 +159,7 @@ var translationMatrix = [
 一个非常简单的开始使用矩阵的方法是使用 CSS3 里的 `matrix3d` 变换。首先，我们新建一个简单的 {{htmlelement("div")}} 并加上一些内容。这里样式没有展示出来，但我们将其设置成了页面居中且固定宽度与高度。我们同样为变换设定了动画以便清晰的观察发生的变化。
 
 ```html
-<div id='move-me' class='transformable'>
+<div id="move-me" class="transformable">
   <h2>Move me with a matrix</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
 </div>
@@ -168,14 +170,14 @@ var translationMatrix = [
 ```js
 // 从矩阵数组创建 matrix3d 样式属性
 function matrixArrayToCssMatrix(array) {
-  return "matrix3d(" + array.join(',') + ")";
+  return "matrix3d(" + array.join(",") + ")";
 }
 
 // 获取 DOM 元素
-var moveMe = document.getElementById('move-me');
+var moveMe = document.getElementById("move-me");
 
 // 返回结果如："matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1);"
-var matrix3dRule = matrixArrayToCssMatrix( translationMatrix );
+var matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
 
 // 设置变换
 moveMe.style.transform = matrix3dRule;
@@ -192,14 +194,9 @@ moveMe.style.transform = matrix3dRule;
 ```js
 var w = 1.5; // width  (x)
 var h = 0.7; // height (y)
-var d = 1;   // depth  (z)
+var d = 1; // depth  (z)
 
-var scaleMatrix = [
-    w,    0,    0,   0,
-    0,    h,    0,   0,
-    0,    0,    d,   0,
-    0,    0,    0,   1
-];
+var scaleMatrix = [w, 0, 0, 0, 0, h, 0, 0, 0, 0, d, 0, 0, 0, 0, 1];
 ```
 
 [在 JSFiddle 中查看](https://jsfiddle.net/fndd6e1b)
@@ -212,7 +209,7 @@ var scaleMatrix = [
 
 ```js
 // 不借助矩阵将点绕原点旋转
-var point = [10,2];
+var point = [10, 2];
 
 // 计算到原点的距离
 var distance = Math.sqrt(point[0] * point[0] + point[1] * point[1]);
@@ -221,8 +218,8 @@ var distance = Math.sqrt(point[0] * point[0] + point[1] * point[1]);
 var rotationInRadians = Math.PI / 3;
 
 var transformedPoint = [
-  Math.cos( rotationInRadians ) * distance,
-  Math.sin( rotationInRadians ) * distance
+  Math.cos(rotationInRadians) * distance,
+  Math.sin(rotationInRadians) * distance,
 ];
 ```
 
@@ -239,10 +236,22 @@ var a = Math.PI * 0.3; // 转角
 
 // 绕 Z 轴旋转
 var rotateZMatrix = [
-  cos(a), -sin(a),    0,    0,
-  sin(a),  cos(a),    0,    0,
-       0,       0,    1,    0,
-       0,       0,    0,    1
+  cos(a),
+  -sin(a),
+  0,
+  0,
+  sin(a),
+  cos(a),
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
 ];
 ```
 
@@ -254,33 +263,15 @@ var rotateZMatrix = [
 
 ```js
 function rotateAroundXAxis(a) {
-
-  return [
-       1,       0,        0,     0,
-       0,  cos(a),  -sin(a),     0,
-       0,  sin(a),   cos(a),     0,
-       0,       0,        0,     1
-  ];
+  return [1, 0, 0, 0, 0, cos(a), -sin(a), 0, 0, sin(a), cos(a), 0, 0, 0, 0, 1];
 }
 
 function rotateAroundYAxis(a) {
-
-  return [
-     cos(a),   0, sin(a),   0,
-          0,   1,      0,   0,
-    -sin(a),   0, cos(a),   0,
-          0,   0,      0,   1
-  ];
+  return [cos(a), 0, sin(a), 0, 0, 1, 0, 0, -sin(a), 0, cos(a), 0, 0, 0, 0, 1];
 }
 
 function rotateAroundZAxis(a) {
-
-  return [
-    cos(a), -sin(a),    0,    0,
-    sin(a),  cos(a),    0,    0,
-         0,       0,    1,    0,
-         0,       0,    0,    1
-  ];
+  return [cos(a), -sin(a), 0, 0, sin(a), cos(a), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 }
 ```
 
@@ -304,9 +295,9 @@ function rotateAroundZAxis(a) {
 
 ```js
 var transformMatrix = MDN.multiplyArrayOfMatrices([
-  rotateAroundZAxis(Math.PI * 0.5),    // 第 3 步：旋转 90 度
-  translate(0, 200, 0),                // 第 2 步：下移 100 像素
-  scale(0.8, 0.8, 0.8),                // 第 1 步：缩小
+  rotateAroundZAxis(Math.PI * 0.5), // 第 3 步：旋转 90 度
+  translate(0, 200, 0), // 第 2 步：下移 100 像素
+  scale(0.8, 0.8, 0.8), // 第 1 步：缩小
 ]);
 ```
 
@@ -318,12 +309,12 @@ var transformMatrix = MDN.multiplyArrayOfMatrices([
 
 ```js
 var transformMatrix = MDN.multiplyArrayOfMatrices([
-  scale(1.25, 1.25, 1.25),             // 第 6 步：放大
-  translate(0, -200, 0),               // 第 5 步：上移
-  rotateAroundZAxis(-Math.PI * 0.5),   // 第 4 步：倒转
-  rotateAroundZAxis(Math.PI * 0.5),    // 第 3 步：旋转 90 度
-  translate(0, 200, 0),                // 第 2 步：下移 100 像素
-  scale(0.8, 0.8, 0.8),                // 第 1 步：缩小
+  scale(1.25, 1.25, 1.25), // 第 6 步：放大
+  translate(0, -200, 0), // 第 5 步：上移
+  rotateAroundZAxis(-Math.PI * 0.5), // 第 4 步：倒转
+  rotateAroundZAxis(Math.PI * 0.5), // 第 3 步：旋转 90 度
+  translate(0, 200, 0), // 第 2 步：下移 100 像素
+  scale(0.8, 0.8, 0.8), // 第 1 步：缩小
 ]);
 ```
 

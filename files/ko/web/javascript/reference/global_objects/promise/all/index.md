@@ -2,6 +2,7 @@
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
+
 {{JSRef}}
 
 **`Promise.all()`** 메서드는 순회 가능한 객체에 주어진 모든 프로미스가 이행한 후, 혹은 프로미스가 주어지지 않았을 때 이행하는 {{jsxref("Promise")}}를 반환합니다. 주어진 프로미스 중 하나가 거부하는 경우, 첫 번째로 거절한 프로미스의 이유를 사용해 자신도 거부합니다.
@@ -57,7 +58,7 @@ var p3 = new Promise((resolve, reject) => {
   }, 100);
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
@@ -66,17 +67,17 @@ Promise.all([p1, p2, p3]).then(values => {
 
 ```js
 // 매개변수 배열이 빈 것과 동일하게 취급하므로 이행함
-var p = Promise.all([1,2,3]);
+var p = Promise.all([1, 2, 3]);
 // 444로 이행하는 프로미스 하나만 제공한 것과 동일하게 취급하므로 이행함
-var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
+var p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // 555로 거부하는 프로미스 하나만 제공한 것과 동일하게 취급하므로 거부함
-var p3 = Promise.all([1,2,3, Promise.reject(555)]);
+var p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
 
 // setTimeout()을 사용해 스택이 빈 후에 출력할 수 있음
-setTimeout(function() {
-    console.log(p);
-    console.log(p2);
-    console.log(p3);
+setTimeout(function () {
+  console.log(p);
+  console.log(p2);
+  console.log(p3);
 });
 
 // 출력
@@ -99,9 +100,9 @@ var p = Promise.all(resolvedPromisesArray);
 console.log(p);
 
 // 호출 스택을 비운 다음 실행하기 위해 setTimeout을 사용
-setTimeout(function() {
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // 로그 출력 결과 (순서대로):
@@ -116,9 +117,9 @@ setTimeout(function() {
 var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
 console.log(p);
-setTimeout(function() {
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // 출력
@@ -134,9 +135,9 @@ var p = Promise.all([]); // 즉시 이행함
 var p2 = Promise.all([1337, "hi"]); // 프로미스가 아닌 값은 무시하지만 비동기적으로 실행됨
 console.log(p);
 console.log(p2);
-setTimeout(function() {
-    console.log('the stack is now empty');
-    console.log(p2);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p2);
 });
 
 // 출력
@@ -152,30 +153,29 @@ setTimeout(function() {
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('하나'), 1000);
+  setTimeout(() => resolve("하나"), 1000);
 });
 var p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('둘'), 2000);
+  setTimeout(() => resolve("둘"), 2000);
 });
 var p3 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('셋'), 3000);
+  setTimeout(() => resolve("셋"), 3000);
 });
 var p4 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('넷'), 4000);
+  setTimeout(() => resolve("넷"), 4000);
 });
 var p5 = new Promise((resolve, reject) => {
-  reject(new Error('거부'));
+  reject(new Error("거부"));
 });
-
 
 // .catch 사용:
 Promise.all([p1, p2, p3, p4, p5])
-.then(values => {
-  console.log(values);
-})
-.catch(error => {
-  console.log(error.message)
-});
+  .then((values) => {
+    console.log(values);
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
 
 // 콘솔 출력값:
 // "거부"
@@ -185,20 +185,24 @@ Promise.all([p1, p2, p3, p4, p5])
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('p1_지연_이행'), 1000);
+  setTimeout(() => resolve("p1_지연_이행"), 1000);
 });
 
 var p2 = new Promise((resolve, reject) => {
-  reject(new Error('p2_즉시_거부'));
+  reject(new Error("p2_즉시_거부"));
 });
 
 Promise.all([
-  p1.catch(error => { return error }),
-  p2.catch(error => { return error }),
-]).then(values => {
-  console.log(values[0]) // "p1_지연_이행"
-  console.log(values[1]) // "Error: p2_즉시_거부"
-})
+  p1.catch((error) => {
+    return error;
+  }),
+  p2.catch((error) => {
+    return error;
+  }),
+]).then((values) => {
+  console.log(values[0]); // "p1_지연_이행"
+  console.log(values[1]); // "Error: p2_즉시_거부"
+});
 ```
 
 ## 명세

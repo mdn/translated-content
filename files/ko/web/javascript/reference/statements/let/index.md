@@ -2,6 +2,7 @@
 title: let
 slug: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 명령문은 블록 스코프의 범위를 가지는 지역 변수를 선언하며, 선언과 동시에 임의의 값으로 초기화할 수도 있습니다.
@@ -68,8 +69,8 @@ function letTest() {
 프로그램 최상위에서 사용할 경우 `var`는 전역 객체에 속성을 추가하지만 `let`은 추가하지 않습니다.
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -85,19 +86,19 @@ var Thing;
   let privateScope = new WeakMap();
   let counter = 0;
 
-  Thing = function() {
-    this.someProperty = 'foo';
+  Thing = function () {
+    this.someProperty = "foo";
 
     privateScope.set(this, {
       hidden: ++counter,
     });
   };
 
-  Thing.prototype.showPublic = function() {
+  Thing.prototype.showPublic = function () {
     return this.someProperty;
   };
 
-  Thing.prototype.showPrivate = function() {
+  Thing.prototype.showPrivate = function () {
     return privateScope.get(this).hidden;
   };
 }
@@ -134,7 +135,7 @@ if (x) {
 
 ```js example-bad
 let x = 1;
-switch(x) {
+switch (x) {
   case 0:
     let foo;
     break;
@@ -150,7 +151,7 @@ switch(x) {
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -183,13 +184,13 @@ function do_something() {
 
 ```js
 {
-    // TDZ가 스코프 맨 위에서부터 시작
-    const func = () => console.log(letVar); // OK
+  // TDZ가 스코프 맨 위에서부터 시작
+  const func = () => console.log(letVar); // OK
 
-    // TDZ 안에서 letVar에 접근하면 ReferenceError
+  // TDZ 안에서 letVar에 접근하면 ReferenceError
 
-    let letVar = 3; // letVar의 TDZ 종료
-    func(); // TDZ 밖에서 호출함
+  let letVar = 3; // letVar의 TDZ 종료
+  func(); // TDZ 밖에서 호출함
 }
 ```
 
@@ -213,11 +214,11 @@ console.log(typeof undeclaredVariable); // undefined 출력
 아래 코드는 주석으로 표기한 지점에서 `ReferenceError`가 발생합니다.
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   if(foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```
@@ -231,12 +232,13 @@ function go(n) {
   // 이 n은 매개변수 n
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    // ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### 기타 예제
@@ -251,8 +253,8 @@ if (a === 1) {
   var a = 11; // 전역 변수
   let b = 22; // if 블록 변수
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11

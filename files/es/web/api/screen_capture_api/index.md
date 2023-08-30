@@ -16,9 +16,8 @@ La API de captura de pantalla es relativamente simple de usar. Su único método
 Para comenzar a capturar video desde la pantalla, llama a `getDisplayMedia()` en `navigator.mediaDevices`:
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(
-  displayMediaOptions
-);
+captureStream =
+  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
 La {{jsxref("Promise","Promesa")}} devuelta por `getDisplayMedia()` se resuelve en un {{domxref("MediaStream")}} que transmite los medios capturados.

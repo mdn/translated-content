@@ -1,12 +1,6 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/time
 ---
 
 {{HTMLSidebar}}
@@ -16,7 +10,7 @@ L'élément HTML **`<time>`** permet de représenter une période donnée. Cet �
 Cet élément permet de représenter :
 
 - une heure
-- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
+- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
 - [une durée valide](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
@@ -76,8 +70,7 @@ La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de
 #### HTML
 
 ```html
-<p>Le concert a lieu <time
-  datetime="2001-05-15T19:00">le 15 mai</time>.</p>
+<p>Le concert a lieu <time datetime="2001-05-15T19:00">le 15 mai</time>.</p>
 ```
 
 #### Résultat

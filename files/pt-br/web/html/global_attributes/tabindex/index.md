@@ -24,12 +24,12 @@ Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}},
 
 ## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}     | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                   |
-| {{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}                                                                                                                          |
-| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, o atributo agora é suportado em todos os elementos (atributos globais).                                                                 |
-| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}} | {{Spec2('HTML4.01')}}     | Suportado apenas em {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, e {{HTMLElement("textarea")}}. |
+| Especificação                                                             | Status                   | Comentário                                                                                                                                                                         |
+| ------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}     | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}                                                                                                             |
+| {{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}                                                                                           |
+| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}       | {{Spec2('HTML5 W3C')}}   | Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, o atributo agora é suportado em todos os elementos (atributos globais).                                   |
+| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}} | {{Spec2('HTML4.01')}}    | Suportado apenas em {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, e {{HTMLElement("textarea")}}. |
 
 ## Compatibilidade com navegadores
 
@@ -39,4 +39,4 @@ Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}},
 
 - Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabIndex")}} que reflete este atributo.
-- Problemas de acessibilidade com tabindex: veja [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).
+- Problemas de acessibilidade com tabindex: veja [Don't Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).

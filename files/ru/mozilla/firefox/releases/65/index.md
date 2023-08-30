@@ -1,7 +1,6 @@
 ---
 title: Firefox 65 для разработчиков
 slug: Mozilla/Firefox/Releases/65
-translation_of: Mozilla/Firefox/Releases/65
 ---
 
 {{FirefoxSidebar}}
@@ -80,7 +79,8 @@ translation_of: Mozilla/Firefox/Releases/65
   - `user-select: all`, установленное на элемент, больше не перекрывает значения `user-select` дочерних элементов. Пример:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```
@@ -126,7 +126,7 @@ _Без изменений._
 #### События DOM
 
 - За одно событие разрешено не более одного вызова {{domxref("Window.open()")}} ({{bug(675574)}}).
-- События [`keyup`](/en-US/docs/Web/Events/keyup) и [`keydown`](/en-US/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ({{bug(354358)}}).
+- События [`keyup`](/ru/docs/Web/Events/keyup) и [`keydown`](/ru/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ({{bug(354358)}}).
 
 #### Веб-воркеры
 

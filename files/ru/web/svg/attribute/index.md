@@ -1,14 +1,6 @@
 ---
 title: Справочник SVG атрибутов
 slug: Web/SVG/Attribute
-tags:
-  - NeedsHelp
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - Атрибуты
-  - Руководство
-translation_of: Web/SVG/Attribute
 ---
 
 « [SVG](/ru/docs/Web/SVG) / [Справочник SVG элементов](/ru/docs/Web/SVG/Элемент) »

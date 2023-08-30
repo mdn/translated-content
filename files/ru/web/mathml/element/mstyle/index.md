@@ -1,11 +1,8 @@
 ---
 title: <mstyle>
 slug: Web/MathML/Element/mstyle
-tags:
-  - MathML
-  - MathML:Element
-translation_of: Web/MathML/Element/mstyle
 ---
+
 {{MathMLRef}}
 
 Элемент `<mstyle>` разметки MathML используется для изменения стиля его дочерних элементов. Он принимает все атрибуты всех элементов представления MathML, за некоторыми исключениями и c дополнительными атрибутами, перечисленными ниже.
@@ -44,10 +41,8 @@ translation_of: Web/MathML/Element/mstyle
 
 ```html
 <math>
-
   <mstyle displaystyle="true" mathcolor="teal">
     <mrow>
-
       <munderover>
         <mo stretchy="true" form="prefix">&sum;</mo>
         <mrow>
@@ -64,10 +59,8 @@ translation_of: Web/MathML/Element/mstyle
           <mi>n</mi>
         </mfrac>
       </mstyle>
-
     </mrow>
   </mstyle>
-
 </math>
 ```
 

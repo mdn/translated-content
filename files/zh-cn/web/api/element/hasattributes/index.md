@@ -20,7 +20,7 @@ result = targetNode.hasAttributes();
 ```js
 var t1 = document.getElementById("table-data");
 
-if ( t1.hasAttributes() ) {
+if (t1.hasAttributes()) {
   // 可以用 t1.attributes 来读取该元素的所有属性
 }
 ```

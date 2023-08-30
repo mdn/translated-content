@@ -14,31 +14,28 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 和网页一样，插件可以加载其他来源的内容。例如浏览器的弹出窗口可以指定为一个 HTML 文档，它同样可以包含不同来源的 JavaScript 和 CSS，就像一个普通的网页一样。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <!--Some HTML content here-->
 
     <!--
       Include a third-party script.
-      See also https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity.
+      See also https://developer.mozilla.org/zh-CN/docs/Web/Security/Subresource_Integrity.
     -->
     <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"></script>
 
     <!-- Include my popup's own script-->
     <script src="popup.js"></script>
   </body>
-
 </html>
 ```
 
@@ -66,7 +63,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 在默认 CSP 下你只能加载相对插件来说本地的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 和 [\<object>](/zh-CN/docs/Web/HTML/Element/object) 资源。例如假设插件文档中存在这样一条语句：
 
 ```html
- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 ```
 
 这不会加载请求的资源：它会安静地失败，并且你所期望看到的任何来自该资源的对象都不会出现。对于这种情况有两种解决办法：
@@ -95,7 +92,9 @@ var f = new Function("console.log('foo');");
 默认 CSP 下内联 JavaScript 不被执行。这不仅不允许将 JavaScript 直接放在 `<script>` 标签中间，也不允许内联事件句柄。即以下内容被禁止：
 
 ```html
-<script>console.log("foo");</script>
+<script>
+  console.log("foo");
+</script>
 ```
 
 ```html

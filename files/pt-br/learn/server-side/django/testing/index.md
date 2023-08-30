@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 10: Testando uma aplicação web Django'
+title: "Tutorial Django Parte 10: Testando uma aplicação web Django"
 slug: Learn/Server-side/Django/Testing
 ---
 
@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Testing
       <th scope="row">Pré-requisitos:</th>
       <td>
         Complete todos os tópicos de tutoriais anteriores, incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabalhando com formulários</a
         >.
       </td>

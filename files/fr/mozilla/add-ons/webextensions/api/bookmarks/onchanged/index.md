@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
 
 {{AddonSidebar}}
@@ -14,9 +13,9 @@ Mise en place quand il y a un changement à :
 ## Syntaxe
 
 ```js
-browser.bookmarks.onChanged.addListener(listener)
-browser.bookmarks.onChanged.removeListener(listener)
-browser.bookmarks.onChanged.hasListener(listener)
+browser.bookmarks.onChanged.addListener(listener);
+browser.bookmarks.onChanged.removeListener(listener);
+browser.bookmarks.onChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

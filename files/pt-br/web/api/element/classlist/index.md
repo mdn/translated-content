@@ -42,12 +42,12 @@ div.classList.add("anotherclass");
 div.classList.toggle("visible");
 
 // adicionar/remover, dependendo do teste condicional, i menos de 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 alert(div.classList.contains("foo"));
 
 // adicionar ou remover várias classes
-div.classList.add("foo","bar");
+div.classList.add("foo", "bar");
 div.classList.remove("foo", "bar");
 ```
 
@@ -55,15 +55,11 @@ div.classList.remove("foo", "bar");
 
 ## Especificações
 
-| Especificações                                                                                       | Status                           | Comentário                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Observe dentro da especificação HTML relacionada ao [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) attribute. |
-| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Definição inicial                                                                               |
-| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                                 |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.classList")}}
+{{Compat}}
 
 ## Veja também
 

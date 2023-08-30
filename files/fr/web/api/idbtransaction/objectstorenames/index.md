@@ -1,12 +1,6 @@
 ---
 title: IDBTransaction.objectStoreNames
 slug: Web/API/IDBTransaction/ObjectStoreNames
-tags:
-  - API
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBTransaction/ObjectStoreNames
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}

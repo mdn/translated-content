@@ -1,7 +1,6 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-original_slug: Web/HTML/Elemento/input/checkbox
 ---
 
 El elemento HTML **`<input type="checkbox">`** es un elemento de entrada que te permite insertar un vector o array de valores. El atributo **value** es usado para definr el valor enviado por el **checkbox**. El atributo **checked** se usa para indicar que el elemento está seleccionado. El atributo **indeterminate** se usa para indicar que el **checkbox** esta en un estado indeterminado (en la mayoria de las plataformas, esto dibuja una linea horizontal que atraviesa el **checkbox**).
@@ -21,9 +20,13 @@ Este elemento posee los "[atributos globales](/es/docs/HTML/Global_attributes)".
 ## Ejemplo
 
 ```html
-<label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+<label
+  ><input type="checkbox" id="cbox1" value="first_checkbox" /> Este es mi primer
+  checkbox</label
+><br />
 
-<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Este es mi segundo checkbox</label>
+<input type="checkbox" id="cbox2" value="second_checkbox" />
+<label for="cbox2">Este es mi segundo checkbox</label>
 ```
 
 Esto crea dos casillas de verificación, que se ven así:

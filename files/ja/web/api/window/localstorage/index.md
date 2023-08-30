@@ -21,7 +21,7 @@ myStorage = localStorage;
 
 - `SecurityError`
   - : リクエストがポリシーの決定に反している、またはオリジンが[妥当な scheme/host/port tuple](/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) でない (これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。
-      なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータ永続化の拒否と解釈する可能性が高いです。
+    なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータ永続化の拒否と解釈する可能性が高いです。
 
 ## 説明
 
@@ -38,19 +38,19 @@ myStorage = localStorage;
 以下のスニペットでは現在のドメインのローカル {{domxref("Storage")}} オブジェクトにアクセスし、{{domxref("Storage.setItem()")}} を利用してデータを追加しています。
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 `localStorage` からの項目の読み込みは以下のようにできます。
 
 ```js
-var cat = localStorage.getItem('myCat');
+var cat = localStorage.getItem("myCat");
 ```
 
 `localStorage` からの項目の削除は以下のようにできます。
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 `localStorage` からの全項目の削除は以下のようにできます。

@@ -1,19 +1,11 @@
 ---
 title: Placer les éléments sur les lignes d'une grille CSS
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guides
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
-original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 
 {{CSSRef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
 
 Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.
 
@@ -28,7 +20,9 @@ Dans le conteneur, on a quatre éléments fils. Si aucune autre règle de placem
 ![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -70,10 +64,10 @@ On peut placer les éléments d'une grille en utilisant les numéros de lignes q
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
@@ -82,7 +76,9 @@ Lorsqu'on positionne des objets sur la grille, les autres continueront d'être p
 On peut placer chacun des éléments individuellement et on peut également choisir de laisser certaines cellules vides. Un des avantages de la grille CSS est qu'on peut créer des espaces sans avoir à utiliser des marges ou d'autres méthodes de contournement.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -104,10 +100,10 @@ On peut placer chacun des éléments individuellement et on peut également choi
 
 ```html
 <div class="wrapper">
-   <div class="box1">Un</div>
-   <div class="box2">Deux</div>
-   <div class="box3">Trois</div>
-   <div class="box4">Quatre</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
+  <div class="box4">Quatre</div>
 </div>
 ```
 
@@ -139,7 +135,9 @@ On peut placer chacun des éléments individuellement et on peut également choi
 On a écrit beaucoup de règles pour positionner chaque élément. Heureusement, il existe des propriétés raccourcies qui permettent d'avoir une syntaxe plus concise. Les propriétés {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}} peuvent être combinées pour former la propriété raccourcie {{cssxref("grid-column")}} et de la même façon, {{cssxref("grid-row-start")}} et {{cssxref("grid-row-end")}} peuvent être synthétisées avec {{cssxref("grid-row")}}.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -179,7 +177,7 @@ On a écrit beaucoup de règles pour positionner chaque élément. Heureusement,
 }
 .box3 {
   grid-column: 2 / 3;
-  grid-row: 1 /  2;
+  grid-row: 1 / 2;
 }
 .box4 {
   grid-column: 2 / 4;
@@ -194,7 +192,9 @@ On a écrit beaucoup de règles pour positionner chaque élément. Heureusement,
 Dans les exemples précédents, on a défini chaque ligne et colonne de fin pour chaque élément. Mais si en pratique, on souhaite qu'un élément n'occupe qu'une seule piste, on peut omettre `grid-column-end` ou `grid-row-end`. Par défaut, les éléments occupent une seule piste. Notre exemple initial, avec les propriétés détaillées peut donc être réécrit de cette façon :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -252,7 +252,9 @@ Dans les exemples précédents, on a défini chaque ligne et colonne de fin pour
 Avec les propriétés raccourcies, on obtient le code suivant (sans aucune barre oblique ni seconde valeur pour les éléments qui n'occupent qu'une seule piste).
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -283,20 +285,20 @@ Avec les propriétés raccourcies, on obtient le code suivant (sans aucune barre
 
 ```css
 .box1 {
-  grid-column: 1 ;
+  grid-column: 1;
   grid-row: 1 / 4;
 }
 .box2 {
-  grid-column: 3 ;
+  grid-column: 3;
   grid-row: 1 / 3;
 }
 .box3 {
-  grid-column: 2 ;
-  grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
   grid-column: 2 / 4;
-  grid-row: 3 ;
+  grid-row: 3;
 }
 ```
 
@@ -312,7 +314,9 @@ On peut aller plus loin et définir une zone pour chaque élément grâce à une
 - `grid-column-end`
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -376,7 +380,9 @@ On peut également compter à l'envers, à partir des lignes de fin. Pour un doc
 Dans le prochain exemple, on renverse la disposition de la grille en travaillant à partir du bas et de la droite.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -398,10 +404,10 @@ Dans le prochain exemple, on renverse la disposition de la grille en travaillant
 
 ```html
 <div class="wrapper">
-   <div class="box1">Un</div>
-   <div class="box2">Deux</div>
-   <div class="box3">Trois</div>
-   <div class="box4">Quatre</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
+  <div class="box4">Quatre</div>
 </div>
 ```
 
@@ -455,7 +461,9 @@ La spécification pour les grilles CSS permet également d'ajouter des espaces (
 Les gouttières apparaissent uniquement entre les pistes de la grille, elles n'ajoutent pas d'espace en haut, en bas, à gauche ou à droite du conteneur. Voyons comment ajouter des espaces sur l'exemple précédent grâce à ces propriétés :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -486,20 +494,20 @@ Les gouttières apparaissent uniquement entre les pistes de la grille, elles n'a
 
 ```css
 .box1 {
-  grid-column: 1 ;
+  grid-column: 1;
   grid-row: 1 / 4;
 }
 .box2 {
-  grid-column: 3 ;
+  grid-column: 3;
   grid-row: 1 / 3;
 }
 .box3 {
-  grid-column: 2 ;
-  grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
   grid-column: 2 / 4;
-  grid-row: 3 ;
+  grid-row: 3;
 }
 .wrapper {
   display: grid;
@@ -532,7 +540,9 @@ Par rapport au positionnement sur les lignes, les gouttières agissent comme si 
 On a vu comment indiquer la ligne de début et la ligne de fin avec des numéros. Il est aussi possible de définir la taille d'un élément en indiquant le numéro de la ligne de départ et le nombre de pistes sur lequel s'étale l'élément.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -606,4 +616,4 @@ Pour vous familiariser avec le positionnement des éléments d'une grille en uti
 
 Il faut aussi se rappeler que lorsqu'on place les éléments explicitement sur la grille, ceux-ci peuvent se chevaucher. Cela permet d'obtenir certains effets mais attention aux erreurs lorsque c'est la mauvaise ligne de début ou de fin qui est indiquée. Pour régler ce problème, on peut utiliser [l'outil de mise en évidence de la grille CSS dans Firefox](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) pour analyser une grille compliquée.
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}

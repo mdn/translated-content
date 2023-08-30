@@ -1,24 +1,24 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** response status code indicates that the HTTP version used in the request is not supported by the server.
+El código de estado de respuesta del Protocolo de transferencia de hipertexto (HTTP, por sus siglas en inglés) **`505 HTTP Version Not Supported`** indica que la versión HTTP utilizada en la solicitud no es compatible con el servidor.
 
-## Status
+## Estado
 
-```
+```http
 505 HTTP Version Not Supported
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                    | Title                                                         |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## See also
+## Véase también
 
 - {{HTTPHeader("Upgrade")}}

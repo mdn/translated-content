@@ -1,7 +1,6 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
 
 {{AddonSidebar}}
@@ -259,7 +258,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
 
 ### Couleurs
 
-Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"`  étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
+Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"` étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
 
 <table class="standard-table">
   <tbody>
@@ -569,7 +568,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
       <td>
         <p>
           La couleur d'arrière-plan des éléments mis en surbrillance à l'aide du
-          clavier dans les fenêtre contextuelles (tel que l’élément sélectionné
+          clavier dans les fenêtre contextuelles (tel que l'élément sélectionné
           dans le menu déroulant de la barre d'URL).
         </p>
         <div class="note">
@@ -1253,8 +1252,8 @@ En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une
 
 > **Attention :** A partir de Firefox 70, les propriétés suivantes sont supprimées : `accentcolor` et `textcolor`. Utilisez à la place `frame` et `tab_background_text`. L'utilisation de ces valeurs dans des thèmes chargés dans Firefox 65 ou une version ultérieure augmentera les avertissements.
 
-| Nom                   | Alias pour                                  |
-| --------------------- | ------------------------------------------- |
+| Nom                   | Alias pour                           |
+| --------------------- | ------------------------------------ |
 | `bookmark_text`       | `toolbar_text {{Deprecated_Inline}}` |
 | `frame`               | `accentcolor {{Deprecated_Inline}}`  |
 | `frame_inactive`      | `accentcolor {{Deprecated_Inline}}`  |

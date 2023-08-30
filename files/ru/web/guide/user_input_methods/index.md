@@ -1,14 +1,6 @@
 ---
 title: Ввод пользователя и управление
 slug: Web/Guide/User_input_methods
-tags:
-  - Клавиатура
-  - Ориентация экрана
-  - ввод пользователя
-  - касание
-  - мышь
-  - указатель
-translation_of: Web/Guide/User_input_methods
 ---
 
 Это руководство содержит рекомендации по обработке пользовательского ввода
@@ -128,9 +120,11 @@ if (elem.requestFullscreen) {
 Here is an example that allows a section of content to be dragged.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-    This text <strong>may</strong> be dragged.
- </div>
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+  This text <strong>may</strong> be dragged.  
+</div>
 ```
 
 in which we:
@@ -145,9 +139,7 @@ in which we:
 In open web apps any DOM element can be made directly editable using the [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
 ```html
-<div contenteditable="true">
-    This text can be edited by the user.
-</div>
+<div contenteditable="true">This text can be edited by the user.</div>
 ```
 
 > **Примечание:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/ru/docs/Web/Guide/HTML/Content_Editable).

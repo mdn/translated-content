@@ -1,9 +1,6 @@
 ---
 title: column-gap
 slug: Web/CSS/column-gap
-page-type: css-property
-translation_of: Web/CSS/column-gap
-browser-compat: css.properties.column-gap
 ---
 
 {{CSSRef}}
@@ -159,4 +156,4 @@ column-gap: unset;
 
 - Похожие CSS-свойства: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
 - Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
-- Руководство по многоколоночной раскладке: _[Стилизация колонок](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_
+- Руководство по многоколоночной раскладке: _[Стилизация колонок](/ru/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

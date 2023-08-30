@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/put
 ---
 
 {{APIRef("IndexedDB")}}
@@ -118,12 +111,14 @@ Dans l'exemple suivant, on effectue une requête pour obtenir l'enregistrement c
 var title = "Walk dog";
 
 // On ouvre une transaction
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // On obtient la liste to-do dont le titre correspond
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // On récupère les données de l'objet associé
   // à l'enregistrement
   var data = objectStoreTitleRequest.result;
@@ -137,11 +132,13 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // On imprime la transaction à l'origine
   // de la requête
-  console.log("La transaction originelle est " + updateTitleRequest.transaction);
+  console.log(
+    "La transaction originelle est " + updateTitleRequest.transaction,
+  );
 
   // Lorsque cette nouvelle requête a réussi. On affiche
   // les données grâce à la fonction displayData()
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };

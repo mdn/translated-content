@@ -15,8 +15,8 @@ l10n:
 ## 構文
 
 ```js
-structuredClone(value)
-structuredClone(value, transferables)
+structuredClone(value);
+structuredClone(value, transferables);
 ```
 
 ### 引数
@@ -70,8 +70,10 @@ console.assert(clone.itself === clone); // 循環参照も保持されている
 // 16MB = 1024 * 1024 * 16
 const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i);
 
-const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
-console.log(uInt8Array.byteLength);  // 0
+const transferred = structuredClone(uInt8Array, {
+  transfer: [uInt8Array.buffer],
+});
+console.log(uInt8Array.byteLength); // 0
 ```
 
 任意の数のオブジェクトを複製し、それらのオブジェクトの任意のサブセットを転送することができます。
@@ -79,8 +81,9 @@ console.log(uInt8Array.byteLength);  // 0
 
 ```js
 const transferred = structuredClone(
-   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-   { transfer: [arrayBuffer1] });
+  { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
+  { transfer: [arrayBuffer1] },
+);
 ```
 
 ## 仕様書

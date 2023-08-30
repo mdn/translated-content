@@ -1,7 +1,6 @@
 ---
 title: Política Same-origin
 slug: Web/Security/Same-origin_policy
-original_slug: Web/Security/Same-origin_politica
 ---
 
 La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.
@@ -146,4 +145,4 @@ Las cookies usan una definición separada de orígenes. Una página puede asigna
 
 - Autor(es): Jesse Ruderman
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/es/docs/Web/Security")}}

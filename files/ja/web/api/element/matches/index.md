@@ -1,32 +1,38 @@
 ---
-title: Element.matches()
+title: "Element: matches() メソッド"
+short-title: matches()
 slug: Web/API/Element/matches
+l10n:
+  sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
 ---
 
 {{APIRef("DOM")}}
 
-**`matches()`** メソッドは、その要素 ({{domxref("Element")}}) が指定された `selectorString` によって選択されるかをチェックします。言い換えれば、要素「が」セレクターであることをチェックします。
+**`matches()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素が指定した [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors) によって選択されるかどうかを検査します。
 
 ## 構文
 
-```
-var result = element.matches(selectorString);
+```js-nolint
+matches(selectors)
 ```
 
 ### 引数
 
-`selectorString` は、テストするためのセレクターを表す文字列です。
+- `selectors`
+  - : {{domxref("Element")}} を検査するために有効な [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)を格納した文字列です。
 
 ### 返値
 
-`result` は {{domxref("Boolean")}} です。
+{{domxref("Element")}} が `selectors` に一致すれば `true` です。そうでなければ `false` です。
 
 ### 例外
 
-- `SYNTAX_ERR`
-  - : 指定されたセレクター文字列が無効である場合。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : `selectors` が CSS のセレクターリストとして解釈できない場合に発生します。
 
 ## 例
+
+### HTML
 
 ```html
 <ul id="birds">
@@ -34,49 +40,21 @@ var result = element.matches(selectorString);
   <li class="endangered">Philippine eagle</li>
   <li>Great white pelican</li>
 </ul>
+```
 
-<script type="text/javascript">
-  var birds = document.getElementsByTagName('li');
+### JavaScript
 
-  for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches('.endangered')) {
-      console.log('The ' + birds[i].textContent + ' is endangered!');
-    }
+```js
+const birds = document.querySelectorAll("li");
+
+for (const bird of birds) {
+  if (bird.matches(".endangered")) {
+    console.log(`The ${bird.textContent} is endangered!`);
   }
-</script>
+}
 ```
 
 要素が実際に値 `endangered` 持つ `class` 属性を持つので、これは、コンソールのログに "The Philippine eagle is endangered!" と表示されます。
-
-## ポリフィル
-
-`Element.matches()` や `Element.matchesSelector()` には対応していないが、 `document.querySelectorAll()` には対応しているブラウザーには、ポリフィルが存在します。
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-      Element.prototype.matchesSelector ||
-      Element.prototype.mozMatchesSelector ||
-      Element.prototype.msMatchesSelector ||
-      Element.prototype.oMatchesSelector ||
-      Element.prototype.webkitMatchesSelector ||
-      function(s) {
-        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i = matches.length;
-        while (--i >= 0 && matches.item(i) !== this) {}
-        return i > -1;
-      };
-}
-```
-
-しかし、古いブラウザーに対応することの実用性を考えると、実用的なケース (言い換えると IE9 以降の対応) ではほとんどの場合 (全部ではない)、次のもので十分です。
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                              Element.prototype.webkitMatchesSelector;
-}
-```
 
 ## 仕様書
 
@@ -88,5 +66,5 @@ if (!Element.prototype.matches) {
 
 ## 関連情報
 
-- [セレクターの構文](/ja/docs/Web/Guide/CSS/Getting_started/Selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)モジュール
 - セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}

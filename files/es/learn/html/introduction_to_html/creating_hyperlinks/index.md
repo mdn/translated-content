@@ -1,7 +1,6 @@
 ---
 title: Crear hipervínculos
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-original_slug: Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -93,8 +92,7 @@ Como hemos mencionado anteriormente, puedes convertir cualquier contenido en un 
 <a href="https://www.mozilla.org/es-ES/">
   <img
     src="mozilla-image.png"
-    alt="Logotipo de Mozilla que dirige a la página inicial de Mozilla"
-  />
+    alt="Logotipo de Mozilla que dirige a la página inicial de Mozilla" />
 </a>
 ```
 
@@ -260,8 +258,7 @@ Si queremos hacer referencia a una descarga en lugar de a algo que abra el naveg
 ```html
 <a
   href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
-  download="firefox-latest-64bit-installer.exe"
->
+  download="firefox-latest-64bit-installer.exe">
   Descarga la última versión de Firefox para Windows (64 bits) (Español, es-MX)
 </a>
 ```
@@ -314,8 +311,7 @@ Veamos un ejemplo que incluye estos campos:
 
 ```html
 <a
-  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
->
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Enviar un correo electrónico cc, bcc, asunto y cuerpo
 </a>
 ```

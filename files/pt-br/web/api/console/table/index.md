@@ -49,7 +49,11 @@ Se os elementos no array, ou propriedades no objeto, forem arrays ou objetos, se
 ```js
 // um array de arrays
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+var people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -128,9 +132,7 @@ console.table(data [, columns]);
 
 ## Especificações
 
-| Especificação                                                                | Status                           | Comentário        |
-| ---------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

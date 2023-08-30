@@ -1,14 +1,6 @@
 ---
-title: '<article> : l''élément de contenu d''un article'
+title: "<article> : l'élément de contenu d'un article"
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
-browser-compat: html.elements.article
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Extension des outils de développement
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
 
 {{AddonSidebar}}
@@ -35,10 +34,10 @@ La page devtools n'a pas de DOM visible, mais peut inclure des sources JavaScrip
 Notez que la page devtools n'accède à aucune autre API WebExtension, et que la page d'arrière-plan n'a pas accès aux API devtools. Au lieu de cela, la page devtools et la page d'arrière-plan doivent communiquer à l'aide des API messageries d'`éxécution`. Voici un exemple :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
   <body>
     <script src="devtools.js"></script>
@@ -55,14 +54,16 @@ La fenêtre devtools héberge un certain nombre d'outils distincts: le débogueu
 A l'aide de l'API `devtools.panel.create()`, vous pouvez créer votre propre panneau dans la fenêtre devtools :
 
 ```js
-browser.devtools.panels.create(
-  "My Panel",                      // title
-  "icons/star.png",                // icon
-  "devtools/panel/panel.html"      // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(initialisePanel);
-  newPanel.onHidden.addListener(unInitialisePanel);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(initialisePanel);
+    newPanel.onHidden.addListener(unInitialisePanel);
+  });
 ```
 
 Cela nécessite trois arguments obligatoires: le titre, l'icône et le contenu du panneau. Il renvoie une [`promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui résout un objet `devtools.panels.ExtensionPanel` représentant le nouveau panneau.
@@ -95,7 +96,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 window.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -105,7 +106,7 @@ window.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 

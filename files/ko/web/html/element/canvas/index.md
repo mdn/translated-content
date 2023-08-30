@@ -1,5 +1,5 @@
 ---
-title: '<canvas>: 그래픽 캔버스 요소'
+title: "<canvas>: 그래픽 캔버스 요소"
 slug: Web/HTML/Element/canvas
 ---
 
@@ -36,7 +36,7 @@ slug: Web/HTML/Element/canvas
         >가 아닌 요소. 단, {{HTMLElement("a")}},
         {{HTMLElement("button")}}, 그리고
         {{HTMLElement("input")}} 중
-        {{htmlattrxref("type", "input")}} 특성이
+        <a href="/ko/docs/Web/HTML/Element/input#type"><code>type</code></a> 특성이
         <code>checkbox</code>, <code>radio</code>, <code>button</code>인 요소는
         가능
       </td>
@@ -121,9 +121,9 @@ slug: Web/HTML/Element/canvas
 그 다음, JavaScript 코드 내에서 {{domxref("HTMLCanvasElement.getContext()")}}를 호출해 그리기 맥락을 얻어서 캔버스 위에 그립니다.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

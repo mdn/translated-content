@@ -1,7 +1,6 @@
 ---
 title: Dégradation gracieuse
 slug: Glossary/Graceful_degradation
-translation_of: Glossary/Graceful_degradation
 ---
 
 **La dégradation gracieuse** est une philosophie de conception centrée sur la création d'un site / application web moderne qui fonctionnera dans les navigateurs les plus récents, mais qui sera remplacé par un contenu et une fonctionnalité essentiels dans les anciens navigateurs, même moins performant.
@@ -14,4 +13,4 @@ C'est une technique utile qui permet aux développeurs Web de se concentrer sur 
 
 ### Culture générale
 
-- [Tolérance aux pannes](https://fr.wikipedia.org/wiki/Tol%C3%A9rance_aux_pannes) sur Wikipédia
+- [Tolérance aux pannes](https://fr.wikipedia.org/wiki/Tolérance_aux_pannes) sur Wikipédia

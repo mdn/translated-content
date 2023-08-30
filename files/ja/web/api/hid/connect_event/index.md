@@ -14,9 +14,9 @@ l10n:
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('connect', (event) => { })
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { }
+onconnect = (event) => {};
 ```
 
 ## イベント型
@@ -37,7 +37,7 @@ _以下のプロパティに加え、親の {{domxref("Event")}} インターフ
 この例では、デバイスの接続を監視するためにイベントリスナーを登録します。接続時、デバイス名が {{domxref("HIDDevice.productName")}} を用いてコンソールに出力されます。
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
+navigator.hid.addEventListener("connect", ({ device }) => {
   console.log(`HID connected: ${device.productName}`);
 });
 ```

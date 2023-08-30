@@ -15,75 +15,82 @@ slug: Web/JavaScript/Guide/Numbers_and_dates
 
 JavaScript 最近添加了 {{jsxref("BigInt")}} 的支持，能够用于表示极大的数字。使用 BigInt 的时候有一些注意事项，例如，你不能让 BigInt 和 {{jsxref("Number")}} 直接进行运算，你也不能用 {{jsxref("Math")}} 对象去操作 BigInt 数字。
 
-请参见 Javascript 指南中的 [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) ，了解其他更多的基本类型。
+请参见 Javascript 指南中的 [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)，了解其他更多的基本类型。
 
-您可以使用四种数字进制：十进制，二进制，八进制和十六进制。
+你可以使用四种数字进制：十进制、二进制、八进制和十六进制。
 
-### 十进制数字 (Decimal numbers)
+### 十进制数字
 
-```js
+```js-nolint
 1234567890
 42
-// 以零开头的数字的注意事项：
-0888 // 888 将被当做十进制处理
-0777 // 在非严格格式下会被当做八进制处理 (用十进制表示就是 511)
 ```
 
 请注意，十进制可以以 0 开头，后面接其他十进制数字，但是假如下一个接的十进制数字小于 8，那么该数字将会被当做八进制处理。
 
-### 二进制数字 (Binary numbers)
-
-二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(`0b` 或者是 `0B`)。假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（ `SyntaxError`）："Missing binary digits after 0b(0b 之后缺失二有效的二进制数据)"。
-
-```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+```js-nolint example-bad
+0888 // 888 以十进制解析
+0777 // 以八进制解析，为十进制的 511
 ```
 
-### 八进制数字 (Octal numbers)
+### 二进制数字
+
+二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(`0b` 或者是 `0B`)。假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（`SyntaxError`）：“Missing binary digits after 0b（0b 之后缺失二有效的二进制数据）”。
+
+```js-nolint
+0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
+```
+
+### 八进制数字
 
 八进制数字语法是以 0 为开头的。假如 0 后面的数字不在 0 到 7 的范围内，该数字将会被转换成十进制数字。
 
-```js
-var n = 0755; // 493
-var m = 0644; // 420
+```js-nolint
+0O755 // 493
+0o644 // 420
 ```
 
-在 ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是 ECMAScript 5 规范的一部分，但是通过在八进制数字添加一个前缀 0 就可以被所有的浏览器支持：0644 === 420 而且 "\045" === "%"。在 ECMAScript 6 中使用八进制数字是需要给一个数字添加前缀"0o"。
+在 ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是 ECMAScript 5 规范的一部分，但是通过在八进制数字添加一个前缀 0 就可以被所有的浏览器支持：`0644 === 420` 而且 `"\045" === "%"`。在 ECMAScript 6 中使用八进制数字是需要给一个数字添加前缀“0o”。
 
 ```js
-var a = 0o10; // ES6 :八进制
+const n = 0755; // 493
+const m = 0644; // 420
 ```
 
-### 十六进制 (Hexadecimal numbers)
+### 十六进制
 
-十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 X(`0x 或者是 0X`)。假如`0x`后面的数字超出规定范围 (0123456789ABCDEF)，那么就会提示这样的语法错误 (`SyntaxError)：`"Identifier starts immediately after numeric literal".
+十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 X(`0x 或者是 0X`)。假如`0x`后面的数字超出规定范围 (0123456789ABCDEF)，那么就会提示这样的语法错误（`SyntaxError`）：“Identifier starts immediately after numeric literal”。
 
-```js
+```js-nolint
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 ```
 
-### 指数形式 (Exponentiation)
+### 指数形式
 
-```js
-1E3   // 1000
-2e6   // 2000000
-0.1e2 // 10
+```js-nolint
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
-## `数字对象`
+## 数字对象
 
-内置的{{jsxref("Number")}}对象有一些有关数字的常量属性，如最大值、不是一个数字和无穷大的。你不能改变这些属性，但可以按下边的方式使用它们：
+内置的 {{jsxref("Number")}} 对象有一些有关数字的常量属性，如最大值、不是一个数字和无穷大的。你不能改变这些属性，但可以按下边的方式使用它们：
 
 ```js
-var biggestNum = Number.MAX_VALUE;
-var smallestNum = Number.MIN_VALUE;
-var infiniteNum = Number.POSITIVE_INFINITY;
-var negInfiniteNum = Number.NEGATIVE_INFINITY;
-var notANum = Number.NaN;
+const biggestNum = Number.MAX_VALUE;
+const smallestNum = Number.MIN_VALUE;
+const infiniteNum = Number.POSITIVE_INFINITY;
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+const notANum = Number.NaN;
 ```
 
 你永远只用从 Number 对象引用上边显示的属性，而不是你自己创建的 Number 对象的属性。
@@ -92,46 +99,46 @@ var notANum = Number.NaN;
 
 **数字的属性**
 
-| 属性                                                 | 描述                                                                      |
-| ---------------------------------------------------- | ------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | 可表示的最大值                                                            |
-| {{jsxref("Number.MIN_VALUE")}}             | 可表示的最小值                                                            |
-| {{jsxref("Number.NaN")}}                     | 特指”非数字“                                                              |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | 特指“负无穷”;在溢出时返回                                                 |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | 特指“正无穷”;在溢出时返回                                                 |
-| {{jsxref("Number.EPSILON")}}                 | 表示 1 和比最接近 1 且大于 1 的最小{{jsxref("Number")}}之间的差别 |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}     | JavaScript 最小安全整数。                                                 |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}     | JavaScript 最大安全整数。                                                 |
+| 属性                                   | 描述                                                              |
+| -------------------------------------- | ----------------------------------------------------------------- |
+| {{jsxref("Number.MAX_VALUE")}}         | 可表示的最大值                                                    |
+| {{jsxref("Number.MIN_VALUE")}}         | 可表示的最小值                                                    |
+| {{jsxref("Number.NaN")}}               | 特指”非数字“                                                      |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | 特指“负无穷”;在溢出时返回                                         |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | 特指“正无穷”;在溢出时返回                                         |
+| {{jsxref("Number.EPSILON")}}           | 表示 1 和比最接近 1 且大于 1 的最小{{jsxref("Number")}}之间的差别 |
+| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | JavaScript 最小安全整数。                                         |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | JavaScript 最大安全整数。                                         |
 
-| 方法                                             | 描述                                                                                                                                                                              |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}     | 把字符串参数解析成浮点数，和全局方法 {{jsxref("parseFloat", "parseFloat()")}} 作用一致。                                                                             |
-| {{jsxref("Number.parseInt()")}}         | 把字符串解析成特定基数对应的整型数字，和全局方法 {{jsxref("parseInt", "parseInt()")}} 作用一致。                                                                      |
-| {{jsxref("Number.isFinite()")}}         | 判断传递的值是否为有限数字。                                                                                                                                                      |
-| {{jsxref("Number.isInteger()")}}     | 判断传递的值是否为整数。                                                                                                                                                          |
-| {{jsxref("Number.isNaN()")}}             | 判断传递的值是否为 {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | 判断传递的值是否为安全整数。                                                                                                                                                      |
+| 方法                                 | 描述                                                                                                                                                  |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | 把字符串参数解析成浮点数，和全局方法 {{jsxref("parseFloat", "parseFloat()")}} 作用一致。                                                              |
+| {{jsxref("Number.parseInt()")}}      | 把字符串解析成特定基数对应的整型数字，和全局方法 {{jsxref("parseInt", "parseInt()")}} 作用一致。                                                      |
+| {{jsxref("Number.isFinite()")}}      | 判断传递的值是否为有限数字。                                                                                                                          |
+| {{jsxref("Number.isInteger()")}}     | 判断传递的值是否为整数。                                                                                                                              |
+| {{jsxref("Number.isNaN()")}}         | 判断传递的值是否为 {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
+| {{jsxref("Number.isSafeInteger()")}} | 判断传递的值是否为安全整数。                                                                                                                          |
 
 数字的类型提供了不同格式的方法以从数字对象中检索信息。以下表格总结了 数字类型原型上的方法。
 
-| 方法                                                                     | 描述                                                                                                        |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| 方法                                                  | 描述                                                                                                        |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | {{jsxref("Number.toExponential", "toExponential()")}} | 返回一个数字的指数形式的字符串，形如：1.23e+2                                                               |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | 返回指定小数位数的表示形式，var a=123,b=a.toFixed(2)//b="123.00"                                            |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | 返回一个指定精度的数字。如下例子中，a=123 中，3 会由于精度限制消失 var a=123,b=a.toPrecision(2)//b="1.2e+2" |
+| {{jsxref("Number.toFixed", "toFixed()")}}             | 返回指定小数位数的表示形式，var a=123,b=a.toFixed(2)//b="123.00"                                            |
+| {{jsxref("Number.toPrecision", "toPrecision()")}}     | 返回一个指定精度的数字。如下例子中，a=123 中，3 会由于精度限制消失 var a=123,b=a.toPrecision(2)//b="1.2e+2" |
 
 ## 数学对象（Math）
 
 对于内置的{{jsxref("Math")}}数学常项和函数也有一些属性和方法。比方说， `Math` 对象的 `PI` 属性会有属性值 pi (3.141...)，你可以像这样调用它：
 
 ```js
-Math.PI // π
+Math.PI; // π
 ```
 
-同理，标准数学函数也是 Math 的方法。这些包括三角函数 ，对数，指数，和其他函数。比方说你想使用三角函数 `sin`，你可以这么写：
+同理，标准数学函数也是 Math 的方法。这些包括三角函数、对数、指数，和其他函数。比方说你想使用三角函数 `sin`，你可以这么写：
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 需要注意的是 Math 的所有三角函数参数都是弧度制。
@@ -140,21 +147,21 @@ Math.sin(1.56)
 
 Math 的方法
 
-| 方法                                                                                                                                                                                                                                                                                   | 描述                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                                                                               | 绝对值                                                                                      |
-| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                                                           | 标准三角函数;参数为弧度                                                                     |
-| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                                             | 反三角函数; 返回值为弧度                                                                    |
-| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                                                               | 双曲三角函数; 参数为弧度。                                                                  |
-| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                                                   | 反双曲三角函数;返回值为弧度。                                                               |
+| 方法                                                                                                                                                                                                               | 描述                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                    | 绝对值                                                                                      |
+| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                  | 标准三角函数;参数为弧度                                                                     |
+| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                       | 反三角函数; 返回值为弧度                                                                    |
+| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                            | 双曲三角函数; 参数为弧度。                                                                  |
+| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                      | 反双曲三角函数;返回值为弧度。                                                               |
 | {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | 指数与对数函数                                                                              |
-| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                                                                         | 返回小于等于参数的最大整数；返回大于等于参数的最小整数                                      |
-| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                                                                     | 返回一个以逗号间隔的数字参数列表中的较小或较大值 (分别地)                                   |
-| {{jsxref("Math.random", "random()")}}                                                                                                                                                                                                                                       | 返回 0 和 1 之间的随机数。                                                                  |
-| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                                                  | 四舍五入和截断函数                                                                          |
-| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                                                           | 平方根，立方根，所有参数平方和的平方根两个参数平方和的平方根                                |
-| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                                                                           | 数字的符号，说明数字是否为正、负、零。                                                      |
-| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                                                                         | 在 32 位 2 进制表示中，开头的 0 的数量。_返回传入的两个参数相乘结果的类 C 的 32 位表现形式_ |
+| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                             | 返回小于等于参数的最大整数；返回大于等于参数的最小整数                                      |
+| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                   | 返回一个以逗号间隔的数字参数列表中的较小或较大值 (分别地)                                   |
+| {{jsxref("Math.random", "random()")}}                                                                                                                                                                              | 返回 0 和 1 之间的随机数。                                                                  |
+| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                   | 四舍五入和截断函数                                                                          |
+| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                          | 平方根，立方根，所有参数平方和的平方根两个参数平方和的平方根                                |
+| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                  | 数字的符号，说明数字是否为正、负、零。                                                      |
+| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                             | 在 32 位 2 进制表示中，开头的 0 的数量。_返回传入的两个参数相乘结果的类 C 的 32 位表现形式_ |
 
 和其他对象不同，你不能够创建一个自己的 Math 对象。你只能使用内置的 Math 对象。
 
@@ -241,12 +248,11 @@ function JSClock() {
   var hour = time.getHours();
   var minute = time.getMinutes();
   var second = time.getSeconds();
-  var temp = "" + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
-    temp = "12";
-  temp += ((minute < 10) ? ":0" : ":") + minute;
-  temp += ((second < 10) ? ":0" : ":") + second;
-  temp += (hour >= 12) ? " P.M." : " A.M.";
+  var temp = "" + (hour > 12 ? hour - 12 : hour);
+  if (hour == 0) temp = "12";
+  temp += (minute < 10 ? ":0" : ":") + minute;
+  temp += (second < 10 ? ":0" : ":") + second;
+  temp += hour >= 12 ? " P.M." : " A.M.";
   return temp;
 }
 ```

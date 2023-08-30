@@ -30,7 +30,7 @@ const t = window.performance.now();
 const t0 = window.performance.now();
 doSomething();
 const t1 = window.performance.now();
-console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒。")
+console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒。");
 ```
 
 和 JavaScript 中其他可用的时间类函数（比如[`Date.now`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now)）不同的是，`window.performance.now()`返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。
@@ -68,7 +68,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-这些头确保顶层文档不会与跨源文档共享浏览上下文组。COOP 过程 -- 隔离你的文档，潜在的攻击者如果在弹出窗口中打开你的全局对象，就无法访问它，从而防止一组被称为 [XS-Leaks](https://github.com/xsleaks/xsleaks) 的跨源攻击。
+这些头确保顶层文档不会与跨源文档共享浏览上下文组。COOP 过程——隔离你的文档，潜在的攻击者如果在弹出窗口中打开你的全局对象，就无法访问它，从而防止一组被称为 [XS-Leaks](https://github.com/xsleaks/xsleaks) 的跨源攻击。
 
 ## 规范
 

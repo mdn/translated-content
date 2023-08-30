@@ -1,7 +1,6 @@
 ---
 title: Whitespace
 slug: Glossary/Whitespace
-translation_of: Glossary/Whitespace
 ---
 
 **Whitespace** sont un ensemble de {{Glossary("Character", "characters")}} qui est utilisé pour afficher des espaces horizontaux ou verticaux entre d'autres caractères. Ils sont souvent utilisés pour séparer les jetons dans {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, et dans d'autres langages informatiques. Les caractères whitespace et leur utilisation varient selon les langages.
@@ -12,7 +11,7 @@ translation_of: Glossary/Whitespace
 
 ## En JavaScript
 
-[ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space) spécifie plusieurs points de code Unicode sous forme de white space: U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> et autre catégorie “Zs” Tout autre point de code Unicode “Séparateur, esspace” \<USP>. Ces caractères sont généralement inutiles pour la fonctionnalité du code.
+[ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space) spécifie plusieurs points de code Unicode sous forme de white space: U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> et autre catégorie "Zs" Tout autre point de code Unicode "Séparateur, esspace" \<USP>. Ces caractères sont généralement inutiles pour la fonctionnalité du code.
 
 ## Voir aussi
 
@@ -20,5 +19,5 @@ translation_of: Glossary/Whitespace
 - [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
 - [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
 - {{cssxref("white-space")}}
-- [Espace](https://fr.wikipedia.org/wiki/Espace_(typographie)) sur Wikipédia
+- [Espace](<https://fr.wikipedia.org/wiki/Espace_(typographie)>) sur Wikipédia
 - {{Glossary("Character")}}

@@ -31,9 +31,9 @@ GET /mypage.html
 响应也极其简单的：只包含响应文档本身。
 
 ```html
-<HTML>
-这是一个非常简单的 HTML 页面
-</HTML>
+<html>
+  这是一个非常简单的 HTML 页面
+</html>
 ```
 
 跟后来的版本不同，HTTP/0.9 的响应内容并不包含 HTTP 头。这意味着只有 HTML 文件可以传送，无法传输其他类型的文件。也没有状态码或错误代码。一旦出现问题，一个特殊的包含问题描述信息的 HTML 文件将被发回，供人们查看。
@@ -94,13 +94,13 @@ HTTP/1.1 消除了大量歧义内容并引入了多项改进：
 一个典型的请求流程，所有请求都通过一个连接实现，看起来就像这样：
 
 ```http
-GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+GET /zh-CN/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/Simple_header
 
 200 OK
 Connection: Keep-Alive
@@ -123,7 +123,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/Simple_header
 
 200 OK
 Age: 9578461
@@ -165,7 +165,7 @@ Tim Berners-Lee 对于 Web 的最初设想不是一个只读媒体。他设想�
 
 HTTP 和 Web 安全模型——[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是互不相关的。事实上，当前的 Web 安全模型是在 HTTP 被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的 HTTP 头来发送。这些被定义在了[跨源资源共享](/zh-CN/docs/Glossary/CORS)（CORS）和[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)（CSP）规范里。
 
-不只是这大量的扩展，很多的其他的头也被加了进来，有些只是实验性的。比较著名的有 {{HTTPHeader("DNT")}}（Do Not Track） 来控制隐私，{{HTTPHeader("X-Frame-Options")}}, 还有很多。
+不只是这大量的扩展，很多的其他的头也被加了进来，有些只是实验性的。比较著名的有 {{HTTPHeader("DNT")}}（Do Not Track）来控制隐私，{{HTTPHeader("X-Frame-Options")}}，还有很多。
 
 ## HTTP/2——为了更优异的表现
 
@@ -187,12 +187,12 @@ HTTP/2 在 HTTP/1.1 有几处基本的不同：
 随着 HTTP/2.的发布，就像先前的 HTTP/1.x 一样，HTTP 没有停止进化，HTTP 的扩展性依然被用来添加新的功能。特别的，我们能列举出 2016 年里 HTTP 的新扩展：
 
 - 对 Alt-Svc 的支持允许了给定资源的位置和资源鉴定，允许了更智能的 CDN 缓冲机制。
-- [客户端提示（client hint）](/en-US/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
+- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
 - 在 Cookie 头中引入安全相关的的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
 
 ## HTTP/3——基于 QUIC 的 HTTP
 
-HTTP 的下一个主要版本，HTTP/3 有这与 HTTP 早期版本的相同语义，但在传输层部分使用 {{Glossary("QUIC")}} 而不是 {{Glossary("TCP")}}。到2022年10月，[26% 的网站正在使用 HTTP/3](https://w3techs.com/technologies/details/ce-http3)。
+HTTP 的下一个主要版本，HTTP/3 有这与 HTTP 早期版本的相同语义，但在传输层部分使用 {{Glossary("QUIC")}} 而不是 {{Glossary("TCP")}}。到 2022 年 10 月，[26% 的网站正在使用 HTTP/3](https://w3techs.com/technologies/details/ce-http3)。
 
 QUIC 旨在为 HTTP 连接设计更低的延迟。类似于 HTTP/2，它是一个多路复用协议，但是 HTTP/2 通过单个 TCP 连接运行，所以在 TCP 层处理的数据包丢失检测和重传可以阻止所有流。QUIC 通过 {{Glossary("UDP")}} 运行多个流，并为每个流独立实现数据包丢失检测和重传，因此如果发生错误，只有该数据包中包含数据的流才会被阻止。
 

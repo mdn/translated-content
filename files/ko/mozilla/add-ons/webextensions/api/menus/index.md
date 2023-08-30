@@ -1,7 +1,6 @@
 ---
 title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
 
 {{AddonSidebar}}
@@ -14,7 +13,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 이 API를 사용하려면 '`menus`' [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)이 필요하다. `menus` 대신에 `contextMenus`를 사용해도 된다. `contextMenus`를 사용했으면 API도 `browser.contextMenus`를 써야 한다.
 
-콘텐트 스크립트에서는 [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
+콘텐트 스크립트에서는 [`menus.getTargetElement()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
 
 ## 메뉴 항목 만들기
 
@@ -50,57 +49,75 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ![](menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## 타입

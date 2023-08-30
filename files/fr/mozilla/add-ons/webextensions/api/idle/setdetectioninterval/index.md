@@ -1,7 +1,6 @@
 ---
 title: idle.setDetectionInterval()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ L'intervalle de détection est spécifique à l'extension qui appelle la méthod
 
 ```js
 browser.idle.setDetectionInterval(
-  intervalInSeconds // integer
-)
+  intervalInSeconds, // integer
+);
 ```
 
 ### Paramètres

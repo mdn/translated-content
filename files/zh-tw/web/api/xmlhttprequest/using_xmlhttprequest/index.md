@@ -237,7 +237,7 @@ function loadEnd(e) {
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/zh-TW/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
       if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -257,7 +257,7 @@ function loadEnd(e) {
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html

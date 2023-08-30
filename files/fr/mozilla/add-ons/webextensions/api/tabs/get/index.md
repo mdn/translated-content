@@ -1,7 +1,6 @@
 ---
 title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.tabs.get(
-  tabId              // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Paramètres
@@ -52,7 +51,7 @@ browser.tabs.onActivated.addListener(logListener);
 
 > **Note :**
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

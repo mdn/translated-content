@@ -1,7 +1,6 @@
 ---
 title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 ---
 
 {{AddonSidebar()}}
@@ -18,8 +17,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var erasing = browser.downloads.erase(
-  query                    // DownloadQuery
-)
+  query, // DownloadQuery
+);
 ```
 
 ### Paramètres
@@ -50,7 +49,7 @@ function onError(error) {
 
 var erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 erasing.then(onErased, onError);

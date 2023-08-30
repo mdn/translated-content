@@ -1,7 +1,6 @@
 ---
-title: '<a>: El elemento ancla'
+title: "<a>: El elemento ancla"
 slug: Web/HTML/Element/a
-original_slug: Web/HTML/Elemento/a
 ---
 
 {{HTMLSidebar}}
@@ -23,7 +22,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Transparent_content_model"
+          href="/es/docs/HTML/Content_categories#Transparent_content_model"
           title="HTML/Content_categories#Transparent_content_model"
           >Transparente, que contiene contenido de flujo (excluyendo contenido
           interactivo) o contenido de párrafo.</a
@@ -144,9 +143,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 ```html
 <!-- anclaje a un archivo externo -->
-<a href="https://www.mozilla.com/">
-Enlace externo
-</a>
+<a href="https://www.mozilla.com/">Enlace externo</a>
 ```
 
 #### Resultado
@@ -157,9 +154,7 @@ Enlace externo
 
 ```html
 <!-- enlace a un elemento en esta página con id="attr-href" -->
-<a href="#attr-href">
-Descripción de enlaces de la misma página
-</a>
+<a href="#attr-href">Descripción de enlaces de la misma página</a>
 ```
 
 #### Resultado
@@ -172,8 +167,7 @@ Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La pá
 
 ```html
 <a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="mdn_logo.png"
-       alt="MDN logo" />
+  <img src="mdn_logo.png" alt="MDN logo" />
 </a>
 ```
 
@@ -210,13 +204,17 @@ Para detalles adicionales acerca del esquema de la URL `tel`, consultar {{RFC(28
 Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo `download` y la información canvas como un archivo URL:
 
 ```js
-var link = document.createElement('a');
-link.innerHTML = 'download image';
+var link = document.createElement("a");
+link.innerHTML = "download image";
 
-link.addEventListener('click', function(ev) {
+link.addEventListener(
+  "click",
+  function (ev) {
     link.href = canvas.toDataURL();
     link.download = "mypainting.png";
-}, false);
+  },
+  false,
+);
 
 document.body.appendChild(link);
 ```
@@ -237,13 +235,13 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
-| Navegadores de escritorio                                                                                                                             | Windows 8.1 | OS X 10.9                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
-| Firefox 30.0                                                                                                                                          | Si          | Si                              |
+| Navegadores de escritorio                                                                      | Windows 8.1 | OS X 10.9                       |
+| ---------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
+| Firefox 30.0                                                                                   | Si          | Si                              |
 | Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Si          | Si                              |
-| Safari 7.0.5                                                                                                                                          | N/A         | Sólo cuando tiene un `tabindex` |
-| Internet Explorer 11                                                                                                                                  | Si          | N/A                             |
-| Presto (Opera 12)                                                                                                                                     | Si          | Si                              |
+| Safari 7.0.5                                                                                   | N/A         | Sólo cuando tiene un `tabindex` |
+| Internet Explorer 11                                                                           | Si          | N/A                             |
+| Presto (Opera 12)                                                                              | Si          | Si                              |
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 

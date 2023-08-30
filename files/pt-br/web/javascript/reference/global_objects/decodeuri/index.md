@@ -30,14 +30,16 @@ Lança uma exceção {{jsxref("URIError")}} ("sequência de URI malformada") qua
 
 ## Descrição
 
-Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere “`#`” não é decodificado a partir de sequência de escape.
+Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere "`#`" não é decodificado a partir de sequência de escape.
 
 ## Exemplos
 
 ### Decodificando uma URL Cyrillic
 
 ```js
-decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURI(
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+);
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
@@ -55,11 +57,11 @@ try {
 
 ## Especificações
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}                     | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}         | {{Spec2('ES6')}}         |                    |
+| Specification                                                     | Status               | Comment            |
+| ----------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES3')}}                                               | {{Spec2('ES3')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}               | {{Spec2('ES5.1')}}   |                    |
+| {{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}     | {{Spec2('ES6')}}     |                    |
 | {{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

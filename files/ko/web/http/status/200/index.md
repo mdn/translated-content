@@ -2,6 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Status/200
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`200 OK`** 는 요청이 성공했음을 나타내는 성공 응답 상태 코드입니다. 200 응답은 기본적으로 캐시 가능합니다.

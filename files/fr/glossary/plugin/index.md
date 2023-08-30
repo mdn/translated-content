@@ -1,7 +1,6 @@
 ---
 title: Constantes
 slug: Glossary/Plugin
-translation_of: Plugins/Guide/Constants
 ---
 
 Cette section est une référence au définitions utilisées par l'API Plug-in. Toutes les définitions proviennent de npapi.h.
@@ -18,7 +17,7 @@ Cette section est une référence au définitions utilisées par l'API Plug-in. 
 | **NPERR_OUT_OF_MEMORY_ERROR**        | 5      | L'allocation de mémoire a échoué                                     |
 | **NPERR_INVALID_PLUGIN_ERROR**       | 6      | Plugin manquant ou invalide                                          |
 | **NPERR_INVALID_PLUGIN_DIR_ERROR**   | 7      | Répertoire du plugin manquant ou invalide                            |
-| **NPERR_INCOMPATIBLE_VERSION_ERROR** | 8      | les versions du plugin et de Communicator ne correspondent pas      |
+| **NPERR_INCOMPATIBLE_VERSION_ERROR** | 8      | les versions du plugin et de Communicator ne correspondent pas       |
 | **NPERR_INVALID_PARAM**              | 9      | Paramètre manquant ou invalide                                       |
 | **NPERR_INVALID_URL**                | 10     | URL manquante ou invalide                                            |
 | **NPERR_FILE_NOT_FOUND**             | 11     | Fichier manquant ou invalide                                         |

@@ -32,11 +32,11 @@ var request = ObjectStore.openCursor(query, direction);
 
 此方法可能引起以下类型之一的 {{domxref("DOMException")}} ：
 
-| 异常                       | 描述                                                                                      |
-| -------------------------- | ----------------------------------------------------------------------------------------- |
+| 异常                       | 描述                                                                  |
+| -------------------------- | --------------------------------------------------------------------- |
 | `InvalidStateError`        | 此 {{domxref("IDBObjectStore")}} 或{{domxref("IDBIndex")}} 已被删除。 |
-| `TransactionInactiveError` | 此 {{domxref("IDBObjectStore")}} 的事务处于非活动状态。                        |
-| `DataError`                | 指定的键或键范围无效。                                                                    |
+| `TransactionInactiveError` | 此 {{domxref("IDBObjectStore")}} 的事务处于非活动状态。               |
+| `DataError`                | 指定的键或键范围无效。                                                |
 
 ## 例子
 
@@ -46,9 +46,9 @@ var request = ObjectStore.openCursor(query, direction);
 var transaction = db.transaction("name", "readonly");
 var objectStore = transaction.objectStore("name");
 var request = objectStore.openCursor();
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   var cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.value 包含正在被遍历的当前记录
     // 这里你可以对 result 做些什么
     cursor.continue();

@@ -1,13 +1,6 @@
 ---
 title: Event.srcElement
 slug: Web/API/Event/srcElement
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriétés
-  - Éléments SRC
-translation_of: Web/API/Event/srcElement
 ---
 
 {{ApiRef("DOM")}}

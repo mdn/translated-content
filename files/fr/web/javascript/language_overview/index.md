@@ -1,15 +1,6 @@
 ---
 title: Une réintroduction à JavaScript
 slug: Web/JavaScript/Language_overview
-tags:
-  - CodingScripting
-  - Guide
-  - Intermediate
-  - Intro
-  - JavaScript
-  - Learn
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}
@@ -64,7 +55,7 @@ ECMAScript possède deux types numériques intégrés : **Number** et **BigInt**
 Les nombres en JavaScript sont « des valeurs [au format IEEE 754 en double précision 64 bits](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) », d'après la spécification. Cela permet de représenter les nombres entre -(2^53 − 1) et 2^53 − 1. Lorsqu'on fait référence (ici ou dans les autres articles) à des entiers, on parle généralement d'une représentation d'un entier avec une valeur de type Number. En effet, les valeurs Number ne sont pas strictement des entiers et il faut donc prendre quelques précautions :
 
 ```js
-console.log(3 / 2);             // 1.5 et pas 1
+console.log(3 / 2); // 1.5 et pas 1
 console.log(Math.floor(3 / 2)); // 1
 ```
 
@@ -95,7 +86,7 @@ parseInt("010", 10); //10
 Si la base n'est pas indiquée, les résultats peuvent être surprenants dans les anciens navigateurs qui datent de 2013 ou avant où les chaînes commençant par `0` pouvaient ne pas être considérées comme exprimées en notation octale. À moins que vous ne soyez certain du format de votre chaîne de caractères, vous pouvez obtenir des résultats surprenants sur ces anciens navigateurs :
 
 ```js
-parseInt("010");  //  8
+parseInt("010"); //  8
 parseInt("0x10"); // 16
 ```
 
@@ -112,9 +103,9 @@ De la même manière, vous pouvez traiter les nombres à virgule flottante à l'
 On peut également utiliser l'opérateur unaire `+` pour convertir des valeurs en nombres :
 
 ```js
-+ "42";   // 42
-+ "010";  // 10
-+ "0x10"; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 Une valeur spéciale appelée [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) (qui signifie « _Not a Number_ », soit « pas un nombre ») est renvoyée si la chaîne est non numérique :
@@ -133,23 +124,23 @@ Cette valeur peut être détectée grâce à la fonction native [`Number.isNaN()
 
 ```js
 Number.isNaN(NaN); // true
-Number.isNaN('bonjour'); // false
-Number.isNaN('1'); // false
+Number.isNaN("bonjour"); // false
+Number.isNaN("1"); // false
 Number.isNaN(undefined); // false
 Number.isNaN({}); // false
-Number.isNaN([1]) // false
-Number.isNaN([1,2]) // false
+Number.isNaN([1]); // false
+Number.isNaN([1, 2]); // false
 ```
 
 Mais ne testez pas le `NaN` en utilisant la fonction globale [`isNaN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN), [qui a un comportement peu intuitif](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior) :
 
 ```js
-isNaN('bonjour'); // true
-isNaN('1'); // false
+isNaN("bonjour"); // true
+isNaN("1"); // false
 isNaN(undefined); // true
 isNaN({}); // true
-isNaN([1]) // false
-isNaN([1,2]) // true
+isNaN([1]); // false
+isNaN([1, 2]); // true
 ```
 
 JavaScript dispose également de valeur spéciales pour l'infini [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) et l'infini négatif (`-Infinity`)&nbsp;:
@@ -162,7 +153,7 @@ JavaScript dispose également de valeur spéciales pour l'infini [`Infinity`](/f
 Il est possible de tester les valeurs `Infinity`, `-Infinity` et `NaN` à l'aide de la fonction native [`isFinite()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/isFinite) :
 
 ```js
-isFinite(1/0); // false
+isFinite(1 / 0); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
@@ -201,7 +192,7 @@ JavaScript dispose d'un type booléen, dont les valeurs possibles sont `true` (v
 Cette conversion peut être faite de manière explicite à l'aide de la fonction `Boolean()` :
 
 ```js
-Boolean("");  // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -273,7 +264,7 @@ x = x + 5;
 
 Vous pouvez utiliser `++` et `--` respectivement pour incrémenter et pour décrémenter. Ils peuvent être utilisés comme opérateurs préfixes ou suffixes.
 
-L'[opérateur `+`](/fr/docs/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
+L'[opérateur `+`](</fr/docs/Web/JavaScript/Reference/Operators#addition_(.2b)>) permet également de concaténer des chaînes :
 
 ```js
 "coucou" + " monde"; // "coucou monde"
@@ -292,7 +283,7 @@ Les [comparaisons](/fr/docs/Web/JavaScript/Reference/Operators) en JavaScript se
 
 ```js
 123 == "123"; // true
-1 == true;    // true
+1 == true; // true
 ```
 
 Pour éviter les conversions implicites avant les comparaisons, utilisez l'opérateur triple égal :
@@ -319,7 +310,7 @@ if (nom == "des chiots") {
 } else {
   nom = " !" + nom;
 }
-nom == "des chatons !!"
+nom == "des chatons !!";
 ```
 
 JavaScript dispose également de boucles `while` et `do-while`. Les premières permettent de former des boucles basiques ; les secondes permettent de construire des boucles qui seront exécutées au moins une fois :
@@ -382,17 +373,17 @@ let nom = nomEnCache || (nomEnCache = getNom());
 JavaScript propose également un opérateur ternaire pour les assignations conditionnelles en une ligne :
 
 ```js
-let permis = (age > 18) ? "oui" : "non";
+let permis = age > 18 ? "oui" : "non";
 ```
 
 L'instruction `switch` peut être utilisée pour différentes branches de code basées sur un nombre ou une chaîne :
 
 ```js
 switch (action) {
-  case 'dessiner':
+  case "dessiner":
     dessine();
     break;
-  case 'manger':
+  case "manger":
     mange();
     break;
   default:
@@ -416,7 +407,7 @@ switch (a) {
 La clause `default` est optionnelle. Vous pouvez placer des expressions à la fois dans la partie `switch` et dans les cas à gérer si vous voulez ; les comparaisons entre les deux se font comme si on avait utilisé l'opérateur `===` :
 
 ```js
-switch (1 + 3){
+switch (1 + 3) {
   case 2 + 2:
     yay();
     break;
@@ -457,12 +448,12 @@ La syntaxe littérale pour écrire un objet peut être utilisée afin d'initiali
 
 ```js
 let obj = {
-  name: 'Carotte',
-  _for: 'Max', // Le mot "for" est un mot réservé, utilisez plutôt "_for".
+  name: "Carotte",
+  _for: "Max", // Le mot "for" est un mot réservé, utilisez plutôt "_for".
   details: {
-    color: 'orange',
-    size: 12
-  }
+    color: "orange",
+    size: 12,
+  },
 };
 ```
 
@@ -470,7 +461,7 @@ L'accès aux attributs peut être enchaîné :
 
 ```js
 obj.details.color; // orange
-obj['details']['size']; // 12
+obj["details"]["size"]; // 12
 ```
 
 L'exemple suivant crée un prototype d'objet (`Person`) et une instance de ce prototype (`you`).
@@ -482,7 +473,7 @@ function Person(name, age) {
 }
 
 // Définir un objet
-let you = new Person('You', 24);
+let you = new Person("You", 24);
 // Nous créons une nouvelle personne nommée "You" âgée de 24 ans.
 ```
 
@@ -490,7 +481,7 @@ let you = new Person('You', 24);
 
 ```js
 // notation par points
-obj.name = 'Simon';
+obj.name = "Simon";
 let name = obj.name;
 ```
 
@@ -498,11 +489,11 @@ Et…
 
 ```js
 // notation entre crochets
-obj['name'] = 'Simon';
-let name = obj['name'];
+obj["name"] = "Simon";
+let name = obj["name"];
 // on peut utiliser une variable pour définir une clé
-let user = prompt('quelle clé ?');
-obj[user] = prompt('quelle valeur ?');
+let user = prompt("quelle clé ?");
+obj[user] = prompt("quelle valeur ?");
 ```
 
 Ces deux méthodes sont également sémantiquement équivalentes. La seconde méthode a l'avantage de fournir le nom de l'attribut de l'objet dans une chaîne, ce qui signifie qu'il peut être calculé au moment de l'exécution (mais ce qui peut empêcher certaines optimisations du moteur JavaScript). Elle peut également être utilisée pour définir et lire des propriétés dont les noms sont des [mots réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) :
@@ -544,7 +535,7 @@ Notez que `array.length` ne correspond pas nécessairement au nombre d'élément
 ```js
 let a = ["chien", "chat", "poule"];
 a[100] = "renard";
-a.length // 101
+a.length; // 101
 ```
 
 Rappelez-vous : la longueur du tableau vaut simplement un de plus que l'indice le plus élevé.
@@ -552,7 +543,7 @@ Rappelez-vous : la longueur du tableau vaut simplement un de plus que l'indice l
 Si vous interrogez un élément de tableau non existant, vous obtenez `undefined` :
 
 ```js
-typeof(a[90]); // undefined
+typeof a[90]; // undefined
 ```
 
 Si vous prenez cela en compte, il est possible de parcourir un tableau à l'aide de la boucle suivante :
@@ -576,7 +567,7 @@ Vous pourriez également itérer sur un tableau en utilisant une boucle [`for...
 Une autre façon d'itérer sur un tableau qui a été ajoutée avec ECMAScript 5 est [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) :
 
 ```js
-['chien', 'chat', 'poule'].forEach(function(currentValue, index, array) {
+["chien", "chat", "poule"].forEach(function (currentValue, index, array) {
   // Faire quelque chose avec currentValue ou array[index]
 });
 ```
@@ -601,7 +592,7 @@ Les tableaux sont accompagnés d'un certain nombre de méthodes. Voir également
 | `a.unshift(item1[, item2[, ...[, itemN]]])`          | Ajoute des éléments au début du tableau.                                                                                 |
 | `a.slice(start[, end])`                              | Renvoie un sous-tableau.                                                                                                 |
 | `a.sort([cmpfn])`                                    | Trie le tableau (avec une fonction de comparaison optionnelle).                                                          |
-| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
+| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.                         |
 | `a.reverse()`                                        | Retourne le tableau.                                                                                                     |
 
 ## Les fonctions
@@ -717,7 +708,7 @@ function() {
 Mais une telle fonction anonyme n'est pas utile en soi, car sans nom, il n'y a aucun moyen d'appeler la fonction. En pratique, les fonctions anonymes sont donc généralement utilisées comme arguments pour d'autres fonctions ou sont rendues appelables en les assignant immédiatement à une variable qui peut être utilisée pour invoquer la fonction :
 
 ```js
-let moyenne = function() {
+let moyenne = function () {
   let somme = 0;
   for (let i = 0, j = arguments.length; i < j; i++) {
     somme += arguments[i];
@@ -731,7 +722,7 @@ Cela rend la fonction anonyme invocable en appelant `moyenne()` avec des argumen
 Mais les fonctions anonymes peuvent être utiles même si elles ne sont jamais affectées à des variables ou transmises comme arguments à d'autres fonctions : JavaScript fournit un mécanisme permettant de déclarer et d'invoquer simultanément une fonction à l'aide d'une seule expression. Cela s'appelle une [expression de fonction invoquée immédiatement (_IIFE_ pour l'acronyme anglais)](/fr/docs/Glossary/IIFE), et la syntaxe pour l'utiliser avec une fonction anonyme ressemble à ceci :
 
 ```js
-(function() {
+(function () {
   // …
 })();
 ```
@@ -744,11 +735,12 @@ JavaScript permet d'appeler des fonctions récursivement. C'est particulièremen
 
 ```js
 function countChars(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   let count = 0;
-  for (let i = 0, child; child = elm.childNodes[i]; i++) {
+  for (let i = 0, child; (child = elm.childNodes[i]); i++) {
     count += countChars(child);
   }
   return count;
@@ -759,11 +751,12 @@ Cela met en évidence un problème potentiel avec les fonctions anonymes : comme
 
 ```js
 let charsInBody = (function counter(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   let count = 0;
-  for (let i = 0, child; child = elm.childNodes[i]; i++) {
+  for (let i = 0, child; (child = elm.childNodes[i]); i++) {
     count += counter(child);
   }
   return count;
@@ -784,16 +777,16 @@ Dans la programmation orientée objet classique, les objets sont des collections
 function creerPersonne(prenom, nom) {
   return {
     prenom: prenom,
-    nom: nom
+    nom: nom,
   };
 }
 
 function personneNomComplet(personne) {
-  return personne.prenom + ' ' + personne.nom;
+  return personne.prenom + " " + personne.nom;
 }
 
 function personneNomCompletInverse(personne) {
-  return personne.nom + ' ' + personne.prenom;
+  return personne.nom + " " + personne.prenom;
 }
 
 let s = creerPersonne("Simon", "Willison");
@@ -808,16 +801,16 @@ function creerPersonne(prenom, nom) {
   return {
     prenom: prenom,
     nom: nom,
-    nomComplet: function() {
-      return this.prenom + ' ' + this.nom;
+    nomComplet: function () {
+      return this.prenom + " " + this.nom;
     },
-    nomCompletInverse: function() {
-      return this.nom + ' ' + this.prenom;
-    }
+    nomCompletInverse: function () {
+      return this.nom + " " + this.prenom;
+    },
   };
 }
 
-let s = creerPersonne("Simon", "Willison")
+let s = creerPersonne("Simon", "Willison");
 s.nomComplet(); // Simon Willison
 s.nomCompletInverse(); // Willison Simon
 ```
@@ -840,12 +833,12 @@ On peut se servir du mot-clé `this` pour améliorer notre fonction de construct
 function Personne(prenom, nom) {
   this.prenom = prenom;
   this.nom = nom;
-  this.nomComplet = function() {
-    return this.prenom + ' ' + this.nom;
-  }
-  this.nomCompletInverse = function() {
-    return this.nom + ' ' + this.prenom;
-  }
+  this.nomComplet = function () {
+    return this.prenom + " " + this.nom;
+  };
+  this.nomCompletInverse = function () {
+    return this.nom + " " + this.prenom;
+  };
 }
 let s = new Personne("Simon", "Willison");
 ```
@@ -858,11 +851,11 @@ Nos objets `Personne` s'améliorent, mais il leur reste certaines aspérités pa
 
 ```js
 function personneNomComplet() {
-  return this.prenom + ' ' + this.nom;
+  return this.prenom + " " + this.nom;
 }
 
 function personneNomCompletInverse() {
-  return this.nom + ' ' + this.prenom;
+  return this.nom + " " + this.prenom;
 }
 
 function Personne(prenom, nom) {
@@ -881,13 +874,13 @@ function Personne(prenom, nom) {
   this.nom = nom;
 }
 
-Personne.prototype.nomComplet = function() {
-  return this.prenom + ', ' + this.nom;
-}
+Personne.prototype.nomComplet = function () {
+  return this.prenom + ", " + this.nom;
+};
 
-Personne.prototype.nomCompletInverse = function() {
-  return this.nom + ', ' + this.prenom;
-}
+Personne.prototype.nomCompletInverse = function () {
+  return this.nom + ", " + this.prenom;
+};
 ```
 
 `Personne.prototype` est un objet partagé par toutes les instances de `Personne`. Il fait partie d'une chaîne de résolution (qui a un nom spécial, la « chaîne de prototypes ») : chaque fois que vous essayez d'accéder à une propriété de `Personne` qui n'est pas définie, JavaScript va vérifier `Personne.prototype` pour voir si cette propriété n'existe pas plutôt à cet endroit. Par conséquent, tout ce qui est assigné à `Personne.prototype` devient disponible à toutes les instances de ce constructeur via l'objet `this`.
@@ -899,8 +892,8 @@ let s = new Personne("Simon", "Willison");
 s.prenomEnMajuscules(); // TypeError on line 1: s.prenomEnMajuscules is not a function
 
 Personne.prototype.prenomEnMajuscules = function prenomEnMajuscules() {
-  return this.prenom.toUpperCase()
-}
+  return this.prenom.toUpperCase();
+};
 s.prenomEnMajuscules(); // "SIMON"
 ```
 
@@ -916,14 +909,14 @@ String.prototype.inverse = function inverse() {
     r += this[i];
   }
   return r;
-}
+};
 s.inverse(); // "nomiS"
 ```
 
 Notre nouvelle méthode fonctionne même sur les chaînes littérales !
 
 ```js
-"Ceci peut maintenant être inversé.".inverse() // ".ésrevni ertê tnanetniam tuep iceC"
+"Ceci peut maintenant être inversé.".inverse(); // ".ésrevni ertê tnanetniam tuep iceC"
 ```
 
 Comme mentionné précédemment, le prototype fait partie d'une chaîne de prototypes. Le début de cette chaîne est `Object.prototype`, dont `toString()` fait partie des méthodes. C'est cette méthode qui est appelée quand vous essayez de représenter un objet sous la forme d'une chaîne. Elle sera utile pour déboguer nos objets `Personne` :
@@ -932,9 +925,9 @@ Comme mentionné précédemment, le prototype fait partie d'une chaîne de proto
 let s = new Personne("Simon", "Willison");
 s; // [object Object]
 
-Personne.prototype.toString = function() {
-  return '<Personne : ' + this.nomComplet() + '>';
-}
+Personne.prototype.toString = function () {
+  return "<Personne : " + this.nomComplet() + ">";
+};
 s.toString(); // "<Personne : Simon Willison>"
 ```
 
@@ -999,9 +992,9 @@ Cela nous amène à l'une des abstractions les plus spectaculaires que JavaScrip
 
 ```js
 function creerAdditionneur(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
-  }
+  };
 }
 let ajoute5 = creerAdditionneur(5);
 let ajoute20 = creerAdditionneur(20);

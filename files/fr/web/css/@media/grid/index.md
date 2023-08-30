@@ -1,11 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/grid
 ---
 
 {{CSSRef}}
@@ -23,7 +18,9 @@ La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxre
 ### HTML
 
 ```html
-<p class="unknown">Impossible de savoir si l'affichage fonctionne sur une grille. :-(</p>
+<p class="unknown">
+  Impossible de savoir si l'affichage fonctionne sur une grille. :-(
+</p>
 <p class="bitmap">L'appareil dispose d'un affichage matriciel.</p>
 <p class="grid">L'appareil utilise une grille pour l'affichage !</p>
 ```

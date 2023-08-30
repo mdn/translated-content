@@ -1,30 +1,31 @@
 ---
 title: Gouttières
 slug: Glossary/Gutters
-translation_of: Glossary/Gutters
 ---
 
-**Les gouttières** (ou *ruelles*) sont l'espace entre les pistes de contenu. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) en utilisant les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) ou [`gap`](/fr/docs/Web/CSS/gap).
+**Les gouttières** (ou _ruelles_) sont l'espace entre les pistes de contenu. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) en utilisant les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) ou [`gap`](/fr/docs/Web/CSS/gap).
 
 ## Exemple
 
 Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et `20px` entre les pistes de lignes.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #fff8f8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #fff8f8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -40,11 +41,11 @@ Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, av
 
 ```html
 <div class="wrapper">
-   <div>Un</div>
-   <div>Deux</div>
-   <div>Trois</div>
-   <div>Quatre</div>
-   <div>Cinq</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
 </div>
 ```
 
@@ -64,5 +65,5 @@ Les propriétés de l'écart de grille (par exemple, `row-gap` et `column-gap`) 
 
 ### En lire plus
 
-- Guide des grilles CSS&nbsp;: *[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)*
+- Guide des grilles CSS&nbsp;: _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
 - [Définition des gouttières (<i lang="en">gutters</i>) dans la spécification des grilles CSS (en anglais)](https://drafts.csswg.org/css-grid/#gutters)

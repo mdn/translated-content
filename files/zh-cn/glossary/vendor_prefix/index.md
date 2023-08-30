@@ -55,11 +55,12 @@ transition: all 4s ease;
 示例：
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 ```
 
 ## 了解更多

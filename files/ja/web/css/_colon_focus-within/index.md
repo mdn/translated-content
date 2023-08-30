@@ -1,5 +1,5 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
 ---
 
@@ -33,10 +33,10 @@ div:focus-within {
 
 <form>
   <label for="given_name">名前:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">苗字:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Enlivening Expressions
-translation_of: Web/MathML/Element/maction
 ---
 
 {{MathMLRef}}
@@ -42,34 +36,30 @@ translation_of: Web/MathML/Element/maction
 
 ```html
 <math>
+  <maction actiontype="toggle">
+    <mfrac>
+      <mn>6</mn>
+      <mn>8</mn>
+    </mfrac>
 
-<maction actiontype="toggle">
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+        <mo>&sdot;</mo>
+        <mn>2</mn>
+      </mrow>
+      <mrow>
+        <mn>4</mn>
+        <mo>&sdot;</mo>
+        <mn>2</mn>
+      </mrow>
+    </mfrac>
 
-  <mfrac>
-    <mn>6</mn>
-    <mn>8</mn>
-  </mfrac>
-
-  <mfrac>
-    <mrow>
+    <mfrac>
       <mn>3</mn>
-      <mo>&sdot;</mo>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
       <mn>4</mn>
-      <mo>&sdot;</mo>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-
-  <mfrac>
-    <mn>3</mn>
-    <mn>4</mn>
-  </mfrac>
-
-</maction>
-
+    </mfrac>
+  </maction>
 </math>
 ```
 

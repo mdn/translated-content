@@ -1,7 +1,6 @@
 ---
 title: extension.getExtensionTabs()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ Renvoie un tableau des objets de la [Window](/fr/docs/Web/API/Window) JavaScript
 
 ```js
 chrome.extension.getExtensionTabs(
-  windowId // optional integer
-)
+  windowId, // optional integer
+);
 ```
 
 Cette API est également disponible en tant que `browser.extension.getExtensionTabs()`.

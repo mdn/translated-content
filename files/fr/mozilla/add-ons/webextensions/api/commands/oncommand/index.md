@@ -1,7 +1,6 @@
 ---
 title: onCommand
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ---
 
 {{AddonSidebar()}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit le nom de la commande. Cela correspond au nom donnée à la commande dans une [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
@@ -9,9 +8,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ## Syntaxe
 
 ```js
-browser.commands.onCommand.addListener(listener)
-browser.commands.onCommand.removeListener(listener)
-browser.commands.onCommand.hasListener(listener)
+browser.commands.onCommand.addListener(listener);
+browser.commands.onCommand.removeListener(listener);
+browser.commands.onCommand.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -56,7 +55,7 @@ Etant donnée une entrée manifest.json comme ceci :
 Vous pouvez écouter cette commande particulière comme ceci :
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
+browser.commands.onCommand.addListener(function (command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }

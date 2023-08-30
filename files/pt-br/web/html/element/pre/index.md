@@ -48,11 +48,11 @@ body {
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
+| Especificação                                                                       | Status                   | Comentário                                                  |
+| ----------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança significante na {{SpecName("HTML WHATWG")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Nenhuma mudança significante na {{SpecName("HTML4.01")}}     |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;dl&gt;')}}                         | {{Spec2('HTML4.01')}}     | `Atributto cols` obsoleto                                            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}   | {{Spec2('HTML5 W3C')}}   | Nenhuma mudança significante na {{SpecName("HTML4.01")}}    |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;dl&gt;')}}                  | {{Spec2('HTML4.01')}}    | `Atributto cols` obsoleto                                   |
 
 ## Compatibilidade de navegador
 

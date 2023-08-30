@@ -1,8 +1,7 @@
 ---
 title: MDN を始めよう
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
-i10n:
+l10n:
   sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
 ---
 

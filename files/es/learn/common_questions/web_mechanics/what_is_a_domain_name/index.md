@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es un nombre de dominio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
@@ -12,7 +11,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >cómo funciona Internet</a
         >
         y entender
@@ -52,6 +51,7 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 <!-- -->
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
+
   - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
 
     **Etiqueta (o componente)**

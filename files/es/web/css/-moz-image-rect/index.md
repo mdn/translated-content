@@ -1,5 +1,5 @@
 ---
-title: '-moz-image-rect'
+title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
 ---
 
@@ -44,14 +44,14 @@ Para el contenedor:
 
 ```css
 #container {
-  width:267px;
-  height:272px;
-  top:100px;
-  left:100px;
-  position:absolute;
-  font-size:16px;
-  text-shadow:white 0px 0px 6px;
-  text-align:center;
+  width: 267px;
+  height: 272px;
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  font-size: 16px;
+  text-shadow: white 0px 0px 6px;
+  text-align: center;
 }
 ```
 
@@ -60,9 +60,9 @@ posteriormente las cuatro caja se defines las cajas que especifican los segmento
 ```css
 #box1 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -71,9 +71,9 @@ Esta es la esquina superior izquierda de la imagen. Define un rectángulo que co
 ```css
 #box2 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -84,15 +84,15 @@ Las otras dos siguen un patrón similar:
 ```css
 #box3 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 #box4 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -117,16 +117,20 @@ Gestiona el evento click cuando el contenedor recibe un click de ratón
 
 ```js
 function rotate() {
-  var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  var prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // Una vez hemos guardado la última, empezamos a rotar.
 
-  for (var i=1; i<=4; i++) {
+  for (var i = 1; i <= 4; i++) {
     var curId = "box" + i;
 
     // Permuta las imágenes de fondo.
 
-    var curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    var curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }

@@ -1,10 +1,8 @@
 ---
 title: rx
 slug: Web/SVG/Attribute/rx
-tags:
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/rx
 ---
+
 {{SVGRef}}
 
 Атрибут **`rx`** определяет радиус круга по оси x.
@@ -12,18 +10,22 @@ translation_of: Web/SVG/Attribute/rx
 Два элемента используют этот атрибут: {{SVGElement("ellipse")}} и {{SVGElement("rect")}}
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="50"  cy="50" rx="0"  ry="25" />
+  <ellipse cx="50" cy="50" rx="0" ry="25" />
   <ellipse cx="150" cy="50" rx="25" ry="25" />
   <ellipse cx="250" cy="50" rx="50" ry="25" />
 
-  <rect x="20"  y="120" width="60" height="60" rx="0"   ry="15"/>
-  <rect x="120" y="120" width="60" height="60" rx="15"  ry="15"/>
-  <rect x="220" y="120" width="60" height="60" rx="150" ry="15"/>
+  <rect x="20" y="120" width="60" height="60" rx="0" ry="15" />
+  <rect x="120" y="120" width="60" height="60" rx="15" ry="15" />
+  <rect x="220" y="120" width="60" height="60" rx="150" ry="15" />
 </svg>
 ```
 
@@ -59,8 +61,8 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-| Спецификация                                                                                 | Статус                   | Комментарий                          |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------ |
-| {{SpecName("SVG2", "geometry.html#RX", "rx")}}                                 | {{Spec2("SVG2")}} | Определяется как свойство геометрии  |
+| Спецификация                                                          | Статус              | Комментарий                          |
+| --------------------------------------------------------------------- | ------------------- | ------------------------------------ |
+| {{SpecName("SVG2", "geometry.html#RX", "rx")}}                        | {{Spec2("SVG2")}}   | Определяется как свойство геометрии  |
 | {{SpecName("SVG1.1", "shapes.html#EllipseElementRXAttribute", "rx")}} | {{Spec2("SVG1.1")}} | Начальное определение для \<ellipse> |
-| {{SpecName("SVG1.1", "shapes.html#RectElementRXAttribute", "rx")}}     | {{Spec2("SVG1.1")}} | Начальное определение для `<rect>`   |
+| {{SpecName("SVG1.1", "shapes.html#RectElementRXAttribute", "rx")}}    | {{Spec2("SVG1.1")}} | Начальное определение для `<rect>`   |

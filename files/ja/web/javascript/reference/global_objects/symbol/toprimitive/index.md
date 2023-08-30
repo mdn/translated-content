@@ -24,25 +24,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ```js
 // Symbol.toPrimitive プロパティを持たないオブジェクト。
 var obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // Symbol.toPrimitive プロパティを持つオブジェクト。
 var obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint == 'number') {
+    if (hint == "number") {
       return 10;
     }
-    if (hint == 'string') {
-      return 'hello';
+    if (hint == "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        -- hint は "number"
+console.log(+obj2); // 10        -- hint は "number"
 console.log(`${obj2}`); // "hello"   -- hint は "string"
-console.log(obj2 + ''); // "true"    -- hint は "default"
+console.log(obj2 + ""); // "true"    -- hint は "default"
 ```
 
 ## 仕様書

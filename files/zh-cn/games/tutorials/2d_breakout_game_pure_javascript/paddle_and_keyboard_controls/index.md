@@ -18,18 +18,18 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_contr
 ```js
 var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的 `drawBall()` 方法里去：
 
 ```js
 function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -60,21 +60,19 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 ```js
 function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = true;
+  } else if (e.keyCode == 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = false;
+  } else if (e.keyCode == 37) {
+    leftPressed = false;
+  }
 }
 ```
 
@@ -87,22 +85,20 @@ function keyUpHandler(e) {
 我们现在有用于存储按键，事件监听器和相关功能的信息的变量。现在我们将看到实际的代码来使用这些变量，并在屏幕上移动球拍。在 draw（）函数内部，我们将检查每一帧被渲染的同时是否按下左或右键。我们的代码如下：
 
 ```js
-if(rightPressed) {
-    paddleX += 7;
-}
-else if(leftPressed) {
-    paddleX -= 7;
+if (rightPressed) {
+  paddleX += 7;
+} else if (leftPressed) {
+  paddleX -= 7;
 }
 ```
 
 如果按一下左键，球拍将向左移动 7 个像素，如果按一下右键，球拍将向右移动 7 个像素。目前这个功能可以正常工作，但是如果我们按任意一个键的时间太长，球拍就会从画布的边缘消失。我们可以通过改变代码来改善这种情况，并且只能在画布的边界内移动球拍，如下所示：
 
 ```js
-if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-}
-else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
+if (rightPressed && paddleX < canvas.width - paddleWidth) {
+  paddleX += 7;
+} else if (leftPressed && paddleX > 0) {
+  paddleX -= 7;
 }
 ```
 

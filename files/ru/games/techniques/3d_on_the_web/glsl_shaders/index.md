@@ -1,13 +1,6 @@
 ---
 title: GLSL Шейдеры
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - GLSL
-  - OpenGL
-  - Shader
-  - three.js
-  - Шейдер
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 
 {{GamesSidebar}}
@@ -53,28 +46,35 @@ Let's build a simple demo to explain those shaders in action. Be sure to read [T
 Мы будем использовать следующую структуру HTML кода.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: Shaders demo</title>
-  <style>
-    body { margin: 0; padding: 0; font-size: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-  <script src="three.min.js"></script>
-</head>
-<body>
-  <script id="vertexShader" type="x-shader/x-vertex">
-  // vertex shader's code goes here
-  </script>
-  <script id="fragmentShader" type="x-shader/x-fragment">
-  // fragment shader's code goes here
-  </script>
-  <script>
-  // scene setup goes here
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: Shaders demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="three.min.js"></script>
+  </head>
+  <body>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      // vertex shader's code goes here
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      // fragment shader's code goes here
+    </script>
+    <script>
+      // scene setup goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -131,9 +131,9 @@ To actually apply the newly created shaders to the cube, comment out the `basicM
 Далее, создаём [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial( {
-  vertexShader: document.getElementById( 'vertexShader' ).textContent,
-  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
 });
 ```
 
@@ -164,57 +164,64 @@ It looks exactly the same as the Three.js cube demo but the slightly different p
 ```html
 <script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
-    }
+  void main() {
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  }
 </script>
 <script id="fragmentShader" type="x-shader/x-fragment">
-    void main() {
-        gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
-    }
+  void main() {
+      gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  }
 </script>
 ```
 
 ### JavaScript
 
 ```js
-    var WIDTH = window.innerWidth;
-    var HEIGHT = window.innerHeight;
+var WIDTH = window.innerWidth;
+var HEIGHT = window.innerHeight;
 
-    var renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(WIDTH, HEIGHT);
-    renderer.setClearColor(0xDDDDDD, 1);
-    document.body.appendChild(renderer.domElement);
+var renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
 
-    var scene = new THREE.Scene();
+var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
-    camera.position.z = 50;
-    scene.add(camera);
+var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+camera.position.z = 50;
+scene.add(camera);
 
-    var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-    var shaderMaterial = new THREE.ShaderMaterial( {
-        vertexShader: document.getElementById( 'vertexShader' ).textContent,
-        fragmentShader: document.getElementById( 'fragmentShader' ).textContent
-    });
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
+});
 
-    var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
-    scene.add(cube);
-    cube.rotation.set(0.4, 0.2, 0);
+var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+scene.add(cube);
+cube.rotation.set(0.4, 0.2, 0);
 
-    function render() {
-        requestAnimationFrame(render);
-        renderer.render(scene, camera);
-    }
-    render();
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
+render();
 ```
 
 ### CSS
 
 ```css
-body { margin: 0; padding: 0; font-size: 0; }
-canvas { width: 100%; height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
 ```
 
 ### Результат

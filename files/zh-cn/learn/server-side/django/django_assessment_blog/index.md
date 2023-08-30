@@ -22,7 +22,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
   </tbody>
 </table>
 
-## 項目概要
+## 项目概要
 
 下面列出了需要显示的页面、URL 和其他要求：
 
@@ -37,7 +37,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
   <tbody>
     <tr>
       <td>主页</td>
-      <td><code>/</code> and <code>/blog/</code></td>
+      <td><code>/</code> 和 <code>/blog/</code></td>
       <td>描述站点的索引页面。</td>
     </tr>
     <tr>
@@ -219,10 +219,10 @@ slug: Learn/Server-side/Django/django_assessment_blog
 1. 为站点创建骨架项目和 Web 应用程序（如[Django 教程 2：创建骨架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)中所述）。您可以使用 'diyblog' 作为项目名称，使用 'blog' 作为应用程序名称。
 2. 为博客帖子，评论和所需的任何其他对象创建模型。在考虑您的设计时，请记住：
 
-    - 每个评论只有一个博客，但博客可能有很多评论。
-    - 博客帖子和评论，必须按发布日期排序。
-    - 并非每个用户都必须是博客作者，尽管任何用户都可能是评论者。
-    - 博客作者还必须包含个人信息。
+   - 每个评论只有一个博客，但博客可能有很多评论。
+   - 博客帖子和评论，必须按发布日期排序。
+   - 并非每个用户都必须是博客作者，尽管任何用户都可能是评论者。
+   - 博客作者还必须包含个人信息。
 
 3. 为新模型运行迁移，并创建超级用户。
 4. 使用管理站点，创建一些示例博客帖子，和博客评论。
@@ -240,28 +240,28 @@ slug: Learn/Server-side/Django/django_assessment_blog
 2. T 可以使用[通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)，以创建博客帖子和博主的列表视图，以及博客帖子的详细信息视图。
 3. 可以使用通用列表的博客列表视图，并对指定作者匹配的博客对象进行过滤，来创建特定作者的博客帖子列表。
 
-    - 您将必须实现`get_queryset(self)`来进行过滤（很像我们的图书馆类`LoanedBooksAllListView`），并从 URL 获取作者信息。
-    - 您还需要将作者的名称，传递给上下文中的页面。要在基于类的视图中执行此操作，您需要实现`get_context_data()`（在下面讨论）。
+   - 您将必须实现`get_queryset(self)`来进行过滤（很像我们的图书馆类`LoanedBooksAllListView`），并从 URL 获取作者信息。
+   - 您还需要将作者的名称，传递给上下文中的页面。要在基于类的视图中执行此操作，您需要实现`get_context_data()`（在下面讨论）。
 
 4. 可以使用基于函数的视图（以及关联的模型和表单），或使用通用`CreateView`，以创建添加注释表单。如果您使用`CreateView`（推荐），那么：
 
-    - 您还需要将博客文章的名称，传递到上下文中的评论页面（实现`get_context_data()` ，如下所述）。
-    - 表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在`form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
+   - 您还需要将博客文章的名称，传递到上下文中的评论页面（实现`get_context_data()` ，如下所述）。
+   - 表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在`form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
 
-      ```python
-          def form_valid(self, form):
-              """
-              Add author and associated blog to form data before setting it as valid (so it is saved to model)
-              """
-              #Add logged-in user as author of comment
-              form.instance.author = self.request.user
-              #Associate comment with blog based on passed id
-              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
-              # Call super-class form validation behaviour
-              return super(BlogCommentCreate, self).form_valid(form)
-      ```
+     ```python
+         def form_valid(self, form):
+             """
+             Add author and associated blog to form data before setting it as valid (so it is saved to model)
+             """
+             #Add logged-in user as author of comment
+             form.instance.author = self.request.user
+             #Associate comment with blog based on passed id
+             form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
+             # Call super-class form validation behaviour
+             return super(BlogCommentCreate, self).form_valid(form)
+     ```
 
-    - 在表单验证后，您需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，您需要覆盖 `get_success_url()`，并为原来的博客“反转”URL。您可以使用`self.kwargs`属性，获取所需的博客 ID，如上面的 `form_valid()` 方法所示。
+   - 在表单验证后，您需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，您需要覆盖 `get_success_url()`，并为原来的博客“反转”URL。您可以使用`self.kwargs`属性，获取所需的博客 ID，如上面的 `form_valid()` 方法所示。
 
 我们简要地讨论了在[Django 教程 6：通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views)主题中，在基于类的视图中，将上下文传递给模板。要执行此操作，您需要覆盖`get_context_data()`（首先，获取现有上下文，使用要传递给模板的任何其他变量，更新它，然后返回更新的上下文）。例如，下面的代码片段，显示了如何根据`BlogAuthor` id，将 blogger 对象添加到上下文中。
 

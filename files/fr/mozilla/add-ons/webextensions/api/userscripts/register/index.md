@@ -1,12 +1,11 @@
 ---
 title: userScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/register
 ---
 
 {{AddonSidebar}}
 
-Dans les pages d'une extension (comme la page d'arrière plan), l'API userScripts fournit une méthode API {{WebExtAPIRef("userScripts.register","register()")}}. Cette méthode est très similaire à la méthode API {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} (par exemple, ils retournent tous les deux une promise qui est résolue à un objet API qui fournit un   {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} pour la désinscription du script enregistré de tous les processus enfants), avec quelques différences dans les options prises en charge.
+Dans les pages d'une extension (comme la page d'arrière plan), l'API userScripts fournit une méthode API {{WebExtAPIRef("userScripts.register","register()")}}. Cette méthode est très similaire à la méthode API {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} (par exemple, ils retournent tous les deux une promise qui est résolue à un objet API qui fournit un {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} pour la désinscription du script enregistré de tous les processus enfants), avec quelques différences dans les options prises en charge.
 
 C'est une méthode asynchrone qui retourne un {{JSxRef("Promise")}}.
 

@@ -1,10 +1,6 @@
 ---
 title: Асинхронное управление потоками при помощи async
 slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
-tags:
-  - Node
-  - Часть 5
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
 

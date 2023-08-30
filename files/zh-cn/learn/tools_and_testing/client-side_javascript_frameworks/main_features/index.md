@@ -51,8 +51,10 @@ const header = (
 
 ```js
 const subject = "World";
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Hello, ", subject, "!")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Hello, ", subject, "!"),
 );
 ```
 
@@ -84,7 +86,7 @@ const header = React.createElement("header", null,
 
 ```js
 {
-  subject: "World"
+  subject: "World";
 }
 ```
 
@@ -157,13 +159,8 @@ function AuthorCredit(props) {
 
 ```html
 <figure>
-  <img
-    src="assets/zelda.png"
-    alt="Portrait of Zelda Schiff"
-  >
-  <figcaption>
-    Zelda Schiff is editor-in-chief of the Library Times.
-  </figcaption>
+  <img src="assets/zelda.png" alt="Portrait of Zelda Schiff" />
+  <figcaption>Zelda Schiff is editor-in-chief of the Library Times.</figcaption>
 </figure>
 ```
 
@@ -176,9 +173,7 @@ function AuthorCredit(props) {
 ```js
 function CounterButton() {
   const [count] = useState(0);
-  return (
-    <button>Clicked {count} times</button>
-  );
+  return <button>Clicked {count} times</button>;
 }
 ```
 
@@ -271,11 +266,11 @@ Angular 把这个过程称为[依赖注入](https://angular.io/guide/dependency-
 
 就像生命周期一样，框架对如何渲染应用程序采取了不同但相似的方法。所有的框架都会跟踪浏览器 DOM 的当前渲染版本，并且每个框架都会对 DOM 在应用程序中的组件重新渲染时应该如何变化做出略有不同的决定。因为框架为你做出了这些决定，所以你通常不会自己与 DOM 交互。这种远离 DOM 的抽象比自己更新 DOM 更复杂、更耗费内存，但如果没有它，框架就不能让你以它们所熟知的声明性方式编程。
 
-**虚拟 DOM** 是一种方法，此时关于浏览器的 DOM 信息被存储在 JavaScript 内存中。你的应用程序更新这个 DOM 副本，然后将其与“真正的” DOM（为你的用户实际渲染的 DOM）进行比较，以决定要渲染什么。应用程序建立一个“diff“来比较更新的虚拟 DOM 和当前渲染的 DOM 之间的差异，并使用该差异将更新应用到真实 DOM。React 和 Vue 都利用虚拟 DOM 模型，但它们建立“diff”或渲染应用的逻辑并不完全相同。
+**虚拟 DOM** 是一种方法，此时关于浏览器的 DOM 信息被存储在 JavaScript 内存中。你的应用程序更新这个 DOM 副本，然后将其与“真正的”DOM（为你的用户实际渲染的 DOM）进行比较，以决定要渲染什么。应用程序建立一个“diff“来比较更新的虚拟 DOM 和当前渲染的 DOM 之间的差异，并使用该差异将更新应用到真实 DOM。React 和 Vue 都利用虚拟 DOM 模型，但它们建立“diff”或渲染应用的逻辑并不完全相同。
 
 你可以[在 React 文档阅读到更多有关虚拟 DOM 的信息](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)。
 
-**增量式 DOM** 与虚拟 DOM 类似，它建立一个 DOM “diff”来决定渲染什么，但不同的是，它不在 JavaScript 内存中创建一个完整的 DOM 副本。它忽略了 DOM 中不需要被改变的部分。Angular 是本模块到目前为止讨论的唯一一个使用增量 DOM 的框架。
+**增量式 DOM** 与虚拟 DOM 类似，它建立一个 DOM“diff”来决定渲染什么，但不同的是，它不在 JavaScript 内存中创建一个完整的 DOM 副本。它忽略了 DOM 中不需要被改变的部分。Angular 是本模块到目前为止讨论的唯一一个使用增量 DOM 的框架。
 
 你可以[在 Auth0 博客阅读到更多有关增量式 DOM 的信息](https://auth0.com/blog/incremental-dom/)。
 

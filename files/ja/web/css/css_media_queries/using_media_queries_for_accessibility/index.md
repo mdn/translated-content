@@ -1,7 +1,6 @@
 ---
 title: アクセシビリティのためのメディアクエリーの使用
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
-original_slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 ---
 
 **メディアクエリー**は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。
@@ -74,9 +73,13 @@ original_slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
   /* すべての高コントラストの整形規則 */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```

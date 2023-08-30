@@ -1,7 +1,6 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
 
 {{AddonSidebar()}}
@@ -16,9 +15,9 @@ Pour plus de détails, voir [connection-based messaging](/fr/Add-ons/WebExtensio
 
 ```js
 browser.tabs.connect(
-  tabId,      // integer
-  connectInfo // optional object
-)
+  tabId, // integer
+  connectInfo, // optional object
+);
 ```
 
 ### Parameters
@@ -45,11 +44,10 @@ In this example a background script listens for a click on a [browser action](/f
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    var examplePort = browser.tabs.connect(
-      tabs[0].id,
-      {name: "tabs-connect-example"}
-    );
-    examplePort.postMessage({greeting: "Hi from background script"});
+    var examplePort = browser.tabs.connect(tabs[0].id, {
+      name: "tabs-connect-example",
+    });
+    examplePort.postMessage({ greeting: "Hi from background script" });
   }
 }
 
@@ -57,9 +55,10 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var gettingActive = browser.tabs.query({
-    currentWindow: true, active: true
+    currentWindow: true,
+    active: true,
   });
   gettingActive.then(connectToTab, onError);
 });

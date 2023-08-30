@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 l10n:
   sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
+
 {{JSRef}}
 
 **`setTime()`** 메서드는 {{jsxref("Date")}} 객체를 1970년 1월 1일 00:00:00 UTC부터

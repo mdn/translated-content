@@ -1,11 +1,6 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:empty
 ---
 
 {{CSSRef}}
@@ -53,7 +48,7 @@ body {
 <div class="box"><!-- Je serai bleu. --></div>
 <div class="box">Je serai rouge.</div>
 <div class="box">
-    <!-- Je serai rouge à cause des espaces autour du commentaire -->
+  <!-- Je serai rouge à cause des espaces autour du commentaire -->
 </div>
 ```
 
@@ -72,7 +67,7 @@ Le texte fournissant le nom accessible peut être masqué grâce [à des propri�
 
   [<i lang="en">Hidden content for better a11y</i> (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)
 
-- [Comprendre la règle WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Comprendre la règle WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - <i lang="en">Understanding Success Criterion 2.4.4</i>
 
   [<i lang="en">Understanding Success Criterion 2.4.4</i> (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)

@@ -1,7 +1,6 @@
 ---
 title: Axe transversal
 slug: Glossary/Cross_Axis
-translation_of: Glossary/Cross_Axis
 ---
 
 L'axe transversal d'une {{glossary("flexbox")}} traverse l'{{glossary("Main Axis","axe principal")}}, donc si la {{glossary("flex-direction")}} et l'axe principal sont `row` (_ligne_) ou `row-reverse` l'axe transversal est en colonne.
@@ -28,5 +27,5 @@ L'alignement des articles sur l'axe transversal est réalisé avec la propriét�
 ### En lire plus
 
 - Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)_
-- Guide Flexbox CSS : _[Maîtriser l'enveloppe des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ma%C3%AEtriser_passage_%C3%A0_la_ligne_des_%C3%A9l%C3%A9ments_flexibles)_
+- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
+- Guide Flexbox CSS : _[Maîtriser l'enveloppe des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)_

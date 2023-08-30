@@ -18,7 +18,7 @@ object.search = string;
 
 ```js
 // 让一个
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123" />
+// <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/HTMLHyperlinkElementUtils.search?q=123" />
 //  元素在文档里
 
 let anchor = document.getElementById("myAnchor");

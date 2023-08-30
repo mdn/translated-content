@@ -1,14 +1,13 @@
 ---
 title: Usando Media Queries
 slug: Web/CSS/CSS_media_queries/Using_media_queries
-original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 Uma **media query** consiste de um _media type_ e pelo menos uma expressão que limita o escopo das folhas de estilo usando _media features_, tal como largura, altura e cor. _Media queries_, adicionadas no [CSS3](/pt-BR/docs/CSS/CSS3), deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.
 
 ## Sintaxe
 
-_Media queries_ consistem de um _[media type](en-US/docs/Web/CSS/@media)_ e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em _media features_, que determinam ou verdadeiro ou falso. Os resultados da _query_ são verdadeiros se o _media type_ especificado na _media query_ corresponde ao tipo do documento exibido no dispositivo e todas as expressões na _media query_ são verdadeiras.
+_Media queries_ consistem de um _[media type](/en-US/docs/Web/CSS/@media)_ e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em _media features_, que determinam ou verdadeiro ou falso. Os resultados da _query_ são verdadeiros se o _media type_ especificado na _media query_ corresponde ao tipo do documento exibido no dispositivo e todas as expressões na _media query_ são verdadeiras.
 
 ```html
 <!-- CSS media query em um elemento de link -->
@@ -16,13 +15,11 @@ _Media queries_ consistem de um _[media type](en-US/docs/Web/CSS/@media)_ e pode
 ```
 
 ```css
-<!-- CSS media query dentro de um stylesheet -->
-@media (max-width: 600px)
-{
-  .facet_sidebar
-   {
+/* CSS media query dentro de um stylesheet */
+@media (max-width: 600px) {
+  .facet_sidebar {
     display: none;
-   }
+  }
 }
 ```
 
@@ -93,13 +90,13 @@ Isto significa que a _query_ é avaliada assim:
 Um outro exemplo, veja a _media query_ seguinte:
 
 ```css
-@media not screen and (color), print and (color)
+@media not screen and (color), print and (color) { ... }
 ```
 
 É avalida desta forma:
 
 ```css
-@media (not (screen and (color))), print and (color)
+@media (not (screen and (color))), print and (color) { ... }
 ```
 
 #### only
@@ -138,7 +135,7 @@ _Media queries_ são _case insensitive_. _Media queries_ envolvidas em _media ty
 
 ## Características de mídia
 
-A maioria das _media features_ podem ter prefixo “min-” ou “max-“ para expressar as restrições “maior ou igual” ou “menor ou igual”. Isto evita o uso dos símbolos “<” e “>” , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
+A maioria das _media features_ podem ter prefixo "min-" ou "max-" para expressar as restrições "maior ou igual" ou "menor ou igual". Isto evita o uso dos símbolos "<" e ">" , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
 
 > **Nota:** Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
 
@@ -185,7 +182,10 @@ Para indicar que uma folha de estilo deve ser aplicada para todos os dispositivo
 Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que 256 cores:
 
 ```html
-<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" />
+<link
+  rel="stylesheet"
+  media="all and (min-color-index: 256)"
+  href="http://foo.bar.com/stylesheet.css" />
 ```
 
 ### aspect-ratio
@@ -194,7 +194,7 @@ Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que
 **Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
 **Aceita prefixos min/max:** sim
 
-Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra (“/”). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).
+Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra ("/"). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).
 
 #### Exemplo
 
@@ -212,7 +212,7 @@ Isto seleciona o estilo quando a relação de aspecto seja 1:1 ou maior. Em outr
 **Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
 **Aceita prefixos min/max:** sim
 
-Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra (“/”). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).
+Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra ("/"). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).
 
 #### Exemplo
 
@@ -384,8 +384,10 @@ Se você quiser especificar uma folha de estilo para dispositivos portáteis, ou
 Essa _media query_ especifica uma folha de estilo que aplica-se para mídias impressas maiores que 8.5 inches.
 
 ```html
-<link rel="stylesheet" media="print and (min-width: 8.5in)"
-    href="http://foo.com/mystyle.css" />
+<link
+  rel="stylesheet"
+  media="print and (min-width: 8.5in)"
+  href="http://foo.com/mystyle.css" />
 ```
 
 Essa _query_ especifica uma folha de estilo que é usada quano o viewport está entre 500 e 800 pixels de largura:

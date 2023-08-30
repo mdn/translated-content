@@ -1,7 +1,6 @@
 ---
 title: Flexbox
 slug: Glossary/Flexbox
-translation_of: Glossary/Flexbox
 ---
 
 Flexbox (_boîte flexible_) est le nom communément utilisé pour le [module de mise en page des boîtes flexibles CSS](https://www.w3.org/TR/css-flexbox-1/), un modèle de disposition pour afficher des éléments dans une seule dimension - comme une ligne ou une colonne.
@@ -32,8 +31,8 @@ Flexbox permet également l'alignement des éléments sur l'axe principal ou tra
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
 - Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
 - Guide Flexbox CSS : _[Les liens entre flexbox et les autres méthodes de disposition](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Liens_entre_flexbox_et_les_autres_dispositions)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)_
+- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
 - Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordering_Flex_Items)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contr%C3%B4ler_les_proportions_des_bo%C3%AEtes_flexibles_le_long_de_l_axe_principal)_
-- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ma%C3%AEtriser_passage_%C3%A0_la_ligne_des_%C3%A9l%C3%A9ments_flexibles)_
+- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)_
+- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)_
 - Guide Flexbox CSS : _[Cas d'utilisation classiques de flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox)_

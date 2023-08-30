@@ -1,7 +1,6 @@
 ---
 title: Suggestions de la barre d'adresse
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
 
 {{AddonSidebar()}}
@@ -25,7 +24,7 @@ Dans le fichier JavaScript d'arrière-plan extension, en utilisant {{WebExtAPIRe
 ```js
 browser.omnibox.setDefaultSuggestion({
   description: `Search the firefox codebase
-    (e.g. "hello world" | "path:omnibox.js onInputChanged")`
+    (e.g. "hello world" | "path:omnibox.js onInputChanged")`,
 });
 ```
 
@@ -33,14 +32,12 @@ Vous pouvez ensuite ajouter le code pour fournir le contenu personnalisé en éc
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
-  let headers = new Headers({"Accept": "application/json"});
-  let init = {method: 'GET', headers};
+  let headers = new Headers({ Accept: "application/json" });
+  let init = { method: "GET", headers };
   let url = buildSearchURL(text);
   let request = new Request(url, init);
 
-  fetch(request)
-    .then(createSuggestionsFromResponse)
-    .then(addSuggestions);
+  fetch(request).then(createSuggestionsFromResponse).then(addSuggestions);
 });
 ```
 
@@ -57,13 +54,13 @@ browser.omnibox.onInputEntered.addListener((text, disposition) => {
   }
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });

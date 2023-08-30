@@ -1,7 +1,6 @@
 ---
 title: Nom d'en-tête interdit
 slug: Glossary/Forbidden_header_name
-translation_of: Glossary/Forbidden_header_name
 ---
 
 **Un nom d'en-tête interdit** est un nom d'[en-tête HTTP](/fr/docs/HTTP/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de **requête** HTTP (contraste avec {{Glossary("Forbidden response header name","Nom d'en-tête de réponse interdit")}}).
@@ -33,4 +32,4 @@ Les noms d'en-tête interdits commencent avec `Proxy-` ou `Sec-`, ou se composen
 - `Upgrade`
 - `Via`
 
-> **Note :** L'en-tête `User-Agent` n'est plus interdit, [conformément à la spécification](https://fetch.spec.whatwg.org/#terminology-headers) — voir la liste des noms d'en-tête interdit (implémentée dans Firefox 43), et peut donc maintenant être défini dans un objet [en-tête](/fr/docs/Web/API/Headers) Fetch, via XHR [setRequestHeader()](/fr/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29), etc.
+> **Note :** L'en-tête `User-Agent` n'est plus interdit, [conformément à la spécification](https://fetch.spec.whatwg.org/#terminology-headers) — voir la liste des noms d'en-tête interdit (implémentée dans Firefox 43), et peut donc maintenant être défini dans un objet [en-tête](/fr/docs/Web/API/Headers) Fetch, via XHR [setRequestHeader()](</fr/docs/Web/API/XMLHttpRequest#setRequestHeader()>), etc.

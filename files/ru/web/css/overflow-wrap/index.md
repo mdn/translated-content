@@ -1,7 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-translation_of: Web/CSS/overflow-wrap
 ---
 
 {{CSSRef}}
@@ -56,52 +55,67 @@ overflow-wrap: unset;
 #### HTML
 
 ```html
-<p>They say the fishing is excellent at
-  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>normal</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: break-word</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>word-break</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, without <code>lang</code> attribute)</p>
-<p lang="en">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, English rules)</p>
-<p class="hyphens" lang="de">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, German rules)</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>normal</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: break-word</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>word-break</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, without
+  <code>lang</code> attribute)
+</p>
+<p lang="en">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, English rules)
+</p>
+<p class="hyphens" lang="de">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, German rules)
+</p>
 ```
 
 #### CSS
 
 ```css
 p {
-   width: 13em;
-   margin: 2px;
-   background: gold;
+  width: 13em;
+  margin: 2px;
+  background: gold;
 }
 
 .ow-anywhere {
-   overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 .ow-break-word {
-   overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .word-break {
-   word-break: break-all;
+  word-break: break-all;
 }
 
 .hyphens {
-   hyphens: auto;
+  hyphens: auto;
 }
 ```
 
@@ -111,8 +125,8 @@ p {
 
 ## Specifications
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                          | Status                   | Comment            |
+| ---------------------------------------------------------------------- | ------------------------ | ------------------ |
 | {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
 
 {{cssinfo}}

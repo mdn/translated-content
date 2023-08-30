@@ -80,8 +80,8 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 
 ## Especificações
 
-| Especificação                                | Título                   |
-| -------------------------------------------- | ------------------------ |
+| Especificação                     | Título                   |
+| --------------------------------- | ------------------------ |
 | {{RFC("7239", "Forwarded", "4")}} | Forwarded HTTP Extension |
 
 ## Compatibilidade com navegadores

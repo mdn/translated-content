@@ -1,12 +1,6 @@
 ---
-title: ':-moz-drag-over'
+title: ":-moz-drag-over"
 slug: Web/CSS/:-moz-drag-over
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-drag-over
 ---
 
 {{Non-standard_header}}{{CSSRef}}

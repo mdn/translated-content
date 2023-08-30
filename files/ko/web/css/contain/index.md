@@ -2,6 +2,7 @@
 title: contain
 slug: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`contain`** 속성은 특정 요소와 콘텐츠가 문서 트리의 다른 부위와 독립되어있음을 나타낼 때 사용합니다. 브라우저는 이 정보를 사용해 레이아웃, 스타일, 페인트, 크기, 또는 그 조합의 계산을 전체 페이지 DOM 대신 일부에서만 수행할 수 있으므로 뚜렷한 성능 상 이점을 얻을 수 있습니다.
@@ -80,7 +81,7 @@ contain: unset;
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -109,11 +110,11 @@ article {
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -142,11 +143,11 @@ article {
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```

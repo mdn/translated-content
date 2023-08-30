@@ -1,7 +1,6 @@
 ---
 title: tabs.getAllInWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 ---
 
 {{AddonSidebar}}
@@ -17,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.tabs.getAllInWindow(
-  windowId            // optional integer
-)
+  windowId, // optional integer
+);
 ```
 
 ### Paramètres
@@ -38,7 +37,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 
 > **Note :**
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

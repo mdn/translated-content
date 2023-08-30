@@ -41,19 +41,18 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 ### Usando o atributo "for"
 
 ```html
-<label for="User">Click me</label>
-<input type="text" id="User" name="Name" />
+<label for="User">Click me</label> <input type="text" id="User" name="Name" />
 ```
 
 {{EmbedLiveSample('Using_the_.22for.22_attribute', '200', '50', '')}}
 
 ## Especificações
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Specification                                                                | Status                   | Comment |
+| ---------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}     | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}    | {{Spec2('HTML4.01')}}    |         |
 
 ## Compatibilidade com navegadores
 

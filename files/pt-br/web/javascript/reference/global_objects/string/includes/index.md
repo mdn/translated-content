@@ -33,7 +33,7 @@ Este método permite conferir se uma string contém um determinado conjunto de c
 O método `includes()` é case sensitive. Por exemplo, a seguinte expressão retorna `false`:
 
 ```js
-'Bandeira do Brasil'.includes('brasil'); // retorna false
+"Bandeira do Brasil".includes("brasil"); // retorna false
 ```
 
 ## Exemplos
@@ -41,13 +41,13 @@ O método `includes()` é case sensitive. Por exemplo, a seguinte expressão ret
 ### Utilizando `includes()`
 
 ```js
-var str = 'Ser, ou não ser, eis a questão.';
+var str = "Ser, ou não ser, eis a questão.";
 
-console.log(str.includes('Ser'));         // true
-console.log(str.includes('questão'));     // true
-console.log(str.includes('não existe'));  // false
-console.log(str.includes('ser', 1));      // true
-console.log(str.includes('SER'));         // false
+console.log(str.includes("Ser")); // true
+console.log(str.includes("questão")); // true
+console.log(str.includes("não existe")); // false
+console.log(str.includes("ser", 1)); // true
+console.log(str.includes("SER")); // false
 ```
 
 ## Implementação
@@ -56,7 +56,8 @@ Este método foi adicionado à especificação ECMAScript 6 e pode não estar di
 
 ```js
 if (!String.prototype.includes) {
-  String.prototype.includes = function() {'use strict';
+  String.prototype.includes = function () {
+    "use strict";
     return String.prototype.indexOf.apply(this, arguments) !== -1;
   };
 }
@@ -64,8 +65,8 @@ if (!String.prototype.includes) {
 
 ## Especificações
 
-| Especificação                                                                                                | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| Especificação                                                                      | Status           | Comentário         |
+| ---------------------------------------------------------------------------------- | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-string.prototype.includes', 'String.prototype.includes')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Navegadores compatíveis

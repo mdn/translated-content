@@ -1,13 +1,6 @@
 ---
 title: Mettre à l'échelle des images en arrière-plan
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-  - Reference
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 
 {{CSSRef}}
@@ -92,7 +85,8 @@ Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
   border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
 }
 ```
 

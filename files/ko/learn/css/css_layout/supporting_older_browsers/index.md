@@ -1,7 +1,6 @@
 ---
 title: 이전 브라우저 지원
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 ---
 
 {{LearnSidebar}}
@@ -62,15 +61,17 @@ original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 
 ## CSS로 대체 페이지 생성하기
 
-CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용될 때 브라우저가 수행하는 작업을 설명하는 정보가 포함되어 있습니다. 즉, 부동체 항목이 한편으로는 CSS grid 레이아웃을 사용하는 grid 항목인 경우 발생하는 상황에 대한 정의가 있음을 의미합니다. 이 정보가 브라우저가 이해하지 못하는 CSS를 무시한다는 지식과 결합되어, 이미 다루었던 [레거시 기술](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)을 사용하여 간단한 레이아웃을 생성할 수 있는 방법이 있습니다. 그런 다음 이를 최신 브라우저에서는 grid 레이아웃으로 덮어씁니다.
+CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용될 때 브라우저가 수행하는 작업을 설명하는 정보가 포함되어 있습니다. 즉, 부동체 항목이 한편으로는 CSS grid 레이아웃을 사용하는 grid 항목인 경우 발생하는 상황에 대한 정의가 있음을 의미합니다. 이 정보가 브라우저가 이해하지 못하는 CSS를 무시한다는 지식과 결합되어, 이미 다루었던 [레거시 기술](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)을 사용하여 간단한 레이아웃을 생성할 수 있는 방법이 있습니다. 그런 다음 이를 최신 브라우저에서는 grid 레이아웃으로 덮어씁니다.
 
 아래 예에서는 세 개의 `<div>` 부동체를 행으로 표시했습니다. [CSS grid 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Grids)을 지원하지 않는 브라우저는 상자 행을 <ruby><em>부동 레이아웃</em><rp> (</rp><rt>浮動 組版</rt><rp>) </rp></ruby>으로 간주합니다. grid 항목이 되는 부동 항목은 부동 동작을 상실합니다. 즉, `.wrapper` 클레스를 grid 컨테이너로 전환하면 부동 항목이 grid 항목이 됩니다. 브라우저가 grid 레이아웃을 지원하는 경우 grid 디스플레이를 표시합니다. 지원하지 않으면 `display: grid` 관련 속성은 무시되고 부동 레이아웃이 사용됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -80,7 +81,7 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -109,17 +110,19 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 - 다단 레이아웃
   - : 특정 레이아웃의 경우 당신은 [다단](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)을 대체품로 사용할 수 있습니다. 여러분의 콘테이너가 `column-*` 속성에 속한 것으로 정의되었다면 grid 컨테이너가 될 것이고, 다단 동작은 발생하지 않습니다.
 - grid 대체품 역할인 Flexbox<
-  - : [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)는 인터넷 익스플로러 10과 11이 지원하기 때문에 grid를 지원하는 브라우저가 훨씬 많이 있습니다. 다만 이 단원의 뒷부분에서 설명하고 있는 구형 브라우저에서 flex를 지원하기 위한 처리 방법에 대해서도 확인해보세요. flex 컨테이너를 grid 컨테이너로 만들면 자식에 적용된 모든 `flex` 속성은 무시됩니다.
+  - : [Flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox)는 인터넷 익스플로러 10과 11이 지원하기 때문에 grid를 지원하는 브라우저가 훨씬 많이 있습니다. 다만 이 단원의 뒷부분에서 설명하고 있는 구형 브라우저에서 flex를 지원하기 위한 처리 방법에 대해서도 확인해보세요. flex 컨테이너를 grid 컨테이너로 만들면 자식에 적용된 모든 `flex` 속성은 무시됩니다.
 
 구형 브라우저에서 레이아웃 조정이 많이 필요한 경우 CSS를 이런 식으로 사용하면 괜찮은 경험을 할 수 있습니다. 오래되고 잘 지원되는 기술을 기반으로 간단한 레이아웃을 추가한 다음 최신 CSS를 사용하여 잠재 고객의 90% 이상이 볼 수있는 레이아웃을 만듭니다. 그러나 대체 코드에 새 브라우저가 해석할 내용이 포함되어야하는 경우가 있습니다. 이에 대한 좋은 예는 부동 항목에 백분율 너비를 추가하여 열을 마치 grid 디스플레이처럼 보이도록 컨테이너를 채울 수 있도록 (너비를) 늘리는 경우입니다.
 
 부동 레이아웃에서 백분율은 컨테이너를 기준으로 계산됩니다. 33.333%는 컨테이너 너비의 3 분의 1입니다. 그러나 grid에서는 항목이 배치된 grid 영역을 기준으로 33.333%가 계산되므로 grid 레이아웃이 도입되면 실제로 원하는 크기의 3분의 1이 됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -129,7 +132,7 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -154,10 +157,12 @@ feature queries를 사용하면 브라우저가 특정 CSS 기능을 지원하�
 위의 예제에 feature query를 추가하면 grid가 지원됨을 알고 있는 경우 이 feature query를 사용하여 항목 너비를 `auto`으로 다시 설정할 수 있습니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -167,14 +172,14 @@ feature queries를 사용하면 브라우저가 특정 CSS 기능을 지원하�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```

@@ -5,7 +5,7 @@ slug: Glossary/Hyperlink
 
 Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas web. En [HTML](/es/docs/Glossary/HTML), los elementos {{HTMLElement("a")}} representan hipervínculos que tienen como origen un elemento de la página web (por ejemplo cadenas de texto o imágenes), y que pueden tener como destino un elemento de otro sitio web (incluso pueden enlazar a otro punto de la misma página).
 
-## Para saber más...
+## Para saber más
 
 ### Cultura General
 

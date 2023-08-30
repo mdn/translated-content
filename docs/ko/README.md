@@ -15,6 +15,9 @@
 
 마찬가지로 추가하려는 일반 안내서에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에 대해 이야기해주세요. 다음은 한국어 번역 안내서 원칙의 주요 내용입니다.
 
+> 어떻게 시작해야 할지 어려우신가요?
+> [MDN Discord #korean 채널](https://discord.com/channels/1009925603572600863/1070064829466939503) 혹은 [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)에 오셔서 이야기해주세요!
+
 ## 첫 기여자들을 위한 안내서
 
 MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습니다. 한국 로케일[(translated-content)](https://github.com/mdn/translated-content)도 `en-us`[(content)](https://github.com/mdn/content)를 기반으로 번역이 진행되고 있습니다. **따라서, `ko`와 `en-us` 문서 사이에 차이가 있다면, 마크업을 포함하여 `en-us` 문서를 기준으로 번역하여 `translated-content` 저장소에 기여할 수 있습니다.**
@@ -45,8 +48,6 @@ PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 �
 
 첫 기여자분들을 위해 다음 [issue 827](https://github.com/mdn/translated-content/issues/827)에 기여 방법을 작성했습니다. 참고해주세요.
 
-추가적으로 궁금하신점 있으시면 [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)에 이야기해주세요.
-
 ## yari 빠른 사용법
 
 yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/translated-content#making-contributions)를 참고해주세요.
@@ -55,10 +56,10 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
 3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
 
-    ```
-    CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
-    EDITOR=code
-    ```
+   ```
+   CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
+   EDITOR=code
+   ```
 
 4. `yarn start`
 

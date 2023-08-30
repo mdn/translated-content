@@ -1,13 +1,6 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.grid-template-areas
 ---
 
 {{CSSRef}}
@@ -26,8 +19,9 @@ grid-template-areas: none;
 
 /* Строка (<string>) в качестве значения */
 grid-template-areas: "a b";
-grid-template-areas: "a b b"
-                     "a c d";
+grid-template-areas:
+  "a b b"
+  "a c d";
 
 /* Глобальные значения */
 grid-template-areas: inherit;
@@ -73,9 +67,10 @@ grid-template-areas: unset;
   display: grid;
   width: 100%;
   height: 250px;
-  grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot";
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "nav  foot";
   grid-template-rows: 50px 1fr 30px;
   grid-template-columns: 150px 1fr;
 }

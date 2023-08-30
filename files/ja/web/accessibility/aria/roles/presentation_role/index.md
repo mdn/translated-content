@@ -1,7 +1,6 @@
 ---
 title: presentation ロールの使用
 slug: Web/Accessibility/ARIA/Roles/presentation_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
 ---
 
 このテクニックは、[`presentation`](https://www.w3.org/TR/wai-aria/#presentation) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。
@@ -10,11 +9,11 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_rol
 
 ## ユーザーエージェントと支援技術への影響
 
-> **メモ:**援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ## 例
 
-### Example 1:
+### Example 1
 
 ```html
 Code

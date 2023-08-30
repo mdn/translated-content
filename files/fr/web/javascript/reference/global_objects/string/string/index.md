@@ -1,8 +1,6 @@
 ---
 title: Constructeur String()
 slug: Web/JavaScript/Reference/Global_Objects/String/String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/String
-browser-compat: javascript.builtins.String.String
 ---
 
 {{JSRef}}
@@ -12,8 +10,8 @@ Le constructeur **`String`** est utilisé afin de créer un nouvel objet [`Strin
 ## Syntaxe
 
 ```js
-new String(truc)
-String(truc)
+new String(truc);
+String(truc);
 ```
 
 ### Paramètres
@@ -28,8 +26,8 @@ String(truc)
 Selon qu'on utilise `String()` comme une fonction ou comme un constructeur, cela produira différents résultats&nbsp;:
 
 ```js
-typeof String('Coucou monde'); // string
-typeof new String('Coucou monde'); // object
+typeof String("Coucou monde"); // string
+typeof new String("Coucou monde"); // object
 ```
 
 Ici, la fonction produit une chaîne de caractères (une valeur primitive). Toutefois, le constructeur produit une instance objet de `String`.

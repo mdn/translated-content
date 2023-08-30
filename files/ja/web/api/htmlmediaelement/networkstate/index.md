@@ -13,12 +13,12 @@ l10n:
 
 `unsigned short` 型。 可能な値は次のとおりです。
 
-| 定数            | 値 | 説明                                                                           |
-| ------------------- | ----- | ------------------------------------------------------------------------------------- |
-| `NETWORK_EMPTY`     | 0     | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                           |
-| `NETWORK_IDLE`      | 1     | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
-| `NETWORK_LOADING`   | 2     | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                                     |
-| `NETWORK_NO_SOURCE` | 3     | `HTMLMediaElement` の `src` が見つかりません。                                                        |
+| 定数                | 値  | 説明                                                                                          |
+| ------------------- | --- | --------------------------------------------------------------------------------------------- |
+| `NETWORK_EMPTY`     | 0   | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                          |
+| `NETWORK_IDLE`      | 1   | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
+| `NETWORK_LOADING`   | 2   | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                            |
+| `NETWORK_NO_SOURCE` | 3   | `HTMLMediaElement` の `src` が見つかりません。                                                |
 
 ## 例
 
@@ -31,14 +31,12 @@ l10n:
 ```
 
 ```js
-const obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('playing', () => {
-
+obj.addEventListener("playing", () => {
   if (obj.networkState === 2) {
     // 読み込み中...
   }
-
 });
 ```
 

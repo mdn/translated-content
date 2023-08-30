@@ -37,13 +37,13 @@ void ctx.moveTo(x, y);
 最初の線は、 (50, 50) が始点で (200, 50) が終点です。 2 番目の線は、(50, 90) が始点で (280, 120) が終点です。
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50, 50);   // 1 つ目のサブパス
+ctx.moveTo(50, 50); // 1 つ目のサブパス
 ctx.lineTo(200, 50);
-ctx.moveTo(50, 90);   // 2 つ目のサブパス
+ctx.moveTo(50, 90); // 2 つ目のサブパス
 ctx.lineTo(280, 120);
 ctx.stroke();
 ```

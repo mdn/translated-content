@@ -1,12 +1,6 @@
 ---
 title: CSS счётчики
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
-tags:
-  - CSS
-  - CSS счётчики
-  - вложенные счётчики
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
-original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
 {{CSSRef}}
@@ -23,14 +17,13 @@ CSS счётчики, в своей сущности, переменные CSS, 
 
 ```css
 body {
-  counter-reset: section;                     /* Устанавливает значение
+  counter-reset: section; /* Устанавливает значение
                                                  счётчика, равным 0 */
 }
 
 h3::before {
-  counter-increment: section;                 /* Инкрементирует счётчик*/
-  content: "Секция " counter(section) ": ";   /* Отображает текущее
-                                                 значение счётчика */
+  counter-increment: section; /* Инкрементирует счётчик*/
+  content: "Секция " counter(section) ": "; /* Отображает текущее значение счётчика */
 }
 ```
 
@@ -50,25 +43,20 @@ CSS счётчики могут быть очень полезны для соз
 
 ```css
 ol {
-  counter-reset: section;           /*Создаёт новый счётчик для каждого
-                                      тега <ol>*/
+  counter-reset: section; /* Создаёт новый счётчик для каждого тега <ol> */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;      /*Инкрементируется только счётчик
-                                     текущего уровня вложенности*/
-  content: counters(section,".") " ";/*Добавляем значения всех уровней
-                                    вложенности, используя разделитель '.'*/
-                                   /*Если необходима поддержка < IE8,
-                                      необходимо убедиться, что после
-                                      разделителя ('.') не стоит пробел*/
+  counter-increment: section; /* Инкрементируется только счётчик текущего уровня вложенности */
+  content: counters(section, ".") " "; /* Добавляем значения всех уровней вложенности, используя разделитель '.' */
+  /* Если необходима поддержка < IE8, необходимо убедиться, что после разделителя ('.') не стоит пробел */
 }
 ```
 
 Объединим с данным HTML:
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->
@@ -104,10 +92,10 @@ li::before {
 
 ## Спецификации
 
-| Specification                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}     | {{Spec2("CSS3 Lists")}} | No change          |
-| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Initial definition |
+| Specification                                                    | Status                  | Comment            |
+| ---------------------------------------------------------------- | ----------------------- | ------------------ |
+| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}    | {{Spec2("CSS3 Lists")}} | No change          |
+| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}     | Initial definition |
 
 ## Смотрите также
 

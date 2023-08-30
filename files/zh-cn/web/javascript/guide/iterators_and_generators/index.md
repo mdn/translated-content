@@ -26,22 +26,22 @@ Javascript 中最常见的迭代器是 Array 迭代器，它只是按顺序返�
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    let nextIndex = start;
-    let iterationCount = 0;
+  let nextIndex = start;
+  let iterationCount = 0;
 
-    const rangeIterator = {
-       next: function() {
-           let result;
-           if (nextIndex < end) {
-               result = { value: nextIndex, done: false }
-               nextIndex += step;
-               iterationCount++;
-               return result;
-           }
-           return { value: iterationCount, done: true }
-       }
-    };
-    return rangeIterator;
+  const rangeIterator = {
+    next: function () {
+      let result;
+      if (nextIndex < end) {
+        result = { value: nextIndex, done: false };
+        nextIndex += step;
+        iterationCount++;
+        return result;
+      }
+      return { value: iterationCount, done: true };
+    },
+  };
+  return rangeIterator;
 }
 ```
 
@@ -52,8 +52,8 @@ let it = makeRangeIterator(1, 10, 2);
 
 let result = it.next();
 while (!result.done) {
- console.log(result.value); // 1 3 5 7 9
- result = it.next();
+  console.log(result.value); // 1 3 5 7 9
+  result = it.next();
 }
 
 console.log("Iterated over sequence of size: ", result.value); // 5
@@ -71,17 +71,17 @@ console.log("Iterated over sequence of size: ", result.value); // 5
 
 ```js
 function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    for (let i = start; i < end; i += step) {
-        yield i;
-    }
+  for (let i = start; i < end; i += step) {
+    yield i;
+  }
 }
-var a = makeRangeIterator(1,10,2)
-a.next() // {value: 1, done: false}
-a.next() // {value: 3, done: false}
-a.next() // {value: 5, done: false}
-a.next() // {value: 7, done: false}
-a.next() // {value: 9, done: false}
-a.next() // {value: undefined, done: true}
+var a = makeRangeIterator(1, 10, 2);
+a.next(); // {value: 1, done: false}
+a.next(); // {value: 3, done: false}
+a.next(); // {value: 5, done: false}
+a.next(); // {value: 7, done: false}
+a.next(); // {value: 9, done: false}
+a.next(); // {value: undefined, done: true}
 ```
 
 ## 可迭代对象
@@ -102,11 +102,11 @@ var myIterable = {
     yield 1;
     yield 2;
     yield 3;
-  }
-}
+  },
+};
 
 for (let value of myIterable) {
-    console.log(value);
+  console.log(value);
 }
 // 1
 // 2
@@ -126,22 +126,22 @@ for (let value of myIterable) {
 一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of","for-of")}} 循环，{{jsxref("Operators/Spread_operator","展开语法")}}，{{jsxref("Operators/yield*", "yield*")}} 和 {{jsxref("Operators/Destructuring_assignment", "解构赋值")}}。
 
 ```js
-for (let value of ['a', 'b', 'c']) {
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[...'abc']; // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
 function* gen() {
-  yield* ['a', 'b', 'c'];
+  yield* ["a", "b", "c"];
 }
 
 gen().next(); // { value: "a", done: false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
+[a, b, c] = new Set(["a", "b", "c"]);
 a; // "a"
 ```
 
@@ -163,24 +163,24 @@ function* fibonacci() {
     fn2 = current + fn1;
     var reset = yield current;
     if (reset) {
-        fn1 = 0;
-        fn2 = 1;
+      fn1 = 0;
+      fn2 = 1;
     }
   }
 }
 
 var sequence = fibonacci();
-console.log(sequence.next().value);     // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
+console.log(sequence.next().value); // 0
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
 console.log(sequence.next(true).value); // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
 ```
 
 你可以通过调用其 {{jsxref("Global_Objects/Generator/throw","throw()")}} 方法强制生成器抛出异常，并传递应该抛出的异常值。这个异常将从当前挂起的生成器的上下文中抛出，就好像当前挂起的 `yield` 是一个 `throw value` 语句。

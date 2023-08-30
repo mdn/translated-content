@@ -1,7 +1,6 @@
 ---
 title: Navigator.language
 slug: Web/API/Navigator/language
-original_slug: Web/API/NavigatorLanguage/language
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +10,7 @@ original_slug: Web/API/NavigatorLanguage/language
 ## 構文
 
 ```js
-const lang = navigator.language
+const lang = navigator.language;
 ```
 
 ### 値

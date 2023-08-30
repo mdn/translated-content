@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMonth
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`getMonth()`** retourne le mois de la date renseignée d'après l'
 ## Syntaxe
 
 ```js
-dateObj.getMonth()
+dateObj.getMonth();
 ```
 
 ### Valeur de retour
@@ -43,10 +35,10 @@ console.log(mois); //11
 > **Note :** Si besoin, on pourra récupérer le nom complet du mois (`"Janvier"` par exemple) en utilisant [`Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat) avec un paramètre `options`. En utilisant cette méthode, il est plus simple d'internationaliser le site ou l'application :
 >
 > ```js
-> var options = { month: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(noel95));
+> var options = { month: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(noel95));
 > // December
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(noel95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(noel95));
 > // Dezember
 > ```
 

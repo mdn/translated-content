@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
-translation_of: Web/API/DOMTokenList/item
 ---
 
 {{APIRef("DOM")}}
@@ -38,7 +37,7 @@ Maintenant le JavaScript :
 ```js
 var span = document.querySelector("span");
 var classes = span.classList;
-var item = classes.item(classes.length-1);
+var item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 

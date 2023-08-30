@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Tag.prototype.type()
 slug: WebAssembly/JavaScript_interface/Tag/type
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/type
 ---
 
 {{WebAssemblySidebar}}
@@ -13,7 +12,7 @@ L'objet renvoyé par la méthode sera le même que celui initialement passé au 
 ## Syntaxe
 
 ```js
-type()
+type();
 ```
 
 ### Paramètres

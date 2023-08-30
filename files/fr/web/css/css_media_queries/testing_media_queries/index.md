@@ -1,13 +1,6 @@
 ---
 title: Tester les requêtes média en JavaScript
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
-tags:
-  - Avancé
-  - CSS
-  - DOM
-  - Guide
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
-original_slug: Web/CSS/Media_Queries/Testing_media_queries
 ---
 
 {{CSSRef}}

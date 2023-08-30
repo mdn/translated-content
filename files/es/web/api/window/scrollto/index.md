@@ -12,7 +12,7 @@ Desplaza el visor a un conjunto específico de coordenadas en el documento.
 ## Sintaxis
 
 ```js
-window.scrollTo(x-coord, y-coord)
+window.scrollTo(x_coord, y_coord);
 ```
 
 ### Parámetros
@@ -23,7 +23,7 @@ window.scrollTo(x-coord, y-coord)
 ## Ejemplo
 
 ```js
-window.scrollTo( 0, 1000 );
+window.scrollTo(0, 1000);
 ```
 
 ## Notas

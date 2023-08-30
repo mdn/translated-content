@@ -119,7 +119,7 @@ x + 1n === x + 2n; // false because 9007199254740992n and 9007199254740993n are 
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true because both are 9007199254740992
 ```
 
-你可以使用大多数运算符为 BigInt工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
+你可以使用大多数运算符为 BigInt 工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
 
 BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigInt 不能表示分数，但是可以表示更准确的大整数。这两种类型都包含各自的类型，并且它们不能相互替代。如果 BigInt 值在算术表达式中与正则数值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，则抛出 {{jsxref("TypeError")}}。
 
@@ -244,7 +244,7 @@ console.log({} + []); // "[object Object]"
 
 `{}` 和 `[]` 都没有 `[@@toPrimitive]()` 方法。`{}` 和 `[]` 都从 {{jsxref("Object.prototype.valueOf")}} 继承 `valueOf()`，其返回对象自身。因为返回值是一个对象，因此它被忽略。因此，调用 `toString()` 方法。[`{}.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 返回 `"[object Object]"`，而 [`[].toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 返回 `""`，因此这个结果是它们的串联：`"[object Object]"`。
 
-在强制转换为任意的原始类型时，`[@@toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与强制 number 类型类似，因为优先调用 `valueOf()`；然而，有着自定义 `[@@toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[@@toPrimitive]()` 方法的对象。[`Date.prototype[@@toPrimitive]()`]((/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)) 将 `"default"` hint 视为 `"string"`，而 [`Symbol.prototype[@@toPrimitive]()`]((/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)) 忽略 hint 并始终返回一个 symbol。
+在强制转换为任意的原始类型时，`[@@toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与强制 number 类型类似，因为优先调用 `valueOf()`；然而，有着自定义 `[@@toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[@@toPrimitive]()` 方法的对象。[`Date.prototype[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) 将 `"default"` hint 视为 `"string"`，而 [`Symbol.prototype[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) 忽略 hint 并始终返回一个 symbol。
 
 ### 强制数字类型转换
 

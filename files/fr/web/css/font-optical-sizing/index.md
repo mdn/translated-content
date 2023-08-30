@@ -1,11 +1,6 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-optical-sizing
 ---
 
 {{CSSRef}}
@@ -50,9 +45,9 @@ font-optical-sizing: unset;
 
 ```css
 @font-face {
-    src: url('AmstelvarAlpha-VF.ttf');
-    font-family:'Amstelvar';
-    font-style: normal;
+  src: url("AmstelvarAlpha-VF.ttf");
+  font-family: "Amstelvar";
+  font-style: normal;
 }
 
 p {
@@ -68,12 +63,16 @@ p {
 ### HTML
 
 ```html
-<p class="optical-sizing">Ce paragraphe est dimensionné pour une meilleure
- lecture. C'est le comportement par défaut.</p>
+<p class="optical-sizing">
+  Ce paragraphe est dimensionné pour une meilleure lecture. C'est le
+  comportement par défaut.
+</p>
 
-<p class="no-optical-sizing">Ce paragraphe n'est pas adapté pour une
- meilleure lecture. Vous devriez voir une différence avec les navigateurs
- qui prennent en charge cette fonctionnalité.</p>
+<p class="no-optical-sizing">
+  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devriez voir
+  une différence avec les navigateurs qui prennent en charge cette
+  fonctionnalité.
+</p>
 ```
 
 > **Note :** La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre [en téléchargement sur GitHub](https://github.com/TypeNetwork/Amstelvar/releases).

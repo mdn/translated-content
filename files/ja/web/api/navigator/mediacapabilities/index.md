@@ -1,5 +1,5 @@
 ---
-title: 'Navigator: mediaCapabilities プロパティ'
+title: "Navigator: mediaCapabilities プロパティ"
 slug: Web/API/Navigator/mediaCapabilities
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
@@ -27,7 +27,7 @@ navigator.mediaCapabilities
   })
   .then((result) => {
     console.log(
-      `This configuration is ${result.supported ? "" : "not "}supported,`
+      `This configuration is ${result.supported ? "" : "not "}supported,`,
     );
     console.log(`${result.smooth ? "" : "not "}smooth, and`);
     console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);

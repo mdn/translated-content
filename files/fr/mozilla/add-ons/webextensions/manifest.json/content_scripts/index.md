@@ -1,7 +1,6 @@
 ---
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
 
 {{AddonSidebar}}
@@ -32,13 +31,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   </tbody>
 </table>
 
-Ordonne au navigateur de charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages web dont l’URL correspond à un modèle donné.
+Ordonne au navigateur de charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages web dont l'URL correspond à un modèle donné.
 
 Cette clé est un tableau. Chaque élément est un objet qui&nbsp;:
 
-- **doit** contenir une clé nommée **`matches`**, qui spécifie les modèles d’URL à reconnaître afin que les scripts soient chargés&nbsp;;
+- **doit** contenir une clé nommée **`matches`**, qui spécifie les modèles d'URL à reconnaître afin que les scripts soient chargés&nbsp;;
 - **peut** contenir des clés nommées **`js`** et **`css`**, qui listent les scripts à charger dans les pages correspondantes&nbsp;;
-- **peut** contenir un certain nombre d’autres propriétés qui contrôlent des aspects plus fins correspondant à quand et comment les scripts de contenu sont chargés.
+- **peut** contenir un certain nombre d'autres propriétés qui contrôlent des aspects plus fins correspondant à quand et comment les scripts de contenu sont chargés.
 
 Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez inclure.
 
@@ -58,15 +57,15 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
         <p>
           <code>true</code>&nbsp;: injecte les scripts spécifiés dans
           <code>js</code> et <code>css</code> dans tous les cadres
-          correspondant aux exigences d’URL spécifiées, même s’il n’est pas le
-          cadre le plus haut d’un onglet. Cela n’injecte pas dans les cadres
-          enfants quand seul leur parent correspond aux exigences d’URL et pas
-          les cadres enfants. Les exigences d’URL sont vérifiées pour chaque
+          correspondant aux exigences d'URL spécifiées, même s'il n'est pas le
+          cadre le plus haut d'un onglet. Cela n'injecte pas dans les cadres
+          enfants quand seul leur parent correspond aux exigences d'URL et pas
+          les cadres enfants. Les exigences d'URL sont vérifiées pour chaque
           cadre indépendamment.
         </p>
         <p>
           <code>false</code>&nbsp;: injecte seulement dans le cadre le plus haut de
-          l’onglet qui répond aux exigences d’URL.
+          l'onglet qui répond aux exigences d'URL.
         </p>
         <p>Par défaut à <code>false</code>.</p>
       </td>
@@ -80,7 +79,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           les fichiers CSS qui seront injectés dans les pages correspondantes.
         </p>
         <p>
-          Les fichiers sont injectés dans l’ordre donné, et avant que le DOM ne
+          Les fichiers sont injectés dans l'ordre donné, et avant que le DOM ne
           soit chargé.
         </p>
         <div class="note">
@@ -136,8 +135,8 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           correspondantes.
         </p>
         <p>
-          Les fichiers sont injectés dans l’ordre indiqué. Cela signifie que,
-          par exemple, si vous incluez ici jQuery suivi d’un autre script de
+          Les fichiers sont injectés dans l'ordre indiqué. Cela signifie que,
+          par exemple, si vous incluez ici jQuery suivi d'un autre script de
           contenu, comme ceci&nbsp;:
         </p>
         <pre class="brush: json">
@@ -155,20 +154,20 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
       <td>{{ jsxref("boolean", "Booléen") }}</td>
       <td>
         <p>
-          Insère les scripts de contenu dans les pages dont l’URL est
-          <code>about:blank</code> ou <code>about:srcdoc</code>, si l’URL de la
+          Insère les scripts de contenu dans les pages dont l'URL est
+          <code>about:blank</code> ou <code>about:srcdoc</code>, si l'URL de la
           page qui a ouvert ou créé cette page
           [correspond aux modèles](#les_modèles_de_correspondance_d'url)
           spécifiés dans le reste de la clé <code>content_scripts</code>.
         </p>
         <p>
           Ceci est particulièrement utile pour exécuter des scripts dans des
-          {{ htmlelement("iframe", "iframes") }} vides, dont l’URL
+          {{ htmlelement("iframe", "iframes") }} vides, dont l'URL
           est <code>about:blank</code>. Pour ce faire, vous devez également
           définir la clé <code>all_frames</code>.
         </p>
         <p>
-          Par exemple, supposons que vous disposiez d’une clé de
+          Par exemple, supposons que vous disposiez d'une clé de
           <code>content_scripts</code> comme ceci&nbsp;:
         </p>
         <pre class="brush: json">
@@ -182,9 +181,9 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
 ]</pre
         >
         <p>
-          Si l’utilisateur ou l’utilisatrice charge
+          Si l'utilisateur ou l'utilisatrice charge
           <code>https://example.org/</code>, et si cette page intègre une iframe
-          vide, alors <em>my-script.js</em> sera chargé dans l’iframe.
+          vide, alors <em>my-script.js</em> sera chargé dans l'iframe.
         </p>
         <p>
           <code>match_about_blank</code> est supporté dans Firefox à partir de
@@ -207,7 +206,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
           ci-dessous.
         </p>
-        <p>C’est la seule clé obligatoire.</p>
+        <p>C'est la seule clé obligatoire.</p>
       </td>
     </tr>
     <tr>
@@ -218,7 +217,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           Cette option détermine quand les scripts spécifiés dans
           <code>js</code> sont injectés. Vous pouvez fournir une chaîne
           parmi trois ici, chacune identifiant un état dans le processus de
-          chargement d’un document. Les états correspondent directement à
+          chargement d'un document. Les états correspondent directement à
           {{domxref("Document/readyState", "Document.readyState")}}&nbsp;:
         </p>
         <ul>
@@ -249,7 +248,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
 
 ## Les modèles de correspondance d'URL
 
-La clé `content_scripts` associe les scripts de contenu aux documents en fonction de la correspondance des URL&nbsp;: si l’URL du document correspond à la spécification de la clé, le script sera joint. Il existe quatre propriétés dans `content_scripts` que vous pouvez utiliser pour cette spécification&nbsp;:
+La clé `content_scripts` associe les scripts de contenu aux documents en fonction de la correspondance des URL&nbsp;: si l'URL du document correspond à la spécification de la clé, le script sera joint. Il existe quatre propriétés dans `content_scripts` que vous pouvez utiliser pour cette spécification&nbsp;:
 
 - `matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) (modèles).
 - `exclude_matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
@@ -291,7 +290,7 @@ Par exemple&nbsp;: `"*na?i"` correspond à `"illuminati"` et à `"annunaki"`, ma
 ]
 ```
 
-Cela injecte un seul script de contenu _borderify.js_ dans toutes les pages sous `mozilla.org` ou l’un de ses sous-domaines, qu’ils soient fournis via HTTP ou HTTPS.
+Cela injecte un seul script de contenu _borderify.js_ dans toutes les pages sous `mozilla.org` ou l'un de ses sous-domaines, qu'ils soient fournis via HTTP ou HTTPS.
 
 ```json
 "content_scripts": [
@@ -303,9 +302,9 @@ Cela injecte un seul script de contenu _borderify.js_ dans toutes les pages sous
 ]
 ```
 
-Cela implique deux scripts de contenu dans toutes les pages sous `mozilla.org` ou l’un de ses sous-domaines, à l’exception de `developer.mozilla.org`, qu’il s’agisse de HTTP ou HTTPS.
+Cela implique deux scripts de contenu dans toutes les pages sous `mozilla.org` ou l'un de ses sous-domaines, à l'exception de `developer.mozilla.org`, qu'il s'agisse de HTTP ou HTTPS.
 
-Les scripts de contenu ont la même vue du DOM et sont injectés dans l’ordre où ils apparaissent dans le tableau, de sorte que _borderify.js_ peut voir les variables globales ajoutées par _jquery.js_.
+Les scripts de contenu ont la même vue du DOM et sont injectés dans l'ordre où ils apparaissent dans le tableau, de sorte que _borderify.js_ peut voir les variables globales ajoutées par _jquery.js_.
 
 ## Compatibilité des navigateurs
 

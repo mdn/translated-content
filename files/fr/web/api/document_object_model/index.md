@@ -1,12 +1,6 @@
 ---
 title: Référence du DOM
 slug: Web/API/Document_Object_Model
-tags:
-  - API
-  - DOM
-  - Intermédiaire
-  - Référence(2)
-translation_of: Web/API/Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: indexedDB
 slug: Web/API/indexedDB
-original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 l10n:
   sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---
@@ -21,10 +20,10 @@ l10n:
 ```js
 let db;
 function openDB() {
- const DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = (e) => {
-   db = DBOpenRequest.result;
- }
+  const DBOpenRequest = window.indexedDB.open("toDoList");
+  DBOpenRequest.onsuccess = (e) => {
+    db = DBOpenRequest.result;
+  };
 }
 ```
 

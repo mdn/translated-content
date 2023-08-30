@@ -1,21 +1,6 @@
 ---
 title: Création d'un en-tête de papier à lettre élégant
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-tags:
-  - Arrière‑plan
-  - Boîte
-  - Boîtes
-  - CSS
-  - Codage
-  - Débutant
-  - Evaluation
-  - encadrement
-  - en‑tête de lettre
-  - lettre
-  - lettre avec en‑tête
-  - papier
-translation_of: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-original_slug: Apprendre/CSS/styliser_boites/Creating_fancy_letterheaded_paper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Apprendre/CSS/styliser_boites")}}

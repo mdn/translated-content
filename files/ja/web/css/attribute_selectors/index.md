@@ -14,7 +14,8 @@ a[title] {
 }
 
 /* href が "https://example.org" と一致する <a> 要素 */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 

@@ -1,7 +1,6 @@
 ---
 title: Toolbar
 slug: orphaned/Code_snippets/Toolbar
-original_slug: Code_snippets/Toolbar
 ---
 
 ### ツールバーボタンを追加する

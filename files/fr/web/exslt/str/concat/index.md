@@ -1,10 +1,6 @@
 ---
 title: concat
 slug: Web/EXSLT/str/concat
-tags:
-  - EXSLT
-  - XSLT
-translation_of: Web/EXSLT/str/concat
 ---
 
 {{ XsltRef() }}
