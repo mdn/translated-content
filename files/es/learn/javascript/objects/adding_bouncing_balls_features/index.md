@@ -86,17 +86,17 @@ Este método agregará un detector de eventos `onkeydown` al objeto `window` par
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if (e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if (e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if (e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if (e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 Por tanto cuando se presiona una tecla, el evento del objeto [keyCode](/es/docs/Web/API/KeyboardEvent/keyCode) se consulta para averiguar que tecla se ha presionado. Si es uno de los cuatro representados por los códigos clave especificados, entonces el círculo maligno se moverá a la izquierda / derecha / arriba / abajo.
@@ -111,7 +111,7 @@ Este método actuará de una forma muy similar al método `collisionDetect()` de
 - En el exterior de la declaración `if`, ya no es necesario comprobar si la bola actual en la iteración es la misma que la bola que está haciendo la comprobación, porque ya no es una bola, ¡es el círculo del mal! En su lugar, debe hacer una prueba para ver si existe la bola que se está verificando (¿con qué propiedad podría hacerlo?). Si no existe, ya ha sido devorado por el círculo maligno, por lo que no es necesario volver a comprobarlo.
 - En el interior de la declaración `if`, ya no desea que los objetos cambien de color cuando se detecta una colisión; en cambio, desea que no existan más bolas que colisionen con el círculo maligno (una vez más, ¿cómo cree que haría eso?).
 
-### Trayendo el círculo del mal al programa.
+### Trayendo el círculo del mal al programa
 
 Ahora que hemos definido el círculo maligno, debemos hacerlo aparecer en nuestra escena. Para hacerlo, necesitas hacer alguno cambios a la función `loop()`.
 
@@ -119,29 +119,29 @@ Ahora que hemos definido el círculo maligno, debemos hacerlo aparecer en nuestr
 - En el punto en el que intera por todas las pelotas y llama a las funciones `draw()`, `update()`, y `collisionDetect()` para cada una, hazlo para que estas funciones solo sean llamadas si la bola actual existe.
 - Llama a los métodos de la instancia de la pelota maligna `draw()`, `checkBounds()`, y `collisionDetect()` en cada iteración del bucle.
 
-### Implementando el contador de puntuación.
+### Implementando el contador de puntuación
 
 Para implementar el contador de puntuación sigue estos pasos:
 
 1. En tu archivo HTML añade un elemento {{HTMLElement("p")}} justo debajo del elemento {{HTMLElement("h1")}} que contiene el texto "Ball count: ".
 2. En tu archivo CSS, agregue la siguiente regla en la parte inferior:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. En su JavaScript, realice las siguientes actualizaciones:
 
-    - Cree una variable que almacene una referencia al párrafo.
-    - Mantenga un recuento de la cantidad de bolas en la pantalla de alguna manera.
-    - Incrementa el conteo y muestra el número actualizado de bolas cada vez que se agrega una bola a la escena.
-    - Disminuye el conteo y muestra el número actualizado de bolas cada vez que el círculo maligno se come una bola (hace que no exista).
+   - Cree una variable que almacene una referencia al párrafo.
+   - Mantenga un recuento de la cantidad de bolas en la pantalla de alguna manera.
+   - Incrementa el conteo y muestra el número actualizado de bolas cada vez que se agrega una bola a la escena.
+   - Disminuye el conteo y muestra el número actualizado de bolas cada vez que el círculo maligno se come una bola (hace que no exista).
 
 ## Consejos
 

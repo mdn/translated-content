@@ -24,14 +24,17 @@ PushSubscription.unsubscribe().then(function(Boolean) { ... });
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    subscription.unsubscribe().then(function(successful) {
-      // 登録解除が成功
-    }).catch(function(e) {
-      // 登録解除が失敗
-    })
-  })
+navigator.serviceWorker.ready.then(function (reg) {
+  reg.pushManager.getSubscription().then(function (subscription) {
+    subscription
+      .unsubscribe()
+      .then(function (successful) {
+        // 登録解除が成功
+      })
+      .catch(function (e) {
+        // 登録解除が失敗
+      });
+  });
 });
 ```
 

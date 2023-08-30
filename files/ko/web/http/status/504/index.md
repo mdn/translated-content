@@ -2,6 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 ---
+
 {{HTTPSidebar}}
 
 하이퍼텍스트 전송 프로토콜 (HTTP) **`504 Gateway Timeout`** 서버 에러 응답 코드는 서버가 게이트웨이 혹은 프록시의 역할을 하는 동안 시간 안에 업스트림 서버(upstream server)로부터 요청을 마치기 위해 필요한 응답를 받지 못했음을 나타냅니다.
@@ -14,7 +15,7 @@ slug: Web/HTTP/Status/504
 504 Gateway Timeout
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

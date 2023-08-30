@@ -1,7 +1,6 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-original_slug: Web/HTML/Elemento/source
 ---
 
 El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).
@@ -14,7 +13,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -36,7 +35,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
         <div>
           Un elemento multimedia—{{HTMLElement("audio")}} o
           {{HTMLelement("video")}}—y se debe colocar antes que cualquier
-          <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          <a href="/es/docs/HTML/Content_categories#Flow_content"
             >contenido de flujo</a
           >
           o elemento {{HTMLElement("track")}}.
@@ -93,9 +92,9 @@ Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos n
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   Lo lamento; su navegador no soporta video HTML5.
 </video>
 ```

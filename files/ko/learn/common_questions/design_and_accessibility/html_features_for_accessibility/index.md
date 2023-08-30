@@ -1,8 +1,6 @@
 ---
 title: 어떤 HTML 기능이 접근성을 촉진할까?
-slug: >-
-  Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-original_slug: Learn/Common_questions/HTML_features_for_accessibility
+slug: Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
 ---
 
 이번 내용은 웹 페이지를 좀 더 서로 다른 장애를 가진 사람들에게 좀 더 접근하기 쉽게 만들 수 있는 HTML의 특정한 기능을 서술합니다.
@@ -26,7 +24,15 @@ pointing devices를 사용 하지 않거나 사용 할 수 없는 유저들은 <
 만약 당신이 자신을 설명하지 않는 링크를 가지고 있거나, 링크 목적지가 더 자세하게 설명되지 않으면, 그 링크에 제목 속성을 추가 할 수 있습니다.
 
 ```html
-<p>I'm really bad at writing link text. <a href="inept.html" title="Why I'm rubbish at writing link text: An explanation and an apology.">Click here</a> to find out more.</p>
+<p>
+  I'm really bad at writing link text.
+  <a
+    href="inept.html"
+    title="Why I'm rubbish at writing link text: An explanation and an apology."
+    >Click here</a
+  >
+  to find out more.
+</p>
 ```
 
 ## 접근 키(Access Keys)

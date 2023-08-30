@@ -1,5 +1,5 @@
 ---
-title: ':in-range'
+title: ":in-range"
 slug: Web/CSS/:in-range
 ---
 
@@ -31,9 +31,18 @@ input:in-range {
 
 ```html
 <form action="" id="form1">
-  <ul>1 から 10 の間の値が有効です。
+  <ul>
+    1 から 10 の間の値が有効です。
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12" required>
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12"
+        required />
       <label for="value1">あなたの値は</label>
     </li>
   </ul>
@@ -62,11 +71,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: '範囲内です。';
+  content: "範囲内です。";
 }
 
 input:out-of-range + label::after {
-  content: '範囲外です！';
+  content: "範囲外です！";
 }
 ```
 
@@ -74,7 +83,7 @@ input:out-of-range + label::after {
 
 {{EmbedLiveSample('Examples', 600, 140)}}
 
-> **メモ:** 空の `<input>` は範囲外としてカウントされず、 `:out-of-range` 擬似クラスセレクターで選択されることはありません。空の入力を選択するための [`:blank`](/ja/docs/Web/CSS/:blank) 擬似クラスがありますが、この記事を書いている時点では、実験的で対応が十分ではありません。また、 `required` 属性と [`:invalid`](/ja/docs/Web/CSS/:invalid) 擬似クラスを使用すると、入力を必須にするためのより一般的なロジックとスタイルを提供できます (`:invalid` は空白_および_範囲外の入力のスタイルを指定します)。
+> **メモ:** 空の `<input>` は範囲外としてカウントされず、 `:out-of-range` 擬似クラスセレクターで選択されることはありません。空の入力を選択するための [`:blank`](/ja/docs/Web/CSS/:blank) 擬似クラスがありますが、この記事を書いている時点では、実験的で対応が十分ではありません。また、 `required` 属性と [`:invalid`](/ja/docs/Web/CSS/:invalid) 擬似クラスを使用すると、入力を必須にするためのより一般的なロジックとスタイルを提供できます (`:invalid` は空白*および*範囲外の入力のスタイルを指定します)。
 
 ## 仕様書
 

@@ -1,16 +1,8 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Workers
-  - Worker
-  - Конструктор
-  - Ссылка
-translation_of: Web/API/Worker/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en/Same_origin_policy_for_JavaScript)).
@@ -48,12 +40,12 @@ var myWorker = new Worker(aURL, options);
 Следующий фрагмент кода показывает создание объекта {{domxref ("Worker")}} с помощью конструктора `Worker()` и его последующее использование:
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).

@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t delete non-configurable array element'
+title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 ---
 
@@ -35,8 +35,8 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 ```js example-bad
 "use strict";
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0});
-Object.defineProperty(arr, 1, {value: "1"});
+Object.defineProperty(arr, 0, { value: 0 });
+Object.defineProperty(arr, 1, { value: "1" });
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
@@ -47,8 +47,8 @@ arr.length = 1;
 ```js example-good
 "use strict";
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0, configurable: true});
-Object.defineProperty(arr, 1, {value: "1", configurable: true});
+Object.defineProperty(arr, 0, { value: 0, configurable: true });
+Object.defineProperty(arr, 1, { value: "1", configurable: true });
 
 arr.length = 1;
 ```
@@ -59,7 +59,7 @@ arr.length = 1;
 
 ```js example-bad
 "use strict";
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -70,7 +70,7 @@ arr.length = 1;
 
 ```js example-good
 "use strict";
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 // Copy the initial array to shorten the copy

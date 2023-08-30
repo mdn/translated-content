@@ -1,7 +1,6 @@
 ---
 title: 寸法の論理的プロパティ
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
-original_slug: Web/CSS/CSS_Logical_Properties/Sizing
 ---
 
 {{CSSRef}}

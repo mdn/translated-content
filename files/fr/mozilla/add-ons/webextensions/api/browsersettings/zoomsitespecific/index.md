@@ -1,7 +1,6 @@
 ---
 title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
 ---
 
 {{AddonSidebar()}}
@@ -37,8 +36,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);
+browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

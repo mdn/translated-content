@@ -1,10 +1,6 @@
 ---
 title: element.lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLElement/lang
 ---
 
 {{ ApiRef() }}
@@ -28,9 +24,9 @@ _langueUtilisee_ est une variable chaîne de caracteres recevant la langue dans 
 // ce bout de code compare la langue de base et
 // redirige vers une autre URL suivant la langue
 if (document.documentElement.lang === "en") {
-    window.location.href = "un_document.html.en";
-} else if(document.documentElement.lang === "ru") {
-    window.location.href = "un_document.html.ru";
+  window.location.href = "un_document.html.en";
+} else if (document.documentElement.lang === "ru") {
+  window.location.href = "un_document.html.ru";
 }
 ```
 

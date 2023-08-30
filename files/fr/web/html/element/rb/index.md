@@ -1,12 +1,6 @@
 ---
-title: '<rb> : l''élément de base ruby'
+title: "<rb> : l'élément de base ruby"
 slug: Web/HTML/Element/rb
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-translation_of: Web/HTML/Element/rb
 ---
 
 {{HTMLSidebar}}
@@ -29,8 +23,7 @@ Dans cet exemple, on fournit une annotation pour le caractère original correspo
 
 ```html
 <ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -44,8 +37,7 @@ On aurait également pu écrire cet exemple avec les deux parties du texte de ba
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -56,7 +48,9 @@ On aurait également pu écrire cet exemple avec les deux parties du texte de ba
 ### Avec prise en charge de ruby
 
 ```html hidden
-<ruby> <rb>漢<rb>字 <rp>(</rp><rt>kan<rt>ji<rp>)</rp> </ruby>
+<ruby>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
+</ruby>
 ```
 
 ```css hidden

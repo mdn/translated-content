@@ -5,52 +5,49 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 
 {{JSRef}}
 
-**`toLocaleUpperCase()`** 方法根据本地主机语言环境把字符串转换为大写格式，并返回转换后的字符串。
+{{jsxref("String")}} 的 **`toLocaleUpperCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为大写形式并返回。
 
 {{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
 
 ## 语法
 
-```plain
-str.toLocaleUpperCase()
-str.toLocaleUpperCase(locale)
-str.toLocaleUpperCase([locale, locale, ...])
+```js-nolint
+toLocaleUpperCase()
+toLocaleUpperCase(locales)
 ```
 
 ### 参数
 
-- `locale` {{optional_inline}}
-  - : The `locale` parameter indicates the locale to be used to convert to upper case according to any locale-specific case mappings. If multiple locales are given in an {{jsxref("Array")}}, the [best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment's current locale.
+- `locales` {{optional_inline}}
+
+  - : 一个带有 BCP 47 语言标签的字符串，或者是这种字符串的数组。指示要根据特定区域设置的大小写映射规则进行转换的区域设置。有关 `locales` 参数的一般形式和解释，请参阅 [`Intl` 主页上的参数描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
+
+    与使用 `locales` 参数的其他方法不同，`toLocaleUpperCase()` 不允许进行区域设置匹配。因此，在检查 `locales` 参数的有效性之后，`toLocaleUpperCase()` 始终使用列表中的第一个区域设置（如果列表为空，则使用默认区域设置），即使该区域设置在实现中不受支持。
 
 ### 返回值
 
-A new string representing the calling string converted to upper case, according to any locale-specific case mappings.
-
-### Exceptions
-
-- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a `locale` argument isn't a valid language tag.
-- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an array element isn't of type string.
+一个新的字符串，表示调用字符串根据特定区域设置的大小写映射规则转换得到的大写形式。
 
 ## 描述
 
-The `toLocaleUpperCase()` method returns the value of the string converted to upper case according to any locale-specific case mappings. `toLocaleUpperCase()` does not affect the value of the string itself. In most cases, this will produce the same result as {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not follow the default case mappings in Unicode, there may be a different result.
+`toLocaleUpperCase()` 方法返回根据特定区域设置的大小写映射规则将字符串转换为小写形式的值。`toLocaleUpperCase()` 不会影响字符串本身的值。在大多数情况下，这将产生与 {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} 相同的结果，但对于某些区域设置（例如土耳其语），它们的大小写映射与 Unicode 的默认映射不同，可能会得到不同的结果。
 
-Also notice that conversion is not necessarily a 1:1 character mapping, as some characters might result in two (or even more) characters when transformed to upper-case. Therefore the length of the result string can differ from the input length. This also implies that the conversion is not stable, so i.E. the following can return `false`:
+还要注意，转换不一定是一对一的字符映射，因为某些字符在转换为小写形式时可能会产生两个（甚至更多）字符。因此，结果字符串的长度可能与输入长度不同。这也意味着转换是不稳定的，因此下面的例子可能返回 `false`：
 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`
 
 ## 示例
 
-### 使用 `toLocaleUpperCase()`
+### 使用 toLocaleUpperCase()
 
 ```js
-'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
+"alphabet".toLocaleUpperCase(); // 'ALPHABET'
 
-'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+const locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## 规范
@@ -61,7 +58,7 @@ let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
 - {{jsxref("String.prototype.toLowerCase()")}}

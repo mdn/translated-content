@@ -1,7 +1,6 @@
 ---
 title: extension.ViewType
 slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 ---
 
 {{AddonSidebar()}}

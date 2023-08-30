@@ -1,7 +1,6 @@
 ---
 title: pageAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
 ---
 
 {{AddonSidebar()}}Ouvrez le menu contextuel de l'action de la page.
@@ -11,7 +10,7 @@ Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une
 ## Syntaxe
 
 ```js
-browser.pageAction.openPopup()
+browser.pageAction.openPopup();
 ```
 
 ### Paramètres
@@ -34,7 +33,7 @@ Ouvrez la fenêtre contextuelle lorsque l'utilisateur sélectionne un élément 
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

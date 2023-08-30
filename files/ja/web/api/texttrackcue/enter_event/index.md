@@ -1,5 +1,5 @@
 ---
-title: 'TextTrackCue: enter イベント'
+title: "TextTrackCue: enter イベント"
 slug: Web/API/TextTrackCue/enter_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('enter', (event) => { })
+addEventListener("enter", (event) => {});
 
-onenter = (event) => { }
+onenter = (event) => {};
 ```
 
 ## イベント型
@@ -28,8 +28,8 @@ onenter = (event) => { }
 以下の例では、`cue1` がアクティブキューになったときにコンソールに表示します。
 
 ```js
-cue1.addEventListener('enter', (event) => {
-  console.log('Cue 1 has displayed');
+cue1.addEventListener("enter", (event) => {
+  console.log("Cue 1 has displayed");
 });
 ```
 

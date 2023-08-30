@@ -186,6 +186,7 @@ JavaScript 함수를 호출하고 싶을 때면 언제든지 이들을 파일에
     description = "A sample project with wasm-pack"
     license = "MIT/Apache-2.0"
     repository = "https://github.com/yourgithubusername/hello-wasm"
+    edition = "2018"
 
     [lib]
     crate-type = ["cdylib"]
@@ -248,19 +249,19 @@ npm에 우리의 새 패키지를 배포해봅시다.
 `package.json` 이라는 이름의 새 파일을 만들어, 다음 코드를 작성합니다.
 
 ```json
-    {
-      "scripts": {
-        "serve": "webpack-dev-server"
-      },
-      "dependencies": {
-        "@mynpmusername/hello-wasm": "^0.1.0"
-      },
-      "devDependencies": {
-        "webpack": "^4.25.1",
-        "webpack-cli": "^3.1.2",
-        "webpack-dev-server": "^3.1.10"
-      }
-    }
+{
+  "scripts": {
+    "serve": "webpack-dev-server"
+  },
+  "dependencies": {
+    "@mynpmusername/hello-wasm": "^0.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
 ```
 
 `dependencies` 섹션에서 `@` 뒤에 실제 npm 계정명을 넣어주세요.
@@ -268,39 +269,39 @@ npm에 우리의 새 패키지를 배포해봅시다.
 그 다음은 Webpack을 설정해야 합니다. `webpack.config.js` 파일을 만든 뒤, 다음 코드를 작성합니다.
 
 ```js
-    const path = require('path');
-    module.exports = {
-      entry: "./index.js",
-      output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "index.js",
-      },
-      mode: "development"
-    };
+const path = require("path");
+module.exports = {
+  entry: "./index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+  },
+  mode: "development",
+};
 ```
 
 그리고 HTML 파일도 필요합니다. `index.html`을 만들고, 다음 내용을 작성합니다.
 
 ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>hello-wasm example</title>
-      </head>
-      <body>
-        <script src="./index.js"></script>
-      </body>
-    </html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <script src="./index.js"></script>
+  </body>
+</html>
 ```
 
 마지막으로, HTML에서 참조되는 `index.js`를 만들어 다음 내용을 작성합니다.
 
 ```js
-    const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-    js.then(js => {
-      js.greet("WebAssembly");
-    });
+const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
+js.then((js) => {
+  js.greet("WebAssembly");
+});
 ```
 
 npm 계정명을 한번 더 입력해야 합니다.

@@ -1,8 +1,6 @@
 ---
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
 
 {{APIRef("DOM")}}
@@ -22,8 +20,8 @@ var nextNode = elementNodeReference.nextElementSibling;
 <div id="div-02">Это div-02</div>
 
 <script type="text/javascript">
-  var el = document.getElementById('div-01').nextElementSibling;
-  console.log('Сосед div-01:');
+  var el = document.getElementById("div-01").nextElementSibling;
+  console.log("Сосед div-01:");
   while (el) {
     console.log(el.nodeName);
     el = el.nextElementSibling;
@@ -45,16 +43,16 @@ SCRIPT
 
 ```js
 // Источник: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
-if (!('nextElementSibling' in document.documentElement)) {
-    Object.defineProperty(Element.prototype, 'nextElementSibling', {
-        get: function() {
-            var e = this.nextSibling;
-            while (e && 1 !== e.nodeType) {
-                e = e.nextSibling;
-            }
-            return e;
-        }
-    });
+if (!("nextElementSibling" in document.documentElement)) {
+  Object.defineProperty(Element.prototype, "nextElementSibling", {
+    get: function () {
+      var e = this.nextSibling;
+      while (e && 1 !== e.nodeType) {
+        e = e.nextSibling;
+      }
+      return e;
+    },
+  });
 }
 ```
 
@@ -62,35 +60,32 @@ if (!('nextElementSibling' in document.documentElement)) {
 
 ```js
 // Источник: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
-(function(arr) {
-    arr.forEach(function(item) {
-        if (item.hasOwnProperty('nextElementSibling')) {
-            return;
+(function (arr) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty("nextElementSibling")) {
+      return;
+    }
+    Object.defineProperty(item, "nextElementSibling", {
+      configurable: true,
+      enumerable: true,
+      get: function () {
+        var el = this;
+        while ((el = el.nextSibling)) {
+          if (el.nodeType === 1) {
+            return el;
+          }
         }
-        Object.defineProperty(item, 'nextElementSibling', {
-            configurable: true,
-            enumerable: true,
-            get: function() {
-                var el = this;
-                while (el = el.nextSibling) {
-                    if (el.nodeType === 1) {
-                        return el;
-                    }
-                }
-                return null;
-            },
-            set: undefined
-        });
+        return null;
+      },
+      set: undefined,
     });
+  });
 })([Element.prototype, CharacterData.prototype]);
 ```
 
 ## Спецификации
 
-| Specification                                                                                                                                    | Status                                   | Comment                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-nextelementsibling', 'ChildNodenextElementSibling')}} | {{Spec2('DOM WHATWG')}}         | Split the `ElementTraversal` interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former. The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface. |
-| {{SpecName('Element Traversal', '#attribute-nextElementSibling', 'ElementTraversal.nextElementSibling')}}     | {{Spec2('Element Traversal')}} | Added its initial definition to the `ElementTraversal` pure interface and use it on {{domxref("Element")}}.                                                                                                                                                                                                                     |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

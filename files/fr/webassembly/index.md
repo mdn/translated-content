@@ -1,11 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Landing
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 
 {{WebAssemblySidebar}}{{SeeCompatTable}}

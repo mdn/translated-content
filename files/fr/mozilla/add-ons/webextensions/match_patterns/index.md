@@ -1,21 +1,20 @@
 ---
 title: Motifs (Match patterns)
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
-translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 
 {{AddonSidebar}}
 
-Les modèles de correspondance sont un moyen de spécifier des groupes d’URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l’aide d’API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest).
+Les modèles de correspondance sont un moyen de spécifier des groupes d'URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l'aide d'API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest).
 
-Les API qui utilisent des modèles de correspondance acceptent généralement une liste de modèles de correspondance et effectueront les actions appropriées si l’URL correspond à l’un des motifs. Voir, par exemple, la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) dans manifest.json.
+Les API qui utilisent des modèles de correspondance acceptent généralement une liste de modèles de correspondance et effectueront les actions appropriées si l'URL correspond à l'un des motifs. Voir, par exemple, la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) dans manifest.json.
 
 ## Structure du modèle de correspondance
 
 > **Note :** Certains navigateurs ne prennent pas en charge certains schémas.
 > Consultez le [tableau de compatibilité du navigateur](#Browser_compatibility) pour plus de détails.
 
-Tous les modèles de correspondance sont spécifiés comme des chaînes. Outre le motif spécial « [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) », les modèles de correspondance se composent de trois partie : _schéma_, l’hôte, et le _chemin d’accès._ Le schéma et l’hôte sont séparés par « :// ».
+Tous les modèles de correspondance sont spécifiés comme des chaînes. Outre le motif spécial « [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) », les modèles de correspondance se composent de trois partie : _schéma_, l'hôte, et le _chemin d'accès._ Le schéma et l'hôte sont séparés par « :// ».
 
 ```
 <scheme>://<host><path>
@@ -23,7 +22,7 @@ Tous les modèles de correspondance sont spécifiés comme des chaînes. Outre l
 
 ### schéma
 
-Le composant du _schéma_ peut prendre l’une des deux formes suivantes :
+Le composant du _schéma_ peut prendre l'une des deux formes suivantes :
 
 <table class="standard-table">
   <thead>
@@ -68,27 +67,27 @@ Le composant _hôte_ peut prendre l'une des trois formes suivantes :
       <td>Tout hôte</td>
     </tr>
     <tr>
-      <td><code>*.</code> Suivi d’une partie du nom d’hôte</td>
-      <td>L’hôte donné et l’un de ses sous-domaines</td>
+      <td><code>*.</code> Suivi d'une partie du nom d'hôte</td>
+      <td>L'hôte donné et l'un de ses sous-domaines</td>
     </tr>
     <tr>
-      <td>Un nom d’hôte complet, sans caractères génériques</td>
-      <td>Seul l’hôte donné</td>
+      <td>Un nom d'hôte complet, sans caractères génériques</td>
+      <td>Seul l'hôte donné</td>
     </tr>
   </tbody>
 </table>
 
-L’_hôte_ ne doit pas inclure un numéro de port.
+L'_hôte_ ne doit pas inclure un numéro de port.
 
-L’_hôte_ est facultatif seulement si le _schéma_ est un « fichier ».
+L'_hôte_ est facultatif seulement si le _schéma_ est un « fichier ».
 
-Notez que le caractère générique ne peut apparaître qu’au début.
+Notez que le caractère générique ne peut apparaître qu'au début.
 
 ### chemin
 
-Le composant du chemin d’accès doit commencer par un `/`.
+Le composant du chemin d'accès doit commencer par un `/`.
 
-Ensuite, il peut contenir éventuellement toute combinaison du caractère générique `*` et de l’un des caractères autorisés dans les chemins d’URL ou chaînes de requête. Contrairement à l’_hôte_, le composant du _chemin_ peut contenir le caractère générique `*` au milieu ou à la fin, et le caractère `*` peut apparaître plusieurs fois.
+Ensuite, il peut contenir éventuellement toute combinaison du caractère générique `*` et de l'un des caractères autorisés dans les chemins d'URL ou chaînes de requête. Contrairement à l'_hôte_, le composant du _chemin_ peut contenir le caractère générique `*` au milieu ou à la fin, et le caractère `*` peut apparaître plusieurs fois.
 
 La valeur du _chemin_ matches correspond à la chaîne de caractères qui est le chemin plus la [chaine de requête URL](https://en.wikipedia.org/wiki/Query_string). Ceci inclut le signe `?` entre les deux, si la chaîne de requête est présente dans l'URL. Par exemple, si vous voulez faire correspondre des URLs sur n'importe quel domaine où le chemin URL se termine par `foo.bar`, alors vous devez utiliser un tableau de Match Patterns comme `['*://*/*foo.bar', '*://*/*foo.bar?*']`. Le `?*` est nécessaire, plutôt que juste la `bar*`, afin d'ancrer la fin `*` comme s'appliquant à la chaîne de requête URL et non à une partie du chemin URL.
 
@@ -98,7 +97,7 @@ Ni l'[identificateur de fragment d'URL](https://en.wikipedia.org/wiki/Fragment_i
 
 ### \<all_urls>
 
-La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des schémas pris en charge, c’est‐à‐dire&nbsp;: "http", "https", "ws", "wss", "ftp", "data" et "file".
+La valeur spéciale `<all_urls>` correspond à toutes les URL sous l'un des schémas pris en charge, c'est‐à‐dire&nbsp;: "http", "https", "ws", "wss", "ftp", "data" et "file".
 
 ## Exemples
 
@@ -152,7 +151,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
         <p><code>*://*.mozilla.org/*</code></p>
         <p>
           Correspondance à toutes les URLs HTTP, HTTPS et WebSocket URLs qui
-          sont hébergés sur "mozilla.org" ou l’un de ses sous-domaines.
+          sont hébergés sur "mozilla.org" ou l'un de ses sous-domaines.
         </p>
       </td>
       <td>
@@ -234,7 +233,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
       <td>
         <p><code>https://*/path/</code></p>
         <p>
-          Correspondance aux URLs HTTPS sur n’importe quel hôte, dont le chemin
+          Correspondance aux URLs HTTPS sur n'importe quel hôte, dont le chemin
           est "path/".
         </p>
       </td>
@@ -263,7 +262,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
         <p><code>https://mozilla.org/*</code></p>
         <p>
           Correspondance sur toutes les URLs HTTPS uniquement sur "mozilla.org",
-          avec n’importe quel chemin
+          avec n'importe quel chemin
         </p>
       </td>
       <td>
@@ -296,7 +295,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
         <p><code>https://mozilla.org/*/b/*/</code></p>
         <p>
           Correspondance sur toutes les URL HTTPS hébergées sur "mozilla.org",
-          dont le chemin d’accès contient un composant "b" quelque part au
+          dont le chemin d'accès contient un composant "b" quelque part au
           milieu. Correspond aux URLs avec les chaînes de requête, si la chaîne
           se termine par un <code>/</code>.
         </p>
@@ -330,7 +329,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
       <td>
         <p><code>file:///blah/*</code></p>
         <p>
-          Correspondance à n’importe quelle URL FILE dont le chemin commence par
+          Correspondance à n'importe quelle URL FILE dont le chemin commence par
           "blah".
         </p>
       </td>
@@ -352,7 +351,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
 | `https://mozilla.*.org/`  | "*" dans *hôte\* doit être au départ.                                |
 | `https://*zilla.org/`     | "*" dans *hôte\* doit être le seul caractère ou être suivi de « . ». |
 | `http*://mozilla.org/`    | "\*" dans le schéma doit être le seul caractère.                     |
-| `https://mozilla.org:80/` | L’hôte ne doit pas inclure un numéro de port.                        |
+| `https://mozilla.org:80/` | L'hôte ne doit pas inclure un numéro de port.                        |
 | `*://*`                   | Chemin vide : il doit être "`*://*/*`".                              |
 | `file://*`                | Chemin vide : il doit être "`file:///*`".                            |
 

@@ -7,7 +7,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 この記事では、W3C の Permissions API を使用するための基本的なガイドを提供します。 これは、現在のコンテキストに起因する API のパーミッションの状態を照会するためのプログラムによる方法を提供します。
 
-## パーミッションを求めるのが面倒...
+## パーミッションを求めるのが面倒
 
 ウェブ上のパーミッションは必要悪であり、そしてそれらは開発者として対処するのはそれほど面白くありませんが、それに立ち向かいましょう。
 
@@ -48,26 +48,30 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({name:'geolocation'}).then(function(result) {
-    if (result.state == 'granted') {
+  navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+    if (result.state == "granted") {
       report(result.state);
-      geoBtn.style.display = 'none';
-    } else if (result.state == 'prompt') {
+      geoBtn.style.display = "none";
+    } else if (result.state == "prompt") {
       report(result.state);
-      geoBtn.style.display = 'none';
-      navigator.geolocation.getCurrentPosition(revealPosition,positionDenied,geoSettings);
-    } else if (result.state == 'denied') {
+      geoBtn.style.display = "none";
+      navigator.geolocation.getCurrentPosition(
+        revealPosition,
+        positionDenied,
+        geoSettings,
+      );
+    } else if (result.state == "denied") {
       report(result.state);
-      geoBtn.style.display = 'inline';
+      geoBtn.style.display = "inline";
     }
-    result.onchange = function() {
+    result.onchange = function () {
       report(result.state);
-    }
+    };
   });
 }
 
 function report(state) {
-  console.log('Permission ' + state);
+  console.log("Permission " + state);
 }
 
 handlePermission();

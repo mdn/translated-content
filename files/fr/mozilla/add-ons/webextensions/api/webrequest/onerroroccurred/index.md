@@ -1,7 +1,6 @@
 ---
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 ---
 
 {{AddonSidebar()}}
@@ -18,11 +17,11 @@ Cet événement est à titre d'information seulement.
 
 ```js
 browser.webRequest.onErrorOccurred.addListener(
-  listener,             // function
-  filter                //  object
-)
-browser.webRequest.onErrorOccurred.removeListener(listener)
-browser.webRequest.onErrorOccurred.hasListener(listener)
+  listener, // function
+  filter, //  object
+);
+browser.webRequest.onErrorOccurred.removeListener(listener);
+browser.webRequest.onErrorOccurred.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -129,10 +128,7 @@ function logError(responseDetails) {
   console.log(responseDetails.error);
 }
 
-browser.webRequest.onErrorOccurred.addListener(
-  logError,
-  {urls: [target]}
-);
+browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
 ```
 
 {{WebExtExamples}}

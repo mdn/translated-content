@@ -48,21 +48,21 @@ WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框�
 
 1. 检查用户的设备和浏览器是否都能够呈现您想要提供的 XR 体验。
 
-    1. 确保 WebXR API 可用；如果 {{domxref("navigator.xr")}} 未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。
-    2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式：`inline`, `immersive-vr`, 或 `immersive-ar`, 以确定您希望提供的会话类型是否可用。
-    3. 如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。
+   1. 确保 WebXR API 可用；如果 {{domxref("navigator.xr")}} 未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。
+   2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式：`inline`, `immersive-vr`, 或 `immersive-ar`, 以确定您希望提供的会话类型是否可用。
+   3. 如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。
 
 2. 当用户通过上述的界面开启了 WebXR 功能后，通过调用 {{DOMxRef("XR.requestSession","navigator.xr.requestSession()")}}，也是指定使用的模式为以下三种之一： `inline`, `immersive-vr`, 或 `immersive-ar`后，可以将一个 {{DOMxRef("XRSession")}} 设定在期望的模式下。
 3. 当 `requestSession()` 返回的 promise 被 resolve 后，使用新的 {{domxref("XRSession")}} 在整个 WebXR 体验期间运行帧循环。
 
-    1. 调用 {{domxref("XRSession")}} 的 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 方法，以调度 XR 设备的首帧渲染。
-    2. 每一个 `requestAnimationFrame()` 的回调都需要使用 WebGL 渲染已提供信息的 3D 世界中的物体。
-    3. 持续在回调中调用 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 保证每一帧都成功地按顺序渲染。
+   1. 调用 {{domxref("XRSession")}} 的 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 方法，以调度 XR 设备的首帧渲染。
+   2. 每一个 `requestAnimationFrame()` 的回调都需要使用 WebGL 渲染已提供信息的 3D 世界中的物体。
+   3. 持续在回调中调用 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 保证每一帧都成功地按顺序渲染。
 
 4. 当需要结束 XR 会话的时候；或者用户主动退出 XR 模式。
 
-    1. 通过调用 {{DOMxRef("XRSession.end", "XRSession.end()")}} 可手动结束 XR 会话。
-    2. 无论通过何种方式（开发者、用户或者浏览器）终止会话，{{domxref("XRSession")}} 的 {{domxref("XRSession.end_event", "end")}} 事件都会接收到通知。
+   1. 通过调用 {{DOMxRef("XRSession.end", "XRSession.end()")}} 可手动结束 XR 会话。
+   2. 无论通过何种方式（开发者、用户或者浏览器）终止会话，{{domxref("XRSession")}} 的 {{domxref("XRSession.end_event", "end")}} 事件都会接收到通知。
 
 ### 获取许可与安全性
 

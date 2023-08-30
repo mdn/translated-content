@@ -28,7 +28,7 @@ str.split([separator[, limit]])
 - `separator`
   - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.
 
-> **Aviso:** Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](http://unicode.org/faq/utf_bom.html#utf16-2). Consulte “[Como você transforma uma string em um array de caracteres em JavaScript?” no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
+> **Aviso:** Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](http://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
 
 - `limite`
 
@@ -54,8 +54,8 @@ Se o separador for uma expressão regular que contenha parênteses de captura, c
 Quando a string está vazia, o `split()` irá retornar um array contendo uma string vazia ao invés de um array vazio. Se a string e o separador forem ambos strings vazias, um array vazio será retornado.
 
 ```js
-const myString = ''
-const splits = myString.split()
+const myString = "";
+const splits = myString.split();
 
 console.log(splits);
 
@@ -70,14 +70,19 @@ function splitString(stringToSplit, separator) {
 
   console.log('A string original é: "' + stringToSplit + '"');
   console.log('O separador é: "' + separator + '"');
-  console.log('O array tem ' + arrayOfStrings.length + ' elementos: ' + arrayOfStrings.join(' / '));
+  console.log(
+    "O array tem " +
+      arrayOfStrings.length +
+      " elementos: " +
+      arrayOfStrings.join(" / "),
+  );
 }
 
-var tempestString = 'Oh brave new world that has such people in it.';
-var monthString = 'Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez';
+var tempestString = "Oh brave new world that has such people in it.";
+var monthString = "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez";
 
-var space = ' ';
-var comma = ',';
+var space = " ";
+var comma = ",";
 
 splitString(tempestString, space);
 splitString(tempestString);
@@ -105,7 +110,7 @@ O array possui 12 elementos: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep
 No exemplo a seguir, `split()` procura por 0 ou mais espaços seguidos por um ponto e vírgula seguido por 0 ou mais espaços e, quando encontrar, remove os espaços e os pontos e vírgulas da string. `nameList` é o array retornado como resultado do `split()`.
 
 ```js
-var names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';
+var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
 
 console.log(names);
 
@@ -127,8 +132,8 @@ Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 No exemplo a seguir, o `split()` procura por 0 ou mais espaços em uma string e retorna as 3 primeiras divisões que encontrar.
 
 ```js
-var myString = 'Hello World. How are you doing?';
-var splits = myString.split(' ', 3);
+var myString = "Hello World. How are you doing?";
+var splits = myString.split(" ", 3);
 
 console.log(splits);
 ```
@@ -144,7 +149,7 @@ O script exibirá o texto a seguir:
 Se o `separator` contém parênteses de captura, os resultados correspondentes são retornados no array.
 
 ```js
-var myString = 'Hello 1 word. Sentence number 2.';
+var myString = "Hello 1 word. Sentence number 2.";
 var splits = myString.split(/(\d)/);
 
 console.log(splits);
@@ -163,8 +168,8 @@ O script exibirá o texto a seguir:
 > **Aviso:** Esta não é a melhor maneira de reverter uma string:
 >
 > ```js example-bad
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
+> const str = "asdfghjkl";
+> const strReverse = str.split("").reverse().join("");
 > // 'lkjhgfdsa'
 >
 > // split() retorna um array onde os métodos
@@ -174,8 +179,8 @@ O script exibirá o texto a seguir:
 > Não funciona se a string contém `grapheme clusters`, mesmo ao usar uma divisão compatível com Unicode. (Use, por exemplo, [esrever](https://github.com/mathiasbynens/esrever) no lugar.)
 >
 > ```js example-bad
-> const str = 'résumé'
-> const strReverse = str.split(/(?:)/u).reverse().join('')
+> const str = "résumé";
+> const strReverse = str.split(/(?:)/u).reverse().join("");
 > // retorna "́emuśer"
 > ```
 >
@@ -183,11 +188,11 @@ O script exibirá o texto a seguir:
 
 ## Especificações
 
-| Especificação                                                                                                | Status                       | Comentário                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                                    | Status               | Comentário                                         |
+| -------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                              | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}                | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

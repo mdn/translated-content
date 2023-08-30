@@ -1,11 +1,6 @@
 ---
 title: scroll-padding-bottom
 slug: Web/CSS/scroll-padding-bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scroll-padding-bottom
 ---
 
 {{CSSRef}}

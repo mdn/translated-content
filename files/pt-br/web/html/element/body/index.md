@@ -136,11 +136,11 @@ Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attri
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                 | Status                   | Comentário                                                                                                                                                                                               |
+| ----------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', 'sections.html#the-body-element', '&lt;body&gt;')}} | {{Spec2('HTML WHATWG')}} | Changed the list of non-conforming features.                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Obsoleted the formerly deprecated attributes. Defined the behavior of the non-conforming and never standardized `margintop`, `marginleft`, `marginright` and `marginbottom`. Added the `on*` attributes. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}             | {{Spec2('HTML4.01')}}     | Deprecated the `alink`, `background`, `bgcolor`, `link`, `text` and `vlink` attributes.                                                                                                                  |
+| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}   | {{Spec2('HTML5 W3C')}}   | Obsoleted the formerly deprecated attributes. Defined the behavior of the non-conforming and never standardized `margintop`, `marginleft`, `marginright` and `marginbottom`. Added the `on*` attributes. |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}        | {{Spec2('HTML4.01')}}    | Deprecated the `alink`, `background`, `bgcolor`, `link`, `text` and `vlink` attributes.                                                                                                                  |
 
 ## Compatibilidade com navegadores
 

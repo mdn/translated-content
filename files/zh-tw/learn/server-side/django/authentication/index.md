@@ -27,13 +27,13 @@ slug: Learn/Server-side/Django/Authentication
 
 ## 大綱
 
-Django 提供認證和授權（“ permission”）系統，該系統建立在[上一教程](/zh-TW/docs/Learn/Server-side/Django/Sessions)中討論的會話框架的基礎上。透過它可以驗證用戶憑證並定義個別用戶能夠執行的操作。 該框架包括用於`Users` 和`Groups` 的內置模型（一般常用來一次性套用權限於一群用戶上的方式），用於指定用戶是否可以執行任務的權限/旗標，用於登入用戶的表單和視圖，以及 查看用於限制內容的工具。
+Django 提供認證和授權（「 permission」）系統，該系統建立在[上一教程](/zh-TW/docs/Learn/Server-side/Django/Sessions)中討論的會話框架的基礎上。透過它可以驗證用戶憑證並定義個別用戶能夠執行的操作。 該框架包括用於`Users` 和`Groups` 的內置模型（一般常用來一次性套用權限於一群用戶上的方式），用於指定用戶是否可以執行任務的權限/旗標，用於登入用戶的表單和視圖，以及 查看用於限制內容的工具。
 
 > **備註：** 從 Django 角度而言，身份驗證系統需要做到非常通用，因此不提供其他網頁身份驗證系統中提供的某些功能。 需要解決一些常見問題的話可以透過第三方軟件包。 例如，限制登錄嘗試和透過第三方進行身份驗證（例如 OAuth）。
 
 在本教程中，我們將會展示如何在[LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)網站中啟用用戶身份驗證，並建立自己的登入和登出頁面，為模型添加權限以及控制對頁面的訪問。 我們將根據身份驗證/權限顯示為用戶或是圖書館員設計的已借出書籍列表。
 
-身份驗證系統非常有彈性，您可以根據需要從頭開始構建 URL，表單，視圖和模板，只透過提供的 API 來登入用戶。 但是，在本文中，我們將為登入與登出頁面使用 Django 的“ stock”身份驗證視圖和表單。 我們仍然需要建立一些模板，但這很簡單。
+身份驗證系統非常有彈性，您可以根據需要從頭開始構建 URL，表單，視圖和模板，只透過提供的 API 來登入用戶。 但是，在本文中，我們將為登入與登出頁面使用 Django 的「 stock」身份驗證視圖和表單。 我們仍然需要建立一些模板，但這很簡單。
 
 我們還將向您展示如何建立權限，並在視圖和模板中檢查登入狀態和權限。
 
@@ -80,35 +80,35 @@ MIDDLEWARE = [
 
 在下面，我們將首先創建一個組，然後創建一個用戶。 即使我們還沒有添加庫成員的任何權限，但是如果以後需要添加，將它們一次添加到組中要比分別添加到每個成員要容易得多。
 
-啟動開發服務器，然後在本地 Web 瀏覽器（<http://127.0.0.1:8000/admin/>）中導航到管理站點。 使用您的超級用戶帳戶的憑據登錄到該站點。 管理站點的頂層顯示所有模型，按“ django 應用程序”排序。 在“**Authentication and Authorisation**”部分，您可以單擊**Users** 或**Groups**鏈接以查看其現有記錄。
+啟動開發服務器，然後在本地 Web 瀏覽器（<http://127.0.0.1:8000/admin/>）中導航到管理站點。 使用您的超級用戶帳戶的憑據登錄到該站點。 管理站點的頂層顯示所有模型，按「 django 應用程序」排序。 在「**Authentication and Authorisation**」部分，您可以單擊**Users** 或**Groups**鏈接以查看其現有記錄。
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
 首先，讓我們為圖書館成員創建一個新組。
 
-1. 單擊**Add**按鈕（在組旁邊）以創建一個新組； 輸入該組的名稱“Library Members”。
+1. 單擊**Add**按鈕（在組旁邊）以創建一個新組； 輸入該組的名稱「Library Members」。
    ![Admin site - add group](admin_authentication_add_group.png)
 2. 我們不需要該組的任何權限，因此只需按**SAVE** （您將被帶到組列表）。
 
 現在讓我們創建一個用戶：
 
 1. 導航回到管理站點的主頁
-2. 單擊“用戶”旁邊的“添加”按鈕以打開“添加用戶”對話框。
+2. 單擊「用戶」旁邊的「添加」按鈕以打開「添加用戶」對話框。
    ![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. 輸入適合您的測試用戶的用戶名和密碼/密碼確認
 4. 按**SAVE**創建用戶。
-   管理站點將創建新用戶，並立即將您帶到“更改用戶”視窗，您可以在其中更改用戶名並為用戶模型的可選字段添加信息。 這些字段包括名字，姓氏，電子郵件地址，用戶狀態和權限（僅應設置“活動”標誌）。 在更下方的位置，您可以指定用戶的組和權限，並查看與該用戶相關的重要日期（例如，他們的加入日期和上次登錄日期）。
+   管理站點將創建新用戶，並立即將您帶到「更改用戶」視窗，您可以在其中更改用戶名並為用戶模型的可選字段添加信息。 這些字段包括名字，姓氏，電子郵件地址，用戶狀態和權限（僅應設置「活動」標誌）。 在更下方的位置，您可以指定用戶的組和權限，並查看與該用戶相關的重要日期（例如，他們的加入日期和上次登錄日期）。
    ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
-5. 在“組”部分中，從“可用組”列表中選擇“**Library Member**”組，然後按框之間的右箭頭將其移至“選擇的組”框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
+5. 在「組」部分中，從「可用組」列表中選擇「**Library Member**」組，然後按框之間的右箭頭將其移至「選擇的組」框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. 我們在這裡不需要執行任何其他操作，因此只需再次選擇**SAVE** 即可進入用戶列表。
 
-就是這樣而已！ 現在，您將擁有一個“普通庫成員”帳戶，您將可以使用該帳戶進行測試（一旦我們實現了頁面以使其能夠登錄）。
+就是這樣而已！ 現在，您將擁有一個「普通庫成員」帳戶，您將可以使用該帳戶進行測試（一旦我們實現了頁面以使其能夠登錄）。
 
 > **備註：** 您應該嘗試創建另一個庫成員用戶。 另外，為圖書館員創建一個組，並為其添加用戶！
 
 ## Setting up your authentication views
 
-Django 提供了創建身份驗證頁面所需的幾乎所有內容，以處理“開箱即用”的登錄，註銷和密碼管理。 這包括 URL 映射器，視圖和表單，但不包括模板-我們必須創建自己的模板！
+Django 提供了創建身份驗證頁面所需的幾乎所有內容，以處理「開箱即用」的登錄，註銷和密碼管理。 這包括 URL 映射器，視圖和表單，但不包括模板-我們必須創建自己的模板！
 
 在本節中，我們顯示如何將默認系統集成到 LocalLibrary 網站中並創建模板。 我們將它們放在主項目 URL 中。
 
@@ -377,7 +377,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 您可以使用 `\{{ user }}`模板變量在模板中獲取有關當前登錄用戶的信息（默認情況下，就像我們在框架中一樣設置項目時，該信息會添加到模板上下文中）。
 
-通常，您將首先針對 `\{{ user.is_authenticated }}`模板變量進行測試，以確定該用戶是否有資格查看特定內容。 為了演示這一點，接下來，我們將更新邊欄，以在用戶註銷時顯示“登錄”鏈接，在用戶登錄時顯示“註銷”鏈接。
+通常，您將首先針對 `\{{ user.is_authenticated }}`模板變量進行測試，以確定該用戶是否有資格查看特定內容。 為了演示這一點，接下來，我們將更新邊欄，以在用戶註銷時顯示「登錄」鏈接，在用戶登錄時顯示「註銷」鏈接。
 
 打開基礎模板。 (**/locallibrary/catalog/templates/base_generic.html**) ，然後將以下文本複製到`sidebar` 塊中，緊接在`endblock` 模板標籤之前。
 
@@ -399,7 +399,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 我們使用 `url` 模板標記和相應 URL 配置的名稱來創建登錄和註銷鏈接 URL。 還要注意我們如何將`?next=\{{request.path}}`附加到 URL 的末尾。 這是在鏈接的 URL 的末尾添加一個 URL 參數，其中包含當前頁面的地址（URL）。 用戶成功登錄/註銷後，視圖將使用此 `next` 值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。
 
-> **備註：** 試試看！ 如果您在主頁上，然後單擊側欄中的“Login/Logout”，那麼在操作完成後，您應該回到同一頁面。
+> **備註：** 試試看！ 如果您在主頁上，然後單擊側欄中的「Login/Logout」，那麼在操作完成後，您應該回到同一頁面。
 
 ### 在視圖中測試
 
@@ -424,7 +424,7 @@ class MyView(LoginRequiredMixin, View):
     ...
 ```
 
-它具有與 `login_required` 裝飾器完全相同的重定向行為。 如果用戶未通過身份驗證，也可以指定其他位置來重定向用戶 (`login_url`)，並使用 URL 參數名稱代替“ next”來插入當前的絕對路徑(`redirect_field_name`).。
+它具有與 `login_required` 裝飾器完全相同的重定向行為。 如果用戶未通過身份驗證，也可以指定其他位置來重定向用戶 (`login_url`)，並使用 URL 參數名稱代替「 next」來插入當前的絕對路徑(`redirect_field_name`).。
 
 ```python
 class MyView(LoginRequiredMixin, View):
@@ -485,7 +485,7 @@ python3 manage.py migrate
 
 ### Admin
 
-現在打開**catalog/admin.py**，然後將`list_display` 和`fieldsets` 中的`borrower` 字段添加到`BookInstanceAdmin` 類中，如下所示。 這將使該字段在“管理”部分中可見，以便我們可以在需要時將`User` 分配給`BookInstance` 。
+現在打開**catalog/admin.py**，然後將`list_display` 和`fieldsets` 中的`borrower` 字段添加到`BookInstanceAdmin` 類中，如下所示。 這將使該字段在「管理」部分中可見，以便我們可以在需要時將`User` 分配給`BookInstance` 。
 
 ```python
 @admin.register(BookInstance)
@@ -505,7 +505,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### Loan a few books
 
-現在可以將書借給特定用戶了，然後借出許多`BookInstance` 記錄。 將他們的`borrowed` 字段設置為測試用戶，`status` 為“借用”，並設置將來和將來的到期日。
+現在可以將書借給特定用戶了，然後借出許多`BookInstance` 記錄。 將他們的`borrowed` 字段設置為測試用戶，`status` 為「借用」，並設置將來和將來的到期日。
 
 > **備註：** 我們不會詳細說明該過程，因為您已經知道如何使用管理網站！
 
@@ -528,7 +528,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
         return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
 ```
 
-為了將查詢限制為僅針對當前用戶的`BookInstance` 對象，我們重新實現了 `get_queryset()`，如上所示。 請注意，“ o”是“借出”的存儲代碼，我們在`due_back` 日期之前訂購，以便最先顯示最早的項目。
+為了將查詢限制為僅針對當前用戶的`BookInstance` 對象，我們重新實現了 `get_queryset()`，如上所示。 請注意，「 o」是「借出」的存儲代碼，我們在`due_back` 日期之前訂購，以便最先顯示最早的項目。
 
 ### URL conf for on loan books
 
@@ -566,7 +566,7 @@ urlpatterns += [
 {% endblock %}
 ```
 
-該模板與我們先前為`Book` 和`Author` 物件創建的模板非常相似。 這裡唯一的“新內容”是我們檢查在模型中添加的方法（`bookinst.is_overdue`），並使用它來更改過期項目的顏色。
+該模板與我們先前為`Book` 和`Author` 物件創建的模板非常相似。 這裡唯一的「新內容」是我們檢查在模型中添加的方法（`bookinst.is_overdue`），並使用它來更改過期項目的顏色。
 
 開發服務器運行時，現在應該可以在瀏覽器中的 <http://127.0.0.1:8000/catalog/mybooks/> 上查看已登錄用戶的列表。 在您的用戶登錄和註銷後進行嘗試（在第二種情況下，應將您重定向到登錄頁面）。
 
@@ -592,7 +592,7 @@ urlpatterns += [
 
 ### What does it look like?
 
-當任何用戶登錄後，他們將在邊欄中看到“_My Borrowed_ ”，並且書的列表顯示如下（第一本書沒有截止日期，這是我們希望在以後的教程中解決的錯誤！） 。
+當任何用戶登錄後，他們將在邊欄中看到「_My Borrowed_ 」，並且書的列表顯示如下（第一本書沒有截止日期，這是我們希望在以後的教程中解決的錯誤！） 。
 
 ![Library - borrowed books by user](library_borrowed_by_user.png)
 
@@ -604,7 +604,7 @@ urlpatterns += [
 
 ### Models
 
-使用`permissions` 字段在模型“`class Meta`”部分中完成權限的定義。 您可以在元組中根據需要指定任意數量的權限，每個權限本身都在嵌套的元組中定義，其中包含權限名稱和權限顯示值。 例如，我們可以定義一個權限，以允許用戶標記已退回一本書，如下所示：
+使用`permissions` 字段在模型「`class Meta`」部分中完成權限的定義。 您可以在元組中根據需要指定任意數量的權限，每個權限本身都在嵌套的元組中定義，其中包含權限名稱和權限顯示值。 例如，我們可以定義一個權限，以允許用戶標記已退回一本書，如下所示：
 
 ```python
 class BookInstance(models.Model):
@@ -614,13 +614,13 @@ class BookInstance(models.Model):
         permissions = (("can_mark_returned", "Set book as returned"),)
 ```
 
-然後，我們可以將權限分配給管理站點中的“圖書管理員”組。
+然後，我們可以將權限分配給管理站點中的「圖書管理員」組。
 
 打開**catalog/models.py，**然後添加權限，如上所示。 您將需要重新運行遷移（調用 `python3 manage.py makemigrations` 和`python3 manage.py migrate`）以適當地更新數據庫。
 
 ### 模板
 
-當前用戶的權限存儲在名為 `\{{ perms }}`. 的模板變量中。 您可以使用關聯的 Django "app"“應用”中的特定變量名稱來檢查當前用戶是否具有特定權限，例如 如果用戶具有此權限，則 `\{{ perms.catalog.can_mark_returned }}` 將為 `True` ，否則為`False`。 我們通常使用模板 `{% if %}` 標籤測試權限，如下所示：
+當前用戶的權限存儲在名為 `\{{ perms }}`. 的模板變量中。 您可以使用關聯的 Django "app"「應用」中的特定變量名稱來檢查當前用戶是否具有特定權限，例如 如果用戶具有此權限，則 `\{{ perms.catalog.can_mark_returned }}` 將為 `True` ，否則為`False`。 我們通常使用模板 `{% if %}` 標籤測試權限，如下所示：
 
 ```django
 {% if perms.catalog.can_mark_returned %}

@@ -1,7 +1,6 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
 
 {{AddonSidebar}}

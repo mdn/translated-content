@@ -1,7 +1,6 @@
 ---
 title: JavaScript のクラス
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Inheritance
 l10n:
   sourceCommit: ad3d16a5acd46253a4f5e2861fd4fba4e4497110
 ---
@@ -40,7 +39,6 @@ l10n:
 
 ```js
 class Person {
-
   name;
 
   constructor(name) {
@@ -50,7 +48,6 @@ class Person {
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}`);
   }
-
 }
 ```
 
@@ -74,7 +71,7 @@ class Person {
 上記のクラス宣言コードを指定された場合、次のように新しい `Person` インスタンスを作成して使用することができます。
 
 ```js
-const giles = new Person('Giles');
+const giles = new Person("Giles");
 
 giles.introduceSelf(); // Hi! I'm Giles
 ```
@@ -87,11 +84,9 @@ giles.introduceSelf(); // Hi! I'm Giles
 
 ```js
 class Animal {
-
   sleep() {
-    console.log('zzzzzzz');
+    console.log("zzzzzzz");
   }
-
 }
 
 const spot = new Animal();
@@ -105,7 +100,6 @@ spot.sleep(); // 'zzzzzzz'
 
 ```js
 class Professor extends Person {
-
   teaches;
 
   constructor(name, teaches) {
@@ -114,14 +108,15 @@ class Professor extends Person {
   }
 
   introduceSelf() {
-    console.log(`My name is ${this.name}, and I will be your ${this.teaches} professor.`);
+    console.log(
+      `My name is ${this.name}, and I will be your ${this.teaches} professor.`,
+    );
   }
 
   grade(paper) {
     const grade = Math.floor(Math.random() * (5 - 1) + 1);
     console.log(grade);
   }
-
 }
 ```
 
@@ -138,10 +133,10 @@ class Professor extends Person {
 この宣言により、これで教授を作成し、使用することができるようになりました。
 
 ```js
-const walsh = new Professor('Walsh', 'Psychology');
-walsh.introduceSelf();  // 'My name is Walsh, and I will be your Psychology professor'
+const walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Walsh, and I will be your Psychology professor'
 
-walsh.grade('my paper'); // some random grade
+walsh.grade("my paper"); // some random grade
 ```
 
 ## カプセル化
@@ -152,14 +147,12 @@ walsh.grade('my paper'); // some random grade
 
 ```js
 class Student extends Person {
-
   #year;
 
   constructor(name, year) {
     super(name);
     this.#year = year;
   }
-
 
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
@@ -168,14 +161,13 @@ class Student extends Person {
   canStudyArchery() {
     return this.#year > 1;
   }
-
 }
 ```
 
 このクラス宣言では、`#year` は [プライベートデータプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)です。`Student` オブジェクトを作成し、内部で `#year` を使用することができますが、オブジェクトの外のコードが `#year` にアクセスしようとすると、ブラウザはエラーを報告します。
 
 ```js
-const summers = new Student('Summers', 2);
+const summers = new Student("Summers", 2);
 
 summers.introduceSelf(); // Hi! I'm Summers, and I'm in year 2.
 summers.canStudyArchery(); // true
@@ -196,7 +188,7 @@ class Example {
   }
 
   #somePrivateMethod() {
-    console.log('You called me?');
+    console.log("You called me?");
   }
 }
 

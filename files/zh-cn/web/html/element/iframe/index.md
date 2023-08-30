@@ -20,13 +20,17 @@ slug: Web/HTML/Element/iframe
 - `allow`
   - : 用于为`<iframe>`指定其[特征策略](/zh-CN/docs/Web/HTTP/策略特征).
 - `allowfullscreen`
+
   - : 设置为`true`时，可以通过调用 `<iframe>` 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。
 
     > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="fullscreen"`。
+
 - `allowpaymentrequest`
+
   - : 设置为`true`时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
 
     > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
+
 - `csp` {{experimental_inline}}
   - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - `height`
@@ -42,6 +46,7 @@ slug: Web/HTML/Element/iframe
 - `name`
   - : 用于定位嵌入的浏览上下文的名称。该名称可以用作 {{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 `target` 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 `formtarget` 属性值，还可以用作 {{domxref("Window.open()","window.open()")}} 方法的 `windowName` 参数值。
 - `referrerpolicy`
+
   - : 表示在获取 iframe 资源时如何发送 [referrer](/zh-CN/docs/Web/API/Document/referrer) 首部：
 
     - `no-referrer`: 不发送 {{HTTPHeader("Referer")}} 首部。
@@ -52,7 +57,9 @@ slug: Web/HTML/Element/iframe
     - `strict-origin`: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 首部（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 首部（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
     - `strict-origin-when-cross-origin`: 当发起同源请求时，在 referrer 首部中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 首部中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 首部。
     - `unsafe-url`: 始终在 referrer 首部中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/hash)，[密码](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/password)，或[用户名](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username)）。**这个值是不安全的**, 因为这样做会暴露受 TLS 保护的资源的源和路径信息。
+
 - `sandbox`
+
   - : 该属性对呈现在 iframe 框架中的内容启用一些额外的限制条件。属性值可以为空字符串（这种情况下会启用所有限制），也可以是用空格分隔的一系列指定的字符串。有效的值有：
 
     - `allow-downloads-without-user-activation` {{experimental_inline}}: 允许在没有征求用户同意的情况下下载文件。
@@ -96,6 +103,7 @@ slug: Web/HTML/Element/iframe
 - `marginwidth` {{Deprecated_Inline}}
   - : 这个属性定义了框架的内容距其左边框和右边框的距离，单位是像素。
 - `scrolling` {{Deprecated_Inline}}
+
   - : 这个属性控制是否要在框架内显示滚动条，允许的值包括：
 
     - `auto`: 仅当框架的内容超出框架的范围时显示滚动条。
@@ -149,7 +157,9 @@ slug: Web/HTML/Element/iframe
 使用 `iframe` 的 [title](/zh-CN/docs/Web/HTML/Global_attributes/title) 属性来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：
 
 ```html
-<iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
 ```
 
 如果没有标题，他们就只能浏览每一个框架来获取需要的内容。这非常耗时间，也很容易让人迷惑，尤其是当页面中包含很多框架或者互动内容如音视频等的时候。

@@ -1,11 +1,13 @@
 ---
-title: Rust から WebAssembly にコンパイルする
+title: Rust から WebAssembly にコンパイル
 slug: WebAssembly/Rust_to_Wasm
+l10n:
+  sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
 ---
 
 {{WebAssemblySidebar}}
 
-Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (wasm) にコンパイルすることができます。このチュートリアルでは Rust プロジェクトをコンパイルして既存のウェブアプリケーションで使用するために必要なことについて説明します。
+Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (Wasm) にコンパイルすることができます。このチュートリアルでは、Rust プロジェクトを WebAssembly にコンパイルし、既存のウェブアプリケーションで使用する方法を示します。
 
 ## Rust と WebAssembly の用途
 
@@ -48,9 +50,9 @@ $ cargo new --lib hello-wasm
 これにより新たなライブラリーが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
 
 ```plain
-+-- Cargo.toml
-+-- src
-    +-- lib.rs
+├── Cargo.toml
+└── src
+    └── lib.rs
 ```
 
 まず `Cargo.toml` があります。これはビルドを設定するためのファイルです。もし `Gemfile` を Bundler から使ったり、`package.json` を npm から使ったりしたことがあるなら、なじみがあるでしょう。cargo は両者と似たような動作をします。
@@ -120,7 +122,7 @@ extern {
 }
 ```
 
-`#[ ]` の内側は「アトリビュート」と呼ばれ、次に来る文を何らかの形で修飾します。この場合、その文は外部で定義された関数を呼び出したいことを Rust に伝える `extern` です。アトリビュートは「wasm-bindgen はこれらの関数を見つける方法を知っている」ということを意味しています。
+`#[ ]` の内側は「属性」と呼ばれ、次に来る文を何らかの形で修飾します。この場合、その文は外部で定義された関数を呼び出したいことを Rust に伝える `extern` です。属性は「wasm-bindgen はこれらの関数を見つける方法を知っている」ということを意味しています。
 
 3 行目は関数の Rust で書かれたシグニチャです。「`alert` 関数は `s` という名前の引数を一つ取る」ということを意味しています。
 
@@ -139,7 +141,7 @@ pub fn greet(name: &str) {
 }
 ```
 
-再び `#[wasm_bindgen]` アトリビュートが目に入ります。この場合、`extern` ブロックではなく `fn` を改変しています。これは JavaScript がこの Rust 関数を呼び出せるようにしてほしいということを意味します。これは `extern` とは逆です。自分が必要とする関数ではなく、外の世界に渡す関数なのです。
+再び `#[wasm_bindgen]` 属性が目に入ります。この場合、`extern` ブロックではなく `fn` を改変しています。これは JavaScript がこの Rust 関数を呼び出せるようにしてほしいということを意味します。これは `extern` とは逆です。自分が必要とする関数ではなく、外の世界に渡す関数なのです。
 
 この関数は `greet` という名前で、引数に (`&str` と書かれる) 文字列 `name` を一つ取ります。そしてそれは上の `extern` ブロックで要求した alert 関数を呼び出します。文字列を結合する `format!` マクロに呼び出しを渡します。
 
@@ -200,32 +202,50 @@ wasm-pack build --target web
 
 ## パッケージのウェブでの利用
 
-さて、コンパイルされた wasm モジュールが入手できたので、ブラウザーで動かしてみましょう。
+さて、コンパイルされた Wasm モジュールが入手できたので、ブラウザーで動かしてみましょう。
+まず `index.html` というファイルをプロジェクトのルートに作成するところから始めましょう。最終的には以下のようなプロジェクト構造になります。
 
-まず、プロジェクトのルートに `index.html` という名前のファイルを作成し、以下のような内容にしてみましょう。
+```plain
+├── Cargo.lock
+├── Cargo.toml
+├── index.html
+├── pkg
+│   ├── hello_wasm.d.ts
+│   ├── hello_wasm.js
+│   ├── hello_wasm_bg.wasm
+│   ├── hello_wasm_bg.wasm.d.ts
+│   └── package.json
+├── src
+│   └── lib.rs
+└── target
+    ├── CACHEDIR.TAG
+    ├── release
+    └── wasm32-unknown-unknown
+```
+
+`index.html` ファイルの内容は以下のようなものです。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
     <script type="module">
-      import init, {greet} from "./pkg/hello_wasm.js";
-      init()
-        .then(() => {
-          greet("WebAssembly")
-        });
+      import init, { greet } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        greet("WebAssembly");
+      });
     </script>
   </body>
 </html>
 ```
 
-このファイルのスクリプトは、js グルーコードをインポートし、wasm モジュールを初期化し、rust で書いた `greet` 関数を呼び出します。
+このファイルのスクリプトは、js グルーコードをインポートし、Wasm モジュールを初期化し、rust で書いた `greet` 関数を呼び出します。
 
-プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server` ）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server)を参考にしてください。
+プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server`）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#シンプルなローカル_http_サーバーの実行)を参考にしてください。
 
 > **メモ:** 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
 
@@ -245,9 +265,10 @@ wasm-pack build --target bundler
 
 npmパッケージを構築しているので、Node.jsと npm をインストールしておく必要があります。
 
-Node.js と npm を入手するには、 [Get npm!](https://docs.npmjs.com/getting-started/) ページへ移動して指示に従ってください。バージョンは好きなものを選んでください。このチュートリアルはバージョンを詳細に指定するものではありません。
+Node.js と npm を入手するには、 [Get npm!](https://docs.npmjs.com/getting-started/) ページへ移動して指示に従ってください。
+このチュートリアルでは node 16 をターゲットとしていますので、node のバージョンを切り替えたい場合は、[nvm](https://github.com/nvm-sh/nvm) を使用してください。
 
-次に、インストールした他の JavaScript パッケージがこのパッケージを利用できるようにするために、 \`npm link\` を使用しましょう。
+次に、インストールした他の JavaScript パッケージがこのパッケージを利用できるようにするために、`npm link` を使用しましょう。
 
 ```bash
 cd pkg
@@ -290,14 +311,14 @@ npm link hello-wasm
 次に、Webpack を設定する必要があります。`webpack.config.js` を作成し、そこに次のことを記入してください。
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
@@ -311,19 +332,30 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 
 これは新しいモジュールを `node_modules` フォルダーからインポートします。これは最善の方法ではないと思いますが、デモなので、これでいいでしょう。一度そのモジュールが読み込まれると、そこから `greet` 関数を呼び出し、`"WebAssembly"` を文字列として渡します。ここに特別なことはなにもありませんが、Rust コードを呼び出していることに注意してください。JavaScript コードから観察する限り、これはただの普通のモジュールです。
 
-最後に HTML ファイルが必要です。 `index.html` を作成し、次の内容を追加してください。
+最後に、JavaScript を読み込むための HTML ファイルを追加します。`index.html` ファイルを作成し、以下の内容を追加してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
     <script src="./index.js"></script>
   </body>
 </html>
+```
+
+`hello-wasm/site` ディレクトリーは次のようになります。
+
+```plain
+├── index.html
+├── index.js
+├── node_modules
+│   └── hello-wasm -> ../../pkg
+├── package.json
+└── webpack.config.js
 ```
 
 ファイルを作りました。これを試してみましょう。

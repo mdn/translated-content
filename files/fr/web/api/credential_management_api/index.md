@@ -1,14 +1,6 @@
 ---
 title: Credential Management API
 slug: Web/API/Credential_Management_API
-tags:
-  - API
-  - Credential Management API
-  - Landing
-  - Reference
-  - Web Authentification API
-  - WebAuthn
-translation_of: Web/API/Credential_Management_API
 ---
 
 {{APIRef("Credential Management API")}}{{ SeeCompatTable() }}

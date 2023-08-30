@@ -1,7 +1,6 @@
 ---
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 ---
 
 {{AddonSidebar()}}
@@ -25,12 +24,12 @@ Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webR
 
 ```js
 browser.webRequest.onBeforeRequest.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onBeforeRequest.removeListener(listener)
-browser.webRequest.onBeforeRequest.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onBeforeRequest.removeListener(listener);
+browser.webRequest.onBeforeRequest.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -160,10 +159,9 @@ function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 Ce code annule les demandes d'images qui sont faites aux URLs sous "https\://mdn.mozillademos.org/" (pour voir l'effet, visitez n'importe quelle page de MDN qui contient des images, comme [Firefox Developer Edition](/fr/docs/Mozilla/Firefox/Developer_Edition)):
@@ -176,15 +174,15 @@ var pattern = "https://mdn.mozillademos.org/*";
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
   console.log("Canceling: " + requestDetails.url);
-  return {cancel: true};
+  return { cancel: true };
 }
 
 // add the listener,
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   cancel,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -200,7 +198,8 @@ var pattern = "https://mdn.mozillademos.org/*";
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
@@ -208,8 +207,8 @@ function redirect(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -220,7 +219,8 @@ Ce code est exactement comme l'exemple précédent, sauf que l'auditeur traite l
 var pattern = "https://mdn.mozillademos.org/*";
 
 // URL we will redirect to
-var redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+var redirectUrl =
+  "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
@@ -228,7 +228,7 @@ function redirectAsync(requestDetails) {
   console.log("Redirecting async: " + requestDetails.url);
   return new Promise((resolve, reject) => {
     window.setTimeout(() => {
-      resolve({redirectUrl});
+      resolve({ redirectUrl });
     }, 2000);
   });
 }
@@ -237,8 +237,8 @@ function redirectAsync(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 

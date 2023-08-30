@@ -1,8 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-l10:
-  sourceCommit: 413355c790c4102eea5937465ea610938327fe56
 ---
 
 {{CSSRef}}

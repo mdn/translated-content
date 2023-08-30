@@ -1,7 +1,6 @@
 ---
 title: Lignes directrices pour le HTML
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
-translation_of: MDN/Guidelines/Code_guidelines/HTML
 ---
 
 {{MDNSidebar}}
@@ -36,7 +35,7 @@ Les directives suivantes couvrent la manière d'écrire du HTML pour les exemple
 Vous devez utiliser le doctype HTML5. Il est court, facile à retenir et rétrocompatible :
 
 ```html example-good
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 ### Langue du document
@@ -44,7 +43,7 @@ Vous devez utiliser le doctype HTML5. Il est court, facile à retenir et rétroc
 Définissez la langue du document à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) de votre élément [`<html>`](/fr/docs/Web/HTML/Element/html) :
 
 ```html example-good
-<html lang="fr">
+<html lang="fr"></html>
 ```
 
 C'est bon pour l'accessibilité et les moteurs de recherche, cela aide à localiser le contenu et cela rappelle aux gens d'utiliser les meilleures pratiques.
@@ -54,7 +53,7 @@ C'est bon pour l'accessibilité et les moteurs de recherche, cela aide à locali
 Vous devez également définir le jeu de caractères de votre document comme suit :
 
 ```html example-good
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le faire ; il couvrira vos besoins en caractères à peu près indépendamment de la langue que vous utilisez dans votre document. En outre, vous devriez toujours spécifier le jeu de caractères le plus tôt possible dans le bloc [`<head>`](/fr/docs/Web/HTML/Element/head) de votre HTML (dans le premier kilooctet), car cela vous protège contre une [vulnérabilité de sécurité d'Internet Explorer](http://support.microsoft.com/kb/928847).
@@ -64,7 +63,7 @@ Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le fair
 Enfin, vous devez toujours ajouter la métabalise viewport dans votre HTML [`<head>`](/fr/docs/Web/HTML/Element/head), pour donner à l'exemple une meilleure chance de fonctionner sur les appareils mobiles. Vous devez inclure au moins les éléments suivants dans votre document, que vous pourrez modifier ultérieurement en fonction des besoins :
 
 ```html example-good
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 ```
 
 Voir [Zones d'affichage sur mobiles](/fr/docs/Web/CSS/Viewport_concepts#mobile_viewports) pour plus de détails.
@@ -83,7 +82,7 @@ C'est bien :
 
 Ce n'est pas très bon :
 
-```html example-bad
+```html-nolint example-bad
 <P CLASS="WHOA-THERE">Pourquoi mon balisage crie-t-il ?</P>
 ```
 
@@ -94,8 +93,8 @@ N'incluez pas les barres obliques de fin de style XHTML pour les éléments vide
 C'est bon :
 
 ```html example-good
-<input type="text">
-<hr>
+<input type="text" />
+<hr />
 ```
 
 Les barres obliques ne sont pas nécessaires :
@@ -110,7 +109,10 @@ Les barres obliques ne sont pas nécessaires :
 Vous devez mettre toutes les valeurs d'attribut entre guillemets. Il est tentant d'omettre les guillemets puisque HTML5 le permet, mais le balisage est plus net et plus facile à lire si vous les incluez. Par exemple, ceci est mieux :
 
 ```html example-good
-<img src="images/logo.jpg" alt="Une icône de globe circulaire" class="no-border">
+<img
+  src="images/logo.jpg"
+  alt="Une icône de globe circulaire"
+  class="no-border" />
 ```
 
 que ça :
@@ -129,7 +131,7 @@ Utilisez des guillemets doubles pour le HTML, et non des guillemets simples :
 <p class="important">Yes</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <p class='important'>Nope</p>
 ```
 

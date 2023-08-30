@@ -1,5 +1,5 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
 ---
 
@@ -42,9 +42,7 @@ if (paragraph.matches(":scope")) {
 #### HTML
 
 ```html
-<p id="para">
-  これは段落です。面白い段落ではありません。すみません。
-</p>
+<p id="para">これは段落です。面白い段落ではありません。すみません。</p>
 <p id="output"></p>
 ```
 
@@ -59,29 +57,31 @@ if (paragraph.matches(":scope")) {
 #### JavaScript
 
 ```js
-var context = document.getElementById('context');
-var selected = context.querySelectorAll(':scope > div');
+var context = document.getElementById("context");
+var selected = context.querySelectorAll(":scope > div");
 
-document.getElementById('results').innerHTML = Array.prototype.map.call(selected, function (element) {
-    return '#' + element.getAttribute('id');
-}).join(', ');
+document.getElementById("results").innerHTML = Array.prototype.map
+  .call(selected, function (element) {
+    return "#" + element.getAttribute("id");
+  })
+  .join(", ");
 ```
 
 #### HTML
 
 ```html
 <div id="context">
-    <div id="element-1">
-        <div id="element-1.1"></div>
-        <div id="element-1.2"></div>
-    </div>
-    <div id="element-2">
-        <div id="element-2.1"></div>
-    </div>
+  <div id="element-1">
+    <div id="element-1.1"></div>
+    <div id="element-1.2"></div>
+  </div>
+  <div id="element-2">
+    <div id="element-2.1"></div>
+  </div>
 </div>
 <p>
-    Selected elements ids :
-    <span id="results"></span>
+  Selected elements ids :
+  <span id="results"></span>
 </p>
 ```
 

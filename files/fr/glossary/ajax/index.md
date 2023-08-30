@@ -11,7 +11,7 @@ Avec les sites web interactifs et les standards modernes du web, AJAX est progre
 
 ## Voir aussi
 
-- [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
+- [AJAX](<https://fr.wikipedia.org/wiki/Ajax_(informatique)>) sur Wikipédia
 - [AJAX](/fr/docs/Web/Guide/AJAX)
 - [AJAX - Premiers pas](/fr/docs/Web/Guide/AJAX/Premiers_pas)
 - [Glossaire du MND](/fr/docs/Glossaire):

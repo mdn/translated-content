@@ -1,16 +1,6 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Left-hand-side expressions
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/super
-original_slug: Web/JavaScript/Reference/Opérateurs/super
-browser-compat: javascript.operators.super
 ---
 
 {{jsSidebar("Operators")}}
@@ -39,12 +29,12 @@ Ce fragment de code est tiré de [cet exemple](https://github.com/GoogleChrome/s
 ```js
 class Rectangle {
   constructor(hauteur, largeur) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.hauteur = hauteur;
     this.largeur = largeur;
   }
-  coucou(){
-    console.log('Coucou, je suis un ' + this.name + '.');
+  coucou() {
+    console.log("Coucou, je suis un " + this.name + ".");
   }
   get aire() {
     return this.hauteur * this.largeur;
@@ -57,7 +47,6 @@ class Rectangle {
 
 class Carre extends Rectangle {
   constructor(longueur) {
-
     // Ici, on appelle le constructeur de Rectangle
     // qui est l'objet « parent » de Carré
     super(longueur, longueur);
@@ -65,7 +54,7 @@ class Carre extends Rectangle {
     // Pour les classes dérivées, super() doit être appelé
     // avant d'utiliser 'this' sinon cela entraînera une
     // exception ReferenceError.
-    this.name = 'Carré';
+    this.name = "Carré";
   }
 }
 ```
@@ -83,9 +72,9 @@ class Rectangle {
 }
 
 class Carre extends Rectangle {
-  constructor(){}
+  constructor() {}
   static logDescription() {
-    return super.logNbCotes() + ' qui sont tous égaux';
+    return super.logNbCotes() + " qui sont tous égaux";
   }
 }
 Carre.logDescription(); // "J'ai 4 côtés qui sont tous égaux"
@@ -120,7 +109,7 @@ class X {
     Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
-      value: 1
+      value: 1,
     });
   }
 }
@@ -128,7 +117,7 @@ class Y extends X {
   constructor() {
     super();
   }
-  toto(){
+  toto() {
     super.prop = 2; // Impossible de surcharger
   }
 }
@@ -145,14 +134,14 @@ console.log(y.prop); // 1
 const obj1 = {
   methode1() {
     console.log("méthode 1");
-  }
-}
+  },
+};
 
 const obj2 = {
   methode2() {
     super.methode1();
-  }
-}
+  },
+};
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.methode2(); // affiche "méthode 1" dans la console

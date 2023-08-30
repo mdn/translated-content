@@ -1,7 +1,6 @@
 ---
 title: Cascada y herencia
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-original_slug: Learn/CSS/Building_blocks/Cascada_y_herencia
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
@@ -176,12 +175,12 @@ La cantidad de especificidad de un selector se mide usando cuatro valores difere
 
 La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo mejor. Analízalos y trata de entender por qué tienen la especificidad que les hemos dado. Aun no hemos explicado los selectores de forma detallada, pero puedes encontrar detalles de cada selector en los [selectores de referencia](/es/docs/Web/CSS/Selectores_CSS) de MDN.
 
-| Selector                                                                                   | Millares: | Centenas: | Decenas: | Unidades: | Especificidad total |
-| ------------------------------------------------------------------------------------------ | --------- | --------- | -------- | --------- | ------------------- |
-| `h1`                                                                                       | 0         | 0         | 0        | 1         | 0001                |
-| `h1 + p::first-letter`                                                                     | 0         | 0         | 0        | 3         | 0003                |
-| `li > a[href*="en-US"] > .inline-warning`                                                  | 0         | 0         | 2        | 2         | 0022                |
-| `#identifier`                                                                              | 0         | 1         | 0        | 0         | 0100                |
+| Selector                                                                                                       | Millares: | Centenas: | Decenas: | Unidades: | Especificidad total |
+| -------------------------------------------------------------------------------------------------------------- | --------- | --------- | -------- | --------- | ------------------- |
+| `h1`                                                                                                           | 0         | 0         | 0        | 1         | 0001                |
+| `h1 + p::first-letter`                                                                                         | 0         | 0         | 0        | 3         | 0003                |
+| `li > a[href*="en-US"] > .inline-warning`                                                                      | 0         | 0         | 2        | 2         | 0022                |
+| `#identifier`                                                                                                  | 0         | 1         | 0        | 0         | 0100                |
 | Sin selector, con una regla en el atributo de un elemento [`style`](/es/docs/Web/HTML/Global_attributes#style) | 1         | 0         | 0        | 0         | 1000                |
 
 Antes de continuar, vamos a ver un ejemplo:

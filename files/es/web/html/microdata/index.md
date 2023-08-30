@@ -1,7 +1,6 @@
 ---
 title: Microdatos
 slug: Web/HTML/Microdata
-original_slug: Web/HTML/Microdatos
 ---
 
 ## Resumen
@@ -12,12 +11,12 @@ El Grupo de Trabajo de HTML del W3C no pudo encontrar un editor que se encargase
 
 En un nivel elevado, los microdatos consisten de un grupo de conjuntos nombre-valor. Tales grupos se denominan elementos, y cada conjunto nombre-valor es una propiedad. Los elementos y las propiedades los representan elementos ordinarios.
 
-- Para crear un elemento, se utiliza el atributo **itemscope** (‘alcance de elemento’).
-- Para añadir una propiedad a un elemento, el atributo **itemprop** (‘propiedad de elemento’) se emplea en uno de los descendientes del elemento.
+- Para crear un elemento, se utiliza el atributo **itemscope** ('alcance de elemento').
+- Para añadir una propiedad a un elemento, el atributo **itemprop** ('propiedad de elemento') se emplea en uno de los descendientes del elemento.
 
 ## Vocabularios
 
-Google, así como otros de los principales buscadores, admiten el vocabulario para datos estructurados de [Schema.org](schema.org). Este vocabulario define un conjunto estandarizado de nombres de tipos y de propiedades: por ejemplo, [Evento musical de Schema.org](http://schema.org/MusicEvent) señala conciertos, e incluye las propiedades _[startDate](http://schema.org/startDate)_ (‘fecha inicial’) y _[location](http://schema.org/location)_ (‘ubicación’) para definir los detalles clave del acontecimiento. En este caso, [Evento musical de Schema.org](http://schema.org/MusicEvent) es el URL usado por _itemtype_ y _startDate_, y la ubicación corresponde a las _itemprop_ que defina [Evento musical de Schema.org](http://schema.org/MusicEvent).
+Google, así como otros de los principales buscadores, admiten el vocabulario para datos estructurados de [Schema.org](schema.org). Este vocabulario define un conjunto estandarizado de nombres de tipos y de propiedades: por ejemplo, [Evento musical de Schema.org](http://schema.org/MusicEvent) señala conciertos, e incluye las propiedades _[startDate](http://schema.org/startDate)_ ('fecha inicial') y _[location](http://schema.org/location)_ ('ubicación') para definir los detalles clave del acontecimiento. En este caso, [Evento musical de Schema.org](http://schema.org/MusicEvent) es el URL usado por _itemtype_ y _startDate_, y la ubicación corresponde a las _itemprop_ que defina [Evento musical de Schema.org](http://schema.org/MusicEvent).
 
 > **Nota:** para obtener más información sobre los atributos _itemtype_, véase <http://schema.org/Thing> (en inglés)
 
@@ -25,17 +24,17 @@ Los vocabularios de microdatos brindan la semántica, o el significado, de los e
 
 Vocabularios usados frecuentemente:
 
-- Obras creativas: _[CreativeWork](http://schema.org/CreativeWork)_ (‘obra creativa’),_ [Book](http://schema.org/Book)_ (‘libro’), _[Movie](http://schema.org/Movie)_ (película),_ [MusicRecording](http://schema.org/MusicRecording)_ (‘grabación musical’),_ [Recipe](http://schema.org/Recipe)_ (‘receta’),_ [TVSeries](http://schema.org/TVSeries)_ (‘serie de televisión’)
-- Objetos distintos del texto incrustados: _[AudioObject](http://schema.org/AudioObject)_ (‘objeto de audio’), _[ImageObject](http://schema.org/ImageObject)_ (‘objeto de imagen’),_ [VideoObject](http://schema.org/VideoObject)_ (‘objeto de vídeo’)
-- _[Event](http://schema.org/Event)_ (‘acontecimiento’)
-- [Tipos relativos a la salud y la medicina](http://schema.org/docs/meddocs.html): las notas sobre los tipos relativos a la salud y la medicina se encuentran bajo _[MedicalEntity](http://schema.org/MedicalEntity)_ (‘entidad médica’)
-- _[Organization](http://schema.org/Organization)_ (‘organización’)
-- _[Person](http://schema.org/Person)_ (‘persona’)
-- _[Place](http://schema.org/Place)_ (‘sitio’), _[LocalBusiness](http://schema.org/LocalBusiness)_ (‘negocio local’), _[Restaurant](http://schema.org/Restaurant)_ (‘restaurante’)
-- _[Product](http://schema.org/Product)_ (‘producto’), _[Offer](http://schema.org/Offer)_ (‘oferta’), _[AggregateOffer](http://schema.org/AggregateOffer)_ (‘oferta general’)
-- _[Review](http://schema.org/Review)_ (‘reseña’), _[AggregateRating](http://schema.org/AggregateRating)_ (‘valoración totalizada’)
-- _[Action](http://schema.org/Action)_ (‘acción’)
-- _[Thing](http://schema.org/Thing)_ (‘cosa’)
+- Obras creativas: _[CreativeWork](http://schema.org/CreativeWork)_ ('obra creativa'),_ [Book](http://schema.org/Book)_ ('libro'), _[Movie](http://schema.org/Movie)_ (película),_ [MusicRecording](http://schema.org/MusicRecording)_ ('grabación musical'),_ [Recipe](http://schema.org/Recipe)_ ('receta'),_ [TVSeries](http://schema.org/TVSeries)_ ('serie de televisión')
+- Objetos distintos del texto incrustados: _[AudioObject](http://schema.org/AudioObject)_ ('objeto de audio'), _[ImageObject](http://schema.org/ImageObject)_ ('objeto de imagen'),_ [VideoObject](http://schema.org/VideoObject)_ ('objeto de vídeo')
+- _[Event](http://schema.org/Event)_ ('acontecimiento')
+- [Tipos relativos a la salud y la medicina](http://schema.org/docs/meddocs.html): las notas sobre los tipos relativos a la salud y la medicina se encuentran bajo _[MedicalEntity](http://schema.org/MedicalEntity)_ ('entidad médica')
+- _[Organization](http://schema.org/Organization)_ ('organización')
+- _[Person](http://schema.org/Person)_ ('persona')
+- _[Place](http://schema.org/Place)_ ('sitio'), _[LocalBusiness](http://schema.org/LocalBusiness)_ ('negocio local'), _[Restaurant](http://schema.org/Restaurant)_ ('restaurante')
+- _[Product](http://schema.org/Product)_ ('producto'), _[Offer](http://schema.org/Offer)_ ('oferta'), _[AggregateOffer](http://schema.org/AggregateOffer)_ ('oferta general')
+- _[Review](http://schema.org/Review)_ ('reseña'), _[AggregateRating](http://schema.org/AggregateRating)_ ('valoración totalizada')
+- _[Action](http://schema.org/Action)_ ('acción')
+- _[Thing](http://schema.org/Thing)_ ('cosa')
 - _[Intangible](http://schema.org/Intangible)_
 
 Con el objeto de mejorar los resultados de las búsquedas, las empresas operarias de los principales buscadores, como Google, Microsoft y Yahoo!, dependen del vocabulario de [Schema.org](http://schema.org/). Para algunos propósitos específicos, es necesario diseñar un vocabulario especializado. Siempre que resulta posible, se anima a los autores a servirse de vocabularios existentes, dado que esto facilita la reutilización del contenido.
@@ -54,7 +53,7 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 [_itemscope_](/es/docs/Web/HTML/Global_attributes/itemscope): _Itemscope_ (por lo general) funciona en conjunto con [_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype)para especificar que el HTML contenido en un bloque se refiere a un término concreto. _itemscope_ crea el elemento y define el alcance del _itemtype_ asociado con él. _itemtype_ es un URL válido de un vocabulario (como [Schema.org](http://schema.org/)) que describe el elemento y el contexto de sus propiedades.
 
-[_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype): Especifica el URL del vocabulario que se empleará para definir _itemprops_ (‘propiedades de elementos’) en la estructura de datos. Se emplea _[Itemscope](/es/docs/Web/HTML/Global_attributes/itemscope)_ para establecer el alcance del área de funcionamiento del vocabulario establecido por _itemtype_ dentro de la estructura de datos.
+[_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype): Especifica el URL del vocabulario que se empleará para definir _itemprops_ ('propiedades de elementos') en la estructura de datos. Se emplea _[Itemscope](/es/docs/Web/HTML/Global_attributes/itemscope)_ para establecer el alcance del área de funcionamiento del vocabulario establecido por _itemtype_ dentro de la estructura de datos.
 
 ## Ejemplo
 

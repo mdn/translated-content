@@ -60,21 +60,21 @@ Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das m
 
 Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms).
 
-### Exemplo ao vivo:
+### Exemplo ao vivo
 
 ```css
 pre {
-     width: 33em;
-     border: solid red;
+  width: 33em;
+  border: solid red;
 
-    -webkit-transform: translate(100px) rotate(20deg);
-    -webkit-transform-origin: 60% 100%;
+  -webkit-transform: translate(100px) rotate(20deg);
+  -webkit-transform-origin: 60% 100%;
 
-    -o-transform:translate(100px) rotate(20deg);
-    -o-transform-origin:60% 100%;
+  -o-transform: translate(100px) rotate(20deg);
+  -o-transform-origin: 60% 100%;
 
-    transform: translate(100px) rotate(20deg);
-    transform-origin: 60% 100%;
+  transform: translate(100px) rotate(20deg);
+  transform-origin: 60% 100%;
 }
 ```
 
@@ -212,8 +212,8 @@ Translates the element by the given amount along the Y axis.
 
 ## Specifications
 
-| Specification                                                                    | Status                                   | Comment |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------- |
+| Specification                                                | Status                         | Comment |
+| ------------------------------------------------------------ | ------------------------------ | ------- |
 | {{ SpecName('CSS3 Transforms', '#transform', 'transform') }} | {{ Spec2('CSS3 Transforms') }} |         |
 
 ## Compatibilidade com navegadores

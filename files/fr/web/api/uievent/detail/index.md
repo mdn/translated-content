@@ -1,12 +1,6 @@
 ---
 title: UIEvent.detail
 slug: Web/API/UIEvent/detail
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Reference
-translation_of: Web/API/UIEvent/detail
 ---
 
 {{APIRef("DOM Events")}}

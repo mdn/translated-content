@@ -22,7 +22,7 @@ slug: Web/HTML/Element/hgroup
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <title>HTML 标准</title>
 <body>
   <hgroup id="document-title">

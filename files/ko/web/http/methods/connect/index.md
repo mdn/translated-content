@@ -35,7 +35,7 @@ slug: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Allowed in <a href="/ko/docs/Web/Guide/HTML/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
@@ -52,7 +52,7 @@ CONNECT www.example.com:443 HTTP/1.1
 
 일부 프록시 서버는 터널을 생성하기 위해 인증을 요구할 수 있습니다. {{HTTPHeader("Proxy-Authorization")}} 헤더를 참고하세요.
 
-```html
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
@@ -60,8 +60,8 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 기술 사양
 
-| Specification                                    | Title                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                       | Title                                                         |
+| ----------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## 브라우저 호환성

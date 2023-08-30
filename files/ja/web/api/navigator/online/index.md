@@ -1,7 +1,6 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
-original_slug: Web/API/NavigatorOnLine/onLine
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -34,9 +33,9 @@ online = window.navigator.onLine;
 
 ```js
 if (navigator.onLine) {
-  console.log('online');
+  console.log("online");
 } else {
-  console.log('offline');
+  console.log("offline");
 }
 ```
 
@@ -47,9 +46,13 @@ if (navigator.onLine) {
 ネットワーク接続状態の変化を確認するには、以下の例のように [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して、 `window.online` および `window.offline` を待ち受けします。
 
 ```js
-window.addEventListener('offline', function(e) { console.log('offline'); });
+window.addEventListener("offline", function (e) {
+  console.log("offline");
+});
 
-window.addEventListener('online', function(e) { console.log('online'); });
+window.addEventListener("online", function (e) {
+  console.log("online");
+});
 ```
 
 ## 仕様書

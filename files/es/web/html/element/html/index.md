@@ -1,7 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-original_slug: Web/HTML/Elemento/html
 ---
 
 {{HTMLSidebar}}
@@ -10,12 +9,12 @@ El **elemento HTML `<html>`** (o _elemento HTML raiz_) representa la raiz de un 
 
 Dado que el elemento `<html>` es el primero en un documento, aparte de los comentarios, se llama el elemento raíz. A pesar de que esta etiqueta puede ser implicita, o no requerida en {{glossary("HTML")}}, sí es requerida para abrir y cerrar en {{glossary("XHTML")}}.
 
-| [Categorías de Contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | Un elemento {{HTMLElement("head")}} seguido de un elemento {{HTMLElement("body")}}.                                                                                                                                                                                                                                                    |
+| [Categorías de Contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                        | Un elemento {{HTMLElement("head")}} seguido de un elemento {{HTMLElement("body")}}.                                                                                                                                                                                                                                                             |
 | Omisión de etiqueta                                                        | La etiqueta de inicio puede omitirse si lo primero que hay en el interior del elemento \<html> no es un comentario. La etiqueta final puede omitirse si el elemento \<html> no está inmediatamente seguido por un comentario y contiene un elemento {{HTMLElement("body")}}, o bien que no esté vacío, o cuya etiqueta de inicio está presente. |
-| Elementos padres permitidos                                                | Como elemento raiz de un documento, o donde se permite un fragmento de subdocumento en un documento compuesto.                                                                                                                                                                                                                                           |
-| Interfaz DOM                                                               | {{domxref("HTMLHtmlElement")}}                                                                                                                                                                                                                                                                                                                 |
+| Elementos padres permitidos                                                | Como elemento raiz de un documento, o donde se permite un fragmento de subdocumento en un documento compuesto.                                                                                                                                                                                                                                  |
+| Interfaz DOM                                                               | {{domxref("HTMLHtmlElement")}}                                                                                                                                                                                                                                                                                                                  |
 
 ## Atributos
 
@@ -33,10 +32,14 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 El DOCTYPE usado en el siguiente ejemplo indica que es un documento HTML5.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 

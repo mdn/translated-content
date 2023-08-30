@@ -1,7 +1,6 @@
 ---
 title: よく使われるマクロ
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-original_slug: MDN/Structures/Macros/Commonly-used_macros
 l10n:
   sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---

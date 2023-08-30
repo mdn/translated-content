@@ -1,7 +1,6 @@
 ---
 title: Bucles
 slug: Learn/JavaScript/Building_blocks/Looping_code
-original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
@@ -51,10 +50,10 @@ Muchas veces, el código será ligeramente diferente en cada iteracción sucesiv
 Vamos a ver un ejemplo para ilustrar perfectamente por qué los bucles son tan útiles. Digamos que queremos dibujar 100 círculos aleatorios en un elemento {{htmlelement("canvas")}} (presiona el botón _Update_ para ejecutar el ejemplo una y otra vez y ver diferentes configuraciones aleatorias):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Random canvas circles</title>
     <style>
       html {
@@ -79,41 +78,37 @@ Vamos a ver un ejemplo para ilustrar perfectamente por qué los bucles son tan �
     </style>
   </head>
   <body>
+    <button>Update</button>
 
-  <button>Update</button>
-
-  <canvas></canvas>
-
+    <canvas></canvas>
 
     <script>
-    var btn = document.querySelector('button');
-    var canvas = document.querySelector('canvas');
-    var ctx = canvas.getContext('2d');
+      var btn = document.querySelector("button");
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
 
-    var WIDTH = document.documentElement.clientWidth;
-    var HEIGHT = document.documentElement.clientHeight;
+      var WIDTH = document.documentElement.clientWidth;
+      var HEIGHT = document.documentElement.clientHeight;
 
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
+      canvas.width = WIDTH;
+      canvas.height = HEIGHT;
 
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (var i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
+      function random(number) {
+        return Math.floor(Math.random() * number);
       }
-    }
 
-    btn.addEventListener('click',draw);
+      function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (var i = 0; i < 100; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,0,0,0.5)";
+          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
 
+      btn.addEventListener("click", draw);
     </script>
-
   </body>
 </html>
 ```
@@ -125,7 +120,7 @@ No tienes que entender todo el código por ahora, pero vamos a echar un vistazo 
 ```js
 for (var i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
@@ -137,7 +132,7 @@ Si no usáramos un bucle aquí, tendríamos que repetir el siguiente código por
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
+ctx.fillStyle = "rgba(255,0,0,0.5)";
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -159,21 +154,21 @@ Aquí tenemos:
 1. La palabra reservada `for`, seguida por algunos paréntesis.
 2. Dentro de los paréntesis tenemos tres ítems, separados por punto y coma (;):
 
-    1. Un **inicializador** - Este es usualmente una variable con un número asignado, que aumenta el número de veces que el bucle ha sijo ejecutado. También se le llama **contador** o **variable de conteo**.
-    2. Una **condición de salida** - como se mencionó previamente, ésta define cuando el bucle debería detenerse. Generalmente es una expresión que contiene un operador de comparación, una prueba para verificar ue la condición de término o salida ha sido cumplida.
-    3. Una **expresión final** - que es siempre evaluada o ejecutada cada vez que el bucle ha completado una iteración. Usualmente sirve para modificar al contador (incrementando su valor o algunas veces disminuyendolo), para aproximarse a la condición de salida.
+   1. Un **inicializador** - Este es usualmente una variable con un número asignado, que aumenta el número de veces que el bucle ha sijo ejecutado. También se le llama **contador** o **variable de conteo**.
+   2. Una **condición de salida** - como se mencionó previamente, ésta define cuando el bucle debería detenerse. Generalmente es una expresión que contiene un operador de comparación, una prueba para verificar ue la condición de término o salida ha sido cumplida.
+   3. Una **expresión final** - que es siempre evaluada o ejecutada cada vez que el bucle ha completado una iteración. Usualmente sirve para modificar al contador (incrementando su valor o algunas veces disminuyendolo), para aproximarse a la condición de salida.
 
 3. Algunos corchetes curvos que contienen un bloque de código - este código se ejecutará cada vez que se repita el bucle.
 
 Observa un ejemplo real para poder entender esto más claramente.
 
 ```js
-var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-var info = 'My cats are called ';
-var para = document.querySelector('p');
+var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+var info = "My cats are called ";
+var para = document.querySelector("p");
 
 for (var i = 0; i < cats.length; i++) {
-  info += cats[i] + ', ';
+  info += cats[i] + ", ";
 }
 
 para.textContent = info;
@@ -182,33 +177,27 @@ para.textContent = info;
 Esto nos da el siguiente resultado:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Basic for loop example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-    var info = 'My cats are called ';
-    var para = document.querySelector('p');
+      var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+      var info = "My cats are called ";
+      var para = document.querySelector("p");
 
-    for (var i = 0; i < cats.length; i++) {
-      info += cats[i] + ', ';
-    }
+      for (var i = 0; i < cats.length; i++) {
+        info += cats[i] + ", ";
+      }
 
-    para.textContent = info;
-
+      para.textContent = info;
     </script>
-
   </body>
 </html>
 ```
@@ -223,9 +212,9 @@ Esto muestra un bucle siendo usado para iterar sobre los elementos de un arreglo
 2. Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo `cats`. Esto es importante - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras `i < cats.length` sea verdadero, el bucle seguirá ejecutándose.
 3. Dentro del bucle, concatenamos el elemento del bucle actual (`cats[i]` es `cats[lo que sea i en ese momento]`) junto con una coma y un espacio, al final de la variable `info`. Así:
 
-    1. Durante la primera ejecución, `i = 0`, así `cats[0] + ', '` se concatenará con la información ("Bill, ").
-    2. Durante la segunda ejecución, `i = 1`, así `cats[1] + ', '` agregará el siguiente nombre ("Jeff, ").
-    3. Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (`i++`), entonces el proceso comenzará de nuevo.
+   1. Durante la primera ejecución, `i = 0`, así `cats[0] + ', '` se concatenará con la información ("Bill, ").
+   2. Durante la segunda ejecución, `i = 1`, así `cats[1] + ', '` agregará el siguiente nombre ("Jeff, ").
+   3. Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (`i++`), entonces el proceso comenzará de nuevo.
 
 4. Cuando `i` sea igual a `cats.length`, el bucle se detendrá, y el navegador se moverá al siguiente segmento de código bajo el bucle.
 
@@ -242,9 +231,9 @@ Idealmente querríamos cambiar la concatenacion al final de la última iteracion
 ```js
 for (var i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 }
 ```
@@ -263,7 +252,7 @@ Digamos que queremos buscar a través de un arreglo de contactos y números tele
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -272,22 +261,29 @@ Digamos que queremos buscar a través de un arreglo de contactos y números tele
 Ahora en el JavaScript:
 
 ```js
-var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-var para = document.querySelector('p');
-var input = document.querySelector('input');
-var btn = document.querySelector('button');
+var contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+var para = document.querySelector("p");
+var input = document.querySelector("input");
+var btn = document.querySelector("button");
 
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   var searchName = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (var i = 0; i < contacts.length; i++) {
-    var splitContact = contacts[i].split(':');
+    var splitContact = contacts[i].split(":");
     if (splitContact[0] === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent =
+        splitContact[0] + "'s number is " + splitContact[1] + ".";
       break;
     } else {
-      para.textContent = 'Contact not found.';
+      para.textContent = "Contact not found.";
     }
   }
 });
@@ -300,9 +296,9 @@ btn.addEventListener('click', function() {
 3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
 4. Now onto the interesting part, the for loop:
 
-    1. We start the counter at `0`, run the loop until the counter is no longer less than `contacts.length`, and increment `i` by 1 after each iteration of the loop.
-    2. Inside the loop we first split the current contact (`contacts[i]`) at the colon character, and store the resulting two values in an array called `splitContact`.
-    3. We then use a conditional statement to test whether `splitContact[0]` (the contact's name) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
+   1. We start the counter at `0`, run the loop until the counter is no longer less than `contacts.length`, and increment `i` by 1 after each iteration of the loop.
+   2. Inside the loop we first split the current contact (`contacts[i]`) at the colon character, and store the resulting two values in an array called `splitContact`.
+   3. We then use a conditional statement to test whether `splitContact[0]` (the contact's name) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
 
 5. If the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.
 
@@ -323,52 +319,47 @@ for (var i = 1; i <= num; i++) {
     continue;
   }
 
-  para.textContent += i + ' ';
+  para.textContent += i + " ";
 }
 ```
 
 Here's the output:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Integer squares generator</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="number">Enter number: </label>
+    <input id="number" type="text" />
+    <button>Generate integer squares</button>
 
-  <label for="number">Enter number: </label>
-  <input id="number" type="text">
-  <button>Generate integer squares</button>
-
-  <p>Output: </p>
-
+    <p>Output:</p>
 
     <script>
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var para = document.querySelector("p");
+      var input = document.querySelector("input");
+      var btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      var num = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 1; i <= num; i++) {
-        var sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
+      btn.addEventListener("click", function () {
+        para.textContent = "Output: ";
+        var num = input.value;
+        input.value = "";
+        input.focus();
+        for (var i = 1; i <= num; i++) {
+          var sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+
+          para.textContent += i + " ";
         }
-
-        para.textContent += i + ' ';
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -408,9 +399,9 @@ var i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -441,9 +432,9 @@ var i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -479,12 +470,12 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 var output = document.querySelector('.output');
 output.innerHTML = '';
@@ -497,8 +488,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -525,9 +516,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -535,38 +526,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+var jsSolution =
+  "var output = document.querySelector('.output');\noutput.innerHTML = '';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n  para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -578,8 +570,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -590,10 +585,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -630,12 +625,14 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -652,8 +649,8 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -680,9 +677,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -690,38 +687,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nvar i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+var jsSolution =
+  "var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];\n\nvar admitted = document.querySelector('.admitted');\nvar refused = document.querySelector('.refused');\n\nadmitted.textContent = 'Admit: ';\nrefused.textContent = 'Refuse: '\nvar i = 0;\n\ndo {\n if(people[i] === 'Phil' || people[i] === 'Lola') {\n refused.textContent += people[i] + ', ';\n } else {\n admitted.textContent += people[i] + ', ';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -733,8 +731,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -745,10 +746,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -810,6 +811,6 @@ If there is anything you didn't understand, feel free to read through the articl
 - [for statement reference](/es/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/es/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/es/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/es/docs/Web/JavaScript/Reference/Statements/break) and [continue](/es/docs/Web/JavaScript/Reference/Statements/continue) references
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

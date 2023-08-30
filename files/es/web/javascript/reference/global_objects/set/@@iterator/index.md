@@ -1,7 +1,6 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator
 ---
 
 {{JSRef}}
@@ -28,7 +27,7 @@ La función **iteradora** `Set` , la cuál es {{jsxref("Set.prototype.values()",
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 
@@ -43,7 +42,7 @@ console.log(setIter.next().value); // Object
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 

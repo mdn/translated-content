@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ## 구문
 
 ```js
-arr[Symbol.iterator]()
+arr[Symbol.iterator]();
 ```
 
 ## 예

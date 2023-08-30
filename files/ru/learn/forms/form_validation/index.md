@@ -1,16 +1,6 @@
 ---
 title: Валидация форм на стороне клиента
 slug: Learn/Forms/Form_validation
-tags:
-  - Новичку
-  - Пример
-  - Формы
-  - Гайд
-  - HTML
-  - JavaScript
-  - Изучение
-  - Web
-  - regex
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -57,9 +47,9 @@ tags:
 
 Одной из самых важных функций [элементов форм HTML5](/ru/docs/Learn/Forms/HTML5_input_types) является способность валидировать бóльшую часть пользовательских данных без использования JavaScript. Это выполняется с помощью атрибутов валидации у элементов формы. Многие из них мы уже рассмотрели в этом курсе:
 
-- [`required`](/en-US/docs/Web/HTML/Attributes/required): Определяет, что для отправки формы данное поле предварительно должно быть заполнено.
-- [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength): Задаёт минимальную и максимальную длину текстовых данных (строк)
-- [`min`](/en-US/docs/Web/HTML/Attributes/min) и [`max`](/en-US/docs/Web/HTML/Attributes/max): Задаёт минимальное и максимальное значение для поля, расчитанного на числовой тип данных
+- [`required`](/ru/docs/Web/HTML/Attributes/required): Определяет, что для отправки формы данное поле предварительно должно быть заполнено.
+- [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength): Задаёт минимальную и максимальную длину текстовых данных (строк)
+- [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max): Задаёт минимальное и максимальное значение для поля, расчитанного на числовой тип данных
 - `type`: Определяет тип данных, на который рассчитано поле: число, email-адрес или какой-то другой предустановленный тип
 - [`pattern`](/ru/docs/Web/HTML/Attributes/pattern): С помощью [регулярного выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), определяет шаблон, которому должны соответствовать вводимые данные.
 
@@ -88,7 +78,7 @@ tags:
 ```html
 <form>
   <label for="choose">Would you prefer a banana or cherry?</label>
-  <input id="choose" name="i_like">
+  <input id="choose" name="i_like" />
   <button>Submit</button>
 </form>
 ```
@@ -109,14 +99,14 @@ input:valid {
 
 ### Атрибут required
 
-Самым простым в HTML5-валидации является атрибут [`required`](/en-US/docs/Web/HTML/Attributes/required). Добавьте его к элементу, чтобы сделать заполнение обязательным. Элемент с данным атрибутом соответствует CSS-псевдоклассу {{cssxref(':required')}}, а если поле ввода пустое, вместо отправки формы отобразится сообщение об ошибке. Пока поле пустое, оно также будет соответствовать CSS-псевдоклассу {{cssxref(':invalid')}}.
+Самым простым в HTML5-валидации является атрибут [`required`](/ru/docs/Web/HTML/Attributes/required). Добавьте его к элементу, чтобы сделать заполнение обязательным. Элемент с данным атрибутом соответствует CSS-псевдоклассу {{cssxref(':required')}}, а если поле ввода пустое, вместо отправки формы отобразится сообщение об ошибке. Пока поле пустое, оно также будет соответствовать CSS-псевдоклассу {{cssxref(':invalid')}}.
 
 Добавьте к полю атрибут `required`, как показано ниже.
 
 ```html
 <form>
   <label for="choose">Would you prefer a banana or cherry? (required)</label>
-  <input id="choose" name="i_like" required>
+  <input id="choose" name="i_like" required />
   <button>Submit</button>
 </form>
 ```
@@ -169,7 +159,7 @@ input:valid {
 ```html
 <form>
   <label for="choose">Would you prefer a banana or a cherry?</label>
-  <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+  <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry" />
   <button>Submit</button>
 </form>
 ```
@@ -202,13 +192,13 @@ input:valid {
 
 ### Ограничение длины вводимых значений
 
-Можно ограничить максимально допустимое количество символов для текстовых полей {{HTMLElement("input")}} или {{HTMLElement("textarea")}} используя атрибуты [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength). Поле будет не валидным, если количество символов его содержимого будет меньше [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) или больше [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength).
+Можно ограничить максимально допустимое количество символов для текстовых полей {{HTMLElement("input")}} или {{HTMLElement("textarea")}} используя атрибуты [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength). Поле будет не валидным, если количество символов его содержимого будет меньше [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) или больше [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength).
 
 Зачастую браузеры не позволяют пользователям вводить в текстовое поле значение, длина которого превышает максимально допустимую. Можно существенно повысить удобство использования, если помимо ограничения в атрибуте `maxlength` добавить доступный индикатор, отображающий текущее и максимально допустимое количество символов, что даст пользователю возможность уместить содержимое в заданные рамки. Хорошим примером является окно написания твита в Twitter. Для реализации такого функционала можно использовать JavaScript, включая [решения, использующие `maxlength`](https://github.com/mimo84/bootstrap-maxlength).
 
 ### Ограничение допустимых значений
 
-В полях, предназначенных для ввода чисел (например, [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)), диапазон допустимых значений можно определить с помощью атрибутов [`min`](/en-US/docs/Web/HTML/Attributes/min) и [`max`](/en-US/docs/Web/HTML/Attributes/max). Если поле содержит значение за пределами данного диапазона, оно будет не валидным.
+В полях, предназначенных для ввода чисел (например, [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)), диапазон допустимых значений можно определить с помощью атрибутов [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max). Если поле содержит значение за пределами данного диапазона, оно будет не валидным.
 
 Давайте рассмотрим другой пример. Создайте новую копию файла [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 
@@ -218,11 +208,17 @@ input:valid {
 <form>
   <div>
     <label for="choose">Would you prefer a banana or a cherry?</label>
-    <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+    <input
+      type="text"
+      id="choose"
+      name="i_like"
+      required
+      minlength="6"
+      maxlength="6" />
   </div>
   <div>
     <label for="number">How many would you like?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
   </div>
   <div>
     <button>Submit</button>
@@ -325,7 +321,7 @@ input[type="email"],
 input[type="number"],
 textarea,
 fieldset {
-  width : 100%;
+  width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
 }
@@ -356,11 +352,11 @@ input:focus:invalid {
 Большинство браузеров поддерживают [Constraint Validation API](/ru/docs/Web/API/Constraint_validation), который состоит из набора свойств и методов, доступных на DOM-интерфейсах следующих элементов форм:
 
 - [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement) (представляет элемент [`<button>`](/ru/docs/Web/HTML/Element/button))
-- [`HTMLFieldSetElement`](/en-US/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset))
+- [`HTMLFieldSetElement`](/ru/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset))
 - [`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement) (представляет элемент [`<input>`](/ru/docs/Web/HTML/Element/input))
-- [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) (представляет элемент [`<output>`](/ru/docs/Web/HTML/Element/output))
+- [`HTMLOutputElement`](/ru/docs/Web/API/HTMLOutputElement) (представляет элемент [`<output>`](/ru/docs/Web/HTML/Element/output))
 - [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) (представляет элемент [`<select>`](/ru/docs/Web/HTML/Element/select))
-- [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement) (представляет элемент [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea))
+- [`HTMLTextAreaElement`](/ru/docs/Web/API/HTMLTextAreaElement) (представляет элемент [`<textarea>`](/ru/docs/Web/HTML/Element/textarea))
 
 Для перечисленных выше элементов Constraint Validation API делает доступными следующие свойства.
 
@@ -400,8 +396,10 @@ input:focus:invalid {
 
 ```html
 <form>
-  <label for="mail">I would like you to provide me with an e-mail address:</label>
-  <input type="email" id="mail" name="mail">
+  <label for="mail"
+    >I would like you to provide me with an e-mail address:</label
+  >
+  <input type="email" id="mail" name="mail" />
   <button>Submit</button>
 </form>
 ```
@@ -443,7 +441,7 @@ email.addEventListener("input", function (event) {
   <p>
     <label for="mail">
       <span>Please enter an email address:</span>
-      <input type="email" id="mail" name="mail" required minlength="8">
+      <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
   </p>
@@ -451,9 +449,9 @@ email.addEventListener("input", function (event) {
 </form>
 ```
 
-Эта простая форма использует атрибут [`novalidate`](/en-US/docs/Web/HTML/Attributes/novalidate), который отключает автоматическую валидацию браузером; это позволяет нашему скрипту взять управление валидацией на себя. Однако, это не отменяет поддержку Constraint Validation API или псевдоклассов, таких как {{cssxref(":valid")}} или ему подобных. Это значит, что хотя браузер автоматически и не проверяет валидность формы перед отправкой данных, вы можете сделать это самостоятельно и соответствующим образом стилизовать форму.
+Эта простая форма использует атрибут [`novalidate`](/ru/docs/Web/HTML/Attributes/novalidate), который отключает автоматическую валидацию браузером; это позволяет нашему скрипту взять управление валидацией на себя. Однако, это не отменяет поддержку Constraint Validation API или псевдоклассов, таких как {{cssxref(":valid")}} или ему подобных. Это значит, что хотя браузер автоматически и не проверяет валидность формы перед отправкой данных, вы можете сделать это самостоятельно и соответствующим образом стилизовать форму.
 
-Объектом валидации является обязательный для заполнения [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), длина которого не должна быть меньше 8 символов. Давайте напишем код, проверяющий эти критерии, и покажем кастомное сообщение об ошибке в случае несоблюдения какого-то из них.
+Объектом валидации является обязательный для заполнения [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email), длина которого не должна быть меньше 8 символов. Давайте напишем код, проверяющий эти критерии, и покажем кастомное сообщение об ошибке в случае несоблюдения какого-то из них.
 
 Мы хотим показывать сообщение об ошибке внутри элемента `<span>`. Данному элементу задан атрибут [`aria-live`](/ru/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), чтобы гарантировать, что наше кастомное сообщение об ошибке будет доступно всем, включая пользователей скринридеров.
 
@@ -466,14 +464,14 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 p * {
   display: block;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
   appearance: none;
 
@@ -488,9 +486,9 @@ input[type=email]{
 }
 
 /* Это стили для не валидных полей */
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
@@ -499,7 +497,7 @@ input:focus:invalid {
 
 /* Это стили для кастомных сообщений об ошибке */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -520,30 +518,30 @@ input:focus:invalid {
 ```js
 // Существуют разные способы получить DOM-узел; здесь мы определяем саму форму и
 // поле ввода email и элемент span, в который поместим сообщение об ошибке
-const form  = document.getElementsByTagName('form')[0];
+const form = document.getElementsByTagName("form")[0];
 
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
+const email = document.getElementById("mail");
+const emailError = document.querySelector("#mail + span.error");
 
-email.addEventListener('input', function (event) {
+email.addEventListener("input", function (event) {
   // Каждый раз, когда пользователь что-то вводит,
   // мы проверяем, являются ли поля формы валидными
 
   if (email.validity.valid) {
     // Если на момент валидации какое-то сообщение об ошибке уже отображается,
     // если поле валидно, удаляем сообщение
-    emailError.textContent = ''; // Сбросить содержимое сообщения
-    emailError.className = 'error'; // Сбросить визуальное состояние сообщения
+    emailError.textContent = ""; // Сбросить содержимое сообщения
+    emailError.className = "error"; // Сбросить визуальное состояние сообщения
   } else {
     // Если поле не валидно, показываем правильную ошибку
     showError();
   }
 });
 
-form.addEventListener('submit', function (event) {
+form.addEventListener("submit", function (event) {
   // Если поле email валдно, позволяем форме отправляться
 
-  if(!email.validity.valid) {
+  if (!email.validity.valid) {
     // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
     showError();
     // Затем предотвращаем стандартное событие отправки формы
@@ -552,22 +550,22 @@ form.addEventListener('submit', function (event) {
 });
 
 function showError() {
-  if(email.validity.valueMissing) {
+  if (email.validity.valueMissing) {
     // Если поле пустое,
     // отображаем следующее сообщение об ошибке
-    emailError.textContent = 'You need to enter an e-mail address.';
-  } else if(email.validity.typeMismatch) {
+    emailError.textContent = "You need to enter an e-mail address.";
+  } else if (email.validity.typeMismatch) {
     // Если поле содержит не email-адрес,
     // отображаем следующее сообщение об ошибке
-    emailError.textContent = 'Entered value needs to be an e-mail address.';
-  } else if(email.validity.tooShort) {
+    emailError.textContent = "Entered value needs to be an e-mail address.";
+  } else if (email.validity.tooShort) {
     // Если содержимое слишком короткое,
     // отображаем следующее сообщение об ошибке
-    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
   }
 
   // Задаём соответствующую стилизацию
-  emailError.className = 'error active';
+  emailError.className = "error active";
 }
 ```
 
@@ -616,9 +614,9 @@ HTML почти тот такой же; мы только удалили фун�
 <form>
   <p>
     <label for="mail">
-        <span>Please enter an email address:</span>
-        <input type="text" id="mail" name="mail">
-        <span class="error" aria-live="polite"></span>
+      <span>Please enter an email address:</span>
+      <input type="text" id="mail" name="mail" />
+      <span class="error" aria-live="polite"></span>
     </label>
   </p>
   <!-- Для некоторых устаревших браузеров элементу `button` нужно добавлять
@@ -634,7 +632,7 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 form {
@@ -659,9 +657,9 @@ input.mail {
 }
 
 /* Стилизация не валидных полей */
-input.invalid{
+input.invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus.invalid {
@@ -670,7 +668,7 @@ input:focus.invalid {
 
 /* Стилизация сообщений об ошибках */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -689,8 +687,8 @@ input:focus.invalid {
 
 ```js
 // Устаревшие браузеры поддерживают несколько способов получения DOM-узла
-const form  = document.getElementsByTagName('form')[0];
-const email = document.getElementById('mail');
+const form = document.getElementsByTagName("form")[0];
+const email = document.getElementById("mail");
 
 // Ниже приведён способ получения узла следующего родственного DOM-элемента
 // Он опасен, потому что можно создать бесконечный цикл.
@@ -699,22 +697,23 @@ let error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // Согласно спецификации HTML5
-const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // Многие устаревшие браузеры не поддерживают метод `addEventListener`
 // Есть простой способ заменить его; и далеко не единственный
 function addEvent(element, event, callback) {
-  let previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
+  let previousEventCallBack = element["on" + event];
+  element["on" + event] = function (e) {
     let output = callback(e);
 
     // Колбэк, который возвращает `false`, останавливает цепочку колбэков
     // и прерывает выполнение колбэка события
     if (output === false) return false;
 
-    if (typeof previousEventCallBack === 'function') {
+    if (typeof previousEventCallBack === "function") {
       output = previousEventCallBack(e);
-      if(output === false) return false;
+      if (output === false) return false;
     }
   };
 }

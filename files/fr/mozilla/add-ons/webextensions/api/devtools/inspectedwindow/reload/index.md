@@ -1,7 +1,6 @@
 ---
 title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload
 ---
 
 {{AddonSidebar()}}
@@ -12,8 +11,8 @@ Recharge la fenêtre à laquelle les devtools sont attachés.
 
 ```js
 browser.devtools.inspectedWindow.reload(
-  reloadOptions       // object
-)
+  reloadOptions, // object
+);
 ```
 
 ### Paramètres
@@ -42,8 +41,8 @@ const reloadButton = document.querySelector("#reload-button");
 
 reloadButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.reload({
-    injectedScript:"alert(navigator.userAgent);",
-    userAgent: "Not a real UA"
+    injectedScript: "alert(navigator.userAgent);",
+    userAgent: "Not a real UA",
   });
 });
 ```

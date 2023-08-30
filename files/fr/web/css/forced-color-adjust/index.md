@@ -1,8 +1,6 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
-translation_of: Web/CSS/forced-color-adjust
-browser-compat: css.properties.forced-color-adjust
 ---
 
 {{CSSRef}}

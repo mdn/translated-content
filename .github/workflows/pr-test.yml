@@ -17,10 +17,16 @@ on:
 
 jobs:
   tests:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      # If we don't do this the built files will end up in
+      # `node_modules/@mdn/yari/client/build/` and we don't want that
+      # to get pushed into the cache.
+      BUILD_OUT_ROOT: /tmp/build
 
     steps:
       - uses: actions/checkout@v3
@@ -45,6 +51,9 @@ jobs:
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
           yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get changed files
         run: |
@@ -82,17 +91,8 @@ jobs:
           # we set this to disable that stuff.
           REACT_APP_CRUD_MODE_READONLY: true
 
-          # Setting this to an empty string effectively means that the
-          # <iframe> src will end up being the relative URL of the current
-          # document as a base.
-          # I.e. like this, if the current document is '/en-US/docs/Foo':
-          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
-          # ...for example.
-          # Yes, it's potentially "insecure" because the iframe will execute
-          # whatever code is inserted into the code example. But since the
-          # whole (possible) domain for PR builds will never be somewhere
-          # where there are interesting cookies, it's a safe choice.
-          BUILD_LIVE_SAMPLES_BASE_URL: ""
+          BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
 
           # In these builds we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
@@ -101,60 +101,42 @@ jobs:
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
 
-          # If we don't do this the built files will end up in
-          # `node_modules/@mdn/yari/client/build/` and we don't want that
-          # to get pushed into the cache.
-          BUILD_OUT_ROOT: /tmp/build
+          # Playground
+          REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
 
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          mkdir -p $BUILD_OUT_ROOT
+          mkdir -p ${{ env.BUILD_OUT_ROOT }}
 
           # Don't use `yarn build` (from mdn/content) because that one hardcodes
           # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
           node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF_CONTENT }}
 
           echo "Disk usage size of build/"
-          du -sh $BUILD_OUT_ROOT
+          du -sh ${{ env.BUILD_OUT_ROOT }}
 
           # Save the PR number into the build
-          echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
+          echo ${{ github.event.number }} > ${{ env.BUILD_OUT_ROOT }}/NR
 
       - name: Download the diff file
         if: ${{ env.GIT_DIFF_CONTENT }}
-        env:
-          # This must match what we set in the "Build changed content" step above
-          BUILD_OUT_ROOT: /tmp/build
         run: |
           # Save the raw diff blob and store that inside the ./build/
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O $BUILD_OUT_ROOT/DIFF
+          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
-        env:
-          # This must match what we set in the "Build changed content" step above
-          BUILD_OUT_ROOT: /tmp/build
         run: |
-          rsync -a ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT/
-
-          # Now that build/ directory contains everything you need to deploy
-          # that as a site. HTML, static assets, images, etc.
-          # However, that Yari static files is very heavy and it's in large
-          # part due to the .map files.
-          # In fact, as of March 2021, the client/build/static directory
-          # is 2.3MB but only 864KB without all the .map files.
-          # Let's delete those this time because this isn't the right time
-          # to debug JS or CSS.
-          find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs rm
+          # Exclude the .map files, as they're used for debugging JS and CSS.
+          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ ${{ env.BUILD_OUT_ROOT }}
+          # Show the final disk usage size of the build.
+          du -sh ${{ env.BUILD_OUT_ROOT }}
 
       - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
-        env:
-          # This must match what we set in the "Build changed content" step above
-          BUILD_OUT_ROOT: /tmp/build
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}

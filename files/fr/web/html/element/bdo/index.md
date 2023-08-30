@@ -1,26 +1,6 @@
 ---
-title: '<bdo> : l''élément de remplacement bidirectionnelle'
+title: "<bdo> : l'élément de remplacement bidirectionnelle"
 slug: Web/HTML/Element/bdo
-tags:
-  - BiDi
-  - Bidirectional Text
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Left to Right
-  - Reference
-  - Right to Left
-  - Text
-  - Text Direction
-  - Text Rendering
-  - Web
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdo
-browser-compat: html.elements.bdo
 ---
 
 {{HTMLSidebar}}

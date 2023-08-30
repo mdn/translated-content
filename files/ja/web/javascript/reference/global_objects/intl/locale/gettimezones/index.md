@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.timeZones
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
 ---
 
 {{JSRef}}

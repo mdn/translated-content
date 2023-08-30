@@ -1,12 +1,11 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-translation_of: Glossary/JavaScript
 ---
 
 JavaScript (JS) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server","serveur")}}, depuis l'arrivée de [Node JS](https://nodejs.org/fr/).
 
-Ne pas confondre JavaScript avec [Java](https://fr.wikipedia.org/wiki/Java_(langage)). "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
+Ne pas confondre JavaScript avec [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>). "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
 
 D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
 
@@ -14,7 +13,7 @@ En novembre 1996, Netscape commence à travailler avec ECMA International pour f
 
 JavaScript est principalement utilisé dans le navigateur, permettant aux développeurs de manipuler le contenu des pages internet à travers le {{Glossary("DOM")}}, manipuler les données avec {{Glossary("AJAX")}} et {{Glossary("IndexedDB")}}, dessiner avec {{Glossary("canvas")}}, interargir avec le périphérique qui pilote le navigateur via de nombreuses {{Glossary("API","APIs")}}, etc.. JavaScript est l'un des langages les plus utilisés au monde, grâce au développement et à l'amélioration des performances des {{Glossary("API","APIs")}} dans les navigateurs.
 
-Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](http://nodejs.org/), l'environnement d’exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
+Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](http://nodejs.org/), l'environnement d'exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
 
 ## Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
 ---
 
@@ -12,8 +12,8 @@ slug: Web/CSS/@import
 ```css
 @import url;
 @import url list-of-media-queries;
-@import url supports( supports-query );
-@import url supports( supports-query ) list-of-media-queries;
+@import url supports(supports-query);
+@import url supports(supports-query) list-of-media-queries;
 ```
 
 内容は次の通りです。
@@ -40,7 +40,7 @@ slug: Web/CSS/@import
 ### CSS ルールをインポート
 
 ```css
-@import 'custom.css';
+@import "custom.css";
 @import url("chrome://communicator/skin/");
 ```
 
@@ -50,7 +50,7 @@ slug: Web/CSS/@import
 @import url("fineprint.css") print;
 @import url("bluish.css") speech;
 @import "common.css" screen;
-@import url('landscape.css') screen and (orientation:landscape);
+@import url("landscape.css") screen and (orientation: landscape);
 ```
 
 ## 仕様書

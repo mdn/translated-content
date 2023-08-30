@@ -49,19 +49,17 @@ A promise é rejeitada quando umas das seguintes exceções é encontrada:
 
 ## Especificações
 
-| Especificação                                                                                                                        | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-importKey', 'SubtleCrypto.importKey()') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SubtleCrypto.importKey")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

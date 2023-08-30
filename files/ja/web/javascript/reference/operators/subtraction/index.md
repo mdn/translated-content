@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction
 ## 構文
 
 ```js
-x - y
+x - y;
 ```
 
 ## 例
@@ -20,14 +20,14 @@ x - y
 ### 数値の減算
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### 非数の減算
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## 仕様書

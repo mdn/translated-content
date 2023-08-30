@@ -1,12 +1,6 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
 
 {{CSSRef}}
@@ -17,7 +11,7 @@ Il est possible d'utiliser des valeurs négatives pour chacun des côtés.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
+Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/Élément_remplacé) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
 
 > **Note :** Les marges créent un espace supplémentaire à l'extérieur de l'élément. Le _« remplissage »_ ({{cssxref("padding")}}) permet quant à lui de créer un espace supplémentaire à l'intérieur de l'élément.
 
@@ -90,16 +84,8 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 #### HTML
 
 ```html
-<div class="ex1">
-  margin: auto;
-  background: gold;
-  width: 66%;
-</div>
-<div class="ex2">
-  margin: 20px 0px 0px -20px;
-  background: gold;
-  width: 66%;
-</div>
+<div class="ex1">margin: auto; background: gold; width: 66%;</div>
+<div class="ex2">margin: 20px 0px 0px -20px; background: gold; width: 66%;</div>
 ```
 
 #### Résultat
@@ -109,23 +95,23 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 ### Autres exemples
 
 ```css
-margin: 5%;                /* tous les côtés avec une marge de 5% */
-margin: 10px;              /* tous les côtés avec une marge de 10px */
+margin: 5%; /* tous les côtés avec une marge de 5% */
+margin: 10px; /* tous les côtés avec une marge de 10px */
 
-margin: 1.6em 20px;        /* haut et bas à 1.6em     */
-                           /* gauche et droite à 20px */
+margin: 1.6em 20px; /* haut et bas à 1.6em     */
+/* gauche et droite à 20px */
 
-margin: 10px 3% 1em;       /* haut à 10px, gauche et droite à 3% */
-                           /* bas à 1em */
+margin: 10px 3% 1em; /* haut à 10px, gauche et droite à 3% */
+/* bas à 1em */
 
 margin: 10px 3px 30px 5px; /* haut à 10px, droite à 3px */
-                           /* bas à 30px, gauche à 5px  */
+/* bas à 30px, gauche à 5px  */
 
-margin: 1em auto;          /* marge de 1em en haut et en bas       */
-                           /* la boîte est centrée horizontalement */
+margin: 1em auto; /* marge de 1em en haut et en bas       */
+/* la boîte est centrée horizontalement */
 
-margin: auto;              /* boîte centrée horizontalement */
-                           /* marge nulle en haut et en bas */
+margin: auto; /* boîte centrée horizontalement */
+/* marge nulle en haut et en bas */
 ```
 
 ## Notes

@@ -1,15 +1,6 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createBuffer
-translation_of: Web/API/BaseAudioContext/createBuffer
 ---
 
 {{APIRef("API Web Audio")}}
@@ -23,7 +14,11 @@ Pour plus de détails sur les tampons audio, consultez la page de référence {{
 ## Syntaxe
 
 ```js
-var tampon = baseAudioContext.createBuffer(nbDeCanaux, longueur, frequenceDEchantillonnage);
+var tampon = baseAudioContext.createBuffer(
+  nbDeCanaux,
+  longueur,
+  frequenceDEchantillonnage,
+);
 ```
 
 ### Paramètres
@@ -67,7 +62,11 @@ Examinons maintenant un exemple de `createBuffer()` plus complexe, dans lequel n
 var ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
 
 // Création d'un tampon stéréo vide de trois secondes à la fréquence d'échantillonnage de l'AudioContext
-var monArrayBuffer = ctxAudio.createBuffer(2, ctxAudio.sampleRate * 3, ctxAudio.sampleRate);
+var monArrayBuffer = ctxAudio.createBuffer(
+  2,
+  ctxAudio.sampleRate * 3,
+  ctxAudio.sampleRate,
+);
 
 // Remplissage du tampon avec du bruit blanc ;
 // simplement des valeurs aléatoires entre -1,0 et 1,0

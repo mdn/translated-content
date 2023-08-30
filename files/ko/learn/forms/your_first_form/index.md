@@ -1,7 +1,6 @@
 ---
 title: 나의 첫 HTML 폼
 slug: Learn/Forms/Your_first_form
-original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
 
 이 문서는 HTML 폼 소개 문서입니다. 간단한 폼들을 살펴보면서 HTML 폼을 만들기에 대한 기본적인 필요 사항들을 볼 수 있을 것이다. 이 문서는 HTML폼에 대해서는 아무것도 몰라도 되지만 다음 문서에 나와 있는 기본적인 HTML이나 CSS를 알아야 한다. ([the basics of HTML](/ko/docs/HTML/Introduction), [CSS](/ko/docs/CSS/Getting_Started))
@@ -42,9 +41,7 @@ HTML 폼과 일반적인 HTML 요소의 주요 차이점은 폼에 의해 수집
 모든 HTML 폼은 {{HTMLElement("form")}} 요소로 다음과 같이 시작된다:
 
 ```html
-<form action="/my-handling-form-page" method="post">
-
-</form>
+<form action="/my-handling-form-page" method="post"></form>
 ```
 
 이 요소는 폼의 공식적인 형태이다. 이 요소는 다음 {{HTMLElement("div")}} 나 {{HTMLElement("p")}} 요소와 같이 사용되고,뿐만 아니라 폼이 동작하는 방식을 설정하는 일부 속성들을 지정 해야한다. 이러한 모든 속성은 선택적이지만 `action` 속성과 `method` 속성은 필수적으로 설정해야 한다.
@@ -62,18 +59,18 @@ HTML코드를 다음과 같이 짤 것이다.
 
 ```html
 <form action="/my-handling-form-page" method="post">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" />
-    </div>
-    <div>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" />
-    </div>
-    <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg"></textarea>
-    </div>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+  </div>
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" />
+  </div>
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg"></textarea>
+  </div>
 </form>
 ```
 
@@ -99,22 +96,22 @@ HTML코드를 다음과 같이 짤 것이다.
 
 ```html
 <form action="/my-handling-form-page" method="post">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" />
-    </div>
-    <div>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" />
-    </div>
-    <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg"></textarea>
-    </div>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+  </div>
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" />
+  </div>
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg"></textarea>
+  </div>
 
-    <div class="button">
-        <button type="submit">Send your message</button>
-    </div>
+  <div class="button">
+    <button type="submit">Send your message</button>
+  </div>
 </form>
 ```
 
@@ -138,13 +135,13 @@ CSS 스타일시트를 이용하여 조금만더 나이스하게 만들어 보�
 
 ```css
 form {
-    /* Just to center the form on the page */
-    margin: 0 auto;
-    width: 400px;
-    /* To see the outline of the form */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
 }
 ```
 
@@ -152,7 +149,7 @@ form {
 
 ```css
 form div + div {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 ```
 
@@ -160,10 +157,10 @@ form div + div {
 
 ```css
 label {
-    /* To make sure that all label have the same size and are properly align */
-    display: inline-block;
-    width: 90px;
-    text-align: right;
+  /* To make sure that all label have the same size and are properly align */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
 }
 ```
 
@@ -172,27 +169,29 @@ HTML 폼을 다루는 가장 어려운 것중 하나는 HTML자체를 위젯으�
 폰트, 크기, 테두리를 변경 해보자
 
 ```css
-input, textarea {
-    /* To make sure that all text fields have the same font settings
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
-    font: 1em sans-serif;
+  font: 1em sans-serif;
 
-    /* To give the same size to all text field */
-    width: 300px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  /* To give the same size to all text field */
+  width: 300px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
-    /* To harmonize the look & feel of text field border */
-    border: 1px solid #999;
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
 }
 ```
 
 HTML 폼은 요소의 상태를 나타내는 많은 가상클래스 를 지원한다.예르들어 위젯이 활성화 되면 하이라이트 효과를 추가할 수있다. 이것은 사용자가 쉽게 따라가도록 하는 편리한 방법이다.
 
 ```css
-input:focus, textarea:focus {
-    /* To give a little highlight on active elements */
-    border-color: #000;
+input:focus,
+textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
 }
 ```
 
@@ -202,15 +201,15 @@ input:focus, textarea:focus {
 
 ```css
 textarea {
-    /* To properly align multiline text fields with their labels */
-    vertical-align: top;
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
 
-    /* To give enough room to type some text */
-    height: 5em;
+  /* To give enough room to type some text */
+  height: 5em;
 
-    /* To allow users to resize any textarea vertically
+  /* To allow users to resize any textarea vertically
        It does not work on every browsers */
-    resize: vertical;
+  resize: vertical;
 }
 ```
 
@@ -218,14 +217,14 @@ textarea {
 
 ```css
 .button {
-    /* To position the buttons to the same position of the text fields */
-    padding-left: 90px; /* same size as the label elements */
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
 }
 
 button {
-    /* This extra margin represent roughly the same space as the space
+  /* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
-    margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
@@ -245,22 +244,22 @@ button {
 
 ```html
 <form action="/my-handling-form-page" method="post">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" />
-    </div>
-    <div>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" name="user_email" />
-    </div>
-    <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
-    </div>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </div>
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_email" />
+  </div>
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
 
-    <div class="button">
-        <button type="submit">Send your message</button>
-    </div>
+  <div class="button">
+    <button type="submit">Send your message</button>
+  </div>
 </form>
 ```
 
@@ -272,10 +271,10 @@ button {
 
 축하한다! 첫번째 HTML폼을 만들었다.
 
-| Live example                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Live example                                                                                               |
+| ---------------------------------------------------------------------------------------------------------- |
 | {{ EmbedLiveSample('A_simple_form', '100%', '240', '', 'Learn/HTML/Forms/Your_first_HTML_form/Example') }} |
-| [Check out the source code](/ko/docs/HTML/Forms/My_first_HTML_form/Example)                                                                  |
+| [Check out the source code](/ko/docs/HTML/Forms/My_first_HTML_form/Example)                                |
 
 하지만 이제 시작일 뿐이고, 더 깊게 파고들 시간이다. HTML폼은 이 문서에서 본 것 보다 더 강력한 도구이고, 이 가이드의 다른 문서가 나머지 내용을 배우는데 도움이 될 것이다.
 

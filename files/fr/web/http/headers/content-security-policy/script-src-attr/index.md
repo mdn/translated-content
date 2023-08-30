@@ -1,8 +1,6 @@
 ---
-title: 'CSP : script-src-attr'
+title: "CSP : script-src-attr"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
-translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
-browser-compat: http.headers.csp.Content-Security-Policy.script-src-attr
 ---
 
 {{HTTPSidebar}}

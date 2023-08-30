@@ -1,8 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-browser-compat: css.properties.filter
-translation_of: Web/CSS/filter
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -47,18 +45,18 @@ filter: unset;
 Avec une fonction, on utilisera la forme suivante&nbsp;:
 
 ```css
-filter: <filter-function> [<filter-function>]* | none
+filter: <filter-function> [<filter-function>] * | none;
 ```
 
 En utilisant un élément SVG [`<filter>`](/fr/docs/Web/SVG/Element/filter), on utilisera la forme suivante&nbsp;:
 
 ```css
-filter: url(file.svg#filter-element-id)
+filter: url(file.svg#filter-element-id);
 ```
 
 ### Interpolation
 
-Si les deux filtres possèdent chacun une liste de même longueur (sans [`<url>`](/fr/docs/Web/CSS/url()), chacune des fonctions est interpolée selon ses propres règles. Si les deux listes ont des longueurs différentes, les derniers filtres de la liste la plus longue sont utilisés avec leurs valeurs par défaut afin de compléter la liste la plus courte, ensuite chaque fonction est interpolée selon ses propres règles. Si un filtre vaut `none`, il est remplacé avec la fonction de filtre (avec ses valeurs par défaut) de l'autre liste puis l'ensemble des fonctions est interpolé selon les règles de chacune. Dans les autres cas, on utilise une interpolation discrète.
+Si les deux filtres possèdent chacun une liste de même longueur (sans [`<url>`](</fr/docs/Web/CSS/url()>), chacune des fonctions est interpolée selon ses propres règles. Si les deux listes ont des longueurs différentes, les derniers filtres de la liste la plus longue sont utilisés avec leurs valeurs par défaut afin de compléter la liste la plus courte, ensuite chaque fonction est interpolée selon ses propres règles. Si un filtre vaut `none`, il est remplacé avec la fonction de filtre (avec ses valeurs par défaut) de l'autre liste puis l'ensemble des fonctions est interpolé selon les règles de chacune. Dans les autres cas, on utilise une interpolation discrète.
 
 ## Fonctions
 
@@ -71,7 +69,7 @@ Lorsqu'une seule propriété `filter` possède deux fonctions (ou plus), le rés
 La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/fr/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
 
 ```css
-filter: url(resources.svg#c1)
+filter: url(resources.svg#c1);
 ```
 
 ### `blur()`
@@ -79,7 +77,7 @@ filter: url(resources.svg#c1)
 Cette fonction applique un flou gaussien à l'image d'entrée. La valeur du paramètre correspond au rayon de flou (l'écart-type de la gaussienne) utilisé. Plus la valeur est importante, plus le flou sera prononcé. La valeur par défaut du paramètre est 0. Selon la spécification, le paramètre est une valeur de type [`<length>`](/fr/docs/Web/CSS/length) mais la fonction n'accepte pas de valeurs exprimées en pourcentages.
 
 ```css
-filter: blur(5px)
+filter: blur(5px);
 ```
 
 ```html hidden
@@ -87,26 +85,54 @@ filter: blur(5px)
   <thead>
     <tr>
       <th style="text-align: left;" scope="col">Image originale</th>
-      <th style="text-align: left;" scope="col">Exemple <i lang="en">live</i></th>
+      <th style="text-align: left;" scope="col">
+        Exemple <i lang="en">live</i>
+      </th>
       <th style="text-align: left;" scope="col">Équivalent SVG</th>
       <th style="text-align: left;" scope="col">Exemple statique</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_2.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_2.jpeg"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg id="img3" overflow="visible" viewbox="0 0 212 161" color-interpolation-filters="sRGB">
+          <svg
+            id="img3"
+            overflow="visible"
+            viewbox="0 0 212 161"
+            color-interpolation-filters="sRGB">
             <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" />
             </filter>
-            <image xlink:href="test_form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/>
+            <image
+              xlink:href="test_form_2.jpeg"
+              filter="url(#svgBlur)"
+              width="212px"
+              height="161px" />
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_2_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_2_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -114,20 +140,28 @@ filter: blur(5px)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida, Arial, Helvetica, sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -webkit-filter:blur(5px);
-  -ms-filter:blur(5px);
-  filter:blur(5px); }
+  width: 100%;
+  height: auto;
+  -webkit-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -148,11 +182,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -166,14 +200,14 @@ table.standard-table td {
 
 {{EmbedLiveSample('','100%','236px','','', 'no-codepen')}}
 
-> **Note :** Voir [`blur()`](/fr/docs/Web/CSS/filter-function/blur()) pour plus d'informations.
+> **Note :** Voir [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>) pour plus d'informations.
 
 ### `brightness()`
 
-La fonction [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness()) permet de modifier la luminosité d'une image grâce à un facteur linéaire. Un argument égal `0%` créera une image totalement noire et une valeur de `100%` conservera l'image d'entrée telle quelle. Il est possible d'utiliser des valeurs supérieures à `100%` afin d'obtenir des images saturées en luminosité. La valeur par défaut pour l'argument est `1`.
+La fonction [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>) permet de modifier la luminosité d'une image grâce à un facteur linéaire. Un argument égal `0%` créera une image totalement noire et une valeur de `100%` conservera l'image d'entrée telle quelle. Il est possible d'utiliser des valeurs supérieures à `100%` afin d'obtenir des images saturées en luminosité. La valeur par défaut pour l'argument est `1`.
 
 ```css
-filter: brightness(2)
+filter: brightness(2);
 ```
 
 ```svg
@@ -220,27 +254,35 @@ filter: brightness(2)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -ms-filter:brightness(2);
-  filter:brightness(2); }
+  width: 100%;
+  height: auto;
+  -moz-filter: brightness(2);
+  -webkit-filter: brightness(2);
+  -ms-filter: brightness(2);
+  filter: brightness(2);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
   border-spacing: 0px;
   margin: 0px 0px 1.286em;
-  height:100%;
+  height: 100%;
   width: 85%;
 }
 table.standard-table th {
@@ -255,24 +297,24 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','231px','','', 'no-codepen')}}
 
-> **Note :** Voir [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness()) pour plus d'informations.
+> **Note :** Voir [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>) pour plus d'informations.
 
 ### `contrast()`
 
-La fonction [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast()) permet d'ajuster le contraste de l'image d'entrée. Une valeur de `0%` créera une image entièrement grise. Une valeur de `100%` conservera l'image d'entrée telle quelle. Il est possible d'utiliser des valeurs supérieures à 100% pour augmenter le contraste. La valeur par défaut de l'argument est `1`.
+La fonction [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>) permet d'ajuster le contraste de l'image d'entrée. Une valeur de `0%` créera une image entièrement grise. Une valeur de `100%` conservera l'image d'entrée telle quelle. Il est possible d'utiliser des valeurs supérieures à 100% pour augmenter le contraste. La valeur par défaut de l'argument est `1`.
 
 ```css
-filter: contrast(200%)
+filter: contrast(200%);
 ```
 
 ```svg
@@ -319,21 +361,29 @@ filter: contrast(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -ms-filter:contrast(200%);
-  filter:contrast(200%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+  -ms-filter: contrast(200%);
+  filter: contrast(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -354,21 +404,21 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','203px','','', 'no-codepen')}}
 
-> **Note :** Voir [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast()) pour plus d'informations.
+> **Note :** Voir [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>) pour plus d'informations.
 
 ### `drop-shadow()`
 
-La fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow()) permet d'appliquer une ombre portée à l'image d'entrée. Une ombre portée est une version décalée, dans une couleur donnée, du canal alpha de l'image qui est affiché sous celle-ci. La fonction peut accepter une valeur de type [`<shadow>`](/fr/docs/Web/CSS/shadow) (définie dans la spécification CSS3 sur les arrière-plans), une exception&nbsp;: les mots-clés `inset` et `spread` ne sont pas autorisés. Cette fonction est semblable à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow) plus répandue&nbsp;; seule différence&nbsp;: les navigateurs utilisent parfois l'accélération matérielle pour les filtres ce qui peut permettre d'obtenir de meilleures performances. Les paramètres de l'argument `<shadow>` sont les suivants&nbsp;:
+La fonction [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>) permet d'appliquer une ombre portée à l'image d'entrée. Une ombre portée est une version décalée, dans une couleur donnée, du canal alpha de l'image qui est affiché sous celle-ci. La fonction peut accepter une valeur de type [`<shadow>`](/fr/docs/Web/CSS/shadow) (définie dans la spécification CSS3 sur les arrière-plans), une exception&nbsp;: les mots-clés `inset` et `spread` ne sont pas autorisés. Cette fonction est semblable à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow) plus répandue&nbsp;; seule différence&nbsp;: les navigateurs utilisent parfois l'accélération matérielle pour les filtres ce qui peut permettre d'obtenir de meilleures performances. Les paramètres de l'argument `<shadow>` sont les suivants&nbsp;:
 
 - `<offset-x>` `<offset-y>` (nécessaire)
   - : Deux valeurs [`<length>`](/fr/docs/Web/CSS/length) qui indiquent le décalage de l'ombre portée. `<offset-x>` définit la distance horizontale&nbsp;: des valeurs négatives décaleront l'ombre à gauche de l'élément. `<offset-y>` définit la distance verticale&nbsp;: des valeurs négatives décaleront l'ombre au-dessus de l'élément. Se référer à la page [`<length>`](/fr/docs/Web/CSS/length) pour les différentes unités utilisables.
@@ -381,7 +431,7 @@ La fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow()) pe
   - : Voir [`<color>`](/fr/docs/Web/CSS/color_value) pour les mots-clés et notations possibles. Si ce paramètre n'est pas défini, la couleur choisie dépendra du navigateur. Pour Gecko (Firefox), Presto (Opera) et Trident (Internet Explorer), la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) est utilisée. Pour WebKit, si la couleur est absente, l'ombre sera transparente (donc inutile).
 
 ```css
-filter: drop-shadow(16px 16px 10px black)
+filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```svg
@@ -459,29 +509,36 @@ filter: drop-shadow(16px 16px 10px black)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: drop-shadow(16px 16px 10px black);
   -webkit-filter: drop-shadow(16px 16px 10px black);
   -ms-filter: drop-shadow(16px 16px 10px black);
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width:100%;
-  height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
+  width: 100%;
+  height: auto;
+  -moz-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -ms-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -506,25 +563,26 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
-#img3, #img13 {
-  width:100%;
-  height:auto;
+#img3,
+#img13 {
+  width: 100%;
+  height: auto;
 }
 ```
 
 {{EmbedLiveSample('','100%','400px','','', 'no-codepen')}}
 
-> **Note :** Voir [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow()) pour plus d'informations.
+> **Note :** Voir [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>) pour plus d'informations.
 
 ### `grayscale()`
 
-Avec la fonction [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale()), l'image d'entrée est convertie en niveau de gris. La valeur de l'argument définit la force de cette conversion. En utilisant une valeur de `100%` sera complètement en niveaux de gris. `0%` conservera l'image telle quelle. La valeur par défaut du paramètre est `0`.
+Avec la fonction [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>), l'image d'entrée est convertie en niveau de gris. La valeur de l'argument définit la force de cette conversion. En utilisant une valeur de `100%` sera complètement en niveaux de gris. `0%` conservera l'image telle quelle. La valeur par défaut du paramètre est `0`.
 
 ```css
-filter: grayscale(100%)
+filter: grayscale(100%);
 ```
 
 ```html hidden
@@ -559,21 +617,29 @@ filter: grayscale(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
-  filter:grayscale(100%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -594,28 +660,28 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','209px','','', 'no-codepen')}}
 
-> **Note :** Voir [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale()) pour plus d'informations.
+> **Note :** Voir [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>) pour plus d'informations.
 
 ### `hue-rotate()`
 
-La fonction [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate()) applique une rotation de teinte à l'image d'entrée. La valeur de l'angle passé en argument définit le nombre de degrés parcouru sur le cercle des couleurs. Une valeur de `0deg` conservera l'image telle quelle. La valeur par défaut du paramètre est `0deg`. Il n'y a pas de valeur maximale pour l'argument, si une valeur supérieure à `360deg` est utilisée, ce sera la mesure de l'angle correspondante qui sera utilisée.
+La fonction [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>) applique une rotation de teinte à l'image d'entrée. La valeur de l'angle passé en argument définit le nombre de degrés parcouru sur le cercle des couleurs. Une valeur de `0deg` conservera l'image telle quelle. La valeur par défaut du paramètre est `0deg`. Il n'y a pas de valeur maximale pour l'argument, si une valeur supérieure à `360deg` est utilisée, ce sera la mesure de l'angle correspondante qui sera utilisée.
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```html hidden
@@ -647,21 +713,29 @@ filter: hue-rotate(90deg)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
-  filter:hue-rotate(90deg); }
+  width: 100%;
+  height: auto;
+  -moz-filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -682,32 +756,34 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 ```html
-<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -999999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="svgHueRotate">
-    <feColorMatrix type="hueRotate" values="[angle]"/>
+    <feColorMatrix type="hueRotate" values="[angle]" />
   </filter>
 </svg>
 ```
 
 {{EmbedLiveSample('','100%','221px','','', 'no-codepen')}}
 
-> **Note :** Voir [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate()) pour plus d'informations.
+> **Note :** Voir [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>) pour plus d'informations.
 
 ### `invert()`
 
-La fonction [`invert()`](/fr/docs/Web/CSS/filter-function/invert()) permet d'inverser les couleurs de l'image d'entrée. La valeur de l'argument définit la force de cette inversion. Une valeur de `100%` inversera complètement les couleurs (tel un négatif) et une valeur `0%` conservera l'image d'entrée telle quelle. La valeur par défaut de l'argument est `0`.
+La fonction [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>) permet d'inverser les couleurs de l'image d'entrée. La valeur de l'argument définit la force de cette inversion. Une valeur de `100%` inversera complètement les couleurs (tel un négatif) et une valeur `0%` conservera l'image d'entrée telle quelle. La valeur par défaut de l'argument est `0`.
 
 ```css
-filter: invert(100%)
+filter: invert(100%);
 ```
 
 ```html hidden
@@ -742,21 +818,29 @@ filter: invert(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: invert(100%);
   -webkit-filter: invert(100%);
   -ms-filter: invert(100%);
-  filter: invert(100%); }
+  filter: invert(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -777,24 +861,24 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','407px','','', 'no-codepen')}}
 
-> **Note :** Voir [`invert()`](/fr/docs/Web/CSS/filter-function/invert()) pour plus d'informations.
+> **Note :** Voir [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>) pour plus d'informations.
 
 ### `opacity()`
 
-La fonction [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity()) permet de régler l'opacité de l'image d'entrée. La valeur de l'argument indique la force de l'opacité. Ainsi, une valeur de `0%` rendra l'image complètement transparente et une valeur de `100%` conservera l'image telle quelle. Les valeurs intermédiaires appliqueront des effets proportionnels. La valeur par défaut de l'argument est `1`. Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity), toutefois, avec les filtres, certains navigateurs utilisent l'accélération matérielle, ce qui permet d'obtenir de meilleures performances.
+La fonction [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>) permet de régler l'opacité de l'image d'entrée. La valeur de l'argument indique la force de l'opacité. Ainsi, une valeur de `0%` rendra l'image complètement transparente et une valeur de `100%` conservera l'image telle quelle. Les valeurs intermédiaires appliqueront des effets proportionnels. La valeur par défaut de l'argument est `1`. Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity), toutefois, avec les filtres, certains navigateurs utilisent l'accélération matérielle, ce qui permet d'obtenir de meilleures performances.
 
 ```css
-filter: opacity(50%)
+filter: opacity(50%);
 ```
 
 ```html hidden
@@ -827,21 +911,29 @@ filter: opacity(50%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: opacity(50%);
   -webkit-filter: opacity(50%);
   -ms-filter: opacity(50%);
-  filter: opacity(50%); }
+  filter: opacity(50%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -862,24 +954,24 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','210px','','', 'no-codepen')}}
 
-> **Note :** Voir [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity()) pour plus d'informations.
+> **Note :** Voir [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>) pour plus d'informations.
 
 ### `saturate()`
 
-La fonction [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate()) sature l'image d'entrée. La valeur de l'argument indique la force de la saturation. Une valeur de `0%` fera que l'image sera totalement désaturée et une valeur de `100%` conservera l'image d'entrée telle quelle. Les valeurs intermédiaires auront un effet linéaire. Il est possible d'utiliser des valeurs supérieures à `100%` pour obtenir un effet de sursaturation. La valeur par défaut de l'argument est `1`.
+La fonction [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>) sature l'image d'entrée. La valeur de l'argument indique la force de la saturation. Une valeur de `0%` fera que l'image sera totalement désaturée et une valeur de `100%` conservera l'image d'entrée telle quelle. Les valeurs intermédiaires auront un effet linéaire. Il est possible d'utiliser des valeurs supérieures à `100%` pour obtenir un effet de sursaturation. La valeur par défaut de l'argument est `1`.
 
 ```css
-filter: saturate(200%)
+filter: saturate(200%);
 ```
 
 ```html hidden
@@ -911,21 +1003,29 @@ filter: saturate(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: saturate(200%);
   -webkit-filter: saturate(200%);
   -ms-filter: saturate(200%);
-  filter: saturate(200%); }
+  filter: saturate(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -946,24 +1046,24 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','332px','','', 'no-codepen')}}
 
-> **Note :** Voir [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate()) pour plus d'informations.
+> **Note :** Voir [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>) pour plus d'informations.
 
 ### `sepia()`
 
-La fonction [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia()) convertit l'image d'entrée est convertie en sépia. La valeur de l'argument définit la proportion de la conversion. Ainsi, si on utilise un argument égal à 100%, le résultat sera entièrement sépia et si on utilise une valeur de `0%`, l'image d'entrée sera inchangée. Les valeurs comprises entre `0%` et `100%` appliquent l'effet de façon linéaire. La valeur par défaut de l'argument est `0`.
+La fonction [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>) convertit l'image d'entrée est convertie en sépia. La valeur de l'argument définit la proportion de la conversion. Ainsi, si on utilise un argument égal à 100%, le résultat sera entièrement sépia et si on utilise une valeur de `0%`, l'image d'entrée sera inchangée. Les valeurs comprises entre `0%` et `100%` appliquent l'effet de façon linéaire. La valeur par défaut de l'argument est `0`.
 
 ```css
-filter: sepia(100%)
+filter: sepia(100%);
 ```
 
 ```html hidden
@@ -998,21 +1098,29 @@ filter: sepia(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: sepia(100%);
   -webkit-filter: sepia(100%);
   -ms-filter: sepia(100%);
-  filter: sepia(100%); }
+  filter: sepia(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -1033,24 +1141,24 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 {{EmbedLiveSample('','100%','229px','','', 'no-codepen')}}
 
-> **Note :** Voir [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia()) pour plus d'informations.
+> **Note :** Voir [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>) pour plus d'informations.
 
 ## Enchaîner les fonctions
 
 On peut appliquer autant de fonction que nécessaire pour manipuler le rendu obtenu. Dans l'exemple suivant, on augmente le contraste et la luminosité de l'image&nbsp;:
 
 ```css
-filter: contrast(175%) brightness(103%)
+filter: contrast(175%) brightness(103%);
 ```
 
 ```html hidden
@@ -1058,15 +1166,35 @@ filter: contrast(175%) brightness(103%)
   <thead>
     <tr>
       <th style="text-align: left;" scope="col">Image originale</th>
-      <th style="text-align: left;" scope="col">Exemple <i lang="en">live</i></th>
+      <th style="text-align: left;" scope="col">
+        Exemple <i lang="en">live</i>
+      </th>
       <th style="text-align: left;" scope="col">Exemple statique</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img4" class="internal default" src="test_form_8_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_8_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -1074,17 +1202,24 @@ filter: contrast(175%) brightness(103%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: contrast(175%) brightness(103%);
   -webkit-filter: contrast(175%) brightness(103%);
   -ms-filter: contrast(175%) brightness(103%);
@@ -1110,11 +1245,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 

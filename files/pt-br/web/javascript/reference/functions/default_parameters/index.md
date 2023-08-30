@@ -1,7 +1,6 @@
 ---
 title: Parâmetros Predefinidos
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-original_slug: Web/JavaScript/Reference/Functions/Parametros_Predefinidos
 ---
 
 {{jsSidebar("Functions")}}
@@ -24,14 +23,14 @@ No passado, a estratégia de definir valores padrão para parâmetros era testar
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ? b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
   return a * b;
 }
 
 multiply(5, 2); // 10
 multiply(5, 1); // 5
-multiply(5);    // 5
+multiply(5); // 5
 ```
 
 Com o parâmetros predefinidos a checagem no corpo da função nao é mais necessária. Agora você pode simplesmente colocar 1 como valor padrão para `b` na declaração da função:
@@ -43,7 +42,7 @@ function multiply(a, b = 1) {
 
 multiply(5, 2); // 10
 multiply(5, 1); // 5
-multiply(5);    // 5
+multiply(5); // 5
 ```
 
 ## Exemplos
@@ -82,13 +81,15 @@ append(2); //[2], not [1, 2]
 Este mesmo comportamento é aplicado para funções e variáveis:
 
 ```js
-function callSomething(thing = something()) { return thing }
+function callSomething(thing = something()) {
+  return thing;
+}
 
-function something(){
+function something() {
   return "sth";
 }
 
-callSomething();  //sth
+callSomething(); //sth
 ```
 
 ### Parâmetros predefinidos estão disponíveis para os parâmetros seguintes à sua definição
@@ -116,59 +117,67 @@ Esta funcionalidade torna-se uma maneira direta e demonstra quantos casos extrem
 
 ```js
 function go() {
-  return ":P"
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a,b,c,d,e,f,g];
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
+  return [a, b, c, d, e, f, g];
 }
-function withoutDefaults(a, b, c, d, e, f, g){
-  switch(arguments.length){
+function withoutDefaults(a, b, c, d, e, f, g) {
+  switch (arguments.length) {
     case 0:
-      a
+      a;
     case 1:
-      b = 5
+      b = 5;
     case 2:
-      c = b
+      c = b;
     case 3:
       d = go();
     case 4:
-      e = this
+      e = this;
     case 5:
-      f = arguments
+      f = arguments;
     case 6:
       g = this.value;
     default:
   }
-  return [a,b,c,d,e,f,g];
+  return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value:"=^_^="});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", window, arguments, "=^_^="]
 
-
-withoutDefaults.call({value:"=^_^="});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", window, arguments, "=^_^="]
 ```
 
 ### Funções definidadas dentro do corpo da função
 
-Introduzido no Gecko 33. Funções declaradas no corpo da função não podem ser referenciada dentro de parâmetos padrão e lançará um {{jsxref("ReferenceError")}} (atualmente um {{jsxref("TypeError")}} no SpiderMonkey, veja {{bug(1022967)}}). Parâmetros padrão são sempre executados primeiro, declarações de funções dentro do corpo de outra função são avaliadas depois.
+Introduzido no Gecko 33. Funções declaradas no corpo da função não podem ser referenciada dentro de parâmetos padrão e lançará um {{jsxref("ReferenceError")}} (atualmente um {{jsxref("TypeError")}} no SpiderMonkey, veja [Erro do Firefox 1022967](https://bugzil.la/1022967)). Parâmetros padrão são sempre executados primeiro, declarações de funções dentro do corpo de outra função são avaliadas depois.
 
 ```js
 // Não funciona! Throws ReferenceError.
 function f(a = go()) {
-  function go(){return ":P"}
+  function go() {
+    return ":P";
+  }
 }
 ```
 
 ### Parâmetros sem valor padrão depois de parâmetros com valores padrão
 
-Antes do Gecko 26, o seguinte código resultaria em um {{jsxref("SyntaxError")}}. Isto foi corrigido no {{bug(777060)}} e funciona como esperado em versões posteriores:
+Antes do Gecko 26, o seguinte código resultaria em um {{jsxref("SyntaxError")}}. Isto foi corrigido no [Erro do Firefox 777060](https://bugzil.la/777060) e funciona como esperado em versões posteriores:
 
 ```js
-function f(x=1, y) {
+function f(x = 1, y) {
   return [x, y];
 }
 
@@ -180,7 +189,7 @@ f(); // [1, undefined]
 É possível definir valores padrões com a notação [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
   return x + y + z;
 }
 
@@ -189,8 +198,8 @@ f(); // 6
 
 ## Especificações
 
-| Especificação                                                                                    | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| Especificação                                                            | Status           | Comentário         |
+| ------------------------------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES6')}} | Definição Inicial. |
 
 ## Compatibilidade com navegadores

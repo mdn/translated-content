@@ -1,7 +1,6 @@
 ---
 title: 装飾的なレターヘッド付きの便箋の作成
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-original_slug: Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}

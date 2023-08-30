@@ -1,7 +1,6 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var creating = browser.tabs.create(
-  createProperties   // object
-)
+  createProperties, // object
+);
 ```
 
 ### Paramètres
@@ -72,16 +71,16 @@ Ouvre "https\://example.org" dans un nouvel onglet :
 
 ```js
 function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`)
+  console.log(`Created new tab: ${tab.id}`);
 }
 
 function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var creating = browser.tabs.create({
-    url:"https://example.org"
+    url: "https://example.org",
   });
   creating.then(onCreated, onError);
 });

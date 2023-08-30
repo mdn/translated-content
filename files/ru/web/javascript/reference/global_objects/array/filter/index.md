@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
 
 {{JSRef}}
@@ -69,7 +60,7 @@ filter(function callbackFn(element, index, array) { ... }, thisArg)
 2. индекс элемента;
 3. массив, по которому осуществляется проход.
 
-Если в метод `filter()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение `undefined`. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно [обычным правилам определения `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+Если в метод `filter()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение `undefined`. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно [обычным правилам определения `this`](/ru/docs/Web/JavaScript/Reference/Operators/this).
 
 Метод `filter()` не изменяет массив, для которого он был вызван.
 
@@ -122,29 +113,29 @@ let arr = [
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
-]
+  { id: "undefined" },
+];
 
-let invalidEntries = 0
+let invalidEntries = 0;
 
 function filterByID(item) {
   if (Number.isFinite(item.id) && item.id !== 0) {
-    return true
+    return true;
   }
-  invalidEntries++
+  invalidEntries++;
   return false;
 }
 
-let arrByID = arr.filter(filterByID)
+let arrByID = arr.filter(filterByID);
 
-console.log('Отфильтрованный массив\n', arrByID)
+console.log("Отфильтрованный массив\n", arrByID);
 // Отфильтрованный массив
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Количество некорректных элементов = ', invalidEntries)
+console.log("Количество некорректных элементов = ", invalidEntries);
 // Количество некорректных элементов = 5
 ```
 
@@ -153,35 +144,37 @@ console.log('Количество некорректных элементов = 
 В следующем примере `filter()` используется для фильтрации содержимого массива на основе входных данных.
 
 ```js
-var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+var fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Элементы массива фильтруется на основе критериев поиска (query)
-*/
+ */
 function filterItems(query) {
-  return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+  return fruits.filter(function (el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  });
 }
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 #### Реализация с использованием ES2015
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Элементы массива фильтруется на основе критериев поиска (query)
  */
 const filterItems = (arr, query) => {
-  return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
-}
+  return arr.filter(
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) !== -1,
+  );
+};
 
-console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
 ### Модификация изначального массива (изменение, добавление и удаление)
@@ -190,36 +183,36 @@ console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
 
 ```js
 // Изменение всех элементов
-let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+let words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 
-const modifiedWords = words.filter( (word, index, arr) => {
-  arr[index+1] +=' extra'
-  return word.length < 6
-})
+const modifiedWords = words.filter((word, index, arr) => {
+  arr[index + 1] += " extra";
+  return word.length < 6;
+});
 
-console.log(modifiedWords)
+console.log(modifiedWords);
 // Обратите внимание, что есть три слова длиной менее 6, но так как они были изменены,
 // возвращается одно слово ['spray']
 
 // Добавление новых элементов
-words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
-const appendedWords = words.filter( (word, index, arr) => {
-  arr.push('new')
-  return word.length < 6
-})
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
+const appendedWords = words.filter((word, index, arr) => {
+  arr.push("new");
+  return word.length < 6;
+});
 
-console.log(appendedWords)
+console.log(appendedWords);
 // Только три слова удовлетворяют условию, хотя `words` теперь имеет куда больше слов,
 // длинной меньше 6 символов: ['spray', 'limit', 'elite']
 
 // Удаление элементов
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter( (word, index, arr) => {
-  arr.pop()
-  return word.length < 6
-})
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
+const deleteWords = words.filter((word, index, arr) => {
+  arr.pop();
+  return word.length < 6;
+});
 
-console.log(deleteWords)
+console.log(deleteWords);
 // Заметьте, что 'elite' не получено, так как удалено из `words` до того,
 // как filter смог получить его: ['spray', 'limit']
 ```

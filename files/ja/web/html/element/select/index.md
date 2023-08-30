@@ -115,7 +115,7 @@ l10n:
 
 ## CSS のスタイル付け
 
-`<select>` 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。例えば、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_Fonts)を操作したり、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の `appearance` を削除したりすることができます。
+`<select>` 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。例えば、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_fonts)を操作したり、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の `appearance` を削除したりすることができます。
 
 しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 `<select>` 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) をを使用して独自のドロップダウンメニューを実装することを検討してください。
 
@@ -150,7 +150,8 @@ l10n:
 以下の例はもっと複雑で、 `<select>` 要素で使用できる機能をもっと示しています。
 
 ```html
-<label>Please choose one or more pets:
+<label>
+  Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>
@@ -183,7 +184,7 @@ l10n:
 
 この例では基本的に以下のことを行います。
 
-- 親ラッパーの `<select>` のコンテキスト（[`<option>`](/ja/docs/Web/HTML/Element/option)）を複製し、追加の HTML 要素と JavaScript を使用して標準の期待される動作を再実装します。これには、キーボードアクセシビリティを提供するための基本的なタブの動作が含まれます。
+- 親ラッパーの `<select>` のコンテキスト（[`<option>`](/ja/docs/Web/HTML/Element/option) 要素）を複製し、追加の HTML 要素と JavaScript を使用して標準の期待される動作を再実装します。これには、キーボードアクセシビリティを提供するための基本的なタブの動作が含まれます。
 - 状態と CSS を管理するために、いくつかの標準ネイティブの `属性` を新しい要素の `data-attributes` に対応付けします。
 
 > **メモ:** すべてのネイティブ機能をサポートしているわけではありません。これは標準的な HTML から始まりますが、 JSON データ、カスタム HTML、または他のソリューションから始めても同じ結果を得ることができます。
@@ -372,18 +373,18 @@ html body form fieldset#custom div.select div.header span {
 #### JavaScript
 
 ```js
-const selects = custom.querySelectorAll('select');
+const selects = custom.querySelectorAll("select");
 for (const select of selects) {
-  const div = document.createElement('div');
-  const header = document.createElement('div');
-  const datalist = document.createElement('datalist');
-  const optgroups = select.querySelectorAll('optgroup');
-  const span = document.createElement('span');
+  const div = document.createElement("div");
+  const header = document.createElement("div");
+  const datalist = document.createElement("datalist");
+  const optgroups = select.querySelectorAll("optgroup");
+  const span = document.createElement("span");
   const options = select.options;
   const parent = select.parentElement;
-  const multiple = select.hasAttribute('multiple');
+  const multiple = select.hasAttribute("multiple");
   function onclick(e) {
-    const disabled = this.hasAttribute('data-disabled');
+    const disabled = this.hasAttribute("data-disabled");
     select.value = this.dataset.value;
     span.innerText = this.dataset.label;
     if (disabled) return;
@@ -396,7 +397,7 @@ for (const select of selects) {
           this.setAttribute("data-checked", "");
         }
       } else {
-        const options = div.querySelectorAll('.option');
+        const options = div.querySelectorAll(".option");
         for (let i = 0; i < options.length; i++) {
           const option = options[i];
           option.removeAttribute("data-checked");
@@ -414,8 +415,8 @@ for (const select of selects) {
     }
   }
 
-  div.classList.add('select');
-  header.classList.add('header');
+  div.classList.add("select");
+  header.classList.add("header");
   div.tabIndex = 1;
   select.tabIndex = -1;
   span.innerText = select.label;
@@ -425,14 +426,14 @@ for (const select of selects) {
     div.dataset[attribute.name] = attribute.value;
   }
   for (let i = 0; i < options.length; i++) {
-    const option = document.createElement('div');
-    const label = document.createElement('div');
+    const option = document.createElement("div");
+    const label = document.createElement("div");
     const o = options[i];
     for (const attribute of o.attributes) {
       option.dataset[attribute.name] = attribute.value;
     }
-    option.classList.add('option');
-    label.classList.add('label');
+    option.classList.add("option");
+    label.classList.add("label");
     label.innerText = o.label;
     option.dataset.value = o.value;
     option.dataset.label = o.label;
@@ -444,25 +445,25 @@ for (const select of selects) {
   }
   div.appendChild(header);
   for (const o of optgroups) {
-    const optgroup = document.createElement('div');
-    const label = document.createElement('div');
-    const options = o.querySelectorAll('option');
+    const optgroup = document.createElement("div");
+    const label = document.createElement("div");
+    const options = o.querySelectorAll("option");
 
     Object.assign(optgroup, o);
-    optgroup.classList.add('optgroup');
-    label.classList.add('label');
+    optgroup.classList.add("optgroup");
+    label.classList.add("label");
     label.innerText = o.label;
     optgroup.appendChild(label);
     div.appendChild(optgroup);
     for (const o of options) {
-      const option = document.createElement('div');
-      const label = document.createElement('div');
+      const option = document.createElement("div");
+      const label = document.createElement("div");
 
       for (const attribute of o.attributes) {
         option.dataset[attribute.name] = attribute.value;
       }
-      option.classList.add('option');
-      label.classList.add('label');
+      option.classList.add("option");
+      label.classList.add("label");
       label.innerText = o.label;
       option.tabIndex = i + 1;
       option.dataset.value = o.value;
@@ -486,7 +487,7 @@ for (const select of selects) {
 
   div.onclick = (e) => {
     if (!multiple) {
-      const open = this.hasAttribute("data-open");
+      const open = div.hasAttribute("data-open");
       e.stopPropagation();
       if (open) {
         div.removeAttribute("data-open");
@@ -503,16 +504,18 @@ for (const select of selects) {
     }
   };
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener("click", (e) => {
     if (div.hasAttribute("data-open")) {
       div.removeAttribute("data-open");
     }
   });
 
-  const width = Math.max(...Array.from(options).map((e) => {
-    span.innerText = e.label;
-    return div.offsetWidth;
-  }));
+  const width = Math.max(
+    ...Array.from(options).map((e) => {
+      span.innerText = e.label;
+      return div.offsetWidth;
+    }),
+  );
 
   console.log(width);
   div.style.width = `${width}px`;

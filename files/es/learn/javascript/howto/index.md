@@ -38,8 +38,8 @@ Uno de los errores más comunes es declarar una función, pero no llamarla a nin
 
 ```js
 function miFuncion() {
-  alert('Esta es mi funcion.');
-};
+  alert("Esta es mi funcion.");
+}
 ```
 
 Este código no hará nada a menos que lo llame, por ejemplo con
@@ -74,16 +74,16 @@ function saludo(nombre){
 Cuando asigna algo normalmente en JavaScript, utiliza un solo signo igual, por ejemplo:
 
 ```js
-const miNumero= 0;
+const miNumero = 0;
 ```
 
 Esto no funciona en los [Objetos](/es/docs/Learn/JavaScript/Objects), sin embargo, con los objetos, debe separar los nombres de los miembros de sus valores mediante dos puntos y separar cada miembro con una coma, por ejemplo:
 
 ```js
-const miObjeto= {
-  nombre: 'Felipe',
-  edad: 27
-}
+const miObjeto = {
+  nombre: "Felipe",
+  edad: 27,
+};
 ```
 
 ## Definiciones básicas

@@ -1,7 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
-original_slug: Web/HTTP/Controle_Acesso_CORS
 ---
 
 {{HTTPSidebar}}
@@ -20,7 +19,7 @@ O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transfe
 
 Todos, realmente.
 
-Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](en-US/docs/Web/HTTP/Server-Side_Access_Control), pode ser uma leitura complementar.
+Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/en-US/docs/Web/HTTP/Server-Side_Access_Control), pode ser uma leitura complementar.
 
 ## Quais solicitações usam o CORS?
 
@@ -51,7 +50,7 @@ Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do 
 
 ### Requisições simples
 
-Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como “requisições simples” (_simple request_), embora a especificação {{SpecName('Fetch')}} (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada “requisição simples” — é uma que **atende todas as seguintes condições**:
+Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação {{SpecName('Fetch')}} (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
 
 - Os únicos métodos permitidos são:
 
@@ -59,7 +58,7 @@ Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Acc
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- Além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [qualquer um dos outros cabeçalhos com nomes definidos na especificação Fetch como “_forbidden header name_”](https://fetch.spec.whatwg.org/#forbidden-header-name)), os únicos cabeçalhos que podem ser definidos manualmente são [aqueles cujo a especificação Fetch define como sendo um “_CORS-safelisted request-header_”](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
+- Além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [qualquer um dos outros cabeçalhos com nomes definidos na especificação Fetch como "_forbidden header name_"](https://fetch.spec.whatwg.org/#forbidden-header-name)), os únicos cabeçalhos que podem ser definidos manualmente são [aqueles cujo a especificação Fetch define como sendo um "_CORS-safelisted request-header_"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
@@ -77,17 +76,17 @@ Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Acc
 
 > **Nota:** Esses são os mesmos tipos de requisições entre origens distintas que o conteúdo da web já pode realizar e nenhum dado dado de resposta é liberado ao solicitante, a menos que o servidor envie um cabeçalho adequado. Portanto, sites que impedem a falsificação de requisições entre origens não tem nada a temer em relação ao controle de acesso HTTP.
 
-> **Nota:** O WebKit Nightly e Safari Technology Preview impõem restrições adicionais nos valores permitidos nos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso algum destes cabeçalhos tenham valores ”não-padronizados”, o WebKit/Safari não considera que a requisição atenda as condições para uma “requisição simples”. O que o WebKit/Safari considera valores “não-padronizados” para estes cabeçalhos não é documentado exceto nos seguintes bugs do WebKit: _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ e _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
+> **Nota:** O WebKit Nightly e Safari Technology Preview impõem restrições adicionais nos valores permitidos nos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso algum destes cabeçalhos tenham valores "não-padronizados", o WebKit/Safari não considera que a requisição atenda as condições para uma "requisição simples". O que o WebKit/Safari considera valores "não-padronizados" para estes cabeçalhos não é documentado exceto nos seguintes bugs do WebKit: _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ e _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
 
 Por exemplo, suponha que o conteúdo web no domínio `http://foo.example` deseje chamar (`invocation` do exemplo abaixo) um outro conteúdo no domínio `http://bar.other`. Esse código Javascript pode estar hospedado em foo.example:
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = "http://bar.other/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -100,7 +99,7 @@ Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho C
 
 Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:
 
-```html
+```http
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
@@ -135,7 +134,7 @@ Observe que, agora, nenhum dominio além de `http://foo.example` (identificado n
 
 ### Requisições com pré-envio
 
-Ao contrário de [“requisições simples” (discutido acima)](/pt-BR/docs/Web/HTTP/Access_control_CORS#Simple_requests), requisições com "pré-envio" (_Preflighted requests_) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.
+Ao contrário de ["requisições simples" (discutido acima)](/pt-BR/docs/Web/HTTP/Access_control_CORS#Simple_requests), requisições com "pré-envio" (_Preflighted requests_) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.
 
 Em particular, uma requisição tem um pré-envio **se qualquer das seguintes condições** for verdadeira:
 
@@ -148,7 +147,7 @@ Em particular, uma requisição tem um pré-envio **se qualquer das seguintes co
   - {{HTTPMethod("TRACE")}}
   - {{HTTPMethod("PATCH")}}
 
-- **Ou se**, além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {HTTPHeader("User-Agent")}} ou [qualquer **OUTRO** cabeçalho com um nome definido na especificação Fetch como “_forbidden header name_”](https://fetch.spec.whatwg.org/#forbidden-header-name)), a requisição inclui quaisquer cabeçalhos **além** [daqueles que a especificação Fetch define como sendo um “_CORS-safelisted request-header_”](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
+- **Ou se**, além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {HTTPHeader("User-Agent")}} ou [qualquer **OUTRO** cabeçalho com um nome definido na especificação Fetch como "_forbidden header name_"](https://fetch.spec.whatwg.org/#forbidden-header-name)), a requisição inclui quaisquer cabeçalhos **além** [daqueles que a especificação Fetch define como sendo um "_CORS-safelisted request-header_"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
@@ -169,7 +168,7 @@ Em particular, uma requisição tem um pré-envio **se qualquer das seguintes co
 - **Ou se** um ou mais _event listener_ estiver registrado em um objeto {{domxref ("XMLHttpRequestUpload")}} usado nessa requisição.
 - **Ou se** um objeto {{domxref("ReadableStream")}} é usado nessa requisição.
 
-> **Nota:** WebKit Nightly e Safari Technology Preview colocam restrições adicionais nos valores permitidos dos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso qualquer um desses cabeçalhos tenha algum valor fora do padrão (non-standard), o WebKit/Safari faz o pré-envio da requisição. O que o WebKit/Safari considera como valor “non-standard” para tais cabeçalhos não está documentado, exceto nos seguintes bugs do WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, e Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566) e [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
+> **Nota:** WebKit Nightly e Safari Technology Preview colocam restrições adicionais nos valores permitidos dos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso qualquer um desses cabeçalhos tenha algum valor fora do padrão (non-standard), o WebKit/Safari faz o pré-envio da requisição. O que o WebKit/Safari considera como valor "non-standard" para tais cabeçalhos não está documentado, exceto nos seguintes bugs do WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, e Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566) e [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
 
 O exemplo a seguir é de uma requisição com pré-envio.
 
@@ -302,14 +301,14 @@ The CORS protocol originally required that behavior but [was subsequently change
 So until all browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:
 
 - change the server-side behavior to avoid the preflight and/or to avoid the redirect—if you have control over the server the request is being made to
-- change the request such that it is a [simple request]#simple_requests) that doesn’t cause a preflight
+- change the request such that it is a [simple request]#simple_requests) that doesn't cause a preflight
 
-But if it’s not possible to make those changes, then another way that may be possible is to this:
+But if it's not possible to make those changes, then another way that may be possible is to this:
 
 1. Make a [simple request](#simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
-2. Make another request (the “real” request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
+2. Make another request (the "real" request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
 
-However, if the request is one that triggers a preflight due to the presence of the `Authorization` header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.
+However, if the request is one that triggers a preflight due to the presence of the `Authorization` header in the request, you won't be able to work around the limitation using the steps above. And you won't be able to work around it at all unless you have control over the server the request is being made to.
 
 ### Requisições com credenciais
 
@@ -319,11 +318,11 @@ In this example, content originally loaded from `http://foo.example` makes a sim
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
@@ -493,8 +492,8 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Especificações
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
+| Specification                                   | Status             | Comment                                                                          |
+| ----------------------------------------------- | ------------------ | -------------------------------------------------------------------------------- |
 | {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
 
 ## Compatibilidade com navegadores
@@ -517,8 +516,8 @@ Examples of this usage can be [found above](#Preflighted_requests).
 - [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
 - [Client-Side & Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)](https://github.com/jackblackevo/cors-jsonp-sample)
 - [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/Server-Side_Access_Control)
-- [Stack Overflow answer with “how to” info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
-  - How to use a CORS proxy to get around _“No Access-Control-Allow-Origin header”_
-  - How to fix _“Access-Control-Allow-Origin header must not be the wildcard”_
+  - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
+  - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

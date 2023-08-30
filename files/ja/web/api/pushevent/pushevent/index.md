@@ -34,10 +34,10 @@ new PushEvent(type, options)
 
 ```js
 const dataInit = {
-  data : 'Some sample text'
-}
+  data: "Some sample text",
+};
 
-const myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent("push", dataInit);
 
 myPushEvent.data.text(); // 'Some sample text' を返す
 ```

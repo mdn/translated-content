@@ -12,10 +12,10 @@ slug: Web/API/NodeList
 경우에 따라, `NodeList`는 라이브 콜렉션으로, DOM의 변경 사항을 실시간으로 콜렉션에 반영합니다. 예를 들어, {{domxref("Node.childNodes")}} 는 실시간입니다:
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // let's assume "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // should output "3"
 ```
 
@@ -38,16 +38,16 @@ for 루프를 사용하여 `NodeList`의 항목을 반복할 수 있습니다.
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
+  var item = myNodeList[i]; // Calling myNodeList.item(i) isn't necessary in JavaScript
 }
 ```
 
 **리스트의 항목(items)을 열거하기 위해 [for...in](/ko/docs/JavaScript/Reference/Statements/for...in) 또는 [for each...in](/ko/docs/JavaScript/Reference/Statements/for_each...in)를 사용하지 않길 바랍니다.** `NodeList`의 길이와 항목 속성까지 열거합니다. 또한 스크립트가 요소({{domxref("element")}}) 객체만 처리한다고 가정하면 오류가 발생할 수 있습니다. 게다가, `for..in`은 고정된 순서로 각 속성들을 접근한다는 보장이 없습니다.
 
-[`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) 루프는 `NodeList` 객체를 올바르게 반복합니다.
+[`for...of`](/ko/docs/JavaScript/Reference/Statements/for...of) 루프는 `NodeList` 객체를 올바르게 반복합니다.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var item of list) {
   item.checked = true;
 }
@@ -58,7 +58,7 @@ for (var item of list) {
 인터넷 익스플로러의 호환을 위해서는 {{jsxref("Array.forEach()", "Array.prototype.forEach")}} 를 사용하는 방법도 있습니다.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
 });
@@ -69,7 +69,7 @@ Array.prototype.forEach.call(list, function (item) {
 NodeList의 컨텐츠를 Array의 메소드를 통해 다루는 것이 더 쉬울 때도 있다. 아래는 NodeList 객체를 Array로 변환하는 기법이다.
 
 ```js
-var div_list = document.querySelectorAll('div'); // returns NodeList
+var div_list = document.querySelectorAll("div"); // returns NodeList
 var div_array = Array.prototype.slice.call(div_list); // converts NodeList to Array
 ```
 
@@ -80,20 +80,20 @@ NodeList에 프로토타입을 추가할 수도 있다.
 ```js
 var elements = document.querySelectorAll(".suggestions");
 
-NodeList.prototype.addEventListener = function(event, func) {
-    this.forEach(function(content, item) {
-       content.addEventListener(event, func);
-    });
-}
+NodeList.prototype.addEventListener = function (event, func) {
+  this.forEach(function (content, item) {
+    content.addEventListener(event, func);
+  });
+};
 
 function log() {
-    console.log(this, " was clicked");
+  console.log(this, " was clicked");
 }
 
 elements.addEventListener("click", log);
 //or
-elements.addEventListener("click", function() {
-    console.log(this, "  awas clicked");
+elements.addEventListener("click", function () {
+  console.log(this, "  awas clicked");
 });
 // 클릭된 요소로부터 출력될 요소는 둘 모두 HTML 요소가 된다.
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: JSON.parse: bad parsing'
+title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
 
@@ -59,7 +59,7 @@ SyntaxError: JSON.parse Error: Invalid character at position {0} (Edge)
 どちらの行でも SyntaxError が発生します。
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4,]');
+JSON.parse("[1, 2, 3, 4,]");
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -68,7 +68,7 @@ JSON.parse('{"foo": 1,}');
 末尾のカンマを省略すると、正しく JSON として解釈します。
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4]');
+JSON.parse("[1, 2, 3, 4]");
 JSON.parse('{"foo": 1}');
 ```
 

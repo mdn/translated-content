@@ -1,7 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-translation_of: Glossary/Python
 ---
 
 **Python** est un langage de programmation de haut-niveau, pour tous usages. Il possède une approche multi-paradigme et supporte donc des formes de programmation procédurale, orientée objet et fonctionnelle.
@@ -12,6 +11,6 @@ Python est développé sous une licence Open Source approuvée OSI, ce qui le re
 
 ## Voir aussi
 
-- [Python](https://fr.wikipedia.org/wiki/Python_(langage)) sur Wikipédia
+- [Python](<https://fr.wikipedia.org/wiki/Python_(langage)>) sur Wikipédia
 - [Le site officiel de Python, où le télécharger et l'installer](https://www.python.org/)
 - [Un tutoriel sur python](http://www.tutorialspoint.com/python/index.htm) (en anglais)

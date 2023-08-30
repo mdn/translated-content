@@ -48,7 +48,7 @@ My cat is very grumpy
 2. 属性的名称，并接上一个等号。
 3. 由引号所包围的属性值。
 
-> **备注：** 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>` ）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
+> **备注：** 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>`）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
 
 ### 嵌套元素
 
@@ -81,26 +81,28 @@ My cat is very grumpy
 以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾 [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 小节中创建的 `index.html` 示例：
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
 
 这里有：
 
-- `<!DOCTYPE html>` — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，`DOCTYPE` 用来链接一些 HTML 编写守则，比如自动查错之类。`DOCTYPE` 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。
-- `<html></html>` — {{htmlelement("html")}} 元素。该元素包含整个页面的内容，也称作根元素。
-- `<head></head>` — {{htmlelement("head")}} 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（{{Glossary("keyword", "keywords")}}）、页面描述、CSS 样式表和字符编码声明等。
-- `<meta charset="utf-8">` — 该元素指定文档使用 UTF-8 字符编码，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。
-- `<title></title>` — {{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
-- `<body></body>` — {{htmlelement("body")}} 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。
+- `<!DOCTYPE html>`——[文档类型](/zh-CN/docs/Glossary/Doctype)。这是必不可少的开头。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，这个元素用来关联 HTML 编写规范，以供自动查错等功能所用。而在当今，它作用有限，可以说仅用于保证文档正常读取。现在知道这些就足够了。
+- `<html></html>`——{{htmlelement("html")}} 元素。该元素包含整个页面的所有内容，有时候也称作根元素。里面也包含了 `lang` 属性，写明了页面的主要语种。
+- `<head></head>`——{{htmlelement("head")}} 元素。所有那些你加到页面中，且*不*向看客展示的页面成员，都以这个元素为容器。其中包含诸如提供给搜索引擎的{{Glossary("keyword", "关键字")}}和页面描述、用作风格化页面的 CSS、字符集声明等等。
+- `<meta charset="utf-8">`——该元素指明你的文档使用 UTF-8 字符编码，UTF-8 包括世界绝大多数书写语言的字符。它基本上可以处理任何文本内容。以它为编码还可以避免以后出现某些问题，没有理由再选用其他编码。
+- `<meta name="viewport" content="width=device-width">`——[视口元素](/zh-CN/docs/Web/CSS/Viewport_concepts#移动设备的视口)可以确保页面以视口宽度进行渲染，避免移动端浏览器上因页面过宽导致缩放。
+- `<title></title>`——{{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
+- `<body></body>`——{{htmlelement("body")}} 元素。该元素包含期望让用户在访问页面时看到的*全部*内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。
 
 ## 图像
 
@@ -166,7 +168,10 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 比如，要将下面的段落片段改成一个列表：
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+<p>
+  At Mozilla, we're a global community of technologists, thinkers, and builders
+  working together…
+</p>
 ```
 
 可以这样更改标记：
@@ -180,7 +185,7 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
   <li>builders</li>
 </ul>
 
-<p>working together… </p>
+<p>working together…</p>
 ```
 
 试着在示例页面中添加一个有序列表和无序列表。
@@ -192,21 +197,23 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 1. 选择一些文本。比如“Mozilla Manifesto”。
 2. 将文本包含在 {{htmlelement("a")}} 元素内，就像这样：
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. 为此 {{htmlelement("a")}} 元素添加一个 `href` 属性，就像这样：
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. 把属性的值设置为所需网址：
 
-    ```html
-    <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/zh-CN/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
+   ```
 
 如果网址开始部分省略了 `https://` 或者 `http://`，可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。
 

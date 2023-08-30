@@ -39,8 +39,8 @@ em {
 
 ## Especificações
 
-| Specification                                                            | Status                           | Comment                  |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------------ |
+| Specification                                         | Status                    | Comment                  |
+| ----------------------------------------------------- | ------------------------- | ------------------------ |
 | {{ SpecName('CSS4 Cascade', '#initial', 'initial') }} | {{Spec2('CSS4 Cascade')}} | No changes from Level 3. |
 | {{ SpecName('CSS3 Cascade', '#initial', 'initial') }} | {{Spec2('CSS3 Cascade')}} | Initial definition.      |
 

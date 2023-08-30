@@ -1,7 +1,6 @@
 ---
-title: 'XMLHttpRequest: readystatechange イベント'
+title: "XMLHttpRequest: readystatechange イベント"
 slug: Web/API/XMLHttpRequest/readystatechange_event
-original_slug: Web/API/XMLHttpRequest/onreadystatechange
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
@@ -17,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('readystatechange', (event) => { })
+addEventListener("readystatechange", (event) => {});
 
-onreadystatechange = (event) => { }
+onreadystatechange = (event) => {};
 ```
 
 ## イベント型

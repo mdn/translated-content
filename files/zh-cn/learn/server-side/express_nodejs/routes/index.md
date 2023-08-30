@@ -66,17 +66,17 @@ slug: Learn/Server-side/Express_Nodejs/routes
 ```js
 // wiki.js - 维基路由模块
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // 主页路由
-router.get('/', (req, res) => {
-  res.send('维基主页');
+router.get("/", (req, res) => {
+  res.send("维基主页");
 });
 
 // “关于页面”路由
-router.get('/about', (req, res) => {
-  res.send('关于此维基');
+router.get("/about", (req, res) => {
+  res.send("关于此维基");
 });
 
 module.exports = router;
@@ -87,9 +87,9 @@ module.exports = router;
 要在主应用中使用该路由模块，首先应 `require` 它（**wiki.js**），然后对 Express 应用对象调用 `use()`（指定路径‘/wiki’），即可将其添加到中间件处理路径。
 
 ```js
-const wiki = require('./wiki.js');
+const wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 这时 `wiki` 模块中定义的两个路由就可以从 `/wiki/` 和 `/wiki/about/` 访问了。
@@ -99,8 +99,8 @@ app.use('/wiki', wiki);
 上述模块定义了两个典型的路由函数。`Router.get()` 方法定义的“about”路由（下方重现的）仅响应 HTTP GET 请求。第一个参数是 URL 路径，第二个参数是一个回调，在收到带有路径的 HTTP GET 请求将调用之。
 
 ```js
-router.get('/about', (req, res) => {
-  res.send('关于此维基');
+router.get("/about", (req, res) => {
+  res.send("关于此维基");
 });
 ```
 
@@ -121,8 +121,8 @@ router.get('/about', (req, res) => {
 比如下方代码与上方 `/about` 路由行为一致，但只响应 HTTP POST 请求。
 
 ```js
-router.post('/about', (req, res) => {
-  res.send('关于此维基');
+router.post("/about", (req, res) => {
+  res.send("关于此维基");
 });
 ```
 
@@ -154,7 +154,7 @@ app.get(/.*fish$/, (req, res) => {
 举例说，一个包含用户和藏书信息的 URL：`http://localhost:3000/users/34/books/8989`，可以这样提取信息（使用 `userId` 和 `bookId` 路径参数）：
 
 ```js
-app.get('/users/:userId/books/:bookId', (req, res) => {
+app.get("/users/:userId/books/:bookId", (req, res) => {
   // 通过 req.params.userId 访问 userId
   // 通过 req.params.bookId 访问 bookId
   res.send(req.params);
@@ -208,31 +208,47 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 以下是 **/controllers/authorController.js** 文件的内容：
 
 ```js
-const Author = require('../models/author');
+const Author = require("../models/author");
 
 // 显示完整的作者列表
-exports.author_list = (req, res) => { res.send('未实现：作者列表'); };
+exports.author_list = (req, res) => {
+  res.send("未实现：作者列表");
+};
 
 // 为每位作者显示详细信息的页面
-exports.author_detail = (req, res) => { res.send('未实现：作者详细信息：' + req.params.id); };
+exports.author_detail = (req, res) => {
+  res.send("未实现：作者详细信息：" + req.params.id);
+};
 
 // 由 GET 显示创建作者的表单
-exports.author_create_get = (req, res) => { res.send('未实现：作者创建表单的 GET'); };
+exports.author_create_get = (req, res) => {
+  res.send("未实现：作者创建表单的 GET");
+};
 
 // 由 POST 处理作者创建操作
-exports.author_create_post = (req, res) => { res.send('未实现：创建作者的 POST'); };
+exports.author_create_post = (req, res) => {
+  res.send("未实现：创建作者的 POST");
+};
 
 // 由 GET 显示删除作者的表单
-exports.author_delete_get = (req, res) => { res.send('未实现：作者删除表单的 GET'); };
+exports.author_delete_get = (req, res) => {
+  res.send("未实现：作者删除表单的 GET");
+};
 
 // 由 POST 处理作者删除操作
-exports.author_delete_post = (req, res) => { res.send('未实现：删除作者的 POST'); };
+exports.author_delete_post = (req, res) => {
+  res.send("未实现：删除作者的 POST");
+};
 
 // 由 GET 显示更新作者的表单
-exports.author_update_get = (req, res) => { res.send('未实现：作者更新表单的 GET'); };
+exports.author_update_get = (req, res) => {
+  res.send("未实现：作者更新表单的 GET");
+};
 
 // 由 POST 处理作者更新操作
-exports.author_update_post = (req, res) => { res.send('未实现：更新作者的 POST'); };
+exports.author_update_post = (req, res) => {
+  res.send("未实现：更新作者的 POST");
+};
 ```
 
 该模块首先导入了用于访问和更新数据的模型，然后为每个需要处理（添加、更新和删除表单，以及相应的 POST 请求，稍后在 [使用表单](/zh-CN/docs/learn/Server-side/Express_Nodejs/forms) 一节中讲解）的 URL 导出一个函数。
@@ -272,43 +288,43 @@ exports.index = (req, res) => { res.send('未实现：站点首页'); };
 **/routes/catalog.js** 中有以下代码：
 
 ```js
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // 导入控制器模块
-const book_controller = require('../controllers/bookController');
-const author_controller = require('../controllers/authorController');
-const genre_controller = require('../controllers/genreController');
-const book_instance_controller = require('../controllers/bookinstanceController');
+const book_controller = require("../controllers/bookController");
+const author_controller = require("../controllers/authorController");
+const genre_controller = require("../controllers/genreController");
+const book_instance_controller = require("../controllers/bookinstanceController");
 
 /// 藏书路由 ///
 
 // GET 获取藏书编目主页
-router.get('/', book_controller.index);
+router.get("/", book_controller.index);
 
 // GET 请求添加新的藏书。注意此项必须位于显示藏书的路由（使用了 id）之前。
-router.get('/book/create', book_controller.book_create_get);
+router.get("/book/create", book_controller.book_create_get);
 
 // POST 请求添加新的藏书
-router.post('/book/create', book_controller.book_create_post);
+router.post("/book/create", book_controller.book_create_post);
 
 // GET 请求删除藏书
-router.get('/book/:id/delete', book_controller.book_delete_get);
+router.get("/book/:id/delete", book_controller.book_delete_get);
 
 // POST 请求删除藏书
-router.post('/book/:id/delete', book_controller.book_delete_post);
+router.post("/book/:id/delete", book_controller.book_delete_post);
 
 // GET 请求更新藏书
-router.get('/book/:id/update', book_controller.book_update_get);
+router.get("/book/:id/update", book_controller.book_update_get);
 
 // POST 请求更新藏书
-router.post('/book/:id/update', book_controller.book_update_post);
+router.post("/book/:id/update", book_controller.book_update_post);
 
 // GET 请求藏书
-router.get('/book/:id', book_controller.book_detail);
+router.get("/book/:id", book_controller.book_detail);
 
 // GET 请求完整藏书列表
-router.get('/books', book_controller.book_list);
+router.get("/books", book_controller.book_list);
 
 /// 藏书副本、藏书种类、作者的路由与藏书路由结构基本一致，只是无需获取主页 ///
 
@@ -329,8 +345,8 @@ module.exports = router;
 
 ```js
 // GET 请求主页
-router.get('/', (req, res) => {
-  res.redirect('/catalog');
+router.get("/", (req, res) => {
+  res.redirect("/catalog");
 });
 ```
 
@@ -343,17 +359,17 @@ router.get('/', (req, res) => {
 打开 **app.js**，在 `index` 和 `users` 路由下方添加 `catalog` 路由：
 
 ```js
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const catalogRouter = require('./routes/catalog');  // 导入 catalog 路由
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
+const catalogRouter = require("./routes/catalog"); // 导入 catalog 路由
 ```
 
 然后在已定义的路由下方将目录路由添加进中间件栈：
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
 ```
 
 > **备注：** 我们将图书编目模块添加到了 `'/catalog'` 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问藏书列表 的 URL 为：`/catalog/books/`。
@@ -376,28 +392,28 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见 [教程 2 相关译注](zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
+> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见[教程 2 相关译注](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
 
 接下来浏览上面一些 URL，确保不会收到错误页面（HTTP 404）。可以尝试以下示例：
 
-- <http://localhost:3000/>
-- <http://localhost:3000/catalog>
-- <http://localhost:3000/catalog/books>
-- [http://localhost:3000/catalog/bookinstances](http://localhost:3000/catalog/bookinstances/)
-- [http://localhost:3000/catalog/authors](http://localhost:3000/catalog/authors/)
-- [http://localhost:3000/catalog/genres](http://localhost:3000/catalog/genres/)
-- [http://localhost:3000/catalog/book/5846437593935e2f8c2aa226](http://localhost:3000/catalog/book/5846437593935e2f8c2aa226/)
-- <http://localhost:3000/catalog/book/create>
+- `http://localhost:3000/`
+- `http://localhost:3000/catalog`
+- `http://localhost:3000/catalog/books`
+- `http://localhost:3000/catalog/bookinstances/`
+- `http://localhost:3000/catalog/authors/`
+- `http://localhost:3000/catalog/genres/`
+- `http://localhost:3000/catalog/book/5846437593935e2f8c2aa226`
+- `http://localhost:3000/catalog/book/create`
 
 ## 小结
 
 网站的路由已创建完毕，接下来的教程将把完整的实现填入控制器框架中。藉此来学习 Express 路由的基础知识，以及组织路由和控制器的一些方式。
 
-下一节将使用视图 (模板) 和模型里的信息创建一个欢迎页面。
+下一节将使用视图（模板）和模型里的信息创建一个欢迎页面。
 
 ## 参见
 
-- [路由基础](http://www.expressjs.com.cn/starter/basic-routing.html) (Express 官方文档)
-- [路由简介](http://expressjs.com/en/guide/routing.html) (Express 官方文档)
+- [基本路由](https://expressjs.com/zh-cn/starter/basic-routing.html)（Express 文档）
+- [路由指南](https://expressjs.com/zh-cn/guide/routing.html)（Express 文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}

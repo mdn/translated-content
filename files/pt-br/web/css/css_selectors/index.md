@@ -1,7 +1,6 @@
 ---
 title: Seletores CSS
-slug: Web/CSS/CSS_Selectors
-original_slug: Web/CSS/Seletores_CSS
+slug: Web/CSS/CSS_selectors
 ---
 
 {{CSSRef}}
@@ -57,9 +56,9 @@ Os Seletores definem quais elementos um conjunto de regras CSS se aplica.
 
 ## Especificações
 
-| Especificação                                        | Status                               | Comentário        |
-| ---------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS4 Selectors')}}             | {{Spec2('CSS4 Selectors')}} |                   |
-| {{SpecName('CSS3 Selectors')}}             | {{Spec2('CSS3 Selectors')}} |                   |
-| {{SpecName('CSS2.1', 'selector.html')}} | {{Spec2('CSS2.1')}}             |                   |
-| {{SpecName('CSS1')}}                         | {{Spec2('CSS1')}}             | Definição inicial |
+| Especificação                           | Status                      | Comentário        |
+| --------------------------------------- | --------------------------- | ----------------- |
+| {{SpecName('CSS4 Selectors')}}          | {{Spec2('CSS4 Selectors')}} |                   |
+| {{SpecName('CSS3 Selectors')}}          | {{Spec2('CSS3 Selectors')}} |                   |
+| {{SpecName('CSS2.1', 'selector.html')}} | {{Spec2('CSS2.1')}}         |                   |
+| {{SpecName('CSS1')}}                    | {{Spec2('CSS1')}}           | Definição inicial |

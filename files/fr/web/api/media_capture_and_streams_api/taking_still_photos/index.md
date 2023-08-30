@@ -38,7 +38,7 @@ Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sur 
 ```html
 <canvas id="canvas"> </canvas>
 <div class="output">
-  <img id="photo" alt="L'image capturée sera affichée dans cette boîte.">
+  <img id="photo" alt="L'image capturée sera affichée dans cette boîte." />
 </div>
 ```
 
@@ -140,7 +140,7 @@ video.addEventListener(
       streaming = true;
     }
   },
-  false
+  false,
 );
 ```
 
@@ -161,7 +161,7 @@ startbutton.addEventListener(
     takepicture();
     ev.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -233,9 +233,14 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
 
 ```html
 <div class="contentarea">
-  <h1>MDN - navigator.mediaDevices.getUserMedia() : illustrer comment capturer une image</h1>
+  <h1>
+    MDN - navigator.mediaDevices.getUserMedia() : illustrer comment capturer une
+    image
+  </h1>
   <p>
-    Dans cet exemple, on illustre comment utiliser un flux média provenant de la webcam, en récupérer une image et créer un PNG à partir de celle-ci pour l'afficher sur la page.
+    Dans cet exemple, on illustre comment utiliser un flux média provenant de la
+    webcam, en récupérer une image et créer un PNG à partir de celle-ci pour
+    l'afficher sur la page.
   </p>
   <div class="camera">
     <video id="video">Le flux vidéo n'est pas disponible.</video>
@@ -243,10 +248,15 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   </div>
   <canvas id="canvas"> </canvas>
   <div class="output">
-    <img id="photo" alt="L'image capturée apparaîtra ici.">
+    <img id="photo" alt="L'image capturée apparaîtra ici." />
   </div>
   <p>
-    Consultez l'article <a href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API/Taking_still_photos">Prendre des photos avec <code>getUserMedia()</code></a> pour en savoir plus sur les technologies utilisées ici.
+    Consultez l'article
+    <a
+      href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API/Taking_still_photos"
+      >Prendre des photos avec <code>getUserMedia()</code></a
+    >
+    pour en savoir plus sur les technologies utilisées ici.
   </p>
 </div>
 ```
@@ -313,7 +323,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   // aux proportions du flux vidéo d'entrée.
 
   const width = 320; // On met à l'échelle la photo pour avoir cette largeur
-  let height = 0;    // On calcule cette valeur ensuite selon le flux d'entrée
+  let height = 0; // On calcule cette valeur ensuite selon le flux d'entrée
 
   // |streaming| indique si le flux vidéo est en cours
   // Lorsqu'on commence, ce n'est pas le cas (false).
@@ -336,7 +346,8 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
       // pas la demande d'accès à la caméra.
       document.querySelector(".contentarea").remove();
       const button = document.createElement("button");
-      button.textContent = "Voir le résultat de l'exemple dont le code est présenté avant";
+      button.textContent =
+        "Voir le résultat de l'exemple dont le code est présenté avant";
       document.body.append(button);
       button.addEventListener("click", () => window.open(location.href));
       return true;
@@ -383,7 +394,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
           streaming = true;
         }
       },
-      false
+      false,
     );
 
     startbutton.addEventListener(
@@ -392,7 +403,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
         takepicture();
         ev.preventDefault();
       },
-      false
+      false,
     );
 
     clearphoto();

@@ -1,5 +1,5 @@
 ---
-title: 'DedicatedWorkerGlobalScope: message イベント'
+title: "DedicatedWorkerGlobalScope: message イベント"
 slug: Web/API/DedicatedWorkerGlobalScope/message_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## イベント型
@@ -53,17 +53,17 @@ const myWorker = new Worker("worker.js");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 // worker.js
 
 self.onmessage = (e) => {
-  console.log('Message received from main script');
+  console.log("Message received from main script");
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-  console.log('Posting message back to main script');
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 `main.js` スクリプトでは、ワーカースクリプトからのメッセージを処理するために `onmessage` ハンドラーを使用しています。
@@ -73,8 +73,8 @@ self.onmessage = (e) => {
 
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 他に、スクリプトで [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用してメッセージを待ち受けすることができます。
@@ -82,9 +82,9 @@ myWorker.onmessage = (e) => {
 ```js
 // worker.js
 
-self.addEventListener('message', (e) => {
+self.addEventListener("message", (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
 });
 ```
 

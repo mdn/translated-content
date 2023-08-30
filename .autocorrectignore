@@ -1,0 +1,8 @@
+# AutoCorrect Link ignore rules.
+# https://github.com/huacnlee/autocorrect
+#
+# Like `.gitignore`, this file to tell AutoCorrect which files need to check, some need to ignore.
+files/
+docs/
+!files/zh-cn/
+_wikihistory.json

@@ -1,10 +1,9 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-translation_of: Glossary/HTTP
 ---
 
-L'*Hypertext Transfer Protocol* (**HTTP**) (_Protocole de transfert hypertexte_) est un {{glossary("Protocol","protocole")}} de base qui autorise le transfert de fichiers sur le {{glossary("World Wide Web","web")}}, typiquement entre un navigateur web et un serveur afin que des utilisateurs puissent les consulter. La version actuelle de la spécification HTTP s'appelle {{glossary("HTTP_2", "HTTP/2")}}.
+L'_Hypertext Transfer Protocol_ (**HTTP**) (_Protocole de transfert hypertexte_) est un {{glossary("Protocol","protocole")}} de base qui autorise le transfert de fichiers sur le {{glossary("World Wide Web","web")}}, typiquement entre un navigateur web et un serveur afin que des utilisateurs puissent les consulter. La version actuelle de la spécification HTTP s'appelle {{glossary("HTTP_2", "HTTP/2")}}.
 
 Dans le cadre d'une {{glossary("URI")}}, la partie "http\://" s'appelle le "schema" et commence la plupart du temps au début d'une addresse. Par exemple, dans "https\://developer.mozilla.org", "https\://" indique au navigateur de requêter le document au travers du protocole HTTP. Plus précisément, dans cet exemple, https fait référence à la version sécurisée du protocole HTTP, {{glossary("SSL")}} (also called TLS).
 

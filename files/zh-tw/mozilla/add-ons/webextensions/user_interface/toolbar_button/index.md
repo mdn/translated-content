@@ -1,7 +1,6 @@
 ---
 title: 工具列按鈕
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
 
 {{AddonSidebar}}
@@ -48,4 +47,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 GitHub 上的[擴充套件範例](https://github.com/mdn/webextensions-examples)程式庫包含兩個建立工具列按鈕的範例：
 
 - [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) 使用不含彈出視窗的工具列按鈕。
-- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) 使用包含彈出視窗的工具列按鈕。
+- [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify) 使用包含彈出視窗的工具列按鈕。

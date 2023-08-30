@@ -1,7 +1,6 @@
 ---
 title: Médias continus
 slug: Glossary/Continuous_Media
-translation_of: Glossary/Continuous_Media
 ---
 
 Les médias continus (« _Continuous Media_ » en Anglais) sont des données pour lesquelles il existe une relation temporelle entre la source et la destination. Les exemples les plus courants de médias continus sont l'audio et la vidéo animée. Les médias continus peuvent être en temps réel (interactif), où il existe une relation temporelle « étroite » entre la source et le récepteur, ou en streaming (lecture), où la relation est moins stricte.

@@ -1,13 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -44,7 +37,7 @@ str.charCodeAt(index)
 В следующем примере возвращается число 65, значение Unicode для латинского символа «A».
 
 ```js
-'ABC'.charCodeAt(0); // вернёт 65
+"ABC".charCodeAt(0); // вернёт 65
 ```
 
 ### Пример: исправление метода `charCodeAt()` для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке неизвестно
@@ -62,15 +55,16 @@ function fixedCharCodeAt(str, idx) {
   // Старшая часть суррогатной пары (последнее число можно изменить на 0xDB7F,
   // чтобы трактовать старшую часть суррогатной пары в частной плоскости как
   // одиночный символ)
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
-      throw 'Старшая часть суррогатной пары без следующей младшей в fixedCharCodeAt()';
+      throw "Старшая часть суррогатной пары без следующей младшей в fixedCharCodeAt()";
     }
-    return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
-  if (0xDC00 <= code && code <= 0xDFFF) { // Младшая часть суррогатной пары
+  if (0xdc00 <= code && code <= 0xdfff) {
+    // Младшая часть суррогатной пары
     // Мы возвращаем false, чтобы цикл пропустил эту итерацию,
     // поскольку суррогатная пара
     // уже обработана в предыдущей итерации
@@ -88,17 +82,16 @@ function fixedCharCodeAt(str, idx) {
 
 ```js
 function knownCharCodeAt(str, idx) {
-  str += '';
+  str += "";
   var code,
-      end = str.length;
+    end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
-    }
-    else {
+    } else {
       break;
     }
   }
@@ -110,11 +103,11 @@ function knownCharCodeAt(str, idx) {
   code = str.charCodeAt(idx);
 
   var hi, low;
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     // Перешагиваем через один, поскольку один «символ» является частью суррогатной пары
-    return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
   return code;
 }

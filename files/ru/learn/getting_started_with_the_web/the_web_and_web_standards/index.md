@@ -1,12 +1,8 @@
 ---
 title: Всемирная сеть (веб) и веб-стандарты
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Веб-стандарты
-  - Изучение
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Learn/Getting_started_with_the_web/Веб_и_веб_стандарты
 ---
+
 {{learnsidebar}}
 
 Статья содержит общую информацию о всемирной сети (the Web) — откуда она взялась, что такое веб-стандарты, как они связанны, почему "веб разработчик" отличный карьерный выбор и чему полезному можно научиться изучая этот курс.
@@ -92,7 +88,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
@@ -100,7 +96,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -110,8 +106,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality

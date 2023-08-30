@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removeContext = browser.contextualIdentities.remove(
-  cookieStoreId                  // string
-)
+  cookieStoreId, // string
+);
 ```
 
 ### Paramètres
@@ -48,8 +47,9 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.remove("firefox-container-1").
-  then(onRemoved, onError);
+browser.contextualIdentities
+  .remove("firefox-container-1")
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

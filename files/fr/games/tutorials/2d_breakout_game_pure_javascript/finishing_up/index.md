@@ -1,7 +1,6 @@
 ---
 title: Finitions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
 {{GamesSidebar}}
@@ -24,9 +23,9 @@ L'affichage du compteur de vie est similaire à celui du compteur de points — 
 
 ```js
 function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
 }
 ```
 
@@ -42,17 +41,16 @@ Nous pouvons ainsi y ajouter une logique un peu plus complexe, comme indiqué ci
 
 ```js
 lives--;
-if(!lives) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
-}
-else {
-    x = canvas.width/2;
-    y = canvas.height-30;
-    dx = 2;
-    dy = -2;
-    paddleX = (canvas.width-paddleWidth)/2;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
 }
 ```
 

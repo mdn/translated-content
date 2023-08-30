@@ -1,9 +1,6 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
-tags:
-  - Псевдо-класс
-translation_of: Web/CSS/:disabled
 ---
 
 {{CSSRef}}
@@ -26,7 +23,9 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:disab
 Следующий CSS:
 
 ```css
-input[type="text"]:disabled { background: #ccc; }
+input[type="text"]:disabled {
+  background: #ccc;
+}
 ```
 
 Применим к этому HTML5 фрагменту:
@@ -35,18 +34,18 @@ input[type="text"]:disabled { background: #ccc; }
 <form action="#">
   <fieldset>
     <legend>Адрес доставки</legend>
-    <input type="text" placeholder="Имя">
-    <input type="text" placeholder="Адрес">
-    <input type="text" placeholder="Почтовый индекс">
+    <input type="text" placeholder="Имя" />
+    <input type="text" placeholder="Адрес" />
+    <input type="text" placeholder="Почтовый индекс" />
   </fieldset>
   <fieldset id="billing">
     <legend>Адрес оплаты</legend>
     <label for="billing_is_shipping">Такой же как адрес доставки:</label>
-    <input type="checkbox" onchange="javascript:toggleBilling()" checked>
+    <input type="checkbox" onchange="javascript:toggleBilling()" checked />
     <br />
-    <input type="text" placeholder="Имя" disabled>
-    <input type="text" placeholder="Адрес" disabled>
-    <input type="text" placeholder="Почтовый индекс" disabled>
+    <input type="text" placeholder="Имя" disabled />
+    <input type="text" placeholder="Адрес" disabled />
+    <input type="text" placeholder="Почтовый индекс" disabled />
   </fieldset>
 </form>
 ```

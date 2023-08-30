@@ -1,7 +1,6 @@
 ---
 title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 ---
 
 {{AddonSidebar()}}
@@ -37,9 +36,9 @@ Le script accède à un certain nombre d'objets qui aident le script injecté à
 
 ```js
 var evaluating = browser.devtools.inspectedWindow.eval(
-  expression,       // string
-  options           // object
-)
+  expression, // string
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -104,8 +103,7 @@ function handleResult(result) {
 const checkjQuery = "typeof jQuery != 'undefined'";
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
 });
 ```
 
@@ -132,8 +130,7 @@ function handleResult(result) {
 }
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(evalString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(evalString).then(handleResult);
 });
 ```
 
@@ -158,8 +155,7 @@ function handleResult(result) {
 }
 
 inspectButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(inspectString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(inspectString).then(handleResult);
 });
 ```
 

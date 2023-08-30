@@ -1,7 +1,6 @@
 ---
 title: En-tête de requête
 slug: Glossary/Request_header
-translation_of: Glossary/Request_header
 ---
 
 Un **en-tête de requête** est un {{glossary("header","en-tête HTTP")}} qui peut être utilisé dans une requête HTTP et ne concerne pas le contenu du message. Les en-têtes de requête, comme {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}} ou {{HTTPHeader("If-Modified-Since","If-*")}}, permettent d'effectuer des requêtes conditionnelles ; d'autres comme {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} ou {{HTTPHeader("Referer")}} précisent le contexte pour que le serveur adapte la réponse.

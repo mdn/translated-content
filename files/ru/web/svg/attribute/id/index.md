@@ -1,10 +1,8 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
-tags:
-  - SVG
-translation_of: Web/SVG/Attribute/id
 ---
+
 {{SVGRef}}
 
 Атрибут **`id`** присваивает уникальное имя элементу.
@@ -12,7 +10,11 @@ translation_of: Web/SVG/Attribute/id
 Этот атрибут используется всеми элементами.
 
 ```html
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
   <style type="text/css">
     <![CDATA[
       #smallRect {

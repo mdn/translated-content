@@ -1,7 +1,6 @@
 ---
 title: manifests Natif
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
-translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
 
 {{AddonSidebar}}
@@ -155,7 +154,7 @@ Par exemple, voici un manifest pour l'application native "ping_pong":
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -220,8 +219,7 @@ Par exemple :
   "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "colour": "management thinks it should be blue!"
   }
 }
@@ -230,7 +228,7 @@ Par exemple :
 Etant donné ce manifest JSON, l'extension "favourite-colour-examples\@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci:
 
 ```js
-var storageItem = browser.storage.managed.get('colour');
+var storageItem = browser.storage.managed.get("colour");
 storageItem.then((res) => {
   console.log(`Managed colour is: ${res.colour}`);
 });

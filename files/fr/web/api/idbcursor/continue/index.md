@@ -1,12 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBCursor/continue
 ---
 
 {{APIRef("IndexedDB")}}
@@ -74,22 +68,23 @@ Dans ce petit morceau de code, on fait une transaction, on récupère un magasin
 
 ```js
 function afficheDonnee() {
-  var transaction = db.transaction(['granListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('granListAlbum');
+  var transaction = db.transaction(["granListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("granListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
 
       curseur.continue();
     } else {
-      console.log('Entrées toutes affichés.');
+      console.log("Entrées toutes affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications

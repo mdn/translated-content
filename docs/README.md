@@ -1,10 +1,8 @@
-# General guidelines for MDN translated content
+# Translation guidelines for MDN translated content
 
-In this README you can find a collection of general guidelines for translating
-MDN content, which apply to every locale.
+This document describes the general guidelines for translating MDN content, which apply to every locale.
 
-For guidelines relating to specific locales, we have locale-specific docs in
-subdirectories:
+For guidelines relating to specific locales, we have locale-specific docs in subdirectories:
 
 - [Russian translation guide / Участие в переводе](ru/translation-guide.md)
 - [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
@@ -13,66 +11,41 @@ subdirectories:
 - [Japanese translation guide / 日本語翻訳ガイド](ja/README.md)
 - [Korean translation guide / 한국 번역 지침](ko/README.md)
 
-If you want to add a guide to document some specific guidelines for your locale
-and it does not already appear here, you are welcome to add one, or
-[talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)
-about it. Similarly, if you can think of a good general guideline that you'd
-like to add here, feel free to create an issue to talk about it.
+> **Note:** If you want to add a guide to document some specific guidelines for your locale and it does not already appear here, you are welcome to add one, or [talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams) about it.
 
-## Translating heading IDs
+## Do not copy all front matter properties from English pages
 
-Our article headings are nearly always given IDs, so that we can automatically
-generate in-article navigation, identify code blocks to create live samples,
-and other reasons too. When translating headings, you don't need to translate
-the ID too; the rest of the slug is not translated, so this keeps it all
-consistent.
+In upstream content, pages will have many front matter properties, including `page-type` and `browser-compat`. However, these properties do not need to be copied to translated pages; Yari merges the front matter of the English and translated versions of a page. Localized documents should only have the following front matter properties:
 
-For example:
+- `title` - A long title for the page; to localize
+- `short-title` - A short title for the page which appears in sidebars; also to localize
+- `slug` - needs to match the original page's `slug`
+- `l10n.sourceCommit` - The commit hash of the upstream commit the translation is synchronized with
 
-```html
-<h2 id="tutorials">Tutorials</h2>
-```
+This guideline is enforced by a linter.
 
-in the `fr` locale would be
+## Do not partially translate a document
 
-```html
-<h2 id="tutorials">Tutoriels</h2>
-```
+At the time of writing, there are numerous documents throughout the repository that are partially translated. The documents were created in the wiki era before this project transitioned to GitHub, where anyone could make changes to the pages without review. Partially translated pages are bad for numerous reasons:
 
-We generally advise that you write all IDs in lower-case. The platform
-automatically converts them at render time anyway, but keeping them lower-case
-means that there is less chance of a manually-created anchor link not working
-because of the conversion.
+- They provide a negative user experience if only part of the page is in their requested locale
+- They produce a negative SEO score because of the above reason
+- The upstream content may have changed, but contributors will likely continue working on the English content in that file
 
-## Translating code blocks
+If you are translating a document, please follow through and translate the entire page. If you need assistance translating a section, please ask a member of your locale for help.
 
-When translating code blocks, it is fine to translate comments, strings,
-variable names, and output representations.
+## Do not use machine translation
 
-However, don't translate actual code terms such as syntax. The example needs
-to still work after you are finished with it.
+Using machine translation services can be helpful to discern the meaning of a word you may not know, and machine translations have greatly improved over the years. However, machines are not able to _localize_ content. They cannot discern complete context, and may over-translate or use different words for the same terms in different sentences. Do not use machine translations to localize content; only use them as a reference.
 
-Also, when considering translating examples, bear in mind that some examples
-will link to a live version or source code on a separate repo. You might also
-want to consider creating a translated version of the external code examples
-to link to from your translated page.
+## Localizing code blocks
 
-## Line breaks in HTML source
+Many code blocks are present in MDN pages. We encourage the localization of code blocks, as long as you follow the following guidelines:
 
-In some of the article source code, you may find line breaks in the block-level
-elements that aren't strictly necessary, for example:
+- Translate comments, strings and output representations
+  - Translating variable and function names is not recommended, except in learn/
+- Do not translate syntax (`await`, `console`, etc.) which would break the code
+- Ensure that the code example is not completely rewritten, unless it is absolutely essential
+  - If a code block must be rewritten to meet a locale's requirements, add a comment explaining why
 
-```html
-<p>The
-  <strong><code>HTMLCanvasElement.transferControlToOffscreen()</code></strong>
-  method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
-  thread or on a worker.</p>
-
-<pre
-  class="brush: js">OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()</pre>
-```
-
-Generally we don't use line breaks like this in our source code, so you are
-free to remove them if you want to, and don't add them in when creating new
-translations. However, don't spend too much time trying to remove these, as
-they don't make any difference to the final rendered result.
+Also, when considering translating examples, bear in mind that some examples will link to a live version or source code on a separate repo. You might also want to consider creating a translated version of the external code examples to link to from your translated page.

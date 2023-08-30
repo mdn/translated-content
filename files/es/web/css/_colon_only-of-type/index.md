@@ -1,5 +1,5 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
 ---
 
@@ -30,7 +30,8 @@ p:only-of-type {
   <div>Soy un `div` #1.</div>
   <p>Yo soy el único `p` entre mis hermanos.</p>
   <div>Soy un `div` #2.</div>
-  <div>Soy un `div` #3.
+  <div>
+    Soy un `div` #3.
     <i>Yo soy el único hijo `i`.</i>
     <em>Soy un `em` #1.</em>
     <em>Soy un `em` #2.</em>

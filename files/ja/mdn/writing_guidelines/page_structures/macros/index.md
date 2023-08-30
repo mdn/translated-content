@@ -1,7 +1,6 @@
 ---
 title: マクロの使用
 slug: MDN/Writing_guidelines/Page_structures/Macros
-original_slug: MDN/Structures/Macros
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---

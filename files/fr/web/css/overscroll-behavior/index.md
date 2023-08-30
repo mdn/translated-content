@@ -1,12 +1,6 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/overscroll-behavior
 ---
 
 {{CSSRef}}

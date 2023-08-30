@@ -1,11 +1,6 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-area
 ---
 
 {{CSSRef}}

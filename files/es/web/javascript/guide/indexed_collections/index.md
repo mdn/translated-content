@@ -1,7 +1,6 @@
 ---
 title: Colecciones indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
-original_slug: Web/JavaScript/Guide/colecciones_indexadas
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
@@ -34,15 +33,14 @@ Para crear un arreglo con una longitud distinta de cero, pero sin ningún elemen
 
 ```js
 // Esta...
-let arr = new Array(arrayLength)
+let arr = new Array(arrayLength);
 
 // ...da como resultado el mismo arreglo que este
-let arr = Array(arrayLength)
-
+let arr = Array(arrayLength);
 
 // Esto tiene exactamente el mismo efecto
-let arr = []
-arr.length = arrayLength
+let arr = [];
+arr.length = arrayLength;
 ```
 
 > **Nota:** En el código anterior, `arrayLength` debe ser un `Número`. De lo contrario, se creará un arreglo con un solo elemento (el valor proporcionado). Llamar a `arr.length` devolverá `arrayLength`, pero el arreglo no contiene ningún elemento. Un bucle {{jsxref("Statements/for...in", "for...in")}} no encontrarás ninguna propiedad en el arreglo.
@@ -61,21 +59,21 @@ let obj = {prop: [element0, element1, ...., elementN]}
 Si deseas iniciar un arreglo con un solo elemento, y el elemento resulta ser un `Número`, debes usar la sintaxis de corchetes. Cuando se pasa un solo valor `Number` al constructor o función `Array()`, se interpreta como un `arrayLength`, no como un solo elemento.
 
 ```js
-let arr = [42]       // Crea un arreglo con un solo elemento:
-                     // el número 42.
+let arr = [42]; // Crea un arreglo con un solo elemento:
+// el número 42.
 
-let arr = Array(42)  // Crea un arreglo sin elementos
-                     // y arr.length establecidos en 42.
-                     //
-                     // Esto es equivalente a:
-let arr = []
-arr.length = 42
+let arr = Array(42); // Crea un arreglo sin elementos
+// y arr.length establecidos en 42.
+//
+// Esto es equivalente a:
+let arr = [];
+arr.length = 42;
 ```
 
 Llamar a `Array(N)` da como resultado un `RangeError`, si `N` no es un número entero cuya porción fraccionaria no es cero. El siguiente ejemplo ilustra este comportamiento.
 
 ```js
-let arr = Array(9.3)   // RangeError: Longitud de arreglo no válida
+let arr = Array(9.3); // RangeError: Longitud de arreglo no válida
 ```
 
 Si tu código necesita crear arreglos con elementos únicos de un tipo de dato arbitrario, es más seguro utilizar arreglos literales. Alternativamente, crea un arreglo vacío primero antes de agregarle el único elemento.
@@ -83,7 +81,7 @@ Si tu código necesita crear arreglos con elementos únicos de un tipo de dato a
 En ES2015, puedes utilizar el método estático {{jsxref("Array.of")}} para crear arreglos con un solo elemento.
 
 ```js
-let wisenArray = Array.of(9.3)   // wisenArray contiene solo un elemento 9.3
+let wisenArray = Array.of(9.3); // wisenArray contiene solo un elemento 9.3
 ```
 
 ### Refiriéndose a elementos del arreglo
@@ -91,7 +89,7 @@ let wisenArray = Array.of(9.3)   // wisenArray contiene solo un elemento 9.3
 Dado que los elementos también son propiedades, puedes acceder a ellos usando la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Supongamos que defines el siguiente arreglo:
 
 ```js
-let myArray = ['Wind', 'Rain', 'Fire']
+let myArray = ["Wind", "Rain", "Fire"];
 ```
 
 Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
@@ -99,9 +97,9 @@ Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo el
 > **Nota:** También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.
 >
 > ```js
-> let arr = ['one', 'two', 'three']
-> arr[2] // three
-> arr['length'] // 3
+> let arr = ["one", "two", "three"];
+> arr[2]; // three
+> arr["length"]; // 3
 > ```
 
 ### Llenar un arreglo
@@ -109,27 +107,27 @@ Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo el
 Puedes llenar un arreglo asignando valores a sus elementos. Por ejemplo:
 
 ```js
-let emp = []
-emp[0] = 'Casey Jones'
-emp[1] = 'Phil Lesh'
-emp[2] = 'August West'
+let emp = [];
+emp[0] = "Casey Jones";
+emp[1] = "Phil Lesh";
+emp[2] = "August West";
 ```
 
 > **Nota:** Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.
 >
 > ```js
-> let arr = []
-> arr[3.4] = 'Oranges'
-> console.log(arr.length) // 0
-> console.log(arr.hasOwnProperty(3.4)) // true
+> let arr = [];
+> arr[3.4] = "Oranges";
+> console.log(arr.length); // 0
+> console.log(arr.hasOwnProperty(3.4)); // true
 > ```
 
 También puedes rellenar un arreglo cuando lo creas:
 
 ```js
-let myArray = new Array('Hello', myVar, 3.14159)
+let myArray = new Array("Hello", myVar, 3.14159);
 // OR
-let myArray = ['Mango', 'Apple', 'Orange']
+let myArray = ["Mango", "Apple", "Orange"];
 ```
 
 ### Entendiendo `length`
@@ -141,9 +139,9 @@ La propiedad `length` es especial. Siempre devuelve el índice del último eleme
 Recuerda, los índices del Array JavaScript están basados en 0: comienzan en `0`, no en `1`. Esto significa que la propiedad `length` será uno más que el índice más alto almacenado en el arreglo:
 
 ```js
-let cats = []
-cats[30] = ['Dusty']
-console.log(cats.length) // 31
+let cats = [];
+cats[30] = ["Dusty"];
+console.log(cats.length); // 31
 ```
 
 También puedes asignar la propiedad `length`.
@@ -151,17 +149,17 @@ También puedes asignar la propiedad `length`.
 Escribir un valor que sea más corto que el número de elementos almacenados trunca el arreglo. Escribir `0` lo vacía por completo:
 
 ```js
-let cats = ['Dusty', 'Misty', 'Twiggy']
-console.log(cats.length)  // 3
+let cats = ["Dusty", "Misty", "Twiggy"];
+console.log(cats.length); // 3
 
-cats.length = 2
-console.log(cats)  // logs "Dusty, Misty" - Twiggy se ha eliminado
+cats.length = 2;
+console.log(cats); // logs "Dusty, Misty" - Twiggy se ha eliminado
 
-cats.length = 0
-console.log(cats)  // logs []; el arreglo cats está vacío
+cats.length = 0;
+console.log(cats); // logs []; el arreglo cats está vacío
 
-cats.length = 3
-console.log(cats)  // logs [ <3 elementos vacíos> ]
+cats.length = 3;
+console.log(cats); // logs [ <3 elementos vacíos> ]
 ```
 
 ### Iterando sobre arreglos
@@ -169,17 +167,17 @@ console.log(cats)  // logs [ <3 elementos vacíos> ]
 Una operación común es iterar sobre los valores de un arreglo, procesando cada uno de alguna manera. La forma más sencilla de hacerlo es la siguiente:
 
 ```js
-let colors = ['red', 'green', 'blue']
+let colors = ["red", "green", "blue"];
 for (let i = 0; i < colors.length; i++) {
-  console.log(colors[i])
+  console.log(colors[i]);
 }
 ```
 
 Si sabes que ninguno de los elementos de tu arreglo se evalúa como `false` en un contexto booleano, si tu arreglo consta solo de nodos [DOM](/es/docs/DOM), por ejemplo, puedes usar un lenguaje eficiente:
 
 ```js
-let divs = document.getElementsByTagName('div')
-for (let i = 0, div; div = divs[i]; i++) {
+let divs = document.getElementsByTagName("div");
+for (let i = 0, div; (div = divs[i]); i++) {
   /* Procesar div de alguna manera */
 }
 ```
@@ -189,10 +187,10 @@ Esto evita la sobrecarga de verificar la longitud del arreglo y garantiza que la
 El método {{jsxref("Array.forEach", "forEach()")}} proporciona otra forma de iterar sobre un arreglo:
 
 ```js
-let colors = ['red', 'green', 'blue']
-colors.forEach(function(color) {
-  console.log(color)
-})
+let colors = ["red", "green", "blue"];
+colors.forEach(function (color) {
+  console.log(color);
+});
 // red
 // green
 // blue
@@ -201,8 +199,8 @@ colors.forEach(function(color) {
 Alternativamente, puedes acortar el código para el parámetro `forEach` con las funciones de flecha ES2015:
 
 ```js
-let colors = ['red', 'green', 'blue']
-colors.forEach(color => console.log(color))
+let colors = ["red", "green", "blue"];
+colors.forEach((color) => console.log(color));
 // red
 // green
 // blue
@@ -213,24 +211,24 @@ La función pasada a `forEach` se ejecuta una vez por cada elemento del arreglo,
 Ten en cuenta que los elementos de un arreglo que se omiten cuando se define el arreglo no se enumeran cuando lo itera `forEach`, pero _se enumeran_ cuando `undefined` se ha asignado manualmente al elemento:
 
 ```js
-let array = ['first', 'second', , 'fourth']
+let array = ["first", "second", , "fourth"];
 
-array.forEach(function(element) {
-  console.log(element)
-})
+array.forEach(function (element) {
+  console.log(element);
+});
 // first
 // second
 // fourth
 
 if (array[2] === undefined) {
-  console.log('array[2] is undefined')  // true
+  console.log("array[2] is undefined"); // true
 }
 
-array = ['first', 'second', undefined, 'fourth']
+array = ["first", "second", undefined, "fourth"];
 
-array.forEach(function(element) {
-  console.log(element)
-})
+array.forEach(function (element) {
+  console.log(element);
+});
 // first
 // second
 // undefined
@@ -246,62 +244,62 @@ El objeto {{jsxref("Array")}} tiene los siguientes métodos:
 {{jsxref("Array.concat", "concat()")}} une dos o más arreglos y devuelve un nuevo arreglo.
 
 ```js
-let myArray = new Array('1', '2', '3')
-myArray = myArray.concat('a', 'b', 'c')
+let myArray = new Array("1", "2", "3");
+myArray = myArray.concat("a", "b", "c");
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
 
 {{jsxref("Array.join", "join(delimiter = ',')")}} une todos los elementos de un arreglo en una cadena.
 
 ```js
-let myArray = new Array('Viento', 'Lluvia', 'Fuego')
-let list = myArray.join('-')   // la lista es "Viento - Lluvia - Fuego"
+let myArray = new Array("Viento", "Lluvia", "Fuego");
+let list = myArray.join("-"); // la lista es "Viento - Lluvia - Fuego"
 ```
 
 {{jsxref("Array.push", "push()")}} agrega uno o más elementos al final de un arreglo y devuelve la `longitud` resultante del arreglo.
 
 ```js
-let myArray = new Array('1', '2')
-myArray.push('3') // myArray ahora es ["1", "2", "3"]
+let myArray = new Array("1", "2");
+myArray.push("3"); // myArray ahora es ["1", "2", "3"]
 ```
 
 {{jsxref("Array.pop", "pop()")}} elimina el último elemento de un arreglo y devuelve ese elemento.
 
 ```js
-let myArray = new Array ('1', '2', '3')
-let last = myArray.pop()
+let myArray = new Array("1", "2", "3");
+let last = myArray.pop();
 // myArray ahora es ["1", "2"], last = "3"
 ```
 
 {{jsxref("Array.shift", "shift()")}} elimina el primer elemento de un arreglo y devuelve ese elemento.
 
 ```js
-let myArray = new Array ('1', '2', '3')
-let first = myArray.shift()
+let myArray = new Array("1", "2", "3");
+let first = myArray.shift();
 // myArray ahora es ["2", "3"], first es "1"
 ```
 
 {{jsxref("Array.unshift", "unshift()")}} agrega uno o más elementos al frente de un arreglo y devuelve la nueva longitud del arreglo.
 
 ```js
-let myArray = new Array('1', '2', '3')
-myArray.unshift('4', '5')
+let myArray = new Array("1", "2", "3");
+myArray.unshift("4", "5");
 // myArray se convierte en ["4", "5", "1", "2", "3"]
 ```
 
 {{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrae una sección de un arreglo y devuelve un nuevo arreglo.
 
 ```js
-let myArray = new Array('a', 'b', 'c', 'd', 'e')
-myArray = myArray.slice(1, 4) // comienza en el índice 1 y extrae todos los elementos
-                               // hasta el índice 3, devuelve ["b", "c", "d"]
+let myArray = new Array("a", "b", "c", "d", "e");
+myArray = myArray.slice(1, 4); // comienza en el índice 1 y extrae todos los elementos
+// hasta el índice 3, devuelve ["b", "c", "d"]
 ```
 
 {{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} elimina elementos de un arreglo y (opcionalmente) los reemplaza. Devuelve los elementos que se eliminaron del arreglo.
 
 ```js
-let myArray = new Array('1', '2', '3', '4', '5')
-myArray.splice(1, 3, 'a', 'b', 'c', 'd')
+let myArray = new Array("1", "2", "3", "4", "5");
+myArray.splice(1, 3, "a", "b", "c", "d");
 // myArray ahora es ["1", "a", "b", "c", "d", "5"]
 // Este código comenzó en el índice uno (o donde estaba el "2"),
 // eliminó 3 elementos allí, y luego insertó todos los consecutivos
@@ -311,16 +309,16 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 {{jsxref("Array.reverse", "reverse()")}} transpone los elementos de un arreglo, en su lugar: el primer elemento del arreglo se convierte en el último y el último en el primero. Devuelve una referencia al arreglo.
 
 ```js
-let myArray = new Array ('1', '2', '3')
-myArray.reverse()
+let myArray = new Array("1", "2", "3");
+myArray.reverse();
 // transpone el arreglo para que myArray = ["3", "2", "1"]
 ```
 
 {{jsxref("Array.sort", "sort()")}} ordena los elementos de un arreglo en su lugar y devuelve una referencia al arreglo.
 
 ```js
-let myArray = new Array('Viento', 'Lluvia', 'Fuego')
-myArray.sort()
+let myArray = new Array("Viento", "Lluvia", "Fuego");
+myArray.sort();
 // ordena el arreglo para que myArray = ["Fuego", "Lluvia", "Viento"]
 ```
 
@@ -335,12 +333,12 @@ La siguiente función compara dos valores y devuelve uno de tres valores:
 Por ejemplo, lo siguiente se ordenará por la última letra de una cadena:
 
 ```js
-let sortFn = function(a, b) {
+let sortFn = function (a, b) {
   if (a[a.length - 1] < b[b.length - 1]) return -1;
   if (a[a.length - 1] > b[b.length - 1]) return 1;
   if (a[a.length - 1] == b[b.length - 1]) return 0;
-}
-myArray.sort(sortFn)
+};
+myArray.sort(sortFn);
 // ordena el arreglo para que myArray = ["Viento", "Fuego", "Lluvia"]
 ```
 
@@ -351,73 +349,79 @@ myArray.sort(sortFn)
 {{jsxref("Array.indexOf", "indexOf (searchElement[, fromIndex])")}} busca en el arreglo `searchElement` y devuelve el índice de la primera coincidencia.
 
 ```js
-let a = ['a', 'b', 'a', 'b', 'a']
-console.log(a.indexOf('b')) // registros 1
+let a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); // registros 1
 
 // Ahora inténtalo de nuevo, comenzando después de la última coincidencia
-console.log(a.indexOf('b', 2)) // registra 3
-console.log(a.indexOf('z')) // logs -1, porque no se encontró 'z'
+console.log(a.indexOf("b", 2)); // registra 3
+console.log(a.indexOf("z")); // logs -1, porque no se encontró 'z'
 ```
 
 {{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como `indexOf`, pero comienza al final y busca hacia atrás.
 
 ```js
-let a = ['a', 'b', 'c', 'd', 'a', 'b']
-console.log(a.lastIndexOf('b')) // registra 5
+let a = ["a", "b", "c", "d", "a", "b"];
+console.log(a.lastIndexOf("b")); // registra 5
 
 // Ahora inténtalo de nuevo, comenzando desde antes de la última coincidencia
-console.log(a.lastIndexOf('b', 4)) // registra 1
-console.log(a.lastIndexOf('z'))    // registra -1
+console.log(a.lastIndexOf("b", 4)); // registra 1
+console.log(a.lastIndexOf("z")); // registra -1
 ```
 
 {{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta `callback` en cada elemento del arreglo y devuelve `undefined`.
 
 ```js
-let a = ['a', 'b', 'c']
-a.forEach(function(elemento) { console.log(elemento) })
+let a = ["a", "b", "c"];
+a.forEach(function (elemento) {
+  console.log(elemento);
+});
 // registra cada elemento por turno
 ```
 
 {{jsxref("Array.map", "map(callback [, thisObject])")}} devuelve un nuevo arreglo del valor de retorno de ejecutar `callback` en cada elemento del arreglo.
 
 ```js
-let a1 = ['a', 'b', 'c']
-let a2 = a1.map(function(item) { return item.toUpperCase() })
-console.log(a2) // registra ['A', 'B', 'C']
+let a1 = ["a", "b", "c"];
+let a2 = a1.map(function (item) {
+  return item.toUpperCase();
+});
+console.log(a2); // registra ['A', 'B', 'C']
 ```
 
 {{jsxref("Array.filter", "filter(callback [, thisObject])")}} devuelve un nuevo arreglo que contiene los elementos para los cuales `callback` devolvió `true`.
 
 ```js
-let a1 = ['a', 10, 'b', 20, 'c', 30]
-let a2 = a1.filter(function(item) { return typeof item === 'number'; })
-console.log(a2)  // registra [10, 20, 30]
+let a1 = ["a", 10, "b", 20, "c", 30];
+let a2 = a1.filter(function (item) {
+  return typeof item === "number";
+});
+console.log(a2); // registra [10, 20, 30]
 ```
 
 {{jsxref("Array.every", "every(callback [, thisObject])")}} devuelve `true` si `callback` devuelve `true` para cada elemento del arreglo.
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number'
+  return typeof value === "number";
 }
-let a1 = [1, 2, 3]
-console.log(a1.every(isNumber))  // registra true
-let a2 = [1, '2', 3]
-console.log(a2.every(isNumber))  // registra false
+let a1 = [1, 2, 3];
+console.log(a1.every(isNumber)); // registra true
+let a2 = [1, "2", 3];
+console.log(a2.every(isNumber)); // registra false
 ```
 
 {{jsxref("Array.some", "some(callback[, thisObject])")}} devuelve `true` si `callback` devuelve `true` para al menos un elemento del arreglo.
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number'
+  return typeof value === "number";
 }
-let a1 = [1, 2, 3]
-console.log(a1.some(isNumber))  // registra true
-let a2 = [1, '2', 3]
-console.log(a2.some(isNumber))  // registra true
-let a3 = ['1', '2', '3']
-console.log(a3.some(isNumber))  // registra false
+let a1 = [1, 2, 3];
+console.log(a1.some(isNumber)); // registra true
+let a2 = [1, "2", 3];
+console.log(a2.some(isNumber)); // registra true
+let a3 = ["1", "2", "3"];
+console.log(a3.some(isNumber)); // registra false
 ```
 
 {{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica `callback(acumulador, currentValue[, currentIndex[,array]])` para cada valor en el arreglo con el fin de reducir la lista de elementos a un solo valor. La función `reduce` devuelve el valor final devuelto por la función `callback`.
@@ -429,9 +433,11 @@ Si `initialValue` _no_ es especificado, entonces `callback` los primeros dos val
 Si `callback` necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.
 
 ```js
-let a = [10, 20, 30]
-let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
-console.log(total) // Imprime 60
+let a = [10, 20, 30];
+let total = a.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0);
+console.log(total); // Imprime 60
 ```
 
 {{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} funciona como `reduce()`, pero comienza con el último elemento.
@@ -445,11 +451,11 @@ Los arreglos se pueden anidar, lo cual significa que un arreglo puede contener o
 El siguiente código crea un arreglo bidimensional.
 
 ```js
-let a = new Array(4)
+let a = new Array(4);
 for (let i = 0; i < 4; i++) {
-  a[i] = new Array(4)
+  a[i] = new Array(4);
   for (let j = 0; j < 4; j++) {
-    a[i][j] = '[' + i + ', ' + j + ']'
+    a[i][j] = "[" + i + ", " + j + "]";
   }
 }
 ```
@@ -470,7 +476,7 @@ Los arreglos también se pueden utilizar como objetos para almacenar informació
 ```js
 const arr = [1, 2, 3];
 arr.property = "value";
-console.log(arr.property);  // Registra "value"
+console.log(arr.property); // Registra "value"
 ```
 
 ### Arreglos y expresiones regulares
@@ -485,7 +491,8 @@ Los métodos de arreglo no se pueden llamar directamente en objetos similares a 
 
 ```js example-bad
 function printArguments() {
-  arguments.forEach(function(item) {// TypeError: arguments.forEach no es una función
+  arguments.forEach(function (item) {
+    // TypeError: arguments.forEach no es una función
     console.log(item);
   });
 }
@@ -495,7 +502,7 @@ Pero puedes llamarlos indirectamente usando {{jsxref("Global_Objects/Function/ca
 
 ```js example-good
 function printArguments() {
-  Array.prototype.forEach.call(arguments, function(item) {
+  Array.prototype.forEach.call(arguments, function (item) {
     console.log(item);
   });
 }
@@ -504,9 +511,9 @@ function printArguments() {
 Los métodos de prototipos de arreglos también se pueden utilizar en cadenas, ya que proporcionan acceso secuencial a sus caracteres de forma similar a los arreglos:
 
 ```js
-Array.prototype.forEach.call('a string', function(chr) {
-  console.log(chr)
-})
+Array.prototype.forEach.call("a string", function (chr) {
+  console.log(chr);
+});
 ```
 
 ## Arrays tipados
@@ -527,19 +534,19 @@ Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript div
 
 Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo con tipo especial, {jsxref("Uint8ClampedArray")}}, que fija los valores entre `0` y `255`. Esto es útil para [procesamiento de datos de Canvas](/es/docs/Web/API/ImageData), por ejemplo.
 
-| Tipo                                     | Rango de valores               | Tamaño en bytes | Descripción                                                                                     | Tipo de IDL web            | Tipo C equivalente               |
-| ---------------------------------------- | ------------------------------ | --------------- | ----------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------- |
-| {{jsxref("Int8Array")}}         | `-128` a `127`                 | 1               | Dos enteros complementarios de 8 bits con signo                                                 | `byte`                     | `int8_t`                         |
-| {{jsxref("Uint8Array")}}         | `0` a `255`                    | 1               | Entero de 8-bit sin signo                                                                       | `octeto`                   | `uint8_t`                        |
-| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                    | 1               | Entero de 8 bits sin signo (sujeto)                                                             | `octeto`                   | `uint8_t`                        |
-| {{jsxref("Int16Array")}}         | `-32768` a `32767`             | 2               | Dos enteros complementarios de 16 bits con signo                                                | `short`                    | `int16_t`                        |
-| {{jsxref("Uint16Array")}}         | `0` a `65535`                  | 2               | Entero de 16 bits sin signo                                                                     | `short sin signo`          | `uint16_t`                       |
-| {{jsxref("Int32Array")}}         | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                                | `long`                     | `int32_t`                        |
-| {{jsxref("Uint32Array")}}         | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                                    | `long sin signo`           | `uint32_t`                       |
-| {{jsxref("Float32Array")}}     | `1.2`×`10-38` a `3.4`×`1038`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)         | `float sin restricciones`  | `float`                          |
-| {{jsxref("Float64Array")}}     | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo, `1.123 ... 15`) | `double sin restricciones` | `double`                         |
-| {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                                | `bigint`                   | `int64_t (long long con signo)`  |
-| {{jsxref("BigUint64Array")}}     | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                                     | `bigint`                   | `uint64_t (long long sin signo)` |
+| Tipo                            | Rango de valores               | Tamaño en bytes | Descripción                                                                                      | Tipo de IDL web            | Tipo C equivalente               |
+| ------------------------------- | ------------------------------ | --------------- | ------------------------------------------------------------------------------------------------ | -------------------------- | -------------------------------- |
+| {{jsxref("Int8Array")}}         | `-128` a `127`                 | 1               | Dos enteros complementarios de 8 bits con signo                                                  | `byte`                     | `int8_t`                         |
+| {{jsxref("Uint8Array")}}        | `0` a `255`                    | 1               | Entero de 8-bit sin signo                                                                        | `octeto`                   | `uint8_t`                        |
+| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                    | 1               | Entero de 8 bits sin signo (sujeto)                                                              | `octeto`                   | `uint8_t`                        |
+| {{jsxref("Int16Array")}}        | `-32768` a `32767`             | 2               | Dos enteros complementarios de 16 bits con signo                                                 | `short`                    | `int16_t`                        |
+| {{jsxref("Uint16Array")}}       | `0` a `65535`                  | 2               | Entero de 16 bits sin signo                                                                      | `short sin signo`          | `uint16_t`                       |
+| {{jsxref("Int32Array")}}        | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                                 | `long`                     | `int32_t`                        |
+| {{jsxref("Uint32Array")}}       | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                                     | `long sin signo`           | `uint32_t`                       |
+| {{jsxref("Float32Array")}}      | `1.2`×`10-38` a `3.4`×`1038`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)          | `float sin restricciones`  | `float`                          |
+| {{jsxref("Float64Array")}}      | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo, `1.123 ... 15`) | `double sin restricciones` | `double`                         |
+| {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                                 | `bigint`                   | `int64_t (long long con signo)`  |
+| {{jsxref("BigUint64Array")}}    | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                                      | `bigint`                   | `uint64_t (long long sin signo)` |
 
 Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
 

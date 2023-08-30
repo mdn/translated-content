@@ -1,7 +1,6 @@
 ---
 title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
 
 {{AddonSidebar()}}
@@ -27,8 +26,8 @@ Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebE
 
 ```js
 var hiding = browser.tabs.hide(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Paramètres

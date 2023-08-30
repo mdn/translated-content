@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 
@@ -38,15 +38,15 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
-with(obj) {
+with (obj) {
   console.log(foo); // 1
   console.log(bar); // ReferenceError: bar is not defined
 }

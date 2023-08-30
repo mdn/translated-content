@@ -1,7 +1,6 @@
 ---
 title: progressbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ---
 
 このテクニックは、[`progressbar`](http://www.w3.org/TR/wai-aria/#progressbar) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。
@@ -29,13 +28,24 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ### 例 1: パーセンテージ値を持つ基本的なプログレスバー
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
+<div
+  role="progressbar"
+  aria-valuenow="20"
+  aria-valuemin="0"
+  aria-valuemax="100">
+  20 %
+</div>
 ```
 
 ### 例 2: aria-valuetext の使用
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuetext="ステップ 2: ファイルをコピーしています... " aria-valuemax="100">
+<div
+  role="progressbar"
+  aria-valuenow="20"
+  aria-valuemin="0"
+  aria-valuetext="ステップ 2: ファイルをコピーしています... "
+  aria-valuemax="100">
   ステップ 2: ファイルをコピーしています...
 </div>
 ```

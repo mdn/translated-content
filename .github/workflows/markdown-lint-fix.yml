@@ -31,14 +31,37 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        env:
-          HUSKY: 0
         run: |
           yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: 0
 
-      - name: Lint markdown files
+      - uses: actions/checkout@v3
+        with:
+          repository: mdn/content
+          path: mdn/content
+
+      - name: Setup Node.js environment for mdn/content
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+          cache-dependency-path: mdn/content/yarn.lock
+
+      - name: Install all yarn packages for mdn/content
+        working-directory: ${{ github.workspace }}/mdn/content
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint Markdown files
         run: |
-          yarn markdownlint-cli2-fix "**/${{ matrix.lang }}/**/*.md"
+          yarn markdownlint-cli2 --fix "**/${{ matrix.lang }}/**/*.md"
+          yarn prettier -w "**/${{ matrix.lang }}/**/*.md"
+          cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
 
       - name: Create PR with only fixable issues
         if: success()

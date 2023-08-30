@@ -1,14 +1,6 @@
 ---
 title: IDBKeyRange.bound()
 slug: Web/API/IDBKeyRange/bound_static
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBKeyRange/bound
-original_slug: Web/API/IDBKeyRange/bound
 ---
 
 {{APIRef("IndexedDB")}}
@@ -58,22 +50,23 @@ Dans l'exemple qui suit, on illustre comment créer un intervalle de clé. On d�
 function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  var transaction = db.transaction(["fThings"], "readonly");
+  var objectStore = transaction.objectStore("fThings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
     var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Les éléments ont été affichés.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Les éléments ont été affichés.");
+    }
   };
+}
 ```
 
 > **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).

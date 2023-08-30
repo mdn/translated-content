@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
 
 {{WebAssemblySidebar}}
@@ -41,28 +40,36 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 global 的值发生改变，首先设置`Global.value` 为 42，然后使用导出函数 `incGlobal()` 增加为 43. 导出函数在 `global.wasm` 模块中 (它将参数的值加一并返回).
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-    output.innerHTML += `Testing ${msg}: `;
-    if (got !== expected)
-        output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-    else
-        output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  output.innerHTML += `Testing ${msg}: `;
+  if (got !== expected)
+    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "getting initial value from wasm",
+      instance.exports.getGlobal(),
+      0,
+    );
     global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "getting JS-updated value from wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});
+  },
+);
 ```
 
 > **备注：** 你可以在[running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) 查看例子; 也可以访问[source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).

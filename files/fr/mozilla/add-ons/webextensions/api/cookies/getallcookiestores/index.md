@@ -1,7 +1,6 @@
 ---
 title: cookies.getAllCookieStores()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingStores = browser.cookies.getAllCookieStores()
+var gettingStores = browser.cookies.getAllCookieStores();
 ```
 
 ### Paramètres

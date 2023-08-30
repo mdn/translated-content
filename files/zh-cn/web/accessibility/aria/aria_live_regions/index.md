@@ -22,7 +22,7 @@ slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 1. **`aria-live`**: `aria-live=POLITENESS_SETTING` 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：`off`, `polite` or `assertive` 。默认设置是 `off` 。这个设置是到目前为止最重要的。
 2. **`aria-controls`**: `aria-controls=[IDLIST]` 被用来将控制动作与它控制的区域相关联。区域就像`div` 里面的 `id` 被鉴别；多区域可以被一个带空格的控制动作关联，例如： `aria-controls="myRegionID1 myRegionsID2"` 。
 
-    > **警告：** 尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。需要研究。
+   > **警告：** 尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。需要研究。
 
 正常来说，只有 `aria-live="polite"` 被使用。任何对用户来说很重要但又不至于令人讨厌的更新的区域都应该被设置此属性。每当用户空闲时，屏幕阅读器都会说出更改。
 
@@ -53,7 +53,14 @@ slug: Web/Accessibility/ARIA/ARIA_Live_Regions
   <p id="planetDescription">Select a planet to view its description</p>
 </div>
 
-<p><small>Information courtesy <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System">Wikipedia</a></small></p>
+<p>
+  <small
+    >Information courtesy
+    <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System"
+      >Wikipedia</a
+    ></small
+  >
+</p>
 ```
 
 #### JavaScript
@@ -61,44 +68,51 @@ slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 ```js
 const PLANETS_INFO = {
   mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
+    title: "Mercury",
+    description:
+      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
   },
 
   venus: {
     title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
+    description:
+      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
   },
 
   earth: {
     title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
+    description:
+      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
   },
 
   mars: {
     title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+    description:
+      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+  },
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector("#planetTitle");
+  const planetDescription = document.querySelector("#planetDescription");
 
   if (planet in PLANETS_INFO) {
     planetTitle.textContent = PLANETS_INFO[planet].title;
     planetDescription.textContent = PLANETS_INFO[planet].description;
   } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
+    planetTitle.textContent = "No planet selected";
+    planetDescription.textContent = "Select a planet to view its description";
   }
 }
 
-const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
+const renderPlanetInfoButton = document.querySelector(
+  "#renderPlanetInfoButton",
+);
 
-renderPlanetInfoButton.addEventListener('click', event => {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+renderPlanetInfoButton.addEventListener("click", (event) => {
+  const planetsSelect = document.querySelector("#planetsSelect");
+  const selectedPlanet =
+    planetsSelect.options[planetsSelect.selectedIndex].value;
 
   renderPlanetInfo(selectedPlanet);
 });
@@ -114,14 +128,14 @@ renderPlanetInfoButton.addEventListener('click', event => {
 
 在以下众所周知的预定义情况下，最好使用提供的特定“活动区域角色”：
 
-| 角色   | 描述                                                                                                                                        | 兼容性提示                                                                                                                                                                    |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 日志   | 对话、错误、游戏或者其他类型的日志                                                                                                          | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="polite"` 参数。                                                                                                   |
-| 状态   | 一个状态栏或者屏幕上提供持续更新某种状态的区域。屏幕阅读器用户有一个特殊的命令用来读取当前的状态。                                          | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="polite"` 参数。                                                                                                   |
-| 警告   | 在屏幕上闪烁的错误或警告信息。警报对于向用户发出客户端验证通知特别重要。（待定：带有 ARIA 信息的 ARIA 表单教程链接）                        | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="assertive"` 参数。但是，同时添加 `aria-live` 和 `role="alert"` 会导致在 iOS 平台上出现 VoiceOver 的双重播报问题。 |
+| 角色   | 描述                                                                                                                                       | 兼容性提示                                                                                                                                                                    |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 日志   | 对话、错误、游戏或者其他类型的日志                                                                                                         | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="polite"` 参数。                                                                                                   |
+| 状态   | 一个状态栏或者屏幕上提供持续更新某种状态的区域。屏幕阅读器用户有一个特殊的命令用来读取当前的状态。                                         | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="polite"` 参数。                                                                                                   |
+| 警告   | 在屏幕上闪烁的错误或警告信息。警报对于向用户发出客户端验证通知特别重要。（待定：带有 ARIA 信息的 ARIA 表单教程链接）                       | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="assertive"` 参数。但是，同时添加 `aria-live` 和 `role="alert"` 会导致在 iOS 平台上出现 VoiceOver 的双重播报问题。 |
 | 进度条 | 小部件和活动区域之间的混合体。将此参数与 `aria-valuemin` ， `aria-valuenow` 和`aria-valuemax` 结合使用。（_待定_：请在此处添加更多信息）。 |                                                                                                                                                                               |
-| 选框   | 用于滚动文本，例如股票行情自动收录器。                                                                                                      |                                                                                                                                                                               |
-| 计时器 | 或任何类型的计时器或时钟，例如倒数计时器或秒表读数。                                                                                        |                                                                                                                                                                               |
+| 选框   | 用于滚动文本，例如股票行情自动收录器。                                                                                                     |                                                                                                                                                                               |
+| 计时器 | 或任何类型的计时器或时钟，例如倒数计时器或秒表读数。                                                                                       |                                                                                                                                                                               |
 
 ## 高级活动区域
 
@@ -147,9 +161,10 @@ Paciello Group 有一些 [与活动区域支持状态有关的信息](https://ww
 ```js
 /* basic JavaScript to update the clock */
 
-setInterval(function() {
+setInterval(function () {
   var now = new Date();
-  document.getElementById('clock').innerHTML = "Time: " + now.getHours() + ":" + ("0"+now.getMinutes()).substr(-2);
+  document.getElementById("clock").innerHTML =
+    "Time: " + now.getHours() + ":" + ("0" + now.getMinutes()).substr(-2);
 }, 60000);
 ```
 
@@ -169,8 +184,9 @@ setInterval(function() {
 
 ```html
 <div id="date-input">
-  <label>Year:
-    <input type="text" id="year" value="1990" onblur="change(event)"/>
+  <label
+    >Year:
+    <input type="text" id="year" value="1990" onblur="change(event)" />
   </label>
 </div>
 
@@ -187,10 +203,10 @@ function change(event) {
     case "year":
       yearOut.innerHTML = event.target.value;
       break;
-   default:
+    default:
       return;
   }
-};
+}
 ```
 
 如果没有 `aria-atomic="true"` ，屏幕阅读器只会播报"年"的数值的改变。

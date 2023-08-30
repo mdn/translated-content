@@ -1,14 +1,6 @@
 ---
 title: TextEncoder
 slug: Web/API/TextEncoder
-tags:
-  - API
-  - Encoding
-  - Experimental
-  - Interface
-  - Reference
-  - TextEncoder
-translation_of: Web/API/TextEncoder
 ---
 
 {{APIRef("Encoding API")}}{{SeeCompatTable}}

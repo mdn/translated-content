@@ -1,5 +1,5 @@
 ---
-title: '::after (:after)'
+title: "::after (:after)"
 slug: Web/CSS/::after
 ---
 
@@ -17,7 +17,7 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 }
 ```
 
-> **备注：** CSS 引入 `::after` 表示法（两个引号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持前文介绍的 `:after`。
+> **备注：** CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持前文介绍的 `:after`。
 
 ## 示例
 
@@ -28,8 +28,9 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 ```html
 <p class="boring-text">这是些无聊的文字</p>
 <p>这是不无聊也不有趣的文字</p>
-<p class="exciting-text">在 MDN 上做贡献简单又轻松。
-按右上角的编辑按钮添加新示例或改进旧示例！</p>
+<p class="exciting-text">
+  在 MDN 上做贡献简单又轻松。按右上角的编辑按钮添加新示例或改进旧示例！
+</p>
 ```
 
 ```css
@@ -58,14 +59,14 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 
 ```css
 .ribbon {
- background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
- content: "Look at this orange box.";
- background-color: #FFBA10;
- border-color: black;
- border-style: dotted;
+  content: "Look at this orange box.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
 }
 ```
 
@@ -78,8 +79,10 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 接下来的示例展示了用`::after`[伪元素](/zh-CN/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/zh-CN/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](/files/4591/css-only_tooltips.html)看这个例子。
 
 ```html
-<p>这是上面代码的实现<br />
-  我们有一些 <span data-descr="collection of words and punctuation">文字</span> 有一些
+<p>
+  这是上面代码的实现<br />
+  我们有一些
+  <span data-descr="collection of words and punctuation">文字</span> 有一些
   <span data-descr="small popups which also hide again">提示</span>。<br />
   把鼠标放上去<span data-descr="not to be taken literally">看看</span>。
 </p>
@@ -87,25 +90,25 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 
 ```css
 span[data-descr] {
- position: relative;
- text-decoration: underline;
- color: #00F;
- cursor: help;
+  position: relative;
+  text-decoration: underline;
+  color: #00f;
+  cursor: help;
 }
 
 span[data-descr]:hover::after {
- content: attr(data-descr);
- position: absolute;
- left: 0;
- top: 24px;
- min-width: 200px;
- border: 1px #aaaaaa solid;
- border-radius: 10px;
- background-color: #ffffcc;
- padding: 12px;
- color: #000000;
- font-size: 14px;
- z-index: 1;
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
 }
 ```
 

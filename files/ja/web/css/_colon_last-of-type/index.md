@@ -1,5 +1,5 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
 ---
 
@@ -57,7 +57,9 @@ p:last-of-type {
 <article>
   <div>This `div` is first.</div>
   <div>This <span>nested `span` is last</span>!</div>
-  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>
+    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+  </div>
   <b>This `b` qualifies!</b>
   <div>This is the final `div`!</div>
 </article>

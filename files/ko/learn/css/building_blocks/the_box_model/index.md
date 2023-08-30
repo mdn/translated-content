@@ -1,7 +1,6 @@
 ---
-title: 상자 모델
+title: 박스 모델
 slug: Learn/CSS/Building_blocks/The_box_model
-original_slug: Learn/CSS/Building_blocks/상자_모델
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
@@ -20,11 +19,11 @@ CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이�
         <a
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업에 대한 기본 지식</a
-        >, HTML 기본기 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        >, HTML 기본기 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML</a
         >
         학습), CSS 작동 방식에 대한 개념 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 단계</a
         >
         학습.) 등에 대한 기본 지식
@@ -101,9 +100,9 @@ CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예�
 
 나머지 수업에서는 외부 디스플레이 유형에 집중할 것이다.
 
-## CSS Box Model이란 무엇인가?
+## CSS 박스 모델이란 무엇인가?
 
-전체 CSS box model은 블록 박스에 적용되며, 인라인 박스는 박스 모델에 정의된 일부 동작만 사용합니다. 이 모델은 당신이 페이지에서 볼 수 있는 박스를 생성하기 위해 박스의 서로 다른 부분인 여백, 테두리, 패딩 및 콘텐츠등이 어떻게 함께 작동할 것인지를 정의합니다. 몇 가지 복잡성을 추가하기 위해 표준 및 대체 박스 모델이 있습니다.
+전체 CSS 박스 모델은 블록 박스에 적용되며, 인라인 박스는 박스 모델에 정의된 일부 동작만 사용합니다. 이 모델은 당신이 페이지에서 볼 수 있는 박스를 생성하기 위해 박스의 서로 다른 부분인 여백, 테두리, 패딩 및 콘텐츠등이 어떻게 함께 작동할 것인지를 정의합니다. 몇 가지 복잡성을 추가하기 위해 표준 및 대체 박스 모델이 있습니다.
 
 ### Box의 구성
 
@@ -118,9 +117,9 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 ![박스 모델](box-model.png)
 
-### 표준 CSS box model
+### 표준 CSS 박스 모델
 
-표준 box model에서 box에서 `width`와 `height`를 부여하면 *content box*의 너비와 높이가 정의됩니다. 그런 다음 패딩과 테두리는 박스의 너비와 높이에 추가되여 박스가 점유하는 전체 크기가 정해집니다. 그 내용이 아래 이미지에서 제시되었습니다.
+표준 박스 모델에서 box에서 `width`와 `height`를 부여하면 *content box*의 너비와 높이가 정의됩니다. 그런 다음 패딩과 테두리는 박스의 너비와 높이에 추가되여 박스가 점유하는 전체 크기가 정해집니다. 그 내용이 아래 이미지에서 제시되었습니다.
 
 우리는 박스의 `width`와 `height`, `margin`과 `border` 및 `padding` CSS 값이 다음과 같이 지정되어 있다고 간주합니다:
 
@@ -140,7 +139,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 > **참고:** 여백은 박스의 실제 크기에 포함되지 않습니다. 물론 여백은 박스가 페이지에서 차지하는 총 공간에 영향을 미치지만, 박스의 외부 공간에만 영향을 미칩니다. 박스의 영역은 테두리에서 멈추게 됩니다. 여백으로 확장되지 않습니다.
 
-### 대체 CSS box model
+### 대체 CSS 박스 모델
 
 박스의 실제 크기를 얻기 위해 테두리와 패딩을 추가하는 것이 다소 불편하다고 생각할 수 있습니다. 당신 말이 옳을 것입니다! 이러한 이유로 CSS는 표준 박스 모델 이후 머지않아 대체 박스 모델이 도입되었습니다. 이 모델을 사용한다면 너비는 페이지에서 표시되는 박스 너비이므로 콘텐츠 영역 너비는 너비에서 패딩 및 테두리 너비를 뺀 너비입니다. 위에서 사용된 것과 동일한 CSS를 아래 결과에 대입하면(폭 = 350px, 높이 = 150px)가 됩니다.
 
@@ -160,7 +159,9 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

@@ -1,42 +1,47 @@
 ---
-title: element.hasAttribute
+title: "Element: hasAttribute() メソッド"
+short-title: hasAttribute()
 slug: Web/API/Element/hasAttribute
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-## 概要
-
-hasAttribute
-
-は指定の要素が指定の属性を持つか否かを示す真偽値を返します。
+**`Element.hasAttribute()`** メソッドは、指定した要素が指定した属性を持つかどうかを示す**論理値**を返します。
 
 ## 構文
 
-```
-var result = element.hasAttribute(attName);
+```js-nolint
+hasAttribute(name)
 ```
 
-- `result` : true または false の戻り値を保有
-- `attName` : 属性の名前を表す文字列を指定
+### 引数
+
+- `name`
+  - : 属性の名前を示す文字列です。
+
+### 引数
+
+論理値です。
 
 ## 例
 
-対象属性の存在をチェックし、無い場合にのみ属性を設定する例を以下に示します。
-
 ```js
-var d = document.getElementById("div1"); // 対象要素を取得
-
-if ( !d.hasAttribute("align") ) {
-  d.setAttribute("align", "center");
+const foo = document.getElementById("foo");
+if (foo.hasAttribute("bar")) {
+  // do something
 }
 ```
 
-## 注記
+## メモ
 
 {{DOMAttributeMethods}}
 
 ## 仕様書
 
-- [DOM Level 2 Core: hasAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr)
-- [DOM Level 3 Core: hasAttribute](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-ElHasAttr)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

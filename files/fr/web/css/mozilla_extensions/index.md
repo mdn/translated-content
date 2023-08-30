@@ -1,13 +1,6 @@
 ---
 title: Extensions CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-tags:
-  - CSS
-  - Mozilla
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/Mozilla_Extensions
-original_slug: Web/CSS/Extensions_Mozilla
 ---
 
 {{CSSRef}}

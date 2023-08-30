@@ -1,5 +1,5 @@
 ---
-title: '<html>: HTML 문서 / 루트 요소'
+title: "<html>: HTML 문서 / 루트 요소"
 slug: Web/HTML/Element/html
 ---
 
@@ -67,16 +67,20 @@ slug: Web/HTML/Element/html
 ## 예제
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
 ## 접근성 고려사항
 
-`html` 요소의 {{htmlattrxref("lang")}} 특성에 [유효한 IETF 언어 식별 태그](https://www.ietf.org/rfc/bcp/bcp47.txt)를 지정하면 스크린 리더가 음성 표현에 사용할 언어를 선택할 때 도움이 됩니다. 언어 식별 태그는 페이지의 주 언어를 가리켜야 합니다. 아무런 값도 지정하지 않을 시 보통 운영체제의 언어 설정을 따라가므로, 잘못된 발음을 사용할 수 있습니다.
+`html` 요소의 [`lang`](/ko/docs/Web/HTML/Global_attributes#lang) 특성에 [유효한 IETF 언어 식별 태그](https://www.ietf.org/rfc/bcp/bcp47.txt)를 지정하면 스크린 리더가 음성 표현에 사용할 언어를 선택할 때 도움이 됩니다. 언어 식별 태그는 페이지의 주 언어를 가리켜야 합니다. 아무런 값도 지정하지 않을 시 보통 운영체제의 언어 설정을 따라가므로, 잘못된 발음을 사용할 수 있습니다.
 
 또한 `<html>` 요소에 유효한 `lang` 선언이 존재해야 {{htmlelement("title")}}과 같은 {{htmlelement("head")}} 내부의 중요한 메타데이터를 정확한 발음으로 표현할 수 있습니다.
 

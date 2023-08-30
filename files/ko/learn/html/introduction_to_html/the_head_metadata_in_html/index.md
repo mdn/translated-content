@@ -13,7 +13,7 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
       <th scope="row">사전 지식:</th>
       <td>
         HTML의 기본 구조,
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >문서의 내용을 사전에 읽으면 좋습니다.
       </td>
@@ -33,10 +33,10 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
 [HTML document we covered in the previous article](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)을 다시 봅시다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -49,7 +49,7 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>My test page</title>
 </head>
 ```
@@ -67,18 +67,18 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 
 1. 능동적인 학습을 시작하기 위해서, GitHub repo에가서 [title-example.html 페이지](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)의 복사본을 다운로드 하십시오. 다음 중 하나를 하면 됩니다:
 
-    1. 복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
-    2. 페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
+   1. 복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
+   2. 페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
 
 2. 이제 당신의 브라우저에서 받은 파일을 여십시오.아래와 같이 보일 것입니다:
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)\<h1>컨텐츠가 보이는 곳이 어디인지 이제 명백할 것입니다. 그리고 `<title>` 컨텐츠도 어디에 있는지 알 수 있습니다!
+   ![A simple web page with the title set to 'title' element, and the 'h1' set to 'h1' element.](title-example.png)\<h1>컨텐츠가 보이는 곳이 어디인지 이제 명백할 것입니다. 그리고 `<title>` 컨텐츠도 어디에 있는지 알 수 있습니다!
 
 3. 텍스트 편집기에서도 이것을 열 수 있습니다. 이 요소들을 변경해보고, 페이지 새로고침하면서 즐겨보십시오.
 
 `<title>` 요소는 다른 방식으로 사용될 수도 있는데, 예를 들면 브라우저에서 사이트를 북마크할 때, `<title>`의 내용물을 추천하는 북마크 이름으로 사용하기도 합니다.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the 'title' element ](bookmark-example.png)
 
 `<title>`은 아래에서 보는것 처럼 검색결과로 사용되기도 합니다.
 
@@ -91,7 +91,7 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 위에서의 예제에서 , 아래의 줄이 포함됩니다:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 이 요소는 문서의 character—문서에서 허용하는 문자 집합(character set)— encoding에 대해서 간단히 표시합니다 . `utf-8` 은 전세계적인 character 집합으로 많은 언어들을 문자들을 포함합니다. 이는 웹 페이지에서 어떤 문자라도 취급할 수 있다는 것을 의미합니다. 따라서 당신이 작성할 모든 페이지에서 character 집합을 utf-8로 지정하는것은 좋은 생각입니다! 예를 들어서 당신의 웹페이지는 영어나 일본어 모두 허용합니다:
@@ -120,10 +120,12 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 이러한 두가지 메타데이터는 당신의 페이지에서 관리자를 정리하고 머릿말을 요약하는데 유용합니다. 아래의 예시를 보면:
 
 ```html
-<meta name="author" content="Chris Mills">
-<meta name="description" content="The MDN Learning Area aims to provide
+<meta name="author" content="Chris Mills" />
+<meta
+  name="description"
+  content="The MDN Learning Area aims to provide
 complete beginners to the Web with all they need to know to get
-started with developing web sites and applications.">
+started with developing web sites and applications." />
 ```
 
 저자를 지정하는 것은 콘텐츠 작성자에 대한 정보를 볼 수 있게 해준다. 일부 컨텐츠 관리 시스템에는 페이지 작성자 정보를 자동으로 추출해서 사용할 수 있는 기능이 있다.
@@ -137,21 +139,23 @@ started with developing web sites and applications.">
 1. 다음 링크로 간다. [front page of The Mozilla Developer Network](/en-US/).
 2. 페이지의 소스를 본다. (Right/
 
-    <kbd>Ctrl</kbd>
+   <kbd>Ctrl</kbd>
 
-    \+ click on the page, choose _View Page Source_ from the context menu.)
+   \+ click on the page, choose _View Page Source_ from the context menu.)
 
 3. 메타 태그를 찾아본다. 아마 아래와 같은 형태로 생겼을 것이다.
 
-    ```html
-    <meta name="description" content="The Mozilla Developer Network (MDN) provides
-    information about Open Web technologies including HTML, CSS, and APIs for both
-    Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
-    ```
+   ```html
+   <meta
+     name="description"
+     content="The Mozilla Developer Network (MDN) provides
+   information about Open Web technologies including HTML, CSS, and APIs for both
+   Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS." />
+   ```
 
 4. 지금 당신이 애용하는 검색엔진으로 "Mozilla Developer Network"를 찾아보라(우리는 YAHOO를 사용한다). 검색 결과를 보면, `<meta>` 및 `<title>` 요소의 컨텐츠 설명이 어떤 역할을 했는지 알 수 있을 것이다.
 
-    ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
+   ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
 
 > **참고:** Google에서는 메인 MDN 홈페이지 링크 아래에 MDN의 몇 가지 관련 서브 페이지가 표시된다. 이를 사이트 링크라고하며 Google의 웹 마스터 도구에서 구성 할 수 있다. 그리고 이는 Google 검색 엔진에서 사이트의 검색 결과를 개선하는 방법이다.
 
@@ -164,11 +168,15 @@ started with developing web sites and applications.">
 [Open Graph Data](http://ogp.me/) 는 Facebook이 웹 사이트에 더 풍부한 메타 데이터를 제공하기 위해 발명한 메타 데이터 프로토콜이다. MDN 소스코드에서 다음과 같은 부분을 볼 수 있을 것이다.
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
-<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+<meta
+  property="og:image"
+  content="https://developer.mozilla.org/mdn-social-share.png" />
+<meta
+  property="og:description"
+  content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
-<meta property="og:title" content="Mozilla Developer Network">
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS." />
+<meta property="og:title" content="Mozilla Developer Network" />
 ```
 
 Facebook에서 MDN에 링크를 하면, 이미지와 설명이 함께 나타난다. 사용자에게는 더 좋은 정보를 보여줄 수 있는 것이다.
@@ -176,7 +184,7 @@ Facebook에서 MDN에 링크를 하면, 이미지와 설명이 함께 나타난�
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)Twitter 에서도 유사한 형태의 독점적인 자체 메타데이터를 가지고 있는데, 특정 웹사이트의 url이 twitter.com에 표시 될 때와 유사한 효과가 있다.
 
 ```html
-<meta name="twitter:title" content="Mozilla Developer Network">
+<meta name="twitter:title" content="Mozilla Developer Network" />
 ```
 
 ## 맞춤 아이콘 추가하기
@@ -190,9 +198,9 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 1. 당신의 사이트의 인덱스 페이지와 같은 디렉토리에 `.ico` 포멧의 파일을 저장하라 (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
 2. `다음 줄을 HTML <head>에 추가하여 favicon을 참조하라`:
 
-    ```html
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    ```
+   ```html
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   ```
 
 북마크 페널의 페비콘이 그 예시이다:
 
@@ -202,15 +210,28 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://developer.mozilla.org/static/img/favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="https://developer.mozilla.org/static/img/favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="https://developer.mozilla.org/static/img/favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  href="https://developer.mozilla.org/static/img/favicon57.png" />
 <!-- basic favicon -->
-<link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+<link
+  rel="shortcut icon"
+  href="https://developer.mozilla.org/static/img/favicon32.png" />
 ```
 
 주석은 각 아이콘의 용도를 설명한다. 웹사이트가 iPad의 홈 화면에 저장 될 때 사용할 고해상도 아이콘을 제공하는 것 등을 포함한다.
@@ -224,7 +245,7 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 - {{htmlelement("link")}}는 항상 문서의 head 부분에 위치한다. 이것은 두 가지 속성을 취하는데, rel="stylesheet", 즉 문서의 스타일 시트임을 나타냄과 동시에 스타일 시트 파일의 경로를 포함하는 href를 내포한다.
 
   ```html
-  <link rel="stylesheet" href="my-css-file.css">
+  <link rel="stylesheet" href="my-css-file.css" />
   ```
 
 - {{htmlelement("script")}} 는 head에 들어갈 필요가 없다. `</body>` 태그 바로 앞, 문서 본문의 맨 끝에 넣는 것이 좋으며, JavaScript를 적용하기 전에 모든 HTML 내용을 브라우저에서 읽었는지 확인하는 것이 좋다. 액세스 과정에서 JavaScript가 아직 존재하지 않는 요소라고 판단하며 에러가 날 수 있다.
@@ -255,7 +276,7 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
 
 ```html
-<html lang="en-US">
+<html lang="en-US"></html>
 ```
 
 이것은 여러 방면에서 유용하다. HTML 문서는 언어가 설정되어 있으면 검색 엔진에 의해 보다 효과적으로 색인화되며(예를 들어 언어 별 결과에 올바르게 표시되도록..) 화면 판독기를 사용하여 시각장애가 있는 사용자에게 유용하다.(예: 6이라는 숫자는 프랑스어와 영어에서 모두 존재하지만, 각기 다른 발음이 적용된다.)

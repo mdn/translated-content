@@ -42,7 +42,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 2. 打開你的 `index.html`，並複製貼上下面這段 code。先別擔心這些 code 代表什麼意思，我們會在後面的時候講解它們代表的意義。
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html>
      <head>
        <meta charset="utf-8" />

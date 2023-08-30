@@ -1,7 +1,6 @@
 ---
 title: Depurar el HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
@@ -68,55 +67,58 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
 2. A continuación, abrámoslo en un navegador; veremos lo siguiente:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. No parece que esté bien; veamos el código fuente para ver qué podemos hacer (solo mostramos el contenido del \<body>):
 
-    ```html
-    <h1>HTML debugging examples</h1>
+   ```html
+   <h1>HTML debugging examples</h1>
 
-    <p>What causes errors in HTML?
+   <p>What causes errors in HTML?
 
-    <ul>
-      <li>Unclosed elements: If an element is <strong>not closed properly,
-          then its effect can spread to areas you didn't intend
+   <ul>
+     <li>Unclosed elements: If an element is <strong>not closed properly,
+         then its effect can spread to areas you didn't intend
 
-      <li>Badly nested elements: Nesting elements properly is also very important
-          for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
-          what is this?</em>
+     <li>Badly nested elements: Nesting elements properly is also very important
+         for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
+         what is this?</em>
 
-      <li>Unclosed attributes: Another common source of HTML problems. Let's
-          look at an example: <a href="https://www.mozilla.org/>link to Mozilla
-          homepage</a>
-    </ul>
-    ```
+     <li>Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example: <a href="https://www.mozilla.org/>link to Mozilla
+         homepage</a>
+   </ul>
+   ```
 
 4. Veamos qué problemas podemos descubrir:
 
-    - El elemento {{htmlelement("p")}} y el {{htmlelement("li")}} no tienen etiquetas de cierre. Si comprobamos el resultado, no parece que haya generado un efecto grave en la representación del lenguaje de marcado, porque es fácil deducir que donde un elemento acaba, debería comenzar otro.
-    - El primer elemento {{htmlelement("strong")}} no tiene etiqueta de cierre. Este resulta ser un poco más problemático porque no es fácil deducir dónde se supone que termina el elemento. De hecho, el énfasis fuerte se ha aplicado al resto del texto.
-    - Esta sección está mal anidada: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
-    - Al valor del atributo [`href`](/es/docs/Web/HTML/Element/a#href) le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
+   - El elemento {{htmlelement("p")}} y el {{htmlelement("li")}} no tienen etiquetas de cierre. Si comprobamos el resultado, no parece que haya generado un efecto grave en la representación del lenguaje de marcado, porque es fácil deducir que donde un elemento acaba, debería comenzar otro.
+   - El primer elemento {{htmlelement("strong")}} no tiene etiqueta de cierre. Este resulta ser un poco más problemático porque no es fácil deducir dónde se supone que termina el elemento. De hecho, el énfasis fuerte se ha aplicado al resto del texto.
+   - Esta sección está mal anidada: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
+   - Al valor del atributo [`href`](/es/docs/Web/HTML/Element/a#href) le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
 
 5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), y luego continuaremos.
 6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
 
-    - Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.
-    - Al no estar claro el final del elemento `<strong>`, el navegador lo ha aplicado individualmente a todos los bloques de texto siguientes, a cada uno le ha añadido su etiqueta `strong` propia, desde donde está ¡hasta el final del documento!
-    - El navegador ha arreglado el anidamiento incorrecto del modo siguiente:
+   - Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.
+   - Al no estar claro el final del elemento `<strong>`, el navegador lo ha aplicado individualmente a todos los bloques de texto siguientes, a cada uno le ha añadido su etiqueta `strong` propia, desde donde está ¡hasta el final del documento!
+   - El navegador ha arreglado el anidamiento incorrecto del modo siguiente:
 
-      ```html
-      <strong>strong
-        <em>strong emphasised?</em>
-      </strong>
-      <em> what is this?</em>
-      ```
+     ```html
+     <strong
+       >strong
+       <em>strong emphasised?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
-    - El enlace a cuyo atributo le faltan las comillas del final ha sido ignorado. La última lista la ha dejado como sigue:
+   - El enlace a cuyo atributo le faltan las comillas del final ha sido ignorado. La última lista la ha dejado como sigue:
 
-      ```html
-      <li>
-        <strong>Unclosed attributes: Another common source of HTML problems.
-        Let's look at an example: </strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong
+         >Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example:
+       </strong>
+     </li>
+     ```
 
 ### Validación HTML
 

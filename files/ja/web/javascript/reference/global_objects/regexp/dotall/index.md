@@ -1,50 +1,51 @@
 ---
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
 {{JSRef}}
 
-**`dotAll`** プロパティは、正規表現で "`s`" フラグが使用されているかどうかを示します。 `dotAll` は、個々の正規表現インスタンスの読み取り専用プロパティです。
+**`dotAll`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、正規表現で `s` フラグが使用されているかどうかを示します。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
 
-{{JS_Property_Attributes(0, 0, 1)}}
+## 解説
 
-## 説明
+`RegExp.prototype.dotAll` の値は `s` フラグが使用されている場合は `true`、それ以外の場合は `false` です。`s` フラグは、ドット特殊文字 (`.`) が追加で行末記号 ("newline") 文字と一致することを示します。これ以外の場合は一致しません。
 
-dotAll の値は {{JSxRef("Boolean")}} であり、"`s`" フラグが使用されている場合は `true` 、それ以外の場合は `false` です。 "`s`" フラグは、ドット特殊文字 ("`.`") が以下に示す行末記号 ("`newline`") 文字と一致することを示します。これ以外の場合は一致しません:
+- U+000A LINE FEED (LF) (`\n`)
+- U+000D CARRIAGE RETURN (CR) (`\r`)
+- U+2028 LINE SEPARATOR
+- U+2029 PARAGRAPH SEPARATOR
 
-- U+000A 改行 (LF) ("`\n`")
-- U+000D キャリッジリターン (CR) ("`\r`")
-- U+2028 ラインセパレーター
-- U+2029 段落区切り文字
+これは事実上、ドットが基本多言語面 (BMP) のすべての文字と一致することを意味します。アストラル文字と一致させるには、`u` (Unicode) フラグを使用する必要があります。両方のフラグを組み合わせて使用すると、ドットは例外なく任意の Unicode 文字に一致します。
 
-これは事実上、ドットが基本多言語面 (BMP) のすべての文字と一致することを意味します。 アストラル文字と一致させるには、"`u`" (ユニコード) フラグを使用する必要があります。 両方のフラグを組み合わせて使用すると、ドットは例外なく任意のユニコード文字に一致します。
-
-このプロパティを直接変更することはできません。
+`dotAll` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
 ## 例
 
-### dotAll を使用する
+### dotAll の使用
 
 ```js
-var str1 = 'bar\nexample foo example';
+const str1 = "bar\nexample foo example";
 
-var regex1 = new RegExp('bar.example','s');
+const regex1 = /bar.example/s;
 
-console.log(regex1.dotAll); // Output: true
+console.log(regex1.dotAll); // true
 
-console.log(str1.replace(regex1,'')); // Output: foo example
+console.log(str1.replace(regex1, "")); // foo example
 
-var str2 = 'bar\nexample foo example';
+const str2 = "bar\nexample foo example";
 
-var regex2 = new RegExp('bar.example');
+const regex2 = /bar.example/;
 
-console.log(regex2.dotAll); // Output: false
+console.log(regex2.dotAll); // false
 
-console.log(str2.replace(regex2,'')); // Output: bar
-                                      //         example foo example
+console.log(str2.replace(regex2, ""));
+// bar
+// example foo example
 ```
 
 ## 仕様書
@@ -53,12 +54,14 @@ console.log(str2.replace(regex2,'')); // Output: bar
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.dotAll")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{JSxRef("RegExp.lastIndex")}}
+- [`dotAll` フラグのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
 - {{JSxRef("RegExp.prototype.ignoreCase")}}
 - {{JSxRef("RegExp.prototype.multiline")}}
 - {{JSxRef("RegExp.prototype.source")}}

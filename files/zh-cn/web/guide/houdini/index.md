@@ -1,23 +1,20 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-original_slug: Web/Houdini
 ---
 
 Houdini 是一组底层 API，它们公开了 CSS 引擎的各个部分，从而使开发人员能够通过加入浏览器渲染引擎的样式和布局过程来扩展 CSS。Houdini 是一组 API，它们使开发人员可以直接访问[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) （CSSOM），使开发人员可以编写浏览器可以解析为 CSS 的代码，从而创建新的 CSS 功能，而无需等待它们在浏览器中本地实现。
 
 ## Houdini 的优点
 
-当样式改变时 Houdini 相比 JavaScript[.style](/zh-CN/docs/Web/API/ElementCSSInlineStyle/style) 的方式能够能够更快的解析。浏览器在应用脚本中发现的任何样式更新之前，会对 CSSOM 进行解析 -- 包括布局、绘制和合成过程。此外，对于 JavaScript 样式更新，布局、绘制和复合过程也会重复进行。Houdini 代码不会等待第一个渲染周期完成。相反，它被包含在第一个周期中 -- 创建可渲染的、可理解的样式。Houdini 为在 JavaScript 中使用 CSS 值提供了一个基于对象的 API。
+当样式改变时 Houdini 相比 JavaScript[.style](/zh-CN/docs/Web/API/ElementCSSInlineStyle/style) 的方式能够能够更快的解析。浏览器在应用脚本中发现的任何样式更新之前，会对 CSSOM 进行解析——包括布局、绘制和合成过程。此外，对于 JavaScript 样式更新，布局、绘制和复合过程也会重复进行。Houdini 代码不会等待第一个渲染周期完成。相反，它被包含在第一个周期中——创建可渲染的、可理解的样式。Houdini 为在 JavaScript 中使用 CSS 值提供了一个基于对象的 API。
 
 Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且暴露出了作为 JavaScript 对象的值。比起先前基于字符串的，对 [`HTMLElement.style`](/zh-CN/docs/Web/API/HTMLElement/style) 进行操作的方案，对 JavaScript 对象进行操作更符合直觉。每个元素和样式表规则都拥有一个样式对应表，该对应表可以通过 [`StylePropertyMap`](/zh-CN/docs/Web/API/StylePropertyMap) 来获得。
 
 一个 CSS Houdini 的特性就是 [Worklet](/zh-CN/docs/Web/API/Worklet)。在它的帮助下，你可以通过引入一行 JavaScript 代码来引入配置化的组件，从而创建模块式的 CSS。不依赖任何前置处理器、后置处理器或者 JavaScript 框架。
 
 ```js
-<script>
-  CSS.paintWorklet.addModule('csscomponent.js');
-</script>
+<script>CSS.paintWorklet.addModule('csscomponent.js');</script>
 ```
 
 以上添加进的模块包含一个 [`registerPaint()`](/zh-CN/docs/Web/API/PaintWorklet/registerPaint)函数，这个模块是完全通过可配置的 worklets 来注册的。
@@ -26,9 +23,9 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 
 ```css
 li {
-    background-image: paint(myComponent, stroke, 10px);
-    --hilights: blue;
-    --lowlights: green;
+  background-image: paint(myComponent, stroke, 10px);
+  --hilights: blue;
+  --lowlights: green;
 }
 ```
 

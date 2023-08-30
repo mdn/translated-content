@@ -1,7 +1,6 @@
 ---
 title: Mise à jour des applications Web pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
 ---
 
 {{FirefoxSidebar}}
@@ -79,10 +78,10 @@ Dans les versions précédentes de Firefox, un certain nombre de cas existaient 
 
 ### Changements dans JavaScript
 
-Firefox 3 intègre [JavaScript 1.8](/fr/Nouveaut%c3%a9s_dans_JavaScript_1.8). Un changement important qui pourrait nécessiter une mise à jour de vos sites ou applications Web est que l'objet obsolète et non standard `Script` n'est plus géré. Il ne s'agit pas de la balise `<script>` mais d'un objet JavaScript qui n'avait jamais été standardisé. Il est finalement peu probable que vous l'ayez jamais utilisé, et vous n'aurez sans doute aucun problème.
+Firefox 3 intègre [JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8). Un changement important qui pourrait nécessiter une mise à jour de vos sites ou applications Web est que l'objet obsolète et non standard `Script` n'est plus géré. Il ne s'agit pas de la balise `<script>` mais d'un objet JavaScript qui n'avait jamais été standardisé. Il est finalement peu probable que vous l'ayez jamais utilisé, et vous n'aurez sans doute aucun problème.
 
 ### Voir aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
-- [Nouveautés dans JavaScript 1.8](/fr/Nouveaut%c3%a9s_dans_JavaScript_1.8)
-- [Mise à jour des extensions pour Firefox 3](/fr/Mise_%c3%a0_jour_des_extensions_pour_Firefox_3)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
+- [Nouveautés dans JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8)
+- [Mise à jour des extensions pour Firefox 3](/fr/Mise_à_jour_des_extensions_pour_Firefox_3)

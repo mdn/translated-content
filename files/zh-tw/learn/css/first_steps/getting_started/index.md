@@ -39,7 +39,7 @@ slug: Learn/CSS/First_steps/Getting_started
 我們的起點是一個 HTML 文件。如果您想要在自己的電腦上操作，可以把下面的程式碼複製下來。在您電腦上的目錄中，用 `index.html` 為檔名儲存。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

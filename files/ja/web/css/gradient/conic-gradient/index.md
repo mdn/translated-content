@@ -1,7 +1,6 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
-original_slug: Web/CSS/gradient/conic-gradient()
 ---
 
 {{CSSRef}}
@@ -86,7 +85,7 @@ conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg)
 conic-gradient(red 40grad, 80grad, blue 360grad);
 ```
 
-2 つ以上の色経由点が同じ場所にある場合、その場所で宣言された最初の色と最後の色の間に不連続の (硬い) 色変化として表示されます。扇形グラデーションを使用して円グラフを作成するには、 -- 背景画像はアクセシビリティが確保できないため、正しい方法ではありませんが -- 隣接する 2 つの色経由点の色経由点の角度が同じである、硬い色経由点を使用します。これを実現する最も簡単な方法は、複数のポジションの色経由点を使用することです。次の 2 つの宣言は等価です。
+2 つ以上の色経由点が同じ場所にある場合、その場所で宣言された最初の色と最後の色の間に不連続の (硬い) 色変化として表示されます。扇形グラデーションを使用して円グラフを作成するには、 — 背景画像はアクセシビリティが確保できないため、正しい方法ではありませんが — 隣接する 2 つの色経由点の色経由点の角度が同じである、硬い色経由点を使用します。これを実現する最も簡単な方法は、複数のポジションの色経由点を使用することです。次の 2 つの宣言は等価です。
 
 ```css
 conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
@@ -132,8 +131,7 @@ div {
 
 ```css
 div {
-  background-image:
-     conic-gradient(from 40deg, #fff, #000);
+  background-image: conic-gradient(from 40deg, #fff, #000);
 }
 ```
 
@@ -177,9 +175,8 @@ div {
 
 ```css
 div {
-  background: conic-gradient(
-     red 36deg, orange 36deg 170deg, yellow 170deg);
-  border-radius: 50%
+  background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg);
+  border-radius: 50%;
 }
 ```
 
@@ -200,9 +197,12 @@ div {
 
 ```css
 div {
-  background:
-     conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn)
-     top left / 25% 25% repeat;
+  background: conic-gradient(
+      #fff 0.25turn,
+      #000 0.25turn 0.5turn,
+      #fff 0.5turn 0.75turn,
+      #000 0.75turn
+    ) top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```

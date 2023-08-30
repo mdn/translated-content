@@ -54,14 +54,14 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     - `_self`: No atual contexto de pesquisa. (Default)
     - `_blank`: Normalmente uma nova aba, porém usuários podem configurar seus navegadores para abrir em uma nova janela.
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
-    - `_top`: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as `_self`.
+    - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
     > **Note:** Quando usando `target`, adicione `rel="noreferrer noopener"` para evitar "exploit" para `window.opener` API;
 
     > **Warning:** **Note:** Linking to another page with `target="_blank"` will run the new page in the same process as your page. If the new page executes JavaScript, your page's performance may suffer. This can also be avoided by using `rel="noreferrer noopener"`.
 
 - {{HTMLAttrDef("type")}}
-  - : Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.
+  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Obsolete attributes
 
@@ -83,7 +83,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
 - {{HTMLAttrDef("shape")}}
 
-  - : The shape of the hyperlink’s region in an image map.
+  - : The shape of the hyperlink's region in an image map.
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
@@ -256,7 +256,7 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element’s contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
 
 #### Example painting app with save link
 
@@ -306,7 +306,7 @@ function draw(x, y) {
 }
 
 canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY)
+  draw(event.offsetX, event.offsetY),
 );
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
@@ -315,7 +315,7 @@ document
   .querySelector("a")
   .addEventListener(
     "click",
-    (event) => (event.target.href = canvas.toDataURL())
+    (event) => (event.target.href = canvas.toDataURL()),
   );
 ```
 
@@ -325,7 +325,7 @@ document
 
 ## Security and privacy
 
-`<a>` elements can have consequences for users’ security and privacy. See [`Referer` header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without `rel="noreferrer"` and `rel="noopener"` makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)).
 
@@ -337,7 +337,7 @@ Using `target="_blank"` without `rel="noreferrer"` and `rel="noopener"` makes th
 
 #### Inaccessible, weak link text
 
-A sadly common mistake is to only link the words “click here” or “here”:
+A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
 <p>Learn more about our products <a href="/products">here</a>.</p>
@@ -345,13 +345,13 @@ A sadly common mistake is to only link the words “click here” or “here”:
 
 #### Strong link text
 
-Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!
+Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
 <p>Learn more <a href="/products">about our products</a>.</p>
 ```
 
-Assistive software have shortcuts to list all links on a page. However, strong link text benefits all users — the “list all links” shortcut emulates how sighted users quickly scan pages.
+Assistive software have shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
 ### onclick events
 
@@ -441,7 +441,7 @@ Skip links are especially useful for people who navigate with the aid of assisti
 
 Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-Text-only links in prose content are exempt from this requirement, but it’s still a good idea to make sure enough text is hyperlinked to be easily activated.
+Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
