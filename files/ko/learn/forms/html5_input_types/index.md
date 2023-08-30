@@ -189,7 +189,7 @@ priceInput.addEventListener("input", function () {
 output.textContent = priceInput.value; // 초기 출력 값 설정
 ```
 
-여기서 우리는 `range` 입력과 `output`에 대한 참조를 두 변수에 저장합니다. 그 다음에 즉시 `output`의 [`textContent`](/ko/docs/Web/API/Node/textContent)를 입력의 현재 `value`로 설정합니다. 마지막으로 범위 슬라이더가 움직일 때마다 `output`의 `textContent`가 새 값으로 업데이트되도록 이벤트 리스너가 설정됩니다.
+여기서 우리는 `range` 입력과 `output`에 대한 참조를 두 변수에 저장합니다. 그 다음에 즉시 `output`의 [`textContent`](/ko/docs/Web/API/Node/textContent)를 입력의 현재 `value`로 설정합니다. 마지막으로 범위 슬라이더가 움직일 때마다 `output`의 `textContent`가 새 값으로 갱신되도록 이벤트 수신기가 설정됩니다.
 
 > **참고:** CSS Tricks에 이 주제를 다루는 멋진 튜토리얼이 있습니다. [The Output Element](https://css-tricks.com/the-output-element/).
 
