@@ -15,7 +15,7 @@ slug: Web/API/Node/parentNode
 parentNode = node.parentNode
 ```
 
-`parentNode` 是指定节点的父节点。一个元素节点的父节点可能是一个元素 (`Element`) 节点，也可能是一个文档 (`Document`) 节点，或者是个`文档碎片 (`DocumentFragment`) 节点。
+`parentNode` 是指定节点的父节点。一个元素节点的父节点可能是一个元素 (`Element`) 节点，也可能是一个文档 (`Document`) 节点，或者是个文档碎片 (`DocumentFragment`) 节点。
 
 ## 例子
 
