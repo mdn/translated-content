@@ -53,7 +53,7 @@ if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a sing
 
 注意：在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下允许将 `let` 作为 `var` 或者 `function` 的标识符名称，但你应当避免将 `let` 用作标识符以防止发生不期望的语法混淆。
 
-许多风格的教程（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，前提是为原始值）永远不会改变。此外更推荐用 `let` 存放可变的非原始值。
+许多风格的教程（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，如果其为原始值）永远不会改变。此外也推荐用 `let` 存放可变的非原始值。
 
 `let` 关键字后方的列表叫做[_绑定_](/zh-CN/docs/Glossary/Binding)_列表_，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
 
@@ -63,7 +63,7 @@ if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a sing
 
 当变量处于暂时性死区之中时，其尚未被初始化，并且任何访问其的尝试都将导致抛出 {{jsxref("ReferenceError")}}。当代码执行到变量被声明的位置时，变量会被初始化为一个值。如果变量声明中未指定初始值，则变量将被初始化为 `undefined`。
 
-与 {{jsxref("Statements/var", "var", "hoisting")}} 声明的变量不同，如果在声明位置前访问 var 声明的变量会返回 `undefined`。以下代码演示了在声明位置前访问 `let` 和 `var` 声明的变量的不同结果。
+这与 {{jsxref("Statements/var", "var", "变量提升")}} 声明的变量不同，如果在声明位置前访问 `var` 声明的变量会返回 `undefined`。以下代码演示了在声明位置前访问 `let` 和 `var` 声明的变量的不同结果。
 
 ```js example-bad
 {
@@ -282,7 +282,7 @@ console.log(a, b, c); // "aaa" "b" "cc"
 - {{jsxref("Statements/const", "const")}}
 - [变量提升](/zh-CN/docs/Glossary/Hoisting)
 - [深入 ES6：`let` 和 `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)——hacks.mozilla.org（2015）
-- [Firefox 44 中 `let` and `const` 的惊人变化](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)——blog.mozilla.org（2015）
+- [Firefox 44 中 `let` 和 `const` 的惊人变化](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)——blog.mozilla.org（2015）
 - [你不懂 JS：作用域和闭包 第三章：函数对决块作用域](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)——Kyle Simpson
 - [什么是暂时性死区？](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850)——Stack Overflow
 - [`let` 和 `var` 在用法上有什么不同？](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)——Stack Overflow
