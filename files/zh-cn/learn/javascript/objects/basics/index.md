@@ -7,18 +7,16 @@ slug: Learn/JavaScript/Objects/Basics
 
 在这学习 JavaScript 的对象的首篇文章中，我们将会学习有关对象基础的语法，并且回顾一些之前学过的 JavaScript 的一些特点，使你明白你所使用过的一些功能实际上是由对象提供的。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基础计算机基础，了解基础的 HTML 和 CSS, 熟悉 JavaScript 基础
-        (基础知识看这里
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a>
-        和这里
-        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
-        >).
+        基础计算机基础，了解基础的 HTML 和 CSS，熟悉 JavaScript 基础（参见
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+          >JavaScript 第一步</a>和<a
+          href="/zh-CN/docs/Learn/JavaScript/Building_blocks">创建代码块</a
+        >）。
       </td>
     </tr>
     <tr>
@@ -34,15 +32,15 @@ slug: Learn/JavaScript/Objects/Basics
 
 对象是一个包含相关数据和方法的集合（通常由一些变量和函数组成，我们称之为对象里面的属性和方法），让我们通过一个例子来了解它们。
 
-首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地，文件的元素非常少 — 仅一个供我们写源代码的 {{HTMLElement("script")}} 标签。我们将在此基础上研究对象基础语法。在使用此示例时，您应该打开[开发人员工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并准备键入一些命令。
+首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地，文件的元素非常少——仅一个供我们编写源代码的 {{HTMLElement("script")}} 标签。我们将在此基础上研究对象基础语法。在使用此示例时，你应该打开[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并准备键入一些命令。
 
-如同 Javascript 中的很多东西一样，创建一个对象通常先定义并初始化变量。尝试在您的文件中输入以下 JavaScript 代码，保存并刷新页面：
+如同 JavaScript 中的很多东西一样，创建一个对象通常先定义并初始化变量。尝试在你的文件中输入以下 JavaScript 代码，保存并刷新页面：
 
 ```js
 const person = {};
 ```
 
-如果你在浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 Enter（确认）键，你可能会得到以下结果中的一种：
+打开你的浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 <kbd>Enter</kbd>/<kbd>Return</kbd>，你可能会得到以下结果中的一种：
 
 ```plain
 [object Object]
@@ -50,38 +48,36 @@ Object { }
 { }
 ```
 
-恭喜，你刚创建了你的第一个对象。干的漂亮！但这是一个空对象，所以我们做不了更多的事情。像下面一样更新我们的对象：
+恭喜，你刚创建了你的第一个对象。干的漂亮！但这是一个空对象，所以我们做不了很多事情。让我们像这样更新文件中的 JavaScript 对象：
 
 ```js
 const person = {
   name: ["Bob", "Smith"],
   age: 32,
   bio: function () {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    console.log(`${this.name[0]} ${this.name[1]} 现在 ${this.age} 岁了。`);
   },
   introduceSelf: function () {
-    console.log(`Hi! I'm ${this.name[0]}.`);
+    console.log(`你好！我是 ${this.name[0]}。`);
   },
 };
 ```
 
-保存并刷新后，尝试在你的浏览器控制台输入下面的内容：
+保存并刷新后，尝试在你的浏览器开发者工具的 JavaScript 控制台输入以下内容：
 
 ```js
 person.name;
 person.name[0];
 person.age;
 person.bio();
-// "Bob Smith is 32 years old."
+// "Bob Smith 现在 32 岁了。"
 person.introduceSelf();
-// "Hi! I'm Bob."
+// "你好！我是 Bob。"
 ```
 
-现在，你的对象拥有了一些数据和功能，你现在可以通过简单的语法访问他们了！
+现在，你的对象拥有了一些数据和功能，你现在可以通过简单的语法访问它们了！
 
-> **备注：** 如果做上面的东西遇到了麻烦，尝试拿你的代码与我们的版本做对比——对比 [oojs-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs-finished.html) (也可以[看实际效果](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。一个对于初学者很常见的错误是在最后一个成员后面多了一个逗号，这会引发错误。
-
-所以发生了什么？一个对象由许多的成员组成，每一个成员都拥有一个名字（如 `name`、`age`）和一个值（如 `['Bob', 'Smith']`、`32`）。每一组名字/值（name/value）必须被逗号分隔开，并且名字和值之间由冒号（`:`）分隔，语法规则如下所示：
+所以发生了什么？一个对象由许多的成员组成，每一个成员都拥有一个名字（如 `name`、`age`）和一个值（如 `['Bob', 'Smith']`、`32`）。每一组名字/值必须由逗号分隔开，并且名字和值之间由冒号分隔，语法规则如下所示：
 
 ```js
 const objectName = {
@@ -91,32 +87,32 @@ const objectName = {
 };
 ```
 
-对象成员的值可以是任意的，person 对象里包含了：一个数字 (number)，一个数组 (array)，以及两个函数 (function)。前两项是数据项，被称为对象的**属性 (property)**，后两项是允许对象对该数据进行某些操作的函数，称为对象的**方法 (method)**。
+对象成员的值可以是任意的，person 对象里包含了：一个数字、一个数组，以及两个函数。前两项是数据项，被称为对象的**属性**，后两项是允许对象对该数据进行某些操作的函数，称为对象的**方法**。
 
-当对象的成员是函数时，语法会更简单。我们可以写 `bio()` 来代替 `bio:function()`。像这样：
+当对象的成员是函数时，语法会更简单。我们可以写 `bio()` 来代替 `bio: function()`。像这样：
 
 ```js
 const person = {
   name: ["Bob", "Smith"],
   age: 32,
   bio() {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    console.log(`${this.name[0]} ${this.name[1]} 现在 ${this.age} 岁了。`);
   },
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name[0]}.`);
+    console.log(`你好！我是 ${this.name[0]}。`);
   },
 };
 ```
 
 从现在开始，我们将使用这种更短的语法。
 
-一个如上所示的对象被称之为对象的字面量 (literal) —— 手动的写出对象的内容来创建一个对象。不同于从类实例化一个对象，我们会在后面学习这种方式。
+一个如上所示的对象被称之为对象字面量（object literal）——手动的写出对象的内容来创建一个对象。不同于从类实例化一个对象，我们会在后面学习这种方式。
 
-当你想要传输一系列结构化的相关的数据项（例如，服务器发起请求以存储一些数据到数据库）时，常见的方式是使用字面量来创建一个对象。发送一个对象要比分别发送这些数据更有效率，当你使用名字 (name) 标识这些数据时，它比数组更容易使用。
+当你想要传输一系列结构化的相关的数据项（例如，服务器发起请求以存储一些数据到数据库）时，常见的方式是使用字面量来创建一个对象。发送一个对象要比分别发送这些数据更有效率，当你使用名字标识这些数据时，它比数组更容易使用。
 
 ## 点表示法
 
-在上面的例子中，你使用了点表示法 (dot notation) 来访问对象的属性和方法。对象的名字表现为一个**命名空间** (namespace)。当你想访问对象内部的属性或方法时，命名空间必须写在第一位。然后输入一个点 (.)，紧接着是你想要访问的目标——可以是简单属性的名字 (name)，或者是数组属性的一个子元素，又或者是对象的方法调用。如下所示：
+在上面的例子中，你使用了**点表示法**（dot notation）来访问对象的属性和方法。对象的名字表现为一个**命名空间**（namespace）。当你想访问对象内部的属性或方法时，命名空间必须写在第一位。然后输入一个点，紧接着是你想要访问的目标——可以是简单属性的名字，或者是数组属性的一个子元素，又或者是对象的方法调用。如下所示：
 
 ```js
 person.age;
@@ -125,7 +121,7 @@ person.bio();
 
 ### 子命名空间
 
-可以用一个对象来做另一个对象成员的值。例如将 name 成员，从
+可以用一个对象来做另一个对象成员的值。例如将 `name` 成员，从
 
 ```js
 const person = {
@@ -170,7 +166,7 @@ name.last;
 
 ## 括号表示法
 
-另外一种访问对象属性的方式是使用括号表示法 (bracket notation)，下方所示的点表示法：
+另外一种访问对象属性的方式是使用括号表示法（bracket notation），下方所示的[点表示法](#点表示法)：
 
 ```js
 person.age;
@@ -184,9 +180,9 @@ person["age"];
 person["name"]["first"];
 ```
 
-这看起来很像访问一个数组的元素，从根本上来说是一回事儿，你使用了关联了值的名字，而不是索引去选择元素。因此对象有时被称之为**关联数组 (associative array)** ——对象将字符串映射到值，而数组将数字映射到值。
+这看起来很像访问一个数组的元素，并且基本上是相同的——使用关联了值的名称，而不是索引来选择元素。因此对象有时被称为**关联数组**——对象将字符串映射到值，而数组将数字映射到值。
 
-点表示法通常优于括号表示法，因为它更简洁且更易于阅读。然而，在某些情况下您必须使用括号。例如，如果对象属性名称保存在变量中，则不能使用点表示法访问该值，但可以使用括号表示法访问该值。
+点表示法通常优于括号表示法，因为它更简洁且更易于阅读。然而，在某些情况下你必须使用括号。例如，如果对象属性名称保存在变量中，则不能使用点表示法访问该值，但可以使用括号表示法访问该值。
 
 在下面的示例中，`logProperty()` 函数可以使用 `person[propertyName]` 来检索 `propertyName` 中指定的属性的值。
 
@@ -208,14 +204,14 @@ logProperty("age");
 
 ## 设置对象成员
 
-目前我们仅仅看到了如何访问对象的成员，而你也可以通过声明设置对象成员的值（使用点表示法 或 括号表示法），像这样：
+目前我们仅仅看到了如何查询（或**获取**）对象成员，而你也可以通过声明**设置**（更新）对象成员的值（使用点表示法或括号表示法），像这样：
 
 ```js
 person.age = 45;
 person["name"]["last"] = "Cratchit";
 ```
 
-尝试这些代码，然后再查看这些成员是否已经被改变了
+尝试输入以上代码，然后再查看这些成员是否已经被改变了，像这样：
 
 ```js
 person.age;
@@ -227,7 +223,7 @@ person["name"]["last"];
 ```js
 person["eyes"] = "hazel";
 person.farewell = function () {
-  alert("Bye everybody!");
+  console.log("再见！");
 };
 ```
 
@@ -236,25 +232,23 @@ person.farewell = function () {
 ```js
 person["eyes"];
 person.farewell();
-// "Bye everybody!"
+// "再见！"
 ```
 
-括号表示法一个有用的地方是它不仅可以动态的去设置对象成员的值，还可以动态的去设置成员的名字。
-
-假设我们想让用户能够通过在两个文本输入框中键入成员名称和值，在他们的人员数据中存储自定义的值类型。我们可以像这样获取这些值：
+括号表示法一个有用的地方是它不仅可以动态的去设置对象成员的值，还可以动态的去设置成员的名字。假设我们想让用户能够通过在两个文本输入框中键入成员名称和值，在他们的人员数据中存储自定义的值类型。我们可以像这样获取这些值：
 
 ```js
 const myDataName = nameInput.value;
 const myDataValue = nameValue.value;
 ```
 
-我们可以像这样把这个新的成员的名字和值加到 `person` 对象里：
+我们可以像这样把这个新的成员的名字和值加到 `person` 对象中：
 
 ```js
 person[myDataName] = myDataValue;
 ```
 
-为了测试这个功能，尝试在你的代码里添加以下几行，就在 `person` 对象的右花括号的下面：
+为了测试它，尝试在你的代码里添加以下几行，就在 `person` 对象的右花括号的下面：
 
 ```js
 const myDataName = "height";
@@ -268,19 +262,19 @@ person[myDataName] = myDataValue;
 person.height;
 ```
 
-这是使用点表示法无法做到的，点表示法只能接受字面量的成员的名字，不接受变量作为名字。
+这是使用点表示法无法做到的，点表示法只能接受字面量的成员的名字，不接受表示名称的变量。
 
-## "this" 的含义
+## “this”的含义
 
 你也许在我们的方法里注意到了一些奇怪的地方，看这个例子：
 
 ```js
 introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
+  console.log(`你好！我是 ${this.name[0]}。`);
 }
 ```
 
-你也许想知道 "this" 是什么，关键字 `this` 指向了当前代码运行时的对象——这里指 `person` 对象，为什么不直接写 `person` 呢？
+你也许想知道“this”是什么，关键字 `this` 指向了当前代码运行时的对象——这里指 `person` 对象，为什么不直接写 `person` 呢？
 
 当你只需要创建一个对象字面量时，`this` 就不是那么有用。但是如果你创建多个对象时，`this` 可以让你对每一个创建的对象都使用相同的方法定义。
 
@@ -290,23 +284,23 @@ introduceSelf() {
 const person1 = {
   name: "Chris",
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`你好！我是 ${this.name}。`);
   },
 };
 
 const person2 = {
   name: "Deepti",
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`你好！我是 ${this.name}。`);
   },
 };
 ```
 
-在本例中，尽管两个实例的方法代码完全相同，但 `person1.introduceSelf()` 输出 "Hi! I'm Chris."，而 `person2.introduceSelf()` 输出 "Hi! I'm Deepti."。当您手工编写对象字面量时，这并不是很有用，但是当我们开始使用**构造函数**从单个对象定义创建多个对象时，这将是必不可少的，这就是下一节的主题。
+在本例中，尽管两个实例的方法代码完全相同，但 `person1.introduceSelf()` 输出“你好！我是 Chris。”，而 `person2.introduceSelf()` 输出“你好！我是 Deepti”。当你手工编写对象字面量时，这并不是很有用，但是当我们开始使用**构造函数**从单个对象定义创建多个对象时，这将是必不可少的，这就是下一节的主题。
 
 ## 构造函数介绍
 
-使用对象字面量在只需要创建一个对象时是可以的，但如果您需要创建多个对象，如前面章节所示，它们就不够用了。我们必须为每个创建的对象编写相同的代码，如果我们想要更改对象的某些属性，比如添加一个 `height` 属性，那么我们必须手动更新每个对象。
+使用对象字面量在只需要创建一个对象时是可以的，但如果你需要创建多个对象，如前面章节所示，它们就不够用了。我们必须为每个创建的对象编写相同的代码，如果我们想要更改对象的某些属性，比如添加一个 `height` 属性，那么我们必须手动更新每个对象。
 
 我们希望有一种方法来定义对象的“特征”，即方法集和属性集，然后可以创建任意多个对象，只需更新不同属性的值。
 
@@ -317,7 +311,7 @@ function createPerson(name) {
   const obj = {};
   obj.name = name;
   obj.introduceSelf = function () {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`你好！我是 ${this.name}。`);
   };
   return obj;
 }
@@ -325,8 +319,8 @@ function createPerson(name) {
 
 每次调用 `createPerson()` 函数时，它都会创建并返回一个新对象。该对象将具有两个成员：
 
-- 一个属性 `name`
-- 一个方法 `introduceSelf()`。
+- 一个 `name` 属性
+- 一个 `introduceSelf()` 方法。
 
 请注意，`createPerson()` 接受一个参数 `name` 来设置 `name` 属性的值，但是 `introduceSelf()` 方法的值对于使用此函数创建的所有对象都是相同的。这是创建对象的一种非常常见的模式。
 
@@ -336,18 +330,18 @@ function createPerson(name) {
 const salva = createPerson("Salva");
 salva.name;
 salva.introduceSelf();
-// "Hi! I'm Salva."
+// "你好！我是 Salva。"
 
 const frankie = createPerson("Frankie");
 frankie.name;
 frankie.introduceSelf();
-// "Hi! I'm Frankie."
+// "你好！我是 Frankie。"
 ```
 
-这样可以正常工作，但有点冗长：我们必须创建一个空对象，初始化它，并返回它。更好的方法是使用**构造函数**。构造函数只是使用 {{jsxref("operators/new", "new")}} 关键字调用的函数。当您调用构造函数时，它将：
+这样可以正常工作，但有点冗长：我们必须创建一个空对象，初始化它，并返回它。更好的方法是使用**构造函数**。构造函数只是使用 {{jsxref("operators/new", "new")}} 关键字调用的函数。当你调用构造函数时，它将：
 
 - 创建一个新对象
-- 将 `this` 绑定到新对象，以便您可以在构造函数代码中引用 `this`
+- 将 `this` 绑定到新对象，以便你可以在构造函数代码中引用 `this`
 - 运行构造函数中的代码
 - 返回新对象
 
@@ -357,7 +351,7 @@ frankie.introduceSelf();
 function Person(name) {
   this.name = name;
   this.introduceSelf = function () {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`你好！我是 ${this.name}。`);
   };
 }
 ```
@@ -368,12 +362,12 @@ function Person(name) {
 const salva = new Person("Salva");
 salva.name;
 salva.introduceSelf();
-// "Hi! I'm Salva."
+// "你好！我是 Salva。"
 
 const frankie = new Person("Frankie");
 frankie.name;
 frankie.introduceSelf();
-// "Hi! I'm Frankie."
+// "你好！我是 Frankie。"
 ```
 
 ## 你一直在使用对象
@@ -395,24 +389,24 @@ const myDiv = document.createElement("div");
 const myVideo = document.querySelector("video");
 ```
 
-你正在使用[`Document`](/zh-CN/docs/Web/API/Document)对象上的方法。每个页面在加载完毕后，会有一个 `Document` 的实例被创建，叫做 `document`，它代表了整个页面的结构，内容和一些功能，比如页面的 URL。同样的，这意味 `document` 有一些可用的方法和属性。
+你正在使用 [`Document`](/zh-CN/docs/Web/API/Document) 对象上的方法。每个页面在加载完毕后，会有一个 `Document` 的实例被创建，叫做 `document`，它代表了整个页面的结构，内容和一些功能，比如页面的 URL。同样的，这意味 `document` 有一些可用的方法和属性。
 
-这同样适用许多其他内建的对象或 API，你使用过有—— [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)，等。
+这同样适用于你使用过的几乎所有其他的内置对象或 API——[`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)、[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)，等。
 
-请注意内建的对象或 API 不会总是自动地创建对象的实例，举例来说，这个 [Notifications API](/zh-CN/docs/Web/API/Notifications_API)——允许浏览器发起系统通知，需要你为每一个你想发起的通知都使用构造函数进行实例化。尝试在 JavaScript 控制台里输入以下代码：
+请注意内置对象或 API 并不总是自动地创建对象的实例，举例来说，[通知 API](/zh-CN/docs/Web/API/Notifications_API)——允许浏览器发起系统通知，需要你为每一个你想发起的通知都使用构造函数进行实例化。尝试在 JavaScript 控制台里输入以下代码：
 
 ```js
-const myNotification = new Notification("Hello!");
+const myNotification = new Notification("你好！");
 ```
 
 ## 测试你的能力！
 
-你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“测试你的技能:对象基础” （en-US）](/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics)。
+你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“测试你的技能：对象基础”](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics)。
 
 ## 总结
 
 恭喜，你已经阅读到了我们有关 JavaScript 对象的第一篇文章的末尾，你现在应该对如何在 JavaScript 中使用对象有了很好的认识，包括你自己创建一个简单的对象。你应该清楚对象有利于存储一些相关联的数据和函数，如果你尝试以分开的方式去保存 `person` 对象包含的所有的属性和方法，这是令人沮丧且效率低下的，而且会有很多的变量和函数之间同名的风险。对象使我们将一些信息安全地锁在了它们自己的包内，防止它们被损坏。
 
-在下一篇文章，我们将讨论**原型 (prototypes)**，这是 JavaScript 让对象从其他对象继承属性的基本方式。
+在下一篇文章，我们将讨论**原型**（prototype），这是 JavaScript 让对象从其他对象继承属性的基本方式。
 
 {{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
