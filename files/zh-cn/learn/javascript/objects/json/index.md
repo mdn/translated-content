@@ -83,14 +83,14 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 }
 ```
 
-例如，如果我们把字符串加载到 JavaScript 程序中，并将其解析为一个名为 `superHeroes` 的变量，那么我们就可以使用在[JavaScript对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章中相同的点/括号表示法来访问其中的数据。例如:
+例如，如果我们把字符串加载到 JavaScript 程序中，并将其解析为一个名为 `superHeroes` 的变量，那么我们就可以使用在[JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章中相同的点/括号表示法来访问其中的数据。例如:
 
 ```js
 superHeroes.hometown;
 superHeroes["active"];
 ```
 
-为了访问层次结构中更深层次的数据，必须将所需的属性名和数组索引链接在一起。例如，要访问成员列表中第二个英雄的第三个超能力，可以这样做:
+为了访问层次结构中更深层次的数据，必须将所需的属性名和数组索引链接在一起。例如，要访问成员列表中第二个英雄的第三个超能力，可以这样做：
 
 ```js
 superHeroes["members"][1]["powers"][2];
@@ -106,7 +106,7 @@ superHeroes["members"][1]["powers"][2];
 
 ### JSON 数组
 
-前面我们提到，JSON 文本基本上看起来像字符串中的 JavaScript 对象。我们也可以将数组转换为 JSON。下面也是有效的 JSON，例如:
+前面我们提到，JSON 文本基本上看起来像字符串中的 JavaScript 对象。我们也可以将数组转换为 JSON。下面也是有效的 JSON，例如：
 
 ```json
 [
@@ -145,7 +145,7 @@ superHeroes["members"][1]["powers"][2];
 
 ### 开始吧
 
-首先，拷贝我们的 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) 和 [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) 文件。后者包含了用于页面的简单的 CSS，前者包含了简单的 HTML body，以及一个{{HTMLElement("script")}}元素，其中包含我们将在练习中编写的JavaScript代码:
+首先，拷贝我们的 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) 和 [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) 文件。后者包含了用于页面的简单的 CSS，前者包含了简单的 HTML body，以及一个{{HTMLElement("script")}}元素，其中包含我们将在练习中编写的 JavaScript 代码：
 
 ```html-nolint
 <header>
