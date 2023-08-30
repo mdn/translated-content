@@ -23,7 +23,7 @@ new Notification(title, options)
   - : 一个包含要应用于通知的任何自定义设置的选项对象。可能的选项有：
 
     - `dir`
-      - : 显示通知的方向。它默认为 `auto`，即只采用浏览器的语言设置行为，但您可以通过设置 `ltr` 和 `rtl` 的值来覆盖该行为（尽管大多数浏览器似乎忽略这些设置）。
+      - : 显示通知的方向。它默认为 `auto`，即只采用浏览器的语言设置行为，但你可以通过设置 `ltr` 和 `rtl` 的值来覆盖该行为（尽管大多数浏览器似乎忽略这些设置）。
     - `lang`
       - : 指定通知的语言，根据 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} 使用表示语言标签的字符串指定。请参阅 Sitepoint [ISO 2 字母语言代码](https://www.sitepoint.com/iso-2-letter-language-codes/) 页面以获取简单参考。
     - `badge`
