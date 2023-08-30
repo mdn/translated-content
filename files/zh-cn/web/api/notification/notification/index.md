@@ -82,11 +82,11 @@ function spawnNotification(body, icon, title) {
 
 {{Compat}}
 
-### Chrome 浏览器注意点
+### Chrome 浏览器备注
 
 从 Chrome 49 开始，通知在无痕模式下不起作用。
 
-Android 版 Chrome 会在调用 `Notification` 构造函数时抛出一个 {{jsxref("TypeError")}}。它仅支持从 Service Worker 中创建通知。有关更多详细信息，请参阅 [Chromium 问题跟踪器](https://crbug.com/481856)。
+Android 版 Chrome 会在调用 `Notification` 构造函数时抛出 {{jsxref("TypeError")}}。它仅支持从 Service Worker 中创建通知。有关更多详细信息，请参阅 [Chromium 问题跟踪器](https://crbug.com/481856)。
 
 ## 参见
 
