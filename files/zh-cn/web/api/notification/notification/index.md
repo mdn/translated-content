@@ -5,7 +5,7 @@ slug: Web/API/Notification/Notification
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-**Notification()** 构造函数创建一个新的代表用户通知的 {{domxref("Notification")}} 对象实例。
+**`Notification()`** 构造函数创建一个新的代表用户通知的 {{domxref("Notification")}} 对象实例。
 
 ## 语法
 
