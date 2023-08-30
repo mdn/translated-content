@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBObjectStore")}} インターフェイスの **`createIndex()`** メソッドは、接続中のデータベースに新しい {{domxref("IDBIndex")}}  オブジェクトを作成して返します。これは、データベースの各レコードが持つべき新しいデータポイントを定義するフィールド (列) を定義します。
+{{domxref("IDBObjectStore")}} インターフェイスの **`createIndex()`** メソッドは、接続中のデータベースに新しい {{domxref("IDBIndex")}} オブジェクトを作成して返します。これは、データベースの各レコードが持つべき新しいデータポイントを定義するフィールド (列) を定義します。
 
 IndexedDB のインデックスには _任意の_ JavaScript のデータ型を入れることができることを覚えておいてください。IndexedDB は保存するオブジェクトのシリアライズに[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いるので、単純なオブジェクトも複雑なオブジェクトも保存できます。
 
@@ -35,7 +35,7 @@ createIndex(indexName, keyPath, options)
       - : `true` に設定した場合、このインデックスは単一のキーについて重複した値を許可しません。デフォルトは `false` です。
     - `multiEntry`
       - : `true` に設定した場合、このインデックスは `keyPath` が配列に解決したとき、配列の各要素についてインデックスにエントリーを追加します。
-          `false` に設定した場合、配列を 1 個のエントリーとして追加します。デフォルトは `false` です。
+        `false` に設定した場合、配列を 1 個のエントリーとして追加します。デフォルトは `false` です。
     - `locale` {{non-standard_inline}}
       - : 現在 Firefox (43+) でのみ対応しています。インデックスのロケールを指定できます。
         指定すると、キー範囲によるデータのソート操作はすべて、このロケールのソート規則に沿います。
