@@ -316,7 +316,7 @@ app.use("/wiki", wiki);
 npm install morgan
 ```
 
-然后，您可以对 *Express 应用对象*调用 `use()` 将该中间件添加到栈：
+然后，你可以对 *Express 应用对象*调用 `use()` 将该中间件添加到栈：
 
 ```js
 const express = require('express');

@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Objects/JSON
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
-JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。您会经常遇到它，所以在本文中，我们向您提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
+JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。你会经常遇到它，所以在本文中，我们向你提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -24,7 +24,7 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>理解 JSON 的数据储存工作原理，创建您的 JSON 对象。</td>
+      <td>理解 JSON 的数据储存工作原理，创建你的 JSON 对象。</td>
     </tr>
   </tbody>
 </table>
@@ -39,7 +39,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 
 ### JSON 结构
 
-我们已经可以推测出 JSON 对象就是基于 JavaScript 对象，而且这几乎是正确的。您可以把 JavaScript 对象原原本本的写入 JSON 数据——字符串，数字，数组，布尔还有其他的字面值对象。这允许您构造出一个对象树，如下：
+我们已经可以推测出 JSON 对象就是基于 JavaScript 对象，而且这几乎是正确的。你可以把 JavaScript 对象原原本本的写入 JSON 数据——字符串，数字，数组，布尔还有其他的字面值对象。这允许你构造出一个对象树，如下：
 
 ```json
 {
@@ -88,7 +88,7 @@ superHeroes.hometown;
 superHeroes["active"];
 ```
 
-为了访问对象中的对象，您只需简单地链式访问（通过属性名和数组索引）。例如，访问 superHeroes 对象中的 members 数组对象的第二个元素的 powers 数组对象的第三个元素，您可以这样做：
+为了访问对象中的对象，你只需简单地链式访问（通过属性名和数组索引）。例如，访问 superHeroes 对象中的 members 数组对象的第二个元素的 powers 数组对象的第三个元素，你可以这样做：
 
 ```js
 superHeroes["members"][1]["powers"][2];
@@ -100,7 +100,7 @@ superHeroes["members"][1]["powers"][2];
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
+> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
 
 ### JSON 数组
 
@@ -127,13 +127,13 @@ superHeroes["members"][1]["powers"][2];
 ]
 ```
 
-上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
+上面是完全合法的 JSON。你只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
 
 ### 其他注意事项
 
 - JSON 是一种纯数据格式，它只包含属性，没有方法。
 - JSON 要求在字符串和属性名称周围使用双引号。单引号无效。
-- 甚至一个错位的逗号或分号就可以导致 JSON 文件出错。您应该小心的检查您想使用的数据 (虽然计算机生成的 JSON 很少出错，只要生成程序正常工作)。您可以通过像 [JSONLint](http://jsonlint.com/) 的应用程序来检验 JSON。
+- 甚至一个错位的逗号或分号就可以导致 JSON 文件出错。你应该小心的检查你想使用的数据 (虽然计算机生成的 JSON 很少出错，只要生成程序正常工作)。你可以通过像 [JSONLint](http://jsonlint.com/) 的应用程序来检验 JSON。
 - JSON 可以将任何标准合法的 JSON 数据格式化保存，不只是数组和对象。比如，一个单一的字符串或者数字可以是合法的 JSON 对象。虽然不是特别有用处……
 - 与 JavaScript 代码中对象属性可以不加引号不同，JSON 中只有带引号的字符串可以用作属性。
 
@@ -168,14 +168,14 @@ var section = document.querySelector("section");
 
 为了载入 JSON 到页面中，我们将使用 一个名为`XMLHTTPRequest`的 API（常称为 XHR）。这是一个非常有用的 JavaScript 对象，使我们能够通过代码来向服务器请求资源文件 (如：图片，文本，JSON，甚至 HTML 片段)，意味着我们可以更新小段内容而不用重新加载整个页面。这将有更多响应页面，听起来让人兴奋，但是这部分超出我们本部分的文章，所以就不多详述了。
 
-1. 首先，我们将保存一个即将访问的 URL 作为变量。在您的 JavaScript 代码的底部添加下面的代码：
+1. 首先，我们将保存一个即将访问的 URL 作为变量。在你的 JavaScript 代码的底部添加下面的代码：
 
    ```js
    var requestURL =
      "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
    ```
 
-2. 为了创建一个 HTTP 请求，我们需要创建一个 HTTP 请求对象，通过 new 构造函数的形式。在您最下面的代码中写入：
+2. 为了创建一个 HTTP 请求，我们需要创建一个 HTTP 请求对象，通过 new 构造函数的形式。在你最下面的代码中写入：
 
    ```js
    var request = new XMLHttpRequest();
@@ -199,7 +199,7 @@ var section = document.querySelector("section");
    request.send();
    ```
 
-5. 最后一点内容涉及相应来自服务器的返回数据，然后处理它，添加如下代码在您先前的代码下方：
+5. 最后一点内容涉及相应来自服务器的返回数据，然后处理它，添加如下代码在你先前的代码下方：
 
    ```js
    request.onload = function () {
@@ -284,7 +284,7 @@ function showHeroes(jsonObj) {
 
 > **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
 
-> **备注：** 如果您对访问 JSON 对象的 点/括号标记 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号符号的更多信息。
+> **备注：** 如果你对访问 JSON 对象的 点/括号标记 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在你的编辑器中打开参考我们的 JS 代码将会有帮助。你还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号符号的更多信息。
 
 ## 对象和文本间的转换
 
@@ -299,7 +299,7 @@ request.responseType = "json";
 - [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): 以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
 - [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 接收一个对象作为参数，返回一个对应的 JSON 字符串。
 
-您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作 (见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)) ，除了返回的是 text，这做了一件与我们之前一模一样的事情，然后使用 `parse()` 来将他转换成为 JavaScript 对象。关键片段如下：
+你可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作 (见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)) ，除了返回的是 text，这做了一件与我们之前一模一样的事情，然后使用 `parse()` 来将他转换成为 JavaScript 对象。关键片段如下：
 
 ```js
 request.open("GET", requestURL);
@@ -314,7 +314,7 @@ request.onload = function () {
 };
 ```
 
-正如您所想，`stringify()` 做相反的事情。尝试将下面的代码输入您的浏览器 JS 控制台来看看会发生什么：
+正如你所想，`stringify()` 做相反的事情。尝试将下面的代码输入你的浏览器 JS 控制台来看看会发生什么：
 
 ```js
 var myJSON = { name: "Chris", age: "38" };
@@ -327,7 +327,7 @@ myString;
 
 ## 总结
 
-在这个文章中，我们给了您一个简单的示例来在自己的程序中使用 JSON，包括创建和处理 JSON，还有如何访问 JSON 内的数据。在下一篇文章中我们将开始关注 JS 中的面向对象内容。
+在这个文章中，我们给了你一个简单的示例来在自己的程序中使用 JSON，包括创建和处理 JSON，还有如何访问 JSON 内的数据。在下一篇文章中我们将开始关注 JS 中的面向对象内容。
 
 ## 参见
 
