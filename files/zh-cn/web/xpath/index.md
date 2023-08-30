@@ -3,6 +3,8 @@ title: XPath
 slug: Web/XPath
 ---
 
+{{XsltSidebar}}
+
 XPath 表示 XML 路径语言。它使用非 XML 语法来提供一种灵活地定位（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分的方法。它也可以用于检查文档中某个定位节点是否与某个模式（pattern）匹配。
 
 XPath 主要用于 [XSLT](/zh-CN/docs/Web/XSLT)，但也可以作为一种更强大的方式使用——使用 {{DOMxRef("XPathExpression")}} 来导航任何类似 XML 语言文档的 [DOM](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [HTML](/zh-CN/docs/Web/HTML) 和 [SVG](/zh-CN/docs/Web/SVG)）。而不是依赖于 {{DOMxRef("Document.getElementById()")}} 或 {{DOMxRef("Document.querySelectorAll()")}} 方法、{{DOMxRef("Node.childNodes")}} 属性和其他 DOM 核心特性。
