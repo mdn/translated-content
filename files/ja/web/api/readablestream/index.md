@@ -43,7 +43,7 @@ l10n:
 これは {{jsxref("Uint8Array")}} と組み合わせた {{domxref("ReadableStream")}} の使用方法を示しています。
 
 ```js
-fetch('https://www.example.org')
+fetch("https://www.example.org")
   .then((response) => response.body)
   .then((rb) => {
     const reader = rb.getReader();
@@ -74,7 +74,7 @@ fetch('https://www.example.org')
   })
   .then((stream) =>
     // ストリームで応答する
-    new Response(stream, { headers: { 'Content-Type': 'text/html' } }).text()
+    new Response(stream, { headers: { "Content-Type": "text/html" } }).text(),
   )
   .then((result) => {
     // Do things with result

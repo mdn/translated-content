@@ -16,8 +16,8 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('online', (event) => { });
-ononline = (event) => { };
+addEventListener("online", (event) => {});
+ononline = (event) => {};
 ```
 
 ## イベント型
@@ -36,8 +36,8 @@ ononline = (event) => { };
 
 ```js
 // addEventListener 版
-window.addEventListener('online', (event) => {
-    console.log("You are now connected to the network.");
+window.addEventListener("online", (event) => {
+  console.log("You are now connected to the network.");
 });
 
 // ononline 版

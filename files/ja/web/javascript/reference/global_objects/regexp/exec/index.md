@@ -68,15 +68,15 @@ const result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 
 このスクリプト実行後の `result` の状態は次のようになります。
 
-| プロパティ  | 値                                                              |
-| --------- | ------------------------------------------------------------------ |
-| `[0]`     | `"Quick Brown Fox Jumps"`                                          |
-| `[1]`     | `"Brown"`                                                          |
-| `[2]`     | `"Jumps"`                                                          |
-| `index`   | `4`                                                                |
-| `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
-| `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
-| `groups`  | `{ color: "brown" }`                                               |
+| プロパティ | 値                                                                 |
+| ---------- | ------------------------------------------------------------------ |
+| `[0]`      | `"Quick Brown Fox Jumps"`                                          |
+| `[1]`      | `"Brown"`                                                          |
+| `[2]`      | `"Jumps"`                                                          |
+| `index`    | `4`                                                                |
+| `indices`  | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
+| `input`    | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
+| `groups`   | `{ color: "brown" }`                                               |
 
 それに加えて、この正規表現がグローバルであるため、 `re.lastIndex` は `25` に設定されます。
 
@@ -107,7 +107,7 @@ ab を見つけました。次の照合は 9 からです。
 > **警告:** 無限ループに陥る落とし穴がたくさんあります。
 >
 > - 正規表現リテラル（または {{jsxref("RegExp")}} コンストラクター）を `while` 条件内に配置しないでください。反復処理するたびに正規表現が再作成され、 {{jsxref("RegExp/lastIndex", "lastIndex")}} がリセットされます。
-> [グローバルフラグ (`g`)](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索) が設定されているかを確認してください。さもないと `lastIndex` が進行しなくなります。
+> - [グローバルフラグ (`g`)](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索) が設定されているかを確認してください。さもないと `lastIndex` が進行しなくなります。
 > - 正規表現が長さゼロの文字（例えば `/^/gm`）に一致する可能性がある場合、同じ位置に留まるのを避けるために、 {{jsxref("RegExp/lastIndex", "lastIndex")}} を毎回手動で増やしてください。
 
 通常、このようなコードを {{jsxref("String.prototype.matchAll()")}} で置き換えることで、エラーの可能性を下げることができます。

@@ -24,7 +24,7 @@ var myBlob = PushEvent.data.blob();
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var blob = event.data.blob();
 
   // Blob を使用して何かを実行する。

@@ -72,9 +72,11 @@ slug: Web/HTML/Element/s
 ## 例
 
 ```html
-<s>本日のおすすめ: サーモンカルパッチョ</s> 売り切れ<br>
-<span style="text-decoration:line-through;">本日のおすすめ:
-  サーモンカルパッチョ</span> 売り切れ
+<s>本日のおすすめ: サーモンカルパッチョ</s> 売り切れ<br />
+<span style="text-decoration:line-through;"
+  >本日のおすすめ: サーモンカルパッチョ</span
+>
+売り切れ
 ```
 
 {{EmbedLiveSample("Examples")}}
