@@ -82,7 +82,7 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 - 在应用图标上[显示标记（badge）](/zh-CN/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)。
 - 启用[应用程序之间的数据共享](/zh-CN/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)。
 
-许多[Web 应用程序清单成员](/zh-CN/docs/Web/Manifest#成员)可用于自定义应用程序在用户设备上的显示方式，并在操作系统中更深入地集成。
+许多 [Web 应用程序清单成员](/zh-CN/docs/Web/Manifest#成员)可用于自定义应用程序在用户设备上的显示方式，并在操作系统中更深入地集成。
 
 #### 应用的外观和感觉
 
