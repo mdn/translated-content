@@ -62,7 +62,7 @@ slug: Web/API/File_System_Access_API
 - {{domxref("FileSystemDirectoryHandle")}}
   - : 提供一个文件系统目录的句柄。
 - {{domxref("FileSystemSyncAccessHandle")}}
-  - : 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](#源私有文件系统)上的文件时访问。
+  - : 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在专用于操作[源私有文件系统](#源私有文件系统)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中访问。
 - {{domxref("FileSystemWritableFileStream")}}
   - : 属于 {{domxref('WritableStream')}} 对象，附加了便于操作磁盘上单个文件的方法。
 
@@ -190,7 +190,7 @@ writableStream.write({ type: "truncate", size });
 
 - 创建一个异步文件访问句柄。
 - 获取文件大小并创建一个 {{jsxref("ArrayBuffer")}} 来容纳它。
-- 将文件内容读取到 buffer 中。
+- 将文件内容读取到缓冲区中。
 - 将消息编码，并将其写入到文件末尾。
 - 将更改持久化至磁盘并关闭访问句柄。
 
@@ -199,7 +199,7 @@ onmessage = async (e) => {
   // 获取从主线程发往 worker 的消息
   const message = e.data;
 
-  // 获取 OPFS 中 draft 文件的句柄
+  // 获取 OPFS 中草稿文件的句柄
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // 获取同步访问句柄
@@ -207,7 +207,7 @@ onmessage = async (e) => {
 
   // 获取文件大小
   const fileSize = accessHandle.getSize();
-  // 将文件内容读取到 buffer
+  // 将文件内容读取到缓冲区
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
 
