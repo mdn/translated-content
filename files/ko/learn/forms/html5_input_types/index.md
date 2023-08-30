@@ -12,7 +12,7 @@ l10n:
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        기본 컴퓨터 리터러시와 기본적인
+        기본 컴퓨터 활용 능력과 기본적인
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 이해</a
         >가 필요합니다.
