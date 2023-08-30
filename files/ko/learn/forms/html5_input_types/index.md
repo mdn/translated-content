@@ -151,7 +151,7 @@ URL을 입력하기 위한 특별한 유형의 필드는 [`type`](/ko/docs/Web/H
 
 {{EmbedGHLiveSample("learning-area/html/forms/range-example/index.html", '100%', 200)}}
 
-사용법에 따라 슬라이더는 텍스트 필드보다 정확하지 않습니다. 따라서 그들은 _정확한_ 값이 꼭 필요하지 않은 숫자를 선택하기 위해 사용됩니다.
+사용법에 따라 슬라이더는 텍스트 필드보다 정확하지 않습니다. 따라서 그들은 정확한 값이 꼭 필요하지 않은 숫자를 선택하기 위해 사용됩니다.
 
 슬라이더는 {{HTMLElement("input")}}을 사용하여 생성되며, 그 [`type`](/ko/docs/Web/HTML/Element/input#type) 속성의 값은 `range`로 설정됩니다. 슬라이더 썸네일은 마우스나 터치 또는 키패드의 화살표로 이동할 수 있습니다.
 
