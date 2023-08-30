@@ -27,7 +27,7 @@ createWritable(options)
 
 ### 返回值
 
-一个 {{jsxref('Promise')}} 对象，可兑现一个  {{domxref('FileSystemWritableFileStream')}} 对象。
+一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('FileSystemWritableFileStream')}} 对象。
 
 ### 异常
 
@@ -61,5 +61,5 @@ async function writeFile(fileHandle, contents) {
 
 ## 参见
 
-- [文件系统访问 API](zh-CN/docs/Web/API/File_System_Access_API)
+- [文件系统访问 API](/zh-CN/docs/Web/API/File_System_Access_API)
 - [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
