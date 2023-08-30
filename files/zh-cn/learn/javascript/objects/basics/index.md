@@ -34,7 +34,7 @@ slug: Learn/JavaScript/Objects/Basics
 
 对象是一个包含相关数据和方法的集合（通常由一些变量和函数组成，我们称之为对象里面的属性和方法），让我们通过一个例子来了解它们。
 
-首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地，文件的元素非常少 — 仅一个供我们写源代码的 {{HTMLElement("script")}} 标签。我们将在此基础上研究对象基础语法。在使用此示例时，您应该打开[开发人员工具JavaScript控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并准备键入一些命令。
+首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地，文件的元素非常少 — 仅一个供我们写源代码的 {{HTMLElement("script")}} 标签。我们将在此基础上研究对象基础语法。在使用此示例时，您应该打开[开发人员工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并准备键入一些命令。
 
 如同 Javascript 中的很多东西一样，创建一个对象通常先定义并初始化变量。尝试在您的文件中输入以下 JavaScript 代码，保存并刷新页面：
 
@@ -241,7 +241,7 @@ person.farewell();
 
 括号表示法一个有用的地方是它不仅可以动态的去设置对象成员的值，还可以动态的去设置成员的名字。
 
-假设我们想让用户能够通过在两个文本输入框中键入成员名称和值,在他们的人员数据中存储自定义的值类型。我们可以像这样获取这些值：
+假设我们想让用户能够通过在两个文本输入框中键入成员名称和值，在他们的人员数据中存储自定义的值类型。我们可以像这样获取这些值：
 
 ```js
 const myDataName = nameInput.value;
@@ -282,7 +282,7 @@ introduceSelf() {
 
 你也许想知道 "this" 是什么，关键字 `this` 指向了当前代码运行时的对象——这里指 `person` 对象，为什么不直接写 `person` 呢？
 
-当你只需要创建一个对象字面量时，`this` 就不是那么有用。但是如果你创建多个对象时,`this` 可以让你对每一个创建的对象都使用相同的方法定义。
+当你只需要创建一个对象字面量时，`this` 就不是那么有用。但是如果你创建多个对象时，`this` 可以让你对每一个创建的对象都使用相同的方法定义。
 
 让我们用两个简单的 person 对象来说明：
 
@@ -407,7 +407,7 @@ const myNotification = new Notification("Hello!");
 
 ## 测试你的能力！
 
-你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“测试你的技能:对象基础” (en-US)](/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics)。
+你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“测试你的技能:对象基础” （en-US）](/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics)。
 
 ## 总结
 
