@@ -366,7 +366,7 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 }
 ```
 
-```html
+```html-nolint
 <div class="wrapper">
   <div class="item1">
     col1-start の線 1 から col2-start の線 2 に配置されています

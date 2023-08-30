@@ -66,13 +66,13 @@ pipeThrough(transformStream, options)
 
 ```js
 // 元の画像をフェッチ
-fetch('png-logo.png')
-// その body を ReadableStream として取得
-.then((response) => response.body)
-.then((rs) => logReadableStream('Fetch Response Stream', rs))
-// 元の画像からグレースケール PNG ストリームを作成
-.then((body) => body.pipeThrough(new PNGTransformStream()))
-.then((rs) => logReadableStream('PNG Chunk Stream', rs))
+fetch("png-logo.png")
+  // その body を ReadableStream として取得
+  .then((response) => response.body)
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
+  // 元の画像からグレースケール PNG ストリームを作成
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 ## 仕様書

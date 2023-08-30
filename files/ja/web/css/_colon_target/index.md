@@ -46,7 +46,7 @@ http://www.example.com/index.html#section2
 
 #### HTML
 
-```html
+```html-nolint
 <h3>目次</h3>
 <ol>
   <li><a href="#p1">第 1 段落にジャンプ！</a></li>

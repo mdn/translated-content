@@ -19,13 +19,13 @@ l10n:
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  vibrate: [200, 100, 200]
-}
+  body: "Do you like my body?",
+  vibrate: [200, 100, 200],
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.vibrate) // should log [200,100,200]
+console.log(n.vibrate); // should log [200,100,200]
 ```
 
 ## 仕様書
