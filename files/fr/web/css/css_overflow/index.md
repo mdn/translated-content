@@ -14,7 +14,7 @@ Le second type de dépassement, **_scrollable overflow_** (ou dépassement défi
 
 ## Exemple
 
-L'exempel interactif suivant illustre comment la modification de la valeur de la propriété `overflow` change la façon dont est géré le dépassement pour une boîte avec une hauteur fixe.
+L'exemple interactif suivant illustre comment la modification de la valeur de la propriété `overflow` change la façon dont est géré le dépassement pour une boîte avec une hauteur fixe.
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
