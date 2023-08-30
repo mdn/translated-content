@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/let
 
 {{jsSidebar("Statements")}}
 
-**`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且能可选性地分别将每个变量初始化为一个值。
+**`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以将每个变量初始化为一个值（可选）。
 
 {{EmbedInteractiveExample("pages/js/statement-let.html")}}
 
@@ -22,13 +22,13 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### 参数
 
 - `nameN`
-  - : 要声明的变量的名称，必须是合规的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)或[解构绑定模板](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称，必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)或[解构绑定模板](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
 - `valueN` {{optional_inline}}
-  - : 变量的初始值，可以是任意合规的表达式。默认值为 `undefined`。
+  - : 变量的初始值，可以是任意合法的表达式。默认值为 `undefined`。
 
 ## 描述
 
-用 `let` 声明的变量的作用域是最靠近并包围 `let` 声明的以下花括号闭合语法结构：
+用 `let` 声明的变量的作用域是最靠近并包含 `let` 声明的以下花括号闭合语法结构的一个：
 
 - [块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)语句
 - {{jsxref("Statements/switch", "switch")}} 语句
@@ -43,7 +43,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 
 - `let` 声明的作用域是块或函数。
 - `let` 声明只能在执行到声明书写处之后才能被访问（参见[暂时性死区](#暂时性死区)）。因此，`let` 声明通常被视为是[非提升的](/zh-CN/docs/Glossary/Hoisting)。
-- `let` 声明在脚本的顶级作用域上声明变量时不会在{{jsxref("globalThis", "全局对象")}}上创建属性。
+- `let` 声明在脚本的顶级作用域上声明变量时不会在{{jsxref("globalThis", "全局对象", "", 1)}}上创建属性。
 - `let` 声明的变量不能被同一个作用域中的任何其他声明[重复声明](#重复声明)。
 - `let` [是*声明*，而不是*语句*](/zh-CN/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations)的开头。这意味着，你不能将单独的 `let` 声明当做块的主体使用（因为这样做会让变量无法被访问）。
 
@@ -51,11 +51,11 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
-注意：`let` 允许在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下作为 `var` 或者 `function` 的标识符，但你应当避免使用 `let` 作为标识符以防止发生不期望的语法混淆。
+注意：在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下允许将 `let` 作为 `var` 或者 `function` 的标识符名称，但你应当避免将 `let` 用作标识符以防止发生不期望的语法混淆。
 
 许多风格的教程（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，前提是为原始值）永远不会改变。此外更推荐用 `let` 存放可变的非原始值。
 
-`let` 关键字后方的列表叫做*{{glossary("binding", "绑定")}}列表*，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
+`let` 关键字后方的列表叫做[_绑定_](/zh-CN/docs/Glossary/Binding)*列表*，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
 
 ### 暂时性死区
 
@@ -125,7 +125,7 @@ try {
 }
 ```
 
-如果你在交互式解释器中实验，比如 Firefox web 控制台（**更多工具** > **Web 开发者工具** > **控制台**），当你分开两次输入并运行含有同一个名称的 `let` 声明时，你会得到同上的重复声明错误。有关更进一步的讨论参见这篇 issue：[Firefox bug 1580891](https://bugzil.la/1580891)。Chrome 的控制台则允许在不同次的输入中重复声明 `let` 变量。
+如果你在交互式解释器中实验，比如 Firefox web 控制台（**更多工具** > **Web 开发者工具** > **控制台**），当你分开两次输入并运行含有同一个名称的 `let` 声明时，你会得到同上的重复声明错误。有关更进一步的讨论参见这个议题：[Firefox bug 1580891](https://bugzil.la/1580891)。Chrome 的控制台则允许在不同次的输入中重复声明 `let` 变量。
 
 你或许会在 {{jsxref("Statements/switch", "switch")}} 语句中遇到错误，因为语句只有一个代码块。
 
@@ -266,7 +266,7 @@ let [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-更多信息，参见[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+更多信息，参见[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
 
 ## 规范
 
@@ -281,9 +281,9 @@ console.log(a, b, c); // "aaa" "b" "cc"
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
 - [变量提升](/zh-CN/docs/Glossary/Hoisting)
-- [深入 ES6：`let` 和 `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/) - hacks.mozilla.org (2015)
-- [Firefox 44 中 `let` and `const` 的惊人变化](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) - blog.mozilla.org (2015)
-- [你不懂 JS：作用域和闭包 第三章：函数对决块作用域](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md) - Kyle Simpson
-- [什么是暂时性死区？](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850) - Stack Overflow
-- [`let` 和 `var` 在用法上有什么不同？](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var) - Stack Overflow
-- [为什么“let”被选为了 JavaScript 块作用域变量声明的名字？](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri) - Stack Overflow
+- [深入 ES6：`let` 和 `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)——hacks.mozilla.org（2015）
+- [Firefox 44 中 `let` and `const` 的惊人变化](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)——blog.mozilla.org（2015）
+- [你不懂 JS：作用域和闭包 第三章：函数对决块作用域](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)——Kyle Simpson
+- [什么是暂时性死区？](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850)——Stack Overflow
+- [`let` 和 `var` 在用法上有什么不同？](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)——Stack Overflow
+- [为什么“let”被选为了 JavaScript 块作用域变量声明的名字？](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)——Stack Overflow
