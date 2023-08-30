@@ -35,7 +35,7 @@ slug: Learn/JavaScript/Asynchronous
 ## 测验
 
 - [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
-  - : 这个测验要求您使用 Promise 来播放一组特定序列的动画。
+  - : 这个测验要求你使用 Promise 来播放一组特定序列的动画。
 
 ## 参见
 
