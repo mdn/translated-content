@@ -26,11 +26,11 @@ Los recursos útiles para redactar cualquier documentación incluyen:
 
 1. Las [Guías prácticas](/es/docs/MDN/Writing_guidelines/Howto) para MDN Web Docs: ya estás aquí, pero es bueno navegar por todos los artículos y familiarizarte con nuestro estilo de escritura, los diferentes tipos de páginas y qué secciones se incluyen en ellas, y las diferentes formas en que incluimos diferentes partes de la página (como especificaciones y compatibilidad con navegadores).
 2. La última especificación:
-    Diferentes organismos de estandarización crean especificaciones para tecnologías que están documentadas en MDN Web Docs. Por ejemplo, TC39 para JavaScript o W3C para HTML, CSS y API web.
-    Las especificaciones están vinculadas desde páginas de referencia en MDN Web Docs (consulte la sección 'Especificaciones'). Alternativamente, normalmente puedes hacer una búsqueda en la web. Trabaje siempre con las especificaciones más recientes y actualizadas.
+   Diferentes organismos de estandarización crean especificaciones para tecnologías que están documentadas en MDN Web Docs. Por ejemplo, TC39 para JavaScript o W3C para HTML, CSS y API web.
+   Las especificaciones están vinculadas desde páginas de referencia en MDN Web Docs (consulte la sección 'Especificaciones'). Alternativamente, normalmente puedes hacer una búsqueda en la web. Trabaje siempre con las especificaciones más recientes y actualizadas.
 3. Los últimos navegadores web modernos:
-    Estas deberían ser compilaciones experimentales/alfa como [Firefox Nightly](https://www.mozilla.org/es/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/es/chrome/canary/) que tienen más probabilidades de admitir las funciones que está documentando.
-    Esto es especialmente pertinente si está documentando una función que está en "próximamente" (upcoming).
+   Estas deberían ser compilaciones experimentales/alfa como [Firefox Nightly](https://www.mozilla.org/es/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/es/chrome/canary/) que tienen más probabilidades de admitir las funciones que está documentando.
+   Esto es especialmente pertinente si está documentando una función que está en "próximamente" (upcoming).
 4. Demostraciones/publicaciones de blog/otra información: encuentre tanta información como pueda. Si está actualizando una tecnología porque ha cambiado, asegúrese de que los recursos que está utilizando para aprender no estén desactualizados. Por eso los dos primeros puntos anteriores son importantes.
 
 También puede ser aconsejable intentar encontrar a alguien que le ayude a responder sus preguntas. Pueden ser los autores de las especificaciones o los ingenieros que implementan las funciones del navegador.
