@@ -1,102 +1,436 @@
 ---
-title: MathML attribute reference
+title: 属性
 slug: Web/MathML/Attribute
 ---
 
-此页面是 MathML 属性的字母表。每个属性的更多详细信息请看这里[element pages](/zh-CN/docs/MathML/Element)。
+{{MathMLRef}}
 
-注意：
+此页面是 MathML 属性的字母表。要了解每个属性的更多详细信息，请参见 [MathML 元素页面](/zh-CN/docs/Web/MathML/Element)和[全局属性页面](/zh-CN/docs/Web/MathML/Global_attributes)。[值](/zh-CN/docs/Web/MathML/Values)页面也介绍了有关 MathML 属性常用值的一些说明。
 
-- MathML 的 {{ MathMLElement("mstyle") }} 和 {{ MathMLElement("math") }} 元素接受所有 MathML 的描述元素。
-- 请参阅 MathML 中值（[values](/zh-CN/docs/MathML/Attributes/Values)）和单位的注释值。
+> **备注：** 就像 [MathML](/zh-CN/docs/Web/MathML) 主页所解释的那样，MDN 使用 [MathML 核心](https://w3c.github.io/mathml-core/)作为参考规范。不过，一些浏览器仍在使用的遗留特性也被记录在案。你可以在 [MathML 4](https://w3c.github.io/mathml/) 中找到有关这些特性和其他特性的更多详细信息。
 
-| 名（Name）                                                                                     | 元素接受的属性（Elements accepting attribute）                                                                                                                          | 描述（Description）                                                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `accent`                                                                                       | {{ MathMLElement("mo") }}, {{ MathMLElement("mover") }}, {{ MathMLElement("munderover") }}                                                                              | 布尔类型的值，指明操作符是否应该被视为 accent。原文：A Boolean value specifying whether the operator should be treated as an accent.                                                                                       |
-| `accentunder`                                                                                  | {{ MathMLElement("munder") }}, {{ MathMLElement("munderover") }}                                                                                                        | 布尔类型的值，指明操作符是否应该被视为 accent。原文：A Boolean value specifying whether the operator should be treated as an accent.                                                                                       |
-| `actiontype`                                                                                   | {{ MathMLElement("maction") }}                                                                                                                                          | 字符串类型的值，指明元素发生的操作。                                                                                                                                                                                       |
-| `align`                                                                                        | {{ MathMLElement("mtable") }} {{ MathMLElement("munder") }}, {{ MathMLElement("mover") }}, {{ MathMLElement("munderover") }} {{ MathMLElement("mstack") }}              | Specifies different alignments of several elements (see element pages for details).                                                                                                                                        |
-| {{ unimplemented_inline() }} `alignmentscope`                                                  | {{ MathMLElement("mtable") }}                                                                                                                                           | A Boolean value specifying whether table columns should act as alignment scopes or not.                                                                                                                                    |
-| {{ unimplemented_inline() }} `altimg` `altimg-width` `altimg-height` `altimg-valign` `alttext` | {{ MathMLElement("math") }}                                                                                                                                             | Visual and textual fall-back options.                                                                                                                                                                                      |
-| `bevelled`                                                                                     | {{ MathMLElement("mfrac") }}                                                                                                                                            | Specifies the style how the fraction should be displayed.                                                                                                                                                                  |
-| {{ unimplemented_inline() }} `charalign`                                                       | {{ MathMLElement("mstack") }}                                                                                                                                           | Specifies the horizontal alignment of digits.                                                                                                                                                                              |
-| `close`                                                                                        | {{ MathMLElement("mfenced") }}                                                                                                                                          | A string for the closing delimiter.                                                                                                                                                                                        |
-| `columnalign`                                                                                  | {{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}, {{ MathMLElement("mlabeledtr") }}                                                | Specifies the horizontal alignment of table cells.                                                                                                                                                                         |
-| `columnlines`                                                                                  | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies table column borders.                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `columnspacing`                                                   | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies the space between table columns.                                                                                                                                                                                 |
-| `columnspan`                                                                                   | {{ MathMLElement("mtd") }}                                                                                                                                              | A non-negative integer value that indicates on how many table columns does the cell extend.                                                                                                                                |
-| {{ unimplemented_inline() }} `columnwidth`                                                     | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies the width of table columns.                                                                                                                                                                                      |
-| {{ unimplemented_inline() }} `crossout`                                                        | {{ MathMLElement("mscarry") }}                                                                                                                                          | Specifies what kind of line is drawn to cross out carries.                                                                                                                                                                 |
-| {{ unimplemented_inline() }} `decimalpoint`                                                    | {{ MathMLElement("mstyle") }}                                                                                                                                           | If the `decimalpoint` value is used to specify the [alignment](#align), this attribute is specifying the character for the alignment point within {{ MathMLElement("mstack") }} and {{ MathMLElement("mtable") }} columns. |
-| `denomalign`                                                                                   | {{ MathMLElement("mfrac") }}                                                                                                                                            | The alignment of the denominator under the fraction.                                                                                                                                                                       |
-| `depth`                                                                                        | {{ MathMLElement("mpadded") }}                                                                                                                                          | Sets or increments the depth. See [length](/zh-CN/docs/MathML/Attributes/Values).                                                                                                                                          |
-| `dir`                                                                                          | {{ MathMLElement("math") }}, {{ MathMLElement("mi") }}, {{ MathMLElement("mo") }}, {{ MathMLElement("mrow") }}, {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }} | The text direction. Possible values are either ltr (left to right) or rtl (right to left).                                                                                                                                 |
-| `display`                                                                                      | {{ MathMLElement("math") }}                                                                                                                                             | Specifies the rendering mode. The values `block` and `inline` are allowed.                                                                                                                                                 |
-| `displaystyle`                                                                                 | {{ MathMLElement("mstyle") }}, {{ MathMLElement("mtable") }}                                                                                                            | A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas.                                                           |
-| {{ unimplemented_inline() }} `edge`                                                            | {{ MathMLElement("malignmark") }}                                                                                                                                       |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `equalcolumns`                                                    | {{ MathMLElement("mtable") }}                                                                                                                                           | A Boolean value indicating whether to force all columns to have the same total height.                                                                                                                                     |
-| {{ unimplemented_inline() }} `equalrows`                                                       | {{ MathMLElement("mtable") }}                                                                                                                                           | A Boolean value indicating whether to force all rows to have the same total height.                                                                                                                                        |
-| `fence`                                                                                        | {{ MathMLElement("mo") }}                                                                                                                                               | A Boolean value specifying whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.                                                                                            |
-| {{ unimplemented_inline() }} `form`                                                            | {{ MathMLElement("mo") }}                                                                                                                                               | Specifies the role of the operator in an enclosed expression.                                                                                                                                                              |
-| `frame`                                                                                        | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies borders of an entire {{ MathMLElement("mtable") }}. Possible values are: `none` (default), `solid` and `dashed`.                                                                                                 |
-| {{ unimplemented_inline() }} `framespacing`                                                    | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies additional space added between the table and `frame`.                                                                                                                                                            |
-| {{ unimplemented_inline() }} `groupalign`                                                      | {{ MathMLElement("maligngroup") }}, {{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}                                               |                                                                                                                                                                                                                            |
-| `height`                                                                                       | {{ MathMLElement("mglyph") }}, {{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}                                                                            | Specifies the desired height. See [lengths](/zh-CN/docs/MathML/Attributes/Values#Lengths) for possible values.                                                                                                             |
-| `href`                                                                                         | _All_                                                                                                                                                                   | Used to set a hyperlink to a specified URI.                                                                                                                                                                                |
-| `id`                                                                                           | _All_                                                                                                                                                                   | Sets up a unique identifier associated with the element.                                                                                                                                                                   |
-| {{ unimplemented_inline() }} `indentalign`                                                     | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `indentalignfirst`                                                | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `indentalignlast`                                                 | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `indentshift`                                                     | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `indentshiftfirst`                                                | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `indentshiftlast`                                                 | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `indenttarget`                                                    | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `infixlinebreakstyle`                                             | {{ MathMLElement("mstyle") }}                                                                                                                                           | Specifies the default `linebreakstyle` to use for infix operators.                                                                                                                                                         |
-| `largeop`                                                                                      | {{ MathMLElement("mo") }}                                                                                                                                               | Specifies whether the operator should be drawn larger than normal.                                                                                                                                                         |
-| `length`                                                                                       | {{ MathMLElement("msline") }}                                                                                                                                           |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `linebreak`                                                       | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `linebreakmultchar`                                               | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `linebreakstyle`                                                  | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `lineleading`                                                     | {{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}                                                                                                                |                                                                                                                                                                                                                            |
-| `linethickness`                                                                                | {{ MathMLElement("mfrac") }}                                                                                                                                            | The thickness of the horizontal fraction line.                                                                                                                                                                             |
-| {{ unimplemented_inline() }} `location`                                                        | {{ MathMLElement("mscarries") }}                                                                                                                                        |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `longdivstyle`                                                    | {{ MathMLElement("mlongdiv") }}                                                                                                                                         | Controls the style of the long division layout.                                                                                                                                                                            |
-| `lspace`                                                                                       | {{ MathMLElement("mo") }}, {{ MathMLElement("mpadded") }}                                                                                                               | The amount of space before the operator (see [length](/zh-CN/docs/MathML/Attributes/Values#Lengths) for values and units).                                                                                                 |
-| `lquote`                                                                                       | {{ MathMLElement("ms") }}                                                                                                                                               | The opening quote character (depends on `dir`) to enclose the content. The default value is "`&quot;`".                                                                                                                    |
-| `mathbackground`                                                                               | _All_                                                                                                                                                                   | The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/zh-CN/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords).                                                                             |
-| `mathcolor`                                                                                    | _All_                                                                                                                                                                   | The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/zh-CN/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords).                                                                                   |
-| `mathsize`                                                                                     | {{ MathMLElement("mi") }}, {{ MathMLElement("mn") }}, {{ MathMLElement("mo") }}, {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }}                                | The size of the content. Starting with Gecko 20.0 unitless values are allowed and are interpreted as N times of the default size.                                                                                          |
-| `mathvariant`                                                                                  | {{ MathMLElement("mi") }}, {{ MathMLElement("mn") }}, {{ MathMLElement("mo") }}, {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }}                                | The logical class of the identifier, which varies in typography.                                                                                                                                                           |
-| `maxsize`                                                                                      | {{ MathMLElement("mo") }}                                                                                                                                               | The maximum size of the operator.                                                                                                                                                                                          |
-| {{ unimplemented_inline() }} `minlabelspacing`                                                 | {{ MathMLElement("mtable") }}                                                                                                                                           | A [length value](/zh-CN/docs/MathML/Attributes/Values) specifing the minimum space between a [label](Element/mlabeledtr) and the adjacent cell in the row.                                                                 |
-| `minsize`                                                                                      | {{ MathMLElement("mo") }}                                                                                                                                               | The minimum size of the operator.                                                                                                                                                                                          |
-| `movablelimits`                                                                                | {{ MathMLElement("mo") }}                                                                                                                                               | Specifies whether attached under- and overscripts move to sub- and superscript positions.                                                                                                                                  |
-| `notation`                                                                                     | {{ MathMLElement("menclose") }}                                                                                                                                         | A list of notations, separated by white space, to apply to the child elements.                                                                                                                                             |
-| `numalign`                                                                                     | {{ MathMLElement("mfrac") }}                                                                                                                                            | The alignment of the numerator over the fraction.                                                                                                                                                                          |
-| `open`                                                                                         | {{ MathMLElement("mfenced") }}                                                                                                                                          | A string for the opening delimiter.                                                                                                                                                                                        |
-| {{ unimplemented_inline() }} `overflow`                                                        | {{ MathMLElement("math") }}                                                                                                                                             | If an expression is too long to fit in the allowed width, this attribute sets the preferred handling.                                                                                                                      |
-| {{ unimplemented_inline() }} `position`                                                        | {{ MathMLElement("msgroup") }}, {{ MathMLElement("msrow") }}, {{ MathMLElement("mscarries") }}, {{ MathMLElement("msline") }}                                           |                                                                                                                                                                                                                            |
-| `rowalign`                                                                                     | {{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}                                                                                   | Specifies the vertical alignment of table cells.                                                                                                                                                                           |
-| `rowlines`                                                                                     | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies table row borders.                                                                                                                                                                                               |
-| `rowspacing`                                                                                   | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies the space between table rows.                                                                                                                                                                                    |
-| `rowspan`                                                                                      | {{ MathMLElement("mtd") }}                                                                                                                                              | A non-negative integer value that indicates on how many rows does the cell extend.                                                                                                                                         |
-| `rspace`                                                                                       | {{ MathMLElement("mo") }}                                                                                                                                               | The amount of space after the operator.                                                                                                                                                                                    |
-| `rquote`                                                                                       | {{ MathMLElement("ms") }}                                                                                                                                               | The closing quote mark (depends on `dir`) to enclose the content. The default value is "`&quot;`".                                                                                                                         |
-| `scriptlevel`                                                                                  | {{ MathMLElement("mstyle") }}                                                                                                                                           | Controls mostly the font-size. The higher the `scriptlevel`, the smaller the font size.                                                                                                                                    |
-| `scriptminsize`                                                                                | {{ MathMLElement("mstyle") }}                                                                                                                                           | Specifies a minimum font size allowed due to changes in `scriptlevel`. Starting with Gecko 20.0 unitless values and percent values are allowed and interpreted as multiple of "8pt".                                       |
-| `scriptsizemultiplier`                                                                         | {{ MathMLElement("mstyle") }}                                                                                                                                           | Specifies the multiplier to be used to adjust font size due to changes in `scriptlevel`.                                                                                                                                   |
-| `selection`                                                                                    | {{ MathMLElement("maction") }}                                                                                                                                          | The child element which is addressed by the action.                                                                                                                                                                        |
-| `separator`                                                                                    | {{ MathMLElement("mo") }}                                                                                                                                               | There is no visual effect for this attribute, but it specifies whether the operator is a separator (such as commas).                                                                                                       |
-| `separators`                                                                                   | {{ MathMLElement("mfenced") }}                                                                                                                                          | A sequence of zero or more characters to be used for different separators.                                                                                                                                                 |
-| {{ unimplemented_inline() }} `shift`                                                           | {{ MathMLElement("msgroup") }}                                                                                                                                          |                                                                                                                                                                                                                            |
-| {{ unimplemented_inline() }} `side`                                                            | {{ MathMLElement("mtable") }}                                                                                                                                           | Specifies the position where {{ MathMLElement("mlabeledtr") }} label elements should be placed.                                                                                                                            |
-| {{ unimplemented_inline() }} `src`                                                             | {{ MathMLElement("mglyph") }}                                                                                                                                           | The location of the image resource.                                                                                                                                                                                        |
-| {{ unimplemented_inline() }} `stackalign`                                                      | {{ MathMLElement("mstack") }}                                                                                                                                           |                                                                                                                                                                                                                            |
-| `stretchy`                                                                                     | {{ MathMLElement("mo") }}                                                                                                                                               | Specifies whether the operator stretches to the size of the adjacent element.                                                                                                                                              |
-| `subscriptshift`                                                                               | {{ MathMLElement("mmultiscripts") }}, {{ MathMLElement("msub") }}, {{ MathMLElement("msubsup") }}                                                                       | The minimum space by which to shift the subscript below the baseline of the expression.                                                                                                                                    |
-| `supscriptshift`                                                                               | {{ MathMLElement("mmultiscripts") }}, {{ MathMLElement("msup") }}, {{ MathMLElement("msubsup") }}                                                                       | The minimum space by which to shift the superscript above the baseline of the expression.                                                                                                                                  |
-| `symmetric`                                                                                    | {{ MathMLElement("mo") }}                                                                                                                                               | If `stretchy` is `true`, this attribute specifies whether the operator should be vertically symmetric around the imaginary math axis (centered fraction line).                                                             |
-| `voffset`                                                                                      | {{ MathMLElement("mpadded") }}                                                                                                                                          | Sets the vertical position of the child content.                                                                                                                                                                           |
-| `width`                                                                                        | {{ MathMLElement("mglyph") }}, {{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}, {{ MathMLElement("mtable") }}                                             | Specifies the desired width. See [lengths](/zh-CN/docs/MathML/Attributes/Values#Lengths) for possible values.                                                                                                              |
-| `xlink:href`                                                                                   | _All_                                                                                                                                                                   | Can be used to set a hyperlink to a specfied URI. However, authors are encouraged to use the `href` attribute instead.                                                                                                     |
-| `xmlns`                                                                                        | {{ MathMLElement("math") }}                                                                                                                                             | Specifies the URI for the MathML namespace ([`http://www.w3.org/1998/Math/MathML`](http://www.w3.org/1998/Math/MathML))                                                                                                    |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>接受该属性的元素</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>accent</code></td>
+      <td>
+        {{ MathMLElement("mo") }}
+      </td>
+      <td>
+         一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示在作为下标或上标使用时，运算符是否应着重表示。
+      </td>
+    </tr>
+    <tr>
+      <td><code>accent</code></td>
+      <td>
+        {{ MathMLElement("mover") }}、{{ MathMLElement("munderover") }}
+      </td>
+      <td>
+         一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示下标是否应着重表示。
+      </td>
+    </tr>
+    <tr>
+      <td><code>accentunder</code></td>
+      <td>
+        {{ MathMLElement("munder") }}、{{ MathMLElement("munderover") }}
+      </td>
+      <td>
+         一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示上标是否应着重表示。
+      </td>
+    </tr>
+    <tr>
+      <td><code>actiontype</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("maction") }}</td>
+      <td>一个字符串值，用于指定此元素发生的操作。</td>
+    </tr>
+    <tr>
+      <td><code>align</code></td>
+      <td>
+        {{ MathMLElement("mtable") }}
+      </td>
+      <td>
+        指定表格相对于环境的垂直对齐方式。
+      </td>
+    </tr>
+    <tr>
+      <td><code>background</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>close</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>用于结尾分隔符的字符串。</td>
+    </tr>
+    <tr>
+      <td><code>color</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>请使用 CSS <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 代替。</td>
+    </tr>
+    <tr>
+      <td><code>columnalign</code></td>
+      <td>
+        {{ MathMLElement("mtable") }}、{{ MathMLElement("mtd") }}、{{ MathMLElement("mtr") }}
+      </td>
+      <td>指定表格单元格的水平对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>columnlines</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格列边框。</td>
+    </tr>
+    <tr>
+      <td><code>columnspacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格列间距。</td>
+    </tr>
+    <tr>
+      <td><code>columnspan</code></td>
+      <td>{{ MathMLElement("mtd") }}</td>
+      <td>
+        一个非负整数值，表示单元格扩展到多少表格列。
+      </td>
+    </tr>
+    <tr>
+      <td><code>denomalign</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>分数下分母的对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>depth</code></td>
+      <td>{{ MathMLElement("mpadded") }}</td>
+      <td>
+       一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的深度（基线以下）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>dir</code></td>
+      <td>
+        <a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a>
+      </td>
+      <td>
+        文本方向，可能的值为 <code>ltr</code>（从左到右）或 <code>rtl</code>（从右到左）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>display</code></td>
+      <td>{{ MathMLElement("math") }}</td>
+      <td>
+        指定渲染模式，允许的值为 <code>block</code> 和 <code>inline</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>displaystyle</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        <p>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>fence</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定运算符是否为分隔符（如括号）。该属性没有视觉效果。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontfamily</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-family"><code>font-family</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontsize</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontstyle</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontweight</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-weight"><code>font-weight</code></a> 代替。
+      </td>
+    </tr>
+    <tr>
+      <td><code>frame</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>
+        指定整个 {{ MathMLElement("mtable") }} 的边框显示。可能的值为 <code>none</code>（默认）、<code>solid</code> 和 <code>dashed</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>framespacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>
+        指定在表格和 <code>frame</code> 之间添加的额外空间。
+      </td>
+    </tr>
+    <tr>
+      <td><code>height</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }}、{{ MathMLElement("mspace") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的高度（基线之上）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>用于设置指向指定 URI 的超链接。</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>设置与元素相关的唯一标识符。</td>
+    </tr>
+    <tr>
+      <td><code>linethickness</code></td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示水平分数线的厚度。</td>
+    </tr>
+    <tr>
+      <td><code>lspace</code></td>
+      <td>
+        {{ MathMLElement("mo") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符前的空间大小。
+      </td>
+    </tr>
+    <tr>
+      <td><code>lspace</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示子内容的定位点相对于元素定位点的水平位置。
+      </td>
+    </tr>
+    <tr>
+      <td><code>lquote</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("ms") }}</td>
+      <td>
+        包含内容的起始引号，默认值为 <code>&amp;quot;</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathbackground</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        元素的 <a href="/zh-CN/docs/Web/CSS/background-color">background-color</a> 值。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathcolor</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        元素的 <a href="/zh-CN/docs/Web/CSS/color">color</a> 值。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathsize</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，作为元素的 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 值。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathvariant</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>标记元素的逻辑类别，在排版上有所不同。</td>
+    </tr>
+    <tr>
+      <td><code>maxsize</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符在拉伸状态下的最大尺寸。</td>
+    </tr>
+    <tr>
+      <td><code>minsize</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符在拉伸状态下的最小尺寸。</td>
+    </tr>
+    <tr>
+      <td><code>movablelimits</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下标和上标位置。
+      </td>
+    </tr>
+    <tr>
+      <td><code>notation</code></td>
+      <td>{{ MathMLElement("menclose") }}</td>
+      <td>
+        应用于子元素的符号列表，以空白符分隔。
+      </td>
+    </tr>
+    <tr>
+      <td><code>numalign</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>分数中分子的对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>open</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>用于起始分隔符的字符串。</td>
+    </tr>
+    <tr>
+      <td><code>rowalign</code></td>
+      <td>
+        {{ MathMLElement("mtable") }}、{{ MathMLElement("mtd") }}、{{ MathMLElement("mtr") }}
+      </td>
+      <td>指定单元格的垂直对齐方式。</td>
+    </tr>
+    <tr>
+      <td><code>rowlines</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格行的边框大小。</td>
+    </tr>
+    <tr>
+      <td><code>rowspacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>指定表格行间距。</td>
+    </tr>
+    <tr>
+      <td><code>rowspan</code></td>
+      <td>{{ MathMLElement("mtd") }}</td>
+      <td>
+        一个非负整数值，表示单元格扩展到多少行。
+      </td>
+    </tr>
+    <tr>
+      <td><code>rspace</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符后的空格大小。</td>
+    </tr>
+    <tr>
+      <td><code>rquote</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("ms") }}</td>
+      <td>
+        包含内容的结尾引号，默认值为 <code>&amp;quot;</code>。
+      </td>
+    </tr>
+    <tr>
+      <td><code>scriptlevel</code></td>
+      <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
+      <td>
+        指定了元素的 <a href="/zh-CN/docs/Web/CSS/math-depth">math-depth</a> 值。参见 <a href="/zh-CN/docs/Web/MathML/Global_attributes/scriptlevel#values">scriptlevel 页面</a>以了解接受的值和映射。
+      </td>
+    </tr>
+    <tr>
+      <td><code>scriptminsize</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        指定由于 <code>scriptlevel</code> 的更改而允许的最小字体大小。
+      </td>
+    </tr>
+    <tr>
+      <td><code>scriptsizemultiplier</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        指定倍数，用于根据 <code>scriptlevel</code> 的变化调整字体大小。
+      </td>
+    </tr>
+    <tr>
+      <td><code>selection</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("maction") }}</td>
+      <td>子元素可见，仅在某些 <code>actiontype</code> 值中被考虑。</td>
+    </tr>
+    <tr>
+      <td><code>separator</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+      一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定了该运算符是否为分割符（如逗号）。这个属性没有视觉效果。
+      </td>
+    </tr>
+    <tr>
+      <td><code>separators</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>
+        用于不同分隔符的零个或多个字符的序列。
+      </td>
+    </tr>
+    <tr>
+      <td><code>stretchy</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示运算符是否拉伸到相邻元素的大小。
+      </td>
+    </tr>
+    <tr>
+      <td><code>subscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("msub") }}、{{ MathMLElement("msubsup") }}、{{ MathMLElement("mmultiscripts") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示下标基线下移的最小量。
+      </td>
+    </tr>
+    <tr>
+      <td><code>superscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("msup") }}、{{ MathMLElement("msubsup") }}、{{ MathMLElement("mmultiscripts") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示上标基线上移的最小量。
+      </td>
+    </tr>
+    <tr>
+      <td><code>symmetric</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示拉伸运算符是否应围绕数学虚轴（居中分数线）垂直对称。
+      </td>
+    </tr>
+    <tr>
+      <td><code>voffset</code></td>
+      <td>{{ MathMLElement("mpadded") }}</td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"
+          ><code>&lt;length-percentage&gt;</code></a
+        > 值，表示子内容的定位点相对于元素定位点的垂直位置。
+      </td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }}、{{ MathMLElement("mspace") }}、{{ MathMLElement("mtable") }}
+      </td>
+      <td>
+        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的宽度。
+      </td>
+    </tr>
+    <tr>
+      <td><code>xmlns</code></td>
+      <td>{{ MathMLElement("math") }}</td>
+      <td>
+        指定 MathML 命名空间的 URI（<code
+          ><a href="https://www.w3.org/1998/Math/MathML"
+            >http://www.w3.org/1998/Math/MathML</a
+          ></code
+        >）
+      </td>
+    </tr>
+  </tbody>
+</table>
