@@ -55,7 +55,7 @@ if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a sing
 
 许多风格的教程（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，前提是为原始值）永远不会改变。此外更推荐用 `let` 存放可变的非原始值。
 
-`let` 关键字后方的列表叫做*{{glossary("binding")}}*列表，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
+`let` 关键字后方的列表叫做*{{glossary("binding", "绑定")}}列表*，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
 
 ### 暂时性死区
 
@@ -104,7 +104,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 
 ### 重复声明
 
-`let` 声明的变量不能被同一个作用域中的任何其他声明重复声明，包括 `let`, {{jsxref("Statements/const", "const")}}、{{jsxref("Statements/class", "class")}}、{{jsxref("Statements/function", "function")}}、{{jsxref("Statements/var", "var")}} 和 {{jsxref("Statements/import", "import")}} 声明。
+`let` 声明的变量不能被同一个作用域中的任何其他声明重复声明，包括 `let`、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/class", "class")}}、{{jsxref("Statements/function", "function")}}、{{jsxref("Statements/var", "var")}} 和 {{jsxref("Statements/import", "import")}} 声明。
 
 ```js-nolint example-bad
 {
