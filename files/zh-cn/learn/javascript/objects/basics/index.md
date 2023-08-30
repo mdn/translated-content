@@ -63,7 +63,6 @@ const person = {
     console.log(`Hi! I'm ${this.name[0]}.`);
   },
 };
-
 ```
 
 保存并刷新后，尝试在你的浏览器控制台输入下面的内容：
