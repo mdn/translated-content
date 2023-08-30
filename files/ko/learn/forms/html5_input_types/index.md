@@ -10,7 +10,7 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">사전 요구 사항:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         기본 컴퓨터 리터러시와 기본적인
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
