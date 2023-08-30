@@ -53,7 +53,7 @@ var obj = new f();
 
 ### 一个构造器
 
-假设你想为汽车创建一个对象类型。你希望此类型的对象被称为 `car`，并且您希望它具有 make，model 和 year 属性。为此，你编写以下函数：
+假设你想为汽车创建一个对象类型。你希望此类型的对象被称为 `car`，并且你希望它具有 make，model 和 year 属性。为此，你编写以下函数：
 
 ```js
 function Car(make, model, year) {
