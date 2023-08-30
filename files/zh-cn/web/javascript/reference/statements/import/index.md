@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Statements/import
 
 在 [script](/zh-CN/docs/Web/HTML/Element/script) 标签中使用 `nomodule` 属性，可以确保向后兼容。
 
-在您希望按照一定的条件或者按需加载模块的时候，动态 `import()` 是非常有用的。而静态型的 `import` 是初始化加载依赖项的最优选择，使用静态 `import` 更容易从代码静态分析工具和 [tree shaking](/zh-CN/docs/Glossary/Tree_shaking) 中受益。
+在你希望按照一定的条件或者按需加载模块的时候，动态 `import()` 是非常有用的。而静态型的 `import` 是初始化加载依赖项的最优选择，使用静态 `import` 更容易从代码静态分析工具和 [tree shaking](/zh-CN/docs/Glossary/Tree_shaking) 中受益。
 
 语法
 
