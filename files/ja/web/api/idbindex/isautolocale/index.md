@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-{{domxref("IDBIndex")}} インターフェイスの読み取り専用プロパティ **`isAutoLocale`** は、このインデックスの生成時に `locale` の値を `auto` に設定したかを表す論理値を返します。( [`IDBObjectStore.createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数  [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
+{{domxref("IDBIndex")}} インターフェイスの読み取り専用プロパティ **`isAutoLocale`** は、このインデックスの生成時に `locale` の値を `auto` に設定したかを表す論理値を返します。([`IDBObjectStore.createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
 
 ## 値
 

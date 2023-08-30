@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-{{domxref("IDBIndex")}} インターフェイスの読み取り専用プロパティ **`locale`**  は、生成時に `locale` の値を指定されていた場合、インデックスのロケール (たとえば `en-US` や `pl`) を返します。([`IDBObjectStore.createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください) なお、このプロパティは常にこのインデックスで現在使用されているロケールを返します。すなわち、`"auto"` を返すことはありません。
+{{domxref("IDBIndex")}} インターフェイスの読み取り専用プロパティ **`locale`** は、生成時に `locale` の値を指定されていた場合、インデックスのロケール (たとえば `en-US` や `pl`) を返します。([`IDBObjectStore.createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください) なお、このプロパティは常にこのインデックスで現在使用されているロケールを返します。すなわち、`"auto"` を返すことはありません。
 
 ## 値
 
