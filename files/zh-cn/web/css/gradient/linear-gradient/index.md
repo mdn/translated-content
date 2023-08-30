@@ -50,7 +50,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 [`<image>`](/zh-CN/docs/Web/CSS/image) 的地方。因此，`linear-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
-### 线性渐变的构成
+### 线性渐变的合成
 
 线性渐变是在一个轴——*渐变线*和两个或者更多个*色标*（color stop）构成的。轴上的每个点都是一个单独的颜色，要创建平滑的渐变，`linear-gradient()` 函数会绘制出一系列与渐变线垂直的彩色线，每条线都匹配与渐变线相交点的颜色。
 
@@ -67,6 +67,12 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ```css
 linear-gradient(red, orange, yellow, green, blue);
 linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+```
+
+默认情况下，颜色会从一个色标的颜色到后续的色标的颜色平滑过渡，颜色的中点是颜色过渡中的中间点。你可以将这个中点移动到两个色标之间的任何位置，方法就是在两个颜色之间的中点所在的位置添加一个没有加标签的 % 颜色提示。下面这个例子中，起始点到 10% 是纯红色，90% 到结束点是纯蓝色。10% 和 90% 之间是颜色从红色过渡到蓝色的地方，但是，过渡的中点是 30% 的位置，假如没有这个 30% 的颜色提示，就会是 50% 的位置。
+
+```css
+linear-gradient(red 10%, 30%, blue 90%);
 ```
 
 如果两个或者多个色标位于同一个位置，那么过渡会在这个位置的第一个和最后一个颜色之间产生一条硬线。
