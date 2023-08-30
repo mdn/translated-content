@@ -38,7 +38,7 @@ service worker 是 PWA 的一部分：它是在其自己的线程中运行的单
 
 {{domxref("Cache")}} 接口为 `Request`/`Response` 对提供了持久性存储。它提供了添加和删除 `Request`/`Response` 对的方法，以及查找匹配给定 `Request` 的缓存 `Response` 的方法。缓存在主应用线程和 service worker 中都可用：所以一个线程可以添加一个响应，另一个线程可以检索它。
 
-最常见的是，service worker 在处理 `install` 或 `fetch` 事件时使用 `Cache` 接口。
+通常情况下，service Worker 会在其 `install` 或 `fetch` 事件处理程序中将资源添加到缓存中。
 
 ## 何时缓存资源
 
