@@ -19,7 +19,7 @@ apply(thisArg, argsArray)
 ### 参数
 
 - `thisArg`
-  - : `func` 调用时提供的 `this` 值。如果函数不处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，则 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 会被替换为全局对象，原始值会被转换为对象。
+  - : 调用 `func` 时提供的 `this` 值。如果函数不处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，则 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 会被替换为全局对象，原始值会被转换为对象。
 - `argsArray` {{optional_inline}}
   - : 一个类数组对象，用于指定调用 `func` 时的参数，或者如果不需要向函数提供参数，则为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
 
@@ -33,7 +33,7 @@ apply(thisArg, argsArray)
 
 通常情况下，在调用函数时，函数内部的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值是访问该函数的对象。使用 `apply()`，你可以在调用现有函数时将任意值分配给 `this`，而无需先将函数作为属性附加到对象上。这使得你可以将一个对象的方法用作通用的实用函数。
 
-你还可以使用任何类数组对象作为第二个参数。实际上，这意味着它需要具有 `length` 属性，并且整数（"索引"）属性的范围在 `(0..length - 1)` 之间。例如，你可以使用一个 {{domxref("NodeList")}}，或者像 `{ 'length': 2, '0': 'eat', '1': 'bananas' }` 这样的自定义对象。你还可以使用 {{jsxref("Functions/arguments", "arguments")}}，例如：
+你还可以使用任何类数组对象作为第二个参数。实际上，这意味着它需要具有 `length` 属性，并且整数（“索引”）属性的范围在 `(0..length - 1)` 之间。例如，你可以使用一个 {{domxref("NodeList")}}，或者像 `{ 'length': 2, '0': 'eat', '1': 'bananas' }` 这样的自定义对象。你还可以使用 {{jsxref("Functions/arguments", "arguments")}}，例如：
 
 ```js
 function wrapper() {
@@ -109,7 +109,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 但要注意：通过使用 `apply()`（或展开语法）来处理任意长的参数列表，你可能会超过 JavaScript 引擎的参数长度限制。
 
-调用具有太多参数的函数（即超过数万个参数）的后果是未指定的，并且在不同的引擎中会有所不同。（JavaScriptCore 引擎硬编码的[参数限制为 65536](https://webkit.org/b/80797)。）大多数引擎会抛出异常；但并没有规范要求阻止其他行为，例如任意限制应用函数实际接收的参数数量。为了说明后一种情况：假设这样的引擎限制为四个参数（实际限制当然要高得多），那么在上面的示例中，传递给 `apply` 的参数将变为 `5, 6, 2, 3`，而不是完整的数组。
+调用具有太多参数的函数（即超过数万个参数）的后果是未指定的，并且在不同的引擎中会有所不同。（JavaScriptCore 引擎[将参数限制硬编码为 65536](https://webkit.org/b/80797)。）大多数引擎会抛出异常；但并没有规范要求阻止其他行为，例如任意限制应用函数实际接收的参数数量。为了说明后一种情况：假设这样的引擎限制为四个参数（实际限制当然要高得多），那么在上面的示例中，传递给 `apply` 的参数将变为 `5, 6, 2, 3`，而不是完整的数组。
 
 如果你的值数组可能会增长到数万个，可以使用混合策略：将数组的片段分批通过 `apply` 调用函数：
 
