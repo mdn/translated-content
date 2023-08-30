@@ -41,7 +41,7 @@ new Notification(title, options)
     - `vibrate`
       - : 设备振动硬件随通知一起发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。当该值被指定时，`silent` 参数不得设置为 `true`。
     - `renotify`
-      - : 一个布尔值，指定在新通知替换旧通知后是否应通知用户。默认值为 `false`，这意味着他们不会收到通知。如果该值被指定为 `true`，那么 `tag` 参数必须被设置。
+      - : 一个布尔值，指定在新通知替换旧通知后是否应通知用户。默认值为 `false`，这意味着他们不会收到通知。如果该值被指定为 `true`，那么必须同时设置 `tag` 参数。
     - `requireInteraction`
       - : 指示通知应保持活动状态，直到用户单击或关闭它，而不是自动关闭。默认值为 `false`。
     - `actions`
