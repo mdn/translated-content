@@ -48,9 +48,9 @@ new Notification(title, options)
 
       - : 要在通知中显示的一系列操作的数组。数组中的每个元素都是一个具有以下成员的对象：
 
-        - `action`: 一个标识要在通知上显示的用户操作的字符串。
-        - `title`: 一个包含要向用户显示的操作文本的字符串。
-        - `icon`: 一个包含与操作一起显示的图标 URL 的字符串。
+        - `action`：一个标识要在通知上显示的用户操作的字符串。
+        - `title`：一个包含要向用户显示的操作文本的字符串。
+        - `icon`：一个包含与操作一起显示的图标 URL 的字符串。
 
         使用 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 事件中的 `event.action` 构建适当的响应。
 
