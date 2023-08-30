@@ -5,7 +5,7 @@ slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
 
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
-{{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专用于操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_Access_API#origin_private_file_system)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
+{{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专用于操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 
 创建 {{domxref('FileSystemSyncAccessHandle')}} 会对与文件句柄关联的文件进行独占锁定。这用于在文件已有的访问句柄被关闭前，阻止对文件创建更多的 {{domxref('FileSystemSyncAccessHandle')}} 或 {{domxref('FileSystemWritableFileStream')}}。
 
@@ -26,7 +26,7 @@ createSyncAccessHandle()
 ### 异常
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('FileSystemSyncAccessHandle')}} 对象代表的不是[源私有文件系统](/zh-CN/docs/Web/API/File_System_Access_API#origin_private_file_system)上的文件，抛出此异常。
+  - : 如果 {{domxref('FileSystemSyncAccessHandle')}} 对象代表的不是[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件，抛出此异常。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : 如果浏览器无法获得文件句柄所关联的文件的锁定，抛出此异常。
 - `NotAllowedError` {{domxref("DOMException")}}
