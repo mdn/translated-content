@@ -29,7 +29,7 @@ _从其父项{{domxref("HTMLElement")}}继承方法。_
 - {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
   - : 返回{{domxref("CanvasCaptureMediaStream")}} ，它是对画布表面的实时视频捕获。
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : 返回画布上的绘图上下文；如果不支持上下文 ID，则返回 null。绘图上下文可让您在画布上绘图。调用 getContext 传入`"2d"` 可以返回一个{{domxref("CanvasRenderingContext2D")}}对象，也可以传入`"webgl"`（或`"experimental-webgl"`）返回一个{{domxref("WebGLRenderingContext")}} 对象。此上下文仅在实现[WebGL](/zh-CN/docs/Web/WebGL)的浏览器上可用。
+  - : 返回画布上的绘图上下文；如果不支持上下文 ID，则返回 null。绘图上下文可让你在画布上绘图。调用 getContext 传入`"2d"` 可以返回一个{{domxref("CanvasRenderingContext2D")}}对象，也可以传入`"webgl"`（或`"experimental-webgl"`）返回一个{{domxref("WebGLRenderingContext")}} 对象。此上下文仅在实现[WebGL](/zh-CN/docs/Web/WebGL)的浏览器上可用。
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : 返回一个数据 URL，该 URL 包含由类型参数指定的格式的图像（默认为`png`）。返回的图像分辨率为 96dpi。
 - {{domxref("HTMLCanvasElement.toBlob()")}}

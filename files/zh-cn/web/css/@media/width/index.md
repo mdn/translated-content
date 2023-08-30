@@ -9,7 +9,7 @@ slug: Web/CSS/@media/width
 
 ## 语法
 
-该`width`特性被指定为{{cssxref("&lt;length&gt;")}}，表示 viewport 宽度的值。这是一个范围特性，也就是说，您也可以使用前缀 **`min-width`** 和 **`max-width`** 分别查询最小值和最大值。
+该`width`特性被指定为{{cssxref("&lt;length&gt;")}}，表示 viewport 宽度的值。这是一个范围特性，也就是说，你也可以使用前缀 **`min-width`** 和 **`max-width`** 分别查询最小值和最大值。
 
 ## 示例
 
