@@ -83,7 +83,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 }
 ```
 
-例如，如果我们把字符串加载到 JavaScript 程序中，并将其解析为一个名为 `superHeroes` 的变量，那么我们就可以使用在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章中相同的点/括号表示法来访问其中的数据。例如：
+如果我们把字符串加载到 JavaScript 程序中，并将其解析到一个名为 `superHeroes` 的变量，那么我们就可以使用在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章中相同的点/括号表示法来访问其中的数据。例如：
 
 ```js
 superHeroes.hometown;
