@@ -35,13 +35,13 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
 
 JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
 
-> **注意：**将字符串转换为原生对象称为反序列化 (deserialization)，而将原生对象转换为可以通过网络传输的字符串称为序列化 (serialization)。
+> **备注：**将字符串转换为原生对象称为反序列化（deserialization），而将原生对象转换为可以通过网络传输的字符串称为序列化（serialization）。
 
 一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`，还有 {{glossary("MIME type")}} 用于 `application/json`.
 
 ### JSON 结构
 
-如上所述，JSON 是一个字符串，其格式非常类似于 JavaScript 对象字面量的格式。您可以在 JSON 中包含与标准 JavaScript 对象相同的基本数据类型 — 字符串、数字、数组、布尔值和其他对象字面量。这使您可以构建一个数据层次结构，如下所示：
+如上所述，JSON 是一个字符串，其格式非常类似于 JavaScript 对象字面量的格式。您可以在 JSON 中包含与标准 JavaScript 对象相同的基本数据类型 —— 字符串、数字、数组、布尔值和其他对象字面量。这使您可以构建一个数据层次结构，如下所示：
 
 ```json
 {
@@ -83,7 +83,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 }
 ```
 
-例如，如果我们把字符串加载到 JavaScript 程序中，并将其解析为一个名为 `superHeroes` 的变量，那么我们就可以使用在[JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章中相同的点/括号表示法来访问其中的数据。例如:
+例如，如果我们把字符串加载到 JavaScript 程序中，并将其解析为一个名为 `superHeroes` 的变量，那么我们就可以使用在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章中相同的点/括号表示法来访问其中的数据。例如：
 
 ```js
 superHeroes.hometown;
@@ -102,7 +102,7 @@ superHeroes["members"][1]["powers"][2];
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
+> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见 [源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
 
 ### JSON 数组
 
@@ -135,17 +135,17 @@ superHeroes["members"][1]["powers"][2];
 
 - JSON 是一种纯数据格式，它只包含属性，没有方法。
 - JSON 要求在字符串和属性名称周围使用双引号。单引号无效。
-- 甚至一个错位的逗号或分号就可以导致 JSON 文件出错。您应该小心的检查您想使用的数据 (虽然计算机生成的 JSON 很少出错，只要生成程序正常工作)。您可以通过像 [JSONLint](http://jsonlint.com/) 的应用程序来检验 JSON。
+- 甚至一个错位的逗号或分号就可以导致 JSON 文件出错。您应该小心的检查您想使用的数据（虽然计算机生成的 JSON 很少出错，只要生成程序正常工作）。您可以通过像 [JSONLint](http://jsonlint.com/) 的应用程序来检验 JSON。
 - JSON 可以将任何标准合法的 JSON 数据格式化保存，不只是数组和对象。比如，一个单一的字符串或者数字可以是合法的 JSON 对象。
 - 与 JavaScript 代码中对象属性可以不加引号不同，JSON 中只有带引号的字符串可以用作属性。
 
-## 主动学习 : 一个 JSON 示例
+## 主动学习：一个 JSON 示例
 
 好了，让我们通过运行这个示例来展示我们如何利用 JSON 数据。
 
 ### 开始吧
 
-首先，拷贝我们的 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) 和 [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) 文件。后者包含了用于页面的简单的 CSS，前者包含了简单的 HTML body，以及一个{{HTMLElement("script")}}元素，其中包含我们将在练习中编写的 JavaScript 代码：
+首先，拷贝我们的 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) 和 [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) 文件。后者包含了用于页面的简单的 CSS，前者包含了简单的 HTML body，以及一个 {{HTMLElement("script")}} 元素，其中包含我们将在练习中编写的 JavaScript 代码：
 
 ```html-nolint
 <header>
@@ -169,7 +169,7 @@ superHeroes["members"][1]["powers"][2];
 
 ### 顶层函数
 
-顶层函数 (top-level function) 的代码如下所示：
+顶层函数（top-level function）的代码如下所示：
 
 ```js
 async function populate() {
@@ -195,7 +195,7 @@ async function populate() {
 - 我们使用 {{domxref("fetch", "fetch()")}} 函数进行网络请求，它返回一个 {{domxref("Response")}} 对象
 - 我们使用 `Response` 对象的 {{domxref("Response/json", "json()")}} 函数将响应作为 JSON 获取。
 
-> **注意：** `fetch()` API 是**异步**的。我们将在[下一个模块](/zh-CN/docs/Learn/JavaScript/Asynchronous)中详细了解有关异步函数的知识，但现在我们只需知道需要在使用 fetch API 的函数名称之前添加关键字 {{jsxref("Statements/async_function", "async")}}，并在任何异步函数的调用之前添加关键字 {{jsxref("Operators/await", "await")}}。
+> **备注：**`fetch()` API 是**异步**的。我们将在 [下一个模块](/zh-CN/docs/Learn/JavaScript/Asynchronous) 中详细了解有关异步函数的知识，但现在我们只需知道需要在使用 fetch API 的函数名称之前添加关键字 {{jsxref("Statements/async_function", "async")}}，并在任何异步函数的调用之前添加关键字 {{jsxref("Operators/await", "await")}}。
 
 在这一切之后，`superHeroes` 变量将包含基于 JSON 的 JavaScript 对象。然后，我们将该对象传递给两个函数调用 —— 第一个函数用正确的数据填充 `<header>`，而第二个函数为团队中的每个英雄创建一个信息卡，并将其插入到 `<section>` 中。
 
@@ -269,9 +269,9 @@ function populateHeroes(obj) {
 5. 使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
 6. 最后一件事情是追加 `<h2>`, `<p>`, 还有 `<ul>` 进入 `<article>` (`myArticle`)。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
 
-> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
+> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
-> **备注：** 如果您对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
+> **备注：** 如果您对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在 您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章，了解关于点和括号表示法的更多信息。
 
 ## 调用顶层函数
 
@@ -287,10 +287,10 @@ populate();
 
 但是有时候我们没有那么幸运，我们接收到一些 字符串作为 JSON 数据，然后我们想要将它转换为对象。当我们想要发送 JSON 数据作为信息，我们将需要转换它为字符串，我们经常需要正确的转换数据，幸运的是，这两个问题在 web 环境中是那么普遍以至于浏览器拥有一个内建的 JSON，包含以下两个方法。
 
-- [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): 以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
-- [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 接收一个对象作为参数，返回一个对应的 JSON 字符串。
+- [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
+- [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收一个对象作为参数，返回一个对应的 JSON 字符串。
 
-您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作 (见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)) ，这做了一件与我们之前一模一样的事情，除了：
+您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作（见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)），这做了一件与我们之前一模一样的事情，除了：
 
 - 我们通过调用 {{domxref("Response/text", "text()")}} 方法将响应作为文本获取，而不是 JSON
 - 然后我们使用 `parse()` 将文本转换为 JavaScript 对象。
@@ -325,7 +325,7 @@ myString;
 
 ## 测验您的技能！
 
-您已经到达本文的末尾，但您是否记住了最重要的信息呢？在继续之前，您可以进行一些进一步的测试，以验证您是否记住了这些信息 — 请参阅 [测验您的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
+您已经到达本文的末尾，但您是否记住了最重要的信息呢？在继续之前，您可以进行一些进一步的测试，以验证您是否记住了这些信息 —— 请参阅 [测验您的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
 
 ## 总结
 
