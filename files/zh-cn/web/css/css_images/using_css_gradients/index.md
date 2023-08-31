@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_images/Using_CSS_gradients
 
 {{CSSRef}}
 
-**CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。您可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向 (由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。您还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。
+**CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。你可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向 (由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。你还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。
 
 渐变可以在任何使用 `<image>` 的地方使用，例如在背景中。由于渐变是动态生成的，因此它们可以消除对传统用于实现类似效果的栅格图像文件的需求。此外，由于渐变是由浏览器生成的，因此在放大时它们看起来比栅格图像更好，并且可以动态调整大小。
 
@@ -17,7 +17,7 @@ slug: Web/CSS/CSS_images/Using_CSS_gradients
 
 ### 基础线性渐变
 
-要创建最基本的渐变类型，您只需指定两种颜色即可。这些被称为色标。至少指定两个色标，也可以指定任意数量。
+要创建最基本的渐变类型，你只需指定两种颜色即可。这些被称为色标。至少指定两个色标，也可以指定任意数量。
 
 ```html hidden
 <div class="simple-linear"></div>
