@@ -269,7 +269,7 @@ function populateHeroes(obj) {
 5. 使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
 6. 最后一件事情是追加 `<h2>`, `<p>`, 还有 `<ul>` 进入 `<article>` (`myArticle`)。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
 
-> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
+> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
 > **备注：** 如果你对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在 你的编辑器中打开参考我们的 JS 代码将会有帮助。你还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章，了解关于点和括号表示法的更多信息。
 
