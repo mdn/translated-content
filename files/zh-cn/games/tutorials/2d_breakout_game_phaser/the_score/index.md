@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 11 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 11 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html)完成本课程后找到源代码。
 
 得分也可以使游戏更有趣 - 你可以尝试击败自己的高分，或者你的朋友。在这篇文章中，我们将为我们的游戏添加一个评分系统。
 
@@ -58,7 +58,7 @@ function ballHitBrick(ball, brick) {
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/n8o6rhrf/","","400")}}
 

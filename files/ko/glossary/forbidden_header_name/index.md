@@ -2,8 +2,10 @@
 title: 금지된 헤더 이름
 slug: Glossary/Forbidden_header_name
 l10n:
-  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 **금지된 헤더 이름**은 프로그래밍 방식으로 수정할 수 없는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)의 이름입니다. 정확히는 {{Glossary("Forbidden response header name", "금지된 응답 헤더 이름")}}과 대비되는 HTTP **요청** 헤더 이름입니다.
 
@@ -34,7 +36,7 @@ l10n:
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPHeader("Via")}}
 
-> **참고:** 위 목록에 없는 {{HTTPHeader("User-Agent")}} 헤더는 금지됐었으나 [명세](https://fetch.spec.whatwg.org/#terminology-headers)에 따라 이제 사용할 수 있습니다. 따라서 Fetch API [`Headers`](/ko/docs/Web/API/Headers) 객체나 `XMLHttpRequest`의 [`setRequestHeader()`](/ko/docs/Web/API/XMLHttpRequest/setRequestHeader) 메서드로 설정 가능합니다. 그러나 Chrome은 Fetch 요청에서 `User-Agent` 헤더를 조용하게 제거하고 있습니다. [Chromium bug 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722)를 참고하세요.
+> **참고:** 위 목록에 없는 {{HTTPHeader("User-Agent")}} 헤더는 금지됐었으나 [명세](https://fetch.spec.whatwg.org/#terminology-headers)에 따라 (금지된 헤더 이름 목록 참조(Firefox 43에서 구현됨))이제 사용할 수 있습니다. 따라서 Fetch API [`Headers`](/ko/docs/Web/API/Headers) 객체나 `XMLHttpRequest`의 [`setRequestHeader()`](/ko/docs/Web/API/XMLHttpRequest/setRequestHeader) 메서드로 설정 가능합니다. 그러나 Chrome은 Fetch 요청에서 `User-Agent` 헤더를 조용하게 제거하고 있습니다. [Chromium bug 571722](https://crbug.com/571722)를 참고하세요.
 
 ## 같이 보기
 
