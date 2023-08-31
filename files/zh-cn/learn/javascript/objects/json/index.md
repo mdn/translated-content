@@ -12,14 +12,13 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
     <tr>
       <th scope="row">前提：</th>
       <td>
-        计算机基础知识，HTML 和 CSS 基础 (see
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
-        >) 和 JS 面向对象基础 (see
-        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
-          >Introduction to objects</a
-        >)。
+        具备基本的计算机知识、对 HTML 和 CSS 的基本了解、熟悉 JavaScript
+        基础知识（阅读 <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+          >JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+          >创建代码块</a>）和 JS
+        面向对象基础（阅读<a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
+          >对象介绍</a
+        >）。
       </td>
     </tr>
     <tr>
@@ -29,9 +28,9 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
   </tbody>
 </table>
 
-## 什么是 JSON?
+## 什么是 JSON？
 
-{{glossary("JSON")}} 是一种按照 JavaScript 对象语法的数据格式，这是 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford) 推广的。虽然它是基于 JavaScript 语法，但它独立于 JavaScript，这也是为什么许多程序环境能够读取（解读）和生成 JSON。
+{{glossary("JSON")}} 是一种按照 JavaScript 对象语法的数据格式，这是[道格拉斯·克罗克福特](https://zh.wikipedia.org/wiki/道格拉斯·克羅克福特)推广的。虽然它是基于 JavaScript 语法，但它独立于 JavaScript，这也是为什么许多程序环境能够读取（解读）和生成 JSON。
 
 JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
 
@@ -98,9 +97,9 @@ superHeroes["members"][1]["powers"][2];
 
 1. 首先我们有变量名 `superHeroes`，储存对象。
 2. 在对象中我们想访问 `members` 属性，所以我们使用 `["members"]`。
-3. `members` 包含有对象数组，我们想要访问第二个元素，所以我们使用`[1]`。
+3. `members` 包含有对象数组，我们想要访问第二个元素，所以我们使用 `[1]`。
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
-5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
+5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用 `[2]`。
 
 > **备注：** 我们已经在 [JSONText.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
 
