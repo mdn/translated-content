@@ -3,7 +3,7 @@ title: FileSystemFileHandle：getFile() 方法
 slug: Web/API/FileSystemFileHandle/getFile
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 {{domxref("FileSystemFileHandle")}} 接口的 **`getFile()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('File')}} 对象，其表示磁盘上句柄所代表的条目的状态。
 
@@ -52,5 +52,5 @@ async function getTheFile() {
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_Access_API)
+- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
 - [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)

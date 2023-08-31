@@ -3,11 +3,11 @@ title: FileSystemFileHandle：createWritable() 方法
 slug: Web/API/FileSystemFileHandle/createWritable
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 {{domxref("FileSystemFileHandle")}} 接口的 **`createWritable()`** 方法用于创建一个 {{domxref('FileSystemWritableFileStream')}} 对象，可用于写入文件。此方法返回一个可兑现这些写入流的 {{jsxref('Promise')}} 对象。
 
-任何通过写入流造成的更改在写入流被关闭前都不会反映到文件句柄所代表的文件上。这通常是将数据写入到一个临时文件来实现的，然后只有在写入流被关闭后才会用临时文件替换掉文件句柄所代表的文件。
+任何通过写入流造成的更改在写入流被关闭前都不会反映到文件句柄所代表的文件上。这通常是将数据写入到一个临时文件来实现的，然后只有在写入文件流被关闭后才会用临时文件替换掉文件句柄所代表的文件。
 
 ## 语法
 
@@ -23,7 +23,7 @@ createWritable(options)
   - : 一个包含以下属性的对象：
 
     - `keepExistingData`
-      - : {{jsxref('Boolean', '布尔值')}}，默认为 `false`。当设为 `true` 时，如果文件存在，则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
+      - : {{jsxref('Boolean', '布尔值', '', 'nocode')}}，默认为 `false`。当设为 `true` 时，如果文件存在，则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
 
 ### 返回值
 
@@ -61,5 +61,5 @@ async function writeFile(fileHandle, contents) {
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_Access_API)
+- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
 - [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)

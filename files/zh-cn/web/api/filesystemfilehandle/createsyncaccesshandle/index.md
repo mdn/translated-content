@@ -3,7 +3,7 @@ title: FileSystemFileHandle：createSyncAccessHandle() 方法
 slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 {{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专用于操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 
@@ -64,5 +64,5 @@ onmessage = async (e) => {
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_Access_API)
+- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
 - [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)

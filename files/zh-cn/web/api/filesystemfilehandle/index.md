@@ -3,11 +3,11 @@ title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
-{{domxref("File System Access API", "File System Access API", "", "nocode")}} 的 **`FileSystemFileHandle`** 接口表示了一个指向文件系统条目的句柄。此接口通过 {{domxref('window.showOpenFilePicker()')}} 方法来访问。
+{{domxref("File System API", "File System API", "", "nocode")}} 的 **`FileSystemFileHandle`** 接口表示一个指向文件系统条目的句柄。可通过 {{domxref('window.showOpenFilePicker()')}} 方法来访问此接口。
 
-注意，读写操作所依赖的文件访问权限在刷新或关闭了页面并且页面所属的源没有其他标签页保持打开的情况下不会继续保有。{{domxref("FileSystemHandle")}} 接口的 {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} 方法可用来在访问文件前验证权限状态。
+注意，读写操作所依赖的文件访问权限在刷新或关闭页面并且页面所属的源没有其他标签页保持打开的情况下不会继续保有。{{domxref("FileSystemHandle")}} 接口的 {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} 方法可用于在访问文件前验证权限状态。
 
 {{InheritanceDiagram}}
 
@@ -112,7 +112,7 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被不合逻辑地指定为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
+> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地定义为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
 
 ## 规范
 
@@ -124,5 +124,5 @@ onmessage = async (e) => {
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_Access_API)
+- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
 - [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
