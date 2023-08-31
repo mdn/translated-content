@@ -216,7 +216,7 @@ function populateHeader(obj) {
 }
 ```
 
-这里我们首先使用 [`createElement()`](/zh-CN/docs/Web/API/Document/createElement) 创建一个 {{HTMLElement("Heading_Elements", "h1")}} 元素，然后将其 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 设置为对象的 `squadName` 属性，接着使用 [`appendChild()`](/zh-CN/docs/Web/API/Node/appendChild) 将其添加到页眉中。然后，我们使用类似的操作来创建一个段落：创建并设置其文本内容，再将其附加到页眉。唯一的区别在于，它的文本设置为一个包含对象的 `homeTown` 和 `formed` 属性的 [模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)。
+这里我们首先使用 [`createElement()`](/zh-CN/docs/Web/API/Document/createElement) 创建一个 {{HTMLElement("Heading_Elements", "h1")}} 元素，然后将其 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 设置为对象的 `squadName` 属性，接着使用 [`appendChild()`](/zh-CN/docs/Web/API/Node/appendChild) 将其添加到页眉中。然后，我们使用类似的操作来创建一个段落：创建并设置其文本内容，再将其附加到页眉。唯一的区别在于，它的文本设置为一个包含对象的 `homeTown` 和 `formed` 属性的[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)。
 
 ### 创建英雄信息卡片
 
