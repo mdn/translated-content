@@ -38,7 +38,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
 - [IndexedDB](/zh-CN/docs/IndexedDB)
   - : 将用户数据存储在他们自己的计算机或设备上。
 - [JavaScript](/zh-CN/docs/JavaScript)
-  - : 快速的网页编程语言为你的游戏编写代码。轻松移植你现有的游戏 [Emscripten](https://github.com/kripken/emscripten/wiki) 或 [Asm.js](http://asmjs.org/spec/latest/)
+  - : 快速的网页编程语言为你的游戏编写代码。轻松移植你现有的游戏 [Emscripten](https://github.com/kripken/emscripten/wiki) 或 [Asm.js](http://asmjs.org/spec/latest/)。
 - [Pointer Lock API](/zh-CN/docs/WebAPI/Pointer_Lock)
   - : 在游戏界面中锁定鼠标或其他指针设备。
 - [SVG](/zh-CN/docs/SVG) (Scalable Vector Graphics)
