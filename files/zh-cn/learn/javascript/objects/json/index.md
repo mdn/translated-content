@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Objects/JSON
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
-JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。您会经常遇到它，所以在本文中，我们向您提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
+JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。你会经常遇到它，所以在本文中，我们向你提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -24,7 +24,7 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>理解 JSON 的数据储存工作原理，创建您的 JSON 对象。</td>
+      <td>理解 JSON 的数据储存工作原理，创建你的 JSON 对象。</td>
     </tr>
   </tbody>
 </table>
@@ -42,6 +42,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 ### JSON 结构
 
 如上所述，JSON 是一个字符串，其格式非常类似于 JavaScript 对象字面量的格式。您可以在 JSON 中包含与标准 JavaScript 对象相同的基本数据类型 —— 字符串、数字、数组、布尔值和其他对象字面量。这使您可以构建一个数据层次结构，如下所示：
+
 
 ```json
 {
@@ -90,7 +91,7 @@ superHeroes.hometown;
 superHeroes["active"];
 ```
 
-为了访问层次结构中更深层次的数据，必须将所需的属性名和数组索引链接在一起。例如，要访问成员列表中第二个英雄的第三个超能力，可以这样做：
+为了访问层次结构中更深层次的数据，必须将所需的属性名和数组索引链接在一起。例如，访问 superHeroes 对象中的 members 数组对象的第二个元素的 powers 数组对象的第三个元素，可以这样做：
 
 ```js
 superHeroes["members"][1]["powers"][2];
@@ -129,7 +130,7 @@ superHeroes["members"][1]["powers"][2];
 ]
 ```
 
-上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
+上面是完全合法的 JSON。你只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
 
 ### 其他注意事项
 
@@ -312,7 +313,7 @@ async function populate() {
 }
 ```
 
-正如您所想，`stringify()` 做相反的事情。尝试将下面的代码输入您的浏览器 JS 控制台来看看会发生什么：
+正如你所想，`stringify()` 做相反的事情。尝试将下面的代码输入你的浏览器 JS 控制台来看看会发生什么：
 
 ```js
 let myObj = { name: "Chris", age: 38 };
@@ -329,7 +330,7 @@ myString;
 
 ## 总结
 
-在这个文章中，我们给了您一个简单的示例来在自己的程序中使用 JSON，包括创建和处理 JSON，还有如何访问 JSON 内的数据。在下一篇文章中我们将开始关注 JS 中的面向对象内容。
+在这个文章中，我们给了你一个简单的示例来在自己的程序中使用 JSON，包括创建和处理 JSON，还有如何访问 JSON 内的数据。在下一篇文章中我们将开始关注 JS 中的面向对象内容。
 
 ## 参见
 

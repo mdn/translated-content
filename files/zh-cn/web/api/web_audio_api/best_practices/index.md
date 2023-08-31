@@ -15,7 +15,7 @@ slug: Web/API/Web_Audio_API/Best_practices
 
 多媒体类 HTML 元素有开箱即用的媒体流支持。音频会在浏览器判断可以在播放完成之前加载文件的剩余部分时进行播放 (when the browser determines it can load the rest of the file before playing finishes.)。你可以在[Using the Web Audio API tutorial](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)这篇文档中看到一个把多媒体类 HTML 元素与 Web Audio API 结合使用的例子。
 
-如果你使用缓冲节点（buffer node）来加载音频，你将会有更多的控制权。虽然你需要请求这个文件，然后等待它加载完成 ([我们的这篇进阶文章中的这一节](/zh-CN/docs/Web/API/Web_Audio_API/Advanced_techniques#dial_up_—_loading_a_sound_sample)介绍了一个好办法)。但是，随后您可以直接访问数据，这意味着你能进行更精确，更精确的操作。
+如果你使用缓冲节点（buffer node）来加载音频，你将会有更多的控制权。虽然你需要请求这个文件，然后等待它加载完成 ([我们的这篇进阶文章中的这一节](/zh-CN/docs/Web/API/Web_Audio_API/Advanced_techniques#dial_up_—_loading_a_sound_sample)介绍了一个好办法)。但是，随后你可以直接访问数据，这意味着你能进行更精确，更精确的操作。
 
 对于来自用户的摄像头或麦克风的音频，你可以考虑通过[Media Stream API](/zh-CN/docs/Web/API/Media_Streams_API)和{{domxref("MediaStreamAudioSourceNode")}}接口来访问。这在与 WebRTC 协作以及你想录制或分析音频的场合下很管用。
 
