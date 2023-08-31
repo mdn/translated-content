@@ -262,7 +262,7 @@ function populateHeroes(obj) {
 
 接下来，我们使用一个循环来，遍历每个元素。对于每一个元素，我们：
 
-1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`, 和一个 `<ul>`。
+1. 创建几个元素：一个 `<article>`、一个 `<h2>`、三个 `<p>` 和一个 `<ul>`。
 2. 设置 `<h2>` 为当前英雄的 `name`。
 3. 使用他们的 `secretIdentity`、`age`，以及“Superpowers:”介绍信息列表来填充三个段落。
 4. 保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。
