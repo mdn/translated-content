@@ -28,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
     );
   } else {
     console.log(
-      "f 没有自有的名 为arguments 的属性。尝试获取 f.[[Prototype]].arguments"
+      "f 没有自有的名为 arguments 的属性。尝试获取 f.[[Prototype]].arguments"
     );
     console.log(
       Object.getOwnPropertyDescriptor(
@@ -43,7 +43,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 // arguments 是带有描述符的自有属性 {value: Arguments(0), writable: false, enumerable: false, configurable: false}
 
 // 在 Firefox 中：
-// f 没有自有的名 为arguments 的属性。尝试获取 f.[[Prototype]].arguments
+// f 没有自有的名为 arguments 的属性。尝试获取 f.[[Prototype]].arguments
 // Arguments { … }
 ```
 
