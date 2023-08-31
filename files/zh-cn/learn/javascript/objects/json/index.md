@@ -90,7 +90,7 @@ superHeroes.hometown;
 superHeroes["active"];
 ```
 
-为了访问层次结构中更深层次的数据，必须将所需的属性名和数组索引链接在一起。例如，访问 superHeroes 对象中的 members 数组对象的第二个元素的 powers 数组对象的第三个元素，可以这样做：
+为了访问层次结构中更深层次的数据，必须将所需的属性名和数组索引链接在一起。例如，访问 members 数组第二个英雄的第三个超能力，可以这样做：
 
 ```js
 superHeroes["members"][1]["powers"][2];
