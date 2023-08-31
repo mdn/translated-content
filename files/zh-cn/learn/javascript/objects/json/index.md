@@ -325,7 +325,7 @@ myString;
 
 ## 测试你的技能！
 
-你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息 —— 请参阅 [测验你的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
+你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[测试你的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
 
 ## 总结
 
