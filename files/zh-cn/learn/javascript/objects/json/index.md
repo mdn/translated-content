@@ -102,7 +102,7 @@ superHeroes["members"][1]["powers"][2];
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见 [源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
+> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
 
 ### JSON 数组
 
