@@ -271,7 +271,7 @@ function populateHeroes(obj) {
 
 > **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
-> **备注：** 如果你对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在 你的编辑器中打开参考我们的 JS 代码将会有帮助。你还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章，了解关于点和括号表示法的更多信息。
+> **备注：** 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
 
 ### 调用顶层函数
 
