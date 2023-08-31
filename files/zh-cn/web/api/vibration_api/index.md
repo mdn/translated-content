@@ -36,7 +36,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 停止振动
 
-当调用 [`window.navigator.vibrate()`](/zh-CN/docs/Web/API/window.navigator.vibrate) 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。
+当调用 {{DOMxRef("Navigator.vibrate()")}} 的参数为 `0`、空数组，或包含全 0 值的数组时会取消任何正在进行中的振动。
 
 ### 持续振动
 
