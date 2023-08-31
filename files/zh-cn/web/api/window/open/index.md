@@ -10,27 +10,25 @@ slug: Web/API/Window/open
 ## 语法
 
 ```js
-let windowObjectReference = window.open(strUrl, strWindowName, [
-  strWindowFeatures,
-]);
+open();
+open(url);
+open(url, target);
+open(url, target, windowFeatures);
 ```
-
-> **备注：** *strUrl === *要在新打开的窗口中加载的 URL。
->
-> *strWindowName === *新窗口的名称。
->
-> *strWindowFeatures === *一个可选参数，列出新窗口的特征 (大小，位置，滚动条等) 作为一个{{domxref("DOMString")}}。
 
 ## 参数与返回值
 
+- `strUrl` {{optional_inline}}
+  - : 新窗口需要载入的 url 地址。*strUrl*可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。
+- `strWindowName` {{optional_inline}}
+  - : 新窗口的名称。该字符串可以用来作为超链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 元素的目标属性值。字符串中不能含有空白字符。注意：_strWindowName_ 并不是新窗口的标题。
+- `strWindowFeatures` {{optional_inline}}
+  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#位置尺寸特征)。
+
+## 返回值
+
 - `WindowObjectReference`
   - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null`。如果父子窗口满足“[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)”，你可以通过这个引用访问新窗口的属性或方法。
-- `strUrl`
-  - : 新窗口需要载入的 url 地址。*strUrl*可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。
-- `strWindowName`
-  - : 新窗口的名称。该字符串可以用来作为超链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 元素的目标属性值。字符串中不能含有空白字符。注意：_strWindowName_ 并不是新窗口的标题。
-- `strWindowFeatures`
-  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#Position_and_size_features>)。
 
 ## 说明
 
@@ -54,7 +52,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.cnn.com/",
     "CNN_WindowName",
-    strWindowFeatures,
+    strWindowFeatures
   );
 }
 ```
@@ -66,7 +64,7 @@ const openRequestedPopup = () => {
   windowObjectReference = window.open(
     "https://www.domainname.ext/path/ImageFile.png",
     "DescriptiveWindowName",
-    "resizable,scrollbars,status",
+    "resizable,scrollbars,status"
   );
 };
 ```
@@ -365,7 +363,7 @@ In cases where `left` and `screenX` (and/or `top` and `screenY`) have conflictin
 windowObjectReference = window.open(
   "http://news.bbc.co.uk/",
   "BBCWorldNewsWindowName",
-  "left=100,screenX=200,resizable,scrollbars,status",
+  "left=100,screenX=200,resizable,scrollbars,status"
 );
 ```
 
@@ -377,7 +375,7 @@ outerWidth has precedence over width and width has precedence over innerWidth. o
 windowObjectReference = window.open(
   "http://www.wwf.org/",
   "WWildlifeOrgWindowName",
-  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status",
+  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status"
 );
 ```
 
