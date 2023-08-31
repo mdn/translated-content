@@ -323,9 +323,9 @@ myString;
 
 这儿我们创建了一个 JavaScript 对象，接着检查了它包含了什么，然后用 `stringify()` 将它转换成 JSON 字符串，最后保存返回值作为变量并再一次检查。
 
-## 测验您的技能！
+## 测验你的技能！
 
-您已经到达本文的末尾，但您是否记住了最重要的信息呢？在继续之前，您可以进行一些进一步的测试，以验证您是否记住了这些信息 —— 请参阅 [测验您的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
+你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息 —— 请参阅 [测验你的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
 
 ## 总结
 
