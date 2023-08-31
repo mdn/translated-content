@@ -102,7 +102,7 @@ superHeroes["members"][1]["powers"][2];
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
+> **备注：** 我们已经在 [JSONText.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
 
 ### JSON 数组
 
@@ -269,9 +269,9 @@ function populateHeroes(obj) {
 5. 使用另一个循环来遍历当前的英雄的超能力，对于每一个元素我们创建 `<li>` 元素，并放入超能力，然后使用 `appendChild()` 把 `listItem` 放入`<ul>` 元素（`myList`）中。
 6. 最后一件事情是将 `<h2>`、`<p>` 和 `<ul>` 追加到 `<article>`（`myArticle`）中。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为它们将被展示在 HTML 中。
 
-> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
+> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
-> **备注：** 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
+> **备注：** 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
 
 ### 调用顶层函数
 
@@ -290,7 +290,7 @@ populate();
 - [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
 - [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收一个对象作为参数，返回一个对应的 JSON 字符串。
 
-你可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作（见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)），这做了一件与我们之前一模一样的事情，除了：
+你可以看看我们 [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作（查看[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)），这做了一件与我们之前一模一样的事情，除了：
 
 - 我们通过调用 {{domxref("Response/text", "text()")}} 方法将响应作为文本获取，而不是 JSON
 - 然后我们使用 `parse()` 将文本转换为 JavaScript 对象。
