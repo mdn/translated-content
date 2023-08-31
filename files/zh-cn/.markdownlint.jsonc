@@ -66,9 +66,8 @@
       },
       {
         "name": "force-pronoun",
-        "message": "Don't use '您'",
+        "message": "Consider using '你' instead of '您'",
         "searchPattern": "/您/g",
-        "replace": "你",
         "searchScope": "text"
       }
     ]
