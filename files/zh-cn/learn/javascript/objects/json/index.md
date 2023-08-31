@@ -37,7 +37,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 
 > **备注：** 将字符串转换为原生对象称为*反序列化*（deserialization），而将原生对象转换为可以通过网络传输的字符串称为*序列化*（serialization）。
 
-一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`，还有 {{glossary("MIME type")}} 用于 `application/json`.
+一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`，还有 `application/json` {{glossary("MIME type", "MIME 类型")}}。
 
 ### JSON 结构
 
