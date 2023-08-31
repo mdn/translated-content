@@ -43,7 +43,6 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 
 如上所述，JSON 是一个字符串，其格式非常类似于 JavaScript 对象字面量的格式。您可以在 JSON 中包含与标准 JavaScript 对象相同的基本数据类型 —— 字符串、数字、数组、布尔值和其他对象字面量。这使您可以构建一个数据层次结构，如下所示：
 
-
 ```json
 {
   "squadName": "Super hero squad",
