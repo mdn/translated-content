@@ -9,7 +9,7 @@ slug: Web/API/Web_components/Using_templates_and_slots
 
 ## 关于模板 (Templates)
 
-当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。
+当你必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。
 
 让我们看一个简单的示例：
 
@@ -27,7 +27,7 @@ let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
 
-虽然是个简单的例子，但您已经可以开始了解它是多么的有用了。
+虽然是个简单的例子，但你已经可以开始了解它是多么的有用了。
 
 ## 在 Web Component 中使用模板
 
@@ -80,7 +80,7 @@ customElements.define(
 
 尽管到这一步已经挺好了，但是元素仍旧不是很灵活。我们只能在里面放一点文本，甚至没有普通的 p 标签管用！我们使用 {{htmlelement("slot")}} 让它能在单个实例中通过声明式的语法展示不同的文本。浏览器对这个功能的支持比{{htmlelement("template")}}少，在 Chrome 53, Opera 40, Safari 10，火狐 59 和 Edge 79 中支持。
 
-插槽由其`name`属性标识，并且允许您在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何 HTML 标记片段。
+插槽由其`name`属性标识，并且允许你在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何 HTML 标记片段。
 
 如果你想添加一个槽到我们的这个例子，我们会将模板的 p 标签改成下面这样：
 
@@ -90,7 +90,7 @@ customElements.define(
 
 如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持 slot 属性，则`<my-paragraph>`仅包含后备内容"My default text"。(译者注：此处的意思是使用\<my-paragraph>时内部不包裹任何内容时会显示 slot 定义好的默认值。具体使用可参考下面)
 
-要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有[`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot)属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是您喜欢的任何东西，例如：
+要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有[`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot)属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是你喜欢的任何东西，例如：
 
 ```html
 <my-paragraph>

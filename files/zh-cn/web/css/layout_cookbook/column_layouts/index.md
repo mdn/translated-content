@@ -36,7 +36,7 @@ You can control the gaps between columns with the {{cssxref("column-gap")}} prop
 在以下情况使用多列布局：
 
 - 你想要你的文本看起来想报纸那种排版布局。
-- 您有一组要分成列的小项目。
+- 你有一组要分成列的小项目。
 - 你不需要单独为指定的列写样式。
 
 ### A single row of items with equal heights — flexbox
@@ -64,7 +64,7 @@ Flexbox 还可以被用来创建 flex items 自动换行的布局，通过给 fl
 Use flexbox:
 
 - For single rows or columns of items. 设置一行或者一列中的 items
-- When you want to do alignment on the cross axis after laying out your items. 当你想在横轴上对齐您的 items
+- When you want to do alignment on the cross axis after laying out your items. 当你想在横轴上对齐你的 items
 - When you are happy for wrapped items to share out space along their line only and not line up with items in other lines.
 
 ### Lining items up in rows and columns — grid layout

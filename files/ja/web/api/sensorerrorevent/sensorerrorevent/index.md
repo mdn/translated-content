@@ -19,7 +19,7 @@ new SensorErrorEvent(type, options)
 
 - `type`
   - : イベントの名前を表す文字列です。
-      大文字と小文字は区別され、ブラウザーは常に `error` に設定します。
+    大文字と小文字は区別され、ブラウザーは常に `error` に設定します。
 - `options`
   - : _{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持ちうるオブジェクトです。
     - `error`

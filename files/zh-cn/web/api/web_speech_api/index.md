@@ -5,7 +5,7 @@ slug: Web/API/Web_Speech_API
 
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
-Web Speech API 使您能够将语音数据合并到 Web 应用程序中。Web Speech API 有两个部分：SpeechSynthesis 语音合成（文本到语音 TTS）和 SpeechRecognition 语音识别（异步语音识别）。
+Web Speech API 使你能够将语音数据合并到 Web 应用程序中。Web Speech API 有两个部分：SpeechSynthesis 语音合成（文本到语音 TTS）和 SpeechRecognition 语音识别（异步语音识别）。
 
 ## Web Speech 的概念及用法
 
