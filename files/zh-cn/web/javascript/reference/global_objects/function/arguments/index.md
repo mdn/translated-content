@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 
 如果函数没有正在进行的未完成的调用（即函数已被调用但尚未返回），`arguments` 属性的值通常为 {{jsxref("Operators/null", "null")}}。
 
-请注意，ECMAScript 规范只规定了 `Function.prototype` 具有一个初始的 `arguments` 访问器，对于任何 `get` 或 `set` 请求都无条件地抛出 {{jsxref("TypeError")}}（称为“毒丸访问器”），而且实现不允许改变此语义，除非是非严格的普通函数。`arguments` 属性的实际行为如果不是抛出错误，就是由实现定义的。例如，Chrome 将其定义为自有的数据属性，而 Firefox 和 Safari 将初始的毒丸 `Function.prototype.arguments` 访问器扩展为特殊处理非严格函数的 `this` 值。
+请注意，ECMAScript 规范只规定了 `Function.prototype` 具有一个初始的 `arguments` 访问器，对于任何 `get` 或 `set` 请求都无条件地抛出 {{jsxref("TypeError")}}（称为“毒丸访问器”），而且实现不允许改变此语义，除非是非严格的普通函数。`arguments` 属性的实际行为如果不是抛出错误，就是由实现定义的。例如，Chrome 将其定义为自有的数据属性，而 Firefox 和 Safari 将初始的毒丸访问器 `Function.prototype.arguments` 扩展为特殊处理非严格函数的 `this` 值。
 
 ```js
 (function f() {
