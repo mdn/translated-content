@@ -184,9 +184,9 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 在本文的开头，我解释了 Level1 flexbox 规范中当前包含的对齐相关属性也被包含在了 Box Alignment Level3 规范中，这意味着将来会很好地扩展这些属性和值。我们已经看到了这种情况的发生，比如：为 `align-content` 和`justify-content` 属性引入`space-evenly`值。
 
-Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 中包含的 `column-gap` 和`row-gap` 特性。这些属性包含在 Box Alignment 规范中意味着在将来我们也应该能够在 flex 布局中使用`column-gap`和`row-gap`，在 Firefox 63 中，您将在 flex 布局中找到第一个浏览器对 gap 属性的实现。
+Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 中包含的 `column-gap` 和`row-gap` 特性。这些属性包含在 Box Alignment 规范中意味着在将来我们也应该能够在 flex 布局中使用`column-gap`和`row-gap`，在 Firefox 63 中，你将在 flex 布局中找到第一个浏览器对 gap 属性的实现。
 
-在深入研究 flexbox 对齐时，我的建议是同时查看 Grid Layout 中的对齐方式。两种规范都使用 Box Alignment 规范中详细说明的对齐属性。您可以在 MDN 文章《[Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)》中查看使用网格时这些属性的行为，并且我还在《 [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)》中比较了这些规范中对齐的工作方式。
+在深入研究 flexbox 对齐时，我的建议是同时查看 Grid Layout 中的对齐方式。两种规范都使用 Box Alignment 规范中详细说明的对齐属性。你可以在 MDN 文章《[Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)》中查看使用网格时这些属性的行为，并且我还在《 [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)》中比较了这些规范中对齐的工作方式。
 
 ## 更多
 

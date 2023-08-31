@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_me
 
 {{CSSRef}}
 
-在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果您想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。
+在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果你想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。
 
 > **备注：** CSS 1 和 CSS 2 是一个单一的整体规范，其中所有 CSS 都定义在一个文档中。随着 CSS 成为一种功能更加丰富的语言，各个部分有不同的发展速度，如何维护一个庞大的规范就成了问题。因此现在的 CSS 是模块化的，不同的 CSS 模块有不同的规范，一起构成了现在的 CSS。这些模块之间相互关联，并且处于不同的开发阶段。
 
