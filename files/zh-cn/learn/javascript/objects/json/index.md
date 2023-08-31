@@ -41,7 +41,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 
 ### JSON 结构
 
-如上所述，JSON 是一个字符串，其格式非常类似于 JavaScript 对象字面量的格式。您可以在 JSON 中包含与标准 JavaScript 对象相同的基本数据类型 —— 字符串、数字、数组、布尔值和其他对象字面量。这使您可以构建一个数据层次结构，如下所示：
+如上所述，JSON 是一个字符串，其格式非常类似于 JavaScript 对象字面量的格式。你可以在 JSON 中包含与标准 JavaScript 对象相同的基本数据类型 —— 字符串、数字、数组、布尔值和其他对象字面量。这使你可以构建一个数据层次结构，如下所示：
 
 ```json
 {
@@ -102,7 +102,7 @@ superHeroes["members"][1]["powers"][2];
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见 [源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
+> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见 [源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
 
 ### JSON 数组
 
@@ -135,7 +135,7 @@ superHeroes["members"][1]["powers"][2];
 
 - JSON 是一种纯数据格式，它只包含属性，没有方法。
 - JSON 要求在字符串和属性名称周围使用双引号。单引号无效。
-- 甚至一个错位的逗号或分号就可以导致 JSON 文件出错。您应该小心的检查您想使用的数据（虽然计算机生成的 JSON 很少出错，只要生成程序正常工作）。您可以通过像 [JSONLint](http://jsonlint.com/) 的应用程序来检验 JSON。
+- 甚至一个错位的逗号或分号就可以导致 JSON 文件出错。你应该小心的检查你想使用的数据（虽然计算机生成的 JSON 很少出错，只要生成程序正常工作）。你可以通过像 [JSONLint](http://jsonlint.com/) 的应用程序来检验 JSON。
 - JSON 可以将任何标准合法的 JSON 数据格式化保存，不只是数组和对象。比如，一个单一的字符串或者数字可以是合法的 JSON 对象。
 - 与 JavaScript 代码中对象属性可以不加引号不同，JSON 中只有带引号的字符串可以用作属性。
 
@@ -271,7 +271,7 @@ function populateHeroes(obj) {
 
 > **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
-> **备注：** 如果您对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在 您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章，了解关于点和括号表示法的更多信息。
+> **备注：** 如果你对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在 你的编辑器中打开参考我们的 JS 代码将会有帮助。你还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章，了解关于点和括号表示法的更多信息。
 
 ## 调用顶层函数
 
@@ -323,9 +323,9 @@ myString;
 
 这儿我们创建了一个 JavaScript 对象，接着检查了它包含了什么，然后用 `stringify()` 将它转换成 JSON 字符串，最后保存返回值作为变量并再一次检查。
 
-## 测验您的技能！
+## 测验你的技能！
 
-您已经到达本文的末尾，但您是否记住了最重要的信息呢？在继续之前，您可以进行一些进一步的测试，以验证您是否记住了这些信息 —— 请参阅 [测验您的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
+你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息 —— 请参阅 [测验你的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
 
 ## 总结
 
