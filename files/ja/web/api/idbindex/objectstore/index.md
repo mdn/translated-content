@@ -2,7 +2,7 @@
 title: "IDBIndex: objectStore プロパティ"
 slug: Web/API/IDBIndex/objectStore
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: afbfde6079ae864d29fbe4947e0281988652c6f4
 ---
 
 {{ APIRef("IndexedDB") }}
