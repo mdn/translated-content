@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 9 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html)完成本课后，您可以找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 9 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html)完成本课后，你可以找到源代码。
 
 建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用 Phaser 还是比纯 JavaScript 更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。
 
@@ -34,7 +34,7 @@ function preload() {
 }
 ```
 
-您还需要[从 Github 抓取砖图像](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png)并将其保存在您的`/img`目录中。
+你还需要[从 Github 抓取砖图像](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png)并将其保存在你的`/img`目录中。
 
 ## 画砖
 
@@ -148,11 +148,11 @@ function initBricks() {
 }
 ```
 
-如果您现在重新加载`index.html`，您应该看到在屏幕上打印的砖块彼此相距甚远。
+如果你现在重新加载`index.html`，你应该看到在屏幕上打印的砖块彼此相距甚远。
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/cck2b9e8/","","400")}}
 
