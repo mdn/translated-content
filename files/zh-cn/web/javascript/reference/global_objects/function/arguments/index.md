@@ -24,17 +24,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
   if (Object.hasOwn(f, "arguments")) {
     console.log(
       "arguments 是带有描述符的自有属性",
-      Object.getOwnPropertyDescriptor(f, "arguments")
+      Object.getOwnPropertyDescriptor(f, "arguments"),
     );
   } else {
     console.log(
-      "f 没有自有的名为 arguments 的属性。尝试获取 f.[[Prototype]].arguments"
+      "f 没有自有的名为 arguments 的属性。尝试获取 f.[[Prototype]].arguments",
     );
     console.log(
       Object.getOwnPropertyDescriptor(
         Object.getPrototypeOf(f),
-        "arguments"
-      ).get.call(f)
+        "arguments",
+      ).get.call(f),
     );
   }
 })();
