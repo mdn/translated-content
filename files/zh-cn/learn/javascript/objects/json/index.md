@@ -106,7 +106,7 @@ superHeroes["members"][1]["powers"][2];
 
 ### JSON 数组
 
-前面我们提到，JSON 文本基本上看起来像字符串中的 JavaScript 对象。我们也可以将数组转换为 JSON。下面也是有效的 JSON，例如：
+前面我们提到，JSON 文本基本上看起来像字符串中的 JavaScript 对象。我们也可以将数组与 JSON 相互转换。下面也是有效的 JSON，例如：
 
 ```json
 [
