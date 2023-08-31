@@ -5,7 +5,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-如果您已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。
+如果你已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。
 
 > **备注：** 如果你不熟悉本文中提到到基础概念并且需要更多的解释，先阅读 [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts) 然后再回来。
 
@@ -81,7 +81,7 @@ fetch("simple.wasm")
 
 ### 在开发者工具查看 wasm
 
-在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击“xxx > wasm”。
+在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，你可以转到 Debugger Panel 然后单击“xxx > wasm”。
 
 ![](wasm-debug.png)
 
@@ -93,7 +93,7 @@ fetch("simple.wasm")
 
 然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的 —— 可能非常小的范围内。
 
-在 JavaScript 中，内存实例可以被认为是可调整大小的 ArrayBuffer，就像 ArrayBuffers 一样，一个 Web 应用程序可以创建许多独立的内存对象。您可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。
+在 JavaScript 中，内存实例可以被认为是可调整大小的 ArrayBuffer，就像 ArrayBuffers 一样，一个 Web 应用程序可以创建许多独立的内存对象。你可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。
 
 我们通过一个快速的例子来开始探索。
 

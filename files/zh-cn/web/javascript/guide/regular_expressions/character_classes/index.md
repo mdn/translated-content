@@ -119,7 +119,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>匹配退格键。如果您正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
+   <td>匹配退格键。如果你正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
   </tr>
   <tr>
    <td><code>\0</code></td>

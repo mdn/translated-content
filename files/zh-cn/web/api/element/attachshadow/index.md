@@ -71,8 +71,8 @@ var shadowroot = element.attachShadow(shadowRootInit);
 
 | 异常                             | 说明                                                                                                 |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `InvalidStateError 无效状态错误` | 您添加的元素已经是一个 shadow host（影子主机）.                                                      |
-| `NotSupportedError 不被支持错误` | 您应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
+| `InvalidStateError 无效状态错误` | 你添加的元素已经是一个 shadow host（影子主机）.                                                      |
+| `NotSupportedError 不被支持错误` | 你应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
 
 ## 示例
 
