@@ -63,6 +63,12 @@
         "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
         "replace": "](/",
         "searchScope": "text"
+      },
+      {
+        "name": "force-pronoun",
+        "message": "Don't use '您'",
+        "searchPattern": "/您/g",
+        "searchScope": "text"
       }
     ]
   }
