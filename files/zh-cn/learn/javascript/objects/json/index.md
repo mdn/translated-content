@@ -273,7 +273,7 @@ function populateHeroes(obj) {
 
 > **备注：** 如果你对访问 JSON 对象的 点/括号表示法 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在 你的编辑器中打开参考我们的 JS 代码将会有帮助。你还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 文章，了解关于点和括号表示法的更多信息。
 
-## 调用顶层函数
+### 调用顶层函数
 
 最后，我们需要调用顶层函数 `populate()`：
 
@@ -290,7 +290,7 @@ populate();
 - [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
 - [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收一个对象作为参数，返回一个对应的 JSON 字符串。
 
-您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作（见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)），这做了一件与我们之前一模一样的事情，除了：
+你可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作（见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)），这做了一件与我们之前一模一样的事情，除了：
 
 - 我们通过调用 {{domxref("Response/text", "text()")}} 方法将响应作为文本获取，而不是 JSON
 - 然后我们使用 `parse()` 将文本转换为 JavaScript 对象。
