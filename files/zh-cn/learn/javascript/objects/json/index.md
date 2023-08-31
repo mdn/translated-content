@@ -333,11 +333,10 @@ myString;
 
 ## 参见
 
-- [JSON object reference page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- [Fetch API overview](/zh-CN/docs/Web/API/Fetch_API)
-- [Using Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
-- [Using XMLHTTPRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
-- [Official JSON website with link to ECMA standard](https://json.org)
+- [JSON 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
+- [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
+- [JSON 官网（含 ECMA 标准链接）](https://www.json.org/json-zh.html)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
