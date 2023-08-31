@@ -46,7 +46,7 @@ getAllKeys(query, count)
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : この {{domxref("IDBObjectStore")}} のトランザクションが実行中でないとき投げられます。
 - `DataError` {{domxref("DOMException")}}
-  - : 与えられたキーまたはキー範囲が不正なキーを含むか `null` であるとき投げられます。
+  - : 与えられたキーまたはキー範囲が無効なキーを含むか `null` であるとき投げられます。
 - `InvalidStateError` {{domxref("DOMException")}}
   - : {{domxref("IDBObjectStore")}} が削除されたか取り除かれたとき投げられます。
 

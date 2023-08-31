@@ -39,7 +39,7 @@ getKey(key)
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : この {{domxref("IDBObjectStore")}} のトランザクションが実行中でないとき投げられます。
 - `DataError` {{domxref("DOMException")}}
-  - : 与えられたキーまたはキー範囲が不正なキーを含むとき投げられます。
+  - : 与えられたキーまたはキー範囲が無効なキーを含むとき投げられます。
 
 ## 例
 
