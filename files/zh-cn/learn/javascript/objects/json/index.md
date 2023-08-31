@@ -220,7 +220,7 @@ function populateHeader(obj) {
 
 ### 创建英雄信息卡片
 
-接下来，添加如下的函数到代码底部，这个函数创建和展示了`superhero cards`：
+接下来，添加如下的函数到代码底部，这个函数创建和展示了超级英雄的卡片：
 
 ```js
 function populateHeroes(obj) {
