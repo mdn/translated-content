@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/linear-gradient
 
 {{CSSRef}}
 
-**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) 创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
+**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
 
@@ -52,13 +52,13 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 ### 线性渐变的合成
 
-线性渐变是在一个轴——*渐变线*和两个或者更多个*色标*（color stop）构成的。轴上的每个点都是一个单独的颜色，要创建平滑的渐变，`linear-gradient()` 函数会绘制出一系列与渐变线垂直的彩色线，每条线都匹配与渐变线相交点的颜色。
+线性渐变是在一个轴——*渐变线*和两个或者更多个*色标*构成的。轴上的每个点都是一个单独的颜色，要创建平滑的渐变，`linear-gradient()` 函数会绘制出一系列与渐变线垂直的彩色线，每条线都匹配与渐变线相交点的颜色。
 
 ![linear-gradient.png](linear-gradient.png)
 
 渐变线由包含渐变图形的容器的中心点和一个角度来定义的。渐变线上的颜色值是由不同的点来定义，包括起始点、终点，以及两者之间的可选的中间点（中间点可以有多个）。
 
-*起始点*是渐变线上代表起始颜色值的点。*终点*是渐变线上代表最终颜色值的点。这两个点都是由渐变线和从最近的顶点发出的垂直线之间的交叉点定义的，然而从起始点的对称点来定义终点是更容易理解的一种方式，因为终点是起点关于容器的中心点的反射点。这一复杂的定义导致了一个有趣的效果，有时称为 _magic corners_：起点附近的点具有跟起点相同的颜色值，终点附近的点具有跟终点相同的颜色值。
+*起点*是渐变线上代表起始颜色值的点。*终点*是渐变线上代表最终颜色值的点。这两个点都是由渐变线和从最近的顶点发出的垂直线之间的交叉点定义的，然而从起点的对称点来定义终点是更容易理解的一种方式，因为终点是起点关于容器的中心点的反射点。这一复杂的定义导致了一个有趣的效果，有时称为 _magic corners_：起点附近的点具有跟起点相同的颜色值，终点附近的点具有跟终点相同的颜色值。
 
 #### 自定义渐变
 
@@ -75,7 +75,7 @@ linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
 linear-gradient(red 10%, 30%, blue 90%);
 ```
 
-如果两个或者多个色标位于同一个位置，那么过渡会在这个位置的第一个和最后一个颜色之间产生一条硬线。
+如果两个及以上色标位于同一个位置，那么过渡会在这个位置的第一个和最后一个颜色之间产生一条硬线。
 
 色标应该以递增的顺序列出。后面的更低值的色标会覆盖前面的值并创建硬过渡线。下面的渐变在 40% 处由红色变为黄色，然后在 25% 处由黄色变为蓝色：
 
@@ -181,4 +181,4 @@ body {
 - {{cssxref("image/image-set","image-set()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - [CSS 图像模块](/zh-CN/docs/Web/CSS/CSS_images)
-- MDN 博客中的文章[新函数、和 CSS 颜色中的色相（级别 4）](/en-US/blog/css-color-module-level-4/)（2023 年）
+- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](/en-US/blog/css-color-module-level-4/)（2023 年）
