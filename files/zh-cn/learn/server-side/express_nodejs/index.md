@@ -18,13 +18,13 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 ## 指南
 
 - [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-  - : 在这篇文章中，我们回答了“什么是 Node？”和“什么是 Express？”并为您概述了 Express web 框架的特殊之处。我们将介绍主要功能，并向您展示 Express 应用程序的一些主要构建模块（尽管此时您还没有可用于测试它的开发环境）。
+  - : 在这篇文章中，我们回答了“什么是 Node？”和“什么是 Express？”并为你概述了 Express web 框架的特殊之处。我们将介绍主要功能，并向你展示 Express 应用程序的一些主要构建模块（尽管此时你还没有可用于测试它的开发环境）。
 - [搭建 Node(Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-  - : 介绍了 Express 的所用之处后，我们将向您展示如何在不同操作系统下建立并验证 Node/Express 开发环境。无论您使用任何操作系统，这篇文章都可以完全指导如何开始构建 Express 应用。
+  - : 介绍了 Express 的所用之处后，我们将向你展示如何在不同操作系统下建立并验证 Node/Express 开发环境。无论你使用任何操作系统，这篇文章都可以完全指导如何开始构建 Express 应用。
 - [Express 教程——第一部分：本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
   - : 该实用教程系列中的第一篇文章，介绍了即将学习的内容，并概述了在后续文章中不断迭代的“本地图书馆”例子。
 - [Express 教程——第二部分：建立网站的骨架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-  - : 这篇文章将介绍如何建立一个网站项目的“骨架”，然后您可以继续添加自己的路由、模板/视图和数据库。
+  - : 这篇文章将介绍如何建立一个网站项目的“骨架”，然后你可以继续添加自己的路由、模板/视图和数据库。
 - [Express 教程——第三部分：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
   - : 这篇文章简单介绍了在 Node/Express 中如何使用数据库。本文中我们将会使用 Mongoose 为该项目（本地图书馆）提供数据访问，同时解释了如何定义对象模式、模型和基础和验证。本文也简单介绍了访问模型数据的一些主流方式。
 - [Express 教程——第四部分：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)

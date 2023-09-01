@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocales
 
 **`Intl.ListFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat-supportedlocalesof.html","shorter")}}
 
 ## 構文
 

@@ -79,7 +79,7 @@ slug: Learn/Getting_started_with_the_web/How_the_Web_works
 
 这叫做 {{Glossary("IP Address", "IP 地址")}}，它代表了一个互联网上独特的位置。然而，它并不容易记忆，不是吗？那就是域名系统（DNS）被发明的原因。它们是将你输入浏览器的地址（像 "mozilla.org"）与实际 IP 地址相匹配的特殊的服务器。
 
-网页可以通过 IP 地址直接访问。您可以通过在 [DNS 查询工具](https://www.nslookup.io/website-to-ip-lookup/) 等工具中输入域名来查找网站的 IP 地址。
+网页可以通过 IP 地址直接访问。你可以通过在 [DNS 查询工具](https://www.nslookup.io/website-to-ip-lookup/) 等工具中输入域名来查找网站的 IP 地址。
 
 ## 数据包详解
 
