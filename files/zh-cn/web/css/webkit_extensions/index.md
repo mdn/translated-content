@@ -154,7 +154,7 @@ slug: Web/CSS/WebKit_Extensions
 - {{CSSxRef("appearance", "-webkit-appearance")}}
 - {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
 
-## 曾经私有但是现在标准的属性
+## 已经成为标准属性的前专有属性
 
 > **备注：** 要尽可能地提高兼容性，你需要使用无前缀的标准属性，而不是下面列出的这些有前缀的。
 
@@ -318,7 +318,7 @@ slug: Web/CSS/WebKit_Extensions
 
 ## 在 Firefox 中带 `-webkit-` 前缀支持
 
-以下属性在 Firefox 中带 `-webkit-` 前缀支持。很多这些也不带前缀支持。参见上面的[曾经私有但是现在标准的属性](#曾经私有但是现在标准的属性)。
+以下属性在 Firefox 中带 `-webkit-` 前缀支持，其中许多也支持无前缀版本。参见上面的[已经成为标准属性的前专有属性](#已经成为标准属性的前专有属性)。
 
 > **备注：** 由于许多网站的旧版代码使用了以 -webkit- 为前缀的属性，Edge 和 Firefox 会将许多 -webkit- 为前缀的属性重定向到 -moz-、-ms- 和相应的没有前缀的等价属性上。
 
@@ -517,5 +517,5 @@ slug: Web/CSS/WebKit_Extensions
 
 ## 参见
 
-- [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
+- [在 WebKit Trac 上设计表单控件的样式](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
 - [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)

@@ -109,7 +109,7 @@ div {
 
 在使用角度的时候，`0deg` 代表渐变方向为从下到上，`90deg` 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。而负角度意味着逆时针方向。
 
-![Four boxes listing angle and showing associated gradient. 0deg starts and top and goes to bottom. 90deg starts at right and goes left. 180deg starts and bottom and goes to the top. -90deg starts at left and goes right.](linear_red_angles.png)
+![四个显示角度和相关渐变的盒子。0deg 从顶部到底部，90deg 从右到左，180deg 从底部到顶部，-90deg从左到右](linear_red_angles.png)
 
 ## 声明颜色和创建效果
 
@@ -140,7 +140,7 @@ div {
 
 ### 色标位置
 
-你不需要将你的色标设置在默认的位置。你可以为径向和线性渐变设置 0%、1% 或者 2% 或者绝对长度值来调整它们的位置。如果你将位置设置为百分数，`0%` 表示起始点，而 `100%` 表示终点，但是如果需要的话你也可以设置这个范围之外的其他值来达到你想要的效果。如果有些位置你没有明确设置，那么将会自动计算，第一个色标在 `0%` 处，最后一个色标在 `100%`，其他的色标则位于其相邻的两个色标中间。
+你不需要将你的色标设置在默认的位置。你可以为径向和线性渐变设置 0、1 或 2 个百分比值或者绝对长度值来调整它们的位置。如果你将位置设置为百分数，`0%` 表示起始点，而 `100%` 表示终点，但是如果需要的话你也可以设置这个范围之外的其他值来达到你想要的效果。如果有些位置你没有明确设置，那么将会自动计算，第一个色标在 `0%` 处，最后一个色标在 `100%`，其他的色标则位于其相邻的两个色标中间。
 
 ```html hidden
 <div class="multicolor-linear"></div>
@@ -367,7 +367,7 @@ div {
 
 ### 基本的径向渐变
 
-和线性渐变一样，你创建径向渐变所需要的就是两个颜色。默认情况下，渐变的中心点是 50% 50% 的位置，且渐变是椭圆的以匹配盒的比例。
+和线性渐变一样，创建径向渐变所需要的就是两个颜色。默认情况下，渐变的中心点是 50% 50% 的位置，且渐变是椭圆的以匹配盒的比例。
 
 ```html hidden
 <div class="simple-radial"></div>
@@ -465,7 +465,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('示例：椭圆最近一侧', 240, 100) }}
+{{ EmbedLiveSample('示例：椭圆渐变的 closet-side 值', 240, 100) }}
 
 #### 示例：椭圆渐变的 farthest-corner 值
 
@@ -494,7 +494,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('示例：椭圆最远一侧', 240, 100) }}
+{{ EmbedLiveSample('示例：椭圆渐变的 farthest-corner 值', 240, 100) }}
 
 #### 示例：圆形渐变的 closet-side 值
 
@@ -523,7 +523,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('示例：圆最近一侧', 240, 120) }}
+{{ EmbedLiveSample('示例：圆形渐变的 closet-side 值', 240, 120) }}
 
 #### 示例：椭圆形渐变长度或百分比
 
@@ -618,7 +618,7 @@ div {
 
 ## 使用锥形渐变
 
-**`conic-gradient()`** [CSS](/zh-CN/docs/Web/CSS) 函数创建包含颜色围绕中心点旋转（两颗不是从中心点辐射）产生的渐变的图像。锥形渐变的例子包括了饼图和{{glossary("color wheel", "色轮")}}，但是也可以用于创建棋盘格和其他有趣的效果。
+**`conic-gradient()`** [CSS](/zh-CN/docs/Web/CSS) 函数创建包含颜色围绕中心点旋转（而不是从中心点辐射）产生的渐变的图像。锥形渐变的例子包括了饼图和{{glossary("color wheel", "色轮")}}，但是也可以用于创建棋盘格和其他有趣的效果。
 
 锥形渐变的语法和径向渐变的语法类似，但是色标是围绕渐变弧（圆的圆周）进行的，而不是从渐变中心出现的渐变线上，并且色标是百分比或度数：绝对长度无效。
 
@@ -649,7 +649,7 @@ div {
 
 ### 设置锥形渐变的位置
 
-和锥形渐变类似，你可以使用关键词、百分比或者绝对长度，以及关键词“at”来设置锥形渐变的中心位置。
+和锥形渐变类似，你可以使用关键词、百分比或者绝对长度，以及关键字“at”来设置锥形渐变的中心位置。
 
 ```html hidden
 <div class="conic-gradient"></div>
@@ -701,7 +701,7 @@ div {
 
 ### 重复的线性渐变
 
-这个例子使用了 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 以创建一个沿着直线重复推进的渐变。随渐变进行，颜色会重复循环。在这个例子中，线的长度为 10px。
+这个例子使用了 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 以创建一个沿着直线重复推进的渐变。随渐变进行，颜色会重复循环。在这个例子中，渐变线的长度为 10px。
 
 ```html hidden
 <div class="repeating-linear"></div>

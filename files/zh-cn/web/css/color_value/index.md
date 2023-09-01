@@ -94,8 +94,6 @@ background-color: hsl(0deg 100% 50%);
 
 ## 插值
 
-在动画和[渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中， `<color>` 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 [alpha-premultiplied sRGBA color space](https://www.gimp.org/docs/plug-in/appendix-alpha.html) 中，以避免出现未预料的灰色。在动画中，插值速度由[时间函数](/zh-CN/docs/)决定。
-
 颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/gradient)、[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 和[动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)中。
 
 当对 `<color>` 值进行插值时，它们首先会转换成指定的颜色空间，然后颜色成分的[计算值](/zh-CN/docs/Web/CSS/computed_value)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值颜色空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
@@ -172,7 +170,7 @@ color(display-p3 0.7 0.5 none)
 
 ## 无障碍考虑
 
-一些人分辨颜色可能会存在困难。[WCAG 2.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 强烈建议不要将颜色作为传递特定消息、活动或结果的唯一方式。参见[颜色和颜色对比度](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#颜色对比度)以了解更多信息。
+一些人分辨颜色可能会存在困难。[WCAG 2.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 强烈建议不要将颜色作为传递特定消息、活动或结果的唯一方式。参见[颜色和颜色对比度](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)以了解更多信息。
 
 ## 形式语法
 
@@ -431,4 +429,4 @@ div:nth-child(6) {
 - {{CSSXref("&lt;hue&gt;")}}：表示一个颜色的色相角度的数据类型
 - {{CSSXref("color")}}、{{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("box-shadow")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-shadow")}}：使用 `<color>` 的常见属性
 - [使用 CSS 给元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
-- MDN blog（2023）中的[新函数、渐变、CSS 颜色中的色相（级别 4）](/en-US/blog/css-color-module-level-4/)
+- MDN blog（2023）中的 [CSS 颜色中的新功能、渐变和色调（级别 4）](/en-US/blog/css-color-module-level-4/)
