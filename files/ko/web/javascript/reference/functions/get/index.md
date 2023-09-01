@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Functions")}}
 
-**`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다. 이 구문은 [classes](/en-US/docs/Web/JavaScript/Reference/Classes)에서도 사용할 수 있습니다.
+**`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다. 이 구문은 [classes](/ko/docs/Web/JavaScript/Reference/Classes)에서도 사용할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/functions-getter.html")}}
 
@@ -25,7 +25,7 @@ l10n:
 ### 매개변수
 
 - `prop`
-  - : 지정된 함수에 바인딩할 속성의 이름입니다. [객체 초기자](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)의 다른 속성과 동일한 방식으로 문자열 리터럴, 숫자 리터럴 또는 식별자일 수 있습니다.
+  - : 지정된 함수에 바인딩할 속성의 이름입니다. [객체 초기자](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)의 다른 속성과 동일한 방식으로 문자열 리터럴, 숫자 리터럴 또는 식별자일 수 있습니다.
 - `expression`
   - : 속성 이름에 대한 표현식을 사용하여 지정된 함수에 바인딩할 수도 있습니다.
 
@@ -84,7 +84,7 @@ console.log(instance.msg); // "hello cake"
 
 접근자 속성은 클래스의 `속성`으로 정의되므로 클래스의 모든 인스턴스에서 공유됩니다. 객체 리터럴의 접근자 속성과 달리 클래스의 접근자 속성은 열거할 수 없습니다.
 
-Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) 페이지에 설명되어 있습니다.
+Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields) 페이지에 설명되어 있습니다.
 
 ### `delete` 연산자로 접근자 제거하기
 
@@ -221,12 +221,12 @@ console.log(
 
 ## 같이 보기
 
-- [객체로 작업하기](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
-- [함수](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [`설정자`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects)
+- [함수](/ko/docs/Web/JavaScript/Reference/Functions)
+- [`설정자`](/ko/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Object.defineProperty()")}}
-- [객체 초기자](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [객체 초기자](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 - {{jsxref("Statements/class", "class")}}
-- [속성 접근자](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - Jeff Walden (2010)의 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
 - Jeff Walden (2010)의 [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
