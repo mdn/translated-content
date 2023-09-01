@@ -9,19 +9,19 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 本文提供了一系列最佳实践，以帮助你确保你的 PWA 尽可能完善。
 
-## 适应所有浏览器
+## 适配所有浏览器
 
 你的 PWA 基于 Web 技术。这意味着除了可以安装在设备上之外，PWA 也可以在 Web 浏览器中运行。为了确保兼容性，非常重要的是在各种浏览器和操作系统上[测试你的应用](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 
-考虑到用户可能使用的各种浏览器，满足广泛的潜在用户需求。使用[功能检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)可以让你为最广泛的受众提供可用的体验。
+考虑到用户可能使用的各种浏览器，满足广泛的潜在用户需求。使用[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)可以让你为最广泛的受众提供可用的体验。
 
-功能检测还有助于实现{{Glossary("渐进增强")}}，这是一种设计理念，可以让尽可能多的用户获得出色的体验。
+功能检测还有助于实现{{Glossary("Progressive Enhancement", "渐进增强")}}，这是一种设计理念，可以让尽可能多的用户获得出色的体验。
 
-通过渐进增强，你首先专注于使用最简单的技术使应用的核心功能在所有浏览器上运行，然后对支持的设备增强体验。
+通过渐进增强，你首先专注于使用最简单的技术使应用的核心功能可以在所有浏览器上运行，然后增强支持的设备上的体验。
 
 例如，使用 HTML {{htmlelement("form")}} 元素处理表单提交意味着该表单将在所有浏览器上工作，包括不支持 JavaScript 的浏览器。然后，你可以通过添加客户端验证和基于 JavaScript 的提交处理来逐步增强表单，以在兼容设备上获得更好的体验。
 
-## 适应所有设备
+## 适配所有设备
 
 与在各种浏览器上测试你的应用程序的重要性类似，跨设备测试可确保你的应用对最广泛的用户群体都是可访问的。
 
@@ -29,7 +29,7 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 确保用户可以通过任何访问你的内容的方式与你的应用程序进行交互。支持键盘和鼠标，以及触摸或触控笔输入方法。确保所有应用程序功能都可以通过任何输入方式访问。
 
-最后，使用[语义化的 HTML 元素](/zh-CN/docs/Glossary/Semantics#semantics_in_html)而不是重新创建自己的按钮或表单元素，因为语义化的 HTML 元素可以直接支持所有用户输入方式。
+最后，使用[语义化的 HTML 元素](/zh-CN/docs/Glossary/Semantics#html_中的语义)而不是重新创建自己的按钮或表单元素，因为语义化的 HTML 元素可以直接支持所有用户输入方式。
 
 ## 提供离线体验
 
@@ -37,9 +37,9 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 ### 自定义离线页面
 
-至少，你的 PWA 应该提供一个自定义离线页面，告知用户他们处于离线状态，而不是显示通用的浏览器错误页面。自定义离线页面在不同的浏览器和设备上提供更一致的体验，并保持用户与你的应用程序保持互动。
+至少，你的 PWA 应该提供一个自定义离线页面，告知用户他们处于离线状态，而不是显示通用的浏览器错误页面。自定义离线页面在不同的浏览器和设备上提供更一致的体验，并保持用户与你的应用程序的互动。
 
-你可以通过使用 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 拦截网络请求，并在用户离线时响应并提供自定义离线页面。
+你可以通过使用 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 拦截网络请求，并在用户离线时响应并提供自定义离线页面。
 
 ### 离线操作
 
@@ -55,21 +55,21 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 能够通过唯一的 URL 引用任何资源是 Web 的最强大的特性之一。由于它们构建在 Web 技术上，PWA 可以并且应该利用这个特性。
 
-通过唯一的 URL 使应用程序的不同部分可用，允许用户收藏夹、直接导航和在应用程序中共享特定内容。它还允许搜索引擎索引你的应用程序内容，并通过 Web 搜索使其可发现。
+通过唯一的 URL 使应用程序的不同部分可用，允许用户收藏夹、直接导航和在应用程序中共享特定内容。它还允许搜索引擎索引你的应用程序内容，并使其可以通过 web 搜索被发现。
 
 ### 提供快速的体验
 
-用户对安装的应用程序和网站有不同的期望。用户预期网站在加载和导航上需要时间，特别是在网络连接较差的情况下。然而，他们期望安装的应用程序始终快速和响应。
+用户对安装的应用程序和网站有不同的期望。用户预期网站在加载和导航上需要时间，特别是在网络连接较差的情况下。然而，他们期望安装的应用程序始终快速并能够提供响应。
 
 应用程序加载和执行核心功能的速度在用户参与和留存方面起着关键作用。应用程序响应时间越长，用户放弃的可能性就越大。
 
-有工具、API 和最佳实践可帮助衡量和提高性能。了解更多信息，请参阅[网络性能](/zh-CN/docs/Web/Performance)。
+有工具、API 和最佳实践可帮助衡量和提高性能。了解更多信息，请参阅 [web 性能](/zh-CN/docs/Web/Performance)。
 
 ### 提供无障碍体验
 
-无障碍性对于确保每个人都可以使用你的应用程序至关重要，无论个人能力或其用于访问你的应用程序的设备如何。无障碍性确保尽可能多的人可以使用你的应用程序。无障碍性也是法律要求的。此外，无障碍性通常会为所有人（而不仅仅是那些有永久或临时残疾的人）带来更好的用户体验。
+无障碍对于确保每个人都可以使用你的应用程序至关重要，无论个人能力或其用于访问你的应用程序的设备如何。无障碍确保尽可能多的人可以使用你的应用程序。无障碍也是法律所要求的。此外，无障碍通常会为所有人（而不仅仅是那些有永久或临时残疾的人）带来更好的用户体验。
 
-了解如何在[无障碍性](/zh-CN/docs/Web/Accessibility)中使你的应用程序可访问。
+参见[无障碍](/zh-CN/docs/Web/Accessibility)文档，以了解如何使你的应用程序提供无障碍体验。
 
 ### 提供类似应用的体验
 
@@ -77,7 +77,7 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 用户期望安装的 PWA 与任何安装的特定平台应用程序一样运行。为了提供用户期望的类似应用的体验，你可以以以下方式将你的应用程序与操作系统集成：
 
-- 使用 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 向用户设备发送通知。
+- 使用[通知 API](/zh-CN/docs/Web/API/Notifications_API) 向用户设备发送通知。
 - 使用 [`file_handlers`](/zh-CN/docs/Web/Manifest/file_handlers) Web 应用清单成员处理文件。
 - 在应用图标上[显示标记（badge）](/zh-CN/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)。
 - 启用[应用程序之间的数据共享](/zh-CN/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)。
