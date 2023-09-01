@@ -5,7 +5,7 @@ slug: Games/Publishing_games/Game_distribution
 
 {{GamesSidebar}}
 
-你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
+你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript) 做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
 
 ## HTML5 相较于传统的好处
 
@@ -15,7 +15,7 @@ slug: Games/Publishing_games/Game_distribution
 
 HTML5 本身是多平台的，所以你只需要写一种代码就可以适配不同的平台。从小型的智能手机和平板电脑，到笔记本电脑和台式电脑，再到智能电视，智能手表甚至是智能冰箱（如果它内置现代化浏览器的话）。
 
-你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)和促进[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)。
+你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion) 和促进[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)。
 
 ### 即时更新
 
@@ -53,7 +53,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ### 发行商和门户网站
 
-顾名思义，开发商可以帮助你发行游戏，是否交给开发商则取决于你的游戏开发计划：你想在全平台发行么？或你只向[购买了游戏](/zh-CN/docs/Games/Publishing_games/Game_monetization)的用户开放游戏？这都取决于你，考虑各个选项，试验和结论。你可以在[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization/)这篇文章中得到更详细的关于发行商的解释。
+顾名思义，开发商可以帮助你发行游戏，是否交给开发商则取决于你的游戏开发计划：你想在全平台发行么？或你只向[购买了游戏](/zh-CN/docs/Games/Publishing_games/Game_monetization) 的用户开放游戏？这都取决于你，考虑各个选项，试验和结论。你可以在[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization/)这篇文章中得到更详细的关于发行商的解释。
 
 这里还有许多独立的门户网站收集 HTML5 游戏，例如 [HTML5Games.com](http://html5games.com/), [MarketJS.com](http://www.marketjs.com/), [Clay.io](http://clay.io/), or [Poki](https://developers.poki.com/) 你可以把你的游戏发布上去，它会得到一些自然的推广，因为这些网站吸引了大量的流量。一些网站会把你的文件放在他们的服务器上运营，而其他网站则只链接到你的网站或将你的游戏嵌入他们的网站，这样的曝光可能只是为你的游戏提供宣传，如果你的游戏旁边有广告 (或其他赚钱的选项)，它也可能为你的游戏提供收益化。
 
@@ -87,9 +87,9 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ### 电脑平台
 
-为了扩大你的受众，你也可以使用 HTML5 游戏去占据电脑游戏市场——只要记住那些已经占据了大部分市场份额的 AAA 级游戏，并仔细考虑这是否适合你的策略。要正确的在电脑端运行，你应该支持所有三种操作系统:Windows、Mac OS 和 Linux。最大的电脑游戏商店无疑是[Steam](http://steamcommunity.com/) — 独立开发者可以通过 [Greenlight](https://steamcommunity.com/greenlight/) 接触 steam. 请记住，你必须通过为不同的平台上传不同的版本来处理跨平台问题。
+为了扩大你的受众，你也可以使用 HTML5 游戏去占据电脑游戏市场——只要记住那些已经占据了大部分市场份额的 AAA 级游戏，并仔细考虑这是否适合你的策略。要正确的在电脑端运行，你应该支持所有三种操作系统:Windows、Mac OS 和 Linux。最大的电脑游戏商店无疑是 [Steam](http://steamcommunity.com/) — 独立开发者可以通过 [Greenlight](https://steamcommunity.com/greenlight/) 接触 steam. 请记住，你必须通过为不同的平台上传不同的版本来处理跨平台问题。
 
-在你入驻 Steam 之后，便会有许多类似于[Humble Bundle](http://www.humblebundle.com/)等项目的讨论，这些项目可以把最受欢迎的独立游戏能够呈现给更多人。不过，这更像是一个绝佳的促销机会，而不是一种赚大钱的方式，因为捆绑游戏的价格通常相当低。
+在你入驻 Steam 之后，便会有许多类似于 [Humble Bundle](http://www.humblebundle.com/)等项目的讨论，这些项目可以把最受欢迎的独立游戏能够呈现给更多人。不过，这更像是一个绝佳的促销机会，而不是一种赚大钱的方式，因为捆绑游戏的价格通常相当低。
 
 ## 打包游戏
 
@@ -101,7 +101,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 - [Phonegap](http://phonegap.com/) —基于 Cordova，这是为本地平台构建/打包 JavaScript 应用程序最流行的工具
 - [CocoonIO](http://cocoon.io/) — 为多个本地商店构建 HTML5 游戏的最流行的工具。它对画布上呈现的游戏有自己的性能优化，并支持许多游戏框架。
-- [Ejecta](http://impactjs.com/ejecta) — 一个专门用于为 iOS 打包使用[the ImpactJS](http://impactjs.com/)框架创建的游戏的工具，由 ImpactJS 作者构建。它提供了与 ImpactJS 的无缝集成，但只支持一个框架和应用程序商店。
+- [Ejecta](http://impactjs.com/ejecta) — 一个专门用于为 iOS 打包使用 [the ImpactJS](http://impactjs.com/)框架创建的游戏的工具，由 ImpactJS 作者构建。它提供了与 ImpactJS 的无缝集成，但只支持一个框架和应用程序商店。
 - [NW.js](http://nwjs.io/) — 这款游戏的前身是 Node-Webkit，它是开发适用于 Windows、Mac 和 Linux 的桌面游戏的首选。这些发行版与 WebKit 引擎打包在一起，可以在任何平台上提供呈现。
 
 其他替代工具包括：

@@ -5,7 +5,7 @@ slug: Learn/Forms/HTML5_input_types
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-在[前一篇文章](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)中我们学习了 {{htmlelement("input")}} 元素，涵盖了自 HTML 早期以来可用的 `type` 属性的原始值。现在我们来具体看一看较新的表单控件，包含一些新添加至 HTML 5 的 input 类型，以允许收集更多特定类型的数据。
+在[前一篇文章](/zh-CN/docs/Learn/Forms/Basic_native_form_controls) 中我们学习了 {{htmlelement("input")}} 元素，涵盖了自 HTML 早期以来可用的 `type` 属性的原始值。现在我们来具体看一看较新的表单控件，包含一些新添加至 HTML 5 的 input 类型，以允许收集更多特定类型的数据。
 
 <table>
   <tbody>
@@ -61,9 +61,9 @@ slug: Learn/Forms/HTML5_input_types
 
 正如你在上面看到的，`email` 与其他较新的 `input` 类型一样，提供了内置的*客户端*错误验证，在数据被发送到服务器之前由浏览器执行。它*是*引导用户准确填写表格的一个有用的辅助工具，可以节省时间：可以立即知道你的数据是否正确，而不需要等待服务器返回结果。
 
-但它*不应该*被认为是一种详尽的安全措施！你的应用程序始终应该在*服务器端*和客户端对任何表单提交的数据进行安全检查，因为客户端验证太容易被关闭了，所以恶意用户仍然可以很容易地将坏数据发送到你的服务器。请参阅[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)来了解*可能*会发生什么。实现服务端认证超出了本章的范围，但你应该熟稔于心。
+但它*不应该*被认为是一种详尽的安全措施！你的应用程序始终应该在*服务器端*和客户端对任何表单提交的数据进行安全检查，因为客户端验证太容易被关闭了，所以恶意用户仍然可以很容易地将坏数据发送到你的服务器。请参阅[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security) 来了解*可能*会发生什么。实现服务端认证超出了本章的范围，但你应该熟稔于心。
 
-注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网络的电子邮件地址。为了实现不同的验证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn/Forms/Form_validation)文章中进一步说明如何使用这些功能。
+注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网络的电子邮件地址。为了实现不同的验证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn/Forms/Form_validation) 文章中进一步说明如何使用这些功能。
 
 > **备注：** 如果输入的数据不是一个电子邮件地址，会匹配 {{cssxref(':invalid')}} 伪类，且 {{domxref('validityState.typeMismatch')}} 属性总会返回 `true`。
 
@@ -99,7 +99,7 @@ slug: Learn/Forms/HTML5_input_types
 
 由于世界各地的电话号码格式多种多样，这种类型的字段对用户输入的值没有任何限制（这意味着它可能包括字母等非数字值）。
 
-像之前提及的那样，[`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性也可以应用在这里来附加一些限制，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)文章中学到更多内容。
+像之前提及的那样，[`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性也可以应用在这里来附加一些限制，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation) 文章中学到更多内容。
 
 ## URL 字段
 

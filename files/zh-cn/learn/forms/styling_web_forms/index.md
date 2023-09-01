@@ -5,17 +5,17 @@ slug: Learn/Forms/Styling_web_forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
+在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets) 以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
 
 ## 为什么使用 CSS 美化表单组件这么困难？
 
-在 1995 年左右的 Web 早期，表单组件 (或控件) 在 [HTML 2 规范](http://www.ietf.org/rfc/rfc1866.txt)中被添加到 HTML。由于表单组件的复杂性，实现者选择依靠底层操作系统来管理和渲染它们。
+在 1995 年左右的 Web 早期，表单组件 (或控件) 在 [HTML 2 规范](http://www.ietf.org/rfc/rfc1866.txt) 中被添加到 HTML。由于表单组件的复杂性，实现者选择依靠底层操作系统来管理和渲染它们。
 
 若干年后，CSS 被创建出来了，那么技术上的必要性，就是使用原生组件来实现表单控制，这是因为风格的要求。在 CSS 的早期，表单样式控制不是优先事项。
 
 由于用户习惯于各自平台的视觉外观，浏览器厂商不愿意对表单控件样式进行调整;到目前为止，要重建所有控件以使它们可美化仍然是非常困难的。
 
-即使在今天，仍然没有一个浏览器完全实现了 CSS 2.1。然而，随着时间的推移，浏览器厂商已经改进了对表单元素的 CSS 支持，尽管可用性的声誉不好，但现在已经可以使用 CSS 来设计[HTML 表单](/zh-CN/docs/HTML/Forms)。
+即使在今天，仍然没有一个浏览器完全实现了 CSS 2.1。然而，随着时间的推移，浏览器厂商已经改进了对表单元素的 CSS 支持，尽管可用性的声誉不好，但现在已经可以使用 CSS 来设计 [HTML 表单](/zh-CN/docs/HTML/Forms)。
 
 ### 涉及到 CSS，并非所有组件都是平等的
 
@@ -38,13 +38,13 @@ slug: Learn/Forms/Styling_web_forms
 
 这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
 
-我们会在[如何构建自定义表单挂件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)一文中讲述如何处理更多特定的问题。
+我们会在[如何构建自定义表单挂件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets) 一文中讲述如何处理更多特定的问题。
 
 #### 丑陋的
 
 有些元素根本不能用应用 CSS 样式。这些包括：所有高级用户界面小部件，如范围，颜色或日期控件; 和所有下拉小部件，包括{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}和{{HTMLElement("datalist")}} 元素。文件选择器小部件也被称为不可样式化。新的{{HTMLElement("progress")}}和{{HTMLElement("meter")}} 元素也属于这个类别。
 
-所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 [How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)一文中探索如何实现这一点。
+所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 [How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets) 一文中探索如何实现这一点。
 
 ## 基本样式美化
 

@@ -5,7 +5,7 @@ slug: Learn/Forms/Basic_native_form_controls
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-在[上一篇文章](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
+在[上一篇文章](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form) 中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
 
 <table>
  <tbody>
@@ -27,7 +27,7 @@ slug: Learn/Forms/Basic_native_form_controls
 - 常见的输入（input）类型元素：{{HTMLelement('input/button', 'button')}}、{{HTMLelement('input/checkbox', 'checkbox')}}、{{HTMLelement('input/file', 'file')}}、{{HTMLelement('input/hidden', 'hidden')}}、{{HTMLelement('input/image', 'image')}}、{{HTMLelement('input/password', 'password')}}、{{HTMLelement('input/radio', 'radio')}}、{{HTMLelement('input/reset', 'reset')}}、{{HTMLelement('input/submit', 'submit')}} 和 {{HTMLelement('input/text', 'text')}}。
 - 所有表单部件共有的一些属性。
 
-> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
+> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input) 参考。
 
 ## 文本输入框
 
@@ -88,7 +88,7 @@ _以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上�
 
 如果你创建了这样一个元素，就需要设置它的 `name` 和 `value` 属性。元素的值可以通过 JavaScript 动态设置。`hidden` input 类型不应有关联的标签（`label` 元素）。
 
-HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
+HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types) 中介绍。
 
 ## 可选中项：复选框和单选按钮
 
@@ -249,11 +249,11 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-这是构建“热图”的一种非常方便的方式。如何发送和检索这些值在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
+这是构建“热图”的一种非常方便的方式。如何发送和检索这些值在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data) 文章中详细说明。
 
 ## 文件选择器
 
-HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
+HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data) 的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
 
 要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/Input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
 

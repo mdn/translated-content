@@ -23,7 +23,7 @@ slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 ## 从这里开始
 
-你可以在[这里](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension)下载基本的 HTML、CSS 和六张图片素材。
+你可以在[这里](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension) 下载基本的 HTML、CSS 和六张图片素材。
 
 将 HTML 文档和样式表文件保存到你自己计算机的目录中，并将图像添加到名为 `images` 的文件夹中，在浏览器中打开 `index.html` 文件应该会提供一个具有基本样式但没有布局的页面，该页面应该类似下面所示的图像。
 

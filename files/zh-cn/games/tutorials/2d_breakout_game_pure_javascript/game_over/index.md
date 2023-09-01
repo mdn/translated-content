@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)教程的第五章。你可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html)找到源代码。
+这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 教程的第五章。你可以在完成本课程后在这里 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 找到源代码。
 
 看球从墙上反弹，并能够移动球盘是很有趣的。但除此之外，游戏什么都不做，也没有任何进展或最终目标。从游戏的角度来看，我们需要一个 game over。失败的逻辑很简单。如果你的球拍错过了球，并且球到达屏幕的底部边缘，那么游戏就结束了。
 

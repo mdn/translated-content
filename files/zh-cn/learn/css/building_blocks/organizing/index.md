@@ -45,7 +45,7 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 如果你在和一个小组共同协作完成一个已有的项目，需要检查的第一件事是这一项目是否已经有了 CSS 的代码风格规范。小组的代码风格规范应当总是优先于的个人喜好。做事情很多时候没有对错之分，但是统一是很重要的。
 
-例如你可以看下[MDN 的 CSS 代码规范的示例。](/zh-CN/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS).
+例如你可以看下 [MDN 的 CSS 代码规范的示例。](/zh-CN/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS).
 
 ### 保持统一
 
@@ -221,7 +221,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 
 #### OOCSS
 
-你会遇到的大多数方式都有一部分归功于面向对象的 CSS（OOCSS）的概念，这是一种因[Nicole Sullivan 的努力](https://github.com/stubbornella/oocss/wiki)而流行的方式。OOCSS 的基本理念是将你的 CSS 分解成可复用的对象，于是你可以在你的站点上任何需要的地方使用。OOCSS 的标准示例是在[The Media Object](/zh-CN/docs/Web/CSS/Layout_cookbook/Media_objects)中所描述的排布。这一排布一方面让图片、视频或者其他元素保持固定尺寸，而另一方面也让其他内容可伸缩。这是我们在用于评论、列表等网站随处可见的排布。
+你会遇到的大多数方式都有一部分归功于面向对象的 CSS（OOCSS）的概念，这是一种因 [Nicole Sullivan 的努力](https://github.com/stubbornella/oocss/wiki) 而流行的方式。OOCSS 的基本理念是将你的 CSS 分解成可复用的对象，于是你可以在你的站点上任何需要的地方使用。OOCSS 的标准示例是在 [The Media Object](/zh-CN/docs/Web/CSS/Layout_cookbook/Media_objects) 中所描述的排布。这一排布一方面让图片、视频或者其他元素保持固定尺寸，而另一方面也让其他内容可伸缩。这是我们在用于评论、列表等网站随处可见的排布。
 
 如果你没有使用一种 OOCSS 的方法，你或许会创建一个用在这种排布所应用的不同地方的自定义 CSS，例如创建一个叫做`comment`的类，用于组件部分的一组规则，然后是叫做`list-item`的类，除了一些细小的区别外，它几乎和`comment`类完全相同。这两个组件之间的不同是列表项有一个底边，在评论里的图像有边框而列表项里面的图像没有。
 
@@ -295,7 +295,7 @@ Nicole Sullivan 在描述这种方式和推广上所做的工作导致，即使�
 
 #### BEM
 
-BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，一个块，例如一个按钮、菜单或者标志，就是独立的实体。一个元素就像一个列表项或者标题一样，被绑定到它所在的块。修饰字符是标记到一个块或者元素的标识，能够改变样式或者行为。你能认出使用 BEM 的代码，因为代码中在 CSS 的类里使用了多余的一个下划线和连字符。例如看看这个来自关于[BEM 命名常规](http://getbem.com/naming/)的页面里面的 HTML 所应用的类：
+BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，一个块，例如一个按钮、菜单或者标志，就是独立的实体。一个元素就像一个列表项或者标题一样，被绑定到它所在的块。修饰字符是标记到一个块或者元素的标识，能够改变样式或者行为。你能认出使用 BEM 的代码，因为代码中在 CSS 的类里使用了多余的一个下划线和连字符。例如看看这个来自关于 [BEM 命名常规](http://getbem.com/naming/)的页面里面的 HTML 所应用的类：
 
 ```html
 <form class="form form--theme-xmas form--simple">
@@ -308,11 +308,11 @@ BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，�
 
 BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他们的 CSS。你可能会在没有提及为何 CSS 如此布局的时候，遇到 BEM 语法的例子，甚至是在教程中
 
-阅读[BEM 101](https://css-tricks.com/bem-101/) 中关于 CSS Tricks 的段落以了解更多和这个系统相关的信息。
+阅读 [BEM 101](https://css-tricks.com/bem-101/) 中关于 CSS Tricks 的段落以了解更多和这个系统相关的信息。
 
 #### 其他常见体系
 
-应用中，有很多这样的体系。其他流行的方式包括 Jonathan Snook 创造的[Scalable and Modular Architecture for CSS (SMACSS)](http://smacss.com/)、Harry Roberts 的[ITCSS](https://itcss.io/)以及原本由 Yahoo! 创造的[Atomic CSS (ACSS)](https://acss.io/)。如果你遇到了使用这几种方式之一的项目，那么好处就是你可以搜索到许多文章和指导，帮你理解如何以同种方式写代码。
+应用中，有很多这样的体系。其他流行的方式包括 Jonathan Snook 创造的 [Scalable and Modular Architecture for CSS (SMACSS)](http://smacss.com/)、Harry Roberts 的 [ITCSS](https://itcss.io/)以及原本由 Yahoo! 创造的 [Atomic CSS (ACSS)](https://acss.io/)。如果你遇到了使用这几种方式之一的项目，那么好处就是你可以搜索到许多文章和指导，帮你理解如何以同种方式写代码。
 
 使用这样的体系的缺点是，它们会看起来过于复杂，尤其是对于小项目。
 
@@ -322,7 +322,7 @@ BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他�
 
 使用这些工具的任何一部分都需要你的开发环境能运行进行处理工作的脚本。许多代码编辑器能为你做这项工作，或者你也可以安装一个命令行工具来辅助工作。
 
-最为流行的预处理工具是[Sass](https://sass-lang.com/)，这里不是 Sass 的教程，所以我只会简要地解释一些 Sass 能做的事情，在组织的时候真的会帮到你，即使你没有用到 Sass 的任何其他的独特功能。
+最为流行的预处理工具是 [Sass](https://sass-lang.com/)，这里不是 Sass 的教程，所以我只会简要地解释一些 Sass 能做的事情，在组织的时候真的会帮到你，即使你没有用到 Sass 的任何其他的独特功能。
 
 #### 定义变量
 
@@ -350,20 +350,20 @@ $base-color: #c6538c;
 
 我在上面提到了，一种组织 CSS 的方式是将样式表分成小的样式表。在使用 Sass 时，你可以在另一个层次上理解，然后得到许多小样式表——甚至到了每个组件都有一个独立样式表的地步。使用 Sass 中的 include 功能，这些都可以被编译为一个、或者少数几个真正链接到你的网站的样式表。
 
-在[这篇博文](https://www.lauraleeflores.com/blog/how-to-organize-your-css-files)里面，你可以看下一个开发者是如何处理这个问题的。
+在[这篇博文](https://www.lauraleeflores.com/blog/how-to-organize-your-css-files) 里面，你可以看下一个开发者是如何处理这个问题的。
 
 > **备注：** 一个简单的尝试 Sass 的方式是使用 [CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
 
 #### 后处理以进行优化
 
-如果你对加入例如许多额外的注释和空格，增大你的样式表大小有所关心的话，那么后处理会通过在生产版本中略去任何不必要的东西的方式，优化 CSS。后处理解决方案中，通过这种方式实现的一个例子是[cssnano](https://cssnano.co/)。
+如果你对加入例如许多额外的注释和空格，增大你的样式表大小有所关心的话，那么后处理会通过在生产版本中略去任何不必要的东西的方式，优化 CSS。后处理解决方案中，通过这种方式实现的一个例子是 [cssnano](https://cssnano.co/)。
 
 ## 结语
 
 这是我们学习 CSS 的指导的最后一部分，正如你所见，你可以通过许多方式从这里继续对 CSS 的探索。
 
-欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)这节课。
+欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout) 这节课。
 
-你应该也有了探索[MDN CSS](/zh-CN/docs/Web/CSS)学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的[CSS Cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的排布，在诸如[Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)的一些更加专门的指导里阅读更多。.
+你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS Cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook) 来了解可用的排布，在诸如 [Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 的一些更加专门的指导里阅读更多。.
 
 {{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}

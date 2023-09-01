@@ -144,7 +144,7 @@ the last one.
 
 在旧时代，人们曾经使用 HTML 表格创建页面布局 - 使用不同的表格单元格来包含页眉，页脚，边栏，主要内容栏等。这不是一个好主意，因为屏幕阅读器可能会读出给人造成困惑的结果，特别是如果布局复杂，并且有许多嵌套表格的话。
 
-试试我们的例子[table-layout.html](http://mdn.github.io/learning-area/accessibility/html/table-layout.html)，它看起来像这样：
+试试我们的例子 [table-layout.html](http://mdn.github.io/learning-area/accessibility/html/table-layout.html)，它看起来像这样：
 
 ```html
 <table width="1200">
@@ -378,7 +378,7 @@ document.onkeydown = function (e) {
 </p>
 ```
 
-> **备注：** 你可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
+> **备注：** 你可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
 
 表单标签也很重要，可以让你了解你需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 

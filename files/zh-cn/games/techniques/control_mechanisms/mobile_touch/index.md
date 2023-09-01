@@ -9,7 +9,7 @@ slug: Games/Techniques/Control_mechanisms/Mobile_touch
 
 未来手游一定是 Web 的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端 H5 游戏中实现触摸控制，只要移动端支持触摸，你就可以尽情的玩。
 
-**说明**：游戏 [Captain Rogers: Battle at Andromeda](http://rogers2.enclavegames.com/demo/) 是基于[Phaser](http://phaser.io/) 和 Phaser-based 管理控制，但它也可以用纯 JavaScript 实现。使用 Phaser 的好处它提供了辅助变量和方法可以直接调用，有助于快速的开发游戏，这需要根据项目实际情况选择。
+**说明**：游戏 [Captain Rogers: Battle at Andromeda](http://rogers2.enclavegames.com/demo/) 是基于 [Phaser](http://phaser.io/) 和 Phaser-based 管理控制，但它也可以用纯 JavaScript 实现。使用 Phaser 的好处它提供了辅助变量和方法可以直接调用，有助于快速的开发游戏，这需要根据项目实际情况选择。
 
 ## 纯 JavaScript 方式实现
 
@@ -34,7 +34,7 @@ el.addEventListener("touchcancel", handleCancel);
 
 ### 纯 JavaScript 示例
 
-这个实现了移动端触摸的[little demo](https://github.com/end3r/JavaScript-Game-Controls/)代码已经放到了 GibHub 上，我们下载这个示例就可以实现在移动端屏幕上移动飞船。
+这个实现了移动端触摸的 [little demo](https://github.com/end3r/JavaScript-Game-Controls/)代码已经放到了 GibHub 上，我们下载这个示例就可以实现在移动端屏幕上移动飞船。
 
 我们将两种事件：`touchstart` 和`touchmove` 放到一个方法里处理。为什么呢？ `touchHandler` 方法定义的飞船位置变量适合下面两种情况下：当玩家触摸时，但不移动它（`touchstart`）和当手指在屏幕上开始移动（`touchmove`）：
 

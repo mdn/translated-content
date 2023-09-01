@@ -21,7 +21,7 @@ p {
 
 让我们来试一试！在文本编辑器中，将上述的三行 CSS 代码粘贴到一个新的文件中，将文件命名为 `style.css` 并保存到 `styles` 文件夹下。
 
-为了使代码发挥作用，我们仍然需要将上述 CSS 样式应用到你的 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
+为了使代码发挥作用，我们仍然需要将上述 CSS 样式应用到你的 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
 
 1. 打开 `index.html` 文件，然后将下面一行粘贴到文档头部（也就是 {{HTMLElement("head")}} 和 `</head>` 标签之间）。
 
@@ -31,7 +31,7 @@ p {
 
 2. 保存 `index.html` 并用浏览器将其打开。应该看到以下页面：
 
-![一个 Mozilla 徽标和一些段落，段落文字通过 css 设置为红色](website-screenshot-styled.png)如果段落文字变红，那么祝贺你，CSS 样式已经生效了。
+![一个 Mozilla 徽标和一些段落，段落文字通过 css 设置为红色](website-screenshot-styled.png) 如果段落文字变红，那么祝贺你，CSS 样式已经生效了。
 
 ### “CSS 规则集”详解
 
@@ -144,7 +144,7 @@ h1 {
 
 在探索了一些 CSS 基础后，我们来把更多规则和信息添加至 `style.css` 中，从而让示例更美观。
 
-1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)中保存的 [Google Font 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。并以 {{htmlelement("link")}} 元素的形式添加进 `index.html` 文档头部（ {{HTMLElement("head")}} 和 `</head>` 之间的任意位置）。代码如下：
+1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 中保存的 [Google Font 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。并以 {{htmlelement("link")}} 元素的形式添加进 `index.html` 文档头部（ {{HTMLElement("head")}} 和 `</head>` 之间的任意位置）。代码如下：
 
    ```html
    <link
@@ -295,7 +295,7 @@ img {
 
 （你可以[在这里](https://mdn.github.io/beginner-html-site-styled/)查看我们的版本。）
 
-若遇到问题，可以参考 GitHub 上的[完整示例代码](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)做对比。
+若遇到问题，可以参考 GitHub 上的[完整示例代码](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css) 做对比。
 
 本章介绍的 CSS 知识非常有限，更多内容请访问[学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)。
 

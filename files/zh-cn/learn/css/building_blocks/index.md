@@ -7,7 +7,7 @@ slug: Learn/CSS/Building_blocks
 
 这个模块承接[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)——即你对 (CSS) 语言和其语法已经足够熟悉、并且有了一些基本的使用经验，该是稍微深入点学习的时候了。这个模块着眼于级联和继承，所有可供使用的选择器类型，单位，尺寸，背景、边框样式，调试，等等等等。
 
-本文目标是，在你进一步了解 [为文本添加样式](/zh-CN/docs/Learn/CSS/为文本添加样式)和[CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)之前，为你提供一个助你写出合格 CSS 和理解所有基本理论的工具箱。
+本文目标是，在你进一步了解 [为文本添加样式](/zh-CN/docs/Learn/CSS/为文本添加样式)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout) 之前，为你提供一个助你写出合格 CSS 和理解所有基本理论的工具箱。
 
 ## 先决条件
 
@@ -15,8 +15,8 @@ slug: Learn/CSS/Building_blocks
 
 1. 使用计算机的基本知识，能够被动使用网络（也就是查看网页的内容）。
 2. 建立基本工作环境（详见[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），知道如何建立和管理文档（详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）。
-3. HTML 基础知识（参见[HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块）。
-4. CSS 基础知识（参见[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块）。
+3. HTML 基础知识（参见 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块）。
+4. CSS 基础知识（参见[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps) 模块）。
 
 > **备注：** 如果你此刻正使用一台电脑/笔记本/其他设备，而你无法创建自己的文件，那你可以在诸如 JSBin 或 Glitch 等网络编辑程序上尝试（多数）程序案例。
 

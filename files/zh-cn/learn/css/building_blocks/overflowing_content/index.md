@@ -75,7 +75,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-你也可以用{{cssxref("overflow-x")}}，以在 x 轴方向上滚动，尽管这不是处理长英文词的好办法！如果你真的需要在小盒子里面和长英文词打交道，那么你可能要了解一下{{cssxref("word-break")}}或者{{cssxref("overflow-wrap")}}属性。除此以外，一些[在 CSS 里面调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)这节课里面讨论过的方式可能会帮助你创建可以和有变化容量的内容相协调的盒子。
+你也可以用{{cssxref("overflow-x")}}，以在 x 轴方向上滚动，尽管这不是处理长英文词的好办法！如果你真的需要在小盒子里面和长英文词打交道，那么你可能要了解一下{{cssxref("word-break")}}或者{{cssxref("overflow-wrap")}}属性。除此以外，一些[在 CSS 里面调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) 这节课里面讨论过的方式可能会帮助你创建可以和有变化容量的内容相协调的盒子。
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 
@@ -95,7 +95,7 @@ CSS 中有所谓**块级排版上下文**（Block Formatting Context，BFC）**�
 
 ## 网页设计时不需要的溢出
 
-现代网页布局的方式（正如[CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout)模块中所介绍的那些）可以很好地处理溢出。我们不一定能预料到网页上会有多少内容，人们很好地设计它们，使得它们能与这种现状协调。但是在以往，开发者会更多地使用固定高度，尽力让毫无关联的盒子的底部对齐。这是很脆弱的，在旧时的应用里面，你偶尔会遇到一些盒子，它们的内容遮到了页面上的其他内容。如果你看到了，那么你现在应该知道，这就是溢出，理论上你应该能重新排布这些布局，使得它不必依赖于盒子尺寸的调整。
+现代网页布局的方式（正如 [CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout) 模块中所介绍的那些）可以很好地处理溢出。我们不一定能预料到网页上会有多少内容，人们很好地设计它们，使得它们能与这种现状协调。但是在以往，开发者会更多地使用固定高度，尽力让毫无关联的盒子的底部对齐。这是很脆弱的，在旧时的应用里面，你偶尔会遇到一些盒子，它们的内容遮到了页面上的其他内容。如果你看到了，那么你现在应该知道，这就是溢出，理论上你应该能重新排布这些布局，使得它不必依赖于盒子尺寸的调整。
 
 在开发网站的时候，你应该一直把溢出的问题挂在心头，你应该用或多或少的内容测试设计，增加文本的字号，确保你的 CSS 可以正常地协调。改变溢出属性的值，来隐藏内容或者增加滚动条，会是你仅仅在少数特别情况下需要的，例如在你确实需要一个可滚动盒子的时候。
 

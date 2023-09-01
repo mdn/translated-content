@@ -34,7 +34,7 @@ slug: Learn/CSS/Styling_text/Web_fonts
 
 ## 字体种类回顾
 
-正如我们在[基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)中所看到的那样，应用到你的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。你需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
+正如我们在[基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals) 中所看到的那样，应用到你的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。你需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
 
 ```css
 p {
@@ -86,10 +86,10 @@ html {
 通常有三种类型的网站可以获得字体：
 
 - 免费的字体经销商：这是一个可以下载免费字体的网站 (可能还有一些许可条件，比如对字体创建者的信赖)。比如： [Font Squirre](https://www.fontsquirrel.com/)，[dafont](http://www.dafont.com/) 和 [Everything Fonts](https://everythingfonts.com/)。
-- 收费的字体经销商：这是一个收费则字体可用的网站，例如[fonts.com](http://www.fonts.com/)或[myfonts.com](http://www.myfonts.com/)。你也可以直接从字体铸造厂中购买字体，例如[Linotype](https://www.linotype.com/)，[Monotype](http://www.monotype.com) 或 [Exljbris](http://www.exljbris.com/)。
+- 收费的字体经销商：这是一个收费则字体可用的网站，例如 [fonts.com](http://www.fonts.com/)或 [myfonts.com](http://www.myfonts.com/)。你也可以直接从字体铸造厂中购买字体，例如 [Linotype](https://www.linotype.com/)，[Monotype](http://www.monotype.com) 或 [Exljbris](http://www.exljbris.com/)。
 - 在线字体服务：这是一个存储和为你提供字体的网站，它使整个过程更容易。更多细节见[使用在线字体服务](#使用在线字体服务)。
 
-让我们找到一些字体！前往[Font Squirrel](https://www.fontsquirrel.com/) 并选择两种字体——一种用于标题的有趣的字体 (可能是一种不错的显示字体或无衬线字体)，和一种用于段落，稍微不那么华丽，更易于阅读的字体。当你找到每种字体时，按下下载按钮，并将该文件保存在与你先前保存的 HTML 和 CSS 文件相同的目录中。无论它们是 TTF(True Type Fonts)) 还是 OTF(Open Type 字体) 都不重要。
+让我们找到一些字体！前往 [Font Squirrel](https://www.fontsquirrel.com/) 并选择两种字体——一种用于标题的有趣的字体 (可能是一种不错的显示字体或无衬线字体)，和一种用于段落，稍微不那么华丽，更易于阅读的字体。当你找到每种字体时，按下下载按钮，并将该文件保存在与你先前保存的 HTML 和 CSS 文件相同的目录中。无论它们是 TTF(True Type Fonts)) 还是 OTF(Open Type 字体) 都不重要。
 
 在每种情况下，都要解压字体包 (Web 字体通常分布在包含字体文件和许可信息的 ZIP 文件中。) 你可能会在包中发现多个字体文件，一些字体是作为一个具有不同变体的家庭分布的，例如，瘦、中、粗体、斜体、斜体等等。对于这个例子，我们只是想让你自己考虑一个单一的字体文件。
 
@@ -135,7 +135,7 @@ html {
 
 ## 使用在线字体服务
 
-在线字体服务通常会为你存储和服务字体，这样你就不用担心写`@font-face`代码了，通常只需要在你的网站上插入一两行代码就可以让一切都运行。例子包括[Typekit](https://typekit.com/) 和[Cloud.typography](http://www.typography.com/cloud/welcome/)。大多数这些服务都是基于订阅的，除了[Google Fonts](https://www.google.com/fonts)，这是一个有用的免费服务，特别是对于快速的测试工作和编写演示。
+在线字体服务通常会为你存储和服务字体，这样你就不用担心写`@font-face`代码了，通常只需要在你的网站上插入一两行代码就可以让一切都运行。例子包括 [Typekit](https://typekit.com/) 和 [Cloud.typography](http://www.typography.com/cloud/welcome/)。大多数这些服务都是基于订阅的，除了 [Google Fonts](https://www.google.com/fonts)，这是一个有用的免费服务，特别是对于快速的测试工作和编写演示。
 
 大多数这些服务都很容易使用，所以我们不会详细地介绍它们。让我们快速浏览一下 Google Fonts，这样你就能明白它的意思了。再次的，使用`web-font-start.html` 和 `web-font-start.css` a 的副本作为你的开始。
 
@@ -146,7 +146,7 @@ html {
 5. 在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。
 6. 然后，你需要将 CSS 声明复制到你的 CSS 中，以便将自定义字体应用到你的 HTML。
 
-> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
+> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) 和 [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css) 找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
 
 ## 关于 @font-face 的更多细节
 
@@ -173,7 +173,7 @@ html {
 - `src`：这些行指定要导入到你的 CSS(`url`部分) 的字体文件的路径，以及每种字体文件的格式 (`format`部分)。后面的部分不是必要的，但是声明它是很有用的，因为它允许浏览器更快地找到可以使用的字体。可以列出多个声明，用逗号分隔——浏览器会搜索并使用它能找到的第一个——因此，最好是把新的、更好的格式比如 WOFF2 放在前面，把偏老的，不是那么好的格式像 TTF 这样的放在后面。唯一的例外是 EOT 字体——他们首先在旧版本的 IE 中修复了几个 bug，这样它就会尝试使用它找到的第一件东西，即使它不能真正使用字体。
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: 这些行指定字体的粗细，以及它是否斜体。如果你正在导入相同字体的多个粗细，你可以指定它们的粗细/样式，然后使用不同的{{cssxref("font-weight")}}/{{cssxref("font-style")}}来选择它们之间的不同值，而不必调用字体种类不同名称的所有不同成员。Roger Johansson 写的 [@font-face tip: define font-weight and font-style to keep your CSS simple](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) 更详细地说明了该做些什么。
 
-> **备注：** 你还可以为你的 web 字体指定特定的{{cssxref("font-variant")}} 和 {{cssxref("font-stretch")}} ) 值。在较新的浏览器中，你还可以指定一个{{cssxref("unicode-range")}}值，这是一个你需要使用什么 web 字体的特定范围的字符——在支持浏览器中，只有指定的字符才会被下载，省去了不必要的下载。Drew McLellan 写的[Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)在如何利用这个问题上提供了一些有用的建议。
+> **备注：** 你还可以为你的 web 字体指定特定的{{cssxref("font-variant")}} 和 {{cssxref("font-stretch")}} ) 值。在较新的浏览器中，你还可以指定一个{{cssxref("unicode-range")}}值，这是一个你需要使用什么 web 字体的特定范围的字符——在支持浏览器中，只有指定的字符才会被下载，省去了不必要的下载。Drew McLellan 写的 [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)在如何利用这个问题上提供了一些有用的建议。
 
 ## 总结
 

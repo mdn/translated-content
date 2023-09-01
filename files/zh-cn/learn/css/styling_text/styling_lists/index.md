@@ -92,7 +92,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-现在，如果你去到示例的展示页面，并使用[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)查看那些列表元素，你会注意到若干个默认的样式预设值：
+现在，如果你去到示例的展示页面，并使用[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 查看那些列表元素，你会注意到若干个默认的样式预设值：
 
 - {{htmlelement("ul")}} 和 {{htmlelement("ol")}} 元素含有 `16px`（`1em`）的顶部和底部 {{cssxref("margin")}} 和 `40px`（`2.5em`）的 {{cssxref("padding-left")}}。
 - 列表项（{{htmlelement("li")}} 元素）默认是没有设置间距的。
@@ -196,7 +196,7 @@ ul {
 }
 ```
 
-然而，这个属性在控制项目符号的位置，大小等方面是有限的。最好使用 {{cssxref("background")}} 系列属性，你将在[背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)文章中了解更多信息。在这里我们仅做一点尝试！
+然而，这个属性在控制项目符号的位置，大小等方面是有限的。最好使用 {{cssxref("background")}} 系列属性，你将在[背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) 文章中了解更多信息。在这里我们仅做一点尝试！
 
 在我们的示例中，我们的无序列表最终样式像这样（在之前所见的顶部）：
 
@@ -425,7 +425,7 @@ window.addEventListener("load", drawOutput);
 
 ## 总结
 
-一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——[为链接提供样式](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)的各种技巧。
+一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——[为链接提供样式](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links) 的各种技巧。
 
 ## 参见
 

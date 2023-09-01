@@ -5,7 +5,7 @@ slug: Games/Techniques/Async_scripts
 
 {{GamesSidebar}}
 
-每个中型或大型游戏都应编译[asm.js](/zh-CN/docs/Games/Tools/asm.js)代码作为异步脚本的一部分，以便浏览器能够最大限度地灵活地优化编译过程。在 Gecko 中，异步编译允许 JavaScript 引擎在游戏加载时缓存主线程的 asm.js，并缓存生成的机器代码，这样游戏就不需要在随后的加载中编译（从 Firefox 28 开始）。要查看差异，请切换`javascript.options.parallel_parsing` in `about:config`.
+每个中型或大型游戏都应编译 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 代码作为异步脚本的一部分，以便浏览器能够最大限度地灵活地优化编译过程。在 Gecko 中，异步编译允许 JavaScript 引擎在游戏加载时缓存主线程的 asm.js，并缓存生成的机器代码，这样游戏就不需要在随后的加载中编译（从 Firefox 28 开始）。要查看差异，请切换`javascript.options.parallel_parsing` in `about:config`.
 
 ## 异步执行
 
@@ -27,7 +27,7 @@ document.body.appendChild(script);
 
 ## 什么时候用 async 或者不用？
 
-两种常见的情况下是脚本是**非**异步的（由[HTML 规范](https://www.w3.org/TR/html5/scripting-1.html)定义）
+两种常见的情况下是脚本是**非**异步的（由 [HTML 规范](https://www.w3.org/TR/html5/scripting-1.html) 定义）
 
 ```js
 <script async>code();</script>

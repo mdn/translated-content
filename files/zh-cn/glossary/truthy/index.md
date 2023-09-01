@@ -29,7 +29,7 @@ if (-Infinity)
 
 ### 逻辑与运算 &&
 
-如果第一个对象为真值，则[逻辑与运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND)返回第二个操作数。
+如果第一个对象为真值，则[逻辑与运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND) 返回第二个操作数。
 
 ```js
 true && "dog"

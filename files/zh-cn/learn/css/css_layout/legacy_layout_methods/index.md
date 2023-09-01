@@ -43,7 +43,7 @@ slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 
 ## 两列布局
 
-让我们从最简单的实例开始——一个两列布局。你可以按照步骤在你的电脑上创建一个新的 `index.html`，先用一个[简单 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)填充它，然后在适当的位置填充下面的代码。在这节底部，你可以看到一个展示最终代码样貌的实时实例。
+让我们从最简单的实例开始——一个两列布局。你可以按照步骤在你的电脑上创建一个新的 `index.html`，先用一个[简单 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) 填充它，然后在适当的位置填充下面的代码。在这节底部，你可以看到一个展示最终代码样貌的实时实例。
 
 首先，我们需要在我们的栏中放入一些内容。把现在在 body 中的内容替换成下面的代码：
 
@@ -127,7 +127,7 @@ div:nth-of-type(2) {
 
 ## 创建简单的传统网格框架
 
-大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
+大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 这节课中学到的内容之上搭建更多的东西。
 
 最简单的一类网格创建是固定宽度的——我们只需要计算设计中总的宽度、列的数目、每一列和间隔的宽度。但是，如果我们决定设计的网格是可以根据浏览器宽度缩放的，我们则需要计算每一列和间距的所占的宽度的百分比。
 
@@ -137,7 +137,7 @@ div:nth-of-type(2) {
 
 让我们先来创建一个固定列宽度的网格系统吧。
 
-首先，把 [simple-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid.html)下载储存下来，其 body 中包含以下的标记：
+首先，把 [simple-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid.html) 下载储存下来，其 body 中包含以下的标记：
 
 ```html
 <div class="wrapper">
@@ -259,7 +259,7 @@ body {
 
 创建了这些类以后，我们可以在网格上布局不同宽度的列。试试保存并在你的浏览器上加载这个页面，来查看效果。
 
-> **备注：** 如果你在让上面的示例实现的时候正遇到麻烦，尝试将它和我们在 GitHub 上的[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)进行比较（再[看下实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
+> **备注：** 如果你在让上面的示例实现的时候正遇到麻烦，尝试将它和我们在 GitHub 上的[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) 进行比较（再[看下实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
 
 试试修改这些类，甚至添加、删除一些容器，来看看你能怎么改变这个布局。例如，你可以把第二行写成这样：
 
@@ -300,7 +300,7 @@ target / context = result
 
 #### 更新我们的网格
 
-创建一个之前例子网页的副本。然后开始这个章节，或者制作一个[simple-grid-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)代码的本地副本，以将其作为入手点。
+创建一个之前例子网页的副本。然后开始这个章节，或者制作一个 [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) 代码的本地副本，以将其作为入手点。
 
 更新第二个 CSS 规则（有着`.wrapper`选择器），像下面这样：
 
@@ -374,7 +374,7 @@ body {
 
 现在保存你的代码，从浏览器里加载它，尝试改变视口长度——你应该可以看到网格完美地适配了。
 
-> **备注：**如果你在让上面的示例实现的时候正遇到困难，试着把它和我们[GitHub 上的完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)比较（另[见实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
+> **备注：**如果你在让上面的示例实现的时候正遇到困难，试着把它和我们 [GitHub 上的完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) 比较（另[见实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
 
 ### 使用 calc() 函数的更简单计算
 
@@ -426,7 +426,7 @@ body {
 }
 ```
 
-> **备注：**你能在[fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html)里看到我们的完成版（另[见实时版](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
+> **备注：**你能在 [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) 里看到我们的完成版（另[见实时版](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
 
 > **备注：**如果你不能让这个正常工作，可能是你的浏览器不支持`calc()`函数，尽管各浏览器对它的支持相当好——远至 IE9 那样老。
 
@@ -442,7 +442,7 @@ body {
 }
 ```
 
-> **备注：** 如果你要用预处理工具，如[Sass](http://sass-lang.com/)，你可以建立一个简单的类（mixin）以插入那个值。
+> **备注：** 如果你要用预处理工具，如 [Sass](http://sass-lang.com/)，你可以建立一个简单的类（mixin）以插入那个值。
 
 ### 在我们的网格里启用偏移容器
 
@@ -450,7 +450,7 @@ body {
 
 让我们实际试试吧。
 
-从你以前的代码开始，或者把我们的[fluid-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)文件用作起始点。
+从你以前的代码开始，或者把我们的 [fluid-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) 文件用作起始点。
 
 我们在 CSS 上搞一个类，它会给一个容器元素来个一列宽度的偏移。将下面的内容加到你的 CSS 的底部：
 
@@ -482,7 +482,7 @@ body {
 
 > **备注：** 注意你需要别让横跨多列的列太多，给偏移留点空间！
 
-试着载入，刷新来查看区别，或者查看我们的[fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html)示例（另见[实时](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)示例）。完成的示例应该看起来像这样：
+试着载入，刷新来查看区别，或者查看我们的 [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) 示例（另见[实时](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) 示例）。完成的示例应该看起来像这样：
 
 ![](offset-grid-finished.png)
 
@@ -498,7 +498,7 @@ body {
 
 ## 弹性盒网格？
 
-如果你读了之前关于[flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
+如果你读了之前关于 [flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
 
 但是，弹性布局不是为网格布局而设的，把它当网格布局来用也有新的挑战。举个简单的例子，我们可以使用我们在上面使用过的同样的示例标记，用下面的 CSS 样式化`wrapper`、`row`和`col`类：
 
@@ -526,7 +526,7 @@ body {
 }
 ```
 
-你可以试着在你自己的示例里做这些替换，或者看下我们的[flexbox-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/flexbox-grid.html)示例代码（另见[实时版](http://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)）。
+你可以试着在你自己的示例里做这些替换，或者看下我们的 [flexbox-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/flexbox-grid.html) 示例代码（另见[实时版](http://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)）。
 
 这里，我们会把每行变成一个弹性容器。有了弹性盒为基础的网格，我们仍然需要行，以让我们的元素加起来能不超过 100%。我们将容器设为`display: flex`。
 
@@ -546,13 +546,13 @@ body {
 
 ## 第三方网格系统
 
-既然我们理解了我们的网格计算背后的数学了，我们现在该看看一些常用的第三方网格系统了。如果你在互联网上搜索“CSS 网格框架”的话，你会发现一个包含了可选项的庞大列表。流行的框架，例如[Bootstrap](http://getbootstrap.com/)和[Foundation](http://foundation.zurb.com/)，就包含了网格系统。此外还有独立的网格系统，不是用 CSS 开发的就是用预处理器开发的。
+既然我们理解了我们的网格计算背后的数学了，我们现在该看看一些常用的第三方网格系统了。如果你在互联网上搜索“CSS 网格框架”的话，你会发现一个包含了可选项的庞大列表。流行的框架，例如 [Bootstrap](http://getbootstrap.com/)和 [Foundation](http://foundation.zurb.com/)，就包含了网格系统。此外还有独立的网格系统，不是用 CSS 开发的就是用预处理器开发的。
 
 让我们看下这些独立系统其中的一个，它阐释了利用网格框架工作的常见技术。我们将要使用的网格是 Skeleton 的一部分，它是一种简单的 CSS 框架。
 
-访问[Skeleton 网站](http://getskeleton.com/)以开始，选择“Download”下载 ZIP 文件。解压文件，把 skeleton.css 和 normalize.css 复制到一个新路径下。
+访问 [Skeleton 网站](http://getskeleton.com/)以开始，选择“Download”下载 ZIP 文件。解压文件，把 skeleton.css 和 normalize.css 复制到一个新路径下。
 
-制作一个[html-skeleton.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton.html)文件的副本，在同 skeleton 和 normalize CSS 相同的路径下保存副本。
+制作一个 [html-skeleton.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton.html) 文件的副本，在同 skeleton 和 normalize CSS 相同的路径下保存副本。
 
 在 HTML 页面包含 skeleton 和 normalize CSS，通过把以下内容加到文件头部的方式：
 
@@ -637,7 +637,7 @@ Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能�
 
 试着保存你的 HTML，在你的浏览器里面载入，看下效果。
 
-> **备注：**如果你在实现这个示例的时候遇到麻烦，试着拿它和我们的[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html)文件进行比较（另见[实时运行版](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
+> **备注：**如果你在实现这个示例的时候遇到麻烦，试着拿它和我们的 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) 文件进行比较（另见[实时运行版](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
 
 如果你看下 skeleton.css 文件的内容，你能理解这是如何实现的。例如，Skeleton 有下面的定义内容，用于样式化加入了“three colomns”类的元素。
 

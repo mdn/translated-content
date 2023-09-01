@@ -27,7 +27,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 
 ## 开始之前
 
-在开始本测验之前，你需要在[这里](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip)获取包含组成这个例子的 ZIP 压缩文件。将它们解压到一个本地的新文件夹中。
+在开始本测验之前，你需要在[这里](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip) 获取包含组成这个例子的 ZIP 压缩文件。将它们解压到一个本地的新文件夹中。
 
 或者，你可以使用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 完成你的测验。你可以将 HTML、CSS 和 JavaScript 代码粘贴到这些在线编辑器之一。如果你使用的在线编辑器没有分开的 CSS/JS 面板，则可将它们放置在适当的 `<style>`、`<script>` 元素之下。
 

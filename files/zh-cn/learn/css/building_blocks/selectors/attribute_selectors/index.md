@@ -116,6 +116,6 @@ slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 
 ## 接下来……
 
-现在我们完成了属性选择器的学习，你可以继续读下篇文章——关于[伪类和伪元素选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)的事情。
+现在我们完成了属性选择器的学习，你可以继续读下篇文章——关于[伪类和伪元素选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements) 的事情。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

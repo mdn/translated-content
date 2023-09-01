@@ -104,7 +104,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 实践中，使用最小值和最大值对响应式设计有很多的用处，所以你会很少见到`width`或`height` 单独使用的情况。
 
-还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features)中找到一张完整的列表。
+还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features) 中找到一张完整的列表。
 
 #### 朝向
 
@@ -194,7 +194,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 现在有多得多的设备，以及多种多样的尺寸，让这种事变得不再可行。这也就是说，将所有的设计用在特定的尺寸上以外，一个更好的方法是在内容某种程度上开始变得混乱的时候，改变尺寸的设计。也许线太长了，或者盒子状的外侧栏开始挤在一起而难以阅读。那就是你想要使用媒体查询，将设计变得对剩余可用空间更加友好的时候。这种方式意味着，它无关使用的设备的确切大小，每个范围都被照顾到了。引入媒体查询的点就叫做**断点**。
 
-火狐开发者工具中的[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode)能很好地帮助弄清楚断点应该设置在哪里。你能容易就能让视口变大和变小，然后看下可以在哪里加入媒体查询、调整设计，从而改善内容。
+火狐开发者工具中的[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode) 能很好地帮助弄清楚断点应该设置在哪里。你能容易就能让视口变大和变小，然后看下可以在哪里加入媒体查询、调整设计，从而改善内容。
 
 ![A screenshot of a layout in a mobile view in Firefox DevTools.](rwd-mode.png)
 
@@ -309,7 +309,7 @@ article {
 
 在浏览器里[打开步骤一](https://mdn.github.io/css-examples/learn/media-queries/step1.html)，或者[查看源代码](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html)。
 
-**如果你想要在我们继续的时候，按步骤来并尝试这个示例，在你的电脑上建立一个[step1.html](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html)的本地副本。**
+**如果你想要在我们继续的时候，按步骤来并尝试这个示例，在你的电脑上建立一个 [step1.html](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html) 的本地副本。**
 
 从这里开始，脱拽响应式设计的窗口，让它变得变得更宽，直到你看到一行变得非常长，有足够空间把导航栏放在一个水平行里面。这是我们加入第一个媒体查询的地方。我们将会使用 em，因为这意味着，如果用户已经增加了文本的大小，断点会在行差不多也是这样长，但是视口更宽的时候产生；而文本更小的时候，视口也会更窄。
 

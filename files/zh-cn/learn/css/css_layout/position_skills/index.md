@@ -23,7 +23,7 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 作为一个额外的挑战，你能改变目标元素显示在文本下面吗？
 
-> **备注：** 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html)在本地编辑器或在线编辑器中编辑
+> **备注：** 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html) 在本地编辑器或在线编辑器中编辑
 
 ## 定位练习二
 
@@ -35,7 +35,7 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}
 
-> **备注：** 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html)在本地编辑器或在线编辑器中编辑
+> **备注：** 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html) 在本地编辑器或在线编辑器中编辑
 
 ## Assessment or further help
 

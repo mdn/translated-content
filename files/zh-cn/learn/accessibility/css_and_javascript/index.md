@@ -77,7 +77,7 @@ li {
 - 确保标题从正文文本中脱颖而出，通常像默认样式一样大而粗壮。你的列表应类似于列表。
 - 文本颜色应与背景颜色形成良好对比。
 
-有关详细信息，请参阅 [HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)和[设置文本样式](/zh-CN/docs/Learn/CSS/Styling_text)。
+有关详细信息，请参阅 [HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 和[设置文本样式](/zh-CN/docs/Learn/CSS/Styling_text)。
 
 #### 强调的文本
 
@@ -223,7 +223,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 
 现代 JavaScript 是一种功能强大的语言，如今我们可以使用它，从简单的内容和 UI 更新到成熟的 2D 和 3D 游戏。没有任何规则规定所有内容都必须对所有人 100% 无障碍——你只需尽力而为，并使你的应用尽可能无障碍。
 
-简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)一文中提到的，主要注意事项包括：
+简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML) 一文中提到的，主要注意事项包括：
 
 - 良好的语义：为正确的工作使用正确的元素。例如，确保你使用标题和段落，以及 {{htmlelement("button")}} 和 {{htmlelement("a")}} 元素
 - 确保内容以文本形式提供，要么直接作为文本内容、表单元素的良好文本标签，也可以确保[文本替代品](/zh-CN/docs/Learn/Accessibility/HTML#文本替代品)（例如图像的 alt 文本）。
@@ -247,7 +247,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 - 提供客户端表单验证，它快速提醒用户表单条目出现的问题，而无需等待服务器检查数据。如果表单不可用，则窗口仍然有效，但验证速度可能较慢。
 - 为 HTML5 `<video>` 提供自定义控件，这些控件仅供键盘用户访问，以及如果 JavaScript 不可用 (默认 `<video>` 浏览器控件在大多数浏览器中无法使用键盘访问)，就直接通过链接访问视频。
 
-例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见[form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
+例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见 [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
 
 这种表单验证并不引人注目——在 JavaScript 不可用的情况下，你仍然可以很好的使用表单，并且任何合理的表单实现都将激活服务器端验证，因为恶意用户很容易绕过客户端验证（例如，通过在浏览器中关闭 JavaScript）。客户端验证对于报告错误仍然非常有用——用户可以立即了解他们所犯的错误，而不必等待到服务器的往返和页面重新加载。这是一个明确的可用性优势。
 

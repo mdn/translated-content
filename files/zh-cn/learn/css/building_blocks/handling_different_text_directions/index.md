@@ -43,7 +43,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode)的三个值分别是：
+[`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode) 的三个值分别是：
 
 - `horizontal-tb`: 块流向从上至下。对应的文本方向是横向的。
 - `vertical-rl`: 块流向从右向左。对应的文本方向是纵向的。
@@ -121,7 +121,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 之类，我们同样使用逻辑边距值来保证在任何书写模式下边距的位置都是对的。
 
-> **备注：** [`float`](/zh-CN/docs/CSS/float)的逻辑值暂时只有 Firefox 和 Firefox for Android 支持，上面的例子可能无法生效。
+> **备注：** [`float`](/zh-CN/docs/CSS/float) 的逻辑值暂时只有 Firefox 和 Firefox for Android 支持，上面的例子可能无法生效。
 
 ### 应该使用物理属性还是逻辑属性呢？
 

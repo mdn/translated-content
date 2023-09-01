@@ -81,7 +81,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
+> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS) 里了解更多。
 
 ## 理解盒模型
 
@@ -97,7 +97,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **备注：** 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
+> **备注：** 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model) 里了解更多。
 
 ## 解决优先级问题
 
@@ -120,7 +120,7 @@ em {
 }
 ```
 
-正如你从[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)里面，我们讨论的关于优先级的经验中回忆起来的那样，类选择器比元素选择器有更高的优先级，因而这就是实际生效的值。开发工具可以帮忙找出这类问题，尤其是在有效的信息被淹没在一个巨大的样式表的某个角落的时候。
+正如你从[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) 里面，我们讨论的关于优先级的经验中回忆起来的那样，类选择器比元素选择器有更高的优先级，因而这就是实际生效的值。开发工具可以帮忙找出这类问题，尤其是在有效的信息被淹没在一个巨大的样式表的某个角落的时候。
 
 **检查有 `.special` 类的 `<em>` 元素，开发者工具会告诉你橘黄色是实际生效的颜色，还会将应用在 em 上的 `color` 属性划掉。你这样就能看到是类选择器覆盖了元素选择器了。**
 

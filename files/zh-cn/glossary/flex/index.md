@@ -9,7 +9,7 @@ slug: Glossary/Flex
 
 `flex` 属性是`flex-grow`, `flex-shrink` 和 `flex-basis` 属性的简写。
 
-此外，`<flex>` 可以作为[弹性长度](/zh-CN/docs/Web/CSS/flex_value)被引用在 CSS Grid（栅格）布局中。
+此外，`<flex>` 可以作为[弹性长度](/zh-CN/docs/Web/CSS/flex_value) 被引用在 CSS Grid（栅格）布局中。
 
 ## 了解更多
 

@@ -101,7 +101,7 @@ article p:first-child::first-line {
 
 ## 生成带有::before 和::after 的内容
 
-有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content)属性一同使用，使用 CSS 将内容插入到你的文档中中。
+有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content) 属性一同使用，使用 CSS 将内容插入到你的文档中中。
 
 你能用这些插入一个文本字符串，和在下面的实时示例里那样。试着改变{{cssxref("content")}}属性的文本值，看看输出是怎么改变的。你也能改变`::before`伪元素为`::after`，看到这段文本插入到了元素的末尾而不是开头。
 
@@ -135,11 +135,11 @@ article p:first-child::first-line {
 | {{ Cssxref(":checked") }}           | 匹配处于选中状态的单选或者复选框。                                                                                                                                                                        |
 | {{ Cssxref(":current") }}           | 匹配正在展示的元素，或者其上级元素。                                                                                                                                                                      |
 | {{ Cssxref(":default") }}           | 匹配一组相似的元素中默认的一个或者更多的 UI 元素。                                                                                                                                                        |
-| {{ Cssxref(":dir") }}               | 基于其方向性（HTML[`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir)属性或者 CSS[`direction`](/zh-CN/docs/Web/CSS/direction)属性的值）匹配一个元素。                                                     |
+| {{ Cssxref(":dir") }}               | 基于其方向性（HTML[`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性或者 CSS[`direction`](/zh-CN/docs/Web/CSS/direction) 属性的值）匹配一个元素。                                                     |
 | {{ Cssxref(":disabled") }}          | 匹配处于关闭状态的用户界面元素                                                                                                                                                                            |
 | {{ Cssxref(":empty") }}             | 匹配除了可能存在的空格外，没有子元素的元素。                                                                                                                                                              |
 | {{ Cssxref(":enabled") }}           | 匹配处于开启状态的用户界面元素。                                                                                                                                                                          |
-| {{ Cssxref(":first") }}             | 匹配[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)的第一页。                                                                                                                                             |
+| {{ Cssxref(":first") }}             | 匹配[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media) 的第一页。                                                                                                                                             |
 | {{ Cssxref(":first-child") }}       | 匹配兄弟元素中的第一个元素。                                                                                                                                                                              |
 | {{ Cssxref(":first-of-type") }}     | 匹配兄弟元素中第一个某种类型的元素。                                                                                                                                                                      |
 | {{ Cssxref(":focus") }}             | 当一个元素有焦点的时候匹配。                                                                                                                                                                              |
@@ -150,10 +150,10 @@ article p:first-child::first-line {
 | {{ Cssxref(":indeterminate") }}     | 匹配未定态值的 UI 元素，通常为[复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)。                                                                                                                     |
 | {{ Cssxref(":in-range") }}          | 用一个区间匹配元素，当值处于区间之内时匹配。                                                                                                                                                              |
 | {{ Cssxref(":invalid") }}           | 匹配诸如`<input>`的位于不可用状态的元素。                                                                                                                                                                 |
-| {{ Cssxref(":lang") }}              | 基于语言（HTML[lang](/zh-CN/docs/Web/HTML/Global_attributes/lang)属性的值）匹配元素。                                                                                                                     |
+| {{ Cssxref(":lang") }}              | 基于语言（HTML[lang](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性的值）匹配元素。                                                                                                                     |
 | {{ Cssxref(":last-child") }}        | 匹配兄弟元素中最末的那个元素。                                                                                                                                                                            |
 | {{ Cssxref(":last-of-type") }}      | 匹配兄弟元素中最后一个某种类型的元素。                                                                                                                                                                    |
-| {{ Cssxref(":left") }}              | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)中，匹配左手边的页。                                                                                                                                     |
+| {{ Cssxref(":left") }}              | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media) 中，匹配左手边的页。                                                                                                                                     |
 | {{ Cssxref(":link")}}               | 匹配未曾访问的链接。                                                                                                                                                                                      |
 | {{ Cssxref(":local-link")}}         | 匹配指向和当前文档同一网站页面的链接。                                                                                                                                                                    |
 | {{ Cssxref(":is", ":is()")}}        | 匹配传入的选择器列表中的任何选择器。                                                                                                                                                                      |
@@ -173,11 +173,11 @@ article p:first-child::first-line {
 | {{ Cssxref(":read-only") }}         | 匹配用户不可更改的元素。                                                                                                                                                                                  |
 | {{ Cssxref(":read-write") }}        | 匹配用户可更改的元素。                                                                                                                                                                                    |
 | {{ Cssxref(":required") }}          | 匹配必填的 form 元素。                                                                                                                                                                                    |
-| {{ Cssxref(":right") }}             | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)中，匹配右手边的页。                                                                                                                                     |
+| {{ Cssxref(":right") }}             | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media) 中，匹配右手边的页。                                                                                                                                     |
 | {{ Cssxref(":root") }}              | 匹配文档的根元素。                                                                                                                                                                                        |
 | {{ Cssxref(":scope") }}             | 匹配任何为参考点元素的的元素。                                                                                                                                                                            |
 | {{ Cssxref(":valid") }}             | 匹配诸如`<input>`元素的处于可用状态的元素。                                                                                                                                                               |
-| {{ Cssxref(":target") }}            | 匹配当前 URL 目标的元素（例如如果它有一个匹配当前[URL 分段](https://en.wikipedia.org/wiki/Fragment_identifier)的元素）。                                                                                  |
+| {{ Cssxref(":target") }}            | 匹配当前 URL 目标的元素（例如如果它有一个匹配当前 [URL 分段](https://en.wikipedia.org/wiki/Fragment_identifier) 的元素）。                                                                                  |
 | {{ Cssxref(":visited") }}           | 匹配已访问链接。                                                                                                                                                                                          |
 
 ### 伪元素

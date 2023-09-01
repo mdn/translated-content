@@ -26,7 +26,7 @@ slug: Learn/Front-end_web_developer
 
 你并不需要任何预备知识以开始这一章节，你仅需要一台可以运行现代浏览器并且联网的电脑和一颗好学之心。
 
-如果你不确定 Web 前端是否适合自己，或是想在开始一个更长、更完整的课程之前先对其有一个更通识的了解，可以先阅读 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)章节。
+如果你不确定 Web 前端是否适合自己，或是想在开始一个更长、更完整的课程之前先对其有一个更通识的了解，可以先阅读 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 章节。
 
 ## 获得帮助
 
@@ -80,7 +80,7 @@ slug: Learn/Front-end_web_developer
 
 #### 预备知识
 
-学习 CSS 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)再开始。
+学习 CSS 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 再开始。
 
 #### 我怎么知道自己是否可以继续往下学习了？
 
@@ -103,7 +103,7 @@ slug: Learn/Front-end_web_developer
 
 #### 预备知识
 
-学习 JavaScript 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)再开始。
+学习 JavaScript 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 再开始。
 
 #### 我怎么知道自己是否可以继续往下学习了？
 

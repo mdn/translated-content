@@ -33,7 +33,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 ## 概要
 
-如果你已经建立了一个简单的页面（参见 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)以获取示例），你会想将它放到某些 web 服务器上。在本文中，我们将讨论如何使用各类可用的方法（如 SFTP 客户端、Rsync 和 GitHub）来做到这一点。
+如果你已经建立了一个简单的页面（参见 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics) 以获取示例），你会想将它放到某些 web 服务器上。在本文中，我们将讨论如何使用各类可用的方法（如 SFTP 客户端、Rsync 和 GitHub）来做到这一点。
 
 ## SFTP
 
@@ -123,7 +123,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 ```
 
-- `-options` 破折号后根一个或多个字母，例如 `-v` 用于详细展示错误消息，而 `-b` 用于进行备份你可用在 [rsync 手册页](https://linux.die.net/man/1/rsync)中查看完整的列表（搜索“Options summary”）。
+- `-options` 破折号后根一个或多个字母，例如 `-v` 用于详细展示错误消息，而 `-b` 用于进行备份你可用在 [rsync 手册页](https://linux.die.net/man/1/rsync) 中查看完整的列表（搜索“Options summary”）。
 - `SOURCE` 是要从中复制文件的本地文件或目录的路径。
 - `user@` 是你要将文件复制到远程服务器上的用户的凭据。
 - `x.x.x.x` 是远程服务器的 IP 地址。
@@ -139,7 +139,7 @@ rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 ```
 
-你可以在[如何通过 Rsync Over SSH 来拷贝文件](https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh)中了解详细信息。
+你可以在[如何通过 Rsync Over SSH 来拷贝文件](https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh) 中了解详细信息。
 
 ### Rsync 图形工具
 
@@ -151,9 +151,9 @@ rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 
 GitHub 允许你通过 [GitHub pages](https://pages.github.com/)（gh-pages）发布网站。
 
-我们已经在我们的[web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南的[发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)中介绍了这一内容，所以我们不再重复。
+我们已经在我们的 [web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 指南的[发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website) 中介绍了这一内容，所以我们不再重复。
 
-但是，值得注意的是，你也可以在使用自定义域名的情况下，在 GitHub 上托管网站。请参阅[配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site)以获取详细的指南。
+但是，值得注意的是，你也可以在使用自定义域名的情况下，在 GitHub 上托管网站。请参阅[配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site) 以获取详细的指南。
 
 ## 其他上传文件的方法
 

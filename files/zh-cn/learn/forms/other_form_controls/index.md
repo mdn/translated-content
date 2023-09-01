@@ -72,7 +72,7 @@ slug: Learn/Forms/Other_form_controls
 - `horizontal`：只允许横向水平缩放行为。
 - `vertical`：只允许纵向竖直缩放行为。
 - `none`：不允许缩放行为。
-- `block` 和 `inline`：实验性的值，仅允许以 `block` 或 `inline` 方向缩放，如何变化取决于文字的方向，请参阅[处理不同文字方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)以了解更多内容。
+- `block` 和 `inline`：实验性的值，仅允许以 `block` 或 `inline` 方向缩放，如何变化取决于文字的方向，请参阅[处理不同文字方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) 以了解更多内容。
 
 多多调试 {{cssxref("resize")}} 参考页面顶部的例子，来看看它们是如何运行的。
 

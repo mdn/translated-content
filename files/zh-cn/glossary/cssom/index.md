@@ -11,7 +11,7 @@ CSSOM 与 DOM 一起构建**渲染树**，浏览器依次使用渲染树来布�
 
 ### CSSOM API
 
-[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)也是一组 API，允许从 JavaScript 操纵 CSS。它非常类似于 DOM，但应用于 CSS 而不是 HTML。它允许用户动态读取和修改 CSS 样式。
+[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) 也是一组 API，允许从 JavaScript 操纵 CSS。它非常类似于 DOM，但应用于 CSS 而不是 HTML。它允许用户动态读取和修改 CSS 样式。
 
 ## 查看更多
 

@@ -11,4 +11,4 @@ slug: Glossary/Engine
 
 ### 基本信息
 
-- 维基百科上的[JavaScript engine](https://zh.wikipedia.org/wiki/JavaScript_engine)
+- 维基百科上的 [JavaScript engine](https://zh.wikipedia.org/wiki/JavaScript_engine)

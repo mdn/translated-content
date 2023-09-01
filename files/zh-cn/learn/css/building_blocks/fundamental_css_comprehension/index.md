@@ -81,6 +81,6 @@ slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 
 ## 评估
 
-如果你将此评估作为有组织的课程的一部分，你应该能够将你的工作交给你的老师/导师进行打分。如果你是自学的，那么你可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
+如果你将此评估作为有组织的课程的一部分，你应该能够将你的工作交给你的老师/导师进行打分。如果你是自学的，那么你可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn) 的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}

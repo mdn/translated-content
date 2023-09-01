@@ -47,7 +47,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 > **备注：** 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。
 
-CSS 可以用于给文档添加样式 —— 比如改变标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)及[大小](/zh-CN/docs/Web/CSS/font-size)。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的[布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)。它甚至还可以用来做一些特效，比如[动画](/zh-CN/docs/Web/CSS/CSS_animations)。查看本段内容中所给出的特定案例。
+CSS 可以用于给文档添加样式 —— 比如改变标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value) 及[大小](/zh-CN/docs/Web/CSS/font-size)。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的[布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)。它甚至还可以用来做一些特效，比如[动画](/zh-CN/docs/Web/CSS/CSS_animations)。查看本段内容中所给出的特定案例。
 
 ## CSS 语法
 
@@ -83,7 +83,7 @@ p {
 
 你会发现你已经很快掌握了一些属性的值，但是属性可以接受的值远不止这些。在 MDN 上每个属性都有单独的页面，不论你是忘记了某个属性，还是想要知道一个属性还能接受什么其他的值，这些页面都可以帮助你。
 
-> **备注：** 在 MDN 上的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索“mdn _css-feature-name_”。例如，搜索“mdn color”和“mdn font-size”！
+> **备注：** 在 MDN 上的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference) 页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索“mdn _css-feature-name_”。例如，搜索“mdn color”和“mdn font-size”！
 
 ## CSS 模块
 
@@ -105,10 +105,10 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 ## 浏览器支持
 
-当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
+当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) 一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
 
 ## 下一步
 
-现在你对 CSS 已经有了一定的理解，接下来，通过 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)的学习，你将可以自己写一些 CSS 代码了。
+现在你对 CSS 已经有了一定的理解，接下来，通过 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started) 的学习，你将可以自己写一些 CSS 代码了。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

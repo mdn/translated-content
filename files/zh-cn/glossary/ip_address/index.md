@@ -13,4 +13,4 @@ _IP_ 代表*互联网协议*（Internet Protocol），是与地址相关的[协�
 
 ## 参见
 
-- 维基百科上的 [IP 地址](https://zh.wikipedia.org/wiki/IP_address)词条
+- 维基百科上的 [IP 地址](https://zh.wikipedia.org/wiki/IP_address) 词条

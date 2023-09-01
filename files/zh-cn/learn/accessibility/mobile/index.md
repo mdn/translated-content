@@ -179,7 +179,7 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 
 在我们的 CSS 和 JavaScript 无障碍文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[特定于鼠标的事件](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#鼠标特定事件)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
 
-举例来说，[点击](/zh-CN/docs/Web/API/Element/click_event)事件在无障碍方面是良好的——通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的 [simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) 示例（[查看实时示例](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）以理解我们的意思。
+举例来说，[点击](/zh-CN/docs/Web/API/Element/click_event) 事件在无障碍方面是良好的——通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的 [simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) 示例（[查看实时示例](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）以理解我们的意思。
 
 另一方面，像 [mousedown](/zh-CN/docs/Web/API/Element/mousedown_event) 和 [mouseup](/zh-CN/docs/Web/API/Element/mouseup_event) 这些特定的鼠标事件会产生一些问题——无法使用鼠标以外的控制设备调用这些事件处理器。
 
@@ -210,17 +210,17 @@ panel.ontouchend = stopMove;
 
 我们提供了一个简单的示例来展示如何使用鼠标和触摸事件——[multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html)（[查看实时示例](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）。
 
-> **备注：** 你可以看到一个功能完善的示例，展示如何在实现[游戏控制机制](/zh-CN/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
+> **备注：** 你可以看到一个功能完善的示例，展示如何在实现[游戏控制机制](/zh-CN/docs/Games/Techniques/Control_mechanisms) 中实现不同的控制机制。
 
 ## 响应式设计
 
-[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是根据屏幕大小和分辨率等因素动态更改你的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用且无障碍的。
+[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design) 是根据屏幕大小和分辨率等因素动态更改你的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用且无障碍的。
 
 特别是，移动端设备需要解决的最常见的问题是：
 
-- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来解决。
-- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)处理此问题。
-- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)以了解更多的细节）。
+- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来解决。
+- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 处理此问题。
+- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) 以了解更多的细节）。
 
 > **备注：** 我们不会在这里对响应式设计进行完整的讨论，因为它们在 MDN 其他地方都有涉及（参考上面的链接）。
 
@@ -230,7 +230,7 @@ panel.ontouchend = stopMove;
 
 #### 不禁用缩放
 
-使用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)可能会禁用缩放。要始终启用缩放，请在 {{htmlelement("head")}} 中将宽度设置为设备宽度：
+使用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag) 可能会禁用缩放。要始终启用缩放，请在 {{htmlelement("head")}} 中将宽度设置为设备宽度：
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />
@@ -250,14 +250,14 @@ panel.ontouchend = stopMove;
 
 在移动设备上，输入数据往往比在台式计算机上的同等体验更令用户恼火。使用桌面或笔记本电脑键盘输入文本到表单输入比触摸屏虚拟键盘或微小的移动物理键盘更方便。
 
-出于这个原因，值得尽量减少所需的输入量。例如，与其让用户每次使用常规文本输入来填写他们的工作标题，而是可以提供一个 {{htmlelement("select")}} 菜单，其中包含最常见的选项（这也有助于数据输入的一致性），并提供一个“其他”选项，显示一个文本字段来输入任何异常值。你可以在 [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html)中看到这个想法的一个简单示例（查看[常见任务实时示例](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
+出于这个原因，值得尽量减少所需的输入量。例如，与其让用户每次使用常规文本输入来填写他们的工作标题，而是可以提供一个 {{htmlelement("select")}} 菜单，其中包含最常见的选项（这也有助于数据输入的一致性），并提供一个“其他”选项，显示一个文本字段来输入任何异常值。你可以在 [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) 中看到这个想法的一个简单示例（查看[常见任务实时示例](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
 
 也值得考虑在移动平台上使用 HTML 格式输入类型（如日期），因为它们可以得到很好的处理。例如，Android 和 iOS 都会显示可用于设备体验的可用控件。有关示例，请参阅 [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html)（请查看 [HTML5 表单实时示例](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)）——尝试加载这些内容并在移动设备上对其进行操作。例如：
 
 - 在输入数字（`number`）、电话（`tel`）和邮件（`email`）时，展示合适的虚拟键盘来输入数字。
 - 在输入时间（`time`）和日期（`date`）时展示合适的选择器来选择时间和日期。
 
-如果你想为桌面端提供不同的解决方案，则可以使用特性检测为你的移动设备始终提供不同的标记。有关检测不同输入类型的原始信息，请参阅[输入类型](https://diveinto.html5doctor.com/detect.html#input-types)，还可以查看我们的[特性检测文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)获取更多信息。
+如果你想为桌面端提供不同的解决方案，则可以使用特性检测为你的移动设备始终提供不同的标记。有关检测不同输入类型的原始信息，请参阅[输入类型](https://diveinto.html5doctor.com/detect.html#input-types)，还可以查看我们的[特性检测文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) 获取更多信息。
 
 ## 总结
 

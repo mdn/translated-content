@@ -307,7 +307,7 @@ p {
 
 ### 字体大小
 
-在我们之前的模块中的[CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 文章，我们回顾了[length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size). 字体大小 (通过 {{cssxref("font-size")}} 属性设置) 可以取大多数这些单位的值 (以及其他，比如百分比 [percentages](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages))，然而你在调整字体大小时，最常用的单位是：
+在我们之前的模块中的 [CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 文章，我们回顾了 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size). 字体大小 (通过 {{cssxref("font-size")}} 属性设置) 可以取大多数这些单位的值 (以及其他，比如百分比 [percentages](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages))，然而你在调整字体大小时，最常用的单位是：
 
 - `px` (像素): 将像素的值赋予给你的文本。这是一个绝对单位，它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。
 - `em`: 1em 等于我们设计的当前元素的父元素上设置的字体大小 (更加具体的话，比如包含在父元素中的大写字母 M 的宽度) 如果你有大量设置了不同字体大小的嵌套元素，这可能会变得棘手，但它是可行的，如下图所示。为什么要使用这个麻烦的单位呢？当你习惯这样做时，那么就会变得很自然，你可以使用`em`调整任何东西的大小，不只是文本。你可以有一个单位全部都使用 em 的网站，这样维护起来会很简单。

@@ -5,7 +5,7 @@ slug: Learn/CSS/Building_blocks/Cascade_layers
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
-这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity)的基本概念之上。
+这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/Cascade) 和 [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity) 的基本概念之上。
 
 如果你是 CSS 的新手，刚开始可能会觉得这部分的内容与本课程的其他部分相比不太相关，而且有些学术化。然而，了解层叠层的基本知识对于你在项目中遇到它们时会非常有帮助。随着你对 CSS 的不断使用，理解层叠层以及如何充分利用它们的功能将能够避免在处理来自不同团队、插件和开发人员的 CSS 代码库时遇到的很多问题。
 
@@ -44,7 +44,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 2. **重要性**：根据规则是普通还是重要对规则进行排序。重要的样式是指设置了 [`!important`](/zh-CN/docs/Web/CSS/important) 标志的样式。
 3. **来源**：在两个按重要性划分的分组内，按作者、用户或用户代理这几个来源对规则进行排序。
 4. **层**：在六个按重要性和来源划分的分组内，按层叠层进行排序。普通声明的层顺序是从创建的第一个到最后一个，然后是未分层的普通样式。对于重要的样式，这个顺序是反转的，但保持未分层的重要样式优先权最低。
-5. **优先级**：对于来源层中优先权相同的竞争样式，按[优先级](/zh-CN/docs/Web/CSS/Specificity)对声明进行排序。
+5. **优先级**：对于来源层中优先权相同的竞争样式，按[优先级](/zh-CN/docs/Web/CSS/Specificity) 对声明进行排序。
 6. **出现顺序**：当两个来源层的优先权相同的选择器具有相同的优先级时，最后声明的具有最高优先级的选择器的属性值获胜。
 
 对于每一步，只有“仍在运行”的声明才会进入下一轮“竞争”。如果只有一个声明在运行，那么它就“赢了”，后续的步骤就没有意义了。
@@ -86,7 +86,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 类似于我们有六个基于来源和重要性的优先权级别，层叠层使我们能够在这些来源中创建子来源级别的优先权。
 
-在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
+在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/@layer) 非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
 
 在普通来源中，层按照创建的顺序排序。优先权顺序是从首个创建的层到最后一个层，然后是未分层的普通样式。
 
@@ -112,7 +112,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层叠层允许创建嵌套层。每个层叠层可以包含嵌套层。
 
-例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
+例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation) 来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
 
 嵌套层的能力非常适用于开发组件库、框架、第三方小部件和主题的任何人。
 
@@ -223,7 +223,7 @@ body {
 
 #### 层创建和媒体查询
 
-如果你使用[媒体](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)或[特性](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)查询来定义层，且媒体不匹配或特征不被支持，则不会创建该层。下面的示例展示了改变设备或浏览器的尺寸可能会改变层的顺序。在这个示例中，我们只在更宽的浏览器中创建 `site` 层。然后我们按顺序为 `page` 和 `site` 层分配样式。
+如果你使用[媒体](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries) 或[特性](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) 查询来定义层，且媒体不匹配或特征不被支持，则不会创建该层。下面的示例展示了改变设备或浏览器的尺寸可能会改变层的顺序。在这个示例中，我们只在更宽的浏览器中创建 `site` 层。然后我们按顺序为 `page` 和 `site` 层分配样式。
 
 {{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
 
@@ -250,7 +250,7 @@ body {
 @import url(sm-icons.css) layer(social);
 ```
 
-你可以使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)和[特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)根据特定条件导入样式并创建层。以下将样式表导入到 `international` 层，但前提是浏览器支持 `display: ruby`，而且被导入的文件取决于屏幕的宽度。
+你可以使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries) 和[特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) 根据特定条件导入样式并创建层。以下将样式表导入到 `international` 层，但前提是浏览器支持 `display: ruby`，而且被导入的文件取决于屏幕的宽度。
 
 ```css
 @import url("ruby-narrow.css") layer(international) supports(display: ruby) and
@@ -333,7 +333,7 @@ body {
 
 接下来是在层外声明的任何样式。`C.css` 中的样式没有导入到层中，并将覆盖任何来自 `firstLayer` 和 `secondLayer` 的冲突样式。在层外声明的普通样式总是比层内的普通样式具有更高的优先权。
 
-内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
+内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Global_attributes/style) 声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
 
 动画样式比所有普通样式都具有更高的优先权，包括内联普通样式。
 

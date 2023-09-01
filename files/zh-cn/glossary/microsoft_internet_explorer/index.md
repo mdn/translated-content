@@ -14,5 +14,5 @@ IE 经历了许多版本，并为桌面、手机和 Xbox 控制台提供了版�
 ## 参见
 
 - [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer) 维基百科
-- [Internet Explorer 的历史](https://zh.wikipedia.org/wiki/History_of_Internet_Explorer)维基百科
-- [Internet Explorer 版本](https://zh.wikipedia.org/wiki/Internet_Explorer_versions)维基百科
+- [Internet Explorer 的历史](https://zh.wikipedia.org/wiki/History_of_Internet_Explorer) 维基百科
+- [Internet Explorer 版本](https://zh.wikipedia.org/wiki/Internet_Explorer_versions) 维基百科

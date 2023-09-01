@@ -29,7 +29,7 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 例如，[HTML Living Standard](https://html.spec.whatwg.org/multipage/) 描述了应如何实现 HTML（所有 HTML 元素及其关联的 API 和其他相关技术）。
 
-Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如[WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
+Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如 [WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
 
 ### “开放”标准
 
@@ -116,7 +116,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），你很快就会发现各种可用于使工作更轻松或更有效的工具。例如：
 
-- 现代浏览器中的 [开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
+- 现代浏览器中的 [开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 可用于调试代码。
 - 可用于运行测试以显示你的代码是否按预期运行的 [测试工具（Testing tools）](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 - 建立在 JavaScript 之上的库和框架，使你可以更快，更有效地构建某些类型的网站。
 - 所谓的“Linters” ，它包含了一组规则，检查你的代码之后，会突出显示你未正确遵循规则的地方。

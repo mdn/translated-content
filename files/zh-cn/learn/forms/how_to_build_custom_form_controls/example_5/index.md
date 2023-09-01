@@ -3,7 +3,7 @@ title: 示例 5
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_5
 ---
 
-这是解释[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)的最后一个示例。
+这是解释[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls) 的最后一个示例。
 
 ## 改变状态
 

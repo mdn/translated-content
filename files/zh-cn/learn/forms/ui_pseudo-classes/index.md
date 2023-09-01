@@ -44,7 +44,7 @@ slug: Learn/Forms/UI_pseudo-classes
 
 还有很多其他的，但上面列出的是最明显有用的。其中一些旨在解决非常具体的小众问题，或者在浏览器中还没有得到很好的支持。上面列出的那些都有相当好的浏览器支持，但当然，你应该仔细测试你的表单实现，以确保它们对你的目标受众有效。
 
-> **备注：** 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
+> **备注：** 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation) 中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
 
 ## 根据必需与否为输入控件添加样式
 
@@ -105,11 +105,11 @@ input:optional {
 
 ## 使用伪类生成内容
 
-在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)的用法，现在是一个更详细地谈论它的好时机。
+在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content) 的用法，现在是一个更详细地谈论它的好时机。
 
 我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
 
-当你想给一个元素添加一个视觉指示器，比如一个标签或图标，但又不想让它被辅助技术发现时，这就非常有用。例如，在我们的[自定义单选按钮示例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)中，我们使用生成的内容来处理单选按钮被选中时内圈的位置和动画：
+当你想给一个元素添加一个视觉指示器，比如一个标签或图标，但又不想让它被辅助技术发现时，这就非常有用。例如，在我们的[自定义单选按钮示例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) 中，我们使用生成的内容来处理单选按钮被选中时内圈的位置和动画：
 
 ```css
 input[type="radio"]::before {
@@ -194,7 +194,7 @@ input:required + span::after {
 
 ## 根据数据是否有效为控件添加样式
 
-表单验证中另一个真正重要的基本概念是表单控件的数据是否有效（在数值数据的情况下，我们也可以谈论范围内和范围外的数据）。具有[约束限制](/zh-CN/docs/Web/HTML/Constraint_validation)的表单控件可以根据这些状态来进行定位。
+表单验证中另一个真正重要的基本概念是表单控件的数据是否有效（在数值数据的情况下，我们也可以谈论范围内和范围外的数据）。具有[约束限制](/zh-CN/docs/Web/HTML/Constraint_validation) 的表单控件可以根据这些状态来进行定位。
 
 ### :valid 和 :invalid
 
@@ -204,7 +204,7 @@ input:required + span::after {
 - 设定了 `required`，且没有任何值的表单控件是无效的——它们与 `:invalid` 和 `:required` 匹配。
 - 具有内置验证功能的控件，如 `<input type="email">` 或 `<input type="url">`，当输入的数据与它们所需的模式不匹配时，会被（与）`:invalid` 匹配（但当它们为空时是有效的）。
 - 当前值超出 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性所指定的范围限制的控件，会被（与）`:invalid` 匹配，但也会被 {{cssxref(":out-of-range")}} 匹配，后面还会看到。
-- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)文章中看到。但目前还没有必要介绍得太复杂。
+- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation) 文章中看到。但目前还没有必要介绍得太复杂。
 
 让我们看看一个简单的 `:valid`/`:invalid` 的示例（访问 [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) 以查看实时演示，也可以查看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)）。
 
@@ -420,7 +420,7 @@ function toggleBilling() {
 }
 ```
 
-它使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event)来让用户启用/禁用账单字段，并切换相关标签的样式。
+它使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event) 来让用户启用/禁用账单字段，并切换相关标签的样式。
 
 你可以在下面看到这个示例（也可以[在这里看到它的运行版本](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html)，并看到[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)）：
 
@@ -482,7 +482,7 @@ Firefox 在版本 78 之前只支持带前缀的伪类，从这个版本以后�
 
 最常见的用途是在复选框或单选按钮被选中时添加不同的样式，在这种情况下，已经使用 `appearance: none;` 删除了系统默认的样式，想自己重新建立样式。我们在上一篇文章中看到了这样的示例，当时我们谈到了[在单选钮/复选框上使用 `appearance: none`](/zh-CN/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)。
 
-回顾一下，我们的[有样式的单选钮](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)示例中的 `:checked` 代码看起来像这样：
+回顾一下，我们的[有样式的单选钮](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) 示例中的 `:checked` 代码看起来像这样：
 
 ```css
 input[type="radio"]::before {

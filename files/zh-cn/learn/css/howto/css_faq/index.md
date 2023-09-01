@@ -92,7 +92,7 @@ h1 {
 
 ## 我如何才可以从一个样式中衍生出另一种样式？
 
-CSS 并不完全允许用一种样式来定义另一种样式。但是，将多个类分配给单个元素，可以提供相同的效果。[CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)也提供了一种方法来定义在多处复用的样式信息。
+CSS 并不完全允许用一种样式来定义另一种样式。但是，将多个类分配给单个元素，可以提供相同的效果。[CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) 也提供了一种方法来定义在多处复用的样式信息。
 
 ## 我该如何给一个元素分配多个类？
 
@@ -116,7 +116,7 @@ HTML 元素可以通过列出的类属性，用空格分开它们。
 
 ## 为什么我的样式规则不能正确地工作？
 
-在语法上正确的样式规则可能在某些情况下不适用。你可以使用调试工具 *CSS 面板*的[规则视图](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)来调试这类问题。下面列出了最常见的忽略样式规则的实例：
+在语法上正确的样式规则可能在某些情况下不适用。你可以使用调试工具 *CSS 面板*的[规则视图](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) 来调试这类问题。下面列出了最常见的忽略样式规则的实例：
 
 ### HTML 元素层次结构
 
@@ -263,9 +263,9 @@ div {
 text-stroke: 4px navy;
 ```
 
-> **备注：** 为更深层次了解处理前缀属性，请参阅[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块的[处理常见的 HTML 和 CSS 问题——处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)。
+> **备注：** 为更深层次了解处理前缀属性，请参阅[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing) 模块的[处理常见的 HTML 和 CSS 问题——处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)。
 
-> **备注：** 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)，以了解浏览器前缀 CSS 属性的列表。
+> **备注：** 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions) 和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)，以了解浏览器前缀 CSS 属性的列表。
 
 ## z-index 属性与定位有什么关系？
 
@@ -273,4 +273,4 @@ z-index 属性指定了元素的栈序。
 
 具有较高 z-index/栈序的元素总是渲染于具有较低 z-index/栈序的元素之前。z-index 只会在有着指定 position（`position:absolute`、`position:relative` 或 `position:fixed`）的元素上工作。
 
-> **备注：** 请参阅[定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)文章，特别是[介绍 z-index](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning#介绍_z-index) 部分来深入学习。
+> **备注：** 请参阅[定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning) 文章，特别是[介绍 z-index](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning#介绍_z-index) 部分来深入学习。

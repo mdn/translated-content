@@ -9,7 +9,7 @@ slug: Glossary/Crawler
 
 ## 了解更多
 
-- 维基百科上关于[Web crawler](https://zh.wikipedia.org/wiki/Web_crawler)的内容
+- 维基百科上关于 [Web crawler](https://zh.wikipedia.org/wiki/Web_crawler) 的内容
 - [MDN 网络文档术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("Search engine")}}

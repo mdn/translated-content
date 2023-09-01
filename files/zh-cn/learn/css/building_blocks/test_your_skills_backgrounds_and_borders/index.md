@@ -5,7 +5,7 @@ slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 
 {{learnsidebar}}
 
-本技能测试的目的是评估你是否完全理解了 [CSS 中的背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)教程的内容。
+本技能测试的目的是评估你是否完全理解了 [CSS 中的背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) 教程的内容。
 
 > **备注：** 你可以在下面的互动编辑器中尝试解决方案。然而，下载代码并使用在线工具，如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 来完成任务可能会有所帮助。
 >

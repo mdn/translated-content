@@ -38,7 +38,7 @@ slug: Learn/CSS/First_steps/How_CSS_is_structured
 
 ### 外部样式表
 
-外部样式表在一个单独的扩展名为 `.css` 的文件中包含 CSS。这是将 CSS 应用到文档中最常见和最有用的方法。你可以将一个 CSS 文件链接到多个网页上，用同一个 CSS 样式表为所有网页确定样式。在 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)中，我们将一个外部样式表链接到我们的网页上。
+外部样式表在一个单独的扩展名为 `.css` 的文件中包含 CSS。这是将 CSS 应用到文档中最常见和最有用的方法。你可以将一个 CSS 文件链接到多个网页上，用同一个 CSS 样式表为所有网页确定样式。在 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started) 中，我们将一个外部样式表链接到我们的网页上。
 
 使用 HTML `<link>` 元素来链接外部样式表文件：
 
@@ -183,7 +183,7 @@ p {
 
 ## 选择器
 
-选择器以 HTML 为目标，对内容应用样式。我们已经在 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)的教程中探索了各种选择器。如果 CSS 没有像预期的那样应用于内容，你的选择器可能与你认为它应该匹配的方式不一致。
+选择器以 HTML 为目标，对内容应用样式。我们已经在 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started) 的教程中探索了各种选择器。如果 CSS 没有像预期的那样应用于内容，你的选择器可能与你认为它应该匹配的方式不一致。
 
 每个 CSS 规则都以一个选择器或一组选择器为开始，去告诉浏览器这些规则应该应用到哪些元素上。以下都是有效的选择器或组合选择器的示例。
 
@@ -200,7 +200,7 @@ h1, h2, .intro
 
 尝试创建一些使用上述选择器的 CSS 规则，并创建一些 HTML 样式。如果你不熟悉上面的一些语法，请尝试在 MDN 上搜索它！
 
-> **备注：** 在下一个模块 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)中，你将学习到更多关于选择器的知识。
+> **备注：** 在下一个模块 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors) 中，你将学习到更多关于选择器的知识。
 
 ### 优先级
 
@@ -238,7 +238,7 @@ p {
 
 自己试试这个实验吧！添加 HTML 代码，然后添加两个 `p { }` 规则到你的样式表。接下来，把第一个 `p` 选择器改为 `.special`，看看它是如何改变样式的。
 
-优先级和层叠的规则起初看起来很复杂。随着你对 CSS 越来越熟悉，这些规则就容易理解了。下一个模块中的[层叠和继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)一节对此进行了详细解释，包括如何计算优先级。
+优先级和层叠的规则起初看起来很复杂。随着你对 CSS 越来越熟悉，这些规则就容易理解了。下一个模块中的[层叠和继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) 一节对此进行了详细解释，包括如何计算优先级。
 
 现在，请记住优先级的存在。有时，CSS 可能不会像你预期的那样应用，因为样式表中的其他东西可能有更高的优先级。认识到不止一个规则可以适用于一个元素，是解决这类问题的第一步。
 
@@ -403,7 +403,7 @@ background-repeat: repeat-x;
 background-attachment: fixed;
 ```
 
-在本课程的后期，你会遇到许多其他简写属性的例子。MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)是一个很好的资源，可以获得关于任何简写属性的更多信息。
+在本课程的后期，你会遇到许多其他简写属性的例子。MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference) 是一个很好的资源，可以获得关于任何简写属性的更多信息。
 
 **尝试将上述声明添加到 CSS 中，看看它如何影响 HTML 的样式。试着尝试一些不同的属性值。**
 
@@ -553,6 +553,6 @@ padding- left: 10px;
 
 ## 总结
 
-到此为止，你应该对 CSS 的结构有了更多的了解。了解浏览器是如何使用 HTML 和 CSS 来显示网页的，也很有帮助。下一篇文章 [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)解释了这一过程。
+到此为止，你应该对 CSS 的结构有了更多的了解。了解浏览器是如何使用 HTML 和 CSS 来显示网页的，也很有帮助。下一篇文章 [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) 解释了这一过程。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

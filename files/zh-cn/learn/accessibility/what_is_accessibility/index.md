@@ -65,7 +65,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 ### 行动障碍的人
 
-这些人在行动方面存在着残疾，可能是因为纯粹的身体问题（例如肢体丧失或瘫痪），或导致肢体无力或失去控制的神经系统/遗传疾病。有些人可能难以做出使用鼠标所需的精准手部动作，而另一些人则可能受到的影响更为严重，可能会严重瘫痪到需要使用[头部指针](https://www.performancehealth.com/baseball-cap-head-pointer)与计算机进行交互的地步。
+这些人在行动方面存在着残疾，可能是因为纯粹的身体问题（例如肢体丧失或瘫痪），或导致肢体无力或失去控制的神经系统/遗传疾病。有些人可能难以做出使用鼠标所需的精准手部动作，而另一些人则可能受到的影响更为严重，可能会严重瘫痪到需要使用[头部指针](https://www.performancehealth.com/baseball-cap-head-pointer) 与计算机进行交互的地步。
 
 这种残疾也可能是由于年老体衰导致，而不是任何特定的创伤或状况造成，也可能是由于硬件限制所致——有些用户可能没有鼠标。
 
@@ -91,7 +91,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 ### 注意
 
-- 具有[认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)的设计将导致良好的设计实践。他们将使所有人受益。
+- 具有[认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility) 的设计将导致良好的设计实践。他们将使所有人受益。
 - 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility#Guidelines)。
 - W3C 的“[认知和学习残疾无障碍专案组](https://www.w3.org/WAI/GL/task-forces/coga/)”为认知障碍人士制作了 web 无障碍指南。
 - WebAIM 有一个[认知网页](https://webaim.org/articles/cognitive/)提供了相关的信息和资源。
@@ -107,7 +107,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 然而如果你能在项目的开始阶段就考虑到无障碍的话，使大多数内容无障碍化的代价就会相当微小。
 
-在规划项目时，将无障碍测试纳入测试体系，就像对其他任何重要目标受众群体（例如台式机或移动浏览器的目标用户）进行测试一样。尽早和经常进行测试，理想情况下运行自动化测试找出程序化方式可检测到的缺失功能（例如，缺少图像[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)或不良链接文字——请参阅[元素关系与上下文](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context)），并对残疾人士的用户群进行一些测试，以查看更复杂的网站功能是否对他们可用。例如：
+在规划项目时，将无障碍测试纳入测试体系，就像对其他任何重要目标受众群体（例如台式机或移动浏览器的目标用户）进行测试一样。尽早和经常进行测试，理想情况下运行自动化测试找出程序化方式可检测到的缺失功能（例如，缺少图像[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives) 或不良链接文字——请参阅[元素关系与上下文](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context)），并对残疾人士的用户群进行一些测试，以查看更复杂的网站功能是否对他们可用。例如：
 
 - 我的日期选择器小部件是否可供使用屏幕阅读器的人使用？
 - 如果内容动态更新，视力受损的人知道吗？

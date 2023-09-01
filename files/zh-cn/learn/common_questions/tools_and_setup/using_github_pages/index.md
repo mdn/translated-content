@@ -7,13 +7,13 @@ slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 
 ## 发布内容
 
-GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitHub 也是一个非常受欢迎的[版本控制系统](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - 现在大多数科技公司在其工作流程中使用它。GitHub 有一个非常有用的功能，称为[GitHub Pages](https://pages.github.com/)，它允许你在 Web 上实时发布网站代码。
+GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitHub 也是一个非常受欢迎的[版本控制系统](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - 现在大多数科技公司在其工作流程中使用它。GitHub 有一个非常有用的功能，称为 [GitHub Pages](https://pages.github.com/)，它允许你在 Web 上实时发布网站代码。
 
 ### 基本 Github 设置
 
 1. 首先，在你的机器上[安装 Git](http://git-scm.com/downloads)。这是 GitHub 工作的底层版本控制系统软件。
 2. 接下来，[注册一个 GitHub 帐户](https://github.com/join)。这很简单易操作。
-3. 注册后，用你的用户名和密码登录[github.com](https://github.com/)。
+3. 注册后，用你的用户名和密码登录 [github.com](https://github.com/)。
 
 ### 准备上传代码
 
@@ -39,7 +39,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 ![](command-line.png)
 
-> **备注：** 你也可以考虑使用[Git 图形用户界面](http://git-scm.com/downloads/guis)来执行相同的工作，如果你不熟悉命令行。
+> **备注：** 你也可以考虑使用 [Git 图形用户界面](http://git-scm.com/downloads/guis) 来执行相同的工作，如果你不熟悉命令行。
 
 每个操作系统都附带有一个命令行工具：
 
@@ -95,4 +95,4 @@ git push
 
 你可以使用更合适的消息替换上一次的提交信息，以描述你刚刚做出的更改。
 
-我们仅仅提供了 Git 的浅显基本的信息。要了解更多信息，请先从 [GitHub 帮助站点](https://help.github.com/index.html)开始。
+我们仅仅提供了 Git 的浅显基本的信息。要了解更多信息，请先从 [GitHub 帮助站点](https://help.github.com/index.html) 开始。

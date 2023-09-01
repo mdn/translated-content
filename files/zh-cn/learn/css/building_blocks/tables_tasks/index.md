@@ -5,7 +5,7 @@ slug: Learn/CSS/Building_blocks/Tables_tasks
 
 {{LearnSidebar}}
 
-此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)课程中学到的技巧的理解。
+此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables) 课程中学到的技巧的理解。
 
 > **备注：** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
@@ -13,7 +13,7 @@ slug: Learn/CSS/Building_blocks/Tables_tasks
 
 ## 任务
 
-在之前的课程中，我们以一种杀马特的方式样式化了一个表格。在这个任务中，我们打算样式化同样的表格，但是使用一些在外部文章[Web 排版：设计可读而不是可看的表格](https://alistapart.com/article/web-typography-tables/)概述的表格设计良好实践。
+在之前的课程中，我们以一种杀马特的方式样式化了一个表格。在这个任务中，我们打算样式化同样的表格，但是使用一些在外部文章 [Web 排版：设计可读而不是可看的表格](https://alistapart.com/article/web-typography-tables/)概述的表格设计良好实践。
 
 我们要完成的表格如下图所示。完成这个任务有许多方法，但是我建议你使用和向导中所用的相似的模式来完成以下的事情。
 

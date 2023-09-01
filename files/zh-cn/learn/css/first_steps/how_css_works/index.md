@@ -153,6 +153,6 @@ p {
 
 ## 最后
 
-恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
+恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page) 来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}

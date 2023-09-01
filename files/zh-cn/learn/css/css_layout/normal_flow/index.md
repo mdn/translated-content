@@ -38,7 +38,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 
 首先，取得元素的内容并将其放在一个独立的元素盒子中，然后在其周边加上内边距、边框和外边距——就是我们所说的**盒子模型**。
 
-默认情况下，一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)会填充其父元素所有的行向空间，并沿着其块向伸长以容纳其内容。[行级元素](/zh-CN/docs/Glossary/Inline-level_content)的大小就是其本身的大小。你可以为某些 {{cssxref("display")}} 属性值默认为 `inline` 的元素（例如 {{HTMLElement("img")}}）设置 {{cssxref("width")}} 或 {{cssxref("height")}}，但其 `display` 仍将保持为 `inline`。
+默认情况下，一个[块级元素](/zh-CN/docs/Glossary/Block-level_content) 会填充其父元素所有的行向空间，并沿着其块向伸长以容纳其内容。[行级元素](/zh-CN/docs/Glossary/Inline-level_content) 的大小就是其本身的大小。你可以为某些 {{cssxref("display")}} 属性值默认为 `inline` 的元素（例如 {{HTMLElement("img")}}）设置 {{cssxref("width")}} 或 {{cssxref("height")}}，但其 `display` 仍将保持为 `inline`。
 
 如果你想要控制行级元素的 `display` 属性，请使用 CSS 将其设置为块级元素（例如，使用 `display: block;` 或 `display: inline-block;`，后者混合了两者特性）。
 
@@ -96,6 +96,6 @@ span {
 
 在本节中，你学习了常规流布局的基础指示——知晓元素的默认 CSS 布局方式。通过了解行级元素、块级元素以及外边距的默认行为，在未来你可以更轻松地修改这些行为。
 
-在下一节，我们将会在这些基础指示的基础上，使用[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来修改元素的 CSS 布局方式。
+在下一节，我们将会在这些基础指示的基础上，使用[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来修改元素的 CSS 布局方式。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

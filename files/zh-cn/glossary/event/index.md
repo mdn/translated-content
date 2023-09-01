@@ -11,4 +11,4 @@ slug: Glossary/Event
 
 - [MDN 上的事件文档](/zh-CN/docs/Web/API/Event)
 - [官方网站](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
-- 维基百科上的 [DOM 事件](https://en.wikipedia.org/wiki/DOM_Events)词条
+- 维基百科上的 [DOM 事件](https://en.wikipedia.org/wiki/DOM_Events) 词条

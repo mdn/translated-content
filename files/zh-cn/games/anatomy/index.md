@@ -296,7 +296,7 @@ var tNow = window.performance.now();
 ```
 <!-- prettier-ignore-end -->
 
-另一个选择是简单地做一些事情不那么频繁。如果你的更新循环的一部分难以计算但对时间不敏感，则可以考虑缩小其频率，理想情况下，在延长的时间段内将其扩展成块。这是一个隐含的例子，在火炮博物馆的炮兵游戏中，他们[调整垃圾发生率](https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html)来优化垃圾收集。显然，清理资源不是时间敏感的（特别是如果整理比垃圾本身更具破坏性）。
+另一个选择是简单地做一些事情不那么频繁。如果你的更新循环的一部分难以计算但对时间不敏感，则可以考虑缩小其频率，理想情况下，在延长的时间段内将其扩展成块。这是一个隐含的例子，在火炮博物馆的炮兵游戏中，他们[调整垃圾发生率](https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) 来优化垃圾收集。显然，清理资源不是时间敏感的（特别是如果整理比垃圾本身更具破坏性）。
 
 这也可能适用于你自己的一些任务。那些是当可用资源成为关注点时的好候选人。
 

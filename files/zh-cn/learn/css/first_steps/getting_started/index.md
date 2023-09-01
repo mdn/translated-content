@@ -124,7 +124,7 @@ li {
 
 目前为止，我们通过 HTML 元素名规定样式。如果你愿意所有元素都一个样，也不是不可以，但大多数情况下，我估计你都不愿意。我知道你想干啥，你想用这种方式样式化这一片元素，又想用那种方式样式化那一片元素，真贪心。不过没关系，你可以给 HTML 元素加个类名（class），再选中那个类名，这样就可以了，大家基本上都这么用。
 
-举个例子吧，咱们把 [class 属性](/zh-CN/docs/Web/HTML/Global_attributes/class)加到表里面第二个对象。你的列表看起来应该是这样的：
+举个例子吧，咱们把 [class 属性](/zh-CN/docs/Web/HTML/Global_attributes/class) 加到表里面第二个对象。你的列表看起来应该是这样的：
 
 ```html
 <ul>
@@ -196,7 +196,7 @@ h1 + p {
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **备注：** 如你所见，CSS 给我们提供了几种定位元素的方法。到目前为止，我们只触及了皮毛！我们将对这些选择器进行适当的研究，更多的内容将在我们后面的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)章节中介绍。
+> **备注：** 如你所见，CSS 给我们提供了几种定位元素的方法。到目前为止，我们只触及了皮毛！我们将对这些选择器进行适当的研究，更多的内容将在我们后面的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors) 章节中介绍。
 
 ## 根据状态确定样式
 

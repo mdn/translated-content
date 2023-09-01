@@ -10,7 +10,7 @@ _无障碍网页_（Web Accessibility，缩写：**A11Y**）指在物理条件�
 ## 参见
 
 - [MDN 上的无障碍资源](/zh-CN/docs/Web/Accessibility)
-- 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/Web_accessibility)词条
+- 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/Web_accessibility) 词条
 - [学习无障碍](/zh-CN/docs/Learn/Accessibility)
 - [Web Accessibility In Mind](https://webaim.org/)
 - [MDN 上的 ARIA 文档](/zh-CN/docs/Web/Accessibility/ARIA)

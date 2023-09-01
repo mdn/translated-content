@@ -31,7 +31,7 @@ slug: Learn/CSS/CSS_layout/Introduction
   </tbody>
 </table>
 
-CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面[布局技术](/zh-CN/docs/Web/CSS/Layout_mode)的细节：
+CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面[布局技术](/zh-CN/docs/Web/CSS/Layout_mode) 的细节：
 
 - 正常布局流
 - {{cssxref("display")}}属性
@@ -258,7 +258,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 {{ EmbedLiveSample('在网格内放置元素', '300', '330') }}
 
-> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章[Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
+> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章 [Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
 
 这篇指南的其余部分介绍了其他的布局方式，它们与你的页面的主要布局结构关系不大，但是却能够帮助你实现特殊的操作。同时，只要你理解了每一个布局任务的初衷，你就能够马上意识到哪一种布局更适合你的组件。
 
@@ -324,7 +324,7 @@ p {
 
 {{ EmbedLiveSample('浮动', '100%', 600) }}
 
-> **备注：** CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果你想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
+> **备注：** CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 的教程当中被详细地解释。除此之外，如果你想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
 
 ## 定位技术
 
@@ -475,7 +475,7 @@ p {
 
 {{ EmbedLiveSample('绝对定位', '100%', 300) }}
 
-这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 `<html>`元素的距离)。我们也可以修改作为容器的那个元素（在这里是`<html>`元素），要了解这方面的知识，参见关于[定位 (positioning)](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)的课程
+这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 `<html>`元素的距离)。我们也可以修改作为容器的那个元素（在这里是`<html>`元素），要了解这方面的知识，参见关于[定位 (positioning)](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning) 的课程
 
 我们现在暂时不讨论固定定位（fixed positioning）——它基本上以相同的方式工作，除了它仍然固定在浏览器窗口的边缘，而不是它定位的父节点的边缘。
 
@@ -629,7 +629,7 @@ body {
 
 {{ EmbedLiveSample('粘性定位', '100%', 200) }}
 
-> **备注：** 想要发现更多关于定位的信息，请参阅我们的[Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)和[Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
+> **备注：** 想要发现更多关于定位的信息，请参阅我们的 [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning) 和 [Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples) 文章。
 
 ## 表格布局
 

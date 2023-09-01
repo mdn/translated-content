@@ -48,7 +48,7 @@ _还没有可用的资料。[Please, consider contributing](/zh-CN/docs/MDN/Gett
 
 ### 网页
 
-一份网页文档是交给{{Glossary("浏览器")}}显示的简单文档。这种文档是由{{Glossary("超文本标记语言 HTML")}}来编写的 (在[other articles](/zh-CN/docs/Web/HTML)可查看更多详细内容)。网页文档可以插入各种各样不同类型的资源，例如：
+一份网页文档是交给{{Glossary("浏览器")}}显示的简单文档。这种文档是由{{Glossary("超文本标记语言 HTML")}}来编写的 (在 [other articles](/zh-CN/docs/Web/HTML) 可查看更多详细内容)。网页文档可以插入各种各样不同类型的资源，例如：
 
 - _样式信息_ — 控制页面的观感
 - _脚本_— 为页面添加交互性
@@ -80,7 +80,7 @@ _当网站只包含一个网页时，网站和网页二者尤其容易弄混。�
 
 搜索引擎是网络上常见的混乱之源。搜索引擎是一个特定类型的网站，用以帮助用户在其他网站中寻找网页。
 
-搜索引擎数不胜数，有[Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/)等等。其中有的功能宽泛，有的专注于特定的主题。你可按需使用。
+搜索引擎数不胜数，有 [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/)等等。其中有的功能宽泛，有的专注于特定的主题。你可按需使用。
 
 许多网上的初学者将搜索引擎和浏览器混淆了。让我们明确一下：浏览器是一个接收并显示网页的软件，搜索引擎则是一个帮助用户从其他网站中寻找网页的网站。这种混淆之所以出现是因为当一个人打开一个浏览器的时候，浏览器展现的是一个搜索引擎的主页。这有什么意义呢？很明显，因为你打开浏览器要做的第一件事就是去寻找一个网站。不要把基础设施（浏览器）和服务（搜索引擎）混淆。这种区分会对你很有帮助，但是甚至有些专业人员也还把它们说得很宽泛，所以不用对这种区分太过谨慎。
 

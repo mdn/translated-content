@@ -227,7 +227,7 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 ![](finished-test-page-small.png)
 
-如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html)与你的文件进行比较。
+如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) 与你的文件进行比较。
 
 在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的 [HTML 学习主题页面](/zh-CN/docs/Learn/HTML) 。
 
