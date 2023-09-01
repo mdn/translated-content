@@ -33,7 +33,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 ### pushState() 메서드
 
-`pushState()`는 **state object**, **title** (현재 무시됨), **URL**(선택사항)의 세 가지 매개변수를 가집니다.
+`pushState()`는 **state object**, **title**(현재 무시됨), **URL**(선택사항)의 세 가지 매개변수를 가집니다.
 
 이 세 가지 매개변수를 각각 자세히 살펴보겠습니다.
 
