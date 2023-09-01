@@ -41,7 +41,7 @@ l10n:
 
 ## 서비스 워커 추가 기능
 
-푸시 메시지를 사용하기 위한 진입점을 제공하기 위해 푸시 API 사양에 다음과 같은 추가 기능이 [Service Worker API](/ko/docs/Web/API/Service_Worker_API)에 지정되었습니다. 또한 푸시 및 구독 변경 이벤트를 모니터링하고 응답합니다.
+푸시 API 사양에는 푸시 메시지를 사용하는 진입점을 제공하고, 푸시 및 구독 변경 이벤트를 모니터하고 응답하기 위해 [Service Worker API](/ko/docs/Web/API/Service_Worker_API)에 대한 다음과 같은 추가 사항들이 명시되어 있습니다.
 
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : 구독, 활성 구독 가져오기, 푸시 권한 상태 접근 등 푸시 구독을 관리하기 위한 {{domxref("PushManager")}} 인터페이스에 대한 참조를 반환합니다. 푸시 메시징을 사용하기 위한 진입점입니다.
