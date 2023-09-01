@@ -3,7 +3,6 @@ title: History API로 작업하기
 slug: Web/API/History_API/Working_with_the_History_API
 l10n:
   sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
-
 ---
 
 {{DefaultAPISidebar("History API")}}
@@ -75,7 +74,7 @@ const stateObj = {
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-위의 두 줄에 대한 설명은 [pushState() 메서드 예제](#pushState()_메서드_예제) 섹션에서 확인할 수 있습니다.
+위의 두 줄에 대한 설명은 [pushState() 메서드 예제](<#pushState()_메서드_예제>) 섹션에서 확인할 수 있습니다.
 
 다음으로 `https://mozilla.org/bar.html`이 다음 JavaScript 코드를 실행한다고 가정합니다.
 
