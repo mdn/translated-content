@@ -47,7 +47,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 
 - 离线工作
 
-  - ：首次需要互联网访问来下载应用程序，当与服务器或其他用户同步数据时也需要互联网访问。这对所有应用程序都是必需的，不仅仅是 PWA。我们将添加一个 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) 来创建离线体验，这意味着周期追踪器即使在用户失去互联网访问时也能工作。我们将只触及 PWA 离线支持的能力。service worker 可以使 PWA 像任何其他已安装的应用程序一样离线工作。如果用户在离线时做出更改，service worker 使 PWA 能够在恢复连接后同步数据。使用 service worker ，用户不需要积极地与 PWA 进行交互，事实上，PWA 甚至不需要打开，就能够发送和检索服务器数据。
+  - ：首次需要互联网访问来下载应用程序，当与服务器或其他用户同步数据时也需要互联网访问。这对所有应用程序都是必需的，不仅仅是 PWA。我们将添加一个 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) 来创建离线体验，这意味着周期追踪器即使在用户失去互联网访问时也能工作。我们将只触及 PWA 离线支持的能力。service worker 可以使 PWA 像任何其他已安装的应用程序一样离线工作。如果用户在离线时做出更改，service worker 使 PWA 能够在恢复连接后同步数据。使用 service worker，用户不需要积极地与 PWA 进行交互，事实上，PWA 甚至不需要打开，就能够发送和检索服务器数据。
 
 ## 周期追踪器 PWA 教程
 
@@ -82,7 +82,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
   - : 使用 JavaScript，我们将确定用户是在线还是离线。当离线时，将显示一个离线体验，通知用户他们当前处于离线状态。当在线时，体验将类似于网站，但安装按钮将不可见。
 
 - [会话存储](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Storage)
-  - : 将深入了解service worker和会话存储，使用 JavaScript 增强 PWA。
+  - : 将深入了解 service worker 和会话存储，使用 JavaScript 增强 PWA。
 -->
 
 为了完成本教程，有一定的 HTML、CSS 和 JavaScript 基础将会有帮助。本教程提供了创建 PWA 所需的清单文件和启动 service worker 的指导，以及设置本地开发环境的说明，这样你就可以查看自己的进度。<!--本教程将介绍检查网络访问、定义在线和离线体验的方法。-->
