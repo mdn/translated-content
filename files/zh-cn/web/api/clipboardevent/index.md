@@ -5,7 +5,7 @@ slug: Web/API/ClipboardEvent
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
-**`ClipboardEvent`** 接口描述了与修改剪切板相关信息的事件，这些事件包括 剪切[`cut`](/zh-CN/docs/Web/API/Element/cut_event) , 复制[`copy`](/zh-CN/docs/Web/API/Element/copy_event) 和 粘贴[`paste`](/zh-CN/docs/Web/API/Element/paste_event) 事件。
+**`ClipboardEvent`** 接口描述了与修改剪切板相关信息的事件，这些事件包括 剪切 [`cut`](/zh-CN/docs/Web/API/Element/cut_event) , 复制 [`copy`](/zh-CN/docs/Web/API/Element/copy_event) 和 粘贴 [`paste`](/zh-CN/docs/Web/API/Element/paste_event) 事件。
 
 ## 构造函数
 

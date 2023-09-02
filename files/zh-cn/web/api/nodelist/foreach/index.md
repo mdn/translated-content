@@ -66,7 +66,7 @@ list.forEach(function (currentValue, currentIndex, listObj) {
 
 ## Polyfill
 
-{{Glossary("Polyfill","polyfill")}} 增加了对所有支持[ES5](https://caniuse.com/#search=es5)的浏览器的兼容性：
+{{Glossary("Polyfill","polyfill")}} 增加了对所有支持 [ES5](https://caniuse.com/#search=es5)的浏览器的兼容性：
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {

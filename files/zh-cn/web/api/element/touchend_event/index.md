@@ -40,7 +40,7 @@ slug: Web/API/Element/touchend_event
 
 ## 例子
 
-这些事件的代码示例在这个页面[Touch events](/zh-CN/docs/DOM/Touch_events)中均有体现。
+这些事件的代码示例在这个页面 [Touch events](/zh-CN/docs/DOM/Touch_events)中均有体现。
 
 ## 规范
 

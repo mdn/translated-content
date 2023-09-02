@@ -17,14 +17,14 @@ Demo
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者[directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
+为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者 [directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
 
 ### Browser support
 
 对于 Web Speech API speech recognition(语音识别) 的支持，在各浏览器中还不成熟，还在发展，现在主要的限制如下：
 
 - Firefox 桌面端和移动端在 Gecko 44+ 中都支持，并且是没有前缀的，它可以在`about:config` 中把 `media.webspeech.recognition.enable` 设置为 `true` 打开。权限设置/UI 还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧\~
-- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在[manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载，或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
+- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在 [manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载，或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
 
   ```json
   "permissions": {
@@ -97,13 +97,13 @@ var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 ```
 
-使用 [`SpeechGrammarList.addFromString()`](/zh-CN/docs/Web/API/SpeechGrammarList/addFromString) 把语法添加到列表 (list)，这个方法接收两个参数，第一个是我们想要添加的包含语法内容的字符串，第二个是对添加的这条语法的权重 (权重值范围是 0\~1)，权重其实是相对于其他语法，这一条语法的重要程度。添加到列表的语法就是可用的，并且是一个[`SpeechGrammar`](/zh-CN/docs/Web/API/SpeechGrammar) 实例。
+使用 [`SpeechGrammarList.addFromString()`](/zh-CN/docs/Web/API/SpeechGrammarList/addFromString) 把语法添加到列表 (list)，这个方法接收两个参数，第一个是我们想要添加的包含语法内容的字符串，第二个是对添加的这条语法的权重 (权重值范围是 0\~1)，权重其实是相对于其他语法，这一条语法的重要程度。添加到列表的语法就是可用的，并且是一个 [`SpeechGrammar`](/zh-CN/docs/Web/API/SpeechGrammar) 实例。
 
 ```js
 speechRecognitionList.addFromString(grammar, 1);
 ```
 
-我们然后通过设置 [`SpeechRecognition.grammars`](/zh-CN/docs/Web/API/SpeechRecognition/grammars) 属性值，把我们的[`SpeechGrammarList`](/zh-CN/docs/Web/API/SpeechGrammarList) 添加到 speech recognition 实例。在继续往前走之前，我们还需要设置 recognition 实例其他的一些属性：
+我们然后通过设置 [`SpeechRecognition.grammars`](/zh-CN/docs/Web/API/SpeechRecognition/grammars) 属性值，把我们的 [`SpeechGrammarList`](/zh-CN/docs/Web/API/SpeechGrammarList) 添加到 speech recognition 实例。在继续往前走之前，我们还需要设置 recognition 实例其他的一些属性：
 
 - [`SpeechRecognition.lang`](/zh-CN/docs/Web/API/SpeechRecognition/lang) ：设置识别的是什么语言。这个设定是良好的做好，因此墙裂推荐\~
 - [`SpeechRecognition.interimResults`](/zh-CN/docs/Web/API/SpeechRecognition/interimResults) ：定义 speech recognition 系统要不要返回临时结果 (interim results)，还是只返回最终结果。对于这个简单 demo，只返回最终结果就够了。
@@ -158,9 +158,9 @@ recognition.onresult = function (event) {
 };
 ```
 
-代码中第三行看上去有一点复杂，让我们一步一步解释以下。[`SpeechRecognitionEvent.results`](/zh-CN/docs/Web/API/SpeechRecognitionEvent/results) 属性返回的是一个[`SpeechRecognitionResultList`](/zh-CN/docs/Web/API/SpeechRecognitionResultList) 对象 (这个对象会包含[`SpeechRecognitionResult`](/zh-CN/docs/Web/API/SpeechRecognitionResult) 对象们)，它有一个 getter，所以它包含的这些对象可以像一个数组被访问到——所以`[last]` 返回的是排在最后位置 (最新) 的`SpeechRecognitionResult`对象。每个`SpeechRecognitionResult` 对象包含的 [`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象含有一个被识别的单词。这些`SpeechRecognitionResult` 对象也有一个 getter，所以`[0]` 返回的是其中包含的第一个[`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象。最后返回的`transcript`属性就是被识别单词的字符串，把背景颜色设置为这个颜色，并在 UI 中报告出这个结果信息。
+代码中第三行看上去有一点复杂，让我们一步一步解释以下。[`SpeechRecognitionEvent.results`](/zh-CN/docs/Web/API/SpeechRecognitionEvent/results) 属性返回的是一个 [`SpeechRecognitionResultList`](/zh-CN/docs/Web/API/SpeechRecognitionResultList) 对象 (这个对象会包含 [`SpeechRecognitionResult`](/zh-CN/docs/Web/API/SpeechRecognitionResult) 对象们)，它有一个 getter，所以它包含的这些对象可以像一个数组被访问到——所以`[last]` 返回的是排在最后位置 (最新) 的`SpeechRecognitionResult`对象。每个`SpeechRecognitionResult` 对象包含的 [`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象含有一个被识别的单词。这些`SpeechRecognitionResult` 对象也有一个 getter，所以`[0]` 返回的是其中包含的第一个 [`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象。最后返回的`transcript`属性就是被识别单词的字符串，把背景颜色设置为这个颜色，并在 UI 中报告出这个结果信息。
 
-也使用了 [`SpeechRecognition.onspeechend`](/zh-CN/docs/Web/API/SpeechRecognition/onspeechend) 这个 handle 停止语音识别服务 (具体工作在[`SpeechRecognition.stop()`](/zh-CN/docs/Web/API/SpeechRecognition/stop)) ，一旦一个单词被识别就不能再说咯 (必须再点击屏幕再次开启语音识别)
+也使用了 [`SpeechRecognition.onspeechend`](/zh-CN/docs/Web/API/SpeechRecognition/onspeechend) 这个 handle 停止语音识别服务 (具体工作在 [`SpeechRecognition.stop()`](/zh-CN/docs/Web/API/SpeechRecognition/stop)) ，一旦一个单词被识别就不能再说咯 (必须再点击屏幕再次开启语音识别)
 
 ```js
 recognition.onspeechend = function () {
@@ -246,7 +246,7 @@ HTML 和 CSS 还是无足轻重，只是简单包含一个标题，一段介绍�
 
 #### 设置变量
 
-首先我们获得 UI 中涉及的 DOM 元素的引用，但更有趣的是，我们获得了[`Window.speechSynthesis`](/zh-CN/docs/Web/API/Window/speechSynthesis) 的引用。这是 API 的入口点——它返回了[`SpeechSynthesis`](/zh-CN/docs/Web/API/SpeechSynthesis) 的一个实例，对于 web 语音合成的控制接口。
+首先我们获得 UI 中涉及的 DOM 元素的引用，但更有趣的是，我们获得了 [`Window.speechSynthesis`](/zh-CN/docs/Web/API/Window/speechSynthesis) 的引用。这是 API 的入口点——它返回了 [`SpeechSynthesis`](/zh-CN/docs/Web/API/SpeechSynthesis) 的一个实例，对于 web 语音合成的控制接口。
 
 ```js
 var synth = window.speechSynthesis;
@@ -265,7 +265,7 @@ var voices = [];
 
 #### 填充 select 元素
 
-为使用设备可使用的不同的语音选项填充`<select>`元素，我们写了`populateVoiceList()` 方法。首先调用[`SpeechSynthesis.getVoices()`](/zh-CN/docs/Web/API/SpeechSynthesis/getVoices) ，这个函数返回包含所有可用语音 ([`SpeechSynthesisVoice`](/zh-CN/docs/Web/API/SpeechSynthesisVoice)对象) 的列表。接下来循环这个列表，每次创建一个`<option>` 元素，设置它的文本内容以显示声音的名称（从`SpeechSynthesisVoice.name`获取），语音的语言（从`SpeechSynthesisVoice.lang`获取），如果某个语音是合成引擎默认的 (检查[`SpeechSynthesisVoice.default`](/zh-CN/docs/Web/API/SpeechSynthesisVoice/default)属性返回`true`) 在文本内容后面添加`-- DEFAULT`。
+为使用设备可使用的不同的语音选项填充`<select>`元素，我们写了`populateVoiceList()` 方法。首先调用 [`SpeechSynthesis.getVoices()`](/zh-CN/docs/Web/API/SpeechSynthesis/getVoices) ，这个函数返回包含所有可用语音 ([`SpeechSynthesisVoice`](/zh-CN/docs/Web/API/SpeechSynthesisVoice)对象) 的列表。接下来循环这个列表，每次创建一个`<option>` 元素，设置它的文本内容以显示声音的名称（从`SpeechSynthesisVoice.name`获取），语音的语言（从`SpeechSynthesisVoice.lang`获取），如果某个语音是合成引擎默认的 (检查 [`SpeechSynthesisVoice.default`](/zh-CN/docs/Web/API/SpeechSynthesisVoice/default)属性返回`true`) 在文本内容后面添加`-- DEFAULT`。
 
 对于每个`option`元素，我们也创建了`data-` 属性，属性值是语音的名字和语言，这样在之后我们可以轻松获取这个信息。之后把所有的`option`元素作为孩子添加到`select` 元素。
 
@@ -288,7 +288,7 @@ function populateVoiceList() {
 }
 ```
 
-接下来是运行这个函数，我们做如下代码工作。因为 Firefox 不支持[`SpeechSynthesis.onvoiceschanged`](/zh-CN/docs/Web/API/SpeechSynthesis/onvoiceschanged) ，所以很常规地只是返回语音对象列表当[`SpeechSynthesis.getVoices()`](/zh-CN/docs/Web/API/SpeechSynthesis/getVoices) 被触发。但是 Chrome 就有点不同了，在`SpeechSynthesis.getVoices()` 被触发时，先要等待事件触发 (有点绕\~按照下面代码，`populateVoiceList` 函数在 Firefox 运行一次，在 Chrome 中运行两次)：
+接下来是运行这个函数，我们做如下代码工作。因为 Firefox 不支持 [`SpeechSynthesis.onvoiceschanged`](/zh-CN/docs/Web/API/SpeechSynthesis/onvoiceschanged) ，所以很常规地只是返回语音对象列表当 [`SpeechSynthesis.getVoices()`](/zh-CN/docs/Web/API/SpeechSynthesis/getVoices) 被触发。但是 Chrome 就有点不同了，在`SpeechSynthesis.getVoices()` 被触发时，先要等待事件触发 (有点绕\~按照下面代码，`populateVoiceList` 函数在 Firefox 运行一次，在 Chrome 中运行两次)：
 
 ```js
 populateVoiceList();
@@ -299,11 +299,11 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 #### 说出输入的文本
 
-接下来我们创建一个事件处理器 (handler)，开始说出在文本框中输入的文本。我们把`onsubmit` 处理器挂在表单上，当`Enter/Return` 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的[`SpeechSynthesisUtterance()`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance) 实例——把文本输入框中的值作为参数传递。
+接下来我们创建一个事件处理器 (handler)，开始说出在文本框中输入的文本。我们把`onsubmit` 处理器挂在表单上，当`Enter/Return` 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的 [`SpeechSynthesisUtterance()`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance) 实例——把文本输入框中的值作为参数传递。
 
-接下来，我们需要弄清楚使用哪种语音。使用[`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement) `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素。然后使用元素的`data-name`属性，找到 [`SpeechSynthesisVoice`](/zh-CN/docs/Web/API/SpeechSynthesisVoice) 对象的`name`匹配`data-name` 的值。把匹配的语音对象设置为[`SpeechSynthesisUtterance.voice`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/voice) 的属性值。
+接下来，我们需要弄清楚使用哪种语音。使用 [`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement) `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素。然后使用元素的`data-name`属性，找到 [`SpeechSynthesisVoice`](/zh-CN/docs/Web/API/SpeechSynthesisVoice) 对象的`name`匹配`data-name` 的值。把匹配的语音对象设置为 [`SpeechSynthesisUtterance.voice`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/voice) 的属性值。
 
-最后，我们设置 [`SpeechSynthesisUtterance.pitch`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/pitch) 和[`SpeechSynthesisUtterance.rate`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/rate) 属性值为对应范围表单元素中的值。哈哈所有准备工作就绪，调用 [`SpeechSynthesis.speak()`](/zh-CN/docs/Web/API/SpeechSynthesis/speak) 开始说话。把 [`SpeechSynthesisUtterance`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance) 实例作为参数传递。
+最后，我们设置 [`SpeechSynthesisUtterance.pitch`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/pitch) 和 [`SpeechSynthesisUtterance.rate`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/rate) 属性值为对应范围表单元素中的值。哈哈所有准备工作就绪，调用 [`SpeechSynthesis.speak()`](/zh-CN/docs/Web/API/SpeechSynthesis/speak) 开始说话。把 [`SpeechSynthesisUtterance`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance) 实例作为参数传递。
 
 ```js
 inputForm.onsubmit = function(event) {
@@ -321,7 +321,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 ```
 
-在事件处理器的最后部分，我们加入了一个 [`SpeechSynthesisUtterance.onpause`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/onpause) 处理器，来展示[`SpeechSynthesisEvent`](/zh-CN/docs/Web/API/SpeechSynthesisEvent) 如何可以很好地使用。当 [`SpeechSynthesis.pause()`](/zh-CN/docs/Web/API/SpeechSynthesis/pause) 被调用，这将返回一条消息，报告该语音暂停的字符编号和名称。
+在事件处理器的最后部分，我们加入了一个 [`SpeechSynthesisUtterance.onpause`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/onpause) 处理器，来展示 [`SpeechSynthesisEvent`](/zh-CN/docs/Web/API/SpeechSynthesisEvent) 如何可以很好地使用。当 [`SpeechSynthesis.pause()`](/zh-CN/docs/Web/API/SpeechSynthesis/pause) 被调用，这将返回一条消息，报告该语音暂停的字符编号和名称。
 
 ```js
 utterThis.onpause = function (event) {

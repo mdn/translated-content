@@ -19,7 +19,7 @@ None.
 
 ## 例子
 
-以下代码展示了如何使用 `FileReader()` 构造器创建 [`FileReader`](/zh-CN/docs/Web/API/FileReader) 对象，和[`FileReader`](/zh-CN/docs/Web/API/FileReader)对象的用法。
+以下代码展示了如何使用 `FileReader()` 构造器创建 [`FileReader`](/zh-CN/docs/Web/API/FileReader) 对象，和 [`FileReader`](/zh-CN/docs/Web/API/FileReader)对象的用法。
 
 ```js
 function printFile(file) {

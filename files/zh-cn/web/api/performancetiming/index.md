@@ -16,9 +16,9 @@ _`PerformanceTiming` 接口不包含任何继承属性。_
 - {{domxref("PerformanceTiming.navigationStart")}} {{readonlyInline}}
   - : 是一个无符号 long long 型的毫秒数，表征了从同一个浏览器上下文的上一个文档卸载（unload）结束时的 UNIX 时间戳。如果没有上一个文档，这个值会和 `PerformanceTiming.fetchStart` 相同。
 - {{domxref("PerformanceTiming.unloadEventStart")}} {{readonlyInline}}
-  - : 是一个无符号 long long 型的毫秒数，表征了[`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件抛出时的 UNIX 时间戳。如果没有上一个文档，或者重定向中的一个不同源，这个值会返回 `0`。
+  - : 是一个无符号 long long 型的毫秒数，表征了 [`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件抛出时的 UNIX 时间戳。如果没有上一个文档，或者重定向中的一个不同源，这个值会返回 `0`。
 - {{domxref("PerformanceTiming.unloadEventEnd")}} {{readonlyInline}}
-  - : 是一个无符号 long long 型的毫秒数，表征了[`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件处理完成时的 UNIX 时间戳。如果没有上一个文档，或者重定向中的一个不同源，这个值会返回 `0`。
+  - : 是一个无符号 long long 型的毫秒数，表征了 [`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件处理完成时的 UNIX 时间戳。如果没有上一个文档，或者重定向中的一个不同源，这个值会返回 `0`。
 - {{domxref("PerformanceTiming.redirectStart")}} {{readonlyInline}}
   - : 是一个无符号 long long 型的毫秒数，表征了第一个 HTTP 重定向开始时的 UNIX 时间戳。如果没有重定向，或者重定向中的一个不同源，这个值会返回 0。
 - {{domxref("PerformanceTiming.redirectEnd")}} {{readonlyInline}}

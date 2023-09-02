@@ -54,7 +54,7 @@ Promise<Response> fetch(input[, init]);
 | 类型         | **描述**                                                                                                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `AbortError` | 请求被{{domxref("AbortController.abort()")}}终止。                                                                                                                             |
-| `TypeError`  | 从[Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)开始，如果`fetch()`接收到含有用户名和密码的 URL（例如`http://user:password@example.com`），它将会抛出一个`TypeError` 。 |
+| `TypeError`  | 从 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)开始，如果`fetch()`接收到含有用户名和密码的 URL（例如`http://user:password@example.com`），它将会抛出一个`TypeError` 。 |
 
 ## 示例
 

@@ -35,7 +35,7 @@ if (
 属性的命名空间 URI 在属性创建时被冻结。
 
 在 Firefox 3.5 及更早版本中，HTML 文档中 HTML 属性的命名空间 URI 为 null。
-在后来的版本中，遵照 HTML5，就像在 XHTML 中一样是[`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
+在后来的版本中，遵照 HTML5，就像在 XHTML 中一样是 [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
 
 你可以使用 DOM Level 2 方法 {{domxref("Element.setAttributeNS")}}创建具有指定 namespaceURI 的属性。
 

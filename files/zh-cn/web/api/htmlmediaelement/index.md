@@ -30,7 +30,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         <p>
-          表示[`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)的 HTML
+          表示 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)的 HTML
           属性，表明在视频加载可用时是否不中断地自动播放资源
         </p>
       </td>

@@ -122,7 +122,7 @@ Web Audio API 使用的音频源接口。
 
 可以编写 JavaScript 代码来处理音频数据。当然，这需要用到下面的接口和事件。
 
-> **备注：** 这些功能在 Web Audio API 的 2014 年 8 月 9 日版本中已经标记为不推荐的，这些功能很快会被[Audio_Workers](#audio_workers)代替。
+> **备注：** 这些功能在 Web Audio API 的 2014 年 8 月 9 日版本中已经标记为不推荐的，这些功能很快会被 [Audio_Workers](#audio_workers)代替。
 
 - {{domxref("ScriptProcessorNode")}}
   - : **`ScriptProcessorNode`** 接口用于通过 JavaScript 代码生成，处理，分析音频。它是一个{{domxref("AudioNode")}}类型的音频处理模块，但是它与两个缓冲区相连接，一个缓冲区里包含当前的输入数据，另一个缓冲区里包含着输出数据。每当新的音频数据被放入输入缓冲区，就会产生一个{{domxref("AudioProcessingEvent")}}事件，当这个事件处理结束时，输出缓冲区里应该写好了新数据。
@@ -144,7 +144,7 @@ Web Audio API 使用的音频源接口。
 
 ### 音频工作者
 
-在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个[WebWorker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和[前文](/zh-CN/docs/Web/API/Web_Audio_API#Audio_processing_via_JavaScript)中提到的其他接口都会被替代。
+在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个 [WebWorker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和[前文](/zh-CN/docs/Web/API/Web_Audio_API#Audio_processing_via_JavaScript)中提到的其他接口都会被替代。
 
 - {{domxref("AudioWorkerNode")}}
   - : AudioWorkerNode 也是{{domxref("AudioNode")}}类型，但是它用于与工作者线程合作来直接完成音频的生成，处理或分析等操作。

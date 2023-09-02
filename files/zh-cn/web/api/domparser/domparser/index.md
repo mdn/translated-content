@@ -17,4 +17,4 @@ var parser = new DOMParser();
 
 ### 返回值
 
-一个新建的[`DOMParser`](/zh-CN/docs/Web/API/DOMParser) 对象实例，可以通过这个对象的 `parseFromString()` 方法将字符串解析为 DOM 对象。
+一个新建的 [`DOMParser`](/zh-CN/docs/Web/API/DOMParser) 对象实例，可以通过这个对象的 `parseFromString()` 方法将字符串解析为 DOM 对象。

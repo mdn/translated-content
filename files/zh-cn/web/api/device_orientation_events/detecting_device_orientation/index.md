@@ -13,7 +13,7 @@ slug: Web/API/Device_orientation_events/Detecting_device_orientation
 
 ## 处理方向（orientation）事件
 
-要接收设备方向变化信息，只需要监听[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)事件：
+要接收设备方向变化信息，只需要监听 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)事件：
 
 > **备注：** [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
@@ -56,7 +56,7 @@ function handleOrientation(orientData) {
 
 ### 示例
 
-这个例子会成功运行在支持检测自己方向的设备中的支持[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件的浏览器中。
+这个例子会成功运行在支持检测自己方向的设备中的支持 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件的浏览器中。
 
 让我们想象一下有一个球在花园中：
 

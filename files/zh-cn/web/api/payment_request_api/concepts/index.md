@@ -40,9 +40,9 @@ slug: Web/API/Payment_Request_API/Concepts
 这种识别方式的具体使用将会极大程度地依赖不同服务各自的规范。比如，某种服务可能使用多个 URL 链接，不同 URL 的使用依赖于 API 的版本和通信方式等。
 
 - `https://apple.com/apple-pay`
-  - : 交易使用[Apple Pay](https://www.apple.com/apple-pay/)服务。目前，只有 Safari 浏览器支持这种交易方式。
+  - : 交易使用 [Apple Pay](https://www.apple.com/apple-pay/)服务。目前，只有 Safari 浏览器支持这种交易方式。
 - `https://google.com/pay`
-  - : 交易使用[Google Pay](https://pay.google.com/). 目前，只有 Chrome 及 Chrome 内核的浏览器支持这种交易方式。
+  - : 交易使用 [Google Pay](https://pay.google.com/). 目前，只有 Chrome 及 Chrome 内核的浏览器支持这种交易方式。
 
 ## 交易处理机的功能
 

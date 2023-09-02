@@ -30,7 +30,7 @@ slug: Web/API/CacheStorage
 
 ## 示例
 
-此代码片段来自于 MDN [sw-test example](https://github.com/mdn/sw-test/) （请参阅[sw-test running live](https://mdn.github.io/sw-test/).）此 service worker 脚本等待 {{domxref("InstallEvent")}} 触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理应用程序的安装过程。这包括调用 {{domxref("CacheStorage.open")}} 创建一个新的 cache，然后使用 {{domxref("Cache.addAll")}} 向其添加一系列资源。
+此代码片段来自于 MDN [sw-test example](https://github.com/mdn/sw-test/) （请参阅 [sw-test running live](https://mdn.github.io/sw-test/).）此 service worker 脚本等待 {{domxref("InstallEvent")}} 触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理应用程序的安装过程。这包括调用 {{domxref("CacheStorage.open")}} 创建一个新的 cache，然后使用 {{domxref("Cache.addAll")}} 向其添加一系列资源。
 
 在第二个代码块，我们等待 {{domxref("FetchEvent")}} 触发。我们构建自定义相应，像这样：
 

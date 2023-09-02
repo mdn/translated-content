@@ -9,7 +9,7 @@ Web Authentication API 继承自 [Credential Management API](/zh-CN/docs/Web/API
 
 ## Web authentication 概念和用例
 
-Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其他双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
+Web Authentication API（也称作 WebAuthn）使用 [asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其他双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
 
 许多网站已实现用户注册账号，登录已有账号的页面，WebAuthn 作为这些页面的替代和补充。类似其他形式的 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API)（凭据管理 API)。Web Authentication API 有两个对应于注册和登录的基本方法：
 
@@ -36,7 +36,7 @@ _图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。_
 注册步骤如下：
 
 1. **应用程序请求注册** - 应用程序发出注册请求。这个请求的协议和格式不在 WebAuthn 标准的范围内。
-2. **服务器发送挑战、用户信息和依赖方信息** - 服务器将挑战、用户信息和依赖方信息发送回应用程序。在这里，协议和格式不在 WebAuthn 标准的范围内。通常，这可以是基于 HTTPS 连接的 [REST](/zh-CN/docs/Glossary/REST)（可能会使用 [XMLHttpRequest](/zh-CN/docs/User:maybe/webidl_mdn/XMLHttpRequest_API) 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）API。不过只要在安全连接中，也可以使用 [SOAP](/zh-CN/docs/Glossary/SOAP)、[RFC 2549](https://tools.ietf.org/html/rfc2549) 或几乎任何其他协议。从服务器接收到的参数将传递给 [create()](/zh-CN/docs/Web/API/CredentialsContainer/create) ，大部分情况下只需很少修改甚至不需要做任何修改。create() 会返回一个[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，并返回包含 {{domxref("AuthenticatorAttestationResponse")}} 的 {{domxref("PublicKeyCredential")}}。**需要注意的是挑战必须是随机的 buffer（至少 16 字节），并且必须在服务器上生成以确保安全。**
+2. **服务器发送挑战、用户信息和依赖方信息** - 服务器将挑战、用户信息和依赖方信息发送回应用程序。在这里，协议和格式不在 WebAuthn 标准的范围内。通常，这可以是基于 HTTPS 连接的 [REST](/zh-CN/docs/Glossary/REST)（可能会使用 [XMLHttpRequest](/zh-CN/docs/User:maybe/webidl_mdn/XMLHttpRequest_API) 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）API。不过只要在安全连接中，也可以使用 [SOAP](/zh-CN/docs/Glossary/SOAP)、[RFC 2549](https://tools.ietf.org/html/rfc2549) 或几乎任何其他协议。从服务器接收到的参数将传递给 [create()](/zh-CN/docs/Web/API/CredentialsContainer/create) ，大部分情况下只需很少修改甚至不需要做任何修改。create() 会返回一个 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，并返回包含 {{domxref("AuthenticatorAttestationResponse")}} 的 {{domxref("PublicKeyCredential")}}。**需要注意的是挑战必须是随机的 buffer（至少 16 字节），并且必须在服务器上生成以确保安全。**
 3. **浏览器向认证器调用 authenticatorMakeCredential()** - 在浏览器内部，浏览器将验证参数并用默认值补全缺少的参数，然后这些参数会变为 {{domxref("AuthenticatorResponse.clientDataJSON")}}。其中最重要的参数之一是 origin，它是 clientData 的一部分，同时服务器将能在稍后验证它。调用 create() 的参数与 clientDataJSON 的 SHA-256 哈希一起传递到身份验证器（只有哈希被发送是因为与认证器的连接可能是低带宽的 NFC 或蓝牙连接，之后认证器只需对哈希签名以确保它不会被篡改）。
 4. **认证器创建新的密钥对和证明** - 在进行下一步之前，认证器通常会以某种形式要求用户确认，如输入 PIN，使用指纹，进行虹膜扫描等，以证明用户在场并同意注册。之后，认证器将创建一个新的非对称密钥对，并安全地存储私钥以供将来验证使用。公钥则将成为证明的一部分，被在制作过程中烧录于认证器内的私钥进行签名。这个私钥会具有可以被验证的证书链。
 5. **认证器将数据返回浏览器** - 新的公钥、全局唯一的凭证 ID 和其他的证明数据会被返回到浏览器，成为 attestationObject。

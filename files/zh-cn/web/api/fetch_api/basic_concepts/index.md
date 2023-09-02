@@ -7,7 +7,7 @@ slug: Web/API/Fetch_API/Basic_concepts
 
 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 是一个现代的概念，等同于 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)。它提供了许多与 XMLHttpRequest 相同的功能，但被设计成更具可扩展性和高效性。本文介绍了 Fetch API 的一些基本概念。
 
-> **备注：** 这篇文章可能还需要修改。如果你觉得有的概念可以解释的更好，让人们在[MDN 论坛](https://discourse.mozilla-community.org/c/mdn)上知道，或 [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room)。
+> **备注：** 这篇文章可能还需要修改。如果你觉得有的概念可以解释的更好，让人们在 [MDN 论坛](https://discourse.mozilla-community.org/c/mdn)上知道，或 [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room)。
 
 ## 简而言之
 

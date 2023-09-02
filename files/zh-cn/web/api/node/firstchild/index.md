@@ -64,7 +64,7 @@ Gecko 内核的浏览器会在源代码中标签内部有空白符的地方插�
 而不是使用者所预期得到的节点。
 
 详情请参见 [DOM 中的空白符](/zh-CN/docs/Whitespace_in_the_DOM)
-和[W3C DOM 3 FAQ: 为什么一些文本节点是空的](http://www.w3.org/DOM/faq.html#emptytext).
+和 [W3C DOM 3 FAQ: 为什么一些文本节点是空的](http://www.w3.org/DOM/faq.html#emptytext).
 
 ### 规范
 

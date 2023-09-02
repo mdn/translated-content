@@ -542,7 +542,7 @@ function draw() {
 
 新的 Path2D API 有另一个强大的特点，就是使用 SVG path data 来初始化 canvas 上的路径。这将使你获取路径时可以以 SVG 或 canvas 的方式来重用它们。
 
-这条路径将先移动到点 `(M10 10)` 然后再水平移动 80 个单位`(h 80)`，然后下移 80 个单位 `(v 80)`，接着左移 80 个单位 `(h -80)`，再回到起点处 (`z`)。你可以在[Path2D constructor](/zh-CN/docs/Web/API/Path2D.Path2D#Using_SVG_paths) 查看这个例子。
+这条路径将先移动到点 `(M10 10)` 然后再水平移动 80 个单位`(h 80)`，然后下移 80 个单位 `(v 80)`，接着左移 80 个单位 `(h -80)`，再回到起点处 (`z`)。你可以在 [Path2D constructor](/zh-CN/docs/Web/API/Path2D.Path2D#Using_SVG_paths) 查看这个例子。
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

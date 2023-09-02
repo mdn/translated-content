@@ -17,7 +17,7 @@ targetDocument.onfullscreenchange = fullscreenChangeHandler;
 
 ## Example
 
-本示例建立一个`fullscreenchange` 处理程序，`handleFullscreenChange ()`。此函数通过检查 [`event.target`](/zh-CN/docs/Web/API/Event/target) 的值来确定调用它的元素，然后将文档的[`fullscreenElement`](/zh-CN/docs/Web/API/Document/fullscreenElement) 值与元素进行比较，以查看它们是否为同一节点。
+本示例建立一个`fullscreenchange` 处理程序，`handleFullscreenChange ()`。此函数通过检查 [`event.target`](/zh-CN/docs/Web/API/Event/target) 的值来确定调用它的元素，然后将文档的 [`fullscreenElement`](/zh-CN/docs/Web/API/Document/fullscreenElement) 值与元素进行比较，以查看它们是否为同一节点。
 
 这给了我们一个值，即 `isFullscreen`, 我们将其传递到一个名为 `adjustMyControls()` 的函数，我们想象它是一个函数，可以对应用的用户界面进行调整，以便在全屏模式下而不是在窗口。
 

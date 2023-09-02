@@ -189,7 +189,7 @@ partial interface MouseEvent {
 
 > **备注：** movement 属性目前在 Firefox 中被加上前缀为 `.mozMovementX` 和 `.mozMovementY` , 在 Chrome 中为`.webkitMovementX` 和 `.webkitMovementY`。
 
-鼠标事件的两个新参数—`movementX` 和 `movementY`—提供了鼠标位置的变化情况。这两个参数的值，等于两个[`MouseEvent`](/zh-CN/DOM/MouseEvent) 属性（ `screenX` 和 `screenY）`之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ `eNow` 和 `ePrevious`）中。换言之，指针锁定参数 `movementX = eNow.screenX - ePrevious.screenX`。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）
+鼠标事件的两个新参数—`movementX` 和 `movementY`—提供了鼠标位置的变化情况。这两个参数的值，等于两个 [`MouseEvent`](/zh-CN/DOM/MouseEvent) 属性（ `screenX` 和 `screenY）`之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ `eNow` 和 `ePrevious`）中。换言之，指针锁定参数 `movementX = eNow.screenX - ePrevious.screenX`。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）
 
 ### 锁定状态
 

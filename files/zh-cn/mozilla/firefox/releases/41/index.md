@@ -53,7 +53,7 @@ Highlights:
 - 非标准 {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} 支持已经被废弃 ([Firefox bug 1023609](https://bugzil.la/1023609)).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment","#Destructured_parameter_with_default_value_assignment", 1)}} 现在已经被支持 ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号。从现在开始语法没有尖括号将会失败 ([Firefox bug 1150855](https://bugzil.la/1150855)).
-- [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (除了生成方法) 已经不再可构造 ([Firefox bug 1059908](https://bugzil.la/1059908) 和[Firefox bug 1166950](https://bugzil.la/1166950)).
+- [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (除了生成方法) 已经不再可构造 ([Firefox bug 1059908](https://bugzil.la/1059908) 和 [Firefox bug 1166950](https://bugzil.la/1166950)).
 - As part of ES2015 specification compliance, parenthesized [destructuring](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
 - The [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ([Firefox bug 1141865](https://bugzil.la/1141865)).
 
@@ -115,7 +115,7 @@ Highlights:
 
 #### 新的默认、支持字体处理
 
-数学公式需要特殊的字体。到目前为止，这些字体被硬编码在用户默认样式 `mathml.css` (使用{{MathMLElement("math")}} 标志设置字体组) 和偏好选项`font.mathfont-family` (为拉伸和大操作数设置支持字体). Firefox 41 引入一个能够自动设置\<math>标志和相应偏好选项的内置`x-math` 语言 (例如`font.name.serif.x-math`). 用户默认样式现在将\<math>标志字体设置为 serif 并且`font.mathfont-family` 被替换为 `font.name.serif.x-math`. 所有平台现在基本使用相同列表的支持字体， "Latin Modern Math" 是首选。在标准的 per-language 字体偏好菜单中，默认支持字体能够被设置。更多细节，请参照[Firefox bug 947654](https://bugzil.la/947654) 和 [Firefox bug 1160456](https://bugzil.la/1160456).
+数学公式需要特殊的字体。到目前为止，这些字体被硬编码在用户默认样式 `mathml.css` (使用{{MathMLElement("math")}} 标志设置字体组) 和偏好选项`font.mathfont-family` (为拉伸和大操作数设置支持字体). Firefox 41 引入一个能够自动设置\<math>标志和相应偏好选项的内置`x-math` 语言 (例如`font.name.serif.x-math`). 用户默认样式现在将\<math>标志字体设置为 serif 并且`font.mathfont-family` 被替换为 `font.name.serif.x-math`. 所有平台现在基本使用相同列表的支持字体， "Latin Modern Math" 是首选。在标准的 per-language 字体偏好菜单中，默认支持字体能够被设置。更多细节，请参照 [Firefox bug 947654](https://bugzil.la/947654) 和 [Firefox bug 1160456](https://bugzil.la/1160456).
 
 ### SVG
 

@@ -15,7 +15,7 @@ slug: Web/API/HTML_Drag_and_Drop_API
 
 HTML 的 drag & drop 使用了 {{domxref("Event","DOM event model")}} 以及从 {{domxref("MouseEvent","mouse events")}} 继承而来的 _{{domxref("DragEvent","drag events")}}_。一个典型的拖拽操作是这样的：用户选中一个*可拖拽的（draggable）*元素，并将其拖拽（鼠标不放开）到一个*可放置的（droppable）*元素，然后释放鼠标。
 
-在操作期间，会触发一些事件类型，有一些事件类型可能会被多次触发（比如[`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件类型）。
+在操作期间，会触发一些事件类型，有一些事件类型可能会被多次触发（比如 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件类型）。
 
 所有的 [拖拽事件类型](/zh-CN/docs/Web/API/DragEvent#Event_types) 有一个对应的 [拖拽全局属性](/zh-CN/docs/Web/API/DragEvent#GlobalEventHandlers)。每个拖拽事件类型和拖拽全局属性都有对应的描述文档。下面的表格提供了一个简短的事件类型描述，以及一个相关文档的链接。
 

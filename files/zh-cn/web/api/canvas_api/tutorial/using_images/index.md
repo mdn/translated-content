@@ -41,7 +41,7 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 ### 使用其他域名下的图片
 
-在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/HTML/CORS_settings_attributes)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas)。
+在 {{domxref("HTMLImageElement")}}上使用 [crossOrigin](/zh-CN/docs/HTML/CORS_settings_attributes)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas)。
 
 ### 使用其他 canvas 元素
 

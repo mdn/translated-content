@@ -272,7 +272,7 @@ function log(msg) {
 
 ### 处理点击
 
-由于在 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)（或系列 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件里的首个）中调用 `preventDefault()` 也会阻止相应的鼠标事件的触发，因此一般情况下我们在[`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 而不是 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 中调用它，这样，鼠标事件仍可正常触发，链接等部件也可继续工作。有些框架采取了一个替代方案，使用触摸事件代替鼠标事件来达到相同目的。 (下面的示例过于简单，可能产生奇怪的行为。这里仅仅作为一个引导。)
+由于在 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)（或系列 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件里的首个）中调用 `preventDefault()` 也会阻止相应的鼠标事件的触发，因此一般情况下我们在 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 而不是 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 中调用它，这样，鼠标事件仍可正常触发，链接等部件也可继续工作。有些框架采取了一个替代方案，使用触摸事件代替鼠标事件来达到相同目的。 (下面的示例过于简单，可能产生奇怪的行为。这里仅仅作为一个引导。)
 
 ```js
 function onTouch(evt) {

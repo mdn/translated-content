@@ -9,7 +9,7 @@ slug: Mozilla/Firefox/Releases/21
 
 ### HTML
 
-- 实现了{{HTMLElement("style")}}元素上的[`scoped`](/zh-CN/docs/Web/HTML/Element/style#scoped)属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.([Firefox bug 508725](https://bugzil.la/508725)).
+- 实现了{{HTMLElement("style")}}元素上的 [`scoped`](/zh-CN/docs/Web/HTML/Element/style#scoped)属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.([Firefox bug 508725](https://bugzil.la/508725)).
 - 实现了新的{{HTMLElement("main")}}元素 ([Firefox bug 820508](https://bugzil.la/820508)).
 
 ### JavaScript
@@ -31,7 +31,7 @@ slug: Mozilla/Firefox/Releases/21
 - Some new keyCodes for volume control are supported ([Firefox bug 674739](https://bugzil.la/674739)).
 - Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ([Firefox bug 833719](https://bugzil.la/833719)).
 - Various keyCode values for OEM sepecific keys on Windows are now supported again ([Firefox bug 833719](https://bugzil.la/833719)).
-- 实现了[`window.crypto.getRandomValues`](/zh-CN/docs/Web/API/Crypto/getRandomValues)函数 ([Firefox bug 440046](https://bugzil.la/440046))。
+- 实现了 [`window.crypto.getRandomValues`](/zh-CN/docs/Web/API/Crypto/getRandomValues)函数 ([Firefox bug 440046](https://bugzil.la/440046))。
 
 ### SVG
 

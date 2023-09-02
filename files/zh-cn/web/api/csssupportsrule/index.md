@@ -9,7 +9,7 @@ slug: Web/API/CSSSupportsRule
 
 ## 句法
 
-该语法使用所描述的[WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 格式。
+该语法使用所描述的 [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 格式。
 
 ```plain
 接口 CSSSupportsRule : CSSConditionRule {

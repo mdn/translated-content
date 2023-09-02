@@ -37,7 +37,7 @@ slug: Web/API/OscillatorNode
 ## 构造函数
 
 - {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
-  - : 创建一个 OscillatorNode 对象的示例，为 node[属性](#属性)提供可选的一个定义默认值的对象。如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。
+  - : 创建一个 OscillatorNode 对象的示例，为 node [属性](#属性)提供可选的一个定义默认值的对象。如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。
 
 ## 属性
 

@@ -25,7 +25,7 @@ console.info(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : 用于替换 msg 内的替换字符串的 JavaScript 对象。可以对输出的格式进行额外的控制。
 
-查看更多细节可访问 {{domxref("console")}} 文件内的[Outputting t](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)[ext to the console](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)
+查看更多细节可访问 {{domxref("console")}} 文件内的 [Outputting t](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)[ext to the console](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)
 
 ## 规范
 

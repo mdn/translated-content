@@ -9,7 +9,7 @@ slug: Web/API/Page_Visibility_API
 
 > **备注：** 页面可见性 API 对于节省资源和提高性能特别有用，它使页面在文档不可见时避免执行不必要的任务。
 
-当用户最小化窗口或切换到另一个选项卡时，API 会发送[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果你的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
+当用户最小化窗口或切换到另一个选项卡时，API 会发送 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果你的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
 
 {{HTMLElement("iframe")}}的可见性状态与父文档相同。使用 CSS 属性（例如{{cssxref("display", "display: none;")}}）隐藏`<iframe>`不会触发可见性事件或更改框架中包含的文档的状态。
 
@@ -127,7 +127,7 @@ if (
     - 注释：有的浏览器不支持此功能
 
 - {{domxref("Document.onvisibilitychange")}}
-  - : {{domxref("EventListener")}} 提供在[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件被触发时要调用的代码。
+  - : {{domxref("EventListener")}} 提供在 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件被触发时要调用的代码。
 
 ```js
 //startSimulation 和 pauseSimulation 在其他地方定义

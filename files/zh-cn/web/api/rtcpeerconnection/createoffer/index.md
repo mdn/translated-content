@@ -53,7 +53,7 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 - `errorCallback` {{deprecated_inline}}
   - : {{domxref("RTCPeerConnectionErrorCallback")}}将会传递给一个{{domxref("DOMException")}}对象，该对象说明了创建 offer 的请求失败的原因。
 - `options` {{optional_inline}}
-  - : 可选的[`RTCOfferOptions`](#RTCOfferOptions_dictionary)词典，提供 offer 所要求的选项。
+  - : 可选的 [`RTCOfferOptions`](#RTCOfferOptions_dictionary)词典，提供 offer 所要求的选项。
 
 ### 返回值
 

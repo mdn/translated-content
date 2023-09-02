@@ -72,14 +72,14 @@ slug: Mozilla/Firefox/Releases/78
 
 ### TLS 1.0 和 1.1 已被移除
 
-- 所有浏览器都不再支持[传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security) (TLS) 协议的 1.0 和 1.1 版本。阅读[TLS 1.0 和 1.1 删除更新](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/)以获取先前的公告，以及如果受到影响应采取的措施 ([Firefox bug 1643229](https://bugzil.la/1643229)).
+- 所有浏览器都不再支持[传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security) (TLS) 协议的 1.0 和 1.1 版本。阅读 [TLS 1.0 和 1.1 删除更新](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/)以获取先前的公告，以及如果受到影响应采取的措施 ([Firefox bug 1643229](https://bugzil.la/1643229)).
 
 ## 对于附加组件开发人员的更改
 
 - {{WebExtAPIRef("browsingData.removeCache")}} 和 {{WebExtAPIRef("browsingData.removePluginData")}} 现在支持按主机名删除。([Firefox bug 1636784](https://bugzil.la/1636784)).
-- 使用[`proxy.onRequest`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest)时，现在可以正确应用基于选项卡 ID 或窗口 ID 限制的过滤器。这对于希望仅在一个窗口中提供代理功能的加载项很有用。
+- 使用 [`proxy.onRequest`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest)时，现在可以正确应用基于选项卡 ID 或窗口 ID 限制的过滤器。这对于希望仅在一个窗口中提供代理功能的加载项很有用。
 - 现在，从“所有选项卡”下拉菜单中[单击上下文菜单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked)即可传递适当的选项卡对象。过去，活动选项卡被错误地传递了。
-- 当使用带有另存为选项的[`downloads.download`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)时，可以记住最近使用的目录。尽管此信息对开发人员用处不大，但对用户而言却非常方便。
+- 当使用带有另存为选项的 [`downloads.download`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)时，可以记住最近使用的目录。尽管此信息对开发人员用处不大，但对用户而言却非常方便。
 
 ## 旧版本
 

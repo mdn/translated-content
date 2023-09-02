@@ -128,4 +128,4 @@ function removeColors() {
 ## 参考
 
 - 定义接口，{{domxref("HTMLCanvasElement")}}
-- [HTTP](/zh-CN/docs/Web/HTTP)引用中的[Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)
+- [HTTP](/zh-CN/docs/Web/HTTP)引用中的 [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)

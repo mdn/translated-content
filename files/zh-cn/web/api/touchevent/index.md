@@ -78,7 +78,7 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件。
+  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件。
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
   - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) 事件。
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}

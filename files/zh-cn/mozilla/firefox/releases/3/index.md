@@ -16,7 +16,7 @@ slug: Mozilla/Firefox/Releases/3
 - [上线与离线事件](/zh-CN/%E4%B8%8A%E7%BA%BF%E4%B8%8E%E7%A6%BB%E7%BA%BF%E4%BA%8B%E4%BB%B6)
   - : Firefox 3 支持 WHATWG 的上线与离线事件，基于这一特性，程序可以检测当前是否有可用的互联网联接以及何时上线或下线。
 - [跨域的 XMLHttpRequest 请求](/zh-CN/%E8%B7%A8%E5%9F%9F%E7%9A%84XMLHttpRequest%E8%AF%B7%E6%B1%82)
-  - : Firefox 3 支持[W3C Access Control](http://www.w3.org/TR/access-control/)工作草案，使你有能够使用[XMLHttpRequests](/zh-CN/XMLHttpRequest)检索和操作其他站点的数据；使你能够创造令人印象深刻的以浏览器为基础的交互式应用（mashups）。
+  - : Firefox 3 支持 [W3C Access Control](http://www.w3.org/TR/access-control/)工作草案，使你有能够使用 [XMLHttpRequests](/zh-CN/XMLHttpRequest)检索和操作其他站点的数据；使你能够创造令人印象深刻的以浏览器为基础的交互式应用（mashups）。
 - [交错格式样表](/zh-CN/%E4%BA%A4%E9%94%99%E6%A0%BC%E5%BC%8F%E6%A0%B7%E8%A1%A8)
   - : Firefox 3 支持 CSS 层叠式样式表 API.
 - [基于 web 的协议处理](/zh-CN/DOM/window.navigator.registerProtocolHandler)

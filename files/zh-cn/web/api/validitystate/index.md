@@ -16,7 +16,7 @@ DOM 接口 `ValidityState` 代表一个元素可有的有效性状态（_validit
 - customError {{ReadOnlyInline}}
   - : 一个 {{jsxref("Boolean")}}，表示这个元素的自定义验证信息是否已通过调用元素的 {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} 方法设置为一个非空字符串。
 - {{domxref("ValidityState.patternMismatch", "patternMismatch")}} {{ReadOnlyInline}}
-  - : 一个 {{jsxref("Boolean")}}，`true` 表示元素值不匹配规定的[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern)，`false` 则表示匹配。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 匹配。
+  - : 一个 {{jsxref("Boolean")}}，`true` 表示元素值不匹配规定的 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern)，`false` 则表示匹配。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 匹配。
 - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} {{ReadOnlyInline}}
   - : 一个 {{jsxref("Boolean")}}，`true` 表示值已超过 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性规定的最大值，`false` 则表示小于或等于这个最大值。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。
 - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} {{ReadOnlyInline}}

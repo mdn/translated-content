@@ -74,7 +74,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-上述代码片段中，类的构造函数{{jsxref("Classes.constructor","constructor")}}总是先调用[`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)来建立正确的原型链继承关系。
+上述代码片段中，类的构造函数{{jsxref("Classes.constructor","constructor")}}总是先调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)来建立正确的原型链继承关系。
 
 在构造函数中，我们会定义元素实例所拥有的全部功能。作为示例，我们首先会将 shadow root 附加到 custom element 上，然后通过一系列 DOM 操作创建 custom element 的内部阴影 DOM（shadow DOM）结构，再将其附加到 shadow root 上，最后再将一些 CSS 附加到 shadow root 的 style 节点上。
 
@@ -191,7 +191,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 - `adoptedCallback`：当 custom element 被移动到新的文档时，被调用。
 - `attributeChangedCallback`: 当 custom element 增加、删除、修改自身属性时，被调用。
 
-我们来看一下它们的一下用法示例。下面的代码出自[life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks)示例（[查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)）。这个简单示例只是生成特定大小、颜色的方块。custom element 看起来像下面这样：
+我们来看一下它们的一下用法示例。下面的代码出自 [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks)示例（[查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)）。这个简单示例只是生成特定大小、颜色的方块。custom element 看起来像下面这样：
 
 ```html
 <custom-square l="100" c="red"></custom-square>

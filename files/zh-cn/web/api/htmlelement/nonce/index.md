@@ -18,7 +18,7 @@ HTMLElement.nonce = nonce
 
 ### 访问 nonce 属性值
 
-以前，并不是所有的浏览器都支持 `nonce` IDL 属性，因此在实际应用场景中，尝试使用[`getAttribute`](/zh-CN/docs/Web/API/Element/getAttribute) 作为备选：
+以前，并不是所有的浏览器都支持 `nonce` IDL 属性，因此在实际应用场景中，尝试使用 [`getAttribute`](/zh-CN/docs/Web/API/Element/getAttribute) 作为备选：
 
 ```plain
 let nonce = script['nonce'] || script.getAttribute('nonce');

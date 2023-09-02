@@ -59,7 +59,7 @@ self.addEventListener("notificationclick", function (event) {
 
 {{Specifications}}
 
-> **备注：** 此接口在[Notifications API 中](/zh-CN/docs/Web/API/Notifications_API)指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}}访问。
+> **备注：** 此接口在 [Notifications API 中](/zh-CN/docs/Web/API/Notifications_API)指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}}访问。
 
 ## 浏览器兼容性
 

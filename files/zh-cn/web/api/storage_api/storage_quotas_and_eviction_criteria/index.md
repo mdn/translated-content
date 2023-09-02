@@ -24,7 +24,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。
 
-在 Chrome/Opera 中，Quota Management API 处理[AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，WebSQL 和[File System API](/zh-CN/docs/WebGuide/API/File_System)的配额管理。
+在 Chrome/Opera 中，Quota Management API 处理 [AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，WebSQL 和 [File System API](/zh-CN/docs/WebGuide/API/File_System)的配额管理。
 
 ## 数据存储的不同类型
 
@@ -48,7 +48,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 - `<profile>/storage/temporary` —临时数据存储库
 - `<profile>/storage/default` — 默认数据存储库
 
-> **备注：** 引入[Storage API](/zh-CN/docs/Web/API/Web_Storage_API)后，“permanent”文件夹可以被认为是过时的；“permanent”文件夹仅存储 IndexedDB 持久性数据库。模式是“best-effort”还是“persistent”并不重要——数据存储在\<profile>/storage/default 下。
+> **备注：** 引入 [Storage API](/zh-CN/docs/Web/API/Web_Storage_API)后，“permanent”文件夹可以被认为是过时的；“permanent”文件夹仅存储 IndexedDB 持久性数据库。模式是“best-effort”还是“persistent”并不重要——数据存储在\<profile>/storage/default 下。
 
 > **备注：** 在 Firefox 中，可以通过`about:support`在 URL 栏中输入，然后按“ *配置文件夹”*标题旁边的*“在...中显示...”*按钮（例如，在 Mac OS X 上的*“在 Finder 中显示”）来查找*你的*配置文件文件夹*。
 

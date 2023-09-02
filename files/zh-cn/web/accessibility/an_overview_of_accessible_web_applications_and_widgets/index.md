@@ -11,7 +11,7 @@ web 正在变化。静态的、基于页面的站点逐渐被动态站点所取�
 
 ## 问题
 
-大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如\<div>和\<span>）。虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。那就是[ARIA](/zh-CN/ARIA)存在的意义。
+大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如\<div>和\<span>）。虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。那就是 [ARIA](/zh-CN/ARIA)存在的意义。
 
 _Example 1: Markup for a tabs widget built without ARIA labeling. There's no information in the markup to describe the widget's form and function._
 

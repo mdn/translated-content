@@ -3,7 +3,7 @@ title: FormData 对象的使用
 slug: Web/API/FormData/Using_FormData_Objects
 ---
 
-FormData 对象用以将数据编译成键值对，以便用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据 (keyed data)，而独立于表单使用。如果表单`enctype`属性设为 multipart/form-data，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。
+FormData 对象用以将数据编译成键值对，以便用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据 (keyed data)，而独立于表单使用。如果表单`enctype`属性设为 multipart/form-data，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。
 
 ## 从零开始创建 FormData 对象
 
@@ -29,7 +29,7 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **备注：** 字段 "userfile" 和 "webmasterfile" 都包含一个文件。字段 "accountnum" 是数字类型，它将被[`FormData.append()`](/zh-CN/docs/Web/API/FormData/append) 方法转换成字符串（字段类型可以是 {{ domxref("Blob") }}、{{ domxref("File") }} 或者字符串：**如果它的字段类型不是 Blob 也不是 File，则会被转换成字符串类**）。
+> **备注：** 字段 "userfile" 和 "webmasterfile" 都包含一个文件。字段 "accountnum" 是数字类型，它将被 [`FormData.append()`](/zh-CN/docs/Web/API/FormData/append) 方法转换成字符串（字段类型可以是 {{ domxref("Blob") }}、{{ domxref("File") }} 或者字符串：**如果它的字段类型不是 Blob 也不是 File，则会被转换成字符串类**）。
 
 上面的示例创建了一个 `FormData` 实例，包含"username"、"accountnum"、"userfile" 和 "webmasterfile"四个字段，然后使用 `XMLHttpRequest` 的 [`send()`](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法发送表单数据。字段 "webmasterfile" 是 {{domxref("Blob")}} 类型。一个 **Blob** 对象表示一个不可变的，原始数据的类似文件对象。Blob 表示的数据不一定是一个 JavaScript 原生格式。 [`File`](/zh-CN/docs/Web/API/File) 接口基于 Blob，继承 blob 功能并将其扩展为支持用户系统上的文件。你可以通过 [`Blob()`](/zh-CN/docs/Web/API/Blob/Blob) 构造函数创建一个 Blob 对象。
 
@@ -148,7 +148,7 @@ $.ajax({
 
 ## 不使用 FormData 对象，通过 AJAX 提交表单和上传文件
 
-如果你想知道不使用 FormData 对象的情况下，通过[AJAX](/zh-CN/docs/AJAX)序列化和提交表单 [请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)。
+如果你想知道不使用 FormData 对象的情况下，通过 [AJAX](/zh-CN/docs/AJAX)序列化和提交表单 [请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)。
 
 ## 相关链接
 

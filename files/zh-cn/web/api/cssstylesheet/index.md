@@ -76,7 +76,7 @@ _这些遗留方法是很久以前由微软提出的，应尽量避免使用，�
 
 一个样式表最多与一个{{domxref("Document")}}链接，即所应用的那个{{domxref("Document")}}（除非{{domxref("StyleSheet.disabled", "disabled")}}）。一个特定文档的 `CSSStyleSheet` 对象列表可用 {{domxref("document.styleSheets")}} 属性获取。一个特定的样式表也可以通过其所在对象（`Node` 或 `CSSImportRule`）获取，如果有的话。
 
-在文档的样式表加载时，一个 `CSSStyleSheet` 对象由浏览器自动创建并插入至文档的{{domxref("Document.styleSheets")}}列表中。由于样式表列表不能直接修改，我们没有什么有效的手段取手动创建一个新的 `CSSStyleSheet` 对象（不过[Constructable Stylesheet Objects](https://wicg.github.io/construct-stylesheets/)很快会来到 web 平台，而且 Blink 早已支持）。需要创建新的样式表就直接在文档中插入{{HTMLElement("style")}} 或 {{HTMLElement("link")}} 元素吧。
+在文档的样式表加载时，一个 `CSSStyleSheet` 对象由浏览器自动创建并插入至文档的{{domxref("Document.styleSheets")}}列表中。由于样式表列表不能直接修改，我们没有什么有效的手段取手动创建一个新的 `CSSStyleSheet` 对象（不过 [Constructable Stylesheet Objects](https://wicg.github.io/construct-stylesheets/)很快会来到 web 平台，而且 Blink 早已支持）。需要创建新的样式表就直接在文档中插入{{HTMLElement("style")}} 或 {{HTMLElement("link")}} 元素吧。
 
 以下是将样式表链接到文档的一些方式（可能不完整）：
 

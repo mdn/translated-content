@@ -91,7 +91,7 @@ myWorker.onmessage = (e) => {
 
 > **备注：** 在主线程中使用时，`onmessage` 和 `postMessage()` 必须挂在 `worker` 对象上，而在 worker 中使用时不用这样做。原因是，在 worker 内部，worker 是有效的全局作用域。
 
-> **备注：** 当一个消息在主线程和 worker 之间传递时，它被复制或者转移了，而不是共享。请参阅[worker 中数据的接收与发送：详细介绍](#worker_中数据的接收与发送：详细介绍) 获取更详尽的解释。
+> **备注：** 当一个消息在主线程和 worker 之间传递时，它被复制或者转移了，而不是共享。请参阅 [worker 中数据的接收与发送：详细介绍](#worker_中数据的接收与发送：详细介绍) 获取更详尽的解释。
 
 ### 终止 worker
 
@@ -602,7 +602,7 @@ const uInt8Array = new Uint8Array(1024 * 1024 * 32).map((v, i) => i);
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
-> **备注：** 获取更多该方法相关的可转让对象、性能及特性检测等方法，请参阅 HTML5 Rocks 中的[Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 。
+> **备注：** 获取更多该方法相关的可转让对象、性能及特性检测等方法，请参阅 HTML5 Rocks 中的 [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 。
 
 ## 嵌入式 worker
 

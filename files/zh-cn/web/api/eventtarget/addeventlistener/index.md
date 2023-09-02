@@ -126,7 +126,7 @@ someElement.addEventListener(
 
 如果你愿意，你可以用一个类似 [Modernizr](https://modernizr.com/docs) 或 [Detect It](https://github.com/rafrex/detect-it) 的第三方库来帮助你做这项测试。
 
-你可以在 [Web Incubator Community Group](https://wicg.github.io/admin/charter.html) 里关于[`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) 的文章中了解更多。
+你可以在 [Web Incubator Community Group](https://wicg.github.io/admin/charter.html) 里关于 [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) 的文章中了解更多。
 
 ## 示例
 

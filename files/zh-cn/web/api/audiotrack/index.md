@@ -12,7 +12,7 @@ slug: Web/API/AudioTrack
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : 一个布尔值，用于控制是否启用音轨的声音。设置此值`false`可使音轨的音频静音。
 - {{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}
-  - : 一个{{domxref("DOMString")}}唯一标识媒体中的曲目。此 ID 可用于通过调用{{domxref("AudioTrackList.getTrackById()")}}来定位音轨列表中的特定轨道。如果媒体支持按媒体片段[URI 规范](https://www.w3.org/TR/media-frags/)按媒体片段搜索，则 ID 也可以用作 URL 的片段部分。
+  - : 一个{{domxref("DOMString")}}唯一标识媒体中的曲目。此 ID 可用于通过调用{{domxref("AudioTrackList.getTrackById()")}}来定位音轨列表中的特定轨道。如果媒体支持按媒体片段 [URI 规范](https://www.w3.org/TR/media-frags/)按媒体片段搜索，则 ID 也可以用作 URL 的片段部分。
 - {{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}
   - : 一个{{domxref("DOMString")}}指定轨道所属的类别。例如，主音频轨道将有一个`kind`的`"main"`。
 - {{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}

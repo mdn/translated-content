@@ -7,7 +7,7 @@ slug: Web/API/URLSearchParams/values
 
 URLSearchParams.values() 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}，该遍历器允许遍历对象中包含的所有值。这些值都是{{domxref("USVString")}}对象。
 
-> **备注：** 该方法在[Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中也可使用
+> **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中也可使用
 
 ## 语法
 

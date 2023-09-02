@@ -88,7 +88,7 @@ function fillTableWithParameters(tbl) {
 }
 ```
 
-在 [found on Glitch](https://url-api.glitch.me/)上可以找到这个例子的工作版本。只要在加载页面时向 URL 添加参数，就可以在表中看到它们。例如，试试[`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me/?from=mdn&excitement=high&likelihood=inconceivable)。
+在 [found on Glitch](https://url-api.glitch.me/)上可以找到这个例子的工作版本。只要在加载页面时向 URL 添加参数，就可以在表中看到它们。例如，试试 [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me/?from=mdn&excitement=high&likelihood=inconceivable)。
 
 ## 规范
 

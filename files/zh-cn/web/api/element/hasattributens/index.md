@@ -33,7 +33,7 @@ if (d.hasAttributeNS(
 
 ## 备注
 
-该方法与[`hasAttribute`](/zh-CN/docs/Web/API/element/hasAttribute)类似，只是要检查的属性由命名空间和名称指定。只有使用命名空间的 XML 文档才使用方法
+该方法与 [`hasAttribute`](/zh-CN/docs/Web/API/element/hasAttribute)类似，只是要检查的属性由命名空间和名称指定。只有使用命名空间的 XML 文档才使用方法
 
 {{ DOMAttributeMethods() }}
 

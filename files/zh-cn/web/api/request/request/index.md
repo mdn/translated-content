@@ -64,7 +64,7 @@ fetch(myRequest)
   });
 ```
 
-在[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
+在 [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
 
 ```js
 var myImage = document.querySelector('img');

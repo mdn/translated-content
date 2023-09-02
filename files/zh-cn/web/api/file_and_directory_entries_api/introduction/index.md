@@ -3,7 +3,7 @@ title: 文件系统 API 的基本概念
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 ---
 
-本文是对[Basic_Concepts_About_the_Filesystem_API](/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)一文的译文。
+本文是对 [Basic_Concepts_About_the_Filesystem_API](/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)一文的译文。
 
 文件系统 API（File System API）模拟网络应用程序可以导航到的本地文件系统。你可以开发应用在一个沙盒的虚拟文件系统中读、写、创建以及索引文件。
 
@@ -19,7 +19,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 ## 概要
 
-文件系统 API 包括[异步](/zh-CN/DOM/File_API/File_System_API#Asynchronous_APIs)和[同步](/zh-CN/DOM/File_API/File_System_API#Synchronous_APIs)两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和[WebWorkers 一起使用](/En/Using_web_workers).
+文件系统 API 包括[异步](/zh-CN/DOM/File_API/File_System_API#Asynchronous_APIs)和[同步](/zh-CN/DOM/File_API/File_System_API#Synchronous_APIs)两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和 [WebWorkers 一起使用](/En/Using_web_workers).
 
 ### 该 API 的用途
 
@@ -102,7 +102,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 文件系统 API 拥有异步和同步两种版本。两种版本的 API 提供相同的功能和特性。事实上，它们基本相同，除了几个不同点以外。
 
-- **WebWorkers.** 异步的 API 可以在文档或[WebWorkers](/En/Using_web_workers) 上下文中使用，而同步 API 只能用于 WebWorkers.
+- **WebWorkers.** 异步的 API 可以在文档或 [WebWorkers](/En/Using_web_workers) 上下文中使用，而同步 API 只能用于 WebWorkers.
 - **Callbacks**. 异步 API 不会将数据作为返回值；作为替代，你需要传递一个回调函数。你在操作中发送请求，并在回调时得到通知。相反，同步 API 不使用回调函数，因为 API 方法返回值。
 - **异步和同步 API 的全局方法**. 异步 API 拥有这些全局方法：`requestFileSystem()` 和 `resolveLocalFileSystemURL()`. 这些方法同时是 window 对象和 worker 全局作用域的成员。另一方面，同步 API 使用如下方法：`requestFileSystemSync()` 和 `resolveLocalFileSystemSyncURL()`. 这些同步方法只是 worker 全局作用域的成员，而非 window 对象的。
 

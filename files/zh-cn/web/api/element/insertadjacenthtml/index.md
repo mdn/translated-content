@@ -56,7 +56,7 @@ d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 使用 `insertAdjacentHTML` 插入用户输入的 HTML 内容的时候，需要转义之后才能使用。
 
-如果只是为了插入文本内容（而不是 HTML 节点），不建议使用这个方法，建议使用[`node.textContent`](/zh-CN/docs/Web/API/Node/textContent) 或者 [`node.insertAdjacentText()`](/zh-CN/docs/Web/API/Element/insertAdjacentText)。因为这样不需要经过 HTML 解释器的转换，性能会好一点。
+如果只是为了插入文本内容（而不是 HTML 节点），不建议使用这个方法，建议使用 [`node.textContent`](/zh-CN/docs/Web/API/Node/textContent) 或者 [`node.insertAdjacentText()`](/zh-CN/docs/Web/API/Element/insertAdjacentText)。因为这样不需要经过 HTML 解释器的转换，性能会好一点。
 
 ## 规范
 

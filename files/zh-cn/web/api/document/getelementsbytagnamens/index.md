@@ -29,7 +29,7 @@ elements = document.getElementsByTagNameNS(namespace, name)
 
 在下面的示例中，`getElementsByTagNameNS`方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素。
 
-注意当调用`getElementsByTagName`方法获取到的节点不是文档节点时，实际上是调用了[element.getElementsByTagNameNS](/zh-CN/DOM/element.getElementsByTagNameNS)方法。
+注意当调用`getElementsByTagName`方法获取到的节点不是文档节点时，实际上是调用了 [element.getElementsByTagNameNS](/zh-CN/DOM/element.getElementsByTagNameNS)方法。
 
 需要使用以下示例，只需复制/粘贴以下代码到用.xhtml 后缀名保存的新文件中即可。
 
