@@ -958,7 +958,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
 
 ### rect() 和 xywh() 基本图形函数
 
-通过 CSS [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数，你可以使用 [`<basic-shape>`](/zh-CN/docs/Web/CSS/basic-shape) 数据类型定义矩形。在 CSS 属性（如 {{cssxref("offset-path")}}） 中，这些函数用于定义元素移动路径的形状。使用 `rect()` 函数，可以指定矩形边缘与包含块的顶部边缘和左侧边缘的偏移量。使用 `xywh()` 函数，可以指定矩形边缘与包含块的左边缘和顶边缘的偏移量，以及矩形的宽度和高度。在这两个函数中，都可以选择对边角进行舍入。有关详细信息，请参阅 `rect()` 函数的 [Firefox bug 1786161](https://bugzil.la/1786161) 和 `xywh()` 函数的 [Firefox bug 1786160](https://bugzil.la/1786160)。
+通过 CSS [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数，你可以使用 [`<basic-shape>`](/zh-CN/docs/Web/CSS/basic-shape) 数据类型定义矩形。在 CSS 属性（如 {{cssxref("offset-path")}}）中，这些函数用于定义元素移动路径的形状。使用 `rect()` 函数，可以指定矩形边缘与包含块的顶部边缘和左侧边缘的偏移量。使用 `xywh()` 函数，可以指定矩形边缘与包含块的左边缘和顶边缘的偏移量，以及矩形的宽度和高度。在这两个函数中，都可以选择对边角进行舍入。有关详细信息，请参阅 `rect()` 函数的 [Firefox bug 1786161](https://bugzil.la/1786161) 和 `xywh()` 函数的 [Firefox bug 1786160](https://bugzil.la/1786160)。
 
 <table>
   <thead>
@@ -990,7 +990,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
       <td>否</td>
     </tr>
     <tr>
-      <th>首选项名称s</th>
+      <th>首选项名称</th>
       <td colspan="2">
       <code>layout.css.motion-path-basic-shapes.enabled</code>、<code>layout.css.basic-shape-rect.enabled</code>、<code>layout.css.basic-shape-xywh.enabled</code>
     </td>
@@ -2322,7 +2322,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此功能。其他版本没�
   </tbody>
 </table>
 
-### Clear-Site-Data “cache”指令
+### Clear-Site-Data“cache”指令
 
 [`Clear-Site-Data`](/zh-CN/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP 响应标头 `cache` 指令会清除请求网站的浏览器缓存。
 
