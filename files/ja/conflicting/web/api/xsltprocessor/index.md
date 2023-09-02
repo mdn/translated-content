@@ -1,6 +1,7 @@
 ---
 title: Resources
-slug: Web/API/XSLTProcessor/Resources
+slug: conflicting/Web/API/XSLTProcessor
+original_slug: Web/API/XSLTProcessor/Resources
 ---
 
 ## 参考

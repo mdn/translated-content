@@ -1,6 +1,7 @@
 ---
 title: XSLT - パラメータの設定
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
+slug: conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 ---
 
 ## パラメータの設定

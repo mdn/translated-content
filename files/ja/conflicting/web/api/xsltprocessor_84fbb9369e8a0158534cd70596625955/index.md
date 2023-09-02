@@ -1,6 +1,7 @@
 ---
 title: Gecko の XSLT/JavaScript インターフェース
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko
+slug: conflicting/Web/API/XSLTProcessor_84fbb9369e8a0158534cd70596625955
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko
 ---
 
 1. [前書き](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction)
