@@ -233,7 +233,7 @@ null
 
 ### 布尔字面量
 
-更多信息可以参考[`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+更多信息可以参考 [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
 ```js-nolint
 true
@@ -253,7 +253,7 @@ false
 
 #### 二进制
 
-二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing binary digits after 0b”。
+二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出 [`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing binary digits after 0b”。
 
 ```js-nolint
 0b10000000000000000000000000000000 // 2147483648
@@ -263,7 +263,7 @@ false
 
 #### 八进制
 
-八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing octal digits after 0o”。
+八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出 [`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing octal digits after 0o”。
 
 ```js-nolint
 0O755 // 493
@@ -272,7 +272,7 @@ false
 
 #### 十六进制
 
-十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Identifier starts immediately after numeric literal”。
+十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出 [`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Identifier starts immediately after numeric literal”。
 
 ```js-nolint
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -379,7 +379,7 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 
 ### 模板字面量
 
-更多信息可以参考[template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
+更多信息可以参考 [template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
 
 ```js-nolint
 `string text`

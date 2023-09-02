@@ -110,7 +110,7 @@ div {
 
 ## 插值
 
-与其他的颜色插值一样，颜色渐变也通过 Alpha 预乘 (alpha-permultiplied) 计算得到结果。这样避免了因为颜色和透明度转变带来的不可预见的灰色阴影。（在使用[transparent keyword](/zh-CN/docs/Web/CSS/color_value#transparent_keyword)时，敬请注意一些没有使用这种计算方式的旧浏览器。）
+与其他的颜色插值一样，颜色渐变也通过 Alpha 预乘 (alpha-permultiplied) 计算得到结果。这样避免了因为颜色和透明度转变带来的不可预见的灰色阴影。（在使用 [transparent keyword](/zh-CN/docs/Web/CSS/color_value#transparent_keyword)时，敬请注意一些没有使用这种计算方式的旧浏览器。）
 
 ## 规范
 

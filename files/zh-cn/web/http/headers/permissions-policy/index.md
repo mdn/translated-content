@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 **`Permissions-Policy`** 响应标头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 
-更多的信息，请查看[Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
+更多的信息，请查看 [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
 
 | Header type                           | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |

@@ -38,7 +38,7 @@ for (let value of iterable) {
 // 31
 ```
 
-如果你不想修改语句块中的变量 , 也可以使用[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)。
+如果你不想修改语句块中的变量 , 也可以使用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)代替 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)。
 
 ```js
 let iterable = [10, 20, 30];

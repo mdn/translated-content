@@ -44,7 +44,7 @@ WebRTC 包含了若干相互关联的 API 和协议以达到这个目标。你�
 - [使用 WebRTC 拍摄静止的照片](/zh-CN/docs/Web/API/WebRTC_API/Taking_still_photos)
   - : 这篇文章介绍了如何在 WebRTC 的支持下可以访问到电脑或者手机的摄像头并且使用它来拍摄照片。
 - [一个简易 RTCDataChannel 的例子](/zh-CN/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-  - : {{domxref("RTCDataChannel")}} 接口是一个特性，使用它你可以在两个点之间发送和接收任意数据。它的 API 和[WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)非常相似，所以同样的代码对他们来说都可以使用。
+  - : {{domxref("RTCDataChannel")}} 接口是一个特性，使用它你可以在两个点之间发送和接收任意数据。它的 API 和 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)非常相似，所以同样的代码对他们来说都可以使用。
 
 ## 资源
 

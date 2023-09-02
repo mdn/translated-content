@@ -120,7 +120,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 
 新的语法不需要 `to()`、`from()` 和 `color-stop()` 函数，所以这些函数被丢弃。而 `top` / `bottom` 与 `left` / `right` 的顺序也被标记为不重要，所以 `Mozilla` 移除了必需首先定义 `top` / `bottom` 的限制。
 
-新的语法仍然有一个缺点：它只允许水平和垂直渐变。在多次变更解决了方向限制的问题之后，它被增加到[CSS Images Values and Content Replacement Level 3 draft in 2011-02-17](http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient)。
+新的语法仍然有一个缺点：它只允许水平和垂直渐变。在多次变更解决了方向限制的问题之后，它被增加到 [CSS Images Values and Content Replacement Level 3 draft in 2011-02-17](http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient)。
 
 - 原生支持{{ cssxref("&lt;angle&gt;") }}允许任何方向的渐变
 - 定义 magic corner 算法，允许使用简便的方式定义端点的颜色，从而简化了开发者的工作
@@ -131,7 +131,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 linear-gradient( [ [ {{cssxref("&lt;angle&gt;")}} | [top | bottom] || [left | right] ],]? <color-stop>[, <color-stop>]+);
 ```
 
-{{ cssxref("&lt;angle&gt;") }}属性的添加导致了一些混乱，它应当指向终点方向，但是这些关键字却通常指起始方向。在[related W3C CSSWG thread](http://lists.w3.org/Archives/Public/www-style/2011Jun/0377.html)可以查看一些讨论。在一项新的语法中，这个问题被修正。它仍然使用方向关键字，但是在关键字之前增加关键字 `to` 。这项语法被添加到[CSS Images Values and Content Replacement Level 3 draft in 2011-09-08](http://www.w3.org/TR/2011/WD-css3-images-20110908/#ltlinear-gradient)。
+{{ cssxref("&lt;angle&gt;") }}属性的添加导致了一些混乱，它应当指向终点方向，但是这些关键字却通常指起始方向。在 [related W3C CSSWG thread](http://lists.w3.org/Archives/Public/www-style/2011Jun/0377.html)可以查看一些讨论。在一项新的语法中，这个问题被修正。它仍然使用方向关键字，但是在关键字之前增加关键字 `to` 。这项语法被添加到 [CSS Images Values and Content Replacement Level 3 draft in 2011-09-08](http://www.w3.org/TR/2011/WD-css3-images-20110908/#ltlinear-gradient)。
 
 ```
 linear-gradient([ [ [ {{cssxref("&lt;angle&gt;")}} | to [top | bottom] || [left | right] ],]? <color-stop>[, <color-stop>]+);
@@ -281,7 +281,7 @@ div {
 
 \-moz-前缀的规则用于兼容 Fx 3.6 to Fx 15 的火狐浏览器。 -webkit-前缀的规则用于兼容在 Android 4.3 以前版本、iOS 6.1 以前版本、Safari 6。当使用带前缀的规则时，不要加“to”关键字。
 
-> **备注：** 如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非你还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
+> **备注：** 如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非你还设置文档根标签（例如\<html>标签）的 [min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
 
 ## 规范
 

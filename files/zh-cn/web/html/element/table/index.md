@@ -267,7 +267,7 @@ td {
 
 #### 对表格的行进行排序
 
-没有原生的方法对 HTML 表格的行（[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)元素）进行排序。但是通过使用 [`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`Node. removeChild()`](/zh-CN/docs/Web/API/Node/removeChild) 和 [`Node.appendChild()`](/zh-CN/docs/Web/API/Node/appendChild)，你可以实现你自己的 `sort()` 函数来对 `<tr>` 元素的[`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) 进行排序。
+没有原生的方法对 HTML 表格的行（[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)元素）进行排序。但是通过使用 [`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`Node. removeChild()`](/zh-CN/docs/Web/API/Node/removeChild) 和 [`Node.appendChild()`](/zh-CN/docs/Web/API/Node/appendChild)，你可以实现你自己的 `sort()` 函数来对 `<tr>` 元素的 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) 进行排序。
 
 在下面的示例中，你可以看到具体如何这样做。我们把这个自定义方法附加到 \<tbody> 元素上，这样它就会按照数值增加的顺序对表格单元格进行排序，并更新显示内容以适应需要。
 

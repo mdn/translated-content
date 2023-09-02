@@ -7,7 +7,7 @@ slug: Web/HTML/Element/col
 
 **HTML `<col>` 元素** 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于{{HTMLElement("colgroup")}}元素内。
 
-此元素允许使用 CSS 进行样式列，但只有少数属性将对该列产生影响（请参阅列表的[CSS 2.1 规范](https://www.w3.org/TR/CSS21/tables.html#columns)）。
+此元素允许使用 CSS 进行样式列，但只有少数属性将对该列产生影响（请参阅列表的 [CSS 2.1 规范](https://www.w3.org/TR/CSS21/tables.html#columns)）。
 
 <table class="properties">
   <tbody>

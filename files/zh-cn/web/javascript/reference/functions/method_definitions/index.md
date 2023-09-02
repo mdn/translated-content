@@ -31,7 +31,7 @@ var obj = {
 
 ## 描述
 
-该简写语法与 ECMAScript 2015 的[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)和[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)语法类似。
+该简写语法与 ECMAScript 2015 的 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)语法类似。
 
 如下代码：
 

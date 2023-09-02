@@ -45,7 +45,7 @@ if (!Uint8Array.prototype.join) {
 }
 ```
 
-如果你需要支持过时的 JavaScript 引擎，它们不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
+如果你需要支持过时的 JavaScript 引擎，它们不支持 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
 
 ## 规范
 

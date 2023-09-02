@@ -41,7 +41,7 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
 
   - : 由一个{{cssxref("&lt;color&gt;")}}值组成，并且跟随着一个可选的终点位置（可以是一个{{cssxref("&lt;percentage&gt;")}}或者是沿着渐变轴的{{cssxref("&lt;length&gt;")}}）。CSS 渐变的颜色渲染采取了与 SVG 相同的规则。
 
-    > **备注：** 渲染颜色中间点的规则[CSS 渐变中的色标](#Gradient_with_multiple_color_stops) 与[SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
+    > **备注：** 渲染颜色中间点的规则 [CSS 渐变中的色标](#Gradient_with_multiple_color_stops) 与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
 
 ### 形式语法
 

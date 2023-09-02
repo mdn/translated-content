@@ -5,7 +5,7 @@ slug: Web/API/WebGLActiveInfo
 
 {{APIRef("WebGL")}}
 
-**WebGLActiveInfo**是[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，并且代表了调用 {{domxref("WebGLRenderingContext.getActiveAttrib()")}} 和{{domxref("WebGLRenderingContext.getActiveUniform()")}} 这两个方法后传回的信息。
+**WebGLActiveInfo**是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，并且代表了调用 {{domxref("WebGLRenderingContext.getActiveAttrib()")}} 和{{domxref("WebGLRenderingContext.getActiveUniform()")}} 这两个方法后传回的信息。
 
 ## 属性值
 

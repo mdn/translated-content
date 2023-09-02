@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 
 {{jsSidebar("Functions")}}
 
-**箭头函数表达式**的语法比[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，并且没有自己的[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)，[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)或[`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+**箭头函数表达式**的语法比[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，并且没有自己的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)，[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)或 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
@@ -172,7 +172,7 @@ console.log(adder.addThruCall(1)); // 仍然输出 2
 
 ### 不绑定`arguments`
 
-箭头函数不绑定[Arguments 对象](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。因此，在本示例中，`arguments`只是引用了封闭作用域内的 arguments：
+箭头函数不绑定 [Arguments 对象](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。因此，在本示例中，`arguments`只是引用了封闭作用域内的 arguments：
 
 ```js
 var arguments = [1, 2, 3];

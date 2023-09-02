@@ -93,7 +93,7 @@ object[foo] = "value";
 console.log(object[bar]);
 ```
 
-上述的代码的输出也是 "value"，由于对象 foo 和 bar 都会被转成相同的字符串。在[SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) JavaScript 引擎中，这个字符串是 "\[object Object]"。
+上述的代码的输出也是 "value"，由于对象 foo 和 bar 都会被转成相同的字符串。在 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) JavaScript 引擎中，这个字符串是 "\[object Object]"。
 
 ### 方法绑定
 
@@ -101,7 +101,7 @@ console.log(object[bar]);
 
 ### 注意`eval`
 
-在那些可通过方括号表示法替换的场景下，JavaScript 新手在使用[eval](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 经常会犯错。例如，下面的语法经常在很多代码中找到。
+在那些可通过方括号表示法替换的场景下，JavaScript 新手在使用 [eval](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 经常会犯错。例如，下面的语法经常在很多代码中找到。
 
 ```js
 x = eval("document.forms.form_name.elements." + strFormControl + ".value");

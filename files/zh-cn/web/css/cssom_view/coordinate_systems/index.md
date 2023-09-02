@@ -5,7 +5,7 @@ slug: Web/CSS/CSSOM_view/Coordinate_systems
 
 {{CSSRef}}
 
-当我们需要在图形上指定一点的坐标[algebra](https://zh.wikipedia.org/wiki/algebra))，这个坐标需要先对于某一个固定点。这个固定点我们称为原点[origin](<https://zh.wikipedia.org/wiki/Origin_(mathematics)>). 这个指定点的坐标即为包含在各个维度上相对于远点的距离值。
+当我们需要在图形上指定一点的坐标 [algebra](https://zh.wikipedia.org/wiki/algebra))，这个坐标需要先对于某一个固定点。这个固定点我们称为原点 [origin](<https://zh.wikipedia.org/wiki/Origin_(mathematics)>). 这个指定点的坐标即为包含在各个维度上相对于远点的距离值。
 
 下面我将谈谈基于 CSS 对象模型的坐标系系统。大体上来讲这些坐标系唯一的不同就是坐标原点不一样。
 

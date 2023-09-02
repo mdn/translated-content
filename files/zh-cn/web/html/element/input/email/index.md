@@ -274,7 +274,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ## 示例
 
-这里我们有一个 ID 为 `emailAddress` 的电子邮件输入框，它最多可以有 256 个字符长。输入框本身的宽度为 64 个字符，并在字段为空时显示文本 `user@example.gov` 作为占位符。此外，通过使用[`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple)属性，该框被配置为允许用户输入零个或多个电子邮件地址，用逗号分隔，如[允许多个电子邮件地址](#允许多个电子邮件地址)中所述。最后，[`list`](/zh-CN/docs/Web/HTML/Attributes/list) 属性包含一个 {{HTMLElement("datalist")}} 的 ID，其 {{HTMLElement("option")}} 指定一组建议值，供用户选择。
+这里我们有一个 ID 为 `emailAddress` 的电子邮件输入框，它最多可以有 256 个字符长。输入框本身的宽度为 64 个字符，并在字段为空时显示文本 `user@example.gov` 作为占位符。此外，通过使用 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple)属性，该框被配置为允许用户输入零个或多个电子邮件地址，用逗号分隔，如[允许多个电子邮件地址](#允许多个电子邮件地址)中所述。最后，[`list`](/zh-CN/docs/Web/HTML/Attributes/list) 属性包含一个 {{HTMLElement("datalist")}} 的 ID，其 {{HTMLElement("option")}} 指定一组建议值，供用户选择。
 
 作为补充，{{HTMLElement("label")}} 元素被用来为电子邮件输入框建立一个标签，其 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性引用了 {{HTMLElement("input")}} 元素的 `emailAddress` ID。通过这种方式将这两个元素联系起来，点击标签将聚焦输入元素。
 

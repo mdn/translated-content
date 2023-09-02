@@ -13,7 +13,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_me
 
 许多人开始关注 flexbox 的最初原因是在 flex 容器中能够很好的对齐其中的元素。flexbox 可以设置在其交叉轴以及主轴上的对齐属性。
 
-这些属性最开始出现在 flexbox 规范中，现在已经成为[Box Alignment 规范](https://www.w3.org/TR/css-align-3/)的一部分。这个规范详细说明了在所有布局中（不仅仅是 flexbox）对齐属性是如何起作用的。对齐属性用于设置元素对齐方式和沿轴的空间分配。
+这些属性最开始出现在 flexbox 规范中，现在已经成为 [Box Alignment 规范](https://www.w3.org/TR/css-align-3/)的一部分。这个规范详细说明了在所有布局中（不仅仅是 flexbox）对齐属性是如何起作用的。对齐属性用于设置元素对齐方式和沿轴的空间分配。
 
 之所以在 flexbox 规范和 box alignment 模块规范中都有对对齐属性的详细描述，是为了确保 flexbox 规范的完成不会受 box alignment 模块规范的影响，因为后者需要详细说明所有的布局类型中的对齐方法。flexbox 规范中有一条注释指出将来一旦 Box Alignment Level 3 完成，它将会取代 flexbox 规范中的相关定义：
 

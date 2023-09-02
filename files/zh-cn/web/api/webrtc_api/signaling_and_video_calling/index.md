@@ -9,7 +9,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 是一个完全对等技术，用于实时交换音频、视频和数据，同时提供一个中心警告。如其他地方所讨论的，必须进行一种发现和媒体格式协商，以使不同网络上的两个设备相互定位。这个过程被称为**信令**，并涉及两个设备连接到第三个共同商定的服务器。通过这个第三方服务器，这两台设备可以相互定位，并交换协商消息。
 
-在本文中，我们将进一步扩充 [WebSocket chat](https://webrtc-from-chat.glitch.me/) 作为我们的 WebSocket 文档的一部分（本文链接即将发布;它实际上还没有在线），以支持在用户之间的双向视频通话。你可以在[Glitch](https://webrtc-from-chat.glitch.me/)上查看这个例子，你也尝试[修改](https://glitch.com/edit/#!/remix/webrtc-from-chat)这个例子。你还可以在[GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上查看完整的项目代码。
+在本文中，我们将进一步扩充 [WebSocket chat](https://webrtc-from-chat.glitch.me/) 作为我们的 WebSocket 文档的一部分（本文链接即将发布;它实际上还没有在线），以支持在用户之间的双向视频通话。你可以在 [Glitch](https://webrtc-from-chat.glitch.me/)上查看这个例子，你也尝试[修改](https://glitch.com/edit/#!/remix/webrtc-from-chat)这个例子。你还可以在 [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上查看完整的项目代码。
 
 > **备注：** 如果你尝试在 Glitch 的例子，请注意任何代码的改动将立即重置所有连接。并且这个例子有短暂的延迟；Glitch 的例子仅仅作为简单的实验和测试用途。
 
@@ -17,7 +17,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 两个设备之间建立 WebRTC 连接需要一个**信令服务器**来实现双方通过网络进行连接。信令服务器的作用是作为一个中间人帮助双方在尽可能少的暴露隐私的情况下建立连接。那我们如何实现这个服务器并且它是如何工作的呢？
 
-WebRTC 并没有提供信令传递机制，你可以使用任何你喜欢的方式如[WebSocket](/zh-CN/docs/Web/API/WebSocket_API) 或者{{domxref("XMLHttpRequest")}} 等等，来交换彼此的令牌信息。
+WebRTC 并没有提供信令传递机制，你可以使用任何你喜欢的方式如 [WebSocket](/zh-CN/docs/Web/API/WebSocket_API) 或者{{domxref("XMLHttpRequest")}} 等等，来交换彼此的令牌信息。
 
 重要的是信令服务器并不需要理解和解释信令数据内容。虽然它基于 {{Glossary("SDP")}}但这并不重要：通过信令服务器的消息的内容实际上是一个黑盒。重要的是，当{{Glossary("ICE")}}子系统指示你将信令数据发送给另一个对等方时，你就这样做，而另一个对等方知道如何接收此信息并将其传递给自己的 ICE 子系统。你所要做的就是来回传递信息。内容对信令服务器一点都不重要。
 
@@ -181,7 +181,7 @@ if (sendToClients) {
 
 #### 向信令服务器发送信息
 
-在整个代码中，我们调用 `sendToServer()` 以便向信令服务器发送消息。此函数使用[WebSocket](/zh-CN/docs/Web/API/WebSockets_API)连接执行其工作：
+在整个代码中，我们调用 `sendToServer()` 以便向信令服务器发送消息。此函数使用 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API)连接执行其工作：
 
 ```js
 function sendToServer(msg) {
@@ -349,11 +349,11 @@ function createPeerConnection() {
 - {{domxref("RTCPeerConnection.onremovetrack")}}
   - : 调用与 `ontrack`相对应的对象来处理 `removetrack` 事件；当远程对等端从正在发送的媒体中删除磁道时，它将发送到`RTCPeerConnection`。参见[处理流的移除](#处理流的移除) 。
 - {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
-  - : ICE 层发送 `iceconnectionstatechange` 事件，让你了解 ICE 连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的[ICE 连接状态](#ice_连接状态)中查看此示例的代码。
+  - : ICE 层发送 `iceconnectionstatechange` 事件，让你了解 ICE 连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的 [ICE 连接状态](#ice_连接状态)中查看此示例的代码。
 - {{domxref("RTCPeerConnection.onicegatheringstatechange")}}
   - : 当 ICE 代理收集候选对象的过程从一个状态切换到另一个状态（例如开始收集候选对象或完成协商）时，ICE 层将向你发送事件（“ICegulatingStateChange”）事件。见下文 [ICE 收集状态](#ice_收集状态)。
 - {{domxref("RTCPeerConnection.onsignalingstatechange")}}
-  - : 当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC 架构将向你发送 `signalingstatechange` 消息。参见[ICE 信令状态](#ice_信令状态)查看我们的代码。
+  - : 当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC 架构将向你发送 `signalingstatechange` 消息。参见 [ICE 信令状态](#ice_信令状态)查看我们的代码。
 
 #### 开始协商
 
@@ -488,7 +488,7 @@ function handleICECandidateEvent(event) {
 
 ##### 接收 ICE 候选
 
-信令服务器使用它选择的任何方法将每个 ICE 候选传递给目标对等机；在我们的示例中，我们用的是 JSON 对象， `type` 属性包含字符串 `"new-ice-candidate"`。我们的 r `handleNewICECandidateMsg()` 函数由主[WebSocket](/zh-CN/docs/MDN/Doc_status/API/WebSockets)传入消息代码调用，以处理这些消息：
+信令服务器使用它选择的任何方法将每个 ICE 候选传递给目标对等机；在我们的示例中，我们用的是 JSON 对象， `type` 属性包含字符串 `"new-ice-candidate"`。我们的 r `handleNewICECandidateMsg()` 函数由主 [WebSocket](/zh-CN/docs/MDN/Doc_status/API/WebSockets)传入消息代码调用，以处理这些消息：
 
 ```js
 function handleNewICECandidateMsg(msg) {
@@ -611,7 +611,7 @@ function closeVideoCall() {
 3. 通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
 4. 设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
 
-然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject)和[`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性。这就完成了流与视频元素的分离。
+然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject)和 [`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性。这就完成了流与视频元素的分离。
 
 最后，我们在"Hang Up"按钮上将{{domxref("HTMLElement.disabled", "disabled")}}属性设置为 `true`，使其在没有调用的情况下不可点击；然后我们将`targetUsername` 设置为 `null` ，因为我们不再与任何人交谈。这允许用户呼叫另一个用户，或接收来电。
 
@@ -666,6 +666,6 @@ function handleICEGatheringStateChangeEvent(event) {
 
 ## 下一步
 
-现在你可以[在 Glitch 上尝试这个例子](https://webrtc-from-chat.glitch.me/)，以看到它的实际效果。打开两个设备上的 Web 控制台并查看记录的输出，尽管你在上面所示的代码中看不到它，但是服务器上（以及[GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上）的代码有很多控制台输出，因此你可以看到信令和连接进程在工作。
+现在你可以[在 Glitch 上尝试这个例子](https://webrtc-from-chat.glitch.me/)，以看到它的实际效果。打开两个设备上的 Web 控制台并查看记录的输出，尽管你在上面所示的代码中看不到它，但是服务器上（以及 [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上）的代码有很多控制台输出，因此你可以看到信令和连接进程在工作。
 
 另一个明显的改进是添加了一个“铃声”功能，这样一来，一个"用户 X 正在呼叫。你是否要应答？" 提示会首先出现，而不仅仅是请求用户允许使用相机和麦克风。

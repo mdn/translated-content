@@ -7,7 +7,7 @@ slug: Web/API/Window/devicemotion_event
 
 ## 摘要
 
-一个发送到窗口的[`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)事件处理程序。
+一个发送到窗口的 [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)事件处理程序。
 
 ## 语法
 

@@ -61,7 +61,7 @@ slug: Web/HTML/Element/link
 其他用法的注解：
 
 - `<link>`元素可以出现在{{HTMLElement("head")}}元素或者{{HTMLElement("body")}}元素中，具体取决于它是否有一个**body-ok**的[链接类型](https://html.spec.whatwg.org/multipage/links.html#body-ok)。例如，`stylesheet`链接类型是 body-ok 的，因此`<link rel="stylesheet">`允许出现在 body 中。然而，这不是一种好的可遵循的实践方式；更合理的方式是，将你的`<link>`元素从你的 body 内容中分离出来，将其放在`<head>`中。
-- 当使用`<link>`为网站创建一个 favicon 时，你的网站使用内容安全策略 (Content Security Policy，CSP) 来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证{{HTTPHeader("Content-Security-Policy")}}头的[`img-src` directive](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。
+- 当使用`<link>`为网站创建一个 favicon 时，你的网站使用内容安全策略 (Content Security Policy，CSP) 来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证{{HTTPHeader("Content-Security-Policy")}}头的 [`img-src` directive](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。
 - HTML 和 XHTML 规范为`<link>`元素定义了一些事件处理器 (_event handler_) ，但是对于它们的使用方法不明确。
 - 在 XHTML 1.0 下，例如`<link>`的空元素需要一个尾斜杠：`<link />`。
 - WebTV 支持`rel`使用`next`值，用于在一个 document series 中预加载下一页。
@@ -108,7 +108,7 @@ slug: Web/HTML/Element/link
     > **备注：** 只有存在 rel=“preload”或 rel=“prefetch”时，importance 属性才能用于\<link>元素。
 
 - `integrity` {{experimental_inline}}
-  - : 包含行内元数据，它是一个你用浏览器获取的资源文件的哈希值，以 base64 编码的方式加的密，这样用户能用它来验证一个获取到的资源，在传送时未被非法篡改，详情查看[Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)。
+  - : 包含行内元数据，它是一个你用浏览器获取的资源文件的哈希值，以 base64 编码的方式加的密，这样用户能用它来验证一个获取到的资源，在传送时未被非法篡改，详情查看 [Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
   - : 这个属性规定了外部资源适用的媒体类型。它的值必须是"[媒体查询](/zh-CN/docs/Web/Guide/CSS/Media_queries)"。这个属性使得用户代理能选择最适合设备运行的媒体类型。
     - 在 HTML 4 中，该属性只能是一组以空白符作为分隔的媒体描述文字，比如"[媒体类型](/zh-CN/docs/Web/CSS/@media)"规定了该元素可取的属性，如 print、screen、aural、braille。HTML5 将该属性值扩展为任意类型的"[媒体查询](/zh-CN/docs/CSS/Media_queries)"，"媒体查询"将 HTML4 的属性值都包括在内。
@@ -124,7 +124,7 @@ slug: Web/HTML/Element/link
   - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Link_types)的用空格分隔的列表。
 - `sizes`
 
-  - : 这个属性定义了包含相应资源的可视化媒体中的 icons 的大小。它只有在[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)包含 icon 的[link 类型值](/zh-CN/docs/Web/HTML/Link_types)。它可能有如下的规则。
+  - : 这个属性定义了包含相应资源的可视化媒体中的 icons 的大小。它只有在 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)包含 icon 的 [link 类型值](/zh-CN/docs/Web/HTML/Link_types)。它可能有如下的规则。
 
     - `any` 表示图标可以按矢量格式缩放到任意大小，例如 `image/svg+xml`。
     - 一个由空白符分隔的尺寸列表。每一个都以`<width in pixels>x<height in pixels>` 或 `<width in pixels>X<height in pixels>给出。`尺寸列表中的每一个尺寸都必须包含在资源里。
@@ -157,9 +157,9 @@ slug: Web/HTML/Element/link
 
 - `rev`{{Deprecated_Inline}}
 
-  - : 此属性的值显示了 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)的可能值。
+  - : 此属性的值显示了 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的 [Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)的可能值。
 
-    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，你应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
+    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，你应该使用具有相反链接类型值的 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
 
 ## 示例
 
@@ -249,7 +249,7 @@ slug: Web/HTML/Element/link
 
 ### 预加载例子
 
-你可以在[Preloading content with rel="preload"](/zh-CN/docs/Web/HTML/Preloading_content)找到`<link rel="preload">`的详细例子。
+你可以在 [Preloading content with rel="preload"](/zh-CN/docs/Web/HTML/Preloading_content)找到`<link rel="preload">`的详细例子。
 
 ## 概要
 

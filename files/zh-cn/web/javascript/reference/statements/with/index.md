@@ -55,13 +55,13 @@ function f(foo, values) {
 }
 ```
 
-如果是在 ECMAScript 5 环境调用`f([1,2,3], obj)`，则`with`语句中变量`values`将指向函数的第二个参数`values`。但是，ECMAScript 6 标准给[`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)添加了一个新属性`values`，所有数组实例将继承这个属性。所以在 ECMAScript 6 环境中，`with`语句中变量`values`将指向`[1,2,3].values`。
+如果是在 ECMAScript 5 环境调用`f([1,2,3], obj)`，则`with`语句中变量`values`将指向函数的第二个参数`values`。但是，ECMAScript 6 标准给 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)添加了一个新属性`values`，所有数组实例将继承这个属性。所以在 ECMAScript 6 环境中，`with`语句中变量`values`将指向`[1,2,3].values`。
 
 ## 示例
 
 ### 使用 with 语句
 
-下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的[`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos` 和 [`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
+下面的`with`语句指定 [`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的 [`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos` 和 [`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
 
 ```js
 var a, x, y;

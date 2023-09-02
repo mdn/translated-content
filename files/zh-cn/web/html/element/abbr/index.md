@@ -52,7 +52,7 @@ slug: Web/HTML/Element/abbr
 
 当然，我们不是所有的缩写都要使用`<abbr>`标记。但是其在下面一些场景很有帮助：
 
-- 当你想为缩写在文档流外提供一段扩展或定义的时候，为 `<abbr>` 设置一个合适的[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。
+- 当你想为缩写在文档流外提供一段扩展或定义的时候，为 `<abbr>` 设置一个合适的 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。
 - 在定义一个读者可能不太熟悉的缩写时，使用 `<abbr>` 和`title`属性或内联的文本来表现这个术语。
 - 当文本中出现需要进行语义上的标注的缩写词时，`<abbr>`元素可用于依次将其作用样式和脚本。
 - 可以将 `<abbr>` 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。请参阅下面的示例 [定义一个缩写](#定义一个缩写)。

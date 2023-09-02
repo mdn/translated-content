@@ -11,7 +11,7 @@ slug: Web/CSS/border-bottom-left-radius
 
 一个无论是图像或颜色的背景，都会在边框上被裁剪，即使背景是圆角的; 裁剪的确切位置由 {{cssxref("background-clip")}} 属性定义。
 
-> **备注：** 如果该属性的值没有被一个在**`border-bottom-left-radius`** 属性后，作用于当前元素上的{{cssxref("border-radius")}}简写属性设置，那么该属性值将会被[shorthand property](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为初始值。
+> **备注：** 如果该属性的值没有被一个在**`border-bottom-left-radius`** 属性后，作用于当前元素上的{{cssxref("border-radius")}}简写属性设置，那么该属性值将会被 [shorthand property](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为初始值。
 
 {{cssinfo}}
 

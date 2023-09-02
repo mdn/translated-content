@@ -56,7 +56,7 @@ slug: Web/HTML/Element/th
     - `center`: 单元格内容居中
     - `right`: 单元格内容右对齐
     - `justify` (仅文字内容): 内容拉伸以覆盖单元格
-    - `char` (仅文字内容): 内容相对`<th>`标签中的某个字符对齐（默认值是页面语言的小数点字符）。该字符由[`char`](/zh-CN/docs/Web/HTML/Element/th#char) 和[`charoff`](/zh-CN/docs/Web/HTML/Element/th#charoff) 属性定义。对齐方式的默认值是 `left`.
+    - `char` (仅文字内容): 内容相对`<th>`标签中的某个字符对齐（默认值是页面语言的小数点字符）。该字符由 [`char`](/zh-CN/docs/Web/HTML/Element/th#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/th#charoff) 属性定义。对齐方式的默认值是 `left`.
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
     >
@@ -71,9 +71,9 @@ slug: Web/HTML/Element/th
 
 - `bgcolor` {{Non-standard_inline}}
 
-  - : 这个属性定义了每列中每单元格的背景色。它由带有‘#’前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
+  - : 这个属性定义了每列中每单元格的背景色。它由带有‘#’前缀的 6 位数的十六进制码组成，并在 [sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
 
-    > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
+    > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用 [CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用 [CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
 
 - `char` {{Deprecated_inline}}
 
@@ -107,7 +107,7 @@ slug: Web/HTML/Element/th
 
   - : 这个属性指定了单元格内文本的垂直对齐方式。这个属性可能有以下值：
 
-    - `baseline`: 将文本置于单元格底部并将其与字母的[baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)对齐而不是与底部。若字母没有 `baseline` 以下的部分（即为无[降部](https://www.wikiwand.com/zh/%E9%99%8D%E9%83%A8)）那么 `baseline` 值起到的效果便和 `bottom` 相同。
+    - `baseline`: 将文本置于单元格底部并将其与字母的 [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)对齐而不是与底部。若字母没有 `baseline` 以下的部分（即为无[降部](https://www.wikiwand.com/zh/%E9%99%8D%E9%83%A8)）那么 `baseline` 值起到的效果便和 `bottom` 相同。
     - `bottom`: 将文本置于底部。
     - `middle`: 将文本置于单元格中央。
     - `top`: 将文本置于单元格顶部。
@@ -116,7 +116,7 @@ slug: Web/HTML/Element/th
 
 - `width` {{Deprecated_inline}}
 
-  - : 这个属性用来定义一个期望的单元格宽。额外的空间可以藉由[cellspacing](/zh-CN/docs/Web/API/HTMLTableElement/cellSpacing)和 [cellpadding](/zh-CN/docs/Web/API/HTMLTableElement/cellPadding) 属性来增加，并且{{HTMLElement("col")}}元素的宽也可以创造额外空间。但是，如果一列宽太窄以至于无法恰当显示 某单元格时，它会被自动加宽。
+  - : 这个属性用来定义一个期望的单元格宽。额外的空间可以藉由 [cellspacing](/zh-CN/docs/Web/API/HTMLTableElement/cellSpacing)和 [cellpadding](/zh-CN/docs/Web/API/HTMLTableElement/cellPadding) 属性来增加，并且{{HTMLElement("col")}}元素的宽也可以创造额外空间。但是，如果一列宽太窄以至于无法恰当显示 某单元格时，它会被自动加宽。
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。使用 CSS {{cssxref("width")}}属性代替。
 

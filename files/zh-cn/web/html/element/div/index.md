@@ -9,7 +9,7 @@ slug: Web/HTML/Element/div
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-作为一个“纯粹的”容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用[`class`](/zh-CN/docs/Web/HTML/Global_attributes#class)或是[`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class)或是 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
 
 <table class="properties">
  <tbody>

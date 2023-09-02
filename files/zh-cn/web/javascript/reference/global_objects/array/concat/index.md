@@ -29,7 +29,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 ## 描述
 
-`concat` 方法创建一个新数组。该数组将首先由调用它的对象中的元素填充。然后，对于每个参数，它的值将被连接到数组中——对于普通对象或基元，参数本身将成为最终数组的一个元素；对于属性[`Symbol.isConcatSpreadable`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable)设置为真的数组或类数组对象，参数的每个元素都将是独立地添加到最终数组中。`concat` 方法不会递归到嵌套数组参数中。
+`concat` 方法创建一个新数组。该数组将首先由调用它的对象中的元素填充。然后，对于每个参数，它的值将被连接到数组中——对于普通对象或基元，参数本身将成为最终数组的一个元素；对于属性 [`Symbol.isConcatSpreadable`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable)设置为真的数组或类数组对象，参数的每个元素都将是独立地添加到最终数组中。`concat` 方法不会递归到嵌套数组参数中。
 
 `concat()` 方法是一种[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会更改 `this` 或作为参数提供的任何数组，而是返回包含与原始数组中的元素相同的元素的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。
 

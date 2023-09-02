@@ -15,13 +15,13 @@ slug: Web/CSS/CSS_media_queries
 
 在 [HTML](/zh-CN/docs/Web/HTML) 中，媒体查询可以应用于各种元素：
 
-- 在{{HTMLElement("link")}}元素的[`media`](/zh-CN/docs/Web/HTML/Element/link#media)属性中，它们定义了待应用链接资源（通常是 CSS）的媒体。
-- 在{{HTMLElement("source")}}元素的[`media`](/zh-CN/docs/Web/HTML/Element/source#media)属性中，它们定义待应用源的媒体。 （这仅在{{HTMLElement("picture")}}元素内有效。）
-- 在{{HTMLElement("style")}}元素的[`media`](/zh-CN/docs/Web/HTML/Element/style#media)属性中，它们定义待应用样式的媒体。
+- 在{{HTMLElement("link")}}元素的 [`media`](/zh-CN/docs/Web/HTML/Element/link#media)属性中，它们定义了待应用链接资源（通常是 CSS）的媒体。
+- 在{{HTMLElement("source")}}元素的 [`media`](/zh-CN/docs/Web/HTML/Element/source#media)属性中，它们定义待应用源的媒体。 （这仅在{{HTMLElement("picture")}}元素内有效。）
+- 在{{HTMLElement("style")}}元素的 [`media`](/zh-CN/docs/Web/HTML/Element/style#media)属性中，它们定义待应用样式的媒体。
 
 ### 在 JavaScript 中使用媒体查询
 
-在[JavaScript](/zh-CN/docs/Web/JavaScript)中，你可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。你还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。借助此功能，你的站点或应用可以响应设备配置，方向或状态的更改。
+在 [JavaScript](/zh-CN/docs/Web/JavaScript)中，你可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。你还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。借助此功能，你的站点或应用可以响应设备配置，方向或状态的更改。
 
 你可以学习更多以编程方式使用媒体查询在[测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)中。
 

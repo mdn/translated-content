@@ -394,7 +394,7 @@ try {
 
 #### 嵌套 try...catch 语句
 
-你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
+你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅 [try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
 
 ### 使用`Error`对象
 

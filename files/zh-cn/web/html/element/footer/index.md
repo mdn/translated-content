@@ -22,7 +22,7 @@ slug: Web/HTML/Element/footer
 ## 使用说明
 
 - \<footer>元素内的作者信息应包含在{{HTMLElement("address")}} 元素中。
-- \<footer>元素不是章节内容，因此在[outline](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document)中不能包含新的章节。
+- \<footer>元素不是章节内容，因此在 [outline](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document)中不能包含新的章节。
 
 ## 例子
 

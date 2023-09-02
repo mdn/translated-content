@@ -27,7 +27,7 @@ The {{domxref("HMDVRDevice.getEyeParameters()")}} method returns a {{domxref("VR
 
 > **备注：** To find out more about using these interfaces in your own app, read [Using the WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API). To learn more about the basic concepts behind VR, read [WebVR concepts](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts).
 >
-> 注释：要了解更多关于如何在你的应用程序中使用这些接口，请阅读文章[Using the WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API). 要学习更多关于 VR 技术背后的基础概念，请阅读文章 [WebVR concepts](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts).
+> 注释：要了解更多关于如何在你的应用程序中使用这些接口，请阅读文章 [Using the WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API). 要学习更多关于 VR 技术背后的基础概念，请阅读文章 [WebVR concepts](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts).
 
 ### Using controllers: Combining WebVR with the Gamepad API
 

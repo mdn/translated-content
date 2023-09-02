@@ -79,7 +79,7 @@ slug: Web/HTML/Element/progress
 
 ## DOM 接口
 
-该元素实现了[`HTMLProgressElement`](/zh-CN/DOM/HTMLProgressElement)接口。
+该元素实现了 [`HTMLProgressElement`](/zh-CN/DOM/HTMLProgressElement)接口。
 
 ## 示例
 

@@ -16,7 +16,7 @@ otherWindow.postMessage(message, targetOrigin, [transfer]);
 ```
 
 - `otherWindow`
-  - : 其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行[window.open](/zh-CN/docs/DOM/window.open)返回的窗口对象、或者是命名过或数值索引的[window.frames](/zh-CN/docs/DOM/window.frames)。
+  - : 其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行 [window.open](/zh-CN/docs/DOM/window.open)返回的窗口对象、或者是命名过或数值索引的 [window.frames](/zh-CN/docs/DOM/window.frames)。
 - `message`
   - : 将要发送到其他 window 的数据。它将会被[结构化克隆算法](/zh-CN/docs/DOM/The_structured_clone_algorithm)序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。\[[1](/zh-CN/docs/)]
 - `targetOrigin`

@@ -456,7 +456,7 @@ import("/modules/mymodule.js").then((module) => {
 
 在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改——模块导出保持与以前相同。
 
-在`main.js`中，我们使用[`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
+在`main.js`中，我们使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
 
 ```js
 let squareBtn = document.querySelector(".square");

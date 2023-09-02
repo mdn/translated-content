@@ -61,7 +61,7 @@ console.log(language.log); // ['EN', 'FA']
 
 ### 用 `delete` 操作符移除一个 setter
 
-我们可以使用[`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
+我们可以使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
 
 ```js
 delete language.current;

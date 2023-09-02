@@ -79,7 +79,7 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 ### MPEG-DASH
 
-DASH 意即基于 HTTP 的动态自适应流，最近已经被 Chrome、以及运行在 Window 8.1 的 IE 11 浏览器所支持。它依赖于媒体源扩展 (MSE)，这些扩展被[DASH.js](https://github.com/Dash-Industry-Forum/dash.js/)之类的 JavaScript 库所使用。这种方式允许我们通过 XHR 下载视频流的数据块，并且将它“添加”到 {{ htmlelement("video") }}元素正在播放的流中。正因如此，如果我们检测到网络缓慢，我们可以从下一段开始请求低质量（较小）的数据块。这种技术也允许添加广告片段到流中。
+DASH 意即基于 HTTP 的动态自适应流，最近已经被 Chrome、以及运行在 Window 8.1 的 IE 11 浏览器所支持。它依赖于媒体源扩展 (MSE)，这些扩展被 [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/)之类的 JavaScript 库所使用。这种方式允许我们通过 XHR 下载视频流的数据块，并且将它“添加”到 {{ htmlelement("video") }}元素正在播放的流中。正因如此，如果我们检测到网络缓慢，我们可以从下一段开始请求低质量（较小）的数据块。这种技术也允许添加广告片段到流中。
 
 > **备注：** 你也可以 [将 MPEG-DASH 自适应流式系统与 WebM 一起使用](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 

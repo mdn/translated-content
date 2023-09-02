@@ -49,7 +49,7 @@ cursor:
 ### 值
 
 - <`url`>
-  - : `url(…)`或者逗号分隔的`url(…), url(…), …`，指向图片文件。用大于一个{{cssxref("&lt;url&gt;")}}值提供后备，以防某些指针图片类型不被支持。最后必须提供一个非 URL 后备值。详情参见[cursor 属性中使用 URL 值](/zh-CN/docs/CSS/Using_URL_values_for_the_cursor_property)。
+  - : `url(…)`或者逗号分隔的`url(…), url(…), …`，指向图片文件。用大于一个{{cssxref("&lt;url&gt;")}}值提供后备，以防某些指针图片类型不被支持。最后必须提供一个非 URL 后备值。详情参见 [cursor 属性中使用 URL 值](/zh-CN/docs/CSS/Using_URL_values_for_the_cursor_property)。
 - `<x>` `<y>` {{experimental_inline}}
   - : 可选 x，y 坐标。两个小于 32 的无单位非负数。
 - 关键字值

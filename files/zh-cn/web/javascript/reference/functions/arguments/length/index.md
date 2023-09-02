@@ -15,7 +15,7 @@ arguments.length
 
 ## 描述
 
-arguments.length 表示的是实际上向函数传入了多少个参数，这个数字可以比形参数量大，也可以比形参数量小 (形参数量的值可以通过[Function.length](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)获取到).
+arguments.length 表示的是实际上向函数传入了多少个参数，这个数字可以比形参数量大，也可以比形参数量小 (形参数量的值可以通过 [Function.length](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)获取到).
 
 ## 示例
 

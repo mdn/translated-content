@@ -26,7 +26,7 @@ flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它
 
 我们也会了解到 flexbox 如何使用 margin: auto 来实现居中。
 
-> **备注：** 这些 Flexbox 的对齐属性已经纳入 [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/)标准里了。预计这特性将最终会取代之前在[Flexbox Level One](https://www.w3.org/TR/css-flexbox-1/)定义的属性。
+> **备注：** 这些 Flexbox 的对齐属性已经纳入 [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/)标准里了。预计这特性将最终会取代之前在 [Flexbox Level One](https://www.w3.org/TR/css-flexbox-1/)定义的属性。
 
 ## 交叉轴
 
@@ -76,7 +76,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 ## 轴对齐内容—— align-content 属性
 
-到现在为止，我们已经对定义在 flex 容器里的 flex 项目或者单个 flex 项目进行对齐操作了。如果你有一个折行的多条 flex 项目的 flex 容器，然后你可能想使用 `align-content` 来控制每行之间空间的分配，在这种特定的场景叫做[packing flex lines](https://drafts.csswg.org/css-flexbox/#align-content-property)。
+到现在为止，我们已经对定义在 flex 容器里的 flex 项目或者单个 flex 项目进行对齐操作了。如果你有一个折行的多条 flex 项目的 flex 容器，然后你可能想使用 `align-content` 来控制每行之间空间的分配，在这种特定的场景叫做 [packing flex lines](https://drafts.csswg.org/css-flexbox/#align-content-property)。
 
 要使得 `align-content` 生效，你需要你的 flex 容器的 height 要大于 flex 项目的可视内容。然后它会将所有的 flex 项目打包成一块之后再对齐剩下的空间。
 

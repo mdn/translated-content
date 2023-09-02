@@ -71,7 +71,7 @@ f2() === undefined; // true
 
 > **备注：** 在第二个例子中，`this` 应是 [undefined](/zh-CN/docs/Glossary/undefined)，因为 `f2` 是被直接调用的，而不是作为对象的属性或方法调用的（如 `window.f2()`）。有一些浏览器最初在支持[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)时没有正确实现这个功能，于是它们错误地返回了`window`对象。
 
-如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
+如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者 [`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
 
 ### 类上下文
 
@@ -341,7 +341,7 @@ console.log(o.average, o.sum); // logs 2, 6
 
 ### 作为构造函数
 
-当一个函数用作构造函数时（使用[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字），它的`this`被绑定到正在构造的新对象。
+当一个函数用作构造函数时（使用 [new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字），它的`this`被绑定到正在构造的新对象。
 
 > **备注：** 虽然构造函数返回的默认值是 `this` 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 `this` 对象）。
 

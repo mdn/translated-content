@@ -82,7 +82,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### min
 
-允许值范围内的最小值。如果元素的[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值。请参见 HTML [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 属性。
 

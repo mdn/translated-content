@@ -38,7 +38,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 你可以看看这个头部 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ，这样你设置起来会做的更好。
 
-检查 cross origin isolation 是否成功，你可以再次测试[`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 这个属性 是否对窗口和工作的上下文有效：
+检查 cross origin isolation 是否成功，你可以再次测试 [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 这个属性 是否对窗口和工作的上下文有效：
 
 ```js
 if (crossOriginIsolated) {

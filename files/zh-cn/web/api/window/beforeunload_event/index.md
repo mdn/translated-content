@@ -43,9 +43,9 @@ slug: Web/API/Window/beforeunload_event
 
 为避免意外弹出窗口，除非页面已与之交互，否则浏览器可能不会显示在`beforeunload`事件中创建的提示，甚至根本不会显示它们。
 
-将事件处理程序/监听器加到`window`或 `document`的`beforeunload`事件后，将阻止浏览器使用内存中的页面导航缓存，例如[Firefox 的 Back-Forward 缓存](/zh-CN/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)或[WebKit 的 Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/)。
+将事件处理程序/监听器加到`window`或 `document`的`beforeunload`事件后，将阻止浏览器使用内存中的页面导航缓存，例如 [Firefox 的 Back-Forward 缓存](/zh-CN/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)或 [WebKit 的 Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/)。
 
-HTML 规范指出在此事件中调用{{domxref("window.alert()")}}，{{domxref("window.confirm()")}}以及{{domxref("window.prompt()")}}方法，可能会失效。更多详细信息，请参见[HTML 规范](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts)。
+HTML 规范指出在此事件中调用{{domxref("window.alert()")}}，{{domxref("window.confirm()")}}以及{{domxref("window.prompt()")}}方法，可能会失效。更多详细信息，请参见 [HTML 规范](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts)。
 
 ## 示例
 

@@ -33,4 +33,4 @@ _不属于规范的一部分。_ Apple [有自己的 safari web 内容指南的�
 
 ## 浏览器兼容性
 
-webkit/safari, Blink/Chrome，以及[IE 的一些版本。](<https://msdn.microsoft.com/en-us//library/dn806275(v=vs.85).aspx>)
+webkit/safari, Blink/Chrome，以及 [IE 的一些版本。](<https://msdn.microsoft.com/en-us//library/dn806275(v=vs.85).aspx>)

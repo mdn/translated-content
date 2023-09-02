@@ -303,7 +303,7 @@ delete property; // legal only within a with statement
 
 `objectName`是一个对象名，`property` 是一个已经存在的属性，`index`是数组中的一个已经存在的键值的索引值。
 
-第三行的形式只在[`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with)声明的状态下是合法的，从对象中删除一个属性。
+第三行的形式只在 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with)声明的状态下是合法的，从对象中删除一个属性。
 
 你能使用 `delete` 删除各种各样的隐式声明，但是被`var`声明的除外。
 
@@ -619,7 +619,7 @@ var abc = [ "A", "B", "C" ];
 
 #### `new`
 
-你可以使用[`new` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)创建一个自定义类型或者是预置类型的对象实例。用法如下：
+你可以使用 [`new` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)创建一个自定义类型或者是预置类型的对象实例。用法如下：
 
 ```js
 var objectName = new objectType([param1, param2, ..., paramN]);

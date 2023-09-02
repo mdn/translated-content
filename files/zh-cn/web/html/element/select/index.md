@@ -30,7 +30,7 @@ slug: Web/HTML/Element/select
 - `disabled`
   - : 这个布尔值的属性表示用户不能与该表单控件交互。如果没有声明这个属性，则从它的父元素继承，例如 `fieldset`；如果没有父元素设置了 `disabled` 属性，那么默认该表单对象可用。
 - `form`
-  - : `<select>` 所关联的{{HTMLElement("form")}} (它的"表单拥有者")。其值必须是在同一文档中的 `<form>` 元素的[`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)（如果没有设置这个属性， `<select>` 元素则与其任何存在的祖先 `<form>` 元素关联）。
+  - : `<select>` 所关联的{{HTMLElement("form")}} (它的"表单拥有者")。其值必须是在同一文档中的 `<form>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)（如果没有设置这个属性， `<select>` 元素则与其任何存在的祖先 `<form>` 元素关联）。
     这个属性让你将 `<select>` 元素与文档中任意位置的 `<form>` 元素相关联，而不仅仅是包含 `<select>` 元素的 `<form>` 元素。这个属性还可以覆盖元素的祖先 `<form>` 元素。
 - `multiple`
   - : 这个布尔值属性表示列表中的选项是否支持多选。没有声明该值时，一次只能选中一个选项。声明这个属性后，大多数浏览器都会显示一个可滚动的列表框，而非一个下拉菜单。

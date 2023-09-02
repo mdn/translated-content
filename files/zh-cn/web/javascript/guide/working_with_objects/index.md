@@ -429,7 +429,7 @@ console.log(o.a); // 25
 - `o.b` — 返回 `o.a` + 1 的 getter
 - `o.c` — 由 `o.c 的值所设置 o.a 值的` setter
 
-请注意在一个对象字面量语法中定义 getter 和 setter 使用"\[gs]et property()"的方式（相比较于\_\_define\[GS]etter\_\_) 时，并不是获取和设置某个属性自身，容易让人误以为是"\[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"\[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用[`Object.defineProperty`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineProperty)(或者 [`Object.prototype.__defineGetter__`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineGetter) 旧语法回退)
+请注意在一个对象字面量语法中定义 getter 和 setter 使用"\[gs]et property()"的方式（相比较于\_\_define\[GS]etter\_\_) 时，并不是获取和设置某个属性自身，容易让人误以为是"\[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"\[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用 [`Object.defineProperty`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineProperty)(或者 [`Object.prototype.__defineGetter__`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineGetter) 旧语法回退)
 
 下面这个例子展示使用 getter 和 setter 方法扩展 {{jsxref("Date")}}原型，为预定义好的 Date 类添加一个 year 的属性。定义属性 year 的 getter 和 setter 方法用到了 Date 类中已存在的 getFullYear 和 setFullYear 方法。
 
@@ -550,7 +550,7 @@ fruit === fruitbear; // return true
 
 ## 附加参考
 
-- 想要深入了解，请阅读[details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
+- 想要深入了解，请阅读 [details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
 - 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

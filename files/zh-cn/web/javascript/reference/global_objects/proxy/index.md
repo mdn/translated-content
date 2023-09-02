@@ -143,7 +143,7 @@ person.age = 300;
 
 ### 扩展构造函数
 
-方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了[`construct`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)和[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply)。
+方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了 [`construct`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)和 [`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply)。
 
 ```js
 function extend(sup, base) {
@@ -419,4 +419,4 @@ alert(docCookies.my_cookie1);
 
 ## 版权声明
 
-一些内容（如文本、例子）是复制自或修改自[ECMAScript wiki](http://wiki.ecmascript.org/doku.php)（版权声明 [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/)）。
+一些内容（如文本、例子）是复制自或修改自 [ECMAScript wiki](http://wiki.ecmascript.org/doku.php)（版权声明 [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/)）。

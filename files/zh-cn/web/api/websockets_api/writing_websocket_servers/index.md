@@ -5,7 +5,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 
 **WebSocket 服务器是一个**TCP 应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在你选择的平台上实现一个简单的 WebSocket 服务器是很容易的。
 
-WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
+WebSocket 服务器可以用任何实现了 [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至 [PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
 
 你需要知道 HTTP 的工作原理，并具有中级编程经验。根据语言帮助（Depending on language support），可能需要 TCP 套接字的知识。本指南的范围是介绍编写 WebSocket 服务器所需的最低知识。
 
@@ -55,7 +55,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-另外，服务器可以在这时候决定插件或子协议，详情参见[杂项](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous)。 `Sec-WebSocket-Accept` 参数很有趣，它需要服务器通过客户端发送的`Sec-WebSocket-Key` 计算出来。怎样计算呢，把客户发送的 `Sec-WebSocket-Key` 和 "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (这个叫做 "[魔法值](https://en.wikipedia.org/wiki/Magic_string)") 连接起来，把结果用[SHA-1](https://zh.wikipedia.org/wiki/SHA-1)编码，再用[base64](https://zh.wikipedia.org/wiki/Base64)编码一次，就可以了。
+另外，服务器可以在这时候决定插件或子协议，详情参见[杂项](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous)。 `Sec-WebSocket-Accept` 参数很有趣，它需要服务器通过客户端发送的`Sec-WebSocket-Key` 计算出来。怎样计算呢，把客户发送的 `Sec-WebSocket-Key` 和 "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (这个叫做 "[魔法值](https://en.wikipedia.org/wiki/Magic_string)") 连接起来，把结果用 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1)编码，再用 [base64](https://zh.wikipedia.org/wiki/Base64)编码一次，就可以了。
 
 > **备注：** 这看起来繁复的处理使得客户端明确服务端是否支持 WebSocket。这是十分重要的，如果服务端接收到一个 WebSocket 连接但是把数据作为 HTTP 请求理解可能会导致安全问题。
 
@@ -176,7 +176,7 @@ _TODO_
 
 ### 子协议
 
-可以把子协议理解成一个自定义[XML schema](https://en.wikipedia.org/wiki/XML_schema)或[文件类型声明](https://en.wikipedia.org/wiki/Document_Type_Definition)。你仍然使用 XML 和它的语法，但是还要额外受限于你声明的格式。
+可以把子协议理解成一个自定义 [XML schema](https://en.wikipedia.org/wiki/XML_schema)或[文件类型声明](https://en.wikipedia.org/wiki/Document_Type_Definition)。你仍然使用 XML 和它的语法，但是还要额外受限于你声明的格式。
 
 WebSocket 子协议就是像这样的东西。它们不作任何假设实现，只是确立框架。就像一个文件类型或概要。与文件类型或概要类似，通信双方都需要同意子协议；于文件类型或概要不同的是，子协议在服务端实现，而不能由客户端参考第三方。
 

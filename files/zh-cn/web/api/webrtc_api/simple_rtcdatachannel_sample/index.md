@@ -58,9 +58,9 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
 ## The JavaScript code
 
-你可以直接到[look at the code itself on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js)来看代码，下面我们也会一步一步的解释。
+你可以直接到 [look at the code itself on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js)来看代码，下面我们也会一步一步的解释。
 
-WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过程变得简单;如果你还没有到[ECMAScript 2015](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)了解过 Promise，你应该先去看看。另外本示例还使用了箭头语法[arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过程变得简单;如果你还没有到 [ECMAScript 2015](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)了解过 Promise，你应该先去看看。另外本示例还使用了箭头语法 [arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
 ### 启动
 

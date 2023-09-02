@@ -112,7 +112,7 @@ slug: Web/HTML/Element/video
 
 其他的使用注意事项：
 
-- 如果你没有指定 `controls` 属性，那么视频不会展示浏览器自带的控件，你也可以用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详情请见[Creating a cross-browser video player](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)。
+- 如果你没有指定 `controls` 属性，那么视频不会展示浏览器自带的控件，你也可以用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详情请见 [Creating a cross-browser video player](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)。
 - `HTMLMediaElement` 会激活许多不同的[事件](/zh-CN/docs/Web/Guide/Events/Media_events)，以便于让你可以控制视频（和音频）内容。
 - 你可以用 CSS 属性 {{cssxref("object-position")}} 来调整视频在元素内部的位置，它可以控制视频尺寸适应于元素外框的方式。
 - 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详情请见 [Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
