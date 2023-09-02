@@ -140,8 +140,7 @@ gQIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-[PKCS #8](#pkcs_8) と同じように、これを取得し 
-importKey()` に渡せる形式にするには、2つのことをする必要があります。
+[PKCS #8](#pkcs_8) と同様に、これを `importKey()` に渡せる形式で取得するには、 2 つのことを行う必要があります。
 
 - [`window.atob()`](/ja/docs/Web/API/atob) を使用して、ヘッダーとフッターの間の部分を base64 デコードします。
 - 結果の文字列を [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に変換します。
