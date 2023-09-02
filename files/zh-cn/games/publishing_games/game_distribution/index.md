@@ -87,9 +87,9 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ### 电脑平台
 
-为了扩大你的受众，你也可以使用 HTML5 游戏去占据电脑游戏市场——只要记住那些已经占据了大部分市场份额的 AAA 级游戏，并仔细考虑这是否适合你的策略。要正确的在电脑端运行，你应该支持所有三种操作系统:Windows、Mac OS 和 Linux。最大的电脑游戏商店无疑是[Steam](http://steamcommunity.com/) — 独立开发者可以通过 [Greenlight](https://steamcommunity.com/greenlight/) 接触 steam. 请记住，你必须通过为不同的平台上传不同的版本来处理跨平台问题。
+为了扩大你的受众，你也可以使用 HTML5 游戏去占据电脑游戏市场——只要记住那些已经占据了大部分市场份额的 AAA 级游戏，并仔细考虑这是否适合你的策略。要正确的在电脑端运行，你应该支持所有三种操作系统:Windows、Mac OS 和 Linux。最大的电脑游戏商店无疑是 [Steam](http://steamcommunity.com/) — 独立开发者可以通过 [Greenlight](https://steamcommunity.com/greenlight/) 接触 steam. 请记住，你必须通过为不同的平台上传不同的版本来处理跨平台问题。
 
-在你入驻 Steam 之后，便会有许多类似于[Humble Bundle](http://www.humblebundle.com/)等项目的讨论，这些项目可以把最受欢迎的独立游戏能够呈现给更多人。不过，这更像是一个绝佳的促销机会，而不是一种赚大钱的方式，因为捆绑游戏的价格通常相当低。
+在你入驻 Steam 之后，便会有许多类似于 [Humble Bundle](http://www.humblebundle.com/)等项目的讨论，这些项目可以把最受欢迎的独立游戏能够呈现给更多人。不过，这更像是一个绝佳的促销机会，而不是一种赚大钱的方式，因为捆绑游戏的价格通常相当低。
 
 ## 打包游戏
 
@@ -101,7 +101,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 - [Phonegap](http://phonegap.com/) —基于 Cordova，这是为本地平台构建/打包 JavaScript 应用程序最流行的工具
 - [CocoonIO](http://cocoon.io/) — 为多个本地商店构建 HTML5 游戏的最流行的工具。它对画布上呈现的游戏有自己的性能优化，并支持许多游戏框架。
-- [Ejecta](http://impactjs.com/ejecta) — 一个专门用于为 iOS 打包使用[the ImpactJS](http://impactjs.com/)框架创建的游戏的工具，由 ImpactJS 作者构建。它提供了与 ImpactJS 的无缝集成，但只支持一个框架和应用程序商店。
+- [Ejecta](http://impactjs.com/ejecta) — 一个专门用于为 iOS 打包使用 [the ImpactJS](http://impactjs.com/)框架创建的游戏的工具，由 ImpactJS 作者构建。它提供了与 ImpactJS 的无缝集成，但只支持一个框架和应用程序商店。
 - [NW.js](http://nwjs.io/) — 这款游戏的前身是 Node-Webkit，它是开发适用于 Windows、Mac 和 Linux 的桌面游戏的首选。这些发行版与 WebKit 引擎打包在一起，可以在任何平台上提供呈现。
 
 其他替代工具包括：

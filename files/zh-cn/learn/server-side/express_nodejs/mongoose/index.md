@@ -716,7 +716,7 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
    > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
    >
-   > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
+   > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 

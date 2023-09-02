@@ -713,7 +713,7 @@ aside {
 
 {{ EmbedLiveSample('一个用 CSS 网格实现的网格排版框架', '100%', 400) }}
 
-你可以使用[Firefox Grid Inspector](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)去查看页面中的网格线，你应该能看到这 12 列的网格是如何工作的。
+你可以使用 [Firefox Grid Inspector](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)去查看页面中的网格线，你应该能看到这 12 列的网格是如何工作的。
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 

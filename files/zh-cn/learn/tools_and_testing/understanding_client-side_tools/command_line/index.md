@@ -192,7 +192,7 @@ ls -l
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
-> **备注：** 要确切地了解每个命令有哪些可用选项，你可以查看它[man page](https://en.wikipedia.org/wiki/Man_page). 通过键入 `man` 命令，后跟要查找的命令的名称，例如`man ls`. 这将在终端的默认文本文件查看器中打开手册页 (例如，[`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>)(在我的终端中)，然后你应该能够使用箭头键或其他类似的机制在页面中滚动。手册页详细地列出了所有选项，一开始可能有点吓人，但至少在需要时你知道它就在那里。一旦你完成了对手册页的查看，你需要使用文本查看器的 quit 命令退出它 ("q" 在 `less`;如果不明显，你可能需要在网上搜索才能找到).
+> **备注：** 要确切地了解每个命令有哪些可用选项，你可以查看它 [man page](https://en.wikipedia.org/wiki/Man_page). 通过键入 `man` 命令，后跟要查找的命令的名称，例如`man ls`. 这将在终端的默认文本文件查看器中打开手册页 (例如，[`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>)(在我的终端中)，然后你应该能够使用箭头键或其他类似的机制在页面中滚动。手册页详细地列出了所有选项，一开始可能有点吓人，但至少在需要时你知道它就在那里。一旦你完成了对手册页的查看，你需要使用文本查看器的 quit 命令退出它 ("q" 在 `less`;如果不明显，你可能需要在网上搜索才能找到).
 
 > **备注：** 要同时运行具有多个选项的命令，通常可以将它们全部放在破折号后面的单个字符串中`ls -lah`, 或`ls -ltrh`.尝试在 `ls` 了解这些额外选项的作用
 
@@ -263,7 +263,7 @@ ls | wc -l
 
 让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-但是，这个 URL 是页面的旧位置。如果你在一个新的浏览器标签中输入它，你将 (最终) 被重定向到[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
+但是，这个 URL 是页面的旧位置。如果你在一个新的浏览器标签中输入它，你将 (最终) 被重定向到 [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
 因此，如果你使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
@@ -473,9 +473,9 @@ printMe(myObj);
 
 使用 Prettier 有许多实现自动化的方法，尽管它们超出了本文的范围，但是有一些很好的在线资源可以提供帮助 (已经链接到其中一些)。你可以调用更漂亮的：
 
-- 在将代码提交到 git 存储库之前，使用[Husky](https://github.com/typicode/husky).
-- 当你在代码编辑器中点击“保存”的时候，无论是[VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), 或[Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- 作为持续集成检查的一部分，可以使用以下工具[Github Actions](https://github.com/features/actions).
+- 在将代码提交到 git 存储库之前，使用 [Husky](https://github.com/typicode/husky).
+- 当你在代码编辑器中点击“保存”的时候，无论是 [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), 或 [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
+- 作为持续集成检查的一部分，可以使用以下工具 [Github Actions](https://github.com/features/actions).
 
 我们个人的偏好是第二个当使用 say VS 代码时，Prettier 会启动并清理每次我们点击保存时需要做的格式化。关于以不同方式使用 Prettier，你可以在 [Prettier docs](https://prettier.io/docs/en/).
 

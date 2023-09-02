@@ -26,7 +26,7 @@ LocalLibrary 目前有页面显示所有书本和作者的列表，书本和作�
 
 自动化测试可以真正帮助解决这个问题！显而易见的好处，是它们可以比手动测试运行得更快，可以测试更底层级别的细节，并且每次都测试完全相同的功能（人类测试员远远没有这么可靠！）因为它们很快速，自动化的测试可以更频繁地执行，如果测试失败，他们会指出代码未按预期执行的位置。
 
-此外，自动化测试可以充当代码的第一个真实“用户”，迫使你严格定义和记录网站的行为方式。它们通常是你的代码示例，和文档的基础。由于这些原因，一些软件开发过程，从测试定义和实现开始，之后编写代码以匹配所需的行为（例如，测试驱动[test-driven](https://en.wikipedia.org/wiki/Test-driven_development) 和行为驱动 [behaviour-driven](https://en.wikipedia.org/wiki/Behavior-driven_development)的开发）。
+此外，自动化测试可以充当代码的第一个真实“用户”，迫使你严格定义和记录网站的行为方式。它们通常是你的代码示例，和文档的基础。由于这些原因，一些软件开发过程，从测试定义和实现开始，之后编写代码以匹配所需的行为（例如，测试驱动 [test-driven](https://en.wikipedia.org/wiki/Test-driven_development) 和行为驱动 [behaviour-driven](https://en.wikipedia.org/wiki/Behavior-driven_development)的开发）。
 
 本教程通过向 LocalLibrary 网站添加大量测试，来演示如何为 Django 编写自动化测试。
 
@@ -69,7 +69,7 @@ class YourTestClass(TestCase):
         self.assertTrue(False)
 ```
 
-大多数测试的最佳基类是 [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase)。此测试类在运行测试之前，创建一个干净的数据库，并在自己的事务中，运行每个测试函数。该类还拥有一个[测试客户端](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client)，你可以使用该客户端，模拟在视图级别与代码交互的用户。在下面的部分中，我们将集中讨论使用此[TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 基类创建的单元测试。
+大多数测试的最佳基类是 [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase)。此测试类在运行测试之前，创建一个干净的数据库，并在自己的事务中，运行每个测试函数。该类还拥有一个[测试客户端](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client)，你可以使用该客户端，模拟在视图级别与代码交互的用户。在下面的部分中，我们将集中讨论使用此 [TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 基类创建的单元测试。
 
 > **备注：** [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，你可能希望用可以用更简单的测试类，替换一些测试。
 
@@ -448,7 +448,7 @@ class RenewBookFormTest(TestCase):
 
 其余函数，测试表单对于续借日期，在可接受范围内是否有效，对于范围外的值，是否无效。请注意我们如何使用`datetime.timedelta()`，在当前日期（`datetime.date.today()`）周围构建测试日期值（在这种情况下指定天数或周数）。然后我们只需创建表单，传入我们的数据，并测试它是否有效。
 
-> **备注：** 这里我们实际上并没有使用数据库，或测试客户端。考虑修改这些测试，以使用[SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.SimpleTestCase)。
+> **备注：** 这里我们实际上并没有使用数据库，或测试客户端。考虑修改这些测试，以使用 [SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.SimpleTestCase)。
 >
 > 如果表单无效，我们还需要验证是否引发了正确的错误，但这通常是作为视图处理的一部分完成的，因此我们将在下一节中处理。
 
@@ -852,7 +852,7 @@ Django 提供测试 API 来检查你的视图，是否正在调用正确的模�
 
 ## 其他推荐的测试工具
 
-Django 的测试框架，可以帮助你编写有效的单元和集成测试 - 我们只涉及底层单元测试框架**unittest**可以做什么，而不去谈 Django 的其他部分（例如，查看如何使用[unittest.mock](https://docs.python.org/3.5/library/unittest.mock-examples.html) 修补第三方库，以便你可以更彻底地测试自己的代码）。
+Django 的测试框架，可以帮助你编写有效的单元和集成测试 - 我们只涉及底层单元测试框架**unittest**可以做什么，而不去谈 Django 的其他部分（例如，查看如何使用 [unittest.mock](https://docs.python.org/3.5/library/unittest.mock-examples.html) 修补第三方库，以便你可以更彻底地测试自己的代码）。
 
 虽然你可以使用许多其他测试工具，但我们只重点介绍两个：
 

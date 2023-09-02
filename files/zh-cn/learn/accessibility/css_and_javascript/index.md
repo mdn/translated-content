@@ -247,7 +247,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 - 提供客户端表单验证，它快速提醒用户表单条目出现的问题，而无需等待服务器检查数据。如果表单不可用，则窗口仍然有效，但验证速度可能较慢。
 - 为 HTML5 `<video>` 提供自定义控件，这些控件仅供键盘用户访问，以及如果 JavaScript 不可用 (默认 `<video>` 浏览器控件在大多数浏览器中无法使用键盘访问)，就直接通过链接访问视频。
 
-例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见[form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
+例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见 [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
 
 这种表单验证并不引人注目——在 JavaScript 不可用的情况下，你仍然可以很好的使用表单，并且任何合理的表单实现都将激活服务器端验证，因为恶意用户很容易绕过客户端验证（例如，通过在浏览器中关闭 JavaScript）。客户端验证对于报告错误仍然非常有用——用户可以立即了解他们所犯的错误，而不必等待到服务器的往返和页面重新加载。这是一个明确的可用性优势。
 

@@ -61,7 +61,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 {{Compat}}
 
-> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat)宏。
+> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用 [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat)宏。
 >
 > 如果你需要更新此章节，编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities)，然后刷新查看更改。
 

@@ -55,7 +55,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-现在安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
+现在安装这个 [WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -114,7 +114,7 @@ modify-page/
     page-eater.js
 ```
 
-重新加载[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
+重新加载 [WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 

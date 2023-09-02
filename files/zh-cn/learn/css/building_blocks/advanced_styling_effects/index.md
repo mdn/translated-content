@@ -236,7 +236,7 @@ CSS 混合模式允许我们为元素添加一个混合模式，以当两个元�
 - {{cssxref("background-blend-mode")}}, 用来将单个元素的多重背景图片和背景颜色设置混合在一起。
 - {{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容 (content) 混合在一起。
 
-你可以找到比这里用到的更多的例子，在我们的[blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) 示例页面 (查看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。
+你可以找到比这里用到的更多的例子，在我们的 [blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) 示例页面 (查看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。
 
 > **备注：** 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。
 
@@ -351,7 +351,7 @@ article div:last-child {
 
 如果你确实希望在你的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。
 
-> **备注：** 对于一个完整的 `-webkit-background-clip: text` 代码示例，见[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
+> **备注：** 对于一个完整的 `-webkit-background-clip: text` 代码示例，见 [background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
 
 ## 自主学习：尝试一些效果
 

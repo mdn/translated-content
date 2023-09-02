@@ -95,7 +95,7 @@ elem.html(cleanHTML);
 
 另一个常见的模式是对一个页面创建本地 HTML 模板并通过远端的值来填空。这种方法被广泛应用，应该注意去避免构造函数的使用，可能会导致执行代码的注入。当模板引擎使用构造函数插入 HTML 到文档的时候会发生这种情况，如果用来注入原始 HTML 的变量是远端代码，这就属于上面介绍中的安全风险。
 
-例如，当使用[mustache templates](https://mustache.github.io/) 你必须使用两个花括号`\{{variable}}`,来去掉任何 HTML。使用三个花括号`\{\{{variable}}}` 必须避免注入原始 HTML 字符串到模板。
+例如，当使用 [mustache templates](https://mustache.github.io/) 你必须使用两个花括号`\{{variable}}`,来去掉任何 HTML。使用三个花括号`\{\{{variable}}}` 必须避免注入原始 HTML 字符串到模板。
 
 [Handlebars](http://handlebarsjs.com/) 工作原理也是类似，`\{{variable}}` 。同时，如果创造了 Handlebars helper 使用 `Handlebars.SafeString` 使用`Handlebars.escapeExpression()` 来消除任何传给 helper 的动态参数。`Handlebars.SafeString` 的结果被认为是安全的，当插入到双 handlebars 的时候就不会做消除动作。
 

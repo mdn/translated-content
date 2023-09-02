@@ -194,7 +194,7 @@ num2 + num1 / 8 + 2;
 
 ## 自增和自减运算符
 
-有时候，你需要反复把一个变量加 1 或减 1。这可以方便地使用增量（`++`）和递减（ `--` ）运算符来完成。我们在[JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)文章的“猜数字”游戏中使用了++，当我们添加 1 到我们的 guessCount 变量来跟踪用户在每次转动之后剩下的猜测时。
+有时候，你需要反复把一个变量加 1 或减 1。这可以方便地使用增量（`++`）和递减（ `--` ）运算符来完成。我们在 [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)文章的“猜数字”游戏中使用了++，当我们添加 1 到我们的 guessCount 变量来跟踪用户在每次转动之后剩下的猜测时。
 
 ```js
 guessCount++;

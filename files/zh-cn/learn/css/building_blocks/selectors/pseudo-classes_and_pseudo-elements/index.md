@@ -177,7 +177,7 @@ article p:first-child::first-line {
 | {{ Cssxref(":root") }}              | 匹配文档的根元素。                                                                                                                                                                                        |
 | {{ Cssxref(":scope") }}             | 匹配任何为参考点元素的的元素。                                                                                                                                                                            |
 | {{ Cssxref(":valid") }}             | 匹配诸如`<input>`元素的处于可用状态的元素。                                                                                                                                                               |
-| {{ Cssxref(":target") }}            | 匹配当前 URL 目标的元素（例如如果它有一个匹配当前[URL 分段](https://en.wikipedia.org/wiki/Fragment_identifier)的元素）。                                                                                  |
+| {{ Cssxref(":target") }}            | 匹配当前 URL 目标的元素（例如如果它有一个匹配当前 [URL 分段](https://en.wikipedia.org/wiki/Fragment_identifier)的元素）。                                                                                  |
 | {{ Cssxref(":visited") }}           | 匹配已访问链接。                                                                                                                                                                                          |
 
 ### 伪元素

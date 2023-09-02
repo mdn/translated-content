@@ -41,7 +41,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ### HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
+首先简要概述 [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -114,7 +114,7 @@ npm install express-validator --save
 
 #### 使用 express-validator
 
-> **备注：** Github 上的[express-validator](https://github.com/ctavan/express-validator#express-validator)指南，提供了 API 的良好概述。我们建议你阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。
+> **备注：** Github 上的 [express-validator](https://github.com/ctavan/express-validator#express-validator)指南，提供了 API 的良好概述。我们建议你阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。
 
 要在我们的控制器中使用验证器，我们必须从'**express-validator/check**'和'**express-validator/filter**'模块中，导入我们想要使用的函数，如下所示：
 

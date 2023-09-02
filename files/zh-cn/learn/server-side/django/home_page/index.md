@@ -85,7 +85,7 @@ urlpatterns = [
 ]
 ```
 
-如果检测到 URL 模式''，(views.index——在 view\.py 中函数命名 index() ）将被调用。URL 模式是[Python 正则表达式](https://docs.python.org/3/library/re.html) (RE)。我们将在本教程中进一步介绍 RE。
+如果检测到 URL 模式''，(views.index——在 view\.py 中函数命名 index() ）将被调用。URL 模式是 [Python 正则表达式](https://docs.python.org/3/library/re.html) (RE)。我们将在本教程中进一步介绍 RE。
 
 > **备注：** 在 **/locallibrary/locallibrary/urls.py**
 >
@@ -309,7 +309,7 @@ return render(
   style="width:555px;height:540px;" />
 ```
 
-> **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
+> **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们 [created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
 
 更多内容—[Managing static files](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs).
 

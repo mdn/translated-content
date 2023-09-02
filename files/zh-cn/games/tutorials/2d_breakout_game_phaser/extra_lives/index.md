@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 13 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 13 步**。你可以在 [Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
 
 我们可以通过增加生活使游戏更愉快。在这篇文章中，我们将实施一个生活系统，以便玩家可以继续玩，直到他们失去了三个生命，而不仅仅是一个人。
 

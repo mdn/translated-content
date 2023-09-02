@@ -20,7 +20,7 @@ slug: Glossary/Simple_header
 - {{HTTPHeader("Viewport-Width")}}
 - {{HTTPHeader("Width")}}
 
-当只包含简单头部时，一个请求则被视为简单请求并且在[CORS](/zh-CN/docs/Glossary/CORS)中不需要发送{{glossary("preflight request")}}。
+当只包含简单头部时，一个请求则被视为简单请求并且在 [CORS](/zh-CN/docs/Glossary/CORS)中不需要发送{{glossary("preflight request")}}。
 
 ## Learn more
 

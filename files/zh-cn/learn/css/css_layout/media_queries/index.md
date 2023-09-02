@@ -309,7 +309,7 @@ article {
 
 在浏览器里[打开步骤一](https://mdn.github.io/css-examples/learn/media-queries/step1.html)，或者[查看源代码](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html)。
 
-**如果你想要在我们继续的时候，按步骤来并尝试这个示例，在你的电脑上建立一个[step1.html](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html)的本地副本。**
+**如果你想要在我们继续的时候，按步骤来并尝试这个示例，在你的电脑上建立一个 [step1.html](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html)的本地副本。**
 
 从这里开始，脱拽响应式设计的窗口，让它变得变得更宽，直到你看到一行变得非常长，有足够空间把导航栏放在一个水平行里面。这是我们加入第一个媒体查询的地方。我们将会使用 em，因为这意味着，如果用户已经增加了文本的大小，断点会在行差不多也是这样长，但是视口更宽的时候产生；而文本更小的时候，视口也会更窄。
 

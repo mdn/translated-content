@@ -133,7 +133,7 @@ td {
 
 需要注意的最重要的部分如下：
 
-- 在你的表上，给{{cssxref("table-layout")}}属性设置一个为`fixed`的值通常是一个好主意，因为它使表的行为在默认情况下更可预测。通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了`thead th:nth-child(n)` 选择了四个不同的标题 ({{cssxref(":nth-child")}}) 选择器（“选择第 n 个子元素，它是一个顺序排列的{{htmlelement("th")}}元素，且其父元素是{{htmlelement("thead")}}元素”）并给定了它们的百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。Chris Coyier 在[Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
+- 在你的表上，给{{cssxref("table-layout")}}属性设置一个为`fixed`的值通常是一个好主意，因为它使表的行为在默认情况下更可预测。通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了`thead th:nth-child(n)` 选择了四个不同的标题 ({{cssxref(":nth-child")}}) 选择器（“选择第 n 个子元素，它是一个顺序排列的{{htmlelement("th")}}元素，且其父元素是{{htmlelement("thead")}}元素”）并给定了它们的百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。Chris Coyier 在 [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
 
   我们将它与一个 100% 的{{cssxref("width")}}组合在一起，这意味着该表将填充它放入的任何容器，并且能很好的响应（虽然它仍然需要更多的工作来让它在窄屏宽度上看起来很好）。
 
@@ -149,7 +149,7 @@ td {
 
 现在我们把类型整理一下。
 
-首先，我们在[Google Fonts](https://www.google.com/fonts)上找到了一种适合于朋克乐队的字体的字体。如果你愿意，你可以去那里找一个不同的。现在，你只需替换我们提供的{{htmlelement("link")}}元素和定制的{{cssxref("font-family")}}声明，并使用 Google 字体提供给你的内容。
+首先，我们在 [Google Fonts](https://www.google.com/fonts)上找到了一种适合于朋克乐队的字体的字体。如果你愿意，你可以去那里找一个不同的。现在，你只需替换我们提供的{{htmlelement("link")}}元素和定制的{{cssxref("font-family")}}声明，并使用 Google 字体提供给你的内容。
 
 首先，将下面的{{htmlelement("link")}}元素添加到你的 HTML 头部，就在你现有的 `<link>` 元素之上：
 
@@ -275,7 +275,7 @@ caption {
 }
 ```
 
-这里没有什么值得注意的地方，除了{{cssxref("caption-side")}}属性，它被赋予了一个`bottom`的值。这就导致标题被放置在表格的底部，与其他声明一起提供了最后的外观（见预览版[punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)）：
+这里没有什么值得注意的地方，除了{{cssxref("caption-side")}}属性，它被赋予了一个`bottom`的值。这就导致标题被放置在表格的底部，与其他声明一起提供了最后的外观（见预览版 [punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)）：
 
 ![](table-with-caption.png)
 
@@ -296,7 +296,7 @@ caption {
 
 ## 小试牛刀！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，想要验证你已经吸收了这些信息的话，请见[Test your skills: tables](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，想要验证你已经吸收了这些信息的话，请见 [Test your skills: tables](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
 
 ## 总结
 

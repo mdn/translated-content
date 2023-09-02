@@ -12,4 +12,4 @@ slug: Glossary/Head
 ### HTML head
 
 - MDN 里的{{htmlelement("head")}}元素引用
-- MDN 学习区域里的[The HTML \<head>](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- MDN 学习区域里的 [The HTML \<head>](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)

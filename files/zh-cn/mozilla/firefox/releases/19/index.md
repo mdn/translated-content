@@ -37,7 +37,7 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ### XForms
 
-[**删除**](http://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms/)了对[XForms](/zh-CN/docs/XForms)的支持。
+[**删除**](http://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms/)了对 [XForms](/zh-CN/docs/XForms)的支持。
 
 ## 附加组件和 Mozilla 开发者需要注意的变化
 

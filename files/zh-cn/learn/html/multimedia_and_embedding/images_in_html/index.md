@@ -78,7 +78,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 > **备注：** 像{{htmlelement("img")}}和{{htmlelement("video")}}这样的元素有时被称之为**替换元素**，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。
 
-> **备注：** 你可以在[GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
+> **备注：** 你可以在 [GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
@@ -134,7 +134,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 然而，你不应该使用 HTML 属性来改变图片的大小。如果你把尺寸设定的太大，最终图片看起来会模糊；如果太小，会在下载远远大于你需要的图片时浪费带宽。如果你没有保持正确的[宽高比](<https://zh.wikipedia.org/wiki/%E9%95%B7%E5%AF%AC%E6%AF%94_(%E5%BD%B1%E5%83%8F)>)，图片可能看起来会扭曲。在把图片放到你的网站页面之前，你应该使用图形编辑器使图片的尺寸正确。
 
-> **备注：** 如果你需要改变图片的尺寸，你应该使用[CSS](/zh-CN/docs/Learn/CSS)而不是 HTML。
+> **备注：** 如果你需要改变图片的尺寸，你应该使用 [CSS](/zh-CN/docs/Learn/CSS)而不是 HTML。
 
 ### Image titles 图片标题
 
@@ -155,7 +155,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 图片标题并不必须要包含有意义的信息，通常来说，将这样的支持信息放到主要文本中而不是附着于图片会更好。不过，在有些环境中这样做更有用，比如当没有空间显示提示时，也就是在图片栏中。
 
-然而，这并不是推荐的——title 有很多易访问性问题，主要是基于这样一个事实，即屏幕阅读器的支持是不可预测的，大多数浏览器都不会显示它，除非你在鼠标悬停时（例如：title 无法访问键盘用户），如果你对更多的信息感兴趣，阅读[The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
+然而，这并不是推荐的——title 有很多易访问性问题，主要是基于这样一个事实，即屏幕阅读器的支持是不可预测的，大多数浏览器都不会显示它，除非你在鼠标悬停时（例如：title 无法访问键盘用户），如果你对更多的信息感兴趣，阅读 [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 
 ### 动手练习：嵌入一张图片
 
@@ -496,7 +496,7 @@ p {
 
 总而言之，如果图像对你的内容里有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。
 
-> **备注：** 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于[CSS 背景图片](/zh-CN/docs/Learn/CSS/Styling_boxes/背景)的东西。
+> **备注：** 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn/CSS/Styling_boxes/背景)的东西。
 
 ## 总结
 

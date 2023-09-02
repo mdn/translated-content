@@ -35,7 +35,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Goo
 
 现在我们已经制作了我们的项目并将示例应用程序文件收集在一起，下面发布应用程序。
 
-1. 打开[Google Cloud Shell](https://console.cloud.google.com/cloudshell/editor).
+1. 打开 [Google Cloud Shell](https://console.cloud.google.com/cloudshell/editor).
 2. 把 `sample-app`目录拖拽到代码编辑器左边
 3. 在命令行中键入如下命令选择你的项目：
 
@@ -61,4 +61,4 @@ slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Goo
 
 ## 更多信息
 
-请访问[Google App Engine Documentation](https://cloud.google.com/appengine/docs/).
+请访问 [Google App Engine Documentation](https://cloud.google.com/appengine/docs/).

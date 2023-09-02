@@ -75,7 +75,7 @@ button/
     manifest.json
 ```
 
-安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
+安装这个 [WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 

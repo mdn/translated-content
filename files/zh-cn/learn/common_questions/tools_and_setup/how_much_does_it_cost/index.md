@@ -64,7 +64,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 每个系统都包含一个 FTP 客户端作为文件管理器的一部分。Windows 资源管理器，Nautilus（一个常见的 Linux 文件管理器）和 Mac Finder 都包含该功能。然而，人们更经常选择专门的 FTP 客户端，可以存储密码并且并行显示本地和远程目录。
 
-如果你需要安装一个 FTP 客户端，这里有很多免费的选择：例如，可以全平台使用的 [FileZilla](https://filezilla-project.org/) , windows 上使用的[WinSCP](http://winscp.net/) , Mac 和 windows 上都能使用的 [Cyberduck](https://cyberduck.io/) ，还有很多)。
+如果你需要安装一个 FTP 客户端，这里有很多免费的选择：例如，可以全平台使用的 [FileZilla](https://filezilla-project.org/) , windows 上使用的 [WinSCP](http://winscp.net/) , Mac 和 windows 上都能使用的 [Cyberduck](https://cyberduck.io/) ，还有很多)。
 
 > **备注：** 还有其他方法可以在远程服务器上发布内容，如 rsync 和 git，但并不像 FTP 那样简单，我们不会在这里讨论。
 

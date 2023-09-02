@@ -123,7 +123,7 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 无法识别的 HTML 元素被浏览器视为匿名内联元素（有效内联元素，没有语义值，类似于 {{htmlelement("span")}} 元素）。你还可以参考他们通过自己的名字，并用 CSS 样式它们，例如 - 你只需要确保它们表现为你想让他们，例如对所有新的语义元素设置 `display: block;`（如 {{htmlelement("article")}}、{{htmlelement("aside")}} 等），但现在，基本只有在旧版本的 IE 不能识别他们（IE 8 和更低）。这样，新的浏览器就可以正常使用这些代码，但是旧的 IE 版本也可以对这些元素进行样式化。
 
-> **备注：** 请参阅[IE 条件注释](/zh-CN/docs/preview-wiki-content#IE_conditional_comments)以获取最佳实践。
+> **备注：** 请参阅 [IE 条件注释](/zh-CN/docs/preview-wiki-content#IE_conditional_comments)以获取最佳实践。
 
 更复杂的元素，如 HTML [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<audio>`](/zh-CN/docs/Web/HTML/Element/audio)，和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)（和其他功能除外）有自然的 fallback 加入机制，其工作原理与上述相同。你可以在开始和结束标记之间添加回退内容，非支持的浏览器将有效地忽略外部元素并运行嵌套的内容。
 
@@ -185,7 +185,7 @@ HTML5 表单元素也表现出了后备素质--HTML5 引入了一些特殊的 [`
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 你也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> **备注：** 你也可以在 GitHub 上以 [forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果你在支持的浏览器（如桌面/ Android Chrome 或 iOS Safari）上查看该示例，则会在尝试输入数据时看到特殊的小部件/功能。在一个非支持的平台上，例如 Firefox 或 Internet Explorer，输入只会回退到正常的文本输入，所以至少用户仍然可以输入一些信息。
 
@@ -288,7 +288,7 @@ form > #date
 然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/zh-CN/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
 
 1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
-2. 现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
+2. 现在下载 [MooTools](http://mootools.net/)和 [Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
 3. 将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
 
    ```html
@@ -326,17 +326,17 @@ background-image: -webkit-gradient(
 background-image: linear-gradient(to right, green, yellow);
 ```
 
-第一行显示了一个[transform](/zh-CN/docs/Web/CSS/transform)带有-webkit-前缀的属性 - 这是在 Chrome 中使用变换功能所必需的，直到功能定稿，并且这些浏览器添加了该属性的前缀无版本（在撰写本文时，Chrome 支持这两个版本）。
+第一行显示了一个 [transform](/zh-CN/docs/Web/CSS/transform)带有-webkit-前缀的属性 - 这是在 Chrome 中使用变换功能所必需的，直到功能定稿，并且这些浏览器添加了该属性的前缀无版本（在撰写本文时，Chrome 支持这两个版本）。
 
-最后三行显示了三个不同版本的[linear-gradient()](/zh-CN/docs/Web/CSS/linear-gradient)函数，用于在元素的背景中生成线性渐变：
+最后三行显示了三个不同版本的 [linear-gradient()](/zh-CN/docs/Web/CSS/linear-gradient)函数，用于在元素的背景中生成线性渐变：
 
 1. 第一个有一个-moz-前缀，并显示一个略老的语法版本（Firefox）
 2. 第二个有一个-webkit-前缀，并显示一个更老的专有版本的语法（这实际上是从一个真正的旧版本的 WebKit 引擎）。
-3. 第三个没有前缀，并显示语法的最终版本（包含在定义此功能的[CSS 图像值和替换内容模块级别 3 规范中](https://drafts.csswg.org/css-images-3/#linear-gradients)）。
+3. 第三个没有前缀，并显示语法的最终版本（包含在定义此功能的 [CSS 图像值和替换内容模块级别 3 规范中](https://drafts.csswg.org/css-images-3/#linear-gradients)）。
 
 前缀功能从来不应该用于生产网站——它们可能会在没有警告的情况下更改或删除，并导致跨浏览器问题。当开发人员决定只使用-webkit- 某个属性的版本时，这是一个特别的问题 - 这意味着该网站在其他浏览器中不起作用。这实际上发生了很多，其他浏览器已经开始实现-webkit-各种 CSS 属性的前缀版本，所以他们将使用这样的代码。由于这些类型的问题，浏览器供应商使用前缀最近已经下降，但仍然有一些需要注意。
 
-如果你坚持使用前缀功能，请确保使用正确的功能。你可以在 MDN 参考页面上查找哪些浏览器需要前缀，以及像[caniuse.com](http://caniuse.com/)这样的[站点](http://caniuse.com/)。如果你不确定，你也可以直接在浏览器中做一些测试。
+如果你坚持使用前缀功能，请确保使用正确的功能。你可以在 MDN 参考页面上查找哪些浏览器需要前缀，以及像 [caniuse.com](http://caniuse.com/)这样的[站点](http://caniuse.com/)。如果你不确定，你也可以直接在浏览器中做一些测试。
 
 试试这个简单的例子：
 
@@ -349,7 +349,7 @@ background-image: linear-gradient(to right, green, yellow);
    const test = document.getElementById("hplogo");
    ```
 
-5. 现在尝试为你感兴趣的 CSS 属性设置一个新的值，你可以使用元素的[style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
+5. 现在尝试为你感兴趣的 CSS 属性设置一个新的值，你可以使用元素的 [style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
 
    ```js
    test.style.transform = "rotate(90deg)";
@@ -358,7 +358,7 @@ background-image: linear-gradient(to right, green, yellow);
 
 当你开始在第二个点之后键入属性名称表示形式（请注意，在 JavaScript 中，CSS 属性名称是以较低的驼峰大小写，而不是连字符），JavaScript 控制台应该开始自动填充浏览器中存在的属性的名称并匹配到目前为止所写的内容。这对于找出在该浏览器中实现哪个版本的属性很有用。
 
-在撰写本文时，Firefox 和 Chrome 都实现了 `-webkit-` 前缀和非前缀的[transform](/zh-CN/docs/Web/CSS/transform)！
+在撰写本文时，Firefox 和 Chrome 都实现了 `-webkit-` 前缀和非前缀的 [transform](/zh-CN/docs/Web/CSS/transform)！
 
 一旦你找到了你需要支持的前缀，你应该把它们写在你的 CSS 中，例如：
 
@@ -374,13 +374,13 @@ transform: rotate(90deg);
 
 [无前缀的 JavaScript 库](http://leaverou.github.io/prefixfree/)可以附加到页面上，并自动检测浏览器查看页面的功能，并根据需要添加前缀。使用起来非常简单方便，虽然它有一些缺点（请参阅上面的链接了解详细信息），但有一点是可争议的，即在你的站点中解析每个样式表并在运行时添加前缀可能会消耗计算机的处理能力为一个大的网站。
 
-另一个解决方案是在开发过程中自动添加前缀，而这个（和其他的东西除外）可以使用像[Autoprefixer](https://github.com/postcss/autoprefixer)和[PostCSS](http://postcss.org/)这样的工具完成。这些工具可以以多种方式使用，例如 Autoprefixer 有一个[在线版本](http://autoprefixer.github.io/)，允许你在左侧输入非前缀 CSS，并在右侧给出前缀添加版本。你可以使用[Autoprefixer 选项中](https://github.com/postcss/autoprefixer#options)列出的符号来选择要确保支持的浏览器; 另请参阅基于此的[Browserslist 查询](https://github.com/ai/browserslist#queries)以获取更多详细信息。例如，以下查询将选择所有主流浏览器的最后 2 个版本和 IE9 以上的版本。
+另一个解决方案是在开发过程中自动添加前缀，而这个（和其他的东西除外）可以使用像 [Autoprefixer](https://github.com/postcss/autoprefixer)和 [PostCSS](http://postcss.org/)这样的工具完成。这些工具可以以多种方式使用，例如 Autoprefixer 有一个[在线版本](http://autoprefixer.github.io/)，允许你在左侧输入非前缀 CSS，并在右侧给出前缀添加版本。你可以使用 [Autoprefixer 选项中](https://github.com/postcss/autoprefixer#options)列出的符号来选择要确保支持的浏览器; 另请参阅基于此的 [Browserslist 查询](https://github.com/ai/browserslist#queries)以获取更多详细信息。例如，以下查询将选择所有主流浏览器的最后 2 个版本和 IE9 以上的版本。
 
 ```plain
 last 2 versions, ie > 9
 ```
 
-Autoprefixer 也可用于其他更便捷的方式 - 请参阅[Autoprefixer 使用情况](https://github.com/postcss/autoprefixer#usage)。例如，你可以使用任务运行器/构建工具（如[Gulp](http://gulpjs.com/)或[Webpack）](https://webpack.github.io/)在开发完成后自动添加前缀。（解释这些工作如何超出本文的范围。）
+Autoprefixer 也可用于其他更便捷的方式 - 请参阅 [Autoprefixer 使用情况](https://github.com/postcss/autoprefixer#usage)。例如，你可以使用任务运行器/构建工具（如 [Gulp](http://gulpjs.com/)或 [Webpack）](https://webpack.github.io/)在开发完成后自动添加前缀。（解释这些工作如何超出本文的范围。）
 
 你也可以使用插件来编辑文本编辑器，如 Atom 或 Sublime 文本。例如，在 Atom 中：
 
@@ -413,15 +413,15 @@ body {
 - 对现代布局功能缺乏（或不同）支持。
 - 布局在移动浏览器中看起来不太好（即响应式设计问题）。
 
-> **备注：** 过去，Web 开发人员使用 reset CSS 删除应用于 HTML 的所有默认浏览器样式，然后将自己的样式应用于顶部的所有样式 - 这样做是为了使项目的样式更加一致，并减少可能的跨浏览器问题，特别是像布局的东西。然而现在它被认为过头了。我们现在最好的等价物是[normalize.css](https://necolas.github.io/normalize.css/)，这是一个整齐的 CSS，在默认的浏览器样式上略微增加一点，使事情更加一致，并解决一些布局问题。建议你将 normalize.css 应用于所有的 HTML 页面。
+> **备注：** 过去，Web 开发人员使用 reset CSS 删除应用于 HTML 的所有默认浏览器样式，然后将自己的样式应用于顶部的所有样式 - 这样做是为了使项目的样式更加一致，并减少可能的跨浏览器问题，特别是像布局的东西。然而现在它被认为过头了。我们现在最好的等价物是 [normalize.css](https://necolas.github.io/normalize.css/)，这是一个整齐的 CSS，在默认的浏览器样式上略微增加一点，使事情更加一致，并解决一些布局问题。建议你将 normalize.css 应用于所有的 HTML 页面。
 
-> **备注：** 当试图追踪一个棘手的布局问题，一个好方法是添加一个明亮的颜色[outline](/zh-CN/docs/Web/CSS/outline)到有问题的元素，或附近的所有元素。这使得更容易看到一切放置在哪里。请参阅[使用大纲可视化调试你的 CSS 以](http://www.otsukare.info/2016/10/05/debugging-css)获取更多详细信息。
+> **备注：** 当试图追踪一个棘手的布局问题，一个好方法是添加一个明亮的颜色 [outline](/zh-CN/docs/Web/CSS/outline)到有问题的元素，或附近的所有元素。这使得更容易看到一切放置在哪里。请参阅[使用大纲可视化调试你的 CSS 以](http://www.otsukare.info/2016/10/05/debugging-css)获取更多详细信息。
 
 #### 支持新的布局特性
 
 今天网络上的大部分布局工作都是使用[浮动工具](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)完成的 - 这是因为浮动支持得很好（可以回到 IE4，尽管如此，如果你尝试支持 IE，也需要调查一些错误很久以前）。但是，它们并不是真正用于布局的目的 - 使用浮动的方式实际上是一种黑客攻击 - 而且它们有一些严重的限制（例如，请参阅[为什么选择 Flexbox？](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox)）
 
-最近，出现了专门的布局机制，例如[Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)和[CSS Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout)，这些布局机制使常见的布局任务变得更加容易并消除了这些缺点。但是，这些在浏览器中并没有得到很好的支持：
+最近，出现了专门的布局机制，例如 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)和 [CSS Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout)，这些布局机制使常见的布局任务变得更加容易并消除了这些缺点。但是，这些在浏览器中并没有得到很好的支持：
 
 - CSS Grid 是非常新的；在撰写本文的时候，他们只在最新版本的现代浏览器中才[得到支持](http://gridbyexample.com/browsers/)。
 - Flexbox 在现代浏览器中[得到](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility)了[很好的支持](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility)，但是在旧版浏览器中却存在问题。IE 9 根本不支持它，IE 10 和旧版本的 iOS /桌面 Safari 分别支持 Flexbox 规范的两种不兼容老版本。如果你想尝试在所有这些浏览器上使用 flexbox（请参阅[高级跨浏览器 Flexbox](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)以获得创意），[则会](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)导致一些有趣的浏览器前缀[杂乱](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)。

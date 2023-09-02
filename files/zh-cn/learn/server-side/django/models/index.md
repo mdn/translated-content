@@ -128,9 +128,9 @@ my_field_name = models.CharField(max_length=20, help_text="Enter field documenta
 - [CharField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField) 是用来定义短到中等长度的字段字符串。你必须指定`max_length`要存储的数据。
 - [TextField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField) 用于大型任意长度的字符串。你可以`max_length`为该字段指定一个字段，但仅当该字段以表单显示时才会使用（不会在数据库级别强制执行）。
 - [IntegerField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField) 是一个用于存储整数（整数）值的字段，用于在表单中验证输入的值为整数。
-- [DateField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield) 和[DateTimeField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield) 用于存储／表示日期和日期／时间信息（分别是`Python.datetime.date` 和 `datetime.datetime` 对象）。这些字段可以另外表明（互斥）参数 `auto_now=Ture`（在每次保存模型时将该字段设置为当前日期），`auto_now_add`（仅设置模型首次创建时的日期）和 `default`（设置默认日期，可以被用户覆盖）。
+- [DateField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield) 和 [DateTimeField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield) 用于存储／表示日期和日期／时间信息（分别是`Python.datetime.date` 和 `datetime.datetime` 对象）。这些字段可以另外表明（互斥）参数 `auto_now=Ture`（在每次保存模型时将该字段设置为当前日期），`auto_now_add`（仅设置模型首次创建时的日期）和 `default`（设置默认日期，可以被用户覆盖）。
 - [EmailField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield) 用于存储和验证电子邮件地址。
-- [FileField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield) 和[ImageField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield) 分别用于上传文件和图像（`ImageField` 只需添加上传的文件是图像的附加验证）。这些参数用于定义上传文件的存储方式和位置。
+- [FileField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield) 和 [ImageField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield) 分别用于上传文件和图像（`ImageField` 只需添加上传的文件是图像的附加验证）。这些参数用于定义上传文件的存储方式和位置。
 - [AutoField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield) 是一种 **IntegerField** 自动递增的特殊类型。如果你没有明确指定一个主键，则此类型的主键将自动添加到模型中。
 - [ForeignKey](https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey) 用于指定与另一个数据库模型的一对多关系（例如，汽车有一个制造商，但制造商可以制作许多汽车）。关系的“一”侧是包含密钥的模型。
 - [ManyToManyField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield) 用于指定[多对多](https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield)关系（例如，一本书可以有几种类型，每种类型可以包含几本书）。在我们的图书馆应用程序中，我们将非常类似地使用它们 ForeignKeys，但是可以用更复杂的方式来描述组之间的关系。这些具有参数 `on_delete` 来定义关联记录被删除时会发生什么（例如，值 `models.SET_NULL` 将简单地设置为值 NULL）。
@@ -166,7 +166,7 @@ verbose_name = 'BetterName'
 
 许多其他元数据选项控制模型中必须使用哪些数据库以及数据的存储方式。（如果你需要模型映射一个现有数据库，这会有用）。
 
-完整有用的元数据选项在这里[Model metadata options](https://docs.djangoproject.com/en/1.10/ref/models/options/) (Django docs).
+完整有用的元数据选项在这里 [Model metadata options](https://docs.djangoproject.com/en/1.10/ref/models/options/) (Django docs).
 
 #### 方法
 

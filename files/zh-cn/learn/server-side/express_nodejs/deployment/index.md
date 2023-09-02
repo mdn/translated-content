@@ -134,7 +134,7 @@ set DEBUG=author,book
 export DEBUG="author,book"
 ```
 
-> **备注：** 调用`debug`可以替换你以前使用`console.log()`或`console.error()`执行的日志记录。通过调试模块[debug](https://www.npmjs.com/package/debug)进行日志记录，替换代码中的所有`console.log()`调用。通过设置 DEBUG 变量，并在其中记录对日志记录的影响，在开发环境中，打开和关闭日志记录。
+> **备注：** 调用`debug`可以替换你以前使用`console.log()`或`console.error()`执行的日志记录。通过调试模块 [debug](https://www.npmjs.com/package/debug)进行日志记录，替换代码中的所有`console.log()`调用。通过设置 DEBUG 变量，并在其中记录对日志记录的影响，在开发环境中，打开和关闭日志记录。
 
 如果你需要记录网站活动，可以使用 Winston 或 Bunyan 等日志库。有关此主题的更多信息，请参阅：[生产最佳实践：性能和可靠性](https://expressjs.com/en/advanced/best-practice-performance.html)。
 
@@ -195,11 +195,11 @@ app.use(helmet());
 ...
 ```
 
-> **备注：** 上面的命令，添加了对大多数站点有意义的可用标头子集。你可以按照[npm](https://www.npmjs.com/package/helmet)上的说明，根据需要添加/禁用特定标头。
+> **备注：** 上面的命令，添加了对大多数站点有意义的可用标头子集。你可以按照 [npm](https://www.npmjs.com/package/helmet)上的说明，根据需要添加/禁用特定标头。
 
 ## 例子：在 Heroku 上安装一个本地图书馆
 
-本节提供了如何在[Heroku PaaS cloud](http://heroku.com)云上安装 LocalLibrary 的实际演示。
+本节提供了如何在 [Heroku PaaS cloud](http://heroku.com)云上安装 LocalLibrary 的实际演示。
 
 ### 为什么选择 Heroku?
 
@@ -240,7 +240,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 > **备注：** 如果你习惯于遵循良好的软件开发实践，那么你可能已经在使用 git 或其他一些 SCM 系统。如果你已有 git 存储库，则可以跳过此步骤。
 
-有很多方法可以使用 git，但最简单的方法之一，是首先在[GitHub](https://github.com/)上建立一个帐户，在那里创建存储库，然后在本地同步它：
+有很多方法可以使用 git，但最简单的方法之一，是首先在 [GitHub](https://github.com/)上建立一个帐户，在那里创建存储库，然后在本地同步它：
 
 1. 访问 <https://github.com/> 并创建一个帐户。
 2. 登录后，单击顶部工具栏中的 **+** 号链接，然后选择新建存储库**New repository**。
@@ -473,7 +473,7 @@ heroku ps   #Display dyno status
 
 ## 总结
 
-本教程介绍在生产环境中，如何配置 Express 应用。是 Express 系列教程的最后一个。我们希望你觉得这些教程有用。你可以在[Github 上取得完整的源码](https://github.com/mdn/express-locallibrary-tutorial)。
+本教程介绍在生产环境中，如何配置 Express 应用。是 Express 系列教程的最后一个。我们希望你觉得这些教程有用。你可以在 [Github 上取得完整的源码](https://github.com/mdn/express-locallibrary-tutorial)。
 
 ## 相关链接
 

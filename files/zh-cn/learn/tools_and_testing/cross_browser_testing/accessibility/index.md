@@ -116,7 +116,7 @@ the last one.
 
 某些 HTML 功能可以使用键盘来选择 — 这是默认的，从早期 web 开始就是这样的。具有此功能的元素是允许用户与网页交互的常见元素，比如 links, {{htmlelement("button")}}s, 以及表单元素，比如{{htmlelement("input")}}.
 
-浏览[native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (查看[源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。
+浏览 [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (查看[源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。
 
 ![](button-focused-unfocused.png)
 
@@ -152,9 +152,9 @@ select:focus {
 
 有时可能无法使用键盘完成无障碍。你可能有一个语义不是很好的网站（也许你最终得到了一个糟糕的 CMS 网页，该 CMS 生成了由\<div> 组成的按钮），或者你正在使用一个没有内置键盘无障碍的复杂控件，例如 HTML5 {{htmlelement("video")}} 元素（令人惊奇的是，Opera 是唯一允许你在\<video>元素的默认浏览器控件之间进行制表的浏览器）。你有几种选择：
 
-1. 使用\<button>元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见[Creating a cross-browser video player](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)。
-2. 通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅[Desktop mouse and keyboard controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以获取一些可用于任何目的（比如游戏）的例子。
-3. 使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
+1. 使用\<button>元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见 [Creating a cross-browser video player](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)。
+2. 通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅 [Desktop mouse and keyboard controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以获取一些可用于任何目的（比如游戏）的例子。
+3. 使用一些有趣的策略来伪造按钮行为。以我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 WebAIM 的 [tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
 
    ```js
    document.onkeydown = function (e) {
@@ -173,11 +173,11 @@ select:focus {
 
 替代文本对于无障碍非常重要 — 如果一个人有视觉或听觉障碍使他们无法看到或听到某些内容，那么这就是一个问题。可用的最简单的文本替代方法是`alt`属性，我们应该在所有包含相关内容的图像上包括该属性。其中应包含对图像的描述，该描述可在页面上成功传达其含义和内容，并由屏幕阅读器读取并读出给用户。
 
-> **备注：** 更多信息请阅读[Text alternatives](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81)
+> **备注：** 更多信息请阅读 [Text alternatives](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81)
 
 可以通过多种方法来测试缺少的替代文本，例如，使用无障碍[审计工具](#审计工具)。
 
-对于视频和音频内容，Alt 文本稍微复杂一些。有一种方法可以定义文本轨道（例如，字幕）并在播放视频时以{{htmlelement("track")}}元素和[WebVTT](/zh-CN/docs/Web/API/WebVTT_API)格式的形式显示它们（请参见[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)以获取详细信息）。这些功能的[浏览器兼容性](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9)相当好，但是如果你想提供音频的替代文本或支持较旧的浏览器，则在页面某处或单独页面上显示一个简单的文本记录可能是个好主意。
+对于视频和音频内容，Alt 文本稍微复杂一些。有一种方法可以定义文本轨道（例如，字幕）并在播放视频时以{{htmlelement("track")}}元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API)格式的形式显示它们（请参见 [Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)以获取详细信息）。这些功能的[浏览器兼容性](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9)相当好，但是如果你想提供音频的替代文本或支持较旧的浏览器，则在页面某处或单独页面上显示一个简单的文本记录可能是个好主意。
 
 #### 元素关系和上下文
 
@@ -189,7 +189,7 @@ HTML 中有某些功能和最佳实践，旨在提供元素之间的上下文和
 
 > **备注：** 更多关于链接文本和表单标签，请阅读[有意义的文字标签](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E6%96%87%E5%AD%97%E6%A0%87%E7%AD%BE)
 
-最后，简要介绍一下数据表。基本数据表可以用非常简单的标记编写（请参阅[bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)和[源码](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html))），但这存在问题 — 屏幕阅读器用户无法将行或列作为数据分组关联在一起，但你需要知道标题行是什么，以及标题行行的标题还是列的标题等。这些只能从可视化的表格才能知道。
+最后，简要介绍一下数据表。基本数据表可以用非常简单的标记编写（请参阅 [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)和[源码](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html))），但这存在问题 — 屏幕阅读器用户无法将行或列作为数据分组关联在一起，但你需要知道标题行是什么，以及标题行行的标题还是列的标题等。这些只能从可视化的表格才能知道。
 
 相反，如果你看一下我们的`punk-bands-complete.html`示例（[示例](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)，[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)），则可以在此处看到一些无障碍辅助，例如表头（{{htmlelement("th")}}和`作用域`属性），{{htmlelement("caption")}}元素等。
 
@@ -207,7 +207,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 #### 颜色和颜色对比度
 
-为你的网站选择配色方案时，应确保文本（前景）颜色与背景颜色形成鲜明对比。你的设计可能看起来很酷，但是如果视力障碍者（例如色盲）无法阅读你的内容，那就不好了。使用 WebAIM 的[Color Contrast Checker](http://webaim.org/resources/contrastchecker/)之类的工具来检查你的方案是否有足够对比度。
+为你的网站选择配色方案时，应确保文本（前景）颜色与背景颜色形成鲜明对比。你的设计可能看起来很酷，但是如果视力障碍者（例如色盲）无法阅读你的内容，那就不好了。使用 WebAIM 的 [Color Contrast Checker](http://webaim.org/resources/contrastchecker/)之类的工具来检查你的方案是否有足够对比度。
 
 另一个提示是不要仅依靠颜色来表示界标/信息，因为这对于看不见颜色的人来说是不好的。例如，不要将所需的表单字段标记为红色，而应使用星号和红色标记它们。
 
@@ -215,7 +215,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 #### 隐藏的内容
 
-在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的[Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)“示例（查看[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。
+在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)“示例（查看[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。
 
 ![](20191022144107.png)
 
@@ -236,7 +236,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 - 提供客户端表单验证，可在不等待服务器检查数据的情况下，迅速向用户发出有关表单条目问题的警报。如果不能在客户端验证，则该表格仍然可以使用，但验证速度可能会较慢。
 - 提供全键盘用户可访问的 HTML5 `<video>`的自定义控件（如我们之前所述，默认浏览器视频控件在大多数浏览器中均无法通过键盘访问）。
 
-> **备注：** WebAIM 的[Accessible JavaScript](http://webaim.org/techniques/javascript/)提供了一些关于 JavaScript 无障碍注意事项的信息。
+> **备注：** WebAIM 的 [Accessible JavaScript](http://webaim.org/techniques/javascript/)提供了一些关于 JavaScript 无障碍注意事项的信息。
 
 更复杂的 JavaScript 实现可能会带来无障碍问题 — 你需要尽力而为。例如，期望让使用 WebGL 编写的复杂 3D 游戏对盲人来说 100％无障碍是不合理的，但是你可以实现键盘控件，以便非鼠标用户可以使用它，并使配色方案具有足够的对比度供有颜色分辨障碍的人使用。
 
@@ -244,13 +244,13 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 无障碍存在问题的主要领域之一是复杂的应用程序，其中涉及复杂的表单控件（例如日期选择器）和动态内容，内容会经常增量更新。
 
-非自带的复杂的表单控件可能会存在问题，因为它们往往涉及大量嵌套的`<div>`，浏览器默认情况下不知道如何处理它们。如果你自己开发控件，则需要确保它们可以通过键盘访问。如果你使用的是某种第三方框架，请在开始使用之前仔细检查可用的选项以了解它们是否具有完备的无障碍。例如，Bootstrap 就对无障碍有相当好的支持（尽管 Rhiana Heath 的[Making Bootstrap a Little More Accessible](https://www.sitepoint.com/making-bootstrap-accessible/)探讨了它的一些问题（主要与色彩对比度有关），并着眼于一些解决方案）。
+非自带的复杂的表单控件可能会存在问题，因为它们往往涉及大量嵌套的`<div>`，浏览器默认情况下不知道如何处理它们。如果你自己开发控件，则需要确保它们可以通过键盘访问。如果你使用的是某种第三方框架，请在开始使用之前仔细检查可用的选项以了解它们是否具有完备的无障碍。例如，Bootstrap 就对无障碍有相当好的支持（尽管 Rhiana Heath 的 [Making Bootstrap a Little More Accessible](https://www.sitepoint.com/making-bootstrap-accessible/)探讨了它的一些问题（主要与色彩对比度有关），并着眼于一些解决方案）。
 
-定期更新的动态内容可能会成为问题，因为屏幕阅读器用户可能会错过这些内容，尤其是在意外更新的情况下。如果你有一个包含主要内容面板的单页应用程序，该应用程序使用[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)或[Fetch](/zh-CN/docs/Web/API/Fetch_API)定期更新，那么屏幕阅读器用户可能会错过这些更新。
+定期更新的动态内容可能会成为问题，因为屏幕阅读器用户可能会错过这些内容，尤其是在意外更新的情况下。如果你有一个包含主要内容面板的单页应用程序，该应用程序使用 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)定期更新，那么屏幕阅读器用户可能会错过这些更新。
 
 #### WAI-ARIA
 
-你是否需要使用这种复杂的功能，或者使用普通的旧语义化 HTML 代替？如果确实需要复杂性，则应考虑使用[WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/)（Accessible Rich Internet Applications - 可访问的互联网应用），该规范为诸如复杂的表单控件和更新面板之类的项目提供了语义（以新的 HTML 属性形式），这样大部分浏览器和屏幕阅读器就能理解内容。
+你是否需要使用这种复杂的功能，或者使用普通的旧语义化 HTML 代替？如果确实需要复杂性，则应考虑使用 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/)（Accessible Rich Internet Applications - 可访问的互联网应用），该规范为诸如复杂的表单控件和更新面板之类的项目提供了语义（以新的 HTML 属性形式），这样大部分浏览器和屏幕阅读器就能理解内容。
 
 要处理复杂的表单窗口小部件，你需要使用 ARIA 属性（例如`roles`）来声明窗口小部件中不同元素的角色（例如，它们是选项卡还是选项卡面板？），用`aria-disabled`来表示控件是否禁用等。
 
@@ -267,9 +267,9 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-浏览 Freedom Scientific 的[ARIA (Accessible Rich Internet Applications) 动态更新区域](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)示例 — 高亮显示的段落每 10 秒更新一次内容，屏幕阅读器应将此内容读出给用户。[ARIA Live Regions - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)是另一个很有用的例子。
+浏览 Freedom Scientific 的 [ARIA (Accessible Rich Internet Applications) 动态更新区域](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)示例 — 高亮显示的段落每 10 秒更新一次内容，屏幕阅读器应将此内容读出给用户。[ARIA Live Regions - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)是另一个很有用的例子。
 
-我们这里没有足够的空间来详细介绍 WAI-ARIA，你可以在[WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)了解更多。
+我们这里没有足够的空间来详细介绍 WAI-ARIA，你可以在 [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)了解更多。
 
 ## 无障碍测试工具
 
@@ -285,8 +285,8 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 看下面的例子，我们用的是 Tenon。
 
-1. 访问[Tenon 主页](https://tenon.io)。
-2. 使用[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
+1. 访问 [Tenon 主页](https://tenon.io)。
+2. 使用 [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
 3. 下滑，直到你看到错误/描述部分，如下图。
 
 ![](tenon-screenshot.png)
@@ -302,25 +302,25 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 - [aXe for Chrome](http://bitly.com/aXe-Chrome)
 - [aXe for Firefox](http://bit.ly/aXe-Firefox)
 
-扩展程序将无障碍选项卡添加到浏览器开发人员工具。例如，我们安装了 Firefox 版本，然后使用它来审核[bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)示例。我们得到以下结果：
+扩展程序将无障碍选项卡添加到浏览器开发人员工具。例如，我们安装了 Firefox 版本，然后使用它来审核 [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)示例。我们得到以下结果：
 
 ![](axe-screenshot.png)
 
-aXe 也可以使用`npm`安装，并且可以与任务运行器（如[Grunt](http://gruntjs.com/) 和[Gulp](http://gulpjs.com/)），自动化框架（如[Selenium](http://www.seleniumhq.org/)和[Cucumber](https://cucumber.io/)），单元测试框架（如[Jasmin](http://jasmine.github.io/)）集成，以及更多其他功能（详见[main aXe page](https://www.deque.com/products/axe/) ）。
+aXe 也可以使用`npm`安装，并且可以与任务运行器（如 [Grunt](http://gruntjs.com/) 和 [Gulp](http://gulpjs.com/)），自动化框架（如 [Selenium](http://www.seleniumhq.org/)和 [Cucumber](https://cucumber.io/)），单元测试框架（如 [Jasmin](http://jasmine.github.io/)）集成，以及更多其他功能（详见 [main aXe page](https://www.deque.com/products/axe/) ）。
 
 ### 屏幕阅读器
 
 为了了解有严重视力障碍的人是如何浏览网页的，我们需要测试屏幕阅读器。有几款屏幕阅读器：
 
-- 有些是付费产品，比如[JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) 和[Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
-- 有些是免费产品，比如[NVDA](http://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows, and Mac OS X), 和[Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- 有些内置在操作系统中，比如[VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), 和[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- 有些是付费产品，比如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) 和 [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
+- 有些是免费产品，比如 [NVDA](http://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows, and Mac OS X), 和 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
+- 有些内置在操作系统中，比如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), 和 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 通常，屏幕阅读器是独立运行的应用程序，并且不仅仅支持阅读网页，也支持阅读其他应用程序。也有例外（比如 ChromeVox 是一个浏览器扩展程序）。不同的屏幕阅读器可能在控制键和表现上稍有不同，所以你必须查阅你选择的屏幕阅读器的文档来获取相关细节。总体来说他们是大同小异的。
 
 一起看一下我们对几款不同的屏幕阅读器的测试。这将帮助你大致了解它们如何工作以及如何测试它们。
 
-> **备注：** WebAIM 的 [Designing for Screen Reader Compatibility](http://webaim.org/techniques/screenreader/)提供了一些关于屏幕阅读器的使用和如何开发应用以最好的适用屏幕阅读器的信息。你也可以看下[Screen Reader User Survey #6 Results](http://webaim.org/projects/screenreadersurvey6/#used)这篇有关屏幕阅读器一些有趣的统计信息的文章。
+> **备注：** WebAIM 的 [Designing for Screen Reader Compatibility](http://webaim.org/techniques/screenreader/)提供了一些关于屏幕阅读器的使用和如何开发应用以最好的适用屏幕阅读器的信息。你也可以看下 [Screen Reader User Survey #6 Results](http://webaim.org/projects/screenreadersurvey6/#used)这篇有关屏幕阅读器一些有趣的统计信息的文章。
 
 #### VoiceOver
 
@@ -364,7 +364,7 @@ VO 有很多快捷键，我们没有全部列出来。只把测试网页无障�
 
 NVDA 只能运行在 Window 系统，你需要安装它。
 
-1. 在[nvaccess.org](http://www.nvaccess.org/)下载。你能选择免费下载，或赞助后再下载；你需要在下载前提供你的邮箱地址。
+1. 在 [nvaccess.org](http://www.nvaccess.org/)下载。你能选择免费下载，或赞助后再下载；你需要在下载前提供你的邮箱地址。
 2. 下载完成后，开始安装 - 双击安装程序，接受条款，一步步按提示来。
 3. 双击 NVDA 程序或快捷方式，或者按下 Ctrl + Alt + N 打开它。你会看见欢迎界面。你能选择一些选项，然后按下 OK 继续。
 
@@ -403,11 +403,11 @@ NVDA 有很多快捷键，我们没有全部列出来。只把测试网页无障
 
 现在你学会了如何使用屏幕阅读器，来使用它做一些无障碍测试吧。这样你才能了解屏幕阅读器在好的网页和坏的网页之间不同的表现：
 
-- 浏览[good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html), 留意屏幕阅读器如何找到标题并将其用于导航。再看一下[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html), 留意屏幕阅读器不会得到这些信息。想象一下，当尝试浏览非常长的文本页面时，这会是多么使人烦躁。
-- 浏览[good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html), 并留意当不在上下文时他们对于你理解内容的帮助。而[bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html) 就无法帮助你理解— 他们仅仅会提示"click here（点击这里）".
-- 浏览[good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html), 并注意如何使用其标签描述表单输入，因为我们已经正确使用了\<label>。在[bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html), 只能获取到无用的空白标签。
-- 浏览[punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), 并查看屏幕阅读器如何将内容的列和行关联起来，并一起读取它们，因为我们已经正确定义了标头。在[bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html), 无法得知单元格的关联关系。请注意，当页面上只有一个表时，NVDA 似乎表现得有些杂乱无章。你可以改用[WebAIM's table test page](http://webaim.org/articles/nvda/tables.htm)进行测试。
-- 看一下之前看过的[WAI-ARIA live regions example](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm), 并注意屏幕阅读器将实时读取不断更新的部分。
+- 浏览 [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html), 留意屏幕阅读器如何找到标题并将其用于导航。再看一下 [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html), 留意屏幕阅读器不会得到这些信息。想象一下，当尝试浏览非常长的文本页面时，这会是多么使人烦躁。
+- 浏览 [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html), 并留意当不在上下文时他们对于你理解内容的帮助。而 [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html) 就无法帮助你理解— 他们仅仅会提示"click here（点击这里）".
+- 浏览 [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html), 并注意如何使用其标签描述表单输入，因为我们已经正确使用了\<label>。在 [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html), 只能获取到无用的空白标签。
+- 浏览 [punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), 并查看屏幕阅读器如何将内容的列和行关联起来，并一起读取它们，因为我们已经正确定义了标头。在 [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html), 无法得知单元格的关联关系。请注意，当页面上只有一个表时，NVDA 似乎表现得有些杂乱无章。你可以改用 [WebAIM's table test page](http://webaim.org/articles/nvda/tables.htm)进行测试。
+- 看一下之前看过的 [WAI-ARIA live regions example](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm), 并注意屏幕阅读器将实时读取不断更新的部分。
 
 ### 用户测试
 

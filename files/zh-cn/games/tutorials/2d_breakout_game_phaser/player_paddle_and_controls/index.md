@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 7 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html)完成本课程后找到源代码。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 7 步**。你可以在 [Gamedev-Phaser-Content-Kit / demos / lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html)完成本课程后找到源代码。
 
 我们有球从墙上移动并弹跳，但它很快变得无聊 - 没有互动！我们需要一种介绍游戏的方法，所以在这篇文章中，我们将创建一个桨来移动并击中球。
 

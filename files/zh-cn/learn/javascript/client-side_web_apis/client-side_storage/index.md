@@ -531,7 +531,7 @@ function deleteItem(e) {
 }
 ```
 
-- 第一部分可以使用一些解释 - 我们检索要删除`Number(e.target.parentNode.getAttribute('data-note-id'))`的记录的 ID - 回想一下记录的 ID 是在第一次显示时保存在`data-note-id`属性中的`<li>`。但是，我们需要通过全局内置的[Number（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。
+- 第一部分可以使用一些解释 - 我们检索要删除`Number(e.target.parentNode.getAttribute('data-note-id'))`的记录的 ID - 回想一下记录的 ID 是在第一次显示时保存在`data-note-id`属性中的`<li>`。但是，我们需要通过全局内置的 [Number（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。
 - 然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该[`IDBObjectStore.delete()`](/zh-CN/docs/Web/API/IDBObjectStore/delete)方法从数据库中删除记录，并将 ID 传递给它。
 - 当数据库事务完成后，我们`<li>`从 DOM 中删除注释，然后再次检查以查看它是否`<ul>`为空，并根据需要插入注释。
 
@@ -543,7 +543,7 @@ function deleteItem(e) {
 
 如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。你可以存储任何你想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
 
-为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
+为了演示如何操作，我们编写了另一个名为 [IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
 
 让我们来看看这个例子中最有趣的部分。我们不会全部看 - 它的很多内容与上一个示例类似，代码注释得很好。
 
@@ -663,7 +663,7 @@ function deleteItem(e) {
 
 ![](ff-offline.png)
 
-这就是[服务工作者](/zh-CN/docs/Web/API/Service_Worker_API)和密切相关的[Cache API 的](/zh-CN/docs/Web/API/Cache)用武之地。
+这就是[服务工作者](/zh-CN/docs/Web/API/Service_Worker_API)和密切相关的 [Cache API 的](/zh-CN/docs/Web/API/Cache)用武之地。
 
 服务工作者是一个 JavaScript 文件，简单地说，它是在浏览器访问时针对特定来源（网站或某个域的网站的一部分）进行注册的。注册后，它可以控制该来源的可用页面。它通过坐在加载的页面和网络之间以及拦截针对该来源的网络请求来实现这一点。
 
@@ -681,7 +681,7 @@ Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTT
 
 #### 注册服务工作者
 
-首先要注意的是，在主 JavaScript 文件中放置了一些额外的代码（请参阅[index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)）。首先，我们进行特征检测测试，以查看`serviceWorker`该[`Navigator`](/zh-CN/docs/Web/API/Navigator)对象中是否有该成员。如果返回 true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该[`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register)方法将`sw.js`文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。
+首先要注意的是，在主 JavaScript 文件中放置了一些额外的代码（请参阅 [index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)）。首先，我们进行特征检测测试，以查看`serviceWorker`该[`Navigator`](/zh-CN/docs/Web/API/Navigator)对象中是否有该成员。如果返回 true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该[`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register)方法将`sw.js`文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。
 
 ```js
 // Register service worker to control making site work offline
@@ -703,7 +703,7 @@ if ("serviceWorker" in navigator) {
 
 下次访问服务工作者控制下的任何页面时（例如，重新加载示例时），将针对该页面安装服务工作者，这意味着它将开始控制它。发生这种情况时，`install`会向服务工作人员发起一个事件; 你可以在服务工作者本身内编写代码来响应安装。
 
-让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。你将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
+让我们看一下 [sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。你将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
 
 在`install` 处理程序内部，我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil)事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
 

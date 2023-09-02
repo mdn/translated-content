@@ -92,7 +92,7 @@ function sendData(data) {
 
 {{EmbedLiveSample("构建_xmlhttprequest", "100%", 50)}}
 
-> **备注：** 当你想要往第三方网站传输数据时，使用{{domxref("XMLHttpRequest")}}会受到同源策略的影响。如果你需要执行跨域请求，你需要熟悉一下[CORS 和 HTTP 访问控制](/zh-CN/docs/HTTP/Access_control_CORS).
+> **备注：** 当你想要往第三方网站传输数据时，使用{{domxref("XMLHttpRequest")}}会受到同源策略的影响。如果你需要执行跨域请求，你需要熟悉一下 [CORS 和 HTTP 访问控制](/zh-CN/docs/HTTP/Access_control_CORS).
 
 ### 使用 XMLHttpRequest 和 the FormData object（表单数据对象）
 
@@ -100,7 +100,7 @@ function sendData(data) {
 
 {{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是“只写”的，这意味着你可以更改它们，但不能检索其内容。
 
-使用这个对象在[Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
+使用这个对象在 [Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
 
 #### 使用一个独立的 FormData 对象
 

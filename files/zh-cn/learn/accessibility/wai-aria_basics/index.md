@@ -93,7 +93,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 我们过去讨论了一些促使 WAI-ARIA 诞生的问题。但基本上是以下四个主要领域：
 
 1. **路标/地标**（**Signposts/Landmarks**）**：** ARIA 的 `角色` 属性值可以作为地标来复制 HTML5 元素的语义化（例如 nav tag）。或者超越 HTML5 的语义，给不同的功能块提供「路标」，例如 `search`, `tabgroup`, `tab`, `listbox` 等等。
-2. **动态的内容更新：** 屏幕阅读器往往难以报告一直变化的内容，用无障碍特性我们能使用 `aria-live` 来通知屏幕阅读器某一部分的内容更新了。例如[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 或者 [DOM APIs](/zh-CN/docs/Web/API/Document_Object_Model)。
+2. **动态的内容更新：** 屏幕阅读器往往难以报告一直变化的内容，用无障碍特性我们能使用 `aria-live` 来通知屏幕阅读器某一部分的内容更新了。例如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 或者 [DOM APIs](/zh-CN/docs/Web/API/Document_Object_Model)。
 3. **优化键盘的无障碍操作**: 默认的 HTML 元素是具有自带的键盘辅助功能的。当其他元素与 JavaScript 一起进行交互时，键盘的辅助功能和屏幕阅读器的报告会因此收到影响（例如你将会难以用 tab 到达理想的位置）。这是无法避免的，WAI-ARIA 提供了提供了一种允许其他元素获得焦点的方法（使用 `tabindex`）。
 4. **非语义控件的无障碍**：当一系列嵌套的 `<div>` 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，无障碍将会变得极其困难——屏幕阅读器将会难以找到语义内容线索。在这种情况下，AIRA 可以帮助提供缺少了的功能，例如 `button`, `listbox`，或者 `tabgroup`，另外和 aria-required 或 aria-posinset 这样的属性可以提供有关功能的更多线索。
 
@@ -195,7 +195,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 
 使用屏幕阅读器可以轻松访问读取到 DOM 中的内容，从文本内容到附加到图像的 alt 文本。所以具有大量文本内容的传统静态网站易于为视碍人士提供信息。
 
-问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)，[Fetch](/zh-CN/docs/Web/API/Fetch_API) 或[DOM API](/zh-CN/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
+问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)，[Fetch](/zh-CN/docs/Web/API/Fetch_API) 或 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
 
 我们来看一个小例子—— [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。在这个例子我们哟一个小的随机引用块：
 
@@ -275,7 +275,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 </div>
 ```
 
-- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个 alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 [`alert()`](/zh-CN/docs/Web/API/Window/alert) 的调用会导致一系列的无障碍问题，详情请看[Popup Windows](http://webaim.org/techniques/javascript/other#popups) ）。
+- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个 alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 [`alert()`](/zh-CN/docs/Web/API/Window/alert) 的调用会导致一系列的无障碍问题，详情请看 [Popup Windows](http://webaim.org/techniques/javascript/other#popups) ）。
 - 一个 [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 的值为 `all` 会指示屏幕阅读器在对其进行任何更改时读出错误列表的内容 — 即为错误的增加或者消失。这是很有用的，因为用户需要知道具体哪个错误的出现或者消失，不仅仅是表单错误列表出现了增加或者删除。
 
 我们可以在 ARIA 的应用上更进一步，并提供更多验证上的帮助。例如支出某个字段是否必填，或者是要填的年龄的区间该是多少？
@@ -314,7 +314,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 还有许多其他有用的属性和状态，用于指示表单元素的状态。例如：`aria-disabled="true"` 可用于表示该表单字段已禁用。许多浏览器只会跳过禁用的表单字段，它们甚至不会被屏幕阅读器读出，但在某些情况下它们会被识别出来，所以最好包含这个属性让屏幕阅读器知道禁用的输入事实上已经被禁用。
 
-如果输入的禁用状态可能会改变，那么指示它何时发生以及结果是什么也是一个好主意。例如，在我们的[form-validation-checkbox-disabled.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) 这一 demo 中，有一个复选框，选中后，启用另一个表单输入以允许输入更多信息。我们已经建立了一个隐藏的实时区域：
+如果输入的禁用状态可能会改变，那么指示它何时发生以及结果是什么也是一个好主意。例如，在我们的 [form-validation-checkbox-disabled.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) 这一 demo 中，有一个复选框，选中后，启用另一个表单输入以允许输入更多信息。我们已经建立了一个隐藏的实时区域：
 
 ```html
 <p class="hidden-alert" aria-live="assertive"></p>
@@ -343,7 +343,7 @@ function toggleMusician(bool) {
 
 #### 描述非语义的 button 是个 button
 
-在本课程中已经有几次，我们已经提到了原生的无障碍（以及使用其他元素伪造导致的无障碍问题）按钮，链接或表单元素（请参阅 HTML 辅助功能文章中的[UI 控件](/zh-CN/docs/Learn/Accessibility/HTML#UI_controls) ，以及[优化键盘的无障碍操作](#优化键盘的无障碍操作)，上面）。基本上，利用 tabindex 和一些 JavaScript 的话，大部分情况下添加键盘辅助功能不会有多少麻烦。
+在本课程中已经有几次，我们已经提到了原生的无障碍（以及使用其他元素伪造导致的无障碍问题）按钮，链接或表单元素（请参阅 HTML 辅助功能文章中的 [UI 控件](/zh-CN/docs/Learn/Accessibility/HTML#UI_controls) ，以及[优化键盘的无障碍操作](#优化键盘的无障碍操作)，上面）。基本上，利用 tabindex 和一些 JavaScript 的话，大部分情况下添加键盘辅助功能不会有多少麻烦。
 
 但是屏幕阅读器呢？他们还是看着这个元素并不是一个 button，如果你用屏幕阅读器测试我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 例子，你会听到一段短语描述这个按钮，内容大概是 "Click me!, group"，显然这会让人疑惑。
 

@@ -24,8 +24,8 @@ slug: Mozilla/Firefox/Releases/22
 
 ### DOM
 
-- 不再支持 `XMLHttpRequest` 中的 `multipart` 属性和 `multipart/x-mixed-replace` 响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用[Server-Sent Events](/zh-CN/docs/Server-sent_events), [Web Sockets](/zh-CN/docs/WebSockets)或者在 progress 事件中查看 `responseText` 属性的变化来实现同样的效果。
-- 实现了[Web Notifications](http://notifications.spec.whatwg.org/) ([Firefox bug 782211](https://bugzil.la/782211)).
+- 不再支持 `XMLHttpRequest` 中的 `multipart` 属性和 `multipart/x-mixed-replace` 响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用 [Server-Sent Events](/zh-CN/docs/Server-sent_events), [Web Sockets](/zh-CN/docs/WebSockets)或者在 progress 事件中查看 `responseText` 属性的变化来实现同样的效果。
+- 实现了 [Web Notifications](http://notifications.spec.whatwg.org/) ([Firefox bug 782211](https://bugzil.la/782211)).
 - {{domxref("XMLHttpRequest/FormData", "FormData")}}对象的`append`方法现在开始接受第三个参数`filename`([Firefox bug 690659](https://bugzil.la/690659)).
 - 移除了{{domxref("Node.isSupported")}}方法 ([Firefox bug 801562](https://bugzil.la/801562)).
 - {{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ([Firefox bug 842372](https://bugzil.la/842372)).

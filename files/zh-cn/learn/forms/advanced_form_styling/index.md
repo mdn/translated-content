@@ -5,7 +5,7 @@ slug: Learn/Forms/Advanced_form_styling
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-在本文中，我们将看到[HTML](/zh-CN/docs/HTML)表单怎样使用[CSS](/zh-CN/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/zh-CN/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
+在本文中，我们将看到 [HTML](/zh-CN/docs/HTML)表单怎样使用 [CSS](/zh-CN/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/zh-CN/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
 
 在继续之前，让我们回忆一下两种表单小部件：
 
@@ -98,7 +98,7 @@ input[type=search] {
 
 {{EmbedLiveSample("控制表单元素的外观", 250, 40)}}
 
-> **备注：** 当我们谈及 Web 技术的时总是很难预测未来。扩展 CSS 表现力是很困难的，其他规范也做了一些探索性的工作，如[Shadow DOM](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html)提供了一些观点。可完全设置样式的表单的问题还远未结束。
+> **备注：** 当我们谈及 Web 技术的时总是很难预测未来。扩展 CSS 表现力是很困难的，其他规范也做了一些探索性的工作，如 [Shadow DOM](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html)提供了一些观点。可完全设置样式的表单的问题还远未结束。
 
 ## 举例
 
@@ -220,7 +220,7 @@ p + p {
 }
 ```
 
-现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/zh-CN/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/zh-CN/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
+现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用 [selector 属性](/zh-CN/docs/CSS/Attribute_selectors)来选择复选框，然后使用 [adjacent sibling selector](/zh-CN/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
 
 ```css
 :root input[type="checkbox"] + label:before {
@@ -529,7 +529,7 @@ option {
 
 虽然对于复选框和单选按钮而言，CSS 的表示方式足够丰富，但是对更高级的小部件来说差距仍然很大。即使可以用{{HTMLElement("select")}}元素作一些事情，但是对 file 小部件的样式完全没用。对于日期选择器也同样如此。
 
-要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章[How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
+要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章 [How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
 
 - [Uni-form](http://sprawsm.com/uni-form/)是一个对采用 CSS 样式的表单标记实现标准化的框架，在使用 jQuery 时，还提供一些附加特性，但这是可选的。
 - [Formalize](http://formalize.me/)是对公共 JavaScript 框架的扩展（如 jQuery, Dojo, YUI 等），有助于规范和定制表单。

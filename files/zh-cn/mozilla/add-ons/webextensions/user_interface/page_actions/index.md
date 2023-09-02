@@ -67,21 +67,21 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 仅 default_icon 是强制（必需）的。
 
-有两种方式定义地址栏按钮：带 popup 窗口和无 popup 窗口。如果你没有指定一个 popup，则当用户点击此按钮时，事件被派送到使用[pageAction.onClicked](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked)侦听器的扩展：
+有两种方式定义地址栏按钮：带 popup 窗口和无 popup 窗口。如果你没有指定一个 popup，则当用户点击此按钮时，事件被派送到使用 [pageAction.onClicked](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked)侦听器的扩展：
 
 ```js
 browser.pageAction.onClicked.addListener(handleClick);
 ```
 
-如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/zh-CN/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
+如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见 [Popup](/zh-CN/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
 
 注意你的扩展只能有一个地址栏按钮。
 
-通过使用[pageAction](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API，你可以以编程方式修改地址栏按钮的任何属性。
+通过使用 [pageAction](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API，你可以以编程方式修改地址栏按钮的任何属性。
 
 ## Icons
 
-如何创建用于地址栏按钮的 ICONS 的详细内容，请参见[Photon Design System](https://design.firefox.com/photon/index.html)文档中的[Iconography](https://design.firefox.com/photon/visuals/iconography.html)节。
+如何创建用于地址栏按钮的 ICONS 的详细内容，请参见 [Photon Design System](https://design.firefox.com/photon/index.html)文档中的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html)节。
 
 ## 示例
 

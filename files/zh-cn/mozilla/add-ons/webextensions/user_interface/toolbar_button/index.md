@@ -42,7 +42,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 ## 图标
 
-想了解更多关于如何创建浏览器动作图标信息，请参看[Photon Design System](https://design.firefox.com/photon/index.html) 文档里的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) 部分。
+想了解更多关于如何创建浏览器动作图标信息，请参看 [Photon Design System](https://design.firefox.com/photon/index.html) 文档里的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) 部分。
 
 ## 范例
 

@@ -30,7 +30,7 @@ slug: Learn/Server-side/Django/Generic_views
 
 ## 概览
 
-本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站（或者更准确地说，我们将向你展示如何实现书页，并让你自己创建作者页面！）
+本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站（或者更准确地说，我们将向你展示如何实现书页，并让你自己创建作者页面！）
 
 该过程类似于创建索引页面，我们在上一个教程中展示了该页面。我们仍然需要创建 URL 地图，视图和模板。主要区别在于，对于详细信息页面，我们还有一个额外的挑战，即从 URL 中的模式中提取信息，并将其传递给视图。对于这些页面，我们将演示一种完全不同的视图类型：基于类别的通用列表和详细视图。这些可以显着减少所需的视图代码量，使其更易于编写和维护。
 
@@ -162,7 +162,7 @@ class BookListView(generic.ListView):
 
 #### For 循环/回圈
 
-模板使用[for](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#for) 和 `endfor`模板标签，以循环遍历书本列表，如下所示。每次迭代都会使用当前列表项的信息，填充书本模板变量`book`。
+模板使用 [for](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#for) 和 `endfor`模板标签，以循环遍历书本列表，如下所示。每次迭代都会使用当前列表项的信息，填充书本模板变量`book`。
 
 ```django
 {% for book in book_list %}

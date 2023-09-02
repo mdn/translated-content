@@ -101,4 +101,4 @@ var f = new Function("console.log('foo');");
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 或者 [load](/zh-CN/docs/Web/Events/load) 代替。
+如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听 [DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 或者 [load](/zh-CN/docs/Web/Events/load) 代替。

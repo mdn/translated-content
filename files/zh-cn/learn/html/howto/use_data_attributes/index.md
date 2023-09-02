@@ -23,7 +23,7 @@ HTML 是具有扩展性的设计，它初衷是数据应与特定的元素相关
 
 ## JavaScript 访问
 
-在外部使用[JavaScript](/zh-CN/docs/Web/JavaScript)去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。
+在外部使用 [JavaScript](/zh-CN/docs/Web/JavaScript)去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。
 
 为了使用`dataset`对象去获取到数据属性，需要获取属性名中`data-`之后的部分 (要注意的是破折号连接的名称需要改写为骆驼拼写法 (如"index-number"转换为"indexNumber"))。
 
@@ -39,7 +39,7 @@ article.dataset.parent; // "cars"
 
 ## CSS 访问
 
-注意，data 设定为 HTML 属性，他们同样能被[CSS](/zh-CN/docs/Web/CSS)访问。比如你可以通过[generated content](/zh-CN/docs/Web/CSS/content)使用函数{{cssxref("attr")}}来显示 data-parent 的内容：
+注意，data 设定为 HTML 属性，他们同样能被 [CSS](/zh-CN/docs/Web/CSS)访问。比如你可以通过 [generated content](/zh-CN/docs/Web/CSS/content)使用函数{{cssxref("attr")}}来显示 data-parent 的内容：
 
 ```css
 article::before {
@@ -58,7 +58,7 @@ article[data-columns="4"] {
 }
 ```
 
-你可以在这个[JSBin](http://jsbin.com/ujiday/2/edit) 里看到全部演示。
+你可以在这个 [JSBin](http://jsbin.com/ujiday/2/edit) 里看到全部演示。
 
 Data 属性同样可以存储不断变化的信息，比如游戏的得分。使用 CSS 选择器与 JavaScript 去访问可以让你得到花俏的效果，这里你并不需要用常规的编写方案来编写代码。有关使用生成内容和 CSS 转换（[JSBin 示例](https://jsbin.com/atawaz/3/edit)）的示例，请参阅此[视频](https://www.youtube.com/watch?v=On_WyUB1gOk)。
 
@@ -68,7 +68,7 @@ Data 属性同样可以存储不断变化的信息，比如游戏的得分。使
 
 不要在 data attribute 里储存需要显示及访问的内容，因为一些其他的技术可能访问不到它们。另外爬虫不能将 data attribute 的值编入索引中。
 
-IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持[dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
+IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持 [dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
 
 尽管如此，对于那些与元素相关的数据，这依然是一个很好的解决方案。
 

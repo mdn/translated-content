@@ -21,7 +21,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" [API permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 和 [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions). 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。
 
-这个 webRequest API 不能让你进入一些安全敏感的请求，比如[update checks and OCSP checks](https://bugzilla.mozilla.org/show_bug.cgi?id=1279371).
+这个 webRequest API 不能让你进入一些安全敏感的请求，比如 [update checks and OCSP checks](https://bugzilla.mozilla.org/show_bug.cgi?id=1279371).
 
 ### Modifying requests
 

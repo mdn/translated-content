@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/Deployment
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-现在，你已经创建（并测试）了一个令人敬畏的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，如果你希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能让你的网站准备好生产。
+现在，你已经创建（并测试）了一个令人敬畏的 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，如果你希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能让你的网站准备好生产。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -38,7 +38,7 @@ slug: Learn/Server-side/Django/Deployment
 - 选择一个用来托管所有静态文件的环境
 - 设置一个产品级的设施来为你的网站服务
 
-本教程为你选择托管站点提供了一些指导，简要概述了为了让你的 Django 应用程序可用于生产需要做什么以及如何将 LocalLibrary 网站安装到[Heroku](https://www.heroku.com/)云托管上服务。
+本教程为你选择托管站点提供了一些指导，简要概述了为了让你的 Django 应用程序可用于生产需要做什么以及如何将 LocalLibrary 网站安装到 [Heroku](https://www.heroku.com/)云托管上服务。
 
 ## 什么是生产环境？
 
@@ -81,7 +81,7 @@ slug: Learn/Server-side/Django/Deployment
 - 额外的好处。一些提供商将提供免费域名和 SSL 证书支持，否则你将不得不为此支付费用。
 - 你所依赖的“免费”等级，是否会随着时间的推移而过期，以及迁移到更昂贵等级的成本，是否意味着，你最好一开始就使用其他服务！
 
-当你刚开始时，好消息是，有很多网站提供了“免费”的“评估”、“开发者”或“爱好者”计算环境。这些始终是资源相当受限/有限的环境，你需要注意，它们可能会在广告期限后过期。然而，它们非常适合在真实环境中，测试低流量站点，并且可以在你的站点变得更加繁忙时，付费取得更多资源，并轻松迁移。此类别中的热门选择包括[Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 等。
+当你刚开始时，好消息是，有很多网站提供了“免费”的“评估”、“开发者”或“爱好者”计算环境。这些始终是资源相当受限/有限的环境，你需要注意，它们可能会在广告期限后过期。然而，它们非常适合在真实环境中，测试低流量站点，并且可以在你的站点变得更加繁忙时，付费取得更多资源，并轻松迁移。此类别中的热门选择包括 [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 等。
 
 许多提供商还有“基本”层，可提供更多有用的计算能力和更少的限制。[Digital Ocean](https://www.digitalocean.com/) 和 [Python Anywhere](https://www.pythonanywhere.com/) ，就是流行的托管服务提供商的例子，提供相对便宜的基本计算等级（每月 5 美元到 10 美元不等）。
 
@@ -149,7 +149,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 我们选择使用 Heroku 有以下几个原因：
 
-- Heroku 有一个真正免费的免费套餐[free tier](https://www.heroku.com/pricing) （尽管有一些限制）。
+- Heroku 有一个真正免费的免费套餐 [free tier](https://www.heroku.com/pricing) （尽管有一些限制）。
 - 作为 PaaS，Heroku 为我们提供了大量的 Web 基础架构。这使得入门更加容易，因为你不必担心 Heroku 为我们提供的服务器，负载平衡器，反向代理或任何其他 Web 基础结构。
 - 虽然它确实有一些限制，但这些不会影响本教程的应用程序。例如：
 
@@ -311,7 +311,7 @@ pip3 install gunicorn
 
 处理这种情况的 Heroku 机制，是使用[数据库加载项](https://elements.heroku.com/addons#data-stores)，并使用来自加载项设置的环境[配置变量](https://devcenter.heroku.com/articles/config-vars)的信息，来配置 Web 应用程序。有很多数据库选项，但我们将使用 Heroku postgres 数据库的[爱好者等级](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers)，因为它是免费的，被 Django 所支持，并在使用免费的爱好者 dyno 计划等级时，会自动添加到新的 Heroku 应用程序。
 
-使用名为`DATABASE_URL`的配置变量，将数据库连接信息提供给 Web dyno。Heroku 建议开发人员使用 [dj-database-url](https://warehouse.python.org/project/dj-database-url/) 套件包，以解析`DATABASE_URL`环境变量，并自动将其转换为 Django 所需的配置格式，而不是将此信息硬编码到 Django 中。除了安装 dj-database-url 套件包之外，我们还需要安装[psycopg2](http://initd.org/psycopg/)，因为 Django 需要它与 Postgres 数据库进行交互。
+使用名为`DATABASE_URL`的配置变量，将数据库连接信息提供给 Web dyno。Heroku 建议开发人员使用 [dj-database-url](https://warehouse.python.org/project/dj-database-url/) 套件包，以解析`DATABASE_URL`环境变量，并自动将其转换为 Django 所需的配置格式，而不是将此信息硬编码到 Django 中。除了安装 dj-database-url 套件包之外，我们还需要安装 [psycopg2](http://initd.org/psycopg/)，因为 Django 需要它与 Postgres 数据库进行交互。
 
 ##### dj-database-url (Django database configuration from environment variable)
 
@@ -339,7 +339,7 @@ DATABASES['default'].update(db_from_env)
 
 ##### psycopg2 (Python Postgres database support)
 
-Django 需要 psycopg2 来处理 Postgres 数据库，你需要将它添加到[requirements.txt](#requirements) 中，以便 Heroku 在远程服务器上进行设置（如下面的 requirements 部分所述）。
+Django 需要 psycopg2 来处理 Postgres 数据库，你需要将它添加到 [requirements.txt](#requirements) 中，以便 Heroku 在远程服务器上进行设置（如下面的 requirements 部分所述）。
 
 Django 默认会在本地使用我们的 SQLite 数据库，因为我们的本地环境中，没有设置`DATABASE_URL`环境变量。如果你想完全切换到 Postgres，并使用我们的 Heroku 免费等级数据库，进行开发和生产，那么你可以这么做。例如，要在基于 Linux 的系统上，本地安装 psycopg2 及其依赖项，你将使用以下 bash / terminal 命令：
 
@@ -583,7 +583,7 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 Setting DJANGO_DEBUG and restarting locallibrary... done, v8
 ```
 
-如果你现在访问该站点，你将收到“错误请求”（Bad request）错误，因为如果你有 `DEBUG=False`（作为安全措施），则需要[ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.0/ref/settings/#allowed-hosts) 设置。打开 **/locallibrary/settings.py**，并更改`ALLOWED_HOSTS`设置，以包含你的基本应用程序 URL（例如'locallibrary1234.herokuapp.com'），以及你通常在本地开发服务器上使用的 URL。
+如果你现在访问该站点，你将收到“错误请求”（Bad request）错误，因为如果你有 `DEBUG=False`（作为安全措施），则需要 [ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.0/ref/settings/#allowed-hosts) 设置。打开 **/locallibrary/settings.py**，并更改`ALLOWED_HOSTS`设置，以包含你的基本应用程序 URL（例如'locallibrary1234.herokuapp.com'），以及你通常在本地开发服务器上使用的 URL。
 
 ```python
 ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']

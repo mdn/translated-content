@@ -21,7 +21,7 @@ slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 
 ### 最小化文件数量
 
-减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的[HTTP](/zh-CN/docs/HTTP)请求数量，从而减少这些请求的收发时间。
+减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的 [HTTP](/zh-CN/docs/HTTP)请求数量，从而减少这些请求的收发时间。
 
 根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 [If-Modified-Since](/zh-CN/docs/Web/HTTP/Headers/If-Modified-Since) 的请求给网络服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。
 

@@ -228,7 +228,7 @@ let myName = "Chris";
 
 这可能是大多数时间你都会使用的方式，因为它要比在单独的两行上做两次操作要快。
 
-> **备注：** 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做**顶置**—阅读[var hoisting](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)来了解更多细节。
+> **备注：** 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做**顶置**—阅读 [var hoisting](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)来了解更多细节。
 
 ## var 与 let 的区别
 

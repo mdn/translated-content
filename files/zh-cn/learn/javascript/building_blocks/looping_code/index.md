@@ -498,7 +498,7 @@ do {
 } while (i < cats.length);
 ```
 
-> **备注：** 再一次，它正如我们期望的那样工作 — 看一看它在[Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+> **备注：** 再一次，它正如我们期望的那样工作 — 看一看它在 [Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
 > **警告：** 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。
 

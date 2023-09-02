@@ -131,7 +131,7 @@ ARIA 角色共分为 6 类：
 
 抽象角色仅由浏览器使用，以帮助组织和简化文档。编写 HTML 标记的开发者不应使用这些抽象角色。这样做不会向辅助技术或用户传达任何有意义的信息。
 
-避免使用[command](/zh-CN/docs/Web/Accessibility/ARIA/Roles/command_role)、[composite](/zh-CN/docs/Web/Accessibility/ARIA/Roles/composite_role)、[input](/zh-CN/docs/Web/Accessibility/ARIA/Roles/input_role)、[landmark](/zh-CN/docs/Web/Accessibility/ARIA/Roles/landmark_role)、[range](/zh-CN/docs/Web/Accessibility/ARIA/Roles/range_role)、[roletype](/zh-CN/docs/Web/Accessibility/ARIA/Roles/roletype_role)、[section](/zh-CN/docs/Web/Accessibility/ARIA/Roles/section_role)、[sectionhead](/zh-CN/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)、[select](/zh-CN/docs/Web/Accessibility/ARIA/Roles/select_role)、[structure](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structure_role)、[widget](/zh-CN/docs/Web/Accessibility/ARIA/Roles/widget_role) 和 [window](/zh-CN/docs/Web/Accessibility/ARIA/Roles/window_role)。
+避免使用 [command](/zh-CN/docs/Web/Accessibility/ARIA/Roles/command_role)、[composite](/zh-CN/docs/Web/Accessibility/ARIA/Roles/composite_role)、[input](/zh-CN/docs/Web/Accessibility/ARIA/Roles/input_role)、[landmark](/zh-CN/docs/Web/Accessibility/ARIA/Roles/landmark_role)、[range](/zh-CN/docs/Web/Accessibility/ARIA/Roles/range_role)、[roletype](/zh-CN/docs/Web/Accessibility/ARIA/Roles/roletype_role)、[section](/zh-CN/docs/Web/Accessibility/ARIA/Roles/section_role)、[sectionhead](/zh-CN/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)、[select](/zh-CN/docs/Web/Accessibility/ARIA/Roles/select_role)、[structure](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structure_role)、[widget](/zh-CN/docs/Web/Accessibility/ARIA/Roles/widget_role) 和 [window](/zh-CN/docs/Web/Accessibility/ARIA/Roles/window_role)。
 
 > **备注：** 不要在你的网站和应用中使用抽象角色。抽象角色是由浏览器使用的，这里列出来仅用于参考。
 
