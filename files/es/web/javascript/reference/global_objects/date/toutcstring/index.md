@@ -43,7 +43,7 @@ Antes de ECMAScript 2018, el formato del valor devuelto variaba según la plataf
 ### Usando `toUTCString()`
 
 ```js
-var today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+var today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
 var UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 

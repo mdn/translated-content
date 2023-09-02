@@ -20,10 +20,10 @@ permissionsObj = globalObj.navigator.permissions
 ## 例
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+  if (result.state === "granted") {
     showMap();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableMap();
   }
   // パーミッションが拒否された場合は、何もしないでください。

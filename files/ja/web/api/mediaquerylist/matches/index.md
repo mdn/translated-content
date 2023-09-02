@@ -26,15 +26,13 @@ function addMQListener(mq, callback) {
   }
 }
 
-addMQListener(window.matchMedia("(orientation:landscape)"),
-  event => {
-    if (event.matches) {
-      /* 横向きの画面になった */
-    } else {
-      /* 縦向きの画面になった */
-    }
+addMQListener(window.matchMedia("(orientation:landscape)"), (event) => {
+  if (event.matches) {
+    /* 横向きの画面になった */
+  } else {
+    /* 縦向きの画面になった */
   }
-);
+});
 ```
 
 ## 仕様書

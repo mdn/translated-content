@@ -10,7 +10,7 @@ slug: Web/API/Window/menubar
 ## 構文
 
 ```js
-objRef = window.menubar
+objRef = window.menubar;
 ```
 
 ## 例
@@ -19,15 +19,15 @@ objRef = window.menubar
 
 ```html
 <html>
-<head>
-  <title>様々な DOM テスト</title>
-  <script>
-    var visible = window.menubar.visible;
-  </script>
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
+  <head>
+    <title>様々な DOM テスト</title>
+    <script>
+      var visible = window.menubar.visible;
+    </script>
+  </head>
+  <body>
+    <p>様々な DOM テスト</p>
+  </body>
 </html>
 ```
 

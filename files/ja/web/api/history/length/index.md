@@ -12,7 +12,7 @@ slug: Web/API/History/length
 ## 構文
 
 ```js
-const length = history.length
+const length = history.length;
 ```
 
 ## 仕様書

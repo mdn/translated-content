@@ -5,7 +5,7 @@ slug: Web/API/Animation/finished
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-Animation.finished 只读属性允许您返回动画的完成状态。
+Animation.finished 只读属性允许你返回动画的完成状态。
 
 > **备注：** The Promise is replaced with a new (pending) Promise object every time the animation leaves the `finished` play state.
 

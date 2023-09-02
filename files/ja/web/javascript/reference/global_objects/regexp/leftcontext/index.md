@@ -1,29 +1,35 @@
 ---
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
+l10n:
+  sourceCommit: 05218bd05ab482d49ca659473851a285bcb104b0
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{deprecated_header}}
 
-標準外の **`input`** プロパティは、正規表現の一致している文字列を含む静的プロパティです。 `` RegExp.$` `` はこのプロパティのエイリアスです。
+> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+
+**`RegExp.leftContext`** は静的アクセサープロパティで、最近一致した文字列の前の部分文字列を返します。``RegExp["$`"]`` はこのプロパティの別名です。
 
 ## 解説
 
-`leftContext` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。常に、 `RegExp.leftContext` または `` RegExp['$`'] `` として使用してください。
+`leftContext` は {{jsxref("RegExp")}} の静的プロパティですので、作成した `RegExp` オブジェクトのプロパティとしてではなく、常に `RegExp.leftContext` または ``RegExp["$`"]`` として使用してください。
 
-`leftContext` プロパティの値は読み取り専用で、一致に成功するたびに変更されます。
+`leftContext` の値は `RegExp` の（ただし `RegExp` のサブクラスではない）インスタンスが照合に成功するたびに更新されます。照合が行われていない場合、または直近の正規表現にキャプチャグループが格納されていない場合、`leftContext` は空文字列になります。`leftContext` の設定アクセサーは `undefined` なので、このプロパティを直接変更することはできません。
 
-ドットプロパティアクセサー (`` RegExp.$` ``) で短縮エイリアスを使用することはできません。その場合、パーサーはテンプレート文字列の開始をを期待して {{jsxref("SyntaxError")}} が発生します。[プロパティへのアクセスにはブラケット表記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用してください。
+ドットプロパティアクセサー (``RegExp.$` ``) で短縮エイリアスを使用することはできません。`` ` `` は識別子の一部として有効ではないので、{{jsxref("SyntaxError")}} が発生します。代わりに[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してください。
+
+``$` `` は {{jsxref("String.prototype.replace()")}} の置換文字列でも使用できますが、``RegExp["$`"]`` の古いプロパティとは無関係です。
 
 ## 例
 
-### input と $\` の使用
+### leftContext と $\` の使用
 
 ```js
-var re = /world/g;
-re.test('hello world!');
+const re = /world/g;
+re.test("hello world!");
 RegExp.leftContext; // "hello "
-RegExp['$`'];       // "hello "
+RegExp["$`"]; // "hello "
 ```
 
 ## 仕様書
@@ -32,7 +38,7 @@ RegExp['$`'];       // "hello "
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.leftContext")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -40,4 +46,4 @@ RegExp['$`'];       // "hello "
 - {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

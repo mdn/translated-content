@@ -186,6 +186,7 @@ JavaScript 함수를 호출하고 싶을 때면 언제든지 이들을 파일에
     description = "A sample project with wasm-pack"
     license = "MIT/Apache-2.0"
     repository = "https://github.com/yourgithubusername/hello-wasm"
+    edition = "2018"
 
     [lib]
     crate-type = ["cdylib"]

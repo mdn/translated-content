@@ -35,7 +35,7 @@ Permissions-Policy: <directive> <allowlist>
   - : 許可リストは、以下の値のうち 1 つ以上を取るオリジンの空白区切りのリストです。
 
     - `*`: この機能は、この文書と、含まれるすべての閲覧コンテキスト (iframe) でオリジンに関係なく許可されます。
-    - `()`: (空の許可リスト): この機能は最上位および含まれる閲覧コンテキストで向こうになります。
+    - `()`: (空の許可リスト): この機能は最上位および含まれる閲覧コンテキストで無効になります。
     - `self`: この機能は、この文書と、含まれるすべての閲覧コンテキスト (iframe) のうち、同じオリジンのものに許可されます。
     - `src`: (iframe の `allow` 属性のみ) この iframe に読み込まれた文書が iframe の {{HTMLElement('iframe','src','#Attributes')}} 属性の URL と同じオリジンから来ている限り、この機能はこの iframe で許可されます。
 
@@ -86,6 +86,7 @@ Permissions-Policy: <directive> <allowlist>
 - {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
   - : 表示されないフレーム内 (例えば iframe が [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) または `display: none` の場合) でタスクを実行するかどうかを制御します。
 - {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
+
   - : ビューポートの見える範囲外にあるフレーム内のタスクを実行するかどうかを制御します。
 
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
@@ -99,10 +100,8 @@ Permissions-Policy: <directive> <allowlist>
   - : 現在の文書が {{DOMxRef("Gyroscope")}} インターフェイスを通じて、端末の方向に関する情報を収集することを許可するかどうかを制御します。
 - {{httpheader('Permissions-Policy/layout-animations','layout-animations')}}
   - : 現在の文書がレイアウトアニメーションを表示することを許可するかどうかを制御します。
-
 - {{httpheader('Permissions-Policy/legacy-image-formats','legacy-image-formats')}}
   - : 現在の文書が古い形式の画像を表示することを許可するかどうかを制御します。
-
 - {{httpheader('Permissions-Policy/magnetometer','magnetometer')}}
   - : 現在の文書が {{DOMxRef("Magnetometer")}} インターフェイスを通じて、端末の方向に関する情報を収集することを許可するかどうかを制御します。
 - {{httpheader('Permissions-Policy/microphone','microphone')}}

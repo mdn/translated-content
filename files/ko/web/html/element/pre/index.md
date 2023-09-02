@@ -9,8 +9,6 @@ slug: Web/HTML/Element/pre
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -58,7 +56,12 @@ slug: Web/HTML/Element/pre
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<div class="hidden"><dl><dt>{{htmlattrdef("cols")}} {{non-standard_inline}} {{deprecated_inline}}</dt><dd>Contains the <em>preferred</em> count of characters that a line should have. It was a non-standard synonym of <a href="/ko/docs/Web/HTML/Element/pre#width"><code>width</code></a>. To achieve such an effect, use CSS styling instead.</dd><dt>{{htmlattrdef("width")}} {{deprecated_inline}}</dt><dd>Contains the <em>preferred</em> count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.</dd><dt>{{htmlattrdef("wrap")}} {{non-standard_inline}}</dt><dd>Is a <em>hint</em> indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.</dd></dl></div>
+- {{htmlattrdef("cols")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of [`width`](/ko/docs/Web/HTML/Element/pre#width). To achieve such an effect, use CSS styling instead.
+- {{htmlattrdef("width")}} {{deprecated_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.
+- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+  - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.
 
 ## 예제
 

@@ -155,7 +155,7 @@ The following events are based on the `KeyboardEvent` type. They can be delivere
 ### 过时事件
 
 - {{domxref("Document.keypress_event", "keypress")}} {{Deprecated_Inline}}
-  - : 通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件 (highly device-dependent ) 且废弃，您不应该使用它
+  - : 通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件 (highly device-dependent ) 且废弃，你不应该使用它
 
 ## 用法说明
 

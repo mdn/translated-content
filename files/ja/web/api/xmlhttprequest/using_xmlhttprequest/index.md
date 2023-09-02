@@ -159,7 +159,7 @@ req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
   console.log(
-    "The transfer finished (although we don't know if it succeeded or not)."
+    "The transfer finished (although we don't know if it succeeded or not).",
   );
 }
 ```
@@ -238,7 +238,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
 こうしたすべての効果は {{HTMLElement("form")}} を投稿するたびにウェブブラウザーで自動的に行われます。 JavaScript を使って同じ効果を実行したい場合、*すべて*をインタープリターに教えなければなりません。ゆえに、_純粋な_ AJAX でフォームを送る方法をここで詳しく説明するには複雑すぎます。このため、**完全な (しかし教訓的な) フレームワーク**を置いて、この 4 つの*送信*の方法すべてを使い、**ファイルをアップロードします**。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -249,7 +249,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
 
       // :: XHR Form Submit Framework ::
       //
-      // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      // https://developer.mozilla.org/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
       //
       // This framework is released under the GNU Public License, version 3 or later.
       // https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -274,9 +274,9 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
               "get",
               data.receiver.replace(
                 /(?:\?.*)?$/,
-                data.segments.length > 0 ? `?${data.segments.join("&")}` : ""
+                data.segments.length > 0 ? `?${data.segments.join("&")}` : "",
               ),
-              true
+              true,
             );
             req.send(null);
           } else {
@@ -288,12 +288,12 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
                 "---------------------------" + Date.now().toString(16);
               req.setRequestHeader(
                 "Content-Type",
-                `multipart\/form-data; boundary=${boundary}`
+                `multipart\/form-data; boundary=${boundary}`,
               );
               req.sendAsBinary(
                 `--${boundary}\r\n` +
                   data.segments.join(`--${boundary}\r\n`) +
-                  `--${boundary}--\r\n`
+                  `--${boundary}--\r\n`,
               );
             } else {
               // enctype is application/x-www-form-urlencoded or text/plain
@@ -371,7 +371,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
                       file.name +
                       '"\r\nContent-Type: ' +
                       file.type +
-                      "\r\n\r\n"
+                      "\r\n\r\n",
                   );
                   this.status++;
                   segmReq.readAsBinaryString(file);
@@ -381,7 +381,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
                 // method is GET: files will not be sent!
                 for (const file of field.files) {
                   this.segments.push(
-                    `${filter(field.name)}=${filter(file.name)}`
+                    `${filter(field.name)}=${filter(file.name)}`,
                   );
                 }
               }
@@ -394,12 +394,12 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
               if (this.technique === 3) {
                 // enctype is multipart/form-data
                 this.segments.push(
-                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`
+                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`,
                 );
               } else {
                 // enctype is application/x-www-form-urlencoded or text/plain or method is GET
                 this.segments.push(
-                  `${filter(field.name)}=${filter(field.value)}`
+                  `${filter(field.name)}=${filter(field.value)}`,
                 );
               }
             }
@@ -428,7 +428,8 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
@@ -447,10 +448,10 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name:
-            <input type="text" name="firstname" />
-          </label><br />
-          <label>Last name:
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
+          <label
+            >Last name:
             <input type="text" name="lastname" />
           </label>
         </p>
@@ -470,12 +471,14 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>Your name:
+          <label
+            >Your name:
             <input type="text" name="user" />
           </label>
         </p>
         <p>
-          <label>Your message:<br />
+          <label
+            >Your message:<br />
             <textarea name="message" cols="40" rows="8"></textarea>
           </label>
         </p>
@@ -495,7 +498,8 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
       <fieldset>
         <legend>Upload example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label><br />
           Sex:
           <input id="sex_male" type="radio" name="sex" value="male" />
@@ -503,7 +507,8 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
           <input id="sex_female" type="radio" name="sex" value="female" />
           <label for="sex_female">Female</label><br />
           Password: <input type="password" name="secret" /><br />
-          <label>What do you prefer:
+          <label
+            >What do you prefer:
             <select name="image_type">
               <option>Books</option>
               <option>Cinema</option>
@@ -512,7 +517,8 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
           </label>
         </p>
         <p>
-          <label>Post your photos:
+          <label
+            >Post your photos:
             <input type="file" multiple name="photos[]" />
           </label>
         </p>
@@ -531,7 +537,8 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
-          <label>Describe yourself:<br />
+          <label
+            >Describe yourself:<br />
             <textarea name="description" cols="50" rows="8"></textarea>
           </label>
         </p>
@@ -587,7 +594,7 @@ XHRSubmit(myForm);
 {{domxref("XMLHttpRequest.FormData", "FormData")}} コンストラクターでは `XMLHttpRequest` を使用して送信するためのキー/値の組のセットをコンパイルできます。この主な使い方はフォームの送信ですが、フォームとは独立してキー付きのユーザーデータを転送するときにも使用することができます。フォームのエンコーディング型が "multipart/form-data" に設定された場合、送信されたデータは、データ送信に使うフォームの `submit()` メソッドと同じ書式です。 FormData オブジェクトは色々な方法で `XMLHttpRequest` と一緒に使うことができます。例や FormData と XMLHttpRequests を使用方法についての説明は、 [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)のページをご覧ください。ここでは説明目的で、**[前の例](#小さな_vanilla_フレームワーク)を*翻訳*して、 `FormData` API を使用するよう変換**してみます。コードの簡潔さに注目してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -739,7 +746,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // use HEAD when you only need the headers
-  "yourpage.html"
+  "yourpage.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -752,7 +759,7 @@ req.send();
 ```js
 function getHeaderTime() {
   const lastVisit = parseFloat(
-    window.localStorage.getItem(`lm_${this.filepath}`)
+    window.localStorage.getItem(`lm_${this.filepath}`),
   );
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -779,8 +786,8 @@ function ifHasChanged(URL, callback) {
 ifHasChanged("yourpage.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified
-    ).toLocaleString()}!`
+      nModified,
+    ).toLocaleString()}!`,
   );
 });
 ```

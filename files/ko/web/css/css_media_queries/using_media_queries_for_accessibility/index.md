@@ -73,9 +73,13 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
   /* 모든 고대비 모드에 대한 스타일 규칙입니다 */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```

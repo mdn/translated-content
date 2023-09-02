@@ -39,14 +39,14 @@ Já que `trunc()` é um método estático em `Math`, sempre utilize `Math.trunc(
 ### Usando `Math.trunc()`
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## Polyfill
@@ -54,15 +54,17 @@ Math.trunc();         // NaN
 (um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc` na classe `Math`, ele será criado);
 
 ```js
-Math.trunc = Math.trunc || function(x) {
-  return x < 0 ? Math.ceil(x) : Math.floor(x);
-}
+Math.trunc =
+  Math.trunc ||
+  function (x) {
+    return x < 0 ? Math.ceil(x) : Math.floor(x);
+  };
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status               | Comentário         |
-| -------------------------------------------------------------------- | -------------------- | ------------------ |
+| Especificação                                        | Status           | Comentário         |
+| ---------------------------------------------------- | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Navegadores compatíveis

@@ -73,9 +73,9 @@ self.addEventListener("activate", (event) => {
             console.log("期限切れのキャッシュを削除:", cacheName);
             return caches.delete(cacheName);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 
@@ -88,9 +88,9 @@ self.addEventListener("fetch", (event) => {
         .match(event.request)
         .then((response) => {
           if (response) {
-          // event.request の項目がキャッシュにある場合、レスポンスが定義され、
-          // それを返すことができます。
-          // この例では、フォントリソースのみがキャッシュされることに注意してください。
+            // event.request の項目がキャッシュにある場合、レスポンスが定義され、
+            // それを返すことができます。
+            // この例では、フォントリソースのみがキャッシュされることに注意してください。
             console.log(" キャッシュ内にレスポンスあり:", response);
 
             return response;
@@ -101,19 +101,19 @@ self.addEventListener("fetch", (event) => {
           console.log(
             " キャッシュ内に %s のレスポンスが見つかりません。" +
               "ネットワークから取得します…",
-            event.request.url
+            event.request.url,
           );
 
           // 後で cache.put() の呼び出しで使用する可能性があるため、
           // リクエストで .clone() を呼び出します。
           // fetch() と cache.put() の両方がリクエストを「消費」するため、
           // コピーを作成する必要があります。
-          // （https://developer.mozilla.org/en-US/docs/Web/API/Request/clone を参照）
+          // （https://developer.mozilla.org/ja/docs/Web/API/Request/clone を参照）
           return fetch(event.request.clone()).then((response) => {
             console.log(
               "  ネットワークからの %s のレスポンス: %O",
               event.request.url,
-              response
+              response,
             );
 
             if (
@@ -141,7 +141,10 @@ self.addEventListener("fetch", (event) => {
               // https://developer.mozilla.org/ja/docs/Web/API/Request/clone
               cache.put(event.request, response.clone());
             } else {
-              console.log("  レスポンスをキャッシュしない: ", event.request.url);
+              console.log(
+                "  レスポンスをキャッシュしない: ",
+                event.request.url,
+              );
             }
 
             // 元のレスポンスオブジェクトを返します。これは、リソース要求を満たすために使用されます。
@@ -159,7 +162,7 @@ self.addEventListener("fetch", (event) => {
 
           throw error;
         });
-    })
+    }),
   );
 });
 ```

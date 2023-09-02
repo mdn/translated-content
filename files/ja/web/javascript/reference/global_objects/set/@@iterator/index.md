@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ## 構文
 
 ```js
-mySet[Symbol.iterator]()
+mySet[Symbol.iterator]();
 ```
 
 ### 返値
@@ -29,7 +29,7 @@ mySet[Symbol.iterator]()
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 
@@ -44,7 +44,7 @@ for (const v of mySet) {
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 

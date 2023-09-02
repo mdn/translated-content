@@ -778,7 +778,7 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事の最後まで来ましたが、最も大事な情報を覚えていますか？先に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Conditionals](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals) を見てください。
 

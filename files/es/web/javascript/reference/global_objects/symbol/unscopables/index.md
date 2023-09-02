@@ -29,7 +29,7 @@ El siguiente código funciona bien en ES5 y posteriores. Sin embargo, en ECMAScr
 const keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -44,12 +44,12 @@ También puede establecer `unscopables` para sus propios objetos.
 ```js
 const obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {

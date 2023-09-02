@@ -60,8 +60,8 @@ formElem.addEventListener("submit", (e) => {
 
 // データを受け取るための formdata ハンドラー
 
-formElem.addEventListener('formdata', (e) => {
-  console.log('formdata fired');
+formElem.addEventListener("formdata", (e) => {
+  console.log("formdata fired");
 
   // イベントオブジェクトからフォームデータを取得する
   const formData = e.formData;

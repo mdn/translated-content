@@ -130,14 +130,14 @@ l10n:
 ### JavaScript
 
 ```js
-const mouseoutLog = document.getElementById('log'),
-      red = document.getElementById('red'),
-      blue = document.getElementById('blue');
+const mouseoutLog = document.getElementById("log"),
+  red = document.getElementById("red"),
+  blue = document.getElementById("blue");
 
-red.addEventListener('mouseover', overListener);
-red.addEventListener('mouseout', outListener);
-blue.addEventListener('mouseover', overListener);
-blue.addEventListener('mouseout', outListener);
+red.addEventListener("mouseover", overListener);
+red.addEventListener("mouseout", outListener);
+blue.addEventListener("mouseover", overListener);
+blue.addEventListener("mouseout", outListener);
 
 function outListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";

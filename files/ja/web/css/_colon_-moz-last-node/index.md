@@ -11,8 +11,8 @@ slug: Web/CSS/:-moz-last-node
 
 ## 構文
 
-```css
-:-moz-last-node
+```css-nolint
+:-moz-last-node {}
 ```
 
 ## 例

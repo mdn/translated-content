@@ -2,6 +2,7 @@
 title: text-align
 slug: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`text-align`** 속성은 블록 요소나 표의 칸 상자의 가로 정렬을 설정합니다. 즉 {{cssxref("vertical-align")}}과 동일하나 세로가 아닌 가로 방향으로 동작합니다.
@@ -85,9 +86,8 @@ text-align: unset;
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -111,9 +111,8 @@ text-align: unset;
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -137,9 +136,8 @@ text-align: unset;
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```

@@ -28,9 +28,9 @@ toString()
 ### アンカー要素で toString を呼び出す
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.toString(); // 'https://developer.mozilla.org/en-US/docs/HTMLAnchorElement' を返す
+anchor.toString(); // 'https://developer.mozilla.org/ja/docs/HTMLAnchorElement' を返す
 ```
 
 ## 仕様書

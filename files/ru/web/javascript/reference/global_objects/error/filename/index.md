@@ -18,7 +18,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ### Пример: использование `fileName`
 
 ```js
-var e = new Error('Невозможно разобрать входные данные');
+var e = new Error("Невозможно разобрать входные данные");
 throw e;
 // e.fileName может выглядеть так "file:///C:/example.html"
 ```

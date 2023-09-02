@@ -11,10 +11,10 @@ slug: Web/CSS/@font-face/unicode-range
 
 ```css
 /* <unicode-range> 値 */
-unicode-range: U+26;               /* 単一の符号位置 */
+unicode-range: U+26; /* 単一の符号位置 */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;        /* 符号位置の範囲 */
-unicode-range: U+4??;              /* ワイルドカードの範囲 */
+unicode-range: U+0025-00FF; /* 符号位置の範囲 */
+unicode-range: U+4??; /* ワイルドカードの範囲 */
 unicode-range: U+0025-00FF, U+4??; /* 複数の値 */
 ```
 
@@ -57,8 +57,8 @@ CSS において、1 つの文字だけを含んだ完全に別個の {{cssxref(
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 

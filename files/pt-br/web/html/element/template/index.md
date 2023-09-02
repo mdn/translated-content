@@ -108,11 +108,10 @@ Agora que a tabela foi criada e o _template_ definido, nós usamos JavaScript pa
 ```js
 // Teste se seu navegador suporta o template HTML checando
 // a presença do atribute content no elemento template .
-if ('content' in document.createElement('template')) {
-
+if ("content" in document.createElement("template")) {
   // Instancie a tabela com o HTML tbody e a row com o template
-  var t = document.querySelector('#productrow'),
-  td = t.content.querySelectorAll("td");
+  var t = document.querySelector("#productrow"),
+    td = t.content.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
 
@@ -128,7 +127,6 @@ if ('content' in document.createElement('template')) {
   // Clone a nova row e insira-a na tabela
   var clone2 = document.importNode(t.content, true);
   tb[0].appendChild(clone2);
-
 } else {
   // Ache outro modo de adicionar as rows na tabela, pois
   // o elemento HTML template não é suportado.
@@ -150,10 +148,10 @@ table td {
 
 ## Especificações
 
-| Especificação                                                                                                        | Estado                           | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| Especificação                                                                           | Estado                   | Comentário        |
+| --------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
 | {{SpecName('HTML WHATWG','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} | Sem mudanças      |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}     | {{Spec2('HTML5 W3C')}}     | Definição Inicial |
+| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}   | {{Spec2('HTML5 W3C')}}   | Definição Inicial |
 
 ## Compatibilidade de Navegadores
 

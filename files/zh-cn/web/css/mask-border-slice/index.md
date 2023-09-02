@@ -101,7 +101,7 @@ mask-border-slice: 30 fill;
 -webkit-mask-box-image-slice: 30 fill;
 ```
 
-> **备注：** 该[`mask-border`](/zh-CN/docs/Web/CSS/mask-border)页面提供了一个有效的示例（使用 Chromium 支持的过期前缀边框蒙版属性），因此您可以大致了解效果。
+> **备注：** 该[`mask-border`](/zh-CN/docs/Web/CSS/mask-border)页面提供了一个有效的示例（使用 Chromium 支持的过期前缀边框蒙版属性），因此你可以大致了解效果。
 
 > **备注：** 如果希望元素的内容可见，则必须包含 fill 关键字。
 
