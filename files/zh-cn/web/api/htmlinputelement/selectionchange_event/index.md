@@ -24,7 +24,7 @@ document.onselectionchange = function () {
 };
 ```
 
-完整例子请参阅[Key quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
+完整例子请参阅 [Key quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
 
 ## 规范
 

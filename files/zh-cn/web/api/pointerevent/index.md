@@ -29,7 +29,7 @@ _该接口属性继承自 {{domxref("MouseEvent")}} 和 {{domxref("Event")}}._
 - {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
   - : 归一化后的 pointer 压力值，范围在 \[0,1] 区间。其中 0 和 1 分别代表硬件能够检测的最小和最大压力。
 - {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
-  - : 归一化后的切向压力值（也称为桶压或[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)），范围在 \[-1, 1] 区间，0 表示控制设备中立状态时的值。
+  - : 归一化后的切向压力值（也称为桶压或 [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)），范围在 \[-1, 1] 区间，0 表示控制设备中立状态时的值。
 - {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
   - : 由输入设备（如手写笔）与 Y 轴构成的平面，和 Y-Z 平面之间的夹角（取值在 \[-90, 90] 区间）。
 - {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}

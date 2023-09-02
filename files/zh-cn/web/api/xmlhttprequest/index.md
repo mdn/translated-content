@@ -66,7 +66,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 作为 `XMLHttpRequest` 实例的属性之一，所有浏览器都支持 `onreadystatechange`。
 
-后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见 [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
 
 更多现代浏览器，包括 Firefox，除了可以设置 `on*` 属性外，也提供标准的监听器 {{domxref("EventTarget.addEventListener", "addEventListener()")}} API 来监听`XMLHttpRequest` 事件。
 

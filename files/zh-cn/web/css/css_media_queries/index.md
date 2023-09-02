@@ -21,7 +21,7 @@ slug: Web/CSS/CSS_media_queries
 
 ### 在 JavaScript 中使用媒体查询
 
-在[JavaScript](/zh-CN/docs/Web/JavaScript)中，你可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。你还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。借助此功能，你的站点或应用可以响应设备配置，方向或状态的更改。
+在 [JavaScript](/zh-CN/docs/Web/JavaScript)中，你可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。你还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。借助此功能，你的站点或应用可以响应设备配置，方向或状态的更改。
 
 你可以学习更多以编程方式使用媒体查询在[测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)中。
 

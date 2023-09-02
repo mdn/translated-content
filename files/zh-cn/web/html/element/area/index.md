@@ -28,7 +28,7 @@ _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个�
 - `href`
   - : area 的超链接，值为一个 URL. HTML4 里，这个值不管是不是有值都要明确指定出来。HTML5 里则不需要。
 - `hreflang`
-  - : 指明链接资源的语言类型，值的范围参考[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt). 这个属性只能在指明 href 属性之后使用。
+  - : 指明链接资源的语言类型，值的范围参考 [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt). 这个属性只能在指明 href 属性之后使用。
 - `name` {{Deprecated_Inline}}
   - : 为可点击区域定义一个名字以使旧浏览器解析。
 - `media`

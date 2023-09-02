@@ -41,7 +41,7 @@ pointer-events: unset;
 - `auto`
   - : 与`pointer-events`属性未指定时的表现效果相同，对于 SVG 内容，该值与`visiblePainted`效果相同
 - `none`
-  - : 元素永远不会成为鼠标事件的[target](/zh-CN/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
+  - : 元素永远不会成为鼠标事件的 [target](/zh-CN/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
 - `visiblePainted`
 
   - : 只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：
@@ -106,7 +106,7 @@ a[href="http://example.com"]
 
 使用`pointer-events`来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永远不会触发。如果元素后代明确指定了`pointer-events`属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然，位于父元素但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（鼠标活动将会穿过父元素而指向位于其下面的元素）。
 
-我们希望为 HTML 提供更为精细的控制（而不仅仅是`auto`和`none`），以控制元素哪一部分何时会捕获鼠标事件。如果你有独特的想法，请添加至[wiki 页面](https://wiki.mozilla.org/SVG:pointer-events)的 Use Cases 部分，以帮助我们如何针对 HTML 扩展`pointer-events`。
+我们希望为 HTML 提供更为精细的控制（而不仅仅是`auto`和`none`），以控制元素哪一部分何时会捕获鼠标事件。如果你有独特的想法，请添加至 [wiki 页面](https://wiki.mozilla.org/SVG:pointer-events)的 Use Cases 部分，以帮助我们如何针对 HTML 扩展`pointer-events`。
 
 该属性也可用来提高滚动时的帧频。的确，当滚动时，鼠标悬停在某些元素上，则触发其上的 hover 效果，然而这些影响通常不被用户注意，并多半导致滚动出现问题。对`body`元素应用`pointer-events：none`，禁用了包括`hover`在内的鼠标事件，从而提高滚动性能。
 

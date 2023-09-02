@@ -23,7 +23,7 @@ WebGLTexture gl.createTexture();
 
 ## 示例
 
-另见 [Using textures in WebGL](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)上的[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
+另见 [Using textures in WebGL](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)上的 [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
 
 ### 创建一个纹理
 

@@ -79,7 +79,7 @@ Specification 定义了三种新的权限：
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)学习。
+下面我们进入更深层次的 [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)学习。
 
 ## `shape-margin` 属性
 

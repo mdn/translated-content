@@ -7,11 +7,11 @@ slug: Web/API/Performance/now
 
 **`performance.now()`** 方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}}。
 
-> **警告：** 这个时间戳实际上并不是高精度的。为了降低像[Spectre](https://spectreattack.com/)这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。
+> **警告：** 这个时间戳实际上并不是高精度的。为了降低像 [Spectre](https://spectreattack.com/)这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。
 
 {{AvailableInWorkers}}
 
-返回值表示为从[time origin](/zh-CN/docs/Web/API/DOMHighResTimeStamp#The_time_origin)之后到当前调用时经过的时间
+返回值表示为从 [time origin](/zh-CN/docs/Web/API/DOMHighResTimeStamp#The_time_origin)之后到当前调用时经过的时间
 
 牢记如下几点：
 

@@ -5,7 +5,7 @@ slug: Web/API/DOMStringList
 
 {{APIRef("DOM")}}
 
-某些 API 会返回的包含一列[DOMString](/En/DOM/DOMString)的一种类型
+某些 API 会返回的包含一列 [DOMString](/En/DOM/DOMString)的一种类型
 
 ## Properties
 

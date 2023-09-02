@@ -5,13 +5,13 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) `<color>` 表示一种[标准 RGB 色彩空间（sRGB color space）](http://en.wikipedia.org/wiki/SRGB)的颜色。一个颜色可以包括一个[alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与它的背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) `<color>` 表示一种[标准 RGB 色彩空间（sRGB color space）](http://en.wikipedia.org/wiki/SRGB)的颜色。一个颜色可以包括一个 [alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与它的背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
 
 一个`<color>`可以以如下方式定义：
 
 - 使用一个关键字（比如`blue`或`transparent`）
-- 使用[RGB 立体坐标（RGB cubic-coordinate）](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系统（以“#”加十六进制或者 `rgb()` 和 `rgba()` 函数表达式的形式）
-- 使用[HSL 圆柱坐标（HSL cylindrical-coordinate）](http://en.wikipedia.org/wiki/HSL_and_HSV)系统（以 `hsl()` 和 `hsla()` 函数表达式的形式）
+- 使用 [RGB 立体坐标（RGB cubic-coordinate）](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系统（以“#”加十六进制或者 `rgb()` 和 `rgba()` 函数表达式的形式）
+- 使用 [HSL 圆柱坐标（HSL cylindrical-coordinate）](http://en.wikipedia.org/wiki/HSL_and_HSV)系统（以 `hsl()` 和 `hsla()` 函数表达式的形式）
 
 > **备注：** 本文章详细描述了`<color>`数据类型。如要了解更多关于在 HTML 中使用颜色的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/HTML/Applying_color)。
 

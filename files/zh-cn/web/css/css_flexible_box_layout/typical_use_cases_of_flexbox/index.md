@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 
 **为什么选择 flexbox？**
 
-在浏览器完美支持的环境中，你选择使用 flexbox 的原因是你希望把一堆元素不是放在这个方向就是那个方向。因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制他们彼此之间的间距。flexbox 就是为此设计的。. 又可以阅读[Relationship of Flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)来了解更多关于 flexbox 和 CSS Grid 布局的区别，在这篇文章里面，我们会讨论 flexbox 如何运用与 CSS 整体布局。
+在浏览器完美支持的环境中，你选择使用 flexbox 的原因是你希望把一堆元素不是放在这个方向就是那个方向。因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制他们彼此之间的间距。flexbox 就是为此设计的。. 又可以阅读 [Relationship of Flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)来了解更多关于 flexbox 和 CSS Grid 布局的区别，在这篇文章里面，我们会讨论 flexbox 如何运用与 CSS 整体布局。
 
 在现实中，为了便于对齐，我们通常会选择用 Flexbox 作为替代品，来完成即使用 Grid 布局更好的情况。一旦盒子对齐（Box Alignment）被盒模型所实行，这种情况就会得到改善。在这个教程中，我们会介绍一些会在现在使用 flexbox 的用例。
 

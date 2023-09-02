@@ -191,7 +191,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 - `adoptedCallback`：当 custom element 被移动到新的文档时，被调用。
 - `attributeChangedCallback`: 当 custom element 增加、删除、修改自身属性时，被调用。
 
-我们来看一下它们的一下用法示例。下面的代码出自[life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks)示例（[查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)）。这个简单示例只是生成特定大小、颜色的方块。custom element 看起来像下面这样：
+我们来看一下它们的一下用法示例。下面的代码出自 [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks)示例（[查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)）。这个简单示例只是生成特定大小、颜色的方块。custom element 看起来像下面这样：
 
 ```html
 <custom-square l="100" c="red"></custom-square>

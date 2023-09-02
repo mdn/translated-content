@@ -36,7 +36,7 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 
 让我们看看几个例子，来理解创建 BFC 的效果。
 
-在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如流入和流出元素指南[guide to in-flow and out of flow elements](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
+在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如流入和流出元素指南 [guide to in-flow and out of flow elements](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 

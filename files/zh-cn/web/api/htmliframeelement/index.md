@@ -88,7 +88,7 @@ _继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 - {{domxref("HTMLIFrameElement.setInputMethodActive()")}}
   - : 设置当前浏览器{{HTMLElement("iframe")}}是活动的输入法编辑器窗口而其他不是。当一个顶层应用希望激活一个窗口作为输入法编辑器（如键盘）时有用。
 - {{domxref("HTMLIFrameElement.setNfcFocus()")}}
-  - : Firefox 操作系统 [NFC API](/zh-CN/docs/Web/API/NFC_API) 的一部分，扩展了[Browser API](/zh-CN/docs/Web/API/Browser_API)，这个集合设置浏览器{{htmlelement("iframe")}}是否可以接收一个[NFC](/zh-CN/docs/Web/API/NFC_API)事件。
+  - : Firefox 操作系统 [NFC API](/zh-CN/docs/Web/API/NFC_API) 的一部分，扩展了 [Browser API](/zh-CN/docs/Web/API/Browser_API)，这个集合设置浏览器{{htmlelement("iframe")}}是否可以接收一个 [NFC](/zh-CN/docs/Web/API/NFC_API)事件。
 
 #### 音频相关方法
 

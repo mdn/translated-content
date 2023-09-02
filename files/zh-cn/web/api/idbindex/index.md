@@ -5,7 +5,7 @@ slug: Web/API/IDBIndex
 
 {{APIRef()}}
 
-[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中的 IDBIndex 接口提供了异步获取数据库中一个[index](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#index)的功能。index 是一种用于在另一个 object store 中查找记录的 object store，其被称为被引用的 object store。你可以通过使用该接口来取回数据。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中的 IDBIndex 接口提供了异步获取数据库中一个 [index](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#index)的功能。index 是一种用于在另一个 object store 中查找记录的 object store，其被称为被引用的 object store。你可以通过使用该接口来取回数据。
 
 你可以通过记录的键或使用一个 index 取回一个 object store 中的这些记录 (cursors 提供了第三种方式：请见 {{ domxref("IDBCursor") }})。一个 index 可以让你在 object store 的 records 中，通过使用 records 的 properties（属性）来寻找 records。
 

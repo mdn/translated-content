@@ -5,7 +5,7 @@ slug: Web/API/OffscreenCanvas
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-**`OffscreenCanvas`** 提供了一个可以脱离屏幕渲染的 canvas 对象。它在窗口环境和[web worker](/zh-CN/docs/Web/API/Web_Workers_API)环境均有效。
+**`OffscreenCanvas`** 提供了一个可以脱离屏幕渲染的 canvas 对象。它在窗口环境和 [web worker](/zh-CN/docs/Web/API/Web_Workers_API)环境均有效。
 
 ## 构造函数
 
@@ -66,7 +66,7 @@ two.transferFromImageBitmap(bitmapTwo);
 
 ### 异步显示 `OffscreenCanvas` 生成的帧
 
-另一种使用 `OffscreenCanvas` API 的方式，是在一个{{HTMLElement("canvas")}}元素上调用{{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}，也可以在[worker](/zh-CN/docs/Web/API/Web_Workers_API)或主线程，上调用，这将从主线程的{{domxref("HTMLCanvasElement")}}对象返回一个`OffscreenCanvas` 对象。调用{{domxref("OffscreenCanvas.getContext", "getContext()")}} 会从这个 `OffscreenCanvas` 获取一个[RenderingContext](/zh-CN/docs/Web/API/RenderingContext)。
+另一种使用 `OffscreenCanvas` API 的方式，是在一个{{HTMLElement("canvas")}}元素上调用{{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}，也可以在 [worker](/zh-CN/docs/Web/API/Web_Workers_API)或主线程，上调用，这将从主线程的{{domxref("HTMLCanvasElement")}}对象返回一个`OffscreenCanvas` 对象。调用{{domxref("OffscreenCanvas.getContext", "getContext()")}} 会从这个 `OffscreenCanvas` 获取一个 [RenderingContext](/zh-CN/docs/Web/API/RenderingContext)。
 
 main.js (主线程代码):
 

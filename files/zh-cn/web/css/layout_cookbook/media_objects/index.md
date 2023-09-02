@@ -5,7 +5,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{CSSRef}}
 
-媒体对象是 web 上随处可见的一种模式。它由[Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇 facebook 帖子或者 tweet。
+媒体对象是 web 上随处可见的一种模式。它由 [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇 facebook 帖子或者 tweet。
 
 ![](media-object.png)
 
@@ -27,7 +27,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 ## 做出选择
 
-我选择使用[Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)实现媒体对象，因为它可以让我在我需要的时候控制两个维度的布局。这意味着当我们有一个页脚（footer）的时候，上面的内容很短，页脚可以被推到媒体对象的底部。
+我选择使用 [Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)实现媒体对象，因为它可以让我在我需要的时候控制两个维度的布局。这意味着当我们有一个页脚（footer）的时候，上面的内容很短，页脚可以被推到媒体对象的底部。
 
 另一个使用网格布局（Grid Layout）的原因是为了可以使用{{cssxref("fit-content")}}图片的追踪（track）大小。通过使用 最大尺寸是 200 像素的`fit-content` ，当我们有一个小图片比如 icon 的时候，track 仅仅得到和 image 的尺寸一样的大小（`max-content` 大小）。如果图片更大，track 在 200 像素的时候停止增长，因为图片应用了{{cssxref("max-width ")}}为 100%。同样，它会缩小以适应列内部的尺寸。
 

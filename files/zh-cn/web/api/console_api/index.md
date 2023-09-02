@@ -32,7 +32,7 @@ let myString = "Hello world";
 console.log(myString);
 ```
 
-到[Console reference page](/zh-CN/docs/Web/API/Console#Usage)查看更多示例
+到 [Console reference page](/zh-CN/docs/Web/API/Console#Usage)查看更多示例
 
 ## 规范
 

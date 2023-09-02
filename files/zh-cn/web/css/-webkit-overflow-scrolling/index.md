@@ -26,7 +26,7 @@ slug: Web/CSS/-webkit-overflow-scrolling
 
 ### 规范
 
-尚未有相关规范。另在 Apple 提供的[Safari CSS 参考文档](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling)中有所提及。
+尚未有相关规范。另在 Apple 提供的 [Safari CSS 参考文档](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling)中有所提及。
 
 ### 浏览器兼容性
 

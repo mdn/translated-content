@@ -9,7 +9,7 @@ slug: Web/HTML/Element/big
 
 The HTML Big Element (`<big>`) 会使字体加大一号（例如从小号 (small) 到中号 (medium)，从大号 (large) 到加大 (x-large)），最大不超过浏览器的最大字体。
 
-> **备注：** 由于它是纯显示性的，该元素在[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)中已经被移除，不应当再使用。取而代之，网页开发者应当使用 CSS 属性。
+> **备注：** 由于它是纯显示性的，该元素在 [HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)中已经被移除，不应当再使用。取而代之，网页开发者应当使用 CSS 属性。
 
 ## 属性
 

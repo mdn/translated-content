@@ -17,7 +17,7 @@ element = baseElement.querySelector(selectors);
 ### 参数
 
 - `selectors`
-  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器[selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
+  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器 [selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
 
 ### 返回值
 

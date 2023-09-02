@@ -17,14 +17,14 @@ Demo
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者[directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
+为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者 [directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
 
 ### Browser support
 
 对于 Web Speech API speech recognition(语音识别) 的支持，在各浏览器中还不成熟，还在发展，现在主要的限制如下：
 
 - Firefox 桌面端和移动端在 Gecko 44+ 中都支持，并且是没有前缀的，它可以在`about:config` 中把 `media.webspeech.recognition.enable` 设置为 `true` 打开。权限设置/UI 还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧\~
-- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在[manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载，或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
+- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在 [manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载，或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
 
   ```json
   "permissions": {

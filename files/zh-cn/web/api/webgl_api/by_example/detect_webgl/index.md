@@ -64,6 +64,6 @@ window.addEventListener(
 );
 ```
 
-这个例子的源代码可以在[GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl)上获取。
+这个例子的源代码可以在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl)上获取。
 
 {{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}

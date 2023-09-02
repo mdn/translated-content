@@ -5,7 +5,7 @@ slug: Web/CSS/scrollbar-color
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`scrollbar-color`**该[CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色
+**`scrollbar-color`**该 [CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色
 
 **track（轨道）**是指滚动条，其一般是固定的而不管滚动位置的背景。
 
@@ -81,7 +81,7 @@ scrollbar-color: unset;
 
 ## 无障碍问题
 
-使用`scrollbar-color`具有特定颜色值的属性时，作者应确保指定的颜色在它们之间具有足够的对比度。对于关键字值，UA 应确保其使用的颜色具有足够的对比度。参见[WCAG 2.0 的技术：G183：使用 3:1 的对比度](https://www.w3.org/TR/WCAG20-TECHS/G183.html)。
+使用`scrollbar-color`具有特定颜色值的属性时，作者应确保指定的颜色在它们之间具有足够的对比度。对于关键字值，UA 应确保其使用的颜色具有足够的对比度。参见 [WCAG 2.0 的技术：G183：使用 3:1 的对比度](https://www.w3.org/TR/WCAG20-TECHS/G183.html)。
 
 ## 规范
 

@@ -24,7 +24,7 @@ customElements.upgrade(root);
 
 ## 示例
 
-摘至[HTML 规范](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
+摘至 [HTML 规范](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
 
 ```js
 const el = document.createElement("spider-man");

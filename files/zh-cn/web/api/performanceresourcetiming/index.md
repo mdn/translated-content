@@ -27,7 +27,7 @@ slug: Web/API/PerformanceResourceTiming
 - {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
   - : 返回{{domxref("DOMString","string")}}，表示初始化性能条目的资源类型，如{{domxref('PerformanceResourceTiming.initiatorType')}}中所规定。
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}}{{readonlyInline}}
-  - : 返回{{domxref("DOMString","string")}} ，表示用于获取资源的网络协议，由[ALPN Protocol ID (RFC7301)](https://tools.ietf.org/html/rfc7301)标识。
+  - : 返回{{domxref("DOMString","string")}} ，表示用于获取资源的网络协议，由 [ALPN Protocol ID (RFC7301)](https://tools.ietf.org/html/rfc7301)标识。
 - {{domxref('PerformanceResourceTiming.workerStart')}}{{readonlyInline}}
   - : 如果 Service Worker 线程已在运行，则在调用{{domxref("FetchEvent")}}之前立即返回{{domxref("DOMHighResTimeStamp")}}，如果尚未运行，则在启动 Service Worker 线程之前立即返回{{domxref("DOMHighResTimeStamp")}}。如果资源未被 Service Worker 拦截，则该属性将始终返回 0。
 - {{domxref('PerformanceResourceTiming.redirectStart')}}{{readonlyInline}}

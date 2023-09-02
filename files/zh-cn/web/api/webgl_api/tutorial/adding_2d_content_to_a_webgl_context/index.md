@@ -75,7 +75,7 @@ const vsSource = `
   `;
 ```
 
-这个例子中，我们没有计算任何光照效果，因为我们还没有应用到场景，它将后面的 [WebGL 光照](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)章节介绍。同样我们也还没应用任何纹理，这将在[WebGL 添加纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)章节补充。
+这个例子中，我们没有计算任何光照效果，因为我们还没有应用到场景，它将后面的 [WebGL 光照](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)章节介绍。同样我们也还没应用任何纹理，这将在 [WebGL 添加纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)章节补充。
 
 #### 片段着色器
 
@@ -377,7 +377,7 @@ drawScene(gl, programInfo, buffers);
 
 ## 矩阵通用计算
 
-矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
+矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是 [glMatrix library](http://glmatrix.net/).
 
 ## 参见
 

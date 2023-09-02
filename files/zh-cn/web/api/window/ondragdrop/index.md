@@ -3,7 +3,7 @@ title: Window.ondragdrop
 slug: Web/API/Window/ondragdrop
 ---
 
-> **警告：** 在 Firefox 50 中已删除，并且从未在任何其他浏览器中实行。请改用现代标准的[HTML5 拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)功能。
+> **警告：** 在 Firefox 50 中已删除，并且从未在任何其他浏览器中实行。请改用现代标准的 [HTML5 拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)功能。
 
 ## 摘要
 
@@ -19,7 +19,7 @@ window.addEventListener("dragdrop", funcRef, useCapturing);
 - funcRef
   - : 要注册的事件处理函数。
 
-[Gecko](/zh-CN/docs/Web/API/Window/en/Gecko)([Firefox bug 112288](https://bugzil.la/112288)) 中未实现`window.ondragdrop`属性和`ondragdrop`属性，你必须使用`addEventListener`。有关详细信息，请参见[addEventListener](/zh-CN/docs/Web/API/Window/en/DOM/element.addEventListener)。
+[Gecko](/zh-CN/docs/Web/API/Window/en/Gecko)([Firefox bug 112288](https://bugzil.la/112288)) 中未实现`window.ondragdrop`属性和`ondragdrop`属性，你必须使用`addEventListener`。有关详细信息，请参见 [addEventListener](/zh-CN/docs/Web/API/Window/en/DOM/element.addEventListener)。
 
 **示例**
 

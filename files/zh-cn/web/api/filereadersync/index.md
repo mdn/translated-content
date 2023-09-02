@@ -7,7 +7,7 @@ slug: Web/API/FileReaderSync
 
 `FileReaderSync`接口允许以同步的方式读取`File`或`Blob`对象中的内容。
 
-该接口只在[workers](/zh-CN/DOM/Worker)里[可用](/zh-CN/DOM/Worker/Functions_available_to_workers),因为在主线程里进行同步 I/O 操作可能会阻塞用户界面。
+该接口只在 [workers](/zh-CN/DOM/Worker)里[可用](/zh-CN/DOM/Worker/Functions_available_to_workers),因为在主线程里进行同步 I/O 操作可能会阻塞用户界面。
 
 ## 方法概述
 

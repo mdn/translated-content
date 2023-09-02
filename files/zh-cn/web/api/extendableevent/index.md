@@ -3,7 +3,7 @@ title: ExtendableEvent
 slug: Web/API/ExtendableEvent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}作为 service worker 生命周期的一部分，**`ExtendableEvent`** 接口延长了在全局范围上 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件的生命周期。这样可以确保在升级数据库架构并删除过时的 caches 之前，不会调度任何函数事件（如{{domxref("FetchEvent")}}）。如果在`ExtendableEvent`处理程序之外调用{{domxref("ExtendableEvent.waitUntil","waitUntil()")}}，浏览器应该抛出一个`InvalidStateError`；还要注意，多个调用将堆积起来，结果 promises 将添加到[extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises).
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}作为 service worker 生命周期的一部分，**`ExtendableEvent`** 接口延长了在全局范围上 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件的生命周期。这样可以确保在升级数据库架构并删除过时的 caches 之前，不会调度任何函数事件（如{{domxref("FetchEvent")}}）。如果在`ExtendableEvent`处理程序之外调用{{domxref("ExtendableEvent.waitUntil","waitUntil()")}}，浏览器应该抛出一个`InvalidStateError`；还要注意，多个调用将堆积起来，结果 promises 将添加到 [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises).
 
 > **备注：** 上述段落中描述的行为在 firefox 43 中得到了修复（参见 [Firefox bug 1180274](https://bugzil.la/1180274)）。
 
@@ -31,7 +31,7 @@ _从他的父辈继承，{{domxref("Event")}}。_
 
 ## 实例
 
-代码片段来自[service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (查看 [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).)。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil()")}}，延迟将{{domxref("ServiceWorkerRegistration.installing")}} Worker 视为已安装，直到传递的 promise resolve(在所有资源都已被提取和缓存的情况，或者发生任何异常时的问题.)
+代码片段来自 [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (查看 [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).)。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil()")}}，延迟将{{domxref("ServiceWorkerRegistration.installing")}} Worker 视为已安装，直到传递的 promise resolve(在所有资源都已被提取和缓存的情况，或者发生任何异常时的问题.)
 
 代码段还显示了对 service worker 使用的缓存进行版本控制的最佳实践。虽然在这个例子中只有一个缓存，但是相同的方法可以用于多个缓存。它将缓存的速记标识符映射到特定的、版本化的缓存名称。
 

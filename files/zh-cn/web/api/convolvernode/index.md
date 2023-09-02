@@ -7,7 +7,7 @@ slug: Web/API/ConvolverNode
 
 `ConvolverNode` 接口是一个对给定 {{domxref("AudioBuffer")}} 上执行线性卷积的 {{domxref("AudioNode")}}，一般用来做音频混响效果。每一个 `ConvolverNode` 都会有一个输入值和输出值。
 
-> **备注：** 更多线性卷积理论的相关信息，请参阅[Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
+> **备注：** 更多线性卷积理论的相关信息，请参阅 [Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
 
 <table class="properties">
   <tbody>

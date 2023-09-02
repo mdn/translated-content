@@ -16,7 +16,7 @@ element.onloadedmetadata = handlerFunction;
 var handlerFunction = element.onloadedmetadata;
 ```
 
-`handlerFunction`应当是`null`或是由[JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)声明的事件 handler。
+`handlerFunction`应当是`null`或是由 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)声明的事件 handler。
 
 ## 规范
 

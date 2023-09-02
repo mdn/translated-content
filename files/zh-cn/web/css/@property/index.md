@@ -5,7 +5,7 @@ slug: Web/CSS/@property
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`@property`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("at-rule")}}是[CSS Houdini](/zh-CN/docs/Web/Houdini) API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
+**`@property`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("at-rule")}}是 [CSS Houdini](/zh-CN/docs/Web/Houdini) API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
 
 `@property` 规则提供了一个直接在样式表中注册自定义属性的方式，而无需运行任何 JS 代码。有效的 `@property` 规则会注册一个自定义属性，就像 {{domxref('CSS.registerProperty')}} 函数被使用同样的参数调用了一样。
 

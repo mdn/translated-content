@@ -9,8 +9,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 媒体查询常被用于以下目的：
 
-- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at-rules](/zh-CN/docs/Web/CSS/At-rule) 用[CSS](/zh-CN/docs/Web/CSS) 装饰样式。
-- 用 `media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他[HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
+- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at-rules](/zh-CN/docs/Web/CSS/At-rule) 用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
+- 用 `media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他 [HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
 
 ```
 <link rel="stylesheet" src="styles.css" media="screen" />
@@ -43,7 +43,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 @media screen, print { ... }
 ```
 
-有关所有媒体类型的列表，请参见[Media types](#Media_types)。由于它们仅以非常广泛的术语描述设备，因此只有少数几种可用。要定位更具体的属性，请改用*媒体功能*。
+有关所有媒体类型的列表，请参见 [Media types](#Media_types)。由于它们仅以非常广泛的术语描述设备，因此只有少数几种可用。要定位更具体的属性，请改用*媒体功能*。
 
 ## 定位媒体特性
 
@@ -71,7 +71,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 @media speech and (aspect-ratio: 11/5) { ... }
 ```
 
-有关更多媒体功能[media feature](#Media_features)示例，请参阅每个特定功能的参考页。
+有关更多媒体功能 [media feature](#Media_features)示例，请参阅每个特定功能的参考页。
 
 ## 创建复杂查询
 

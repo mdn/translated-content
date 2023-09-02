@@ -9,7 +9,7 @@ slug: Web/API/Headers/set
 
 **`set()`** 方法和 [append()](/zh-CN/docs/Web/API/Headers/append)方法不同的是声明的 **`Headers`** 对象是否已经存在对应的 **`keys`** 是否已经存在并且已经赋值。**`set()`** 方法将会覆盖之前的 **`value`**，然而 [append()](/zh-CN/docs/Web/API/Headers/append)方法只会在 **`Headers`** 对象的尾部添加一个新的键值对。
 
-为了安全策略，一些 **`Headers`**对象中的键值对只能客户端去控制。这些 **`key`** 包括[Forbidden response header name](/zh-CN/docs/Glossary/Forbidden_header_name) 和 [Forbidden responese header names](/zh-CN/docs/Glossary/Forbidden_response_header_name) 。
+为了安全策略，一些 **`Headers`**对象中的键值对只能客户端去控制。这些 **`key`** 包括 [Forbidden response header name](/zh-CN/docs/Glossary/Forbidden_header_name) 和 [Forbidden responese header names](/zh-CN/docs/Glossary/Forbidden_response_header_name) 。
 
 ## 语法
 
@@ -36,7 +36,7 @@ Void.
 var myHeaders = new Headers(); // Currently empty
 ```
 
-你可以用[append()](/zh-CN/docs/Web/API/Headers/append)方法给`Headers` 对象增添一个新的键值对，然后用 **`set()`** 方法去改变这个键值对：
+你可以用 [append()](/zh-CN/docs/Web/API/Headers/append)方法给`Headers` 对象增添一个新的键值对，然后用 **`set()`** 方法去改变这个键值对：
 
 ```js
 myHeaders.append("Content-Type", "image/jpeg");
@@ -51,7 +51,7 @@ myHeaders.set("Accept-Encoding", "gzip");
 myHeaders.get("Accept-Encoding"); // Returns 'gzip'
 ```
 
-如果你需要增加一个键值对，而不是要覆盖之前的键值对，那么你需要用[append()](/zh-CN/docs/Web/API/Headers/append)方法。
+如果你需要增加一个键值对，而不是要覆盖之前的键值对，那么你需要用 [append()](/zh-CN/docs/Web/API/Headers/append)方法。
 
 ## Specifications
 

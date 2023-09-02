@@ -14,7 +14,7 @@ element.oncuechange = handlerFunction;
 var handlerFunction = element.oncuechange;
 ```
 
-`handlerFunction` 可以为 `null`，也可以是一个处理指定事件的[JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
+`handlerFunction` 可以为 `null`，也可以是一个处理指定事件的 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
 
 ## 规范
 

@@ -28,7 +28,7 @@ document.linkColor = color
 
 替代方案是在链接元素上 [HTML anchor (\<a>)](/zh-CN/HTML/Element/a) 使用 css {{ Cssxref("color") }} 属性，(比如`a {color:red;}`) 或者 [`:link`](http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes) 伪类 ,(比如`:link {color:red;}`).
 
-另一种方法是使用 `document.body.link`, 该属也在[HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-link)中被废弃。
+另一种方法是使用 `document.body.link`, 该属也在 [HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-link)中被废弃。
 
 ### 例子
 

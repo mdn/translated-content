@@ -239,7 +239,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## 权限
 
-在一个可安装的 app（如[Firefox OS app](/zh-CN/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
+在一个可安装的 app（如 [Firefox OS app](/zh-CN/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
 
 ```js
 "permissions": {

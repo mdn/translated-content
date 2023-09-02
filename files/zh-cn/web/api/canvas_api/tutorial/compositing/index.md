@@ -14,7 +14,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : 这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。
 
-查看下面[Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
+查看下面 [Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
 
 {{EmbedLiveSample("合成示例", 750, 6750, "")}}
 
