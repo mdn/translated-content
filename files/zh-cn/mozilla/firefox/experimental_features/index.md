@@ -1164,7 +1164,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
   </tbody>
 </table>
 
-## APIs
+## API
 
 ### 图形：Canvas、WebGL 和 WebGPU
 
