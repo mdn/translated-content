@@ -10,7 +10,7 @@ slug: Web/API/ShadowRoot/activeElement
 ## 構文
 
 ```js
-shadowRoot.activeElement
+shadowRoot.activeElement;
 ```
 
 ### 値
@@ -20,7 +20,7 @@ shadowRoot.activeElement
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let focusedElem = shadow.activeElement;
 ```

@@ -16,7 +16,11 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 要想在 CSS 样式中应用 SVG 效果，首先需要创建一个引用 SVG 的 CSS 样式。
 
 ```html
-<style>p { mask: url(#my-mask); }</style>
+<style>
+  p {
+    mask: url(#my-mask);
+  }
+</style>
 ```
 
 在上面的例子中，所有段落会被 [ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为 `my-mask` 的 [SVG `<mask>`](/zh-CN/docs/Web/SVG/Element/mask) 遮罩。
@@ -29,11 +33,11 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 <svg height="0">
   <mask id="mask-1">
     <linearGradient id="gradient-1" y2="1">
-      <stop stop-color="white" offset="0"/>
-      <stop stop-opacity="0" offset="1"/>
+      <stop stop-color="white" offset="0" />
+      <stop stop-opacity="0" offset="1" />
     </linearGradient>
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/>
-    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)"/>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white" />
+    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)" />
   </mask>
 </svg>
 ```
@@ -55,14 +59,15 @@ p {
 
 ```html
 <p class="target" style="background:lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <b class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  >
+  Ut enim ad minim veniam.
 </p>
 ```
 
@@ -76,22 +81,23 @@ p {
 
 ```html
 <p class="target" style="background:lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <b class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  >
+  Ut enim ad minim veniam.
 </p>
 
 <button onclick="toggleRadius()">Toggle radius</button>
 
 <svg height="0">
   <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle"/>
-    <rect x="0.5" y="0.2" width="0.5" height="0.8"/>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
+    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
   </clipPath>
 </svg>
 ```
@@ -114,7 +120,7 @@ p {
 ```js
 function toggleRadius() {
   var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
+  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
 }
 ```
 
@@ -126,15 +132,16 @@ function toggleRadius() {
 
 ```html
 <p class="target" style="background: lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <pre class="target">lorem</pre>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <b class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  >
+  Ut enim ad minim veniam.
 </p>
 ```
 
@@ -143,7 +150,7 @@ function toggleRadius() {
 ```html
 <svg height="0">
   <filter id="f1">
-    <feGaussianBlur stdDeviation="3"/>
+    <feGaussianBlur stdDeviation="3" />
   </filter>
 </svg>
 ```
@@ -153,10 +160,11 @@ function toggleRadius() {
 ```html
 <svg height="0">
   <filter id="f2">
-    <feColorMatrix values="0.3333 0.3333 0.3333 0 0
-                           0.3333 0.3333 0.3333 0 0
-                           0.3333 0.3333 0.3333 0 0
-                           0      0      0      1 0"/>
+    <feColorMatrix
+      values="0.3333 0.3333 0.3333 0 0
+              0.3333 0.3333 0.3333 0 0
+              0.3333 0.3333 0.3333 0 0
+              0      0      0      1 0" />
   </filter>
 </svg>
 ```
@@ -166,20 +174,29 @@ function toggleRadius() {
 ```html
 <svg height="0">
   <filter id="f3">
-    <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+    <feConvolveMatrix
+      filterRes="100 100"
+      style="color-interpolation-filters:sRGB"
+      order="3"
+      kernelMatrix="0 -1 0   -1 4 -1   0 -1 0"
+      preserveAlpha="true" />
   </filter>
   <filter id="f4">
-    <feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white">
-      <fePointLight x="-5000" y="-10000" z="20000"/>
+    <feSpecularLighting
+      surfaceScale="5"
+      specularConstant="1"
+      specularExponent="10"
+      lighting-color="white">
+      <fePointLight x="-5000" y="-10000" z="20000" />
     </feSpecularLighting>
   </filter>
   <filter id="f5">
-    <feColorMatrix values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
+    <feColorMatrix
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 1 0 0 0"
+      style="color-interpolation-filters:sRGB" />
   </filter>
 </svg>
 ```
@@ -187,17 +204,27 @@ function toggleRadius() {
 使用以下 CSS 应用五个过滤器：
 
 ```css
-p.target { filter:url(#f3); }
-p.target:hover { filter:url(#f5); }
-b.target { filter:url(#f1); }
-b.target:hover { filter:url(#f4); }
-pre.target { filter:url(#f2); }
-pre.target:hover { filter:url(#f3); }
+p.target {
+  filter: url(#f3);
+}
+p.target:hover {
+  filter: url(#f5);
+}
+b.target {
+  filter: url(#f1);
+}
+b.target:hover {
+  filter: url(#f4);
+}
+pre.target {
+  filter: url(#f2);
+}
+pre.target:hover {
+  filter: url(#f3);
+}
 ```
 
 {{EmbedLiveSample('示例：Filtering', 650, 200)}}
-
-[View this example live](/files/3329/filterdemo.xhtml)
 
 ### 示例：Blurred Text
 
@@ -208,7 +235,7 @@ pre.target:hover { filter:url(#f3); }
 <svg height="0">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
     </filter>
   </defs>
 </svg>
@@ -217,7 +244,9 @@ pre.target:hover { filter:url(#f3); }
 你可以在同一个 class 中使用 SVG 和 CSS 过滤器：
 
 ```css
-.blur { filter: url(#wherearemyglasses); }
+.blur {
+  filter: url(#wherearemyglasses);
+}
 ```
 
 {{ EmbedLiveSample('示例：Blurred Text', 300, 100) }}
@@ -243,7 +272,9 @@ SVG 还可以用于添加比纯 HTML 文本更动态、更灵活的文本添加�
 例如，CSS 规则在一个名为 default.css 的文件中，如下这样：
 
 ```css
-.target { clip-path: url(resources.svg#c1); }
+.target {
+  clip-path: url(resources.svg#c1);
+}
 ```
 
 这个 SVG 就可以从一个名为 resources.svg 的文件中导入，clip 路径为 ID c1。

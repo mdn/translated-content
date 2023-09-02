@@ -1,8 +1,6 @@
 ---
 title: Повторное введение в JavaScript (JS учебник)
 slug: Web/JavaScript/Language_overview
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}
@@ -53,7 +51,7 @@ JavaScript является объектно-ориентированным яз
 Числа в JavaScript — это "64-битные значения двойной точности формата IEEE 754", согласно спецификации. Это имеет интересные последствия. В JavaScript нет такой вещи, как целое число, поэтому с арифметикой нужно быть начеку, если вы привыкли к вычислениям в языках C или Java. Взгляните на пример:
 
 ```js
-0.1 + 0.2 == 0.30000000000000004
+0.1 + 0.2 == 0.30000000000000004;
 ```
 
 На практике целые значения это 32-битные целые (и хранятся таким образом в некоторых браузерных реализациях), что может быть важно для побитовых операций.
@@ -75,7 +73,7 @@ parseInt("010", 10); // 10
 Если вы не предоставите основание, то можете получить неожиданные результаты:
 
 ```js
-parseInt("010");  // 8
+parseInt("010"); // 8
 parseInt("0x10"); // 16
 ```
 
@@ -92,8 +90,8 @@ parseInt("11", 2); // 3
 Также можно использовать унарный оператор **`+`** для преобразования значения в число:
 
 ```js
-+ "42";   // 42
-+ "0x10"; // 16
++"42"; // 42
++"0x10"; // 16
 ```
 
 Специальное значение [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) (сокращение от "Not a Number") возвращается, если строка не является числом:
@@ -124,7 +122,7 @@ JavaScript также имеет специальные значения [`Infin
 Проверить значение на `Infinity`, `-Infinity` и `NaN` можно с помощью встроенной функции [`isFinite()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/isFinite):
 
 ```js
-isFinite(1/0); // false
+isFinite(1 / 0); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
@@ -173,7 +171,7 @@ Boolean(234); // true
 
 ## Переменные
 
-Для объявления новых переменных в JavaScript используются ключевые слова [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) или [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
+Для объявления новых переменных в JavaScript используются ключевые слова [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) или [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var).
 
 ```js
 let a;
@@ -203,7 +201,7 @@ Pi = 1; // вызовет исключение, так как значение �
 
 ```js
 var a;
-var name = 'Simon';
+var name = "Simon";
 ```
 
 Пример кода с переменной, объявленной с помощью **`var`:**
@@ -227,8 +225,8 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 JavaScript поддерживает такие операторы, как `+`, `-`, `*`, `/` и `%`, который возвращает остаток от деления ([не путать с модулем](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29)). Значения присваиваются с помощью оператора `=`, или с помощью составных операторов `+=` и `-=`. Это сокращённая запись выражения `x = x оператор y`.
 
 ```js
-x += 5
-x = x + 5
+x += 5;
+x = x + 5;
 ```
 
 Так же используются операторы инкремента (`++`) и декремента (`--`). Которые имеют префиксную и постфиксную форму записи.
@@ -252,7 +250,7 @@ x = x + 5
 
 ```js
 123 == "123"; // true
-1 == true;    // true
+1 == true; // true
 ```
 
 Если преобразование нежелательно, то используют оператор строгого равенства:
@@ -280,7 +278,7 @@ if (name == "puppies") {
 } else {
   name = "!" + name;
 }
-name == "kittens!!"
+name == "kittens!!";
 ```
 
 В JavaScript есть три типа циклов: `while`, `do-while` и `for`. While используется для задания обычного цикла, а do-while целесообразно применить в том случае, если вы хотите, чтобы цикл был выполнен хотя бы один раз:
@@ -293,7 +291,7 @@ while (true) {
 var input;
 do {
   input = get_input();
-} while (inputIsNotValid(input))
+} while (inputIsNotValid(input));
 ```
 
 Цикл `for` похож на такой же в языках C и Java: он позволяет задавать данные для контроля за выполнением цикла:
@@ -335,46 +333,46 @@ var name = otherName || "default";
 К условным операторам в JavaScript принадлежит также тернарный оператор "`?`" :
 
 ```js
-var allowed = (age > 18) ? "yes" : "no";
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 Оператор `switch` используется при необходимости множественного сравнения:
 
 ```js
-switch(action) {
-    case 'draw':
-        drawit();
-        break;
-    case 'eat':
-        eatit();
-        break;
-    default:
-        donothing();
+switch (action) {
+  case "draw":
+    drawit();
+    break;
+  case "eat":
+    eatit();
+    break;
+  default:
+    donothing();
 }
 ```
 
 Если в конце инструкции `case` не добавить останавливающую инструкцию `break`, то выполнение перейдёт к следующей инструкции `case`. Как правило, такое поведение нежелательно, но если вдруг вы решили его использовать, настоятельно рекомендуем писать соответствующий комментарий для облегчения поиска ошибок:
 
 ```js
-switch(a) {
-    case 1: // fallthrough
-    case 2:
-        eatit();
-        break;
-    default:
-        donothing();
+switch (a) {
+  case 1: // fallthrough
+  case 2:
+    eatit();
+    break;
+  default:
+    donothing();
 }
 ```
 
 Вариант `default` опциональный. Допускается использование выражений как в условии `switch`, так и в `cases`. При проверке на равенство используется оператор строгого равенства `===`:
 
 ```js
-switch(1 + 3) {
-    case 2 + 2:
-        yay();
-        break;
-    default:
-        neverhappens();
+switch (1 + 3) {
+  case 2 + 2:
+    yay();
+    break;
+  default:
+    neverhappens();
 }
 ```
 
@@ -409,19 +407,19 @@ var obj = {};
 ```js
 var obj = {
   name: "Carrot",
-  "for": "Max",
+  for: "Max",
   details: {
     color: "orange",
-    size: 12
-  }
-}
+    size: 12,
+  },
+};
 ```
 
 Доступ к свойствам объекта можно получить следующими способами:
 
 ```js
 obj.details.color; // orange
-obj['details']['size']; // 12
+obj["details"]["size"]; // 12
 ```
 
 Эти два метода равнозначны. Первый метод используется, если мы точно знаем к какому методу нам нужно обратиться. Второй метод принимает в качестве имени свойства строку, и позволяет вычислять имя в процессе вычислений. Следует отметить, что последний метод мешает некоторым движкам и минимизаторам оптимизировать код. Если появится необходимость назначить в качестве имён свойств объекта [зарезервированные слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), то данный метод тоже может пригодиться:
@@ -483,7 +481,7 @@ typeof a[90]; // undefined
 
 ```js
 for (var i = 0; i < a.length; i++) {
-    // Сделать что-нибудь с элементом a[i]
+  // Сделать что-нибудь с элементом a[i]
 }
 ```
 
@@ -500,8 +498,8 @@ for (const currentValue of a) {
 И самый новый способ перебора свойств массива был добавлен в ECMAScript 5 — это метод [forEach()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 
 ```js
-["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
-// Сделать что-нибудь с currentValue или array[index]
+["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
+  // Сделать что-нибудь с currentValue или array[index]
 });
 ```
 
@@ -517,7 +515,7 @@ a.push(item);
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `a.toString()`                                       | Возвращает строковое представление массива, где все элементы разделены запятыми.    |
 | `a.toLocaleString()`                                 | Возвращает строковое представление массива в соответствии с выбранной локалью.      |
-| `a.concat(item1[, item2[, ...[, itemN]]])`          | Возвращает новый массив с добавлением указанных элементов.                          |
+| `a.concat(item1[, item2[, ...[, itemN]]])`           | Возвращает новый массив с добавлением указанных элементов.                          |
 | `a.join(sep)`                                        | Преобразует массив в строку, где в качестве разделителя используется параметр `sep` |
 | `a.pop()`                                            | Удаляет последний элемент массива и возвращает его.                                 |
 | `a.push(item1, ..., itemN)`                          | Добавляет один или более элементов в конец массива.                                 |
@@ -534,8 +532,8 @@ a.push(item);
 
 ```js
 function add(x, y) {
-    var total = x + y;
-    return total;
+  var total = x + y;
+  return total;
 }
 ```
 
@@ -559,11 +557,11 @@ add(2, 3, 4); // 5
 
 ```js
 function add() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum;
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum;
 }
 
 add(2, 3, 4, 5); // 14
@@ -573,11 +571,11 @@ add(2, 3, 4, 5); // 14
 
 ```js
 function avg() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
 }
 avg(2, 3, 4, 5); // 3.5
 ```
@@ -627,13 +625,13 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 В JavaScript можно создавать анонимные функции:
 
 ```js
-var avg = function() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
-}
+var avg = function () {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
 ```
 
 Данная запись семантически равнозначна записи `function` `avg()`. Это даёт возможность использовать разные интересные трюки. Вот посмотрите, как можно "спрятать" локальные переменные в функции:
@@ -641,9 +639,9 @@ var avg = function() {
 ```js
 var a = 1;
 var b = 2;
-(function() {
-    var b = 3;
-    a += b;
+(function () {
+  var b = 3;
+  a += b;
 })();
 a; // 4
 b; // 2
@@ -653,14 +651,15 @@ b; // 2
 
 ```js
 function countChars(elm) {
-    if (elm.nodeType == 3) { // TEXT_NODE
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += countChars(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += countChars(child);
+  }
+  return count;
 }
 ```
 
@@ -668,14 +667,15 @@ function countChars(elm) {
 
 ```js
 var charsInBody = (function counter(elm) {
-    if (elm.nodeType == 3) { // TEXT_NODE
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += counter(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += counter(child);
+  }
+  return count;
 })(document.body);
 ```
 
@@ -689,18 +689,18 @@ var charsInBody = (function counter(elm) {
 
 ```js
 function makePerson(first, last) {
-    return {
-        first: first,
-        last: last
-    }
+  return {
+    first: first,
+    last: last,
+  };
 }
 
 function personFullName(person) {
-    return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 
 function personFullNameReversed(person) {
-    return person.last + ', ' + person.first
+  return person.last + ", " + person.first;
 }
 
 s = makePerson("Simon", "Willison");
@@ -712,18 +712,18 @@ personFullNameReversed(s); // Willison, Simon
 
 ```js
 function makePerson(first, last) {
-    return {
-        first: first,
-        last: last,
-        fullName: function() {
-            return this.first + ' ' + this.last;
-        },
-        fullNameReversed: function() {
-            return this.last + ', ' + this.first;
-        }
-    }
+  return {
+    first: first,
+    last: last,
+    fullName: function () {
+      return this.first + " " + this.last;
+    },
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
+  };
 }
-s = makePerson("Simon", "Willison")
+s = makePerson("Simon", "Willison");
 s.fullName(); // Simon Willison
 s.fullNameReversed(); // Willison, Simon
 ```
@@ -731,7 +731,7 @@ s.fullNameReversed(); // Willison, Simon
 А вот кое-что новенькое: ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this). Когда `this` используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через [точку или квадратные скобки](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), то `this` получится равным данному объекту. В ином случае `this` будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:
 
 ```js
-s = makePerson("Simon", "Willison")
+s = makePerson("Simon", "Willison");
 var fullName = s.fullName;
 fullName(); // undefined undefined
 ```
@@ -742,14 +742,14 @@ fullName(); // undefined undefined
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = function() {
-        return this.first + ' ' + this.last;
-    };
-    this.fullNameReversed = function() {
-        return this.last + ', ' + this.first;
-    };
+  this.first = first;
+  this.last = last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
+  };
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
+  };
 }
 var s = new Person("Simon", "Willison");
 ```
@@ -762,16 +762,16 @@ var s = new Person("Simon", "Willison");
 
 ```js
 function personFullName() {
-    return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-    return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = personFullName;
-    this.fullNameReversed = personFullNameReversed;
+  this.first = first;
+  this.last = last;
+  this.fullName = personFullName;
+  this.fullNameReversed = personFullNameReversed;
 }
 ```
 
@@ -779,15 +779,15 @@ function Person(first, last) {
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
+  this.first = first;
+  this.last = last;
 }
 Person.prototype.fullName = function fullName() {
-    return this.first + ' ' + this.last;
-}
+  return this.first + " " + this.last;
+};
 Person.prototype.fullNameReversed = function fullNameReversed() {
-    return this.last + ', ' + this.first;
-}
+  return this.last + ", " + this.first;
+};
 ```
 
 `Person.prototype` это объект, доступ к которому есть у всех экземпляров класса `Person`. Он создаёт особую цепочку прототипов. Каждый раз, когда вы пытаетесь получить доступ к несуществующему свойству объекта `Person`, JavaScript проверяет, существует ли свойство в `Person.prototype`. В результате все, что передано в `Person.prototype`, становится доступным и всем экземплярам этого конструктора через `this` объект.
@@ -799,9 +799,9 @@ s = new Person("Simon", "Willison");
 s.firstNameCaps();
 // TypeError on line 1: s.firstNameCaps is not a function
 
-Person.prototype.firstNameCaps = function() {
-    return this.first.toUpperCase()
-}
+Person.prototype.firstNameCaps = function () {
+  return this.first.toUpperCase();
+};
 s.firstNameCaps(); // "SIMON"
 ```
 
@@ -812,12 +812,12 @@ var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
 String.prototype.reversed = function reversed() {
-    var r = "";
-    for (var i = this.length - 1; i >= 0; i--) {
-        r += this[i];
-    }
-    return r;
-}
+  var r = "";
+  for (var i = this.length - 1; i >= 0; i--) {
+    r += this[i];
+  }
+  return r;
+};
 s.reversed(); // "nomiS"
 ```
 
@@ -834,9 +834,9 @@ s.reversed(); // "nomiS"
 var s = new Person("Simon", "Willison");
 s.toString(); // [object Object]
 
-Person.prototype.toString = function() {
-    return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 
 s.toString(); // "<Person: Simon Willison>"
 ```
@@ -845,9 +845,9 @@ s.toString(); // "<Person: Simon Willison>"
 
 ```js
 function trivialNew(constructor, ...args) {
-    var o = {}; // Создаём новый объект
-    constructor.apply(o, args);
-    return o;
+  var o = {}; // Создаём новый объект
+  constructor.apply(o, args);
+  return o;
 }
 ```
 
@@ -856,20 +856,20 @@ function trivialNew(constructor, ...args) {
 Вызов
 
 ```js
-var bill = trivialNew(Person, 'William', 'Orange');
+var bill = trivialNew(Person, "William", "Orange");
 ```
 
 практически полностью эквивалентен этому:
 
 ```js
-var bill = new Person('William', 'Orange');
+var bill = new Person("William", "Orange");
 ```
 
 В JavaScript метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) имеет похожий метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call), который тоже позволяет устанавливать `this`, но принимает список, а не массив аргументов.
 
 ```js
 function lastNameCaps() {
-    return this.last.toUpperCase();
+  return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
@@ -904,9 +904,9 @@ function parentFunc() {
 
 ```js
 function makeAdder(a) {
-    return function(b) {
-        return a + b;
-    };
+  return function (b) {
+    return a + b;
+  };
 }
 
 var x = makeAdder(5);

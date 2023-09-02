@@ -1,14 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/resolve
 ---
 
 {{JSRef}}
@@ -45,18 +37,21 @@ La fonction statique `Promise.resolve` renvoie un objet `Promise` qui est résol
 ### Utilisation de la méthode statique `Promise.resolve`
 
 ```js
-Promise.resolve("Succès").then(function(valeur) {
-  console.log(valeur); // "Succès"
-}, function(valeur) {
-  // n'est pas appelée
-});
+Promise.resolve("Succès").then(
+  function (valeur) {
+    console.log(valeur); // "Succès"
+  },
+  function (valeur) {
+    // n'est pas appelée
+  },
+);
 ```
 
 ### Résoudre un tableau
 
 ```js
-var p = Promise.resolve([1,2,3]);
-p.then(function(v) {
+var p = Promise.resolve([1, 2, 3]);
+p.then(function (v) {
   console.log(v[0]); // 1
 });
 ```
@@ -66,7 +61,7 @@ p.then(function(v) {
 ```js
 var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
-cast.then(function(value) {
+cast.then(function (value) {
   console.log("value: " + value);
 });
 console.log("original === cast ? " + (original === cast));
@@ -83,43 +78,58 @@ L'ordre des traces dans la console est dû au fait que les gestionnaires `then()
 ```js
 // Résoudre un objet avec then
 var p1 = Promise.resolve({
-  then: function(onFulfill, onReject) { onFulfill("tenue !"); }
+  then: function (onFulfill, onReject) {
+    onFulfill("tenue !");
+  },
 });
-console.log(p1 instanceof Promise) // true, l'objet est transformée en une Promise
+console.log(p1 instanceof Promise); // true, l'objet est transformée en une Promise
 
-p1.then(function(v) {
+p1.then(
+  function (v) {
     console.log(v); // "tenue !"
-  }, function(e) {
+  },
+  function (e) {
     // n'est pas appelée
-});
+  },
+);
 
 // L'objet avec then renvoie une erreur avant le callback
 // La promesse n'est pas tenue
-var thenable = { then: function(resolve) {
-  throw new TypeError("Renvoi d'erreur");
-  resolve("Résolution ");
-}};
+var thenable = {
+  then: function (resolve) {
+    throw new TypeError("Renvoi d'erreur");
+    resolve("Résolution ");
+  },
+};
 
 var p2 = Promise.resolve(thenable);
-p2.then(function(v) {
-  // n'est pas appelée
-}, function(e) {
-  console.log(e); // TypeError : Renvoi d'erreur
-});
+p2.then(
+  function (v) {
+    // n'est pas appelée
+  },
+  function (e) {
+    console.log(e); // TypeError : Renvoi d'erreur
+  },
+);
 
 // L'objet avec then renvoie une erreur après le callback
 // La promesse est tenue
-var thenable = { then: function(resolve) {
-  resolve("Résolue");
-  throw new TypeError("Erreur");
-}};
+var thenable = {
+  then: function (resolve) {
+    resolve("Résolue");
+    throw new TypeError("Erreur");
+  },
+};
 
 var p3 = Promise.resolve(thenable);
-p3.then(function(v) {
-  console.log(v); // "Résolue"
-}, function(e) {
-  // n'est pas appelée
-});
+p3.then(
+  function (v) {
+    console.log(v); // "Résolue"
+  },
+  function (e) {
+    // n'est pas appelée
+  },
+);
 ```
 
 ## Spécifications

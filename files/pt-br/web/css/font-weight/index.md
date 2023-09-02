@@ -114,14 +114,14 @@ Um valor de `font-weight` é interpolado com passos discretos (múltiplos de 100
 
 ```html
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the
-  bank, and of having nothing to do: once or twice she had peeped into the
-  book her sister was reading, but it had no pictures or conversations in
-  it, 'and what is the use of a book,' thought Alice 'without pictures or
-  conversations?'
+  Alice was beginning to get very tired of sitting by her sister on the bank,
+  and of having nothing to do: once or twice she had peeped into the book her
+  sister was reading, but it had no pictures or conversations in it, 'and what
+  is the use of a book,' thought Alice 'without pictures or conversations?'
 </p>
 
-<div>I'm heavy<br/>
+<div>
+  I'm heavy<br />
   <span>I'm lighter</span>
 </div>
 ```
@@ -137,7 +137,7 @@ p {
 /* Set div text to two steps darker than
    normal but less than a standard bold. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Sets text enclosed within span tag
@@ -153,12 +153,12 @@ span {
 
 ## Especificações
 
-| Especificações                                                                                   | Status                                   | Comentário                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}             | {{Spec2('CSS3 Fonts')}}         | Sem alterações.                             |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}         | {{Spec2('CSS3 Transitions')}} | Permite animação do atributo `font-weight`. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}} | {{Spec2('CSS2.1')}}                 | Sem alterações.                             |
-| {{SpecName('CSS1', '#font-weight', 'font-weight')}}                             | {{Spec2('CSS1')}}                 |                                             |
+| Especificações                                                          | Status                        | Comentário                                  |
+| ----------------------------------------------------------------------- | ----------------------------- | ------------------------------------------- |
+| {{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}          | {{Spec2('CSS3 Fonts')}}       | Sem alterações.                             |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}      | {{Spec2('CSS3 Transitions')}} | Permite animação do atributo `font-weight`. |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}} | {{Spec2('CSS2.1')}}           | Sem alterações.                             |
+| {{SpecName('CSS1', '#font-weight', 'font-weight')}}                     | {{Spec2('CSS1')}}             |                                             |
 
 ## Compatibilidade com navegadores
 

@@ -1,12 +1,12 @@
 ---
 title: div
 slug: Web/HTML/Element/div
-original_slug: Web/HTML/Elemento/div
 ---
 
 ### Definición
 
 - **div** de "division" -_división_ . Sirve para crear secciones o agrupar contenidos.
+
   - : **Sus etiquetas son**: `<div>` y `</div>` (ambas obligatorias).
 
     **Está definido como**: [Elemento en bloque](/es/docs/Web/HTML/Block-level_elements).
@@ -228,7 +228,7 @@ código:
 
 ```html
 <div style="color: blue;">
- <h2> Ejemplo de div y span </h2>
+  <h2>Ejemplo de div y span</h2>
   <p>
     Esto es un párrafo dentro de un div,
     <span style="color: red;"> y esto un span dentro de un párrafo.</span>

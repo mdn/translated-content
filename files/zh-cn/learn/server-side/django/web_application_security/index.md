@@ -45,16 +45,16 @@ slug: Learn/Server-side/Django/web_application_security
 
 XSS(英语：Cross site scripting，通常简称：XSS) 是指一类恶意攻击者将代码通过网站注入到其他用户浏览器中的攻击方式。一般攻击者会把恶意代码作为普通数据放入到网站数据库中，这样其他用户在获取和展示数据的过程中就会受到攻击。此外，攻击者还可以通过引诱用户点击某些链接来执行恶意的 JavaScript 代码。
 
-Django 的模板系统可以帮您抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
+Django 的模板系统可以帮你抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
 
 1. 使用开发服务器启动网站 (参考命令：`python3 manage.py runserver`)。
 2. 在浏览器中打开网站，并用超级用户身份登录。
 3. 进入创建作者页面 (地址可能会是：[`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/))。
 4. 输入姓名、生日等信息，随后在 Last Name 这个字段里面填入以下的内容：
-    `<script>alert('Test alert');</script>`
-    ![Author Form XSS test](author_create_form_alert_xss.png)
+   `<script>alert('Test alert');</script>`
+   ![Author Form XSS test](author_create_form_alert_xss.png)
 
-    > **备注：** 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被 XSS 攻击的漏洞。
+   > **备注：** 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被 XSS 攻击的漏洞。
 
 5. 点击 **Submit** 按钮保存信息。
 6. 保存后的作者信息将会显示为下图的样式。因为 XSS 防护措施的存在，注入代码中的`alert()`部分并没有执行，而只是用文本的方式直接显示了出来。![Author detail view XSS test](author_detail_alert_xss.png)
@@ -62,7 +62,10 @@ Django 的模板系统可以帮您抵挡大部分的 XSS 攻击，实现的方�
 如果你有兴趣阅读下页面的 HTML 源码，则会发现危险的字符已被转义成了无害的字符 (例如： `>` 被转义为了 `&gt;` )
 
 ```html
-<h1>Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David (Boonie) </h1>
+<h1>
+  Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David
+  (Boonie)
+</h1>
 ```
 
 Django 的模板系统可以帮助抵御大部分的 XSS 攻击。当然，XSS 保护功能也可以被关闭，而且 XSS 保护一般对非用户输入的内容不会自动进行防护 (例如表单中字段的`help_text`通常不会是用户提交的，所以这部分数据 Django 也不会进行转义)
@@ -79,19 +82,56 @@ CSRF(英语：Cross-site request forgery，通常简称：CSRF 或 XSRF) 攻击�
 
 ```html
 <html>
-<body onload='document.EvilForm.submit()'>
-
-<form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'>
-  <table>
-    <tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" maxlength="100" name="first_name" type="text" value="Mad" required /></td></tr>
-    <tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" maxlength="100" name="last_name" type="text" value="Man" required /></td></tr>
-    <tr><th><label for="id_date_of_birth">Date of birth:</label></th><td><input id="id_date_of_birth" name="date_of_birth" type="text" /></td></tr>
-    <tr><th><label for="id_date_of_death">Died:</label></th><td><input id="id_date_of_death" name="date_of_death" type="text" value="12/10/2016" /></td></tr>
-  </table>
-  <input type="submit" value="Submit" />
-</form>
-
-</body>
+  <body onload="document.EvilForm.submit()">
+    <form
+      action="http://127.0.0.1:8000/catalog/author/create/"
+      method="post"
+      name="EvilForm">
+      <table>
+        <tr>
+          <th><label for="id_first_name">First name:</label></th>
+          <td>
+            <input
+              id="id_first_name"
+              maxlength="100"
+              name="first_name"
+              type="text"
+              value="Mad"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_last_name">Last name:</label></th>
+          <td>
+            <input
+              id="id_last_name"
+              maxlength="100"
+              name="last_name"
+              type="text"
+              value="Man"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_birth">Date of birth:</label></th>
+          <td>
+            <input id="id_date_of_birth" name="date_of_birth" type="text" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_death">Died:</label></th>
+          <td>
+            <input
+              id="id_date_of_death"
+              name="date_of_death"
+              type="text"
+              value="12/10/2016" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -100,7 +140,10 @@ CSRF(英语：Cross-site request forgery，通常简称：CSRF 或 XSRF) 攻击�
 在表单定义的时候加入 `{% csrf_token %}` 这个模板标签，CSRF 保护功能即可启用。在模板渲染的时候，这个 token 在 HTML 代码中将会按照下面的格式显示，包含了一个与当前用户和当前浏览器关联的值。
 
 ```html
-<input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' />
+<input
+  type="hidden"
+  name="csrfmiddlewaretoken"
+  value="0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW" />
 ```
 
 Django 生成这个用户/浏览器关联 key 的目的在于可以据此来拒绝那些不包含这个 key 的表单请求，也可以拒绝那些包含了错误了用户/浏览器关联 key 的表单请求。
@@ -118,6 +161,7 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 - 点击劫持防护
   - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe>](/zh-CN/docs/Web/HTML/Element/iframe) 标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
 - 强制 SSL/HTTPS
+
   - : web 服务器可通过启用 SSL/HTTPS 来加密网站和浏览器之间的所有通信流量，包括了身份认证及其他通过纯文本方式来发送的数据流量 (强烈建议启用 HTTPS)。如果 HTTPS 已启用，Django 还提供了一起实用的保护措施：
 
 - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) 设置可以用于检查内容是否安全，可用于代理和 Django 之间使用非 HTTPS 方式通讯的情况下。
@@ -134,7 +178,7 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 
 Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示 Django 如何处理一些特定的攻击。我们也提供了关于其他保护措施的简单概述。
 
-但这仅仅是对网站安全的一个入门。我们强烈建议您阅读 [Django 中的安全](https://docs.djangoproject.com/en/2.0/topics/security/) 以获得更加深入的理解。
+但这仅仅是对网站安全的一个入门。我们强烈建议你阅读 [Django 中的安全](https://docs.djangoproject.com/en/2.0/topics/security/) 以获得更加深入的理解。
 
 本 Django 教程的下一步，也是最后一步，是完成 [评估任务](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)。
 

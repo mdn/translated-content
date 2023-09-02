@@ -3,7 +3,7 @@ title: Web 安全
 slug: Web/Security
 ---
 
-确保你的 Web 站点或 Web 应用安全是十分重要的，即使是代码中很小的 bug 也可能导致隐私信息被泄露，黑客会尝试偷窃数据。这些文档提供信息帮助您使代码更安全。此处列出的面向 Web 安全的文章提供的信息可以帮助你保护站点及其代码免受攻击和数据窃取。
+确保你的 Web 站点或 Web 应用安全是十分重要的，即使是代码中很小的 bug 也可能导致隐私信息被泄露，黑客会尝试偷窃数据。这些文档提供信息帮助你使代码更安全。此处列出的面向 Web 安全的文章提供的信息可以帮助你保护站点及其代码免受攻击和数据窃取。
 
 ## 内容安全
 
@@ -36,7 +36,7 @@ slug: Web/Security
 ## 数据安全
 
 - [使用 HTTP Cookies](/zh-CN/docs/Web/HTTP/Cookies)
-  - : *HTTP cookie*（web cookie，浏览器 cookie）是服务器发送给客户端 web 浏览器的一小块数据。浏览器可能会存储它，并在后续对同一服务器的请求中将它发送回服务器。例如，通常这可以说明两个请求来自同一个浏览器，从而让用户保持登录状态。
+  - : _HTTP cookie_（web cookie，浏览器 cookie）是服务器发送给客户端 web 浏览器的一小块数据。浏览器可能会存储它，并在后续对同一服务器的请求中将它发送回服务器。例如，通常这可以说明两个请求来自同一个浏览器，从而让用户保持登录状态。
 - [Local storage](/zh-CN/docs/Web/API/Window/localStorage)
   - : `Window` 对象的 {{domxref("Window.localStorage")}} 属性是一种服务器在客户端上存储持久性数据的方法，数据可以在不同的会话中持久访问。
 
@@ -80,7 +80,7 @@ slug: Web/Security
 
 - {{Glossary("Block cipher mode of operation")}}
 - {{Glossary("Certificate authority","认证机构")}}
-- {{Glossary("challenge", "挑战-响应认证")}}
+- {{Glossary("challenge", "挑战—响应认证")}}
 - {{Glossary("Cipher","密码")}}
 - {{Glossary("Cipher suite","密码套件")}}
 - {{Glossary("Ciphertext","密文")}}

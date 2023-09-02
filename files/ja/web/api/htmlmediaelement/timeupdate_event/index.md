@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: timeupdate イベント'
+title: "HTMLMediaElement: timeupdate イベント"
 slug: Web/API/HTMLMediaElement/timeupdate_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -18,9 +18,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('timeupdate', (event) => {});
+addEventListener("timeupdate", (event) => {});
 
-ontimeupdate = (event) => { };
+ontimeupdate = (event) => {};
 ```
 
 ## イベント型
@@ -34,20 +34,20 @@ ontimeupdate = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('timeupdate', (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+video.addEventListener("timeupdate", (event) => {
+  console.log("The currentTime attribute has been updated. Again.");
 });
 ```
 
 `ontimeupdate` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ontimeupdate = (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+  console.log("The currentTime attribute has been updated. Again.");
 };
 ```
 

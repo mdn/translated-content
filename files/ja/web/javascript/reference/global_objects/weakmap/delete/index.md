@@ -30,11 +30,11 @@ wm.delete(key);
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.delete(window); // true を返す。削除に成功。
 
-wm.has(window);    // false を返す。 window はもう WeakMap に存在しない。
+wm.has(window); // false を返す。 window はもう WeakMap に存在しない。
 ```
 
 ## 仕様書

@@ -14,7 +14,8 @@ a[title] {
 }
 
 /* 存在 href 属性并且属性值匹配"https://example.org"的 <a> 元素 */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -151,9 +152,9 @@ div[data-lang="zh-TW"] {
 ```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+<div lang="zh-CN">世界你好！</div>
+<div lang="zh-TW">世界你好！</div>
+<div data-lang="zh-TW">世界你好！</div>
 ```
 
 #### 结果
@@ -190,9 +191,7 @@ ol[type="c" i] {
 
 ```html
 <ol type="A">
-  <li>
-    非大小写敏感匹配呈现红色背景（类型选择器默认值）
-  </li>
+  <li>非大小写敏感匹配呈现红色背景（类型选择器默认值）</li>
 </ol>
 <ol type="b">
   <li>如果支持 `s` 修饰符（大小写敏感匹配），拥有亮绿色背景</li>
@@ -201,9 +200,7 @@ ol[type="c" i] {
   <li>如果支持 `s` 修饰符（大小写敏感匹配），拥有灰色背景</li>
 </ol>
 <ol type="C">
-  <li>
-    如果支持 `i` 修饰符（大小写不敏感匹配），拥有绿色背景
-  </li>
+  <li>如果支持 `i` 修饰符（大小写不敏感匹配），拥有绿色背景</li>
 </ol>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: caret
 slug: Glossary/Caret
-original_slug: Glossario/caret
 ---
 
 Um **caret** (às vezes chamado de "cursor de texto") é um indicador exibido na tela para indicar onde a entrada de texto será inserida. A maioria das interfaces de usuário representam o caret usando uma linha vertical fina ou uma caixa do tamanho de um caractere que pisca, mas isso pode variar. Este ponto do texto é chamado de **ponto de inserção.** A palavra "_careta_" diferencia o ponto de inserção de texto do cursor do mouse.
@@ -12,7 +11,7 @@ Na web, um caret é usado para representar o ponto de inserção em {{HTMLElemen
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Caret navigation")}} no Wikipedia
+- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) no Wikipedia
 
 ### CSS relacionado com o caret
 

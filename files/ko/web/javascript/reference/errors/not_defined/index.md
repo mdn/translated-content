@@ -41,9 +41,9 @@ foo.substring(1); // "ar"
 변수는 현재의 실행 흐름 내에서 이용 가능해야합니다. 함수 내부에 정의된 변수는 다른 외부의 함수에서는 접근할 수 없습니다. 그 때문에, 변수는 함수의 스코프 내부에서만 정의 됩니다.
 
 ```js example-bad
-function numbers () {
+function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -54,9 +54,9 @@ console.log(num1); // ReferenceError: num1 is not defined
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 
@@ -66,5 +66,5 @@ console.log(num1); // 2
 ## 참조
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+- [Declaring variables in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Function scope in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Functions#함수_스코프)

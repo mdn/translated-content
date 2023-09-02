@@ -15,9 +15,9 @@ A server receiving a PATCH request with an unsupported media type could reply wi
 >
 > - Two others content encoding, `bzip` and `bzip2`, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.
 
-| 头部类型                                                               | {{Glossary("Response header")}} |
-| ---------------------------------------------------------------------- | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | yes                                      |
+| 头部类型                                                    | {{Glossary("Response header")}} |
+| ----------------------------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | yes                             |
 
 ## 语法
 

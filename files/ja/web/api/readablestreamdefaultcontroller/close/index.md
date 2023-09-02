@@ -44,16 +44,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // それを画面に表示
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener("click", function () {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // この例では実際には pull は必要ありません
@@ -62,7 +62,7 @@ const stream = new ReadableStream({
     // リーダーがキャンセルされた場合に呼び出されるため、
     // 文字列の生成を停止する必要があります
     clearInterval(interval);
-  }
+  },
 });
 ```
 

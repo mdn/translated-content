@@ -165,7 +165,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 `signup.html` 的 HTML 像这样：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

@@ -1,7 +1,6 @@
 ---
 title: Introducción
 slug: Web/API/Document_Object_Model/Introduction
-original_slug: Referencia_DOM_de_Gecko/Introducción
 ---
 
 Ésta sección da una breve introducción conceptual del [DOM](/es/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](/es/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
@@ -17,10 +16,10 @@ El [W3C DOM](http://www.w3.org/DOM/) estándar forma la base del funcionamiento 
 Por ejemplo, el DOM de W3C especifica que el método `getElementsByTagName` en el código de abajo debe devolver una lista de todos los elementos `<p>` del documento:
 
 ```js
-paragraphs = document.getElementsByTagName ("p");
+paragraphs = document.getElementsByTagName("p");
 // paragraphs[0] es el primer elemento <p>
 // paragraphs[1] es el segundo elemento <p>, etc.
-alert (paragraphs [0].nodeName);
+alert(paragraphs[0].nodeName);
 ```
 
 Todas las propiedades, métodos y eventos disponibles para la manipulación y la creación de páginas web está organizado dentro de objetos. Un ejemplo: el objeto `document` representa al documento mismo, el objeto `table` hace funcionar la interfaz especial `HTMLTableElement` del DOM para acceder a tablas HTML, y así sucesivamente. Ésta documentación procura una relación objeto-por-objeto del DOM que funciona con los navegadores basados en Gecko.
@@ -50,7 +49,7 @@ No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferent
 Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/DOM/document) o [`window`](/es/DOM/window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/DOM/window.alert) desde el objeto [`window`](/es/DOM/window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
 
 ```html
-<body onload="window.alert('Bienvenido a mi página!');">
+<body onload="window.alert('Bienvenido a mi página!');"></body>
 ```
 
 Aparte del elemento `<script>` en el cual JavaScript es definido, el ejemplo siguiente muestra la función a ejecutar cuando el documento se está cargando (y que el DOM completo es disponible para su uso). Esta función crea un nuevo elemento `H1`, le pone texto y después lo agrega al árbol del documento:
@@ -59,19 +58,17 @@ Aparte del elemento `<script>` en el cual JavaScript es definido, el ejemplo sig
 <html>
   <head>
     <script>
-       // ejecuta esta función cuando se cargue el documento
-       window.onload = function() {
-
-         // crea dinámicamente un par de elementos HTML en una página vacia
-         var heading = document.createElement("h1");
-         var heading_text = document.createTextNode("el texto que desee");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // ejecuta esta función cuando se cargue el documento
+      window.onload = function () {
+        // crea dinámicamente un par de elementos HTML en una página vacia
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("el texto que desee");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -129,8 +126,7 @@ var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Node/interfaz Element
 for (var i = 0; i < tableAttrs.length; i++) {
   // interfaz HTMLTableElement: atributo border
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // interfaz HTMLTableElement: atributo summary
 table.summary = "nota: borde aumentado";
@@ -169,35 +165,47 @@ Para probar y ver como trabajan en la plataforma del navegador las interfaces de
   <head>
     <title>Pruebas DOM</title>
     <script type="application/javascript">
-    function setBodyAttr(attr, value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>texto</tt></b></p>
+      <p>
+        <b><tt>texto</tt></b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">negro
-          <option value="darkblue">azul oscuro
+          <option value="black">negro</option>
+          <option value="darkblue">azul oscuro</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">blanco
-          <option value="lightgrey">gris
+          <option value="white">blanco</option>
+          <option value="lightgrey">gris</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">azul
-          <option value="green">verde
-        </select>  <small>
-        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
-        (sample link)</a></small><br>
+          <option value="blue">azul</option>
+          <option value="green">verde</option>
+        </select>
+        <small>
+          <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+            (sample link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />

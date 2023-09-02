@@ -1,12 +1,6 @@
 ---
 title: Inégalité stricte (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.strict_inequality
 ---
 
 {{jsSidebar("Operators")}}
@@ -18,7 +12,7 @@ L'opérateur d'inégalité stricte (`!==`) vérifie si ses deux opérandes ne so
 ## Syntaxe
 
 ```js
-x !== y
+x !== y;
 ```
 
 ## Description
@@ -26,8 +20,8 @@ x !== y
 L'opérateur d'inégalité stricte vérifie que ses deux opérandes ne sont pas égaux. Il s'agit de la négation de [l'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality). Les deux expressions suivantes fourniront toujours le même résultat :
 
 ```js
-x !== y
-!(x === y)
+x !== y;
+!(x === y);
 ```
 
 Pour plus de détails sur l'algorithme de comparaison utilisé, voir [la page sur l'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality).
@@ -43,41 +37,41 @@ Pour plus de détails sur l'algorithme de comparaison utilisé, voir [la page su
 ### Comparaison d'opérandes de même type
 
 ```js
-console.log("hello" !== "hello");   // false
-console.log("hello" !== "hola");    // true
+console.log("hello" !== "hello"); // false
+console.log("hello" !== "hola"); // true
 
-console.log(3 !== 3);               // false
-console.log(3 !== 4);               // true
+console.log(3 !== 3); // false
+console.log(3 !== 4); // true
 
-console.log(true !== true);         // false
-console.log(true !== false);        // true
+console.log(true !== true); // false
+console.log(true !== false); // true
 
-console.log(null !== null);         // false
+console.log(null !== null); // false
 ```
 
 ### Comparaison d'opérandes de types différents
 
 ```js
-console.log("3" !== 3);           // true
+console.log("3" !== 3); // true
 
-console.log(true !== 1);          // true
+console.log(true !== 1); // true
 
-console.log(null !== undefined);  // true
+console.log(null !== undefined); // true
 ```
 
 ### Comparaison d'objets
 
 ```js
 const objet1 = {
-  name: "coucou"
-}
+  name: "coucou",
+};
 
 const objet2 = {
-  name: "coucou"
-}
+  name: "coucou",
+};
 
-console.log(objet1 !== objet2);  // true
-console.log(objet1 !== objet1);  // false
+console.log(objet1 !== objet2); // true
+console.log(objet1 !== objet1); // false
 ```
 
 ## Spécifications

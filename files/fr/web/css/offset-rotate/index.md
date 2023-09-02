@@ -1,12 +1,6 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - offset-rotate
-translation_of: Web/CSS/offset-rotate
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -28,7 +22,7 @@ offset-rotate: reverse;
 /* Conserve une rotation constante quelle que soit la position
 /* sur le chemin  */
 offset-rotate: 90deg;
-offset-rotate: .5turn;
+offset-rotate: 0.5turn;
 ```
 
 - `auto`
@@ -56,12 +50,12 @@ offset-rotate: .5turn;
 div {
   width: 40px;
   height: 40px;
-  background: #2BC4A2;
+  background: #2bc4a2;
   margin: 20px;
   clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
   animation: move 5000ms infinite alternate ease-in-out;
 
-  offset-path: path('M20,20 C20,50 180,-10 180,20');
+  offset-path: path("M20,20 C20,50 180,-10 180,20");
 }
 div:nth-child(1) {
   offset-rotate: auto;

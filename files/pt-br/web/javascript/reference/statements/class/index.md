@@ -30,7 +30,7 @@ No exemplo a seguir, primeiro definimos uma classe chamada _Polygon_, então ext
 ```js
 class Poligono {
   constructor(altura, largura) {
-    this.nome = 'Polígono';
+    this.nome = "Polígono";
     this.altura = altura;
     this.largura = largura;
   }
@@ -39,15 +39,15 @@ class Poligono {
 class Quadrado extends Poligono {
   constructor(altura) {
     super(altura, altura);
-    this.nome = 'Quadrado';
+    this.nome = "Quadrado";
   }
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Status               | Comentário         |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| Especificação                                                      | Status           | Comentário         |
+| ------------------------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES6')}} | definição inicial. |
 
 ## Compatibilidade com navegadores

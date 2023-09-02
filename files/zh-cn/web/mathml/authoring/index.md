@@ -16,41 +16,39 @@ slug: Web/MathML/Authoring
 每个 MathML 公式都由一个根元素 [`math`](/zh-CN/docs/Web/MathML/Element/math) 表示，其可以直接嵌入到 HTML 网页中。默认情况下，公式将被内联渲染，并进行额外的调整以将其高度最小化。可以使用 `display="block"` 属性，以在独立的段落中渲染复杂的公式。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>MathML in HTML5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
 
-  <h1>MathML in HTML5</h1>
+    <p>
+      One over square root of two (inline style):
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          <msqrt>
+            <mn>2</mn>
+          </msqrt>
+        </mfrac>
+      </math>
+    </p>
 
-  <p>
-    One over square root of two (inline style):
-    <math>
-      <mfrac>
-        <mn>1</mn>
-        <msqrt>
-          <mn>2</mn>
-        </msqrt>
-      </mfrac>
-    </math>
-  </p>
-
-  <p>
-    One over square root of two (display style):
-    <math display="block">
-      <mfrac>
-        <mn>1</mn>
-        <msqrt>
-          <mn>2</mn>
-        </msqrt>
-      </mfrac>
-    </math>
-  </p>
-
-</body>
+    <p>
+      One over square root of two (display style):
+      <math display="block">
+        <mfrac>
+          <mn>1</mn>
+          <msqrt>
+            <mn>2</mn>
+          </msqrt>
+        </mfrac>
+      </math>
+    </p>
+  </body>
 </html>
 ```
 
@@ -87,13 +85,17 @@ slug: Web/MathML/Authoring
 [MathFonts 页面](https://fred-wang.github.io/MathFonts/)提供了此类 Web 字体，以及适合的样式表。例如，只要在文档 head 下插入以下内容，即可选择带有回退的 Web 字体的拉丁现代字体：
 
 ```html
- <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 其中有多种字体，你可以选择不同的样式，例如 STIX：
 
 ```html
- <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css">
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
 ```
 
 > **备注：** MathFonts 页面中的字体和样式表是在开源许可下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行修改。
@@ -109,10 +111,10 @@ slug: Web/MathML/Authoring
 [自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)可用于托管这些源代码，并确保对应的 MathML 输出会通过 [shadow 子树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)被插入和渲染 [TeXZilla](https://github.com/fred-wang/TeXZilla) 的 [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) 元素，[上面的示例](#html_网页中的_mathml)就可以重写成以下更简洁的样子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
@@ -136,35 +138,31 @@ slug: Web/MathML/Authoring
 对于不熟悉 LaTex 的作者，可以使用其他的输入方法，例如 [ASCIIMath](http://asciimath.org/#syntax) 或 [jqMath](https://mathscribe.com/author/jqmath.html) 语法。请记得加载 JavaScript 库并使用正确的分隔符：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width">
-<title>ASCII MathML</title>
-...
-<!-- ASCIIMathML.js -->
-<script src="/path/to/ASCIIMathML.js"></script>
-...
-<!-- jqMath -->
-<script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
-<script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
-...
-</head>
-<body>
-...
-    <p>
-      One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`
-    </p>
-...
-    <p>
-      One over square root of two (inline style, jqMath): $1/√2$
-    </p>
-...
-    <p>
-      One over square root of two (display style, jqMath): $$1/√2$$
-    </p>
-...
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ASCII MathML</title>
+    ...
+    <!-- ASCIIMathML.js -->
+    <script src="/path/to/ASCIIMathML.js"></script>
+    ...
+    <!-- jqMath -->
+    <script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
+    <script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
+    ...
+  </head>
+  <body>
+    ...
+    <p>One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`</p>
+    ...
+    <p>One over square root of two (inline style, jqMath): $1/√2$</p>
+    ...
+    <p>One over square root of two (display style, jqMath): $$1/√2$$</p>
+    ...
+  </body>
+</html>
 ```
 
 ### 命令行程序
@@ -172,24 +170,18 @@ slug: Web/MathML/Authoring
 你可以选择命令行程序，而不是在网页加载时再生成 MathML 表达式。这样，网页中将包含静态的 MathML 内容，加载速度也会更快。考虑以下 `input.html` 网页（内容来自[客户端转换](#客户端转换)）：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
   </head>
   <body>
     <h1>MathML in HTML5</h1>
 
-    <p>
-      One over square root of two (inline style):
-      $\frac{1}{\sqrt{2}}$
-    </p>
+    <p>One over square root of two (inline style): $\frac{1}{\sqrt{2}}$</p>
 
-    <p>
-      One over square root of two (display style):
-      $$\frac{1}{\sqrt{2}}$$
-    </p>
+    <p>One over square root of two (display style): $$\frac{1}{\sqrt{2}}$$</p>
   </body>
 </html>
 ```
@@ -203,10 +195,10 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 在执行完成上述命令后，将创建一个包含 HTML 输出的 `output.html` 文件。以美元分隔的公式将转换为 MathML：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -214,12 +206,24 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
     <p>
       One over square root of two (inline style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"
+        ><semantics
+          ><mfrac
+            ><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac
+          ><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics
+        ></math
+      >
     </p>
 
     <p>
       One over square root of two (display style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+        ><semantics
+          ><mfrac
+            ><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac
+          ><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics
+        ></math
+      >
     </p>
   </body>
 </html>

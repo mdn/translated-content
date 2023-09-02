@@ -20,9 +20,11 @@ slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 设置一个 Web 应用程序作为一个协议处理器不是一个很麻烦的过程。Web 应用程序可以使用 [registerProtocolHandler()](/zh-CN/docs/Web/API/navigator.registerProtocolHandler) 注册到浏览器上，从而对于一个给定的协议来讲，作为一个潜在的处理程序。例如：
 
 ```js
-navigator.registerProtocolHandler("mailto",
-                                  "https://www.example.com/?uri=%s",
-                                  "Example Mail");
+navigator.registerProtocolHandler(
+  "mailto",
+  "https://www.example.com/?uri=%s",
+  "Example Mail",
+);
 ```
 
 参数为：
@@ -67,14 +69,14 @@ navigator.registerProtocolHandler("mailto",
 ### Example
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-<head>
-  <title>Web Protocol Handler Sample - Test</title>
-</head>
-<body>
-  <p>Hey have you seen <a href="fake:this%20is%20fake">this</a> before?</p>
-</body>
+  <head>
+    <title>Web Protocol Handler Sample - Test</title>
+  </head>
+  <body>
+    <p>Hey have you seen <a href="fake:this%20is%20fake">this</a> before?</p>
+  </body>
 </html>
 ```
 

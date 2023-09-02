@@ -1,7 +1,6 @@
 ---
 title: Imagens no HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-original_slug: Aprender/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
@@ -47,13 +46,13 @@ Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlel
 Por exemplo, se sua imagem for chamada `dinossauro.jpg`, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:
 
 ```html
-<img src="dinossauro.jpg">
+<img src="dinossauro.jpg" />
 ```
 
 Se a imagem estivesse em um subdiretório de `images`, que estivesse dentro do mesmo diretório da página HTML (que o Google recomenda para fins de indexição/{{glossary("SEO")}}), então você a incorporaria da seguinte maneira:
 
 ```html
-<img src="images/dinossauro.jpg">
+<img src="images/dinossauro.jpg" />
 ```
 
 E assim por diante.
@@ -63,7 +62,7 @@ E assim por diante.
 Você pode incorporar a imagem usando seu URL absoluto, por exemplo:
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
 Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o endereço IP do servidor DNS novamente, etc. Você quase sempre manterá as imagens do seu site no mesmo servidor que o HTML.
@@ -89,9 +88,10 @@ Nosso código acima nos daria o seguinte resultado:
 O próximo atributo que veremos é `alt`. Seu valor deve ser uma descrição textual da imagem, para uso em situações em que a imagem não pode ser vista/exibida ou leva muito tempo para renderizar devido a uma conexão lenta à Internet. Por exemplo, nosso código acima pode ser modificado da seguinte maneira:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 A maneira mais fácil de testar seu texto `alt` é digitar incorretamente seu nome de arquivo. Se, por exemplo, o nome da nossa imagem estivesse escrito `dinosooooor.jpg`, o navegador não exibiria a imagem, mas exibiria o texto alternativo:
@@ -122,11 +122,12 @@ Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando a
 Você pode usar os atributos `width` e `height`, para especificar a largura e altura da sua imagem. Você pode encontrar a largura e a altura da sua imagem de várias maneiras. Por exemplo, no Mac, você pode usar <kbd>Cmd</kbd> + <kbd>I</kbd> para exibir as informações do arquivo de imagem. Voltando ao nosso exemplo, poderíamos fazer isso:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="A cabeça e o tronco de um esqueleto de dinossauro;
+<img
+  src="images/dinosaur.jpg"
+  alt="A cabeça e o tronco de um esqueleto de dinossauro;
           tem uma cabeça grande com dentes longos e afiados"
-     width="400"
-     height="341">
+  width="400"
+  height="341" />
 ```
 
 Isso não resulta em muita diferença para a tela, em circunstâncias normais. Mas se a imagem não estiver sendo exibida, por exemplo, o usuário acabou de navegar para a página e a imagem ainda não foi carregada, você notará que o navegador está deixando um espaço para a imagem aparecer:
@@ -144,12 +145,13 @@ No entanto, você não deve alterar o tamanho das suas imagens usando atributos 
 Como [nos links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="A cabeça e o tronco de um esqueleto de dinossauro;
+<img
+  src="images/dinosaur.jpg"
+  alt="A cabeça e o tronco de um esqueleto de dinossauro;
           tem uma cabeça grande com dentes longos e afiados"
-     width="400"
-     height="341"
-     title="Um T-Rex em exibição no Museu da Universidade de Manchester">
+  width="400"
+  height="341"
+  title="Um T-Rex em exibição no Museu da Universidade de Manchester" />
 ```
 
 Isso nos dá uma dica de ferramenta, assim como os títulos dos links:
@@ -178,8 +180,7 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-<img></textarea>
+<textarea id="code" class="input"><img></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -190,10 +191,11 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -217,13 +219,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
   drawOutput();
 });
 
@@ -239,11 +242,12 @@ Por falar em legendas, existem várias maneiras de adicionar uma legenda para ac
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
   <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
@@ -288,8 +292,7 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-</textarea>
+<textarea id="code" class="input"></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -300,10 +303,11 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -327,13 +331,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
   drawOutput();
 });
 

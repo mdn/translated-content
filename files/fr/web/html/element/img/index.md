@@ -1,8 +1,6 @@
 ---
-title: '<img> : l''élément d''image embarquée'
+title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
-browser-compat: html.elements.img
 ---
 
 {{HTMLSidebar}}
@@ -101,6 +99,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
 - `height`
+
   - : La hauteur intrinsèque de l'image, exprimée en pixels. Cette valeur doit être un nombre entier, sans unité.
 
 - `ismap`
@@ -116,6 +115,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `eager`
       - : L'image est chargée immédiatement, que l'image soit située dans la zone d'affichage (<i lang="en">viewport</i>) visible ou non. Il s'agit de la valeur par défaut.
     - `lazy`
+
       - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage. L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
       > **Note :** Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
@@ -153,6 +153,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     Les valeurs pour les tailles de source indiquent la taille d'affichage souhaitée de l'image. Le navigateur utilise la taille de source courante correspondante pour sélectionner une des sources fournies par l'attribut `srcset` lorsque les sources y sont décrites avec un descripteur de largeur (`w`). La taille de source sélectionnée affecte la taille intrinsèque de l'image (c'est-à-dire la taille occupée à l'écran si aucun style CSS n'est appliqué). Si l'attribut `srcset` est absent ou qu'il ne contient pas de valeur avec un descripteur de largeur, l'attribut `sizes` aura aucun effet.
 
 - `src`
+
   - : L'URL de l'image. Cet attribut est obligatoire. Pour les navigateurs qui prennent en charge `srcset`, l'image fourni par `src` est considérée comme une candidate avec un descripteur de densité de pixel à `1x`, sauf si une image avec un tel descripteur est déjà définie dans `srcset`, ou si `srcset` contient des descripteurs `w`.
 
 - `srcset`
@@ -162,8 +163,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     1. D'une URL vers l'image
     2. Éventuellement, d'un espace suivi&nbsp;:
 
-        - D'un descripteur de largeur (un entier positif suivi par `w`). Le descripteur de largeur est divisé par la taille de source fournie par l'attribut `sizes` afin de calculer la densité de pixel effective.
-        - D'un descripteur de densité de pixel (un nombre décimal positif suivi par `x`).
+       - D'un descripteur de largeur (un entier positif suivi par `w`). Le descripteur de largeur est divisé par la taille de source fournie par l'attribut `sizes` afin de calculer la densité de pixel effective.
+       - D'un descripteur de densité de pixel (un nombre décimal positif suivi par `x`).
 
     Si aucun descripteur n'est indiqué, la source se voit affecter un descripteur par défaut de `1x`.
 
@@ -172,6 +173,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     L'agent utilisateur sélectionne une des sources disponibles comme il l'entend. Cette liberté permet de baser le choix sur d'autres facteurs comme les préférences de l'utilisateur ou les conditions réseau. Voir [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) pour un exemple.
 
 - `width`
+
   - : La largeur intrinsèque de l'image, exprimée en pixels. La valeur doit être un nombre entier sans unité.
 
 - `usemap`
@@ -198,12 +200,15 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       - : Équivalent à `float: right`
 
 - `border` {{deprecated_inline}}
+
   - : La largeur de la bordure autour de l'image. La propriété CSS [`border`](/fr/docs/Web/CSS/border) doit être utilisée à la place.
 
 - `hspace` {{deprecated_inline}}
+
   - : Le nombre de pixels d'espace blanc à droite et à gauche de l'image. La propriété [`margin`](/fr/docs/Web/CSS/margin) doit être utilisée à la place.
 
 - `intrinsicsize` {{deprecated_inline}}
+
   - : Cet attribut indique au navigateur d'ignorer la taille intrinsèque de l'image pour prendre en compte celle fournie par l'attribut.
 
 - `longdesc` {{deprecated_inline}}
@@ -213,6 +218,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     > **Note :** Cet attribut est mentionné dans la spécification [HTML 5.2 du W3C](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été retiré [du standard évolutif HTML du WHATWG](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Son avenir est incertain et mieux vaut utiliser une alternative WAI-ARIA comme [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
+
   - : Un nom pour l'élément, l'attribut universel `id` doit être utilisé à la place.
 
 - `vspace` {{deprecated_inline}}
@@ -235,7 +241,7 @@ Selon son type, une image peut avoir une largeur et une hauteur intrinsèque. Po
 Dans l'exemple qui suit, l'image est accompagnée d'un texte alternatif qui sert l'accessibilité.
 
 ```html
-<img src="favicon144.png" alt="Logo de MDN">
+<img src="favicon144.png" alt="Logo de MDN" />
 ```
 
 {{EmbedLiveSample('', '100%', '160')}}
@@ -246,7 +252,7 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png" alt="Visiter le site MDN">
+  <img src="favicon144.png" alt="Visiter le site MDN" />
 </a>
 ```
 
@@ -257,7 +263,7 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une version du logo en haute résolution. Pour les appareils avec une haute résolution, celle-ci sera chargée à la place à la place de l'image indiquée par `src`. Pour les agents utilisateurs qui prennent en charge l'attribut `srcset`, l'image référencée par l'attribut `src` sera considérée comme une candidate avec le descripteur `1x`.
 
 ```html
-<img src="favicon72.png" alt="Logo MDN" srcset="favicon144.png 2x">
+<img src="favicon72.png" alt="Logo MDN" srcset="favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("", "100%", "160")}}
@@ -267,11 +273,11 @@ Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une v
 L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en charge lorsque les descripteurs `w` sont présents. Lorsque la condition `(max-width: 600px)` est respectée, l'image large de 200 pixels sera chargée (car c'est celle qui est la plus proche de `200px`). Dans les autres cas, c'est l'autre image qui est chargée.
 
 ```html
-<img src="clock-demo-200px.png"
-     alt="Clock"
-     srcset="clock-demo-200px.png 200w,
-             clock-demo-400px.png 400w"
-     sizes="(max-width: 600px) 200px, 50vw">
+<img
+  src="clock-demo-200px.png"
+  alt="Clock"
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(max-width: 600px) 200px, 50vw" />
 ```
 
 {{EmbedLiveSample("", "100%", 350)}}
@@ -289,13 +295,13 @@ La valeur d'un attribut `alt` devrait toujours décrire le contenu de l'image de
 #### Mauvaise pratique
 
 ```html example-bad
-<img alt="image" src="pingouin.jpg">
+<img alt="image" src="pingouin.jpg" />
 ```
 
 #### Bonne pratique
 
 ```html example-good
-<img alt="Un manchot Rockhopper sur une plage." src="pingouin.jpg">
+<img alt="Un manchot Rockhopper sur une plage." src="pingouin.jpg" />
 ```
 
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran pourront annoncer le nom du fichier de l'image. Cela peut être source de confusion si le nom du fichier n'est pas représentatif du contenu de l'image.

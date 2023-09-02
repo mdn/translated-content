@@ -1,8 +1,8 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
-translation_of: Web/API/Window/postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`Window.postMessage()`** - этот метод позволяет безопасно отправлять кроссдоменные запросы. Обычно сценариям на разных страницах разрешён доступ друг к другу только если страницы, которые их выполняли, передаются по одному протоколу (обычно это https), номер порта (443 — по умолчанию для https) и хост (modulo {{domxref("Document.domain")}} установленный страницами на одно и тоже значение). `window.postMessage()` предоставляет контролируемый механизм, чтобы обойти это ограничение способом, который безопасен при правильном использовании.
@@ -31,10 +31,8 @@ otherWindow.postMessage(message, targetOrigin, [transfer]);
 ```js
 window.addEventListener("message", receiveMessage, false);
 
-function receiveMessage(event)
-{
-  if (event.origin !== "http://example.org:8080")
-    return;
+function receiveMessage(event) {
+  if (event.origin !== "http://example.org:8080") return;
 
   // ...
 }
@@ -47,7 +45,7 @@ function receiveMessage(event)
 - `origin`
   - : The [origin](/ru/docs/Origin) of the window that sent the message at the time `postMessage` was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are `https://example.org` (implying port `443`), `http://example.net` (implying port `80`), and `http://example.com:8080`. Note that this origin is _not_ guaranteed to be the current or future origin of that window, which might have been navigated to a different location since `postMessage` was called.
 - `source`
-  - : Ссылка на объект [`window`](/en-US/docs/DOM/window) , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными `origins`.
+  - : Ссылка на объект [`window`](/ru/docs/DOM/window) , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными `origins`.
 
 ## Вопросы безопасности
 
@@ -95,11 +93,9 @@ window.addEventListener("message", receiveMessage, false);
  */
 
 // Called sometime after postMessage is called
-function receiveMessage(event)
-{
+function receiveMessage(event) {
   // Do we trust the sender of this message?
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source is window.opener
   // event.data is "hello there!"
@@ -108,9 +104,10 @@ function receiveMessage(event)
   // you must do in any case), a convenient idiom for replying to a
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 }
 
 window.addEventListener("message", receiveMessage, false);
@@ -134,10 +131,7 @@ The value of the `origin` property when the sending window contains a `javascrip
 
 ## Specifications
 
-| **Specification**                                                                                                | **Status**                                   | **Comment**                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-window-postmessage", "window.postMessage")}}             | {{Spec2('HTML WHATWG')}}             | No change from {{SpecName('HTML5 Web Messaging')}} |
-| {{SpecName('HTML5 Web Messaging', '#dom-window-postmessage', 'window.postMessage')}} | {{Spec2('HTML5 Web Messaging')}} | Initial definition.                                             |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,7 +1,6 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-translation_of: Web/API/Element/setAttribute
 ---
 
 {{APIRef("DOM")}}

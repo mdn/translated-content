@@ -163,15 +163,15 @@ inputInstance.indeterminate = true;
 在这种情况下，`indeterminate` 状态用来说明已经开始收集原料，但配方还没有完成。
 
 ```js
-const overall = document.querySelector('#enchantment');
-const ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector("#enchantment");
+const ingredients = document.querySelectorAll("ul input");
 
-overall.addEventListener('click', (e) => {
+overall.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
 for (const ingredient of ingredients) {
-  ingredient.addEventListener('click', updateDisplay);
+  ingredient.addEventListener("click", updateDisplay);
 }
 
 function updateDisplay() {
@@ -276,16 +276,16 @@ legend {
 ### JavaScript
 
 ```js
-const otherCheckbox = document.querySelector('#other');
-const otherText = document.querySelector('#otherValue');
-otherText.style.visibility = 'hidden';
+const otherCheckbox = document.querySelector("#other");
+const otherText = document.querySelector("#otherValue");
+otherText.style.visibility = "hidden";
 
-otherCheckbox.addEventListener('change', () => {
+otherCheckbox.addEventListener("change", () => {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visible';
-    otherText.value = '';
+    otherText.style.visibility = "visible";
+    otherText.value = "";
   } else {
-    otherText.style.visibility = 'hidden';
+    otherText.style.visibility = "hidden";
   }
 });
 ```

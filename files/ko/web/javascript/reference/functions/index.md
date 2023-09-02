@@ -2,6 +2,7 @@
 title: 함수
 slug: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}
 
 보통 **함수**란 자신의 외부(재귀 함수의 경우 스스로) 코드가 '호출'할 수 있는 하위 프로그램입니다. 프로그램과 마찬가지로, 함수 역시 명령문의 시퀀스로 구성된 함수 본문을 가집니다. 함수에 값을 '전달'하면, 함수는 값을 '반환'할 것입니다.
@@ -21,31 +22,31 @@ JavaScript에서 모든 함수는 `Function` 객체입니다. {{jsxref("Function
 ```js
 /* 함수 'myFunc' 선언 */
 function myFunc(theObject) {
-   theObject.brand = "쌍용";
- }
+  theObject.brand = "쌍용";
+}
 
- /*
-  * 변수 'mycar' 선언;
-  * 새 객체를 만들고 초기화;
-  * 'mycar'에 객체 참조를 할당
-  */
- var mycar = {
-   brand: "현대",
-   model: "엑셀",
-   year: 1994
- };
+/*
+ * 변수 'mycar' 선언;
+ * 새 객체를 만들고 초기화;
+ * 'mycar'에 객체 참조를 할당
+ */
+var mycar = {
+  brand: "현대",
+  model: "엑셀",
+  year: 1994,
+};
 
- /* '현대' 기록 */
- console.log(mycar.brand);
+/* '현대' 기록 */
+console.log(mycar.brand);
 
- /* 객체 참조를 함수에 전달 */
- myFunc(mycar);
+/* 객체 참조를 함수에 전달 */
+myFunc(mycar);
 
- /*
-  * 함수가 객체의 'brand' 속성을 바꿨으므로
-  * '쌍용' 출력.
-  */
- console.log(mycar.brand);
+/*
+ * 함수가 객체의 'brand' 속성을 바꿨으므로
+ * '쌍용' 출력.
+ */
+console.log(mycar.brand);
 ```
 
 [`this` 키워드](/ko/docs/Web/JavaScript/Reference/Operators/this)는 현재 실행 중인 함수를 참조하는 것이 아닙니다. 그러므로 함수 본문 내에서도 `Function` 객체를 참조할 땐 이름을 사용해야 합니다.
@@ -91,17 +92,17 @@ function [name]([param[, param[, ... param]]]) {
 다음은 `name`을 사용하지 않은 **익명** 함수 표현식의 예시입니다.
 
 ```js
-var myFunction = function() {
-    statements
-}
+var myFunction = function () {
+  statements;
+};
 ```
 
 선언 시에 이름을 제공해서 **유명** 함수 표현식을 생성하는 것도 가능합니다.
 
 ```js
-var myFunction = function namedFunction(){
-    statements
-}
+var myFunction = function namedFunction() {
+  statements;
+};
 ```
 
 함수 표현식에 이름을 붙여주는 것의 장점 중 하나는, 오류가 발생했을 때 스택 추적에 함수의 이름이 나타나므로 원인을 찾기 쉽다는 것입니다.
@@ -111,8 +112,8 @@ var myFunction = function namedFunction(){
 한 번만 사용하는 함수의 경우 자주 사용하는 패턴으로 {{glossary("IIFE")}}(Immediately Invokable Function Expression, 즉시 실행 함수 표현식)가 있습니다.
 
 ```js
-(function() {
-    statements
+(function () {
+  statements;
 })();
 ```
 
@@ -176,7 +177,7 @@ param => expression
 다른 모든 객체처럼, `new` 연산자를 사용해서 {{jsxref("Function")}} 객체를 생성할 수 있습니다.
 
 ```js
-new Function (arg1, arg2, ... argN, functionBody)
+new Function(arg1, arg2, ...argN, functionBody);
 ```
 
 - `arg1, arg2, ... argN`
@@ -195,7 +196,7 @@ new Function (arg1, arg2, ... argN, functionBody)
 다른 모든 객체처럼, `new` 연산자를 사용해서 {{jsxref("GeneratorFunction")}} 객체를 생성할 수 있습니다.
 
 ```js
-new GeneratorFunction (arg1, arg2, ... argN, functionBody)
+new GeneratorFunction(arg1, arg2, ...argN, functionBody);
 ```
 
 - `arg1, arg2, ... argN`
@@ -242,7 +243,7 @@ ECMAScript 2015부터는 메서드 역시 접근자/설정자와 유사한 짧�
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -253,22 +254,22 @@ var obj = {
 `multiply` 변수에 `Function` 생성자로 정의한 함수를 할당하는 코드입니다.
 
 ```js
-var multiply = new Function('x', 'y', 'return x * y');
+var multiply = new Function("x", "y", "return x * y");
 ```
 
 `multiply`라는 이름의 함수를 선언하는 선언문입니다.
 
 ```js
 function multiply(x, y) {
-   return x * y;
+  return x * y;
 }
 ```
 
 `multiply` 변수에 익명 함수 표현식을 할당하는 코드입니다.
 
 ```js
-var multiply = function(x, y) {
-   return x * y;
+var multiply = function (x, y) {
+  return x * y;
 };
 ```
 
@@ -276,7 +277,7 @@ var multiply = function(x, y) {
 
 ```js
 var multiply = function func_name(x, y) {
-   return x * y;
+  return x * y;
 };
 ```
 
@@ -304,7 +305,7 @@ alert(x); // 오류 발생
 ```js
 foo(); // 안녕! 경고창 등장
 function foo() {
-   alert('안녕!');
+  alert("안녕!");
 }
 ```
 
@@ -323,19 +324,19 @@ function foo() {
  */
 var p = 5;
 function myFunc() {
-    var p = 9;
+  var p = 9;
 
-    function decl() {
-        console.log(p);
-    }
-    var expr = function() {
-        console.log(p);
-    };
-    var cons = new Function('\tconsole.log(p);');
+  function decl() {
+    console.log(p);
+  }
+  var expr = function () {
+    console.log(p);
+  };
+  var cons = new Function("\tconsole.log(p);");
 
-    decl();
-    expr();
-    cons();
+  decl();
+  expr();
+  cons();
 }
 myFunc();
 
@@ -352,7 +353,9 @@ myFunc();
 단, 함수 표현식의 본문 문자열 내에서 정의하는 함수 표현식과 선언 본문은 다시 파싱하지 않습니다. 예를 들면...
 
 ```js
-var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+var foo = new Function(
+  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
+)();
 foo(); // 함수 본문 문자열의 "function() {\n\talert(bar);\n}" 부분은 다시 파싱하지 않음
 ```
 
@@ -362,18 +365,21 @@ foo(); // 함수 본문 문자열의 "function() {\n\talert(bar);\n}" 부분은 
 - 함수나 스크립트의 '본 요소'가 아닌 경우. '본 요소'는 함수나 스크립트 본문의, 중첩되지 않은 명령문을 의미합니다.
 
 ```js
-var x = 0;               // 본 요소
-if (x == 0) {            // 본 요소
-   x = 10;               // 본 요소가 아님
-   function boo() {}     // 본 요소가 아님
+var x = 0; // 본 요소
+if (x == 0) {
+  // 본 요소
+  x = 10; // 본 요소가 아님
+  function boo() {} // 본 요소가 아님
 }
-function foo() {         // 본 요소
-   var y = 20;           // 본 요소
-   function bar() {}     // 본 요소
-   while (y == 10) {     // 본 요소
-      function blah() {} // 본 요소가 아님
-      y++;               // 본 요소가 아님
-   }
+function foo() {
+  // 본 요소
+  var y = 20; // 본 요소
+  function bar() {} // 본 요소
+  while (y == 10) {
+    // 본 요소
+    function blah() {} // 본 요소가 아님
+    y++; // 본 요소가 아님
+  }
 }
 ```
 
@@ -384,24 +390,24 @@ function foo() {         // 본 요소
 function foo() {}
 
 // 함수 표현식
-(function bar() {})
+(function bar() {});
 
 // 함수 표현식
-x = function hello() {}
+x = function hello() {};
 
 if (x) {
-   // 함수 표현식
-   function world() {}
+  // 함수 표현식
+  function world() {}
 }
 
 // 함수 선언
 function a() {
-   // 함수 선언
-   function b() {}
-   if (0) {
-      // 함수 표현식
-      function c() {}
-   }
+  // 함수 선언
+  function b() {}
+  if (0) {
+    // 함수 표현식
+    function c() {}
+  }
 }
 ```
 
@@ -410,7 +416,7 @@ function a() {
 ES2015부터, [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서는 블록 내의 함수 범위가 해당 블록으로 제한됩니다. ES2015 이전에는 블록 레벨 함수를 엄격 모드에서 사용할 수 없었습니다.
 
 ```js
-'use strict';
+"use strict";
 
 function f() {
   return 1;
@@ -435,9 +441,10 @@ f() === 1; // true
 
 ```js
 if (shouldDefineZero) {
-   function zero() { // 위험: 호환성 위험
-      console.log("zero입니다.");
-   }
+  function zero() {
+    // 위험: 호환성 위험
+    console.log("zero입니다.");
+  }
 }
 ```
 
@@ -450,9 +457,9 @@ ES2015에 따르면 `shouldDefineZero`가 거짓인 경우, `zero`를 정의해�
 ```js
 var zero;
 if (0) {
-   zero = function() {
-      console.log("zero입니다.");
-   };
+  zero = function () {
+    console.log("zero입니다.");
+  };
 }
 ```
 
@@ -464,12 +471,12 @@ if (0) {
 
 ```js
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // 반환 값을 문자열로 초기화
-   var numZeros = totalLen - numStr.length; // 필요한 0의 수 계산
-   for (var i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  var numStr = num.toString(); // 반환 값을 문자열로 초기화
+  var numZeros = totalLen - numStr.length; // 필요한 0의 수 계산
+  for (var i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
@@ -477,9 +484,9 @@ function padZeros(num, totalLen) {
 
 ```js
 var result;
-result = padZeros(42,4); // "0042"
-result = padZeros(42,2); // "42"
-result = padZeros(5,4);  // "0005"
+result = padZeros(42, 4); // "0042"
+result = padZeros(42, 2); // "42"
+result = padZeros(5, 4); // "0005"
 ```
 
 ### 함수 존재 여부 판단
@@ -487,11 +494,11 @@ result = padZeros(5,4);  // "0005"
 `typeof` 연산자를 사용하면 함수의 존재 여부를 판단할 수 있습니다. 아래 예제에서는 `window` 객체의 `noFunc`라는 속성이 함수인지 확인합니다. 그 후, 함수라면 호출하고, 함수가 아니면 임의의 다른 동작을 수행합니다.
 
 ```js
- if ('function' == typeof window.noFunc) {
-   // noFunc() 사용
- } else {
-   // 다른 동작 수행
- }
+if ("function" == typeof window.noFunc) {
+  // noFunc() 사용
+} else {
+  // 다른 동작 수행
+}
 ```
 
 `if` 조건에 `noFunc`의 참조를 사용한 것에 주의하세요. 이름 뒤에 괄호 "()"를 붙이지 않았으므로 함수를 실제로 호출한 것은 아닙니다.

@@ -36,15 +36,15 @@ XPath는 XML 문서의 계층 구조를 항해하기 위해 경로 표기법(URL
 
 <section id="Quick_links">
   <ol>
-    <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
-    <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/ko/docs/Web/EXSLT">EXSLT</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XPath">XPath</a></strong></li>
     <li class="toggle"><details open><summary>Guides</summary>
       <ol>
-        <li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li>
-        <li><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></li>
+        <li><a href="/ko/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li>
+        <li><a href="/ko/docs/Web/XPath/Snippets">XPath snippets</a></li>
       </ol></details>
     </li>
-    <li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Axes")}}</details></li>
-    <li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Functions")}}</details></li>
+    <li class="toggle"><details open><summary><a href="/ko/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/ko/docs/Web/XPath/Axes")}}</details></li>
+    <li class="toggle"><details open><summary><a href="/ko/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/ko/docs/Web/XPath/Functions")}}</details></li>
   </ol>
 </section>

@@ -1,7 +1,6 @@
 ---
 title: Explication des bases théoriques de la 3D
 slug: Games/Techniques/3D_on_the_web/Basic_theory
-translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 
 {{GamesSidebar}}

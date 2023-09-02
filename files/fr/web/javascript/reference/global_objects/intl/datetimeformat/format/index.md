@@ -1,16 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/format
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur format
 ## Syntaxe
 
 ```js
-dateTimeFormat.format(date)
+dateTimeFormat.format(date);
 ```
 
 ### Paramètres
@@ -41,7 +31,12 @@ L'accesseur `format` permet de formater une date en une chaîne de caractères e
 On peut utiliser la fonction renvoyée par l'accesseur `format` pour formater une date. Par exemple selon la locale serbe :
 
 ```js
-var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
@@ -53,7 +48,7 @@ On peut également utiliser la fonction renvoyée par l'accesseur `format` pour 
 
 ```js
 var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = {year: "numeric", month: "long"};
+var options = { year: "numeric", month: "long" };
 var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
 var formatted = a.map(dateTimeFormat.format);
 console.log(formatted.join("; "));
@@ -69,12 +64,12 @@ Aussi, mieux vaut ne pas comparer un résultat fourni par `format()` avec une va
 ```js example-bad
 let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric'
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
 }).format(d);
 
 "1.1.2019, 01:00:00" === formattedDate;

@@ -1,13 +1,6 @@
 ---
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-tags:
-  - JavaScript
-  - Math
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/SQRT2
 ---
 
 {{JSRef}}
@@ -28,7 +21,7 @@ La fonction suivante renvoie la valeur de la racine carrée de 2 :
 
 ```js
 function getRoot2() {
-   return Math.SQRT2;
+  return Math.SQRT2;
 }
 
 getRoot2(); // 1.4142135623730951

@@ -25,9 +25,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 
 ```js
 if (num1 * num2 <= Number.MAX_VALUE) {
-   func1();
+  func1();
 } else {
-   func2();
+  func2();
 }
 ```
 

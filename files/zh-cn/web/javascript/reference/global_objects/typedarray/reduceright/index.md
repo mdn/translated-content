@@ -40,9 +40,11 @@ reduceRight(callbackFn, initialValue)
 `reduceRight`回调函数的调用是这样：
 
 ```js
-typedarray.reduceRight(function(previousValue, currentValue, index, typedarray) {
-  // ...
-});
+typedarray.reduceRight(
+  function (previousValue, currentValue, index, typedarray) {
+    // ...
+  },
+);
 ```
 
 第一次调用回调函数的时候， `previousValue` 和 `currentValue` 可以是两个值之一。如果 `initialValue` 在`reduce`的调用中提供， `previousValue` 会等于`initialValue` 并且`currentValue` 会等于类型化数组的最后一个值。如果 `initialValue` 没有提供，则`previousValue`等于类型化数组的最后一个值，`currentValue`会等于倒数第二个值。
@@ -54,7 +56,7 @@ typedarray.reduceRight(function(previousValue, currentValue, index, typedarray) 
 ### 累加数组中的所有值
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function (a, b) {
   return a + b;
 });
 // total == 6

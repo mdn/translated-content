@@ -1,12 +1,6 @@
 ---
-title: 'Guide : ancrage du défilement (scroll anchoring)'
+title: "Guide : ancrage du défilement (scroll anchoring)"
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-original_slug: Web/CSS/overflow-anchor/Guide_ancrage_défilement
 ---
 
 {{CSSRef}}

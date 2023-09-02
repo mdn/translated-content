@@ -1,27 +1,53 @@
 ---
-title: '<q>: 行内引用要素'
+title: "<q>: インライン引用要素"
 slug: Web/HTML/Element/q
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<q>` 要素** は、その内容が行内の引用であることを表します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
+**`<q>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるテキストが短いインラインの引用であることを示します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
 
 {{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
+
+## 属性
+
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
+
+- `cite`
+  - : この属性の値は、引用した情報の引用元となる文書やメッセージの URL です。この属性は、引用文のコンテキストや参照先を説明する情報を指すためのものです。
+
+## 例
+
+```html
+<p>
+  According to Mozilla's website,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/">
+    Firefox 1.0 was released in 2004 and became a big success.
+  </q>
+</p>
+```
+
+### 結果
+
+{{EmbedLiveSample('Example')}}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリ</a
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -29,7 +55,7 @@ slug: Web/HTML/Element/q
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -41,7 +67,7 @@ slug: Web/HTML/Element/q
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -65,33 +91,13 @@ slug: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **メモ:** 最近の多くのブラウザーは、`<q>` 要素内の文字列の周りに自動的に引用符を追加します。古いブラウザーでは引用符を追加するためにスタイル規則が必要な場合があります。
-
-## 属性
-
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
-
-- `cite`
-  - : この属性の値は、引用した情報の引用元文書やメッセージの URL です。この属性は、引用文の文脈や参照先を説明する情報を指すためのものです。
-
-## 例
-
-```html
-<p>According to Mozilla's website,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  was released in 2004 and became a big success.</q></p>
-```
-
-{{EmbedLiveSample('Example')}}
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 関連情報
 

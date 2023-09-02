@@ -45,16 +45,16 @@ for (var i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
+console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 ```
 
 ## Especificações
 
-| Specification                                                                                                | Status                       | Comment                                            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}         | {{Spec2('ES6')}}         |                                                    |
+| Specification                                                                    | Status               | Comment                                            |
+| -------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}     | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}                 | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

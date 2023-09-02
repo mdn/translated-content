@@ -142,15 +142,15 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 1. 首先，安装依赖项（`install` 命令将获取项目的 **package.json** 文件中列出的所有依赖项包）。
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 2. 然后运行该应用。
 
-    ```bash
-    DEBUG=express-locallibrary-tutorial:* npm start
-    ```
+   ```bash
+   DEBUG=express-locallibrary-tutorial:* npm start
+   ```
 
 3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](success.png)
 
@@ -290,7 +290,7 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
  * 模块依赖项。
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **备注：** `require()` 是一个全局的 node 函数，可将模块导入当前文件。这里使用相对路径指定 **app.js** 模块，并省略了 .**js** 扩展名（可选）。
@@ -313,18 +313,18 @@ module.exports = app;
 我们来详细了解一下 **app.js** 文件。首先，它使用 `require()` 导入了一些实用 node 库，其中包括之前用 NPM 下载的 _`express`_、_`http-errors`_、_`morgan`_ 和 _`cookie-parser`_，还有一个 _`path`_ 库，它是用于解析文件和目录的核心 node 库。
 
 ```js
-var express = require('express');
-var createError = require('http-errors');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var path = require('path');
+var express = require("express");
+var createError = require("http-errors");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var path = require("path");
 ```
 
 然后 `require()` 的是用户路由目录中的模块。这些模块/文件用于处理特定的“路由”（URL 路径）。可以通过添加新文件来扩展骨架应用，比如添加图书相关的路由来列出所有馆藏书目。
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
 > **备注：** 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。
@@ -336,25 +336,25 @@ var app = express();
 
 // view engine setup
 // 视图引擎设定
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 下一组 `app.use()` 调用将中间件库添加进请求处理链。除了之前导入的第三方库之外，我们还使用 `express.static` 中间件将项目 **/public** 目录下所有静态文件托管至根目录。
 
 ```js
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 所有中间件都已设置完毕，现在把（之前导入的）路由处理器添加到请求处理链中。从而为网站的不同部分定义具体的路由：
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
 > **备注：** 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 `users` 在 `/profile` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
@@ -364,22 +364,22 @@ app.use('/users', usersRouter);
 ```js
 // catch 404 and forward to error handler
 // 捕获 404 并抛给错误处理器
-app.use(function(req, res, next) {
-   next(createError(404));
+app.use(function (req, res, next) {
+  next(createError(404));
 });
 
 // error handler
 // 错误处理器
-app.use(function(err, req, res, next) {
-   // set locals, only providing error in development
-   // 设置 locals，只在开发环境提供错误信息
-   res.locals.message = err.message;
-   res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+  // set locals, only providing error in development
+  // 设置 locals，只在开发环境提供错误信息
+  res.locals.message = err.message;
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
-   // render the error page
-   // 渲染出错页面
-   res.status(err.status || 500);
-   res.render('error');
+  // render the error page
+  // 渲染出错页面
+  res.status(err.status || 500);
+  res.render("error");
 });
 ```
 
@@ -394,12 +394,12 @@ module.exports = app;
 路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -417,8 +417,8 @@ module.exports = router;
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 
@@ -434,7 +434,7 @@ block content
 
 ## 挑战自我
 
-在 **/routes/users.js** 中添加一个新路由，在 URL `/users/cool/` 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 [http://localhost:3000/users/cool/](http://localhost:3000/users/cool/)，测试一下是否成功。
+在 **/routes/users.js** 中添加一个新路由，在 URL `/users/cool/` 处显示文本“你好酷”。运行服务器，并在浏览器中访问 `http://localhost:3000/users/cool/`，测试一下是否成功。
 
 ## 小结
 
@@ -444,7 +444,7 @@ block content
 
 ## 参见
 
-- [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) （Express 中文镜像文档）
-- [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）
+- [Express 应用程序生成器](https://expressjs.com/zh-cn/starter/generator.html)（Express 文档）
+- [将模板引擎用于 Express](https://expressjs.com/zh-cn/guide/using-template-engines.html)（Express 文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}

@@ -28,7 +28,7 @@ slug: Web/API/PannerNode/orientationX
 ```js
 // このユーティリティは、Y 軸周りの回転量 (つまり「水平面」での回転) を
 // 方向ベクトルに変換します
-const yRotationToVector = degrees => {
+const yRotationToVector = (degrees) => {
   // 度をラジアンに変換し、0 で聞き手の方を向くように角度をオフセットします
   const radians = (degrees - 90) * (Math.PI / 180);
   // ここでコサインとサインを使用すると，出力値は常に正規化されます
@@ -47,10 +47,10 @@ const yRotationToVector = degrees => {
 const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
-osc.type = 'sawtooth';
+osc.type = "sawtooth";
 
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 ```
 
 次に、空間音の*円錐体*を設定し、それが聞こえる範囲を決めます。
@@ -97,8 +97,7 @@ panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);
 最後に、すべてのノードを接続して、オシレーターを起動しましょう。
 
 ```js
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

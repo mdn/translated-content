@@ -82,11 +82,15 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你确实被卡住了，按下*显示答案*按钮以借鉴答案。
 
 ```html hidden
-<p>可以试着引入B站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其BV号为BV1bW411n7fY）</p>
+<p>
+  可以试着引入 B 站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其 BV 号为
+  BV1bW411n7fY）
+</p>
 <h2>实时输出</h2>
 <div class="output" style="min-height: 250px;"></div>
 <h2>可编辑代码</h2>
-<p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符
+<p class="a11y-label">
+  按 ESC 退出编辑区域，按 Tab 可插入制表符
   <code>'\t'</code>
 </p>
 <textarea
@@ -167,7 +171,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -199,12 +203,18 @@ textarea.onkeyup = function () {
 我们会在后面提到，关于 `<iframe>` 有一些严重的[安全隐患](#安全隐患)需要考虑，但这并不意味着你不应该在你的网站上使用它们——它只需要一些知识和仔细地思考。让我们更详细地探索这些代码。假设你想在其中一个网页上加入 MDN 词汇表，你可以尝试以下方式：
 
 ```html
-<iframe src="https://developer.mozilla.org/zh-CN/docs/Glossary"
-        width="100%" height="500" frameborder="0"
-        allowfullscreen sandbox>
-  <p> <a href="https://developer.mozilla.org/zh-CN/docs/Glossary">
-    Fallback link for browsers that don't support iframes
-  </a> </p>
+<iframe
+  src="https://developer.mozilla.org/zh-CN/docs/Glossary"
+  width="100%"
+  height="500"
+  frameborder="0"
+  allowfullscreen
+  sandbox>
+  <p>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+    </a>
+  </p>
 </iframe>
 ```
 
@@ -282,8 +292,8 @@ Google Maps 或 Youtube，当你嵌入内容时，`<iframe>` 将通过 HTTPS 提
 #### 配置 CSP 指令
 
 {{Glossary("CSP")}} 代表 **[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)**，它提供[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（由 web 服务器发送时与元数据一起发送的元数据），旨在提高 HTML
-文档的安全性。在 `<iframe>` 的安全性方面，你可以[*将服务器配置为发送适当的 `X-Frame-Options`
-标题*](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样做可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://zh.wikipedia.org/wiki/点击劫持)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
+文档的安全性。在 `<iframe>` 的安全性方面，你可以[_将服务器配置为发送适当的 `X-Frame-Options`
+标题_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样做可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://zh.wikipedia.org/wiki/点击劫持)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
 
 > **备注：** 你可以阅读 Frederik Braun 的帖子[在 X-Frame-Options 安全性标头上](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。
 
@@ -299,13 +309,13 @@ Java 小程序和 Flash，PDF（可在浏览器中显示为一个 PDF 插件）�
 
 如果你发现自己需要嵌入插件内容，那么你至少需要一些这样的信息：
 
-|                                                            | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| 嵌入内容的[网址](/zh-CN/docs/Glossary/URL)                 | [`src`](/zh-CN/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/zh-CN/docs/Web/HTML/Element/object#data)                                                  |
-| 嵌入内容的*准确*[媒体类型](/zh-CN/docs/Glossary/MIME_type) | [`type`](/zh-CN/docs/Web/HTML/Element/embed#type)                                              | [`type`](/zh-CN/docs/Web/HTML/Element/object#type)                                                  |
+|                                                            | {{htmlelement("embed")}}                                                                                  | {{htmlelement("object")}}                                                                                   |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| 嵌入内容的[网址](/zh-CN/docs/Glossary/URL)                 | [`src`](/zh-CN/docs/Web/HTML/Element/embed#src)                                                           | [`data`](/zh-CN/docs/Web/HTML/Element/object#data)                                                          |
+| 嵌入内容的*准确*[媒体类型](/zh-CN/docs/Glossary/MIME_type) | [`type`](/zh-CN/docs/Web/HTML/Element/embed#type)                                                         | [`type`](/zh-CN/docs/Web/HTML/Element/object#type)                                                          |
 | 由插件控制的框的高度和宽度（以 CSS 像素为单位）            | [`height`](/zh-CN/docs/Web/HTML/Element/embed#height) [`width`](/zh-CN/docs/Web/HTML/Element/embed#width) | [`height`](/zh-CN/docs/Web/HTML/Element/object#height) [`width`](/zh-CN/docs/Web/HTML/Element/object#width) |
-| 名称和值，将插件作为参数提供                               | 具有这些名称和值的 ad hoc 属性                                                            | 单标签[`<param>`](/zh-CN/docs/Web/HTML/Element/param)元素，包含在内`<object>`                 |
-| 独立的 HTML 内容作为不可用资源的回退                       | 不支持（`<noembed>`已过时）                                                               | 包含在元素`<object>`之后`<param>`                                                             |
+| 名称和值，将插件作为参数提供                               | 具有这些名称和值的 ad hoc 属性                                                                            | 单标签[`<param>`](/zh-CN/docs/Web/HTML/Element/param)元素，包含在内`<object>`                               |
+| 独立的 HTML 内容作为不可用资源的回退                       | 不支持（`<noembed>`已过时）                                                                               | 包含在元素`<object>`之后`<param>`                                                                           |
 
 > **备注：** `<object>`需要`data`属性，`type`属性或两者。如果你同时使用这两个，你也可以使用该[`typemustmatch`](/zh-CN/docs/Web/HTML/Element/object#attr-typemustmatch)属性（仅在 Firefox
 > 中实现，在本文中）。`typemustmatch`保持嵌入文件不运行，除非`type`属性提供正确的媒体类型。`typemustmatch`因此，当你嵌入来自不同[来源的](/zh-CN/docs/Glossary/Origin)内容（可以防止攻击者通过插件运行任意脚本）时，可以赋予重要的安全优势。
@@ -314,11 +324,18 @@ Java 小程序和 Flash，PDF（可在浏览器中显示为一个 PDF 插件）�
 Flash 影片的示例（请参阅此处的[Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html)，并[检查源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html)）：
 
 ```html
-<embed src="whoosh.swf" quality="medium"
-       bgcolor="#ffffff" width="550" height="400"
-       name="whoosh" align="middle" allowScriptAccess="sameDomain"
-       allowFullScreen="false" type="application/x-shockwave-flash"
-       pluginspage="http://www.macromedia.com/go/getflashplayer">
+<embed
+  src="whoosh.swf"
+  quality="medium"
+  bgcolor="#ffffff"
+  width="550"
+  height="400"
+  name="whoosh"
+  align="middle"
+  allowScriptAccess="sameDomain"
+  allowFullScreen="false"
+  type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer" />
 ```
 
 很可怕，不是吗。Adobe Flash 工具生成的 HTML
@@ -328,9 +345,16 @@ Flash 影片的示例（请参阅此处的[Github](https://mdn.github.io/learnin
 现在来看一个 `<object>` 将 PDF 嵌入一个页面的例子（参见[实例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)和[源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)）：
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch>
-  <p>You don't have a PDF plugin, but you can <a href="myfile.pdf">download the PDF file.</a></p>
+<object
+  data="mypdf.pdf"
+  type="application/pdf"
+  width="800"
+  height="1200"
+  typemustmatch>
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="myfile.pdf">download the PDF file.</a>
+  </p>
 </object>
 ```
 

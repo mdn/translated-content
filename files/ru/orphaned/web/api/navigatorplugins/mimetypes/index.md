@@ -1,8 +1,6 @@
 ---
 title: NavigatorPlugins.mimeTypes
 slug: orphaned/Web/API/NavigatorPlugins/mimeTypes
-translation_of: Web/API/NavigatorPlugins/mimeTypes
-original_slug: Web/API/NavigatorPlugins/mimeTypes
 ---
 
 {{ ApiRef("HTML DOM") }}

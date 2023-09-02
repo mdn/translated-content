@@ -31,8 +31,7 @@ slug: Web/API/VRFrameData
 
 ## 例
 
-例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
-) を参照してください。
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例) を参照してください。
 
 ## 仕様書
 

@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: speechend イベント'
+title: "SpeechRecognition: speechend イベント"
 slug: Web/API/SpeechRecognition/speechend_event
-original_slug: Web/API/SpeechRecognition/onspeechend
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
@@ -15,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('speechend', (event) => { })
+addEventListener("speechend", (event) => {});
 
-onspeechend = (event) => { }
+onspeechend = (event) => {};
 ```
 
 ## イベント型
@@ -31,8 +30,8 @@ onspeechend = (event) => { }
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('speechend', () => {
-  console.log('音声が検出されなくなりました');
+recognition.addEventListener("speechend", () => {
+  console.log("音声が検出されなくなりました");
 });
 ```
 
@@ -40,8 +39,8 @@ recognition.addEventListener('speechend', () => {
 
 ```js
 recognition.onspeechend = () => {
-  console.log('音声が検出されなくなりました');
-}
+  console.log("音声が検出されなくなりました");
+};
 ```
 
 ## 仕様書

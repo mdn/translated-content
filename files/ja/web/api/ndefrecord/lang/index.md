@@ -12,7 +12,7 @@ slug: Web/API/NDEFRecord/lang
 ## 構文
 
 ```js
-NDEFRecord.lang
+NDEFRecord.lang;
 ```
 
 ### 値

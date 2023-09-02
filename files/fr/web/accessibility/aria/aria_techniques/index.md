@@ -1,18 +1,11 @@
 ---
 title: Techniques ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibilité
-  - Attributs
-  - Rôles
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques
-original_slug: Accessibilité/ARIA/Techniques_ARIA
 ---
 
 ### Rôles
 
-#### Rôles de composant d’interface
+#### Rôles de composant d'interface
 
 - [Alert](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
 - [Alertdialog](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alertdialog)
@@ -74,7 +67,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 
 ### États et propriétés
 
-#### Attributs de composants d’interface
+#### Attributs de composants d'interface
 
 - aria-autocomplete
 - aria-checked

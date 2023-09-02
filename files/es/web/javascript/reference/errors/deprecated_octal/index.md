@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: "x" is not a legal ECMA-262 octal constant'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
-original_slug: Web/JavaScript/Reference/Errors/Bad_octal
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,7 +37,7 @@ Tenga en cuenta que las literales octales y las secuencias de escape octal está
 
 Utilice el cero inicialmente seguido de la letra "o";
 
-```js example-good
+```js-nolint example-good
 0O755;
 0o644;
 ```

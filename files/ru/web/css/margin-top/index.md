@@ -1,12 +1,6 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - справочник
-translation_of: Web/CSS/margin-top
 ---
 
 {{CSSRef}}
@@ -15,15 +9,15 @@ translation_of: Web/CSS/margin-top
 
 {{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
-Это свойство не имеет эффекта на _незамещаемых_ (_non-[replaced](/ru/docs/Web/CSS/Замещаемый_элемент)_) строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
+Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/Замещаемый_элемент))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 
 ## Синтаксис
 
 ```css
 /* значения <length> */
-margin-top: 10px;  /* абсолютное значение */
-margin-top: 1em;   /* относительно размера текста */
-margin-top: 5%;    /* относительно ширины ближайшего контейнера */
+margin-top: 10px; /* абсолютное значение */
+margin-top: 1em; /* относительно размера текста */
+margin-top: 5%; /* относительно ширины ближайшего контейнера */
 
 /* ключевые слова */
 margin-top: auto;
@@ -52,20 +46,28 @@ margin-top: unset;
 ## Примеры
 
 ```css
-.content { margin-top:   5%; }
-.sidebox { margin-top: 10px; }
-.logo    { margin-top: -5px; }
-#footer  { margin-top:  1em; }
+.content {
+  margin-top: 5%;
+}
+.sidebox {
+  margin-top: 10px;
+}
+.logo {
+  margin-top: -5px;
+}
+#footer {
+  margin-top: 1em;
+}
 ```
 
 ## Спецификации
 
-| Specification                                                                            | Status                                   | Comment                                               |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Никаких существенных изменений                        |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | Определяет `margin-top` как анимационный.             |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | Устраняет его влияние на строковые (inline) элементы. |
-| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Начальное определение                                 |
+| Specification                                                      | Status                        | Comment                                               |
+| ------------------------------------------------------------------ | ----------------------------- | ----------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}              | {{Spec2('CSS3 Box')}}         | Никаких существенных изменений                        |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}}  | {{Spec2('CSS3 Transitions')}} | Определяет `margin-top` как анимационный.             |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}           | Устраняет его влияние на строковые (inline) элементы. |
+| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                  | {{Spec2('CSS1')}}             | Начальное определение                                 |
 
 {{cssinfo}}
 

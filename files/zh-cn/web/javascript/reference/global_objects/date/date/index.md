@@ -40,13 +40,13 @@ Date()
 #### 时间或时间戳值
 
 - `value`
-  - : 一个整数，代表自 UTC 1970 年 1 月 1 日 00:00:00 （ECMAScript 纪元，与 UNIX 纪元相同）以来的毫秒数，忽略闰秒。请记住，大多数 [UNIX 时间戳](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)函数只精确到最近的秒。
+  - : 一个整数，代表自 UTC 1970 年 1 月 1 日 00:00:00（ECMAScript 纪元，与 UNIX 纪元相同）以来的毫秒数，忽略闰秒。请记住，大多数 [UNIX 时间戳](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)函数只精确到最近的秒。
 
 #### 日期字符串
 
 - `dateString`
 
-  - : 一个代表日期的字符串值，其格式由 {{jsxref("Date.parse()")}} 方法所识别。（ECMA262 规范规定了 [ISO 8601的简化版本](https://tc39.es/ecma262/#sec-date-time-string-format)，但其他格式可以由实现者定义，通常包括[符合 IETF 的 RFC 2822 时间戳](https://datatracker.ietf.org/doc/html/rfc2822#page-14)。）
+  - : 一个代表日期的字符串值，其格式由 {{jsxref("Date.parse()")}} 方法所识别。（ECMA262 规范规定了 [ISO 8601 的简化版本](https://tc39.es/ecma262/#sec-date-time-string-format)，但其他格式可以由实现者定义，通常包括[符合 IETF 的 RFC 2822 时间戳](https://datatracker.ietf.org/doc/html/rfc2822#page-14)。）
 
     > **备注：** 当用 `Date` 构造函数（和 `Date.parse`，它们是等价的）解析日期字符串时，一定要确保输入符合 ISO 8601 格式（`YYYY-MM-DDTHH:mm:ss.ssZ`），其他格式的解析行为是实现定义的，可能无法在所有浏览器上运行。对 [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 格式字符串的支持只是惯例。如果要适应许多不同的格式，库可以提供帮助。
     >

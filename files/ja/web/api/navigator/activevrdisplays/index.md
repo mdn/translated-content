@@ -18,8 +18,8 @@ slug: Web/API/Navigator/activeVRDisplays
 ```js
 function showActive() {
   const displays = navigator.activeVRDisplays;
-  for(let i = 0; i < displays.length; i++) {
-    console.log('Display ' + displays[i].displayId + ' is active.');
+  for (let i = 0; i < displays.length; i++) {
+    console.log("Display " + displays[i].displayId + " is active.");
   }
 }
 ```

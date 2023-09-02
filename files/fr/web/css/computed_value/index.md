@@ -1,11 +1,6 @@
 ---
 title: Valeur calculée
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/computed_value
-original_slug: Web/CSS/Valeur_calculée
 ---
 
 {{CSSRef}}
@@ -21,7 +16,7 @@ Cependant, pour certaines propriétés (celles où les pourcentages sont relatif
 
 Le principal intérêt de la valeur calculée (en dehors de la gestion du passage de [la valeur spécifiée](/fr/docs/Web/CSS/Valeur_spécifiée) à [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée)) est [l'héritage](/fr/docs/Web/CSS/Héritage), notamment grâce au mot-clé {{cssxref("inherit")}}.
 
-> **Note :** La méthode du DOM {{domxref("Window.getComputedStyle", "getComputedStyle()")}} renvoie [la valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue) qui correspond à la valeur calculée ou à [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilis%C3%A9e) selon la propriété.
+> **Note :** La méthode du DOM {{domxref("Window.getComputedStyle", "getComputedStyle()")}} renvoie [la valeur résolue](/fr/docs/Web/CSS/valeur_résolue) qui correspond à la valeur calculée ou à [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée) selon la propriété.
 
 ## Spécifications
 
@@ -34,7 +29,7 @@ Le principal intérêt de la valeur calculée (en dehors de la gestion du passag
 - [La notion de valeur définie](/fr/docs/Web/CSS/Valeur_spécifiée)
 - [La notion de valeur calculée](/fr/docs/Web/CSS/Valeur_calculée)
 - [La notion de valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée)
-- [La notion de valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue)
+- [La notion de valeur résolue](/fr/docs/Web/CSS/valeur_résolue)
 - [La notion de valeur réelle](/fr/docs/Web/CSS/valeur_reelle)
 - {{cssxref("inherit")}}
 - {{cssxref("initial")}}

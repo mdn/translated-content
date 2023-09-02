@@ -10,7 +10,7 @@ La propiedad de sólo lectura **`URL`** de la interfaz {{domxref("Document")}} d
 ## Sintaxis
 
 ```js
-var string = document.URL
+var string = document.URL;
 ```
 
 ## Ejemplo
@@ -25,7 +25,7 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">La URL va aquí</span>
 </p>
 ```

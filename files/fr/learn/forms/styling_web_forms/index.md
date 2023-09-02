@@ -1,16 +1,6 @@
 ---
 title: Mise en forme des formulaires HTML
 slug: Learn/Forms/Styling_web_forms
-tags:
-  - CSS
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Intermédiaire
-  - Web
-translation_of: Learn/Forms/Styling_web_forms
-original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
@@ -68,12 +58,12 @@ Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peu
 
 ```html
 <form>
-  <input type="search">
+  <input type="search" />
 </form>
 ```
 
 ```css
-input[type=search] {
+input[type="search"] {
   border: 1px dotted #999;
   border-radius: 0;
 
@@ -90,9 +80,12 @@ Comme vous pouvez le voir sur la capture d'écran pour Chrome, les deux champs o
 Les fonctionnalités liées au texte et aux polices de caractères dans les CSS peuvent être utilisées facilement avec n'importe quel widget (et oui, vous pouvez utiliser {{cssxref("@font-face")}} avec les formulaires). Toutefois, le comportement des navigateurs est souvent incompatible. Par défaut, certains éléments comme {{cssxref("font-family")}} {{cssxref("font-size")}} n'héritent pas de leurs parents. De nombreux navigateurs utilisent les valeurs du système d'exploitation. Pour que l'apparence des formulaires soit cohérente avec le reste de votre contenu, vous pouvez ajouter les règles suivantes à votre feuille de style&nbsp;:
 
 ```css
-button, input, select, textarea {
-  font-family : inherit;
-  font-size   : 100%;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -109,13 +102,16 @@ Tous les champs textuels sont compatibles avec les différentes propriétés du 
 **Chacun des blocs a ses propres règles concernant les bordures, la marge intérieure (padding) et extérieure (margin).** Si vous souhaitez qu'ils aient tous la même dimension, vous devrez utiliser la propriété {{cssxref("box-sizing")}}&nbsp;:
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   margin: 0;
 
   -webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
-     -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
-          box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+  box-sizing: border-box;
 }
 ```
 
@@ -178,12 +174,12 @@ Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [ar
 
   <div id="from">
     <label for="name">de&nbsp;:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">répondre à&nbsp;:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -219,39 +215,41 @@ Maintenant nous pouvons approfondir les CSS de l'exemple. Ajoutez tous les blocs
 D'abord, la préparation de base en définissant les règles de {{cssxref("@font-face")}} et les base des éléments {{HTMLElement("body")}} et {{HTMLElement("form")}}.
 
 ```css
-@font-face{
-  font-family : "handwriting";
-  src: url('fonts/journal-webfont.woff2') format('woff2'),
-       url('fonts/journal-webfont.woff') format('woff');
+@font-face {
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face{
-  font-family : "typewriter";
-  src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-       url('fonts/veteran_typewriter-webfont.woff') format('woff');
+@font-face {
+  font-family: "typewriter";
+  src:
+    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("fonts/veteran_typewriter-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font  : 21px sans-serif;
+  font: 21px sans-serif;
 
-  padding : 2em;
-  margin  : 0;
+  padding: 2em;
+  margin: 0;
 
-  background : #222;
+  background: #222;
 }
 
 form {
   position: relative;
 
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
 
-  background: #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 }
 ```
 
@@ -259,29 +257,31 @@ Maintenant nous pouvons placer nos éléments, y compris le titre et tous les é
 
 ```css
 h1 {
-  position : absolute;
-  left : 415px;
-  top  : 185px;
+  position: absolute;
+  left: 415px;
+  top: 185px;
 
-  font : 1em "typewriter", sans-serif;
+  font:
+    1em "typewriter",
+    sans-serif;
 }
 
 #from {
   position: absolute;
-  left : 398px;
-  top  : 235px;
+  left: 398px;
+  top: 235px;
 }
 
 #reply {
   position: absolute;
-  left : 390px;
-  top  : 285px;
+  left: 390px;
+  top: 285px;
 }
 
 #message {
   position: absolute;
-  left : 20px;
-  top  : 70px;
+  left: 20px;
+  top: 70px;
 }
 ```
 
@@ -289,20 +289,25 @@ C'est là que nous commençons à travailler sur les éléments du formulaire eu
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
 Les champs texte nécessitent quelques règles courantes. Mettons‑les simplement, nous supprimons {{cssxref("border","borders")}} et {{cssxref("background","backgrounds")}} et redéfinissons {{cssxref("padding")}} et {{cssxref("margin")}}.
 
 ```css
-input, textarea {
-  font    : .9em/1.5em "handwriting", sans-serif;
+input,
+textarea {
+  font:
+    0.9em/1.5em "handwriting",
+    sans-serif;
 
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 240px;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 240px;
 
   background: none;
 }
@@ -311,10 +316,11 @@ input, textarea {
 Lorsque l'un de ces champs reçoit le focus, nous le mettons en évidence avec un fond gris clair et transparent. Notez qu'il est important d'ajouter la propriété {{cssxref("outline")}} pour supprimer le focus par défaut ajouté par certains navigateurs.
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  outline      : none;
+  outline: none;
 }
 ```
 
@@ -324,8 +330,8 @@ Le champ texte à une seule ligne a besoin de quelques ajustements pour un bon r
 
 ```css
 input {
-    height: 2.5em; /* pour IE */
-    vertical-align: middle; /* optionnel mais donne meilleur aspect pour IE */
+  height: 2.5em; /* pour IE */
+  vertical-align: middle; /* optionnel mais donne meilleur aspect pour IE */
 }
 ```
 
@@ -333,14 +339,14 @@ Les éléments {{HTMLElement("textarea")}} sont rendus par défaut en tant qu'é
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 340px;
-  height  : 360px;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 340px;
+  height: 360px;
 
-  resize  : none;
+  resize: none;
   overflow: auto;
 }
 ```
@@ -349,24 +355,24 @@ L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous 
 
 ```css
 button {
-  position     : absolute;
-  left         : 440px;
-  top          : 360px;
+  position: absolute;
+  left: 440px;
+  top: 360px;
 
-  padding      : 5px;
+  padding: 5px;
 
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
+  background: none;
 
-  cursor       : pointer;
+  cursor: pointer;
 
--webkit-transform: rotate(-1.5deg);
-   -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-     -o-transform: rotate(-1.5deg);
-        transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  -ms-transform: rotate(-1.5deg);
+  -o-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
 }
 
 button:after {
@@ -375,9 +381,9 @@ button:after {
 
 button:hover,
 button:focus {
-  outline   : none;
+  outline: none;
   background: #000;
-  color   : #FFF;
+  color: #fff;
 }
 ```
 

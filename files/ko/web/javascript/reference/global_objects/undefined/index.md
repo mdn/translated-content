@@ -48,10 +48,9 @@ JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.
 ```js
 let x;
 if (x === undefined) {
-   // 이 문이 실행됨
-}
-else {
-   // 이 문이 실행되지 않음
+  // 이 문이 실행됨
+} else {
+  // 이 문이 실행되지 않음
 }
 ```
 
@@ -66,8 +65,8 @@ else {
 
 ```js
 let x;
-if (typeof x === 'undefined') {
-   // 이 문이 실행됨
+if (typeof x === "undefined") {
+  // 이 문이 실행됨
 }
 ```
 
@@ -76,13 +75,12 @@ if (typeof x === 'undefined') {
 ```js
 // x를 선언한 적 없음
 // 오류 없이 true로 평가
-if (typeof x === 'undefined') {
-   // 이 문이 실행됨
+if (typeof x === "undefined") {
+  // 이 문이 실행됨
 }
 
 // ReferenceError 발생
-if(x === undefined) {
-
+if (x === undefined) {
 }
 ```
 

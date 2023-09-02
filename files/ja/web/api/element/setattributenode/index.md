@@ -1,44 +1,69 @@
 ---
-title: element.setAttributeNode
+title: "Element: setAttributeNode() メソッド"
+short-title: setAttributeNode()
 slug: Web/API/Element/setAttributeNode
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ ApiRef("DOM") }}
+{{ APIRef("DOM") }}
 
-### Summary
+**`setAttributeNode()`** メソッドは、新しい `Attr` ノードを指定された要素に追加します。
 
-`setAttributeNode()` adds a new `Attr` node to the specified element.
+### 構文
 
-### Syntax
-
-```
-replacedAttr =element.setAttributeNode(attribute)
+```js-nolint
+setAttributeNode(attribute)
 ```
 
-- `attribute` is the `Attr` node to set on the element.
-- `replacedAttr` is the replaced attribute node, if any, returned by this function.
+### 引数
 
-### Example
+- `attribute` は要素に追加する `Attr` ノードです。
 
+### 返値
+
+置換された属性ノードが、もしあれば、この関数から返されます。
+
+## 例
+
+この例では `align` 属性をある要素から別の要素へコピーしています。
+
+### HTML
+
+```html
+<div id="one" align="left">one</div>
+<div id="two">two</div>
 ```
-// <div id="one" align="left">one</div>
-// <div id="two">two</div>
-var d1 = document.getElementById("one");
-var d2 = document.getElementById("two");
-var a = d1.getAttributeNode("align");
-d2.setAttributeNode(a);
-alert(d2.attributes[1].value)
-// returns: `left'
+
+### JavaScript
+
+```js
+let d1 = document.getElementById("one");
+let d2 = document.getElementById("two");
+let a = d1.getAttributeNode("align");
+
+d2.setAttributeNode(a.cloneNode(true));
+
+// 返値: 'left'
+alert(d2.attributes[1].value);
 ```
 
-### Notes
+## メモ
 
-If the attribute named already exists on the element, that attribute is replaced with the new one and the replaced one is returned.
+指定された属性が要素に既に存在する場合、その属性は新しい属性に置き換えられ、置き換えられた属性が返されます。
 
-This method is seldom used, with [`setAttribute()`](/ja/DOM/element.setAttribute) usually being used to change element's attributes.
+このメソッドが使われることはあまりなく、通常は {{domxref("Element.setAttribute()")}} が要素の属性を変更するために使われます。
 
 {{ DOMAttributeMethods() }}
 
-### Specification
+## 仕様書
 
-[DOM Level 2 Core: setAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-887236154) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode))
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Document.createAttribute()")}}

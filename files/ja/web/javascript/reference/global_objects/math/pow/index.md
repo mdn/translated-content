@@ -38,25 +38,25 @@ Math.pow(base, exponent)
 
 ```js
 // 単純
-Math.pow(7, 2);    // 49
-Math.pow(7, 3);    // 343
-Math.pow(2, 10);   // 1024
+Math.pow(7, 2); // 49
+Math.pow(7, 3); // 343
+Math.pow(2, 10); // 1024
 // 小数のべき乗
-Math.pow(4, 0.5);  // 2 (4 の平方根)
-Math.pow(8, 1/3);  // 2 (8 の立方根)
-Math.pow(2, 0.5);  // 1.4142135623730951 (2 の平方根)
-Math.pow(2, 1/3);  // 1.2599210498948732 (2 の立方根)
+Math.pow(4, 0.5); // 2 (4 の平方根)
+Math.pow(8, 1 / 3); // 2 (8 の立方根)
+Math.pow(2, 0.5); // 1.4142135623730951 (2 の平方根)
+Math.pow(2, 1 / 3); // 1.2599210498948732 (2 の立方根)
 // 負の数のべき乗
-Math.pow(7, -2);   // 0.02040816326530612 (1/49)
-Math.pow(8, -1/3); // 0.5
+Math.pow(7, -2); // 0.02040816326530612 (1/49)
+Math.pow(8, -1 / 3); // 0.5
 // 負の数の底
-Math.pow(-7, 2);   // 49 (2乗は正の数)
-Math.pow(-7, 3);   // -343 (3乗は負の数)
+Math.pow(-7, 2); // 49 (2乗は正の数)
+Math.pow(-7, 3); // -343 (3乗は負の数)
 Math.pow(-7, 0.5); // NaN (負の数には実数の平方根がない)
 // due to "even" and "odd" roots laying close to each other,
 // and limits in the floating number precision,
 // negative bases with fractional exponents always return NaN
-Math.pow(-7, 1/3); // NaN
+Math.pow(-7, 1 / 3); // NaN
 ```
 
 ## 仕様書

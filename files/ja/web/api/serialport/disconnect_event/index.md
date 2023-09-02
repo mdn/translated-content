@@ -1,5 +1,5 @@
 ---
-title: 'SerialPort: disconnect イベント'
+title: "SerialPort: disconnect イベント"
 slug: Web/API/SerialPort/disconnect_event
 l10n:
   sourceCommit: ba5931fadbcc3b79ffacbb442b58380c827fc0ae
@@ -16,9 +16,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('disconnect', (event) => { });
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { };
+ondisconnect = (event) => {};
 ```
 
 ## 型
@@ -38,7 +38,7 @@ ondisconnect = (event) => { };
 ここでは、イベントリスナーを特定の {{domxref("SerialPort")}} オブジェクトに設定します。
 
 ```js
-port.addEventListener('disconnect', (event) => {
+port.addEventListener("disconnect", (event) => {
   // このポートが利用不可能になったことを通知する
 });
 ```
@@ -48,7 +48,7 @@ port.addEventListener('disconnect', (event) => {
 `disconnect` イベントは {{domxref("Serial")}} オブジェクトに伝搬し、ここで利用不可能になった任意のポートを監視することができます。
 
 ```js
-navigator.serial.addEventListener('disconnect', (event) => {
+navigator.serial.addEventListener("disconnect", (event) => {
   // ポートが利用不可能になったら通知する
   // 利用不可能になったポートを参照するには、`event.target` を使う
 });

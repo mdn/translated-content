@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
-translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
 
 {{APIRef}}La propriété **CanvasRenderingContext2D.globalAlpha** de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).
@@ -34,8 +33,8 @@ Il s'agit seulement d'un simple fragment de code utilisant la propriété `globa
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 ctx.globalAlpha = 0.5;
 
@@ -63,15 +62,16 @@ ctx.fillStyle = 'blue';
 ctx.fillRect(10, 10, 100, 100);
 
 ctx.fillStyle = 'red';
-ctx.fillRect(50, 50, 100, 100);</textarea>
+ctx.fillRect(50, 50, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
-var zoneTexte = document.getElementById('code');
-var effacement = document.getElementById('effacement');
-var modifier = document.getElementById('modifier');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
+var zoneTexte = document.getElementById("code");
+var effacement = document.getElementById("effacement");
+var modifier = document.getElementById("modifier");
 var code = zoneTexte.value;
 
 function dessinerCanevas() {
@@ -79,17 +79,17 @@ function dessinerCanevas() {
   eval(zoneTexte.value);
 }
 
-effacement.addEventListener('click', function() {
+effacement.addEventListener("click", function () {
   zoneT.value = code;
   dessinerCanevas();
 });
 
-modifier.addEventListener('click', function() {
+modifier.addEventListener("click", function () {
   zoneTexte.focus();
-})
+});
 
-zoneTexte.addEventListener('input', dessinerCanevas);
-window.addEventListener('load', dessinerCanevas);
+zoneTexte.addEventListener("input", dessinerCanevas);
+window.addEventListener("load", dessinerCanevas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 380) }}
@@ -99,24 +99,24 @@ window.addEventListener('load', dessinerCanevas);
 Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle `for` dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.
 
 ```js
-var ctx = document.getElementById('canevas').getContext('2d');
+var ctx = document.getElementById("canevas").getContext("2d");
 
 // Dessiner l'arrière-plan
-ctx.fillStyle = '#FD0';
+ctx.fillStyle = "#FD0";
 ctx.fillRect(0, 0, 75, 75);
-ctx.fillStyle = '#6C0';
+ctx.fillStyle = "#6C0";
 ctx.fillRect(75, 0, 75, 75);
-ctx.fillStyle = '#09F';
+ctx.fillStyle = "#09F";
 ctx.fillRect(0, 75, 75, 75);
-ctx.fillStyle = '#F30';
+ctx.fillStyle = "#F30";
 ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = '#FFF';
+ctx.fillStyle = "#FFF";
 
 // Définir la valeur de transparence
 ctx.globalAlpha = 0.2;
 
 // Dessiner les cercles semi-transparents
-for (i = 0; i < 7; i++){
+for (i = 0; i < 7; i++) {
   ctx.beginPath();
   ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
   ctx.fill();

@@ -5,9 +5,9 @@ slug: Web/HTML/Element/marquee
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-HTML marquee 元素（`<marquee>`） 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。
+HTML marquee 元素（`<marquee>`）用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。
 
-> **警告：** `<marquee>` 元素已经 **过时**，请不要再使用。尽管一些浏览器仍然支持它，但它不是必须的。此外，使用这个元素基本上是你可以对你的用户做最糟糕的事情之一，所以请不要这样做。
+> **警告：** `<marquee>` 元素已经**过时**，请不要再使用。尽管一些浏览器仍然支持它，但它不是必须的。此外，使用这个元素基本上是你可以对你的用户做最糟糕的事情之一，所以请不要这样做。
 
 ## 属性
 
@@ -57,10 +57,13 @@ HTML marquee 元素（`<marquee>`） 用来插入一段滚动的文字。你可�
 
 <marquee direction="up">This text will scroll from bottom to top</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    This text will bounce
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate"> This text will bounce </marquee>
 </marquee>
 ```
 

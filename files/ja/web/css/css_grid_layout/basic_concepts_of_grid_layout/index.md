@@ -58,7 +58,9 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -115,7 +117,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -156,7 +160,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -197,7 +203,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -238,7 +246,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -324,7 +334,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -358,7 +370,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -378,9 +392,10 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
-    より多くの内容物があります。
-    <p>これによって、高さが 100 ピクセルよりも高くなります。</div>
+  <div>
+    Two より多くの内容物があります。
+    <p>これによって、高さが 100 ピクセルよりも高くなります。</p>
+  </div>
   <div>Three</div>
   <div>Four</div>
   <div>Five</div>
@@ -437,7 +452,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -484,19 +501,19 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 
 <h2 id="Grid_cells">グリッドセル</h2>
 
-*グリッドセル* は、グリッド上の最も小さな単位です。コンセプトとしては、表のセルのようなものです。先述の例で、親要素のグリッドが定義されると、子アイテムが定義されたグリッドの各セルにレイアウトされる様を見てきました。下の画像では、グリッドの最初のセルをハイライトしています。
+_グリッドセル_ は、グリッド上の最も小さな単位です。コンセプトとしては、表のセルのようなものです。先述の例で、親要素のグリッドが定義されると、子アイテムが定義されたグリッドの各セルにレイアウトされる様を見てきました。下の画像では、グリッドの最初のセルをハイライトしています。
 
 ![グリッドの最初のセルをハイライト表示](1_grid_cell.png)
 
 <h2 id="Grid_areas">グリッド領域</h2>
 
-アイテムは、行と列の複数のセルにまたがって配置でき、*グリッド領域* を作ることができます。グリッド領域は四角形でなければなりません。例えば L 字型の領域は作れません。ハイライトされた領域は、2 行と 2 列にまたがるトラックです。
+アイテムは、行と列の複数のセルにまたがって配置でき、_グリッド領域_ を作ることができます。グリッド領域は四角形でなければなりません。例えば L 字型の領域は作れません。ハイライトされた領域は、2 行と 2 列にまたがるトラックです。
 
 ![グリッド領域](1_grid_area.png)
 
 <h2 id="Gutters" name="Gutters">セル間隔</h2>
 
-グリッドセル間の *溝* (Gutters) または *路地* (alleys) は、 {{cssxref("column-gap")}} および {{cssxref("row-gap")}} プロパティを使用するか、一括指定の {{cssxref("gap")}} で作成できます。下の例では、列間 10 ピクセル、行間 `1em` の溝を作っています。
+グリッドセル間の _溝_ (Gutters) または _路地_ (alleys) は、 {{cssxref("column-gap")}} および {{cssxref("row-gap")}} プロパティを使用するか、一括指定の {{cssxref("gap")}} で作成できます。下の例では、列間 10 ピクセル、行間 `1em` の溝を作っています。
 
 ```css
 .wrapper {
@@ -522,7 +539,9 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   column-gap: 10px;
@@ -568,20 +587,22 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">
-      <div class="nested">a</div>
-      <div class="nested">b</div>
-      <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
   </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
+</div>
 ```
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -674,7 +695,9 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -733,7 +756,9 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

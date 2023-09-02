@@ -47,9 +47,9 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 1. 参考上一个章节[创建 Node 和 npm](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm) 创建一个新的 npm 工程，取一个不同的名字，如 `selenium-test`。
 2. 接下来，我们需要安装一个框架来允许我们从 Node 中运行 Selenium。我们选择 selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)，它的文档更新得很好，维护得也很好。如果你想要其他的选择，[webdriver.io](http://webdriver.io/) 和 [nightwatch.js](http://nightwatchjs.org/) 也都不错。要安装 selenium-webdriver，在你的工程目录下运行如下命令：
 
-    ```bash
-    npm install selenium-webdriver
-    ```
+   ```bash
+   npm install selenium-webdriver
+   ```
 
 > **备注：** 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确保所有东西都是最新的。
 
@@ -95,30 +95,28 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 2. 将下面代码复制到文件中保存：
 
    ```js
-   const webdriver = require('selenium-webdriver');
+   const webdriver = require("selenium-webdriver");
    const By = webdriver.By;
    const until = webdriver.until;
 
-   const driver = new webdriver.Builder()
-     .forBrowser('firefox')
-     .build();
+   const driver = new webdriver.Builder().forBrowser("firefox").build();
 
-   driver.get('http://www.google.com');
+   driver.get("http://www.google.com");
 
-   driver.findElement(By.name('q')).sendKeys('webdriver');
+   driver.findElement(By.name("q")).sendKeys("webdriver");
 
    driver.sleep(1000).then(() => {
-     driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
    });
 
-   driver.findElement(By.name('btnK')).click();
+   driver.findElement(By.name("btnK")).click();
 
    driver.sleep(2000).then(() => {
      driver.getTitle().then((title) => {
-       if (title === 'webdriver - Google Search') {
-         console.log('Test passed');
+       if (title === "webdriver - Google Search") {
+         console.log("Test passed");
        } else {
-         console.log('Test failed');
+         console.log("Test failed");
        }
        driver.quit();
      });
@@ -141,43 +139,37 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 2. 将下面代码复制到文件中保存：
 
    ```js
-   const webdriver = require('selenium-webdriver');
+   const webdriver = require("selenium-webdriver");
    const By = webdriver.By;
    const until = webdriver.until;
 
-   let driver_fx = new webdriver.Builder()
-     .forBrowser('firefox')
-     .build();
+   let driver_fx = new webdriver.Builder().forBrowser("firefox").build();
 
-   let driver_chr = new webdriver.Builder()
-     .forBrowser('chrome')
-     .build();
+   let driver_chr = new webdriver.Builder().forBrowser("chrome").build();
 
    searchTest(driver_fx);
    searchTest(driver_chr);
 
    function searchTest(driver) {
-     driver.get('http://www.google.com');
-     driver.findElement(By.name('q')).sendKeys('webdriver');
+     driver.get("http://www.google.com");
+     driver.findElement(By.name("q")).sendKeys("webdriver");
 
      driver.sleep(1000).then(() => {
-       driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+       driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
      });
 
-     driver.findElement(By.name('btnK')).click();
+     driver.findElement(By.name("btnK")).click();
 
      driver.sleep(2000).then(() => {
        driver.getTitle().then((title) => {
-
-         if (title === 'webdriver - Google Search') {
-           console.log('Test passed');
+         if (title === "webdriver - Google Search") {
+           console.log("Test passed");
          } else {
-           console.log('Test failed');
+           console.log("Test failed");
          }
          driver.quit();
        });
      });
-
    }
    ```
 
@@ -202,7 +194,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 要启动一次新的测试，你需要包含如下的 `selenium-webdriver` 代码模块：
 
 ```js
-const webdriver = require('selenium-webdriver');
+const webdriver = require("selenium-webdriver");
 const By = webdriver.By;
 const until = webdriver.until;
 ```
@@ -210,17 +202,13 @@ const until = webdriver.until;
 接下来，通过 `new webdriver.Builder()` 构造器来创建一个新的驱动实例，通过 `forBrowser()` 方法指定测试的浏览器类型，最后调用 `build()` 来实际创建它。（关于这些功能的详细信息，请参见 [Builder 类参考资料](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html)）。
 
 ```js
-let driver = new webdriver.Builder()
-  .forBrowser('firefox')
-  .build();
+let driver = new webdriver.Builder().forBrowser("firefox").build();
 ```
 
 注意，可以为要测试的浏览器设置特定的配置选项，例如，你可以在 `forBrowser()` 方法中设置一个特定的版本和操作系统来测试：
 
 ```js
-let driver = new webdriver.Builder()
-  .forBrowser('firefox', '46', 'MAC')
-  .build();
+let driver = new webdriver.Builder().forBrowser("firefox", "46", "MAC").build();
 ```
 
 你还可以通过设置环境变量的方式来配置这些选项，如：
@@ -232,13 +220,11 @@ SELENIUM_BROWSER=firefox:46:MAC
 让我们来创建一个新的测试验证一下。在你的 selenium 测试工程目录下，新建一个文件 `quick_test.js`, 将下面代码复制进去：
 
 ```js
-const webdriver = require('selenium-webdriver');
+const webdriver = require("selenium-webdriver");
 const By = webdriver.By;
 const until = webdriver.until;
 
-const driver = new webdriver.Builder()
-  .forBrowser('firefox')
-  .build();
+const driver = new webdriver.Builder().forBrowser("firefox").build();
 ```
 
 ### 获取测试的文档
@@ -246,7 +232,7 @@ const driver = new webdriver.Builder()
 通过刚创建的驱动实例的 `get()` 方法，加载你需要测试的网页：
 
 ```js
-driver.get('http://www.google.com');
+driver.get("http://www.google.com");
 ```
 
 > **备注：** 可以查看 [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) 了解这一部分提到内容的详情。
@@ -254,13 +240,15 @@ driver.get('http://www.google.com');
 你可以使用包含 `file://` 的 URL 来指向需要测试的本地文件：
 
 ```js
-driver.get('file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html');
+driver.get(
+  "file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html",
+);
 ```
 
 或
 
 ```js
-driver.get('http://localhost:8888/fake-div-buttons.html');
+driver.get("http://localhost:8888/fake-div-buttons.html");
 ```
 
 使用一个远程的服务器地址代码会更灵活——当你启用远程服务器运行测试时，如果企图使用本地路径，代码会中断。
@@ -268,7 +256,9 @@ driver.get('http://localhost:8888/fake-div-buttons.html');
 现在添加下面代码到 `quick_test.js` 的最后：
 
 ```js
-driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html');
+driver.get(
+  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+);
 ```
 
 ### 同文档交互
@@ -276,13 +266,13 @@ driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-test
 得到测试的文档后，我们就需要同它进行交互操作了，比如获取特定的元素对它进行某种测试。WebDriver 提供了[通过多种方法选择 UI 元素](https://www.selenium.dev/zh-cn/documentation/webdriver/elements/)，比如通过 ID、class、元素名称等。具体的选择通过 `findElement()` 方法完成，只需要将选择的元素作为参数传给它即可。举例来说，通过 ID 选择一个元素：
 
 ```js
-const element = driver.findElement(By.id('myElementId'));
+const element = driver.findElement(By.id("myElementId"));
 ```
 
 通过 CSS 查找一个元素的最常用方法是使用 By.css 方法，它可以通过 CSS 选择器的方式来选择元素。把下面代码敲到 `quick_test.js` 的最后面：
 
 ```js
-const button = driver.findElement(By.css('button:nth-of-type(1)'));
+const button = driver.findElement(By.css("button:nth-of-type(1)"));
 ```
 
 ### 测试元素
@@ -330,15 +320,15 @@ alert.accept();
 接下来，我们试一下在表单的一个元素中输入文本。添加如下代码并运行测试：
 
 ```js
-const input = driver.findElement(By.id('name'));
-input.sendKeys('Filling in my form');
+const input = driver.findElement(By.id("name"));
+input.sendKeys("Filling in my form");
 ```
 
 你可以提交一些使用常规 `webdriver.Key` 属性不能代表的按键操作。举个例子，下面我们使用指令在提交前将 tab 从 input 移走：
 
 ```js
 driver.sleep(1000).then(() => {
-  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+  driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
 });
 ```
 
@@ -351,10 +341,10 @@ driver.sleep(1000).then(() => {
 ```js
 driver.sleep(2000).then(() => {
   driver.getTitle().then((title) => {
-    if (title === 'webdriver - Google Search') {
-      console.log('Test passed');
+    if (title === "webdriver - Google Search") {
+      console.log("Test passed");
     } else {
-      console.log('Test failed');
+      console.log("Test failed");
     }
   });
 });
@@ -366,10 +356,10 @@ driver.sleep(2000).then(() => {
 
 ```js
 driver.sleep(2000).then(() => {
-  input.sendKeys('Filling in my form');
+  input.sendKeys("Filling in my form");
   input.getAttribute("value").then((value) => {
-    if (value !== '') {
-      console.log('Form input editable');
+    if (value !== "") {
+      console.log("Form input editable");
     }
   });
 });
@@ -430,33 +420,33 @@ driver.quit();
 2. 将下列内容复制到文件中：
 
    ```js
-   const webdriver = require('selenium-webdriver');
+   const webdriver = require("selenium-webdriver");
    const By = webdriver.By;
    const until = webdriver.until;
 
    // username: Username can be found at automation dashboard
-   const USERNAME = '{username}';
+   const USERNAME = "{username}";
 
    // AccessKey: AccessKey can be generated from automation dashboard or profile section
-   const KEY = '{accessKey}';
+   const KEY = "{accessKey}";
 
    // gridUrl: gridUrl can be found at automation dashboard
-   const GRID_HOST = 'hub.lambdatest.com/wd/hub';
+   const GRID_HOST = "hub.lambdatest.com/wd/hub";
 
    function searchTextOnGoogle() {
      // Setup Input capabilities
      const capabilities = {
-       platform: 'windows 10',
-       browserName: 'chrome',
-       version: '67.0',
-       resolution: '1280x800',
+       platform: "windows 10",
+       browserName: "chrome",
+       version: "67.0",
+       resolution: "1280x800",
        network: true,
        visual: true,
        console: true,
        video: true,
-       name: 'Test 1', // name of the test
-       build: 'NodeJS build' // name of the build
-       };
+       name: "Test 1", // name of the test
+       build: "NodeJS build", // name of the build
+     };
 
      // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
@@ -468,17 +458,20 @@ driver.quit();
        .build();
 
      // navigate to a URL, search for a text and get title of page
-     driver.get('https://www.google.com/ncr').then(function() {
-       driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
-         driver.getTitle().then((title) => {
-           setTimeout(() => {
-             console.log(title);
-             driver.quit();
+     driver.get("https://www.google.com/ncr").then(function () {
+       driver
+         .findElement(webdriver.By.name("q"))
+         .sendKeys("LambdaTest\n")
+         .then(function () {
+           driver.getTitle().then((title) => {
+             setTimeout(() => {
+               console.log(title);
+               driver.quit();
              }, 5000);
            });
          });
-       });
-     }
+     });
+   }
 
    searchTextOnGoogle();
    ```
@@ -494,7 +487,10 @@ driver.quit();
    如果你希望从 LambdaTest 平台提取这些结果用于报告，那么你可以通过使用 [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/) 来实现。
 
 5. 现在，如果访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，你会看到你的测试被列出；从这里你可以看到视频、屏幕截图和其他此类数据。
-   [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)你可以检索网络、命令、异常和 Selenium 日志，用于你测试构建中的每个测试。你还会发现你的 Selenium 脚本执行的视频记录。
+
+   [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
+
+   你可以检索网络、命令、异常和 Selenium 日志，用于你测试构建中的每个测试。你还会发现你的 Selenium 脚本执行的视频记录。
 
 > **备注：** LambdaTest 自动测试仪表板上的 _HELP_ 按钮将为你提供大量的信息，帮助你开始使用 LambdaTest 自动化。你也可以关注我们关于[在 Node JS 中运行第一个 Selenium 脚本](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)的文档。
 
@@ -524,43 +520,43 @@ driver.quit();
 2. 复制下面内容：
 
    ```js
-   const webdriver = require('selenium-webdriver');
+   const webdriver = require("selenium-webdriver");
    const By = webdriver.By;
    const until = webdriver.until;
 
    // Input capabilities
    const capabilities = {
-     'browserName' : 'Firefox',
-     'browser_version' : '56.0 beta',
-     'os' : 'OS X',
-     'os_version' : 'Sierra',
-     'resolution' : '1280x1024',
-     'browserstack.user' : 'YOUR-USER-NAME',
-     'browserstack.key' : 'YOUR-ACCESS-KEY',
-     'browserstack.debug' : 'true',
-     'build' : 'First build'
+     browserName: "Firefox",
+     browser_version: "56.0 beta",
+     os: "OS X",
+     os_version: "Sierra",
+     resolution: "1280x1024",
+     "browserstack.user": "YOUR-USER-NAME",
+     "browserstack.key": "YOUR-ACCESS-KEY",
+     "browserstack.debug": "true",
+     build: "First build",
    };
 
    const driver = new webdriver.Builder()
-     .usingServer('http://hub-cloud.browserstack.com/wd/hub')
+     .usingServer("http://hub-cloud.browserstack.com/wd/hub")
      .withCapabilities(capabilities)
      .build();
 
-   driver.get('http://www.google.com');
-   driver.findElement(By.name('q')).sendKeys('webdriver');
+   driver.get("http://www.google.com");
+   driver.findElement(By.name("q")).sendKeys("webdriver");
 
    driver.sleep(1000).then(() => {
-     driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
    });
 
-   driver.findElement(By.name('btnK')).click();
+   driver.findElement(By.name("btnK")).click();
 
    driver.sleep(2000).then(() => {
      driver.getTitle().then((title) => {
-       if (title === 'webdriver - Google Search') {
-         console.log('Test passed');
+       if (title === "webdriver - Google Search") {
+         console.log("Test passed");
        } else {
-         console.log('Test failed');
+         console.log("Test failed");
        }
      });
    });
@@ -578,11 +574,11 @@ driver.quit();
    测试被发送给 BrowserStackces, 测试结果会返回到你的控制台。这体现了包含报告机制的重要性！
 
 5. 现在回到 [BrowserStack automation dashboard](https://www.browserstack.com/automate) 页面，你会看到测试列出来的结果：
-    ![BrowserStack 自动测试结果](bstack_automated_results.png)
+   ![BrowserStack 自动测试结果](bstack_automated_results.png)
 
 点击测试链接，会打开一个播放记录了测试视频的屏幕和在测试过程中相关的日志详情。
 
-> **备注：** Browserstack 自动化仪表盘的 *Resources* 菜单选项上提供了许多运行自动化测试的有用信息。查看[使用 Node JS 编写自动化测试的文档](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs)获取相关信息，研究一下使用 BrowserStack 可以帮你做到哪些事情。
+> **备注：** Browserstack 自动化仪表盘的 _Resources_ 菜单选项上提供了许多运行自动化测试的有用信息。查看[使用 Node JS 编写自动化测试的文档](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs)获取相关信息，研究一下使用 BrowserStack 可以帮你做到哪些事情。
 
 > **备注：** 如果你不想自己写测试用例，可以使用文档中嵌入的生成器，参见[运行你的首个测试](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test)）。
 
@@ -609,7 +605,7 @@ driver.quit();
    ```js
    let sessionId;
 
-   driver.session_.then((sessionData) =>{
+   driver.session_.then((sessionData) => {
      sessionId = sessionData.id_;
    });
    ```
@@ -619,19 +615,25 @@ driver.quit();
    ```js
    driver.sleep(2000).then(() => {
      driver.getTitle().then((title) => {
-       if (title === 'webdriver - Google Search') {
-         console.log('Test passed');
+       if (title === "webdriver - Google Search") {
+         console.log("Test passed");
          request({
            uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
            method: "PUT",
-           form: { "status": "passed", "reason": "Google results showed correct title" }
+           form: {
+             status: "passed",
+             reason: "Google results showed correct title",
+           },
          });
        } else {
-         console.log('Test failed');
+         console.log("Test failed");
          request({
            uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
            method: "PUT",
-           form: { "status": "failed", "reason": "Google results showed wrong title" }
+           form: {
+             status: "failed",
+             reason: "Google results showed wrong title",
+           },
          });
        }
      });
@@ -654,7 +656,7 @@ driver.quit();
 2. 复制下面内容：
 
    ```js
-   const webdriver = require('selenium-webdriver');
+   const webdriver = require("selenium-webdriver");
    const By = webdriver.By;
    const until = webdriver.until;
    const username = "YOUR-USER-NAME";
@@ -662,31 +664,33 @@ driver.quit();
 
    const driver = new webdriver.Builder()
      .withCapabilities({
-       browserName: 'chrome',
-       platform: 'Windows XP',
-       version: '43.0',
+       browserName: "chrome",
+       platform: "Windows XP",
+       version: "43.0",
        username,
        accessKey,
      })
-     .usingServer(`https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`)
+     .usingServer(
+       `https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`,
+     )
      .build();
 
-   driver.get('http://www.google.com');
+   driver.get("http://www.google.com");
 
-   driver.findElement(By.name('q')).sendKeys('webdriver');
+   driver.findElement(By.name("q")).sendKeys("webdriver");
 
    driver.sleep(1000).then(() => {
-     driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
    });
 
-   driver.findElement(By.name('btnK')).click();
+   driver.findElement(By.name("btnK")).click();
 
    driver.sleep(2000).then(() => {
      driver.getTitle().then((title) => {
-       if (title === 'webdriver - Google Search') {
-         console.log('Test passed');
+       if (title === "webdriver - Google Search") {
+         console.log("Test passed");
        } else {
-         console.log('Test failed');
+         console.log("Test failed");
        }
      });
    });
@@ -725,15 +729,15 @@ driver.quit();
 2. 依赖 saucelabs。在 `sauce_google_test.js` 文件顶端，就在之前的变量声明下面添加如下代码：
 
    ```js
-   const SauceLabs = require('saucelabs');
+   const SauceLabs = require("saucelabs");
    ```
 
 3. 接着添加如下代码，创建一个新的 SauceLabs 实例：
 
    ```js
    const saucelabs = new SauceLabs({
-     username : "YOUR-USER-NAME",
-     password : "YOUR-ACCESS-KEY"
+     username: "YOUR-USER-NAME",
+     password: "YOUR-ACCESS-KEY",
    });
    ```
 
@@ -753,16 +757,16 @@ driver.quit();
    driver.sleep(2000).then(() => {
      driver.getTitle().then((title) => {
        let testPassed = false;
-       if (title === 'webdriver - Google Search') {
-         console.log('Test passed');
+       if (title === "webdriver - Google Search") {
+         console.log("Test passed");
          testPassed = true;
        } else {
-         console.error('Test failed');
+         console.error("Test failed");
        }
 
        saucelabs.updateJob(driver.sessionID, {
-         name: 'Google search results page title test',
-         passed: testPassed
+         name: "Google search results page title test",
+         passed: testPassed,
        });
      });
    });
@@ -788,7 +792,7 @@ driver.quit();
 
    修改 `.jar` 文件名为你获取的文件名称。
 
-4. 服务会运行在 [`http://localhost:4444/wd/hub`](http://localhost:4444/wd/hub)，你可以去试试看是什么效果。
+4. 服务会运行在 `http://localhost:4444/wd/hub`，你可以去试试看是什么效果。
 
 现在服务器运行起来了，让我们在 selenium 服务器上来创建一个 demo 测试。
 
@@ -797,8 +801,8 @@ driver.quit();
 
    ```js
    let driver = new webdriver.Builder()
-     .forBrowser('firefox')
-     .usingServer('http://localhost:4444/wd/hub')
+     .forBrowser("firefox")
+     .usingServer("http://localhost:4444/wd/hub")
      .build();
    ```
 

@@ -542,7 +542,7 @@ AVC 还具有特殊功能，例如支持同一场景的多个视图（多视图�
 
 然而，AVC 是一种专有格式，其技术的众多专利由多方拥有。AVC 媒体的商业使用需要许可证，但 MPEG LA 专利池不需要为以 AVC 格式流式传输的互联网视频收取许可证费用，只要视频对最终用户免费即可。
 
-WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）都_需要_支持 AVC 作为 WebRTC 调用中的编解码器。虽然 Web 浏览器不需要这样做，但有些需要这样做。
+WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）都*需要*支持 AVC 作为 WebRTC 调用中的编解码器。虽然 Web 浏览器不需要这样做，但有些需要这样做。
 
 在 Web 浏览器的 HTML 内容中，AVC 具有广泛的兼容性，并且许多平台支持 AVC 媒体的硬件编码和解码。但是，在你的项目中选择使用 AVC 之前，请注意其[许可要求](https://www.mpegla.com/programs/avc-h-264/)！
 
@@ -1732,20 +1732,18 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。V
 
 1. **[WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm)** 容器，使用 **[VP9](#vp9)** 视频编解码器和 **[Opus](/zh-CN/docs/Web/Media/Formats/Audio_codecs#opus)** 音频编解码器。这些都是开放的、免版税的格式，通常都得到很好的支持，尽管只是在最近的浏览器中，这就是为什么需要准备一个备用视频。
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. **[MP4](/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** 容器和 **[AVC](#avc_h.264)**（**H.264**）视频编解码器，最好使用 **[AAC](/zh-CN/docs/Web/Media/Formats/Audio_codecs#aac)** 作为你的音频编解码器。这是因为带有 AVC 和 AAC 编解码器的 MP4 容器是一种广泛支持的组合——事实上，每个主流浏览器都支持它——而且质量通常对大多数用例都很好。但是，请确保验证你是否符合许可证要求。
 
-    ```html
-    <video controls>
-      <source type="video/webm"
-              src="filename.webm">
-      <source type="video/mp4"
-              src="filename.mp4">
-    </video>
-    ```
+   ```html
+   <video controls>
+     <source type="video/webm" src="filename.webm" />
+     <source type="video/mp4" src="filename.mp4" />
+   </video>
+   ```
 
 > **备注：** 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video>` 标签。
 
@@ -1755,18 +1753,18 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。V
 
 1. 一个 WebM 容器，视频使用 AV1，音频使用 Opus。如果你在编码 AV1 时能够使用 High 或 Professional 配置文件，在 6.3 等高级别，你可以在 4K 或 8K 分辨率下获得非常高的比特率，同时保持出色的视频质量。使用 Opus 的 Fullband 配置文件以 48 kHz 采样率对音频进行编码可最大限度地提高捕获的音频带宽，几乎可以捕获人类听觉范围内的整个频率范围。
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. 使用 [HEVC](#hevc_h.265) 编解码器的 MP4 容器，使用高级 Main 配置文件之一，例如具有 10 或 12 位色深的 Main 4:2:2，甚至是 Main 4:4:4 个配置文件，每个组件最多 16 位。在高比特率下，这提供了出色的图形质量和出色的色彩再现。此外，你可以选择包含 HDR 元数据以提供高动态范围视频。对于音频，请以高采样率（至少 48 kHz，但理想情况下为 96 kHz）使用 AAC 编解码器，并使用复杂编码而不是快速编码进行编码。
 
-    ```html
-    <video controls>
-      <source type="video/webm" src="filename.webm">
-      <source type="video/mp4" src="filename.mp4">
-    </video>
-    ```
+   ```html
+   <video controls>
+     <source type="video/webm" src="filename.webm" />
+     <source type="video/mp4" src="filename.mp4" />
+   </video>
+   ```
 
 ### 归档、编辑或混音建议
 
@@ -1790,11 +1788,11 @@ x264 --crf 18 -preset ultrafast --output outfilename.mp4 infile
 
 ```js
 const kbps = 1024;
-const Mbps = kbps*kbps;
+const Mbps = kbps * kbps;
 
 const options = {
   mimeType: 'video/webm; codecs="av01.2.19H.12.0.000.09.16.09.1, flac"',
-  bitsPerSecond: 800*Mbps,
+  bitsPerSecond: 800 * Mbps,
 };
 
 let recorder = new MediaRecorder(sourceStream, options);

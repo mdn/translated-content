@@ -40,20 +40,20 @@ Reflect.isExtensible(target)
 
 ```js
 // 今オブジェクトは拡張可能。
-let empty = {}
-Reflect.isExtensible(empty)  // === true
+let empty = {};
+Reflect.isExtensible(empty); // === true
 
 // ...しかし、変更できます
-Reflect.preventExtensions(empty)
-Reflect.isExtensible(empty)  // === false
+Reflect.preventExtensions(empty);
+Reflect.isExtensible(empty); // === false
 
 // シールドオブジェクトは拡張できないように定義される。
-let sealed = Object.seal({})
-Reflect.isExtensible(sealed)  // === false
+let sealed = Object.seal({});
+Reflect.isExtensible(sealed); // === false
 
 // フローズンオブジェクトも拡張できないように定義される。
-let frozen = Object.freeze({})
-Reflect.isExtensible(frozen)  // === false
+let frozen = Object.freeze({});
+Reflect.isExtensible(frozen); // === false
 ```
 
 ### Object.isExtensible() との違い
@@ -61,10 +61,10 @@ Reflect.isExtensible(frozen)  // === false
 このメソッドへの最初の引数がオブジェクトではなかった (プリミティブであった) 場合、これは {{jsxref("TypeError")}} を引き起こします。{{jsxref("Object.isExtensible()")}} だと、オブジェクトではない最初の引数はオブジェクトに強制的に変換されます。
 
 ```js
-Reflect.isExtensible(1)
+Reflect.isExtensible(1);
 // TypeError: 1 はオブジェクトではない
 
-Object.isExtensible(1)
+Object.isExtensible(1);
 // false
 ```
 

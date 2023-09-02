@@ -22,8 +22,8 @@ const evtSource = new EventSource("ssedemo.php");
 如果生成事件的脚本不同源，应该创建一个新的包含 URL 和 options 参数的 `EventSource` 对象。例如，假设客户端脚本在 `example.com` 上：
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { 
-  withCredentials: true 
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
 });
 ```
 
@@ -32,13 +32,13 @@ const evtSource = new EventSource("//api.example.com/ssedemo.php", {
 如果服务器发送的消息中没有 [`event`](#event) 字段，则这些消息会被视为 `message` 事件。为了接收这些 message 事件，需要为 {{domxref("EventSource.message_event", "message")}} 事件附加一个事件处理程序。
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = function (event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
   newElement.innerHTML = "message: " + event.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 上面的代码监听了那些从服务器发送来的 message 事件，然后把消息内容显示在页面文档的列表中。

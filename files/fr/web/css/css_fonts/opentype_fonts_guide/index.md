@@ -1,13 +1,6 @@
 ---
 title: Guide des caractéristiques de police OpenType
 slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Polices
-translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
-original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 ---
 
 {{CSSRef}}
@@ -16,7 +9,7 @@ Les caractéristiques de police ou variantes font référence à différents gly
 
 Pour certaines polices, une ou plusieurs caractéristiques sont activées par défaut (le crénage et les ligatures classiques sont souvent activées par exemple). D'autres caractéristiques sont inactives et peuvent être activées par choix dans certaines situations.
 
-En plus des caractéristiques communément utilisées telles que les ligatures ou [les chiffres elzéviriens](https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens), il existe d'autres caractéristiques spécifiques telles que les ensembles stylistiques, les ensembles alternatifs voire des ensembles avec des altérations spécifiques pour une langue donnée. Pour ce dernier cas, ces altérations sont nécessaires à l'expression correcte du langage et il s'agit donc d'une caractéristique qui dépasse largement l'aspect purement stylistique d'autres caractéristiques.
+En plus des caractéristiques communément utilisées telles que les ligatures ou [les chiffres elzéviriens](https://fr.wikipedia.org/wiki/Chiffres_elzéviriens), il existe d'autres caractéristiques spécifiques telles que les ensembles stylistiques, les ensembles alternatifs voire des ensembles avec des altérations spécifiques pour une langue donnée. Pour ce dernier cas, ces altérations sont nécessaires à l'expression correcte du langage et il s'agit donc d'une caractéristique qui dépasse largement l'aspect purement stylistique d'autres caractéristiques.
 
 > **Attention :** Il existe de nombreuses propriétés CSS qui permettent de manipuler les caractéristiques de police. Cependant, la plupart ne sont pas encore complètement implémentées ni prises en charge de façon homogène. Nous les verrons dans cet article mais il faudra la plupart du temps utiliser {{cssxref("font-feature-settings")}} pour les définir à un plus bas niveau. Il est possible d'écrire du CSS qui gère ces deux cas mais c'est plus laborieux. Mais lorsqu'on utilise `font-feature-settings` pour chaque caractéristique, il est nécessaire de réécrire la chaîne entière même si on ne souhaite changer qu'une caractéristique.
 
@@ -102,7 +95,7 @@ Une utilisation fréquente des caractéristiques OpenType est l'activation de «
 Il existe généralement différents types de chiffre dans les polices :
 
 - Les chiffres classiques (ou chiffres Didot) qui sont alignées sur la ligne de base du texte et qui ont la même hauteur que les majuscules
-- [Les chiffres elzéviriens](https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens) qui ont des jambages et des hampes à la façon des autres lettres minuscules. Ces chiffres sont conçus pour être utilisés en incise et se « fondre » au sein des glyphes alentours, à la manières des petites capitales.
+- [Les chiffres elzéviriens](https://fr.wikipedia.org/wiki/Chiffres_elzéviriens) qui ont des jambages et des hampes à la façon des autres lettres minuscules. Ces chiffres sont conçus pour être utilisés en incise et se « fondre » au sein des glyphes alentours, à la manières des petites capitales.
 
 On y retrouve également la notion d'espacement. L'espacement proportionnel est le réglage par défaut et l'espacement tabulaire permet d'avoir un espace identique entre chaque chiffre, quelle que soit la largeur du caractère. Ce dernier mode est notamment utile pour l'affichage de nombre dans des tableaux (où on peut souhaiter comparer des montants d'une ligne à l'autre).
 
@@ -153,7 +146,9 @@ Selon la spécification, on peut fournir le code à quatre caractères de la car
 
 ```css
 .no-ligatures {
-  font-feature-settings: "liga" 0, "dlig" 0;
+  font-feature-settings:
+    "liga" 0,
+    "dlig" 0;
 }
 ```
 
@@ -170,14 +165,14 @@ Ainsi, les petites capitales peuvent être activées de différentes façons mai
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 

@@ -72,7 +72,9 @@ IndexedDB API は必要なエラー処理を最小限にするよう設計され
 let db;
 const request = indexedDB.open("MyTestDatabase");
 request.onerror = (event) => {
-  console.error("なぜ私の ウェブアプリで IndexedDB を使わせてくれないのですか?!");
+  console.error(
+    "なぜ私の ウェブアプリで IndexedDB を使わせてくれないのですか?!",
+  );
 };
 request.onsuccess = (event) => {
   db = event.target.result;
@@ -170,7 +172,7 @@ request.onupgradeneeded = (event) => {
 // 顧客データがどのようなものかを示します
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -206,7 +208,9 @@ request.onupgradeneeded = (event) => {
   // transaction oncomplete を使用します。
   objectStore.transaction.oncomplete = (event) => {
     // 新たに作成した objectStore に値を保存します。
-    const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+    const customerObjectStore = db
+      .transaction("customers", "readwrite")
+      .objectStore("customers");
     customerData.forEach((customer) => {
       customerObjectStore.add(customer);
     });
@@ -235,11 +239,10 @@ request.onupgradeneeded = (event) => {
 const request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = (event) => {
-
   const db = event.target.result;
 
   // autoIncrement フラグに true を設定した、"names" という名前のオブジェクトストアを作成します。
-  const objStore = db.createObjectStore("names", { autoIncrement : true });
+  const objStore = db.createObjectStore("names", { autoIncrement: true });
 
   // "names" オブジェクトストアはキージェネレーターを持っていますので、値 name のキーは自動的に生成されます。
   // 追加したレコードは以下のようになります:
@@ -342,7 +345,10 @@ request.onsuccess = (event) => {
 "単純に" 読み出すにも多くのコードがあります。データベースレベルでエラー処理を行うとすれば、コードを少々短縮できることを以下に示します。
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = (event) => {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = (event) => {
   console.log(`Name for SSN 444-44-4444 is ${event.target.result.name}`);
 };
 ```
@@ -359,7 +365,9 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 読み出したデータを更新して IndexedDB に書き戻す方法は、とてもシンプルです。先ほどのサンプルを多少更新しましょう。
 
 ```js
-const objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+const objectStore = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers");
 const request = objectStore.get("444-44-4444");
 request.onerror = (event) => {
   // エラー処理!
@@ -458,7 +466,9 @@ index.openCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
     // cursor.key は "Bill" のような名前、cursor.value はオブジェクト全体です。
-    console.log(`Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`);
+    console.log(
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
+    );
     cursor.continue();
   }
 };
@@ -574,7 +584,9 @@ function useDatabase(db) {
   // これを行わなければ、ユーザーがタブを閉じるまでデータベースはアップグレードされません。
   db.onversionchange = (event) => {
     db.close();
-    console.log("新しいバージョンのページが使用可能になりました。再読み込みしてください!");
+    console.log(
+      "新しいバージョンのページが使用可能になりました。再読み込みしてください!",
+    );
   };
 
   // データベースを使用する処理

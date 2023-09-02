@@ -1,70 +1,68 @@
 ---
-title: Web media technologies
+title: Tecnologías multimedia de la web
 slug: Web/Media
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/es/docs/Web/Media")}}
 
-Over the years, the Web's ability to present, create, and manage audio, video, and other media has grown at an increasing pace. Today, there are a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to not only perform these tasks, but use media in tandem with other technologies to do truly remarkable things. This article lists the various APIs with links to documentation you may find helpful in mastering them.
+A lo largo de los años, la capacidad de la Web para presentar, crear y administrar audio, video y otros medios ha crecido a un ritmo cada vez mayor. Hoy en día, hay una gran cantidad de API disponibles, así como elementos HTML, interfaces DOM y otras características que hacen posible no solo realizar estas tareas, sino también usar medios en conjunto con otras tecnologías para hacer cosas realmente notables. Este artículo enumera las diversas API con enlaces a la documentación que puede resultarle útil para dominarlas.
 
-## References
+## Referencias
 
 ### HTML
 
-These articles cover HTML features for media developers.
+Estos artículos cubren las características de HTML para los desarrolladores multimedia.
 
 - {{HTMLElement("audio")}}
-  - : The `<audio>` element is used to play audio in a Web context. These can be used invisibly as a destination for more complex media, or with visible controls for user-controlled playback of audio files. Accessible from JavaScript as {{domxref("HTMLAudioElement")}} objects.
+  - : El elemento `<audio>` se utiliza para reproducir audio en un contexto web. Estos se pueden usar de forma invisible como destino para medios más complejos, o con controles visibles para la reproducción de archivos de audio controlada por el usuario. Accesible desde JavaScript como objetos {{domxref("HTMLAudioElement")}}.
 - {{HTMLElement("video")}}
-  - : The `<video>` element is an endpoint for video content in a Web context. It can be used to simply present video files, or as a destination for streamed video content. `<video>` can also be used as a way to link media APIs with other HTML and DOM technologies, including {{HTMLElement("canvas")}} (for frame grabbing and manipulation), for example. Accessible from JavaScript as {{domxref("HTMLVideoElement")}} objects.
+  - : El elemento `<video>` es un punto final para contenido de video en un contexto web. Se puede usar para presentar archivos de video o como destino para contenido de video transmitido. `<video>` también se puede usar como una forma de vincular las API de medios con otras tecnologías HTML y DOM, incluido {{HTMLElement("canvas")}} (para captura y manipulación de fotogramas), por ejemplo. Accesible desde JavaScript como objetos {{domxref("HTMLVideoElement")}}.
 - {{HTMLElement("track")}}
-  - : The HTML `<track>` element can be placed within an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element to provide a reference to a [WebVTT](/es/docs/Web/API/Web_Video_Text_Tracks_Format) format subtitle or caption track to be used when playing the media. Accessible from JavaScript as {{domxref("HTMLTrackElement")}} objects.
+  - : El elemento HTML `<track>` se puede colocar dentro de un elemento {{HTMLElement("audio")}} o {{HTMLElement("video")}} para proporcionar una referencia a un formato de subtítulos o pista de subtítulos [WebVTT](/es/docs/Web/API/WebVTT_API) que se utilizará al reproducir los medios. Accesible desde JavaScript como objetos {{domxref("HTMLTrackElement")}}.
 - {{HTMLElement("source")}}
-  - : The HTML `<source>` element is used within an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element to specify source media to present. Multiple sources can be used to provide the media in different formats, sizes, or resolutions. Accessible from JavaScript as {{domxref("HTMLSourceElement")}} objects.
+  - : El elemento HTML `<source>` se usa dentro de un elemento {{HTMLElement("audio")}} o {{HTMLElement("video")}} para especificar los medios de origen para presentar. Se pueden usar múltiples fuentes para proporcionar los medios en diferentes formatos, tamaños o resoluciones. Accesible desde JavaScript como objetos {{domxref("HTMLSourceElement")}}.
 
-### APIs
+### API
 
-- [Media Capabilities API](/es/docs/Web/API/Media_Capabilities_API)
-  - : The Media Capabilities API lets you determine the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.
-- [Media Capture and Streams API](/es/docs/Web/API/Media_Streams_API)
-  - : A reference for the API which makes it possible to stream, record, and manipulate media both locally and across a network. This includes using local cameras and microphones to capture video, audio, and still images.
-- [MediaStream Recording API](/es/docs/Web/API/MediaStream_Recording_API)
-  - : The MediaStream Recording API lets you capture media streams to process or filter the data or record it to disk.
-- [Web Audio API](/es/docs/Web/API/Web_Audio_API)
-  - : The Web Audio API lets you generate, filter, and manipulate sound data both in real-time and on pre-recorded material, then send that audio to a destination such as an `<audio>` element, a media stream, or to disk.
+- [API de capacidades multimedia](/es/docs/Web/API/Media_Capabilities_API)
+  - : La API de capacidades multimedia le permite determinar las capacidades de codificación y decodificación del dispositivo en el que se ejecuta su aplicación o sitio. Esto le permite tomar decisiones en tiempo real sobre qué formatos usar y cuándo.
+- [API de transmisión y captura de medios](/es/docs/Web/API/Media_Capture_and_Streams_API)
+  - : Una referencia para la API que hace posible transmitir, grabar y manipular medios tanto localmente como a través de una red. Esto incluye el uso de cámaras y micrófonos locales para capturar video, audio e imágenes fijas.
+- [API de sesión multimedia](/es/docs/Web/API/Media_Session_API)
+  - : La API de sesión multimedia proporciona una forma de personalizar las notificaciones de medios. Para ello, proporciona metadatos para que los muestre el agente de usuario para los medios que reproduce su aplicación web. También proporciona controladores de acciones que el navegador puede usar para acceder a las teclas multimedia de la plataforma, como las teclas de hardware que se encuentran en los teclados, los auriculares, los controles remotos y las teclas de software que se encuentran en las áreas de notificación y en las pantallas de bloqueo de los dispositivos móviles.
+- [API de grabación de MediaStream](/es/docs/Web/API/MediaStream_Recording_API)
+  - : La API de grabación de MediaStream le permite capturar secuencias de medios para procesar o filtrar los datos o grabarlos en el disco.
+- [API de audio web](/es/docs/Web/API/Web_Audio_API)
+  - : La API de audio web le permite generar, filtrar y manipular datos de sonido tanto en tiempo real como en material pregrabado, y luego enviar ese audio a un destino como un elemento `<audio>`, un flujo de medios o un disco. .
 - [WebRTC](/es/docs/Web/API/WebRTC_API)
-  - : WebRTC (Web Real-Time Communication) makes it possible to stream live audio and video, as well as transfer arbitrary data, between two peers over the Internet, without requiring an intermediary.
+  - : WebRTC (Web Real-Time Communication) hace posible la transmisión de audio y video en vivo, así como la transferencia de datos arbitrarios, entre dos pares a través de Internet, sin necesidad de un intermediario.
 
-## Guides
+## Guías
 
-- [Overview of media technology on the web](/es/docs/Web/Media/Overview)
-  - : A general look at the open Web technologies and APIs that provide support for audio and video playback, manipulation, and recording. If you're not sure which API you should use, this is the place to start.
-- [Using audio and video in HTML](/es/docs/Web/Media/HTML_media)
-  - : A guide to using the HTML `<audio>` and `<video>` elements.
-- [Accessibility guide for media in web design](/es/docs/Web/Media/Accessibility)
-  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from simply using the [`alt`](/es/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
-- [Guide to media types and formats on the web](/es/docs/Web/Media/Formats)
-  - : A guide to the file types and codecs available for images, audio, and video media on the web. This includes recommendations for what formats to use for what kinds of content, best practices including how to provide fallbacks and how to prioritize media types, and also includes general browser support information for each media container and codec.
-- [Streaming audio and video](/es/docs/Web/Media/Streaming)
-  - : A guide which covers how to stream audio and video, as well as techniques and technologies you can take advantage of to ensure the best possible quality and/or performance of your streams.
-- [Autoplay guide for media and Web Audio APIs](/es/docs/Web/Media/Autoplay_guide)
-  - : Unexpected automatic playback of media or audio can be an unwelcome surprise to users. While autoplay serves a purpose, it should be used carefully. To give users control over this, many browsers now provide forms of autoplay blocking. This article is a guide to autoplay, with tips on when and how to use it and how to work with browsers to handle autoplay blocking gracefully.
-- [Positional audio in a 3D environment](/es/docs/Web/Media/3D_audio)
-  - : In 3D environments, which may either be 3D scenes rendered to the screen or a mixed reality experience experienced using a headset, it's important for audio to be performed so that it sounds like it's coming from the direction of its source. This guide covers how to accomplish this.
-- [Playing video in a 3D environment](/es/docs/Web/Media/3D_video)
-  - : In this guide, we examine how to play video into a 3D scene. This technique can be used in both standard [WebGL](/es/docs/Web/API/WebGL_API) applications presented on a flat computer screen, or in a [WebXR](/es/docs/Web/API/WebXR_Device_API)-generated virtual or augmented reality environment.
+- [Uso de audio y video en HTML](/es/docs/Web/Media/HTML_media)
+  - : Una guía para usar los elementos HTML `<audio>` y `<video>`.
+- [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
+  - : En esta guía, cubrimos las formas en que los diseñadores y desarrolladores web pueden crear contenido que sea accesible para personas con diferentes capacidades. Esto va desde el uso del atributo [`alt`](/es/docs/Web/HTML/Element/img#alt) en elementos {{HTMLElement("img")}} hasta subtítulos y etiquetado de medios para lectores de pantalla.
+- [Guía de tipos y formatos de medios en la web](/es/docs/Web/Media/Formats)
+  - : Una guía de los tipos de archivos y códecs disponibles para imágenes, audio y video en la web. Esto incluye recomendaciones sobre qué formatos usar para qué tipo de contenido, las mejores prácticas que incluyen cómo proporcionar respaldos y cómo priorizar los tipos de medios, y también incluye información general de soporte del navegador para cada contenedor de medios y códec.
+- [Transmisión de audio y video](/es/docs/Web/Media/Streaming)
+  - : Una guía que cubre cómo transmitir audio y video, así como técnicas y tecnologías que puede aprovechar para garantizar la mejor calidad o rendimiento posible de sus transmisiones.
+- [Guía de reproducción automática para API de audio web y multimedia](/es/docs/Web/Media/Autoplay_guide)
+  - : La reproducción automática inesperada de medios o audio puede ser una sorpresa desagradable para los usuarios. Si bien la reproducción automática tiene un propósito, debe usarse con cuidado. Para dar a los usuarios control sobre esto, muchos navegadores ahora ofrecen formas de bloqueo de reproducción automática. Este artículo es una guía para la reproducción automática, con consejos sobre cuándo y cómo usarla y cómo trabajar con los navegadores para manejar correctamente el bloqueo de la reproducción automática.
+- [Conceptos básicos de espacialización de audio web](/es/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+  - : En entornos 3D, que pueden ser escenas 3D representadas en la pantalla o una experiencia de realidad mixta experimentada con auriculares, es importante que el audio se realice de manera que suene como si viniera de la dirección de su fuente. Esta guía cubre cómo lograr esto.
 
-<!---->
+## Otros temas
 
-## Other topics
+Temas relacionados que pueden ser de interés, ya que se pueden usar junto con las API de medios de maneras interesantes.
 
-Related topics which may be of interest, since they can be used in tandem with media APIs in interesting ways.
-
-- [The Canvas API](/es/docs/Web/API/Canvas_API)
-  - : The Canvas API lets you draw into an {{HTMLElement("canvas")}}, manipulating and changing the contents of an image. This can be used with media in many ways, including by setting a `<canvas>` element as the destination for video playback or camera capture so that you can capture and manipulate video frames.
+- [La API de Canvas (lienzo)](/es/docs/Web/API/Canvas_API)
+  - : La API de Canvas le permite dibujar en un {{HTMLElement("canvas")}}, manipular y cambiar el contenido de una imagen. Esto se puede usar con medios de muchas maneras, incluso configurando un elemento `<canvas>` como el destino para la reproducción de video o la captura de cámara para que pueda capturar y manipular cuadros de video.
 - [WebGL](/es/docs/Web/API/WebGL_API)
-  - : WebGL provides an OpenGL ES compatible API on top of the existing Canvas API, making it possible to do powerful 3D graphics on the Web. Through a canvas, this can be used to add 3D imagery to media content.
-- [WebXR](/es/docs/Web/API/WebXR_API)
-  - : WebXR, which has replaced the now-obsolete WebVR API, is a technology that provides support for creating virtual reality (VR) and augmented reality (AR) content. The mixed reality content can then be displayed on the device's screen or using goggles or a headset.
+  - : WebGL proporciona una API compatible con OpenGL ES además de la API Canvas existente, lo que hace posible crear potentes gráficos 3D en la Web. A través de un lienzo, esto se puede usar para agregar imágenes en 3D al contenido multimedia.
+- [WebXR](/es/docs/Web/API/WebXR_Device_API)
+  - : WebXR, que reemplazó a la ahora obsoleta API de WebVR, es una tecnología que brinda soporte para crear contenido de realidad virtual (VR) y realidad aumentada (AR). El contenido de realidad mixta se puede mostrar en la pantalla del dispositivo o usando gafas o auriculares.
 - [WebVR](/es/docs/Web/API/WebVR_API) {{deprecated_inline}}
-  - : The Web Virtual Reality API supports virtual reality (VR) devices such as the Oculus Rift or the HTC Vive, making it possible for developers to translate position and movement of the user into movement within a 3D scene which is then presented on the device. WebVR has been replaced by WebXR, and is due to be removed from browsers soon.
+  - : La API Web de Realidad Virtual admite dispositivos de realidad virtual (VR) como Oculus Rift o HTC Vive, lo que permite a los desarrolladores traducir la posición y el movimiento del usuario en movimiento dentro de una escena 3D que luego se presenta en el dispositivo. WebVR ha sido reemplazado por WebXR y pronto se eliminará de los navegadores.

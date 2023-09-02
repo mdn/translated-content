@@ -1,7 +1,6 @@
 ---
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect_static
-original_slug: Web/API/DOMRect/fromRect
 ---
 
 {{APIRef("Geometry Interfaces")}}
@@ -11,7 +10,7 @@ original_slug: Web/API/DOMRect/fromRect
 ## 구문
 
 ```js
-DOMRect.fromRect(rectangle)
+DOMRect.fromRect(rectangle);
 ```
 
 ### 매개변수

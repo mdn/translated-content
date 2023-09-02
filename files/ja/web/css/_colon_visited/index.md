@@ -1,5 +1,5 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
 ---
 
@@ -41,7 +41,7 @@ visited
 ### HTML
 
 ```html
-<a href="#test-visited-link">このリンクを訪問しましたか？</a><br>
+<a href="#test-visited-link">このリンクを訪問しましたか？</a><br />
 <a href="">このリンクはすでに訪問済みです。</a>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: pushsubscriptionchange イベント'
+title: "ServiceWorkerGlobalScope: pushsubscriptionchange イベント"
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
@@ -18,9 +18,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pushsubscriptionchange', (event) => { });
+addEventListener("pushsubscriptionchange", (event) => {});
 
-onpushsubscriptionchange = (event) => { };
+onpushsubscriptionchange = (event) => {};
 ```
 
 ## イベント型
@@ -40,22 +40,26 @@ onpushsubscriptionchange = (event) => { };
 この例は、サービスワーカーのコンテキストで実行するものであり、 `pushsubscriptionchange` イベントを待ち受けて、無効になった場合に再加入します。
 
 ```js
-self.addEventListener("pushsubscriptionchange", (event) => {
-  const subscription = swRegistration.pushManager
-    .subscribe(event.oldSubscription.options)
-    .then((subscription) =>
-      fetch("register", {
-        method: "post",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          endpoint: subscription.endpoint,
+self.addEventListener(
+  "pushsubscriptionchange",
+  (event) => {
+    const subscription = swRegistration.pushManager
+      .subscribe(event.oldSubscription.options)
+      .then((subscription) =>
+        fetch("register", {
+          method: "post",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            endpoint: subscription.endpoint,
+          }),
         }),
-      }),
-    );
-  event.waitUntil(subscription);
-}, false);
+      );
+    event.waitUntil(subscription);
+  },
+  false,
+);
 ```
 
 加入の有効期限が切れたことを示す `pushsubscriptionchange` イベントが到着すると、プッシュマネージャーの {{domxref("PushManager.subscribe", "subscribe()")}} メソッドを呼び出して再加入します。返されたプロミスが解決されると、新しい加入を受け取ります。これは、 {{domxref("fetch()")}} 呼び出しを使用してアプリサーバーに配信され、 {{Glossary("JSON")}} 形式で加入の {{domxref("PushSubscription.endpoint", "endpoint")}} の返信をアプリサーバーに送信します。
@@ -64,11 +68,13 @@ self.addEventListener("pushsubscriptionchange", (event) => {
 
 ```js
 self.onpushsubscriptionchange = (event) => {
-  event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then((subscription) => {
-      /* ... */
-    })
-  )
+  event.waitUntil(
+    swRegistration.pushManager
+      .subscribe(event.oldSubscription.options)
+      .then((subscription) => {
+        /* ... */
+      }),
+  );
 };
 ```
 

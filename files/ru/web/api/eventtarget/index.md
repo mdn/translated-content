@@ -1,10 +1,6 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
-tags:
-  - DOM
-  - Interface
-translation_of: Web/API/EventTarget
 ---
 
 {{ ApiRef("DOM Events") }}
@@ -24,15 +20,11 @@ translation_of: Web/API/EventTarget
 - {{domxref("EventTarget.dispatchEvent()")}}
   - : Генерирует событие на объекте `EventTarget`.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                     | Статус                           | Комментарий                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}                         | {{Spec2('DOM WHATWG')}} | Без изменений.                                                                                                    |
-| {{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}} | {{Spec2('DOM3 Events')}} | Несколько параметров теперь являются необязательными (`listener`), или принимают нулевое значение (`useCapture`). |
-| {{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}             | {{Spec2('DOM2 Events')}} | Начальное определение.                                                                                            |
+{{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

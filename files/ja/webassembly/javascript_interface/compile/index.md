@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ## 構文
 
 ```js
-WebAssembly.compile(bufferSource)
+WebAssembly.compile(bufferSource);
 ```
 
 ### 引数
@@ -37,13 +36,10 @@ WebAssembly.compile(bufferSource)
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 > **メモ:** おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。

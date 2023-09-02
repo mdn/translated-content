@@ -1,14 +1,6 @@
 ---
 title: Метод EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - DOM
-  - EventTarget
-  - addEventListener
-  - Обработчик
-  - Событие
-  - метод
-translation_of: Web/API/EventTarget/addEventListener
 ---
 
 {{apiref("DOM Events")}}
@@ -73,9 +65,9 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
 
 ```js
 function eventHandler(event) {
-  if (event.type == 'fullscreenchange') {
+  if (event.type == "fullscreenchange") {
     /* Переключатель полноэкранного режима */
-  } else /* fullscreenerror */ {
+  } /* fullscreenerror */ else {
     /* Ошибка переключателя полноэкранного режима */
   }
 }
@@ -94,13 +86,13 @@ var passiveSupported = false;
 
 try {
   var options = Object.defineProperty({}, "passive", {
-    get: function() {
+    get: function () {
       passiveSupported = true;
-    }
+    },
   });
 
   window.addEventListener("test", null, options);
-} catch(err) {}
+} catch (err) {}
 ```
 
 Этот код создаёт объект `options` с геттером для свойства passive, устанавливающим флаг `passiveSupported` в `true`, если он вызван. Это означает, что если браузер проверяет значение свойства `passive` на объекте `options`, значение `passiveSupported` будет установлено в true; в противном случае он останется ложным. Затем мы вызываем `addEventListener`, чтобы настроить фальшивый обработчик событий, указав эти параметры для проверки опций, если браузер распознает объект в качестве третьего параметра.
@@ -110,8 +102,11 @@ try {
 Если вы хотите добавить обработчик событий, использующий параметры, о которых идёт речь, вы можете сделать это подобным образом:
 
 ```js
-someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
-                               ? { passive: true } : false);
+someElement.addEventListener(
+  "mouseup",
+  handleMouseUp,
+  passiveSupported ? { passive: true } : false,
+);
 ```
 
 Здесь мы добавляем обработчик события {{event ("mouseup")}} элемента `someElement`. Для третьего параметра, если `passiveSupported` имеет значение `true`, мы указываем объект `options` с `passive: true`; в противном случае мы знаем, что нам нужно передать логическое значение, и мы передаём `false` как значение параметра `useCapture`.
@@ -130,8 +125,12 @@ someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
 
 ```html
 <table id="outside">
-    <tr><td id="t1">один</td></tr>
-    <tr><td id="t2">два</td></tr>
+  <tr>
+    <td id="t1">один</td>
+  </tr>
+  <tr>
+    <td id="t2">два</td>
+  </tr>
 </table>
 ```
 
@@ -167,8 +166,12 @@ el.addEventListener("click", modifyText, false);
 
 ```html
 <table id="outside">
-    <tr><td id="t1">один</td></tr>
-    <tr><td id="t2">два</td></tr>
+  <tr>
+    <td id="t1">один</td>
+  </tr>
+  <tr>
+    <td id="t2">два</td>
+  </tr>
 </table>
 ```
 
@@ -183,7 +186,13 @@ function modifyText(new_text) {
 
 // Функция, добавляющая обработчик к таблице
 el = document.getElementById("outside");
-el.addEventListener("click", function(){modifyText("четыре")}, false);
+el.addEventListener(
+  "click",
+  function () {
+    modifyText("четыре");
+  },
+  false,
+);
 ```
 
 Обратите внимание, что addEvenListener - это анонимная функция, которая инкапсулирует код, который, в свою очередь, может отправлять параметры функции modifyText(), которая отвечает за фактический ответ на событие.
@@ -198,8 +207,12 @@ el.addEventListener("click", function(){modifyText("четыре")}, false);
 
 ```html
 <table id="outside">
-    <tr><td id="t1">one</td></tr>
-    <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -214,7 +227,13 @@ function modifyText(new_text) {
 
 // Add event listener to table with an arrow function
 var el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  () => {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 #### Результат
@@ -252,53 +271,54 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 ```html
 <table id="t" onclick="modifyText();">
   . . .
+</table>
 ```
 
 Значение переменной `this` внутри `modifyText()` при вызове событием клика будет равно ссылке на глобальный (window) объект (или `undefined` при использовании [strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode))
 
-> **Примечание:** В JavaScript 1.8.5 введён метод [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind), который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что вам будет необходимо иметь внешнюю ссылку на обработчик, чтобы вы могли удалить его позже.
+> **Примечание:** В JavaScript 1.8.5 введён метод [`Function.prototype.bind()`](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind), который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что вам будет необходимо иметь внешнюю ссылку на обработчик, чтобы вы могли удалить его позже.
 
 Пример с использованием `bind` и без него:
 
 ```js
-var Something = function(element) {
-  this.name = 'Something Good';
-  this.onclick1 = function(event) {
+var Something = function (element) {
+  this.name = "Something Good";
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, так как this является элементом
   };
-  this.onclick2 = function(event) {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', так как в this передано значение объекта Something
   };
-  element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
-}
+  element.addEventListener("click", this.onclick1, false);
+  element.addEventListener("click", this.onclick2.bind(this), false); // Trick
+};
 ```
 
 Проблема в примере выше заключается в том, что вы не можете удалить обработчик, вызванный с `bind`. Другое решение использует специальную функцию `handleEvent`, чтобы перехватывать любые события:
 
 ```js
-var Something = function(element) {
-  this.name = 'Something Good';
-  this.handleEvent = function(event) {
+var Something = function (element) {
+  this.name = "Something Good";
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', так как this является объектом Something
-    switch(event.type) {
-      case 'click':
+    switch (event.type) {
+      case "click":
         // код обработчика...
         break;
-      case 'dblclick':
+      case "dblclick":
         // код обработчика...
         break;
     }
   };
 
   // В этом случае обработчики хранятся в this, а не в this.handleEvent
-  element.addEventListener('click', this, false);
-  element.addEventListener('dblclick', this, false);
+  element.addEventListener("click", this, false);
+  element.addEventListener("dblclick", this, false);
 
   // Вы можете напрямую удалять обработчики
-  element.removeEventListener('click', this, false);
-  element.removeEventListener('dblclick', this, false);
-}
+  element.removeEventListener("click", this, false);
+  element.removeEventListener("dblclick", this, false);
+};
 ```
 
 ### Наследство Internet Explorer и attachEvent
@@ -307,9 +327,9 @@ var Something = function(element) {
 
 ```js
 if (el.addEventListener) {
-  el.addEventListener('click', modifyText, false);
-} else if (el.attachEvent)  {
-  el.attachEvent('onclick', modifyText);
+  el.addEventListener("click", modifyText, false);
+} else if (el.attachEvent) {
+  el.attachEvent("onclick", modifyText);
 }
 ```
 
@@ -322,59 +342,79 @@ if (el.addEventListener) {
 > **Примечание:** useCapture не поддерживается, так как IE 8 не имеет альтернативного метода для этого. Также заметьте, что следующий код только добавляет поддержку IE 8. Также, он работает только при соблюдении стандартов: объявление DOCTYPE страницы обязательно.
 
 ```js
-(function() {
+(function () {
   if (!Event.prototype.preventDefault) {
-    Event.prototype.preventDefault=function() {
-      this.returnValue=false;
+    Event.prototype.preventDefault = function () {
+      this.returnValue = false;
     };
   }
   if (!Event.prototype.stopPropagation) {
-    Event.prototype.stopPropagation=function() {
-      this.cancelBubble=true;
+    Event.prototype.stopPropagation = function () {
+      this.cancelBubble = true;
     };
   }
   if (!Element.prototype.addEventListener) {
-    var eventListeners=[];
+    var eventListeners = [];
 
-    var addEventListener=function(type,listener /*, useCapture (will be ignored) */) {
-      var self=this;
-      var wrapper=function(e) {
-        e.target=e.srcElement;
-        e.currentTarget=self;
+    var addEventListener = function (
+      type,
+      listener /*, useCapture (will be ignored) */,
+    ) {
+      var self = this;
+      var wrapper = function (e) {
+        e.target = e.srcElement;
+        e.currentTarget = self;
         if (listener.handleEvent) {
           listener.handleEvent(e);
         } else {
-          listener.call(self,e);
+          listener.call(self, e);
         }
       };
-      if (type=="DOMContentLoaded") {
-        var wrapper2=function(e) {
-          if (document.readyState=="complete") {
+      if (type == "DOMContentLoaded") {
+        var wrapper2 = function (e) {
+          if (document.readyState == "complete") {
             wrapper(e);
           }
         };
-        document.attachEvent("onreadystatechange",wrapper2);
-        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper2});
+        document.attachEvent("onreadystatechange", wrapper2);
+        eventListeners.push({
+          object: this,
+          type: type,
+          listener: listener,
+          wrapper: wrapper2,
+        });
 
-        if (document.readyState=="complete") {
-          var e=new Event();
-          e.srcElement=window;
+        if (document.readyState == "complete") {
+          var e = new Event();
+          e.srcElement = window;
           wrapper2(e);
         }
       } else {
-        this.attachEvent("on"+type,wrapper);
-        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper});
+        this.attachEvent("on" + type, wrapper);
+        eventListeners.push({
+          object: this,
+          type: type,
+          listener: listener,
+          wrapper: wrapper,
+        });
       }
     };
-    var removeEventListener=function(type,listener /*, useCapture (will be ignored) */) {
-      var counter=0;
-      while (counter<eventListeners.length) {
-        var eventListener=eventListeners[counter];
-        if (eventListener.object==this && eventListener.type==type && eventListener.listener==listener) {
-          if (type=="DOMContentLoaded") {
-            this.detachEvent("onreadystatechange",eventListener.wrapper);
+    var removeEventListener = function (
+      type,
+      listener /*, useCapture (will be ignored) */,
+    ) {
+      var counter = 0;
+      while (counter < eventListeners.length) {
+        var eventListener = eventListeners[counter];
+        if (
+          eventListener.object == this &&
+          eventListener.type == type &&
+          eventListener.listener == listener
+        ) {
+          if (type == "DOMContentLoaded") {
+            this.detachEvent("onreadystatechange", eventListener.wrapper);
           } else {
-            this.detachEvent("on"+type,eventListener.wrapper);
+            this.detachEvent("on" + type, eventListener.wrapper);
           }
           eventListeners.splice(counter, 1);
           break;
@@ -382,15 +422,15 @@ if (el.addEventListener) {
         ++counter;
       }
     };
-    Element.prototype.addEventListener=addEventListener;
-    Element.prototype.removeEventListener=removeEventListener;
+    Element.prototype.addEventListener = addEventListener;
+    Element.prototype.removeEventListener = removeEventListener;
     if (HTMLDocument) {
-      HTMLDocument.prototype.addEventListener=addEventListener;
-      HTMLDocument.prototype.removeEventListener=removeEventListener;
+      HTMLDocument.prototype.addEventListener = addEventListener;
+      HTMLDocument.prototype.removeEventListener = removeEventListener;
     }
     if (Window) {
-      Window.prototype.addEventListener=addEventListener;
-      Window.prototype.removeEventListener=removeEventListener;
+      Window.prototype.addEventListener = addEventListener;
+      Window.prototype.removeEventListener = removeEventListener;
     }
   }
 })();
@@ -405,7 +445,7 @@ if (el.addEventListener) {
 el.onclick = modifyText;
 
 // Использование функционального выражения
-element.onclick = function() {
+element.onclick = function () {
   // ... логика функции ...
 };
 ```
@@ -418,19 +458,25 @@ element.onclick = function() {
 
 ```js
 var i;
-var els = document.getElementsByTagName('*');
+var els = document.getElementsByTagName("*");
 
 // Случай 1
-for(i=0 ; i<els.length ; i++){
-  els[i].addEventListener("click", function(e){/*некоторые действия*/}, false);
+for (i = 0; i < els.length; i++) {
+  els[i].addEventListener(
+    "click",
+    function (e) {
+      /*некоторые действия*/
+    },
+    false,
+  );
 }
 
 // Случай 2
-function processEvent(e){
+function processEvent(e) {
   /*некоторые действия*/
 }
 
-for(i=0 ; i<els.length ; i++){
+for (i = 0; i < els.length; i++) {
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -445,18 +491,25 @@ for(i=0 ; i<els.length ; i++){
 /* Не позволяем обработчику блокировать показ страницы */
 var passiveSupported = false;
 try {
-    window.addEventListener(
-        "test",
-        null,
-        Object.defineProperty({}, "passive", { get: function() { passiveSupported = true; } }));
-} catch(err) {}
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get: function () {
+        passiveSupported = true;
+      },
+    }),
+  );
+} catch (err) {}
 
 /* Добавляем обработчик событий */
-var elem = document.getElementById('elem');
+var elem = document.getElementById("elem");
 elem.addEventListener(
-    'touchmove',
-    function listener() {   /* do something */ },
-    passiveSupported ? { passive: true } : false
+  "touchmove",
+  function listener() {
+    /* do something */
+  },
+  passiveSupported ? { passive: true } : false,
 );
 ```
 
@@ -476,15 +529,11 @@ elem.addEventListener(
 
 ## Спецификации
 
-| Specification                                                                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Initial definition |
+{{Specifications}}
 
-## Кроссбраузерность
+## Совместимость с браузерами
 
-{{Compat("api.EventTarget.addEventListener", 3)}}
+{{Compat}}
 
 ## Дополнительная информация
 

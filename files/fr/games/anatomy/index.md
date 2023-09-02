@@ -1,7 +1,6 @@
 ---
 title: Anatomie d'un jeu vidéo
 slug: Games/Anatomy
-translation_of: Games/Anatomy
 ---
 
 {{GamesSidebar}}
@@ -14,11 +13,11 @@ Le but de chaque jeu vidéo est de **présenter** à (aux) utilisateur(s) une si
 
 Ces spécificités dépendent du jeu.
 
-Certains jeu maintiennent ce cycle par les entrées du joueur. Imaginez que vous développez un jeu du type *"trouvez les différences entre ces deux images"*. Ces jeux **présentent** deux images à l'utilisateur; ils **accèptent** leur clics (ou touchés); ils **interprètent** l'entrée comme un succès, une erreur, une pause, une interaction de menu, etc.; finalement, ils **calculent** une scène mise à jour resultant de l'entrée de donnée. La boucle du jeu évolue par l'entrée de l'utilisateur et s'arrête jusqu'à ce qu'il en soumette une nouvelle. C'est plus une approche au coup par coup qui ne demande pas une mise à jour continuelle de chaque image, mais juste quand le joueur réagit.
+Certains jeu maintiennent ce cycle par les entrées du joueur. Imaginez que vous développez un jeu du type _"trouvez les différences entre ces deux images"_. Ces jeux **présentent** deux images à l'utilisateur; ils **accèptent** leur clics (ou touchés); ils **interprètent** l'entrée comme un succès, une erreur, une pause, une interaction de menu, etc.; finalement, ils **calculent** une scène mise à jour resultant de l'entrée de donnée. La boucle du jeu évolue par l'entrée de l'utilisateur et s'arrête jusqu'à ce qu'il en soumette une nouvelle. C'est plus une approche au coup par coup qui ne demande pas une mise à jour continuelle de chaque image, mais juste quand le joueur réagit.
 
 D'autres jeux demandent un contrôle précis à chaque fraction de seconde. Les principes sont les mêmes avec une légère différence: chaque animation fait progresser le cycle et tout changement d'entrée d'un utilisateur est capturé dès que possible. Ce modèle au coup par image est implementé dans ce que l'on appelle la **boucle principale**. Si vos boucles de jeu sont basées sur le temps alors ce sera là-dessus que seront basées vos simulations.
 
-Mais parfois ce n'est pas un contrôle dans le temps. Votre boucle de jeu peut être similaire à l'exemple *cherchez les différences* et se baser directement sur les entrées. Cela peut être nécessaire d'avoir à la fois les entrées et un temps simulé. Cela peut aussi être basé sur une boucle qui utilise d'autre chose.
+Mais parfois ce n'est pas un contrôle dans le temps. Votre boucle de jeu peut être similaire à l'exemple _cherchez les différences_ et se baser directement sur les entrées. Cela peut être nécessaire d'avoir à la fois les entrées et un temps simulé. Cela peut aussi être basé sur une boucle qui utilise d'autre chose.
 
 Le JavaScript moderne — comme décrit dans les prochaines sections — heureusement, facilite le développement d'une boucle efficace éxécutée une fois par seconde. Bien sûr, votre jeu sera optimisé au long de sa conception. Si quelque chose doit s'apparenter à un évènement peu fréquent alors il sera préférable de briser la boucle principale (mais pas tout le temps).
 
@@ -30,7 +29,7 @@ Certain programmes ont besoin d'être lancés image-par-image alors pourquoi y a
 
 ```js
 window.main = function () {
-  window.requestAnimationFrame( main );
+  window.requestAnimationFrame(main);
 
   //Qu'importe ce que votre boucle principale doit faire.
 };
@@ -50,19 +49,19 @@ Pourtant n'imaginez pas que les animations requièrent un contrôle image-par-im
 
 ## Construire une meilleure boucle principale en Javascript
 
-Il y a deux problèmes évidents avec notre boucle principale précédente: `main()` pollue l'objet `{{ domxref("window") }}` (où sont stockées toutes les variables globales) et l'exemple donné ne nous permet pas de *stopper* la boucle à moins que l'onglet du navigateur ne soit fermé ou rafraîchit. Pour le premier problème, si vous désirez que la boucle principale tourne simplement sans y accéder directement, vous pouvez en crééer une fonction à accès immédiat -(FAI ou "Immediately-Invoked Function Expression - IIFE").
+Il y a deux problèmes évidents avec notre boucle principale précédente: `main()` pollue l'objet `{{ domxref("window") }}` (où sont stockées toutes les variables globales) et l'exemple donné ne nous permet pas de _stopper_ la boucle à moins que l'onglet du navigateur ne soit fermé ou rafraîchit. Pour le premier problème, si vous désirez que la boucle principale tourne simplement sans y accéder directement, vous pouvez en crééer une fonction à accès immédiat -(FAI ou "Immediately-Invoked Function Expression - IIFE").
 
 ```js
 /*
-* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-*/
+ * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+ * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+ * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+ * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ */
 
-;(function () {
+(function () {
   function main() {
-    window.requestAnimationFrame( main );
+    window.requestAnimationFrame(main);
 
     // Contenu de votre boucle principale.
   }
@@ -79,17 +78,17 @@ Pour le second problème, arrêter la boucle principale, vous aurez besoin d'ann
 
 ```js
 /*
-* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-*
-* Assumons aussi que MyGame est défini précédemment.
-*/
+ * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+ * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+ * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+ * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ *
+ * Assumons aussi que MyGame est défini précédemment.
+ */
 
-;(function () {
+(function () {
   function main() {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Contenu de votre boucle principale.
   }
@@ -101,7 +100,7 @@ Pour le second problème, arrêter la boucle principale, vous aurez besoin d'ann
 Nous avons maintenant une variable déclarée dans l'espace de nom `MyGame`, que nous appelons `stopMain`, qui contient la valeur de l'appel de notre boucle principale `requestAnimationFrame()` la plus récente. À tout moment, nous pouvons stopper la boucle principale en disant au navigateur d'annuler la requête qui correspond à notre valeur.
 
 ```js
-window.cancelAnimationFrame( MyGame.stopMain );
+window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
 La clé pour programmer une boucle principale, en JavaScript, est d'attacher n'importe quel évènement qui doit diriger votre action et porter attention aux systèmes interconnectés. Vous pourriez avoir différents composants dirigés par différents évènements. Cela paraît comme d'une complexité inutile mais cela peut être une bonne optimisation (pas nécessairement, bien sûr). Le problème c'est que vous ne programmez pas une boucle principale typique. En Javascript, vous utilisez la boucle principale du navigateur et vous essayez de le faire avec efficacité.
@@ -110,7 +109,7 @@ La clé pour programmer une boucle principale, en JavaScript, est d'attacher n'i
 
 En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale et votre code existe dans certaines de ses étapes. La section ci-dessus décrit des boucles principales qui essaient de ne pas lâcher le contrôle du navigateur. Ces méthodes principales s'attachent à `window.requestAnimationFrame()`, qui demandent au navigateur le contrôle sur la prochaine image qui arrive. C'est au navigateur de décider de la gestion de sa boucle principale. Les spécifications du [W3C en matière de requestAnimationFrame](http://www.w3.org/TR/animation-timing/) ne définissent pas exactement quand les navigateur doivent éxécuter les rappels de requestAnimationFrame. Cela pourrait être bénéfique car cela laisse aux concepteurs de navigateurs la liberté d'expérimenter les solutions qu'ils pensent être les meilleures au travers du temps.
 
-Les versions modernes de Firefox et Google Chrome (et probablement d'autres)*tentent* de connecter les rappels de `requestAnimationFrame` à leur fil principal au tout début de chaque image. De ce fait, le déroulement principal *essaye* d'être le plus possible comme ci-dessous:
+Les versions modernes de Firefox et Google Chrome (et probablement d'autres)_tentent_ de connecter les rappels de `requestAnimationFrame` à leur fil principal au tout début de chaque image. De ce fait, le déroulement principal _essaye_ d'être le plus possible comme ci-dessous:
 
 1. Débuter une nouvelle image (pendant que la précédente est prise en charge par l'affichage).
 2. Passer à travers la liste de retours `requestAnimationFrame` et les appeler.
@@ -119,7 +118,7 @@ Les versions modernes de Firefox et Google Chrome (et probablement d'autres)*ten
 
 Vous pouvez considérer que développer une application en temps réél est comme avoir un temps donné pour faire le travail. Toutes les étapes ci-dessus doivent prendre effet toutes les 16.5 millisecondes pour fonctionner avec un affichage de 60Hz. Les navigateurs invoquent leur code aussitôt que possible pour donner un maximum de temps aux calculs. Votre fil principal va souvent débuter par les tâches qui ne sont même pas dans le fil principal (tel que la rasterisation ou les ombrages en WebGL). Les longs calculs peuvent être fait par un Web Worker ou une accélération matérielle en même temps que le navigateur utilise son propre fil principal pour passer le ramasse-miette, ces autres tâches, ou gérer les évènements asynchrones.
 
-Bien que nous ne discutons pas du gain de temps, plusieurs navigateur ont un outil appelé *Temps Haute Résolution*. L'objet {{ domxref("Date") }} n'est plus la méthode reconnue pour temporiser les évènements car elle est très imprécise et peut être modifiée par l'horloge système. Le Temps Haute Résolution, d'un autre côté, compte le nombre de millisecondes depuis `navigationStart` (quand le document précédent est déchargé). Cette valeur est retournée en un nombre décimal précis au millième de seconde. Il est connu comme étant `{{ domxref("DOMHighResTimeStamp") }}` mais, à toutes fins utiles, considérez le comme un nombre décimal à virgule flottante.
+Bien que nous ne discutons pas du gain de temps, plusieurs navigateur ont un outil appelé _Temps Haute Résolution_. L'objet {{ domxref("Date") }} n'est plus la méthode reconnue pour temporiser les évènements car elle est très imprécise et peut être modifiée par l'horloge système. Le Temps Haute Résolution, d'un autre côté, compte le nombre de millisecondes depuis `navigationStart` (quand le document précédent est déchargé). Cette valeur est retournée en un nombre décimal précis au millième de seconde. Il est connu comme étant `{{ domxref("DOMHighResTimeStamp") }}` mais, à toutes fins utiles, considérez le comme un nombre décimal à virgule flottante.
 
 **Note**: Les systèmes (matériels ou logiciels) qui ne sont pas capables d'avoir une précision à la microseconde sont autorisés à fournir une précision à la milliseconde au minimum. Sinon, ils devraient fournir une précision de 0.001ms s'ils en sont capables.
 
@@ -133,17 +132,17 @@ Retournons sur le sujet de la boucle principale. Il vous arrivera souvent de vou
 
 ```js
 /*
-* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-*
-* Assumons aussi que MyGame est défini précédemment.
-*/
+ * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+ * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+ * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+ * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ *
+ * Assumons aussi que MyGame est défini précédemment.
+ */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+(function () {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Contenu de votre boucle principale.
     // tFrame, provenant de "function main ( tFrame )", est maintenant un DOMHighResTimeStamp (Temps Haute Résolution du DOM) fourni par rAF.
@@ -167,19 +166,19 @@ Si votre jeu peut atteindre le maximum du taux de rafraîchissement sur n'import
 
 ```js
 /*
-* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-*
-* Assumons aussi que MyGame est défini précédemment.
-*/
+ * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+ * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+ * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+ * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ *
+ * Assumons aussi que MyGame est défini précédemment.
+ */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+(function () {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
-    update( tFrame ); //Appelez votre méthode de mise à jour. Dans notre cas, nous lui donnons la capture de temps rAF.
+    update(tFrame); //Appelez votre méthode de mise à jour. Dans notre cas, nous lui donnons la capture de temps rAF.
     render();
   }
 
@@ -212,7 +211,7 @@ Une technique commune est de mettre à jour la simulation à une fréquence cons
 
 - Dessiner à chaque `requestAnimationFrame` et l'utiliser pour solliciter un Web Worker qui contient la méthode de mise à jour avec la quantité de temps à calculer, s'il y a lieu.
 
-  - Cela se met en veille jusqu'à ce que `requestAnimationFrame` est appelée et ne pollue pas le fil principal, et de plus vous ne vous reposez pas sur d'anciennes méthodes. À nouveau, c'est un peu plus complexe que les deux premières options, et *débuter* chaque mise à jour sera bloqué tant que le navigateur ne décide de lancer les retours rAF.
+  - Cela se met en veille jusqu'à ce que `requestAnimationFrame` est appelée et ne pollue pas le fil principal, et de plus vous ne vous reposez pas sur d'anciennes méthodes. À nouveau, c'est un peu plus complexe que les deux premières options, et _débuter_ chaque mise à jour sera bloqué tant que le navigateur ne décide de lancer les retours rAF.
 
 Chacune de ces méthodes ont un compromis similaire :
 
@@ -256,9 +255,9 @@ _Note: Cet exemple spécifiquement, aurait besoin d'une relecture._
 *                   Ceci est juste un exemple générique d'une fonction que vous devriez ajouter.
 */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+(function () {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
     var nextTick = MyGame.lastTick + MyGame.tickLength;
     var numTicks = 0;
 
@@ -268,18 +267,18 @@ _Note: Cet exemple spécifiquement, aurait besoin d'une relecture._
     //S'il est important, alors soit votre jeu est en veille, soit votre machine ne répond plus.
     if (tFrame > nextTick) {
       var timeSinceTick = tFrame - MyGame.lastTick;
-      numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
+      numTicks = Math.floor(timeSinceTick / MyGame.tickLength);
     }
 
-    queueUpdates( numTicks );
-    render( tFrame );
+    queueUpdates(numTicks);
+    render(tFrame);
     MyGame.lastRender = tFrame;
   }
 
-  function queueUpdates( numTicks ) {
-    for(var i=0; i < numTicks; i++) {
+  function queueUpdates(numTicks) {
+    for (var i = 0; i < numTicks; i++) {
       MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; //Maitenant lastTick est ce tick.
-      update( MyGame.lastTick );
+      update(MyGame.lastTick);
     }
   }
 

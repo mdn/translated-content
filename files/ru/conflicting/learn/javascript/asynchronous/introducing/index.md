@@ -1,14 +1,6 @@
 ---
 title: Основные понятия асинхронного программирования
 slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - JavaScript
-  - Promises
-  - Асинхронность
-  - Обучение
-  - блокировки
-  - потоки
-translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}

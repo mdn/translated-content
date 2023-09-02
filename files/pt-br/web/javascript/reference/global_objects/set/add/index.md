@@ -38,9 +38,9 @@ console.log(mySet);
 
 ## Especificações
 
-| Especificações                                                                               | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificações                                                         | Status               | Comentário         |
+| ---------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatilidade de Navegadores (Browser)
@@ -49,7 +49,7 @@ console.log(mySet);
 
 ## Notas específicas para Firefox
 
-- Antes do Firefox 33, `Set.prototype.add retornava` `undefined` e não era possível encadear chamadas. Isto foi resolvido ({{bug(1031632)}}). O comportamento pode ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- Antes do Firefox 33, `Set.prototype.add retornava` `undefined` e não era possível encadear chamadas. Isto foi resolvido ([Erro do Firefox 1031632](https://bugzil.la/1031632)). O comportamento pode ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
 ## Veja também
 

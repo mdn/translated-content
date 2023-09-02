@@ -445,8 +445,8 @@ console.table(values);
 
 ## 參見
 
-- [JavaScript Guide: “Indexing object properties”](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
-- [JavaScript Guide: “Predefined Core Objects: `Array` Object”](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
+- [JavaScript Guide: 「Indexing object properties」](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
+- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
 - [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)
 - [Polyfill for JavaScript 1.8.5 Array Generics and ECMAScript 5 Array Extras](https://github.com/plusdude/array-generics)
 - [Typed Arrays](/zh-TW/docs/JavaScript_typed_arrays)

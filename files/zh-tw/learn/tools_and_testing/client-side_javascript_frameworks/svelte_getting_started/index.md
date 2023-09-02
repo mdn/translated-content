@@ -1,7 +1,6 @@
 ---
 title: Svelte 入門
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 ---
 
 {{LearnSidebar}}
@@ -368,7 +367,7 @@ Svelte 編譯器處理每一個元件的 `<style>` 區塊並編譯它們至 `pub
 最後 `public/index.html` 檔案會引入那些被產生的 `bundle.css` 和 `bundle.js` 檔案：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

@@ -1,7 +1,6 @@
 ---
 title: Navigator.appCodeName
 slug: Web/API/Navigator/appCodeName
-original_slug: Web/API/NavigatorID/appCodeName
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
@@ -13,7 +12,7 @@ original_slug: Web/API/NavigatorID/appCodeName
 ## 構文
 
 ```js
-codeName = navigator.appCodeName
+codeName = navigator.appCodeName;
 ```
 
 ### 値

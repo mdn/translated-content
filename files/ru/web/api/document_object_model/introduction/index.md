@@ -1,10 +1,6 @@
 ---
 title: Введение
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - DOM
-translation_of: Web/API/Document_Object_Model/Introduction
-original_slug: DOM/DOM_Reference/Введение
 ---
 
 Этот раздел представляет краткое знакомство с Объектной Моделью Документа (DOM) - что такое DOM, каким образом предоставляются структуры HTML и XML документов, и как взаимодействовать с ними. Данный раздел содержит справочную информацию и примеры.
@@ -52,10 +48,11 @@ p_list = doc.getElementsByTagName("para");
 
 Вы не должны делать ничего особенного для работы с DOM. Различные браузеры имеют различную реализацию DOM, эти реализации показывают различную степень соответствия с действительным стандартом DOM (это тема, которую мы пытались не затрагивать в данной документации), но каждый браузер использует свой DOM, чтобы сделать веб страницы доступными для взаимодействия с языками сценариев.
 
-При создании сценария с использованием элемента `<script>`, либо включая в веб страницу инструкцию для загрузки скрипта, вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы `document` или [`window`](/en-US/docs/DOM/window) для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице. Ваше программирование DOM может быть чем-то простым, например, вывод сообщения с использованием функции [`alert()`](/en-US/docs/DOM/window.alert) объекта [`window`](/en-US/docs/DOM/window), или использовать более сложные методы DOM, которые создают новое содержимое, как показано в следующем примере:
+При создании сценария с использованием элемента `<script>`, либо включая в веб страницу инструкцию для загрузки скрипта, вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы `document` или [`window`](/ru/docs/DOM/window) для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице. Ваше программирование DOM может быть чем-то простым, например, вывод сообщения с использованием функции [`alert()`](/ru/docs/DOM/window.alert) объекта [`window`](/ru/docs/DOM/window), или использовать более сложные методы DOM, которые создают новое содержимое, как показано в следующем примере:
 
 ```html
-<body onload="window.alert('добро пожаловать на мою домашнюю страницу!');">
+<body
+  onload="window.alert('добро пожаловать на мою домашнюю страницу!');"></body>
 ```
 
 В следующем примере внутри элемента `<script>` определён код JavaScript, данный код устанавливает функцию при загрузке документа (когда весь DOM доступен для использования). Эта функция создаёт новый элемент H1, добавляет текст в данный элемент, а затем добавляет H1 в дерево документа:
@@ -64,19 +61,18 @@ p_list = doc.getElementsByTagName("para");
 <html>
   <head>
     <script>
-    // запуск данной функции при загрузке документа
-       window.onload = function() {
-    // создание нескольких элементов
-    // в пустой HTML странице
-       heading = document.createElement("h1");
-       heading_text = document.createTextNode("Big Head!");
-       heading.appendChild(heading_text);
-       document.body.appendChild(heading);
-      }
+      // запуск данной функции при загрузке документа
+      window.onload = function () {
+        // создание нескольких элементов
+        // в пустой HTML странице
+        heading = document.createElement("h1");
+        heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -167,8 +163,7 @@ var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Node/Element interface
 for (var i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // HTMLTableElement interface: summary attribute
 table.summary = "note: increased border";
@@ -191,9 +186,9 @@ table.summary = "note: increased border";
 - `element.setAttribute`
 - `element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/en-US/docs/DOM/window.content)
-- [`window.onload`](/en-US/docs/DOM/window.onload)
-- [`window.dump`](/en-US/docs/DOM/window.dump)
+- [`window.content`](/ru/docs/DOM/window.content)
+- [`window.onload`](/ru/docs/DOM/window.onload)
+- [`window.dump`](/ru/docs/DOM/window.dump)
 - [`window.scrollTo`](/ru/docs/Web/API/Window/scrollTo)
 
 ## Тестирование DOM API
@@ -209,35 +204,47 @@ table.summary = "note: increased border";
   <head>
     <title>DOM Tests</title>
     <script type="application/javascript">
-    function setBodyAttr(attr, value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt></b></p>
+      <p>
+        <b><tt>text</tt></b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">black
-          <option value="darkblue">darkblue
+          <option value="black">black</option>
+          <option value="darkblue">darkblue</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">white
-          <option value="lightgrey">gray
+          <option value="white">white</option>
+          <option value="lightgrey">gray</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">blue
-          <option value="green">green
-        </select>  <small>
-        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
-        (sample link)</a></small><br>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+        <small>
+          <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+            (sample link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />

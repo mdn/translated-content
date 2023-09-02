@@ -9,8 +9,6 @@ slug: Web/HTML/Element/option
 
 {{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -61,7 +59,7 @@ slug: Web/HTML/Element/option
 - {{htmlattrdef("label")}}
   - : 옵션의 뜻을 나타내는 텍스트. 지정하지 않은 경우, 요소의 텍스트 콘텐츠를 대신 사용합니다.
 - {{htmlattrdef("selected")}}
-  - : 지정한 경우 초기에 이 옵션을 선택한 상태로 설정합니다. {{htmlattrxref("multiple", "select")}}를 지정하지 않은 {{HTMLElement("select")}} 요소의 자손인 경우, 하나의 `<option>`만 `selected` 특성을 가질 수 있습니다.
+  - : 지정한 경우 초기에 이 옵션을 선택한 상태로 설정합니다. [`multiple`](/ko/docs/Web/HTML/Element/select#multiple)를 지정하지 않은 {{HTMLElement("select")}} 요소의 자손인 경우, 하나의 `<option>`만 `selected` 특성을 가질 수 있습니다.
 - {{htmlattrdef("value")}}
   - : 양식 데이터를 구성할 때 사용할 값. 지정하지 않은 경우, 요소의 텍스트 콘텐츠를 대신 사용합니다.
 

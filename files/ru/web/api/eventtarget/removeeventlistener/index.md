@@ -1,12 +1,6 @@
 ---
 title: Метод EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - Браузерная совместимость
-  - Обработка событий
-  - метод
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 
 {{APIRef("DOM Events")}}
@@ -51,7 +45,7 @@ target.removeEventListener(type, listener[, useCapture]);
 
 ## Примечания
 
-Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.
+Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} в процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.
 
 Вызов `removeEventListener()` с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в `EventTarget`, не имеет никакого эффекта.
 
@@ -60,12 +54,12 @@ target.removeEventListener(type, listener[, useCapture]);
 Это пример добавления и последующего удаления обработчика событий.
 
 ```js
-var div = document.getElementById('div');
+var div = document.getElementById("div");
 var listener = function (event) {
   /* do something here */
 };
-div.addEventListener('click', listener, false);
-div.removeEventListener('click', listener, false);
+div.addEventListener("click", listener, false);
+div.removeEventListener("click", listener, false);
 ```
 
 ## Совместимость браузеров
@@ -96,19 +90,37 @@ div.removeEventListener('click', listener, false);
 if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
-    if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+    if (!oEvent) {
+      oEvent = window.event;
+    }
+    for (
+      var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type];
+      iElId < oEvtListeners.aEls.length;
+      iElId++
+    ) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
+          oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
+        }
         break;
       }
     }
   }
-  Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+  Element.prototype.addEventListener = function (
+    sEventType,
+    fListener /*, useCapture (will be ignored!) */,
+  ) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
-        if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
+      for (
+        var nElIdx = -1, iElId = 0;
+        iElId < oEvtListeners.aEls.length;
+        iElId++
+      ) {
+        if (oEvtListeners.aEls[iElId] === this) {
+          nElIdx = iElId;
+          break;
+        }
       }
       if (nElIdx === -1) {
         oEvtListeners.aEls.push(this);
@@ -121,24 +133,46 @@ if (!Element.prototype.addEventListener) {
           this["on" + sEventType] = runListeners;
         }
         for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
-          if (aElListeners[iLstId] === fListener) { return; }
+          if (aElListeners[iLstId] === fListener) {
+            return;
+          }
         }
         aElListeners.push(fListener);
       }
     } else {
-      oListeners[sEventType] = { aEls: [this], aEvts: [ [fListener] ] };
+      oListeners[sEventType] = { aEls: [this], aEvts: [[fListener]] };
       this["on" + sEventType] = runListeners;
     }
   };
-  Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
-    if (!oListeners.hasOwnProperty(sEventType)) { return; }
-    var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
-      if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
+  Element.prototype.removeEventListener = function (
+    sEventType,
+    fListener /*, useCapture (will be ignored!) */,
+  ) {
+    if (!oListeners.hasOwnProperty(sEventType)) {
+      return;
     }
-    if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
-      if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
+    var oEvtListeners = oListeners[sEventType];
+    for (
+      var nElIdx = -1, iElId = 0;
+      iElId < oEvtListeners.aEls.length;
+      iElId++
+    ) {
+      if (oEvtListeners.aEls[iElId] === this) {
+        nElIdx = iElId;
+        break;
+      }
+    }
+    if (nElIdx === -1) {
+      return;
+    }
+    for (
+      var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx];
+      iLstId < aElListeners.length;
+      iLstId++
+    ) {
+      if (aElListeners[iLstId] === fListener) {
+        aElListeners.splice(iLstId, 1);
+      }
     }
   };
 }

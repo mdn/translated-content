@@ -7,7 +7,7 @@ slug: Web/HTML/Element/embed
 
 > **备注：** 这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。
 
-请记住，大多数现代浏览器已经弃用并取消了对浏览器插件的支持，所以如果您希望您的网站可以在普通用户的浏览器上运行，那么依靠 `<embed>` 通常是不明智的。
+请记住，大多数现代浏览器已经弃用并取消了对浏览器插件的支持，所以如果你希望你的网站可以在普通用户的浏览器上运行，那么依靠 `<embed>` 通常是不明智的。
 
 <table class="properties">
  <tbody>
@@ -43,18 +43,18 @@ slug: Web/HTML/Element/embed
 这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `height`
-  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - `src`
   - : 被嵌套的资源的 URL。
 - `type`
   - : 用于选择插件实例化的 MIME 类型。
 - `width`
-  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例子
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## 规范

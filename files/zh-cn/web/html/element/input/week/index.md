@@ -56,7 +56,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ```html
 <label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('值', 600, 60)}}
@@ -67,7 +67,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ```js
 const weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## 其他属性
@@ -125,7 +125,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 控制输入框大小
 
-`<input type="week">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性。您必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="week">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
@@ -137,7 +137,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 设置最大和最小星期
 
-您可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
 
 ```html
 <form>
@@ -182,7 +182,7 @@ input:valid + span::after {
 
 ### 使星期值成为必需值
 
-另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
+另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果你尝试提交空白的星期字段，则支持的浏览器将显示错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大星期，并令该字段必填：
 
@@ -205,7 +205,7 @@ input:valid + span::after {
 </form>
 ```
 
-如果您尝试提交不带任何值的表单，浏览器将显示错误。现在尝试使用示例：
+如果你尝试提交不带任何值的表单，浏览器将显示错误。现在尝试使用示例：
 
 {{EmbedLiveSample('使星期值成为必需值', 600, 120)}}
 
@@ -307,32 +307,32 @@ input:valid + span::after {
 
 ```js
 // 获取 UI 元素
-const nativePicker = document.querySelector('.nativeWeekPicker');
-const fallbackPicker = document.querySelector('.fallbackWeekPicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeWeekPicker");
+const fallbackPicker = document.querySelector(".fallbackWeekPicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector("#year");
+const weekSelect = document.querySelector("#fallbackWeek");
 
 // 最初，隐藏回退元素
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 测试一个新的 date 输入框是否会回退至 text 输入框
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'week';
+  test.type = "week";
 } catch (e) {
   console.log(e.description);
 }
 
 // 如果回退了，运行 if 代码块中的代码
-if ( test.type === 'text') {
+if (test.type === "text") {
   // 隐藏原生选择器，显示回退元素
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 动态生成星期数
   populateWeeks();
@@ -341,8 +341,8 @@ if ( test.type === 'text') {
 function populateWeeks() {
   // 生成含有 52 个选择的星期数
   for (let i = 1; i <= 52; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }

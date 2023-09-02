@@ -1,16 +1,6 @@
 ---
 title: Utiliser les évènements envoyés par le serveur
 slug: Web/API/Server-sent_events/Using_server-sent_events
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}
@@ -28,27 +18,29 @@ const evtSource = new EventSource("ssedemo.php");
 Si le script qui génère les évènements est hébergé sur une origine différente, le nouvel objet `EventSource` doit être créé en spécifiant à la fois l'URL et un dictionnaire d'options. Par exemple, en supposant que le script client est sur example.com&nbsp;:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
-Une fois que la source d'évènement a été instanciée, on peut écouter les messages *sans propriété `event`* provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
+Une fois que la source d'évènement a été instanciée, on peut écouter les messages _sans propriété `event`_ provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = function (event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
   newElement.textContent = "message: " + event.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Ce code écoute les messages entrants (plus précisément, les notifications venant du serveur qui n'ont pas de champ `event` attaché) et ajoute le texte des messages à une liste dans le contenu HTML du document.
 
-On peut écouter les évènements de message *avec* un champ `event` grâce à `addEventListener()`&nbsp;:
+On peut écouter les évènements de message _avec_ un champ `event` grâce à `addEventListener()`&nbsp;:
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", function (event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
   newElement.textContent = "ping at " + time;
@@ -112,7 +104,7 @@ La boucle s'exécute indépendamment du statut de la connexion, on a donc une v�
 Quand un problème survient (tel qu'un délai de réponse dépassé ou une erreur liée au [contrôle d'accès](/fr/docs/Web/HTTP/CORS)), un évènement `error` est généré. Vous pouvez traiter ces cas d'erreur en implémentant la fonction de rappel `onerror` sur l'objet `EventSource`.
 
 ```js
-evtSource.onerror = function(err) {
+evtSource.onerror = function (err) {
   console.error("EventSource failed:", err);
 };
 ```

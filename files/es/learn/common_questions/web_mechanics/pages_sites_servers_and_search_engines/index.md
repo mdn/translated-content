@@ -1,9 +1,6 @@
 ---
-title: >-
-  ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el
-  motor de búsqueda?
+title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el motor de búsqueda?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-original_slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
@@ -75,19 +72,19 @@ Una **página web** es un simple documento que puede ser mostrado por un {{Gloss
 
 Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su direcciones en la barra de búsqueda de tu navegador:
 
-![Example of a web page address in the browser address bar](web-page.jpg)
+![Ejemplo de dirección de una página web en la barra de direcciones del navegador](web-page.jpg)
 
 Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones del texto en que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
 
 Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de tu buscador, y él te mostrará la página principal del sitio web, o _homepage_ (informalmente denominada "el home"):
 
-![Example of a web site domain name in the browser address bar](web-site.jpg)
+![Ejemplo de nombre de dominio de un sitio web en la barra de direcciones del navegador](web-site.jpg)
 
 _Página web_ y _sitio web_ son especialmente fáciles de confundir cuando un _sitio_ contiene una única _página web_ Tales sitios son denominados _sitios de una sola página._
 
 ### Servidor web
 
-Un _servidor web_ es una computadora que aloja uno o mas _sitios web_. “Alojar” (_hosting_) significa que todas las _páginas web_ y sus archivos soportes están disponibles en esa computadora. El _servidor web_ enviará cualquier _página web_ del _sitio web_ que aloja, al navegador de cualquier usuario, por cada solicitud del usuario.
+Un _servidor web_ es una computadora que aloja uno o mas _sitios web_. "Alojar" (_hosting_) significa que todas las _páginas web_ y sus archivos soportes están disponibles en esa computadora. El _servidor web_ enviará cualquier _página web_ del _sitio web_ que aloja, al navegador de cualquier usuario, por cada solicitud del usuario.
 
 No confundir _sito web_ y _servidor web_. Por ejemplo, la expresión "Mi sitio web no responde", en realidad significa que el _servidor web_ no responde y, por lo tanto, el _sitio web_ no está disponible. Más importante aún, dado que un servidor web puede alojar varios sitios web, la expresión _servidor web_ nunca se utiliza para designar un sitio web, pues podría causar una gran confusión. En nuestro ejemplo anterior, si dijéramos: "Mi servidor web no responde", significaría que múltiples sitios web alojados en ese servidor web no están disponibles.
 
@@ -101,7 +98,7 @@ Muchos principiantes en la web confunden motores de búsqueda con navegadores. A
 
 Aquí hay una instancia de Firefox que muestra un cuadro de búsqueda de Google como su página de inicio predeterminada:
 
-![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
+![Ejemplo de Firefox Nightly mostrando una página personalizada de Google como predeterminada](search-engine.jpg)
 
 ## Próximos pasos
 

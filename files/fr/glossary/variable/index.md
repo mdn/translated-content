@@ -1,7 +1,6 @@
 ---
 title: Variable
 slug: Glossary/Variable
-translation_of: Glossary/Variable
 ---
 
 Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "valeur")}}. Ainsi, il est possible d'accéder à une valeur quelconque par l'intermédiaire d'un nom prédéterminé.
@@ -10,7 +9,7 @@ Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "v
 
 ### Culture générale
 
-- [Variable](https://fr.wikipedia.org/wiki/Variable_(informatique)) sur Wikipédia
+- [Variable](<https://fr.wikipedia.org/wiki/Variable_(informatique)>) sur Wikipédia
 
 ### Référence technique
 

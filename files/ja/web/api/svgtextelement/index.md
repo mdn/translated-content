@@ -9,11 +9,11 @@ slug: Web/API/SVGTextElement
 
 ### インタフェースの概要
 
-| 実装インタフェース | {{domxref("SVGTextPositioningElement")}} 、 {{domxref("SVGTransformable")}} |
-| ------------------ | ------------------------------------------------------------------------------------------------ |
-| メソッド           | _無し_                                                                                           |
-| プロパティ         | _無し_                                                                                           |
-| 標準文書           | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/text.html#InterfaceSVGTextElement)              |
+| 実装インタフェース | {{domxref("SVGTextPositioningElement")}} 、 {{domxref("SVGTransformable")}}         |
+| ------------------ | ----------------------------------------------------------------------------------- |
+| メソッド           | _無し_                                                                              |
+| プロパティ         | _無し_                                                                              |
+| 標準文書           | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/text.html#InterfaceSVGTextElement) |
 
 ## プロパティ
 

@@ -1,7 +1,6 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
-translation_of: Web/HTML/Element/input/number
 ---
 
 {{HTMLSidebar}}
@@ -12,19 +11,19 @@ translation_of: Web/HTML/Element/input/number
 
 В браузерах, которые не поддерживают тип `number`, тип `number` приводится к `text`.
 
-| **[Value](#value)**             | A {{jsxref("Number")}} representing a number, or empty                                                                                                                                                       |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Events**                      | {{event("change")}} and {{event("input")}}                                                                                                                                                                |
-| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly)       |
-| **IDL attributes**              | `list`, `value`, `valueAsNumber`                                                                                                                                                                                     |
-| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}} |
+| **[Value](#value)**             | A {{jsxref("Number")}} representing a number, or empty                                                                                                                                                                               |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Events**                      | {{event("change")}} and {{event("input")}}                                                                                                                                                                                           |
+| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly) |
+| **IDL attributes**              | `list`, `value`, `valueAsNumber`                                                                                                                                                                                                     |
+| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}                                                                       |
 
 ## Value
 
 {{jsxref("Number")}}, представляющий значение введённого числа. Вы можете установить значение по умолчанию, вставив значение в атрибут [`value`](/ru/docs/Web/HTML/Element/input#value), например:
 
 ```html
-<input id="number" type="number" value="42">
+<input id="number" type="number" value="42" />
 ```
 
 {{EmbedLiveSample('Value', 600, 40)}}
@@ -53,9 +52,9 @@ The minimum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/E
 
 This value must be less than or equal to the value of the `max` attribute.
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
+{{page("/ru/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+{{page("/ru/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
 ### {{htmlattrdef("step")}}
 
@@ -85,7 +84,7 @@ In its most basic form, a number input can be implemented like this:
 
 ```html
 <label for="ticketNum">Number of tickets you would like to buy:</label>
-<input id="ticketNum" type="number" name="ticketNum" value="0">
+<input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
 {{EmbedLiveSample('A_simple_number_input', 600, 40)}}
@@ -101,7 +100,7 @@ Sometimes it's helpful to offer an in-context hint as to what form the input dat
 Here, we have an `number` input with the placeholder `"Multiple of 10"`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
-<input type="number" placeholder="Multiple of 10">
+<input type="number" placeholder="Multiple of 10" />
 ```
 
 {{EmbedLiveSample('Placeholders', 600, 40)}}
@@ -111,7 +110,7 @@ Here, we have an `number` input with the placeholder `"Multiple of 10"`. Note ho
 By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a [`step`](/ru/docs/Web/HTML/Element/input#step) attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a `step` value of 10:
 
 ```html
-<input type="number" placeholder="multiple of 10" step="10">
+<input type="number" placeholder="multiple of 10" step="10" />
 ```
 
 {{EmbedLiveSample('Controlling_step_size', 600, 40)}}
@@ -123,7 +122,7 @@ In this example you should find that the up and down step arrows will increase a
 You can use the [`min`](/ru/docs/Web/HTML/Element/input#min) and [`max`](/ru/docs/Web/HTML/Element/input#max) attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of 0, and a maximum of 100:
 
 ```html
-<input type="number" placeholder="multiple of 10" step="10" min="0" max="100">
+<input type="number" placeholder="multiple of 10" step="10" min="0" max="100" />
 ```
 
 {{EmbedLiveSample('Specifying_minimum_and_maximum_values', 600, 40)}}
@@ -135,7 +134,7 @@ In this updated version, you should find that the up and down step buttons will 
 One issue with number inputs is that their step size is 1 by default — if you try to enter a number with a decimal, such as "1.0", it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a simple example:
 
 ```html
-<input type="number" placeholder="1.0" step="0.01" min="0" max="10">
+<input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
 ```
 
 {{EmbedLiveSample("Allowing_decimal_values", 600, 40)}}
@@ -149,7 +148,13 @@ See that this example allows any value between 0.0 and 10.0, with decimals to tw
 For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an ID and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
 ```html
-<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
+<input
+  type="number"
+  placeholder="x10"
+  step="10"
+  min="0"
+  max="100"
+  id="number" />
 ```
 
 Then we add some CSS to narrow the width of the element with the ID `number`:
@@ -169,15 +174,15 @@ The result looks like this:
 You can provide a list of default options from which the user can select by specifying the [`list`](/ru/docs/Web/HTML/Element/input#list) attribute, which contains as its value the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the number entry box.
 
 ```html
-<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers">
+<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
 <span class="validity"></span>
 
 <datalist id="defaultNumbers">
-  <option value="10045678">
-  <option value="103421">
-  <option value="11111111">
-  <option value="12345678">
-  <option value="12999922">
+  <option value="10045678"></option>
+  <option value="103421"></option>
+  <option value="11111111"></option>
+  <option value="12345678"></option>
+  <option value="12999922"></option>
 </datalist>
 ```
 
@@ -200,11 +205,18 @@ The following example exhibits all of the above features, as well as using some 
 <form>
   <div>
     <label for="balloons">Number of balloons to order (multiples of 10):</label>
-    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
+    <input
+      id="balloons"
+      type="number"
+      name="balloons"
+      step="10"
+      min="0"
+      max="100"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -220,13 +232,13 @@ div {
   margin-bottom: 10px;
 }
 
-input:invalid+span:after {
-  content: '✖';
+input:invalid + span:after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span:after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -291,15 +303,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -307,39 +319,39 @@ input:valid+span:after {
 And finally, the JavaScript:
 
 ```js
-var metersInputGroup = document.querySelector('.metersInputGroup');
-var feetInputGroup = document.querySelector('.feetInputGroup');
-var metersInput = document.querySelector('#meters');
-var feetInput = document.querySelector('#feet');
-var inchesInput = document.querySelector('#inches');
+var metersInputGroup = document.querySelector(".metersInputGroup");
+var feetInputGroup = document.querySelector(".feetInputGroup");
+var metersInput = document.querySelector("#meters");
+var feetInput = document.querySelector("#feet");
+var inchesInput = document.querySelector("#inches");
 var switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', function() {
-  if(switchBtn.getAttribute('class') === 'meters') {
-    switchBtn.setAttribute('class', 'feet');
-    switchBtn.value = 'Enter height in meters';
+switchBtn.addEventListener("click", function () {
+  if (switchBtn.getAttribute("class") === "meters") {
+    switchBtn.setAttribute("class", "feet");
+    switchBtn.value = "Enter height in meters";
 
-    metersInputGroup.style.display = 'none';
-    feetInputGroup.style.display = 'block';
+    metersInputGroup.style.display = "none";
+    feetInputGroup.style.display = "block";
 
-    feetInput.setAttribute('required', '');
-    inchesInput.setAttribute('required', '');
-    metersInput.removeAttribute('required');
+    feetInput.setAttribute("required", "");
+    inchesInput.setAttribute("required", "");
+    metersInput.removeAttribute("required");
 
-    metersInput.value = '';
+    metersInput.value = "";
   } else {
-    switchBtn.setAttribute('class', 'meters');
-    switchBtn.value = 'Enter height in feet and inches';
+    switchBtn.setAttribute("class", "meters");
+    switchBtn.value = "Enter height in feet and inches";
 
-    metersInputGroup.style.display = 'block';
-    feetInputGroup.style.display = 'none';
+    metersInputGroup.style.display = "block";
+    feetInputGroup.style.display = "none";
 
-    feetInput.removeAttribute('required');
-    inchesInput.removeAttribute('required');
-    metersInput.setAttribute('required', '');
+    feetInput.removeAttribute("required");
+    inchesInput.removeAttribute("required");
+    metersInput.setAttribute("required", "");
 
-    feetInput.value = '';
-    inchesInput.value = '';
+    feetInput.value = "";
+    inchesInput.value = "";
   }
 });
 ```
@@ -350,10 +362,10 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## Specifications
 
-| Specification                                                                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Specification                                                                                       | Status                   | Comment            |
+| --------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'forms.html#number-state-(type=number)', '&lt;input type="number"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#number-state-typenumber', '&lt;input type="number"&gt;')}}     | {{Spec2('HTML5.1')}}     | Initial definition |
+| {{SpecName('HTML5.1', 'sec-forms.html#number-state-typenumber', '&lt;input type="number"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
 
 ## Browser compatibility
 
@@ -363,4 +375,4 @@ After declaring a few variables, we add an event listener to the button to contr
 
 - [HTML forms guide](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="tel">`](/ru/docs/Web/HTML/Element/input/tel)

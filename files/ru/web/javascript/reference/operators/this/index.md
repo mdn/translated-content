@@ -1,14 +1,8 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-  - this
-  - свойства языка
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 Поведение ключевого слова `this` в JavaScript несколько отличается по сравнению с остальными языками. Имеются также различия при использовании `this` в [строгом](/ru/docs/Web/JavaScript/Reference/Strict_mode) и нестрогом режиме.
@@ -39,8 +33,8 @@ a = 37;
 console.log(window.a); // 37
 
 this.b = "MDN";
-console.log(window.b)  // "MDN"
-console.log(b)         // "MDN"
+console.log(window.b); // "MDN"
+console.log(b); // "MDN"
 ```
 
 > **Примечание:** вы всегда можете легко получить объект global, используя глобальное свойство {{jsxref ("globalThis")}}, независимо от текущего контекста, в котором выполняется ваш код.
@@ -54,7 +48,7 @@ console.log(b)         // "MDN"
 Поскольку следующий код не в {{jsxref('Strict_mode', 'строгом режиме')}}, и значение `this` не устанавливается вызовом, по умолчанию будет использоваться объект global, которым в браузере является `{{domxref('window')}}`.
 
 ```js
-function f1(){
+function f1() {
   return this;
 }
 
@@ -68,7 +62,7 @@ f1() === global; // global - глобальный объект в Node
 В строгом режиме, если значение `this` не установлено в контексте выполнения, оно остаётся `undefined`, как показано в следующем примере:
 
 ```js
-function f2(){
+function f2() {
   "use strict"; // см. strict mode
   return this;
 }
@@ -85,18 +79,17 @@ f2() === undefined; // true
 ```js
 // В качестве первого аргумента методов call или apply может быть передан объект,
 // на который будет указывать this.
-var obj = {a: 'Custom'};
+var obj = { a: "Custom" };
 
 // Это свойство принадлежит глобальному объекту
-var a = 'Global';
+var a = "Global";
 
 function whatsThis() {
-  return this.a;  //значение this зависит от контекста вызова функции
-
+  return this.a; //значение this зависит от контекста вызова функции
 }
 
-whatsThis();          // 'Global'
-whatsThis.call(obj);  // 'Custom'
+whatsThis(); // 'Global'
+whatsThis.call(obj); // 'Custom'
 whatsThis.apply(obj); // 'Custom'
 ```
 
@@ -107,7 +100,7 @@ function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+var o = { a: 1, b: 3 };
 
 // Первый параметр - это объект для использования в качестве
 // 'this', последующие параметры передаются как
@@ -127,8 +120,8 @@ function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
-bar.call(7);     // [object Number]
-bar.call('foo'); // [object String]
+bar.call(7); // [object Number]
+bar.call("foo"); // [object String]
 ```
 
 ### Метод `bind`
@@ -140,13 +133,13 @@ function f() {
   return this.a;
 }
 
-var g = f.bind({a: 'azerty'});
+var g = f.bind({ a: "azerty" });
 console.log(g()); // azerty
 
-var h = g.bind({a: 'yoo'}); // bind only works once!
+var h = g.bind({ a: "yoo" }); // bind only works once!
 console.log(h()); // azerty
 
-var o = {a: 37, f: f, g: g, h: h};
+var o = { a: 37, f: f, g: g, h: h };
 console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 ```
 
@@ -156,7 +149,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 
 ```js
 var globalObject = this;
-var foo = (() => this);
+var foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
@@ -166,7 +159,7 @@ console.log(foo() === globalObject); // true
 
 ```js
 // Вызов функции как метода объекта
-var obj = {foo: foo};
+var obj = { foo: foo };
 console.log(obj.foo() === globalObject); // true
 
 // Попытка установить this с помощью call
@@ -185,11 +178,12 @@ console.log(foo() === globalObject); // true
 // как стрелочная функция, таким образом её this постоянно замкнут
 // на this функции, в которой она создана. Значение bar может быть установлено
 // в вызове, который, в свою очередь, устанавливает значение возвращаемой функции.
-var obj = { bar : function() {
-                    var x = (() => this);
-                    return x;
-                  }
-          };
+var obj = {
+  bar: function () {
+    var x = () => this;
+    return x;
+  },
+};
 
 // Вызываем bar как метод объекта obj, устанавливая его this на obj
 // Присваиваем ссылку возвращаемой функции переменной fn
@@ -217,9 +211,9 @@ console.log(fn2()() == window); // true
 ```js
 var o = {
   prop: 37,
-  f: function() {
+  f: function () {
     return this.prop;
-  }
+  },
 };
 
 console.log(o.f()); // logs 37
@@ -228,7 +222,7 @@ console.log(o.f()); // logs 37
 Необходимо отметить, что на поведение `this` совсем не влияет то, как или где была определена функция. В предыдущем примере мы определили функцию внутри свойства `f` во время определения объекта `o`. Однако, мы могли бы также просто определить сначала функцию, а затем закрепить её за свойством `o.f`. В этом случае поведение `this` не изменится:
 
 ```js
-var o = {prop: 37};
+var o = { prop: 37 };
 
 function independent() {
   return this.prop;
@@ -244,7 +238,7 @@ console.log(o.f()); // logs 37
 Аналогично, привязывание `this` обуславливается наличием ближайшей ссылки на объект или свойство. В следующем примере, когда мы вызываем функцию, мы обращаемся к ней как к методу `g` объекта `o.b`. На этот раз во время выполнения, `this`, что находится внутри функции, будет ссылаться на `o.b`. Тот факт, что объект является членом объекта `o`, не имеет значения; важна только ближайшая ссылка.
 
 ```js
-o.b = {g: independent, prop: 42};
+o.b = { g: independent, prop: 42 };
 console.log(o.b.g()); // logs 42
 ```
 
@@ -253,7 +247,11 @@ console.log(o.b.g()); // logs 42
 Это же представление справедливо и для методов, определённых где-либо в цепочке object's prototype. Если метод находится в цепочке прототипов, то `this` ссылается на объект, на котором был вызван метод, т.е. так, словно метод является методом самого объекта, а не прототипа.
 
 ```js
-var o = {f:function(){ return this.a + this.b; }};
+var o = {
+  f: function () {
+    return this.a + this.b;
+  },
+};
 var p = Object.create(o);
 p.a = 1;
 p.b = 4;
@@ -268,27 +266,30 @@ console.log(p.f()); // 5
 Все те же утверждения справедливы, если функция вызывается из геттера или сеттера. Для функции, которая используется как геттер или сеттер `this` привязан к объекту, свойство которого необходимо извлечь через геттер/сеттер.
 
 ```js
-function modulus(){
+function modulus() {
   return Math.sqrt(this.re * this.re + this.im * this.im);
 }
 
 var o = {
   re: 1,
   im: -1,
-  get phase(){
+  get phase() {
     return Math.atan2(this.im, this.re);
-  }
+  },
 };
 
-Object.defineProperty(o, 'modulus', {
-    get: modulus, enumerable:true, configurable:true});
+Object.defineProperty(o, "modulus", {
+  get: modulus,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.phase, o.modulus); // logs -0.78 1.4142
 ```
 
 ### В конструкторе
 
-Когда функция используется как конструктор (с ключевым словом [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) ), `this` связано с создаваемым новым объектом.
+Когда функция используется как конструктор (с ключевым словом [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new) ), `this` связано с создаваемым новым объектом.
 
 Примечание: по умолчанию конструктор возвращает объект, на который ссылается `this`, но он может вернуть и другой объект (если возвращаемое значение не является объектом, тогда будет возвращён объект с `this`).
 
@@ -319,10 +320,9 @@ function C() {
 var o = new C();
 console.log(o.a); // logs 37
 
-
 function C2() {
   this.a = 37;
-  return {a: 38};
+  return { a: 38 };
 }
 
 o = new C2();
@@ -333,14 +333,14 @@ console.log(o.a); // logs 38
 
 ### `call` и `apply`
 
-Когда в теле функции используется ключевое слово `this`, его значение может быть привязано к конкретному объекту в вызове при помощи методов [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) или [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), которые наследуются всеми функциями от `Function.prototype`.
+Когда в теле функции используется ключевое слово `this`, его значение может быть привязано к конкретному объекту в вызове при помощи методов [`call`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) или [`apply`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), которые наследуются всеми функциями от `Function.prototype`.
 
 ```js
 function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+var o = { a: 1, b: 3 };
 
 // Первый параметр - это объект, который следует использовать как
 // 'this', последующие параметры передаются
@@ -374,16 +374,16 @@ function bluify(e) {
   console.log(this === e.currentTarget);
   // true, когда currentTarget и target один объект
   console.log(this === e.target);
-  this.style.backgroundColor = '#A5D9F3';
+  this.style.backgroundColor = "#A5D9F3";
 }
 
 // Получить список каждого элемента в документе
-var elements = document.getElementsByTagName('*');
+var elements = document.getElementsByTagName("*");
 
 // Добавить bluify как обработчика кликов, чтобы при
 // нажатии на элемент он становился синим
 for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', bluify, false);
+  elements[i].addEventListener("click", bluify, false);
 }
 ```
 
@@ -392,9 +392,7 @@ for (var i = 0; i < elements.length; i++) {
 Когда код вызван из инлайнового обработчика, `this` указывает на DOM-элемент, в котором расположен код события:
 
 ```js
-<button onclick="alert(this.tagName.toLowerCase());">
-  Показать this
-</button>
+<button onclick="alert(this.tagName.toLowerCase());">Показать this</button>
 ```
 
 Код выше выведет '`button`'. Следует отметить, что `this` будет указывать на DOM-элемент только во внешних (не вложенных) функциях:

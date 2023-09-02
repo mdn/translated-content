@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 l10n:
   sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
+
 {{JSRef}}
 
 **`dotAll`** 속성은 `s` 플래그가 정규식과 함께 사용되는지 여부를 나타냅니다. `dotAll`은 개별 정규식 인스턴스의 읽기 전용 속성입니다.

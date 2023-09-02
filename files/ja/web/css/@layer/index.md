@@ -1,5 +1,5 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
 ---
 
@@ -20,11 +20,11 @@ slug: Web/CSS/@layer
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
@@ -32,7 +32,7 @@ slug: Web/CSS/@layer
 カスケードレイヤーは {{cssxref("@import")}} で作ることができ、この場合のルールはインポートされたスタイルシートにあることになります。
 
 ```css
-@import(utilities.css) layer(utilities);
+@import (utilities.css) layer(utilities);
 ```
 
 また、スタイルを割り当てずに、名前付きのカスケードレイヤーを作成することもできます。これは単一の名前にすることができます。
@@ -62,7 +62,6 @@ slug: Web/CSS/@layer
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -140,9 +139,11 @@ p {
 #### HTML
 
 ```html
-<div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>special</code> layer comes after the <code>base</code> layer.
-My green border, font-size, and padding come from the <code>base</code> layer.</div>
+<div class="item">
+  I am displayed in <code>color: rebeccapurple</code> because the
+  <code>special</code> layer comes after the <code>base</code> layer. My green
+  border, font-size, and padding come from the <code>base</code> layer.
+</div>
 ```
 
 #### CSS
@@ -161,7 +162,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```

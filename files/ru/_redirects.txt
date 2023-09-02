@@ -5,8 +5,8 @@
 #
 # FROM-URL	TO-URL
 /ru/docs/AJAX	/ru/docs/Web/Guide/AJAX
-/ru/docs/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
-/ru/docs/AJAX:С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
+/ru/docs/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/AJAX:С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
 /ru/docs/Accessibility	/ru/docs/Web/Accessibility
 /ru/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/ru/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /ru/docs/Apps/Progressive	/ru/docs/Web/Progressive_web_apps
@@ -45,7 +45,6 @@
 /ru/docs/DOM/HTMLTableElement	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/DOM/Node.compareDocumentPosition	/ru/docs/Web/API/Node/compareDocumentPosition
 /ru/docs/DOM/Node.lastChild	/ru/docs/Web/API/Node/lastChild
-/ru/docs/DOM/Using_fullscreen_mode	/ru/docs/Web/API/Fullscreen_API
 /ru/docs/DOM/Using_web_workers	/ru/docs/Web/API/Web_Workers_API/Using_web_workers
 /ru/docs/DOM/document.createElement	/ru/docs/Web/API/Document/createElement
 /ru/docs/DOM/document.images	/ru/docs/Web/API/Document/images
@@ -221,7 +220,6 @@
 /ru/docs/Learn/Common_questions/What_software_do_I_need	/ru/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /ru/docs/Learn/Common_questions/set_up_a_local_testing_server	/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /ru/docs/Learn/Discover_browser_developer_tools	/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-/ru/docs/Learn/Forms/Your_first_form/Example	/ru/docs/Learn/Forms/Your_first_form
 /ru/docs/Learn/Getting_started_with_the_web/Веб_и_веб_стандарты	/ru/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /ru/docs/Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения	/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /ru/docs/Learn/HTML/Forms	/ru/docs/Learn/Forms
@@ -230,9 +228,7 @@
 /ru/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript	/ru/docs/Learn/Forms/Sending_forms_through_JavaScript
 /ru/docs/Learn/HTML/Forms/Styling_HTML_forms	/ru/docs/Learn/Forms/Styling_web_forms
 /ru/docs/Learn/HTML/Forms/Валидация_формы	/ru/docs/Learn/Forms/Form_validation
-/ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма	/ru/docs/Learn/Forms/Your_first_form
 /ru/docs/Learn/HTML/Forms/Отправка_и_Получение_данных_формы	/ru/docs/Learn/Forms/Sending_and_retrieving_form_data
-/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм	/ru/docs/Learn/Forms/Basic_native_form_controls
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Добавление_r_graphics_to_the_Web	/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML	/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML/Проверьте_свои_знания:_Изображения_в_HTML	/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
@@ -293,9 +289,6 @@
 /ru/docs/Learn/Доступность/Accessibility_troubleshooting	/ru/docs/Learn/Accessibility/Accessibility_troubleshooting
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Доступность/HTML	/ru/docs/Learn/Accessibility/HTML
-/ru/docs/Learn/Доступность/Mobile	/ru/docs/Learn/Accessibility/Mobile
-/ru/docs/Learn/Доступность/Multimedia	/ru/docs/Learn/Accessibility/Multimedia
-/ru/docs/Learn/Доступность/WAI-ARIA_basics	/ru/docs/Learn/Accessibility/WAI-ARIA_basics
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
 /ru/docs/Learn/Фронтенд_разработчик	/ru/docs/Learn/Front-end_web_developer
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
@@ -319,14 +312,16 @@
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Guidelines	/ru/docs/conflicting/MDN/Writing_guidelines
 /ru/docs/MDN/Kuma	/ru/docs/orphaned/MDN/Yari
-/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
 /ru/docs/MDN/Tools	/ru/docs/orphaned/MDN/Tools
-/ru/docs/MDN/Tools/KumaScript/Troubleshooting	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Tools/URL-suffix	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
+/ru/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ru/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
+/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 /ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
@@ -402,7 +397,6 @@
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
-/ru/docs/Web/API/AudioContext/decodeAudioData	/ru/docs/Web/API/BaseAudioContext/decodeAudioData
 /ru/docs/Web/API/ByteString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ru/docs/Web/API/CSS_Object_Model/ориентация_экрана	/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ru/docs/Web/API/CanvasRenderingContext2D/currentTransform	/ru/docs/conflicting/Web/API/CanvasRenderingContext2D
@@ -446,7 +440,6 @@
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
-/ru/docs/Web/API/GlobalEventHandlers	/ru/docs/orphaned/Web/API/GlobalEventHandlers
 /ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /ru/docs/Web/API/GlobalEventHandlers/onanimationcancel	/ru/docs/Web/API/Element/animationcancel_event
 /ru/docs/Web/API/GlobalEventHandlers/onanimationend	/ru/docs/Web/API/Element/animationend_event
@@ -529,6 +522,7 @@
 /ru/docs/Web/API/WebRTC_API/adapter.js	/ru/docs/orphaned/Web/API/WebRTC_API/adapter.js
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
+/ru/docs/Web/API/Window/DOMContentLoaded_event	/ru/docs/conflicting/Web/API/Document/DOMContentLoaded_event
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
 /ru/docs/Web/API/Window/ondeviceorientation	/ru/docs/conflicting/Web/API/Window/deviceorientation_event
@@ -538,7 +532,6 @@
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
-/ru/docs/Web/API/WindowEventHandlers	/ru/docs/orphaned/Web/API/WindowEventHandlers
 /ru/docs/Web/API/WindowEventHandlers/onafterprint	/ru/docs/Web/API/Window/afterprint_event
 /ru/docs/Web/API/WindowEventHandlers/onbeforeunload	/ru/docs/conflicting/Web/API/Window/beforeunload_event
 /ru/docs/Web/API/WindowEventHandlers/onhashchange	/ru/docs/conflicting/Web/API/Window/hashchange_event
@@ -568,16 +561,27 @@
 /ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute	/ru/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 /ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ru/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 /ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/ru/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
-/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/CSS/:-moz-focusring	/ru/docs/conflicting/Web/CSS/:focus-visible
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
-/ru/docs/Web/CSS/@viewport	/ru/docs/conflicting/Web/CSS
+/ru/docs/Web/CSS/@viewport	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/height	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/max-height	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/max-width	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/max-zoom	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/min-height	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/min-width	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/min-zoom	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/orientation	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/user-zoom	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/viewport-fit	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/width	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/@viewport/zoom	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Adjacent_sibling_combinator
 /ru/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ru/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy	/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations
-/ru/docs/Web/CSS/CSS_Background_and_Borders	/ru/docs/Web/CSS/CSS_backgrounds_and_borders
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
@@ -587,11 +591,8 @@
 /ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Color	/ru/docs/Web/CSS/CSS_colors
-/ru/docs/Web/CSS/CSS_Columns	/ru/docs/Web/CSS/CSS_multicol_layout
 /ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси	/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 /ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 /ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 /ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
@@ -603,9 +604,7 @@
 /ru/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout	/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 /ru/docs/Web/CSS/CSS_Grid_Layout/Грид-области	/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas
 /ru/docs/Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid	/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-/ru/docs/Web/CSS/CSS_Lists_and_Counters	/ru/docs/Web/CSS/CSS_lists
 /ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
-/ru/docs/Web/CSS/CSS_Positioning	/ru/docs/Web/CSS/CSS_positioned_layout
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
@@ -614,8 +613,8 @@
 /ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
-/ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_Selectors
-/ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
+/ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /ru/docs/Web/CSS/Child_selectors	/ru/docs/Web/CSS/Child_combinator
 /ru/docs/Web/CSS/Common_CSS_Questions	/ru/docs/Learn/CSS/Howto/CSS_FAQ
 /ru/docs/Web/CSS/Descendant_selectors	/ru/docs/Web/CSS/Descendant_combinator
@@ -647,7 +646,7 @@
 /ru/docs/Web/CSS/Тихий	/ru/docs/Web/CSS/Comments
 /ru/docs/Web/CSS/Указанное_значение	/ru/docs/Web/CSS/specified_value
 /ru/docs/Web/CSS/размер	/ru/docs/Web/CSS/length
-/ru/docs/Web/Events/DOMContentLoaded	/ru/docs/Web/API/Window/DOMContentLoaded_event
+/ru/docs/Web/Events/DOMContentLoaded	/ru/docs/conflicting/Web/API/Document/DOMContentLoaded_event
 /ru/docs/Web/Events/abort_(dom_abort_api)	/ru/docs/Web/API/AbortSignal/abort_event
 /ru/docs/Web/Events/blur	/ru/docs/Web/API/Element/blur_event
 /ru/docs/Web/Events/deviceorientation	/ru/docs/Web/API/Window/deviceorientation_event
@@ -671,7 +670,8 @@
 /ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
-/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
+/ru/docs/Web/Guide/AJAX/Getting_Started	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
@@ -704,13 +704,11 @@
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/HTML/Element/Input/datetime	/ru/docs/conflicting/Web/HTML/Element/input/datetime-local
 /ru/docs/Web/HTML/Element/applet	/ru/docs/orphaned/Web/HTML/Element/applet
-/ru/docs/Web/HTML/Element/basefont	/ru/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
 /ru/docs/Web/HTML/Element/video/seeking_event	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/HTML/Element/кнопка	/ru/docs/Web/HTML/Element/button
 /ru/docs/Web/HTML/Element/ссылка	/ru/docs/Web/HTML/Element/link
 /ru/docs/Web/HTML/Element/стиль	/ru/docs/Web/HTML/Element/style
 /ru/docs/Web/HTML/Inline_elements	/ru/docs/orphaned/Web/HTML/Inline_elements
-/ru/docs/Web/HTML/Link_types	/ru/docs/Web/HTML/Attributes/rel
 /ru/docs/Web/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/ru/docs/Glossary/Speculative_parsing
 /ru/docs/Web/HTML/Использование_HTML5_audio_и_video	/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ru/docs/Web/HTML/Общие_атрибуты	/ru/docs/Web/HTML/Global_attributes
@@ -727,7 +725,6 @@
 /ru/docs/Web/HTML/Общие_атрибуты/tabindex	/ru/docs/Web/HTML/Global_attributes/tabindex
 /ru/docs/Web/HTML/Ссылки	/ru/docs/Web/HTML/Reference
 /ru/docs/Web/HTML/Строчные_Элементы	/ru/docs/orphaned/Web/HTML/Inline_elements
-/ru/docs/Web/HTML/Типы_ссылок	/ru/docs/Web/HTML/Attributes/rel
 /ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU	/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
@@ -800,7 +797,6 @@
 /ru/docs/Web/JavaScript/Guide_ru/Замыкания	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/JavaScript_шеллы	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ru/docs/Web/JavaScript/Language_Resources	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
-/ru/docs/Web/JavaScript/Reference/About	/ru/docs/conflicting/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
 /ru/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal
@@ -866,7 +862,6 @@
 /ru/docs/Web/JavaScript/Reference/Statements/Блок	/ru/docs/Web/JavaScript/Reference/Statements/block
 /ru/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ru/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ru/docs/Web/JavaScript/Reference/template_strings	/ru/docs/Web/JavaScript/Reference/Template_literals
-/ru/docs/Web/JavaScript/Reference/Об	/ru/docs/conflicting/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Shells	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ru/docs/Web/JavaScript/Typed_arrays	/ru/docs/Web/JavaScript/Guide/Typed_arrays
 /ru/docs/Web/JavaScript/О_JavaScript	/ru/docs/conflicting/Web/JavaScript
@@ -947,7 +942,6 @@
 /ru/docs/Web/Web_Components/HTML_Imports	/ru/docs/conflicting/Web/Web_Components
 /ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
-/ru/docs/Web/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/Web/Манифест	/ru/docs/Web/Manifest
 /ru/docs/Web/Манифест/background_color	/ru/docs/Web/Manifest/background_color
@@ -972,8 +966,6 @@
 /ru/docs/WebSockets	/ru/docs/Web/API/WebSockets_API
 /ru/docs/WebSockets/Writing_WebSocket_client_applications	/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
-/ru/docs/XPath	/ru/docs/Web/XPath
-/ru/docs/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
 /ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -1116,8 +1108,6 @@
 /ru/docs/Словарь/Scroll_container	/ru/docs/Glossary/Scroll_container
 /ru/docs/Словарь/Self-Executing_Anonymous_Function	/ru/docs/Glossary/Self-Executing_Anonymous_Function
 /ru/docs/Словарь/Semantics	/ru/docs/Glossary/Semantics
-/ru/docs/Словарь/Server	/ru/docs/Glossary/Server
-/ru/docs/Словарь/Simple_response_header	/ru/docs/Glossary/Simple_response_header
 /ru/docs/Словарь/Sloppy_mode	/ru/docs/Glossary/Sloppy_mode
 /ru/docs/Словарь/Specification	/ru/docs/Glossary/Specification
 /ru/docs/Словарь/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
@@ -1132,7 +1122,6 @@
 /ru/docs/Словарь/URL	/ru/docs/Glossary/URL
 /ru/docs/Словарь/User_agent	/ru/docs/Glossary/User_agent
 /ru/docs/Словарь/Variable	/ru/docs/Glossary/Variable
-/ru/docs/Словарь/Vendor_Prefix	/ru/docs/Glossary/Vendor_Prefix
 /ru/docs/Словарь/Viewport	/ru/docs/Glossary/Viewport
 /ru/docs/Словарь/W3C	/ru/docs/Glossary/W3C
 /ru/docs/Словарь/WAI	/ru/docs/Glossary/WAI

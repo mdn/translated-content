@@ -1,8 +1,6 @@
 ---
 title: Images adaptatives
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
-translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
-original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -81,18 +79,18 @@ Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessu
 Alors, quel est le problème à résoudre à l'aide des commutations de résolution&nbsp;? Nous voulons afficher un contenu d'image identique, juste plus grand ou plus petit selon l'appareil — c'est la situation de la deuxième image du contenu de notre exemple précédent. L'élément standard [`<img>`](/fr/docs/Web/HTML/Element/Img) vous permet classiquement de ne faire pointer le navigateur que vers un seul fichier source :
 
 ```html
-<img src="elva-fairy-800w.jpg" alt="Elva habillée en fée">
+<img src="elva-fairy-800w.jpg" alt="Elva habillée en fée" />
 ```
 
 Mais il est possible d'utiliser deux nouveaux attributs — [`srcset`](/fr/docs/Web/HTML/Element/Img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Element/Img#attr-sizes) — permettant de fournir plusieurs images source avec des indications pour permettre au navigateur de faire le bon choix. Vous trouverez un exemple de cela dans le fichier [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) sur GitHub (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html))&nbsp;:
 
 ```html
-<img srcset="elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 600px) 480px,
+<img
+  srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+  sizes="(max-width: 600px) 480px,
             800px"
-     src="elva-fairy-800w.jpg"
-     alt="Elva dressed as a fairy">
+  src="elva-fairy-800w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas difficiles à comprendre si vous les formatez comme indiqué ci-dessus, avec une partie différente de la valeur de l'attribut sur chaque ligne. Chaque valeur contient une liste séparée par des virgules et chaque partie de la liste est composée de trois sous-parties. Passons maintenant en revue leur contenu.
@@ -103,13 +101,13 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 2. un espace,
 3. la **largeur intrinsèque en pixels** (`480w`) — notez l'utilisation de l'unité `w`, et non `px` comme vous auriez pu penser. C'est la taille réelle de l'image; qui peut être trouvée en examinant les propriétés du fichier image sur l'ordinateur (par exemple sur un Mac, sélectionnez l'image dans le Finder, puis appuyez sur
 
-    <kbd>Cmd</kbd>
+   <kbd>Cmd</kbd>
 
-    \+
+   \+
 
-    <kbd>I</kbd>
+   <kbd>I</kbd>
 
-    pour faire apparaître l'écran des infos).
+   pour faire apparaître l'écran des infos).
 
 **`sizes`** définit un ensemble de conditions pour le média (par ex. des largeurs d'écran) et indique quelle taille d'image serait la plus adaptée si certaines conditions sont satisfaites — ce sont les conditions dont nous avons parlé plus haut. Dans ce cas, nous écrivons avant chaque virgule&nbsp;:
 
@@ -141,10 +139,10 @@ Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalit
 Si votre ordinateur prend en charge plusieurs résolutions d'affichage, mais que tout le monde voit l'image avec la même taille effective sur l'écran, vous pouvez permettre au navigateur de choisir une image de résolution appropriée en utilisant `srcset` avec `x-descriptors` et sans `sizes` — une syntaxe un peu plus facile en quelque sorte ! Vous pouvez trouver un exemple de ce à quoi cela ressemble dans [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html))&nbsp;:
 
 ```html
-<img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg" alt="Elva habillée en fée">
+<img
+  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+  src="elva-fairy-640w.jpg"
+  alt="Elva habillée en fée" />
 ```
 
 ![Une photo d'une petite fille habillée en fée avec un filtre appliqué à l'image pour obtenir l'effet d'une vieille photo.](resolution-example.png)Dans cet exemple, le CSS suivant est appliqué à l'image de façon à ce qu'elle ait une largeur de 320 pixels à l'écran (également nommée pixels CSS)&nbsp;:
@@ -164,16 +162,20 @@ Pour résumer, le problème des **décisions de nature artistique** réside dans
 Revenons à notre exemple initial du fichier [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html). Cette image nécessite d'opérer un choix de nature artistique&nbsp;:
 
 ```html
-<img src="elva-800w.jpg" alt="Chris debout tenant sa fille Elva dans ses bras">
+<img
+  src="elva-800w.jpg"
+  alt="Chris debout tenant sa fille Elva dans ses bras" />
 ```
 
 Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)}&nbsp;! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/Source)}&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/Img)}. Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à&nbsp;:
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
-  <img src="elva-800w.jpg" alt="Chris debout tenant sa fille Elva dans ses bras">
+  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+  <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+  <img
+    src="elva-800w.jpg"
+    alt="Chris debout tenant sa fille Elva dans ses bras" />
 </picture>
 ```
 
@@ -199,9 +201,11 @@ Il existe plusieurs nouveaux formats d'image très intéressants (comme WebP et 
 
 ```html
 <picture>
-  <source type="image/svg+xml" srcset="pyramid.svg">
-  <source type="image/webp" srcset="pyramid.webp">
-  <img src="pyramid.png" alt="Pyramide régulière constituée de quatre triangles équilatéraux">
+  <source type="image/svg+xml" srcset="pyramid.svg" />
+  <source type="image/webp" srcset="pyramid.webp" />
+  <img
+    src="pyramid.png"
+    alt="Pyramide régulière constituée de quatre triangles équilatéraux" />
 </picture>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
 
 {{HTTPSidebar}}
@@ -32,7 +31,7 @@ Access-Control-Allow-Origin: null
 ## Directives
 
 - \*
-  - : Pour les demandes sans informations d’identification, le serveur peut spécifier « \* » comme un caractère générique, permettant ainsi à n’importe quelle origine d'accéder à la ressource.
+  - : Pour les demandes sans informations d'identification, le serveur peut spécifier « \* » comme un caractère générique, permettant ainsi à n'importe quelle origine d'accéder à la ressource.
 - \<origin>
   - : Spécifie un URI qui peut accéder à la ressource. Il n'est possible de spécifier qu'une seule origine.
 

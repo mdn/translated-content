@@ -1,10 +1,6 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/fill-opacity
 ---
 
 {{SVGRef}}
@@ -18,7 +14,11 @@ Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -27,16 +27,13 @@ html,body,svg { height:100% }
   <circle cx="50" cy="50" r="40" />
 
   <!-- Définit l'opacité avec un nombre -->
-  <circle cx="150" cy="50" r="40"
-          fill-opacity="0.7" />
+  <circle cx="150" cy="50" r="40" fill-opacity="0.7" />
 
   <!-- Définit l'opaité avec un pourcentage -->
-  <circle cx="250" cy="50" r="40"
-          fill-opacity="50%" />
+  <circle cx="250" cy="50" r="40" fill-opacity="50%" />
 
   <!-- Définit l'opacité avec une propriété CSS -->
-  <circle cx="350" cy="50" r="40"
-          style="fill-opacity: .25;" />
+  <circle cx="350" cy="50" r="40" style="fill-opacity: .25;" />
 </svg>
 ```
 

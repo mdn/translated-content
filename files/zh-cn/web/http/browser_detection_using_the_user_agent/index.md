@@ -3,9 +3,9 @@ title: 使用用户代理字段进行浏览器检测
 slug: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 
-{{HTTPSidebar}}为不同浏览器提供不同的网页或服务通常是一个坏主意。互联网的本意是让任何人都可以访问，无论他们使用哪个浏览器或设备。有一些方法可以根据功能的可用性而不是针对特定的浏览器来开发您的网站以逐步增强自身。
+{{HTTPSidebar}}为不同浏览器提供不同的网页或服务通常是一个坏主意。互联网的本意是让任何人都可以访问，无论他们使用哪个浏览器或设备。有一些方法可以根据功能的可用性而不是针对特定的浏览器来开发你的网站以逐步增强自身。
 
-但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导您尽可能正确地进行此操作。
+但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导你尽可能正确地进行此操作。
 
 > **备注：** 值得重申的是：使用用户代理嗅探很少会成为一个好主意。你几乎总能发现一个更好的、更广泛兼容的方式来解决你的问题。
 
@@ -96,7 +96,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
 | 浏览器                                           | 规则                                                                                                                                                                                                                                    | 示例                                                                                                                                                           |
 | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                         | 注释中的 [**Mobile 或 Tablet 标记**](/zh-CN/docs/Gecko_user_agent_string_reference)                                                                                                                                              | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
+| Mozilla (Gecko, Firefox)                         | 注释中的 [**Mobile 或 Tablet 标记**](/zh-CN/docs/Gecko_user_agent_string_reference)                                                                                                                                                     | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
 | WebKit-based (Android, Safari)                   | 注释外的[**Mobile Safari 标记**](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3) | Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30               |
 | Blink-based (Chromium, Google Chrome, Opera 15+) | 注释外的[**Mobile Safari 标记**](https://developers.google.com/chrome/mobile/docs/user-agent)                                                                                                                                           | Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047 |
 | Presto-based (Opera 12-)                         | 注释中的[**Opera Mobi/xyz 标记**](http://my.opera.com/community/openweb/idopera/)(Opera 12-)                                                                                                                                            | Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50                                                            |

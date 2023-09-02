@@ -22,7 +22,7 @@ worker 可以依次生成新的 worker，只要这些 worker 与父页面托管�
 有许多不同类型的 worker：
 
 - 专用 worker 是由单个脚本使用的 worker。该上下文由 {{DOMxRef("DedicatedWorkerGlobalScope")}} 对象表示。
-- {{DOMxRef("SharedWorker","Shared worker")}} 是可以由在不同窗口、IFrame 等中运行的多个脚本使用的 worker ，只要它们与 worker 在同一域中。它们比专用的 worker 稍微复杂一点——脚本必须通过活动端口进行通信。
+- {{DOMxRef("SharedWorker","Shared worker")}} 是可以由在不同窗口、IFrame 等中运行的多个脚本使用的 worker，只要它们与 worker 在同一域中。它们比专用的 worker 稍微复杂一点——脚本必须通过活动端口进行通信。
 - [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验、拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。它们还将允许访问推送通知和后台同步 API。
 
 > **备注：** 根据 [web worker 规范](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)，worker 错误事件不应该冒泡（参见 [Firefox bug 1188141](https://bugzil.la/1188141)）。该规范已在 Firefox 42 中实现。
@@ -42,8 +42,12 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("queueMicrotask()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("structuredClone()")}}
+- {{domxref("window.requestAnimationFrame")}}（仅专用 worker）
+- {{domxref("window.cancelAnimationFrame")}}（仅专用 worker）
 
 以下函数**仅**对 worker 可用：
 
@@ -69,10 +73,13 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}}（仅在 worker 中有效！）
 - {{domxref("FormData")}}
+- {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}}（仅限专用 worker）
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
+- {{domxref("OffscreenCanvas")}}（和所有的 canvas context API）
 - {{domxref("Performance_API","Performance API")}}，包括：
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
@@ -80,11 +87,10 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- {{jsxref("Promise")}}
 - [Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
 - {{domxref("URL_API","URL API")}}（例如 {{domxref("URL")}}）
-- [WebGL](/zh-CN/docs/Web/API/WebGL_API) 与 {{domxref("OffscreenCanvas")}}
+- {{domxref('WebCodecs_API','','','true')}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
 

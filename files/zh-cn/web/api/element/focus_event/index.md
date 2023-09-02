@@ -14,9 +14,9 @@ slug: Web/API/Element/focus_event
 在象 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称或设置事件处理器属性。
 
 ```js
-addEventListener('focus', (event) => { });
+addEventListener("focus", (event) => {});
 
-onfocus = (event) => { };
+onfocus = (event) => {};
 ```
 
 ## 事件属性
@@ -34,8 +34,8 @@ _该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -51,23 +51,31 @@ _该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';
-}, true);
+form.addEventListener(
+  "focus",
+  (event) => {
+    event.target.style.background = "pink";
+  },
+  true,
+);
 
-form.addEventListener('blur', (event) => {
-  event.target.style.background = '';
-}, true);
+form.addEventListener(
+  "blur",
+  (event) => {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 #### 结果

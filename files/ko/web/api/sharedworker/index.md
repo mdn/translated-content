@@ -2,6 +2,7 @@
 title: SharedWorker
 slug: Web/API/SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`SharedWorker`** 인터페이스는 윈도우 창이나 iframe, 워커등의 다른 브라우징 컨텍스트에서도 접근이 가능한 특정 종류의 워커를 의미합니다. 기존의 다른 종류의 워커들과 다른 전역 스코프를 갖는 인터페이스를 구현합니다. {{domxref("SharedWorkerGlobalScope")}}.
@@ -45,35 +46,35 @@ myWorker.port.start();
 포트가 시작되면, 양 스크립트는 워커에 메시지를 보내고 `port.postMessage()`와 `port.onmessage` 를 각각 이용하여 메시지를 처리합니다.
 
 ```js
-first.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-  second.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-  myWorker.port.onmessage = function(e) {
-    result1.textContent = e.data;
-    console.log('Message received from worker');
-  }
+myWorker.port.onmessage = function (e) {
+  result1.textContent = e.data;
+  console.log("Message received from worker");
+};
 ```
 
 워커에서 {{domxref("SharedWorkerGlobalScope.onconnect")}} 핸들러를 이용하여 위에 언급된 포트에 접속할 수 있습니다. 워커에 연관되어 있는 포트는 {{event("connect")}} 이벤트 포트 속성에 접근할 수 있습니다 — 그리고나서 {{domxref("MessagePort")}} `start()` 메서드로 포트를 시작하고, onmessage 핸들러로 메인쓰레드에서 받은 메시지를 처리합니다.
 
 ```js
-onconnect = function(e) {
-    var port = e.ports[0];
+onconnect = function (e) {
+  var port = e.ports[0];
 
-    port.addEventListener('message', function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    });
+  port.addEventListener("message", function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
+    port.postMessage(workerResult);
+  });
 
-    port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+};
 ```
 
 ## 명세

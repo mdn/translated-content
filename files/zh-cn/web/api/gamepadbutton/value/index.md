@@ -21,7 +21,7 @@ var pressState = navigator.getGamepads()[0].value;
 ```js
 var gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value > 0) {
+if (gp.buttons[0].value > 0) {
   // 响应模拟按钮被按下
 }
 ```

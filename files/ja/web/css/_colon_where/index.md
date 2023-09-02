@@ -1,5 +1,5 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
 ---
 
@@ -60,30 +60,52 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 <article>
   <h2>:is() でスタイル付けしたリンク</h2>
   <section class="is-styling">
-    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>。
+    <p>
+      こちらがメインコンテンツです。これは<a href="https://mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </section>
 
   <aside class="is-styling">
-    <p>こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org">リンクを含んでいます</a>。
+    <p>
+      こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </aside>
 
   <footer class="is-styling">
-    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+    <p>
+      こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a
+      >を含んでいます。
+    </p>
   </footer>
 </article>
 
 <article>
   <h2>:where() でスタイル付けしたリンク</h2>
   <section class="where-styling">
-    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>.
+    <p>
+      こちらがメインコンテンツです。これは<a href="https://mozilla.org"
+        >リンクを含んでいます</a
+      >.
+    </p>
   </section>
 
   <aside class="where-styling">
-    <p>こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org">リンクを含んでいます</a>.
+    <p>
+      こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org"
+        >リンクを含んでいます</a
+      >.
+    </p>
   </aside>
 
   <footer class="where-styling">
-    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+    <p>
+      こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a
+      >を含んでいます。
+    </p>
   </footer>
 </article>
 ```

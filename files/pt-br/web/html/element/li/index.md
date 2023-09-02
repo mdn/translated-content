@@ -43,9 +43,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ```html
 <ol>
-    <li>primeiro item</li>
-    <li>segundo item</li>
-    <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ol>
 ```
 
@@ -57,9 +57,9 @@ A saída HTML acima será:
 
 ```html
 <ul>
-    <li>primeiro item</li>
-    <li>segundo item</li>
-    <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ul>
 ```
 
@@ -71,17 +71,17 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 
 ## Especificações
 
-| Especificação                                                                                                | Estado                           | Observação |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                     | Estado                   | Observação |
+| --------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                       | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 
 {{Compat("html.elements.li")}}
 
-## Veja também:
+## Veja também
 
 - Outros elementos HTML parentes: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
 - Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento`<li>`:

@@ -44,7 +44,7 @@ var firstTrack = tracks[0];
 次の例では、メディアのすべての音声トラックをスキャンして、（変数 `userLanguage` から取得した）ユーザーの優先言語のものを有効にし、それ以外を無効にします。
 
 ```js
-tracks.forEach(function(track) {
+tracks.forEach(function (track) {
   if (track.language === userLanguage) {
     track.enabled = true;
   } else {

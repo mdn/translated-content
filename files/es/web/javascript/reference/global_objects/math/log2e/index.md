@@ -1,7 +1,6 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LOG2E
 ---
 
 {{JSRef("Objetos_globales", "Math")}}
@@ -24,7 +23,7 @@ La función siguiente devuelve el base 2 del logaritmo natural del `E`:
 
 ```js
 function getLog2e() {
-   return Math.LOG2E
+  return Math.LOG2E;
 }
 ```
 

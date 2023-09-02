@@ -31,6 +31,7 @@ border-bottom-width: <border-width> | inherit
 - thick
   - : un borde grueso.
 - \<length>
+
   - : El espesor de un borde tiene un valor explícito. los anchos de borde no pueden ser negativos.
 
     Nota : El valor `em` también es soportada.

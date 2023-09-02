@@ -17,16 +17,20 @@ l10n:
 
 ```js
 // 関数なし
-sort()
+sort();
 
 // アロー関数
-sort((a, b) => { /* … */ } )
+sort((a, b) => {
+  /* … */
+});
 
 // 比較関数
-sort(compareFn)
+sort(compareFn);
 
 // インライン比較関数
-sort(function compareFn(a, b) { /* … */ })
+sort(function compareFn(a, b) {
+  /* … */
+});
 ```
 
 ### 引数
@@ -52,11 +56,11 @@ sort(function compareFn(a, b) { /* … */ })
 
 `compareFn` が与えられた場合、`undefined` 以外のすべての配列要素は比較関数の返値に基づきソートされます（`undefined` の要素はすべて、`compareFn` を呼び出すことなく配列の末尾へ並べられます）。
 
-| `compareFn(a, b)` の返値 | ソート順                         |
-| ------------------------------ | ---------------------------------- |
-| > 0                            | `a` を `b` の後に並べる           |
-| < 0                            | `a` を `b` の前に並べる           |
-| === 0                          | `a` と `b` の元の順序を維持する   |
+| `compareFn(a, b)` の返値 | ソート順                        |
+| ------------------------ | ------------------------------- |
+| > 0                      | `a` を `b` の後に並べる         |
+| < 0                      | `a` を `b` の前に並べる         |
+| === 0                    | `a` と `b` の元の順序を維持する |
 
 よって、比較関数は以下のような形式をもちます。
 
@@ -115,12 +119,12 @@ console.log(numbers2);
 
 ```js
 const items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
 ];
 
 // value 順にソート
@@ -149,10 +153,10 @@ items.sort((a, b) => {
 以下の例は 4 つの配列を生成し、元の配列を表示したのちに、ソートした配列を表示します。数値の配列は比較関数なしでソートされたのち、比較関数ありでソートされます。
 
 ```js
-const stringArray = ['Blue', 'Humpback', 'Beluga'];
+const stringArray = ["Blue", "Humpback", "Beluga"];
 const numberArray = [40, 1, 5, 200];
-const numericStringArray = ['80', '9', '700'];
-const mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+const numericStringArray = ["80", "9", "700"];
+const mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
@@ -179,7 +183,7 @@ mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 非 ASCII 文字、つまりアクセント記号付き文字（e, é, è, a, ä など）を含む文字列をソートする場合、英語以外の文字列は {{jsxref("String.prototype.localeCompare()")}} を使用してください。この関数は、それらの文字を比較して正しい順序で表示することができます。
 
 ```js
-const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+const items = ["réservé", "premier", "communiqué", "café", "adieu", "éclair"];
 items.sort((a, b) => a.localeCompare(b));
 
 // items は ['adieu', 'café', 'communiqué', 'éclair', 'premier', 'réservé']
@@ -191,12 +195,12 @@ items.sort((a, b) => a.localeCompare(b));
 
 ```js
 // ソートする配列
-const data = ['delta', 'alpha', 'charlie', 'bravo'];
+const data = ["delta", "alpha", "charlie", "bravo"];
 
 // 位置とソート値を持つオブジェクトを保持する一時的な配列です。
 const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
-})
+});
 
 // 削減された値を含む対応付けられた配列のソート
 mapped.sort((a, b) => {
@@ -244,10 +248,10 @@ console.log(numbers[0]); // 3
 
 ```js
 const students = [
-  { name: "Alex",   grade: 15 },
+  { name: "Alex", grade: 15 },
   { name: "Devlin", grade: 15 },
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 }
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
 ];
 ```
 
@@ -261,10 +265,10 @@ students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
-  { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
-  { name: "Devlin", grade: 15 }  // original maintained for similar grade (stable sorting)
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
+  { name: "Alex", grade: 15 }, // original maintained for similar grade (stable sorting)
+  { name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
 ];
 ```
 
@@ -274,10 +278,10 @@ students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
-  { name: "Alex",   grade: 15 }  // original order not maintained
+  { name: "Alex", grade: 15 }, // original order not maintained
 ];
 ```
 
@@ -289,17 +293,17 @@ students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 
 ```js
 const arr = [3, 1, 4, 1, 5, 9];
-const compareFn = (a, b) => a > b ? 1 : 0;
+const compareFn = (a, b) => (a > b ? 1 : 0);
 arr.sort(compareFn);
 ```
 
-ここでの `compareFn` 関数は、対称性を満たしていないため、正しい形式ではありません。 `a > b` ならば `1` を返しますが、 `a` と `b` を入れ替えると、負の値ではなく `0` を返すようになります。そのため、生成される配列はエンジンによって異なります。例えば、V8（Chrome、Node.jsなどで使用）やJavaScriptCore（Safariで使用）は配列を全くソートせず、 `[3, 1, 4, 1, 5, 9]` を返しますが、SpiderMonkey（Firefoxで使用）は `[1, 1, 4, 5, 9]` のように昇順に並べた配列を返すことになります。
+ここでの `compareFn` 関数は、対称性を満たしていないため、正しい形式ではありません。 `a > b` ならば `1` を返しますが、 `a` と `b` を入れ替えると、負の値ではなく `0` を返すようになります。そのため、生成される配列はエンジンによって異なります。例えば、V8（Chrome、Node.jsなどで使用）やJavaScriptCore（Safariで使用）は配列を全くソートせず、 `[3, 1, 4, 1, 5, 9]` を返しますが、SpiderMonkey（Firefoxで使用）は `[1, 1, 3, 4, 5, 9]` のように昇順に並べた配列を返すことになります。
 
 しかし、`compareFn` 関数を少し変更して、`-1` や `0` を返すようにすると、次のようになります。
 
 ```js
 const arr = [3, 1, 4, 1, 5, 9];
-const compareFn = (a, b) => a > b ? -1 : 0;
+const compareFn = (a, b) => (a > b ? -1 : 0);
 arr.sort(compareFn);
 ```
 

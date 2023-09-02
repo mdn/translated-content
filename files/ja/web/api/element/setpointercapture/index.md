@@ -1,8 +1,9 @@
 ---
-title: Element.setPointerCapture()
+title: "Element: setPointerCapture() メソッド"
+short-title: setPointerCapture()
 slug: Web/API/Element/setPointerCapture
 l10n:
-  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}

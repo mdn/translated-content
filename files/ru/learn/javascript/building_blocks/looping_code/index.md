@@ -1,7 +1,6 @@
 ---
 title: Зацикливание кода
 slug: Learn/JavaScript/Building_blocks/Looping_code
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
@@ -51,10 +50,10 @@ loop(food = 0; foodNeeded = 10) {
 На следующем примере попробуем показать, почему циклы так полезны. Предположим мы хотели нарисовать 100 случайных кругов на элементе {{htmlelement("canvas")}}. Нажмите кнопку "Обновить", чтобы снова и снова запускать пример и увидеть, что круги рисуются случайным образом.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Random canvas circles</title>
     <style>
       html {
@@ -79,41 +78,37 @@ loop(food = 0; foodNeeded = 10) {
     </style>
   </head>
   <body>
+    <button>Обновить</button>
 
-  <button>Обновить</button>
-
-  <canvas></canvas>
-
+    <canvas></canvas>
 
     <script>
-    var btn = document.querySelector('button');
-    var canvas = document.querySelector('canvas');
-    var ctx = canvas.getContext('2d');
+      var btn = document.querySelector("button");
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
 
-    var WIDTH = document.documentElement.clientWidth;
-    var HEIGHT = document.documentElement.clientHeight;
+      var WIDTH = document.documentElement.clientWidth;
+      var HEIGHT = document.documentElement.clientHeight;
 
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
+      canvas.width = WIDTH;
+      canvas.height = HEIGHT;
 
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (var i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
+      function random(number) {
+        return Math.floor(Math.random() * number);
       }
-    }
 
-    btn.addEventListener('click',draw);
+      function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (var i = 0; i < 100; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,0,0,0.5)";
+          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
 
+      btn.addEventListener("click", draw);
     </script>
-
   </body>
 </html>
 ```
@@ -125,7 +120,7 @@ loop(food = 0; foodNeeded = 10) {
 ```js
 for (var i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
@@ -140,7 +135,7 @@ for (var i = 0; i < 100; i++) {
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
+ctx.fillStyle = "rgba(255,0,0,0.5)";
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -162,21 +157,21 @@ for (initializer; exit-condition; final-expression) {
 1. Ключевое слово [for](/ru/docs/Web/JavaScript/Reference/Statements/for), за которым следуют круглые скобки.
 2. В круглых скобках у нас есть три части, разделённые точкой с запятой:
 
-    1. **Инициализатор** — обычно это переменная численного типа, которая увеличивается каждую итерацию, чтобы посчитать количество шагов цикла. Её также называет **счётчиком**.
-    2. **Условие выхода** — как упоминалось ранее, определяет, когда цикл должен остановиться. Обычно это выражение с оператором сравнения проверяющим, выполнено ли условие выхода.
-    3. **Окончательное выражение** — вычисляется (или выполняется) каждый раз, когда цикл проходит полную итерацию. Обычно оно служит для увеличения (или уменьшения) переменной **счётчика**, чтобы приблизить её значение к условию выхода.
+   1. **Инициализатор** — обычно это переменная численного типа, которая увеличивается каждую итерацию, чтобы посчитать количество шагов цикла. Её также называет **счётчиком**.
+   2. **Условие выхода** — как упоминалось ранее, определяет, когда цикл должен остановиться. Обычно это выражение с оператором сравнения проверяющим, выполнено ли условие выхода.
+   3. **Окончательное выражение** — вычисляется (или выполняется) каждый раз, когда цикл проходит полную итерацию. Обычно оно служит для увеличения (или уменьшения) переменной **счётчика**, чтобы приблизить её значение к условию выхода.
 
 3. Фигурные скобки, содержащие блок кода. Этот код будет запускаться на каждой итерации цикла.
 
 Посмотрим на пример, чтобы разобраться в этом более детально.
 
 ```js
-var cats = ['Билл', 'Макс', 'Пикси', 'Алиса', 'Жасмин'];
-var info = 'Моих кошек зовут ';
-var para = document.querySelector('p');
+var cats = ["Билл", "Макс", "Пикси", "Алиса", "Жасмин"];
+var info = "Моих кошек зовут ";
+var para = document.querySelector("p");
 
 for (var i = 0; i < cats.length; i++) {
-  info += cats[i] + ', ';
+  info += cats[i] + ", ";
 }
 
 para.textContent = info;
@@ -185,33 +180,27 @@ para.textContent = info;
 Этот блок кода будет иметь следующий результат:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Пример цикла For</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var cats = ['Билл', 'Макс', 'Пикси', 'Алиса', 'Жасмин'];
-    var info = 'Моих кошек зовут: ';
-    var para = document.querySelector('p');
+      var cats = ["Билл", "Макс", "Пикси", "Алиса", "Жасмин"];
+      var info = "Моих кошек зовут: ";
+      var para = document.querySelector("p");
 
-    for (var i = 0; i < cats.length; i++) {
-      info += cats[i] + ', ';
-    }
+      for (var i = 0; i < cats.length; i++) {
+        info += cats[i] + ", ";
+      }
 
-    para.textContent = info;
-
+      para.textContent = info;
     </script>
-
   </body>
 </html>
 ```
@@ -227,9 +216,9 @@ para.textContent = info;
 2. Цикл запускается, пока значение итератора не будет больше длины массива кошек. Это важно - условие выхода показывает когда именно цикл должен работать, а когда нужно выйти из цикла. Поэтому в случае, пока `i < cats.lenght` по-прежнему возвращает `true`, цикл будет работать.
 3. Внутри тела цикла мы соединяем текущий элемент цикла (`cats[i]` это `cats`\[независимо от того, чем `i` является в данный момент]) с запятой и пробелом. Итак:
 
-    1. В начале, `i = 0`, поэтому `cats[0] + ', '` соединятся в ("Билл, ").
-    2. На втором шаге, `i = 1`, поэтому `cats[1] + ', '` соединятся в ("Макс, ")
-    3. И так далее. В конце каждого цикла `i` увеличится на 1 (`i++`) , и процесс будет начинаться заново.
+   1. В начале, `i = 0`, поэтому `cats[0] + ', '` соединятся в ("Билл, ").
+   2. На втором шаге, `i = 1`, поэтому `cats[1] + ', '` соединятся в ("Макс, ")
+   3. И так далее. В конце каждого цикла `i` увеличится на 1 (`i++`) , и процесс будет начинаться заново.
 
 4. Когда `i` достигнет величины `cats.length` цикл остановится и браузер перейдёт к следующему фрагменту кода после цикла.
 
@@ -246,9 +235,9 @@ para.textContent = info;
 ```js
 for (var i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
-    info += 'и ' + cats[i] + '.';
+    info += "и " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 }
 ```
@@ -268,7 +257,7 @@ for (var i = 0; i < cats.length; i++) {
 
 ```html
 <label for="search">Поиск по имени: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Поиск</button>
 
 <p></p>
@@ -277,67 +266,75 @@ for (var i = 0; i < cats.length; i++) {
 Теперь в JavaScript:
 
 ```js
-var contacts = ['Григорий:2232322', 'Марина:3453456', 'Василий:7654322', 'Наталья:9998769', 'Диана:9384975'];
-var para = document.querySelector('p');
-var input = document.querySelector('input');
-var btn = document.querySelector('button');
+var contacts = [
+  "Григорий:2232322",
+  "Марина:3453456",
+  "Василий:7654322",
+  "Наталья:9998769",
+  "Диана:9384975",
+];
+var para = document.querySelector("p");
+var input = document.querySelector("input");
+var btn = document.querySelector("button");
 
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   var searchName = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (var i = 0; i < contacts.length; i++) {
-    var splitContact = contacts[i].split(':');
+    var splitContact = contacts[i].split(":");
     if (splitContact[0] === searchName) {
-      para.textContent = splitContact[0] + ', тел.: ' + splitContact[1] + '.';
+      para.textContent = splitContact[0] + ", тел.: " + splitContact[1] + ".";
       break;
     } else {
-      para.textContent = 'Контакт не найден.';
+      para.textContent = "Контакт не найден.";
     }
   }
 });
 ```
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple contact search example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="search">Найти имя контакта: </label>
+    <input id="search" type="text" />
+    <button>Поиск</button>
 
-  <label for="search">Найти имя контакта: </label>
-  <input id="search" type="text">
-  <button>Поиск</button>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var contacts = ['Григорий:2232322', 'Марина:3453456', 'Василий:7654322', 'Наталья:9998769', 'Диана:9384975'];
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var contacts = [
+        "Григорий:2232322",
+        "Марина:3453456",
+        "Василий:7654322",
+        "Наталья:9998769",
+        "Диана:9384975",
+      ];
+      var para = document.querySelector("p");
+      var input = document.querySelector("input");
+      var btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      var searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 0; i < contacts.length; i++) {
-        var splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + ', тел.: ' + splitContact[1] + '.';
-          break;
-        } else if (i === contacts.length-1)
-              para.textContent = 'Контакт не найден.';
+      btn.addEventListener("click", function () {
+        var searchName = input.value;
+        input.value = "";
+        input.focus();
+        for (var i = 0; i < contacts.length; i++) {
+          var splitContact = contacts[i].split(":");
+          if (splitContact[0] === searchName) {
+            para.textContent =
+              splitContact[0] + ", тел.: " + splitContact[1] + ".";
+            break;
+          } else if (i === contacts.length - 1)
+            para.textContent = "Контакт не найден.";
         }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -349,9 +346,9 @@ btn.addEventListener('click', function() {
 3. Мы сохраняем значение, введённое в текстовое поле, в переменную `searchName`, затем очищаем введённый текст и снова фокусируемся на текстовом поле для нового поиска.
 4. Теперь перейдём к интересующей нас части — к циклу `for`:
 
-    1. Мы начали счётчик с `0`, запускаем цикл до тех пор, пока счётчик всё ещё меньше, чем contacts.length, а инкремент `i` увеличиваем на 1 после каждой итерации цикла.
-    2. Внутри цикла мы сначала разделяем текущий контакт (`contacts[i]`) на символе двоеточия, и сохраняем полученные два значения в массиве с названием `splitContact`.
-    3. Затем мы используем условный оператор, чтобы проверить, равно ли `splitContact[0]` (имя контакта) введённому `searchName`. Если это так, мы выводим строку в абзац, чтобы сообщить, каков номер контакта, и используем `break` для завершения цикла.
+   1. Мы начали счётчик с `0`, запускаем цикл до тех пор, пока счётчик всё ещё меньше, чем contacts.length, а инкремент `i` увеличиваем на 1 после каждой итерации цикла.
+   2. Внутри цикла мы сначала разделяем текущий контакт (`contacts[i]`) на символе двоеточия, и сохраняем полученные два значения в массиве с названием `splitContact`.
+   3. Затем мы используем условный оператор, чтобы проверить, равно ли `splitContact[0]` (имя контакта) введённому `searchName`. Если это так, мы выводим строку в абзац, чтобы сообщить, каков номер контакта, и используем `break` для завершения цикла.
 
 5. После [итерации](<https://ru.wikipedia.org/wiki/%D0%98%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F_(%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)>) `(contacts.length-1)`, если имя контакта не совпадает с введённым именем в поисковом запросе, для текста абзаца устанавливается: «Контакт не найден.», и цикл продолжает повторяться.
 
@@ -374,52 +371,47 @@ for (var i = 1; i <= num; i++) {
     continue;
   }
 
-  para.textContent += i + ' ';
+  para.textContent += i + " ";
 }
 ```
 
 Вывод:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Генератор целочисленных квадратов</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="number">Введите число: </label>
+    <input id="number" type="text" />
+    <button>Генерация целочисленных квадратов</button>
 
-  <label for="number">Введите число: </label>
-  <input id="number" type="text">
-  <button>Генерация целочисленных квадратов</button>
-
-  <p>Результат: </p>
-
+    <p>Результат:</p>
 
     <script>
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var para = document.querySelector("p");
+      var input = document.querySelector("input");
+      var btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      var num = input.value;
-      input.value = '';
-      input.focus();
-      para.textContent = 'Вы ввели: ' + num + '. Результат: ';
-      for (var i = 1; i <= num; i++) {
-        var sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
+      btn.addEventListener("click", function () {
+        var num = input.value;
+        input.value = "";
+        input.focus();
+        para.textContent = "Вы ввели: " + num + ". Результат: ";
+        for (var i = 1; i <= num; i++) {
+          var sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+
+          para.textContent += i + " ";
         }
-
-        para.textContent += i + ' ';
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -461,9 +453,9 @@ var i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -494,9 +486,9 @@ var i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -531,12 +523,12 @@ do {
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 var output = document.querySelector('.output');
 output.innerHTML = '';
@@ -549,8 +541,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -577,9 +569,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -587,38 +579,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+var jsSolution =
+  "var output = document.querySelector('.output');\noutput.innerHTML = '';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n  para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -630,8 +623,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -642,10 +638,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -683,12 +679,14 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Пригласить: </p>
-  <p class="refused">Не приглашать(!): </p>
+  <p class="admitted">Пригласить:</p>
+  <p class="refused">Не приглашать(!):</p>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 var people = ['Крис', 'Анна', 'Колин', 'Терри', 'Фил', 'Лола', 'Сём', 'Кай', 'Брюс'];
 
@@ -705,8 +703,8 @@ refused.textContent = 'Не приглашать(!): '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сброс">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сброс" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -733,9 +731,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -743,38 +741,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Скрыть решение';
+    solution.value = "Скрыть решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var jsSolution = 'var people = [\'Крис\', \'Анна\', \'Колин\', \'Терри\', \'Фил\', \'Лола\', \'Сём\', \'Кай\', \'Брюс\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Пригласить: \';\nrefused.textContent = \'Не приглашать(!): \'\nvar i = 0;\n\ndo {\n if(people[i] === \'Фил\' || people[i] === \'Лола\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+var jsSolution =
+  "var people = ['Крис', 'Анна', 'Колин', 'Терри', 'Фил', 'Лола', 'Сём', 'Кай', 'Брюс'];\n\nvar admitted = document.querySelector('.admitted');\nvar refused = document.querySelector('.refused');\n\nadmitted.textContent = 'Пригласить: ';\nrefused.textContent = 'Не приглашать(!): '\nvar i = 0;\n\ndo {\n if(people[i] === 'Фил' || people[i] === 'Лола') {\n refused.textContent += people[i] + ', ';\n } else {\n admitted.textContent += people[i] + ', ';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -786,8 +785,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -798,10 +800,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -863,7 +865,7 @@ do {
 - [for свойства и характеристики](/ru/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/ru/docs/Web/JavaScript/Reference/Statements/while) и [do...while](/ru/docs/Web/JavaScript/Reference/Statements/do...while) описание
 - [break](/ru/docs/Web/JavaScript/Reference/Statements/break) и [continue](/ru/docs/Web/JavaScript/Reference/Statements/continue) описание
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — статья о практическом применении циклов
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — статья о практическом применении циклов
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 

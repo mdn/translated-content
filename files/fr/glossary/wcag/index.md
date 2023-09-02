@@ -1,7 +1,6 @@
 ---
 title: WCAG
 slug: Glossary/WCAG
-translation_of: Glossary/WCAG
 ---
 
 Les _Web Content Accessibility Guidelines_ (**WCAG**) sont une recommandation publiée par le groupe {{Glossary("WAI","Web Accessibility Initiative")}} du {{Glossary("W3C")}}. Ils définissent un ensemble de lignes de conduite à suivre pour rendre le contenu accessible principalement aux personnes avec des handicaps, mais aussi aux appareils aux ressources limitées comme les téléphones portables.
@@ -18,7 +17,7 @@ WCAG utilise trois niveaux d'accessibilité :
 
 ### Culture générale
 
-- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web) sur Wikipédia
+- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
 
 ### Connaissances techniques
 

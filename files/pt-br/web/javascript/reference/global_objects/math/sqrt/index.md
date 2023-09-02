@@ -38,18 +38,18 @@ Por `sqrt` ser um método estático de `Math`, deve-se sempre usá-lo como `Math
 Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+| Especificação                                        | Status             | Comentário                                         |
+| ---------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                  | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}} | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}   | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

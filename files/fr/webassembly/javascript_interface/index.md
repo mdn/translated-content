@@ -1,14 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-tags:
-  - API
-  - JavaScript
-  - Object
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
 {{WebAssemblySidebar}}
@@ -32,7 +24,7 @@ L'objet `WebAssembly` est notamment utilisé pour :
 - {{jsxref("WebAssembly.instantiateStreaming()")}}
   - : Cette méthode peremet de compiler et d'instancier un module WebAssembly à partir d'un flux source (_streamed source_). Elle renvoie à la fois un objet `Module` et sa première `Instance`.
 - {{jsxref("WebAssembly.compile()")}}
-  - : Cette méthode permet de compiler un {{jsxref("WebAssembly.Module")}} à partir de *bytecode* WebAssembly, l'instanciation doit alors être effectuée dans une autre étape.
+  - : Cette méthode permet de compiler un {{jsxref("WebAssembly.Module")}} à partir de _bytecode_ WebAssembly, l'instanciation doit alors être effectuée dans une autre étape.
 - {{jsxref("WebAssembly.compileStreaming()")}}
   - : Cette méthode permet de compiler un module {{jsxref("WebAssembly.Module")}} à partir d'un flux source (_streamed source_). L'instanciation devra alors être réalisée avec une autre étape.
 - {{jsxref("WebAssembly.validate()")}}
@@ -62,10 +54,11 @@ L'objet `WebAssembly` est notamment utilisé pour :
 L'exemple suivant (cf. le fichier [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) sur GitHub et [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) permet de récupérer le module WebAssembly via un flux depuis une source, de le compiler, puis de l'instancier. La promesse est résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` accepte une promesse pour l'argument {{domxref("Response")}}, on peut lui passer directement un appel à [`fetch()`](/fr/docs/Web/API/fetch) qui passera ensuite la réponse à la fonction lors de la complétion de la promesse.
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 On accède alors à la propriété de l'instance `ResultObject` puis on appelle la fonction exportée.

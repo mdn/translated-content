@@ -1,7 +1,6 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-original_slug: Web/HTML/Elemento/marquee
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}
@@ -61,7 +60,12 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 
 <marquee direction="up">Este texto se mueve de abajo hacia arriba</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
   <marquee behavior="alternate">
     Este texto rebotará dentro de la marquesina.
   </marquee>

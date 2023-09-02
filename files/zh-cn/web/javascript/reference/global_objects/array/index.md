@@ -31,7 +31,7 @@ JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Gui
 JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
 
 ```js
-console.log(years['2'] !== years['02']);
+console.log(years["2"] !== years["02"]);
 ```
 
 只有 `years['2']` 是一个实际的数组索引。`years['02']` 是一个在数组迭代中不会被访问的任意字符串属性。
@@ -113,8 +113,6 @@ console.log(fruits.length); // 2
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
 - {{jsxref("Array/includes", "includes()")}}
 - {{jsxref("Array/join", "join()")}}
 - {{jsxref("Array/keys", "keys()")}}
@@ -123,7 +121,7 @@ console.log(fruits.length); // 2
 
 ### 复制方法和修改方法
 
-有些方法不会修改调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[*浅层次的*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制一开始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
+有些方法不会修改调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[_浅层次的_](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制一开始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
 
 - 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
 - 基本类型，如字符串、数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
@@ -147,20 +145,18 @@ console.log(fruits.length); // 2
 - {{jsxref("Array/toSpliced", "toSpliced()")}}
 - {{jsxref("Array/with", "with()")}}
 
-注意，{{jsxref("Array/group", "group()")}} 和 {{jsxref("Array/groupToMap", "groupToMap()")}} 不使用 `@@species` 为每个组条目创建新数组，而是始终使用普通的 `Array` 构造函数。从概念上讲，它们也不是复制方法。
-
 下表列出了会修改原始数组的方法，以及相应的非修改方法：
 
-| 修改方法                                        | 相应的非修改方法                                        |
-| ---------------------------------------------- | ----------------------------------------------------- |
+| 修改方法                                       | 相应的非修改方法                                         |
+| ---------------------------------------------- | -------------------------------------------------------- |
 | {{jsxref("Array/copyWithin", "copyWithin()")}} | 没有相应的非修改方法                                     |
 | {{jsxref("Array/fill", "fill()")}}             | 没有相应的非修改方法                                     |
-| {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}             |
-| {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}        |
-| {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}        |
-| {{jsxref("Array/shift", "shift()")}}           | {{jsxref("Array/slice", "slice(1)")}}                 |
-| {{jsxref("Array/sort", "sort()")}}             | {{jsxref("Array/toSorted", "toSorted()")}}            |
-| {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}          |
+| {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}                |
+| {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}           |
+| {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}           |
+| {{jsxref("Array/shift", "shift()")}}           | {{jsxref("Array/slice", "slice(1)")}}                    |
+| {{jsxref("Array/sort", "sort()")}}             | {{jsxref("Array/toSorted", "toSorted()")}}               |
+| {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}             |
 | {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/toSpliced", "toSpliced(0, 0, v1, v2)")}} |
 
 将改变原数组的方法转换为非修改方法的一种简单方式是使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 {{jsxref("Array/slice", "slice()")}} 先创建一个副本：
@@ -204,8 +200,6 @@ method(callbackFn, thisArg)
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
 - {{jsxref("Array/flatMap", "flatMap()")}}
 - {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
 - {{jsxref("Array/map", "map()")}}
 - {{jsxref("Array/some", "some()")}}
 
@@ -251,7 +245,7 @@ console.log(a.length); // 0
 
 #### 类数组对象
 
-术语[*类数组对象*](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)指的是在上面描述的 `length` 转换过程中不抛出的任何对象。在实践中，这样的对象应该实际具有 `length` 属性，并且索引元素的范围在 `0` 到 `length - 1` 之间。（如果它没有所有的索引，它将在功能上等同于[稀疏数组](#数组方法和空槽)。）
+术语[_类数组对象_](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)指的是在上面描述的 `length` 转换过程中不抛出的任何对象。在实践中，这样的对象应该实际具有 `length` 属性，并且索引元素的范围在 `0` 到 `length - 1` 之间。（如果它没有所有的索引，它将在功能上等同于[稀疏数组](#数组方法和空槽)。）
 
 许多 DOM 对象都是类数组对象——例如 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 和 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection)。[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象也是类数组对象。你可以在它们上调用数组方法，即使它们本身没有这些方法。
 
@@ -307,7 +301,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 在数组内复制数组元素序列。
 - {{jsxref("Array.prototype.entries()")}}
-  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，其中包含数组中每个索引的键/值对。
+  - : 返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，其中包含数组中每个索引的键/值对。
 - {{jsxref("Array.prototype.every()")}}
   - : 如果调用数组中的每个元素都满足测试函数，则返回 `true`。
 - {{jsxref("Array.prototype.fill()")}}
@@ -328,10 +322,6 @@ f("a", "b"); // 'a+b'
   - : 对调用数组的每个元素调用给定的回调函数，然后将结果展平一层，返回一个新数组。
 - {{jsxref("Array.prototype.forEach()")}}
   - : 对调用数组中的每个元素调用给定的函数。
-- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
-  - : 根据测试函数返回的字符串，将数组的元素分组到一个对象中。
-- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
-  - : 根据测试函数返回的值，将数组的元素分组到 {{jsxref("Map")}} 中。
 - {{jsxref("Array.prototype.includes()")}}
   - : 确定调用数组是否包含一个值，根据情况返回 `true` 或 `false`。
 - {{jsxref("Array.prototype.indexOf()")}}
@@ -339,7 +329,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.join()")}}
   - : 将数组的所有元素连接为字符串。
 - {{jsxref("Array.prototype.keys()")}}
-  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)，其中包含调用数组中每个索引的键。
+  - : 返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)，其中包含调用数组中每个索引的键。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 返回在调用数组中可以找到给定元素的最后一个（最大）索引，如果找不到则返回 `-1`。
 - {{jsxref("Array.prototype.map()")}}
@@ -377,7 +367,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.unshift()")}}
   - : 在数组的前面添加一个或多个元素，并返回数组新的 `length`。
 - {{jsxref("Array.prototype.values()")}}
-  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含数组中每个索引的值。
+  - : 返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含数组中每个索引的值。
 - {{jsxref("Array.prototype.with()")}}
   - : 返回一个新数组，其中给定索引处的元素替换为给定值，而不改变原始数组。
 - [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
@@ -387,7 +377,7 @@ f("a", "b"); // 'a+b'
 
 本节提供一些 JavaScript 中常见的数组操作示例。
 
-> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 
@@ -447,7 +437,7 @@ fruits[99]; // undefined
 
 ```js
 const fruits = ["Apple", "Banana"];
-console.log(fruits.indexOf('Banana'));
+console.log(fruits.indexOf("Banana"));
 // 1
 ```
 
@@ -603,7 +593,7 @@ console.log(removedItems);
 const fruits = ["Apple", "Banana", "Strawberry"];
 const start = -2;
 const deleteCount = 2;
-const removedItems = fruits.splice(start, deleteCount, 'Mango', 'Cherry');
+const removedItems = fruits.splice(start, deleteCount, "Mango", "Cherry");
 console.log(fruits);
 // ["Apple", "Mango", "Cherry"]
 console.log(removedItems);
@@ -615,7 +605,7 @@ console.log(removedItems);
 下面的例子使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环遍历 `fruits` 数组，将每一个元素打印到控制台。
 
 ```js
-const fruits = ['Apple', 'Mango', 'Cherry'];
+const fruits = ["Apple", "Mango", "Cherry"];
 for (const fruit of fruits) {
   console.log(fruit);
 }
@@ -694,7 +684,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 const fruits = ["Strawberry", "Mango"];
 const fruitsAlias = fruits;
 // 'fruits' 和 'fruitsAlias' 是同一个对象，严格相等。
-fruits === fruitsAlias // true
+fruits === fruitsAlias; // true
 // 对 'fruits' 数组的任何更改也会更改 'fruitsAlias'。
 fruits.unshift("Apple", "Banana");
 console.log(fruits);
@@ -702,36 +692,6 @@ console.log(fruits);
 console.log(fruitsAlias);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 ```
-
-### 对数组的元素进行分组
-
-{{jsxref("Array.prototype.group()")}} 方法可用于对数组的元素进行分组，使用测试函数返回指示当前元素组的字符串。
-
-这里我们有一个简单的库存数组，它包含具有 `name` 和 `type` 的 `food` 对象。
-
-```js
-const inventory = [
-  { name: 'asparagus', type: 'vegetables' },
-  { name: 'bananas', type: 'fruit' },
-  { name: 'goat', type: 'meat' },
-  { name: 'cherries', type: 'fruit' },
-  { name: 'fish', type: 'meat' },
-];
-```
-
-要使用 `group()`，你需要提供一个回调函数，该回调函数与当前元素、可选的当前索引和数组一起调用，并返回指示元素组的字符串。
-
-下面的例子使用一个箭头函数返回每个数组元素的 `type`（此处使用[函数参数的对象解构语法](zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数实参的对象中提取数据)从传递的对象中提取 `type` 元素)。结果是一个对象，其属性以回调返回的唯一字符串命名。为每个属性分配一个数组，其中包含数组中的元素。
-
-```js
-const result = inventory.group(({ type }) => type);
-console.log(result.vegetables);
-// [{ name: "asparagus", type: "vegetables" }]
-```
-
-注意，返回的对象引用*相同*元素作为原数组（而不是{{glossary("deep copy", "深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
-
-如果不能使用字符串作为键，例如，如果要分组的信息与可能更改的对象相关联，那么可以使用 {{jsxref("Array.prototype.groupToMap()")}}。这与 `group` 非常相似，只是它将数组的元素分组到 {{jsxref("Map")}} 中，可以使用任意（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）作为键。
 
 ### 创建二维数组
 

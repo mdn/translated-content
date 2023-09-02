@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = (Math.abs(x - y + z) < Number.EPSILON);
+equal = Math.abs(x - y + z) < Number.EPSILON;
 ```
 
 ## Polyfill

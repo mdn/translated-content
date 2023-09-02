@@ -1,13 +1,6 @@
 ---
 title: Premiers pas avec CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Apprendre
-  - CSS
-  - Débutant
-  - Module
-  - premiers pas
-translation_of: Learn/CSS/First_steps
 ---
 
 {{LearnSidebar}}

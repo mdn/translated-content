@@ -36,7 +36,9 @@ l10n:
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">マウスでここをクリックしてください…</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  マウスでここをクリックしてください…
+</button>
 <p id="log"></p>
 ```
 

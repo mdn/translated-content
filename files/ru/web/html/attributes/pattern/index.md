@@ -1,7 +1,6 @@
 ---
-title: 'HTML attribute: pattern'
+title: "HTML attribute: pattern"
 slug: Web/HTML/Attributes/pattern
-translation_of: Web/HTML/Attributes/pattern
 ---
 
 {{HTMLSidebar}}
@@ -20,11 +19,11 @@ Some of the input types supporting the pattern attribute, notably the {{HTMLElem
 
 ### Usability
 
-When including a `pattern`, provide a description of the pattern in visible text near the control. Additionally, include a [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.
+When including a `pattern`, provide a description of the pattern in visible text near the control. Additionally, include a [`title`](/ru/docs/Web/HTML/Global_attributes/title) attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.
 
 ### Constraint validation
 
-If the input’s value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.
+If the input's value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.
 The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
 
 ## Examples
@@ -33,15 +32,34 @@ Given the following:
 
 ```html
 <p>
- <label>Enter your phone number in the format (123)456-7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label
+    >Enter your phone number in the format (123)456-7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />)-
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
-Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute set on each.
+Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/ru/docs/Web/HTML/Attributes/pattern) attribute set on each.
 
 If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
 
@@ -53,7 +71,7 @@ input:invalid {
 
 {{EmbedLiveSample("example1", 300, 40)}}
 
-Had we used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
+Had we used [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
 
 ### Specifying a pattern
 
@@ -65,8 +83,14 @@ The example below restricts the value to 4-8 characters and requires that it con
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}"
+      title="4 to 8 lowercase letters" />
     <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
@@ -91,15 +115,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -116,11 +140,11 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                             | Status                   | Comment |
+| ------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
 | {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML5 W3C')}}     |         |
+| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
 
 ## Browser compatibility
 

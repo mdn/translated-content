@@ -1,7 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-original_slug: Web/CSS/env()
 ---
 
 {{CSSRef}}
@@ -10,11 +9,10 @@ A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o 
 
 ```css
 body {
-  padding:
-    env(safe-area-inset-top, 20px)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px)
-    env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
+      safe-area-inset-bottom,
+      20px
+    ) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -55,13 +53,12 @@ O exemplo abaixo faz uso do segundo parâmetro opcional de `env()`, que permite 
 
 ```html
 <p>
- Se a função <code>env()</code> é suportada em seu navegador,
- o texto deste parágrafo deverá estar na borda <i>top</i>, <i>right</i> e <i>bottom</i>,
- ter 50px de preenchimento entre a borda e o texto. O CSS é equivalente
- ao preenchimento: <code>padding: 0 0 0 50px</code>,
- porque, ao contrário de outras propriedades CSS, os nomes de
- propriedades do agente do usuário diferenciam letras maiúsculas de
- minúsculas.
+  Se a função <code>env()</code> é suportada em seu navegador, o texto deste
+  parágrafo deverá estar na borda <i>top</i>, <i>right</i> e <i>bottom</i>, ter
+  50px de preenchimento entre a borda e o texto. O CSS é equivalente ao
+  preenchimento: <code>padding: 0 0 0 50px</code>, porque, ao contrário de
+  outras propriedades CSS, os nomes de propriedades do agente do usuário
+  diferenciam letras maiúsculas de minúsculas.
 </p>
 ```
 
@@ -69,11 +66,10 @@ O exemplo abaixo faz uso do segundo parâmetro opcional de `env()`, que permite 
 p {
   width: 300px;
   border: 2px solid red;
-  padding:
-    env(safe-area-inset-top, 50px)
-    env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px)
-    env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
+      safe-area-inset-bottom,
+      50px
+    ) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -82,10 +78,23 @@ p {
 ### Exemplo com valores
 
 ```css
-padding: env(safe-area-inset-bottom, 50px); /* zero para todos agentes do usuário que são retangulares*/
-padding: env(Safe-area-inset-bottom, 50px); /* 50px porque as propriedades do agente do usuário diferenciam maiúsculas de minúsculas */
-padding: env(x, 50px 20px); /* como se estivesse preenchendo: '50px 20px' que foram definidos, porque x não é uma variável de ambiente válida */
-padding: env(x, 50px, 20px); /* ignorado '50px, 20px' porque não é um valor de preenchimento válido e x não é uma variável de ambiente válida */
+padding: env(
+  safe-area-inset-bottom,
+  50px
+); /* zero para todos agentes do usuário que são retangulares*/
+padding: env(
+  Safe-area-inset-bottom,
+  50px
+); /* 50px porque as propriedades do agente do usuário diferenciam maiúsculas de minúsculas */
+padding: env(
+  x,
+  50px 20px
+); /* como se estivesse preenchendo: '50px 20px' que foram definidos, porque x não é uma variável de ambiente válida */
+padding: env(
+  x,
+  50px,
+  20px
+); /* ignorado '50px, 20px' porque não é um valor de preenchimento válido e x não é uma variável de ambiente válida */
 ```
 
 A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas se o valor da propriedade não suportar vírgulas, o valor não é válido.
@@ -94,8 +103,8 @@ A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas 
 
 ## Especificações
 
-| Especificação                                                                                | Status                                               | Comentário         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------ |
+| Especificação                                                        | Status                                  | Comentário         |
+| -------------------------------------------------------------------- | --------------------------------------- | ------------------ |
 | {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Definição inicial. |
 
 ## Compatibilidade com navegadores
@@ -108,4 +117,3 @@ A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas 
 - [CSS Custom Properties for Cascading Variables](/pt-BR/docs/Web/CSS/CSS_Variables)
 - [Custom Properties (--\*)](/pt-BR/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/pt-BR/docs/Web/CSS/Using_CSS_variables)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

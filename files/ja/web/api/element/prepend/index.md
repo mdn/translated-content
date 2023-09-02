@@ -1,31 +1,36 @@
 ---
-title: Element.prepend()
+title: "Element: prepend() メソッド"
+short-title: prepend()
 slug: Web/API/Element/prepend
-original_slug: Web/API/ParentNode/prepend
+l10n:
+  sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.prepend()`** メソッドは、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの {{domxref("Element")}} の最初の子の前に挿入します。 {{domxref("DOMString")}} オブジェクトは、同等の {{domxref("Text")}} ノードとして挿入されます。
+**`Element.prepend()`** メソッドは、一連の {{domxref("Node")}} または文字列をこの {{domxref("Element")}} の最初の子の前に挿入します。文字列は、同等の {{domxref("Text")}} ノードとして挿入されます。
 
 ## 構文
 
-```js
-prepend(...nodesOrDOMStrings);
+```js-nolint
+prepend(param1)
+prepend(param1, param2)
+prepend(param1, param2, /* … ,*/ paramN)
 ```
 
 ### 引数
 
-- `nodesOrDOMStrings`
-  - : 挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。
+- `param1`, …, `paramN`
+  - : 挿入する一連の {{domxref("Node")}} または文字列です。
 
 ### 返値
 
-`undefined`.
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-- {{domxref("HierarchyRequestError")}}: ノードを階層の特定の箇所に追加することができません。
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : ノードを階層の指定された箇所に追加することができない場合に発生します。
 
 ## 例
 
@@ -68,7 +73,7 @@ console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined

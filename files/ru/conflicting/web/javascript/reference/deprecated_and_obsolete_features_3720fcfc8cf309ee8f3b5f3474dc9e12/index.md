@@ -1,11 +1,6 @@
 ---
-title: 'Warning: String.x is deprecated; use String.prototype.x instead'
-slug: >-
-  conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12
-tags:
-  - JavaScript
-  - предупреждение
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_String_generics
+title: "Warning: String.x is deprecated; use String.prototype.x instead"
+slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12
 original_slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 ---
 

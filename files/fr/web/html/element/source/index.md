@@ -1,13 +1,6 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-tags:
-  - Element
-  - HTML
-  - Media
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/source
 ---
 
 {{HTMLSidebar}}
@@ -54,9 +47,9 @@ Dans cet exemple, on voit comment distribuer une vidéo au format Ogg pour les n
 
 ```html
 <video controls>
-  <source src="toto.webm" type="video/webm">
-  <source src="toto.ogg" type="video/ogg">
-  <source src="toto.mov" type="video/quicktime">
+  <source src="toto.webm" type="video/webm" />
+  <source src="toto.ogg" type="video/ogg" />
+  <source src="toto.mov" type="video/quicktime" />
   Votre navigateur ne prend pas en charge audio ou video.
 </video>
 ```
@@ -67,9 +60,9 @@ Pour plus d'exemples, se référer à [Manipuler les éléments `<audio>` et `<v
 
 ```html
 <picture>
-   <source srcset="mdn-logo-wide.png" media="(min-width: 800px)">
-   <source srcset="mdn-logo-medium.png" media="(min-width: 600px)">
-   <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 

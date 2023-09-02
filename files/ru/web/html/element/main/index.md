@@ -1,16 +1,8 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML группировка контента
-  - HTML секции
-  - main
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/main
 ---
+
 {{HTMLSidebar}}
 
 **HTML-элемент `<main>`** предназначен для основного контента (содержимого) {{HTMLElement("body")}} документа (страницы). Основной контент состоит из контента, который непосредственно относится к главной теме документа или её развивает.
@@ -24,8 +16,8 @@ translation_of: Web/HTML/Element/main
 | Допустимое содержимое                                            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                           |
 | Пропуск тегов                                                    | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                |
 | Допустимые родители                                              | Те, в которых разрешается [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого, но только если это [иерархически корректный `main` элемент](https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element). |
-| Допустимые ARIA-роли                                             | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                              |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                   |
+| Допустимые ARIA-роли                                             | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                                 |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                             |
 
 ## Атрибуты
 
@@ -109,9 +101,7 @@ translation_of: Web/HTML/Element/main
 Элемент `<main>` широко поддерживается. Для Internet Explorer 11 и ниже предлагается добавить роль {{glossary("ARIA")}} `"main"` в элемент `<main>`, чтобы обеспечит его доступность (программы для чтения с экрана, такие как JAWS, используемые совместно со старыми версиями Internet Explorer, смогут понять семантическое значение элемента `<main>` после добавления атрибута `role`).
 
 ```html
-<main role="main">
-  ...
-</main>
+<main role="main">...</main>
 ```
 
 {{Compat}}

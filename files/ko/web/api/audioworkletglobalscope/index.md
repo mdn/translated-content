@@ -34,40 +34,40 @@ slug: Web/API/AudioWorkletGlobalScope
 ```js
 // test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
-  constructor () {
-    super()
+  constructor() {
+    super();
     // 초기화 순간의 현재 샘플 프레임과 시간
     // 값이 변하는 것을 보기 위해서, 여러분은 이 두 줄을 process 메서드에 넣을 수 있습니다
-    console.log(currentFrame)
-    console.log(currentTime)
+    console.log(currentFrame);
+    console.log(currentTime);
   }
   // process 메서드는 필수적입니다 - 아무 소리도 나지 않는데,
   // outputs에 값을 넣지 않았기 때문입니다
-  process (inputs, outputs, parameters) {
-    return true
+  process(inputs, outputs, parameters) {
+    return true;
   }
 }
 
 // 샘플 레이트는 절대 변하지 않을 것인데,
 // 왜냐하면 이것은 BaseAudioContext의 읽기 전용 속성이고
 // 오직 이것의 초기화 동안에만 설정되기 때문입니다
-console.log(sampleRate)
+console.log(sampleRate);
 
 // 여러분은 어떠한 변수든 선언하고 프로세서에서 사용할 수 있습니다
 // 예를 들어 변수는 웨이브 테이블을 가진 ArrayBuffer일 수 있습니다
-const usefulVariable = 42
-console.log(usefulVariable)
+const usefulVariable = 42;
+console.log(usefulVariable);
 
-registerProcessor('test-processor', TestProcessor)
+registerProcessor("test-processor", TestProcessor);
 ```
 
 다음으로, 메인 스크립트 파일에서 우리는 프로세서를 로드하고, `AudioWorkletNode`에 프로세서의 이름을 전달하며 `AudioWorkletNode`의 인스턴스를 생성하고, 노드를 오디오 그래프에 연결할 것입니다. 우리는 콘솔에서 `console.log` 호출의 출력을 볼 수 있을 것입니다.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('test-processor.js')
-const testNode = new AudioWorkletNode(audioContext, 'test-processor')
-testNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("test-processor.js");
+const testNode = new AudioWorkletNode(audioContext, "test-processor");
+testNode.connect(audioContext.destination);
 ```
 
 ## 명세

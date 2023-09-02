@@ -1,7 +1,6 @@
 ---
 title: 一个漂亮的盒子
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
-original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
@@ -25,7 +24,7 @@ original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 
 在开始评估之前，你需要：
 
-- 复制一份[HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html)和[CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css)代码，并在一个新的目录下把它们保存为`index.html` 和 `style.css`。
+- 复制一份[HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/index.html)和[CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/style.css)代码，并在一个新的目录下把它们保存为`index.html` 和 `style.css`。
 
 > **备注：** 或者你也可以用[JSBin](http://jsbin.com/)或[Glitch](https://glitch.com/)这样的网站来做这个评估，把链接里的 HTML 和 CSS 代码贴到这些在线编辑器里就行。如果你在用的在线编辑器没有独立的 CSS 面板的话，把 CSS 代码放到 HTML 文档头部的`<style>`元素里就好。
 

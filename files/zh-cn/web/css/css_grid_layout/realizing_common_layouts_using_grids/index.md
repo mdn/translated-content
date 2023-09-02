@@ -5,11 +5,11 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 
 {{CSSRef}}
 
-为了完善这组 CSS 网格布局指南，我将介绍几种不同的布局，它们演示了在使用网格布局进行设计时可以使用的一些不同技术。我们将看到一个使用 [grid-template-areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) 的示例，一个典型的 12 列灵活网格系统，以及一个使用自动布局的产品列表。正如您从这组示例中看到的，使用网格布局通常有不止一种方法来实现您想要的结果。选择对您正在解决的问题和需要实现的设计最有帮助的方法。
+为了完善这组 CSS 网格布局指南，我将介绍几种不同的布局，它们演示了在使用网格布局进行设计时可以使用的一些不同技术。我们将看到一个使用 [grid-template-areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) 的示例，一个典型的 12 列灵活网格系统，以及一个使用自动布局的产品列表。正如你从这组示例中看到的，使用网格布局通常有不止一种方法来实现你想要的结果。选择对你正在解决的问题和需要实现的设计最有帮助的方法。
 
 ## 使用网格模板区域的响应式布局，包含 1 到 3 个流动列
 
-许多网站都是这种布局的变体，有内容、边栏、页眉和页脚。在响应式设计中，您可能希望将布局显示为单个列，在某个断点添加侧栏，然后为更宽的屏幕引入三列布局。
+许多网站都是这种布局的变体，有内容、边栏、页眉和页脚。在响应式设计中，你可能希望将布局显示为单个列，在某个断点添加侧栏，然后为更宽的屏幕引入三列布局。
 
 ![Image of the three different layouts created by redefining our grid at two breakpoints.](11-responsive-areas.png)
 
@@ -18,45 +18,55 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 我的标记是一个容器，其中包含用于标题、页脚、主要内容、导航、边栏和打算放置广告的块的元素。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content">
-            <h1>Main article area</h1>
-            <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
-        </article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Main article area</h1>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
 </div>
 ```
 
@@ -118,7 +128,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 }
 ```
 
-您可以看到布局在{{cssxref("grid-template-areas")}}的值中成形。 `header` 跨越两个列轨道，就像 `nav` 一样。在第三行轨道中，我们在 `content` 旁边有 `sidebar` 。在第四行轨道，我选择了放置我的广告内容 - 所以它出现在侧边栏下，然后 `footer` 旁边的内容。我在导航栏上使用了一个 flexbox 来显示它。
+你可以看到布局在{{cssxref("grid-template-areas")}}的值中成形。 `header` 跨越两个列轨道，就像 `nav` 一样。在第三行轨道中，我们在 `content` 旁边有 `sidebar` 。在第四行轨道，我选择了放置我的广告内容 - 所以它出现在侧边栏下，然后 `footer` 旁边的内容。我在导航栏上使用了一个 flexbox 来显示它。
 
 现在我可以添加最后一个断点来移动到三列布局。
 
@@ -130,11 +140,11 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -144,17 +154,20 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 
 {{ EmbedLiveSample('使用网格模板区域的响应式布局，包含 1 到 3 个流动列', '800', '500') }}
 
-这是一个简单的示例，但是演示了如何使用网格布局来为不同的断点重新安排布局。具体来说，我正在更改广告块的位置，这在不同的列设置中是合适的。我发现这种命名区域的方法在原型制作阶段非常有用，很容易处理元素的位置。您可以始终以这种方式开始使用 grid 进行原型设计，即使由于访问您站点的浏览器的原因，您不能在生产中完全依赖它。
+这是一个简单的示例，但是演示了如何使用网格布局来为不同的断点重新安排布局。具体来说，我正在更改广告块的位置，这在不同的列设置中是合适的。我发现这种命名区域的方法在原型制作阶段非常有用，很容易处理元素的位置。你可以始终以这种方式开始使用 grid 进行原型设计，即使由于访问你站点的浏览器的原因，你不能在生产中完全依赖它。
 
 ## 灵活的 12 列布局
 
-如果您使用过许多框架或网格系统之一，那么您可能已经习惯了将站点布置在 12 或 16 列的灵活网格上。我们可以使用 CSS 网格布局创建这种类型的系统。作为一个简单的例子，我正在创建一个 12 列的灵活网格，它有 12 个 1fr-unit 列轨道，它们都有一个名为`col-start` 的起始行。这意味着我们将拥有 12 条名为 `col-start` 的网格线。
+如果你使用过许多框架或网格系统之一，那么你可能已经习惯了将站点布置在 12 或 16 列的灵活网格上。我们可以使用 CSS 网格布局创建这种类型的系统。作为一个简单的例子，我正在创建一个 12 列的灵活网格，它有 12 个 1fr-unit 列轨道，它们都有一个名为`col-start` 的起始行。这意味着我们将拥有 12 条名为 `col-start` 的网格线。
 
 ```css hidden
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -177,9 +190,13 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 ```html
 <div class="wrapper">
   <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+  <div class="item2">
+    Start column line 6, span 4 column tracks. 2 row tracks.
+  </div>
   <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+  <div class="item4">
+    Start at column line 3, span to the end of the grid (-1).
+  </div>
 </div>
 ```
 
@@ -190,7 +207,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -205,57 +222,69 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 
 {{ EmbedLiveSample('灵活的 12 列布局', '800', '400') }}
 
-正如命名行指南中所述，我们使用命名行来放置项目。因为我们有 12 行名称相同，所以我们使用名称，然后是行索引。如果您喜欢并完全避免使用命名行，也可以使用行索引本身。
+正如命名行指南中所述，我们使用命名行来放置项目。因为我们有 12 行名称相同，所以我们使用名称，然后是行索引。如果你喜欢并完全避免使用命名行，也可以使用行索引本身。
 
 我没有设置结束行号，而是选择使用 span 关键字表示这个元素应该跨多少个轨道。我喜欢这种方法，因为在使用多列布局系统时，我们通常根据网格的轨迹数量来考虑块，并根据不同的断点进行调整。要查看块如何与轨道对齐，请使用 [Firefox Grid Inspector](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts). 。它清楚地展示了我们的项目是如何放置的。
 
 ![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
 
-与您以前可能使用过的网格系统上的网格布局的工作方式有一些关键区别。如您所见，我们不需要添加任何标记来创建行，网格系统需要这样做来阻止元素弹出到上面的行中。使用 CSS 网格布局，我们可以将内容放入行中，如果行是空的，则它们不会上升到上面的行中。由于这种严格的列和行布局，我们也可以很容易地在布局中留出空白。我们也不需要特殊的类来拉或推东西，将它们缩进网格。我们需要做的就是指定项目的开始和结束行。
+与你以前可能使用过的网格系统上的网格布局的工作方式有一些关键区别。如你所见，我们不需要添加任何标记来创建行，网格系统需要这样做来阻止元素弹出到上面的行中。使用 CSS 网格布局，我们可以将内容放入行中，如果行是空的，则它们不会上升到上面的行中。由于这种严格的列和行布局，我们也可以很容易地在布局中留出空白。我们也不需要特殊的类来拉或推东西，将它们缩进网格。我们需要做的就是指定项目的开始和结束行。
 
 ## 使用 12 列系统构建布局
 
 为了了解这种布局方法在实践中是如何工作的，我们可以使用 12 列网格系统创建与使用{{cssxref("grid-template-areas")}}创建的布局相同的布局。我开始使用与网格模板区域示例相同的标记。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content"><h1>Main article area</h1>
-        <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p></article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
-    </div>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Main article area</h1>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
+</div>
 ```
 
 然后，我可以设置网格，如上面的示例 12 列布局。
@@ -284,7 +313,6 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
 
 ```css
 @media (min-width: 500px) {
-
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -293,7 +321,8 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -353,50 +382,61 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 我们将创建一个具有灵活数量的灵活列的网格。我希望它们永远不要小于 200 像素，然后平等地共享任何可用的剩余空间——所以我们总是得到相同宽度的列轨迹。我们使用 minmax() 函数实现了这一点，该函数是用于轨道大小的重复表示法。
@@ -407,13 +447,13 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
   margin: 2em;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
 一旦我添加了这个 CSS，项目就开始以网格的形式展开。如果我让窗口变小或变宽，列跟踪的数量就会发生变化，而不需要使用媒体查询添加断点并重新定义网格。
 
-然后，我就可以使用 flex touch 来整理这些盒子的内部结构。我将列表项设置为` display: flex `和 `flex-direction` 设置为 `column`。然后，我可以在` .cta `上使用自动边界将这个工具条推到盒子底部。
+然后，我就可以使用 flex touch 来整理这些盒子的内部结构。我将列表项设置为 `display: flex` 和 `flex-direction` 设置为 `column`。然后，我可以在 `.cta` 上使用自动边界将这个工具条推到盒子底部。
 
 ```css
 .listing li {
@@ -443,7 +483,7 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
 
 ![The layout has gaps as there is not space to layout a two track item.](11-grid-auto-flow-sparse.png)
 
-我可以通过设置{{cssxref("grid-auto-flow")}}`: dense` 在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。您应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。
+我可以通过设置{{cssxref("grid-auto-flow")}}`: dense` 在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。你应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。
 
 ```html hidden
 <ul class="listing">
@@ -452,50 +492,61 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -521,7 +572,7 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;
@@ -534,7 +585,7 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
 
 ## Further exploration
 
-学习使用网格布局的最佳方法是继续构建我们在这里介绍的示例。选择一些您通常使用选择的框架构建的东西，或者使用浮动构建的东西，看看是否可以使用 grid 构建它。不要忘记寻找用当前方法无法构建的示例。这可能意味着从杂志或其他非网络资源中获取灵感。网格布局提供了我们以前没有过的可能性，我们不需要绑定到相同的旧布局来使用它。
+学习使用网格布局的最佳方法是继续构建我们在这里介绍的示例。选择一些你通常使用选择的框架构建的东西，或者使用浮动构建的东西，看看是否可以使用 grid 构建它。不要忘记寻找用当前方法无法构建的示例。这可能意味着从杂志或其他非网络资源中获取灵感。网格布局提供了我们以前没有过的可能性，我们不需要绑定到相同的旧布局来使用它。
 
 - 有关灵感，请参阅 [Layout Labs from Jen Simmons](http://labs.jensimmons.com/), 她一直在创建基于一系列资源的布局。
 - 有关其他常见布局模式，请参见 [Grid by Example](http://gridbyexample.com), 这里有许多网格布局的小例子，也有一些较大的 UI 模式和完整的页面布局。

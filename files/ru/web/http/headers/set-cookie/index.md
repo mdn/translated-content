@@ -1,8 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
-original_slug: Web/HTTP/Заголовки/Set-Cookie
 ---
 
 {{HTTPSidebar}}
@@ -11,9 +9,9 @@ HTTP заголовок **`Set-Cookie`** используется для отп�
 
 Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Cookies).
 
-| Тип заголовка                                    | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | нет                                      |
+| Тип заголовка                         | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | нет                             |
 
 ## Синтаксис
 
@@ -158,7 +156,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 | Specification                                                                                    | Title                                                         |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | HTTP State Management Mechanism                               |
+| {{RFC("6265", "Set-Cookie", "4.1")}}                                                             | HTTP State Management Mechanism                               |
 | [draft-ietf-httpbis-rfc6265bis-02](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-02) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
 
 ## Browser compatibility

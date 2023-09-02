@@ -1,9 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-translation_of: Web/API/FileReader/readAsDataURL
-page-type: web-api-instance-method
-browser-compat: api.FileReader.readAsDataURL
 l10n:
   sourceCommit: cd997ca39d8f0ce5511bc41a9bc58310ac69cb40
 ---
@@ -17,7 +14,7 @@ La méthode **`FileReader.readAsDataURL()`** est utilisée afin de lire le conte
 ## Syntaxe
 
 ```js
-readAsDataURL(blob)
+readAsDataURL(blob);
 ```
 
 ### Paramètres
@@ -36,22 +33,26 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 #### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Prévisualisation de l'image…">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Prévisualisation de l'image…" />
 ```
 
 #### JavaScript
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", () => {
-    // on convertit l'image en une chaîne de caractères base64
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // on convertit l'image en une chaîne de caractères base64
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -68,7 +69,7 @@ function previewFile() {
 #### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 
@@ -76,22 +77,26 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-  const preview = document.querySelector('#preview');
-  const files = document.querySelector('input[type=file]').files;
+  const preview = document.querySelector("#preview");
+  const files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
-    // On s'assure que `file.name` termine par 
+    // On s'assure que `file.name` termine par
     // une des extensions souhaitées
     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
-      reader.addEventListener("load", () => {
-        const image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild(image);
-      }, false);
+      reader.addEventListener(
+        "load",
+        () => {
+          const image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }

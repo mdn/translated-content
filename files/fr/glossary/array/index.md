@@ -1,7 +1,6 @@
 ---
 title: Tableau (Array)
 slug: Glossary/Array
-translation_of: Glossary/array
 ---
 
 En anglais, un **_array_**, parfois appelé en français « tableau » ou « liste », est une collection de données ({{Glossary("Primitive","primitives")}} ou {{Glossary("Object","objets")}} selon le langage). Ils sont utilisés pour stocker plusieurs valeurs dans une seule variable. Ceci est comparé à une variable qui ne peut stocker qu'une seule valeur.
@@ -22,7 +21,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### Culture générale
 
-- [Tableau (structure de données)](https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)) sur Wikipédia
+- [Tableau (structure de données)](<https://fr.wikipedia.org/wiki/Tableau_(structure_de_données)>) sur Wikipédia
 
 ### Informations techniques
 

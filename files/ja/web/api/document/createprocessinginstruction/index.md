@@ -12,7 +12,7 @@ slug: Web/API/Document/createProcessingInstruction
 ## 構文
 
 ```js
-piNode = document.createProcessingInstruction(target, data)
+piNode = document.createProcessingInstruction(target, data);
 ```
 
 ### 引数
@@ -33,8 +33,11 @@ piNode = document.createProcessingInstruction(target, data)
 ## 例
 
 ```js
-var doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-var pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+var doc = new DOMParser().parseFromString("<foo />", "application/xml");
+var pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css" type="text/css"',
+);
 
 doc.insertBefore(pi, doc.firstChild);
 
