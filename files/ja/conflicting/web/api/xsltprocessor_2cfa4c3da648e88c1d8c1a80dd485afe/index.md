@@ -1,8 +1,7 @@
 ---
 title: 基本的な例
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
-l10n:
-  sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
+slug: conflicting/Web/API/XSLTProcessor_2cfa4c3da648e88c1d8c1a80dd485afe
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 ---
 
 ## 基本的な例

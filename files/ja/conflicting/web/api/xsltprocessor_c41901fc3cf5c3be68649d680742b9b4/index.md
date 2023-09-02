@@ -1,6 +1,7 @@
 ---
 title: 前書き
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
+slug: conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
 ---
 
 ## 前書き

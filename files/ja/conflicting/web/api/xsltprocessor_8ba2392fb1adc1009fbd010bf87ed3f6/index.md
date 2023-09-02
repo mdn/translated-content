@@ -1,6 +1,7 @@
 ---
 title: リソース
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
+slug: conflicting/Web/API/XSLTProcessor_8ba2392fb1adc1009fbd010bf87ed3f6
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 ---
 
 ## リソース
