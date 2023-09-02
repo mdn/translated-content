@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/proxy
 
 Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这个 api 类似，在 chrome 的 api 中也可以用来实现一个拦截策略。然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的`proxy`的 API 完全不同，这个 API 只能通过'browser'命名空间访问
 
-如果你想用这个 API 你需要得到'`proxy`'的[permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).并且，如果你想拦截一个请求，你同样也需要当前拦截请求的 url 的 [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+如果你想用这个 API 你需要得到'`proxy`'的 [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).并且，如果你想拦截一个请求，你同样也需要当前拦截请求的 url 的 [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## Types
 

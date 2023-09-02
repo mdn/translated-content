@@ -313,7 +313,7 @@ browser.tabs
 
 从 96 行开始。只要弹出窗加载完，popup scrpit 就会使用 [`browser.tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API 在活跃标签页执行 content script。如果执行 content scrpit 成功，content script 会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。
 
-`browser.tabs.executeScript()`调用失败的常见原因是你不能在所有页面执行 content scripts。例如，你不能在特权浏览器页面执行，像 about:debugging，你也不能在[addons.mozilla.org](https://addons.mozilla.org/)域执行。如果调用失败，`reportExecuteScriptError()`会隐藏`"popup-content"` `<div>`，并展示`"error-content"` `<div>`, 然后打印一个错误到[控制台](/zh-CN/Add-ons/WebExtensions/Debugging)。
+`browser.tabs.executeScript()`调用失败的常见原因是你不能在所有页面执行 content scripts。例如，你不能在特权浏览器页面执行，像 about:debugging，你也不能在 [addons.mozilla.org](https://addons.mozilla.org/)域执行。如果调用失败，`reportExecuteScriptError()`会隐藏`"popup-content"` `<div>`，并展示`"error-content"` `<div>`, 然后打印一个错误到[控制台](/zh-CN/Add-ons/WebExtensions/Debugging)。
 
 如果成功执行 content script，我们会调用 `listenForClicks()`。这个监听了弹窗上的点击事件。
 
@@ -323,8 +323,8 @@ browser.tabs
 `beastify()` 函数做了三件事：
 
 - 将被点击的按钮映射到一个指向特定动物图片的 URL
-- 通过[`browser.tabs.insertCSS()`](/zh-CN/Add-ons/WebExtensions/API/tabs/insertCSS) API 向页面注入一些 CSS 来隐藏整个页面的内容
-- 通过[`browser.tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API 向 content script 发送“beastify”信息，要求其 beastify 页面，同时向其传递一个指向动物图片的 URL
+- 通过 [`browser.tabs.insertCSS()`](/zh-CN/Add-ons/WebExtensions/API/tabs/insertCSS) API 向页面注入一些 CSS 来隐藏整个页面的内容
+- 通过 [`browser.tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API 向 content script 发送“beastify”信息，要求其 beastify 页面，同时向其传递一个指向动物图片的 URL
 
 `reset()` 函数实际上就是撤销 beastify :
 
@@ -387,7 +387,7 @@ browser.tabs
 
 content script 做的第一件事是检查全局变量 `window.hasRun`：如果它被设置了，脚本直接返回，否则设置`window.hasRun`并继续。原因是每次用户打开弹出窗，弹出窗就会在活跃页面执行一个 content script，所以我们可能会在单个页面运行多个脚本实例。如果是这样的话，我们需要保证只有一个实例在做所有事情。
 
-然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用[`browser.runtime.onMessage`](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage) API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。
+然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用 [`browser.runtime.onMessage`](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage) API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。
 
 - 如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的[`<img>`](/zh-CN/docs/Web/HTML/Element/img) 元素。
 - 如果信息是 "reset"，我们只需要移除所有被添加的动物片。

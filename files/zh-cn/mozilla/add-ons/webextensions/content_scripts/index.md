@@ -207,7 +207,7 @@ function notifyExtension(e) {
 }
 ```
 
-后台脚本监听这个消息然后使用[`notifications`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API 显示一个通知：
+后台脚本监听这个消息然后使用 [`notifications`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API 显示一个通知：
 
 ```js
 // background-script.js

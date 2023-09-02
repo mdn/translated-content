@@ -151,7 +151,7 @@ rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 
 GitHub 允许你通过 [GitHub pages](https://pages.github.com/)（gh-pages）发布网站。
 
-我们已经在我们的[web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南的[发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)中介绍了这一内容，所以我们不再重复。
+我们已经在我们的 [web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南的[发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)中介绍了这一内容，所以我们不再重复。
 
 但是，值得注意的是，你也可以在使用自定义域名的情况下，在 GitHub 上托管网站。请参阅[配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site)以获取详细的指南。
 

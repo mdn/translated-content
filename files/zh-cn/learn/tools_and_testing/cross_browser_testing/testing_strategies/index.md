@@ -88,7 +88,7 @@ IE8 被列为重要，但它较老且不再更新。Opera Mini 也很重要，�
 
 #### 配置 Google 分析
 
-1. 首先，你需要一个谷歌帐户。使用此帐户可登录[Google Analytics](https://www.google.com/analytics/)。
+1. 首先，你需要一个谷歌帐户。使用此帐户可登录 [Google Analytics](https://www.google.com/analytics/)。
 2. 选择 [Google Analytics](https://analytics.google.com/analytics/web/) (web)) 选项，然后单击"注册"按钮。
 3. 在注册页面中输入你的网站/应用详细信息。这是相当直观的设置;获得正确的最重要的字段是网站 URL。这需要是你的网站/应用的根 URL。
 4. 填写完所有内容后，按"获取跟踪 ID"按钮，然后接受显示的服务条款。
@@ -172,7 +172,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 如果可以获取这些选项，则以下是不错的选项：
 
-- 可用的 Linux PC ,以防你需要测试特定于 Linux 版本的浏览器的错误。Linux 用户只使用火狐、Opera 和 Chrome。如果只有一台计算机可用，则可以考虑在单独的分区上创建运行 Linux 和 Windows 的双引导计算机。Ubuntu 的安装程序使设置起来非常简单;有关此帮助，请参阅[WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot)。
+- 可用的 Linux PC ,以防你需要测试特定于 Linux 版本的浏览器的错误。Linux 用户只使用火狐、Opera 和 Chrome。如果只有一台计算机可用，则可以考虑在单独的分区上创建运行 Linux 和 Windows 的双引导计算机。Ubuntu 的安装程序使设置起来非常简单;有关此帮助，请参阅 [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot)。
 - 几个低规格的移动设备，因此你可以测试低功率处理器上的动画等功能的性能。
 
 你的主工作计算机也可以用于安装其他工具以用于特定目的，例如辅助功能审核工具、屏幕阅读器和仿真器/虚拟机。
@@ -189,24 +189,24 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许你比查找要测试的特定硬件/软件组合更方便地执行某些测试。
 
-仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
+仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的 [Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。Chrome 也有类似的功能：设备模式 (请参阅 [Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
 
 不过，你经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：
 
-- 用于开发 Android 应用程序的官方[Android Studio IDE](https://developer.android.com/studio/)对于仅测试 Google Chrome 或旧版 Android 浏览器上的网站来说有点沉重，但它确实附带了一个强大的[emulator](https://developer.android.com/studio/run/emulator.html)。如果你想要更轻巧的东西，[LeapDroid](http://leapdroid.com/)是 Windows 的一个很好的选择，[Andy](http://www.andyroid.net/) 是一个合理的选择，可以在 Windows 和 Mac 上运行。
-- Apple 提供了一个名为[Simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html) 的应用程序，它运行在[XCode](https://developer.apple.com/xcode/)开发环境之上，并模拟 iPad / iPhone / Apple Watch / Apple TV。这包括本机 iOS Safari 浏览器。不幸的是，这只能在 Mac 上运行。
+- 用于开发 Android 应用程序的官方 [Android Studio IDE](https://developer.android.com/studio/)对于仅测试 Google Chrome 或旧版 Android 浏览器上的网站来说有点沉重，但它确实附带了一个强大的 [emulator](https://developer.android.com/studio/run/emulator.html)。如果你想要更轻巧的东西，[LeapDroid](http://leapdroid.com/)是 Windows 的一个很好的选择，[Andy](http://www.andyroid.net/) 是一个合理的选择，可以在 Windows 和 Mac 上运行。
+- Apple 提供了一个名为 [Simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html) 的应用程序，它运行在 [XCode](https://developer.apple.com/xcode/)开发环境之上，并模拟 iPad / iPhone / Apple Watch / Apple TV。这包括本机 iOS Safari 浏览器。不幸的是，这只能在 Mac 上运行。
 
 你也经常可以为其他移动设备环境找到模拟器，例如：
 
 - [Blackberry](https://developer.blackberry.com/develop/simulator/) （适用于 Windows，Mac OSX 和 Linux 的模拟器）。
-- 如果要进行测试，可以单独模拟[Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/)。
-- 适用于 Windows Mobile 操作系统的仿真器：请参阅[Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) 和[Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator)（这些仅适用于 Windows）。
+- 如果要进行测试，可以单独模拟 [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/)。
+- 适用于 Windows Mobile 操作系统的仿真器：请参阅 [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) 和 [Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator)（这些仅适用于 Windows）。
 
 > **备注：** 许多模拟器实际上需要使用虚拟机（见下文）;在这种情况下，通常提供指令，和/或将虚拟机的使用合并到仿真器的安装程序中。
 
 ### 虚拟机
 
-虚拟机是在台式计算机上运行的应用程序，允许你运行整个操作系统的仿真，每个操作系统都划分在自己的虚拟硬盘驱动器中（通常由主机硬盘上存在的单个大文件表示）。有许多流行的虚拟机应用程序可用，例如[Parallels](www.parallels.com/)，[VMWare](http://www.vmware.com/)和[Virtual Box](https://www.virtualbox.org/wiki/Downloads);我们个人喜欢后者，因为它是免费的。
+虚拟机是在台式计算机上运行的应用程序，允许你运行整个操作系统的仿真，每个操作系统都划分在自己的虚拟硬盘驱动器中（通常由主机硬盘上存在的单个大文件表示）。有许多流行的虚拟机应用程序可用，例如 [Parallels](www.parallels.com/)，[VMWare](http://www.vmware.com/)和 [Virtual Box](https://www.virtualbox.org/wiki/Downloads);我们个人喜欢后者，因为它是免费的。
 
 > **备注：** 你需要可用的大容量硬盘空间来运行虚拟机模拟;模拟的每个操作系统都会占用大量内存。你可能倾向于为每次安装选择所需的硬盘空间;你也可能会试图侥幸使用 10GB 空间，但会被建议使用 50GB 空间或更多，以便让操作系统运行可靠。大多数虚拟机应用程序提供的一个很好的选择是创建一个动态分配（**dynamically allocated）**的硬盘驱动器，它会随着需要的增长和缩小而动态改变。
 
@@ -253,7 +253,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 正如上一章所述，通过使用某种自动化系统，你可以从浏览器测试中减少很多痛苦。你可以设置自己的测试自动化系统（[Selenium](http://www.seleniumhq.org/)是首选的流行应用程序），它确实需要一些设置，但是当你解决问题时可能会相当受益。
 
-还有一些商业工具，如[Sauce Labs](https://saucelabs.com/)和[Browser Stack](https://www.browserstack.com/)，可以为你做这种事情，如果你愿意在测试中投入一些资金，则无需担心设置的问题。
+还有一些商业工具，如 [Sauce Labs](https://saucelabs.com/)和 [Browser Stack](https://www.browserstack.com/)，可以为你做这种事情，如果你愿意在测试中投入一些资金，则无需担心设置的问题。
 
 我们将在后续文章中查看如何使用此类工具。
 
@@ -272,8 +272,8 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 运行测试时，最好还是：
 
-- 尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他此类操作，并在该配置文件中运行测试（例如，请参阅[Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles)和[Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824)）
-- 在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox 中的[Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)，Chrome 中的[Incognito Mode](https://support.google.com/chrome/answer/95464)），因此不会保存 cookie 和临时文件等内容。
+- 尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他此类操作，并在该配置文件中运行测试（例如，请参阅 [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles)和 [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824)）
+- 在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox 中的 [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)，Chrome 中的 [Incognito Mode](https://support.google.com/chrome/answer/95464)），因此不会保存 cookie 和临时文件等内容。
 
 这些步骤旨在确保你正在测试的浏览器尽可能“纯粹（pure）”，即没有安装任何可能影响测试结果的内容。
 

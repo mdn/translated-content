@@ -258,7 +258,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 {{ EmbedLiveSample('在网格内放置元素', '300', '330') }}
 
-> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章[Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
+> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章 [Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
 
 这篇指南的其余部分介绍了其他的布局方式，它们与你的页面的主要布局结构关系不大，但是却能够帮助你实现特殊的操作。同时，只要你理解了每一个布局任务的初衷，你就能够马上意识到哪一种布局更适合你的组件。
 
@@ -629,7 +629,7 @@ body {
 
 {{ EmbedLiveSample('粘性定位', '100%', 200) }}
 
-> **备注：** 想要发现更多关于定位的信息，请参阅我们的[Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)和[Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
+> **备注：** 想要发现更多关于定位的信息，请参阅我们的 [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)和 [Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
 
 ## 表格布局
 

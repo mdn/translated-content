@@ -5,9 +5,9 @@ slug: Learn/CSS/Building_blocks/Images_tasks
 
 {{LearnSidebar}}
 
-该任务的目的是帮助你检查对我们在本课程[Images, Media and Form elements](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)(图像，媒体及表格元素）中了解的一些值和单位的理解。
+该任务的目的是帮助你检查对我们在本课程 [Images, Media and Form elements](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)(图像，媒体及表格元素）中了解的一些值和单位的理解。
 
-> **备注：** 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。
+> **备注：** 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。
 >
 > 如果你遇到困难，联系我们获得帮助 — 参见页面底部的[评价以及更多帮助](#评价以及更多帮助)
 
@@ -47,7 +47,7 @@ slug: Learn/CSS/Building_blocks/Images_tasks
 如果你希望对自己的工作进行评估，或者遇到困难并希望寻求帮助，请执行以下操作：
 
 1. 将你的工作上传到在线共享编辑器中，例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/).。你可以自己编写代码，也可以使用以上部分中链接到的起点文件。
-2. 在[MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). “学习”类别中写一篇帖子，要求评估帮助。你的帖子应包括：
+2. 在 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). “学习”类别中写一篇帖子，要求评估帮助。你的帖子应包括：
 
 - 描述性标题，例如“**Assessment wanted for Images skill test 1**”。
 - 你已经尝试过的内容以及你希望我们做什么的详细信息，例如 **如果你陷入困境并需要帮助**，或者**需要评估**。

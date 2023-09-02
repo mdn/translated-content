@@ -61,7 +61,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 #### 请求
 
-每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个[HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
+每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个 [HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
 
 ```plain
 GET https://developer.mozilla.org/en-

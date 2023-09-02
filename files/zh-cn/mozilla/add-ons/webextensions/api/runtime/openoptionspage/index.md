@@ -3,7 +3,7 @@ title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 
-假如你的页面有[options page](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise` 对象。
+假如你的页面有 [options page](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise` 对象。
 
 ## 语法
 
@@ -17,7 +17,7 @@ var openingPage = browser.runtime.openOptionsPage();
 
 ### 返回值
 
-当设置页面成功创建，执行[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的无参成功回调方法，否则执行[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的失败回调方法，参数为错误信息。
+当设置页面成功创建，执行 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的无参成功回调方法，否则执行 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的失败回调方法，参数为错误信息。
 
 ## 浏览器兼容性
 

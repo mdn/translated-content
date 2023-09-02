@@ -12,7 +12,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 
 ## 指定浏览器动作
 
-通过 manifest.json 里的关键字[`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 来定义浏览器动作的属性：
+通过 manifest.json 里的关键字 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 来定义浏览器动作的属性：
 
 ```json
 "browser_action": {
@@ -38,11 +38,11 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 注意一个扩展只能指定一个浏览器动作。
 
-可通过[`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API 在程序里更改你的浏览器动作的属性。
+可通过 [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API 在程序里更改你的浏览器动作的属性。
 
 ## 图标
 
-想了解更多关于如何创建浏览器动作图标信息，请参看[Photon Design System](https://design.firefox.com/photon/index.html) 文档里的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) 部分。
+想了解更多关于如何创建浏览器动作图标信息，请参看 [Photon Design System](https://design.firefox.com/photon/index.html) 文档里的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) 部分。
 
 ## 范例
 

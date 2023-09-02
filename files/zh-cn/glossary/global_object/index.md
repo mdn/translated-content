@@ -11,7 +11,7 @@ slug: Glossary/Global_object
 
 - 在 Web 浏览器中，脚本没有专门作为后台任务启动的任何代码都将{{domxref("Window")}} 作为其全局对象。这是 Web 上绝大多数的 JavaScript 代码。
 - 在 {{domxref("Worker")}} 中运行的代码将{{domxref("WorkerGlobalScope")}} 对象作为其全局对象。
-- 在{{Glossary("Node.js")}} 环境下运行的脚本具有一个称为[`global`](https://nodejs.org/api/globals.html#globals_global) 的对象作为其全局对象。
+- 在{{Glossary("Node.js")}} 环境下运行的脚本具有一个称为 [`global`](https://nodejs.org/api/globals.html#globals_global) 的对象作为其全局对象。
 
 ## 浏览器中的 `window` 对象
 

@@ -19,7 +19,7 @@ slug: Glossary/Asynchronous
 
   - : 异步软件设计通过构建代码扩展了异步的概念，按照这种设计编写的代码使得程序能够要求一个任务与先前的一个（或多个）任务一起执行，而无需为了等待它们完成而停止执行。当后来的任务完成时，程序将使用约定好的机制通知先前的任务，以便让它知道任务已经完成，以及如果有结果存在的话，这个结果是可用的。
 
-    还有许多用来实现异步软件的编程技术。查看文章[Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)来了解它们吧。
+    还有许多用来实现异步软件的编程技术。查看文章 [Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)来了解它们吧。
 
 ## 了解更多
 

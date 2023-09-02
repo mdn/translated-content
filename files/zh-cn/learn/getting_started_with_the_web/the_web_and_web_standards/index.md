@@ -29,7 +29,7 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 例如，[HTML Living Standard](https://html.spec.whatwg.org/multipage/) 描述了应如何实现 HTML（所有 HTML 元素及其关联的 API 和其他相关技术）。
 
-Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如[WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
+Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如 [WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
 
 ### “开放”标准
 

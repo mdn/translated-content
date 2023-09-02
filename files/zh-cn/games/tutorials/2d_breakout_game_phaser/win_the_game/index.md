@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 12 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html)完成本课程后找到源代码。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 12 步**。你可以在 [Gamedev-Phaser-Content-Kit / demos / lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html)完成本课程后找到源代码。
 
 在我们的游戏中实现获胜是相当容易的：如果你碰巧摧毁所有的砖块，那么你赢了。
 

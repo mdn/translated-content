@@ -13,4 +13,4 @@ slug: Glossary/Keyword
 
 ### 基本信息
 
-- 维基百科上的[Keyword](https://zh.wikipedia.org/wiki/Keyword_research)
+- 维基百科上的 [Keyword](https://zh.wikipedia.org/wiki/Keyword_research)

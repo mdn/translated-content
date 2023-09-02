@@ -62,7 +62,7 @@ function openPage() {
 browser.browserAction.onClicked.addListener(openPage);
 ```
 
-该文件用来监听浏览器单击事件。当单击事件发生时运行 `openPage()` 函数，这个函数通过使用[`tabs`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs) 接口加载指定的页面。
+该文件用来监听浏览器单击事件。当单击事件发生时运行 `openPage()` 函数，这个函数通过使用 [`tabs`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs) 接口加载指定的页面。
 
 现在完整的附加组件看上去应该像下面这样：
 
@@ -75,7 +75,7 @@ button/
     manifest.json
 ```
 
-安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
+安装这个 [WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 

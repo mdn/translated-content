@@ -95,7 +95,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 
 ### 快捷方式：{{htmlelement("img")}}
 
-要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果你的 SVG 没有固有的宽高比）。如果你还没使用过\<img>元素，请阅读[HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
+要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果你的 SVG 没有固有的宽高比）。如果你还没使用过\<img>元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
 
 ```html
 <img
@@ -118,7 +118,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 
 ### 疑难解答和跨浏览器支持
 
-对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，你可以从`src`属性引用 PNG 或 JPG，并使用[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
+对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，你可以从`src`属性引用 PNG 或 JPG，并使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
 
 ```html
 <img

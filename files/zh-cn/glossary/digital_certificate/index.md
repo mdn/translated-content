@@ -9,4 +9,4 @@ slug: Glossary/Digital_certificate
 
 ## 了解更多
 
-- Wikipedia 上的[Digital certificate](https://zh.wikipedia.org/wiki/Public_key_certificate)
+- Wikipedia 上的 [Digital certificate](https://zh.wikipedia.org/wiki/Public_key_certificate)

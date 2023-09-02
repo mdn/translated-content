@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 ## 方法
 
 - {{WebExtAPIRef("history.search()")}}
-  - : 在浏览器历史记录中查找符合给定条件的[`history.HistoryItem`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem)
+  - : 在浏览器历史记录中查找符合给定条件的 [`history.HistoryItem`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem)
 - {{WebExtAPIRef("history.getVisits()")}}
   - : 获取指定页面的访问集信息。
 - {{WebExtAPIRef("history.addUrl()")}}
@@ -62,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 该 API 基于 Chromium 的[`chrome.history`](https://developer.chrome.com/extensions/history) API。该文档由 Chromium 代码中的[`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json)衍生而来。
+> **备注：** 该 API 基于 Chromium 的 [`chrome.history`](https://developer.chrome.com/extensions/history) API。该文档由 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json)衍生而来。
 >
 > 微软 Edge 兼容性数据由微软公司提供并包含在如下证书中—— Creative Commons Attribution 3.0 United States License.
 

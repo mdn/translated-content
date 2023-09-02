@@ -28,7 +28,7 @@ slug: Learn/Accessibility/Multimedia
 
 ## 多媒体和无障碍
 
-到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
+到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
 
 另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
 
@@ -36,7 +36,7 @@ slug: Learn/Accessibility/Multimedia
 
 ## 简单图像
 
-我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML) –– 你可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
+我们已经介绍了 HTML 图像的简单文本替代 [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML) –– 你可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
 
 示例：
 
@@ -97,7 +97,7 @@ HTML5 视频和音频共享 API — HTML Media Element — 允许你将自定义
 
 #### 基本设置
 
-首先，获取我们的[custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html)、[custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css)、 [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.mp4) 和 [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.webm)文件的副本，并将它们保存在硬盘上的新目录中。
+首先，获取我们的 [custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html)、[custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css)、 [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.mp4) 和 [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.webm)文件的副本，并将它们保存在硬盘上的新目录中。
 
 创建一个名为 main.js 的新文件并将其保存在同一目录中。
 
@@ -235,7 +235,7 @@ player.ontimeupdate = () => {
 
 在实际创建脚本方面，你的选项包括：
 
-- 商业服务––你可以向专业人士支付报酬进行转录，例如 [Scribie](https://scribie.com/)、[Casting Words](https://castingwords.com/)或[Rev](https://www.rev.com/)公司。询问并征求意见，以确保你找到一家信誉良好的公司，你可以有效地合作。
+- 商业服务––你可以向专业人士支付报酬进行转录，例如 [Scribie](https://scribie.com/)、[Casting Words](https://castingwords.com/)或 [Rev](https://www.rev.com/)公司。询问并征求意见，以确保你找到一家信誉良好的公司，你可以有效地合作。
 - 社区/草根/自我转录 – 如果你是工作场所中活跃社区或团队的一员，你可以请求他们帮助翻译。你甚至可以自己去做。
 - 自动服务 – 提供自动服务，例如，当你将视频上传到 YouTube 时，你可以选择生成自动字幕/脚本。根据语音音频的清晰程度，生成的脚本质量将有很大差异。
 
@@ -245,9 +245,9 @@ player.ontimeupdate = () => {
 
 ### 脚本示例
 
-如果使用自动服务，则可能需要使用该工具提供的用户界面。例如，查看[Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8)并选择" _More > Transcript_"。
+如果使用自动服务，则可能需要使用该工具提供的用户界面。例如，查看 [Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8)并选择" _More > Transcript_"。
 
-如果要创建自己的用户界面来显示音频和相关脚本，你可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的[audio-transcript-ui](http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) 示例（另请参阅[其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)）。
+如果要创建自己的用户界面来显示音频和相关脚本，你可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的 [audio-transcript-ui](http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) 示例（另请参阅[其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)）。
 
 ### 音频描述
 
@@ -319,7 +319,7 @@ This is the second.
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。你可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，你需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
+有关详细信息，请阅读 [Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。你可以找到与本文一起使用本文的 [the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅 [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，你需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
 
 > **备注：** 文本轨道和转录也可以帮助你使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。
 

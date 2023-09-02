@@ -23,4 +23,4 @@ URL 也可用于文件传输（{{Glossary("FTP")}}） ，电子邮件（{{Glossa
 
 ### 规范
 
-- URL 的语法，在[URL Living Standard](https://url.spec.whatwg.org/)中定义。
+- URL 的语法，在 [URL Living Standard](https://url.spec.whatwg.org/)中定义。

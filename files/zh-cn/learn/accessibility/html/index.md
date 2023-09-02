@@ -144,7 +144,7 @@ the last one.
 
 在旧时代，人们曾经使用 HTML 表格创建页面布局 - 使用不同的表格单元格来包含页眉，页脚，边栏，主要内容栏等。这不是一个好主意，因为屏幕阅读器可能会读出给人造成困惑的结果，特别是如果布局复杂，并且有许多嵌套表格的话。
 
-试试我们的例子[table-layout.html](http://mdn.github.io/learning-area/accessibility/html/table-layout.html)，它看起来像这样：
+试试我们的例子 [table-layout.html](http://mdn.github.io/learning-area/accessibility/html/table-layout.html)，它看起来像这样：
 
 ```html
 <table width="1200">

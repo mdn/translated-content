@@ -41,9 +41,9 @@ void main() {
 
 ## 示例
 
-让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过[Three.js 教程](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
+让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过 [Three.js 教程](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
 
-> **备注：** 记住你没必要使用 Three.js 或者其他库来编写着色器——纯[WebGL](/zh-CN/docs/Web/API/WebGL_API) 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来——如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。
+> **备注：** 记住你没必要使用 Three.js 或者其他库来编写着色器——纯 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来——如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。
 
 ### 环境设置
 
@@ -100,9 +100,9 @@ void main() {
 
 ### 立方体源代码
 
-我们可以复用[Building up a basic demo with Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。
+我们可以复用 [Building up a basic demo with Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。
 
-去[cube.html file on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html)中，复制第二个{{htmlelement("script")}}元素中所有的 JavaScript 代码，粘贴到当前例子中的第三个`<script>` 标签中。保存并运行 `index.html` — 然后你会看到一个蓝色立方体
+去 [cube.html file on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html)中，复制第二个{{htmlelement("script")}}元素中所有的 JavaScript 代码，粘贴到当前例子中的第三个`<script>` 标签中。保存并运行 `index.html` — 然后你会看到一个蓝色立方体
 
 ### 顶点着色器代码
 

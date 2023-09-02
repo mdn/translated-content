@@ -13,7 +13,7 @@ JSON 可以表示数字、布尔值、字符串、`null`、数组（有序序列
 
 如果你需要使用 JSON 来表示复杂的数据类型，请在它们转化为字符串值。
 
-与 XML 非常相似，JSON 能存储 CSV 格式，同时保留它的分级信息。有许多工具能帮助你进行格式转换（例如 [JSON to CSV Converter](https://json-csv.com) 或[JSON to CSV Converter](https://jsontoexcel.com/)）。
+与 XML 非常相似，JSON 能存储 CSV 格式，同时保留它的分级信息。有许多工具能帮助你进行格式转换（例如 [JSON to CSV Converter](https://json-csv.com) 或 [JSON to CSV Converter](https://jsontoexcel.com/)）。
 
 ## 详细了解
 

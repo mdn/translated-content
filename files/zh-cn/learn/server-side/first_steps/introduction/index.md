@@ -32,7 +32,7 @@ slug: Learn/Server-side/First_steps/Introduction
 
 Web 浏览器通过**超文本传输协议**（{{glossary("HTTP")}}）来和 [Web 服务器](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)进行通信。当你在网页上点击一个链接，或提交一个表单，再或进行一次搜索时，一个 **HTTP 请求**就从你的浏览器发送到了目标服务器。
 
-这个请求包括一个标识所请求资源的 URL，一个定义所需操作的方法 (比如获取，删除或者发布资源)，还可以包括编码在 URL 参数中的附加信息。附加信息以键值对（参数和它的值）的形式，通过一个[查询字符串](https://en.wikipedia.org/wiki/Query_string)，作为 POST 数据（由[HTTP POST 方法](/zh-CN/docs/Web/HTTP/Methods/POST)发送）或存放在与之相关联的{{glossary("Cookie")}}中。
+这个请求包括一个标识所请求资源的 URL，一个定义所需操作的方法 (比如获取，删除或者发布资源)，还可以包括编码在 URL 参数中的附加信息。附加信息以键值对（参数和它的值）的形式，通过一个[查询字符串](https://en.wikipedia.org/wiki/Query_string)，作为 POST 数据（由 [HTTP POST 方法](/zh-CN/docs/Web/HTTP/Methods/POST)发送）或存放在与之相关联的{{glossary("Cookie")}}中。
 
 Web 服务器等待客户端的请求信息，在它们到达的时候处理它们，并且回复 Web 浏览器一个 **HTTP 响应**信息。这个响应包含一个表明该请求是否成功的状态行（比如“HTTP/1.1 200 OK”代表请求成功）。
 
@@ -147,7 +147,7 @@ web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站�
 
 这也就允许，比如说，一个网站知道一个用户曾经登录过并且展示他们邮箱的链接或者订单历史，或者可能存储一个简单游戏的状态来确保用户可以再次访问网站然后从上次留下来的地方继续。
 
-> **备注：** 访问一个具有订阅模式的新闻网站，并且打开一系列标签（比如[The Age](http://www.theage.com.au/)）。几个小时或者几天之后再来访问这个网站。最后你将开始被重定向到一个向你解释如何订阅的页面上，并且你将无法访问文章。这个信息就是一个 session 信息被存储在 cookie 中的例子
+> **备注：** 访问一个具有订阅模式的新闻网站，并且打开一系列标签（比如 [The Age](http://www.theage.com.au/)）。几个小时或者几天之后再来访问这个网站。最后你将开始被重定向到一个向你解释如何订阅的页面上，并且你将无法访问文章。这个信息就是一个 session 信息被存储在 cookie 中的例子
 
 ### 通知和通讯
 

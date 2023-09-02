@@ -5,7 +5,7 @@ slug: Glossary/JavaScript
 
 {{GlossarySidebar}}
 
-JavaScript (JS) 是一种编程语言，为通常用于客户端（client-side）的网页动态脚本，不过，也常通过像[Node.js](https://nodejs.org/)这样的包，用于服务器端（{{Glossary("Server","server")}}-side）。
+JavaScript (JS) 是一种编程语言，为通常用于客户端（client-side）的网页动态脚本，不过，也常通过像 [Node.js](https://nodejs.org/)这样的包，用于服务器端（{{Glossary("Server","server")}}-side）。
 
 不应该把 JavaScript 和 [Java](/zh-CN/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_Java) 混淆。“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册的商标，但是这两种编程语言在语法、语义和使用方面都明显不同。
 
@@ -21,7 +21,7 @@ JavaScript 通常用于浏览器，使开发者能通过{{Glossary("DOM")}}来�
 
 ### 基本知识
 
-- 维基百科上的[JavaScript](https://zh.wikipedia.org/wiki/JavaScript)
+- 维基百科上的 [JavaScript](https://zh.wikipedia.org/wiki/JavaScript)
 
 ### 学习 JavaScript
 

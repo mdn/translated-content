@@ -39,9 +39,9 @@ slug: Mozilla/Add-ons
 
 ### 迁移现有扩展
 
-如果你正在维护一个旧式扩展，比如 XUL overlay、bootstrapped，或者基于 Add-on SDK 的扩展，我们建议你将其移植到 WebExtension APIs。这里有一些[Firefox 扩展工坊中的移植资源](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)。
+如果你正在维护一个旧式扩展，比如 XUL overlay、bootstrapped，或者基于 Add-on SDK 的扩展，我们建议你将其移植到 WebExtension APIs。这里有一些 [Firefox 扩展工坊中的移植资源](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)。
 
-有关过渡支持的更多内容，请访问我们的[wiki 页面](https://wiki.mozilla.org/Add-ons/developer/communication)。
+有关过渡支持的更多内容，请访问我们的 [wiki 页面](https://wiki.mozilla.org/Add-ons/developer/communication)。
 
 ## 发布附加组件
 

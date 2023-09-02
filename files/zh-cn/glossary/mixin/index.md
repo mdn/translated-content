@@ -15,4 +15,4 @@ slug: Glossary/Mixin
 
 ### 基础知识
 
-- 维基百科上的[Mixin](https://en.wikipedia.org/wiki/Mixin)
+- 维基百科上的 [Mixin](https://en.wikipedia.org/wiki/Mixin)

@@ -45,10 +45,10 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 目前只包含了一个 key：`gecko`，其中包含了 4 个 attributes:
 
-- `id`即[extension ID](/zh-CN/Add-ons/Install_Manifests#id)。从 Firefox 48 起为可选项，在此之前为强制必须项。参看[WebExtensions and the Add-on ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)来确认何时需要定义附加组件 ID。
+- `id`即 [extension ID](/zh-CN/Add-ons/Install_Manifests#id)。从 Firefox 48 起为可选项，在此之前为强制必须项。参看 [WebExtensions and the Add-on ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)来确认何时需要定义附加组件 ID。
 - `strict_min_version`: Gecko 所能支持的最小版本号。不允许使用"\*"来定义版本号。默认值为 "42a1"。
 - `strict_max_version`: Gecko 所能支持的最大版本号。如果安装或运行附加组件的 Firefox 版本号高于这个最大版本号，附加组件将不能运行或不允许被安装。默认值为"\*"，意思为不对最大版本号做检查。
-- `update_url`为链接到[add-on update manifest](/zh-CN/Add-ons/Updates)的链接。注意链接必须以"https"开头。这是为了使你自己就能够管理附加组件的更新 (如不通过 AMO)。
+- `update_url`为链接到 [add-on update manifest](/zh-CN/Add-ons/Updates)的链接。注意链接必须以"https"开头。这是为了使你自己就能够管理附加组件的更新 (如不通过 AMO)。
 
 ## Chrome 不兼容性
 

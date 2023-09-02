@@ -49,7 +49,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
+你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -275,7 +275,7 @@ button:before {
    media.addEventListener("ended", stopMedia);
    ```
 
-   [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由[`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
+   [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由 [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
 
 2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia()` 后面添加以下函数：
 
@@ -295,7 +295,7 @@ button:before {
 
 有许多方法可以实现快退和快进功能;在这里，我们向你展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
 
-1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
+1. 首先，在前面的代码之下添加以下两个 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
 
    ```js
    rwd.addEventListener("click", mediaBackward);
@@ -454,7 +454,7 @@ clearInterval(intervalFwd);
 
 1. 如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。你能弄清楚如何更改示例以使其显示小时数吗？
 2. 由于 `<audio>` 元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此你可以轻松地将此播放器用于 `<audio>` 元素。试着这样做。
-3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，你可以通过[`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
+3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，你可以通过 [`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
 
    ```js
    document.onclick = function (e) {

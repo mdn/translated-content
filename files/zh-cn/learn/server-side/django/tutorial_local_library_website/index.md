@@ -63,7 +63,7 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 在学习本系列教程时，我们会提供合适的代码片段，你可以粘贴复制，但是有些代码我们希望你能自己扩展（在提示下）。
 
-如果你卡在某个地方，你可以在[Github](https://github.com/mdn/django-locallibrary-tutorial)里找到网站的完整代码。I
+如果你卡在某个地方，你可以在 [Github](https://github.com/mdn/django-locallibrary-tutorial)里找到网站的完整代码。I
 
 ## 总结
 

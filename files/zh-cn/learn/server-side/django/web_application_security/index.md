@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/web_application_security
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
-保护用户数据是任何网站设计的重要部分。我们之前在文章[web 安全](/zh-CN/docs/Web/Security)中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。
+保护用户数据是任何网站设计的重要部分。我们之前在文章 [web 安全](/zh-CN/docs/Web/Security)中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -45,7 +45,7 @@ slug: Learn/Server-side/Django/web_application_security
 
 XSS(英语：Cross site scripting，通常简称：XSS) 是指一类恶意攻击者将代码通过网站注入到其他用户浏览器中的攻击方式。一般攻击者会把恶意代码作为普通数据放入到网站数据库中，这样其他用户在获取和展示数据的过程中就会受到攻击。此外，攻击者还可以通过引诱用户点击某些链接来执行恶意的 JavaScript 代码。
 
-Django 的模板系统可以帮你抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
+Django 的模板系统可以帮你抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用 [Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
 
 1. 使用开发服务器启动网站 (参考命令：`python3 manage.py runserver`)。
 2. 在浏览器中打开网站，并用超级用户身份登录。

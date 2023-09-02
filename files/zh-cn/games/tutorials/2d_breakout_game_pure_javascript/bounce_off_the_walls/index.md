@@ -104,6 +104,6 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 ## 下一步
 
-现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 paddle - 参见[paddle 和键盘控制](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls)。
+现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 paddle - 参见 [paddle 和键盘控制](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

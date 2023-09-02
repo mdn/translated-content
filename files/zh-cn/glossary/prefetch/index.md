@@ -88,11 +88,11 @@ Link: </images/big.jpeg>; rel=prefetch
 X-moz: prefetch
 ```
 
-Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).当然，此请求标头根本不是标准化的，并且在将来的 Mozilla 版本中可能会更改。Chrome 使用“X-Purpose: prefetch”或“Purpose: prefetch 的[header](https://bugs.webkit.org/show_bug.cgi?id=46529)。
+Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).当然，此请求标头根本不是标准化的，并且在将来的 Mozilla 版本中可能会更改。Chrome 使用“X-Purpose: prefetch”或“Purpose: prefetch 的 [header](https://bugs.webkit.org/show_bug.cgi?id=46529)。
 
 ### 是否有禁用链接预取的首选项？
 
-是的，你可以设置一个隐藏的首选项来禁用链接预取。将此行添加到位于配置文件目录中的 prefs.js 文件中（或通过[about:config](/about:config)进行适当的更改）：
+是的，你可以设置一个隐藏的首选项来禁用链接预取。将此行添加到位于配置文件目录中的 prefs.js 文件中（或通过 [about:config](/about:config)进行适当的更改）：
 
 ```plain
 user_pref("network.prefetch-next", false);

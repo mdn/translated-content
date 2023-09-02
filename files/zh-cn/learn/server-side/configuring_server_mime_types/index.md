@@ -23,7 +23,7 @@ MIME 类型描述了邮件或者 web 服务器或者 web 应用中的媒体内�
 
 完整的 MIME 类型列表可在 [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html) 查看。
 
-在[HTTP specification](http://www.w3.org/Protocols/HTTP/1.1/spec.html) 中定义了能够描述在 web 中使用的媒体类型的 MIME 超集。
+在 [HTTP specification](http://www.w3.org/Protocols/HTTP/1.1/spec.html) 中定义了能够描述在 web 中使用的媒体类型的 MIME 超集。
 
 ### Why are correct MIME types important?
 
@@ -66,14 +66,14 @@ MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将�
 1. 如果你的内容是通过供应商软件应用创建的，那么你可以阅读供应商文档确认不同媒体文件的 MIME 值
 2. 通过查看完整的 MIME 类型表 [IANA | MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html)
 3. 如果使用插件 netscape gecko 显示媒体类型，请安装插件，然后查看“帮助”>“关于插件”菜单，以查看哪些 MIME 类型与媒体类型相关联。
-4. 搜索文件扩展名 [FILExt](http://filext.com/) 或者[File extensions reference](http://www.file-extensions.org/) ，确认扩展名和哪种类型的 MIME 相关联
+4. 搜索文件扩展名 [FILExt](http://filext.com/) 或者 [File extensions reference](http://www.file-extensions.org/) ，确认扩展名和哪种类型的 MIME 相关联
 
 ## 如何设置服务器以发送正确的 MIME 类型
 
 基本的方法是配置你的服务器发送正确的 HTTP `ContentType`类型给每个文档
 
 - 如果你正在使用 Apache Web 服务器，只需将此示例.htaccess 文件复制到包含要使用正确 MIME 类型发送的文件的目录中。如果你有一个完整的文件子目录，只需将文件放在父目录中；你不需要将它放在每个子目录中。
-- 如果你使用的是 Microsoft IIS, 请参阅[IANA | MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html)这篇文章。
+- 如果你使用的是 Microsoft IIS, 请参阅 [IANA | MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html)这篇文章。
 - 如果你使用服务器端脚本生成内容，通常可以在脚本顶部附近添加一行。你可以从 Perl，PHP，ASP 或 Java 提供 HTML 以外的内容 - 只需相应地更改 MIME 类型即可。
 
   - 对于 Perl CGI，你应该在文档其他行之前输出 `print "Content-Type: text/html\n\n";`。如果你正在使用 CGI 模块，你可以使用 `print $cgi->header('text/html');` 代替，其中 `$cgi` 是对 CGI 实例的引用。

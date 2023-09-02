@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/Forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-在本教程中，我们将向你展示如何在 Django 中使用 HTML 表单，特别是编写表单以创建，更新和删除模型实例的最简单方法。作为本演示的一部分，我们将扩展[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，以便图书馆员可以使用我们自己的表单（而不是使用管理员应用程序）更新图书，创建，更新和删除作者。
+在本教程中，我们将向你展示如何在 Django 中使用 HTML 表单，特别是编写表单以创建，更新和删除模型实例的最简单方法。作为本演示的一部分，我们将扩展 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，以便图书馆员可以使用我们自己的表单（而不是使用管理员应用程序）更新图书，创建，更新和删除作者。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -42,7 +42,7 @@ slug: Learn/Server-side/Django/Forms
 
 ## HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Learn/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：
+首先简要概述 [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -140,7 +140,7 @@ class RenewBookForm(forms.Form):
 下面列出了大多数字段共有的参数（这些参数具有合理的默认值）：
 
 - [required](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#required): 如果为`True`，则该字段不能留空或给出`None`值。默认情况下需要字段，因此你可以设置`required=False`以允许表单中的空白值。
-- [label](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label): 在 HTML 中呈现字段时使用的标签。如果未指定[label](https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields/#label)，则 Django 将通过大写第一个字母、并用空格替换下划线（例如续订日期）的方式，从字段名称创建一个。
+- [label](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label): 在 HTML 中呈现字段时使用的标签。如果未指定 [label](https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields/#label)，则 Django 将通过大写第一个字母、并用空格替换下划线（例如续订日期）的方式，从字段名称创建一个。
 - [label_suffix](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label-suffix): 默认情况下，标签后面会显示冒号（例如续借日期:)。此参数允许你指定包含其他字符的不同后缀。
 - [initial](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#initial): 显示表单时，字段的初始值。
 - [widget](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#widget): 要使用的显示小部件。
@@ -183,7 +183,7 @@ class RenewBookForm(forms.Form):
 
 第二点是，如果某个值超出了我们的范围，我们会引发`ValidationError`，指定在输入无效值时，我们要在表单中显示的错误文本。上面的例子，也将这个文本包含在 [Django 的翻译函数](https://docs.djangoproject.com/zh-hans/2.0/topics/i18n/translation/)`ugettext_lazy()`中（导入为 `_()`），如果你想在稍后翻译你的网站，这是一个很好的做法。
 
-> **备注：** 在[表单和字段验证](https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/)（Django docs）中验证表单还有其他很多方法和示例。例如，如果你有多个相互依赖的字段，则可以覆盖[Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) 函数并再次引发`ValidationError`。
+> **备注：** 在[表单和字段验证](https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/)（Django docs）中验证表单还有其他很多方法和示例。例如，如果你有多个相互依赖的字段，则可以覆盖 [Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) 函数并再次引发`ValidationError`。
 
 这就是我们在这个例子中，对表单所需要了解的全部内容！
 
@@ -433,7 +433,7 @@ def renew_book_librarian(request, pk):
 
 ### 测试页面
 
-如果你接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)，你将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
+如果你接受了 [Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)，你将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
 
 ```django
 {% if perms.catalog.can_mark_returned %}-
@@ -554,7 +554,7 @@ class AuthorDelete(DeleteView):
 
 对于“创建”和“更新”的情况，你还需要指定要在表单中显示的字段（使用与`ModelForm`相同的语法）。在这种情况下，我们将说明两者的语法，如何显示“所有”字段，以及如何单独列出它们。你还可以使用 field_name / value 对的字典，为每个字段指定初始值（此处我们为了演示目的，而任意设置死亡日期 - 你可能希望删除它！）。默认情况下，这些视图会在成功时，重定向到显示新创建/编辑的模型项的页面，在我们的示例中，这将是我们在上一个教程中，创建的作者详细信息视图。你可以通过显式声明参数`success_url` ，指定备用重定向位置（与`AuthorDelete` 类一样）。
 
-`AuthorDelete` 类不需要显示任何字段，因此不需要指定这些字段。但是你需要指定`success_url`，因为 Django 没有明显的默认值。在这种情况下，我们使用[`reverse_lazy()`](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy)函数，在删除作者后，重定向到我们的作者列表 - `reverse_lazy()`是一个延迟执行的`reverse()`版本，在这里使用，是因为我们提供了一个基于类的 URL 查看属性。
+`AuthorDelete` 类不需要显示任何字段，因此不需要指定这些字段。但是你需要指定`success_url`，因为 Django 没有明显的默认值。在这种情况下，我们使用 [`reverse_lazy()`](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy)函数，在删除作者后，重定向到我们的作者列表 - `reverse_lazy()`是一个延迟执行的`reverse()`版本，在这里使用，是因为我们提供了一个基于类的 URL 查看属性。
 
 ### 模板
 

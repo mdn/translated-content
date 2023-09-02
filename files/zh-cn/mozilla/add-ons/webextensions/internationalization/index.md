@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 ## 在 \_locales 中提供本地化的字符串
 
-你可以使用[Language subtag lookup page](https://r12a.github.io/app-subtags/)上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。
+你可以使用 [Language subtag lookup page](https://r12a.github.io/app-subtags/)上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。
 
 每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。在 WebExtensions 中，这些字符串放在一个名为 `_locales` 的目录中，`_locales` 目录则位于扩展的根目录。每个语言区域都有一个名叫 `messages.json` 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 `_locales` 的子目录下，子目录以对应语言区域的语言子标签来命名。
 

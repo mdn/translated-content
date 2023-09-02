@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/Authentication
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-在本教程中，我们将向你展示如何允许用户使用自己的帐户登录到你的网站，以及如何根据用户是否已登录及其*权限*来控制他们可以执行和查看的内容。作为演示的一部分，我们将扩展[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，添加登录页面和注销页面，以及用户和员工特定的页面以查看已借阅的图书。
+在本教程中，我们将向你展示如何允许用户使用自己的帐户登录到你的网站，以及如何根据用户是否已登录及其*权限*来控制他们可以执行和查看的内容。作为演示的一部分，我们将扩展 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，添加登录页面和注销页面，以及用户和员工特定的页面以查看已借阅的图书。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -31,7 +31,7 @@ Django 提供了一个身份验证和授权（“权限”）系统，该系统�
 
 > **备注：** Django 身份验证系统的目标非常通用，因此不提供其他 Web 身份验证系统中，所提供的某些功能。某些常见问题的解决方案，可作为第三方软件包提供。例如，限制登录尝试，和针对第三方的身份验证（例如 OAuth）。
 
-在本教程中，我们将向你展示，如何在[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站中，启用用户身份验证，创建你自己的登录和注销页面，为模型添加权限，以及控制对页面的访问。我们将使用身份验证/权限，来显示用户和图书馆员借用图书的列表。
+在本教程中，我们将向你展示，如何在 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站中，启用用户身份验证，创建你自己的登录和注销页面，为模型添加权限，以及控制对页面的访问。我们将使用身份验证/权限，来显示用户和图书馆员借用图书的列表。
 
 身份验证系统非常灵活，你可以根据需要，从头开始构建 URLs，表单，视图和模板，只需调用提供的 API，即可登录用户。但是，在本文中，我们将在登录和注销页面，使用 Django 的“库存”身份验证视图和表单。我们仍然需要创建一些模板，但这很简单。
 
@@ -441,7 +441,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-有关其他详细信息，请查看[Django](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)文档。
+有关其他详细信息，请查看 [Django](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)文档。
 
 ## 示例 - 列出当前用户的书本
 

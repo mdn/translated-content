@@ -138,7 +138,7 @@ Django 使用注册模型的信息为创建基本管理站点做了非常好的�
 
 在本节中，我们将看一些改进本地图书馆界面的更改，其中包括添加更多信息 Book 和 Author 模型列表，以及改进编辑视图的布局。我们不会改变 Language 和 Genre 模拟演示，因为它们只有一个字段，所以这样没有真正的好处。
 
-你可以 在[The Django Admin site](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) 中找到所以管理员网站自定义选项的完整参考。
+你可以 在 [The Django Admin site](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) 中找到所以管理员网站自定义选项的完整参考。
 
 ### 注册 一个 ModelAdmin 类
 
@@ -188,7 +188,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### 配置列表视图
 
-该 本地图书馆 目前列出的所以作者都使用从模型生成的对象名称的`__str__()` 方法。如果只是几个作者，这无关紧要。但一旦你有许多作者，这可能会重复。要区分它们，或仅仅因为你想要显示有关每个作者的更多有趣的信息，你可以使用[list_display](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display) 向视图添加其他字段。
+该 本地图书馆 目前列出的所以作者都使用从模型生成的对象名称的`__str__()` 方法。如果只是几个作者，这无关紧要。但一旦你有许多作者，这可能会重复。要区分它们，或仅仅因为你想要显示有关每个作者的更多有趣的信息，你可以使用 [list_display](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display) 向视图添加其他字段。
 
 用下面的代码替代 你 **AuthorAdmin** 的类。在元组中声明要显示列表中的字段名称以所需的顺序排列，如图（这些和原始模型中指定的名称相同）。
 

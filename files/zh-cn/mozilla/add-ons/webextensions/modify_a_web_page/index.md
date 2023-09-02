@@ -55,7 +55,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-现在安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
+现在安装这个 [WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -103,7 +103,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-在该脚本中我们创建了一个右键菜单项，给了它一个具体的 id 和标题 (将在菜单中显示的文本)。然后又设置了一个事件侦听器，当用户点击菜单项时，检查该菜单项是否就是我们的吞页菜单项。如果是，就通过[`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 接口，把"page-eater.js" 注入到活动标签页中。这个接口用标签 ID 做为参数：如果省略标签 ID 参数，就默认把脚本注入当前活动标签。
+在该脚本中我们创建了一个右键菜单项，给了它一个具体的 id 和标题 (将在菜单中显示的文本)。然后又设置了一个事件侦听器，当用户点击菜单项时，检查该菜单项是否就是我们的吞页菜单项。如果是，就通过 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 接口，把"page-eater.js" 注入到活动标签页中。这个接口用标签 ID 做为参数：如果省略标签 ID 参数，就默认把脚本注入当前活动标签。
 
 现在，附加组件看起来像这样：
 
@@ -114,7 +114,7 @@ modify-page/
     page-eater.js
 ```
 
-重新加载[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
+重新加载 [WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
@@ -199,7 +199,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-注入 "page-eater.js"后，通过使用 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用[`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}`。
+注入 "page-eater.js"后，通过使用 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用 [`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}`。
 
 接下来，修改 "page-eater.js" 如下：
 

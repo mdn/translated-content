@@ -191,15 +191,15 @@ input:valid {
 
 在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响你可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
 
-> **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
+> **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
 
-> **备注：** 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
+> **备注：** 该 {{HTMLElement("textarea")}} 元素不支持 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
 
 ### 限制输入的长度
 
-所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用[`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性来限制长度。如果输入的字段长度小于 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 的值或大于 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。
+所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性来限制长度。如果输入的字段长度小于 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 的值或大于 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。
 
-在数字条目中 (i.e. `<input type="number">`), 该 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性同样提供校验约束。如果字段的值小于[`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的值或大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的值，该字段则无效。
+在数字条目中 (i.e. `<input type="number">`), 该 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性同样提供校验约束。如果字段的值小于 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的值或大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的值，该字段则无效。
 
 让我来看看另外一个例子。创建一个 [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) 文件副本。
 
@@ -242,7 +242,7 @@ div {
 
 {{EmbedLiveSample("限制输入的长度", "100%", 70)}}
 
-> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
+> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
 
 ### 完整的例子
 

@@ -30,7 +30,7 @@ exports.index = function (req, res, next) {
 
 索引控制器函数需要获取以下有关信息，即数据库中有多少`Book`，`BookInstance`，可用的`BookInstance`，`Author`和`Genre`记录，将这些数据渲染到模板中，以创建 HTML 页面，然后将其返回到 HTTP 响应中。
 
-> **备注：** 我们使用[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如[使用数据库](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)[(Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)）中讨论的那样，并且还可以返回 `Query` ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值`null`）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。
+> **备注：** 我们使用 [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如[使用数据库](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)[(Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)）中讨论的那样，并且还可以返回 `Query` ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值`null`）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。
 >
 > ```js
 > SomeModel.count({ a_model_field: "match_value" }, function (err, count) {

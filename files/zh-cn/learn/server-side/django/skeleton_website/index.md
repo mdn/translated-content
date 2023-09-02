@@ -121,7 +121,7 @@ locallibrary/
 除上面所说的文件外，我们还有：
 
 - 一个*migration*文件夹，用来存储“migrations”——当你修改你的数据模型时，这个文件会自动升级你的数据库。
-- **\_\_init\_\_.py** — 一个空文件，Django/Python 会将这个文件作为[Python 包](https://docs.python.org/3/tutorial/modules.html#packages)并允许你在项目的其他部分使用它。
+- **\_\_init\_\_.py** — 一个空文件，Django/Python 会将这个文件作为 [Python 包](https://docs.python.org/3/tutorial/modules.html#packages)并允许你在项目的其他部分使用它。
 
 > **备注：** 你注意到上面的文件里有些缺失嘛？尽管有 views 和 models 文件，可是 url 映射，网站模板，静态文件在哪里呢？我们会在接下来的部分展示如何创建它们（并不是每个网站都需要，不过这个例子需要）
 
@@ -166,7 +166,7 @@ DATABASES = {
 
 ## 其他项目设置
 
-settings.py 里还包括其他的一些设置，现在只需要改变[时区](https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE) — 改为和 标准[tz 时区数据表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 里的字符串相同就可以了（数据表里的 TZ 列有你想要的时区）。把`TIME_ZONE`的值改为你的时区，比如
+settings.py 里还包括其他的一些设置，现在只需要改变[时区](https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE) — 改为和 标准 [tz 时区数据表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 里的字符串相同就可以了（数据表里的 TZ 列有你想要的时区）。把`TIME_ZONE`的值改为你的时区，比如
 
 ```python
 TIME_ZONE = 'Asia/Shanghai'

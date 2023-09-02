@@ -35,7 +35,7 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 ## 先决条件
 
-你可以使用下面的实时编辑器，或者下载这个[download the starting point](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)在自己的编辑器中进行编辑。这是一个独立的 HTML 文件，在 head 中包含了初始 CSS 样式。你可以将这些 CSS 样式从 HTML 文件中移出，保存为另一个独立文件。你可以选择 CodePen、jsFiddle 或 Glitch 中的任意一个完成这些工作。
+你可以使用下面的实时编辑器，或者下载这个 [download the starting point](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)在自己的编辑器中进行编辑。这是一个独立的 HTML 文件，在 head 中包含了初始 CSS 样式。你可以将这些 CSS 样式从 HTML 文件中移出，保存为另一个独立文件。你可以选择 CodePen、jsFiddle 或 Glitch 中的任意一个完成这些工作。
 
 > **备注：** 如果遇到困难，你可以向我求助——参见本页下面的[测评或请求帮助](#测评或请求帮助)部分。
 
@@ -52,7 +52,7 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 我使用了许多不同的选择器（样式元素），如 h1 和 h2，也为工作职务建立了一个类别。
 
-尝试使用 CSS 更改这一页面的显示，试着修改已有属性的取值，删除一些规则，或添加新的样式。然后通过[CSS 参考](/zh-CN/docs/Web/CSS/Reference)找到本文未提及的一些属性，尽管大胆尝试！
+尝试使用 CSS 更改这一页面的显示，试着修改已有属性的取值，删除一些规则，或添加新的样式。然后通过 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)找到本文未提及的一些属性，尽管大胆尝试！
 
 举例来说，你可以：
 
@@ -85,6 +85,6 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 **接下来是什么？**
 
-恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)中，我们将对一些关键区域进行深入的学习。
+恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块 [CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)中，我们将对一些关键区域进行深入的学习。
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

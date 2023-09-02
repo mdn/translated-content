@@ -134,8 +134,8 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 它做了两件事：
 
-- 当网页被加载它使用[`storage.local.get()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。
-- 当用户点击提交按钮，使用[`storage.local.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) 存贮颜色值。
+- 当网页被加载它使用 [`storage.local.get()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。
+- 当用户点击提交按钮，使用 [`storage.local.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) 存贮颜色值。
 
 最后，更新"borderify.js" 来读取边框颜色：
 
@@ -183,7 +183,7 @@ settings/
 
 - [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 关键字文档
 - [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 文档
-- 使用[`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
+- 使用 [`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
 - 另一个设置页面例子：
 
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

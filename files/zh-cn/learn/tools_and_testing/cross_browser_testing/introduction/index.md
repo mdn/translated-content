@@ -46,7 +46,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 ## 为什么会出现跨浏览器问题？
 
-对于为何出现跨浏览器问题，原因有很多，而且要注意，我们在此讨论的是跨不同浏览器/设备/浏览偏好时出现的表现差异的问题。你应该在遇到跨浏览器问题之前就预先修复你代码里的 Bug（如需巩固记忆，请参阅之前主题中的[Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，以及[What went wrong?Troubleshooting Javascript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
+对于为何出现跨浏览器问题，原因有很多，而且要注意，我们在此讨论的是跨不同浏览器/设备/浏览偏好时出现的表现差异的问题。你应该在遇到跨浏览器问题之前就预先修复你代码里的 Bug（如需巩固记忆，请参阅之前主题中的 [Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，以及 [What went wrong?Troubleshooting Javascript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
 
 跨浏览器问题会出现通常因为：
 
@@ -125,7 +125,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 - 看一个按钮点击事件是否成功生效（例如显示地图），测试完成后就显示结果。
 - 逐个截屏，允许你检查每个布局在跨浏览器中是否显示一致。
 
-如果你愿意，你可以为测试投入一些资金，诸如[Sauce Labs](https://saucelabs.com/)和[Browser Stack](https://www.browserstack.com/)的商业工具都可以为你做这些事，那你就不用操心如何搭建测试环境了。亲自搭建一个属于你自己的测试环境也可以，这样以后你只要把更改后并通过了测试的代码提交到中央代码仓库就可以了。
+如果你愿意，你可以为测试投入一些资金，诸如 [Sauce Labs](https://saucelabs.com/)和 [Browser Stack](https://www.browserstack.com/)的商业工具都可以为你做这些事，那你就不用操心如何搭建测试环境了。亲自搭建一个属于你自己的测试环境也可以，这样以后你只要把更改后并通过了测试的代码提交到中央代码仓库就可以了。
 
 #### 在预发布的浏览器上测试
 
@@ -147,7 +147,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 那可能不是你的错误——如果是一个浏览器的 Bug，那就希望厂商尽快修复它。也许它已经被修复了——例如若一个 Bug 存在于 Firefox 版本 49，但 Firefox Nightly 中已经不存在了。如果还未修复，你可能需要提交一个 Bug 报告。
 
-如果是你的错误，你需要修复它！查出导致该 Bug 的原因（再次，查阅[Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，和[What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。当你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用 Javascript 功能检测代码来检测问题功能不运行的情况，并运行一些在那些情况下生效的代码。
+如果是你的错误，你需要修复它！查出导致该 Bug 的原因（再次，查阅 [Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，和 [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。当你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用 Javascript 功能检测代码来检测问题功能不运行的情况，并运行一些在那些情况下生效的代码。
 
 一旦完成修复，你应该重新测试来确保你的修复工作有效，并且没有导致网站的其他地方在其他浏览器中出问题。
 

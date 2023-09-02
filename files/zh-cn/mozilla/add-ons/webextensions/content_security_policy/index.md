@@ -52,7 +52,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 "script-src 'self'; object-src 'self';"
 ```
 
-这会被应用在任何没有明确在 manifest.json 中的[`content_security_policy`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 项设置自己的内容安全策略的插件中。它有以下几种效果：
+这会被应用在任何没有明确在 manifest.json 中的 [`content_security_policy`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 项设置自己的内容安全策略的插件中。它有以下几种效果：
 
 - [你只能将本地的 \<script> 和 \<object> 资源加载到插件中。](/zh-CN/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources)
 - [插件无法将字符串转换为 JavaScript 执行。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval_和_friends)
@@ -101,4 +101,4 @@ var f = new Function("console.log('foo');");
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 或者 [load](/zh-CN/docs/Web/Events/load) 代替。
+如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听 [DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 或者 [load](/zh-CN/docs/Web/Events/load) 代替。

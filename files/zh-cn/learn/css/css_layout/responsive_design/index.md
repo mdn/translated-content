@@ -62,7 +62,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 ## 响应式设计
 
-“响应式设计”这个词是[Ethan Marcotte 在 2010 年首度提出的](https://alistapart.com/article/responsive-web-design/)，他将其描述为三种技术的混合使用。
+“响应式设计”这个词是 [Ethan Marcotte 在 2010 年首度提出的](https://alistapart.com/article/responsive-web-design/)，他将其描述为三种技术的混合使用。
 
 1. 第一个是液态网格，这早先已由 Gillenwater 进行探讨，可以在 Marcotte 的文章《[Fluid Grids](https://alistapart.com/article/fluidgrids/)》（出版于 2009 年的《A List Apart》上）中读到。
 2. 第二个是[液态图像](http://unstoppablerobotninja.com/entry/fluid-images)的理念。通过使用相当简单的将设置`max-width`属性设置为`100%`的技术，图像可以在包含它们的列变得比图像原始尺寸窄的时候，缩放得更小，但总不会变得更大。这使得图像可以被缩放，以被放到一个灵活尺寸的列，而不是溢出出去，同时也不会在列宽于图像的时候，使图像变得太大以至于画质变得粗糙。
@@ -98,7 +98,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 使用灵活网格，你只需要加进去一个断点，在内容看起来不齐整的时候改变设计。例如如果一行随着屏幕大小增加而增长得不可读的长，或者是一个盒子在变窄时把每行的两个单词挤到一起。
 
-早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用[float](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。
+早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用 [float](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。
 
 ```plain
 target / context = result
@@ -112,7 +112,7 @@ target / context = result
 }
 ```
 
-这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的[Legacy layout methods](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。
+这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的 [Legacy layout methods](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。
 
 下面的例子阐释了一个使用媒体查询和灵活网格的简单响应式设计。在窄屏幕上，布局将盒子堆叠在另一个的上面：
 
@@ -150,7 +150,7 @@ target / context = result
 
 在伸缩盒中，初始的行为是，弹性的物件将参照容器里面的空间的大小，缩小和分布物件之间的空间。通过更改`flex-grow`和 `flex-shrink`的值，你可以指示在物件遇到周围有更多或者更少的空间的情况下，你所期望的物件表现。
 
-在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
+在下面的示例中，和布局专题的 [Flexbox: Flexible sizing of flex items](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
 
 ```css
 .container {
@@ -166,7 +166,7 @@ target / context = result
 
 ### CSS 网格
 
-在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[Flexible grids with the fr unit](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
+在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在 [Flexible grids with the fr unit](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
 
 ```css
 .container {
@@ -243,7 +243,7 @@ h1 {
 
 问题在于，当做上面的事情的时候，因为文本总是随着视口的大小改变大小，用户失去了放缩任何使用`vw`单位的文本的能力。**所以你永远都不要只用 viewport 单位设定文本。**
 
-这里有一个解决方法，它使用了[`calc()`](/zh-CN/docs/Web/CSS/calc)，如果你将`vw`单位加到了使用固定大小（例如`em`或者`rem`）的值组，那么文本仍然是可放缩的。基本来说，是`vw`加在了放缩后的值上。
+这里有一个解决方法，它使用了 [`calc()`](/zh-CN/docs/Web/CSS/calc)，如果你将`vw`单位加到了使用固定大小（例如`em`或者`rem`）的值组，那么文本仍然是可放缩的。基本来说，是`vw`加在了放缩后的值上。
 
 ```css
 h1 {

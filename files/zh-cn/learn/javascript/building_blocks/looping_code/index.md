@@ -227,7 +227,7 @@ para.textContent = info;
 
 1. 迭代器`i`从 0 开始（`var i = 0`）。
 2. 循环将会一直运行直到它不再小于猫数组的长度。这很重要 - 退出条件显示循环仍然运行的条件。所以在这种情况下，`< cats.length` 仍然是真的，循环仍然运行。
-3. 在循环中，我们将当前的循环项（`cats[i]`是`cats[当前下标的任何东西]`）以及逗号和空格连接到`info`变量的末尾。所以：
+3. 在循环中，我们将当前的循环项（`cats[i]`是`cats [当前下标的任何东西]`）以及逗号和空格连接到`info`变量的末尾。所以：
 
    1. 在第一次运行中，`i = 0`，所以 `cats[0] +', '` 将被连接到 `info("Bill")` 上。
    2. 在第二次运行中，`i = 1`，所以 `cats[1] +', '` 将被连接到 `info("Jeff")` 上。
@@ -498,7 +498,7 @@ do {
 } while (i < cats.length);
 ```
 
-> **备注：** 再一次，它正如我们期望的那样工作 — 看一看它在[Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+> **备注：** 再一次，它正如我们期望的那样工作 — 看一看它在 [Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
 > **警告：** 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。
 

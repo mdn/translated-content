@@ -95,7 +95,7 @@ npm install -g jshint
 
 ![命令行输入了 jshint filename.js。响应是一个行号的列表和对发现的错误的描述。](js-hint-commandline.png)
 
-你也可以将这些工具与任务运行器/构建工具一起使用，如 [Gulp](https://gulpjs.com/) 或 [Webpack](https://webpack.github.io/)，以便在开发过程中自动对你的 JavaScript 进行 lint。（见后面文章中的[使用任务运行器来自动测试工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#使用任务运行器作为自动化测试工具)。）关于 ESLint 选项，请参见 [ESLint 集成](https://eslint.org/docs/user-guide/integrations)；Grunt 开箱即支持 JSHint，并且还有其他可用的集成，例如[JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader)。
+你也可以将这些工具与任务运行器/构建工具一起使用，如 [Gulp](https://gulpjs.com/) 或 [Webpack](https://webpack.github.io/)，以便在开发过程中自动对你的 JavaScript 进行 lint。（见后面文章中的[使用任务运行器来自动测试工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#使用任务运行器作为自动化测试工具)。）关于 ESLint 选项，请参见 [ESLint 集成](https://eslint.org/docs/user-guide/integrations)；Grunt 开箱即支持 JSHint，并且还有其他可用的集成，例如 [JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader)。
 
 > **备注：** ESLint 需要比 JSHint 更多的安装和配置过程，但是它也很强大。
 
@@ -207,7 +207,7 @@ request.onload = function () {
 随着你的应用程序变得越来越复杂，你开始使用更多的 JavaScript，并可能会遇到性能问题，特别是在较慢的设备上查看应用程序时。性能是一个宽泛的话题，我们没有时间在这里详细介绍它。以下是一些快速提示：
 
 - 为了避免加载超过你需要的 JavaScript，请使用 [Browserify](https://browserify.org/) 这样的解决方案将你的脚本捆绑成一个文件。一般来说，减少 HTTP 请求的数量对性能非常有利。
-- 在你将文件加载到你的生产服务器之前，通过最小化使你的文件变得更小。最小化将所有的代码压缩到一个巨大的单行中，使其占用的文件大小大大减少。这很难看，但当它完成后，你不需要阅读它！这最好使用像 [Uglify](https://github.com/mishoo/UglifyJS) 这样的最小化工具来完成（也有一个在线版本，见[JSCompress.com](https://jscompress.com/)）。
+- 在你将文件加载到你的生产服务器之前，通过最小化使你的文件变得更小。最小化将所有的代码压缩到一个巨大的单行中，使其占用的文件大小大大减少。这很难看，但当它完成后，你不需要阅读它！这最好使用像 [Uglify](https://github.com/mishoo/UglifyJS) 这样的最小化工具来完成（也有一个在线版本，见 [JSCompress.com](https://jscompress.com/)）。
 - 当使用 API 时，确保在不使用 API 特性时将其关闭；一些 API 调用可能非常耗费处理能力。例如，当显示一个视频流时，确保在你看不到它时将其关闭。当使用重复的地理定位调用跟踪设备的位置时，确保在用户停止使用时将其关闭。
 - 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)这样的本地浏览器功能（或新生的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
 
@@ -279,7 +279,7 @@ JavaScript 库往往有几个主要的种类（有些库包含其中的一个以
 - 实用程序库：提供一堆功能，使平凡的任务更容易管理，不那么枯燥。例如，[jQuery](https://jquery.com/) 提供了自己的全功能选择器和 DOM 操作库，允许在 JavaScript 中进行 CSS 选择器类型的元素选择，并更容易建立 DOM。现在我们有了现代的特性，如 {{domxref("Document.querySelector()")}}、{{domxref("Document.querySelectorAll()")}}、{{domxref("Node")}} 方法，在各浏览器中可用，这就不那么重要了，但在旧的浏览器需要支持时，它仍然有用。
 - 方便性库：让困难的事情更容易做。例如，直接使用 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 很复杂且很有挑战性，而 [Three.js](https://threejs.org/) 库（和其他类似的库）是建立在 WebGL 之上的，为创建普通 3D 对象、照明、纹理等提供了更容易的 API。[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的使用也非常复杂，所以代码库已经开始出现，以使常见的 Service Worker 用例更容易实现（参见 [Service Worker 指导书](https://github.com/mdn/serviceworker-cookbook)，以获得一些有用的代码示例）。
 - 效果库：这些库的设计是为了让你能够轻松地在你的网站上添加特殊效果。在“DHTML”是一个流行的流行语的时候，这是很有用的，实现一个效果需要很多复杂的 JavaScript，但现在的浏览器有很多内置的 CSS 功能和 API，可以更容易地实现效果。
-- UI 库：提供实现复杂的 UI 功能的方法，否则这些功能的实现和跨浏览器的工作会很困难，例如 [Foundation](https://get.foundation/)、[Bootstrap](https://getbootstrap.com/) 和[Material-UI](https://mui.com/)（后者是一套用于 React 框架的组件）。这些往往被用作整个网站布局的基础；仅仅为了一个 UI 功能而把它们放入其中往往是很困难的。
+- UI 库：提供实现复杂的 UI 功能的方法，否则这些功能的实现和跨浏览器的工作会很困难，例如 [Foundation](https://get.foundation/)、[Bootstrap](https://getbootstrap.com/) 和 [Material-UI](https://mui.com/)（后者是一套用于 React 框架的组件）。这些往往被用作整个网站布局的基础；仅仅为了一个 UI 功能而把它们放入其中往往是很困难的。
 - 标准化库：给你一个简单的语法，让你轻松完成一个任务，而不必担心跨浏览器的差异。该库将在后台操作适当的 API，所以无论什么浏览器，该功能都可以使用（理论上）。例如， [LocalForage](https://github.com/localForage/localForage) 是一个用于客户端数据存储的库，它为存储和检索数据提供了一个简单的语法。在后台，它使用浏览器可用的最好的 API 来存储数据，无论是 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API)，甚至是 Web SQL（现在已经废弃了，但在基于 Chromium 的浏览器安全上下文中仍然支持）。
 
 在选择使用一个库时，要确保它能在你想支持的一系列浏览器中工作，并对你的实现进行彻底的测试。还要确保这个库是受欢迎的，得到良好的支持，并且不可能在下周就被淘汰。与其他开发者交谈，了解他们的建议，看看该库在 GitHub（或其他存放它的地方）上有多少活动和贡献者，等等。

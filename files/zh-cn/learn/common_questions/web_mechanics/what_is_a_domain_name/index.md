@@ -55,7 +55,7 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 
 顶级域名既可以包含拉丁字母，也可以包含特殊字符。顶级域名最长可以达到 63 个字符，不过为了使用方便，大多数顶级域名都是两到三个字符。
 
-顶级域名的完整列表是[ICANN](https://www.icann.org/resources/pages/tlds-2012-02-25-en)维护的。
+顶级域名的完整列表是 [ICANN](https://www.icann.org/resources/pages/tlds-2012-02-25-en)维护的。
 
 - 标签 (或者说是组件)
   - : 标签都是紧随着 TLD 的。标签由 1 到 63 个大小写不敏感的字符组成，这些字符包含字母 A-z，数字 0-9，甚至“-”这个符号（当然，“-”不应该出现在标签开头或者标签的结尾）。举几个例子，`a`，`97`，或者 `hello-strange-person-16-how-are-you` 都是合法的标签。

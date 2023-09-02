@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 当再次调用{{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的 CSS 可能会被清除。
 
-这是一个返回[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## Syntax
 
