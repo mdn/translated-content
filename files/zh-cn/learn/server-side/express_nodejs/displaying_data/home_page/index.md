@@ -39,7 +39,7 @@ exports.index = function (req, res, next) {
 > });
 > ```
 
-打开 **/controllers/bookController.js**. 在文件顶部附近，您应该看到导出的 `index()` 函数。
+打开 **/controllers/bookController.js**. 在文件顶部附近，你应该看到导出的 `index()` 函数。
 
 ```python
 var Book = require('../models/book')
@@ -93,7 +93,7 @@ exports.index = function (req, res) {
 
 成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为 '**index**' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
 
-> **备注：** 上面的`async.parallel()`裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。
+> **备注：** 上面的`async.parallel()`裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常你可能使用单独的执行路径来处理错误的显示）。
 
 ## 视图
 
@@ -133,7 +133,7 @@ block content
 
 ![Home page - Express Local Library site](locallibary_express_home.png)
 
-> **备注：** 您将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果您尝试，取决于您点击的链接，您将获取“尚未实作：图书清单”等错误。在“控制器”文件中的不同控制器中，會指定这些字符串文字（将被合适的数据替换）。
+> **备注：** 你将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果你尝试，取决于你点击的链接，你将获取“尚未实作：图书清单”等错误。在“控制器”文件中的不同控制器中，會指定这些字符串文字（将被合适的数据替换）。
 
 ## 下一步
 

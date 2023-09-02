@@ -90,7 +90,7 @@ analyser.getByteTimeDomainData(dataArray);
 次に、初期値としてキャンバスを単色で塗りつぶします。
 
 ```js
-canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -98,33 +98,32 @@ canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
 ```js
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 canvasCtx.beginPath();
 ```
 
 キャンバスの幅を配列の長さ(先ほど定義した frequencyBinCount と等しい)で除算することによって描かれる線の各セグメントの幅を決定し、次に、変数 x を定義して、パスの各セグメントを描画するために移動する位置を定義します。
 
 ```js
-var sliceWidth = WIDTH * 1.0 / bufferLength;
+var sliceWidth = (WIDTH * 1.0) / bufferLength;
 var x = 0;
 ```
 
 次にループを実行して、バッファ内の各ポイントの波の小さなセグメントの位置を、配列からのデータポイント値に基づいて特定の高さに定義し、線を次の波セグメントが描画されるべき場所に移動させます。
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+for (var i = 0; i < bufferLength; i++) {
+  var v = dataArray[i] / 128.0;
+  var y = (v * HEIGHT) / 2;
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
+  x += sliceWidth;
+}
 ```
 
 最後に、キャンバスの右端の途中で線を終え、次に定義した線を描画します。
@@ -138,7 +137,7 @@ var x = 0;
 このコードの最後では、 `draw()` 関数を呼び出してプロセス全体を開始します。
 
 ```js
-    draw();
+draw();
 ```
 
 これにより、1 秒に数回更新する素晴らしい波形表示が得られます。

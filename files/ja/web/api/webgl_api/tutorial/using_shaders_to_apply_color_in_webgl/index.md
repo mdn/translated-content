@@ -32,20 +32,20 @@ GL ではオブジェクトは頂点のセットを用いて構築され、各�
 これらの色情報を実際に使うためには、カラーバッファから適切な色情報を取り出すようにバーテックスシェーダーを変更しなければなりません:
 
 ```html
-    <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 aVertexPosition;
-      attribute vec4 aVertexColor;
+<script id="shader-vs" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec4 aVertexColor;
 
-      uniform mat4 uMVMatrix;
-      uniform mat4 uPMatrix;
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
 
-      varying lowp vec4 vColor;
+  varying lowp vec4 vColor;
 
-      void main(void) {
-        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-        vColor = aVertexColor;
-      }
-    </script>
+  void main(void) {
+    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    vColor = aVertexColor;
+  }
+</script>
 ```
 
 ここでの各頂点に関する重要な違いは、色の配列内で対応する値を、頂点の色情報として設定していることです。
@@ -55,23 +55,23 @@ GL ではオブジェクトは頂点のセットを用いて構築され、各�
 復習として、以前はフラグメントシェーダーを以下のようにしていました:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-      void main(void) {
-        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-      }
-    </script>
+<script id="shader-fs" type="x-shader/x-fragment">
+  void main(void) {
+    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+  }
+</script>
 ```
 
 各ピクセルが補完された色を取り込むようにするため、`vColor` 変数から値を取り出すようにシェーダーを変更しなければなりません:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-      varying lowp vec4 vColor;
+<script id="shader-fs" type="x-shader/x-fragment">
+  varying lowp vec4 vColor;
 
-      void main(void) {
-        gl_FragColor = vColor;
-      }
-    </script>
+  void main(void) {
+    gl_FragColor = vColor;
+  }
+</script>
 ```
 
 これは単純な変更です。これにより各フラグメントは固定値ではなく、頂点からの相対的な位置に基づいて補完された色情報を受け取ります。
@@ -81,15 +81,15 @@ GL ではオブジェクトは頂点のセットを用いて構築され、各�
 次に、シェーダープログラムの色属性を初期化するコードを `initShaders()` ルーチンに追加しなければなりません:
 
 ```js
-  vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
-  gl.enableVertexAttribArray(vertexColorAttribute);
+vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+gl.enableVertexAttribArray(vertexColorAttribute);
 ```
 
 そして、実際に色情報を用いて正方形を描画するように drawScene() を変更することが可能になります:
 
 ```js
-  gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
-  gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
+gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
+gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 ```
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510)}}

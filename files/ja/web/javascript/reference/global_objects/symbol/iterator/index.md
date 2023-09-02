@@ -32,20 +32,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 次のように独自の反復可能オブジェクトを作成できます。
 
 ```js
-const myIterable = {}
+const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 または、[計算されたプロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)を使用して、クラスやオブジェクト内で反復可能オブジェクトを直接定義できます。
 
 ```js
 class Foo {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
     yield 3;
@@ -53,13 +53,13 @@ class Foo {
 }
 
 const someObj = {
-  *[Symbol.iterator] () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(...new Foo); // 1, 2, 3
+console.log(...new Foo()); // 1, 2, 3
 console.log(...someObj); // 'a', 'b'
 ```
 

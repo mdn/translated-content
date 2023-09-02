@@ -37,22 +37,22 @@ Javascript で最も一般的なイテレーターは配列イテレーターで
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    let nextIndex = start;
-    let iterationCount = 0;
+  let nextIndex = start;
+  let iterationCount = 0;
 
-    const rangeIterator = {
-       next: function() {
-           let result;
-           if (nextIndex < end) {
-               result = { value: nextIndex, done: false }
-               nextIndex += step;
-               iterationCount++;
-               return result;
-           }
-           return { value: iterationCount, done: true }
-       }
-    };
-    return rangeIterator;
+  const rangeIterator = {
+    next: function () {
+      let result;
+      if (nextIndex < end) {
+        result = { value: nextIndex, done: false };
+        nextIndex += step;
+        iterationCount++;
+        return result;
+      }
+      return { value: iterationCount, done: true };
+    },
+  };
+  return rangeIterator;
 }
 ```
 
@@ -63,8 +63,8 @@ const it = makeRangeIterator(1, 10, 2);
 
 let result = it.next();
 while (!result.done) {
- console.log(result.value); // 1 3 5 7 9
- result = it.next();
+  console.log(result.value); // 1 3 5 7 9
+  result = it.next();
 }
 
 console.log("Iterated over sequence of size: ", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
@@ -84,12 +84,12 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 ```js
 function* makeRangeIterator(start = 0, end = 100, step = 1) {
-    let iterationCount = 0;
-    for (let i = start; i < end; i += step) {
-        iterationCount++;
-        yield i;
-    }
-    return iterationCount;
+  let iterationCount = 0;
+  for (let i = start; i < end; i += step) {
+    iterationCount++;
+    yield i;
+  }
+  return iterationCount;
 }
 ```
 
@@ -105,22 +105,21 @@ function* makeRangeIterator(start = 0, end = 100, step = 1) {
 
 ```js
 function* makeIterator() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 
 const it = makeIterator();
 
 for (const itItem of it) {
-    console.log(itItem);
+  console.log(itItem);
 }
 
-console.log(it[Symbol.iterator]() === it) // true;
+console.log(it[Symbol.iterator]() === it); // true;
 
 // This example show us generator(iterator) is iterable object,
 // which has the @@iterator method return the it (itself),
 // and consequently, the it object can iterate only _once_.
-
 
 // If we change it's @@iterator method to a function/generator
 // which returns a new iterator/generator object, (it)
@@ -166,24 +165,24 @@ or
 {{jsxref("Statements/for...of","for-of")}} ループ、{{jsxref("Operators/yield*","yield*")}} などの文や式は、反復可能オブジェクトを必要とします。
 
 ```js
-for (let value of ['a', 'b', 'c']) {
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[...'abc'];
+[..."abc"];
 // ["a", "b", "c"]
 
 function* gen() {
-  yield* ['a', 'b', 'c'];
+  yield* ["a", "b", "c"];
 }
 
 gen().next();
 // { value: "a", done: false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
+[a, b, c] = new Set(["a", "b", "c"]);
 a;
 // "a"
 ```
@@ -206,24 +205,24 @@ function* fibonacci() {
     let reset = yield current;
     [current, next] = [next, next + current];
     if (reset) {
-        current = 0;
-        next = 1;
+      current = 0;
+      next = 1;
     }
   }
 }
 
 const sequence = fibonacci();
-console.log(sequence.next().value);     // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
+console.log(sequence.next().value); // 0
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
 console.log(sequence.next(true).value); // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
 ```
 
 ジェネレーターの {{jsxref("Global_Objects/Generator/throw","throw()")}} メソッドを呼び出して発生すべき例外値を渡すことで、ジェネレーターに例外を強制的に発生させることができます。これにより、まるで停止中の `yield` が `throw value` 文に替わったかのように、ジェネレーターが停止した際の状況に応じて例外が発生します。

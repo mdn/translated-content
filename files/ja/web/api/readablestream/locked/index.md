@@ -25,7 +25,7 @@ const stream = new ReadableStream({
 
 const reader = stream.getReader();
 
-stream.locked
+stream.locked;
 // ストリームがリーダーにロックされているため、true が返されるはずです
 ```
 

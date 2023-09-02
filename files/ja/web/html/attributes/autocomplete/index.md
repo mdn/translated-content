@@ -117,6 +117,7 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 - "`sex`"
   - : 性別で ("Female", "Fa'afafine", "Male" など)、改行のない自由な形式のテキストです。
 - "`tel`"
+
   - : 国番号を含む、完全な電話番号です。電話番号を書く部分に分割する必要がある場合は、各フィールドに以下の値を使用することができます。
 
     - "`tel-country-code`"
@@ -146,7 +147,7 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 ```html
 <div>
   <label for="cc-number">Enter your credit card number</label>
-  <input name="cc-number" id="cc-number" autocomplete="off">
+  <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 

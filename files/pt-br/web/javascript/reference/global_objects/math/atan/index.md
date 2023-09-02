@@ -35,12 +35,12 @@ Por `atan()` ser um método estático de `Math`, deve-se sempre usá-lo como `Ma
 ### Usando `Math.atan()`
 
 ```js
-Math.atan(1);   // 0.7853981633974483
-Math.atan(0);   // 0
-Math.atan(-0);  // -0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
+Math.atan(-0); // -0
 
-Math.atan(Infinity);   //  1.5707963267948966
-Math.atan(-Infinity);  // -1.5707963267948966
+Math.atan(Infinity); //  1.5707963267948966
+Math.atan(-Infinity); // -1.5707963267948966
 
 // The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
 Math.atan(y / x);
@@ -50,11 +50,11 @@ Talvez você queira evitar usar **±**`Infinity` por motivos estéticos. Nesse c
 
 ## Especificações
 
-| Specification                                                            | Status                       | Comment                                            |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.4', 'Math.atan')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specification                                          | Status               | Comment                                            |
+| ------------------------------------------------------ | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}     | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.4', 'Math.atan')}}    | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-math.atan', 'Math.atan')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

@@ -39,9 +39,13 @@ h3 {
 ```
 
 ```html
-<h3 style="font-weight: unset; color: unset;">これは font-weight: normal ですが、 color: black になります</h3>
+<h3 style="font-weight: unset; color: unset;">
+  これは font-weight: normal ですが、 color: black になります
+</h3>
 <p>いくらかのテキスト</p>
-<h3 style="font-weight: revert; color: revert;">これは本来通り font-weight (bold) と color: black です</h3>
+<h3 style="font-weight: revert; color: revert;">
+  これは本来通り font-weight (bold) と color: black です
+</h3>
 <p>いくらかのテキスト</p>
 ```
 
@@ -73,9 +77,15 @@ h3 {
 revert は、何らかのルールで選択した要素の値を、その要素に限って効果的に削除します。例として、セクションに緑色、段落に赤色を設定します。
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 ```html

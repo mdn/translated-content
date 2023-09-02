@@ -26,13 +26,11 @@ getAnimations();
 次のコードでは、シャドウツリーにあるすべてのアニメーションの {{domxref("Animation.playbackRate")}} を半分にすることで、アニメーションの速度を下げます。
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
-shadow.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+shadow.getAnimations().forEach(function (animation) {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 ## 仕様書

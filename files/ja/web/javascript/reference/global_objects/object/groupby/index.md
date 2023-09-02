@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.group()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/group
 ---
 
 {{JSRef}} {{SeeCompatTable}}
@@ -18,19 +17,33 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Array/group
 
 ```js
 // アロー関数
-group((element) => { /* … */ } )
-group((element, index) => { /* … */ } )
-group((element, index, array) => { /* … */ } )
+group((element) => {
+  /* … */
+});
+group((element, index) => {
+  /* … */
+});
+group((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-group(callbackFn)
-group(callbackFn, thisArg)
+group(callbackFn);
+group(callbackFn, thisArg);
 
 // インラインコールバック関数
-group(function(element) { /* … */ })
-group(function(element, index) { /* … */ })
-group(function(element, index, array){ /* … */ })
-group(function(element, index, array) { /* … */ }, thisArg)
+group(function (element) {
+  /* … */
+});
+group(function (element, index) {
+  /* … */
+});
+group(function (element, index, array) {
+  /* … */
+});
+group(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -105,11 +118,11 @@ group(function(element, index, array) { /* … */ }, thisArg)
 
 ```js
 const inventory = [
-  { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  { name: 'bananas',  type: 'fruit', quantity: 0 },
-  { name: 'goat', type: 'meat', quantity: 23 },
-  { name: 'cherries', type: 'fruit', quantity: 5 },
-  { name: 'fish', type: 'meat', quantity: 22 }
+  { name: "asparagus", type: "vegetables", quantity: 5 },
+  { name: "bananas", type: "fruit", quantity: 0 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 5 },
+  { name: "fish", type: "meat", quantity: 22 },
 ];
 ```
 
@@ -145,7 +158,7 @@ const result = inventory.group(({ type }) => type);
 
 ```js
 function myCallback({ quantity }) {
-  return quantity > 5 ? 'ok' : 'restock';
+  return quantity > 5 ? "ok" : "restock";
 }
 
 result = inventory.group(myCallback);

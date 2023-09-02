@@ -27,7 +27,7 @@ l10n:
 次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの資格情報を変数に保存しています。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myCred = myRequest.credentials; // 既定で "same-origin" を返す
 ```
 

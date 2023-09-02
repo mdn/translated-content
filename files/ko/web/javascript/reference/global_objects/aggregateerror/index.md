@@ -26,7 +26,7 @@ l10n:
 
 - {{jsxref("Object/constructor", "AggregateError.prototype.constructor")}}
   - : 인스턴스 객체를 생성하는 생성자 함수입니다. `AggregateError` 인스턴스에서 초기 값은
-  {{jsxref("AggregateError/AggregateError", "AggregateError")}} 생성자입니다.
+    {{jsxref("AggregateError/AggregateError", "AggregateError")}} 생성자입니다.
 - {{jsxref("Error/name", "AggregateError.prototype.name")}}
   - : 오류의 유형에 대한 이름을 나타냅니다. `AggregateError.prototype.name`의 초기 값은 `"AggregateError"`입니다.
 

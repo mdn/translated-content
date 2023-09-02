@@ -5,7 +5,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
-矢量图形在很多情况下非常有用 — 它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在这篇文章中，我们将为您呈现如何在网页中添加矢量图形。
+矢量图形在很多情况下非常有用 — 它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在这篇文章中，我们将为你呈现如何在网页中添加矢量图形。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -72,7 +72,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 {{ EmbedLiveSample('SVG 是什么？', 300, 200) }}
 
-从上面的例子可以看出，SVG 很容易手工编码。是的，您可以在文本编辑器中手动编写简单的 SVG，但是对于复杂的图像，这很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 [Inkscape](https://inkscape.org/en/) 或 [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator)。这些软件包允许您使用各种图形工具创建各种插图，并创建照片的近似值（例如 Inkscape 的跟踪位图功能）。
+从上面的例子可以看出，SVG 很容易手工编码。是的，你可以在文本编辑器中手动编写简单的 SVG，但是对于复杂的图像，这很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 [Inkscape](https://inkscape.org/en/) 或 [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator)。这些软件包允许你使用各种图形工具创建各种插图，并创建照片的近似值（例如 Inkscape 的跟踪位图功能）。
 
 SVG 除了迄今为止所描述的以外还有其他优点：
 
@@ -82,8 +82,8 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 那么为什么会有人想使用光栅图形而不是 SVG？其实 SVG 确实有一些缺点：
 
 - SVG 非常容易变得复杂，这意味着文件大小会增加; 复杂的 SVG 也会在浏览器中占用很长的处理时间。
-- SVG 可能比栅格图像更难创建，具体取决于您尝试创建哪种图像。
-- 旧版浏览器不支持 SVG，因此如果您需要在网站上支持旧版本的 IE，则可能不适合（SVG 从 IE9 开始得到支持）。
+- SVG 可能比栅格图像更难创建，具体取决于你尝试创建哪种图像。
+- 旧版浏览器不支持 SVG，因此如果你需要在网站上支持旧版本的 IE，则可能不适合（SVG 从 IE9 开始得到支持）。
 
 由于上述原因，光栅图形更适合照片那样复杂精密的图像。
 
@@ -95,7 +95,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 
 ### 快捷方式：{{htmlelement("img")}}
 
-要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果您的 SVG 没有固有的宽高比）。如果您还没使用过\<img>元素，请阅读[HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
+要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果你的 SVG 没有固有的宽高比）。如果你还没使用过\<img>元素，请阅读[HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
 
 ```html
 <img
@@ -118,7 +118,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 
 ### 疑难解答和跨浏览器支持
 
-对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，您可以从`src`属性引用 PNG 或 JPG，并使用[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
+对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，你可以从`src`属性引用 PNG 或 JPG，并使用[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
 
 ```html
 <img
@@ -127,7 +127,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
   srcset="equilateral.svg" />
 ```
 
-您还可以使用 SVG 作为 CSS 背景图像，如下所示。在下面的代码中，旧版浏览器会坚持他们理解的 PNG，而较新的浏览器将加载 SVG：
+你还可以使用 SVG 作为 CSS 背景图像，如下所示。在下面的代码中，旧版浏览器会坚持他们理解的 PNG，而较新的浏览器将加载 SVG：
 
 ```css
 background: url("fallback.png") no-repeat center;
@@ -141,7 +141,7 @@ background-size: contain;
 
 ### 如何在 HTML 中引入 SVG 代码
 
-你还可以在文本编辑器中打开 SVG 文件，复制 SVG 代码，并将其粘贴到 HTML 文档中 - 这有时称为将**SVG 内联**或**内联 SVG**。确保您的 SVG 代码在[`<svg></svg>`](/zh-CN/docs/Web/SVG/Element/svg)标签中（不要在外面添加任何内容）。这是一个非常简单的示例，您可以粘贴到文档中：
+你还可以在文本编辑器中打开 SVG 文件，复制 SVG 代码，并将其粘贴到 HTML 文档中 - 这有时称为将**SVG 内联**或**内联 SVG**。确保你的 SVG 代码在[`<svg></svg>`](/zh-CN/docs/Web/SVG/Element/svg)标签中（不要在外面添加任何内容）。这是一个非常简单的示例，你可以粘贴到文档中：
 
 ```html
 <svg width="300" height="200">
@@ -152,20 +152,20 @@ background-size: contain;
 #### 优点
 
 - 将 SVG 内联减少 HTTP 请求，可以减少加载时间。
-- 您可以为 SVG 元素分配`class`和`id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，您可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation_attributes) 作为 CSS 属性。
-- 内联 SVG 是唯一可以让您在 SVG 图像上使用 CSS 交互（如`:focus`）和 CSS 动画的方法（即使在常规样式表中）。
-- 您可以通过将 SVG 标记包在{{htmlelement("a")}}元素中，使其成为超链接。
+- 你可以为 SVG 元素分配`class`和`id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，你可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation_attributes) 作为 CSS 属性。
+- 内联 SVG 是唯一可以让你在 SVG 图像上使用 CSS 交互（如`:focus`）和 CSS 动画的方法（即使在常规样式表中）。
+- 你可以通过将 SVG 标记包在{{htmlelement("a")}}元素中，使其成为超链接。
 
 #### 缺点
 
 - 这种方法只适用于在一个地方使用的 SVG。多次使用会导致资源密集型维护（resource-intensive maintenance）。
 - 额外的 SVG 代码会增加 HTML 文件的大小。
 - 浏览器不能像缓存普通图片一样缓存内联 SVG。
-- 您可能会在{{svgelement("foreignObject")}} 元素中包含回退，但支持 SVG 的浏览器仍然会下载任何后备图像。你需要考虑仅仅为支持过时的浏览器，而增加额外开销是否真的值得。
+- 你可能会在{{svgelement("foreignObject")}} 元素中包含回退，但支持 SVG 的浏览器仍然会下载任何后备图像。你需要考虑仅仅为支持过时的浏览器，而增加额外开销是否真的值得。
 
 ### 如何使用 {{htmlelement("iframe")}} 嵌入 SVG
 
-您可以在浏览器中打开 SVG 图像，就像网页一样。因此，使用`<iframe>`嵌入 SVG 文档就像我们在 [从对象到 iframe - 其他嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术) 中进行研究一样。
+你可以在浏览器中打开 SVG 图像，就像网页一样。因此，使用`<iframe>`嵌入 SVG 文档就像我们在 [从对象到 iframe - 其他嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术) 中进行研究一样。
 
 这是一个快速回顾：
 
@@ -180,11 +180,11 @@ background-size: contain;
 #### 缺点
 
 - 如你所知， `iframe`有一个回退机制，如果浏览器不支持`iframe`，则只会显示回退。
-- 此外，除非 SVG 和您当前的网页具有相同的 {{glossary('origin')}}，否则你不能在主页面上使用 JavaScript 来操纵 SVG。
+- 此外，除非 SVG 和你当前的网页具有相同的 {{glossary('origin')}}，否则你不能在主页面上使用 JavaScript 来操纵 SVG。
 
 ## 动手学习：使用 SVG
 
-在这个动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的“input”部分，您将看到我们已经提供了一些样例来开始使用。您还可以访问 [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)，了解更多关于 SVG 可以使用的其他玩具的细节，也可以尝试一下。这部分都是为了锻炼你的研究技巧，并且有一些乐趣。
+在这个动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的“input”部分，你将看到我们已经提供了一些样例来开始使用。你还可以访问 [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)，了解更多关于 SVG 可以使用的其他玩具的细节，也可以尝试一下。这部分都是为了锻炼你的研究技巧，并且有一些乐趣。
 
 如果你卡住了，无法使你的代码工作，你可以随时使用 Reset 按钮进行重置。
 
@@ -325,9 +325,9 @@ textarea.onkeyup = function () {
 
 ## 总结
 
-本文提供了一个矢量图形和 SVG 的快速浏览，让你了解他们的作用，以及如何在网页中引入 SVG。它从来没有打算成为学习 SVG 的完整教程，只是一个指南，让你在网上遇到 SVG 时知道它是什么。所以不要觉得你不是一个 SVG 专家而担心。如果你想了解更多关于它的工作原理，我们在下面列出了一些可能会帮助您的信息。
+本文提供了一个矢量图形和 SVG 的快速浏览，让你了解他们的作用，以及如何在网页中引入 SVG。它从来没有打算成为学习 SVG 的完整教程，只是一个指南，让你在网上遇到 SVG 时知道它是什么。所以不要觉得你不是一个 SVG 专家而担心。如果你想了解更多关于它的工作原理，我们在下面列出了一些可能会帮助你的信息。
 
-在本模块的最后一篇文章中，我们将详细探索响应式图像，查看 HTML 可以让您的图像在不同设备上更好地适配。
+在本模块的最后一篇文章中，我们将详细探索响应式图像，查看 HTML 可以让你的图像在不同设备上更好地适配。
 
 ## 参见
 

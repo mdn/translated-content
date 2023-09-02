@@ -101,7 +101,6 @@
 /ko/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/Core_JavaScript_1.5_Reference/Operators/this	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/Core_JavaScript_1.5_Reference/Operators/void	/ko/docs/Web/JavaScript/Reference/Operators/void
-/ko/docs/Core_JavaScript_1.5_Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/Core_JavaScript_1.5_Reference/Statements	/ko/docs/Web/JavaScript/Reference/Statements
 /ko/docs/Core_JavaScript_1.5_Reference/Statements/for...in	/ko/docs/Web/JavaScript/Reference/Statements/for...in
 /ko/docs/Core_JavaScript_1.5_Reference:About	/ko/docs/Web/JavaScript/Reference
@@ -115,7 +114,6 @@
 /ko/docs/Core_JavaScript_1.5_Reference:Global_Properties	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Core_JavaScript_1.5_Reference:Objects:Function	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
 /ko/docs/Core_JavaScript_1.5_Reference:Operators:Special_Operators:this_Operator	/ko/docs/Web/JavaScript/Reference/Operators/this
-/ko/docs/Core_JavaScript_1.5_Reference:Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/DOM	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/DOM/Notification.permission	/ko/docs/Web/API/Notification/permission_static
 /ko/docs/DOM/document	/ko/docs/Web/API/Document
@@ -247,7 +245,6 @@
 /ko/docs/JavaScript/Reference/Operators/Special_Operators	/ko/docs/Web/JavaScript/Reference/Operators
 /ko/docs/JavaScript/Reference/Operators/this	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/JavaScript/Reference/Operators/void	/ko/docs/Web/JavaScript/Reference/Operators/void
-/ko/docs/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/JavaScript/Reference/Statements	/ko/docs/Web/JavaScript/Reference/Statements
 /ko/docs/JavaScript/Reference/Statements/for...in	/ko/docs/Web/JavaScript/Reference/Statements/for...in
 /ko/docs/JavaScript_modules	/ko/docs/Web/JavaScript/Guide/Modules
@@ -378,11 +375,11 @@
 /ko/docs/SVG:Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG_In_HTML_Introduction	/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ko/docs/The_Importance_of_Correct_HTML_Commenting	/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/conflicting/Web/API/XSLTProcessor
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
 /ko/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/ko/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ko/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ko/docs/Tools/Accessibility_inspector	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html
@@ -411,7 +408,7 @@
 /ko/docs/Using_JSON_in_Firefox	/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ko/docs/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
 /ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/Web/CSS/cursor
-/ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+/ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/API/XSLTProcessor
 /ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/CSSOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
@@ -741,7 +738,6 @@
 /ko/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
-/ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ko/docs/Web/JavaScript/Reference/Strict_mode
 /ko/docs/Web/JavaScript/Shells	/ko/docs/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
@@ -804,9 +800,13 @@
 /ko/docs/Web/XPath/Axes/self	/ko/docs/Web/XPath/Axes#self
 /ko/docs/Web/XSLT/Elements	/ko/docs/Web/XSLT/Element
 /ko/docs/Web/XSLT/Elements/element	/ko/docs/Web/XSLT/Element/element
-/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
-/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
+/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/conflicting/Web/API/XSLTProcessor
+/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
+/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/API/XSLTProcessor
+/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko	/ko/docs/conflicting/Web/API/XSLTProcessor
+/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
 /ko/docs/Web/XSLT/apply-imports	/ko/docs/Web/XSLT/Element/apply-imports
 /ko/docs/Web/XSLT/apply-templates	/ko/docs/Web/XSLT/Element/apply-templates
 /ko/docs/Web/XSLT/attribute	/ko/docs/Web/XSLT/Element/attribute

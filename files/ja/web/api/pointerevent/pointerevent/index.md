@@ -52,15 +52,15 @@ new PointerEvent(type, options)
 ```js
 const moveEvent = new PointerEvent("pointermove");
 
-const downEvent = new PointerEvent("pointerdown",
-   {pointerId: 1,
-    bubbles: true,
-    cancelable: true,
-    pointerType: "touch",
-    width: 100,
-    height: 100,
-    isPrimary: true
-   });
+const downEvent = new PointerEvent("pointerdown", {
+  pointerId: 1,
+  bubbles: true,
+  cancelable: true,
+  pointerType: "touch",
+  width: 100,
+  height: 100,
+  isPrimary: true,
+});
 ```
 
 ## 仕様書

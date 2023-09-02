@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -34,7 +34,7 @@ l10n:
             "\n" +
             "ALT key KeyDown: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

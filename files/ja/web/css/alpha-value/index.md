@@ -28,7 +28,7 @@ slug: Web/CSS/alpha-value
 ```css
 /* <rgba()> */
 color: rgba(34, 12, 64, 0.6);
-color: rgba(34.0 12 64 / 60%);
+color: rgba(34 12 64 / 60%);
 ```
 
 ### シェイプ画像の閾値の設定
