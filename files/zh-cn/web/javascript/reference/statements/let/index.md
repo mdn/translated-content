@@ -37,7 +37,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 - 函数主体
 - 类[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-如果没有被这些结构包围，则是当前模块或脚本的顶级作用域。
+如果没有被这些结构包含，则是当前模块或脚本的顶级作用域。
 
 相较于 {{jsxref("Statements/var", "var")}}，`let` 声明有以下不同点：
 
