@@ -5,9 +5,9 @@ l10n:
   sourceCommit: f09f04f9658cce9c57e97270f59b24b263826fd0
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar}}
 
-**`autocomplete`** 특성을 사용하면 {{glossary("user agent", "사용자 에이전트")}}의 자동완성을 허용할 양식 입력 필드를 지정할 수 있으며, 사용자 에이전트에게 어떤 정보에 대한 자동완성을 원하는지 안내할 수도 있습니다. HTML `autocomplete` 특성은 텍스트와 숫자를 허용하는 {{HTMLElement("input")}} 요소, {{HTMLElement("textarea")}} 요소, {{HTMLElement("select")}} 요소, {{HTMLElement("form")}} 요소에 사용할 수 있습니다.
+`autocomplete` 특성을 사용하면 {{glossary("user agent", "사용자 에이전트")}}의 자동완성을 허용할 양식 입력 필드를 지정할 수 있으며, 사용자 에이전트에게 어떤 정보에 대한 자동완성을 원하는지 안내할 수도 있습니다. HTML `autocomplete` 특성은 텍스트와 숫자를 허용하는 {{HTMLElement("input")}} 요소, {{HTMLElement("textarea")}} 요소, {{HTMLElement("select")}} 요소, {{HTMLElement("form")}} 요소에 사용할 수 있습니다.
 
 자동완성으로 제안할 값의 출처는 대개 브라우저가 선택합니다. 사전 정의된 값을 사용할 수도 있으나 보통 과거에 사용자가 입력했던 값을 사용합니다. 예를 들어 사용자가 입력한 이름, 주소, 전화번호, 이메일 주소를 브라우저에 저장할 방법을 제공하기도 하고, 신용카드 정보를 미리 암호화해 저장하고 인증절차 후 자동완성 값으로 쓸 수도 있습니다.
 
@@ -209,7 +209,7 @@ Exampleville CA 95555
 
 미국에서의 가장 큰 행정구역은 "주"로, 위 주소에서는 "CA"("캘리포니아"의 미국 우정청 공식 줄임말)입니다. 따라서 `address-level1`은 주, 즉 "CA"를 사용합니다.
 
-두 번째 행정구역은 도시 혹은 마을 이름이므로 `adress-level2`는 "Examplevile"입니다.
+두 번째 행정구역은 도시 혹은 마을 이름이므로 `address-level2`는 "Examplevile"입니다.
 
 미국 주소는 3단계 이상을 사용하지 않습니다.
 
@@ -227,5 +227,5 @@ Exampleville CA 95555
 - {{htmlelement("select")}} 요소.
 - {{htmlelement("textarea")}} 요소.
 - {{htmlelement("form")}} 요소.
-- [HTML 양식](/ko/docs/Learn/HTML/Forms)
+- [HTML 양식](/ko/docs/Learn/Forms)
 - 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
