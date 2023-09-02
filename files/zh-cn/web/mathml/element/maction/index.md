@@ -22,9 +22,9 @@ MathML **`<maction>`** 元素提供了一种让表达式（或子表达式）具
 - href
   - : 用来设置标签点击后跳转的链接。
 - mathbackground
-  - : 用来设置标签的背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置标签的背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者 [HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - mathcolor
-  - : 用来设置文字和分数的线的颜色，同样可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置文字和分数的线的颜色，同样可以使用 **`#rgb`**、**`#rrggbb`** 或者 [HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - selection
   - : 用来设置该行为作用在哪个子元素上，默认为**`1`**，代表第一个子元素。
 

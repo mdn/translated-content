@@ -64,7 +64,7 @@ if (condition) {
 }
 ```
 
-不要将原始布尔值的`true`和`false`与[Boolean](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)对象的真或假混淆。任何一个值，只要它不是 `undefined`、`null`、 `0`、`NaN`或空字符串（`""`），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：
+不要将原始布尔值的`true`和`false`与 [Boolean](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)对象的真或假混淆。任何一个值，只要它不是 `undefined`、`null`、 `0`、`NaN`或空字符串（`""`），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：
 
 ```js
 var b = new Boolean(false);

@@ -15,7 +15,7 @@ slug: Web/HTTP/Status/451
 
 ## 示例
 
-这个响应示例来自 IETF RFC 规范（见下文），其中提到了英国戏剧电影[Monty Python's Life of Brian](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)（《蒙提·派森之布莱恩的一生》）。
+这个响应示例来自 IETF RFC 规范（见下文），其中提到了英国戏剧电影 [Monty Python's Life of Brian](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)（《蒙提·派森之布莱恩的一生》）。
 
 注意 {{HTTPHeader("Link")}} 首部中可能会包含一个 `rel="blocked-by"` 字段，用于标明为该资源无法提供负责的主体，例如颁布法令将资源删除的个人或组织的名称。
 

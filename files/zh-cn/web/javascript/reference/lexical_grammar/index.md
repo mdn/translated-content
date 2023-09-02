@@ -379,7 +379,7 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 
 ### 模板字面量
 
-更多信息可以参考[template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
+更多信息可以参考 [template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
 
 ```js-nolint
 `string text`

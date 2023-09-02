@@ -10,7 +10,7 @@ slug: Web/HTML/Element/p
 - _[内容分类](/zh-CN/docs/Web/HTML/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#Flow_content), palpable content.
 - _允许的内容_ [Phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
 - *标签省略*起始标签是必需的，结束标签在以下情形中可以省略。\<p>元素后紧跟{{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hr")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}}, {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("section")}}, {{HTMLElement("table")}}, {{HTMLElement("ul")}}或另一个{{HTMLElement("p")}}元素；或者父元素中没有其他内容了，而且父元素不是{{HTMLElement("a")}}元素
-- *允许的父元素*任何接受[flow content](/zh-CN/docs/Web/HTML/Content_categories#Flow_content)的元素
+- *允许的父元素*任何接受 [flow content](/zh-CN/docs/Web/HTML/Content_categories#Flow_content)的元素
 - _DOM 接口_ {{domxref("HTMLParagraphElement")}}
 
 ## 属性
@@ -32,7 +32,7 @@ slug: Web/HTML/Element/p
 
 ## 注意
 
-使用[CSS](/zh-CN/docs/Web/CSS) {{cssxref("margin")}}属性去改变段落之间的间隙，**不要**在段落之间插入空的段落元素或者{{HTMLElement("br")}}元素。
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("margin")}}属性去改变段落之间的间隙，**不要**在段落之间插入空的段落元素或者{{HTMLElement("br")}}元素。
 
 ## 规范
 

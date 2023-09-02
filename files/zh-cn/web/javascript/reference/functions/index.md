@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Functions
 
 在 JavaScript 中，每个函数其实都是一个`Function`对象。查看{{jsxref("Function")}}页面`了解其`属性和方法。
 
-如果一个函数中没有使用 return 语句，则它默认返回`undefined`。要想返回一个特定的值，则函数必须使用 [`return`](/zh-CN/JavaScript/Reference/Statements/return) 语句来指定一个要返回的值。(使用[new](/zh-CN/JavaScript/Reference/Operators/new)关键字调用一个[构造函数](/zh-CN/JavaScript/Reference/Global_Objects/Object/constructor)除外)。
+如果一个函数中没有使用 return 语句，则它默认返回`undefined`。要想返回一个特定的值，则函数必须使用 [`return`](/zh-CN/JavaScript/Reference/Statements/return) 语句来指定一个要返回的值。(使用 [new](/zh-CN/JavaScript/Reference/Operators/new)关键字调用一个[构造函数](/zh-CN/JavaScript/Reference/Global_Objects/Object/constructor)除外)。
 
 调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数参数名叫作形参。如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应形参的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应形参会和该实参指向同一个对象。假如函数在内部改变了对应形参的值，返回后，实参指向的对象的值也会改变：
 
@@ -45,7 +45,7 @@ myFunc(mycar);
 console.log(mycar.brand);
 ```
 
-在函数执行时，[`this` 关键字](/zh-CN/JavaScript/Reference/Operators/this)并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用[arguments.callee](/zh-CN/JavaScript/Reference/Functions_and_function_scope/arguments/callee)属性 (**[严格模式](/zh-CN/JavaScript/Strict_mode)**下不可用)，如果该函数是一个匿名函数，则你只能使用后者。
+在函数执行时，[`this` 关键字](/zh-CN/JavaScript/Reference/Operators/this)并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用 [arguments.callee](/zh-CN/JavaScript/Reference/Functions_and_function_scope/arguments/callee)属性 (**[严格模式](/zh-CN/JavaScript/Strict_mode)**下不可用)，如果该函数是一个匿名函数，则你只能使用后者。
 
 ## 函数定义
 

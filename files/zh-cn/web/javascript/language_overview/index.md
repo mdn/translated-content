@@ -149,7 +149,7 @@ Number.isFinite("0"); // false
 
 ## 字符串
 
-JavaScript 中的字符串是一串[Unicode 字符](/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode.E7.BC.96.E7.A0.81)序列。这对于那些需要和多语种网页打交道的开发者来说是个好消息。更准确地说，它们是一串 UTF-16 编码单元的序列，每一个编码单元由一个 16 位二进制数表示。每一个 Unicode 字符由一个或两个编码单元来表示。
+JavaScript 中的字符串是一串 [Unicode 字符](/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode.E7.BC.96.E7.A0.81)序列。这对于那些需要和多语种网页打交道的开发者来说是个好消息。更准确地说，它们是一串 UTF-16 编码单元的序列，每一个编码单元由一个 16 位二进制数表示。每一个 Unicode 字符由一个或两个编码单元来表示。
 
 如果想表示一个单独的字符，只需使用长度为 1 的字符串。
 

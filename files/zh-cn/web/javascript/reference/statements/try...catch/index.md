@@ -52,7 +52,7 @@ try {
 
 你可以嵌套一个或者更多的`try`语句。如果内部的`try`语句没有`catch`子句，那么将会进入包裹它的`try`语句的`catch`子句。
 
-你也可以用`try`语句去处理 JavaScript 异常。参考[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)了解更多关于 Javascript 异常的信息。
+你也可以用`try`语句去处理 JavaScript 异常。参考 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)了解更多关于 Javascript 异常的信息。
 
 ### 无条件的`catch`块
 

@@ -627,7 +627,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 | \\\\        | 反斜杠字符（\）                                                                                                                                                                                              |
 | \\_XXX_     | 由从 0 到 377 最多三位八进制数*XXX*表示的 Latin-1 字符。例如，\251 是版权符号的八进制序列。                                                                                                                  |
 | \x*XX*      | 由从 00 和 FF 的两位十六进制数字 XX 表示的 Latin-1 字符。例如，\ xA9 是版权符号的十六进制序列。                                                                                                              |
-| _\uXXXX_    | 由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见[Unicode escape sequences](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) (Unicode 转义字符). |
+| _\uXXXX_    | 由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见 [Unicode escape sequences](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) (Unicode 转义字符). |
 | \u*{XXXXX}* | Unicode 代码点 (code point) 转义字符。例如，\u{2F804} 相当于 Unicode 转义字符 \uD87E\uDC04 的简写。                                                                                                          |
 
 #### 转义字符

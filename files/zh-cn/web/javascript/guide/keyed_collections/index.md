@@ -135,7 +135,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ## `Map`的键和`Set`的值的等值判断
 
-`Map`的键和`Set`的值的等值判断都基于[same-value-zero algorithm](https://tc39.es/ecma262/#sec-samevaluezero)：
+`Map`的键和`Set`的值的等值判断都基于 [same-value-zero algorithm](https://tc39.es/ecma262/#sec-samevaluezero)：
 
 - 判断使用与`===`相似的规则。
 - `-0`和`+0`相等。

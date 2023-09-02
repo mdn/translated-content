@@ -204,7 +204,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 ### 字段声明
 
-> **警告：** 公共和私有字段声明是 JavaScript 标准委员会[TC39](https://tc39.es/)提出的[实验性功能（第 3 阶段）](https://github.com/tc39/proposal-class-fields)。浏览器中的支持是有限的，但是可以通过[Babel](https://babeljs.io/)等系统构建后使用此功能。
+> **警告：** 公共和私有字段声明是 JavaScript 标准委员会 [TC39](https://tc39.es/)提出的[实验性功能（第 3 阶段）](https://github.com/tc39/proposal-class-fields)。浏览器中的支持是有限的，但是可以通过 [Babel](https://babeljs.io/)等系统构建后使用此功能。
 
 #### 公有字段声明
 
@@ -248,7 +248,7 @@ class Rectangle {
 
 私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。
 
-更多信息，请看[class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Class_fields).
+更多信息，请看 [class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Class_fields).
 
 ## 使用 `extends` 扩展子类
 

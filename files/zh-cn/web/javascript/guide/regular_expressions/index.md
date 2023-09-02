@@ -615,7 +615,7 @@ function escapeRegExp(string) {
 
 正则表达式后的"g"是一个表示全局搜索选项或标记，将在整个字符串查找并返回所有匹配结果。这将在下面的[通过标志进行高级搜索](#通过标志进行高级搜索)详述。
 
-为什么这个没有内建在 JavaScript 中？之前有计划在 RegExp 对象中添加一个 Function，但在[TC39](https://github.com/benjamingr/RegExp.escape/issues/37)中被否决了。
+为什么这个没有内建在 JavaScript 中？之前有计划在 RegExp 对象中添加一个 Function，但在 [TC39](https://github.com/benjamingr/RegExp.escape/issues/37)中被否决了。
 
 ### 使用插入语
 

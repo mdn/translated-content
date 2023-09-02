@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 
 ## 描述
 
-`MIN_SAFE_INTEGER` 的值是`-9007199254740991`. 形成这个数字的原因是 JavaScript 在 [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point)中使用[double-precision floating-point format numbers](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) 作为规定。在这个规定中能安全的表示数字的范围在`-(2^53 - 1)` 到 `2^53 - 1`之间。
+`MIN_SAFE_INTEGER` 的值是`-9007199254740991`. 形成这个数字的原因是 JavaScript 在 [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point)中使用 [double-precision floating-point format numbers](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) 作为规定。在这个规定中能安全的表示数字的范围在`-(2^53 - 1)` 到 `2^53 - 1`之间。
 
 `由于 MIN_SAFE_INTEGER` 是 {{jsxref("Number")}} 的一个静态属性，你可以直接使用`Number.MIN_SAFE_INTEGER`, 而不是自己去创建一个 {{jsxref("Number")}} 的属性。
 

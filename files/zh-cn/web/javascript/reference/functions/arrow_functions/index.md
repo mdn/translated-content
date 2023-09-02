@@ -172,7 +172,7 @@ console.log(adder.addThruCall(1)); // 仍然输出 2
 
 ### 不绑定`arguments`
 
-箭头函数不绑定[Arguments 对象](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。因此，在本示例中，`arguments`只是引用了封闭作用域内的 arguments：
+箭头函数不绑定 [Arguments 对象](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。因此，在本示例中，`arguments`只是引用了封闭作用域内的 arguments：
 
 ```js
 var arguments = [1, 2, 3];

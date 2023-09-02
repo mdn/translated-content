@@ -341,7 +341,7 @@ console.log(o.average, o.sum); // logs 2, 6
 
 ### 作为构造函数
 
-当一个函数用作构造函数时（使用[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字），它的`this`被绑定到正在构造的新对象。
+当一个函数用作构造函数时（使用 [new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字），它的`this`被绑定到正在构造的新对象。
 
 > **备注：** 虽然构造函数返回的默认值是 `this` 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 `this` 对象）。
 
