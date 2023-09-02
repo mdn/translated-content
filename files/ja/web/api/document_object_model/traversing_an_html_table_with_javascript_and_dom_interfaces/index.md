@@ -149,10 +149,7 @@ JavaScript コードによって生成される HTML マークアップはこの
 
 ```html
 <body>
-  <input
-    type="button"
-    value="段落の背景色を設定"
-    onclick="setBackground()" />
+  <input type="button" value="段落の背景色を設定" onclick="setBackground()" />
   <p>hi</p>
   <p>hello</p>
 </body>
