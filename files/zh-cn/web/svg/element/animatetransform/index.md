@@ -62,4 +62,4 @@ slug: Web/SVG/Element/animateTransform
 
 ## DOM Interface
 
-该元素实现了[`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement)接口。
+该元素实现了 [`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement)接口。
