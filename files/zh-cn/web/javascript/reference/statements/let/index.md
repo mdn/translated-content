@@ -42,7 +42,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 相较于 {{jsxref("Statements/var", "var")}}，`let` 声明有以下不同点：
 
 - `let` 声明的作用域是块或函数。
-- `let` 声明的变量只能在执行到声明书写处之后才能被访问（参见[暂时性死区](#暂时性死区)）。因此，`let` 声明通常被视为是[非提升的](/zh-CN/docs/Glossary/Hoisting)。
+- `let` 声明的变量只能在执行到声明所在的位置之后才能被访问（参见[暂时性死区](#暂时性死区)）。因此，`let` 声明通常被视为是[非提升的](/zh-CN/docs/Glossary/Hoisting)。
 - `let` 声明在脚本的顶级作用域上声明变量时不会在{{jsxref("globalThis", "全局对象", "", 1)}}上创建属性。
 - `let` 声明的变量不能被同一个作用域中的任何其他声明[重复声明](#重复声明)。
 - `let` [是*声明*，而不是*语句*](/zh-CN/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations)的开头。这意味着，你不能将单独的 `let` 声明当做块的主体使用（因为这样做会让变量无法被访问）。
