@@ -2708,6 +2708,6 @@ CSS 规则视图可以在存在已知问题的 CSS 属性旁边显示浏览器�
 
 ## 参见
 
-- [Firefox 开发者发行日志](/zh-CN/docs/Mozilla/Firefox/正式发布版s)
+- [Firefox 开发者发行日志](/zh-CN/docs/Mozilla/Firefox/Releases)
 - [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/)
 - [Firefox 开发者版本](https://www.mozilla.org/zh-CN/firefox/developer/)
