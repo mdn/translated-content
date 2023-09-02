@@ -666,7 +666,6 @@
 /ko/docs/Web/HTML/Global_attributes/클래스	/ko/docs/Web/HTML/Global_attributes/class
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
-/ko/docs/Web/HTML/Index	/ko/docs/Web/HTML
 /ko/docs/Web/HTML/Inline_elements	/ko/docs/Glossary/Inline-level_content
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/CORS
