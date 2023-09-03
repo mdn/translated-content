@@ -13,8 +13,8 @@ slug: Web/API/Clipboard/write
 
 ## 语法
 
-```js
-var promise = navigator.clipboard.write(data)
+```js-nolint
+write(data)
 ```
 
 ### 参数
@@ -47,11 +47,11 @@ function setClipboard(text) {
 }
 ```
 
-代码首先创建了一个新的 {{domxref("Blob")}} 对象，此对象是构造一个 {{domxref("ClipboardItem")}} 对象、并写入到剪贴板所必需的。{{domxref("Blob")}} 构造函数接收我们要复制的内容及类型，一个 {{domxref("Blob")}} 对象可以有不同的来源（例如：{{domxref("canvas")}} 画布）。
+代码首先创建了一个新的 {{domxref("Blob")}} 对象，需要使用该对象来构造 {{domxref("ClipboardItem")}} 对象，并将其发送到剪贴板。{{domxref("Blob")}} 构造函数接收我们要复制的内容及类型，一个 {{domxref("Blob")}} 对象可以有不同的来源，例如 [canvas](/zh-CN/docs/Web/API/HTMLCanvasElement)。
 
-接下来，我们创建一个新的 {{domxref("ClipboardItem")}} 对象，并在其中放置 blob，以写入到剪贴板。传递给 {{domxref("ClipboardItem")}} 构造函数的对象，其键名为 MIME 内容类型，值为复制内容。然后通过调用 `write()`，浏览器根据复制成功与否分别进入到成功和失败的回调函数中。
+接下来，我们创建一个新的 {{domxref("ClipboardItem")}} 对象，并在其中放置 blob，以写入到剪贴板。传递给 {{domxref("ClipboardItem")}} 构造函数的对象的键名表示内容类型，值表示内容。然后调用 `write()`，并指定复制成功和失败的回调函数。
 
-> **注意：** 一次只能传入一个剪贴板项目。
+> **备注：** 一次只能传入一个剪贴板项目。
 
 ## 规范
 
