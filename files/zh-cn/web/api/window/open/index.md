@@ -16,7 +16,7 @@ open(url, target)
 open(url, target, windowFeatures)
 ```
 
-## 参数与返回值
+### 参数
 
 - `url` {{optional_inline}}
 
