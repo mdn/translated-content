@@ -7,7 +7,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 本页列出了 Firefox 的实验性和部分实现的特性，包括针对提议的或前沿的网络平台标准的特性，以及这些特性的版本信息、是否“默认”激活这些特性，以及可用于激活或停用这些特性的偏好设置。这样，就可以在特性发布前对其进行测试。
 
-新特性首先出现在 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 版本中，通常默认启用。它们随后会引入到 [Firefox 浏览器开发者版](https://www.mozilla.org/zh-CN/firefox/developer/)，并最终引入到发布版本中。在发布版中默认启用某项特性后，该功能就不再被视为实验性特性，应从主题中删除。
+新特性首先出现在 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 版本中，通常默认启用。它们随后会引入到 [Firefox 浏览器开发者版](https://www.mozilla.org/zh-CN/firefox/developer/)，并最终引入到发布版本中。在发布版中默认启用某项特性后，该特性就不再被视为实验性特性，应从主题中删除。
 
 可以使用 [Firefox 配置编辑器](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)（在 Firefox 地址栏中输入 `about:config`）通过修改下面列出的相关首选项来启用或禁用实验特性。
 
@@ -259,7 +259,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
   </tbody>
 </table>
 
-请注意，相关的 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件和相关的 {{domxref("ContentVisibilityAutoStateChangeEvent")}} 接口是在版本 110 中添加的，并由相同的首选项控制。应用程序代码可使用这些功能监控可见性变化，并在用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其中内容)时停止与渲染元素相关的进程。（详见 [Firefox bug 1791759](https://bugzil.la/1791759)。）
+请注意，相关的 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件和相关的 {{domxref("ContentVisibilityAutoStateChangeEvent")}} 接口是在版本 110 中添加的，并由相同的首选项控制。应用程序代码可使用这些特性监控可见性变化，并在用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其中内容)时停止与渲染元素相关的进程。（详见 [Firefox bug 1791759](https://bugzil.la/1791759)。）
 
 ### 在媒体查询中将单个数字作为纵横比
 
@@ -1386,7 +1386,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### OpenFont COLRv1 字体
 
-该特性支持 [OpenFont COLRv1 字体规范](https://docs.microsoft.com/en-us/typography/opentype/spec/)。这样就可以使用 CSS [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 规则或 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来加载带有渐变、合成和混合功能的压缩友好型彩色矢量字体。详情请参见 [Firefox bug 1740530](https://bugzil.la/1740530)。
+该特性支持 [OpenFont COLRv1 字体规范](https://docs.microsoft.com/en-us/typography/opentype/spec/)。这样就可以使用 CSS [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 规则或 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来加载带有渐变、合成和混合特性的压缩友好型彩色矢量字体。详情请参见 [Firefox bug 1740530](https://bugzil.la/1740530)。
 
 <table>
   <thead>
@@ -2024,7 +2024,7 @@ CSS 更新包括：
 
 ### WebShare API
 
-[Web 分享 API](/zh-CN/docs/Web/API/Web_Share_API) 允许从网站共享文件、URL 和其他数据。该功能在安卓系统的所有版本中均已启用，但在桌面系统中则需要指定首选项设置（除非另有说明）。
+[Web 分享 API](/zh-CN/docs/Web/API/Web_Share_API) 允许从网站共享文件、URL 和其他数据。该特性在安卓系统的所有版本中均已启用，但在桌面系统中则需要指定首选项设置（除非另有说明）。
 
 <table>
   <thead>
@@ -2108,7 +2108,7 @@ CSS 更新包括：
 
 [优先级任务调度 API](/zh-CN/docs/Web/API/Prioritized_Task_Scheduling_API) 提供了一种标准化的方法，可对属于应用程序的所有任务进行优先排序，无论这些任务是在网站开发人员的代码中定义的，还是在第三方库和框架中定义的。
 
-Firefox Nightly（仅）从 Firefox 101 开始启用此功能。其他版本没有提供启用该功能的首选项。
+Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没有提供启用该特性的首选项。
 
 ### 通知 API
 
@@ -2282,7 +2282,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此功能。其他版本没�
 
 ### 权限策略 / 特性策略
 
-[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 允许网络开发人员有选择地启用、禁用和修改浏览器中某些功能和 API 的行为。它与 CSP 类似，但控制的是功能而不是安全行为。请注意，在 Firefox 中实现的是**特性策略**，这是该规范早期版本中使用的名称。
+[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 允许网络开发人员有选择地启用、禁用和修改浏览器中某些特性和 API 的行为。它与 CSP 类似，但控制的是特性而不是安全行为。请注意，在 Firefox 中实现的是**特性策略**，这是该规范早期版本中使用的名称。
 
 <table>
   <thead>
@@ -2492,11 +2492,11 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此功能。其他版本没�
 
 ## 开发者工具
 
-Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加新的功能，并在 Nightly 和开发者版本渠道上进行测试，然后再通过测试版发布。以下是目前开发者工具的实验功能。
+Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加新的特性，并在 Nightly 和开发者版本渠道上进行测试，然后再通过测试版发布。以下是目前开发者工具的实验特性。
 
 ### 执行上下文选择器
 
-该功能可在控制台命令行上显示一个按钮，让你更改输入表达式的执行环境。（详见 [Firefox bug 1605154](https://bugzil.la/1605154) 和 [Firefox bug 1605153](https://bugzil.la/1605153)）。
+该特性可在控制台命令行上显示一个按钮，让你更改输入表达式的执行环境。（详见 [Firefox bug 1605154](https://bugzil.la/1605154) 和 [Firefox bug 1605153](https://bugzil.la/1605153)）。
 
 <table>
   <thead>
@@ -2666,7 +2666,7 @@ CSS 规则视图可以在存在已知问题的 CSS 属性旁边显示浏览器�
 
 ### 桌面缩放
 
-该功能可让你在桌面端实现流畅的捏合缩放，而无需像移动设备那样重新刷新布局。（详见 [Firefox bug 1245183](https://bugzil.la/1245183) 和 [Firefox bug 1620055](https://bugzil.la/1620055)）。
+该特性可让你在桌面端实现流畅的捏合缩放，而无需像移动设备那样重新刷新布局。（详见 [Firefox bug 1245183](https://bugzil.la/1245183) 和 [Firefox bug 1620055](https://bugzil.la/1620055)）。
 
 <table>
   <thead>
