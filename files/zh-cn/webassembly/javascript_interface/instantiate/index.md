@@ -89,7 +89,7 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports);
 ```
 
-> **备注：** 查看 GitHub([在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)) 的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1)库函数
+> **备注：** 查看 GitHub（[在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)）的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) 库函数
 
 ### 第二种重载例子
 

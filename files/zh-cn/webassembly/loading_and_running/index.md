@@ -5,7 +5,7 @@ slug: WebAssembly/Loading_and_running
 
 {{WebAssemblySidebar}}
 
-为了在 JavaScript 中使用 WebAssembly，在编译/实例化之前，你首先需要把模块放入内存。比如，通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)，模块将会被初始化为带类型数组；不过，将来会开发更多的方式。本文提供了一篇关于获取 WebAssembly 字节码的不同机制以及如何编译/实例化并运行它的参考。
+为了在 JavaScript 中使用 WebAssembly，在编译/实例化之前，你首先需要把模块放入内存。比如，通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)，模块将会被初始化为带类型数组；不过，将来会开发更多的方式。本文提供了一篇关于获取 WebAssembly 字节码的不同机制以及如何编译/实例化并运行它的参考。
 
 ## 这里的主题是什么？
 
@@ -19,8 +19,8 @@ WebAssembly 还没有和\<script type='module'>或 ES6 的 import 语句集成�
 
 假设网络上有一个叫做 simple.wasm 的 WebAssembly 模块：
 
-- 我们可以使用 [fetch()](/zh-CN/docs/Web/API/fetch)全局函数来轻松地获取它，该函数返回一个可以解析为 [Response](/zh-CN/docs/Web/API/Response)对象的 promise。
-- 我们可以使用 [arrayBuffer()](/zh-CN/docs/Web/API/Body/arrayBuffer)函数把响应（response）转换为带类型数组，该函数返回一个可以解析为带类型数组的 promise。
+- 我们可以使用 [fetch()](/zh-CN/docs/Web/API/fetch)全局函数来轻松地获取它，该函数返回一个可以兑现为 [Response](/zh-CN/docs/Web/API/Response) 对象的 promise。
+- 我们可以使用 [arrayBuffer()](/zh-CN/docs/Web/API/Body/arrayBuffer) 函数把响应（response）转换为带类型数组，该函数返回一个可以解析为带类型数组的 promise。
 - 最后，我们使用{{jsxref("WebAssembly.instantiate()")}}函数一步实现编译和实例化带类型数组。
 
 代码块看起来像这样：
@@ -47,7 +47,7 @@ fetch("module.wasm")
 
 > **备注：** 通常，我们只关心实例，但是，当我们想缓存模块，使用 [postMessage()](/zh-CN/docs/Web/API/MessagePort/postMessage)与另外一个 worker 或 window 共享模块或者只是创建更多的实例的时候，拥有模块对象是很有用的。
 
-> **备注：** 这二种重载形式接受一个 [WebAssembly.Module](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)对象作为参数，并且返回一个包含了一个实例对象的 promise。参考[第二种重载示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example)。
+> **备注：** 这二种重载形式接受一个 [WebAssembly.Module](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 对象作为参数，并且返回一个包含了一个实例对象的 promise。参考[第二种重载示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example)。
 
 ### 获取及实例化的实用函数
 
@@ -117,4 +117,4 @@ request.onload = function () {
 };
 ```
 
-> **备注：** 你可以在 [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html)看到实际使用的例子。
+> **备注：** 你可以在 [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) 看到实际使用的例子。

@@ -11,7 +11,7 @@ slug: Web/SVG/Tutorial/Introduction
 
 ![Mozilla dino logo](dino.svg)
 
-SVG 诞生于 1999 年，之前有几个相互竞争的格式规范被提交到 [W3C](https://www.w3.org)，但是都没有获得批准。主流浏览器均支持 SVG。加载慢是 SVG 的一个缺点。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方扩展 (extensions，原文有误，应该是插件 plugins，类似 flash)。当然，是否使用 SVG 还要取决于你要实现什么。
+SVG 诞生于 1999 年，之前有几个相互竞争的格式规范被提交到 [W3C](https://www.w3.org)，但是都没有获得批准。主流浏览器均支持 SVG。加载慢是 SVG 的一个缺点。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方扩展。当然，是否使用 SVG 还要取决于你要实现什么。
 
 ## 基本要素
 
