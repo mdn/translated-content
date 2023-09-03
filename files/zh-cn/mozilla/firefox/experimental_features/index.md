@@ -22,7 +22,7 @@ slug: Mozilla/Firefox/Experimental_features
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -62,7 +62,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -102,7 +102,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -144,7 +144,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -186,7 +186,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -226,7 +226,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -268,7 +268,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -308,7 +308,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -352,7 +352,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -392,7 +392,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -434,7 +434,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -480,7 +480,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -520,7 +520,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -560,7 +560,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -600,7 +600,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -640,7 +640,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -680,7 +680,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -721,7 +721,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -761,7 +761,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -801,7 +801,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -841,7 +841,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -881,7 +881,7 @@ CSS {{cssxref("offset-position")}} 属性定义了元素在路径上的初始位
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -921,7 +921,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -963,7 +963,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1007,7 +1007,7 @@ SVGPathSeg API 接口将不再包含，并被置于首选项之后。其中包�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1049,7 +1049,7 @@ SVGPathSeg API 接口将不再包含，并被置于首选项之后。其中包�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1089,7 +1089,7 @@ SVGPathSeg API 接口将不再包含，并被置于首选项之后。其中包�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1131,7 +1131,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1175,7 +1175,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1219,7 +1219,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1263,7 +1263,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1309,7 +1309,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1351,7 +1351,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1391,7 +1391,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1431,7 +1431,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1471,7 +1471,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1513,7 +1513,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1555,7 +1555,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1616,7 +1616,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1656,7 +1656,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1696,7 +1696,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1736,7 +1736,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1776,7 +1776,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1816,7 +1816,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1856,7 +1856,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1896,7 +1896,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1943,7 +1943,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -1985,7 +1985,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2029,7 +2029,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2071,7 +2071,7 @@ CSS 更新包括：
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2117,7 +2117,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2159,7 +2159,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2201,7 +2201,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2245,7 +2245,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2287,7 +2287,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2331,7 +2331,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2375,7 +2375,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2415,7 +2415,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2457,7 +2457,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2501,7 +2501,7 @@ Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2541,7 +2541,7 @@ Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2583,7 +2583,7 @@ Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2625,7 +2625,7 @@ CSS 规则视图可以在存在已知问题的 CSS 属性旁边显示浏览器�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
@@ -2671,7 +2671,7 @@ CSS 规则视图可以在存在已知问题的 CSS 属性旁边显示浏览器�
 <table>
   <thead>
     <tr>
-      <th>发布渠道</th>
+      <th>更新通道</th>
       <th>添加的版本</th>
       <th>默认启用？</th>
     </tr>
