@@ -44,7 +44,7 @@ slug: Mozilla/Firefox/Experimental_features
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>81</td>
       <td>否</td>
     </tr>
@@ -84,7 +84,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>96</td>
       <td>否</td>
     </tr>
@@ -124,7 +124,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>114</td>
       <td>否</td>
     </tr>
@@ -166,7 +166,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>43</td>
       <td>否</td>
     </tr>
@@ -208,7 +208,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>50</td>
       <td>否</td>
     </tr>
@@ -248,7 +248,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>109</td>
       <td>否</td>
     </tr>
@@ -290,7 +290,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>70</td>
       <td>否</td>
     </tr>
@@ -330,7 +330,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>70</td>
       <td>否</td>
     </tr>
@@ -374,7 +374,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>72</td>
       <td>否</td>
     </tr>
@@ -414,7 +414,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>77</td>
       <td>否</td>
     </tr>
@@ -456,7 +456,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>91</td>
       <td>否</td>
     </tr>
@@ -502,7 +502,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>110</td>
       <td>否</td>
     </tr>
@@ -542,7 +542,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>103</td>
       <td>否</td>
     </tr>
@@ -582,7 +582,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>105</td>
       <td>否</td>
     </tr>
@@ -622,7 +622,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>108</td>
       <td>否</td>
     </tr>
@@ -662,7 +662,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>108</td>
       <td>否</td>
     </tr>
@@ -702,7 +702,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>111</td>
       <td>否</td>
     </tr>
@@ -743,7 +743,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>113</td>
       <td>否</td>
     </tr>
@@ -783,7 +783,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>114</td>
       <td>否</td>
     </tr>
@@ -823,7 +823,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>114</td>
       <td>否</td>
     </tr>
@@ -863,7 +863,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>114</td>
       <td>否</td>
     </tr>
@@ -903,7 +903,7 @@ CSS {{cssxref("offset-position")}} 属性定义了元素在路径上的初始位
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>116</td>
       <td>否</td>
     </tr>
@@ -943,7 +943,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>117</td>
       <td>否</td>
     </tr>
@@ -985,7 +985,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>117</td>
       <td>否</td>
     </tr>
@@ -1029,7 +1029,7 @@ SVGPathSeg API 接口将不再包含，并被置于首选项之后。其中包�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>97</td>
       <td>否</td>
     </tr>
@@ -1071,7 +1071,7 @@ SVGPathSeg API 接口将不再包含，并被置于首选项之后。其中包�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>NA</td>
       <td>否</td>
     </tr>
@@ -1111,7 +1111,7 @@ SVGPathSeg API 接口将不再包含，并被置于首选项之后。其中包�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>NA</td>
       <td>否</td>
     </tr>
@@ -1153,7 +1153,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>-</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>-</td>
       <td>-</td>
     </tr>
@@ -1197,7 +1197,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>30</td>
       <td>否</td>
     </tr>
@@ -1241,7 +1241,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>73</td>
       <td>否</td>
     </tr>
@@ -1285,7 +1285,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>62</td>
       <td>否</td>
     </tr>
@@ -1331,7 +1331,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>1</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>92</td>
       <td>1</td>
     </tr>
@@ -1373,7 +1373,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>—</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -1413,7 +1413,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>105</td>
       <td>否</td>
     </tr>
@@ -1453,7 +1453,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>116</td>
       <td>否</td>
     </tr>
@@ -1493,7 +1493,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>117</td>
       <td>否</td>
     </tr>
@@ -1535,7 +1535,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>97</td>
       <td>否</td>
     </tr>
@@ -1577,7 +1577,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>98</td>
       <td>否</td>
     </tr>
@@ -1638,7 +1638,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>114</td>
       <td>否</td>
     </tr>
@@ -1678,7 +1678,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>64</td>
       <td>否</td>
     </tr>
@@ -1718,7 +1718,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>33</td>
       <td>否</td>
     </tr>
@@ -1758,7 +1758,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>87</td>
       <td>否</td>
     </tr>
@@ -1798,7 +1798,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>90</td>
       <td>否</td>
     </tr>
@@ -1838,7 +1838,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>84</td>
       <td>否</td>
     </tr>
@@ -1878,7 +1878,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>31</td>
       <td>否</td>
     </tr>
@@ -1918,7 +1918,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>31</td>
       <td>否</td>
     </tr>
@@ -1965,7 +1965,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>95</td>
       <td>否</td>
     </tr>
@@ -2007,7 +2007,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>55</td>
       <td>否</td>
     </tr>
@@ -2051,7 +2051,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>71</td>
       <td>否 (Desktop). 是 (Android).</td>
     </tr>
@@ -2093,7 +2093,7 @@ CSS 更新包括：
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>97</td>
       <td>否</td>
     </tr>
@@ -2139,7 +2139,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>117</td>
       <td>Windows only</td>
     </tr>
@@ -2181,7 +2181,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>59</td>
       <td>否</td>
     </tr>
@@ -2223,7 +2223,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>60</td>
       <td>否</td>
     </tr>
@@ -2267,7 +2267,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>60</td>
       <td>否</td>
     </tr>
@@ -2309,7 +2309,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>65</td>
       <td>否</td>
     </tr>
@@ -2353,7 +2353,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>63</td>
       <td>否</td>
     </tr>
@@ -2397,7 +2397,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>69</td>
       <td>否</td>
     </tr>
@@ -2437,7 +2437,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>是</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>102</td>
       <td>否</td>
     </tr>
@@ -2479,7 +2479,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
       <td>是</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>115</td>
       <td>是</td>
     </tr>
@@ -2523,7 +2523,7 @@ Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>75</td>
       <td>否</td>
     </tr>
@@ -2563,7 +2563,7 @@ Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加
       <td>是</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>76<sup>[1]</sup></td>
       <td>否</td>
     </tr>
@@ -2605,7 +2605,7 @@ Mozilla 的开发者工具在不断发展。我们会尝试新的想法，添加
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>80</td>
       <td>否</td>
     </tr>
@@ -2647,7 +2647,7 @@ CSS 规则视图可以在存在已知问题的 CSS 属性旁边显示浏览器�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>81</td>
       <td>否</td>
     </tr>
@@ -2693,7 +2693,7 @@ CSS 规则视图可以在存在已知问题的 CSS 属性旁边显示浏览器�
       <td>否</td>
     </tr>
     <tr>
-      <th>正式发布版</th>
+      <th>发行版</th>
       <td>42</td>
       <td>否</td>
     </tr>
