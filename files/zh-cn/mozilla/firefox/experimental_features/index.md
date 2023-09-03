@@ -139,7 +139,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 
 ### 显示杂散控制字符的十六进制框
 
-该特性会将除 _tab_（`U+0009`）、_line feed_（`U+000A`）、_form feed_（`U+000C`）和 _carriage return_（`U+000D`）之外的控制字符（Unicode 类别 Cc）渲染为十六进制框，而这些控制字符并非预期字符。（详见 [Firefox bug 1099557](https://bugzil.la/1099557)）。
+该特性会将除*制表符*（`U+0009`）、_换行符_（`U+000A`）、_换页符_（`U+000C`）和*回车符*（`U+000D`）以外的控制字符（Unicode 类别 Cc）渲染为十六进制框，而这些控制字符并非预期字符。（详见 [Firefox bug 1099557](https://bugzil.la/1099557)）。
 
 <table>
   <thead>
