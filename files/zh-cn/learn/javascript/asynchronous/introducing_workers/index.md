@@ -6,7 +6,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使您能够在单独执行 {{Glossary("Thread", "线程")}} 中运行一些任务。
+在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使你能够在单独执行 {{Glossary("Thread", "线程")}} 中运行一些任务。
 
 <table>
   <tbody>

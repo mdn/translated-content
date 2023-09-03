@@ -48,7 +48,7 @@ JavaScript 还有一种内置的 {{jsxref("Error")}}（错误）类型。但是�
 
 ## 数字
 
-根据语言规范，JavaScript 采用“遵循 IEEE 754 标准的双精度 64 位格式”（"double-precision 64-bit format IEEE 754 values"）表示数字。——在 JavaScript（除了{{jsxref("BigInt")}}）当中，**并不存在整数/整型 (Integer)。**因此在处理如下的场景时候，您一定要小心：
+根据语言规范，JavaScript 采用“遵循 IEEE 754 标准的双精度 64 位格式”（"double-precision 64-bit format IEEE 754 values"）表示数字。——在 JavaScript（除了{{jsxref("BigInt")}}）当中，**并不存在整数/整型 (Integer)。**因此在处理如下的场景时候，你一定要小心：
 
 ```plain
 console.log(3 / 2);             // 1.5,not 1
@@ -57,7 +57,7 @@ console.log(Math.floor(3 / 2)); // 1
 
 一个看上去是整数的东西，其实都是浮点数。
 
-当然，您也需要小心这种情况：
+当然，你也需要小心这种情况：
 
 ```js
 0.1 + 0.2 = 0.30000000000000004

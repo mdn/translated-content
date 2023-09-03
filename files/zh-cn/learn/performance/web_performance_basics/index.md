@@ -13,15 +13,15 @@ slug: Learn/Performance/Web_Performance_Basics
 - [CSS](/zh-CN/docs/Learn/Performance/CSS_performance)性能因素
 - 在你的服务器（或者 CDN）上使用 [HTTP/2](/zh-CN/docs/Learn/Performance/HTTP2)协议
 - 使用 CDN 托管静态资源，这样可以显著减少加载时间
-- 使用[gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli) 或者 [Zopfli](https://github.com/google/zopfli)压缩您的资源
+- 使用[gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli) 或者 [Zopfli](https://github.com/google/zopfli)压缩你的资源
 - 图片优化（如果可以，尽可能使用 css 动画或者 svg）
 - 在超出应用视口范围的部分使用懒加载，如果你这么做了，为 SEO 制定一个后备计划（例如为 bot traffic 渲染整个页面）
 
 #### 工具
 
-- 学习使用[Firefox Dev Tools](/zh-CN/docs/Tools/Performance)来分析您的网站。
-- [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 可以分析您的页面并且给出一些通用的建议来提升网站性能。
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 可以给您一份有关您网站的包括性能，SEO 和无障碍等多个方面的详细分类。
+- 学习使用[Firefox Dev Tools](/zh-CN/docs/Tools/Performance)来分析你的网站。
+- [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 可以分析你的页面并且给出一些通用的建议来提升网站性能。
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 可以给你一份有关你网站的包括性能，SEO 和无障碍等多个方面的详细分类。
 - 使用 [Webpagetest.org](http://webpagetest.org/)检测页面在不同真实设备类型和地点时候的速度。trics.
 - 定义一个绩效预算（[performance budget](/zh-CN/docs/Web/Performance/Performance_budget)）。
 
