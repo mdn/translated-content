@@ -5,13 +5,13 @@ slug: Mozilla/Firefox/Experimental_features
 
 {{FirefoxSidebar}}
 
-本页列出了 Firefox 的实验性和部分实现的功能，包括针对提议的或前沿的网络平台标准的功能，以及这些功能的版本信息、是否“默认”激活这些功能，以及可用于激活或停用这些功能的偏好设置。这样，就可以在功能发布前对其进行测试。
+本页列出了 Firefox 的实验性和部分实现的特性，包括针对提议的或前沿的网络平台标准的特性，以及这些特性的版本信息、是否“默认”激活这些特性，以及可用于激活或停用这些特性的偏好设置。这样，就可以在特性发布前对其进行测试。
 
-新功能首先出现在 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 版本中，通常默认启用。它们随后会传播到 [Firefox 浏览器开发者版](https://www.mozilla.org/zh-CN/firefox/developer/)，并最终传播到发布版本中。在发布版中默认启用某项特性后，该功能就不再被视为实验性特性，应从主题中删除。
+新特性首先出现在 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 版本中，通常默认启用。它们随后会引入到 [Firefox 浏览器开发者版](https://www.mozilla.org/zh-CN/firefox/developer/)，并最终引入到发布版本中。在发布版中默认启用某项特性后，该功能就不再被视为实验性特性，应从主题中删除。
 
 可以使用 [Firefox 配置编辑器](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)（在 Firefox 地址栏中输入 `about:config`）通过修改下面列出的相关首选项来启用或禁用实验特性。
 
-> **备注：** 对编者的信息——当在这些表格添加特性时，请尝试使用 `[Firefox bug <number>](https://bugzil.la/<number>)` 包含相关的 bug。
+> **备注：** 对编者的信息——当在这些表格添加特性时，请尝试使用 `[Firefox bug <number>](https://bugzil.la/<number>)` 包含指向相关 bug 的链接。
 
 ## HTML
 
@@ -97,7 +97,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Eleme
 
 ### ARIA 属性反射
 
-为非 IDREF 属性启用了 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 反射功能，允许作者通过 JavaScript API 直接获取和设置 DOM 元素上的 ARIA 属性，而不是使用 `setAttribute` 和 `getAttribute`（详情请参见 [Firefox bug 1824980](https://bugzil.la/1824980)）。
+为非 IDREF 属性启用了 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 反射特性，允许作者通过 JavaScript API 直接获取和设置 DOM 元素上的 ARIA 属性，而不是使用 `setAttribute` 和 `getAttribute`（详情请参见 [Firefox bug 1824980](https://bugzil.la/1824980)）。
 
 <table>
   <thead>
