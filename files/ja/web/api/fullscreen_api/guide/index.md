@@ -84,11 +84,15 @@ if (elem.requestFullscreen) {
 ページが読み込まれると、このコードが実行され、 <kbd>Enter</kbd> キーを待ち受けるためのイベントリスナーが設定されます。
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 全画面モードのトグル切り替え

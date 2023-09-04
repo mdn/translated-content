@@ -18,9 +18,9 @@ var id = mediaStream.id;
 ```js
 var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
-p.then(function(stream) {
-   console.log(stream.id);
-})
+p.then(function (stream) {
+  console.log(stream.id);
+});
 ```
 
 ## 仕様書

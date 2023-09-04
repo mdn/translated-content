@@ -69,4 +69,4 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGPatternElement`](/zh-CN/DOM/SVGPatternElement)接口。
+该元素实现了 [`SVGPatternElement`](/zh-CN/DOM/SVGPatternElement) 接口。

@@ -9,7 +9,7 @@ slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 
 以缩放画布为例，这个属性对像素为主的游戏很有用。默认的改变大小的算法会造成图片模糊并且破坏图片原有的像素。如果那样的话，设置属性值为 false。参见 CSS {{cssxref("image-rendering")}} 属性。
 
-> **备注：** 您可以使用{{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}属性来调整平滑质量。
+> **备注：** 你可以使用{{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}属性来调整平滑质量。
 
 ## 语法
 

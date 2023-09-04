@@ -12,7 +12,7 @@ slug: Web/API/VRDisplay/cancelAnimationFrame
 ## 構文
 
 ```js
-cancelAnimationFrame(handle)
+cancelAnimationFrame(handle);
 ```
 
 ### 引数

@@ -1,78 +1,63 @@
 ---
-title: PerformanceEntry.toJSON()
+title: "PerformanceEntry: toJSON() メソッド"
+short-title: toJSON()
 slug: Web/API/PerformanceEntry/toJSON
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-**`toJSON()`** メソッドは*シリアライザ*で、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}オブジェクトの JSON 表現を返します。
-
-{{AvailableInWorkers}}
+**`toJSON()`** メソッドは{{Glossary("Serialization","シリアライザー")}}で、この {{domxref("PerformanceEntry")}} オブジェクトの JSON 表現を返します。
 
 ## 構文
 
-```
-json = perfEntry.toJSON();
+```js-nolint
+toJSON()
 ```
 
 ### 引数
 
-なし
+なし。
 
 ### 返値
 
-- json
-  - : {{domxref("PerformanceEntry")}} オブジェクトのシリアル化である JSON オブジェクト
+{{jsxref("JSON")}} お武衛ジェクトで、この {{domxref("PerformanceEntry")}} オブジェクトをシリアライズしたものです。
 
 ## 例
 
-次の例は、`toJSON()` メソッドの使用方法を示しています。
+### toJSON メソッドの使用
+
+この例では、 `entry.toJSON()` を呼び出すとその {{domxref("PerformanceMark")}} オブジェクトの JSON 表現を返します。
 
 ```js
-function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
+performance.mark("debug-marker", {
+  detail: "debugging-marker-123",
+});
 
-  if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
-    return;
-  }
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry.toJSON());
+  });
+});
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
+observer.observe({ entryTypes: ["mark"] });
+```
 
-  // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
-  }
-}
-function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
+これは JSON オブジェクトを次のように出力します。
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
-  }
-  for (var i=0; i < methods.length; i++) {
-    // check each method
-    var supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      var js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      log("..." + methods[i] + " = Not supported");
-    }
-  }
+```json
+{
+  "name": "debug-marker",
+  "entryType": "mark",
+  "startTime": 158361,
+  "duration": 0
 }
 ```
+
+`PerformanceMark` の {{domxref("PerformanceMark.detail", "detail")}} プロパティが格納されていないことに注意してください。
+
+JSON 文字列を取得するには、 [`JSON.stringify(entry)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を直接使用することができます。これは `toJSON()` を自動的に呼び出します。
 
 ## 仕様書
 
@@ -80,4 +65,8 @@ function check_PerformanceEntry(obj) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceEntry.toJSON")}}
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("JSON")}}

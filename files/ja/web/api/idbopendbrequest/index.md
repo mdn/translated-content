@@ -46,11 +46,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これらのイベントハンドラーは、開かれているデータベースを扱います
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>データベースの読み込み中にエラーが発生しました。</li>';
+  note.innerHTML += "<li>データベースの読み込み中にエラーが発生しました。</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>データベースの初期化が完了しました。</li>';
+  note.innerHTML += "<li>データベースの初期化が完了しました。</li>";
 
   // データベースを開いた結果を変数 db に格納します。
   // これは後でたくさん使います。
@@ -70,11 +70,14 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>データベースの読み込み中にエラーが発生しました｡</li>';
+    note.innerHTML +=
+      "<li>データベースの読み込み中にエラーが発生しました｡</li>";
   };
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore にどのようなアイテムを保存するかを定義します
 

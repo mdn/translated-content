@@ -5,7 +5,7 @@ slug: Glossary/Block-level_content
 
 {{GlossarySidebar}}
 
-在 CSS 中，参与行内布局的内容被称为**块级内容**（block-level content）。
+在 CSS 中，参与块级布局的内容被称为**块级内容**（block-level content）。
 
 在块级布局中，从包含块的顶部开始，盒子总是一个接着一个地垂直放置。每个盒子的左外边缘触及包含块的左边缘。块级元素总是开始在新的行/列上。在水平书写模式中，像英语或者阿拉伯语，它占据父元素（容器）的整个水平空间和等于其内容高度的垂直空间，从而创建一个“区块”。
 
@@ -19,11 +19,8 @@ slug: Glossary/Block-level_content
 
 ```html
 <div>
-  <p>
-    This the first paragraph. The background color of these paragraphs have been
-    colored to distinguish them from their parent element.
-  </p>
-  <p>This is the second paragraph.</p>
+  <p>这是第一段。这些段落的背景颜色已着色，以将其与其父元素区分开。</p>
+  <p>这是第二段。</p>
 </div>
 ```
 

@@ -32,7 +32,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 
 ## 常见问题
 
-由于经过了发展，flexbox 的大多数问题与规范的变更有关，而且事实上我们很多人都试图在生产中环境中使用实验性的规范。如果您要确保与旧版本的浏览器（尤其是 IE10 和 11）向后兼容，则 [Flexbugs](https://github.com/philipwalton/flexbugs) 网站是一个有用的资源。您将看到许多列出的 bug 都适用于旧的浏览器版本，并且在当前的浏览器中已修复。每个错误都有列出的解决方法 - 可以节省许多时间。
+由于经过了发展，flexbox 的大多数问题与规范的变更有关，而且事实上我们很多人都试图在生产中环境中使用实验性的规范。如果你要确保与旧版本的浏览器（尤其是 IE10 和 11）向后兼容，则 [Flexbugs](https://github.com/philipwalton/flexbugs) 网站是一个有用的资源。你将看到许多列出的 bug 都适用于旧的浏览器版本，并且在当前的浏览器中已修复。每个错误都有列出的解决方法 - 可以节省许多时间。
 
 如果你想要支持非常旧的浏览器使用 flexbox 属性，在 CSS 中加入：
 
@@ -45,7 +45,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 }
 ```
 
-[Autoprefixer Online](https://autoprefixer.github.io/)是查看推荐使用前缀浏览器的有效方式，具体取决于您希望通过浏览器支持返回多少版本。您还可以从 [Can I Use](https://caniuse.com/#feat=flexbox) 中以获取浏览器支持的信息，以便在已经支持的浏览器中删除前缀
+[Autoprefixer Online](https://autoprefixer.github.io/)是查看推荐使用前缀浏览器的有效方式，具体取决于你希望通过浏览器支持返回多少版本。你还可以从 [Can I Use](https://caniuse.com/#feat=flexbox) 中以获取浏览器支持的信息，以便在已经支持的浏览器中删除前缀
 
 ## 有用的向下支持技术
 

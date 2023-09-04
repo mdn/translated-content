@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 13 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 13 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
 
 我们可以通过增加生活使游戏更愉快。在这篇文章中，我们将实施一个生活系统，以便玩家可以继续玩，直到他们失去了三个生命，而不仅仅是一个人。
 
@@ -122,11 +122,11 @@ function ballLeaveScreen() {
 
 ## 事件
 
-您可能已经注意到了`add()`，并`addOnce()`在上面的两个代码块的方法调用，并想知道它们的区别。不同之处在于，该`add()`方法绑定给定的函数，并使其在每次事件发生时执行，同时`addOnce()`当您希望绑定函数只执行一次，然后解除绑定时有用，因此不会再次执行。在我们的例子中，每个`outOfBounds`事件`ballLeaveScreen`都将被执行，但当球离开屏幕时，我们只想从屏幕上删除一次消息。
+你可能已经注意到了`add()`，并`addOnce()`在上面的两个代码块的方法调用，并想知道它们的区别。不同之处在于，该`add()`方法绑定给定的函数，并使其在每次事件发生时执行，同时`addOnce()`当你希望绑定函数只执行一次，然后解除绑定时有用，因此不会再次执行。在我们的例子中，每个`outOfBounds`事件`ballLeaveScreen`都将被执行，但当球离开屏幕时，我们只想从屏幕上删除一次消息。
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/yk1c5n0b/","","400")}}
 

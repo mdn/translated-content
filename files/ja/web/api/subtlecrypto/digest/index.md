@@ -61,12 +61,13 @@ const digest = crypto.subtle.digest(algorithm, data);
 この例では、メッセージをエンコードし、 SHA-256 ダイジェスト値を計算して、ダイジェスト長を記録します。
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
@@ -79,13 +80,16 @@ console.log(digestBuffer.byteLength);
 ダイジェストは`ArrayBuffer`として返されますが、比較および表示のために、ダイジェスト値は多くの場合 16 進文字列として表されます。 この例では、ダイジェストを計算し、`ArrayBuffer`を 16 進文字列に変換します。
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // (utf-8 の) Uint8Array にエンコードする
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // メッセージをハッシュする
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // バッファーをバイト列に変換する
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // バイト列を16進文字列に変換する
+  const msgUint8 = new TextEncoder().encode(message); // (utf-8 の) Uint8Array にエンコードする
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // メッセージをハッシュする
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // バッファーをバイト列に変換する
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // バイト列を16進文字列に変換する
   return hashHex;
 }
 

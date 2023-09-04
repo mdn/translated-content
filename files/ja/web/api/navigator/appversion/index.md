@@ -12,7 +12,7 @@ slug: Web/API/Navigator/appVersion
 ## 構文
 
 ```js
-window.navigator.appVersion
+window.navigator.appVersion;
 ```
 
 ### 値
@@ -22,7 +22,11 @@ window.navigator.appVersion
 ## 例
 
 ```js
-alert("このブラウザーのバージョンは " + navigator.appVersion + " と報告されています。");
+alert(
+  "このブラウザーのバージョンは " +
+    navigator.appVersion +
+    " と報告されています。",
+);
 ```
 
 ## 注
