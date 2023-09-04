@@ -24,7 +24,7 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : 一个不含空格的字符串，用于指定加载资源的浏览上下文的[名称](/zh-CN/docs/Web/API/Window/name)。如果该名称无法识别现有的上下文，则会创建一个新的上下文，并赋予指定的名称。还可以使用特殊的 [`target` 关键字](/zh-CN/docs/Web/HTML/Element/a#target)、`_self`、`_blank`、`_parent` 和 `_top`。
+  - : 一个不含空格的字符串，用于指定加载资源的浏览上下文的[名称](/zh-CN/docs/Web/API/Window/name)。如果该名称无法识别现有的上下文，则会创建一个新的上下文，并赋予指定的名称。还可以使用特殊的 [`target` 关键字](/zh-CN/docs/Web/HTML/Element/a#target)：`_self`、`_blank`、`_parent` 和 `_top`。
 
   该名称可用作 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target) 元素的 `target` 属性。
 
@@ -134,7 +134,7 @@ if (!handle) {
 #### JavaScript
 
 ```js
-let windowObjectReference = null; // global variable
+let windowObjectReference = null; // 全局变量
 function openRequestedTab(url, windowName) {
   if (windowObjectReference === null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, windowName);
@@ -261,7 +261,7 @@ console.log(sameOriginContext.origin);
 
 ### 始终指明指向二级窗口的链接
 
-确定可打开新窗口的链接，以帮助用户导航。
+指明可打开新窗口的链接，以帮助用户导航。
 
 ```html
 <a target="WikipediaWindow" href="https://www.wikipedia.org">
