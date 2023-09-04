@@ -39,12 +39,14 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
     如果 `<ending-shape>` 被指定为 `circle`，则可以为大小指定一个 [`<length>`](/zh-CN/docs/Web/CSS/length) 值，它明确了圆的半径。负值是无效的。
 
-    如果 `<ending-shape>` 被指定为 `ellipse`，或者被忽略，则可以使用 [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 用两个值来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框的相应尺寸的。负值是无效的。
+    如果 `<ending-shape>` 被指定为 `ellipse`，则可以使用带有两个值的 [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框在相应维度上的大小的。负值是无效的。
+
+    如果 `<ending-shape>` 关键词被省略，渐变形状会由给定的大小决定。一个 `<length>` 产生圆，两个 `<length-percentage>` 单位的值产生椭圆。一个 `<percentage>` 值是无效的。
 
 - `<linear-color-stop>`
   - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，代表渐变的中心；值 `100%` 表示结束形状与虚拟渐变射线的交点。两者之间的百分比值线性定位在渐变射线上。包含两个色标位置相当于在两个位置上声明了两个颜色相同的色标。
 - `<color-hint>`
-  - : 颜色提示（color-hint）是一个插值提示，定义了渐变色在相邻色标之间的渐变方式。长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略该值，颜色过渡的中点就是两个色标之间的中点。
+  - : 颜色提示（color-hint）是一个插值提示，定义了渐变色在相邻色标之间的渐变方式。这个长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略该值，颜色过渡的中点就是两个色标之间的中点。
 
 ## 描述
 

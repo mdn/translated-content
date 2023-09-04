@@ -12,7 +12,7 @@ slug: Web/CSS/color_value
 ## 语法
 
 ```css
-/* 命名的颜色 */
+/* 命名颜色 */
 rebeccapurple
 aliceblue
 
