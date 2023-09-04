@@ -9,7 +9,7 @@ l10n:
 
 **`Accept-Patch`** 응답 HTTP 헤더는 서버가 PATCH 요청에서 어떤 미디어 유형을 이해할 수 있는지를 알려줍니다.
 
-메서드에 대한 응답으로 **`Accept-Patch`**를 반환하면 Request-URI로 식별된 리소스에서 PATCH가 허용됨을 의미합니다. 두 가지 일반적인 경우가 이에 해당합니다.
+메서드에 대한 응답으로 **`Accept-Patch`** 를 반환하면 Request-URI로 식별된 리소스에서 PATCH가 허용됨을 의미합니다. 두 가지 일반적인 경우가 이에 해당합니다.
 
 지원되지 않는 미디어 유형이 포함된 패치 요청을 수신하는 서버는 {{HTTPStatus("415")}} `Unsupported Media Type`과 하나 이상의 지원되는 미디어 유형을 참조하는 Accept-Patch 헤더로 응답할 수 있습니다.
 
@@ -31,7 +31,7 @@ l10n:
   </tbody>
 </table>
 
-## 문법
+## 구문
 
 ```http
 Accept-Patch: application/example, text/example
@@ -39,7 +39,7 @@ Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
 ```
 
-## 디렉티브
+## 지시어
 
 없습니다.
 
@@ -53,7 +53,7 @@ Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -61,7 +61,7 @@ Accept-Patch: application/merge-patch+json
 
 브라우저 호환성은 이 헤더와 관련이 없습니다. 헤더는 서버에서 전송되며 사양은 클라이언트 동작을 정의하지 않습니다.
 
-## 함께 참고할 내용
+## 같이 보기
 
 - HTTP 메서드 {{HTTPMethod("PATCH")}}
 - HTTP 시맨틱 및 컨텍스트 {{RFC("7231", "PUT", "4.3.4")}}
