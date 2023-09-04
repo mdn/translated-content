@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 {{JSRef}}
 
-{{jsxref("Function")}} 实例的 **`bind()`** 方法创建一个新函数，当调用该新函数时，它会调用原始函数并将其 `this` 关键字设置为给定的值，同时，还可以传入一系列指定的参数，这些参数会插入于调用新函数时传入的参数的前面。
+{{jsxref("Function")}} 实例的 **`bind()`** 方法创建一个新函数，当调用该新函数时，它会调用原始函数并将其 `this` 关键字设置为给定的值，同时，还可以传入一系列指定的参数，这些参数会插入到调用新函数时传入的参数的前面。
 
 {{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
 
@@ -61,7 +61,7 @@ const BoundBase = Base.bind(null, 1, 2);
 new BoundBase(3, 4); // true, [1, 2, 3, 4]
 ```
 
-然而，由于绑定函数没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性，它不能作为基类被 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
+然而，由于绑定函数没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性，它不能作为 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 的基类。
 
 ```js example-bad
 class Derived extends class {}.bind(null) {}
@@ -93,7 +93,7 @@ console.log(new Base() instanceof BoundBase); // true
 
 JavaScript 新手经常犯的一个错误是将一个方法从对象中提取出来，然后再调用，并期望方法中的 `this` 是原来的对象（比如在回调中传入这个方法）。
 
-然而，如果不做特殊处理的话，通常会丢失原始对象。使用这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：
+然而，如果不做特殊处理的话，通常会丢失原始对象。使用这个函数加上原始的对象来创建一个绑定函数，巧妙地解决了这个问题：
 
 ```js
 // 顶级的“this”绑定到“globalThis”。
@@ -123,7 +123,7 @@ console.log(boundGetX()); // 81
 >
 > 如果在 Node CommonJS 模块中运行这个示例，则顶级的 `this` 会绑定到 `module.exports` 而不是 `globalThis`。然而，在非严格模式下，`retrieveX` 的 `this` 仍然会绑定到 `globalThis`，而在严格模式下会绑定为 `undefined`。因此，在非严格模式下（默认情况下），`retrieveX()` 调用会返回 `undefined`, 因为 `this.x = 9` 会写入的是一个不同的对象（`module.exports`），而 `getX` 读取的是另一个对象（`globalThis`）。
 
-实际上，一些内置的"方法"也是返回绑定函数的 getter 方法，其中一个显著的例子是 [`Intl.NumberFormat.prototype.format()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#使用_format_和_map)，当访问时，它返回一个绑定函数，你可以直接将其作为回调函数传递。
+实际上，一些内置的“方法”也是返回绑定函数的 getter 方法，其中一个显著的例子是 [`Intl.NumberFormat.prototype.format()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#使用_format_和_map)，当访问时，它返回一个绑定函数，你可以直接将其作为回调函数传递。
 
 ### 偏函数
 
@@ -296,4 +296,4 @@ slice(arguments);
 - [`core-js` 中 `Function.prototype.bind` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-function)
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxref("Functions", "函数", "", 1)}}
