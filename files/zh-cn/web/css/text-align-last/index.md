@@ -5,7 +5,7 @@ slug: Web/CSS/text-align-last
 
 {{CSSRef}}
 
-CSS 属性 **`text-align-last`** 描述的是一段文本中最后一行在被强制换行之前的对齐规则。
+CSS 属性 **`text-align-last`** 指定一行或者块中的最后一行在被强制换行之前的对齐规则。
 
 ## 语法
 
@@ -32,23 +32,17 @@ text-align-last: unset;
 ### 值
 
 - `auto`
-  - : 每一行的对齐规则由 {{cssxref("text-align")}} 的值来确定，当 {{cssxref("text-align")}} 的值是 `justify`，`text-align-last` 的表现和设置了 `start` 的表现是一样的，即如果文本的展示方向是从左到右，则最后一行左侧对齐与内容盒子。
+  - : 受影响的行会根据 {{cssxref("text-align")}} 的值来对齐，除非 {{cssxref("text-align")}} 的值是 `justify`，在这种情况下，其效果等同于将 `text-align-last` 的值设置为 `start`。
 - `start`
-  - : 与 {{cssxref("direction")}} 的设置有关。
-    如果文本展示方向是从左到右，起点在左侧，则是左对齐；
-    如果文本展示方向是从右到左，起点在右侧，则是右对齐。
-    如果没有设置 {{cssxref("direction")}} ，则按照浏览器文本的默认显示方向来确定。
+  - : 如果内容方向是左至右，则等于 `left`，反之则为 `right`。
 - `end`
-  - : 与 {{cssxref("direction")}} 的设置有关。
-    如果文本展示方向是从左到右，末尾在右侧，则是右对齐；
-    如果文本展示方向是从右到左，末尾在左侧，则是左对齐。
-    如果没有设置 {{cssxref("direction")}} ，则按照浏览器文本的默认显示方向来确定。
+  - : 如果内容方向是左至右，则等于 `right`，反之则为 `left`。
 - `left`
-  - : 最后一行文字与内容盒子的左侧对齐
+  - : 行内内容对齐到行框的左边缘。
 - `right`
-  - : 最后一行文字与内容盒子的右侧对齐
+  - : 行内内容对齐到行框的右边缘。
 - `center`
-  - : 最后一行文字与内容盒子居中对齐
+  - : 行内内容在行框中居中。
 - `justify`
   - : 最后一行文字的开头与内容盒子的左侧对齐，末尾与右侧对齐。
 
@@ -72,12 +66,11 @@ text-align-last: unset;
 p {
   font-size: 1.4em;
   text-align: justify;
-  -moz-text-align-last: center;
   text-align-last: center;
 }
 ```
 
-{{EmbedLiveSample('示例','100%')}}
+{{EmbedLiveSample('对齐最后一行','560')}}
 
 ## 规范
 

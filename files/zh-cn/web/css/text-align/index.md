@@ -40,7 +40,7 @@ text-align: unset;
 
 `text-align` 属性可以按照以下方式之一来指定：
 
-- 使用 `start`、`end`、`left`、`right`、`center`、`justify`、`justify-all` 或 `match-parent` 关键字值。
+- 使用关键字值 `start`、`end`、`left`、`right`、`center`、`justify`、`justify-all` 或 `match-parent`。
 - 仅使用单个 `<string>` 值，此时另外一个值默认为 `right`。
 - 同时使用关键字值和 [`<string>`](#string) 值。
 
