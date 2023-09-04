@@ -67,7 +67,9 @@ try {
   // 生成時のエラーを処理する
   if (error.name === "SecurityError") {
     // 前述の Permissions Policy に関するメモを参照
-    console.log("センサーの生成が Permissions Policy によりブロックされました。");
+    console.log(
+      "センサーの生成が Permissions Policy によりブロックされました。",
+    );
   } else if (error.name === "ReferenceError") {
     console.log("このユーザーエージェントはセンサーに対応していません。");
   } else {
