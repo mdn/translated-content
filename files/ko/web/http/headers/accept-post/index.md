@@ -28,7 +28,7 @@ l10n:
   </tbody>
 </table>
 
-## 문법
+## 구문
 
 ```http
 Accept-Post: <MIME_type>/<MIME_subtype>
@@ -38,7 +38,7 @@ Accept-Post: */*
 
 > **참고:** `Accept-Post` 헤더는 기본 설정 개념이 없다는 점(즉, `q` 인수가 없다는 점)을 제외하면 {{HTTPHeader("Accept")}}와 동일한 방식으로 미디어 범위를 지정합니다. 이는 `Accept-Post`가 응답 헤더인 반면 `Accept`는 요청 헤더이기 때문입니다.
 
-## 디렉티브
+## 지시어
 
 없습니다.
 
@@ -50,7 +50,7 @@ Accept-Post: image/webp
 Accept-Post: */*
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -58,7 +58,7 @@ Accept-Post: */*
 
 브라우저 호환성은 이 헤더와 관련이 없습니다. 헤더는 서버에서 전송되며 사양은 클라이언트 동작을 정의하지 않습니다.
 
-## 함께 참고할 내용
+## 같이 보기
 
 - HTTP 메서드 {{HTTPMethod("POST")}}
 - HTTP 시맨틱 및 컨텍스트 {{RFC("7231", "POST", "4.3.3")}}
