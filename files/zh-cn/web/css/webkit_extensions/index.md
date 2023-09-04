@@ -417,7 +417,7 @@ slug: Web/CSS/WebKit_Extensions
 
 ## 弃用的 `-webkit-` 属性
 
-以下属性曾经带 -webkit- 前缀支持，但是在 evergreen 浏览器中不再支持，无论有无 `-webkit-` 前缀。
+以下属性曾经带 -webkit- 前缀支持，但是在常新浏览器（evergreen browser）中不再支持，无论有无 `-webkit-` 前缀。
 
 - `-webkit-alt*`
 - `-webkit-background-composite`
