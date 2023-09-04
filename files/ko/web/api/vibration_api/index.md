@@ -61,8 +61,8 @@ function stopVibrate() {
 
 // 주어진 지속시간과 간격대로 지속적인 바이브레이션을 시작함
 // 숫자 값이 주어졌다고 가정함
-function startPeristentVibrate(duration, interval) {
-  vibrateInterval = setInterval(function () {
+function startPersistentVibrate(duration, interval) {
+  vibrateInterval = setInterval(() => {
     startVibrate(duration);
   }, interval);
 }
