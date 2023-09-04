@@ -18,6 +18,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 ### 매개변수
 
 - `callback`
+
   - : 각 요소를 시험할 함수. `true`를 반환하면 요소를 유지하고, `false`를 반환하면 버립니다.
 
     다음 세 가지 매개변수를 받습니다.
@@ -78,16 +79,16 @@ var arr = [
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
+  { id: "undefined" },
 ];
 
 var invalidEntries = 0;
 
 function isNumber(obj) {
-  return obj !== undefined && typeof(obj) === 'number' && !isNaN(obj);
+  return obj !== undefined && typeof obj === "number" && !isNaN(obj);
 }
 
 function filterByID(item) {
@@ -100,11 +101,11 @@ function filterByID(item) {
 
 var arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID);
+console.log("Filtered Array\n", arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries);
+console.log("Number of Invalid Entries = ", invalidEntries);
 // Number of Invalid Entries = 5
 ```
 
@@ -113,37 +114,37 @@ console.log('Number of Invalid Entries = ', invalidEntries);
 다음 예는 배열 내용을 조건에 따라 검색하기 위해 `filter()` 를 사용합니다.
 
 ```js
-var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+var fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * 검색 조건에 따른 배열 필터링(쿼리)
  */
 function filterItems(query) {
-  return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+  return fruits.filter(function (el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  });
 }
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ### ES2015로 구현
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * 검색 조건에 따른 배열 필터링(쿼리)
  */
 const filterItems = (query) => {
-  return fruits.filter((el) =>
-    el.toLowerCase().indexOf(query.toLowerCase()) > -1
+  return fruits.filter(
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1,
   );
-}
+};
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ## 폴리필
@@ -151,30 +152,31 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
 `filter`는 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 `filter`를 사용할 수 있습니다. 아래 알고리즘은 `fn.call`의 계산 값이 원래의 [`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)과 같고, {{jsxref("Array.prototype.push()")}}가 변형되지 않은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.
 
 ```js
-if (!Array.prototype.filter){
-  Array.prototype.filter = function(func, thisArg) {
-    'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
-        throw new TypeError();
+if (!Array.prototype.filter) {
+  Array.prototype.filter = function (func, thisArg) {
+    "use strict";
+    if (!((typeof func === "Function" || typeof func === "function") && this))
+      throw new TypeError();
 
     var len = this.length >>> 0,
-        res = new Array(len), // preallocate array
-        t = this, c = 0, i = -1;
-    if (thisArg === undefined){
-      while (++i !== len){
+      res = new Array(len), // preallocate array
+      t = this,
+      c = 0,
+      i = -1;
+    if (thisArg === undefined) {
+      while (++i !== len) {
         // checks to see if the key was set
-        if (i in this){
-          if (func(t[i], i, t)){
+        if (i in this) {
+          if (func(t[i], i, t)) {
             res[c++] = t[i];
           }
         }
       }
-    }
-    else{
-      while (++i !== len){
+    } else {
+      while (++i !== len) {
         // checks to see if the key was set
-        if (i in this){
-          if (func.call(thisArg, t[i], i, t)){
+        if (i in this) {
+          if (func.call(thisArg, t[i], i, t)) {
             res[c++] = t[i];
           }
         }

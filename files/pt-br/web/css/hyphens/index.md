@@ -56,13 +56,17 @@ Este exemplo usa três classes, uma para cada configuração possível da propri
 
 ```html
 <ul>
-  <li><code>none</code>: sem hífen; transbordar se necessário
+  <li>
+    <code>none</code>: sem hífen; transbordar se necessário
     <p lang="en" class="none">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>manual</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se necessário)
+  <li>
+    <code>manual</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se
+    necessário)
     <p lang="en" class="manual">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>auto</code>: hífen onde o algorítmo decidir (se necessário)
+  <li>
+    <code>auto</code>: hífen onde o algorítmo decidir (se necessário)
     <p lang="en" class="auto">An extreme&shy;ly long English word</p>
   </li>
 </ul>
@@ -72,7 +76,7 @@ Este exemplo usa três classes, uma para cada configuração possível da propri
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -94,8 +98,8 @@ p.auto {
 
 ## Especificações
 
-| Especificação                                                                | Condição                     | Comentário         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| Especificação                                             | Condição               | Comentário         |
+| --------------------------------------------------------- | ---------------------- | ------------------ |
 | {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
 
 ## Compatibilidade com navegadores

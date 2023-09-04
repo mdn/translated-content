@@ -135,7 +135,7 @@ var obj4 = {
 
 ### 方法定义不是构造函数
 
-所有方法定义不是构造函数，如果您尝试实例化它们，将抛出{{jsxref("TypeError")}}。
+所有方法定义不是构造函数，如果你尝试实例化它们，将抛出{{jsxref("TypeError")}}。
 
 ```js example-bad
 var obj = {

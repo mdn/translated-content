@@ -9,8 +9,6 @@ slug: Web/HTML/Element/main
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 [`hidden`](/ko/docs/Web/HTML/Global_attributes#hidden) 속성 없이는 문서에 하나보다 많은 `<main>` 요소가 존재해선 안됩니다.
 
 <table class="properties">

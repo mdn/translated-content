@@ -47,9 +47,9 @@ overflow:  visible | hidden | scroll | {{ cssxref("auto") }} | {{ cssxref("inher
 
 ```css
 p {
-     width: 12em;
-     border: dotted;
-     overflow: visible;   /* Exibe o conteúdo de forma vazada, fora da caixa de conteúdo */
+  width: 12em;
+  border: dotted;
+  overflow: visible; /* Exibe o conteúdo de forma vazada, fora da caixa de conteúdo */
 }
 ```
 
@@ -79,10 +79,10 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comment        |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------- |
-| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}             | {{ Spec2('CSS3 Box') }} | Sem alteração. |
-| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}     |                |
+| Especificação                                                | Status                  | Comment        |
+| ------------------------------------------------------------ | ----------------------- | -------------- |
+| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}         | {{ Spec2('CSS3 Box') }} | Sem alteração. |
+| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}   |                |
 
 ## Compatibilidade com navegadores
 

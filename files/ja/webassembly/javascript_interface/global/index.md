@@ -1,15 +1,17 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。 JavaScript からアクセスでき、1つ以上の {{jsxref("WebAssembly.Module")}} インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
+**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。JavaScript からアクセスでき、1 つ以上の [`WebAssembly.Module`](/ja/docs/WebAssembly/JavaScript_interface/Module) インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
 
 ## コンストラクター
 
-- [`WebAssembly.Global()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+- [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global/Global)
   - : 新しい `Global` オブジェクトを生成します。
 
 ## Global のインスタンス
@@ -19,7 +21,7 @@ slug: WebAssembly/JavaScript_interface/Global
 ### インスタンスプロパティ
 
 - `Global.prototype.constructor`
-  - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは {{jsxref("WebAssembly.Global()")}} コンストラクターです。
+  - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global/Global) コンストラクターです。
 - `Global.prototype[@@toStringTag]`
   - : [@@toStringTag](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列値 "WebAssembly.Global" です。
 - `Global.prototype.value`
@@ -36,16 +38,17 @@ slug: WebAssembly/JavaScript_interface/Global
 
 以下の例では新しいグローバルインスタンスは `WebAssembly.Global()` コンストラクターを用いて初期化され、初期値 0 の変更可能な `i32` 型として定義されます。
 
-その後この値は、`Global.value` プロパティを使うことによって `42` に、`global.wasm` モジュールから公開された (どんな値が与えられても 1 を加算して、新しい値を返す) `incGlobal()` 関数を使うことによって `43` になります。
+その後この値は、`Global.value` プロパティを使うことによって `42` に、`global.wasm` モジュールから公開された（どんな値が与えられても 1 を加算して、新しい値を返す）`incGlobal()` 関数を使うことによって `43` になります。
 
 ```js
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  output.innerHTML += `Testing ${msg}: `;
-  if (got !== expected)
-    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  const result =
+    got === expected
+      ? `SUCCESS! Got: ${got}<br>`
+      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  output.innerHTML += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
@@ -83,7 +86,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) overview page
-- [WebAssembly concepts](/ja/docs/WebAssembly/Concepts)
+- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
+- [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)
 - [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
 - [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

@@ -14,9 +14,9 @@ l10n:
 ## 構文
 
 ```js
-copyWithin(target)
-copyWithin(target, start)
-copyWithin(target, start, end)
+copyWithin(target);
+copyWithin(target, start);
+copyWithin(target, start, end);
 ```
 
 ### 引数
@@ -32,11 +32,12 @@ copyWithin(target, start, end)
   - : 要素のコピー元の始まりを表す、0 から始まる位置です。負の場合、 `start` は最後から数えられます。
 
     `start` が省略された場合、`copyWithin` は最初の要素からコピーします（つまり、初期値は 0 です）。
+
 - `end` {{optional_inline}}
 
   - : 要素のコピー元の末尾を表す、0 から始まるインデックスです。 `copyWithin` のコピーは `end` を含みません。負の場合、 `end` は最後から数えられます。
 
-   `end` が省略された場合、 `copyWithin` は最後までコピーします（つまり、初期値は `arr.length` です）。
+  `end` が省略された場合、 `copyWithin` は最後までコピーします（つまり、初期値は `arr.length` です）。
 
 ### 返値
 
@@ -67,7 +68,7 @@ console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
 console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
 // [1, 2, 3, 3, 4]
 
-console.log([].copyWithin.call({length: 5, 3: 1}, 0, 3));
+console.log([].copyWithin.call({ length: 5, 3: 1 }, 0, 3));
 // {0: 1, 3: 1, length: 5}
 ```
 

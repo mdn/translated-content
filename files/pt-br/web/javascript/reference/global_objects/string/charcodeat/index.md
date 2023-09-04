@@ -39,7 +39,7 @@ Compatibilidade com versões anteriores: Em versões históricas (como JavaScrip
 O exemplo a seguir retorna `65`, o valor Unicode para A.
 
 ```js
-'ABC'.charCodeAt(0); // retorna 65
+"ABC".charCodeAt(0); // retorna 65
 ```
 
 ### Corrigindo o `charCodeAt()` para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida
@@ -56,15 +56,16 @@ function fixedCharCodeAt(str, idx) {
 
   // Substituto elevado (poderia mudar o último hex para 0xDB7F para tratar
   // substitutos privados elevados como caracteres únicos)
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
-      throw 'High surrogate not followed by low surrogate in fixedCharCodeAt()';
+      throw "High surrogate not followed by low surrogate in fixedCharCodeAt()";
     }
-    return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
-  if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
+  if (0xdc00 <= code && code <= 0xdfff) {
+    // Low surrogate
     // Retornamos false para permitir os loops pularem essa iteração já que já deveria
     //ter tratado os substitutos elevados acima, na iteração anterior
     return false;
@@ -80,17 +81,16 @@ function fixedCharCodeAt(str, idx) {
 
 ```js
 function knownCharCodeAt(str, idx) {
-  str += '';
+  str += "";
   var code,
-      end = str.length;
+    end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
-    }
-    else {
+    } else {
       break;
     }
   }
@@ -102,11 +102,11 @@ function knownCharCodeAt(str, idx) {
   code = str.charCodeAt(idx);
 
   var hi, low;
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     // Vá um adiante, já que um dos "characters" é parte de um par substituto
-    return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
   return code;
 }
@@ -114,11 +114,11 @@ function knownCharCodeAt(str, idx) {
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                       | Comentário                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}     | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                                              | Status               | Comentário                                         |
+| ------------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                        | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

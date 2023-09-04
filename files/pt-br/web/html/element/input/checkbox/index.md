@@ -50,13 +50,17 @@ Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso n
 ```html
 <form>
   <div>
-    <input type = "checkbox" id = "subscribeNews" name = "subscribe" value = "newsletter">
-    <label for = "subscribeNews"> Subscreva a newsletter? </ label>
-  </ div>
+    <input
+      type="checkbox"
+      id="subscribeNews"
+      name="subscribe"
+      value="newsletter" />
+    <label for="subscribeNews"> Subscreva a newsletter? </label>
+  </div>
   <div>
-    <button type = "submit"> Subscrever </ button>
-  </ div>
-</ form>
+    <button type="submit">Subscrever</button>
+  </div>
+</form>
 ```
 
 {{EmbedLiveSample ('Value', 600, 60)}}
@@ -79,16 +83,20 @@ Por exemplo, na demonstração a seguir, incluímos várias caixas de seleção 
 
 ```html
 <fieldset>
-  <legend> Escolha seus interesses </ legend>
+  <legend>Escolha seus interesses</legend>
   <div>
-    <input type = "checkbox" id = "codificação" name = "interesse" value = "codificação">
-    <label for = "coding"> Codificação </ label>
-  </ div>
+    <input
+      type="checkbox"
+      id="codificação"
+      name="interesse"
+      value="codificação" />
+    <label for="coding"> Codificação </label>
+  </div>
   <div>
-    <input type = "checkbox" id = "música" name = "interesse" value = "música">
-    <label for = "music"> Música </ label>
-  </ div>
-</ fieldset>
+    <input type="checkbox" id="música" name="interesse" value="música" />
+    <label for="music"> Música </label>
+  </div>
+</fieldset>
 ```
 
 {{EmbedLiveSample ('Handling_multiple_checkboxes', 600, 100)}}
@@ -101,16 +109,21 @@ Para fazer uma caixa de seleção marcada por padrão, você simplesmente atribu
 
 ```html
 <fieldset>
-  <legend> Escolha seus interesses </ legend>
+  <legend>Escolha seus interesses</legend>
   <div>
-    <input type = "checkbox" id = "codificação" name = "interesse" value = "codificação" checked>
-    <label for = "coding"> Codificação </ label>
-  </ div>
+    <input
+      type="checkbox"
+      id="codificação"
+      name="interesse"
+      value="codificação"
+      checked />
+    <label for="coding"> Codificação </label>
+  </div>
   <div>
-    <input type = "checkbox" id = "música" name = "interesse" value = "música">
-    <label for = "music"> Música </ label>
-  </ div>
-</ fieldset>
+    <input type="checkbox" id="música" name="interesse" value="música" />
+    <label for="music"> Música </label>
+  </div>
+</fieldset>
 ```
 
 {{EmbedLiveSample ('Checking_boxes_by_default', 600, 100)}}
@@ -191,37 +204,41 @@ O exemplo a seguir é uma versão estendida do exemplo "multiple checkboxes" que
 ```html
 <form>
   <fieldset>
-  <legend> Escolha seus interesses </ legend>
+    <legend>Escolha seus interesses</legend>
     <div>
-      <input type = "checkbox" id = "codificação" name = "interesse" value = "codificação">
-      <label for = "coding"> Codificação </ label>
-    </ div>
+      <input
+        type="checkbox"
+        id="codificação"
+        name="interesse"
+        value="codificação" />
+      <label for="coding"> Codificação </label>
+    </div>
     <div>
-      <input type = "checkbox" id = "música" name = "interesse" value = "música">
-      <label for = "music"> Música </ label>
-    </ div>
+      <input type="checkbox" id="música" name="interesse" value="música" />
+      <label for="music"> Música </label>
+    </div>
     <div>
-      <input type = "checkbox" id = "arte" name = "interesse" value = "arte">
-      <label for = "art"> Art </ label>
-    </ div>
+      <input type="checkbox" id="arte" name="interesse" value="arte" />
+      <label for="art"> Art </label>
+    </div>
     <div>
-      <input type = "checkbox" id = "sports" name = "interesse" value = "esportes">
-      <label for = "sports"> Esportes </ label>
-    </ div>
+      <input type="checkbox" id="sports" name="interesse" value="esportes" />
+      <label for="sports"> Esportes </label>
+    </div>
     <div>
-      <input type = "checkbox" id = "cozinhar" name = "interesse" value = "cozinhar">
-      <label for = "cooking"> Cozinhando </ label>
-    </ div>
+      <input type="checkbox" id="cozinhar" name="interesse" value="cozinhar" />
+      <label for="cooking"> Cozinhando </label>
+    </div>
     <div>
-      <input type = "checkbox" id = "outro" name = "interesse" value = "outro">
-      <label for = "other"> Outro </ label>
-      <input type = "text" id = "otherValue" name = "outro">
-    </ div>
+      <input type="checkbox" id="outro" name="interesse" value="outro" />
+      <label for="other"> Outro </label>
+      <input type="text" id="otherValue" name="outro" />
+    </div>
     <div>
-      <button type = "submit"> Enviar formulário </ button>
-    </ div>
-  </ fieldset>
-</ form>
+      <button type="submit">Enviar formulário</button>
+    </div>
+  </fieldset>
+</form>
 ```
 
 ### CSS
@@ -273,11 +290,11 @@ otherCheckbox.onchange = function () {
 
 ## Especificações
 
-| Especificação                                                                                                                                                        | Status                           | Comente |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-|                                                                                                                                                                      |                                  |         |
+| Especificação                                                                                                             | Status                    | Comente |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------- |
+|                                                                                                                           |                           |         |
 | {{SpecName ('HTML WHATWG', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}} | {{Spec2 ('HTML WHATWG')}} |         |
-| {{SpecName ('HTML5 W3C', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}}     | {{Spec2 ('HTML5 W3C')}} |         |
+| {{SpecName ('HTML5 W3C', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}}   | {{Spec2 ('HTML5 W3C')}}   |         |
 
 ## Compatibilidade com navegadores
 

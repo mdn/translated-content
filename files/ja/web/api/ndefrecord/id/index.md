@@ -12,7 +12,7 @@ slug: Web/API/NDEFRecord/id
 ## 構文
 
 ```js
-NDEFRecord.id
+NDEFRecord.id;
 ```
 
 ### 値

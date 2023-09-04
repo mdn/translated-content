@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Operators/await
 ## 구문
 
 ```js
-    [rv] = await expression;
+[rv] = await expression;
 ```
 
 - `expression`
@@ -32,7 +32,7 @@ An `await` can split execution flow, allowing the caller of the `await`'s functi
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -50,16 +50,16 @@ f1();
 {{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just the same.
 
 ```js
-    async function f2() {
-      const thenable = {
-        then: function(resolve, _reject) {
-          resolve('resolved!')
-        }
-      };
-      console.log(await thenable); // resolved!
-    }
+async function f2() {
+  const thenable = {
+    then: function (resolve, _reject) {
+      resolve("resolved!");
+    },
+  };
+  console.log(await thenable); // resolved!
+}
 
-    f2();
+f2();
 ```
 
 만약 값이 `Promise`가 아니라면, 해당 값은 `resolve`된 `Promise`로 변환되며 이를 기다립니다.
@@ -78,7 +78,7 @@ f2();
 async function f3() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.log(e); // 30
   }
 }
@@ -88,8 +88,10 @@ f3();
 try블럭 없이 rejected `Promise`다루기
 
 ```js
-    var response = await promisedFunction().catch((err) => { console.error(err); });
-    // response will be undefined if the promise is rejected
+var response = await promisedFunction().catch((err) => {
+  console.error(err);
+});
+// response will be undefined if the promise is rejected
 ```
 
 ## 명세서

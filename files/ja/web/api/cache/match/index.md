@@ -57,7 +57,7 @@ self.addEventListener("fetch", (event) => {
         return caches
           .open(OFFLINE_CACHE)
           .then((cache) => cache.match(OFFLINE_URL));
-      })
+      }),
     );
   }
 });

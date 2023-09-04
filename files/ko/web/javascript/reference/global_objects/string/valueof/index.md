@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ## 구문
 
 ```js
-str.valueOf()
+str.valueOf();
 ```
 
 ### 반환 값
@@ -30,7 +30,7 @@ str.valueOf()
 ### `valueOf()` 사용
 
 ```js
-var x = new String('Hello world');
+var x = new String("Hello world");
 console.log(x.valueOf()); // 'Hello world' 가 보여집니다.
 ```
 

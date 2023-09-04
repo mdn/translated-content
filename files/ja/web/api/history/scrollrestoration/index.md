@@ -10,7 +10,7 @@ slug: Web/API/History/scrollRestoration
 ## 構文
 
 ```js
-const scrollRestore = history.scrollRestoration
+const scrollRestore = history.scrollRestoration;
 ```
 
 ### 値
@@ -25,9 +25,11 @@ const scrollRestore = history.scrollRestoration
 ### 現在のスクロール復元の動作を問い合わせる
 
 ```js
-const scrollRestoration = history.scrollRestoration
-if (scrollRestoration === 'manual') {
-  console.log('ページ上の位置は復元されないので、ユーザーが手動でスクロールする必要があります。');
+const scrollRestoration = history.scrollRestoration;
+if (scrollRestoration === "manual") {
+  console.log(
+    "ページ上の位置は復元されないので、ユーザーが手動でスクロールする必要があります。",
+  );
 }
 ```
 
@@ -35,7 +37,7 @@ if (scrollRestoration === 'manual') {
 
 ```js
 if (history.scrollRestoration) {
-  history.scrollRestoration = 'manual';
+  history.scrollRestoration = "manual";
 }
 ```
 

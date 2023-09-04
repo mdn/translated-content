@@ -35,27 +35,27 @@ JSON.stringify(valor[, replacer[, espaço]])
 - Propriedades não enumeráveis serão ignoradas.
 
 ```js
-JSON.stringify({});                  // '{}'
-JSON.stringify(true);                // 'true'
-JSON.stringify('foo');               // '"foo"'
-JSON.stringify([1, 'false', false]); // '[1,"false",false]'
-JSON.stringify({ x: 5 });            // '{"x":5}'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}' or '{"y":6,"x":5}'
-JSON.stringify([new Number(1), new String('false'), new Boolean(false)]);
+JSON.stringify([new Number(1), new String("false"), new Boolean(false)]);
 // '[1,"false",false]'
 
 // Symbols:
-JSON.stringify({ x: undefined, y: Object, z: Symbol('') });
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({ [Symbol('foo')]: 'foo' });
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
-  if (typeof k === 'symbol') {
-    return 'a symbol';
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
   }
 });
 // '{}'
@@ -83,7 +83,13 @@ function replacer(key, value) {
   return value;
 }
 
-var foo = {fundação: "Mozilla", modelo: "caixa", semana: 45, transporte: "carro", mês: 7};
+var foo = {
+  fundação: "Mozilla",
+  modelo: "caixa",
+  semana: 45,
+  transporte: "carro",
+  mês: 7,
+};
 var jsonString = JSON.stringify(foo, replacer);
 ```
 
@@ -94,7 +100,7 @@ O resultado do JSON é: `{"semana":45,"mês":7}`.
 Se `replacer` é usado em uma array, os valores da array indicam os nomes das propriedades no objeto, que devem ser incluídas na sequência JSON resultante.
 
 ```js
-JSON.stringify(foo, ['semana', 'mês']);
+JSON.stringify(foo, ["semana", "mês"]);
 // '{"semana":45,"mês":7}', apenas mantém as propriedades "semana" e "mês"
 ```
 
@@ -103,7 +109,7 @@ JSON.stringify(foo, ['semana', 'mês']);
 O argumento `space` O argumento pode ser usado para controlar o espaçamento na sequência final. Se for um número, os níveis sucessivos na stringficação serão recuados por esse número de caracteres de espaço (até 10). Se for uma sequência, os níveis sucessivos serão recuados por essa sequência (ou pelos dez primeiros caracteres).
 
 ```js
-JSON.stringify({ a: 2 }, null, ' ');
+JSON.stringify({ a: 2 }, null, " ");
 // '{
 //  "a": 2
 // }'
@@ -112,7 +118,7 @@ JSON.stringify({ a: 2 }, null, ' ');
 O uso de um caractere de tabulação imita a aparência padrão de impressão pretty-print.
 
 ```js
-JSON.stringify({ um: 1, dois: 2 }, null, '\t');
+JSON.stringify({ um: 1, dois: 2 }, null, "\t");
 // r:
 // '{
 //     "um": 1,
@@ -126,12 +132,12 @@ Se um objeto sendo stringificado tiver uma propriedade denominada toJSON() cujo 
 
 ```js
 var obj = {
-  foo: 'foo',
-  toJSON: function() {
-    return 'bar';
-  }
+  foo: "foo",
+  toJSON: function () {
+    return "bar";
+  },
 };
-JSON.stringify(obj);        // '"bar"'
+JSON.stringify(obj); // '"bar"'
 JSON.stringify({ x: obj }); // '{"x":"bar"}'
 ```
 
@@ -144,23 +150,23 @@ No caso em que você deseja armazenar um objeto criado por seu usuário e permit
 ```js
 // Criando um exemplo em JSON
 var seção = {
-  'telas': [],
-  'estado': true
+  telas: [],
+  estado: true,
 };
-session.screens.push({ 'nome': 'telaA', 'largura': 450, 'altura': 250 });
-session.screens.push({ 'nome': 'telaB', 'largura': 650, 'altura': 350 });
-session.screens.push({ 'nome': 'telaC', 'largura': 750, 'altura': 120 });
-session.screens.push({ 'nome': 'telaD', 'largura': 250, 'altura': 60 });
-session.screens.push({ 'nome': 'telaE', 'largura': 390, 'altura': 120 });
-session.screens.push({ 'nome': 'telaF', 'largura': 1240, 'altura': 650 });
+session.screens.push({ nome: "telaA", largura: 450, altura: 250 });
+session.screens.push({ nome: "telaB", largura: 650, altura: 350 });
+session.screens.push({ nome: "telaC", largura: 750, altura: 120 });
+session.screens.push({ nome: "telaD", largura: 250, altura: 60 });
+session.screens.push({ nome: "telaE", largura: 390, altura: 120 });
+session.screens.push({ nome: "telaF", largura: 1240, altura: 650 });
 
 // Convertendo a string JSON em JSON.stringify()
 // Salvando com localStorage no nome da sessão
-localStorage.setItem('seção', JSON.stringify(seção));
+localStorage.setItem("seção", JSON.stringify(seção));
 
 // Exemplo de como transformar a String gerada por meio de:
 // JSON.stringify() e salva em localStorage no objeto JSON novamente
-var seçãoRestaurada = JSON.parse(localStorage.getItem('seção'));
+var seçãoRestaurada = JSON.parse(localStorage.getItem("seção"));
 
 // Agora, a variável seçãoRestaurada contém o objeto que foi salvo
 // no localStorage
@@ -169,10 +175,10 @@ console.log(seçãoRestaurada);
 
 ## Especificações
 
-| Especificação                                                                    | Status                   | Comentário                                         |
-| -------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}         | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                | Status             | Comentário                                         |
+| ------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}      | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade em navegadores
 

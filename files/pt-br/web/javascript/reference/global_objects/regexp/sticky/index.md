@@ -20,7 +20,7 @@ Você não pode alterar essa propriedade diretamente. Ela é somente para leitur
 ### Uilizando uma expressão regular com a flag _sticky_
 
 ```js
-var str = '#foo#';
+var str = "#foo#";
 var regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -41,20 +41,20 @@ Exemplos de comportamento esperado:
 ```js
 var regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test('..foo');   // false - índice 2 não é o início da string
+regex.test("..foo"); // false - índice 2 não é o início da string
 
 var regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test('..foo');  // false - índice 2 não é o início da string nem da linha
+regex2.test("..foo"); // false - índice 2 não é o início da string nem da linha
 regex2.lastIndex = 2;
-regex2.test('.\nfoo'); // true - índice 2 é o início da linha
+regex2.test(".\nfoo"); // true - índice 2 é o início da linha
 ```
 
 ## Especificações
 
-| Especificação                                                                                                        | Estado                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                                                          | Estado               | Comentário         |
+| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

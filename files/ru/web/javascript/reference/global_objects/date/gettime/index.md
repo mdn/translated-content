@@ -52,7 +52,7 @@ for (let i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Операция заняла ' + (end.getTime() - start.getTime()) + ' мсек');
+console.log("Операция заняла " + (end.getTime() - start.getTime()) + " мсек");
 ```
 
 ## Спецификации

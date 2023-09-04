@@ -37,10 +37,10 @@ function handleMessage(e) {
 これを行うもう一つの方法は、{{domxref("EventTarget.addEventListener")}} を使用します。しかし、このメソッドが使用された場合、明示的に `start()` を呼び出してメッセージの送信を開始する必要があります:
 
 ```js
-channel.port1.addEventListener('message', handleMessage, false);
+channel.port1.addEventListener("message", handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 
 channel.port1.start();

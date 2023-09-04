@@ -18,7 +18,7 @@ slug: Glossary/Signature/Function
 
 ### JavaScript 中的签名
 
-{{Glossary("JavaScript")}} 是一种*松散类型* 或 *动态*语言。这意味着您不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为您提供有关该方法的一些信息：
+{{Glossary("JavaScript")}} 是一种*松散类型* 或 *动态*语言。这意味着你不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为你提供有关该方法的一些信息：
 
 ```js
 MyObject.prototype.myFunction(value);

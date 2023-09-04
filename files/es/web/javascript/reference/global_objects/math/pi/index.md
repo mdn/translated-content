@@ -24,7 +24,7 @@ function calculaCircunferencia(radio) {
   return 2 * Math.PI * radio;
 }
 
-calculaCircunferencia(1);  // 6.283185307179586
+calculaCircunferencia(1); // 6.283185307179586
 ```
 
 ## Especificaciones

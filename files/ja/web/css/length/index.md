@@ -108,14 +108,11 @@ slug: Web/CSS/length
 <div class="outer">
   <div class="input-container">
     <label>長さを入力してください:</label>
-    <input type="text" id="length">
+    <input type="text" id="length" />
   </div>
-  <div class="inner">
-
-  </div>
+  <div class="inner"></div>
 </div>
-<div class="results">
-</div>
+<div class="results"></div>
 ```
 
 #### CSS
@@ -137,15 +134,17 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .result {
   height: 20px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
   background-color: orange;
   display: flex;
   align-items: center;
@@ -177,22 +176,22 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector('.inner');
-const inputElem = document.querySelector('input');
-const resultsDiv = document.querySelector('.results');
+const inputDiv = document.querySelector(".inner");
+const inputElem = document.querySelector("input");
+const resultsDiv = document.querySelector(".results");
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement('div');
-  result.className = 'result';
+  const result = document.createElement("div");
+  result.className = "result";
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = '';
+  inputElem.value = "";
   inputElem.focus();
-})
+});
 ```
 
 #### 結果

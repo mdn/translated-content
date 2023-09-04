@@ -33,10 +33,10 @@ Los enlaces creados con el método `link` serán elementos del array `links` del
 El siguiente ejemplo muestra la palabra "Netscape" como un enlace de hipertexto que devuelve al usuario a la página inicial de Netscape:
 
 ```js
-var textoActivo="MDN"
-var URL="https://developer.mozilla.org/"
+var textoActivo = "MDN";
+var URL = "https://developer.mozilla.org/";
 
-console.log("Haga click para volver a " + textoActivo.link(URL))
+console.log("Haga click para volver a " + textoActivo.link(URL));
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

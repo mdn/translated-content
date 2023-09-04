@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 ## 構文
 
 ```js
-deref()
+deref();
 ```
 
 ### 返値

@@ -49,16 +49,20 @@ Um, dois ou três valores, dada em ordem arbitrária:
 ```css
 /* duas declarações identicas */
 
-:link:hover { outline: 1px solid #000; }
-:link:hover { outline: solid black 1px; }
+:link:hover {
+  outline: 1px solid #000;
+}
+:link:hover {
+  outline: solid black 1px;
+}
 ```
 
 ## Especificações
 
-| Especificação                                                                    | Estado                               | Comentário         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}             | {{Spec2('CSS3 Basic UI')}} | No change          |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}             | Initial definition |
+| Especificação                                                | Estado                     | Comentário         |
+| ------------------------------------------------------------ | -------------------------- | ------------------ |
+| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}         | {{Spec2('CSS3 Basic UI')}} | No change          |
+| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}        | Initial definition |
 
 ## Compatibilidade com navegadores
 

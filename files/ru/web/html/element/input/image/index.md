@@ -9,7 +9,7 @@ slug: Web/HTML/Element/input/image
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Необязательный закрывающийся тег  | Обязательно должен быть открывающийся тег, и обязательно отсутствует закрывающий.                                                 |
 | Разрешённые родительские элементы | Любой элемент, которому доступен фразообразующий контент ([phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content)). |
-| DOM-интерфейс                     | {{domxref("HTMLInputElement")}}                                                                                          |
+| DOM-интерфейс                     | {{domxref("HTMLInputElement")}}                                                                                                   |
 
 ## Атрибуты
 
@@ -52,7 +52,7 @@ slug: Web/HTML/Element/input/image
 ### Поле в виде логотипа Firefox
 
 ```html
-<input type="image" name="image" src="fxlogo.png" width="50">
+<input type="image" name="image" src="fxlogo.png" width="50" />
 ```
 
 #### Результат

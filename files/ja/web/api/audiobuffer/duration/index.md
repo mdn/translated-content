@@ -21,7 +21,7 @@ var channels = 2;
 var frameCount = audioCtx.sampleRate * 2.0;
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = function () {
   // バッファにホワイトノイズを書き込む
   // 単なる -1.0 から 1.0 の間の乱数の値である
   for (var channel = 0; channel < channels; channel++) {
@@ -35,7 +35,7 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.duration);
-}
+};
 ```
 
 ## 仕様書
