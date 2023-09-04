@@ -9,23 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ## 描述
 
-`Set` 对象是值的合集（collection）。集合（set）中的元素只会**出现一次**，即集合中的元素是唯一的。你可以按照插入顺序迭代集合中的元素。*插入顺序*对应于 [`add()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/add) 方法成功（即，调用 `add()` 方法时集合中不存在相同的元素）将每一个元素插入到集合中的顺序。
+`Set` 对象是值的合集（collection）。集合（set）中的元素**只会出现一次**，即集合中的元素是唯一的。你可以按照插入顺序迭代集合中的元素。*插入顺序*对应于 [`add()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/add) 方法成功将每一个元素插入到集合中（即，调用 `add()` 方法时集合中不存在相同的元素）的顺序。
 
-规范要求集合的实现是“对合集中的元素的访问时间是与集合中元素的数量呈次线性关系的”。因此，它可以在内部表示为哈希表（查找的时间复杂度为 O(1)）、搜索树（查找的时间复杂度为 O(log(N))）或任何其他的时间复杂度低于 O(N) 的数据结构。
+规范要求集合的实现是“对合集中的元素的平均访问时间与集合中元素的数量呈次线性关系”。因此，它可以在内部表示为哈希表（查找的时间复杂度为 O(1)）、搜索树（查找的时间复杂度为 O(log(N))）或任何其他的时间复杂度低于 O(N) 的数据结构。
 
 ### 值的相等
 
-值的相等是基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法的。（曾经使用[同值算法](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)，会将 `0` 和 `-0` 视为不同值。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 和 {{jsxref("undefined")}} 会被视为是相同的值（即使 `NaN !== NaN`），而所有其他的值则基于 `===` 运算符的语义进行相等比较。
+值的相等是基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法的。（曾使用会将 `0` 和 `-0` 视为不同值的[同值算法](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 和 {{jsxref("undefined")}} 会被视为是相同的值（即使 `NaN !== NaN`），而所有其他的值则基于 `===` 运算符的语义进行相等比较。
 
 ### 性能
 
-[`has`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/has) 方法检查某个值是否在集合中，使用的方法的平均时间比逐个测试先前添加到集合中的元素更快。特别是，当一个数组的长度（`length`）等于集合的大小（`size`）时，这比 [`Array.prototype.includes`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 方法的平均速度更快。
+[`has`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/has) 方法检查某个值是否在集合中，其采用的方式的平均时间比逐个测试先前添加到集合中的元素更快。特别是当一个数组的长度（`length`）等于集合的大小（`size`）时，这比 [`Array.prototype.includes`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 方法的平均速度更快。
 
 ### 类 Set 浏览器 API
 
 浏览器**类 `Set` 对象**（或“类集合对象”）是行为与 `Set` 类似的 [Web API](/zh-CN/docs/Web/API) 接口。
 
-就像 `Set` 一样，元素可以按照它们被添加到对象的顺序进行迭代。类 `Set` 对象和 `Set` 也有相同名称和行为的属性和方法。但是，与 `Set` 不同的是，前者只允许每个条目特定的预定义类型。
+就像 `Set` 一样，元素可以按照它们被添加到对象的顺序进行迭代。类 `Set` 对象也有与 `Set` 相同名称和行为的属性及方法。但是，与 `Set` 不同的是，前者只允许每个条目特定的预定义类型。
 
 允许的类型由规范的 IDL 定义给出。例如，{{domxref("GPUSupportedFeatures")}} 是一个类 `Set` 对象，它必须以字符串为键/值。规范的 IDL 对其的定义如下：
 
@@ -37,7 +37,7 @@ interface GPUSupportedFeatures {
 
 类 `Set` 对象是只读或可读写的（参见上面的 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性和以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 以及 [`@@iterator`](#set.prototypeiterator)。
+- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性及以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 和 [`@@iterator`](#set.prototypeiterator)。
 - 可写的类 `Set` 对象此外还具有以下方法：[`clear()`](#set.prototype.clear)、[`delete()`](#set.prototype.delete) 和 [`add()`](#set.prototype.add)。
 
 除了对条目类型的限制外，方法和属性的行为与 `Set` 中的等效成员相同。
@@ -87,7 +87,7 @@ interface GPUSupportedFeatures {
 - {{jsxref("Set.prototype.forEach()")}}
   - : 按照值插入的顺序为 `Set` 对象中的每个值调用一次 `callbackFn`。如果提供了 `thisArg` 参数，它将被用作每次调用 `callbackFn` 时的 `this` 值。
 - {{jsxref("Set.prototype.has()")}}
-  - : 返回一个布尔值，表示该值在 `Set` 对象中是否存在。
+  - : 返回一个布尔值，表示给定值在 `Set` 对象中是否存在。
 - {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} 的别名。
 - {{jsxref("Set.prototype.values()")}}
@@ -97,7 +97,7 @@ interface GPUSupportedFeatures {
 
 ## 示例
 
-### 使用 `Set` 对象
+### 使用 Set 对象
 
 ```js
 const mySet1 = new Set();
