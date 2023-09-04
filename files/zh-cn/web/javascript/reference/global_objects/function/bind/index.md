@@ -31,12 +31,12 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 
 ## 描述
 
-`bind()` 函数创建一个新的*绑定函数（bound function）*。调用绑定函数通常会执行其所包装的函数，也称为*目标函数（target function）*。绑定函数将绑定时传入的参数（包括 `this` 的值和前几个参数）提前存储为其内部状态。而不是在实际调用时传入。通常情况下，你可以将 `const boundFn = fn.bind(thisArg, arg1, arg2)` 和 `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` 构建的绑定函数的调用效果视为等效（但就构建 `boundFn` 的过程而言不是二者等效的）。
+`bind()` 函数创建一个新的*绑定函数（bound function）*。调用绑定函数通常会执行其所包装的函数，也称为*目标函数（target function）*。绑定函数将绑定时传入的参数（包括 `this` 的值和前几个参数）提前存储为其内部状态。而不是在实际调用时传入。通常情况下，你可以将 `const boundFn = fn.bind(thisArg, arg1, arg2)` 和 `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` 构建的绑定函数的调用效果视为等效（但就构建 `boundFn` 的过程而言，不是二者等效的）。
 
 绑定函数可以通过调用 `boundFn.bind(thisArg, /* more args */)` 进一步进行绑定，从而创建另一个绑定函数 `boundFn2`。新绑定的 `thisArg` 值会被忽略，因为 `boundFn2` 的目标函数是 `boundFn`，而 `boundFn` 已经有一个绑定的 `this` 值了。当调用 `boundFn2` 时，它会调用 `boundFn`，而 `boundFn` 又会调用 `fn`。`fn` 最终接收到的参数按顺序为：`boundFn` 绑定的参数、`boundFn2` 绑定的参数，以及 `boundFn2` 接收到的参数。
 
 ```js
-"use strict"; // prevent `this` from being boxed into the wrapper object
+"use strict"; // 防止 `this` 被封装到到包装对象中
 
 function log(...args) {
   console.log(this, ...args);
@@ -83,7 +83,7 @@ console.log(new Base() instanceof BoundBase); // true
 - [`name`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : 目标函数的 `name` 前加上 `"bound "` 前缀。
 
-绑定函数还会继承目标函数的[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。然而，它不会继承目标函数的其他自有属性（例如，如果目标函数是一个类，则不会继承[静态属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)）。
+绑定函数还会继承目标函数的[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。然而，它不会继承目标函数的其他自有属性（例如，如果目标函数是一个类，则不会继承其[静态属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)）。
 
 ## 示例
 
@@ -93,10 +93,10 @@ console.log(new Base() instanceof BoundBase); // true
 
 JavaScript 新手经常犯的一个错误是将一个方法从对象中提取出来，然后再调用，并期望方法中的 `this` 是原来的对象（比如在回调中传入这个方法）。
 
-然而，如果不做特殊处理的话，通常会丢失原始对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：
+然而，如果不做特殊处理的话，通常会丢失原始对象。使用这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：
 
 ```js
-// Top-level 'this' is bound to 'globalThis' in scripts.
+// 顶级的“this”绑定到“globalThis”。
 this.x = 9;
 const module = {
   x: 81,
@@ -105,14 +105,14 @@ const module = {
   },
 };
 
-// The 'this' parameter of 'getX' is bound to 'module'.
+// “getX”的“this”参数绑定到“module”。
 console.log(module.getX()); // 81
 
 const retrieveX = module.getX;
-// The 'this' parameter of 'retrieveX' is bound to 'globalThis' in non-strict mode.
+// “retrieveX”的“this”参数在非严格模式下绑定到“globalThis”。
 console.log(retrieveX()); // 9
 
-// Create a new function 'boundGetX' with the 'this' parameter bound to 'module'.
+// 创建一个新函数“boundGetX”，并将“this”参数绑定到“module”。
 const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
@@ -127,9 +127,9 @@ console.log(boundGetX()); // 81
 
 ### 偏函数
 
-`bind()` 的下一个简单用法是创建一个具有预设初始参数的函数。
+`bind()` 的另一个简单用法是创建一个具有预设初始参数的函数。
 
-这些参数（如果提供）跟随提供的 `this` 值，并在目标函数的参数列表中插入在最前面，然后是调用绑定函数时传递的参数列表。
+这些参数（如果有的话）会跟随提供的 `this` 值，并在传递给目标函数的参数列表的开头插入，其后是在调用绑定函数时传递的参数。
 
 ```js
 function list(...args) {
@@ -144,17 +144,17 @@ console.log(list(1, 2, 3)); // [1, 2, 3]
 
 console.log(addArguments(1, 2)); // 3
 
-// Create a function with a preset leading argument
+// 创建一个带有预设前导参数的函数
 const leadingThirtySevenList = list.bind(null, 37);
 
-// Create a function with a preset first argument.
+// 创建一个带有预设第一个参数的函数。
 const addThirtySeven = addArguments.bind(null, 37);
 
 console.log(leadingThirtySevenList()); // [37]
 console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
 console.log(addThirtySeven(5)); // 42
 console.log(addThirtySeven(5, 10)); // 42
-// (the last argument 10 is ignored)
+//（最后一个参数 10 被忽略）
 ```
 
 ### 配合 setTimeout()
@@ -167,7 +167,7 @@ class LateBloomer {
     this.petalCount = Math.floor(Math.random() * 12) + 1;
   }
   bloom() {
-    // Declare bloom after a delay of 1 second
+    // 延迟 1 秒后宣布开花
     setTimeout(this.declare.bind(this), 1000);
   }
   declare() {
@@ -177,7 +177,7 @@ class LateBloomer {
 
 const flower = new LateBloomer();
 flower.bloom();
-// After 1 second, calls 'flower.declare()'
+// 1 秒后调用“flower.declare()”
 ```
 
 你还可以使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来实现此目的。
@@ -185,7 +185,7 @@ flower.bloom();
 ```js
 class LateBloomer {
   bloom() {
-    // Declare bloom after a delay of 1 second
+    // 延迟 1 秒后宣布开花
     setTimeout(() => this.declare(), 1000);
   }
 }
@@ -209,7 +209,7 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-// The thisArg's value doesn't matter because it's ignored
+// thisArg 的值并不重要，因为它被忽略了
 const YAxisPoint = Point.bind(null, 0 /*x*/);
 
 const axisPoint = new YAxisPoint(5);
@@ -220,48 +220,48 @@ axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-请注意，您无需采取任何特殊措施来创建一个绑定函数，以便与 {{jsxref("Operators/new", "new")}} 运算符一起使用。[`new.target` ↗](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)、[`instanceof` ↗](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)、[`this` ↗](/en-US/docs/Web/JavaScript/Reference/Operators/this) 等都按预期工作，就好像构造函数从未被绑定一样。唯一的区别是它不能再用于 [`extends` ↗](/en-US/docs/Web/JavaScript/Reference/Classes/extends)。
+请注意，你无需采取任何特殊措施来创建一个绑定函数，以便与 {{jsxref("Operators/new", "new")}} 运算符一起使用。[`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)、[`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)、[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 等都如预期工作，就好像构造函数从未被绑定一样。唯一的区别是它不能再用于 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
 
-相应地，您无需采取任何特殊措施来创建一个绑定函数，使其只能以普通方式调用，即使您更希望要求只能使用 {{jsxref("Operators/new", "new")}} 来调用绑定函数。如果您在没有使用 `new` 的情况下调用它，绑定的 `this` 将不再被忽略。
+相应地，你无需采取任何特殊措施来创建一个绑定函数，使其只能以普通方式调用，即使你更希望要求只能使用 {{jsxref("Operators/new", "new")}} 来调用绑定函数。如果你在没有使用 `new` 的情况下调用它，绑定的 `this` 将不再被忽略。
 
 ```js
 const emptyObj = {};
 const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
-// Can still be called as a normal function
-// (although usually this is undesirable)
+// 仍然可以作为普通函数调用
+//（尽管通常这是不可取的）
 YAxisPoint(13);
 
-// The modifications to `this` is now observable from the outside
+// 现在可以从外部观察对 `this` 的修改
 console.log(emptyObj); // { x: 0, y: 13 }
 ```
 
-如果您希望限制绑定函数只能使用 {{jsxref("Operators/new", "new")}} 调用，或者只能在没有使用 `new` 的情况下调用，目标函数必须强制执行该限制，例如通过检查 `new.target !== undefined` 或使用 [class ↗](/en-US/docs/Web/JavaScript/Reference/Classes)。这样可以在目标函数内部进行适当的处理来确保绑定函数的调用方式符合预期。
+如果你希望限制绑定函数只能使用 {{jsxref("Operators/new", "new")}} 调用，或者只能在没有使用 `new` 的情况下调用，目标函数必须强制执行该限制，例如通过检查 `new.target !== undefined` 或使用 [class](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
 
 ### 绑定类
 
-在类上使用 `bind()` 会保留大部分类的语义，只是当前类的所有静态自有属性会丢失。然而，由于原型链被保留，您仍然可以访问从父类继承的静态属性。这意味着绑定后的类实例仍然可以享受到继承自父类的静态属性的功能。
+在类上使用 `bind()` 会保留大部分类的语义，只是当前类的所有静态自有属性会丢失。然而，由于原型链被保留，你仍然可以访问从父类继承的静态属性。这意味着绑定后的类实例仍然可以享受到继承自父类的静态属性的功能。
 
 ```js
 class Base {
-  static baseProp = "base";
+  static baseProp = "基类属性";
 }
 
 class Derived extends Base {
-  static derivedProp = "derived";
+  static derivedProp = "派生类属性";
 }
 
 const BoundDerived = Derived.bind(null);
-console.log(BoundDerived.baseProp); // "base"
+console.log(BoundDerived.baseProp); // "基类属性"
 console.log(BoundDerived.derivedProp); // undefined
 console.log(new BoundDerived() instanceof Derived); // true
 ```
 
 ### 将方法转换为实用函数
 
-`bind()` 在某些情况下也非常有用，比如当您想将一个需要特定 `this` 值的方法转换为一个普通的实用函数，该函数将之前的 `this` 参数作为普通参数传入。这类似于通用实用函数的工作方式：而不是调用 `array.map(callback)`，您可以使用 `map(array, callback)`，这样可以避免修改 `Array.prototype`，并且可以在不是数组的类数组对象（比如 [`arguments` ↗](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)）上使用 `map`。
+`bind()` 在某些情况下也非常有用，比如当你想将一个需要特定 `this` 值的方法转换为一个普通的实用函数，该函数将之前的 `this` 参数作为普通参数传入。这类似于通用实用函数的工作方式：而不是调用 `array.map(callback)`，你可以使用 `map(array, callback)`，这样可以避免修改 `Array.prototype`，并且可以在不是数组的类数组对象（比如 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)）上使用 `map`。
 
-以 `Array.prototype.slice()` 为例，您可以使用它将类数组对象转换为真正的数组。您可以创建一个类似下面的快捷方式：
+以 {{jsxref("Array.prototype.slice()")}} 为例，你可以使用它将类数组对象转换为真正的数组。你可以创建一个类似下面的快捷方式：
 
 ```js
 const slice = Array.prototype.slice;
@@ -271,10 +271,10 @@ const slice = Array.prototype.slice;
 slice.call(arguments);
 ```
 
-请注意，您不能保存 `slice.call` 并将其作为普通函数调用，因为 `call()` 方法还会读取其应该调用的函数作为其 `this` 值。在这种情况下，您可以使用 `bind()` 来绑定 `call()` 的 `this` 值。在下面的代码片段中，`slice()` 是一个绑定了 `this` 值为 {{jsxref("Array.prototype.slice()")}} 的 {{jsxref("Function.prototype.call()")}} 的版本。这意味着可以消除额外的 `call()` 调用：
+请注意，你不能保存 `slice.call` 并将其作为普通函数调用，因为 `call()` 方法还会读取其应该调用的函数作为其 `this` 值。在这种情况下，你可以使用 `bind()` 来绑定 `call()` 的 `this` 值。在下面的代码片段中，`slice()` 是一个绑定了 `this` 值为 {{jsxref("Array.prototype.slice()")}} 的 {{jsxref("Function.prototype.call()")}} 的版本。这意味着可以消除额外的 `call()` 调用：
 
 ```js
-// Same as "slice" in the previous example
+// 与上一个示例中的“slice”相同
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
