@@ -436,7 +436,7 @@ textarea.onkeyup = function () {
 ```html
 <a href="http://www.example.com">Ссылка к моему примеру.</a>
 
-<a href="http://www.example.com">Ссылка к моему примеру.</a>
+<a href='http://www.example.com'>Ссылка к моему примеру.</a>
 ```
 
 Однако вы должны убедиться, что не смешиваете их вместе. Следующее будет неверным!
