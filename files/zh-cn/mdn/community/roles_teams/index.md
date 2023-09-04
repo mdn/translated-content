@@ -38,7 +38,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 如果想要成为一名贡献者，你需要遵循：
 
 - [Mozilla 行为准则](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
-- [MDN 的贡献准则](https://github.com/mdn/mdn-community/blob/main/CONTRIBUTING.md)
+- 贡献指南（参见每个仓库下的 `CONTRIBUTING.md` 文件；例如，`mdn/translated-content` 仓库的[贡献指南](https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md)）
 
 **权利：**
 
