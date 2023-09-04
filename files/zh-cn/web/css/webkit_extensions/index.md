@@ -447,7 +447,7 @@ slug: Web/CSS/WebKit_Extensions
 - `background-origin-x`（无前缀！）
 - `background-origin-y`（无前缀！）
 
-\* 仍在 Safari Technology Preview 中支持，但是通常在正式发布的浏览器中不支持。
+\* 仍在 Safari 技术预览版中支持，但是通常在正式发布的浏览器中不支持。
 
 ## 伪类
 
