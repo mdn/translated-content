@@ -92,7 +92,7 @@ interface GPUSupportedFeatures {
   - : {{jsxref("Set.prototype.values()")}} 的别名。
 - {{jsxref("Set.prototype.values()")}}
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
-- [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
 
 ## 示例
