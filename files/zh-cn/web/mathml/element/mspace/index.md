@@ -19,7 +19,7 @@ MathML\<mspace>元素用来表示一段空白，空白的大小由它自身的�
   - : Indicates a line-break at the space. Possible values: `auto` (default value), `newline`, `nobreak`, `goodbreak`, `badbreak`.
     Starting with MathML 3, it is preferred to use {{ MathMLElement("mo") }} to control linebreaking.
 - mathbackground
-  - : 用来设置背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者 [HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - width
   - : 空白的宽度 (参阅 [length](/zh-CN/docs/MathML/Attributes/Values#Lengths)).
 
