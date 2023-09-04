@@ -22,13 +22,13 @@ l10n:
   </tbody>
 </table>
 
-## 문법
+## 구문
 
 ```http
 Access-Control-Max-Age: <delta-seconds>
 ```
 
-## 디렉티브
+## 지시어
 
 - \<delta-seconds>
   - : 결과를 부호가 없는 음수가 아닌 정수로 캐시할 수 있는 최대 시간(초)입니다. Firefox는 [24시간(86400초)으로 제한](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207)합니다. 크롬(v76 이전 버전)은 [10분(600초)으로 제한](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36)됩니다. 크롬(v76부터)은 [2시간(7200초)으로 제한](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31)됩니다. 기본값은 5초입니다.
@@ -41,7 +41,7 @@ preflight 요청의 결과를 10분 동안 캐시합니다.
 Access-Control-Max-Age: 600
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -49,7 +49,7 @@ Access-Control-Max-Age: 600
 
 {{Compat}}
 
-## 함께 참고할 내용
+## 같이 보기
 
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
