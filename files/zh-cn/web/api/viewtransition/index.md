@@ -39,7 +39,7 @@ let lastClick;
 addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
-  // 为不支持此 API 的浏览器提供回退方案:
+  // 为不支持此 API 的浏览器提供回退方案：
   if (!document.startViewTransition) {
     updateTheDOMSomehow(data);
     return;
@@ -54,12 +54,12 @@ function spaNavigate(data) {
     Math.max(y, innerHeight - y),
   );
 
-  // 创建一个过渡:
+  // 创建一个过渡：
   const transition = document.startViewTransition(() => {
     updateTheDOMSomehow(data);
   });
 
-  // 等待伪元素创建完成:
+  // 等待伪元素创建完成：
   transition.ready.then(() => {
     // 新视图的根元素动画
     document.documentElement.animate(
@@ -80,7 +80,7 @@ function spaNavigate(data) {
 }
 ```
 
-该动画还需要以下 CSS，以关闭默认的 CSS 动画并防止新旧视图状态以任何方式混合（新状态从旧状态上方 “擦除”，而不是过渡）：
+该动画还需要以下 CSS，以关闭默认的 CSS 动画并防止新旧视图状态以任何方式混合（新状态从旧状态上方“擦除”，而不是过渡）：
 
 ```css
 ::view-transition-image-pair(root) {

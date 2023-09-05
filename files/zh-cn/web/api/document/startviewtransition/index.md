@@ -51,7 +51,7 @@ function updateView(event) {
     galleryCaption.textContent = targetIdentifier.alt;
   };
 
-  // 浏览器不支持 View Transitions 时的回退方案:
+  // 浏览器不支持 View Transitions 时的回退方案：
   if (!document.startViewTransition) {
     displayNewImage();
     return;
