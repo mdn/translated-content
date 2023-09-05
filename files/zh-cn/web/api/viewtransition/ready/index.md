@@ -39,7 +39,7 @@ function spaNavigate(data) {
     Math.max(y, innerHeight - y),
   );
 
-  // 创建一个过渡：
+  // 开始一次视图过渡：
   const transition = document.startViewTransition(() => {
     updateTheDOMSomehow(data);
   });

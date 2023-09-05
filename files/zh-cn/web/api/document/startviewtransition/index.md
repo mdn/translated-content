@@ -53,7 +53,7 @@ function updateView(event) {
     return;
   }
 
-  // 使用 View Transitions:
+  // 开始一次视图过渡:
   const transition = document.startViewTransition(() => displayNewImage());
 }
 ```
