@@ -7,19 +7,19 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 
 {{PWASidebar}}
 
-这个入门级教程将带领你完成构建基础渐进式 Web 应用（PWA）的所有步骤。我们将使用 Web 技术——HTML，CSS 和 JavaScript——来构建一个名为“经期跟踪器”的月经周期跟踪 Web 应用。像所有的 Web 应用一样，经期跟踪器被设计为可以在所有设备的所有浏览器上工作。
+这个入门教程将带领你完成构建基础渐进式 Web 应用（PWA）的所有步骤。我们将使用 Web 技术——HTML、CSS 和 JavaScript——来构建一个名为“CycleTracker”（经期跟踪器）的月经周期跟踪 Web 应用。像所有的 Web 应用一样，经期跟踪器被设计为可以在所有设备的所有浏览器上工作。
 
-我们将逐步构建一个功能完整的 Web 应用，然后逐步改善周期追踪器，使其可安装并在用户离线时仍可工作。
+我们将逐步构建一个功能完整的 Web 应用，然后逐步增强经期跟踪器，使其可安装并在用户离线时仍可工作。
 
 默认情况下，PWA 是常规的网站，两者使用相同的技术构建。和常规网站一样，PWA 可被链接，可通过搜索引擎发现，并在浏览器中可见。通过包含一个清单文件和 service worker，并通过 SSL 提供网站服务，任何网站都可以成为 PWA。
 
 ## PWA 的优势
 
-我们将使用 Web 语言创建一个功能完整的应用，该应用不论有无网络，在浏览器和用户的操作系统上都能运行。像任何常规网站一样，经期跟踪器托管在 Web 服务器上并可从 Web 服务器下载。我们需要的只是一个文本编辑器，就能让经期跟踪器像所有的 PWA 一样，不需要任何额外的编程语言知识，不需要打包也不需要专有的 SDK，无需应用商店（也无需应用商店的批准和花费）就可以无缝地安装在任何操作系统上。
+我们将使用 Web 语言创建一个功能完整的应用，该应用不论有无网络，在浏览器和用户的操作系统上都能运行。像任何常规网站一样，经期跟踪器托管在 Web 服务器上并可从 Web 服务器下载。我们需要的只是一个文本编辑器，就能让经期跟踪器像所有的 PWA 一样，不需要任何额外的编程语言知识，不需要打包也不需要专有的 SDK，无需应用商店（也无需应用商店的审核和费用）就可以无缝地安装在任何操作系统上。
 
 - 使用标准和开放的 Web 技术
 
-  - : 过去，为了使应用程序可在操作系统（如 Windows、iOS、MacOS、Linux 和 Android）上安装，应用程序需要用操作系统支持的编程语言（如 C#、.Net、Objective C、Swift、Kotlin、Java 或 Python）来开发。PWA 则基于一个不同的模型：它们使用单一的代码库，使用跨越操作系统的标准的开放 Web 技术（HTML、CSS 和 JavaScript）编写。
+  - : 过去，为了使应用程序可在操作系统（如 Windows、iOS、MacOS、Linux 和 Android）上安装，应用程序需要用操作系统支持的编程语言（如 C#、.Net、Objective C、Swift、Kotlin、Java 或 Python）来开发。PWA 则基于一个不同的模型：它们使用单一的代码库，使用跨操作系统的标准的开放 Web 技术（HTML、CSS 和 JavaScript）编写。
 
 - 无需编译
 
@@ -43,7 +43,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 
 - 应用程序图标
 
-  - : PWA 在操作系统的应用图标显示的同一位置显示其应用程序图标。这可以是主屏幕上的图标、工具栏中的图标、应用程序文件夹中的图标，或者任何设备显示应用程序图标的地方。我们将学习如何为经期跟踪器[声明图标](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#app_iconography)，所以，一经安装，我们的 PWA 可以像用户设备上的任何其他安装的应用程序一样出现。
+  - : PWA 在操作系统的应用图标显示的同一位置显示其应用程序图标。这可以是主屏幕上的图标、工具栏中的图标、应用程序文件夹中的图标，或者任何设备显示应用程序图标的地方。我们将学习如何为经期跟踪器[声明图标](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#应用程序图标)，所以，一经安装，我们的 PWA 可以像用户设备上的任何其他安装的应用程序一样出现。
 
 - 离线工作
 
@@ -51,7 +51,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 
 ## 经期跟踪器 PWA 教程
 
-这个 PWA 教程中的基础网页应用是一个经期跟踪器，用户可以追踪每个月经周期的开始和结束时间。我们将创建一个静态网页框架并为其设置样式，然后学习如何创建一个安全连接以查看我们的进度。我们将添加 JavaScript 功能，将 HTML 和 CSS 框架转化为一个完全功能的应用程序，并使用 localStorage 存储数据。使用你构建的完全功能的 Web 应用程序，我们将逐步将这个网络应用程序增强为支持离线的渐进式 Web 应用程序，通过添加清单文件、图标和 service worker 来实现。
+这个 PWA 教程中的基础网页应用是一个经期跟踪器，用户可以追踪每个月经周期的开始和结束时间。我们将创建一个静态网页框架并为其设置样式，然后学习如何创建一个安全连接以查看我们的进度。我们将添加 JavaScript 功能，将 HTML 和 CSS 框架转化为一个功能完整的应用程序，并使用 localStorage 存储数据。使用你构建的功能完整的 Web 应用程序，我们将通过添加清单文件、图标和 service worker 来逐步将这个网络应用程序增强为支持离线的渐进式 Web 应用程序。
 
 教程步骤包括：
 
@@ -61,11 +61,11 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 
 - [本地开发环境或安全连接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)
 
-  - : 尽管所有的网站都应该通过 https 进行服务，但对于 PWA 来说，https 是一个要求。service worker 和 PWA 只能在安全环境中使用，包括使用 `https://` 协议提供的 SSL 环境和使用 `http://` 协议提供的本地资源，包括 `127.0.0.1` 和 `localhost` 的 URL。我们将使用 `file://` 协议查看当前状态的页面，然后在教程步骤中逐步介绍创建安全的本地主机连接以测试你的代码的选项。我们还将介绍如何使用 GitHub 页面提供你的 PWA。
+  - : 尽管所有的网站都应该通过 https 提供服务，但对于 PWA 来说，https 是一个要求。service worker 和 PWA 只能在安全上下文中使用，包括使用 `https://` 协议提供的 SSL 环境和使用 `http://` 协议提供的本地资源（包括 `127.0.0.1` 和 `localhost` 这两个 URL）。我们将使用 `file://` 协议查看当前状态的页面，然后在教程步骤中逐步介绍创建安全的本地主机连接以测试你的代码的选项。我们还将介绍如何使用 GitHub 页面提供你的 PWA。
 
 - [JavaScript 和 LocalStorage](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)
 
-  - : 完整解释用于创建客户端经期跟踪器 Web 应用程序的 JavaScript 功能，以便我们拥有一个功能齐全的应用程序，可以逐步改进为 PWA，并使用 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage) 来存储经期信息。
+  - : 完整解释用于创建客户端经期跟踪器 Web 应用程序的 JavaScript 功能，以便我们拥有一个功能齐全的应用程序，可以逐步增强为 PWA，并使用 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage) 来存储经期信息。
 
 - [清单文件：标识、外观和图标](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)
 
@@ -75,7 +75,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 
   - : Service Worker 使应用程序能够离线工作。通过前面的安全连接，首次访问页面时提供其基本功能，同时下载 Service Worker。安装和激活 Service Worker 后，它将控制页面以提供更高的可靠性和速度。
 
-为了完成本教程，有一定的 HTML、CSS 和 JavaScript 基础将会有帮助。本教程提供了创建 PWA 所需的清单文件和启动 service worker 的指导，以及设置本地开发环境的说明，这样你就可以查看自己的进度。<!--本教程将介绍检查网络访问、定义在线和离线体验的方法。-->
+有一定的 HTML、CSS 和 JavaScript 基础将对完成本教程有一定的帮助。本教程提供了创建清单文件、启动 service worker，以及设置本地开发环境的说明，这样你就可以查看自己的进度。<!--本教程将介绍检查网络访问、定义在线和离线体验的方法。-->
 
 虽然安全连接是一个要求，但创建 PWA 除了使用任何文本编辑器编写代码和使用浏览器查看代码之外，没有其他软件要求。
 
