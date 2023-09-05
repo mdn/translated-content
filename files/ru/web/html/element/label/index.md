@@ -1,7 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-translation_of: Web/HTML/Element/label
 ---
 
 {{HTMLSidebar}}
@@ -11,10 +10,10 @@ translation_of: Web/HTML/Element/label
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Общий поток](/ru/docs/Web/HTML/Content_categories#Flow_content), [текстовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), [интерактивный контент, элемент формы](/ru/docs/Web/HTML/Content_categories#Interactive_content), ощутимый контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимый контент                                         | [Текстовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но без вложенных элементов `label`. Недопустимы другие оборачиваемые в `label` элементы помимо целевого.                                                                              |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                                                                          |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                                                                               |
 | Допустимые родители                                        | Любой элемент, разрешающий [текстовый контент.](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                                                                                                                                            |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                                                                       |
-| DOM-интерфейс                                              | {{domxref("HTMLLabelElement")}}                                                                                                                                                                                                                          |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                                                                               |
+| DOM-интерфейс                                              | {{domxref("HTMLLabelElement")}}                                                                                                                                                                                                                                   |
 
 ## Атрибуты
 
@@ -37,7 +36,7 @@ translation_of: Web/HTML/Element/label
 ### Simple label example
 
 ```html
-<label>Click me <input type="text"></label>
+<label>Click me <input type="text" /></label>
 ```
 
 {{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
@@ -45,19 +44,18 @@ translation_of: Web/HTML/Element/label
 ### Using the "for" attribute
 
 ```html
-<label for="username">Click me</label>
-<input type="text" id="username">
+<label for="username">Click me</label> <input type="text" id="username" />
 ```
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 
 ## Specifications
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                                | Status                   | Comment            |
+| ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}     | {{Spec2('HTML4.01')}}     | Initial definition |
+| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}}   | {{Spec2('HTML5 W3C')}}   |                    |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}    | {{Spec2('HTML4.01')}}    | Initial definition |
 
 ## Browser compatibility
 

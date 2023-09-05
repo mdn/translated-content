@@ -1,5 +1,5 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
 ---
 
@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/null
 ## 구문
 
 ```js
-null
+null;
 ```
 
 ## 설명
@@ -33,15 +33,15 @@ foo; //null
 `null` 또는 `undefined`를 검사할 때, [동등 연산자(==)와 일치 연산자(===)의 차이](/ko/docs/Web/JavaScript/Reference/Operators)를 주의하세요. 동등 연산자는 자료형 변환을 수행합니다.
 
 ```js
-typeof null          // "object" (하위호환 유지를 위해 "null"이 아님)
-typeof undefined     // "undefined"
-null === undefined   // false
-null  == undefined   // true
-null === null        // true
-null == null         // true
-!null                // true
-isNaN(1 + null)      // false
-isNaN(1 + undefined) // true
+typeof null; // "object" (하위호환 유지를 위해 "null"이 아님)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+isNaN(1 + null); // false
+isNaN(1 + undefined); // true
 ```
 
 ## 명세

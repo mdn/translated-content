@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ## 書式
 
 ```js
-browser.tabs.onCreated.addListener(callback)
-browser.tabs.onCreated.removeListener(listener)
-browser.tabs.onCreated.hasListener(listener)
+browser.tabs.onCreated.addListener(callback);
+browser.tabs.onCreated.removeListener(listener);
+browser.tabs.onCreated.hasListener(listener);
 ```
 
 イベントは３つの関数を持ちます:

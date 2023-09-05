@@ -24,8 +24,8 @@ l10n:
 これをウェブワーカーの中に挿入して実行することができます。
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## 仕様書

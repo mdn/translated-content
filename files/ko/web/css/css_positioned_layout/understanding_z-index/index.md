@@ -1,7 +1,6 @@
 ---
 title: CSS z-index 이해하기
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 
 우리들은 HTML 페이지를 2차원 평면으로 생각한다. 왜냐하면 여러 텍스트, 이미지와 다른 엘리먼트들이 서로 겹치지 않고 배열되기 때문이다. 하나의 렌더링 흐름만이 존재하며 모든 엘리먼트들은 다른 엘리먼트들이 어떤 공간을 차지하고 있는지 알고 있다.

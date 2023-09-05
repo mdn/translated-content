@@ -30,19 +30,19 @@ Não é usual a utilização do `NaN`. Ele é retornado quando uma operação ma
 Os operadores de igualdade (`==` e `===`) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("Global_Objects/isNaN", "isNaN()")}}.
 
 ```js
-NaN === NaN;        // falso
+NaN === NaN; // falso
 Number.NaN === NaN; // falso
-isNaN(NaN);         // verdadeiro
-isNaN(Number.NaN);  // verdadeiro
+isNaN(NaN); // verdadeiro
+isNaN(Number.NaN); // verdadeiro
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                   | Comentários                                       |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                              | Standard                 | Definição inicial. Implementado no JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}                                         | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}} | {{Spec2('ES6')}}     |                                                   |
+| Especificação                                                                | Status             | Comentários                                       |
+| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 1st Edition.                                                      | Standard           | Definição inicial. Implementado no JavaScript 1.3 |
+| {{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}                                | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com navegadores
 

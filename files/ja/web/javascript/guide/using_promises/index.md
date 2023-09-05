@@ -68,11 +68,19 @@ const promise2 = doSomething().then(successCallback, failureCallback);
 
 ```js
 doSomething(function (result) {
-  doSomethingElse(result, function (newResult) {
-    doThirdThing(newResult, function (finalResult) {
-      console.log("Got the final result: " + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Got the final result: " + finalResult);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
@@ -201,7 +209,7 @@ async/await はプロミスの上に成り立っています。例えば上記�
 ```js
 process.on("unhandledRejection", (reason, promise) => {
   /* ここにコードを追加することで、 "promise" および "reason" の値を
-  * 検査することができます。 */
+   * 検査することができます。 */
 });
 ```
 
@@ -242,8 +250,9 @@ wait(10 * 1000)
 以下のように複数の処理を並行に開始し、すべてが終了するのを待つことができます。
 
 ```js
-Promise.all([func1(), func2(), func3()])
-.then(([result1, result2, result3]) => { /* result1, result2, result3 を使用 */ });
+Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
+  /* result1, result2, result3 を使用 */
+});
 ```
 
 注意すべきは，配列の中の 1 つのプロミスが拒否されると， `Promise.all()` がそのエラーを発生させ，他の処理を中断することです．これにより、予期せぬ状態や振る舞いが発生する可能性があります。 {{jsxref("Promise.allSettled()")}} は、解決する前にすべての操作が完了することを保証する別の合成ツールです。
@@ -265,14 +274,19 @@ Promise.resolve()
   .then(func1)
   .then(func2)
   .then(func3)
-  .then((result3) => { /* result3 を使用 */ });
+  .then((result3) => {
+    /* result3 を使用 */
+  });
 ```
 
 これは、関数型プログラミングでよく見られる、再利用可能な合成関数にすることができます。
 
 ```js
 const applyAsync = (acc, val) => acc.then(val);
-const composeAsync = (...funcs) => (x) => funcs.reduce(applyAsync, Promise.resolve(x));
+const composeAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(applyAsync, Promise.resolve(x));
 ```
 
 `composeAsync()` 関数は、任意の数の関数を引数として受け取り、合成パイプラインに渡される初期値を受け取る新しい関数を返します。
@@ -354,7 +368,7 @@ doSomethingCritical()
   .then((result) =>
     doSomethingOptional(result)
       .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {})
+      .catch((e) => {}),
   ) // オプションの処理が失敗すれば無視して進める
   .then(() => moreCriticalStuff())
   .catch((e) => console.error("Critical failure: " + e.message));
@@ -374,8 +388,7 @@ doSomethingCritical()
 doSomething()
   .then(function (result) {
     // 内側の連鎖でプロミスを返していない + 不必要な入れ子
-    doSomethingElse(result)
-      .then((newResult) => doThirdThing(newResult));
+    doSomethingElse(result).then((newResult) => doThirdThing(newResult));
   })
   .then(() => doFourthThing());
 // 連鎖の最後で catch を忘れている

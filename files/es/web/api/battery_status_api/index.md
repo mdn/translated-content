@@ -1,7 +1,6 @@
 ---
 title: API de Estado de Bateria
 slug: Web/API/Battery_Status_API
-original_slug: Web/API/Estado_de_Bateria
 ---
 
 {{DefaultAPISidebar("Battery API")}}{{deprecated_header}}

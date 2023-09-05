@@ -1,7 +1,6 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
-translation_of: Web/API/Cache/match
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

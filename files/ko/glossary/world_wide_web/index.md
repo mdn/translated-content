@@ -2,6 +2,7 @@
 title: World Wide Web
 slug: Glossary/World_Wide_Web
 ---
+
 흔히 **WWW**, **W3**, **Web으로** 불리는 *World Wide Web*은 {{Glossary("Internet")}}을 통해 접근 가능한 공용 웹페이지의 상호연결 시스템이다. 웹은 인터넷과 다르며, 인터넷을 기반으로 한 수많은 응용 프로그램 중 하나이다.
 
 팀 버너스리가 제안한 구조를 바탕으로 훗날 World Wide Web으로 알려질 것이 만들어졌다. 그는 1990년에 CERN 물리학 연구소에서 자신의 컴퓨터에 최초의 웹 {{Glossary("Server","server")}}, 웹 {{Glossary("Browser","browser")}}, 웹페이지를 만들었다. 곧바로 alt.hypertext 뉴스 그룹에 이 소식을 알렸고, 이것이 웹이 세상에 공식적으로 모습을 드러낸 첫 순간이었다.

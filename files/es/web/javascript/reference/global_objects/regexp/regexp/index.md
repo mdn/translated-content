@@ -1,7 +1,6 @@
 ---
 title: Constructor RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/RegExp
 ---
 
 {{JSRef}}
@@ -27,9 +26,11 @@ RegExp(patrón[, banderas])
 ### Parámetros
 
 - `patrón`
+
   - : El texto de la expresión regular.
 
     A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.
+
 - `banderas`
 
   - : Si se especifica, `banderas` es una cadena que contiene las banderas para agregar.
@@ -65,9 +66,9 @@ Hay dos formas de crear un objeto `RegExp`: una _notación literal_ y un _constr
 Las siguientes tres expresiones crean la misma expresión regular:
 
 ```js
-/ab+c/i
-new RegExp(/ab+c/, 'i') // notación literal
-new RegExp('ab+c', 'i') // constructor
+/ab+c/i;
+new RegExp(/ab+c/, "i"); // notación literal
+new RegExp("ab+c", "i"); // constructor
 ```
 
 La notación literal da como resultado la compilación de la expresión regular cuando se evalúa la expresión. Utiliza la notación literal cuando la expresión regular permanecerá constante. Por ejemplo, si usas notación literal para construir una expresión regular usada en un bucle, la expresión regular no se volverá a compilar en cada iteración.

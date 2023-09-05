@@ -1,7 +1,6 @@
 ---
 title: downloads.State
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/State
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/State
 ---
 
 {{AddonSidebar()}}

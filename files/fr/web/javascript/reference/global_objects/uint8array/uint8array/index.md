@@ -1,7 +1,6 @@
 ---
 title: Constructeur Uint8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 ---
 
 {{JSRef}}

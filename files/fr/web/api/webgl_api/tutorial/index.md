@@ -1,7 +1,6 @@
 ---
 title: Tutoriel WebGL
 slug: Web/API/WebGL_API/Tutorial
-translation_of: Web/API/WebGL_API/Tutorial
 ---
 
 {{DefaultAPISidebar("WebGL")}}

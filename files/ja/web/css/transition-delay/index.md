@@ -51,13 +51,13 @@ transition-delay: unset;
 #### HTML
 
 ```html
-  <div class="box delay-1">0.5 seconds</div>
+<div class="box delay-1">0.5 seconds</div>
 
-  <div class="box delay-2">2 seconds</div>
+<div class="box delay-2">2 seconds</div>
 
-  <div class="box delay-3">4 seconds</div>
+<div class="box delay-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS

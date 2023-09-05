@@ -64,7 +64,7 @@ ctx.strokeText("Hello world", 50, 90);
 
 このコードは {{HTMLElement("canvas")}} への参照を受け取り、そこから二次元グラフィックコンテキストへの参照を取得します。
 
-そこで、 {{domxref("CanvasRenderingContext2D.font", "font")}} に 50 ピクセル高の "serif" （ユーザーの既定の[セリフ付き](https://ja.wikipedia.org/wiki/セリフ_(文字))フォント）を設定し、`strokeText()` を呼び出して座標 (50, 90) からテキスト "Hello world" を描画します。
+そこで、 {{domxref("CanvasRenderingContext2D.font", "font")}} に 50 ピクセル高の "serif" （ユーザーの既定の[セリフ付き](<https://ja.wikipedia.org/wiki/セリフ_(文字)>)フォント）を設定し、`strokeText()` を呼び出して座標 (50, 90) からテキスト "Hello world" を描画します。
 
 #### 結果
 

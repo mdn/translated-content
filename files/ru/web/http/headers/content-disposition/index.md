@@ -1,13 +1,8 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - HTTP-заголовок
-  - header
-translation_of: Web/HTTP/Headers/Content-Disposition
-original_slug: Web/HTTP/Заголовки/Content-Disposition
 ---
+
 {{HTTPSidebar}}В обычном HTTP-ответе заголовок **`Content-Disposition`** является индикатором того, что ожидаемый контент ответа будет отображаться в браузере, как веб-страница или часть веб-страницы, или же как вложение, которое затем может быть скачано и сохранено локально.
 
 В случае, если тело HTTP-запроса типа `multipart/form-data`, то общий заголовок **`Content-Disposition`** используется для каждой из составных частей multipart тела для указания дополнительных сведений по полю, к которому применён заголовок. Каждая часть отделена с помощью _границы (boundary)_, определённой в заголовке {{HTTPHeader("Content-Type")}}. `Content-Disposition,` используемый непосредственно для всего тела HTTP-запроса, ни на что не влияет.
@@ -100,8 +95,8 @@ value2
 
 ## Спецификации
 
-| Спецификация         | Название                                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
+| Спецификация    | Название                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
 | {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
 | {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |

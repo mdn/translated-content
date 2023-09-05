@@ -1,7 +1,6 @@
 ---
 title: O que é um nome de domínio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 Nesse artigo examinaremos nomes de domínios: o que são, como são estruturados, e como conseguir um.

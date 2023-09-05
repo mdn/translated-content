@@ -1,7 +1,6 @@
 ---
 title: frameset
 slug: Web/HTML/Element/frameset
-original_slug: Web/HTML/Elemento/frameset
 ---
 
 ### Definición

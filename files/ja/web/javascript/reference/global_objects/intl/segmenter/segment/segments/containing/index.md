@@ -1,8 +1,6 @@
 ---
 title: Intl.Segments.prototype.containing()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 ---
 
 {{JSRef}}
@@ -14,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
 ## 構文
 
 ```js
-containing(codeUnitIndex)
+containing(codeUnitIndex);
 ```
 
 ### 引数
@@ -42,7 +40,7 @@ containing(codeUnitIndex)
 // ┃A l l o n s┃-┃y┃!┃   ← code unit
 const input = "Allons-y!";
 
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
 let current = undefined;
 

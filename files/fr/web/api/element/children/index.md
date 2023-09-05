@@ -1,7 +1,6 @@
 ---
 title: Element.children
 slug: Web/API/Element/children
-translation_of: Web/API/Element/children
 ---
 
 {{APIRef("DOM")}}

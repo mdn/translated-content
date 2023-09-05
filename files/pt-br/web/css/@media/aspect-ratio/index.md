@@ -18,8 +18,9 @@ O exemplo abaixo está contido em um {{htmlElement("iframe")}}, que cria o seu p
 ### HTML
 
 ```html
-<div id='inner'>
-  Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua viewport.
+<div id="inner">
+  Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua
+  viewport.
 </div>
 ```
 
@@ -36,7 +37,7 @@ O exemplo abaixo está contido em um {{htmlElement("iframe")}}, que cria o seu p
 /* Taxa de aspecto máxima */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff;  /* ciano */
+    background: #9ff; /* ciano */
   }
 }
 
@@ -50,32 +51,33 @@ O exemplo abaixo está contido em um {{htmlElement("iframe")}}, que cria o seu p
 
 ```html hidden
 <label id="wf" for="w">width:165</label>
-<input id="w" name="w" type="range" min="100" max="250" step="5" value="165">
+<input id="w" name="w" type="range" min="100" max="250" step="5" value="165" />
 <label id="hf" for="w">height:165</label>
-<input id="h" name="h" type="range" min="100" max="250" step="5" value="165">
+<input id="h" name="h" type="range" min="100" max="250" step="5" value="165" />
 
-<iframe id="outer" src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua viewport.</div>">
-
+<iframe
+  id="outer"
+  src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua viewport.</div>">
 </iframe>
 ```
 
 ```css hidden
-iframe{
-  display:block;
+iframe {
+  display: block;
 }
 ```
 
 ```js hidden
-outer.style.width=outer.style.height="165px"
+outer.style.width = outer.style.height = "165px";
 
-w.onchange=w.oninput=function(){
-  outer.style.width=w.value+"px"
-  wf.textContent="width:"+w.value
-}
-h.onchange=h.oninput=function(){
-  outer.style.height=h.value+"px"
-  hf.textContent="height:"+h.value
-}
+w.onchange = w.oninput = function () {
+  outer.style.width = w.value + "px";
+  wf.textContent = "width:" + w.value;
+};
+h.onchange = h.oninput = function () {
+  outer.style.height = h.value + "px";
+  hf.textContent = "height:" + h.value;
+};
 ```
 
 ### Result
@@ -84,8 +86,8 @@ h.onchange=h.oninput=function(){
 
 ## Specificações
 
-| Specification                                                                            | Status                                   | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| Specification                                                       | Status                          | Comment             |
+| ------------------------------------------------------------------- | ------------------------------- | ------------------- |
 | {{SpecName('CSS4 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS4 Media Queries')}} | No change.          |
 | {{SpecName('CSS3 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS3 Media Queries')}} | Initial definition. |
 

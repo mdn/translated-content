@@ -1,7 +1,6 @@
 ---
 title: 一貫性のあるリストのインデント
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
-original_slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}
@@ -39,7 +38,11 @@ original_slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 では、これらは文書の中でどのように表示されるのでしょうか。現時点では、以下のスタイルに似た状況になっています。
 
 ```css
-ul, li {margin-left: 0; padding-left: 0;}
+ul,
+li {
+  margin-left: 0;
+  padding-left: 0;
+}
 ```
 
 このリストをそのまま文書に落とし込むと、明らかなインデントがなく、マーカーがブラウザーのウィンドウの左端から外れてしまう危険性があります。
@@ -67,19 +70,28 @@ ul, li {margin-left: 0; padding-left: 0;}
 煮詰めていくと、こんな感じになります。Gecko、Internet Explorer、Opera の間でリストの表示を統一したい場合は、`<ul>` 要素の左マージンと左パディングの**両方**を設定する必要があります。このためには、`<li>` を意識する必要はありません。Netscape 6.xでの既定の表示を再現したい場合は、次のように書きます。
 
 ```css
-ul {margin-left: 0; padding-left: 40px;}
+ul {
+  margin-left: 0;
+  padding-left: 40px;
+}
 ```
 
 Internet Explorer や Opera のモデルの場合は、次のようになります。
 
 ```css
-ul {margin-left: 40px; padding-left: 0;}
+ul {
+  margin-left: 40px;
+  padding-left: 0;
+}
 ```
 
 もちろん、好きな値を入力することができます。お好みで両方とも `1.25em` に設定してください。ピクセルベースのインデントにこだわる必要はありません。もしリストをインデントがない状態にリセットしたい場合は、パディングとマージンの両方をゼロにする必要があります。
 
 ```css
-ul {margin-left: 0; padding-left: 0;}
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 ```
 
 ただし、そうすると、箇条書きがリストとその親要素の外にぶら下がってしまうことを忘れないでください。親要素が `body` の場合、箇条書きが完全にブラウザーウィンドウの外に出てしまい、表示されなくなる可能性が高くなります。

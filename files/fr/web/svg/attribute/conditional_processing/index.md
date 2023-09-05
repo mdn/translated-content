@@ -1,7 +1,6 @@
 ---
 title: Attributs SVG de traitement conditionnel
 slug: Web/SVG/Attribute/Conditional_Processing
-translation_of: Web/SVG/Attribute/Conditional_Processing
 ---
 
 Les _attributs SVG de traitement conditionnel_ sont tous les attributs qui peuvent être spécifiés sur des éléments SVG pour contrôler si l'élément sur lequel il s'applique doit s'afficher ou non.

@@ -2,6 +2,7 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 `readAsDataURL` 메서드는 컨텐츠를 특정 {{domxref("Blob")}} 이나 {{domxref("File")}}에서 읽어 오는 역할을 합니다. 읽어오는 read 행위가 종료되는 경우에, {{domxref("FileReader.readyState","readyState")}} 의 상태가 `DONE`이 되며, {{event("loadend")}} 이벤트가 트리거 됩니다. 이와 함께, base64 인코딩 된 스트링 데이터가 {{domxref("FileReader.result","result")}} 속성(attribute)에 담아지게 됩니다.
@@ -30,16 +31,16 @@ instanceOfFileReader.readAsDataURL(blob);
 
 ```js
 function previewFile() {
-  var preview = document.querySelector('img');
-  var file = document.querySelector('input[type=file]').files[0];
+  var preview = document.querySelector("img");
+  var file = document.querySelector("input[type=file]").files[0];
   var reader = new FileReader();
 
   reader.addEventListener(
-    'load',
+    "load",
     function () {
       preview.src = reader.result;
     },
-    false
+    false,
   );
 
   if (file) {
@@ -65,8 +66,8 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-  var preview = document.querySelector('#preview');
-  var files = document.querySelector('input[type=file]').files;
+  var preview = document.querySelector("#preview");
+  var files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
     // `file.name` 형태의 확장자 규칙에 주의하세요
@@ -74,7 +75,7 @@ function previewFiles() {
       var reader = new FileReader();
 
       reader.addEventListener(
-        'load',
+        "load",
         function () {
           var image = new Image();
           image.height = 100;
@@ -82,7 +83,7 @@ function previewFiles() {
           image.src = this.result;
           preview.appendChild(image);
         },
-        false
+        false,
       );
 
       reader.readAsDataURL(file);

@@ -1,7 +1,6 @@
 ---
 title: Imágenes, medios y elementos de formulario
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
-original_slug: Learn/CSS/Building_blocks/Imágenes_medios_y_elementos_de_formulario
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}

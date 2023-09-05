@@ -93,7 +93,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : A cor de fundo da tabela. É um [código RGB hexadecimal de 6 dígitos](/pt-BR/docs/Web/CSS/hex-color), prefixado por um '`#`'. Uma das [palavras-chave de cor] predefinidas (/pt-BR/docs/Web/CSS/named-color) também pode ser usada.
 
-     Para obter um efeito semelhante, use a propriedade CSS {{cssxref("background-color")}}.
+    Para obter um efeito semelhante, use a propriedade CSS {{cssxref("background-color")}}.
 
 - `border` {{Deprecated_inline}}
 
@@ -111,7 +111,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : Este atributo define o tamanho do espaço entre duas células em um valor percentual ou pixels. O atributo é aplicado horizontal e verticalmente, ao espaço entre o topo da tabela e as células da primeira linha, a esquerda da tabela e a primeira coluna, a direita da tabela e a última coluna e a parte inferior da tabela e a última linha.
 
-     Para obter um efeito semelhante, aplique a propriedade {{cssxref("border-spacing")}} ao elemento `<table>`. `border-spacing` não tem nenhum efeito se {{cssxref("border-collapse")}} estiver definido para recolher.
+    Para obter um efeito semelhante, aplique a propriedade {{cssxref("border-spacing")}} ao elemento `<table>`. `border-spacing` não tem nenhum efeito se {{cssxref("border-collapse")}} estiver definido para recolher.
 
 - `frame` {{Deprecated_inline}}
 

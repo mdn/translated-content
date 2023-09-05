@@ -1,17 +1,6 @@
 ---
 title: "Изучение HTML: руководства и уроки"
 slug: Learn/HTML
-tags:
-  - HTML
-  - Введение
-  - Для начинающих
-  - Изучение
-  - Интро
-  - Новичок
-  - Руководство
-  - С нуля
-  - Тема
-translation_of: Learn/HTML
 ---
 
 {{LearnSidebar}}

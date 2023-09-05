@@ -3,7 +3,6 @@ title: 基本的なネイティブフォームコントロール
 slug: Learn/Forms/Basic_native_form_controls
 l10n:
   sourceCommit: 25233e77fc3d3de84511203fd41eaddf361880ef
-original_slug: Learn/Forms/The_native_form_widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
@@ -342,7 +341,7 @@ http://foo.com?pos.x=123&pos.y=456
   </tbody>
 </table>
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事の最後に到着しましたが、もっとも大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Basic controls](/ja/docs/Learn/Forms/Test_your_skills:_Basic_controls) を見てください。
 

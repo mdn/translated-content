@@ -1,7 +1,6 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
-translation_of: Web/CSS/offset-position
 ---
 
 {{CSSRef}}{{seecompattable}}

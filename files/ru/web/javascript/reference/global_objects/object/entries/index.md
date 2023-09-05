@@ -1,7 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 
 {{JSRef}}
@@ -36,15 +35,24 @@ var obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // массив как объект
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // массив как объект c random сортировкой ключей
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(an_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getFoo is property which isn't enumerable
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
 my_obj.foo = "bar";
 console.log(Object.entries(my_obj)); // [ ['foo', 'bar'] ]
 

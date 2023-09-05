@@ -1,13 +1,8 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - Заголовки HTTP
-  - Справка
-  - User-agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("request header", "Заголовок запроса")}} **User-Agent** - это строка с характеристиками, по которым сервера и сетевые узлы могут определить тип приложения, операционную систему, производителя и/или версию {{Glossary("user agent", "пользовательского агента")}}.

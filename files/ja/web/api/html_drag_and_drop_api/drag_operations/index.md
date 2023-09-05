@@ -1,7 +1,6 @@
 ---
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-original_slug: DragDrop/Drag_Operations
 l10n:
   sourceCommit: 6718ec2ba92f3f29757ab0e71cb9ce279e1866ad
 ---
@@ -34,7 +33,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 const draggableElement = document.querySelector('p[draggable="true"]');
 
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -55,7 +54,7 @@ draggableElement.addEventListener("dragstart", (event) =>
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -308,7 +307,7 @@ function doDrop(event) {
     "text/plain",
   ];
   const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type)
+    supportedTypes.includes(type),
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);

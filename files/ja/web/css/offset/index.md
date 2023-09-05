@@ -29,7 +29,7 @@ offset: none;
 
 /* オフセット経路 */
 offset: ray(45deg closest-side);
-offset: path('M 100 100 L 300 100 L 200 300 z');
+offset: path("M 100 100 L 300 100 L 200 300 z");
 offset: url(arc.svg);
 
 /* オフセット経路に距離と回転が加わったもの */

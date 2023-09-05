@@ -1,7 +1,6 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
-translation_of: Web/API/PerformanceObserverEntryList
 ---
 
 {{APIRef("Performance Timeline API")}}

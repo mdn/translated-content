@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Operators/Decrement
 ## 構文
 
 ```js
-x--
---x
+x--;
+--x;
 ```
 
 ## 解説

@@ -1,7 +1,6 @@
 ---
 title: browserAction.setBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
 ---
 
 {{AddonSidebar()}}

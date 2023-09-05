@@ -1,14 +1,6 @@
 ---
 title: Bootstrap
 slug: orphaned/Glossary/Bootstrap
-tags:
-  - Bootstrap
-  - CSS
-  - Введение
-  - Глоссарий
-  - фреймворк
-translation_of: Glossary/Bootstrap
-original_slug: Glossary/Bootstrap
 ---
 
 Bootstrap - это бесплатный фреймворк {{Glossary("HTML")}} , {{Glossary("CSS")}} и {{Glossary("JavaScript")}} с открытым исходным кодом для быстрого создания адаптивных веб-сайтов.

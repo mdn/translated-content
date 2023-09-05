@@ -1,7 +1,6 @@
 ---
 title: 寫作風格指南
 slug: MDN/Writing_guidelines/Writing_style_guide
-original_slug: MDN/Guidelines/Writing_style_guide
 ---
 
 {{MDNSidebar}}

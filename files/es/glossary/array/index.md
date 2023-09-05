@@ -1,7 +1,6 @@
 ---
 title: Arreglos (Matrices)
 slug: Glossary/Array
-original_slug: Glossary/Arreglos
 ---
 
 Un arreglo (matriz) es una colección ordenada de datos (tanto {{glossary("Primitivo", "primitivos")}} u {{glossary("Object", "objetos")}} dependiendo del lenguaje). Los arreglos (matrices) se emplean para almacenar multiples valores en una sola variable, frente a las variables que sólo pueden almacenar un valor (por cada variable).

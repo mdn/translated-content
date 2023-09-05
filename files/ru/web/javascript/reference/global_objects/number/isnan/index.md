@@ -1,16 +1,8 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка
@@ -39,30 +31,32 @@ Number.isNaN(value)
 ```js
 Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0) // true
+Number.isNaN(0 / 0); // true
 
 // При использовании глобальной функции isNaN() это всё будет true
-Number.isNaN('NaN');      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN('blabla');   // false
+Number.isNaN("NaN"); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // А это всё в любом случае будет false
 Number.isNaN(true);
 Number.isNaN(null);
 Number.isNaN(37);
-Number.isNaN('37');
-Number.isNaN('37.37');
-Number.isNaN('');
-Number.isNaN(' ');
+Number.isNaN("37");
+Number.isNaN("37.37");
+Number.isNaN("");
+Number.isNaN(" ");
 ```
 
 ## Полифил
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
-  return typeof value === 'number' && isNaN(value);
-}
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
+    return typeof value === "number" && isNaN(value);
+  };
 ```
 
 ## Спецификации

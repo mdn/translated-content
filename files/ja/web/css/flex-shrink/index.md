@@ -47,9 +47,9 @@ flex-shrink: unset;
 #### HTML
 
 ```html
-全体の幅は 500px で、フレックスアイテムの flex-basis は 120px です。
-A、B、C には flex-shrink:1 が、D と E には flex-shrink:2 が設定されています。
-D と E の幅は他より狭くなります。
+全体の幅は 500px で、フレックスアイテムの flex-basis は 120px です。 A、B、C
+には flex-shrink:1 が、D と E には flex-shrink:2 が設定されています。 D と E
+の幅は他より狭くなります。
 <div id="content">
   <div class="box" style="background-color:red;">A</div>
   <div class="box" style="background-color:lightblue;">B</div>
@@ -69,7 +69,7 @@ D と E の幅は他より狭くなります。
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {

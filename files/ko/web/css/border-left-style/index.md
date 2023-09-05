@@ -69,23 +69,44 @@ border-left-style: unset;
 /* Define look of the table */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-left-style example classes */
-.b1 {border-left-style: none;}
-.b2 {border-left-style: hidden;}
-.b3 {border-left-style: dotted;}
-.b4 {border-left-style: dashed;}
-.b5 {border-left-style: solid;}
-.b6 {border-left-style: double;}
-.b7 {border-left-style: groove;}
-.b8 {border-left-style: ridge;}
-.b9 {border-left-style: inset;}
-.b10 {border-left-style: outset;}
+.b1 {
+  border-left-style: none;
+}
+.b2 {
+  border-left-style: hidden;
+}
+.b3 {
+  border-left-style: dotted;
+}
+.b4 {
+  border-left-style: dashed;
+}
+.b5 {
+  border-left-style: solid;
+}
+.b6 {
+  border-left-style: double;
+}
+.b7 {
+  border-left-style: groove;
+}
+.b8 {
+  border-left-style: ridge;
+}
+.b9 {
+  border-left-style: inset;
+}
+.b10 {
+  border-left-style: outset;
+}
 ```
 
 #### 결과

@@ -1,7 +1,6 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-translation_of: Web/SVG/Attribute/color
 ---
 
 {{SVGRef}}

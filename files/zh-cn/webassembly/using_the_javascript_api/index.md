@@ -5,7 +5,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-如果您已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。
+如果你已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。
 
 > **备注：** 如果你不熟悉本文中提到到基础概念并且需要更多的解释，先阅读 [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts) 然后再回来。
 
@@ -17,7 +17,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 ### 准备工作
 
-1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
+1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
 2. 确保本机使用的是支持 webassembly 的浏览器。Firefox 52+ 和 Chrome 57+ 是默认支持 webassembly 的。
 3. 然后，创建一个简单的 HTML 文件命名为 index.html 和并且你的本机的 wasm 文件处于同一目录下 ( 如果你没有模板可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) ).
 4. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示 (也可以在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式)见到):
@@ -81,7 +81,7 @@ fetch("simple.wasm")
 
 ### 在开发者工具查看 wasm
 
-在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击“xxx > wasm”。
+在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，你可以转到 Debugger Panel 然后单击“xxx > wasm”。
 
 ![](wasm-debug.png)
 
@@ -93,7 +93,7 @@ fetch("simple.wasm")
 
 然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的 —— 可能非常小的范围内。
 
-在 JavaScript 中，内存实例可以被认为是可调整大小的 ArrayBuffer，就像 ArrayBuffers 一样，一个 Web 应用程序可以创建许多独立的内存对象。您可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。
+在 JavaScript 中，内存实例可以被认为是可调整大小的 ArrayBuffer，就像 ArrayBuffers 一样，一个 Web 应用程序可以创建许多独立的内存对象。你可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。
 
 我们通过一个快速的例子来开始探索。
 
@@ -136,11 +136,11 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 
 ### 更复杂的内存示例
 
-让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在这里[memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)找到示例。
+让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在 [memory.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm) 中找到示例。
 
 1. 像前面那样在相同的目录下复制一份 memory.wasm。
 
-   > **备注：** 你可以在这里[memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)找到模块的文本表示形式。
+   > **备注：** 你可以在这里 [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) 找到模块的文本表示形式。
 
 2. 回到你的示例文件 memory.html，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：
 
@@ -172,7 +172,7 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 - 它们允许 JavaScript 在模块编译之前或者同时获取和创建内存的初始内容。
 - 它们允许一个单一的内存对象被多个模块实例导入，对于实现 WebAssembly 动态链接来说，这是一个关键的构建模块。
 
-> **备注：** 你可以在这里[memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([或实时运行](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) 找到我们的完整例子——这个版本使用了[fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js)函数。
+> **备注：** 你可以在这里 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)（[或实时运行](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)）找到我们的完整例子——这个版本使用了 [fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
 
 ## 表格
 
@@ -184,18 +184,18 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 当调用一个函数指针的时候，WebAssembly 调用函数提供索引。在进行索引和调用索引到的函数引用之前，可以对该索引进行表格的边界检查。因而，目前的表格是一个相当底层的用来安全地和可移植地编译底层编程语言特性的基本类型。
 
-表格可以通过[Table.prototype.set()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)和 [Table.prototype.grow()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow)进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于[动态链接技术](http://webassembly.org/docs/dynamic-linking/)来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过[Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)得到最新值。
+表格可以通过 [Table.prototype.set()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) 和 [Table.prototype.grow()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow) 进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于[动态链接技术](http://webassembly.org/docs/dynamic-linking/)来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过 [Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 得到最新值。
 
 ### 表格示例
 
-让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在[table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm)中找到该示例。
+让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在 [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm) 中找到该示例。
 
 1. 在一个新的目录中复制一份 table.wasm。
 
-   > **备注：** 你可以在[table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)中查看模块的文本表示。
+   > **备注：** 你可以在 [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) 中查看模块的文本表示。
 
-2. 创建一份[HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为`table.html`.
-3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的[\<script>](/zh-CN/docs/Web/HTML/Element/script)节点里面：
+2. 创建一份 [HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为`table.html`.
+3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 节点里面：
 
    ```js
    fetch("table.wasm")
@@ -214,9 +214,9 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
    console.log(tbl.get(1)()); // 42
    ```
 
-这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用[Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
+这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
 
-> **备注：** 你可以在[table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) 找到我们完整的示例——这个版本使用了[`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js)函数。
+> **备注：** 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
 
 ## 多样性
 

@@ -33,8 +33,8 @@ Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -49,17 +49,11 @@ function logKey(e) {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário                                                         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSSOM View','#dom-mouseevent-clienty', 'clientY')}}                 | {{Spec2('CSSOM View')}} | Redefine {{domxref("MouseEvent")}} de `long` para `double`. |
-| {{SpecName('DOM3 Events','#widl-MouseEvent-clientY','MouseEvent.clientY')}} | {{Spec2('DOM3 Events')}} | Sem mudanças vindas de {{SpecName('DOM2 Events')}}.       |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientY')}}         | {{Spec2('DOM2 Events')}} | Definição inicial.                                                 |
-
-<
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.MouseEvent.clientY")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,8 +1,9 @@
 ---
-title: Gamepad.buttons
+title: "Gamepad: buttons プロパティ"
+short-title: buttons
 slug: Web/API/Gamepad/buttons
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
@@ -56,7 +57,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = rAF(gameLoop);
-};
+}
 ```
 
 ## 仕様書

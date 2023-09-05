@@ -2,6 +2,7 @@
 title: Web Audio 사용을 분석하기 위한 도구들
 slug: Web/API/Web_Audio_API/Tools
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API 코드를 작성하는 중에, 여러분은 여러분이 만든 노드의 그래프를 분석하거나 그게 아니라면 여러분의 작업을 디버그할 도구가 필요하다고 생각했을 지도 모릅니다. 이 글은 여러분을 도울 이용 가능한 도구들에 대해 이야기합니다.

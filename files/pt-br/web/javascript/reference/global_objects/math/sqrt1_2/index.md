@@ -31,11 +31,11 @@ getRoot1_2(); // 0.7071067811865476
 
 ## Especificações
 
-| Specification                                                                    | Status                       | Comment                                            |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specification                                                | Status               | Comment                                            |
+| ------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                          | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}       | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

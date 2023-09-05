@@ -1,7 +1,6 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient()
 ---
 
 {{CSSRef}}
@@ -282,7 +281,7 @@ div {
 
 \-moz-前缀的规则用于兼容 Fx 3.6 to Fx 15 的火狐浏览器。 -webkit-前缀的规则用于兼容在 Android 4.3 以前版本、iOS 6.1 以前版本、Safari 6。当使用带前缀的规则时，不要加“to”关键字。
 
-> **备注：** 如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非您还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
+> **备注：** 如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非你还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
 
 ## 规范
 

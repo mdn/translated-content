@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: Web/API/Element/keydown_event
-translation_of: Web/API/GlobalEventHandlers/onkeydown
 ---
 
 {{ApiRef("HTML DOM")}}

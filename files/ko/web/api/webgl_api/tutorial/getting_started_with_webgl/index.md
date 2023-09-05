@@ -16,7 +16,8 @@ WebGL을 사용하여 3D 렌더링을 하는 데 첫 번째로 필요한 것은 
 ```html
 <body onload="start()">
   <canvas id="glcanvas" width="640" height="480">
-    Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    Your browser doesn't appear to support the HTML5
+    <code>&lt;canvas&gt;</code> element.
   </canvas>
 </body>
 ```
@@ -31,15 +32,15 @@ var gl; // A global variable for the WebGL context
 function start() {
   var canvas = document.getElementById("glcanvas");
 
-  gl = initWebGL(canvas);      // Initialize the GL context
+  gl = initWebGL(canvas); // Initialize the GL context
 
   // Only continue if WebGL is available and working
 
   if (gl) {
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);                      // Set clear color to black, fully opaque
-    gl.enable(gl.DEPTH_TEST);                               // Enable depth testing
-    gl.depthFunc(gl.LEQUAL);                                // Near things obscure far things
-    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);      // Clear the color as well as the depth buffer.
+    gl.clearColor(0.0, 0.0, 0.0, 1.0); // Set clear color to black, fully opaque
+    gl.enable(gl.DEPTH_TEST); // Enable depth testing
+    gl.depthFunc(gl.LEQUAL); // Near things obscure far things
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // Clear the color as well as the depth buffer.
   }
 }
 ```
@@ -63,8 +64,7 @@ function initWebGL(canvas) {
   try {
     // Try to grab the standard context. If it fails, fallback to experimental.
     gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  }
-  catch(e) {}
+  } catch (e) {}
 
   // If we don't have a GL context, give up now
   if (!gl) {

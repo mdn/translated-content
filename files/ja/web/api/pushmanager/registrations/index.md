@@ -33,20 +33,24 @@ var request = navigator.push.registrations();
 ```js
 var req = navigator.push.registrations();
 
-req.onsuccess = function(e) {
+req.onsuccess = function (e) {
   if (req.result.length > 0) {
     for (var i = 0, l = req.result.length; i < l; i++) {
-      console.log("Existing registration", req.result[i].pushEndpoint, req.result[i].version);
+      console.log(
+        "Existing registration",
+        req.result[i].pushEndpoint,
+        req.result[i].version,
+      );
     }
     // Reuse existing endpoints.
   } else {
     // Register for a new endpoint.
     var register = navigator.push.register();
-    register.onsuccess = function(e) {
+    register.onsuccess = function (e) {
       console.log("Registered new endpoint", register.result);
-    }
+    };
   }
-}
+};
 ```
 
 ## 仕様書

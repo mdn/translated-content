@@ -1,7 +1,6 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-translation_of: Web/CSS/text-combine-upright
 ---
 
 {{CSSRef}}

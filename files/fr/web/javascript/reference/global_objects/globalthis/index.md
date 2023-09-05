@@ -1,7 +1,6 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
 
 {{jsSidebar("Objects")}}

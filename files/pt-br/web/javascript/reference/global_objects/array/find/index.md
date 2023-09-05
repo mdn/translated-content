@@ -57,13 +57,13 @@ O conjunto dos elementos processados por `find` é definido antes do primeiro ac
 
 ```js
 const inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cerejas', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cerejas", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-    return fruit.name === 'cerejas';
+  return fruit.name === "cerejas";
 }
 
 console.log(inventory.find(isCherries));
@@ -74,14 +74,14 @@ console.log(inventory.find(isCherries));
 
 ```js
 const inventory = [
-    {name: 'maças', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
+  { name: "maças", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find( fruit => fruit.name === 'cherries' );
+const result = inventory.find((fruit) => fruit.name === "cherries");
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
 ### Encontrar um número primo em um array
@@ -109,12 +109,12 @@ Este método foi adicionado à especificação do ECMAScript 2015 e pode não es
 
 ```js
 if (!Array.prototype.find) {
-  Array.prototype.find = function(predicate) {
+  Array.prototype.find = function (predicate) {
     if (this === null) {
-      throw new TypeError('Array.prototype.find called on null or undefined');
+      throw new TypeError("Array.prototype.find called on null or undefined");
     }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
+    if (typeof predicate !== "function") {
+      throw new TypeError("predicate must be a function");
     }
     var list = Object(this);
     var length = list.length >>> 0;
@@ -134,8 +134,8 @@ if (!Array.prototype.find) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| Especificação                                                            | Status           | Comentário         |
+| ------------------------------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

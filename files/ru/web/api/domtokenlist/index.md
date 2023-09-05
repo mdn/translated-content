@@ -1,8 +1,8 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-translation_of: Web/API/DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 **DOMTokenList** интерфейс представляет собой набор разделённых пробелами токенов. Такой набор возвращается от {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}}, {{domxref("HTMLAreaElement.relList")}}, {{domxref("HTMLIframeElement.sandbox")}}, или {{domxref("HTMLOutputElement.htmlFor")}}. Он в начале индексируется 0 как в объектах JavaScript. DOMTokenList всегда чувствителен к регистру.
@@ -81,13 +81,11 @@ span.textContent = 'span classList is "' + classes + '"';
 
 {{ EmbedLiveSample('Обрезка_пробелов_и_удаление_дубликатов', '100%', 60) }}
 
-## Характеристики
+## Спецификации
 
-| Характеристики                                                                               | Статус                           | Комментарий           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}} | {{Spec2("DOM WHATWG")}} | Начальное определение |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

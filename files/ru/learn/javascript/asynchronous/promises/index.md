@@ -1,12 +1,6 @@
 ---
 title: Making asynchronous programming easier with async and await
 slug: Learn/JavaScript/Asynchronous/Promises
-tags:
-  - Асинхронность
-  - Гайд
-  - Для новичков
-translation_of: Learn/JavaScript/Asynchronous/Async_await
-original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}

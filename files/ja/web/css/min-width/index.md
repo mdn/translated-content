@@ -60,9 +60,13 @@ min-width: unset;
 ### 要素の最小幅を設定
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## 仕様書

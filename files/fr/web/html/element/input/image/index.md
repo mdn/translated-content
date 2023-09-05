@@ -1,7 +1,6 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
-translation_of: Web/HTML/Element/input/image
 ---
 
 {{HTMLSidebar}}

@@ -1,18 +1,17 @@
 ---
 title: Элемент <source>
 slug: Web/HTML/Element/source
-translation_of: Web/HTML/Element/source
 ---
 
-**HTML-элемент `<source>` **указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements).
+**HTML-элемент `<source>`** указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements).
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                                                                                                                                        |
-| Пропуск тегов                                              | Должен иметь открывающий тег; закрывающий тег необязателен.                                                                                                                                                                                                                                                                                               |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                         | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                                                                                                                          |
+| Пропуск тегов                                              | Должен иметь открывающий тег; закрывающий тег необязателен.                                                                                                                                                                                                                                                       |
 | Допустимые родители                                        | Медиа-элементы —{{HTMLElement("audio")}} или {{HTMLelement("video")}}—должен быть помещён перед любым [потоковым контентом](/ru/docs/HTML/Content_categories#Flow_content) или элементом{{HTMLElement("track")}}.Элемент {{HTMLElement("picture")}} , должен быть помещён перед элементом {{HTMLElement("img")}}. |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                                                                                                                                                                       |
-| DOM-интерфейс                                              | {{domxref("HTMLSourceElement")}}                                                                                                                                                                                                                                                                                                              |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                                                                                                                               |
+| DOM-интерфейс                                              | {{domxref("HTMLSourceElement")}}                                                                                                                                                                                                                                                                                  |
 
 ## Атрибуты
 
@@ -41,9 +40,9 @@ This example demonstrates how to offer a video in Ogg format for users whose bro
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   I'm sorry; your browser doesn't support HTML5 video.
 </video>
 ```

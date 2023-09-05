@@ -1,8 +1,8 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-translation_of: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 Css-свойство touch-action указывает как элемент будет управляться через тачскрин (например, при помощи возможности приближения (zooming), встроенной в браузер).
@@ -50,7 +50,7 @@ The `touch-action` property may be specified as either:
 - `manipulation`
   - : Enable panning and pinch zoom gestures, but disable additional non-standard gestures such as double-tap to zoom. Disabling double-tap to zoom removes the need for browsers to delay the generation of **click** events when the user taps the screen. This is an alias for "**pan-x pan-y pinch-zoom**" (which, for compatibility, is itself still valid).
 - `pan-left`, `pan-right,pan-up,pan-down` {{experimental_inline}}
-  - : Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (**pan-up**) means that the user is dragging their finger downward on the screen surface, and likewise **pan-left** means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, **"pan-left** **pan-right**" is invalid since "**pan-x**" is simpler, but "**pan-left** pan-down**" is valid).
+  - : Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (**pan-up**) means that the user is dragging their finger downward on the screen surface, and likewise **pan-left** means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, **"pan-left pan-right**" is invalid since "**pan-x**" is simpler, but "**pan-left pan-down**" is valid).
 - `pinch-zoom`
   - : Enable multi-finger panning and zooming of the page. This may be combined with any of the **pan-** values.
 
@@ -88,11 +88,11 @@ html {
 
 ## Спецификации
 
-| Specification                                                                                                | Status                                   | Comment                                                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                     | {{Spec2('Compat')}}                 | Added `pinch-zoom` property value.                                   |
+| Specification                                                                      | Status                        | Comment                                                              |
+| ---------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('Compat', '#touch-action', 'touch-action')}}                            | {{Spec2('Compat')}}           | Added `pinch-zoom` property value.                                   |
 | {{SpecName('Pointer Events 2', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events 2')}} | Added `pan-left`, `pan-right`, `pan-up`, `pan-down` property values. |
-| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events')}}     | Initial definition                                                   |
+| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}   | {{Spec2('Pointer Events')}}   | Initial definition                                                   |
 
 ## Поддержка браузерами
 

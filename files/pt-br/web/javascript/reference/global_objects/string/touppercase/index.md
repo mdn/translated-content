@@ -31,16 +31,16 @@ O método `toUpperCase()` retorna o valor da string convertido para letras maiú
 ### Uso básico
 
 ```js
-console.log('alfabeto'.toUpperCase()); // 'ALFABETO'
+console.log("alfabeto".toUpperCase()); // 'ALFABETO'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                                                | Status               | Comentário                                         |
+| -------------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                          | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

@@ -1,16 +1,13 @@
 ---
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.RelativeTimeFormat.supportedLocalesOf()`** renvoie un tableau contenant l'ensemble des locales, parmi celles fournies en argument, qui sont prises en charge pour le formatage internationalisé du temps relatif, sans avoir à utiliser la locale par défaut de l'environnement d'exécution.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-supportedlocalesof.html")}}
 
 ## Syntaxe
 

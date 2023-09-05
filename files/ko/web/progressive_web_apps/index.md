@@ -52,4 +52,4 @@ PWA는 발견 가능, 설치 가능, 연결 가능해야 하고, 네트워크에
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) — web-app auditing tool that includes PWA-auditing features
 - [localForage](https://localforage.github.io/localForage/) — `localStorage`-like _async_ storage, to improve your PWA's offline experience
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Progressive_web_apps/")}}

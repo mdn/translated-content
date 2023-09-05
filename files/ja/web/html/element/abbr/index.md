@@ -34,7 +34,7 @@ l10n:
 
 ### 文法的な考慮事項
 
-[文法的に数を表現する](https://ja.wikipedia.org/wiki/数_(文法))言語（つまり、項目の数が文の文法に影響する言語）では、`<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
+[文法的に数を表現する](<https://ja.wikipedia.org/wiki/数_(文法)>)言語（つまり、項目の数が文の文法に影響する言語）では、`<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
 
 ## 既定のスタイル
 
@@ -102,11 +102,14 @@ abbr {
 
 ```html
 <p>
-  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr></dfn> は、ウェブページの意味と構造を構築するために使用するマークアップ言語です。
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr></dfn>
+  は、ウェブページの意味と構造を構築するために使用するマークアップ言語です。
 </p>
 
 <p>
-  仕様 (<dfn id="spec">Specification</dfn>, <abbr>spec</abbr>) は、ある技術や API がどのように機能することを意図し、どのようにアクセスするのかを詳細に説明した文書です。
+  仕様 (<dfn id="spec">Specification</dfn>, <abbr>spec</abbr>) は、ある技術や
+  API
+  がどのように機能することを意図し、どのようにアクセスするのかを詳細に説明した文書です。
 </p>
 ```
 

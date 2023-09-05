@@ -70,7 +70,7 @@ My cat is very grumpy
 어떤 요소들은 내용을 갖지 않습니다, 그리고 이것을 **{{glossary("void element", "빈 요소")}}** 라고 합니다. {{htmlelement("img")}} 요소는 이미 우리 HTML 페이지에 있습니다.
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 이 요소는 두 개의 속성을 포함하고 있으나 닫는 `</img>` 태그가 없습니다. 이미지 요소는 효과를 주기 위해 콘텐츠를 감싸지 않기 때문입니다. 이 요소의 목적은 HTML 페이지에서 이미지가 나타날 위치에 이미지를 끼워 넣는 것입니다.
@@ -80,14 +80,14 @@ My cat is very grumpy
 각 HTML 요소의 기본적인 내용들은 살펴봤지만, 그것만으로는 별로 유용하지 않습니다. 이제 각 요소들이 어떻게 전체 HTML 페이지를 구성하는지 살펴볼 차례입니다. `index.html` 예제([파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 편에서 처음 봤던)에 넣은 코드를 다시 살펴봅시다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
@@ -107,7 +107,7 @@ My cat is very grumpy
 {{htmlelement("img")}} 요소를 다시 살펴보도록 합시다.
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 앞에서 설명한 것처럼 이 요소는 이미지가 나타나야 할 위치에 이미지를 끼워 넣습니다. 이미지 파일의 경로를 포함하는 `src` (source) 속성을 통해 이러한 일을 합니다.
@@ -170,7 +170,8 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 
 ```html
 <p>
-  At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... 
+  At Mozilla, we’re a global community of technologists, thinkers, and builders
+  working together ...
 </p>
 ```
 
@@ -185,7 +186,7 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
   <li>builders</li>
 </ul>
 
-<p>working together ... </p>
+<p>working together ...</p>
 ```
 
 여러분의 예시 페이지에서 순서 있는 목록과 순서 없는 목록을 추가해보세요.
@@ -197,21 +198,23 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 1. 어떤 단어를 선택하세요. "Mozilla Manifesto" 를 선택하겠습니다.
 2. 문자를 {{htmlelement("a")}} 요소로 감쌉니다, 이렇게요.
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. {{htmlelement("a")}} 요소에 `href` 속성을 줍니다, 이렇게요.
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. 이 속성의 값에 여러분이 연결하길 원하는 웹 주소를 채웁니다.
 
-    ```html
-    <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/en-US/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
+   ```
 
 만약 웹 주소의 시작부분에 _프로토콜_ 이라 불리는 `https://` 또는 `http://` 부분을 빼먹으셨다면 예상하지 못한 결과를 얻을 것입니다. 이렇게 링크를 만든 후에, 원하는 곳으로 이동하는지 클릭해보세요.
 

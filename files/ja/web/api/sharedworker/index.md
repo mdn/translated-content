@@ -41,7 +41,7 @@ _{{domxref("EventTarget")}} のメソッドを継承しています。_
 以下のコードでは `SharedWorker` オブジェクトを、 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して生成しています。どちらのスクリプトもこれを格納します。
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 ```
 
 どちらのスクリプトも、{{domxref("SharedWorker.port")}} プロパティを使用して作成された {{domxref("MessagePort")}} オブジェクトを通してワーカーにアクセスします。addEventListener を使用して onmessage イベントが関連づけられている場合、ポートはその `start()` メソッドを使用して手動で開始されます。
@@ -55,18 +55,18 @@ myWorker.port.start();
 ```js
 first.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 ワーカー内部では {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} ハンドラーを使用して、前述と同じポートに接続します。そのワーカーに関連するポートは {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} イベントの `ports` プロパティでアクセスできます。それから {{domxref("MessagePort") }} を使用して、ワーカーを開始します。ポートを始めるには `start()` メソッドを、メインスレッドから送られるメッセージを処理するには `onmessage` ハンドラーを使用します。
@@ -75,13 +75,13 @@ myWorker.port.onmessage = (e) => {
 onconnect = (e) => {
   const port = e.ports[0];
 
-  port.addEventListener('message', (e) => {
+  port.addEventListener("message", (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+};
 ```
 
 ## 仕様書

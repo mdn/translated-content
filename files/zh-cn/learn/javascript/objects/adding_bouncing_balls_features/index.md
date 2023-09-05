@@ -1,7 +1,6 @@
 ---
 title: 为“弹球”示例添加新功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -427,6 +426,6 @@ window.onkeydown = (e) => {
 
 ## 评定
 
-如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给您的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
+如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给你的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

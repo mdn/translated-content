@@ -60,7 +60,7 @@ slug: Web/CSS/box-flex
 ### box-flex の設定
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>-moz-box-flex example</title>
@@ -72,13 +72,13 @@ slug: Web/CSS/box-flex
         width: 100%;
       }
       div.example > p:nth-child(1) {
-        -moz-box-flex: 1;       /* Mozilla */
-        -webkit-box-flex: 1;    /* WebKit */
+        -moz-box-flex: 1; /* Mozilla */
+        -webkit-box-flex: 1; /* WebKit */
         border: 1px solid black;
       }
       div.example > p:nth-child(2) {
-        -moz-box-flex: 0;       /* Mozilla */
-        -webkit-box-flex: 0;    /* WebKit */
+        -moz-box-flex: 0; /* Mozilla */
+        -webkit-box-flex: 0; /* WebKit */
         border: 1px solid black;
       }
     </style>

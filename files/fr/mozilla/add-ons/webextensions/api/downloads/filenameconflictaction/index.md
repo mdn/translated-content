@@ -1,7 +1,6 @@
 ---
 title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 ---
 
 {{AddonSidebar()}}

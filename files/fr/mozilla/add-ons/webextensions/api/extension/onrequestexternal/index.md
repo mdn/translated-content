@@ -1,7 +1,6 @@
 ---
 title: extension.onRequestExternal
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
 ---
 
 {{AddonSidebar()}}

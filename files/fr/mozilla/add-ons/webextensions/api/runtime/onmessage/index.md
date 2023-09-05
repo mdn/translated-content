@@ -1,7 +1,6 @@
 ---
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
 
 {{AddonSidebar()}}

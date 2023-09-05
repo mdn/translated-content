@@ -1,7 +1,6 @@
 ---
 title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 ---
 
 {{AddonSidebar()}}

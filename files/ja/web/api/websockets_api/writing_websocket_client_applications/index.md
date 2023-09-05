@@ -39,7 +39,10 @@ webSocket = new WebSocket(url, protocols);
 この簡単な例では新しい WebSocket を作成し、 `wss://www.example.com/socketserver` のサーバーに接続します。この例では、ソケットのリクエストで "protocolOne" のカスタムプロトコルが指定されていますが、省略することもできます。
 
 ```js
-var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "wss://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 返されると、 {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} は `CONNECTING` です。 `readyState` は接続がデータを転送する準備ができたら `OPEN`になります。
@@ -47,7 +50,10 @@ var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protoco
 接続を開き、サポートしているプロトコルについて柔軟に対応したい場合は、プロトコルの配列を指定することができます。
 
 ```js
-var exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 接続が確立されると（つまり `readyState` が `OPEN`）、 {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} は、サーバーが選択したプロトコルを通知します。
@@ -83,8 +89,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -102,7 +108,7 @@ WebSockets はイベント駆動型 API です。メッセージを受信する�
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### JSON オブジェクトの受信と解釈
@@ -116,30 +122,38 @@ exampleSocket.onmessage = function (event) {
 これらの受信メッセージを解釈するコードは、次のようになります。
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

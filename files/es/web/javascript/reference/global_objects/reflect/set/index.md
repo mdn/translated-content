@@ -43,22 +43,22 @@ El método `Reflect.set` permite asignar una propiedad a un objeto. It does prop
 ```js
 // Objeto
 var obj = {};
-Reflect.set(obj, 'prop', 'value'); // true
+Reflect.set(obj, "prop", "value"); // true
 obj.prop; // "value"
 
 // Arreglo
-var arr = ['duck', 'duck', 'duck'];
-Reflect.set(arr, 2, 'goose'); // true
+var arr = ["duck", "duck", "duck"];
+Reflect.set(arr, 2, "goose"); // true
 arr[2]; // "goose"
 
 // Puede truncar un arreglo.
-Reflect.set(arr, 'length', 1); // true
+Reflect.set(arr, "length", 1); // true
 arr; // ["duck"];
 
 // Con solo un argumento, propertyKey y value son "undefined".
 var obj = {};
 Reflect.set(obj); // true
-Reflect.getOwnPropertyDescriptor(obj, 'undefined');
+Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
 ```
 

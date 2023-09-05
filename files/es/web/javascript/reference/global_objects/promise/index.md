@@ -1,7 +1,6 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-original_slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 
 {{JSRef}}
@@ -41,7 +40,7 @@ El método `.then()` toma hasta dos argumentos; el primer argumento es una funci
 ```js
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve('foo');
+    resolve("foo");
   }, 300);
 });
 
@@ -67,12 +66,16 @@ Usando {{JSxRef("Functions/Arrow_functions", "Expresiones de funciones de flecha
 
 ```js
 promise1
-  .then(value => { return value + ' y barra'; })
-  .then(value => { return value + ' y barra de nuevo'; })
-  .then(value => { return value + ' y de nuevo'; })
-  .then(value => { return value + ' y de nuevo'; })
-  .then(value => { console.log(value) })
-  .catch(err => { console.log(err) });
+  .then((value) => `${value} y barra`)
+  .then((value) => `${value} y barra de nuevo`)
+  .then((value) => `${value} y de nuevo`)
+  .then((value) => `${value} y de nuevo)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 La condición de terminación de una promesa determina el estado "establecido" de la próxima promesa en la cadena. Un estado "resuelto" indica una finalización exitosa de la promesa, mientras que un estado "rechazado" indica una falta de éxito. El valor de retorno de cada promesa resuelta en la cadena se pasa al siguiente `.then()`, mientras que el motivo del rechazo se pasa a la siguiente función de manejo de rechazo en la cadena.
@@ -100,11 +103,11 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 Se puede asignar una acción a una promesa ya "establecida". En ese caso, la acción (si corresponde) se realizará en la primera oportunidad asíncrona. Tenga en cuenta que se garantiza que las promesas serán asincrónicas. Por lo tanto, una acción para una promesa ya "establecida" ocurrirá solo después de que la pila se haya borrado y haya pasado un ciclo de reloj. El efecto es muy parecido al de `setTimeout(action,10)`.
 
 ```js
-const promiseA = new Promise( (resolutionFunc,rejectionFunc) => {
+const promiseA = new Promise((resolutionFunc, rejectionFunc) => {
   resolutionFunc(777);
 });
 // En este punto, "promiseA" ya está resuelto.
-promiseA.then( (val) => console.log("el registro asíncrono tiene val:",val) );
+promiseA.then((val) => console.log("el registro asíncrono tiene val:", val));
 console.log("registro inmediato");
 
 // produce salida en este orden:
@@ -121,15 +124,15 @@ Para representar mejor esto, podemos echar un vistazo más de cerca a cómo el c
 Para ilustrar esto un poco más, podemos echar un vistazo a cómo un [`<iframe>`](/es/docs/Web/HTML/Element/iframe) incrustado en un documento se comunica con su _host_. Dado que todas las API web conocen el objeto de configuración correspondiente, lo siguiente funcionará en todos los navegadores:
 
 ```html
-<!DOCTYPE html>
-<iframe></iframe> <!-- tenemos un campo aqui -->
-<script> // tenemos un campo aquí también
-  const bound = frames[0].postMessage.bind(
-    frames[0], "algunos datos", "*");
-    // bound es una función incorporada: no hay código de usuario
-    // en la pila, entonces, ¿qué campo usamos?
+<!doctype html> <iframe></iframe>
+<!-- tenemos un campo aqui -->
+<script>
+  // tenemos un campo aquí también
+  const bound = frames[0].postMessage.bind(frames[0], "algunos datos", "*");
+  // bound es una función incorporada: no hay código de usuario
+  // en la pila, entonces, ¿qué campo usamos?
   window.setTimeout(bound);
-  // esto todavía funciona, porque usamos el campo 
+  // esto todavía funciona, porque usamos el campo
   // más actual (el titular) en la pila
 </script>
 ```
@@ -137,15 +140,15 @@ Para ilustrar esto un poco más, podemos echar un vistazo a cómo un [`<iframe>`
 El mismo concepto se aplica a las promesas. Si modificamos un poco el ejemplo anterior, obtenemos esto:
 
 ```html
-<!DOCTYPE html>
-<iframe></iframe> <!-- tenemos un campo aqui -->
-<script> // tenemos un campo aquí también
-  const bound = frames[0].postMessage.bind(
-    frames[0], "algunos datos", "*");
-    // bound es una función incorporada: no hay código de usuario
-    // en la pila, entonces, ¿qué campo usamos?
+<!doctype html> <iframe></iframe>
+<!-- tenemos un campo aqui -->
+<script>
+  // tenemos un campo aquí también
+  const bound = frames[0].postMessage.bind(frames[0], "algunos datos", "*");
+  // bound es una función incorporada: no hay código de usuario
+  // en la pila, entonces, ¿qué campo usamos?
   Promise.resolve(undefined).then(bound);
-  // esto todavía funciona, porque usamos el campo 
+  // esto todavía funciona, porque usamos el campo
   // más actual (el titular) en la pila
 </script>
 ```
@@ -154,7 +157,7 @@ Si cambiamos esto para que el `<iframe>` en el documento escuche los mensajes de
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "algunos datos", "*");
@@ -164,14 +167,18 @@ Si cambiamos esto para que el `<iframe>` en el documento escuche los mensajes de
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
-window.addEventListener("message", (event) => {
-  document.querySelector("#text").textContent = "Hola";
-  // este código solo se ejecutará en navegadores que rastrean 
-  // el objeto de configuración titular
-  console.log(event);
-}, false);
+  window.addEventListener(
+    "message",
+    (event) => {
+      document.querySelector("#text").textContent = "Hola";
+      // este código solo se ejecutará en navegadores que rastrean
+      // el objeto de configuración titular
+      console.log(event);
+    },
+    false,
+  );
 </script>
 ```
 
@@ -223,6 +230,7 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 Consulte la [guía de Microtask](/es/docs/Web/API/HTML_DOM_API/Microtask_guide) para obtener más información sobre cómo estos métodos utilizan la cola y los servicios de Microtask.
 
 - {{jsxref("Promise.prototype.catch()")}}
+
   - : Agrega un _callback_ del controlador de rechazo a la promesa y devuelve una nueva promesa que se resuelve en el valor de devolución del _callback_ si se llama, o en su valor de cumplimiento original si la promesa se cumple.
 
 - {{jsxref("Promise.prototype.then()")}}
@@ -236,20 +244,20 @@ Consulte la [guía de Microtask](/es/docs/Web/API/HTML_DOM_API/Microtask_guide) 
 
 ```js
 let myFirstPromise = new Promise((resolve, reject) => {
-  // Llamamos a resolve(...) cuando lo que estábamos haciendo de forma 
+  // Llamamos a resolve(...) cuando lo que estábamos haciendo de forma
   // asíncrona fue exitoso, y reject(...) cuando falló.
   // En este ejemplo, usamos setTimeout(...) para simular código asíncrono.
   // En realidad, probablemente usará algo como XHR o una API HTML5.
-  setTimeout( function() {
-    resolve("Éxito!")  // ¡Hurra! ¡Todo salió bien!
-  }, 250)
-})
+  setTimeout(function () {
+    resolve("Éxito!"); // ¡Hurra! ¡Todo salió bien!
+  }, 250);
+});
 
 myFirstPromise.then((successMessage) => {
   // successMessage es lo que hayamos pasado en la función resolve(...) anterior.
-  // No tiene que ser una cadena, pero si es solo un mensaje de éxito, 
+  // No tiene que ser una cadena, pero si es solo un mensaje de éxito,
   // probablemente lo sea.
-  console.log("¡Hurra! " + successMessage)
+  console.log("¡Hurra! " + successMessage);
 });
 ```
 
@@ -266,37 +274,36 @@ Este código se puede ejecutar en NodeJS. La comprensión se mejora al ver que l
 ```js
 "use strict";
 
-// Para experimentar con el manejo de errores, los valores de "threshold" 
+// Para experimentar con el manejo de errores, los valores de "threshold"
 // causan errores aleatoriamente
 const THRESHOLD_A = 8; // puede usar cero 0 para garantizar el error
 
 function tetheredGetNumber(resolve, reject) {
   try {
-    setTimeout(
-      function() {
-        const randomInt = Date.now();
-        const value = randomInt % 10;
-        try {
-          if(value >= THRESHOLD_A) {
-            throw new Error(`Demasiado grande: ${value}`);
-          }
-        } catch(msg) {
-            reject(`Error en el  callback ${msg}`);
+    setTimeout(function () {
+      const randomInt = Date.now();
+      const value = randomInt % 10;
+      try {
+        if (value >= THRESHOLD_A) {
+          throw new Error(`Demasiado grande: ${value}`);
         }
+      } catch (msg) {
+        reject(`Error en el  callback ${msg}`);
+      }
       resolve(value);
       return;
     }, 500);
-    // Para experimentar con un error en la configuración, 
+    // Para experimentar con un error en la configuración,
     // descomente el siguiente 'throw'.
     // throw new Error("Mala configuración");
-  } catch(err) {
+  } catch (err) {
     reject(`Error durante la configuración: ${err}`);
   }
   return;
 }
 
 function determineParity(value) {
-  const isOdd = value % 2 ? true : false ;
+  const isOdd = value % 2 ? true : false;
   const parityInfo = { theNumber: value, isOdd: isOdd };
   return parityInfo;
 }
@@ -308,35 +315,34 @@ function troubleWithGetNumber(reason) {
 
 function promiseGetWord(parityInfo) {
   // La función "tetheredGetWord()" obtiene "parityInfo" como variable de cierre.
-  const tetheredGetWord = function(resolve,reject) {
+  const tetheredGetWord = function (resolve, reject) {
     const theNumber = parityInfo.theNumber;
     const threshold_B = THRESHOLD_A - 1;
-    if(theNumber >= threshold_B) {
+    if (theNumber >= threshold_B) {
       reject(`Todavía demasiado grande: ${theNumber}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? 'impar' : 'par';
+      parityInfo.wordEvenOdd = parityInfo.isOdd ? "impar" : "par";
       resolve(parityInfo);
     }
     return;
-  }
+  };
   return new Promise(tetheredGetWord);
 }
 
-(new Promise(tetheredGetNumber))
-  .then(determineParity,troubleWithGetNumber)
+new Promise(tetheredGetNumber)
+  .then(determineParity, troubleWithGetNumber)
   .then(promiseGetWord)
   .then((info) => {
-    console.log("Got: ",info.theNumber," , ", info.wordEvenOdd);
+    console.log("Got: ", info.theNumber, " , ", info.wordEvenOdd);
     return info;
   })
   .catch((reason) => {
-    if(reason === -999) {
+    if (reason === -999) {
       console.error("Había manejado previamente el error");
-    }
-    else {
+    } else {
       console.error(`Problema con promiseGetWord(): ${reason}`);
     }
-   })
+  })
   .finally((info) => console.log("Todo listo"));
 ```
 
@@ -363,41 +369,51 @@ let promiseCount = 0;
 
 function testPromise() {
   let thisPromiseCount = ++promiseCount;
-  let log = document.getElementById('log');
+  let log = document.getElementById("log");
   // inicio
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Inicio<br>');
+  log.insertAdjacentHTML("beforeend", thisPromiseCount + ") Inicio<br>");
   // Hacemos una nueva promesa: prometemos un recuento numérico de esta promesa,
   // a partir de 1 (después de esperar 3 segundos)
   let p1 = new Promise((resolve, reject) => {
     // Se llama a la función ejecutora con la capacidad de resolver
     // o rechazar la promesa.
-    log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promesa construida<br>');
+    log.insertAdjacentHTML(
+      "beforeend",
+      thisPromiseCount + ") Promesa construida<br>",
+    );
     // Esto es solo un ejemplo para crear asincronismo.
-    window.setTimeout(function() {
+    window.setTimeout(
+      function () {
         // ¡Cumplimos la promesa!
         resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // Definimos qué hacer cuando la promesa se resuelve con la llamada then()
   // y qué hacer cuando la promesa se rechaza con la llamada catch()
-  p1.then(function(val) {
+  p1.then(function (val) {
     // Mostrar el valor de cumplimiento
-    log.insertAdjacentHTML('beforeend', val + ') Promesa completada<br>');
+    log.insertAdjacentHTML("beforeend", val + ") Promesa completada<br>");
   }).catch((reason) => {
     // Mostrar el motivo del rechazo
     console.log(`Manejar la promesa rechazada (${reason}) aquí.`);
   });
   // fin
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promesa creada<br>');
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisPromiseCount + ") Promesa creada<br>",
+  );
 }
 
 if ("Promise" in window) {
   let btn = document.getElementById("make-promise");
-  btn.addEventListener("click",testPromise);
+  btn.addEventListener("click", testPromise);
 } else {
-  log = document.getElementById('log');
-  log.textContent = "El ejemplo en vivo no está disponible porque su navegador no es compatible con la interfaz <code>Promise<code>.";
+  log = document.getElementById("log");
+  log.textContent =
+    "El ejemplo en vivo no está disponible porque su navegador no es compatible con la interfaz <code>Promise<code>.";
 }
 ```
 

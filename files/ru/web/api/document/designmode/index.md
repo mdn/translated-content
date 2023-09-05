@@ -1,16 +1,8 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - JS
-  - designmode
-  - editor
-translation_of: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 `document.designMode` переключает режим редактирования для всего документа. Допустимые значения: "on" и "off". В соответствии со спецификацией, это свойство по умолчанию имеет значение "off". Firefox следует этому стандарту. В более ранних версии Chrome и IE это свойство по умолчанию имеет значение "inherit". Начиная с Chrome 43 значение по умолчанию "off", а значение "inherit" более не поддерживается. В IE6-10 значение должно быть указанно с большой буквы ("On" и "Off")
