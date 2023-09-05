@@ -86,14 +86,14 @@ slug: Web/HTML/Viewport_meta_tag
 
 - `resizes-visual`
 
-  - : [虚拟视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
+  - : [可见视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
 
 - `resizes-content`
 
   - : [视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
 
 - `overlays-content`
-  - : [虚拟视口](/zh-CN/docs/Glossary/Viewport)和[视口](/zh-CN/docs/Glossary/Viewport)都不会被交互式组件调整大小。
+  - : [可见视口](/zh-CN/docs/Glossary/Viewport)和[视口](/zh-CN/docs/Glossary/Viewport)都不会被交互式组件调整大小。
 
 当[视口](/zh-CN/docs/Glossary/Viewport)的大小被调整时，初始[布局和包含块](/zh-CN/docs/Web/CSS/Containing_block)的大小也会被调整，从而影响[视口单位](/zh-CN/docs/Web/CSS/length)的计算所得的大小。
 
