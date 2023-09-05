@@ -26,7 +26,7 @@ View Transitions API 提供了一种更简单的方法来处理必需的 DOM 更
 
 ### 创建基本视图过渡
 
-例如，一个 SPA 应用可能包含获取新内容和响应某种事件并更新 DOM 的功能，例如点击导航链接或从服务器推送更新。在我们的 [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) 中，我们将其简化为一个 `displayNewImage()` 函数，该函数根据点击的缩略图显示新的全尺寸图像。我们将其封装在 `updateView()` 函数中，该函数仅在浏览器支持时才调用 View Transitions API：
+例如，一个 SPA 应用可能包含获取新内容和响应某种事件并更新 DOM 的功能，例如点击导航链接或从服务器推送更新。在我们的[基础视图过渡演示](https://mdn.github.io/dom-examples/view-transitions/)中，我们将其简化为一个 `displayNewImage()` 函数，该函数根据点击的缩略图显示新的全尺寸图像。我们将其封装在 `updateView()` 函数中，该函数仅在浏览器支持时才调用 View Transitions API：
 
 ```js
 function updateView(event) {

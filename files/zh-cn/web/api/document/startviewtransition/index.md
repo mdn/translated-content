@@ -29,7 +29,7 @@ startViewTransition(callback)
 
 ### 基本用法
 
-在 [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) 中，`updateView()` 函数处理支持和不支持 View Transitions API 的浏览器。在支持的浏览器中，我们调用 `startViewTransition()` 来启动视图过渡，而不关心返回值。
+在[基础视图过渡演示](https://mdn.github.io/dom-examples/view-transitions/)中，`updateView()` 函数处理支持和不支持 View Transitions API 的浏览器。在支持的浏览器中，我们调用 `startViewTransition()` 来启动视图过渡，而不关心返回值。
 
 ```js
 function updateView(event) {
