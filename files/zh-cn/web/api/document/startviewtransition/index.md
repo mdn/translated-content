@@ -1,11 +1,7 @@
 ---
-title: "Document: startViewTransition() method"
+title: "Document.startViewTransition()"
 short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
-page-type: web-api-instance-method
-status:
-  - experimental
-browser-compat: api.Document.startViewTransition
 ---
 
 {{APIRef("Document")}}{{SeeCompatTable}}

@@ -1,11 +1,7 @@
 ---
-title: "ViewTransition: finished property"
+title: "ViewTransition.finished"
 short-title: finished
 slug: Web/API/ViewTransition/finished
-page-type: web-api-instance-property
-status:
-  - experimental
-browser-compat: api.ViewTransition.finished
 ---
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}

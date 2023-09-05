@@ -1,10 +1,6 @@
 ---
 title: "::view-transition-new"
 slug: Web/CSS/::view-transition-new
-page-type: css-pseudo-element
-status:
-  - experimental
-browser-compat: css.selectors.view-transition-new
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

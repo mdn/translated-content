@@ -1,10 +1,6 @@
 ---
 title: "::view-transition-old"
 slug: Web/CSS/::view-transition-old
-page-type: css-pseudo-element
-status:
-  - experimental
-browser-compat: css.selectors.view-transition-old
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

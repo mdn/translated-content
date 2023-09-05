@@ -1,10 +1,6 @@
 ---
 title: "::view-transition-group"
 slug: Web/CSS/::view-transition-group
-page-type: css-pseudo-element
-status:
-  - experimental
-browser-compat: css.selectors.view-transition-group
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

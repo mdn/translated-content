@@ -1,10 +1,6 @@
 ---
 title: "::view-transition-image-pair"
 slug: Web/CSS/::view-transition-image-pair
-page-type: css-pseudo-element
-status:
-  - experimental
-browser-compat: css.selectors.view-transition-image-pair
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

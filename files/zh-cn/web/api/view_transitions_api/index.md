@@ -1,10 +1,6 @@
 ---
 title: View Transitions API
 slug: Web/API/View_Transitions_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat: api.Document.startViewTransition
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
