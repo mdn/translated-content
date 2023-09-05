@@ -22,7 +22,7 @@ call(thisArg, arg1, arg2, /* …, */ argN)
 
 - `thisArg`
   - : 在调用 `func` 时要使用的 `this` 值。如果函数不在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 将被替换为全局对象，并且原始值将被转换为对象。
-- `arg1`, …, `argN` {{optional_inline}}
+- `arg1, …, argN` {{optional_inline}}
   - : 函数的参数。
 
 ## 返回值
@@ -45,15 +45,15 @@ call(thisArg, arg1, arg2, /* …, */ argN)
 
 ```js
 function greet() {
-  console.log(this.animal, "通常在", this.sleepDuration, "之间睡觉");
+  console.log(this.animal, "的睡眠时间一般在", this.sleepDuration, "之间");
 }
 
 const obj = {
   animal: "猫",
-  sleepDuration: "12 到 16 点",
+  sleepDuration: "12 到 16 小时",
 };
 
-greet.call(obj); // 猫 通常在 12 到 16 点 之间睡觉
+greet.call(obj); // 猫 的睡眠时间一般在 12 到 16 小时 之间
 ```
 
 ### 使用 call() 在不指定第一个参数的情况下调用函数
@@ -67,7 +67,7 @@ function display() {
   console.log(`globProp 的值是 ${this.globProp}`);
 }
 
-display.call(); // Logs "globProp 的值是 Wisen"
+display.call(); // 输出“globProp 的值是 Wisen”
 ```
 
 在严格模式下，`this` 的值不会被替换，因此它保持为 `undefined`。
