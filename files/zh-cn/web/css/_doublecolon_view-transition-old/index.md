@@ -32,7 +32,7 @@ html::view-transition-old(*) {
 }
 ```
 
-> **注意：** 视图过渡样式表也会额外设置一些样式来动画化 `::view-transition-old`。这些样式是在视图过渡期间动态生成的；有关更多详细信息，请参阅规范中的 [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) 和 [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) 部分。
+> **备注：** 视图过渡样式表也会额外设置一些样式来动画化 `::view-transition-old`。这些样式是在视图过渡期间动态生成的；有关更多详细信息，请参阅规范中的 [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) 和 [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) 部分。
 
 ## 语法
 

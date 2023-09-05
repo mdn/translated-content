@@ -22,7 +22,7 @@ slug: Web/API/View_Transitions_API
 
 View Transitions API 提供了一种更简单的方法来处理必需的 DOM 更改和过渡动画。
 
-> **注意：** View Transitions API 目前不支持跨文档视图过渡，但这已计划在未来的规范级别中实现，并正在积极开发中。
+> **备注：** View Transitions API 目前不支持跨文档视图过渡，但这已计划在未来的规范级别中实现，并正在积极开发中。
 
 ### 创建基本视图过渡
 
@@ -112,7 +112,7 @@ figcaption {
 
 `view-transition-name` 的值可以是除 `none` 之外的任何值 —— `none` 值表示该元素不参与视图过渡。
 
-> **注意：** `view-transition-name` 必须是唯一的。如果两个渲染元素同时具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将拒绝并跳过过渡。
+> **备注：** `view-transition-name` 必须是唯一的。如果两个渲染元素同时具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将拒绝并跳过过渡。
 
 ### 自定义动画
 
@@ -186,7 +186,7 @@ figcaption {
 
 这是有效的，因为默认情况下，`::view-transition-group` 在新旧视图之间过渡高度和宽度。我们只需要在两个状态上设置固定的高度，就可以使其正常工作。
 
-> **注意：** [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) 包含了其他几个自定义示例。
+> **备注：** [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) 包含了其他几个自定义示例。
 
 ### 使用 JavaScript 控制动画
 
