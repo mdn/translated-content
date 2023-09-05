@@ -29,11 +29,11 @@ slug: Web/CSS/text-emphasis
 text-emphasis: none; /* 圏点なし */
 
 /* <string> 値 */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
 
 /* キーワード値 */
 text-emphasis: filled;
@@ -92,8 +92,8 @@ text-emphasis: unset;
 
 ```css
 h2 {
-  -webkit-text-emphasis: triangle #D55;
-  text-emphasis: triangle #D55;
+  -webkit-text-emphasis: triangle #d55;
+  text-emphasis: triangle #d55;
 }
 ```
 

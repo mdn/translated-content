@@ -50,16 +50,16 @@ console.log(alphaNumeric)  // Result: ['a', 'b', 'c', [1, 2, 3] ]
 配列状のオブジェクトは、既定で展開しません。`Symbol.isConcatSpreadable` 平坦化した配列を取得するには、`true` に設定する必要があります：
 
 ```js
-let x = [1, 2, 3]
+let x = [1, 2, 3];
 
 let fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
-  0: 'hello',
-  1: 'world'
-}
+  0: "hello",
+  1: "world",
+};
 
-x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
+x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
 > **メモ:** `length` プロパティは、追加するオブジェクトプロパティの数を制御するために使用されます。上記の例では、`length:2` は 2 つのプロパティを追加する必要があることを示しています。

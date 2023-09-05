@@ -100,11 +100,11 @@ background: unset;
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
 ```
 
 #### CSS

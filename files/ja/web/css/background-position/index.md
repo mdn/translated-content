@@ -28,7 +28,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* 複数の画像 */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* 辺からのオフセット値 */
 background-position: bottom 10px right 20px;
@@ -139,7 +141,7 @@ X 軸を例にすると、幅 300px の画像があり、それを幅 100px の�
 ```css
 /* すべての <div> で共有される */
 div {
-  background-color: #FFEE99;
+  background-color: #ffee99;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px;
@@ -148,19 +150,19 @@ div {
 
 /* これらの例は background 一括指定プロパティを使用しています */
 .exampleone {
-  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #FFEE99 left 4em bottom 1em no-repeat;
+  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* 複数の背景画像: 各画像は対応する位置スタイルに、
    最初に指定されたものから順に対応付けられます。 */
 .examplethree {
-  background-image:    url("startransparent.gif"),
-                       url("catfront.png");
-  background-position: 0px 0px,
-                       right 3em bottom 2em;
+  background-image: url("startransparent.gif"), url("catfront.png");
+  background-position:
+    0px 0px,
+    right 3em bottom 2em;
 }
 ```
 

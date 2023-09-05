@@ -17,16 +17,22 @@ slug: Web/CSS/inherit
 
 ```css
 /* 第 2 レベルのヘッダーを緑色にする */
-h2 { color: green; }
+h2 {
+  color: green;
+}
 
 /* ... ただしサイドバーの中にあるものは、親要素の色を使用する */
-#sidebar h2 { color: inherit; }
+#sidebar h2 {
+  color: inherit;
+}
 ```
 
 この例の中で、サイドバー内にある `h2` 要素は異なる色になる可能性があります。例えば、以下のルールに一致する div の子であった場合は ...
 
 ```css
-div#current { color: blue; }
+div#current {
+  color: blue;
+}
 ```
 
 ... 青になるでしょう。

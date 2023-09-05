@@ -20,7 +20,7 @@ l10n:
 次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、リクエストのリファラーを変数に保存しています。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myReferrer = myRequest.referrer; // returns "about:client" by default
 ```
 

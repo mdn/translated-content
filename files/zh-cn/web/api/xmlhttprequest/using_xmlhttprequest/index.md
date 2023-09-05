@@ -849,7 +849,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 ## 跨站的 XMLHttpRequest
 
-现代浏览器可以通过执行 WebApps 工作小组通过的 [Access Control for Cross-Site Requests](/zh-CN/docs/Web/HTTP/Access_control_CORS) 标注来支持跨站请求。只要服务器端的配置允许您从您的 Web 应用发送请求，就可以使用 `XMLHttpRequest` 。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
+现代浏览器可以通过执行 WebApps 工作小组通过的 [Access Control for Cross-Site Requests](/zh-CN/docs/Web/HTTP/Access_control_CORS) 标注来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest` 。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
 
 ## 绕过缓存
 

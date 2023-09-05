@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOption
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -41,14 +41,14 @@ resolvedOptions()
 ### resolvedOptions メソッドの使用
 
 ```js
-var germanFakeRegion = new Intl.DateTimeFormat('de-XX', { timeZone: 'UTC' });
+var germanFakeRegion = new Intl.DateTimeFormat("de-XX", { timeZone: "UTC" });
 var usedOptions = germanFakeRegion.resolvedOptions();
 
-usedOptions.locale;          // "de"
-usedOptions.calendar;        // "gregory"
+usedOptions.locale; // "de"
+usedOptions.calendar; // "gregory"
 usedOptions.numberingSystem; // "latn"
-usedOptions.timeZone;        // "UTC"
-usedOptions.month;           // "numeric"
+usedOptions.timeZone; // "UTC"
+usedOptions.month; // "numeric"
 ```
 
 ## 仕様書

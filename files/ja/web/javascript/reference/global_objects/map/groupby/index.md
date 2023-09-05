@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.groupToMap()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 ---
 
 {{JSRef}} {{SeeCompatTable}}
@@ -18,19 +17,33 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 
 ```js
 // アロー関数
-groupToMap((element) => { /* … */ } )
-groupToMap((element, index) => { /* … */ } )
-groupToMap((element, index, array) => { /* … */ } )
+groupToMap((element) => {
+  /* … */
+});
+groupToMap((element, index) => {
+  /* … */
+});
+groupToMap((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-groupToMap(callbackFn)
-groupToMap(callbackFn, thisArg)
+groupToMap(callbackFn);
+groupToMap(callbackFn, thisArg);
 
 // インラインコールバック関数
-groupToMap(function(element) { /* … */ })
-groupToMap(function(element, index) { /* … */ })
-groupToMap(function(element, index, array){ /* … */ })
-groupToMap(function(element, index, array) { /* … */ }, thisArg)
+groupToMap(function (element) {
+  /* … */
+});
+groupToMap(function (element, index) {
+  /* … */
+});
+groupToMap(function (element, index, array) {
+  /* … */
+});
+groupToMap(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -112,11 +125,11 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
 
 ```js
 const inventory = [
-  { name: 'asparagus', type: 'vegetables', quantity: 9 },
-  { name: 'bananas',  type: 'fruit', quantity: 5 },
-  { name: 'goat', type: 'meat', quantity: 23 },
-  { name: 'cherries', type: 'fruit', quantity: 12 },
-  { name: 'fish', type: 'meat', quantity: 22 }
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
 ];
 ```
 
@@ -124,9 +137,11 @@ const inventory = [
 返される `result` オブジェクトは `Map` なので、配列を返すにはキーを指定して `get()` を呼び出す必要があります。
 
 ```js
-const restock  = { restock: true };
+const restock = { restock: true };
 const sufficient = { restock: false };
-const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
+const result = inventory.groupToMap(({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 ```
@@ -141,12 +156,12 @@ console.log(result.get(restock));
 
 ```js
 // The key can be modified and still used
-restock['fast']  = true ;
+restock["fast"] = true;
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 
 // A new key can't be used, even if it has the same structure!
-const restock2  = { restock: true };
+const restock2 = { restock: true };
 console.log(result.get(restock2));
 // expected output: undefined
 ```

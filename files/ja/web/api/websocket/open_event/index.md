@@ -14,9 +14,9 @@ l10n:
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('open', (event) => { })
+addEventListener("open", (event) => {});
 
-onopen = (event) => { }
+onopen = (event) => {};
 ```
 
 ## イベント型
@@ -27,11 +27,11 @@ onopen = (event) => { }
 
 ```js
 // WebSocket の接続を作成
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // 接続が開かれた場合
-socket.addEventListener('open', (event) => {
-  socket.send('Hello Server!');
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
 });
 ```
 

@@ -340,7 +340,7 @@ button {
 
 [クロスブラウザーのテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)のモジュールでは、ブラウザー間の対応の問題を解決するための戦略について説明します。
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Flexbox: フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills) を見てください。
 

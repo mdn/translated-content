@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 ## 構文
 
 ```js
-x &= y // x = x & y
+x &= y; // x = x & y
 ```
 
 ## 例

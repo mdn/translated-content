@@ -1,5 +1,5 @@
 ---
-title: Advanced text formatting
+title: 고급 텍스트 서식
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
@@ -35,76 +35,74 @@ slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
   </tbody>
 </table>
 
-## Description lists
+## 정의 목록
 
-[HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 [mark up basic lists](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 를 볼 수 있습니다. 하지만 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 **description lists**에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다. 아래의 예시를 살펴봅시다.
+[HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 [mark up basic lists](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 를 볼 수 있습니다. 하지만 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 **정의 목록**에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다. 아래의 예시를 살펴봅시다.
 
 ```
-soliloquy
-In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
-monologue
-In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
-aside
-In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
+독백
+드라마에서 등장인물이 혼잣말을 하며 내면의 생각이나 감정을 표현하고 그 과정에서 청중에게 전달합니다(다른 등장인물에게는 전달하지 않음).
+독백
+드라마에서 등장인물이 자신의 생각을 큰 소리로 말하여 청중 및 다른 등장인물과 공유하는 것을 말합니다.
+방백
+드라마에서 캐릭터가 유머러스하거나 극적인 효과를 위해 청중에게만 의견을 공유하는 경우. 일반적으로 느낌, 생각 또는 추가 배경 정보입니다.
 ```
 
-Description lists 는 다른 타입의 리스트와 다르게 {{htmlelement("dl")}} 태그를 사용합니다. 용어, 질문과 같은 상위 항목은 {{htmlelement("dt")}} (description term) 요소를 사용하고,\ 정의, 답변과 같은 하위 항목은 {{htmlelement("dd")}} (description definition) 요소를 사용합니다. 이해를 돕기위해 아래의 마크업 예시가 준비되어 있습니다.
+정의 목록은 다른 타입의 리스트와 다르게 {{htmlelement("dl")}} 태그를 사용합니다. 용어, 질문과 같은 상위 항목은 {{htmlelement("dt")}} (description term) 요소를 사용하고,\ 정의, 답변과 같은 하위 항목은 {{htmlelement("dd")}} (description definition) 요소를 사용합니다. 이해를 돕기위해 아래의 마크업 예시가 준비되어 있습니다.
 
 ```html
 <dl>
-  <dt>soliloquy</dt>
+  <dt>독백</dt>
   <dd>
-    In drama, where a character speaks to themselves, representing their inner
-    thoughts or feelings and in the process relaying them to the audience (but
-    not to other characters.)
+    드라마에서 등장인물이 혼잣말을 하며 내면의 생각이나 감정을 표현하고 그
+    과정에서 청중에게 전달합니다(다른 등장인물에게는 전달하지 않음).
   </dd>
-  <dt>monologue</dt>
+  <dt>독백</dt>
   <dd>
-    In drama, where a character speaks their thoughts out loud to share them
-    with the audience and any other characters present.
+    드라마에서 등장인물이 자신의 생각을 큰 소리로 말하여 청중 및 다른 등장인물과
+    공유하는 것을 말합니다.
   </dd>
-  <dt>aside</dt>
+  <dt>방백</dt>
   <dd>
-    In drama, where a character shares a comment only with the audience for
-    humorous or dramatic effect. This is usually a feeling, thought or piece of
-    additional background information.
+    드라마에서 캐릭터가 유머러스하거나 극적인 효과를 위해 청중에게만 의견을
+    공유하는 경우. 일반적으로 느낌, 생각 또는 추가 배경 정보입니다.
   </dd>
 </dl>
 ```
 
-브라우저에서 제공하는 기본 스타일에 의해서 정의, 답변과 같은 하위 항목에 대해서 들여쓰기가 적용됩니다. 현재 보고계시는 description list 는 MDN에서 제공하는 스타일이 적용되어 있습니다. 이는 브라우저에서 제공하는 기본 스타일과 매우 유사하게 정의 되어 있습니다만, 추가적으로 정의된 스타일입니다.
+브라우저에서 제공하는 기본 스타일에 의해서 정의, 답변과 같은 하위 항목에 대해서 들여쓰기가 적용됩니다. 현재 보고계시는 정의 목록은 MDN에서 제공하는 스타일이 적용되어 있습니다. 이는 브라우저에서 제공하는 기본 스타일과 매우 유사하게 정의 되어 있습니다만, 추가적으로 정의된 스타일입니다.
 
-<dl><dt>soliloquy</dt><dd>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</dd><dt>monologue</dt><dd>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</dd><dt>aside</dt><dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.</dd><dt></dt></dl>
+<dl><dt>독백</dt><dd>드라마에서 등장인물이 혼잣말을 하며 내면의 생각이나 감정을 표현하고 그 과정에서 청중에게 전달합니다(다른 등장인물에게는 전달하지 않음).</dd><dt>독백</dt><dd>드라마에서 등장인물이 자신의 생각을 큰 소리로 말하여 청중 및 다른 등장인물과 공유하는 것을 말합니다.</dd><dt>방백</dt><dd>드라마에서 캐릭터가 유머러스하거나 극적인 효과를 위해 청중에게만 의견을 공유하는 경우. 일반적으로 느낌, 생각 또는 추가 배경 정보입니다.</dd><dt></dt></dl>
 
 아래의 예시와 같이 하나의 `<dt>` 에는 여러개의 `<dd>` 가 존재할 수 있습니다.
 
 ```
 <dl>
-  <dt>aside</dt>
-  <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought, or piece of additional background information.</dd>
-  <dd>In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)</dd>
+  <dt>방백</dt>
+  <dd>드라마에서 캐릭터가 유머러스하거나 극적인 효과를 위해 청중에게만 의견을 공유하는 경우. 일반적으로 느낌, 생각 또는 추가 배경 정보입니다.</dd>
+  <dd>서면에서는 현재 주제와 관련이 있지만 콘텐츠의 주요 흐름에 직접 맞지 않는 콘텐츠 섹션을 근처에 표시합니다(종종 옆의 상자에 표시됨).</dd>
 </dl>
 ```
 
-<dl><dt>aside</dt><dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.</dd><dd>In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)</dd><dt></dt></dl>
+<dl><dt>방백</dt><dd>드라마에서 캐릭터가 유머러스하거나 극적인 효과를 위해 청중에게만 의견을 공유하는 경우. 일반적으로 느낌, 생각 또는 추가 배경 정보입니다.</dd><dd>서면에서는 현재 주제와 관련이 있지만 콘텐츠의 주요 흐름에 직접 맞지 않는 콘텐츠 섹션을 근처에 표시합니다(종종 옆의 상자에 표시됨).</dd><dt></dt></dl>
 
-### 추가학습: 일련의 정의 표시
+### 추가 학습: 일련의 정의 표시
 
-description list 를 직접 시도해볼 시간입니다. input 필드에 요소들을 추가하여 output 필드에 description list 로 표시되도록 하십시오. 원하시는 경우에 추가적인 요소들을 추가하셔도 좋습니다.
+정의 목록을 직접 시도해볼 시간입니다. input 필드에 요소들을 추가하여 output 필드에 description list 로 표시되도록 하십시오. 원하시는 경우에 추가적인 요소들을 추가하셔도 좋습니다.
 
 실수를 하셨을 경우에는, _Reset_ 버튼을 통해서 재시작하실 수 있습니다. 해답을 찾지 못하셨을 경우에 _Show solution_ 버튼을 통해서 해답을 보실 수 있습니다.
 
 ```html hidden
 <h2>Input</h2>
 <textarea id="code" class="input">
-Bacon
-The glue that binds the world together.
-Eggs
-The glue that binds the cake together.
-Coffee
-The drink that gets the world running in the morning.
-A light brown color.</textarea
->
+베이컨
+세상을 하나로 묶는 접착제.
+달걀
+케이크를 하나로 묶어주는 접착제.
+커피
+아침에 세상을 움직이게 하는 음료.
+연한 갈색.
+</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -150,7 +148,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    "<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>";
+    "<dl>\n  <dt>베이컨</dt>\n  <dd>세상을 하나로 묶는 접착제.</dd>\n  <dt>달걀</dt>\n  <dd>케이크를 하나로 묶어주는 접착제.</dd>\n  <dt>커피</dt>\n  <dd>아침에 세상을 움직이게 하는 음료.</dd>\n  <dd>연한 갈색.</dd>\n</dl>";
   drawOutput();
 });
 
@@ -170,9 +168,9 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 
 ```html
 <p>
-  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
-  extended quotation.
+  <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (또는
+  <em>HTML Block Quotation Element</em>)은 동봉된 텍스트는 확장된 인용문임을
+  나타냅니다.
 </p>
 ```
 
@@ -182,33 +180,33 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 <blockquote
   cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (또는
+    <em>HTML Block Quotation Element</em>)은 동봉된 텍스트는 확장된 인용문임을
+    나타냅니다.
   </p>
 </blockquote>
 ```
 
 브라우저 기본 스타일은 인용구를 표현할 때, 들여쓰기 된 단락으로 나타냅니다. MDN은 추가적인 스타일링과 함께 이를 나타냅니다.
 
-> The **HTML `<blockquote>` Element** (or _HTML Block Quotation Element_) indicates that the enclosed text is an extended quotation.
+> **HTML `<blockquote>` Element** (또는 _HTML Block Quotation Element_)은 동봉된 텍스트는 확장된 인용문임을 나타냅니다.
 
-### Inline quotations
+### 인라인 인용구
 
 인라인 인용구는 `<q>` 요소를 사용한다는 점만 제외하면 블럭 인용구와 동일하게 동작합니다. 아래의 마크업 예시는 MDN `<q>` 페이지의 인용문을 포함합니다.
 
 ```html
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
+  따옴표 요소 — <code>&lt;q&gt;</code> — 는
   <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q"
-    >intended for short quotations that don't require paragraph breaks.</q
+    >단락 나누기가 필요 없는 짧은 인용문을 위한 것입니다.</q
   >
 </p>
 ```
 
 브라우저 기본 스타일은 인라인 인용구를 따옴표로 묶은 일반 텍스트로 표현합니다.
 
-The quote element — `<q>` — is "intended for short quotations that don't require paragraph breaks."
+따옴표 요소 — `<q>` — 는 단락 나누기가 필요 없는 짧은 인용문을 위한 것입니다.
 
 ### Citations
 
@@ -216,34 +214,34 @@ The quote element — `<q>` — is "intended for short quotations that don't req
 
 ```html
 <p>
-  According to the
   <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
-    <cite>MDN blockquote page</cite></a
-  >:
+    <cite>MDN blockquote 페이지</cite>
+  </a>
+  에 따르면
 </p>
 
 <blockquote
   cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (또는
+    <em>HTML Block Quotation Element</em>)은 동봉된 텍스트는 확장된 인용문임을
+    나타냅니다.
   </p>
 </blockquote>
 
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
+  따옴표 요소 — <code>&lt;q&gt;</code> — 는
   <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q"
-    >intended for short quotations that don't require paragraph breaks.</q
+    >단락 나누기가 필요 없는 짧은 인용문을 위한 것입니다.</q
   >
   --
   <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q">
-    <cite>MDN q page</cite></a
+    <cite>MDN q 페이지</cite></a
   >.
 </p>
 ```
 
-Citations are styled in italic font by default. You can see this code at work in our [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html) example.
+인용문은 기본적으로 이탤릭체로 스타일이 지정됩니다. 이 코드는 [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html) 예제에서 확인할 수 있습니다.
 
 ### 추가학습: 누가 말했어?
 
@@ -260,12 +258,11 @@ Citations are styled in italic font by default. You can see this code at work in
 ```html hidden
 <h2>Input</h2>
 <textarea id="code" class="input">
-<p>Hello and welcome to my motivation page. As Confucius once said:</p>
+<p>안녕하세요, 제 동기 부여 페이지에 오신 것을 환영합니다. 공자의 명언 사이트에서 말했듯이:</p>
 
-<p>It does not matter how slowly you go as long as you do not stop.</p>
+<p>멈추지 않는 한 얼마나 천천히 가느냐는 중요하지 않습니다.</p>
 
-<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)</p></textarea
+<p>저는 또한 긍정적 사고의 개념과 부정적인 자기 대화를 제거해야 할 필요성(긍정적 사고를 위한 긍정의 힘에서 언급된 바와 같이)을 좋아합니다.</p></textarea
 >
 <h2>Output</h2>
 <div class="output"></div>
@@ -312,7 +309,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+    '<p>안녕하세요, 제 동기 부여 페이지에 오신 것을 환영합니다. <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>공자의 명언 사이트</cite></a>에서 말했듯이:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>멈추지 않는 한 얼마나 천천히 가느냐는 중요하지 않습니다.</p>\n</blockquote>\n\n<p>저는 또한 긍정적 사고의 개념과 <q cite="http://www.affirmationsforpositivethinking.com/index.htm">부정적인 자기 대화를 제거해야 할 필요성</q>을 좋아합니다. (<a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>긍정적 사고에 대한 확언</cite></a>.)</p>에서 언급되었듯이';
   drawOutput();
 });
 
@@ -327,27 +324,27 @@ window.addEventListener("load", drawOutput);
 웹을 둘러 볼 때 `<abbr>` 요소를 꽤 많이 볼 수 있습니다. 이는 머리 글자 또는 약어를 나타내는데 사용됩니다. title 속성을 통해 원래의 용어를 나태날 수 있습니다. 몇가지 예제를 살펴 보겠습니다.
 
 ```
-<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+<p>우리는 <abbr title="Hypertext Markup Language">HTML</abbr>을 사용하여 웹 문서를 구조화합니다.</p>
 
-<p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+<p>저는 그린 <abbr title="Reverend">목사.</abbr>가 전기톱으로 부엌에서 한 것 같다고 생각합니다.</p>
 ```
 
 위의 코드는 아래와 같이 보입니다. 용어의 전체 뜻은 마우스를 올려 놓으면 툴팁에 표시됩니다.
 
-We use HTML to structure our web documents.
+우리는 HTML을 사용하여 웹 문서를 구조화합니다.
 
-I think Rev. Green did it in the kitchen with the chainsaw.
+저는 그린 목사가 전기톱으로 부엌에서 한 것 같다고 생각합니다.
 
 > **참고:** 약어를 나타내기 위해 \<abbr> 과 동일하게 사용할 수 있는 `<acronym>` 가 존재합니다. 이는 사용중지 되었으며 브라우저에서도 호환되지 않는 경우가 있습니다. 따라서 `<abbr>` 을 대신 사용하는 것을 추천드립니다.
 
-### 추가학습: 약어 만들기
+### 추가 학습: 약어 만들기
 
 아래의 간단한 실습 과제를 통해 약어 사용에 대한 학습을 하고자 합니다. 아래의 샘플을 그대로 사용하시거나 여러분의 샘플로 교체 하실 수 있습니다.
 
 ```html hidden
 <h2>Input</h2>
 <textarea id="code" class="input">
-<p>NASA sure does some exciting work.</p></textarea
+<p>NASA는 정말 흥미로운 일을 하고 있습니다.</p></textarea
 >
 <h2>Output</h2>
 <div class="output"></div>
@@ -394,7 +391,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
+    '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr>는 정말 흥미로운 일을 하고 있습니다.</p>';
   drawOutput();
 });
 
@@ -410,7 +407,7 @@ HTML 에서 `<address>` 태그를 이용해서 연락처 세부 정보를 표시
 
 ```html
 <address>
-  <p>Chris Mills, Manchester, The Grim North, UK</p>
+  <p>크리스 밀스, 맨체스터, 더그림노스, 영국</p>
 </address>
 ```
 
@@ -418,7 +415,7 @@ HTML 에서 `<address>` 태그를 이용해서 연락처 세부 정보를 표시
 
 ```html
 <address>
-  <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
+  <p><a href="../authors/chris-mills/">Chris Mills</a>에 의해 작성된 페이지.</p>
 </address>
 ```
 
@@ -427,21 +424,21 @@ HTML 에서 `<address>` 태그를 이용해서 연락처 세부 정보를 표시
 여러분은 종종 날짜, 화학 공식 및 수학 방적식과 같은 항목을 표시 할 때 올바른 의미를 갖도록 위첨자 아래 첨자를 사용해야 할 수도 있습니다. `<sup>` 과 `<sub>` 요소들은 이를 위해 사용할 수 있습니다.
 
 ```html
-<p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+<p>제 생일은 2001년 5월 25<sup>일</sup>입니다.</p>
 <p>
-  Caffeine's chemical formula is
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+  카페인의 화학식은 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
+  입니다.
 </p>
-<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+<p>x<sup>2</sup>가 9이면, x는 3 또는 -3이어야 합니다.</p>
 ```
 
 표시될 결과는 아래와 같습니다.
 
-My birthday is on the 25th of May 2001.
+제 생일은 2001년 5월 25일입니다.
 
-Caffeine's chemical formula is C8H10N4O2.
+카페인의 화학식은 C8H10N4O2입니다.
 
-If x2 is 9, x must equal 3 or -3.
+x2가 9이면 x는 3 또는 -3이어야 합니다.
 
 ## 컴퓨터 코드를 나타내기
 
@@ -463,16 +460,13 @@ para.onclick = function() {
 }</code></pre>
 
 <p>
-  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
-  <code>&lt;center&gt;</code>.
+  <code>&lt;font&gt;</code>와 <code>&lt;center&gt;</code>와 같은 프레젠테이션
+  요소를 사용해서는 안 됩니다..
 </p>
 
-<p>
-  In the above JavaScript example, <var>para</var> represents a paragraph
-  element.
-</p>
+<p>위의 자바스크립트 예시에서, <var>para</var>는 문단 요소를 나타냅니다.</p>
 
-<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+<p><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>로 모든 텍스트를 선택합니다.</p>
 
 <pre>$ <kbd>ping mozilla.org</kbd>
 <samp>PING mozilla.org (63.245.215.20): 56 data bytes
@@ -501,7 +495,7 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 - The 20th of next month
 - 20e Janvier 2016
 - 2016 年 1 月 20 日
-- And so on
+- 기타
 
 그러나 이러한 다른 형식들은 컴퓨터가 쉽게 인식할 수 없습니다. 페이지의 모든 이벤트 날짜를 자동으로 인식하여 캘린더에 삽입하려면 어떻게 해야합니까? `<time>` 요소를 사용하면 기계가 읽을 수 있는 명확한 시간 / 날짜를 첨부 할 수 있습니다.
 
@@ -530,6 +524,6 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 
 ## 요약
 
-HTML 텍스트 시맨틱에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element) 를 살펴보십시오.([Inline text semantics](/ko/docs/Web/HTML/Element#Inline_text_semantics) 섹션은 시작하기에 좋은 장소입니다.). 다음 문서에서는 HTML 문서의 다른 부분을 구성하는 데 사용할 HTML 요소를 살펴 보겠습니다.
+HTML 텍스트 시맨틱에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하세요. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element) 를 살펴보세요.([Inline text semantics](/ko/docs/Web/HTML/Element#Inline_text_semantics) 섹션은 시작하기에 좋은 장소입니다.). 다음 문서에서는 HTML 문서의 다른 부분을 구성하는 데 사용할 HTML 요소를 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}

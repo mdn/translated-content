@@ -12,16 +12,18 @@ slug: Web/HTML/Attributes/accept
 例えば、 Microsoft Word ファイルを識別できる方法は何通りもありますので、 Word ファイルを受け付けるサイトは `<input>` を次のように使用するかもしれません。
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 一方、メディアファイルを受け入れる場合は、そのメディア種別の任意の形式を含めるようにしたいかもしれません。
 
 ```html
-<input type="file" id="soundFile" accept="audio/*">
-<input type="file" id="videoFile" accept="video/*">
-<input type="file" id="imageFile" accept="image/*">
+<input type="file" id="soundFile" accept="audio/*" />
+<input type="file" id="videoFile" accept="video/*" />
+<input type="file" id="imageFile" accept="image/*" />
 ```
 
 `accept` 属性は、選択されたファイルの種別を検証するものではありません。これはブラウザーがユーザーに対して正しいファイル種別を選択できるようにするためのガイドをするためのヒントを提供するだけです。ユーザーがファイルセレクターのオプションを切り替え、これを上書きして任意のファイルを選択し、不正なファイル種別を選択することは (ほとんどの場合) 可能です。
@@ -35,16 +37,16 @@ slug: Web/HTML/Attributes/accept
 ```html
 <p>
   <label for="soundFile">Select an audio file:</label>
-  <input type="file" id="soundFile" accept="audio/*">
-  </p>
-  <p>
+  <input type="file" id="soundFile" accept="audio/*" />
+</p>
+<p>
   <label for="videoFile">Select a video file:</label>
-  <input type="file" id="videoFile" accept="video/*">
-  </p>
-  <p>
+  <input type="file" id="videoFile" accept="video/*" />
+</p>
+<p>
   <label for="imageFile">Select some images:</label>
-  <input type="file" id="imageFile" accept="image/*" multiple>
-  </p>
+  <input type="file" id="imageFile" accept="image/*" multiple />
+</p>
 ```
 
 {{EmbedLiveSample('simple_example', '100%', 200)}}
@@ -64,7 +66,7 @@ slug: Web/HTML/Attributes/accept
 `accept` 属性は、カンマ区切りの 1 つ以上の固有ファイル種別指定子を含む文字列を値として取ります。例えば、標準的な画像形式と PDF ファイルの両方を含む、画像として表示できるコンテンツを必要とするファイルピッカーは、次のようになります。
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## file 入力の使用
@@ -73,13 +75,13 @@ slug: Web/HTML/Attributes/accept
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Submit</button>
- </div>
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -116,8 +118,11 @@ div {
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choose file to upload</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Submit</button>

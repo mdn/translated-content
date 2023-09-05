@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 ## 構文
 
 ```js
-eval(string)
+eval(string);
 ```
 
 ### 引数
@@ -37,15 +37,15 @@ eval(string)
 `eval()` の引数が文字列でない場合、`eval()` は引数を変更せずに返します。次の例では `String` コンストラクターが指定されているため、`eval()` は文字列を評価したものではなく `String` オブジェクトを返します。
 
 ```js
-eval(new String('2 + 2')); // "2 + 2" を含む String オブジェクトを返します
-eval('2 + 2');             // 4 を返します
+eval(new String("2 + 2")); // "2 + 2" を含む String オブジェクトを返します
+eval("2 + 2"); // 4 を返します
 ```
 
 この制約は、`toString` を使用する一般的な方法で回避できます。
 
 ```js
-var expression = new String('2 + 2');
-eval(expression.toString());            // 4 を返します
+var expression = new String("2 + 2");
+eval(expression.toString()); // 4 を返します
 ```
 
 `eval` 関数を `eval` 以外の名前を参照して呼び出すことで*間接的に*使用した場合、[ECMAScript
@@ -77,37 +77,39 @@ function test() {
 `eval()` を使用した悪いコード:
 
 ```js
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 `eval()` を使用しないより良いコード:
 
 ```js
-function looseJsonParse(obj){
-    return Function('"use strict";return (' + obj + ')')();
+function looseJsonParse(obj) {
+  return Function('"use strict";return (' + obj + ")")();
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 上記の 2 つのコードスニペットを比較すると、2 つのコードスニペットが同じように動作するように見えるかもしれませんが、よく考えてみてください。`eval()` の方は非常に遅いのです。評価されたオブジェクトの中の `c: new Date()` に注目してください。`eval()` を使用しない関数では、オブジェクトはグローバルスコープで評価されているので、ブラウザーは `Date` が `window.Date` を参照しており、`Date` というローカル変数ではないと考えて安全です。しかし、コードが次のようになっている場合 `eval()` を使ったコードでは、ブラウザーがこれを仮定することができません。
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 したがって、コードの `eval()` バージョンでは、ブラウザーは高価なルックアップ呼び出しを行い、`Date()` というローカル変数があるかどうかを確認します。これは `Function()` と比較して非常に効率が悪くなります。
@@ -115,17 +117,21 @@ console.log(looseJsonParse(
 関連する状況で、実際に `Date()` 関数を `Function()` 内のコードから呼び出すことができるようにしたいとしたらどうでしょうか。簡単な方法を取って、`eval()` に戻るべきでしょうか。いいえ、決してそうではありません。代わりに、以下の方法を試してみてください。
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj){
-    return Function('"use strict";return (' + obj + ')')()(
-        Date
-    );
+function runCodeWithDateFunction(obj) {
+  return Function('"use strict";return (' + obj + ")")()(Date);
 }
-console.log(runCodeWithDateFunction(
-   "function(Date){ return Date(5) }"
-))
+console.log(runCodeWithDateFunction("function(Date){ return Date(5) }"));
 ```
 
 上記のコードは、三重に入れ子になった関数があるために効率が悪く遅いと思えるかもしれませんが、上記の効率的なメソッドの利点を分析してみましょう。
@@ -138,8 +144,13 @@ console.log(runCodeWithDateFunction(
 最後に、最小化を検討してみましょう。上記のように `Function()` を使用すると、`runCodeWithDateFunction` に渡されたコード文字列をはるかに効率的に最小化することができます。関数の引数名は、下の最小化されたコードで見られるように最小化することができるからです。
 
 ```js
-console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
-return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7||0]}));
+console.log(
+  Function('"use strict";return(function(a){return a(5)})')()(function (a) {
+    return "Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(
+      " ",
+    )[a % 7 || 0];
+  }),
+);
 ```
 
 一般的な用途においては、さらに安全 (そして高速) な `eval()` または `Function()` の代替手段があります。
@@ -150,41 +161,41 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 
 ```js
 var obj = { a: 20, b: 30 };
-var propName = getPropName();  // "a" または "b" が返される
+var propName = getPropName(); // "a" または "b" が返される
 
-eval( 'var result = obj.' + propName );
+eval("var result = obj." + propName);
 ```
 
 ただし、ここで `eval()` は必要ありません。実際、この使い方はお勧めできません。代わりに[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用したほうが、より速くて安全です。
 
 ```js
 var obj = { a: 20, b: 30 };
-var propName = getPropName();  // "a" または "b" が返される
-var result = obj[ propName ];  //  obj[ "a" ] は obj.a と同じ
+var propName = getPropName(); // "a" または "b" が返される
+var result = obj[propName]; //  obj[ "a" ] は obj.a と同じ
 ```
 
 このメソッドを使用して子孫プロパティにアクセスすることもできます。`eval()` を使うと以下のようになります。
 
 ```js
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // "a.b.c" などを返す
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // "a.b.c" などを返す
 
-eval( 'var result = obj.' + propPath );
+eval("var result = obj." + propPath);
 ```
 
 ここで `eval()` を回避するには、プロパティのパスを分割し、様々なプロパティをループすることで行うことができます。
 
 ```js
 function getDescendantProp(obj, desc) {
-  var arr = desc.split('.');
+  var arr = desc.split(".");
   while (arr.length) {
     obj = obj[arr.shift()];
   }
   return obj;
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // "a.b.c" などを返す
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // "a.b.c" などを返す
 var result = getDescendantProp(obj, propPath);
 ```
 
@@ -192,16 +203,16 @@ var result = getDescendantProp(obj, propPath);
 
 ```js
 function setDescendantProp(obj, desc, value) {
-  var arr = desc.split('.');
+  var arr = desc.split(".");
   while (arr.length > 1) {
     obj = obj[arr.shift()];
   }
-  return obj[arr[0]] = value;
+  return (obj[arr[0]] = value);
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // "a.b.c" などを返す
-var result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c は 1 になる
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // "a.b.c" などを返す
+var result = setDescendantProp(obj, propPath, 1); // obj.a.b.c は 1 になる
 ```
 
 ### コードの断片を評価する場合、代わりに関数を使う
@@ -213,7 +224,7 @@ JavaScript [第一級関数](https://ja.wikipedia.org/wiki/第一級関数)を�
 setTimeout(function() { ... }, 1000);
 
 // elt.setAttribute("onclick", " ... ") を使う代わりに
-elt.addEventListener('click', function() { ... } , false); 
+elt.addEventListener('click', function() { ... } , false);
 ```
 
 文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Closures)を使う方法も便利です。
@@ -237,9 +248,9 @@ JSON の構文は JavaScript の構文に比べて制限があり、多くの有
 ```js
 var x = 2;
 var y = 39;
-var z = '42';
-eval('x + y + 1'); // 42 が返される
-eval(z);           // 42 が返される
+var z = "42";
+eval("x + y + 1"); // 42 が返される
+eval(z); // 42 が返される
 ```
 
 ### `eval` を使用して JavaScript 文の文字列を評価する
@@ -250,7 +261,7 @@ eval(z);           // 42 が返される
 var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";
 
-console.log('z is ', eval(str));
+console.log("z is ", eval(str));
 ```
 
 複数の値を定義した場合、最後の値が返されます。
@@ -259,7 +270,7 @@ console.log('z is ', eval(str));
 var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
 
-console.log('x is ', eval(str)); // z is 42  x is 420
+console.log("x is ", eval(str)); // z is 42  x is 420
 ```
 
 ### 評価される最後の式について
@@ -267,25 +278,25 @@ console.log('x is ', eval(str)); // z is 42  x is 420
 `eval()` は最後に評価された式の値を返します。
 
 ```js
-var str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
+var str = "if ( a ) { 1 + 1; } else { 1 + 2; }";
 var a = true;
-var b = eval(str);  // 2 が返される
+var b = eval(str); // 2 が返される
 
-console.log('b is : ' + b);
+console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // 3 が返される
+b = eval(str); // 3 が返される
 
-console.log('b is : ' + b);
+console.log("b is : " + b);
 ```
 
 ### 関数定義の文字列の `eval` には先頭と末尾に "(" と ")" が必要
 
 ```js
-var fctStr1 = 'function a() {}'
-var fctStr2 = '(function a() {})'
-var fct1 = eval(fctStr1)  // undefined が返される
-var fct2 = eval(fctStr2)  // 関数が返される
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // undefined が返される
+var fct2 = eval(fctStr2); // 関数が返される
 ```
 
 ## 仕様書

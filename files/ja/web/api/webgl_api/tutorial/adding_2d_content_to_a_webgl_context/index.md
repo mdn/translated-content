@@ -18,7 +18,7 @@ l10n:
 > **メモ:** "index.html" を更新すると、次のようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -120,8 +120,8 @@ function initShaderProgram(gl, vsSource, fsSource) {
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
     alert(
       `シェーダープログラムを初期化できません: ${gl.getProgramInfoLog(
-        shaderProgram
-      )}`
+        shaderProgram,
+      )}`,
     );
     return null;
   }
@@ -148,7 +148,9 @@ function loadShader(gl, type, source) {
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
     alert(
-      `シェーダーのコンパイル時にエラーが発生しました: ${gl.getShaderInfoLog(shader)}`
+      `シェーダーのコンパイル時にエラーが発生しました: ${gl.getShaderInfoLog(
+        shader,
+      )}`,
     );
     gl.deleteShader(shader);
     return null;
@@ -277,7 +279,7 @@ function drawScene(gl, programInfo, buffers) {
   mat4.translate(
     modelViewMatrix, // 変換結果の格納先
     modelViewMatrix, // 変換する行列
-    [-0.0, 0.0, -6.0]
+    [-0.0, 0.0, -6.0],
   ); // 変換量
 
   // WebGL にどのように座標バッファーから vertexPosition 属性に
@@ -291,12 +293,12 @@ function drawScene(gl, programInfo, buffers) {
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.projectionMatrix,
     false,
-    projectionMatrix
+    projectionMatrix,
   );
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.modelViewMatrix,
     false,
-    modelViewMatrix
+    modelViewMatrix,
   );
 
   {
@@ -322,7 +324,7 @@ function setPositionAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
 }
@@ -368,6 +370,6 @@ drawScene(gl, programInfo, buffers);
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) (WebGLFundamentals)
 - [Matrices](https://mathworld.wolfram.com/Matrix.html) (Wolfram MathWorld)
-- [行列](<http://ja.wikipedia.org/wiki/行列>) （ウィキペディア）
+- [行列](http://ja.wikipedia.org/wiki/行列) （ウィキペディア）
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

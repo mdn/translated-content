@@ -12,7 +12,7 @@ slug: Web/API/History/go
 ## 構文
 
 ```js
-history.go([delta])
+history.go([delta]);
 ```
 
 ### 引数
@@ -25,13 +25,13 @@ history.go([delta])
 1 つページを戻す場合 ({{domxref("History.back", "back()")}} の呼び出しと同等)
 
 ```js
-history.go(-1)
+history.go(-1);
 ```
 
 1 つページを進める場合、 {{domxref("History.forward", "forward()")}} の呼び出しと同等です。
 
 ```js
-history.go(1)
+history.go(1);
 ```
 
 2 つページを進める場合

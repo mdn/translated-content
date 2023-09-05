@@ -180,7 +180,11 @@ Like this.
 
 ### 代名词
 
+<!-- markdownlint-disable search-replace -->
+
 我们无需将“you”翻译为“您”，在文档正文部分的翻译中，请统一使用“你”。
+
+<!-- markdownlint-enable search-replace -->
 
 ### 复数形式
 

@@ -35,8 +35,8 @@ slug: Web/API/Window/afterprint_event
 `addEventListener()` の使用例:
 
 ```js
-window.addEventListener('afterprint', (event) => {
-  console.log('After print');
+window.addEventListener("afterprint", (event) => {
+  console.log("After print");
 });
 ```
 
@@ -44,7 +44,7 @@ window.addEventListener('afterprint', (event) => {
 
 ```js
 window.onafterprint = (event) => {
-  console.log('After print');
+  console.log("After print");
 };
 ```
 

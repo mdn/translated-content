@@ -28,23 +28,18 @@ JavaScript 開発者として、プログラムでストリームにデータを
 構文の骨組みは次のようになります。
 
 ```js
-const stream = new WritableStream({
-  start(controller) {
-
+const stream = new WritableStream(
+  {
+    start(controller) {},
+    write(chunk, controller) {},
+    close(controller) {},
+    abort(reason) {},
   },
-  write(chunk, controller) {
-
+  {
+    highWaterMark: 3,
+    size: () => 1,
   },
-  close(controller) {
-
-  },
-  abort(reason) {
-
-  }
-}, {
-  highWaterMark: 3,
-  size: () => 1
-});
+);
 ```
 
 コンストラクターは引数として 2 つのオブジェクトを取ります。 最初のオブジェクトは必須であり、データの書き込み先の基になるシンクのモデルを JavaScript で作成します。 2 番目のオブジェクトはオプションであり、ストリームに使用する[カスタムのキューイング戦略](/ja/docs/Web/API/Streams_API/Concepts#内部キューとキューイング戦略)を指定できる {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスの形式をとります。
@@ -62,30 +57,33 @@ const stream = new WritableStream({
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // シンクの実装
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      const buffer = new ArrayBuffer(1);
-      const view = new Uint8Array(buffer);
-      view[0] = chunk;
-      const decoded = decoder.decode(view, { stream: true });
-      const listItem = document.createElement('li');
-      listItem.textContent = `Chunk decoded: ${decoded}`;
+const writableStream = new WritableStream(
+  {
+    // シンクの実装
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
+        view[0] = chunk;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `Chunk decoded: ${decoded}`;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      const listItem = document.createElement("li");
+      listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.error("Sink error:", err);
+    },
   },
-  close() {
-    const listItem = document.createElement('li');
-    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.error("Sink error:", err);
-  },
-}, queuingStrategy);
+  queuingStrategy,
+);
 ```
 
 - `write()` メソッドには、書き込まれた各チャンクを UI に書き込める形式にデコードするコードを含むプロミスが含まれています。 これは、各チャンクが実際に書き込まれるときに呼び出されます（次のセクションを参照）。
