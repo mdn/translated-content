@@ -116,7 +116,7 @@ figcaption {
 
 ### 自定义动画
 
-视图过渡伪元素具有默认的 [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations)（在其 [参考页面](#css_additions) 中详细介绍）。
+视图过渡伪元素具有默认的 [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations)（在其[参考页面](#css_additions)中详细介绍）。
 
 值得注意的是，`height`、`width`、`position` 和 `transform` 的过渡不使用平滑的淡入淡出动画。相反，高度和宽度过渡使用平滑的缩放动画。同时，位置和变换过渡将使用平滑的移动动画。
 
