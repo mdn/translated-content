@@ -9,11 +9,11 @@ browser-compat: html.elements.param
 
 {{HTMLSidebar}}{{Deprecated_Header}}
 
-El elemento [HTML](../../index.md) **`<param>`** define los parámetros para un elemento {{HTMLElement("object")}}.
+El elemento [HTML](/es/web/html/index.md) **`<param>`** define los parámetros para un elemento {{HTMLElement("object")}}.
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](../../global_attributes/index.md).
+Este elemento incluye los [atributos globales](/es/web/html/global_attributes/index.md).
 
 - `name` {{deprecated_inline}}
   - : Nombre del parámetro.
@@ -35,7 +35,7 @@ Este elemento incluye los [atributos globales](../../global_attributes/index.md)
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Categorías de contenido</a>
+        <a href="/es/web/html/content_categories/index.md">Categorías de contenido</a>
       </th>
       <td>Ninguno</td>
     </tr>
@@ -53,7 +53,7 @@ Este elemento incluye los [atributos globales](../../global_attributes/index.md)
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Un {{HTMLElement("object")}} antes de cualquier
-        <a href="../../content_categories/index.md"
+        <a href="/es/web/html/content_categories/index.md"
           >Categorías de contenido</a
         >.
       </td>
