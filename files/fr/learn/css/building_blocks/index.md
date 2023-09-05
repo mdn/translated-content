@@ -33,10 +33,10 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 
   - : Il y a une large palette de sélecteurs CSS disponibles permettant avec une fine granularité de désigner les éléments auxquels appliquer des styles. Dans cet article, nous verrons avec moult détails comment ces différents types de sélecteurs fonctionnent, au travers de plusieurs parties :
 
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [The box model (le modèle des boîtes)](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Tout en CSS a une boîte autour de lui, et comprendre ces boîtes est la clef pour être capable de créer des mises en page avec CSS, ou d'aligner des éléments avec d'autres. Dans cette leçon, nous nous attarderons sur le modèle de boîte CSS, afin que vous puissiez passer à des mises en page plus complexes grâce à une meilleure compréhension du fonctionnement et de la terminologie.
