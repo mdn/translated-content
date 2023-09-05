@@ -31,7 +31,6 @@ const IGNORE_BLOCK_STRINGS = [
  * @returns string
  */
 function removeIgnoredContent(content) {
-  let newContent = content;
   let complete = false;
 
   while (!complete) {
@@ -43,15 +42,16 @@ function removeIgnoredContent(content) {
       complete = true;
     } else {
       // replace the ignored section with empty lines (so that the line numbers don't change)
-      const lines = (newContent.match(/\n/g) || []).length + 1;
-      newContent = newContent.replace(
-        newContent.slice(posStart, posEnd + IGNORE_BLOCK_STRINGS[1].length),
-        "\n".repeat(lines),
+      const replaceLines = content.slice(
+        posStart,
+        posEnd + IGNORE_BLOCK_STRINGS[1].length,
       );
+      const lines = (replaceLines.match(/\n/g) || []).length;
+      content = content.replace(replaceLines, "\n".repeat(lines));
     }
   }
 
-  return newContent;
+  return content;
 }
 
 /**
@@ -273,7 +273,11 @@ async function main() {
           spinner.info(
             `${file}: Found ${urlLocaleErrors.length} URL locale errors! Fixing...`,
           );
-          const newContent = fixUrlLocale(content, urlLocaleErrors, locale);
+          const newContent = fixUrlLocale(
+            originContent,
+            urlLocaleErrors,
+            locale,
+          );
           if (newContent === originContent) {
             spinner.fail(`${file}: Fixing URL locale errors failed!`);
             exitCode = 1;
