@@ -49,7 +49,7 @@ var downloading = browser.downloads.download(
 
       - : 一个`boolean` 指定是 (`true`) 否 (`false`) 提供一个文件选择对话框允许用户选择文件名。.
 
-        如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问您要存到哪" ，或者 about:config 里 `browser.download.useDownloadDir` )。
+        如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问你要存到哪" ，或者 about:config 里 `browser.download.useDownloadDir` )。
 
         > **备注：** 如果 `saveAs` 被设置为 `true`，Firefox for Android 将会引发一个错误。当 `saveAs` 为 `false` 或空时这个参数会被忽略。
 

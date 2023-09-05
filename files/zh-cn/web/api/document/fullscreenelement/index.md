@@ -20,7 +20,7 @@ var element = document.mozFullScreenElement;
 ```plain
 function isVideoInFullsreen() {
   if (document.mozFullScreenElement && document.mozFullScreenElement.nodeName == 'VIDEO') {
-    console.log('您的视频正在以全屏模式显示');
+    console.log('你的视频正在以全屏模式显示');
   }
 }
 ```
