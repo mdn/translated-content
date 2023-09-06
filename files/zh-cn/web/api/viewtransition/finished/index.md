@@ -1,5 +1,5 @@
 ---
-title: "ViewTransition.finished"
+title: "ViewTransition：finished 属性"
 short-title: finished
 slug: Web/API/ViewTransition/finished
 ---
