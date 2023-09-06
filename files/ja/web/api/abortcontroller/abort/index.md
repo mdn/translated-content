@@ -1,8 +1,9 @@
 ---
-title: AbortController.abort()
+title: "AbortController: abort() メソッド"
+short-title: abort()
 slug: Web/API/AbortController/abort
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("DOM")}}
