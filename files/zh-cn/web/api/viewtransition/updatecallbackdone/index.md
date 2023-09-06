@@ -1,5 +1,5 @@
 ---
-title: "ViewTransition：updateCallbackDone 属性"
+title: ViewTransition：updateCallbackDone 属性
 short-title: updateCallbackDone
 slug: Web/API/ViewTransition/updateCallbackDone
 ---

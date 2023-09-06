@@ -1,5 +1,5 @@
 ---
-title: "ViewTransition：ready 属性"
+title: ViewTransition：ready 属性
 short-title: ready
 slug: Web/API/ViewTransition/ready
 ---

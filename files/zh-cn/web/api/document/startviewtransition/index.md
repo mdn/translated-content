@@ -1,5 +1,5 @@
 ---
-title: "Document：startViewTransition() 方法"
+title: Document：startViewTransition() 方法
 short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
 ---

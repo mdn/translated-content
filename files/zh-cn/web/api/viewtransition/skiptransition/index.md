@@ -1,5 +1,5 @@
 ---
-title: "ViewTransition：skipTransition() 方法"
+title: ViewTransition：skipTransition() 方法
 short-title: skipTransition()
 slug: Web/API/ViewTransition/skipTransition
 ---
