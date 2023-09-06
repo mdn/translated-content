@@ -1,6 +1,7 @@
 ---
-title:  Web 开发技术
+title: Web 开发技术
 slug: Web
+page-type: landing-page
 ---
 
 <section id="Quick_links">
