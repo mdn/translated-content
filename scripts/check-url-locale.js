@@ -26,29 +26,33 @@ const IGNORE_BLOCK_STRINGS = [
 ];
 
 /**
+ * define types
+ *
+ * @typedef {Array<{url: string, line: number, column: number, urlLocale: string}>} UrlLocaleErrors
+ * @typedef {Array<{url: string, line: number, column: number}>} Urls
+ */
+
+/**
  *
  * @param {string} content
- * @returns string
  */
 function removeIgnoredContent(content) {
-  let complete = false;
-
-  while (!complete) {
+  while (true) {
     const posStart = content.search(IGNORE_BLOCK_STRINGS[0]);
     const posEnd = content.search(IGNORE_BLOCK_STRINGS[1]);
 
     if (posStart === -1 || posEnd === -1) {
       // If there isn't a full lang-detect ignore block left, we're finished
-      complete = true;
-    } else {
-      // replace the ignored section with empty lines (so that the line numbers don't change)
-      const replaceLines = content.slice(
-        posStart,
-        posEnd + IGNORE_BLOCK_STRINGS[1].length,
-      );
-      const lines = (replaceLines.match(/\n/g) || []).length;
-      content = content.replace(replaceLines, "\n".repeat(lines));
+      break;
     }
+
+    // replace the ignored section with empty lines (so that the line numbers don't change)
+    const replaceLines = content.slice(
+      posStart,
+      posEnd + IGNORE_BLOCK_STRINGS[1].length,
+    );
+    const lines = (replaceLines.match(/\n/g) || []).length;
+    content = content.replace(replaceLines, "\n".repeat(lines));
   }
 
   return content;
@@ -69,6 +73,7 @@ function normalizeLocale(locale) {
 /**
  *
  * @param {string} rawContent
+ * @returns {Urls}
  */
 function findUrlInText(rawContent) {
   const urls = [];
@@ -85,7 +90,7 @@ function findUrlInText(rawContent) {
 /**
  *
  * @param {string} content
- * @returns {Array<{url: string, line: number, column: number}>}
+ * @returns {Urls}
  */
 function findUrlInMarkdown(content) {
   const tree = fromMarkdown(content);
@@ -126,7 +131,7 @@ function findUrlInMarkdown(content) {
  *
  * @param {string} content
  * @param {string} docLocale
- * @returns {Array<{url: string, line: number, column: number, urlLocale: string}>}
+ * @returns {UrlLocaleErrors}
  */
 function checkUrlLocale(content, docLocale) {
   const urls = findUrlInMarkdown(content);
@@ -154,7 +159,7 @@ function checkUrlLocale(content, docLocale) {
 /**
  *
  * @param {string} filePath
- * @param {Array<{url: string, line: number, column: number, urlLocale: string}>} errors
+ * @param {UrlLocaleErrors} errors
  * @param {string} expectedLocale
  */
 function generateReport(filePath, errors, expectedLocale) {
@@ -169,7 +174,7 @@ function generateReport(filePath, errors, expectedLocale) {
 /**
  *
  * @param {string} content
- * @param {Array<{url: string, line: number, column: number, urlLocale: string}>} errors
+ * @param {UrlLocaleErrors} errors
  * @param {string} expectedLocale
  */
 function fixUrlLocale(content, errors, expectedLocale) {
