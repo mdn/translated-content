@@ -31,13 +31,13 @@ hsl(120deg 75% 25% / 0.6)
 - `H`
   - : {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;angle&gt;")}} またはキーワード `none` であり、色相環上の角度を表します。この型の詳細は {{CSSXref("&lt;hue&gt;")}} のリファレンスを参照してください。
 - `S`
-  - : {{cssxref("&lt;percentage&gt;")}} またはキーワード `none` であり、彩度を表します。`100%` は色の濃さが最大で、 `0%` は完全に色がありません（グレー）。
+  - : {{cssxref("&lt;percentage&gt;")}} またはキーワード `none` であり、彩度を表します。`100%` は色の濃さが最大で、`0%` は完全に色がありません（グレー）。
 - `L`
-  - : {{cssxref("&lt;percentage&gt;")}} またはキーワード `none` であり、輝度を表します。`100%` は白で、 `0%` は黒で、 `50%` は「通常」です。
+  - : {{cssxref("&lt;percentage&gt;")}} またはキーワード `none` であり、輝度を表します。`100%` は白で、`0%` は黒で、`50%` は「通常」です。
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` であり、数値 `1` が `100%` (完全に不透明) を意味します。
 
-> **メモ:** `none` の効果は、[Missing color components](/ja/docs/Web/CSS/color_value#missing_color_components)を参照してください。
+> **メモ:** `none` の効果は、[Missing color components](/ja/docs/Web/CSS/color_value#missing_color_components) を参照してください。
 
 ### 形式的な構文
 
