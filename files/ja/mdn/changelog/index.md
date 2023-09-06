@@ -30,7 +30,7 @@ CSS スタイルガイドを複数更新し、 Markdown への移行を反映し
 
 - メモと警告ボックスのタイトルに別個の見出し `<h4>` をつけること（例: `<h4>警告</h4>`）はなくなりました。
 
-  正しい構文については、[MDN での Markdown](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#メモ、警告、コールアウト)のガイドを確認してください。
+  正しい構文については、[MDN での Markdown](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#メモ、警告、コールアウト) のガイドを確認してください。
 
 - `seoSummary` クラスは使用できなくなりました。
 - `standard-table` クラスを使用することはできなくなりました。このクラスで指定されたスタイル設定が既定で表に適用されるようになりました。
@@ -62,4 +62,4 @@ Web IDL の[インターフェイスミックスイン](https://heycam.github.io
 
 1 月にこれが変更され、 `class` 属性に追加の `notecard` クラスを含めるようにし、強調表示のテキストはブロックの上部で見出しに含めるようになりました。
 
-詳しい情報と構文のガイドは、 [MDN のコンテンツで使われるクラスとスタイルのガイド](/ja/docs/MDN/Guidelines/CSS_style_guide#.note.notecard)を参照してください。
+詳しい情報と構文のガイドは、 [MDN での Markdown](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#メモ、警告、コールアウト) を参照してください。
