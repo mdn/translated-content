@@ -3,7 +3,7 @@ title: "CycleTracker：基础 HTML 和 CSS"
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker"， "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection"， "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 {{PWASidebar}}
 
