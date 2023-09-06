@@ -9,19 +9,19 @@ l10n:
 
 모든 프로그래밍 언어에는 내장된 자료구조가 존재하지만, 보통 그 내용은 언어마다 다릅니다. 이 글에서는 JavaScript에서 사용할 수 있는 내장 자료구조와 그 속성에 대해 알아보겠습니다. 그러면 이 자료구조들을 다른 자료구조 개발에 사용할 수 있을 것입니다.
 
-[language overview](/ko/docs/Web/JavaScript/Language_overview)는 일반적인 데이터 타입에 대한 유사한 정리된 내용을 제공하지만, 다른 언어와 더 많이 비교가 되는 부분입니다.
+[언어 개요](/ko/docs/Web/JavaScript/Language_overview)는 일반적인 데이터 타입에 대한 유사한 정리된 내용을 제공하지만, 다른 언어와 더 많은 비교를 제공합니다.
 
-## 동적 및 약한 타입(Dynamic and weak typing)
+## 동적 및 약타입
 
-JavaScript는 [동적 타입(dynamic types)](https://en.wikipedia.org/wiki/Type_system#DYNAMIC)이 있는 [동적(dynamic)](https://en.wikipedia.org/wiki/Dynamic_programming_language) 언어입니다. JavaScript의 변수는 어떤 특정 타입과 연결되지 않으며, 모든 타입의 값으로 할당 (및 재할당) 가능합니다.
+JavaScript는 [동적 타입](https://en.wikipedia.org/wiki/Type_system#DYNAMIC)이 있는 [동적](https://en.wikipedia.org/wiki/Dynamic_programming_language) 언어입니다. JavaScript의 변수는 어떤 특정 타입과 연결되지 않으며, 모든 타입의 값으로 할당 (및 재할당) 가능합니다.
 
 ```js
-let foo = 42; // foo가 숫자
-foo = "bar"; // foo가 이제 문자열
-foo = true; // foo가 이제 불리언
+let foo = 42; // foo는 이제 숫자입니다
+foo = "bar"; // foo는 이제 문자열입니다
+foo = true; // foo는 이제 불리언입니다
 ```
 
-JavaScript는 또한 [약한 타입(weakly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing) 언어이기도 합니다. 즉, 작업에 타입 오류가 발생하는 대신, 일치하지 않는 타입이 포함된 경우 암시적 타입 변환이 가능합니다.
+JavaScript는 또한 [약타입](https://en.wikipedia.org/wiki/Strong_and_weak_typing) 언어이기도 합니다. 즉, 작업에 타입 오류가 발생하는 대신, 일치하지 않는 타입이 포함된 경우 암시적 타입 변환이 가능합니다.
 
 ```js
 const foo = 42; // foo는 숫자입니다.
@@ -29,18 +29,16 @@ const result = foo + "1"; // JavaScript는 foo를 문자열로 강제 변환하�
 console.log(result); // 421
 ```
 
-Implicit coercions is very convenient, but can be a potential footgun if developers didn't intend to do the conversion, or intend to convert in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
-
-암시적 형변환(Implicit coercions)은 매우 편리하지만, 개발자가 변환을 수행할 의도가 없거나, 다른 방향으로 변환하려는 경우(예: 숫자에서 문자열 대신, 문자열에서 숫자로 변환하는 것) 잠재적인 오류(footgun)가 될 수 있습니다.
-[기호(symbols)](#symbol_type) 및 [BigInts](#bigint_type)의 경우, JavaScript는 의도적으로 특정 암시적 타입 변환을 허용하지 않습니다.
+암시적 형변환은 매우 편리하지만, 개발자가 변환을 수행할 의도가 없거나, 다른 방향으로 변환하려는 경우(예: 숫자에서 문자열 대신, 문자열에서 숫자로 변환하는 것) 잠재적인 오류(footgun)가 될 수 있습니다.
+[기호](#symbol_타입) 및 [BigInts](#bigint_타입)의 경우, JavaScript는 의도적으로 특정 암시적 타입 변환을 허용하지 않습니다.
 
 ## 원시 값(Primitive values)
 
-[Object](#objects)를 제외한 모든 타입은 언어의 최하위 수준에서 직접 표현되는 [불변(immutable)](/ko/docs/Glossary/Immutable) 값을 정의합니다. 이러한 타입의 값을 "원시 값"이라고 합니다.
+[Object](#객체)를 제외한 모든 타입은 언어의 최하위 수준에서 직접 표현되는 [불변](/ko/docs/Glossary/Immutable) 값을 정의합니다. 이러한 타입의 값을 '원시 값'이라고 합니다.
 
 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)을 제외한 모든 기본 타입은 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof) 연산자로 테스트할 수 있습니다. `typeof null`은 `"object"`를 반환하므로 `=== null`을 사용하여 `null`을 테스트해야 합니다.
 
-[`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 및 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)를 제외한, 모든 원시 타입에는 원시 값으로 작업하는 데 유용한 메서드를 제공하는 해당 객체 래퍼(wrapper) 타입이 있습니다. 예를 들어, [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) 객체는 [`toExponential()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)와 같은 메서드를 제공합니다. 원시 값에서 속성에 접근하면, JavaScript는 값을 해당 래퍼(wrapper) 객체로 자동으로 감싸고(래핑하고) 대신 객체의 속성에 접근합니다. 그러나 `null` 또는 `undefined`에서 속성에 접근하면, `TypeError` 예외가 발생하므로 [(선택적 체이닝)optional chaining](/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 연산자를 도입해야 합니다.
+[`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 및 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)를 제외한, 모든 원시 타입에는 원시 값으로 작업하는 데 유용한 메서드를 제공하는 해당 객체 래퍼 타입이 있습니다. 예를 들어, [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) 객체는 [`toExponential()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)와 같은 메서드를 제공합니다. 원시 값에서 속성에 접근하면, JavaScript는 값을 해당 래퍼 객체로 자동으로 감싸는 대신 객체의 속성에 접근합니다. 그러나 `null` 또는 `undefined`에서 속성에 접근하면, `TypeError` 예외가 발생하므로 [선택적 체이닝](/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 연산자를 도입해야 합니다.
 
 | Type                              | `typeof` return value | Object wrapper        |
 | --------------------------------- | --------------------- | --------------------- |
@@ -52,7 +50,7 @@ Implicit coercions is very convenient, but can be a potential footgun if develop
 | [String 타입](#string_타입)       | `"string"`            | {{jsxref("String")}}  |
 | [Symbol 타입](#symbol_타입)       | `"symbol"`            | {{jsxref("Symbol")}}  |
 
-객체 래퍼(wrapper) 클래스의 참조 페이지에는 각 타입에 사용할 수 있는 메서드 및 속성에 대한 자세한 정보와, 원시 타입 자체의 의미 체계에 대한 자세한 설명이 포함되어 있습니다.
+객체 래퍼 클래스의 참조 페이지에는 각 타입에 사용할 수 있는 메서드 및 속성에 대한 자세한 정보와, 원시 타입 자체의 의미 체계에 대한 자세한 설명이 포함되어 있습니다.
 
 ### Null 타입
 
@@ -62,17 +60,17 @@ Null 타입은 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)이라�
 
 Undefined 타입은 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)이라는 오직 하나의 값만 가질 수 있습니다.
 
-개념적으로, `undefined`는 *value*가 없음을 의미하고, `null`은 *object*가 없음을 의미합니다.
-([`typeof null === "object"`](/ko/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)에 대한 변명이 될 수도 있습니다). 무언가에 값이 없을 때 언어는 일반적으로 `undefined`으로 기본으로 설정됩니다.
+개념적으로, `undefined`는 값이 없음을 의미하고, `null`은 객체가 없음을 의미합니다.
+([`typeof null === "object"`](/ko/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)에 대한 변명이 될 수도 있습니다). 일반적으로 값이 없는 경우 언어의 기본값은 `undefined`입니다.
 
 - 반환 값이 없는 [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return)문(`return;`)은 암시적으로 `undefined`를 반환합니다.
 - 존재하지 않는 [객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object) 속성에 접근 (`obj.iDontExist`) 하면 `undefined`가 반환됩니다.
 - 초기화(`let x;`)가 없는 변수 선언은 변수를 `undefined`로 암시적으로 초기화합니다.
-- {{jsxref("Array.prototype.find()")}} 및 {{jsxref("Map.prototype.get()")}}와 같은 대부분의 메서드는, 요소를 찾을 수 없을 때 `undefined`를 반홥하니다.
+- {{jsxref("Array.prototype.find()")}} 및 {{jsxref("Map.prototype.get()")}}와 같은 대부분의 메서드는, 요소를 찾을 수 없을 때 `undefined`를 반환합니다.
 
-`null`은 언어의 핵심적인 부분에선 덜 자주 사용됩니다. 가장 중요한 위치는 [prototype chain](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)의 끝부분입니다. 이어서, {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}} 등 프로토타입(prototype)과 상호 작용하는 메서드는 `undefined` 대신 `null`을 받거나 반환합니다.
+`null`은 언어의 핵심적인 부분에선 덜 자주 사용됩니다. 가장 중요한 위치는 [prototype chain](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)의 끝부분입니다. 이어서, {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}} 등 프로토타입과 상호 작용하는 메서드는 `undefined` 대신 `null`을 받거나 반환합니다.
 
-`null`은 [키워드(keyword)](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)이지만, `undefined`는 전역 속성인 일반적인 [식별자(identifier)](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)입니다. 실제로는 `undefined`가 재정의되거나 가려져서는 안 되기 때문에 그 차이는 미미합니다.
+`null`은 [키워드](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)이지만, `undefined`는 전역 속성인 일반적인 [식별자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)입니다. 실제로는 `undefined`가 재정의되거나 가려져서는 안 되기 때문에 그 차이는 미미합니다.
 
 ### Boolean 타입
 
@@ -110,16 +108,16 @@ console.log(42 / -0); // -Infinity
 
 ### BigInt 타입
 
-{{jsxref("BigInt")}} 타입은 임의 정밀도로 정수를 나타낼 수 있는 JavaScript 숫자 원시 값입니다. BigInt를 Number의 안전한 정수 제한({{jsxref("Number.MAX_SAFE_INTEGER")}})을 넘어서는 큰 정수도 안전하게 저장하고 연산할 수 있습니다.
+{{jsxref("BigInt")}} 타입은 임의 정밀도로 정수를 나타낼 수 있는 JavaScript 숫자 원시 값입니다. BigInt로 Number의 안전한 정수 제한({{jsxref("Number.MAX_SAFE_INTEGER")}})을 넘어서는 큰 정수도 안전하게 저장하고 연산할 수 있습니다.
 
 BigInt는 정수 끝에 `n`을 추가하거나 [`BigInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 함수를 호출해 생성할 수 있습니다.
 
-다음 예제는 {{jsxref("Number.MAX_SAFE_INTEGER")}}를 증가시키면, 예상된 값을 반환하는 것을 보입니다.
+다음 예제는 {{jsxref("Number.MAX_SAFE_INTEGER")}}를 증가시키면, 예상된 값을 반환하는 것을 보여줍니다.
 
 ```js
 // BigInt
 const x = BigInt(Number.MAX_SAFE_INTEGER); // 9007199254740991n
-x + 1n === x + 2n; // 9007199254740992n는 9007199254740993n 같지 않아 false입니다.
+x + 1n === x + 2n; // 9007199254740992n는 9007199254740993n과 같지 않아 false입니다.
 
 // Number
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // 둘 다 9007199254740992 이기 때문에 true입니다.
@@ -131,7 +129,7 @@ BigInt는 소수를 나타낼 수 없지만, 큰 정수를 더 정확하게 나�
 
 ### String 타입
 
-{{jsxref("String")}} 타입은 텍스트 데이터를 나타내며, [UTF-16 코드 단위 수](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 나타내는 16비트 부호 없는 정수 값의 나열(시퀀스)로 인코딩됩니다. String의 각 요소는 String 내부의 위치를 차지합니다.첫 번째 요소는 인덱스 `0`에, 다음 요소는 인덱스 `1`에 있습니다. String의 [길이](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length)는 UTF-16 코드 단위의 수이며, 실제 유니코드 문자 수와 일치하지 않을 수 있습니다. 자세한 내용은 [`String`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) 페이지를 참조하세요.
+{{jsxref("String")}} 타입은 텍스트 데이터를 나타내며, [UTF-16 코드 단위 수](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 나타내는 16비트 부호 없는 정수 값의 나열로 인코딩됩니다. String의 각 요소는 String 내부의 위치를 차지합니다. 첫 번째 요소는 인덱스 `0`에, 다음 요소는 인덱스 `1`에 있습니다. String의 [길이](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length)는 UTF-16 코드 단위의 수이며, 실제 유니코드 문자 수와 일치하지 않을 수 있습니다. 자세한 내용은 [`String`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) 페이지를 참조하세요.
 
 JavaScript String은 변경할 수 없습니다. 즉, String이 생성되면 수정할 수 없습니다. String 메서드는 현재 String의 내용을 기반으로 새 String을 만듭니다. 예를 들면, 다음과 같습니다.
 
@@ -148,19 +146,19 @@ JavaScript String은 변경할 수 없습니다. 즉, String이 생성되면 수
 
 규칙을 통해, 어떤 자료구조라도 문자열로 표현할 수 있습니다. 그러나 그게 좋은 방법은 아닙니다. 예를 들어, 구분자를 사용하면 (물론 JavaScript 배열이 더 적합하겠지만) 문자열로 리스트를 흉내낼 수도 있을 것입니다. 그러나 구분자를 리스트의 요소로 사용하는 순간 리스트가 망가지고 맙니다. 이제 구분자를 구분하기 위해 이스케이프 문자를 선택하고, 등등... 이 모든 것이 각자의 규칙을 필요로 하고 불필요한 유지보수 부담이 발생합니다.
 
-문자열은 텍스트 데이터에만 사용하세요. 복잡한 데이터를 표현해야 할 땐 문자열을 구문 분석(parsing)하고 적합한 추상화를 사용하세요.
+문자열은 텍스트 데이터에만 사용하세요. 복잡한 데이터를 표현해야 할 땐 문자열을 구문 분석하고 적합한 추상화를 사용하세요.
 
 ### Symbol 타입
 
-{{jsxref("Symbol")}}은 **고유**하고 **변경 불가능한** 원시 값이며 객체의 속성(아래를 참고하세요) 키로 사용할 수 있습니다. 어떤 프로그래밍 언어들에선 "원자(atoms)"라고 부르기도 합니다. 기호(symbols)의 목적은 다른 코드의 키와 충돌하지 않도록 보장되는 고유한 속성 키를 만드는 것입니다.
+{{jsxref("Symbol")}}은 **고유**하고 **변경 불가능한** 원시 값이며 객체의 속성(아래를 참고하세요) 키로 사용할 수 있습니다. 어떤 프로그래밍 언어들에선 "원자"라고 부르기도 합니다. 기호의 목적은 다른 코드의 키와 충돌하지 않도록 보장되는 고유한 속성 키를 만드는 것입니다.
 
 ## 객체
 
-컴퓨터 과학에서의 객체란 [식별자](/ko/docs/Glossary/Identifier)로 참조할 수 있는 메모리 상의 값을 말합니다. JavaScript에서 객체는 유일한 [변경 가능한(mutable)](/ko/docs/Glossary/Mutable) 값입니다. [Functions](/ko/docs/Web/JavaScript/Reference/Functions)는 사실 _callable_ 이라는 추가 기능이 있는 객체이기도 합니다.
+컴퓨터 과학에서의 객체란 [식별자](/ko/docs/Glossary/Identifier)로 참조할 수 있는 메모리 상의 값을 말합니다. JavaScript에서 객체는 유일한 [변경 가능한](/ko/docs/Glossary/Mutable) 값입니다. [Functions](/ko/docs/Web/JavaScript/Reference/Functions)는 사실 callable 이라는 추가 기능이 있는 객체이기도 합니다.
 
 ### 속성
 
-JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [객체 리터럴 구문](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#객체_리터럴)을 사용해 제한적으로 속성을 초기화할 수의 있고, 그 후에 속성을 추가하거나 제거할 수도 있습니다. 객체 속성은 키-값 쌍과 동일합니다. 속성 키는 [strings](#string_type)타입 또는 [symbols](#symbol_type)타입이 될 수 있습니다. 속성 값으로는 다른 객체를 포함해 모든 타입을 사용할 수 있으므로 복잡한 자료구조의 구축이 가능합니다.
+JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [객체 리터럴 구문](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#객체_리터럴)을 사용해 제한적으로 속성을 초기화할 수의 있고, 그 후에 속성을 추가하거나 제거할 수도 있습니다. 객체 속성은 키-값 쌍과 동일합니다. 속성 키는 [strings](#string_타입)타입 또는 [symbols](#symbol_타입)타입이 될 수 있습니다. 속성 값으로는 다른 객체를 포함해 모든 타입을 사용할 수 있으므로 복잡한 자료구조의 구축이 가능합니다.
 
 객체 속성에는 [데이터 속성](#데이터_속성)과 [접근자 속성](#접근자_속성) 두 종류가 있습니다. 각각의 속성에는 다시 '특성'(attribute)들이 존재합니다. 특성은 JavaScript 엔진 내부에서는 접근되지만, {{jsxref("Object.defineProperty()")}}를 통해 설정하거나, {{jsxref("Object.getOwnPropertyDescriptor()")}} 를 통해 읽을 수 있습니다.
 
@@ -168,14 +166,14 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 #### 데이터 속성
 
-데이터 속성(properties)은 키를 값과 연결하며, 다음과 같은 특성(attribute)을 가집니다.
+데이터 속성은 키를 값과 연결하며, 다음과 같은 특성을 가집니다.
 
 - `value`
   - : 속성의 get 접근으로 검색된 값입니다. 모든 JavaScript의 값이 볼 수 있습니다.
 - `writable`
   - : 할당으로 속성을 변경할 수 있는지 여부를 나타내는 불리언 값입니다.
 - `enumerable`
-  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
+  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
   - : 속성을 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프로 열거할 수 있는지 여부를 나타내는 불리언 값입니다. 열거 가능성이 다른 함수 및 구문과 상호 작용하는 방식에 대해서는 [속성 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)을 참조하세요.
 - `configurable`
   - : 속성을 삭제할 수 있는지, 접근자 속성으로 변경할 수 있는지, 속성을 변경할 수 있는지를 나타내는 불리언 값입니다.
@@ -188,62 +186,6 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 접근자 속성은 다음과 같은 특성을 가집니다.
 
-<table class="standard-table">
-  <caption>
-    접근자 속성의 특성
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">특성</th>
-      <th scope="col">타입</th>
-      <th scope="col">설명</th>
-      <th scope="col">기본 값</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[[Get]]</td>
-      <td>함수 객체 또는 Undefined</td>
-      <td>
-        값에 대해 접근을 시도하면 매개변수 없이 호출해서 속성 값을 회수합니다.
-        <a href="/ko/docs/Web/JavaScript/Reference/Functions/get"><code>get</code>을 참고하세요.
-      </td>
-      <td><code>undefined</code></td>
-    </tr>
-    <tr>
-      <td>[[Set]]]</td>
-      <td>함수 객체 또는 Undefined</td>
-      <td>
-        값에 대해 변경을 시도하면 변경을 시도한 값을 유일한 매개변수로 사용해 호출합니다.
-        <a href="/ko/docs/Web/JavaScript/Reference/Functions/set"><code>set</code>을 참고하세요.
-      </td>
-      <td><code>undefined</code></td>
-    </tr>
-    <tr>
-      <td>[[Enumerable]]</td>
-      <td>Boolean</td>
-      <td>
-        <p>
-          <code>true</code>면 속성이
-          <a href="/ko/docs/Web/JavaScript/Reference/Statements/for...in"
-             ><code>for...in</code></a
-          >
-          반복문에 노출됩니다.
-        </p>
-      </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td>[[Configurable]]</td>
-      <td>Boolean</td>
-      <td>
-        <code>false</code>면 속성을 삭제하거나 데이터 속성으로 변경할 수 없습니다.
-      </td>
-      <td><code>false</code></td>
-    </tr>
-  </tbody>
-</table>
-
 - `get`
   - : 값에 대한 get 접근이 수행될 따마다 속성 값을 검색하기 위해 비어 있는 인수 목록으로 호출되는 함수입니다. [getters](/ko/docs/Web/JavaScript/Reference/Functions/get)를 참고하세요. `undefined`일 수 있습니다.
 - `set`
@@ -255,7 +197,7 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 객체의 [prototype](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)은 다른 객체 또는 `null`을 가리킵니다. 이는 개념적으로 객체의 숨겨진 속성이며, 일반적으로 `[[Prototype]]`으로 표시됩니다. 객체의 `[[Prototype]]`속성은 객체 자체에서도 접근할 수 있습니다.
 
-객체는 임시 키-값 쌍이므로, 종종 Map으로 사용됩니다. 그러나 인체 공학, 보안 및 성능 문제가 있을 수 있습니다. 대신 임의의 데이터를 저장하려면, {{jsxref("Map")}}을 사용하세요. [`Map` 참조](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps)에는 키-값 연결을 저장하기 위한 일반 객체와 Map 간의 장단점에 대한 자세한 설명이 포함되어 있습니다.
+객체는 임시 키-값 쌍이므로, 종종 맵으로 사용됩니다. 그러나 인체 공학, 보안 및 성능 문제가 있을 수 있습니다. 대신 임의의 데이터를 저장하려면, {{jsxref("Map")}}을 사용하세요. [`Map` 참조](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps)에는 키-값 연결을 저장하기 위한 일반 객체와 Map 간의 장단점에 대한 자세한 설명이 포함되어 있습니다.
 
 ### 날짜
 
@@ -271,15 +213,13 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 ### 키 컬렉션: Maps, Sets, WeakMaps, WeakSets
 
-키 컬렉션 자료구조는 객체 참조를 키로 가집니다. {{jsxref("Set")}}과 {{jsxref("WeakSet")}}은 고유한 값의 모음을 나타내고, {{jsxref("Map")}}과 {{jsxref("WeakMap")}}은 객체와 값을 연결짓는 쌍들의 모음을 나타냅니다.
+키 컬렉션 자료구조는 객체 참조를 키로 가집니다. {{jsxref("Set")}}과 {{jsxref("WeakSet")}}은 고유한 값의 모음을 나타내고, {{jsxref("Map")}}과 {{jsxref("WeakMap")}}은 객체와 값을 연결 짓는 쌍들의 모음을 나타냅니다.
 
-`Map`과 `WeakMap`의 차이는 `Map`에서만 객체 키를 열거할 수 있다는 점입니다. 덕분에 `WeakMap`에 대해서는 가비지 컬렉션 최적화를 수행할 수 있습니다.
-
-`Map`과 `Set`을 직접 구현할 수 있습니다. 그러나 객체를 직접 비교(`<`, "작음" 비교와 같이)할 방법은 없고, 엔진도 객체에 대한 해시 함수를 노출하지 않기 때문에, 탐색 성능이 필연적으로 선형입니다. 반면 (`WeakMap`을 포함해) 네이티브 구현의 경우 대략 로그 시간(_O(log n)_)에 가까운 조회 성능을 낼 수 있습니다.
+`Map`과 `Set`을 직접 구현할 수 있습니다. 그러나 객체를 직접 비교(`<`, '작음' 비교와 같이)할 방법은 없고, 엔진도 객체에 대한 해시 함수를 노출하지 않기 때문에, 조회 성능이 필연적으로 선형입니다. (`WeakMap`을 포함해) 네이티브 구현은 상수 시간에 대한 로그함수의 조회 성능을 가질 수 있습니다.
 
 보통 DOM 노드에 데이터를 연결할 땐 해당 객체에 직접 속성을 추가하거나 `data-*` 특성을 사용하겠지만, 동일한 컨텍스트에서 이렇게 추가한 데이터를 모든 스크립트에서 다 사용할 수 있다는 문제가 있습니다. `Map`과 `WeakMap`을 사용하면 비공개 데이터를 객체에 쉽게 바인딩 할 수 있습니다.
 
-`WeakMap` 및 `WeakSet`은 가비지 컬렉션이 가능한 객체 또는 [등록되지 않은 기호(symbol)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)만 키로 허용하며, 키가 컬렉션에 남아있어도 가비지 컬렉션할 수 있습니다. 특히 [메모리 사용량 최적화](/ko/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management)에 사용됩니다.
+`WeakMap` 및 `WeakSet`은 가비지 컬렉션이 가능한 객체 또는 [등록되지 않은 기호](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)만 키로 허용하며, 키가 컬렉션에 남아있어도 가비지 컬렉션할 수 있습니다. 특히 [메모리 사용량 최적화](/ko/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management)에 사용됩니다.
 
 ### 구조화된 자료: JSON
 
@@ -289,14 +229,13 @@ JSON(**J**ava**S**cript **O**bject **N**otation)은 경량 데이터 교환 형�
 
 JavaScript는 내장 객체로 구성된 표준 라이브러리를 포함합니다. 내장 객체에 대해 자세히 알아보려면 [참고서](/ko/docs/Web/JavaScript/Reference/Global_Objects)를 읽어보세요.
 
-## 타입 강제 변환(Type coercion)
+## 타입 강제 변환
 
-As mentioned above, JavaScript is a [weakly typed](#dynamic_and_weak_typing) language. This means that you can often use a value of one type where another type is expected, and the language will convert it to the right type for you. To do so, JavaScript defines a handful of coercion rules.
-위에서 언급했듯이, JavaScript는 [약한 타입](#dynamic_and_weak_typing) 언어입니다. 즉, 다른 타입이 예상되는 하나의 타입의 값을 자주 사용할 수 있으며, 언어에서 이를 적합한 타입으로 변환해줍니다. 이를 위해, JavaScript는 몇 가지 강제 변환 규칙을 정의합니다.
+위에서 언급했듯이, JavaScript는 [약타입](#동적_및_약타입) 언어입니다. 즉, 다른 타입이 예상되는 하나의 타입의 값을 자주 사용할 수 있으며, 언어에서 이를 적합한 타입으로 변환해줍니다. 이를 위해, JavaScript는 몇 가지 강제 변환 규칙을 정의합니다.
 
-### 원시 타입 강제 변환(Primitive coercion)
+### 원시 타입 강제 변환
 
-[원시 타입 강제 변환(Primitive coercion)](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive) 프로세스는 원시 값이 예상되는 경우에 사용되지만, 실제 타입이 무엇이어야 하는지에 대한 강력한 선호도는 없습니다. 일반적으로 [string](#string_type), [number](#number_type) 또는 [BigInt](#bigint_type)이 동등하게 허용되는 경우입니다. 예를 들면,
+[원시 타입 강제 변환](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive) 프로세스는 원시 값이 예상되는 경우에 사용되지만, 실제 타입이 무엇이어야 하는지에 대한 강력한 선호도는 없습니다. 일반적으로 [string](#string_타입), [number](#number_타입) 또는 [BigInt](#bigint_타입)이 동등하게 허용되는 경우입니다. 예를 들면 아래와 같습니다.
 
 - [`Date()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) 생성자는 `Date` 인스턴스가 아닌 하나의 인수를 받는 경우, String은 날짜 String을 나타내는 반면, 숫자는 타임스탬프를 나타냅니다.
 - [`+`](/ko/docs/Web/JavaScript/Reference/Operators/Addition) 연산자, 하나의 피연산자가 String이면 String 연결이 수행됩니다.
@@ -304,7 +243,7 @@ As mentioned above, JavaScript is a [weakly typed](#dynamic_and_weak_typing) lan
 
 이 작업은 값이 이미 원시 타입인 경우, 변환을 수행하지 않습니다. 객체는 [`[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (힌트로 `"default"` 사용), `valueOf()`, `toString()` 메서드를 차례로 호출하여 원시 타입으로 변환됩니다. 원시 타입 변환은 `toString()` 이전에 `valueOf()`를 호출하는데, 이는 [숫자 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)의 동작과 비슷하지만, [string 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)과는 다릅니다.
 
-`[@@toPrimitive]()` 메서드가 있는 경우, 원시 타입을 반환해야 합니다. 객체를 반환하면 {{jsxref("TypeError")}}가 발생합니다. `valueOf()` 및 `toString()`의 경우, 하나가 객체를 반환하면 반환 값은 무시되고 다른 하나의 반환 값이 대신 사용됩니다. 둘 다 존재하지 않거나, 원시 타입을 반환하지 않으면 {{jsxref("TypeError")}}가 발생합니다. 예를 들어, 다음 코드에서.
+`[@@toPrimitive]()` 메서드가 있는 경우, 원시 타입을 반환해야 합니다. 객체를 반환하면 {{jsxref("TypeError")}}가 발생합니다. `valueOf()` 및 `toString()`의 경우, 하나가 객체를 반환하면 반환 값은 무시되고 다른 하나의 반환 값이 대신 사용됩니다. 둘 다 존재하지 않거나, 원시 타입을 반환하지 않으면 {{jsxref("TypeError")}}가 발생합니다. 다음 코드를 예로 들 수 있습니다.
 
 ```js
 console.log({} + []); // "[object Object]"
@@ -314,27 +253,25 @@ console.log({} + []); // "[object Object]"
 
 `[@@toPrimitive]()` 메서드는 원시 타입으로 변환할 때 항상 우선합니다. 원시 타입 변환은 일반적으로 `valueOf()`가 우선적으로 호출되기 때문에, 숫자 강제 변환과 같이 동작합니다. 그러나 사용자 지정 `[@@toPrimitive]()` 메서드가 있는 객체는 모든 원시 타입을 반환하도록 선택할 수 있습니다. {{jsxref("Date")}} 및 {{jsxref("Symbol")}} 객체는 `[@@toPrimitive]()` 메서드를 재정의하는 유일한 내장 객체입니다. [`Date.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)는 `"default"` 힌트를 `"string"`인 것처럼 취급하는 반면, [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)는 힌트를 무시하고 항상 기호(symbol)을 반환합니다.
 
-### 숫자 강제 변환(Numeric coercion)
+### 숫자 강제 변환
 
-[Number](#number_type) 및 [BigInt](#bigint_type)의 두 가지 숫자 타입이 있습니다. 때때로 언어는 특별히 숫자 또는 BigInt(예: 인덱스가 숫자여야 하는 {{jsxref("Array.prototype.slice()")}})를 기대합니다. 다른 경우에는, 둘 중 하나를 허용하고 피연산자의 타입에 따라 다른 작업을 수행할 수 있습니다. 다른 타입의 암시적 변환을 허용하지 않는 엄격한 강제 변환 프로세스는 [숫자 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) 및 [BigInt 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)을 참조하세요.
+[Number](#number_타입) 및 [BigInt](#bigint_타입)의 두 가지 숫자 타입이 있습니다. 때때로 언어는 특별히 숫자 또는 BigInt(예: 인덱스가 숫자여야 하는 {{jsxref("Array.prototype.slice()")}})를 기대합니다. 다른 경우에는, 둘 중 하나를 허용하고 피연산자의 타입에 따라 다른 작업을 수행할 수 있습니다. 다른 타입의 암시적 변환을 허용하지 않는 엄격한 강제 변환 프로세스는 [숫자 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) 및 [BigInt 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)을 참조하세요.
 
 숫자 강제 변환은 BigInt가 {{jsxref("TypeError")}}를 발생시키는 대신 있는 그대로 반환된다는 점을 제외하면 [수 강제 변환(number coercion)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)하고 거의 동일합니다. 숫자 강제 변환은 Number와 BigInt 모두에 대해 오버로딩되기 때문에, 모든 산술 연산자에서 사용됩니다. 유일한 예외는 항상 숫자 강제 변환을 수행하는 [단항 더하기](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)입니다.
 
-### 기타 강제 변환(Other coercions)
+### 기타 강제 변환
 
 Null, Undefined 및 Symbol을 제외한 모든 데이터 타입에는 각각의 강제 변환 프로세스가 있습니다. 자세한 내용은 [string 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), [불리언(boolean) 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion) 및 [객체 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)에서 확인하세요.
 
 눈치채셨겠지만, 객체를 원시 타입으로 변환할 수 있는 세 가지 경로가 있습니다.
 
-- [원시 타입 강제 변환](#primitive_coercion): `[@@toPrimitive]("default")` → `valueOf()` → `toString()`
-- [숫자 강제 변환](#numeric_coercion), [number coercion](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), [BigInt coercion](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[@@toPrimitive]("number")` → `valueOf()` → `toString()`
+- [원시 타입 강제 변환](#원시_타입_강제_변환): `[@@toPrimitive]("default")` → `valueOf()` → `toString()`
+- [숫자 강제 변환](#숫자_강제_변환), [number coercion](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), [BigInt coercion](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[@@toPrimitive]("number")` → `valueOf()` → `toString()`
 - [문자열 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
 
 모든 경우에, `[@@toPrimitive]()`이 있으면 호출 가능하고, 원시 타입을 반환해야 하며, `valueOf` 또는 `toString`은 호출 가능하지 않거나 객체를 반환하는 경우 무시됩니다. 프로세스가 끝나고, 성공하면 결과가 원시 타입임을 보장합니다. 결과 원시 타입은 컨텍스트에 따라 추가 강제 적용을 받습니다.
 
 ## 같이 보기
 
-- [Oleksii Trekhleb의 JavaScript 데이터 구조 및 알고리즘](https://github.com/trekhleb/javascript-algorithms)
-- [Nicholas Zakas의 JavaScript 공통 데이터 구조 및 알고리즘 모음](https://github.com/humanwhocodes/computer-science-in-javascript)
-- [JavaScript로 구현된 검색 Tre(i)es](https://github.com/monmohan/dsjslib)
-- [ECMAScript 명세의 데이터 타입과 값](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html)
+- Oleksii Trekhleb의 [JavaScript 데이터 구조 및 알고리즘](https://github.com/trekhleb/javascript-algorithms)
+- Nicholas Zakas의 [JavaScript 공통 데이터 구조 및 알고리즘 모음](https://github.com/humanwhocodes/computer-science-in-javascript)
