@@ -15,7 +15,7 @@ slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>学习无障碍，了解其重要性</td>
+      <td>学习无障碍，了解其重要性。</td>
     </tr>
   </tbody>
 </table>
