@@ -1,8 +1,8 @@
 ---
 title: Alt-Used
 slug: Web/HTTP/Headers/Alt-Used
-page-type: http-header
-browser-compat: http.headers.Alt-Used
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
