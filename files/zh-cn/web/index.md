@@ -1,5 +1,5 @@
 ---
-title: Web 开发技术
+title:  Web 开发技术
 slug: Web
 ---
 
