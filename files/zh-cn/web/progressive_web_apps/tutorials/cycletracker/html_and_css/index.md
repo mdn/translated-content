@@ -68,14 +68,14 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 
 根 {{HTMLelement("html")}} 标签将所有内容包裹在具有 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性的标签中，该属性定义了页面的主要语言。
 
-```html  
+```html
 <!doctype html>
 <html lang="zh-CN">
   <!-- <head> 和 <body> 将在这里 -->
 </html>
 ```
 
-### 文档头部 
+### 文档头部
 
 {{HTMLelement("head")}} 包含了关于网页应用程序的不能被读者看到的机器可读信息，除了 `<title>` 之外，它显示在浏览器选项卡的标题中。
 
@@ -84,7 +84,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 ```html
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" /> 
+  <meta name="viewport" content="width=device-width" />
 </head>
 ```
 
@@ -93,7 +93,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 虽然标题可以是“月经周期追踪应用程序”，但我们选择了一个更简短更隐蔽的名称。
 
 ```html
-<title>周期跟踪器</title>  
+<title>周期跟踪器</title>
 ```
 
 尽管这两个 `<meta>` 标签和 `<title>` 在技术上是可选的，但为了更好的用户体验，它们应该被视为 HTML 文档所必需的 `<head>` 的三个组成部分。
@@ -153,7 +153,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
       <input type="date" id="start-date" required />
     </p>
     <p>
-      <label for="end-date">结束日期</label>  
+      <label for="end-date">结束日期</label>
       <input type="date" id="end-date" required />
     </p>
   </fieldset>
@@ -169,7 +169,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 然后，我们包含一个空的 {{HTMLElement("section")}}。这个容器将使用 JavaScript 填充。
 
-```html 
+```html
 <section id="past-periods"></section>
 ```
 
@@ -181,7 +181,6 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 <section id="past-periods">
   <h2>过去月经周期</h2>
   <ul>
-
     <li>从 01/01/2024 到 01/06/2024</li>  
     <li>从 01/29/2024 到 02/04/2024</li>
   </ul>
@@ -216,7 +215,7 @@ fieldset,
 legend {
   border: 1px solid;
   background-color: #fff;
-}  
+}
 ul {
   padding: 0;
   font-family: monospace;
@@ -244,11 +243,11 @@ li:nth-of-type(even) {
 
 ```css
 body {
-  background-color: #efe; 
+  background-color: #efe;
 }
 
 ul,
-fieldset, 
+fieldset,
 legend {
   border: 1px solid;
   background-color: #fff;
@@ -280,7 +279,7 @@ li {
 
 ```css
 body {
-  margin: 1vh 1vw; 
+  margin: 1vh 1vw;
 }
 
 ul {
@@ -288,7 +287,7 @@ ul {
 }
 
 li,
-legend {  
+legend {
   padding: 0.2em 0.5em;
 }
 ```
@@ -302,10 +301,10 @@ body {
 }
 
 ul,
-fieldset,  
+fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 ul {
@@ -317,7 +316,7 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;  
+  background-color: #cfc;
 }
 
 li:nth-of-type(even) {
