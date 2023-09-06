@@ -25,7 +25,7 @@ Web MIDI API は、Musical Instrument Digital Interface (MIDI) デバイスに�
 - {{domxref("MIDIInput")}}
   - : 入力ポートから受信する MIDI メッセージを扱うメソッドを提供します。
 - {{domxref("MIDIOutput")}}
-  - : メッセージを接続された MIDI ポートに送信します。メッセージはすぐに送信することも、指定の遅延の後で送信することもできます。
+  - : 接続された MIDI ポートに送信するメッセージをキューに追加します。メッセージはすぐに送信することも、指定の遅延の後で送信することもできます。
 - {{domxref("MIDIMessageEvent")}}
   - : {{domxref("MIDIInput.midimessage_event")}} に渡されるイベントです。
 - {{domxref("MIDIConnectionEvent")}}
