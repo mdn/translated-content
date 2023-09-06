@@ -3,7 +3,7 @@ title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
 
-{{JSRef}}{{JSRef}}
+{{JSRef}}
 
 {{jsxref("Function")}} 实例的 **`length`** 数据属性表示函数期望的参数数量。
 
@@ -32,7 +32,7 @@ console.log(Function.length); // 1
 
 console.log((() => {}).length); // 0
 console.log(((a) => {}).length); // 1
-console.log(((a, b) => {}).length); // 2 etc.
+console.log(((a, b) => {}).length); // 2，依此类推
 
 console.log(((...args) => {}).length);
 // 0，剩余参数不计算在内
