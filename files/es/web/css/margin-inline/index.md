@@ -1,6 +1,8 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
@@ -93,7 +95,7 @@ p {
 
 #### Resultado
 
-{{EmbedLiveSample("Setting_inline_start_and_end_margins", 140, 240)}}
+{{EmbedLiveSample("Configuración_de_márgenes_iniciales_y_finales_en_línea", 140, 240)}}
 
 ## Especificaciones
 
