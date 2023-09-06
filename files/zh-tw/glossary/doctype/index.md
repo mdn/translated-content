@@ -17,4 +17,3 @@ slug: Glossary/Doctype
 ### 技術參考
 
 - [Document.doctype](/zh-TW/docs/Web/API/Document/doctype)，以 JavaScript 回傳文件類型的方法
-- [使用多種 DTD](/zh-TW/docs/Using_multiple_DTDs)以符合本地化
