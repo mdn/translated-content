@@ -11,15 +11,15 @@ slug: Games/Introduction
 
 如同 Mozilla 常說的「Web 即是平台」，你可將 Web 想像為較佳的遊戲平台。接著就來看看 Web 平台的核心：
 
-| 功能         | 技術                                                                                                                                                                                                                                     |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **音效**     | [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)                                                                                                                                                                                       |
-| **圖形**     | [WebGL](/zh-TW/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                |
+| 功能         | 技術                                                                                                                                                                                                                                                                                      |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **音效**     | [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                        |
+| **圖形**     | [WebGL](/zh-TW/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                               |
 | **輸入**     | [觸控事件](/zh-TW/docs/Web/API/Touch_events)、[Gamepad API](/zh-TW/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)、裝置感測器、[WebRTC](/zh-TW/docs/Web/API/WebRTC_API)、[Full Screen API](/zh-TW/docs/Web/API/Fullscreen_API)、[Pointer Lock API](/zh-TW/docs/Web/API/Pointer_Lock_API) |
-| **程式語言** | [JavaScript](/zh-TW/docs/Web/JavaScript)（或 C/C++ 可透過[Emscripten](https://github.com/kripken/emscripten/wiki) 編譯為 JavaScript）                                                                                                    |
-| **網路連線** | [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) 及/或 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)                                                                                                                                                            |
-| **儲存功能** | [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API) 或雲端                                                                                                                                                                                    |
-| **Web**      | [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[SVG](/zh-TW/docs/Web/SVG)、[Social API](/docs/Social_API)（還有更多！）                                                                                                       |
+| **程式語言** | [JavaScript](/zh-TW/docs/Web/JavaScript)（或 C/C++ 可透過[Emscripten](https://github.com/kripken/emscripten/wiki) 編譯為 JavaScript）                                                                                                                                                     |
+| **網路連線** | [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) 及/或 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)                                                                                                                                                                                           |
+| **儲存功能** | [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API) 或雲端                                                                                                                                                                                                                                     |
+| **Web**      | [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[SVG](/zh-TW/docs/Web/SVG)、[Social API](/docs/Social_API)（還有更多！）                                                                                                                                                        |
 
 ## 商業案例
 
