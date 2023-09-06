@@ -136,12 +136,12 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 3. [CSS — 讓 Web 別有風格](/zh-TW/docs/Learn/CSS)
 
    1. **[CSS 概述](/zh-TW/docs/Learn/CSS)**
-   2. [CSS 介紹](/en-US/docs/Learn/CSS/First_steps)
+   2. [CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)
 
-      1. **[CSS 基本介紹](/en-US/docs/Learn/CSS/First_steps)**
-      2. [CSS 運作方式](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-      3. [CSS 語法](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-      4. [選擇器(Selectors)](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+      1. **[CSS 基本介紹](/zh-TW/docs/Learn/CSS/First_steps)**
+      2. [CSS 運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
+      3. [CSS 語法](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+      4. [選擇器(Selectors)](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)
       5. [CSS 數值與單位](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
       6. [串接 (Cascade) 與繼承 (Inheritance)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
       7. [區塊模型 (Box model)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Box_model)
@@ -157,9 +157,9 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
       5. [Web 字型](/zh-TW/docs/Learn/CSS/Styling_text/Web_fonts)
       6. [評量習題：Typesetting a community school homepage](/zh-TW/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
 
-   4. [框盒 (boxes) 樣式](/en-US/docs/Learn/CSS/Building_blocks)
+   4. [框盒 (boxes) 樣式](/zh-TW/docs/Learn/CSS/Building_blocks)
 
-      1. **[框盒樣式概述](/en-US/docs/Learn/CSS/Building_blocks)**
+      1. **[框盒樣式概述](/zh-TW/docs/Learn/CSS/Building_blocks)**
       2. [框盒模型 (Box model) 回顧](/zh-TW/docs/Learn/CSS/Styling_boxes/Box_model_recap)
       3. [背景](/zh-TW/docs/Learn/CSS/Styling_boxes/Backgrounds)
       4. [邊框](/zh-TW/docs/Learn/CSS/Styling_boxes/Borders)

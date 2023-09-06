@@ -21,7 +21,7 @@ slug: Web
 - [JavaScript](/zh-TW/docs/Web/JavaScript)
   - : JavaScript 是在瀏覽器中執行的程式語言，你可以用它來增進網站或網路程式的互動性、及其他動態功能。
 - [Web APIs](/zh-TW/docs/Web/API)
-  - : 提供了能擴展網路腳本化能力的每個 API 的參考資訊，包含了 [DOM](/en-US/docs/Web/API/Document_Object_Model) 及所有相關的 API 及介面，能用於製作網站內容與應用程式。[Web API 介面參考](/zh-TW/docs/Web/API) - 以字母順序排序的所有介面資訊
+  - : 提供了能擴展網路腳本化能力的每個 API 的參考資訊，包含了 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) 及所有相關的 API 及介面，能用於製作網站內容與應用程式。[Web API 介面參考](/zh-TW/docs/Web/API)——以字母順序排序的所有介面資訊
     - [WebAPI](/zh-TW/docs/Web/API) 列出裝置 API 及其他益於開發應用程式時的 API
     - [事件參考](/zh-TW/docs/Web/Events) 列出可以用來追蹤和回應在網頁或網路程式中所發生的有趣事情的所有事件。
 
