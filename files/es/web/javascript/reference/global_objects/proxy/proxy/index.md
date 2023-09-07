@@ -1,54 +1,108 @@
 ---
-title: Proxy handler
+title: Constructor Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler
+l10n:
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{JSRef}}
 
-The proxy's handler object is a placeholder object which contains traps for {{jsxref("Proxy", "proxies", "", 1)}}.
+El constructor **`Proxy()`** crea objetos {{jsxref("Proxy")}}.
 
-## Methods
+## Sintaxis
 
-All traps are optional. If a trap has not been defined, the default behavior is to forward the operation to the target.
+```js-nolint
+new Proxy(target, handler)
+```
 
-- {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
-  - : A trap for {{jsxref("Object.getPrototypeOf")}}.
-- {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
-  - : A trap for {{jsxref("Object.setPrototypeOf")}}.
-- {{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}
-  - : A trap for {{jsxref("Object.isExtensible")}}.
-- {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
-  - : A trap for {{jsxref("Object.preventExtensions")}}.
-- {{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
-  - : A trap for {{jsxref("Object.getOwnPropertyDescriptor")}}.
-- {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
-  - : A trap for {{jsxref("Object.defineProperty")}}.
-- {{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}
-  - : A trap for the {{jsxref("Operators/in", "in")}} operator.
-- {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
-  - : A trap for getting property values.
-- {{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}
-  - : A trap for setting property values.
-- {{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
-  - : A trap for the {{jsxref("Operators/delete", "delete")}} operator.
-- {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
-  - : A trap for {{jsxref("Object.getOwnPropertyNames")}} and {{jsxref("Object.getOwnPropertySymbols")}}.
-- {{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
-  - : A trap for a function call.
-- {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
-  - : A trap for the {{jsxref("Operators/new", "new")}} operator.
+> **Nota:** `Proxy()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` arroja un {{jsxref("TypeError")}}.
 
-Some non-standard traps are [obsolete and have been removed](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy).
+### Parameters
+
+- `target`
+  - : Un objeto de destino para envolver con `Proxy`. Puede ser cualquier tipo de objeto, incluida una matriz nativa, una función o incluso otro proxy.
+- `handler`
+  - : Un objeto cuyas propiedades son funciones que definen el comportamiento del proxy cuando se realiza una operación en él.
+
+## Descripción
+
+Utilice el constructor `Proxy()` para crear un nuevo objeto `Proxy`.
+Este constructor toma dos argumentos obligatorios:
+
+- `target` es el objeto para el que desea crear el proxy
+- `handler` es el objeto que define el comportamiento personalizado del proxy.
+
+Un manejador vacío creará un proxy que se comporta, en casi todos los aspectos, exactamente como el objetivo. Al definir cualquiera de un conjunto de funciones en el objeto `handler`, puede personalizar aspectos específicos del comportamiento del proxy. Por ejemplo, al definir `get()` puede proporcionar una versión personalizada del [acceso a la propiedad](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) del objetivo.
+
+### Funciones del manejador
+
+Esta sección enumera todas las funciones de manejador que puede definir. Las funciones de manejador a veces se denominan _trampas_, porque atrapan las llamadas al objeto de destino subyacente.
+
+- {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
+  - : Una trampa para una llamada de función.
+- {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
+  - : Una trampa para el operador {{JSxRef("Operators/new", "new")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
+  - : Una trampa para {{JSxRef("Object.defineProperty")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+  - : Una trampa para el operador {{JSxRef("Operators/delete", "delete")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
+  - : Una trampa para obtener valores de propiedad.
+- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor",
+    "handler.getOwnPropertyDescriptor()")}}
+  - : Una trampa para {{JSxRef("Object.getOwnPropertyDescriptor")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
+  - : Una trampa para {{JSxRef("Object.getPrototypeOf")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}
+  - : Una trampa para el operador {{JSxRef("Operators/in", "in")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
+  - : Una trampa para {{JSxRef("Object.isExtensible")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
+  - : Una trampa para {{JSxRef("Object.getOwnPropertyNames")}} y {{JSxRef("Object.getOwnPropertySymbols")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions",
+    "handler.preventExtensions()")}}
+  - : Una trampa para {{JSxRef("Object.preventExtensions")}}.
+- {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
+  - : Una trampa para establecer valores de propiedad.
+- {{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
+  - : Una trampa para {{JSxRef("Object.setPrototypeOf")}}.
+
+## Ejemplos
+
+### Accesores de propiedad proxy selectivamente
+
+En este ejemplo, el objetivo tiene dos propiedades, `notProxied` y `proxied`. Definimos un controlador que devuelve un valor diferente para `proxied` y permite cualquier otro acceso al objetivo.
+
+```js
+const target = {
+  notProxied: "Valor original",
+  proxied: "Valor original",
+};
+
+const handler = {
+  get(target, prop, receiver) {
+    if (prop === "proxied") {
+      return "Valor reemplazado";
+    }
+    return Reflect.get(...arguments);
+  },
+};
+
+const proxy = new Proxy(target, handler);
+
+console.log(proxy.notProxied); // "Valor original"
+console.log(proxy.proxied); // "Valor reemplazado"
+```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- {{jsxref("Proxy")}}
+- [`Proxy` y `Reflect` en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Meta_programming)
+- {{jsxref("Global_Objects/Reflect", "Reflect")}}

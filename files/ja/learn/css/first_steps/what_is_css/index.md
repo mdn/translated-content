@@ -73,7 +73,7 @@ h1 {
 - 上の例では、CSS ルールは{{Glossary("CSS Selector", "セレクター")}}で始まるようになっています。これは、スタイルを設定する HTML 要素を選択するものです。この例では、レベル 1 の見出し ({{htmlelement("h1")}}) にスタイルを設定しています。
 - 次に、一組の中括弧 `{ }` があります。
 - 中括弧の中には、1つ以上の **宣言** が入ります。これは、**プロパティ** と **値** の組という形を採ります。コロンの前にプロパティ（上の例では `color`）を指定し、コロンの後にプロパティの値（この例では `red`）を指定します。
-- この例では、`color` と `font-size` の 2 つの宣言を保持しています。。それぞれの組は、選択した要素（この例では {{htmlelement("h1")}}）のプロパティを指定し、次にそのプロパティに与えたい値を指定しています。
+- この例では、`color` と `font-size` の 2 つの宣言を保持しています。それぞれの組は、選択した要素（この例では {{htmlelement("h1")}}）のプロパティを指定し、次にそのプロパティに与えたい値を指定しています。
 
 CSS の{{Glossary("property/CSS","プロパティ")}}は、指定されたプロパティによって様々な許容値を持ちます。例えば、`color` プロパティは様々な[色の値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#色)を持っています。`font-size` プロパティもあります。このプロパティは値として様々な[大きさの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#数値・長さ・割合) を持っています。
 
@@ -125,11 +125,3 @@ CSS の機能が制定された後、1 つ以上のブラウザーがその機�
 この記事の最後までたどり着きました。これで CSS とは何かということがある程度理解できたと思いますので、次は自分で CSS を書き始めるための [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)に移動しましょう。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## このモジュール内
-
-- [CSS とは何か](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-- [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-- [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [CSS はどう働くか](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-- [経歴ページのスタイル設定](/ja/docs/Learn/CSS/First_steps/Styling_a_biography_page)

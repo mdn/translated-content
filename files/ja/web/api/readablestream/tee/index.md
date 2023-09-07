@@ -63,7 +63,7 @@ function fetchStream(stream, list) {
     // フェッチしたストリームの値は Uint8Array です
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 

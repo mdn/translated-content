@@ -19,16 +19,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 
 ## 示例
 
-### 例子：使用 `Math.LOG2E`
+### 示例：使用 `Math.LOG2E`
 
 下面的函数返回以 2 为底数，E 的对数：
 
 ```js
 function getLog2e() {
-   return Math.LOG2E
+  return Math.LOG2E;
 }
 
-getLog2e() // 1.4426950408889634
+getLog2e(); // 1.4426950408889634
 ```
 
 ## 规范

@@ -1,17 +1,6 @@
 ---
 title: Tester le bon fonctionnement de votre site web
-slug: >-
-  Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-tags:
-  - Beginner
-  - Document
-  - Guide
-  - NeedsActiveLearning
-  - Web
-  - Web Development
-  - WebMechanics
-translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
-original_slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
+slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
 Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.
@@ -58,7 +47,7 @@ La première chose à faire pour tester une page donnée est d'ouvrir votre navi
 
 Allons sur notre site web : `http://demozilla.hebergeurexemple.net/`. L'image n'apparaît pas alors qu'il y aurait du y en avoir une !
 
-![Oops, the ‘unicorn’ image is missing](Capture%20du%202015-10-12%2017-21-20.png)
+![Oops, the 'unicorn' image is missing](Capture%20du%202015-10-12%2017-21-20.png)
 
 Ouvrons les outils de développement et plus particulièrement ceux qui portent sur le réseau (**Outils ➤ Développement Web ➤ Réseau**) puis rechargeons la page :
 
@@ -97,7 +86,7 @@ Où est donc le problème ?
 
 À premièrve vue, l'image semble être au bon endroit mais l'outil d'analyse réseau affiche un code 404 renvoyé par le serveur. Le problème ici est une coquille dans le code de la page HTML `licornes.png` plutôt que `licorne.png`. En corrigeant cette erreur avec l'attribut `src`
 
-![Deleting the ‘s’](Capture%20du%202015-10-12%2018-50-56.png)
+![Deleting the 's'](Capture%20du%202015-10-12%2018-50-56.png)
 
 Puis en sauvegardant et [en envoyant le fichier vers le serveur](/fr/Learn/Upload_files_to_a_web_server), on peut ensuite recharger la page dans le navigateur :
 

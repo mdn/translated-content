@@ -7,7 +7,7 @@ slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 
 {{domxref("ServiceWorkerGlobalScope")}} 的 **`ServiceWorkerGlobalScope.skipWaiting()`** 方法强制等待 service worker 成为激活的 service worker。
 
-这个方法与 {{domxref("Clients.claim()")}} 一起使用，以确保原 service worker 的更新，能立即对当前对客户端和其它所有激活的客户端生效。
+这个方法与 {{domxref("Clients.claim()")}} 一起使用，以确保原 service worker 的更新，能立即对当前对客户端和其他所有激活的客户端生效。
 
 ## 语法
 
@@ -35,7 +35,7 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 
   // 执行 service worker 安装所需
-  // 的任何其它操作，
+  // 的任何其他操作，
   // 可能需要在 event.waitUntil() 的内部进行
 });
 ```

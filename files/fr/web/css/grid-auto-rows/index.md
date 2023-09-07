@@ -1,11 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-auto-rows
 ---
 
 {{CSSRef}}
@@ -51,7 +46,6 @@ grid-auto-rows: 10% 33.3%;
 grid-auto-rows: 0.5fr 3fr 1fr;
 grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
 grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
-
 
 /* Valeurs globales */
 grid-auto-rows: inherit;

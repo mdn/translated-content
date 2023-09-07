@@ -15,7 +15,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
         基础电脑知识，<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了基本的软件</a
-        >，<a href="/和CN/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >，<a href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习<a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

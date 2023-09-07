@@ -1,17 +1,11 @@
 ---
 title: Blocs de base en CSS
 slug: Learn/CSS/Building_blocks
-tags:
-  - CSS
-  - Débutant
-  - Tutoriel
-translation_of: Learn/CSS/Building_blocks
-original_slug: Apprendre/CSS/Building_blocks
 ---
 
 {{LearnSidebar}}
 
-Ce cours fait suite aux [premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps) : vous avez déjà acquis une bonne familiarité avec le langage et sa syntaxe, avec déjà des expériences d'utilisation de CSS. Il est donc temps d'approfondir le sujet. On examine ici les principes de cascade et d’héritage, tous les types de sélecteurs à notre disposition, les unités, le dimensionnement, les arrière-plans de style et les limites, le débogage, et bien d'autres choses.
+Ce cours fait suite aux [premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps) : vous avez déjà acquis une bonne familiarité avec le langage et sa syntaxe, avec déjà des expériences d'utilisation de CSS. Il est donc temps d'approfondir le sujet. On examine ici les principes de cascade et d'héritage, tous les types de sélecteurs à notre disposition, les unités, le dimensionnement, les arrière-plans de style et les limites, le débogage, et bien d'autres choses.
 
 L'objectif est d'introduire les outils qui feront de vous un utilisateur CSS compétent avec une bonne compréhension du cœur de la théorie CSS. Nous étudierons plus tard des sujets plus spécifiques comme [le style de texte](/fr/docs/Learn/CSS/Styling_text) et la [mise en page CSS](/fr/docs/Apprendre/CSS/CSS_layout).
 
@@ -20,7 +14,7 @@ L'objectif est d'introduire les outils qui feront de vous un utilisateur CSS com
 Avant de commencer ce cours, nous vous recommandons :
 
 1. D'être familiarisé avec l'usage des ordinateurs et avec la navigation sur internet.
-2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers)).
+2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)).
 3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML)).
 4. D'avoir compris les bases du CSS telles qu'exposées dans le cours [premiers pas avec CSS.](/fr/docs/Learn/CSS/First_steps)
 
@@ -38,10 +32,10 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 
   - : Il y a une large palette de sélecteurs CSS disponibles permettant avec une fine granularité de désigner les éléments auxquels appliquer des styles. Dans cet article, nous verrons avec moult détails comment ces différents types de sélecteurs fonctionnent, au travers de plusieurs parties :
 
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [The box model (le modèle des boîtes)](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Tout en CSS a une boîte autour de lui, et comprendre ces boîtes est la clef pour être capable de créer des mises en page avec CSS, ou d'aligner des éléments avec d'autres. Dans cette leçon, nous nous attarderons sur le modèle de boîte CSS, afin que vous puissiez passer à des mises en page plus complexes grâce à une meilleure compréhension du fonctionnement et de la terminologie.
@@ -56,7 +50,7 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 - [Sizing items in CSS (dimensionner les éléments en CSS)](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
   - : Dans plusieurs leçons précédentes, vous avez abordé plusieurs façons de dimensionner de nombreux éléments d'une page web en utilisant le CSS. Comprendre pour anticiper les tailles des composants de votre design est important. Dans cette leçon nous résumerons par quels différents biais les éléments sont dimensionnés en CSS et définirons quelques termes qui vous aideront à l'avenir.
 - [Images, media, and form elements (images, médias et éléments de formulaires)](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-  - : Dans cet article, nous verrons comment des éléments particuliers sont traités en CSS. Les images, les autres médias, ou encore le éléments de formulaires se comportent légèrement différement des boîtes habituelles lorsque vous souhaitez leur appliquer un style CSS. Comprendre ce qu'il est possible ou non de faire vous évitera d'éventuelles déceptions cette leçon soulignera ce qu'il vous faut savoir.
+  - : Dans cet article, nous verrons comment des éléments particuliers sont traités en CSS. Les images, les autres médias, ou encore les éléments de formulaires se comportent légèrement différement des boîtes habituelles lorsque vous souhaitez leur appliquer un style CSS. Comprendre ce qu'il est possible ou non de faire vous évitera d'éventuelles déceptions cette leçon soulignera ce qu'il vous faut savoir.
 - [Mise en page des tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
   - : Styliser un tableau HTML n'est pas le travail qui fait rêver, mais vous pouvez parfois avoir à le faire. Cet article vous guide pour réussir l'apparence de vos tableaux en soulignant les techniques spécifiques applicables.
 - [Debugging CSS (déboguer le CSS)](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)

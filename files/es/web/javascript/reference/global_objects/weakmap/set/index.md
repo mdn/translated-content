@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/set
 ---
 
 {{JSRef}}
@@ -36,9 +35,9 @@ var wm = new WeakMap();
 var obj = {};
 
 // Agregando nuevos elementos a WeakMap
-wm.set(obj, 'foo').set(window, 'bar'); // encadenamiento
+wm.set(obj, "foo").set(window, "bar"); // encadenamiento
 // Actualiza el un elemento en el objeto WeakMap
-wm.set(obj, 'baz');
+wm.set(obj, "baz");
 ```
 
 ## Especificaciones

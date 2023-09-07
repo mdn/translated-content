@@ -2,6 +2,7 @@
 title: 이미지 갤러리
 slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 이제 우리는 JavaScript의 핵심적인 구성 요소를 살펴보았으므로, 우리는 반복문, 함수, 조건문, 그리고 이벤트에 대한 여러분의 이해를 시험할 것입니다. 많은 웹사이트들에서 보게 될 꽤 흔한 아이템인 — JavaScript를 이용하는 이미지 갤러리를 만듦으로써 말이죠.
@@ -40,14 +41,12 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 예제는 다음과 같습니다:
@@ -91,13 +90,13 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 우리의 어두워지게/밝게 하는 `<button>`은 가만히 있습니다 — 우리는 이미 `btn` 상수에 `<button>`에 대한 참조를 저장하는 코드 라인을 제공했습니다. 여러분은 다음을 수행하는 `onclick`을 추가할 필요가 있습니다:
 
 1. `<button>`에 설정된 현재 클래스명을 확인 — 여러분은 다시 이것을 `getAttribute()`를 사용함으로써 달성할 수 있습니다.
-2. 만약 클래스명이 `"dark"`라면, `<button>` 클래스를 `"light"`로 ([`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)를 사용하여), 이것의 텍스트 콘텐츠를 "Lighten"으로, 그리고 덮어씌운 `<div>`의 {{cssxref("background-color")}}를 `"rgba(0,0,0,0.5)"`로 변경.
+2. 만약 클래스명이 `"dark"`라면, `<button>` 클래스를 `"light"`로 ([`setAttribute()`](/ko/docs/Web/API/Element/setAttribute)를 사용하여), 이것의 텍스트 콘텐츠를 "Lighten"으로, 그리고 덮어씌운 `<div>`의 {{cssxref("background-color")}}를 `"rgba(0,0,0,0.5)"`로 변경.
 3. 만약 클래스명이 `"dark"`가 아니라면, `<button>` 클래스를 `"dark"`로, 이것의 텍스트 콘텐츠를 다시 "Darken"으로, 덮어씌운 `<div>`의 {{cssxref("background-color")}}를 `"rgba(0,0,0,0)"`로 변경.
 
 다음의 코드 라인은 위의 2와 3에서 규정된 변화 달성에 대한 기초를 제공합니다.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -113,9 +112,9 @@ overlay.style.backgroundColor = xxx;
 1. 여러분의 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/) 같은 온라인에서 공유 가능한 에디터에 올리세요.
 2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및/또는 도움을 요청하는 글을 작성하세요. 여러분의 글은 다음을 포함해야만 합니다:
 
-    - "이미지 갤러리에 대한 평가 원함"과 같은 서술적인 제목.
-    - 여러분이 이미 무엇을 시도해 봤는지, 그리고 우리가 무엇을 하기를 원하는지에 대한 설명. 예를 들자면, 막혀서 도움이 필요하다거나, 평가를 원한다거나 하는 설명을 포함해야 합니다.
-    - (위의 단계 1에서 언급된) 온라인에서 공유 가능한 에디터에 있는, 여러분이 평가를 원하거나 도움이 필요한 예제의 링크. 이것은 익숙해지기에 좋은 습관입니다. 코딩 문제가 있는 누군가를 도울 때, 그들의 코드를 보지 못한다면 그들을 돕는 것은 몹시 힘듭니다.
-    - 우리가 여러분이 도움을 원하는 문제를 찾을 수 있도록, 실제 과제나 평가 페이지의 링크.
+   - "이미지 갤러리에 대한 평가 원함"과 같은 서술적인 제목.
+   - 여러분이 이미 무엇을 시도해 봤는지, 그리고 우리가 무엇을 하기를 원하는지에 대한 설명. 예를 들자면, 막혀서 도움이 필요하다거나, 평가를 원한다거나 하는 설명을 포함해야 합니다.
+   - (위의 단계 1에서 언급된) 온라인에서 공유 가능한 에디터에 있는, 여러분이 평가를 원하거나 도움이 필요한 예제의 링크. 이것은 익숙해지기에 좋은 습관입니다. 코딩 문제가 있는 누군가를 도울 때, 그들의 코드를 보지 못한다면 그들을 돕는 것은 몹시 힘듭니다.
+   - 우리가 여러분이 도움을 원하는 문제를 찾을 수 있도록, 실제 과제나 평가 페이지의 링크.
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

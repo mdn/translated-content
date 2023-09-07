@@ -30,13 +30,16 @@ grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
 grid-template: fit-content(100px) / fit-content(40%);
 
 /* grid-template-areas grid-template-rows / grid-template-column の値 */
-grid-template: "a a a"
-               "b b b";
-grid-template: "a a a" 20%
-               "b b b" auto;
-grid-template: [header-top] "a a a"     [header-bottom]
-                 [main-top] "b b b" 1fr [main-bottom]
-                            / auto 1fr auto;
+grid-template:
+  "a a a"
+  "b b b";
+grid-template:
+  "a a a" 20%
+  "b b b" auto;
+grid-template:
+  [header-top] "a a a" [header-bottom]
+  [main-top] "b b b" 1fr [main-bottom]
+  / auto 1fr auto;
 
 /* グローバル値 */
 grid-template: inherit;
@@ -55,7 +58,7 @@ grid-template: unset;
 
   - : {{cssxref("grid-template-areas")}} にリストの文字列を設定し、{{cssxref("grid-template-rows")}} にリストの各文字列に従ったトラックサイズを設定します (サイズ指定の足りない部分には `auto` が設定されます)。さらに、各サイズの前後で定義された名前付き線をつなぎ、{{cssxref("grid-template-columns")}} にトラックリストのスラッシュ記号の後で指定されたサイズを設定します (指定されていない場合は `none` が設定されます)。
 
-    > **メモ:** これらのトラックリストに {{cssxref("repeat()")}} 関数を使うことはできません。トラックは “ASCII アート” 内の行列と一対一の関係で視覚的に並んでいるためです。
+    > **メモ:** これらのトラックリストに {{cssxref("repeat()")}} 関数を使うことはできません。トラックは "ASCII アート" 内の行列と一対一の関係で視覚的に並んでいるためです。
 
 > **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、(`grid-template` ではなく) `grid` を使用してください。
 
@@ -78,10 +81,11 @@ grid-template: unset;
   display: grid;
   width: 100%;
   height: 200px;
-  grid-template: [header-left] "head head" 30px [header-right]
-                 [main-left]   "nav  main" 1fr  [main-right]
-                 [footer-left] "nav  foot" 30px [footer-right]
-                 / 120px 1fr;
+  grid-template:
+    [header-left] "head head" 30px [header-right]
+    [main-left] "nav  main" 1fr [main-right]
+    [footer-left] "nav  foot" 30px [footer-right]
+    / 120px 1fr;
 }
 
 header {

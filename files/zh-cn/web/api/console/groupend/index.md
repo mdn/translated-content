@@ -1,6 +1,6 @@
 ---
 title: Console.groupEnd()
-slug: Web/API/Console/groupEnd
+slug: Web/API/console/groupEnd
 ---
 
 {{APIRef("Console API")}}

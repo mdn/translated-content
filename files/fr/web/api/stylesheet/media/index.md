@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
-translation_of: Web/API/StyleSheet/media
 ---
 
 {{APIRef ("CSSOM")}}
@@ -11,18 +10,18 @@ translation_of: Web/API/StyleSheet/media
 ## Syntaxe
 
 ```js
-Medium = stylesheet.media
-Stylesheet.media = medium
+media = stylesheet.media;
+stylesheet.media = media;
 ```
 
 ## Paramètres
 
-- `medium` Est une chaîne décrivant un seul moyen ou une liste séparée par des virgules.
+- `media` Est une chaîne décrivant un seul moyen ou une liste séparée par des virgules.
 
 ## Exemple
 
 ```html
-<Link rel = "StyleSheet" href="document.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="document.css" type="text/css" media="screen" />
 ```
 
 ## Remarques

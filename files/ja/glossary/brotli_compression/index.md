@@ -1,6 +1,6 @@
 ---
 title: Brotli
-slug: Glossary/brotli_compression
+slug: Glossary/Brotli_compression
 l10n:
   sourceCommit: a0e987d407b31560bde1f982520ee10103db4ba0
 ---

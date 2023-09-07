@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: pause イベント'
+title: "HTMLMediaElement: pause イベント"
 slug: Web/API/HTMLMediaElement/pause_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -18,9 +18,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pause', (event) => {});
+addEventListener("pause", (event) => {});
 
-onpause = (event) => { };
+onpause = (event) => {};
 ```
 
 ## イベント型
@@ -34,22 +34,26 @@ onpause = (event) => { };
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('pause', (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.addEventListener("pause", (event) => {
+  console.log(
+    "The Boolean paused property is now true. Either the " +
+      "pause() method was called or the autoplay attribute was toggled.",
+  );
 });
 ```
 
 `onpause` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onpause = (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now true. Either the " +
+      "pause() method was called or the autoplay attribute was toggled.",
+  );
 };
 ```
 

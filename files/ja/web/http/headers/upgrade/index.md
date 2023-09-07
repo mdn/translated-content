@@ -46,11 +46,11 @@ Upgrade: example/1, foo/2
 
 1. {{HTTPStatus(101, "101 Switching Protocols")}} レスポンスステータスを返し、そこに切り替え先のプロトコルを示した `Upgrade` ヘッダーを入れる必要があります。例えば次のようにします。
 
-    ```
-    HTTP/1.1 101 Switching Protocols
-    Upgrade: foo/2
-    Connection: Upgrade
-    ```
+   ```http
+   HTTP/1.1 101 Switching Protocols
+   Upgrade: foo/2
+   Connection: Upgrade
+   ```
 
 2. 元のリクエストに*新しいプロトコルを使用して*レスポンスを送ります（サーバーは、元のリクエストを完了できるプロトコルにのみ切り替えることができます）。
 

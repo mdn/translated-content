@@ -12,10 +12,10 @@ Para mais artigos sobre canvas, veja [canvas topic page](/pt-BR/HTML/Canvas).
 ## Contexto de uso
 
 | Conteúdo permitido         | Transparente, tanto [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) ou [flow content](/pt-BR/HTML/Content_categories#flow_content).          |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                              |
 | Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) ou [flow content](/pt-BR/HTML/Content_categories#flow_content). |
-| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
+| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                 |
 
 ## Atributos
 

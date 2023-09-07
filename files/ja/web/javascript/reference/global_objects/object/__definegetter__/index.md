@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ## 構文
 
 ```js
-__defineGetter__(prop, func)
+__defineGetter__(prop, func);
 ```
 
 ### 引数
@@ -36,7 +36,9 @@ __defineGetter__(prop, func)
 
 ```js
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
 ```
 
@@ -44,15 +46,19 @@ console.log(o.gimmeFive); // 5
 
 ```js
 // get 演算子を使用
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Object.defineProperty を使用
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```
@@ -76,4 +82,4 @@ console.log(o.gimmeFive); // 5
 - [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 - [\[Blog
   Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- {{bug(647423)}}
+- [Firefox バグ 647423](https://bugzil.la/647423)

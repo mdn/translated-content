@@ -1,7 +1,6 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 ---
 
 {{JSRef}}
@@ -41,14 +40,14 @@ La función retorna el mismo objeto pasado en ella, no crea una copia _congelada
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // Nuevas propiedades pueden ser agregadas,
 // propiedades existentes pueden cambiar o removerse
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // Ambos, el objeto pasado como argumento tanto como el que se regresa
@@ -60,54 +59,53 @@ var o = Object.freeze(obj);
 assert(Object.isFrozen(obj) === true);
 
 // Ahora cualquier cambio fallará
-obj.foo = 'quux'; // No hace nada de manera silenciosa
-obj.quaxxor = 'the friendly duck'; // No agrega una nueva propiedad, de manera silenciosa
+obj.foo = "quux"; // No hace nada de manera silenciosa
+obj.quaxxor = "the friendly duck"; // No agrega una nueva propiedad, de manera silenciosa
 
 // ...y en modo estrico tal intento arrojará TypeErrors
-function fail(){
-  'use strict';
-  obj.foo = 'sparky'; // arroja un TypeError
+function fail() {
+  "use strict";
+  obj.foo = "sparky"; // arroja un TypeError
   delete obj.quaxxor; // arroja un TypeError
-  obj.sparky = 'arf'; // arroja un TypeError
+  obj.sparky = "arf"; // arroja un TypeError
 }
 
 fail();
 
 // Los intentos utilizando Object.defineProperty tambien arrojarán una excepción...
-Object.defineProperty(obj, 'ohai', { value: 17 }); // arroja un TypeError
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // arroja un TypeError
+Object.defineProperty(obj, "ohai", { value: 17 }); // arroja un TypeError
+Object.defineProperty(obj, "foo", { value: "eit" }); // arroja un TypeError
 
 // Es imposible cambiar un prototipo
 // Estos ejemplos retornan un error TypeError
-Object.setPrototype(obj,{x:20})
-obj.__proto__ = {x:20}
+Object.setPrototype(obj, { x: 20 });
+obj.__proto__ = { x: 20 };
 ```
 
 El siguiente ejemplo muestra que los valores de objetos en un objeto congelado pueden ser mutados (la congelación es superficial).
 
 ```js
 obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'aValue';
+obj1.internal.a = "aValue";
 
-obj1.internal.a // 'aValue'
+obj1.internal.a; // 'aValue'
 
 // Para hacer obj completamente inmutable, congelamos cada objeto en obj.
 // Para hacerlo, usamos esta función.
 function deepFreeze(obj) {
-
   // Recuperamos el nombre de las propiedades en obj
   var propNames = Object.getOwnPropertyNames(obj);
 
   // Congelamos las propiedades antes de congelar a obj
-  propNames.forEach(function(name) {
+  propNames.forEach(function (name) {
     var prop = obj[name];
 
     // Si la propiedad es un objeto, llamaremos a deepFreezze para que congele las propiedades de ese objeto
-    if (typeof prop == 'object' && prop !== null && !Object.isFrozen(prop))
+    if (typeof prop == "object" && prop !== null && !Object.isFrozen(prop))
       deepFreeze(prop);
   });
 
@@ -116,11 +114,11 @@ function deepFreeze(obj) {
 }
 
 obj2 = {
-  internal: {}
+  internal: {},
 };
 
 deepFreeze(obj2);
-obj2.internal.a = 'anotherValue';
+obj2.internal.a = "anotherValue";
 obj2.internal.a; // undefined
 ```
 

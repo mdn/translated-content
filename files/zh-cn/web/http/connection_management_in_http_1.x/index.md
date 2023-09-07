@@ -5,7 +5,7 @@ slug: Web/HTTP/Connection_management_in_HTTP_1.x
 
 {{HTTPSidebar}}
 
-连接管理是一个 HTTP 的关键话题：打开和保持连接在很大程度上影响着网站和 Web 应用程序的性能。在 HTTP/1.x 里有多种模型：*短连接*、*长连接*和 *HTTP 流水线*。
+连接管理是一个 HTTP 的关键话题：打开和保持连接在很大程度上影响着网站和 Web 应用程序的性能。在 HTTP/1.x 里有多种模型：_短连接_、*长连接*和 _HTTP 流水线_。
 
 HTTP 的传输协议主要依赖于 TCP 来提供从客户端到服务器端之间的连接。在早期，HTTP 使用一个简单的模型来处理这样的连接。这些连接的生命周期是短暂的：每发起一个请求时都会创建一个新的连接，并在收到应答时立即关闭。
 
@@ -15,7 +15,7 @@ HTTP 的传输协议主要依赖于 TCP 来提供从客户端到服务器端之�
 
 ![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **备注：** HTTP/2 新增了其它连接管理模型。
+> **备注：** HTTP/2 新增了其他连接管理模型。
 
 要注意的一个重点是 HTTP 的连接管理适用于两个连续节点之间的连接，它是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)，而不是[端到端（End-to-end）标头](/zh-CN/docs/Web/HTTP/Headers#端到端（end-to-end）标头)。当模型用于从客户端到第一个代理服务器的连接和从代理服务器到目标服务器之间的连接时（或者任意中间代理）效果可能是不一样的。HTTP 协议头受不同连接模型的影响，比如 {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}，就是[逐跳标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)标头，它们的值是可以被中间节点修改的。
 
@@ -39,7 +39,7 @@ TCP 协议握手本身就是耗费时间的，所以 TCP 可以保持更多的�
 
 长连接也还是有缺点的；就算是在空闲状态，它还是会消耗服务器资源，而且在重负载时，还有可能遭受 {{glossary("DoS attack", "DoS 攻击")}}。这种场景下，可以使用非长连接，即尽快关闭那些空闲的连接，也能对性能有所提升。
 
-HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设置成 `close` 以外的其它参数都可以让其保持长连接，通常会设置为 `retry-after`。
+HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设置成 `close` 以外的其他参数都可以让其保持长连接，通常会设置为 `retry-after`。
 
 在 HTTP/1.1 里，默认就是长连接的，不再需要标头（但我们还是会把它加上，万一某个时候因为某种原因要退回到 HTTP/1.0 呢）。
 
@@ -51,7 +51,7 @@ HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设�
 > - 正确的实现流水线是复杂的：传输中的资源大小、多少有效的 [RTT](https://zh.wikipedia.org/wiki/來回通訊延遲) 会被用到以及有效带宽都会直接影响到流水线提供的改善。不知道这些的话，重要的消息可能被延迟到不重要的消息后面。这个重要性的概念甚至会演变为影响到页面布局！因此 HTTP 流水线在大多数情况下带来的改善并不明显。
 > - 流水线受制于[队头阻塞（HOL）](https://zh.wikipedia.org/wiki/队头阻塞)问题。
 >
-> 由于这些原因，流水线已被 HTTP/2 中更好的算法——*多路复用*（multiplexing）所取代。
+> 由于这些原因，流水线已被 HTTP/2 中更好的算法——_多路复用_（multiplexing）所取代。
 
 默认情况下，[HTTP](/zh-CN/docs/Web/HTTP) 请求是按顺序发出的。下一个请求只有在当前请求收到响应过后才会被发出。由于会受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。
 

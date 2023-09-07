@@ -1,5 +1,5 @@
 ---
-title: 'NDEFReader: reading イベント'
+title: "NDEFReader: reading イベント"
 slug: Web/API/NDEFReader/reading_event
 ---
 
@@ -12,9 +12,9 @@ slug: Web/API/NDEFReader/reading_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
 ```js
-addEventListener('reading', event => { });
+addEventListener("reading", (event) => {});
 
-onreading = event => { };
+onreading = (event) => {};
 ```
 
 ## イベント型
@@ -23,22 +23,26 @@ onreading = event => { };
 
 ## 例
 
-次の例は、 `onreading` と `onreadinger` の両方のイベントハンドラーを使用してイベントを処理する方法を示しています。
+次の例は、 `onreading` と `onreadingerror` の両方のイベントハンドラーを使用してイベントを処理する方法を示しています。
 
 ```js
 const ndef = new NDEFReader();
-  ndef.scan().then(() => {
+ndef
+  .scan()
+  .then(() => {
     console.log("Scan started successfully.");
     ndef.onreadingerror = (event) => {
-      console.log("Error! Cannot read data from the NFC tag. Try a different one?");
+      console.log(
+        "Error! Cannot read data from the NFC tag. Try a different one?",
+      );
     };
     ndef.onreading = (event) => {
       console.log("NDEF message read.");
     };
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-
 ```
 
 ## 仕様書

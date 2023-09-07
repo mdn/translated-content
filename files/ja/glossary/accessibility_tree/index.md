@@ -10,7 +10,7 @@ slug: Glossary/Accessibility_tree
 アクセシビリティツリーオブジェクトの中には 4 つのものがあります。
 
 - **name**
-  - : このものをどのように参照することができるか。例えば、 ‘Read more’ というテキストを持ったリンクは ‘Read more’ という名前を持つでしょう (名前がどのように計算されるかの詳細については [Accessible Name and Description Computation spec](https://www.w3.org/TR/accname-1.1/) にあります)。
+  - : このものをどのように参照することができるか。例えば、 'Read more' というテキストを持ったリンクは 'Read more' という名前を持つでしょう (名前がどのように計算されるかの詳細については [Accessible Name and Description Computation spec](https://www.w3.org/TR/accname-1.1/) にあります)。
 - **description**
   - : 名前に何かを追加したいとすれば、この要素をどのように説明するか。表の説明は、その表が提供する情報の種類が何かで説明することができます。
 - **role**
@@ -22,5 +22,5 @@ slug: Glossary/Accessibility_tree
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Accessibility", "アクセシビリティ")}}
-    2. {{Glossary("ARIA")}}
+   1. {{Glossary("Accessibility", "アクセシビリティ")}}
+   2. {{Glossary("ARIA")}}

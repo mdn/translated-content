@@ -5,11 +5,11 @@ slug: Web/CSS/var
 
 {{CSSRef}}
 
-**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-cn/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
+**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
 
 {{EmbedInteractiveExample("pages/css/var.html")}}
 
-`var()` 函数不能作为属性名、选择器或者其它除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
+`var()` 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
 
 ## 语法
 
@@ -45,13 +45,10 @@ body {
 ```css
 /* 回退值 */
 
-/* 在 component 的样式中: */
+/* 在 component 的样式中：*/
 .component .header {
-  /* header-color 没有被设置, 将使用回退值 blue */
-  color: var(
-    --header-color,
-    blue
-  );
+  /* header-color 没有被设置，将使用回退值 blue */
+  color: var(--header-color, blue);
 }
 
 .component .text {

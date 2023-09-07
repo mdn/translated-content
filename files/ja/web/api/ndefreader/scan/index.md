@@ -5,7 +5,7 @@ slug: Web/API/NDEFReader/scan
 
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグが読み取れたときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
+`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取りを開始したときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
 ## 構文
 
@@ -19,11 +19,11 @@ var readerPromise = NDEFReader.scan(options);
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `signal` -- {{DOMxRef("AbortSignal")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
+    - `signal` — {{DOMxRef("AbortSignal")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
 
 ### 返値
 
-{{JSxRef("Promise")}} で、 NFC アダプターのスケジュール済みの読み取り操作が終わると直ちに解決します。
+{{JSxRef("Promise")}} で、 NFC アダプターで読み取り操作のスケジューリングが終わると直ちに解決します。
 
 ## 例外
 
@@ -46,17 +46,22 @@ var readerPromise = NDEFReader.scan(options);
 
 ```js
 const ndef = new NDEFReader();
-ndef.scan().then(() => {
-  console.log("Scan started successfully.");
-  ndef.onreadingerror = (event) => {
-    console.log("Error! Cannot read data from the NFC tag. Try a different one?");
-  };
-  ndef.onreading = (event) => {
-    console.log("NDEF message read.");
-  };
-}).catch(error => {
-  console.log(`Error! Scan failed to start: ${error}.`);
-});
+ndef
+  .scan()
+  .then(() => {
+    console.log("Scan started successfully.");
+    ndef.onreadingerror = (event) => {
+      console.log(
+        "Error! Cannot read data from the NFC tag. Try a different one?",
+      );
+    };
+    ndef.onreading = (event) => {
+      console.log("NDEF message read.");
+    };
+  })
+  .catch((error) => {
+    console.log(`Error! Scan failed to start: ${error}.`);
+  });
 ```
 
 ## 仕様書

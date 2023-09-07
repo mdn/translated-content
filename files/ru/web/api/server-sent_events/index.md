@@ -1,8 +1,8 @@
 ---
 title: Server-sent events
 slug: Web/API/Server-sent_events
-translation_of: Web/API/Server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 По традиции, web-страница должна отправить запрос на сервер, чтобы получить новые данные; это то, как страница получает данные с сервера. Server-sent events дают возможность серверу отправлять новые данные web-странице в любое время, отсылая сообщения web-странице. Такие входящие сообщения могут расцениваться как _[Events](/ru/docs/DOM/event) + data_ внутри web-страницы.
@@ -22,18 +22,20 @@ translation_of: Web/API/Server-sent_events
 
 ## Specification
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#server-sent-events', 'Server-sent events')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
 ### Tools
 
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
 - intercooler.js [declarative SSE support](http://intercoolerjs.org/docs.html#sse)
 
 ### Related Topics

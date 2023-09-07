@@ -1,7 +1,6 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -14,9 +13,13 @@ En este artículo vamos a exponer lo más básico del HTML. Para comenzar defini
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática,
-        [tener instalado el software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+        <a href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software">
+          tener instalado el software básico
+        </a>
         y conocimientos básicos de cómo
-        [trabajar con archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files">
+          trabajar con archivos
+        </a>.
       </td>
     </tr>
     <tr>
@@ -165,7 +168,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -227,7 +230,7 @@ Considera el siguiente ejemplo:
 <p>sexto</p>
 ```
 
-{{htmlelement("em")}} es un elemento en línea. Así, como puedes observar, los tres primeros elementos se sitúan en la misma línea, uno tras otro sin espacio entre ellos. Por otro lado, {{htmlelement("p")}} es un elemento a nivel de bloque. Cada elemento _p_ aparece en una nueva línea, con un espacio arriba y abajo. (El espaciado se debe al [estilo CSS](/es/docs/Learn/CSS/Introduction_to_CSS) predeterminado que el navegador aplica a los párrafos).
+{{htmlelement("em")}} es un elemento en línea. Así, como puedes observar, los tres primeros elementos se sitúan en la misma línea, uno tras otro sin espacio entre ellos. Por otro lado, {{htmlelement("p")}} es un elemento a nivel de bloque. Cada elemento _p_ aparece en una nueva línea, con un espacio arriba y abajo. (El espaciado se debe al [estilo CSS](/es/docs/Learn/CSS/First_steps) predeterminado que el navegador aplica a los párrafos).
 
 {{ EmbedLiveSample('Elementos_de_bloque_y_elementos_en_línea', 700, 200, "", "") }}
 
@@ -235,7 +238,7 @@ Considera el siguiente ejemplo:
 
 > **Nota:** Los términos «en bloque» (block) y «en línea» (inline), tal como se usan en este tema, no se deberían confundir con [los tipos de casillas de CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) que se conocen con el mismo nombre. Aunque de manera predeterminada están relacionados, el hecho de cambiar el tipo de aspecto visual del CSS no cambia la categoría del elemento ni afecta a aquellos elementos que pueda contener. Una de las razones por las que HTML5 abandonó el uso de estos términos fue para evitar este tipo de confusión.
 
-> **Nota:** Puedes encontrar referencias útiles que incluyen listas de elementos de bloque y elementos en línea. Consulta [Elementos en bloque](/es/docs/Web/HTML/Block-level_elements) y [Elementos en línea](/es/docs/Web/HTML/Elementos_en_línea).
+> **Nota:** Puedes encontrar referencias útiles que incluyen listas de elementos de bloque y elementos en línea. Consulta [Elementos en bloque](/es/docs/Glossary/Block-level_content) y [Elementos en línea](/es/docs/orphaned/Web/HTML/Inline_elements).
 
 ### Elementos vacíos
 
@@ -243,8 +246,7 @@ No todos los elementos siguen el patrón de etiqueta de apertura, contenido y et
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
-/>
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
 ```
 
 Este texto mostrará lo siguiente en tu página:
@@ -390,7 +392,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -419,7 +421,7 @@ textarea.onkeyup = function () {
 
 ### Atributos booleanos
 
-En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo {{htmlattrxref("disabled", "input")}}, que puedes asignar a los elementos de entrada del formulario. (Usa esto para _deshabilitar_ los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:
+En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo [`disabled`](/es/docs/Web/HTML/Element/input#disabled), que puedes asignar a los elementos de entrada del formulario. (Usa esto para _deshabilitar_ los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:
 
 ```bash
 <input type="text" disabled="disabled">
@@ -450,10 +452,10 @@ Cuando observas diferentes páginas web, puedes encontrarte con todo tipo de est
 Sin embargo, las cosas no funcionarán cuando a este estilo se añada el atributo `title`:
 
 ```html example-bad
-<a href=https://www.mozilla.org/ title=The Mozilla homepage>mi sitio web favorito</a>
+<a href=https://www.mozilla.org/ title=La pagina de Mozilla>mi sitio web favorito</a>
 ```
 
-En este punto el navegador interpretará mal el cambio y pensará que el atributo `title` corresponde a tres atributos: un atributo `title` con el valor _The_ y dos atributos booleanos: `Mozilla` y `homepage`. ¡Obviamente, esta no es la intensión! Causará errores o comportamientos inesperados, como puedes ver en el ejemplo en vivo a continuación. ¡Intenta colocar el cursor sobre el enlace para ver el texto del título!
+En este punto el navegador interpretará mal el cambio y pensará que el atributo `title` corresponde a tres atributos: un atributo `title` con el valor _La_ y dos atributos booleanos: `Mozilla` y `homepage`. ¡Obviamente, esta no es la intensión! Causará errores o comportamientos inesperados, como puedes ver en el ejemplo en vivo a continuación. ¡Intenta colocar el cursor sobre el enlace para ver el texto del título!
 
 {{ EmbedLiveSample('Omitir_comillas_en_valores_de_atributos', 700, 100, "", "", "hide-codepen-jsfiddle") }}
 
@@ -502,7 +504,7 @@ Así que tendrás que hacer esto:
 Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combinar los elementos individuales para formar una página HTML completa:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -550,8 +552,8 @@ En este ejercicio, puedes editar el código en tu ordenador como se indica arrib
 - Justo debajo de la etiqueta de apertura {{htmlelement("body")}}, añade un título principal para el documento. Este deberá estar dentro de una etiqueta de apertura `<h1>` y una etiqueta de cierre `</h1>`.
 - Edita el contenido del párrafo e incluye algún texto sobre algo que te interese.
 - Pon las palabras importantes dentro de etiquetas `<strong>` de apertura y `</strong>` de cierre para que destaquen en negrita.
-- Añade un enlace a tu párrafo, como se ha explicado [anteriormente en este mismo artículo](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element).
-- Agrega una imagen a tu documento. Colócala debajo del párrafo, como [se explicó anteriormente en el artículo](/es/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements). Ganarás puntos extra si consigues enlazar a una imagen diferente (de tu propio ordenador o de cualquier otro lugar de la web).
+- Añade un enlace a tu párrafo, como se ha explicado [anteriormente en este mismo artículo](#active_learning_adding_attributes_to_an_element).
+- Agrega una imagen a tu documento. Colócala debajo del párrafo, como [se explicó anteriormente en el artículo](#empty_elements). Ganarás puntos extra si consigues enlazar a una imagen diferente (de tu propio ordenador o de cualquier otro lugar de la web).
 
 Si te equivocas, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente atascado, pulsa el botón _Mostrar la solución_ para ver la solución.
 
@@ -665,7 +667,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -699,8 +701,7 @@ En los ejemplos anteriores se han incluido espacios en blanco y saltos de línea
 ```html
 <p>Los perros son tontos.</p>
 
-<p>Los    perros        son
-         tontos.</p>
+<p>Los perros son tontos.</p>
 ```
 
 No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de espacio como saltos de línea) el intérprete de HTML reduce cada secuencia de espacio en blanco a un único espacio al interpretar el código. Entonces, ¿por qué utilizar espacios en blanco? La respuesta está en la legibilidad.
@@ -726,7 +727,8 @@ El equivalente de referencia de caracter podría recordarse fácilmente porque e
 Considera los dos siguientes párrafos:
 
 ```html
-<p>En HTML, defines un párrafo con el elemento <p>.</p>
+<p>En HTML, defines un párrafo con el elemento</p>
+<p>.</p>
 
 <p>En HTML, defines un párrafo con el elemento &lt;p&gt;.</p>
 ```
@@ -735,7 +737,7 @@ En la salida en vivo de abajo, puedes ver que el primer párrafo salió mal. El 
 
 {{ EmbedLiveSample('Referencias_a_entidades_Inclusión_de_caracteres_especiales_en_HTML', 700, 200) }}
 
-> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML). Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding).
+> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML). Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_document's_character_encoding).
 
 ## Comentarios HTML
 
@@ -765,15 +767,3 @@ En este punto ya deberías entender el lenguaje, cómo funciona en un nivel bás
 - [Aplicación de color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en la cabecera? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcando para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -66,16 +66,19 @@ O texto alternativo deve incluir todas as informações que a imagem transmite q
 
 A sintaxe em markdown e HTML:
 
-```html
+```md-nolint
 ![<alt-text>](<url-of-image>)
-<img alt="<alt-text>" src="<url-of-image>">
+```
+
+```html
+<img alt="<alt-text>" src="<url-of-image>" />
 ```
 
 Exemplos:
 
 ```html
 ![Logotipo OpenWebDocs: Carle, o verme dos livros](carle.png)
-<img alt="OpenWebDocs Logo: Carle, o verme dos livros" src="carle.png">
+<img alt="OpenWebDocs Logo: Carle, o verme dos livros" src="carle.png" />
 ```
 
 Embora as imagens puramente decorativas devam ter um `alt` vazio, as imagens adicionadas à documentação MDN devem ter um propósito e, portanto, exigir uma descrição de string não vazia.
@@ -158,14 +161,14 @@ Caso contrário, recomendamos que você comece com uma ferramenta simples e depo
 
 A tabela a seguir fornece algumas recomendações para boas ferramentas iniciais:
 
-| Ferramenta | SO | Custo | Recursos de pós-produção disponíveis? |
-| ------------------------- | --------------------- | ------ | ----------------------------------- |
-| Open Broadcaster Software | macOS, Windows, Linux | Grátis | Sim |
-| CamStudio | Janelas | Grátis | Limitada |
-| Camtasia | Windows, macOS | alta | Sim |
-| QuickTime | mac OS | Grátis | Não, apenas permite gravação simples |
-| Screenflow | mac OS | Médio | Sim |
-| Kazam | Linux | Grátis | Mínimo |
+| Ferramenta                | SO                    | Custo  | Recursos de pós-produção disponíveis? |
+| ------------------------- | --------------------- | ------ | ------------------------------------- |
+| Open Broadcaster Software | macOS, Windows, Linux | Grátis | Sim                                   |
+| CamStudio                 | Janelas               | Grátis | Limitada                              |
+| Camtasia                  | Windows, macOS        | alta   | Sim                                   |
+| QuickTime                 | mac OS                | Grátis | Não, apenas permite gravação simples  |
+| Screenflow                | mac OS                | Médio  | Sim                                   |
+| Kazam                     | Linux                 | Grátis | Mínimo                                |
 
 ### Dicas do QuickTime
 
@@ -182,7 +185,7 @@ As etapas de gravação usando esta ferramenta são bem simples:
 
 ### Outros recursos
 
-- [Como adicionar frases de destaque personalizadas a vídeos de screencast no Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122 )
+- [Como adicionar frases de destaque personalizadas a vídeos de screencast no Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ## Fluxo de trabalho para criação de vídeos
 

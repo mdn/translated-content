@@ -31,13 +31,17 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ## Exemplo
 
 ```html
-<p>Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
-  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.</p>
+<p>
+  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+</p>
 
-<hr>
+<hr />
 
-<p>Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
-  Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.</p>
+<p>
+  Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto. Este
+  é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
+</p>
 ```
 
 O HTML acima irá produzir:
@@ -54,12 +58,12 @@ Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, util
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário                                       |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------ |
+| Especificação                                                                     | Status                   | Comentário                                       |
+| --------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------ |
 | {{SpecName('HTML WHATWG', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento `hr`                       |
-| {{SpecName('HTML WHATWG', 'rendering.html#the-hr-element-0')}}                         | {{Spec2('HTML WHATWG')}} | Sugestão de renderização padrão do elemento `hr` |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}}     | {{Spec2('HTML5 W3C')}}     |                                                  |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}                 | {{Spec2('HTML4.01')}}     |                                                  |
+| {{SpecName('HTML WHATWG', 'rendering.html#the-hr-element-0')}}                    | {{Spec2('HTML WHATWG')}} | Sugestão de renderização padrão do elemento `hr` |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}}   | {{Spec2('HTML5 W3C')}}   |                                                  |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}            | {{Spec2('HTML4.01')}}    |                                                  |
 
 ## Compatibilidade nos Navegadores
 

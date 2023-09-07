@@ -12,12 +12,11 @@ slug: Learn/CSS/Building_blocks/Selectors/Combinators
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        基础电脑知识，<a
+        基础电脑知识、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了基本的软件</a
-        >，<a href="/和CN/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >处理文件</a
-        >的基本知识，HTML 基础（学习<a
+        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >文件处理</a>基本知识、HTML 基础（学习 <a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
         >），以及对 CSS 工作原理的了解（学习<a
@@ -90,7 +89,8 @@ p ~ img
 你能用关系选择器，将任何在我们前面的学习过程中学到的选择器组合起来，选出你的文档中的一部分。例如如果我们想选中为`<ul>`的直接子元素的带有“a”类的列表项的话，我可以用下面的代码。
 
 ```css
-ul > li[class="a"]  {  }
+ul > li[class="a"] {
+}
 ```
 
 不过，建立一长列选中你的文档中很明确的部分的选择器的时候，小心一些。这些 CSS 规则难以复用，因为你让选择器在表示标记文本中的元素的相对位置上过于明确。

@@ -1,12 +1,6 @@
 ---
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -39,11 +33,11 @@ getLog10e(); // 0.4342944819032518
 
 ## Спецификации
 
-| Спецификация                                                             | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                           | Статус             | Комментарии                                            |
+| ------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}}  | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

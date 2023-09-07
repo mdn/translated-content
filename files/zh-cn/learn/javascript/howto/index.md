@@ -38,8 +38,8 @@ slug: Learn/JavaScript/Howto
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 这个函数不会执行，除非你调用它，例如：
@@ -56,7 +56,7 @@ myFunction();
 
 还要记住，当你向一个函数外部返回一个值时，JavaScript 解释器会退出这个函数——在 return 语句之后，不会执行任何代码。
 
-事实上，如果您在返回语句之后有代码，某些浏览器（如 Firefox）会在开发人员控制台中显示出一条错误消息。Firefox 在返回语句后会给你“无法运行到的代码”的提示。
+事实上，如果你在返回语句之后有代码，某些浏览器（如 Firefox）会在开发人员控制台中显示出一条错误消息。Firefox 在返回语句后会给你“无法运行到的代码”的提示。
 
 ### 对象标记法与正常赋值
 
@@ -70,9 +70,9 @@ const myNumber = 0;
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## 基本定义
@@ -140,7 +140,7 @@ const myObject = {
 - [怎么在 JavaScript 控制台打印值？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#console_相关_api)
 - [怎么使用断点和其他 JavaScript 调试工具？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
-有关 JavaScript 调试的更多内容，请查阅[处理 JavaScript 常见问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)页面，也可以查看[其他常见错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#其它常见错误)的描述。
+有关 JavaScript 调试的更多内容，请查阅[处理 JavaScript 常见问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)页面，也可以查看[其他常见错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#其他常见错误)的描述。
 
 ### 在代码中作出判断
 

@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es un nombre de dominio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
@@ -12,11 +11,11 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >cómo funciona Internet</a
         >
         y entender
-        <a href="/en-US/Learn/Understanding_URLs">qué son las URLs</a>.
+        <a href="/es/Learn/Understanding_URLs">qué son las URLs</a>.
       </td>
     </tr>
     <tr>
@@ -33,7 +32,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
 
 Los nombres de dominio son una parte clave de la infraestructura de internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
 
-Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
+Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
 
 ## Ánalisis del tema
 
@@ -41,7 +40,7 @@ Cualquier computadora conectada a Internet puede ser alcanzada a partir de una d
 
 Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
 
-![Anatomy of the MDN domain name](structure.png)
+![Anatomía del nombre de dominio MDN](structure.png)
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
@@ -52,6 +51,7 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 <!-- -->
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
+
   - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
 
     **Etiqueta (o componente)**
@@ -62,7 +62,7 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 
 #### ¿Quién es propietario de un nombre de dominio?
 
-No se puede “comprar un nombre de dominio”. Se paga por el derecho de usar un nombre de dominio por uno o más años. Se pueden renovar los derechos y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá se podrá apropiar se un nombre de dominio. Una vez que deja de pagarlo queda libre para que otras personas puedan utilizarlo.
+No se puede "comprar un nombre de dominio". Se paga por el derecho de usar un nombre de dominio por uno o más años. Se pueden renovar los derechos y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá se podrá apropiar se un nombre de dominio. Una vez que deja de pagarlo queda libre para que otras personas puedan utilizarlo.
 
 Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
 
@@ -116,7 +116,7 @@ Como se observa, el dominio no existe en la base de datos de `whois` (en el mome
 El proceso es bastante sencillo:
 
 1. Ir a un sitio de registro.
-2. Generalmente hay un letrero que llama la atención que dice “Get a domain name”. Hacer click en él.
+2. Generalmente hay un letrero que llama la atención que dice "Get a domain name". Hacer click en él.
 3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
 4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
 
@@ -137,7 +137,7 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
 4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
 
-![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
+![Explicación de los pasos necesarios para obtener el resultado de una solicitud DNS](2014-10-dns-request2.png)
 
 ## Próximos pasos
 

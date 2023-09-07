@@ -13,7 +13,7 @@ Para aprovechar al máximo este módulo, debería haber trabajado con los módul
 
 Conocimiento basico de [HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS) tambien seria util.
 
-> **Nota:** Si está trabajando en un dispositivo en el que no tiene la capacidad de crear sus propios archivos, puede probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si está trabajando en un dispositivo en el que no tiene la capacidad de crear sus propios archivos, puede probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

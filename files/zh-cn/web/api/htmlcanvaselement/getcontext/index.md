@@ -34,9 +34,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
   - : 你可以在创建渲染上下文的时候设置多个属性，例如：
 
     ```js
-    canvas.getContext("webgl",
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     2d 上下文属性：
@@ -98,7 +96,7 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("HTMLCanvasElement")}}.
 - {{domxref("OffscreenCanvas.getContext()")}}

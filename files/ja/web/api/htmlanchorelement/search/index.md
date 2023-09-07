@@ -1,10 +1,11 @@
 ---
-title: HTMLAnchorElement.search
+title: "HTMLAnchorElement: search プロパティ"
 slug: Web/API/HTMLAnchorElement/search
-original_slug: Web/API/HTMLHyperlinkElementUtils/search
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL の引数の入った文字列です。
 
@@ -19,7 +20,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ### アンカーリンクから検索文字列を取得
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
 const anchor = document.getElementById("myAnchor");
 anchor.search; // '?q=123' を返す
 ```

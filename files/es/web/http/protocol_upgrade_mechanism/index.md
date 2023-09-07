@@ -1,7 +1,6 @@
 ---
 title: Mecanismo de actualización del protocolo
 slug: Web/HTTP/Protocol_upgrade_mechanism
-original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 ---
 
 {{HTTPSidebar}}

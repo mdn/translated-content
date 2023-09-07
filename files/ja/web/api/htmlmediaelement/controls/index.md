@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.controls`** プロパティは、 HTML の {{htmlattrxref("controls", "video")}} 属性を反映し、メディア項目を再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。
+**`HTMLMediaElement.controls`** プロパティは、 HTML の [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性を反映し、メディア項目を再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。
 
 ## 値
 
@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.controls = true;
 ```
 

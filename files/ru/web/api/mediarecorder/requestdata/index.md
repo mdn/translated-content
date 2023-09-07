@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
-translation_of: Web/API/MediaRecorder/requestData
 ---
 
 {{APIRef("MediaStream Recording")}}
@@ -22,7 +21,7 @@ MediaRecorder.requestData()
 
 ### Errors
 
-An `InvalidState` error is raised if the `requestData()` method is called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if recording is not occurring.
+An `InvalidState` error is raised if the `requestData()` method is called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if recording is not occurring.
 
 ## Example
 
@@ -41,9 +40,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 
 ## Specifications
 
-| Specification                                                                                                                                    | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-requestData-void", "MediaRecorder.requestData()")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

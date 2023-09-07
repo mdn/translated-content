@@ -1,11 +1,11 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
 ---
 
 {{CSSRef}}
 
-**`@media`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+**`@media`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > **备注：** 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
 
@@ -13,7 +13,7 @@ slug: Web/CSS/@media
 
 ## 语法
 
-`@media` 规则可置于你代码的顶层或位于其它任何 [@ 条件规则组](/zh-CN/docs/Web/CSS/At-rule#条件规则组)内。
+`@media` 规则可置于你代码的顶层或位于其他任何 [@ 条件规则组](/zh-CN/docs/Web/CSS/At-rule#条件规则组)内。
 
 ```css
 /* At the top level of your code */
@@ -33,7 +33,7 @@ slug: Web/CSS/@media
 }
 ```
 
-有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。
+有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。
 
 ## 描述
 
@@ -44,7 +44,7 @@ _媒体类型_（_Media type_）描述设备的一般类别。除非使用 `not`
 - `all`
   - : 适用于所有设备。
 - `print`
-  - : 适用于在打印预览模式下在屏幕上查看的分页材料和文档。 （有关特定于这些格式的格式问题的信息，请参阅[分页媒体](/zh-CN/docs/Web/CSS/Paged_Media)。）
+  - : 适用于在打印预览模式下在屏幕上查看的分页材料和文档。（有关特定于这些格式的格式问题的信息，请参阅[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)。）
 - `screen`
   - : 主要用于屏幕。
 
@@ -120,6 +120,7 @@ _逻辑操作符_（_logical operator_）`not`、`and`、`only` 和 `or` 可用�
 - `and`
   - : 用于将多个媒体查询规则组合成单条媒体查询，当每个查询规则都为真时则该条媒体查询为 `true`，它还用于将媒体功能与媒体类型结合在一起。
 - `not`
+
   - : 用于否定媒体查询，如果不满足这个条件则返回 `true`，否则返回 `false`。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 `not` 运算符，则*还必须*指定媒体类型。
 
     > **备注：** 在 Level 3 中，`not` 关键字不能用于否定单个媒体特性表达式，而只能用于否定整个媒体查询。
@@ -133,7 +134,7 @@ _逻辑操作符_（_logical operator_）`not`、`and`、`only` 和 `or` 可用�
 
 ## 无障碍考虑
 
-为了最好地调整网站文本大小，当你需要 {{cssxref("&lt;length&gt;")}} 进行[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)时，请使用 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度)。
+为了最好地调整网站文本大小，当你需要 {{cssxref("&lt;length&gt;")}} 进行[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)时，请使用 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度)。
 
 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 的效果会更好。
 
@@ -143,7 +144,7 @@ _逻辑操作符_（_logical operator_）`not`、`and`、`only` 和 `or` 可用�
 
 由于媒体查询可以洞察用户正在使用的设备的功能（以及扩展的功能和设计），因此有可能滥用它们来构造“指纹”以识别设备，或者至少将其分类为某些细节，这可能是用户不希望看到的。
 
-由于存在这种潜在的安全问题，浏览器可能会选择以某种方式捏造返回的值，以防止它们被用来精确地标识计算机。浏览器可能还会在此区域提供其它措施。例如，如果启用了 Firefox 的“抵抗指纹”设置，则许多媒体查询会报告默认值，而不是代表实际设备状态的值。
+由于存在这种潜在的安全问题，浏览器可能会选择以某种方式捏造返回的值，以防止它们被用来精确地标识计算机。浏览器可能还会在此区域提供其他措施。例如，如果启用了 Firefox 的“抵抗指纹”设置，则许多媒体查询会报告默认值，而不是代表实际设备状态的值。
 
 ### 形式语法
 
@@ -195,7 +196,7 @@ Media Queries Level 4 引入了一种新的范围语法，在测试接受范围�
 }
 ```
 
-更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。
+更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。
 
 ## 规范
 
@@ -207,7 +208,7 @@ Media Queries Level 4 引入了一种新的范围语法，在测试接受范围�
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - 在 JavaScript 中，`@media` 可以通过 CSS 对象模型接口 {{domxref("CSSMediaRule")}} 被调用。
 - [扩展的 Mozilla 媒体特性](/zh-CN/docs/Web/CSS/Mozilla_Extensions#媒体特性)
 - [扩展的 WebKit 媒体特性](/zh-CN/docs/Web/CSS/WebKit_Extensions#媒体特性)

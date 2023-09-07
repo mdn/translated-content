@@ -70,7 +70,7 @@ My cat is very grumpy
 
 <h2>可编辑代码</h2>
 <p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> 
+  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
 </p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
@@ -106,10 +106,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -117,37 +117,37 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<em>刀枪剑戟 斧钺钩叉</em>';
+const htmlSolution = "<em>刀枪剑戟 斧钺钩叉</em>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -160,7 +160,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -174,7 +177,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -188,7 +191,7 @@ textarea.onkeyup = () => {
 
 ### 嵌套元素
 
-你也可以把元素放到其它元素之中——这被称作*嵌套*。如果我们想要表明我们的小猫脾气**很**暴躁，可以将 _very_ 一词嵌套在 {{htmlelement("strong")}} 元素中，意味着这个单词被着重强调：
+你也可以把元素放到其他元素之中——这被称作*嵌套*。如果我们想要表明我们的小猫脾气**很**暴躁，可以将 _very_ 一词嵌套在 {{htmlelement("strong")}} 元素中，意味着这个单词被着重强调：
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -214,7 +217,9 @@ textarea.onkeyup = () => {
 ```html
 <em>第一</em><em>第二</em><em>第三</em>
 
-<p>第四</p><p>第五</p><p>第六</p>
+<p>第四</p>
+<p>第五</p>
+<p>第六</p>
 ```
 
 {{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而 {{htmlelement("p")}} 是一个块级元素，所以第二行代码中的每个 _p_ 元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着展示 {{htmlelement("p")}} 元素的默认 [CSS 样式](/zh-CN/docs/Learn/CSS/First_steps)）。
@@ -225,14 +230,16 @@ textarea.onkeyup = () => {
 
 > **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
-> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)和[内联元素](/zh-CN/docs/Web/HTML/Inline_elements)页面。
+> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
 
 ### 空元素
 
 不是所有元素都拥有开始标签、内容和结束标签。一些元素只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。这些元素被称为{{glossary("void element", "空元素")}}。例如：元素 {{htmlelement("img")}} 是用来在页面插入一张指定的图片。
 
 ```html
-<img src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png" alt="Firefox 图标">
+<img
+  src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png"
+  alt="Firefox 图标" />
 ```
 
 显示如下：
@@ -319,10 +326,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -330,30 +337,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+const htmlSolution =
+  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -361,7 +369,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -374,7 +382,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -388,7 +399,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -402,7 +413,7 @@ textarea.onkeyup = () => {
 
 ### 布尔属性
 
-有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 {{htmlattrxref("disabled", "input")}} 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
+有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
 
 ```html
 <input type="text" disabled="disabled" />
@@ -446,10 +457,10 @@ textarea.onkeyup = () => {
 
 在目前为止，本章内容所有的属性都是由双引号来包裹。然而，你也许在一些 HTML 中也见过单引号。这只是风格的问题，你可以从中选择一个你喜欢的。以下两种情况都可以：
 
-```html
-<a href="https://www.example.com">示例站点链接</a>
-
+```html-nolint
 <a href='https://www.example.com'>示例站点链接</a>
+
+<a href="https://www.example.com">示例站点链接</a>
 ```
 
 但应该注意单引号和双引号不能在一个属性值里面混用。下面的语法是错误的：
@@ -473,7 +484,7 @@ textarea.onkeyup = () => {
 要这样做：
 
 ```html
-<a href='https://www.example.com' title='Isn&apos;t this fun?'>示例站点链接</a>
+<a href="https://www.example.com" title="Isn't this fun?">示例站点链接</a>
 ```
 
 ## 剖析 HTML 文档
@@ -481,7 +492,7 @@ textarea.onkeyup = () => {
 单独的 HTML 元素本身并不十分有用。接下来，我们来看看单个元素是如何组合成整个 HTML 页面的：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -505,7 +516,7 @@ textarea.onkeyup = () => {
 
 2. `<html></html>`: {{htmlelement("html")}} 元素。这个元素包裹了页面中所有的内容，有时被称为根元素。
 3. `<head></head>`: {{htmlelement("head")}} 元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但**不在 HTML 页面中显示**的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。
-4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。{{htmlattrxref("charset", "meta")}} 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
+4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。[`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
 5. `<title></title>`: {{htmlelement("title")}} 元素。这设置了页面的标题，也就是出现在该页面加载的浏览器标签中的内容。当页面被加入书签时，页面标题也被用来描述该页面。
 6. `<body></body>`: {{htmlelement("body")}} 元素。包含了你访问页面时*所有*显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。
 
@@ -545,8 +556,8 @@ textarea.onkeyup = () => {
 </textarea>
 
 <div class="playable-buttons">
- <input id="reset" type="button" value="重置" />
- <input id="solution" type="button" value="显示答案" />
+  <input id="reset" type="button" value="重置" />
+  <input id="solution" type="button" value="显示答案" />
 </div>
 ```
 
@@ -581,10 +592,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -601,27 +612,27 @@ const htmlSolution = `<h1>经典回忆</h1>
 
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -629,7 +640,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -642,7 +653,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -655,7 +669,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -671,7 +685,7 @@ textarea.onkeyup = () => {
 
 在上面的例子中，你可能已经注意到了在代码中包含了很多的空格——这是没有必要的；下面的两个代码片段是等价的：
 
-```html
+```html-nolint
 <p>狗 狗 很 呆 萌。</p>
 
 <p>狗 狗        很
@@ -680,7 +694,7 @@ textarea.onkeyup = () => {
 
 无论你在 HTML 元素的内容中使用多少空格（包括一个或多个空白字符或换行），当渲染这些代码的时候，HTML 解释器会将连续出现的空白字符减少为一个单独的空格符。
 
-如果你的代码有很好的格式化，就会更容易理解你的代码中发生了什么。在我们的HTML中，每个嵌套元素都比它所在的元素多缩进了两个空格。你可以选择格式化的风格（例如，每一级缩进多少个空格），但你至少应该考虑格式化。
+如果你的代码有很好的格式化，就会更容易理解你的代码中发生了什么。在我们的 HTML 中，每个嵌套元素都比它所在的元素多缩进了两个空格。你可以选择格式化的风格（例如，每一级缩进多少个空格），但你至少应该考虑格式化。
 
 ## 实体引用：在 HTML 中包含特殊字符
 
@@ -696,11 +710,11 @@ textarea.onkeyup = () => {
 | '        | `&apos;`     |
 | &        | `&amp;`      |
 
-等价字符引用可以很容易记住，因为它使用的文本可以被看作是小于“\&lt;”，引号是“\&quot;”，其它的也是如此。要找到更多关于实体引用的信息，请参见 [XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（维基百科）。
+等价字符引用可以很容易记住，因为它使用的文本可以被看作是小于“\&lt;”，引号是“\&quot;”，其他的也是如此。要找到更多关于实体引用的信息，请参见 [XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（维基百科）。
 
 在下面的示例中，有两个自然段：
 
-```html
+```html-nolint
 <p>HTML 中用 <p> 来定义段落元素。</p>
 
 <p>HTML 中用 &lt;p&gt; 来定义段落元素</p>
@@ -732,12 +746,12 @@ HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地
 
 你已经来到了这篇文章的结尾——希望你享受基础的 HTML 学习的旅程。
 
-在这里你应该可以理解 HTML 语言的全貌和基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且展示语言的一些其它概念。
+在这里你应该可以理解 HTML 语言的全貌和基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且展示语言的一些其他概念。
 
 > **备注：** 当你开始学习更多的 HTML 知识时，可能也想了解一些层叠样式列表（[CSS](/zh-CN/docs/Learn/CSS)）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。
 
 ## 参见
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

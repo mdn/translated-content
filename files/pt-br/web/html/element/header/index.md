@@ -34,10 +34,10 @@ Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                     | Status                   | Comentário |
+| --------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'sections.html#the-header-element', '&lt;header&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
 
 ## Compatibilidade com navegadores
 

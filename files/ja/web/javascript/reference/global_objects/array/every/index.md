@@ -15,19 +15,33 @@ l10n:
 
 ```js
 // アロー関数
-every((element) => { /* … */ } )
-every((element, index) => { /* … */ } )
-every((element, index, array) => { /* … */ } )
+every((element) => {
+  /* … */
+});
+every((element, index) => {
+  /* … */
+});
+every((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-every(callbackFn)
-every(callbackFn, thisArg)
+every(callbackFn);
+every(callbackFn, thisArg);
 
 // インラインコールバック関数
-every(function(element) { /* … */ })
-every(function(element, index) { /* … */ })
-every(function(element, index, array){ /* … */ })
-every(function(element, index, array) { /* … */ }, thisArg)
+every(function (element) {
+  /* … */
+});
+every(function (element, index) {
+  /* … */
+});
+every(function (element, index, array) {
+  /* … */
+});
+every(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -80,7 +94,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
@@ -89,7 +103,8 @@ function isBigEnough(element, index, array) {
 以下の例では、ある配列のすべての要素が別の配列に存在するかどうかをテストしています。
 
 ```js
-const isSubset = (array1, array2) => array2.every((element) => array1.includes(element));
+const isSubset = (array1, array2) =>
+  array2.every((element) => array1.includes(element));
 
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
@@ -100,7 +115,7 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)はより短い構文で同じテストを提供します。
 
 ```js
-[12, 5, 8, 130, 44].every((x) => x >= 10);   // false
+[12, 5, 8, 130, 44].every((x) => x >= 10); // false
 [12, 54, 18, 130, 44].every((x) => x >= 10); // true
 ```
 
@@ -114,10 +129,10 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 // ---------------
 let arr = [1, 2, 3, 4];
 arr.every((elem, index, arr) => {
-  arr[index+1]--;
+  arr[index + 1]--;
   console.log(`[${arr}][${index}] -> ${elem}`);
   return elem < 2;
-})
+});
 
 // Loop runs for 3 iterations, but would
 // have run 2 iterations without any modification
@@ -131,10 +146,10 @@ arr.every((elem, index, arr) => {
 // ---------------
 arr = [1, 2, 3];
 arr.every((elem, index, arr) => {
-  arr.push('new');
+  arr.push("new");
   console.log(`[${arr}][${index}] -> ${elem}`);
   return elem < 4;
-})
+});
 
 // Loop runs for 3 iterations, even after appending new items
 //
@@ -150,7 +165,7 @@ arr.every((elem, index, arr) => {
   arr.pop();
   console.log(`[${arr}][${index}] -> ${elem}`);
   return elem < 4;
-})
+});
 
 // Loop runs for 2 iterations only, as the remaining
 // items are `pop()`ed off

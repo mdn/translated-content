@@ -2,6 +2,7 @@
 title: console.trace()
 slug: Web/API/console/trace
 ---
+
 {{APIRef("Console API")}}
 
 **`console.trace()`** 메서드는 [웹 콘솔](/ko/docs/Tools/Web_Console)에 스택 추적을 출력합니다.
@@ -13,7 +14,7 @@ slug: Web/API/console/trace
 ## 구문
 
 ```js
-console.trace( [...any, ...data ]);
+console.trace([...any, ...data]);
 ```
 
 ### 매개변수

@@ -45,7 +45,7 @@ O método `getYear()` retorna um ano de 2 ou 4 dígitos:
 O segundo statement atribui o valor 95 à variável `year`.
 
 ```js
-var Xmas = new Date('December 25, 1995 23:15:00');
+var Xmas = new Date("December 25, 1995 23:15:00");
 var year = Xmas.getYear(); // returns 95
 ```
 
@@ -54,7 +54,7 @@ var year = Xmas.getYear(); // returns 95
 O segundo statement atribui o valor 100 à variável `year`.
 
 ```js
-var Xmas = new Date('December 25, 2000 23:15:00');
+var Xmas = new Date("December 25, 2000 23:15:00");
 var year = Xmas.getYear(); // returns 100
 ```
 
@@ -63,7 +63,7 @@ var year = Xmas.getYear(); // returns 100
 O segundo statement atribui o valor -100 à variável `year`.
 
 ```js
-var Xmas = new Date('December 25, 1800 23:15:00');
+var Xmas = new Date("December 25, 1800 23:15:00");
 var year = Xmas.getYear(); // returns -100
 ```
 
@@ -78,11 +78,11 @@ var year = Xmas.getYear(); // returns 95
 
 ## Especificações
 
-| **Especificação**                                                                                    | Status                   | **Comentário**                                                                           |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                              | Standard                 | Definição inicial. Implementado em JavaScript 1.3.                                       |
-| {{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}                     | {{Spec2('ES5.1')}} | Definido em (informativo) compatibilidade annex.                                         |
-| {{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}} | {{Spec2('ES6')}}     | Definido em (normativo) annex para funcionalidades adicionais para futuros browsers web. |
+| **Especificação**                                                            | Status             | **Comentário**                                                                           |
+| ---------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------- |
+| ECMAScript 1st Edition.                                                      | Standard           | Definição inicial. Implementado em JavaScript 1.3.                                       |
+| {{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}                | {{Spec2('ES5.1')}} | Definido em (informativo) compatibilidade annex.                                         |
+| {{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}} | {{Spec2('ES6')}}   | Definido em (normativo) annex para funcionalidades adicionais para futuros browsers web. |
 
 ## Compatibilidade com navegadores
 

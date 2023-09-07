@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 2: Creación del esqueleto del sitio web'
+title: "Tutorial Django Parte 2: Creación del esqueleto del sitio web"
 slug: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -17,7 +17,7 @@ Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/D
           >Poner en marcha un entorno de desarrollo Django</a
         >. Repasar el
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/es/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >Tutorial Django</a
         >.
       </td>
@@ -43,7 +43,7 @@ El proceso es sencillo:
 1. Usar la herramienta `django-admin` para crear la carpeta del proyecto, los ficheros de plantillas básicos y el script de gestión del proyecto (**manage.py**).
 2. Usar **manage.py** para crear una o más _aplicaciones_.
 
-    > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
+   > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
 
 3. Registrar las nuevas aplicaciones para incluirlas en el proyecto.
 4. Conectar el mapeador url de cada aplicación.
@@ -361,21 +361,3 @@ Ahora que el esqueleto del [sitio web de la BibliotecaLocal](/es/docs/Learn/Serv
 - [Aplicaciones](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). Contiene información sobre cómo configurar aplicaciones.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

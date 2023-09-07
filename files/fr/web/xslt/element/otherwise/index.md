@@ -1,10 +1,6 @@
 ---
 title: otherwise
 slug: Web/XSLT/Element/otherwise
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/otherwise
-original_slug: Web/XSLT/otherwise
 ---
 
 {{ XsltRef() }}

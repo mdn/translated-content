@@ -1,11 +1,8 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Основная информация
@@ -27,8 +24,8 @@ throw выражение;
 
 ```js
 throw "Error2"; // генерирует исключение, значением которого является строка
-throw 42;       // генерирует исключение, значением которого является число 42
-throw true;     // генерирует исключение, значением которого является логическое значение true
+throw 42; // генерирует исключение, значением которого является число 42
+throw true; // генерирует исключение, значением которого является логическое значение true
 ```
 
 Также стоит отметить, что на инструкцию `throw` влияет [автоматическая вставка точки с запятой (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Поэтому не допускаются разрывы строк между инструкцией `throw` и `выражением`.
@@ -41,39 +38,39 @@ throw true;     // генерирует исключение, значением
 
 ```js
 function UserException(message) {
-   this.message = message;
-   this.name = "Исключение, определённое пользователем";
+  this.message = message;
+  this.name = "Исключение, определённое пользователем";
 }
 function getMonthName(mo) {
-   mo = mo - 1; // Нужно скорректировать номер месяца согласно индексам массива (1 = Jan, 12 = Dec)
-   const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec"
-   ];
-   if (months[mo] !== undefined) return months[mo];
+  mo = mo - 1; // Нужно скорректировать номер месяца согласно индексам массива (1 = Jan, 12 = Dec)
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  if (months[mo] !== undefined) return months[mo];
 
-   throw new UserException("Неверно указан номер месяца");
+  throw new UserException("Неверно указан номер месяца");
 }
 
 let monthName;
 
 try {
-   // statements to try
-   const myMonth = 15; // 15 находится вне границ массива, что приведёт к исключению
-   monthName = getMonthName(myMonth);
+  // statements to try
+  const myMonth = 15; // 15 находится вне границ массива, что приведёт к исключению
+  monthName = getMonthName(myMonth);
 } catch (e) {
-   monthName = "неизвестен";
-   logMyErrors(e.message, e.name); // передаём исключение в обработчик ошибок
+  monthName = "неизвестен";
+  logMyErrors(e.message, e.name); // передаём исключение в обработчик ошибок
 }
 ```
 
@@ -96,28 +93,28 @@ try {
  */
 
 function ZipCode(zip) {
-   zip = new String(zip);
-   const pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-   if (pattern.test(zip)) {
-      // значение почтового индекса должно быть первым совпадением в строке
-      this.value = zip.match(pattern)[0];
-      this.valueOf = function() {
-         return this.value
-      };
-      this.toString = function() {
-         return String(this.value)
-      };
-   } else {
-      throw new ZipCodeFormatException(zip);
-   }
+  zip = new String(zip);
+  const pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+  if (pattern.test(zip)) {
+    // значение почтового индекса должно быть первым совпадением в строке
+    this.value = zip.match(pattern)[0];
+    this.valueOf = function () {
+      return this.value;
+    };
+    this.toString = function () {
+      return String(this.value);
+    };
+  } else {
+    throw new ZipCodeFormatException(zip);
+  }
 }
 
 function ZipCodeFormatException(value) {
-   this.value = value;
-   this.message = "Почтовый индекс имеет недопустимый формат";
-   this.toString = function() {
-      return this.value + this.message
-   };
+  this.value = value;
+  this.message = "Почтовый индекс имеет недопустимый формат";
+  this.toString = function () {
+    return this.value + this.message;
+  };
 }
 
 /*
@@ -129,21 +126,21 @@ const ZIPCODE_INVALID = -1;
 const ZIPCODE_UNKNOWN_ERROR = -2;
 
 function verifyZipCode(z) {
-   try {
-     z = new ZipCode(z);
-   } catch (e) {
-     return e instanceof ZipCodeFormatException
+  try {
+    z = new ZipCode(z);
+  } catch (e) {
+    return e instanceof ZipCodeFormatException
       ? ZIPCODE_INVALID
       : IPCODE_UNKNOWN_ERROR;
-   }
-   return z;
+  }
+  return z;
 }
 
-a = verifyZipCode(95060);         // вернёт 95060
-b = verifyZipCode(9560);          // вернёт -1
-c = verifyZipCode("a");           // вернёт -1
-d = verifyZipCode("95060");       // вернёт 95060
-e = verifyZipCode("95060 1234");  // вернёт 95060 1234
+a = verifyZipCode(95060); // вернёт 95060
+b = verifyZipCode(9560); // вернёт -1
+c = verifyZipCode("a"); // вернёт -1
+d = verifyZipCode("95060"); // вернёт 95060
+e = verifyZipCode("95060 1234"); // вернёт 95060 1234
 ```
 
 ### Пример: Повторный выброс исключения
@@ -152,24 +149,24 @@ e = verifyZipCode("95060 1234");  // вернёт 95060 1234
 
 ```js
 try {
-   throw n; // бросаем исключение с числовым значением
+  throw n; // бросаем исключение с числовым значением
 } catch (e) {
-   if (e <= 50) {
-      // инструкции для обработки исключений со значениями в диапазоне 1-50
-   } else {
-      // необработанное исключение, делаем повторный выброс
-      throw e;
-   }
+  if (e <= 50) {
+    // инструкции для обработки исключений со значениями в диапазоне 1-50
+  } else {
+    // необработанное исключение, делаем повторный выброс
+    throw e;
+  }
 }
 ```
 
 ## Спецификации
 
-| Specification                                                                            | Status                       | Comment                                           |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}                 | {{Spec2('ES5.1')}}     |                                                   |
-| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}         |                                                   |
+| Specification                                                      | Status               | Comment                                           |
+| ------------------------------------------------------------------ | -------------------- | ------------------------------------------------- |
+| {{SpecName('ES3')}}                                                | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.4 |
+| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}             | {{Spec2('ES5.1')}}   |                                                   |
+| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}     |                                                   |
 | {{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}} | {{Spec2('ESDraft')}} |                                                   |
 
 ## Поддерживаемые браузеры

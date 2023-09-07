@@ -34,13 +34,13 @@ Retorna a referência ao Objeto passado.
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // Novas propriedades podem ser adicionadas, propriedades existentes podem ser alteradas ou removidas.
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 var o = Object.seal(obj);
@@ -49,26 +49,30 @@ o === obj; // true
 Object.isSealed(obj); // === true
 
 // Alterar o valor das propriedades em um objeto selado ainda funciona.
-obj.foo = 'quux';
+obj.foo = "quux";
 
 // Mas você não pode converter propriedades de dados em propriedades de acesso, e vice-versa.
-Object.defineProperty(obj, 'foo', { get: function() { return 'g'; } }); // throws a TypeError
+Object.defineProperty(obj, "foo", {
+  get: function () {
+    return "g";
+  },
+}); // throws a TypeError
 
 // Agora quaisquer mudanças, que não sejam aos valores da das propriedades, irão falhar.
-obj.quaxxor = 'the friendly duck'; // silently doesn't add the property
+obj.quaxxor = "the friendly duck"; // silently doesn't add the property
 delete obj.foo; // silently doesn't delete the property
 
 // e em modo rigoroso (strict mode) tais tentativas irão jogar erros do tipo TypeErrors.
 function fail() {
-  'use strict';
+  "use strict";
   delete obj.foo; // throws a TypeError
-  obj.sparky = 'arf'; // throws a TypeError
+  obj.sparky = "arf"; // throws a TypeError
 }
 fail();
 
 // Tentativas através do Object.defineProperty também irão falhar.
-Object.defineProperty(obj, 'ohai', { value: 17 }); // lança um erro do tipo TypeError
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // altera o valor da propriedade existente
+Object.defineProperty(obj, "ohai", { value: 17 }); // lança um erro do tipo TypeError
+Object.defineProperty(obj, "foo", { value: "eit" }); // altera o valor da propriedade existente
 ```
 
 ## Notas
@@ -85,10 +89,10 @@ Object.seal(1);
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário                                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}     | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no Javascript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}         |                                                      |
+| Especificação                                              | Status               | Comentário                                           |
+| ---------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}      | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no Javascript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

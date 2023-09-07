@@ -1,8 +1,8 @@
 ---
 title: MDN 시작하기
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 우리는 어떤 브랜드의 플랫폼이나 브라우저에 상관 없이 더 나은 웹을 위한 리소스를 만드는 오픈 커뮤니티입니다. 누구나 참여할 수 있고, 여러분의 참여는 우리에게 더욱 큰 힘이 됩니다. 우리는 가장 멋진 것들을 제공하기 위해 계속해서 웹의 혁신을 이끌어 낼 것입니다. 여러분들과 함께 말이죠.
@@ -19,7 +19,7 @@ MDN은 <strong>누구나</strong> 문서를 추가하고 수정할 수 있는 �
 
 MDN에 참여하기 위해서는 반드시 MDN 계정을 생성해야합니다. <a href="/ko/docs/MDN/Contribute/Howto/Create_an_MDN_account">계정을 만드는 방법</a>에서 자세한 내용을 확인하세요. 참고로 MDN 계정을 만들려면 <a href="https://github.com/join">Github 계정이 필요합니다</a>. 인증에 Github을 사용하고 있습니다.
 
-신규 문서를 만들고 싶다면 {{SectionOnPage("/ko/docs/MDN/Contribute/Howto/Create_and_edit_pages", "문서 생성 권한 얻기")}}를 참고하세요. 문서를 만드는 권한에 대한 중요 정보가 있습니다. 보안상의 이유로 신규 계정은 문서를 만들 수 없습니다.
+신규 문서를 만들고 싶다면 [페이지 생성 권한 얻기](/ko/docs/MDN/Contribute/Howto/Create_and_edit_pages#페이지_생성_권한_얻기)를 참고하세요. 문서를 만드는 권한에 대한 중요 정보가 있습니다. 보안상의 이유로 신규 계정은 문서를 만들 수 없습니다.
 
 <h3 id="Step_2_할_일_정하기">Step 2: 할 일 정하기</h3>
 

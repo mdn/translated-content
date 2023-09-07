@@ -5,11 +5,11 @@ slug: Web/HTTP/Headers/Timing-Allow-Origin
 
 {{HTTPSidebar}}
 
-响应头 **`Timing-Allow-Origin`** 用于指定特定站点，以允许其访问[Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)提供的相关信息，否则这些信息会由于跨源限制将被报告为零
+响应头 **`Timing-Allow-Origin`** 用于指定特定站点，以允许其访问[Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)提供的相关信息，否则这些信息会由于跨源限制将被报告为零
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -49,6 +49,5 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## 参见
 
-- [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)
-- [使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
 - {{HTTPHeader("Vary")}}

@@ -1,13 +1,6 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
-translation_of: Web/API/WheelEvent
 ---
 
 {{APIRef("DOM Events")}}

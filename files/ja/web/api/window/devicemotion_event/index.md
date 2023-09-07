@@ -1,5 +1,5 @@
 ---
-title: 'Window: devicemotion イベント'
+title: "Window: devicemotion イベント"
 slug: Web/API/Window/devicemotion_event
 ---
 
@@ -32,12 +32,11 @@ slug: Web/API/Window/devicemotion_event
 
 ```js
 function handleMotionEvent(event) {
+  var x = event.accelerationIncludingGravity.x;
+  var y = event.accelerationIncludingGravity.y;
+  var z = event.accelerationIncludingGravity.z;
 
-    var x = event.accelerationIncludingGravity.x;
-    var y = event.accelerationIncludingGravity.y;
-    var z = event.accelerationIncludingGravity.z;
-
-    // Do something awesome.
+  // Do something awesome.
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);

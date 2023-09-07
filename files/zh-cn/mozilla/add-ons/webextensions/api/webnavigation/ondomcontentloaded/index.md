@@ -11,11 +11,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 
 ```js
 browser.webNavigation.onDOMContentLoaded.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onDOMContentLoaded.removeListener(listener)
-browser.webNavigation.onDOMContentLoaded.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onDOMContentLoaded.removeListener(listener);
+browser.webNavigation.onDOMContentLoaded.hasListener(listener);
 ```
 
 事件有三个方法：
@@ -39,7 +39,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
       - : [`object`](#details). 有关导航（navigation）事件的详细信息。
 
 - `filter`{{optional_inline}}
-  - : `object`. 包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} 数组对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个`UrlFilter`匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。
+  - : `object`. 包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} 数组对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个`UrlFilter`匹配的 URL。在数组中。如果你省略此参数，则该事件将触发所有转换。
 
 ## Additional objects
 
@@ -66,18 +66,17 @@ Logs the target URLs for `onDOMContentLoaded`, if the target URL's hostname cont
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnDOMContentLoaded(details) {
   console.log("onDOMContentLoaded: " + details.url);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(
+  logOnDOMContentLoaded,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

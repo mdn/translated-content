@@ -1,7 +1,6 @@
 ---
 title: Response.blob()
 slug: Web/API/Response/blob
-original_slug: Web/API/Body/blob
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
@@ -31,9 +30,9 @@ blob()
 [fetch request の例](https://github.com/mdn/fetch-examples/tree/main/fetch-request) ([fetch request をライブで](https://mdn.github.io/fetch-examples/fetch-request/)実行) では、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して JPG を読み取ります。読み取りが成功したら、`blob()` を使用してレスポンスから {{domxref("Blob")}} を読み取り、それを {{domxref("URL.createObjectURL")}} を使用してオブジェクト URL に入れ、その URL を {{htmlelement("img")}} 要素のソースとして設定して画像を表示します。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())

@@ -137,7 +137,7 @@ CSS Fonts レベル 4 では、構文を拡張して 1 から 1000 までの任�
 
 `100` から `900` の数値は、おおよそ以下の太さ名に対応します ([OpenType 仕様書](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)を参照してください)。
 
-| 値  | 太さ名                                                                                                                |
+| 値  | 太さ名                                                                                                                            |
 | --- | --------------------------------------------------------------------------------------------------------------------------------- |
 | 100 | Thin (Hairline)                                                                                                                   |
 | 200 | Extra Light (Ultra Light)                                                                                                         |
@@ -183,14 +183,14 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 
 ```html
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the
-  bank, and of having nothing to do: once or twice she had peeped into the
-  book her sister was reading, but it had no pictures or conversations in
-  it, "and what is the use of a book," thought Alice "without pictures or
-  conversations?"
+  Alice was beginning to get very tired of sitting by her sister on the bank,
+  and of having nothing to do: once or twice she had peeped into the book her
+  sister was reading, but it had no pictures or conversations in it, "and what
+  is the use of a book," thought Alice "without pictures or conversations?"
 </p>
 
-<div>I'm heavy<br/>
+<div>
+  I'm heavy<br />
   <span>I'm lighter</span>
 </div>
 ```
@@ -206,7 +206,7 @@ p {
 /* div 要素のテキストの太さを normal より 2 段階太くしますが、
    標準的な bold より細くします */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* span 要素のテキストの太さを親要素より

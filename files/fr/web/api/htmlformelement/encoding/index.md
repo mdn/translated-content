@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.encoding
 slug: Web/API/HTMLFormElement/encoding
-translation_of: Web/API/HTMLFormElement/encoding
 ---
 
 {{APIRef("HTML DOM")}}

@@ -13,9 +13,9 @@ Una versión estandarizada de esta cabecera es la cabecera HTTP {{HTTPHeader("Fo
 
 `X-Forwarded-For` es también una cabecera de correo electrónico que indica que el mismo fue reenviado desde otra cuenta.
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## Sintaxis
 

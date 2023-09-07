@@ -1,7 +1,8 @@
 ---
 title: CSS Flow Layout
-slug: Web/CSS/CSS_Flow_Layout
+slug: Web/CSS/CSS_flow_layout
 ---
+
 {{CSSRef}}
 
 _일반적인 흐름 Normal Flow_, 또는 흐름 레이아웃 Flow Layout 은 그 레이아웃 변화가 있기 전까지 페이지 안의 블록 요소와 인라인 요소가 보여지는 방식 입니다. 흐름이란 본질적으로 레이아웃 아래 서로 같이 동작하고 서로에게 서로가 알려지는 것들의 집합 입니다. 만약에 어느 하나가 _흐름에서 벗어나면_ 그것은 독립적으로 동작하게 됩니다.

@@ -12,8 +12,8 @@ l10n:
 ## 構文
 
 ```js
-new MessageEvent(type)
-new MessageEvent(type, options)
+new MessageEvent(type);
+new MessageEvent(type, options);
 ```
 
 ### 引数
@@ -45,8 +45,8 @@ new MessageEvent(type, options)
 ## 例
 
 ```js
-const myMessage = new MessageEvent('message', {
-  data : 'hello'
+const myMessage = new MessageEvent("message", {
+  data: "hello",
 });
 ```
 

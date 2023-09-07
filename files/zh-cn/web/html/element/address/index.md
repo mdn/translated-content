@@ -16,7 +16,7 @@ slug: Web/HTML/Element/address
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-cn/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, palpable content.</td>
   </tr>
   <tr>
@@ -57,17 +57,17 @@ slug: Web/HTML/Element/address
 这个例子演示了如何使用 `<address>` 表示一篇文章的作者的联系信息。
 
 ```html
-  <address>
-    You can contact author at <a href="http://www.somedomain.com/contact">
-    www.somedomain.com</a>.<br>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-    contact webmaster</a>.<br>
-    You may also want to visit us:<br>
-    Mozilla Foundation<br>
-    331 E Evelyn Ave<br>
-    Mountain View, CA 94041<br>
-    USA
-  </address>
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
+  USA
+</address>
 ```
 
 ### 结果

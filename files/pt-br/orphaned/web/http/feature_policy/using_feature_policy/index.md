@@ -1,7 +1,6 @@
 ---
 title: Using Feature Policy
 slug: orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy
-original_slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
 
 {{HTTPSidebar}}
@@ -39,7 +38,7 @@ Funcionalidade são definidas para cada uma ter uma lista de permissão padrão,
 Feature Policy provides two ways to specify policies to control features:
 
 - The {{httpheader('Feature-Policy')}} HTTP header.
-- The {{htmlattrxref("allow", "iframe")}} attribute on {{htmlelement("iframe")}}s.
+- The [`allow`](/pt-BR/docs/Web/HTML/Element/iframe#allow) attribute on {{htmlelement("iframe")}}s.
 
 The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
 

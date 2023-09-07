@@ -3,7 +3,9 @@ title: <string>
 slug: Web/CSS/string
 ---
 
-{{CSSRef}}在 CSS 中，**`<string>`** 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。
+{{CSSRef}}
+
+在 CSS 中，**`<string>`** 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。
 
 ## 使用规则
 

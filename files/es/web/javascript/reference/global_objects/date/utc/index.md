@@ -1,7 +1,6 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/UTC
 ---
 
 {{JSRef("Objetos_globales", "Date")}}
@@ -19,21 +18,27 @@ Date.UTC(año,mes[, dia[, hora[, minutos[, segundos, milisegundos]]]])
 ### Parámetros
 
 - `año`
+
   - : Un año mayor de 1900.
 
 - `mes`
+
   - : Un entero entre 0 y 11 que representa al mes.
 
 - `dia`
+
   - : Un entero entre 1 y 31 que representa al día del mes.
 
 - `hora`
+
   - : Un entero entre 0 y 23 que representa la hora.
 
 - `minutos`
+
   - : Un entero entre 0 y 59 que representa los minutos.
 
 - `segundos`
+
   - : Un entero entre 0 y 59 que representa los segundos.
 
 - `milisegundos`

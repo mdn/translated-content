@@ -5,7 +5,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
-在页面加载完成的时候，HTML 文档中的{{glossary("Head", "头部")}}是不会显示在 web 浏览器的。它包含了诸如页面的 {{htmlelement("title")}}（标题）、指向 {{glossary("CSS")}} 的链接（如果你选择用 CSS 来为 HTML 内容添加样式）、指向自定义网页图标的链接和其它的元数据（描述 HTML 的数据，比如作者和描述文档的重要关键词）等信息。Web 浏览器将使用文档{{glossary("Head", "头部")}}的信息正确渲染 HTML 文档。本文将涵盖上述内容并拓展，以便为你的标记工作打下良好基础。
+在页面加载完成的时候，HTML 文档中的{{glossary("Head", "头部")}}是不会显示在 web 浏览器的。它包含了诸如页面的 {{htmlelement("title")}}（标题）、指向 {{glossary("CSS")}} 的链接（如果你选择用 CSS 来为 HTML 内容添加样式）、指向自定义网页图标的链接和其他的元数据（描述 HTML 的数据，比如作者和描述文档的重要关键词）等信息。Web 浏览器将使用文档{{glossary("Head", "头部")}}的信息正确渲染 HTML 文档。本文将涵盖上述内容并拓展，以便为你的标记工作打下良好基础。
 
 <table>
   <tbody>
@@ -25,7 +25,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 让我们简单回顾一下[上一章节的 HTML 文档](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#剖析html文档)：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -60,11 +60,11 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 1. 为了开始这个练习，我们希望你到我们的 GitHub 库中下载一份 [title-example.html 网页](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)副本。要做到这一点，你可以选择下面两种操作之一：
 
    1. 使用你的代码编辑器，从页面中拷贝粘贴代码到一个新的文本文件中，然后将其保存到一个适当的地方。
-   2. 按下 GitHub 页面中的“Raw”按钮（可能会在浏览器新标签中显示源代码），从浏览器的菜单中选择 *另存为...*，然后选择一个地方来保存这个文件。
+   2. 按下 GitHub 页面中的“Raw”按钮（可能会在浏览器新标签中显示源代码），从浏览器的菜单中选择 _另存为..._，然后选择一个地方来保存这个文件。
 
 2. 在浏览器中打开文件，你会看到类似这样效果：
 
-   ![一个简单的 web 页面，在 \<title> 元素上设置了文档标题，在 \<h1> 元素上设置了页面标题](title-example.png)
+   ![一个简单的 web 页面，在 'title' 元素上设置了文档标题，在 'h1' 元素上设置了页面标题](title-example.png)
 
    现在很明显的可以看到 `<h1>` 和 `<title>` 出现的地方！
 
@@ -72,13 +72,13 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 
 `<title>` 元素也被以其他的方式使用着。比如说，如果你尝试为某个页面添加书签（在 Firefox 浏览器中，点击*书签 > 将当前标签页添加到书签*，或点击地址栏末尾的星标），你会看到 `<title>` 的内容被作为建议的书签名。
 
-![在 Firefox 浏览器中，一个网页被添加了书签；书签的名称已经自动填入了 \<title> 元素的内容。](bookmark-example.png)
+![在 Firefox 浏览器中，一个网页被添加了书签；书签的名称已经自动填入了 'title' 元素的内容。](bookmark-example.png)
 
 正如你即将在下面看到的那样，`<title>` 元素的内容也被用在搜索的结果中。
 
 ## 元数据：\<meta> 元素
 
-元数据就是描述数据的数据，而 HTML 有一个“官方的”方式来为一个文档添加元数据——{{htmlelement("meta")}} 元素。当然，其它在这篇文章中提到的东西也可以被当作元数据。有很多不同种类的 `<meta>` 元素可以被包含进你的页面的 \<head> 元素，但是现在我们还不会尝试去解释所有类型，这只会引起混乱。我们会解释一些你常会看到的类型，先让你有个概念。
+元数据就是描述数据的数据，而 HTML 有一个“官方的”方式来为一个文档添加元数据——{{htmlelement("meta")}} 元素。当然，其他在这篇文章中提到的东西也可以被当作元数据。有很多不同种类的 `<meta>` 元素可以被包含进你的页面的 \<head> 元素，但是现在我们还不会尝试去解释所有类型，这只会引起混乱。我们会解释一些你常会看到的类型，先让你有个概念。
 
 ### 指定文档中的字符编码
 
@@ -96,7 +96,7 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 
 ![一个包含英文和日文字符的网页，字符编码设置为拉丁文。日语字符不能正确显示。](bad-encoding.png)
 
-> **备注：** 一些浏览器（比如 Chrome）会自动修正错误的编码，所以根据你所使用的浏览器不同，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其它浏览器中可能出现的问题。
+> **备注：** 一些浏览器（比如 Chrome）会自动修正错误的编码，所以根据你所使用的浏览器不同，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的问题。
 
 ### 主动学习：体验字符编码
 
@@ -147,22 +147,22 @@ description 也被使用在搜索引擎显示的结果页中。下面通过一�
 
 4. 现在，在你喜欢的搜索引擎里搜索“MDN Web Docs”（下图展示的是在谷歌搜索里的情况）。你会看到 description `<meta>` 和 `<title>` 元素如何在搜索结果里显示——很值得这样做哦！
 
-    ![“MDN Web Docs”的搜索结果](mdn-search-result.png)
+   ![“MDN Web Docs”的搜索结果](mdn-search-result.png)
 
 > **备注：** 在谷歌搜索里，在主页面链接下面，你将看到一些相关子页面——这些是站点链接，可以在 [Google's webmaster tools](https://search.google.com/search-console/about) 配置——这是一种可以使你的站点对搜索引擎更友好的方式。
 
 > **备注：** 许多 `<meta>` 特性已经不再使用。例如，keyword `<meta>` 元素（`<meta name="keywords" content="fill, in, your, keywords, here">`，为搜索引擎提供关键词，用于确定该页面与不同搜索词的相关性）已经被搜索引擎忽略了，因为作弊者填充了大量关键词到 keyword，错误地引导搜索结果。
 
-### 其它类型的元数据
+### 其他类型的元数据
 
-当你在网站上查看源码时，你也会发现其它类型的元数据。你在网站上看到的许多功能都是专有创作，旨在向某些网站（如社交网站）提供可使用的特定信息。
+当你在网站上查看源码时，你也会发现其他类型的元数据。你在网站上看到的许多功能都是专有创作，旨在向某些网站（如社交网站）提供可使用的特定信息。
 
 例如，Facebook 编写的元数据协议 [Open Graph Data](https://ogp.me/) 为网站提供了更丰富的元数据。在 MDN Web 文档源代码中，你会发现：
 
 ```html
 <meta
   property="og:image"
-  content="https://developer.mozilla.org/static/img/opengraph-logo.png" />
+  content="https://developer.mozilla.org/mdn-social-share.png" />
 <meta
   property="og:description"
   content="The Mozilla Developer Network (MDN) provides

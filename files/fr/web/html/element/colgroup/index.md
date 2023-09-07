@@ -1,15 +1,6 @@
 ---
-title: '<colgroup> : l''élément regroupant des colonnes'
+title: "<colgroup> : l'élément regroupant des colonnes"
 slug: Web/HTML/Element/colgroup
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/colgroup
-browser-compat: html.elements.colgroup
 ---
 
 {{HTMLSidebar}}

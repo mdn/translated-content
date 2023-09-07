@@ -26,17 +26,18 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 > **备注：** URL 可以指向 HTML 文件、文本文件、图像、文本文档、视频和音频文件以及可以在网络上保存的任何其他内容。如果浏览器不知道如何显示或处理文件，它会询问你是否要打开文件（需要选择合适的本地应用来打开或处理文件）或下载文件（以后处理它）。
 
-以 BBC 的主页为例，里面就包含了非常多的链接，各自连到不同新闻、网站的其它地方（导航功能），或者登入/注册页面（用户工具）等等。
+以 BBC 的主页为例，里面就包含了非常多的链接，各自连到不同新闻、网站的其他地方（导航功能），或者登入/注册页面（用户工具）等等。
 
 ![bbc.co.uk 的主页，显示了很多新闻内容和导航菜单功能](updated-bbc-website.png)
 
 ## 链接的解析
 
-通过将文本或其它内容包裹在 {{htmlelement("a")}} 元素内，并给它一个包含网址的 {{htmlattrxref("href", "a")}} 属性（也称为**超文本引用**或**目标**，它将包含一个网址）来创建一个基本链接。
+通过将文本或其他内容包裹在 {{htmlelement("a")}} 元素内，并给它一个包含网址的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性（也称为**超文本引用**或**目标**，它将包含一个网址）来创建一个基本链接。
 
 ```html
 <p>
-  我创建了一个指向 <a href="https://www.mozilla.org/zh-CN/">Mozilla 主页</a>的链接。
+  我创建了一个指向
+  <a href="https://www.mozilla.org/zh-CN/">Mozilla 主页</a>的链接。
 </p>
 ```
 
@@ -89,8 +90,11 @@ img {
 
 ```html
 <p>
-  我创建了一个指向<a href="https://www.mozilla.org/zh-CN/"
-   title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">Mozilla 主页</a>的超链接。
+  我创建了一个指向<a
+    href="https://www.mozilla.org/zh-CN/"
+    title="了解 Mozilla 使命以及如何参与贡献的最佳站点。"
+    >Mozilla 主页</a
+  >的超链接。
 </p>
 ```
 
@@ -104,7 +108,7 @@ img {
 
 使用本地代码编辑器和我们的[入门模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)来创建一个 HTML 文档。
 
-- 在 HTML 内，尝试添加一个或者多个段落或其它你知道类型的内容。
+- 在 HTML 内，尝试添加一个或者多个段落或其他你知道类型的内容。
 - 将某些内容转换为链接。
 - 包含 title 属性。
 
@@ -146,7 +150,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ### 文档片段
 
-超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为**文档片段**）。要做到这一点，你必须首先给要链接到的元素分配一个 {{htmlattrxref("id")}} 属性。通常情况下，链接到一个特定的标题是有意义的，这看起来就像下面这样：
+超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为**文档片段**）。要做到这一点，你必须首先给要链接到的元素分配一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性。通常情况下，链接到一个特定的标题是有意义的，这看起来就像下面这样：
 
 ```html
 <h2 id="Mailing_address">邮寄地址</h2>
@@ -156,16 +160,16 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ```html
 <p>
-  要提供意见和建议，请将信件邮寄至<a href="contacts.html#Mailing_address">我们的地址</a>。
+  要提供意见和建议，请将信件邮寄至<a href="contacts.html#Mailing_address"
+    >我们的地址</a
+  >。
 </p>
 ```
 
 你甚至可以在同一份文档下，通过链接文档片段，来链接到*当前文档的另一部分*：
 
 ```html
-<p>
-  本页面底部可以找到<a href="#Mailing_address">公司邮寄地址</a>。
-</p>
+<p>本页面底部可以找到<a href="#Mailing_address">公司邮寄地址</a>。</p>
 ```
 
 ### 绝对 URL 和相对 URL
@@ -188,7 +192,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ### 使用清晰的链接措辞
 
-把链接放在你的页面上很容易。这还不够。我们需要让所有的读者都可以使用链接，无论他们当前的环境和用于访问的工具（*无障碍*）。例如：
+把链接放在你的页面上很容易。这还不够。我们需要让所有的读者都可以使用链接，无论他们当前的环境和用于访问的工具（_无障碍_）。例如：
 
 - 使用屏幕阅读器的用户喜欢从页面上的一个链接跳到另一个链接，并且脱离上下文来阅读链接。
 - 搜索引擎使用链接文本来索引目标文件，所以在链接文本中包含关键词是一个很好的主意，以有效地描述与之相关的信息。
@@ -199,17 +203,13 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 **好的**链接文本：[下载 Firefox](https://www.mozilla.org/zh-CN/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">
- 下载 Firefox
-</a></p>
+<p><a href="https://www.mozilla.org/firefox/"> 下载 Firefox </a></p>
 ```
 
 **不好的**链接文本：[点击这里](https://www.mozilla.org/firefox/)下载 Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">
-  点击这里
-</a>下载 Firefox</p>
+<p><a href="https://www.mozilla.org/firefox/"> 点击这里 </a>下载 Firefox</p>
 ```
 
 其他提示：
@@ -248,8 +248,9 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 当你链接到要下载的资源而不是在浏览器中打开时，你可以使用 `download` 属性来提供一个默认的保存文件名。下面是一个 Firefox 的 Windows 最新版本下载链接的示例：
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
+  download="firefox-latest-64bit-installer.exe">
   下载最新的 Firefox 中文版 - Windows（64 位）
 </a>
 ```
@@ -290,7 +291,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 这会创建一个链接，看起来像这样：[向 nowhere 发邮件](mailto:nowhere@mozilla.org)。
 
-实际上，电子邮件地址是可选的。如果你省略了它（也就是说，你的 {{htmlattrxref("href", "a")}} 属性仅仅只是简单的“mailto:”），发送新的电子邮件的窗口也会被用户的邮件客户端打开，只是没有收件人的地址信息，这通常在“分享”链接是很有用的，用户可以给他们选择的地址发送邮件。
+实际上，电子邮件地址是可选的。如果你省略了它（也就是说，你的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性仅仅只是简单的“mailto:”），发送新的电子邮件的窗口也会被用户的邮件客户端打开，只是没有收件人的地址信息，这通常在“分享”链接是很有用的，用户可以给他们选择的地址发送邮件。
 
 ### 指定详细信息
 

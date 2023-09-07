@@ -1,7 +1,6 @@
 ---
 title: EventSource.onerror
 slug: Web/API/EventSource/error_event
-original_slug: Web/API/EventSource/onerror
 ---
 
 {{APIRef('WebSockets API')}}
@@ -17,7 +16,7 @@ eventSource.onerror = function
 ## Exemplos
 
 ```js
-evtSource.onerror = function() {
+evtSource.onerror = function () {
   console.log("EventSource failed.");
 };
 ```
@@ -26,13 +25,11 @@ evtSource.onerror = function() {
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventSource.error_event")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,11 +1,6 @@
 ---
 title: Использование атрибута aria-describedby
-slug: >-
-  orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
-tags:
-  - доступность
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
+slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 ---
 
 ### Описание
@@ -60,11 +55,11 @@ return you back to the main page</div>
 
 - Атрибут `aria-describedby` не предназначен для ссылки, описывающей внешний ресурс - так как это ID, он должен ссылаться на элемент в том же документе DOM.
 
-### Использование ARIA ролей
+### Использование ARIA-ролей
 
 все элементы базовой разметки
 
-### Связанные ARIA методы
+### Связанные ARIA-методы
 
 - [Using the aria-labelledby attribute](/en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
 

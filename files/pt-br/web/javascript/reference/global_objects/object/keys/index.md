@@ -25,19 +25,28 @@ Object.keys(obj)
 ## Exemplos
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
 // array com objeto
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj)); // console: ['0', '1', '2']
 
 // array como objeto com ordenação aleatória por chave
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
 
 // getFoo é uma propriedade que não é enumerável
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
 my_obj.foo = 1;
 
 console.log(Object.keys(my_obj)); // console: ['foo']
@@ -64,27 +73,32 @@ Para adicionar suporte Object.keys compatíveis em ambientes mais antigos que n�
 ```js
 // De https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
-  Object.keys = (function() {
-    'use strict';
+  Object.keys = (function () {
+    "use strict";
     var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
+      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
+      dontEnums = [
+        "toString",
+        "toLocaleString",
+        "valueOf",
+        "hasOwnProperty",
+        "isPrototypeOf",
+        "propertyIsEnumerable",
+        "constructor",
+      ],
+      dontEnumsLength = dontEnums.length;
 
-    return function(obj) {
-      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
-        throw new TypeError('Object.keys chamado de non-object');
+    return function (obj) {
+      if (
+        typeof obj !== "object" &&
+        (typeof obj !== "function" || obj === null)
+      ) {
+        throw new TypeError("Object.keys chamado de non-object");
       }
 
-      var result = [], prop, i;
+      var result = [],
+        prop,
+        i;
 
       for (prop in obj) {
         if (hasOwnProperty.call(obj, prop)) {
@@ -101,7 +115,7 @@ if (!Object.keys) {
       }
       return result;
     };
-  }());
+  })();
 }
 ```
 
@@ -111,9 +125,9 @@ Para um simples Browser Polyfill, veja [Javascript - Object.keys Browser Compati
 
 ## Especificações
 
-| Especificação                                                                | Status                   | Comentário                                           |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}     | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.8.5. |
+| Especificação                                             | Status              | Comentário                                           |
+| --------------------------------------------------------- | ------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}    | {{Spec2('ES5.1')}}  | Definição inicial. Implementado em JavaScript 1.8.5. |
 | {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}} |                                                      |
 
 ## Browser compatibilidade

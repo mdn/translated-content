@@ -5,7 +5,7 @@ slug: Web/API/HTMLTemplateElement/content
 
 {{APIRef("Web Components")}}
 
-The **`HTMLTemplateElement.content`**属性返回`<template>`元素的模板内容 (一个 {{domxref("DocumentFragment")}}).
+**`HTMLTemplateElement.content`** 属性返回 `<template>` 元素的模板内容（一个 {{domxref("DocumentFragment")}}）。
 
 ## 语法
 

@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es el CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-original_slug: Learn/CSS/First_steps/Qué_es_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
@@ -61,8 +60,8 @@ El código siguiente muestra una regla CSS muy simple que proporcionaría el est
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -76,12 +75,12 @@ Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 
@@ -118,11 +117,3 @@ Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`f
 Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn/CSS/First_steps/Comenzando_CSS), donde puedes empezar a escribir algo de CSS tú mismo.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## En este módulo
-
-1. [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Comenzar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

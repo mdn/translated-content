@@ -25,7 +25,7 @@ regexObj.toString()
 
 ## 示例
 
-### 例子：使用 `toString`
+### 示例：使用 `toString`
 
 下例输出 `RegExp` 对象的字符串值：
 

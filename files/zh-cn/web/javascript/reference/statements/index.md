@@ -61,9 +61,9 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 - {{jsxref("Statements/for...in", "for...in")}}
   - : 无序遍历对象的可枚举属性。语句针对每个唯一的属性。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 遍历可迭代的对象（包括 {{jsxref("Global_Objects/Array","数组")}}、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_Generators))，对每个不同属性的属性，调用一个自定义的有执行语句的迭代钩子。
+  - : 遍历可迭代的对象（包括 {{jsxref("Global_Objects/Array","数组")}}、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_generators))，对每个不同属性的属性，调用一个自定义的有执行语句的迭代钩子。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : 在异步可迭代对象、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_Generators)上迭代，调用自定义迭代钩子，其中包含要为每个不同属性的值执行的语句。
+  - : 在异步可迭代对象、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_generators)上迭代，调用自定义迭代钩子，其中包含要为每个不同属性的值执行的语句。
 - {{jsxref("Statements/while", "while")}}
   - : 创建一个循环语句，循环会一直持续到该语句条件表达式的值为 false。先执行条件表达式，然后执行语句。
 

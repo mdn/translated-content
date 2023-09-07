@@ -35,8 +35,8 @@ generateKey(algorithm, extractable, keyUsages)
     - `verify`：密钥可用于{{domxref("SubtleCrypto.verify()", "验证", "", 1)}}签名。
     - `deriveKey`：密钥可用于{{domxref("SubtleCrypto.deriveKey()", "派生新的密钥", "", 1)}}。
     - `deriveBits`：密钥可用于{{domxref("SubtleCrypto.deriveBits()", "派生比特序列", "", 1)}}。
-    - `wrapKey`：密钥可被{{domxref("SubtleCrypto.wrapKey()", "包装", "", 1)}}。
-    - `unwrapKey`：密钥可被{{domxref("SubtleCrypto.unwrapKey()", "解包装", "", 1)}}。
+    - `wrapKey`：密钥可用于{{domxref("SubtleCrypto.wrapKey()", "包装一个密钥", "", 1)}}。
+    - `unwrapKey`：密钥可用于{{domxref("SubtleCrypto.unwrapKey()", "解开一个密钥的包装", "", 1)}}。
 
 ### 返回值
 
@@ -65,10 +65,10 @@ let keyPair = await window.crypto.subtle.generateKey(
     name: "RSA-OAEP",
     modulusLength: 4096,
     publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256"
+    hash: "SHA-256",
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 
@@ -80,10 +80,10 @@ let keyPair = await window.crypto.subtle.generateKey(
 let keyPair = await window.crypto.subtle.generateKey(
   {
     name: "ECDSA",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -95,10 +95,10 @@ let keyPair = await window.crypto.subtle.generateKey(
 let key = await window.crypto.subtle.generateKey(
   {
     name: "HMAC",
-    hash: {name: "SHA-512"}
+    hash: { name: "SHA-512" },
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -110,10 +110,10 @@ let key = await window.crypto.subtle.generateKey(
 let key = await window.crypto.subtle.generateKey(
   {
     name: "AES-GCM",
-    length: 256
+    length: 256,
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 

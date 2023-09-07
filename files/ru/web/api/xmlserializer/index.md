@@ -1,12 +1,11 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
-translation_of: Web/API/XMLSerializer
 ---
 
 `XMLSerializer` может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. `XMLSerializer` доступен непривилегированным скриптам.
 
-Для получения более подробной информации об `XMLSerializer` в расширениях для браузера Firefox, пожалуйста обратитесь к документации [`nsIDOMSerializer`](/en-US/docs/nsIDOMSerializer).
+Для получения более подробной информации об `XMLSerializer` в расширениях для браузера Firefox, пожалуйста обратитесь к документации [`nsIDOMSerializer`](/ru/docs/nsIDOMSerializer).
 
 ## Методы
 
@@ -18,22 +17,21 @@ translation_of: Web/API/XMLSerializer
 ## Примеры
 
 ```js
- var s = new XMLSerializer();
- var d = document;
- var str = s.serializeToString(d);
- alert(str);
+var s = new XMLSerializer();
+var d = document;
+var str = s.serializeToString(d);
+alert(str);
 ```
 
 The next example uses XMLSerializer with [insertAdjacentHTML()](/ru/docs/DOM/element.insertAdjacentHTML) to insert a newly created DOM Node into the Document's body. Because [insertAdjacentHTML()](/ru/docs/DOM/element.insertAdjacentHTML) accepts a string and not a Node for its second parameter, XMLSerializer is used to first convert the node into a string.
 
 ```js
-var inp = document.createElement('input');
+var inp = document.createElement("input");
 var XMLS = new XMLSerializer();
 var inp_xmls = XMLS.serializeToString(inp); // Конвертируем DOM-элемент в строку
 
-
 // Вставляет вновь созданный элемент в тело документа
-document.body.insertAdjacentHTML('afterbegin', inp_xmls);
+document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 ```
 
 ## Браузерная совместимость

@@ -1,7 +1,6 @@
 ---
 title: Introduccion para desarrollo de juegos para la Web
 slug: Games/Introduction
-original_slug: Games/Introduccion
 ---
 
 {{GamesSidebar}}
@@ -12,15 +11,15 @@ La Web rapidamente se ha convertido en una plataforma viable no solo para crear 
 
 Puedes pensar en la Web como una mejor opción de plataforma para desarrollar tu juego. Como nos gusta decir, "la Web es la plataforma". Hechemos un vistazo al nucleo de la plataforma Web:
 
-| Funcion            | Tecnología                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Audio**          | [Web Audio API](/es/docs/Web_Audio_API)                                                                                                                                                                                                                                                                                                                                                                           |
-| **Graficos**       | [WebGL](/es/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                                                                                                                               |
+| Funcion            | Tecnología                                                                                                                                                                                                                                                       |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Audio**          | [Web Audio API](/es/docs/Web_Audio_API)                                                                                                                                                                                                                          |
+| **Graficos**       | [WebGL](/es/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                      |
 | **Entrada**        | [Touch events](/es/docs/DOM/Touch_events), [Gamepad API](/es/docs/API/Gamepad/Using_Gamepad_API), device sensors, [WebRTC](/es/docs/Web/API/WebRTC_API), [Full Screen API](/es/docs/DOM/Using_fullscreen_mode), [Pointer Lock API](/es/docs/WebAPI/Pointer_Lock) |
-| **Lenguaje**       | [JavaScript](/es/docs/JavaScript) (o C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar a JavaScript)                                                                                                                                                                                                                                                                               |
-| **Redes**          | [WebRTC](/es/docs/WebRTC) and/or [WebSockets](/es/docs/WebSockets)                                                                                                                                                                                                                                                                                                                              |
-| **Almacenamiento** | [IndexedDB](/es/docs/IndexedDB) o la "nube"                                                                                                                                                                                                                                                                                                                                                                           |
-| **Web**            | [HTML](/es/docs/HTML), [CSS](/es/docs/CSS), [SVG](/es/docs/SVG), [Social API](/es/docs/Social_API) (y mucho más!)                                                                                                                                                                                                                                             |
+| **Lenguaje**       | [JavaScript](/es/docs/JavaScript) (o C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar a JavaScript)                                                                                                                           |
+| **Redes**          | [WebRTC](/es/docs/WebRTC) and/or [WebSockets](/es/docs/WebSockets)                                                                                                                                                                                               |
+| **Almacenamiento** | [IndexedDB](/es/docs/IndexedDB) o la "nube"                                                                                                                                                                                                                      |
+| **Web**            | [HTML](/es/docs/HTML), [CSS](/es/docs/CSS), [SVG](/es/docs/SVG), [Social API](/es/docs/Social_API) (y mucho más!)                                                                                                                                                |
 
 ## El caso de Exito
 
@@ -28,39 +27,39 @@ Como un desarrollador de juegos, de forma individual o como un gran studio de ju
 
 1. El alcance de la Web es enorme;
 
-    está en todas partes.
+   está en todas partes.
 
-    Los juegos construidos con HTML5 funcionan en smartphones, tablets, PCs y Smart TVs.
+   Los juegos construidos con HTML5 funcionan en smartphones, tablets, PCs y Smart TVs.
 
 2. Se mejoran la comercialización y la detección.
 
-    No estás limitado a promocionar tu aplicación en la tienda de aplicaciones de otra persona.
+   No estás limitado a promocionar tu aplicación en la tienda de aplicaciones de otra persona.
 
-    En su lugar, puede anunciar y promover su juego en toda la Web, así como en otros medios, aprovechando la inherente capacidad de enlace y capacidad de compartir de la Web para llegar a nuevos clientes.
+   En su lugar, puede anunciar y promover su juego en toda la Web, así como en otros medios, aprovechando la inherente capacidad de enlace y capacidad de compartir de la Web para llegar a nuevos clientes.
 
 3. Usted tiene control donde importa: Pagos.
 
-    Usted no tiene que entregar más del 30% de sus ingresos a otra persona sólo porque su juego está en su ecosistema.
+   Usted no tiene que entregar más del 30% de sus ingresos a otra persona sólo porque su juego está en su ecosistema.
 
-    En su lugar, cargue lo que quiera y utilice cualquier servicio de procesamiento de pagos que le guste.
+   En su lugar, cargue lo que quiera y utilice cualquier servicio de procesamiento de pagos que le guste.
 
 4. Una vez más con más control, puedes actualizar tu juego cuando quieras.
 
-    No hay que esperar sin aliento para la aprobación, mientras que alguien oculto dentro de otra empresa decide si su solución de error crítico se enviará hoy o mañana.
+   No hay que esperar sin aliento para la aprobación, mientras que alguien oculto dentro de otra empresa decide si su solución de error crítico se enviará hoy o mañana.
 
 5. ¡Controla tus análisis!
 
-    En lugar de confiar en otra persona para tomar todas las decisiones sobre qué analítica necesita, puede recoger su propia o elegir la tercera parte que más le guste para recopilar información sobre sus ventas y el alcance de su juego.
+   En lugar de confiar en otra persona para tomar todas las decisiones sobre qué analítica necesita, puede recoger su propia o elegir la tercera parte que más le guste para recopilar información sobre sus ventas y el alcance de su juego.
 
 6. Usted consigue manejar su relación del cliente más de cerca, en su propia manera.
 
-    No más tener comentarios de los clientes filtrados a través de los mecanismos limitados de una tienda de aplicaciones.
+   No más tener comentarios de los clientes filtrados a través de los mecanismos limitados de una tienda de aplicaciones.
 
-    Involucrarse con sus clientes de la manera que desee, sin un intermediario.
+   Involucrarse con sus clientes de la manera que desee, sin un intermediario.
 
 7. Sus jugadores pueden jugar su juego en cualquier lugar, en cualquier momento.
 
-    Debido a que la Web es omnipresente, sus clientes pueden comprobar el estado de su juego en sus teléfonos, tabletas, computadoras portátiles domésticas, sus escritorios de trabajo o cualquier otra cosa.
+   Debido a que la Web es omnipresente, sus clientes pueden comprobar el estado de su juego en sus teléfonos, tabletas, computadoras portátiles domésticas, sus escritorios de trabajo o cualquier otra cosa.
 
 ## Tecnologías web para desarrolladores de juegos
 

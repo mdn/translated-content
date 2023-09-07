@@ -24,7 +24,7 @@ for await (variable of iterable) {
 - `iterable`
   - : 被迭代枚举其属性的对象。与 for...of 相比，这里的对象可以返回 `Promise`，如果是这样，那么 `variable` 将是 `Promise` 所包含的值，否则是值本身。
 
-## 例子
+## 示例
 
 ### 迭代异步可迭代对象
 
@@ -41,15 +41,15 @@ var asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (num of asyncIterable) {
-     console.log(num);
-   }
+(async function () {
+  for await (num of asyncIterable) {
+    console.log(num);
+  }
 })();
 
 // 0
@@ -69,7 +69,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (num of asyncGenerator()) {
     console.log(num);
   }
@@ -111,7 +111,7 @@ async function getResponseSize(url) {
   // expected output: "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ## 规范

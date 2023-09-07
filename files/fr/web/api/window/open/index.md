@@ -1,8 +1,6 @@
 ---
 title: Window.open()
 slug: Web/API/Window/open
-translation_of: Web/API/Window/open
-browser-compat: api.Window.open
 ---
 
 {{APIRef}}
@@ -12,25 +10,30 @@ La méthode **`open()`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/
 ## Syntaxe
 
 ```js
-open()
-open(url)
-open(url, target)
-open(url, target, windowFeatures)
+open();
+open(url);
+open(url, target);
+open(url, target, windowFeatures);
 ```
 
 ### Paramètres
 
 - `url` {{optional_inline}}
+
   - : Une chaîne de caractères indiquant l'URL ou le chemin de la ressource à charger. S'il s'agit d'une chaîne de caractères vide (`""`) ou que ce paramètre est absent, une page blanche est chargée dans le contexte de navigation ciblé.
 
 - `target` {{optional_inline}}
+
   - : Une chaîne de caractères sans espace qui indique le nom ([`Window.name`](/fr/docs/Web/API/Window/name)) du contexte de navigation dans lequel la ressource est chargée. Si le nom ne correspond pas à un contexte déjà existant, un nouveau contexte est créé avec ce nom. [Les mots-clés spécifiques pour `target`](/fr/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, et `_top`, peuvent également être utilisés.
 
     Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Element/Form#attr-target).
 
 - `windowFeatures` {{optional_inline}}
+
   - : Une chaîne de caractères contenant une liste de fonctionnalités de fenêtre, séparées par des virgules, de la forme `nom=valeur`, ou pour les fonctionnalités booléennes `nom` uniquement. Ces fonctionnalités incluent des options comme la taille et le positionnement par défaut de la fenêtre, s'il faut ouvrir une fenêtre popup minimale, etc. Les options suivantes sont prises en charge&nbsp;:
+
     - `popup`
+
       - : Si cette fonctionnalité est activée, il est demandé au navigateur d'ouvrir la fenêtre sous forme d'une popup minimale. Les fonctionnalités offertes par l'interface utilisateur du navigateur seront choisies par ce dernier (on y trouve généralement seulement la barre d'adresse).
 
         Si `popup` n'est pas activée et qu'il n'y a pas d'autres fonctionnalités déclarées avec ce paramètre, le nouveau contexte de navigation sera un onglet.
@@ -44,18 +47,23 @@ open(url, target, windowFeatures)
         > **Note :** [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
 
     - `width` ou `innerWidth`
+
       - : Indique la largeur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
 
     - `height` ou `innerHeight`
+
       - : Indique la hauteur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
 
     - `left` ou `screenX`
+
       - : Indique la distance, exprimée en pixels, depuis le bord gauche de la zone de travail définie par le système d'exploitation, à laquelle la fenêtre sera ouverte.
 
     - `top` ou `screenY`
+
       - : Indique la distance, exprimée en pixels, depuis le bord haut de la zone de travail définie par le système d'exploitation, à laquelle la fenêtre sera ouverte.
 
     - `noopener`
+
       - : Si cette fonctionnalité est utilisée, la nouvelle fenêtre n'aura pas accès à la fenêtre d'origine avec [`Window.opener`](/fr/docs/Web/API/Window/opener) (qui renverra alors `null`).
 
         Lorsque `noopener` est utilisé, les noms de cibles qui ne sont pas vides et qui ne sont pas `_top`, `_self`, et `_parent`, sont traités comme `_blank` lorsqu'il s'agit de décider s'il faut ouvrir un nouveau contexte de navigation.
@@ -82,7 +90,11 @@ let windowObjectReference;
 let windowFeatures = "popup";
 
 function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+  windowObjectReference = window.open(
+    "https://www.mozilla.org/",
+    "mozillaWindow",
+    windowFeatures,
+  );
 }
 ```
 
@@ -93,7 +105,11 @@ let windowObjectReference;
 let windowFeatures = "left=100,top=100,width=320,height=320";
 
 function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+  windowObjectReference = window.open(
+    "https://www.mozilla.org/",
+    "mozillaWindow",
+    windowFeatures,
+  );
 }
 ```
 
@@ -111,34 +127,37 @@ function openRequestedPopup() {
 
 ```html
 <script type="text/javascript">
-var windowObjectReference = null; // variable globale
-function openMozillaPopup() {
-  if(windowObjectReference == null || windowObjectReference.closed)
-  /* si le pointeur vers l'objet window n'existe pas
+  var windowObjectReference = null; // variable globale
+  function openMozillaPopup() {
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      /* si le pointeur vers l'objet window n'existe pas
      ou s'il existe mais que la fenêtre a été fermée */
-  {
-    windowObjectReference = window.open("https://www.mozilla.org/",
-   "MozillaWindowName", "popup");
-    /* on le crée. La nouvelle fenêtre sera créée et affichée
+      windowObjectReference = window.open(
+        "https://www.mozilla.org/",
+        "MozillaWindowName",
+        "popup",
+      );
+      /* on le crée. La nouvelle fenêtre sera créée et affichée
        par-dessus les éventuelles autres fenêtres. */
-  }
-  else
-  {
-    windowObjectReference.focus();
-    /* sinon la référence existe et la fenêtre n'est pas fermée
+    } else {
+      windowObjectReference.focus();
+      /* sinon la référence existe et la fenêtre n'est pas fermée
        on peut donc l'amener devant avec la méthode focus()
        sans avoir à recréer la fenêtre ou à recharger la 
        ressource référencée. */
-  };
-}
+    }
+  }
 </script>
 (...)
-<p><a
- href="https://www.mozilla.org/"
- target="MozillaWindowName"
- onclick="openMozillaPopup(); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Site Mozilla</a></p>
+<p>
+  <a
+    href="https://www.mozilla.org/"
+    target="MozillaWindowName"
+    onclick="openMozillaPopup(); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Site Mozilla</a
+  >
+</p>
 ```
 
 Le fragment de code qui précède corrige certains problèmes relatifs aux liens ouvrants des fenêtres secondaires. L'instruction `return false;` présente dans l'attribut `onclick` permet d'annuler l'action par défaut du lien. Toutefois, si la prise en charge de JavaScript est désactivée ou inexistante, ce gestionnaire d'évènement est ignoré et le navigateur charge la ressource référencée avec le nom "MozillaWindowName" si elle existe ou, dans le cas contraire, crée une nouvelle fenêtre et l'appelle "MozillaWindowName".
@@ -152,63 +171,78 @@ La fonction présentée ci-avant peut être réécrite pour qu'on puisse la réu
 
 ```html
 <script type="text/javascript">
-var windowObjectReference = null; // variable globale
-function openRequestedPopup(url, windowName) {
-  if(windowObjectReference == null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, windowName, "popup");
-  } else {
-    windowObjectReference.focus();
-  };
-}
+  var windowObjectReference = null; // variable globale
+  function openRequestedPopup(url, windowName) {
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      windowObjectReference = window.open(url, windowName, "popup");
+    } else {
+      windowObjectReference.focus();
+    }
+  }
 </script>
 (...)
-<p><a
- href="https://www.mozilla.org/"
- target="MozillaWindowName"
- onclick="openRequestedPopup(this.href, this.target); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Site Mozilla</a></p>
+<p>
+  <a
+    href="https://www.mozilla.org/"
+    target="MozillaWindowName"
+    onclick="openRequestedPopup(this.href, this.target); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Site Mozilla</a
+  >
+</p>
 ```
 
 On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour les autres liens&nbsp;:
 
 ```html
 <script type="text/javascript">
-var windowObjectReference = null; // variable globale
-var PreviousUrl; /* une variable globale qui stockera l'URL
+  var windowObjectReference = null; // variable globale
+  var PreviousUrl; /* une variable globale qui stockera l'URL
                     courante de la fenêtre secondaire */
-function openRequestedSinglePopup(url) {
-  if(windowObjectReference == null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, "SingleSecondaryWindowName",
-         "popup");
-  } else if(PreviousUrl != url) {
-    windowObjectReference = window.open(url, "SingleSecondaryWindowName",
-      "popup");
-    /* Si la ressource à charger est différente, on la charge dans
+  function openRequestedSinglePopup(url) {
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      windowObjectReference = window.open(
+        url,
+        "SingleSecondaryWindowName",
+        "popup",
+      );
+    } else if (PreviousUrl != url) {
+      windowObjectReference = window.open(
+        url,
+        "SingleSecondaryWindowName",
+        "popup",
+      );
+      /* Si la ressource à charger est différente, on la charge dans
        la fenêtre secondaire déjà ouverte puis on place la nouvelle
        fenêtre au premier plan */
-    windowObjectReference.focus();
-  } else {
-    windowObjectReference.focus();
-  };
-  PreviousUrl = url;
-  /* On stocke l'URL courante afin de pouvoir la comparer dans 
+      windowObjectReference.focus();
+    } else {
+      windowObjectReference.focus();
+    }
+    PreviousUrl = url;
+    /* On stocke l'URL courante afin de pouvoir la comparer dans 
      le cas d'un autre appel à cette fonction. */
-}
+  }
 </script>
 (...)
-<p><a
- href="https://www.mozilla.org/"
- target="SingleSecondaryWindowName"
- onclick="openRequestedSinglePopup(this.href); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Site Mozilla</a></p>
-<p><a
- href="https://support.mozilla.org/fr/products/firefox"
- target="SingleSecondaryWindowName"
- onclick="openRequestedSinglePopup(this.href); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Assistance Firefox</a></p>
+<p>
+  <a
+    href="https://www.mozilla.org/"
+    target="SingleSecondaryWindowName"
+    onclick="openRequestedSinglePopup(this.href); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Site Mozilla</a
+  >
+</p>
+<p>
+  <a
+    href="https://support.mozilla.org/fr/products/firefox"
+    target="SingleSecondaryWindowName"
+    onclick="openRequestedSinglePopup(this.href); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Assistance Firefox</a
+  >
+</p>
 ```
 
 ## FAQ

@@ -23,9 +23,9 @@ _無變動。_
 
 ### SVG
 
-- {{SVGElement("a")}} 元素（{{domxref("SVGAElement")}}）新增 `ping`、`rel`、`referrerPolicy`、`relList`、`hreflang`、`type` 及 `text` 等屬性，以便與 HTML {{HTMLElement("a")}} 元素抱持一致。（{{bug("1451823")}}）
-- {{SVGElement("textPath")}} 元素（{{domxref("SVGTextPathElement")}}）現在支援 SVG2 的 `path` 及 `side` 屬性。（{{bug("1446617")}} 與 {{bug("1446650")}}）
-- 除 {{SVGElement("path")}} 之外，現在有更多元素支援{{domxref("SVGGeometryElement")}} 。（{{bug("1325320")}}）
+- {{SVGElement("a")}} 元素（{{domxref("SVGAElement")}}）新增 `ping`、`rel`、`referrerPolicy`、`relList`、`hreflang`、`type` 及 `text` 等屬性，以便與 HTML {{HTMLElement("a")}} 元素抱持一致。（[Firefox bug 1451823](https://bugzil.la/1451823)）
+- {{SVGElement("textPath")}} 元素（{{domxref("SVGTextPathElement")}}）現在支援 SVG2 的 `path` 及 `side` 屬性。（[Firefox bug 1446617](https://bugzil.la/1446617) 與 [Firefox bug 1446650](https://bugzil.la/1446650)）
+- 除 {{SVGElement("path")}} 之外，現在有更多元素支援{{domxref("SVGGeometryElement")}} 。（[Firefox bug 1325320](https://bugzil.la/1325320)）
 
 ### JavaScript
 
@@ -103,7 +103,7 @@ _無變動。_
   - `screenPixelToMillimeterX`
   - `screenPixelToMillimeterY`
 
-- 不在標準規格內的 `SVGNumber()` 建構式已經移除。（{{bug("1455940")}}）
+- 不在標準規格內的 `SVGNumber()` 建構式已經移除。（[Firefox bug 1455940](https://bugzil.la/1455940)）
 
 ### 其他
 

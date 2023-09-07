@@ -1,5 +1,5 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
 ---
 
@@ -29,8 +29,8 @@ a:link {
 ### HTML
 
 ```html
-<a href="#ordinary-target">평범한 링크입니다.</a><br>
-<a href="">이 링크는 이미 방문했습니다.</a><br>
+<a href="#ordinary-target">평범한 링크입니다.</a><br />
+<a href="">이 링크는 이미 방문했습니다.</a><br />
 <a>플레이스홀더 링크 (스타일 적용 안됨)</a>
 ```
 

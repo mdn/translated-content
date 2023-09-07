@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.port
 slug: Web/API/HTMLAnchorElement/port
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/port
-original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ---
 
 {{ApiRef("URL API")}}
@@ -27,7 +19,7 @@ object.port = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.port">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.port">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.port; // Вернёт: '80'
 ```

@@ -47,37 +47,35 @@ public class WebSocket {
       System.out.println("A client connected.");
 ```
 
-### Socket
+### Socket 方法
 
-方法：
+- `java.net.Socket.getInputStream()`
+  返回该 Socket 的输入流。
+- `java.net.Socket.getOutputStream()`
+  返回该 Socket 的输出流。
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)`getInputStream()`
-  返回这个 Socket 的输入流 InputStream
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)`getOutputStream()`
-  返回这个 Socket 的输出流 OutputStream
+### OutputStream 方法
 
-### OutputStream
+```java
+write(byte[] b, int off, int len)
+```
 
-方法：
+将指定字节数组从偏移量 `off` 开始的 `len` 字节写入此输出流。
 
-`write(byte[] b, int off, int len)`
+### InputStream 方法
 
-将从数组`b`中的下标`off`开始的`len`个字节写入此输出流。
+```java
+read(byte[] b, int off, int len)
+```
 
-### InputStream
-
-方法：
-
-`int read(byte[] b, int off, int len)`
-
-将输入流中最多 `len` 个字节写入`byte[] b`，写入起始下标为`off`。尝试读取多达 `len` 字节，但可能读取较少数量。以整数形式返回实际读取的字节数。
+从输入流中读取最多 _len_ 字节的数据到一个字节数组中。
 
 代码片段二：
 
 ```java
 InputStream in = client.getInputStream();
-      OutputStream out = client.getOutputStream();
-      Scanner s = new Scanner(in, "UTF-8");
+OutputStream out = client.getOutputStream();
+Scanner s = new Scanner(in, "UTF-8");
 ```
 
 ## 握手

@@ -56,13 +56,17 @@ console.log(navigator.userAgentData.brands);
 以下の例では、 {{domxref("NavigatorUAData.getHighEntropyValues()")}} メソッドを使用して多くのヒントがリクエストされます。プロミスが解決すると、この情報がコンソールに表示されます。
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## 仕様書

@@ -1,18 +1,6 @@
 ---
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -32,7 +20,7 @@ string[Symbol.iterator]
 ### Пример: использование метода `[@@iterator]()`
 
 ```js
-var string = 'A\uD835\uDC68';
+var string = "A\uD835\uDC68";
 
 var strIter = string[Symbol.iterator]();
 
@@ -43,7 +31,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ### Пример: использование метода `[@@iterator]()` вместе с циклом `for..of`
 
 ```js
-var string = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+var string = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
 
 for (var v of string) {
   console.log(v);

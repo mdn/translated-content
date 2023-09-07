@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: activate イベント'
+title: "ServiceWorkerGlobalScope: activate イベント"
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('activate', (event) => { });
+addEventListener("activate", (event) => {});
 
-onactivate = (event) => { };
+onactivate = (event) => {};
 ```
 
 ## イベント型
@@ -36,15 +36,15 @@ _固有のプロパティは実装していませんが、親である {{domxref
 次のスニペットは、`activate` イベントハンドラーを使用してキャッシュをアップグレードする方法を示しています。
 
 ```js
-globalScope.addEventListener('activate', (event) => {
-  const cacheAllowlist = ['v2'];
+globalScope.addEventListener("activate", (event) => {
+  const cacheAllowlist = ["v2"];
 
   event.waitUntil(
     caches.forEach((cache, cacheName) => {
       if (!cacheAllowlist.includes(cacheName)) {
         return caches.delete(cacheName);
       }
-    })
+    }),
   );
 });
 ```

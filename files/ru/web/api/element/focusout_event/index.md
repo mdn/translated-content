@@ -1,9 +1,8 @@
 ---
 title: focusout
 slug: Web/API/Element/focusout_event
-translation_of: Web/API/Element/focusout_event
-original_slug: Web/Events/focusout
 ---
+
 Событие `focusout` вызывается перед потерей элементом фокуса. Главное отличие между этим событием и [`blur`](</ru/docs/Mozilla_event_reference/blur_(event)>) в том, что у последнего нет фазы всплытия.
 
 Основная информация
@@ -23,12 +22,12 @@ original_slug: Web/Events/focusout
 
 ## Свойства
 
-| Свойство                                 | Тип                                                | Описание                                      |
-| ---------------------------------------- | -------------------------------------------------- | --------------------------------------------- |
+| Свойство                           | Тип                                      | Описание                                      |
+| ---------------------------------- | ---------------------------------------- | --------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Цель события, теряющая фокус.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | Тип события.                                  |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Всплывает ли событие при нормальных условиях. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Возможно ли отменить событие.                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | Тип события.                                  |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Всплывает ли событие при нормальных условиях. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Возможно ли отменить событие.                 |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM-элемент) | Цель события, получающая фокус.               |
 
 ## Browser compatibility

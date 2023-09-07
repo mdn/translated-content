@@ -1,7 +1,9 @@
 ---
-title: '::-webkit-slider-thumb'
+title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
 ---
+
+{{CSSRef}}
 
 ## 总结
 
@@ -14,19 +16,19 @@ slug: Web/CSS/::-webkit-slider-thumb
 该伪类需要配和 **::-webkit-slider-runnable-track** 使用，否则会没有效果
 
 ```css
-input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance: none;/*清除默认样式*/
-  height:7vw;/*设置滑块高度*/
-  width:5vw;/*设置滑块宽度*/
-  background:#000;/*设置背景色*/
-  border-radius:10vw 10vw;/*加个圆角边*/
-  margin-top:-1vw;/*使用 position 的话会导致滑块不滑动，但是绑定的 value 是改变的，所以这里使用 margin-top 去做定位*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*清除默认样式*/
+  height: 7vw; /*设置滑块高度*/
+  width: 5vw; /*设置滑块宽度*/
+  background: #000; /*设置背景色*/
+  border-radius: 10vw 10vw; /*加个圆角边*/
+  margin-top: -1vw; /*使用 position 的话会导致滑块不滑动，但是绑定的 value 是改变的，所以这里使用 margin-top 去做定位*/
 }
 
-input[type=range]::-webkit-slider-runnable-track{
+input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 30px;
-  background:#128;
-  height:15px;
+  background: #128;
+  height: 15px;
 }
 ```
 
@@ -34,7 +36,7 @@ input[type=range]::-webkit-slider-runnable-track{
 
 这不是任何规范中的一部分，这是 webkit/bink 内核特有的 (chrome/safari)
 
-## 另请参阅
+## 参见
 
 - ::-webkit-slider-runnable-track
 - 其他浏览器内与该功能类似的伪类

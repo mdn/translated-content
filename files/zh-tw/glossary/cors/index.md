@@ -3,6 +3,8 @@ title: CORS
 slug: Glossary/CORS
 ---
 
+{{GlossarySidebar}}
+
 **CORS**（跨來源資源共享）是瀏覽器技術規範，用來傳輸 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)，判斷阻擋或允許不同來源網域的資源存取。
 
 [同源安全政策（same-origin security policy）](/zh-TW/docs/Web/Security/Same-origin_policy)，預設會禁止跨網域的資源請求。CORS 賦予網站伺服器跨網域存取控制能力，使其能安全地跨網域傳輸資料。
@@ -11,7 +13,7 @@ slug: Glossary/CORS
 
 ### 一般知識
 
-- MDN 上的 [HTTP 存取控制（CORS）](/zh-TW/docs/Web/HTTP/Access_control_CORS)
+- MDN 上的 [HTTP 存取控制（CORS）](/zh-TW/docs/Web/HTTP/CORS)
 - 維基百科上的 [Cross-origin resource sharing](https://zh.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 ### CORS 標頭

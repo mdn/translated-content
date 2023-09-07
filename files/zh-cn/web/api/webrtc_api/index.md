@@ -29,7 +29,7 @@ WebRTC 包含了若干相互关联的 API 和协议以达到这个目标。你�
 - [WebRTC 架构概述](/zh-CN/docs/Web/API/WebRTC_API/Architecture)
   - : 用来创建 WebRTC 连接的 API 底层使用了一系列的网络协议和连接标准。这篇文章涵盖了这些标准。
 - [WebRTC 基础](/zh-CN/docs/Web/API/WebRTC_API/WebRTC_basics)
-  - : 这篇文建将带你贯穿一个跨浏览器 RTC 应用的整个创建过程。结束的时候，你将拥有一个可以运行的点对点（peer-to-peer）数据通道（data channel）和媒体通道（media channel）。
+  - : 这篇文章将带你贯穿一个跨浏览器 RTC 应用的整个创建过程。结束的时候，你将拥有一个可以运行的点对点（peer-to-peer）数据通道（data channel）和媒体通道（media channel）。
 - [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
   - : 这篇文章介绍了一系列的协议，WebRTC API 就是建立于他们之上。
 - [WebRTC 连接](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)

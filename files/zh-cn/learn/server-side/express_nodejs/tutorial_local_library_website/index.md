@@ -53,7 +53,7 @@ slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 - 教程前几节中我们将定义一个简单的、只能浏览的图书馆，会员可以在网站找书。通过这几节我们来学习大多数网站都会涉及的一项操作：从数据库读取并呈现内容。
 - 随着教程的进展，图书馆的示例子会逐步扩充，以演示更高级的网站特征。比如我们会加入新增书目的功能，以此来演示表单和用户授权的用法。
 
-尽管这个示例具备相当可观的扩展度，但依然有理由把它叫做**本地**图书馆（**Local**Library）。我们希望呈现给你最少的信息，从而帮助你尽快上手并运行 Express。因此，我们只保留书名、本数、作者以及其它关键信息。我们会省略掉其它可能用到的信息，也不会提供多图书馆架构或“大型图书馆"等特性的支持。
+尽管这个示例具备相当可观的扩展度，但依然有理由把它叫做**本地**图书馆（**Local**Library）。我们希望呈现给你最少的信息，从而帮助你尽快上手并运行 Express。因此，我们只保留书名、本数、作者以及其他关键信息。我们会省略掉其他可能用到的信息，也不会提供多图书馆架构或“大型图书馆"等特性的支持。
 
 ## 我被难住了，哪里有源代码？
 
@@ -63,7 +63,7 @@ slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 如果实在进行不下去，可以参考 [Github](https://github.com/mdn/express-locallibrary-tutorial) 上的完整版本。
 
-> **备注：** 本教程中的代码，已在特定版本（项目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 所列版本）的 node、Express 及其它模组的环境下通过测试。
+> **备注：** 本教程中的代码，已在特定版本（项目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 所列版本）的 node、Express 及其他模组的环境下通过测试。
 
 ## 总结
 

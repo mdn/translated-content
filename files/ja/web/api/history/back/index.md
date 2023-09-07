@@ -14,7 +14,7 @@ slug: Web/API/History/back
 ## 構文
 
 ```js
-history.back()
+history.back();
 ```
 
 ## 例
@@ -30,7 +30,7 @@ history.back()
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   history.back();
 });
 ```

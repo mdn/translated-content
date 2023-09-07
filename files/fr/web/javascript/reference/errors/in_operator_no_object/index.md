@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: invalid ''in'' operand "x"'
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
-original_slug: Web/JavaScript/Reference/Erreurs/in_operator_no_object
 ---
 
 {{jsSidebar("Errors")}}
@@ -71,7 +65,7 @@ var toto = { machin: "bidule" };
 Attention lorsqu'on utilise l'opérateur `in` quand on recherche une valeur dans un objet {{jsxref("Array")}}. L'opérateur `in` vérifie la présence de l'index mais pas la valeur présente à cet index.
 
 ```js
-var arbres = ['cèdre', 'bouleau', 'pin', 'sapin', 'érable'];
+var arbres = ["cèdre", "bouleau", "pin", "sapin", "érable"];
 3 in arbres; // true
 "pin" in arbres; // false
 ```

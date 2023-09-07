@@ -1,5 +1,5 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
 ---
 
@@ -56,7 +56,10 @@ Este exemplo mostra como os elementos aninhados também podem ser estilizados. N
 <article>
   <div>Esta `div` é a primeira!</div>
   <div>Esta <span>`span` aninhada é a primeira</span>!</div>
-  <div>Este <em>`em` aninhado é o primeiro</em>, mas este <em>`em` aninhado é o último</em>!</div>
+  <div>
+    Este <em>`em` aninhado é o primeiro</em>, mas este
+    <em>`em` aninhado é o último</em>!
+  </div>
   <div>Este <span>`span` aninhado pegou o estilo</span>!</div>
   <b>Este `b` qualifica!</b>
   <div>Esta é a `div` final.</div>
@@ -77,8 +80,8 @@ article :first-of-type {
 
 ## Especificações
 
-| Specification                                                                                    | Status                               | Comment                                                           |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------- |
+| Specification                                                             | Status                      | Comment                                                           |
+| ------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------- |
 | {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Os elementos correspondentes não são necessários para ter um pai. |
 | {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                |
 

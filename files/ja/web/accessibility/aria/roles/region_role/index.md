@@ -1,6 +1,6 @@
 ---
-title: 'ARIA: region ロール'
-slug: Web/Accessibility/ARIA/Roles/Region_role
+title: "ARIA: region ロール"
+slug: Web/Accessibility/ARIA/Roles/region_role
 ---
 
 リージョン (`region`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書内で、著者が重要であると識別した領域を識別するために使用されます。 これは、他のランドマークロールのどれも適切でないときでも、汎用のランドマークを提供することで、人々が容易にナビゲートできるようにするために使用されます。
@@ -40,7 +40,11 @@ slug: Web/Accessibility/ARIA/Roles/Region_role
 
 ```html
 <div role="region" aria-labelledby="region-heading">
-  <h2 id="region-heading">この見出しの <code>id</code> 属性は、このリージョンがアクセス可能な名前を持つのに役立ちます</h2>
+  <h2 id="region-heading">
+    この見出しの
+    <code>id</code>
+    属性は、このリージョンがアクセス可能な名前を持つのに役立ちます
+  </h2>
   <!-- リージョンのコンテンツ -->
 </div>
 ```
@@ -63,7 +67,9 @@ slug: Web/Accessibility/ARIA/Roles/Region_role
 
 ```html
 <div role="region" aria-labelledby="use-discretion">
-  <h3 id="use-discretion">慎重に <code>region</code> ロールを使用してください</h3>
+  <h3 id="use-discretion">
+    慎重に <code>region</code> ロールを使用してください
+  </h3>
   <!-- コンテンツ -->
 </div>
 

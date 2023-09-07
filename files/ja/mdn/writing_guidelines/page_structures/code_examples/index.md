@@ -1,7 +1,6 @@
 ---
 title: コードサンプル
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
-original_slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 
 {{MDNSidebar}}
@@ -85,9 +84,9 @@ console.log(test);
 - CSS
 - JavaScript
 - Result
-上記のそれぞれのサブセクションにコードブロックを書きます。
-**結果**サブセクションに、 [`EmbedLiveSample` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros)への呼び出しを追加してください。できれば、このサブセクションに、結果を記述するための文章をもう少し入れてください。
-もし、特定の言語型を使用しない場合（例えば、 JavaScript を使用しない場合）、または非表示にしている場合は、対応する見出しを省略する必要があります。
+  上記のそれぞれのサブセクションにコードブロックを書きます。
+  **結果**サブセクションに、 [`EmbedLiveSample` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros)への呼び出しを追加してください。できれば、このサブセクションに、結果を記述するための文章をもう少し入れてください。
+  もし、特定の言語型を使用しない場合（例えば、 JavaScript を使用しない場合）、または非表示にしている場合は、対応する見出しを省略する必要があります。
 
 例
 

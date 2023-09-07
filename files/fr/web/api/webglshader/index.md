@@ -1,11 +1,6 @@
 ---
 title: WebGLShader
 slug: Web/API/WebGLShader
-tags:
-  - Reference
-  - WebGL
-  - WebGLShader
-translation_of: Web/API/WebGLShader
 ---
 
 {{APIRef("WebGL")}}
@@ -17,15 +12,15 @@ Le **WebGLShader** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) e
 Pour créer un **WebGLShader,** utiliser {{domxref("WebGLRenderingContext.createShader")}}, puis reliez-y le code source GLSL en utilisant {{domxref("WebGLRenderingContext.shaderSource()")}}, et enfin, appelez {{domxref ("WebGLRenderingContext.compileShader()")}} pour terminer et compiler le shader. À ce stade, le WebGLShader n'est toujours pas sous une forme utilisable et doit toujours être relié à un {{domxref ("WebGLProgram")}}.
 
 ```js
-function creerShader (gl, codeSource, type) {
+function creerShader(gl, codeSource, type) {
   // Compile un shader de type soit gl.VERTEX_SHADER, soit gl.FRAGMENT_SHADER
-  var shader = gl.createShader( type );
-  gl.shaderSource( shader, codeSource );
-  gl.compileShader( shader );
+  var shader = gl.createShader(type);
+  gl.shaderSource(shader, codeSource);
+  gl.compileShader(shader);
 
-  if ( !gl.getShaderParameter(shader, gl.COMPILE_STATUS) ) {
-    var info = gl.getShaderInfoLog( shader );
-    throw 'Impossible de compiler le programme WebGL.\n\n' + info;
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    var info = gl.getShaderInfoLog(shader);
+    throw "Impossible de compiler le programme WebGL.\n\n" + info;
   }
   return shader;
 }
@@ -41,25 +36,27 @@ Notez qu'il existe de nombreuses autres stratégies pour écrire des chaînes de
 
 ```js
 var sourceShaderDeSommet =
-  'attribute vec4 position;\n' +
-  'void main() {\n' +
-  '  gl_Position = position;\n' +
-  '}\n';
+  "attribute vec4 position;\n" +
+  "void main() {\n" +
+  "  gl_Position = position;\n" +
+  "}\n";
 
 // Utilisez la function creerShader de l'exemple ci-dessus
-var shaderDeSommet = creerShader(gl, sourceShaderDeSommet, gl.VERTEX_SHADER)
+var shaderDeSommet = creerShader(gl, sourceShaderDeSommet, gl.VERTEX_SHADER);
 ```
 
 ### Création d'un shader de fragment
 
 ```js
 var sourceShaderDeFragment =
-  'void main() {\n' +
-  '  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n' +
-  '}\n';
+  "void main() {\n" + "  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" + "}\n";
 
 // Utilisez la fonction creerShader de l'exemple ci-dessus
-var shaderDeFragment = creerShader(gl, sourceShaderDeFragment, gl.FRAGMENT_SHADER)
+var shaderDeFragment = creerShader(
+  gl,
+  sourceShaderDeFragment,
+  gl.FRAGMENT_SHADER,
+);
 ```
 
 ## Spécifications

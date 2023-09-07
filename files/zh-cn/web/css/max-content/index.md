@@ -36,7 +36,9 @@ max-content: unset;
 ```html
 <div id="container">
   <div class="item">Item</div>
-  <div class="item">Item with more text in it which will overflow the fixed width box.</div>
+  <div class="item">
+    Item with more text in it which will overflow the fixed width box.
+  </div>
 </div>
 ```
 
@@ -68,9 +70,7 @@ max-content: unset;
 ```html
 <div id="container">
   Item
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   Flexible item
 </div>
 ```
@@ -109,4 +109,4 @@ max-content: unset;
 
 ## 参见
 
-- 其它尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
+- 其他尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}

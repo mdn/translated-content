@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 `AsyncFunction`이 전역변수가 아님에 주의한다. 다음코드를 보면 알 수 있다.
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## 문법
@@ -58,23 +58,25 @@ AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_functi
 ### `AsyncFunction` 생성자를 통한 비동기 함수 만들기
 
 ```js
-    function resolveAfter2Seconds(x) {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          resolve(x);
-        }, 2000);
-      });
-    }
+function resolveAfter2Seconds(x) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
+  });
+}
 
-    let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-    let a = new AsyncFunction('a',
-                              'b',
-                              'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+let a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-    a(10, 20).then(v => {
-      console.log(v); // 4초 후에 30을 출력
-    });
+a(10, 20).then((v) => {
+  console.log(v); // 4초 후에 30을 출력
+});
 ```
 
 ## 명세서

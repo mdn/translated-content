@@ -1,7 +1,6 @@
 ---
 title: DOMString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
-original_slug: Web/API/DOMString
 ---
 
 {{APIRef("DOM")}}
@@ -21,7 +20,7 @@ Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para
 
 ## Veja também
 
-- [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+- [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String "/pt-BR/docs/Web/API/DOMString")
 - {{domxref("USVString")}}
 - {{domxref("CSSOMString")}}
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/String_view)

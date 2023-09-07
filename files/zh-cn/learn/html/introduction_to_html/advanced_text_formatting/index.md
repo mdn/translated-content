@@ -52,11 +52,17 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 ```html
 <dl>
   <dt>内心独白</dt>
-    <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
+  <dd>
+    戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
+  </dd>
   <dt>语言独白</dt>
-    <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
+  <dd>
+    戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
+  </dd>
   <dt>旁白</dt>
-    <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
+  <dd>
+    戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
+  </dd>
 </dl>
 ```
 
@@ -75,7 +81,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
     戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
   </dd>
   <dd>
-    写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。
+    写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其他位置（通常位于主线内容旁边一个文本框内）。
   </dd>
 </dl>
 ```
@@ -95,7 +101,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 
 <h2>可编辑代码</h2>
 <p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> 
+  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
 </p>
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 培根
@@ -136,10 +142,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -147,30 +153,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<dl>\n <dt>培根</dt>\n <dd>整个世界的粘合剂。</dd>\n <dt>鸡蛋</dt>\n <dd>一块蛋糕的粘合剂。</dd>\n <dt>咖啡</dt>\n <dd>一种浅棕色的饮料。</dd>\n <dd>可以在清晨带来活力。</dd>\n </dl>';
+const htmlSolution =
+  "<dl>\n <dt>培根</dt>\n <dd>整个世界的粘合剂。</dd>\n <dt>鸡蛋</dt>\n <dd>一块蛋糕的粘合剂。</dd>\n <dt>咖啡</dt>\n <dd>一种浅棕色的饮料。</dd>\n <dd>可以在清晨带来活力。</dd>\n </dl>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -178,7 +185,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -191,7 +198,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -205,7 +215,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -223,11 +233,14 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ### 块引用
 
-如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 {{htmlattrxref("cite","blockquote")}} 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
+如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 [`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
 
 ```html
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<p>
+  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+  extended quotation.
+</p>
 ```
 
 要把这些转换为块引用，我们要这样做：
@@ -235,7 +248,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 ```html
 <p>Here is a blockquote:</p>
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -253,8 +266,12 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 除了使用 {{htmlelement("q")}} 元素以外，行内元素用同样的方式工作。例如，下面的标记包含了从 MDN `<q>` 页面的引用：
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q></p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+</p>
 ```
 
 浏览器默认将其作为普通文本放入引号内表示引用，就像下面：
@@ -263,25 +280,35 @@ for short quotations that don't require paragraph breaks.</q></p>
 
 ### 引文
 
-{{htmlattrxref("cite","blockquote")}} 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
+[`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
 
 这里有 {{htmlelement("cite")}} 元素，但它是为了包含所引用资源的标题（如书名）。然而，你没有理由不把 `<cite>` 内的文字以某种方式链接到引用源。
 
 ```html
 <p>
   According to the
-  <a href="/en-US/docs/Web/HTML/Element/blockquote">
-    <cite>MDN blockquote page</cite></a>:
+  <a href="/zh-CN/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a
+  >:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> — <a href="/en-US/docs/Web/HTML/Element/q">
-<cite>MDN q page</cite></a>.</p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+  — <a href="/zh-CN/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a
+  >.
+</p>
 ```
 
 引文默认的字体样式为斜体。
@@ -347,10 +374,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -364,28 +391,27 @@ const htmlSolution = `<p>你好！欢迎访问我的激励网页！<a href="http
 <p>要保持乐观，<q cite="http://example.com/affirmationsforpositivethinking">不要说泄气的话</q>。（源自 <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
 
 let solutionEntry = htmlSolution;
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -393,7 +419,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -406,7 +432,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -419,7 +448,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -435,7 +464,7 @@ textarea.onkeyup = () => {
 
 另一个你在 Web 上看到的相当常见的元素是 {{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释。当包括这两种情况时，在第一次使用时提供纯文本的完整扩展，同时用 `<abbr>` 来标记缩写。这为用户代理提供了如何公布/显示内容的提示，同时告知所有用户该缩写的含义。
 
-如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 {{htmlattrxref("title")}} 属性的值：
+如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的值：
 
 ### 缩略语示例
 
@@ -443,11 +472,14 @@ textarea.onkeyup = () => {
 
 ```html
 <p>
-  我们使用 <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr> 来组织网页文档。
+  我们使用
+  <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr>
+  来组织网页文档。
 </p>
 
 <p>
-  第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>将于 2024 年 8 月在法国巴黎举行。
+  第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>将于 2024 年 8
+  月在法国巴黎举行。
 </p>
 ```
 
@@ -502,10 +534,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -513,30 +545,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<p>美国国家航空航天局 <abbr>NASA</abbr> 做了一些动人心弦的事情。</p>';
+const htmlSolution =
+  "<p>美国国家航空航天局 <abbr>NASA</abbr> 做了一些动人心弦的事情。</p>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -544,7 +577,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -557,7 +590,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -570,7 +606,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -590,7 +626,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 <address>Chris Mills, Manchester, The Grim North, UK</address>
 ```
 
-其中可以包含更复杂的标记和其它形式的联系方式，如：
+其中可以包含更复杂的标记和其他形式的联系方式，如：
 
 ```html
 <address>
@@ -624,8 +660,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 
 ```html
 <p>
-  咖啡因的化学方程式是
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
+  咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
 </p>
 <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
 ```
@@ -644,7 +679,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 - {{htmlelement("kbd")}}：用于标记输入电脑的键盘（或其他类型）输入。
 - {{htmlelement("samp")}}：用于标记计算机程序的输出。
 
-让我们看看一些例子。你应该尝试运行一下（尝试运行一下 [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html) 样例文件的拷贝）：
+让我们看看一些例子。你应该尝试运行一下（尝试运行一下 [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) 样例文件的拷贝）：
 
 ```html
 <pre><code>const para = document.querySelector('p');
@@ -654,12 +689,11 @@ para.onclick = function() {
 }</code></pre>
 
 <p>
-  请不要使用 <code>&lt;font&gt;</code> 、 <code>&lt;center&gt;</code> 等表象元素。
+  请不要使用 <code>&lt;font&gt;</code> 、
+  <code>&lt;center&gt;</code> 等表象元素。
 </p>
 
-<p>
-  在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。
-</p>
+<p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
 
 <p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
 
@@ -714,7 +748,9 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 <!-- 日期和时间 -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- 含有时区偏移值的日期时间 -->
-<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<time datetime="2016-01-20T19:30+01:00"
+  >7.30pm, 20 January 2016 is 8.30pm in France</time
+>
 <!-- 提及特定周 -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```

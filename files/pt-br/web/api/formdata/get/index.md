@@ -35,25 +35,23 @@ var formData = new FormData();
 Se adicionarmos dois valores usuario_nome usando {{domxref("FormData.append")}}:
 
 ```js
-formData.append('usuario_nome', 'Sabrina');
-formData.append('usuario_nome', 'Antônio');
+formData.append("usuario_nome", "Sabrina");
+formData.append("usuario_nome", "Antônio");
 ```
 
 A função get() abaixo apenas irá retornar o primeiro valor usuario_nome incluido:
 
 ```js
-formData.get('usuario_nome'); // Retorna "Sabrina"
+formData.get("usuario_nome"); // Retorna "Sabrina"
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                               | Comentário |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-get','get()')}} | {{Spec2('XMLHttpRequest')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.get")}}
+{{Compat}}
 
 ## Veja também
 

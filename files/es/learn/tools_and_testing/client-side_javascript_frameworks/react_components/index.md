@@ -108,8 +108,7 @@ Con este componente importado, podemos reemplazar todos los elementos `li` en `A
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -236,7 +235,7 @@ En `src/index.js`, crea una nueva `const` debajo de la última importación, per
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-2", name: "Repeat", completed: false },
 ];
 ```
 
@@ -266,8 +265,7 @@ Intentemos reemplazar todos los hijos de `<ul>` con `taskList`:
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -277,10 +275,10 @@ Falta la estructura de nuestro HTML - ¡la etiqueta `<li>` y sus casillas de ver
 
 ![Nuestra aplicación de lista de tareas con las etiquetas de elementos de tareas que se muestran agrupadas en una línea](todo-list-unstructured-names.png)
 
-Para corregirlo, necesitamos devolver un componente `<Todo />`  de nuestra función `map()` - ¡recuerda que JSX permite mezclar JavaScript y estructura de marcado! Probemos lo siguiente reemplazando lo que ya tenemos.
+Para corregirlo, necesitamos devolver un componente `<Todo />` de nuestra función `map()` - ¡recuerda que JSX permite mezclar JavaScript y estructura de marcado! Probemos lo siguiente reemplazando lo que ya tenemos.
 
 ```jsx
-  const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 Mire nuevamente su aplicación; ahora nuestras tareas se parecen más a las de antes, pero les faltan los nombres de las propias tareas. Recuerde que cada tarea que mapeamos tiene las propiedades `id`, `name` y `completed` que queremos pasar a nuestro componente`<Todo />`. Si juntamos ese conocimiento, obtenemos un código como este:
@@ -301,14 +299,13 @@ Debido a que las claves deben ser únicas, vamos a reutilizar el `id` de cada ob
 
 ```jsx
 const taskList = props.tasks.map((task) => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **Siempre debe pasar una clave unica a cualquier cosa que renderice con iteración.** Obviamente no cambiará nada en tu navegador, pero si no usas claves únicas, ¡React mostrará una advertencia en la consola y tal vés tu aplicación se comporte extraño!
@@ -407,13 +404,12 @@ import Todo from "./components/Todo";
 function App(props) {
   const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -427,8 +423,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>
@@ -445,58 +440,3 @@ Con esto en su lugar, ¡estamos _casi_ listos para abordar algo de interactivida
 Y eso es todo en este artículo — hemos profundizado un poco en cómo dividir su aplicación en componentes, y renderizarlos eficientemente. Ahora veremos como manejamos los eventos en React, y empezaremos a agregar algo de interactividad.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## En este modulo
-
-- [Introducción a los frameworks del lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Caracteristicas principales de un framework](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Primeros pasos con React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Comenzando nuestro React todo list](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Creando componentes en nuestra aplicación React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [Interactividad en React: Eventos y estados](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [Interactividad en React: Edición, filtrado, renderizado condicional](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accesibilidad en React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [Recursos de React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Primeros pasos con Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Estructura y componentes de una aplicación Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Interactividad en Ember: Eventos, classes y estado](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Interactividad en Ember: funcionalidad del pie de pagina, renderizado condicional](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Enrutamiento en Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Recursos and resolución de problemas](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Primeros pasos con Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creando nuestro primer componente de Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Renderizando una lista de componentes](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Agregando un nuevo formulario de tareas: eventos, métodos, y modelos](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Estilizando componentes con CSS](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Usando propiedades calculadas](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Renderizado condicional: editando tareas existentes](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Gestión de foco con Vue refs](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Recursos](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Primeros pasos con Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Comenzando nuestra aplicación Todo list en Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Comportamiento dinamico en Svelte: trabajando con variables y props](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Crenado componententes en nuestra aplicación de Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Svelte avanzado: Reactividad, ciclo de vida, accessibilidad](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Trabajando con Svelte stores](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Soporte de TypeScript en Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Despliege y siguientes pasos](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Primeros pasos con Angular](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Comenzando nuestra aplicación todo list Angular](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Estilizando nuestra aplicación de Angular](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creando un componente item](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtrando los items de nuestro to-do](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Creación de aplicaciones de Angular y otros recursos](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

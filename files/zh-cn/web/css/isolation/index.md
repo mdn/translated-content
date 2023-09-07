@@ -3,7 +3,7 @@ title: isolation
 slug: Web/CSS/isolation
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## 概述
 
@@ -50,7 +50,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

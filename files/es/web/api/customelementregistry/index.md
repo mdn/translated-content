@@ -1,69 +1,74 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
+l10n:
+  sourceCommit: 6a298de5052a62331f16de1e82c25e025eefc76e
 ---
 
 {{DefaultAPISidebar("Web Components")}}
 
-The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
+La interfaz **`CustomElementRegistry`** proporciona métodos para registrar elementos personalizados y consultar elementos registrados. Para obtener una instancia, usa la propiedad {{domxref("window.customElements")}}.
 
-## Methods
+## Métodos de instancia
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : Defines a new [custom element](/es/docs/Web/Web_Components/Custom_Elements).
+  - : Define un nuevo [elemento personalizado](/es/docs/Web/API/Web_components/Using_custom_elements).
 - {{domxref("CustomElementRegistry.get()")}}
-  - : Returns the constuctor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.
+  - : Devuelve el constructor del elemento personalizado nombrado, o {{jsxref("undefined")}} si el elemento personalizado no está definido.
+- {{domxref("CustomElementRegistry.getName()")}}
+  - : Devuelve el nombre del elemento personalizado ya definido, o `null` si el elemento personalizado no está definido.
 - {{domxref("CustomElementRegistry.upgrade()")}}
-  - : Upgrades a custom element directly, even before it is connected to its shadow root.
+  - : Actualiza un elemento personalizado directamente, incluso antes de que se conecte a su [shadow root](/es/docs/Web/API/ShadowRoot).
 - {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : Returns an empty {{jsxref("Promise", "promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.
+  - : Devuelve un {{jsxref("Promise")}} vacío que se resuelve cuando un elemento personalizado se define con el nombre dado. Si dicho elemento personalizado ya está definido, la promesa devuelta se cumple de inmediato.
 
-## Examples
+## Ejemplos
 
-The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.
+El siguiente código está tomado de nuestro ejemplo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) ([véalo también en vivo](https://mdn.github.io/web-components-examples/word-count-web-component/)). Observe cómo usamos el método {{domxref("CustomElementRegistry.define()")}} para definir el elemento personalizado después de crear su clase.
 
 ```js
-// Create a class for the element
+// Crear una clase para el elemento.
 class WordCount extends HTMLParagraphElement {
   constructor() {
-    // Always call super first in constructor
+    // Siempre llama super primero en el constructor
     super();
 
-    // count words in element's parent element
-    var wcParent = this.parentNode;
+    // contar palabras en el elemento padre del elemento
+    const wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
-      return text.split(/\s+/g).length;
+    function countWords(node) {
+      const text = node.innerText || node.textContent;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    const count = `Palabras: ${countWords(wcParent)}`;
 
-    // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    // Crear una shadow root
+    const shadow = this.attachShadow({ mode: "open" });
 
-    // Create text node and add word count to it
-    var text = document.createElement('span');
+    // Cree un nodo de texto y agrega el recuento de palabras
+    const text = document.createElement("span");
     text.textContent = count;
 
-    // Append it to the shadow root
+    // Añádalo a al shadow root
     shadow.appendChild(text);
 
-
-    // Update count when element content changes
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    // Actualizar el recuento cuando cambia el contenido del elemento
+    setInterval(() => {
+      const count = `Palabras: ${countWords(wcParent)}`;
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 
-// Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+// Definir el nuevo elemento
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-> **Nota:** The `CustomElementRegistry` is available through the {{domxref("Window.customElements")}} property.
+> **Nota:** `CustomElementRegistry` está disponible a través de la propiedad {{domxref("Window.customElements")}}.
 
 ## Especificaciones
 

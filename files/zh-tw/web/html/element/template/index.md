@@ -12,10 +12,10 @@ slug: Web/HTML/Element/template
 | [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)、[流內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Phrasing_content)、支援腳本的元素 |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許內容                                            | 沒有限制                                                                                                                                                                                                                               |
-| 標籤省略                                            | {{no_tag_omission}}                                                                                                                                                                                                               |
-| 允許的父元素                                        | {{HTMLElement("body")}}, {{HTMLElement("frameset")}}, {{HTMLElement("head")}}, {{HTMLElement("dl")}} and {{HTMLElement("colgroup")}} without a `span` attribute                             |
+| 標籤省略                                            | {{no_tag_omission}}                                                                                                                                                                                                                    |
+| 允許的父元素                                        | {{HTMLElement("body")}}, {{HTMLElement("frameset")}}, {{HTMLElement("head")}}, {{HTMLElement("dl")}} and {{HTMLElement("colgroup")}} without a `span` attribute                                                                        |
 | 允許的 ARIA roles                                   | 無                                                                                                                                                                                                                                     |
-| DOM 介面                                            | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                           |
+| DOM 介面                                            | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                     |
 
 ## 屬性
 
@@ -52,11 +52,10 @@ slug: Web/HTML/Element/template
 
 ```js
 // 透過檢查 HTML template 元素屬性的存在與否，以測試瀏覽器是否支援它
-if ('content' in document.createElement('template')) {
-
+if ("content" in document.createElement("template")) {
   // 使用現有 HTML tbody、行以及模板，來實例化表格
-  var t = document.querySelector('#productrow'),
-  td = t.content.querySelectorAll("td");
+  var t = document.querySelector("#productrow"),
+    td = t.content.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
 
@@ -72,7 +71,6 @@ if ('content' in document.createElement('template')) {
   // 複製新的行並將其插至表格
   var clone2 = document.importNode(t.content, true);
   tb.appendChild(clone2);
-
 } else {
   // 因為 HTML template 不被支援，所以要用其他方法在表格增加新行
 }

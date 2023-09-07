@@ -1,15 +1,8 @@
 ---
 title: Прокси
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - ECMAScript6
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-  - Объект
-  - Прокси
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 Объект `Proxy` позволяет создать прокси для другого объекта, может перехватывать и переопределить основные операции для данного объекта.
 
 ## Введение
@@ -50,18 +43,18 @@ var p = new Proxy(target, handler);
 
 Все ловушки опциональны. В случае, если ловушка не задана, то стандартным поведением будет перенаправление операции к объекту-цели.
 
-| JavaScript-код                                                                                                                                     | Метод обработчика                                                                    | Описание                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Object.getOwnPropertyDescriptor(proxy, name)`                                                                                                     | `getOwnPropertyDescriptor function(target, name) -> PropertyDescriptor \| undefined` | Должен возвращать верный объект-описание свойства или `undefined`, чтобы показать, что свойство с именем `name` существует в эмулируемом объекте. |
-| `Object.getOwnPropertyNames(proxy)` `Object.getOwnPropertySymbols(proxy)` `Object.keys(proxy)`                                                     | `ownKeys function(target) -> [string \| symbol]`                                     | Возвращает массив всех собственных (не унаследованных) имён свойств эмулируемого объекта.                                                         |
-| `Object.defineProperty(proxy,name,pd)`                                                                                                             | `defineProperty function(target, name, propertyDescriptor) -> any`                   | Задаёт новое свойство, атрибуты которого определяются предоставленным `propertyDescriptor`. Возвращаемое значение метода игнорируется.            |
-| `delete proxy.name`                                                                                                                                | `deleteProperty function(target, name) -> boolean`                                   | Удаляет именованное свойство из прокси. Возвращает `true` в случае успешного удаления свойства `name`.                                            |
-| `Object.preventExtensions(proxy)`                                                                                                                  | `preventExtensions function(target) -> boolean`                                      | Делает объект нерасширяемым. Возвращает `true` при успешном выполнении.                                                                           |
-| `name in proxy`                                                                                                                                    | `has function(target, name) -> boolean`                                              |                                                                                                                                                   |
+| JavaScript-код                                                                                                                                      | Метод обработчика                                                                    | Описание                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Object.getOwnPropertyDescriptor(proxy, name)`                                                                                                      | `getOwnPropertyDescriptor function(target, name) -> PropertyDescriptor \| undefined` | Должен возвращать верный объект-описание свойства или `undefined`, чтобы показать, что свойство с именем `name` существует в эмулируемом объекте. |
+| `Object.getOwnPropertyNames(proxy)` `Object.getOwnPropertySymbols(proxy)` `Object.keys(proxy)`                                                      | `ownKeys function(target) -> [string \| symbol]`                                     | Возвращает массив всех собственных (не унаследованных) имён свойств эмулируемого объекта.                                                         |
+| `Object.defineProperty(proxy,name,pd)`                                                                                                              | `defineProperty function(target, name, propertyDescriptor) -> any`                   | Задаёт новое свойство, атрибуты которого определяются предоставленным `propertyDescriptor`. Возвращаемое значение метода игнорируется.            |
+| `delete proxy.name`                                                                                                                                 | `deleteProperty function(target, name) -> boolean`                                   | Удаляет именованное свойство из прокси. Возвращает `true` в случае успешного удаления свойства `name`.                                            |
+| `Object.preventExtensions(proxy)`                                                                                                                   | `preventExtensions function(target) -> boolean`                                      | Делает объект нерасширяемым. Возвращает `true` при успешном выполнении.                                                                           |
+| `name in proxy`                                                                                                                                     | `has function(target, name) -> boolean`                                              |                                                                                                                                                   |
 | `proxy.name` (in the context of "getting the value") `receiver.name` (if `receiver` inherits from a proxy and does not override `name`)             | `get function(target, name, receiver) -> any`                                        | `receiver` — это прокси или объект, унаследованный от прокси.                                                                                     |
 | `proxy.name = val` (in the context of "setting the value") `receiver.name = val` (if `receiver` inherits from a proxy and does not override `name`) | `set function(target, name, val, receiver) -> boolean`                               | `receiver` — это прокси или объект, унаследованный от прокси.                                                                                     |
-| `proxy(...args) proxy.apply(thisValue, args) proxy.call(thisValue, ...args)`                                                                       | `apply function(target, thisValue, args) -> any`                                     | `target` должен быть функцией.                                                                                                                    |
-| `new proxy(...args)`                                                                                                                               | `construct function(target, args) -> object`                                         | `target` должен быть функцией.                                                                                                                    |
+| `proxy(...args) proxy.apply(thisValue, args) proxy.call(thisValue, ...args)`                                                                        | `apply function(target, thisValue, args) -> any`                                     | `target` должен быть функцией.                                                                                                                    |
+| `new proxy(...args)`                                                                                                                                | `construct function(target, args) -> object`                                         | `target` должен быть функцией.                                                                                                                    |
 
 ## Инварианты
 
@@ -81,11 +74,9 @@ var p = new Proxy(target, handler);
 
 ```js
 var handler = {
-    get: function(target, name){
-        return name in target?
-            target[name] :
-            37;
-    }
+  get: function (target, name) {
+    return name in target ? target[name] : 37;
+  },
 };
 
 var p = new Proxy({}, handler);
@@ -93,7 +84,7 @@ p.a = 1;
 p.b = undefined;
 
 console.log(p.a, p.b); // 1, undefined
-console.log('c' in p, p.c); // false, 37
+console.log("c" in p, p.c); // false, 37
 ```
 
 ### Перенаправляющий прокси
@@ -115,13 +106,13 @@ console.log(target.a); // 37. Операция была успешно пере�
 
 ```js
 let validator = {
-  set: function(obj, prop, value) {
-    if (prop === 'age') {
+  set: function (obj, prop, value) {
+    if (prop === "age") {
       if (!Number.isInteger(value)) {
-        throw new TypeError('The age is not an integer');
+        throw new TypeError("The age is not an integer");
       }
       if (value > 200) {
-        throw new RangeError('The age seems invalid');
+        throw new RangeError("The age seems invalid");
       }
     }
 
@@ -130,14 +121,14 @@ let validator = {
 
     // Обозначить успех
     return true;
-  }
+  },
 };
 
 let person = new Proxy({}, validator);
 
 person.age = 100;
 console.log(person.age); // 100
-person.age = 'young'; // Вызовет исключение
+person.age = "young"; // Вызовет исключение
 person.age = 300; // Вызовет исключение
 ```
 
@@ -147,43 +138,44 @@ person.age = 300; // Вызовет исключение
 
 ```js
 function extend(sup, base) {
-    var descriptor = Object.getOwnPropertyDescriptor(
-        base.prototype, 'constructor',
-    );
+  var descriptor = Object.getOwnPropertyDescriptor(
+    base.prototype,
+    "constructor",
+  );
 
-    const prototype = {...base.prototype}
+  const prototype = { ...base.prototype };
 
-    base.prototype = Object.create(sup.prototype);
-    base.prototype = Object.assign(base.prototype, prototype);
+  base.prototype = Object.create(sup.prototype);
+  base.prototype = Object.assign(base.prototype, prototype);
 
-    var handler = {
-        construct: function(target, args) {
-            var obj = Object.create(base.prototype);
-            this.apply(target, obj, args);
-            return obj;
-        },
-        apply: function(target, that, args) {
-            sup.apply(that, args);
-            base.apply(that, args);
-        },
-    };
-    var proxy = new Proxy(base, handler);
-    descriptor.value = proxy;
-    Object.defineProperty(base.prototype, 'constructor', descriptor);
-    return proxy;
+  var handler = {
+    construct: function (target, args) {
+      var obj = Object.create(base.prototype);
+      this.apply(target, obj, args);
+      return obj;
+    },
+    apply: function (target, that, args) {
+      sup.apply(that, args);
+      base.apply(that, args);
+    },
+  };
+  var proxy = new Proxy(base, handler);
+  descriptor.value = proxy;
+  Object.defineProperty(base.prototype, "constructor", descriptor);
+  return proxy;
 }
 
-var Person = function(name) {
-    this.name = name;
+var Person = function (name) {
+  this.name = name;
 };
 
-var Boy = extend(Person, function(name, age) {
-    this.age = age;
+var Boy = extend(Person, function (name, age) {
+  this.age = age;
 });
 
-Boy.prototype.sex = 'M';
+Boy.prototype.sex = "M";
 
-var Peter = new Boy('Peter', 13);
+var Peter = new Boy("Peter", 13);
 console.log(Peter.sex); // "M"
 console.log(Peter.name); // "Peter"
 console.log(Peter.age); // 13
@@ -194,33 +186,35 @@ console.log(Peter.age); // 13
 Иногда возникает необходимость переключить атрибут или имя класса у двух разных элементов:
 
 ```js
-let view = new Proxy({
-  selected: null
-},
-{
-  set: function(obj, prop, newval) {
-    let oldval = obj[prop];
+let view = new Proxy(
+  {
+    selected: null,
+  },
+  {
+    set: function (obj, prop, newval) {
+      let oldval = obj[prop];
 
-    if (prop === 'selected') {
-      if (oldval) {
-        oldval.setAttribute('aria-selected', 'false');
+      if (prop === "selected") {
+        if (oldval) {
+          oldval.setAttribute("aria-selected", "false");
+        }
+        if (newval) {
+          newval.setAttribute("aria-selected", "true");
+        }
       }
-      if (newval) {
-        newval.setAttribute('aria-selected', 'true');
-      }
-    }
 
-    // Стандартное сохранение значения
-    obj[prop] = newval;
-  }
-});
+      // Стандартное сохранение значения
+      obj[prop] = newval;
+    },
+  },
+);
 
-let i1 = view.selected = document.getElementById('item-1');
-console.log(i1.getAttribute('aria-selected')); // 'true'
+let i1 = (view.selected = document.getElementById("item-1"));
+console.log(i1.getAttribute("aria-selected")); // 'true'
 
-let i2 = view.selected = document.getElementById('item-2');
-console.log(i1.getAttribute('aria-selected')); // 'false'
-console.log(i2.getAttribute('aria-selected')); // 'true'
+let i2 = (view.selected = document.getElementById("item-2"));
+console.log(i1.getAttribute("aria-selected")); // 'false'
+console.log(i2.getAttribute("aria-selected")); // 'true'
 ```
 
 ### Изменение значений и дополнительные свойства
@@ -228,41 +222,43 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 Прокси объект `products` проверяет передаваемые значения и преобразует их в массив в случае необходимости. Объект также поддерживает дополнительное свойство `latestBrowser` на чтение и запись.
 
 ```js
-let products = new Proxy({
-  browsers: ['Internet Explorer', 'Netscape']
-},
-{
-  get: function(obj, prop) {
-    // Дополнительное свойство
-    if (prop === 'latestBrowser') {
-      return obj.browsers[obj.browsers.length - 1];
-    }
-
-    // Стандартный возврат значения
-    return obj[prop];
+let products = new Proxy(
+  {
+    browsers: ["Internet Explorer", "Netscape"],
   },
-  set: function(obj, prop, value) {
-    // Дополнительное свойство
-    if (prop === 'latestBrowser') {
-      obj.browsers.push(value);
-      return;
-    }
+  {
+    get: function (obj, prop) {
+      // Дополнительное свойство
+      if (prop === "latestBrowser") {
+        return obj.browsers[obj.browsers.length - 1];
+      }
 
-    // Преобразование значения, если оно не массив
-    if (typeof value === 'string') {
-      value = [value];
-    }
+      // Стандартный возврат значения
+      return obj[prop];
+    },
+    set: function (obj, prop, value) {
+      // Дополнительное свойство
+      if (prop === "latestBrowser") {
+        obj.browsers.push(value);
+        return;
+      }
 
-    // Стандартное сохранение значения
-    obj[prop] = value;
-  }
-});
+      // Преобразование значения, если оно не массив
+      if (typeof value === "string") {
+        value = [value];
+      }
+
+      // Стандартное сохранение значения
+      obj[prop] = value;
+    },
+  },
+);
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
-products.browsers = 'Firefox'; // передаётся как строка (по ошибке)
+products.browsers = "Firefox"; // передаётся как строка (по ошибке)
 console.log(products.browsers); // ['Firefox'] <- проблем нет, значение - массив
 
-products.latestBrowser = 'Chrome';
+products.latestBrowser = "Chrome";
 console.log(products.browsers); // ['Firefox', 'Chrome']
 console.log(products.latestBrowser); // 'Chrome'
 ```
@@ -272,58 +268,61 @@ console.log(products.latestBrowser); // 'Chrome'
 Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования [`Object.defineProperties`](/ru/docs/JavaScript/Reference/Global_Objects/Object/defineProperties). Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет [`table.rows`](/ru/docs/DOM/table.rows).
 
 ```js
-let products = new Proxy([
-  { name: 'Firefox', type: 'browser' },
-  { name: 'SeaMonkey', type: 'browser' },
-  { name: 'Thunderbird', type: 'mailer' }
-],
-{
-  get: function(obj, prop) {
-    // Стандартное возвращение значения; prop обычно является числом
-    if (prop in obj) {
-      return obj[prop];
-    }
-
-    // Получение количества продуктов; псевдоним products.length
-    if (prop === 'number') {
-      return obj.length;
-    }
-
-    let result, types = {};
-
-    for (let product of obj) {
-      if (product.name === prop) {
-        result = product;
+let products = new Proxy(
+  [
+    { name: "Firefox", type: "browser" },
+    { name: "SeaMonkey", type: "browser" },
+    { name: "Thunderbird", type: "mailer" },
+  ],
+  {
+    get: function (obj, prop) {
+      // Стандартное возвращение значения; prop обычно является числом
+      if (prop in obj) {
+        return obj[prop];
       }
-      if (types[product.type]) {
-        types[product.type].push(product);
-      } else {
-        types[product.type] = [product];
+
+      // Получение количества продуктов; псевдоним products.length
+      if (prop === "number") {
+        return obj.length;
       }
-    }
 
-    // Получение продукта по имени
-    if (result) {
-      return result;
-    }
+      let result,
+        types = {};
 
-    // Получение продуктов по типу
-    if (prop in types) {
-      return types[prop];
-    }
+      for (let product of obj) {
+        if (product.name === prop) {
+          result = product;
+        }
+        if (types[product.type]) {
+          types[product.type].push(product);
+        } else {
+          types[product.type] = [product];
+        }
+      }
 
-    // Получение типов продуктов
-    if (prop === 'types') {
-      return Object.keys(types);
-    }
+      // Получение продукта по имени
+      if (result) {
+        return result;
+      }
 
-    return undefined;
-  }
-});
+      // Получение продуктов по типу
+      if (prop in types) {
+        return types[prop];
+      }
+
+      // Получение типов продуктов
+      if (prop === "types") {
+        return Object.keys(types);
+      }
+
+      return undefined;
+    },
+  },
+);
 
 console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products['Firefox']); // { name: 'Firefox', type: 'browser' }
-console.log(products['Chrome']); // undefined
+console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
+console.log(products["Chrome"]); // undefined
 console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types); // ['browser', 'mailer']
 console.log(products.number); // 3
@@ -336,72 +335,82 @@ console.log(products.number); // 3
 ```js
 /*
   var docCookies = ... получить объект "docCookies" можно здесь:
-  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://developer.mozilla.org/ru/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
 
 var docCookies = new Proxy(docCookies, {
-  "get": function (oTarget, sKey) {
+  get: function (oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
-  "set": function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
+  set: function (oTarget, sKey, vValue) {
+    if (sKey in oTarget) {
+      return false;
+    }
     return oTarget.setItem(sKey, vValue);
   },
-  "deleteProperty": function (oTarget, sKey) {
-    if (sKey in oTarget) { return false; }
+  deleteProperty: function (oTarget, sKey) {
+    if (sKey in oTarget) {
+      return false;
+    }
     return oTarget.removeItem(sKey);
   },
-  "enumerate": function (oTarget, sKey) {
+  enumerate: function (oTarget, sKey) {
     return oTarget.keys();
   },
-  "iterate": function (oTarget, sKey) {
+  iterate: function (oTarget, sKey) {
     return oTarget.keys();
   },
-  "ownKeys": function (oTarget, sKey) {
+  ownKeys: function (oTarget, sKey) {
     return oTarget.keys();
   },
-  "has": function (oTarget, sKey) {
+  has: function (oTarget, sKey) {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
-  "hasOwn": function (oTarget, sKey) {
+  hasOwn: function (oTarget, sKey) {
     return oTarget.hasItem(sKey);
   },
-  "defineProperty": function (oTarget, sKey, oDesc) {
-    if (oDesc && "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+  defineProperty: function (oTarget, sKey, oDesc) {
+    if (oDesc && "value" in oDesc) {
+      oTarget.setItem(sKey, oDesc.value);
+    }
     return oTarget;
   },
-  "getPropertyNames": function (oTarget) {
+  getPropertyNames: function (oTarget) {
     return Object.getPropertyNames(oTarget).concat(oTarget.keys());
   },
-  "getOwnPropertyNames": function (oTarget) {
+  getOwnPropertyNames: function (oTarget) {
     return Object.getOwnPropertyNames(oTarget).concat(oTarget.keys());
   },
-  "getPropertyDescriptor": function (oTarget, sKey) {
-    var vValue = oTarget[sKey] || oTarget.getItem(sKey)
-    return vValue ? {
-      "value": vValue,
-      "writable": true,
-      "enumerable": true,
-      "configurable": false
-    } : undefined;
+  getPropertyDescriptor: function (oTarget, sKey) {
+    var vValue = oTarget[sKey] || oTarget.getItem(sKey);
+    return vValue
+      ? {
+          value: vValue,
+          writable: true,
+          enumerable: true,
+          configurable: false,
+        }
+      : undefined;
   },
-  "getOwnPropertyDescriptor": function (oTarget, sKey) {
+  getOwnPropertyDescriptor: function (oTarget, sKey) {
     var vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      "value": vValue,
-      "writable": true,
-      "enumerable": true,
-      "configurable": false
-    } : undefined;
+    return vValue
+      ? {
+          value: vValue,
+          writable: true,
+          enumerable: true,
+          configurable: false,
+        }
+      : undefined;
   },
-  "fix":  function (oTarget) {
+  fix: function (oTarget) {
     return "not implemented yet!";
   },
 });
 
 /* Проверка cookies */
 
-alert(docCookies.my_cookie1 = "First value");
+alert((docCookies.my_cookie1 = "First value"));
 alert(docCookies.getItem("my_cookie1"));
 
 docCookies.setItem("my_cookie1", "Changed value");

@@ -1,9 +1,6 @@
 ---
 title: Comparaison des cibles d'évènements
 slug: Web/API/Event/Comparison_of_Event_Targets
-page-type: guide
-translation_of: Web/API/Event/Comparison_of_Event_Targets
-original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
@@ -63,9 +60,18 @@ Voici les cibles à considérer&nbsp;:
 <table>
   <thead>
     <tr>
-      <td>La cible originale qui émet l'évènement <small><code>event.target</code></small></td>
-      <td>La cible dont le gestionnaire d'évènement est en cours de traitement <small><code>event.currentTarget</code></small></td>
-      <td>Identifie un (éventuel) autre élément impliqué dans l'évènement <small><code>event.relatedTarget</code></small></td>
+      <td>
+        La cible originale qui émet l'évènement
+        <small><code>event.target</code></small>
+      </td>
+      <td>
+        La cible dont le gestionnaire d'évènement est en cours de traitement
+        <small><code>event.currentTarget</code></small>
+      </td>
+      <td>
+        Identifie un (éventuel) autre élément impliqué dans l'évènement
+        <small><code>event.relatedTarget</code></small>
+      </td>
     </tr>
   </thead>
   <tr>
@@ -101,18 +107,18 @@ thead tr {
 
 ```js
 function handleClicks(e) {
-  document.getElementById('target').innerHTML = e.target;
-  document.getElementById('currentTarget').innerHTML = e.currentTarget;
-  document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
+  document.getElementById("target").innerHTML = e.target;
+  document.getElementById("currentTarget").innerHTML = e.currentTarget;
+  document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
 }
 
 function handleMouseover(e) {
-  document.getElementById('target').innerHTML = e.target;
-  document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
+  document.getElementById("target").innerHTML = e.target;
+  document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
 }
 
-document.addEventListener('click', handleClicks);
-document.addEventListener('mouseover', handleMouseover);
+document.addEventListener("click", handleClicks);
+document.addEventListener("mouseover", handleMouseover);
 ```
 
 ### Résultat
@@ -125,10 +131,10 @@ Cliquer sur le texte dans le tableau vous permettra d'observer la différence en
 
 La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud sur lequel la souris était précédemment. Pour l'évènement `mouseout`, elle contient le nœud sur lequel la souris s'est déplacée.
 
-| Type d'évènement  | [`event.target`](/fr/docs/Web/API/Event/target)                       | [`event.relatedTarget`](/fr/docs/Web/API/MouseEvent/relatedTarget)    |
-| ----------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `mouseover`       | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. | L'objet `EventTarget` que le dispositif de pointage quitte.           |
-| `mouseout`        | L'objet `EventTarget` que le dispositif de pointage quitte.           | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. |
+| Type d'évènement | [`event.target`](/fr/docs/Web/API/Event/target)                       | [`event.relatedTarget`](/fr/docs/Web/API/MouseEvent/relatedTarget)    |
+| ---------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `mouseover`      | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. | L'objet `EventTarget` que le dispositif de pointage quitte.           |
+| `mouseout`       | L'objet `EventTarget` que le dispositif de pointage quitte.           | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. |
 
 ### Exemple
 
@@ -136,10 +142,9 @@ La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud su
 
 ```html
 <div id="outer">
-  <div id="inner">
-  </div>
+  <div id="inner"></div>
 </div>
-<p id="log"/>
+<p id="log" />
 ```
 
 #### CSS
@@ -163,15 +168,17 @@ const inner = document.getElementById("inner");
 const log = document.getElementById("log");
 
 function handleMouseOver(event) {
-  log.innerHTML = 'mouseover ' + event.relatedTarget.id + ' > ' + event.target.id;
+  log.innerHTML =
+    "mouseover " + event.relatedTarget.id + " > " + event.target.id;
 }
 
 function handleMouseOut(event) {
-  log.innerHTML = 'mouseout ' + event.target.id + ' > ' + event.relatedTarget.id;
+  log.innerHTML =
+    "mouseout " + event.target.id + " > " + event.relatedTarget.id;
 }
 
-inner.addEventListener('mouseover',handleMouseOver);
-inner.addEventListener('mouseout',handleMouseOut);
+inner.addEventListener("mouseover", handleMouseOver);
+inner.addEventListener("mouseout", handleMouseOut);
 ```
 
 #### Résultat

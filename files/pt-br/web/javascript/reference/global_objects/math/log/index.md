@@ -38,8 +38,8 @@ Caso você precise do logaritmo natural de 2 ou 10, use as constantes {{jsxref("
 
 ```js
 Math.log(-1); // NaN, out of range
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
@@ -57,11 +57,11 @@ Caso você execute `getBaseLog(10, 1000)` será retornado `2.9999999999999996` d
 
 ## Especificações
 
-| Specification                                                        | Status                       | Comment                                            |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}} | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specification                                        | Status               | Comment                                            |
+| ---------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                  | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}}  | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-math.log', 'Math.log')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

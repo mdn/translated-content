@@ -1,13 +1,8 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG text
-translation_of: Web/SVG/Element/text
-original_slug: Web/SVG/Элемент/<text>
 ---
+
 {{SVGRef}}
 
 SVG элемент **`<text>`** определяет графический элемент, содержащий текст. Как и к любому другому графическому элементу SVG, к элементу `<text>` можно применить градиент, шаблон, окантовку, маску или фильтр.
@@ -17,19 +12,29 @@ SVG элемент **`<text>`** определяет графический эл
 ## Пример
 
 ```css hidden
-   html,body,svg { height:100% }
-
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .small { font: italic 13px sans-serif; }
-    .heavy { font: bold 30px sans-serif; }
+    .small {
+      font: italic 13px sans-serif;
+    }
+    .heavy {
+      font: bold 30px sans-serif;
+    }
 
     /* Обратите внимание, что цвет текста задаётся с помощью        *
      * fill свойства, а свойство color используется только для HTML */
-    .Rrrrr { font: italic 40px serif; fill: red; }
+    .Rrrrr {
+      font: italic 40px serif;
+      fill: red;
+    }
   </style>
 
   <text x="20" y="35" class="small">Мой</text>
@@ -78,8 +83,13 @@ SVG элемент **`<text>`** определяет графический эл
 ```html
 <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .mal { font: italic 16px sans-serif; }
-    .hey { font: bold 26px sans-serif; fill: #6de;}
+    .mal {
+      font: italic 16px sans-serif;
+    }
+    .hey {
+      font: bold 26px sans-serif;
+      fill: #6de;
+    }
   </style>
   <text x="0" y="68" class="mal">- Привет,</text>
   <text x="110" y="40" class="hey">Сахалин!</text>
@@ -90,21 +100,27 @@ SVG элемент **`<text>`** определяет графический эл
 
 {{EmbedLiveSample('SVG', 150, '100%')}}
 
-### Изменение направления написания текста.
+### Изменение направления написания текста
 
 Направление написания SVG-текста можно сменить на обратное, применив трансформацию.
 
 #### SVG
 
 ```html
-
 <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .mal {font: italic 16px sans-serif; transform: rotate(180, 50, 50);}
-    .hey {font: bold 26px sans-serif; fill: #6de;}
+    .mal {
+      font: italic 16px sans-serif;
+      transform: rotate(180, 50, 50);
+    }
+    .hey {
+      font: bold 26px sans-serif;
+      fill: #6de;
+    }
   </style>
   <text x="-40" y="68" class="mal" transform="rotate(180, 50, 50)">
-    Пример ротации</text>
+    Пример ротации
+  </text>
   <text x="180" y="40" class="hey">SVG-текста.</text>
 </svg>
 ```
@@ -121,12 +137,18 @@ SVG элемент **`<text>`** определяет графический эл
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-    <style>
-      .gri {font: italic 16px sans-serif; fill: #6dd;}
-      .red {font: bold 26px sans-serif; fill: #d66;}
-    </style>
-    <text class="gri" x="10" y="30">Цвет текста</text>
-    <text class="red" x="120" y="30">SVG.</text>
+  <style>
+    .gri {
+      font: italic 16px sans-serif;
+      fill: #6dd;
+    }
+    .red {
+      font: bold 26px sans-serif;
+      fill: #d66;
+    }
+  </style>
+  <text class="gri" x="10" y="30">Цвет текста</text>
+  <text class="red" x="120" y="30">SVG.</text>
 </svg>
 ```
 
@@ -134,20 +156,24 @@ SVG элемент **`<text>`** определяет графический эл
 
 {{EmbedLiveSample('SVG_3', 200, '100%')}}
 
-### Применение CSS-стилей к содержимому элемента \<text>.
+### Применение CSS-стилей к содержимому элемента \<text>
 
 Содержимое SVG элемента **\<text>** может быть стилизовано как обычный текст в HTML.
 
 #### SVG
 
 ```html
-  <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-    <style>
-      .stil {font: italic 16px sans-serif;}
-      .list {font: bold 26px sans-serif;}
-    </style>
-    <text class="stil" x="10" y="30">Стиль текста</text>
-    <text class="list" x="140" y="30">SVG.</text>
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .stil {
+      font: italic 16px sans-serif;
+    }
+    .list {
+      font: bold 26px sans-serif;
+    }
+  </style>
+  <text class="stil" x="10" y="30">Стиль текста</text>
+  <text class="list" x="140" y="30">SVG.</text>
 </svg>
 ```
 

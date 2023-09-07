@@ -86,7 +86,7 @@ TLS 1.3 でリネゴシエーションが削除されたことは、証明書を
 
 より現代的で安全なウェブに向けての取り組みにより、2020 年第 1 四半期に TLS 1.0 および 1.1 のサポートがすべての主要ブラウザーから削除されます。ウェブサーバーが今後 TLS 1.2 または 1.3 をサポートすることを確認する必要があります。
 
-Firefox はバージョン 74 以降、古い TLS バージョンを使用してサーバーに接続すると [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーを返します ({{bug(1606734)}}) 。
+Firefox はバージョン 74 以降、古い TLS バージョンを使用してサーバーに接続すると [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーを返します ([Firefox バグ 1606734](https://bugzil.la/1606734)) 。
 
 ## TLS ハンドシェイクタイムアウト値
 

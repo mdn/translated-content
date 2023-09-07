@@ -22,7 +22,7 @@ l10n:
 以下の例では、`inBandMetadataTrackDispatchType`の値がコンソールに表示されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.inBandMetadataTrackDispatchType);

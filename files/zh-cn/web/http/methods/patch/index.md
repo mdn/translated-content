@@ -5,25 +5,54 @@ slug: Web/HTTP/Methods/PATCH
 
 {{HTTPSidebar}}
 
-在 HTTP 协议中，请求方法 **PATCH** 用于对资源进行部分修改。
+**HTTP `PATCH` 请求方法**用于对资源进行部分修改。
 
-在 HTTP 协议中， {{HTTPMethod("PUT")}} 方法已经被用来表示对资源进行整体覆盖，而 {{HTTPMethod("POST")}} 方法则没有对标准的补丁格式的提供支持。不同于 `PUT` 方法，而与 `POST` 方法类似，`PATCH` 方法是非幂等的，这就意味着连续多个的相同请求会产生不同的效果。
+`PATCH` 有点类似于 {{Glossary("CRUD")}} 中的“更新”概念（一般来说，HTTP 与 {{Glossary("CRUD")}} 不同，两者不应混淆）。
 
-要判断一台服务器是否支持 `PATCH` 方法，那么就看它是否将其添加到了响应首部 {{HTTPHeader("Allow")}} 或者 {{HTTPHeader("Access-Control-Allow-Methods")}}（在跨域访问的场合，CORS）的方法列表中。
+`PATCH` 请求是一组关于如何修改资源的指令，与 {{HTTPMethod("PUT")}} 形成对比；后者是一个资源的完整表述。
 
-另外一个支持 PATCH 方法的隐含迹象是 {{HTTPHeader("Accept-Patch")}} 首部的出现，这个首部明确了服务器端可以接受的补丁文件的格式。
+`PATCH` 并不需要是幂等的，这与 {{HTTPMethod("PUT")}} 形成鲜明对比；后者始终是幂等的。“幂等（idempotent）”一词意味着，任何数量的重复、相同的请求都会使资源处于相同的状态。例如，如果一个自动递增的计数器字段是资源的一个组成部分，那么 {{HTTPMethod("PUT")}} 将自然地覆盖它（因为它覆盖一切），但对于 `PATCH` 则不一定如此。
 
-| Request has body                                          | Yes |
-| --------------------------------------------------------- | --- |
-| Successful response has body                              | No  |
-| {{Glossary("Safe")}}                              | No  |
-| {{Glossary("Idempotent")}}                      | No  |
-| {{Glossary("Cacheable")}}                          | No  |
-| Allowed in [HTML forms](/zh-CN/docs/Web/Guide/HTML/Forms) | No  |
+`PATCH` 像 {{HTTPMethod("POST")}} 一样，*可能*会对其他资源产生副作用。
+
+要知道一个服务器是否支持 `PATCH`，服务器可以通过将其加入 {{HTTPHeader("Allow")}} 或 {{HTTPHeader("Access-Control-Allow-Methods")}}（用于 [CORS](/zh-CN/docs/Web/HTTP/CORS)）响应标头中的列表来宣告其支持。
+
+另外一个（隐式）表明允许 `PATCH` 方法的指示为 {{HTTPHeader("Accept-Patch")}} 标头的存在，这个标头明确了服务器端可以接受补丁文档的格式。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">请求是否有主体</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">成功的响应是否有主体</th>
+      <td>可能有</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent","幂等")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable","可缓存")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        允许在 <a href="/zh-CN/docs/Learn/Forms">HTML 表单</a>中使用
+      </th>
+      <td>不允许</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 PATCH /file.txt HTTP/1.1
 ```
 
@@ -31,21 +60,23 @@ PATCH /file.txt HTTP/1.1
 
 ### 请求
 
-```plain
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
 Content-Length: 100
 
-[description of changes]
+[描述变化情况]
 ```
 
 ### 响应
 
-{{HTTPStatus("204")}} 状态码表示这是一个操作成功的响应，因为响应中不带有消息主体。
+任何 [2xx](https://httpwg.org/specs/rfc9110.html#status.2xx) 状态码都代表成功的响应。
 
-```plain
+以下示例使用了 {{HTTPStatus("204")}} 响应码，因为响应不携带任何主体。{{HTTPStatus("200")}} 响应可能携带了响应体。
+
+```http
 HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"
@@ -55,8 +86,8 @@ ETag: "e0023aa4f"
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - {{HTTPStatus("204")}}
-- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}} – 用于明确服务器端可以接受的补丁文件的格式。
+- {{HTTPHeader("Allow")}}、{{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Accept-Patch")}}——指定了可以接受的补丁文档的格式。

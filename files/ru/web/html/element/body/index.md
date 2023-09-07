@@ -1,17 +1,6 @@
 ---
 title: <body>
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Корневой элемент
-  - Разделы
-  - Секционирование
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/body
 ---
 
 {{HTMLSidebar}}
@@ -34,7 +23,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённое содержимое</th>
+      <th scope="row">Допустимое содержимое</th>
       <td>
         <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент"
           >Потоковый контент</a
@@ -42,7 +31,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Пропуск тега</th>
+      <th scope="row">Пропуск тегов</th>
       <td>
         Открывающий тег может быть пропущен, если первое, что находится внутри
         него, не является пробелом, комментарием, элементом
@@ -53,14 +42,14 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые родительские элементы</th>
+      <th scope="row">Допустимые родители</th>
       <td>
         Этот элемент должен быть вторым в элементе
         {{HTMLElement("html")}}
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые роли ARIA</th>
+      <th scope="row">Допустимые ARIA-роли</th>
       <td>Отсутствуют</td>
     </tr>
     <tr>

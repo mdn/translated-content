@@ -1,12 +1,8 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Выражение
-  - Цикл
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 **`Цикл for...in`** проходит через перечисляемые свойства объекта. Он пройдёт по каждому отдельному элементу.
@@ -39,7 +35,7 @@ for (variable in object) {...
 
 Так как порядок прохода зависит от реализации, проход по массиву может не произойти в правильном порядке. Следовательно лучше с числовыми индексами использовать циклы {{jsxref("Statements/for", "for")}}, {{jsxref("Array.prototype.forEach()")}} или {{jsxref("Statements/for...of", "for...of")}}, когда проходим по массивам, где важен порядок доступа к свойствам.
 
-### Проход только через собственные свойства.
+### Проход только через собственные свойства
 
 Если вы хотите рассматривать только свойства самого объекта, а не его прототипов, используйте {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}}, {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} или {{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}. Кроме того, если вы знаете, что не будет вмешательства в код извне, вы можете расширить встроенные прототипы методом проверки.
 
@@ -48,7 +44,7 @@ for (variable in object) {...
 Следующее выражение берёт аргументом объект. Затем проходит по всем перечислимым свойствам объекта и возвращает строку содержащую имена свойств и их значения.
 
 ```js
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log("obj." + prop + " = " + obj[prop]);
@@ -63,7 +59,7 @@ for (var prop in obj) {
 Следующая функция иллюстрирует использование {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: наследуемые свойства не отображаются
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
   this.color = "red";
@@ -74,7 +70,7 @@ ColoredTriangle.prototype = triangle;
 var obj = new ColoredTriangle();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log("obj." + prop + " = " + obj[prop]);
   }
 }
@@ -85,12 +81,12 @@ for (var prop in obj) {
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарий             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ES6')}}     |                         |
-| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                             | {{Spec2('ES5.1')}} |                         |
-| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                             | {{Spec2('ES3')}}     |                         |
-| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                             | {{Spec2('ES1')}}     | Изначальное определение |
+| Спецификация                                                                   | Статус             | Комментарий             |
+| ------------------------------------------------------------------------------ | ------------------ | ----------------------- |
+| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ES6')}}   |                         |
+| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                     | {{Spec2('ES5.1')}} |                         |
+| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                       | {{Spec2('ES3')}}   |                         |
+| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                       | {{Spec2('ES1')}}   | Изначальное определение |
 
 ## Поддержка браузерами
 

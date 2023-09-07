@@ -1,18 +1,6 @@
 ---
 title: Introduction au HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - Codage
-  - HTML
-  - Introduction au HTML
-  - Landing
-  - Liens
-  - Structure
-  - Texte
-  - head
-  - sémantique
-translation_of: Learn/HTML/Introduction_to_HTML
-original_slug: Apprendre/HTML/Introduction_à_HTML
 ---
 
 {{LearnSidebar}}

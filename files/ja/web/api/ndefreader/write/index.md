@@ -11,7 +11,7 @@ slug: Web/API/NDEFReader/write
 
 ```js
 NDEFReader.write(message);
-  NDEFReader.write(message, options);
+NDEFReader.write(message, options);
 ```
 
 ### 引数
@@ -54,8 +54,8 @@ NDEFReader.write(message);
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `overwrite` -- 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
-    - `signal` -- オプションの {{DOMxRef("AbortSignal")}} で、現在の書き込み操作をキャンセルすることができます。
+    - `overwrite` — 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
+    - `signal` — オプションの {{DOMxRef("AbortSignal")}} で、現在の書き込み操作をキャンセルすることができます。
 
 ### 返値
 
@@ -84,13 +84,14 @@ NDEFReader.write(message);
 
 ```js
 const ndef = new NDEFReader();
-ndef.write(
-  "Hello World"
-).then(() => {
-  console.log("Message written.");
-}).catch(error => {
-  console.log(`Write failed :-( try again: ${error}.`);
-});
+ndef
+  .write("Hello World")
+  .then(() => {
+    console.log("Message written.");
+  })
+  .catch((error) => {
+    console.log(`Write failed :-( try again: ${error}.`);
+  });
 ```
 
 ### URL の書き込み
@@ -101,11 +102,11 @@ ndef.write(
 const ndef = new NDEFReader();
 try {
   await ndef.write({
-    records: [{ recordType: "url", data: "http://example.com/" }]
+    records: [{ recordType: "url", data: "http://example.com/" }],
   });
 } catch {
   console.log("Write failed :-( try again.");
-};
+}
 ```
 
 ### タイムアウトで書き込みをスケジューリング
@@ -122,9 +123,13 @@ function write(data, { timeout } = {}) {
     ctlr.signal.onabort = () => reject("Time is up, bailing out!");
     setTimeout(() => ctlr.abort(), timeout);
 
-    ndef.addEventListener("reading", event => {
-      ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
-    }, { once: true });
+    ndef.addEventListener(
+      "reading",
+      (event) => {
+        ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
+      },
+      { once: true },
+    );
   });
 }
 
@@ -132,7 +137,7 @@ await ndef.scan();
 try {
   // Let's wait for 5 seconds only.
   await write("Hello World", { timeout: 5_000 });
-} catch(err) {
+} catch (err) {
   console.error("Something went wrong", err);
 } finally {
   console.log("We wrote to a tag!");

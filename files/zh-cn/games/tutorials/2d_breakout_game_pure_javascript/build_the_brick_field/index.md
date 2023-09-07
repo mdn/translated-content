@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
-这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)教程 10 节的第 6 节。您可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)找到源代码。
+这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)教程 10 节的第 6 节。你可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)找到源代码。
 
 在修改游戏机制后，我们可以输了 — 这样这游戏看起来终于像是一个游戏了，这真是太好了。但是，如果你总是让球与墙、板碰撞的话，很快就会感到无聊的。好游戏需要的是让球消灭砖，这就是我们即将要做的！
 
@@ -31,11 +31,11 @@ var brickOffsetLeft = 30;
 
 ```js
 var bricks = [];
-for(c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0 };
-    }
+for (c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0 };
+  }
 }
 ```
 
@@ -47,25 +47,25 @@ for(c=0; c<brickColumnCount; c++) {
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            bricks[c][r].x = 0;
-            bricks[c][r].y = 0;
-            ctx.beginPath();
-            ctx.rect(0, 0, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      bricks[c][r].x = 0;
+      bricks[c][r].y = 0;
+      ctx.beginPath();
+      ctx.rect(0, 0, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 
 再次，我们遍历的行和列，给每一块砖的位置设置`X`和`Y`，我们也画布上画砖，---`brickwidth` X `brickheight` 。问题是我们都画在一个地方坐标`（0,0）`处。我们需要做的是增加一些计算，计算每个循环迭代后的砖块的 x 和 y 位置：
 
 ```js
-var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
 ```
 
 每个`brickX`位置是 `brickWidth + brickPadding`，乘以列数`C`，再加上`brickOffsetLeft`；对于砖`brickY`的逻辑相同，除了名称不同，使用行数`R`，`brickHeight`，和`brickOffsetTop`。现在，每一块砖都可以放在正确的地方，排成一排，每一块砖之间都有填充物，从左上角和顶部的帆布边缘偏移。
@@ -74,19 +74,19 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-            var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-            bricks[c][r].x = brickX;
-            bricks[c][r].y = brickY;
-            ctx.beginPath();
-            ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+      var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+      bricks[c][r].x = brickX;
+      bricks[c][r].y = brickY;
+      ctx.beginPath();
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 

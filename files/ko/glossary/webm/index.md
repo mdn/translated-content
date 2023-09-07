@@ -1,6 +1,6 @@
 ---
 title: WebM
-slug: Glossary/webm
+slug: Glossary/WebM
 ---
 
 **WebM**은 로열티 비용이 없는 개방형 웹 비디오 포맷이며 Mozilla Firefox에서 네이티브로 지원됩니다.

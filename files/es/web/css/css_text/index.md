@@ -1,7 +1,6 @@
 ---
 title: Texto CSS
-slug: Web/CSS/CSS_Text
-original_slug: Web/CSS/Texto_CSS
+slug: Web/CSS/CSS_text
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Demos of open web technologies
 slug: Web/Demos
-original_slug: Web/Demos_of_open_web_technologies
 ---
 
 Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們鼓勵使用他們。這個頁面提供一些展示這些有趣技術的連結，包含那些曾經在 Demo Studio 有人氣的，但[現在已經落伍了](https://blog.mozilla.org/community/2015/12/18/saying-goodbye-to-demo-studio/)的技術。如果你知道有關於新的網路公開技術，不錯的展示或是應用程式，請將連結加到下方適合的區塊中。
@@ -15,9 +14,9 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 - [Canvas3D & Flickr](http://www.xs4all.nl/~peterned/3d/)
 - [Playing with Canvas](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
 - [Using the Canvas Html element5](http://langexplr.blogspot.com/2008/11/using-canvas-html-element.html)
-- [RayCaster](/samples/raycaster/RayCaster.html)
+- [RayCaster](http://mdn.github.io/canvas-raycaster/index.html)
 - [MSX Emulator](http://jsmsxdemo.googlepages.com/jsmsx.html)
-- [processing.js](http://processingjs.org/exhibition/)
+- [processing.js](https://processingjs.org/exhibition/)
 - [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
 - [miniPaint - Image editor](http://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 
@@ -27,7 +26,7 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 - [HTML transformations](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) using `foreignObject` (visual effects and transforms)
 - [Phonetics Guide](http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg) (interactive)
 - [3D objects demo](http://www.lutanho.net/svgvml3d/platonic.html) (interactive)
-- [Blobular](http://www.themaninblue.com/experiment/Blobular/) (interactive)
+- [Blobular](https://www.themaninblue.com/experiment/Blobular/) (interactive)
 - [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg) (or use the [local download](http://www.double.co.nz/video_test/video_svg.tar.bz2))
 - [Summer HTML image map creator](http://summerstyle.github.io/summer/) ([source code](https://github.com/summerstyle/summer))
 - [SVG/CSS demo firefox developer edition](http://s.codepen.io/SoftwareRVG/debug/JRJZVW) design by Rober Villar from Software RVG ([source code](https://github.com/SoftwareRVG/mde_design/blob/master/css_svg_dev)) ([debug mode](http://s.codepen.io/SoftwareRVG/debug/JRJZVW))
@@ -61,11 +60,11 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 ## CSS
 
 - [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](https://codepen.io/SoftwareRVG/full/OXkOWj) (debug mode)
-- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](http://codepen.io/SoftwareRVG/pen/OXkOWj/) (source code)
-- [Paperfold](http://felixniklas.com/paperfold/)
+- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](https://codepen.io/SoftwareRVG/pen/OXkOWj/) (source code)
+- [Paperfold](https://felixniklas.com/paperfold/)
 - [CSS Blockout](http://ondras.github.io/blockout/)
-- [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)
-- [Pure CSS Slides](http://ondras.zarovi.cz/demos/nojs/)
+- [Rubik's cube](https://ondras.zarovi.cz/demos/rubik/)
+- [Pure CSS Slides](https://ondras.zarovi.cz/demos/nojs/)
 - Planetarium ([source code](https://github.com/littleworkshop/planetarium))
 
 ### 轉換 ( Transformations )
@@ -79,7 +78,7 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 
 ## HTML
 
-- [Zen Photon Garden](http://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
 
 ## Web APIs
 
@@ -93,7 +92,7 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 - [oscope.js - JavaScript oscilloscope](http://ondras.github.io/oscope/)
 - [HTML5 Web Audio Showcase](http://nipe-systems.de/webapps/html5-web-audio/) ([source code](https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase))
 - [HTML5 Audio Visualizer](http://wayou.github.io/HTML5_Audio_Visualizer/) ([source code](https://github.com/Wayou/HTML5_Audio_Visualizer))
-- [Graphical Filter Editor and Visualizer](http://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([source code](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
+- [Graphical Filter Editor and Visualizer](https://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([source code](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
 
 ### 檔案的 API
 
@@ -104,5 +103,5 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 - [Web Worker Fractals](http://ondras.github.io/fractal/)
 - [圖片編輯器](http://ondras.github.io/photo/)
 - [Coral generator](http://ondras.github.io/coral/)
-- [Raytracer](http://nerget.com/rayjs-mt/rayjs.html)
+- [Raytracer](https://nerget.com/rayjs-mt/rayjs.html)
 - [HotCold Touch Typing](http://palerdot.github.io/hotcold/)

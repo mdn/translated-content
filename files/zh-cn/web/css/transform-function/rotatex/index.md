@@ -1,7 +1,6 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX
-original_slug: Web/CSS/transform-function/rotateX()
 ---
 
 {{CSSRef}}
@@ -112,7 +111,7 @@ div {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

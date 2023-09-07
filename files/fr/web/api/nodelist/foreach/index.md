@@ -1,8 +1,6 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-translation_of: Web/API/NodeList/forEach
-browser-compat: api.NodeList.forEach
 ---
 
 {{APIRef("DOM")}}
@@ -53,12 +51,9 @@ node.appendChild(kid3);
 
 var list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(currentValue + ", " + currentIndex + ", " + this);
+}, "myThisArg");
 ```
 
 résultat :
@@ -75,12 +70,12 @@ Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les nav
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
 }
 ```
 

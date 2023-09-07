@@ -36,7 +36,7 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 - {{domxref("PerformanceEventTiming")}}
   - : 测量事件的延迟和首次输入延迟（FID）。
 - {{domxref("PerformanceLongTaskTiming")}}
-  - : 检测占用渲染并阻止其它任务执行的长任务。
+  - : 检测占用渲染并阻止其他任务执行的长任务。
 - {{domxref("PerformanceMark")}}
   - : 在性能时间线上标记自定义条目。
 - {{domxref("PerformanceMeasure")}}
@@ -59,10 +59,9 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 ## 教程和指南
 
 - [使用 Performance API](/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API)
-- [使用性能时间线](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-- [使用 User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [使用 Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)
-- [使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [User Timing（概览）](/zh-CN/docs/Web/API/Performance_API/User_timing)
+- [Navigation Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)
+- [Resource Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
 
 ## 规范
 

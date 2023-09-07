@@ -27,13 +27,13 @@ dateObj.valueOf()
 
 该方法通常在 JavaScript 内部被调用，而不是在代码中显式调用。
 
-## 例子
+## 示例
 
 ### 使用 `valueOf()`
 
 ```js
 var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // assigns -424713600000 to myVar
+var myVar = x.valueOf(); // assigns -424713600000 to myVar
 ```
 
 ## 规范

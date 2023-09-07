@@ -38,12 +38,15 @@ postMessage(message, targetOrigin, transfer)
 `window` は以下の JavaScript を実行することで、配信されたメッセージを受け取ることができます。
 
 ```js
-window.addEventListener("message", (event) => {
-  if (event.origin !== "http://example.org:8080")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    if (event.origin !== "http://example.org:8080") return;
 
-  // …
-}, false);
+    // …
+  },
+  false,
+);
 ```
 
 配信されたメッセージには、以下のプロパティがあります。
@@ -57,15 +60,15 @@ window.addEventListener("message", (event) => {
 
 ## セキュリティの考慮事項
 
-**他のサイトからメッセージを受け取りたくない場合、`message` イベントに対して一切イベントリスナーを追加しないでください。**これはセキュリティ的な問題を避けるための完全にフールプルーフな方法です。
+**他のサイトからメッセージを受け取りたくない場合、`message` イベントに対して一切イベントリスナーを追加*しないでください***。これはセキュリティ的な問題を避けるための完全にフールプルーフな方法です。
 
 他のサイトからメッセージを受け取りたい場合、`origin` あるいは `source` プロパティを用いて**常に送信者の識別情報を確かめてください**。任意のウィンドウ（例えば、`http://evil.example.com` も含む）は任意の他のウィンドウにメッセージを送ることができ、見知らぬ送信者が悪意あるメッセージを送らない保証はありません。識別情報を確かめたとしても、**常に受け取ったメッセージの構文を確かめる**べきです。そうしないと、信頼されたメッセージだけを送るとして信頼されたサイトにセキュリティホールが存在した場合に、クロスサイトスクリプティングのセキュリティホールをサイトに開けることになり得ます。
 
-**他のウィンドウに `postMessage` でデータを送信する場合、 `*` ではなく、常に具体的なターゲットオリジンを指定してください。**悪意を持ったサイトはあなたの知らないうちに送信先ウィンドウの場所を変更することができ、そのまま `postMessage` で送信されたデータを傍受することができてしまいます。
+**他のウィンドウに `postMessage` でデータを送信する場合、 `*` ではなく、常に具体的なターゲットオリジンを指定してください**。悪意を持ったサイトはあなたの知らないうちに送信先ウィンドウの場所を変更することができ、そのまま `postMessage` で送信されたデータを傍受することができてしまいます。
 
 ### 安全な共有メモリーによるメッセージ
 
-`postMessage()` が {{jsxref("SharedArrayBuffer")}} オブジェクトを扱った際ににエラーが発生した場合は、サイトのサイト間分離を適切に行う必要があります。共有メモリーは、 2 つの HTTP ヘッダーの後ろにゲートされています。
+`postMessage()` が {{jsxref("SharedArrayBuffer")}} オブジェクトを扱った際にエラーが発生した場合は、サイトのサイト間分離を適切に行う必要があります。共有メモリーは、 2 つの HTTP ヘッダーの後ろにゲートされています。
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} で `same-origin` を値に指定する（オリジンを攻撃者から保護する）
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} で `require-corp` を値に指定する（このオリジンから被害者を守る）
@@ -99,22 +102,27 @@ const popup = window.open(/* ポップアップの詳細 */);
 // ポップアップブロッカーでブロックされず、ポップアップが完全にロードされたとき
 
 // ウィンドウがその場所を変更していない場合、これは何もしません。
-popup.postMessage("ユーザー名は 'bob' 、パスワードは 'secret' です",
-                  "https://secure.example.net");
+popup.postMessage(
+  "ユーザー名は 'bob' 、パスワードは 'secret' です",
+  "https://secure.example.net",
+);
 
 // ウィンドウがその場所を変更していない場合、
 //これはポップアップに送るメッセージのキューに追加します。
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener("message", (event) => {
-  // このメッセージの送信者は信頼している者か？（例えば、最初開いたものと違
-  // うかもしれません）。
-  if (event.origin !== "http://example.com")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    // このメッセージの送信者は信頼している者か？（例えば、最初開いたものと違
+    // うかもしれません）。
+    if (event.origin !== "http://example.com") return;
 
-  // event.source は popup
-  // event.data は "hi there yourself!  the secret response is: rheeeeet!"
-}, false);
+    // event.source は popup
+    // event.data は "hi there yourself!  the secret response is: rheeeeet!"
+  },
+  false,
+);
 ```
 
 ```js
@@ -125,8 +133,7 @@ window.addEventListener("message", (event) => {
 // postMessage が呼び出された後に呼び出されます。
 window.addEventListener("message", (event) => {
   // このメッセージの送信者は信頼している者か？
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source は window.opener
   // event.data は "hello there!"
@@ -135,9 +142,10 @@ window.addEventListener("message", (event) => {
   // きです）、メッセージに返答するための便利なイディオムは event.source 上
   // の postMessage を呼び出し、targetOrigin に event.origin を指定すること
   // です。
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 });
 ```
 

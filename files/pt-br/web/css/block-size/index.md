@@ -70,8 +70,8 @@ A propriedade `block-size` leva os mesmos valores que as propriedades {{cssxref(
 
 ## Especificação
 
-| Specification                                                                                                    | Status                                           | Comment           |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| Specification                                                                         | Status                              | Comment           |
+| ------------------------------------------------------------------------------------- | ----------------------------------- | ----------------- |
 | {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Definição inicial |
 
 ## Compatibilidade com navegadores

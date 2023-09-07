@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`Headers.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを読み取ることができる{{jsxref("Iteration_protocols", '反復子', '', 1)}}オブジェクトを返します。キーは文字列です。です。
+**`Headers.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを読み取ることができる{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}オブジェクトを返します。キーは文字列です。です。
 
 > **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
@@ -23,19 +23,19 @@ keys()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。
+{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
 
 ## 例
 
 ```js
 // テスト用の Headers オブジェクトを作成
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // キーを表示
 for (const key of myHeaders.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

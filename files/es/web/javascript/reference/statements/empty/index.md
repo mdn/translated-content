@@ -1,7 +1,6 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-original_slug: Web/JavaScript/Referencia/Sentencias/Empty
 ---
 
 {{jsSidebar("Statements")}}
@@ -26,7 +25,9 @@ La sentencia vacía es comúnmente usada en bucles. Por ejemplo, un bucle for si
 var arr = [1, 2, 3];
 
 // Asignar el valor 0 a todos los elementos del array
-for (i = 0; i < arr.length; arr[i++] = 0) /* sentencia vacía */ ;
+for (i = 0; i < arr.length; arr[i++] = 0) {
+  /* sentencia vacía */
+}
 
 console.log(arr);
 // [0, 0, 0]
@@ -34,16 +35,17 @@ console.log(arr);
 
 **Nota:** Es una buena práctica comentar el uso intencional de la sentencia vacía, ya que no es fácilmente distinguible de un punto y coma normal. Un ejemplo de uso probablemente no intencional:
 
-```js
-if (condicion);  // Esta condición no ejerce ningún control!
-   borrarTodo()  // Por lo cual esta sentencia será ejecutada siempre!!!
+```js-nolint
+if (condicion); // Esta condición no ejerce ningún control!
+  borrarTodo(); // Por lo cual esta sentencia será ejecutada siempre!!!
 ```
 
 Otro ejemplo de uso:
 
 ```js
-var a = 1, b = 1;
-if((a == 0) || (b = 0)); // Asigna a 'b' el valor cero si 'a' no es cero.
+var a = 1,
+  b = 1;
+if (a == 0 || (b = 0)); // Asigna a 'b' el valor cero si 'a' no es cero.
 console.log(b); // 0
 ```
 

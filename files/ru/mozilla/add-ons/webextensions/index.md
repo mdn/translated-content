@@ -1,13 +1,8 @@
 ---
 title: Расширения браузера
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Landing
-  - WebExtensions
-  - Дополнения
-  - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
+
 {{AddonSidebar}}
 
 WebExtensions - это кросс-браузерная система разработки дополнений (для браузеров). В значительной степени эта система совместима с [API-расширений](https://developer.chrome.com/extensions), поддерживаемых Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/Firefox/Multiprocess_Firefox).

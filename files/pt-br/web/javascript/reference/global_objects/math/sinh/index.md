@@ -44,25 +44,29 @@ Math.sinh(1); // 1.1752011936438014
 Isso pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  return (Math.exp(x) - Math.exp(-x)) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    return (Math.exp(x) - Math.exp(-x)) / 2;
+  };
 ```
 
 ou usando apenas uma chamada para a função {{jsxref("Math.exp()")}}:
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  var y = Math.exp(x);
-  return (y - 1 / y) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y - 1 / y) / 2;
+  };
 ```
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                          | Status               | Comentário         |
+| ------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

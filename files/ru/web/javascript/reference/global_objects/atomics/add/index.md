@@ -1,7 +1,6 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 
 {{JSRef}}
@@ -45,8 +44,8 @@ Atomics.load(ta, 0); // 12
 
 ## Спецификации
 
-| Specification                                                                | Status                       | Comment                       |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| Specification                                              | Status               | Comment                       |
+| ---------------------------------------------------------- | -------------------- | ----------------------------- |
 | {{SpecName('ESDraft', '#sec-atomics.add', 'Atomics.add')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
 
 ## Поддержка браузерами

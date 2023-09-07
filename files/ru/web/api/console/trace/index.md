@@ -1,7 +1,6 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
-translation_of: Web/API/Console/trace
+slug: Web/API/console/trace
 ---
 
 {{APIRef("Console API")}}

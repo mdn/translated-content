@@ -1,11 +1,6 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
 
 {{JSRef("Global_Objects", "Number")}}
@@ -51,11 +46,11 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                     | Статус             | Комментарии                                            |
+| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                          | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}               | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

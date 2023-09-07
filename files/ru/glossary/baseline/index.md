@@ -1,14 +1,6 @@
 ---
 title: Baseline
-slug: Glossary/baseline
-tags:
-  - CSS
-  - SVG
-  - Выравнивание
-  - Глоссарий
-  - типография
-translation_of: Glossary/baseline
-original_slug: Глоссарий/baseline
+slug: Glossary/Baseline
 ---
 
 **Базовая линия** - это термин, используемый в европейской и западно-азиатской типографии, означающий воображаемую линию, на которую опираются символы шрифта.

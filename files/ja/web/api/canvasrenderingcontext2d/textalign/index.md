@@ -47,9 +47,9 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 canvas.width = 350;
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 const x = canvas.width / 2;
 
 ctx.beginPath();
@@ -57,16 +57,16 @@ ctx.moveTo(x, 0);
 ctx.lineTo(x, canvas.height);
 ctx.stroke();
 
-ctx.font = '30px serif';
+ctx.font = "30px serif";
 
-ctx.textAlign = 'left';
-ctx.fillText('左揃え', x, 40);
+ctx.textAlign = "left";
+ctx.fillText("左揃え", x, 40);
 
-ctx.textAlign = 'center';
-ctx.fillText('中央揃え', x, 85);
+ctx.textAlign = "center";
+ctx.fillText("中央揃え", x, 85);
 
-ctx.textAlign = 'right';
-ctx.fillText('右揃え', x, 130);
+ctx.textAlign = "right";
+ctx.fillText("右揃え", x, 130);
 ```
 
 #### 結果
@@ -86,17 +86,17 @@ ctx.fillText('右揃え', x, 130);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '30px serif';
-ctx.direction = 'ltr';
+ctx.font = "30px serif";
+ctx.direction = "ltr";
 
-ctx.textAlign = 'start';
-ctx.fillText('先頭揃え', 0, 50);
+ctx.textAlign = "start";
+ctx.fillText("先頭揃え", 0, 50);
 
-ctx.textAlign = 'end';
-ctx.fillText('末尾揃え', canvas.width, 120);
+ctx.textAlign = "end";
+ctx.fillText("末尾揃え", canvas.width, 120);
 ```
 
 #### 結果

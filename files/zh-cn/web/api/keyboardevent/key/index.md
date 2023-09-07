@@ -20,7 +20,7 @@ slug: Web/API/KeyboardEvent/key
 `KeyboardEvent` 事件以一个预设的次序触发，理解这一点对于理解特定 `KeyboardEvent` 的 `key` 属性值大有帮助。对于一个给定的按键操作，`KeyboardEvent` 将假定 {{domxref("Event.preventDefault")}} 未调用并按下面次序触发：
 
 1. 首先触发 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件。如果按键长按且生成一个字符，则事件将以一个与平台实现方式相关的时间间隔持续发出，同时将只读属性 {{domxref("KeyboardEvent.repeat")}} 设定为 `true`。
-2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其它某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}、[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)事件。注意某些实现中若支持 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件则可能将其触发。当按键长按时重复触发。
+2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其他某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}、[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)事件。注意某些实现中若支持 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件则可能将其触发。当按键长按时重复触发。
 3. 当按键松开时触发 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件。操作结束。
 
 在次序 1、3 中，`KeyboardEvent.key` 属性按照事先定义的规则设定为恰当的值。
@@ -82,15 +82,15 @@ slug: Web/API/KeyboardEvent/key
 ### JavaScript
 
 ```js
-let textarea = document.getElementById('test-target'),
-consoleLog = document.getElementById('console-log'),
-btnReset = document.getElementById('btn-reset');
+let textarea = document.getElementById("test-target"),
+  consoleLog = document.getElementById("console-log"),
+  btnReset = document.getElementById("btn-reset");
 
 function logMessage(message) {
   consoleLog.innerHTML += `${message}<br>`;
 }
 
-textarea.addEventListener('keydown', (e) => {
+textarea.addEventListener("keydown", (e) => {
   if (!e.repeat) {
     logMessage(`按下 "${e.key}" 键 [事件：keydown]`);
   } else {
@@ -98,25 +98,25 @@ textarea.addEventListener('keydown', (e) => {
   }
 });
 
-textarea.addEventListener('beforeinput', (e) => {
+textarea.addEventListener("beforeinput", (e) => {
   logMessage(`即将输入 "${e.data}" 键 [事件：beforeinput]`);
 });
 
-textarea.addEventListener('input', (e) => {
+textarea.addEventListener("input", (e) => {
   logMessage(`输入 "${e.data}" 键 [事件：input]`);
 });
 
-textarea.addEventListener('keyup', (e) => {
-  logMessage(`释放 "${e.key}" 键 [事件： keyup]`);
+textarea.addEventListener("keyup", (e) => {
+  logMessage(`释放 "${e.key}" 键 [事件：keyup]`);
 });
 
-btnReset.addEventListener('click', (e) => {
+btnReset.addEventListener("click", (e) => {
   let child = consoleLog.firstChild;
   while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
+    consoleLog.removeChild(child);
+    child = consoleLog.firstChild;
   }
-  textarea.value = ''
+  textarea.value = "";
 });
 ```
 
@@ -149,37 +149,41 @@ btnReset.addEventListener('click', (e) => {
 这个示例使用 {{domxref("EventTarget.addEventListener()")}} 监听 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件。当我们事件触发时，将检测按键的值是否为代码所关注，如果是，就进行某项操作。（可能是给飞船转向，或者是调整电子表格中选中单元格的位置。）
 
 ```js
-window.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return; // 如果事件已经在进行中，则不做任何事。
-  }
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.defaultPrevented) {
+      return; // 如果事件已经在进行中，则不做任何事。
+    }
 
-  switch (event.key) {
-    case "ArrowUp":
-      // 按“↑”方向键时要做的事。
-      break;
-    case "ArrowDown":
-      // 按“↓”方向键时要做的事。
-      break;
-    case "ArrowLeft":
-      // 按“←”方向键时要做的事。
-      break;
-    case "ArrowRight":
-      // 按“→”方向键时要做的事。
-      break;
-    case "Enter":
-      // 按“回车”键时要做的事。
-      break;
-    case "Escape":
-      // 按“ESC”键时要做的事。
-      break;
-    default:
-      return; // 什么都没按就退出吧。
-  }
+    switch (event.key) {
+      case "ArrowUp":
+        // 按“↑”方向键时要做的事。
+        break;
+      case "ArrowDown":
+        // 按“↓”方向键时要做的事。
+        break;
+      case "ArrowLeft":
+        // 按“←”方向键时要做的事。
+        break;
+      case "ArrowRight":
+        // 按“→”方向键时要做的事。
+        break;
+      case "Enter":
+        // 按“回车”键时要做的事。
+        break;
+      case "Escape":
+        // 按“ESC”键时要做的事。
+        break;
+      default:
+        return; // 什么都没按就退出吧。
+    }
 
-  // 取消默认动作，从而避免处理两次。
-  event.preventDefault();
-}, true);
+    // 取消默认动作，从而避免处理两次。
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder
 slug: Web/API/MediaRecorder
-translation_of: Web/API/MediaRecorder
 ---
 
 {{APIRef("Media Recorder API")}}
