@@ -261,7 +261,10 @@ l10n:
   <source src="myVideo.webm" type="video/webm" />
   <source src="myVideo.mp4" type="video/mp4" />
   <p>
-    このブラウザーは HTML の動画に対応していません。代わりに<a href="myVideo.mp4">動画へのリンク</a>があります。
+    このブラウザーは HTML の動画に対応していません。代わりに<a
+      href="myVideo.mp4"
+      >動画へのリンク</a
+    >があります。
   </p>
 </video>
 ```
@@ -351,7 +354,10 @@ AddType video/webm .webm
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
-  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a href="https://archive.org/details/BigBuckBunny_124">ダウンロード</a>してお好きな動画プレイヤーで見ることはできます。
+  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a
+    href="https://archive.org/details/BigBuckBunny_124"
+    >ダウンロード</a
+  >してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
 
@@ -385,7 +391,10 @@ AddType video/webm .webm
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4" />
 
-  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">MP4 をダウンロード</a>してお好きな動画プレイヤーで見ることはできます。
+  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    >MP4 をダウンロード</a
+  >してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
 
