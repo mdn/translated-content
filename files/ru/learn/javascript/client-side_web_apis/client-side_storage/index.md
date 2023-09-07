@@ -250,9 +250,9 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 ### Предустановка
 
-1.  Прежде всего, создайте локальные копии наших [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) файлов в новом каталоге на вашем компьютере.
-2.  Взгляните на эти файлы. Вы увидите, что HTML достаточно прост: веб-сайт с верхним и нижним колонтитулами, а также областью основного содержимого, где расположено место для отображения заметок, и форма для внесения новых заметок в базу данных. CSS предоставляет простую стилизацию для ясности понимания. В JavaScript-файле объявлено пять констант, содержащих ссылки на {{htmlelement("ul")}} элемент, в котором будут отображены заметки, элементы {{htmlelement("input")}} заголовка и тела страницы, саму форму {{htmlelement("form")}}, и кнопку {{htmlelement("button")}}.
-3.  Переименуйте ваш JavaScript файл в `index.js`. Теперь вы готовы к добавлению в него кода.
+1. Прежде всего, создайте локальные копии наших [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) файлов в новом каталоге на вашем компьютере.
+2. Взгляните на эти файлы. Вы увидите, что HTML достаточно прост: веб-сайт с верхним и нижним колонтитулами, а также областью основного содержимого, где расположено место для отображения заметок, и форма для внесения новых заметок в базу данных. CSS предоставляет простую стилизацию для ясности понимания. В JavaScript-файле объявлено пять констант, содержащих ссылки на {{htmlelement("ul")}} элемент, в котором будут отображены заметки, элементы {{htmlelement("input")}} заголовка и тела страницы, саму форму {{htmlelement("form")}}, и кнопку {{htmlelement("button")}}.
+3. Переименуйте ваш JavaScript файл в `index.js`. Теперь вы готовы к добавлению в него кода.
 
 ### Настраиваем базу данных
 
