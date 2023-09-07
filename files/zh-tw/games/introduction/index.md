@@ -19,7 +19,7 @@ slug: Games/Introduction
 | **程式語言** | [JavaScript](/zh-TW/docs/Web/JavaScript)（或 C/C++ 可透過[Emscripten](https://github.com/kripken/emscripten/wiki) 編譯為 JavaScript）                                                                                                                                                     |
 | **網路連線** | [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) 及/或 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)                                                                                                                                                                                           |
 | **儲存功能** | [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API) 或雲端                                                                                                                                                                                                                                     |
-| **Web**      | [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[SVG](/zh-TW/docs/Web/SVG)、[Social API](/docs/Social_API)（還有更多！）                                                                                                                                                        |
+| **Web**      | [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[SVG](/zh-TW/docs/Web/SVG)（還有更多！）                                                                                                                                                                                        |
 
 ## 商業案例
 
@@ -38,13 +38,13 @@ slug: Games/Introduction
 我們要為開發者提供 API 的相關資訊，了解 Web 帶來的絕妙開發功能。
 以下只列舉出其中數項：
 
-- [Full Screen API](/docs/DOM/Using_fullscreen_mode)
+- [Full Screen API](/zh-TW/docs/Web/API/Fullscreen_API)
   - : 此簡易 API 可讓遊戲全螢幕運作，提供玩家絕佳的動作體驗。
 - [Gamepad API](/zh-TW/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
   - : 如果要讓遊戲搭配搖桿或其他類型的控制器，就用這個 API。
 - [HTML](/zh-TW/docs/Web/HTML) 與 [CSS](/zh-TW/docs/Web/CSS)
   - : 這兩種技術可用以建立遊戲的使用者介面，並設定其風格與配置方式。部分的 HTML 即為 {{HTMLElement("canvas")}} 元素，可直接建構 2D 圖形。
-- [HTML audio](/docs/HTML/Element/audio)
+- [HTML audio](/zh-TW/docs/Web/HTML/Element/audio)
   - : {{HTMLElement("audio")}} 元素可輕鬆播放簡易音效與音樂。如果需要進一步效果，可參閱 [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API) 達到真正的音訊處理效能！
 - [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)
   - : 此強大的資料儲存 API，可將使用者的資料保存於電腦或其他裝置之上，亦可於本端儲存遊戲資料與其他資訊；如此可避免每次都需再下載資料一次。即使目前處於無網路連線的狀態 (例如飛機上長達數個小時的旅程...)，也同樣可以玩遊戲 。
