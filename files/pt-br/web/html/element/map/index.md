@@ -31,11 +31,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificação                                                                                                            | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName ('HTML WHATWG', 'a-map-element.html # the-map-elemento', '&lt;map&gt;')}}         | {{Spec2 ('HTML WHATWG')}} |            |
-| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # the-map-elemento', '&lt;map&gt;')}} | {{Spec2 ('HTML5 W3C')}} |            |
-| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;map&gt;')}}                     | {{Spec2 ('HTML4.01')}}     |            |
+| Especificação                                                                              | Estado                    | Comentário |
+| ------------------------------------------------------------------------------------------ | ------------------------- | ---------- |
+| {{SpecName ('HTML WHATWG', 'a-map-element.html # the-map-elemento', '&lt;map&gt;')}}       | {{Spec2 ('HTML WHATWG')}} |            |
+| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # the-map-elemento', '&lt;map&gt;')}} | {{Spec2 ('HTML5 W3C')}}   |            |
+| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;map&gt;')}}               | {{Spec2 ('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

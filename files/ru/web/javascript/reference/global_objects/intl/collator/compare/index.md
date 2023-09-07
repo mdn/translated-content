@@ -34,10 +34,10 @@ collator.compare(string1, string2)
 Использование функции, возвращённой геттером `compare`, для сортировки массивов. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/Collator", "Collator")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.sort()")}} напрямую.
 
 ```js
-var a = ['Offenbach', 'Österreich', 'Odenwald'];
-var collator = new Intl.Collator('de-u-co-phonebk');
+var a = ["Offenbach", "Österreich", "Odenwald"];
+var collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
-console.log(a.join(', '));
+console.log(a.join(", "));
 // → "Odenwald, Österreich, Offenbach"
 ```
 
@@ -46,20 +46,23 @@ console.log(a.join(', '));
 Использование функции, возвращённой геттером `compare`, для поиска совпадающих строк в массиве:
 
 ```js
-var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
-var collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
-var s = 'congres';
-var matches = a.filter(function(v) {
+var a = ["Congrès", "congres", "Assemblée", "poisson"];
+var collator = new Intl.Collator("fr", {
+  usage: "search",
+  sensitivity: "base",
+});
+var s = "congres";
+var matches = a.filter(function (v) {
   return collator.compare(v, s) === 0;
 });
-console.log(matches.join(', '));
+console.log(matches.join(", "));
 // → "Congrès, congres"
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус                           | Комментарии              |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| Спецификация                                                                 | Статус                  | Комментарии              |
+| ---------------------------------------------------------------------------- | ----------------------- | ------------------------ |
 | {{SpecName('ES Int 1.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
 
 ## Совместимость с браузерами

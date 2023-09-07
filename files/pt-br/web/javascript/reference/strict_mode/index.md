@@ -151,7 +151,8 @@ Primeiro, strict mode proíbe `with`. O problema com `with` é que qualquer nome
 ```js
 "use strict";
 var x = 17;
-with (obj) { // !!! erro de sintaxe
+with (obj) {
+  // !!! erro de sintaxe
   // Se isto não fosse strict mode, isso seria var x ou obj.x?
   // No geral, é impossível saber sem executar o código, então
   // o nome não pode ser otimizado.

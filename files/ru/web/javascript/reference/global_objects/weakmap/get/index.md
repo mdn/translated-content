@@ -31,7 +31,7 @@ var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.get(window); // Возвращает "foo".
-wm.get("baz");  // Возвращает undefined.
+wm.get("baz"); // Возвращает undefined.
 ```
 
 ## Спецификация

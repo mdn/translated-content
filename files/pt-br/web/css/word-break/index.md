@@ -46,50 +46,58 @@ word-break: unset;
 
 ```html
 <p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="normal narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 
 <p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="breakAll narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 
 <p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="keepAll narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 
 <p>4. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">This is a long and
-  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
-  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="breakWord narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 ```
 
 ### Conteúdo CSS
 
 ```css
 .narrow {
-    padding: 5px;
-    border: 1px solid;
-    display: table;
-    max-width: 100%;
+  padding: 5px;
+  border: 1px solid;
+  display: table;
+  max-width: 100%;
 }
 
 .normal {
-    word-break: normal;
+  word-break: normal;
 }
 
 .breakAll {
-    word-break: break-all;
+  word-break: break-all;
 }
 
 .keepAll {
-    word-break: keep-all;
+  word-break: keep-all;
 }
 
 .breakWord {
-    word-break: break-word;
+  word-break: break-word;
 }
 ```
 
@@ -97,8 +105,8 @@ word-break: unset;
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Commentário       |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
+| Especificação                                                   | Status                 | Commentário       |
+| --------------------------------------------------------------- | ---------------------- | ----------------- |
 | {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Definição inicial |
 
 ## Compatibilidade com navegadores

@@ -57,11 +57,11 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 ## Specifications
 
-| Specification                                                                | Status                       | Comment                                            |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}}         | {{Spec2('ES6')}}         |                                                    |
+| Specification                                            | Status               | Comment                                            |
+| -------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                      | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}}     | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

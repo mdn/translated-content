@@ -43,9 +43,9 @@ function myFunc(theObject) {
 }
 
 const mycar = {
-  make: "Honda", 
-  model: "Accord", 
-  year: 1998
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
 };
 
 // `x`의 값은 "Honda"입니다.
@@ -79,18 +79,18 @@ console.log(arr[0]); // 30
 이러한 함수를 **익명 함수**라 하며. 함수가 이름을 가질 필요는 없음을 의미합니다. 예를 들어, 제곱 함수 `square`은 다음과 같이 정의 할 수 있습니다.
 
 ```js
-const square = function (number) { 
+const square = function (number) {
   return number * number;
-}
+};
 const x = square(4); // `x` 의 값은 16 입니다.
 ```
 
 하지만 함수 표현식에서도 함수의 이름을 지정할 수 있습니다. 함수가 자신을 참조할 수 있고, 디버거의 스택 추적에서 함수를 보다 쉽게 식별할 수 있습니다.
 
 ```js
-const factorial = function fac(n) { 
+const factorial = function fac(n) {
   return n < 2 ? 1 : n * fac(n - 1);
-}
+};
 
 console.log(factorial(3));
 ```
@@ -118,9 +118,9 @@ function map(fn, arr) {
   return result;
 }
 
-const fn = function(x) {
+const fn = function (x) {
   return x * x * x;
-}
+};
 
 const numbers = [0, 1, 2, 5, 10];
 const cube = map(fn, numbers);
@@ -134,10 +134,10 @@ JavaScript에서는 조건에 따라 함수를 정의할 수 있습니다. 예�
 ```js
 let myFunc;
 
-if (num === 0){
-  myFunc = function(theObject) {
-    theObject.make = "Toyota"
-  }
+if (num === 0) {
+  myFunc = function (theObject) {
+    theObject.make = "Toyota";
+  };
 }
 ```
 
@@ -162,11 +162,11 @@ square(5);
 함수의 스코프는 함수가 선언된 곳(또는 최상위 레벨에 선언되었다면 전역)입니다.
 
 ```js example-bad
-console.log(square);   // square는 초기값으로 undefined를 가지고 호이스트된다.
-console.log(square(5));  // TypeError: square는 함수가 아니다.
+console.log(square); // square는 초기값으로 undefined를 가지고 호이스트된다.
+console.log(square(5)); // TypeError: square는 함수가 아니다.
 square = function (n) {
   return n * n;
-}
+};
 ```
 
 함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
@@ -174,11 +174,9 @@ square = function (n) {
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다.
 
 ```js
-function factorial(n){
-  if ((n == 0) || (n == 1))
-    return 1;
-  else
-    return (n * factorial(n - 1));
+function factorial(n) {
+  if (n == 0 || n == 1) return 1;
+  else return n * factorial(n - 1);
 }
 ```
 
@@ -199,7 +197,7 @@ const e = factorial(5); // e의 값은 120이 됩니다.
 ## 함수 호이스팅
 
 ```js
-console.log(square(5));  // `25`
+console.log(square(5)); // `25`
 
 function square(n) {
   return n * n;
@@ -214,16 +212,16 @@ function square(n) {
   return n * n;
 }
 
-console.log(square(5));  // `25`
+console.log(square(5)); // `25`
 ```
 
 함수 호이스팅은 **함수 선언**에만 적용됩니다. 함수 표현식에선 쓸 수 없습니다. 아래의 코드는 실행되지 않습니다.
 
 ```js example-bad
-console.log(square);  // ReferenceError: 초기화 되기 전에는 `square`에 접근할 수 없습니다.
+console.log(square); // ReferenceError: 초기화 되기 전에는 `square`에 접근할 수 없습니다.
 
-const square = function(n) { 
-  return n * n 
+const square = function (n) {
+  return n * n;
 };
 ```
 
@@ -237,7 +235,7 @@ const square = function(n) {
 // 다음 변수는 전역 스코프에 있습니다.
 const num1 = 20;
 const num2 = 3;
-const name = 'Chamakh';
+const name = "Chamakh";
 
 // 이 함수는 전역 스코프에 있습니다.
 function multiply() {
@@ -275,7 +273,7 @@ getScore(); // "Chamakh scored 5"
 
 ```js
 var foo = function bar() {
-   // 여기에 구문이 들어갑니다.
+  // 여기에 구문이 들어갑니다.
 };
 ```
 
@@ -291,17 +289,19 @@ var foo = function bar() {
 
 ```js
 var x = 0;
-while (x < 10) { // 루프 조건: "x < 10"
-   // 뭔가 합니다. 
-   x++;
+while (x < 10) {
+  // 루프 조건: "x < 10"
+  // 뭔가 합니다.
+  x++;
 }
 ```
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" 는 탈출 조건 ("!(x < 10)"와 동일)
+  if (x >= 10)
+    // "x >= 10" 는 탈출 조건 ("!(x < 10)"와 동일)
     return;
-  // 뭔가 합니다. 
+  // 뭔가 합니다.
   loop(x + 1); // 재귀 호출
 }
 loop(0);
@@ -311,8 +311,9 @@ loop(0);
 
 ```js
 function walkTree(node) {
-  if (node == null) //
+  if (node == null) {
     return;
+  }
   // 노드를 가지고 뭔가 합니다.
   for (var i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
@@ -387,7 +388,7 @@ function outside(x) {
   return inside;
 }
 // 어떤 값이 들어와도 3을 더하는 함수라 생각해보세요.
-fn_inside = outside(3); 
+fn_inside = outside(3);
 result = fn_inside(5); // 8
 
 result1 = outside(3)(5); // 8
@@ -458,16 +459,17 @@ result = outside()(20); // 10 대신 20을 반환합니다
 또한, 내부 함수는 외부 함수의 스코프에 접근할 수 있기 때문에, 내부 함수가 외부 함수의 수명 보다 오래 생존하는 경우 외부 함수에서 선언된 변수나 함수는 외부 함수의 실행 기간보다 오래 유지됩니다. 내부 함수가 외부 함수 밖의 모든 스코프에서 사용 가능할 때 클로저가 생성됩니다.
 
 ```js
-const pet = function(name) {   // 외부 함수는 'name'이라 불리는 변수를 정의합니다.
-  const getName = function() {
-    return name;             // 내부 함수는 외부 함수의 'name' 변수에 접근합니다.
-  }
-  return getName;            // 내부 함수를 반환함으로써, 외부 스코프에 노출됩니다.
-}
+const pet = function (name) {
+  // 외부 함수는 'name'이라 불리는 변수를 정의합니다.
+  const getName = function () {
+    return name; // 내부 함수는 외부 함수의 'name' 변수에 접근합니다.
+  };
+  return getName; // 내부 함수를 반환함으로써, 외부 스코프에 노출됩니다.
+};
 
 const myPet = pet("Vivie");
 
-myPet();                     // "Vivie"로 반환합니다.
+myPet(); // "Vivie"로 반환합니다.
 ```
 
 클로저는 위 코드보다 더 복잡해 질 수도 있습니다. 외부 함수의 내부 변수를 다루는 메서드를 포함한 객체도 반환될 수도 있습니다.
@@ -477,7 +479,7 @@ const createPet = function (name) {
   let sex;
 
   const pet = {
-    // `setName(newName)`은 이 문맥에서 
+    // `setName(newName)`은 이 문맥에서
     // `setName: function (newName)`과 동일합니다.
     setName(newName) {
       name = newName;
@@ -492,37 +494,39 @@ const createPet = function (name) {
     },
 
     setSex(newSex) {
-      if (typeof newSex === 'string' &&
-        (newSex.toLowerCase() === 'male' || newSex.toLowerCase() === 'female')) {
+      if (
+        typeof newSex === "string" &&
+        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+      ) {
         sex = newSex;
       }
-    }
+    },
   };
 
   return pet;
-}
+};
 
-const pet = createPet('Vivie');
-pet.getName();                  // Vivie
+const pet = createPet("Vivie");
+pet.getName(); // Vivie
 
-pet.setName('Oliver');
-pet.setSex('male');
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+pet.setName("Oliver");
+pet.setSex("male");
+pet.getSex(); // male
+pet.getName(); // Oliver
 ```
 
 위의 코드에서 외부 함수의 `name` 변수는 내부 함수에 접근할 수 있으며, 내부 함수를 통해서만 내부 변수에 접근할 수 있습니다. 내부 함수의 내부 변수는 외부 인수와 변수를 안전하게 저장하는 역할을 합니다. 이들은 내부 기능이 작동할 수 있게 '지속적'이고 '캡슐화된' 데이터를 보유합니다. 함수를 변수에 할당하거나 이름을 가질 필요가 없습니다.
 
 ```js
-const getCode = (function() {
-  const secureCode = "0]Eal(eh&2";    // 외부에서 접근할 수 없게 하고 싶은 변수.
+const getCode = (function () {
+  const secureCode = "0]Eal(eh&2"; // 외부에서 접근할 수 없게 하고 싶은 변수.
 
   return function () {
     return secureCode;
   };
 })();
 
-getCode();    // `secureCode`를 반환합니다.
+getCode(); // `secureCode`를 반환합니다.
 ```
 
 > **참고:** 클로저를 사용할 때 주의해야 할 점이 있습니다!
@@ -534,12 +538,12 @@ getCode();    // `secureCode`를 반환합니다.
 > const createPet = function (name) {
 >   return {
 >     // 내부의 함수 또한 변수 `name`을 정의합니다.
->     setName(name) { 
+>     setName(name) {
 >       // 그럼 외부 함수에서 정의된 `name`에는 어떻게 접근해야 할까요?
 >       name = name;
->     }
->   }
-> }
+>     },
+>   };
+> };
 > ```
 
 ## 인수(arguments) 객체 사용하기
@@ -547,7 +551,7 @@ getCode();    // `secureCode`를 반환합니다.
 함수의 인수는 배열과 비슷한 객체로 처리가 됩니다. 함수 내에서는, 전달 된 인수를 다음과 같이 다룰 수 있습니다.
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 `i` 는 `0`으로 시작하는 순서 번호입니다. 따라서 함수에 전달된 첫 번째 인수는 `arguments[0]` 입니다. 총 인수의 개수는 `arguments.length` 에서 얻을 수 있습니다.
@@ -600,7 +604,7 @@ JavaScript에서 함수의 매개변수는 `undefined` 가 기본으로 설정�
 ```js
 // ECMAScript 2015 이전
 function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
   return a * b;
 }
 
@@ -628,7 +632,7 @@ multiply(5); // 5
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
@@ -646,18 +650,15 @@ console.log(arr); // [2, 4, 6]
 몇몇 함수 패턴에서는 더 짧은 함수를 사용하는 것이 더 유용합니다. 한번 비교해보세요.
 
 ```js
-var a = [
-  "Hydrogen",
-  "Helium",
-  "Lithium",
-  "Beryl­lium"
-];
+var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s){ return s.length });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 console.log(a2); // logs [8, 6, 7, 9]
 
 // 화살표 함수 사용
-var a3 = a.map( s => s.length );
+var a3 = a.map((s) => s.length);
 console.log(a3); // logs [8, 6, 7, 9]
 ```
 
@@ -672,7 +673,7 @@ function Person() {
 
   setInterval(function growUp() {
     // 느슨한 모드에서 `growUp()` 함수는 `this`를 전역 객체로 정의합니다.
-    // 이는 `Person()` 생성자에 의해 정의된 `this`와 다릅니다. 
+    // 이는 `Person()` 생성자에 의해 정의된 `this`와 다릅니다.
     this.age++;
   }, 1000);
 }
@@ -685,7 +686,7 @@ ECMAScript 3/5 에서 이 문제는 `this` 안의 값을 뒤덮을 수 있는 �
 ```js
 function Person() {
   var self = this; // `self` 대신 `that`을 선택하는 사람도 있습니다.
-                   // 어느 한 쪽만 선택하고 그것만 사용하도록 하죠.
+  // 어느 한 쪽만 선택하고 그것만 사용하도록 하죠.
   self.age = 0;
 
   setInterval(function growUp() {
@@ -717,41 +718,52 @@ var p = new Person();
 JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
+
   - : **`eval()`** 메소드는 문자열로 표현된 JavaScript 코드를 실행합니다.
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+
   - : **`uneval()`** 메소드는 {{jsxref("Object")}}의 소스코드를 표현하는 문자열을 만듭니다.
 
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+
   - : 전역 **`isFinite()`** 함수는 전달받은 값이 유한한지 결정합니다. 만약 필요하다면, 매개변수는 첫번째로 숫자로 변환됩니다.
 
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+
   - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다.
-  > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다.
-  >
-  > {{jsxref("Number.isNaN()")}}을 이용해 값이 NaN인지 확인할 수 있습니다.
-  >
-  > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
+    > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다.
+    >
+    > {{jsxref("Number.isNaN()")}}을 이용해 값이 NaN인지 확인할 수 있습니다.
+    >
+    > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+
   - **`parseFloat()`** 함수는 문자열 인수 값을 해석하여 부동소숫점 수를 반환합니다.
 
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+
   - **`parseInt()`** 함수는 문자열 인수 값을 수학적인 수 체계에 따라 해석하여 특정한 진법의 정수를 반환합니다.
 
 - {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+
   - **`decodeURI()`** 함수는 사전에 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}을 통해 만들어지거나 비슷한 과정을 통해 만들어진 URI(Uniform Resource Identifier) 를 해독합니다.
 
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+
   - **`decodeURIComponent()`** 함수는 인코딩으로 이전에 생성된 URI({{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}})를 디코딩합니다. URI(Uniform Resource Identifier) 또는 유사한 루틴을 사용합니다.
 
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+
   - **`encodeURI()`** 메소드는 URI(Uniform Resource Identifier)를 각 인스턴스의 특정한 문자를 한 개, 두 개, 세 개 또는 네 개의 UTF-8인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다. (두 "surrogate"문자로 구성된 문자들은 오직 네 개의 연속된 확장문자 입니다)
 
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+
   - **`encodeURIComponent()`** 메소드는 URI(Uniform Resource Identifier) 컴포넌트를 각 인스턴스의 특정한 문자를 한개, 두 개, 세 개 또는 네 개의 UTF-8 인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다.(두 "surrogate"문자로 구성된 문자들은 오직 네개의 연속된 확장문자 입니다.)
 
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
+
   - 곧 사라질 **`escape()`** 메소드는 한 문자열에서 특정 문자들이 16진 확장 비트열로 바뀌어진 문자열로 계산합니다. {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 또는 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 를 사용하세요.
 
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-throwIfAborted()`**メソッドは、シグナルが中止された場合、シグナルの中止理由 ({{domxref("AbortSignal.reason", "reason")}}) の例外を発生させ、それ以外の場合は何もしません。
+**`throwIfAborted()`**メソッドは、シグナルが中止された場合、シグナルの中止理由 ({{domxref("AbortSignal.reason", "reason")}}) の例外を発生させ、それ以外の場合は何もしません。
 
 中止に対応させる必要がある API は、{{domxref("AbortSignal")}} オブジェクトを受け入れ、 `throwIfAborted()` を使用して [`abort`](/ja/docs/Web/API/AbortSignal/abort_event) イベントが発生するとテストして例外を発生するようにすることができます。
 

@@ -106,7 +106,7 @@ target.addEventListener(
     // ドロップできるように既定の動作を停止
     event.preventDefault();
   },
-  false
+  false,
 );
 
 target.addEventListener("dragenter", (event) => {

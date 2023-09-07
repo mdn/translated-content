@@ -1,7 +1,6 @@
 ---
 title: AbortSignal.onabort
 slug: conflicting/Web/API/AbortSignal/abort_event
-translation_of: Web/API/AbortSignal/onabort
 original_slug: Web/API/AbortSignal/onabort
 ---
 

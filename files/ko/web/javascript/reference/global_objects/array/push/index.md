@@ -39,11 +39,11 @@ String(문자열)이 변경할 수 없는 것처럼 비록 이 명령어의 어�
 다음 코드는 두가지 엘리먼트를 포함하는 스포츠 배열을 생성하고 두개의 엘리먼트를 추가 한다. `total` 변수는 추가한 배열의 새 길이 값을 포함한다.
 
 ```js
-var sports = ['축구', '야구'];
-var total = sports.push('미식축구', '수영');
+var sports = ["축구", "야구"];
+var total = sports.push("미식축구", "수영");
 
 console.log(sports); // ['축구', '야구', '미식축구', '수영']
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### 두개의 배열을 합치기
@@ -53,8 +53,8 @@ console.log(total);  // 4
 만약 두번째 배열( 아래 예제에서는 moreVegs )이 매우 클 경우, 이 메소드를 사용하지 말아야 한다. 실제로 한 함수가 사용가능한 매개변수의 최대 개수에는 제한이 있기 때문이다. 더 자세한 사항은 {{jsxref("Function.apply", "apply()")}} 에서 찾아볼 수 있다.
 
 ```js
-var vegetables = ['설탕당근', '감자'];
-var moreVegs = ['셀러리', '홍당무'];
+var vegetables = ["설탕당근", "감자"];
+var moreVegs = ["셀러리", "홍당무"];
 
 // 첫번째 배열에 두번째 배열을 합친다.
 // vegetables.push('셀러리', '홍당무'); 하는 것과 동일하다.

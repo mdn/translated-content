@@ -45,7 +45,7 @@ slug: Glossary/IIFE
 
 ### 执行一个异步函数
 
-[`async`](/zh-cn/docs/Web/JavaScript/Reference/Operators/async_function) IIFE 允许你在比较旧的浏览器或者 JavaScript 运行环境没有[顶层 await](/zh-cn/docs/Web/JavaScript/Reference/Operators/await#top_level_await) 中使用 [`await`](/zh-cn/docs/Web/JavaScript/Reference/Operators/async_function) 和 [`for-await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of)：
+[`async`](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function) IIFE 允许你在比较旧的浏览器或者 JavaScript 运行环境没有[顶层 await](/zh-CN/docs/Web/JavaScript/Reference/Operators/await#top_level_await) 中使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function) 和 [`for-await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of)：
 
 ```js
 const getFileStream = async (url) => {
@@ -62,7 +62,7 @@ const getFileStream = async (url) => {
 
 ### 模块模式
 
-我们也可以使用 IIFE 来创建私有和公有变量、方法。对于模块模式的更复杂用法和 IIFE 的其他用途，你可以参考 Addy Osmani 的 《Learning JavaScript Design Patterns》这本书。
+我们也可以使用 IIFE 来创建私有和公有变量、方法。对于模块模式的更复杂用法和 IIFE 的其他用途，你可以参考 Addy Osmani 的《Learning JavaScript Design Patterns》这本书。
 
 ```js
 const makeWithdraw = (balance) => {

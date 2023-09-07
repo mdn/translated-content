@@ -20,7 +20,7 @@ arr.values()
 ### Пример: итерация через цикл `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr.values();
 // ваш браузер должен поддерживать цикл for...of и переменные,
 // объявленные через let в циклах for
@@ -32,7 +32,7 @@ for (let letter of eArr) {
 ### Пример: альтернативный способ итерации
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr.values();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y

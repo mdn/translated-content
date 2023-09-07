@@ -16,7 +16,7 @@ slug: Web/CSS/align-tracks
 align-tracks: start;
 align-tracks: space-between;
 align-tracks: center;
-align-tracks: start,center,end;
+align-tracks: start, center, end;
 
 /* グローバル値 */
 align-tracks: inherit;

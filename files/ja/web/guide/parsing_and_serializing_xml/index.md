@@ -1,7 +1,13 @@
 ---
 title: XML のパースとシリアライズ
 slug: Web/Guide/Parsing_and_serializing_XML
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/ja/docs/Web/Guide")}}
+</section>
 
 場合によっては、{{Glossary("XML")}} のコンテンツを解析して {{Glossary("DOM")}} ツリーに変換する必要があるでしょう。または逆に、既存の DOM ツリーを XML にシリアライズすることもあります。この記事では、XML のシリアライズと解析の一般的な作業を容易にするため、ウェブプラットフォームで提供されるオブジェクトに注目します。
 
@@ -23,15 +29,16 @@ slug: Web/Guide/Parsing_and_serializing_XML
 この例では、{{domxref("DOMParser")}} を使用して文字列の XML フラグメントを DOM ツリーに変換します:
 
 ```js
-const xmlStr = '<a id="a"><b id="b">hey!</b></a>';
+const xmlStr = '<q id="a"><span id="b">hey!</span></q>';
 const parser = new DOMParser();
-const dom = parser.parseFromString(xmlStr, "application/xml");
+const doc = parser.parseFromString(xmlStr, "application/xml");
 // ルート要素の名前またはエラーメッセージを出力します
-console.log(
-  dom.documentElement.nodeName == "parsererror"
-    ? "パース中にエラー発生"
-    : dom.documentElement.nodeName,
-);
+const errorNode = doc.querySelector("parsererror");
+if (errorNode) {
+  console.log("パース中にエラー発生");
+} else {
+  console.log(doc.documentElement.nodeName);
+}
 ```
 
 ### URL にできるリソースを DOM ツリーにパースする
@@ -43,11 +50,11 @@ URL アドレス指定が可能な XML ファイルを読み込み解析して D
 ```js
 const xhr = new XMLHttpRequest();
 
-xhr.onload = function () {
+xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
 };
 
-xhr.onerror = function () {
+xhr.onerror = () => {
   dump("Error while getting XML.");
 };
 
@@ -70,7 +77,7 @@ document が {{Glossary("HTML")}} である場合、上記のコードは {{domx
 
 ### DOM ツリーを文字列にシリアライズ
 
-まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)で説明された方法で DOM ツリーを作成します。もしくは、{{domxref("XMLHttpRequest")}} で取得した DOM ツリーを用います。
+まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)で説明された方法で DOM ツリーを作成します。もしくは、{{ domxref("XMLHttpRequest") }} で取得した DOM ツリーを用います。
 
 DOM ツリー `doc` を XML 文字列にシリアライズするには、以下のように {{domxref("XMLSerializer.serializeToString()")}} を呼び出します。
 
@@ -87,7 +94,7 @@ DOM が HTML 文書である場合、`serializeToString()` を用いてシリア
 const docInnerHtml = document.documentElement.innerHTML;
 ```
 
-これを実行すると、`docHTML` は文書の内容、すなわち {{HTMLElement("body")}} 要素の内容を表す HTML が入った {{domxref("DOMString")}} になります。
+これを実行すると、`docHTML` は文書の内容、すなわち {{HTMLElement("body")}} 要素の内容を表す HTML が入った文字列になります。
 
 このコードを用いると、`<body>` _と_ その子孫に対応する HTML を得ることができます。
 

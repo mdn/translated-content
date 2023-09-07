@@ -10,8 +10,8 @@ slug: Web/API/History/pushState
 ## 構文
 
 ```js
-history.pushState(state, unused)
-history.pushState(state, unused, url)
+history.pushState(state, unused);
+history.pushState(state, unused, url);
 ```
 
 ### 引数
@@ -23,6 +23,7 @@ history.pushState(state, unused, url)
     `state` オブジェクトは、シリアライズ可能なあらゆものとなりえます。 Firefox では状態オブジェクトをユーザーのディスクに保存してブラウザーを再起動した後にも復帰できるため、 `state` オブジェクトのシリアライズ表現に 2 MiB の上限を課しています。これを超える大きさの状態オブジェクトを `pushState()` に渡した場合、このメソッドで例外が発生します。これ以上のスペースが必要な場合、{{domxref("Window.sessionStorage", "sessionStorage")}} や {{domxref("Window.localStorage", "localStorage")}} を使用することをお勧めします。
 
 - `unused`
+
   - : この引数は歴史的な理由のために存在しており、省略することはできません。空文字を渡すことが、将来このメソッドに変更が加えられたときに安全です。
 
 - `url` {{optional_inline}}
@@ -45,18 +46,18 @@ history.pushState(state, unused, url)
 ### JavaScript
 
 ```js
-const state = { 'page_id': 1, 'user_id': 5 }
-const url = 'hello-world.html'
+const state = { page_id: 1, user_id: 5 };
+const url = "hello-world.html";
 
-history.pushState(state, '', url)
+history.pushState(state, "", url);
 ```
 
 ### クエリー引数の変更
 
 ```js
 const url = new URL(window.location);
-url.searchParams.set('foo', 'bar');
-window.history.pushState({}, '', url);
+url.searchParams.set("foo", "bar");
+window.history.pushState({}, "", url);
 ```
 
 ## 仕様書

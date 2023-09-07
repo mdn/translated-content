@@ -14,8 +14,7 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS

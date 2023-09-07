@@ -77,7 +77,7 @@ _`SpeechRecognition` は、その親インターフェイスである {{domxref(
     `onpeechstart` プロパティからも利用できます。
 - [`speechend`](/ja/docs/Web/API/SpeechRecognition/speechend_event)
   - : 音声認識サービスによって認識された音声が検出されなくなったときに発行されます。
-また、 `onspeechend` プロパティからも利用できます。
+    また、 `onspeechend` プロパティからも利用できます。
 - [`start`](/ja/docs/Web/API/SpeechRecognition/start_event)
   - : 音声認識サービスが、現在の `SpeechRecognition` に関連付けられた文法を認識するために、入力された音声を聞き始めたときに発行されます。
     `onstart` プロパティからも利用できます。
@@ -89,29 +89,30 @@ _`SpeechRecognition` は、その親インターフェイスである {{domxref(
 他の値を定義した後、それを設定して、クリックイベントの発生時 ({{domxref("SpeechRecognition.start()")}} 参照) に認識サービスを開始します。音声の認識に成功すると、{{domxref("SpeechRecognition.result_event")}} イベントが発生し、イベントオブジェクトから発話された色を展開、そしてそれを {{htmlelement("html")}} 要素の背景色に設定します。
 
 ```js
-const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-const diagnostic = document.querySelector('.output');
-const bg = document.querySelector('html');
+const diagnostic = document.querySelector(".output");
+const bg = document.querySelector("html");
 
 document.body.onclick = () => {
   recognition.start();
-  console.log('Ready to receive a color command.');
-}
+  console.log("Ready to receive a color command.");
+};
 
 recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## 仕様書

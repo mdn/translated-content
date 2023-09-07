@@ -5,7 +5,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 {{APIRef("Web Notifications")}}
 
-[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。
+[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
 {{AvailableInWorkers}}
 
@@ -76,7 +76,7 @@ window.addEventListener("load", function () {
 }
 ```
 
-> **备注：** 当安装应用程序时，你不需要通过上面的代码显式的请求权限，但您仍然需要在触发通知之前取得权限项。
+> **备注：** 当安装应用程序时，你不需要通过上面的代码显式的请求权限，但你仍然需要在触发通知之前取得权限项。
 
 ## 创建通知
 

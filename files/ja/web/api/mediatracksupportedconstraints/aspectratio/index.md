@@ -16,13 +16,14 @@ slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
 ## 例
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -30,9 +31,9 @@ slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
 let result = document.getElementById("result");
 
 if (navigator.mediaDevices.getSupportedConstraints().aspectRatio) {
-    result.textContent = "Supported!";
+  result.textContent = "Supported!";
 } else {
-    result.textContent = "Not supported!";
+  result.textContent = "Not supported!";
 }
 ```
 

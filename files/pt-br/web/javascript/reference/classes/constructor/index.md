@@ -33,7 +33,7 @@ class Quadrado extends Poligono {
     super(comprimento, comprimento);
     // Nas classes filhas, super() deve ser chamado antes de usar o this. Sem ele
     // vai ocorrer um erro de referência. O this agora se refere a classe filha Quadrado
-    this.nome = 'Quadrado';
+    this.nome = "Quadrado";
   }
 
   // os atributos a seguir são herdados da classe pai Poligono: altura, comprimento e area.
@@ -66,9 +66,9 @@ constructor(...args) {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}         | Definição inicial |
+| Especificação                                                                            | Status               | Comentário        |
+| ---------------------------------------------------------------------------------------- | -------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}     | Definição inicial |
 | {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatibilidade com navegadores

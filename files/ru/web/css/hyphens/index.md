@@ -2,6 +2,7 @@
 title: hyphens
 slug: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`hyphens`** указывает, как следует переносить слова через дефис, когда текст переносится на несколько строк. Оно может полностью запретить перенос, делать перенос в местах, заданных вручную или позволять браузеру автоматически расставлять переносы, где это необходимо.
@@ -70,7 +71,9 @@ hyphens: unset;
 <dl>
   <dt><code>none</code>: no hyphen; overflow if needed</dt>
   <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
-  <dt><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)</dt>
+  <dt>
+    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
+  </dt>
   <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
   <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
   <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
@@ -83,7 +86,7 @@ hyphens: unset;
 dd {
   width: 55px;
   border: 1px solid black;
- }
+}
 dd.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -107,8 +110,8 @@ dd.auto {
 
 ## Характеристики
 
-| Характеристика                                                               | Статус                       | Комментарий                |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------- |
+| Характеристика                                            | Статус                 | Комментарий                |
+| --------------------------------------------------------- | ---------------------- | -------------------------- |
 | {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Первоначальное определение |
 
 ## Совместимость с браузером

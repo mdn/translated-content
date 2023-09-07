@@ -13,8 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 
 ```js
 var p = new Proxy(target, {
-  apply: function(target, thisArg, argumentsList) {
-  }
+  apply: function (target, thisArg, argumentsList) {},
 });
 ```
 
@@ -63,11 +62,11 @@ const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log(`called: ${argumentsList}`);
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "호출: 1,2,3"
-                         // 6
+// 6
 ```
 
 ## 명세서

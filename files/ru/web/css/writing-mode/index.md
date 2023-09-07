@@ -2,6 +2,7 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary
@@ -68,8 +69,8 @@ writing-mode: unset;
 
 ## Specification
 
-| Specification                                                                            | Status                                   | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| Specification                                                     | Status                          | Comment            |
+| ----------------------------------------------------------------- | ------------------------------- | ------------------ |
 | {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Initial definition |
 
 ## Browser compatibility

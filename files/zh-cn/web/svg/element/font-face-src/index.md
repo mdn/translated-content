@@ -25,7 +25,7 @@ _无_
 
 ## DOM 接口
 
-该元素实现了[`SVGFontFaceSrcElement`](/zh-CN/DOM/SVGFontFaceSrcElement)接口。
+该元素实现了 [`SVGFontFaceSrcElement`](/zh-CN/DOM/SVGFontFaceSrcElement) 接口。
 
 ## 相关内容
 

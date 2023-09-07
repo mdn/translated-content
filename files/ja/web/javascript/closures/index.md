@@ -381,7 +381,7 @@ function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -421,7 +421,7 @@ function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -441,14 +441,14 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -475,7 +475,7 @@ function setupHelp() {
   const helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -502,7 +502,7 @@ function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   helpText.forEach(function (text) {

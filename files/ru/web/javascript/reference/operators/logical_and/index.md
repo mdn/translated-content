@@ -2,6 +2,7 @@
 title: Логическое И (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 ---
+
 {{jsSidebar("Operators")}}
 
 Логический оператор И (`&&`) (конъюнкция) для набора операндов со значением типа {{jsxref("Boolean")}} будет `true` только в случае, если все операнды содержат значение `true`. В противном случае это будет `false`.
@@ -13,7 +14,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 ## Синтаксис
 
 ```js
-expr1 && expr2
+expr1 && expr2;
 ```
 
 ## Описание
@@ -34,9 +35,9 @@ expr1 && expr2
 Оператор И возвращает небулевы значения как есть:
 
 ```js
-result = '' && 'foo';  // result is assigned "" (empty string)
-result = 2 && 0;       // result is assigned 0
-result = 'foo' && 4;   // result is assigned 4
+result = "" && "foo"; // result is assigned "" (empty string)
+result = 2 && 0; // result is assigned 0
+result = "foo" && 4; // result is assigned 4
 ```
 
 Несмотря на то, что оператор `&&` может использоваться с операндами, не содержащие логических значений, он всё равно останется булевым оператором, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type).
@@ -58,10 +59,16 @@ result = 'foo' && 4;   // result is assigned 4
 Посмотрите пример ниже:
 
 ```js
-function A() { console.log('вызвана функция A'); return false; }
-function B() { console.log('вызвана функция B'); return true; }
+function A() {
+  console.log("вызвана функция A");
+  return false;
+}
+function B() {
+  console.log("вызвана функция B");
+  return true;
+}
 
-console.log( A() && B() );
+console.log(A() && B());
 // В результате вызова функции A, в консоли будет выведено "вызвана функция A",
 // а оператор && вычислится как false (функция A возвращает false), поэтому далее в консоли появится false;
 // вследствие этого оператор И прекратит вычисление и проигнорирует функцию B
@@ -72,9 +79,9 @@ console.log( A() && B() );
 Оператор И имеет более высокий приоритет, чем оператор ИЛИ, поэтому оператор `&&` выполнится раньше оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-false || true && true            // вернёт true
-true && (false || false)         // вернёт false
-(2 == 3) || (4 < 0) && (1 == 1)  // вернёт false
+false || (true && true); // вернёт true
+true && (false || false); // вернёт false
+2 == 3 || (4 < 0 && 1 == 1); // вернёт false
 ```
 
 ## Примеры
@@ -84,15 +91,15 @@ true && (false || false)         // вернёт false
 В следующем коде показаны примеры использования оператора `&&` (логическое И).
 
 ```js
-a1 = true  && true       // t && t вернёт true
-a2 = true  && false      // t && f вернёт false
-a3 = false && true       // f && t вернёт false
-a4 = false && (3 == 4)   // f && f вернёт false
-a5 = 'Cat' && 'Dog'      // t && t вернёт "Dog"
-a6 = false && 'Cat'      // f && t вернёт false
-a7 = 'Cat' && false      // t && f вернёт false
-a8 = ''    && false      // f && f вернёт ""
-a9 = false && ''         // f && f вернёт false
+a1 = true && true; // t && t вернёт true
+a2 = true && false; // t && f вернёт false
+a3 = false && true; // f && t вернёт false
+a4 = false && 3 == 4; // f && f вернёт false
+a5 = "Cat" && "Dog"; // t && t вернёт "Dog"
+a6 = false && "Cat"; // f && t вернёт false
+a7 = "Cat" && false; // t && f вернёт false
+a8 = "" && false; // f && f вернёт ""
+a9 = false && ""; // f && f вернёт false
 ```
 
 ### Правила преобразования булевых значений
@@ -102,13 +109,13 @@ a9 = false && ''         // f && f вернёт false
 Следующая операция с **булевыми значениями**:
 
 ```js
-bCondition1 && bCondition2
+bCondition1 && bCondition2;
 ```
 
 всегда эквивалентна:
 
 ```js
-!(!bCondition1 || !bCondition2)
+!(!bCondition1 || !bCondition2);
 ```
 
 #### Конвертация ИЛИ к И
@@ -116,13 +123,13 @@ bCondition1 && bCondition2
 Следующая операция с **булевыми значениями**:
 
 ```js
-bCondition1 || bCondition2
+bCondition1 || bCondition2;
 ```
 
 всегда эквивалентна:
 
 ```js
-!(!bCondition1 && !bCondition2)
+!(!bCondition1 && !bCondition2);
 ```
 
 ### Удаление вложенных круглых скобок
@@ -132,13 +139,13 @@ bCondition1 || bCondition2
 Следующая составная операция с **булевыми значениями**:
 
 ```js
-bCondition1 || (bCondition2 && bCondition3)
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 это то же самое, что и:
 
 ```js
-bCondition1 || bCondition2 && bCondition3
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 ## Спецификации

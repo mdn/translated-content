@@ -137,7 +137,7 @@ video.addEventListener(
       streaming = true;
     }
   },
-  false
+  false,
 );
 ```
 
@@ -158,7 +158,7 @@ startbutton.addEventListener(
     takepicture();
     ev.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -246,7 +246,7 @@ function takepicture() {
   <p>
     Visit our article
     <a
-      href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">
+      href="https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API/Taking_still_photos">
       Taking still photos with WebRTC</a
     >
     to learn more about the technologies used here.
@@ -385,7 +385,7 @@ function takepicture() {
           streaming = true;
         }
       },
-      false
+      false,
     );
 
     startbutton.addEventListener(
@@ -394,7 +394,7 @@ function takepicture() {
         takepicture();
         ev.preventDefault();
       },
-      false
+      false,
     );
 
     clearphoto();

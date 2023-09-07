@@ -292,7 +292,7 @@ new Promise(tetheredGetNumber)
     if (reason.cause) {
       console.error("已经在前面处理过错误了");
     } else {
-      console.error(`运行 promiseGetWord() 时遇到问题: ${reason}`);
+      console.error(`运行 promiseGetWord() 时遇到问题：${reason}`);
     }
   })
   .finally((info) => console.log("所有回调都完成了"));
