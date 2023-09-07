@@ -1,5 +1,5 @@
 ---
-title: "Document.timeline"
+title: Document.timeline
 short-title: timeline
 slug: Web/API/Document/timeline
 l10n:
