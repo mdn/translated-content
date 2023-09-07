@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("Document")}} 인터페이스의 `timeline` 읽기 전용 속성은 현재 문서의 기본 타임라인을 나타냅니다. 이 타임라인은 {{domxref("DocumentTimeline")}}의 특수 인스턴스입니다.
 
-이 타임라인은 각각의 `document` 마다 고유하며 {{domxref("Document.open()")}} 호출을 포함한 문서가 황성화 되어 있는 동안 유지됩니다.
+이 타임라인은 각각의 `document` 마다 고유하며 {{domxref("Document.open()")}} 호출 또한 포함하는 문서의 생명주기 동안 유지됩니다.
 
 이 타임라인은 {{domxref("Performance.timeOrigin")}} 이후 시간을 밀리세컨드 단위로 연산합니다.
 원점 이전의 시간은 타임라인에서 고려하지 않으며 이 경우 {{domxref("AnimationTimeline.currentTime","currentTime")}}은 `null`입니다.
