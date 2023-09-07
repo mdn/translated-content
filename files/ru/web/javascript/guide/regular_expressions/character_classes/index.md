@@ -1,14 +1,6 @@
 ---
 title: Классы символов
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expression
-  - character classes
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}
@@ -154,7 +146,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
         Совпадёт с символом возврат назад (англ. backspace). Если вы ищите
         символ границы слова (<code>\b</code>), смотри
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+          href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
           >Границы</a
         >.
       </td>
@@ -264,7 +256,8 @@ console.table(randomData.match(regexpFourDigits));
 ### Поиск слов (латинский алфавит), начинающих с A
 
 ```js
-var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+var aliceExcerpt =
+  "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b определяет границу поиска (например, не начинает поиск с середины слова)
 // [aA] определяет букву a или A
@@ -284,7 +277,7 @@ var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 ## Совместимость с браузерами

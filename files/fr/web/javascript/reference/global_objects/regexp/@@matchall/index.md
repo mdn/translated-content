@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@matchAll
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expr
 ## Syntaxe
 
 ```js
-regexp[Symbol.matchAll](str)
+regexp[Symbol.matchAll](str);
 ```
 
 ### Paramètres
@@ -37,9 +29,9 @@ Un [itérateur](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
 Cette méthode est appelée, en interne, par le moteur JavaScript, pendant l'exécution {{jsxref("String.prototype.matchAll()")}}. Les deux lignes qui suivent renverront donc le même résultat.
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 Cette méthode existe afin de personnaliser le comportement des correspondances pour les sous-classes de `RegExp`.
@@ -52,10 +44,10 @@ Cette méthode peut être utilisée de façon semblable à {{jsxref("String.prot
 
 ```js
 var re = /[0-9]+/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var resultat = re[Symbol.matchAll](str);
 
-console.log(Array.from(resultat, x => x[0]));
+console.log(Array.from(resultat, (x) => x[0]));
 // ["2016", "01", "02"]
 ```
 
@@ -75,8 +67,8 @@ class MaRegExp extends RegExp {
   }
 }
 
-var re = new MaRegExp('([0-9]+)-([0-9]+)-([0-9]+)', 'g');
-var str = '2016-01-02|2019-03-07';
+var re = new MaRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+var str = "2016-01-02|2019-03-07";
 var resultat = str.matchAll(re);
 console.log(resultat[0]); // [ "2016-01-02", "2016", "01", "02" ]
 console.log(resultat[1]); // [ "2019-03-07", "2019", "03", "07" ]

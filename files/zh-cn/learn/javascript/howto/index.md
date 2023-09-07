@@ -38,8 +38,8 @@ slug: Learn/JavaScript/Howto
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 这个函数不会执行，除非你调用它，例如：
@@ -56,7 +56,7 @@ myFunction();
 
 还要记住，当你向一个函数外部返回一个值时，JavaScript 解释器会退出这个函数——在 return 语句之后，不会执行任何代码。
 
-事实上，如果您在返回语句之后有代码，某些浏览器（如 Firefox）会在开发人员控制台中显示出一条错误消息。Firefox 在返回语句后会给你“无法运行到的代码”的提示。
+事实上，如果你在返回语句之后有代码，某些浏览器（如 Firefox）会在开发人员控制台中显示出一条错误消息。Firefox 在返回语句后会给你“无法运行到的代码”的提示。
 
 ### 对象标记法与正常赋值
 
@@ -70,9 +70,9 @@ const myNumber = 0;
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## 基本定义

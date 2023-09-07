@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.getAllKeys()
 slug: Web/API/IDBObjectStore/getAllKeys
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Référence(2)
-translation_of: Web/API/IDBObjectStore/getAllKeys
 ---
 
 {{APIRef("IndexedDB")}}

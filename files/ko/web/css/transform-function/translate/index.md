@@ -1,7 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-original_slug: Web/CSS/transform-function/translate
 l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---

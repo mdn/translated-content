@@ -31,8 +31,8 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
+| Especificação                                                        |
+| -------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}} |
 
 ## Compatibilidade com navegadores

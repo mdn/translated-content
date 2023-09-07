@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: beforeinput event'
+title: "HTMLElement: beforeinput event"
 slug: Web/API/HTMLElement/beforeinput_event
 ---
 
@@ -49,17 +49,17 @@ In the case of `contenteditable` and `designMode`, the event target is the **edi
 ### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="values"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('values');
+const input = document.querySelector("input");
+const log = document.getElementById("values");
 
-input.addEventListener('beforeinput', updateValue);
+input.addEventListener("beforeinput", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

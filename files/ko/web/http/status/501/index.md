@@ -28,7 +28,7 @@ slug: Web/HTTP/Status/501
 501 Not Implemented
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

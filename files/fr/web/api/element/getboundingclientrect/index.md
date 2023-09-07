@@ -1,7 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 
 {{APIRef("DOM")}}
@@ -34,11 +33,17 @@ Les scripts qui doivent avoir une haute compatibilité pour l'ensemble des navig
 
 ```js
 // Pour scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft
-// Pour scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.ScrollLeft == "number"
+  ? t
+  : document.body
+).ScrollLeft(
+  // Pour scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.ScrollTop == "number"
+    ? t
+    : document.body,
+).ScrollTop;
 ```
 
 ## Exemple
@@ -60,12 +65,12 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
 for (let key in rect) {
-  if(typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }

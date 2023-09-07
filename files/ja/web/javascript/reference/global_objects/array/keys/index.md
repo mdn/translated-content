@@ -7,30 +7,30 @@ l10n:
 
 {{JSRef}}
 
-**`keys()`** メソッドは、配列内の各インデックスのキーを含む、新しい**配列反復子**オブジェクトを返します。
+**`keys()`** メソッドは、配列内の各インデックスのキーを含む、新しい**配列イテレーター**オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
 ## 構文
 
 ```js
-keys()
+keys();
 ```
 
 ### 返値
 
-新しい {{jsxref("Array")}} の反復子オブジェクトです。
+新しい {{jsxref("Array")}} のイテレーターオブジェクトです。
 
 ## 例
 
-### 不連続を無視しないキー反復子
+### 不連続を無視しないキーイテレーター
 
 ```js
-const arr = ['a', , 'c'];
+const arr = ["a", , "c"];
 const sparseKeys = Object.keys(arr);
 const denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ## 仕様書

@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type'
+title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -42,7 +42,7 @@ slug: Web/CSS/:nth-of-type
 
 ```css
 /* 奇数段 */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 

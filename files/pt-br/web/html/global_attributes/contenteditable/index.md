@@ -24,12 +24,12 @@ Você pode definir a cor usada para desenhar a inserção de texto {{Glossary("c
 
 ## Especificações
 
-| Especificação                                                                                                                                                                | Status                           | Comentário                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}                                                             | {{Spec2("HTML WHATWG")}} | Nenhuma mudança na última instância, {{SpecName("HTML5.2")}}                                 |
-| {{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.2")}}     | Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5.1")}} |
+| Especificação                                                                                                                     | Status                   | Comentário                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}                                               | {{Spec2("HTML WHATWG")}} | Nenhuma mudança na última instância, {{SpecName("HTML5.2")}}                          |
+| {{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.2")}}     | Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5.1")}}   |
 | {{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.1")}}     | Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5 W3C")}} |
-| {{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}                                                                 | {{Spec2("HTML5 W3C")}}     | Instância de {{SpecName("HTML WHATWG")}}, definição inicial.                                 |
+| {{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}                                                 | {{Spec2("HTML5 W3C")}}   | Instância de {{SpecName("HTML WHATWG")}}, definição inicial.                          |
 
 ## Compatibilidade com navegadores
 

@@ -1,7 +1,6 @@
 ---
-title: ':-moz-locale-dir(rtl)'
+title: ":-moz-locale-dir(rtl)"
 slug: Web/CSS/:-moz-locale-dir_rtl
-original_slug: Web/CSS/:-moz-locale-dir(rtl)
 ---
 
 {{Non-standard_header}}{{CSSRef}}

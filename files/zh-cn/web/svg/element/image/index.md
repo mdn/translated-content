@@ -42,17 +42,25 @@ SVG 文件是这样的一种图像：不被当做外部资源加载，不可以�
 
 ## DOM 接口
 
-该元素实现[`SVGImageElement`](/zh-CN/DOM/SVGImageElement) 接口。
+该元素实现 [`SVGImageElement`](/zh-CN/DOM/SVGImageElement) 接口。
 
 ## 示例
 
 在 SVG 对象中基本呈现 PNG 图像：
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-  <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" />
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image
+    xlink:href="/files/2917/fxlogo.png"
+    x="0"
+    y="0"
+    height="100"
+    width="100" />
 </svg>
 ```
 

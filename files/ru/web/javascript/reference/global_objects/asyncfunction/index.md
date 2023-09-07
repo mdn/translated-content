@@ -1,7 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 Обратите внимание, что AsyncFunction не является глобальным объектом. Её можно получить, выполнив следующий код.
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## Синтаксис
@@ -60,20 +59,22 @@ new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-var AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-var a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+var a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // напечатает 30 через 4 секунды
 });
 ```

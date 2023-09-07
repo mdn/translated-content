@@ -76,7 +76,7 @@ page-break-before: unset;
 ```css
 /* div の前で改ページされないようにします */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 

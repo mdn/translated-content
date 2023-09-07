@@ -1,10 +1,6 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
-tags:
-  - WebGL
-  - WebGLProgram
-translation_of: Web/API/WebGLProgram
 ---
 
 {{APIRef("WebGL")}}
@@ -20,9 +16,9 @@ gl.attachShader(programme, shaderDeFragment);
 
 gl.linkProgram(programme);
 
-if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(programme);
-  throw 'Impossible de compiler le program WebGL.\n\n' + info;
+  throw "Impossible de compiler le program WebGL.\n\n" + info;
 }
 ```
 

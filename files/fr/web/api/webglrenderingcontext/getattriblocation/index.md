@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
 
 {{APIRef("WebGL")}}
@@ -34,7 +27,7 @@ Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si 
 ## Exemples
 
 ```js
-gl.getAttribLocation(programme, 'vColor');
+gl.getAttribLocation(programme, "vColor");
 ```
 
 ## Spécifications

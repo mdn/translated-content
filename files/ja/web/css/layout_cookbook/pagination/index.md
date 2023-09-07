@@ -11,7 +11,7 @@ slug: Web/CSS/Layout_cookbook/Pagination
 
 ## 要件
 
-画面リーダーを使用している人がページ付けであることを理解できるようにするために、項目を {{htmlelement("nav")}} 要素内のリストとしてマークアップし、CSS を使用してレイアウトを視覚的に 1 行で表示します。
+スクリーンリーダーを使用している人がページ付けであることを理解できるようにするために、項目を {{htmlelement("nav")}} 要素内のリストとしてマークアップし、CSS を使用してレイアウトを視覚的に 1 行で表示します。
 
 通常、ページ付けのコンポーネントはコンテンツの下側にあり、水平方向の中央に配置されます。
 
@@ -45,9 +45,9 @@ slug: Web/CSS/Layout_cookbook/Pagination
 
 ## アクセシビリティの考慮
 
-画面リーダーを使用している人が、このナビゲーションが何をするのか、そしてリンクをクリックしたときにどこに行くのかを確実に理解できるようにしたいです。 これを手助けするために、 [`aria-label="pagination"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) を `<nav>` 要素に追加しました。
+スクリーンリーダーを使用している人が、このナビゲーションが何をするのか、そしてリンクをクリックしたときにどこに行くのかを確実に理解できるようにしたいです。 これを手助けするために、 [`aria-label="pagination"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) を `<nav>` 要素に追加しました。
 
-画面リーダーによって読み取られるが視覚的に隠されている追加のコンテンツを追加し、ページング矢印に [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性を設定しました。
+スクリーンリーダーによって読み取られるが視覚的に隠されている追加のコンテンツを追加し、ページング矢印に [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性を設定しました。
 
 このドキュメントの最後にある「関連情報」の節には、関連するアクセシビリティのトピックへのリンクがあります。
 
@@ -69,6 +69,6 @@ _align-items を含む以下の例のように、使用したキー・プロパ�
 
 - {{Cssxref("justify-content")}}、{{Cssxref("column-gap")}}
 - [ARIA を知る: 'Hidden' 対 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)（英語）
-- [画面リーダーのユーザーには見えないコンテンツ](https://webaim.org/techniques/css/invisiblecontent/#techniques)（英語）
+- [スクリーンリーダーのユーザーには見えないコンテンツ](https://webaim.org/techniques/css/invisiblecontent/#techniques)（英語）
 - [アクセシビリティを意識した CSS の書き方](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)（英語）（[日本語訳](https://frasco.io/writing-css-with-accessibility-in-mind-4fc82b26aecb)）
 - [アクセシビリティ（a11y）スタイルガイド: ページ付け](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)（英語）

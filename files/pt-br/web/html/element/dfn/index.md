@@ -12,7 +12,7 @@ O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma in
 > - O valor exato do termo a ser definido é determinado pelas seguintes regras:
 >
 >   1. Se o elemento \<dfn> tiver um atributo title, então o termo é o valor deste atributo.
->   2. Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo {{htmlattrxref("title", "abbr")}}, então o termo é o valor deste atributo.
+>   2. Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo [`title`](/pt-BR/docs/Web/HTML/Element/abbr#title), então o termo é o valor deste atributo.
 >   3. Caso contrário, o conteúdo do texto do elemento `<dfn>` é o termo a ser definido.
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conetúdo palpável.
@@ -33,7 +33,10 @@ Os exemplos a seguir são válidos em HTML5.
 
 ```html
 <!-- Define "A Internet" -->
-<p><dfn id="def-internet">A Internet</dfn> é um sistema global de redes interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir bilhões de usuários no mundo todo.
+<p>
+  <dfn id="def-internet">A Internet</dfn> é um sistema global de redes
+  interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir
+  bilhões de usuários no mundo todo.
 </p>
 ```
 
@@ -47,7 +50,10 @@ Posteriormente no mesmo documento:
       <abbr title="World-Wide Web">WWW</abbr>
     </dfn>
   </dt>
-  <dd>A World-Wide Web (WWW) é um sistema de documentos de hipertexto interligados acessados pela <a href="#def-internet">Internet</a>.</dd>
+  <dd>
+    A World-Wide Web (WWW) é um sistema de documentos de hipertexto interligados
+    acessados pela <a href="#def-internet">Internet</a>.
+  </dd>
 </dl>
 ```
 
@@ -60,11 +66,11 @@ _A Internet_ é um sistema global de redes interconectadas que usam o Internet P
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                                                           | Status                   | Comentário |
+| --------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                     | {{Spec2('HTML4.01')}}    |            |
 
 ## Navegadores compatíveis
 

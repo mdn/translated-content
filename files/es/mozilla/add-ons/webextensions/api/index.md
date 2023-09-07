@@ -14,7 +14,7 @@ function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 Muchas de las APIs son asíncronas, devolviendo un `Promise`:
@@ -28,9 +28,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 

@@ -1,15 +1,6 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -40,8 +31,8 @@ Math.cosh(x)
 ### Пример: использование метода `Math.cosh()`
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -50,18 +41,22 @@ Math.cosh(-1); // 1.5430806348152437
 Этот метод может эмулироваться при помощи двух вызовов метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    return (Math.exp(x) + Math.exp(-x)) / 2;
+  };
 ```
 
 либо при помощи только одного вызова метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  var y = Math.exp(x);
-  return (y + 1 / y) / 2;
-};
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y + 1 / y) / 2;
+  };
 ```
 
 ## Спецификации

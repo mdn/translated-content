@@ -1,12 +1,6 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-tags:
-  - CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/clamp()
-original_slug: Web/CSS/clamp()
 ---
 
 {{CSSRef}}
@@ -43,7 +37,7 @@ La valeur préférée correspond à la valeur qui sera utilisée si elle est sup
 
 La valeur maximale est la borne supérieure des valeurs autorisées. C'est cette valeur qui sera utilisée si la valeur préférée lui est supérieure.
 
-Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informationsn), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
+Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informations), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
 
 Il est possible d'utiliser différentes unités pour chacune des valeurs des expressions.
 
@@ -80,7 +74,9 @@ Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois l
 
 ```html
 <h1>Ce texte est toujours lisible mais sa taille ne change pas.</h1>
-<h1 class="responsive">Ce texte est toujours lisible et s'adapte dans une certaine mesure.</h1>
+<h1 class="responsive">
+  Ce texte est toujours lisible et s'adapte dans une certaine mesure.
+</h1>
 ```
 
 #### Résultat

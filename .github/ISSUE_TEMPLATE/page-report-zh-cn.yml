@@ -1,5 +1,5 @@
-name: "[via MDN pages only // zh-cn]"
-description: Issue filed via "Report a problem with this content on GitHub" link on MDN pages.
+name: "[仅通过 MDN 页面报告问题 // zh-cn]"
+description: 通过 MDN 页面上的“Report the content issue”链接提交议题。
 labels: ["l10n-zh", "needs triage"]
 body:
   - type: markdown

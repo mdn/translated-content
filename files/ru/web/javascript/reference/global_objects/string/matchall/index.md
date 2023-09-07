@@ -1,15 +1,8 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
+
 {{JSRef}}
 
 Метод **`matchAll()`** возвращает итератор по всем результатам при сопоставлении _строки с регулярным выражением_.
@@ -38,8 +31,8 @@ str.matchAll(regexp)
 До добавления метода `matchAll` в JavaScript, можно было использовать метод [regexp.exec](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (и регулярные выражения с флагом `/g` ) в цикле для получения доступа к совпадениям:
 
 ```js
-const regexp = RegExp('foo*','g');
-const str = 'table football, foosball';
+const regexp = RegExp("foo*", "g");
+const str = "table football, foosball";
 
 while ((matches = regexp.exec(str)) !== null) {
   console.log(`Found ${matches[0]}. Next starts at ${regexp.lastIndex}.`);
@@ -48,12 +41,12 @@ while ((matches = regexp.exec(str)) !== null) {
 }
 ```
 
-С появлением `matchAll`, нет необходимости использовать цикл [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) и метод `exec` с флагом `/g`.
-Используя вместо этого метод `matchAll`, вы получаете итератор, который вы можете использовать более удобно с конструкциями [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), или {{jsxref("Array.from()")}} :
+С появлением `matchAll`, нет необходимости использовать цикл [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) и метод `exec` с флагом `/g`.
+Используя вместо этого метод `matchAll`, вы получаете итератор, который вы можете использовать более удобно с конструкциями [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), или {{jsxref("Array.from()")}} :
 
 ```js
-const regexp = RegExp('foo*','g');
-const str = 'table football, foosball';
+const regexp = RegExp("foo*", "g");
+const str = "table football, foosball";
 let matches = str.matchAll(regexp);
 
 for (const match of matches) {
@@ -66,17 +59,17 @@ for (const match of matches) {
 // Для создания нового итератора вызовите matchAll повторно
 matches = str.matchAll(regexp);
 
-Array.from(matches, m => m[0]);
+Array.from(matches, (m) => m[0]);
 // Array [ "foo", "foo" ]
 ```
 
 ### Улучшенный доступ к группам захвата
 
-Ещё одна веская причина использовать `matchAll` это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании [`match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) с глобальным флагом `/g`:
+Ещё одна веская причина использовать `matchAll` это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании [`match()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/match) с глобальным флагом `/g`:
 
 ```js
 var regexp = /t(e)(st(\d?))/g;
-var str = 'test1test2';
+var str = "test1test2";
 
 str.match(regexp);
 // Array ['test1', 'test2']

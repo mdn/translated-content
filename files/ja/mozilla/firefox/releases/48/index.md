@@ -29,7 +29,7 @@ l10n:
   - これらの要素のデフォルトのスタイルが、仕様書に合致するようになりました ([Firefox バグ 1258657](https://bugzil.la/1258657))。
   - {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが、{{HTMLElement("details")}} 要素を開いたり閉じたりしたときに送られるようになりました ([Firefox バグ 1225412](https://bugzil.la/1225412))。
 
-- {{htmlattrxref("meta", "referrer")}} 属性で、値 `no-referrer-when-downgrade` および `origin-when-cross-origin` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
+- [`meta`](/ja/docs/Web/HTML/Element/referrer#meta) 属性で、値 `no-referrer-when-downgrade` および `origin-when-cross-origin` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
 
 ### CSS
 
@@ -78,7 +78,7 @@ l10n:
 
 - 非推奨の [古い Proxy API](/ja/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` および `Proxy.createFunction()`) を廃止しました。代わりに標準の {{jsxref("Proxy")}} オブジェクトを使用してください ([Firefox バグ 892903](https://bugzil.la/892903))。
 - `String.prototype.contains()` メソッドを削除しました (バージョン 40 より非推奨でした)。代わりに {{jsxref("String.prototype.includes()")}} メソッドを使用してください ([Firefox バグ 1103588](https://bugzil.la/1103588))。
-- 非標準の `RegExp.multiline` プロパティ ({{jsxref("RegExp.prototype.multiline")}} ではありません) を削除しました。代わりに標準の [m フラグ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) を使用してください ([Firefox バグ 1219757](https://bugzil.la/1219757))。
+- 非標準の `RegExp.multiline` プロパティ ({{jsxref("RegExp.prototype.multiline")}} ではありません) を削除しました。代わりに標準の [m フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索) を使用してください ([Firefox バグ 1219757](https://bugzil.la/1219757))。
 - [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) および [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) メソッドは、オブジェクトを伴わないグローバルスコープでは呼び出すことができなくなりました ([Firefox バグ 1253016](https://bugzil.la/1253016))。
 
 ### インターフェイス/API/DOM

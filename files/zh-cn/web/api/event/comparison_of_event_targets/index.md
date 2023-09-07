@@ -85,7 +85,7 @@ There are 5 targets to consider:
         some reason other than an anonymous boundary crossing, this will be set
         to the target before the retargeting occurs. For example, mouse events
         are retargeted to their parent node when they happen over text nodes
-        ({{ Bug("185889") }}), and in that case <code>.target</code> will
+        ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will
         show the parent and <code>.explicitOriginalTarget</code> will show the
         text node.<br />Unlike <code>.originalTarget</code>,
         <code>.explicitOriginalTarget</code> will never contain anonymous
@@ -191,10 +191,10 @@ TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extensi
 
 The `relatedTarget` property for the `mouseover` event holds the node that the mouse was previously over. For the `mouseout` event, it holds the node that the mouse moved to.
 
-| Event type  | [event.target](/zh-CN/DOM/event.target)              | [event.relatedTarget](/zh-CN/DOM/event.relatedTarget) |
-| ----------- | ------------------------------------------------- | -------------------------------------------------- |
-| `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited   |
-| `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered  |
+| Event type  | [event.target](/zh-CN/DOM/event.target)           | [event.relatedTarget](/zh-CN/DOM/event.relatedTarget) |
+| ----------- | ------------------------------------------------- | ----------------------------------------------------- |
+| `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited      |
+| `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered     |
 
 TODO: Also needs descriptions about `dragenter` and `dragexit` events.
 

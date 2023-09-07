@@ -38,7 +38,7 @@ l10n:
   // Old method
   let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
   // New method
-  let pinyin = new Intl.Collator("zh", {collation: "pinyin"});
+  let pinyin = new Intl.Collator("zh", { collation: "pinyin" });
   ```
 
 ### プラグイン

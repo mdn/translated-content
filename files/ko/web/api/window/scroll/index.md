@@ -29,7 +29,7 @@ scroll(options)
       - : 창이나 요소를 스크롤할 X축의 픽셀의 수를 지정합니다.
     - `behavior`
       - : 요소를 위치로 스크롤하는 브라우저는 다음 스크롤 동작 중 하나를 가질 수 있습니다.
-        - `auto` (기본): 스크롤 동작은 스크롤 요소에 의해 설정되거나 상속된 [`scroll-behavior`](/en-US/docs/Web/CSS/scroll-behavior) CSS 스타일에 의해 제어됩니다.
+        - `auto` (기본): 스크롤 동작은 스크롤 요소에 의해 설정되거나 상속된 [`scroll-behavior`](/ko/docs/Web/CSS/scroll-behavior) CSS 스타일에 의해 제어됩니다.
         - `smooth`: 스크롤이 부드럽게 작동합니다.
 
 ### 반환 값
@@ -50,7 +50,7 @@ scroll(options)
 window.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

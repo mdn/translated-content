@@ -23,6 +23,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : 此 {{domxref("DOMException")}} 類型的物件記錄了讀取資料時發生的錯誤資訊。
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
+
   - : 表示目前 `FileReader` 狀態的數字，其代表的意義為：
 
     <table>
@@ -44,6 +45,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
     </tr>
     </tbody>
     </table>
+
 - {{domxref("FileReader.result")}} {{readonlyinline}}
   - : 讀入的資料內容。只有在讀取完成之後此屬性才有效，而資料的格式則取決於是由哪一個方法進行讀取。
 

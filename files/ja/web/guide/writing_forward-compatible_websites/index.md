@@ -1,7 +1,6 @@
 ---
 title: 前方互換性のあるウェブサイトを書く
 slug: Web/Guide/Writing_forward-compatible_websites
-original_slug: Web_Development/Writing_forward-compatible_websites
 ---
 
 このページでは、新しいバージョンのブラウザーが公開されても壊れることのないウェブサイトを記述する方法を説明します。
@@ -27,10 +26,13 @@ HTML の要素でイベントハンドラーのコンテンツ属性（`onclick`
 ```html
 <script>
   function localName() {
-    alert('Function localName has been called');
+    alert("Function localName has been called");
   }
 </script>
-<div onclick="window.localName()">Clicking me should show an alert<div>
+<div onclick="window.localName()">
+  Clicking me should show an alert
+  <div></div>
+</div>
 ```
 
 ### 自身で管理しないスクリプトを連結しない

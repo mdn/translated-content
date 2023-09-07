@@ -1,8 +1,6 @@
 ---
 title: アクセシビリティを推進する HTML の機能とは？
-slug: >-
-  Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-original_slug: Learn/Common_questions/HTML_features_for_accessibility
+slug: Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
 ---
 
 以下のコンテンツは、さまざまな障害を持つ人々にとってウェブページのアクセシビリティをより高めるために使用できる HTML の特定の機能について説明しています。
@@ -26,7 +24,15 @@ original_slug: Learn/Common_questions/HTML_features_for_accessibility
 自己説明的でないリンクがある場合や、リンク先をより詳細に説明をすることで好ましいことがある場合、`title`属性を使用してリンクに情報を追加することができます。
 
 ```html
-<p>I'm really bad at writing link text. <a href="inept.html" title="Why I'm rubbish at writing link text: An explanation and an apology.">Click here</a> to find out more.</p>
+<p>
+  I'm really bad at writing link text.
+  <a
+    href="inept.html"
+    title="Why I'm rubbish at writing link text: An explanation and an apology."
+    >Click here</a
+  >
+  to find out more.
+</p>
 ```
 
 ## アクセスキー

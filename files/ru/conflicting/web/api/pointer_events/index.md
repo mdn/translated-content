@@ -1,7 +1,6 @@
 ---
 title: Поддержка TouchEvent и MouseEvent
 slug: conflicting/Web/API/Pointer_events
-translation_of: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 ---
 {{DefaultAPISidebar("Touch Events")}}

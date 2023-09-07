@@ -1,14 +1,6 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - loadTime
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/loadTime
 ---
 
 {{APIRef("Element Timing API")}}
@@ -30,7 +22,11 @@ Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec le t
 Dans cet exemple, l'appel à `entry.loadTime` renvoie le temps de chargement de l'image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

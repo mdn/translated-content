@@ -1,36 +1,78 @@
 ---
-title: CanvasRenderingContext2D.fillText()
+title: CanvasRenderingContext2D：fillText() 方法
+short-title: fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`CanvasRenderingContext2D.fillText()`** 是 Canvas 2D API 在 *(x, y)* 位置填充文本的方法。如果选项的第四个参数提供了最大宽度，文本会进行缩放以适应最大宽度。
+{{domxref("CanvasRenderingContext2D")}} 对象的方法 **`fillText()`** 是 Canvas 2D API 的一部分，它在指定的坐标上绘制文本字符串，并使用当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 对其进行填充。存在一个可选参数，其指定了渲染文本的最大宽度，{{Glossary("user agent","用户代理")}}将通过压缩文本或使用较小的字体大小来实现。
 
-参见 {{domxref("CanvasRenderingContext2D.strokeText()")}} 方法对文本进行描边。
+此方法会直接绘制到画布上，而不会修改当前路径，因此任何后续的 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 调用都不会对其产生影响。
+
+文本根据 {{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性所定义的字体和文本布局来渲染。
+
+> **备注：** 如果需要绘制字符串中字符的轮廓，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
 
 ## 语法
 
-```js
-void ctx.fillText(text, x, y, [maxWidth]);
+```js-nolint
+fillText(text, x, y)
+fillText(text, x, y, maxWidth)
 ```
 
 ### 参数
 
 - `text`
-  - : 使用当前的 {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction","direction")}} 值对文本进行渲染。
+  - : 要作为渲染上下文的文本字符串。使用当前的 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction","direction")}} 设置值对文本进行渲染。
 - `x`
-  - : 文本起点的 x 轴坐标。
+  - : 开始绘制文本的点的 X 轴坐标，单位为像素。
 - `y`
-  - : 文本起点的 y 轴坐标。
+  - : 开始绘制文本的基线的 Y 轴坐标，单位为像素。
 - `maxWidth` {{optional_inline}}
-  - : 绘制的最大宽度。如果指定了值，并且经过计算字符串的值比最大宽度还要宽，字体为了适应会水平缩放（如果通过水平缩放当前字体，可以进行有效的或者合理可读的处理）或者使用小号的字体。
+  - : 文本渲染后的最大像素宽度。如果未指定，则文本宽度没有限制。但是，如果提供了该值，用户代理将调整字距，选择水平方向更紧凑的字体（如果有这种字体或可以在不降低质量的情况下生成这种字体），或缩小字体大小，以便在指定宽度内容纳文本。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ### 绘制填充文本
 
-这是一段使用 `fillText` 方法的简单的代码片段。
+这段代码使用 `fillText()` 方法绘制了“Hello World”字符串。
+
+#### HTML
+
+首先，我们需要一个画布来绘图。这段代码将创建一个宽 400 像素，宽 150 像素的背景。
+
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+```
+
+#### JavaScript
+
+以下是此示例的 JavaScript 代码。
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90);
+```
+
+这段代码获取 {{HTMLElement("canvas")}} 的引用，然后获取其 2D 图形上下文的引用。
+
+有了这些，我们将 {{domxref("CanvasRenderingContext2D.font", "font")}} 设置为 50 像素高的“衬线体”（用户默认的[衬线](https://zh.wikipedia.org/wiki/衬线体)字体），然后调用 `fillText()` 从坐标 (50, 90) 开始绘制文本“Hello world”。
+
+#### 结果
+
+{{ EmbedLiveSample('绘制填充文本', 700, 180) }}
+
+### 限制文本大小
+
+本示例绘制了“Hello world”字符串并将其宽度限制为 140 像素。
 
 #### HTML
 
@@ -45,12 +87,12 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 ctx.font = "50px serif";
-ctx.fillText("Hello world", 50, 90);
+ctx.fillText("Hello world", 50, 90, 140);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('绘制填充文本', 700, 180) }}
+{{ EmbedLiveSample('限制文本大小', 700, 180) }}
 
 ## 规范
 
@@ -62,5 +104,6 @@ ctx.fillText("Hello world", 50, 90);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- [绘制文本](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.strokeText()")}}

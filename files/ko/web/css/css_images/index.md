@@ -1,6 +1,6 @@
 ---
 title: CSS Images
-slug: Web/CSS/CSS_Images
+slug: Web/CSS/CSS_images
 ---
 
 {{CSSRef}}

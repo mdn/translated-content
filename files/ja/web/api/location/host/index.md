@@ -1,33 +1,32 @@
 ---
-title: location.host
+title: "location: host プロパティ"
 slug: Web/API/Location/host
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{ApiRef("Location")}}
 
-**`host`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} でホスト、すなわち*ホスト名*と、 URL の*ポート番号*が空でなければ、 `':'` およびその*ポート番号*を保持します。
+**`host`** は {{domxref("Location")}} インターフェイスのプロパティで、ホスト、すなわち*ホスト名*と、 URL の*ポート番号*が空でなければ、 `':'` およびその*ポート番号*の入った文字列です。
 
-## 構文
+## 値
 
-```js
-string = object.host;
-object.host = string;
-```
+文字列です。
 
 ## 例
 
 ```js
-var anchor = document.createElement("a");
+const anchor = document.createElement("a");
 
-anchor.href = "https://developer.mozilla.org/ja/Location.host"
-anchor.host == "developer.mozilla.org"
+anchor.href = "https://developer.mozilla.org/en-US/Location.host";
+console.log(anchor.host === "developer.mozilla.org");
 
-anchor.href = "https://developer.mozilla.org:443/ja/Location.host"
-anchor.host == "developer.mozilla.org"
-// The port number is not included because 443 is the scheme's default port
+anchor.href = "https://developer.mozilla.org:443/en-US/Location.host";
+console.log(anchor.host === "developer.mozilla.org");
+// 443 はこのスキームの既定のポートなので含まれない
 
-anchor.href = "https://developer.mozilla.org:4097/ja/Location.host"
-anchor.host == "developer.mozilla.org:4097"
+anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host";
+console.log(anchor.host === "developer.mozilla.org:4097");
 ```
 
 ## 仕様書

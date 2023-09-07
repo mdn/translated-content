@@ -3,6 +3,8 @@ title: 禁止修改的标头
 slug: Glossary/Forbidden_header_name
 ---
 
+{{GlossarySidebar}}
+
 **禁止修改的标头**指的是不能在代码中通过编程的方式进行修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)，具体指 HTTP **请求**标头（和{{Glossary("Forbidden response header name", "禁止修改的响应标头")}}形成对比）。
 
 因为用户代理保留对此类标头的完全控制，所以它们被禁止修改。保留以 `Sec-` 开头的名称，以用于在使用 [fetch 算法](https://fetch.spec.whatwg.org/#concept-fetch)的请求中创建安全的新标头，这些 {{glossary("API")}} 授予开发人员对标头的控制权，例如：{{domxref("XMLHttpRequest")}}。

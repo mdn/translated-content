@@ -32,14 +32,17 @@ const myHeaders = new Headers(); // Currently empty
 {{domxref("Headers.append")}} を使用してヘッダーを追加できます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 または、`Headers` オブジェクトの生成時に必要なヘッダーを追加することもできます。次のスニペットでは、新しい {{domxref("Headers")}} を作成し、コンストラクターに初期化オブジェクトを引数として渡してヘッダーを追加しています。
 
 ```js
-const httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
+const httpHeaders = {
+  "Content-Type": "image/jpeg",
+  "X-My-Custom-Header": "Zeke are cool",
+};
 const myHeaders = new Headers(httpHeaders);
 ```
 
@@ -47,15 +50,15 @@ const myHeaders = new Headers(httpHeaders);
 
 ```js
 const secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+secondHeadersObj.get("Content-Type"); // Would return 'image/jpeg' — it inherits it from the first headers object
 ```
 
 また、`Headers` オブジェクトを作成する際に、二次元の配列を使用して、同じ値を持つ複数のヘッダーを追加することができます。以下のスニペットでは、コンストラクターの引数に初期化配列を渡して、複数の `Set-Cookie` ヘッダーを持つ新しい {{domxref("Headers")}} オブジェクトを作成しています。
 
 ```js
 const headers = [
-  ['Set-Cookie', 'greeting=hello'],
-  ['Set-Cookie', 'name=world']
+  ["Set-Cookie", "greeting=hello"],
+  ["Set-Cookie", "name=world"],
 ];
 const myHeaders = new Headers(headers);
 ```

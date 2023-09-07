@@ -8,7 +8,7 @@ l10n:
 {{APIRef("DOM")}}
 
 **`setNamedItem()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、名前によって識別される属性 ({{domxref("Attr")}}) をこのマップに設定します。
-すでに同じ名前の {{domxref("Attr")}} がこのマップに存在した場合は、*置き換えます*。
+すでに同じ名前の {{domxref("Attr")}} がこのマップに存在した場合は、_置き換えます_。
 
 ## 構文
 
@@ -53,8 +53,7 @@ result += "We get 'two' from '<span>' and try to adds it to '<pre>'.\n";
 const two = span.attributes.getNamedItem("two");
 try {
   attrMap.setNamedItem(two);
-}
-catch (e) {
+} catch (e) {
   result += `An exception has been raised: ${e.name}.\n`;
 }
 

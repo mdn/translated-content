@@ -87,9 +87,9 @@ Highlights:
 
   - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ([Firefox bug 1131352](https://bugzil.la/1131352)).
   - {{domxref("Clients.claim()")}} has been added ([Firefox bug 1130684](https://bugzil.la/1130684)).
-  - The other functional events of Service Workers have been made to inherit from {{domxref("ExtendableEvent")}}, giving them access to the {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} method ({{bug("1160527")}}).
+  - The other functional events of Service Workers have been made to inherit from {{domxref("ExtendableEvent")}}, giving them access to the {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} method ([Firefox bug 1160527](https://bugzil.la/1160527)).
 
-- The {{domxref("CacheStorage")}} and {{domxref("Cache")}} interfaces are now supported ({{bug("1110144")}}).
+- The {{domxref("CacheStorage")}} and {{domxref("Cache")}} interfaces are now supported ([Firefox bug 1110144](https://bugzil.la/1110144)).
 
 #### WebGL
 

@@ -1,13 +1,6 @@
 ---
 title: Affectation après décalage à droite non signé (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unsigned_right_shift_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,8 +12,8 @@ L'**opérateur de décalage à droite non signé et d'affectation** (`>>>=`) dé
 ## Syntaxe
 
 ```js
-Opérateur : x >>>= y
-Signification :  x    = x >>> y
+Opérateur: x >>>= y;
+Signification: x = x >>> y;
 ```
 
 ## Exemples
@@ -29,10 +22,10 @@ Signification :  x    = x >>> y
 
 ```js
 let a = 5; //   (00000000000000000000000000000101)
-a >>>= 2;  // 1 (00000000000000000000000000000001)
+a >>>= 2; // 1 (00000000000000000000000000000001)
 
 let b = -5; // (-00000000000000000000000000000101)
-b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
+b >>>= 2; // 1073741822 (00111111111111111111111111111110)
 ```
 
 ## Spécifications

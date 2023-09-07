@@ -67,31 +67,31 @@ slug: Learn
 
 3. 在命令提示符 / 终端中输入以下命令，即可将 `roy-tian/learning-area` 仓库拷贝到本地的 `learning-area` 文件夹：
 
-    ```bash
-    git clone https://github.com/roy-tian/learning-area
-    ```
+   ```bash
+   git clone https://github.com/roy-tian/learning-area
+   ```
 
-4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](https://zh.wikipedia.org/wiki/Cd_(命令))) 进入该目录，查找所需文件。
+4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)) 进入该目录，查找所需文件。
 
 你可以随时对本地 `learning-area` 目录与 GitHub 仓库中的 master 分支进行同步，具体步骤如下：
 
 1. 在命令提示符 / 终端中使用 `cd` 指令进入 `learning-area` 文件夹。例如，当你在父目录时：
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. 执行以下命令以更新仓库：
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 联系我们
 
 如果你想就任何事宜联系我们，最好的方式是在[论坛](https://discourse.mozilla.org/c/mdn/236)上留言。如果你认为网站上有任何错误或遗漏、请求新的学习主题、针对你不理解的部分请求帮助、或提出任何其他问题，我们都期待听到你的意见。
 
-如果你有兴趣帮助我们开发或改进社区内容，请阅读[如何做出贡献](/zh-CN/docs/MDN/Contribute)部分并联系我们！无论您是学生、老师、经验丰富的 Web 开发者、还是其他有兴趣通过帮助我们以提升自学经验的人，我们都不胜荣幸！
+如果你有兴趣帮助我们开发或改进社区内容，请阅读[如何做出贡献](/zh-CN/docs/MDN/Contribute)部分并联系我们！无论你是学生、老师、经验丰富的 Web 开发者、还是其他有兴趣通过帮助我们以提升自学经验的人，我们都不胜荣幸！
 
 ## 参见
 

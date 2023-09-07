@@ -13,13 +13,13 @@ slug: Web/API/Window/sessionStorage
 
 ```js
 // sessionStorage にデータを保存する
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // sessionStorage に保存したデータを取得する
-var data = sessionStorage.getItem('key');
+var data = sessionStorage.getItem("key");
 
 // sessionStorage に保存したデータを削除する
-sessionStorage.removeItem('key')
+sessionStorage.removeItem("key");
 ```
 
 ## 値
@@ -30,14 +30,14 @@ sessionStorage.removeItem('key')
 
 - `SecurityError`
   - : リクエストがポリシーの決定に反している、またはオリジンが[妥当な scheme/host/port tuple](/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) でない (これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。
-      なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータ永続化の拒否と解釈する可能性が高いです。
+    なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータ永続化の拒否と解釈する可能性が高いです。
 
 ## 例
 
 以下のスニペットは、現在のドメインのセッション {{domxref("Storage")}} オブジェクトにアクセスして、{{domxref("Storage.setItem()")}} を使用してデータアイテムを追加します。
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 以下の例はテキストフィールドの内容を自動的に保存して、ブラウザーが意図せず再開されたときに、記入した内容を失わないようにテキストフィールドの内容を復元します。
@@ -54,7 +54,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // テキストフィールドの変更をリッスンする
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // セッションストレージオブジェクトに結果を保存する
   sessionStorage.setItem("autosave", field.value);
 });

@@ -41,7 +41,6 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 
 ```js
 class Person {
-
   name;
 
   constructor(name) {
@@ -51,7 +50,6 @@ class Person {
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}`);
   }
-
 }
 ```
 
@@ -75,7 +73,7 @@ class Person {
 如上文中给出的类声明的代码，你可以像这样创建和使用一个新的 `Person` 实例：
 
 ```js
-const giles = new Person('Giles');
+const giles = new Person("Giles");
 
 giles.introduceSelf(); // Hi! I'm Giles
 ```
@@ -88,11 +86,9 @@ giles.introduceSelf(); // Hi! I'm Giles
 
 ```js
 class Animal {
-
   sleep() {
-    console.log('zzzzzzz');
+    console.log("zzzzzzz");
   }
-
 }
 
 const spot = new Animal();
@@ -106,7 +102,6 @@ spot.sleep(); // 'zzzzzzz'
 
 ```js
 class Professor extends Person {
-
   teaches;
 
   constructor(name, teaches) {
@@ -115,14 +110,15 @@ class Professor extends Person {
   }
 
   introduceSelf() {
-    console.log(`My name is ${this.name}, and I will be your ${this.teaches} professor.`);
+    console.log(
+      `My name is ${this.name}, and I will be your ${this.teaches} professor.`,
+    );
   }
 
   grade(paper) {
     const grade = Math.floor(Math.random() * (5 - 1) + 1);
     console.log(grade);
   }
-
 }
 ```
 
@@ -139,10 +135,10 @@ class Professor extends Person {
 有了这个声明，我们现在可以创建和使用 professor 实例了：
 
 ```js
-const walsh = new Professor('Walsh', 'Psychology');
-walsh.introduceSelf();  // 'My name is Walsh, and I will be your Psychology professor'
+const walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Walsh, and I will be your Psychology professor'
 
-walsh.grade('my paper'); // some random grade
+walsh.grade("my paper"); // some random grade
 ```
 
 ## 封装
@@ -153,14 +149,12 @@ walsh.grade('my paper'); // some random grade
 
 ```js
 class Student extends Person {
-
   #year;
 
   constructor(name, year) {
     super(name);
     this.#year = year;
   }
-
 
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
@@ -169,14 +163,13 @@ class Student extends Person {
   canStudyArchery() {
     return this.#year > 1;
   }
-
 }
 ```
 
 在这个类的声明中，`#year` 是一个[私有数据属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
 
 ```js
-const summers = new Student('Summers', 2);
+const summers = new Student("Summers", 2);
 
 summers.introduceSelf(); // Hi! I'm Summers, and I'm in year 2.
 summers.canStudyArchery(); // true
@@ -192,15 +185,13 @@ summers.#year; // SyntaxError
 
 ```js
 class Example {
-
   somePublicMethod() {
     this.#somePrivateMethod();
   }
 
   #somePrivateMethod() {
-    console.log('You called me?');
+    console.log("You called me?");
   }
-
 }
 
 const myExample = new Example();

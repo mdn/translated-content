@@ -1,7 +1,6 @@
 ---
 title: skewY()
 slug: Web/CSS/transform-function/skewY
-original_slug: Web/CSS/transform-function/skewY()
 l10n:
   sourceCommit: 6be1b954a117202d7635caeec74ebbbde984d3f3
 ---

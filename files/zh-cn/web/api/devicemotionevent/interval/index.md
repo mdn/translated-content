@@ -5,7 +5,7 @@ slug: Web/API/DeviceMotionEvent/interval
 
 {{ apiref("Device Orientation Events") }}
 
-返回从底层硬件获取数据的时间间隔（单位：毫秒）。您可以使用它来确定运动事件的粒度。
+返回从底层硬件获取数据的时间间隔（单位：毫秒）。你可以使用它来确定运动事件的粒度。
 
 ## 语法
 

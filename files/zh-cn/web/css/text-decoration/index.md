@@ -5,7 +5,7 @@ slug: Web/CSS/text-decoration
 
 {{CSSRef}}
 
-**`text-decoration`** [简写](/zh-CN/docs/Web/CSS/Shorthand_properties) [CSS](/zh-CN/docs/Web/CSS) 属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
+**`text-decoration`** [简写](/zh-CN/docs/Web/CSS/Shorthand_properties) [CSS](/zh-CN/docs/Web/CSS) 属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
@@ -94,7 +94,10 @@ text-decoration: unset;
 <p class="under">此文本下方有一行线。</p>
 <p class="over">此文本上面有一行线。</p>
 <p class="line">此文本有一条线穿过它。</p>
-<p>此<a class="plain" href="#">链接不会具有下划线</a>，因为链接默认加下划线。移除锚点上的文本装饰时要小心，因为用户通常依赖下划线来表示超链接</p>
+<p>
+  此<a class="plain" href="#">链接不会具有下划线</a
+  >，因为链接默认加下划线。移除锚点上的文本装饰时要小心，因为用户通常依赖下划线来表示超链接
+</p>
 <p class="underover">此文本在其上方<em>和</em>下方都有线条。</p>
 <p class="thick">在浏览器支持的情况下，此文本具有非常粗的紫色下划线。</p>
 <p class="blink">此文本可能会为你闪烁，具体取决于你使用的浏览器。</p>

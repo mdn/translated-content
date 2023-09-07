@@ -1,7 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}
@@ -44,7 +43,10 @@ width: min(1vw, 4em, 80px);
 ```
 
 ```html
-<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+<img
+  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  alt="MDN Web Docs"
+  class="logo" />
 ```
 
 {{EmbedLiveSample("Growing_images_to_a_maximum_size", "100%", "60")}}
@@ -58,7 +60,8 @@ CSS 方法的另一个用途时设置响应式组件（form）的最大尺寸：
 看下面的样式：
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -78,7 +81,7 @@ form {
 ```html
 <form>
   <label>Type something:</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 

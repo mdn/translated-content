@@ -13,21 +13,39 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 
 ```js
 // Arrow function
-forEach(() => { /* ... */ } )
-forEach((value) => { /* ... */ } )
-forEach((value, key) => { /* ... */ } )
-forEach((value, key, set) => { /* ... */ } )
+forEach(() => {
+  /* ... */
+});
+forEach((value) => {
+  /* ... */
+});
+forEach((value, key) => {
+  /* ... */
+});
+forEach((value, key, set) => {
+  /* ... */
+});
 
 // Callback function
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+forEach(callbackFn);
+forEach(callbackFn, thisArg);
 
 // Inline callback function
-forEach(function() { /* ... */ })
-forEach(function(value) { /* ... */ })
-forEach(function(value, key) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ }, thisArg)
+forEach(function () {
+  /* ... */
+});
+forEach(function (value) {
+  /* ... */
+});
+forEach(function (value, key) {
+  /* ... */
+});
+forEach(function (value, key, set) {
+  /* ... */
+});
+forEach(function (value, key, set) {
+  /* ... */
+}, thisArg);
 ```
 
 ### 引数
@@ -74,10 +92,10 @@ forEach(function(value, key, set) { /* ... */ }, thisArg)
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log("s[" + value1 + "] = " + value2);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 // logs:
 // "s[foo] = foo"

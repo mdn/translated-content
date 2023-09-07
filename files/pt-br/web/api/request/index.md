@@ -71,7 +71,7 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` (para um arquivo de imagem no mesmo diretório do código) e, em seguida, nos retorna alguns valores das propriedades da requisição:
 
 ```js
-const myRequest = new Request('http://localhost/flowers.jpg');
+const myRequest = new Request("http://localhost/flowers.jpg");
 
 const myURL = myRequest.url; // http://localhost/flowers.jpg
 const myMethod = myRequest.method; // GET
@@ -82,8 +82,8 @@ Você poderá, então, solicitar uma nova requisição passando o objeto `Reques
 
 ```js
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     myImage.src = URL.createObjectURL(blob);
   });
 ```
@@ -91,7 +91,10 @@ fetch(myRequest)
 No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` com alguns valores iniciais e contendo o corpo para APIs que precisam processar essas informações:
 
 ```js
-const myRequest = new Request('http://localhost/api', {method: 'POST', body: '{"foo":"bar"}'});
+const myRequest = new Request("http://localhost/api", {
+  method: "POST",
+  body: '{"foo":"bar"}',
+});
 
 const myURL = myRequest.url; // http://localhost/api
 const myMethod = myRequest.method; // POST
@@ -105,30 +108,29 @@ Você poderá, então, solicitar uma nova requisição passando o objeto `Reques
 
 ```js
 fetch(myRequest)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Ops! Houve um erro em nosso servidor.');
+      throw new Error("Ops! Houve um erro em nosso servidor.");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```
 
 ## Especificações
 
-| Specification                                                    | Status                   | Comment            |
-| ---------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## Veja também
 

@@ -28,7 +28,7 @@ browser.contextMenus.create(
     title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
     contexts: ["selection"],
   },
-  onCreated
+  onCreated,
 );
 ```
 
@@ -53,5 +53,5 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 GitHub 上的[webextensions-examples](https://github.com/mdn/webextensions-examples) 程式庫包含了兩個建立快捷選單的範例：
 
-- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) 替瀏覽器的快捷選單添加幾個項目。
-- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) 替連結添加一個快捷選單項，以純文字或 rich HTML 的形式複製連結的 UR。
+- [menu-demo](https://github.com/mdn/webextensions-examples/tree/main/menu-demo) 替瀏覽器的快捷選單添加幾個項目。
+- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types) 替連結添加一個快捷選單項，以純文字或 rich HTML 的形式複製連結的 UR。

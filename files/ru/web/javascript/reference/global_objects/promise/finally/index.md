@@ -1,8 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
+
 {{JSRef}}
 
 Метод **`finally()`** возвращает {{jsxref("Promise")}}. Когда промис был выполнен, вне зависимости успешно или с ошибкой, указанная функция будет выполнена. Это даёт возможность запустить один раз определённый участок кода, который должен выполниться вне зависимости от того, с каким результатом выполнился `Promise`.
@@ -50,16 +50,23 @@ p.finally(() => {
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); })
-  .finally(function() { isLoading = false; });
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
 ## Спецификации

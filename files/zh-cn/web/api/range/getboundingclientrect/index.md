@@ -21,7 +21,12 @@ boundingRect = range.getBoundingClientRect()
 
 ```html
 <div id="highlight"></div>
-<p>This example positions a "highlight" rectangle behind the contents of a range. The range's content <b>starts here</b> and continues on until it <b>ends here</b>. The bounding client rectangle contains everything selected in the range.</p>
+<p>
+  This example positions a "highlight" rectangle behind the contents of a range.
+  The range's content <b>starts here</b> and continues on until it
+  <b>ends here</b>. The bounding client rectangle contains everything selected
+  in the range.
+</p>
 ```
 
 ### CSS
@@ -42,11 +47,11 @@ p {
 
 ```js
 const range = document.createRange();
-range.setStartBefore(document.getElementsByTagName('b').item(0), 0);
-range.setEndAfter(document.getElementsByTagName('b').item(1), 0);
+range.setStartBefore(document.getElementsByTagName("b").item(0), 0);
+range.setEndAfter(document.getElementsByTagName("b").item(1), 0);
 
 const clientRect = range.getBoundingClientRect();
-const highlight = document.getElementById('highlight');
+const highlight = document.getElementById("highlight");
 highlight.style.left = `${clientRect.x}px`;
 highlight.style.top = `${clientRect.y}px`;
 highlight.style.width = `${clientRect.width}px`;

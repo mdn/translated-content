@@ -9,8 +9,6 @@ slug: Web/HTML/Element/meter
 
 {{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -81,7 +79,7 @@ slug: Web/HTML/Element/meter
 - {{htmlattrdef("optimum")}}
   - : 이상적인 값. `min`과 `max` 특성으로 정의한 범위 내에 위치해야 합니다. `low`와 `high` 특성을 함께 사용한 경우, `optimum`은 어느 범위가 이상적인지 나타냅니다. 예를 들어, 값이 `min`과 `low` 사이에 위치한 경우, 측정 범위 중 낮은 범위가 이상적인 범위입니다.
 - {{htmlattrdef("form")}}
-  - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 {{htmlattrxref("id")}} 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
+  - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
 
 ## 예제
 
@@ -90,8 +88,9 @@ slug: Web/HTML/Element/meter
 #### HTML
 
 ```html
-<p>Heat the oven to <meter min="200" max="500"
-  value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+</p>
 ```
 
 #### 결과
@@ -100,17 +99,18 @@ slug: Web/HTML/Element/meter
 
 Google Chrome에서는 다음 그림처럼 보입니다.
 
-![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
+![current look of 'meter' in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### 높은 범위와 낮은 범위
 
-{{htmlattrxref("min", "meter")}} 특성의 기본값이 0이므로 생략한 것을 참고하세요.
+[`min`](/ko/docs/Web/HTML/Element/meter#min) 특성의 기본값이 0이므로 생략한 것을 참고하세요.
 
 #### HTML
 
 ```html
-<p>He got a <meter low="69" high="80" max="100"
-  value="84">B</meter> on the exam.</p>
+<p>
+  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+</p>
 ```
 
 #### 결과

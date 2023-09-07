@@ -1,5 +1,5 @@
 ---
-title: '<rp>: ルビのフォールバック用括弧要素'
+title: "<rp>: ルビのフォールバック用括弧要素"
 slug: Web/HTML/Element/rp
 ---
 
@@ -72,8 +72,7 @@ slug: Web/HTML/Element/rp
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 

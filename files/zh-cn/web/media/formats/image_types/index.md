@@ -5,7 +5,7 @@ slug: Web/Media/Formats/Image_types
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
-在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。
+在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助你为你的网站选择最合适的图像格式。
 
 ## 常见图像文件类型
 
@@ -1322,10 +1322,13 @@ For example, if you're displaying a diagram best displayed with SVG, but wish to
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagram showing the data channels">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagram showing the data channels" />
 </picture>
 ```
 

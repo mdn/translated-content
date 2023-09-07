@@ -25,8 +25,8 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## 仕様
 
-| Specification                                                                    | Title                    |
-| -------------------------------------------------------------------------------- | ------------------------ |
+| Specification                                                | Title                    |
+| ------------------------------------------------------------ | ------------------------ |
 | {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
 
 ## ブラウザー互換性

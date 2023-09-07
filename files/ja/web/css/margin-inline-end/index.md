@@ -13,9 +13,9 @@ slug: Web/CSS/margin-inline-end
 
 ```css
 /* <length> 値 */
-margin-inline-end: 10px;   /* 絶対的な長さ */
-margin-inline-end: 1em;    /* テキストの大きさに対する相対値 */
-margin-inline-end: 5%;     /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-inline-end: 10px; /* 絶対的な長さ */
+margin-inline-end: 1em; /* テキストの大きさに対する相対値 */
+margin-inline-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-inline-end: auto;

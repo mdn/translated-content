@@ -36,7 +36,7 @@ document.domain = domainString;
 
 ### 获取域名
 
-对于 URI `http://developer.mozilla.org/en-US/docs/Web`，此示例将 currentDomain 设置为字符串 `developer.mozilla.org`。
+对于 URI `http://developer.mozilla.org/zh-CN/docs/Web`，此示例将 currentDomain 设置为字符串 `developer.mozilla.org`。
 
 ```js
 var currentDomain = document.domain;

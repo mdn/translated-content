@@ -17,7 +17,7 @@ l10n:
 
 ### itemscope の id 属性
 
-ある要素に `itemscope` 属性を指定すると、新しいアイテムが作成されます。アイテムは名前と値の組のグループから構成されます。 `itemscope` 属性と `itemtype` 属性を持つ要素では、 {{htmlattrxref("id")}} 属性も指定することができます。 `id` 属性を使用すると、新しいアイテムにグローバルな識別子を設定することができます。グローバルな識別子によって、そのアイテムはウェブ上のページで見られる他のアイテムに関連付けることができます。
+ある要素に `itemscope` 属性を指定すると、新しいアイテムが作成されます。アイテムは名前と値の組のグループから構成されます。 `itemscope` 属性と `itemtype` 属性を持つ要素では、 [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性も指定することができます。 `id` 属性を使用すると、新しいアイテムにグローバルな識別子を設定することができます。グローバルな識別子によって、そのアイテムはウェブ上のページで見られる他のアイテムに関連付けることができます。
 
 ## 例
 
@@ -63,8 +63,10 @@ l10n:
 ```html
 <div itemscope itemtype="https://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16,
-    1954)</span>
+  <span
+    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
@@ -190,6 +192,7 @@ l10n:
 </table>
 
 > **メモ:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
+
 </div>
 
 #### HTML
@@ -210,10 +213,14 @@ l10n:
   </p>
   <p>
     Published:
-    <time datetime="2022-11-05" itemprop="datePublished">November 5, 20022</time>
+    <time datetime="2022-11-05" itemprop="datePublished"
+      >November 5, 20022</time
+    >
   </p>
-  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of
-    nutmeg.</span>
+  <span itemprop="description"
+    >This is my grandmother's apple pie recipe. I like to add a dash of
+    nutmeg.</span
+  >
   <br />
   <span
     itemprop="aggregateRating"

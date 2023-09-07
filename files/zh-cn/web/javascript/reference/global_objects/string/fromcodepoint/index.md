@@ -5,103 +5,77 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 
 {{JSRef}}
 
-**`String.fromCodePoint()` 静态方法返回使用指定的代码点序列创建的字符串。**
+**`String.fromCodePoint()`** 静态方法将根据指定的码位序列返回一个字符串。
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}
+{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}
 
 ## 语法
 
-```plain
-String.fromCodePoint(num1[, ...[, numN]])
+```js-nolint
+String.fromCodePoint(num1)
+String.fromCodePoint(num1, num2)
+String.fromCodePoint(num1, num2, /* …, */ numN)
 ```
 
 ### 参数
 
-- `num1, ..., numN`
-  - : 一串 Unicode 编码位置，即“代码点”。
+- `numN`
+  - : 一个介于 `0` 和 `0x10FFFF`（包括两者）之间的整数，表示一个 Unicode 码位。
 
 ### 返回值
 
-使用指定的 Unicode 编码位置创建的字符串。
+通过使用指定的码位序列创建的字符串。
 
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果传入无效的 Unicode 编码，将会抛出一个{{jsxref("RangeError")}} (例如： "RangeError: NaN is not a valid code point")。
+  - : 如果 `numN` 不是整数、小于 `0` 或者在转换为数字后大于 `0x10FFFF`，则会抛出该异常。
 
 ## 说明
 
-该方法返回一个字符串，而不是一个 {{jsxref("String")}} 对象。
+`fromCodePoint()` 是 `String` 的静态方法，因此始终使用 `String.fromCodePoint()` 调用它，而不是作为你创建的 `String` 值的方法。
 
-因为 `fromCodePoint()` 是 {{jsxref("String")}} 的一个静态方法，所以只能通过 `String.fromCodePoint()` 这样的方式来使用，不能在你创建的 {{jsxref("String")}} 对象实例上直接调用。
+Unicode 码位范围从 `0` 到 `1114111`（`0x10FFFF`）。在 UTF-16 中，每个字符串索引是一个取值范围为 `0` 到 `65535` 的码元。较高的码位由一对 16 位代理伪字符表示。因此，`fromCodePoint()` 可能返回一个字符串，其在 UTF-16 码元中的 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length) 大于传递的参数个数。有关 Unicode 的更多信息，请参阅 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
 
 ## 示例
 
-### 使用 `fromCodePoint()`
+### 使用 fromCodePoint()
+
+有效输入：
 
 ```js
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // "\u0404" === "Є"
+String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
+String.fromCodePoint(194564); // "\uD87E\uDC04"
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+```
 
-String.fromCodePoint('_');      // RangeError
+无效输入：
+
+```js
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
+### 与 fromCharCode() 的比较
+
+`String.fromCharCode()` 方法无法通过指定其码位来返回补充字符（即码位 `0x010000` 至 `0x10FFFF`）。相反，它需要使用 UTF-16 代理对来返回补充字符：
+
 ```js
-// String.fromCharCode() 方法不能单独获取在高代码点位上的字符
-// 另一方面，下列的示例中，可以返回 4 字节，也可以返回 2 字节的字符
-// (也就是说，它可以返回单独的字符，使用长度 2 代替 1!）
-console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
+String.fromCharCode(0xd83c, 0xdf03); // 码位 U+1F303（夜晚与星星）=== "\uD83C\uDF03"
+String.fromCharCode(55356, 57091);
 ```
 
-## Polyfill
-
-`String.fromCodePoint` 方法是 ECMAScript2015（ES6）新增加的特性，所以一些老的浏览器可能还不支持。可以通过使用下面的 polyfill 代码来保证浏览器的支持：
+另一方面，`String.fromCodePoint()` 可以通过指定其码位（相当于 UTF-32 码元）返回 4 个字节的补充字符，以及更常见的 2 个字节的 BMP 字符：
 
 ```js
-if (!String.fromCodePoint) (function(stringFromCharCode) {
-    var fromCodePoint = function(_) {
-      var codeUnits = [], codeLen = 0, result = "";
-      for (var index=0, len = arguments.length; index !== len; ++index) {
-        var codePoint = +arguments[index];
-        // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
-        // The surrounding `!(...)` is required to correctly handle `NaN` cases
-        // The (codePoint>>>0) === codePoint clause handles decimals and negatives
-        if (!(codePoint < 0x10FFFF && (codePoint>>>0) === codePoint))
-          throw RangeError("Invalid code point: " + codePoint);
-        if (codePoint <= 0xFFFF) { // BMP code point
-          codeLen = codeUnits.push(codePoint);
-        } else { // Astral code point; split in surrogate halves
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          codePoint -= 0x10000;
-          codeLen = codeUnits.push(
-            (codePoint >> 10) + 0xD800,  // highSurrogate
-            (codePoint % 0x400) + 0xDC00 // lowSurrogate
-          );
-        }
-        if (codeLen >= 0x3fff) {
-          result += stringFromCharCode.apply(null, codeUnits);
-          codeUnits.length = 0;
-        }
-      }
-      return result + stringFromCharCode.apply(null, codeUnits);
-    };
-    try { // IE 8 only supports `Object.defineProperty` on DOM elements
-      Object.defineProperty(String, "fromCodePoint", {
-        "value": fromCodePoint, "configurable": true, "writable": true
-      });
-    } catch(e) {
-      String.fromCodePoint = fromCodePoint;
-    }
-}(String.fromCharCode));
+String.fromCodePoint(0x1f303); // 或十进制数 127747
 ```
 
 ## 规范
@@ -114,6 +88,7 @@ if (!String.fromCodePoint) (function(stringFromCharCode) {
 
 ## 参见
 
+- [`core-js` 中 `String.fromCodePoint` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.codePointAt()")}}

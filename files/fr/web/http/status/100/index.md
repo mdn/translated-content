@@ -1,8 +1,6 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-translation_of: Web/HTTP/Status/100
-browser-compat: http.status.100
 ---
 
 {{HTTPSidebar}}

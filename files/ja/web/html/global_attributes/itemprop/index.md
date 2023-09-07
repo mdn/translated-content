@@ -18,9 +18,11 @@ l10n:
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span
+    >Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -65,7 +67,7 @@ l10n:
 
 ## プロパティ
 
-プロパティは、文字列か URL のどちらかの形で値を持ちます。文字列の値が URL である場合、 {{HTMLElement("a")}} 要素とその {{htmlattrxref("href", "a")}} 属性、 {{HTMLElement("img")}} 要素とその {{htmlattrxref("src", "img")}} 属性、または外部リソースにリンクしたり埋め込んだりするその他の要素を用いて表現されます。
+プロパティは、文字列か URL のどちらかの形で値を持ちます。文字列の値が URL である場合、 {{HTMLElement("a")}} 要素とその [`href`](/ja/docs/Web/HTML/Element/a#href) 属性、 {{HTMLElement("img")}} 要素とその [`src`](/ja/docs/Web/HTML/Element/img#src) 属性、または外部リソースにリンクしたり埋め込んだりするその他の要素を用いて表現されます。
 
 ### 文字列の値を持つ 3 つのプロパティ
 
@@ -186,8 +188,11 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 
 ```html
 <div itemscope>
-  <span itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange</span
+  >
 </div>
 ```
 

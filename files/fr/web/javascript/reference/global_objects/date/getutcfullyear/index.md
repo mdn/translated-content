@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCFullYear
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`getUTCFullYear()`** renvoie l'année de la date renseignée, d'ap
 ## Syntaxe
 
 ```js
-dateObj.getUTCFullYear()
+dateObj.getUTCFullYear();
 ```
 
 ### Valeur de retour

@@ -1,7 +1,6 @@
 ---
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions_static
-original_slug: Web/API/Notification/maxActions
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
@@ -18,7 +17,9 @@ original_slug: Web/API/Notification/maxActions
 
 ```js
 const maxActions = Notification.maxActions;
-console.log(`This device can display at most ${maxActions} actions on each notification.`);
+console.log(
+  `This device can display at most ${maxActions} actions on each notification.`,
+);
 ```
 
 ## 仕様書

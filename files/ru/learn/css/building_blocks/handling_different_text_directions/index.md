@@ -1,7 +1,6 @@
 ---
 title: Изменение направления текста
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -11,8 +10,8 @@ translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 Однако в последние годы CSS развивался чтобы лучше поддерживать разную направленность контента, включая контент с направлением справа налево, а также контент сверху вниз (например, в японском языке) - эти разные направления называются режимами письма. По мере того, как вы продвигаетесь в обучении и начинаете работать с макетом, понимание режимов письма будет вам очень полезно, поэтому мы сейчас и познакомимся с ними.
 
 | Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Какие бывают режимы письма?
 
@@ -22,7 +21,7 @@ translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-Три возможных значения свойства [`writing-mode`](/en-US/docs/Web/CSS/writing-mode):
+Три возможных значения свойства [`writing-mode`](/ru/docs/Web/CSS/writing-mode):
 
 - `horizontal-tb`: Направление потока блока сверху вниз. Предложения идут горизонтально.
 - `vertical-rl`: Направление потока блоков справа налево. Предложения идут вертикально.
@@ -117,10 +116,10 @@ In the next module we will take a good look at overflow in CSS.
 1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

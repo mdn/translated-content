@@ -1,14 +1,6 @@
 ---
 title: Window.mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/mozInnerScreenY
 ---
 
 {{APIRef}}

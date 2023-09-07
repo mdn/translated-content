@@ -1,14 +1,6 @@
 ---
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Int32Array
 ---
 
 {{JSRef}}
@@ -132,7 +124,7 @@ console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // Construction à partir d'un tableau
-var arr = new Int32Array([21,31]);
+var arr = new Int32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un autre TypedArray
@@ -145,7 +137,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Int32Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```

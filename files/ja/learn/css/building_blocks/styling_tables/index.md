@@ -17,7 +17,9 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -40,7 +42,7 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
       <td>London Calling</td>
     </tr>
 
-      ... 簡潔にするためにいくつかの行を削除
+    ... 簡潔にするためにいくつかの行を削除
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -58,7 +60,7 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
 </table>
 ```
 
-{{htmlattrxref("scope","th")}}、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} などの機能のおかげで、表はうまくマークアップされ、簡単に装飾を整えられ、アクセスしやすくなりました。 残念なことに、画面に表示したときは見栄えがよくありません ([punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) でライブを見る)。
+[`scope`](/ja/docs/Web/HTML/Element/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} などの機能のおかげで、表はうまくマークアップされ、簡単に装飾を整えられ、アクセスしやすくなりました。 残念なことに、画面に表示したときは見栄えがよくありません ([punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) でライブを見る)。
 
 ![](table-unstyled.png)
 
@@ -72,9 +74,9 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
 2. 次に、`style.css` という名前の新しいファイルを作成し、他のファイルと同じディレクトリーに保存します。
 3. {{htmlelement("head")}} の内側に次の HTML 行を配置して、CSS を HTML にリンクします。
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### スペーシングとレイアウト
 
@@ -106,7 +108,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -134,7 +137,10 @@ th, td {
 まず、HTML `head` の既存の {{htmlelement("link")}} 要素のすぐ上に、次の `<link>` 要素を追加します。
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 そして、`style.css` ファイルの以前の追加の下に、次の CSS を追加します。
@@ -143,11 +149,12 @@ th, td {
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -187,14 +194,21 @@ tfoot th {
 ```css
 /* グラフィックと色 */
 
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -247,7 +261,7 @@ table {
 /* caption */
 
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

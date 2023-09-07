@@ -1,12 +1,6 @@
 ---
 title: Présentation
 slug: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
-tags:
-  - Transformations_XML_avec_XSLT
-  - XML
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
-original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Présentation
 ---
 
 [« Transformations XML avec XSLT](/fr/docs/Transformations_XML_avec_XSLT)
@@ -18,6 +12,7 @@ L'eXtensible Stylesheet Language/Transform est un langage très puissant, et une
 - Une feuille de styles XSLT est identifiée comme telle par un en-tête XSLT standard.
   - : L'élément externe dans une feuille de styles XSLT doit être l'élément \<xsl:stylesheet> (ou éventuellement l'élément `<xsl:transform>`). Cet élément inclut au moins une déclaration d'espace de nommage (`namespace`) et l'attribut de version obligatoire. On peut également inclure d'autres espaces de nommage et trois attributs optionnels.
 - L'espace de nommage imposé pour XSLT est "http\://www\.w3.org/1999/XSL/Transform".
+
   - : Les espaces de nommages sont une source de confusion importante dans XML. Bien qu'ils semblent souvent être des URI, ils ne se réfèrent pas à une ressource située à cette adresse. Ils sont uniquement un moyen d'attribuer un identifiant unique à un ensemble d'éléments connus. La chaîne "http\://www\.w3.org/1999/XSL/Transform" est une constante qui marque les éléments ainsi désignés comme appartenant à l'ensemble des balises définies par le W3C dans sa recommandation XSLT de 1999. Une autre chaîne occasionnellement utilisée dans les feuilles de styles, "http\://www\.w3.org/TR/WD-xsl", indique la conformité avec un des premiers brouillons de travail (Working Draft en anglais, d'où le WD) du document du W3C. Ce dernier espace de nommage n'est pas compatible avec celui que la W3C a adopté et il n'est pas supporté par Netscape. Comme saisir la chaîne "http\://www\.w3.org/1999/XSL/Transform" à chaque fois serait pénible et rendrait la balisage difficile à lire, il existe un mécanisme pour assigner une abréviation à un espace de nommage dans l'en-tête de la feuille de styles. Dans sa totalité, l'élément ouvrant d'une feuille de style serait&nbsp;:
 
     ```xml

@@ -84,7 +84,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
 // 예제는 JavaScript 콘솔에서 직접 실행하실 수 있습니다
 
 // 두 개의 인수를 가지고 그 둘의 합을 반환하는 함수 생성
-var adder = new Function('a', 'b', 'return a + b');
+var adder = new Function("a", "b", "return a + b");
 
 // 함수 호출
 adder(2, 6);
@@ -101,27 +101,27 @@ adder(2, 6);
 var x = 10;
 
 function createFunction1() {
-    var x = 20;
-    return new Function('return x;'); // 여기서 |x|는 전역 범위에 있는 |x|를 참조함.
+  var x = 20;
+  return new Function("return x;"); // 여기서 |x|는 전역 범위에 있는 |x|를 참조함.
 }
 
 function createFunction2() {
-    var x = 20;
-    function f() {
-        return x; // 여기서 |x|는 위의 지역에 있는 |x|를 참조함.
-    }
-    return f;
+  var x = 20;
+  function f() {
+    return x; // 여기서 |x|는 위의 지역에 있는 |x|를 참조함.
+  }
+  return f;
 }
 
 var f1 = createFunction1();
-console.log(f1());          // 10
+console.log(f1()); // 10
 var f2 = createFunction2();
-console.log(f2());          // 20
+console.log(f2()); // 20
 ```
 
 위 코드는 브라우저에서는 정상 동작하지만, {{glossary("Node.js")}}에서는 `x`를 찾을 수 없어, `f1()`이 `ReferenceError`를 생성합니다. 이는 Node.js의 최상위 스크립트 범위가 전역이 아닌 모듈이므로, `x`도 모듈 범위에 종속되기 때문입니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

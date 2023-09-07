@@ -1,8 +1,6 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-browser-compat: javascript.builtins.TypedArray.at
 ---
 
 {{JSRef}}
@@ -16,7 +14,7 @@ L'accès aux éléments d'un tableau typé en utilisant les crochets ne permet q
 ## Syntaxe
 
 ```js
-at(indice)
+at(indice);
 ```
 
 ### Paramètres
@@ -55,7 +53,7 @@ On compare ici différentes façons d'accéder à l'avant-dernier élément d'un
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // En utilisant la propriété length
-const avecLength = uint8[uint8.length-2];
+const avecLength = uint8[uint8.length - 2];
 console.log(avecLength); // Affiche 11 dans la console
 
 // En utilisant la méthode slice()

@@ -9,7 +9,7 @@ slug: Web/API/Document/fullscreen
 
 虽然这个属性是只读的，但如果修改它，它不会抛出 (即使在严格模式下);setter 是一个非操作，它将被忽略。
 
-> **备注：** 由于不推荐使用此属性，您可以通过检查{{DOMxRef("document.fullscreenelement")}}是否为 **`null`** 来确定文档上是否启用全屏模式。
+> **备注：** 由于不推荐使用此属性，你可以通过检查{{DOMxRef("document.fullscreenelement")}}是否为 **`null`** 来确定文档上是否启用全屏模式。
 
 ### 概述
 
@@ -26,8 +26,10 @@ var isFullScreen = document.mozFullScreen || document.webkitIsFullScreen;
 ```js
 function isDocumentInFullScreenMode() {
   // 过去由 F11 触发的那种浏览器全屏模式和 HTML5 中内容的全屏模式是不一样的
-  return (document.fullscreenElement && document.fullscreenElement !== null) ||
-      (!document.mozFullScreen && !document.webkitIsFullScreen);
+  return (
+    (document.fullscreenElement && document.fullscreenElement !== null) ||
+    (!document.mozFullScreen && !document.webkitIsFullScreen)
+  );
 }
 ```
 

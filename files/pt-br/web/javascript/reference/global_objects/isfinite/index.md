@@ -27,26 +27,25 @@ Você pode usar esta função para determinar se um número é um número finito
 ## Exemplos
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(null);      // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(null); // true
 
-
-isFinite("0");       // true, teria sido false com o
-                     // mais robusto Number.isFinite("0")
+isFinite("0"); // true, teria sido false com o
+// mais robusto Number.isFinite("0")
 ```
 
 ## Especificações
 
-| Especificação                                                            | Status                   | Comentário         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('ES3')}}                                                 | {{Spec2('ES3')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}     |                    |
+| Especificação                                           | Status             | Comentário         |
+| ------------------------------------------------------- | ------------------ | ------------------ |
+| {{SpecName('ES3')}}                                     | {{Spec2('ES3')}}   | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}      | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}   |                    |
 
 ## Browser compatibilidade
 

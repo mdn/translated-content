@@ -1,6 +1,6 @@
 ---
 title: CSS Generated Content
-slug: Web/CSS/CSS_Generated_Content
+slug: Web/CSS/CSS_generated_content
 ---
 
 {{CSSRef}}

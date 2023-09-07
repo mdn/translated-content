@@ -1,12 +1,6 @@
 ---
 title: Liste de groupes avec indicateurs
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/Layout_cookbook/List_group_with_badges
-original_slug: Web/CSS/Layout_cookbook/Liste_groupes_avec_indicateurs
 ---
 
 {{CSSRef}}

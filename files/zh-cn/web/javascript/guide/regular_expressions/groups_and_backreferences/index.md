@@ -1,7 +1,6 @@
 ---
 title: Groups and ranges
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -38,7 +37,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td>
         <p>
           字符集。
-          匹配任何一个包含的字符。您可以使用连字符来指定字符范围，但如果连字符显示为方括号中的第一个或最后一个字符，则它将被视为作为普通字符包含在字符集中的文字连字符。也可以在字符集中包含字符类。
+          匹配任何一个包含的字符。你可以使用连字符来指定字符范围，但如果连字符显示为方括号中的第一个或最后一个字符，则它将被视为作为普通字符包含在字符集中的文字连字符。也可以在字符集中包含字符类。
         </p>
         <p>
           例如，<code>[abcd]</code> 是与<code>[a-d]</code>.一样的，它们会
@@ -102,7 +101,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
               >String.match()</a
             ></code
           >
-          不会返回组，如果设置了 <code>/.../g</code> 标志。但是，您仍然可以使用
+          不会返回组，如果设置了 <code>/.../g</code> 标志。但是，你仍然可以使用
           <code
             ><a
               href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
@@ -112,7 +111,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           to get all matches.
         </p>
         <p>
-          match() 不会返回组，如果/…但是，您仍然可以使用 String.matchAll()
+          match() 不会返回组，如果/…但是，你仍然可以使用 String.matchAll()
           来获取所有匹配项。
         </p>
       </td>
@@ -177,25 +176,25 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+let regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 let match = regexpNames.exec(personList);
 do {
   console.log(`Hello ${match[1]} ${match[2]}`);
-} while((match = regexpNames.exec(personList)) !== null);
+} while ((match = regexpNames.exec(personList)) !== null);
 ```
 
 ### 使用命名组
 
 ```js
-let users= `姓氏：李，名字：雷
+let users = `姓氏：李，名字：雷
 姓氏：韩，名字：梅梅`;
 
-let regexpNames =  /姓氏：(?<first>.+)，名字：(?<last>.+)/mg;
+let regexpNames = /姓氏：(?<first>.+)，名字：(?<last>.+)/gm;
 let match = regexpNames.exec(users);
 
 do {
   console.log(`Hello ${match.groups.first} ${match.groups.last}`);
-} while((match = regexpNames.exec(users)) !== null);
+} while ((match = regexpNames.exec(users)) !== null);
 
 // Hellow 李 雷
 // Hellow 韩 梅梅

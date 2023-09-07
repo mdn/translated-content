@@ -1,13 +1,6 @@
 ---
 title: Sélecteurs d'attribut
 slug: Web/CSS/Attribute_selectors
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Attribute_selectors
-original_slug: Web/CSS/Sélecteurs_d_attribut
 ---
 
 {{CSSRef}}
@@ -22,7 +15,8 @@ a[title] {
 
 /* Les éléments <a> avec un href qui correspond */
 /* à "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -175,7 +169,7 @@ div[data-lang="zh-TW"] {
 
 {{SeeCompatTable}}
 
-La spécification HTML indique que l'attribut {{htmlattrxref("type", "input")}} doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec {{htmlattrxref("type", "ol")}} d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.
+La spécification HTML indique que l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec [`type`](/fr/docs/Web/HTML/Element/ol#type) d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.
 
 #### CSS
 

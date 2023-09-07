@@ -54,9 +54,9 @@ slug: Web/CSS/length
 - `vw`
   - : 视口的初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)的宽度的 1%。
 - `vi` {{experimental_inline}}
-  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#inline-dimension)方向上。
+  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#行向尺度)方向上。
 - `vb` {{experimental_inline}}
-  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#block-dimension)方向上。
+  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向尺度)方向上。
 - `vmin`
   - : 视口高度 `vw` 和宽度 `vh` 两者之间的最小值。
 - `vmax`
@@ -110,14 +110,11 @@ slug: Web/CSS/length
 <div class="outer">
   <div class="input-container">
     <label>Enter width:</label>
-    <input type="text" id="length">
+    <input type="text" id="length" />
   </div>
-  <div class="inner">
-
-  </div>
+  <div class="inner"></div>
 </div>
-<div class="results">
-</div>
+<div class="results"></div>
 ```
 
 #### CSS
@@ -139,15 +136,17 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .result {
   height: 20px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
   background-color: orange;
   display: flex;
   align-items: center;
@@ -179,22 +178,22 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector('.inner');
-const inputElem = document.querySelector('input');
-const resultsDiv = document.querySelector('.results');
+const inputDiv = document.querySelector(".inner");
+const inputElem = document.querySelector("input");
+const resultsDiv = document.querySelector(".results");
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement('div');
-  result.className = 'result';
+  const result = document.createElement("div");
+  result.className = "result";
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = '';
+  inputElem.value = "";
   inputElem.focus();
-})
+});
 ```
 
 #### 结果
@@ -213,4 +212,4 @@ inputElem.addEventListener('change', () => {
 
 - [CSS 属性值与单位教程](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
 - [CSS 属性值与单位参考](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [框盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model)
+- [框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)

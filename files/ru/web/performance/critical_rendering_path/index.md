@@ -1,10 +1,8 @@
 ---
 title: Критические этапы рендеринга
 slug: Web/Performance/Critical_rendering_path
-tags:
-  - Performance
-translation_of: Web/Performance/Critical_rendering_path
 ---
+
 Критические этапы рендеринга (Critical Rendering Path) - это последовательность шагов, которые выполняет браузер, когда преобразуется HTML, CSS и JavaScript в пиксели, которые вы видите на экране. Оптимизация этих шагов улучшает производительность рендера. Эти этапы включают в себя работу с [Document Object Model](/ru/docs/Web/API/Document_Object_Model)(DOM), [CSS Object Model](/ru/docs/Web/API/CSS_Object_Model)(CSSOM), деревом рендера (render tree) и компоновкой объектов (layout)
 
 Объектная модель документа DOM создаётся в тот момент, когда браузер парсит HTML. Этот HTML может запрашивать JavaScript, который может модифицировать DOM. HTML может запросить стили, которые участвуют в создании CSS Object Model. Движок браузера комбинирует эти две объектные модели, чтобы создать дерево рендера (render tree). Компоновка (layout) определяет размеры и позицию каждого элемента на странице. Как только компоновка определена - пиксели отрисовываются на экране.

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Addition
 ## 構文
 
 ```js
-x + y
+x + y;
 ```
 
 ## 例
@@ -21,26 +21,26 @@ x + y
 
 ```js
 // 数値 + 数値 -> 加算
-1 + 2 // 3
+1 + 2; // 3
 
 // 論理値 + 数値 -> 加算
-true + 1 // 2
+true + 1; // 2
 
 // 論理値 + 論理値 -> 加算
-false + false // 0
+false + false; // 0
 ```
 
 ### 文字列の連結
 
 ```js
 // 文字列 + 文字列 -> 連結
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 
 // 数値 + 文字列 -> 連結
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 
 // 文字列 + 論理値 -> 連結
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## 仕様書

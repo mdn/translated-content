@@ -1,19 +1,9 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-translation_of: Web/API/CacheStorage
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+
+{{APIRef("Service Workers API")}}
 
 Интерфейс **`CacheStorage`** представляет собой хранилище для объектов {{domxref("Cache")}}. Он предоставляет главную директорию всех именованных кешей, к которым могут получить доступ {{domxref("ServiceWorker")}}, другие типы воркеров или {{domxref("window")}} (вы не обязаны использовать их с service workers, даже если существует спецификация, определяющая это) и поддерживает отображение строковых имён соответствующих объектов {{domxref("Cache")}}.
 
@@ -51,37 +41,43 @@ translation_of: Web/API/CacheStorage
 Наконец, возвращаем ответ, был ли встроенный запрос в итоге равнозначным, используя {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 
-this.addEventListener('fetch', function(event) {
+this.addEventListener("fetch", function (event) {
   var response;
-  event.respondWith(caches.match(event.request).catch(function() {
-    return fetch(event.request);
-  }).then(function(r) {
-    response = r;
-    caches.open('v1').then(function(cache) {
-      cache.put(event.request, response);
-    });
-    return response.clone();
-  }).catch(function() {
-    return caches.match('/sw-test/gallery/myLittleVader.jpg');
-  }));
+  event.respondWith(
+    caches
+      .match(event.request)
+      .catch(function () {
+        return fetch(event.request);
+      })
+      .then(function (r) {
+        response = r;
+        caches.open("v1").then(function (cache) {
+          cache.put(event.request, response);
+        });
+        return response.clone();
+      })
+      .catch(function () {
+        return caches.match("/sw-test/gallery/myLittleVader.jpg");
+      }),
+  );
 });
 ```
 
@@ -89,7 +85,7 @@ this.addEventListener('fetch', function(event) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

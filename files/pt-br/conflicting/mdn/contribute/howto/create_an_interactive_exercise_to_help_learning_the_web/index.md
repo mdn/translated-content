@@ -1,9 +1,6 @@
 ---
 title: distant example
-slug: >-
-  conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
-original_slug: >-
-  MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example
+slug: conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
 
 {{MDNSidebar}}

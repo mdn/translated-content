@@ -1,23 +1,13 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - NumberFormat
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/supportedLocalesOf
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.supportedLocalesOf()`** renvoie un tableau de locales supportées parmi les locales fournies en argument afin d'éviter d'utiliser celle par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat-supportedlocalesof.html")}}
 
 ## Syntaxe
 
@@ -52,7 +42,7 @@ Si on dispose d'un environnement qui supporte les locales indonésienne et allem
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
+var options = { localeMatcher: "lookup" };
 console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```

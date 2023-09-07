@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: result イベント'
+title: "SpeechRecognition: result イベント"
 slug: Web/API/SpeechRecognition/result_event
-original_slug: Web/API/SpeechRecognition/onresult
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
@@ -15,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('result', (event) => { })
+addEventListener("result", (event) => {});
 
-onresult = (event) => { }
+onresult = (event) => {};
 ```
 
 ## イベント型
@@ -48,7 +47,7 @@ _以下に列挙したプロパティに加えて、親インターフェイス�
 ```js
 const recognition = new SpeechRecognition();
 
-recognition.addEventListener('result', (event) => {
+recognition.addEventListener("result", (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `結果を受信しました: ${color}.`;
   bg.style.backgroundColor = color;
@@ -62,7 +61,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `結果を受信しました: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## 仕様書

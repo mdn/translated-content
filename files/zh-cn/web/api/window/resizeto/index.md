@@ -25,10 +25,7 @@ window.resizeTo(aWidth, aHeight)
 ```js
 // 将窗口设置为整个屏幕的 1/4 大小（面积）
 function quarter() {
-  window.resizeTo(
-    window.screen.availWidth / 2,
-    window.screen.availHeight / 2
-  );
+  window.resizeTo(window.screen.availWidth / 2, window.screen.availHeight / 2);
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Console.timeLog()
 slug: Web/API/console/timeLog
-translation_of: Web/API/Console/timeLog
 ---
 
 {{APIRef("Console API")}}Выводит в консоль текущее значение таймера, запущенного вызовом {{domxref("console.time()")}}.

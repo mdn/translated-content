@@ -12,7 +12,7 @@ slug: Web/API/HTMLTableRowElement/rowIndex
 ## 语法
 
 ```js
-var index = HTMLTableRowElement.rowIndex
+var index = HTMLTableRowElement.rowIndex;
 ```
 
 ### 返回值
@@ -28,15 +28,30 @@ var index = HTMLTableRowElement.rowIndex
 ```html
 <table>
   <thead>
-    <tr><th>商品</th>       <th>价格</th></tr>
+    <tr>
+      <th>商品</th>
+      <th>价格</th>
+    </tr>
   </thead>
   <tbody>
-    <tr><td>香蕉</td>       <td>$2</td></tr>
-    <tr><td>橘子</td>       <td>$8</td></tr>
-    <tr><td>西冷牛排</td>   <td>$20</td></tr>
+    <tr>
+      <td>香蕉</td>
+      <td>$2</td>
+    </tr>
+    <tr>
+      <td>橘子</td>
+      <td>$8</td>
+    </tr>
+    <tr>
+      <td>西冷牛排</td>
+      <td>$20</td>
+    </tr>
   </tbody>
   <tfoot>
-    <tr><td>总计</td>       <td>$30</td></tr>
+    <tr>
+      <td>总计</td>
+      <td>$30</td>
+    </tr>
   </tfoot>
 </table>
 ```
@@ -44,7 +59,7 @@ var index = HTMLTableRowElement.rowIndex
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll('tr');
+let rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
   let z = document.createElement("td");

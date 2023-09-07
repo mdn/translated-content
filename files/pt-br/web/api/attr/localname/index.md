@@ -33,7 +33,7 @@ O seguinte exemplo mostra "id" em um diálogo de alerta.
 
 ```js
 const element = document.querySelector("#example");
-element.addEventListener("click", function() {
+element.addEventListener("click", function () {
   const attribute = element.attributes[0];
   alert(attribute.localName);
 });
@@ -49,13 +49,11 @@ O nome local de um atributo é a parte do nome qualificado do atributo the vem d
 
 ## Especificações
 
-| Especificação                                                                | Status                   | Comment           |
-| ---------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('DOM4', '#interface-attr', 'Attr.localName')}} | {{Spec2('DOM4')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Attr.localName")}}
+{{Compat}}
 
 ## Veja também
 

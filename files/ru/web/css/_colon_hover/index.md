@@ -1,12 +1,8 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:hover
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -22,9 +18,13 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:hover
 ## Примеры
 
 ```css
-:link:hover { outline: dotted red; }
+:link:hover {
+  outline: dotted red;
+}
 
-.foo:hover { background: gold; }
+.foo:hover {
+  background: gold;
+}
 ```
 
 ### Выпадающее меню

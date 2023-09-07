@@ -18,7 +18,7 @@ letter-spacing: normal;
 /* <length> values */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Global values */
 letter-spacing: inherit;
@@ -52,11 +52,21 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### 结果

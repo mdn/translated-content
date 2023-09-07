@@ -69,7 +69,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -90,13 +91,17 @@ Marcado en línea que confiere un énfasis específico al texto que rodea:
 ```html
 <p>El agua está <em>muy caliente</em>.</p>
 
-<p>Las gotas de agua que se acumulan en las superficies se denominan <strong>condensación</strong>.</p>
+<p>
+  Las gotas de agua que se acumulan en las superficies se denominan
+  <strong>condensación</strong>.
+</p>
 ```
 
 Es posible que desees agregar algunos colores simples a su texto enfatizado:
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -108,7 +113,10 @@ Sin embargo, rara vez necesitarás dar estilo a elementos de énfasis de manera 
 Un elemento que permite asociar una abreviatura, un acrónimo o una inicialización a su expansión:
 
 ```html
-<p>El contenido web se marca usando <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>
+  El contenido web se marca usando
+  <abbr title="Hypertext Markup Language">HTML</abbr>.
+</p>
 ```
 
 Nuevamente, es posible que desees darle estilo de una manera simple:
@@ -126,7 +134,9 @@ La convención de estilo reconocida para las abreviaturas es un subrayado puntea
 Hipervínculos: la forma de llegar a nuevos lugares en la web:
 
 ```html
-<p>Visita la <a href="https://www.mozilla.org">página de inicio de Mozilla</a>.</p>
+<p>
+  Visita la <a href="https://www.mozilla.org">página de inicio de Mozilla</a>.
+</p>
 ```
 
 A continuación se muestra un estilo de enlace muy simple:
@@ -136,7 +146,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -162,7 +174,7 @@ Elementos que permiten a los usuarios introducir datos en sitios web:
 ```html
 <div>
   <label for="nombre">Entra tu nombre</label>
-  <input type="text" id="nombre" name="nombre">
+  <input type="text" id="nombre" name="nombre" />
 </div>
 ```
 
@@ -251,7 +263,7 @@ También hemos hecho que esta validación de formulario sea bastante accesible. 
 
 ```html
 <label for="name">Entra tu nombre:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 Solo realizamos la validación cuando se envía el formulario; esto es para no actualizar la IU con demasiada frecuencia y confundir potencialmente a los lectores de pantalla (y posiblemente a otros) usuarios:
@@ -260,16 +272,16 @@ Solo realizamos la validación cuando se envía el formulario; esto es para no a
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(let i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -285,12 +297,17 @@ Para cada entrada sin un valor completado cuando se envía el formulario, creamo
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement("li");
+  const anchor = document.createElement("a");
 
-  anchor.textContent = 'El campo ' + testItem.input.name + ' está vacío. Entra tu ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  anchor.textContent =
+    "El campo " +
+    testItem.input.name +
+    " está vacío. Entra tu " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -308,8 +325,7 @@ Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostrac
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -343,7 +359,7 @@ imgThumb.onblur = hideImg;
 
 Las dos primeras líneas ejecutan las funciones cuando el puntero del ratón se desplaza sobre la miniatura y deja de hacerlo, respectivamente. Sin embargo, esto no nos permite acceder a la vista ampliada con el teclado; para hacerlo hemos incluido las dos últimas líneas, que ejecutan las funciones cuando la imagen toma y pierde el foco. Esto se puede hacer presionando el tabulador hasta llegar a la imagen, porque le hemos dado `tabindex="0"`.
 
-El evento de `click` es interesante: parce dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#Volver_a_añadir_la_accesibilidad_del_teclado)).
+El evento de `click` es interesante: parece dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#Volver_a_añadir_la_accesibilidad_del_teclado)).
 
 ## ¡Pon a prueba tus habilidades
 

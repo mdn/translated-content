@@ -1,7 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/raw
 ---
 
 {{JSRef}}
@@ -45,7 +44,7 @@ En la mayoría de los casos, `String.raw()` es usado con plantillas _string_. La
 ### Usando `String.raw()`
 
 ```js
-String.raw`Hi\n${2+3}!`;
+String.raw`Hi\n${2 + 3}!`;
 // 'Hi\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
@@ -58,19 +57,23 @@ String.raw`Hi\u000A!`;
 // You can confirm this by checking the .length property
 // of the string.
 
-let name = 'Bob';
+let name = "Bob";
 String.raw`Hi\n${name}!`;
 // 'Hi\nBob!', substitutions are processed.
 
 // Normally you would not call String.raw() as a function,
 // but to simulate `t${0}e${1}s${2}t` you can do:
-String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
+String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 // Note that 'test', a string, is an array-like object
 // The following is equivalent to
 // `foo${2 + 3}bar${'Java' + 'Script'}baz`
-String.raw({
-  raw: ['foo', 'bar', 'baz']
-}, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
+String.raw(
+  {
+    raw: ["foo", "bar", "baz"],
+  },
+  2 + 3,
+  "Java" + "Script",
+); // 'foo5barJavaScriptbaz'
 ```
 
 ## Especificaciones

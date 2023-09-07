@@ -53,7 +53,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 - 用于 `textStart`、`textEnd`、`prefix-` 和 `suffix` 值的文本字符串需要作[百分比编码](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)。
 - 匹配是大小写不敏感的。
-- 单独的 `textStart`、`textEnd`、`prefix-` 和 `suffix` 字符串需要完全位于同一个[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements#元素)中，但完整的匹配可以跨越多个元素的边界。
+- 单独的 `textStart`、`textEnd`、`prefix-` 和 `suffix` 字符串需要完全位于同一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)中，但完整的匹配可以跨越多个元素的边界。
 - 出于安全考虑，该功能要求在 noopener 上下文中打开链接——使用该特性时，你需要在你的 {{htmlelement("a")}} 元素中添加 `rel="noopener"`，并在你的 {{domxref("window.open()")}} 调用中添加 `noopener`。
 - 文本片段只在完整的（非同一页面）、用户发起的导航中被调用。
 - 文本片段只适用于主框架；文本不会在 {{htmlelement("iframe")}} 内被搜索到，并且 `iframe` 导航不会调用文本片段。
@@ -81,7 +81,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ### 含有 prefix- 和/或 -suffix 的示例
 
 - [https://example.com#:~:text=asking-,for](https://example.com#:~:text=asking-,for) 滚动到文档中第二次出现“for”文本的地方并高亮它。
-- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=表示-,referrer](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E8%A1%A8%E7%A4%BA-,referrer) 滚动到文档中第一次在文本“表示” 后方出现“referrer”文本的地方并高亮它。这是该文档中“referrer”的第五次出现，如果没有前缀，会高亮第一次匹配。
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=表示-,referrer](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E8%A1%A8%E7%A4%BA-,referrer) 滚动到文档中第一次在文本“表示”后方出现“referrer”文本的地方并高亮它。这是该文档中“referrer”的第五次出现，如果没有前缀，会高亮第一次匹配。
 - [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=浏览器,-本身](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E6%B5%8F%E8%A7%88%E5%99%A8,-%E6%9C%AC%E8%BA%AB) 滚动到文档中第一次在“浏览器”后方出现“本身”文本的地方并高亮它。这是该文档中“浏览器”的第七次出现，如果没有后缀，会高亮第一次匹配。
 - [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=浏览器-,对待下载,自动打开。,-自动打开](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E6%B5%8F%E8%A7%88%E5%99%A8-,%E5%AF%B9%E5%BE%85%E4%B8%8B%E8%BD%BD,%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E3%80%82,-%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80) 滚动到文档中第一次出现“对待下载 ... 自动打开。”文本的地方，该文本以“浏览器”为前驱，“自动打开”为后续。这说明了一个更复杂的例子，前缀/后缀被用来锁定你想要链接的特定文本实例。尝试移除前缀，看看会匹配到什么。
 
@@ -98,7 +98,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 ### 为匹配的文本片段添加样式
 
-浏览器可以自由地以它们选择的任何默认方式对突出显示的文本进行样式处理。[CSS 伪元素模块等级 4](https://w3c.github.io/csswg-drafts/css-pseudo/#selectordef-target-text) 定义了 {{cssxref("::target-text")}} 伪元素，它允许你指定自定义样式。
+浏览器可以自由地以它们选择的任何默认方式对突出显示的文本进行样式处理。[CSS 伪元素模块等级 4](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) 定义了 {{cssxref("::target-text")}} 伪元素，它允许你指定自定义样式。
 
 例如，在我们的 [scroll-to-text 示例](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance)中我们有如下的 CSS 样式：
 

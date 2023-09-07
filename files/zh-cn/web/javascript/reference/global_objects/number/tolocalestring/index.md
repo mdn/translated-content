@@ -67,9 +67,9 @@ console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English loc
 function toLocaleStringSupportsLocales() {
   const number = 0;
   try {
-    number.toLocaleString('i');
+    number.toLocaleString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -79,7 +79,11 @@ function toLocaleStringSupportsLocales() {
 
 ```js
 function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl === 'object' && Intl && typeof Intl.NumberFormat === 'function');
+  return !!(
+    typeof Intl === "object" &&
+    Intl &&
+    typeof Intl.NumberFormat === "function"
+  );
 }
 ```
 
@@ -93,23 +97,23 @@ function toLocaleStringSupportsOptions() {
 const number = 123456.789;
 
 // 德国使用逗号作为小数分隔符，分位周期为千位
-console.log(number.toLocaleString('de-DE'));
+console.log(number.toLocaleString("de-DE"));
 // → 123.456,789
 
 // 在大多数阿拉伯语国家使用阿拉伯语数字
-console.log(number.toLocaleString('ar-EG'));
+console.log(number.toLocaleString("ar-EG"));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // 印度使用千位/拉克（十万）/克若尔（千万）分隔
-console.log(number.toLocaleString('en-IN'));
+console.log(number.toLocaleString("en-IN"));
 // → 1,23,456.789
 
 // nu 扩展字段要求编号系统，e.g. 中文十进制
-console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
 // 当请求不支持的语言时，例如巴厘语，加入一个备用语言，比如印尼语
-console.log(number.toLocaleString(['ban', 'id']));
+console.log(number.toLocaleString(["ban", "id"]));
 // → 123.456,789
 ```
 
@@ -121,20 +125,29 @@ console.log(number.toLocaleString(['ban', 'id']));
 const number = 123456.789;
 
 // 要求货币格式
-console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  number.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456,79 €
 
 // 日元不使用小数位
-console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  number.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,457
 
 // 限制三位有效数字
-console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(number.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,000
 
 // 使用带选项的主机默认语言进行数字格式化
 const num = 30000.65;
-console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+console.log(
+  num.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }),
+);
 // → "30,000.65" 英语为默认语言
 // → "30.000,65" 德语为默认语言
 // → "30 000,65" 法语为默认语言

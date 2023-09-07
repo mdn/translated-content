@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: ratechange'
+title: "HTMLMediaElement: ratechange"
 slug: Web/API/HTMLMediaElement/ratechange_event
 ---
 
@@ -22,12 +22,12 @@ slug: Web/API/HTMLMediaElement/ratechange_event
 
 ## 屬性
 
-| 屬性                                  | 類型                                 | 描述                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------- |
+| 屬性                            | 類型                       | 描述                            |
+| ------------------------------- | -------------------------- | ------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件目標（DOM 樹中最頂層的目標) |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 事件類型                        |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 事件是否觸發冒泡                |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 事件是否可取消                  |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 事件類型                        |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | 事件是否觸發冒泡                |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | 事件是否可取消                  |
 
 ## 規範
 

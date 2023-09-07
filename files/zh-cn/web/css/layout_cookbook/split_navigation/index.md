@@ -25,7 +25,7 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 自动外边距会吸收其应用方向上的所有可用空间。这就是利用自动外边距实现居中的工作原理—— 块的两侧都有一个试图占用所有空间的空白，从而将块推到了中间。
 
-在这种情况下，左侧的自动边距会占用所有可用空间，并将项目推到右侧。您可以将类`push`应用到列表中的任何项目上。
+在这种情况下，左侧的自动边距会占用所有可用空间，并将项目推到右侧。你可以将类`push`应用到列表中的任何项目上。
 
 ## 浏览器兼容性
 
@@ -37,4 +37,4 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 ## 参见
 
-- [CSS Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)

@@ -1,18 +1,6 @@
 ---
 title: Valeurs de retour des fonctions
 slug: Learn/JavaScript/Building_blocks/Return_values
-tags:
-  - Apprendre
-  - Article
-  - Débutant
-  - Fonctions
-  - Guide
-  - JavaScript
-  - Return
-  - Valeurs de retour
-  - Écriture de code
-translation_of: Learn/JavaScript/Building_blocks/Return_values
-original_slug: Apprendre/JavaScript/Building_blocks/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -47,8 +35,8 @@ Il y a un concept essentiel que nous devons aborder dans ce cours, pour être co
 **Les valeurs de retour** sont, comme leur nom l'indique, les valeurs retournées par une fonction après son exécution. Vous en avez déjà rencontré plusieurs fois sans y avoir pensé explicitement. Revenons à notre code:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -69,10 +57,10 @@ Pour retourner une valeur d'une fonction que vous avez créée, vous devez utili
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -83,7 +71,7 @@ function draw() {
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -91,7 +79,7 @@ Cela peut aussi s'écrire ainsi:
 
 ```js
 function random(number) {
-  var result = Math.floor(Math.random()*number);
+  var result = Math.floor(Math.random() * number);
   return result;
 }
 ```
@@ -119,47 +107,57 @@ Allons-y, écrivons nos propres fonctions avec des valeurs de retour.
 1. Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
 2. Ajoutons quelques fonctions dans `<script>` . Sous les deux lignes existantes de JavaScript, ajoutez les définitions des fonctions suivantes:
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      var x = num;
-      while (x > 1) {
-        num *= x-1;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     var x = num;
+     while (x > 1) {
+       num *= x - 1;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    Les fonctions `squared()` et `cubed()` sont plutôt évidentes, elle retournent le carré et le cube du nombre donné en paramètre. La fonction `factorial()` retourne la [factorielle](https://en.wikipedia.org/wiki/Factorial) du nombre donné.
+   Les fonctions `squared()` et `cubed()` sont plutôt évidentes, elle retournent le carré et le cube du nombre donné en paramètre. La fonction `factorial()` retourne la [factorielle](https://en.wikipedia.org/wiki/Factorial) du nombre donné.
 
 3. Ensuite, nous allons ajouter un moyen d'afficher des informations sur le nombre entré dans le champ texte. Ajoutez le gestionnaire d'événement suivant à la suite des fonctions:
 
-    ```js
-    input.onchange = function() {
-      var num = input.value;
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.onchange = function () {
+     var num = input.value;
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent =
+         num +
+         " squared is " +
+         squared(num) +
+         ". " +
+         num +
+         " cubed is " +
+         cubed(num) +
+         ". " +
+         num +
+         " factorial is " +
+         factorial(num) +
+         ".";
+     }
+   };
+   ```
 
-    Ici nous créons un gestionnaire d'événement `onchange` qui s'exécute chaque fois que l'événement `change` se déclenche sur le champ de saisie de texte, c'est-à-dire lorsqu'une nouvelle valeur est entrée dans le champ de saisie de texte, puis qu'elle est soumise (par exemple lorsqu'on entre une valeur puis qu'on appuie sur Tab). Quand cette fonction anonyme s'exécute, la valeur entrée dans le champ de saisie est stockée dans la variable `num`.
+   Ici nous créons un gestionnaire d'événement `onchange` qui s'exécute chaque fois que l'événement `change` se déclenche sur le champ de saisie de texte, c'est-à-dire lorsqu'une nouvelle valeur est entrée dans le champ de saisie de texte, puis qu'elle est soumise (par exemple lorsqu'on entre une valeur puis qu'on appuie sur Tab). Quand cette fonction anonyme s'exécute, la valeur entrée dans le champ de saisie est stockée dans la variable `num`.
 
-    Ensuite, nous faisons un test: Si la valeur entrée n'est pas un nombre, un message d'erreur s'affiche dans le paragraphe. Le test vérifie si l'expression `isNaN(num)` retourne `true`. Nous utilisons la fonction [isNaN()](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN) pour vérifier si la valeur `num` est un nombre — si c'est le cas, elle retourne `false`, sinon `true`.
+   Ensuite, nous faisons un test: Si la valeur entrée n'est pas un nombre, un message d'erreur s'affiche dans le paragraphe. Le test vérifie si l'expression `isNaN(num)` retourne `true`. Nous utilisons la fonction [isNaN()](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN) pour vérifier si la valeur `num` est un nombre — si c'est le cas, elle retourne `false`, sinon `true`.
 
-    Si le test retourne `false`, la valeur `num` est un nombre, alors une phrase s'affiche dans le paragraphe indiquant le carré, le cube et la factorielle du nombre. La phrase appelle les fonctions `squared()`, `cubed()` et `factorial()` pour obtenir les valeurs désirées.
+   Si le test retourne `false`, la valeur `num` est un nombre, alors une phrase s'affiche dans le paragraphe indiquant le carré, le cube et la factorielle du nombre. La phrase appelle les fonctions `squared()`, `cubed()` et `factorial()` pour obtenir les valeurs désirées.
 
 4. Sauvegardez votre code, chargez-le dans votre navigateur et testez-le.
 

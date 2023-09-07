@@ -36,14 +36,14 @@ Crea un nuevo `<div>` y lo inserta antes del elemento con ID "`div1`".
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Trabajando con elementos||</title>
-</head>
-<body>
-  <div id="div1">El texto superior se ha creado dinámicamente.</div>
-</body>
+  <head>
+    <title>||Trabajando con elementos||</title>
+  </head>
+  <body>
+    <div id="div1">El texto superior se ha creado dinámicamente.</div>
+  </body>
 </html>
 ```
 
@@ -52,7 +52,7 @@ Crea un nuevo `<div>` y lo inserta antes del elemento con ID "`div1`".
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // crea un nuevo div
   // y añade contenido
   var newDiv = document.createElement("div");

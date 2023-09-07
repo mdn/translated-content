@@ -1,18 +1,6 @@
 ---
 title: Publier votre site web
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Apprendre
-  - Débutant
-  - Codage
-  - FTP
-  - GitHub
-  - Google App Engine
-  - Web
-  - Publier
-  - Serveur Web
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Apprendre/Commencer_avec_le_web/Publier_votre_site_web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
@@ -72,14 +60,14 @@ Maintenant, nous allons vous montrer comment publier facilement votre site via l
 1. Pour commencer, [inscrivez-vous sur GitHub](https://github.com/join) et vérifiez votre adresse e-mail.
 2. Ensuite, [créez un dépôt](https://github.com/new) dans lequel vous placerez vos fichiers.
 3. Sur cette page, dans le champ _Repository name_, entrez _username_.github.io : _username_ est votre nom d'utilisateur. Ainsi, par exemple, notre ami bobsmith entrera _bobsmith.github.io_.
-    Également, cochez _Initialize this repository with a README_, puis cliquez sur _Create repository_.![](github-create-repo.png)
+   Également, cochez _Initialize this repository with a README_, puis cliquez sur _Create repository_.![](github-create-repo.png)
 4. Ensuite, glissez-déposez le contenu du dossier de votre site Web dans votre référentiel, puis cliquez sur _Commit changes_.
 
-    > **Note :** Assurez-vous que votre dossier comporte bien un fichier _index.html._
+   > **Note :** Assurez-vous que votre dossier comporte bien un fichier _index.html._
 
 5. Maintenant, naviguez jusqu'à _username_.github.io pour voir votre site web en ligne. Par exemple, pour le nom d'utilisateur _chrisdavidmills_, allez à [chrisdavidmills.github.io](https://chrisdavidmills.github.io/).
 
-    > **Note :** Cela peut prendre quelques minutes avant que votre site web soit actif. S'il ne fonctionne pas immédiatement, attendez quelques minutes, puis essayez à nouveau.
+   > **Note :** Cela peut prendre quelques minutes avant que votre site web soit actif. S'il ne fonctionne pas immédiatement, attendez quelques minutes, puis essayez à nouveau.
 
 Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github/working-with-github-pages/getting-started-with-github-pages).
 

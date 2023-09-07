@@ -1,8 +1,6 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
 {{WebAssemblySidebar}}
@@ -36,22 +34,17 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 > **Примечание:** Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем `compile()`.
 
 ## Характеристики
 
-| Спецификация                                                                             | Статус                               | Коммент                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}} | {{Spec2('WebAssembly JS')}} | Первоначальное определение проекта. |
+{{Specifications}}
 
 ## Совместимость с браузером
 

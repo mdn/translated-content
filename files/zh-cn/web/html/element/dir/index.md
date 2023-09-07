@@ -18,6 +18,7 @@ slug: Web/HTML/Element/dir
 就像其他 HTML 元素，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `compact`
+
   - : 这个布尔属性表明，列表应该以紧凑样式显示。这个属性的实现取决于浏览器，并且不在所有浏览器中工作。
 
     > **备注：** 用法注解：不要使用这个属性，因为它已经废除了： {{HTMLElement("dir")}} 元素应该使用 CSS 来设计。为了提供 `compact` 属性的相似效果，可以使用 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("line-height")}}，值为 `80%`。

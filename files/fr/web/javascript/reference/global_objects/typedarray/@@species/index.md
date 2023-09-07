@@ -1,15 +1,6 @@
 ---
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/@@species
 ---
 
 {{JSRef}}
@@ -19,7 +10,7 @@ La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [
 ## Syntaxe
 
 ```js
-TypedArray[Symbol.species]
+TypedArray[Symbol.species];
 ```
 
 où TypedArray vaut :
@@ -43,8 +34,8 @@ L'accesseur `species` renvoie le constructeur par défaut pour les tableaux typ�
 La propriété `species` renvoie le constructeur par défaut qui est l'un des constructeurs de tableau typé (selon le type [de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray) de l'objet) :
 
 ```js
-Int8Array[Symbol.species];    // function Int8Array()
-Uint8Array[Symbol.species];   // function Uint8Array()
+Int8Array[Symbol.species]; // function Int8Array()
+Uint8Array[Symbol.species]; // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
 ```
 
@@ -54,7 +45,9 @@ Pour un objet construit sur mesure (par exemple une tableau `MonTableauTypé`), 
 class MonTableauTypé extends Uint8Array {
   // On surcharge species pour MonTableauTypé
   // pour récupérer le constructeur Uint8Array
-  static get [Symbol.species]() { return Uint8Array; }
+  static get [Symbol.species]() {
+    return Uint8Array;
+  }
 }
 ```
 

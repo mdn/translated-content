@@ -47,7 +47,7 @@ l10n:
 
   - : (페이지가 로드될 때) 체크박스가 기본적으로 체크된 상태로 보여질 것인지를 지칭하는 불리언 특성입니다. 이 특성은 체크박스가 "현재 체크된 상태"인지를 나타내지 않습니다. 만약 체크박스의 상태가 변경되면, 이 특성은 그 변경을 반영하지 않습니다 (단지 {{domxref("HTMLInputElement")}} 의 `checked` IDL 특성이 변경됩니다.)
     > **참고:** 다른 Input 컨트롤들과는 다르게, 체크박스의 값은 현재 체크박스의 상태가 `checked`일 때에만 제출되는 데이터에 포함됩니다. 이 경우, 체크박스의 `value` 특성에 지정된 값이 Input의 `value`으로서 전달됩니다.
-    > 다른 브라우저들과는 다르게, Firefox의 경우 기본적으로 페이지 로드에 걸쳐서 `<input>`의 [`checked` 상태를 동적으로 유지합니다.](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) 이 기능을 제어하기 위해서는 {{htmlattrxref("autocomplete","input")}} 특성을 사용해야 합니다.
+    > 다른 브라우저들과는 다르게, Firefox의 경우 기본적으로 페이지 로드에 걸쳐서 `<input>`의 [`checked` 상태를 동적으로 유지합니다.](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) 이 기능을 제어하기 위해서는 [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) 특성을 사용해야 합니다.
 
 - {{htmlattrdef("value")}}
 
@@ -129,15 +129,15 @@ indeterminate 상태에 있는 체크박스는 대부분의 브라우저에서 �
 따라서 이 예제에서 `indeterminate` 상태는 재료를 선택하는 과정이 시작되었지만 조합이 완료되지는 않았다는 것을 표현하기 위해 사용됩니다.
 
 ```js
-const overall = document.querySelector('#enchantment');
-const ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector("#enchantment");
+const ingredients = document.querySelectorAll("ul input");
 
-overall.addEventListener('click', (e) => {
+overall.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
 for (const ingredient of ingredients) {
-  ingredient.addEventListener('click', updateDisplay);
+  ingredient.addEventListener("click", updateDisplay);
 }
 
 function updateDisplay() {
@@ -167,7 +167,7 @@ function updateDisplay() {
 
 ## 유효성 검증하기
 
-체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/Guide/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 {{htmlattrxref("required", "input")}} 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
+체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/Guide/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 [`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
 
 ## 예제
 
@@ -242,16 +242,16 @@ legend {
 ### JavaScript
 
 ```js
-const otherCheckbox = document.querySelector('#other');
-const otherText = document.querySelector('#otherValue');
-otherText.style.visibility = 'hidden';
+const otherCheckbox = document.querySelector("#other");
+const otherText = document.querySelector("#otherValue");
+otherText.style.visibility = "hidden";
 
-otherCheckbox.addEventListener('change', () => {
+otherCheckbox.addEventListener("change", () => {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visible';
-    otherText.value = '';
+    otherText.style.visibility = "visible";
+    otherText.value = "";
   } else {
-    otherText.style.visibility = 'hidden';
+    otherText.style.visibility = "hidden";
   }
 });
 ```

@@ -1,13 +1,11 @@
 ---
 title: 弹性盒子与其他布局方法的联系
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
 
 {{CSSRef}}
 
-在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果您想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。
+在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果你想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。
 
 > **备注：** CSS 1 和 CSS 2 是一个单一的整体规范，其中所有 CSS 都定义在一个文档中。随着 CSS 成为一种功能更加丰富的语言，各个部分有不同的发展速度，如何维护一个庞大的规范就成了问题。因此现在的 CSS 是模块化的，不同的 CSS 模块有不同的规范，一起构成了现在的 CSS。这些模块之间相互关联，并且处于不同的开发阶段。
 
@@ -29,7 +27,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法
 
 ## Writing Modes
 
-In the [Basic concepts of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
+In the [Basic concepts of flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
 
 It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. See [this article](https://24ways.org/2016/css-writing-modes/) for a full description of writing modes and ways to use them, both for content in other languages and for creative reasons.
 
@@ -63,7 +61,7 @@ In this next live example the child elements have been floated, and then their c
 
 ## Flexbox and Grid Layout
 
-[CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) and Flexbox generally act in the same way with regards to overwriting other methods. You might however want to use flexbox as a fallback for grid layout, as there is better support for flexbox in older browsers. This approach works very well. If a flex item becomes a grid item, then the `flex` properties that may have been assigned to the child elements will be ignored.
+[CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) and Flexbox generally act in the same way with regards to overwriting other methods. You might however want to use flexbox as a fallback for grid layout, as there is better support for flexbox in older browsers. This approach works very well. If a flex item becomes a grid item, then the `flex` properties that may have been assigned to the child elements will be ignored.
 
 You can use the Box Alignment properties across both layout methods, so using flexbox as a fallback for grid layout can work very well.
 
@@ -85,7 +83,7 @@ In some cases you could happily use either layout method, but as you become conf
 
 As a rule of thumb, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout. In this case it is likely that the component would be better laid out using CSS Grid Layout. It isn't the case that you should use flexbox for small components and grid layout for larger ones; a tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — we have a choice in layout method for the first time, so take advantage of it.
 
-For more comparisons of grid and flexbox see the article [Relationship of Grid Layout to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout). This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
+For more comparisons of grid and flexbox see the article [Relationship of Grid Layout to other layout methods](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods). This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
 
 ## Flexbox and display: contents
 

@@ -82,11 +82,15 @@ _全画面 API は 2 つのイベントを定義しており、全画面モー�
 ページが読み込まれると、 <kbd>Enter</kbd> キーを監視するイベントリスナーを設定するコードが実行されます。
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.key === "Enter") {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 全画面モードの切り替え
@@ -123,4 +127,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)
