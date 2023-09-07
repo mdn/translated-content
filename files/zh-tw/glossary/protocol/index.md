@@ -12,4 +12,4 @@ slug: Glossary/Protocol
 ### 一般知識
 
 - 維基百科上的 [Communications protocol](https://zh.wikipedia.org/wiki/Communications_protocol) 條目
-- [RFC 官方網路通訊協定標準](http://www.rfc-editor.org/search/standards.php)
+- [RFC 官方網路通訊協定標準](https://www.rfc-editor.org/search/standards.php)
