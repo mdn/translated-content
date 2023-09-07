@@ -1,16 +1,10 @@
 ---
-title: 'Window: событие pagehide'
+title: "Window: событие pagehide"
 slug: Web/API/Window/pagehide_event
-tags:
-  - API
-  - Event
-  - History
-  - Navigation
-  - Reference
-  - Window
-  - pagehide
-browser-compat: api.Window.pagehide_event
+l10n:
+  sourceCommit: c125e7c912ba8f13dc8440ba29a94851d09f6a92
 ---
+
 {{APIRef("HTML DOM")}}
 
 Событие **`pagehide`** отправляется объекту {{domxref("Window")}}, когда браузер скрывает текущую страницу в процессе отображения других страниц из истории сессии.
@@ -59,21 +53,25 @@ browser-compat: api.Window.pagehide_event
 В следующем примере добавлен обработчик для отслеживания событий `pagehide`, чтобы что-то сделать на случай, если страница была сохранена в кеше для возможного повторного использования.
 
 ```js
-window.addEventListener("pagehide", event => {
-  if (event.persisted) {
-    /* Страница была сохранена в кеше, её можно повторно использовать */
-  }
-}, false);
+window.addEventListener(
+  "pagehide",
+  (event) => {
+    if (event.persisted) {
+      /* Страница была сохранена в кеше, её можно повторно использовать */
+    }
+  },
+  false,
+);
 ```
 
 Этот обработчик также можно написать с помощью свойства обработчика события {{domxref("Window.onpagehide", "onpagehide")}} в объекте {{domxref("Window")}}:
 
 ```js
-window.onpagehide = event => {
+window.onpagehide = (event) => {
   if (event.persisted) {
     /* Страница была сохранена в кеше, её можно повторно использовать */
   }
-}
+};
 ```
 
 ## Спецификации

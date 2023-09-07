@@ -1,20 +1,10 @@
 ---
-title: 'Window: событие pageshow'
+title: "Window: событие pageshow"
 slug: Web/API/Window/pageshow_event
-tags:
-  - API
-  - Document
-  - Event
-  - History
-  - Navigation
-  - Page
-  - PageTransitionEvent
-  - Reference
-  - Window
-  - pageshow
-  - show
-browser-compat: api.Window.pageshow_event
+l10n:
+  sourceCommit: 281e3b21178946c8301232a8eb50d11770ee8450
 ---
+
 {{APIRef("HTML DOM")}}
 
 Событие **`pageshow`** отправляется {{domxref("Window")}}, когда браузер отображает страницу.
@@ -23,7 +13,7 @@ browser-compat: api.Window.pageshow_event
 
 - Первоначальная загрузка страницы
 - Переход на страницу с другой страницы в том же самом окне или вкладке
-- Восстановление состояния ранее открытой страницы на мобильных ОС 
+- Восстановление состояния ранее открытой страницы на мобильных ОС
 - Возврат на страницу по кнопкам браузера "Вперёд" и "Назад"
 
 > **Note:** во время первоначальной загрузки страницы, событие `pageshow` срабатывает _после_ события {{domxref("Window/load_event", "load")}}.
@@ -56,34 +46,32 @@ browser-compat: api.Window.pageshow_event
 ### JavaScript
 
 ```js
-const events = [
-  "pagehide", "pageshow",
-  "unload", "load"
-];
+const events = ["pagehide", "pageshow", "unload", "load"];
 
-const eventLogger = event => {
+const eventLogger = (event) => {
   switch (event.type) {
     case "pagehide":
     case "pageshow":
       let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log('Event:', event.type, '-', isPersisted);
+      console.log("Event:", event.type, "-", isPersisted);
       break;
     default:
-      console.log('Event:', event.type);
+      console.log("Event:", event.type);
       break;
   }
 };
 
-events.forEach(eventName =>
-  window.addEventListener(eventName, eventLogger)
-);
+events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
 ### HTML
 
 ```html
-<p>Откройте консоль и следите за выводом данных при переходе на эту страницу и обратно.
-этой страницы. Попробуйте открыть новые страницы в текущей вкладке, а затем вернитесь обратно, и посмотрите, что отобразилось в консоли.</p>
+<p>
+  Откройте консоль и следите за выводом данных при переходе на эту страницу и
+  обратно. этой страницы. Попробуйте открыть новые страницы в текущей вкладке, а
+  затем вернитесь обратно, и посмотрите, что отобразилось в консоли.
+</p>
 ```
 
 ### Результат
