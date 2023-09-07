@@ -2,8 +2,6 @@
 title: "Document.timeline"
 short-title: timeline
 slug: Web/API/Document/timeline
-page-type: web-api-instance-property
-browser-compat: api.Document.timeline
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
