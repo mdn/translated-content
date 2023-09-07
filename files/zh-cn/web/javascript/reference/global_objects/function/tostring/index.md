@@ -32,10 +32,10 @@ toString()
 若 `this` 不是 `Function` 对象，则 `toString()` 方法将抛出 {{jsxref("TypeError")}} 异常（"Function.prototype.toString called on incompatible object"）。
 
 ```js example-bad
-Function.prototype.toString.call("foo"); // throws TypeError
+Function.prototype.toString.call("foo"); // 抛出 TypeError
 ```
 
-如果在内置函数对象上调用 `toString()` 方法，或者在由 {{jsxref("Function.prototype.bind()")}} 创建的函数以及在其他非 JavaScript 函数上调用`toString()`，那么 `toString()` 将返回一个看起来*像原函数的字符串*，类似于：
+如果在内置函数对象上调用 `toString()` 方法，或者在由 {{jsxref("Function.prototype.bind()")}} 创建的函数以及在其他非 JavaScript 函数上调用 `toString()`，那么 `toString()` 将返回一个看起来*像原函数的字符串*，类似于：
 
 ```plain
 function someName() { [native code] }
