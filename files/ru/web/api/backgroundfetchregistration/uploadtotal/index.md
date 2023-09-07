@@ -4,6 +4,7 @@ slug: Web/API/BackgroundFetchRegistration/uploadTotal
 l10n:
   sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Доступное только для чтения свойство **`uploadTotal`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает общее число байтов для отправки на сервер.

@@ -4,6 +4,7 @@ slug: Web/API/BackgroundFetchRegistration/result
 l10n:
   sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Доступное только для чтения свойство **`result`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает строку, которая указывает на то, был фоновый запрос успешным ли неудачным.

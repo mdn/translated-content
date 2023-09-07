@@ -58,9 +58,9 @@ match(request, options);
 В этом примере мы ищем запись с URL "/ep-5.mp3". Если {{domxref("BackgroundFetchRecord")}} найдена, то мы можем вернуть некоторую информацию ней.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('Запись не найдена');
+    console.log("Запись не найдена");
     return;
   }
 

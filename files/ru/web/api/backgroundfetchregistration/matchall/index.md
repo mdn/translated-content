@@ -4,6 +4,7 @@ slug: Web/API/BackgroundFetchRegistration/matchAll
 l10n:
   sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Метод **`matchAll()`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает массив всех совпавших объектов {{domxref("BackgroundFetchRecord")}}.
@@ -11,8 +12,8 @@ l10n:
 ## Синтаксис
 
 ```js
-matchAll(request)
-matchAll(request,options)
+matchAll(request);
+matchAll(request, options);
 ```
 
 ### Параметры
