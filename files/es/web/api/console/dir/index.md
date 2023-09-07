@@ -1,6 +1,6 @@
 ---
 title: Console.dir()
-slug: Web/API/Console/dir
+slug: Web/API/console/dir
 ---
 
 {{APIRef("Console API")}}
@@ -11,7 +11,7 @@ Dicho de otra manera, `console.dir()` es la manera de ver todas las propiedades 
 
 {{AvailableInWorkers}}
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+![console-dir.png](console-dir.png)
 
 ## Sintaxis
 
@@ -28,9 +28,9 @@ console.dir(objeto);
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,8 +1,8 @@
 ---
 title: Использование CSS переходов
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}{{SeeCompatTable}}
 
 **CSS transitions** предоставляют способ контролировать скорость анимации, при изменении CSS-свойств. Вместо того, чтобы свойство применилось сразу, вы можете сделать это действие происходящим в течение какого-то момента времени. Например, если вы смените цвет элемента с белого на чёрный, изменение произойдёт моментально, а вот с CSS transitions, изменения произойдут за временные интервалы, следующих кривой ускорения, все из которых могут быть настроены.
@@ -11,7 +11,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 CSS переходы позволяют вам решить какие свойства нужно анимировать (перечислением их явно), когда анимация начнётся (установкой задержки), как долго переход будет выполняться (установкой продолжительности), а также как она будет запущена (определением функции по времени, например линейно или быстро в начале, медленно в конце).
 
-> **Примечание:** **Замечание:** CSS переходы могут использоваться без префиксов, однако спецификация только недавно достигла стабильности, префиксы по-прежнему необходимы для браузеров на WebKit. Они также необходимы для поддержки старых версий браузеров (таких как: Firefox 15, Opera 12 и более ранних). Таблица совместимости приведена внизу страницы с ещё большим количеством информации.
+> **Примечание:** CSS переходы могут использоваться без префиксов, однако спецификация только недавно достигла стабильности, префиксы по-прежнему необходимы для браузеров на WebKit. Они также необходимы для поддержки старых версий браузеров (таких как: Firefox 15, Opera 12 и более ранних). Таблица совместимости приведена внизу страницы с ещё большим количеством информации.
 
 ## Какие CSS-свойства анимируются?
 
@@ -29,8 +29,12 @@ CSS переходы позволяют вам решить какие свой�
 
 ```html
 <body>
-    <p>К блоку ниже применятся анимации для свойств: width, height, background-color, transform. Наведите на него, чтоб увидеть, как они анимируются</p>
-    <div class="box"></div>
+  <p>
+    К блоку ниже применятся анимации для свойств: width, height,
+    background-color, transform. Наведите на него, чтоб увидеть, как они
+    анимируются
+  </p>
+  <div class="box"></div>
 </body>
 ```
 
@@ -38,22 +42,30 @@ CSS переходы позволяют вам решить какие свой�
 
 ```css
 .box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  -webkit-transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    -webkit-transform 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 
 .box:hover {
-    background-color: #FFCCCC;
-    width: 200px;
-    height: 200px;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 ```
 
@@ -74,46 +86,52 @@ CSS переходы контролируются свойством {{cssxref("
   - : Определяет время происхождения перехода. Можно указать время анимирования всех свойств перехода сразу или для каждого свойства в отдельности. `transition-duration: 0.5s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration: 0.5s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration: 0.5s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transformv color;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transformv color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -121,14 +139,14 @@ CSS переходы контролируются свойством {{cssxref("
     function updateTransition() {
       var el = document.querySelector("div.box");
 
-    if (el) {
-    el.className = "box1";
-    } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-    }
+      if (el) {
+        el.className = "box1";
+      } else {
+        el = document.querySelector("div.box1");
+        el.className = "box";
+      }
 
-    return el;
+      return el;
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
@@ -139,45 +157,52 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-duration: 1s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top -webkit-transform color;
-        -webkit-transition-duration: 1s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform color;
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top -webkit-transform transform color;
-        -webkit-transition-duration: 1s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top -webkit-transform color;
+      -webkit-transition-duration: 1s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top -webkit-transform transform color;
+      -webkit-transition-duration: 1s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -185,14 +210,14 @@ CSS переходы контролируются свойством {{cssxref("
     function updateTransition() {
       var el = document.querySelector("div.box");
 
-    if (el) {
-    el.className = "box1";
-    } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-    }
+      if (el) {
+        el.className = "box1";
+      } else {
+        el = document.querySelector("div.box1");
+        el.className = "box";
+      }
 
-    return el;
+      return el;
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
@@ -203,45 +228,52 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-duration: 2s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration: 2s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration: 2s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -249,14 +281,14 @@ CSS переходы контролируются свойством {{cssxref("
     function updateTransition() {
       var el = document.querySelector("div.box");
 
-    if (el) {
-    el.className = "box1";
-    } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-    }
+      if (el) {
+        el.className = "box1";
+      } else {
+        el = document.querySelector("div.box1");
+        el.className = "box";
+      }
 
-    return el;
+      return el;
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
@@ -267,45 +299,52 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-duration: 4s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration: 4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration: 4s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration: 4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration: 4s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 4s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 4s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -313,278 +352,296 @@ CSS переходы контролируются свойством {{cssxref("
     function updateTransition() {
       var el = document.querySelector("div.box");
 
-    if (el) {
-    el.className = "box1";
-    } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-    }
+      if (el) {
+        el.className = "box1";
+      } else {
+        el = document.querySelector("div.box1");
+        el.className = "box";
+      }
 
-    return el;
+      return el;
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-
     ```
 
     {{EmbedLiveSample("duration_4s",275,150)}}
-
-    ```
 
 - {{cssxref("transition-timing-function")}}
 
   - : ![](/files/3434/TF_with_output_gt_than_1.png)Определяет функцию, указывающую, как вычисляются промежуточные значения свойств. Вы также можете выбрать ослабления от функции замедления Шпаргалка.Большинство [функций времени](/ru/docs/CSS/timing-function) может быть определено графиком соответствующей функции, образующей четырьмя точками кривую Безье. Также можете выбрать функцию отсюда [Easing Functions Cheat Sheet](http://easings.net/).
 
-   `transition-timing-function: ease`
+  `transition-timing-function: ease`
 
-    ```html hidden
-     <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
+  ```html hidden
+  <div class="parent">
+    <div class="box">Lorem</div>
+  </div>
+  ```
 
-    ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: ease;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: ease;
-    }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: ease;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: ease;
-    }
-    ```
+  ```css hidden
+  .parent {
+    width: 250px;
+    height: 125px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+  }
+  .box1 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+    left: 150px;
+    top: 25px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+  }
+  ```
 
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+  ```js hidden
+  function updateTransition() {
+    var el = document.querySelector("div.box");
 
     if (el) {
-    el.className = "box1";
+      el.className = "box1";
     } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+      el = document.querySelector("div.box1");
+      el.className = "box";
     }
 
     return el;
-    }
+  }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
+  var intervalID = window.setInterval(updateTransition, 7000);
+  ```
 
-    {{EmbedLiveSample("ttf_ease",275,150)}}
+  {{EmbedLiveSample("ttf_ease",275,150)}}
 
-    `transition-timing-function: linear`
+  `transition-timing-function: linear`
 
-    ```html hidden
-     <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
+  ```html hidden
+  <div class="parent">
+    <div class="box">Lorem</div>
+  </div>
+  ```
 
-    ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: linear;
-    }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: linear;
-    }
-    ```
+  ```css hidden
+  .parent {
+    width: 250px;
+    height: 125px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: linear;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  }
+  .box1 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+    left: 150px;
+    top: 25px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: linear;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  }
+  ```
 
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+  ```js hidden
+  function updateTransition() {
+    var el = document.querySelector("div.box");
 
     if (el) {
-    el.className = "box1";
+      el.className = "box1";
     } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+      el = document.querySelector("div.box1");
+      el.className = "box";
     }
 
     return el;
-    }
+  }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
+  var intervalID = window.setInterval(updateTransition, 7000);
+  ```
 
-    {{EmbedLiveSample("ttf_linear",275,150)}}
+  {{EmbedLiveSample("ttf_linear",275,150)}}
 
-    `transition-timing-function: step-end`
+  `transition-timing-function: step-end`
 
-    ```html hidden
-     <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
+  ```html hidden
+  <div class="parent">
+    <div class="box">Lorem</div>
+  </div>
+  ```
 
-    ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: step-end;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: step-end;
-    }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: step-end;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: step-end;
-    }
-    ```
+  ```css hidden
+  .parent {
+    width: 250px;
+    height: 125px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: step-end;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: step-end;
+  }
+  .box1 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+    left: 150px;
+    top: 25px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: step-end;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: step-end;
+  }
+  ```
 
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+  ```js hidden
+  function updateTransition() {
+    var el = document.querySelector("div.box");
 
     if (el) {
-    el.className = "box1";
+      el.className = "box1";
     } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+      el = document.querySelector("div.box1");
+      el.className = "box";
     }
 
     return el;
-    }
+  }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
+  var intervalID = window.setInterval(updateTransition, 7000);
+  ```
 
-    {{EmbedLiveSample("ttf_stepend",275,150)}}
+  {{EmbedLiveSample("ttf_stepend",275,150)}}
 
-    `transition-timing-function: steps(4, end)`
+  `transition-timing-function: steps(4, end)`
 
-    ```html hidden
-     <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
+  ```html hidden
+  <div class="parent">
+    <div class="box">Lorem</div>
+  </div>
+  ```
 
-    ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: steps(4, end);
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: steps(4, end);
-    }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-timing-function: steps(4, end);
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-timing-function: steps(4, end);
-    }
-    ```
+  ```css hidden
+  .parent {
+    width: 250px;
+    height: 125px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: steps(4, end);
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: steps(4, end);
+  }
+  .box1 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+    left: 150px;
+    top: 25px;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left
+      top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: steps(4, end);
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: steps(4, end);
+  }
+  ```
 
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+  ```js hidden
+  function updateTransition() {
+    var el = document.querySelector("div.box");
 
     if (el) {
-    el.className = "box1";
+      el.className = "box1";
     } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+      el = document.querySelector("div.box1");
+      el.className = "box";
     }
 
     return el;
-    }
+  }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+  var intervalID = window.setInterval(updateTransition, 7000);
+  ```
 
-    ```
+  {{EmbedLiveSample("ttf_step4end",275,150)}}
 
-    {{EmbedLiveSample("ttf_step4end",275,150)}}
+  ```
 
-    ```
+  ```
 
 - {{cssxref("transition-delay")}}
 
@@ -593,52 +650,56 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-delay: 0.5s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
     .parent {
-        width: 250px;
-        height: 125px;
+      width: 250px;
+      height: 125px;
     }
 
     .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 0.5s;
-    transition-timing-function: linear;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 0.5s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 0.5s;
+      transition-timing-function: linear;
     }
 
     .box1 {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 0.5s;
-    transition-timing-function: linear;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 0.5s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 0.5s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -664,52 +725,56 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-delay: 1s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
     .parent {
-        width: 250px;
-        height: 125px;
+      width: 250px;
+      height: 125px;
     }
 
     .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-         -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-delay: 1s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-delay: 1s;
-        transition-timing-function: linear;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 1s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 1s;
+      transition-timing-function: linear;
     }
 
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-delay: 1s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-delay: 1s;
-        transition-timing-function: linear;
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 1s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 1s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -735,52 +800,56 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-delay: 2s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
     .parent {
-        width: 250px;
-        height: 125px;
+      width: 250px;
+      height: 125px;
     }
 
     .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-delay: 2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-delay: 2s;
-        transition-timing-function: linear;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 2s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 2s;
+      transition-timing-function: linear;
     }
 
     .box1 {
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-delay: 2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-delay: 2s;
-        transition-timing-function: linear;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 2s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 2s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -806,52 +875,56 @@ CSS переходы контролируются свойством {{cssxref("
     `transition-delay: 4s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
     ```
 
     ```css hidden
     .parent {
-        width: 250px;
-        height: 125px;
+      width: 250px;
+      height: 125px;
     }
 
     .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-delay: 4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-delay: 4s;
-        transition-timing-function: ease-in-out;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 4s;
+      transition-timing-function: ease-in-out;
     }
 
     .box1 {
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top: 25px;
-        position: absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration: 2s;
-        -webkit-transition-delay: 4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top color;
-        transition-duration: 2s;
-        transition-delay: 4s;
-        transition-timing-function: ease-in-out;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 4s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -878,7 +951,7 @@ CSS переходы контролируются свойством {{cssxref("
 
 ```css
 div {
-    transition: <property> <duration> <timing-function> <delay>;
+  transition: <property> <duration> <timing-function> <delay>;
 }
 ```
 
@@ -897,7 +970,7 @@ div {
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **Примечание:** **Замечание:** Событие `transitionend` не произойдёт, когда переход был прерван до его завершения, например, если установили {{cssxref("display")}}`: none` или значение анимируемого свойства изменилось`.`
+> **Примечание:** Событие `transitionend` не произойдёт, когда переход был прерван до его завершения, например, если установили {{cssxref("display")}}`: none` или значение анимируемого свойства изменилось`.`
 
 ## Когда у списков значений свойств разные длины
 
@@ -1003,8 +1076,8 @@ div {
   transition-property: background-color, color;
   transition-duration: 1s;
   transition-timing-function: ease-out;
-  background-color:white;
-  color:black;
+  background-color: white;
+  color: black;
   box-shadow: 2px 2px 1px black;
 }
 ```
@@ -1025,11 +1098,15 @@ div {
 Используя JavaScript, добиваемся эффекта перемещения шара на определённую позицию:
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+var f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  function (ev) {
+    f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
+    f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
+  },
+  false,
+);
 ```
 
 C помощью CSS сглаживаем эффект без дополнительных усилий. Просто добавляем переход и любое изменение свойств происходит плавно:
@@ -1055,8 +1132,8 @@ p {
 
 ## Спецификации
 
-| Specification                                        | Status                                   | Comment            |
-| ---------------------------------------------------- | ---------------------------------------- | ------------------ |
+| Specification                            | Status                        | Comment            |
+| ---------------------------------------- | ----------------------------- | ------------------ |
 | {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Initial definition |
 
 ## Смотрите также

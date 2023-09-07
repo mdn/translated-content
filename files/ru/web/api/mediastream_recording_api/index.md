@@ -1,7 +1,6 @@
 ---
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
-translation_of: Web/API/MediaStream_Recording_API
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -32,15 +31,13 @@ MediaStream Recording API состоит из единого интерфейс�
 
 {{domxref("MediaRecorder")}}
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                | Status                                       | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## Смотрите также
 
@@ -48,7 +45,7 @@ MediaStream Recording API состоит из единого интерфейс�
 - [Recording a media element](/ru/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12)
 - {{domxref("navigator.mediaDevices.getUserMedia()")}}
-- [HTML5’s Media Recorder API in Action on Chrome and Firefox](https://addpipe.com/blog/mediarecorder-api/)
+- [HTML5's Media Recorder API in Action on Chrome and Firefox](https://addpipe.com/blog/mediarecorder-api/)
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
 - [FingerSpell](https://www.fingerspell.org/): Sign Language Fingerspelling practice using getUserMedia and the MediaRecorder API to create and download recordings, MediaRecorder API supported desktop browsers only [(source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
 - [Simple video recording demo](http://codepen.io/anon/pen/gpmPzm)

@@ -35,14 +35,6 @@ Para instancias de {{jsxref("String")}} o cadenas literales, `toSource()` devuel
 
 Este método usualmente es llamado internamente por JavaScript y no explícitamente en código.
 
-## Especificaciones
-
-No es parte de ningún estándar. Implementado en JavaScript 1.3.
-
-## Compatibilidad entre navegadores
-
-{{Compat("javascript.builtins.String.toSource")}}
-
 ## Véase también
 
 - {{jsxref("Object.prototype.toSource()")}}

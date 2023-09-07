@@ -26,7 +26,7 @@ BigInt.asUintN(width, bigint);
 
 `bigint` 模 (modulo) `2^width` 作为无符号整数的值。
 
-## 例子
+## 示例
 
 ### 保持在 64 位范围内
 

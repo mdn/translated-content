@@ -1,5 +1,5 @@
 ---
-title: ':-moz-window-inactive'
+title: ":-moz-window-inactive"
 slug: Web/CSS/:-moz-window-inactive
 ---
 
@@ -19,13 +19,13 @@ Este ejemplo modifica la apariencia del fondo de una caja dependiendo de si est�
 
 ```html
 <style type="text/css">
-#mybox {
-  background: linear-gradient(to bottom, blue, cyan);
-}
+  #mybox {
+    background: linear-gradient(to bottom, blue, cyan);
+  }
 
-#mybox:-moz-window-inactive {
-  background: cyan;
-}
+  #mybox:-moz-window-inactive {
+    background: cyan;
+  }
 </style>
 
 <div id="mybox" style="width:200px; height:200px;">
@@ -39,6 +39,6 @@ Puedes verlo aquí en un [ejemplo en directo](/samples/cssref/moz-window-inactiv
 
 No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-window-inactive")}}
+{{Compat}}

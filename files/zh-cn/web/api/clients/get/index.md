@@ -10,7 +10,7 @@ slug: Web/API/Clients/get
 ## 语法
 
 ```js
-self.clients.get(id).then(function(client) {
+self.clients.get(id).then(function (client) {
   // do something with your returned client
 });
 ```
@@ -18,7 +18,7 @@ self.clients.get(id).then(function(client) {
 ### 参数
 
 - `id`
-  - : 一个 {{domxref("DOMString")}} ，表示您想要获取的 client id.
+  - : 一个 {{domxref("DOMString")}} ，表示你想要获取的 client id.
 
 ### 返回
 
@@ -27,7 +27,7 @@ self.clients.get(id).then(function(client) {
 ## 示例
 
 ```js
-self.clients.get(options).then(function(client) {
+self.clients.get(options).then(function (client) {
   self.clients.openWindow(client.url);
 });
 ```

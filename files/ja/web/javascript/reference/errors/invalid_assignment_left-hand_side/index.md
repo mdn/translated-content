@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: invalid assignment left-hand side'
+title: "ReferenceError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
 
@@ -19,7 +19,7 @@ ReferenceError: invalid assignment left-hand side
 
 ## エラーの原因
 
-どこかに予想外の代入があります。たとえば、[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators)と[等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)が合っていないからかもしれません。 "`=`" 記号が 1 つの場合は変数に値を割り当てる一方、"`==`" か "`===`" 演算子は値を比較します。
+どこかに予想外の代入があります。たとえば、[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)と[等値演算子](/ja/docs/Web/JavaScript/Reference/Operators#等値演算子)が合っていないからかもしれません。 "`=`" 記号が 1 つの場合は変数に値を割り当てる一方、"`==`" か "`===`" 演算子は値を比較します。
 
 ## 例
 
@@ -41,15 +41,13 @@ var str = 'Hello, '
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 
-var str = 'Hello, '
-+ 'from the '
-+ 'other side!';
+var str = "Hello, " + "from the " + "other side!";
 ```
 
 ## 関連項目
 
-- [代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators)
-- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)
+- [代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)
+- [等値演算子](/ja/docs/Web/JavaScript/Reference/Operators#等値演算子)

@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-of-type()'
+title: ":nth-last-of-type()"
 slug: Web/CSS/:nth-last-of-type
 ---
 
@@ -61,7 +61,7 @@ span:nth-last-of-type(2) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-last-of-type")}}
+{{Compat}}
 
 ## Ver también
 

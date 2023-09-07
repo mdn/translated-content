@@ -5,7 +5,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 {{APIRef("Web Notifications")}}
 
-[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。
+[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
 {{AvailableInWorkers}}
 
@@ -22,9 +22,9 @@ Web Notifications API 使页面可以发出通知，通知将被显示在页面�
 要显示一条通知，你需要先请求适当的权限，然后你可以实例化一个 {{domxref("Notification")}} 实例：
 
 ```js
-Notification.requestPermission( function(status) {
+Notification.requestPermission(function (status) {
   console.log(status); // 仅当值为 "granted" 时显示通知
-  var n = new Notification("title", {body: "notification body"}); // 显示通知
+  var n = new Notification("title", { body: "notification body" }); // 显示通知
 });
 ```
 
@@ -52,7 +52,7 @@ Notification.requestPermission( function(status) {
 通常你应在你的应用首次初始化的时候请求显示通知的权限：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   Notification.requestPermission(function (status) {
     // 这将使我们能在 Chrome/Safari 中使用 Notification.permission
     if (Notification.permission !== status) {
@@ -76,7 +76,7 @@ window.addEventListener('load', function () {
 }
 ```
 
-> **备注：** 当安装应用程序时，你不需要通过上面的代码显式的请求权限，但您仍然需要在触发通知之前取得权限项。
+> **备注：** 当安装应用程序时，你不需要通过上面的代码显式的请求权限，但你仍然需要在触发通知之前取得权限项。
 
 ## 创建通知
 
@@ -103,12 +103,12 @@ window.addEventListener('load', function () {
 > var n = new Notification("Hi!");
 > n.onshow = function () {
 >   setTimeout(n.close.bind(n), 5000);
-> }
+> };
 > ```
 >
 > 当你接收到一个“close”事件时，并不能保证这个通知是被用户关闭的。这是符合规范的，其中指出：“当一个通知被关闭时，通知的关闭动作都必须执行，不论是底层通知平台导致，还是用户导致。”
 
-### 简单的例子
+### 简单的示例
 
 假定有如下的 HTML:
 
@@ -119,7 +119,7 @@ window.addEventListener('load', function () {
 它可能通过这样的方式处理通知：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // 首先，让我们检查我们是否有权限发出通知
   // 如果没有，我们就请求获得权限
   if (window.Notification && Notification.permission !== "granted") {
@@ -130,9 +130,9 @@ window.addEventListener('load', function () {
     });
   }
 
-  var button = document.getElementsByTagName('button')[0];
+  var button = document.getElementsByTagName("button")[0];
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // 如果用户同意就创建一个通知
     if (window.Notification && Notification.permission === "granted") {
       var n = new Notification("Hi!");
@@ -170,7 +170,7 @@ window.addEventListener('load', function () {
 
 这是实际的结果：
 
-{{ EmbedLiveSample('Simple_example', '100%', 30) }}
+{{ EmbedLiveSample('简单的示例', '100%', 30) }}
 
 ## 处理重复的通知
 
@@ -189,7 +189,7 @@ window.addEventListener('load', function () {
 它有可能通过这种方式处理的多个通知：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // 首先，我们检查是否具有权限显示通知
   // 如果没有，我们就申请权限
   if (window.Notification && Notification.permission !== "granted") {
@@ -200,14 +200,14 @@ window.addEventListener('load', function () {
     });
   }
 
-  var button = document.getElementsByTagName('button')[0];
+  var button = document.getElementsByTagName("button")[0];
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // 如果用户同意接收通知，我们就尝试发送 10 条通知
     if (window.Notification && Notification.permission === "granted") {
       for (var i = 0; i < 10; i++) {
         // 感谢标记，我们应该只看到内容为 "Hi! 9" 的通知
-        var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+        var n = new Notification("Hi! " + i, { tag: "soManyNotification" });
       }
     }
 
@@ -224,7 +224,7 @@ window.addEventListener('load', function () {
         if (status === "granted") {
           for (var i = 0; i < 10; i++) {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+            var n = new Notification("Hi! " + i, { tag: "soManyNotification" });
           }
         }
 

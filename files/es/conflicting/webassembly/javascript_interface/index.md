@@ -72,14 +72,6 @@ fetch('simple.wasm').then(response =>
 
 > **Nota:** Ver [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) en GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)) para un ejemplo que hace uso de la función [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1).
 
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad de Navegadores
-
-{{Compat("javascript.builtins.WebAssembly")}}
-
 ## Ver también
 
 - [Vista General de WebAssembly](/es/docs/WebAssembly)

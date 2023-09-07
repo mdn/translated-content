@@ -1,10 +1,9 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-original_slug: Web/CSS/repeat()
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`repeat()`** 函数表示轨道列表的重复片段，允许以更紧凑的形式写入大量显示重复模式的列或行。
 
@@ -67,7 +66,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
     为了找到自动重复的轨道数，用户代理将轨道大小限制为用户代理指定的值（例如 `1px`），以避免被零除。
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -93,32 +92,22 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ```html
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>Inflexible item of 100 pixels width.</div>
 </div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{EmbedLiveSample("示例", "100%", 200)}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

@@ -1,40 +1,48 @@
 ---
 title: CSSPageRule
 slug: Web/API/CSSPageRule
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSPageRule`** は、1 個の CSS {{cssxref("@page")}} 規則を表すインターフェイスです。これは、型定数の値が `6` (`CSSRule.PAGE_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装します。
+**`CSSPageRule`** は単一の CSS {{cssxref("@page")}} ルールを表します。
 
-## 構文
+{{InheritanceDiagram}}
 
-構文は、[WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 形式で記述されます。
+## インスタンスプロパティ
 
-```
-interface CSSPageRule : CSSRule {
-  attribute DOMString selectorText;
-  readonly attribute CSSStyleDeclaration style;
-};
-```
-
-## プロパティ
-
-{{domxref("CSSRule")}} として、`CSSPageRule` は、このインターフェイスのプロパティも実装します。これは、次の固有のプロパティを持ちます:
+_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
 
 - {{domxref("CSSPageRule.selectorText")}}
-  - : アット規則に関連付けられたページセレクターのテキストを表す。
-- {{domxref("CSSPageRule.style")}} {{readonlyinline}}
-  - : アット規則に関連付けられた宣言ブロックを返す。
+  - : このアットルールに関連付けられたページセレクターのテキストを表します。
+- {{domxref("CSSPageRule.style")}} {{ReadOnlyInline}}
+  - : このアットルールに関連付けられた[宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)を返します。
 
-## メソッド
+## インスタンスメソッド
 
-{{domxref("CSSRule")}} として、`CSSPageRule` は、このインターフェイスのメソッドも実装します。固有のメソッドはありません。
+_祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
 
-## 仕様
+## 例
+
+このスタイルシートには単一の {{cssxref("@page")}} ルールがあるので、最初の（そして唯一の）返されるルールは `CSSPageRule` になります。
+
+```css
+@page {
+  margin: 1cm;
+}
+```
+
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // CSSPageRule
+```
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CSSPageRule")}}
+{{Compat}}

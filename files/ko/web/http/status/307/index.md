@@ -23,7 +23,7 @@ slug: Web/HTTP/Status/307
 
 ## 브라우저 호환성
 
-{{Compat("http.status.307")}}
+{{Compat}}
 
 ## 같이 보기
 

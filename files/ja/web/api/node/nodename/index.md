@@ -1,6 +1,8 @@
 ---
-title: Node.nodeName
+title: "Node: nodeName プロパティ"
 slug: Web/API/Node/nodeName
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -38,23 +40,22 @@ slug: Web/API/Node/nodeName
 こちらは HTML です。
 <div id="d1">Hello world</div>
 <!-- コメントの例 -->
-テキスト<span>テキスト</span>
-テキスト<br/>
+テキスト<span>テキスト</span> テキスト<br />
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
 </svg>
-<hr>
+<hr />
 <output id="result">まだ出力されていません。</output>
 ```
 
 また、スクリプトは以下の通りです。
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.querySelector("body").firstChild;
 let result = "ノード名:<br/>";
 while (node) {
-  result += node.nodeName + "<br/>";
-  node = node.nextSibling
+  result += `${node.nodeName}<br/>`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");

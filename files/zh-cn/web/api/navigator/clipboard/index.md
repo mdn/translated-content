@@ -22,8 +22,11 @@ theClipboard = navigator.clipboard;
 以下代码使用 `navigator.clipboard` 来访问系统剪切板，以读取系统剪切板的内容。
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.querySelector(".cliptext").innerText = clipText);;
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+  );
 ```
 
 这个代码片段将 HTML 中拥有类名 `"cliptext"` 的第一个元素的内容替换为剪切板中的内容。这段代码可用于在浏览器拓展中定时自动更新或者由事件触发，实时显示当前剪切板上的内容。

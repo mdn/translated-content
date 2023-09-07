@@ -1,7 +1,6 @@
 ---
 title: CSS 기초
 slug: Learn/Getting_started_with_the_web/CSS_basics
-original_slug: Learn/Getting_started_with_the_web/CSS_기본
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
@@ -24,9 +23,9 @@ p {
 
 1. `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   ```
 
 2. `index.html`을 저장하고 브라우저에서 불러오세요. 여러분은 다음과 같은 것을 보게 되실겁니다:
 
@@ -70,7 +69,9 @@ p {
 여러분은 요소의 여러 타입을 선택하고 모두에게 하나의 rule set 을 적용할 수도 있습니다. 여러 선택자는 콤마로 구분합니다. 예를 들면:
 
 ```css
-p,li,h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -93,38 +94,42 @@ p,li,h1 {
 
 지금까지 약간의 CSS 기본에 대해 살펴보았습니다, 우리의 예제가 멋있게 보이도록 `style.css` 파일에 더 많은 rule 과 정보를 추가해 봅시다. 우선, 글꼴과 문자가 조금 더 나아보이도록 해보죠.
 
-> **참고:** **노트**: "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
+> **참고:** "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
 
 1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
 
-    ```html
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    ```
+   ```html
+   <link
+     href="http://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet"
+     type="text/css" />
+   ```
 
 2. 다음으로, `style.css` 파일에 이미 존재하는 rule 을 지우세요. 좋은 테스트였지만, 빨간색의 글자가 정말 좋아 보이지는 않습니다.
 3. 아래의 코드를 해당 위치에 추가하고, 구글 폰트로부터 얻은 `font-family` 코드를 placeholder 줄에 덮어쓰세요. (`font-family` 는 여러분이 글자를 위해 사용하길 원하는 글꼴을 의미합니다.) 이 rule 은 먼저 전체 페이지의 글자 크기와 기본 글꼴을 설정합니다. (`html`이 전체 페이지의 부모 요소일 때, 이 안의 모든 요소는 같은 `font-size` 와 `font-family` 를 물려 받습니다):
 
-    ```css
-    html {
-      font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
-      font-family: placeholder: 구글 폰트로부터 여러분이 얻은 마지막 결과가 있어야합니다.
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
+     font-family: placeholder: 구글 폰트로부터 여러분이 얻은 마지막 결과가 있어야합니다.
+   }
+   ```
 
 4. 이제 HTML body 안에 문자를 포함하는 요소 `h1`, `li` 및 `p` 를 위해 글자 크기를 설정할 것입니다. 또한 조금 더 읽기 좋게 하기 위해 body 콘텐츠의 제목을 가운데 정렬하고 줄의 높이(line-height)와 자간(lettet-spacing)도 설정할 것입니다:
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 `px(픽셀)` 값들은 여러분이 원하는대로 조정할 수 있지만, 여러분이 원하는 디자인을 얻도록, 여러분의 디자인은 이런식으로 보여야 합니다:
 
@@ -158,7 +163,7 @@ CSS 작성에서 여러분이 알게 될 한 가지는 많은 것들이 박스�
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -170,7 +175,7 @@ html {
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -190,7 +195,7 @@ body {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```
@@ -221,7 +226,7 @@ img {
 
 > **참고:** 노트: 위의 지침에서는 body에 설정된 너비(600 픽셀) 보다 작은 이미지를 사용한다고 가정합니다. 이미지가 더 크면 body가 넘쳐 페이지의 나머지 부분으로 유출됩니다. 이 문제를 해결하려면 1) [그래픽 편집기](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%BD_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)를 사용하여 이미지의 너비를 줄이거나 2) 더 작은 값(예: `400px`) 으로 `<img>` 요소에 width 속성을 설정하고 CSS를 사용하여 이미지 크기를 조정할 수 있습니다.
 
-> **참고:** **노트**: 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
+> **참고:** 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
 
 ## 마무리
 
@@ -234,14 +239,3 @@ img {
 여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/en-US/Learn/CSS) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
-
-## 이번 과목에서는
-
-- [기본 소프트웨어 설치 방법](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [파일 다루기](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 기본 사항](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 기본 사항](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 기본 사항](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [웹 사이트 출판](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [웹 작동 방식](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

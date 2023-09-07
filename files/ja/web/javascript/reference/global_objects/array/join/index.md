@@ -7,15 +7,15 @@ l10n:
 
 {{JSRef}}
 
-**`join()`** メソッドは、配列（または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトを利用する)）の全要素を順に連結した文字列を新たに作成して返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。
+**`join()`** メソッドは、配列（または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)）の全要素を順に連結した文字列を新たに作成して返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。
 
 {{EmbedInteractiveExample("pages/js/array-join.html")}}
 
 ## 構文
 
 ```js
-join()
-join(separator)
+join();
+join(separator);
 ```
 
 ### 引数
@@ -42,11 +42,11 @@ join(separator)
 以下の例は、3 個の要素を持つ配列 `a` を作成し、デフォルト引数、カンマとスペース、そして「と」と空文字を使った 4 パターンの結合を行っています。
 
 ```js
-const a = ['風', '水', '火'];
-a.join();      // '風,水,火'
-a.join(', ');  // '風, 水, 火'
-a.join(' + '); // '風 + 水 + 火'
-a.join('');    // '風水火'
+const a = ["風", "水", "火"];
+a.join(); // '風,水,火'
+a.join(", "); // '風, 水, 火'
+a.join(" + "); // '風 + 水 + 火'
+a.join(""); // '風水火'
 ```
 
 ### 配列風オブジェクトを連結する
@@ -58,7 +58,7 @@ function f(a, b, c) {
   const s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);
+f(1, "a", true);
 //expected output: "1,a,true"
 ```
 

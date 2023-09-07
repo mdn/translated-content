@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ## 構文
 
 ```js
-has(value)
+has(value);
 ```
 
 ### 引数
@@ -24,26 +24,24 @@ has(value)
 
 `Set` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
-> **メモ:** 技術的に言えば、`has()` は [Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
-
 ## 例
 
 ### has() メソッドの使用
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.has('foo');  // returns true
-mySet.has('bar');  // returns false
+mySet.has("foo"); // returns true
+mySet.has("bar"); // returns false
 
 var set1 = new Set();
-var obj1 = {'key1': 1};
+var obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // returns true
-set1.has({'key1': 1}); // オブジェクト参照が異なるため false を返す
-set1.add({'key1': 1}); // set1 には 2 つの項目が含まれるようになる
+set1.has(obj1); // returns true
+set1.has({ key1: 1 }); // オブジェクト参照が異なるため false を返す
+set1.add({ key1: 1 }); // set1 には 2 つの項目が含まれるようになる
 ```
 
 ## 仕様書

@@ -9,8 +9,6 @@ slug: Web/HTML/Element/optgroup
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -86,4 +84,4 @@ slug: Web/HTML/Element/optgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}

@@ -1,38 +1,36 @@
 ---
-title: 'HTMLElement: drop イベント'
+title: "HTMLElement: drop イベント"
 slug: Web/API/HTMLElement/drop_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
 
 **`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>様々</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondrop", "ondrop")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+
+```js
+addEventListener("drop", (event) => {});
+
+ondrop = (event) => {};
+```
+
+## イベント型
+
+{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## イベントプロパティ
+
+_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
 
@@ -52,9 +50,7 @@ slug: Web/API/HTMLElement/drop_event
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    この div はドラッグ可
-  </div>
+  <div id="draggable" draggable="true">この div はドラッグ可</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -87,22 +83,22 @@ body {
 let dragged = null;
 
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // ドラッグ中の要素の参照を保存
   dragged = event.target;
 });
 
 const target = document.getElementById("droptarget");
-target.addEventListener("dragover", event => {
+target.addEventListener("dragover", (event) => {
   // ドロップできるように既定の動作を停止
   event.preventDefault();
 });
 
-target.addEventListener("drop", event => {
+target.addEventListener("drop", (event) => {
   // 既定の動作（一部の要素でリンクとして開く）を行わないようにする。
   event.preventDefault();
   // ドラッグした要素を選択されたドロップターゲットに移動する
-  if (event.target.className == "dropzone") {
+  if (event.target.className === "dropzone") {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }
@@ -132,7 +128,7 @@ target.addEventListener("drop", event => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
 
-- 他を対象としたこのイベント
+- 他を対象としたこのイベント:
 
   - {{domxref("Window")}}: {{domxref("Window/drop_event", "drop")}} イベント
   - {{domxref("Document")}}: {{domxref("Document/drop_event", "drop")}} イベント

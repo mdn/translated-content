@@ -1,5 +1,5 @@
 ---
-title: 'Express 教學 3: 使用資料庫 ( Mongoose)'
+title: "Express 教學 3: 使用資料庫 ( Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
 
@@ -34,7 +34,7 @@ Express 應用可以使用許多不同的數據庫，並且有好幾種方法可
 
 Express 應用程序可以使用 Node 支持的任何數據庫（Express 本身不會為數據庫管理，定義任何特定的附加行為/要求）。有許多[流行的選項](https://expressjs.com/en/guide/database-integration.html)，包括 PostgreSQL，MySQL，Redis，SQLite 和 MongoDB。
 
-在選擇數據庫時，您應該考慮時間 - 生產力/學習曲線，性能，易複製/備份，成本，社區支持等等。雖然沒有單一的 “最佳” 數據庫，但幾乎任何流行的解決方案，我們的本地圖書館這樣的中小型網站，應該都可以接受。
+在選擇數據庫時，您應該考慮時間 - 生產力/學習曲線，性能，易複製/備份，成本，社區支持等等。雖然沒有單一的 「最佳」 數據庫，但幾乎任何流行的解決方案，我們的本地圖書館這樣的中小型網站，應該都可以接受。
 
 有關選項的更多訊息，請參閱：[數據庫集成（Express docs）](https://expressjs.com/en/guide/database-integration.html)。
 
@@ -43,7 +43,7 @@ Express 應用程序可以使用 Node 支持的任何數據庫（Express 本身�
 有兩種與數據庫互動的方法：
 
 - 使用數據庫的原生查詢語言（例如 SQL）
-- 使用對像數據模型（“ODM”）/對象關係模型（“ORM”）。 ODM / ORM 將網站的數據表示為 JavaScript 對象，然後將其映射到底層數據庫。一些 ORM 綁定到特定的數據庫，而另一些則提供了一個不特定數據庫的後端。
+- 使用對像數據模型（「ODM」）/對象關係模型（「ORM」）。 ODM / ORM 將網站的數據表示為 JavaScript 對象，然後將其映射到底層數據庫。一些 ORM 綁定到特定的數據庫，而另一些則提供了一個不特定數據庫的後端。
 
 通過使用 SQL 或數據庫支持的任何查詢語言，都可以獲得最佳性能。 ODM 通常比較慢，因為它們使用翻譯代碼，在對象和數據庫格式之間進行映射，這可能不會使用最有效的數據庫查詢（尤其是如果 ODM 支持不同的數據庫後端，並且必須在各個數據庫所支持的功能方面，做出更大的折衷）。
 
@@ -63,11 +63,11 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 - [Objection](https://www.npmjs.com/package/objection): 以盡可能簡單的方式，使用 SQL 的全部功能，和底層數據庫引擎（支持 SQLite3，Postgres 和 MySQL）。
 - [Sequelize](https://www.npmjs.com/package/sequelize) 是 Node.js 和 io.js 基於 promise 的 ORM。它支持以下數據庫方言，PostgreSQL，MySQL，MariaDB，SQLite 和 MSSQL，並具有可靠的事務支持，關係，唯讀複本等功能。
 
-一般來說，在選擇解決方案時，您應該考慮提供的功能和 “社區活動” （下載，貢獻，錯誤報告，文檔質量等）。在撰寫本文時，Mongoose 是迄今為止最受歡迎的 ODM，如果您將 MongoDB 用於你的數據庫，那麼它是一個合理的選擇。
+一般來說，在選擇解決方案時，您應該考慮提供的功能和 「社區活動」 （下載，貢獻，錯誤報告，文檔質量等）。在撰寫本文時，Mongoose 是迄今為止最受歡迎的 ODM，如果您將 MongoDB 用於你的數據庫，那麼它是一個合理的選擇。
 
 ### 在本地圖書館使用 Mongoose 和 MongoDb
 
-對於本地圖書館示例（以及本主題的其餘部分），我們將使用 [Mongoose ODM](https://www.npmjs.com/package/mongoose) 來訪問我們的圖書館數據。 Mongoose 是 [MongoDB](https://www.mongodb.com/what-is-mongodb) 的前端，MongoDB 是一個使用面向文檔數據模型的開源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 數據庫。在 MongoDB 數據庫中，“文檔” 的 “集合” ，[類似於](https://docs.mongodb.com/manual/core/databases-and-collections/#collections)關係數據庫中 “行” 的 “表”。
+對於本地圖書館示例（以及本主題的其餘部分），我們將使用 [Mongoose ODM](https://www.npmjs.com/package/mongoose) 來訪問我們的圖書館數據。 Mongoose 是 [MongoDB](https://www.mongodb.com/what-is-mongodb) 的前端，MongoDB 是一個使用面向文檔數據模型的開源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 數據庫。在 MongoDB 數據庫中，「文檔」 的 「集合」 ，[類似於](https://docs.mongodb.com/manual/core/databases-and-collections/#collections)關係數據庫中 「行」 的 「表」。
 
 這種 ODM 和數據庫的結合在 Node 社區中非常流行，部分原因是文檔存儲和查詢系統，看起來非常像 JSON，因此對 JavaScript 開發人員來說很熟悉。
 
@@ -81,7 +81,7 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 我們知道，我們需要儲存有關書籍的訊息（標題，摘要，作者，種類，國際標準書號），以及我們可能有多個副本可用（具有全域唯一 ID，可用狀態等）。我們可能需要存儲有關作者的更多訊息，而不僅僅是他們的名字，並且可能有多個作者，具有相同或相似的名稱。我們希望能夠根據書名，作者，種類和類別對訊息進行分類。
 
-在設計模型時，對於每個“對象”（相關訊息組）都有獨立的模型，是有意義的。在這種情況下，明顯的對像是書籍，書籍實例和作者。
+在設計模型時，對於每個「對象」（相關訊息組）都有獨立的模型，是有意義的。在這種情況下，明顯的對像是書籍，書籍實例和作者。
 
 您可能還希望，使用模型來表示選擇列表選項（例如，選擇的下拉列表），而不是將選項硬編碼到網站本身— 在無法預先知道所有選項，或者可能更改時，更建議使用模型來表示。很明顯的，書本類型是這種模型的可能人選（例如科幻小說，法國詩歌等）。
 
@@ -101,7 +101,7 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 本節概述如何將 Mongoose 連接到 MongoDB 數據庫，如何定義模型綱要和模型，以及如何進行基本查詢。
 
-> **備註：** 本入門受到 npm 上的[Mongoose 快速入門](https://www.npmjs.com/package/mongoose)和[Mongoose 官方文檔](http://mongoosejs.com/docs/guide.html)的“深度影響”。
+> **備註：** 本入門受到 npm 上的[Mongoose 快速入門](https://www.npmjs.com/package/mongoose)和[Mongoose 官方文檔](http://mongoosejs.com/docs/guide.html)的「深度影響」。
 
 ### 安裝 Mongoose 和 MongoDB
 
@@ -113,7 +113,7 @@ npm install mongoose
 
 安裝 Mongoose 會添加所有依賴項，包括 MongoDB 數據庫驅動程序，但它不會安裝 MongoDB 。如果你想安裝一個 MongoDB 服務器，那麼你可以[從這裡下載](https://www.mongodb.com/download-center)各種操作系統的安裝程序，並在本地安裝。您還可以使用基於雲端的 MongoDB 實例。
 
-> **備註：** 對於本教程，我們將使用基於 mLab 雲的數據庫，作為服務[沙箱層](https://mlab.com/plans/pricing/)來提供數據庫。這適用於開發，也對於本教程很有意義，因為它使“安裝”與操作系統無關（數據庫即服務，也是您可能會用於生產環境數據庫的一種方法）。
+> **備註：** 對於本教程，我們將使用基於 mLab 雲的數據庫，作為服務[沙箱層](https://mlab.com/plans/pricing/)來提供數據庫。這適用於開發，也對於本教程很有意義，因為它使「安裝」與操作系統無關（數據庫即服務，也是您可能會用於生產環境數據庫的一種方法）。
 
 ### 連接到 MongoDB
 
@@ -121,10 +121,10 @@ Mongoose 需要連接到 MongoDB 數據庫。您可以`require()`並使用`mongo
 
 ```js
 //Import the mongoose module
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/my_database';
+var mongoDB = "mongodb://127.0.0.1/my_database";
 mongoose.connect(mongoDB);
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
@@ -132,7 +132,7 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 
 //Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
 您可以使用`mongoose.connection`獲取默認的`Connection`對象。一旦連接，在`Connection`實例上，將觸發打開事件。
@@ -143,7 +143,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 模型使用`Schema`接口進行定義。Schema 允許您定義存儲在每個文檔中的字段，及其驗證要求和默認值。此外，您可以定義靜態和實例助手方法，以更輕鬆地處理數據類型，以及可以像其他任何字段一樣使用的虛擬屬性，但實際上並不存儲在數據庫中（我們稍後將討論）。
 
-然後，綱要 Schemas 被`mongoose.model()`方法“編譯”為模型。擁有模型後，您可以使用它來查找，創建，更新和刪除給定類型的對象。
+然後，綱要 Schemas 被`mongoose.model()`方法「編譯」為模型。擁有模型後，您可以使用它來查找，創建，更新和刪除給定類型的對象。
 
 > **備註：** 每個模型都映射到 MongoDB 數據庫中的文檔集合。這些文檔將包含模型綱要`Schema`中定義的字段/綱要型態。
 
@@ -153,14 +153,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 ```js
 //Require Mongoose
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 //Define a schema
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date,
 });
 ```
 
@@ -175,25 +175,24 @@ var SomeModelSchema = new Schema({
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date,
 });
 
 // Compile model from schema
-var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
+var SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 第一個參數，是將為模型創建的集合的單數名稱（Mongoose 將為上面的 SomeModel 模型，創建數據庫集合），第二個參數，是您要在創建模型時使用的綱要 Shema。
 
-> **備註：** 定義模型類後，可以使用它們來創建，更新或刪除記錄，並運行查詢，以獲取記錄的所有記錄，或特定子集。我們將在以下“使用模型”部分，向您展示如何執行上述操作，以及當創建視圖時，如何執行此操作。
+> **備註：** 定義模型類後，可以使用它們來創建，更新或刪除記錄，並運行查詢，以獲取記錄的所有記錄，或特定子集。我們將在以下「使用模型」部分，向您展示如何執行上述操作，以及當創建視圖時，如何執行此操作。
 
 #### 綱要型態（字段）
 
 綱要 schema 可以有任意數量的字段 — 每個字段代表存儲在 MongoDB 文檔中的字段。如下的示例綱要，顯示許多常見字段類型及其聲明方式。
 
 ```js
-var schema = new Schema(
-{
+var schema = new Schema({
   name: String,
   binary: Buffer,
   living: Boolean,
@@ -203,15 +202,15 @@ var schema = new Schema(
   _someId: Schema.Types.ObjectId,
   array: [],
   ofString: [String], // You can also have an array of each of the other types too.
-  nested: { stuff: { type: String, lowercase: true, trim: true } }
-})
+  nested: { stuff: { type: String, lowercase: true, trim: true } },
+});
 ```
 
-大多數綱要型態[SchemaTypes](http://mongoosejs.com/docs/schematypes.html)（“type：”之後或字段名稱之後的描述符）都是自解釋的。例外情況是：
+大多數綱要型態[SchemaTypes](http://mongoosejs.com/docs/schematypes.html)（「type：」之後或字段名稱之後的描述符）都是自解釋的。例外情況是：
 
 - `ObjectId`:表示數據庫中模型的特定實例。例如，一本書可能會使用它來表示其作者對象。這實際上將包含指定對象的唯一 ID ( `_id`) 。我們可以使用`populate()`方法，在需要時提取相關訊息。
 - [Mixed](http://mongoosejs.com/docs/schematypes.html#mixed) :任意綱要型態。
-- \[] :一個數組的項目。您可以在這些模型上執行 JavaScript 數組操作（push，pop，unshift 等）。上面的例子，顯示了一個沒有指定類型的對像數組，和一個 String 對像數組，但是你可以有任何類型的對像數組。
+- \[]：一個數組的項目。您可以在這些模型上執行 JavaScript 數組操作（push、pop、unshift 等）。上面的例子，顯示了一個沒有指定類型的對像數組，和一個 String 對像數組，但是你可以有任何類型的對像數組。
 
 該代碼還顯示了聲明一個字段的兩種方式：
 
@@ -271,7 +270,7 @@ Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。�
 
 #### 方法和查詢幫助
 
-綱要 schema 也可以有[實例方法](http://mongoosejs.com/docs/guide.html#methods)，[靜態方法](http://mongoosejs.com/docs/guide.html#statics)和[查詢助手](http://mongoosejs.com/docs/guide.html#query-helpers)。實例和靜態方法很相似，但有明顯的區別，即實例方法與特定記錄相關聯，並且可以訪問當前對象。查詢助手允許您擴展 mongoose 的[鍊式查詢構建器 API](http://mongoosejs.com/docs/queries.html)（例如，除了`find()`, `findOne()`和`findById()`方法外，還允許您添加一個“byName”查詢。
+綱要 schema 也可以有[實例方法](http://mongoosejs.com/docs/guide.html#methods)，[靜態方法](http://mongoosejs.com/docs/guide.html#statics)和[查詢助手](http://mongoosejs.com/docs/guide.html#query-helpers)。實例和靜態方法很相似，但有明顯的區別，即實例方法與特定記錄相關聯，並且可以訪問當前對象。查詢助手允許您擴展 mongoose 的[鍊式查詢構建器 API](http://mongoosejs.com/docs/queries.html)（例如，除了`find()`, `findOne()`和`findById()`方法外，還允許您添加一個「byName」查詢。
 
 ### 使用模型
 
@@ -281,11 +280,11 @@ Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。�
 
 #### 創建和修改文檔
 
-要創建記錄，您可以定義模型的實例，然後調用`save()`。下面的例子假設，SomeModel 是我們從綱要創建的模型（帶有單一字段“name” ）。
+要創建記錄，您可以定義模型的實例，然後調用`save()`。下面的例子假設，SomeModel 是我們從綱要創建的模型（帶有單一字段「name」 ）。
 
 ```js
 // Create an instance of model SomeModel
-var awesome_instance = new SomeModel({ name: 'awesome' });
+var awesome_instance = new SomeModel({ name: "awesome" });
 
 // Save the new model instance, passing a callback
 awesome_instance.save(function (err) {
@@ -299,7 +298,7 @@ awesome_instance.save(function (err) {
 您還可以使用`create()`，同時定義模型實例，並保存模型實例。回調將為第一個參數返回錯誤，為第二個參數返回新創建的模型實例。
 
 ```js
-SomeModel.create({ name: 'also_awesome' }, function (err, awesome_instance) {
+SomeModel.create({ name: "also_awesome" }, function (err, awesome_instance) {
   if (err) return handleError(err);
   // saved!
 });
@@ -314,10 +313,10 @@ SomeModel.create({ name: 'also_awesome' }, function (err, awesome_instance) {
 console.log(awesome_instance.name); //should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
-awesome_instance.name="New cool name";
+awesome_instance.name = "New cool name";
 awesome_instance.save(function (err) {
-   if (err) return handleError(err); // saved!
-   });
+  if (err) return handleError(err); // saved!
+});
 ```
 
 #### 尋找紀錄
@@ -325,13 +324,13 @@ awesome_instance.save(function (err) {
 可以使用查詢方法搜索記錄，將查詢條件指定為 JSON 文檔。下面的代碼片段，顯示瞭如何在數據庫中，找到所有參加網球運動的運動員，只返回運動員姓名和年齡的字段。這裡我們只指定一個匹配的字段（運動 sport），但您可以添加更多條件，指定正則表達式標準，或完全刪除條件以返回所有運動員。
 
 ```js
-var Athlete = mongoose.model('Athlete', yourSchema);
+var Athlete = mongoose.model("Athlete", yourSchema);
 
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
-Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
+Athlete.find({ sport: "Tennis" }, "name age", function (err, athletes) {
   if (err) return handleError(err);
   // 'athletes' contains the list of athletes that match the criteria.
-})
+});
 ```
 
 如果您指定回調，如上所示，查詢將立即執行。搜索完成後將調用回調。
@@ -342,10 +341,10 @@ Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
 
 ```js
 // find all athletes that play tennis
-var query = Athlete.find({ 'sport': 'Tennis' });
+var query = Athlete.find({ sport: "Tennis" });
 
 // selecting the 'name' and 'age' fields
-query.select('name age');
+query.select("name age");
 
 // limit our results to 5 items
 query.limit(5);
@@ -357,7 +356,7 @@ query.sort({ age: -1 });
 query.exec(function (err, athletes) {
   if (err) return handleError(err);
   // athletes contains an ordered list of 5 athletes who play Tennis
-})
+});
 ```
 
 上面我們在`find()`方法中，定義了查詢條件。我們也可以使用`where()`函數來執行此操作，並且我們可以使用點運算符（ . ）將查詢的所有部分鏈接在一起，而不是分別添加它們。
@@ -389,30 +388,30 @@ Athlete.
 
 您可以使用`ObjectId`綱要字段，從一個文檔/模型實例，創建一對一引用，或者使用`ObjectIds`數組，從一個文檔創建一對多的引用。該字段存儲相關模型的 ID。如果需要關聯文檔的實際內容，可以在查詢中使用[`populate()`](http://mongoosejs.com/docs/api.html#query_Query-populate)方法，將 id 替換為實際數據。
 
-例如，以下綱要定義作者和故事。每個作者可以有多個故事，我們將其表示為一個`ObjectId`數組。每個故事可以有一個作者。綱要從“ref”（以粗體突出顯示）得知，可以分配給該字段的模型。
+例如，以下綱要定義作者和故事。每個作者可以有多個故事，我們將其表示為一個`ObjectId`數組。每個故事可以有一個作者。綱要從「ref」（以粗體突出顯示）得知，可以分配給該字段的模型。
 
 ```js
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema
+var mongoose = require("mongoose"),
+  Schema = mongoose.Schema;
 
 var authorSchema = Schema({
-  name    : String,
-  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+  name: String,
+  stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
 var storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, ref: 'Author' },
-  title    : String
+  author: { type: Schema.Types.ObjectId, ref: "Author" },
+  title: String,
 });
 
-var Story  = mongoose.model('Story', storySchema);
-var Author = mongoose.model('Author', authorSchema);
+var Story = mongoose.model("Story", storySchema);
+var Author = mongoose.model("Author", authorSchema);
 ```
 
 我們可以通過分配`_id`值，來保存對相關文檔的引用。下面我們創建一個作者，然後創建一個故事，並將作者 ID 分配給我們的故事作者字段。
 
 ```js
-var bob = new Author({ name: 'Bob Smith' });
+var bob = new Author({ name: "Bob Smith" });
 
 bob.save(function (err) {
   if (err) return handleError(err);
@@ -420,7 +419,7 @@ bob.save(function (err) {
   //Bob now exists, so lets create a story
   var story = new Story({
     title: "Bob goes sledding",
-    author: bob._id    // assign the _id from the our author Bob. This ID is created by default!
+    author: bob._id, // assign the _id from the our author Bob. This ID is created by default!
   });
 
   story.save(function (err) {
@@ -433,14 +432,13 @@ bob.save(function (err) {
 我們的故事文檔，現在有作者文檔 ID 引用的作者。為了在我們的故事結果中，獲取作者訊息，我們使用`populate()`，如下所示。
 
 ```js
-Story
-.findOne({ title: 'Bob goes sledding' })
-.populate('author') //This populates the author id with actual author information!
-.exec(function (err, story) {
-  if (err) return handleError(err);
-  console.log('The author is %s', story.author.name);
-  // prints "The author is Bob Smith"
-});
+Story.findOne({ title: "Bob goes sledding" })
+  .populate("author") //This populates the author id with actual author information!
+  .exec(function (err, story) {
+    if (err) return handleError(err);
+    console.log("The author is %s", story.author.name);
+    // prints "The author is Bob Smith"
+  });
 ```
 
 > **備註：** 敏銳的讀者會注意到，我們在故事中添加了作者，但我們沒有做任何事情，來將我們的故事添加到作者的故事`stories`數組中。那麼我們怎樣才能得到特定作者的所有故事？
@@ -448,9 +446,7 @@ Story
 > 一種方法，是將作者添加到故事數組中，但這會導致我們需要在兩個地方，維護與作者和故事有關的訊息。更好的方法是獲取作者的`_id`，然後使用`find()`，在所有故事的作者字段中搜索此內容。
 >
 > ```js
-> Story
-> .find({ author : bob._id })
-> .exec(function (err, stories) {
+> Story.find({ author: bob._id }).exec(function (err, stories) {
 >   if (err) return handleError(err);
 >   // returns all stories that have Bob's id as their author.
 > });
@@ -466,25 +462,25 @@ Story
 // File: ./models/somemodel.js
 
 //Require Mongoose
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 //Define a schema
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string          : String,
-    a_date            : Date,
+  a_string: String,
+  a_date: Date,
 });
 
 //Export function to create "SomeModel" model class
-module.exports = mongoose.model('SomeModel', SomeModelSchema );
+module.exports = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 然後，您可以在其他文件中，立即要求並使用該模型。下面我們展示如何使用它，來獲取模型的所有實例。
 
 ```js
 //Create a SomeModel model just by requiring the module
-var SomeModel = require('../models/somemodel')
+var SomeModel = require("../models/somemodel");
 
 // Use the SomeModel object (model) to find all SomeModel records
 SomeModel.find(callback_function);
@@ -494,7 +490,7 @@ SomeModel.find(callback_function);
 
 現在我們了解了 Mongoose 能做什麼，以及我們想如何設計我們的模型，現在該開始在 LocalLibrary 網站上工作了。我們想要做的第一件事，就是設置一個 MongoDb 數據庫，我們可以使用它來儲存我們的圖書館數據。
 
-本教程，我們將使用[mLab](https://mlab.com/welcome/)免費的雲託管的“ [沙盒](https://mlab.com/plans/pricing/) ”數據庫。這個數據庫層不適合生產環境的網站，因為它沒有冗餘設計，但它對於開發和原型設計來說非常有用。我們在這裡使用它，是因為它免費且易於設置，並且因為作為數據庫服務供應商來說，mLab 是流行的數據庫選擇之一，您可能會合理選擇您的生產環境數據庫（撰寫本文時，其他流行的選擇包括[Compose](https://www.compose.com/)、[ScaleGrid](https://scalegrid.io/pricing.html)和[MongoDB Atlas](https://www.mongodb.com/cloud/atlas)）。
+本教程，我們將使用[mLab](https://mlab.com/welcome/)免費的雲託管的「 [沙盒](https://mlab.com/plans/pricing/) 」數據庫。這個數據庫層不適合生產環境的網站，因為它沒有冗餘設計，但它對於開發和原型設計來說非常有用。我們在這裡使用它，是因為它免費且易於設置，並且因為作為數據庫服務供應商來說，mLab 是流行的數據庫選擇之一，您可能會合理選擇您的生產環境數據庫（撰寫本文時，其他流行的選擇包括[Compose](https://www.compose.com/)、[ScaleGrid](https://scalegrid.io/pricing.html)和[MongoDB Atlas](https://www.mongodb.com/cloud/atlas)）。
 
 > **備註：** 如果您願意，可以下載並安裝[與系統相對應的二進製文件](https://www.mongodb.com/download-center)，在本地設置 MongoDb 數據庫。除了您在連接時指定的數據庫 URL 之外，本文中的其餘指令將很類似。
 
@@ -502,36 +498,36 @@ SomeModel.find(callback_function);
 
 登錄後，您將進入[mLab 主](https://mlab.com/home)畫面:
 
-1. 單擊*MongoDB Deployments*部分中的**Create New。**![](mlabcreatenewdeployment.png)
-2. 這將打開“雲提供商”Cloud Provider 選擇畫面。
-    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
+1. 單擊 _MongoDB Deployments_ 部分中的 **Create New**。![](mlabcreatenewdeployment.png)
+2. 這將打開「雲提供商」Cloud Provider 選擇畫面。
+   ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
-    - 從“計劃類型”Plan Type 部分中，選擇“SANDBOX（免費）”計劃。
-    - 從“雲提供商” *Cloud Provider*部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。
-    - 單擊“繼續” **Continue**按鈕。
+   - 從「計劃類型」_Plan Type_ 部分中，選擇「SANDBOX（免費）」計劃。
+   - 從「雲提供商」_Cloud Provider_ 部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。
+   - 單擊「繼續」**Continue** 按鈕。
 
-3. 這將打開“選擇區域” _Select Region_ 畫面。
+3. 這將打開「選擇區域」_Select Region_ 畫面。
 
-    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
+   ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
-    - 選擇離您最近的地區，然後選擇繼續**Continue** .
+   - 選擇離您最近的地區，然後選擇繼續 **Continue**。
 
 4. 這將打開 Final Details 畫面。
-    ![New deployment database name](mlab_new_deployment_final_details.png)
+   ![New deployment database name](mlab_new_deployment_final_details.png)
 
-    - 輸入新數據庫的名稱`local_library`，然後選擇繼續**Continue**。
+   - 輸入新數據庫的名稱 `local_library`，然後選擇繼續 **Continue**。
 
 5. 這將打開訂單確認畫面。
-    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
+   ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
-    - 單擊“提交訂單” **Submit Order**以創建數據庫。
+   - 單擊「提交訂單」**Submit Order** 以創建數據庫。
 
 6. 您將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。
-    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
-    您需要用來訪問數據庫的 URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在 URL 中指定的數據庫用戶。
+   ![mLab - Database details screen](mlab_new_deployment_database_details.png)
+   您需要用來訪問數據庫的 URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在 URL 中指定的數據庫用戶。
 7. 單擊用戶**Users**選項卡，並選擇添加數據庫用戶按鈕**Add database user**。
 8. 輸入用戶名和密碼（兩次），然後按創建**Create**。不要選擇只讀*read-only*。
-    ![](mlab_database_users.png)
+   ![](mlab_database_users.png)
 
 您現在已經創建了數據庫，並且有一個可以用來訪問它的 URL（帶有用戶名和密碼）。這看起來像是這樣的：`mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 
@@ -549,12 +545,12 @@ npm install mongoose
 
 ```js
 //Set up mongoose connection
-var mongoose = require('mongoose');
-var mongoDB = 'insert_your_database_url_here';
+var mongoose = require("mongoose");
+var mongoDB = "insert_your_database_url_here";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
 正如上面的**Mongoose 入門**中所討論的，此代碼創建了與數據庫的默認連接，並綁定到錯誤事件（以便將錯誤打印到控制台）。
@@ -577,38 +573,32 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 複製下面顯示的`Author`作者綱要代碼，並將其粘貼到**./models/author.js**文件中。該綱要定義了一個作者，具有`String`SchemaTypes 的第一個名稱和家族名稱，這是必需的，最多有 100 個字符，`Date`字段為出生和死亡日期。
 
 ```js
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var AuthorSchema = new Schema(
-  {
-    first_name: {type: String, required: true, max: 100},
-    family_name: {type: String, required: true, max: 100},
-    date_of_birth: {type: Date},
-    date_of_death: {type: Date},
-  }
-);
+var AuthorSchema = new Schema({
+  first_name: { type: String, required: true, max: 100 },
+  family_name: { type: String, required: true, max: 100 },
+  date_of_birth: { type: Date },
+  date_of_death: { type: Date },
+});
 
 // Virtual for author's full name
-AuthorSchema
-.virtual('name')
-.get(function () {
-  return this.family_name + ', ' + this.first_name;
+AuthorSchema.virtual("name").get(function () {
+  return this.family_name + ", " + this.first_name;
 });
 
 // Virtual for author's URL
-AuthorSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/author/' + this._id;
+AuthorSchema.virtual("url").get(function () {
+  return "/catalog/author/" + this._id;
 });
 
 //Export model
-module.exports = mongoose.model('Author', AuthorSchema);
+module.exports = mongoose.model("Author", AuthorSchema);
 ```
 
-我們還為 AuthorSchema，聲明了一個名為“url”的虛擬屬性，它返回獲取模型的特定實例所需的絕對 URL — 每當我們需要獲取指向特定作者的鏈接時，我們將在模板中使用該屬性。
+我們還為 AuthorSchema，聲明了一個名為「url」的虛擬屬性，它返回獲取模型的特定實例所需的絕對 URL — 每當我們需要獲取指向特定作者的鏈接時，我們將在模板中使用該屬性。
 
 > **備註：** 在綱要中聲明我們的 URL 是虛擬的，這是一個好主意，因為一個項目的 URL 只需要在一個地方更改。此時，使用此 URL 的鏈接將不起作用，因為我們還沒有任何路由，可以處理個別模型實例的代碼。我們將在後面的文章中介紹這些內容！
 
@@ -619,29 +609,25 @@ module.exports = mongoose.model('Author', AuthorSchema);
 複製下面顯示的`Book`綱要代碼，並將其粘貼到**./models/book.js**文件中。其中大部分與作者模型相似—我們已經聲明了一個具有多個字符串字段的綱要，以及一個虛擬屬性，用於獲取特定書籍記錄的 URL，並且我們已經導出了模型。
 
 ```js
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var BookSchema = new Schema(
-  {
-    title: {type: String, required: true},
-    author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},
-    summary: {type: String, required: true},
-    isbn: {type: String, required: true},
-    genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]
-  }
-);
+var BookSchema = new Schema({
+  title: { type: String, required: true },
+  author: { type: Schema.Types.ObjectId, ref: "Author", required: true },
+  summary: { type: String, required: true },
+  isbn: { type: String, required: true },
+  genre: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
+});
 
 // Virtual for book's URL
-BookSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/book/' + this._id;
+BookSchema.virtual("url").get(function () {
+  return "/catalog/book/" + this._id;
 });
 
 //Export model
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model("Book", BookSchema);
 ```
 
 這裡的主要區別，是我們已經創建了兩個對其他模型的引用：
@@ -651,37 +637,38 @@ module.exports = mongoose.model('Book', BookSchema);
 
 ### 書本實例模型
 
-最後，複製下面顯示的`BookInstance`綱要代碼，並將其粘貼到**./models/bookinstance.js**文件中。`BookInstance`表示某人可能藉閱的書籍的特定副本，並包含有關該副本是否可用，或預期返回日期的訊息，“印記”或版本詳細訊息。
+最後，複製下面顯示的`BookInstance`綱要代碼，並將其粘貼到**./models/bookinstance.js**文件中。`BookInstance`表示某人可能藉閱的書籍的特定副本，並包含有關該副本是否可用，或預期返回日期的訊息，「印記」或版本詳細訊息。
 
 ```js
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var BookInstanceSchema = new Schema(
-  {
-    book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, //reference to the associated book
-    imprint: {type: String, required: true},
-    status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
-    due_back: {type: Date, default: Date.now}
-  }
-);
+var BookInstanceSchema = new Schema({
+  book: { type: Schema.Types.ObjectId, ref: "Book", required: true }, //reference to the associated book
+  imprint: { type: String, required: true },
+  status: {
+    type: String,
+    required: true,
+    enum: ["Available", "Maintenance", "Loaned", "Reserved"],
+    default: "Maintenance",
+  },
+  due_back: { type: Date, default: Date.now },
+});
 
 // Virtual for bookinstance's URL
-BookInstanceSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/bookinstance/' + this._id;
+BookInstanceSchema.virtual("url").get(function () {
+  return "/catalog/bookinstance/" + this._id;
 });
 
 //Export model
-module.exports = mongoose.model('BookInstance', BookInstanceSchema);
+module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 
 我們在這裡展示的新東西，是字段選項：
 
 - 枚舉`enum`:這允許我們設置字符串的允許值。在這種情況下，我們用它來指定我們書籍的可用性狀態（使用枚舉，意味著我們可以防止錯誤拼寫和任意值，成為我們的狀態）
-- 默認值`default`:我們使用默認值，將新創 ​​ 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
+- 默認值`default`:我們使用默認值，將新創 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
 
 其他所有內容，大夥應該在前面教程裡邊已經熟悉了。
 
@@ -692,7 +679,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 該定義將與其他模型非常相似：
 
 - 該模型應該有一個名為`name`的`String`SchemaType ，來描述種類。
-- 這個`name`字段應該是必要的，並且有 3 到 ​​100 個字符。
+- 這個`name`字段應該是必要的，並且有 3 到 100 個字符。
 - 為類型的 URL 聲明虛擬，名為`url`。
 - 導出模型。
 
@@ -704,19 +691,19 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
 1. 在 express-locallibrary-tutorial 目錄下（與`package.json`處於同一級別），下載（或以其他方式創建）文件[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)。
 
-    > **備註：** 您不需要知道[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)的工作原理;它只是將示例數據添加到數據庫中。
+   > **備註：** 您不需要知道[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)的工作原理;它只是將示例數據添加到數據庫中。
 
 2. 在項目根目錄中，輸入以下命令，以安裝腳本所需的異步模塊（我們將在後面的教程中討論這一點）
 
-    ```bash
-    npm install async
-    ```
+   ```bash
+   npm install async
+   ```
 
 3. 在命令提示符下，使用 node 運行此腳本，傳遞 MongoDB 數據庫的 URL（與之前在`app.js`中替換 insert_your_database_url_here 佔位符的那個相同）：
 
-    ```bash
-    node populatedb <your mongodb url>​​​​
-    ```
+   ```bash
+   node populatedb <your mongodb url>
+   ```
 
 4. 該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
 
@@ -740,15 +727,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

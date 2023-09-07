@@ -43,7 +43,7 @@ l10n:
 これは {{jsxref("Uint8Array")}} と組み合わせた {{domxref("ReadableStream")}} の使用方法を示しています。
 
 ```js
-fetch('https://www.example.org')
+fetch("https://www.example.org")
   .then((response) => response.body)
   .then((rb) => {
     const reader = rb.getReader();
@@ -74,7 +74,7 @@ fetch('https://www.example.org')
   })
   .then((stream) =>
     // ストリームで応答する
-    new Response(stream, { headers: { 'Content-Type': 'text/html' } }).text()
+    new Response(stream, { headers: { "Content-Type": "text/html" } }).text(),
   )
   .then((result) => {
     // Do things with result
@@ -82,9 +82,9 @@ fetch('https://www.example.org')
   });
 ```
 
-### 非同期反復子をストリームへ変換
+### 非同期イテレーターをストリームへ変換
 
-[（非同期）反復子](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)を読み取り可能なストリームへ変換します。
+[（非同期）イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を読み取り可能なストリームへ変換します。
 
 ```js
 function iteratorToStream(iterator) {
@@ -102,7 +102,7 @@ function iteratorToStream(iterator) {
 }
 ```
 
-これは、反復子が非同期でも非同期でなくても動作します。
+これは、イテレーターが非同期でも非同期でなくても動作します。
 
 ## 仕様書
 

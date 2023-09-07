@@ -28,21 +28,19 @@ _반환값 없음._
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
-> **참고:** **주**: 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
+> **참고:** 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
 
-## 사양
+## 명세서
 
-| 사양                                                                                         | 상태                             | 비고 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}} | {{Spec2('Web Storage')}} |      |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,12 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS-свойство
-  - семейства-шрифтов
-translation_of: Web/CSS/font-family
 ---
 
 {{CSSRef}}
@@ -27,7 +21,9 @@ CSS-свойство **`font-family`** определяет приоритетн
 
 ```css
 /* Имя шрифта и общие семейства шрифтов */
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
 /* Только общие семейства */
@@ -52,7 +48,9 @@ font-family: unset;
 В приведённом ниже примере перечислены два семейства шрифтов, первое [`<family-name>`](#family-name), а второе как `<generic-name>`:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ### Значения
@@ -63,7 +61,7 @@ font-family: Gill Sans Extrabold, sans-serif;
   - : Общие семейства шрифтов используются как резервный механизм для сохранения некоторого авторского стиля в момент, когда ни один из желаемых шрифтов недоступен. Общие семейства шрифтов являются ключевыми словами и **не** должны браться в кавычки. Общее семейство шрифтов должно определяться последним в списке семейств шрифтов. Определены следующие ключевые слова:
     - `serif`
       - : Глифы имеют завершающие штрихи, расширяющиеся или сужающиеся концы, или имеют фактически зазубренные окончания.
-    Например, "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+        Например, "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
     - `sans-serif`
       - : Глифы имеют гладкие окончания.
         Например, "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
@@ -90,20 +88,30 @@ font-family: Gill Sans Extrabold, sans-serif;
 Например, следующие объявления являются валидными:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 ```
 
 Следующие объявления являются **не валидными**:
 
 ```css example-bad
-font-family: Goudy Bookletter 1911, sans-serif;
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
 font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family:
+  test @foo,
+  sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
 ```
 
 ### Формальный синтаксис
@@ -116,7 +124,11 @@ font-family: Hawaii 5-0, sans-serif;
 
 ```css
 .serif {
-  font-family: Times, Times New Roman, Georgia, serif;
+  font-family:
+    Times,
+    Times New Roman,
+    Georgia,
+    serif;
 }
 
 .sansserif {
@@ -124,7 +136,10 @@ font-family: Hawaii 5-0, sans-serif;
 }
 
 .monospace {
-  font-family: Lucida Console, Courier, monospace;
+  font-family:
+    Lucida Console,
+    Courier,
+    monospace;
 }
 
 .cursive {
@@ -149,37 +164,21 @@ font-family: Hawaii 5-0, sans-serif;
 ```
 
 ```html hidden
-<div class="serif">
-  This is an example of a serif font.
-</div>
+<div class="serif">This is an example of a serif font.</div>
 
-<div class="sansserif">
-  This is an example of a sans-serif font.
-</div>
+<div class="sansserif">This is an example of a sans-serif font.</div>
 
-<div class="monospace">
-  This is an example of a monospace font.
-</div>
+<div class="monospace">This is an example of a monospace font.</div>
 
-<div class="cursive">
-  This is an example of a cursive font.
-</div>
+<div class="cursive">This is an example of a cursive font.</div>
 
-<div class="fantasy">
-  This is an example of a fantasy font.
-</div>
+<div class="fantasy">This is an example of a fantasy font.</div>
 
-<div class="math">
-  This is an example of a math font.
-</div>
+<div class="math">This is an example of a math font.</div>
 
-<div class="emoji">
-  This is an example of an emoji font.
-</div>
+<div class="emoji">This is an example of an emoji font.</div>
 
-<div class="fangsong">
-  This is an example of a fangsong font.
-</div>
+<div class="fangsong">This is an example of a fangsong font.</div>
 ```
 
 {{ EmbedLiveSample('Некоторые_общие_семейства_шрифтов','600','120') }}

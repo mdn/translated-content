@@ -1,7 +1,6 @@
 ---
 title: 101 Switching Protocol
 slug: Web/HTTP/Status/101
-translation_of: Web/HTTP/Status/101
 ---
 
 {{HTTPSidebar}}
@@ -28,9 +27,11 @@ Connection: Upgrade
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.2.2: 101 Switching Protocol](https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

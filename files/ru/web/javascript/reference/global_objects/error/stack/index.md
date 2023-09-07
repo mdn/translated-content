@@ -1,14 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 ---
 
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}
@@ -30,27 +22,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 Следующая разметка HTML демонстрирует использование свойства `stack`.
 
 ```html
-<!DOCTYPE HTML>
-<meta charset="UTF-8">
+<!doctype html>
+<meta charset="UTF-8" />
 <title>Пример трассировки стека</title>
 <body>
-<script>
-function trace() {
-  try {
-    throw new Error('Моя ошибка');
-  }
-  catch(e) {
-    alert(e.stack);
-  }
-}
-function b() {
-  trace();
-}
-function a() {
-  b(3, 4, '\n\n', undefined, {});
-}
-a('первый вызов, первый аргумент');
-</script>
+  <script>
+    function trace() {
+      try {
+        throw new Error("Моя ошибка");
+      } catch (e) {
+        alert(e.stack);
+      }
+    }
+    function b() {
+      trace();
+    }
+    function a() {
+      b(3, 4, "\n\n", undefined, {});
+    }
+    a("первый вызов, первый аргумент");
+  </script>
+</body>
 ```
 
 Предполагается, что разметка выше сохранена как `C:\example.html` в файловой системе Windows. Она выводит следующий текст в диалоговом окне:
@@ -85,18 +77,17 @@ a("первый вызов, первый аргумент")@file:///C:/example.h
 
 ### Стек кода в функции `eval()`
 
-Начиная с Firefox 30 {{geckoRelease("30")}}, стек вызовов кода в вызовах `Function()` и `eval()` даёт более подробную информацию о номере строки и колонки внутри этих вызовов. Вызовы `Function` обозначаются `"> Function"`, а вызовы `eval()` обозначаются `"> eval"`. Смотрите {{bug("332176")}}.
+Начиная с Firefox 30, стек вызовов кода в вызовах `Function()` и `eval()` даёт более подробную информацию о номере строки и колонки внутри этих вызовов. Вызовы `Function` обозначаются `"> Function"`, а вызовы `eval()` обозначаются `"> eval"`. Смотрите {{bug("332176")}}.
 
 ```js
 try {
-  new Function('throw new Error()')();
+  new Function("throw new Error()")();
 } catch (e) {
   console.log(e.stack);
 }
 
 // anonymous@file:///C:/example.html line 7 > Function:1:1
 // @file:///C:/example.html:7:6
-
 
 try {
   eval("eval('FAIL')");

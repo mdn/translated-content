@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/WebGL_model_view_projection
 
 この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
 
-> **メモ:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> **メモ:** This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
 
 ## モデル、ビュー、射影行列
 
@@ -21,7 +21,7 @@ WebGL の空間内の点とポリゴンの個々の変換は、並進、拡縮�
 
 WebGL プログラムでは、通常、データは自分の座標系で GPU にアップロードされ、次に頂点シェーダーがそれらの点を**クリップ空間**と呼ばれる特別な座標系に変換します。クリップ空間の外側にあるデータは切り取られ、描画されません。ただし、三角形がこのスペースの境界を跨ぐ場合は、新しい三角形に分割され、クリップスペースにある新しい三角形の部分のみが残ります。
 
-![A 3d graph showing clip space in WebGL.](https://mdn.mozillademos.org/files/11371/clip-space-graph.svg)
+![A 3d graph showing clip space in WebGL.](clip_space_graph.svg)
 
 上の図は、全ての点が収まる必要のあるクリップ空間を視覚化したものです。これは、各辺が 2 の立方体であり、片方の角が (-1,-1,-1) にあり、対角が (1,1,1) にあります。立方体の中心は点 (0,0,0) です。 クリップ空間に使用されるこの 8 立方メートルの座標系は、正規化デバイス座標（NDC）と呼ばれます。WebGL コードを調べて作業している間、その用語を時々耳にするかもしれません。
 
@@ -31,7 +31,7 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox コンストラクタ
 
@@ -40,7 +40,7 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 ```js
 function WebGLBox() {
   // Setup the canvas and WebGL context
-  this.canvas = document.getElementById('canvas');
+  this.canvas = document.getElementById("canvas");
   this.canvas.width = window.innerWidth;
   this.canvas.height = window.innerHeight;
   this.gl = MDN.createContext(canvas);
@@ -48,17 +48,20 @@ function WebGLBox() {
   var gl = this.gl;
 
   // Setup a WebGL program, anything part of the MDN object is defined outside of this article
-  this.webglProgram = MDN.createWebGLProgramFromIds(gl, 'vertex-shader', 'fragment-shader');
+  this.webglProgram = MDN.createWebGLProgramFromIds(
+    gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
   gl.useProgram(this.webglProgram);
 
   // Save the attribute and uniform locations
-  this.positionLocation = gl.getAttribLocation(this.webglProgram, 'position');
-  this.colorLocation = gl.getUniformLocation(this.webglProgram, 'color');
+  this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+  this.colorLocation = gl.getUniformLocation(this.webglProgram, "color");
 
   // Tell WebGL to test the depth when drawing, so if a square is behind
   // another square it won't be drawn
   gl.enable(gl.DEPTH_TEST);
-
 }
 ```
 
@@ -67,21 +70,32 @@ function WebGLBox() {
 次に、画面上にボックスを描画するメソッドを作成します。
 
 ```js
-WebGLBox.prototype.draw = function(settings) {
+WebGLBox.prototype.draw = function (settings) {
   // Create some attribute data; these are the triangles that will end being
   // drawn to the screen. There are two that form a square.
 
   var data = new Float32Array([
-
     //Triangle 1
-    settings.left,  settings.bottom, settings.depth,
-    settings.right, settings.bottom, settings.depth,
-    settings.left,  settings.top,    settings.depth,
+    settings.left,
+    settings.bottom,
+    settings.depth,
+    settings.right,
+    settings.bottom,
+    settings.depth,
+    settings.left,
+    settings.top,
+    settings.depth,
 
     //Triangle 2
-    settings.left,  settings.top,    settings.depth,
-    settings.right, settings.bottom, settings.depth,
-    settings.right, settings.top,    settings.depth
+    settings.left,
+    settings.top,
+    settings.depth,
+    settings.right,
+    settings.bottom,
+    settings.depth,
+    settings.right,
+    settings.top,
+    settings.depth,
   ]);
 
   // Use WebGL to draw this onto the screen.
@@ -105,10 +119,10 @@ WebGLBox.prototype.draw = function(settings) {
 
   // Draw the triangles to the screen
   gl.drawArrays(gl.TRIANGLES, 0, 6);
-}
+};
 ```
 
-シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/TatumCreative/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
+シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/gregtatum/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
 
 最初に、画面上で頂点を移動させる頂点シェーダーを見てみましょう。
 
@@ -143,13 +157,13 @@ var box = new WebGLBox();
 
 ```js
 box.draw({
-  top    : 0.5,             // x
-  bottom : -0.5,            // x
-  left   : -0.5,            // y
-  right  : 0.5,             // y
+  top: 0.5, // x
+  bottom: -0.5, // x
+  left: -0.5, // y
+  right: 0.5, // y
 
-  depth  : 0,               // z
-  color  : [1, 0.4, 0.4, 1] // red
+  depth: 0, // z
+  color: [1, 0.4, 0.4, 1], // red
 });
 ```
 
@@ -157,13 +171,13 @@ box.draw({
 
 ```js
 box.draw({
-  top    : 0.9,             // x
-  bottom : 0,               // x
-  left   : -0.9,            // y
-  right  : 0.9,             // y
+  top: 0.9, // x
+  bottom: 0, // x
+  left: -0.9, // y
+  right: 0.9, // y
 
-  depth  : 0.5,             // z
-  color  : [0.4, 1, 0.4, 1] // green
+  depth: 0.5, // z
+  color: [0.4, 1, 0.4, 1], // green
 });
 ```
 
@@ -171,13 +185,13 @@ box.draw({
 
 ```js
 box.draw({
-  top    : 1,               // x
-  bottom : -1,              // x
-  left   : -1,              // y
-  right  : 1,               // y
+  top: 1, // x
+  bottom: -1, // x
+  left: -1, // y
+  right: 1, // y
 
-  depth  : -1.5,            // z
-  color  : [0.4, 0.4, 1, 1] // blue
+  depth: -1.5, // z
+  color: [0.4, 0.4, 1, 1], // blue
 });
 ```
 
@@ -185,7 +199,7 @@ box.draw({
 
 [JSFiddle で表示](https://jsfiddle.net/mff99yu5)
 
-![The results of drawing to clip space using WebGL.](https://mdn.mozillademos.org/files/11373/part1.png)
+![The results of drawing to clip space using WebGL.](part1.png)
 
 #### 演習
 
@@ -246,14 +260,32 @@ To start playing with this idea the previous example can be modified to allow fo
 //Redefine the triangles to use the W component
 var data = new Float32Array([
   //Triangle 1
-  settings.left,  settings.bottom, settings.depth, settings.w,
-  settings.right, settings.bottom, settings.depth, settings.w,
-  settings.left,  settings.top,    settings.depth, settings.w,
+  settings.left,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.left,
+  settings.top,
+  settings.depth,
+  settings.w,
 
   //Triangle 2
-  settings.left,  settings.top,    settings.depth, settings.w,
-  settings.right, settings.bottom, settings.depth, settings.w,
-  settings.right, settings.top,    settings.depth, settings.w
+  settings.left,
+  settings.top,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.top,
+  settings.depth,
+  settings.w,
 ]);
 ```
 
@@ -271,14 +303,14 @@ First, we draw a red box in the middle, but set W to 0.7. As the coordinates get
 
 ```js
 box.draw({
-  top    : 0.5,             // y
-  bottom : -0.5,            // y
-  left   : -0.5,            // x
-  right  : 0.5,             // x
-  w      : 0.7,             // w - enlarge this box
+  top: 0.5, // y
+  bottom: -0.5, // y
+  left: -0.5, // x
+  right: 0.5, // x
+  w: 0.7, // w - enlarge this box
 
-  depth  : 0,               // z
-  color  : [1, 0.4, 0.4, 1] // red
+  depth: 0, // z
+  color: [1, 0.4, 0.4, 1], // red
 });
 ```
 
@@ -286,14 +318,14 @@ Now, we draw a green box up top, but shrink it by setting the w component to 1.1
 
 ```js
 box.draw({
-  top    : 0.9,             // y
-  bottom : 0,               // y
-  left   : -0.9,            // x
-  right  : 0.9,             // x
-  w      : 1.1,             // w - shrink this box
+  top: 0.9, // y
+  bottom: 0, // y
+  left: -0.9, // x
+  right: 0.9, // x
+  w: 1.1, // w - shrink this box
 
-  depth  : 0.5,             // z
-  color  : [0.4, 1, 0.4, 1] // green
+  depth: 0.5, // z
+  color: [0.4, 1, 0.4, 1], // green
 });
 ```
 
@@ -301,14 +333,14 @@ This last box doesn't get drawn because it's outside of clip space. The depth is
 
 ```js
 box.draw({
-  top    : 1,               // y
-  bottom : -1,              // y
-  left   : -1,              // x
-  right  : 1,               // x
-  w      : 1.5,             // w - Bring this box into range
+  top: 1, // y
+  bottom: -1, // y
+  left: -1, // x
+  right: 1, // x
+  w: 1.5, // w - Bring this box into range
 
-  depth  : -1.5,             // z
-  color  : [0.4, 0.4, 1, 1] // blue
+  depth: -1.5, // z
+  color: [0.4, 0.4, 1, 1], // blue
 });
 ```
 
@@ -316,7 +348,7 @@ box.draw({
 
 [View on JSFiddle](https://jsfiddle.net/mff99yu)
 
-![The results of using homogeneous coordinates to move the boxes around in WebGL.](https://mdn.mozillademos.org/files/11375/part2.png)
+![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
 
 ### Exercises
 
@@ -331,10 +363,10 @@ Finally a single model matrix is computed and set. This matrix represents the tr
 
 In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.
 
-The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/TatumCreative/mdn-webgl) shared code. The new function looks like this:
+The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/gregtatum/mdn-webgl) shared code. The new function looks like this:
 
 ```js
-CubeDemo.prototype.computeModelMatrix = function(now) {
+CubeDemo.prototype.computeModelMatrix = function (now) {
   //Scale down by 50%
   var scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
@@ -350,9 +382,9 @@ CubeDemo.prototype.computeModelMatrix = function(now) {
   // Multiply together, make sure and read them in opposite order
   this.transforms.model = MDN.multiplyArrayOfMatrices([
     position, // step 4
-    rotateY,  // step 3
-    rotateX,  // step 2
-    scale     // step 1
+    rotateY, // step 3
+    rotateX, // step 2
+    scale, // step 1
   ]);
 };
 ```
@@ -360,13 +392,17 @@ CubeDemo.prototype.computeModelMatrix = function(now) {
 In order to use this in the shader it must be set to a uniform location. The locations for the uniforms are saved in the `locations` object shown below:
 
 ```js
-this.locations.model = gl.getUniformLocation(webglProgram, 'model');
+this.locations.model = gl.getUniformLocation(webglProgram, "model");
 ```
 
 And finally the uniform is set to that location. This hands off the matrix to the GPU.
 
 ```js
-gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transforms.model));
+gl.uniformMatrix4fv(
+  this.locations.model,
+  false,
+  new Float32Array(this.transforms.model),
+);
 ```
 
 In the shader, each position vertex is first transformed into a homogeneous coordinate (a `vec4` object), and then multiplied against the model matrix.
@@ -381,7 +417,7 @@ gl_Position = model * vec4(position, 1.0);
 
 [View on JSFiddle](https://jsfiddle.net/5jofzgsh)
 
-![Using a model matrix](https://mdn.mozillademos.org/files/11377/part3.png)
+![Using a model matrix](part3.png)
 
 At this point the w value of the transformed point is still 1.0. The cube still doesn't have any perspective. The next section will take this setup and modify the w values to provide some perspective.
 
@@ -417,7 +453,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 [View on JSFiddle](https://jsfiddle.net/vk9r8h2c)
 
-![Filling the W component and creating some projection.](https://mdn.mozillademos.org/files/11379/part4.png)
+![Filling the W component and creating some projection.](part4.png)
 
 See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
 
@@ -432,12 +468,7 @@ In the next section we'll take this step of copying Z into the w slot and turn i
 The last step of filling in the w component can actually be accomplished with a simple matrix. Start with the identity matrix:
 
 ```js
-var identity = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1,
-];
+var identity = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
 MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 //> [2, 3, 4, 1]
@@ -446,12 +477,7 @@ MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 Then move the last column's 1 up one space.
 
 ```js
-var copyZ = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 1,
-  0, 0, 0, 0,
-];
+var copyZ = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
 
 MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 //> [2, 3, 4, 4]
@@ -476,22 +502,22 @@ MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
 Breaking it out a little further we can see how this works:
 
 ```js
-var x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
-var y = (2 * 0) + (3 * 1) + (4 * 0) + (1 * 0)
-var z = (2 * 0) + (3 * 0) + (4 * 1) + (1 * 0)
-var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
+var x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
+var y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
+var z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
+var w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 The last line could be simplified to:
 
 ```js
-w = (4 * scaleFactor) + (1 * scaleFactor)
+w = 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 Then factoring out the scaleFactor, we get this:
 
 ```js
-w = (4 + 1) * scaleFactor
+w = (4 + 1) * scaleFactor;
 ```
 
 Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the previous example.
@@ -499,12 +525,24 @@ Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the pre
 In the box demo, an additional `computeSimpleProjectionMatrix()` method is added. This is called in the `draw()` method and has the scale factor passed to it. The result should be identical to the last example:
 
 ```js
-CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
+CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
   this.transforms.projection = [
-    1, 0, 0, 0,
-    0, 1, 0, 0,
-    0, 0, 1, scaleFactor,
-    0, 0, 0, scaleFactor
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    scaleFactor,
+    0,
+    0,
+    0,
+    scaleFactor,
   ];
 };
 ```
@@ -520,7 +558,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 [View on JSFiddle](https://jsfiddle.net/zwyLLcbw)
 
-![A simple projection matrix](https://mdn.mozillademos.org/files/11381/part5.png)
+![A simple projection matrix](part5.png)
 
 ## The viewing frustum
 
@@ -530,7 +568,7 @@ While rendering, we need to determine which polygons need to be rendered in orde
 
 A [frustum](https://en.wikipedia.org/wiki/frustum) is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
 
-![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](https://mdn.mozillademos.org/files/17295/FullCameraFOV.svg)
+![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](fullcamerafov.svg)
 
 If we simply used this to determine the polygons to be rendered each frame, our renderer would need to render every polygon within this pyramid, all the way off into infinity, including also polygons that are very close to the lens—likely too close to be useful (and certainly including things that are so close that a real human wouldn't be able to focus on them in the same setting).
 
@@ -538,7 +576,7 @@ So the first step in reducing the number of polygons we need to compute and rend
 
 In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:
 
-![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](https://mdn.mozillademos.org/files/17296/CameraViewFustum.svg)
+![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](camera_view_frustum.svg)
 
 The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are _entirely_ outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.
 
@@ -561,17 +599,34 @@ The reason to flip the z axis is that the clip space coordinate system is a left
 Let's take a look at a `perspectiveMatrix()` function, which computes the perspective projection matrix.
 
 ```js
-MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
+MDN.perspectiveMatrix = function (
+  fieldOfViewInRadians,
+  aspectRatio,
+  near,
+  far,
+) {
   var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   var rangeInv = 1 / (near - far);
 
   return [
-    f / aspectRatio, 0,                          0,   0,
-    0,               f,                          0,   0,
-    0,               0,    (near + far) * rangeInv,  -1,
-    0,               0,  near * far * rangeInv * 2,   0
+    f / aspectRatio,
+    0,
+    0,
+    0,
+    0,
+    f,
+    0,
+    0,
+    0,
+    0,
+    (near + far) * rangeInv,
+    -1,
+    0,
+    0,
+    near * far * rangeInv * 2,
+    0,
   ];
-}
+};
 ```
 
 The four parameters into this function are:
@@ -588,7 +643,7 @@ The four parameters into this function are:
 In the latest version of the box demo, the `computeSimpleProjectionMatrix()` method has been replaced with the `computePerspectiveMatrix()` method.
 
 ```js
-CubeDemo.prototype.computePerspectiveMatrix = function() {
+CubeDemo.prototype.computePerspectiveMatrix = function () {
   var fieldOfViewInRadians = Math.PI * 0.5;
   var aspectRatio = window.innerWidth / window.innerHeight;
   var nearClippingPlaneDistance = 1;
@@ -598,7 +653,7 @@ CubeDemo.prototype.computePerspectiveMatrix = function() {
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
-    farClippingPlaneDistance
+    farClippingPlaneDistance,
   );
 };
 ```
@@ -615,7 +670,7 @@ Additionally (not shown), the position and scale matrices of the model have been
 
 [View on JSFiddle](https://jsfiddle.net/Lzxw7e1q)
 
-![A true perspective matrix](https://mdn.mozillademos.org/files/11383/part6.png)
+![A true perspective matrix](part6.png)
 
 ### Exercises
 
@@ -647,17 +702,17 @@ Unlike the model matrix, which directly transforms the model vertices, the view 
 The following `computeViewMatrix()` method animates the view matrix by moving it in and out, and left and right.
 
 ```js
-CubeDemo.prototype.computeViewMatrix = function(now) {
+CubeDemo.prototype.computeViewMatrix = function (now) {
   var moveInAndOut = 20 * Math.sin(now * 0.002);
   var moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
   // Move the camera around
-  var position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut );
+  var position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut);
 
   // Multiply together, make sure and read them in opposite order
   var matrix = MDN.multiplyArrayOfMatrices([
     // Exercise: rotate the camera view
-    position
+    position,
   ]);
 
   // Inverse the operation for camera movements, because we are actually
@@ -678,7 +733,7 @@ After this step, the GPU pipeline will clip the out of range vertices, and send 
 
 [View on JSFiddle](https://jsfiddle.net/86fd797g)
 
-![The view matrix](https://mdn.mozillademos.org/files/11385/part7.png)
+![The view matrix](part7.png)
 
 ### Relating the coordinate systems
 

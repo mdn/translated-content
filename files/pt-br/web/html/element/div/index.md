@@ -17,13 +17,16 @@ O **elemento de divisão** **[HTML](/pt-BR/docs/Web/HTML) `<div>` **é um contai
 
 Esse elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-No {{HTMLVersionInline(5)}}, o atributo **align** no **\<div>** é obsoleto {{obsolete_inline}}.
+No HTML 5, o atributo **align** no **\<div>** é obsoleto.
 
 ## Exemplos
 
 ```html
 <div>
-  <p>Qualquer tipo de conteúdo aqui. Como &lt;p&gt;, &lt;table&gt;. Você dá o nome!</p>
+  <p>
+    Qualquer tipo de conteúdo aqui. Como &lt;p&gt;, &lt;table&gt;. Você dá o
+    nome!
+  </p>
 </div>
 ```
 
@@ -33,11 +36,11 @@ Qualquer tipo de conteúdo aqui. Como \<p>, \<table>. Você dá o nome!
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                                                       | Status                   | Comentário |
+| ----------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'grouping-content.html#the-div-element', '&lt;div&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.4', '&lt;div&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.4', '&lt;div&gt;')}}               | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade dos navegadores
 

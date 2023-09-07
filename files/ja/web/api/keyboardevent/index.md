@@ -200,7 +200,7 @@ Caps Lock や Num Lock、 Scroll Lock などのキーは LED 表示も切り替�
 
 > **メモ:** Linux の Firefox 12 以前では `keypress` イベントも発生していました。
 
-しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では Num Lock にも対応していましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって `keypress` イベントが発生していました。この矛盾する挙動は {{bug(602812)}} で修正されました。
+しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では Num Lock にも対応していましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって `keypress` イベントが発生していました。この矛盾する挙動は [Firefox バグ 602812](https://bugzil.la/602812) で修正されました。
 
 ### 自動リピートの扱い
 
@@ -233,32 +233,40 @@ GTK を用いた環境の中には、自動リピート時にネイティブの 
 ## 例
 
 ```js
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
 
-  if (keyName === 'Control') {
-    // do not alert when only Control key is pressed.
-    return;
-  }
+    if (keyName === "Control") {
+      // do not alert when only Control key is pressed.
+      return;
+    }
 
-  if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
-}, false);
+    if (event.ctrlKey) {
+      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+      alert(`Combination of ctrlKey + ${keyName}`);
+    } else {
+      alert(`Key pressed ${keyName}`);
+    }
+  },
+  false,
+);
 
-document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keyup",
+  (event) => {
+    const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
-}, false);
+    // As the user releases the Ctrl key, the key is no longer active,
+    // so event.ctrlKey is false.
+    if (keyName === "Control") {
+      alert("Control key was released");
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書
@@ -273,7 +281,7 @@ document.addEventListener('keyup', (event) => {
 
 ### 互換性のメモ
 
-- Firefox 65 では、 `keypress` イベントは[表示可能でないキー](</ja/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)では発生しなくなりました（{{bug(968056)}}）が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
+- Firefox 65 では、 `keypress` イベントは[表示可能でないキー](</ja/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)では発生しなくなりました（[Firefox バグ 968056](https://bugzil.la/968056)）が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
 
 ## 関連情報
 

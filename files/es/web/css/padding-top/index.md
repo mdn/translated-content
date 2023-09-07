@@ -42,14 +42,18 @@ padding-top: unset;
 ## Ejemplos
 
 ```css
-.content { padding-top: 5%; }
-.sidebox { padding-top: 10px; }
+.content {
+  padding-top: 5%;
+}
+.sidebox {
+  padding-top: 10px;
+}
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-top")}}
+{{Compat}}

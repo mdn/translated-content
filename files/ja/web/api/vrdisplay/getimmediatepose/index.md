@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
-original_slug: Web/API/VRDevice/getImmediatePose
 ---
 
 {{deprecated_header}}{{APIRef("WebVR API")}}
@@ -13,7 +12,7 @@ original_slug: Web/API/VRDevice/getImmediatePose
 ## 構文
 
 ```js
-getImmediatePose()
+getImmediatePose();
 ```
 
 ### 引数

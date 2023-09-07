@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 {{jsSidebar("Operators")}}
 
-**그룹 연산자 `()`**는 표현식 내에서 평가의 우선순위를 제어합니다.
+**그룹 연산자 `()`** 는 표현식 내에서 평가의 우선순위를 제어합니다.
 
 {{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
@@ -23,22 +23,22 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 다음 예제에서는 곱셈과 나눗셈 이후 덧셈과 뺄셈을 사용하는 일반적인 연산 순서를 그룹 연산자를 사용해 바꿉니다.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
 
 // 기본 우선순위
-a + b * c     // 7
+a + b * c; // 7
 // 이것과 같음
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // 더하기를 곱하기보다 먼저 하도록
 // 우선순위 변경
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // 이것과 같음
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ## 명세서

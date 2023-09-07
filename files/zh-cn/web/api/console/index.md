@@ -1,6 +1,6 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}
@@ -10,7 +10,7 @@ slug: Web/API/Console
 `Console` 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 workers 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 `console` 引用。例：
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 本页面记录了 `Console` 对象上的[方法](#方法)并给出了几个 [Usage](#usage) （用例）。
@@ -68,7 +68,7 @@ console.log("Failed to open the specified link")
 - {{domxref("Console.warn()")}}
   - : 打印一个警告信息，可以使用 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions) 和额外的参数。
 
-## 用法
+## 示例
 
 ### 输出文本到控制台
 
@@ -143,7 +143,10 @@ for (var i=0; i<5; i++) {
 可以使用 `%c` 为打印内容定义样式：
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。![](css-styling.png)
@@ -245,7 +248,7 @@ foo();
 
 ## 注意
 
-- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其它浏览器可能也是。
+- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其他浏览器可能也是。
 
 ## 相关文档
 

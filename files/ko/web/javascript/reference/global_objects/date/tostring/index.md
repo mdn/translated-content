@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 ## 구문
 
 ```js
-    dateObj.toString()
+dateObj.toString();
 ```
 
 ### 반환 값
@@ -67,7 +67,7 @@ ECMAScript 2018(제9판) 전까지 `toString()`의 반환 형식은 구현에 �
 ```js
 var x = new Date();
 var myVar = x.toString(); // assigns a string value to myVar in the same format as:
-                          // Mon Sep 08 1998 14:36:22 GMT+0900 (KST)
+// Mon Sep 08 1998 14:36:22 GMT+0900 (KST)
 ```
 
 ## 명세

@@ -1,12 +1,8 @@
 ---
 title: SVG
 slug: Web/SVG
-tags:
-  - 2D Graphics
-  - References
-  - SVG
-translation_of: Web/SVG
 ---
+
 **[С чего начать](/ru/docs/Web/SVG/Tutorial)**
 Этот урок поможет вам начать использовать SVG.
 
@@ -55,7 +51,7 @@ SVG — открытый стандарт, разработанный [World Wid
 - [Использование SVG в качестве изображения](/ru/docs/SVG/SVG_as_an_Image)
 - [SVG анимация при помощи SMIL](/ru/docs/SVG/SVG_animation_with_SMIL)
 - [Художественная галерея SVG](http://plurib.us/1shot/2007/svg_gallery/)
-- Больше примеров (примеры SVG с [carto.net](http://www.carto.net/papers/svg/samples/))
+- Больше примеров (примеры SVG с [carto.net](https://old.carto.net/papers/svg/samples/))
 
 ### Анимация и взаимодействие
 

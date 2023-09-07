@@ -1,10 +1,9 @@
 ---
 title: Cache
 slug: Web/API/Cache
-translation_of: Web/API/Cache
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 Интерфейс **`Cache`** представляет собой механизм хранения пары объектов [`Request`](http://fetch.spec.whatwg.org/#request) / `Response,` которые кешируются, например, как часть жизненного цикла {{domxref("ServiceWorker")}}. Заметьте, что интерфейс Cache доступен как в области видимости окна, так и в области видимости воркеров. Не обязательно использовать его вместе с сервис воркерами, даже если интерфейс определён в их спецификации.
 
@@ -12,15 +11,15 @@ translation_of: Web/API/Cache
 
 Вы также ответственны за периодическую очистку записей кеша. Каждый браузер имеет жёсткие ограничения на объем хранилища кеша, доступный для исходного кода. Браузер делает все, чтобы как можно лучше использовать дисковое пространство, но он может удалить хранилище кеша для скрипта. В основном, браузер либо удаляет все данные из кеша для скрипта, либо не удаляет ничего. Устанавливайте версии кеша в имени и используйте кеш только той версии, которая безопасна для использования. Смотрите [Удаление старого кеша](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches).
 
-> **Примечание:** **Замечание**: {{domxref("Cache.put")}}, {{domxref("Cache.add")}} и {{domxref("Cache.addAll")}} допускают сохранение в кеш только `GET` запросов.
+> **Примечание:** {{domxref("Cache.put")}}, {{domxref("Cache.add")}} и {{domxref("Cache.addAll")}} допускают сохранение в кеш только `GET` запросов.
 
-> **Примечание:** **Замечание**: Изначально, реализация Cache (как в Blink, так и в Gecko) возвращала успешное завершение для промисов {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}} и {{domxref("Cache.put")}}, когда тело ответа было полностью помещено в хранилище. Более поздние версии используют новейший язык, утверждая, что браузер может разрешить промис как только запись будет записана в базу данных, даже если тело ответа все ещё загружается в потоке.
+> **Примечание:** Изначально, реализация Cache (как в Blink, так и в Gecko) возвращала успешное завершение для промисов {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}} и {{domxref("Cache.put")}}, когда тело ответа было полностью помещено в хранилище. Более поздние версии используют новейший язык, утверждая, что браузер может разрешить промис как только запись будет записана в базу данных, даже если тело ответа все ещё загружается в потоке.
 
-> **Примечание:** **Замечание:** Начиная с Chrome 46, Cache API будут хранить запросы только от безопасных источников, то есть, доступных через HTTPS.
+> **Примечание:** Начиная с Chrome 46, Cache API будут хранить запросы только от безопасных источников, то есть, доступных через HTTPS.
 
-> **Примечание:** **Замечание**: Алгоритм сопоставления ключей зависит от заголовка [VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) хранимого значения. Таким образом, сопоставление нового ключа требует одновременно как проверки самого ключа, так и значений для записей в Cache.
+> **Примечание:** Алгоритм сопоставления ключей зависит от заголовка [VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) хранимого значения. Таким образом, сопоставление нового ключа требует одновременно как проверки самого ключа, так и значений для записей в Cache.
 
-> **Примечание:** **Замечание:** Кеширующие API не приветствуют заголовки кеширования HTTP.
+> **Примечание:** Кеширующие API не приветствуют заголовки кеширования HTTP.
 
 ## Методы
 
@@ -51,58 +50,59 @@ translation_of: Web/API/Cache
 
 В примере кода "кеш" это атрибут WorkerGlobalScope сервис воркеров. Он содержит объект CacheStorage, через который можно получить доступ к [CacheStorage](/ru/docs/Web/API/CacheStorage) API.
 
-> **Примечание:** **Замечание:** В Chrome, откройте chrome://inspect/#service-workers и кликните по ссылке "inspect" под зарегистрированным сервис воркером чтобы увидеть записи журнала по различным действиям выполняемым скриптом [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js).
+> **Примечание:** В Chrome, откройте chrome://inspect/#service-workers и кликните по ссылке "inspect" под зарегистрированным сервис воркером чтобы увидеть записи журнала по различным действиям выполняемым скриптом [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js).
 
 ```js
 var CACHE_VERSION = 1;
 
 // Сокращённый идентификатор привязанный к определённой версии кеша.
 var CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+  font: "font-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('activate', function(event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key) {
+self.addEventListener("activate", function (event) {
+  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
     return CURRENT_CACHES[key];
   });
 
   // Активный воркер не будет рассматриваться как активированный, пока promise не разрешится успешно.
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map(function (cacheName) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log('Deleting out of date cache:', cacheName);
+            console.log("Deleting out of date cache:", cacheName);
 
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-
     // Открывает объекты Cache, начинающиеся с 'font'.
-    caches.open(CURRENT_CACHES['font']).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        if (response) {
-          console.log('Found response in cache:', response);
+    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
+      return cache
+        .match(event.request)
+        .then(function (response) {
+          if (response) {
+            console.log("Found response in cache:", response);
 
-          return response;
-        }
-      }).catch(function(error) {
+            return response;
+          }
+        })
+        .catch(function (error) {
+          // Обрабатывает исключения от match() или fetch().
+          console.error("Error in fetch handler:", error);
 
-        // Обрабатывает исключения от match() или fetch().
-        console.error('Error in fetch handler:', error);
-
-        throw error;
-      });
-    })
+          throw error;
+        });
+    }),
   );
 });
 ```

@@ -71,20 +71,24 @@ class AnyToU8Stream extends TransformStream {
 
 ```js
 const tes = {
-  start(){this.encoder = new TextEncoder()},
+  start() {
+    this.encoder = new TextEncoder();
+  },
   transform(chunk, controller) {
-    controller.enqueue(this.encoder.encode(chunk))
-  }
-}
+    controller.enqueue(this.encoder.encode(chunk));
+  },
+};
 let _jstes_wm = new WeakMap(); /* info holder */
 class JSTextEncoderStream extends TransformStream {
   constructor() {
-    let t = {...tes}
+    let t = { ...tes };
 
-    super(t)
-    _jstes_wm.set(this, t)
+    super(t);
+    _jstes_wm.set(this, t);
   }
-  get encoding() {return _jstes_wm.get(this).encoder.encoding}
+  get encoding() {
+    return _jstes_wm.get(this).encoder.encoding;
+  }
 }
 ```
 
@@ -92,24 +96,30 @@ class JSTextEncoderStream extends TransformStream {
 
 ```js
 const tes = {
-  start(){
-    this.decoder = new TextDecoder(this.encoding, this.options)
+  start() {
+    this.decoder = new TextDecoder(this.encoding, this.options);
   },
   transform(chunk, controller) {
-    controller.enqueue(this.decoder.decode(chunk))
-  }
-}
+    controller.enqueue(this.decoder.decode(chunk));
+  },
+};
 let _jstds_wm = new WeakMap(); /* info holder */
 class JSTextDecoderStream extends TransformStream {
-  constructor(encoding = 'utf-8', {...options} = {}) {
-    let t = {...tds, encoding, options}
+  constructor(encoding = "utf-8", { ...options } = {}) {
+    let t = { ...tds, encoding, options };
 
-    super(t)
-    _jstes_wm.set(this, t)
+    super(t);
+    _jstes_wm.set(this, t);
   }
-  get encoding() {return _jstds_wm.get(this).decoder.encoding}
-  get fatal() {return _jstds_wm.get(this).decoder.fatal}
-  get ignoreBOM() {return _jstds_wm.get(this).decoder.ignoreBOM}
+  get encoding() {
+    return _jstds_wm.get(this).decoder.encoding;
+  }
+  get fatal() {
+    return _jstds_wm.get(this).decoder.fatal;
+  }
+  get ignoreBOM() {
+    return _jstds_wm.get(this).decoder.ignoreBOM;
+  }
 }
 ```
 
@@ -118,13 +128,16 @@ class JSTextDecoderStream extends TransformStream {
 これは、複数のストリームを結合できる便利なものです。例ではプログレッシブ読み込みやプログレッシブストリーミングを持つ PWA の構築が含まれます。
 
 ```js
-let responses = [ /* conjoined response tree */ ]
-let {readable, writable} = new TransformStream
+let responses = [
+  /* conjoined response tree */
+];
+let { readable, writable } = new TransformStream();
 
 responses.reduce(
-  (a, res, i, arr) => a.then(() => res.pipeTo(writable, {preventClose: (i+1) !== arr.length})),
-  Promise.resolve()
-)
+  (a, res, i, arr) =>
+    a.then(() => res.pipeTo(writable, { preventClose: i + 1 !== arr.length })),
+  Promise.resolve(),
+);
 ```
 
 これは他への影響に対して耐性がないことに注意してください。

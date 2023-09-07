@@ -46,7 +46,7 @@ slug: Web/HTML/Element/hr
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -74,7 +74,7 @@ slug: Web/HTML/Element/hr
 
 ### HTML
 
-```html
+```html-nolint
 <p>
 This is the first paragraph of text.
 This is the first paragraph of text.
@@ -102,7 +102,7 @@ This is second paragraph of text.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## 같이 보기
 

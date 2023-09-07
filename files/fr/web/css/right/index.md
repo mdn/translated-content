@@ -1,11 +1,6 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/right
 ---
 
 {{CSSRef}}
@@ -81,7 +76,7 @@ right: unset;
 #exemple_3 {
   width: 100px;
   height: 100px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
   top: 20px;
   left: 20px;
@@ -90,7 +85,7 @@ right: unset;
 #exemple_4 {
   width: 100px;
   height: 100px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
   position: absolute;
   bottom: 10px;
   right: 20px;

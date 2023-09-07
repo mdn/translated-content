@@ -24,9 +24,11 @@ font-style: oblique;
 ### Values
 
 - **`normal`**
+
   - : Selecciona la version normal del estilo de fuente.
 
 - **`italic`**
+
   - : Especifica que el estilo de fuente es la versión en _cursiva_ de la fuente normal.
 
 - **`oblique`**
@@ -43,7 +45,7 @@ A modo de ejemplo, consideremos Garamond como un tipo de fuente que, en su forma
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
@@ -63,6 +65,6 @@ Por otra parte, si existe un verdadera versión en _cursiva_ del estilo de fuent
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

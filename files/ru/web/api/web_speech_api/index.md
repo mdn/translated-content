@@ -1,7 +1,6 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-translation_of: Web/API/Web_Speech_API
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
@@ -58,7 +57,7 @@ Web Speech API позволяет веб приложениям управлят
 
 ## Примеры
 
-[Web Speech API репозиторий](https://github.com/mdn/web-speech-api/) на GitHub содержит примеры, показывающие распознавание и синтез речи.
+[Web Speech API репозиторий](https://github.com/mdn/dom-examples/tree/main/web-speech-api) на GitHub содержит примеры, показывающие распознавание и синтез речи.
 
 ## Спецификации
 

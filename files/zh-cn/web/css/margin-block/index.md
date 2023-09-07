@@ -3,79 +3,108 @@ title: margin-block
 slug: Web/CSS/margin-block
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`margin-block`**这个[CSS](/zh-CN/docs/Web/CSS)属性定义了一个元素的逻辑块开始和结束边距，根据元素的写入模式、方向性和文本方向映射到物理边界。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`margin-block`** 定义了元素的逻辑块首和块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
 
-```css
-/* 有长度的具体的值 */
-margin-block: 10px 20px;  /* 一个绝对的长度值 */
-margin-block: 1em 2em;   /* 相对于文本大小的值 */
-margin-block: 5% 2%;    /* 相对于最近的块容器宽度的值 */
-margin-block: 10px; /* 设置开始值和结束值 */
+{{EmbedInteractiveExample("pages/css/margin-block.html")}}
 
-/* 关键字 值 */
-margin-block: auto;
+## 属性构成
 
-/* 全局 值 */
-margin-block: inherit;
-margin-block: initial;
-margin-block: unset;
-```
+此属性为下列 CSS 属性的简写属性：
 
-这些值对应的是{{CSSxRef("margin-top")}}和{{CSSxRef("margin-bottom")}}，或者 {{CSSxRef("margin-right")}}，和{{CSSxRef("margin-left")}}，这些属性取决于{{CSSxRef("writing-mode")}}，{{CSSxRef("direction")}}，和{{CSSxRef("text-orientation")}}。
-
-这些值可以单独设置为{{CSSxRef("margin-block-start")}}和{{CSSxRef("margin-block-end")}}。inline direction 属性是{{CSSxRef("margin-inline")}}，也可设置为{{CSSxRef("margin-inline-start")}}，和{{CSSxRef("margin-inline-end")}}。
+- {{CSSXref("margin-block-start")}}
+- {{CSSXref("margin-block-end")}}
 
 ## 语法
 
-### 值
+```css
+/* <length> 值 */
+margin-block: 10px 20px; /* 绝对长度 */
+margin-block: 1em 2em; /* 相对于文本尺寸 */
+margin-block: 5% 2%; /* 相对于最近区块容器的宽度 */
+margin-block: 10px; /* 同时设置块首和块末值 */
 
-`margin-block`属性采用和{{CSSxRef("margin-left")}}属性相同的值。
+/* 关键词值 */
+margin-block: auto;
 
-### 正规语法
+/* 全局值 */
+margin-block: inherit;
+margin-block: initial;
+margin-block: revert;
+margin-block: revert-layer;
+margin-block: unset;
+```
+
+根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("margin-top")}} 和 {{CSSXref("margin-bottom")}}，或者 {{CSSXref("margin-right")}} 和 {{CSSXref("margin-left")}} 属性。
+
+`margin-block` 属性可用一个或两个值指定。
+
+- 用**一个**值指定时，**块首和块末**应用同样的外边距。
+- 用**两个**值指定时，第一个外边距应用于**块首**，第二个应用于**块末**。
+
+### 取值
+
+`margin-block` 属性的取值与 {{CSSXref("margin")}} 属性相同。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{CSSSyntax}}
 
 ## 示例
 
-### HTML 部分
+### 设置块首和块末外边距
 
-```html
-<div>
-  <p class="exampleText">Example text</p>
-</div>
-```
-
-### CSS 部分
+#### CSS
 
 ```css
 div {
   background-color: yellow;
   width: 120px;
-  height: 120px;
+  height: auto;
+  border: 1px solid green;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+p {
+  margin: 0;
   margin-block: 20px 40px;
-  background-color: #c8c800;
+  background-color: tan;
+}
+
+.verticalExample {
+  writing-mode: vertical-rl;
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+#### HTML
+
+```html
+<div>
+  <p>示例文本</p>
+</div>
+<div class="verticalExample">
+  <p>示例文本</p>
+</div>
+```
+
+#### 结果
+
+{{EmbedLiveSample("设置块首和块末外边距", 140, 200)}}
 
 ## 规范
 
 {{Specifications}}
 
-{{CSSInfo}}
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 请参考
+## 参见
 
-- 所映射的物理特性： {{CSSxRef("margin-top")}}，{{CSSxRef("margin-right")}}，{{CSSxRef("margin-bottom")}}和{{CSSxRef("margin-left")}}
-- {{CSSxRef("writing-mode")}}，{{CSSxRef("direction")}}，{{CSSxRef("text-orientation")}}
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- 对应的实体属性：{{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 和 {{CSSXref("margin-left")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

@@ -16,8 +16,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
   - : 返回元素大小的数值。在 `Uint16Array` 情况下为 `2`。
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
-  - : 返回构造函数名称的字符串值。在 `Uint16Array` 情况下，类型为： "Uint16Array"。
 
 ## 静态方法
 
@@ -105,7 +103,7 @@ console.log(uint16.length); // 2
 console.log(uint16.BYTES_PER_ELEMENT); // 2
 
 // 数组
-var arr = new Uint16Array([21,31]);
+var arr = new Uint16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // 另一个类型数组
@@ -118,7 +116,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint16Array(buffer, 0, 4);
 
 // 可迭代
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint16 = new Uint16Array(iterable);
 // Uint16Array[1, 2, 3]
 ```

@@ -10,7 +10,7 @@ slug: Web/API/PushSubscription/unsubscribe
 ## 構文
 
 ```js-nolint
-​PushSubscription.unsubscribe().then(function(Boolean) { ... });
+PushSubscription.unsubscribe().then(function(Boolean) { ... });
 ```
 
 ### 引数
@@ -24,14 +24,17 @@ slug: Web/API/PushSubscription/unsubscribe
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    subscription.unsubscribe().then(function(successful) {
-      // 登録解除が成功
-    }).catch(function(e) {
-      // 登録解除が失敗
-    })
-  })
+navigator.serviceWorker.ready.then(function (reg) {
+  reg.pushManager.getSubscription().then(function (subscription) {
+    subscription
+      .unsubscribe()
+      .then(function (successful) {
+        // 登録解除が成功
+      })
+      .catch(function (e) {
+        // 登録解除が失敗
+      });
+  });
 });
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/rightContext
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -29,18 +28,18 @@ Tenga presente que no puede usar la abreviatura (`RegExp.$'`), porque el analiza
 
 ```js
 var re = /hola/g;
-re.test('hola mundo!');
+re.test("hola mundo!");
 RegExp.rightContext; // " mundo!"
-RegExp["$'"];       // " mundo!"
+RegExp["$'"]; // " mundo!"
 ```
 
 ## Especificaciones
 
-No estándar. No forma parte de ninguna especificación actual.
+{{Specifications}}
 
-## Navegadores compactibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.rightContext")}}
+{{Compat}}
 
 ## Ver también
 

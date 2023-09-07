@@ -1,11 +1,11 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
 
 {{CSSRef}}
 
-**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の{{htmlattrxref("placeholder","input","プレイスホルダー文字列",1)}}を表します。
+**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
 
 ```css
 ::placeholder {
@@ -49,7 +49,11 @@ slug: Web/CSS/::placeholder
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -62,7 +66,7 @@ slug: Web/CSS/::placeholder
 
 ### ラベル
 
-プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 {{htmlattrxref("for", "label")}} および {{htmlattrxref("id")}} 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
+プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Element/label#for) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
 
 - [MDN 基本的なフォームのヒント](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -76,7 +80,7 @@ slug: Web/CSS/::placeholder
 #### HTML
 
 ```html
-<input placeholder="こちらに入力...">
+<input placeholder="こちらに入力..." />
 ```
 
 #### CSS
@@ -100,8 +104,8 @@ Firefox など一部のブラウザーでは、プレースホルダーの既定
 #### HTML
 
 ```html
-<input placeholder="既定の透明度...">
-<input placeholder="完全に不透明..." class="force-opaque">
+<input placeholder="既定の透明度..." />
+<input placeholder="完全に不透明..." class="force-opaque" />
 ```
 
 #### CSS

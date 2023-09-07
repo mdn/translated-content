@@ -28,7 +28,7 @@ A {{domxref("DOMString")}} whose value is one of the strings which are a member 
         可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了连接，且至少有一个 sender 的处于编码状态，则发送数据。
       </td>
       <td>
-        可以接收 RTP 数据，如果有其它的对等节点接受数据，则接收数据。
+        可以接收 RTP 数据，如果有其他的对等节点接受数据，则接收数据。
       </td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@ A {{domxref("DOMString")}} whose value is one of the strings which are a member 
       <th scope="row"><code>"recvonly"</code></th>
       <td><em>不</em>可以发送 RTP 数据，无论如何都不会发送数据。</td>
       <td>
-        可以接收 RTP 数据，如果有其它的对等节点接受数据，则接收数据。
+        可以接收 RTP 数据，如果有其他的对等节点接受数据，则接收数据。
       </td>
     </tr>
     <tr>

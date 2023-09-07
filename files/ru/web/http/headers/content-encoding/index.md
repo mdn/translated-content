@@ -1,12 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - Content-Encoding
-  - HTTP
-  - Headers
-translation_of: Web/HTTP/Headers/Content-Encoding
-original_slug: Web/HTTP/Заголовки/Content-Encoding
 ---
 
 {{HTTPSidebar}}
@@ -75,10 +69,10 @@ Note that the server is not obligated to use any compression method. Compression
 
 ## Specifications
 
-| Specification                                                    | Title                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                                    | Title                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli Compressed Data Format                                 |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}     | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 | {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
 
 ## Browser compatibility

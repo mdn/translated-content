@@ -1,5 +1,5 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
 ---
 
@@ -37,7 +37,7 @@ El color verde se usa comúnmente para indicar una entrada válida. Las personas
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.valid")}}
+{{Compat}}
 
 ## Ver también
 

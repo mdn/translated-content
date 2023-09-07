@@ -18,13 +18,18 @@ selector1 selector2 { propiedades de estilos }
 ## Ejemplo
 
 ```css
-span { background-color: white; }
-div span { background-color: DodgerBlue; }
+span {
+  background-color: white;
+}
+div span {
+  background-color: DodgerBlue;
+}
 ```
 
 ```html
 <div>
-  <span>Span 1.
+  <span
+    >Span 1.
     <span>Span 2.</span>
   </span>
 </div>
@@ -37,8 +42,8 @@ div span { background-color: DodgerBlue; }
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}
 
 ## Ver también

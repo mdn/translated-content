@@ -1,7 +1,6 @@
 ---
-title: 'Django Tutorial Part 5: 主页构建'
+title: "Django Tutorial Part 5: 主页构建"
 slug: Learn/Server-side/Django/Home_page
-original_slug: learn/Server-side/Django/主页构建
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -44,7 +43,7 @@ original_slug: learn/Server-side/Django/主页构建
 
 ![](basic-django.png)
 
-正如你将在下一节中看到的，我们将要显示 5 个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让您对 URL 映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。
+正如你将在下一节中看到的，我们将要显示 5 个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让你对 URL 映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。
 
 ## 定义资源 URL
 
@@ -62,7 +61,7 @@ original_slug: learn/Server-side/Django/主页构建
 
 相比之下，最后两个 URL 用于显示有关特定书籍或作者的详细信息 - 这些 URL 将编码要显示在 URL 中的项目的标识（如上所示\<id>）。URL 映射器可以提取编码信息并将其传递给视图，然后将动态地确定从数据库获取哪些信息。通过对我们的 URL 中的信息进行编码，我们只需要一个 URL 映射，视图和模板来处理每本书（或作者）。
 
-> **备注：** Django 允许您以任何您喜欢的方式构建您的 URL - 您可以如上所示编码 URL 正文中的信息，或使用 URL `GET`参数（例如 `/book/?id=6`）。无论您使用哪种方法，URL 都应保持清洁，逻辑和可读性 ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> **备注：** Django 允许你以任何你喜欢的方式构建你的 URL - 你可以如上所示编码 URL 正文中的信息，或使用 URL `GET`参数（例如 `/book/?id=6`）。无论你使用哪种方法，URL 都应保持清洁，逻辑和可读性 ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 >
 > Django 文档倾向于在 URL 的主体中推荐编码信息，这是他们觉得鼓励更好的 URL 设计的实践。
 
@@ -144,7 +143,7 @@ def index(request):
     )
 ```
 
-视图函数的第一部分使用`objects.all()`模型类的属性来获取记录计数。它还会获取一个`BookInstance`状态字段值为“a”（可用）的对象列表。您可以在前面的教程 ([Django Tutorial Part 3: Using models > Searching for records](/zh-CN/docs/Learn/Server-side/Django/Models#Searching_for_records)) 中找到更多关于如何访问模型的信息。
+视图函数的第一部分使用`objects.all()`模型类的属性来获取记录计数。它还会获取一个`BookInstance`状态字段值为“a”（可用）的对象列表。你可以在前面的教程 ([Django Tutorial Part 3: Using models > Searching for records](/zh-CN/docs/Learn/Server-side/Django/Models#Searching_for_records)) 中找到更多关于如何访问模型的信息。
 
 在函数结束时，我们将该函数称为`render()`创建和返回 HTML 页面作为响应（此快捷方式函数包含许多其他函数，简化了这种非常常见的用例）。它将原始`request`对象（an HttpRequest）作为参数，具有数据占位符的 HTML 模板以及`context`变量（包含要插入到这些占位符中的数据的 Python 字典）。
 
@@ -164,17 +163,17 @@ def index(request):
 
 > **备注：** 模版标签就像你可以在模版中使用的函数循环列表，基于变量的值执行条件操作等。除了模版标签，模版语法允许你引用模版变量（通过从视图进入模版），并使用模版过滤器，其中重新格式化变量（例如，将字符串设置为小写）。
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+  </head>
 
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  </body>
 </html>
 ```
 
@@ -184,12 +183,12 @@ def index(request):
 
 `base_generic.html` 详细会在下文中，请耐心往下看。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Local Library Home</h1>
-<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+  <h1>Local Library Home</h1>
+  <p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
 {% endblock %}
 ```
 
@@ -201,44 +200,40 @@ def index(request):
 
 创建一个新的文件 — **/locallibrary/catalog/templates/_base_generic.html_** — 写入如下代码
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
 
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-
-<body>
-
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-      <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="">All books</a></li>
-          <li><a href="">All authors</a></li>
-      </ul>
-     {% endblock %}
-      </div>
-      <div class="col-sm-10 ">
-      {% block content %}{% endblock %}
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+            <ul class="sidebar-nav">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="">All books</a></li>
+              <li><a href="">All authors</a></li>
+            </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10">{% block content %}{% endblock %}</div>
       </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -248,9 +243,9 @@ def index(request):
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -258,15 +253,15 @@ def index(request):
 
 新建 HTML 文件 **/locallibrary/catalog/templates/_index.html_** 写入下面代码。第一行我们扩展了我们的基本模版，使用 `content`替换默认块。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Local Library Home</h1>
+  <h1>Local Library Home</h1>
 
   <p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
 
-<h2>Dynamic content</h2>
+  <h2>Dynamic content</h2>
 
   <p>The library has the following record counts:</p>
   <ul>
@@ -275,7 +270,6 @@ def index(request):
     <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
     <li><strong>Authors:</strong> \{{ num_authors }}</li>
   </ul>
-
 {% endblock %}
 ```
 
@@ -299,17 +293,20 @@ return render(
 
 在模版中，你首先调用 `load` 指定“ `static`”去添加此模版库（如下）。静态加载后，你可以使用 `static` 模版标签，指定感兴趣的文件相对`URL`
 
-```html
- <!-- Add additional CSS in static file -->
+```django
+<!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 你可以用同样的方式将图像添加到页面中：
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="My image"
+  style="width:555px;height:540px;" />
 ```
 
 > **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
@@ -324,7 +321,7 @@ return render(
 <li><a href="{% url 'index' %}">Home</a></li>
 ```
 
-此标记`url()`使用您的**urls.py**中调用的函数的名称 和相关视图将从该函数接收的任何参数的值，并返回可用于链接到该资源的 URL。
+此标记`url()`使用你的**urls.py**中调用的函数的名称 和相关视图将从该函数接收的任何参数的值，并返回可用于链接到该资源的 URL。
 
 ## 它看起来什么样？
 
@@ -332,22 +329,22 @@ return render(
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> **备注：** 由于尚未定义这些网页的网址，视图和模板，因此您将无法使用“**所有图书**和**所有作者**”链接（目前我们刚刚在 `base_generic.html` 模板中插入了这些链接的占位符）
+> **备注：** 由于尚未定义这些网页的网址，视图和模板，因此你将无法使用“**所有图书**和**所有作者**”链接（目前我们刚刚在 `base_generic.html` 模板中插入了这些链接的占位符）
 
 ## 挑战自己
 
-以下是一些测试您熟悉模型查询，视图和模板的任务。
+以下是一些测试你熟悉模型查询，视图和模板的任务。
 
 1. 在索引模板中声明一个新的标题块，并更改页面标题以匹配此特定页面。
 2. 修改视图以生成包含特定单词（不区分大小写）的类型计数和书数，然后将这些字段添加到模板。
 
 ## 概要
 
-我们现在已经为我们的网站创建了主页 - 一个 HTML 页面，显示数据库中的一些记录数，并且链接到我们其他尚待创建的页面。一路上，我们已经学到了很多有关 url 映射器，视图，使用我们的模型查询数据库的基本信息，如何从您的视图传递信息到模板，以及如何创建和扩展模板。
+我们现在已经为我们的网站创建了主页 - 一个 HTML 页面，显示数据库中的一些记录数，并且链接到我们其他尚待创建的页面。一路上，我们已经学到了很多有关 url 映射器，视图，使用我们的模型查询数据库的基本信息，如何从你的视图传递信息到模板，以及如何创建和扩展模板。
 
 在我们的下一篇文章中，我们将基于我们的知识来创建其他四个页面。
 
-## 也可以看看
+## 参见
 
 - [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/1.10/intro/tutorial03/) (Django docs)
 - [URL 调度程序](https://docs.djangoproject.com/en/1.10/topics/http/urls/) (Django docs)

@@ -46,21 +46,18 @@ selector::pseudo-element {
 - {{CSSxRef("::slotted", "::slotted()")}}
 - {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
 
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
 <table class="standard-table">
   <tbody>
     <tr>
       <th>브라우저</th>
-      <th>최하위 버전</th>
+      <th>최소 버전</th>
       <th>지원</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
-      <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
     </tr>
     <tr>
       <td rowspan="2">Firefox (Gecko)</td>
@@ -87,10 +84,6 @@ selector::pseudo-element {
     </tr>
   </tbody>
 </table>
-
-## 명세
-
-{{Specifications}}
 
 ## 같이 보기
 

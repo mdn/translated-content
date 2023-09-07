@@ -95,6 +95,6 @@ span {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.outline-width")}}
+{{Compat}}

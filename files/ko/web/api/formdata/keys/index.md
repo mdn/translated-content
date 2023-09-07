@@ -24,12 +24,12 @@ formData.keys();
 ```js
 // Create a test FormData object
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the keys
 for (var key of formData.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 
@@ -40,11 +40,11 @@ key1
 key2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

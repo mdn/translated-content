@@ -19,7 +19,9 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 function initTextures() {
   cubeTexture = gl.createTexture();
   cubeImage = new Image();
-  cubeImage.onload = function() { handleTextureLoaded(cubeImage, cubeTexture); }
+  cubeImage.onload = function () {
+    handleTextureLoaded(cubeImage, cubeTexture);
+  };
   cubeImage.src = "cubetexture.png";
 }
 
@@ -27,7 +29,11 @@ function handleTextureLoaded(image, texture) {
   gl.bindTexture(gl.TEXTURE_2D, texture);
   gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+  gl.texParameteri(
+    gl.TEXTURE_2D,
+    gl.TEXTURE_MIN_FILTER,
+    gl.LINEAR_MIPMAP_NEAREST,
+  );
   gl.generateMipmap(gl.TEXTURE_2D);
   gl.bindTexture(gl.TEXTURE_2D, null);
 }
@@ -69,44 +75,29 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 以上で、テクスチャの読み込みと使用する準備ができました。しかしテクスチャが使用できるようになるには、まずキューブの面の頂点にテクスチャの座標をマッピングする必要があります。これは `initBuffers()` にある、キューブの各面に色を設定する既存のコードの置き換えになります。
 
 ```js
-  cubeVerticesTextureCoordBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
+cubeVerticesTextureCoordBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
 
-  var textureCoordinates = [
-    // 前面
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // 背面
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // 上面
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // 底面
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // 右側面
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // 左側面
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0
-  ];
+var textureCoordinates = [
+  // 前面
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // 背面
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // 上面
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // 底面
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // 右側面
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // 左側面
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+];
 
-  gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(textureCoordinates),
-                gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(textureCoordinates),
+  gl.STATIC_DRAW,
+);
 ```
 
 このコードは始めに各面のテクスチャの座標を収める GL のバッファを作成して、そのバッファを書き込みを行う配列としてバインドします。
@@ -124,8 +115,8 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 始めに `initShaders()` で必要になる、シンプルな変更点を見てみましょう:
 
 ```js
-  textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
-  gl.enableVertexAttribArray(textureCoordAttribute);
+textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
+gl.enableVertexAttribArray(textureCoordAttribute);
 ```
 
 これは頂点の色属性を設定するコードを、各頂点のテクスチャ座標を包含するコードに置き換えます。
@@ -135,20 +126,20 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 次にバーテックスシェーダーを、色のデータを取り出すものからテクスチャ座標のデータを取り出すものに置き換える必要があります。
 
 ```html
-    <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 aVertexPosition;
-      attribute vec2 aTextureCoord;
+<script id="shader-vs" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec2 aTextureCoord;
 
-      uniform mat4 uMVMatrix;
-      uniform mat4 uPMatrix;
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
 
-      varying highp vec2 vTextureCoord;
+  varying highp vec2 vTextureCoord;
 
-      void main(void) {
-        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-        vTextureCoord = aTextureCoord;
-      }
-    </script>
+  void main(void) {
+    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    vTextureCoord = aTextureCoord;
+  }
+</script>
 ```
 
 重要な変更点は、頂点の色を取り出すのに代わりテクスチャ座標を設定していることです。これは頂点に対応する、テクスチャ内の位置を指し示します。
@@ -158,15 +149,15 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 フラグメントシェーダーも同様に更新する必要があります:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-      varying highp vec2 vTextureCoord;
+<script id="shader-fs" type="x-shader/x-fragment">
+  varying highp vec2 vTextureCoord;
 
-      uniform sampler2D uSampler;
+  uniform sampler2D uSampler;
 
-      void main(void) {
-        gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
-      }
-    </script>
+  void main(void) {
+    gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
+  }
+</script>
 ```
 
 色の値をフラグメントの色に割り当てるのに代わり、フラグメントの色は、サンプラーが最適とするフラグメントの位置のテクセル (テクスチャ内のピクセル) を取り出すことで算出されます。
@@ -178,9 +169,9 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 色を割り当てるコードをテクスチャを割り当てるようにするためには、以下のように置き換えます:
 
 ```js
-  gl.activeTexture(gl.TEXTURE0);
-  gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-  gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+gl.activeTexture(gl.TEXTURE0);
+gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
+gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 ```
 
 GL は 32 個のテクスチャレジスタを提供し、その 1 つ目が `gl.TEXTURE0` です。前に読み込んだテクスチャをそのレジスタに結びつけて、そのテクスチャを使用するためにシェーダーサンプラー `uSampler` (シェーダープログラムにより明示されます) を設定します。
@@ -197,12 +188,12 @@ WebGL のテクスチャの読み込みは、クロスドメインアクセス�
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を [こちらの hacks.mozilla.org の記事](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) に掲載していますので、[サンプル](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html) と合わせてご覧ください。
 
-> **メモ:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は {{Gecko("8.0")}} で実装されました。
+> **メモ:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は Gecko 8.0 で実装されました。
 
 汚染された (書き込みのみ) 2D canvas を WebGL のテクスチャとして使用することはできません。2D {{HTMLElement("canvas")}} が汚染されたとは例えば、クロスドメインの画像が canvas 上に描画された状態を指します。
 
-> **メモ:** Canvas 2D `drawImage` 向けの CORS サポートを {{Gecko("9.0")}} で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
+> **メモ:** Canvas 2D `drawImage` 向けの CORS サポートを Gecko 9.0 で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
 
-> **メモ:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は {{Gecko("12.0")}} で実装されました。
+> **メモ:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は Gecko 12.0 で実装されました。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

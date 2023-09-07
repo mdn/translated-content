@@ -1,12 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - Entête de Réponse
-  - Entêtes HTTP
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
 
 {{HTTPSidebar}}
@@ -65,13 +59,11 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Spécifications
 
-| Spécification                                        | Titre                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Last-Modified")}}
+{{Compat}}
 
 ## Voir aussi
 

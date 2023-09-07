@@ -1,11 +1,6 @@
 ---
 title: Élément remplacé
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/Replaced_element
-original_slug: Web/CSS/Élément_remplacé
 ---
 
 {{CSSRef}}

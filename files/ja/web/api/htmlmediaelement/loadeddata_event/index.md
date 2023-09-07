@@ -1,66 +1,57 @@
 ---
-title: 'HTMLMediaElement: loadeddata イベント'
+title: "HTMLMediaElement: loadeddata イベント"
 slug: Web/API/HTMLMediaElement/loadeddata_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 **`loadeddata`** イベントは、メディアの現在の再生位置のフレームの読み込みが完了したときに発生します。ふつうは最初のフレームです。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onloadeddata")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 > **メモ:** なお、このイベントはモバイルやタブレットにおいて、ブラウザーの設定でデータセーバーがオンになっていると発生しません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("loadeddata", (event) => {});
+
+onloadeddata = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 これらの例では、 HTMLMediaElement の `loadeddata` イベントにイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadeddata', (event) => {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+video.addEventListener("loadeddata", (event) => {
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time.",
+  );
 });
 ```
 
-`onloadeddata` イベントハンドラープロパティを使用する場合
+`onloadeddata` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time.",
+  );
 };
 ```
 

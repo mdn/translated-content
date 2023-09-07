@@ -63,15 +63,17 @@ l10n:
     <legend>Feedback form</legend>
     <div>
       <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required>
+      <input id="fname" name="fname" type="text" required />
     </div>
     <div>
       <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required>
+      <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">Email address (include if you want a response): </label>
-      <input id="email" name="email" type="email">
+      <label for="email"
+        >Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
     </div>
     <div><button>Submit</button></div>
   </fieldset>
@@ -110,7 +112,7 @@ input:optional {
 
 これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/CSS_Generated_Content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
 
-これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、画面リーダーからは見えません。それは文書のスタイルの一部なのです。それは擬似要素なので、実際の DOM ノードができるのと同じ方法でスタイルの対象にすることができます。
+これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーからは見えません。それは文書のスタイルの一部なのです。それは擬似要素なので、実際の DOM ノードができるのと同じ方法でスタイルの対象にすることができます。
 
 これは、ラベルやアイコンのような視覚的なインジケータを要素に追加したいが、支援技術に拾われたくない場合に、実に有用な方法です。たとえば、[カスタムラジオボタンの例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)では、ラジオボタンが選択されたときに内側の円の配置とアニメーションを処理するために生成されたコンテンツを使用しています。
 
@@ -134,7 +136,7 @@ input[type="radio"]:checked::before {
 }
 ```
 
-これは実に有用です。画面リーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからで宇s。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
+これは実に有用です。スクリーンリーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからで宇s。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
 
 > **メモ:** これは、必要に応じて擬似クラスと擬似要素を組み合わせる方法も示しています。
 
@@ -153,7 +155,7 @@ input[type="radio"]:checked::before {
 ```html
 <div>
   <label for="fname">First name: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -197,7 +199,7 @@ input:required + span::after {
 
 ## データが妥当が否かでコントロールをスタイル設定する
 
-フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/Guide/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
+フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
 
 ### :valid と :invalid
 
@@ -206,7 +208,7 @@ input:required + span::after {
 - 制約検証を行わないコントロールは常に有効であり、したがって `:valid` と一致します。
 - `required` が設定されているコントロールで、値がないものは無効とみなされ、 `:invalid` および `:required` と一致します。
 - 組み込みの検証機能を持つコントロール、たとえば `<input type="email">` や `<input type="url">` は、入力されたデータが検索するパターンと一致しない場合、 `:invalid` に一致します（ただし、空の場合は有効になります）。
-- 現在の値が {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
+- 現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
 - 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
 それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
@@ -216,7 +218,7 @@ input:required + span::after {
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -239,12 +241,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -261,7 +263,7 @@ input:valid + span::before {
 
 ### 範囲内と範囲外のデータ
 
-上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
+上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
 > **メモ:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
 
@@ -274,7 +276,7 @@ input:valid + span::before {
 ```html
 <div>
   <label for="age">年齢（12 歳以上）:</label>
-  <input id="age" name="age" type="number" min="12" max="120" required>
+  <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
@@ -333,34 +335,38 @@ input:out-of-range + span::after {
     <legend>Shipping address</legend>
     <div>
       <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required>
+      <input id="name1" name="name1" type="text" required />
     </div>
     <div>
       <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required>
+      <input id="address1" name="address1" type="text" required />
     </div>
     <div>
       <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required>
+      <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
     <legend>Billing address</legend>
     <div>
       <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked>
+      <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
       <label for="name" class="billing-label disabled-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required>
+      <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
-      <label for="address2" class="billing-label disabled-label">Address: </label>
-      <input id="address2" name="address2" type="text" disabled required>
+      <label for="address2" class="billing-label disabled-label"
+        >Address:
+      </label>
+      <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">Zip/postal code: </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required>
+      <label for="pcode2" class="billing-label disabled-label"
+        >Zip/postal code:
+      </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -372,8 +378,8 @@ input:out-of-range + span::after {
 
 ```css
 input[type="text"]:disabled {
-    background: #eee;
-    border: 1px solid #ccc;
+  background: #eee;
+  border: 1px solid #ccc;
 }
 
 .disabled-label {
@@ -387,25 +393,33 @@ input[type="text"]:disabled {
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', () => {
-  // Attach `change` event listener to checkbox
-  document.getElementById('billing-checkbox').addEventListener('change', toggleBilling);
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    // Attach `change` event listener to checkbox
+    document
+      .getElementById("billing-checkbox")
+      .addEventListener("change", toggleBilling);
+  },
+  false,
+);
 
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
   // Select the billing text labels
-  const billingLabels = document.querySelectorAll('.billing-label');
+  const billingLabels = document.querySelectorAll(".billing-label");
 
   // Toggle the billing text fields and labels
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if (billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
-      billingLabels[i].setAttribute('class', 'billing-label');
+    if (
+      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
+    ) {
+      billingLabels[i].setAttribute("class", "billing-label");
     } else {
-      billingLabels[i].setAttribute('class', 'billing-label disabled-label');
+      billingLabels[i].setAttribute("class", "billing-label disabled-label");
     }
   }
 }
@@ -419,7 +433,7 @@ function toggleBilling() {
 
 ### read-only と read-write
 
-disabled` と `:enabled` と同様に、 `:read-only` および `:read-write` 擬似クラスは、フォーム入力が切り替えられる 2 つの状態を対象としています。 read-only は値をサーバーに送信しますが、ユーザーが編集することはできません。一方、 read-write は編集可能な状態、つまり既定の状態です。
+disabled`と`:enabled`と同様に、`:read-only`および`:read-write` 擬似クラスは、フォーム入力が切り替えられる 2 つの状態を対象としています。 read-only は値をサーバーに送信しますが、ユーザーが編集することはできません。一方、 read-write は編集可能な状態、つまり既定の状態です。
 
 入力は `readonly` 属性を使用して読み取り専用に設定されます。例として、開発者が前のページで入力された内容をこのページに送り、ユーザーに一箇所で確認してもらい、必要なデータを追加し、送信して注文を確定させることを目的とした確認ページを想像してください。この点で、すべての最終的なフォームデータを一度にサーバーに送信することができます。
 
@@ -430,15 +444,19 @@ HTML の一部を以下に示します。 readonly 属性に注意してくだ�
 ```html
 <div>
   <label for="name">Name: </label>
-  <input id="name" name="name" type="text"
-         value="Mr Soft" readonly>
+  <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
 
 ライブ例を試してみると、一番上のフォーム要素のセットはフォーカスされませんが、フォームが送信されたときに値が送信されることがわかります。このように、`:read-only` と `:read-write` 擬似クラスを使用して、フォームコントロールのスタイル設定を行いました。
 
 ```css
-:is(input:read-only, input:-moz-read-only, textarea:-moz-read-only, textarea:read-only) {
+:is(
+    input:read-only,
+    input:-moz-read-only,
+    textarea:-moz-read-only,
+    textarea:read-only
+  ) {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -513,7 +531,7 @@ input[type="radio"]:checked::before {
 
 ```html
 <p>
-  <input type="radio" name="fruit" value="cherry" id="cherry">
+  <input type="radio" name="fruit" value="cherry" id="cherry" />
   <label for="cherry">Cherry</label>
   <span></span>
 </p>
@@ -581,7 +599,7 @@ input[type="radio"]:indeterminate {
 
 以下のものは、現代のブラウザーはかなり対応しています。
 
-- {{cssxref(":focus-within")}} 擬似クラスは、フォーカスを保有する要素、あるいはフォーカスを保有する要素を 含む_ 要素に一致します。これは、フォーム内の入力にフォーカスが当たったとき、フォーム全体を何らかの方法でハイライトさせたい場合に有用です。
+- {{cssxref(":focus-within")}} 擬似クラスは、フォーカスを保有する要素、あるいはフォーカスを保有する要素を 含む\_ 要素に一致します。これは、フォーム内の入力にフォーカスが当たったとき、フォーム全体を何らかの方法でハイライトさせたい場合に有用です。
 - {{cssxref(":focus-visible")}} 擬似クラスは、（タッチやマウスではなく）キーボード操作によってフォーカスを受けた要素に一致します。マウス（または他の）フォーカスとは異なるスタイルをキーボードフォーカスのために使用したい場合、有用です。
 - {{cssxref(":placeholder-shown")}} 擬似クラスは、{{htmlelement('input')}} と {{htmlelement('textarea')}} 要素の値が空であるため、そのプレースホルダーを表示している（すなわち [`placeholder`](/ja/docs/Web/HTML/Attributes/placeholder) 属性の内容を示している）要素に一致します。
 
@@ -599,22 +617,3 @@ input[type="radio"]:indeterminate {
 これで、フォーム入力に関連する UI 擬似クラスについての説明は完全に終了しました。どんどん使って、楽しいフォームスタイルを作成してください。次は別のもの、[クライアントサイドフォーム検証](/ja/docs/Learn/Forms/Form_validation)に移動しましょう。
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

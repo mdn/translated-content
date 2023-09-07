@@ -1,5 +1,5 @@
 ---
-title: ':read-only'
+title: ":read-only"
 slug: Web/CSS/:read-only
 ---
 
@@ -20,7 +20,7 @@ input:read-only {
 }
 ```
 
-> **备注：** 这个选择器不只是选择具有 {{htmlattrxref("readonly", "input")}} 属性的{{htmlElement("input")}} 元素，它也会选择所有的不能被用户编辑的元素。
+> **备注：** 这个选择器不只是选择具有 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 属性的{{htmlElement("input")}} 元素，它也会选择所有的不能被用户编辑的元素。
 
 ## 语法
 
@@ -31,8 +31,8 @@ input:read-only {
 ### HTML
 
 ```html
-<input type="text" value="Type whatever you want here.">
-<input type="text" value="This is a read-only field." readonly>
+<input type="text" value="Type whatever you want here." />
+<input type="text" value="This is a read-only field." readonly />
 <p>This is a normal paragraph.</p>
 <p contenteditable="true">You can edit this paragraph!</p>
 ```
@@ -40,18 +40,30 @@ input:read-only {
 ### CSS
 
 ```css
-input { min-width: 25em; }
-input:-moz-read-only { background: cyan; }
-input:read-only { background: cyan; }
+input {
+  min-width: 25em;
+}
+input:-moz-read-only {
+  background: cyan;
+}
+input:read-only {
+  background: cyan;
+}
 
-p:-moz-read-only { background: lightgray; }
-p:read-only { background: lightgray; }
-p[contenteditable="true"] { color: blue; }
+p:-moz-read-only {
+  background: lightgray;
+}
+p:read-only {
+  background: lightgray;
+}
+p[contenteditable="true"] {
+  color: blue;
+}
 ```
 
-### 输出
+### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -64,4 +76,4 @@ p[contenteditable="true"] { color: blue; }
 ## 参见
 
 - {{cssxref(":read-write")}}
-- HTML {{htmlattrxref("contenteditable")}} attribute
+- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) attribute

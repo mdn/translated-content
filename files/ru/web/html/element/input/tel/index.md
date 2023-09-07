@@ -1,12 +1,11 @@
 ---
 title: <input type="tel">
-slug: Web/HTML/Element/Input/tel
-translation_of: Web/HTML/Element/input/tel
+slug: Web/HTML/Element/input/tel
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} элемент типа **`tel`** используется чтобы разрешить пользователю вводить и редактировать номер телефона. В отличии от[`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) и [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , введённое значение не проверяется автоматически по определённом формату, перед тем как форма может быть отправлена , потому что форматы телефонных номеров сильно различаются по всему миру
+{{HTMLElement("input")}} элемент типа **`tel`** используется чтобы разрешить пользователю вводить и редактировать номер телефона. В отличии от[`<input type="email">`](/ru/docs/Web/HTML/Element/input/email) и [`<input type="url">`](/ru/docs/Web/HTML/Element/input/url) , введённое значение не проверяется автоматически по определённом формату, перед тем как форма может быть отправлена , потому что форматы телефонных номеров сильно различаются по всему миру
 
 {{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
 
@@ -14,16 +13,16 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 
 > **Примечание:** Browsers that don't support type `tel` fall back to being a standard {{HTMLElement("input/text", "text")}} input.
 
-| **[Value](#value)**             | A {{domxref("DOMString")}} representing a telephone number, or empty                                                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Events**                      | {{event("change")}} and {{event("input")}}                                                                                                                                                                                                                                                                                                                                                                          |
-| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("size", "input")}} |
-| **IDL attributes**              | `list`, `selectionStart`, `selectionEnd`, `selectionDirection`, and `value`                                                                                                                                                                                                                                                                                                                                                    |
-| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}                                                                                                                                                                   |
+| **[Value](#value)**             | A {{domxref("DOMString")}} representing a telephone number, or empty                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Events**                      | {{event("change")}} and {{event("input")}}                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength), [`minlength`](/ru/docs/Web/HTML/Element/input#minlength), [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`size`](/ru/docs/Web/HTML/Element/input#size) |
+| **IDL attributes**              | `list`, `selectionStart`, `selectionEnd`, `selectionDirection`, and `value`                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}                                                                                                                                                                                                                                                                       |
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (`""`).
+The {{HTMLElement("input")}} element's [`value`](/ru/docs/Web/HTML/Element/input#value) attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (`""`).
 
 ## Additional attributes
 
@@ -89,8 +88,8 @@ Fortunately, you can consider the requirements of your own site and implement an
 
 One of the main advantages of `<input type="tel">` is that it causes mobile browsers to display a special keyboard for entering phone numbers. For example, here's what the keypads look like on a couple of devices.
 
-| Firefox for Android                                                                             | WebKit iOS (Safari/Chrome/Firefox)                                                                    |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Firefox for Android                                    | WebKit iOS (Safari/Chrome/Firefox)                           |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Firefox for Android screen shot](fx-android-tel.png) | ![Firefox for iOS screenshot](iphone-tel-keyboard-50pct.png) |
 
 ### A simple tel input
@@ -99,7 +98,7 @@ In its most basic form, a tel input can be implemented like this:
 
 ```html
 <label for="telNo">Phone number:</label>
-<input id="telNo" name="telNo" type="tel">
+<input id="telNo" name="telNo" type="tel" />
 ```
 
 {{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}
@@ -113,8 +112,7 @@ Sometimes it's helpful to offer an in-context hint as to what form the input dat
 Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901">
+<input id="telNo" name="telNo" type="tel" placeholder="123-4567-8901" />
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -125,24 +123,28 @@ You can control not only the physical length of the input box, but also the mini
 
 #### Physical input element size
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `tel` edit box is 20 characters wide:
+The physical size of the input box can be controlled using the [`size`](/ru/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `tel` edit box is 20 characters wide:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       size="20">
+<input id="telNo" name="telNo" type="tel" size="20" />
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
 
 #### Element value length
 
-The `size` is separate from the length limitation on the entered telephone number. You can specify a minimum length, in characters, for the entered telephone number using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered telephone number.
+The `size` is separate from the length limitation on the entered telephone number. You can specify a minimum length, in characters, for the entered telephone number using the [`minlength`](/ru/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered telephone number.
 
 The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+<input
+  id="telNo"
+  name="telNo"
+  type="tel"
+  size="20"
+  minlength="9"
+  maxlength="14" />
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -151,28 +153,27 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 ### Providing default options
 
-As always, you can provide a default value for an `tel` input box by setting its {{htmlattrxref("value", "input")}} attribute:
+As always, you can provide a default value for an `tel` input box by setting its [`value`](/ru/docs/Web/HTML/Element/input#value) attribute:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444">
+<input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
 ```
 
 {{EmbedLiveSample("Default_value", 600, 40)}}
 
 #### Offering suggested values
 
-Taking it a step farther, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the telephone number entry box.
+Taking it a step farther, you can provide a list of default phone number values from which the user can select. To do this, use the [`list`](/ru/docs/Web/HTML/Element/input#list) attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete). The `list` attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the telephone number entry box.
 
 ```html
 <label for="telNo">Phone number: </label>
-<input id="telNo" name="telNo" type="tel" list="defaultTels">
+<input id="telNo" name="telNo" type="tel" list="defaultTels" />
 
 <datalist id="defaultTels">
-  <option value="111-1111-1111">
-  <option value="122-2222-2222">
-  <option value="333-3333-3333">
-  <option value="344-4444-4444">
+  <option value="111-1111-1111"></option>
+  <option value="122-2222-2222"></option>
+  <option value="333-3333-3333"></option>
+  <option value="344-4444-4444"></option>
 </datalist>
 ```
 
@@ -192,13 +193,13 @@ As we've touched on before, it's quite difficult to provide a one-size-fits-all 
 
 ### Making telephone numbers required
 
-You can make it so that an empty input is invalid and won't be submitted to the server using the {{htmlattrxref("required", "input")}} attribute. For example, let's use this HTML:
+You can make it so that an empty input is invalid and won't be submitted to the server using the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute. For example, let's use this HTML:
 
 ```html
 <form>
   <div>
     <label for="telNo">Enter a telephone number (required): </label>
-    <input id="telNo" name="telNo" type="tel" required>
+    <input id="telNo" name="telNo" type="tel" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -223,15 +224,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -243,16 +245,22 @@ The output looks like this:
 
 ### Pattern validation
 
-If you want to further restrict entered numbers so they also have to conform to a specific pattern, you can use the {{htmlattrxref("pattern","input")}} attribute, which takes as its value a {{Glossary("regular expression")}} that entered values have to match.
+If you want to further restrict entered numbers so they also have to conform to a specific pattern, you can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute, which takes as its value a {{Glossary("regular expression")}} that entered values have to match.
 
 In this example we'll use the same CSS as before, but our HTML is changed to look like this:
 
 ```html
 <form>
   <div>
-    <label for="telNo">Enter a telephone number (in the form xxx-xxx-xxxx): </label>
-    <input id="telNo" name="telNo" type="tel" required
-           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <label for="telNo"
+      >Enter a telephone number (in the form xxx-xxx-xxxx):
+    </label>
+    <input
+      id="telNo"
+      name="telNo"
+      type="tel"
+      required
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
     <span class="validity"></span>
   </div>
   <div>
@@ -275,15 +283,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -297,7 +306,7 @@ Notice how the entered value is reported as invalid unless the pattern xxx-xxx-x
 
 In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an `aria-label` attribute to contain a hint to be read out to screenreader users about what to enter into it.
+Each input has a [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) to enforce a specific number of characters for the desired section, and an `aria-label` attribute to contain a hint to be read out to screenreader users about what to enter into it.
 
 ```html
 <form>
@@ -310,23 +319,38 @@ Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hin
     </select>
   </div>
   <div>
-    <p>Enter your telephone number: </p>
+    <p>Enter your telephone number:</p>
     <span class="areaDiv">
-      <input id="areaNo" name="areaNo" type="tel" required
-             placeholder="Area code" pattern="[0-9]{3}"
-             aria-label="Area code">
+      <input
+        id="areaNo"
+        name="areaNo"
+        type="tel"
+        required
+        placeholder="Area code"
+        pattern="[0-9]{3}"
+        aria-label="Area code" />
       <span class="validity"></span>
     </span>
     <span class="number1Div">
-      <input id="number1" name="number1" type="tel" required
-             placeholder="First part" pattern="[0-9]{3}"
-             aria-label="First part of number">
+      <input
+        id="number1"
+        name="number1"
+        type="tel"
+        required
+        placeholder="First part"
+        pattern="[0-9]{3}"
+        aria-label="First part of number" />
       <span class="validity"></span>
     </span>
     <span class="number2Div">
-      <input id="number2" name="number2" type="tel" required
-             placeholder="Second part" pattern="[0-9]{4}"
-             aria-label="Second part of number">
+      <input
+        id="number2"
+        name="number2"
+        type="tel"
+        required
+        placeholder="Second part"
+        pattern="[0-9]{4}"
+        aria-label="Second part of number" />
       <span class="validity"></span>
     </span>
   </div>
@@ -342,12 +366,12 @@ The JavaScript is relatively simple — it contains an {{domxref("GlobalEventHan
 var selectElem = document.querySelector("select");
 var inputElems = document.querySelectorAll("input");
 
-selectElem.onchange = function() {
-  for(var i = 0; i < inputElems.length; i++) {
+selectElem.onchange = function () {
+  for (var i = 0; i < inputElems.length; i++) {
     inputElems[i].value = "";
   }
 
-  if(selectElem.value === "US") {
+  if (selectElem.value === "US") {
     inputElems[2].parentNode.style.display = "inline";
 
     inputElems[0].placeholder = "Area code";
@@ -355,12 +379,12 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
-  } else if(selectElem.value === "UK") {
+    inputElems[2].setAttribute("aria-label", "Second part of number");
+  } else if (selectElem.value === "UK") {
     inputElems[2].parentNode.style.display = "none";
 
     inputElems[0].placeholder = "Area code";
@@ -368,8 +392,8 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "Local number";
     inputElems[1].pattern = "[0-9]{4,8}";
-    inputElems[1].setAttribute("aria-label","Local number");
-  } else if(selectElem.value === "Germany") {
+    inputElems[1].setAttribute("aria-label", "Local number");
+  } else if (selectElem.value === "Germany") {
     inputElems[2].parentNode.style.display = "inline";
 
     inputElems[0].placeholder = "Area code";
@@ -377,13 +401,13 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
+    inputElems[2].setAttribute("aria-label", "Second part of number");
   }
-}
+};
 ```
 
 The example looks like this:
@@ -396,8 +420,8 @@ It makes you wonder if it is worth going to all this trouble on the client-side,
 
 ```css hidden
 div {
-margin-bottom: 10px;
-position: relative;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 input[type="number"] {
@@ -408,15 +432,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -424,10 +449,10 @@ input:valid+span:after {
 
 ## Specifications
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Specification                                                                              | Status                   | Comment            |
+| ------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'forms.html#tel-state-(type=tel)', '&lt;input type="tel"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#tel-state-typetel', '&lt;input type="tel"&gt;')}}     | {{Spec2('HTML5.1')}}     | Initial definition |
+| {{SpecName('HTML5.1', 'sec-forms.html#tel-state-typetel', '&lt;input type="tel"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
 
 ## Browser compatibility
 
@@ -439,5 +464,5 @@ input:valid+span:after {
 - [Forms and accessibility](/ru/docs/Web/Accessibility/ARIA/forms)
 - {{HTMLElement("input")}}
 
-  - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-  - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+  - [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text)
+  - [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email)

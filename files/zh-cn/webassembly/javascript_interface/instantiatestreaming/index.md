@@ -1,10 +1,9 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.instantiateStreaming()`** 方法直接从流式底层源编译和实例化 WebAssembly 模块。这是加载 wasm 代码一种非常有效的优化方式。
 
@@ -25,7 +24,7 @@ Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
 
 一个 `Promise`，通过 resolve 返回一个包含两个属性的 `ResultObject` ：
 
-- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个`Module`能够再次被实例化 或 通过[postMessage()](/zh-CN/docs/Web/API/Worker/postMessage)共享。
+- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个 `Module` 能够再次被实例化 或 通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 共享。
 - `instance`: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 [Exported WebAssembly functions](/zh-CN/docs/WebAssembly/Exported_functions).
 
 ### Exceptions
@@ -38,10 +37,11 @@ Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
 下面的示例 (在 GitHub 上查看 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 示例，并且也可 [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) ) 直接从基础源传输一个 .wasm 模块，然后进行编译和实例化，Promise 履行后返回一个 `ResultObject`. 因为 `instantiateStreaming()` 方法允许履行后返回{{domxref("Response")}}对象的 Promise，你可以直接传递一个 {{domxref("fetch()")}} 请求，它会在履行后将 response 传递给方法。
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 然后访问`ResultObject`的实例成员，并调用包含的公开函数。

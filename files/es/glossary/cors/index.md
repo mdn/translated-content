@@ -3,7 +3,7 @@ title: CORS
 slug: Glossary/CORS
 ---
 
-**CORS** (*Cross-Origin Resource Sharing* o en español Intercambio de recursos de origen cruzado) es un sistema que consiste en transmitir {{Glossary("HTTP_header", "HTTP headers")}}, que determina si los navegadores bloquean el acceso del código JavaScript frontend a las respuestas de peticiones de origen cruzado.
+**CORS** (_Cross-Origin Resource Sharing_ o en español Intercambio de recursos de origen cruzado) es un sistema que consiste en transmitir {{Glossary("HTTP_header", "HTTP headers")}}, que determina si los navegadores bloquean el acceso del código JavaScript frontend a las respuestas de peticiones de origen cruzado.
 
 La [política de seguridad del mismo origen](/es/docs/Web/Security/Same-origin_policy) prohíbe el acceso a los recursos de orígenes cruzados. Pero CORS brinda a los servidores web la capacidad de decir que desean optar por permitir el acceso de origen cruzado a sus recursos.
 

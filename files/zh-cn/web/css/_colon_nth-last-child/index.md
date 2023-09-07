@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child'
+title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -69,16 +69,16 @@ slug: Web/CSS/:nth-last-child
       <td>First line</td>
     </tr>
     <tr>
-       <td>Second line</td>
+      <td>Second line</td>
     </tr>
     <tr>
-       <td>Third line</td>
+      <td>Third line</td>
     </tr>
     <tr>
-       <td>Fourth line</td>
+      <td>Fourth line</td>
     </tr>
     <tr>
-       <td>Fifth line</td>
+      <td>Fifth line</td>
     </tr>
   </tbody>
 </table>
@@ -92,12 +92,12 @@ table {
 }
 
 /* Selects the last three elements */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* Selects every element starting from the second to last item */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -138,8 +138,8 @@ tr:nth-last-child(2) {
 ```css
 /* If there are at least three list items,
    style them all */
-li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
   color: red;
 }
 ```

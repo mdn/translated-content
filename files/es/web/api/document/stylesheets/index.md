@@ -1,7 +1,6 @@
 ---
 title: Document.styleSheets
 slug: Web/API/Document/styleSheets
-original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
 
 {{ ApiRef() }}
@@ -17,7 +16,7 @@ Devuelve una lista de objetos de tipo [stylesheet](/es/DOM/stylesheet) para las 
 ### Sintaxis
 
 ```js
-styleSheetList = document.styleSheets
+styleSheetList = document.styleSheets;
 ```
 
 El objeto devuelto es del tipo [StyleSheetList](https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets).

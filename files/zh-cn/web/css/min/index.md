@@ -1,7 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}
@@ -27,11 +26,11 @@ width: min(1vw, 4em, 80px);
 - Oftentimes you will want to comine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## Examples
+## 示例
 
 ### Growing images to a maximum size
 
@@ -44,7 +43,10 @@ width: min(1vw, 4em, 80px);
 ```
 
 ```html
-<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+<img
+  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  alt="MDN Web Docs"
+  class="logo" />
 ```
 
 {{EmbedLiveSample("Growing_images_to_a_maximum_size", "100%", "60")}}
@@ -58,7 +60,8 @@ CSS 方法的另一个用途时设置响应式组件（form）的最大尺寸：
 看下面的样式：
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -78,11 +81,11 @@ form {
 ```html
 <form>
   <label>Type something:</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_an_label_and_input", "100%", "80")}}
+{{EmbedLiveSample("给 label 和 input 设置最大值", "100%", "80")}}
 
 Think of the `min()` function as finding the maximum value allowed for a property.
 

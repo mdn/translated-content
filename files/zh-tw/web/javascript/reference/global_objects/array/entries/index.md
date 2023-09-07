@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 ## 語法
 
-```plain
-a.entries()
+```js-nolint
+entries()
 ```
 
 ### 回傳值
@@ -21,10 +21,10 @@ a.entries()
 
 ## 範例
 
-### 使用 [for…of](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 進行迭代
+### 使用 for...of 進行迭代
 
 ```js
-var a = ['a', 'b', 'c'];
+var a = ["a", "b", "c"];
 var iterator = a.entries();
 
 for (let e of iterator) {

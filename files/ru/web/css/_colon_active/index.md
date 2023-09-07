@@ -1,9 +1,6 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
-tags:
-  - Псевдоклассы
-translation_of: Web/CSS/:active
 ---
 
 {{CSSRef}}
@@ -17,7 +14,7 @@ a:active {
 }
 ```
 
-Также псевдокласс `:active` срабатывает при использовании клавиши TAB на клавиатуре. Обычно это используется для HTML-элементов {{HTMLElement("a")}} и {{HTMLElement("button")}}, но может применяться и к другим элементам.
+Псевдокласс `:active` чаще используется с элементами {{HTMLElement("a")}} и {{HTMLElement("button")}}, но может применяться и к другим элементам – например элементам форм.
 
 Это свойство может быть переопределено любыми другими псевдоклассами, относящимся к ссылке, такими как {{cssxref(":link")}}, {{cssxref(":hover")}} и {{cssxref(":visited")}}, описанными в последующих правилах. Чтобы стилизировать нужные ссылки, вам нужно ставить правило `:active` после всех других правил, относящихся к ссылке, как определено правилом _LVHA-порядком_: `:link` — `:visited` — `:hover` — `:active`.
 
@@ -34,20 +31,37 @@ a:active {
 #### HTML
 
 ```html
-<p>Этот абзац содержит ссылку:
-<a href="#">Эта ссылка будет окрашена в красный, когда вы нажмёте на неё.</a>
-У абзаца фон станет серым при нажатии на него или на ссылку. </p>
+<p>
+  Этот абзац содержит ссылку:
+  <a href="#">Эта ссылка будет окрашена в красный, когда вы нажмёте на неё.</a>
+  У абзаца фон станет серым при нажатии на него или на ссылку.
+</p>
 ```
 
 #### CSS
 
 ```css
-a:link { color: blue; }          /* Непосещённые ссылки */
-a:visited { color: purple; }     /* Посещённые ссылки */
-a:hover { background: yellow; }  /* Ссылки при наведении */
-a:active { color: red; }         /* Активные ссылки */
+/* Непосещённые ссылки */
+a:link {
+  color: blue;
+}
+/* Посещённые ссылки */
+a:visited {
+  color: purple;
+}
+/* Ссылки при наведении */
+a:hover {
+  background: yellow;
+}
+/* Активные ссылки */
+a:active {
+  color: red;
+}
 
-p:active { background: #eee; }   /* Активные абзацы */
+/* Активные абзацы */
+p:active {
+  background: #eee;
+}
 ```
 
 #### Результат
@@ -61,7 +75,9 @@ p:active { background: #eee; }   /* Активные абзацы */
 ```html
 <form>
   <label for="my-button">Моя кнопка: </label>
-  <button id="my-button" type="button">Попробуй Нажать Меня или Мою подсказку!</button>
+  <button id="my-button" type="button">
+    Попробуй Нажать Меня или Мою подсказку!
+  </button>
 </form>
 ```
 
@@ -83,13 +99,13 @@ form button {
 
 ## Спецификации
 
-| Спецификация                                                                                     | Статус                               | Комментарий                |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}} | {{Spec2('HTML WHATWG')}}     |                            |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}                 | {{Spec2('CSS4 Selectors')}} | Без изменений              |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}             | {{Spec2('CSS3 Selectors')}} | Без изменений              |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}             | Без изменений              |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                     | {{Spec2('CSS1')}}             | Первоначальное определение |
+| Спецификация                                                              | Статус                      | Комментарий                |
+| ------------------------------------------------------------------------- | --------------------------- | -------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}}  | {{Spec2('HTML WHATWG')}}    |                            |
+| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}               | {{Spec2('CSS4 Selectors')}} | Без изменений              |
+| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}          | {{Spec2('CSS3 Selectors')}} | Без изменений              |
+| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}         | Без изменений              |
+| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                 | {{Spec2('CSS1')}}           | Первоначальное определение |
 
 ## Совместимость с браузерами
 

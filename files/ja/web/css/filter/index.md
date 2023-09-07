@@ -46,13 +46,13 @@ filter: unset;
 次のように関数と共に使用してください。
 
 ```css
-filter: <filter-function> [<filter-function>]* | none
+filter: <filter-function> [<filter-function>] * | none;
 ```
 
 SVG の {{SVGElement("filter")}} 要素への参照の場合は、次のようにしてください。
 
 ```css
-filter: url(file.svg#filter-element-id)
+filter: url(file.svg#filter-element-id);
 ```
 
 ### 補間
@@ -72,7 +72,7 @@ filter: url(file.svg#filter-element-id)
 外部 XML ファイルに埋め込むことができる [SVG フィルター](/ja/docs/Web/SVG/Element/filter)を指す URI を取ります。
 
 ```css
-filter: url(resources.svg#c1)
+filter: url(resources.svg#c1);
 ```
 
 ### フィルター関数
@@ -82,11 +82,11 @@ filter: url(resources.svg#c1)
 {{cssxref("filter-function/blur", "blur()")}} 関数は、入力画像にガウスぼかしを適用します。 `radius` の値は、ガウス関数の標準偏差の値、つまり画面上のいくつのピクセルが互いに溶け込むかを定義します。補間のための初期値は `0` です。 この引数は CSS の長さとして指定されますが、パーセント値は受け付けません。
 
 ```css
-filter: blur(5px)
+filter: blur(5px);
 ```
 
 ```html hidden
-  <table class="standard-table">
+<table class="standard-table">
   <thead>
     <tr>
       <th style="text-align: left;" scope="col">Original image</th>
@@ -97,19 +97,45 @@ filter: blur(5px)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_2.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_2.jpeg"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg id="img3" overflow="visible" viewbox="0 0 212 161" color-interpolation-filters="sRGB">
+          <svg
+            id="img3"
+            overflow="visible"
+            viewbox="0 0 212 161"
+            color-interpolation-filters="sRGB">
             <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" />
             </filter>
-            <image xlink:href="test_form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/>
+            <image
+              xlink:href="test_form_2.jpeg"
+              filter="url(#svgBlur)"
+              width="212px"
+              height="161px" />
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_2_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_2_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -117,20 +143,28 @@ filter: blur(5px)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida, Arial, Helvetica, sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -webkit-filter:blur(5px);
-  -ms-filter:blur(5px);
-  filter:blur(5px); }
+  width: 100%;
+  height: auto;
+  -webkit-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -151,11 +185,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -174,7 +208,7 @@ table.standard-table td {
 {{cssxref("filter-function/brightness", "brightness()")}} 関数は、入力画像に線形乗数を適用して明るさを明るくしたり暗くしたりします。 `0%` の値を設定すると、完全な黒の画像が作成されます。 `100%` の値を指定すると、入力は変更されません。その他の値は効果の線形乗数です。 `100%` を超える値が許されており、より明るい結果が得られます。補間時の初期値は `1` です。
 
 ```css
-filter: brightness(2)
+filter: brightness(2);
 ```
 
 ```svg
@@ -221,27 +255,35 @@ filter: brightness(2)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -ms-filter:brightness(2);
-  filter:brightness(2); }
+  width: 100%;
+  height: auto;
+  -moz-filter: brightness(2);
+  -webkit-filter: brightness(2);
+  -ms-filter: brightness(2);
+  filter: brightness(2);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
   border-spacing: 0px;
   margin: 0px 0px 1.286em;
-  height:100%;
+  height: 100%;
   width: 85%;
 }
 table.standard-table th {
@@ -256,11 +298,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -271,7 +313,7 @@ table.standard-table td {
 {{cssxref("filter-function/contrast", "contrast()")}} 関数は、入力画像のコントラストを調整します。 `0%` の値を指定すると完全にグレーの画像が作成されます。 `100%` の値を指定すると、入力画像は変更されません。 `100%` を超える値を指定すると、よりコントラストの高い結果が得られます。補完時の初期値は `1` です。
 
 ```css
-filter: contrast(200%)
+filter: contrast(200%);
 ```
 
 ```svg
@@ -318,21 +360,29 @@ filter: contrast(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -ms-filter:contrast(200%);
-  filter:contrast(200%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+  -ms-filter: contrast(200%);
+  filter: contrast(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -353,11 +403,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -369,14 +419,14 @@ table.standard-table td {
 
 - `<offset-x>` `<offset-y>` (必須)
   - : 2 つの {{cssxref("&lt;length&gt;")}} 値で、影をずらす大きさを設定します。 `<offset-x>` は水平の距離を指定します。負の数の場合、影を要素の左側に配置します。 `<offset-y>` は垂直の距離を指定します。負の数の場合、影を要素の上に配置します。利用可能な単位は {{cssxref("&lt;length&gt;")}} を参照してください。
- 両方の値が `0` である場合は、影は要素の背後に配置されます (そして、 `<blur-radius>` や `<spread-radius>` を設定することで、ぼかしの効果を生成することができます)。
+    両方の値が `0` である場合は、影は要素の背後に配置されます (そして、 `<blur-radius>` や `<spread-radius>` を設定することで、ぼかしの効果を生成することができます)。
 - `<blur-radius>` (オプション)
   - : これは三番目の {{cssxref("&lt;length&gt;")}} 値です。この値が大きくなるほど、ぼかしが大きくなり、影がより大きく薄くなります。負の数を指定することはできません。指定されなかった場合は、 `0` (影の縁がはっきりしている) になります。
 - `<color>` (オプション)
   - : 指定可能なキーワードや記述方法は {{cssxref("&lt;color&gt;")}} 値を参照してください。指定されなかった場合は、使用される色はブラウザーに依存します。 - 普通は {{cssxref("&lt;color&gt;")}} プロパティの値ですが、 Safari では現在のところ、この場合には透明な影を描くことに注意してください。
 
 ```css
-filter: drop-shadow(16px 16px 10px black)
+filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```svg
@@ -406,47 +456,114 @@ filter: drop-shadow(16px 16px 10px black)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_4.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_4.jpeg"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="img3"
+            overflow="visible"
+            viewbox="0 0 213 161"
+            color-interpolation-filters="sRGB">
             <defs>
-              <image id="MyImage" xlink:href="test_form_4.jpeg" width="213px" height="161px"/>
+              <image
+                id="MyImage"
+                xlink:href="test_form_4.jpeg"
+                width="213px"
+                height="161px" />
             </defs>
-            <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
-              <feOffset dx="9" dy="9" in="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="5"/>
+            <filter
+              id="drop-shadow"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%">
+              <feOffset dx="9" dy="9" in="SourceAlpha" />
+              <feGaussianBlur stdDeviation="5" />
             </filter>
-            <use xlink:href="#MyImage" filter="url(#drop-shadow)"/>
-            <use xlink:href="#MyImage"/>
+            <use xlink:href="#MyImage" filter="url(#drop-shadow)" />
+            <use xlink:href="#MyImage" />
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_4_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_4_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
     <tr>
-      <td><img alt="test_form_4 distorted border - Original image" id="img11" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
-      <td><img alt="test_form_4 distorted border - Live example" id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="test_form_4 distorted border - Original image"
+          id="img11"
+          class="internal default"
+          src="test_form_4_irregular-shape_opacity-gradient.png"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="test_form_4 distorted border - Live example"
+          id="img12"
+          class="internal default"
+          src="test_form_4_irregular-shape_opacity-gradient.png"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="img13"
+            overflow="visible"
+            viewbox="0 0 213 161"
+            color-interpolation-filters="sRGB">
             <defs>
-              <image id="MyImage2" xlink:href="test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/>
+              <image
+                id="MyImage2"
+                xlink:href="test_form_4_irregular-shape_opacity-gradient.png"
+                width="213px"
+                height="161px" />
             </defs>
-            <filter id="drop-shadow2" x="-50%" y="-50%" width="200%" height="200%">
-              <feOffset dx="5" dy="5.5" in="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="2.5"/>
+            <filter
+              id="drop-shadow2"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%">
+              <feOffset dx="5" dy="5.5" in="SourceAlpha" />
+              <feGaussianBlur stdDeviation="2.5" />
               <feComponentTransfer>
-                <feFuncA type="table" tableValues="0 0.8"/>
+                <feFuncA type="table" tableValues="0 0.8" />
               </feComponentTransfer>
             </filter>
-            <use xlink:href="#MyImage2" filter="url(#drop-shadow2)"/>
-            <use xlink:href="#MyImage2"/>
+            <use xlink:href="#MyImage2" filter="url(#drop-shadow2)" />
+            <use xlink:href="#MyImage2" />
           </svg>
         </div>
       </td>
-      <td><img alt="test_form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="test_form_4 distorted border drop shadow - Static example"
+          id="img14"
+          class="internal default"
+          src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -454,29 +571,36 @@ filter: drop-shadow(16px 16px 10px black)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: drop-shadow(16px 16px 10px black);
   -webkit-filter: drop-shadow(16px 16px 10px black);
   -ms-filter: drop-shadow(16px 16px 10px black);
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width:100%;
-  height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
+  width: 100%;
+  height: auto;
+  -moz-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -ms-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -501,12 +625,13 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
-#img3, #img13 {
-  width:100%;
-  height:auto;
+#img3,
+#img13 {
+  width: 100%;
+  height: auto;
 }
 ```
 
@@ -517,7 +642,7 @@ table.standard-table td {
 {{cssxref("filter-function/grayscale", "grayscale()")}} 関数は入力画像をグレースケールに変換します。 `amount` の値は変換の程度を定義します。 `100%` の値は完全にグレースケールになります。 `0%` では入力画像が変化しないままになります。 `0%` と `100%` の間は効果の線形乗数になります。補完時の初期値は `0` です。
 
 ```css
-filter: grayscale(100%)
+filter: grayscale(100%);
 ```
 
 ```html hidden
@@ -552,21 +677,29 @@ filter: grayscale(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
-  filter:grayscale(100%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -587,11 +720,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -602,7 +735,7 @@ table.standard-table td {
 {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} 関数は、入力画像の色相を回転させます。 `angle` の値は、色相環を何度回転させて入力サンプルを調整するかを定義します。 `0deg` の値を指定すると入力は変更されません。補完時の初期値は `0` です。最大値はありませんが、 `360deg` を超える値の以上の値の場合は回り込みになります。
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```html hidden
@@ -634,21 +767,29 @@ filter: hue-rotate(90deg)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
-  filter:hue-rotate(90deg); }
+  width: 100%;
+  height: auto;
+  -moz-filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -669,18 +810,20 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 ```html
-<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -999999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="svgHueRotate">
-    <feColorMatrix type="hueRotate" values="90"/>
+    <feColorMatrix type="hueRotate" values="90" />
   </filter>
 </svg>
 ```
@@ -692,7 +835,7 @@ table.standard-table td {
 {{cssxref("filter-function/invert", "invert()")}} 関数は、入力画像のサンプルを反転します。 `amount` の値は、変換の度合を定義します。 `100%` の値を指定すると、完全に反転されます。 `0%` では入力画像が変化しないままになります。 `0%` と `100%` の間は効果の線形乗数になります。補完時の初期値は `0` です。
 
 ```css
-filter: invert(100%)
+filter: invert(100%);
 ```
 
 ```html hidden
@@ -727,21 +870,29 @@ filter: invert(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: invert(100%);
   -webkit-filter: invert(100%);
   -ms-filter: invert(100%);
-  filter: invert(100%); }
+  filter: invert(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -762,11 +913,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -777,7 +928,7 @@ table.standard-table td {
 {{cssxref("filter-function/opacity", "opacity()")}} 関数は、入力画像のサンプルに透過度を適用します。 `amount` の値は、変換の度合を定義します。 `0%` の値を指定すると、完全に透明になります。 `100%` では入力画像が変化しないままになります。 `0%` と `100%` の間は効果の線形乗数になります。これは、入力画像のサンプルに量を乗算することに相当します。補完時の初期値は `1` です。この関数は、より確立された {{cssxref("opacity")}} プロパティに似ていますが、フィルターの場合、一部のブラウザーでは性能を向上させるためにハードウェアアクセラレーションを提供する点が異なります。
 
 ```css
-filter: opacity(50%)
+filter: opacity(50%);
 ```
 
 ```html hidden
@@ -810,21 +961,29 @@ filter: opacity(50%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: opacity(50%);
   -webkit-filter: opacity(50%);
   -ms-filter: opacity(50%);
-  filter: opacity(50%); }
+  filter: opacity(50%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -845,11 +1004,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -860,7 +1019,7 @@ table.standard-table td {
 {{cssxref("filter-function/saturate", "saturate()")}} 関数は、入力画像の彩度を変化させます。 `amount` の値は、変換の度合を定義します。 `0%` の値を指定すると、無彩色になります。 `100%` では入力画像が変化しないままになります。 `0%` と `100%` の間は効果の線形乗数になります。 `100%` を超える値を指定することもでき、彩度を増した結果になります。補完時の初期値は `1` です。
 
 ```css
-filter: saturate(200%)
+filter: saturate(200%);
 ```
 
 ```html hidden
@@ -892,21 +1051,29 @@ filter: saturate(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: saturate(200%);
   -webkit-filter: saturate(200%);
   -ms-filter: saturate(200%);
-  filter: saturate(200%); }
+  filter: saturate(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -927,11 +1094,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -942,7 +1109,7 @@ table.standard-table td {
 {{cssxref("filter-function/sepia", "sepia()")}} 関数は、入力画像をセピア調にします。 `amount` の値は、変換の度合を定義します。 `100%` の値を指定すると、完全にセピア調になります。 `0%` では入力画像が変化しないままになります。 `0%` と `100%` の間は効果の線形乗数になります。補完時の初期値は `0` です。
 
 ```css
-filter: sepia(100%)
+filter: sepia(100%);
 ```
 
 ```html hidden
@@ -977,21 +1144,29 @@ filter: sepia(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: sepia(100%);
   -webkit-filter: sepia(100%);
   -ms-filter: sepia(100%);
-  filter: sepia(100%); }
+  filter: sepia(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -1012,11 +1187,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -1027,7 +1202,7 @@ table.standard-table td {
 いくつかの関数を組み合わせてレンダリングを操作することができます。次の例では、画像のコントラストと明るさを強調しています。
 
 ```css
-filter: contrast(175%) brightness(103%)
+filter: contrast(175%) brightness(103%);
 ```
 
 ```html hidden
@@ -1041,9 +1216,27 @@ filter: contrast(175%) brightness(103%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img4" class="internal default" src="test_form_8_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_8_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -1051,17 +1244,24 @@ filter: contrast(175%) brightness(103%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: contrast(175%) brightness(103%);
   -webkit-filter: contrast(175%) brightness(103%);
   -ms-filter: contrast(175%) brightness(103%);
@@ -1087,11 +1287,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 

@@ -23,7 +23,7 @@ slug: Web/HTTP/Status/304
 
 ## 브라우저 호환성
 
-{{Compat("http.status.304")}}
+{{Compat}}
 
 ## 호환성 노트
 

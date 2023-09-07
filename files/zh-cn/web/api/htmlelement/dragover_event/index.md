@@ -14,9 +14,9 @@ slug: Web/API/HTMLElement/dragover_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('dragover', (event) => {});
+addEventListener("dragover", (event) => {});
 
-ondragover = (event) => { };
+ondragover = (event) => {};
 ```
 
 ## 事件类型
@@ -119,7 +119,7 @@ target.addEventListener("drop", (event) => {
 
 ## 参见
 
-- 其它拖放事件：
+- 其他拖放事件：
 
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
@@ -128,7 +128,7 @@ target.addEventListener("drop", (event) => {
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
-- 其它目标中的该事件：
+- 其他目标中的该事件：
 
   - {{domxref("Window")}}：{{domxref("Window/dragover_event", "dragover")}} 事件
   - {{domxref("Document")}}：{{domxref("Document/dragover_event", "dragover")}} 事件

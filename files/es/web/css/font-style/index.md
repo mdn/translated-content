@@ -71,4 +71,4 @@ Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para `obl
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.font-style")}}
+{{Compat}}

@@ -28,22 +28,20 @@ let fragment = document.createDocumentFragment();
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // assuming ul exists
+var element = document.getElementById("ul"); // assuming ul exists
 var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach(function (browser) {
+  var li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);
@@ -51,17 +49,17 @@ element.appendChild(fragment);
 
 ### 结果
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("示例", 600, 140)}}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

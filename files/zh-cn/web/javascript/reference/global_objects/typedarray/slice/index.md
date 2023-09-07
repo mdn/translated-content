@@ -5,14 +5,16 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 
 {{JSRef}}
 
-**`slice()`**方法将一个 typed array 的一部分浅拷贝到一个新的 typed array 对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}}相同的算法。_TypedArray 指_ [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)中的一员 .
+**`slice()`** 方法将一个类型化数组的一部分浅拷贝到一个新的类型化数组对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}} 相同的算法。_TypedArray_ 指[类型化数组的类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)中的一员。
 
 {{EmbedInteractiveExample("pages/js/typedarray-slice.html")}}
 
 ## 语法
 
-```plain
-typedarray.slice([begin[, end]])
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ## 参数
@@ -37,11 +39,11 @@ typedarray.slice([begin[, end]])
 ### 返回已存在类型数组的一部分片段
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
 
 ## Polyfill

@@ -1,9 +1,6 @@
 ---
 title: Множественные фоны
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-translation_of_original: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
-original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_фоны
+slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
 {{CSSRef}}
@@ -16,11 +13,15 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 
 ```css
 .myclass {
-  background: background1, background 2, ..., backgroundN;
+  background:
+    background1,
+    background 2,
+    ...,
+    backgroundN;
 }
 ```
 
-Вы можете сделать это сокращённым {{ cssxref("background") }} свойством и отдельными свойствами кроме {{ cssxref("background-color") }}. Таким образом следующие свойства могут быть определены в виде списка по одному на фон: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Вы можете сделать это сокращённым свойством {{ cssxref("background") }} и отдельными свойствами кроме {{ cssxref("background-color") }}. Таким образом, следующие свойства могут быть определены в виде списка по одному на фон: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Пример
 
@@ -40,8 +41,19 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
   height: 400px;
   background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
-  background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-position:
+    bottom right,
+    left,
+    right;
+  background:
+    -moz-linear-gradient(
+      to right,
+      rgba(30, 75, 115, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 }
 ```
 

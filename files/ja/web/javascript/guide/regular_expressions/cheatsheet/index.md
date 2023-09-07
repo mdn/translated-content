@@ -1,6 +1,6 @@
 ---
 title: 正規表現構文早見表
-slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 l10n:
   sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
@@ -116,7 +116,7 @@ l10n:
       <td><code>\s</code></td>
       <td>
         <p>
-          ホワイトスペース 1 文字に一致します。例えば空白、タブ、改ページ、改行、その他の Unicode 空白文字などです。 <code>[\f\n\r\t\v​\u00a0\u1680​\u2000​-\u200a​\u2028\u2029\u202f\u205f​\u3000\ufeff]</code> に相当します。例えば <code>/\s\w*/</code> は "foo bar" の "bar" に一致します。
+          ホワイトスペース 1 文字に一致します。例えば空白、タブ、改ページ、改行、その他の Unicode 空白文字などです。 <code>[\f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code> に相当します。例えば <code>/\s\w*/</code> は "foo bar" の "bar" に一致します。
         </p>
       </td>
     </tr>
@@ -133,7 +133,7 @@ l10n:
     </tr>
     <tr>
       <td><code>\t</code></td>
-      <td>水平タブにに一致します。</td>
+      <td>水平タブに一致します。</td>
     </tr>
     <tr>
       <td><code>\r</code></td>
@@ -219,7 +219,7 @@ l10n:
         </ul>
         <p>
           なお、 <code>:</code>, <code>-</code>,
-          <code>@</code>, などの一部の文字は、エスケープされたときにもエスケープされていないときにも、特別な意味を持たないことに注意してください。正規表現では <code>\:</code>, <code>\-</code>, <code>\@</code> のようなエスケープシーケンスは、エスケープされていないリテラル文字と同じになります。しかし、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">unicode フラグ</a>を持つ正規表現では、これらは <em>invalid identity escape</em> エラーが発生します。これは、<code>p</code>や<code>k</code>のような新しいエスケープシーケンスを使用する既存のコードとの後方互換性を確保するために行われます。
+          <code>@</code>, などの一部の文字は、エスケープされたときにもエスケープされていないときにも、特別な意味を持たないことに注意してください。正規表現では <code>\:</code>, <code>\-</code>, <code>\@</code> のようなエスケープシーケンスは、エスケープされていないリテラル文字と同じになります。しかし、<a href="/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索">unicode フラグ</a>を持つ正規表現では、これらは <em>invalid identity escape</em> エラーが発生します。これは、<code>p</code>や<code>k</code>のような新しいエスケープシーケンスを使用する既存のコードとの後方互換性を確保するために行われます。
         </p>
         <div class="notecard note">
           <p>
@@ -234,7 +234,7 @@ l10n:
       </td>
       <td>
         <p>
-          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|<code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
+          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|</code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
         </p>
         <div class="notecard note">
           <p>
@@ -248,7 +248,7 @@ l10n:
 
 ## アサーション
 
-[サーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
+[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
 
 ### 境界型のアサーション
 

@@ -23,9 +23,9 @@ dateObj.getUTCMonth()
 
 `getUTCMonth()` 返回一个 0 到 11 的整数，分别对应以下月份：0 代表一月，1 代表二月，2 代表三月，依次类推。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCMonth()` 方法
+### 示例：使用 `getUTCMonth()` 方法
 
 下例将当前时间的月份赋值给变量 `month`。
 

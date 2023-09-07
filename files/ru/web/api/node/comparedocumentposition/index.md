@@ -1,7 +1,6 @@
 ---
 title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
-translation_of: Web/API/Node/compareDocumentPosition
 ---
 
 {{ ApiRef() }}
@@ -37,24 +36,27 @@ node.compareDocumentPosition( otherNode )
 ## Пример
 
 ```js
-var head = document.getElementsByTagName('head').item(0);
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+var head = document.getElementsByTagName("head").item(0);
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");
 }
 ```
 
-> **Примечание:** **Замечание:** _Из-за того, что результат, возвращаемый_ `compareDocumentPosition`, является битовой маской, [побитовый оператор и](/ru/docs/JavaScript/Reference/Operators/Bitwise_Operators) должен использоваться для осмысленных значений.
+> **Примечание:** _Из-за того, что результат, возвращаемый_ `compareDocumentPosition`, является битовой маской, [побитовый оператор и](/ru/docs/JavaScript/Reference/Operators/Bitwise_Operators) должен использоваться для осмысленных значений.
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус         | Комментарий |
-| -------------------------------------------------------------------------------------------- | -------------- | ----------- |
-| [DOM Level 3](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition) | Рекомендация   |             |
-| [DOM Standard](http://dom.spec.whatwg.org/#dom-node-comparedocumentposition)                 | Живой стандарт |             |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 
-- [`Node.contains`](/en-US/docs/DOM/Node.contains)
+- [`Node.contains`](/ru/docs/DOM/Node.contains)
 - [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)

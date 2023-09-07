@@ -1,6 +1,6 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -15,7 +15,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
   - : Emite uma mensagem e traça a sequência de operações até o primeiro argumento for falso.
 - {{domxref("console.count()", "console.count([label])")}}
   - : Mostra o número de vezes que esta linha foi chamada com a label fornecida.
-- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline("5.0")}}
+- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline}}
   - : Um atalho para `log()`; que foi adicionado para melhorar a compatibilidade de páginas já existentes que utilizavam `debug()`. Porém, ao invés destes comandos você deve utilizar {{domxref("console.log()")}}.
 - {{domxref("console.dir()", "console.dir(object)")}}
   - : Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.
@@ -81,8 +81,13 @@ Você também pode realizar o output de múltiplos objetos ao simplesmente list�
 
 ```js
 var carro = "Fusca";
-var algumObjeto = {str:"Algum texto", id:5};
-console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto);
+var algumObjeto = { str: "Algum texto", id: 5 };
+console.info(
+  "Meu primeiro carro era um ",
+  carro,
+  ". O objeto é: ",
+  algumObjeto,
+);
 ```
 
 O output será algo assim:
@@ -93,7 +98,7 @@ O output será algo assim:
 
 #### Uso de substituição de string
 
-O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
+O Gecko 9.0 introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
 | String de substituição | Descrição                                                                  |
 | ---------------------- | -------------------------------------------------------------------------- |
@@ -199,7 +204,7 @@ The output in the console looks something like this:
 ## Notes
 
 - At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.
-- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
+- Prior to Gecko 12.0, the console object's methods only work when the Web Console is open. Starting with Gecko 12.0, output is cached until the Web Console is opened, then displayed at that time.
 - It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
 
 ## See also

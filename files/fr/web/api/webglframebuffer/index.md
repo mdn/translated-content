@@ -1,11 +1,6 @@
 ---
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
-tags:
-  - API
-  - Reference
-  - WebGL
-translation_of: Web/API/WebGLFramebuffer
 ---
 
 {{APIRef("WebGL")}}
@@ -26,8 +21,8 @@ L'objet `WebGLFramebuffer` ne définit aucune méthode ou propriété en propre,
 ### Création d'un tampon d'image
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createFramebuffer();
 ```
 

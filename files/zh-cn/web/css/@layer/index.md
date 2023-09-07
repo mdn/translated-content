@@ -1,5 +1,5 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
 ---
 
@@ -20,11 +20,11 @@ slug: Web/CSS/@layer
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
@@ -32,19 +32,19 @@ slug: Web/CSS/@layer
 一个级联层同样可以通过 {{cssxref("@import")}} 来创建，规则存在于被引入的样式表内：
 
 ```css
-@import(utilities.css) layer(utilities);
+@import (utilities.css) layer(utilities);
 ```
 
 你也可以创建带命名的级联层，但不指定任何样式。例如，单一的命名层：
 
 ```css
-@layer utilities
+@layer utilities;
 ```
 
 或者，多个命名层也可以被同时定义。例如：
 
 ```css
-@layer theme, layout, utilities
+@layer theme, layout, utilities;
 ```
 
 这一做法很有用，因为层最初被指定的顺序决定了它是否有优先级。对于声明而言，如果同一声明在多个级联层中被指定，最后一层中的将优先于其他层。因此，在上面的例子中，如果 `theme` 层和 `utilities` 层中存在冲突的规则，那么 `utilities` 层中的将优先被应用。
@@ -62,12 +62,11 @@ slug: Web/CSS/@layer
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
 
-向 `layout` 层内部的 `framework` 层附加规则，只需用 `.` 连接这两层。
+向 `framework` 层内部的 `layout` 层附加规则，只需用 `.` 连接这两层。
 
 ```css
 @layer framework.layout {
@@ -91,13 +90,13 @@ slug: Web/CSS/@layer
 
 那么则称为创建了一个匿名层。除创建后无法向其添加规则外，该层和其他命名层功能一致。
 
-## 标准语法
+## 形式语法
 
 {{CSSSyntax}}
 
-## 例子
+## 示例
 
-### 基本例子
+### 基本示例
 
 下方的例子创建了两条 CSS 规则。其中一条为 `type` 层内部的 {{htmlelement("p")}} 元素创建。另一条规则创建于级联层外部，作用于 `.box p`。
 
@@ -131,7 +130,7 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("基本示例")}}
 
 ### 向已存在的层中添加规则
 
@@ -140,9 +139,11 @@ p {
 #### HTML
 
 ```html
-<div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>type</code> layer comes after the <code>base</code> layer.
-My green border, font-size, and padding come from the <code>base</code> layer.</div>
+<div class="item">
+  I am displayed in <code>color: rebeccapurple</code> because the
+  <code>type</code> layer comes after the <code>base</code> layer. My green
+  border, font-size, and padding come from the <code>base</code> layer.
+</div>
 ```
 
 #### CSS
@@ -161,14 +162,14 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
     color: green;
     border: 5px solid green;
     font-size: 1.5em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("Assigning_rules_to_existing_layers")}}
+{{EmbedLiveSample("向已存在的层中添加规则")}}
 
 ## 规范
 

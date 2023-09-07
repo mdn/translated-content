@@ -60,21 +60,21 @@ Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das m
 
 Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms).
 
-### Exemplo ao vivo:
+### Exemplo ao vivo
 
 ```css
 pre {
-     width: 33em;
-     border: solid red;
+  width: 33em;
+  border: solid red;
 
-    -webkit-transform: translate(100px) rotate(20deg);
-    -webkit-transform-origin: 60% 100%;
+  -webkit-transform: translate(100px) rotate(20deg);
+  -webkit-transform-origin: 60% 100%;
 
-    -o-transform:translate(100px) rotate(20deg);
-    -o-transform-origin:60% 100%;
+  -o-transform: translate(100px) rotate(20deg);
+  -o-transform-origin: 60% 100%;
 
-    transform: translate(100px) rotate(20deg);
-    transform-origin: 60% 100%;
+  transform: translate(100px) rotate(20deg);
+  transform-origin: 60% 100%;
 }
 ```
 
@@ -97,7 +97,7 @@ transform:  matrix(a, c, b, d, tx, ty)
 
 Specifies a 2D transformation matrix comprised of the specified six values. This is the equivalent to applying the transformation **matrix \[a b c d tx ty]**.
 
-> **Note:** Gecko (Firefox) accepts a {{cssxref("&lt;length&gt;")}} value for **tx** and **ty**. Webkit (Safari, Chrome) and Opera currently support a unitless {{cssxref("&lt;number&gt;")}} for **tx** and **ty**.
+> **Nota:** Gecko (Firefox) accepts a {{cssxref("&lt;length&gt;")}} value for **tx** and **ty**. Webkit (Safari, Chrome) and Opera currently support a unitless {{cssxref("&lt;number&gt;")}} for **tx** and **ty**.
 
 #### Live examples
 
@@ -166,7 +166,7 @@ transform:  skew(ax[, ay])       /* one or two <angle>s, e.g.  skew(30deg,-10deg
 
 Skews the element around the X and Y axes by the specified angles. If `ay` isn't provided, no skew is performed on the Y axis.
 
-> **Note:** The `skew()` function was present in early drafts. It has been removed but is still present in some implementations. Do not use it.
+> **Nota:** The `skew()` function was present in early drafts. It has been removed but is still present in some implementations. Do not use it.
 >
 > To achieve the same effect, use `skewX()` if you were using `skew()` with one parameter or `matrix(1, tan(ax)`_,_ `tan(ay), 1, 0, 0)` for the general way. Note that _tan()_ isn't a CSS function and you have to precalculate it yourself.
 
@@ -212,8 +212,8 @@ Translates the element by the given amount along the Y axis.
 
 ## Specifications
 
-| Specification                                                                    | Status                                   | Comment |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------- |
+| Specification                                                | Status                         | Comment |
+| ------------------------------------------------------------ | ------------------------------ | ------- |
 | {{ SpecName('CSS3 Transforms', '#transform', 'transform') }} | {{ Spec2('CSS3 Transforms') }} |         |
 
 ## Compatibilidade com navegadores

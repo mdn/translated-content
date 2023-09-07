@@ -1,7 +1,6 @@
 ---
 title: <pre>
 slug: Web/HTML/Element/pre
-original_slug: Web/HTML/Elemento/pre
 ---
 
 ## Sumario
@@ -47,9 +46,9 @@ a   {
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## Véase también
 

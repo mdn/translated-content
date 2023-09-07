@@ -29,16 +29,28 @@ var touches = touchEvent.touches;
 在下面的代码片段中，[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件处理程序会检查 {{domxref("TouchEvent.touches")}} 列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
-   // Invoke the appropriate handler depending on the
-   // number of touch points.
-   switch (e.touches.length) {
-     case 1: handle_one_touch(e); break;
-     case 2: handle_two_touches(e); break;
-     case 3: handle_three_touches(e); break;
-     default: console.log("Not supported"); break;
-   }
- }, false);
+someElement.addEventListener(
+  "touchstart",
+  function (e) {
+    // Invoke the appropriate handler depending on the
+    // number of touch points.
+    switch (e.touches.length) {
+      case 1:
+        handle_one_touch(e);
+        break;
+      case 2:
+        handle_two_touches(e);
+        break;
+      case 3:
+        handle_three_touches(e);
+        break;
+      default:
+        console.log("Not supported");
+        break;
+    }
+  },
+  false,
+);
 ```
 
 ## 规范

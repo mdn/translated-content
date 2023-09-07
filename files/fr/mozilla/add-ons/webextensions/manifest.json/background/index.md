@@ -1,12 +1,6 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
 ---
 
 {{AddonSidebar}}
@@ -128,6 +122,6 @@ Chargez deux scripts de fond.
 
 Chargez une page d'arrière-plan personnalisée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

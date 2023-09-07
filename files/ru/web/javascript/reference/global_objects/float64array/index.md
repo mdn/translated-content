@@ -1,7 +1,6 @@
 ---
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
 ---
 
 {{JSRef}}
@@ -125,7 +124,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -138,17 +137,19 @@ var buffer = new ArrayBuffer(32);
 var z = new Float64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                   |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                        |
+| Specification                                                   | Status                   | Comment                                                                                                                          |
+| --------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                   |
+| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. Specified that `new` is required.                                                        |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Float64Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
 
 ## Browser compatibility

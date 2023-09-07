@@ -13,7 +13,7 @@ slug: Web/CSS/At-rule
 
 ```css
 /* 一般的な構造 */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* 例: ブラウザーに UTF-8 文字セットを使用することを知らせる */
 @charset "utf-8";
@@ -28,8 +28,7 @@ slug: Web/CSS/At-rule
 ### 入れ子
 
 ```css
-@IDENTIFIER (RULE) {
-
+@identifier (RULE) {
 }
 ```
 
@@ -41,7 +40,6 @@ slug: Web/CSS/At-rule
 - {{cssxref("@page")}} — 文書印刷の際に適用されるレイアウト変更に関する指定を記述します。
 - {{cssxref("@font-face")}} — ダウンロードすべき外部フォントに関する指定を記述します。
 - {{cssxref("@keyframes")}} — CSS アニメーションシーケンスの中間段階に関する指定を記述します。
-- {{cssxref("@viewport")}} {{deprecated_inline}} — 小さな画面の端末用に、ビューポートに関する指定を記述します。 _(現在は草稿段階)_
 - {{cssxref("@counter-style")}} — 定義済みのスタイルにはない、独自のカウンタースタイルを定義します。_(勧告候補段階ですが、現時点で Gecko しか実装していません)_
 - {{cssxref("@font-feature-values")}} (および `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset`, `@character-variant`) — OpenType の各機能を有効化するために、 {{cssxref("font-variant-alternates")}} の一般名を定義します。_(勧告候補段階ですが、現時点で Gecko しか実装していません)_
 - {{cssxref("@property")}} {{experimental_inline}} — カスタムプロパティと変数に関して指定します。 _(現在は草稿段階)_
@@ -74,7 +72,6 @@ slug: Web/CSS/At-rule
 - {{cssxref("@page")}}
 - {{cssxref("@property")}} {{experimental_inline}}
 - {{cssxref("@supports")}}
-- {{cssxref("@viewport")}} {{deprecated_inline}}
 
 ## 仕様書
 

@@ -26,13 +26,13 @@ tokenList.remove(token1[, token2[, ...]]);
 
 在下面的示例中，我们使用 {{domxref("Element.classList")}} 检索 {{htmlelement("span")}} 元素上设置的 class 列表作为 DOMTokenList。然后从列表中删除一个标记，并将该列表写入`<span>`的 {{domxref("Node.textContent")}} 中。
 
-HTML:
+### HTML
 
 ```html
 <span class="a b c"></span>
 ```
 
-JavaScript:
+### JavaScript
 
 ```js
 var span = document.querySelector("span");
@@ -43,7 +43,7 @@ span.textContent = classes;
 
 输出如下：
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('示例', '100%', 60) }}
 
 要一次删除多个 class，可以提供多个标记。书写顺序不必与它们在列表中出现的顺序匹配：
 

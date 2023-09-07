@@ -29,14 +29,9 @@ function getRoot2() {
 getRoot2(); // 1.4142135623730951
 ```
 
-## 표준
+## 명세서
 
-| 표준                                                                         | 상태                         | 비고                                               |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.sqrt2', 'Math.SQRT2')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## 브라우저 호환성
 

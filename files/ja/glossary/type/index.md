@@ -13,14 +13,14 @@ slug: Glossary/Type
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("JavaScript")}}
-    2. {{Glossary("string", "文字列")}}
-    3. {{Glossary("number")}}
-    4. {{Glossary("bigint")}}
-    5. {{Glossary("boolean")}}
-    6. {{Glossary("null")}}
-    7. {{Glossary("undefined")}}
-    8. {{Glossary("symbol")}}
+   1. {{Glossary("JavaScript")}}
+   2. {{Glossary("string", "文字列")}}
+   3. {{Glossary("number")}}
+   4. {{Glossary("bigint")}}
+   5. {{Glossary("boolean")}}
+   6. {{Glossary("null")}}
+   7. {{Glossary("undefined")}}
+   8. {{Glossary("symbol")}}
 
 2. Wikipedia の [データ型](https://ja.wikipedia.org/wiki/データ型)
 3. [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)

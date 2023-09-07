@@ -1,11 +1,6 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-tags:
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
 
 {{jsSidebar("Errors")}}
@@ -52,8 +47,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -72,7 +67,7 @@ function Car(make, model, year) {
 Теперь вы можете создать объект, который называется `mycar` (мой автомобиль) следующим образом:
 
 ```js
-var mycar = new Car('Лада', 'Самара', 1993);
+var mycar = new Car("Лада", "Самара", 1993);
 ```
 
 ### В Промисах
@@ -89,7 +84,9 @@ return new Promise.resolve(true);
 
 ```js
 // Это допустимо, но слишком длинно, в этом нет необходимости:
-return new Promise((resolve, reject) => { resolve(true); })
+return new Promise((resolve, reject) => {
+  resolve(true);
+});
 
 // Вместо этого, возвращайте статический метод:
 return Promise.resolve(true);

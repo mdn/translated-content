@@ -24,17 +24,17 @@ Permitanos introducirlo con un sencillo ejemplo. Mire el siguiente codigo :
 </svg>
 ```
 
-Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá como se ve en la siguiente figura. (usuarios Firefox : click [aqui](/@api/deki/files/4571/=svgdemo1.xml))
+Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá como se ve en la siguiente figura. (usuarios Firefox : click [aqui](svgdemo1.xml))
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![svgdemo1.png](svgdemo1.png)
 
 El proceso de renderizado incluye lo siguiente :
 
 1. Comenzamos con el elemento raiz del `svg`:
 
-    - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
-    - En cambio, los atributos `version` y `baseProfile` deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
-    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
+   - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
+   - En cambio, los atributos `version` y `baseProfile` deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
+   - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
 
 2. El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect) que cubre el area de la imagen.
 3. Un circulo verde [`<circle/>`](/en/SVG/Element/circle) con un radio de 80px y se dibuja en el centro del rectangulo rojo(offset 30+120px inward, and 50+50px upward).

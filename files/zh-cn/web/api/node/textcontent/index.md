@@ -35,7 +35,7 @@ someOtherNode.textContent = string;
 
 ### 与 **innerText** 的区别
 
-不要被 `Node.textContent` 和 {{domxref("HTMLElement.innerText")}} 的区别搞混了。虽然名字看起来很相似，但有重要的不同之处：
+不要对 `Node.textContent` 和 {{domxref("HTMLElement.innerText")}} 之间的差异感到困惑。虽然名字看起来很相似，但有重要的不同之处：
 
 - `textContent` 会获取*所有*元素的内容，包括 {{HTMLElement("script")}} 和 {{HTMLElement("style")}} 元素，然而 `innerText` 只展示给人看的元素。
 - `textContent` 会返回节点中的每一个元素。相反，`innerText` 受 CSS 样式的影响，并且不会返回隐藏元素的文本，
@@ -50,25 +50,25 @@ someOtherNode.textContent = string;
 
 此外，使用 `textContent` 可以防止 [XSS 攻击](/zh-CN/docs/Glossary/Cross-site_scripting)。
 
-## 例子
+## 示例
 
 给出这个 HTML 片段：
 
-```js
+```html
 <div id="divA">This is <span>some</span> text!</div>
 ```
 
 你可以使用 `textContent` 去获取该元素的文本内容：
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // The text variable is now: 'This is some text!'
 ```
 
 或者设置元素的文字内容：
 
 ```js
-document.getElementById('divA').textContent = 'This text is different!';
+document.getElementById("divA").textContent = "This text is different!";
 // The HTML for divA is now:
 // <div id="divA">This text is different!</div>
 ```
@@ -77,24 +77,31 @@ document.getElementById('divA').textContent = 'This text is different!';
 
 ```js
 // Source: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
-if (Object.defineProperty
-  && Object.getOwnPropertyDescriptor
-  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
-  (function() {
-    var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
-    Object.defineProperty(Element.prototype, "textContent",
-     // Passing innerText or innerText.get directly does not work,
-     // wrapper function is required.
-     {
-       get: function() {
-         return innerText.get.call(this);
-       },
-       set: function(s) {
-         return innerText.set.call(this, s);
-       }
-     }
-   );
+if (
+  Object.defineProperty &&
+  Object.getOwnPropertyDescriptor &&
+  Object.getOwnPropertyDescriptor(Element.prototype, "textContent") &&
+  !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get
+) {
+  (function () {
+    var innerText = Object.getOwnPropertyDescriptor(
+      Element.prototype,
+      "innerText",
+    );
+    Object.defineProperty(
+      Element.prototype,
+      "textContent",
+      // Passing innerText or innerText.get directly does not work,
+      // wrapper function is required.
+      {
+        get: function () {
+          return innerText.get.call(this);
+        },
+        set: function (s) {
+          return innerText.set.call(this, s);
+        },
+      },
+    );
   })();
 }
 ```
@@ -107,7 +114,7 @@ if (Object.defineProperty
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}

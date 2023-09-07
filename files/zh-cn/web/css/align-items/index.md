@@ -3,7 +3,7 @@ title: align-items
 slug: Web/CSS/align-items
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 CSS align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式。
 
@@ -89,7 +89,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -209,22 +209,22 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", "260px", "290px")}}
+{{EmbedLiveSample("示例", "260px", "290px")}}
 
 ## 规范
 
@@ -236,6 +236,6 @@ display.addEventListener('change', function (evt) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [使用 CSS 弹性框](/zh-CN/docs/CSS/Using_CSS_flexible_boxes)

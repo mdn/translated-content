@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
 
 {{APIRef}}
@@ -33,15 +32,15 @@ Cet exemple utilise la propriété `globalCompositeOperation` pour dessiner deux
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.globalCompositeOperation = 'xor';
+ctx.globalCompositeOperation = "xor";
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
 ```
 

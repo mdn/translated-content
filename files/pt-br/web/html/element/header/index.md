@@ -7,6 +7,8 @@ slug: Web/HTML/Element/header
 
 O **elemento HTML** **`<header>`** representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.
 
+{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
+
 > **Note:** **Notas de utilização:**
 >
 > - O elemento `<header>` não é separador de conteúdo (sectioning content), portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
@@ -32,10 +34,10 @@ Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                     | Status                   | Comentário |
+| --------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'sections.html#the-header-element', '&lt;header&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
 
 ## Compatibilidade com navegadores
 

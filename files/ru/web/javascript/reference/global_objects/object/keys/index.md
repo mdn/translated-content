@@ -1,16 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -37,19 +27,28 @@ Object.keys(obj)
 ## Примеры
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // консоль: ['0', '1', '2']
 
 // Массивоподобный объект
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj)); // консоль: ['0', '1', '2']
 
 // Массивоподобный объект со случайным порядком ключей
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(an_obj)); // консоль: ['2', '7', '100']
 
 // Свойство getFoo является не перечисляемым свойством
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
 my_obj.foo = 1;
 
 console.log(Object.keys(my_obj)); // консоль: ['foo']
@@ -74,29 +73,34 @@ TypeError: 'foo' is not an object // код ES5
 Для добавления поддержки совместимого метода `Object.keys` в старых окружениях, которые его ещё не реализуют, скопируйте следующий кусок кода:
 
 ```js
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+// From https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
-  Object.keys = (function() {
-    'use strict';
+  Object.keys = (function () {
+    "use strict";
     var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
+      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
+      dontEnums = [
+        "toString",
+        "toLocaleString",
+        "valueOf",
+        "hasOwnProperty",
+        "isPrototypeOf",
+        "propertyIsEnumerable",
+        "constructor",
+      ],
+      dontEnumsLength = dontEnums.length;
 
-    return function(obj) {
-      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
-        throw new TypeError('Object.keys called on non-object');
+    return function (obj) {
+      if (
+        typeof obj !== "object" &&
+        (typeof obj !== "function" || obj === null)
+      ) {
+        throw new TypeError("Object.keys called on non-object");
       }
 
-      var result = [], prop, i;
+      var result = [],
+        prop,
+        i;
 
       for (prop in obj) {
         if (hasOwnProperty.call(obj, prop)) {
@@ -113,7 +117,7 @@ if (!Object.keys) {
       }
       return result;
     };
-  }());
+  })();
 }
 ```
 

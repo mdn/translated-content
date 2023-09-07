@@ -44,7 +44,7 @@ slug: Web
   - : 可缩放矢量图形（Scalable Vector Graphics）使你能够使用一组矢量与形状来描述图片，在显示时可提供无关大小的零失真的平滑缩放。
 - [MathML](/zh-CN/docs/Web/MathML)
   - : Mathematical 标记语言让显示复杂的数学公式或语法成为可能。
-- [Web Components](/zh-CN/docs/Web/Web_Components)
+- [Web Component](/zh-CN/docs/Web/API/Web_components)
   - : Web Components 允许你在自己的应用中创建和复用自定义元素。
 - [WebDriver](/zh-CN/docs/Web/WebDriver)
   - : WebDriver 是一种浏览器自动化机制，通过模拟真实的人使用浏览器的动作来远程控制浏览器。它被广泛用于网络应用的跨浏览器测试。

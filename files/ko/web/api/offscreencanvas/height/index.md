@@ -24,11 +24,9 @@ offscreen.height; // 256
 offscreen.height = 512;
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas-height", "OffscreenCanvas.height")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

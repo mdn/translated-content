@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/data-*
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 모든 사용자 지정 데이터는 해당 데이터를 지정한 요소의 {{domxref("HTMLElement")}} 인터페이스, {{domxref("HTMLElement.dataset", "dataset")}} 속성을 통해 사용할 수 있습니다. `data-*`의 `*`은 [XML 이름 생성 규칙](https://www.w3.org/TR/REC-xml/#NT-Name)을 따르는 모든 이름으로 대체할 수 있습니다.
 
 - 대소문자 여부에 상관없이 `xml`로 시작하면 안 됩니다.
@@ -24,10 +22,16 @@ slug: Web/HTML/Global_attributes/data-*
 `data-*` 속성을 추가함으로써, 평범한 HTML 요소조차 복잡하고 강력한 프로그램 객체가 될 수 있습니다. 예컨대, 게임의 우주선 스프라이트는 단순한 {{htmlelement("img")}} 태그와 [`class`](/ko/docs/Web/HTML/Global_attributes/class) 특성, 그리고 여러 `data-*` 특성으로 나타낼 수 있습니다.
 
 ```html
-<img class="spaceship cruiserX3" src="shipX3.png"
-  data-ship-id="324" data-weapons="laserI laserII" data-shields="72%"
-  data-x="414354" data-y="85160" data-z="31940"
-  onclick="spaceships[this.dataset.shipId].blasted()">
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="324"
+  data-weapons="laserI laserII"
+  data-shields="72%"
+  data-x="414354"
+  data-y="85160"
+  data-z="31940"
+  onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
 HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)를 확인하세요.
@@ -38,7 +42,7 @@ HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이�
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## 같이 보기
 

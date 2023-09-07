@@ -1,6 +1,6 @@
 ---
 title: <input type="password">
-slug: Web/HTML/Element/Input/password
+slug: Web/HTML/Element/input/password
 ---
 
 {{HTMLSidebar}}
@@ -30,15 +30,15 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("inputmode", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}}, e
-        {{htmlattrxref("size", "input")}}
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#required"><code>required</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -62,9 +62,9 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
 
 ## Valor
 
-O atributo {{htmlattrxref("value", "input")}} contém uma {{domxref("DOMString")}} cujo valor é o conteúdo atual do controle de edição de texto usado para a inserção da senha. Se o usuário ainda não digitou nada, esse valor é uma string vazia (`""`). Se a propriedade {{htmlattrxref("required")}} for especificada, então a caixa de edição de senha precisa conter um valor que não seja uma string vazia para ser válida.
+O atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) contém uma {{domxref("DOMString")}} cujo valor é o conteúdo atual do controle de edição de texto usado para a inserção da senha. Se o usuário ainda não digitou nada, esse valor é uma string vazia (`""`). Se a propriedade [`required`](/pt-BR/docs/Web/HTML/Global_attributes#required) for especificada, então a caixa de edição de senha precisa conter um valor que não seja uma string vazia para ser válida.
 
-Se o atributo {{htmlattrxref("pattern", "input")}} for especificado, o conteúdo de um controle `"password"` só é considerado válido se o valor passar na validação; veja [Validação](#validação) para mais informações.
+Se o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) for especificado, o conteúdo de um controle `"password"` só é considerado válido se o valor passar na validação; veja [Validação](#validação) para mais informações.
 
 > **Note:** Os caracteres de quebra de linha _line feed_ (U+000A) e _carriage return_ (U+000D) não são permitidos em valores de `"password"`. Quando o valor de um campo de senha é definido, os caracteres acima são removidos do valor.
 
@@ -78,14 +78,14 @@ Aqui vemos o mais básico dos campos de senha, juntamente com um rótulo para el
 
 ```html
 <label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password">
+<input id="senhaUsuario" type="password" />
 ```
 
 {{EmbedLiveSample("A_simple_password_input", 600, 40)}}
 
 ### Permitindo preenchimento automático
 
-Para permitir que o gerenciador de senhas do usuário digite a senha automaticamente, especifique o atributo {{htmlattrxref("autocomplete", "input")}}. Para senhas, o valor dele deve ser geralmente um dos seguintes:
+Para permitir que o gerenciador de senhas do usuário digite a senha automaticamente, especifique o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete). Para senhas, o valor dele deve ser geralmente um dos seguintes:
 
 - `"on"`
   - : Permite que o navegador ou um gerenciador de senhas preencha automaticamente o campo de senha. Esse valor não é tão informativo quanto `"current-password"` ou `"new-password"`.
@@ -98,42 +98,47 @@ Para permitir que o gerenciador de senhas do usuário digite a senha automaticam
 
 ```html
 <label for="senhaUsuario">Senha:</label>
-<input id="senhaUsuario" type="password" autocomplete="current-password">
+<input id="senhaUsuario" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}
 
 ### Tornando a senha obrigatória
 
-Para dizer ao navegador do usuário que o campo de senha precisa ter um valor válido antes do formulário ser enviado, basta adicionar o atributo booleano {{htmlattrxref("required", "input")}}.
+Para dizer ao navegador do usuário que o campo de senha precisa ter um valor válido antes do formulário ser enviado, basta adicionar o atributo booleano [`required`](/pt-BR/docs/Web/HTML/Element/input#required).
 
 ```html
 <label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" required>
-<input type="submit" value="Enviar">
+<input id="senhaUsuario" type="password" required />
+<input type="submit" value="Enviar" />
 ```
 
 {{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
 
 ### Especificando um modo de inserção
 
-Se as suas regras de sintaxe recomendadas (ou obrigatórias) para a senha poderiam obter vantagem de uma interface de digitação diferente da de um teclado padrão, você pode usar o atributo {{htmlattrxref("inputmode", "input")}} para pedir por uma interface específica. O caso de uso mais óbvio para isso é o de a senha precisar ser numérica (como um PIN). Dispositivos móveis com teclados virtuais, por exemplo, podem optar por mostrar um teclado numérico ao invés de um teclado completo, facilitando a digitação da senha.
+Se as suas regras de sintaxe recomendadas (ou obrigatórias) para a senha poderiam obter vantagem de uma interface de digitação diferente da de um teclado padrão, você pode usar o atributo [`inputmode`](/pt-BR/docs/Web/HTML/Element/input#inputmode) para pedir por uma interface específica. O caso de uso mais óbvio para isso é o de a senha precisar ser numérica (como um PIN). Dispositivos móveis com teclados virtuais, por exemplo, podem optar por mostrar um teclado numérico ao invés de um teclado completo, facilitando a digitação da senha.
 
 ```html
 <label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
 
 ### Definindo restrições de tamanho
 
-Como de praxe, você pode usar os atributos {{htmlattrxref("minlength", "input")}} e {{htmlattrxref("maxlength", "input")}} para estabelecer os tamanhos mínimo e máximo aceitáveis para a senha. Este exemplo continua o anterior, agora especificando que o PIN do usuário deva ter pelo menos quatro dígitos e não passe de oito dígitos. O atributo {{htmlattrxref("size", "input")}} é usado para garantir que o campo de senha aceite no máximo oito caracteres.
+Como de praxe, você pode usar os atributos [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) para estabelecer os tamanhos mínimo e máximo aceitáveis para a senha. Este exemplo continua o anterior, agora especificando que o PIN do usuário deva ter pelo menos quatro dígitos e não passe de oito dígitos. O atributo [`size`](/pt-BR/docs/Web/HTML/Element/input#size) é usado para garantir que o campo de senha aceite no máximo oito caracteres.
 
 ```html
 <label for="pin">PIN:</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -146,16 +151,16 @@ Assim como em outros tipos de campos de texto, você pode usar o método {{domxr
 
 ```html
 <label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" size="12">
+<input id="senhaUsuario" type="password" size="12" />
 <button id="selecionarTudo">Selecionar tudo</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selecionarTudo").onclick = function() {
+document.getElementById("selecionarTudo").onclick = function () {
   document.getElementById("senhaUsuario").select();
-}
+};
 ```
 
 #### Resultado
@@ -166,14 +171,17 @@ Você também pode usar {{domxref("HTMLInputElement.selectionStart", "selectionS
 
 ## Validação
 
-Se seu aplicativo tiver restrições de conjuntos de caracteres ou qualquer outro requisito para o conteúdo da senha digitada, você pode usar o atributo {{htmlattrxref("pattern", "input")}} para estabelecer que uma expressão regular seja usada para garantir automaticamente que as senhas cumpram com esses requisitos.
+Se seu aplicativo tiver restrições de conjuntos de caracteres ou qualquer outro requisito para o conteúdo da senha digitada, você pode usar o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para estabelecer que uma expressão regular seja usada para garantir automaticamente que as senhas cumpram com esses requisitos.
 
 Neste exemplo, são válidos apenas valores consistindo de no mínimo quatro e no máximo oito dígitos hexadecimais.
 
 ```html
 <label for="hexId">Hex ID: </label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="Digite um ID consistindo de 4-8 dígitos hexadecimais">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Digite um ID consistindo de 4-8 dígitos hexadecimais" />
 ```
 
 {{EmbedLiveSample("Validation_sample1", 600, 40)}}
@@ -191,17 +199,23 @@ Este exemplo aceita apenas valores que correspondam ao formato de um [Cadastro d
 
 ```html
 <label for="cpf">CPF:</label>
-<input type="password" id="cpf" inputmode="number" minlength="11" maxlength="11"
-    pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="cpf"
+  inputmode="number"
+  minlength="11"
+  maxlength="11"
+  pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"
+  required
+  autocomplete="off" />
+<br />
 <label for="cpf">Valor:</label>
 <span id="atual"></span>
 ```
 
-Ele usa um padrão {{htmlattrxref("pattern", "input")}} que limita o valor digitado a strings que representem números de CPF no formato válido. O padrão aceita tanto valores separados por pontos (".") e hífen ("-") como apenas os números.
+Ele usa um padrão [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) que limita o valor digitado a strings que representem números de CPF no formato válido. O padrão aceita tanto valores separados por pontos (".") e hífen ("-") como apenas os números.
 
-O modo de inserção em {{htmlattrxref("inputmode", "input")}} está definido como `"number"` para indicar a dispositivos com teclados virtuais que eles devem mostrar um teclado numérico para uma digitação mais fácil. Os atributos {{htmlattrxref("minlength", "input")}} e {{htmlattrxref("maxlength", "input")}} foram definidos como 11 e 14, respectivamente, de forma a aceitar valores com no mínimo 11 e no máximo 14 caracteres (o primeiro para valores sem os caracteres separadores e o último para valores com esses caracteres). O atributo {{htmlattrxref("required", "input")}} é usado para indicar que este campo precisa ter um valor válido. Por fim, {{htmlattrxref("autocomplete", "input")}} foi definido como `"off"` para evitar que gerenciadores de senhas tentem usar ou definir o valor dele, já que ele não é nem mesmo uma senha.
+O modo de inserção em [`inputmode`](/pt-BR/docs/Web/HTML/Element/input#inputmode) está definido como `"number"` para indicar a dispositivos com teclados virtuais que eles devem mostrar um teclado numérico para uma digitação mais fácil. Os atributos [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) foram definidos como 11 e 14, respectivamente, de forma a aceitar valores com no mínimo 11 e no máximo 14 caracteres (o primeiro para valores sem os caracteres separadores e o último para valores com esses caracteres). O atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) é usado para indicar que este campo precisa ter um valor válido. Por fim, [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete) foi definido como `"off"` para evitar que gerenciadores de senhas tentem usar ou definir o valor dele, já que ele não é nem mesmo uma senha.
 
 Obviamente, apenas essa expressão regular não garante um CPF realmente válido, já que a validação deste tipo de número exige cálculos adicionais. [Confira este artigo](https://www.devmedia.com.br/validar-cpf-com-javascript/23916) para ver exatamente como garantir um número de CPF válido.
 
@@ -213,9 +227,9 @@ A seguir temos um código simples para mostrar o CPF digitado na tela para que v
 var cpf = document.getElementById("cpf");
 var atual = document.getElementById("atual");
 
-cpf.oninput = function(event) {
+cpf.oninput = function (event) {
   atual.innerHTML = cpf.value;
-}
+};
 ```
 
 #### Resultado
@@ -224,8 +238,8 @@ cpf.oninput = function(event) {
 
 ## Especificações
 
-| Especificação                                                                                                                                | Status                           | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| Especificação                                                                                             | Status                   | Comentário        |
+| --------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
 | {{SpecName('HTML WHATWG', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
 | {{SpecName('HTML5.1', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definição inicial |
 

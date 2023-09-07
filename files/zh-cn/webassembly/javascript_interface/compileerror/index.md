@@ -1,10 +1,9 @@
 ---
 title: WebAssembly.CompileError()
 slug: WebAssembly/JavaScript_interface/CompileError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.CompileError()`**构造函数创建一个新的 WebAssembly `CompileError`对象，该对象表示 WebAssembly 解码或验证期间的错误。
 
@@ -30,7 +29,7 @@ _`CompileError`构造函数没有一些它特有的属性，但是，它确实�
 - `WebAssembly.CompileError.prototype.constructor`
   - : 创建示例原型的特定函数。
 - {{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}
-  - : 错误信息。尽管 ECMA-262 指定{{jsxref("URIError")}}应提供自己的`message`属性，但在[SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey)中，它继承了 {{jsxref("Error.prototype.message")}}。
+  - : 错误信息。尽管 ECMA-262 指定 {{jsxref("URIError")}} 应提供自己的 `message` 属性，但在 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) 中，它继承了 {{jsxref("Error.prototype.message")}}。
 - {{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}
   - : 错误名称。继承自 {{jsxref("Error")}}。
 - {{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}
@@ -57,15 +56,15 @@ _`CompileError`构造函数不包含自己的方法，但是，它确实通过�
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Hello', 'someFile', 10);
+  throw new WebAssembly.CompileError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // 返回代码运行的位置
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // 返回代码运行的位置
 }
 ```
 

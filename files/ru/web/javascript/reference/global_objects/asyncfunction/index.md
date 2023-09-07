@@ -1,7 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 Обратите внимание, что AsyncFunction не является глобальным объектом. Её можно получить, выполнив следующий код.
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## Синтаксис
@@ -33,7 +32,7 @@ new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
 
 Все аргументы, переданные функции, рассматриваются как имена идентификаторов параметров в создаваемой функции в том порядке, в котором они передаются.
 
-> **Примечание:** **Обратите внимание:** объекты {{jsxref("Statements/async_function", "async functions")}} созданные с помощью AsyncFunction constructor , не создают замыкания на создающие их контексты; Они всегда создаются в глобальной области видимости. При их запуске они смогут получить доступ только к своим локальным переменным и к глобальным переменным, но не имеют доступа к тем областям видимости, в которых был вызван AsyncFunction constructor. Это отличается от использования {{jsxref("Global_Objects/eval", "eval")}} с кодом для async function.
+> **Примечание:** объекты {{jsxref("Statements/async_function", "async functions")}} созданные с помощью AsyncFunction constructor , не создают замыкания на создающие их контексты; Они всегда создаются в глобальной области видимости. При их запуске они смогут получить доступ только к своим локальным переменным и к глобальным переменным, но не имеют доступа к тем областям видимости, в которых был вызван AsyncFunction constructor. Это отличается от использования {{jsxref("Global_Objects/eval", "eval")}} с кодом для async function.
 
 Вызов AsyncFunction constructor как функции (без использования оператора new ) имеет тот же эффект, что и вызов его как конструктора.
 
@@ -60,20 +59,22 @@ new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-var AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-var a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+var a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // напечатает 30 через 4 секунды
 });
 ```

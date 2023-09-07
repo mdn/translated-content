@@ -1,8 +1,9 @@
 ---
 title: Empty element
 slug: Glossary/Void_element
-original_slug: Glossary/Empty_element
 ---
+
+{{GlossarySidebar}}
 
 **置空元素(empty element)**是一種來自 HTML、SVG 或 MathML **不能**有任何子節點 (如，嵌套元素或 文本節點)的元素({{Glossary("element")}})。
 
@@ -20,7 +21,6 @@ HTML 的置空元素列表如下：
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 草稿已移除)
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}

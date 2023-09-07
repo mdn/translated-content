@@ -1,10 +1,6 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Reference
-translation_of: Web/API/Worker/Worker
 ---
 
 {{APIRef("Worker")}}
@@ -28,7 +24,7 @@ var myWorker = new Worker(aURL, options);
   - : Un objet contenant des propriétés pour définir les options. Les propriétés suivantes sont valables:
 
     - `type`: Une {{domxref("DOMString")}} définissant le type de worker à créer. The valeur peuvent être `classic` ou `module`. Si cette prpriété n'est pas définie, la valeur sera `classic`.
-    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou *`include`*. *Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`.*
+    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou _`include`_. _Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`._
     - `name`: Une {{domxref("DOMString")}} définissant un identifiant pour l'environment du worker {{domxref("DedicatedWorkerGlobalScope")}}, souvent utilisé pour le débogage.
 
 ### Exceptions
@@ -44,10 +40,10 @@ L'extrait de code suivant illustre la création d'un objet {{domxref("Worker")}}
 ```js
 var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message envoyé au worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 ```
 
 Pour un exemple complet, consultez notre [exemple basique d'un worker dédié](https://github.com/mdn/simple-web-worker) ([lancer le worker dédié](https://mdn.github.io/simple-web-worker/)).

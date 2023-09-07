@@ -1,13 +1,6 @@
 ---
 title: Гипертекст
 slug: Glossary/Hypertext
-tags:
-  - Веб
-  - Глоссарий
-  - Механика Веба
-  - гипертекст
-translation_of: Glossary/Hypertext
-original_slug: Глоссарий/Гипертекст
 ---
 
 Гипертекст - это текст, содержащий ссылки на другие тексты.

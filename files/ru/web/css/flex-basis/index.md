@@ -1,7 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-translation_of: Web/CSS/flex-basis
 ---
 
 {{CSSRef}}
@@ -10,7 +9,7 @@ translation_of: Web/CSS/flex-basis
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-> **Примечание:** **Внимание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
+> **Примечание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
 
 {{cssinfo}}
 
@@ -44,10 +43,12 @@ flex-basis: unset;
 - `<'ширина'>`
   - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово `auto`. Негативные значения не допустимы.
 - `content`
+
   - : Автоматический задаёт размер на основе содержимого элемента flex.
+
     > **Примечание:** Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
 
-    > **Примечание:** **История:**
+    > **Примечание:**
     >
     > - Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
     > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
@@ -88,10 +89,10 @@ flex-basis: unset;
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -114,7 +115,7 @@ flex-basis: unset;
 }
 
 .flex1:after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -122,7 +123,7 @@ flex-basis: unset;
 }
 
 .flex2:after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -130,7 +131,7 @@ flex-basis: unset;
 }
 
 .flex3:after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -138,15 +139,15 @@ flex-basis: unset;
 }
 
 .flex4:after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5:after {
-  content: 'content';
+  content: "content";
 }
 
 .flex6 {
@@ -154,18 +155,18 @@ flex-basis: unset;
 }
 
 .flex6:after {
-  content: 'fill';
+  content: "fill";
 }
 ```
 
 ### Results
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{ EmbedLiveSample('Example', '100%', '360') }}
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                     | Status                    | Comment            |
+| ----------------------------------------------------------------- | ------------------------- | ------------------ |
 | {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
 
 ## Browser compatibility

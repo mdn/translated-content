@@ -1,6 +1,6 @@
 ---
 title: <input type="time">
-slug: Web/HTML/Element/Input/time
+slug: Web/HTML/Element/input/time
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -53,7 +53,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
   <tr>
    <td><strong>支持的常用属性</strong></td>
    <td>
-     {{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("readonly", "input")}} 和 {{htmlattrxref("step", "input")}}
+     <a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a>
    </td>
   </tr>
   <tr>
@@ -81,7 +81,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
 
 ### 设置 value 属性
 
-你可以通过在创建 `<input>` 元素时在 {{htmlattrxref("value", "input")}} 属性包含一个合法的时间来设置默认值，比如：
+你可以通过在创建 `<input>` 元素时在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个合法的时间来设置默认值，比如：
 
 ```html
 <label for="appt-time">选择约定的时间：</label>
@@ -96,12 +96,12 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
 
 ```js
 const timeControl = document.querySelector('input[type="time"]');
-timeControl.value = '15:30';
+timeControl.value = "15:30";
 ```
 
 ### 时间格式
 
-`time` 输入框无论输入何种格式的值（这可能由用户的区域设置，或用户代理决定），其 `value` 值总是带有前导零的 24 小时制时间：`hh:mm`。如果输入的时间包含秒数（参见[使用 step 属性](#使用_step_属性)），则格式总是为 `hh:mm:ss`。你可以在 {{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "时间字符串")}}了解到更多有关时间值的格式。
+`time` 输入框无论输入何种格式的值（这可能由用户的区域设置，或用户代理决定），其 `value` 值总是带有前导零的 24 小时制时间：`hh:mm`。如果输入的时间包含秒数（参见[使用 step 属性](#使用_step_属性)），则格式总是为 `hh:mm:ss`。你可以在[时间字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#时间字符串)中了解到更多有关时间值的格式。
 
 在此示例中，你可以通过输入时间并查看之后如何更改来查看时间输入的值。
 
@@ -112,8 +112,7 @@ timeControl.value = '15:30';
   <label for="startTime">开始时间：</label>
   <input type="time" id="startTime" />
   <p>
-    <code>time</code> 输入框的值：
-    <code> "<span id="value">n/a</span>"</code>.
+    <code>time</code> 输入框的值： <code> "<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```
@@ -124,9 +123,13 @@ timeControl.value = '15:30';
 const startTime = document.getElementById("startTime");
 const valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", () => {
-  valueSpan.innerText = startTime.value;
-}, false);
+startTime.addEventListener(
+  "input",
+  () => {
+    valueSpan.innerText = startTime.value;
+  },
+  false,
+);
 ```
 
 {{EmbedLiveSample("时间格式", 600, 80)}}
@@ -141,7 +144,7 @@ startTime.addEventListener("input", () => {
 
 ### list
 
-列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### max
 
@@ -159,7 +162,7 @@ startTime.addEventListener("input", () => {
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
@@ -186,11 +189,11 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ### 控制输入框大小
 
-`<input type="time">` 不支持诸如 {{htmlattrxref("size", "input")}} 的表单大小属性，因为时间字符串的长度总是相同的。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="time">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性，因为时间字符串的长度总是相同的。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
-你可以使用 {{htmlattrxref("step", "input")}} 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
+你可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
 
 > **备注：** 此属性在不同浏览器之间有一些怪异的行为，并不可靠。
 
@@ -219,13 +222,11 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ### 设置最大和最小时间
 
-你可以使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性来限制用户可以选择的有效时间。在以下示例中，我们设置了可供选择的最小值 `12:00` 和最大值 `18:00`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效时间。在以下示例中，我们设置了可供选择的最小值 `12:00` 和最大值 `18:00`：
 
 ```html
 <form>
-  <label for="appt-time">
-    选择约定的时间（开放时间为 12:00 到 18:00）：
-  </label>
+  <label for="appt-time"> 选择约定的时间（开放时间为 12:00 到 18:00）： </label>
   <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
 </form>
@@ -269,16 +270,16 @@ input:valid + span::after {
 
 #### 使最小值和最大值跨越午夜
 
-如果设置的 {{htmlattrxref("min", "input")}} 属性大于 {{htmlattrxref("max", "input")}} 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
+如果设置的 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
 
 ```js
-const input = document.createElement('input');
-input.type = 'time';
-input.min = '23:00';
-input.max = '01:00';
-input.value = '23:59';
+const input = document.createElement("input");
+input.type = "time";
+input.min = "23:00";
+input.max = "01:00";
+input.value = "23:59";
 
-if (input.validity.valid && input.type === 'time') {
+if (input.validity.valid && input.type === "time") {
   // <input type=time> reversed range supported
 } else {
   // <input type=time> reversed range unsupported
@@ -287,7 +288,7 @@ if (input.validity.valid && input.type === 'time') {
 
 ### 使时间成为必需值
 
-此外，你可以使用 {{htmlattrxref("required", "input")}} 属性来强制填写时间。因此，如果你试图提交一个超出设定范围的时间，或一个空的时间字段，支持的浏览器将显示一个错误。
+此外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写时间。因此，如果你试图提交一个超出设定范围的时间，或一个空的时间字段，支持的浏览器将显示一个错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大的时间，也使这个字段成为必需的：
 
@@ -334,7 +335,7 @@ if (input.validity.valid && input.type === 'time') {
 - `3 o'clock in the afternoon`
 - 等等
 
-一个办法是在你的 `time` 输入上添加 {{htmlattrxref("pattern", "input")}} 属性。即使 `time` 输入不使用它，`text` 输入回退也会使用。例如，试着在一个不支持时间输入的浏览器中查看下面的演示：
+一个办法是在你的 `time` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。即使 `time` 输入不使用它，`text` 输入回退也会使用。例如，试着在一个不支持时间输入的浏览器中查看下面的演示：
 
 ```html
 <form>
@@ -416,9 +417,7 @@ HTML 看起来像这样：
       required />
     <span class="validity"></span>
   </div>
-  <p class="fallbackLabel">
-    选择约定的时间（开放时间为 12:00 到 18:00）：
-  </p>
+  <p class="fallbackLabel">选择约定的时间（开放时间为 12:00 到 18:00）：</p>
   <div class="fallbackTimePicker">
     <div>
       <span>
@@ -467,32 +466,32 @@ input:valid + span::after {
 
 ```js
 // 获取 UI 元素
-const nativePicker = document.querySelector('.nativeTimePicker');
-const fallbackPicker = document.querySelector('.fallbackTimePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeTimePicker");
+const fallbackPicker = document.querySelector(".fallbackTimePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const hourSelect = document.querySelector('#hour');
-const minuteSelect = document.querySelector('#minute');
+const hourSelect = document.querySelector("#hour");
+const minuteSelect = document.querySelector("#minute");
 
 // 最初，隐藏回退元素
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 测试一个新的 time 输入框是否会回退至 text 输入框
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'time';
+  test.type = "time";
 } catch (e) {
   console.log(e.description);
 }
 
 // 如果回退了，运行 if 代码块中的代码
-if (test.type === 'text') {
+if (test.type === "text") {
   // 隐藏原生选择器，显示回退元素
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 动态生成小时和分钟数
   populateHours();
@@ -502,7 +501,7 @@ if (test.type === 'text') {
 function populateHours() {
   // 生成含有 6 小时开放时间的 <select>
   for (let i = 12; i <= 18; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     hourSelect.appendChild(option);
   }
@@ -511,8 +510,8 @@ function populateHours() {
 function populateMinutes() {
   // 对每一小时动态生成 60 个代表分钟数的 <select>
   for (let i = 0; i <= 59; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
@@ -520,8 +519,8 @@ function populateMinutes() {
 // 如果小时数为 18，分钟数必须设置为 00
 // 你不可以选择超过 18:00 的时间
 function setMinutesToZero() {
-  if (hourSelect.value === '18') {
-    minuteSelect.value = '00';
+  if (hourSelect.value === "18") {
+    minuteSelect.value = "00";
   }
 }
 

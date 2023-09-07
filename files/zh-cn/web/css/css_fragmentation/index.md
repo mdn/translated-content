@@ -1,16 +1,17 @@
 ---
-title: CSS 分片
-slug: Web/CSS/CSS_Fragmentation
-original_slug: Web/CSS/CSS_分片
+title: CSS 片段
+slug: Web/CSS/CSS_fragmentation
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-**CSS Fragmentation**是**CSS**的模块，它定义了内容在跨多个[页面](/zh-CN/docs/Web/CSS/Paged_Media)，区域或[列中](/zh-CN/docs/Web/CSS/CSS_Columns)被分割（分段）时如何显示。
+**CSS 片段**模块定义了当内容被分割（fragmented）到多个[页面](/zh-CN/docs/Web/CSS/CSS_paged_media)、区域或[列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)时的显示方式。
 
-当一个内联框包装成多行时会发生碎片。当一个块跨越一个列布局容器内的多个列，或者在打印时跨越一个分页符时，也会发生这种情况。元素的每个渲染*片段*称为一个*片段*。
+当行向盒子被分割为多行时，就会出现分片。当一个块在列布局容器内跨越多列，或在打印时跨越分页符时，也会出现这种情况。元素的每一个渲染的部分都称为*片段*（fragment）。
 
 ## 参考
+
+### 属性
 
 - {{cssxref("box-decoration-break")}}
 - {{cssxref("break-after")}}

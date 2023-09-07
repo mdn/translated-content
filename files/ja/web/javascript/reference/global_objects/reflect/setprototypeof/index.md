@@ -39,18 +39,18 @@ Reflect.setPrototypeOf(target, prototype)
 ### Reflect.setPrototypeOf() の使用
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype)  // true
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // オブジェクトの [[Prototype]] は null に変更できる。
-Reflect.setPrototypeOf({}, null)  // true
+Reflect.setPrototypeOf({}, null); // true
 
 // 対象が拡張できない場合、false を返す。
-Reflect.setPrototypeOf(Object.freeze({}), null)  // false
+Reflect.setPrototypeOf(Object.freeze({}), null); // false
 
 // プロトタイプチェーンが循環する場合、false を返す。
-let target = {}
-let proto = Object.create(target)
-Reflect.setPrototypeOf(target, proto)  // false
+let target = {};
+let proto = Object.create(target);
+Reflect.setPrototypeOf(target, proto); // false
 ```
 
 ## 仕様書

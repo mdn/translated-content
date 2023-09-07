@@ -3,73 +3,99 @@ title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}
 
-`ServiceWorkerContainer`接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载，更新和访问 service worker 的状态，以及他们的注册者
+[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的 `ServiceWorkerContainer` 接口提供了一个对象，该对象表示 service worker 作为网络系统中的整体单元，包括注册、注销和更新 service worker 以及访问 service worker 的状态和它们的注册状态的功能。
 
-主要是{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}}提供一个注册 service worker 的方法，{{domxref("ServiceWorkerContainer.controller")}}将获取当前控制页面网络的 service worker
+更重要的是，它暴露了用于注册 service worker 的 {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} 方法，和用于确定当前页面是否受到主动控制的 {{domxref("ServiceWorkerContainer.controller")}} 属性。
 
-## ?属性
+{{InheritanceDiagram}}
+
+## 实例属性
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : 当 {{domxref("ServiceWorker")}} 对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。
+  - : 如果 ServiceWorker 对象的状态是 `activating` 或 `activated`（与 {{domxref("ServiceWorkerRegistration.active")}} 返回相同的对象），则返回 {{domxref("ServiceWorker")}} 对象。在强制刷新请求（_Shift_ + refresh）或者没有激活的 worker 的时候，该属性返回 `null`。
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
-  - : 定义了一个 serviceWorker 是否准备好为一个页面服务，将返回一个 {{jsxref("Promise")}}，并且这个 {{jsxref("Promise")}}永远不会 reject，这个 {{jsxref("Promise")}}会在{{domxref("ServiceWorkerRegistration")}} 获取到一个 active 的{{domxref("ServiceWorker")}}的时候被解决。
+  - : 提供了一种延迟代码执行直到 service worker 被激活的方法。它返回一个从不会拒绝的 {{jsxref("Promise")}}，并且一直等到与当前页面相关联的 {{domxref("ServiceWorkerRegistration")}} 有一个 {{domxref("ServiceWorkerRegistration.active")}} worker。一旦满足该条件，它将用 {{domxref("ServiceWorkerRegistration")}} 兑现。
 
-### ?事件
+### 事件
 
-- {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : 在{{domxref("ServiceWorkerRegistration")}}获取到一个新的 active 的{{domxref("ServiceWorker")}}对象的时候被触发
-- {{domxref("ServiceWorkerContainer.onerror")}}
-  - : 当 service workers 中出现错误的时候被触发
-- {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : 当{{domxref("ServiceWorkerContainer")}} 对象接受到一个 message 消息的时候被触发，message 由{{domxref("MessagePort.postMessage()")}}发出
+- [`controllerchange`](/zh-CN/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
+  - : 当文档关联的 {{domxref("ServiceWorkerRegistration")}} 获得新{{domxref("ServiceWorkerRegistration.active","激活", "", 1)}}的 worker 时触发。
+- [`error`](/zh-CN/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 每当关联的 service worker 出现错误时触发。
+- [`message`](/zh-CN/docs/Web/API/ServiceWorkerContainer/message_event)
+  - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时触发（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
 
-## ?方法
+## 实例方法
 
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
-  - : 创建或者更新一个{{domxref("ServiceWorkerRegistration")}} 用给定的`scriptURL`
+  - : 用给定的 `scriptURL` 创建或者更新 {{domxref("ServiceWorkerRegistration")}}。
 - {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : 根据当前网页的 URL 与当前 service worker 的 scope Url 的匹配，返回一个 {{domxref("ServiceWorkerRegistration")}}对象，如果不能返回一个 {{domxref("ServiceWorkerRegistration")}},则返回一个{{jsxref("Promise")}}。
+  - : 得到一个 {{domxref("ServiceWorkerRegistration")}} 对象，它的作用域范围与提供的文档匹配。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 或 `undefined` 的 {{jsxref("Promise")}}。
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : 返回所有的{{domxref("ServiceWorkerRegistration")}}对象，如果不能返回一个 {{domxref("ServiceWorkerRegistration")}},则返回一个{{jsxref("Promise")}}。
+  - : 返回数组中与 `ServiceWorkerContainer` 关联的所有 {{domxref("ServiceWorkerRegistration")}} 对象。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 的数组的 {{jsxref("Promise")}}。
+- {{domxref("ServiceWorkerContainer.startMessages()")}}
+  - : 显式启动从 service worker 分发到其控制页面下的消息流（例如，通过 {{domxref("Client.postMessage()")}} 发送）。这可用于更早地对发送的消息做出反应，甚至在该页面的内容加载完成之前。
 
-## ?举例
+## 示例
 
-?代码是[service worker fallback-response sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (see [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)) 的其中一段。?首先检查浏览器是否支持 serviceWorker. 代码创建了一个 serviceWorker，并且打印出来当前页面的 serviceWorker 的？是否接管了页面的网络状态。如果没有需要刷新页面再次查看。代码也处理了注册失败的情况
+以下示例首先检查浏览器是否支持 service worker。如果支持，代码将注册 service worker，并确定页面是否由 service worker 控制。如果不是，它会提示用户重新加载页面，以便 service worker 可以控制。该代码还将报告任何注册的错误。
 
-```
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function() {
-    if (navigator.serviceWorker.controller) {
-      document.querySelector('#status').textContent = 'The service worker is currently handling network operations.';
-      showRequestButtons();
-    } else {
-      document.querySelector('#status').textContent = 'Please reload this page to allow the service worker to handle network operations.';
-    }
-  }).catch(function(error) {
-    document.querySelector('#status').textContent = error;
-  });
+```js
+if ("serviceWorker" in navigator) {
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then((registration) => {
+      console.log("Service worker registration succeeded:", registration);
+      // At this point, you can optionally do something
+      // with registration. See https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerRegistration
+    })
+    .catch((error) => {
+      console.error(`Service worker registration failed: ${error}`);
+    });
+
+  // Independent of the registration, let's also display
+  // information about whether the current page is controlled
+  // by an existing service worker, and when that
+  // controller changes.
+
+  // First, do a one-off check if there's currently a
+  // service worker in control.
+  if (navigator.serviceWorker.controller) {
+    console.log(
+      "This page is currently controlled by:",
+      navigator.serviceWorker.controller,
+    );
+  }
+
+  // Then, register a handler to detect when a new or
+  // updated service worker takes control.
+  navigator.serviceWorker.oncontrollerchange = () => {
+    console.log(
+      "This page is now controlled by",
+      navigator.serviceWorker.controller,
+    );
+  };
 } else {
-  var aElement = document.createElement('a');
-  aElement.href = 'http://www.chromium.org/blink/serviceworker/service-worker-faq';
-  aElement.textContent = 'unavailable';
-  document.querySelector('#status').appendChild(aElement);
+  console.log("Service workers are not supported.");
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [是否支持 ServiceWorker？](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -1,10 +1,8 @@
 ---
-title: >-
-  TypeError: property "x" is non-configurable and can't be deleted(свойство "x"
-  не настраивается и не может быть удалено)
+title: 'TypeError: property "x" is non-configurable and can''t be deleted(свойство "x" не настраивается и не может быть удалено)'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
-translation_of: Web/JavaScript/Reference/Errors/Cant_delete
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -30,25 +28,25 @@ TypeError: не удаётся удалить свойство "x" из #<Object
 Не настраиваемые свойства не очень распространены, но их можно создать с помощью {{jsxref("Object.defineProperty()")}} или {{jsxref("Object.freeze()")}}.
 
 ```js example-bad
-'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
-delete obj.score;  // TypeError
+"use strict";
+var obj = Object.freeze({ name: "Elsa", score: 157 });
+delete obj.score; // TypeError
 
-'use strict';
+("use strict");
 var obj = {};
-Object.defineProperty(obj, 'foo', {value: 2, configurable: false});
-delete obj.foo;  // TypeError
+Object.defineProperty(obj, "foo", { value: 2, configurable: false });
+delete obj.foo; // TypeError
 
-'use strict';
+("use strict");
 var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop();  // TypeError
+frozenArray.pop(); // TypeError
 ```
 
 В JavaScript также встроено несколько настраиваемых свойств. Возможно, вы пытались удалить математическую константу.
 
 ```js example-bad
-'use strict';
-delete Math.PI;  // TypeError
+"use strict";
+delete Math.PI; // TypeError
 ```
 
 ## Смотрите также

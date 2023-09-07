@@ -1,5 +1,5 @@
 ---
-title: '<q>: 인라인 인용문 요소'
+title: "<q>: 인라인 인용문 요소"
 slug: Web/HTML/Element/q
 ---
 
@@ -67,10 +67,12 @@ slug: Web/HTML/Element/q
 ## 예제
 
 ```html
-<p>Mozilla 재단의 웹사이트에 따르면,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q></p>
+<p>
+  Mozilla 재단의 웹사이트에 따르면,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('예제')}}
@@ -81,7 +83,7 @@ slug: Web/HTML/Element/q
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 같이 보기
 

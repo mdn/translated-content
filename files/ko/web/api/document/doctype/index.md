@@ -21,10 +21,17 @@ doctype = document.doctype;
 var doctypeObj = document.doctype;
 
 console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
+  "doctypeObj.name: " +
+    doctypeObj.name +
+    "\n" +
+    "doctypeObj.internalSubset: " +
+    doctypeObj.internalSubset +
+    "\n" +
+    "doctypeObj.publicId: " +
+    doctypeObj.publicId +
+    "\n" +
+    "doctypeObj.systemId: " +
+    doctypeObj.systemId,
 );
 ```
 
@@ -34,6 +41,6 @@ console.log(
 
 DOM level 2는 document type 선언 편집을 지원하지 않습니다. (read-only)
 
-## Specifications
+## 명세서
 
 {{Specifications}}

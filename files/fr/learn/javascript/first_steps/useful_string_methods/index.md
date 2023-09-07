@@ -1,21 +1,6 @@
 ---
 title: Méthodes utiles pour les chaînes de caractères
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - JavaScript
-  - Longueur
-  - cas
-  - couper
-  - indexof
-  - majuscule
-  - minuscule
-  - remplacer
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -47,7 +32,7 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 Nous l'avons déjà dit, et nous le redirons — _tout_ est objet en JavaScript. Lorsque vous créez une chaîne, par exemple en utilisant :
 
 ```js
-let string = 'Ceci est une chaîne';
+let string = "Ceci est une chaîne";
 ```
 
 votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page&nbsp;!
@@ -57,10 +42,10 @@ votre variable devient une instance de l'objet `String`, et par conséquent poss
 Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés, ou utiliser la [console de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -68,7 +53,7 @@ Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous 
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -102,60 +87,55 @@ Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous 
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class', 'input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -167,7 +147,7 @@ Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous 
 C'est facile — il suffit d'utiliser la propriété {{jsxref("String.prototype.length", "length")}}. Entrez ceci&nbsp;:
 
 ```js
-let browserType = 'mozilla';
+let browserType = "mozilla";
 browserType.length;
 ```
 
@@ -181,10 +161,10 @@ Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère 
 browserType[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
+Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length` que nous avons vue plus haut&nbsp;:
 
 ```js
-browserType[browserType.length-1];
+browserType[browserType.length - 1];
 ```
 
 La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
@@ -193,43 +173,43 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
 1. Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire&nbsp;; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
 
-    ```js
-    browserType.indexOf('zilla');
-    ```
+   ```js
+   browserType.indexOf("zilla");
+   ```
 
-    La commande donne 2 comme résultat, car la sous-chaîne «&nbsp;zilla&nbsp;» commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans «&nbsp;mozilla&nbsp;». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent «&nbsp;mozilla ».
+   La commande donne 2 comme résultat, car la sous-chaîne «&nbsp;zilla&nbsp;» commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans «&nbsp;mozilla&nbsp;». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent «&nbsp;mozilla ».
 
 2. On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
 
-    ```js
-    browserType.indexOf('vanilla');
-    ```
+   ```js
+   browserType.indexOf("vanilla");
+   ```
 
-    Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence «&nbsp;vanilla&nbsp;», n'est pas trouvée dans la chaîne principale.
+   Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence «&nbsp;vanilla&nbsp;», n'est pas trouvée dans la chaîne principale.
 
-    Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne «&nbsp;mozilla&nbsp;», ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
+   Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne «&nbsp;mozilla&nbsp;», ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
 
-    ```js
-    if(browserType.indexOf('mozilla') !== -1) {
-      // faire des tas de choses avec la chaîne
-    }
-    ```
+   ```js
+   if (browserType.indexOf("mozilla") !== -1) {
+     // faire des tas de choses avec la chaîne
+   }
+   ```
 
 3. Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code&nbsp;:
 
-    ```js
-    browserType.slice(0,3);
-    ```
+   ```js
+   browserType.slice(0, 3);
+   ```
 
-    Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
+   Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
 
 4. Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre&nbsp;! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
 
-    ```js
-    browserType.slice(2);
-    ```
+   ```js
+   browserType.slice(2);
+   ```
 
-    Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
+   Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
 
 > **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
 
@@ -240,7 +220,7 @@ Les méthodes {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} et {
 Essayons d'entrer les lignes suivantes et voyons ce qui se passe :
 
 ```js
-let radData = 'My NaMe Is MuD';
+let radData = "My NaMe Is MuD";
 radData.toLowerCase();
 radData.toUpperCase();
 ```
@@ -252,7 +232,7 @@ Vous pouvez remplacer une sous-chaîne à l'intérieur d'une chaîne avec une au
 La méthode prend deux paramètres — la chaîne que vous voulez remplacer et la chaîne avec laquelle vous voulez la remplacer. Essayez avec cet exemple :
 
 ```js
-browserType.replace('moz','van');
+browserType.replace("moz", "van");
 ```
 
 À noter&nbsp;: pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire&nbsp;: `browserType = browserType.replace('moz','van');`.
@@ -273,11 +253,7 @@ Dans ce premier exercice, nous commencerons simplement — nous avons un tableau
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 290px;">
@@ -303,35 +279,36 @@ for (var i = 0; i < greetings.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['Happy Birthday!',\n                 'Merry Christmas my love',\n                 'A happy Christmas to all the family',\n                 'You\\'re all I want for Christmas',\n                 'Get well soon'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf('Christmas') !== -1) {\n    var result = input;\n    var listItem = document.createElement('li');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Filtrer_des_messages_de_vœux', '100%', 490) }}
@@ -349,11 +326,7 @@ Dans cet exercice, nous avons des noms des villes du Royaume-Uni, mais les majus
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 250px;">
@@ -372,35 +345,36 @@ for(var i = 0; i < cities.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Remettre_les_majuscules', '100%', 450) }}
@@ -429,11 +403,7 @@ Nous vous recommandons de procéder de la manière suivante :
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 285px;">
@@ -457,36 +427,36 @@ for (var i = 0; i < stations.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar stations = ['MAN675847583748sjt567654;Manchester Piccadilly',\n                'GNF576746573fhdg4737dh4;Greenfield',\n                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',\n                'SYB4f65hf75f736463;Stalybridge',\n                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(';');\n var name = input.slice(semiC + 1);\n var result = code + ': ' + name;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n}";
 
-
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Créer_de_nouvelles_chaînes_à_partir_de_morceaux', '100%', 485) }}

@@ -43,8 +43,12 @@ text-rendering:  auto | optimizeSpeed | optimizeLegibility | geometricPrecision 
 /* make sure all fonts in the HTML document display in all its glory,
    but avoid inadequate ligatures in class foo elements */
 
-body  { text-rendering: optimizeLegibility; }
-.foo  { text-rendering: optimizeSpeed; }
+body {
+  text-rendering: optimizeLegibility;
+}
+.foo {
+  text-rendering: optimizeSpeed;
+}
 ```
 
 #### Live Example
@@ -60,12 +64,12 @@ body  { text-rendering: optimizeLegibility; }
 
 O valor padrão de 20px para `auto` pode ser alterado na propriedade `browser.display.auto_quality_min_font_size` do navegador.
 
-A opção optimizeSpeed não tem efeito na versão 2.0 do Gecko {{ geckoRelease("2.0") }}, devido ao código padrão de renderização de texto que já é muito rápido e não existe até o momento um código mais rápido para esse trabalho. Veja detalhes em {{ bug(595688) }}.
+A opção optimizeSpeed não tem efeito na versão 2.0 do Gecko, devido ao código padrão de renderização de texto que já é muito rápido e não existe até o momento um código mais rápido para esse trabalho. Veja detalhes em {{ bug(595688) }}.
 
 ## Especificações
 
-| Specification                                                                                                | Status                       | Comment |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- |
+| Specification                                                                     | Status                | Comment |
+| --------------------------------------------------------------------------------- | --------------------- | ------- |
 | {{ SpecName('SVG1.1', 'painting.html#TextRenderingProperty', 'text-rendering') }} | {{ Spec2('SVG1.1') }} |         |
 
 Essa é uma especificação SVG, e não é definida em nenhum padrão CSS. Gecko (Firefox) e WebKit aplicam a propriedade `text-rendering` para códigos HTML e XML.

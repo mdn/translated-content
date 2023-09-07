@@ -1,10 +1,9 @@
 ---
 title: Using textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Сейчас наша программа рисует вращающийся объёмный куб - давайте натянем на него текстуру вместо заливки граней одним цветом.
 
@@ -12,7 +11,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 Сначала нужно добавить код для загрузки текстур. В нашем случае мы будем использовать одну текстуру, натянутую на все шесть граней вращающегося куба, но этот подход может быть использован для загрузки любого количества текстур.
 
-> **Примечание:** **Обратите внимание:** Важно помнить, что загрузка текстур следует [правилам кросс-доменности](/ru/docs/Web/HTTP/Access_control_CORS), что означает, что вы можете загружать текстуры только с сайтов, для которых ваш контент является CORS доверенным. См. подробности в секции "Кросс-доменные текстуры" ниже.
+> **Примечание:** Важно помнить, что загрузка текстур следует [правилам кросс-доменности](/ru/docs/Web/HTTP/Access_control_CORS), что означает, что вы можете загружать текстуры только с сайтов, для которых ваш контент является CORS доверенным. См. подробности в секции "Кросс-доменные текстуры" ниже.
 
 Код для загрузки текстур выглядит так::
 
@@ -277,12 +276,12 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 [В статье на hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) есть объяснение с [примером](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html), как использовать изображения CORS для создания WebGL текстур.
 
-> **Примечание:** **Обратите внимание:** Поддержка CORS для текстур WebGL и атрибут `crossOrigin` для элементов изображений реализованы в {{Gecko("8.0")}}.
+> **Примечание:** Поддержка CORS для текстур WebGL и атрибут `crossOrigin` для элементов изображений реализованы в Gecko 8.0.
 
 Tainted (только-для-записи) 2D canvas нельзя использовать в качестве текстур WebGL. Например, 2D {{ HTMLElement("canvas") }} становится "tainted", когда на ней отрисовано кросс-доменное изображение.
 
-> **Примечание:** **Обратите внимание:** Поддержка CORS для Canvas 2D `drawImage` реализована в {{Gecko("9.0")}}. Это значит, что использование CORS доверенных кросс-доменных изображений больше не делает 2D canvas "tained" (только-для-записи), и вы можете использовать такую 2D canvas как исходник для текстур WebGL.
+> **Примечание:** Поддержка CORS для Canvas 2D `drawImage` реализована в Gecko 9.0. Это значит, что использование CORS доверенных кросс-доменных изображений больше не делает 2D canvas "tained" (только-для-записи), и вы можете использовать такую 2D canvas как исходник для текстур WebGL.
 
-> **Примечание:** **Обратите внимание:** Поддержка CORS для кросс-доменного видео и атрибут `crossorigin` для HTML-элемента {{ HTMLElement("video") }} реализованы в {{Gecko("12.0")}}.
+> **Примечание:** Поддержка CORS для кросс-доменного видео и атрибут `crossorigin` для HTML-элемента {{ HTMLElement("video") }} реализованы в Gecko 12.0.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

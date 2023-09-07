@@ -1,7 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 
 {{JSRef}}Объект **`Atomics`** предоставляет атомарные операции как статические методы. Используется вместе с объектом {{jsxref("SharedArrayBuffer")}}.
@@ -54,10 +53,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 ## Спецификации
 
-| Specification                                                                | Status                       | Comment                       |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| Specification                                             | Status               | Comment                       |
+| --------------------------------------------------------- | -------------------- | ----------------------------- |
 | {{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
-| {{SpecName('ES8', '#sec-atomics-object', 'Atomics')}}     | {{Spec2('ES8')}}         |                               |
+| {{SpecName('ES8', '#sec-atomics-object', 'Atomics')}}     | {{Spec2('ES8')}}     |                               |
 
 ## Поддержка браузерами
 
@@ -65,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 ## Похожие заметки
 
-До SpiderMonkey 48 {{geckoRelease(48)}}, финальные имена API и семантика не были ещё реализованы. Изменения между Firefox v. 46 и v. 48:
+До SpiderMonkey 48, финальные имена API и семантика не были ещё реализованы. Изменения между Firefox v. 46 и v. 48:
 
 - Методы `Atomics.futexWakeOrRequeue()` и `Atomics.fence()` полностью удалены ({{bug(1259544)}} и {{bug(1225028)}}).
 - Методы {{jsxref("Atomics.wait()")}} и {{jsxref("Atomics.wake()")}} были названы `Atomics.futexWait()` и `Atomics.futexWake()` ({{bug(1260910)}}). Примечание: старые имена были удалены в версии 49 и младше ({{bug(1262062)}}).
@@ -79,4 +78,4 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 - [Web Workers](/ru/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

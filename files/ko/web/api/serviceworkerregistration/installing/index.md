@@ -12,18 +12,18 @@ slug: Web/API/ServiceWorkerRegistration/installing
 ## Syntax
 
 ```js
-sw = ServiceWorker.installing
+sw = ServiceWorker.installing;
 ```
 
 ### Value
 
 현재 `installing` 상태에 있다면, {{domxref("ServiceWorker")}} 객체
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

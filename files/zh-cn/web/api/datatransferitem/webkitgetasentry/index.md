@@ -9,7 +9,7 @@ slug: Web/API/DataTransferItem/webkitGetAsEntry
 
 > **备注：** 此功能`webkitGetAsEntry()`在此时非包含 Firefox 的非 WebKit 浏览器中实现; 它可能会`getAsEntry()`在以后简单地重命名，所以你应该进行防御性编码，寻找两者。
 
-## [语法](/zh-CN/docs/Web/API/DataTransferItem/webkitGetAsEntry#Syntax)
+## 语法
 
 ```
 DataTransferItem.webkitGetAsEntry();
@@ -27,30 +27,27 @@ DataTransferItem.webkitGetAsEntry();
 
 在此示例中，创建了一个放置区域，该放置区域[`drop`](/zh-CN/docs/Web/Events/drop)通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。
 
-### HTML 内容
+### HTML
 
 HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div)具有 ID 的元素`"dropzone"`，以及带有 ID 的无序列表元素`"listing"`。
 
-```
+```html
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
-  <div id="boxtitle">
-    Drop Files Here
-  </div>
+  <div id="boxtitle">Drop Files Here</div>
 </div>
 
 <h2>Directory tree:</h2>
 
-<ul id="listing">
-</ul>
+<ul id="listing"></ul>
 ```
 
-### CSS 内容
+### CSS
 
 此处显示示例使用的样式。
 
-```
+```css
 #dropzone {
   text-align: center;
   width: 300px;
@@ -66,17 +63,21 @@ HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div
   vertical-align: middle;
   text-align: center;
   color: black;
-  font: bold 2em "Arial", sans-serif;
+  font:
+    bold 2em "Arial",
+    sans-serif;
   width: 300px;
   height: 100px;
 }
 
 body {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 首先，让我们看一下递归`scanFiles()`函数。该函数将[`FileSystemEntry`](/zh-CN/docs/Web/API/FileSystemEntry)表示要扫描和处理的文件系统中的条目（`item`参数）和插入内容列表（`container`参数）的元素作为输入。
 
@@ -91,20 +92,20 @@ function scanFiles(item, container) {
   elem.innerHTML = item.name;
   container.appendChild(elem);
 
- if (item.isDirectory) {
+  if (item.isDirectory) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
-    directoryReader.readEntries(function(entries) {
-        entries.forEach(function(entry) {
-          scanFiles(entry, directoryContainer);
+    directoryReader.readEntries(function (entries) {
+      entries.forEach(function (entry) {
+        scanFiles(entry, directoryContainer);
       });
     });
   }
 }
 ```
 
-`scanFiles()`首先创建一个新[`<li>`](/zh-CN/docs/Web/HTML/Element/li)元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，您很快就会看到。
+`scanFiles()`首先创建一个新[`<li>`](/zh-CN/docs/Web/HTML/Element/li)元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，你很快就会看到。
 
 一旦当前项目在列表中，[`isDirectory`](/zh-CN/docs/Web/API/FileSystemEntry/isDirectory)就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个[`FileSystemDirectoryReader`](/zh-CN/docs/Web/API/FileSystemDirectoryReader)to 来处理获取目录的内容。这是通过调用 item 的[`createReader()`](/zh-CN/docs/Web/API/FileSystemDirectoryEntry/createReader)方法完成的。然后[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。
 
@@ -113,31 +114,39 @@ function scanFiles(item, container) {
 然后是事件处理程序。首先，我们阻止[`dragover`](/zh-CN/docs/Web/Events/dragover)事件由默认处理程序处理，以便我们的 drop 区域可以接收 drop：
 
 ```js
-dropzone.addEventListener("dragover", function(event) {
+dropzone.addEventListener(
+  "dragover",
+  function (event) {
     event.preventDefault();
-}, false);
+  },
+  false,
+);
 ```
 
 当然，关闭所有事件的事件处理程序是事件的处理程序[`drop`](/zh-CN/docs/Web/Events/drop)：
 
 ```js
-dropzone.addEventListener("drop", function(event) {
-  let items = event.dataTransfer.items;
+dropzone.addEventListener(
+  "drop",
+  function (event) {
+    let items = event.dataTransfer.items;
 
-  event.preventDefault();
-  listing.innerHTML = "";
+    event.preventDefault();
+    listing.innerHTML = "";
 
-  for (let i=0; i<items.length; i++) {
-    let item = items[i].webkitGetAsEntry();
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i].webkitGetAsEntry();
 
-    if (item) {
+      if (item) {
         scanFiles(item, listing);
+      }
     }
-  }
-}, false);
+  },
+  false,
+);
 ```
 
-这将获取[`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)表示从中删除的项目的对象列表`event.dataTransfer.items`。然后我们打电话[`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)来防止事件在完成后被进一步处理。
+这将获取表示从 `event.dataTransfer.items` 中删除的项目的 {{domxref("DataTransferItem")}} 对象列表。然后我们调用 {{domxref("Event.preventDefault()")}} 来防止事件在完成后被进一步处理。
 
 现在是时候开始构建列表了。首先，通过设置[`listing.innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML)为空来清空列表。这使我们[`ul`](/zh-CN/docs/Web/API/Ul)开始插入目录条目为空。
 
@@ -147,7 +156,7 @@ dropzone.addEventListener("drop", function(event) {
 
 你可以通过下面的尝试看看它是如何工作的。找到一些文件和目录并将其拖入，然后查看生成的输出。
 
-{{ EmbedLiveSample('Example', 600, 400) }}
+{{ EmbedLiveSample('示例', 600, 400) }}
 
 ## 规范
 
@@ -157,7 +166,7 @@ dropzone.addEventListener("drop", function(event) {
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

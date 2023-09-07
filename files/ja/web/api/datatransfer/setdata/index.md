@@ -12,7 +12,7 @@ slug: Web/API/DataTransfer/setData
 ## 構文
 
 ```js
-setData(format, data)
+setData(format, data);
 ```
 
 ### 引数

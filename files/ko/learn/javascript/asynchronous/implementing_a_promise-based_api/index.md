@@ -43,21 +43,21 @@ slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ```js
-const output = document.querySelector('#output');
-const button = document.querySelector('#set-alarm');
+const output = document.querySelector("#output");
+const button = document.querySelector("#set-alarm");
 
 function setAlarm() {
   window.setTimeout(() => {
-    output.textContent = 'Wake up!';
+    output.textContent = "Wake up!";
   }, 1000);
 }
 
-button.addEventListener('click', setAlarm);
+button.addEventListener("click", setAlarm);
 ```
 
 {{EmbedLiveSample("Wrapping setTimeout()", 600, 100)}}
@@ -76,7 +76,7 @@ button.addEventListener('click', setAlarm);
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -87,7 +87,7 @@ function alarm(person, delay) {
 
 이 함수는 새로운 `Promise`를 만들어 반환합니다. 프로미스 실행자 안에서 우리는 다음과 같이 합니다.
 
-- `deply`가 음수인지 확인하고, 맞다면 오류를 발생시킨다.
+- `delay`가 음수인지 확인하고, 맞다면 오류를 발생시킨다.
 
 - 콜백과 `delay`를 전달하며 `window.setTimeout()`을 호출한다. 콜백은 타이머가 만료되면 호출되며 `resolve`라고 불리는 콜백을 "Wake up!" 메시지와 함께 전달한다.
 
@@ -98,12 +98,12 @@ function alarm(person, delay) {
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value = "Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value = "1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 
 <button id="set-alarm">Set alarm</button>
@@ -115,21 +115,22 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -137,16 +138,16 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => (output.textContent = message))
+    .catch((error) => (output.textContent = `Couldn't set alarm: ${error}`));
 });
 ```
 
 {{EmbedLiveSample("Using the alarm() API", 600, 160)}}
 
-이름과 `deplay`에 다른 값을 설정해 보세요. `deply`에 음수도 설정해 보세요.
+이름과 `delay`에 다른 값을 설정해 보세요. `delay`에 음수도 설정해 보세요.
 
 ## alarm()을 async와 await와 함께 사용하기
 
@@ -155,12 +156,12 @@ button.addEventListener('click', () => {
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value = "Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value = "1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 
 <button id="set-alarm">Set alarm</button>
@@ -172,21 +173,22 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -194,12 +196,11 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', async () => {
+button.addEventListener("click", async () => {
   try {
     const message = await alarm(name.value, delay.value);
     output.textContent = message;
-  }
-  catch (error) {
+  } catch (error) {
     output.textContent = `Couldn't set alarm: ${error}`;
   }
 });
@@ -213,11 +214,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

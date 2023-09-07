@@ -14,8 +14,8 @@ slug: Web/API/URL/password
 ## 구문
 
 ```js
-const passwordString = url.password
-url.password = newPassword
+const passwordString = url.password;
+url.password = newPassword;
 ```
 
 ### 값
@@ -25,15 +25,15 @@ url.password = newPassword
 ## 예제
 
 ```js
-const url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
-console.log(url.password) // Logs "flabada"
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/ko/docs/Web/API/URL/password",
+);
+console.log(url.password); // Logs "flabada"
 ```
 
-## 구문
+## 명세서
 
-| Specification                                                                | Status               | Comment             |
-| ---------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-url-password', 'URL.password')}} | {{Spec2('URL')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

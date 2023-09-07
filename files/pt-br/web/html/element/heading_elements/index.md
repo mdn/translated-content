@@ -1,5 +1,5 @@
 ---
-title: '<h1>–<h6>: Os elementos HTML de cabeçalho da seção'
+title: "<h1>–<h6>: Os elementos HTML de cabeçalho da seção"
 slug: Web/HTML/Element/Heading_Elements
 ---
 
@@ -23,7 +23,7 @@ Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais
 
 Esses elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-O atributo **align** está {{deprecated_inline}} no {{HTMLVersionInline(4.01)}} e {{obsolete_inline}} no {{HTMLVersionInline(5)}}.
+O atributo **align** está {{deprecated_inline}} no HTML 4 e no HTML 5.
 
 ## Exemplos
 
@@ -74,15 +74,15 @@ Aqui está o resultado deste código:
 
 Evite pular níveis de cabeçalhos: sempre comece com `<h1>`, depois `<h2>` e assim por diante. Tente, também, ter pelo menos um cabeçalho de primeiro nível em uma página..
 
-Em {{HTMLVersionInline(5)}}, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
+Em HTML 5, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
 
 ## Especificações
 
-| Especificação                                                                                                                                                                                                            | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                                                                                                      | Status                   | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                                         | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                               | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

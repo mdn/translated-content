@@ -37,7 +37,7 @@ scale: 2 0.5 2;
 - `none`
   - : 指定不进行缩放。
 
-### 标准语法
+### 形式语法
 
 {{CSSSyntax}}
 
@@ -87,7 +87,7 @@ div:hover .scale {
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
-original_slug: Web/API/VRDevice/depthNear
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -21,7 +20,7 @@ double 値で z-depth をメートル単位で表します。初期値は `0.01`
 ```js
 var vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then(function (displays) {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;

@@ -1,14 +1,6 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Relational Operators
-  - instanceof
-  - Объект
-  - Оператор
-  - прототип
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
 
 {{jsSidebar("Operators")}}
@@ -51,7 +43,7 @@ o instanceof C;
 o instanceof D;
 
 o instanceof Object; // true, так как:
-C.prototype instanceof Object // true
+C.prototype instanceof Object; // true
 
 C.prototype = {};
 var o2 = new C();
@@ -77,8 +69,7 @@ o3 instanceof C; // true, так как C.prototype теперь присутс�
 
 Например, для проверки того, что [Node](/ru/docs/Web/API/Node) является [SVGElement](/ru/docs/Web/API/SVGElement) в разных контекстах можно использовать `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 
-> **Примечание:** **Замечания для разработчиков Mozilla:**
-> Использование XPCOM `instanceof` в коде имеет специальный эффект: `obj instanceof xpcomInterface` (например `Components.interfaces.nsIFile`) вызывает `obj.QueryInterface(xpcomInterface)` и возвращает `true` если проверка на QueryInterface прошла успешно. Побочным эффектом этого вызова является то, что можно использовать свойства _`xpcomInterface`_ на `obj` после успешной проверки с помощью `instanceof`. В отличии от стандартных глобальных JavaScript типов, проверка `obj instanceof xpcomInterface` работает как ожидается, даже если `obj` относится к другому контексту.
+> **Примечание:** Использование XPCOM `instanceof` в коде имеет специальный эффект: `obj instanceof xpcomInterface` (например `Components.interfaces.nsIFile`) вызывает `obj.QueryInterface(xpcomInterface)` и возвращает `true` если проверка на QueryInterface прошла успешно. Побочным эффектом этого вызова является то, что можно использовать свойства _`xpcomInterface`_ на `obj` после успешной проверки с помощью `instanceof`. В отличии от стандартных глобальных JavaScript типов, проверка `obj instanceof xpcomInterface` работает как ожидается, даже если `obj` относится к другому контексту.
 
 ## Примеры
 
@@ -89,25 +80,25 @@ o3 instanceof C; // true, так как C.prototype теперь присутс�
 Однако, объекты, созданные с помощью литералов, являются исключениями — хотя их prototype равен `undefined`, выражение `instanceof Object` возвращает `true`.
 
 ```js
-var simpleStr = 'Это обычная строка';
-var myString  = new String();
-var newStr    = new String('Строка, созданная с помощью конструктора');
-var myDate    = new Date();
-var myObj     = {};
+var simpleStr = "Это обычная строка";
+var myString = new String();
+var newStr = new String("Строка, созданная с помощью конструктора");
+var myDate = new Date();
+var myObj = {};
 
 simpleStr instanceof String; // возвращает false, проверяет цепочку прототипов
-myString  instanceof String; // возвращает true
-newStr    instanceof String; // возвращает true
-myString  instanceof Object; // возвращает true
+myString instanceof String; // возвращает true
+newStr instanceof String; // возвращает true
+myString instanceof Object; // возвращает true
 
-myObj instanceof Object;    // возвращает true, несмотря на прототип, равный undefined
-({})  instanceof Object;    // возвращает true, аналогично предыдущей строчке
+myObj instanceof Object; // возвращает true, несмотря на прототип, равный undefined
+({}) instanceof Object; // возвращает true, аналогично предыдущей строчке
 
-myString instanceof Date;   // возвращает false
+myString instanceof Date; // возвращает false
 
-myDate instanceof Date;     // возвращает true
-myDate instanceof Object;   // возвращает true
-myDate instanceof String;   // возвращает false
+myDate instanceof Date; // возвращает true
+myDate instanceof Object; // возвращает true
+myDate instanceof String; // возвращает false
 ```
 
 ### Показывает, что `mycar` имеет тип `Car` и тип `Object`
@@ -120,8 +111,8 @@ function Car(make, model, year) {
   this.model = model;
   this.year = year;
 }
-var mycar = new Car('Honda', 'Accord', 1998);
-var a = mycar instanceof Car;    // возвращает true
+var mycar = new Car("Honda", "Accord", 1998);
+var a = mycar instanceof Car; // возвращает true
 var b = mycar instanceof Object; // возвращает true
 ```
 

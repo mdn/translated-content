@@ -69,14 +69,14 @@ JavaScript 指南會讓您了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 ## 運算式與運算子
 
-概述：[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+概述：[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [賦值](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators)
-- [比較](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators)
-- [算數運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators)
-- [位元](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_operators)
-- [邏輯運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators)
-- [條件（三元）運算子](</zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_(ternary)_operator>)
+- [賦值](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#賦值運算子)
+- [比較](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#比較運算子)
+- [算數運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#算術運算子)
+- [位元](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#位元運算子)
+- [邏輯運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#邏輯運算子)
+- [條件（三元）運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#條件（三元）運算子)
 
 ## 數字與日期
 

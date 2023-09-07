@@ -36,7 +36,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
   - `GET`：获取一份指定（比如一个包含了一个产品或者一系列产品相关信息的 HTML 文档）。
   - `POST`：创建一份新的资源（比如给 wiki 增加一片新的文章、给数据库增加一个新的节点）。
-  - `HEAD`: 获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，您可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。
+  - `HEAD`: 获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，你可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。
   - `PUT`：更新一份已经存在的资源（或者在该资源不存在的情况下创建一份新的）。
   - `DELETE`：删除指定的资源。
   - `TRACE`、`OPTIONS`、`CONNECT、PATCH`：这些动作是为一些不常见任务设计的，因此我们在这里的讲解不会涉及到它们。
@@ -110,7 +110,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 在消息的末尾我们可以看到**主体**内容——包含了针对请求返回的真实的 HTML。
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -123,8 +123,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -145,7 +143,7 @@ header 的剩余部分还包括一些回应的其他信息（比如回应在什�
 
 下面的文本展示了当用户在网站上提交新的文件的时候，生成的一个 HTTP 请求的格式和之前展示的 GET 请求是非常相似的，只是第一行标识这个请求为 POST。
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -171,7 +169,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 请求的响应如下。状态码"302 FOUND"告知浏览器，服务端已收到它提交的 post 请求，它必须再发出第二个 HTTP 请求来加载`Location`字段中指定的页面。对于其他方面的信息含义，则与`GET`请求的响应信息类似。
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
@@ -191,7 +189,7 @@ Content-Length: 0
 
 ## 静态网站
 
-静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果您在 `/static/myproduct1.html` 有一个关于产品的页面，则该页面将返回给每个用户。如果您添加另一个类似的产品到您的网站，您将需要添加另一个页面（例如 `myproduct2.html` ）等。这可能开始变得非常低效：当您访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。
+静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果你在 `/static/myproduct1.html` 有一个关于产品的页面，则该页面将返回给每个用户。如果你添加另一个类似的产品到你的网站，你将需要添加另一个页面（例如 `myproduct2.html` ）等。这可能开始变得非常低效：当你访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。
 
 > **备注：** 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择，然而随着页面数量的增加，它们的维护成本也会很高。
 

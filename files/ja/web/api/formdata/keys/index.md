@@ -1,56 +1,60 @@
 ---
-title: FormData.keys()
+title: "FormData: keys() メソッド"
+short-title: keys()
 slug: Web/API/FormData/keys
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
-**`FormData.keys()`** メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全てのキーを通過できるようにします。キーは {{domxref("USVString")}} オブジェクトです。
+**`FormData.keys()`** メソッドは、この {{domxref("FormData")}} に含まれるすべてのキーを走査する[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。キーは文字列です。
 
-> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
-```
-formData.keys();
+```js-nolint
+keys()
 ```
 
-### 返り値
+### 引数
 
-{{jsxref("Iteration_protocols","iterator")}} を返します。
+なし。
+
+### 返値
+
+この {{domxref("FormData")}} のキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)です。
 
 ## 例
 
 ```js
-// テストの FormData オブジェクトを作成
-var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+const formData = new FormData();
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // キーを表示
-for (var key of formData.keys()) {
-   console.log(key);
+for (const key of formData.keys()) {
+  console.log(key);
 }
 ```
 
-結果は次のとおりです:
+結果は次のとおりです。
 
 ```
 key1
 key2
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.FormData.keys")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

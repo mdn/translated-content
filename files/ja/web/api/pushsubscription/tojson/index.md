@@ -10,7 +10,7 @@ slug: Web/API/PushSubscription/toJSON
 ## 構文
 
 ```js-nolint
-​mySubscription = subscription.toJSON()
+mySubscription = subscription.toJSON()
 ```
 
 ### 引数
@@ -24,11 +24,11 @@ JSON オブジェクト。現在、`endpoint` メンバーとしてサブスク�
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
+navigator.serviceWorker.ready.then(function (reg) {
+  reg.pushManager.getSubscription().then(function (subscription) {
     var mySubscription = subscription.toJSON();
     // サブスクリプションの詳細を使用して何かを実行する。
-  })
+  });
 });
 ```
 

@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Fullscreen API")}}
 
-{{domxref("Document")}} の **`exitFullscreen()`** メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを向け、画面を以前の状態に戻すことを要求します。これはふつう、以前の {{domxref("Element.requestFullscreen()")}} の呼び出しの効果を取り消します。
+{{domxref("Document")}} の **`exitFullscreen()`** メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを抜け、画面を以前の状態に戻すことを要求します。これはふつう、以前の {{domxref("Element.requestFullscreen()")}} の呼び出しの効果を取り消します。
 
 ## 構文
 
@@ -30,16 +30,17 @@ exitFullscreen()
 ```js
 document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     document.documentElement.requestFullscreen();
   }
-}
+};
 ```
 
-> **メモ:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullscreen", "例")}}をご覧ください。
+> **メモ:** もっと完全な例については、[`Element.requestFullscreen()` の例](/ja/docs/Web/API/Element/requestFullscreen#%E4%BE%8B)をご覧ください。
 
 ## 仕様書
 
@@ -56,4 +57,4 @@ document.onclick = (event) => {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} および {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 属性
+- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

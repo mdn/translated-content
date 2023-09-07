@@ -1,25 +1,29 @@
 ---
 title: StorageManager
 slug: Web/API/StorageManager
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}}
 
-The **`StorageManager`** interface of the the [Storage API](/es/docs/Web/API/Storage_API) provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either {{domxref("navigator.storage")}} or {{domxref("WorkerNavigator.storage")}}.
+La interfaz **`StorageManager`** de la [API de almacenamiento](/es/docs/Web/API/Storage_API) proporciona una interfaz para administrar los permisos de persistencia y estimar el almacenamiento disponible. Puede obtener una referencia a esta interfaz mediante {{domxref("navigator.storage")}} o {{domxref("WorkerNavigator.storage")}}.
 
-## Methods
+## Métodos de instancia
 
 - {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
-  - : Returns a {{domxref("StorageEstimate")}} object containing usage and quota numbers for your origin.
+  - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en un objeto que contiene números de uso y cuota para su origen.
+- {{domxref("StorageManager.getDirectory()")}} {{securecontext_inline}}
+  - : Se utiliza para obtener una referencia a un objeto {{domxref("FileSystemDirectoryHandle")}} que permite el acceso a un directorio y su contenido, almacenado en el [sistema de archivos privado de origen](/es/docs/Web/API/File_System_Access_API#origin_private_file_system). Devuelve una {{jsxref('Promise','Promesa')}} que cumple con un objeto {{domxref("FileSystemDirectoryHandle")}}.
 - {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
-  - : Returns a {{jsxref('Promise')}} that resolves to `true` if the user agent is able to persist your site's storage.
+  - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en `true` si el agente de usuario puede conservar el almacenamiento de su sitio.
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
-  - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
+  - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en `true` si ya se ha otorgado persistencia para el almacenamiento de su sitio.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

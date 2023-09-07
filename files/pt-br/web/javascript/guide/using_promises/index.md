@@ -1,7 +1,6 @@
 ---
 title: Usando promises
 slug: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Usando_promises
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -73,40 +72,49 @@ Basicamente, cada promise representa a completude de outro passo assíncrono na 
 Antigamente, realizar operações assíncronas comuns em uma linha levaria à clássica pirâmide da desgraça:
 
 ```js
-doSomething(function(result) {
-  doSomethingElse(result, function(newResult) {
-    doThirdThing(newResult, function(finalResult) {
-      console.log('Got the final result: ' + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+doSomething(function (result) {
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Got the final result: " + finalResult);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
 Ao invés disso, com funções modernas, nós atribuímos nossas callbacks às promises retornadas, formando uma _cadeia de promise_:
 
 ```js
-doSomething().then(function(result) {
-  return doSomethingElse(result);
-})
-.then(function(newResult) {
-  return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-  console.log('Got the final result: ' + finalResult);
-})
-.catch(failureCallback);
+doSomething()
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then(function (newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function (finalResult) {
+    console.log("Got the final result: " + finalResult);
+  })
+  .catch(failureCallback);
 ```
 
 Os argumentos para `then` são opcionais, e `catch(failureCallback)` é uma abreviação para `then(null, failureCallback)`. Você pode também pode ver isso escrito com [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => {
-  console.log(`Got the final result: ${finalResult}`);
-})
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => {
+    console.log(`Got the final result: ${finalResult}`);
+  })
+  .catch(failureCallback);
 ```
 
 **Importante:** Sempre retorne um resultado, de outra forma as callbacks não vão capturar o resultado da promise anterior.
@@ -117,21 +125,21 @@ doSomething()
 
 ```js
 new Promise((resolve, reject) => {
-    console.log('Initial');
+  console.log("Initial");
 
-    resolve();
+  resolve();
 })
-.then(() => {
-    throw new Error('Something failed');
+  .then(() => {
+    throw new Error("Something failed");
 
-    console.log('Do this');
-})
-.catch(() => {
-    console.log('Do that');
-})
-.then(() => {
-    console.log('Do this whatever happened before');
-});
+    console.log("Do this");
+  })
+  .catch(() => {
+    console.log("Do that");
+  })
+  .then(() => {
+    console.log("Do this whatever happened before");
+  });
 ```
 
 Isso vai produzir o seguinte texto:
@@ -150,10 +158,10 @@ Na pirâmide da desgraça vista anteriormente, você pode se lembrar de ter vist
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => console.log(`Got the final result: ${finalResult}`))
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => console.log(`Got the final result: ${finalResult}`))
+  .catch(failureCallback);
 ```
 
 Basicamente, uma corrente de promises para se houver uma exceção, procurando por catch handlers no lugar. Essa modelagem de código segue bastante a maneira de como o código síncrono funciona:
@@ -164,7 +172,7 @@ try {
   const newResult = syncDoSomethingElse(result);
   const finalResult = syncDoThirdThing(newResult);
   console.log(`Got the final result: ${finalResult}`);
-} catch(error) {
+} catch (error) {
   failureCallback(error);
 }
 ```
@@ -178,7 +186,7 @@ async function foo() {
     const newResult = await doSomethingElse(result);
     const finalResult = await doThirdThing(newResult);
     console.log(`Got the final result: ${finalResult}`);
-  } catch(error) {
+  } catch (error) {
     failureCallback(error);
   }
 }
@@ -203,9 +211,11 @@ Misturar chamadas de retorno e promises de _old-style_ é problemático. Se `say
 Por sorte nós podemos envolvê-la em uma promise. É uma boa prática envolver funções problemáticas no menor nivel possível, e nunca chamá-las diretamente de novo:
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-wait(10000).then(() => saySomething("10 seconds")).catch(failureCallback);
+wait(10000)
+  .then(() => saySomething("10 seconds"))
+  .catch(failureCallback);
 ```
 
 Basicamente, um construtor de promises pega uma função executora que nos deixa resolver ou rejeitar uma promise manualmente. Desde que `setTimeout` não falhe, nós deixamos a rejeição de fora neste caso.
@@ -227,8 +237,11 @@ Basicamente reduzimos um vetor de funções assíncronas a uma cadeia de promise
 Isso também pode ser feito com uma função de composição reutilizável, que é comum em programação funcional:
 
 ```js
-const applyAsync = (acc,val) => acc.then(val);
-const composeAsync = (...funcs) => x => funcs.reduce(applyAsync, Promise.resolve(x));
+const applyAsync = (acc, val) => acc.then(val);
+const composeAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(applyAsync, Promise.resolve(x));
 ```
 
 A função composeAsync aceitará qualquer número de funções como argumentos e retornará uma nova função que aceita um valor inicial a ser passado pelo pipeline de composição. Isso é benéfico porque alguma, ou todas as funções, podem ser assíncronas ou síncronas, e é garantido de que serão executadas na ordem correta.
@@ -258,10 +271,12 @@ console.log(1); // 1, 2
 Ao invés de rodar imediatamente, a função passada é colocada em uma micro tarefa, o que significa que ela roda depois que a fila estiver vazia no final do atual processo de evento de loop do Javascript, ou seja: muito em breve:
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 wait().then(() => console.log(4));
-Promise.resolve().then(() => console.log(2)).then(() => console.log(3));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
 console.log(1); // 1, 2, 3, 4
 ```
 

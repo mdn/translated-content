@@ -23,7 +23,9 @@ l10n:
 const title = "Walk dog";
 
 // 通常通りトランザクションを開始します
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // 指定した title をタイトルとして持つ TO-DO リストのオブジェクトを取得します
 const objectStoreTitleRequest = objectStore.get(title);
@@ -42,7 +44,9 @@ objectStoreTitleRequest.onsuccess = () => {
   console.log(`この要求の要求元は ${updateTitleRequest.source} です`);
   // 新しい要求が成功したら、また displayData() 関数を
   // 実行し、表示を更新します
-  updateTitleRequest.onsuccess = () => { displayData(); };
+  updateTitleRequest.onsuccess = () => {
+    displayData();
+  };
 };
 ```
 

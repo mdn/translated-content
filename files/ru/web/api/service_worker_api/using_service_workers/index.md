@@ -1,9 +1,6 @@
 ---
 title: Использование Service Worker
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-tags:
-  - основы ServiceWorker Workers руководство
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
@@ -16,7 +13,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 Предыдущей попыткой была технология AppCache, казавшаяся хорошей идеей, потому как позволяла действительно просто указывать ресурсы для кеширования. Однако, эта технология допускает много предположений о том, что вы пытаетесь сделать, и затем с грохотом ломается, когда ваше приложение работает не в точности с этими допущениями. Чтобы получить больше информации по этой теме, прочитайте (неудачно названную, но хорошо написанную) статью Джейка Арчибальда [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag).
 
-> **Примечание:** **На заметку**: Начиная с Firefox 44, когда используется [AppCache](/ru/docs/Web/HTML/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BA%D1%8D%D1%88%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9) для предоставления странице поддержки офлайн-режима, в консоли разработчика отображается предупреждение о том, что нужно использовать технологию [Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers) ({{bug("1204581")}}.)
+> **Примечание:** Начиная с Firefox 44, когда используется [AppCache](/ru/docs/Web/HTML/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BA%D1%8D%D1%88%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9) для предоставления странице поддержки офлайн-режима, в консоли разработчика отображается предупреждение о том, что нужно использовать технологию [Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers) ({{bug("1204581")}}.)
 
 Технология Service Workers должна в итоге решить озвученные выше вопросы. Синтаксис Service Worker более сложен, чем тот же AppCache, но взамен вы можете посредством JavaScript контролировать AppCache-подразумеваемое поведение с высокой степенью детализации, что позволяет вам решить описанную проблему и многие другие. Используя Service Worker, вы можете без труда получить приложение, использующее в первую очередь кешированные ресурсы, предоставляя тем самым поведение по умолчанию в автономном режиме, до того как будет получено по сети больше данных (такой подход называется [Offline First](http://offlinefirst.org/)). Так обычно работают нативные приложения, что часто является причиной выбора пользователя в их пользу.
 
@@ -63,7 +60,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 try {
   const value = myFunction();
   console.log(value);
-} catch(err) {
+} catch (err) {
   console.log(err);
 }
 ```
@@ -71,11 +68,13 @@ try {
 #### async
 
 ```js
-myFunction().then((value) => {
-  console.log(value);
-}).catch((err) => {
-  console.log(err);
-});
+myFunction()
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 В первом примере код, идущий за вызовом функции `myFunction()`, будет ждать завершения вызова и возврата значения. Во втором примере `myFunction()` возвращает промис для `value`, в этом случае, последующий код сможет выполняться, не дожидаясь завершения основной работы функции. Когда промис разрешится, код, переданный методу `then`, будет выполнен асинхронно.
@@ -90,24 +89,28 @@ myFunction().then((value) => {
 const imgLoad = (url) => {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
+    request.open("GET", url);
+    request.responseType = "blob";
 
     request.onload = () => {
       if (request.status == 200) {
         resolve(request.response);
       } else {
-        reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
+        reject(
+          Error(
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
+        );
       }
     };
 
     request.onerror = () => {
-      reject(Error('There was a network error.'));
+      reject(Error("There was a network error."));
     };
 
     request.send();
   });
-}
+};
 ```
 
 Мы возвращаем новый промис, созданный конструктором `Promise()`, который в качестве аргумента принимает функцию с параметрами `resolve` и `reject`. Где-то внутри функции мы должны определить случаи, при которых промис должен быть разрешён или отклонён, — в нашем случае, в зависимости от того, вернулся ли статус 200 ОК или нет, будут вызваны `resolve` в случае успеха или `reject` при неудаче. Последующее содержимое этой функции — вполне стандартное XHR-наполнение, поэтому на данный момент не стоит о нем волноваться.
@@ -115,26 +118,29 @@ const imgLoad = (url) => {
 Вызывая функцию `imgLoad()`, мы ожидаемо передаём в качестве параметра url изображения, которое хотим загрузить, но далее код немного отличается:
 
 ```js
-let body = document.querySelector('body');
+let body = document.querySelector("body");
 let myImage = new Image();
 
-imgLoad('myLittleVader.jpg').then((response) => {
-  var imageURL = window.URL.createObjectURL(response);
-  myImage.src = imageURL;
-  body.appendChild(myImage);
-}, (Error) => {
-  console.log(Error);
-});
+imgLoad("myLittleVader.jpg").then(
+  (response) => {
+    var imageURL = window.URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  (Error) => {
+    console.log(Error);
+  },
+);
 ```
 
 После вызова функции мы "цепляем" к ней вызов промис-метода `then()`, которому в качестве параметров передаём две функции - первая будет вызвана в случае выполнения промиса, созданного вызовом функции `imgLoad()`, вторая функция будет вызвана в случае отклонения этого промиса. В случае выполнения мы показываем изображение в элементе `myImage`, который прикрепляем к body (аргументом является `request.response`, помещённый в промис-методе `resolve`); в случае отклонения промиса в консоли будет отображено сообщение об ошибке.
 
 Все это происходит асинхронно.
 
-> **Примечание:** **На заметку**: вы можете также объединять вызов нескольких промис-методов в одну цепочку, как в этом примере:
+> **Примечание:** вы можете также объединять вызов нескольких промис-методов в одну цепочку, как в этом примере:
 > `myPromise().then(success, failure).then(success).catch(failure);`
 
-> **Примечание:** **На заметку**: вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald’s) [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
+> **Примечание:** вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald's) [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
 
 ## Демонстрация Service Workers
 
@@ -157,15 +163,17 @@ imgLoad('myLittleVader.jpg').then((response) => {
 Ниже представлен первый блок кода файла app.js. Это точка входа в Service Worker.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
-  .then((reg) => {
-    // регистрация сработала
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch((error) => {
-    // регистрация прошла неудачно
-    console.log('Registration failed with ' + error);
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("./sw-test/sw.js", { scope: "./sw-test/" })
+    .then((reg) => {
+      // регистрация сработала
+      console.log("Registration succeeded. Scope is " + reg.scope);
+    })
+    .catch((error) => {
+      // регистрация прошла неудачно
+      console.log("Registration failed with " + error);
+    });
 }
 ```
 
@@ -179,9 +187,9 @@ if ('serviceWorker' in navigator) {
 
 Один сервис-воркер может контролировать несколько страниц. Каждый раз, когда загружается страница, находящаяся в пределах области видимости, сервис-воркер будет установлен на ней и начнёт работу. Поэтому будьте осторожны с применением глобальных переменных в скриптах сервис-воркеров, потому как у каждой страницы нет своего уникального экземпляра сервис-воркера.
 
-> **Примечание:** **На заметку**: Сервис-воркеры функционально похожи на прокси-серверы, они позволяют модифицировать запросы и ответы, замещая записями из собственного кеша, и многое другое.
+> **Примечание:** Сервис-воркеры функционально похожи на прокси-серверы, они позволяют модифицировать запросы и ответы, замещая записями из собственного кеша, и многое другое.
 
-> **Примечание:** **На заметку**: Есть одна очень хорошая особенность при работе с сервис-воркерами. В случае, если вы используете функциональность проверки поддержки Service Worker, то приложение в браузерах, не имеющих поддержки, продолжат нормально работать с ожидаемым поведением. Кроме того, если браузер поддерживает только AppCache, то будет использована эта технология. В случае, если браузер поддерживает и AppCache и Service Worker, то будет использована Service Worker.
+> **Примечание:** Есть одна очень хорошая особенность при работе с сервис-воркерами. В случае, если вы используете функциональность проверки поддержки Service Worker, то приложение в браузерах, не имеющих поддержки, продолжат нормально работать с ожидаемым поведением. Кроме того, если браузер поддерживает только AppCache, то будет использована эта технология. В случае, если браузер поддерживает и AppCache и Service Worker, то будет использована Service Worker.
 
 #### Почему мой сервис-воркер не прошёл регистрацию?
 
@@ -205,27 +213,27 @@ if ('serviceWorker' in navigator) {
 
 Событие install возникает после того как установка успешно завершится. Это событие используется главным образом для того, чтобы заполнить кеш браузера ресурсами, необходимыми для успешного запуска в офлайн-режиме. Для этого используется новый API хранилища Service Worker — {{domxref("cache")}} — глобальный для всех сервис-воркеров, который позволяет нам хранить результаты запросов, используя в качестве ключа для их получения сами запросы. Этот API работает аналогично стандартному кешу браузера, но только для вашего домена. Данные в кеше сохраняются до тех пор, пока вы сами не решите их удалить — вы имеете полный контроль.
 
-> **Примечание:** **На заметку**: Cache API поддерживается не всеми браузерами (смотрите раздел [Browser support](#browser_support) чтобы получить больше информации). Если вы хотите сейчас использовать эту технологию, то можете рассмотреть возможность использования полифила, который доступен в [Google's Topeka demo](https://github.com/Polymer/topeka/blob/master/sw.js), или можете хранить ресурсы в [IndexedDB](/ru/docs/Web/API/IndexedDB_API).
+> **Примечание:** Cache API поддерживается не всеми браузерами (смотрите раздел [Browser support](#browser_support) чтобы получить больше информации). Если вы хотите сейчас использовать эту технологию, то можете рассмотреть возможность использования полифила, который доступен в [Google's Topeka demo](https://github.com/Polymer/topeka/blob/master/sw.js), или можете хранить ресурсы в [IndexedDB](/ru/docs/Web/API/IndexedDB_API).
 
 Давайте начнём этот раздел посмотрев на фрагмент кода ниже — это [первый блок кода, который вы увидите в нашем сервис-воркере](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L17):
 
 ```js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
+    caches.open("v1").then((cache) => {
       return cache.addAll([
-        './sw-test/',
-        './sw-test/index.html',
-        './sw-test/style.css',
-        './sw-test/app.js',
-        './sw-test/image-list.js',
-        './sw-test/star-wars-logo.jpg',
-        './sw-test/gallery/',
-        './sw-test/gallery/bountyHunters.jpg',
-        './sw-test/gallery/myLittleVader.jpg',
-        './sw-test/gallery/snowTroopers.jpg'
+        "./sw-test/",
+        "./sw-test/index.html",
+        "./sw-test/style.css",
+        "./sw-test/app.js",
+        "./sw-test/image-list.js",
+        "./sw-test/star-wars-logo.jpg",
+        "./sw-test/gallery/",
+        "./sw-test/gallery/bountyHunters.jpg",
+        "./sw-test/gallery/myLittleVader.jpg",
+        "./sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```
@@ -235,9 +243,9 @@ self.addEventListener('install', (event) => {
 3. Если промис будет отклонён, то установка будет завершена неудачно, и воркер ничего не сделает. Это хорошо, потому как вы можете исправить свой код и затем попробовать провести регистрацию в следующий раз.
 4. После успешной установки сервис-воркер активируется. Этот момент не очень важен при первоначальной установке/активации сервис-воркера, в то же время он имеет большое значение, когда происходит обновление воркера (смотрите раздел [Обновление вашего сервис-воркера](#обновление_вашего_сервис-воркера), находящийся ниже).
 
-> **Примечание:** **На заметку**: [localStorage](/ru/docs/Web/Guide/API/DOM/Storage) работает схожим образом, но в синхронном режиме, поэтому запрещён в сервис-воркерах.
+> **Примечание:** [localStorage](/ru/docs/Web/Guide/API/DOM/Storage) работает схожим образом, но в синхронном режиме, поэтому запрещён в сервис-воркерах.
 
-> **Примечание:** **На заметку**: При необходимости хранить данные в сервис-воркерах вы можете использовать [IndexedDB](/ru/docs/Web/API/IndexedDB_API).
+> **Примечание:** При необходимости хранить данные в сервис-воркерах вы можете использовать [IndexedDB](/ru/docs/Web/API/IndexedDB_API).
 
 ### Настраиваемые ответы на запросы
 
@@ -250,20 +258,19 @@ self.addEventListener('install', (event) => {
 Вы можете подключить к сервис-воркеру обработчик события `fetch` и внутри него на объекте события вызвать метод `respondWith()`, чтобы заменить ответы и показать собственную "магию".
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
+self.addEventListener("fetch", (event) => {
+  event
+    .respondWith
     // магия происходит здесь
-  );
+    ();
 });
 ```
 
 Для начала, на каждый сетевой запрос мы можем отдать в ответ ресурс, чей url соответствует запросу:
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-  );
+self.addEventListener("fetch", (event) => {
+  event.respondWith(caches.match(event.request));
 });
 ```
 
@@ -273,38 +280,41 @@ self.addEventListener('fetch', (event) => {
 
 1. Конструктор `{{domxref("Response.Response","Response()")}}` позволяет вам создавать собственные ответы. В данном случае, мы всего лишь возвращаем простую текстовую строку:
 
-    ```js
-    new Response('Hello from your friendly neighbourhood service worker!');
-    ```
+   ```js
+   new Response("Hello from your friendly neighbourhood service worker!");
+   ```
 
-    В этом более сложном объекте Response показано, как вы можете передать набор заголовков в свой ответ, эмулируя стандартный HTTP-ответ. Здесь мы просто сообщаем браузеру, чем является содержимое ответа:
+   В этом более сложном объекте Response показано, как вы можете передать набор заголовков в свой ответ, эмулируя стандартный HTTP-ответ. Здесь мы просто сообщаем браузеру, чем является содержимое ответа:
 
-    ```js
-    new Response('<p>Hello from your friendly neighbourhood service worker!</p>', {
-      headers: { 'Content-Type': 'text/html' }
-    });
-    ```
+   ```js
+   new Response(
+     "<p>Hello from your friendly neighbourhood service worker!</p>",
+     {
+       headers: { "Content-Type": "text/html" },
+     },
+   );
+   ```
 
 2. Если совпадение не было найдено в кеше, вы можете попросить браузер {{domxref("GlobalFetch.fetch","загрузить")}} тот же ресурс, чтобы получить новый файл через обычную сеть, если она доступна:
 
-    ```js
-    fetch(event.request);
-    ```
+   ```js
+   fetch(event.request);
+   ```
 
 3. Если информация, соответствующая запросу, в кеше не найдена, а также сеть не доступна, то вы можете просто ответить на запрос какой-либо страницей по умолчанию, которая хранится в кеше, используя {{domxref("CacheStorage.match","match()")}}:
 
-    ```js
-    caches.match('./fallback.html');
-    ```
+   ```js
+   caches.match("./fallback.html");
+   ```
 
 4. Вы можете получить больше информации о каждом запросе, используя для этого свойства объекта {{domxref("Request")}}, который можно получить как свойство объекта {{domxref("FetchEvent")}}:
 
-    ```js
-    event.request.url
-    event.request.method
-    event.request.headers
-    event.request.body
-    ```
+   ```js
+   event.request.url;
+   event.request.method;
+   event.request.headers;
+   event.request.body;
+   ```
 
 ## Восстановление неудачных запросов
 
@@ -313,11 +323,11 @@ self.addEventListener('fetch', (event) => {
 К счастью, сервис-воркеры имеют структуру основанную на промисах, что делает тривиальной такую обработку и предоставляет большое количество способов успешно обработать запрос:
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request);
-    })
+    }),
   );
 });
 ```
@@ -327,16 +337,19 @@ self.addEventListener('fetch', (event) => {
 Если же мы были достаточно умны, то мы не стали бы просто возвращать сетевой запрос, а сохранили бы его результат в кеше, чтобы иметь возможность получить его в офлайн-режиме. В случае с нашим демо-приложением "Star Wars gallery", это означает, что, если в галерею будет добавлено ещё одно изображение, то оно будет получено и сохранено в кеше:
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        return caches.open('v1').then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
-    })
+      return (
+        resp ||
+        fetch(event.request).then((response) => {
+          return caches.open("v1").then((cache) => {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -348,20 +361,26 @@ self.addEventListener('fetch', (event) => {
 У нас все ещё остаётся единственная проблема - если на какой-либо запрос в кеше не будет найдено соответствие, и в этот момент сеть не доступна, то наш запрос завершится неудачно. Давайте реализуем запасной вариант по умолчанию, при котором пользователь, в описанном случае, будет получать хоть что-нибудь:
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        let responseClone = response.clone();
-        caches.open('v1').then((cache) => {
-          cache.put(event.request, responseClone);
-        });
+    caches
+      .match(event.request)
+      .then((resp) => {
+        return (
+          resp ||
+          fetch(event.request).then((response) => {
+            let responseClone = response.clone();
+            caches.open("v1").then((cache) => {
+              cache.put(event.request, responseClone);
+            });
 
-        return response;
-      });
-    }).catch(() => {
-      return caches.match('./sw-test/gallery/myLittleVader.jpg');
-    })
+            return response;
+          })
+        );
+      })
+      .catch(() => {
+        return caches.match("./sw-test/gallery/myLittleVader.jpg");
+      }),
   );
 });
 ```
@@ -405,17 +424,19 @@ self.addEventListener('install', (event) => {
 Promise, переданный в `waitUntil()`, заблокирует другие события до своего завершения, поэтому можно быть уверенным, что процесс очистки закончится раньше, чем выполнится первое событие `fetch` на основе нового кеша.
 
 ```js
-self.addEventListener('activate', (event) => {
-  var cacheKeeplist = ['v2'];
+self.addEventListener("activate", (event) => {
+  var cacheKeeplist = ["v2"];
 
   event.waitUntil(
     caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cacheKeeplist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+      return Promise.all(
+        keyList.map((key) => {
+          if (cacheKeeplist.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        }),
+      );
+    }),
   );
 });
 ```
@@ -435,7 +456,7 @@ Firefox также начал реализовывать полезные инс
 - Во время тестирования вы можете снять ограничение HTTPS, поставив флажок "Enable Service Workers over HTTP (when toolbox is open)" в [настройках Firefox Developer Tools](/ru/docs/Tools/Settings).
 - Кнопка "Забыть", включаемая в настройках «Персонализация» в Firefox, позволяет удалить все сервис-воркеры и очистить их кеши.
 
-> **Примечание:** **На заметку**: вы можете держать своё приложение на `http://localhost` (например, используя `me@localhost:/my/app$ python -m SimpleHTTPServer`) для локальной разработки. См. [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
+> **Примечание:** вы можете держать своё приложение на `http://localhost` (например, используя `me@localhost:/my/app$ python -m SimpleHTTPServer`) для локальной разработки. См. [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
 
 ## Смотрите также
 

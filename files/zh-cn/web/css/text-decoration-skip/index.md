@@ -50,7 +50,7 @@ text-decoration-skip: unset;
 - `box-decoration`
   - : 文本修饰会跳过盒模型的内边距、边框、外边距。这只会影响到祖先元素定义的修饰；修饰的盒不会渲染本身的盒修饰。
 
-### 语法格式
+### 形式语法
 
 {{csssyntax}}
 
@@ -75,12 +75,12 @@ p {
 
 ### 结果
 
-{{EmbedLiveSample("Example", "100%", 60)}}
+{{EmbedLiveSample("示例", "100%", 60)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser Compatibility
+## 浏览器兼容性
 
 {{Compat}}

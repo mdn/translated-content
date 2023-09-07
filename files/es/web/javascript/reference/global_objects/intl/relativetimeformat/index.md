@@ -1,7 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeFormat
 ---
 
 {{JSRef}}
@@ -41,9 +40,9 @@ El siguiente ejemplo muestra cómo conseguir el tiempo relativo para el mejor id
 // Crea un formateador de tiempo relativo en tu lenguaje
 // con los valores por defectos pasados expresamente.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // otros valores: "lookup"
-    numeric: "always", // otros valores: "auto"
-    style: "long", // otros valores: "short" or "narrow"
+  localeMatcher: "best fit", // otros valores: "lookup"
+  numeric: "always", // otros valores: "auto"
+  style: "long", // otros valores: "short" or "narrow"
 });
 
 // Formatea el tiempo relativo con valores negativos (-1).
@@ -76,9 +75,9 @@ rtf.formatToParts(100, "day");
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
+{{Compat}}
 
 ## Ver también
 

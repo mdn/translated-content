@@ -64,41 +64,41 @@ ECMAScript 规范规定：如果一个字符串不符合标准格式，则函数
 
 ```js
 // 包含无效值的非 ISO 格式字符串
-new Date('23/25/2014');
+new Date("23/25/2014");
 ```
 
 在 Firefox 30 中会被识别为本地时区的 2015 年 12 月 25 日，而在 Safari 7 中则是无效日期。但是，如果字符串被识别为 ISO 格式并且包含无效值，则在所有遵循 ES5 或者更新标准的浏览器中都会返回 {{jsxref("NaN")}} 。
 
 ```js
 // 包含无效值的 ISO 格式字符串
-new Date('2014-25-23').toISOString();
+new Date("2014-25-23").toISOString();
 // 在所有遵循 ES5 的浏览器中返回 "RangeError: invalid date"
 ```
 
 SpiderMonkey 的引擎策略可以在 [`jsdate.cpp`](http://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889) 中找到。字符串 `"10 06 2014"` 可以作为非 ISO 格式字符串使用自定义处理方式的例子。参见这篇关于解析如何进行的[粗略纲要](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6)。
 
 ```js
-new Date('10 06 2014');
+new Date("10 06 2014");
 ```
 
 将会被解析为本地时间 2014 年 10 月 6 日，而不是 6 月 10 日。另一个例子
 
 ```js
-new Date('foo-bar 2014').toString();
+new Date("foo-bar 2014").toString();
 // 返回："Invalid Date"
 
-Date.parse('foo-bar 2014');
+Date.parse("foo-bar 2014");
 // 返回：NaN
 ```
 
-## 例子
+## 示例
 
-### 例子：使用 `Date.parse()`
+### 示例：使用 `Date.parse()`
 
 如果 `IPOdate` 是一个已经存在的 {{jsxref("Date")}} 对象，则可以把其设置为本地时间 1995 年 8 月 9 日。如下：
 
 ```js
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+IPOdate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 其他一些解析非标准格式日期的例子：
@@ -149,7 +149,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 
 ## 兼容性提示
 
-Firefox 49 修改了解析 2 位数年份的方式，从和 Internet Explorer 一致改为和 Google Chrome 浏览器一致。现在，2 位数的年份小于等于 `50` 的将会被解析为 21 世纪的年份。比如，`04/16/17`，在之前会被解析为 1917 年 4 月 16 日，现在将被解析为 2017 年 4 月 16 日。为了避免任何可能的同步问题或者有歧义的年份，推荐使用 ISO 8601 格式如 "2017-04-16" ({{bug(1265136)}})。
+Firefox 49 修改了解析 2 位数年份的方式，从和 Internet Explorer 一致改为和 Google Chrome 浏览器一致。现在，2 位数的年份小于等于 `50` 的将会被解析为 21 世纪的年份。比如，`04/16/17`，在之前会被解析为 1917 年 4 月 16 日，现在将被解析为 2017 年 4 月 16 日。为了避免任何可能的同步问题或者有歧义的年份，推荐使用 ISO 8601 格式如 "2017-04-16" ([Firefox bug 1265136](https://bugzil.la/1265136))。
 
 ## 相关链接
 

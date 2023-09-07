@@ -21,9 +21,9 @@ var timingInfo = performance.timing;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.timing")}}
+{{Compat}}
 
 ## Ver también
 

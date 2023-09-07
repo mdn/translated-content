@@ -9,19 +9,19 @@ slug: Glossary/Key
 
 1. 一般知識
 
-    1. ウィキペディアの[ケルクホフスの原理](https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%AB%E3%82%AF%E3%83%9B%E3%83%95%E3%82%B9%E3%81%AE%E5%8E%9F%E7%90%86)の記事
+   1. ウィキペディアの[ケルクホフスの原理](https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%AB%E3%82%AF%E3%83%9B%E3%83%95%E3%82%B9%E3%81%AE%E5%8E%9F%E7%90%86)の記事
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
-    2. {{Glossary("Cipher", "サイファー")}}
-    3. {{Glossary("Ciphertext", "暗号文")}}
-    4. {{Glossary("Cipher suite", "暗号スイート")}}
-    5. {{Glossary("Cryptanalysis", "暗号解読")}}
-    6. {{Glossary("Cryptography", "暗号学")}}
-    7. {{Glossary("Decryption", "復号")}}
-    8. {{Glossary("Encryption", "暗号化")}}
-    9. {{Glossary("Key", "暗号鍵")}}
-    10. {{Glossary("Plaintext", "平文")}}
-    11. {{Glossary("Public-key cryptography", "公開鍵暗号")}}
-    12. {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}
+   1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
+   2. {{Glossary("Cipher", "サイファー")}}
+   3. {{Glossary("Ciphertext", "暗号文")}}
+   4. {{Glossary("Cipher suite", "暗号スイート")}}
+   5. {{Glossary("Cryptanalysis", "暗号解読")}}
+   6. {{Glossary("Cryptography", "暗号学")}}
+   7. {{Glossary("Decryption", "復号")}}
+   8. {{Glossary("Encryption", "暗号化")}}
+   9. {{Glossary("Key", "暗号鍵")}}
+   10. {{Glossary("Plaintext", "平文")}}
+   11. {{Glossary("Public-key cryptography", "公開鍵暗号")}}
+   12. {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}

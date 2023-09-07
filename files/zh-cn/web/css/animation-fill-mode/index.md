@@ -54,7 +54,7 @@ animation-fill-mode: both, forwards, none;
 - `both`
   - : 动画将遵循`forwards`和`backwards`的规则，从而在两个方向上扩展动画属性。
 
-> **备注：** 当您在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)。
+> **备注：** 当你在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#Setting_multiple_animation_property_values)。
 
 ### 正式语法
 
@@ -62,14 +62,14 @@ animation-fill-mode: both, forwards, none;
 
 ## 示例
 
-您可以在以下示例中看到 `animation-fill-mode` 的效果。它演示了如何对于运行无限时间的动画，可以使其保持最终状态而不是恢复到原始状态（这是默认状态）。
+你可以在以下示例中看到 `animation-fill-mode` 的效果。它演示了如何对于运行无限时间的动画，可以使其保持最终状态而不是恢复到原始状态（这是默认状态）。
 
 ### HTML
 
 ```html
 <p>Move your mouse over the gray box!</p>
 <div class="demo">
- <div class="growsandstays">This grows and stays big.</div>
+  <div class="growsandstays">This grows and stays big.</div>
   <div class="grows">This just grows.</div>
 </div>
 ```
@@ -83,8 +83,12 @@ animation-fill-mode: both, forwards, none;
 }
 
 @keyframes grow {
-  0% { font-size: 0; }
-  100% { font-size: 40px; }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 
 .demo:hover .grows {
@@ -99,7 +103,7 @@ animation-fill-mode: both, forwards, none;
 }
 ```
 
-{{EmbedLiveSample('Example',700,300)}}
+{{EmbedLiveSample('示例',700,300)}}
 
 更多示例请查看 [CSS 动画](/zh-CN/CSS/CSS_animations) 。
 
@@ -113,7 +117,7 @@ animation-fill-mode: both, forwards, none;
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

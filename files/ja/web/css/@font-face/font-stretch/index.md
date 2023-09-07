@@ -28,7 +28,7 @@ font-stretch: 200%;
 
 /* 複数値 */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
 `font-weight` プロパティは以下にリストとして示されている値のいずれかを使用して記述されます。
@@ -129,8 +129,9 @@ TrueType または OpenType 可変フォントの場合、 "wdth" バリエー�
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```

@@ -15,8 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 
 ```js
 browser.pageAction.show(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### 매개변수
@@ -30,7 +30,7 @@ browser.pageAction.show(
 
 ### 반환 값
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's page action is being shown for the given tab, and `false` otherwise.
+A [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's page action is being shown for the given tab, and `false` otherwise.
 
 ## 브라우저 호환성
 
@@ -43,10 +43,10 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
+  title: "Show page action",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "show") {
     browser.pageAction.show(tab.id);
   }

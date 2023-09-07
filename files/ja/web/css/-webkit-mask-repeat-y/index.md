@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-repeat-y'
+title: "-webkit-mask-repeat-y"
 slug: Web/CSS/-webkit-mask-repeat-y
 ---
 
@@ -52,12 +52,12 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
 ```
@@ -68,7 +68,7 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }
 ```

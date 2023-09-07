@@ -1,14 +1,6 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-  - Web Workers
-translation_of: Web/API/Performance/measure
 ---
 
 {{APIRef("User Timing API")}}
@@ -29,10 +21,10 @@ L'{{domxref("PerformanceEntry", "entrée de performance","",1)}} créée par `me
 ## Syntaxe
 
 ```js
-  performance.measure(name);
-  performance.measure(name, startMark);
-  performance.measure(name, startMark, endMark);
-  performance.measure(name, undefined, endMark);
+performance.measure(name);
+performance.measure(name, startMark);
+performance.measure(name, startMark, endMark);
+performance.measure(name, undefined, endMark);
 ```
 
 ### Arguments
@@ -53,19 +45,22 @@ Aucune
 L'exemple suivant montre comment `measure()` est utilisé pour créer une nouvelle _mesure_ d'{{domxref("PerformanceEntry", "entrée de performance","",1)}} dans le tampon d'entrée de performance du navigateur.
 
 ```js
-const markerNameA = "example-marker-a"
-const markerNameB = "example-marker-b"
+const markerNameA = "example-marker-a";
+const markerNameB = "example-marker-b";
 
 // Exécute des temporisations imbriquées et crée un PerformanceMark pour chacune d'entre elles.
 performance.mark(markerNameA);
-setTimeout(function() {
+setTimeout(function () {
   performance.mark(markerNameB);
-  setTimeout(function() {
-
+  setTimeout(function () {
     // Crée une variété de mesures.
     performance.measure("mesure a à b", markerNameA, markerNameB);
     performance.measure("mesure a à maintenant", markerNameA);
-    performance.measure("mesure du début de la navigation à b", undefined, markerNameB);
+    performance.measure(
+      "mesure du début de la navigation à b",
+      undefined,
+      markerNameB,
+    );
     performance.measure("mesure du début de la navigation à maintenant");
 
     // Sort toutes les mesures.

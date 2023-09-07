@@ -31,7 +31,7 @@ class Square extends Polygon {
     // 我們在這裡呼叫了 class 的建構子提供多邊形的長寬值
     super(length, length);
     // 注意：在 derived class 中，super() 必須在使用 this 以前被呼叫。不這樣的話會發生錯誤。
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {

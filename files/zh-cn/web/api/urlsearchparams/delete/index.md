@@ -3,7 +3,7 @@ title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
 ---
 
-{{ApiRef("URL API")}}{{SeeCompatTable}}
+{{ApiRef("URL API")}}
 
 **delete()** 是 {{domxref("URLSearchParams")}} 接口的一个方法。可以删除指定名称的所有搜索参数。
 

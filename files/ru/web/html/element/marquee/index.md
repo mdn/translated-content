@@ -1,9 +1,9 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLSidebar}}{{obsolete_header}}
+
+{{HTMLSidebar}}
 
 ## Определение
 
@@ -57,10 +57,13 @@ HTML-элемент `<marquee>` используется для создания
 
 <marquee direction="up">This text will scroll from bottom to top</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    This text will bounce
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate"> This text will bounce </marquee>
 </marquee>
 ```
 

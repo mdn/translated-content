@@ -2,6 +2,7 @@
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 **`console.timeEnd()`** 는 이전에 {{domxref("console.time()")}}를 호출하여 시작된 타이머를 중지합니다.

@@ -24,7 +24,7 @@ var myText = PushEvent.data.text();
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var textObj = event.data.text();
 
   // テキストを使用して何かを実行する

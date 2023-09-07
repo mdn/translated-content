@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -44,11 +39,11 @@ arr.push(element1, ..., elementN)
 Следующий код создаёт массив `sports`, содержащий два элемента, а затем добавляет к нему ещё два элемента. Переменная `total` будет содержать новую длину массива.
 
 ```js
-var sports = ['футбол', 'бейсбол'];
-var total = sports.push('американский футбол', 'плавание');
+var sports = ["футбол", "бейсбол"];
+var total = sports.push("американский футбол", "плавание");
 
 console.log(sports); // ['футбол', 'бейсбол', 'американский футбол', 'плавание']
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### Пример: слияние двух массивов
@@ -56,8 +51,8 @@ console.log(total);  // 4
 В этом примере используется функция {{jsxref("Function.apply", "apply()")}} для помещения всех элементов из второго массива в первый.
 
 ```js
-var vegetables = ['пастернак', 'картошка'];
-var moreVegs = ['сельдерей', 'свёкла'];
+var vegetables = ["пастернак", "картошка"];
+var moreVegs = ["сельдерей", "свёкла"];
 
 // Сливает второй массив с первым
 // Эквивалентно вызову vegetables.push('сельдерей', 'свёкла');

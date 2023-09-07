@@ -5,7 +5,7 @@ slug: Web/API/MessagePort/start
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。これは、{{domxref("MessageChannel.onmessage")}} を使用する場合は包含されています。
+{{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。{{domxref("MessagePort.onmessage")}} を使用する場合は暗黙に実行されます。
 
 {{AvailableInWorkers}}
 
@@ -37,10 +37,10 @@ function handleMessage(e) {
 これを行うもう一つの方法は、{{domxref("EventTarget.addEventListener")}} を使用します。しかし、このメソッドが使用された場合、明示的に `start()` を呼び出してメッセージの送信を開始する必要があります:
 
 ```js
-channel.port1.addEventListener('message', handleMessage, false);
+channel.port1.addEventListener("message", handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 
 channel.port1.start();

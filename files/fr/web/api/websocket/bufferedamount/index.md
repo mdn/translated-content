@@ -1,7 +1,6 @@
 ---
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
-browser-compat: api.WebSocket.bufferedAmount
 ---
 
 {{APIRef("Web Sockets API")}}

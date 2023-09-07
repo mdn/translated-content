@@ -3,6 +3,8 @@ title: Python
 slug: Glossary/Python
 ---
 
+{{GlossarySidebar}}
+
 **Python**是高階通用（general-purpose）程式語言。他使用了多型編程範式（multi-paradigm approach），這意味著他支援了程序化、物件導向、還有一些函式語言程式設計結構體（functional programming constructs）。
 
 它是由吉多·范羅蘇姆（Guido van Rossum）作為 1985 到 1990 之間盛行的 ABC 語言繼承者形象而誕生的。目前各大領域都有使用 Python：例如 Web 開發、桌面程式、資料科學、DevOps、自動化或生產力用途等。

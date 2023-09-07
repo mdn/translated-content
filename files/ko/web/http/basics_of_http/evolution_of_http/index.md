@@ -94,13 +94,13 @@ HTTP/1.1은 모호함을 명확하게 하고 많은 개선 사항들을 도입�
 다음은 하나의 단일 커넥션을 통한 요청의 전형적인 전체 흐름의 예시입니다:
 
 ```
-GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+GET /ko/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/ko/docs/Glossary/Simple_header
 
 200 OK
 Connection: Keep-Alive
@@ -123,7 +123,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/ko/docs/Glossary/Simple_header
 
 200 OK
 Age: 9578461
@@ -198,4 +198,4 @@ HTTP의 진화는 그것의 확장성과 단순함이 예측 불가능한 애플
 
 HTTP의 다음 메이저 버전인 HTTP/3에서는 전송 계층 부분에 {{Glossary("TCP")}}/{{Glossary("TLS")}} 대신 {{Glossary("QUIC")}}가 사용됩니다.
 
-Firefox에서의 구현 상태는 {{bug(1158011)}}을 참조해주세요.
+Firefox에서의 구현 상태는 [Firefox bug 1158011](https://bugzil.la/1158011)을 참조해주세요.

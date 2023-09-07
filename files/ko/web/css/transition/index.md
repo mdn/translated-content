@@ -25,7 +25,9 @@ transition: margin-left 4s 1s;
 transition: margin-left 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-left 4s, color 1s;
+transition:
+  margin-left 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;
@@ -48,11 +50,11 @@ transition: unset;
 
 [CSS 트랜지션 사용하기](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 에 다양한 CSS transition 예제가 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

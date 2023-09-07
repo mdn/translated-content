@@ -1,14 +1,13 @@
 ---
 title: 화살표 함수
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
 
 {{jsSidebar("Functions")}}
 
 화살표 함수 표현(**arrow function expression**)은 [전통적인 함수표현(function)](/ko/docs/Web/JavaScript/Reference/Operators/function)의 간편한 대안입니다. 하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.
 
-- [this](/ko/docs/Web/JavaScript/Reference/Operators/this)나 [super](/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 바인딩이 없고, [methods](/ko/docs/Glossary/Method) 로 사용될 수 없습니다.
+- [this](/ko/docs/Web/JavaScript/Reference/Operators/this), [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments)나 [super](/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 자체 바인딩이 없고, [methods](/ko/docs/Glossary/Method)로 사용해서는 안됩니다.
 - [new.target](/ko/docs/Web/JavaScript/Reference/Operators/new.target)키워드가 없습니다.
 - 일반적으로 스코프를 지정할 때 사용하는 [call](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [bind](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) methods를 이용할 수 없습니다.
 - 생성자[(Constructor)](/ko/docs/Web/JavaScript/Reference/Classes/constructor)로 사용할 수 없습니다.
@@ -147,7 +146,7 @@ function Person() {
 따라서 다음 코드에서 `setInterval`에 전달 된 함수 내부의 `this`는 `setInterval`을 포함한 function의 `this`와 동일한 값을 갖습니다.
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -163,8 +162,11 @@ var p = new Person();
 `this`가 렉시컬(lexical, 정적)임을 감안하면, `this`에 관한 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode) 규칙은 그냥 무시됩니다.
 
 ```js
-    var f = () => { 'use strict'; return this; };
-    f() === window; // 혹은 전역객체
+var f = () => {
+  "use strict";
+  return this;
+};
+f() === window; // 혹은 전역객체
 ```
 
 엄격 모드의 나머지 규칙은 평소대로 적용합니다.
@@ -237,24 +239,24 @@ f2 illustrates that when explicitly setting the arrow function to apply strict m
 
 ```js
 var adder = {
-  base : 1,
+  base: 1,
 
-  add : function(a) {
-    var f = v => v + this.base;
+  add: function (a) {
+    var f = (v) => v + this.base;
     return f(a);
   },
 
-  addThruCall: function(a) {
-    var f = v => v + this.base;
+  addThruCall: function (a) {
+    var f = (v) => v + this.base;
     var b = {
-      base : 2
+      base: 2,
     };
 
     return f.call(b, a);
-  }
+  },
 };
 
-console.log(adder.add(1));         // 이는 2가 콘솔에 출력될 것임
+console.log(adder.add(1)); // 이는 2가 콘솔에 출력될 것임
 console.log(adder.addThruCall(1)); // 이도 2가 콘솔에 출력될 것임
 ```
 
@@ -292,15 +294,16 @@ foo(1); // 3
 이야기 했듯이, 화살표 함수 표현은 메소드 함수가 아닌 형태로 사용 할 수 있습니다. 메소드로 사용하려고 한다면 무슨일이 발생하는지 봅시다.
 
 ```js
-'use strict';
+"use strict";
 
-var obj = { // does not create a new scope
+var obj = {
+  // does not create a new scope
   i: 10,
   b: () => console.log(this.i, this),
-  c: function() {
-    console.log( this.i, this)
-  }
-}
+  c: function () {
+    console.log(this.i, this);
+  },
+};
 obj.b(); // prints undefined, Window {...} (or the global object)
 obj.c(); // prints 10, Object {...}
 ```
@@ -308,17 +311,17 @@ obj.c(); // prints 10, Object {...}
 화살표 함수는 자신의 this를 가지고("bind" 바인드)있지 않습니다.{{jsxref("Object.defineProperty()")}}
 
 ```js
-'use strict';
+"use strict";
 
 var obj = {
-  a: 10
+  a: 10,
 };
 
-Object.defineProperty(obj, 'b', {
+Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
-  }
+  },
 });
 ```
 
@@ -353,8 +356,10 @@ console.log(Foo.prototype); // undefined
 block바디는 자동으로 값을 반환하지 않습니다. `return`을 사용해서 값을 반환해야 합니다.
 
 ```js
-var func = x => x * x;                  // concise 바디, 생략된 "return" 여기서는 x * x
-var func = (x, y) => { return x + y; }; // block 바디, "return"이 필요
+var func = (x) => x * x; // concise 바디, 생략된 "return" 여기서는 x * x
+var func = (x, y) => {
+  return x + y;
+}; // block 바디, "return"이 필요
 ```
 
 ### 객체 리터럴 반환
@@ -390,29 +395,22 @@ var func = (a, b, c)
 하지만, 보기 좋은 코드를 유지하고 싶다면, 아래에 보는 것처럼 괄호나 개행을 둠으로써 이를 수정할 수 있습니다.
 
 ```js
-    var func = (a, b, c) =>
-      1;
+var func = (a, b, c) => 1;
 
-    var func = (a, b, c) => (
-      1
-    );
+var func = (a, b, c) => 1;
 
-    var func = (a, b, c) => {
-      return 1
-    };
+var func = (a, b, c) => {
+  return 1;
+};
 
-    var func = (
-      a,
-      b,
-      c
-    ) => 1;
+var func = (a, b, c) => 1;
 
-    // SyntaxError가 발생하지 않습니다.
+// SyntaxError가 발생하지 않습니다.
 ```
 
 ### 파싱순서
 
-화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
+화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
 
 ```js
 let callback;
@@ -433,15 +431,15 @@ callback = callback || (() => {});    // ok
 //  empty 화살표 함수는 undefined를 반환
 let empty = () => {};
 
-(() => 'foobar')();
+(() => "foobar")();
 // "foobar" 반환
 // (this is an Immediately Invoked Function Expression
 
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) => a > b ? a : b;
+let max = (a, b) => (a > b ? a : b);
 
 // Easy array filtering, mapping, ...
 
@@ -450,25 +448,27 @@ var arr = [5, 6, 13, 0, 1, 18, 23];
 var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v => v % 2 == 0);
+var even = arr.filter((v) => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v => v * 2);
+var double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // 더 간결한 promise 체인
-promise.then(a => {
-  // ...
-}).then(b => {
-  // ...
-});
+promise
+  .then((a) => {
+    // ...
+  })
+  .then((b) => {
+    // ...
+  });
 
 // 매개변수가 없는 경우에도 더 읽기 쉬움
-setTimeout( () => {
-  console.log('I happen sooner');
-  setTimeout( () => {
+setTimeout(() => {
+  console.log("I happen sooner");
+  setTimeout(() => {
     // deeper code
-    console.log('I happen later');
+    console.log("I happen later");
   }, 1);
 }, 1);
 ```

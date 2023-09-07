@@ -17,11 +17,3 @@ element.onkeydown = event handling code
 ## Notas
 
 El evento `keydown` se lanza cuando el usuario presiona una tecla.
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat("api.GlobalEventHandlers.onkeydown")}}

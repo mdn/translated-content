@@ -1,6 +1,6 @@
 ---
 title: 文字クラス
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 l10n:
   sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
@@ -116,7 +116,7 @@ l10n:
       <td><code>\s</code></td>
       <td>
         <p>
-          ホワイトスペース 1 文字に一致します。例えば空白、タブ、改ページ、改行、その他の Unicode 空白文字などです。 <code>[\f\n\r\t\v​\u00a0\u1680​\u2000​-\u200a​\u2028\u2029\u202f\u205f​\u3000\ufeff]</code> に相当します。例えば <code>/\s\w*/</code> は "foo bar" の "bar" に一致します。
+          ホワイトスペース 1 文字に一致します。例えば空白、タブ、改ページ、改行、その他の Unicode 空白文字などです。 <code>[\f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code> に相当します。例えば <code>/\s\w*/</code> は "foo bar" の " bar" に一致します。
         </p>
       </td>
     </tr>
@@ -133,7 +133,7 @@ l10n:
     </tr>
     <tr>
       <td><code>\t</code></td>
-      <td>水平タブにに一致します。</td>
+      <td>水平タブに一致します。</td>
     </tr>
     <tr>
       <td><code>\r</code></td>
@@ -265,7 +265,6 @@ const regexpFourDigits = /\b\d{4}\b/g;
 // \d{4} は 4 つの数字を示します
 // \b は別の境界を示します（つまり、単語の真ん中でマッチが終わりません）
 
-
 console.table(randomData.match(regexpFourDigits));
 // ['8787', '3512', '8735']
 ```
@@ -273,7 +272,8 @@ console.table(randomData.match(regexpFourDigits));
 ### A から始まる（ラテンアルファベットの）単語を探す
 
 ```js
-const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const aliceExcerpt =
+  "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b は境界を示します（つまり、単語の途中から照合を開始しません）
 // [aA] は a または A の文字を示します
@@ -293,13 +293,14 @@ const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // U+0000 から U+FFFF までの BMP、ただし、U+0020 は空白
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 ### 母音を数える
 
 ```js
-const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const aliceExcerpt =
+  "There was a long silence after this, and Alice could only hear whispers now and then.";
 const regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);

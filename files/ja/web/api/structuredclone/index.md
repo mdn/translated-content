@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-グローバルの **`structuredClone()`** メソッドは、指定された値の[ディープクローン](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
+グローバルの **`structuredClone()`** メソッドは、指定された値の[ディープコピー](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
 
 このメソッドでは、元の値の{{Glossary("transferable objects", "転送可能オブジェクト")}}を、新しいオブジェクトにクローンするのではなく、転送することもできます。
 転送されたオブジェクトは元のオブジェクトから切り離され、新しいオブジェクトに装着されます。元のオブジェクトからはもうアクセスできなくなります。
@@ -15,15 +15,15 @@ l10n:
 ## 構文
 
 ```js
-structuredClone(value)
-structuredClone(value, transferables)
+structuredClone(value);
+structuredClone(value, transferables);
 ```
 
 ### 引数
 
 - `value`
   - : 複製されるオブジェクトです。
-    これはあらゆる[構造化複製可能型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)です。
+    これはあらゆる[構造化複製可能型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#%E5%AF%BE%E5%BF%9C%E6%B8%88%E3%81%BF%E3%81%AE%E5%9E%8B)です。
 - `transferables` {{optional_inline}}
   - : `value` の中にある{{Glossary("transferable objects", "転送可能オブジェクト")}}の配列で、複製するのではなく移動するオブジェクトを指定します。
 
@@ -70,8 +70,10 @@ console.assert(clone.itself === clone); // 循環参照も保持されている
 // 16MB = 1024 * 1024 * 16
 const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i);
 
-const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
-console.log(uInt8Array.byteLength);  // 0
+const transferred = structuredClone(uInt8Array, {
+  transfer: [uInt8Array.buffer],
+});
+console.log(uInt8Array.byteLength); // 0
 ```
 
 任意の数のオブジェクトを複製し、それらのオブジェクトの任意のサブセットを転送することができます。
@@ -79,8 +81,9 @@ console.log(uInt8Array.byteLength);  // 0
 
 ```js
 const transferred = structuredClone(
-   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-   { transfer: [arrayBuffer1] });
+  { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
+  { transfer: [arrayBuffer1] },
+);
 ```
 
 ## 仕様書

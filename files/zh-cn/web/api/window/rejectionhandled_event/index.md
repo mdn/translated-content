@@ -1,5 +1,5 @@
 ---
-title: 'Window: rejectionhandled event'
+title: "Window: rejectionhandled event"
 slug: Web/API/Window/rejectionhandled_event
 ---
 
@@ -33,9 +33,13 @@ slug: Web/API/Window/rejectionhandled_event
 你可以使用`rejectionhandled 事件在控制台打印出被 rejected 的 Promise，以及被 rejected 的原因：`
 
 ```js
-window.addEventListener("rejectionhandled", event => {
-  console.log("Promise rejected; reason: " + event.reason);
-}, false);
+window.addEventListener(
+  "rejectionhandled",
+  (event) => {
+    console.log("Promise rejected; reason: " + event.reason);
+  },
+  false,
+);
 ```
 
 ## 规范
@@ -48,7 +52,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## 参见
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [Promise 拒绝事件](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#promise_拒绝事件)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

@@ -7,7 +7,7 @@ slug: Web/HTML/Element/base
 
 O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento _Base_ \<base> do documento.
 
-> **Note:** **Nota de uso:** Se multiplos elementos `<base>` forem especificados, apenas o primeiro valor de **href** e **target** serão utilizados, os demais serão ignorados.
+> **Note:** Se multiplos elementos `<base>` forem especificados, apenas o primeiro valor de **href** e **target** serão utilizados, os demais serão ignorados.
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ Metadata content.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
@@ -31,17 +31,17 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ## Exemplos
 
 ```html
-<base href="http://www.example.com/">
-<base target="_blank" href="http://www.example.com/">
+<base href="http://www.example.com/" />
+<base target="_blank" href="http://www.example.com/" />
 ```
 
 ## Especificações
 
-| Especificações                                                                                           | Estado                           | Comentários |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}             | {{Spec2('HTML4.01')}}     |             |
+| Especificações                                                                  | Estado                   | Comentários |
+| ------------------------------------------------------------------------------- | ------------------------ | ----------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}}  | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML5 W3C')}}   |             |
+| {{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}            | {{Spec2('HTML4.01')}}    |             |
 
 ## Navegadores Compatíveis
 

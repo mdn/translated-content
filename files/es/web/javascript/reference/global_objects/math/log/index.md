@@ -1,7 +1,6 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log
 ---
 
 {{JSRef}}
@@ -43,8 +42,8 @@ If you need the natural log of 2 or 10, use the constants {{jsxref("Math.LN2")}}
 
 ```js
 Math.log(-1); // NaN, out of range
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
@@ -64,9 +63,9 @@ If you run `getBaseLog(10, 1000)` it returns `2.9999999999999996` due to floatin
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## See also
 

@@ -3,52 +3,60 @@ title: margin-block-start
 slug: Web/CSS/margin-block-start
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`margin-block-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个元素的逻辑块的开始边距，是用来根据元素的书写模式，方向和文本方向进行实际边界的衡量。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-start`** 定义了元素的逻辑块首外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
+
+{{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
+
+## 语法
 
 ```css
-/* <length> values */
-margin-block-start: 10px;  /* 绝对长度 */
-margin-block-start: 1em;   /* 文本的相对大小 */
-margin-block-start: 5%;    /* 相对于最近块容器的大小 */
+/* <length> 值 */
+margin-block-start: 10px; /* 绝对长度 */
+margin-block-start: 1em; /* 相对于文本尺寸 */
+margin-block-start: 5%; /* 相对于最近区块容器的宽度 */
 
-/* 关键字值 */
+/* 关键词值 */
 margin-block-start: auto;
 
 /* 全局值 */
 margin-block-start: inherit;
 margin-block-start: initial;
-margin-block-start: unset
+margin-block-start: revert;
+margin-block-start: revert-layer;
+margin-block-start: unset;
 ```
 
-{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} 属性对应于 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, 和{{cssxref("text-orientation")}}属性定义的值。
+根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 或 {{CSSXref("margin-left")}} 属性。
 
-它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其它元素的边界。
+与此属性相关的有 {{CSSXref("margin-block-end")}}、{{CSSXref("margin-inline-start")}} 和 {{CSSXref("margin-inline-end")}} 等定义元素的其他外边距的属性。
 
-{{cssinfo}}
+### 取值
 
-## Syntax
+`margin-block-start` 属性的取值与 {{CSSXref("margin-left")}} 属性相同。
 
-### Values
+## 形式定义
 
-`margin-block-start` 属性有着和 {{cssxref("margin-left")}} 属性一样的值。
+{{CSSInfo}}
 
-### Formal syntax
+## 形式语法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
-## 案例
+## 示例
 
-### HTML Content
+### 设置块首外边距
+
+#### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">示例文本</p>
 </div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 div {
@@ -64,17 +72,20 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+#### 结果
 
-## Specification
+{{EmbedLiveSample("设置块首外边距", 140, 140)}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## 同样推荐
+## 参见
 
-- 标记的物理属性：{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- 对应的实体属性：{{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 和 {{CSSXref("margin-left")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

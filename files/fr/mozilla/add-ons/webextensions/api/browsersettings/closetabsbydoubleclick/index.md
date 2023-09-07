@@ -1,16 +1,6 @@
 ---
 title: browserSettings.closeTabsByDoubleClick
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - closeTabsByDoubleClick
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
 ---
 
 {{AddonSidebar()}}
@@ -21,6 +11,6 @@ La valeur sous-jacente est un booléen.
 
 Par défaut, closeTabsByDoubleClick est faux. Le réglage peut être modifié par l'utilisateur dans about:config.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.closeTabsByDoubleClick")}}
+{{Compat}}

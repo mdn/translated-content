@@ -12,7 +12,7 @@ slug: Glossary/Certified
 ### 一般知識
 
 - [情報セキュリティのチュートリアル](/ja/docs/Web/Security/Information_Security_Basics)
-- Wikipedia の [Certification](https://en.wikipedia.org/wiki/Professional_certification_(computer_technology)#Information_systems_security)(英語)
+- Wikipedia の [Certification](<https://en.wikipedia.org/wiki/Professional_certification_(computer_technology)#Information_systems_security>)(英語)
 
 ### Firefox OS
 

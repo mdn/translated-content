@@ -1,14 +1,8 @@
 ---
 title: Console.timeEnd
-slug: Web/API/Console/timeEnd
-tags:
-  - API
-  - Method
-  - Веб-разработка
-  - Отладка
-  - консоль
-translation_of: Web/API/Console/timeEnd
+slug: Web/API/console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.
@@ -44,11 +38,9 @@ console.timeEnd("answer time");
 
 Обратите внимание, что метка таймера отображается как при вызове `timeLog()`, так и завершении таймера. Кроме того, вызов timeEnd() выводит дополнительную информацию "timer ended", чтобы очевидно показать, что таймер больше не отслеживается.
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                    | Status                           | Comment                    |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| {{SpecName("Console API", "#timeend", "console.timeEnd()")}} | {{Spec2("Console API")}} | Первоначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

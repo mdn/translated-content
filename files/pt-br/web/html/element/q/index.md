@@ -52,7 +52,7 @@ slug: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **Note:** **Nota:** A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
+> **Nota:** A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
 
 ## Atributos
 
@@ -66,21 +66,23 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ### Conteúdo HTML
 
 ```html
-<p>According to Mozilla's website,
-  <q
-  cite="https://www.mozilla.org/pt-BR/about/history/details/">Firefox 1.0
-  was released in 2004 and became a big success.</q></p>
+<p>
+  According to Mozilla's website,
+  <q cite="https://www.mozilla.org/pt-BR/about/history/details/"
+    >Firefox 1.0 was released in 2004 and became a big success.</q
+  >
+</p>
 ```
 
 {{ EmbedLiveSample('Example') }}
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |                   |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |                   |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}                     | {{Spec2('HTML4.01')}}     | Definição inicial |
+| Especificação                                                                     | Status                   | Comentário        |
+| --------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}          | {{Spec2('HTML WHATWG')}} |                   |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}   |                   |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}                 | {{Spec2('HTML4.01')}}    | Definição inicial |
 
 ## Compatibilidade com navegadores
 

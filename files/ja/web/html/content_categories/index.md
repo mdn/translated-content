@@ -1,7 +1,6 @@
 ---
 title: コンテンツカテゴリー
 slug: Web/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 ほとんどの [HTML](/ja/docs/Web/HTML) 要素は 1 つ以上の**コンテンツカテゴリー**に属していて、カテゴリーごとに共通した特徴を持つ要素を分類しています。これは緩やかなグループ分けです（実際にはこれらのカテゴリーの要素間の関係を作成していません）。しかし、これらは、特にその複雑な詳細に遭遇したときに、カテゴリーの共有動作とその関連ルールを定義し記述するのに役立ちます。*どの*カテゴリーにも属さない要素も存在します。
@@ -14,7 +13,7 @@ original_slug: Web/Guide/HTML/Content_categories
 
 > **メモ:** コンテンツカテゴリーとその機能比較についての詳細な説明は、この記事の範囲外です。詳しく知りたければ、 [HTML 仕様書の関連部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)を読みましょう。
 
-[![様々なコンテンツカテゴリーの相互関係を示すベン図。以下の節では、これらの関係をテキストで説明します。](content_categories_venn.png)](/ja/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![様々なコンテンツカテゴリーの相互関係を示すベン図。以下の節では、これらの関係をテキストで説明します。](content_categories_venn.png)](content_categories_venn.png)
 
 ## 主要コンテンツカテゴリー
 
@@ -35,7 +34,7 @@ original_slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("area")}}: {{HTMLElement("map")}} 要素の子孫の場合
 - {{HTMLElement("link")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
 - {{HTMLElement("meta")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
-- {{HTMLElement("style")}}: {{htmlattrxref("scoped","style")}} {{deprecated_inline}} 属性がある場合
+- {{HTMLElement("style")}}: [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) {{deprecated_inline}} 属性がある場合
 
 ### 区分コンテンツ
 
@@ -80,12 +79,12 @@ original_slug: Web/Guide/HTML/Content_categories
 対話型コンテンツ (interactive content) にはユーザとのやり取りのために固有にデザインされた要素が含まれます。このカテゴリーに属する要素は、 {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} です。
 要素によっては、特定の条件下にある場合にのみこのカテゴリーに所属します。
 
-- {{HTMLElement("audio")}}: {{htmlattrxref("controls", "audio")}} 属性がある場合
-- {{HTMLElement("img")}}: {{htmlattrxref("usemap", "img")}} 属性がある場合
-- {{HTMLElement("input")}}: {{htmlattrxref("type", "input")}} 属性が hidden 状態ではない場合
-- {{HTMLElement("menu")}}: {{htmlattrxref("type", "menu")}} 属性が toolbar 状態ではない場合
-- {{HTMLElement("object")}}: {{htmlattrxref("usemap", "object")}} 属性がある場合
-- {{HTMLElement("video")}}: {{htmlattrxref("controls", "video")}} 属性がある場合
+- {{HTMLElement("audio")}}: [`controls`](/ja/docs/Web/HTML/Element/audio#controls) 属性がある場合
+- {{HTMLElement("img")}}: [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性がある場合
+- {{HTMLElement("input")}}: [`type`](/ja/docs/Web/HTML/Element/input#type) 属性が hidden 状態ではない場合
+- {{HTMLElement("menu")}}: [`type`](/ja/docs/Web/HTML/Element/menu#type) 属性が toolbar 状態ではない場合
+- {{HTMLElement("object")}}: [`usemap`](/ja/docs/Web/HTML/Element/object#usemap) 属性がある場合
+- {{HTMLElement("video")}}: [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性がある場合
 
 ### 知覚可能コンテンツ
 
@@ -138,13 +137,18 @@ original_slug: Web/Guide/HTML/Content_categories
 例えば、 {{HTMLElement("del")}} と {{HTMLELement("ins")}} 要素は透過的です。
 
 ```html
-<p>私たちはこれらの真実を<del><em>不可侵なものでありかつ否定できない</em></del><ins>自明の</ins>ものであるとし続けた。</p>
+<p>
+  私たちはこれらの真実を<del><em>不可侵なものでありかつ否定できない</em></del
+  ><ins>自明の</ins>ものであるとし続けた。
+</p>
 ```
 
 これらの要素が削除されたとしても、この断片は（文章としては正しくありませんが）妥当な HTML です。
 
 ```html
-<p>私たちはこれらの真実を<em>不可侵なものでありかつ否定できない</em>自明のものであるとし続けた。</p>
+<p>
+  私たちはこれらの真実を<em>不可侵なものでありかつ否定できない</em>自明のものであるとし続けた。
+</p>
 ```
 
 ## その他のコンテンツモデル

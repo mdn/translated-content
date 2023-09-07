@@ -1,10 +1,6 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Псевдоклассы
-translation_of: Web/CSS/:only-of-type
 ---
 
 {{CSSRef}}
@@ -31,13 +27,14 @@ p:only-of-type {
 
 ```html
 <main>
-  <div>Я `div` №1.</div>
-  <p>Я тут единственный `p` элемент.</p>
-  <div>Я `div` №2.</div>
-  <div>Я `div` №3.
-    <i>Я единственный потомок типа `i`.</i>
-    <em>Я `em` №1.</em>
-    <em>Я `em` №2.</em>
+  <div>Я <code>div</code> №1.</div>
+  <p>Я тут единственный <code>p</code> элемент.</p>
+  <div>Я <code>div</code> №2.</div>
+  <div>
+    Я <code>div</code> №3.
+    <i>Я единственный потомок типа <code>i</code>.</i>
+    <em>Я <code>em</code> №1.</em>
+    <em>Я <code>em</code> №2.</em>
   </div>
 </main>
 ```
@@ -52,7 +49,7 @@ main :only-of-type {
 
 #### Результат
 
-{{EmbedLiveSample('Пример', '', '', '', 'Web/CSS/:only-of-type')}}
+{{ EmbedLiveSample('Пример') }}
 
 ## Спецификации
 

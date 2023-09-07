@@ -55,17 +55,11 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 
 {{Specifications}}
 
-## Browser Compatibility
+## Compatibilidad con navegadores
 
-### `PushEvent`
+{{Compat}}
 
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
-
-## See also
+## Ver tambien
 
 - [¿Cómo usar la API Push?](/es/docs/Web/API/Push_API/Using_the_Push_API)
 - [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), on Github

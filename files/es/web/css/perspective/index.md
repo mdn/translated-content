@@ -48,9 +48,9 @@ perspective: inherited
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.perspective")}}
+{{Compat}}
 
 ## Ver también
 

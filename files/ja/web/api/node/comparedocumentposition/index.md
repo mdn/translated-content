@@ -1,6 +1,8 @@
 ---
-title: Node.compareDocumentPosition()
+title: "Node: compareDocumentPosition() メソッド"
 slug: Web/API/Node/compareDocumentPosition
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +11,8 @@ slug: Web/API/Node/compareDocumentPosition
 
 ## 構文
 
-```js
-compareDocumentPosition(otherNode);
+```js-nolint
+compareDocumentPosition(otherNode)
 ```
 
 ### 引数
@@ -25,9 +27,9 @@ compareDocumentPosition(otherNode);
 - `Node.DOCUMENT_POSITION_DISCONNECTED` (`1`)
   - : 両方のノードが、異なる文書、または同じ文書の異なるツリーにあります。
 - `Node.DOCUMENT_POSITION_PRECEDING` (`2`)
-  - : `otherNode` はこのノードより、両者を含むツリーの[前順深さ優先走査](https://ja.wikipedia.org/wiki/木構造_(データ構造)#深さ優先探索)で前にある（祖先ノード、前にある兄弟ノード、前にある兄弟ノードの子孫ノード、祖先ノードの前にある兄弟ノードなど）か、（接続されていないのであれば）任意だが一貫した順序で、そのノードよりも前に位置します。
+  - : `otherNode` はこのノードより、両者を含むツリーの[前順深さ優先走査](<https://ja.wikipedia.org/wiki/木構造_(データ構造)#深さ優先探索>)で前にある（祖先ノード、前にある兄弟ノード、前にある兄弟ノードの子孫ノード、祖先ノードの前にある兄弟ノードなど）か、（接続されていないのであれば）任意だが一貫した順序で、そのノードよりも前に位置します。
 - `Node.DOCUMENT_POSITION_FOLLOWING` (`4`)
-  - : `otherNode` はこのノードより、両者を含むツリーの[前順深さ優先走査](https://ja.wikipedia.org/wiki/木構造_(データ構造)#深さ優先探索)で後にある（子孫ノード、後にある兄弟ノード、後にある兄弟ノードの子孫ノード、祖先ノードの後にある兄弟ノードなど）か、（接続されていないのであれば）任意だが一貫した順序で、そのノードよりも後に位置します。
+  - : `otherNode` はこのノードより、両者を含むツリーの[前順深さ優先走査](<https://ja.wikipedia.org/wiki/木構造_(データ構造)#深さ優先探索>)で後にある（子孫ノード、後にある兄弟ノード、後にある兄弟ノードの子孫ノード、祖先ノードの後にある兄弟ノードなど）か、（接続されていないのであれば）任意だが一貫した順序で、そのノードよりも後に位置します。
 - `Node.DOCUMENT_POSITION_CONTAINS` (`8`)
   - : `otherNode` はこのノードの祖先ノードです。
 - `Node.DOCUMENT_POSITION_CONTAINED_BY` (`16`)
@@ -44,9 +46,9 @@ const head = document.head;
 const body = document.body;
 
 if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
-  console.log('正しい形式の文書です');
+  console.log("正しい形式の文書です");
 } else {
-  console.error('<head> が <body> の前にありません');
+  console.error("<head> が <body> の前にありません");
 }
 ```
 

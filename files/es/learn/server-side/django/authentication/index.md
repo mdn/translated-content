@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 8: Autenticación y permisos de Usuario'
+title: "Tutorial de Django Parte 8: Autenticación y permisos de Usuario"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -13,7 +13,7 @@ En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu
       <th scope="row">Prerequisitos:</th>
       <td>
         Completa todos los temas del tutorial anterior, incluyendo:
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/es/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -71,13 +71,13 @@ Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Dj
 >
 > ```python
 > from django.contrib.auth.models import User
-> 
-> # Create user and save to the database
-> 
+>
+> # Crear usuario y guardar en la base de datos.
+>
 > user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
-> 
-> # Update fields and then save again
-> 
+>
+> # Actualizar campos y luego guardar nuevamente
+>
 > user.first_name = 'John'
 > user.last_name = 'Citizen'
 > user.save()
@@ -87,24 +87,24 @@ A continuación, primero crearemos un grupo y luego un usuario. Aunque no tengam
 
 Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu navegador web local (`http://127.0.0.1:8000/admin/`). Ingresa al sitio usando las credenciales de la cuenta de tu superusuario. El nivel superior del sitio de administracion "Admin site" muestra todos tus modelos, ordenados por la aplicacion por defecto de Django "django application". Desde la seccion de **Autenticación y Autorización** puedes dar click en los enlaces de **Usuarios** "Users" y **Grupos** "Groups" para ver todos sus registros existentes.
 
-![Admin site - add groups or users](admin_authentication_add.png)
+![Sitio de administración: agregar grupos o usuarios](admin_authentication_add.png)
 
 Primero vamos a crear un nuevo grupo para los miembros de nuestra biblioteca.
 
-1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](admin_authentication_add_group.png)
+1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Sitio de administración: agregar grupo](admin_authentication_add_group.png)
 2. No necesitamos de ningun permiso para el grupo , entonces solo presiona Save (Seras redirigido a una lista de los grupos disponibles).
 
 Ahora vamos a crear un usuario:
 
 1. Navega de vuelta a la pagina de inicio "home" del sitio de administracion "Admin site".
-2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
+2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Sitio de administración: agregar usuario pt1](admin_authentication_add_user_prt1.png)
 3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
 4. Presiona **Save** "Guardar" para crear el usuario.
 
-    El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
+   El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
 
-5. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
-6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](admin_authentication_user_add_group.png)
+5. ![Sitio de administración: agregar usuario pt2](admin_authentication_add_user_prt2.png)
+6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Sitio de administración: agregar usuario al grupo](admin_authentication_user_add_group.png)
 7. Aqui no necesitamos hacer nada adicional, entonces de nuevo solo seleciona **SAVE** "Guardar", para ir a la lista de usuarios.
 
 ¡Esta hecho! Ahora tienes la cuenta de un miembro normal de la libreria, el cual estara disponible para ser usado en tus pruebas (una vez que hayamos implementado las paginas para permitirles iniciar sesion).
@@ -136,15 +136,15 @@ Navega hasta la URL `http://127.0.0.1:8000/accounts/` (¡Nota la barra inclinada
 
 > **Nota:** Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
 >
-> ```
-> ^accounts/login/$ [name='login']
-> ^accounts/logout/$ [name='logout']
-> ^accounts/password_change/$ [name='password_change']
-> ^accounts/password_change/done/$ [name='password_change_done']
-> ^accounts/password_reset/$ [name='password_reset']
-> ^accounts/password_reset/done/$ [name='password_reset_done']
-> ^accounts/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$ [name='password_reset_confirm']
-> ^accounts/reset/done/$ [name='password_reset_complete']
+> ```python
+> accounts/ login/ [name='login']
+> accounts/ logout/ [name='logout']
+> accounts/ password_change/ [name='password_change']
+> accounts/ password_change/done/ [name='password_change_done']
+> accounts/ password_reset/ [name='password_reset']
+> accounts/ password_reset/done/ [name='password_reset_done']
+> accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+> accounts/ reset/done/ [name='password_reset_complete']
 > ```
 
 Ahora intenta navegar a la URL de inicio de sesion "login"(`http://127.0.0.1:8000/accounts/login/`). Esto fallara de nuevo, pero ahora con un error diciendote que no encuentra la plantilla "template" requerida (**registration/login.html**) por el buscador de directorios de plantillas . Veras el las siguientes lineas en la seccion amarilla en la parte superior:
@@ -162,7 +162,7 @@ Las URL's (y vistas "views" implicitas) que recien hemos añadido esperan encont
 
 Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/registration/".** Este directorio debera estar en el directorio raiz de tu proyecto, es decir, el mismo directorio de las carpetas donde estan **catalog** y **locallibrary**. Por favor ahora crea las carpetas "templates" y dentro de esta "registration".
 
-> **Nota:** Your folder structure should now look like the below:
+> **Nota:** Su estructura de carpetas ahora debería verse como la siguiente:
 >
 > ```
 > locallibrary (django project folder)
@@ -172,15 +172,24 @@ Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/regi
 >     |\_registration
 > ```
 
-Para hacer estos directorios visibles al cargador de plantillas (es decir introducir este directorio en el buscador de directorios de plantillas) abre el archivo de configuracion del proyecto setting.py (**/locallibrary/locallibrary/settings.py)**, y actualiza la seccion de **TEMPLATES** con la linea **'DIRS'** como se muestra a continuacion.
+Para hacer estos directorios visibles al cargador de plantillas (es decir introducir este directorio en el buscador de directorios de plantillas) abre el archivo de configuracion del proyecto setting.py (**/locallibrary/locallibrary/settings.py)**
+
+A continuación, importa el módulo `os` (añade la siguiente línea al principio del archivo).
 
 ```python
-TEMPLATES = [
-    {
-        ...
-        'DIRS': ['./templates',],
-        'APP_DIRS': True,
-        ...
+import os # necesario para el siguiente código
+```
+
+Actualiza la seccion de TEMPLATES con la linea 'DIRS' como se muestra a continuacion.
+
+```python
+    # …
+    TEMPLATES = [
+      {
+       # …
+       'DIRS': [os.path.join(BASE_DIR, 'templates')],
+       'APP_DIRS': True,
+       # …
 ```
 
 ### Plantilla inicio de sesión "login"
@@ -189,44 +198,42 @@ TEMPLATES = [
 
 Crea un nuevo archivo HTML llamado /**locallibrary/templates/registration/login.html**. suministrado en el siguiente contenido :
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
 
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
+  {% if form.errors %}
+    <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
+  {% endif %}
 
-{% if next %}
+  {% if next %}
     {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
+      <p>Su cuenta no tiene acceso a esta página. Para continuar,
+      inicie sesión con una cuenta que tenga acceso.</p>
     {% else %}
-    <p>Please login to see this page.</p>
+      <p>Por favor inicie sesión para ver esta página.</p>
     {% endif %}
-{% endif %}
+  {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>\{{ form.username.label_tag }}</td>
+        <td>\{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>\{{ form.password.label_tag }}</td>
+        <td>\{{ form.password }}</td>
+      </tr>
+    </table>
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="\{{ next }}">
+  </form>
 
-<div>
-  <td>\{{ form.username.label_tag }}</td>
-  <td>\{{ form.username }}</td>
-</div>
-<div>
-  <td>\{{ form.password.label_tag }}</td>
-  <td>\{{ form.password }}</td>
-</div>
-
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="\{{ next }}" />
-</div>
-</form>
-
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  {# Asume que configura la vista de restablecimiento de contraseña en su URLconf #}
+  <p><a href="{% url 'password_reset' %}">¿Olvidó su contraseña?</a></p>
 
 {% endblock %}
 ```
@@ -235,7 +242,7 @@ Estas plantillas comparten algunas similitudes con algunas que hemos visto antes
 
 Navega de vuelta a la página de inicio sesión (`http://127.0.0.1:8000/accounts/login/`) una vez que hayas guardado tu plantilla, y deberías ver algo como esto:
 
-![Library login page v1](library_login.png)
+![Página de inicio de sesión de la biblioteca v1](library_login.png)
 
 Si intentas iniciar sesión tendrá éxito y serás redirigido a otra página (por defecto será `http://127.0.0.1:8000/accounts/profile/`). El problema aquí es que, por defecto, Django espera que después de iniciar sesión seas llevado a una página de perfil (que podrá ser el caso o no). Como no has definido esta página todavía, ¡obtendrás otro error!
 
@@ -252,19 +259,19 @@ Si navegas a la url de cierre de sesión (`http://127.0.0.1:8000/accounts/logout
 
 Crea y abre el fichero /**locallibrary/templates/registration/logged_out.html**. Copia en él el siguiente texto:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<p>Logged out!</p>
+<p>¡Sesión finalizada!</p>
 
-<a href="{% url 'login'%}">Click here to login again.</a>
+<a href="{% url 'login'%}">Haga clic aquí para iniciar sesión nuevamente.</a>
 {% endblock %}
 ```
 
 Esta plantilla es muy simple. Tan sólo muestra un mensaje informándote que has cerrado sesión, y provee un enlace que puedes pulsar para volver a la página de inicio de sesión. Si vas a la url de cierre de sesión otra vez, deberías ver esta página:
 
-![Library logout page v1](library_logout.png)
+![Página de cierre de sesión de la biblioteca v1](library_logout.png)
 
 ### Plantillas de reinicio de contraseña "Password reset"
 
@@ -276,16 +283,18 @@ Las siguientes plantillas pueden usarse como un punto de partida.
 
 Este es el formulario para obtener la dirección del correo electrónico del usuario (para enviar el correo de reinicio de contraseña). Crea **/locallibrary/templates/registration/password_reset_form.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<form action="" method="post">{% csrf_token %}
-    {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
-        <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
-</form>
-
+  <form action="" method="post">
+  {% csrf_token %}
+  {% if form.email.errors %}
+    \{{ form.email.errors }}
+  {% endif %}
+      <p>\{{ form.email }}</p>
+    <input type="submit" class="btn btn-default btn-lg" value="Restablecer contraseña">
+  </form>
 {% endblock %}
 ```
 
@@ -293,10 +302,10 @@ Este es el formulario para obtener la dirección del correo electrónico del usu
 
 Este formulario es mostrado después de que tu dirección de correo electrónico haya sido recogida. Crea **/locallibrary/templates/registration/password_reset_done.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
-<p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
+<p>Le hemos enviado por correo electrónico instrucciones para configurar su contraseña. Si no han llegado en unos minutos, revisa tu carpeta de spam.</p>
 {% endblock %}
 ```
 
@@ -304,8 +313,8 @@ Este formulario es mostrado después de que tu dirección de correo electrónico
 
 Esta plantilla suministra el texto HTML del correo electrónico, y contiene el enlace de reseteo que enviaremos a los usuarios. Crea **/locallibrary/templates/registration/password_reset_email.html**, y establece el siguiente contenido:
 
-```html
-Someone asked for password reset for email \{{ email }}. Follow the link below:
+```django
+Alguien solicitó restablecer la contraseña del correo electrónico \{{ email }}. Vaya el siguiente enlace:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
@@ -313,13 +322,13 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 Esta página es donde introduces una nueva contraseña después de pinchar el enlace en el correo electrónico de reinicio de contraseña. Crea **/locallibrary/templates/registration/password_reset_confirm.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
 
     {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
+        <p>Ingrese (y confirme) su nueva contraseña.</p>
         <form action="" method="post">
             <div style="display:none">
                 <input type="hidden" value="\{{ csrf_token }}" name="csrfmiddlewaretoken">
@@ -327,23 +336,23 @@ Esta página es donde introduces una nueva contraseña después de pinchar el en
             <table>
                 <tr>
                     <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
+                        <label for="id_new_password1">Nueva contraseña:</label></td>
                     <td>\{{ form.new_password1 }}</td>
                 </tr>
                 <tr>
                     <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
+                        <label for="id_new_password2">Confirmar contraseña:</label></td>
                     <td>\{{ form.new_password2 }}</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
+                    <td><input type="submit" value="Cambiar mi contraseña" /></td>
                 </tr>
             </table>
         </form>
     {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
+        <h1>Error al restablecer la contraseña</h1>
+        <p>El enlace para restablecer la contraseña no era válido, posiblemente porque ya se había utilizado. Solicite un nuevo restablecimiento de contraseña.</p>
     {% endif %}
 
 {% endblock %}
@@ -353,12 +362,12 @@ Esta página es donde introduces una nueva contraseña después de pinchar el en
 
 Este es el último paso de la plantilla de reinicio de contraseña, que es mostrada para notificarte cuando el reinicio de contraseña ha tenido éxito. Crea **/locallibrary/templates/registration/password_reset_complete.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 
-<h1>The password has been changed!</h1>
-<p><a href="{% url 'login' %}">log in again?</a></p>
+<h1>¡La contraseña ha sido cambiada!</h1>
+<p><a href="{% url 'login' %}">¿ingresar de nuevo?</a></p>
 
 {% endblock %}
 ```
@@ -376,9 +385,11 @@ Serás capaz de probar la funcionalidad de reinicio de contraseña desde el enla
 
 > **Nota:** El sistema de reinicio de contraseña requiere que tu sitio web soporte envío de correo, que está más allá del ámbito de este artículo, por lo que esta parte **no funcionará todavía**. Para permitir el testeo, establece la siguiente línea al final de tu fichero settings.py. Esto registra en la consola cualquier envío de correo electrónico (y así puedes copiar el enlace de reinicio de contraseña desde dicha consola).
 >
-> `EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
+> ```python
+> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> ```
 >
-> Para más información, ver [Sending email](https://docs.djangoproject.com/en/1.10/topics/email/) (Django docs).
+> Para más información, ver [Enviando correo electrónico](https://docs.djangoproject.com/en/1.10/topics/email/) (documentación de Django).
 
 ## Probando contra usuarios autenticados
 
@@ -392,16 +403,16 @@ Es típico que primero pruebes con la variable de plantilla `\{{ user.is_authent
 
 Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y copia el siguiente texto en el bloque `sidebar`, justamente antes de la etiqueta de plantilla `endblock` .
 
-```html
+```django
   <ul class="sidebar-nav">
 
     ...
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Cerrar sesión</a></li>
    {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+     <li><a href="{% url 'login'%}?next=\{{request.path}}">Iniciar sesión</a></li>
    {% endif %}
   </ul>
 ```
@@ -443,7 +454,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-Para detalles adicionales, echa un vistazo a [Django docs](https://docs.djangoproject.com/en/1.10/topics/auth/default/#limiting-access-to-logged-in-users).
+Para detalles adicionales, echa un vistazo a la [documentación de Django](https://docs.djangoproject.com/en/1.10/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Ejemplo - listando los libros del usuario actual
 
@@ -525,7 +536,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     """
-    Generic class-based view listing books on loan to current user.
+    Vista genérica basada en clases que enumera los libros prestados al usuario actual.
     """
     model = BookInstance
     template_name ='catalog/bookinstance_list_borrowed_user.html'
@@ -539,11 +550,11 @@ Para restringir nuestra consulta a solamente los objetos BookInstance del usuari
 
 ### Configuración URL para libros alquilados
 
-Ahora abre **/catalog/urls.py** y añade la url `url()` apuntando a la vista anterior (puedes simplemente copiar el texto de abajo al final del fichero).
+Ahora abre **/catalog/urls.py** y añade un `path()` apuntando a la vista anterior (puedes simplemente copiar el texto de abajo al final del fichero).
 
 ```python
 urlpatterns += [
-    url(r'^mybooks/$', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
 ]
 ```
 
@@ -551,11 +562,11 @@ urlpatterns += [
 
 Ahora todo lo que necesitamos hacer para esta página es añadir una plantilla. Primero, creamos el fichero plantilla **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** y establecemos el siguiente contenido en ella:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Borrowed books</h1>
+    <h1>Libros prestados</h1>
 
     {% if bookinstance_list %}
     <ul>
@@ -568,7 +579,7 @@ Ahora todo lo que necesitamos hacer para esta página es añadir una plantilla. 
     </ul>
 
     {% else %}
-      <p>There are no books borrowed.</p>
+      <p>No hay libros prestados.</p>
     {% endif %}
 {% endblock %}
 ```
@@ -583,23 +594,23 @@ El último paso es añadir un enlace para esta nueva página en la barra lateral
 
 Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y añade la línea en negrita a la barra lateral como se muestra.
 
-```html
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
-   <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+   <li><a href="{% url 'my-borrowed' %}">Mis libros prestados</a></li>
+   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Cerrar sesión</a></li>
    {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+   <li><a href="{% url 'login'%}?next=\{{request.path}}">Iniciar sesión</a></li>
    {% endif %}
  </ul>
 ```
 
 ### ¿Cómo se ve?
 
-Cuando cualquier usuario ha iniciado sesión, verán el enlace _My Borrowed_ (Mis Alquileres) en la barra lateral, y la lista de libros mostrados como se ve abajo (¡el primer libro no tiene fecha de vencimiento, que es un bug que esperamos arreglar en un tutorial posterior!).
+Cuando cualquier usuario ha iniciado sesión, verán el enlace _My Borrowed_ (Mis libros prestados) en la barra lateral, y la lista de libros mostrados como se ve abajo (¡el primer libro no tiene fecha de vencimiento, que es un bug que esperamos arreglar en un tutorial posterior!).
 
-![Library - borrowed books by user](library_borrowed_by_user.png)
+![Biblioteca - libros prestados por usuario](library_borrowed_by_user.png)
 
 ## Permisos
 
@@ -627,7 +638,7 @@ Abre **catalog/models.py**, y añade el permiso como se muestra arriba. Necesita
 
 Los permisos del usuario actual están almacenados en una variable de plantilla llamada `\{{ perms }}`. Puedes comprobar si el usuario actual tiene un permiso particular usando el nombre de variable específico con la "app" asociada en Django — ej. `\{{ perms.catalog.can_mark_returned }}` será `True` (cierto) si el usuario tiene el permiso, y `False` (falso) en otro caso. De forma típica probamos el permiso usando la etiqueta de plantilla `{% if %}` como se muestra:
 
-```html
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->
@@ -656,10 +667,10 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class MyView(PermissionRequiredMixin, View):
     permission_required = 'catalog.can_mark_returned'
-    # Or multiple permissions
+    # O múltiples permisos
     permission_required = ('catalog.can_mark_returned', 'catalog.can_edit')
-    # Note that 'catalog.can_edit' is just an example
-    # the catalog application doesn't have such permission!
+    # Tenga en cuenta que 'catalog.can_edit' es solo un ejemplo:
+    # ¡la aplicación de catálogo no tiene dicho permiso!
 ```
 
 ### Ejemplo
@@ -676,9 +687,9 @@ Deberías ser capaz de seguir el mismo patrón que el de la otra vista. La princ
 
 Cuando hayas terminado, tu página debería verse algo parecida a la captura de pantalla de abajo.
 
-![All borrowed books, restricted to librarian](library_borrowed_all.png)
+![Todos los libros prestados, restringidos al bibliotecario.](library_borrowed_all.png)
 
-## Sumario
+## Resumen
 
 Excelente trabajo — has creado un sitio web para que los miembros de la biblioteca puedan iniciar sesión y ver su propio contenido, y los bibliotecarios (con el permiso correcto) puedan usarlo para ver todos los libros alquilados y sus prestatarios. En este momento estamos todavía simplemente viendo contenido, pero los mismos principios y técnicas son usados cuando empiezas a modificar y añadir datos.
 
@@ -686,26 +697,8 @@ En nuestro siguiente artículo observaremos cómo puedes usar los formularios de
 
 ## Ver también
 
-- [Autenticación de Usuario en Django](https://docs.djangoproject.com/en/1.10/topics/auth/) (Django docs)
-- [Usando el sistema por defecto de Autenticación de Django](https://docs.djangoproject.com/en/1.10/topics/auth/default//) (Django docs)
-- [Introducción a clases basadas en vistas > Decoradores](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [Autenticación de Usuario en Django](https://docs.djangoproject.com/en/1.10/topics/auth/) (documentación de Django)
+- [Usando el sistema por defecto de Autenticación de Django](https://docs.djangoproject.com/en/1.10/topics/auth/default//) (documentación de Django)
+- [Introducción a clases basadas en vistas > Decoradores](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/#decorating-class-based-views) (documentación de Django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,7 +1,6 @@
 ---
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-original_slug: DragDrop/Drag_Operations
 l10n:
   sourceCommit: 6718ec2ba92f3f29757ab0e71cb9ce279e1866ad
 ---
@@ -20,7 +19,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 
 上記以外の他の HTML 要素をドラッグできるようにするには、以下の 3 つのことをしなくてはなりません。
 
-1. ドラッグできるようにしたい要素の {{htmlattrxref("draggable")}} 属性の値を `"true"` に設定する。
+1. ドラッグできるようにしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性の値を `"true"` に設定する。
 2. {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントにリスナーを設定し、そのリスナーの中でドラッグデータを設定する。
 3. 上記で定義されたリスナーの中で[ドラッグデータを設定する](/ja/docs/Web/API/DataTransfer/setData)。
 
@@ -34,13 +33,13 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 const draggableElement = document.querySelector('p[draggable="true"]');
 
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
-{{htmlattrxref("draggable")}} 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
+[`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
 
-{{htmlattrxref("draggable")}} 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために {{htmlattrxref("draggable")}} 属性に `false` を設定するという場合がほとんどでしょう。
+[`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性に `false` を設定するという場合がほとんどでしょう。
 
 > **メモ:** 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
 
@@ -55,7 +54,7 @@ draggableElement.addEventListener("dragstart", (event) =>
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -308,7 +307,7 @@ function doDrop(event) {
     "text/plain",
   ];
   const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type)
+    supportedTypes.includes(type),
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);

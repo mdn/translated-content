@@ -1,7 +1,6 @@
 ---
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType
 ---
 
 {{AddonSidebar()}}
@@ -47,7 +46,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.ContextType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -1,7 +1,6 @@
 ---
 title: hifens
 slug: Web/CSS/hyphens
-original_slug: Web/CSS/hifens
 ---
 
 {{CSSRef}}A propriedade [CSS](/pt-BR/docs/) **`hyphens`** especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.
@@ -19,7 +18,7 @@ hyphens: unset;
 
 Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang`, e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
 
-> **Note:** **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
+> **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
 
 {{cssinfo}}
 
@@ -36,7 +35,7 @@ A propriedade `hyphens` é especificada como uma única palavra-chave escolhida 
 - `auto`
   - : O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja [Oportunidades sugeridas de quebra de linha](#suggesting_line_break_opportunities) abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.
 
-> **Note:** **Nota:** O comportamento da configuração `auto` requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML `lang` para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.
+> **Nota:** O comportamento da configuração `auto` requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML `lang` para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.
 
 ## Oportunidades sugeridas de quebra de linha
 
@@ -57,13 +56,17 @@ Este exemplo usa três classes, uma para cada configuração possível da propri
 
 ```html
 <ul>
-  <li><code>none</code>: sem hífen; transbordar se necessário
+  <li>
+    <code>none</code>: sem hífen; transbordar se necessário
     <p lang="en" class="none">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>manual</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se necessário)
+  <li>
+    <code>manual</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se
+    necessário)
     <p lang="en" class="manual">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>auto</code>: hífen onde o algorítmo decidir (se necessário)
+  <li>
+    <code>auto</code>: hífen onde o algorítmo decidir (se necessário)
     <p lang="en" class="auto">An extreme&shy;ly long English word</p>
   </li>
 </ul>
@@ -73,7 +76,7 @@ Este exemplo usa três classes, uma para cada configuração possível da propri
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -95,8 +98,8 @@ p.auto {
 
 ## Especificações
 
-| Especificação                                                                | Condição                     | Comentário         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| Especificação                                             | Condição               | Comentário         |
+| --------------------------------------------------------- | ---------------------- | ------------------ |
 | {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
 
 ## Compatibilidade com navegadores

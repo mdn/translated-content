@@ -1,16 +1,6 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CSSStyleDeclaration
 ---
 
 {{ APIRef("CSSOM") }}
@@ -44,7 +34,7 @@ translation_of: Web/API/CSSStyleDeclaration
   - : Удаляет свойство из блока объявления CSS.
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Изменяет существующее свойство CSS или создаёт новое свойство CSS в блоке объявления.
-- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}
   - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/Shorthand_properties)
 
 ## Пример
@@ -53,7 +43,7 @@ translation_of: Web/API/CSSStyleDeclaration
 var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
+for (var i = styleObj.length; i--; ) {
   var nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
@@ -63,15 +53,8 @@ console.log(styleObj.cssText);
 
 ## Спецификации
 
-| Specification                                                                                                    | Status                           | Comment                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                         |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}} | {{Spec2('DOM2 Style')}} | Изначальное определение |
+{{Specifications}}
 
-## Смотрите также
-
-- [DOM CSS Properties](/ru/docs/Web/CSS/CSS_Properties_Reference)
-
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

@@ -27,7 +27,7 @@ slug: Web/HTML/Element/Heading_Elements
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -47,7 +47,6 @@ slug: Web/HTML/Element/Heading_Elements
 - 用户代理可以使用标题信息，例如自动构建文档的目录。
 - 不要为了减小标题的字体而使用低级别的标题，而是使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("font-size")}} 属性。
 - 避免跳过某级标题：始终要从 `<h1>` 开始，接下来依次使用 `<h2>` 等等。
-- 使用 {{HTMLElement("section")}} 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 \<h1>，\<h1> 应被用于表示页面的标题，其他的标题当从 \<h2> 开始。在使用 section 时，应当为每个 section 都使用一个 `<h2>`。详情请参考 {{SectionOnPage("/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}。
 
 ## 示例
 
@@ -66,7 +65,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 下面是这些代码的结果：
 
-{{ EmbedLiveSample('All_headings', '280', '300', '') }}
+{{ EmbedLiveSample('所有标题', '280', '300', '') }}
 
 ### 示例页面
 
@@ -90,7 +89,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 下面是代码的运行结果：
 
-{{ EmbedLiveSample('Example_page', '280', '480', '') }}
+{{ EmbedLiveSample('示例页面', '280', '480', '') }}
 
 ## 无障碍问题
 
@@ -120,29 +119,29 @@ slug: Web/HTML/Element/Heading_Elements
 
 1. `h1` Beetles
 
-    1. `h2` Etymology
-    2. `h2` Distribution and Diversity
-    3. `h2` Evolution
+   1. `h2` Etymology
+   2. `h2` Distribution and Diversity
+   3. `h2` Evolution
 
-        1. `h3` Late Paleozoic
-        2. `h3` Jurassic
-        3. `h3` Cretaceous
-        4. `h3` Cenozoic
+      1. `h3` Late Paleozoic
+      2. `h3` Jurassic
+      3. `h3` Cretaceous
+      4. `h3` Cenozoic
 
-    4. `h2` External Morphology
+   4. `h2` External Morphology
 
-        1. `h3` Head
+      1. `h3` Head
 
-            1. `h4` Mouthparts
+         1. `h4` Mouthparts
 
-        2. `h3` Thorax
+      2. `h3` Thorax
 
-            1. `h4` Prothorax
-            2. `h4` Pterothorax
+         1. `h4` Prothorax
+         2. `h4` Pterothorax
 
-        3. `h3` Legs
-        4. `h3` Wings
-        5. `h3` Abdomen
+      3. `h3` Legs
+      4. `h3` Wings
+      5. `h3` Abdomen
 
 当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被“跳过”。
 
@@ -158,7 +157,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Element#内容分区)的列表，并使用其确定页面布局
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### 示例
 

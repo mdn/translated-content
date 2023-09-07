@@ -44,16 +44,14 @@ border-top: medium dashed green;
 - `{{cssxref("&lt;color&gt;")}}`
   - : 请参阅 {{Cssxref("border-top-color")}}.
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
 ```html
-<div>
-  This box has a border on the top side.
-</div>
+<div>This box has a border on the top side.</div>
 ```
 
 ```css
@@ -67,12 +65,12 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Applying_a_top_border') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

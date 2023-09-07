@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.desiredSize
+title: "WritableStreamDefaultWriter: desiredSize プロパティ"
+short-title: desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -23,17 +24,20 @@ l10n:
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 

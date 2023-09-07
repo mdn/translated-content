@@ -1,58 +1,59 @@
 ---
-title: 'HTMLElement: beforeinput イベント'
+title: "HTMLElement: beforeinput イベント"
 slug: Web/API/HTMLElement/beforeinput_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
 
-DOM の **`beforeinput`** イベントは、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} 要素の値が変更されようとしているときに発生します。 このイベントは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} が有効になっている要素、および {{domxref("Document.designMode", "designMode")}} がオンになっている要素にも適用されます。
+DOM の **`beforeinput`** イベントは、{{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の値が変更されようとしているときに発生します。 このイベントは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} が有効になっている要素、および {{domxref("Document.designMode", "designMode")}} がオンになっている要素にも適用されます。
 
-これにより、ブラウザーが DOM ツリーを変更する前に、ウェブアプリケーションがテキスト編集の動作を上書きすることができ、入力イベントをより詳細に制御してパフォーマンスを向上させることができます。
+これにより、ブラウザーが DOM ツリーを変更する前に、ウェブアプリがテキスト編集の動作を上書きすることができ、入力イベントをより詳細に制御してパフォーマンスを向上させることができます。
 
 `contenteditable` や `designMode` の場合、イベントのターゲットは**編集ホスト**です。これらのプロパティが複数の要素に適用された場合、編集ホストは、親が編集可能ではない直近の先祖要素になります。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th>キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th>インターフェイス</th>
-      <td>{{DOMxRef("InputEvent")}}</td>
-    </tr>
-    <tr>
-      <th>イベントハンドラープロパティ</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th>同期 / 非同期</th>
-      <td>同期</td>
-    </tr>
-    <tr>
-      <th>Composed</th>
-      <td>はい</td>
-    </tr>
-    <tr>
-      <th>既定のアクション</th>
-      <td>DOM 要素の更新</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使うか、イベントハンドラープロパティを代入するかします。
+
+```js
+addEventListener("beforeinput", (event) => {});
+
+onbeforeinput = (event) => {};
+```
+
+## イベント型
+
+{{domxref("InputEvent")}} です。{{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("InputEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスには、親である {{DOMxRef("UIEvent")}} および {{DOMxRef("Event")}} から継承したプロパティがあります。_
+
+- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
+  - : 挿入された文字を文字列で返します。変更によって挿入されたテキストがない場合は、空文字列になることがあります（文字を削除した場合など）。
+- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
+  - : 編集可能なコンテンツに追加またはされるリッチテキストまたはプレーンテキストデータに関する情報が入った {{DOMxRef("DataTransfer")}} オブジェクトを返します。
+- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
+  - : 編集可能なコンテンツの変更の種類、例えばテキストの挿入、削除、整形などを返します。入力型の完全なリストについては、プロパティページを参照してください。
+- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
+  - : 論理値で、このイベントが {{domxref("Element/compositionstart_event", "compositionstart")}} の後、{{domxref("Element/compositionend_event", "compositionend")}} の前に発生したかどうかを示します。
 
 ## 例
 
 ### 機能の検出
 
-以下の関数は、 `beforeinput` に対応していれば true を返します。
+以下の関数は、 `beforeinput` および `getTargetRanges` に対応していれば true を返します。
 
 ```js
 function isBeforeInputEventAvailable() {
-  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
+  return (
+    window.InputEvent &&
+    typeof InputEvent.prototype.getTargetRanges === "function"
+  );
 }
 ```
 
@@ -63,17 +64,17 @@ function isBeforeInputEventAvailable() {
 #### HTML
 
 ```html
-<input placeholder="テキストを入力" name="name"/>
+<input placeholder="テキストを入力" name="name" />
 <p id="values"></p>
 ```
 
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('values');
+const input = document.querySelector("input");
+const log = document.getElementById("values");
 
-input.addEventListener('beforeinput', updateValue);
+input.addEventListener("beforeinput", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

@@ -17,7 +17,7 @@ l10n:
 
 ```js
 if (navigator.getUserMedia) {
-  console.log('getUserMediaがサポートされています。');
+  console.log("getUserMediaがサポートされています。");
   navigator.getUserMedia(
     // 制約 - このアプリに必要なのは音声のみ
     {
@@ -30,7 +30,7 @@ if (navigator.getUserMedia) {
 
       const myStream = mediaRecorder.stream;
       console.log(myStream);
-    }
+    },
   );
 }
 ```
@@ -45,7 +45,7 @@ if (navigator.getUserMedia) {
 
 ## 関連情報
 
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
 - [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
 - {{domxref("Navigator.getUserMedia")}}

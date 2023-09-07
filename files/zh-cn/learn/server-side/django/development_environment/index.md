@@ -1,7 +1,6 @@
 ---
 title: 设置 Django 开发环境
 slug: Learn/Server-side/Django/development_environment
-original_slug: Learn/Server-side/Django/开发环境
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -26,11 +25,11 @@ original_slug: Learn/Server-side/Django/开发环境
 
 ## Django 开发环境概述
 
-Django 使你可以轻松配置自己的电脑，以便开始开发网络应用。本节解释您可以从开发环境中获得什么，并提供一些设置和配置选项的概述。本文的其余部分介绍了在**Ubuntu**，**Mac** OSX 和**Windows**上安装 Django 开发环境的 **推荐方法**，以及如何测试。
+Django 使你可以轻松配置自己的电脑，以便开始开发网络应用。本节解释你可以从开发环境中获得什么，并提供一些设置和配置选项的概述。本文的其余部分介绍了在**Ubuntu**，**Mac** OSX 和**Windows**上安装 Django 开发环境的 **推荐方法**，以及如何测试。
 
 ### 什么是 Django 开发环境？
 
-开发环境是本地计算机上的 Django 安装，在将 Django 应用程序部署到生产环境之前，您可以使用它来开发和测试 Django 应用程序。
+开发环境是本地计算机上的 Django 安装，在将 Django 应用程序部署到生产环境之前，你可以使用它来开发和测试 Django 应用程序。
 
 Django 本身提供的主要工具是一组用于创建和使用 Django 项目的 Python 脚本，以及可在你电脑的 web 浏览器中测试本地 Django web 应用（在你的计算机，而不是在外部的 web 服务器）。
 
@@ -101,7 +100,7 @@ Django 支持四个主要数据库（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 本节简要介绍了如何检查有哪些版本的 Python，并根据需要安装适用于 **Ubuntu Linux 16.04,macOS, and Windows 10**的新版本。
 
-> **备注：** 根据你的平台，您还可以从操作系统自己的软件包管理器或其他机制安装 Python / pip。对于大多数平台，您可以从<https://www.python.org/downloads/>下载所需的安装文件，并使用该平台特定的方法进行安装。
+> **备注：** 根据你的平台，你还可以从操作系统自己的软件包管理器或其他机制安装 Python / pip。对于大多数平台，你可以从<https://www.python.org/downloads/>下载所需的安装文件，并使用该平台特定的方法进行安装。
 
 ### Ubuntu 18.04
 
@@ -131,8 +130,8 @@ python3 -V
 
 1. 下载所需的安装程序：
 
-    1. 点击 <https://www.python.org/downloads/>
-    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
+   1. 点击 <https://www.python.org/downloads/>
+   2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
 2. 使用 Finder 找到安装包，然后双击运行，并按照提示进行安装。
 
@@ -155,8 +154,8 @@ windows 默认不包含 Python, 但你可以从[python.org](https://www.python.o
 
 1. 下载所需版本：
 
-    1. 点击 <https://www.python.org/downloads/>
-    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
+   1. 点击 <https://www.python.org/downloads/>
+   2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
 2. 双击现在的文件并按照提示安装 Python。
 3. 确保勾选了"Add Python to PATH"选项。
@@ -186,7 +185,7 @@ pip3 list
 
 安装了 Python 和 pip 之后，你就可以安装 virtualenvwrapper（包括了 virtualenv）。可以在[这里](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)找到正式的安装指南，或按照以下指导操作。
 
-使用 pip3 安装该工具：​​​​​​
+使用 pip3 安装该工具：
 
 ```bash
 sudo pip3 install virtualenvwrapper
@@ -202,7 +201,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 你可以使用`which virtualenvwrapper.sh` 和 `which python3`命令为你的系统找到正确的安装位置。
 
@@ -244,7 +243,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 例如，在 macOS 上的一个安装测试中，启动文件中必须有以下几行代码：
 >
@@ -289,7 +288,7 @@ pip3 install virtualenvwrapper-win
 
 ### 创建虚拟环境
 
-一旦你成功安装了 *virtualenvwrapper* 或 *virtualenvwrapper-win*，那么在所有平台中使用虚拟环境的方法是非常相似的。
+一旦你成功安装了 _virtualenvwrapper_ 或 _virtualenvwrapper-win_，那么在所有平台中使用虚拟环境的方法是非常相似的。
 
 现在你可以使用 `mkvirtualenv`命令创建一个新的虚拟环境。在运行此命令时，你将看到正在设置的环境（你所看到的只略微与平台相关）。命令完成后，新的虚拟环境将被激活——你能看到提示符的开头就是括号中的环境名称（以下我们展示的是 Ubuntu 的，但是在 Windows/macOS 上，末行时相似的|）
 
@@ -308,7 +307,7 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 ### 使用一个虚拟环境
 
-您应该知道一些其他有用的命令 (在工具的文档中还有更多，但这些是您将经常使用的命令)：
+你应该知道一些其他有用的命令 (在工具的文档中还有更多，但这些是你将经常使用的命令)：
 
 - `deactivate` —退出当前的 Python 虚拟环境
 - `workon` — 列出可用的所有虚拟环境
@@ -323,7 +322,7 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 pip3 install django
 ```
 
-您可以通过运行以下命令来测试 Django 是否安装（这只是用来测试 Python 是否可以找到 Django 模块）：
+你可以通过运行以下命令来测试 Django 是否安装（这只是用来测试 Python 是否可以找到 Django 模块）：
 
 ```bash
 # Linux/macOS
@@ -341,20 +340,20 @@ py -3 -m django --version
 > python -m django --version
 > ```
 >
-> 在 Windows 中，Python 3 脚本是通过在命令前面加上`py -3`来启动的，尽管该脚本可能会因您的特定安装而有所不同。如果遇到命令问题，请尝试省略`-3`修饰符。在 Linux /macOS 中，命令是 python3。
+> 在 Windows 中，Python 3 脚本是通过在命令前面加上`py -3`来启动的，尽管该脚本可能会因你的特定安装而有所不同。如果遇到命令问题，请尝试省略`-3`修饰符。在 Linux /macOS 中，命令是 python3。
 
-> **警告：** 本模块的其余部分使用 Linux 命令来调用 Python 3（`python3`）。如果您在 Windows 上工作，只需将此前缀替换为： `py -3`
+> **警告：** 本模块的其余部分使用 Linux 命令来调用 Python 3（`python3`）。如果你在 Windows 上工作，只需将此前缀替换为： `py -3`
 
 ## 测试你的安装
 
-上面的测试工作并不是很有趣。一个更有趣的测试是创建一个框架项目并查看它的工作情况。要做到这一点，先在你的命令提示符/终端导航到你想存储你**Django**应用程序的位置。为您的测试站点创建一个文件夹并进入其中。
+上面的测试工作并不是很有趣。一个更有趣的测试是创建一个框架项目并查看它的工作情况。要做到这一点，先在你的命令提示符/终端导航到你想存储你**Django**应用程序的位置。为你的测试站点创建一个文件夹并进入其中。
 
 ```bash
 mkdir django_test
 cd django_test
 ```
 
-然后，您可以像所展示的一样使用 django-admin 工具创建一个名为“_mytestsite_”的新框架站点。创建网站后，您可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
+然后，你可以像所展示的一样使用 django-admin 工具创建一个名为“_mytestsite_”的新框架站点。创建网站后，你可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
 
 ```bash
 django-admin startproject mytestsite
@@ -378,9 +377,9 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **备注：** 上面的命令显示了 Linux /macOS 命令。您可以忽略关于“15 unapplied migration(s)”的警告！
+> **备注：** 上面的命令显示了 Linux /macOS 命令。你可以忽略关于“15 unapplied migration(s)”的警告！
 
-一旦服务器运行，您可以通过本地 Web 浏览器打开`http://127.0.0.1:8000/`来查看该站点。你应该看到一个如下所示的网站：
+一旦服务器运行，你可以通过本地 Web 浏览器打开`http://127.0.0.1:8000/`来查看该站点。你应该看到一个如下所示的网站：
 
 ![The home page of the skeleton Django app.](django_skeleton_app_homepage_django_4_0.png)
 
@@ -388,7 +387,7 @@ Quit the server with CONTROL-C.
 
 现在，你的计算机中已经启动并运行了一个 Django 开发环境。
 
-在测试部分，您还简要地了解了如何使用`django-admin startproject`创建一个新的 Django 网站，并使用开发 web 服务器 (`python3 manager .py runserver`) 在浏览器中运行它。在下一篇文章中，我们将对此过程进行扩展，构建一个简单但完整的 web 应用程序。
+在测试部分，你还简要地了解了如何使用`django-admin startproject`创建一个新的 Django 网站，并使用开发 web 服务器 (`python3 manager .py runserver`) 在浏览器中运行它。在下一篇文章中，我们将对此过程进行扩展，构建一个简单但完整的 web 应用程序。
 
 ## 看看瞧瞧
 

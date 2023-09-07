@@ -1,5 +1,5 @@
 ---
-title: '<head>: 문서 메타데이터 (헤더) 요소'
+title: "<head>: 문서 메타데이터 (헤더) 요소"
 slug: Web/HTML/Element/head
 ---
 
@@ -22,7 +22,7 @@ slug: Web/HTML/Element/head
       <td>
         <p>
           현재 문서가 {{HTMLElement("iframe")}}
-          {{htmlattrxref("srcdoc", "iframe")}} 문서거나, 제목 정보가
+          <a href="/ko/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a> 문서거나, 제목 정보가
           더 높은 단계의 규약에 존재하는 경우(HTML 이메일의 제목처럼) 0개 이상의
           메타에이터 콘텐츠.
         </p>
@@ -88,7 +88,7 @@ HTML5 호환 브라우저는 `<head>`가 없는 경우 자동으로 생성합니
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -19,7 +19,7 @@ slug: Web/API/NDEFReader
 _`NDEFReader` インターフェイスは、親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承しています。_
 
 - {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}
-  - : 読み取り機器をアクティブにして {{jsxref("Promise")}} を返します。このプロミスは NFC タグが読み取られれば解決し、ハードウェアまたは権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
+  - : 読み取り機器をアクティブにして {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取りを開始したときに解決し、ハードウェアまたは権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 - {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
   - : NDEF メッセージをタグに書き込む操作を行い、 {{jsxref("Promise")}} を返します。このプロミスは、タグへのメッセージの書き込みが完了した場合は解決し、ハードウェアまたは権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
@@ -53,18 +53,25 @@ ndef.onreading = (event) => {
 function write(data) {
   ignoreRead = true;
   return new Promise((resolve, reject) => {
-    ndef.addEventListener("reading", event => {
-      // Check if we want to write to this tag, or reject.
-      ndef.write(data).then(resolve, reject).finally(() => ignoreRead = false);
-    }, { once: true });
+    ndef.addEventListener(
+      "reading",
+      (event) => {
+        // Check if we want to write to this tag, or reject.
+        ndef
+          .write(data)
+          .then(resolve, reject)
+          .finally(() => (ignoreRead = false));
+      },
+      { once: true },
+    );
   });
 }
 
 await ndef.scan();
 try {
   await write("Hello World");
-  console.log("We wrote to a tag!")
-} catch(err) {
+  console.log("We wrote to a tag!");
+} catch (err) {
   console.error("Something went wrong", err);
 }
 ```

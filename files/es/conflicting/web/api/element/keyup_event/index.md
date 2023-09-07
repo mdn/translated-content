@@ -24,11 +24,3 @@ element.onkeyup = event handling code
 ## Notas
 
 El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionada.
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat("api.GlobalEventHandlers.onkeyup")}}

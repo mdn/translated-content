@@ -1,7 +1,6 @@
 ---
 title: 感知性能
-slug: Learn/Performance/perceived_performance
-original_slug: learn/Performance/感知性能
+slug: Learn/Performance/Perceived_performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
@@ -67,7 +66,7 @@ Displaying content, or at least some part of the page with an indication that co
 
 不要加载初始页面未使用或看不到的图像或脚本，而在页面可用后延时加载，或在需要使用时按需加载。在初始页面加载之后加载其他资源可提高感知性能。在初始请求中加载基本数据，并仅根据需要逐步加载功能部件和数据，有助于改善低带宽和低规格硬件的体验。
 
-此外，您应该优化需加载的资源。图片和视频应以最佳格式、压缩后的大小和正确尺寸进行投放。
+此外，你应该优化需加载的资源。图片和视频应以最佳格式、压缩后的大小和正确尺寸进行投放。
 
 ### 防止内容跳转和其他重排
 
@@ -87,25 +86,10 @@ Make things like type-ahead a progressive enhancement: use css to display input 
 
 ### 使任务启动器显得更具交互性
 
-在按下按键而不是等待按键弹起时发出请求，可以使感知的内容加载减少 200 毫秒。在 KEYUP 后添加一个有趣但不显眼的 200 毫秒动画，甚至可以再降低 200 毫秒的加载感知。您并没有节省 400 毫秒的时间，但是用户直到真正等待内容时，才感觉到他们在等待内容。
+在按下按键而不是等待按键弹起时发出请求，可以使感知的内容加载减少 200 毫秒。在 KEYUP 后添加一个有趣但不显眼的 200 毫秒动画，甚至可以再降低 200 毫秒的加载感知。你并没有节省 400 毫秒的时间，但是用户直到真正等待内容时，才感觉到他们在等待内容。
 
 ## 总结
 
 By turning as much of the download, render and wait time into active phases and reducing any passive waiting, even if the objective measurements stay the same, the user will feel like the content downloaded, rendered, and responded more quickly. Now that we know what we should be speeding up, let's take a look at some metrics and learn how we can measure these events.
 
 {{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/zh-CN/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/zh-CN/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/zh-CN/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/zh-CN/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/zh-CN/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/zh-CN/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/zh-CN/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/zh-CN/docs/Learn/Performance/HTML)
-- [CSS performance features](/zh-CN/docs/Learn/Performance/CSS)
-- [Fonts and performance](/zh-CN/docs/Learn/Performance/Fonts)
-- [Mobile performance](/zh-CN/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/zh-CN/docs/Learn/Performance/business_case_for_performance)

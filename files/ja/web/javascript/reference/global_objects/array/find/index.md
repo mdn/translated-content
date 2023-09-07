@@ -21,19 +21,33 @@ l10n:
 
 ```js
 // アロー関数
-find((element) => { /* … */ } )
-find((element, index) => { /* … */ } )
-find((element, index, array) => { /* … */ } )
+find((element) => {
+  /* … */
+});
+find((element, index) => {
+  /* … */
+});
+find((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-find(callbackFn)
-find(callbackFn, thisArg)
+find(callbackFn);
+find(callbackFn, thisArg);
 
 // インラインコールバック関数
-find(function(element) { /* … */ })
-find(function(element, index) { /* … */ })
-find(function(element, index, array){ /* … */ })
-find(function(element, index, array) { /* … */ }, thisArg)
+find(function (element) {
+  /* … */
+});
+find(function (element, index) {
+  /* … */
+});
+find(function (element, index, array) {
+  /* … */
+});
+find(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -76,7 +90,7 @@ find(function(element, index, array) { /* … */ }, thisArg)
 - 配列の、既存のまだ呼び出していない要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値は `find` がその要素の添字を処理した時点での値になります。
 - {{jsxref("Operators/delete", "削除")}}された要素も処理されます。
 
-> **警告:** 前項で説明したような同時進行の修正は、理解しにくいコードになることが多いので、一般的には避けるべきです（特殊な場合を除く）。
+> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 ## 例
 
@@ -84,13 +98,13 @@ find(function(element, index, array) { /* … */ }, thisArg)
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-  return fruit.name === 'cherries';
+  return fruit.name === "cherries";
 }
 
 console.log(inventory.find(isCherries));
@@ -101,14 +115,14 @@ console.log(inventory.find(isCherries));
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find(({ name }) => name === 'cherries');
+const result = inventory.find(({ name }) => name === "cherries");
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
 ### 配列内の素数の検索
@@ -134,22 +148,22 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 
 ```js
 // 添字が 2, 3, 4 の位置に要素がない配列を宣言
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // 値が割り当てられているものに限らず、すべての添字を表示
 array.find((value, index) => {
-  console.log('Visited index ', index, ' with value ', value);
+  console.log("Visited index ", index, " with value ", value);
 });
 
 // 削除されたものを含め、すべての添字を表示
 array.find((value, index) => {
   // 初回で要素 5 を削除
   if (index === 0) {
-    console.log('Deleting array[5] with value ', array[5]);
+    console.log("Deleting array[5] with value ", array[5]);
     delete array[5];
   }
   // 要素 5 は削除されても処理される
-  console.log('Visited index ', index, ' with value ', value);
+  console.log("Visited index ", index, " with value ", value);
 });
 // 期待される出力:
 // Visited index 0 with value 0

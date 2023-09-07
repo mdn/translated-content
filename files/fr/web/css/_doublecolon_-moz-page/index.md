@@ -1,12 +1,6 @@
 ---
-title: '::-moz-page'
+title: "::-moz-page"
 slug: Web/CSS/::-moz-page
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-moz-page
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -23,7 +17,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-page")}}
+{{Compat}}
 
 ## Voir aussi
 

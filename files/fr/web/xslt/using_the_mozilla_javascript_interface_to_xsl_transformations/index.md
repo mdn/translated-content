@@ -70,7 +70,7 @@ Il est aussi possible d'utiliser [`XSLTProcessor.transformToFragment()`](/fr/doc
 const ownerDocument = document.implementation.createDocument("", "test", null);
 const newFragment = processor.transformToFragment(
   domToBeTransformed,
-  ownerDocument
+  ownerDocument,
 );
 ```
 

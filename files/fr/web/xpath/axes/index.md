@@ -1,13 +1,6 @@
 ---
 title: Axes
 slug: Web/XPath/Axes
-tags:
-  - Référence_XPath
-  - Référence_XSLT
-  - Transformations_XML_avec_XSLT
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Axes
 ---
 
 {{ XsltRef() }}

@@ -1,12 +1,6 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - Reference
-  - Web
-  - en-tête
-translation_of: Web/HTTP/Headers/Connection
 ---
 
 {{HTTPSidebar}}
@@ -50,4 +44,4 @@ Connection: close
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

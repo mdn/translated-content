@@ -1,7 +1,6 @@
 ---
 title: translateY()
 slug: Web/CSS/transform-function/translateY
-original_slug: Web/CSS/transform-function/translateY()
 ---
 
 {{CSSRef}}
@@ -97,7 +96,7 @@ translateY({{cssxref("&lt;length-percentage&gt;")}})
 
 ### HTML
 
-```
+```html
 <div>Static</div>
 <div class="moved">Moved</div>
 <div>Static</div>
@@ -105,7 +104,7 @@ translateY({{cssxref("&lt;length-percentage&gt;")}})
 
 ### CSS
 
-```
+```css
 div {
   width: 60px;
   height: 60px;
@@ -120,7 +119,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 250, 250)}}
+{{EmbedLiveSample("示例", 250, 250)}}
 
 ## 规范
 
@@ -130,7 +129,7 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

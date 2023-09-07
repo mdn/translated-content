@@ -1,18 +1,18 @@
 ---
-title: 'ARIA: article ロール'
-slug: Web/Accessibility/ARIA/Roles/Article_Role
+title: "ARIA: article ロール"
+slug: Web/Accessibility/ARIA/Roles/article_role
 ---
 
 記事 (`article`) ロールは、ページ、文書、またはウェブサイト上で容易に自立することができるページのセクションを示します。 これは、通常、コメント、フォーラム投稿、新聞記事、または 1 ページにまとめられたその他項目などの関連コンテンツの項目に設定します。
 
 ```html
 <div role="article">
-<h2>この断片の見出し</h2>
-<p>この断片の段落。</p>
-<p>別の段落。</p>
-... 記事とインタラクションしたり、共有したり等するためのコントロール ...
+  <h2>この断片の見出し</h2>
+  <p>この断片の段落。</p>
+  <p>別の段落。</p>
+  ... 記事とインタラクションしたり、共有したり等するためのコントロール ...
 </div>
-<div role="article"> ... </div>
+<div role="article">...</div>
 ```
 
 この例では、同じように構成され、関連している 2 つの記事を 1 ページに並べて表示しています。
@@ -23,12 +23,12 @@ slug: Web/Accessibility/ARIA/Roles/Article_Role
 
 ```html
 <article>
-<h2>この断片の見出し</h2>
-<p>この断片の段落。</p>
-<p>別の段落。</p>
-... 記事とインタラクションしたり、共有したり等するためのコントロール ...
+  <h2>この断片の見出し</h2>
+  <p>この断片の段落。</p>
+  <p>別の段落。</p>
+  ... 記事とインタラクションしたり、共有したり等するためのコントロール ...
 </article>
-<article> ... </article>
+<article>...</article>
 ```
 
 ## 説明

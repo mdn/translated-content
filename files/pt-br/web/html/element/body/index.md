@@ -77,17 +77,17 @@ O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML.
 
 Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("alink")}} {{obsolete_inline}}
+- {{htmlattrdef("alink")}}
   - : Cor do texto para hyperlinks quando selecionados. Esse método não está em conformidade, utilize a propriedade _{{cssxref("color")}} em conjunto com a pseudo-classe {{cssxref(":active")}}_
-- {{htmlattrdef("background")}} {{obsolete_inline}}
+- {{htmlattrdef("background")}}
   - : URI de uma imagem para usar como um papel de parede. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("background")}}._
-- {{htmlattrdef("bgcolor")}} {{obsolete_inline}}
+- {{htmlattrdef("bgcolor")}}
   - : Cor de fundo do documento. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("background-color")}}._
-- {{htmlattrdef("bottommargin")}} {{obsolete_inline}}
+- {{htmlattrdef("bottommargin")}}
   - : The margin of the bottom of the body. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("margin-bottom")}}._
-- {{htmlattrdef("leftmargin")}} {{obsolete_inline}}
+- {{htmlattrdef("leftmargin")}}
   - : The margin of the left of the body. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("margin-left")}}._
-- {{htmlattrdef("link")}} {{obsolete_inline}}
+- {{htmlattrdef("link")}}
   - : Cor de textos de links não visitados. Esse método não está em conformidade, utilize o _{{cssxref("color")}} em conjunto com a pseudo-classe {{cssxref(":link")}}_
 - {{htmlattrdef("onafterprint")}}
   - : Função para chamar depois que o usuário solicitou a impressão do documento.
@@ -125,22 +125,22 @@ Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attri
   - : Function to call when the user has moved backward in undo transaction history.
 - {{htmlattrdef("onunload")}}
   - : Function to call when the document is going away.
-- {{htmlattrdef("rightmargin")}} {{obsolete_inline}}
+- {{htmlattrdef("rightmargin")}}
   - : The margin of the right of the body. _This method is non-conforming, use CSS {{cssxref("margin-right")}} property on the element instead._
-- {{htmlattrdef("text")}} {{obsolete_inline}}
+- {{htmlattrdef("text")}}
   - : Foreground color of text. _This method is non-conforming, use CSS {{cssxref("color")}} property on the element instead._
-- {{htmlattrdef("topmargin")}} {{obsolete_inline}}
+- {{htmlattrdef("topmargin")}}
   - : The margin of the top of the body. _This method is non-conforming, use CSS {{cssxref("margin-top")}} property on the element instead._
-- {{htmlattrdef("vlink")}} {{obsolete_inline}}
+- {{htmlattrdef("vlink")}}
   - : Cor do texto para links já visitados. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("color")}} em conjunto com a pseudo-classe {{cssxref(":visited")}}._
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                 | Status                   | Comentário                                                                                                                                                                                               |
+| ----------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', 'sections.html#the-body-element', '&lt;body&gt;')}} | {{Spec2('HTML WHATWG')}} | Changed the list of non-conforming features.                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Obsoleted the formerly deprecated attributes. Defined the behavior of the non-conforming and never standardized `margintop`, `marginleft`, `marginright` and `marginbottom`. Added the `on*` attributes. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}             | {{Spec2('HTML4.01')}}     | Deprecated the `alink`, `background`, `bgcolor`, `link`, `text` and `vlink` attributes.                                                                                                                  |
+| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}   | {{Spec2('HTML5 W3C')}}   | Obsoleted the formerly deprecated attributes. Defined the behavior of the non-conforming and never standardized `margintop`, `marginleft`, `marginright` and `marginbottom`. Added the `on*` attributes. |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}        | {{Spec2('HTML4.01')}}    | Deprecated the `alink`, `background`, `bgcolor`, `link`, `text` and `vlink` attributes.                                                                                                                  |
 
 ## Compatibilidade com navegadores
 

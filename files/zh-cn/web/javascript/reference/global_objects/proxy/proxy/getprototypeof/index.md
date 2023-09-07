@@ -1,7 +1,6 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getPrototypeOf
 ---
 
 {{JSRef("Global_Objects", "Proxy")}}
@@ -54,15 +53,15 @@ const p = new Proxy(obj, {
 var obj = {};
 var proto = {};
 var handler = {
-    getPrototypeOf(target) {
-        console.log(target === obj);   // true
-        console.log(this === handler); // true
-        return proto;
-    }
+  getPrototypeOf(target) {
+    console.log(target === obj); // true
+    console.log(this === handler); // true
+    return proto;
+  },
 };
 
 var p = new Proxy(obj, handler);
-console.log(Object.getPrototypeOf(p) === proto);    // true
+console.log(Object.getPrototypeOf(p) === proto); // true
 ```
 
 ### 5 种触发 getPrototypeOf 代理方法的方式
@@ -70,16 +69,16 @@ console.log(Object.getPrototypeOf(p) === proto);    // true
 ```js
 var obj = {};
 var p = new Proxy(obj, {
-    getPrototypeOf(target) {
-        return Array.prototype;
-    }
+  getPrototypeOf(target) {
+    return Array.prototype;
+  },
 });
 console.log(
-    Object.getPrototypeOf(p) === Array.prototype,  // true
-    Reflect.getPrototypeOf(p) === Array.prototype, // true
-    p.__proto__ === Array.prototype,               // true
-    Array.prototype.isPrototypeOf(p),              // true
-    p instanceof Array                             // true
+  Object.getPrototypeOf(p) === Array.prototype, // true
+  Reflect.getPrototypeOf(p) === Array.prototype, // true
+  p.__proto__ === Array.prototype, // true
+  Array.prototype.isPrototypeOf(p), // true
+  p instanceof Array, // true
 );
 ```
 
@@ -88,17 +87,17 @@ console.log(
 ```js
 var obj = {};
 var p = new Proxy(obj, {
-    getPrototypeOf(target) {
-        return "foo";
-    }
+  getPrototypeOf(target) {
+    return "foo";
+  },
 });
 Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
 
 var obj = Object.preventExtensions({});
 var p = new Proxy(obj, {
-    getPrototypeOf(target) {
-        return {};
-    }
+  getPrototypeOf(target) {
+    return {};
+  },
 });
 Object.getPrototypeOf(p); // TypeError: expected same prototype value
 ```

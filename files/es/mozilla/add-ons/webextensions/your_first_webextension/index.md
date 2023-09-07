@@ -1,7 +1,6 @@
 ---
 title: Tu primera extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension
 ---
 
 {{AddonSidebar}}
@@ -29,7 +28,6 @@ Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carp
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -46,7 +44,6 @@ Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carp
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -120,7 +117,7 @@ Abre "about:debugging" en Firefox, da click en "Cargar complemento temporal" y s
 
 La extensión se encontrará instalada, y lo estará hasta que reinicies Firefox.
 
-Alternativamente, puede ejecuturar la extensión desde la línea de comandos utilizando la herramienta [web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
+Alternativamente, puede ejecutar la extensión desde la línea de comandos utilizando la herramienta [web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
 
 ### Probando
 

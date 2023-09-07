@@ -1,13 +1,8 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-  - URI
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 Метод **encodeURI ()** кодирует универсальный идентификатор ресурса (URI), замещая некоторые символы на одну, две, три или четыре управляющие последовательности, представляющие UTF-8 кодировку символа (четыре управляющие последовательности будут использованы только для символов, состоящих из двух «суррогатных» символов).
@@ -47,20 +42,20 @@ encodeURI заменяет все символы, **кроме** следующ�
 
 ```js
 // низко-высокая пара - нормально
-console.log(encodeURIComponent('\uD800\uDFFF'));
+console.log(encodeURIComponent("\uD800\uDFFF"));
 
 // один высокий суррогат бросит "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uD800'));
+console.log(encodeURIComponent("\uD800"));
 
 // один низкий суррогат бросит "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uDFFF'));
+console.log(encodeURIComponent("\uDFFF"));
 ```
 
 Также заметим, что следуя наиболее свежей [RFC3986](http://tools.ietf.org/html/rfc3986) для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:
 
 ```js
-function fixedEncodeURI (str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+function fixedEncodeURI(str) {
+  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 ```
 

@@ -51,9 +51,9 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 4. 開啟你的[命令提示字元](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）（譯註：如果使用 Windows 7 以後，建議使用 [Powershell](https://msdn.microsoft.com/en-us/powershell)）或是終端機（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)、[MacOSX](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）
 5. 要把學習專區的 repo 透過命令提示字元/終端機複製到目錄裡面，稱作 learning-area 的資料夾，只要鍵入以下指令：
 
-    ```bash
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```bash
+   git clone https://github.com/mdn/learning-area
+   ```
 
 6. 現在你能透過檔案管理員或 [cd 指令](<https://zh.wikipedia.org/wiki/Cd_(%E5%91%BD%E4%BB%A4)>)進入目錄，找到想要的檔案了。
 
@@ -61,21 +61,21 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 1. 在命令提示字元/終端機裡面，用 `cd` 進到 `learning-area` 目錄，例如說你要是在上一層目錄的話：
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. 用這個指令更新 repository：
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 聯絡我們
 
 如果你想向我們詢問任何事情，最快的方式就是透過[學習專區討論串](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [IRC 頻道](/zh-TW/docs/MDN/Community/Conversations#Chat_in_IRC)留下訊息。不論你覺得網站有哪個地方做錯或缺漏，想看到新的學習主題、對自己不了解的地方尋求協助，或其他疑難雜症，都歡迎你提供意見給我們。
 
-如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/Learn/How_to_contribute)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
+如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Contribute)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
 
 ## 另可參閱
 
@@ -93,100 +93,3 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
   - : Web 素養與 21 世紀常見技術的入門，亦已分門別類提供教學活動。
 - [Teaching activities](https://teach.mozilla.org/activities)
   - : 由 Mozilla 基金會所設計的一系列教學 (與學習) 活動，涵蓋 JavaScript 的基本 Web 素養與隱私概念，並可嘗試開發 Minecraft。
-
-##### Subnav
-
-1. [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web)
-
-    1. [安裝基本軟體](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-    2. [你的網站看起來會是什麼樣子？](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-    3. [與各式各樣檔案打交道](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-    4. [HTML 基本概念](/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics)
-    5. [CSS 基本概念](/zh-TW/docs/Learn/Getting_started_with_the_web/CSS_basics)
-    6. [JavaScript 基本概念](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-    7. [將你的網站發佈上線](/zh-TW/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-    8. [網站的運作方式](/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-
-2. [HTML — 建構 Web](/zh-TW/docs/Learn/HTML)
-
-    1. **[HTML 概述](/zh-TW/docs/Learn/HTML)**
-    2. [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)
-
-        1. **[HTML 基本介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)**
-        2. [HTML 入門](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-        3. [先入為主？HTML 的 Metadata](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-        4. [HTML 文字基本概念](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-        5. [建立超連結](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-        6. [進階文字格式](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-        7. [文件與網站架構](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-        8. [HTML 除錯](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-        9. [評量習題：對字母標記](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-        10. [評量習題：建構內容網頁](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
-
-    3. [多媒體與嵌入](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding)
-
-        1. **[多媒體與嵌入概述](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding)**
-        2. [HTML 圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-        3. [視訊與音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-        4. [從物件到 iframe — 其他嵌入技術](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-        5. [為 Web 新增向量圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-        6. [有所回應互動的圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-        7. [評量習題：Mozilla splash 頁面](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-
-3. [CSS — 讓 Web 別有風格](/zh-TW/docs/Learn/CSS)
-
-    1. **[CSS 概述](/zh-TW/docs/Learn/CSS)**
-    2. [CSS 介紹](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)
-
-        1. **[CSS 基本介紹](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)**
-        2. [CSS 運作方式](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-        3. [CSS 語法](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-        4. [選擇器(Selectors)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-        5. [CSS 數值與單位](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
-        6. [串接 (Cascade) 與繼承 (Inheritance)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-        7. [區塊模型 (Box model)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Box_model)
-        8. [CSS 除錯](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-        9. [評量習題：基礎的 CSS 綜合運算 (Comprehension)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
-
-    3. [文字樣式](/zh-TW/docs/Learn/CSS/Styling_text)
-
-        1. **[文字樣式概述](/zh-TW/docs/Learn/CSS/Styling_text)**
-        2. [文字與字體樣式基本原則](/zh-TW/docs/Learn/CSS/Styling_text/Fundamentals)
-        3. [清單樣式](/zh-TW/docs/Learn/CSS/Styling_text/Styling_lists)
-        4. [連結樣式](/zh-TW/docs/Learn/CSS/Styling_text/Styling_links)
-        5. [Web 字型](/zh-TW/docs/Learn/CSS/Styling_text/Web_fonts)
-        6. [評量習題：Typesetting a community school homepage](/zh-TW/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
-
-    4. [框盒 (boxes) 樣式](/zh-TW/docs/Learn/CSS/Styling_boxes)
-
-        1. **[框盒樣式概述](/zh-TW/docs/Learn/CSS/Styling_boxes)**
-        2. [框盒模型 (Box model) 回顧](/zh-TW/docs/Learn/CSS/Styling_boxes/Box_model_recap)
-        3. [背景](/zh-TW/docs/Learn/CSS/Styling_boxes/Backgrounds)
-        4. [邊框](/zh-TW/docs/Learn/CSS/Styling_boxes/Borders)
-        5. [表格樣式](/zh-TW/docs/Learn/CSS/Styling_boxes/Styling_tables)
-        6. [進階框盒效果](/zh-TW/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
-        7. [評量習題：Creating fancy letterheader paper](/zh-TW/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-        8. [評量習題：A cool looking box](/zh-TW/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)
-
-    5. [CSS 配置](/zh-TW/docs/Learn/CSS/CSS_layout)
-
-        1. **[CSS 配置概述](/zh-TW/docs/Learn/CSS/CSS_layout)**
-        2. [浮動布局(Floats)](/zh-TW/docs/Learn/CSS/CSS_layout/Floats)
-        3. [Positioning](/zh-TW/docs/Learn/CSS/CSS_layout/Positioning)
-        4. [Practical positioning examples](/zh-TW/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-        5. [彈性盒子(Flexbox)](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox)
-
-4. [進階學習教材](/zh-TW/docs/Learn/Other_learning_material)
-
-    1. [JavaScript — 動態指令](/zh-TW/docs/Learn/JavaScript)
-    2. [WebGL — 圖像處理](/zh-TW/docs/Learn/WebGL)
-
-5. [常見問題](/zh-TW/docs/Learn/Common_questions)
-
-    1. [HTML 問題](/zh-TW/docs/Learn/HTML/Howto)
-    2. [CSS 問題](/zh-TW/docs/Learn/CSS/Howto)
-    3. [Web 運作方式](/zh-TW/docs/Learn/Common_questions#How_the_Web_works)
-    4. [工具與設定](/zh-TW/docs/Learn/Common_questions#Tools_and_setup)
-    5. [設計與親和度](/zh-TW/docs/Learn/Common_questions#Design_and_accessibility)
-
-6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)

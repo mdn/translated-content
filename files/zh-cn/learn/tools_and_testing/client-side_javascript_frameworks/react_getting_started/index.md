@@ -1,7 +1,6 @@
 ---
 title: React 入门
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -25,7 +24,7 @@ slug: >-
         </p>
         <p>
           React 使用称为 JSX（JavaScript 和 XML）的 HTML-in-JavaScript
-          语法。熟悉 HTML 和 JavaScript 可以帮助您学习
+          语法。熟悉 HTML 和 JavaScript 可以帮助你学习
           JSX，并更好地确定应用程序中的错误是与 JavaScript 还是与 React
           的更特定领域相关。
         </p>
@@ -44,7 +43,7 @@ slug: >-
 
 为了构建 Web 应用，开发人员将 React 与 [ReactDOM 结合使用](https://reactjs.org/docs/react-dom.html)。React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。当我们将 React 称为“框架”时，就是在进行口语化的理解。
 
-React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使您可以专注于 UI 设计 (译者注：显而易见，此设计不等于视觉稿的设计)。
+React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使你可以专注于 UI 设计 (译者注：显而易见，此设计不等于视觉稿的设计)。
 
 ## 用例
 
@@ -76,12 +75,14 @@ const header = (
 );
 ```
 
-> **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对您的应用程序没有任何影响，括号只是用来向您（和您的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
+> **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
 >
 > ```js
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
 > 这看起来多少有点不适感，因为表达式前面的 [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 标记没有缩进与其对应的结束标记相同的位置。
@@ -89,32 +90,34 @@ const header = (
 浏览器是无法读取直接解析 JSX 的。我们的 header 表达式经过（ [Babel](https://babeljs.io/) 或 [Parcel](https://parceljs.org/) 之类的工具）编译之后是这样的：
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
-*可以*跳过编译步骤，并使用 [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) 自己编写 UI。但是，这样做会失去 JSX 的声明性优势，并且代码变得更难以阅读。编译是开发过程中的一个额外步骤，但是 React 社区中的许多开发人员都认为 JSX 的可读性值得。另外，流行的工具使 JSX-to-JavaScript 编译成为其设置过程的一部分。除非您愿意，否则不必自己配置编译。
+*可以*跳过编译步骤，并使用 [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) 自己编写 UI。但是，这样做会失去 JSX 的声明性优势，并且代码变得更难以阅读。编译是开发过程中的一个额外步骤，但是 React 社区中的许多开发人员都认为 JSX 的可读性值得。另外，流行的工具使 JSX-to-JavaScript 编译成为其设置过程的一部分。除非你愿意，否则不必自己配置编译。
 
-由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
+由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使你能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解你的代码库。
 
 要阅读有关 JSX 的更多信息，请查看 React 团队的 [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) 文章。
 
-## 设置您的第一个 React 应用
+## 设置你的第一个 React 应用
 
-有很多使用 React 的方法，但是我们将使用命令行界面（CLI）工具 create-react-app，如前所述，该方法通过安装一些软件包并创建一些软件包来加快开发 React 应用程序的过程。文件供您处理上述工具。
+有很多使用 React 的方法，但是我们将使用命令行界面（CLI）工具 create-react-app，如前所述，该方法通过安装一些软件包并创建一些软件包来加快开发 React 应用程序的过程。文件供你处理上述工具。
 
-通过将一些 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素复制到 HTML 文件中，可以在[没有 create-react-app 的情况下将 React 添加到网站](https://reactjs.org/docs/add-react-to-a-website.html)，但是 create-react-app CLI 是 React 应用程序的常见起点。使用它可以让您花费更多的时间来构建应用，而花更少的时间进行设置。
+通过将一些 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素复制到 HTML 文件中，可以在[没有 create-react-app 的情况下将 React 添加到网站](https://reactjs.org/docs/add-react-to-a-website.html)，但是 create-react-app CLI 是 React 应用程序的常见起点。使用它可以让你花费更多的时间来构建应用，而花更少的时间进行设置。
 
 ### 要求
 
-为了使用 create-react-app，您需要安装 [Node.js](https://nodejs.org/en/)。建议您使用长期支持（LTS）版本。Node 包括 npm（Node 程序包管理器）和 npx（Node 程序包运行器）
+为了使用 create-react-app，你需要安装 [Node.js](https://nodejs.org/en/)。建议你使用长期支持（LTS）版本。Node 包括 npm（Node 程序包管理器）和 npx（Node 程序包运行器）
 
-您也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+你也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
 
-如果您使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
+如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
 
-还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行 —— 通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议您使用 Firefox，Safari 或 Chrome 等现代浏览器。
+还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行 —— 通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
 
 另外，有关更多信息，请参见以下内容：
 
@@ -122,7 +125,7 @@ const header = React.createElement("header", null,
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 - [The create-react-app documentation](https://create-react-app.dev/)
 
-### 初始化您的应用
+### 初始化你的应用
 
 `create-react-app` ，该命令接受一个参数：即你想给自己的应用所起的名字。`create-react-app` 将为此应用创建一个同名的文件夹，并在其中创建所需文件。在你打算放置你的应用程序的文件夹下打开你的命令终端，并键入命令：
 
@@ -189,9 +192,9 @@ moz-todo-react
 打开 `src/App.js`，之前打开的页面也提示我们对这个文件进行编辑。这个文件包含了我们第一个组件 `App`，内容如下：
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -205,8 +208,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -223,9 +225,9 @@ export default App;
 脚本开头的 `import` 语句允许在此脚本中使用其他文件中的代码，让我们更进一步地了解这些语句。
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 第一句代码引入了 React 库，这是为了将代码中的 JSX 语句转为`React.createElement()`，所有的 React 模块都应该引入 React 模块，否则会抛错。
@@ -242,7 +244,7 @@ import './App.css';
 
 ### `App` 组件
 
-在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如：“helloWorld”。但 React 组件使用帕斯卡命名法，如“HelloWorld”，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果您将函数名“App”改为“app”，您的浏览器会显示错误。
+在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如：“helloWorld”。但 React 组件使用帕斯卡命名法，如“HelloWorld”，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果你将函数名“App”改为“app”，你的浏览器会显示错误。
 
 让我们进一步看下 App 方法。
 
@@ -259,8 +261,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -271,7 +272,7 @@ function App() {
 
 App 方法返回一个 JSX 表达式，这个表达式定义了浏览器最终要渲染的 DOM。
 
-表达式中的元素就像以前写的 HTML 一样，都拥有属性，并且遵循 `attribute="value"` 的模式。在第三行，开始标签 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 有着 `className` 属性。这个属性与在 HTML 中的 [`class`](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性相同，但是由于 JSX 就是 JavaScript, 我们不能使用 `class` 属性 - 这个是关键字，意味着 JavaScript 已经用它执行其它任务，使用 `class` 属性将会在我们的代码中产生冲突。由于同样的原因，一些其它的 HTML 属性在 JSX 中也有着不同的书写方式，当我们碰到它们时，我们将会详述。
+表达式中的元素就像以前写的 HTML 一样，都拥有属性，并且遵循 `attribute="value"` 的模式。在第三行，开始标签 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 有着 `className` 属性。这个属性与在 HTML 中的 [`class`](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性相同，但是由于 JSX 就是 JavaScript, 我们不能使用 `class` 属性 - 这个是关键字，意味着 JavaScript 已经用它执行其他任务，使用 `class` 属性将会在我们的代码中产生冲突。由于同样的原因，一些其他的 HTML 属性在 JSX 中也有着不同的书写方式，当我们碰到它们时，我们将会详述。
 
 把第 6 行的 [`<p>`](/zh-CN/docs/Web/HTML/Element/p) 标签内容改为 "Hello, world!" 并保存文件。你会发现这个改变也会立即在浏览器的`http://localhost:3000` 中同步渲染。现在删掉 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 标签并保存，"Learn React"链接也会同样被删除。
 
@@ -283,9 +284,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -294,20 +293,20 @@ function App() {
 
 ### Export 语句
 
-在 `App.js` 文件的最底部， `export default App` 语句使得 `App` 组件能被其它模块使用。
+在 `App.js` 文件的最底部， `export default App` 语句使得 `App` 组件能被其他模块使用。
 
 ## Interrogating the index
 
 现在让我们打开 `src/index.js`, 因为这也是 `App` 组件被用到的地方。这个文件是我们 app 的入口点，在一开始它如下所示
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -315,7 +314,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 ```
 
-就像 `App.js` 一样，这个文件一开始 import 了所有的 JS 模块和其它运行所需要的资源。`src/index.css`定义了运用于整个 app 的 global style。我们可以看到我们的 `App` 组件也被 imported 了，这是在 `App.js` 底部的语句让 import `App` 变得可行。
+就像 `App.js` 一样，这个文件一开始 import 了所有的 JS 模块和其他运行所需要的资源。`src/index.css`定义了运用于整个 app 的 global style。我们可以看到我们的 `App` 组件也被 imported 了，这是在 `App.js` 底部的语句让 import `App` 变得可行。
 
 第七行调用 React 的 `ReactDOM.render()` 函数，并传入两个参数：
 
@@ -326,17 +325,17 @@ serviceWorker.unregister();
 
 > **备注：** 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（`/`），如 `<App />`，如果我们写 `<App>` 或者 `<img>` 将会报错。
 
-[Service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 能让我们的 App 离线运行，但它不在本篇文章的范围中，您可以删除第 5 行和第 9 到 12 行。
+[Service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 能让我们的 App 离线运行，但它不在本篇文章的范围中，你可以删除第 5 行和第 9 到 12 行。
 
-您最终的 `index.js` 文件应该如下所示：
+你最终的 `index.js` 文件应该如下所示：
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variables and props
@@ -351,9 +350,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 <img src={logo} className="App-logo" alt="logo" />
 ```
 
-可以看到， `<img />` 标签的 `src` 属性值是在大括号中的 -- `{logo}`. 这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道您在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
+可以看到，`<img />` 标签的 `src` 属性值是在大括号中的——`{logo}`。这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道你在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
 
-让我们试着设置一个我们自己的变量，在 `App` return 之前，添加 `const subject = 'React';`。您的代码现在应该如下所示：
+让我们试着设置一个我们自己的变量，在 `App` return 之前，添加 `const subject = 'React';`。你的代码现在应该如下所示：
 
 ```js
 function App() {
@@ -362,9 +361,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -380,9 +377,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -397,10 +392,10 @@ function App() {
 
 **prop** 是任何传入 React 组件的数据。Props 写在组件中，并且像 HTML 属性一样写成 `prop="value"`。让我们打开 `index.js` 并且为我们的 `<App/>` 添加第一个 prop。
 
-为 `<App/>` 组件添加一个叫 `subject` 并有着 `Clarice` 值的 prop。当完成之后，您的代码应如下所示：
+为 `<App/>` 组件添加一个叫 `subject` 并有着 `Clarice` 值的 prop。当完成之后，你的代码应如下所示：
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 回到 `App.js`，代码应该如下所示（return 中的内容省略了）
@@ -414,7 +409,7 @@ function App() {
 }
 ```
 
-改变 `App` 的函数签名，让它接收 `props` 作为一个参数。就像其它参数一样，您可以把 `props` 放在 `console.log()` 中，让其在浏览器打印出来。把它放在您的 `subject` 之后，以及 `return` 之前，您的代码应如下所示：
+改变 `App` 的函数签名，让它接收 `props` 作为一个参数。就像其他参数一样，你可以把 `props` 放在 `console.log()` 中，让其在浏览器打印出来。把它放在你的 `subject` 之后，以及 `return` 之前，你的代码应如下所示：
 
 ```js
 function App(props) {
@@ -426,7 +421,7 @@ function App(props) {
 }
 ```
 
-保存您的文件并检查您浏览器中的 JavaScript Console，您将会发现如下所示的语句：
+保存你的文件并检查你浏览器中的 JavaScript Console，你将会发现如下所示的语句：
 
 ```js
 Object { subject: "Clarice" }
@@ -434,7 +429,7 @@ Object { subject: "Clarice" }
 
 对象的 `subject` 属性与我们放入 `App` 函数签名的 prop 相对应，并且 `Clarice` 字符串与它的值相对应，在 React 中的组件 props 总是用这种方式传入 object 中。
 
-现在 `subject` 是我们的 props 之一了，让我们在 `App.js` 中使用它。用 `props.subject` 替代原本的 `React` 字符串，如果你想的话，也可以删除 `console.log()`，您的代码将如下所示：
+现在 `subject` 是我们的 props 之一了，让我们在 `App.js` 中使用它。用 `props.subject` 替代原本的 `React` 字符串，如果你想的话，也可以删除 `console.log()`，你的代码将如下所示：
 
 ```js
 function App(props) {
@@ -445,53 +440,18 @@ function App(props) {
 }
 ```
 
-当您保存之后，app 应该会输出 "Hello, Clarice!"。如果您回到 `index.js`，并且修改 `subject` 的值并保存，您输出的字也会随之改变。
+当你保存之后，app 应该会输出 "Hello, Clarice!"。如果你回到 `index.js`，并且修改 `subject` 的值并保存，你输出的字也会随之改变。
 
 ## 总结
 
-以上就是我们对 React 的初步认识，包括如何在本地下载它，创建一个初始 app，以及一些基本的操作。在下篇文章，我们将会开始创建我们的第一个 app -- 一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。
+以上就是我们对 React 的初步认识，包括如何在本地下载它，创建一个初始 app，以及一些基本的操作。在下篇文章，我们将会开始创建我们的第一个 app——一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。
 
 在 React 中：
 
-- 组件可以 import 它们需要的模块，并且在文件底部将自身 export，以让其它组件使用。
+- 组件可以 import 它们需要的模块，并且在文件底部将自身 export，以让其他组件使用。
 - 组件是用 `PascalCase` 也就是帕斯卡命名法命名的。
-- 通过把变量放在大括号中，您可以读取 JSX 的变量，如`{so}`
+- 通过把变量放在大括号中，你可以读取 JSX 的变量，如`{so}`
 - 一些 JSX 属性与 HTML 属性不相同，这样就不会与 JavaScript 的保留字相冲突，比如说，在 HTML 中的 `class` 会在 JSX 中转译为 `className`。注意这些属性都是驼峰式命名的。
 - Props 就像属性一样写在组件里，并且传入组件。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [在 Ember 中路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 资源和故障排除](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [创建我们的第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [添加新的待办事项表单：Vue 事件，方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [使用 CSS 样式化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算的属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 条件渲染：编辑现有待办事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [使用 Vue 裁判进行焦点管理](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)

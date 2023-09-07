@@ -59,9 +59,8 @@ document.body.innerHTML = "";
 이 예제는 문서의 현재 HTML 마크업을 가져오고, `"<"` 문자를 HTML 엔터티 `"&lt;"` 로 대체하합니다. 그러면 HTML을 원시 텍스트(raw text - 파싱 이전의 모습)로 반환합니다. 이것을 {{HTMLElement("pre")}} 요소로 래핑합니다. 그러면 `innerHTML` 값은 새 문자열로 변경됩니다. 그 결과, 문서의 내용은 페이지의 전체 소스 코드의 출력으로 대체됩니다.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### Operational details
@@ -120,12 +119,18 @@ log("Logging mouse events inside this container...");
 
 `log()` 함수는 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}을 사용하여 {{jsxref("Date")}} 객체에서 현재 시간을 가져 오고, 타임 스탬프와 메시지 텍스트가 있는 문자열을 작성하여 로그 출력을 만듭니다. 그런 다음 메시지는 클래스 `"log"`가 있는 상자에 추가됩니다.
 
-{{domxref("MouseEvent")}} 기반 이벤트 ({{event("mousedown")}}, {{event("click")}}, {{event("mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
+{{domxref("MouseEvent")}} 기반 이벤트 ({{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```
@@ -181,17 +186,15 @@ HTML은 우리의 예제에서 아주 간단합니다.
 
 {{EmbedLiveSample("Example", 640, 350)}}
 
-## Specification
+## 명세서
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#dom-element-innerhtml', 'Element.innerHTML')}} | {{Spec2('DOM Parsing')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{domxref("Node.textContent")}} 과 {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

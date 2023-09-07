@@ -1,18 +1,8 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Games
-  - Graphics
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 Интерфейс **`CanvasRenderingContext2D`** предоставляет контекст 2D рендеринга для поверхности рисования элемента {{ HTMLElement("canvas") }}.
@@ -20,8 +10,8 @@ translation_of: Web/API/CanvasRenderingContext2D
 Для того, чтобы получить объект этого интерфейса, следует вызвать метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} объекта `<canvas>`, передав ему в качестве первого аргумента строку "2d":
 
 ```js
-var canvas = document.getElementById('mycanvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("mycanvas");
+var ctx = canvas.getContext("2d");
 ```
 
 После того, как получен контекст 2D рендеринга для элемента canvas, вы можете начать работу с ним. Например:
@@ -299,13 +289,13 @@ ctx.fillRect(10, 10, 55, 50);
   - : Specifies where to start a dash array on a line. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
   - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozDrawText()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozDrawText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozMeasureText()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozMeasureText()`
   - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozPathText()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozPathText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
 
 #### Internal APIs (chrome-context only)

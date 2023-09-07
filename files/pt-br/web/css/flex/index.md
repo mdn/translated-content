@@ -55,7 +55,7 @@ Esta propriedade é uma abreviação das seguintes propriedades CSS:
 }
 
 .flex-container {
-  background-color: #F4F7F8;
+  background-color: #f4f7f8;
   resize: horizontal;
   overflow: hidden;
   display: flex;
@@ -67,7 +67,7 @@ Esta propriedade é uma abreviação das seguintes propriedades CSS:
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1B5385;
+  background-color: #1b5385;
   color: white;
   font-family: monospace;
   font-size: 13px;
@@ -98,7 +98,7 @@ Esta propriedade é uma abreviação das seguintes propriedades CSS:
 }
 ```
 
-{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Propriedades", 1200, 370, "", "", "example-outcome-frame")}}
 
 By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.
 
@@ -197,7 +197,7 @@ The `flex` property may be specified using one, two, or three values.
 ```js hidden
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
@@ -224,8 +224,8 @@ flex.addEventListener("click", function() {
 
 ## Specifications
 
-| Specification                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Specification                                          | Status                    | Comment            |
+| ------------------------------------------------------ | ------------------------- | ------------------ |
 | {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
 
 {{cssinfo}}

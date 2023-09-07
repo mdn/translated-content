@@ -1,7 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -56,7 +55,7 @@ body {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## Ver también
 

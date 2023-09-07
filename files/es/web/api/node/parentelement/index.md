@@ -1,7 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-original_slug: Web/API/Node/elementoPadre
 ---
 
 {{APIRef("DOM")}}
@@ -20,19 +19,17 @@ El `elementoPadre` es el padre del nodo actual. Esto es siempre un objecto {{dom
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
-
-## Compatibilidad en navegadores
-
-En algunos navegadores, la propiedad `elementoPadre` es solo definida en nodos que ellos mismos son {{domxref("Element")}}. En particular, esto no está definido en nodos de texto.
-
-{{Compat("api.Node.parentElement")}}
 
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

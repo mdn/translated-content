@@ -1,16 +1,6 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-tags:
-  - API
-  - Add-os
-  - Extensions
-  - Interface
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
 
 {{AddonSidebar}}
@@ -61,9 +51,9 @@ Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API p
 - {{WebExtAPIRef("windows.onFocusChanged")}}
   - : Lancé quand la fenêtre courante change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

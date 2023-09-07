@@ -1,5 +1,5 @@
 ---
-title: 'Window: rejectionhandled イベント'
+title: "Window: rejectionhandled イベント"
 slug: Web/API/Window/rejectionhandled_event
 ---
 
@@ -35,9 +35,13 @@ slug: Web/API/Window/rejectionhandled_event
 `rejectionhandled` イベントを使用して、拒否された Promise を、拒否された理由を添えてコンソールに出力することができます。
 
 ```js
-window.addEventListener("rejectionhandled", event => {
-  console.log("Promise rejected; reason: " + event.reason);
-}, false);
+window.addEventListener(
+  "rejectionhandled",
+  (event) => {
+    console.log("Promise rejected; reason: " + event.reason);
+  },
+  false,
+);
 ```
 
 ## 仕様書
@@ -50,7 +54,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## 関連情報
 
-- {{SectionOnPage("/ja/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

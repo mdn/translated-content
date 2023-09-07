@@ -3,6 +3,8 @@ title: 填充与边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
 
 现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在 SVG 绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间 CSS，使用 CSS 嵌入段落，或者使用外部引用的 CSS 文件。你会发现大部分 web 上的 SVG 使用的是行间 CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。
@@ -19,7 +21,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
        fill-opacity="0.5" stroke-opacity="0.8"/>
 ```
 
-此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由` fill-opacity `和` stroke-opacity `两个属性控制。
+此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由 `fill-opacity` 和 `stroke-opacity` 两个属性控制。
 
 > **備註：** FireFox 3+支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了 rgba 值和透明度，它们将被一起调用。
 

@@ -1,18 +1,9 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-  - WebAssembly
-  - table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`get()`**, rattachéee au prototype de {{jsxref("WebAssembly.Table()")}}, permet de récupérer une référence à une fonction stockée dans le tableau WebAssembly grâce à sa position. dans le tableau.
 
@@ -40,11 +31,10 @@ Si `index` est supérieur ou égal à {{jsxref("WebAssembly/Table/length","Table
 Dans l'exemple suivant (cf. le fichier [`table.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)), on compile et on instancie le _bytecode_ chargé, `table.wasm`, grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}. On récupère ensuite les références stockées dans le tableau d'export.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(function(obj) {
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
   var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
 });
 ```
 

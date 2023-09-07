@@ -1,7 +1,6 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
-translation_of: Web/CSS/:defined
 ---
 
 {{ CSSRef }}
@@ -29,18 +28,19 @@ simple-custom:defined {
 Этот пример включает скрипт, определяющий [пользовательский элемент](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) `<simple-custom>`:
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 Затем мы используем короткий HTML код с элементом `<simple-custom>` и стандартным элементом {{htmlelement("p")}}:

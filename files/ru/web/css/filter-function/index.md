@@ -1,9 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - фильтры
-translation_of: Web/CSS/filter-function
 ---
 
 {{cssref}}
@@ -24,7 +21,7 @@ translation_of: Web/CSS/filter-function
   - : Применяет к изображению тень.
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
   - : Преобразует изображение к тонам серого.
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
   - : Изменяет оттенок изображения за счёт поворота на цветовом круге.
 - {{cssxref("filter-function/invert", "invert()")}}
   - : Инвертирует цвета изображения.
@@ -37,8 +34,8 @@ translation_of: Web/CSS/filter-function
 
 ## Спецификация
 
-| Спецификация                                                                                                     | Статус                               | Комментарии         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| Спецификация                                                                         | Статус                     | Комментарии         |
+| ------------------------------------------------------------------------------------ | -------------------------- | ------------------- |
 | {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Первое определение. |
 
 ## Смотрите также

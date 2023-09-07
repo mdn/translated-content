@@ -14,8 +14,11 @@ slug: Web/SVG/Element/style
 ## 示例
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
   <style>
     /* <![CDATA[ */
     circle {
@@ -48,7 +51,7 @@ slug: Web/SVG/Element/style
 
 ## DOM 接口
 
-该元素实现了[`SVGStyleElement`](/zh-CN/DOM/SVGStyleElement)接口。
+该元素实现了 [`SVGStyleElement`](/zh-CN/DOM/SVGStyleElement) 接口。
 
 ## 浏览器兼容性
 

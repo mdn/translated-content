@@ -1,7 +1,6 @@
 ---
 title: Dynamically modifying XUL-based user interface
 slug: orphaned/Dynamically_modifying_XUL-based_user_interface
-original_slug: Dynamically_modifying_XUL-based_user_interface
 ---
 
 この記事では、[DOM](/ja/DOM) やその他の API を使って [XUL](/ja/XUL) インターフェイスを操作する方法について検討します。まず DOM

@@ -1,17 +1,6 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -51,23 +40,24 @@ var dict = Object.setPrototypeOf({}, null);
 
 ```js
 if (!Object.setPrototypeOf) {
-     Object.prototype.setPrototypeOf = function(obj, proto) {
-         if(obj.__proto__) {
-             obj.__proto__ = proto;
-             return obj;
-         } else {
-             // Если нужно будет определить прототип у Object.create(null) объекта
-             var Fn = function() {
-                 for (var key in obj) { //Если в объект уже были определены некоторые свойства
-                     Object.defineProperty(this, key, {
-                         value: obj[key],
-                     });
-                 }
-             };
-             Fn.prototype = proto;
-             return new Fn();
-         }
-     }
+  Object.prototype.setPrototypeOf = function (obj, proto) {
+    if (obj.__proto__) {
+      obj.__proto__ = proto;
+      return obj;
+    } else {
+      // Если нужно будет определить прототип у Object.create(null) объекта
+      var Fn = function () {
+        for (var key in obj) {
+          //Если в объект уже были определены некоторые свойства
+          Object.defineProperty(this, key, {
+            value: obj[key],
+          });
+        }
+      };
+      Fn.prototype = proto;
+      return new Fn();
+    }
+  };
 }
 ```
 
@@ -77,32 +67,38 @@ if (!Object.setPrototypeOf) {
 
 ```js
 /**
-*** Object.appendChain(@object, @prototype)
-*
-* Присоединяет первый неродной прототип цепочки к новому прототипу.
-* Возвращает @object (если он был примитивным значением, оно будет преобразовано в объект).
-*
-*** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
-*** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
-*
-* Присоединяет первый не родной прототип цепочки к родному объекту Function.prototype, затем присоединяет
-* new Function(["@arg"(s)], "@function_body") к этой цепочке.
-* Возвращает функцию.
-*
-**/
+ *** Object.appendChain(@object, @prototype)
+ *
+ * Присоединяет первый неродной прототип цепочки к новому прототипу.
+ * Возвращает @object (если он был примитивным значением, оно будет преобразовано в объект).
+ *
+ *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
+ *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
+ *
+ * Присоединяет первый не родной прототип цепочки к родному объекту Function.prototype, затем присоединяет
+ * new Function(["@arg"(s)], "@function_body") к этой цепочке.
+ * Возвращает функцию.
+ *
+ **/
 
-Object.appendChain = function(oChain, oProto) {
+Object.appendChain = function (oChain, oProto) {
   if (arguments.length < 2) {
-    throw new TypeError('Object.appendChain - Not enough arguments');
+    throw new TypeError("Object.appendChain - Not enough arguments");
   }
-  if (typeof oProto === 'number' || typeof oProto === 'boolean') {
-    throw new TypeError('second argument to Object.appendChain must be an object or a string');
+  if (typeof oProto === "number" || typeof oProto === "boolean") {
+    throw new TypeError(
+      "second argument to Object.appendChain must be an object or a string",
+    );
   }
 
   var oNewProto = oProto,
-      oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
+    oReturn =
+      (o2nd =
+      oLast =
+        oChain instanceof this ? oChain : new oChain.constructor(oChain));
 
-  for (var o1st = this.getPrototypeOf(o2nd);
+  for (
+    var o1st = this.getPrototypeOf(o2nd);
     o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
@@ -117,7 +113,7 @@ Object.appendChain = function(oChain, oProto) {
 
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
-}
+};
 ```
 
 ### Использование
@@ -126,7 +122,7 @@ Object.appendChain = function(oChain, oProto) {
 
 ```js
 function Mammal() {
-  this.isMammal = 'да';
+  this.isMammal = "да";
 }
 
 function MammalSpecies(sMammalSpecies) {
@@ -136,12 +132,12 @@ function MammalSpecies(sMammalSpecies) {
 MammalSpecies.prototype = new Mammal();
 MammalSpecies.prototype.constructor = MammalSpecies;
 
-var oCat = new MammalSpecies('Felis');
+var oCat = new MammalSpecies("Felis");
 
 alert(oCat.isMammal); // 'да'
 
 function Animal() {
-  this.breathing = 'да';
+  this.breathing = "да";
 }
 
 Object.appendChain(oCat, new Animal());
@@ -153,7 +149,7 @@ alert(oCat.breathing); // 'да'
 
 ```js
 function Symbol() {
-  this.isSymbol = 'да';
+  this.isSymbol = "да";
 }
 
 var nPrime = 17;
@@ -174,8 +170,10 @@ function Person(sName) {
   this.identity = sName;
 }
 
-var george = Object.appendChain(new Person('Георг'),
-                                'alert("Привет, парни!!");');
+var george = Object.appendChain(
+  new Person("Георг"),
+  'alert("Привет, парни!!");',
+);
 
 alert(george.identity); // 'Георг'
 george(); // 'Привет, парни!!'

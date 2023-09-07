@@ -120,18 +120,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### 正三角形の高さの計算
 
 正三角形の高さを計算したい場合、側辺の長さが 100 であるとわかっている場合は、*隣の角に正接を乗じた長さは、反対側と等しくなる*という数式を使用することができます。
 
-![](https://mdn.mozillademos.org/files/14829/trigonometry.png)
+![](trigonometry.png)
 
 JavaScript では、次のようにして実現することができます。
 

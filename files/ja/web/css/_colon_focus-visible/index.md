@@ -1,5 +1,5 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 ---
 
@@ -22,16 +22,17 @@ slug: Web/CSS/:focus-visible
 この例では、`:focus-visible` セレクターはユーザーエージェントの動作を使用して照合するタイミングを判断します。マウスでそれぞれのコントロールをクリックしたときと、キーボードを使用してタブ移動したときとで、何が起こるかを比較してみてください。なお、`:focus` でスタイル付けされた要素との動作の違いに注意してください。
 
 ```html
-<input value="既定のスタイル"><br>
-<button>既定のスタイル</button><br>
-<input class="focus-only" value=":focus のみ"><br>
-<button class="focus-only">:focus のみ</button><br>
-<input class="focus-visible-only" value=":focus-visible のみ"><br>
+<input value="既定のスタイル" /><br />
+<button>既定のスタイル</button><br />
+<input class="focus-only" value=":focus のみ" /><br />
+<button class="focus-only">:focus のみ</button><br />
+<input class="focus-visible-only" value=":focus-visible のみ" /><br />
 <button class="focus-visible-only">:focus-visible のみ</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 

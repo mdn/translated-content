@@ -35,7 +35,7 @@ O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaix
 - `ruby` {{Experimental_Inline}}
   - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como o HTML correspondente{{HTMLElement("ruby")}} elementos.
 
-> **Note:** **Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando**`display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
+> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando `display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
 
 ### Sintaxe formal
 
@@ -58,18 +58,18 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 

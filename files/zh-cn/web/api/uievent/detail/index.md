@@ -11,7 +11,7 @@ slug: Web/API/UIEvent/detail
 
 对 [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event) 或者 [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event) 事件，`UIEvent.detail` 是 1 加上当前点击数。
 
-对所有的其它{{domxref("UIEvent")}} 对象，`UIEvent.detail` 总是零。
+对所有的其他{{domxref("UIEvent")}} 对象，`UIEvent.detail` 总是零。
 
 ## Specifications
 

@@ -79,7 +79,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.DELETE")}}
+{{Compat}}
 
 ## 같이 보기
 

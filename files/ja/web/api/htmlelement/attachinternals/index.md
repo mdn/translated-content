@@ -1,6 +1,8 @@
 ---
-title: HTMLElement.attachInternals()
+title: "HTMLElement: attachInternals() メソッド"
 slug: Web/API/HTMLElement/attachInternals
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{APIRef('DOM')}}
@@ -9,8 +11,8 @@ slug: Web/API/HTMLElement/attachInternals
 
 ## 構文
 
-```js
-var internals = element.attachInternals();
+```js-nolint
+attachInternals()
 ```
 
 ### 引数
@@ -42,11 +44,10 @@ class CustomCheckbox extends HTMLElement {
     super();
     this.internals_ = this.attachInternals();
   }
+  // …
+}
 
-  /* ... */
-
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.form);

@@ -1,17 +1,6 @@
 ---
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Fenêtre
-  - Méthode
-  - Non-standard
-  - WebExtensions
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
 
 {{AddonSidebar()}}
@@ -32,8 +21,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var creating = browser.windows.create(
-  createData            // optional object
-)
+  createData, // optional object
+);
 ```
 
 ### Paramètres
@@ -93,8 +82,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
-    url: ["https://developer.mozilla.org",
-          "https://addons.mozilla.org"]
+    url: ["https://developer.mozilla.org", "https://addons.mozilla.org"],
   });
   creating.then(onCreated, onError);
 });
@@ -113,7 +101,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
-    tabId: tab.id
+    tabId: tab.id,
   });
   creating.then(onCreated, onError);
 });
@@ -131,25 +119,23 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   var popupURL = browser.extension.getURL("popup/popup.html");
 
   var creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,
-    width: 200
+    width: 200,
   });
   creating.then(onCreated, onError);
-
 });
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.create", 10)}}
+{{Compat}}
 
 > **Note :**
 >

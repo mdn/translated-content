@@ -31,9 +31,7 @@ canvas.getContext(contextType, contextAttributes);
   - : Você pode usar alguns atributos de contexto quando criar o seu contexto de renderização, por exemplo:
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     Atributos de contexto 2d:
@@ -74,24 +72,20 @@ Dado este elemento {{HTMLElement("canvas")}}:
 Você pega um contexto `2d` do canvas com o código a seguir:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 
 Agora você tem [contexto de renderização 2d](/pt-BR/docs/Web/API/CanvasRenderingContext2D) para o canvas e você pode desenhar nele.
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                        | Status                           | Comment                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o ultimo snapshot, {{SpecName('HTML5 W3C')}}      |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}}     | {{Spec2('HTML5.1')}}     |                                                                                |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML5 W3C')}}     | Snapshot do {{SpecName('HTML WHATWG')}} contendo a definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## See also
 

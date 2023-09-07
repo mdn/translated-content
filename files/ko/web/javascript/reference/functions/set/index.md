@@ -2,6 +2,7 @@
 title: 설정자
 slug: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 **`set`** 구문은 객체의 속성에 할당을 시도할 때 호출할 함수를 바인딩합니다.
@@ -59,13 +60,13 @@ const language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -84,33 +85,37 @@ delete language.current;
 이미 존재하는 객체에 설정자를 추가하려면 {{jsxref("Object.defineProperty()")}}를 사용하세요.
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function(x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10;
 // 설정자 실행, a 속성에 10 / 2 = 5 할당
 
-console.log(o.a)
+console.log(o.a);
 // 5
 ```
 
 ### 계산된 속성 이름 사용하기
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz);
 //  "bar"
 
-obj.foo = 'baz';
+obj.foo = "baz";
 //  run the setter
 
 console.log(obj.baz);

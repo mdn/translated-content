@@ -1,13 +1,6 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/Console/timeStamp
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - console
-translation_of: Web/API/Console/timeStamp
+slug: Web/API/console/timeStamp
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

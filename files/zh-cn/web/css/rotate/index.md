@@ -38,7 +38,7 @@ rotate: 1 1 1 90deg;
 - `none`
   - : 指定不应用旋转
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
@@ -86,11 +86,11 @@ div:hover .rotate {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 

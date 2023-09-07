@@ -16,12 +16,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 一些值没有 `Symbol.toStringTag`，但是有额外的 `toString()` 表示。有关完整列表，请参见 {{jsxref("Object.prototype.toString()")}}。
 
 ```js
-Object.prototype.toString.call('foo');     // "[object String]"
-Object.prototype.toString.call([1, 2]);    // "[object Array]"
-Object.prototype.toString.call(3);         // "[object Number]"
-Object.prototype.toString.call(true);      // "[object Boolean]"
+Object.prototype.toString.call("foo"); // "[object String]"
+Object.prototype.toString.call([1, 2]); // "[object Array]"
+Object.prototype.toString.call(3); // "[object Number]"
+Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null);      // "[object Null]"
+Object.prototype.toString.call(null); // "[object Null]"
 // ... and more
 ```
 
@@ -30,7 +30,7 @@ Object.prototype.toString.call(null);      // "[object Null]"
 大多数内置的对象提供了它们自己的 `@@toStringTag` 属性。所有内置对象的 `@@toStringTag` 属性都是不可写的（writable）、不可枚举的（enumerable）但是可配置的（configurable）。
 
 ```js
-Object.prototype.toString.call(new Map());       // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
@@ -51,7 +51,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 ```js
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 
@@ -63,9 +63,9 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 由于 2020 年年中 [WebIDL 规范的变化](https://github.com/whatwg/webidl/pull/357)，浏览器正在向所有 DOM 原型对象添加 `Symbol.toStringTag` 属性。例如，要访问 {{domxref("HTMLButtonElement")}} 上的 `Symbol.toStringTag` 属性：
 
 ```js
-const test = document.createElement('button');
+const test = document.createElement("button");
 test.toString(); // Returns [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Returns HTMLButtonElement
+test[Symbol.toStringTag]; // Returns HTMLButtonElement
 ```
 
 ## 规范

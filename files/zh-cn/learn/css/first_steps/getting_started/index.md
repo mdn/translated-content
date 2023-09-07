@@ -1,7 +1,6 @@
 ---
 title: 让我们开始 CSS 的学习之旅
 slug: Learn/CSS/First_steps/Getting_started
-original_slug: Learn/CSS/First_steps/开始
 ---
 
 {{LearnSidebar}}
@@ -12,7 +11,7 @@ original_slug: Learn/CSS/First_steps/开始
 
 #### 前置知识
 
-在开始本单元之前，您应该：
+在开始本单元之前，你应该：
 
 - 基本熟悉计算机操作。
 - 基本工作环境的设置（详见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），基本的文件操作，详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)。
@@ -30,28 +29,27 @@ original_slug: Learn/CSS/First_steps/开始
 ```html
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>开始学习 CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>我是一级标题</h1>
 
-    <p>这是一个段落文本。在文本中有一个 <span>span element</span>
-并且还有一个 <a href="http://example.com">链接</a>.</p>
+    <p>
+      这是一个段落文本。在文本中有一个 <span>span element</span> 并且还有一个
+      <a href="http://example.com">链接</a>.
+    </p>
 
     <p>这是第二段。包含了一个 <em>强调</em> 元素。</p>
 
     <ul>
-        <li>项目 1</li>
-        <li>项目 2</li>
-        <li>项目 <em>三</em></li>
+      <li>项目 1</li>
+      <li>项目 2</li>
+      <li>项目 <em>三</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -66,7 +64,7 @@ original_slug: Learn/CSS/First_steps/开始
 为了把 `styles.css` 和 `index.html` 连接起来，可以在 HTML 文档中，{{htmlelement("head")}} 语句模块里面加上下面的代码：
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 {{htmlelement("link")}} 语句块里面，我们用属性 `rel`，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 `href` 指定，寻找 CSS 文件的位置。你可以做测试来验证 CSS 是否有效：在 `styles.css` 里面加上 CSS 样式并观察显示的结果。下面，用你的编辑器打出下面的代码。
@@ -94,12 +92,13 @@ p {
 用逗号将不同选择器隔开，即可一次使用多个选择器。譬如，若要将所有段落与列表变成绿色，只需：
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
-您可以在下面的互动式文本编辑器上试试看，当然您也可以在本地的 CSS 文档上尝试。
+你可以在下面的互动式文本编辑器上试试看，当然你也可以在本地的 CSS 文档上尝试。
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}
 
@@ -117,7 +116,7 @@ li {
 
 把上述代码加到你的 CSS 里面试一试！
 
-欢迎参阅 MDN 上的 `list-style-type` 属性，看看到底有哪些值被支持。 [`list-style-type`](/zh-CN/docs/Web/CSS/list-style-type) 页首提供互动性示例，您可以输入不同的值来瞅一瞅它们到底有什么用。关于每个值的详细描述都规规整整地列在下面。
+欢迎参阅 MDN 上的 `list-style-type` 属性，看看到底有哪些值被支持。 [`list-style-type`](/zh-CN/docs/Web/CSS/list-style-type) 页首提供互动性示例，你可以输入不同的值来瞅一瞅它们到底有什么用。关于每个值的详细描述都规规整整地列在下面。
 
 通过参阅上述页面，你会发现你不仅能移除项目符号——你甚至能改变它们。赶快试试 `square`，它能把默认的小黑球变成方框框。
 
@@ -153,11 +152,11 @@ li {
 ```css
 li.special {
   color: orange;
-  font-weight: bold; 
+  font-weight: bold;
 }
 ```
 
-这个意思是说，“选中每个 `special` 类的 `li` 元素”。你真要这样，好了，它对 `<span>` 还有其它元素不起作用了。你可以把这个元素再添上去就是了：
+这个意思是说，“选中每个 `special` 类的 `li` 元素”。你真要这样，好了，它对 `<span>` 还有其他元素不起作用了。你可以把这个元素再添上去就是了：
 
 ```css
 li.special,
@@ -167,11 +166,11 @@ span.special {
 }
 ```
 
-你们都是懒人，肯定不想每加一个 special 类的元素就改一遍 CSS 表，你肯定想把一个类的属性应用到多个元素上。所以说，有时还是别管元素，光看类就完事了，除非你意志坚定，坚持对这个类的某一种元素创造规则，还不让其它元素用。
+你们都是懒人，肯定不想每加一个 special 类的元素就改一遍 CSS 表，你肯定想把一个类的属性应用到多个元素上。所以说，有时还是别管元素，光看类就完事了，除非你意志坚定，坚持对这个类的某一种元素创造规则，还不让其他元素用。
 
 ## 根据元素在文档中的位置确定样式
 
-有时候，您希望某些内容根据它在文档中的位置而有所不同。这里有很多选择器可以为您提供帮助，但现在我们只介绍几个选择器。在我们的文档中有两个 `<em>`元素 ——一个在段落内，另一个在列表项内。仅选择嵌套在`<li>` 元素内的`<em>`我们可以使用一个称为**包含选择符**的选择器，它只是单纯地在两个选择器之间加上一个空格。
+有时候，你希望某些内容根据它在文档中的位置而有所不同。这里有很多选择器可以为你提供帮助，但现在我们只介绍几个选择器。在我们的文档中有两个 `<em>`元素 ——一个在段落内，另一个在列表项内。仅选择嵌套在`<li>` 元素内的`<em>`我们可以使用一个称为**包含选择符**的选择器，它只是单纯地在两个选择器之间加上一个空格。
 
 将以下规则添加到样式表。
 
@@ -181,7 +180,7 @@ li em {
 }
 ```
 
-该选择器将选择`<li>`内部的任何`<em>`元素（`<li>`的后代）。因此在示例文档中，您应该发现第三个列表项内的`<em>`现在是紫色，但是在段落内的那个没发生变化。
+该选择器将选择`<li>`内部的任何`<em>`元素（`<li>`的后代）。因此在示例文档中，你应该发现第三个列表项内的`<em>`现在是紫色，但是在段落内的那个没发生变化。
 
 另一些可能想尝试的事情是在 HTML 文档中设置直接出现在标题后面并且与标题具有相同层级的段落样式，为此需在两个选择器之间添加一个 `+` 号 (成为 **相邻选择符**)
 
@@ -193,7 +192,7 @@ h1 + p {
 }
 ```
 
-下面的示例包含了上面的两个规则。尝试添加规则使位于段落中的 span 变为红色。如果没问题，您将看到在第一段中的 span 会变为红色，但是第一个列表项中的 span 不会改变颜色。
+下面的示例包含了上面的两个规则。尝试添加规则使位于段落中的 span 变为红色。如果没问题，你将看到在第一段中的 span 会变为红色，但是第一个列表项中的 span 不会改变颜色。
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
@@ -268,11 +267,3 @@ body h1 + p .special {
 在下一节中，我们将看到样式表的结构是什么样的。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## 在此模块
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [开始学习 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 代码是如何组织的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [开始使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

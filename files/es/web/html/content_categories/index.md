@@ -1,7 +1,6 @@
 ---
 title: Categorías de contenido
 slug: Web/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 Cada elemento [HTML](/es/docs/Web/HTML) es miembro de una o más **categorías de contenido** — estas categorías agrupan elementos que comparten características comunes. Esta es una agrupación flexible (en realidad no crea una relación entre los elementos de estas categorías), pero ayuda a definir y describir el comportamiento compartido de las categorías y sus reglas asociadas, especialmente cuando te encuentras con sus intrincados detalles. También es posible que los elementos no sean miembros de _ninguna_ de estas categorías.
@@ -14,7 +13,7 @@ Hay tres tipos de categorías de contenido:
 
 > **Nota:** Una explicación comparativa más detallada de estas categorías de contenido y su funcionalidad está más allá del alcance de este artículo; para eso, posiblemente desees leer las [partes relevantes de la especificación HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-[![Un diagrama de Venn que muestra cómo se interrelacionan las distintas categorías de contenido. Las siguientes secciones explican estas relaciones en texto.](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
+[![Un diagrama de Venn que muestra cómo se interrelacionan las distintas categorías de contenido. Las siguientes secciones explican estas relaciones en texto.](content_categories_venn.png?size=webview)](content_categories_venn.png)
 
 ## Categorías de contenido principal
 
@@ -33,7 +32,7 @@ Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
 - {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
 - {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} {{HTMLAttrxRef("scoped", "style")}}
+- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Element/style#scoped)
 
 ### Contenido de sección
 
@@ -78,12 +77,12 @@ El contenido incrustado importa otro recurso o inserta contenido de otro lenguaj
 El contenido interactivo incluye elementos diseñados específicamente para la interacción del usuario. Los elementos que pertenecen a esta categoría incluyen: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
 Algunos elementos pertenecen a esta categoría solo bajo condiciones específicas:
 
-- {{HTMLElement("audio")}}, si está presente el atributo {{HTMLAttrxRef("controls", "audio")}}
-- {{HTMLElement("img")}}, si está presente el atributo {{HTMLAttrxRef("usemap", "img")}}
-- {{HTMLElement("input")}}, si el atributo {{HTMLAttrxRef("type", "input")}} no está en estado oculto
-- {{HTMLElement("menu")}}, si el atributo {{HTMLAttrxRef("type", "menu")}} está en la barra de estado de herramientas
-- {{HTMLElement("object")}}, si está presente el atributo {{HTMLAttrxRef("usemap", "object")}}
-- {{HTMLElement("video")}}, si está presente el atributo {{HTMLAttrxRef("controls", "video")}}
+- {{HTMLElement("audio")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/audio#controls)
+- {{HTMLElement("img")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/img#usemap)
+- {{HTMLElement("input")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/input#type) no está en estado oculto
+- {{HTMLElement("menu")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/menu#type) está en la barra de estado de herramientas
+- {{HTMLElement("object")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/object#usemap)
+- {{HTMLElement("video")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/video#controls)
 
 ### Contenido palpable
 

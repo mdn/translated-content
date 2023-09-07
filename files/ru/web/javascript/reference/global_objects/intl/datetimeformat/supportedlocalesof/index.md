@@ -1,13 +1,6 @@
 ---
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
 
 {{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
@@ -44,16 +37,18 @@ Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
 Предполагая, что среда выполнения поддерживает индонезийское и немецкое, но на балийское форматирование даты и времени, метод `supportedLocalesOf` вернёт неизменными индонезийскую и немецкую языковые метки, даже несмотря на то, что сортировка `pinyin` не относится к форматированию даты и времени, не используется с индонезийским языком и вряд ли будет поддерживаться в немецком языке для Индонезии. Обратите внимание на используемую здесь спецификацию алгоритма `"lookup"` — сопоставление `"best fit"` может решить, что индонезийский язык является адекватным сопоставлением с балийским, поскольку большинство людей, говорящих на балийском, также понимают индонезийский, и поэтому может возвратиться ещё и языковая метка балийского языка.
 
 ```js
-var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-var options = { localeMatcher: 'lookup' };
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
+var locales = ["ban", "id-u-co-pinyin", "de-ID"];
+var options = { localeMatcher: "lookup" };
+console.log(
+  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
 // → "id-u-co-pinyin, de-ID"
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                           | Комментарии              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| Спецификация                                                                        | Статус                  | Комментарии              |
+| ----------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
 | {{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
 
 ## Совместимость с браузерами

@@ -1,16 +1,6 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
-tags:
-  - API
-  - Device Orientation
-  - Experimental
-  - Firefox OS
-  - Mobile
-  - Motion
-  - Orientation
-  - TopicStub
-translation_of: Web/API/DeviceMotionEvent
 ---
 
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
@@ -40,8 +30,8 @@ translation_of: Web/API/DeviceMotionEvent
 ## Exemple
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener("devicemotion", function (event) {
+  console.log(event.acceleration.x + " m/s2");
 });
 ```
 

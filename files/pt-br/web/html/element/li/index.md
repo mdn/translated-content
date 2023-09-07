@@ -21,9 +21,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo de número inteiro indica o valor ordinal atual do item na lista, definido pelo elemento {{HTMLElement("ol")}}. O único valor possível para este atributo é um número, ainda que a lista seja exibida com algarismos romanos, ou letras. A lista de itens que virá em seguida continuará a ser numerada a partir desta posição. O atributo **value** não tem significado para listas desordenadas ({{HTMLElement("ul")}}), nem para menus ({{HTMLElement("menu")}}).
 
-    > **Note:** **Nota**: Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
+    > **Nota:** Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
 
-    > **Note:** **Nota:** Antes de {{Gecko("9.0")}}, os valores negativos eram, incorretamente, convertidos a 0. A partir de {{Gecko("9.0")}} todos os valores inteiros são analisados corretamente.
+    > **Nota:** Antes de Gecko 9.0, os valores negativos eram, incorretamente, convertidos a 0. A partir de Gecko 9.0 todos os valores inteiros são analisados corretamente.
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 
@@ -43,9 +43,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ```html
 <ol>
-    <li>primeiro item</li>
-    <li>segundo item</li>
-    <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ol>
 ```
 
@@ -57,9 +57,9 @@ A saída HTML acima será:
 
 ```html
 <ul>
-    <li>primeiro item</li>
-    <li>segundo item</li>
-    <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ul>
 ```
 
@@ -71,17 +71,17 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 
 ## Especificações
 
-| Especificação                                                                                                | Estado                           | Observação |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                     | Estado                   | Observação |
+| --------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                       | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 
 {{Compat("html.elements.li")}}
 
-## Veja também:
+## Veja também
 
 - Outros elementos HTML parentes: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
 - Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento`<li>`:

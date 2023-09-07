@@ -1,15 +1,6 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-tags:
-  - API
-  - Besoins Privilèges
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
-  - alarms
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
 
 {{AddonSidebar}}
@@ -45,7 +36,7 @@ Pour pouvoir utiliser cette API, vous devez disposer de la [permission](/fr/Add-
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms")}}
+{{Compat}}
 
 > **Note :**
 >

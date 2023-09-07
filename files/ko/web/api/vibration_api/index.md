@@ -1,8 +1,8 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-original_slug: Web/Guide/API/Vibration/Vibration
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 요즘 나오는 대부분은 모바일 디바이스는 바이브레이션 하드웨어를 포함하고 있다. 소프트웨어 코드를 이용해 바이브레이션 하드웨어를 제어하면, 모바일 디바이스를 흔들리게 만들어 사용자에게 물리적인 피드백을 제공할 수 있다.
@@ -49,22 +49,22 @@ var vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
-    navigator.vibrate(duration);
+  navigator.vibrate(duration);
 }
 
 // Stops vibration
 function stopVibrate() {
-    // Clear interval and stop persistent vibrating
-    if(vibrateInterval) clearInterval(vibrateInterval);
-    navigator.vibrate(0);
+  // Clear interval and stop persistent vibrating
+  if (vibrateInterval) clearInterval(vibrateInterval);
+  navigator.vibrate(0);
 }
 
 // Start persistent vibration at given duration and interval
 // Assumes a number value is given
 function startPeristentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
-        startVibrate(duration);
-    }, interval);
+  vibrateInterval = setInterval(function () {
+    startVibrate(duration);
+  }, interval);
 }
 ```
 
@@ -74,7 +74,7 @@ Of course the snippet above doesn't take into account the array method of vibrat
 
 This API is clearly targeted toward mobile devices. The Vibration API would be good for alerts within mobile web applications, and would be especially awesome when used in games or media-heavy applications. Imagine watching a video on your mobile device, and during an explosion scene, your phone got a bit of a shake. Or playing Bomberman and feeling a gentle kick when a block explodes!
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

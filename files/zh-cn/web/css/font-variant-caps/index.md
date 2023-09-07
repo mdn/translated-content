@@ -5,7 +5,7 @@ slug: Web/CSS/font-variant-caps
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS)属性 **`font-variant-caps`** 使您可以控制大写字母特殊字符的使用。
+[CSS](/zh-CN/docs/Web/CSS)属性 **`font-variant-caps`** 使你可以控制大写字母特殊字符的使用。
 
 {{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
 
@@ -21,7 +21,7 @@ slug: Web/CSS/font-variant-caps
 - 在德语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘de’）中，`ß` 的大写可能会被写作`ẞ`（收录于通用字符集 U+1E9E）。
 - 在希腊语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘el’）中，如果整个单词是大写的（`ά`/`Α`），元音将失去重音。（分离字母 eta（`ή`/`Ή`）除外。）除此之外，重音在第一个元音的双元音将失去重音，并被在第二个元音上加上一个变音符（`άι`/`ΑΪ`）.
 
-## 句法
+## 语法
 
 ```css
 /* Keyword values */
@@ -58,7 +58,7 @@ font-variant-caps: unset;
 - `titling-caps`
   - : 允许首字母大写（OpenType 特性：`titl`）。大写字母变体字符通常被设计成与用于小写字母。在标题序列中，如果均使用大写字母，可能会带来过于强烈的视觉效果。首字母大写即用来应对这种情况。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -84,9 +84,9 @@ font-variant-caps: unset;
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Examples') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 无障碍访问风险
 

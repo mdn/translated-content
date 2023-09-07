@@ -1,11 +1,6 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
 
 {{jsSidebar("Objects")}}
@@ -60,7 +55,7 @@ parseFloat(foo);
 
 var foo = Object.create(null);
 foo.valueOf = function () { return "3.14"; };
-parseFloat(foo);​​​​​
+parseFloat(foo);
 ```
 
 ### `parseFloat` возвращает NaN

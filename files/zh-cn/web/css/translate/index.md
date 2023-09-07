@@ -84,9 +84,9 @@ div:hover .translate {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

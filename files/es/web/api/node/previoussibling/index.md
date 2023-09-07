@@ -16,9 +16,9 @@ nodoAnterior = nodo.previousSibling;
 ## Ejemplo
 
 ```html
-<img id="b0">
-<img id="b1">
-<img id="b2">
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
 ```
 
 ```js
@@ -38,15 +38,13 @@ for more information.
 
 Para navegar en el sentido opuesto de la lista de nodos hijos se utiliza [Node.nextSibling](/es/docs/Web/API/Node.nextSibling).
 
-## Especificación
+## Especificaciones
 
-- [DOM Level 1 Core: previousSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
-- [DOM Level 2 Core: previousSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
-- [DOM Level 3 Core: previousSibling](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Node.previousSibling")}}
+{{Compat}}
 
 ## Ver también
 

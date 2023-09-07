@@ -2,6 +2,7 @@
 title: <style>
 slug: Web/HTML/Element/style
 ---
+
 ## Resumo
 
 O **elemento HTML \<style>** contém informações de estilo para um documento ou uma parte do documento. As informações de estilo específico estão contidas dentro deste elemento, geralmente no [CSS](/pt-BR/docs/Web/CSS).
@@ -33,9 +34,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ```html
 <style type="text/css">
-body {
-  color:red;
-}
+  body {
+    color: red;
+  }
 </style>
 ```
 
@@ -43,12 +44,19 @@ body {
 
 ```html
 <article>
-  <div>The scoped attribute allows for you to include style elements mid-document.
-   Inside rules only apply to the parent element.</div>
-  <p>This text should be black. If it is red your browser does not support the scoped attribute.</p>
+  <div>
+    The scoped attribute allows for you to include style elements mid-document.
+    Inside rules only apply to the parent element.
+  </div>
+  <p>
+    This text should be black. If it is red your browser does not support the
+    scoped attribute.
+  </p>
   <section>
     <style scoped>
-      p { color: red; }
+      p {
+        color: red;
+      }
     </style>
     <p>This should be red.</p>
   </section>
@@ -61,17 +69,17 @@ body {
 
 ## Especificações
 
-| Specification                                                                                                | Status                               | Comment                                              |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------- |
+| Specification                                                                      | Status                     | Comment                                     |
+| ---------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- |
 | {{ SpecName('HTML WHATWG', 'document-metadata.html#the-style-element', 'style') }} | {{ Spec2('HTML WHATWG') }} | No change from {{ SpecName('HTML5 W3C') }}. |
-| {{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }} | {{ Spec2('HTML5 W3C') }}     | Added the `scoped` attribute                         |
-| {{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}                     | {{ Spec2('HTML4.01') }}     |                                                      |
+| {{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }}   | {{ Spec2('HTML5 W3C') }}   | Added the `scoped` attribute                |
+| {{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}                | {{ Spec2('HTML4.01') }}    |                                             |
 
 ## Compatibilidade com navegadores
 
 {{Compat("html.elements.style")}}
 
-## Veja também:
+## Veja também
 
 - O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
 

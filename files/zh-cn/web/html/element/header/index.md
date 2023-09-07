@@ -29,7 +29,7 @@ slug: Web/HTML/Element/header
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("group")}}，{{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>，<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -53,7 +53,7 @@ slug: Web/HTML/Element/header
 ```html
 <header>
   <h1>主页标题</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
 </header>
 ```
 
@@ -65,8 +65,12 @@ slug: Web/HTML/Element/header
     <h2>The Planet Earth</h2>
     <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
   </header>
-  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p>
+    <a href="https://janesmith.com/the-planet-earth/">Continue reading....</a>
+  </p>
 </article>
 ```
 

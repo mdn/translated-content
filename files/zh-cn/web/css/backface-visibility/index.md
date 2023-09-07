@@ -3,7 +3,7 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。
 
@@ -14,11 +14,11 @@ slug: Web/CSS/backface-visibility
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 backface-visibility: visible;
 backface-visibility: hidden;
 
-/* Global values */
+/* 全局值 */
 backface-visibility: inherit;
 backface-visibility: initial;
 backface-visibility: unset;
@@ -33,15 +33,21 @@ backface-visibility: unset;
 - `hidden`
   - : 背面朝向用户时不可见。
 
-### 正式语法
+### 形式定义
+
+{{cssinfo}}
+
+### 形式语法
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
-这个示例展示了一个拥有透明表面的立方体。
+### 具有透明和不透明面的立方体
 
-### HTML
+这个例子展示了一个透明面的立方体和一个不透明面的立方体。
+
+#### HTML
 
 ```html
 <table>
@@ -62,9 +68,7 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        Since all faces are partially transparent,
-        the back faces (2, 4, 5) are visible
-        through the front faces (1, 3, 6).
+        由于所有的面都是部分透明的，所以背面（2、4、5）可以透过前面（1、3、6）看到。
       </p>
     </td>
     <td>
@@ -78,16 +82,13 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        The three back faces (2, 4, 5) are
-        hidden.
-      </p>
+      <p>后面的三个面（2、4、5）被隐藏了。</p>
     </td>
   </tr>
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 /* Classes that will show or hide the
@@ -162,8 +163,10 @@ backface-visibility: unset;
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -171,20 +174,18 @@ th, p, td {
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample('Example', '100%', 360)}}
+{{EmbedLiveSample('具有透明和不透明面的立方体', '100%', 360)}}
 
 ## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
-- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

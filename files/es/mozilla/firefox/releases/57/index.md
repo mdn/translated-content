@@ -23,31 +23,31 @@ _No hay ningún cambio._
 
 ### HTML
 
-- Los tipos [«date»](/es/docs/Web/HTML/Element/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ({{bug("1399036")}}).
+- Los tipos [«date»](/es/docs/Web/HTML/Element/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
 
 ### CSS
 
-- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/@media/display-mode) ({{bug(1369815)}}). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Manifest#display).
-- Se corrigió un problema que causaba que la notación abreviada de la cuadrícula quedara restablecida al utilizar {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} ({{bug(1387410)}}).
-- Se ha eliminado la preferencia `layout.css.clip-path-shapes.enabled`, que permitía activar o desactivar la compatibilidad de {{cssxref("&lt;basic-shape&gt;")}} con {{cssxref("clip-path")}} ({{bug(1399767)}}).
+- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/@media/display-mode) ([Error 1369815 en Firefox](https://bugzil.la/1369815)). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Manifest#display).
+- Se corrigió un problema que causaba que la notación abreviada de la cuadrícula quedara restablecida al utilizar {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} ([Error 1387410 en Firefox](https://bugzil.la/1387410)).
+- Se ha eliminado la preferencia `layout.css.clip-path-shapes.enabled`, que permitía activar o desactivar la compatibilidad de {{cssxref("&lt;basic-shape&gt;")}} con {{cssxref("clip-path")}} ([Error 1399767 en Firefox](https://bugzil.la/1399767)).
 
 #### Notas sobre Quantum CSS
 
-- Los valores de degradados radiales tales como `radial-gradient(circle gold,red)` funcionan en el sistema de estilos de Gecko anterior, pero no debería por la coma faltante entre `circle` y `gold` ({{bug(1383323)}}). Quantum corrige este defecto.
-- Cuando se da animación a un elemento ubicado fuera de la pantalla y se establece un tiempo de retardo, Gecko no actualiza la visualización correctamente en algunas plataformas, como Windows ({{bug(1383239)}}). Esto ha quedado corregido en Quantum.
-- En Gecko, no es posible desplegar de manera predeterminada los elementos {{htmlelement("details")}} mediante el atributo `open` si tienen una propiedad {{cssxref("animation")}} activa ({{bug(1382124)}}). Quantum corrige este problema.
-- En Gecko, los efectos {{cssxref("transition", "transitions")}} no funcionan si se transiciona desde un {{cssxref("text-shadow")}} con un color especificado a un `text-shadow` sin ningún color ({{bug(726550)}}). Este comportamiento se ha corregido en Quantum.
-- En Gecko, cancelar una animación de relleno (p. ej., con `animation-fill-mode: forwards` definido) puede desencadenar un conjunto de transiciones en el mismo elemento, aunque únicamente una vez (véase el {{bug(1192592)}} y [estas pruebas](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) para más información). Por lo general, las animaciones declaratorias no deberían desencadenar animaciones. Esto se ha corregido en Quantum.
-- En Gecko, las animaciones que utilizan ems como unidad no reciben las modificaciones realizadas en {{cssxref("font-size")}} en el elemento padre del elemento animado, aunque deberían ({{bug(1254424)}}). Quantum CSS corrige esto.
-- Gecko además maneja la herencia de `font-size` de manera diferente a la de Quantum CSS, por lo que para algunas configuraciones de idioma, los tamaños de letra heredados quedaban más pequeños de lo esperado (véase {{bug(1391341)}}). Quantum corrige esto.
-- Gecko reutiliza el mismo mecanismo empleado al analizar una ficha de URL durante el análisis de las funciones `domain()` o `url-prefix()` para la regla {{cssxref("@document", "@-moz-document")}}. Quantum CSS no utiliza el mismo mecanismo y no considera las fichas como no válidas cuando contienen paréntesis o comillas ({{bug(1362333)}}).
-- En Gecko, cuando se define un tipo de letra del sistema como el valor del {{domxref("CanvasRenderingContext2D.font", "tipo de letra")}} de algún contexto del lienzo 2D (p. ej., `menu`), la obtención del valor del tipo de letra no devuelve el resultado correcto (no devuelve nada). Este problema quedó solucionado en Quantum. ({{bug(1374885)}}).
-- En Gecko, cuando se crea un subárbol desligado (p. ej., un {{htmlelement("div")}} creado a través de {{domxref("Document.createElement","createElement()")}} que todavía no se inserta en el DOM), el elemento raíz del subárbol se define como un elemento de nivel bloque. En Quantum CSS, el elemento se define como alineado, tal como se define en la especificación ({{bug(1374994)}}).
-- Gecko rechaza las expresiones {{cssxref("calc")}} ―lo que invalida el valor― cuando se utilizan como el componente radial de una función {{cssxref("radial-gradient")}} ({{bug(1376019)}}). Quantum CSS lo resuelve.
-- En Gecko, `calc(1*2*3)` no es analizado debidamente; Quantum CSS soluciona el problema ({{bug(1379467)}}).
-- En Quantum CSS, [`calc()` se admite en todos los sitios que la especificación indica](https://drafts.csswg.org/css-values-3/#calc-notation) ({{bug(1350857)}}). En Gecko, este no es el caso.
-- Gecko contiene un defecto que provoca que los pseudoelementos {{cssxref("::before")}} y {{cssxref("::after")}} se generen aun si el valor de la propiedad {{cssxref("content")}} se define como `normal` o `none`. Este comportamiento es contrario a la especificación ({{bug(1387931)}}) y se ha corregido en Quantum.
-- Otro defecto de Gecko provoca que la propiedad {{cssxref("background-position")}} no pueda transicionarse entre dos valores que contengan números diferentes de valores {{cssxref("&lt;position&gt;")}}, por ejemplo, `background-position: 10px 10px;` y `background-position: 20px 20px, 30px 30px;` (véase {{bug(1390446)}}). Quantum resuelve el error.
+- Los valores de degradados radiales tales como `radial-gradient(circle gold,red)` funcionan en el sistema de estilos de Gecko anterior, pero no debería por la coma faltante entre `circle` y `gold` ([Error 1383323 en Firefox](https://bugzil.la/1383323)). Quantum corrige este defecto.
+- Cuando se da animación a un elemento ubicado fuera de la pantalla y se establece un tiempo de retardo, Gecko no actualiza la visualización correctamente en algunas plataformas, como Windows ([Error 1383239 en Firefox](https://bugzil.la/1383239)). Esto ha quedado corregido en Quantum.
+- En Gecko, no es posible desplegar de manera predeterminada los elementos {{htmlelement("details")}} mediante el atributo `open` si tienen una propiedad {{cssxref("animation")}} activa ([Error 1382124 en Firefox](https://bugzil.la/1382124)). Quantum corrige este problema.
+- En Gecko, los efectos {{cssxref("transition", "transitions")}} no funcionan si se transiciona desde un {{cssxref("text-shadow")}} con un color especificado a un `text-shadow` sin ningún color ([Error 726550 en Firefox](https://bugzil.la/726550)). Este comportamiento se ha corregido en Quantum.
+- En Gecko, cancelar una animación de relleno (p. ej., con `animation-fill-mode: forwards` definido) puede desencadenar un conjunto de transiciones en el mismo elemento, aunque únicamente una vez (véase el [Error 1192592 en Firefox](https://bugzil.la/1192592) y [estas pruebas](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) para más información). Por lo general, las animaciones declaratorias no deberían desencadenar animaciones. Esto se ha corregido en Quantum.
+- En Gecko, las animaciones que utilizan ems como unidad no reciben las modificaciones realizadas en {{cssxref("font-size")}} en el elemento padre del elemento animado, aunque deberían ([Error 1254424 en Firefox](https://bugzil.la/1254424)). Quantum CSS corrige esto.
+- Gecko además maneja la herencia de `font-size` de manera diferente a la de Quantum CSS, por lo que para algunas configuraciones de idioma, los tamaños de letra heredados quedaban más pequeños de lo esperado (véase [Error 1391341 en Firefox](https://bugzil.la/1391341)). Quantum corrige esto.
+- Gecko reutiliza el mismo mecanismo empleado al analizar una ficha de URL durante el análisis de las funciones `domain()` o `url-prefix()` para la regla {{cssxref("@document", "@-moz-document")}}. Quantum CSS no utiliza el mismo mecanismo y no considera las fichas como no válidas cuando contienen paréntesis o comillas ([Error 1362333 en Firefox](https://bugzil.la/1362333)).
+- En Gecko, cuando se define un tipo de letra del sistema como el valor del {{domxref("CanvasRenderingContext2D.font", "tipo de letra")}} de algún contexto del lienzo 2D (p. ej., `menu`), la obtención del valor del tipo de letra no devuelve el resultado correcto (no devuelve nada). Este problema quedó solucionado en Quantum. ([Error 1374885 en Firefox](https://bugzil.la/1374885)).
+- En Gecko, cuando se crea un subárbol desligado (p. ej., un {{htmlelement("div")}} creado a través de {{domxref("Document.createElement","createElement()")}} que todavía no se inserta en el DOM), el elemento raíz del subárbol se define como un elemento de nivel bloque. En Quantum CSS, el elemento se define como alineado, tal como se define en la especificación ([Error 1374994 en Firefox](https://bugzil.la/1374994)).
+- Gecko rechaza las expresiones {{cssxref("calc")}} ―lo que invalida el valor― cuando se utilizan como el componente radial de una función {{cssxref("radial-gradient")}} ([Error 1376019 en Firefox](https://bugzil.la/1376019)). Quantum CSS lo resuelve.
+- En Gecko, `calc(1*2*3)` no es analizado debidamente; Quantum CSS soluciona el problema ([Error 1379467 en Firefox](https://bugzil.la/1379467)).
+- En Quantum CSS, [`calc()` se admite en todos los sitios que la especificación indica](https://drafts.csswg.org/css-values-3/#calc-notation) ([Error 1350857 en Firefox](https://bugzil.la/1350857)). En Gecko, este no es el caso.
+- Gecko contiene un defecto que provoca que los pseudoelementos {{cssxref("::before")}} y {{cssxref("::after")}} se generen aun si el valor de la propiedad {{cssxref("content")}} se define como `normal` o `none`. Este comportamiento es contrario a la especificación ([Error 1387931 en Firefox](https://bugzil.la/1387931)) y se ha corregido en Quantum.
+- Otro defecto de Gecko provoca que la propiedad {{cssxref("background-position")}} no pueda transicionarse entre dos valores que contengan números diferentes de valores {{cssxref("&lt;position&gt;")}}, por ejemplo, `background-position: 10px 10px;` y `background-position: 20px 20px, 30px 30px;` (véase [Error 1390446 en Firefox](https://bugzil.la/1390446)). Quantum resuelve el error.
 
 ### SVG
 
@@ -55,25 +55,25 @@ _No hay ningún cambio._
 
 ### JavaScript
 
-- El bucle no estándar {{jsxref("Statements/for_each...in", "for each...in")}} (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ({{bug(1083470)}}).
-- Se marcaron como obsoletos los métodos {{jsxref("Object.prototype.watch()")}} y {{jsxref("Object.unwatch", "unwatch()")}}. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ({{bug(934669)}}).
-- Se eliminaron los objetos {{jsxref("Iterator")}} y {{jsxref("StopIteration")}} y el protocolo de iteración heredado ({{bug(1098412)}}).
+- El bucle no estándar {{jsxref("Statements/for_each...in", "for each...in")}} (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ([Error 1083470 en Firefox](https://bugzil.la/1083470)).
+- Se marcaron como obsoletos los métodos {{jsxref("Object.prototype.watch()")}} y {{jsxref("Object.unwatch", "unwatch()")}}. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ([Error 934669 en Firefox](https://bugzil.la/934669)).
+- Se eliminaron los objetos {{jsxref("Iterator")}} y {{jsxref("StopIteration")}} y el protocolo de iteración heredado ([Error 1098412 en Firefox](https://bugzil.la/1098412)).
 
 ### API
 
 #### API nuevas
 
-- Se ha activado de manera predeterminada la API {{domxref("PerformanceObserver")}} ({{bug(1386021)}}).
-- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) si así se desea ({{bug(1378342)}}).
+- Se ha activado de manera predeterminada la API {{domxref("PerformanceObserver")}} ([Error 1386021 en Firefox](https://bugzil.la/1386021)).
+- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/fetch)) si así se desea ([Error 1378342 en Firefox](https://bugzil.la/1378342)).
 
 #### DOM
 
-- Se ha implementado la propiedad {{domxref("Selection.type")}} de la [API Selection](/es/docs/Web/API/Selection_API) ({{bug(1359157)}}).
-- Se admite {{domxref("Document.createEvent", "Document.createEvent('FocusEvent')")}} ahora ({{bug(1388069)}}).
-- La propiedad `files` de la interfaz {{domxref("HTMLInputElement")}} puede definirse ahora ({{bug(1384030)}}).
-- El método `HTMLDocument.getSelection()` se ha trasladado a la interfaz {{domxref("Document.getSelection","Document")}} para que quede disponible para los documentos XML ({{bug(718711)}}).
-- Hemos implementado el suceso [`messageerror`](/es/docs/Web/Reference/Events/messageerror), el cual puede ejecutar código tras su desencadenamiento por parte de manejadores de sucesos utilizados en destinos de mensajes. Véase {{domxref("MessagePort.onmessageerror")}}, {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}, {{domxref("Worker.onmessageerror")}}, {{domxref("BroadcastChannel.onmessageerror")}} y {{domxref("Window.onmessageerror")}} ({{bug(1359017)}}).
-- Cuando se emplea la iteración en valores {{domxref("Headers")}}, estos quedarán organizados en orden lexicográfico y se combinarán los valores de los nombres de cabeceras duplicados ({{bug(1396848)}}).
+- Se ha implementado la propiedad {{domxref("Selection.type")}} de la [API Selection](/es/docs/Web/API/Selection_API) ([Error 1359157 en Firefox](https://bugzil.la/1359157)).
+- Se admite {{domxref("Document.createEvent", "Document.createEvent('FocusEvent')")}} ahora ([Error 1388069 en Firefox](https://bugzil.la/1388069)).
+- La propiedad `files` de la interfaz {{domxref("HTMLInputElement")}} puede definirse ahora ([Error 1384030 en Firefox](https://bugzil.la/1384030)).
+- El método `HTMLDocument.getSelection()` se ha trasladado a la interfaz {{domxref("Document.getSelection","Document")}} para que quede disponible para los documentos XML ([Error 718711 en Firefox](https://bugzil.la/718711)).
+- Hemos implementado el suceso [`messageerror`](/es/docs/Web/Reference/Events/messageerror), el cual puede ejecutar código tras su desencadenamiento por parte de manejadores de sucesos utilizados en destinos de mensajes. Véase {{domxref("MessagePort.onmessageerror")}}, {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}, {{domxref("Worker.onmessageerror")}}, {{domxref("BroadcastChannel.onmessageerror")}} y {{domxref("Window.onmessageerror")}} ([Error 1359017 en Firefox](https://bugzil.la/1359017)).
+- Cuando se emplea la iteración en valores {{domxref("Headers")}}, estos quedarán organizados en orden lexicográfico y se combinarán los valores de los nombres de cabeceras duplicados ([Error 1396848 en Firefox](https://bugzil.la/1396848)).
 
 #### Sucesos de DOM
 
@@ -81,18 +81,18 @@ _No hay ningún cambio._
 
 #### Multimedia y WebRTC
 
-- Ahora se admiten mensajes de cualquier tamaño (hasta 1 GiB, aunque 256 kiB es más interoperativo) en {{domxref("RTCDataChannel")}} por medio del uso de la opción «end-of-record» (EOR) en los mensajes de SCTP. Consúltese {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} para obtener más información ({{bug(979417)}}).
+- Ahora se admiten mensajes de cualquier tamaño (hasta 1 GiB, aunque 256 kiB es más interoperativo) en {{domxref("RTCDataChannel")}} por medio del uso de la opción «end-of-record» (EOR) en los mensajes de SCTP. Consúltese [Understanding message size limits](/es/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) para obtener más información ([Error 979417 en Firefox](https://bugzil.la/979417)).
 
-  > **Nota:** Como Firefox aún no admite el protocolo ndata de SCTP, que permite intercalar mensajes de SCTP de varias fuentes, enviar objetos de datos grandes puede causar retardos importantes en el resto del tránsito SCTP. Véase el {{bug(1381145)}} para estar al tanto de la implementación de ndata en Firefox.
+  > **Nota:** Como Firefox aún no admite el protocolo ndata de SCTP, que permite intercalar mensajes de SCTP de varias fuentes, enviar objetos de datos grandes puede causar retardos importantes en el resto del tránsito SCTP. Véase el [Error 1381145 en Firefox](https://bugzil.la/1381145) para estar al tanto de la implementación de ndata en Firefox.
 
-- El método {{domxref("RTCDataChannel.send()")}} ahora puede emitir una excepción `TypeError` si el tamaño del mensaje que se intenta enviar no es compatible con el agente de usuario de destino (esto se implementó como parte del {{bug(979417)}}).
+- El método {{domxref("RTCDataChannel.send()")}} ahora puede emitir una excepción `TypeError` si el tamaño del mensaje que se intenta enviar no es compatible con el agente de usuario de destino (esto se implementó como parte del [Error 979417 en Firefox](https://bugzil.la/979417)).
 - La [API MediaStream Recording](/es/docs/Web/API/MediaStream_Recording_API) se ha actualizado de modo que los sucesos [`error`](/es/docs/Web/Reference/Events/error) que se envíen para notificar problemas acaecidos durante la grabación son ahora del tipo {{domxref("MediaRecorderErrorEvent")}} en lugar de sucesos genéricos.
-- Se actualizó la documentación concerniente a {{domxref("OfflineAudioContext")}}, dado que sus entradas de constructores pueden especificarse ahora dentro de un objeto en lugar de una lista de parámetros ({{bug(1388591)}}).
+- Se actualizó la documentación concerniente a {{domxref("OfflineAudioContext")}}, dado que sus entradas de constructores pueden especificarse ahora dentro de un objeto en lugar de una lista de parámetros ([Error 1388591 en Firefox](https://bugzil.la/1388591)).
 
 ### Seguridad
 
-- Los URL `resource://` ya no filtran información ({{bug(863246)}})
-- Los URI de datos ahora se manipulan como orígenes opacos únicos, en vez de heredar el origen del objeto de configuración responsable de la navegación ({{bug(1324406)}}).
+- Los URL `resource://` ya no filtran información ([Error 863246 en Firefox](https://bugzil.la/863246))
+- Los URI de datos ahora se manipulan como orígenes opacos únicos, en vez de heredar el origen del objeto de configuración responsable de la navegación ([Error 1324406 en Firefox](https://bugzil.la/1324406)).
 
 ### Plugins
 
@@ -100,18 +100,18 @@ _No hay ningún cambio._
 
 ### Otros
 
-- El valor `fullscreen` del campo `display` del [manifiesto de aplicación web](/es/docs/Web/Manifest) ahora funciona en Firefox para Android 57 ({{bug(1126479)}}).
-- La [modalidad sin periféricos](/es/docs/Mozilla/Firefox/Headless_mode) de Firefox ahora incluye el parámetro `-screenshot`, que permite a los usuarios tomar capturas de pantalla de sitios web directamente desde la consola ({{bug(1378010)}}).
+- El valor `fullscreen` del campo `display` del [manifiesto de aplicación web](/es/docs/Web/Manifest) ahora funciona en Firefox para Android 57 ([Error 1126479 en Firefox](https://bugzil.la/1126479)).
+- La [modalidad sin periféricos](/es/docs/Mozilla/Firefox/Headless_mode) de Firefox ahora incluye el parámetro `-screenshot`, que permite a los usuarios tomar capturas de pantalla de sitios web directamente desde la consola ([Error 1378010 en Firefox](https://bugzil.la/1378010)).
 
 ## Eliminaciones de la plataforma web
 
 ### HTML
 
-- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Preloading_content)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., {{bug(1405761)}}). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
+- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Preloading_content)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
 
 ### API
 
-- La [API Social](/es/docs/Archive/Social_API), privativa de Mozilla, se ha eliminado completamente ({{bug(1388902)}}).
+- La [API Social](/es/docs/Archive/Social_API), privativa de Mozilla, se ha eliminado completamente ([Error 1388902 en Firefox](https://bugzil.la/1388902)).
 
 ### SVG
 

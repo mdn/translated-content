@@ -46,8 +46,7 @@ attrMap.removeNamedItem("test");
 
 if (attrMap.getNamedItem("test")) {
   result += "And 'test' still exists.";
-}
-else {
+} else {
   result += "And 'test' is no more to be found.";
 }
 

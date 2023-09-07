@@ -71,7 +71,7 @@ p {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-orientation")}}
+{{Compat}}
 
 ## Vea tambien
 

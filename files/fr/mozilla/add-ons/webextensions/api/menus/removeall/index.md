@@ -1,18 +1,6 @@
 ---
 title: menus.removeAll()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
-  - removeAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
 
 {{AddonSidebar()}}
@@ -26,7 +14,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var removing = browser.menus.removeAll()
+var removing = browser.menus.removeAll();
 ```
 
 ### Paramètres
@@ -37,9 +25,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque tous les éléments ont été supprimés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.removeAll", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -53,16 +41,16 @@ function onRemoved() {
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-all",
   title: "Remove all!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "remove-all") {
     var removing = browser.menus.removeAll();
     removing.then(onRemoved);

@@ -1,6 +1,6 @@
 ---
 title: video
-slug: Web/HTML/Element/Video
+slug: Web/HTML/Element/video
 ---
 
 ## Sumário
@@ -12,10 +12,10 @@ Para uma lista de formatos suportados veja [Media formats supported by the audio
 ## Contexto de uso
 
 | Conteúdo permitido          | [Transparent content](/pt-BR/HTML/Content_categories#transparent_content), contendo ou um atributo **src** ou um ou mais elementos {{ HTMLElement("source") }}, seguido por [flow content](/pt-BR/HTML/Content_categories#flow_content) ou [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) , sem `<video>` ou elementos {{ HTMLElement("audio") }}. |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/pt-BR/HTML/Content_categories#flow_content), ou qualquer outro elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                     |
-| Documento normativo         | [HTML 5, section 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                 |
+| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/pt-BR/HTML/Content_categories#flow_content), ou qualquer outro elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content).                                                                                                                                                                    |
+| Documento normativo         | [HTML 5, section 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                   |
 
 ## Atributos
 
@@ -24,9 +24,9 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-> **Note:** Nota: Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
+> **Nota:** Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
 
-- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
+- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }}
 
   - : Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.
 
@@ -68,22 +68,22 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
-> **Note:** **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
+> **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
 
 ## Exemplos
 
 ```html
 <!-- Exemplo simples de vídeo -->
 <video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg">
-  Desculpa, o seu navegador não suporta vídeos incorporados,
-  mas você pode <a href="videofile.ogg">baixá-lo</a>
+  Desculpa, o seu navegador não suporta vídeos incorporados, mas você pode
+  <a href="videofile.ogg">baixá-lo</a>
   e assistir pelo seu reprodutor de mídia favorito!
 </video>
 
 <!-- Vídeo com legendas -->
 <video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
 </video>
 ```
 
