@@ -66,7 +66,7 @@ customElements.define("word-count", WordCount, { extends: "p" });
 
 > **참고:** `CustomElementRegistry`는 {{domxref("Window.customElements")}} 속성으로 접근할 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

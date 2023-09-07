@@ -2,6 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다.
@@ -41,26 +42,33 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 ## 정적 메서드
 
 - {{jsxref("Promise.all", "Promise.all(iterable)")}}
+
   - : 주어진 모든 프로미스가 이행하거나, 한 프로미스가 거부될 때까지 대기하는 새로운 프로미스를 반환합니다.
 
     반환하는 프로미스가 이행한다면, 매개변수로 제공한 프로미스 각각의 이행 값을 모두 모아놓은 배열로 이행합니다. 배열 요소의 순서는 매개변수에 지정한 프로미스의 순서를 유지합니다.
 
     반환하는 프로미스가 거부된다면, 매개변수의 프로미스 중 거부된 첫 프로미스의 사유를 그대로 사용합니다.
+
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
+
   - : 주어진 모든 프로미스가 처리(이행 또는 거부)될 때까지 대기하는 새로운 프로미스를 반환합니다.
 
     `Promise.allSettled()`가 반환하는 프로미스는 매개변수로 제공한 모든 프로미스 각각의 상태와 값(또는 거부 사유)을 모아놓은 배열로 이행합니다.
+
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
   - : 주어진 모든 프로미스 중 하나라도 이행하는 순간, 즉시 그 프로미스의 값으로 이행하는 새로운 프로미스를 반환합니다.
 - {{jsxref("Promise.race", "Promise.race(iterable)")}}
+
   - : 주어진 모든 프로미스 중 하나라도 처리될 때까지 대기하는 프로미스를 반환합니다.
 
     반환하는 프로미스가 이행한다면, 매개변수의 프로미스 중 첫 번째로 이행한 프로미스의 값으로 이행합니다.
 
     반환하는 프로미스가 거부된다면, 매개변수의 프로미스 중 거부된 첫 프로미스의 사유를 그대로 사용합니다.
+
 - {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
   - : 주어진 사유로 거부하는 `Promise` 객체를 반환합니다.
 - {{jsxref("Promise.resolve()")}}
+
   - : 주어진 값으로 이행하는 `Promise` 객체를 반환합니다. 이때 지정한 값이 `then` 가능한(`then` 메서드를 가지는) 값인 경우, `Promise.resolve()`가 반환하는 프로미스는 `then` 메서드를 "따라가서" 자신의 최종 상태를 결정합니다. 그 외의 경우, 반환된 프로미스는 주어진 값으로 이행합니다.
 
     어떤 값이 프로미스인지 아닌지 알 수 없는 경우, 보통 일일히 두 경우를 나눠서 처리하는 대신 `Promise.resolve()`로 값을 감싸서 항상 프로미스가 되도록 만든 후 작업하는 것이 좋습니다.
@@ -85,15 +93,15 @@ let myFirstPromise = new Promise((resolve, reject) => {
   // 우리가 수행한 비동기 작업이 성공한 경우 resolve(...)를 호출하고, 실패한 경우 reject(...)를 호출합니다.
   // 이 예제에서는 setTimeout()을 사용해 비동기 코드를 흉내냅니다.
   // 실제로는 여기서 XHR이나 HTML5 API를 사용할 것입니다.
-  setTimeout( function() {
-    resolve("성공!")  // 와! 문제 없음!
-  }, 250)
-})
+  setTimeout(function () {
+    resolve("성공!"); // 와! 문제 없음!
+  }, 250);
+});
 
 myFirstPromise.then((successMessage) => {
   // successMessage는 위에서 resolve(...) 호출에 제공한 값입니다.
   // 문자열이어야 하는 법은 없지만, 위에서 문자열을 줬으니 아마 문자열일 것입니다.
-  console.log("와! " + successMessage)
+  console.log("와! " + successMessage);
 });
 ```
 
@@ -115,56 +123,69 @@ myFirstPromise.then((successMessage) => {
 #### JavaScript
 
 ```js
-'use strict';
+"use strict";
 var promiseCount = 0;
 
 function testPromise() {
-    var thisPromiseCount = ++promiseCount;
+  var thisPromiseCount = ++promiseCount;
 
-    var log = document.getElementById('log');
-    log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') 시작 (<small>동기적 코드 시작</small>)<br/>');
+  var log = document.getElementById("log");
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisPromiseCount + ") 시작 (<small>동기적 코드 시작</small>)<br/>",
+  );
 
-    // 새 프로미스 생성 - 프로미스의 생성 순서를 전달하겠다는 약속을 함 (3초 기다린 후)
-    var p1 = new Promise(
-        // 실행 함수는 프로미스를 이행(resolve)하거나
-        // 거부(reject)할 수 있음
-        function(resolve, reject) {
-            log.insertAdjacentHTML('beforeend', thisPromiseCount +
-                ') 프로미스 시작 (<small>비동기적 코드 시작</small>)<br/>');
-            // setTimeout은 비동기적 코드를 만드는 예제에 불과
-            window.setTimeout(
-                function() {
-                    // 프로미스 이행 !
-                    resolve(thisPromiseCount);
-                }, Math.random() * 2000 + 1000);
-        }
-    );
+  // 새 프로미스 생성 - 프로미스의 생성 순서를 전달하겠다는 약속을 함 (3초 기다린 후)
+  var p1 = new Promise(
+    // 실행 함수는 프로미스를 이행(resolve)하거나
+    // 거부(reject)할 수 있음
+    function (resolve, reject) {
+      log.insertAdjacentHTML(
+        "beforeend",
+        thisPromiseCount +
+          ") 프로미스 시작 (<small>비동기적 코드 시작</small>)<br/>",
+      );
+      // setTimeout은 비동기적 코드를 만드는 예제에 불과
+      window.setTimeout(
+        function () {
+          // 프로미스 이행 !
+          resolve(thisPromiseCount);
+        },
+        Math.random() * 2000 + 1000,
+      );
+    },
+  );
 
-    // 프로미스를 이행했을 때 할 일은 then() 호출로 정의하고,
-    // 거부됐을 때 할 일은 catch() 호출로 정의
-    p1.then(
-        // 이행 값 기록
-        function(val) {
-            log.insertAdjacentHTML('beforeend', val +
-                ') 프로미스 이행 (<small>비동기적 코드 종료</small>)<br/>');
-        })
-    .catch(
-        // 거부 이유 기록
-        function(reason) {
-            console.log('여기서 거부된 프로미스(' + reason + ')를 처리하세요.');
-        });
+  // 프로미스를 이행했을 때 할 일은 then() 호출로 정의하고,
+  // 거부됐을 때 할 일은 catch() 호출로 정의
+  p1.then(
+    // 이행 값 기록
+    function (val) {
+      log.insertAdjacentHTML(
+        "beforeend",
+        val + ") 프로미스 이행 (<small>비동기적 코드 종료</small>)<br/>",
+      );
+    },
+  ).catch(
+    // 거부 이유 기록
+    function (reason) {
+      console.log("여기서 거부된 프로미스(" + reason + ")를 처리하세요.");
+    },
+  );
 
-    log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') 프로미스 생성 (<small>동기적 코드 종료</small>)<br/>');
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisPromiseCount + ") 프로미스 생성 (<small>동기적 코드 종료</small>)<br/>",
+  );
 }
 
 if ("Promise" in window) {
   var btn = document.getElementById("btn");
   btn.addEventListener("click", testPromise);
 } else {
-  log = document.getElementById('log');
-  log.innerHTML = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
+  log = document.getElementById("log");
+  log.innerHTML =
+    "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
 }
 ```
 
@@ -176,7 +197,7 @@ if ("Promise" in window) {
 
 이미지를 로드하기 위해 `Promise` 및 {{domxref("XMLHttpRequest")}}를 사용하는 또 다른 간단한 예는 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 저장소에서 이용할 수 있습니다. [실제 예](https://mdn.github.io/js-examples/promises-test/)를 볼 수도 있습니다. 각 단계에 주석이 붙어있어, 프로미스 및 XHR 구조를 차근차근 따라갈 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -2,6 +2,7 @@
 title: 나머지 매개변수
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **나머지 매개변수** 구문을 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 받을 수 있습니다. JavaScript에서 [가변항 함수](https://en.wikipedia.org/wiki/Variadic_function)를 표현할 때 사용합니다.
@@ -40,17 +41,17 @@ myFun("one", "two", "three", "four", "five", "six");
 함수 정의에는 하나의 `...`만 존재할 수 있습니다.
 
 ```js example-bad
-foo(...one, ...wrong, ...wrong)
+foo(...one, ...wrong, ...wrong);
 ```
 
 나머지 매개변수는 반드시 함수 정의의 마지막 매개변수여야 합니다.
 
 ```js example-bad
-foo(...wrong, arg2, arg3)
+foo(...wrong, arg2, arg3);
 ```
 
 ```js example-good
-foo(arg1, arg2, ...correct)
+foo(arg1, arg2, ...correct);
 ```
 
 ### 나머지 매개변수와 `arguments` 객체의 차이
@@ -68,21 +69,21 @@ foo(arg1, arg2, ...correct)
 ```js
 // 나머지 매개변수 이전에 "arguments"를 일반 배열로 변환하던 방법
 function f(a, b) {
-  let normalArray = Array.prototype.slice.call(arguments)
+  let normalArray = Array.prototype.slice.call(arguments);
   // -- 또는 --
-  let normalArray = [].slice.call(arguments)
+  let normalArray = [].slice.call(arguments);
   // -- 또는 --
-  let normalArray = Array.from(arguments)
+  let normalArray = Array.from(arguments);
 
-  let first = normalArray.shift()  // 동작, 첫 번째 매개변수 반환
-  let first = arguments.shift()    // 오류, arguments는 실제 배열이 아님
+  let first = normalArray.shift(); // 동작, 첫 번째 매개변수 반환
+  let first = arguments.shift(); // 오류, arguments는 실제 배열이 아님
 }
 
 // 이제는 나머지 매개변수를 사용해 쉽게 배열로 가져올 수 있음
 
 function f(...args) {
-  let normalArray = args
-  let first = normalArray.shift() // 동작, 첫 번째 매개변수 반환
+  let normalArray = args;
+  let first = normalArray.shift(); // 동작, 첫 번째 매개변수 반환
 }
 ```
 
@@ -96,12 +97,12 @@ function f(...args) {
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a)
-  console.log("b", b)
-  console.log("manyMoreArgs", manyMoreArgs)
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six")
+myFun("one", "two", "three", "four", "five", "six");
 
 // a, "one"
 // b, "two"
@@ -113,7 +114,7 @@ myFun("one", "two", "three", "four", "five", "six")
 ```js
 // 위에 정의한 함수를 그대로 사용
 
-myFun("one", "two", "three")
+myFun("one", "two", "three");
 
 // a, "one"
 // b, "two"
@@ -125,7 +126,7 @@ myFun("one", "two", "three")
 ```js
 // 위에 정의한 함수를 그대로 사용
 
-myFun("one", "two")
+myFun("one", "two");
 
 // a, "one"
 // b, "two"
@@ -138,12 +139,12 @@ myFun("one", "two")
 
 ```js
 function fun1(...theArgs) {
-  console.log(theArgs.length)
+  console.log(theArgs.length);
 }
 
-fun1()         // 0
-fun1(5)        // 1
-fun1(5, 6, 7)  // 3
+fun1(); // 0
+fun1(5); // 1
+fun1(5, 6, 7); // 3
 ```
 
 ### 나머지 매개변수를 일반 매개변수와 함께 사용하기
@@ -152,13 +153,13 @@ fun1(5, 6, 7)  // 3
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element => {
-    return multiplier * element
-  })
+  return theArgs.map((element) => {
+    return multiplier * element;
+  });
 }
 
-let arr = multiply(2, 15, 25, 42)
-console.log(arr)  // [30, 50, 84]
+let arr = multiply(2, 15, 25, 42);
+console.log(arr); // [30, 50, 84]
 ```
 
 ### 나머지 매개변수는 실제 배열, `arguments`는 유사 배열
@@ -167,18 +168,18 @@ console.log(arr)  // [30, 50, 84]
 
 ```js
 function sortRestArgs(...theArgs) {
-  let sortedArgs = theArgs.sort()
-  return sortedArgs
+  let sortedArgs = theArgs.sort();
+  return sortedArgs;
 }
 
-console.log(sortRestArgs(5, 3, 7, 1)) // 1, 3, 5, 7
+console.log(sortRestArgs(5, 3, 7, 1)); // 1, 3, 5, 7
 
 function sortArguments() {
-  let sortedArgs = arguments.sort()
-  return sortedArgs
+  let sortedArgs = arguments.sort();
+  return sortedArgs;
 }
 
-console.log(sortArguments(5, 3, 7, 1))
+console.log(sortArguments(5, 3, 7, 1));
 // TypeError 발생 (arguments.sort is not a function)
 ```
 
@@ -186,11 +187,11 @@ console.log(sortArguments(5, 3, 7, 1))
 
 ```js
 function sortArguments() {
-  let args = Array.from(arguments)
-  let sortedArgs = args.sort()
-  return sortedArgs
+  let args = Array.from(arguments);
+  let sortedArgs = args.sort();
+  return sortedArgs;
 }
-console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
+console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 ```
 
 ## 명세서

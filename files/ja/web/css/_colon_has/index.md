@@ -26,7 +26,8 @@ l10n:
 次のセレクターは、 {{HTMLElement("img")}} を直接子に持つ {{HTMLElement("a")}} 要素のみを選択します。
 
 ```css
-a:has(> img)
+a:has(> img) {
+}
 ```
 
 ### \<h1> 要素のうち直後に \<p> があるものを選択
@@ -34,7 +35,8 @@ a:has(> img)
 次のセレクターは、直後に {{htmlelement("p")}} 要素を持つ {{HTMLElement("h1")}} 要素のみを選択します。
 
 ```css
-h1:has(+ p)
+h1:has(+ p) {
+}
 ```
 
 ## 仕様書

@@ -55,7 +55,7 @@ slug: Web/API/WebSockets_API
 
 ## 仕様書
 
-| 仕様書                                                                                     |
+| 仕様書                                                                                            |
 | ------------------------------------------------------------------------------------------------- |
 | [HTML Living Standard # network](https://html.spec.whatwg.org/multipage/web-sockets.html#network) |
 | [RFC 6455, The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)                 |

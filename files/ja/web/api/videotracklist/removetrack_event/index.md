@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('removetrack', (event) => { })
+addEventListener("removetrack", (event) => {});
 
-onremovetrack = (event) => { }
+onremovetrack = (event) => {};
 ```
 
 ## イベント型
@@ -37,9 +37,9 @@ _下記に挙げたプロパティに加えて、親インターフェイスで�
 `addEventListener()` を使用する場合
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
-videoElement.videoTracks.addEventListener('removetrack', (event) => {
+videoElement.videoTracks.addEventListener("removetrack", (event) => {
   console.log(`Video track: ${event.track.label} removed`);
 });
 ```
@@ -47,7 +47,7 @@ videoElement.videoTracks.addEventListener('removetrack', (event) => {
 `onremovetrack` イベントハンドラープロパティを使用する場合
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
 videoElement.videoTracks.onremovetrack = (event) => {
   console.log(`Video track: ${event.track.label} removed`);

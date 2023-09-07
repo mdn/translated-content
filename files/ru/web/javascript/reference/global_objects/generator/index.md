@@ -40,9 +40,8 @@ console.log(generator().next().value); // 1
 
 ```js
 function* idMaker() {
-    var index = 0;
-    while(true)
-        yield index++;
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"

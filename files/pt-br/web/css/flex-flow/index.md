@@ -54,8 +54,8 @@ elemento {
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário        |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
+| Especificação                                                    | Status                      | Comentário        |
+| ---------------------------------------------------------------- | --------------------------- | ----------------- |
 | {{ SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definição inicial |
 
 {{cssinfo}}

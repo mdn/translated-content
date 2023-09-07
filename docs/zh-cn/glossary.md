@@ -47,6 +47,7 @@
 | exotic object      | 特异对象         |                                                              |                                                                             |
 | normative optional | 可选标准         |                                                              | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
 | interface          | 接口             |                                                              | https://zh.wikipedia.org/wiki/介面_(資訊科技)                               |
+| primitive          | 原始值/类型      | 基本类型包括对象，而原始类型不包括对象。                     | https://github.com/mdn/translated-content/pull/14040#discussion_r1276966303 |
 | unscopable         | 非作用域（属性） |                                                              | https://github.com/mdn/translated-content/pull/12793#discussion_r1170694183 |
 | well-known symbol  | 内置通用符号     |                                                              | https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921 |
 

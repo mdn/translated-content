@@ -35,7 +35,9 @@ Array[Symbol.species]; // функция Array()
 ```js
 class MyArray extends Array {
   //  Переписывает тип MyArray в родительский конструктор Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

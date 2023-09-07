@@ -59,7 +59,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
   // pFast 第一个兑现
 });
-// 打印:
+// 打印：
 // 很快完成
 ```
 
@@ -86,7 +86,7 @@ Promise.any([failure]).catch((err) => {
 async function fetchAndDecode(url, description) {
   const res = await fetch(url);
   if (!res.ok) {
-    throw new Error(`HTTP 错误！状态码: ${res.status}`);
+    throw new Error(`HTTP 错误！状态码：${res.status}`);
   }
   const data = await res.blob();
   return [data, description];

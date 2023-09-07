@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ## 構文
 
 ```js
-Atomics.wait(typedArray, index, value)
-Atomics.wait(typedArray, index, value, timeout)
+Atomics.wait(typedArray, index, value);
+Atomics.wait(typedArray, index, value, timeout);
 ```
 
 ### 引数

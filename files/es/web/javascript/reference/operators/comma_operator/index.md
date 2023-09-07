@@ -36,10 +36,10 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
 Otro ejemplo de lo que se puede hacer con el operador coma es procesar antes de retornar. Como se mencionó, solo el último elemento será retornado pero todos los otros también van a ser evaluados. Así, se puede hacer:
 
 ```js
-function myFunc () {
+function myFunc() {
   var x = 0;
 
-  return (x += 1, x); // the same as return ++x;
+  return (x += 1), x; // the same as return ++x;
 }
 ```
 

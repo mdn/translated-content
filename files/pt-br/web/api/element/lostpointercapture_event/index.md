@@ -26,16 +26,14 @@ function overHandler(event) {
 }
 
 function init() {
-  let el = document.getElementById('target');
+  let el = document.getElementById("target");
   el.onlostpointercapture = overHandler;
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                                            | Status                                   | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------- |
-| {{SpecName('Pointer Events 2', '#the-lostpointercapture-event', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

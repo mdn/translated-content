@@ -33,8 +33,8 @@ if (num1 / num2 >= Number.MIN_VALUE) {
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
+| Especificação                                                        |
+| -------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}} |
 
 ## Compatibilidade com navegadores

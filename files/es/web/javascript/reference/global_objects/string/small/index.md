@@ -26,11 +26,11 @@ Usa el método `small` para formatear y mostrar una cadena en un documento.
 ### Ejemplo: Usando métodos de `string` para cambiar el tamaño de una cadena
 
 ```js
-var cadenaMundo="¡Hola mundo!"
+var cadenaMundo = "¡Hola mundo!";
 
-console.log(cadenaMundo.small())
-console.log(cadenaMundo.big())
-console.log(cadenaMundo.fontsize(7))
+console.log(cadenaMundo.small());
+console.log(cadenaMundo.big());
+console.log(cadenaMundo.fontsize(7));
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:
@@ -38,7 +38,7 @@ Este ejemplo produce el mismo resultado que el siguiente código HTML:
 ```html
 <small>¡Hola mundo!</small>
 <big>¡Hola mundo!</big>
-<fontsize=7>¡Hola mundo!</fontsize>
+<font size="7">¡Hola mundo!</font>
 ```
 
 ### Vea También

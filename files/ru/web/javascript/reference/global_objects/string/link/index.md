@@ -33,10 +33,10 @@ str.link(url)
 В следующем примере слово «MDN» отображается в виде гипертекстовой ссылки, ведущей на сайт Сети разработчиков Mozilla.
 
 ```js
-var hotText = 'MDN';
-var URL = 'https://developer.mozilla.org/';
+var hotText = "MDN";
+var URL = "https://developer.mozilla.org/";
 
-document.write('Нажмите для возврата на ' + hotText.link(URL));
+document.write("Нажмите для возврата на " + hotText.link(URL));
 ```
 
 Этот пример генерирует такой же вывод, как и следующий HTML:

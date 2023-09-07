@@ -45,8 +45,8 @@ theBigDay.setFullYear(1997);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                            |
+| ---------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}} |
 
 ## Compatibilidade com navegadores

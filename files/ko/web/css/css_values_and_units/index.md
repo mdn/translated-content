@@ -41,7 +41,7 @@ CSS 사양에서는 웹 개발자가 정의할 수 있는 값들, 가령 키프�
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -61,7 +61,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 

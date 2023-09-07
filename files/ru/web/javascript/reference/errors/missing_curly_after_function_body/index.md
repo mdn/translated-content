@@ -37,7 +37,7 @@ var charge = function() {
 Правильный код:
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -55,7 +55,7 @@ var charge = function() {
 Зачастую облегчить поиск ошибок можно, проверив отступы ещё раз или расставив их по-другому.
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

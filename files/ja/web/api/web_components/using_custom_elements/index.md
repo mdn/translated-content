@@ -1,31 +1,39 @@
 ---
 title: カスタム要素の使用
 slug: Web/API/Web_components/Using_custom_elements
+l10n:
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{DefaultAPISidebar("Web Components")}}
 
-ウェブコンポーネント標準の主な特徴の 1 つは、 HTML ページに機能をカプセル化するカスタム要素を作成できることで、カスタムページの機能を提供する要素の長いネストしたバッチを作成する必要がありません。この記事では、 Custom Elements API の使い方を紹介します。
+ウェブコンポーネント標準の主な特徴の 1 つは、 HTML ページに機能をカプセル化するカスタム要素を作成できることで、カスタムページの機能を提供する要素の長いネストしたバッチを作成する必要がありません。この記事では、カスタム要素 API の使い方を紹介します。
 
 ## 高水準のビュー
 
-ウェブ文書上でカスタム要素を制御するのは {{domxref("CustomElementRegistry")}} オブジェクトです。 — このオブジェクトで、ページへカスタム要素を登録したり、どのようなカスタム要素が登録されているのかを返したりすることができます。
+ウェブ文書上でカスタム要素を制御するのは {{domxref("CustomElementRegistry")}} オブジェクトです。このオブジェクトで、ページへカスタム要素を登録したり、どのようなカスタム要素が登録されているのかを返したりすることができます。
 
 ページにカスタム要素を登録するには、 {{domxref("CustomElementRegistry.define()")}} メソッドを使います。引数に次のものを取ります。
 
-- 要素に与える名前を表す {{domxref("DOMString")}}。カスタム要素の名前は、[ダッシュが使われている名前](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case) である必要があります。単一の単語にすることはできません。
+- 要素に与える名前を表す文字列。カスタム要素の名前は、[ダッシュが使われている名前](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name) (kebab-case) である必要があります。単一の単語にすることはできません。
 - 要素の振る舞いを定義した[クラス](/ja/docs/Web/JavaScript/Reference/Classes)のオブジェクト。
 - {{optional_inline}} `extends` プロパティを含むオプションオブジェクトです。このプロパティは、もしあれば、要素が継承する組み込み要素を指定します（カスタマイズされた組み込み要素にのみ関係します）。
 
-例えば、カスタムの [word-count 要素](https://mdn.github.io/web-components-examples/word-count-web-component/)を定義するには次のようにします。
+カスタム要素には 2 つの種類があります。
+
+- **自律カスタム要素** (Autonomous custom element) はスタンドアロンです。標準の HTML 要素を継承しません。 HTML 要素としてページ内で記述して使います。例えば、`<popup-info>` あるいは `document.createElement("popup-info")` などです。
+- **カスタマイズされた組み込み要素** (Customized built-in element) は、基礎となる HTML 要素を継承します。これらを作成するには、どの要素を拡張するかを指定する必要があり（上記の例で示した通り）、基本要素を記述し、カスタム要素の名前を [`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性（またはプロパティ）で指定することで使用します。例えば、 `<p is="word-count">` や `document.createElement("p", { is: "word-count" })` のようにします。
+
+例えば、**カスタマイズされた組み込み要素**である [word-count 要素](https://mdn.github.io/web-components-examples/word-count-web-component/)を定義するには次のようにします。
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-`word-count` 要素は `WordCount` クラスのオブジェクトで、 {{htmlelement("p")}} 要素を拡張します。
+この要素は `word-count` と呼ばれ、クラスオブジェクトは `WordCount` であり、 {{htmlelement("p")}} 要素を拡張したものになります。これは拡張された要素内で `is` 属性を設定することでのみ構築することができます。例えば、 `<p is="word-count">` または
+`document.createElement("p", { is: "word-count" })` のようにします。
 
-カスタム要素のクラスのオブジェクトは ES 2015 のクラス構文で実装します。例えば、 `WordCount` は次のように構成します。
+カスタム要素のクラスのオブジェクトは `class` 構文で実装します。例えば、 `WordCount` は次のように構成します。
 
 ```js
 class WordCount extends HTMLParagraphElement {
@@ -34,20 +42,15 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // ここに要素の機能を記述します
-
-    ...
   }
 }
 ```
 
-これはごく簡単な例ですが、ここでできることはもっとあります。クラスの中でライフサイクルコールバックを定義することができ、要素のライフサイクルの特定の時点で実行されます。例えば、`connectedCallback` はドキュメント接続要素にカスタム要素が追加されるたびに実行されます。一方 `attributeChangedCallback` はカスタム要素に属性が追加、削除、変更される時に実行されます。
+> **メモ:** [JavaScript のソース全体](https://github.com/mdn/web-components-examples/blob/main/word-count-web-component/main.js)があります。
+
+これはごく簡単な例ですが、ここでできることはもっとあります。クラスの中でライフサイクルコールバックを定義することにより、要素のライフサイクルの特定の時点で実行することができます。例えば、 `connectedCallback` は文書に接続された要素にカスタム要素が追加されるたびに実行されます。一方 `attributeChangedCallback` はカスタム要素に属性が追加、削除、変更される時に実行されます。
 
 これらについては、下記の[ライフサイクルコールバックの使用](#ライフサイクルコールバックの使用)の節で詳しく学ぶことができます。
-
-カスタム要素には 2 つの種類があります。
-
-- スタンドアロンの**自律カスタム要素** — 標準の HTML 要素を継承しません。 HTML 要素としてページ内で記述して使います。例えば、`<popup-info>` あるいは `document.createElement("popup-info")` などです。
-- 基礎となる HTML 要素を継承する**カスタマイズされた組み込み要素**。これらを作成するには、どの要素を拡張するかを指定する必要があり（上記の例で示した通り）、基本要素を記述し、カスタム要素の名前を [`is`](/ja/docs/Web/HTML/Global_attributes#is) 属性（またはプロパティ）で指定することで使用します。例えば、 `<p is="word-count">` や `document.createElement("p", { is: "word-count" })` のようにします。
 
 ## 簡単な例での作業
 
@@ -55,19 +58,17 @@ class WordCount extends HTMLParagraphElement {
 
 ### 自律カスタム要素
 
-自律カスタム要素の例を見てみましょう。[`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) ([ライブ例](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)も参照) です。これは画像とテキストを受け取り、ページにアイコンを埋め込みます。アイコンにフォーカスすると、テキストをポップアップ情報ボックスに表示し、さらにコンテキスト内の情報を提供します。
+自律カスタム要素の例を見てみましょう。[`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) ([ライブ例](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)も参照) です。これは画像とテキストを受け取り、ページにアイコンを埋め込みます。アイコンにフォーカスすると、テキストをポップアップ情報ボックスに表示し、さらにコンテキスト内の情報を提供します。
 
-最初に汎用的な {{domxref("HTMLElement")}} クラスを継承して `PopUpInfo` というクラスを定義する JavaScript ファイルです。
+最初に汎用的な {{domxref("HTMLElement")}} クラスを継承して `PopupInfo` というクラスを定義する JavaScript ファイルです。
 
 ```js
-class PopUpInfo extends HTMLElement {
+class PopupInfo extends HTMLElement {
   constructor() {
     // コンストラクターでは常に super を最初に呼び出してください
     super();
 
     // ここに要素の機能を記述します
-
-    ...
   }
 }
 ```
@@ -78,59 +79,66 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // シャドウルートを生成
-this.attachShadow({mode: 'open'}); // 'this.shadowRoot' を設定して返す
+this.attachShadow({ mode: "open" }); // 'this.shadowRoot' を設定して返す
 
-// (内部の) span 要素を生成
-const wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-const icon = wrapper.appendChild(document.createElement('span'));
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
+//（内部の）span 要素を生成
+const wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+const icon = wrapper.appendChild(document.createElement("span"));
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
 // アイコンを、定義された属性または既定のアイコンから挿入
-const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+const img = icon.appendChild(document.createElement("img"));
+img.src = this.hasAttribute("img")
+  ? this.getAttribute("img")
+  : "img/default.png";
+// 画像を追加する際には、常に説明文を含めるようする
+img.alt = this.hasAttribute("alt") ? this.getAttribute("alt") : "";
 
-const info = wrapper.appendChild(document.createElement('span'));
-info.setAttribute('class','info');
+const info = wrapper.appendChild(document.createElement("span"));
+info.setAttribute("class", "info");
 // 属性の中身を取得し、 info の span の中に入れる
-info.textContent = this.getAttribute('data-text');
+info.textContent = this.getAttribute("data-text");
 
 // CSS を作成しシャドウ DOM に割り当てる
-const style = document.createElement('style');
-style.textContent = '.wrapper {' +
-// 簡略化のために CSS は省略
+const style = document.createElement("style");
+style.textContent = `.wrapper {
+  /* 簡略化のために CSS は省略 */
+}`;
 
 // 生成された要素をシャドウ DOM に添付する
-this.shadowRoot.append(style,wrapper);
+this.shadowRoot.append(style, wrapper);
 ```
 
 最後に、カスタム要素を `CustomElementRegistry` に登録します。前述の `define()` を使用して、引数で要素名とその機能を定義するクラス名を指定します。
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopupInfo);
 ```
 
-これによって要素がページで使えるようになりました。 HTML 中で下記のように使用することができます。
+これによって要素がページで使えるようになりました。 HTML 内で下記のように使用することができます。
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
 
-> **メモ:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) を見ることができます。
+> **メモ:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-web-component/main.js) を見ることができます。
 
 ### 内部スタイルと外部スタイル
 
 上記の例では {{htmlelement("style")}} 要素を用いてシャドウ DOM にスタイルを適用しましたが、代わりに完全に {{htmlelement("link")}} 要素から外部スタイルシートを参照することが可能です。
 
-例えば、 [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) のコードを少し見てみましょう（[ソースコード](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)はこちら）。
+例えば、 [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) のコードを少し見てみましょう（[ソースコード](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/main.js)はこちら）。
 
 ```js
 // 外部スタイルシートをシャドウ DOM に適用
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 生成された要素をシャドウ DOM に添付
 shadow.appendChild(linkElem);
@@ -142,9 +150,9 @@ shadow.appendChild(linkElem);
 
 ### カスタマイズされた組み込み要素
 
-ここで、もう 1 つの組み込み要素の例を見てみましょう。 [expanding-list](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) ([ライブでも確認してください](https://mdn.github.io/web-components-examples/expanding-list-web-component/)) です。 これにより番号なしリストが展開・縮小するメニューになります。
+ここで、もう 1 つの組み込み要素の例を見てみましょう。 [expanding-list](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) です。（[ライブでも確認してください](https://mdn.github.io/web-components-examples/expanding-list-web-component/)） これにより番号なしリストが展開・収納するメニューになります。
 
- まず始めに、これまでと同様の方法でクラス要素を定義します。
+まず始めに、これまでと同様の方法でクラス要素を定義します。
 
 ```js
 class ExpandingList extends HTMLUListElement {
@@ -153,33 +161,29 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // ここに要素の機能を記述します
-
-    ...
   }
 }
 ```
 
 ここでは要素の詳細な機能については説明しませんが、ソースコードからどのように動作するのか確認することができます。これまでと唯一違う点は、 {{domxref("HTMLUListElement")}} インターフェースを継承しており、 {{domxref("HTMLElement")}} ではないことです。そのため、独立した要素ではなく、 {{htmlelement("ul")}} 要素の特徴を備えた上に、定義した機能を持ちます。これこそが、自律カスタム要素ではなくカスタマイズされた組み込み要素である理由です。
 
- 次に、以前と同様に `define()` を用いて要素を登録しますが、今回はこのカスタム要素がどの要素から継承したのかという情報をオプションとして渡しています。
+次に、以前と同様に `define()` を用いて要素を登録しますが、今回はこのカスタム要素がどの要素から継承したのかという情報をオプションとして渡しています。
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 ウェブ文書内で組み込み要素を使用する場合とはやや異なります。
 
 ```html
 <ul is="expanding-list">
-
-  ...
-
+  …
 </ul>
 ```
 
 通常のように `<ul>` を使用していますが、カスタム要素の名前が `is` 属性で指定されています。
 
-> **メモ:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)はこちらにあります。
+> **メモ:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/main/expanding-list-web-component/main.js)はこちらにあります。
 
 ## ライフサイクルコールバックの使用
 
@@ -191,9 +195,9 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 - `disconnectedCallback`: カスタム要素が文書の DOM から切断されるたびに呼び出されます。
 - `adoptedCallback`: カスタム要素が新しい文書に移動するたびに呼び出されます。
-- `attributeChangedCallback`: カスタム要素の属性の 1 つが追加、削除、変更されるたびに呼び出されます。どの属性の変更が通知されたかは、 static get `observedAttributes()` メソッドで指定されます。
+- `attributeChangedCallback`: カスタム要素の属性の 1 つが追加、削除、変更されるたびに呼び出されます。どの属性の変更が通知されたかは、静的な get `observedAttributes()` メソッドで指定されます。
 
-これらの使用例を見てみましょう。以下のコードは [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) の例から引用しています ([実行可能なライブでも確認してください](https://mdn.github.io/web-components-examples/life-cycle-callbacks/))。これは、ページ上に一定の大きさの色のついた四角形を生成する些細な例です。カスタム要素は次のようなものです。
+これらの使用例を見てみましょう。以下のコードは [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks) の例から引用しています（[実行可能なライブでも確認してください](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)）。これは、ページ上に一定の大きさの色のついた四角形を生成する些細な例です。カスタム要素は次のようなものです。
 
 ```html
 <custom-square l="100" c="red"></custom-square>
@@ -202,10 +206,10 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 クラスのコンストラクターは非常に単純です。ここでは、要素にシャドウ DOM を割り当て、空の {{htmlelement("div")}} および {{htmlelement("style")}} 要素をシャドウルートに追加します。
 
 ```js
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
-const div = document.createElement('div');
-const style = document.createElement('style');
+const div = document.createElement("div");
+const style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -215,11 +219,11 @@ shadow.appendChild(div);
 ```js
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
+  shadow.querySelector("style").textContent = `
     div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
   `;
 }
@@ -263,11 +267,11 @@ static get observedAttributes() { return ['c', 'l']; }
 
 この例では、これはコンストラクターの最上部に配置されています。
 
-> **メモ:** [完全な JavaScript のソース](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)はこちらから探してください。
+> **メモ:** [完全な JavaScript のソース](https://github.com/mdn/web-components-examples/blob/main/life-cycle-callbacks/main.js)はこちらにあります。
 
 ## トランスパイラーとクラス
 
-古いブラウザーを対象とした Babel 6 や TypeScript では、 ES2015 のクラス構文は期待通りにトランスパイルされない可能性があることに注意してください。 Babel 7 もしくは Babel 6 の [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) を使用すると、 TypeScript で古いブラウザーではなく ES2015 をターゲットとすることができます。
+古いブラウザーを対象とした Babel 6 や TypeScript では、クラスが期待通りにトランスパイルされない可能性があることに注意してください。 Babel 7 もしくは Babel 6 の [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) を使用すると、 TypeScript で古いブラウザーではなく ES2015 をターゲットとすることができます。
 
 ## ライブラリー
 

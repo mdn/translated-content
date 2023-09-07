@@ -35,8 +35,8 @@ slug: Web/API/Window/beforeprint_event
 `addEventListener()` の使用例:
 
 ```js
-window.addEventListener('beforeprint', (event) => {
-  console.log('Before print');
+window.addEventListener("beforeprint", (event) => {
+  console.log("Before print");
 });
 ```
 
@@ -44,7 +44,7 @@ window.addEventListener('beforeprint', (event) => {
 
 ```js
 window.onbeforeprint = (event) => {
-  console.log('Before print');
+  console.log("Before print");
 };
 ```
 

@@ -2,6 +2,7 @@
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 **`parseInt()`** 함수는 문자열 인자를 파싱하여 특정 진수(수의 진법 체계에서 기준이 되는 값)의 정수를 반환합니다.
@@ -11,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ## 구문
 
 ```js
-parseInt(string)
-parseInt(string, radix)
+parseInt(string);
+parseInt(string, radix);
 ```
 
 ### 매개변수
@@ -20,6 +21,7 @@ parseInt(string, radix)
 - `string`
   - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
 - `radix` {{optional_inline}}
+
   - : `string`의 진수를 나타내는 `2`부터 `36`까지의 정수입니다. 주의하세요. 기본 값이 `10`이 **아닙니다!** `Number` 자료형이 아닌 경우 `Number`로 변환합니다.
 
     > **경고:** `radix`를 생략할 경우 발생하는 일에 대해서는 [아래 설명](#설명)에서 자세히 알아볼 수 있습니다.
@@ -67,15 +69,15 @@ parseInt(string, radix)
 ECMAScript 3부터 이미 권장되지 않았음에도 불구하고, 많은 ECMAScript 3 구현체는 `0`으로 시작하는 숫자형 문자열을 8진수로 해석했습니다. 다음 코드는 8진수 결과를 낼 수도 있고, 10진수 결과를 낼 수도 있었습니다.
 
 ```js
-parseInt('0e0')  // 0
-parseInt('08')   // 0, '8'은 8진수 숫자가 아니기 때문
+parseInt("0e0"); // 0
+parseInt("08"); // 0, '8'은 8진수 숫자가 아니기 때문
 ```
 
 ECMAScript 5 명세는 `parseInt` 구현이 `0`으로 시작하는 문자열을 8진수로 해석하는 것을 금지했습니다. 2021년 시점에선 많은 구현체가 이 동작을 적용했습니다.
 
 ```js
-parseInt('0e0')  // 0
-parseInt('08')   // 8
+parseInt("0e0"); // 0
+parseInt("08"); // 8
 ```
 
 ## 더 엄격한 파싱 함수
@@ -85,20 +87,20 @@ parseInt('08')   // 8
 ```js
 function filterInt(value) {
   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-    return Number(value)
+    return Number(value);
   } else {
-    return NaN
+    return NaN;
   }
 }
 
-console.log(filterInt('421'))                // 421
-console.log(filterInt('-421'))               // -421
-console.log(filterInt('+421'))               // 421
-console.log(filterInt('Infinity'))           // Infinity
-console.log(filterInt('421e+0'))             // NaN
-console.log(filterInt('421hop'))             // NaN
-console.log(filterInt('hop1.61803398875'))   // NaN
-console.log(filterInt('1.61803398875'))      // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## 예제
@@ -108,77 +110,77 @@ console.log(filterInt('1.61803398875'))      // NaN
 다음은 모두 `15`를 반환합니다.
 
 ```js
-parseInt('0xF', 16)
-parseInt('F', 16)
-parseInt('17', 8)
-parseInt('015', 10)    // parseInt('015', 8)이었다면 13을 반환
-parseInt(15.99, 10)
-parseInt('15,123', 10)
-parseInt('FXX123', 16)
-parseInt('1111', 2)
-parseInt('15 * 3', 10)
-parseInt('15e2', 10)
-parseInt('15px', 10)
-parseInt('12', 13)
+parseInt("0xF", 16);
+parseInt("F", 16);
+parseInt("17", 8);
+parseInt("015", 10); // parseInt('015', 8)이었다면 13을 반환
+parseInt(15.99, 10);
+parseInt("15,123", 10);
+parseInt("FXX123", 16);
+parseInt("1111", 2);
+parseInt("15 * 3", 10);
+parseInt("15e2", 10);
+parseInt("15px", 10);
+parseInt("12", 13);
 ```
 
 다음은 모두 `NaN`을 반환합니다.
 
 ```js
-parseInt('Hello', 8); // 숫자가 전혀 아님
-parseInt('546', 2);   // 0과 1을 제외한 숫자는 2진법에서 유효하지 않음
+parseInt("Hello", 8); // 숫자가 전혀 아님
+parseInt("546", 2); // 0과 1을 제외한 숫자는 2진법에서 유효하지 않음
 ```
 
 다음은 모두 `-15`를 반환합니다.
 
 ```js
-parseInt('-F', 16)
-parseInt('-0F', 16)
-parseInt('-0XF', 16)
-parseInt(-15.1, 10)
-parseInt('-17', 8)
-parseInt('-15', 10)
-parseInt('-1111', 2)
-parseInt('-15e1', 10)
-parseInt('-12', 13)
+parseInt("-F", 16);
+parseInt("-0F", 16);
+parseInt("-0XF", 16);
+parseInt(-15.1, 10);
+parseInt("-17", 8);
+parseInt("-15", 10);
+parseInt("-1111", 2);
+parseInt("-15e1", 10);
+parseInt("-12", 13);
 ```
 
 다음은 모두 `4`를 반환합니다.
 
 ```js
-parseInt(4.7, 10)
-parseInt(4.7 * 1e22, 10)        // 매우 큰 숫자가 4가 됨
-parseInt(0.00000000000434, 10)  // 매우 작은 숫자가 4가 됨
+parseInt(4.7, 10);
+parseInt(4.7 * 1e22, 10); // 매우 큰 숫자가 4가 됨
+parseInt(0.00000000000434, 10); // 매우 작은 숫자가 4가 됨
 ```
 
 숫자가 1e+21을 초과하거나 1e-7 미만인 경우 10진수에서 `1`을 반환합니다.
 
 ```js
-parseInt(0.0000001,10);
-parseInt(0.000000123,10);
-parseInt(1e-7,10);
-parseInt(1000000000000000000000,10);
-parseInt(123000000000000000000000,10);
-parseInt(1e+21,10);
+parseInt(0.0000001, 10);
+parseInt(0.000000123, 10);
+parseInt(1e-7, 10);
+parseInt(1000000000000000000000, 10);
+parseInt(123000000000000000000000, 10);
+parseInt(1e21, 10);
 ```
 
 다음은 `224`를 반환합니다.
 
 ```js
-parseInt('0e0', 16)
+parseInt("0e0", 16);
 ```
 
 {{jsxref("BigInt")}} 값은 정확도를 잃습니다.
 
 ```js
-parseInt('900719925474099267n')
+parseInt("900719925474099267n");
 // 900719925474099300
 ```
 
 `parseInt`는 [숫자 구분 기호](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)와 함께 사용할 수 없습니다.
 
 ```js
-parseInt('123_456')
+parseInt("123_456");
 // 123
 ```
 
@@ -186,15 +188,21 @@ parseInt('123_456')
 
 ```js
 const obj = {
-  valueOf() {return 8}
+  valueOf() {
+    return 8;
+  },
 };
-parseInt('11', obj); // 9
+parseInt("11", obj); // 9
 
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
+obj.valueOf = function () {
+  return 1;
+};
+parseInt("11", obj); // NaN
 
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
+obj.valueOf = function () {
+  return Infinity;
+};
+parseInt("11", obj); // 11
 ```
 
 ## 명세
