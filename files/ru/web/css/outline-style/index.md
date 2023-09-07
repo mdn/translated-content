@@ -1,13 +1,8 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.outline-style
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
 {{CSSRef}}

@@ -1,14 +1,10 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.outline-offset
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`outline-offset`** задаёт расстояние между [обводкой](/ru/docs/Web/CSS/outline) и краем или рамкой элемента.

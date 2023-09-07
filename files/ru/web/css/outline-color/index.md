@@ -1,20 +1,8 @@
 ---
 title: outline-color
 slug: Web/CSS/outline-color
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - CSS User Interface
-  - HTML Colors
-  - HTML Styles
-  - Outline
-  - Reference
-  - Styles
-  - Styling HTML
-  - outline-color
-  - recipe:css-property
-browser-compat: css.properties.outline-color
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
