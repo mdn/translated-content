@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 函数的 `name` 属性可用于在调试工具或错误消息中标识该函数。它对语言本身没有任何意义。
 
-`name` 属性是只读的，不能用赋值操作符修改：
+`name` 属性是只读的，不能用赋值运算符修改：
 
 ```js
 function someFunction() {}
@@ -30,7 +30,7 @@ someFunction.name = "otherFunction";
 console.log(someFunction.name); // someFunction
 ```
 
-想要改变它，请使用 {{jsxref("Object.defineProperty()")}}.
+想要改变它，请使用 {{jsxref("Object.defineProperty()")}}。
 
 `name` 属性通常是从函数的定义方式推断出来的。在下面的部分中，我们将描述推断它的各种方法。
 
