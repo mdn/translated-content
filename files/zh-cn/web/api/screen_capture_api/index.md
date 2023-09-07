@@ -14,9 +14,8 @@ slug: Web/API/Screen_Capture_API
 要开始从屏幕上捕捉视频，你需要在 `getDisplayMedia()` 的实例上调用 `Media` `navigator.mediaDevices`：
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(
-  displayMediaOptions,
-);
+captureStream =
+  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
 The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.

@@ -26,12 +26,12 @@ str.trim()
 Следующий пример покажет строку `'foo'`:
 
 ```js
-var orig = '   foo  ';
+var orig = "   foo  ";
 console.log(orig.trim()); // 'foo'
 
 // Другой пример, в котором .trim() убирает пробельные символы только с одной стороны.
 
-var orig = 'foo    ';
+var orig = "foo    ";
 console.log(orig.trim()); // 'foo'
 ```
 
@@ -41,10 +41,10 @@ console.log(orig.trim()); // 'foo'
 
 ```js
 if (!String.prototype.trim) {
-  (function() {
+  (function () {
     // Вырезаем BOM и неразрывный пробел
-    String.prototype.trim = function() {
-      return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    String.prototype.trim = function () {
+      return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
     };
   })();
 }

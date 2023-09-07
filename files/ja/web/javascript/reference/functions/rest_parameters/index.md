@@ -23,13 +23,13 @@ function f(a, b, ...theArgs) {
 最後の引数のみが「残余引数」になることができます。
 
 ```js
-function myFun(a,  b, ...manyMoreArgs) {
-  console.log("a", a)
-  console.log("b", b)
-  console.log("manyMoreArgs", manyMoreArgs)
+function myFun(a, b, ...manyMoreArgs) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six")
+myFun("one", "two", "three", "four", "five", "six");
 
 // コンソール出力:
 // a, one
@@ -42,17 +42,17 @@ myFun("one", "two", "three", "four", "five", "six")
 関数定義には、 `...`_restParam_ を 1 つだけ入れることができます。
 
 ```js example-bad
-foo(...one, ...wrong, ...wrong)
+foo(...one, ...wrong, ...wrong);
 ```
 
 残余引数は、関数定義の最後の引数でなければなりません。
 
 ```js example-bad
-foo(...wrong, arg2, arg3)
+foo(...wrong, arg2, arg3);
 ```
 
 ```js example-good
-foo(arg1, arg2, ...correct)
+foo(arg1, arg2, ...correct);
 ```
 
 ### 残余引数と `arguments` オブジェクトとの違い
@@ -71,21 +71,21 @@ foo(arg1, arg2, ...correct)
 // 残余引数の登場以前は、"arguments" を普通の配列に変換するには以下のようにしていました。
 
 function f(a, b) {
-  let normalArray = Array.prototype.slice.call(arguments)
+  let normalArray = Array.prototype.slice.call(arguments);
   // -- or --
-  let normalArray = [].slice.call(arguments)
+  let normalArray = [].slice.call(arguments);
   // -- or --
-  let normalArray = Array.from(arguments)
+  let normalArray = Array.from(arguments);
 
-  let first = normalArray.shift()  // OK、最初の引数が得られる
-  let first = arguments.shift()    // エラー (arguments は通常の配列ではない)
+  let first = normalArray.shift(); // OK、最初の引数が得られる
+  let first = arguments.shift(); // エラー (arguments は通常の配列ではない)
 }
 
 // 残余引数を使ってふつうの配列へのアクセスが得られるようになりました
 
 function f(...args) {
-  let normalArray = args
-  let first = normalArray.shift() // OK、最初の引数が得られる
+  let normalArray = args;
+  let first = normalArray.shift(); // OK、最初の引数が得られる
 }
 ```
 
@@ -99,12 +99,12 @@ function f(...args) {
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a)
-  console.log("b", b)
-  console.log("manyMoreArgs", manyMoreArgs)
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six")
+myFun("one", "two", "three", "four", "five", "six");
 
 // a, "one"
 // b, "two"
@@ -116,7 +116,7 @@ myFun("one", "two", "three", "four", "five", "six")
 ```js
 // 上記の例と同じ関数定義を使用
 
-myFun("one", "two", "three")
+myFun("one", "two", "three");
 
 // a, "one"
 // b, "two"
@@ -128,7 +128,7 @@ myFun("one", "two", "three")
 ```js
 // 上記の例と同じ関数定義を使用
 
-myFun("one", "two")
+myFun("one", "two");
 
 // a, "one"
 // b, "two"
@@ -141,12 +141,12 @@ myFun("one", "two")
 
 ```js
 function fun1(...theArgs) {
-  console.log(theArgs.length)
+  console.log(theArgs.length);
 }
 
-fun1()         // 0
-fun1(5)        // 1
-fun1(5, 6, 7)  // 3
+fun1(); // 0
+fun1(5); // 1
+fun1(5, 6, 7); // 3
 ```
 
 ### 通常の引数と残余引数
@@ -155,13 +155,13 @@ fun1(5, 6, 7)  // 3
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element => {
-    return multiplier * element
-  })
+  return theArgs.map((element) => {
+    return multiplier * element;
+  });
 }
 
-let arr = multiply(2, 15, 25, 42)
-console.log(arr)  // [30, 50, 84]
+let arr = multiply(2, 15, 25, 42);
+console.log(arr); // [30, 50, 84]
 ```
 
 ### 残余引数は実際の配列、 arguments オブジェクトはそうではない
@@ -170,18 +170,18 @@ console.log(arr)  // [30, 50, 84]
 
 ```js
 function sortRestArgs(...theArgs) {
-  let sortedArgs = theArgs.sort()
-  return sortedArgs
+  let sortedArgs = theArgs.sort();
+  return sortedArgs;
 }
 
-console.log(sortRestArgs(5, 3, 7, 1)) // 1, 3, 5, 7
+console.log(sortRestArgs(5, 3, 7, 1)); // 1, 3, 5, 7
 
 function sortArguments() {
-  let sortedArgs = arguments.sort()
-  return sortedArgs  // これは実行されない
+  let sortedArgs = arguments.sort();
+  return sortedArgs; // これは実行されない
 }
 
-console.log(sortArguments(5, 3, 7, 1))
+console.log(sortArguments(5, 3, 7, 1));
 // TypeError が発生 (arguments.sort は関数ではない)
 ```
 
@@ -189,11 +189,11 @@ console.log(sortArguments(5, 3, 7, 1))
 
 ```js
 function sortArguments() {
-  let args = Array.from(arguments)
-  let sortedArgs = args.sort()
-  return sortedArgs
+  let args = Array.from(arguments);
+  let sortedArgs = args.sort();
+  return sortedArgs;
 }
-console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
+console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 ```
 
 ## 仕様書

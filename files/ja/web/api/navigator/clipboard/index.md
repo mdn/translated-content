@@ -18,8 +18,11 @@ slug: Web/API/Navigator/clipboard
 以下のコードは、クリップボードの内容を読み取る目的でシステムのクリップボードにアクセスするため、 `navigator.clipboard` を使用します。
 
 ```js
-navigator.clipboard.readText().then(
-  (clipText) => document.querySelector(".cliptext").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+  );
 ```
 
 このスニペットは、クラスが `"cliptext"` の要素の内容を、クリップボードのテキストコンテンツで置き換えます。おそらくこのコードは現在のクリップボードの内容を表示するブラウザー拡張機能に使用されているもので、定期的または特定のイベントが発生したときに自動的に更新されます。

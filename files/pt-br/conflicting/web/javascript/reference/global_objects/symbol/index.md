@@ -1,7 +1,6 @@
 ---
 title: Symbol
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Glossary/Symbol
 ---
 
 Esse termo do glossário descreve tanto o tipo de dados chamado "**symbol**", quando a função/classe "{{jsxref("Symbol")}}`()`", que entre outras coisas, cria instâncias do tipo de dados **symbol**.

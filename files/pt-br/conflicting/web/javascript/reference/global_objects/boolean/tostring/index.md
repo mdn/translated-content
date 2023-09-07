@@ -1,7 +1,6 @@
 ---
 title: Boolean.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}

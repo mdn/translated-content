@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('playing', (event) => {});
+addEventListener("playing", (event) => {});
 
-onplaying = (event) => { };
+onplaying = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onplaying = (event) => { };
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('playing', (event) => {
-  console.log('Video is no longer paused');
+video.addEventListener("playing", (event) => {
+  console.log("Video is no longer paused");
 });
 ```
 
 `onplaying` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplaying = (event) => {
-  console.log('Video is no longer paused.');
+  console.log("Video is no longer paused.");
 };
 ```
 

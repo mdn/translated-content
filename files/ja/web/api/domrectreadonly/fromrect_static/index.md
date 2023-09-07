@@ -10,8 +10,8 @@ slug: Web/API/DOMRectReadOnly/fromRect_static
 ## 構文
 
 ```js
-fromRect()
-fromRect(rectangle)
+fromRect();
+fromRect(rectangle);
 ```
 
 ### 引数

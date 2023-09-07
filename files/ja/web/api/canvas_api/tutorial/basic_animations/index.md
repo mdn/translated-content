@@ -14,13 +14,13 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 フレームを描画させる手順は、このようになります。
 
 1. **キャンバスをクリアする**
-    描画する図形が（たとえば、背景画像のように）キャンバス全体を埋めない限り、以前に描画した図形をすべてクリアする必要があります。最も簡単な方法は、{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} メソッドを使うことです。
+   描画する図形が（たとえば、背景画像のように）キャンバス全体を埋めない限り、以前に描画した図形をすべてクリアする必要があります。最も簡単な方法は、{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} メソッドを使うことです。
 2. **キャンバスの状態を保存する**
-    キャンバスの状態に影響を与える設定（スタイル、変形など）を変更していて、フレームを描画するたびに元の状態を使用したい場合は、その状態を保存する必要があります。
+   キャンバスの状態に影響を与える設定（スタイル、変形など）を変更していて、フレームを描画するたびに元の状態を使用したい場合は、その状態を保存する必要があります。
 3. **アニメ―ションさせる図形を描画する**
-    実際に、フレームの描画を行います。
+   実際に、フレームの描画を行います。
 4. **キャンバスの状態を復元する**
-    状態を保存した場合は、新しいフレームを描画する前に状態を復元します。
+   状態を保存した場合は、新しいフレームを描画する前に状態を復元します。
 
 ## アニメーションの制御
 
@@ -60,33 +60,39 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init() {
-  sun.src = 'canvas_sun.png';
-  moon.src = 'canvas_moon.png';
-  earth.src = 'canvas_earth.png';
+  sun.src = "canvas_sun.png";
+  moon.src = "canvas_moon.png";
+  earth.src = "canvas_earth.png";
   window.requestAnimationFrame(draw);
 }
 
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.globalCompositeOperation = 'destination-over';
+  ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
-  ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
   ctx.save();
   ctx.translate(150, 150);
 
   // 地球
   var time = new Date();
-  ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+  ctx.rotate(
+    ((2 * Math.PI) / 60) * time.getSeconds() +
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
+  );
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // 影
   ctx.drawImage(earth, -12, -12);
 
   // 月
   ctx.save();
-  ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+  ctx.rotate(
+    ((2 * Math.PI) / 6) * time.getSeconds() +
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
+  );
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
@@ -124,16 +130,16 @@ init();
 ```js
 function clock() {
   var now = new Date();
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
   ctx.scale(0.4, 0.4);
   ctx.rotate(-Math.PI / 2);
-  ctx.strokeStyle = 'black';
-  ctx.fillStyle = 'white';
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "white";
   ctx.lineWidth = 8;
-  ctx.lineCap = 'round';
+  ctx.lineCap = "round";
 
   // 文字盤の時
   ctx.save();
@@ -150,7 +156,7 @@ function clock() {
   ctx.save();
   ctx.lineWidth = 5;
   for (i = 0; i < 60; i++) {
-    if (i % 5!= 0) {
+    if (i % 5 != 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
       ctx.lineTo(120, 0);
@@ -162,14 +168,16 @@ function clock() {
 
   var sec = now.getSeconds();
   var min = now.getMinutes();
-  var hr  = now.getHours();
+  var hr = now.getHours();
   hr = hr >= 12 ? hr - 12 : hr;
 
-  ctx.fillStyle = 'black';
+  ctx.fillStyle = "black";
 
   // 時針
   ctx.save();
-  ctx.rotate(hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) *sec);
+  ctx.rotate(
+    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+  );
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -189,9 +197,9 @@ function clock() {
 
   // 秒針
   ctx.save();
-  ctx.rotate(sec * Math.PI / 30);
-  ctx.strokeStyle = '#D40000';
-  ctx.fillStyle = '#D40000';
+  ctx.rotate((sec * Math.PI) / 30);
+  ctx.strokeStyle = "#D40000";
+  ctx.fillStyle = "#D40000";
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
@@ -203,14 +211,14 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0)";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#325FA2';
+  ctx.strokeStyle = "#325FA2";
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
 
@@ -246,7 +254,7 @@ var img = new Image();
 // ユーザー変数。これらをカスタマイズすると、スクロールする画像、方向、速度を
 // 変更することができます。
 
-img.src = 'capitan_meadows_yosemite_national_park.jpg';
+img.src = "capitan_meadows_yosemite_national_park.jpg";
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // 小さくすると速くなる
@@ -263,68 +271,68 @@ var clearX;
 var clearY;
 var ctx;
 
-img.onload = function() {
-    imgW = img.width * scale;
-    imgH = img.height * scale;
+img.onload = function () {
+  imgW = img.width * scale;
+  imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
-    if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
-    if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+  if (imgW > CanvasXSize) {
+    // image larger than canvas
+    x = CanvasXSize - imgW;
+  }
+  if (imgW > CanvasXSize) {
+    // image width larger than canvas
+    clearX = imgW;
+  } else {
+    clearX = CanvasXSize;
+  }
+  if (imgH > CanvasYSize) {
+    // image height larger than canvas
+    clearY = imgH;
+  } else {
+    clearY = CanvasYSize;
+  }
 
-    // get canvas context
-    ctx = document.getElementById('canvas').getContext('2d');
+  // get canvas context
+  ctx = document.getElementById("canvas").getContext("2d");
 
-    // set refresh rate
-    return setInterval(draw, speed);
-}
+  // set refresh rate
+  return setInterval(draw, speed);
+};
 
 function draw() {
-    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
-    if (imgW <= CanvasXSize) {
-        // reset, start from beginning
-        if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
-        // draw additional image1
-        if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
-        // draw additional image2
-        if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
+  // if image is <= Canvas Size
+  if (imgW <= CanvasXSize) {
+    // reset, start from beginning
+    if (x > CanvasXSize) {
+      x = -imgW + x;
     }
+    // draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+    }
+    // draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    }
+  }
 
-    // image is > Canvas Size
-    else {
-        // reset, start from beginning
-        if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
-        // draw additional image
-        if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+  // image is > Canvas Size
+  else {
+    // reset, start from beginning
+    if (x > CanvasXSize) {
+      x = CanvasXSize - imgW;
     }
-    // 画像を描画
-    ctx.drawImage(img, x, y,imgW, imgH);
-    // 移動量
-    x += dx;
+    // draw additional image
+    if (x > CanvasXSize - imgW) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+  // 画像を描画
+  ctx.drawImage(img, x, y, imgW, imgH);
+  // 移動量
+  x += dx;
 }
 ```
 
@@ -385,7 +393,7 @@ addEventListener(
     cursor.x = e.touches[0].clientX;
     cursor.y = e.touches[0].clientY;
   },
-  { passive: false }
+  { passive: false },
 );
 
 addEventListener("resize", () => setSize());
@@ -397,7 +405,7 @@ function generateParticles(amount) {
       innerHeight / 2,
       4,
       generateColor(),
-      0.02
+      0.02,
     );
   }
 }

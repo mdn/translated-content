@@ -160,7 +160,7 @@ array.findLast((value, index) => {
 
 // 삭제된 것을 포함한 모든 색인 보여주기
 array.findLast((value, index) => {
-  // 첫 번째 반복에서 요소 5 삭제하기 
+  // 첫 번째 반복에서 요소 5 삭제하기
   if (index === 6) {
     console.log(`Deleting array[5] with value ${array[5]}`);
     delete array[5];

@@ -23,7 +23,7 @@ frameEl = window.frameElement;
 var frameEl = window.frameElement;
 // 埋め込みの場合、要素の URL が 'http://mozilla.org/' に変わります。
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 

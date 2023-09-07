@@ -14,8 +14,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ```js
 p.finally(onFinally);
 
-p.finally(function() {
-    // settled (fulfilled or rejected)
+p.finally(function () {
+  // settled (fulfilled or rejected)
 });
 ```
 
@@ -47,16 +47,23 @@ p.finally(function() {
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); })
-  .finally(function() { isLoading = false; });
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
 ## 명세

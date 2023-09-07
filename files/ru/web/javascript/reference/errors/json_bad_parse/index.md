@@ -58,7 +58,7 @@ SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
 Обе строки выдадут ошибку типа SyntaxError:
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4,]');
+JSON.parse("[1, 2, 3, 4,]");
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -67,7 +67,7 @@ JSON.parse('{"foo": 1,}');
 Необходимо убрать последние запятые в строках и тогда ошибки не будет:
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4]');
+JSON.parse("[1, 2, 3, 4]");
 JSON.parse('{"foo": 1}');
 ```
 

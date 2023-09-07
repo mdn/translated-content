@@ -78,7 +78,7 @@ Aqui vemos o mais básico dos campos de senha, juntamente com um rótulo para el
 
 ```html
 <label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password">
+<input id="senhaUsuario" type="password" />
 ```
 
 {{EmbedLiveSample("A_simple_password_input", 600, 40)}}
@@ -98,7 +98,7 @@ Para permitir que o gerenciador de senhas do usuário digite a senha automaticam
 
 ```html
 <label for="senhaUsuario">Senha:</label>
-<input id="senhaUsuario" type="password" autocomplete="current-password">
+<input id="senhaUsuario" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}
@@ -109,8 +109,8 @@ Para dizer ao navegador do usuário que o campo de senha precisa ter um valor v�
 
 ```html
 <label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" required>
-<input type="submit" value="Enviar">
+<input id="senhaUsuario" type="password" required />
+<input type="submit" value="Enviar" />
 ```
 
 {{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
@@ -121,7 +121,7 @@ Se as suas regras de sintaxe recomendadas (ou obrigatórias) para a senha poderi
 
 ```html
 <label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
@@ -132,8 +132,13 @@ Como de praxe, você pode usar os atributos [`minlength`](/pt-BR/docs/Web/HTML/E
 
 ```html
 <label for="pin">PIN:</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -146,16 +151,16 @@ Assim como em outros tipos de campos de texto, você pode usar o método {{domxr
 
 ```html
 <label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" size="12">
+<input id="senhaUsuario" type="password" size="12" />
 <button id="selecionarTudo">Selecionar tudo</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selecionarTudo").onclick = function() {
+document.getElementById("selecionarTudo").onclick = function () {
   document.getElementById("senhaUsuario").select();
-}
+};
 ```
 
 #### Resultado
@@ -172,8 +177,11 @@ Neste exemplo, são válidos apenas valores consistindo de no mínimo quatro e n
 
 ```html
 <label for="hexId">Hex ID: </label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="Digite um ID consistindo de 4-8 dígitos hexadecimais">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Digite um ID consistindo de 4-8 dígitos hexadecimais" />
 ```
 
 {{EmbedLiveSample("Validation_sample1", 600, 40)}}
@@ -191,10 +199,16 @@ Este exemplo aceita apenas valores que correspondam ao formato de um [Cadastro d
 
 ```html
 <label for="cpf">CPF:</label>
-<input type="password" id="cpf" inputmode="number" minlength="11" maxlength="11"
-    pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="cpf"
+  inputmode="number"
+  minlength="11"
+  maxlength="11"
+  pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"
+  required
+  autocomplete="off" />
+<br />
 <label for="cpf">Valor:</label>
 <span id="atual"></span>
 ```
@@ -213,9 +227,9 @@ A seguir temos um código simples para mostrar o CPF digitado na tela para que v
 var cpf = document.getElementById("cpf");
 var atual = document.getElementById("atual");
 
-cpf.oninput = function(event) {
+cpf.oninput = function (event) {
   atual.innerHTML = cpf.value;
-}
+};
 ```
 
 #### Resultado
@@ -224,8 +238,8 @@ cpf.oninput = function(event) {
 
 ## Especificações
 
-| Especificação                                                                                                                                | Status                           | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| Especificação                                                                                             | Status                   | Comentário        |
+| --------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
 | {{SpecName('HTML WHATWG', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
 | {{SpecName('HTML5.1', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definição inicial |
 

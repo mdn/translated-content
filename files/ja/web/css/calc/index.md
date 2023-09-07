@@ -121,8 +121,8 @@ input {
 ```html
 <form>
   <div id="formbox">
-  <label>何か入力:</label>
-  <input type="text">
+    <label>何か入力:</label>
+    <input type="text" />
   </div>
 </form>
 ```

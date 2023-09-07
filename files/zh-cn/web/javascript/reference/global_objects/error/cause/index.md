@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 
 ## 描述
 
-`cause` 的值可以是任何类型。你不应该假设捕获错误的 `cause` 属性是一个 `Error`，正如在 `catch` 语句中绑定的变量未必一定是 `Error`。下文 “将结构化的数据作为 cause” 示例展示了刻意不提供 `Error` 作为 `cause` 的情况。
+`cause` 的值可以是任何类型。你不应该假设捕获错误的 `cause` 属性是一个 `Error`，正如在 `catch` 语句中绑定的变量未必一定是 `Error`。下文“将结构化的数据作为 cause”示例展示了刻意不提供 `Error` 作为 `cause` 的情况。
 
 ## 示例
 

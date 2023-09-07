@@ -48,7 +48,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
 Seu atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
 
 ```html
-<input type="button" value="Click Me">
+<input type="button" value="Click Me" />
 ```
 
 {{EmbedLiveSample("summary-example3", 650, 30)}}
@@ -56,7 +56,7 @@ Seu atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) de um elemento 
 Se você não especificar um `value`, você obtém um botão vazio:
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("summary-example1", 650, 30)}}
@@ -71,24 +71,24 @@ Nós iremos começar criando um simples botão com um evento {{event("click")}} 
 
 ```html
 <form>
-  <input type="button" value="Start machine">
+  <input type="button" value="Start machine" />
 </form>
 <p>The machine is stopped.</p>
 ```
 
 ```js
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === "Start machine") {
+    button.value = "Stop machine";
+    paragraph.textContent = "The machine has started!";
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = "Start machine";
+    paragraph.textContent = "The machine is stopped.";
   }
 }
 ```
@@ -105,24 +105,24 @@ In this example, <kbd>s</kbd> is specified as the access key (you'll need to pre
 
 ```html
 <form>
-  <input type="button" value="Start machine" accesskey="s">
+  <input type="button" value="Start machine" accesskey="s" />
 </form>
 <p>The machine is stopped.</p>
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === "Start machine") {
+    button.value = "Stop machine";
+    paragraph.textContent = "The machine has started!";
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = "Start machine";
+    paragraph.textContent = "The machine is stopped.";
   }
 }
 ```
@@ -136,26 +136,26 @@ function updateButton() {
 To disable a button, simply specify the [`disabled`](/pt-BR/docs/Web/HTML/Global_attributes#disabled) global attribute on it, like so:
 
 ```html
-<input type="button" value="Disable me" disabled>
+<input type="button" value="Disable me" disabled />
 ```
 
 You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("WindowTimers.setTimeout","setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
 
 ```html hidden
-<input type="button" value="Enabled">
+<input type="button" value="Enabled" />
 ```
 
 ```js hidden
-const button = document.querySelector('input');
+const button = document.querySelector("input");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
+  button.value = "Disabled";
+  window.setTimeout(function () {
     button.disabled = false;
-    button.value = 'Enabled';
+    button.value = "Enabled";
   }, 2000);
 }
 ```
@@ -169,21 +169,21 @@ The example below shows this in action. This is very similar to the previous exa
 ```html hidden
 <fieldset>
   <legend>Button group</legend>
-  <input type="button" value="Button 1">
-  <input type="button" value="Button 2">
-  <input type="button" value="Button 3">
+  <input type="button" value="Button 1" />
+  <input type="button" value="Button 2" />
+  <input type="button" value="Button 3" />
 </fieldset>
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const fieldset = document.querySelector('fieldset');
+const button = document.querySelector("input");
+const fieldset = document.querySelector("fieldset");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -203,9 +203,14 @@ The below example shows a very simple drawing app created using a {{htmlelement(
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="select pen color">
-  <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
-  <input type="button" value="Clear canvas">
+  <input type="color" aria-label="select pen color" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="select pen size" /><span class="output">30</span>
+  <input type="button" value="Clear canvas" />
 </div>
 
 <canvas class="myCanvas">
@@ -227,7 +232,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -244,29 +250,29 @@ span {
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector(".myCanvas");
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight - 85);
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 var colorPicker = document.querySelector('input[type="color"]');
 var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 var clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = function () {
   output.textContent = sizePicker.value;
-}
+};
 
 // store mouse pointer coordinates, and whether the button is pressed
 var curX;
@@ -274,29 +280,46 @@ var curY;
 var pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+document.onmousemove = function (e) {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+};
 
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = function () {
   pressed = false;
-}
+};
 
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+clearBtn.onclick = function () {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 
@@ -310,10 +333,10 @@ draw();
 
 ## Específicações
 
-| Specification                                                                                                                        | Status                           | Comments |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| Specification                                                                                       | Status                   | Comments |
+| --------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
 | {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}   | {{Spec2('HTML5 W3C')}}   |          |
 
 ## Compatibilidade com navegadores
 

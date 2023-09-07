@@ -45,12 +45,12 @@ l10n:
 `HTMLMediaElement.textTracks` は `textTracksList` を返すので、それを反復処理することができます。ここでは、それぞれの英語トラックのすべてのプロパティをコンソールに表示しています。
 
 ```js
-const tracks = document.querySelector('video').textTracks;
+const tracks = document.querySelector("video").textTracks;
 
 for (const track of tracks) {
-   if (track.language === 'en') {
-      console.dir(track);
-   }
+  if (track.language === "en") {
+    console.dir(track);
+  }
 }
 ```
 

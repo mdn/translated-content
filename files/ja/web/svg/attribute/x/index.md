@@ -52,12 +52,16 @@ slug: Web/SVG/Attribute/x
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20"  y="20" width="60" height="60" />
+  <rect x="20" y="20" width="60" height="60" />
   <rect x="120" y="20" width="60" height="60" />
   <rect x="220" y="20" width="60" height="60" />
 </svg>
@@ -1141,7 +1145,7 @@ html,body,svg { height:100% }
 
 ## text
 
-{{SVGElement('text')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('text')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`x` はテキストから個々の文字への X 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1175,7 +1179,11 @@ html,body,svg { height:100% }
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1205,7 +1213,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1216,7 +1224,7 @@ line {
 
 > **警告:** SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
 
-{{SVGElement('tref')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('tref')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`x` はテキストから個々の文字への X 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1251,7 +1259,7 @@ line {
 
 ## tspan
 
-{{SVGElement('tspan')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('tspan')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置\*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`x` はテキストから個々の文字への X 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1285,7 +1293,11 @@ line {
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1317,7 +1329,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```

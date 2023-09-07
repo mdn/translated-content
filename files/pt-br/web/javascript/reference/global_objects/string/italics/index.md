@@ -29,17 +29,17 @@ O método `italics()` cria uma string dentro de uma tag `<i>`:
 O exemplo a seguir usa métodos do objeto global String para alterar a formatação de uma string:
 
 ```js
-var worldString = 'Olá, mundo';
-console.log(worldString.blink());  // <blink>Olá, mundo</blink>
-console.log(worldString.bold());  // <b>Olá, mundo</b>
+var worldString = "Olá, mundo";
+console.log(worldString.blink()); // <blink>Olá, mundo</blink>
+console.log(worldString.bold()); // <b>Olá, mundo</b>
 console.log(worldString.italics()); // <i>Olá, mundo</i>
-console.log(worldString.strike());  // <strike>Olá, mundo</strike>
+console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 ```
 
 ## Especificações
 
-| Specification                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- |
+| Specification                                                                        |
+| ------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}} |
 
 ## Compatibilidade com navegadores

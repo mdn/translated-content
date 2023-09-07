@@ -12,7 +12,9 @@ slug: Web/CSS/:first-of-type
 ## Синтаксис
 
 ```css
-element:first-of-type { /* стили */ }
+element:first-of-type {
+  /* стили */
+}
 ```
 
 ## Пример

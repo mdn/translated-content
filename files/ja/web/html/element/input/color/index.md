@@ -117,15 +117,17 @@ colorWell.select();
 HTMLはかなり単純です。数段落の説明的な素材と、 ID が `colorWell` で `color` 型の {{HTMLElement("input")}} があり、これを使用して段落のテキストの色を変更することになります。
 
 ```html
-<p>
-  <code>&lt;input type="color"&gt;</code> コントロールを使用する例です。
-</p>
+<p><code>&lt;input type="color"&gt;</code> コントロールを使用する例です。</p>
 
 <label for="colorWell">色:</label>
 <input type="color" value="#ff0000" id="colorWell" />
 
 <p>
-  カラーピッカーを動かしたときに段落の色が変わるのを見てください。カラーピッカーに変更を加えると、最初の段落の色が、プレビューとして変化します（<code>input</code> イベントを使用します）。カラー ピッカーを閉じると、<code>change</code> イベントが実行され、全ての段落が選択された色に変化することが分かります。
+  カラーピッカーを動かしたときに段落の色が変わるのを見てください。カラーピッカーに変更を加えると、最初の段落の色が、プレビューとして変化します（<code
+    >input</code
+  >
+  イベントを使用します）。カラー ピッカーを閉じると、<code>change</code>
+  イベントが実行され、全ての段落が選択された色に変化することが分かります。
 </p>
 ```
 

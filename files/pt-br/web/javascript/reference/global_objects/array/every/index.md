@@ -59,7 +59,7 @@ O exemplo a seguir testa se todos elementos no array são maiores que 10.
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
@@ -68,8 +68,8 @@ function isBigEnough(element, index, array) {
 [Arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) fornecem sintaxe mais curta para o mesmo teste.
 
 ```js
-[12, 5, 8, 130, 44].every(elem => elem >= 10); // false
-[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
+[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
+[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
 ```
 
 ## Polyfill
@@ -78,12 +78,12 @@ function isBigEnough(element, index, array) {
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the this
@@ -96,7 +96,7 @@ if (!Array.prototype.every) {
     var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function') {
+    if (typeof callbackfn !== "function") {
       throw new TypeError();
     }
 
@@ -110,7 +110,6 @@ if (!Array.prototype.every) {
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       var kValue;
 
       // a. Let Pk be ToString(k).
@@ -120,7 +119,6 @@ if (!Array.prototype.every) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal method
         //    of O with argument Pk.
         kValue = O[k];
@@ -144,10 +142,10 @@ if (!Array.prototype.every) {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                   | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                              | Status             | Comentário                                         |
+| -------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}           | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

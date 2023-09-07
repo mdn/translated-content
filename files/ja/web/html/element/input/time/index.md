@@ -93,7 +93,7 @@ startTime.addEventListener(
   () => {
     valueSpan.innerText = startTime.value;
   },
-  false
+  false,
 );
 ```
 
@@ -121,7 +121,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### readonly
 
-論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value`  プロパティを設定することで変更することができます。
+論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
 > **メモ:** 読み取り専用のフィールドは値を持つことができないので、 `required` は `readonly` 属性が指定された入力には何の効果もありません。
 
@@ -384,19 +384,17 @@ HTML は次のようになります。
       required />
     <span class="validity"></span>
   </div>
-  <p class="fallbackLabel">
-    予約時刻を選んでください (営業時間 12:00～18:00):
-  </p>
+  <p class="fallbackLabel">予約時刻を選んでください (営業時間 12:00～18:00):</p>
   <div class="fallbackTimePicker">
     <div>
       <span>
         <select id="hour" name="hour">
-        <label for="hour">時</label>
+          <label for="hour">時</label>
         </select>
       </span>
       <span>
         <select id="minute" name="minute">
-        <label for="minute">分</label>
+          <label for="minute">分</label>
         </select>
       </span>
     </div>
@@ -452,7 +450,7 @@ fallbackLabel.style.display = "none";
 const test = document.createElement("input");
 
 try {
-  test.type = 'time';
+  test.type = "time";
 } catch (e) {
   console.log(e.description);
 }

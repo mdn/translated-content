@@ -24,16 +24,16 @@ Operador: var1 % var2
 ### Resto con dividendo positivo
 
 ```js
- 12 % 5  //  2
- 1 % -2 //  1
- 1 % 2  //  1
- 2 % 3  //  2
-5.5 % 2 // 1.5
+12 % 5; //  2
+1 % -2; //  1
+1 % 2; //  1
+2 % 3; //  2
+5.5 % 2; // 1.5
 ```
 
 ### Resto con dividendo negativo
 
-```js
+```js-nolint
 -12 % 5 // -2
 -1 % 2  // -1
 -4 % 2  // -0
@@ -42,15 +42,15 @@ Operador: var1 % var2
 ### Resto con NaN
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### Resto con Infinity
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## Especificaciones

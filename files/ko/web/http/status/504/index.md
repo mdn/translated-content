@@ -15,7 +15,7 @@ slug: Web/HTTP/Status/504
 504 Gateway Timeout
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

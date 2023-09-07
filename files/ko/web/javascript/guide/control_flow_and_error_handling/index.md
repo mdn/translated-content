@@ -148,8 +148,9 @@ function checkData() {
     return true;
   } else {
     alert(
-      '정확히 세 글자를 입력하세요. ' +
-      `${document.form1.threeChar.value}은(는) 유효하지 않습니다.`);
+      "정확히 세 글자를 입력하세요. " +
+        `${document.form1.threeChar.value}은(는) 유효하지 않습니다.`,
+    );
     return false;
   }
 }
@@ -193,28 +194,28 @@ JavaScript는 위의 `switch` 문을 다음의 과정으로 평가합니다.
 
 ```js
 switch (fruittype) {
-  case '오렌지':
-    console.log('오렌지는 파운드 당 $0.59입니다.');
+  case "오렌지":
+    console.log("오렌지는 파운드 당 $0.59입니다.");
     break;
-  case '사과':
-    console.log('사과는 파운드 당 $0.32입니다.');
+  case "사과":
+    console.log("사과는 파운드 당 $0.32입니다.");
     break;
-  case '바나나':
-    console.log('바나나는 파운드 당 $0.48입니다.');
+  case "바나나":
+    console.log("바나나는 파운드 당 $0.48입니다.");
     break;
-  case '체리':
-    console.log('체리는 파운드 당 $3.00입니다.');
+  case "체리":
+    console.log("체리는 파운드 당 $3.00입니다.");
     break;
-  case '망고':
-    console.log('망고는 파운드 당 $0.56입니다.');
+  case "망고":
+    console.log("망고는 파운드 당 $0.56입니다.");
     break;
-  case '파파야':
-    console.log('망고와 파파야는 파운드 당 $2.79입니다.');
+  case "파파야":
+    console.log("망고와 파파야는 파운드 당 $2.79입니다.");
     break;
   default:
     console.log(`죄송합니다. ${fruitType}은 품절입니다.`);
 }
-console.log('더 필요한게 있으신가요?');
+console.log("더 필요한게 있으신가요?");
 ```
 
 ## 예외 처리 명령문
@@ -242,12 +243,12 @@ throw expression;
 특정 타입의 표현식이 아니라 무엇이든 던질 수 있습니다. 아래 코드에서 다양한 타입을 예외로 던지는 모습을 볼 수 있습니다.
 
 ```js
-throw 'Error2'; // String
+throw "Error2"; // String
 throw 42; // Number
 throw true; // Boolean
 throw {
   toString: function () {
-    return '저는 객체예요';
+    return "저는 객체예요";
   },
 };
 ```
@@ -265,11 +266,24 @@ throw {
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // 배열 인덱스에 맞춰 월 조절 (1 = Jan, 12 = Dec)
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // 여기서 throw 키워드 사용
+    throw "InvalidMonthNo"; // 여기서 throw 키워드 사용
   }
 }
 
@@ -277,7 +291,7 @@ try {
   // 시도할 명령문
   monthName = getMonthName(myMonth); // 예외가 발생할 수 있는 함수
 } catch (e) {
-  monthName = 'unknown';
+  monthName = "unknown";
   logMyErrors(e); // 오류 처리기에 예외 객체 전달
 }
 ```
@@ -300,7 +314,7 @@ JavaScript는 `catch` 블록에 진입해야 예외의 식별자를 생성하고
 
 ```js
 try {
-  throw 'myException'; // 예외 생성
+  throw "myException"; // 예외 생성
 } catch (e) {
   // 모든 예외를 처리하기 위한 명령문
   logMyErrors(e); // 오류 처리기에 예외 객체 전달
@@ -336,7 +350,7 @@ try {
 function f() {
   try {
     console.log(0);
-    throw 'bogus';
+    throw "bogus";
   } catch (e) {
     console.log(1);
     return true; // finally 블록의 실행이 끝날 때까지 중단됨
@@ -357,7 +371,7 @@ console.log(f()); // 0, 1, 3, false
 ```js
 function f() {
   try {
-    throw '예외';
+    throw "예외";
   } catch (e) {
     console.log('내부 "예외" 포획');
     throw e; // finally 블록의 실행이 끝날 때까지 중단

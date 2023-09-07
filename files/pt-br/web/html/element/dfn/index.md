@@ -33,7 +33,10 @@ Os exemplos a seguir são válidos em HTML5.
 
 ```html
 <!-- Define "A Internet" -->
-<p><dfn id="def-internet">A Internet</dfn> é um sistema global de redes interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir bilhões de usuários no mundo todo.
+<p>
+  <dfn id="def-internet">A Internet</dfn> é um sistema global de redes
+  interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir
+  bilhões de usuários no mundo todo.
 </p>
 ```
 
@@ -47,7 +50,10 @@ Posteriormente no mesmo documento:
       <abbr title="World-Wide Web">WWW</abbr>
     </dfn>
   </dt>
-  <dd>A World-Wide Web (WWW) é um sistema de documentos de hipertexto interligados acessados pela <a href="#def-internet">Internet</a>.</dd>
+  <dd>
+    A World-Wide Web (WWW) é um sistema de documentos de hipertexto interligados
+    acessados pela <a href="#def-internet">Internet</a>.
+  </dd>
 </dl>
 ```
 
@@ -60,11 +66,11 @@ _A Internet_ é um sistema global de redes interconectadas que usam o Internet P
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                                                           | Status                   | Comentário |
+| --------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                     | {{Spec2('HTML4.01')}}    |            |
 
 ## Navegadores compatíveis
 

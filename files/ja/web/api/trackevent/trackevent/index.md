@@ -22,6 +22,7 @@ new TrackEvent(type, options)
   - : 文字列で、このイベントの名前です。
     大文字小文字の区別があり、ブラウザーは `addtrack` または`removetrack` を設定します。
 - `options` {{optional_inline}}
+
   - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを設定することができます。
 
     - `track` {{optional_inline}}

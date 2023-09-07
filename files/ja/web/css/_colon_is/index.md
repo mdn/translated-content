@@ -1,54 +1,19 @@
 ---
-title: ":is() (:matches(), :any())"
+title: ":is()"
 slug: Web/CSS/:is
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{CSSRef}}
 
-> **メモ:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))
-
 **`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
 
-```css
-/* header, main, footer 要素の中の段落で
-   マウスポインターが通過中のものをすべて選択 */
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
+> **メモ:** 元々は `:matches()` （と `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
 
-/* 上記のものは以下のものと同じ */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 
 擬似要素は `:is()` のセレクターリストでは無効です。
-
-なお、現在のところ、ブラウザーはこの機能を `:matches()` や、古いバージョンの Chrome, Firefox, Safari では、さらに古い接頭辞付きの擬似クラス — `:any()` で対応しています。 `:any()` は `:matches()`/`:is()` とまったく同じものとして動作しますが、ベンダー接頭辞が必要であり、[複合セレクター](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)に対応していません。
-
-後方互換性のために古い擬似クラスを使用することができます。
-
-```css
-/* -*-any() および :matches() と後方互換性のあるバージョン
-   (無効なセレクターがあるとルール全体が無効になるため、
-   セレクターを単一のルールにグループ化することはできません。) */
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
 
 ### :is() と :where() の違い
 
@@ -58,19 +23,20 @@ footer p:hover {
 
 仕様では `:is()` と `:where()` が[省略可能なセレクターリスト](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)を受け入れることを定義しています。
 
-<p>CSS でセレクターリストを使用している場合、セレクターのどれかが無効な場合、リスト全体が無効とみなされます。 `:is()` や `:where()` を使用している場合、1 つでも解釈に失敗するとセレクターのリスト全体が無効とみなされるのではなく、不正なセレクターや対応していないセレクターは無視され、他のセレクターが使用されます。
+CSS でセレクターリストを使用している場合、セレクターのどれかが無効な場合、リスト全体が無効とみなされます。 `:is()` や `:where()` を使用している場合、1 つでも解釈に失敗するとセレクターのリスト全体が無効とみなされるのではなく、不正なセレクターや対応していないセレクターは無視され、他のセレクターが使用されます。
 
 ```css
 :is(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
-`:unsupported` に対応していないブラウザーでも、正しく解釈して `:valid` に一致します。
+`:unsupported` に対応していないブラウザーでも、正しく解釈して `:valid` に一致します。一方、
 
 ```css
-:valid, :unsupported {
-  ...
+:valid,
+:unsupported {
+  /* … */
 }
 ```
 
@@ -78,97 +44,60 @@ footer p:hover {
 
 ## 例
 
-### クロスブラウザーの例
-
-```html
-<header>
-  <p>This is my header paragraph</p>
-</header>
-
-<main>
-  <ul>
-    <li><p>This is my first</p><p>list item</p></li>
-    <li><p>This is my second</p><p>list item</p></li>
-  </ul>
-</main>
-
-<footer>
-  <p>This is my footer paragraph</p>
-</footer>
-```
-
-```css
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
-```js
-let matchedItems;
-
-try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
-  try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
-    try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
-      try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
-      }
-    }
-  }
-}
-
-matchedItems.forEach(applyHandler);
-
-function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
-  });
-}
-```
-
-{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}
-
 ### リストセレクターの簡略化
 
 `:is()` 擬似クラスは CSS セレクターをとても簡潔にすることができます。例えば以下の CSS の場合、
 
 ```css
 /* 3 層（以上）の順序なしリストに四角形を使用 */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
@@ -177,66 +106,82 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ```css
 /* 3層（以上）の順序なしリストに四角形を使用 */
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
+:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
 }
 ```
 
 ### section セレクターの簡略化
 
-`:is()` 擬似クラスは、 HTML5 の[セクションと見出し](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)を扱うときに特に便利です。 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
+`:is()` 擬似クラスは、 HTML の[セクションと見出し](/ja/docs/Web/HTML/Element/Heading_Elements)を扱うときに特に便利です。 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
 
-例えば、 `:is()` を使わずに、異なる深さの {{HTMLElement("h1")}} 要素にスタイルを適用すると、とても複雑になります。
+例えば、 `:is()` を使わずに、異なる深さの {{HTMLElement("Heading_Elements", "h1")}} 要素にスタイルを適用すると、とても複雑になります。
 
 ```css
-/* Level 0 */
+/* レベル 0 */
 h1 {
   font-size: 30px;
 }
-/* Level 1 */
-section h1, article h1, aside h1, nav h1 {
+
+/* レベル 1 */
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
-/* Level 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1 {
+
+/* レベル 2 */
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
-/* Level 3 */
+
+/* レベル 3 */
 /* ... 考えたくありません! */
 ```
 
 `:is()` を使用すると、ずっと簡単になります。
 
 ```css
-/* Level 0 */
+/* レベル 0 */
 h1 {
   font-size: 30px;
 }
-/* Level 1 */
+/* レベル 1 */
 :is(section, article, aside, nav) h1 {
   font-size: 25px;
 }
-/* Level 2 */
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+/* レベル 2 */
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
   font-size: 20px;
 }
-/* Level 3 */
+/* レベル 3 */
 :is(section, article, aside, nav)
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+  :is(section, article, aside, nav)
+  :is(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```
 
 ### :is() は擬似要素を選択しない
 
-The `:is()` pseudo-class does not match pseudo-elements. So rather than this:
+`:is()` 擬似クラスは擬似要素にマッチしません。したがって、次のようにしたり、
 
 ```css example-bad
 some-element:is(::before, ::after) {
@@ -244,7 +189,15 @@ some-element:is(::before, ::after) {
 }
 ```
 
-instead do:
+または、次のようにする代わりに、
+
+```css example-bad
+:is(some-element::before, some-element::after) {
+  display: block;
+}
+```
+
+以下のようにしましょう：
 
 ```css example-good
 some-element::before,
@@ -255,8 +208,10 @@ some-element::after {
 
 ## 構文
 
-```
-:is( <forgiving-selector-list> )
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
 ```
 
 ## 仕様書

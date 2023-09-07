@@ -15,7 +15,7 @@ O recurso `display-mode` é especificado como um valor de uma palavra chave esco
 
 | Modo de exibição | Descrição                                                                                                                                                                                                                                                                                                                                                         | Modo de exibição secundário |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| `fullscreen`     | Toda a área disponível da tela será usada e nada do agente-usuário (navegador) {{glossary("chrome")}} é mostrado.                                                                                                                                                                                                                                           | `standalone`                |
+| `fullscreen`     | Toda a área disponível da tela será usada e nada do agente-usuário (navegador) {{glossary("chrome")}} é mostrado.                                                                                                                                                                                                                                                 | `standalone`                |
 | `standalone`     | A aplicação irá parecer uma aplicação independente. Isso pode incluir a aplicação ter uma janela diferente, seu próprio ícone no menu de aplicações, etc. Neste modo, o navegador não irá mostrar os controles de navegação (como barra de endereço, botão voltar, botão página inicial, etc), mas pode incluir outros elementos gráficos como a barra de status. | `minimal-ui`                |
 | `minimal-ui`     | A aplicação irá parecer uma aplicação independente, mas terá um conjunto mínimo de elementos gráficos (UI) para controlar a navegação. Esses elementos podem variar de acordo com o navegador.                                                                                                                                                                    | `browser`                   |
 | `browser`        | A aplicação abre numa aba ou nova janela convencional do navegador, dependendo do navegador e da plataforma.                                                                                                                                                                                                                                                      | (nenhum)                    |
@@ -33,8 +33,8 @@ O recurso `display-mode` é especificado como um valor de uma palavra chave esco
 
 ## Especificações
 
-| Specification                                                                                        | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| Specification                                                               | Status                | Comment            |
+| --------------------------------------------------------------------------- | --------------------- | ------------------ |
 | {{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}} | {{Spec2('Manifest')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

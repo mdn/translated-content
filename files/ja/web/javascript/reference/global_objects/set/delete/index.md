@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ## 構文
 
 ```js
-delete(value)
+delete value;
 ```
 
 ### 引数
@@ -30,12 +30,12 @@ delete(value)
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.delete('bar'); // 削除するべき要素が見つからなければ false を返す
-mySet.delete('foo'); // 正常に要素を削除出来れば true を返す
+mySet.delete("bar"); // 削除するべき要素が見つからなければ false を返す
+mySet.delete("foo"); // 正常に要素を削除出来れば true を返す
 
-mySet.has('foo');    // 存在しない要素を確認すると false を返す
+mySet.has("foo"); // 存在しない要素を確認すると false を返す
 ```
 
 ### Set からオブジェクトを削除する
@@ -45,16 +45,16 @@ mySet.has('foo');    // 存在しない要素を確認すると false を返す
 ```js
 const setObj = new Set(); // 新しいセットを作成
 
-setObj.add({x: 10, y: 20}); // セットにオブジェクトを追加
+setObj.add({ x: 10, y: 20 }); // セットにオブジェクトを追加
 
-setObj.add({x: 20, y: 30}); // セットにオブジェクトを追加
+setObj.add({ x: 20, y: 30 }); // セットにオブジェクトを追加
 
 // `x > 10` のポイントを削除
-setObj.forEach(function(point){
-  if (point.x > 10){
-    setObj.delete(point)
+setObj.forEach(function (point) {
+  if (point.x > 10) {
+    setObj.delete(point);
   }
-})
+});
 ```
 
 ## 仕様書
