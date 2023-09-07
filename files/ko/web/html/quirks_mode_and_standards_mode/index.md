@@ -18,7 +18,7 @@ limited-quirks 및 no-quirks 모드는 이전에 각각 "almost-standards" 모�
 [HTML](/ko/docs/HTML)문서의 경우 브라우저는 문서 시작 부분에 DOCTYPE을 사용하여 문서를 quirks 모드에서 처리할지 표준 모드에서 처리할지 결정합니다. 페이지가 전체 표준 모드를 사용하도록 하려면 페이지에 아래 예시와 같은 DOCTYPE이 있는지 확인하세요.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
