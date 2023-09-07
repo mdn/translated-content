@@ -14,9 +14,9 @@ Web Storage API は、ブラウザーがキーと値のペアを安全に保存�
 Storage オブジェクトはシンプルなキーと値の組み合わせを保存しており、オブジェクトに似ていますが、これらは何度ページを読み込んでも存在し続けます。キーは常に文字列です (なお、オブジェクトと同様、整数のキーは自動的に文字列に変換されます)。これらの値にアクセスするにはオブジェクトと同様に、または {{domxref("Storage.getItem()")}} と {{domxref("Storage.setItem()")}} メソッドを使用して行います。以下の 3 行はすべて、(同じ) colorSetting という項目を設定します。
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > **メモ:** Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという[落とし穴](http://www.2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
@@ -44,38 +44,39 @@ Web Storage には、以下の 2 種類の仕組みがあります。
 
 ```js
 function storageAvailable(type) {
-    var storage;
-    try {
-        storage = window[type];
-        var x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
-    }
+  var storage;
+  try {
+    storage = window[type];
+    var x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 また、この関数の使い方は以下のとおりです。
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // やったあ! ローカルストレージをちゃんと利用できます
-}
-else {
+} else {
   // 残念、ローカルストレージは利用できません
 }
 ```
@@ -101,7 +102,7 @@ else {
 始めに [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js) で、ストレージオブジェクトがすでに存在しているか (すなわち、過去にページへアクセスしていたか) を確認します。
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -118,17 +119,17 @@ if(!localStorage.getItem('bgcolor')) {
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -140,9 +141,9 @@ function setStyles() {
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -165,12 +166,14 @@ imageForm.onchange = populateStorage;
 イベントページ ([events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js) をご覧ください) の JavaScript はこれだけです。
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea,
+  );
 });
 ```
 

@@ -27,7 +27,7 @@ Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 
 ([`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) のような) 条件式内では、単純な代入を行わないことをお勧めします。コードを一目見たときに、代入は等価と混同しやすいからです。たとえば、以下のコードは使用しないでください。
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // 正しいことを実行する
 }
@@ -52,4 +52,4 @@ if (x == y) {
 ## 関連項目
 
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
-- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)
+- [等値演算子](/ja/docs/Web/JavaScript/Reference/Operators#等値演算子)

@@ -14,8 +14,7 @@ CSS 배경 이미지의 기본 설정값에서는 원본 이미지가 크기 변
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS

@@ -31,10 +31,9 @@ var supportedFormats = BarcodeDetector.getSupportedFormats();
 
 ```js
 // 対応している型をチェック
-BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ## 仕様書

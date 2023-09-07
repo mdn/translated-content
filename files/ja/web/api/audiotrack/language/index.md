@@ -24,16 +24,14 @@ slug: Web/API/AudioTrack/language
 ```js
 function getAvailableLanguages(el) {
   const trackList = [];
-  const wantedKinds = [
-    "main", "translation"
-  ];
+  const wantedKinds = ["main", "translation"];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach(function (track) {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        language: track.language
+        language: track.language,
       });
     }
   });

@@ -21,8 +21,8 @@ Si `OP1` y `OP2` tienen diferente niveles de precedencia (véase la tabla debajo
 con la precedencia más alta va primero y la asociatividad no importa. Observe como la multiplicación
 tiene mayor precedencia que la suma y se ejecuta primero, a pesar de que la suma se escribe primero en el código.
 
-```js
-console.log(3 + 10 * 2);   // muestra 23
+```js-nolint
+console.log(3 + 10 * 2); // muestra 23
 console.log(3 + (10 * 2)); // muestra 23 porque los paréntesis son superfluos
 console.log((3 + 10) * 2); // muestra 26 porque los paréntesis cambian el orden
 ```
@@ -198,20 +198,20 @@ paréntesis. Se podría decir que el operador de conjunción lógica ("&&") est�
 son la disyunción lógica ("||"), la coalescencia nula ("??"), el encadenamiento opcional ("?."),
 y el operador condicional ternario. A continuación, algunos ejemplos.
 
-```js
-a || (b * c);  // evalúa primero `a`, luego produce `a` si `a` es "truthy"
-a && (b < c);  // evalúa primero `a`, luego produce `a` si `a` es "falsy"
+```js-nolint
+a || (b * c); // evalúa primero `a`, luego produce `a` si `a` es "truthy"
+a && (b < c); // evalúa primero `a`, luego produce `a` si `a` es "falsy"
 a ?? (b || c); // evalúa primero `a`, luego produce `a` si `a` no es `null` ni `undefined`
-a?.b.c;        // evalúa primero `a`, luego produce `undefined` si `a` es `null` ó `undefined`
+a?.b.c; // evalúa primero `a`, luego produce `undefined` si `a` es `null` ó `undefined`
 ```
 
 ## Ejemplos
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // Retorna `true`
 
-3 > 2 > 1
+3 > 2 > 1;
 // Retorna `false` porque 3 > 2 es `true`, luego `true` es convertido a 1
 // por coerción de tipos, luego `true` > 1 se convierte en 1 > 1, que es
 // `false`. Agregar paréntesis hace que las cosas se vean claras: (3 > 2) > 1.

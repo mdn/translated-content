@@ -2,6 +2,7 @@
 title: TypedArray.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 ---
+
 {{JSRef}}
 
 **`reverse()`** 메서드는 제자리에서 형식화 배열을 뒤집습니다. 형식화 배열 첫 요소는 마지막이 되고 마지막은 첫 요소가 됩니다. 이 메서드는 {{jsxref("Array.prototype.reverse()")}}와 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 중 하나입니다.

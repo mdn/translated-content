@@ -34,7 +34,7 @@ performance.clearMarks(name);
 // PerformanceMark のエントリーがいくつあるかを表示する小さなヘルパーを作成します。
 function logMarkCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("mark").length
+    "Found this many entries: " + performance.getEntriesByType("mark").length,
   );
 }
 
@@ -46,15 +46,15 @@ performance.mark("monkey");
 performance.mark("dog");
 performance.mark("dog");
 
-logMarkCount() // "Found this many entries: 6"
+logMarkCount(); // "Found this many entries: 6"
 
 // Delete just the "squirrel" PerformanceMark entries.
-performance.clearMarks('squirrel');
-logMarkCount() // "Found this many entries: 4"
+performance.clearMarks("squirrel");
+logMarkCount(); // "Found this many entries: 4"
 
 // Delete all of the PerformanceMark entries.
 performance.clearMarks();
-logMarkCount() // "Found this many entries: 0"
+logMarkCount(); // "Found this many entries: 0"
 ```
 
 ## 仕様書

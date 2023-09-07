@@ -54,7 +54,7 @@ CONNECT www.example.com:443 HTTP/1.1
 
 Некоторые прокси сервера могут запросить авторизацию для создания туннеля. Смотрите также {{HTTPHeader("Proxy-Authorization")}}.
 
-```html
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=

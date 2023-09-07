@@ -57,8 +57,12 @@ function fetchStream() {
     // フェッチしたストリームの値は Uint8Array です
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
 
     result += chunk;
@@ -78,7 +82,7 @@ async function* makeTextFileLineIterator(fileURL) {
   const utf8Decoder = new TextDecoder("utf-8");
   let response = await fetch(fileURL);
   let reader = response.body.getReader();
-  let {value: chunk, done: readerDone} = await reader.read();
+  let { value: chunk, done: readerDone } = await reader.read();
   chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
   let re = /\n|\r|\r\n/gm;
@@ -92,7 +96,7 @@ async function* makeTextFileLineIterator(fileURL) {
         break;
       }
       let remainder = chunk.substr(startIndex);
-      ({value: chunk, done: readerDone} = await reader.read());
+      ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
       startIndex = re.lastIndex = 0;
       continue;

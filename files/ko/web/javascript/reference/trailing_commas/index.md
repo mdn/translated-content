@@ -18,11 +18,7 @@ JavaScript는 초기부터 배열 리터럴에 trailing comma를 허용했으며
 JavaScript는 배열에 나타나는 trailing comma를 무시합니다.
 
 ```js
-var arr = [
-  1,
-  2,
-  3,
-];
+var arr = [1, 2, 3];
 
 arr; // [1, 2, 3]
 arr.length; // 3
@@ -31,7 +27,7 @@ arr.length; // 3
 trailing comma가 여러 개 있을 경우 빈 슬롯("구멍")이 생깁니다. 구멍이 있는 배열을 성기다(sparse)고 합니다(조밀한(dense) 배열에는 구멍이 없습니다). {{jsxref("Array.prototype.forEach()")}}나 {{jsxref("Array.prototype.map()")}}을 이용해 배열을 순회할 때는 빈 슬롯을 무시합니다.
 
 ```js
-var arr = [1, 2, 3,,,];
+var arr = [1, 2, 3, , ,];
 arr.length; // 5
 ```
 
@@ -55,7 +51,7 @@ ECMAScript 2017에서는 함수의 매개변수 목록에 trailing comma를 허�
 
 아래의 두 함수 정의는 모두 유효하며, 서로 같습니다. Trailing comma는 함수 정의의 `length` 속성이나 `arguments` 객체에 영향을 주지 않습니다.
 
-```js
+```js-nolint
 function f(p) {}
 function f(p,) {}
 
@@ -81,7 +77,7 @@ var obj = {
 
 아래의 두 함수 호출은 모두 유효하며, 서로 같습니다.
 
-```js
+```js-nolint
 f(p);
 f(p,);
 
@@ -106,7 +102,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)의 좌변에도 trailing comma를 사용할 수 있습니다.
 
-```js
+```js-nolint
 // Trailing comma가 있는 배열 구조 분해
 [a, b,] = [1, 2];
 
@@ -120,7 +116,7 @@ var {p, q,} = o;
 
 Rest 원소가 있을 경우 역시 {{jsxref("SyntaxError")}}가 발생합니다.
 
-```js example-bad
+```js-nolint example-bad
 var [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
@@ -132,7 +128,7 @@ var [a, ...b,] = [1, 2, 3];
 아래의 두 줄 모두 `SyntaxError`를 발생합니다.
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -141,7 +137,7 @@ JSON.parse('{"foo" : 1, }');
 JSON을 올바르게 파싱하려면 trailing comma를 제거해야 합니다.
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse("[1, 2, 3, 4 ]");
 JSON.parse('{"foo" : 1 }');
 ```
 

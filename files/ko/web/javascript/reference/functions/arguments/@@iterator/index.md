@@ -25,7 +25,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## 명세

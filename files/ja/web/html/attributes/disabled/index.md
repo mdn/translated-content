@@ -46,51 +46,56 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 ```html
 <fieldset>
   <legend>チェックボックス</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> 通常
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> disabled
-  </label></p>
+  <p>
+    <label> <input type="checkbox" name="chbox" value="regular" /> 通常 </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="disabled" disabled /> disabled
+    </label>
+  </p>
 </fieldset>
 
 <fieldset>
   <legend>ラジオボタン</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> 通常
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> disabled
-  </label></p>
+  <p>
+    <label> <input type="radio" name="radio" value="regular" /> 通常 </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="disabled" disabled /> disabled
+    </label>
+  </p>
 </fieldset>
 
 <p>
- <label>選択してください
-  <select>
-    <optgroup label="Group 1">
-      <option>Option 1.1</option>
-    </optgroup>
-    <optgroup label="Group 2">
-      <option>Option 2.1</option>
-      <option disabled>Option 2.2</option>
-      <option>Option 2.3</option>
-    </optgroup>
-    <optgroup label="Group 3" disabled>
-      <option>Disabled 3.1</option>
-      <option>Disabled 3.2</option>
-      <option>Disabled 3.3</option>
-    </optgroup>
-  </select>
- </label>
+  <label
+    >選択してください
+    <select>
+      <optgroup label="Group 1">
+        <option>Option 1.1</option>
+      </optgroup>
+      <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option disabled>Option 2.2</option>
+        <option>Option 2.3</option>
+      </optgroup>
+      <optgroup label="Group 3" disabled>
+        <option>Disabled 3.1</option>
+        <option>Disabled 3.2</option>
+        <option>Disabled 3.3</option>
+      </optgroup>
+    </select>
+  </label>
 </p>
 
 <fieldset disabled>
   <legend>無効なフィールドセット</legend>
   <p>
-   <label>名前: <input type="name" name="radio" value="通常"> 通常 </label>
+    <label>名前: <input type="name" name="radio" value="通常" /> 通常 </label>
   </p>
   <p>
-   <label>数値: <input type="number"></label>
+    <label>数値: <input type="number" /></label>
   </p>
 </fieldset>
 ```

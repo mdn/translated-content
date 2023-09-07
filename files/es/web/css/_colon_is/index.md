@@ -175,19 +175,24 @@ h1 {
 Por ejemplo
 
 ```css
-.a> : -moz-any(.b, .c) {}
+.a> : -moz-any(.b, .c) {
+}
 ```
 
 es más lento que:
 
 ```css
-.a > .b, .a > .c {}
+.a > .b,
+.a > .c {
+}
 ```
 
 y lo siguiente es rápido:
 
 ```css
-:-moz-any(.a, .d) > .b, :-moz-any(.a, .d) > .c {}
+:-moz-any(.a, .d) > .b,
+:-moz-any(.a, .d) > .c {
+}
 ```
 
 ## Especificaciones

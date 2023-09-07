@@ -2,6 +2,7 @@
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
+
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
 ## Сводка
@@ -32,9 +33,9 @@ str.anchor(name)
 ### Пример: использование метода `anchor()`
 
 ```js
-var myString = 'Оглавление';
+var myString = "Оглавление";
 
-document.body.innerHTML = myString.anchor('contents_anchor');
+document.body.innerHTML = myString.anchor("contents_anchor");
 ```
 
 приведёт к выводу следующего HTML:

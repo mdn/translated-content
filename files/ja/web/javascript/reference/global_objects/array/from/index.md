@@ -15,18 +15,38 @@ l10n:
 
 ```js
 // アロー関数
-Array.from(arrayLike, (element) => { /* … */ } )
-Array.from(arrayLike, (element, index) => { /* … */ } )
+Array.from(arrayLike, (element) => {
+  /* … */
+});
+Array.from(arrayLike, (element, index) => {
+  /* … */
+});
 
 // マッピング関数
-Array.from(arrayLike, mapFn)
-Array.from(arrayLike, mapFn, thisArg)
+Array.from(arrayLike, mapFn);
+Array.from(arrayLike, mapFn, thisArg);
 
 // インラインマッピング関数
-Array.from(arrayLike, function mapFn(element) { /* … */ })
-Array.from(arrayLike, function mapFn(element, index) { /* … */ })
-Array.from(arrayLike, function mapFn(element) { /* … */ }, thisArg)
-Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
+Array.from(arrayLike, function mapFn(element) {
+  /* … */
+});
+Array.from(arrayLike, function mapFn(element, index) {
+  /* … */
+});
+Array.from(
+  arrayLike,
+  function mapFn(element) {
+    /* … */
+  },
+  thisArg,
+);
+Array.from(
+  arrayLike,
+  function mapFn(element, index) {
+    /* … */
+  },
+  thisArg,
+);
 ```
 
 ### 引数
@@ -64,14 +84,14 @@ ES2015 では、 [class](/ja/docs/Web/JavaScript/Reference/Classes) 構文によ
 ### 文字列からの配列の生成
 
 ```js
-Array.from('foo');
+Array.from("foo");
 // [ "f", "o", "o" ]
 ```
 
 ### Set からの配列の生成
 
 ```js
-const set = new Set(['foo', 'bar', 'baz', 'foo']);
+const set = new Set(["foo", "bar", "baz", "foo"]);
 Array.from(set);
 // [ "foo", "bar", "baz" ]
 ```
@@ -79,11 +99,18 @@ Array.from(set);
 ### Map からの配列の生成
 
 ```js
-const map = new Map([[1, 2], [2, 4], [4, 8]]);
+const map = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(map);
 // [[1, 2], [2, 4], [4, 8]]
 
-const mapper = new Map([['1', 'a'], ['2', 'b']]);
+const mapper = new Map([
+  ["1", "a"],
+  ["2", "b"],
+]);
 Array.from(mapper.values());
 // ['a', 'b'];
 
@@ -95,9 +122,9 @@ Array.from(mapper.keys());
 
 ```js
 // DOM 要素のプロパティに基づく配列を作成します。
-const images = document.getElementsByTagName('img');
+const images = document.getElementsByTagName("img");
 const sources = Array.from(images, (image) => image.src);
-const insecureSources = sources.filter((link) => link.startsWith('http://'));
+const insecureSources = sources.filter((link) => link.startsWith("http://"));
 ```
 
 ### 配列風オブジェクト（引数）からの配列の生成
@@ -123,7 +150,7 @@ Array.from([1, 2, 3], (x) => x + x);
 // 連番の生成
 // 配列はそれぞれの場所が `undefined` で初期化されるため、
 // 以下の `v` の値は `undefined` になる
-Array.from({length: 5}, (v, i) => i);
+Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
 
@@ -131,7 +158,8 @@ Array.from({length: 5}, (v, i) => i);
 
 ```js
 // 連番の生成関数（Clojure や PHP などでよく "range" と呼ばれる）
-const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+const range = (start, stop, step) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
 // 0..4 の範囲の数値を生成
 range(0, 4, 1);
@@ -142,7 +170,9 @@ range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
 // Array.from を使用して順番通りになるようアルファベットを生成
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map((x) => String.fromCharCode(x));
+range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+  String.fromCharCode(x),
+);
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 ```
 

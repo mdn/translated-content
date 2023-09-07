@@ -77,7 +77,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 ## DOM 接口
 
-该元素实现了[`SVGFEGaussianBlurElement`](/zh-CN/DOM/SVGFEGaussianBlurElement)接口。
+该元素实现了 [`SVGFEGaussianBlurElement`](/zh-CN/DOM/SVGFEGaussianBlurElement) 接口。
 
 ## 参见
 

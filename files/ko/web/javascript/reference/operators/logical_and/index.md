@@ -41,9 +41,9 @@ expr1 && expr2
 AND 연산자는 불리언이 아닌 값을 보존하고 다음과 같이 반환합니다.
 
 ```js
-result = '' && 'foo';  // result 에 ""(빈 문자열)이 할당됩니다
-result = 2 && 0;       // result 에 0 이 할당됩니다
-result = 'foo' && 4;   // result 에 4 가 할당됩니다.
+result = "" && "foo"; // result 에 ""(빈 문자열)이 할당됩니다
+result = 2 && 0; // result 에 0 이 할당됩니다
+result = "foo" && 4; // result 에 4 가 할당됩니다.
 ```
 
 `&&` 연산자는 불리언이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로
@@ -70,11 +70,11 @@ result = 'foo' && 4;   // result 에 4 가 할당됩니다.
 
 ```js
 function A() {
-  console.log('called A');
+  console.log("called A");
   return false;
 }
 function B() {
-  console.log('called B');
+  console.log("called B");
   return true;
 }
 
@@ -90,9 +90,9 @@ AND 연산자는 OR 연산자보다 높은 우선 순위를 가지며, 이는 `&
 ([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)참고).
 
 ```js
-true || false && false // returns true
-true && (false || false) // returns false
-(2 === 3) || (4 < 0) && (1 === 1) // returns false
+true || (false && false); // returns true
+true && (false || false); // returns false
+2 === 3 || (4 < 0 && 1 === 1); // returns false
 ```
 
 ## 예제
@@ -102,15 +102,15 @@ true && (false || false) // returns false
 다음 코드는 `&&`(논리적 AND) 연산자의 예를 보여줍니다.
 
 ```js
-a1 = true && true // t && t returns true
-a2 = true && false // t && f returns false
-a3 = false && true // f && t returns false
-a4 = false && (3 === 4) // f && f returns false
-a5 = 'Cat' && 'Dog' // t && t returns "Dog"
-a6 = false && 'Cat' // f && t returns false
-a7 = 'Cat' && false // t && f returns false
-a8 = '' && false // f && f returns ""
-a9 = false && '' // f && f returns false
+a1 = true && true; // t && t returns true
+a2 = true && false; // t && f returns false
+a3 = false && true; // f && t returns false
+a4 = false && 3 === 4; // f && f returns false
+a5 = "Cat" && "Dog"; // t && t returns "Dog"
+a6 = false && "Cat"; // f && t returns false
+a7 = "Cat" && false; // t && f returns false
+a8 = "" && false; // f && f returns ""
+a9 = false && ""; // f && f returns false
 ```
 
 ### 불리언을 위한 변환 규칙
@@ -120,13 +120,13 @@ a9 = false && '' // f && f returns false
 **불리언**을 포함하는 아래 연산은
 
 ```js
-bCondition1 && bCondition2
+bCondition1 && bCondition2;
 ```
 
 언제나 아래와 같습니다.
 
 ```js
-!(!bCondition1 || !bCondition2)
+!(!bCondition1 || !bCondition2);
 ```
 
 #### OR을 AND로 변환하기
@@ -134,13 +134,13 @@ bCondition1 && bCondition2
 **불리언**을 포함하는 다음 연산은
 
 ```js
-bCondition1 || bCondition2
+bCondition1 || bCondition2;
 ```
 
 언제나 아래와 같습니다.
 
 ```js
-!(!bCondition1 && !bCondition2)
+!(!bCondition1 && !bCondition2);
 ```
 
 ### 중첩된 괄호 제거
@@ -150,13 +150,13 @@ bCondition1 || bCondition2
 **불리언**을 포함하는 다음 복합적 연산은
 
 ```js
-bCondition1 || (bCondition2 && bCondition3)
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 언제나 다음과 같습니다.
 
 ```js
-bCondition1 || bCondition2 && bCondition3
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 ## 명세서

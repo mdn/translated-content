@@ -23,13 +23,13 @@ l10n:
 const dts = Math.floor(Date.now());
 
 const options = {
-  body: 'Do you like my body?',
-  timestamp: dts
-}
+  body: "Do you like my body?",
+  timestamp: dts,
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.timestamp) // should log original timestamp
+console.log(n.timestamp); // should log original timestamp
 ```
 
 ## 仕様書

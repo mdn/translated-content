@@ -40,7 +40,7 @@ new Function([arg1 [, arg2 [, ...argN]] ,] functionBody)
 // この例は JavaScript コンソールで直接実行することができます
 
 // 二つの引数を取り、その合計を返す関数を生成します
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // 関数を呼び出します
 adder(2, 6);

@@ -10,8 +10,8 @@ slug: Web/API/History/replaceState
 ## 構文
 
 ```js
-history.replaceState(stateObj, unused)
-history.replaceState(stateObj, unused, url)
+history.replaceState(stateObj, unused);
+history.replaceState(stateObj, unused, url);
 ```
 
 ### 引数
@@ -28,14 +28,14 @@ history.replaceState(stateObj, unused, url)
 `https://www.mozilla.org/foo.html` が以下の JavaScript を実行したとします。
 
 ```js
-const stateObj = { foo: 'bar' };
-history.pushState(stateObj, '', 'bar.html');
+const stateObj = { foo: "bar" };
+history.pushState(stateObj, "", "bar.html");
 ```
 
 上記の 2 行の説明は、[履歴 API での作業](/ja/docs/Web/API/History_API/Working_with_the_History_API)の記事の [`pushState()` の例](/ja/docs/Web/API/History_API/Working_with_the_History_API#pushState_%E3%81%AE%E4%BE%8B)にあります。次に、 `https://www.mozilla.org/bar.html` が以下の JavaScript を実行したとします。
 
 ```js
-history.replaceState(stateObj, '', 'bar2.html');
+history.replaceState(stateObj, "", "bar2.html");
 ```
 
 これにより、URL バーに `https://www.mozilla.org/bar2.html` が表示されるようになりますが、ブラウザーが `bar2.html` を読み込んだり、`bar2.html` が存在するかどうかを確認したりすることはありません。

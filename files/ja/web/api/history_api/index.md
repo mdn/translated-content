@@ -18,7 +18,7 @@ DOM の {{DOMxRef("Window")}} オブジェクトは、ブラウザーのセッ�
 履歴を前に遡るには、次のようにします。
 
 ```js
-window.history.back()
+window.history.back();
 ```
 
 これは、ちょうどユーザーがブラウザーのツールバーの<kbd><strong>戻る</strong></kbd>ボタンをクリックしたときのような動作です。
@@ -26,7 +26,7 @@ window.history.back()
 同様に、次のようにして (ユーザーが<kbd><strong>次へ</strong></kbd>ボタンをクリックしたときのように) 次のページへ進むこともできます。
 
 ```js
-window.history.forward()
+window.history.forward();
 ```
 
 ### 履歴内の特定の位置まで移動
@@ -36,13 +36,13 @@ window.history.forward()
 ひとつ前のページへと戻る例です ({{DOMxRef("History.back","back()")}} と同様の動き)。
 
 ```js
-window.history.go(-1)
+window.history.go(-1);
 ```
 
 ページを進める例で、 {{DOMxRef("History.forward","forward()")}} を呼び出すのと同様です。
 
 ```js
-window.history.go(1)
+window.history.go(1);
 ```
 
 同様に、 `2` を渡すことで 2 ページ分を進めることができます。
@@ -53,14 +53,14 @@ window.history.go(1)
 // 以下の文は、
 // どちらもページを再読み込みする
 // 効果があります。
-window.history.go(0)
-window.history.go()
+window.history.go(0);
+window.history.go();
 ```
 
 `length` プロパティの値を参照することにより、履歴スタック中のページの数を知ることができます。
 
 ```js
-let numberOfEntries = window.history.length
+let numberOfEntries = window.history.length;
 ```
 
 ## インターフェイス
@@ -74,15 +74,17 @@ let numberOfEntries = window.history.length
 
 ```js
 window.onpopstate = (event) => {
-  alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
-}
+  alert(
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+  );
+};
 
-history.pushState({page: 1}, "title 1", "?page=1")
-history.pushState({page: 2}, "title 2", "?page=2")
-history.replaceState({page: 3}, "title 3", "?page=3")
-history.back() // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back() // alerts "location: http://example.com/example.html, state: null"
-history.go(2)  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
+history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
+history.back(); // alerts "location: http://example.com/example.html, state: null"
+history.go(2); // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
 ```
 
 ## 仕様書

@@ -102,8 +102,8 @@ The features include:
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Specification                                                                       | Status                      | Comment                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('Feature Policy','#feature-policy-http-header-field','Feature-Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. Defines the {{httpheader('Feature-Policy')}} header. Directives are defined in the specs for the features they control. See individual directive pages for details. |
 
 ## Browser compatibility

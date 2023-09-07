@@ -40,8 +40,9 @@ function Product(name, price) {
   this.price = price;
 
   if (price < 0) {
-    throw RangeError('Cannot create product ' +
-                      this.name + ' with a negative price');
+    throw RangeError(
+      "Cannot create product " + this.name + " with a negative price",
+    );
   }
 
   return this;
@@ -49,20 +50,20 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 Food.prototype = Object.create(Product.prototype);
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
 Toy.prototype = Object.create(Product.prototype);
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+var cheese = new Food("feta", 5);
+var fun = new Toy("robot", 40);
 ```
 
 ### Exemplo: Usando o `call` para chamar funções anônimas
@@ -71,16 +72,15 @@ Neste exemplo, criamos uma função anônima que usa o `call` para executá-lo e
 
 ```js
 var animais = [
-  { especie: 'Lion', nome: 'King' },
-  { especie: 'Whale', nome: 'Fail' }
+  { especie: "Lion", nome: "King" },
+  { especie: "Whale", nome: "Fail" },
 ];
 
 for (var i = 0; i < animais.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.especie
-                  + ': ' + this.nome);
-    }
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.especie + ": " + this.nome);
+    };
     this.print();
   }).call(animais[i], i);
 }
@@ -105,11 +105,11 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
 
 ## Especificações
 
-| Especificações                                                                                           | Status                   | Comentário                                         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificações                                                                 | Status             | Comentário                                         |
+| ------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                            | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}              | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

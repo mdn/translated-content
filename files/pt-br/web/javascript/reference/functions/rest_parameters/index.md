@@ -57,7 +57,7 @@ function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
-fun1();  // 0
+fun1(); // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
 ```
@@ -83,7 +83,7 @@ function sortRestArgs(...theArgs) {
   return sortedArgs;
 }
 
-console.log(sortRestArgs(5,3,7,1)); // Exibe 1,3,5,7
+console.log(sortRestArgs(5, 3, 7, 1)); // Exibe 1,3,5,7
 
 function sortArguments() {
   var sortedArgs = arguments.sort();
@@ -91,15 +91,15 @@ function sortArguments() {
 }
 
 // throws a TypeError: arguments.sort is not a function
-console.log(sortArguments(5,3,7,1));
+console.log(sortArguments(5, 3, 7, 1));
 ```
 
 a fim de usar o objeto `arguments`, você precisará converte-lo para um array antes.
 
 ## Especificações
 
-| Especificações                                                                                   | Status               | Comentário          |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| Especificações                                                           | Status           | Comentário          |
+| ------------------------------------------------------------------------ | ---------------- | ------------------- |
 | {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES6')}} | Initial definition. |
 
 ## Compatibilidade

@@ -28,17 +28,17 @@ var aValue = storage.getItem(keyName);
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 

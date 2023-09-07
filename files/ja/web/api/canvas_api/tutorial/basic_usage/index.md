@@ -35,7 +35,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -54,8 +54,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 初期状態ではキャンバスは空です。何かを表示するには、まずスクリプトで描画コンテキストを取得する必要があります。 {{HTMLElement("canvas")}} 要素には {{domxref("HTMLCanvasElement.getContext", "getContext()")}} というメソッドがあり、描画コンテキストを取得したり描画機能を呼び出したりするのに使います。 `getContext()` には 1 つの引数があり、コンテキストの種類を指定します。このチュートリアルで扱っているような二次元のグラフィックでは、 `"2d"` を指定すると {{domxref("CanvasRenderingContext2D")}} を取得することができます。
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 スクリプトの最初の行では、 DOM 内から {{HTMLElement("canvas")}} 要素を表すノードを取得するために {{domxref("document.getElementById()")}} メソッドを呼び出しています。要素のノードを取得したら、 `getContext()` メソッドを使用して描画コンテキストにアクセスすることができます。
@@ -65,10 +65,10 @@ var ctx = canvas.getContext('2d');
 {{HTMLElement("canvas")}} 要素に対応していないブラウザーでは、代替コンテンツが表示されます。スクリプトからは、 `getContext()` メソッドの有無を調べることで、ブラウザーが対応しているかどうかを確認することができます。確認するためのコードは以下のようになります。
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
 if (canvas.getContext) {
-  var ctx = canvas.getContext('2d');
+  var ctx = canvas.getContext("2d");
   // 描画するコードをここに
 } else {
   // キャンバスに未対応の場合のコードをここに
@@ -82,21 +82,23 @@ if (canvas.getContext) {
 > **メモ:** スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために、仕方なく埋め込んでいます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Canvas tutorial</title>
     <script>
       function draw() {
-        var canvas = document.getElementById('tutorial');
+        var canvas = document.getElementById("tutorial");
         if (canvas.getContext) {
-          var ctx = canvas.getContext('2d');
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style>
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -116,28 +118,28 @@ if (canvas.getContext) {
 まず始めに、交差する 2 つの矩形を描き、そのうちの 1 つにアルファ透過をさせる簡単な例を見てみましょう。これがどのように機能するかは、後の例でさらに詳しく見ていきましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-  <meta charset="utf-8"/>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById('canvas');
-      if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
+  <head>
+    <meta charset="utf-8" />
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+          ctx.fillStyle = "rgb(200, 0, 0)";
+          ctx.fillRect(10, 10, 50, 50);
 
-        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        ctx.fillRect(30, 30, 50, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 50, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

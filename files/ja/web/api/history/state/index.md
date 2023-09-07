@@ -10,7 +10,7 @@ slug: Web/API/History/state
 ## 構文
 
 ```js
-const currentState = history.state
+const currentState = history.state;
 ```
 
 ### 値
@@ -27,10 +27,10 @@ const currentState = history.state
 console.log(`History.state before pushState: ${history.state}`);
 
 // スタックに何かプッシュします
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // 状態は値になりました。
-console.log('History.state after pushState: ', history.state);
+console.log("History.state after pushState: ", history.state);
 ```
 
 ## 仕様書

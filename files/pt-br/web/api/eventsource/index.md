@@ -48,15 +48,15 @@ _Essa interface herda métodos de seu pai, {{domxref("EventTarget")}}._
 Nesse exemplo básico, um `EventSource` é criado para receber eventos do servidor; a página com o nome `"sse.php"` é responsável por gerar os eventos.
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+var evtSource = new EventSource("sse.php");
+var eventList = document.querySelector("ul");
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Cada evento recebido faz com que o handler do evento `onmessage` no objeto `EventSource` seja executado. Ele, em contrapartida, cria um novo elemento {{HTMLElement("li")}} e escreve os dados da mensagem nele, e em seguida concatena o novo elemento na lista já presente no documento.
@@ -65,13 +65,11 @@ Cada evento recebido faz com que o handler do evento `onmessage` no objeto `Even
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## Veja também
 

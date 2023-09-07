@@ -39,8 +39,8 @@ theBigDay.setUTCDate(20);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                          |
+| -------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}} |
 
 ## Compatibilidade com navegadores

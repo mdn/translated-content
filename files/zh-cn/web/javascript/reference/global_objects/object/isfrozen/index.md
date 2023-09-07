@@ -112,6 +112,8 @@ Object.isSealed(frozen); // true
 
 在 ES5 中，如果传递给此方法的参数不是一个对象（而是一个基本类型值），则会导致 {{jsxref("TypeError")}}。在 ES2015 中，如果传递了一个非对象类型的参数，它将返回 `true` 而不会出现错误，因为基本类型值在定义上是不可变的。
 
+<!-- autocorrect-disable -->
+
 ```js
 Object.isFrozen(1);
 // TypeError: 1 is not an object（ES5 代码）
@@ -119,6 +121,8 @@ Object.isFrozen(1);
 Object.isFrozen(1);
 // true                         （ES2015 代码）
 ```
+
+<!-- autocorrect-enable -->
 
 ## 规范
 

@@ -2,6 +2,7 @@
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, использующий дополнительные {{Glossary("HTTP")}}-заголовки, чтобы дать возможность {{Glossary("user agent","агенту пользователя")}} получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника **(cross-origin HTTP request),** если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом.
@@ -313,11 +314,11 @@ Access-Control-Max-Age: 86400
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
@@ -485,8 +486,8 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Specifications
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
+| Specification                                   | Status             | Comment                                                                          |
+| ----------------------------------------------- | ------------------ | -------------------------------------------------------------------------------- |
 | {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
 
 ## Browser compatibility

@@ -39,13 +39,13 @@ ctx.lineCap = "butt" || "round" || "square";
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineWidth = 15;
-ctx.lineCap = 'round';
+ctx.lineCap = "round";
 ctx.lineTo(100, 100);
 ctx.stroke();
 ```
@@ -65,12 +65,12 @@ ctx.stroke();
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const lineCap = ['butt', 'round', 'square'];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const lineCap = ["butt", "round", "square"];
 
 // Draw guides
-ctx.strokeStyle = '#09f';
+ctx.strokeStyle = "#09f";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);
@@ -79,7 +79,7 @@ ctx.lineTo(140, 140);
 ctx.stroke();
 
 // Draw lines
-ctx.strokeStyle = 'black';
+ctx.strokeStyle = "black";
 for (let i = 0; i < lineCap.length; i++) {
   ctx.lineWidth = 15;
   ctx.lineCap = lineCap[i];

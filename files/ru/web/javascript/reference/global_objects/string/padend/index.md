@@ -27,9 +27,9 @@ str.padEnd(targetLength [, padString])
 ## Примеры
 
 ```js
-'abc'.padEnd(10);         // "abc       "
-'abc'.padEnd(10, "foo");  // "abcfoofoof"
-'abc'.padEnd(6,"123456"); // "abc123"
+"abc".padEnd(10); // "abc       "
+"abc".padEnd(10, "foo"); // "abcfoofoof"
+"abc".padEnd(6, "123456"); // "abc123"
 ```
 
 ## Характеристики

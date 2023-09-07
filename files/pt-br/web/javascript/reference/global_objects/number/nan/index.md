@@ -13,11 +13,11 @@ Você não precisa criar um objeto {{jsxref("Number")}} para acessar esta propri
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Detalhes                                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Definição Inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                            | Status               | Detalhes                                           |
+| -------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                      | {{Spec2('ES1')}}     | Definição Inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}}     | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores
