@@ -13,5 +13,5 @@ slug: Games/Tutorials
   - : 在该手把手教程中，你将实现与之间的教程系列中相同的打砖块游戏，只不过这次你将使用 [Phaser](https://phaser.io/) HTML 游戏框架来实现。这里的想法是教授一些使用框架的基础知识（及优势），以及基本的游戏机制。
 - [使用设备方向的 2D 迷宫游戏](/zh-CN/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
   - : 该教程展示如何使用 HTML，结合碰撞检测及在 {{htmlelement("canvas")}} 中放置精灵的基础知识来创建一个 2D 迷宫游戏。这是一个移动游戏，它使用[设备方向](/zh-CN/docs/Web/API/Device_orientation_events) 和[振动](/zh-CN/docs/Web/API/Vibration_API) **API** 来增强游戏体验，并使用 [Phaser](https://phaser.io/) 框架构建。
-- [使用Phaser 构建 2D 平台游戏](https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/)
+- [使用 Phaser 构建 2D 平台游戏](https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/)
   - : 本教程系列展示了如何使用 [Phaser](https://phaser.io/) 创建一个简单的平台游戏，涵盖了精灵、碰撞、物理、收集物品等基础知识。
