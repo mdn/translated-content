@@ -25,7 +25,7 @@ slug: Web/SVG/Element/feFuncG
 
 ## DOM 接口
 
-该元素实现了[`SVGFEFuncGElement`](/zh-CN/DOM/SVGFEFuncGElement)接口。
+该元素实现了 [`SVGFEFuncGElement`](/zh-CN/DOM/SVGFEFuncGElement) 接口。
 
 ## 参见
 

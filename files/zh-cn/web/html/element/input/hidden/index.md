@@ -74,7 +74,7 @@ slug: Web/HTML/Element/input/hidden
 
 这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。这种攻击称为[跨站点请求伪造（CSRF）](/zh-CN/docs/Learn/Server-side/First_steps/Website_security#跨站请求伪造_csrf)；几乎任何知名的服务器端框架都使用隐藏机密来防止此类攻击。
 
-> **备注：** 如前所述，将密钥放置在隐藏的输入中并不能使其固有安全性。密钥的组成和编码已经可以做到这一点。隐藏输入的值是保持它与数据关联性，并在将表单发送到服务器时自动将其包含在内。你需要使用精心设计的密钥来真正保护您的网站。
+> **备注：** 如前所述，将密钥放置在隐藏的输入中并不能使其固有安全性。密钥的组成和编码已经可以做到这一点。隐藏输入的值是保持它与数据关联性，并在将表单发送到服务器时自动将其包含在内。你需要使用精心设计的密钥来真正保护你的网站。
 
 ## 验证
 
@@ -147,7 +147,7 @@ textarea {
 
 {{ EmbedLiveSample('示例', '100%', 200) }}
 
-> **备注：** 您还可以在 GitHub 上找到示例（请参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)，并可以[实时运行](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)）。
+> **备注：** 你还可以在 GitHub 上找到示例（请参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)，并可以[实时运行](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)）。
 
 提交后，发送到服务器的表单数据将如下所示：
 

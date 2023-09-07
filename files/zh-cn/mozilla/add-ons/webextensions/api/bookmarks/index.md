@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 {{AddonSidebar}}
 
-此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
+此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。你可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
 
 欲使用此 API，一个附件组件必须请求"bookmarks" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)在它的[`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件当中。
 
@@ -41,7 +41,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 - {{WebExtAPIRef("bookmarks.move()")}}
   - : 将指定的书签树节点移到指定位置
 - {{WebExtAPIRef("bookmarks.update()")}}
-  - : 更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
+  - : 更新书签或文件夹的属性。只需要指定你需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
 - {{WebExtAPIRef("bookmarks.remove()")}}
   - : 删除书签或者空文件夹。
 - {{WebExtAPIRef("bookmarks.removeTree()")}}

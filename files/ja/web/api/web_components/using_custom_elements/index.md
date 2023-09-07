@@ -31,7 +31,7 @@ customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 この要素は `word-count` と呼ばれ、クラスオブジェクトは `WordCount` であり、 {{htmlelement("p")}} 要素を拡張したものになります。これは拡張された要素内で `is` 属性を設定することでのみ構築することができます。例えば、 `<p is="word-count">` または
- `document.createElement("p", { is: "word-count" })` のようにします。
+`document.createElement("p", { is: "word-count" })` のようにします。
 
 カスタム要素のクラスのオブジェクトは `class` 構文で実装します。例えば、 `WordCount` は次のように構成します。
 

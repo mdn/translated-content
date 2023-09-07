@@ -444,7 +444,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 浏览器中可用的 JavaScript 模块功能的最新部分是动态模块加载。这允许你仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
 
-这个新功能允许你将 `import()` 作为函数调用，将其作为参数传递给模块的路径。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
+这个新功能允许你将 `import()` 作为函数调用，将模块的路径作为参数传递。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
 
 ```js
 import("/modules/mymodule.js").then((module) => {

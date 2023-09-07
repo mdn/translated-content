@@ -30,7 +30,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **备注：** 这类清单文件有一些曾经常被使用的扩展名：`manifest.webapp` 在 Firefox OS 应用清单中很流行，而许多人使用 `manifest.json` 作为网页清单（因为内容是 JSON 格式的）。但是，`.webmanifest` 扩展名是在[W3C 清单规范](https://w3c.github.io/manifest/)中显式指定的，所以这里我们使用这个扩展名。
+> **备注：** 这类清单文件有一些曾经常被使用的扩展名：`manifest.webapp` 在 Firefox OS 应用清单中很流行，而许多人使用 `manifest.json` 作为网页清单（因为内容是 JSON 格式的）。但是，`.webmanifest` 扩展名是在 [W3C 清单规范](https://w3c.github.io/manifest/)中显式指定的，所以这里我们使用这个扩展名。
 
 文件的内容是这个样子的：
 

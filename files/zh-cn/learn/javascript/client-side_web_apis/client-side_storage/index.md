@@ -53,7 +53,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ![](cookies-notice.png)
 
 由于这些原因，我们不会在本文中教你如何使用 cookie。毕竟它过时、存在各种[安全问题](/zh-CN/docs/Web/HTTP/Cookies#安全)，而且无法存储复杂数据，而且有更好的、更现代的方法可以在用户的计算机上存储种类更广泛的数据。
-cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果您的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，您不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie)一把梭就完事了。
+cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果你的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，你不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie)一把梭就完事了。
 
 > **备注：** 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。
 
@@ -61,10 +61,10 @@ cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以�
 
 现代浏览器有比使用 cookies 更简单、更有效的存储客户端数据的 API。
 
-- [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 提供了一种非常简单的语法，用于存储和检索较小的、由名称和相应值组成的数据项。当您只需要存储一些简单的数据时，比如用户的名字，用户是否登录，屏幕背景使用了什么颜色等等，这是非常有用的。
+- [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 提供了一种非常简单的语法，用于存储和检索较小的、由名称和相应值组成的数据项。当你只需要存储一些简单的数据时，比如用户的名字，用户是否登录，屏幕背景使用了什么颜色等等，这是非常有用的。
 - [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 为浏览器提供了一个完整的数据库系统来存储复杂的数据。这可以用于存储从完整的用户记录到甚至是复杂的数据类型，如音频或视频文件。
 
-您将在下面了解更多关于这些 API 的信息。
+你将在下面了解更多关于这些 API 的信息。
 
 ### 未来：Cache API
 
@@ -82,7 +82,7 @@ Cache 和 Service Workers 的使用是一个高级主题，我们不会在本文
 1. 第一步，访问 GitHub 上的 [web storage blank template](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) (在新标签页打开此[模板](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html))。
 2. 打开你浏览器开发者工具的 JavaScript 控制台。
 3. 你所有的 web storage 数据都包含在浏览器内两个类似于对象的结构中： {{domxref("Window.sessionStorage", "sessionStorage")}} 和 {{domxref("Window.localStorage", "localStorage")}}。第一种方法，只要浏览器开着，数据就会一直保存 (关闭浏览器时数据会丢失) ，而第二种会一直保存数据，甚至到浏览器关闭又开启后也是这样。我们将在本文中使用第二种方法，因为它通常更有用。
-4. {{domxref("Storage.setItem()")}} 方法允许您在存储中保存一个数据项——它接受两个参数：数据项的名字及其值。试着把它输入到你的 JavaScript 控制台（如果你愿意的话，可以把它的值改为你自己的名字！）
+4. {{domxref("Storage.setItem()")}} 方法允许你在存储中保存一个数据项——它接受两个参数：数据项的名字及其值。试着把它输入到你的 JavaScript 控制台（如果你愿意的话，可以把它的值改为你自己的名字！）
 
    ```js
    localStorage.setItem("name", "Chris");
@@ -95,9 +95,9 @@ Cache 和 Service Workers 的使用是一个高级主题，我们不会在本文
    myName;
    ```
 
-   在输入第二行时，您应该会看到 `myName`变量现在包含`name`数据项的值。
+   在输入第二行时，你应该会看到 `myName`变量现在包含`name`数据项的值。
 
-6. {{domxref("Storage.removeItem()")}} 方法接受一个参数——你想要删除的数据项的名称——并从 web storage 中删除该数据项。在您的 JavaScript 控制台中输入以下几行：
+6. {{domxref("Storage.removeItem()")}} 方法接受一个参数——你想要删除的数据项的名称——并从 web storage 中删除该数据项。在你的 JavaScript 控制台中输入以下几行：
 
    ```js
    localStorage.removeItem("name");
@@ -142,13 +142,13 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 让我们通过编写一个简单的工作示例来应用这些新发现的知识，让你了解如何使用网络存储。我们的示例将允许你输入一个名称，然后该页面将刷新，以提供个性化问候。这种状态也会页面/浏览器重新加载期间保持，因为这个名称存储在 Web Storage 中。
 
-你可以在 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 中找到示例文件 —— 这包含一个具有标题，内容和页脚，以及用于输入您的姓名的表单的简单网站。
+你可以在 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 中找到示例文件 —— 这包含一个具有标题，内容和页脚，以及用于输入你的姓名的表单的简单网站。
 
 ![](web-storage-demo.png)
 
 让我们来构建示例，以便了解它的工作原理。
 
-1. 首先，在您的计算机上的新目录中创建一个 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 文件的副本。
+1. 首先，在你的计算机上的新目录中创建一个 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 文件的副本。
 2. 接下来，请注意我们的 HTML 如何引用一个名为`index.js`的 JavaScript 文件（请参见第 40 行）。我们需要创建它并将 JavaScript 代码写入其中。在与 HTML 文件相同的目录中创建一个`index.js`文件。
 3. 我们首先创建对所有需要在此示例中操作的 HTML 功能的引用 - 我们将它们全部创建为常量，因为这些引用在应用程序的生命周期中不需要更改。将以下几行添加到你的 JavaScript 文件中：
 
@@ -165,7 +165,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
    const personalGreeting = document.querySelector(".personal-greeting");
    ```
 
-4. 接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在您之前的代码下添加此代码段：在你之前的代码后添加这段代码：
+4. 接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在你之前的代码下添加此代码段：在你之前的代码后添加这段代码：
 
    ```js
    // 当按钮按下时阻止表单提交
@@ -249,21 +249,21 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 ### 通过一个笔记存储示例演示
 
-在这里，我们将向您介绍一个示例，该示例允许您在浏览器中存储笔记并随时查看和删除它们，在我们进行时，我们将解释 IDB 的最基本部分并让您自己构建注释。
+在这里，我们将向你介绍一个示例，该示例允许你在浏览器中存储笔记并随时查看和删除它们，在我们进行时，我们将解释 IDB 的最基本部分并让你自己构建注释。
 
 这个应用看起来像这样：
 
 ![](idb-demo.png)
 
-每个笔记都有一个标题和一些正文，每个都可以单独编辑。我们将在下面通过的 JavaScript 代码提供详细的注释，以帮助您了解正在发生的事情。
+每个笔记都有一个标题和一些正文，每个都可以单独编辑。我们将在下面通过的 JavaScript 代码提供详细的注释，以帮助你了解正在发生的事情。
 
 ### 开始
 
 1、首先，将 [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/style.css), 和 [`index-start.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) 文件的本地副本放入本地计算机上的新目录中。
 
-2、浏览这些文件。您将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
+2、浏览这些文件。你将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
 
-3、将您的 JavaScript 文件重命名为 `index.js` 。您现在可以开始向其添加代码了。
+3、将你的 JavaScript 文件重命名为 `index.js` 。你现在可以开始向其添加代码了。
 
 ### 数据库初始设置
 
@@ -294,9 +294,9 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
    let request = window.indexedDB.open("notes", 1);
    ```
 
-   此行创建一个 `request` 变量，目的是打开 `notes`数据库的 `1`版本。如果`notes`数据库不存在，则后续代码将为您创建。您将在 IndexedDB 中经常看到此请求模式。数据库操作需要时间。您不希望在等待结果时挂起浏览器，因此数据库操作是[异步的](/zh-CN/docs/Glossary/asynchronous)，这意味着它们不会立即发生，而是在将来的某个时刻发生，并且在完成后会收到通知。
+   此行创建一个 `request` 变量，目的是打开 `notes`数据库的 `1`版本。如果`notes`数据库不存在，则后续代码将为你创建。你将在 IndexedDB 中经常看到此请求模式。数据库操作需要时间。你不希望在等待结果时挂起浏览器，因此数据库操作是[异步的](/zh-CN/docs/Glossary/asynchronous)，这意味着它们不会立即发生，而是在将来的某个时刻发生，并且在完成后会收到通知。
 
-   要在 IndexedDB 中处理此问题，您需要创建一个请求对象（可以随意命名 - 命名为`request`，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，您将在下面看到这些代码。
+   要在 IndexedDB 中处理此问题，你需要创建一个请求对象（可以随意命名 - 命名为`request`，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，你将在下面看到这些代码。
 
    > **备注：** 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者`onupgradeneeded`处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。
 
@@ -489,7 +489,7 @@ function displayData() {
 
 再次，让我们打破这个：
 
-- 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素的内容，然后填充更新的内容。如果您不这样做，那么每次更新时都会添加大量重复内容。
+- 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素的内容，然后填充更新的内容。如果你不这样做，那么每次更新时都会添加大量重复内容。
 - 接下来，我们`notes`使用[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)和[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)我们一样得到对象存储的引用`addData()`，除了这里我们将它们链接在一行中。
 - 下一步是使用[`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor)方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个`onsuccess`处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。
 - 我们[`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor)使用 let 获取对游标本身（对象）的引用`cursor = e.target.result`。
@@ -537,11 +537,11 @@ function deleteItem(e) {
 
 就是这样了！你的例子现在应该有效。
 
-如果您遇到问题，请随时[查看我们的实例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/)（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.js)）。
+如果你遇到问题，请随时[查看我们的实例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/)（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.js)）。
 
 ### 通过 IndexedDB 存储复杂数据
 
-如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。您可以存储任何您想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
+如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。你可以存储任何你想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
 
 为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
 
@@ -592,9 +592,9 @@ function deleteItem(e) {
 
 3. 以下片段是从内部`fetchVideoFromNetwork()`获取的 - 这里我们使用两个单独的[`fetch()`](/zh-CN/docs/Web/API/Fetch)请求获取视频的 MP4 和 WebM 版本。然后，我们使用该[`Body.blob()`](/zh-CN/docs/Web/API/Blob)方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。
 
-   我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个 promises 都满足时尝试显示或存储视频。幸运的是，有一种处理这种问题的内置方法 - [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)。这需要一个参数 - 引用您要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。
+   我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个 promises 都满足时尝试显示或存储视频。幸运的是，有一种处理这种问题的内置方法 - [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)。这需要一个参数 - 引用你要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。
 
-   当所有这些承诺都履行完毕时，`all()`承诺将通过包含所有个人履行价值的数组来实现。在`all()`块中，您可以看到我们`displayVideo()`之前调用函数，就像在 UI 中显示视频一样，然后我们也调用`storeVideo()`函数将这些视频存储在数据库中。
+   当所有这些承诺都履行完毕时，`all()`承诺将通过包含所有个人履行价值的数组来实现。在`all()`块中，你可以看到我们`displayVideo()`之前调用函数，就像在 UI 中显示视频一样，然后我们也调用`storeVideo()`函数将这些视频存储在数据库中。
 
    ```js
    let mp4Blob = fetch("videos/" + video.name + ".mp4").then((response) =>
@@ -613,7 +613,7 @@ function deleteItem(e) {
    });
    ```
 
-4. 我们`storeVideo()`先来看看吧。这与您在上一个示例中看到的用于向数据库添加数据的模式非常相似 - 我们打开一个`readwrite`事务并获取对象存储引用`videos`，创建一个表示要添加到数据库的记录的对象，然后使用它添加它[`IDBObjectStore.add()`](/zh-CN/docs/Web/API/IDBObjectStore/add)。
+4. 我们`storeVideo()`先来看看吧。这与你在上一个示例中看到的用于向数据库添加数据的模式非常相似 - 我们打开一个`readwrite`事务并获取对象存储引用`videos`，创建一个表示要添加到数据库的记录的对象，然后使用它添加它[`IDBObjectStore.add()`](/zh-CN/docs/Web/API/IDBObjectStore/add)。
 
    ```js
    function storeVideo(mp4Blob, webmBlob, name) {
@@ -667,7 +667,7 @@ function deleteItem(e) {
 
 服务工作者是一个 JavaScript 文件，简单地说，它是在浏览器访问时针对特定来源（网站或某个域的网站的一部分）进行注册的。注册后，它可以控制该来源的可用页面。它通过坐在加载的页面和网络之间以及拦截针对该来源的网络请求来实现这一点。
 
-当它拦截一个请求时，它可以做任何你想做的事情（参见[用例思路](/zh-CN/docs/Web/API/Service_Worker_API#Other_use_case_ideas)），但经典的例子是离线保存网络响应，然后提供响应请求而不是来自网络的响应。实际上，它允许您使网站完全脱机工作。
+当它拦截一个请求时，它可以做任何你想做的事情（参见[用例思路](/zh-CN/docs/Web/API/Service_Worker_API#Other_use_case_ideas)），但经典的例子是离线保存网络响应，然后提供响应请求而不是来自网络的响应。实际上，它允许你使网站完全脱机工作。
 
 Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTTP 响应，因此与服务工作者一起工作得非常好。
 
@@ -697,13 +697,13 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **备注：** `sw.js`文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。服务人员在`https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。原点是`https://mdn.github.io`，因此给定的路径必须是`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。如果您想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。
+> **备注：** `sw.js`文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。服务人员在`https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。原点是`https://mdn.github.io`，因此给定的路径必须是`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。如果你想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。
 
 #### 安装 service worker
 
-下次访问服务工作者控制下的任何页面时（例如，重新加载示例时），将针对该页面安装服务工作者，这意味着它将开始控制它。发生这种情况时，`install`会向服务工作人员发起一个事件; 您可以在服务工作者本身内编写代码来响应安装。
+下次访问服务工作者控制下的任何页面时（例如，重新加载示例时），将针对该页面安装服务工作者，这意味着它将开始控制它。发生这种情况时，`install`会向服务工作人员发起一个事件; 你可以在服务工作者本身内编写代码来响应安装。
 
-让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。您将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
+让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。你将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
 
 在`install` 处理程序内部，我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil)事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
 
@@ -749,17 +749,17 @@ self.addEventListener("fetch", function (e) {
 });
 ```
 
-这就是我们简单的服务工作者。您可以使用它们进行更多的负载 - 有关详细信息，请参阅[服务工作者手册](https://github.com/mdn/serviceworker-cookbook/)。感谢 Paul Kinlan 在他的文章中[添加服务工作者和离线到您的 Web 应用程序](https://developers.google.com/web/fundamentals/codelabs/offline/)，这启发了这个简单的例子。
+这就是我们简单的服务工作者。你可以使用它们进行更多的负载 - 有关详细信息，请参阅[服务工作者手册](https://github.com/mdn/serviceworker-cookbook/)。感谢 Paul Kinlan 在他的文章中[添加服务工作者和离线到你的 Web 应用程序](https://developers.google.com/web/fundamentals/codelabs/offline/)，这启发了这个简单的例子。
 
 #### 测试离线示例
 
-要测试我们的[服务工作者示例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/)，您需要加载它几次以确保它已安装。完成后，您可以：
+要测试我们的[服务工作者示例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/)，你需要加载它几次以确保它已安装。完成后，你可以：
 
 - 尝试拔掉网络连接/关闭 Wifi。
-- 如果您使用的是 Firefox，请选择*文件>脱机工作*。
-- 转到 devtools，然后选择*Application> Service Workers*，如果您使用的是 Chrome，请选中*Offline*选中。
+- 如果你使用的是 Firefox，请选择*文件>脱机工作*。
+- 转到 devtools，然后选择*Application> Service Workers*，如果你使用的是 Chrome，请选中*Offline*选中。
 
-如果再次刷新示例页面，您仍应该看到它加载得很好。所有内容都是脱机存储的 - 缓存中的页面资源以及 IndexedDB 数据库中的视频。
+如果再次刷新示例页面，你仍应该看到它加载得很好。所有内容都是脱机存储的 - 缓存中的页面资源以及 IndexedDB 数据库中的视频。
 
 ## 总结
 

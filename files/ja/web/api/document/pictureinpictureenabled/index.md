@@ -27,7 +27,9 @@ function requestPictureInPicture() {
   if (document.pictureInPictureEnabled) {
     videoElement.requestPictureInPicture();
   } else {
-    console.log("お使いのブラウザーでは、ピクチャインピクチャを使用することができません。");
+    console.log(
+      "お使いのブラウザーでは、ピクチャインピクチャを使用することができません。",
+    );
   }
 }
 ```
