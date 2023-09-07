@@ -1,7 +1,6 @@
 ---
 title: HTMLBaseFontElement
 slug: conflicting/Web/CSS/CSS_Fonts
-translation_of: Web/API/HTMLBaseFontElement
 original_slug: Web/API/HTMLBaseFontElement
 ---
 

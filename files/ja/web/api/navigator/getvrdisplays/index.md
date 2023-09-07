@@ -10,7 +10,7 @@ slug: Web/API/Navigator/getVRDisplays
 ## 構文
 
 ```js
-getVRDisplays()
+getVRDisplays();
 ```
 
 ### 引数

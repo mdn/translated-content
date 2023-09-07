@@ -105,7 +105,7 @@ for (let item of mySet) console.log(item);
 Array.from(mySet);
 [...mySet2];
 
-mySet2 = new Set([1,2,3,4]);
+mySet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### 배열과 Set비교

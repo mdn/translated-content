@@ -11,12 +11,14 @@ on:
 
 jobs:
   check_redirects:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: mdn/content
           path: mdn/content

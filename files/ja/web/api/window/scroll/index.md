@@ -44,7 +44,7 @@ window.scroll(options)
 ```js
 window.scroll({
   top: 1000,
-  behavior: "smooth"
+  behavior: "smooth",
 });
 ```
 

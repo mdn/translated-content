@@ -38,7 +38,7 @@ navigator.serviceWorker
         // 本番環境では、アプリケーションサーバにエラー情報を送信
         // するためにも 役立ちます。
         console.error(error);
-      }
+      },
     );
   });
 ```

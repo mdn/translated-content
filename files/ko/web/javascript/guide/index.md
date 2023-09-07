@@ -2,6 +2,7 @@
 title: JavaScript 안내서
 slug: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 JavaScript 안내서에서 [JavaScript](/ko/docs/Web/JavaScript) 언어 개요와 사용법을 알아보세요. 언어 기능에 대해 상세한 정보가 필요하면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)를 방문하세요.

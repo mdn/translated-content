@@ -82,11 +82,11 @@ Por exemplo, suponha que o conteúdo web no domínio `http://foo.example` deseje
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = "http://bar.other/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -99,7 +99,7 @@ Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho C
 
 Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:
 
-```html
+```http
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
@@ -318,11 +318,11 @@ In this example, content originally loaded from `http://foo.example` makes a sim
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
@@ -492,8 +492,8 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Especificações
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
+| Specification                                   | Status             | Comment                                                                          |
+| ----------------------------------------------- | ------------------ | -------------------------------------------------------------------------------- |
 | {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
 
 ## Compatibilidade com navegadores

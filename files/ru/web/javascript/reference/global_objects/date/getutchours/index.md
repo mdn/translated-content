@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка
@@ -35,11 +36,11 @@ var hours = today.getUTCHours();
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                          | Стандарт                 | Изначальное определение. Реализовано в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.19', 'Date.prototype.getUTCHours')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.getutchours', 'Date.prototype.getUTCHours')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                         | Статус             | Комментарии                                            |
+| ------------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                              | Стандарт           | Изначальное определение. Реализовано в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.19', 'Date.prototype.getUTCHours')}}                | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.getutchours', 'Date.prototype.getUTCHours')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

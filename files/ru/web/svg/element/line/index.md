@@ -2,12 +2,17 @@
 title: <line>
 slug: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 Элемент **`<line>`** одна из базовых фигур SVG, используемая для создания линии, связывающей две точки.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

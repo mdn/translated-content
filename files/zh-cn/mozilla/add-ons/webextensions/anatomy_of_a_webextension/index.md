@@ -97,7 +97,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 ## 侧边栏，弹出窗口，选项页面
 
-您的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：
+你的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：
 
 - [侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是一个面板，它被显示在浏览器窗口左侧，就在网页旁边。
 - [弹出窗口](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)是一个对话框，可以在用户单击[工具栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)或[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)时显示该对话框。
@@ -109,7 +109,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 ## 扩展页面
 
-您也可以在扩展中包含 HTML 文档，这些文档不附加到某个预定义的用户界面组件。与您可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在 manifest.json 中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用 WebExtension API。
+你也可以在扩展中包含 HTML 文档，这些文档不附加到某个预定义的用户界面组件。与你可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在 manifest.json 中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用 WebExtension API。
 
 你通常可以使用 {{WebExtAPIRef("windows.create()")}} 或 {{WebExtAPIRef("tabs.create()")}}加载一个页面。
 

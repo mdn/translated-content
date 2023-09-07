@@ -20,8 +20,7 @@ l10n:
 この例では、`getPorts()` メソッドを用いて利用可能なポートのリストを初期化します。
 
 ```js
-navigator.serial.getPorts()
-.then((ports) => {
+navigator.serial.getPorts().then((ports) => {
   // ページが読み込まれた時、`ports` を用いて利用可能なポートのリストを初期化します。
 });
 ```

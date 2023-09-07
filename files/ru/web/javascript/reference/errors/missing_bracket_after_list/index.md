@@ -40,13 +40,9 @@ var data = [{foo: 'bar'} {bar: 'foo'}];
 ```js example-good
 var list = [1, 2];
 
-var instruments = [
- 'Укулеле',
- 'Гитара',
- 'Пианино'
-];
+var instruments = ["Укулеле", "Гитара", "Пианино"];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];
+var data = [{ foo: "bar" }, { bar: "foo" }];
 ```
 
 ## Смотрите также

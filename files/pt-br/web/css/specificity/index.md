@@ -39,7 +39,7 @@ Aqui está um trecho de CSS:
 
 ```css
 div.outer p {
-  color:orange;
+  color: orange;
 }
 div:not(.outer) p {
   color: lime;
@@ -107,9 +107,9 @@ Com o HTML seguinte::
 
 ```html
 <html>
-<body>
-  <h1>Aqui está o título!</h1>
-</body>
+  <body>
+    <h1>Aqui está o título!</h1>
+  </body>
 </html>
 ```
 

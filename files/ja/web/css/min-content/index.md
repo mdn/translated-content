@@ -57,9 +57,7 @@ min-content: unset;
 ```html
 <div id="container">
   Item
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   Flexible item
 </div>
 ```

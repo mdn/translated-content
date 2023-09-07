@@ -116,7 +116,7 @@ console.log(proxy3.message2); // world
 
 すべてのオブジェクトは、以下の内部メソッドを保持しています。
 
-| 内部メソッド         | 対応するトラップ                                                               |
+| 内部メソッド            | 対応するトラップ                                                                 |
 | ----------------------- | -------------------------------------------------------------------------------- |
 | `[[GetPrototypeOf]]`    | {{jsxref("Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}}                     |
 | `[[SetPrototypeOf]]`    | {{jsxref("Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}}                     |
@@ -132,7 +132,7 @@ console.log(proxy3.message2); // world
 
 また、関数オブジェクトは以下の内部メソッドも保有します。
 
-| 内部メソッド | 対応するトラップ                                 |
+| 内部メソッド    | 対応するトラップ                                   |
 | --------------- | -------------------------------------------------- |
 | `[[Call]]`      | {{jsxref("Proxy/Proxy/apply", "apply()")}}         |
 | `[[Construct]]` | {{jsxref("Proxy/Proxy/construct", "construct()")}} |
@@ -453,7 +453,7 @@ const products = new Proxy(
       }
 
       // 製品の種類を取得
-      if (prop === 'types') {
+      if (prop === "types") {
         return Object.keys(types);
       }
 

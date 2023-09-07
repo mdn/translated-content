@@ -39,8 +39,7 @@ getDisplayMedia(options)
     - `systemAudio` {{optional_inline}}
       - : ブラウザーがユーザーに提供する使用可能な音声ソースの中にシステム音声を含めるべきかどうかを指定する列挙型の値です。使用可能な値は、ブラウザーがシステム音声を選択肢のリストに含めることを指示する `include` と、除外することを指示する `exclude` です。既定値は仕様書では定められていません。ブラウザー別の既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-> **メモ:** [能力と制約と設定
-](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を見ると、これらのオプションがどのように動作するかのもっと詳細があります。
+> **メモ:** [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を見ると、これらのオプションがどのように動作するかのもっと詳細があります。
 
 ### 返値
 
@@ -58,7 +57,7 @@ getDisplayMedia(options)
   - : 画面領域へのアクセス許可がユーザーによって（例えば[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)で）拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを許可されていない場合に返されます。
 - `NotFoundError` {{domxref("DOMException")}}
   - : キャプチャ可能な画面映像のソースが存在しない場合に返却されます。
-- `NotReadableError`  {{domxref("DOMException")}}
+- `NotReadableError` {{domxref("DOMException")}}
   - : ユーザーが画面、ウィンドウ、タブ、またはその他の画面データのソースを選択したが、ハードウェアまたはオペレーティングシステムレベルのエラーまたはロックアウトが発生し、選択したソースの共有ができない場合に返されます。
 - `OverconstrainedError` {{domxref("DOMException")}}
   - : ストリームを作成した後、互換性のあるストリームが生成できなかったため、指定された制約の適用に失敗した場合に返されます。
@@ -84,9 +83,8 @@ async function startCapture(displayMediaOptions) {
   let captureStream;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
-    );
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error(`Error: ${err}`);
   }

@@ -27,7 +27,7 @@ Normalmente este método es llamado internamente por JavaScript y no en el códi
 
 ```js
 cadena = new String("Hello world");
-alert(cadena.valueOf())          // Displays "Hello world"
+alert(cadena.valueOf()); // Displays "Hello world"
 ```
 
 ## Vea También

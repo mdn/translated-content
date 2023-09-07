@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書内にあるとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書内にあるとします
 const anchor = document.getElementById("myAnchor");
 anchor.hostname; // 'developer.mozilla.org' を返す
 ```

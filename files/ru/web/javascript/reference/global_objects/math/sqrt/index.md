@@ -2,6 +2,7 @@
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -39,8 +40,8 @@ Math.sqrt(x)
 Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 Math.sqrt(-0); // -0
 ```

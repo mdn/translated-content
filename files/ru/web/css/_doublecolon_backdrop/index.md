@@ -12,7 +12,7 @@ slug: Web/CSS/::backdrop
 ```css
 /* Подложка показывается только тогда, когда диалоговое окно открыто с помощью метода dialog.showModal() */
 dialog::backdrop {
-  background: rgba(255,0,0,.25);
+  background: rgba(255, 0, 0, 0.25);
 }
 ```
 

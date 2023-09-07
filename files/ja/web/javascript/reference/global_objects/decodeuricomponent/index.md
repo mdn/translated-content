@@ -37,7 +37,7 @@ decodeURIComponent(encodedURI)
 ### キリル文字の URL の構成要素をデコード
 
 ```js
-decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
 ```
 
@@ -45,8 +45,8 @@ decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 
 ```js
 try {
-  var a = decodeURIComponent('%E0%A4%A');
-} catch(e) {
+  var a = decodeURIComponent("%E0%A4%A");
+} catch (e) {
   console.error(e);
 }
 
@@ -59,10 +59,10 @@ decodeURIComponent は、URL からのクエリパラメータを解析するた
 
 ```js
 function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
+  return decodeURIComponent(p.replace(/\+/g, " "));
 }
 
-decodeQueryParam('search+query%20%28correct%29');
+decodeQueryParam("search+query%20%28correct%29");
 // 'search query (correct)'
 ```
 

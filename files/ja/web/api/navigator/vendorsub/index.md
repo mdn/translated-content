@@ -20,7 +20,7 @@ venSub = window.navigator.vendorSub
 ## 例
 
 ```js
-window.navigator.vendorSub
+window.navigator.vendorSub;
 // "6.1" を返す場合、userAgent のべンダー名は、
 // Netscape6/6.1 などです。
 ```

@@ -20,9 +20,8 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error("Error: " + err);
   }
@@ -103,7 +102,7 @@ function startCapture(displayMediaOptions) {
 
 Метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} в основном используется для захвата видео пользовательского экрана или его части. Однако {{Glossary("user agent", "user agents")}} может позволить захватить аудио вместе с видео контентом. Источником аудио может быть выбранное окно, вся аудио система компьютера, или пользовательский микрофон (или их комбинация) .
 
-До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию {{SectionOnPage("/ru/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} , для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
+До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию [Browser compatibility](/ru/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility), для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
 
 Чтобы запросить доступ к экрану с включённым звуком, параметры ниже передаются в метод `getDisplayMedia()`:
 
@@ -233,9 +232,8 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch (err) {
     console.error("Error: " + err);

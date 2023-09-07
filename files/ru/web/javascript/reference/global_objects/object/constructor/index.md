@@ -58,28 +58,32 @@ var types = [
   new Array(),
   [],
   new Boolean(),
-  true,             // останется неизменным
+  true, // останется неизменным
   new Date(),
   new Error(),
   new Function(),
-  function() {},
+  function () {},
   Math,
   new Number(),
-  1,                // останется неизменным
+  1, // останется неизменным
   new Object(),
   {},
   new RegExp(),
   /(?:)/,
   new String(),
-  'тест'            // останется неизменным
+  "тест", // останется неизменным
 ];
 
 for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
-  types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
+  types[i] = [
+    types[i].constructor,
+    types[i] instanceof Type,
+    types[i].toString(),
+  ];
 }
 
-console.log(types.join('\n'));
+console.log(types.join("\n"));
 ```
 
 Вывод примера будет следующим:

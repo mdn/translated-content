@@ -1,25 +1,28 @@
 ---
-title: XRInputSource.gripSpace
+title: "XRInputSource: gripSpace プロパティ"
+short-title: gripSpace
 slug: Web/API/XRInputSource/gripSpace
+l10n:
+  sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
 ---
 
-{{securecontext_header}}{{APIRef("WebXR")}}
+{{APIRef("WebXR Device API")}}
 
 {{domxref("XRInputSource")}} の **`gripSpace`** 読み取り専用プロパティは、ネイティブの原点がユーザーの手に保持している（またはユーザーの手の一部の）ように見える仮想オブジェクトのレンダリングに使用するポーズを追跡する {{domxref("XRSpace")}} を返します。 例えば、ユーザーが仮想の真っ直ぐな棒を持っている場合、この `XRSpace` のネイティブの原点は、ユーザーの拳のおおよその重心にあります。
 
-## 構文
+## 値
 
-```
-var xrSpace = xrInputSource.gripSpace;
-```
-
-### 値
-
-仮想空間での入力デバイスの位置と向きを表す {{domxref("XRSpace")}} オブジェクト。 デバイスの画像をシーンにレンダリングするのに適しています。 入力ソースが本質的に追跡できない場合、`gripSpace` は `null` です。 例えば、{{domxref("XRInputSource.targetRayMode", "targetRayMode")}} が `tracked-pointer` である入力のみが `gripSpace` を提供します。
+仮想空間での入力機器の位置と向きを表す {{domxref("XRSpace")}} オブジェクトです。 機器の画像をシーンにレンダリングするのに適しています。 入力ソースが本質的に追跡できない場合、`gripSpace` は `null` です。 例えば、{{domxref("XRInputSource.targetRayMode", "targetRayMode")}} が `tracked-pointer` である入力のみが `gripSpace` を提供します。
 
 コントローラーがまっすぐな棒のような形をしていて、ユーザーの拳で握られていると想像してみてください。 グリップ空間の本来の原点は、ユーザーの拳の重心にあり、ユーザーの手の位置を追跡します。
 
-**左手のグリップ空間の座標系。**![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](gripspace-lefthand-light.svg)**右手のグリップ空間の座標系。**![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](gripspace-righthand-light.svg)
+**左手のグリップ空間の座標系。**
+
+![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](gripspace-lefthand-light.svg)
+
+**右手のグリップ空間の座標系。**
+
+![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](gripspace-righthand-light.svg)
 
 上の図に示すように、座標系は次のように方向付けられています。
 
@@ -32,9 +35,9 @@ var xrSpace = xrInputSource.gripSpace;
 この例では、フレームレンダリングコールバックから取得した `gripSpace` を使用して、仮想環境でのコントローラーの位置と向きを表すメッシュをレンダリングします。
 
 ```js
-for (let source in xrSession.inputSources) {
+for (const source in xrSession.inputSources) {
   if (source.gripSpace) {
-    let gripPose = frame.getPose(source.gripSpace, xrRefSpace);
+    const gripPose = frame.getPose(source.gripSpace, xrRefSpace);
 
     if (gripPose) {
       myDrawMeshUsingTransform(controllerMesh, gripPose.transform.matrix);
@@ -51,4 +54,4 @@ for (let source in xrSession.inputSources) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRInputSource.gripSpace")}}
+{{Compat}}

@@ -492,7 +492,7 @@ a?.b.c; // 最初に `a` を評価し、 `a` が `null` または `undefined` �
     <tr>
       <td rowspan="18">2</td>
       <td rowspan="16">
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators">代入</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators#代入演算子">代入</a>
       </td>
       <td rowspan="16">右から左</td>
       <td><code>… = …</code></td>

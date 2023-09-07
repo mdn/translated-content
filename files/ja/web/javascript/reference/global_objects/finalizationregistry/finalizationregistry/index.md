@@ -25,7 +25,7 @@ new FinalizationRegistry([callback]);
 コールバックを渡してレジストリを生成します。
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```

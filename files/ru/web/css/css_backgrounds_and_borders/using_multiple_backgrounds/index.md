@@ -13,7 +13,11 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ```css
 .myclass {
-  background: background1, background 2, ..., backgroundN;
+  background:
+    background1,
+    background 2,
+    ...,
+    backgroundN;
 }
 ```
 
@@ -37,8 +41,19 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
   height: 400px;
   background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
-  background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-position:
+    bottom right,
+    left,
+    right;
+  background:
+    -moz-linear-gradient(
+      to right,
+      rgba(30, 75, 115, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 }
 ```
 

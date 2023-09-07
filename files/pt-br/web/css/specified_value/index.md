@@ -13,8 +13,8 @@ O **valor especificado** de uma propriedade CSS está definido em uma de três m
 
 ## Especificações
 
-| Especificações                                                                                   | Status                   | Comentario        |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
+| Especificações                                                           | Status              | Comentario        |
+| ------------------------------------------------------------------------ | ------------------- | ----------------- |
 | {{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.1")}} | Definição inicial |
 
 ## Veja também

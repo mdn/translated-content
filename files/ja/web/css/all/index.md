@@ -64,7 +64,7 @@ Phasellus eget velit sagittis.
 ```css
 body {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
   margin: 0;
   padding: 0;
@@ -81,12 +81,22 @@ blockquote {
 #### `all` プロパティなし
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
 {{EmbedLiveSample("No_all_property", "200", "125")}}
@@ -96,13 +106,25 @@ blockquote { background-color: skyblue;  color: red; }
 #### `all:unset`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: unset;
+}
 ```
 
 {{EmbedLiveSample("allunset", "200", "125")}}
@@ -112,13 +134,25 @@ blockquote { all: unset; }
 #### `all:initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: initial;
+}
 ```
 
 {{EmbedLiveSample("allinitial", "200", "125")}}
@@ -128,18 +162,31 @@ blockquote { all: initial; }
 #### `all:inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: inherit;
+}
 ```
 
 {{EmbedLiveSample("allinherit", "200", "125")}}
 
 {{HTMLElement("blockquote")}} はブラウザーの標準スタイルを使用しません。*ブロック*要素 (包含要素である {{HTMLElement("body")}} からの継承値)であり、 {{cssxref("background-color")}} は `#F0F0F0` (継承値)、{{cssxref("font-size")}} は `small` (継承値) {{cssxref("color")}} は `blue` (継承値) です。
+
 </div>
 
 ## 仕様書
