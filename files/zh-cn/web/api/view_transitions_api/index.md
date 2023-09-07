@@ -18,11 +18,11 @@ slug: Web/API/View_Transitions_API
 - 防止用户与旧内容的意外交互而导致的问题。
 - 完成过渡后删除旧内容。
 
-像阅读位置丢失，焦点混乱和实时区域公告的奇怪行为等可访问性问题，也可能由于新旧内容同时存在于 DOM 中而导致。此外，跨文档视图过渡（即在常规非 SPA 网站中跨不同页面）是不可能的。
+像阅读位置丢失、焦点混乱和实时区域宣告的奇怪行为等无障碍问题，也可能由于新旧内容同时存在于 DOM 中而导致。此外，跨文档视图过渡（即在常规非 SPA 网站中跨越不同页面）是不可能的。
 
 View Transitions API 提供了一种更简单的方法来处理必需的 DOM 更改和过渡动画。
 
-> **备注：** View Transitions API 目前不支持跨文档视图过渡，但这已计划在未来的规范级别中实现，并正在积极开发中。
+> **备注：** View Transitions API 目前不支持跨文档视图过渡，但这已计划在未来的规范版本中实现，并正在积极开发中。
 
 ### 创建基本视图过渡
 
@@ -110,13 +110,13 @@ figcaption {
 
 第二组伪元素的存在允许将单独的视图过渡样式仅应用于 `<figcaption>`。不同的新旧页面视图之间捕获和处理是完全独立的。
 
-`view-transition-name` 的值可以是除 `none` 之外的任何值 —— `none` 值表示该元素不参与视图过渡。
+`view-transition-name` 的值可以是除 `none` 之外的任何值——`none` 值表示该元素不参与视图过渡。
 
 > **备注：** `view-transition-name` 必须是唯一的。如果两个渲染元素同时具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将拒绝并跳过过渡。
 
 ### 自定义动画
 
-视图过渡伪元素具有默认的 [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations)（在其[参考页面](#css_additions)中详细介绍）。
+视图过渡伪元素具有默认的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)（在其[参考页面](#css_扩展)中详细介绍）。
 
 值得注意的是，`height`、`width`、`position` 和 `transform` 的过渡不使用平滑的淡入淡出动画。相反，高度和宽度过渡使用平滑的缩放动画。同时，位置和变换过渡将使用平滑的移动动画。
 
@@ -131,7 +131,7 @@ figcaption {
 }
 ```
 
-让我们看些更有趣的东西 —— `<figcaption>` 的自定义动画：
+让我们看些更有趣的东西——`<figcaption>` 的自定义动画：
 
 ```css
 @keyframes grow-x {
@@ -271,7 +271,7 @@ function spaNavigate(data) {
 ### 属性
 
 - {{cssxref("view-transition-name")}}
-  - : 为选定的元素提供单独的标识名称，并使其参与与根视图过渡不同的单独视图过渡 —— 或者如果指定了 `none` 值，则不参与视图过渡。
+  - : 为选定的元素提供单独的标识名称，并使其参与与根视图过渡不同的单独视图过渡——或者如果指定了 `none` 值，则不参与视图过渡。
 
 ### 伪元素
 
@@ -280,7 +280,7 @@ function spaNavigate(data) {
 - {{cssxref("::view-transition-group", "::view-transition-group()")}}
   - : 单个视图过渡的根元素。
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
-  - : 视图过渡的旧视图和新视图的容器 —— 过渡前和过渡后。
+  - : 视图过渡的旧视图和新视图的容器——过渡前和过渡后。
 - {{cssxref("::view-transition-old", "::view-transition-old()")}}
   - : 转换前的旧视图的静态屏幕截图。
 - {{cssxref("::view-transition-new", "::view-transition-new()")}}
@@ -289,7 +289,7 @@ function spaNavigate(data) {
 ## 示例
 
 - [基础视图过渡演示](https://mdn.github.io/dom-examples/view-transitions/)：一个基本的图像库演示，其中包含新旧图像之间的单独过渡，以及新旧标题之间的单独过渡。
-- [HTTP 203 播放列表](https://http203-playlist.netlify.app/)：一个更复杂的视频播放器演示应用程序，其中包含许多不同的视图过渡，其中许多在[使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.com/docs/web-platform/view-transitions/)中有解释。
+- [HTTP 203 播放列表](https://http203-playlist.netlify.app/)：一个更复杂的视频播放器演示应用程序，包含了许多不同的视图过渡，在[使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.com/docs/web-platform/view-transitions/)中解释了其中的很多视图过渡。
 
 ## 规范
 
