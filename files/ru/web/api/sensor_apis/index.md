@@ -1,16 +1,8 @@
 ---
 title: Sensor APIs
 slug: Web/API/Sensor_APIs
-page-type: web-api-overview
-tags:
-  - API
-  - Generic Sensor API
-  - Overview
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-browser-compat: api.Sensor
+l10n:
+  sourceCommit: 8899f400df312bb5d49ef426173c19f3922029b4
 ---
 
 {{APIRef("Sensor API")}}
@@ -19,7 +11,7 @@ browser-compat: api.Sensor
 
 ## Концепции и использование Sensor APIs
 
-Несмотря на то, что спецификация Generic Sensor API определяет интерфейс {{domxref('Sensor')}}, вам, как веб-разработчику, не придётся его использовать. Вместо него, для получения данных с конкретных датчиков, вы будете использовать один из его подклассов. Например, интерфейс {{domxref('accelerometer')}} возвращает ускорение перемещения устройства по всем трём осям на момент его считывания.
+Несмотря на то, что спецификация Generic Sensor API определяет интерфейс {{domxref('Sensor')}}, вам, как веб-разработчику, не придётся его использовать. Вместо него, для получения данных с конкретных датчиков, вы будете использовать один из его подклассов. Например, интерфейс {{domxref('Accelerometer')}} возвращает ускорение перемещения устройства по всем трём осям на момент его считывания.
 
 Данные с датчиков могут точно соответствовать данным с физических датчиков устройства, либо не соответствовать им. Например, интерфейс датчика {{domxref('Gyroscope')}} точно соответствует интерфейсу физического датчика. В качестве альтернативы, интерфейс {{domxref('AbsoluteOrientationSensor')}} предоставляет информацию, которая алгоритмически объединяет данные с двух и более датчиков устройста. Два эти типа датчиков называются _низкоуровневыми_ и _высокоуровневыми_ соответственно. Второй тип так же называют объединяющим датчиком (либо, виртуальным или, синтетическим).
 
@@ -32,11 +24,11 @@ browser-compat: api.Sensor
 Пример ниже показывает три метода определения API датчика. Кроме того, вы можете обернуть создание экземпляра объекта в блок {{jsxref('statements/try...catch', 'try...catch')}}. Обратите внимание, что определение через интерфейс {{domxref('Navigator')}} не единственный возможный путь.
 
 ```js
-if (typeof Gyroscope === 'function') {
+if (typeof Gyroscope === "function") {
   // бег по кругу...
 }
 
-if ('ProximitySensor' in window) {
+if ("ProximitySensor" in window) {
   // берегись!
 }
 
@@ -60,26 +52,26 @@ if (window.AmbientLightSensor) {
 ```js
 let accelerometer = null;
 try {
-  accelerometer = new Accelerometer({ referenceFrame: 'device' });
-  accelerometer.addEventListener('error', (event) => {
+  accelerometer = new Accelerometer({ referenceFrame: "device" });
+  accelerometer.addEventListener("error", (event) => {
     // Обработчик ошибок времени исполнения.
-    if (event.error.name === 'NotAllowedError') {
+    if (event.error.name === "NotAllowedError") {
       // Переход к коду для запроса разрешения.
-    } else if (event.error.name === 'NotReadableError') {
-      console.log('Не могу подключиться к датчику.');
+    } else if (event.error.name === "NotReadableError") {
+      console.log("Не могу подключиться к датчику.");
     }
   });
-  accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
+  accelerometer.addEventListener("reading", () => reloadOnShake(accelerometer));
   accelerometer.start();
 } catch (error) {
   // Обработчик ошибок создания объекта.
-  if (error.name === 'SecurityError') {
+  if (error.name === "SecurityError") {
     // Смотри заметку о функциональных политиках.
     console.log(
-      'Создание экземпляра объекта датчика было задлокировано по функциональным политикам.'
+      "Создание экземпляра объекта датчика было задлокировано по функциональным политикам.",
     );
-  } else if (error.name === 'ReferenceError') {
-    console.log('Датчик не поддерживается в User agent.');
+  } else if (error.name === "ReferenceError") {
+    console.log("Датчик не поддерживается в User agent.");
   } else {
     throw error;
   }
@@ -91,9 +83,9 @@ try {
 Показания датчиков могут сниматься только в том случае, если пользователь дает разрешение на определенный тип датчика. Сделать это можно используя [Permissions API](/ru/docs/Web/API/Permissions_API). Короткий пример, показанный ниже, запрашивает у пользователя разрешение перед попыткой использовать датчик.
 
 ```js
-navigator.permissions.query({ name: 'accelerometer' }).then((result) => {
-  if (result.state === 'denied') {
-    console.log('Использование датчика не разрешено.');
+navigator.permissions.query({ name: "accelerometer" }).then((result) => {
+  if (result.state === "denied") {
+    console.log("Использование датчика не разрешено.");
     return;
   }
   // Используйте датчик.
@@ -105,9 +97,9 @@ navigator.permissions.query({ name: 'accelerometer' }).then((result) => {
 ```js
 const sensor = new AbsoluteOrientationSensor();
 sensor.start();
-sensor.addEventListener('error', (error) => {
-  if (event.error.name === 'SecurityError')
-    console.log('Нет разрешения использовать AbsoluteOrientationSensor.');
+sensor.addEventListener("error", (error) => {
+  if (event.error.name === "SecurityError")
+    console.log("Нет разрешения использовать AbsoluteOrientationSensor.");
 });
 ```
 
@@ -133,12 +125,12 @@ sensor.addEventListener('error', (error) => {
 ```js
 let magSensor = new Magnetometer({ frequency: 60 });
 
-magSensor.addEventListener('reading', (e) => {
-  console.log('Магнитное поле вдоль оси X ' + magSensor.x);
-  console.log('Магнитное поле вдоль оси Y ' + magSensor.y);
-  console.log('Магнитное поле вдоль оси Z ' + magSensor.z);
+magSensor.addEventListener("reading", (e) => {
+  console.log("Магнитное поле вдоль оси X " + magSensor.x);
+  console.log("Магнитное поле вдоль оси Y " + magSensor.y);
+  console.log("Магнитное поле вдоль оси Z " + magSensor.z);
 });
-magSensor.addEventListener('error', (event) => {
+magSensor.addEventListener("error", (event) => {
   console.log(event.error.name, event.error.message);
 });
 magSensor.start();

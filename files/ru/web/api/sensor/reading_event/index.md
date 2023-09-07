@@ -1,16 +1,8 @@
 ---
-title: 'Sensor: reading event'
+title: "Sensor: reading event"
 slug: Web/API/Sensor/reading_event
-page-type: web-api-event
-tags:
-  - API
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Event
-browser-compat: api.Sensor.reading_event
+l10n:
+  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
 {{APIRef("Sensor API")}}
@@ -24,7 +16,7 @@ browser-compat: api.Sensor.reading_event
 Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
 
 ```js
-addEventListener('reading', (event) => {});
+addEventListener("reading", (event) => {});
 
 onreading = (event) => {};
 ```
@@ -41,10 +33,10 @@ onreading = (event) => {};
 
 ```js
 const acl = new Accelerometer({ frequency: 60 });
-acl.addEventListener('reading', () => {
-  console.log('Ускорение по оси X ' + acl.x);
-  console.log('Ускорение по оси Y ' + acl.y);
-  console.log('Ускорение по оси Z ' + acl.z);
+acl.addEventListener("reading", () => {
+  console.log("Ускорение по оси X " + acl.x);
+  console.log("Ускорение по оси Y " + acl.y);
+  console.log("Ускорение по оси Z " + acl.z);
 });
 acl.start();
 ```

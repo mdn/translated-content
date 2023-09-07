@@ -1,23 +1,15 @@
 ---
 title: Sensor
 slug: Web/API/Sensor
-page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-browser-compat: api.Sensor
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
+
 {{APIRef("Sensor API")}}
 
 Интерфейс **`Sensor`** [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) это базовый класс для всех интерфейсов датчиков. Этот интерфейс нельзя использовать напрямую. Вместо этого он предоставляет свойства, обработчики событий и методы, к которым обращаются интерфейсы, которые наследуются от него.
 
 Если функциональная политика блокирует использование функции, то это происходит потому, что ваш код не соответствует политикам, установленным на вашем сервере. Это не то, что когда-либо будет показано пользователю. Статья о HTTP заголовке {{httpheader('Feature-Policy')}} содержит инструкцию по реализации.
-
 
 {{InheritanceDiagram}}
 
@@ -25,7 +17,6 @@ browser-compat: api.Sensor
 
 В случае ошибки отправляется событие {{domxref("Sensor/error_event", "error")}}, считывание останавливается и объект `Sensor` снова переходит в состояние _покоя_.
 Чтобы продолжить читать данные нужно снова вызвать метод {{domxref("Sensor.start()", "start()")}}}.
-
 
 ## Интерфейсы унаследованные от `Sensor`
 

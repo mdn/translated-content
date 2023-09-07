@@ -1,17 +1,8 @@
 ---
 title: Sensor.hasReading
 slug: Web/API/Sensor/hasReading
-page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - hasReading
-browser-compat: api.Sensor.hasReading
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
 {{APIRef("Sensor API")}}

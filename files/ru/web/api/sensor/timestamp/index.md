@@ -1,17 +1,8 @@
 ---
 title: Sensor.timestamp
 slug: Web/API/Sensor/timestamp
-page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - timeStamp
-browser-compat: api.Sensor.timestamp
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
 {{APIRef("Sensor API")}}

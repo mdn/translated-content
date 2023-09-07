@@ -1,16 +1,8 @@
 ---
-title: 'Sensor: activate event'
+title: "Sensor: activate event"
 slug: Web/API/Sensor/activate_event
-page-type: web-api-event
-tags:
-  - API
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Event
-browser-compat: api.Sensor.activate_event
+l10n:
+  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
 {{APIRef("Sensor API")}}
@@ -24,7 +16,7 @@ browser-compat: api.Sensor.activate_event
 Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
 
 ```js
-addEventListener('activate', (event) => {});
+addEventListener("activate", (event) => {});
 
 onactivate = (event) => {};
 ```
@@ -41,7 +33,7 @@ onactivate = (event) => {};
 
 ```js
 const acl = new Accelerometer({ frequency: 60 });
-acl.addEventListener('activate', () => console.log('Готов к измерениям.'));
+acl.addEventListener("activate", () => console.log("Готов к измерениям."));
 acl.start();
 ```
 
