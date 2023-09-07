@@ -27,7 +27,7 @@ WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebEx
 
 ## 與現有附加元件合併
 
-如果你正在維護過時的附加元件如 XUL overlay、bootstrapped、附加元件 SDK 等，我們建議把它移植到 WebExtension。MDN 有一些[移植指引](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)。
+如果你正在維護過時的附加元件如 XUL overlay、bootstrapped、附加元件 SDK 等，我們建議把它移植到 WebExtension。MDN 有一些[移植指引](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)。
 
 我們在 wiki page 上收集了一些[資源](https://wiki.mozilla.org/Add-ons/developer/communication)以助開發者完成移植。要開始的話，請使用 [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) 來檢查你的附加元件有無受影響。
 
@@ -37,7 +37,7 @@ WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebEx
 
 你不用把附加元件上傳到 AMO，但你的附加元件需要給 Mozilla 簽署。否則，用戶將無法安裝。
 
-要找到發佈附加元件的過程概觀，請參見[簽署並發布你的附加元件](/zh-TW/docs/Mozilla/Add-ons/Distribution)。
+要找到發佈附加元件的過程概觀，請參見[簽署並發布你的附加元件](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon)。
 
 ## 其他種類的附加元件
 
