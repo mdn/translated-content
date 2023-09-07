@@ -17,4 +17,4 @@ AJAX（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}}、非同�
 ### 技術資訊
 
 - {{domxref("XMLHttpRequest")}} 物件。
-- [MDN 的 AJAX 文件](/zh-TW/docs/AJAX)
+- [MDN 的 AJAX 文件](/zh-TW/docs/Web/Guide/AJAX)

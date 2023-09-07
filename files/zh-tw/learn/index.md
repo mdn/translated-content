@@ -75,7 +75,7 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 如果你想向我們詢問任何事情，最快的方式就是透過[學習專區討論串](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [IRC 頻道](/zh-TW/docs/MDN/Community/Conversations#Chat_in_IRC)留下訊息。不論你覺得網站有哪個地方做錯或缺漏，想看到新的學習主題、對自己不了解的地方尋求協助，或其他疑難雜症，都歡迎你提供意見給我們。
 
-如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/Learn/How_to_contribute)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
+如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Contribute)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
 
 ## 另可參閱
 
@@ -136,12 +136,12 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 3. [CSS — 讓 Web 別有風格](/zh-TW/docs/Learn/CSS)
 
    1. **[CSS 概述](/zh-TW/docs/Learn/CSS)**
-   2. [CSS 介紹](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)
+   2. [CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)
 
-      1. **[CSS 基本介紹](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)**
-      2. [CSS 運作方式](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-      3. [CSS 語法](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-      4. [選擇器(Selectors)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Selectors)
+      1. **[CSS 基本介紹](/zh-TW/docs/Learn/CSS/First_steps)**
+      2. [CSS 運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
+      3. [CSS 語法](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+      4. [選擇器(Selectors)](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)
       5. [CSS 數值與單位](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
       6. [串接 (Cascade) 與繼承 (Inheritance)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
       7. [區塊模型 (Box model)](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Box_model)
@@ -157,9 +157,9 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
       5. [Web 字型](/zh-TW/docs/Learn/CSS/Styling_text/Web_fonts)
       6. [評量習題：Typesetting a community school homepage](/zh-TW/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
 
-   4. [框盒 (boxes) 樣式](/zh-TW/docs/Learn/CSS/Styling_boxes)
+   4. [框盒 (boxes) 樣式](/zh-TW/docs/Learn/CSS/Building_blocks)
 
-      1. **[框盒樣式概述](/zh-TW/docs/Learn/CSS/Styling_boxes)**
+      1. **[框盒樣式概述](/zh-TW/docs/Learn/CSS/Building_blocks)**
       2. [框盒模型 (Box model) 回顧](/zh-TW/docs/Learn/CSS/Styling_boxes/Box_model_recap)
       3. [背景](/zh-TW/docs/Learn/CSS/Styling_boxes/Backgrounds)
       4. [邊框](/zh-TW/docs/Learn/CSS/Styling_boxes/Borders)
@@ -186,8 +186,8 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
    1. [HTML 問題](/zh-TW/docs/Learn/HTML/Howto)
    2. [CSS 問題](/zh-TW/docs/Learn/CSS/Howto)
    3. [JavaScript 問題](/zh-TW/docs/Learn/JavaScript/Howto)
-   4. [Web 運作方式](/zh-TW/docs/Learn/Common_questions#How_the_Web_works)
-   5. [工具與設定](/zh-TW/docs/Learn/Common_questions#Tools_and_setup)
-   6. [設計與親和度](/zh-TW/docs/Learn/Common_questions#Design_and_accessibility)
+   4. [Web 運作方式](/zh-TW/docs/Learn/Common_questions#how_the_web_works)
+   5. [工具與設定](/zh-TW/docs/Learn/Common_questions#tools_and_setup)
+   6. [設計與親和度](/zh-TW/docs/Learn/Common_questions#design_and_accessibility)
 
-6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)
+6. [該如何貢獻](/zh-TW/docs/MDN/Contribute)
