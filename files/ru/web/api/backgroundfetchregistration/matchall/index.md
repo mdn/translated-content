@@ -1,15 +1,8 @@
 ---
 title: BackgroundFetchRegistration.matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - matchAll
-  - BackgroundFetchRegistration
-  - Experimental
-browser-compat: api.BackgroundFetchRegistration.matchAll
+l10n:
+  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
@@ -33,11 +26,11 @@ matchAll(request,options)
 
     - `ignoreSearch`
       - : Булево значение, которое определяет нужно ли игнорировать строку поиска в URL.
-        Например, если параметр установлен как `true`, то подстрока `?value=bar`, которая является частью 
+        Например, если параметр установлен как `true`, то подстрока `?value=bar`, которая является частью
         `http://foo.com/?value=bar`, будет игнорироваться при выполении сопоставления.
         Значение по умолчанию - `false`.
     - `ignoreMethod`
-      - : Булево значение. Если оно установлено как `true`, то 
+      - : Булево значение. Если оно установлено как `true`, то
         операциям сопоставления запрещается проверять метод `http` объекта {{domxref("Request")}}.
         Если `false` (значение по умолчанию) только `GET` и `HEAD` разрешены.
     - `ignoreVary`

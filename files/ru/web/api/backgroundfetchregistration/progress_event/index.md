@@ -1,19 +1,12 @@
 ---
 title: 'BackgroundFetchRegistration: progress event'
 slug: Web/API/BackgroundFetchRegistration/progress_event
-page-type: web-api-event
-tags:
-  - progress
-  - API
-  - Reference
-  - Event
-  - Experimental
-browser-compat: api.BackgroundFetchRegistration.progress_event
+l10n:
+  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Событие **`progress`** интерфейса {{domxref("BackgroundFetchRegistration")}} происходит когда выполняется связанные фоновый запрос.
-
 
 Практически это событие происходит, когда любое из следующих свойств возвращает новое значение:
 

@@ -1,15 +1,8 @@
 ---
 title: BackgroundFetchRegistration.recordsAvailable
 slug: Web/API/BackgroundFetchRegistration/recordsAvailable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - recordsAvailable
-  - BackgroundFetchRegistration
-  - Experimental
-browser-compat: api.BackgroundFetchRegistration.recordsAvailable
+l10n:
+  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 

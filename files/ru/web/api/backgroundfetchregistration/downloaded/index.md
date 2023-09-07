@@ -1,15 +1,8 @@
 ---
 title: BackgroundFetchRegistration.downloaded
 slug: Web/API/BackgroundFetchRegistration/downloaded
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - downloaded
-  - BackgroundFetchRegistration
-  - Experimental
-browser-compat: api.BackgroundFetchRegistration.downloaded
+l10n:
+  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}

@@ -1,15 +1,8 @@
 ---
 title: BackgroundFetchRegistration.downloadTotal
 slug: Web/API/BackgroundFetchRegistration/downloadTotal
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - downloadTotal
-  - BackgroundFetchRegistration
-  - Experimental
-browser-compat: api.BackgroundFetchRegistration.downloadTotal
+l10n:
+  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}

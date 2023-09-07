@@ -1,13 +1,8 @@
 ---
 title: BackgroundFetchRegistration
 slug: Web/API/BackgroundFetchRegistration
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchRegistration
-browser-compat: api.BackgroundFetchRegistration
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("Background Fetch API")}}
