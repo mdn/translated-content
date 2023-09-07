@@ -20,7 +20,7 @@ filter(callbackFn, thisArg)
 
 ### 매개변수
 
-- `callback`
+- `callbackFn`
   - : 배열의 각 요소에 대해 실행할 함수입니다. 결과 배열에 요소를 유지하려면 [참](/ko/docs/Glossary/Truthy) 값을 반환하고 그렇지 않으면 [거짓](/ko/docs/Glossary/Falsy) 값을 반환해야 합니다. 이 함수는 다음 인수를 사용하여 호출됩니다.
     - `element`
       - : 배열에서 처리 중인 현재 요소.
