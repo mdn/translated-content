@@ -1,8 +1,10 @@
 ---
-title: Перевод из текстового формата WebAssembly в wasm
-slug: WebAssembly/Text_format_to_wasm
-translation_of: WebAssembly/Text_format_to_wasm
+title: Перевод из текстового формата WebAssembly в Wasm
+slug: WebAssembly/Text_format_to_Wasm
+l10n:
+  sourceCommit: fe898ddf33314ee129256c3862c5c53106eeec1f
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly имеет текстовое представление на основе S-выражений, которое представляет собой промежуточную форму, предназначенную для отображения в текстовых редакторах, средствах разработки браузеров и т. д. В этой статье кратко объясняется, как это работает и как использовать доступные инструменты для преобразования файлов из текстового формата в двоичный формат `.wasm` сборки.
