@@ -58,7 +58,6 @@ sensor.start();
 
 向きセンサーを使用するには、複数のデバイスセンサーを使用する許可を要求する必要があります。{{domxref('Permissions')}} インターフェイスは Promise を使用するので、許可を要求するのには {{jsxref('Promise.all')}} を使用するとよいです。
 
-
 ```js
 const sensor = new AbsoluteOrientationSensor();
 Promise.all([
