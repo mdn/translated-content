@@ -64,7 +64,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGMaskElement`](/zh-CN/DOM/SVGMaskElement)接口。
+该元素实现了 [`SVGMaskElement`](/zh-CN/DOM/SVGMaskElement) 接口。
 
 ## 参见
 

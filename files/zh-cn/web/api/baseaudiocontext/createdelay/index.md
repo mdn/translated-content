@@ -64,7 +64,7 @@ if (navigator.getUserMedia) { //标准api
   micto(stream);//具体工作
                    }, error);
  } else {
-   alert("您的浏览器版不支持这个api");
+   alert("你的浏览器版不支持这个api");
 }
 
 

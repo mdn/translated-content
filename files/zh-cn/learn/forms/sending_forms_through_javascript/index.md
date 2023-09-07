@@ -98,7 +98,7 @@ function sendData(data) {
 
 手动建立一个 HTTP 请求非常困难。幸运的是，最近的 [XMLHttpRequest 规范](http://www.w3.org/TR/XMLHttpRequest/)提供了一种方便简单的方法 — 利用{{domxref("XMLHttpRequest/FormData","FormData")}}对象来处理表单数据请求。
 
-{{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是“只写”的，这意味着您可以更改它们，但不能检索其内容。
+{{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是“只写”的，这意味着你可以更改它们，但不能检索其内容。
 
 使用这个对象在[Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
 

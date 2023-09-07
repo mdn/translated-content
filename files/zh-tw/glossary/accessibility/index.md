@@ -16,10 +16,10 @@ slug: Glossary/Accessibility
 
 ### 學習網頁無障礙化
 
-- [Web Accessibility In Mind](http://webaim.org/)
+- [Web Accessibility In Mind](https://webaim.org/)
 
 ### 技術參考
 
 - [The ARIA documentation on MDN](/zh-TW/docs/Web/Accessibility/ARIA)
-- [The Web Accessibility Initiative homepage](http://www.w3.org/WAI/)
-- [The WAI-ARIA recommendation](http://www.w3.org/TR/wai-aria/)
+- [The Web Accessibility Initiative homepage](https://www.w3.org/WAI/)
+- [The WAI-ARIA recommendation](https://www.w3.org/TR/wai-aria/)
