@@ -1,5 +1,5 @@
 ---
-title: CycleTracker：基础 HTML 和 CSS
+title: 经期跟踪器：基础 HTML 和 CSS
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 ---
 
@@ -9,11 +9,11 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 
 要构建渐进式 Web 应用程序（PWA），我们需要创建一个功能完备的 Web 应用程序。在本节中，我们将为静态网页标记 HTML，并使用 CSS 来增强其外观。
 
-我们的项目是创建 CycleTracker，一个月经周期跟踪器。在这个入门级的 [PWA 教程](/zh-CN/docs/Web/Progressive_web_apps/Tutorials)的第一步，我们将编写 HTML 和 CSS。页面的上部分是一个表单，供用户输入每个月经周期的开始和结束日期。下部分是以前月经周期的列表。
+我们的项目是创建经期跟踪器（CycleTracker），一个月经周期跟踪器。在这个入门级的 [PWA 教程](/zh-CN/docs/Web/Progressive_web_apps/Tutorials)的第一步，我们将编写 HTML 和 CSS。页面的上部分是一个表单，供用户输入每个月经周期的开始和结束日期。下部分是以前月经周期的列表。
 
 我们创建一个 HTML 文件，其头部包含元数据，静态网页包含一个表单和一个用于显示用户输入数据的占位符。然后我们将添加一个外部 CSS 样式表来提升网站的外观。
 
-要完成本教程，最好对 [HTML](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)，[CSS](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)，和 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 有基本的了解。如果你对这些不熟悉，MDN 是[入门指南](/zh-CN/docs/Learn/Getting_started_with_the_web)的地方，这是一套介绍 Web 开发的系列教程。
+要完成本教程，最好对 [HTML](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)、[CSS](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics) 和 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 有基本的了解。如果你对这些不熟悉，MDN 提供了入门指南[入门指南](/zh-CN/docs/Learn/Getting_started_with_the_web)——一套介绍 Web 开发的系列教程。
 
 在接下来的章节中，我们将设置一个[本地开发环境](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)，然后在添加 [JavaScript 功能](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)来将本节中创建的静态内容转换为功能性的 Web 应用程序之前，我们会看看我们的进展。一旦我们有了一个功能性的应用，我们就会有可以渐进增强为可安装的、离线工作的 PWA 的东西。
 
