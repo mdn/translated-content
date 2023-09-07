@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.outline-style
 ---
+
 {{CSSRef}}
 
 [CSS-свойство](/ru/docs/Web/CSS) **`outline-style`** задаёт стиль обводки элемента. Обводка — линия вокруг элемента за пределами рамки ({{cssxref("border")}}).
@@ -95,7 +96,10 @@ outline-style: unset;
 }
 
 /* Для большей наглядности примера */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Результат
@@ -125,7 +129,10 @@ outline-style: unset;
 }
 
 /* Для большей наглядности примера */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Результат
@@ -155,7 +162,10 @@ outline-style: unset;
 }
 
 /* Для большей наглядности примера */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Результат
@@ -185,7 +195,10 @@ outline-style: unset;
 }
 
 /* Для большей наглядности примера */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Результат
@@ -215,7 +228,10 @@ outline-style: unset;
 }
 
 /* Для большей наглядности примера */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Результат
