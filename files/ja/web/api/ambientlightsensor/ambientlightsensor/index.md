@@ -9,7 +9,6 @@ l10n:
 
 **`AmbientLightSensor()`** コンストラクターは、現在の光レベル、すなわちホストデバイス周辺の環境光の照度を返す新しい {{domxref("AmbientLightSensor")}} オブジェクトを生成します。
 
-
 ## 構文
 
 ```js-nolint
