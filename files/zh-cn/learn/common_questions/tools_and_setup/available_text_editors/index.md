@@ -469,4 +469,4 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 ## 下一步
 
-现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。
+现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。
