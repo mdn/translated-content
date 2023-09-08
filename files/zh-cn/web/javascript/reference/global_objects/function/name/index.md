@@ -45,7 +45,7 @@ doSomething.name; // "doSomething"
 
 ### 默认导出的函数声明
 
-一个 [`export default`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 声明将函数作为声明导出，而不是表达式。如果声明是匿名的，则名称为`"default"`。
+一个 [`export default`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 声明将函数作为声明导出，而不是表达式。如果声明是匿名的，则名称为 `"default"`。
 
 ```js
 // -- someModule.js --
@@ -180,7 +180,7 @@ Foo.name; // "Foo"
 
 > **警告：** JavaScript 只会在函数没有自有的 `name` 属性时才设置函数的 `name` 属性。然而，类的[静态成员](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)将被设置为类构造函数的自有属性，从而阻止内置的 `name` 属性生效。请参阅下面的示例。
 
-### Symbol 作为函数名称
+### 以 Symbol 为函数名称
 
 如果使用一个 {{jsxref("Symbol")}} 作为函数名，并且该 symbol 有一个描述，那么该方法的名称将是方括号中的描述。
 
@@ -199,7 +199,7 @@ o[sym2].name; // "[]"
 
 ### 私有属性
 
-私有字段和私有方法的名称中包含哈希符号（`#`）作为一部分。
+私有字段和私有方法的名称中包含哈希符号（`#`）。
 
 ```js
 class Foo {
@@ -223,7 +223,7 @@ new Foo().getNames();
 你可以使用 `obj.constructor.name` 来检查对象的“类”名。
 
 ```js
-function Foo() {} // Or: class Foo {}
+function Foo() {} // 或：class Foo {}
 
 const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // "Foo"
@@ -254,11 +254,11 @@ class Foo {
 console.log(new Foo().constructor.name); // 123
 ```
 
-如果类有一个静态属性名为 `name` ,它也将变为*可写的*。在没有自定义静态定义的情况下，内置定义是*只读的*:
+如果类有一个静态属性名为 `name`，它也将变为*可写的*。在没有自定义静态定义的情况下，内置定义是*只读的*:
 
 ```js
 Foo.name = "Hello";
-console.log(Foo.name); // “Hello”如果 Foo 类有一个静态的“name”属性，但如果没有，则为“Foo”。
+console.log(Foo.name); // 如果 Foo 类有一个静态的“name”属性，则为“Hello”；但如果没有，则为“Foo”。
 ```
 
 因此，你可能不会依赖内置的 `name` 属性来始终保存类的名称。
