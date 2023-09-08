@@ -30422,53 +30422,6 @@
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
   },
-  "conflicting/Web/API/XSLTProcessor": {
-    "modified": "2020-04-13T14:00:58.038Z",
-    "contributors": ["mfuji09", "SphinxKnight", "Marsf"]
-  },
-  "conflicting/Web/API/XSLTProcessor_2cfa4c3da648e88c1d8c1a80dd485afe": {
-    "modified": "2019-03-18T20:50:32.089Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "conflicting/Web/API/XSLTProcessor_39b28286ccde929e16258e36e71b2b15": {
-    "modified": "2019-03-18T20:50:31.655Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "conflicting/Web/API/XSLTProcessor_3e513a2939789f0dd1d74dccd03ecc19": {
-    "modified": "2019-03-18T20:50:25.643Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "silverskyvicto",
-      "ethertank",
-      "kohei.yoshino",
-      "Mgjbot"
-    ]
-  },
-  "conflicting/Web/API/XSLTProcessor_74e3158b7476863cad08456b0c69370b": {
-    "modified": "2019-03-18T20:50:31.798Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5": {
-    "modified": "2019-03-18T20:50:31.495Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "conflicting/Web/API/XSLTProcessor_84fbb9369e8a0158534cd70596625955": {
-    "modified": "2019-03-23T22:00:06.933Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto", "ethertank"]
-  },
-  "conflicting/Web/API/XSLTProcessor_8ba2392fb1adc1009fbd010bf87ed3f6": {
-    "modified": "2019-03-18T20:50:27.169Z",
-    "contributors": ["mfuji09", "SphinxKnight", "ExE-Boss", "silverskyvicto"]
-  },
-  "conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4": {
-    "modified": "2019-03-18T20:50:31.925Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "conflicting/Web/API/XSLTProcessor_cba108886ce592cea484c5cf60d3e08a": {
-    "modified": "2019-03-18T20:50:31.344Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
   "conflicting/Web/API/console": {
     "modified": "2020-10-15T22:05:58.801Z",
     "contributors": ["yumemi-kuwahara"]
