@@ -2,7 +2,7 @@
 title: OrientationSensor
 slug: Web/API/OrientationSensor
 l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+  sourceCommit: 33eb1ab8fc98ec3a18972a2032b1af49eb57bb85
 ---
 
 {{APIRef("Sensor API")}}
