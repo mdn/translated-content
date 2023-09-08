@@ -95,7 +95,7 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 
 ![](browser.png)
 
-**瀏覽器 API（Browser APIs）**內建在你的瀏覽器中，能夠依本地的電腦環境輸出資料或實現複雜的功能。舉例而言：
+**瀏覽器 API**（Browser API）內建在你的瀏覽器中，能夠依本地的電腦環境輸出資料或實現複雜的功能。舉例而言：
 
 - {{domxref("Document_Object_Model","DOM （文件物件模型） API")}} 讓你能操作 HTML 和 CSS，像是建立、移除或改變 HTML 元素，或動態地將新樣式套用到頁面…等等。每當你看到彈出視窗，或有新的內容出現在畫面上（就像上面的範例所展示的），那就是 DOM 在動作。
 - {{domxref("Geolocation","Geolocations（地理位置） API")}} 可以取得位置資訊。這就是 [Google Maps](https://www.google.com/maps) 取得你的位置並標示在地圖上所透過的方式。
@@ -172,7 +172,7 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 一個沒有動態更新內容能力的網頁被稱為**靜態**，它在任何時候都只顯示一樣的內容。
 
-## 如何在網頁中增加 JavaScript ？
+## 如何在網頁中增加 JavaScript？
 
 在 HTML 頁面中使用 JavaScript 與 CSS 的方法類似。在 HTML 中 CSS 藉著{{htmlelement("link")}} 元素引入外部樣式（stylesheets）以及 {{htmlelement("style")}} 元素定義內部樣式。JavaScript 在 HTML 中只需要一個朋友 — {{htmlelement("script")}} 元素。讓我們了解它是如何運作。
 
