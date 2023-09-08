@@ -28,9 +28,9 @@ l10n:
 - [일반 흐름](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
   - 웹페이지의 요소 무리는 여러분이 무언가 변화를 주기전까지는 _normal flow_(일반 흐름)에 따라 요소들을 배치합니다. 이 문서에서는 일반 흐름을 변경하는 방법을 배우기 위한 기초로서 일반 흐름의 기본을 설명합니다.
 - [플렉스박스(Flexbox)](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-  - [플렉스박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/%EA%B0%80%EB%B3%80%EC%83%81%EC%9E%90%EC%9D%98_%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8_%EC%82%AC%EC%9A%A9%EB%A1%80)는 행이나 열로 배치하는 1차원 레이아웃 메서드입니다. 항목은 좁은 공간에 맞게 축소되거나, 여분의 공간을 채우기 위해 변형됩니다. 이 문서에서는 모든 기본 사항을 설명합니다. 이 안내서를 공부한 후 [플렉스박스 기술을 테스트](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills)하여 이해도를 확인한 후 계속 진행할 수 있습니다.
+  - [플렉스박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/%EA%B0%80%EB%B3%80%EC%83%81%EC%9E%90%EC%9D%98_%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8_%EC%82%AC%EC%9A%A9%EB%A1%80)는 행이나 열로 배치하는 1차원 레이아웃 메서드입니다. 항목은 좁은 공간에 맞게 축소되거나, 여분의 공간을 채우기 위해 변형됩니다. 이 문서에서는 모든 기본 사항을 설명합니다. 이 안내서를 공부한 후 [플렉스박스 기술을 테스트](/ko/docs/Learn/CSS/CSS_layout/Flexbox_skills)하여 이해도를 확인한 후 계속 진행할 수 있습니다.
 - [그리드(Grids)](/ko/docs/Learn/CSS/CSS_layout/Grids)
-  - CSS 그리드 레이아웃(Grid Layout)은 웹페이지를 위한 2차원 레이아웃 시스템입니다. 이 기능을 통해 콘텐츠를 행과 열로 배치할 수 있으며, 복잡한 레이아웃을 간단하게 구축할 수 있는 많은 기능이 있습니다. 이 문서에서는 페이지 레이아웃을 시작하기 위해 필요한 모든 것을 설명합니다. 이 안내서를 공부한 후 [그리드 기술을 테스트](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills)해 볼 수 있습니다.
+  - CSS 그리드 레이아웃(Grid Layout)은 웹페이지를 위한 2차원 레이아웃 시스템입니다. 이 기능을 통해 콘텐츠를 행과 열로 배치할 수 있으며, 복잡한 레이아웃을 간단하게 구축할 수 있는 많은 기능이 있습니다. 이 문서에서는 페이지 레이아웃을 시작하기 위해 필요한 모든 것을 설명합니다. 이 안내서를 공부한 후 [그리드 기술을 테스트](/ko/docs/Learn/CSS/CSS_layout/Grid_skills)해 볼 수 있습니다.
 - [플로트(Floats)](/ko/docs/Learn/CSS/CSS_layout/Floats)
   - 원래 텍스트 블록 안에 플로팅 이미지를 넣기 위해 사용되던 {{cssxref("float")}} 속성은 웹 페이지에서 다단 레이아웃을 생성할 용도로 가장 일반적으로 사용되는 도구 중 하나로 자리매김했었습니다. 플렉스박스와 그리드의 등장으로 플로트 속성은 원래의 용도로 돌아갔습니다.
 - [포지셔닝(Positioning)](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
@@ -50,12 +50,12 @@ l10n:
 
 다음 평가는 위 가이드에서 다룬 CSS 레이아웃 방법에 대한 이해도를 테스트합니다.
 
-- [레이아웃 이해의 핵심 사항](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [레이아웃 이해의 핵심 사항](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
   - 웹페이지를 레이아웃하여 다양한 레이아웃 방법에 대한 지식을 테스트하는 평가입니다.
 
 ## 같이 보기
 
-- [포지셔닝 실례](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
+- [포지셔닝 실례](/ko/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
   - : 이 문서에서는 포지셔닝으로 어떤 작업을 수행할 수 있는지 설명하기 위해 몇 가지 실제 사례를 구축하는 방법을 보여줍니다.
-- [CSS 레이아웃 안내서](/en-US/docs/Web/CSS/Layout_cookbook)
+- [CSS 레이아웃 안내서](/ko/docs/Web/CSS/Layout_cookbook)
   - : CSS 레이아웃 안내서(cookbook)는 사이트에 구현해야 할 수 있는 일반적인 레이아웃 패턴에 대한 레시피를 한데 모으는 것을 목표로 합니다. 이 레시피는 프로젝트의 시작점으로 사용할 수 있는 코드를 제공할 뿐만 아니라 레이아웃 사양을 사용할 수 있는 다양한 방법과 개발자로서의 선택 사항을 강조합니다.
