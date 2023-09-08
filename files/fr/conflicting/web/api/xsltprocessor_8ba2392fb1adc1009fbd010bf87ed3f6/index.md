@@ -1,6 +1,7 @@
 ---
 title: Ressources
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
+slug: conflicting/Web/API/XSLTProcessor_8ba2392fb1adc1009fbd010bf87ed3f6
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 ---
 
 1. [Introduction](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko)

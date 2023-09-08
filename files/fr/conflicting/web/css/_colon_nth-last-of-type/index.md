@@ -1,6 +1,7 @@
 ---
 title: ":nth-last-col"
-slug: Web/CSS/:nth-last-col
+slug: conflicting/Web/CSS/:nth-last-of-type
+original_slug: Web/CSS/:nth-last-col
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

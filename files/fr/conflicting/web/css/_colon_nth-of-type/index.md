@@ -1,6 +1,7 @@
 ---
 title: ":nth-col"
-slug: Web/CSS/:nth-col
+slug: conflicting/Web/CSS/:nth-of-type
+original_slug: Web/CSS/:nth-col
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

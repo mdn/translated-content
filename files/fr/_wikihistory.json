@@ -27324,70 +27324,6 @@
     "modified": "2019-01-16T16:11:27.172Z",
     "contributors": ["chrisdavidmills", "Fredchat"]
   },
-  "Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations": {
-    "modified": "2019-11-21T00:57:28.537Z",
-    "contributors": [
-      "wbamberg",
-      "chrisdavidmills",
-      "teoli",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example": {
-    "modified": "2019-03-23T23:43:56.095Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Jeremie",
-      "Fredchat"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example": {
-    "modified": "2020-04-03T12:42:05.763Z",
-    "contributors": [
-      "olivierdupon",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Jeremie",
-      "Fredchat"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings": {
-    "modified": "2019-03-23T23:49:14.126Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Jeremie",
-      "Chichille",
-      "Fredchat"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Resources": {
-    "modified": "2019-03-23T23:43:56.751Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Jeremie",
-      "Fredchat"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters": {
-    "modified": "2019-03-23T23:43:55.284Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Jeremie",
-      "Fredchat"
-    ]
-  },
   "WebAssembly": {
     "modified": "2019-03-23T22:14:12.769Z",
     "contributors": ["sylv1", "dattaz", "SphinxKnight"]
@@ -27528,6 +27464,70 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/API/XSLTProcessor": {
+    "modified": "2019-11-21T00:57:28.537Z",
+    "contributors": [
+      "wbamberg",
+      "chrisdavidmills",
+      "teoli",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/API/XSLTProcessor_2cfa4c3da648e88c1d8c1a80dd485afe": {
+    "modified": "2020-04-03T12:42:05.763Z",
+    "contributors": [
+      "olivierdupon",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Sebastianz",
+      "Jeremie",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/API/XSLTProcessor_39b28286ccde929e16258e36e71b2b15": {
+    "modified": "2019-03-23T23:43:56.095Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Sebastianz",
+      "Jeremie",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/API/XSLTProcessor_74e3158b7476863cad08456b0c69370b": {
+    "modified": "2019-03-23T23:49:14.126Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Sebastianz",
+      "Jeremie",
+      "Chichille",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5": {
+    "modified": "2019-03-23T23:43:55.284Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Sebastianz",
+      "Jeremie",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/API/XSLTProcessor_8ba2392fb1adc1009fbd010bf87ed3f6": {
+    "modified": "2019-03-23T23:43:56.751Z",
+    "contributors": [
+      "wbamberg",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Sebastianz",
+      "Jeremie",
+      "Fredchat"
     ]
   }
 }

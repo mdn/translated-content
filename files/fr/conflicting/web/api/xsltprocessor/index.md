@@ -1,8 +1,7 @@
 ---
 title: Utilisation de XSLTProcessor pour les transformations XSL
-slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-l10n:
-  sourceCommit: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
+slug: conflicting/Web/API/XSLTProcessor
+original_slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 ---
 
 Ce document décrit l'utilisation de l'interface JavaScript [`XSLTProcessor`](/fr/docs/Web/API/XSLTProcessor) pour effectuer des transformations XSL.

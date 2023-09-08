@@ -1,6 +1,7 @@
 ---
 title: Exemple avancé
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
+slug: conflicting/Web/API/XSLTProcessor_39b28286ccde929e16258e36e71b2b15
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 ---
 
 ## Exemple avancé

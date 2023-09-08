@@ -1,6 +1,7 @@
 ---
 title: Les liaisons JavaScript/XSLT
-slug: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
+slug: conflicting/Web/API/XSLTProcessor_74e3158b7476863cad08456b0c69370b
+original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 ---
 
 ## Les liaisons JavaScript/XSLT
