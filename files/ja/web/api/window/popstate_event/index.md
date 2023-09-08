@@ -1,6 +1,5 @@
 ---
 title: "Window: popstate イベント"
-slug: Web/API/Window/popstate_event
 short-title: popstate
 slug: Web/API/Window/popstate_event
 l10n:
