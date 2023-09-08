@@ -49,7 +49,7 @@ const entryName = "entryToRemove";
 
 // 假设我们有一个目录句柄：'currentDirHandle'
 currentDirHandle.removeEntry(entryName).then(() => {
-// 成功移除后要运行的代码
+  // 成功移除后要运行的代码
 });
 ```
 
