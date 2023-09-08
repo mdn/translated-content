@@ -98,7 +98,7 @@ Ya hemos terminado. ¡La versión final del juego está lista para publicar!
 
 Enhorabuena, has terminado todas las lecciones. Ya has aprendido las técnicas básicas de manipulación del \<canvas> y la lógica que hay detrás de los juegos 2D sencillos.
 
-Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (frameworks) y de continuar con el desarrollo de juegos. Puedes echar un vistazo a estas otra forma de realizar el mismo juego que has visto en [2D breakout game using Phaser](/es/docs/Games/Workflows/2D_breakout_game_Phaser), o de echar un vistazo al tutorial [Cyber Orb built in Phaser](/es/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation). También puedes leer el contenido de [Games section on MDN](/en/docs/Games) para inspirarte y seguir aprendiendo.
+Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (frameworks) y de continuar con el desarrollo de juegos. Puedes echar un vistazo a estas otra forma de realizar el mismo juego que has visto en [2D breakout game using Phaser](/es/docs/Games/Workflows/2D_breakout_game_Phaser), o de echar un vistazo al tutorial [Cyber Orb built in Phaser](/es/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation). También puedes leer el contenido de [Games section on MDN](/es/docs/Games) para inspirarte y seguir aprendiendo.
 
 También puedes volve al [índice de este tutorial](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro). ¡Diviértete programando!
 
