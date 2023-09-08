@@ -4226,8 +4226,8 @@
 /fr/docs/Web/CSS/:current	/fr/docs/Web/API/WebVTT_API
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
-/fr/docs/Web/CSS/:nth-col	/fr/docs/conflicting/Web/CSS/:nth-of-type
-/fr/docs/Web/CSS/:nth-last-col	/fr/docs/conflicting/Web/CSS/:nth-last-of-type
+/fr/docs/Web/CSS/:nth-col	/fr/docs/Web/CSS/:nth-of-type
+/fr/docs/Web/CSS/:nth-last-col	/fr/docs/Web/CSS/:nth-last-of-type
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
 /fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
 /fr/docs/Web/CSS/@media/update-frequency	/fr/docs/Web/CSS/@media/update
@@ -6540,6 +6540,8 @@
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/conflicting/Web/CSS/:focus-visible	/fr/docs/Web/CSS/:focus-visible
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is
+/fr/docs/conflicting/Web/CSS/:nth-last-of-type	/fr/docs/Web/CSS/:nth-last-of-type
+/fr/docs/conflicting/Web/CSS/:nth-of-type	/fr/docs/Web/CSS/:nth-of-type
 /fr/docs/conflicting/Web/CSS/:placeholder-shown	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/conflicting/Web/CSS/@font-face	/fr/docs/Web/CSS/@font-face
 /fr/docs/conflicting/Web/CSS/@viewport	/fr/docs/Web/CSS
