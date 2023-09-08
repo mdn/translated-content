@@ -3,6 +3,8 @@ title: 什么是超链接？
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 通过这篇文章，我们将了解什么是超链接以及超链接的重要性。
 
 <table class="learn-box standard-table">

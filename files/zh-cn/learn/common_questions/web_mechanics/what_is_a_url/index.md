@@ -3,6 +3,8 @@ title: 什么是 URL？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文讨论了统一资源定位符 (URL)，并解释了他们是什么，以及如何被构建的。
 
 <table class="learn-box standard-table">

@@ -3,6 +3,8 @@ title: 什么是域名？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文中我们讨论了域名是什么，域名是如何被构建的，以及如何获得一个域名。
 
 <table class="learn-box standard-table">
