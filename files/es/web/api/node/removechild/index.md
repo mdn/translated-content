@@ -43,9 +43,9 @@ Por lo tanto el método removeChild(child) lanza una excepción de 2 casos difer
 ```js
 <!--Javascript-->
 // El método lanza la excepción correspondiente al (caso 2)
-var top = document.getElementById("top");
-var nested = document.getElementById("nested");
-var garbage = top.removeChild(nested);
+let top = document.getElementById("top");
+let anidados = document.getElementById("anidados");
+let desechable = top.removeChild(anidados);
 ```
 
 ```html
@@ -58,26 +58,26 @@ var garbage = top.removeChild(nested);
 ```js
 <!--Javascript-->
 // Eliminando un elemento específico cuando se conoce su nodo padre
-var d = document.getElementById("top");
-var d_nested = document.getElementById("anidados");
-var throwawayNode = d.removeChild(d_nested);
+let d = document.getElementById("top");
+let d_anidados = document.getElementById("anidados");
+let nodoDesechable = d.removeChild(d_anidados);
 ```
 
 ```js
 <!--Javascript-->
 // Eliminando un elemento específico utilizando la propiedad parentNode, que siempre hace referencia al nodo padre de un nodo (nodoHijo.parentNode.).
-nodo var = document.getElementById("anidados");
-if (node.parentNode) {
-  node.parentNode.removeChild(nodo);
+let nodo = document.getElementById("anidados");
+if (nodo.parentNode) {
+  nodo.parentNode.removeChild(nodo);
 }
 ```
 
 ```js
 <!--Javascript-->
 // Eliminando todos los hijos de un elemento
-elemento var = document.getElementById("top");
-while (element.firstChild) {
-  element.removeChild(element.firstChild);
+let elemento = document.getElementById("top");
+while (elemento.firstChild) {
+  elemento.removeChild(elemento.firstChild);
 }
 ```
 
