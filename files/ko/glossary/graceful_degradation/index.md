@@ -1,5 +1,5 @@
 ---
-title: 우아한 성능 저하
+title: 우아한 성능 저하 (Graceful degradation)
 slug: Glossary/Graceful_degradation
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
