@@ -6,7 +6,7 @@ slug: Web/API/ViewTransition/skipTransition
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`skipTransition()`** 是 {{domxref("ViewTransition")}} 接口上的一个方法，它跳过视图过渡的动画部分，但不跳过更新 DOM 的 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 回调函数。
+{{domxref("ViewTransition")}} 接口的 **`skipTransition()`** 方法跳过视图过渡的动画部分，但不跳过更新 DOM 的 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 回调函数。
 
 ## 语法
 

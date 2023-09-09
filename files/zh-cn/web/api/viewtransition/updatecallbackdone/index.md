@@ -6,13 +6,13 @@ slug: Web/API/ViewTransition/updateCallbackDone
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`updateCallbackDone`** 是 {{domxref("ViewTransition")}} 接口上的一个只读属性，它是一个 {{jsxref("Promise")}}。当 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 的回调函数返回的 Promise 兑现时，该 Promise 也兑现，当回调函数返回的 Promise 拒绝时，该 Promise 也拒绝。
+{{domxref("ViewTransition")}} 接口的 **`updateCallbackDone`** 只读属性是一个 {{jsxref("Promise")}}。当传递给 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 的回调函数返回的 Promise 兑现时，该 Promise 也会兑现，当回调函数返回的 Promise 被拒绝时，该 Promise 也会被拒绝。
 
 当你不关心过渡动画的成功或失败，而只关心 DOM 是否更新以及何时更新时，`updateCallbackDone` 非常有用。
 
 ## 值
 
-一个 {{jsxref("Promise")}}。
+一个 promise。
 
 ## 示例
 

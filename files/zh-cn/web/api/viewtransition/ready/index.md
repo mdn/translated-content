@@ -6,13 +6,13 @@ slug: Web/API/ViewTransition/ready
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`ready`** 是 {{domxref("ViewTransition")}} 接口上的一个只读属性，它是一个 {{jsxref("Promise")}}。当伪元素树被创建且过渡动画即将开始时，该 Promise 就会被兑现。
+{{domxref("ViewTransition")}} 接口的 **`ready`** 只读属性是一个 {{jsxref("Promise")}}。会在伪元素树被创建且过渡动画即将开始时兑现。
 
-如果视图过渡无法开始，`ready` 就会被拒绝。这可能是由于错误的配置，例如重复的 {{cssxref("view-transition-name")}}，或者是因为 {{domxref("Document.startViewTransition()")}} 的回调函数抛出异常或返回一个被拒绝的 Promise。
+如果视图过渡无法开始，`ready` 就会被拒绝。这可能是由于错误的配置，例如重复的 {{cssxref("view-transition-name")}}，或者是因为 {{domxref("Document.startViewTransition()")}} 的回调函数抛出异常或返回的 Promise 被拒绝。
 
 ## 值
 
-一个 {{jsxref("Promise")}}。
+一个 promise。
 
 ## 示例
 

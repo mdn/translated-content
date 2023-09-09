@@ -6,15 +6,15 @@ slug: Web/API/ViewTransition/finished
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`finished`** 是 {{domxref("ViewTransition")}} 接口上的一个只读属性，它是一个 {{jsxref("Promise")}}。当过渡动画完成时，该 Promise 就会被兑现，新的页面视图对用户可见且可交互。
+{{domxref("ViewTransition")}} 接口的 **`finished`** 只读属性是一个 {{jsxref("Promise")}}。会在过渡动画完成（新的页面视图对用户可见且可交互）时兑现。
 
-仅当 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 的回调函数抛出异常或返回一个被拒绝的 Promise 时，`finished` 才会被拒绝，这表示页面的新状态未被创建。
+仅当传递给 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 的回调函数抛出异常或返回的 Promise 被拒绝时，`finished` 才会被拒绝，这表示页面的新状态未被创建。
 
 如果过渡动画无法开始，或在动画期间使用 {{domxref("ViewTransition.skipTransition()")}} 跳过了过渡动画，那么视图过渡依旧可以到达最终状态，因此 `finished` 依旧会被兑现。
 
 ## 值
 
-一个 {{jsxref("Promise")}}。
+一个 promise。
 
 ## 示例
 
