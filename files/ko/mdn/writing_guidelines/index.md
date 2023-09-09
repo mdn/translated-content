@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-MDN 웹 문서는 오픈 소스 프로젝트입니다. 아래에 요약된 섹션은 저희가 문서화하는 것과 MDN 웹 문서에서 문서화하는 방법에 대한 지침을 설명합니다. 기여 방법에 대해 알아보려면 [기여 지침](/ko/docs/MDN/Community)을 참조하세요.
+MDN 웹 문서는 오픈 소스 프로젝트입니다. 아래에 요약된 섹션은 저희가 문서화하는 것과 MDN 웹 문서에서 문서화하는 방법에 대한 지침을 설명합니다. 기여 방법에 대해 알아보려면 [기여 안내서](/ko/docs/MDN/Community)를 참조하세요.
 
 - [우리가 쓰는 것](/ko/docs/MDN/Writing_guidelines/What_we_write)
 
