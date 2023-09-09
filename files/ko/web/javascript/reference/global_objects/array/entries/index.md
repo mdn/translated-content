@@ -23,7 +23,7 @@ entries()
 
 ### 반환 값
 
-새 [순회 가능 순회자 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+새 [순회 가능 반복자 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## 설명
 
