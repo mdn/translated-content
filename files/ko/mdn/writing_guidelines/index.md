@@ -1,5 +1,5 @@
 ---
-title: 쓰기 지침
+title: 쓰기 안내서
 slug: MDN/Writing_guidelines
 l10n:
   sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
