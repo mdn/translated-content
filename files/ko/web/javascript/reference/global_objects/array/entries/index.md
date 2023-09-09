@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 인스턴스의 **`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새 [배열 순회자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새 [배열 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
