@@ -26,9 +26,9 @@ createTreeWalker(root, whatToShow, filter)
 
   - : 表示位掩码的 `unsigned long`，由 [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter) 的常属性组合而成。此参数便于筛选出特定类型的节点。其默认值为 `0xFFFFFFFF`，表示 `NodeFilter.SHOW_ALL` 常数。
 
-    | 常数                                                      | 数值         | 描述                                            |
-    | -------------------------------------------------------- | ------------ | ---------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | 显示所有节点。                                    |
+    | 常数                                                     | 数值         | 描述                                             |
+    | -------------------------------------------------------- | ------------ | ------------------------------------------------ |
+    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | 显示所有节点。                                   |
     | `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`        | 显示 {{DOMXref("Attr")}} 节点。                  |
     | `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`        | 显示 {{DOMXref("CDATASection")}} 节点。          |
     | `NodeFilter.SHOW_COMMENT`                                | `0x80`       | 显示 {{DOMXref("Comment")}} 节点。               |
@@ -36,9 +36,9 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `0x400`      | 显示 {{DOMXref("DocumentFragment")}} 节点。      |
     | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `0x200`      | 显示 {{DOMXref("DocumentType")}} 节点。          |
     | `NodeFilter.SHOW_ELEMENT`                                | `0x1`        | 显示 {{DOMXref("Element")}} 节点。               |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`       | 旧式参数，不再有效。                               |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `0x10`       | 旧式参数，不再有效。                               |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`      | 旧式参数，不再有效。                               |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`       | 旧式参数，不再有效。                             |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `0x10`       | 旧式参数，不再有效。                             |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`      | 旧式参数，不再有效。                             |
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`       | 显示 {{DOMXref("ProcessingInstruction")}} 节点。 |
     | `NodeFilter.SHOW_TEXT`                                   | `0x4`        | 显示 {{DOMXref("Text")}} 节点。                  |
 
@@ -98,7 +98,7 @@ while (treeWalker.nextNode()) {
 
 ### 使用 filter
 
-此示例使用 `filter` 将文本内容转义。对于任意文本节点，若其为某个 `.escape` 元素的后代且非任何 `.no-escape` 元素的后代，则用  {{JSXref("encodeURI()")}} 将其转义。
+此示例使用 `filter` 将文本内容转义。对于任意文本节点，若其为某个 `.escape` 元素的后代且非任何 `.no-escape` 元素的后代，则用 {{JSXref("encodeURI()")}} 将其转义。
 
 #### HTML
 
