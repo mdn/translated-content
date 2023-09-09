@@ -20,7 +20,7 @@ createTreeWalker(root, whatToShow, filter)
 
 - `root`
 
-  - ： 表示 `TreeWalker` 对象的根节点的 {{DOMXref("Node")}}，为 {{DOMXref("TreeWalker.currentNode")}} 的初始值。
+  - ：表示 `TreeWalker` 对象的根节点的 {{DOMXref("Node")}}，为 {{DOMXref("TreeWalker.currentNode")}} 的初始值。
 
 - `whatToShow` {{optional_inline}}
 
@@ -105,22 +105,22 @@ while (treeWalker.nextNode()) {
 ```html
 <div>
   <div>
-    此 文 本 未 被 转 义 。 <span class="escape">但 此 文 本 被 转 义 。</span>
+    此 文 本 未 被 转 义。 <span class="escape">但 此 文 本 被 转 义。</span>
   </div>
-  <div class="escape">此 文 本 被 转 义 。</div>
-  <div class="no-escape">此 文 本 未 被 转 义 。</div>
+  <div class="escape">此 文 本 被 转 义。</div>
+  <div class="no-escape">此 文 本 未 被 转 义。</div>
 </div>
 <hr />
 <div class="escape">
   <div>
-    此 文 本 被 转 义 。 <span class="no-escape">但 此 文 本 未 被 转 义 。</span>
+    此 文 本 被 转 义。 <span class="no-escape">但 此 文 本 未 被 转 义。</span>
   </div>
-  <div class="no-escape">此 文 本 未 被 转 义 。</div>
+  <div class="no-escape">此 文 本 未 被 转 义。</div>
 </div>
 <hr />
 <div class="no-escape">
-  <div>此 文 本 未 被 转 义 。</div>
-  <div class="escape">此 文 本 未 被 转 义 。</div>
+  <div>此 文 本 未 被 转 义。</div>
+  <div class="escape">此 文 本 未 被 转 义。</div>
 </div>
 ```
 
