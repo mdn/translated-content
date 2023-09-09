@@ -38,7 +38,7 @@ slug: MDN/Community/Contributing/Our_repositories
 
 - [mdn-community](https://github.com/mdn/mdn-community)
 - [mdn/mdn](https://github.com/mdn/mdn)
-- [content-team-projects](https://github.com/mdn/content-team-projects).
+- [content-team-projects](https://github.com/mdn/content-team-projects)
 
 三级项目需要有 1 名管理员。
 
@@ -56,7 +56,7 @@ slug: MDN/Community/Contributing/Our_repositories
 
 ### 代码示例和演示
 
-MDN Web 文档的 GitHub 组织包含大量的示例仓库。这些示例通常包含独立的代码示例，通常从我们的页面链接到这些示例，但有时你会发现这些示例中的某一个会被嵌入到页面中（使用像这样的宏调用——`\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`）。
+MDN Web 文档的 GitHub 组织包含大量的示例仓库。这些示例通常包含独立的代码示例，通常从我们的页面链接到这些示例，但有时你会发现这些示例中的某一个会通过使用宏调用（如 `\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`）嵌入到页面中。
 
 请始终牢记，如果你正在更新任何给定页面上的代码，你也需要更新相应的示例仓库。
 
