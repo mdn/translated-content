@@ -94,7 +94,7 @@ function f(a, b, c, d, e) {
 
 递归函数必须能够引用它本身。很典型的，函数通过自己的名字调用自己。然而，匿名函数 (通过 [函数表达式](/zh-CN/docs/JavaScript/Reference/Operators/function) 或者 `函数构造器 创建`) 没有名称。因此如果没有可访问的变量指向该函数，唯一能引用它的方式就是通过 `arguments.callee`。
 
-下面的例子定义了一个函数，按流程，定义并返回了一个阶乘函数。该例并不是很实用，并且几乎都能够用 [命名函数表达式](/zh-CN/docs/JavaScript/Reference/Operators/function) 实现同样结果的例子，and there are nearly no cases where the same result cannot be achieved with .
+下面的例子定义了一个函数，按流程，定义并返回了一个阶乘函数。该例并不是很实用，并且几乎都能够用 [命名函数表达式](/zh-CN/docs/JavaScript/Reference/Operators/function) 实现同样结果的例子。
 
 ```js
 function create() {
