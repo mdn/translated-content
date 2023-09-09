@@ -105,22 +105,22 @@ while (treeWalker.nextNode()) {
 ```html
 <div>
   <div>
-    此 文 本 未 被 转 义。 <span class="escape">但 此 文 本 被 转 义。</span>
+    此文本未被转义。<span class="escape">但此文本被转义。</span>
   </div>
-  <div class="escape">此 文 本 被 转 义。</div>
-  <div class="no-escape">此 文 本 未 被 转 义。</div>
+  <div class="escape">此文本被转义。</div>
+  <div class="no-escape">此文本未被转义。</div>
 </div>
 <hr />
 <div class="escape">
   <div>
-    此 文 本 被 转 义。 <span class="no-escape">但 此 文 本 未 被 转 义。</span>
+    此文本被转义。<span class="no-escape">但此文本未被转义。</span>
   </div>
-  <div class="no-escape">此 文 本 未 被 转 义。</div>
+  <div class="no-escape">此文本未被转义。</div>
 </div>
 <hr />
 <div class="no-escape">
-  <div>此 文 本 未 被 转 义。</div>
-  <div class="escape">此 文 本 未 被 转 义。</div>
+  <div>此文本未被转义。</div>
+  <div class="escape">此文本未被转义。</div>
 </div>
 ```
 
