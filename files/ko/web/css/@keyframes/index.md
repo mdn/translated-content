@@ -2,7 +2,7 @@
 title: "@keyframes"
 slug: Web/CSS/@keyframes
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
 {{CSSRef}}
@@ -33,6 +33,8 @@ l10n:
   - : 마지막 offset인 `100%` 입니다.
 - {{cssxref("&lt;percentage&gt;")}}
   - : 전체 애니메이션 시간 중 명시된 keyframe이 발생해야 하는 시점의 %입니다.
+- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}} {{experimental_inline}}
+  - : 지정된 {{cssxref("animation-range")}} 를 통과한 시간 중 지정된 키 프레임이 발생해야 하는 시간의 백분율입니다. 타임라인 범위를 사용하는 애니메이션의 종류에 대한 자세한 사항은 [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 참고하세요.
 
 ## 설명
 
@@ -135,13 +137,17 @@ l10n:
 }
 ```
 
-### 형식 구문
+## 형식 구문
 
 {{csssyntax}}
 
 ## 예제
 
 [CSS 애니메이션](/en/CSS/CSS_animations)에서 예제를 참고하세요.
+
+### CSS 애니메이션 예제
+
+예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)와 [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/articles/scroll-driven-animations/)를 참고하세요.
 
 ## 명세서
 
@@ -153,5 +159,8 @@ l10n:
 
 ## 같이 보기
 
+- {{cssxref("animation-range")}}
+- [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)
 - [CSS 애니메이션 사용하기](/ko/docs/CSS/Tutorials/Using_CSS_animations)
+- [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/articles/scroll-driven-animations/)
 - {{domxref("AnimationEvent")}}
