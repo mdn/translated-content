@@ -19,9 +19,7 @@ createTreeWalker(root, whatToShow, filter)
 ### 参数
 
 - `root`
-
-  - ：表示 `TreeWalker` 对象的根节点的 {{DOMXref("Node")}}，为 {{DOMXref("TreeWalker.currentNode")}} 的初始值。
-
+  - : 表示 `TreeWalker` 对象的根节点的 {{DOMXref("Node")}}，为 {{DOMXref("TreeWalker.currentNode")}} 的初始值。
 - `whatToShow` {{optional_inline}}
 
   - : 表示位掩码的 `unsigned long`，由 [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter) 的常属性组合而成。此参数便于筛选出特定类型的节点。其默认值为 `0xFFFFFFFF`，表示 `NodeFilter.SHOW_ALL` 常数。
