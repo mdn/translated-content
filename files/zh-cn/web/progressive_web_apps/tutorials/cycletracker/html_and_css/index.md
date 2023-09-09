@@ -23,29 +23,29 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 
 ```html
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>周期跟踪器</title>
+    <title>Cycle Tracker</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>月经周期跟踪器</h1>
+    <h1>Period tracker</h1>
     <form>
       <fieldset>
-        <legend>输入你的月经开始和结束日期</legend>
+        <legend>Enter your period start and end date</legend>
         <p>
-          <label for="start-date">开始日期</label>
+          <label for="start-date">Start date</label>
           <input type="date" id="start-date" required />
         </p>
         <p>
-          <label for="end-date">结束日期</label>
+          <label for="end-date">End date</label>
           <input type="date" id="end-date" required />
         </p>
       </fieldset>
       <p>
-        <button type="submit">添加月经周期</button>
+        <button type="submit">Add Period</button>
       </p>
     </form>
     <section id="past-periods"></section>
@@ -70,7 +70,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 
 ```html
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en-US">
   <!-- <head> 和 <body> 将在这里 -->
 </html>
 ```
@@ -93,7 +93,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 虽然标题可以是“月经周期追踪应用程序”，但我们选择了一个更简短更隐蔽的名称。
 
 ```html
-<title>周期跟踪器</title>
+<title>Cycle Tracker</title>
 ```
 
 尽管这两个 `<meta>` 标签和 `<title>` 在技术上是可选的，但为了更好的用户体验，它们应该被视为 HTML 文档所必需的 `<head>` 的三个组成部分。
@@ -116,7 +116,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 ```html
 <body>
-  <h1>月经周期跟踪器</h1>
+  <h1>Period tracker</h1>
   <form></form>
 </body>
 ```
@@ -128,7 +128,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 ```html
 <form>
   <fieldset>
-    <legend>输入你的月经起始日期和结束日期</legend>
+    <legend>Enter your period start and end date</legend>
   </fieldset>
 </form>
 ```
@@ -138,7 +138,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 为了将 `<label>` 与表单控件相关联，每个 `<input>` 都有一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性，它与相关联的 {{HTMLelement("label")}} 的 [`for`](/zh-CN/docs/Web/HTML/Attributes/for) 属性匹配。相关的标签为每个 `<input>` 提供了一个 {{glossary("accessible name")}}。
 
 ```html
-<label for="start-date">开始日期</label>
+<label for="start-date">Start date</label>
 <input type="date" id="start-date" required />
 ```
 
@@ -147,18 +147,18 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 ```html
 <form>
   <fieldset>
-    <legend>输入你的月经开始日期和结束日期</legend>
+    <legend>Enter your period start and end date</legend>
     <p>
-      <label for="start-date">开始日期</label>
+      <label for="start-date">Start date</label>
       <input type="date" id="start-date" required />
     </p>
     <p>
-      <label for="end-date">结束日期</label>
+      <label for="end-date">End date</label>
       <input type="date" id="end-date" required />
     </p>
   </fieldset>
   <p>
-    <button type="submit">添加月经周期</button>
+    <button type="submit">Add Period</button>
   </p>
 </form>
 ```
@@ -179,10 +179,10 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 ```html
 <section id="past-periods">
-  <h2>过去月经周期</h2>
+  <h2>Past periods</h2>
   <ul>
-    <li>从 01/01/2024 到 01/06/2024</li>
-    <li>从 01/29/2024 到 02/04/2024</li>
+    <li>From 01/01/2024 to 01/06/2024</li>
+    <li>From 01/29/2024 to 02/04/2024</li>
   </ul>
 </section>
 ```
@@ -335,10 +335,10 @@ li:nth-of-type(even) {
 ```html
 <section id="past-periods">
   <!--
-  <h2>过去月经周期</h2>
+  <h2>Past periods</h2>
   <ul>
-    <li>从 01/01/2024 到 01/06/2024</li>
-    <li>从 01/29/2024 到 02/04/2024</li>
+    <li>From 01/01/2024 to 01/06/2024</li>
+    <li>From 01/29/2024 to 02/04/2024</li>
   </ul>
   -->
 </section>
