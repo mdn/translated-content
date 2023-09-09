@@ -49,7 +49,7 @@ slug: MDN/Community/Contributing/Our_repositories
 - **浏览器兼容性数据**：<https://github.com/mdn/browser-compat-data>。这是存储用于生成我们参考页上的浏览器兼容性表格的数据的地方（[示例](/zh-CN/docs/Web/HTML/Element/progress#浏览器兼容性)）。如果你对 Web 特性的浏览器兼容性有所了解，或者愿意并且能够进行一些研究和/或实验，你可以帮助更新 MDN 的[浏览器兼容性数据](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)。
 - **交互示例**：<https://github.com/mdn/interactive-examples>。这个仓库存储了许多参考页顶部的示例代码块（[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)）。可以在这里编辑这些示例。
 - **Bob** 又名 Builder of Bits：<https://github.com/mdn/bob>。这个仓库存储了用于生成许多参考页顶部的漂亮的可编辑、可复制的示例（[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)）的渲染代码。
-- **翻译内容**：<https://github.com/mdn/translated-content>。这是存储本地化内容的地方。如果你想帮助将页面翻译成我们[活跃维护的语言环境](https://github.com/mdn/translated-content#locales)之一，请前往这里。
+- **本地化内容**：<https://github.com/mdn/translated-content>。这是存储本地化内容的地方。如果你想帮助将页面翻译成我们[活跃维护的语言环境](https://github.com/mdn/translated-content#locales)之一，请前往这里。
 - **工作流**：<https://github.com/mdn/workflows>。不断增长的，可在 MDN Web 文档仓库上使用的可重用 GitHub Actions 的集合。
 
 ## 代码示例
