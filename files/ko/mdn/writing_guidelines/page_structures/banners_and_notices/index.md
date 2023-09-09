@@ -39,7 +39,7 @@ browser-compat: api.Ink
 ## 추가 할 수 있는 배너와 추가해야하는 배너
 
 [페이지 유형 템플릿](/ko/docs/MDN/Writing_guidelines/Page_structures/Page_types#templates)에는 가장 중요한 매크로들이 포함되어 있습니다.
-요야하면 다음과 같습니다.
+요약하면 다음과 같습니다.
 
 - `\{{SeeCompatTable}}` — 이 기술은 [실험적](/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)임이라는 것을 나타내는 **실험적 기술 배너**를 생성합니다.
   또한 페이지 머리말에 `status`를 `experimental`로 추가합니다.
