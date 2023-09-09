@@ -240,95 +240,95 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 ### Работа с примером хранения заметок
 
-Here we'll run you through an example that allows you to store notes in your browser and view and delete them whenever you like, getting you to build it up for yourself and explaining the most fundamental parts of IDB as we go along.
+Здесь мы покажем пример, который позволит вам хранить заметки в вашем браузере, просматривать и удалять их в любое время, позволяя вам построить его самостоятельно и объясняя основные аспекты IDB по пути.
 
-The app looks something like this:
+Приложение выглядит примерно так:
 
 ![](idb-demo.png)
 
-Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
+У каждой заметки есть заголовок и основной текст, каждый из которых может быть редактирован индивидуально. В коде JavaScript, который мы рассмотрим, есть подробные комментарии, которые помогут вам понять, что проиходит.
 
 ### Предустановка
 
-1. First of all, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) files into a new directory on your local machine.
-2. Have a look at the files. You'll see that the HTML is pretty simple: a web site with a header and footer, as well as a main content area that contains a place to display notes, and a form for entering new notes into the database. The CSS provides some simple styling to make it clearer what is going on. The JavaScript file contains five declared constants containing references to the {{htmlelement("ul")}} element the notes will be displayed in, the title and body {{htmlelement("input")}} elements, the {{htmlelement("form")}} itself, and the {{htmlelement("button")}}.
-3. Rename your JavaScript file to `index.js`. You are now ready to start adding code to it.
+1. Прежде всего, создайте локальные копии наших [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) файлов в новом каталоге на вашем компьютере.
+2. Взгляните на эти файлы. Вы увидите, что HTML достаточно прост: веб-сайт с верхним и нижним колонтитулами, а также областью основного содержимого, где расположено место для отображения заметок, и форма для внесения новых заметок в базу данных. CSS предоставляет простую стилизацию для ясности понимания. В JavaScript-файле объявлено пять констант, содержащих ссылки на {{htmlelement("ul")}} элемент, в котором будут отображены заметки, элементы {{htmlelement("input")}} заголовка и тела страницы, саму форму {{htmlelement("form")}}, и кнопку {{htmlelement("button")}}.
+3. Переименуйте ваш JavaScript файл в `index.js`. Теперь вы готовы к добавлению в него кода.
 
 ### Настраиваем базу данных
 
-Now let's look at what we have to do in the first place, to actually set up a database.
+Теперь давайте посмотрим, что нам необходимо сделать в первую очередь, чтобы непосредственно настроить базу данных.
 
-1. Below the constant declarations, add the following lines:
+1. Добавьте следующие строки под объявленными константами:
 
    ```js
-   // Create an instance of a db object for us to store the open database in
+   // Создайте экземпляр объекта db, где мы сможем хранить открытую базу данных
    let db;
    ```
 
-   Here we are declaring a variable called `db` — this will later be used to store an object representing our database. We will use this in a few places, so we've declared it globally here to make things easier.
+   Здесь мы объявляем переменную `db` — позже она будет использована для хранения объекта, представляющего нашу базу данных. Мы будем использовать её в нескольких местах, поэтому здесь мы объявили её глобально для упрощения работы.
 
-2. Next, add the following to the bottom of your code:
+2. Далее, добавьте следующее выражение в конец вашего кода:
 
    ```js
    window.onload = function () {};
    ```
 
-   We will write all of our subsequent code inside this `window.onload` event handler function, called when the window's {{event("load")}} event fires, to make sure we don't try to use IndexedDB functionality before the app has completely finished loading (it could fail if we don't).
+   Мы будем писать весь наш последующий код внутри этого `window.onload` обработчика событий, который будет вызван при срабатывании события окна {{event("load")}}, чтобы быть уверенными, что мы не будем использовать функционал IndexedDB прежде чем приложение полностью завершит загрузку (в противном случае оно может дать сбой).
 
-3. Inside the `window.onload` handler, add the following:
+3. Добавьте следующий код внутри обработчика `window.onload`:
 
    ```js
-   // Open our database; it is created if it doesn't already exist
-   // (see onupgradeneeded below)
+   // Открываем нашу базу данных; она создаётся, если её ещё не существует
+   // (см onupgradeneeded ниже)
    let request = window.indexedDB.open("notes", 1);
    ```
 
-   This line creates a `request` to open version `1` of a database called `notes`. If this doesn't already exist, it will be created for you by subsequent code. You will see this request pattern used very often throughout IndexedDB. Database operations take time. You don't want to hang the browser while you wait for the results, so database operations are {{Glossary("asynchronous")}}, meaning that instead of happening immediately, they will happen at some point in the future, and you get notified when they're done.
+   Эта строка создаёт запрос `request` для открытия версии `1` базы данных под именем `notes`. Если её ещё не существует, она будет создана для вас при помощи последующего кода. Вы будете наблюдать этот шаблон запроса в IndexedDB достаточно часто. Операции баз данных требуют времени. Вам не хотелось бы, чтобы браузер зависал пока вы ждёте результатов, поэтому операции баз данных асинхронны {{Glossary("asynchronous")}}, то есть вместо того, чтобы произойти немедленно, они произойдут в какой-то момент в будущем, и вы получите оповещение по их готовности.
 
-   To handle this in IndexedDB, you create a request object (which can be called anything you like — we called it `request` so it is obvious what it is for). You then use event handlers to run code when the request completes, fails, etc., which you'll see in use below.
+   Для обработки этого в IndexedDB, вы создаёте объект запроса (который может быть назван как угодно - мы назвали его "запрос" `request`, чтобы было очевидно, для чего он используется). Затем вы используете обработчики событий для выполнения кода при удачном, неудачном и прочем завершении запроса, что вы увидите в действии ниже.
 
-   > **Примечание:** The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `onupgradeneeded` handler (see below), etc. We won't cover upgrading databases in this simple tutorial.
+   > **Примечание**: Номер версии важен. Если вы захотите обновить вашу базу данных (например, изменив структуру таблицы), вам придётся выполнить ваш код снова с увеличенным номером версии, иной схемой, указанной внутри обработчика `onupgradeneeded` (см.ниже), и т.д. Мы не будем расматривать обновление баз данных в этом простом руководстве.
 
-4. Now add the following event handlers just below your previous addition — again inside the `window.onload` handler:
+4. Теперь добавьте следующие обработчики событий ниже предыдущего ввода — опять же внутри обработчика `window.onload`:
 
    ```js
-   // onerror handler signifies that the database didn't open successfully
+   // обработчик onerror означает, что база данных не открылась успешно
    request.onerror = function () {
      console.log("Database failed to open");
    };
 
-   // onsuccess handler signifies that the database opened successfully
+   // обработчик onsuccess означает, что база данных открыта успешно
    request.onsuccess = function () {
      console.log("Database opened successfully");
 
-     // Store the opened database object in the db variable. This is used a lot below
+     // Сохраните открытую базу данных в переменной db. Она будет использована ниже
      db = request.result;
 
-     // Run the displayData() function to display the notes already in the IDB
+     // Выполните функцию displayData() для отображения тех заметок, которые уже находятся в IDB
      displayData();
    };
    ```
 
-   The {{domxref("IDBRequest.onerror", "request.onerror")}} handler will run if the system comes back saying that the request failed. This allows you to respond to this problem. In our simple example, we just print a message to the JavaScript console.
+   Обработчик {{domxref("IDBRequest.onerror", "request.onerror")}} выполнится, если система вернётся с сообщением о невыполненном запросе. Он позволит вам отреагировать на эту проблему. В нашем простом примере, мы просто выводим сообщение в консоль.
 
-   The {{domxref("IDBRequest.onsuccess", "request.onsuccess")}} handler on the other hand will run if the request returns successfully, meaning the database was successfully opened. If this is the case, an object representing the opened database becomes available in the {{domxref("IDBRequest.result", "request.result")}} property, allowing us to manipulate the database. We store this in the `db` variable we created earlier for later use. We also run a custom function called `displayData()`, which displays the data in the database inside the {{HTMLElement("ul")}}. We run it now so that the notes already in the database are displayed as soon as the page loads. You'll see this defined later on.
+   Обработчик {{domxref("IDBRequest.onsuccess", "request.onsuccess")}}, с другой стороны, выполнится при успешном возвращении запроса, т.е. в случае, если база даных открыта успешно. В этом случае объект, представляющий открытую базу данных становится доступным в свойстве {{domxref("IDBRequest.result", "request.result")}}, позволяя нам манипулировать базой данных. Мы храним её в переменной `db`, которую мы создали ранее для последующего использования. Мы также выполняем функцию `displayData()`, которая отображает данные в базе данных внутри элемента {{HTMLElement("ul")}}. Мы выполняем её сейчас, чтобы заметки, которые уже находятся в базе данных, были отображены как только страница загрузится. Вы увидите её объявление позже.
 
-5. Finally for this section, we'll add probably the most important event handler for setting up the database: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. This handler runs if the database has not already been set up, or if the database is opened with a bigger version number than the existing stored database (when performing an upgrade). Add the following code, below your previous handler:
+5. В конце концов для этой секции мы добавим, возможно, наиболее важный обаботчик событий для настройки базы данных: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. Этот обработчик выполняется, если база данных ещё не настроена или если база данных открыта с бОльшим номером версии, чем существующая сохраненная база данных (при выполнении обновления). Добавьте следующий код ниже вашего предыдущего обработчика:
 
    ```js
-   // Setup the database tables if this has not already been done
+   // Настройка таблиц баз данных, если это ещё не было сделано
    request.onupgradeneeded = function (e) {
-     // Grab a reference to the opened database
+     // Захват ссылки на открытую базу данных
      let db = e.target.result;
 
-     // Create an objectStore to store our notes in (basically like a single table)
-     // including a auto-incrementing key
+     // Создайте objectStore, где мы сможем хранить заметки (фактически как единая таблица)
+     // включая автоматически увеличивающееся значение ключа
      let objectStore = db.createObjectStore("notes", {
        keyPath: "id",
        autoIncrement: true,
      });
 
-     // Define what data items the objectStore will contain
+     // Обозначьте, какие элементы данных будет содержать objectStore
      objectStore.createIndex("title", "title", { unique: false });
      objectStore.createIndex("body", "body", { unique: false });
 
@@ -336,13 +336,13 @@ Now let's look at what we have to do in the first place, to actually set up a da
    };
    ```
 
-   This is where we define the schema (structure) of our database; that is, the set of columns (or fields) it contains. Here we first grab a reference to the existing database from `e.target.result` (the event target's `result` property), which is the `request` object. This is equivalent to the line `db = request.result;` inside the `onsuccess` handler, but we need to do this separately here because the `onupgradeneeded` handler (if needed) will run before the `onsuccess` handler, meaning that the `db` value wouldn't be available if we didn't do this.
+   Здесь мы определяем схему (структуру) нашей базы данных; то есть набор колонок (или полей), которые она содержит. Сначала мы захватываем ссылку на существующую базу данных из `e.target.result` (свойства `result` цели события), которой является объект `request`. Это эквивалентно строке `db = request.result;` внутри обработчика `onsuccess`, но нам необходимо провести их раздельно, поскольку обработчик `onupgradeneeded` (при необходимости) будет выполнен перед обработчиком `onsuccess`, означая, что значение `db` не будет доступным, если мы этого не сделаем.
 
-   We then use {{domxref("IDBDatabase.createObjectStore()")}} to create a new object store inside our opened database. This is equivalent to a single table in a conventional database system. We've given it the name notes, and also specified an `autoIncrement` key field called `id` — in each new record this will automatically be given an incremented value — the developer doesn't need to set this explicitly. Being the key, the `id` field will be used to uniquely identify records, such as when deleting or displaying a record.
+   Затем мы используем {{domxref("IDBDatabase.createObjectStore()")}} для создания нового объекта внутри нашей открытой базы данных. Это эквивалентно единой таблице в общепринятой системе баз данных. Мы назвали этот объект notes, и указали ключ поля `autoIncrement` под именем `id` - в каждой новой записи этому будет автоматически присвоено увеличенное значение — разработчику не нужно устанавливать его явно. Являясь ключом, поле `id` будет использовано для уникальной идентификации записей, например, при удалении или отображении записи.
 
-   We also create two other indexes (fields) using the {{domxref("IDBObjectStore.createIndex()")}} method: `title` (which will contain a title for each note), and `body` (which will contain the body text of the note).
+   Также мы создаём два других индекса (поля), используя метод {{domxref("IDBObjectStore.createIndex()")}}: `title` (который будет содержать заголовок для каждой заметки), и `body` (который будет содержать текст заметки).
 
-So with this simple database schema set up, when we start adding records to the database each one will be represented as an object along these lines:
+Так, настроив эту простую схему базы данных, когда мы начнём добавлять записи в базу данных, каждая запись будет представлена подобно следующему объекту:
 
 ```js
 {

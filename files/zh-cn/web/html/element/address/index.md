@@ -16,7 +16,7 @@ slug: Web/HTML/Element/address
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-cn/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, palpable content.</td>
   </tr>
   <tr>

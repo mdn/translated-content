@@ -52,4 +52,4 @@ if (x == y) {
 ## 関連項目
 
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
-- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)
+- [等値演算子](/ja/docs/Web/JavaScript/Reference/Operators#等値演算子)

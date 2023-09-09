@@ -3,6 +3,8 @@ title: 什么是域名？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文中我们讨论了域名是什么，域名是如何被构建的，以及如何获得一个域名。
 
 <table class="learn-box standard-table">
@@ -33,7 +35,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 
 ## 自主学习
 
-_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)]。_
+_还没有可用的资料。[请考虑贡献一个](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## 深入探索
 
@@ -128,7 +130,7 @@ NOT FOUND
 
 #### DNS 刷新
 
-DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都源于 (refer to) 几个被称为“权威名称服务器”或“顶级 DNS 服务器”。只要您的注册商创建或更新给定域名的任何信息，信息就必须在每个 DNS 数据库中刷新。知道给定域名的每个 DNS 服务器都会存储一段时间的信息，然后再次刷新（DNS 服务器再次查询权威服务器）。因此，知道此域名的 DNS 服务器需要一些时间才能获取最新信息。
+DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都源于 (refer to) 几个被称为“权威名称服务器”或“顶级 DNS 服务器”。只要你的注册商创建或更新给定域名的任何信息，信息就必须在每个 DNS 数据库中刷新。知道给定域名的每个 DNS 服务器都会存储一段时间的信息，然后再次刷新（DNS 服务器再次查询权威服务器）。因此，知道此域名的 DNS 服务器需要一些时间才能获取最新信息。
 
 > **备注：** 这个时间一般被称为**传播时间**。然而这个术语是不精准的，因为更新本身没有传播 (top → down)。被你电脑 (down) 查询的 DNS 服务器只在他需要的时候才从权威服务器 (top) 中获取信息。
 
@@ -137,7 +139,7 @@ DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都�
 正如我们所看到的，当你想在浏览器中展示一个网页的时候，输入域名比输入 IP 简单多了。让我们看一下这个过程：
 
 1. 在你的浏览器地址栏输入`mozilla.org`。
-2. 您的浏览器询问您的计算机是否已经识别此域名所确定的 IP 地址（使用本地 DNS 缓存）。如果是的话，这个域名被转换为 IP 地址，然后浏览器与网络服务器交换内容。结束。
+2. 你的浏览器询问你的计算机是否已经识别此域名所确定的 IP 地址（使用本地 DNS 缓存）。如果是的话，这个域名被转换为 IP 地址，然后浏览器与网络服务器交换内容。结束。
 3. 如果你的电脑不知道 `mozilla.org` 域名背后的 IP, 它会询问一个 DNS 服务器，这个服务器的工作就是告诉你的电脑已经注册的域名所匹配的 IP。
 4. 现在电脑知道了要请求的 IP 地址，你的浏览器能够与网络服务器交换内容。
 
@@ -147,6 +149,6 @@ DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都�
 
 好了，我们讲了许多有关的步骤和结构。接下来。
 
-- 如果你想亲自实践，现在最好开始深入设计和探索 [对一个网页的剖析](/zh-CN/docs/Learn/Common_questions/Common_web_layouts).
-- 关于建站需要的花销这类问题的讨论也是有价值的。请参考 [建站需要花费多少钱](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost).
-- 或者在维基百科上阅读更多关于 [域名](http://en.wikipedia.org/wiki/Domain_name) .
+- 如果你想亲自实践，现在最好开始深入设计和探索 [对一个网页的剖析](/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)。
+- 关于建站需要的花销这类问题的讨论也是有价值的。请参考 [建站需要花费多少钱](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)。
+- 或者在维基百科上阅读更多关于 [域名](http://en.wikipedia.org/wiki/Domain_name)。

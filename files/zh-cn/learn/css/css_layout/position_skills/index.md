@@ -5,15 +5,15 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 {{LearnSidebar}}
 
-此任务的目的是让您使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，您将通过两个小任务来复习刚才课程材料中介绍的不同元素。
+此任务的目的是让你使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，你将通过两个小任务来复习刚才课程材料中介绍的不同元素。
 
-> **备注：** 您可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
+> **备注：** 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
 >
-> 如果您遇到困难，请向我们寻求帮助 - 请参阅本页底部的 [Assessment or further help](#assessment_or_further_help) 部分
+> 如果你遇到困难，请向我们寻求帮助 - 请参阅本页底部的 [Assessment or further help](#assessment_or_further_help) 部分
 
 ## 定位练习一
 
-在这项任务中，您需要将目标类别为 5px 灰色边框的元素定位到外部容器的右上角。
+在这项任务中，你需要将目标类别为 5px 灰色边框的元素定位到外部容器的右上角。
 
 ![The green box is at the top right of a container with a grey border.](position-task1.png)
 

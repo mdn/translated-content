@@ -31,7 +31,7 @@ slug: Web/SVG/Element/set
 
 ## DOM 接口
 
-该元素实现了[`SVGSetElement`](/zh-CN/DOM/SVGSetElement) 接口。
+该元素实现了 [`SVGSetElement`](/zh-CN/DOM/SVGSetElement) 接口。
 
 ## 参见
 
