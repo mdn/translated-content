@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{DOMXref("Location")}} 인터페이스의 **`replace()`** 메서드는 현재 리소스를 제공된 URL에 있는 리소스로 바꿔줍니다. `replace()`를 사용한 후에는 현재 페이지가 세션 {{domxref("History")}}에 저장되지 않으므로 사용자가 _뒤로가기_ 버튼을 사용하여 해당 페이지로 이동할 수 없다는 점에서 {{domxref("Location.assign","assign()")}} 메서드와 차이점이 있습니다.
+{{DOMXref("Location")}} 인터페이스의 **`replace()`** 메서드는 현재 리소스를 제공된 URL에 있는 리소스로 바꿔줍니다. `replace()`를 사용한 후에는 현재 페이지가 세션 {{domxref("History")}}에 저장되지 않으므로 사용자가 뒤로가기 버튼을 사용하여 해당 페이지로 이동할 수 없다는 점에서 {{domxref("Location.assign","assign()")}} 메서드와 차이점이 있습니다.
 
 보안 정책 위반으로 인해 할당을 수행할 수 없는 경우, `SECURITY_ERROR` 유형의 {{domxref("DOMException")}}이 발생합니다. 이것은 메서드를 호출하는 스크립트의 원본이 {{domxref("Location")}} 객체에 의해 원래 설명된 페이지의 원본과 다를 때 발생합니다. 스크립트가 다른 도메인에 호스팅된 경우에 주로 발생합니다.
 
