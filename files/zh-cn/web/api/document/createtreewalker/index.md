@@ -104,17 +104,13 @@ while (treeWalker.nextNode()) {
 
 ```html
 <div>
-  <div>
-    此文本未被转义。<span class="escape">但此文本被转义。</span>
-  </div>
+  <div>此文本未被转义。<span class="escape">但此文本被转义。</span></div>
   <div class="escape">此文本被转义。</div>
   <div class="no-escape">此文本未被转义。</div>
 </div>
 <hr />
 <div class="escape">
-  <div>
-    此文本被转义。<span class="no-escape">但此文本未被转义。</span>
-  </div>
+  <div>此文本被转义。<span class="no-escape">但此文本未被转义。</span></div>
   <div class="no-escape">此文本未被转义。</div>
 </div>
 <hr />
