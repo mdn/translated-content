@@ -38,11 +38,11 @@ send(data, timestamp)
 
 ## 例
 
-以下の例では、真ん中の C のノートをすぐに送信し、1 秒後にノートオフメッセージを送信します。
+以下の例では、真ん中のドのノートをすぐに送信し、1 秒後にノートオフメッセージを送信します。
 
 ```js
 function sendMiddleC(midiAccess, portID) {
-  const noteOnMessage = [0x90, 60, 0x7f]; // ノートオン、真ん中の C、フルベロシティー
+  const noteOnMessage = [0x90, 60, 0x7f]; // ノートオン、真ん中のド、フルベロシティー
   const output = midiAccess.outputs.get(portID);
   output.send(noteOnMessage); // タイムスタンプの省略は、すぐに送信することを意味する
   output.send([0x80, 60, 0x40], window.performance.now() + 1000.0); // timestamp = now + 1000ms
