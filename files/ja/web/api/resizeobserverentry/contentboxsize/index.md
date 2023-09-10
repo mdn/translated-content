@@ -25,19 +25,26 @@ slug: Web/API/ResizeObserverEntry/contentBoxSize
 この例では、ビューポートの大きさに対するパーセント値でサイズ設定された緑色のボックスが含まれています。ビューポートの大きさが変更されると、ボックスの丸みを帯びた角がボックスのサイズに比例して変更されます。パーセント値で {{cssxref("border-radius")}} を使用してこれを実装することもできますが、これではすぐに見苦しい楕円形の角になってしまいます。このソリューションでは、ボックスのサイズに比例した美しい四角形の角が得られます。
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize && entry.contentBoxSize.length > 0) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize[0].inlineSize/10) +
-                                                      (entry.contentBoxSize[0].blockSize/10)) + 'px';
+    if (entry.contentBoxSize && entry.contentBoxSize.length > 0) {
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentBoxSize[0].inlineSize / 10 +
+            entry.contentBoxSize[0].blockSize / 10,
+        ) + "px";
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## 仕様書

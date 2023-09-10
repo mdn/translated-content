@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('canplay', (event) => { });
+addEventListener("canplay", (event) => {});
 
-oncanplay = (event) => { };
+oncanplay = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,24 @@ oncanplay = (event) => { };
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplay', (event) => {
-  console.log('動画は開始できますが、最後まで再生されるかどうかはわかりません。');
+video.addEventListener("canplay", (event) => {
+  console.log(
+    "動画は開始できますが、最後まで再生されるかどうかはわかりません。",
+  );
 });
 ```
 
 イベントハンドラープロパティ `oncanplay` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log('動画は開始できますが、最後まで再生されるかどうかはわかりません。');
+  console.log(
+    "動画は開始できますが、最後まで再生されるかどうかはわかりません。",
+  );
 };
 ```
 

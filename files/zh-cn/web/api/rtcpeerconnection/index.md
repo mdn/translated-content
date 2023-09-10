@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection
 
 **`RTCPeerConnection`** 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。
 
-> **备注：** `RTCPeerConnection` 和[`RTCSessionDescription`](/zh-CN/docs/Web/API/RTCSessionDescription) 是很多浏览器中使用的名称。强烈建议使用补充库，例如强大并且被广泛支持的[Adapter.js](https://github.com/webrtcHacks/adapter)，以确保您网站或 Web 应用程序的兼容性。值得注意的是[Adapter.js](https://github.com/webrtcHacks/adapter)不仅仅提供这些，它还做了一些其他补充以增强 WebRTC 在浏览器中的兼容性。参考：
+> **备注：** `RTCPeerConnection` 和[`RTCSessionDescription`](/zh-CN/docs/Web/API/RTCSessionDescription) 是很多浏览器中使用的名称。强烈建议使用补充库，例如强大并且被广泛支持的[Adapter.js](https://github.com/webrtcHacks/adapter)，以确保你网站或 Web 应用程序的兼容性。值得注意的是[Adapter.js](https://github.com/webrtcHacks/adapter)不仅仅提供这些，它还做了一些其他补充以增强 WebRTC 在浏览器中的兼容性。参考：
 >
 > ```
 > var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;

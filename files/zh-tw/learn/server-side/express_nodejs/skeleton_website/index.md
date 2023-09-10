@@ -179,15 +179,15 @@ express express-locallibrary-tutorial --view=pug
      DEBUG=express-locallibrary-tutorial:* npm start
      ```
 
-3. 然後在瀏覽器中加載 <http://localhost:3000/> ，以訪問該應用程序。
+3. 然後在瀏覽器中加載 `http://localhost:3000/`，以訪問該應用程序。
 
 你應該會看到一個瀏覽器頁面，就像這樣:
 
 ![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
-你有一個能工作的 Express 應用了，讓它在 [http://localhost:3000/](http://localhost:3000/) 服務。
+你有一個能工作的 Express 應用了，讓它在 `http://localhost:3000/` 服務。
 
-> **備註：** 您也可以使用 `npm start`命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
+> **備註：** 你也可以使用 `npm start` 命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
 >
 > ```bash
 > >SET DEBUG=express-locallibrary-tutorial:* & npm start

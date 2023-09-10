@@ -52,7 +52,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 次の例は、このインターフェイスのいくつかの機能を示しています。 カスタムのシンクと API 提供のキューイング戦略を使用した `WritableStream` の作成を示しています。 次に、`sendMessage()` という関数を呼び出し、新しく作成したストリームと文字列を渡します。 この関数内で、{{domxref("WritableStreamDefaultWriter")}} のインスタンスを返すストリームの `getWriter()` メソッドを呼び出します。 `forEach()` 呼び出しを使用して、文字列の各チャンクをストリームに書き込みます。 最後に、`write()` および `close()` は、チャンクとストリームの成功または失敗に対処するためのプロミスを返します。
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 function sendMessage(message, writableStream) {
   // defaultWriter は WritableStreamDefaultWriter 型です
@@ -86,30 +86,33 @@ function sendMessage(message, writableStream) {
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // シンクの実装
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      const buffer = new ArrayBuffer(1);
-      const view = new Uint8Array(buffer);
-      view[0] = chunk;
-      const decoded = decoder.decode(view, { stream: true });
-      const listItem = document.createElement('li');
-      listItem.textContent = `Chunk decoded: ${decoded}`;
+const writableStream = new WritableStream(
+  {
+    // シンクの実装
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
+        view[0] = chunk;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `Chunk decoded: ${decoded}`;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      const listItem = document.createElement("li");
+      listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    const listItem = document.createElement('li');
-    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 sendMessage("Hello, world.", writableStream);
 ```

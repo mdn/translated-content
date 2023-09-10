@@ -117,8 +117,24 @@ let viewMatrix = view.transform.inverse.matrix;
 これは、次のように配列形式で表されます。
 
 ```js
-let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
-                   a9, a10, a11, a12, a13, a14, a15, a16];
+let matrixArray = [
+  a1,
+  a2,
+  a3,
+  a4,
+  a5,
+  a6,
+  a7,
+  a8,
+  a9,
+  a10,
+  a11,
+  a12,
+  a13,
+  a14,
+  a15,
+  a16,
+];
 ```
 
 この配列では、左端の列にエントリ a1、a2、a3、a4 が含まれています。 一番上の行には、エントリ a1、a5、a9、a13 が含まれています。
@@ -151,8 +167,7 @@ function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
   const aspectRatio = viewport.width / viewport.height;
 
   const transform = mat4.create();
-  mat4.perspective(transform, fovRadians, aspectRatio,
-                   nearClip, farClip);
+  mat4.perspective(transform, fovRadians, aspectRatio, nearClip, farClip);
   return transform;
 }
 ```
@@ -169,7 +184,11 @@ FOV 角度 `fovDegrees` を度数からラジアンに変換し、`viewport` パ
 
 ```js
 const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
-const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistance);
+const translateVec = vec3.fromValues(
+  -trackDistance,
+  -craneDistance,
+  pushDistance,
+);
 mat4.translate(transform, transform, translateVec);
 ```
 
@@ -182,12 +201,7 @@ mat4.translate(transform, transform, translateVec);
 2 倍に拡大する場合は、各成分に 2.0 を掛ける必要があります。 同じ量だけ縮小するには、-2.0 を掛けます。 行列の用語では、これは次のように拡大縮小係数された変換行列を使用して実行されます。
 
 ```js
-let scaleTransform = [
-  Sx,  0,  0,  0,
-   0, Sy,  0,  0,
-   0,  0, Sz,  0,
-   0,  0,  0,  1
-];
+let scaleTransform = [Sx, 0, 0, 0, 0, Sy, 0, 0, 0, 0, Sz, 0, 0, 0, 0, 1];
 ```
 
 この行列は、`(Sx, Sy, Sz)` で示される係数で拡大または縮小する変換を表します。 `Sx` は X 軸に沿った拡大縮小係数、`Sy` は Y 軸に沿った拡大縮小係数、`Sz` は Z 軸の係数です。 これらの値のいずれかが他の値と異なる場合、結果は一部の次元で他と比較して異なる伸縮になります。
@@ -196,12 +210,7 @@ let scaleTransform = [
 
 ```js
 function createScalingMatrix(f) {
-  return [
-    f, 0, 0, 0,
-    0, f, 0, 0,
-    0, 0, f, 0,
-    0, 0, 0, 1
-  ];
+  return [f, 0, 0, 0, 0, f, 0, 0, 0, 0, f, 0, 0, 0, 0, 1];
 }
 ```
 
@@ -209,12 +218,7 @@ function createScalingMatrix(f) {
 
 ```js
 let myVector = [2, 1, -3];
-let scaleTransform = [
-  2, 0, 0, 0,
-  0, 2, 0, 0,
-  0, 0, 2, 0,
-  0, 0, 0, 1
-];
+let scaleTransform = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1];
 vec4.transformMat4(myVector, myVector, scaleTransform);
 ```
 
@@ -328,8 +332,11 @@ mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 ここでの解決策は明白です。 平行移動は、各軸に沿って移動する距離を提供するベクトルとして表現されるため、次のようにそれらを組み合わせることができます。
 
 ```js
-mat4.translate(viewMatrix, viewMatrix,
-     [-truckDistance, -pedestalDistance, dollyDistance]);
+mat4.translate(viewMatrix, viewMatrix, [
+  -truckDistance,
+  -pedestalDistance,
+  dollyDistance,
+]);
 ```
 
 これにより、行列 `viewMatrix` の原点が各軸に沿って指定された量だけシフトします。
@@ -387,7 +394,9 @@ function myAnimationFrameCallback(time, frame) {
   let adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
   let pose = frame.getViewerPose(adjustedRefSpace);
 
-  animationFrameRequestID = frame.session.requestAnimationFrame(myAnimationFrameCallback);
+  animationFrameRequestID = frame.session.requestAnimationFrame(
+    myAnimationFrameCallback,
+  );
 
   if (pose) {
     let glLayer = frame.session.renderState.baseLayer;

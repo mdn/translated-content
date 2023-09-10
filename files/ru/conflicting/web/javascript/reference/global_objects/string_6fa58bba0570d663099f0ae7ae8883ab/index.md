@@ -1,8 +1,6 @@
 ---
 title: DOMString
-slug: >-
-  conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
-translation_of: Web/API/DOMString
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 original_slug: Web/API/DOMString
 ---
 {{APIRef("DOM")}}

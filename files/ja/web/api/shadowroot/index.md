@@ -71,14 +71,20 @@ attributeChangedCallback(name, oldValue, newValue) {
 function updateStyle(elem) {
   var shadow = elem.shadowRoot;
   var childNodes = shadow.childNodes;
-  for(var i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
+  for (var i = 0; i < childNodes.length; i++) {
+    if (childNodes[i].nodeName === "STYLE") {
       childNodes[i].textContent =
-        'div {' +
-          'width: ' + elem.getAttribute('l') + 'px;' +
-          'height: ' + elem.getAttribute('l') + 'px;' +
-          'background-color: ' + elem.getAttribute('c') + ';' +
-        '}';
+        "div {" +
+        "width: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "height: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "background-color: " +
+        elem.getAttribute("c") +
+        ";" +
+        "}";
     }
   }
 }

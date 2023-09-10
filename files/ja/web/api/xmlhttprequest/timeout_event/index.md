@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('timeout', (event) => { })
+addEventListener("timeout", (event) => {});
 
-ontimeout = (event) => { }
+ontimeout = (event) => {};
 ```
 
 ## イベント型
@@ -40,9 +40,9 @@ _以下に挙げたプロパティに加えて、親インターフェイスで�
 
 ```js
 const client = new XMLHttpRequest();
-client.open('GET', 'http://www.example.org/example.txt');
+client.open("GET", "http://www.example.org/example.txt");
 client.ontimeout = () => {
-    console.error('Timeout!!')
+  console.error("Timeout!!");
 };
 
 client.send();
@@ -51,8 +51,8 @@ client.send();
 イベントハンドラーは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用して設定することもできます。
 
 ```js
-client.addEventListener('timeout', () => {
-    console.error("Timeout!!");
+client.addEventListener("timeout", () => {
+  console.error("Timeout!!");
 });
 ```
 

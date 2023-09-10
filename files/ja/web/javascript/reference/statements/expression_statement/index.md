@@ -27,7 +27,7 @@ expression;
 - 関数呼び出し (`console.log("Hello");`, `[1, 2, 3].forEach((i) => console.log(i));`)
 - [タグ付きテンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)
 - [代入式](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)（複合演算子を含む）
-- [インクリメント／デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators#increment_and_decrement)
+- [インクリメント／デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators#インクリメントとデクリメント)
 - [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete)
 - [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import)
 - [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) および [`yield*`](/ja/docs/Web/JavaScript/Reference/Operators/yield*)
@@ -95,7 +95,7 @@ console.log(let); // [1, 2, 3]
 
 ### 制御フロー文の回避
 
-制御フロー文の使用は、式文を使ってほとんど避けることができます。例えば、`if...else` は[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)や[論理演算子](/ja/docs/Web/JavaScript/Reference/Operators#binary_logical_operators)に置き換えることができます。`for` や `for...of` のような反復処理文は、[配列メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#インスタンスメソッド)に置き換えることができます。
+制御フロー文の使用は、式文を使ってほとんど避けることができます。例えば、`if...else` は[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)や[論理演算子](/ja/docs/Web/JavaScript/Reference/Operators#バイナリー論理演算子)に置き換えることができます。`for` や `for...of` のような反復処理文は、[配列メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#インスタンスメソッド)に置き換えることができます。
 
 ```js
 // 制御フロー文の使用

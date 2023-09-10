@@ -25,7 +25,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 最初に乗算と除算をし、次に加算と引き算をする優先順位を、最初に加算を評価するように上書きします。
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
