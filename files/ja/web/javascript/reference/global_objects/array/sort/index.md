@@ -2,7 +2,7 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
