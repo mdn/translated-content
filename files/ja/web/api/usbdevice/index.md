@@ -51,7 +51,7 @@ l10n:
 - {{domxref("USBDevice.claimInterface()")}} {{Experimental_Inline}}
   - : 要求したインターフェイスの排他アクセスを獲得したら解決する {{jsxref("Promise")}} を返します。
 - {{domxref("USBDevice.clearHalt()")}} {{Experimental_Inline}}
-  - : 停止状態のクリアが完了したら解決する {{jsxref("Promise")}}  を返します。
+  - : 停止状態のクリアが完了したら解決する {{jsxref("Promise")}} を返します。
 - {{domxref("USBDevice.controlTransferIn()")}} {{Experimental_Inline}}
   - : コマンドまたは状態の操作の USB デバイスへの転送が完了したら {{domxref("USBInTransferResult")}} で解決する {{jsxref("Promise")}} を返します。
 - {{domxref("USBDevice.controlTransferOut()")}} {{Experimental_Inline}}
