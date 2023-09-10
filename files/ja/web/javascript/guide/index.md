@@ -85,10 +85,10 @@ slug: Web/JavaScript/Guide
     </p>
   </li>
   <li><a href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects">オブジェクトを利用する</a>
-    <p><a href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">オブジェクトとそのプロパティ</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects">新しいオブジェクトの作成</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods">メソッドの定義</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">getter と setter</a></p>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#オブジェクトとプロパティ">オブジェクトとそのプロパティ</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#新しいオブジェクトの作成">新しいオブジェクトの作成</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#メソッドの定義">メソッドの定義</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#ゲッターとセッターの定義">getter と setter</a></p>
   </li>
   <li><a href="/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">オブジェクトモデルの詳細</a>
     <p><a

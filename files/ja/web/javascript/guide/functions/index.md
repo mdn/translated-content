@@ -156,7 +156,7 @@ function square(n) {
 > };
 > ```
 
-関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)の章で定義) は、オブジェクトを引数にとる関数の例です。
+関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#オブジェクトとプロパティ)の章で定義) は、オブジェクトを引数にとる関数の例です。
 
 関数はその関数自身を呼び出すこともできます。例えば、ここに階乗を計算する関数を示します。
 
