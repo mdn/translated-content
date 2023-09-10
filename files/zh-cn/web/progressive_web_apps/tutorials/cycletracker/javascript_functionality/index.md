@@ -117,7 +117,7 @@ function checkDatesInvalid(startDate, endDate) {
 
 [LocalStorage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) 有几个局限，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
 
-对于更健壮的应用程序，其他 [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) 选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)(IDB) 和后面讨论的 service worker 性能更好。
+对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) 选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)(IDB) 和后面讨论的 service worker 性能更好。
 
 `localStorage` 的局限包括：
 
@@ -308,12 +308,12 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-你可以试试完全可用的 [CycleTracker 经期跟踪 Web 应用](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality), 并在 GitHub 上查看 [Web 应用源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality)。是的，它可用，但还不是 PWA。
+你可以试试完全可用的 [CycleTracker 经期跟踪 Web 应用](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality)，并在 GitHub 上查看 [Web 应用源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality)。是的，它可用，但还不是 PWA。
 
 ## 接下来
 
-从本质上讲，PWA 是一个可以安装的 Web 应用程序，可以渐进增强以离线工作。现在我们已经有了一个完全可用的 Web 应用程序，我们添加将其转换为 PWA 所需的功能，包括 [清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)、[安全连接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) 和 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)。
+从本质上讲，PWA 是一个可以安装的 Web 应用程序，可以渐进增强以离线工作。现在我们已经有了一个完全可用的 Web 应用程序，我们添加将其转换为 PWA 所需的功能，包括[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)、[安全连接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) 和 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)。
 
-首先，我们为 CycleTracker 创建 [清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)，包括我们的 CycleTracker PWA 的标识、外观和图标。
+首先，我们为 CycleTracker 创建[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)，包括我们的 CycleTracker PWA 的标识、外观和图标。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS","Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
