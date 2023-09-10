@@ -19,13 +19,13 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 ## 描述
 
-`callee` 是 `arguments` 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数。这在函数的名称是未知时很有用，例如在没有名称的函数表达式（也称为“匿名函数”）内。
+`callee` 是 `arguments` 对象的一个属性。它可以用于引用某个函数的函数体内当前正在执行的函数。这在函数的名称未知时很有用，例如在没有名称的函数表达式（也称为“匿名函数”）内。
 
 （以下内容大部分改编自 [olliej 在 Stack Overflow 上的回答](https://stackoverflow.com/a/235760/578288)）
 
 早期版本的 JavaScript 不允许使用具名函数表达式，出于这样的原因，你不能创建递归函数表达式。
 
-例如，下边这个语法就是行的通的：
+例如，以下语法是有效的：
 
 ```js
 function factorial(n) {
@@ -58,7 +58,7 @@ const global = this;
 
 const sillyFunction = function (recursed) {
   if (this !== global) {
-    console.log("this 是 ", this);
+    console.log("this 是", this);
   } else {
     console.log("this 是 global");
   }
@@ -73,7 +73,7 @@ sillyFunction();
 // this 是 [object Arguments]
 ```
 
-此外，`arguments.callee` 的引用使得内联和尾递归优化在大多数情况下都不再可能做到。（你可以通过追踪个别的例子等方法来实现它，但即使是最好的代码也是次优选项，因为做了本来是不需要的检查。）
+此外，`arguments.callee` 的引用使得在一般情况下无法实现内联和尾递归优化。（你可以通过追踪个别的例子等方法来实现它，但即使是最好的代码也是次优选项，因为做了本来是不需要的检查。）
 
 ECMAScript 3 通过允许具名函数表达式解决了这些问题。例如：
 
@@ -120,7 +120,7 @@ function create() {
 const result = create()(5); // 返回 120（5 * 4 * 3 * 2 * 1）
 ```
 
-### 使用 Y 组合器的匿名函数递归
+### 使用 Y 组合子的匿名函数递归
 
 虽然函数表达式现在可以被命名，但[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)始终是匿名的，这意味着它们无法在没有被赋值给变量的情况下引用自身。幸运的是，在 Lambda 演算中有一个非常好的解决方案，它允许一个函数既是匿名的又是自引用的。这个技术被称为 [Y 组合子](https://zh.wikipedia.org/wiki/不动点组合子#Y组合子)。在这里我们不会解释它是*如何工作*的，而仅介绍*如何使用*。
 
@@ -148,4 +148,7 @@ console.log(
 
 ## 参见
 
-- {{jsxref("Function")}}
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Function.prototype.caller")}}
