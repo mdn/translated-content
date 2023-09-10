@@ -121,7 +121,7 @@ console.log(fruits.length); // 2
 - {{jsxref("Array/toLocaleString", "toLocaleString()")}}
 - {{jsxref("Array/values", "values()")}}
 
-### 복사 메서드와 변경 메서드
+### 복사 메서드와 변경 메서드(mutating method)
 
 일부 메서드는 메서드가 호출된 기존 배열을 변경하지 않는 대신, 새 배열을 반환합니다. 이러한 메서드는 먼저 새 배열을 구성한 다음 요소를 채우는 방식으로 수행됩니다. 복사는 항상 [얕게](/ko/docs/Glossary/Shallow_copy) 이루어지며, 메서드는 처음에 생성된 배열 이외에는 아무것도 복사하지 않습니다. 원래 배열의 요소는 다음과 같이 새 배열에 복사됩니다
 
