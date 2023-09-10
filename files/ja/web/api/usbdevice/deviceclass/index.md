@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-{{domxref("USBDevice")}}  インターフェイスの読み取り専用プロパティ **`deviceClass`** は、デバイスとともに動く USB ドライバーのロード用に USB デバイスを特定する 3 個のプロパティのうちの 1 個です。他の 2 個のプロパティは `USBDevice.deviceSubclass` と `USBDevice.deviceProtocol` です。
+{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`deviceClass`** は、デバイスとともに動く USB ドライバーのロード用に USB デバイスを特定する 3 個のプロパティのうちの 1 個です。他の 2 個のプロパティは `USBDevice.deviceSubclass` と `USBDevice.deviceProtocol` です。
 
 ## 値
 
