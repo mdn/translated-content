@@ -39,7 +39,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 
 ## 예제
 
-### 특정 기능은 교차 출처 격리에 따라 달라집니다.
+### 특정 기능은 교차 출처 격리에 따라 달라집니다
 
 문서에 `require-corp` 또는 `credentialless` 값이 설정된 COEP 헤더가 있는 경우, 스로틀링되지 않은 타이머를 사용하여 {{jsxref("SharedArrayBuffer")}} 객체나 {{domxref("Performance.now()")}} 같은 특정 기능에만 액세스할 수 있습니다.
 
