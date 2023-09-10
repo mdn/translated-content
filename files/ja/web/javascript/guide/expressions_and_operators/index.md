@@ -2,7 +2,7 @@
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: d71b141d2d18b96639547856714df19cefacfebf
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -122,6 +122,8 @@ console.log(val); // 0 と表示
 
 より複雑な代入方法、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文は、配列やオブジェクトのリテラル構造を反映した構文を用いて、配列やオブジェクトからデータを抽出することができる JavaScript の式です。
 
+分割代入をしないと、配列やオブジェクトから値を取り出すのに複数の文が必要になります。
+
 ```js
 const foo = ["one", "two", "three"];
 
@@ -129,8 +131,11 @@ const foo = ["one", "two", "three"];
 const one = foo[0];
 const two = foo[1];
 const three = foo[2];
+```
 
-// 分割代入
+分割代入を使用すると、単一の文で複数の値を別々の変数に抽出することができます。
+
+```js
 const [one, two, three] = foo;
 ```
 
@@ -1007,8 +1012,8 @@ a * c + b * c // 9
 
 [`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)を使用すると、いずれかのユーザー定義オブジェクト型や組み込みオブジェクト型のインスタンスを生成することができます。 `new` の使用法は以下のとおりです。
 
-```js
-const オブジェクト名 = new objectType(引数1, 引数2, /* …, */ 引数N);
+```js-nolint
+const オブジェクト名 = new オブジェクト型(引数1, 引数2, /* …, */ 引数N);
 ```
 
 ### super
@@ -1016,7 +1021,7 @@ const オブジェクト名 = new objectType(引数1, 引数2, /* …, */ 引数
 [`super` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/super)は自分の親のオブジェクトに関数を呼び出すのに使います。
 これは下の例のように、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)と共に使って親のコンストラクターを呼び出すのに便利です。
 
-```js
+```js-nolint
 super(引数); // 親のコンストラクターを呼び出す。
 super.親の関数(引数);
 ```
