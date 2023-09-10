@@ -32,10 +32,10 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 
   - : Il y a une large palette de sélecteurs CSS disponibles permettant avec une fine granularité de désigner les éléments auxquels appliquer des styles. Dans cet article, nous verrons avec moult détails comment ces différents types de sélecteurs fonctionnent, au travers de plusieurs parties :
 
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [The box model (le modèle des boîtes)](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Tout en CSS a une boîte autour de lui, et comprendre ces boîtes est la clef pour être capable de créer des mises en page avec CSS, ou d'aligner des éléments avec d'autres. Dans cette leçon, nous nous attarderons sur le modèle de boîte CSS, afin que vous puissiez passer à des mises en page plus complexes grâce à une meilleure compréhension du fonctionnement et de la terminologie.
@@ -50,7 +50,7 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 - [Sizing items in CSS (dimensionner les éléments en CSS)](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
   - : Dans plusieurs leçons précédentes, vous avez abordé plusieurs façons de dimensionner de nombreux éléments d'une page web en utilisant le CSS. Comprendre pour anticiper les tailles des composants de votre design est important. Dans cette leçon nous résumerons par quels différents biais les éléments sont dimensionnés en CSS et définirons quelques termes qui vous aideront à l'avenir.
 - [Images, media, and form elements (images, médias et éléments de formulaires)](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-  - : Dans cet article, nous verrons comment des éléments particuliers sont traités en CSS. Les images, les autres médias, ou encore le éléments de formulaires se comportent légèrement différement des boîtes habituelles lorsque vous souhaitez leur appliquer un style CSS. Comprendre ce qu'il est possible ou non de faire vous évitera d'éventuelles déceptions cette leçon soulignera ce qu'il vous faut savoir.
+  - : Dans cet article, nous verrons comment des éléments particuliers sont traités en CSS. Les images, les autres médias, ou encore les éléments de formulaires se comportent légèrement différement des boîtes habituelles lorsque vous souhaitez leur appliquer un style CSS. Comprendre ce qu'il est possible ou non de faire vous évitera d'éventuelles déceptions cette leçon soulignera ce qu'il vous faut savoir.
 - [Mise en page des tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
   - : Styliser un tableau HTML n'est pas le travail qui fait rêver, mais vous pouvez parfois avoir à le faire. Cet article vous guide pour réussir l'apparence de vos tableaux en soulignant les techniques spécifiques applicables.
 - [Debugging CSS (déboguer le CSS)](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)

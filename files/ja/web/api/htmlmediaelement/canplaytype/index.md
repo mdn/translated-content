@@ -37,8 +37,8 @@ canPlayType(type)
 ## 例
 
 ```js
-let obj = document.createElement('video');
-console.log(obj.canPlayType('video/mp4')); // "maybe"
+let obj = document.createElement("video");
+console.log(obj.canPlayType("video/mp4")); // "maybe"
 ```
 
 ## 仕様書

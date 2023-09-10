@@ -22,14 +22,16 @@ var myEnd = pushSubscription.endpoint;
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.subscribe({userVisibleOnly: true}).then(function(subscription) {
-    console.log(subscription.endpoint);
+navigator.serviceWorker.ready.then(function (reg) {
+  reg.pushManager
+    .subscribe({ userVisibleOnly: true })
+    .then(function (subscription) {
+      console.log(subscription.endpoint);
 
       // この時点で、サブスクリプションエンドポイントをサーバーに送信し、
       // 保存した後、後でプッシュメッセージを送信するために使用します。
-  })
-})
+    });
+});
 ```
 
 ## 仕様書

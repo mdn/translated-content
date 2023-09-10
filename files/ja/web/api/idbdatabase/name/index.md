@@ -10,7 +10,7 @@ slug: Web/API/IDBDatabase/name
 ## 構文
 
 ```js
-db.name
+db.name;
 ```
 
 ### 値
@@ -26,12 +26,12 @@ db.name
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
   db = DBOpenRequest.result;

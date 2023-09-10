@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/uniform
 
 {{APIRef("WebGL")}}
 
-Les méthodes **`WebGLRenderingContext.uniform[1234][fi][v]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) indiquent les valeurs des variables uniform.
+Les méthodes **`WebGLRenderingContext.uniform[1234][fi][v]()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) indiquent les valeurs des variables uniform.
 
 > **Note :** Beaucoup des fonctions décrites ici ont des interfaces WebGL 2 étendues, qui peuvent être trouvées en {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
 

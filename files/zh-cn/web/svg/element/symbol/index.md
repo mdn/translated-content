@@ -54,7 +54,7 @@ slug: Web/SVG/Element/symbol
 
 ## DOM 接口
 
-该元素实现了[`SVGSymbolElement`](/zh-CN/DOM/SVGSymbolElement)接口。
+该元素实现了 [`SVGSymbolElement`](/zh-CN/DOM/SVGSymbolElement) 接口。
 
 ## 浏览器兼容性
 

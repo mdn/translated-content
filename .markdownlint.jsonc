@@ -124,6 +124,7 @@
   "code-block-style": {
     "style": "fenced"
   },
+  "no-space-in-code": false,
   "emphasis-style": false,
   // XXX Replace with the following when ready:
   // "emphasis-style": {

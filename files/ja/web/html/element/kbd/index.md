@@ -34,7 +34,7 @@ l10n:
 ```html
 <p>
   コマンド "mycommand" のドキュメントを参照するには <kbd>help mycommand</kbd>
-コマンドを使用してください。
+  コマンドを使用してください。
 </p>
 ```
 
@@ -55,7 +55,8 @@ l10n:
 ```html
 <p>
   キーボードショートカットの
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> を使用して新規文書を作成することもできます。
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>
+  を使用して新規文書を作成することもできます。
 </p>
 ```
 

@@ -51,7 +51,7 @@ function main() {
 
 La première chose que nous faisons ici est d'obtenir une référence au canvas, en l'affectant à une variable dénommée `canvas`.
 
-Une fois que nous avons le canvas, nous essayons de lui obtenir un [WebGLRenderingContext](/fr-FR/docs/Web/API/WebGLRenderingContext), en appelant [getContext](/fr-FR/docs/Web/API/HTMLCanvasElement/getContext) et en lui passant la chaîne `"webgl"`. Si le navigateur ne supporte pas WebGL, `getContext` retournera `null`, auquel cas nous afficherons un message pour l'utilisateur, et nous sortirons.
+Une fois que nous avons le canvas, nous essayons de lui obtenir un [WebGLRenderingContext](/fr/docs/Web/API/WebGLRenderingContext), en appelant [getContext](/fr/docs/Web/API/HTMLCanvasElement/getContext) et en lui passant la chaîne `"webgl"`. Si le navigateur ne supporte pas WebGL, `getContext` retournera `null`, auquel cas nous afficherons un message pour l'utilisateur, et nous sortirons.
 
 Si le contexte est initialisé avec succès, la variable `gl` sera notre référence à celui-ci. Dans ce cas, nous définissons la couleur d'effacement comme étant le noir, et nous effaçons le contexte avec cette couleur (redessin du canvas avec la couleur d'arrière-plan).
 

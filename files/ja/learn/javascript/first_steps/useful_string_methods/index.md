@@ -662,9 +662,9 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('Playable_code_3', '100%', 585, "", "", "hide-codepen-jsfiddle") }}
 
-## スキルをテストしよう!
+## スキルテスト
 
-この記事の最後に到達しましたが、最も大事な情報を覚えていますか？移動する前に、情報を維持しているかを検証するテストを見ることができます— [Test your skills: Strings](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Strings](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings) を見てください。
 
 ## 結論
 

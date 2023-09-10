@@ -40,7 +40,7 @@ Escribir HTML es fácil, pero ¿qué pasa si algo va mal y desconocemos dónde e
 
 Cuando escribimos cualquier tipo de código, normalmente todo va bien, hasta ese fatídico momento en el que ocurre un error, hemos hecho algo mal y el código no funciona, o no funciona del todo, no lo suficientemente bien. Por ejemplo, el dibujo siguiente muestra un error de {{glossary("compile","compilación")}} de un programa sencillo escrito en lenguaje [Rust](https://www.rust-lang.org/).
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)En el ejemplo, el mensaje de error es fácilmente comprensible: "unterminated double quote string" (comillas sin cerrar en el texto). Si analizamos el listado de código, observamos que en `println!(Hello, world!");` faltan una comillas. Pero, los mensajes de error pueden complicarse con facilidad y su interpretación ser menos sencilla a medida que los programas aumentan en tamaño, e incluso casos sencillo pueden llegar a intimidar a alguien que no sabe nada de Rust.
+![Una ventana de consola que muestra el resultado de intentar compilar un programa Rust al que le faltan comillas alrededor de una cadena en una declaración impresa. El mensaje de error informado es error: cadena de comillas dobles sin terminar.](error-message.png)En el ejemplo, el mensaje de error es fácilmente comprensible: "unterminated double quote string" (comillas sin cerrar en el texto). Si analizamos el listado de código, observamos que en `println!(Hello, world!");` faltan una comillas. Pero, los mensajes de error pueden complicarse con facilidad y su interpretación ser menos sencilla a medida que los programas aumentan en tamaño, e incluso casos sencillo pueden llegar a intimidar a alguien que no sabe nada de Rust.
 
 Sin embargo, la depuración no nos debe asustar; la clave para sentirnos cómodos con la escritura y la depuración de cualquier lenguaje o código es la familiaridad, tanto con el lenguaje como con las herramientas.
 
@@ -64,25 +64,25 @@ HTML en sí mismo no suele producir errores sintácticos porque los navegadores 
 Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos.
 
 1. En primer lugar, hagamos una copia de nuestro [ejemplo-demo a depurar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) y guardémoslo de forma local. Está escrito para generar diversos errores que deberemos descubrir (se dice que el marcado de HTML está **mal formado**, en contraposición a un marcado **bien formado**).
-2. A continuación, abrámoslo en un navegador; veremos lo siguiente:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
+2. A continuación, abrámoslo en un navegador; veremos lo siguiente:![Un documento HTML simple con un título de ejemplos de depuración de HTML y cierta información sobre errores HTML comunes, como elementos no cerrados, elementos mal anidados y atributos no cerrados.](badly-formed-html.png)
 3. No parece que esté bien; veamos el código fuente para ver qué podemos hacer (solo mostramos el contenido del \<body>):
 
    ```html
-   <h1>HTML debugging examples</h1>
+   <h1>Ejemplos de depuración de HTML</h1>
 
-   <p>What causes errors in HTML?
+   <p>¿Qué causa los errores en HTML?
 
    <ul>
-     <li>Unclosed elements: If an element is <strong>not closed properly,
-         then its effect can spread to areas you didn't intend
+     <li>Elementos no cerrados: Si un elemento <strong>no está cerrado correctamente,
+         su efecto puede extenderse a áreas que no pretendía
 
-     <li>Badly nested elements: Nesting elements properly is also very important
-         for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
-         what is this?</em>
+     <li>Elementos mal anidados: anidar elementos correctamente también es muy importante
+         para que el código se comporte correctamente. <strong>negritas <em>negritas enfatizadas?</strong>
+         ¿qué es esto?</em>
 
-     <li>Unclosed attributes: Another common source of HTML problems. Let's
-         look at an example: <a href="https://www.mozilla.org/>link to Mozilla
-         homepage</a>
+     <li>Atributos no cerrados: otra fuente común de problemas de HTML. Veamos
+         un ejemplo: <a href="https://www.mozilla.org/>enlace a la página
+         de inicio de Mozilla</a>
    </ul>
    ```
 
@@ -90,11 +90,11 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
 
    - El elemento {{htmlelement("p")}} y el {{htmlelement("li")}} no tienen etiquetas de cierre. Si comprobamos el resultado, no parece que haya generado un efecto grave en la representación del lenguaje de marcado, porque es fácil deducir que donde un elemento acaba, debería comenzar otro.
    - El primer elemento {{htmlelement("strong")}} no tiene etiqueta de cierre. Este resulta ser un poco más problemático porque no es fácil deducir dónde se supone que termina el elemento. De hecho, el énfasis fuerte se ha aplicado al resto del texto.
-   - Esta sección está mal anidada: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
+   - Esta sección está mal anidada: `<strong>negritas <em>negritas enfatizadas?</strong> ¿qué es esto?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
    - Al valor del atributo [`href`](/es/docs/Web/HTML/Element/a#href) le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
 
 5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), y luego continuaremos.
-6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
+6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![El inspector de HTML en Firefox, con el párrafo de nuestro ejemplo resaltado, muestra el texto "¿Qué causa los errores en HTML?" Aquí puede ver que el navegador ha cerrado el elemento de párrafo.](html-inspector.png)
 7. Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
 
    - Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.
@@ -103,10 +103,10 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
 
      ```html
      <strong
-       >strong
-       <em>strong emphasised?</em>
+       >negritas
+       <em>negritas enfatizadas</em>
      </strong>
-     <em> what is this?</em>
+     <em>¿qué es esto?</em>
      ```
 
    - El enlace a cuyo atributo le faltan las comillas del final ha sido ignorado. La última lista la ha dejado como sigue:
@@ -114,8 +114,8 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
      ```html
      <li>
        <strong
-         >Unclosed attributes: Another common source of HTML problems. Let's
-         look at an example:
+         >Atributos no cerrados: otra fuente común de problemas de HTML. Veamos
+         un ejemplo:
        </strong>
      </li>
      ```
@@ -126,7 +126,7 @@ Con el ejemplo anterior podemos asegurarnos de que nuestro HTML está bien forma
 
 La mejor estrategia es comenzar por pasar tu página HTML por el [servicio de validación de etiquetas](https://validator.w3.org/); fue creado y está mantenido por el W3C, organización que se encarga de definir las especificaciones de HTML, CSS y otras tecnologías web. Esta página web toma un documento HTML como entrada, lo procesa, y genera un informe de dónde están los errores en el documento.
 
-![The HTML validator homepage](validator.png)
+![La página de inicio del validador HTML](validator.png)
 
 Para validar el HTML, podemos proporcionar al validador una dirección web a la que apuntar, subirle un archivo HTML, o directamente introducirle el código HTML que queremos que revise.
 
@@ -141,7 +141,7 @@ Vamos a probar de validar nuestro [documento ejemplo](https://github.com/mdn/lea
 
 Esto debería proporcionar una lista de errores y otras informaciones:
 
-![A list of of HTML validation results from the W3C markup validation service](validation-results.png)
+![Una lista de resultados de validación HTML del servicio de validación de marcado W3C](validation-results.png)
 
 #### Interpretación de los mensajes de error
 
@@ -154,7 +154,7 @@ La lista de mensajes de error que nos presenta el validador suele ayudar, pero a
 - "End of file reached when inside an attribute value. Ignoring tag": Esta es bastante enigmática; se refiere al hecho de que el valor de un atributo no ha sido bien construido, posiblemente cerca del final del archivo porque el final aparece dentro del valor del atributo. El hecho de que el navegador no muestre el enlace nos debería dar una buena pista de qué elemento es el erróneo.
 - "End of file seen and there were open elements": Este es un poco ambiguo, pero básicamente se refiere al hecho de que hay elementos abiertos que necesitan ser cerrados adecuadamente. Los números de línea apuntan a las últimas líneas del archivo, y este mensaje de error viene con una línea de código que indica un ejemplo de un elemento abierto:
 
-  example: `<a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>`
+  ejemplo: `<a href="https://www.mozilla.org/>enlace a la página de inicio de Mozilla</a> ↩ </ul>↩ </body>↩</html>`
 
   > **Nota:** Un atributo al que le falten las comillas de cierre puede ser un elemento abierto, porque el resto del documento será interpretado como si fuera parte de este atributo.
 
@@ -164,7 +164,7 @@ No debemos preocuparnos si no podemos corregir todos los mensajes de error; es p
 
 Sabremos que todos los errores están arreglados cuando veamos el mensaje siguiente:
 
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
+![Banner que dice "El documento se valida de acuerdo con los esquemas especificados y con restricciones adicionales verificadas por el validador".](valid-html-banner.png)
 
 ## Resumen
 
