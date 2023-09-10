@@ -245,19 +245,16 @@ li:nth-of-type(even) {
 body {
   background-color: #efe;
 }
-
 ul,
 fieldset,
 legend {
   border: 1px solid;
   background-color: #fff;
 }
-
 li,
 legend {
   background-color: #cfc;
 }
-
 li:nth-of-type(even) {
   background-color: inherit;
 }
@@ -269,7 +266,6 @@ li:nth-of-type(even) {
 ul {
   padding: 0;
 }
-
 li {
   list-style-type: none;
 }
@@ -281,11 +277,9 @@ li {
 body {
   margin: 1vh 1vw;
 }
-
 ul {
   font-family: monospace;
 }
-
 li,
 legend {
   padding: 0.2em 0.5em;
@@ -299,26 +293,22 @@ body {
   margin: 1vh 1vw;
   background-color: #efe;
 }
-
 ul,
 fieldset,
 legend {
   border: 1px solid;
   background-color: #fff;
 }
-
 ul {
   padding: 0;
   font-family: monospace;
 }
-
 li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
   background-color: #cfc;
 }
-
 li:nth-of-type(even) {
   background-color: inherit;
 }
