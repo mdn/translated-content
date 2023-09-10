@@ -15,7 +15,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
           >cómo funciona Internet</a
         >
         y entender
-        <a href="/en-US/Learn/Understanding_URLs">qué son las URLs</a>.
+        <a href="/es/Learn/Understanding_URLs">qué son las URLs</a>.
       </td>
     </tr>
     <tr>
@@ -32,7 +32,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
 
 Los nombres de dominio son una parte clave de la infraestructura de internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
 
-Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
+Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
 
 ## Ánalisis del tema
 
@@ -40,7 +40,7 @@ Cualquier computadora conectada a Internet puede ser alcanzada a partir de una d
 
 Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
 
-![Anatomy of the MDN domain name](structure.png)
+![Anatomía del nombre de dominio MDN](structure.png)
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
@@ -137,7 +137,7 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
 4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
 
-![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
+![Explicación de los pasos necesarios para obtener el resultado de una solicitud DNS](2014-10-dns-request2.png)
 
 ## Próximos pasos
 

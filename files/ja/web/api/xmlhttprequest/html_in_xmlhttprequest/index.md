@@ -19,9 +19,9 @@ W3C の {{domxref("XMLHttpRequest")}} 仕様書では、もともと {{Glossary(
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.onload = function() {
+xhr.onload = function () {
   console.log(this.responseXML.title);
-}
+};
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
 xhr.send();
@@ -35,13 +35,12 @@ xhr.send();
 
 ```js
 function HTMLinXHR() {
-  if (!window.XMLHttpRequest)
-    return false;
+  if (!window.XMLHttpRequest) return false;
   var req = new window.XMLHttpRequest();
-  req.open('GET', window.location.href, false);
+  req.open("GET", window.location.href, false);
   try {
-    req.responseType = 'document';
-  } catch(e) {
+    req.responseType = "document";
+  } catch (e) {
     return true;
   }
   return false;
@@ -67,29 +66,37 @@ function HTMLinXHR() {
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    window.setTimeout(function() { callback(false); }, 0);
+    window.setTimeout(function () {
+      callback(false);
+    }, 0);
     return;
   }
   var done = false;
   var xhr = new window.XMLHttpRequest();
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (this.readyState == 4 && !done) {
       done = true;
-      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title == "&&<"));
+      callback(
+        !!(
+          this.responseXML &&
+          this.responseXML.title &&
+          this.responseXML.title == "&&<"
+        ),
+      );
     }
-  }
-  xhr.onabort = xhr.onerror = function() {
+  };
+  xhr.onabort = xhr.onerror = function () {
     if (!done) {
       done = true;
       callback(false);
     }
-  }
+  };
   try {
     xhr.open("GET", "detect.html");
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    window.setTimeout(function() {
+    window.setTimeout(function () {
       if (!done) {
         done = true;
         callback(false);
@@ -112,16 +119,37 @@ HTTP の {{HTTPHeader("Content-Type")}} ヘッダーで文字エンコーディ�
 `XMLHttpRequest` はもともと、 XML の解析のみ対応していました。 HTML の解析は最近追加されたものです。古いブラウザーでも、 {{domxref("XMLHttpRequest.responseText")}} プロパティと[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)の組み合わせで、例えば、指定された ID の HTML 要素のソースコードを取得することができます。
 
 ```js
-function getHTML (oXHR, sTargetId) {
-  var  rOpen = new RegExp("<(?!\!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^>]*>" ,"i"),
-       sSrc = oXHR.responseText, aExec = rOpen.exec(sSrc);
+function getHTML(oXHR, sTargetId) {
+  var rOpen = new RegExp(
+      "<(?!!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"']" + sTargetId + "[\"'][^>]*>",
+      "i",
+    ),
+    sSrc = oXHR.responseText,
+    aExec = rOpen.exec(sSrc);
 
-  return aExec ? (new RegExp("(?:(?:.(?!<\\s*" + aExec[1] + "[^>]*[>]))*.?<\\s*" + aExec[1] + "[^>]*[>](?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?<\\s*\/\\s*" + aExec[1] + "\\s*>)*(?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?", "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
+  return aExec
+    ? new RegExp(
+        "(?:(?:.(?!<\\s*" +
+          aExec[1] +
+          "[^>]*[>]))*.?<\\s*" +
+          aExec[1] +
+          "[^>]*[>](?:.(?!<\\s*/\\s*" +
+          aExec[1] +
+          "\\s*>))*.?<\\s*/\\s*" +
+          aExec[1] +
+          "\\s*>)*(?:.(?!<\\s*/\\s*" +
+          aExec[1] +
+          "\\s*>))*.?",
+        "i",
+      ).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || ""
+    : "";
 }
 
 var oReq = new XMLHttpRequest();
 oReq.open("GET", "yourPage.html", true);
-oReq.onload = function () { console.log(getHTML(this, "intro")); };
+oReq.onload = function () {
+  console.log(getHTML(this, "intro"));
+};
 oReq.send(null);
 ```
 

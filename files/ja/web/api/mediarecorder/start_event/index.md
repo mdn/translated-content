@@ -29,12 +29,12 @@ onstart = (event) => {};
 record.onclick = () => {
   mediaRecorder.start();
   console.log("レコーダーが起動しました");
-}
+};
 
 mediaRecorder.onstart = () => {
   // 記録の開始に
   // 応答して何かをする
-}
+};
 ```
 
 ## インスタンスプロパティ

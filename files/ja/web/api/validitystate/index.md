@@ -26,7 +26,7 @@ l10n:
 - {{domxref("ValidityState.stepMismatch", "stepMismatch")}} {{ReadOnlyInline}}
   - : 論理値で、 `true` は値が [`step`](/ja/docs/Web/HTML/Element/input#step) 属性で決められた規則に合わないこと (つまり、step の値で割り切れないこと) を示し、 `false` は刻みの規則に合っていることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.tooLong", "tooLong")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` は値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトの `maxlength` で指定された長さを超えていることを示し、 `false` は長さがその最長値以下であることを示します。 *注: Gecko ではこのプロパティが `true` になることはありません。要素の値の長さが `maxlength` を超えないようになっているからです。* `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
+  - : 論理値で、 `true` は値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトの `maxlength` で指定された長さを超えていることを示し、 `false` は長さがその最長値以下であることを示します。 _注: Gecko ではこのプロパティが `true` になることはありません。要素の値の長さが `maxlength` を超えないようになっているからです。_ `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.tooShort", "tooShort")}} {{ReadOnlyInline}}
   - : 論理値で、 `true` は値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトの `minlength` で指定された長さに満たないことを示し、 `false` は長さがその最短値以上であることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}

@@ -178,7 +178,7 @@ textarea {
 
 ## 测试你的技能
 
-我们在本文中介绍了很多内容，但是您记住最重要的内容了么？在继续之前，您可以通过一些其他测试来验证您是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
 
 ## 小结
 
