@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-在上一节中，我们编写了 CycleTracker 的 HTML 和 CSS，创建了我们的 Web 应用的静态版本。在本节中，我们将编写将静态 HTML 转换为功能完全 Web 应用所需的 JavaScript。
+在上一节中，我们编写了经期跟踪器（CycleTracker）的 HTML 和 CSS，创建了我们的 Web 应用的静态版本。在本节中，我们将编写将静态 HTML 转换为功能完全 Web 应用所需的 JavaScript。
 
 如果你还没有这么做，复制 [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) 和 [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) 并将它们保存到名为 `index.html` 和 `styles.css` 的文件中。
 
@@ -314,6 +314,6 @@ renderPastPeriods();
 
 从本质上讲，PWA 是一个可以安装的 Web 应用程序，可以渐进增强以离线工作。现在我们已经有了一个完全可用的 Web 应用程序，我们添加将其转换为 PWA 所需的功能，包括[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)、[安全连接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) 和 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)。
 
-首先，我们为 CycleTracker 创建[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)，包括我们的 CycleTracker PWA 的标识、外观和图标。
+首先，我们为经期跟踪器创建[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)，包括我们的经期跟踪器 PWA 的标识、外观和图标。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS","Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
