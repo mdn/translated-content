@@ -72,7 +72,7 @@ var {
 
 #### HTML
 
-```html
+```html-nolint
 <p>
   <var>minSpeed</var> と <var>maxSpeed</var> 変数は、端末の最低速度と最高速度を分当たりの回転数 (RPM) で制御します。
 </p>
