@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 {{jsSidebar("Functions")}}{{Deprecated_Header}}
 
-> **警告：** 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下访问 `arguments.callee` 会抛出 {{jsxref("TypeError")}}。若一个函数必须引用自身，请为[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)命名，或使用[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)。
+> **备注：** 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下访问 `arguments.callee` 会抛出 {{jsxref("TypeError")}}。若一个函数必须引用自身，请为[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)命名，或使用[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)。
 
 **`arguments.callee`** 数据属性包含 arguments 所属的当前正在执行的函数。
 
@@ -43,7 +43,7 @@ function factorial(n) {
 });
 ```
 
-这个就不行。为了解决这个问题，`arguments.callee` 被添加了进来。然后你可以这么做
+这个就不行。为了解决这个问题，`arguments.callee` 被添加了进来。然后你可以这么做：
 
 ```js
 [1, 2, 3, 4, 5].map(function (n) {
