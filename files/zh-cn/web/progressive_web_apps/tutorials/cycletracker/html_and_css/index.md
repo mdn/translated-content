@@ -58,9 +58,9 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 
 ## HTML 内容
 
-即使 `index.html` 中的 HTML 对你来说已经很熟悉，在添加一些[临时的硬编码数据](#临时硬编码结果文本)、将 CSS 添加到 [`styles.css`](#CSS 内容) 外部样式表和创建 `app.js`（应用程序的 [JavaScript](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)，使这个网页起作用）之前，我们还是建议你通读一遍这一节。
+即使 `index.html` 中的 HTML 对你来说已经很熟悉，在添加一些[临时的硬编码数据](#临时硬编码结果文本)、将 CSS 添加到 [`styles.css`](#css_内容) 外部样式表和创建 `app.js`（[应用程序的 JavaScript](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)，使这个网页起作用）之前，我们还是建议你通读一遍这一节。
 
-HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容的正确行为。
+HTML 的第一行是一个 {{glossary("doctype")}} 弁言（preamble），可以确保内容的正确行为。
 
 ```html
 <!doctype html>
@@ -77,7 +77,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 
 ### 文档头部
 
-{{HTMLelement("head")}} 包含了关于网页应用程序的不能被读者看到的机器可读信息，除了 `<title>` 之外，它显示在浏览器选项卡的标题中。
+{{HTMLelement("head")}} 包含了关于网页应用程序的不能被读者看到的机器可读信息，除了 `<title>` 之外，它显示在浏览器标签的标题中。
 
 `<head>` 包含了所有的[元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)，和 [viewport](/zh-CN/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
 
@@ -88,9 +88,9 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 </head>
 ```
 
-我们使用 {{HTMLelement("title")}} 元素将页面标题设置为“周期跟踪器”。尽管 `<head>` 的内容不会在页面中显示，但是 `<title>` 的内容会显示！当页面加载时，`<title>` 元素的内部文本会出现在浏览器标签页中，还会出现在搜索引擎结果中，并且当用户收藏网页进书签时，它是默认的标题。对于依赖标题来了解他们当前所在标签页的屏幕阅读器用户来说，标题也提供了一个可访问的名称。
+我们使用 {{HTMLelement("title")}} 元素将页面标题设置为“Cycle Tracker”。尽管 `<head>` 的内容不会在页面中显示，但是 `<title>` 的内容会显示！当页面加载时，`<title>` 元素的内部文本会出现在浏览器标签页中，还会出现在搜索引擎结果中，并且当用户收藏网页进书签时，它是默认的标题。对于依赖标题来了解他们当前所在标签页的屏幕阅读器用户来说，标题也提供了一个无障碍的名称。
 
-虽然标题可以是“月经周期追踪应用程序”，但我们选择了一个更简短更隐蔽的名称。
+虽然标题可以是“月经周期追踪应用程序”，但我们选择了一个更谨慎的缩写名称。
 
 ```html
 <title>Cycle Tracker</title>
@@ -106,13 +106,13 @@ HTML 的第一行是一个 {{glossary("doctype")}} 前言，可以确保内容�
 
 HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性有超过 25 个定义的值——还有许多规范中没有定义的值。最常见的值 `rel="stylesheet"` 导入外部资源作为样式表。
 
-在以后的未来的小节中，当我们包括 [manifest 文件的链接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) 时，我们将重新回顾 `<link>` 元素及其 `rel` 属性。
+在后面的小节中，当我们包括 [manifest 文件的链接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) 时，我们将重新回顾 `<link>` 元素及其 `rel` 属性。
 
 ### 文档主体
 
 {{HTMLelement("body")}} 元素包含了我们想要在用户访问该网站时显示的所有内容。
 
-在 `<body>` 中，我们使用 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 作为一级标题包括应用程序的名称，以及一个 {{HTMLelement("form")}}。
+在 `<body>` 中，我们包含了以应用程序的名称为一级标题的 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)以及一个 {{HTMLelement("form")}}。
 
 ```html
 <body>
@@ -133,16 +133,16 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 </form>
 ```
 
-日期选择器是类型为 {{HTMLElement("input/date", "date")}} 的 {{HTMLElement("input")}} 元素。我们包含 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 属性，通过防止用户意外提交不完整的表单，以减少用户错误，
+日期选择器是类型为 {{HTMLElement("input/date", "date")}} 的 {{HTMLElement("input")}} 元素。我们包含 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 属性，通过防止用户意外提交不完整的表单，来减少用户错误。
 
-为了将 `<label>` 与表单控件相关联，每个 `<input>` 都有一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性，它与相关联的 {{HTMLelement("label")}} 的 [`for`](/zh-CN/docs/Web/HTML/Attributes/for) 属性匹配。相关的标签为每个 `<input>` 提供了一个 {{glossary("accessible name")}}。
+为了将 `<label>` 与表单控件相关联，每个 `<input>` 都有一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性，它与相关联的 {{HTMLelement("label")}} 的 [`for`](/zh-CN/docs/Web/HTML/Attributes/for) 属性匹配。相关的标签为每个 `<input>` 提供了一个{{glossary("accessible name", "无障碍")}}。
 
 ```html
 <label for="start-date">Start date</label>
 <input type="date" id="start-date" required />
 ```
 
-把它组合在一起，在 `<fieldset>` 中，我们包括两个段落 ({{HTMLelement("p")}} 元素），每个段落都有一个日期选择器用于输入当前月经周期的开始和结束日期，以及日期选择器的相关 {{HTMLelement("label")}}。我们还包括一个 {{HTMLelement("button")}} 元素来提交表单；通过在开标签和闭标签之间包括“添加月经周期”文本对其进行标记。`type="submit"` 是可选的，因为 `submit` 是 `<button>` 的默认类型。
+把它组合在一起，在 `<fieldset>` 中，我们包含了两个段落（{{HTMLelement("p")}} 元素），每个段落都有一个日期选择器用于输入当前月经周期的开始和结束日期，以及日期选择器的相关 {{HTMLelement("label")}}。我们还包含了一个 {{HTMLelement("button")}} 元素来提交表单；通过在开始标签（tag）和结束标签之间包括“Add period”文本为其添加标签（label）。`type="submit"` 是可选的，因为 `submit` 是 `<button>` 的默认类型。
 
 ```html
 <form>
@@ -163,7 +163,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 </form>
 ```
 
-我们鼓励你[学习更多关于制作可访问网页表单的知识](/zh-CN/docs/Learn/Forms)。
+我们鼓励你[学习更多关于制作无障碍 web 表单的知识](/zh-CN/docs/Learn/Forms)。
 
 ### 临时硬编码结果文本
 
@@ -187,11 +187,11 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 </section>
 ```
 
-除了容器 `<section id="past-periods"></section>` 之外，这个内容都是临时的。一旦我们[完成 CSS](#css-content) 并对应用程序的外观感到满意后，我们将移除或注释掉这个临时数据。
+除了容器 `<section id="past-periods"></section>` 之外，这里的内容都是临时的。一旦我们[完成 CSS](#css_内容) 并对应用程序的外观感到满意后，我们将移除或注释掉这里的临时数据。
 
 ### JavaScript 链接
 
-在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async 和 defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
+在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_和_defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
 
 ```html
 <script src="app.js" defer></script>
@@ -231,15 +231,15 @@ li:nth-of-type(even) {
 }
 ```
 
-如果每一行对你来说都很熟悉，你可以复制上面的 CSS，或者编写你自己的 CSS，并将文件保存为 [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css)，然后[完成我们 PWA 的静态 HTML 和 CSS](#完成我们 PWA 的静态 HTML 和 CSS)。如果上面的 CSS 中有任何你不了解的内容，请继续阅读说明。
+如果每一行你都很熟悉，你可以复制上面的 CSS，或者编写你自己的 CSS，并将文件保存为 [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css)，然后[完成静态 HTML 和 CSS](#完成我们_pwa_的静态_html_和_css)。如果上面的 CSS 中有任何你不了解的内容，请继续阅读以获得解释。
 
 ![浅绿色的网页，有一个大标题、一个带有说明（legend）的表单、两个日期选择器和一个按钮。底部显示了两个月经周期的假数据和一个标题。](html.jpg)
 
 ### CSS 解释
 
-我们使用 {{CSSXref("background-color")}} 属性在 `body` 上设置了浅绿色 (`#efe`) 的背景颜色。然后在无序列表、fieldset 和 legend 上，我们使用白色 (`#fff`) 的背景颜色，以及使用 {{CSSXref("border")}} 属性添加的细实线边框。我们覆盖 legend 的 `background-color`，使 legend 和列表项为更深的绿色 (`#cfc`)。
+我们使用 {{CSSXref("background-color")}} 属性在 `body` 上设置了浅绿色（`#efe`）的背景颜色。然后在无序列表、fieldset 和 legend 上，我们使用白色（`#fff`）作为背景颜色，并使用 {{CSSXref("border")}} 属性添加细实线边框。我们覆盖 legend 的 `background-color`，使 legend 和列表项变成深绿色（`#cfc`）。
 
-我们使用 [`:nth-of-type(even)`](/zh-CN/docs/Web/CSS/:nth-of-type) 伪类[选择器](/zh-CN/docs/Web/CSS/CSS_selectors) 将每个偶数列表项设置为 {{CSSXref("inherit")}} 其父元素的背景颜色；在这种情况下，继承来自无序列表的 `#fff` 背景颜色。
+我们使用 [`:nth-of-type(even)`](/zh-CN/docs/Web/CSS/:nth-of-type) 伪类[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)将每个偶数列表项设置为 {{CSSXref("inherit")}} 其父元素的背景颜色；在这种情况下，继承来自无序列表的 `#fff` 背景颜色。
 
 ```css
 body {
@@ -263,7 +263,7 @@ li:nth-of-type(even) {
 }
 ```
 
-为了使无序列表和列表项不看起来像一个列表，我们通过在 `ul` 上设置 {{CSSXref("padding", "padding: 0")}} 来删除内边距，并通过在列表项本身上设置 {{CSSXref("list-style-type", "list-style-type: none")}} 来删除列表标记。
+为了使无序列表和列表项看起来不像一个列表，我们通过在 `ul` 上设置 {{CSSXref("padding", "padding: 0")}} 来删除内边距，并通过在列表项本身上设置 {{CSSXref("list-style-type", "list-style-type: none")}} 来删除列表标记。
 
 ```css
 ul {
@@ -275,7 +275,7 @@ li {
 }
 ```
 
-我们通过使用 `vw` 和 `vh` [视口单位](/zh-CN/docs/Web/CSS/length#relative_length_units_based_on_viewport) 来设置 `body` 的 {{CSSXref("margin")}}，使我们应用程序外部的空白与视口大小成比例。我们还在 `li` 和 `legend` 添加了一点内边距。最后，为了改善（但不是修复）过去周期数据的对齐情况，我们将结果部分的 `ul` 的 {{CSSXref("font-family")}} 设置为 `monospace`，使每个字形具有相同的固定宽度。
+我们通过使用 `vw` 和 `vh` [视口单位](/zh-CN/docs/Web/CSS/length#视口比例的长度)来设置 `body` 的 {{CSSXref("margin")}}，使我们应用程序外部的空白与视口大小成比例。我们还在 `li` 和 `legend` 添加了一点内边距。最后，为了改善（但不是修复）过去周期数据的对齐情况，我们将结果部分的 `ul` 的 {{CSSXref("font-family")}} 设置为 `monospace`，使每个字形具有相同的固定宽度。
 
 ```css
 body {
@@ -292,7 +292,7 @@ legend {
 }
 ```
 
-我们可以把上面的内容组合在一起，在每个选择器声明块中放置多个属性。我们甚至可以把 `li` 和 `legend` 的样式放在一起；不相关的样式，比如在 `legend` 上的 `list-style-type` 声明，会被忽略。
+我们可以把上面的内容组合在一起，在每个选择器声明块中放置多个属性。我们甚至可以把 `li` 和 `legend` 的样式放在一起；不相关的样式，比如在 `legend` 上的 `list-style-type` 声明，则会被忽略。
 
 ```css
 body {
@@ -324,7 +324,7 @@ li:nth-of-type(even) {
 }
 ```
 
-如果你仍然不太熟悉上面的 CSS，你可以查看 [CSS 属性](/zh-CN/docs/Glossary/Property/CSS) 和 [选择器](/zh-CN/docs/Web/CSS/CSS_selectors)，或者学习 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)教程。
+如果你仍然不太熟悉上面的 CSS，你可以查看 [CSS 属性](/zh-CN/docs/Glossary/Property/CSS)和[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)，或者学习 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)教程。
 
 无论你是逐字使用上面的 CSS，根据自己的偏好编辑上述样式，还是从头开始编写自己的 CSS，请将所有 CSS 放在一个新文件中，并将其保存为与 `index.html` 文件位于同一目录下的 [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css)。
 
