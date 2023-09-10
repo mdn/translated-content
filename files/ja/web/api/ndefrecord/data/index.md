@@ -1,16 +1,19 @@
 ---
-title: NDEFRecord.data
+title: "NDEFRecord: data プロパティ"
+short-title: data
 slug: Web/API/NDEFRecord/data
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`data`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。
 
 ## 構文
 
-```js
-NDEFRecord.data;
+```js-nolint
+NDEFRecord.data
 ```
 
 ### 値
