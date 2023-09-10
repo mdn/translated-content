@@ -5,7 +5,7 @@ slug: Web/CSS/::view-transition-old
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::view-transition-old`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡的旧视图状态 — 即过渡前旧视图的静态屏幕截图。
+**`::view-transition-old`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡的旧视图状态——即过渡前旧视图的静态屏幕截图。
 
 在视图过渡期间，`::view-transition-old` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述，前提是有一个旧视图状态需要表示。它只能是 {{cssxref("::view-transition-image-pair")}} 的子节点，并且没有任何子节点。
 

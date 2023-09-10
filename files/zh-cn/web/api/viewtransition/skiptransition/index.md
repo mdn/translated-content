@@ -20,7 +20,7 @@ skipTransition()
 
 ### 返回值
 
-`undefined`
+`undefined`。
 
 ## 示例
 
