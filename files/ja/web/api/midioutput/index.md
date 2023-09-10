@@ -26,11 +26,11 @@ _このインターフェイスは {{domxref("MIDIPort")}} からもメソッド
 
 ## 例
 
-以下の例は、真ん中の C をすぐに MIDI チャンネル 1 に送信します。
+以下の例は、真ん中のドをすぐに MIDI チャンネル 1 に送信します。
 
 ```js
 function sendMiddleC(midiAccess, portID) {
-  const noteOnMessage = [0x90, 60, 0x7f]; // ノートオン、真ん中の C、フルベロシティー
+  const noteOnMessage = [0x90, 60, 0x7f]; // ノートオン、真ん中のド、フルベロシティー
   const output = midiAccess.outputs.get(portID);
   output.send(noteOnMessage); // メッセージを送信する
 }
