@@ -80,6 +80,7 @@ newPeriodFormEl.addEventListener("submit", (event) => {
 ```
 
 在使用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 阻止表单提交后，我们：
+
 1. [验证用户输入](#验证用户输入)；如果无效则退出，
 2. 通过[检索、解析、追加、排序、字符串化和重新存储](#检索、追加、排序、和重新存储数据)数据在 localStorage 中存储新的经期，
 3. [渲染表单数据](#将数据渲染到屏幕上)以及过去月经经期的数据和标题部分，并且
@@ -119,6 +120,7 @@ function checkDatesInvalid(startDate, endDate) {
 对于更健壮的应用程序，其他 [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) 选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)(IDB) 和后面讨论的 service worker 性能更好。
 
 `localStorage` 的局限包括：
+
 - 有限的数据存储：每个源的 `localStorage` 限制为 5MB 数据。我们的存储需求远远少于这个数字。
 - 仅存储字符串：`localStorage` 将数据存储为字符串键和字符串值对。我们的开始和结束日期将存储为被解析为字符串的 JSON 对象。对于更复杂的数据，需要一个更健壮的存储机制，比如 IDB。
 - 可能导致性能问题：获取和设置 local storage 是在主线程上同步完成的。当主线程被占用时，应用程序不会响应，就跟被冻住了一样。考虑到这个应用程序的简单性质，这丁点不好的用户体验可以忽略。
@@ -129,6 +131,7 @@ function checkDatesInvalid(startDate, endDate) {
 因为我们使用包含单个字符串的 localStorage，所以我们从 local storage 检索 JSON 字符串数据，解析 JSON 数据（如果有的话），将新日期对推入现有数组，对日期排序，再次将 JSON 对象解析为字符串，并将该字符串保存回 `localStorage`。
 
 这个过程需要创建一些函数：
+
 ```javascript
 // 将存储键添加为应用范围内的常量
 const STORAGE_KEY = "period-tracker";
@@ -197,7 +200,7 @@ function renderPastPeriods() {
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
     periodEl.textContent = `from ${formatDate(
-      period.startDate
+      period.startDate,
     )} to ${formatDate(period.endDate)}`;
     pastPeriodList.appendChild(periodEl);
   });
@@ -212,7 +215,7 @@ function formatDate(dateString) {
 
   // 将日期格式化为特定于语言环境的字符串
   // 包括你的语言环境以获得更好的用户体验
-  return date.toLocaleDateString("en-UK", { timeZone: "UTC" }); 
+  return date.toLocaleDateString("en-UK", { timeZone: "UTC" });
 }
 ```
 
