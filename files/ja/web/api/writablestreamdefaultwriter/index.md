@@ -42,7 +42,7 @@ l10n:
 const list = document.querySelector("ul");
 
 async function sendMessage(message, writableStream) {
-   // defaultWriter は WritableStreamDefaultWriter 型です
+  // defaultWriter は WritableStreamDefaultWriter 型です
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
   const encoded = encoder.encode(message);
@@ -53,8 +53,8 @@ async function sendMessage(message, writableStream) {
       await defaultWriter.write(chunk);
       console.log("Chunk written to sink.");
     }
-   // ライターを閉じる前にすべてのチャンクが確実に
-   // 書き込まれるように、ready を再度呼び出します。
+    // ライターを閉じる前にすべてのチャンクが確実に
+    // 書き込まれるように、ready を再度呼び出します。
     await defaultWriter.ready;
     await defaultWriter.close();
     console.log("All chunks written");

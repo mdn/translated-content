@@ -33,7 +33,7 @@ if (mediaQueryList.matches) {
 
 ## クエリーの通知の受信
 
-クエリの評価結果の変更を継続的に認識する必要がある場合、クエリーの結果をポーリングするよりも、[リスナー](/ja-US/docs/Web/API/EventTarget/addEventListener)を登録する方が効率的です。これを行うには、{{domxref("MediaQueryList")}} オブジェクトの `addEventListener()` メソッドを呼び出し、メディアクエリーのステータスが変化したとき（例えば、メディアクエリーのテストが `true` から `false` になったとき）に呼び出すコールバック関数を指定します。
+クエリの評価結果の変更を継続的に認識する必要がある場合、クエリーの結果をポーリングするよりも、[リスナー](/ja/docs/Web/API/EventTarget/addEventListener)を登録する方が効率的です。これを行うには、{{domxref("MediaQueryList")}} オブジェクトの `addEventListener()` メソッドを呼び出し、メディアクエリーのステータスが変化したとき（例えば、メディアクエリーのテストが `true` から `false` になったとき）に呼び出すコールバック関数を指定します。
 
 ```js
 // クエリーリストを作成する。

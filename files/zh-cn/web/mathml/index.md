@@ -7,7 +7,7 @@ slug: Web/MathML
 
 **Mathematical Markup Language (MathML)** 是一个用于描述数学公式、符号的一种 [XML](/zh-CN/docs/XML) 标记语言。
 
-在这里你可以找到有关的文档、例子和工具来帮助你使用这个强大的技术。如果想快速了解这项技术，请看[Slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html)。
+在这里你可以找到有关的文档、例子和工具来帮助你使用这个强大的技术。如果想快速了解这项技术，请看 [Slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html)。
 
 ## MathML 参考文档
 

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocal
 
 **`Intl.DateTimeFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-supportedlocalesof.html","shorter")}}
 
 ## 構文
 
