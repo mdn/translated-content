@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
-Nous avons vu dans l'article précédent qu'il pouvait être difficile de créer des contrôles d'interface complexes à l'aide de HTML non-sémantique et dont le contenu est géré en JavaScript. WAI-ARIA est une technologie qui aide à résoudre ces problèmes en ajoutant une couche sémantique supplémentaires qui peut être utilisée par les navigateurs et les outils d'assistance pour indiquer à la personne ce dont il s'agit. Dans cet article, nous verrons comment l'utiliser à un premier niveau pour améliorer l'accessibilité.
+Nous avons vu dans l'article précédent qu'il pouvait être difficile de créer des contrôles d'interface complexes à l'aide de HTML non-sémantique et dont le contenu est géré en JavaScript. WAI-ARIA est une technologie qui aide à résoudre ces problèmes en ajoutant une couche sémantique supplémentaire qui peut être utilisée par les navigateurs et les outils d'assistance pour indiquer à la personne ce dont il s'agit. Dans cet article, nous verrons comment l'utiliser à un premier niveau pour améliorer l'accessibilité.
 
 <table>
   <tbody>
@@ -55,19 +55,19 @@ Cela fonctionne visuellement, mais les lecteurs d'écran ne peuvent pas interpr�
 [WAI-ARIA](https://www.w3.org/TR/wai-aria/) (<i lang="en">Web Accessibility Initiative - Accessible Rich Internet Applications</i>) est une spécification écrite par le W3C, qui définit un ensemble d'attributs HTML supplémentaires, qui peuvent être appliqués aux éléments afin de fournir une sémantique complémentaire et d'améliorer l'accessibilité où elle fait défaut. La spécification définit trois grandes fonctionnalités&nbsp;:
 
 - [Les rôles](/fr/docs/Web/Accessibility/ARIA/Roles)
-  — : Ils définissent ce qu'est un élément ou ce qu'il fait. La plupart sont appelés des rôles de repère (<i lang="en">landmark roles</i>), car ils dupliquent la valeur sémantique des éléments structurels, comme `role="navigation"` ([`<nav>`](/fr/docs/Web/HTML/Element/nav)) or `role="complementary"` ([`<aside>`](/fr/docs/Web/HTML/Element/aside)). D'autres rôles décrivent différentes structures qu'on retrouve fréquemment sur les pages comme `role="banner"`, `role="search"`, `role="tablist"`, `role="tabpanel"`.
+  - : Ils définissent ce qu'est un élément ou ce qu'il fait. La plupart sont appelés des rôles de repère (<i lang="en">landmark roles</i>), car ils dupliquent la valeur sémantique des éléments structurels, comme `role="navigation"` ([`<nav>`](/fr/docs/Web/HTML/Element/nav)) or `role="complementary"` ([`<aside>`](/fr/docs/Web/HTML/Element/aside)). D'autres rôles décrivent différentes structures qu'on retrouve fréquemment sur les pages comme `role="banner"`, `role="search"`, `role="tablist"`, `role="tabpanel"`.
 - Les propriétés
   - : Elles définissent des propriétés des éléments, qui peuvent être utilisées pour indiquer une sémantique supplémentaire. Par exemple, `aria-required="true"` indiquera qu'un champ doit être renseigné afin que le formulaire soit valide&nbsp;; `aria-labelledby="label"` permettra d'indiquer un identifiant d'un élément qui pourra être utilisé comme libellé pour n'importe quoi sur la page, même pour plusieurs éléments (ce qui n'est pas possible avec `<label for="input">`). On pourrait par exemple utiliser `aria-labelledby` afin d'indiquer qu'une description importante contenue dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div) est le libellé pour plusieurs cellules d'un tableau, ou l'utiliser comme texte alternatif d'une image (en indiquant une information existant déjà sur la page plutôt que d'avoir à la répéter au sein de l'attribut `alt`). Vous pouvez observer un tel exemple dans [la section sur les alternatives textuelles](/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles).
 - Les états
-  — : Il s'agit de propriétés spéciales qui définissent les conditions actuelles des éléments. Par exemple, `aria-disabled="true"` permet d'indiquer à un lecteur d'écran que le champ de formulaire est actuellement désactivé. Contrairement aux propriétés qui ne changent pas pendant le fonctionnement de l'application, les états peuvent changer (ils sont généralement mis à jour à l'aide de JavaScript).
+  - : Il s'agit de propriétés spéciales qui définissent les conditions actuelles des éléments. Par exemple, `aria-disabled="true"` permet d'indiquer à un lecteur d'écran que le champ de formulaire est actuellement désactivé. Contrairement aux propriétés qui ne changent pas pendant le fonctionnement de l'application, les états peuvent changer (ils sont généralement mis à jour à l'aide de JavaScript).
 
-Les attributs WAI-ARIA ne modifient en rien la page web en dehors des informations exposées aux API du navigateurs portant sur l'accessibilité (ce qu'utilisent les lecteurs d'écran pour récupérer des informations). WAI-ARIA ne modifie pas la structure de la page web, le DOM, etc. On pourratoutefois utiliser ses attributs pour sélectionner certains éléments en CSS.
+Les attributs WAI-ARIA ne modifient en rien la page web en dehors des informations exposées aux API du navigateur portant sur l'accessibilité (ce qu'utilisent les lecteurs d'écran pour récupérer des informations). WAI-ARIA ne modifie pas la structure de la page web, le DOM, etc. On pourra toutefois utiliser ses attributs pour sélectionner certains éléments en CSS.
 
 > **Note :** La spécification WAI-ARIA liste l'ensemble des rôles ARIA et leurs utilisations possibles, avec des liens vers de plus amples informations&nbsp;: [définition des rôles (en anglais)](https://www.w3.org/TR/wai-aria-1.1/#role_definitions). Sur MDN, vous pouvez consulter [la section sur les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles).
 >
 > La spécification contient également la liste de l'ensemble des propriétés et des états, avec des liens vers de plus amples informations&nbsp;: [définition des états et propriétés (tous les attributs `aria-\*`)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
-### Quele est la prise en charge de WAI-ARIA&nbsp;?
+### Quelle est la prise en charge de WAI-ARIA&nbsp;?
 
 Cette question n'est pas si simple. Il est difficile de trouver une ressource de référence qui indique les fonctionnalités de WAI-ARIA qui sont prises en charge et dans quelles conditions. En effet&nbsp;:
 
@@ -76,9 +76,9 @@ Cette question n'est pas si simple. Il est difficile de trouver une ressource de
 
 Ce dernier point est crucial. Pour utiliser un lecteur d'écran, il faut déjà que votre système d'exploitation permette de lancer des navigateurs disposant des API d'accessibilité pour exposer les bonnes informations aux lecteurs d'écran, afin que ces derniers fonctionnent. La plupart des systèmes d'exploitation communément utilisés disposent d'un ou deux navigateurs qui permettent aux lecteurs d'écran de fonctionner. Le groupe Paciello décrit dans un billet relativement à jour les données qui permettent d'arriver à cette conclusion&nbsp;: [Guide approximatif&nbsp; prise en charge entre les navigateurs, systèmes d'exploitation et lecteurs d'écran (mis à jour en juin 2017) (en anglais)](https://www.tpgi.com/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
 
-Il faut ensuite savoir si les navigateurs en question prennent en charge les fonctionnalités ARIA et les exposent grâce à leurs API, mais aussi savoir si les lecteurs d'écran reconnaissent l'informtion et la présente à leurs utilisatrices et utilisateurs de façon utile.
+Il faut ensuite savoir si les navigateurs en question prennent en charge les fonctionnalités ARIA et les exposent grâce à leurs API, mais aussi savoir si les lecteurs d'écran reconnaissent l'information et la présente à leurs utilisatrices et utilisateurs de façon utile.
 
-1. La prise en charge par les navigateur est quasiment universelle.
+1. La prise en charge par les navigateurs est quasiment universelle.
 2. La prise en charge des fonctionnalités ARIA par les lecteurs d'écran n'est pas aussi complète, bien que les lecteurs d'écran les plus populaires s'en approchent. Pour avoir une idée concrète des niveaux de prise en charge, vous pouvez consulter l'article de Powermapper [Compatibilité des lecteurs d'écran avec WAI-ARIA (en anglais)](https://www.powermapper.com/tests/screen-readers/aria/).
 
 Dans cet article, nous n'aborderons pas chaque fonctionnalité WAI-ARIA et les détails de chaque prise en charge. Nous nous intéresserons plutôt aux fonctionnalités essentielles de WAI-ARIA que vous devez connaître, et si nous ne mentionnons pas la compatibilité, vous pouvez partir du principe que la fonctionnalité en question est relativement bien prise en charge. Nous indiquerons clairement s'il y a des exceptions.
@@ -94,7 +94,7 @@ Nous avons déjà abordé les problèmes qui ont amené à la création de WAI-A
 - Mises à jour dynamiques du contenu
   - : Les lecteurs d'écran peuvent avoir des difficultés à constamment indiquer le contenu qui change sur la page. Avec ARIA, on peut utiliser l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) pour informer les personnes lorsqu'une zone de contenu est mise à jour (que ce soit avec [`fetch()`](/fr/docs/Web/API/fetch) et/ou [les API du DOM](/fr/docs/Web/API/Document_Object_Model).
 - Amélioration de l'accessibilité au clavier
-  - : Certains élément HTML natifs peuvent être utilisés avec le clavier. Lorsqu'on utilise d'autres éléments avec JavaScript pour simuler des interactions analogues, l'accessibilité au clavier et la détection par les lecteurs d'écran peuvent en pâtir. WAI-ARIA fournit des outils pour permettre aux autres éléments de recevoir le focus, notamment grâce à `tabindex`).
+  - : Certains éléments HTML natifs peuvent être utilisés avec le clavier. Lorsqu'on utilise d'autres éléments avec JavaScript pour simuler des interactions analogues, l'accessibilité au clavier et la détection par les lecteurs d'écran peuvent en pâtir. WAI-ARIA fournit des outils pour permettre aux autres éléments de recevoir le focus, notamment grâce à `tabindex`).
 - Accessibilité des contrôles non-sémantiques
   - : Lorsqu'un contrôle d'interface complexe est implémenté à l'aide d'éléments `<div>` imbriqués et avec CSS/JavaScript, ou qu'un contrôle natif est amélioré ou modifié à l'aide de JavaScript, l'accessibilité peut être réduite, celles et ceux qui utilisent des lecteurs d'écran peuvent avoir des difficultés à déterminer ce que permet le contrôle s'il n'y a pas d'indications sémantiques ou d'autres indices. Dans ces situations, ARIA peut aider en fournissant ce qui manque, à l'aide de rôles comme `button`, `listbox`, ou `tablist`, de propriétés comme `aria-required` ou `aria-posinset` afin d'offrir des indications sur la fonctionnalité en question.
 
@@ -106,11 +106,11 @@ Rappelons-le quand même&nbsp;: **n'utilisez WAI-ARIA que lorsque c'est nécessa
 
 ## Implémentations concrètes avec WAI-ARIA
 
-Dans cette section, nous verrons chacun de ces quatre domaine avec des exemples concrets. Avant de continuer, mettez en place un lecteur d'écran pour tester les différents exemples. Pour cela, n'hésitez pas à consulter [le paragraphe Tester les lecteurs d'écrans](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#les_lecteurs_décran).
+Dans cette section, nous verrons chacun de ces quatre domaines avec des exemples concrets. Avant de continuer, mettez en place un lecteur d'écran pour tester les différents exemples. Pour cela, n'hésitez pas à consulter [le paragraphe Tester les lecteurs d'écrans](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#les_lecteurs_décran).
 
 ### Signes et repères
 
-WAI-ARIA ajoute [l'attribut `role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) aux navigateurs, qui permet d'indiquer une valeur sémantique supplémentaire aux éléments de votre site où c'est nécesaire. Cela permet notamment de fournir des informations aux lecteurs d'écran pour aider les personnes à trouver des éléments courants sur la page. Prenons comme exemple le site [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) ([voir ce qu'il donne en direct](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)). Ce site a la structure suivante&nbsp;:
+WAI-ARIA ajoute [l'attribut `role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) aux navigateurs, qui permet d'indiquer une valeur sémantique supplémentaire aux éléments de votre site où c'est nécessaire. Cela permet notamment de fournir des informations aux lecteurs d'écran pour aider les personnes à trouver des éléments courants sur la page. Prenons comme exemple le site [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) ([voir ce qu'il donne en direct](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)). Ce site a la structure suivante&nbsp;:
 
 ```html
 <header>
@@ -148,7 +148,7 @@ Si vous utilisez le menu des repères de VoiceOver (ou de votre lecteur d'écran
 
 Toutefois, on pourrait faire encore mieux. Le formulaire de recherche est un emplacement important dont on souhaite qu'il soit rapidement accessible, mais il n'apparaît pas dans la liste du menu des repères et n'est pas considéré comme un repère important.
 
-Améliorons cet exemple en utilisant certaines fonctionnalités ARIA. Tout d'abord, ajoutons quelques attributs [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) à notre structure HTML. Vous pouvez récupérer un exemplaire des fichier (voir [`index.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) et [`style.css`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), ou naviguer jusqu'à l'exemple [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) ([le voir en direct](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), dont la structure est la suivante&nbsp;:
+Améliorons cet exemple en utilisant certaines fonctionnalités ARIA. Tout d'abord, ajoutons quelques attributs [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) à notre structure HTML. Vous pouvez récupérer un exemplaire des fichiers (voir [`index.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) et [`style.css`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), ou naviguer jusqu'à l'exemple [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) ([le voir en direct](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), dont la structure est la suivante&nbsp;:
 
 ```html
 <header>
@@ -234,7 +234,7 @@ Cela permettra au lecteur d'écran d'annoncer le contenu dès qu'il est mis à j
 
 > **Note :** Si vous voyez une exception de sécurité lors de l'appel `XMLHttpRequest`, c'est que le fichier est chargé localement plutôt que depuis un serveur. Voyez [comment mettre en place un serveur de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) pour que cela fonctionne.
 
-C'est mieux, mais seul le texte mis à jour est énoncé. Ce serait encore mieux d'avoir le titre qui est rappelé afin que la personne sache ce qui est énoncé. Pour cela, on peut ajouter la propriété [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) à la section. Reprenez la balise ouvrante `<section>` et modifiez la ainsi&nbsp;:
+C'est mieux, mais seul le texte mis à jour est énoncé. Ce serait encore mieux d'avoir le titre qui est rappelé afin que la personne sache ce qui est énoncé. Pour cela, on peut ajouter la propriété [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) à la section. Reprenez la balise ouvrante `<section>` et modifiez-la ainsi&nbsp;:
 
 ```html
 <section aria-live="assertive" aria-atomic="true">…</section>
@@ -255,7 +255,7 @@ Toutefois, vous aurez parfois à écrire du code qui utilise des éléments non 
 Pour qu'un élément puisse recevoir le focus alors qu'il n'a pas cette capacité nativement, WAI-ARIA étend l'attribut `tabindex` avec de nouvelles valeurs&nbsp;:
 
 - `tabindex="0"`
-  — : Comme indiqué auparavant, cette valeur permet aux éléments vers lesquels on ne peut pas naviguer au clavier de devenir accessible avec la touche <kbd>Tab</kdb>. C'est la valeur la plus utile pour `tabindex`.
+  - : Comme indiqué auparavant, cette valeur permet aux éléments vers lesquels on ne peut pas naviguer au clavier de devenir accessible avec la touche <kbd>Tab</kbd>. C'est la valeur la plus utile pour `tabindex`.
 - `tabindex="-1"`
   - : Cela permet aux éléments vers lesquels on ne peut pas naviguer au clavier de recevoir le focus via du code (JavaScript, ou comme étant la cible d'un lien).
 
@@ -280,7 +280,7 @@ Reprenons l'exemple du formulaire que nous avions abordé dans l'article sur l'a
 
 Nous pouvons aller plus loin avec ARIA et aider à la validation. Comment indiquer les champs obligatoires et l'intervalle d'âge autorisé&nbsp;?
 
-1. Récupérez un exemplaire des fichiers [`form-validation.html`](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) et [`validation.js`](https://github.com/mdn/learning-area/blob/main/accessibility/css/validation.js) et enregistrez ls dans un répertoire local.
+1. Récupérez un exemplaire des fichiers [`form-validation.html`](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) et [`validation.js`](https://github.com/mdn/learning-area/blob/main/accessibility/css/validation.js) et enregistrez-les dans un répertoire local.
 2. Ouvrez ces deux fichiers dans un éditeur de texte et voyez comment le code fonctionne.
 3. Pour commencer, ajoutez un paragraphe avant la balise `<form>` ouvrante, comme celui qui suit. Ajoutez ensuite un astérisque aux libellés (éléments `<label>`) correspondant. C'est la méthode généralement utilisée pour indiquer visuellement les champs obligatoires.
 
@@ -300,7 +300,7 @@ Nous pouvons aller plus loin avec ARIA et aider à la validation. Comment indiqu
 6. Il peut également être judicieux d'indiquer une idée de la valeur attendue pour l'âge. Généralement, cela se présente sous la forme d'une bulle d'informations ou d'un texte de remplacement écrit à l'intérieur du champ. WAI-ARIA permet d'utiliser les propriétés [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) pour indiquer les valeurs minimale et maximale. Les lecteurs d'écran prennent en charge les attributs natifs `min` et `max`. Une autre fonctionnalité HTML prise en charge par certains lecteurs d'écran est l'attribut HTML `placeholder`, qui peut contenir un message affiché dans le champ tant qu'aucune valeur n'est saisie et qui est énoncé par les lecteurs d'écran. Mettez à jour le champ numérique de cette façon&nbsp;:
 
    ```html
-   <label for="age">Votre age :</label>
+   <label for="age">Votre âge :</label>
    <input
      type="number"
      name="age"
@@ -318,7 +318,7 @@ En plus de [`<label>`](/fr/docs/Web/HTML/Element/label), WAI-ARIA permet certain
 
 Il existe de nombreux autres états et propriétés, indiquant par exemple le statut des éléments du formulaire. `aria-disabled="true"` pourra ainsi être utilisé pour indiquer qu'un champ est désactivé. La plupart des navigateurs passeront sur les champs désactivés et ceux-ci ne seront pas énoncés par le lecteur d'écran. Mais dans certains cas, un élément désactivé pourra être listé et inclure cet attribut permettra au lecteur d'écran d'indiquer que le contrôle est bel et bien désactivé.
 
-Si l'état désactivé d'un champ peut être amené à changer, il faudra également indiquer lorsque ça se produit et le résultat. Dans notre démo [`form-validation-checkbox-disabled.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html), nous avons une case à cocher qui, lorsqu'elle est cochée active un autre champ pour saisir des informations complémenaitres. Nous mettons en place une zone dynamique masquée&nbsp;:
+Si l'état désactivé d'un champ peut être amené à changer, il faudra également indiquer lorsque ça se produit et le résultat. Dans notre démo [`form-validation-checkbox-disabled.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html), nous avons une case à cocher qui, lorsqu'elle est cochée active un autre champ pour saisir des informations complémentaires. Nous mettons en place une zone dynamique masquée&nbsp;:
 
 ```html
 <p class="hidden-alert" aria-live="assertive"></p>
@@ -411,18 +411,18 @@ Pour voir l'amélioration, vous pouvez télécharger le fichier [`aria-tabbed-in
 
 > **Note :** Le changement le plus important est le retrait des liens. Seuls les éléments de la liste sont utilisés comme onglets. En effet, les liens n'avaient pas vraiment de destination, ils ne faisaient que changer la vue. De plus, cela permet une meilleure utilisation des attributs `aria-setsize` et `aria-posinset`, au lien de toujours énoncer «&nbsp;1 sur 1&nbsp;», le lecteur d'écran pourra maintenant indiquer «&nbsp;1 sur 3&nbsp;», «&nbsp;2 sur 3&nbsp;», etc.
 
-Les fonctionnalités ARIA utilisés ici sont&nbsp;:
+Les fonctionnalités ARIA utilisées ici sont&nbsp;:
 
 - De nouveaux rôles
-  — : [`tablist`](/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role), [`tab`](/fr/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) qui identifient les zones importantes de l'interface avec les onglets&nbsp;: le conteneur des onglets, les onglets et les panneaux correspondants.
+  - : [`tablist`](/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role), [`tab`](/fr/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) qui identifient les zones importantes de l'interface avec les onglets&nbsp;: le conteneur des onglets, les onglets et les panneaux correspondants.
 - [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
   - : Définit l'onglet actuellement sélectionné. Lorsque la personne passe d'un onglet à l'autre, la valeur de cet attribut est mise à jour grâce à JavaScript sur les différents onglets.
 - [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
   - : Empêche qu'un élément soit énoncé par le lecteur d'écran. Lorsque la personne passe d'un onglet à l'autre, la valeur de cet attribut est mise à jour grâce à JavaScript sur les différents onglets.
 - `tabindex="0"`
-  — : Comme les liens sont retirés, on fournit cet attribut aux éléments de la liste afin qu'ils puissent recevoir le focus au clavier.
+  - : Comme les liens sont retirés, on fournit cet attribut aux éléments de la liste afin qu'ils puissent recevoir le focus au clavier.
 - [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-  — : Cette propriété permet d'indiquer aux lecteurs d'écran que l'élément courant fait partie d'un ensemble et d'indiquer la taille de cet ensemble.
+  - : Cette propriété permet d'indiquer aux lecteurs d'écran que l'élément courant fait partie d'un ensemble et d'indiquer la taille de cet ensemble.
 - [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
   - : Cette propriété permet d'indiquer la position de l'élément au sein de l'ensemble dans lequel il s'inscrit. Combiné avec `aria-setsize`, il fournit suffisamment d'informations au lecteur d'écran pour que ce dernier puisse énoncer qu'on se situe sur l'élément «&nbsp;1 sur 3&nbsp;» etc. Dans la plupart des cas, les navigateurs devraient pouvoir déduire cette information à partir de la hiérarchie des éléments, mais autant fournir des indications complémentaires.
 
