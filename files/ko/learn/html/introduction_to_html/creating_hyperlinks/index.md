@@ -46,7 +46,7 @@ l10n:
 
 ## 링크의 구조
 
-기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 {{htmlattrxref("href", "a")}} 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
+기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
 
 ```html
 <p>
