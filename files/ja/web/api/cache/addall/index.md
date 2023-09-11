@@ -1,8 +1,9 @@
 ---
-title: Cache.addAll()
+title: "Cache: addAll() メソッド"
+short-title: addAll()
 slug: Web/API/Cache/addAll
 l10n:
-  sourceCommit: dcc90b47b1a262061dfc980db59e6254527ad48c
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}

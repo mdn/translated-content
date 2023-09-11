@@ -10,7 +10,7 @@ slug: WebAssembly/JavaScript_interface/instantiate
 - 第一种主要重载方式使用 WebAssembly 二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 `Promise` 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.
 - 第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 `Promise` 携带一个 `Module`的实例化对象 `Instance`. 如果这个 `Module` 已经被编译了或者是从缓存中获取的 ( [retrieved from cache](/zh-CN/docs/WebAssembly/Caching_modules)), 那么这种重载方式是非常有用的。
 
-> **警告：** 此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。
+> **警告：** 此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。如果可能的话，你应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
@@ -63,11 +63,11 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ## 示例
 
-**提示**: 在大多数情况下，您可能需要使用{{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比`instantiate()`更具效率。
+**提示**: 在大多数情况下，你可能需要使用{{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比`instantiate()`更具效率。
 
 ### 第一种重载例子
 
-使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的[Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
+使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的 [Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
 
 ```js
 var importObject = {
@@ -89,7 +89,7 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports);
 ```
 
-> **备注：** 查看 GitHub([在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)) 的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的[`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1)库函数
+> **备注：** 查看 GitHub（[在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)）的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) 库函数
 
 ### 第二种重载例子
 

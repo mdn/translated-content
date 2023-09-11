@@ -3,6 +3,8 @@ title: 互联网是如何工作的
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 这篇文章讨论什么是互联网以及它是如何工作的。
 
 <table class="learn-box standard-table">
@@ -93,6 +95,6 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 
 ## 下一步
 
-- [网络怎样工作](/zh-CN/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [理解网页，网站，网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-- [理解域名](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)
+- [网络怎样工作](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [理解网页，网站，网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [理解域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

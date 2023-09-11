@@ -84,7 +84,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ![Diagram conceptualizing the contents of a media file at the track level.](containersandtracks.png)
 
-为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)进行编码，而视频轨道则使用（您可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如 MP3、MP4 和 WebM，这些格式又可以包含不同类型的视频和音频）。
+为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)进行编码，而视频轨道则使用（你可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如 MP3、MP4 和 WebM，这些格式又可以包含不同类型的视频和音频）。
 
 例如：
 

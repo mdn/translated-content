@@ -16,7 +16,7 @@ fetch(url).then(function (response) {
 });
 ```
 
-对于更复杂的操作，您可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。
+对于更复杂的操作，你可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。
 
 > **备注：** `add()` 将会覆盖之前存储在 cache 中与 request 匹配的任何 key/value 对。
 

@@ -50,15 +50,15 @@ message 的属性有：
 - `origin`
   - : 调用 `postMessage` 时消息发送方窗口的 [origin](/zh-CN/docs/Origin) . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如“`https://example.org` (隐含端口 `443`)”、“`http://example.net` (隐含端口 `80`)”、“`http://example.com:8080`”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。
 - `source`
-  - : 对发送消息的[窗口](/zh-CN/docs/DOM/window)对象的引用; 您可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。
+  - : 对发送消息的[窗口](/zh-CN/docs/DOM/window)对象的引用; 你可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。
 
 ## 安全问题
 
-**如果您不希望从其他网站接收 message，请不要为 message 事件添加任何事件侦听器。** 这是一个完全万无一失的方式来避免安全问题。
+**如果你不希望从其他网站接收 message，请不要为 message 事件添加任何事件侦听器。** 这是一个完全万无一失的方式来避免安全问题。
 
-如果您确实希望从其他网站接收 message，请**始终使用 origin 和 source 属性验证发件人的身份**。任何窗口（包括例如 `http://evil.example.com`）都可以向任何其他窗口发送消息，并且您不能保证未知发件人不会发送恶意消息。但是，验证身份后，您仍然应该**始终验证接收到的消息的语法**。否则，您信任只发送受信任邮件的网站中的安全漏洞可能会在您的网站中打开跨网站脚本漏洞。
+如果你确实希望从其他网站接收 message，请**始终使用 origin 和 source 属性验证发件人的身份**。任何窗口（包括例如 `http://evil.example.com`）都可以向任何其他窗口发送消息，并且你不能保证未知发件人不会发送恶意消息。但是，验证身份后，你仍然应该**始终验证接收到的消息的语法**。否则，你信任只发送受信任邮件的网站中的安全漏洞可能会在你的网站中打开跨网站脚本漏洞。
 
-**当您使用 postMessage 将数据发送到其他窗口时，始终指定精确的目标 origin，而不是 \*。** 恶意网站可以在您不知情的情况下更改窗口的位置，因此它可以拦截使用 postMessage 发送的数据。
+**当你使用 postMessage 将数据发送到其他窗口时，始终指定精确的目标 origin，而不是 \*。** 恶意网站可以在你不知情的情况下更改窗口的位置，因此它可以拦截使用 postMessage 发送的数据。
 
 ## 示例
 
@@ -122,7 +122,7 @@ window.addEventListener("message", receiveMessage, false);
 
 分派事件的 origin 属性的值不受调用窗口中 document.domain 的当前值的影响。
 
-仅对于 IDN 主机名，origin 属性的值不是始终为 Unicode 或 punycode; 在使用此属性时，如果您期望来自 IDN 网站的消息，则最大程度地兼容性检查 IDN 和 punycode 值。这个值最终将始终是 IDN，但现在你应该同时处理 IDN 和 punycode 表单。
+仅对于 IDN 主机名，origin 属性的值不是始终为 Unicode 或 punycode; 在使用此属性时，如果你期望来自 IDN 网站的消息，则最大程度地兼容性检查 IDN 和 punycode 值。这个值最终将始终是 IDN，但现在你应该同时处理 IDN 和 punycode 表单。
 
 当发送窗口包含 `javascript:` 或 `data:` URL 时，origin 属性的值是加载 URL 的脚本的
 
