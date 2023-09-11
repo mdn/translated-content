@@ -110,7 +110,7 @@ Dans cette section, nous verrons chacun de ces quatre domaine avec des exemples 
 
 ### Signes et repères
 
-WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. Let's look at an example — our [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)) has the following structure:
+WAI-ARIA ajoute [l'attribut `role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) aux navigateurs, qui permet d'indiquer une valeur sémantique supplémentaire aux éléments de votre site où c'est nécesaire. Cela permet notamment de fournir des informations aux lecteurs d'écran pour aider les personnes à trouver des éléments courants sur la page. Prenons comme exemple le site [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) ([voir ce qu'il donne en direct](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)). Ce site a la structure suivante&nbsp;:
 
 ```html
 <header>
@@ -120,7 +120,7 @@ WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_de
       …
     </ul>
     <form>
-      <!-- search form -->
+      <!-- Formulaire de recherche -->
     </form>
   </nav>
 </header>
@@ -133,22 +133,22 @@ WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_de
 <footer>…</footer>
 ```
 
-If you try testing the example with a screen reader in a modern browser, you'll already get some useful information. For example, VoiceOver gives you the following:
+Si vous essayez cet exemple avec un lecteur d'écran sur un navigateur récent, vous obtiendrez déjà certaines informations utiles. VoiceOver vous donnera les indications suivantes&nbsp;:
 
-- On the `<header>` element — "banner, 2 items" (it contains a heading and the `<nav>`).
-- On the `<nav>` element — "navigation 2 items" (it contains a list and a form).
-- On the `<main>` element — "main 2 items" (it contains an article and an aside).
-- On the `<aside>` element — "complementary 2 items" (it contains a heading and a list).
-- On the search form input — "Search query, insertion at beginning of text".
-- On the `<footer>` element — "footer 1 item".
+- Sur l'élément `<header>`&nbsp;: «&nbsp;bannière, 2 éléments&nbsp;» (il contient un titre et l'élément `<nav>`).
+- Sur l'élément `<nav>`&nbsp;: «&nbsp;navigation, 2 éléments&nbsp;» (il contient une liste et un formulaire).
+- Sur l'élément `<main>`&nbsp;: «&nbsp;principal, 2 éléments&nbsp;» (il contient un article et un aparté).
+- Sur l'élément `<aside>`&nbsp;: «&nbsp;complémentaire, 2 éléments&nbsp;» (il contient un titre et une liste).
+- Sur l'élément du formulaire de recherche&nbsp;: «&nbsp;requête de recherche, insertion au début du texte&nbsp;».
+- Sur l'élément `<footer>`&nbsp;: «&nbsp;pied-de-page, 1 élément.&nbsp;»
 
-If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.
+Si vous utilisez le menu des repères de VoiceOver (ou de votre lecteur d'écran) et utilisez les flèches du clavier pour naviguer parmi les choix du menu, vous verrez la plupart des éléments bien organisés, ce qui permet d'y accéder rapidement.
 
-![Mac's VoiceOver menu for quick accessibility. Landmarks header and landmarks list including banner, navigation, main, and complementary.](landmarks-list.png)
+![Capture d'écran du menu de VoiceOver sur macOS où la liste des repères (landmarks) inclut la bannière, l'élément de navigation, le contenu principal et le contenu complémentaire.](landmarks-list.png)
 
-However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
+Toutefois, on pourrait faire encore mieux. Le formulaire de recherche est un emplacement important dont on souhaite qu'il soit rapidement accessible, mais il n'apparaît pas dans la liste du menu des repères et n'est pas considéré comme un repère important.
 
-Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure. You can try taking a copy of our original files (see [index.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) and [style.css](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
+Améliorons cet exemple en utilisant certaines fonctionnalités ARIA. Tout d'abord, ajoutons quelques attributs [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) à notre structure HTML. Vous pouvez récupérer un exemplaire des fichier (voir [`index.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) et [`style.css`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), ou naviguer jusqu'à l'exemple [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) ([le voir en direct](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), dont la structure est la suivante&nbsp;:
 
 ```html
 <header>
@@ -158,7 +158,7 @@ Let's improve it by the use of some ARIA features. First, we'll add some [`role`
       …
     </ul>
     <form role="search">
-      <!-- search form -->
+      <!-- formulaire de recherche -->
     </form>
   </nav>
 </header>
@@ -171,32 +171,32 @@ Let's improve it by the use of some ARIA features. First, we'll add some [`role`
 <footer>…</footer>
 ```
 
-We've also given you a bonus feature in this example — the {{htmlelement("input")}} element has been given the attribute [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label), which gives it a descriptive label to be read out by a screen reader, even though we haven't included a {{htmlelement("label")}} element. In cases like these, this is very useful — a search form like this one is a very common, easily recognized feature, and adding a visual label would spoil the page design.
+Nous avons également ajouté l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) à l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), qui fournit un libellé descriptif à utiliser par le lecteur d'écran, même sans élément [`<label>`](/fr/docs/Web/HTML/Element/label). Dans un cas comme celui-ci, c'est plutôt utile, un formulaire de recherche comme celui-là est très courant et facilement reconnaissable, ajouter un libellé visible pourrait dégrader l'apparence de la page.
 
 ```html
 <input
   type="search"
   name="q"
-  placeholder="Search query"
-  aria-label="Search through site content" />
+  placeholder="Termes de recherche"
+  aria-label="Recherchez parmi le contenu du site" />
 ```
 
-Now if we use VoiceOver to look at this example, we get some improvements:
+Si on utilise VoiceOver sur cette version, on pourra noter quelques améliorations&nbsp;:
 
-- The search form is called out as a separate item, both when browsing through the page, and in the Landmarks menu.
-- The label text contained in the `aria-label` attribute is read out when the form input is highlighted.
+- Le formulaire de recherche apparaît comme un élément distinct, à la navigation sur la page et sur le menu des repères de VoiceOver.
+- Le texte du libellé porté par l'attribut `aria-label` est énoncé lorsque le champ du formulaire reçoit le focus.
 
-Beyond this, the site is more likely to be accessible to users of older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just `<div>`s, you should definitely include the ARIA roles to provide these much needed semantics!
+De plus, le site est ainsi plus accessible pour les personnes qui utilisent un ancien navigateur tel qu'IE8 grâce aux rôles indiqués. Si votre site est construit uniquement avec des éléments `<div>`, vous devriez absolument inclure ces rôles ARIA pour indiquer la sémantique correspondante&nbsp;!
 
-The improved semantics of the search form have shown what is made possible when ARIA goes beyond the semantics available in HTML. You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the [Accessibility of non-semantic controls](#accessibility_of_non-semantic_controls) section. For now though, let's look at how ARIA can help with dynamic content updates.
+La sémantique améliorée du formulaire de recherche illustre ce qu'ARIA rend possible en allant au-delà de la sémantique fournie par HTML. Nous verrons plus d'exemples dans la suite de cet article et notamment dans la section [Accessibilité des contrôles non-sémantiques](#accessibilité_des_contrôles_non-sémantiques). Avant cela, voyons comment ARIA peut aider lorsque contenu est mis à jour dynamiquement.
 
-### Dynamic content updates
+### Mises à jour dynamiques du contenu
 
-Content loaded into the DOM can be easily accessed using a screen reader, from textual content to alternative text attached to images. Traditional static websites with largely text content are therefore easy to make accessible for people with visual impairments.
+Le contenu chargé dans le DOM est facilement accessible à l'aide d'un lecteur d'écran, que ce soit le contenu textuel ou les alternatives textuelles attachées aux images. Il est donc relativement simple de rendre accessible un site statique contenant de grandes parties de textes.
 
-The problem is that modern web apps are often not just static text — they tend to have a lot of dynamically updating content, i.e. content that updates without the entire page reloading via a mechanism like [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest), [Fetch](/fr/docs/Web/API/Fetch_API), or [DOM APIs](/fr/docs/Web/API/Document_Object_Model). These are sometimes referred to as **live regions**.
+Toutefois, la plupart des applications web modernes ne contiennent pas uniquement du texte statiques. Elles contiennent du contenu mis à jour dynamiquement, sans recharger l'ensemble de la page, grâce à des mécanismes comme [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (ou avant [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)), ou [les API du DOM](/fr/docs/Web/API/Document_Object_Model). Ces emplacements dynamiques sont parfois appelés <i lang="en">live regions</i> en anglais.
 
-Let's look at a quick example — see [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (also [see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). In this example, we have a simple random quote box:
+Prenons un rapide exemple avec le fichier [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (vous pouvez [voir le résultat correspondant en démonstration](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). Dans cet exemple, on a une simple boîte contenant une citation aléatoire&nbsp;:
 
 ```html
 <section>
@@ -207,56 +207,61 @@ Let's look at a quick example — see [aria-no-live.html](https://github.com/mdn
 </section>
 ```
 
-Our JavaScript loads a JSON file via [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/fr/docs/Web/API/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
+Grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le code JavaScript charge un fichier JSON contenant un ensemble de citations aléatoires avec leurs autrices et auteurs. Lorsque ce chargement est effectué, on démarre une boucle [`setInterval()`](/fr/docs/Web/API/setInterval) qui charge une nouvelle citation aléatoire dans la boîte toutes les 10 secondes&nbsp;:
 
 ```js
 const intervalID = setInterval(showQuote, 10000);
 ```
 
-This works OK, but it is not good for accessibility — the content update is not detected by screen readers, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.
+Cela fonctionne, mais l'accessibilité n'est pas au rendez-vous&nbsp;: la mise à jour du contenu n'est pas détectée par les lecteurs d'écran et les personnes qui utilisent ces outils ne sauront pas ce qui se passe sur la page. Il s'agit d'un exemple plutôt simpliste, mais imaginez une interface utilisateur plus complexe, constamment mise à jour, comme un salon de discussion, ou l'interface d'un jeu de stratégie, ou la mise à jour d'un panier d'achat dans une boutique. Il serait impossible d'utiliser l'application de façon correcte s'il n'y avait aucun moyen d'alerter l'utilisatrice ou l'utilisateur des mises à jour.
 
-WAI-ARIA, fortunately, provides a useful mechanism to provide these alerts — the [`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live) property. Applying this to an element causes screen readers to read out the content that is updated. How urgently the content is read out depends on the attribute value:
+Heureusement, WAI-ARIA fournit un mécanisme pour ces alertes&nbsp;: [la propriété `aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live). Appliquer cette propriété à un élément permet aux lecteurs d'écran d'annoncer le contenu mis à jour. La rapidité à laquelle le contenu est énoncé dépend de la valeur de l'attribut&nbsp;:
 
-- `off:` The default. Updates should not be announced.
-- `polite`: Updates should be announced only if the user is idle.
-- `assertive`: Updates should be announced to the user as soon as possible.
+- `off:`
+  - : Il s'agit de la valeur par défaut, les mises à jour ne doivent pas être annoncées.
+- `polite`
+  - : Les mises à jour devraient être annoncées uniquement si la personne n'est pas active sur la page.
+- `assertive`
+  - : Les mises à jour devraient être annoncées dès que possible.
 
-We'd like you to take a copy of [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) and [quotes.json](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), and update your `<section>` opening tag as follows:
+Téléchargez un exemplaire du fichier [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) et de [`quotes.json`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), puis mettez à jour la balise ouvrante `<section>` comme suit&nbsp;:
 
 ```html
 <section aria-live="assertive">…</section>
 ```
 
-This will cause a screen reader to read out the content as it is updated.
+Cela permettra au lecteur d'écran d'annoncer le contenu dès qu'il est mis à jour.
 
-> **Note:** Most browsers will throw a security exception if you try to do an `XMLHttpRequest` call from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example [using GitHub](/fr/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages), or a local web server like [Python's SimpleHTTPServer](https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/).
+> **Note :** Si vous voyez une exception de sécurité lors de l'appel `XMLHttpRequest`, c'est que le fichier est chargé localement plutôt que depuis un serveur. Voyez [comment mettre en place un serveur de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) pour que cela fonctionne.
 
-There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
+C'est mieux, mais seul le texte mis à jour est énoncé. Ce serait encore mieux d'avoir le titre qui est rappelé afin que la personne sache ce qui est énoncé. Pour cela, on peut ajouter la propriété [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) à la section. Reprenez la balise ouvrante `<section>` et modifiez la ainsi&nbsp;:
 
 ```html
 <section aria-live="assertive" aria-atomic="true">…</section>
 ```
 
-The `aria-atomic="true"` attribute tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated.
+L'attribut `aria-atomic="true"` indique au lecteur d'écran d'énoncer l'intégralité du contenu de l'élément comme une seule unité et pas uniquement les fragments mis à jour.
 
-> **Note:** You can see the finished example at [aria-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+> **Note :** Vous pouvez consulter l'exemple terminé dans le fichier [`aria-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([et aussi voir le résultat avec cette démonstration](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
 
-> **Note:** The [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.
+> **Note :** La propriété [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) peut aussi s'avérer utile pour contrôler ce qui est énoncé lorsqu'une zone dynamique est mise à jour. On peut par exemple la paramétrer pour n'énoncer que les ajouts ou les suppressions.
 
-### Enhancing keyboard accessibility
+### Améliorer l'accessibilité au clavier
 
-As discussed in a few other places in the module, one of the key strengths of HTML with respect to accessibility is the built-in keyboard accessibility of features such as buttons, form controls, and links. Generally, you can use the tab key to move between controls, the Enter/Return key to select or activate controls, and occasionally other controls as needed (for example the up and down cursor to move between options in a `<select>` box).
+Nous l'avons déjà mentionné dans ce module, un atout de HTML quant à l'accessibilité est la capacité à manipuler les fonctionnalités au clavier, comme les boutons, les contrôles de formulaire, et les liens. Généralement, on utilise la touche de tabulation pour se déplacer d'un contrôle à l'autre, la touche <kbd>Entrée</kbd> pour sélectionner ou activer un contrôle (certaines fois d'autres touches sont nécessaires comme les flèches haut et bas pour sélectionner une option dans une boîte `<select>`).
 
-However, sometimes you will end up having to write code that either uses non-semantic elements as buttons (or other types of control), or uses focusable controls for not quite the right purpose. You might be trying to fix some bad code you've inherited, or you might be building some kind of complex widget that requires it.
+Toutefois, vous aurez parfois à écrire du code qui utilise des éléments non sémantiques pour représenter des boutons (ou d'autres contrôles), ou à détourner des contrôles pouvant gagner le focus, que ce soit pour corriger du code historique ou pour construire quelque chose de complexe où il n'y a pas de meilleure solution actuellement.
 
-In terms of making non-focusable code focusable, WAI-ARIA extends the `tabindex` attribute with some new values:
+Pour qu'un élément puisse recevoir le focus alors qu'il n'a pas cette capacité nativement, WAI-ARIA étend l'attribut `tabindex` avec de nouvelles valeurs&nbsp;:
 
-- `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
-- `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links.
+- `tabindex="0"`
+  — : Comme indiqué auparavant, cette valeur permet aux éléments vers lesquels on ne peut pas naviguer au clavier de devenir accessible avec la touche <kbd>Tab</kdb>. C'est la valeur la plus utile pour `tabindex`.
+- `tabindex="-1"`
+  - : Cela permet aux éléments vers lesquels on ne peut pas naviguer au clavier de recevoir le focus via du code (JavaScript, ou comme étant la cible d'un lien).
 
-We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see [Building keyboard accessibility back in](/fr/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in).
+Ce fonctionnement est abordé plus en détail dans l'article sur l'accessibilité HTML et notamment dans la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier).
 
-### Accessibility of non-semantic controls
+### Accessibilité des contrôles non-sémantiques
 
 This follows on from the previous section — when a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, not only can keyboard accessibility suffer, but screen reader users will find it difficult to work out what the feature does if there are no semantics or other clues. In such situations, ARIA can help to provide those missing semantics.
 
