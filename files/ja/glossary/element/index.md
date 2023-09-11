@@ -14,5 +14,5 @@ l10n:
 ## 関連情報
 
 - [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [カスタム要素の定義](/ja/docs/Web/Web_Components/Using_custom_elements)
+- [カスタム要素の定義](/ja/docs/Web/API/Web_components/Using_custom_elements)
 - DOM の中で要素を表現する{{domxref("Element")}} インターフェイス

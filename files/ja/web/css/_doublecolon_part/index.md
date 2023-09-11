@@ -5,7 +5,7 @@ slug: Web/CSS/::part
 
 {{CSSRef}}
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内の要素を表します。
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の要素を表します。
 
 ```css
 custom-element::part(foo) {

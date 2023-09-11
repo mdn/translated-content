@@ -1214,7 +1214,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### WebGPU API
 
-[WebGPU API](/en-US/docs/Web/API/WebGPU_API) 为使用用户设备或计算机的[图形处理单元](https://zh.wikipedia.org/wiki/圖形處理器)（GPU）执行计算和图形渲染提供底层支持。请参见 [Firefox bug 1602129](https://bugzil.la/1602129)，了解我们在此 API 方面的进展。
+[WebGPU API](/zh-CN/docs/Web/API/WebGPU_API) 为使用用户设备或计算机的[图形处理单元](https://zh.wikipedia.org/wiki/圖形處理器)（GPU）执行计算和图形渲染提供底层支持。请参见 [Firefox bug 1602129](https://bugzil.la/1602129)，了解我们在此 API 方面的进展。
 
 <table>
   <thead>
@@ -1598,7 +1598,7 @@ Firefox 现在支持 [Popover API](/zh-CN/docs/Web/API/Popover_API)。
 
 - [`HTMLButtonElement.popoverTargetElement`](/zh-CN/docs/Web/API/HTMLButtonElement/popoverTargetElement) 和 [`HTMLButtonElement.popoverTargetAction`](/zh-CN/docs/Web/API/HTMLButtonElement/popoverTargetAction)。
 - [`HTMLInputElement.popoverTargetElement`](/zh-CN/docs/Web/API/HTMLInputElement/popoverTargetElement) 和 [`HTMLInputElement.popoverTargetAction`](/zh-CN/docs/Web/API/HTMLInputElement/popoverTargetAction)。
-- [`HTMLElement.popover`](/en-US/docs/Web/API/HTMLElement/popover)、[`HTMLElement.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover)、[`HTMLElement. showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover) 和 [`HTMLElement.togglePopover()`](/zh-CN/docs/Web/API/HTMLElement/togglePopover)。
+- [`HTMLElement.popover`](/zh-CN/docs/Web/API/HTMLElement/popover)、[`HTMLElement.hidePopover()`](/zh-CN/docs/Web/API/HTMLElement/hidePopover)、[`HTMLElement. showPopover()`](/zh-CN/docs/Web/API/HTMLElement/showPopover) 和 [`HTMLElement.togglePopover()`](/zh-CN/docs/Web/API/HTMLElement/togglePopover)。
 - `HTMLElement` [`beforetoggle` 事件](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event)、`HTMLElement` [`toggle_event` 事件](/zh-CN/docs/Web/API/HTMLElement/toggle_event) 和 [`ToggleEvent`](/zh-CN/docs/Web/API/ToggleEvent)。
 
 CSS 更新包括：
