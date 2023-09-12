@@ -184,14 +184,14 @@ Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne list
 
 ### Pseudo-éléments
 
-| Sélecteur                         | Description                                                                              |
-| --------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{ Cssxref("::after") }}          | Matches a stylable element appearing after the originating element's actual content.     |
-| {{ Cssxref("::before") }}         | Matches a stylable element appearing before the originating element's actual content.    |
-| {{ Cssxref("::first-letter") }}   | Matches the first letter of the element.                                                 |
-| {{ Cssxref("::first-line") }}     | Matches the first line of the containing element.                                        |
-| {{ Cssxref("::grammar-error") }}  | Matches a portion of the document containing a grammar error as flagged by the browser.  |
-| {{ Cssxref("::selection") }}      | Matches the portion of the document that has been selected.                              |
-| {{ Cssxref("::spelling-error") }} | Matches a portion of the document containing a spelling error as flagged by the browser. |
+| Sélecteur                         | Description                                                                                   |
+| --------------------------------- | --------------------------------------------------------------------------------------------- |
+| {{ Cssxref("::after") }}          | Correspond à un élément stylisable apparaissant après le contenu réel de l'élément d'origine. |
+| {{ Cssxref("::before") }}         | Matches a stylable element appearing before the originating element's actual content.         |
+| {{ Cssxref("::first-letter") }}   | Matches the first letter of the element.                                                      |
+| {{ Cssxref("::first-line") }}     | Matches the first line of the containing element.                                             |
+| {{ Cssxref("::grammar-error") }}  | Matches a portion of the document containing a grammar error as flagged by the browser.       |
+| {{ Cssxref("::selection") }}      | Matches the portion of the document that has been selected.                                   |
+| {{ Cssxref("::spelling-error") }} | Matches a portion of the document containing a spelling error as flagged by the browser.      |
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
