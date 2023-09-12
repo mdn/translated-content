@@ -5,9 +5,9 @@ slug: Web/API/OffscreenCanvas
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-L'interface `OffscreenCanvas` fournit un canevas qui peut être restitué hors écran. Il est disponible dans les contextes à la fois window et [worker](/fr-FR/docs/Web/API/Web_Workers_API).
+L'interface `OffscreenCanvas` fournit un canevas qui peut être restitué hors écran. Il est disponible dans les contextes à la fois window et [worker](/fr/docs/Web/API/Web_Workers_API).
 
-> **Note :** Cette API n'est actuellement implémentée que pour les contextes [WebGL1](/fr-FR/docs/Web/API/WebGLRenderingContext) et[WebGL2](/fr-FR/docs/Web/API/WebGL2RenderingContext). Voir [bug Firefox 801176](https://bugzil.la/801176) pour le support de l'[API canvas](/fr-FR/docs/Web/API/Canvas_API) depuis les workers.
+> **Note :** Cette API n'est actuellement implémentée que pour les contextes [WebGL1](/fr/docs/Web/API/WebGLRenderingContext) et[WebGL2](/fr/docs/Web/API/WebGL2RenderingContext). Voir [bug Firefox 801176](https://bugzil.la/801176) pour le support de l'[API canvas](/fr/docs/Web/API/Canvas_API) depuis les workers.
 
 ## Constructeur
 
@@ -78,7 +78,7 @@ Une autre façon d'utiliser l'API `OffscreenCanvas` est d'appeler {{domxref("HTM
 
 Afin de rendre les cadres visibles, vous pouvez appeler `commit()` sur ce `RenderingContext`, afin que les cadres soient renvoyés dans l'élément {{HTMLElement ("canvas")}} original.
 
-Notez que dans Firefox, cette API n'est actuellement implémentée que pour le [contexte WebGL](/fr-FR/docs/Web/API/WebGL_API) ({{domxref ("WebGLRenderingContext.commit()")}}). Pour la prise en charge de l'API Canvas 2D par les employés, voir le [bug Firefox 801176](https://bugzil.la/801176).
+Notez que dans Firefox, cette API n'est actuellement implémentée que pour le [contexte WebGL](/fr/docs/Web/API/WebGL_API) ({{domxref ("WebGLRenderingContext.commit()")}}). Pour la prise en charge de l'API Canvas 2D par les employés, voir le [bug Firefox 801176](https://bugzil.la/801176).
 
 main.js (code du thread principal) :
 

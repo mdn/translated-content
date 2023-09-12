@@ -3,6 +3,8 @@ title: 我需要什么软件来构建一个网站
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 在这篇文章我们会展示当你编辑，上传或者浏览一个网站时所需要的软件成分。
 
 <table>
@@ -31,7 +33,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 
 ## 自主学习
 
-_现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_started)_。
+_现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community/Contributing/Getting_started)_。
 
 ## 深度探索
 
@@ -199,6 +201,6 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_s
 
 ## 下一步
 
-- 这里的一些软件是免费的，但不是所有都是。探寻在网络上做一些事情需要花费多少 \[[Find out how much it costs to do something on the web](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost)]。
-- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于如何选择并安装一个文件浏览器 \[[how to choose and install a text editor](/zh-CN/docs/Learn/Choose,_Install_and_set_up_a_text_editor)] 的文章。
-- 如果你寻思如何在网络上发布你的网站，查阅“如何上传文件到一个网络服务器 \[[How to upload files to a web server](/zh-CN/docs/Learn/Upload_files_to_a_web_server)]”。
+- 这里的一些软件是免费的，但不是所有都是。探寻[在网络上做一些事情需要花费多少](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)。
+- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于[如何选择并安装一个文件浏览器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)的文章。
+- 如果你寻思如何在网络上发布你的网站，查阅“[如何上传文件到一个网络服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)”。

@@ -1,6 +1,8 @@
 ---
 title: ホワイトスペースは HTML、 CSS、そして DOM 内でどう扱われるか
 slug: Web/API/Document_Object_Model/Whitespace
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -27,7 +29,7 @@ HTML の場合、ホワイトスペースはほとんど無視されます。単
 
 これは、ホワイトスペースがページのレイアウトに影響を与えないようにするためです。要素の周囲や内部に余白を作るのは CSS の仕事です。
 
-### ホワイトスペースに何が*起こる*のか
+### ホワイトスペースに何が起こるのか
 
 しかし、ただ消えるだけではありません。
 
@@ -40,8 +42,9 @@ HTML の場合、ホワイトスペースはほとんど無視されます。単
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>My Document</title>
   </head>
   <body>
@@ -53,13 +56,13 @@ HTML の場合、ホワイトスペースはほとんど無視されます。単
 
 この DOM ツリーは次のように見えます。
 
-![上記の HTML の例と同等の DOM ツリー](dom-string.png)
+![単純な HTML 文書を表す DOM ツリー](dom-string.png)
 
 DOM でホワイトスペースを保存することは多くの点で便利ですが、特定のレイアウトを実装するのが難しくなったり、 DOM 内のノードを反復処理したい開発者にとっては問題が生じたりする場所があります。これらの問題と解決策については、後ほど見ていきましょう。
 
 ### CSS はホワイトスペースをどのように処理するのか
 
-ほとんどのホワイトスペースは無視されますが、すべてが無視されるわけではありません。先ほどの例では、"Hello" と "World!" の間のホワイトスペースの一つは、ブラウザーでページがレンダリングされたときにまだ存在しています。ブラウザーエンジンには、どのホワイトスペースが有用でどれが不要かを決定する規則があります — これらは、少なくとも [CSS テキストモジュールレベル 3](https://www.w3.org/TR/css-text-3)、特に [CSS の white-space プロパティ](https://www.w3.org/TR/css-text-3/#white-space-property)と[ホワイトスペースの処理の詳細](https://www.w3.org/TR/css-text-3/#white-space-processing)についての部分で規定されていますが、以下ではより簡単な説明を提供します。
+ほとんどのホワイトスペースは無視されますが、すべてが無視されるわけではありません。先ほどの例では、"Hello" と "World!" の間のホワイトスペースの一つは、ブラウザーでページがレンダリングされたときにまだ存在しています。ブラウザーエンジンには、どのホワイトスペースが有用でどれが不要かを決定する規則があります — これらは、少なくとも [CSS テキストモジュールレベル 3](https://www.w3.org/TR/css-text-3/)、特に [CSS の white-space プロパティ](https://www.w3.org/TR/css-text-3/#white-space-property)と[ホワイトスペースの処理の詳細](https://www.w3.org/TR/css-text-3/#white-space-processing)についての部分で規定されていますが、以下ではより簡単な説明を提供します。
 
 #### 例
 
@@ -93,7 +96,14 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 このコンテキストの中では、ホワイトスペース文字の処理は次のように要約されます。
 
-1. まず、改行の直前と直後の空白とタブはすべて無視されるので、以前のマークアップの例を参考にして、この最初の規則を適用すると、次のようになります。
+1. まず、改行の直前と直後の空白とタブはすべて無視されるので、以前のマークアップの例を参考にすると、次のようになります。
+
+   ```html-nolint
+   <h1>◦◦◦Hello◦⏎
+   ⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
+   ```
+
+   ...そして最初のルールを適用すると、次のようになります。
 
    ```html-nolint
    <h1>◦◦◦Hello⏎
@@ -109,27 +119,25 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 3. 次に、改行が空白に変換されます。
 
-   ```html
+   ```html-nolint
    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
    ```
 
 4. その後で、空白の直後に他の空白がある場合は（2 つが別々なインライン要素をまたぐ場合も含めて）無視されるので、次のようになります。
 
-   ```html
+   ```html-nolint
    <h1>◦Hello◦<span>World!</span>◦</h1>
    ```
 
-5. そして、行頭と行末の一連の空白が削除されるので、ようやくこのようになります。
+5. そして、要素の先頭の末尾の一連の空白が削除されるので、ようやくこのようになります。
 
-   ```html
+   ```html-nolint
    <h1>Hello◦<span>World!</span></h1>
    ```
 
 このため、ウェブページを訪れた人は、ひどく字下げされた "Hello" に続いてもっとひどく字下げされた "World!" をその下の行に見かけるのではなく、ページの先頭にきれいに書かれた "Hello World!" という文言を見ることになります。
 
-> **メモ:** [Firefox DevTools](/ja/docs/Tools) ではバージョン 52 以降、テキストノードの強調表示に対応しており、どのノードにホワイトスペース文字が含まれているかを正確に確認できるようになりました。純粋なホワイトスペースノードには "whitespace" ラベルが付けられます。
-
-</div>
+> **メモ:** [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html) ではバージョン 52 以降、テキストノードの強調表示に対応しており、どのノードにホワイトスペース文字が含まれているかを正確に確認できるようになりました。純粋なホワイトスペースノードには "whitespace" ラベルが付けられます。
 
 ### ブロック整形コンテキストでのホワイトスペース
 
@@ -167,7 +175,17 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 ここでのホワイトスペースの扱いをまとめると、次のようになります（ブラウザーによって正確な動作に若干の違いがあるかもしれませんが、基本的にはうまくいきます）。
 
-1. ブロック整形コンテキスト内にいるため、すべてがブロックでなければなりません。ブロックは幅いっぱいに配置され、互いに積み重ねられるので、最終的にはこのブロックのリストで構成されるレイアウトとなります。
+1. 私たちはブロック整形コンテキストの中にいるので、すべてがブロックにする必要があります。そのため、 3 つのテキストノードもブロックになり 2 つの `<div>` であるかのように扱われます。ブロックは利用できる幅をすべて占め、互いに積み重ねられます。つまり、上記の例から始めるには次のようにします。
+
+   ```html-nolint
+   <body>⏎
+   ⇥<div>◦◦Hello◦◦</div>⏎
+   ⏎
+   ◦◦◦<div>◦◦World!◦◦</div>◦◦⏎
+   </body>
+   ```
+
+   ...このブロックのリストで構成されたレイアウトが終わります。
 
    ```html
    <block>⏎⇥</block>
@@ -234,17 +252,15 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 <!--
 <ul class="people-list">⏎
-
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
 </ul>
 -->
 ```
@@ -257,7 +273,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 Firefox DevTools の HTML インスペクターではテキストノードを強調表示し、要素がどの領域を占めているかを正確に表示します。
 
-![](whitespace-devtools.png)
+![Firefox 開発者ツールの HTML インスペクターでブロック間の空白を表示する例](whitespace-devtools.png)
 
 ### 解決策
 
@@ -279,14 +295,14 @@ ul {
 ```css
 ul {
   font-size: 0;
-  ...
+  /* … */
 }
 
 li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  ...
+  /* … */
 }
 ```
 
@@ -303,12 +319,8 @@ li {
 
 また、この問題は、リスト項目をすべてソースの同じ行に配置し、空白のノードが最初に作成されないようにすることで解決することもできます。
 
-```html
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+```html-nolint
+<li></li><li></li><li></li><li></li><li></li>
 ```
 
 ## DOM 処理とホワイトスペース
@@ -321,7 +333,7 @@ li {
 
 以下の JavaScript のコードでは、 DOM 内の空白を簡単に処理するためのいくつかの関数を定義しています。
 
-```js
+```js-nolint
 /**
  * スクリプト全体で、ホワイトスペースを以下のいずれかの文字として定義しています。
  *  "\t" TAB \u0009
@@ -342,7 +354,6 @@ li {
  *             それ以外は false
  */
 function is_all_ws(nod) {
-  // ECMA-262 第3版 の String および RegExp の機能を使用
   return !/[^\t\n\r ]/.test(nod.textContent);
 }
 
@@ -358,9 +369,9 @@ function is_all_ws(nod) {
 
 function is_ignorable(nod) {
   return (
-    nod.nodeType == 8 || // コメントノード
-    (nod.nodeType == 3 && is_all_ws(nod))
-  ); // 全空白テキストノード
+    nod.nodeType === 8 || // コメントノード
+    (nod.nodeType === 3 && is_all_ws(nod))
+  ); // 全てホワイトスペースのテキストノード
 }
 
 /**
@@ -376,7 +387,9 @@ function is_ignorable(nod) {
  */
 function node_before(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -392,7 +405,9 @@ function node_before(sib) {
  */
 function node_after(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -409,9 +424,11 @@ function node_after(sib) {
  *               2) 該当するノードがなければ null
  */
 function last_child(par) {
-  var res = par.lastChild;
+  let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.previousSibling;
   }
   return null;
@@ -427,9 +444,11 @@ function last_child(par) {
  *               2) 該当するノードがなければ null
  */
 function first_child(par) {
-  var res = par.firstChild;
+  let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.nextSibling;
   }
   return null;
@@ -445,12 +464,14 @@ function first_child(par) {
  * @return     当該テキストノードの内容が与えるホワイトスペースを纏めた文字列
  */
 function data_of(txt) {
-  var data = txt.textContent;
-  // ECMA-262 第3版 の String および RegExp の機能を使用
+  let data = txt.textContent;
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ") data = data.substring(1, data.length);
-  if (data.charAt(data.length - 1) == " ")
+  if (data[0] === " ") {
+    data = data.substring(1, data.length);
+  }
+  if (data[data.length - 1] === " ") {
     data = data.substring(0, data.length - 1);
+  }
   return data;
 }
 ```
@@ -460,9 +481,9 @@ function data_of(txt) {
 次のコードは、上記の関数の使い方を示したものです。これは、ある要素の子（その子はすべて要素）を繰り返し、テキストが `"This is the third paragraph"` であるものを見つけ、 class 属性とその段落の内容を変更するものです。
 
 ```js
-var cur = first_child(document.getElementById("test"));
+let cur = first_child(document.getElementById("test"));
 while (cur) {
-  if (data_of(cur.firstChild) == "This is the third paragraph.") {
+  if (data_of(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }

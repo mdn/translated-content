@@ -7,42 +7,45 @@ l10n:
 
 {{CSSRef}}
 
-**`hsl()`** 関数表記は、 {{glossary("RGB", "sRGB")}} 色を色相、彩度、明度の成分によって表現します。オプションのアルファ成分は、その色の透明度を表します。
+**`hsl()`** 関数表記は、 {{glossary("RGB", "sRGB")}} 色を _色相_、_彩度_、_明度_ の成分によって表現します。オプションの _アルファ_ 成分は、その色の透明度を表します。
+
+> **メモ:** レガシーの `hsla()` 構文は `hsl()` のエイリアスです。同じ引数を受け付け、同じようにふるまいます。
 
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
-`hsl()` による補色の定義は、{{glossary("color wheel", "色相環")}}の同じ直径に配置されるため、単一の式で計算することができます。ある色の角度を `theta` とすれば、その補色は `180deg-theta` が _彩度_ の座標となります。
+`hsl()` による _補色_ の定義は、{{glossary("color wheel", "色相環")}}の同じ直径に配置されるため、単一の式で計算することができます。ある色の色相環上の角度を `θ` とすれば、その補色の色相環上の角度は `180deg - θ` となります。
 
 ## 構文
 
 ```css
-/* 空白区切りの値の構文 */
-hsl(hue saturation lightness)
-hsl(hue saturation lightness / alpha)
-
-/* カンマ区切りの値の構文 */
-hsl(hue, saturation, lightness)
-hsl(hue, saturation, lightness, alpha)
+hsl(120deg 75% 25%)
+hsl(120deg 75% 25% / 0.6)
 ```
+
+この関数は、すべての値がコンマで区切られたレガシーな構文も受け付けます。
 
 ### 値
 
-- `hue`
+関数表記: `hsl(H S L[ / A])`
 
-  - : {{cssxref("&lt;angle&gt;")}} で {{glossary("color wheel", "色相環")}} 上の角度を `deg`、`rad`、`grad`、`turn` のいずれかの単位で指定したものです。単位のない {{cssxref("&lt;number&gt;")}} として書かれた場合、角度として解釈されます。定義によれば、 _赤_ は `0deg` で、他の色は円周上に広がっているので、 _緑_ は `120deg` 、 _青_ は `240deg` などとなります。また、`<angle>` は周期的なものなので、暗黙のうちに `-120deg` = `240deg`, `480deg` = `120deg`, `-1turn` = `1turn` というように折り返されます。この色相環は、色に関連する角度を探すのに役立ちます。 ![原色（赤-緑-青）と二次色（黄-シアン-マゼンタ）の色相の角度を示す色相環](hue-wheel.png)
+- `H`
+  - : {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;angle&gt;")}} またはキーワード `none` であり、色相環上の角度を表します。この型の詳細は {{CSSXref("&lt;hue&gt;")}} のリファレンスを参照してください。
+- `S`
+  - : {{cssxref("&lt;percentage&gt;")}} またはキーワード `none` であり、彩度を表します。`100%` は色の濃さが最大で、`0%` は完全に色がありません（グレー）。
+- `L`
+  - : {{cssxref("&lt;percentage&gt;")}} またはキーワード `none` であり、輝度を表します。`100%` は白で、`0%` は黒で、`50%` は「通常」です。
+- `A` {{optional_inline}}
+  - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` であり、数値 `1` が `100%` (完全に不透明) を意味します。
 
-- `saturation`
+> **メモ:** `none` の効果は、[Missing color components](/ja/docs/Web/CSS/color_value#missing_color_components) を参照してください。
 
-  - : {{cssxref("&lt;percentage&gt;")}} であり、`100%` は色の濃さが最大で、 `0%` は完全に色がありません（無彩色）。
+### 形式的な構文
 
-- `lightness`
-
-  - : {{cssxref("&lt;percentage&gt;")}} であり、`100%` は白で、 `0%` は黒で、 `50%` は「通常」です。
-
-- `alpha` {{optional_inline}}
-  - : {{cssxref("&lt;percentage&gt;")}} または `0` から `1` までの {{cssxref("&lt;number&gt;")}} で、数値 `1` は `100%` に対応して完全に不透明であることを、 `0` は `0%` に対応し完全に透明であることを意味します。
+{{csssyntax}}
 
 ## 例
+
+### hsl() を conic-gradient() と組み合わせて使う
 
 `hsl()` 関数と [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) はどちらも角度を扱うので、相性がよいものです。
 
@@ -69,7 +72,75 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', '140px')}}
+#### 結果
+
+{{EmbedLiveSample("using_hsl_with_conic-gradient", "100%", 140)}}
+
+### レガシー構文: コンマ区切りの値
+
+歴史上の理由から、`hsl()` 関数はすべての値がコンマにより区切られた形式を受け付けます。
+
+#### HTML
+
+```html
+<div class="space-separated"></div>
+<div class="comma-separated"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.space-separated {
+  background-color: hsl(0 100% 50% / 50%);
+}
+
+div.comma-separated {
+  background-color: hsl(0, 100%, 50%, 50%);
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
+
+### レガシー構文: hsla()
+
+レガシーな `hsla()` 構文は `hsl()` のエイリアスです。
+
+#### HTML
+
+```html
+<div class="hsl"></div>
+<div class="hsla"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.hsl {
+  background-color: hsl(0 100% 50% / 50%);
+}
+
+div.hsla {
+  background-color: hsla(0, 100%, 50%, 50%);
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("legacy_syntax_hsla", "100%", 150)}}
 
 ## 仕様書
 

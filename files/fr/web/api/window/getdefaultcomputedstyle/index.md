@@ -18,7 +18,7 @@ var miseEnForme = window.getDefaultComputedStyle(element[, pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : Une chaîne indiquant le pseudo-élément à rechercher. Doit être `null` (ou non indiqué) pour les éléments ordinaires.
 
-Le `style` retourné est un objet [`CSSStyleDeclaration`](/fr-FR/docs/Web/API/CSSStyleDeclaration).
+Le `style` retourné est un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
 
 ## Exemples
 
