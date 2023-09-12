@@ -5,16 +5,16 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 
 {{MDNSidebar}}
 
-本文提供有关如何记载各种技术的实用信息。
+本文提供有关如何记录各种技术的实用信息。
 
 ## 进行准备工作
 
-在 MDN Web 文档上开始记载或更新前，应当首先准备和规划某些事项再开始正式书写。
+在 MDN Web 文档上开始记录或更新前，应当首先准备和规划某些事项再开始正式书写。
 
 假定你在阅读本指南前已对下列各项有合理程度的了解：
 
 - web 技术，如 HTML、CSS 和 JavaScript。
-- 如何阅读 web 技术规范。在记载 API 时将反复查看规范。
+- 如何阅读 web 技术规范。在记录 API 时将反复查看规范。
 
 其余事项可边做边学。
 
@@ -23,8 +23,8 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 在书写任何文档时的实用资源包含：
 
 1. MDN Web 文档[写作指南](/zh-CN/docs/MDN/Writing_guidelines/Howto)——虽然你已准备开始写作，但是仍然推荐浏览所有文章并熟悉我们的写作规范、不同的页面类型及所含章节和引入页面的不同部分（如规范和浏览器兼容性）的不同方式。
-2. 最新规范——MDN Web 文档上所记载的技术由不同的标准团体创建规范。例如 [TC39](https://tc39.es/zh-Hans/) 对应 JavaScript，[WHATWG](https://whatwg.org/) 对应 HTML，以及 [W3C](https://www.w3.org/zh-hans/) 对应 CSS、XML 和某些 web API。MDN Web 文档中的参考页有指向规范的链接（见“规范”一节），而通常也可进行 web 搜索。请总是着眼于最新的、最接近当下的规范。
-3. 最新的现代 web 浏览器——应为如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/#nightly)、[Chrome 每日构建版](https://www.google.cn/chrome/canary/)或 [Safari 技术预览版](https://webkit.org/downloads/)的实验性或内测构建版，这些版本更有可能支持要记载的特性。若要记载“即将到来”的特性，则这一点尤其要紧。
+2. 最新规范——MDN Web 文档上所记录的技术由不同的标准团体创建规范。例如 [TC39](https://tc39.es/zh-Hans/) 对应 JavaScript，[WHATWG](https://whatwg.org/) 对应 HTML，以及 [W3C](https://www.w3.org/zh-hans/) 对应 CSS、XML 和某些 web API。MDN Web 文档中的参考页有指向规范的链接（见“规范”一节），而通常也可进行 web 搜索。请总是着眼于最新的、最接近当下的规范。
+3. 最新的现代 web 浏览器——应为如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/#nightly)、[Chrome 每日构建版](https://www.google.cn/chrome/canary/)或 [Safari 技术预览版](https://webkit.org/downloads/)的实验性或内测构建版，这些版本更有可能支持要记录的特性。若要记录“即将到来”的特性，则这一点尤其要紧。
 4. 演示、博客文章或其他信息——请找到尽可能多的信息。若因为一项技术发生了变化而要将其更新，则请确保用于学习此技术的资源没有过时。此即上述前两点为何重要的原因。
 
 尝试找人帮助解答问题也属明智之举，询问对象可为规范作者或实现浏览器特性的工程师。
@@ -42,17 +42,17 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 
 ## 探索特性
 
-在记载一项技术的过程中，你将反反复复书写代码示例或构建演示，而先花时间熟悉这项技术的原理将非常有用。这是十分有价值的实践，可以让你很好地理解用例（*为何*开发者要使用这项技术），且同时有助于创造一些代码示例。
+在记录一项技术的过程中，你将反反复复书写代码示例或构建演示，而先花时间熟悉这项技术的原理将非常有用。这是十分有价值的实践，可以让你很好地理解用例（*为何*开发者要使用这项技术），且同时有助于创造一些代码示例。
 
-> **备注：** 若因规范近期的更新导致某个方法现在有不同的定义，但是旧的方法在浏览器中仍然有效，则为了同时涵盖旧方法和新方法，常常需要在同一处同时记载两者。如需帮助，请参考你所找到的演示或询问工程师。
+> **备注：** 若因规范近期的更新导致某个方法现在有不同的定义，但是旧的方法在浏览器中仍然有效，则为了同时涵盖旧方法和新方法，常常需要在同一处同时记录两者。如需帮助，请参考你所找到的演示或询问工程师。
 
 ## 创建待写或待更新页面列表
 
-你需要从头书写或进行更新的页面会因为所对应的技术而有所区别。请查阅[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)和与要记载的技术相关的章节。由于极有可能还需更新现有文档，故请在 MDN Web 文档中搜索与要书写的内容相关的页面。
+你需要从头书写或进行更新的页面会因为所对应的技术而有所区别。请查阅[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)和与要记录的技术相关的章节。由于极有可能还需更新现有文档，故请在 MDN Web 文档中搜索与要书写的内容相关的页面。
 
-### 边栏
+### 侧边栏
 
-所写页面的边栏可能也需要进行定义或更新。为获知是否有必要操作及如何操作，请查阅[边栏指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)。
+所写页面的侧边栏可能也需要进行定义或更新。为获知是否有必要操作及如何操作，请查阅[侧边栏指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)。
 
 ### 代码示例
 
@@ -62,7 +62,7 @@ MDN Web 文档的某些代码示例位于另外的仓库中，其中最为显著
 
 ### 示例
 
-假设你要记载新的 web API，待记载章节的初始列表将类似下列所示：
+假设你要记录新的 web API，待记录章节的初始列表将类似下列所示：
 
 1. 概览页
 2. 接口页
@@ -72,9 +72,9 @@ MDN Web 文档的某些代码示例位于另外的仓库中，其中最为显著
 6. 事件页
 7. 概念或指南页
 8. 代码示例
-9. 边栏
+9. 侧边栏
 
-然后可用更多的细节扩充列表，再加上每个接口及其构成。例如若要记载 Web Audio API，则列表很可能如下所示：
+然后可用更多的细节扩充列表，再加上每个接口及其构成。例如若要记录 Web Audio API，则列表很可能如下所示：
 
 - Web_Audio_API
 - AudioContext
