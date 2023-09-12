@@ -23,8 +23,8 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 在书写任何文档时的实用资源包含：
 
 1. MDN Web 文档[写作指南](/zh-CN/docs/MDN/Writing_guidelines/Howto)——虽然你已准备开始写作，但是仍然推荐浏览所有文章并熟悉我们的写作规范、不同的页面类型及所含章节和引入页面的不同部分（如规范和浏览器兼容性）的不同方式。
-2. 最新规范——MDN Web 文档上所记载的技术由不同的标准团体创建规范。例如 [TC39](https://tc39.es/zh-Hans/) 对应 JavaScript， [WHATWG](https://whatwg.org/) 对应 HTML，以及 [W3C](https://www.w3.org/zh-hans/) 对应 CSS、XML 和某些 web API。MDN Web 文档中的参考页有指向规范的链接（见“规范”一节），而通常也可进行 web 搜索。请总是着眼于最新的、最接近当下的规范。
-3. 最新的现代 web 浏览器——应为如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/#nightly)、[Chrome 每日构建版](https://www.google.cn/chrome/canary/)或 [Safari 技术性预览版](https://webkit.org/downloads/)的实验性或内测构建版，这些版本更有可能支持要记载的特性。若要记载“即将到来”的特性，则这一点尤其要紧。
+2. 最新规范——MDN Web 文档上所记载的技术由不同的标准团体创建规范。例如 [TC39](https://tc39.es/zh-Hans/) 对应 JavaScript，[WHATWG](https://whatwg.org/) 对应 HTML，以及 [W3C](https://www.w3.org/zh-hans/) 对应 CSS、XML 和某些 web API。MDN Web 文档中的参考页有指向规范的链接（见“规范”一节），而通常也可进行 web 搜索。请总是着眼于最新的、最接近当下的规范。
+3. 最新的现代 web 浏览器——应为如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/#nightly)、[Chrome 每日构建版](https://www.google.cn/chrome/canary/)或 [Safari 技术预览版](https://webkit.org/downloads/)的实验性或内测构建版，这些版本更有可能支持要记载的特性。若要记载“即将到来”的特性，则这一点尤其要紧。
 4. 演示、博客文章或其他信息——请找到尽可能多的信息。若因为一项技术发生了变化而要将其更新，则请确保用于学习此技术的资源没有过时。此即上述前两点为何重要的原因。
 
 尝试找人帮助解答问题也属明智之举，询问对象可为规范作者或实现浏览器特性的工程师。
@@ -66,7 +66,7 @@ MDN Web 文档的某些代码示例位于另外的仓库中，其中最为显著
 
 1. 概览页
 2. 接口页
-3. 构建器页
+3. 构造函数页
 4. 方法页
 5. 属性页
 6. 事件页
