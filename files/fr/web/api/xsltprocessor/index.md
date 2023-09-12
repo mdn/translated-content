@@ -56,7 +56,7 @@ const xslRef = maRequeteXHR.responseXML;
 xsltProcessor.importStylesheet(xslRef);
 ```
 
-### Creating an XML document based on part of a document's DOM
+### Créer un document XML à partir d'un fragment du DOM d'un document
 
 Pour obtenir une transformation effective, il faut fournir un document XML à l'objet `XSLTProcessor`. Ce document XML sera utilisé avec le fichier XSL importé afin de produire le résultat final. Le document XML peut être un fichier séparé que l'on charge ou faire partie de la page existante. Pour traiter une partie du DOM d'une page, il faut d'abord créer un document XML en mémoire.
 
