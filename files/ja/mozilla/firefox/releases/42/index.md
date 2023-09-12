@@ -73,7 +73,7 @@ l10n:
 
 #### Web Components
 
-[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) の実験的な実装を変更しました。
+[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の実験的な実装を変更しました。
 
 - {{domxref('ShadowRoot')}} で {{domxref('Node.cloneNode()')}} を実行しようとすると、`DataCloneError` 例外が発生します ([Firefox バグ 1176757](https://bugzil.la/1176757))。
 - {{domxref('ShadowRoot')}} を引数として {{domxref('Document.importNode()')}} を実行すると、`NotSupportedError` の {{domxref("DOMException")}} が発生します ([Firefox バグ 1177914](https://bugzil.la/1177914))。

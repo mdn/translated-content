@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/getTexParameter
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
+La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
 
 ## Syntaxe
 
