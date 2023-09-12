@@ -89,7 +89,7 @@ Si el elemento se implementó en cualquier versión de lanzamiento de uno o más
 
 ### Si el elemento se implementó en un navegador sin un parámetro
 
-Si el elemento se implementó en una o más compilaciones de versiones de navegadores sin requerir una preferencia o un parámetro, marque el elemento como ***desaprobado**, de la siguiente manera:
+Si el elemento se implementó en una o más compilaciones de versiones de navegadores sin requerir una preferencia o un parámetro, marque el elemento como **desaprobado**, de la siguiente manera:
 
 - Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close ()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
 
