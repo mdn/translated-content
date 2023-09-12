@@ -43,10 +43,7 @@ WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebEx
 
 通常，當大家在講「附加元件」時候，他們是指套件（extension）。但也有其他類型的附加元件，允許用戶訂製 Firefox。包含：
 
-- [Lightweight themes](/docs/Mozilla/Add-ons/Themes/Background) 提供簡單而有限的方法自訂 Firefox。
-- [Mobile add-ons](/zh-TW/docs/Mozilla/Add-ons/Firefox_for_Android) 是給 Firefox for Android 的附加元件。注意，我們打算棄用這些 API：未來，WebExtensions 會在 Firefox for Android 完全支持。
-- [搜尋引擎套件](/zh-TW/docs/Creating_OpenSearch_plugins_for_Firefox)會在瀏覽器的搜尋欄位增加新的搜尋引擎。
-- [用戶字典](/zh-TW/docs/Mozilla/Creating_a_spell_check_dictionary_add-on)能讓你在不同語言內檢查拼字。
+- [用戶字典](https://support.mozilla.org/kb/how-do-i-use-firefox-spell-checker)能讓你在不同語言內檢查拼字。
 - [語言包](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack)能讓你的 Firefox 用戶介面支援多語言。
 
 ## 聯絡我們
