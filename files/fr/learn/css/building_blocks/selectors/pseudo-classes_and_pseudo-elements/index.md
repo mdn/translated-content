@@ -191,7 +191,7 @@ Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne list
 | {{ Cssxref("::first-letter") }}   | Correspond à la première lettre de l'élément.                                                      |
 | {{ Cssxref("::first-line") }}     | Correspond à la première ligne de l'élément contenant.                                             |
 | {{ Cssxref("::grammar-error") }}  | Correspond à une partie du document contenant une erreur de grammaire signalée par le navigateur.. |
-| {{ Cssxref("::selection") }}      | Matches the portion of the document that has been selected.                                        |
+| {{ Cssxref("::selection") }}      | Correspond à la partie du document qui a été sélectionnée.                                         |
 | {{ Cssxref("::spelling-error") }} | Matches a portion of the document containing a spelling error as flagged by the browser.           |
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
