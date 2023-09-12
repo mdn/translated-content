@@ -33,19 +33,13 @@ false로 변환할 수 있는 표현식의 예는 다음과 같습니다.
 
 `||` 연산자는 불리언 값이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [불리언 원시 값](/ko/docs/Web/JavaScript/Data_structures#boolean_type)으로 변환할 수 있으므로 불리언 연산자로 간주할 수 있습니다. 반환 값(또는 일반적으로 모든 표현식)을 해당 불리언 값으로 명시적으로 변환하려면 이중 [{{JSxRef("Operators/Logical_NOT", "NOT operator", "", 1)}}] 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용합니다.
 
-### 단락 회로 평가
+### 단락 평가
 
-The logical OR expression is evaluated left to right, it is tested for possible
-"short-circuit" evaluation using the following rule:
+논리적 OR 표현식은 왼쪽에서 오른쪽으로 평가되며, 다음 규칙을 사용하여 "단락" 평가가 가능한지 테스트 합니다.
 
-`(some truthy expression) || expr` is short-circuit evaluated to
-the truthy expression.
+`(some truthy expression) || expr`은 참 같은 값(truthy) 표현식으로 단락 평가됩니다.
 
-Short circuit means that the `expr` part above is **not
-evaluated**, hence any side effects of doing so do not take effect (e.g., if
-`expr` is a function call, the calling never takes place). This
-happens because the value of the operator is already determined after the evaluation of
-the first operand. See example:
+단락은 위의 `expr` 부분이 **평가되지 않으므로** 이로 인한 부작용이 발생하지 않음을 의미합니다. (예: `expr`이 함수 호출인 경우 호출이 수행되지 않음) 이는 첫 번째 피연산자를 평가한 후에 피연산자 값이 이미 결정되었기 때문에 발생합니다. 아래 예제를 참조하세요.
 
 ```js
 function A() {
@@ -58,26 +52,24 @@ function B() {
 }
 
 console.log(B() || A());
-// Logs "called B" due to the function call,
-// then logs true (which is the resulting value of the operator)
+// 함수 호출로 인해 "called B"를 콘솔에 출력합니다.
+// 그런 다음 true(연산자의 결과 값)를 기록합니다.
 ```
 
-### Operator precedence
+### 연산자 우선순위
 
-The following expressions might seem equivalent, but they are not, because the
-`&&` operator is executed before the `||` operator
-(see [operator precedence](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+다음 표현식은 동일해 보일 수 있지만, `&&` 연산자가 `||` 연산자보다 먼저 실행되기 때문에 동일하지 않습니다. ([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)를 참조).
 
 ```js-nolint
-true || false && false; // returns true, because && is executed first
-(true || false) && false; // returns false, because grouping has the highest precedence
+true || false && false; // &&이 먼저 실행되어 true를 반환합니다.
+(true || false) && false; // 그룹화가 가장 우선순위가 높으므로, false를 반환합니다.
 ```
 
-## Examples
+## 예제
 
-### Using OR
+### OR 사용하기
 
-The following code shows examples of the `||` (logical OR) operator.
+다음 코드는 `||` (논리적 OR) 연산자의 예를 보여줍니다.
 
 ```js
 true || true; // t || t returns true
@@ -92,67 +84,64 @@ false || ""; // f || f returns ""
 false || varObject; // f || object returns varObject
 ```
 
-> **Note:** If you use this operator to provide a default value to some
-> variable, be aware that any _falsy_ value will not be used. If you only need to
-> filter out [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, consider using
-> [the nullish coalescing operator](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
+> **참고:** 이 연산자를 사용하여 일부 변수에 기본 값을 제공하는 경우, 거짓 같은 값(falsy)은 사용되지 않으므로 주의해야 합니다.
+> [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 {{jsxref("undefined")}}만 필터링 해야하는 경우, [널 병합 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)를 사용하는 것이 좋습니다.
 
-### Conversion rules for booleans
+### 불리언에 대한 변환 규칙
 
-#### Converting AND to OR
+#### AND를 OR로 변환하기
 
-The following operation involving **booleans**:
+**불리언**을 포함하는 아래 연산은
 
 ```js-nolint
 bCondition1 && bCondition2
 ```
 
-is always equal to:
+항상 아래와 같습니다.
 
 ```js-nolint
 !(!bCondition1 || !bCondition2)
 ```
 
-#### Converting OR to AND
+#### OR을 AND로 변환하기
 
-The following operation involving **booleans**:
+**불리언**을 포함하는 아래의 연산은
 
 ```js-nolint
 bCondition1 || bCondition2
 ```
 
-is always equal to:
+항상 아래와 같습니다.
 
 ```js-nolint
 !(!bCondition1 && !bCondition2)
 ```
 
-### Removing nested parentheses
+### 중첩된 괄호 제거
 
-As logical expressions are evaluated left to right, it is always possible to remove
-parentheses from a complex expression following some rules.
+논리적 표현식은 왼쪽에서 오른쪽으로 평가되기 때문에 특정 규칙을 따르는 경우 복잡한 식에서 괄호를 제거할 수 있습니다.
 
-The following composite operation involving **booleans**:
+**불리언**을 포함하는 다음 복합적인 연산은
 
 ```js-nolint
 bCondition1 && (bCondition2 || bCondition3)
 ```
 
-is always equal to:
+언제나 다음과 같습니다.
 
 ```js-nolint
 !(!bCondition1 || !bCondition2 && !bCondition3)
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이보기
 
 - [Nullish coalescing operator (`??`)](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
