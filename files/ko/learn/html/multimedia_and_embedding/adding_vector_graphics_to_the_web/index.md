@@ -304,8 +304,7 @@ function insertAtCaret(text) {
 // 사용자가 텍스트 영역 코드를 업데이트할 때마다 저장된 사용자 코드를 업데이트합니다.
 
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 솔루션이 아닌 사용자 코드가 표시될 때의 상태만 저장하여 사용자 코드 위에 솔루션이 저장되지 않도록 하려는 것입니다.
   if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
