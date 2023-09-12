@@ -78,7 +78,7 @@ window.alert(selObj);
 
 ```js
 const selObj = window.getSelection();
-const range  = selObj.getRangeAt(0);
+const range = selObj.getRangeAt(0);
 ```
 
 - `selObj` は Selection オブジェクト

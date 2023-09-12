@@ -32,10 +32,10 @@ O seguinte exemplo utiliza `lastIndexOf` para localizar elementos em um array.
 
 ```js
 var array = [2, 5, 9, 2];
-array.lastIndexOf(2);     // 3
-array.lastIndexOf(7);     // -1
-array.lastIndexOf(2, 3);  // 3
-array.lastIndexOf(2, 2);  // 0
+array.lastIndexOf(2); // 3
+array.lastIndexOf(7); // -1
+array.lastIndexOf(2, 3); // 3
+array.lastIndexOf(2, 2); // 0
 array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
 ```
@@ -46,12 +46,12 @@ O seguinte exemplo utiliza `lastIndexOf` para encontrar todos os índices de um 
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
@@ -68,14 +68,15 @@ Note que devemos tratar o caso `idx == 0` separadamente aqui pois o elemento ser
 // Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
-    'use strict';
+  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
     }
 
-    var n, k,
+    var n,
+      k,
       t = Object(this),
       len = t.length >>> 0;
     if (len === 0) {
@@ -87,8 +88,7 @@ if (!Array.prototype.lastIndexOf) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
         n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }
@@ -107,10 +107,10 @@ Novamente, perceba que essa implementação foca na absoluta compatibilidade com
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                         | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                          | Status             | Comentário                                         |
+| -------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

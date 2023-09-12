@@ -1,7 +1,6 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
 
 {{JSRef("Objetos_globales", "Object")}}
@@ -13,7 +12,7 @@ El metodo **`Object.defineProperties()`** define nuevas o modifica propiedades e
 ## Sintáxis
 
 ```js
-Object.defineProperties(obj, propiedades)
+Object.defineProperties(obj, propiedades);
 ```
 
 ### Parámetros
@@ -31,14 +30,14 @@ Object.defineProperties(obj, propiedades)
 
 ```js
 Object.defineProperties(obj, {
-  "property1": {
+  property1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  "property2": {
+  property2: {
     value: "Hello",
-    writable: false
-  }
+    writable: false,
+  },
   // etc. etc.
 });
 ```

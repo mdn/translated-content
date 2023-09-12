@@ -1,22 +1,6 @@
 ---
 title: 全画面 API のガイド
 slug: Web/API/Fullscreen_API/Guide
-page-type: guide
-tags:
-  - API
-  - Drawing
-  - Full
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - display
-  - full screen
-  - fullscreen
-  - screen
-browser-compat:
-  - api.Document.fullscreen
-  - api.Document.fullscreenEnabled
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -100,11 +84,15 @@ if (elem.requestFullscreen) {
 ページが読み込まれると、このコードが実行され、 <kbd>Enter</kbd> キーを待ち受けるためのイベントリスナーが設定されます。
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 全画面モードのトグル切り替え

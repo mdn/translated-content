@@ -239,7 +239,7 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 
 ### ウェブコンポーネントインターフェイス
 
-これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/Web_Components) で使用され、利用可能な[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を作成・管理します。
+これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/Web_Components) で使用され、利用可能な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成・管理します。
 
 - {{DOMxRef("CustomElementRegistry")}}
 

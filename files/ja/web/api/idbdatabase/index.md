@@ -57,51 +57,50 @@ IndexedDB API の `IDBDatabase` インターフェイスは、[データベー�
 
 ```js
 // 我々のデータベースを開きましょう
-  var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
+// これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
+};
 
-  // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-  DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '<li>データベースの読み込みに失敗しました｡</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>データベースを初期化しました｡</li>";
+
+  // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
+  db = DBOpenRequest.result;
+
+  // displayData() 関数を実行し、タスクリストに既に IDB にある全ての to-do リストデータを入れます。
+  displayData();
+};
+
+// このイベントハンドラーは、新しいバージョンのデータベースの作成が必要なことを表すイベントを処理します。
+// これは、データベースが作成されていないときや、上の行の window.indexedDB.open に
+// 新しいバージョン番号が渡されたときです。
+
+DBOpenRequest.onupgradeneeded = function (event) {
+  var db = event.target.result;
+
+  db.onerror = function (event) {
+    note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
   };
 
-  DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '<li>データベースを初期化しました｡</li>';
+  // IDBDatabase.createObjectStore を用いてデータベースにオブジェクトストアを作成します。
 
-    // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
-    db = DBOpenRequest.result;
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
-    // displayData() 関数を実行し、タスクリストに既に IDB にある全ての to-do リストデータを入れます。
-    displayData();
-  };
+  // オブジェクトストアにどのようなデータ項目が入るかを定義します。
 
-  // このイベントハンドラーは、新しいバージョンのデータベースの作成が必要なことを表すイベントを処理します。
-  // これは、データベースが作成されていないときや、上の行の window.indexedDB.open に
-  // 新しいバージョン番号が渡されたときです。
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 
-  DBOpenRequest.onupgradeneeded = function(event) {
-    var db = event.target.result;
+  objectStore.createIndex("notified", "notified", { unique: false });
 
-    db.onerror = function(event) {
-      note.innerHTML += '<li>データベースの読み込みに失敗しました｡</li>';
-    };
-
-    // IDBDatabase.createObjectStore を用いてデータベースにオブジェクトストアを作成します。
-
-    var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
-
-    // オブジェクトストアにどのようなデータ項目が入るかを定義します。
-
-    objectStore.createIndex("hours", "hours", { unique: false });
-    objectStore.createIndex("minutes", "minutes", { unique: false });
-    objectStore.createIndex("day", "day", { unique: false });
-    objectStore.createIndex("month", "month", { unique: false });
-    objectStore.createIndex("year", "year", { unique: false });
-
-    objectStore.createIndex("notified", "notified", { unique: false });
-
-    note.innerHTML += '<li>オブジェクトストアが作成されました。</li>';
-  };
+  note.innerHTML += "<li>オブジェクトストアが作成されました。</li>";
+};
 ```
 
 次の行は、データベースでトランザクションを開いて、そしてオブジェクトストアを開いて、中のデータを操作しています。

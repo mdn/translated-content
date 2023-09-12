@@ -25,12 +25,12 @@ slug: Web/API/MediaSource/duration
 以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
 
 ```js
-function sourceOpen (_) {
+function sourceOpen() {
   //console.log(this.readyState); // open
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       mediaSource.duration = 120;
       video.play();
@@ -38,7 +38,7 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
 // …
 ```

@@ -1,7 +1,6 @@
 ---
 title: break-before
 slug: Web/CSS/break-before
-translation_of: Web/CSS/break-before
 ---
 
 {{CSSRef}}

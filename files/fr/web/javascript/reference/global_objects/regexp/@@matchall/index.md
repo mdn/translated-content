@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
 
 {{JSRef}}

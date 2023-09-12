@@ -10,7 +10,7 @@ slug: Web/API/Window/scrollByPages
 ## 概要
 
 ```js
-window.scrollByPages(pages)
+window.scrollByPages(pages);
 ```
 
 ### 引数

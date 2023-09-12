@@ -5,11 +5,11 @@ slug: Web/API/Page_Visibility_API
 
 {{DefaultAPISidebar("Page Visibility API")}}
 
-使用选项卡式浏览，任何给定网页都有可能在后台，因此对用户不可见。页面可见性 API 提供了您可以观察的事件，以便了解文档何时可见或隐藏，以及查看页面当前可见性状态的功能。
+使用选项卡式浏览，任何给定网页都有可能在后台，因此对用户不可见。页面可见性 API 提供了你可以观察的事件，以便了解文档何时可见或隐藏，以及查看页面当前可见性状态的功能。
 
 > **备注：** 页面可见性 API 对于节省资源和提高性能特别有用，它使页面在文档不可见时避免执行不必要的任务。
 
-当用户最小化窗口或切换到另一个选项卡时，API 会发送[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果您的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
+当用户最小化窗口或切换到另一个选项卡时，API 会发送[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果你的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
 
 {{HTMLElement("iframe")}}的可见性状态与父文档相同。使用 CSS 属性（例如{{cssxref("display", "display: none;")}}）隐藏`<iframe>`不会触发可见性事件或更改框架中包含的文档的状态。
 
@@ -55,7 +55,8 @@ Some processes are exempt from this throttling behavior. In these cases, you can
 ```js
 // 设置隐藏属性和改变可见属性的事件的名称
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+if (typeof document.hidden !== "undefined") {
+  // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.msHidden !== "undefined") {
@@ -79,23 +80,35 @@ function handleVisibilityChange() {
 }
 
 // 如果浏览器不支持 addEventListener 或 Page Visibility API 给出警告
-if (typeof document.addEventListener === "undefined" || typeof document[hidden] === "undefined") {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+if (
+  typeof document.addEventListener === "undefined" ||
+  typeof document[hidden] === "undefined"
+) {
+  console.log(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // 处理页面可见属性的改变
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // 当视频暂停，设置 title
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      document.title = "Paused";
+    },
+    false,
+  );
 
   // 当视频播放，设置 title
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
+  videoElement.addEventListener(
+    "play",
+    function () {
+      document.title = "Playing";
+    },
+    false,
+  );
 }
 ```
 
@@ -121,7 +134,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }

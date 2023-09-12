@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
-translation_of: Web/API/ServiceWorkerContainer/getRegistration
 ---
 
 {{APIRef("Service Workers API")}}

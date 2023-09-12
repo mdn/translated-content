@@ -1,7 +1,6 @@
 ---
 title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
 
 {{AddonSidebar()}}

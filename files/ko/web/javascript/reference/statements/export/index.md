@@ -2,6 +2,7 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 **`export`** 문은 JavaScript 모듈에서 함수, 객체, 원시 값을 내보낼 때 사용합니다. 내보낸 값은 다른 프로그램에서 {{jsxref("Statements/import", "import")}} 문으로 가져가 사용할 수 있습니다.
@@ -76,21 +77,20 @@ slug: Web/JavaScript/Reference/Statements/export
 
 ```js
 // test.js
-let k; 
+let k;
 export default k = 12;
 ```
 
 ```js
 // 임의의 다른 파일
-import m from './test'; // k가 기본 내보내기이므로, 가져오는 이름으로 k 대신 m을 사용해도 문제 없음
-console.log(m);         // 12 기록
+import m from "./test"; // k가 기본 내보내기이므로, 가져오는 이름으로 k 대신 m을 사용해도 문제 없음
+console.log(m); // 12 기록
 ```
 
 식별자 충돌을 피하기 위해 유명 내보내기 중 이름을 바꿔줄 수도 있습니다.
 
 ```js
-export { myFunction as function1,
-         myVariable as variable };
+export { myFunction as function1, myVariable as variable };
 ```
 
 ### 다시 내보내기 / 조합
@@ -98,7 +98,7 @@ export { myFunction as function1,
 부모 모듈이 자식 모듈을 가져와서 다시 내보낼 수도 있습니다. 즉, 여러 개의 모듈을 모아놓을 하나의 모듈을 만들 수 있습니다.
 
 ```js
-export foo from 'bar.js';
+export foo from "bar.js";
 ```
 
 위 구문은 아래와 동일합니다.
@@ -121,14 +121,14 @@ function cube(x) {
 }
 const foo = Math.PI + Math.SQRT2;
 var graph = {
-    options: {
-        color:'white',
-        thickness:'2px'
-    },
-    draw: function() {
-        console.log('From graph draw function');
-    }
-}
+  options: {
+    color: "white",
+    thickness: "2px",
+  },
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 export { cube, foo, graph };
 ```
 
@@ -143,14 +143,14 @@ export { cube, foo, graph };
 //
 // script demo.js
 
-import { cube, foo, graph } from 'my-module';
+import { cube, foo, graph } from "my-module";
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 ### 기본 내보내기 사용
@@ -167,7 +167,7 @@ export default function cube(x) {
 그런 다음, 다른 스크립트에서 가져오는건 간단합니다:
 
 ```js
-import cube from './my-module.js';
+import cube from "./my-module.js";
 console.log(cube(3)); // 27
 ```
 

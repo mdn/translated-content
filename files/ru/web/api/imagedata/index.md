@@ -1,8 +1,8 @@
 ---
 title: ImageData
 slug: Web/API/ImageData
-translation_of: Web/API/ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 Интерфейс **`ImageData`** представляет лежащие в основе пиксельные данные области элемента {{HTMLElement("canvas")}}. Он создан используя конструктор {{domxref("ImageData.ImageData", "ImageData()")}} или метод создания объекта {{domxref("CanvasRenderingContext2D")}} ассоциированного с canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} и {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Он также может быть использован для установки части canvas используя метод {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.

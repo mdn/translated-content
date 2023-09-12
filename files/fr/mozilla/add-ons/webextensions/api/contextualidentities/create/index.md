@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
 ---
 
 {{AddonSidebar()}}

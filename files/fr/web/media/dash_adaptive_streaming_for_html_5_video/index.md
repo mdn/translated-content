@@ -1,7 +1,6 @@
 ---
 title: Utiliser DASH avec les vidéos en HTML
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
 
 {{HTMLSidebar}}

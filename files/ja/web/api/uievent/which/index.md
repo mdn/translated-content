@@ -1,7 +1,6 @@
 ---
 title: UIEvent.which
 slug: Web/API/UIEvent/which
-original_slug: Web/API/MouseEvent/which
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
@@ -46,7 +45,7 @@ l10n:
             `keyCode property: ${evt.keyCode}\n` +
             `which property: ${evt.which}\n` +
             `charCode property: ${evt.charCode}\n` +
-            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`
+            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
         );
       }
 
@@ -54,7 +53,7 @@ l10n:
         alert(
           `onkeydown handler:\n` +
             `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n`
+            `which property: ${evt.which}\n`,
         );
       }
     </script>

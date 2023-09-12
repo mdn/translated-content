@@ -9,7 +9,7 @@ on:
         default: ""
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "0 */24 * * *"
+    - cron: "0 1 * * *"
 
 jobs:
   build:
@@ -31,9 +31,9 @@ jobs:
           - zh-tw
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: mdn/content
           path: mdn/content

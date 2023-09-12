@@ -1,7 +1,6 @@
 ---
 title: String — Cadena de caracteres
 slug: Web/JavaScript/Reference/Global_Objects/String
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
 
 {{JSRef}}
@@ -18,7 +17,7 @@ Las cadenas se pueden crear como primitivas, a partir de cadena literales o como
 
 ```js
 const string1 = "Una cadena primitiva";
-const string2 = 'También una cadena primitiva';
+const string2 = "También una cadena primitiva";
 const string3 = `Otra cadena primitiva más`;
 
 const string4 = new String("Un objeto String");
@@ -33,13 +32,13 @@ Los cadena literales se pueden especificar usando comillas simples o dobles, que
 Hay dos formas de acceder a un caracter individual en una cadena. La primera es con el método {{jsxref("String.prototype.charAt()", "charAt()")}}:
 
 ```js
-return 'cat'.charAt(1) // devuelve "a"
+return "cat".charAt(1); // devuelve "a"
 ```
 
 La otra forma (introducida en ECMAScript 5) es tratar a la cadena como un objeto similar a un arreglo, donde los caracteres individuales corresponden a un índice numérico:
 
 ```js
-return 'cat'[1] // devuelve "a"
+return "cat"[1]; // devuelve "a"
 ```
 
 Cuando se usa la notación entre corchetes para acceder a los caracteres, no se puede intentar eliminar o asignar un valor a estas propiedades. Las propiedades involucradas no se pueden escribir ni configurar. (Ve {{jsxref("Object.defineProperty()")}} para más información).
@@ -49,14 +48,15 @@ Cuando se usa la notación entre corchetes para acceder a los caracteres, no se 
 En C, se usa la función `strcmp()` para comparar cadenas. En JavaScript, solo usas los [operadores menor que y mayor que](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators):
 
 ```js
-let a = 'a'
-let b = 'b'
-if (a < b) { // true
-  console.log(a + ' es menor que ' + b)
+let a = "a";
+let b = "b";
+if (a < b) {
+  // true
+  console.log(a + " es menor que " + b);
 } else if (a > b) {
-  console.log(a + ' es mayor que ' + b)
+  console.log(a + " es mayor que " + b);
 } else {
-  console.log(a + ' y ' + b + ' son iguales.')
+  console.log(a + " y " + b + " son iguales.");
 }
 ```
 
@@ -65,9 +65,8 @@ Puedes lograr un resultado similar usando el método {{jsxref("String.prototype.
 Ten en cuenta que `a == b` compara las cadenas en `a` y `b` por ser igual en la forma habitual que distingue entre mayúsculas y minúsculas. Si deseas comparar sin tener en cuenta los caracteres en mayúsculas o minúsculas, usa una función similar a esta:
 
 ```js
-function isEqual(str1, str2)
-{
-  return str1.toUpperCase() === str2.toUpperCase()
+function isEqual(str1, str2) {
+  return str1.toUpperCase() === str2.toUpperCase();
 } // isEqual
 ```
 
@@ -80,20 +79,20 @@ Ten en cuenta que JavaScript distingue entre objetos `String` y valores de {{Glo
 Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a `String` en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("Operators/new", "new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos `String`, por lo que es posible utilizar métodos del objeto `String` en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.
 
 ```js
-let s_prim = 'foo'
-let s_obj = new String(s_prim)
+let s_prim = "foo";
+let s_obj = new String(s_prim);
 
-console.log(typeof s_prim) // Registra "string"
-console.log(typeof s_obj)  // Registra "object"
+console.log(typeof s_prim); // Registra "string"
+console.log(typeof s_obj); // Registra "object"
 ```
 
 Las primitivas de `String` y los objetos `String` también dan diferente resultado cuando se usa {{jsxref("Global_Objects/eval", "eval()")}}. Las primitivas pasadas a `eval` se tratan como código fuente; Los objetos `String` se tratan como todos los demás objetos, devuelven el objeto. Por ejemplo:
 
 ```js
-let s1 = '2 + 2'              // crea una string primitiva
-let s2 = new String('2 + 2')  // crea un objeto String
-console.log(eval(s1))         // devuelve el número 4
-console.log(eval(s2))         // devuelve la cadena "2 + 2"
+let s1 = "2 + 2"; // crea una string primitiva
+let s2 = new String("2 + 2"); // crea un objeto String
+console.log(eval(s1)); // devuelve el número 4
+console.log(eval(s2)); // devuelve la cadena "2 + 2"
 ```
 
 Por estas razones, el código se puede romper cuando encuentra objetos `String` y espera una `string` primitiva en su lugar, aunque generalmente los autores no necesitan preocuparse por la distinción.
@@ -101,7 +100,7 @@ Por estas razones, el código se puede romper cuando encuentra objetos `String` 
 Un objeto `String` siempre se puede convertir a su contraparte primitiva con el método {{jsxref("String.prototype.valueOf()", "valueOf()")}}.
 
 ```js
-console.log(eval(s2.valueOf()))  // devuelve el número 4
+console.log(eval(s2.valueOf())); // devuelve el número 4
 ```
 
 ### Notación de escape
@@ -133,9 +132,10 @@ A veces, tu código incluirá cadenas que son muy largas. En lugar de tener lín
 Puedes usar el operador [+](/es/docs/Web/JavaScript/Reference/Operators/Addition) para agregar varias cadenas juntas, así:
 
 ```js
-let longString = "Esta es una cadena muy larga que necesita " +
-                 "que dividimos en varias líneas porque " +
-                 "de lo contrario, mi código es ilegible."
+let longString =
+  "Esta es una cadena muy larga que necesita " +
+  "que dividimos en varias líneas porque " +
+  "de lo contrario, mi código es ilegible.";
 ```
 
 #### Método 2
@@ -145,9 +145,10 @@ Puedes usar el caracter de barra invertida (`\`) al final de cada línea para in
 Esa forma se ve así:
 
 ```js
-let longString = "Esta es una cadena muy larga que necesita \
+let longString =
+  "Esta es una cadena muy larga que necesita \
 que dividimos en varias líneas porque \
-de lo contrario, mi código es ilegible."
+de lo contrario, mi código es ilegible.";
 ```
 
 Ambos métodos anteriores dan como resultado cadenas idénticas.
@@ -278,7 +279,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 Es posible usar `String` como una alternativa más confiable de {{jsxref("String.prototype.toString()", "toString()")}}, ya que funciona cuando se usa en {{jsxref( "null")}}, {{jsxref("undefined")}} y en {{jsxref("Symbol", "símbolos")}}. Por ejemplo:
 
 ```js
-let outputStrings = []
+let outputStrings = [];
 for (let i = 0, n = inputValues.length; i < n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }

@@ -1,7 +1,8 @@
 ---
-title: 'HTMLMediaElement: canplay'
+title: "HTMLMediaElement: canplay"
 slug: Web/API/HTMLMediaElement/canplay_event
 ---
+
 `canplay` 이벤트는 user agent 가 media 를 재생할 수 있을 때 발생된다. 그러나, 컨텐츠의 추가 버퍼링을 위한 정지 없이 media 를 끝까지 재생하기에는, 로드된 데이터가 충분하지 않을 것으로 추산한다.
 
 ## General info
@@ -21,12 +22,12 @@ slug: Web/API/HTMLMediaElement/canplay_event
 
 ## Properties
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Related Events
 

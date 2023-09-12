@@ -32,10 +32,10 @@ delete(key)
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-console.log(myMap.delete('bar')); // true を返す。正常に削除された。
-console.log(myMap.has('bar')); // false を返す。 "bar" の要素がもう存在しない。
+console.log(myMap.delete("bar")); // true を返す。正常に削除された。
+console.log(myMap.has("bar")); // false を返す。 "bar" の要素がもう存在しない。
 ```
 
 ## 仕様書

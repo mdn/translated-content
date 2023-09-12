@@ -1,8 +1,6 @@
 ---
 title: NavigatorID.taintEnabled()
 slug: orphaned/Web/API/NavigatorID/taintEnabled
-translation_of: Web/API/NavigatorID/taintEnabled
-original_slug: Web/API/NavigatorID/taintEnabled
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}

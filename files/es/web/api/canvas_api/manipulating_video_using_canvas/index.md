@@ -1,7 +1,6 @@
 ---
 title: Manipular video por medio de canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-original_slug: Web/HTML/anipular_video_por_medio_de_canvas
 ---
 
 Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video) introducido en Firefox 3.5 con un elemento [`canvas`](/en/HTML/Canvas) , puedes manipular los datos de video en tiempo real para incorporar una variedad de efectos visuales que se mostrarán en el video. Este artículo, adaptado de [esta entrada del blog](http://blog.mozbox.org/post/2009/02/25/video-canvas%3A-special-effects) de Paul Rouget, muestra cómo realizar una inserción croma (también conocida como el "efecto pantalla verde") utilizando el código JavaScript.

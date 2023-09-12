@@ -24,18 +24,18 @@ O operador `void` é muitas vezes utilizado apenas para obter o valor primitivo 
 Quando usamos uma [Chamada imediata das expressões da função](/pt-BR/docs/Glossary/IIFE), valores nulos podem ser usado para forçar a palavra-chave da função a ser tratada como uma expressão em vez de uma declaração.
 
 ```js
-void function iife() {
-    var bar = function () {};
-    var baz = function () {};
-    var foo = function () {
-        bar();
-        baz();
-     };
-    var biz = function () {};
+void (function iife() {
+  var bar = function () {};
+  var baz = function () {};
+  var foo = function () {
+    bar();
+    baz();
+  };
+  var biz = function () {};
 
-    foo();
-    biz();
-}();
+  foo();
+  biz();
+})();
 ```
 
 ## JavaScript URIs
@@ -43,9 +43,7 @@ void function iife() {
 Quando o navegador segue uma URI `javascript`, ele avalia o código na URI e então troca o conteúdo da página pelo valor retornado por este, a não ser que o valor retornado seja {{jsxref("Global_Objects/undefined", "undefined")}}. O operador `void` pode ser usado para retornar {{jsxref("Global_Objects/undefined", "undefined")}}. Por exemplo:
 
 ```html
-<a href="javascript:void(0);">
-  Clique aqui para não fazer nada
-</a>
+<a href="javascript:void(0);">Clique aqui para não fazer nada</a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Clique aqui para o papel de parede ser verde
@@ -56,11 +54,11 @@ Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado p
 
 ## Specificações
 
-| Specificação                                                                         | Status                   | Comentário                                        |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
-| ECMAScript 1                                                                         | Standard                 | Initial definition. Implemented in JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-11.4.2', 'The void Operator')}}         | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-void-operator', 'The void Operator')}} | {{Spec2('ES6')}}     |                                                   |
+| Specificação                                                   | Status             | Comentário                                        |
+| -------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 1                                                   | Standard           | Initial definition. Implemented in JavaScript 1.1 |
+| {{SpecName('ES5.1', '#sec-11.4.2', 'The void Operator')}}      | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-void-operator', 'The void Operator')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com navegadores
 

@@ -1,7 +1,6 @@
 ---
 title: Le projet MDN
 slug: MDN
-translation_of: MDN
 ---
 
 {{MDNSidebar}}

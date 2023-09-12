@@ -1,7 +1,6 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
 
 {{AddonSidebar()}}

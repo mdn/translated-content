@@ -1,7 +1,6 @@
 ---
 title: Utilisation des textures en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
@@ -12,7 +11,7 @@ Maintenant que notre programme peut faire tourner un cube 3D, appliquons lui une
 
 La première chose à faire est d'ajouter le code pour charger les textures. Dans notre cas, nous utiliserons une texture unique, appliquée à chacune des six faces de notre cube en rotation ; mais la même technique peut être utilisée un nombre quelconque de textures.
 
-> **Note :** il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr-FR/docs/Web/HTTP/CORS)&nbsp;; donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
+> **Note :** il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr/docs/Web/HTTP/CORS) donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
 
 Le code qui charge la texture ressemble à ce qui suit&nbsp;:
 

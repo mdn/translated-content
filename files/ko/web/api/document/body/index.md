@@ -2,6 +2,7 @@
 title: Document.body
 slug: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 `Document.body` 속성은 현재 문서의 {{htmlelement("body")}} 혹은 {{htmlelement("frameset")}} 노드를 나타냅니다. 일치하는 요소가 존재하지 않으면 `null`을 반환합니다.
@@ -9,8 +10,8 @@ slug: Web/API/Document/body
 ## 구문
 
 ```js
-const objRef = document.body
-document.body = objRef
+const objRef = document.body;
+document.body = objRef;
 ```
 
 ## 예제
@@ -32,7 +33,7 @@ alert(document.body.id); // "newBodyElement"
 
 `body` 속성에 새로운 값을 설정할 수 있긴 하지만, 문서에 새로운 본문을 설정하는건 `<body>` 요소가 가지고 있던 모든 자식을 제거하는 것과 같습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

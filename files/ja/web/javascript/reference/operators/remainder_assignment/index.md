@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 ## 構文
 
 ```js
-x %= y // x = x % y
+x %= y; // x = x % y
 ```
 
 ## 例
@@ -23,9 +23,9 @@ x %= y // x = x % y
 // 以下の変数を想定
 //  bar = 5
 
-bar %= 2     // 1
-bar %= 'foo' // NaN
-bar %= 0     // NaN
+bar %= 2; // 1
+bar %= "foo"; // NaN
+bar %= 0; // NaN
 ```
 
 ## 仕様書

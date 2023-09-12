@@ -1,7 +1,6 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential/PasswordCredential
-translation_of: Web/API/PasswordCredential/PasswordCredential
 ---
 
 {{APIRef("")}}{{Non-standard_header}}

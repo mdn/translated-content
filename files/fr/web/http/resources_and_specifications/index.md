@@ -1,7 +1,6 @@
 ---
 title: Ressources et spécifications sur HTTP
 slug: Web/HTTP/Resources_and_specifications
-translation_of: Web/HTTP/Resources_and_specifications
 ---
 
 {{HTTPSidebar}}

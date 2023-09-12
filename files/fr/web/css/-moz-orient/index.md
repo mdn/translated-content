@@ -1,7 +1,6 @@
 ---
 title: "-moz-orient"
 slug: Web/CSS/-moz-orient
-translation_of: Web/CSS/-moz-orient
 ---
 
 {{CSSRef}}{{Non-standard_header}}

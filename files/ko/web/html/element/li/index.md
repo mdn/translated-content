@@ -9,8 +9,6 @@ slug: Web/HTML/Element/li
 
 {{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -91,9 +89,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -103,9 +101,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ol type="I">
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 
@@ -115,9 +113,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 

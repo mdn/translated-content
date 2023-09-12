@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
 
 {{JSRef}}
@@ -122,7 +121,7 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // Desde un array
-var arr = new Uint8Array([21,31]);
+var arr = new Uint8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Desde otro TypedArray

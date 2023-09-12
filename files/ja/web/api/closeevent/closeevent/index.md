@@ -20,7 +20,7 @@ new CloseEvent(type, options)
 
 - `type`
   - : このイベントの名前を示す文字列です。
-  大文字小文字を区別し、ブラウザーは常に `close` を設定します。
+    大文字小文字を区別し、ブラウザーは常に `close` を設定します。
 - `options` {{optional_inline}}
   - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているものに加え_、次のプロパティを持ちます。
     - `wasClean` {{optional_inline}}

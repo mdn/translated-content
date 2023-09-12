@@ -1,7 +1,6 @@
 ---
 title: position
 slug: Web/XPath/Functions/position
-translation_of: Web/XPath/Functions/position
 ---
 
 {{ XsltRef() }}

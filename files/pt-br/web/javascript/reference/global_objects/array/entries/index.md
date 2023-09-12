@@ -16,7 +16,7 @@ arr.entries()
 ## Exemplos
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 var eArr = arr.entries();
 
 console.log(eArr.next().value); // [0, 'a']
@@ -27,7 +27,7 @@ console.log(eArr.next().value); // [2, 'c']
 ### O mesmo que acima, utilizando um loop [for…of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 var eArr = arr.entries();
 
 for (let e of eArr) {
@@ -40,9 +40,9 @@ for (let e of eArr) {
 
 ## Especificações
 
-| Especificação                                                                                                | Status                       | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificação                                                                      | Status               | Comentário         |
+| ---------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

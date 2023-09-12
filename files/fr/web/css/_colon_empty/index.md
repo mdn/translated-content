@@ -1,7 +1,6 @@
 ---
 title: ":empty"
 slug: Web/CSS/:empty
-translation_of: Web/CSS/:empty
 ---
 
 {{CSSRef}}

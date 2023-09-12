@@ -1,7 +1,6 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
-original_slug: Controlling_DNS_prefetching
 ---
 
 {{HTTPSidebar}}
@@ -52,7 +51,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 <meta http-equiv="x-dns-prefetch-control" content="off">
 ```
 
-您可以通过将 `content` 的参数设置为“`on`”来改变设置。
+你可以通过将 `content` 的参数设置为“`on`”来改变设置。
 
 ### 强制查询特定主机名
 

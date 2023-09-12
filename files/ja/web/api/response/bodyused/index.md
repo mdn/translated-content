@@ -1,7 +1,6 @@
 ---
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
-original_slug: Web/API/Body/bodyUsed
 l10n:
   sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
@@ -31,8 +30,8 @@ l10n:
 ### JS コンテンツ
 
 ```js
-const myImage = document.querySelector('.my-image');
-fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg')
+const myImage = document.querySelector(".my-image");
+fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
   .then((response) => {
     console.log(response.bodyUsed);
     const res = response.blob();

@@ -25,7 +25,11 @@ video 容器**已经被加载的媒体资源中已经被渲染播放或者被废
 var videoElem = document.getElementById("my_vid");
 var quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
+if (
+  (quality.corruptedVideoFrames + quality.droppedVideoFrames) /
+    quality.totalVideoFrames >
+  0.1
+) {
   lostFramesThresholdExceeded();
 }
 ```

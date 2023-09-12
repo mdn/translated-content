@@ -1,7 +1,6 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-translation_of: Web/HTTP/Status/201
 ---
 
 {{HTTPSidebar}}

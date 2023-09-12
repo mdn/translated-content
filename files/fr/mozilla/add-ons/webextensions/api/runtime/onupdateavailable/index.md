@@ -1,7 +1,6 @@
 ---
 title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 ---
 
 {{AddonSidebar()}}

@@ -50,15 +50,15 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
     <tr>
       <th scope="row">Regras ARIA permitidas</th>
       <td>
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>,
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
       </td>
     </tr>
     <tr>
@@ -116,7 +116,6 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
   <h2>Cabeçalho</h2>
   <img src="passaro.jpg" alt="pássaro" />
 </section>
-
 ```
 
 ## Especificações

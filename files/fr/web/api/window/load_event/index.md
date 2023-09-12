@@ -1,7 +1,6 @@
 ---
 title: "Window : évènement load"
 slug: Web/API/Window/load_event
-translation_of: Web/API/Window/load_event
 l10n:
   sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
 ---
@@ -131,7 +130,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 ## Voir aussi
 
 - Évènements liés&nbsp;:
-  - [`DOMContentLoaded`](/fr/docs/Web/API/Window/DOMContentLoaded_event)
+  - [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
   - [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
   - [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
   - [`unload`](/fr/docs/Web/API/Window/unload_event)

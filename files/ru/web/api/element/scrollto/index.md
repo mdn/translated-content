@@ -1,7 +1,6 @@
 ---
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
-translation_of: Web/API/Element/scrollTo
 ---
 
 {{ APIRef }}
@@ -36,7 +35,7 @@ element.scrollTo(0, 1000);
 element.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

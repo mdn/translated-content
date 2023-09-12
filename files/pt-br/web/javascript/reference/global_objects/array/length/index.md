@@ -48,11 +48,11 @@ if (statesUS.length > 50) {
 
 ## Especificações
 
-| Especificação                                                                                                | Status                   | Comentário          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}                                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}} | {{Spec2('ES6')}}     |                     |
+| Especificação                                                                    | Status             | Comentário          |
+| -------------------------------------------------------------------------------- | ------------------ | ------------------- |
+| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}   | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}                           | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}} | {{Spec2('ES6')}}   |                     |
 
 ## Compatibilidade com navegadores
 

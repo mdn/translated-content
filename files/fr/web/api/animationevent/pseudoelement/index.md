@@ -1,7 +1,6 @@
 ---
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
-translation_of: Web/API/AnimationEvent/pseudoElement
 ---
 
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}

@@ -1,7 +1,6 @@
 ---
 title: Navigator.languages
 slug: Web/API/Navigator/languages
-original_slug: Web/API/NavigatorLanguage/languages
 l10n:
   sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
@@ -23,8 +22,8 @@ l10n:
 ## 例
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## 仕様書

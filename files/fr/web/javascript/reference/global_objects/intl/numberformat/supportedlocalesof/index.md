@@ -1,14 +1,13 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.supportedLocalesOf()`** renvoie un tableau de locales supportées parmi les locales fournies en argument afin d'éviter d'utiliser celle par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat-supportedlocalesof.html")}}
 
 ## Syntaxe
 

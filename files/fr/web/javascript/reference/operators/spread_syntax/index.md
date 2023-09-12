@@ -1,7 +1,6 @@
 ---
 title: Syntaxe de décomposition
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 
 {{jsSidebar("Operators")}}

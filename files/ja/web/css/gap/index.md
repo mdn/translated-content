@@ -95,7 +95,6 @@ gap: unset;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
@@ -147,9 +146,8 @@ gap: unset;
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS <code>gap</code> property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 

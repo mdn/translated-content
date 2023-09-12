@@ -1,8 +1,8 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
-translation_of: Web/CSS/:focus-visible
 ---
+
 Псевдокласс **`:focus-visible`** применяется, в то время как элемент соответствует псевдоклассу :focus, и UA ({{glossary("User Agent")}}) определяет с помощью эвристики, что фокус должен быть сделан очевидным для элемента.
 
 Этот селектор полезен для предоставления другого индикатора фокуса, основанного на модальности ввода пользователя (мышь против клавиатуры).
@@ -20,16 +20,17 @@ translation_of: Web/CSS/:focus-visible
 В этом примере селектор `:focus-visible` использует поведение UA, чтобы определить, когда соответствовать. Сравните, что происходит, когда вы щёлкаете мышью по разным элементам управления, и что происходит при переходе по ним с помощью клавиатуры. Обратите внимание на разницу в поведении элементов, оформленных с помощью `:focus`.
 
 ```html
-<input value="Default styles"><br>
-<button>Default styles</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Default styles" /><br />
+<button>Default styles</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
@@ -100,8 +101,8 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                                                                 | Status                      | Comment             |
+| ----------------------------------------------------------------------------- | --------------------------- | ------------------- |
 | {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
 
 ## Browser compatibility

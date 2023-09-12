@@ -1,7 +1,6 @@
 ---
 title: Comment utiliser les promesses
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}

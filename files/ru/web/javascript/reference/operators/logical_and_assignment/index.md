@@ -1,13 +1,6 @@
 ---
 title: Присваивание логического И (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_and_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,7 +12,7 @@ browser-compat: javascript.operators.logical_and_assignment
 ## Синтаксис
 
 ```js
-expr1 &&= expr2
+expr1 &&= expr2;
 ```
 
 ## Описание

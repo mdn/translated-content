@@ -1,7 +1,6 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-translation_of: Web/CSS/grid-template-columns
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Link types
 slug: Web/HTML/Attributes/rel
-original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}
@@ -27,18 +26,18 @@ original_slug: Web/HTML/Link_types
         <ul>
           <li>
             만약 요소가 {{HTMLElement("link")}}이고,
-            {{htmlattrxref("rel", "link")}} 속성값에
+            <a href="/ko/docs/Web/HTML/Element/link#rel"><code>rel</code></a> 속성값에
             <code>stylesheet</code>라는 값이 들어 있다면, 링크가
-            <a href="/en-US/docs/Alternative_style_sheets">대체 스타일 시트</a
+            <a href="/ko/docs/Alternative_style_sheets">대체 스타일 시트</a
             >로 정의된 것입니다. 이 경우,
-            {{htmlattrxref("title", "link")}} 속성은 반드시 존재해야
+            <a href="/ko/docs/Web/HTML/Element/link#title"><code>title</code></a> 속성은 반드시 존재해야
             하고 빈 문자열 값을 가지고 있으면 안됩니다.
           </li>
           <li>
-            만약 {{htmlattrxref("type","link")}}의 값이
+            만약 <a href="/ko/docs/Web/HTML/Element/link#type"><code>type</code></a>의 값이
             <code>application/rss+xml</code>이거나
             <code>application/atom+xml</code>로 설정되어 있다면, 링크를
-            <a href="/en-US/docs/RSS/Getting_Started/Syndicating"
+            <a href="/ko/docs/RSS/Getting_Started/Syndicating"
               >syndication feed</a
             >(기고 알림)로 정의된 것입니다. 페이지에서 정의된 것 중 첫번째 것이
             기본값입니다.
@@ -49,17 +48,17 @@ original_slug: Web/HTML/Link_types
             <ul>
               <li>
                 휴대용 기기와 같은 다른 매체에서 보여질
-                페이지({{htmlattrxref("media","link")}} 속성이
+                페이지(<a href="/ko/docs/Web/HTML/Element/link#media"><code>media</code></a> 속성이
                 정의되어 있을 시)
               </li>
               <li>
                 외국어로 된
-                페이지({{htmlattrxref("hreflang","link")}} 속성이
+                페이지(<a href="/ko/docs/Web/HTML/Element/link#hreflang"><code>hreflang</code></a> 속성이
                 정의되어 있을 시)
               </li>
               <li>
                 PDF처럼 다른 형식으로 된
-                페이지({{htmlattrxref("type","link")}} 속성이 정의되어
+                페이지(<a href="/ko/docs/Web/HTML/Element/link#type"><code>type</code></a> 속성이 정의되어
                 있을 시)
               </li>
               <li>위 세가지 속성 중 2개 이상 같이 쓰인 페이지</li>
@@ -107,9 +106,9 @@ original_slug: Web/HTML/Link_types
         <p>
           {{HTMLElement("a")}}, {{HTMLElement("area")}},
           {{HTMLElement("link")}} 요소에
-          {{htmlattrxref("rev", "link")}} 속성을 사용하고 링크 타입을
+          <a href="/ko/docs/Web/HTML/Element/link#rev"><code>rev</code></a> 속성을 사용하고 링크 타입을
           <code>made</code>로 넣으면 인식이 되기는 하지만 부정확한 값이므로
-          {{htmlattrxref("rel", "link")}} 속성값을
+          <a href="/ko/docs/Web/HTML/Element/link#rel"><code>rel</code></a> 속성값을
           <code>author</code>로 대체해야 합니다.
         </p>
       </td>
@@ -124,12 +123,12 @@ original_slug: Web/HTML/Link_types
       <td>
         <p>
           '가장 가까운 조상 {{HTMLElement("article")}} 요소에 대해
-          퍼머링크(<a href="/en-US/docs/Permalink">permalink</a>)를 제공하는
+          퍼머링크(<a href="/ko/docs/Permalink">permalink</a>)를 제공하는
           하이퍼링크임'이라고 정의하는 값입니다. 만약
           <code>article</code> 요소가 없다면, 링크 요소와 가장 가까운 관계를
           맺고 있는
           <code
-            ><a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document"
+            ><a href="/ko/docs/Sections_and_Outlines_of_an_HTML5_document"
               >section</a
             ></code
           >에 대한 퍼머링크로 인식이 됩니다.
@@ -231,9 +230,9 @@ original_slug: Web/HTML/Link_types
       <td>
         <p>
           사용자 인터페이스에서 페이지를 나타낼 때 사용하는 리소스, 보통
-          아이콘을 정의합니다.<br /><br />{{htmlattrxref("media","link")}},
-          {{htmlattrxref("type","link")}},
-          {{htmlattrxref("sizes","link")}} 특성을 사용하면
+          아이콘을 정의합니다.<br /><br /><a href="/ko/docs/Web/HTML/Element/link#media"><code>media</code></a>,
+          <a href="/ko/docs/Web/HTML/Element/link#type"><code>type</code></a>,
+          <a href="/ko/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> 특성을 사용하면
           브라우저가 현재 맥락에서 제일 적합한 아이콘을 선택할 수 있습니다.
           다수의 적합한 리소스가 존재하는 경우, 브라우저는 트리 순서에서 제일
           뒤에 정의된 리소스를 사용합니다. 위의 특성은 단순히 힌트에 불과하며,
@@ -241,7 +240,7 @@ original_slug: Web/HTML/Link_types
           있습니다.<br /><br /><strong>참고:</strong> Apple의 iOS는 Web Clip
           또는 시작 화면 플레이스 홀더에 사용할 아이콘을 고를 때, 다른 모바일
           브라우저와는 달리 <code>icon</code> 링크 유형은 물론
-          {{htmlattrxref("sizes","link")}} 특성을 사용하지 않습니다.
+          <a href="/ko/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> 특성을 사용하지 않습니다.
           대신, 각각에 대응하는 비표준
           <a
             class="external external-icon"
@@ -422,10 +421,10 @@ original_slug: Web/HTML/Link_types
       <td>
         Suggests that the browser fetch the linked resource in advance, as it is
         likely to be requested by the user. Starting with Firefox 44, the value
-        of the {{htmlattrxref("crossorigin", "link")}} attribute is
+        of the <a href="/ko/docs/Web/HTML/Element/link#crossorigin"><code>crossorigin</code></a> attribute is
         taken into consideration, making it possible to make anonymous
         prefetches.<br /><br /><strong>Note:</strong> The
-        <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
+        <a href="/ko/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
         details on which links can be prefetched and on alternative methods.
       </td>
       <td>
@@ -439,7 +438,7 @@ original_slug: Web/HTML/Link_types
       <td>
         Tells the browser to download a resource because this resource will be
         needed later during the current navigation. See
-        <a href="/en-US/docs/Web/HTML/Preloading_content"
+        <a href="/ko/docs/Web/HTML/Preloading_content"
           >Preloading content with rel="preload"</a
         >
         for more details.
@@ -479,10 +478,10 @@ original_slug: Web/HTML/Link_types
       <td>
         Indicates that the hyperlink references a document whose interface is
         specially designed for searching in this document, or site, and its
-        resources.<br /><br />If the {{htmlattrxref("type","link")}}
+        resources.<br /><br />If the <a href="/ko/docs/Web/HTML/Element/link#type"><code>type</code></a>
         attribute is set to
         <code>application/opensearchdescription+xml </code>the resource is an
-        <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox"
+        <a href="/ko/docs/Creating_OpenSearch_plugins_for_Firefox"
           >OpenSearch plugin</a
         >
         that can be easily added to the interface of some browsers like Firefox
@@ -502,9 +501,9 @@ original_slug: Web/HTML/Link_types
         <code>text/css</code> stylesheet until further inspection.<br /><br />If
         used in combination with the <code>alternate</code> keyword, it defines
         an
-        <a href="/en-US/docs/Alternative_style_sheets"
+        <a href="/ko/docs/Alternative_style_sheets"
           >alternative style sheet</a
-        >; in that case the {{htmlattrxref("title", "link")}}
+        >; in that case the <a href="/ko/docs/Web/HTML/Element/link#title"><code>title</code></a>
         attribute must be present and not be the empty string.
       </td>
       <td>{{HTMLElement("link")}}</td>

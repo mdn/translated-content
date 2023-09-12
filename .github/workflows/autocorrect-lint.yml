@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Get changed files
         env:
@@ -39,6 +39,6 @@ jobs:
 
       - name: AutoCorrect changed content
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: huacnlee/autocorrect-action@v2.6.2
+        uses: huacnlee/autocorrect-action@v2.8.4
         with:
           args: ${{ env.DIFF_DOCUMENTS }} --lint --no-diff-bg-color

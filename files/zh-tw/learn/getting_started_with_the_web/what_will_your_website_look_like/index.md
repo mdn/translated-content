@@ -61,7 +61,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 選用自己喜歡的字型：
 
-1. 到 [Google Fonts](http://www.google.com/fonts) 上捲動清單，直找到你喜歡的字型。你也可以使用左邊的控制功能先行篩選。
+1. 到 [Google Fonts](https://www.google.com/fonts) 上捲動清單，直找到你喜歡的字型。你也可以使用左邊的控制功能先行篩選。
 2. 點擊你想要的字型旁邊「Add to collection」按鈕。
 3. 點擊頁面底端的「使用 (Use)」按鈕。
 4. 進入下一頁，捲動到區塊 3 與區塊 4，將 Google 顯示的程式碼複製到你的文字編輯器中，儲存以待稍後利用。

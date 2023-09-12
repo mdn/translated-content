@@ -1,7 +1,6 @@
 ---
 title: "Window: paste event"
 slug: Web/API/Window/paste_event
-translation_of: Web/API/Window/paste_event
 ---
 
 {{APIRef}}

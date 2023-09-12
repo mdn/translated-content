@@ -90,7 +90,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Pode ser mudado na amostra ao vivo */
   background-color: #8c8c8c;
@@ -210,15 +210,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -229,10 +229,10 @@ display.addEventListener('change', function (evt) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status                                   | Comentário                                      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------- |
+| Especificação                                                             | Status                          | Comentário                                      |
+| ------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------- |
 | {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} | Atualização para últimas definições de sintaxe. |
-| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}         | {{Spec2('CSS3 Flexbox')}}         | Definição inicial                               |
+| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}       | {{Spec2('CSS3 Flexbox')}}       | Definição inicial                               |
 
 {{cssinfo}}
 

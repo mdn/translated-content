@@ -1,7 +1,6 @@
 ---
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 ---
 
 {{AddonSidebar()}}

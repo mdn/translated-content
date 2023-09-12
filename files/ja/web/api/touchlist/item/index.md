@@ -44,7 +44,7 @@ target.addEventListener(
         ? ev.targetTouches.item(0)
         : ev.touches.item(0);
   },
-  false
+  false,
 );
 ```
 

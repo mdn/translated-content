@@ -1,7 +1,6 @@
 ---
 title: 基本文本和字体样式
 slug: Learn/CSS/Styling_text/Fundamentals
-original_slug: Learn/CSS/为文本添加样式/Fundamentals
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
@@ -156,7 +155,7 @@ p {
     <tr>
       <td>Trebuchet MS</td>
       <td>sans-serif</td>
-      <td>您应该小心使用这种字体——它在移动操作系统上并不广泛。</td>
+      <td>你应该小心使用这种字体——它在移动操作系统上并不广泛。</td>
     </tr>
     <tr>
       <td>Verdana</td>
@@ -457,7 +456,7 @@ text-shadow: 4px 4px 5px red;
 
 #### 多种阴影
 
-您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：
+你可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：
 
 ```css
 text-shadow:

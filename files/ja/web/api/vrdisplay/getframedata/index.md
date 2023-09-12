@@ -14,7 +14,7 @@ slug: Web/API/VRDisplay/getFrameData
 ## 構文
 
 ```js
-getFrameData(frameData)
+getFrameData(frameData);
 ```
 
 ### 引数

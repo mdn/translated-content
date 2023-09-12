@@ -45,6 +45,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 - `name`
 
   - : フォームの名前。この値は空文字列であってはならず、また、フォームコレクションに含まれる `form` 要素がある場合は、その中で一意でなければなりません。
+
 - `rel`
   - : 注釈や、このフォームが作成するリンク種別を制御します。注釈には [`external`](/ja/docs/Web/HTML/Attributes/rel#external)、[`nofollow`](/ja/docs/Web/HTML/Attributes/rel#nofollow)、[`opener`](/ja/docs/Web/HTML/Attributes/rel#opener)、[`noopener`](/ja/docs/Web/HTML/Attributes/rel#noopener)、[`noreferrer`](/ja/docs/Web/HTML/Attributes/rel#noreferrer) があります。リンク種別には [`help`](/ja/docs/Web/HTML/Attributes/rel#help)、[`prev`](/ja/docs/Web/HTML/Attributes/rel#prev)、[`next`](/ja/docs/Web/HTML/Attributes/rel#next)、[`search`](/ja/docs/Web/HTML/Attributes/rel#search)、[`license`](/ja/docs/Web/HTML/Attributes/rel#license) があります。[`rel`](/ja/docs/Web/HTML/Attributes/rel) の値はこれらの列挙値の空白区切りの値です。
 

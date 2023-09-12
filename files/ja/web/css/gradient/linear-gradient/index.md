@@ -1,7 +1,6 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient()
 ---
 
 {{CSSRef}}
@@ -157,8 +156,14 @@ body {
 
 ```css
 body {
-  background: linear-gradient(to right,
-     red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+  background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );
 }
 ```
 

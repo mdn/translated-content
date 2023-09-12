@@ -1,7 +1,6 @@
 ---
 title: Ajouter du contenu à WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
@@ -45,7 +44,7 @@ const vsSource = `
 `;
 ```
 
-Dans cet exemple, nous ne calculons pas d'éclairage du tout, puisque nous n'en avons pas encore appliqué à la scène. Cela viendra plus tard, dans l'exemple [Éclairage en WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). Notez également l'absence de tout travail sur les textures ici ; cela sera ajouté dans [Utilisation de textures en WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+Dans cet exemple, nous ne calculons pas d'éclairage du tout, puisque nous n'en avons pas encore appliqué à la scène. Cela viendra plus tard, dans l'exemple [Éclairage en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). Notez également l'absence de tout travail sur les textures ici ; cela sera ajouté dans [Utilisation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 #### Le shader de fragment
 

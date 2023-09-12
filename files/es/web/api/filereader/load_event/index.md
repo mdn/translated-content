@@ -1,7 +1,6 @@
 ---
 title: FileReader.onload
 slug: Web/API/FileReader/load_event
-original_slug: Web/API/FileReader/onload
 ---
 
 {{APIRef}}

@@ -1,10 +1,6 @@
 ---
 title: Руководства "Как сделать"
 slug: conflicting/MDN/Contribute
-tags:
-  - Landing
-  - MDN Meta
-translation_of: MDN/Contribute/Howto
 original_slug: MDN/Contribute/Howto
 ---
 

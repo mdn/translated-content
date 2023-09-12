@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ## 구문
 
 ```js
-regexObj.test(str)
+regexObj.test(str);
 ```
 
 ### 매개변수
@@ -39,7 +39,7 @@ regexObj.test(str)
 문자열의 맨 처음에 `"hello"`가 포함됐는지 알아보는 간단한 예제 코드입니다.
 
 ```js
-const str = 'hello world!';
+const str = "hello world!";
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -51,9 +51,9 @@ console.log(result); // true
 function testInput(re, str) {
   let midstring;
   if (re.test(str)) {
-    midstring = 'contains';
+    midstring = "contains";
   } else {
-    midstring = 'does not contain';
+    midstring = "does not contain";
   }
   console.log(`${str} ${midstring} ${re.source}`);
 }
@@ -75,16 +75,16 @@ function testInput(re, str) {
 const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
-regex.test('foo')     // true
+regex.test("foo"); // true
 
 // regex.lastIndex is now at 3
-regex.test('foo')     // false
+regex.test("foo"); // false
 
 // regex.lastIndex is at 0
-regex.test('barfoo')  // true
+regex.test("barfoo"); // true
 
 // regex.lastIndex is at 6
-regex.test('foobar')  //false
+regex.test("foobar"); //false
 
 // regex.lastIndex is at 0
 // (...and so on)

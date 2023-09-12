@@ -1,7 +1,6 @@
 ---
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
 
 {{AddonSidebar()}}

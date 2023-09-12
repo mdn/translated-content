@@ -41,9 +41,9 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 }
 
 :visited {
-  outline-color: orange;    /* オレンジのアウトライン */
-  background-color: green;  /* グリーンの背景 */
-  color: yellow;            /* イエローのテキスト */
+  outline-color: orange; /* オレンジのアウトライン */
+  background-color: green; /* グリーンの背景 */
+  color: yellow; /* イエローのテキスト */
 }
 ```
 

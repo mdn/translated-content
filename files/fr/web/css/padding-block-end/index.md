@@ -1,7 +1,6 @@
 ---
 title: padding-block-end
 slug: Web/CSS/padding-block-end
-translation_of: Web/CSS/padding-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
