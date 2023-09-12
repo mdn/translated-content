@@ -1,7 +1,6 @@
 ---
 title: Comment convertir des exemples de code pour qu'ils soient "live"
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
-translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
 
 {{MDNSidebar}}

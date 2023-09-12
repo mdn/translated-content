@@ -40,10 +40,10 @@ p ~ span {
 <span>And here is a red span!</span>
 <span>And this is a red span!</span>
 <code>More code...</code>
-<div> How are you? </div>
-<p> Whatever it may be, keep smiling. </p>
-<h1> Dream big </h1>
-<h2> that's all. </h2>
+<div>How are you?</div>
+<p>Whatever it may be, keep smiling.</p>
+<h1>Dream big</h1>
+<h2>that's all.</h2>
 <span>And yet again this is a red span!</span>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: テキストの分割と折り返し
 slug: Web/CSS/CSS_text/Wrapping_breaking_text
-original_slug: Web/CSS/CSS_Text/Wrapping_Text
 ---
 
 {{CSSRef}}

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: stalled イベント'
+title: "HTMLMediaElement: stalled イベント"
 slug: Web/API/HTMLMediaElement/stalled_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('stalled', (event) => {});
+addEventListener("stalled", (event) => {});
 
-onstalled = (event) => { };
+onstalled = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onstalled = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('stalled', (event) => {
-  console.log('データのフェッチに失敗しました。');
+video.addEventListener("stalled", (event) => {
+  console.log("データのフェッチに失敗しました。");
 });
 ```
 
 `onstalled` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onstalled = (event) => {
-  console.log('データのフェッチに失敗しました。');
+  console.log("データのフェッチに失敗しました。");
 };
 ```
 

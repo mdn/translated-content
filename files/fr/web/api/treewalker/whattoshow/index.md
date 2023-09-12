@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
-translation_of: Web/API/TreeWalker/whatToShow
 ---
 
 {{APIRef("DOM")}}

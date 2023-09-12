@@ -74,9 +74,7 @@ height: unset;
 <div id="taller">I'm 50 pixels tall.</div>
 <div id="shorter">I'm 25 pixels tall.</div>
 <div id="parent">
-  <div id="child">
-    I'm half the height of my parent.
-  </div>
+  <div id="child">I'm half the height of my parent.</div>
 </div>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode.playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
-translation_of: Web/API/AudioBufferSourceNode/playbackRate
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -35,25 +35,27 @@ Se você expressar uma cor em formato hexadecimal, deve usar o formato `rrggbb`.
 O exemplo a seguir usa o método `fontcolor()` para alterar a cor de uma string, produzindo uma string com a tag HTML `<font>`.
 
 ```js
-var worldString = 'Olá, mundo';
+var worldString = "Olá, mundo";
 
-console.log(worldString.fontcolor('red') +  ' está vermelho nesta linha');
+console.log(worldString.fontcolor("red") + " está vermelho nesta linha");
 // '<font color="red">Olá, mundo</font> está vermelho nesta linha'
 
-console.log(worldString.fontcolor('FF00') + ' está vermelho em hexadecimal nesta linha');
+console.log(
+  worldString.fontcolor("FF00") + " está vermelho em hexadecimal nesta linha",
+);
 // '<font color="FF00">Olá, mundo</font> está vermelho em hexadecimal nesta linha'
 ```
 
 Com o objeto [`element.style`](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
-document.getElementById('#oIdDoElemento').style.color = 'red';
+document.getElementById("#oIdDoElemento").style.color = "red";
 ```
 
 ## Especificações
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Specification                                                                            |
+| ---------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}} |
 
 ## Compatibilidade com navegadores

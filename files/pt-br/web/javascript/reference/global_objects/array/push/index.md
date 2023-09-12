@@ -50,11 +50,11 @@ Os únicos objetos que implementam nativamente array são as {{jsxref("Global_Ob
 O seguinte código cria um array `esportes` que contém dois elementos. Então adiciona dois elementos a ele. A variável `total` contém o novo comprimento do array.
 
 ```js
-var esportes = ['futebol', 'beisebol'];
-var total = esportes.push('handebol', 'natacao');
+var esportes = ["futebol", "beisebol"];
+var total = esportes.push("handebol", "natacao");
 
 console.log(esportes); // ['futebol, 'beisebol', 'handebol', 'natacao']
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### Exemplo: Fusão de dois arrays
@@ -62,8 +62,8 @@ console.log(total);  // 4
 Este exemplo utiliza {{jsxref("Function.apply", "apply()")}} para adicionar todos os elementos de um segundo array.
 
 ```js
-var vegetais = ['cenoura', 'batata'];
-var maisVegetais = ['aipo', 'beterraba'];
+var vegetais = ["cenoura", "batata"];
+var maisVegetais = ["aipo", "beterraba"];
 
 // Adiciona o segundo array no primeiro
 // Equivalente a vegetais.push('aipo', 'beterraba');
@@ -78,13 +78,13 @@ Como mencionado acima, `push` é intencionalmente genérico, e podemos usar isso
 
 ```js
 var obj = {
-    length: 0,
+  length: 0,
 
-    addElem: function addElem(elem) {
-        // obj.length é automaticamente incrementado
-        // toda vez que um elemento for adicionado.
-        [].push.call(this, elem);
-    }
+  addElem: function addElem(elem) {
+    // obj.length é automaticamente incrementado
+    // toda vez que um elemento for adicionado.
+    [].push.call(this, elem);
+  },
 };
 
 // Vamos adicionar alguns objetos vazios apenas para ilustrar.
@@ -98,11 +98,11 @@ Observe que, embora `obj` não seja um array, o método `push` aumentou com suce
 
 ## Especificações
 
-| Especificação                                                                                    | Estado                   | Comentário                                           |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------- |
-| ECMAScript 3ª Edição                                                                             | Padrão                   | Implementação inicial. Implentado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}             | {{Spec2('ES5.1')}} |                                                      |
-| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ES6')}}     |                                                      |
+| Especificação                                                            | Estado             | Comentário                                           |
+| ------------------------------------------------------------------------ | ------------------ | ---------------------------------------------------- |
+| ECMAScript 3ª Edição                                                     | Padrão             | Implementação inicial. Implentado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}           | {{Spec2('ES5.1')}} |                                                      |
+| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ES6')}}   |                                                      |
 
 ## Compatibilidade em navegadores
 

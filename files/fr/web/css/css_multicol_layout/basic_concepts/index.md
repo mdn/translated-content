@@ -1,7 +1,6 @@
 ---
 title: Concepts de base pour la disposition multi-colonnes
 slug: Web/CSS/CSS_multicol_layout/Basic_concepts
-translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
 
 {{CSSRef}}

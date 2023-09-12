@@ -1,7 +1,6 @@
 ---
 title: VoIP
 slug: Glossary/VoIP
-translation_of: Glossary/VoIP
 ---
 
 La VoIP (Voice over Internet Protocol) est une technologie utilisée pour transmettre des messages vocaux via des réseaux IP (Internet Protocol). Parmi les logiciels de VoIP courants, on trouve Skype, Msn Messenger, Yahoo et beaucoup d'autres. Tout ce qui est transféré en VoIP est numérique. Cette technologie est aussi connue sous les noms de téléphonie IP ou téléphonie haut débit. La principale raison de l'utiliser est son coût.

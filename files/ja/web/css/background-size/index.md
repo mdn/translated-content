@@ -138,8 +138,7 @@ background-size: unset;
 #### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 #### CSS

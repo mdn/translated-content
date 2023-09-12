@@ -13,21 +13,21 @@ slug: Mozilla/Add-ons
 
 ## 開發附加元件
 
-目前有許多開發 Firefox 附加元件的工具，但 [WebExtensions](/zh-TW/Add-ons/WebExtensions) 會在 2017 年末成為標準。其他的工具如傳統附加元件、免重啟附加元件、附加元件 SDK 等，屆時皆預期棄用。
+目前有許多開發 Firefox 附加元件的工具，但 [WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 會在 2017 年末成為標準。其他的工具如傳統附加元件、免重啟附加元件、附加元件 SDK 等，屆時皆預期棄用。
 
-[深入理解 WebExtensions](/zh-TW/Add-ons/WebExtensions)
+[深入理解 WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions)
 
 如果要寫新的附加元件，推薦使用 WebExtension 撰寫。
 
 WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebExtensions 通常只要在一點點的改變下，就能在 Chrome、Edge、Opera 運行。它們也能與多行程 Firefox 完全相容。
 
-[請參見目前在 Firefox 和其他瀏覽器所支援的 API](/zh-TW/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。我們正持續設計與導入新的 API，以回應開發者所需。
+[請參見目前在 Firefox 和其他瀏覽器所支援的 API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。我們正持續設計與導入新的 API，以回應開發者所需。
 
 多數 WebExtensions API 也能在 Firefox for Android 運行。
 
 ## 與現有附加元件合併
 
-如果你正在維護過時的附加元件如 XUL overlay、bootstrapped、附加元件 SDK 等，我們建議把它移植到 WebExtension。MDN 有一些[移植指引](/zh-TW/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)。
+如果你正在維護過時的附加元件如 XUL overlay、bootstrapped、附加元件 SDK 等，我們建議把它移植到 WebExtension。MDN 有一些[移植指引](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)。
 
 我們在 wiki page 上收集了一些[資源](https://wiki.mozilla.org/Add-ons/developer/communication)以助開發者完成移植。要開始的話，請使用 [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) 來檢查你的附加元件有無受影響。
 
@@ -37,16 +37,13 @@ WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebEx
 
 你不用把附加元件上傳到 AMO，但你的附加元件需要給 Mozilla 簽署。否則，用戶將無法安裝。
 
-要找到發佈附加元件的過程概觀，請參見[簽署並發布你的附加元件](/zh-TW/Add-ons/Distribution)。
+要找到發佈附加元件的過程概觀，請參見[簽署並發布你的附加元件](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon)。
 
 ## 其他種類的附加元件
 
 通常，當大家在講「附加元件」時候，他們是指套件（extension）。但也有其他類型的附加元件，允許用戶訂製 Firefox。包含：
 
-- [Lightweight themes](/Add-ons/Themes/Background) 提供簡單而有限的方法自訂 Firefox。
-- [Mobile add-ons](/zh-TW/Add-ons/Firefox_for_Android) 是給 Firefox for Android 的附加元件。注意，我們打算棄用這些 API：未來，WebExtensions 會在 Firefox for Android 完全支持。
-- [搜尋引擎套件](/zh-TW/docs/Creating_OpenSearch_plugins_for_Firefox)會在瀏覽器的搜尋欄位增加新的搜尋引擎。
-- [用戶字典](/zh-TW/docs/Mozilla/Creating_a_spell_check_dictionary_add-on)能讓你在不同語言內檢查拼字。
+- [用戶字典](https://support.mozilla.org/kb/how-do-i-use-firefox-spell-checker)能讓你在不同語言內檢查拼字。
 - [語言包](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack)能讓你的 Firefox 用戶介面支援多語言。
 
 ## 聯絡我們

@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
-original_slug: Web/API/AudioContext/createScriptProcessor
 ---
 
 {{APIRef("Web Audio API")}}{{deprecated_header}}
@@ -13,7 +12,11 @@ original_slug: Web/API/AudioContext/createScriptProcessor
 ## 構文
 
 ```js
-createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
+createScriptProcessor(
+  bufferSize,
+  numberOfInputChannels,
+  numberOfOutputChannels,
+);
 ```
 
 ### 引数
@@ -31,7 +34,7 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 
 > **警告:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
-> **メモ:** numberOfInputChannels` と `numberOfOutputChannels` の両方が 0 にするのは無効です。
+> **メモ:** numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 
@@ -44,9 +47,9 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 > **メモ:** 完全な動作する例については、 GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)も見てください）。
 
 ```js
-var myScript = document.querySelector('script');
-var myPre = document.querySelector('pre');
-var playButton = document.querySelector('button');
+var myScript = document.querySelector("script");
+var myPre = document.querySelector("pre");
+var playButton = document.querySelector("button");
 
 // Create AudioContext and buffer source
 var audioCtx = new AudioContext();
@@ -60,22 +63,27 @@ console.log(scriptNode.bufferSize);
 
 function getData() {
   request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
-    },
-    function(e){"Error with decoding audio data" + e.err});
-  }
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
+        myBuffer = buffer;
+        source.buffer = myBuffer;
+      },
+      function (e) {
+        "Error with decoding audio data" + e.err;
+      },
+    );
+  };
   request.send();
 }
 
 // Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
+scriptNode.onaudioprocess = function (audioProcessingEvent) {
   // The input buffer is the song we loaded earlier
   var inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -93,25 +101,25 @@ scriptNode.onaudioprocess = function(audioProcessingEvent) {
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-}
+};
 
 getData();
 
 // wire up play button
-playButton.onclick = function() {
+playButton.onclick = function () {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
-}
+};
 
 // When the buffer source stops playing, disconnect everything
-source.onended = function() {
+source.onended = function () {
   source.disconnect(scriptNode);
   scriptNode.disconnect(audioCtx.destination);
-}
+};
 ```
 
 ## 仕様書

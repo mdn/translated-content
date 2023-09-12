@@ -1,7 +1,6 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-translation_of: Web/CSS/align-self
 ---
 
 {{CSSRef}}

@@ -15,19 +15,33 @@ l10n:
 
 ```js
 // アロー関数
-flatMap((currentValue) => { /* … */ } )
-flatMap((currentValue, index) => { /* … */ } )
-flatMap((currentValue, index, array) => { /* … */ } )
+flatMap((currentValue) => {
+  /* … */
+});
+flatMap((currentValue, index) => {
+  /* … */
+});
+flatMap((currentValue, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-flatMap(callbackFn)
-flatMap(callbackFn, thisArg)
+flatMap(callbackFn);
+flatMap(callbackFn, thisArg);
 
 // インラインコールバック関数
-flatMap(function(currentValue) { /* … */ })
-flatMap(function(currentValue, index) { /* … */ })
-flatMap(function(currentValue, index, array){ /* … */ })
-flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
+flatMap(function (currentValue) {
+  /* … */
+});
+flatMap(function (currentValue, index) {
+  /* … */
+});
+flatMap(function (currentValue, index, array) {
+  /* … */
+});
+flatMap(function (currentValue, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -67,7 +81,7 @@ arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
-for (let i = 0; i < n; i++){
+for (let i = 0; i < n; i++) {
   const x = arr[i];
   acc[i * 2] = x;
   acc[i * 2 + 1] = x * 2;
@@ -118,7 +132,7 @@ arr1.flatMap((x) => x.split(" "));
 ```js
 // 例えば、すべての負の数を取り除き、
 // 奇数を偶数と 1 に分割したいとします。
-const a = [5, 4, -3, 20, 17, -33, -4, 18]
+const a = [5, 4, -3, 20, 17, -33, -4, 18];
 //         |\  \  x   |  | \   x   x   |
 //        [4,1, 4,   20, 16, 1,       18]
 

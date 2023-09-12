@@ -1,7 +1,6 @@
 ---
 title: element.cloneNode
 slug: Web/API/Node/cloneNode
-translation_of: Web/API/Node/cloneNode
 ---
 
 {{APIRef("DOM")}}

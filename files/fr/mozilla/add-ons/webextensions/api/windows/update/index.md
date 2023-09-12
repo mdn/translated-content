@@ -1,7 +1,6 @@
 ---
 title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/update
 ---
 
 {{AddonSidebar()}}

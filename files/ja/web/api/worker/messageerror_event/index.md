@@ -1,7 +1,6 @@
 ---
-title: 'Worker: messageerror イベント'
+title: "Worker: messageerror イベント"
 slug: Web/API/Worker/messageerror_event
-original_slug: Web/API/Worker/onmessageerror
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
@@ -17,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('messageerror', (event) => { });
+addEventListener("messageerror", (event) => {});
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => {};
 ```
 
 ## イベント型
@@ -53,11 +52,11 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 const worker = new Worker("static/scripts/worker.js");
 
 worker.addEventListener("message", (event) => {
-    console.error(`Received message from worker: ${event}`);
+  console.error(`Received message from worker: ${event}`);
 });
 
 worker.addEventListener("messageerror", (event) => {
-    console.error(`Error receiving message from worker: ${event}`);
+  console.error(`Error receiving message from worker: ${event}`);
 });
 ```
 
@@ -69,11 +68,11 @@ worker.addEventListener("messageerror", (event) => {
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.error(`Received message from worker: ${event}`);
+  console.error(`Received message from worker: ${event}`);
 };
 
 worker.onmessageerror = (event) => {
-    console.error(`Error receiving message from worker: ${event}`);
+  console.error(`Error receiving message from worker: ${event}`);
 };
 ```
 

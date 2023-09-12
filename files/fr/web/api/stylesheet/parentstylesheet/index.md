@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 
 {{APIRef("CSSOM")}}

@@ -1,7 +1,6 @@
 ---
 title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 ---
 
 {{AddonSidebar()}}

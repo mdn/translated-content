@@ -1,7 +1,6 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-translation_of: Web/CSS/orphans
 ---
 
 {{CSSRef}}

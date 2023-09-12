@@ -1,7 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 ---
 
 {{JSRef}}

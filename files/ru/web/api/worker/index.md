@@ -1,7 +1,6 @@
 ---
 title: Worker
 slug: Web/API/Worker
-translation_of: Web/API/Worker
 ---
 
 {{APIRef("Web Workers API")}}
@@ -46,24 +45,19 @@ _Наследует методы своего родителя, {{domxref("Event
 ```js
 var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
 ## Спецификации
 
-| Specification                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#worker", "Worker")}} | {{Spec2('Web Workers')}} | Изначальное определение.                             |
+{{Specifications}}
 
 ## Совместимость с браузерами
-
-Поддержка варьируется для разных видов воркеров. Для уточнения смотрите статьи по каждому типу воркеров.
 
 {{Compat}}
 

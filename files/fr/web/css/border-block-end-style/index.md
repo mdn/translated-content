@@ -1,7 +1,6 @@
 ---
 title: border-block-end-style
 slug: Web/CSS/border-block-end-style
-translation_of: Web/CSS/border-block-end-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

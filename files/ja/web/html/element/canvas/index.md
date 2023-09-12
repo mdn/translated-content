@@ -130,9 +130,9 @@ l10n:
 それから JavaScript コード内で {{domxref("HTMLCanvasElement.getContext()")}} を呼び出して描画コンテキストを取得し、キャンバス上に描画を開始します。
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

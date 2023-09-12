@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onpopstate
 slug: conflicting/Web/API/Window/popstate_event
-original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
 
 {{APIRef}}

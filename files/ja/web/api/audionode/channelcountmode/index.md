@@ -17,9 +17,9 @@ l10n:
 - `max`
 
   - : チャンネルの数は、全接続における最大のチャンネル数です。
-      この場合、`channelCount` は無視され、アップミキシングのみが発生します。
+    この場合、`channelCount` は無視され、アップミキシングのみが発生します。
 
-      以下の `AudioNode` の子におけるデフォルト値です: {{domxref("GainNode")}}, {{domxref("DelayNode")}}, {{domxref("ScriptProcessorNode")}}, {{domxref("BiquadFilterNode")}}, {{domxref("WaveShaperNode")}}
+    以下の `AudioNode` の子におけるデフォルト値です: {{domxref("GainNode")}}, {{domxref("DelayNode")}}, {{domxref("ScriptProcessorNode")}}, {{domxref("BiquadFilterNode")}}, {{domxref("WaveShaperNode")}}
 
 - `clamped-max`
 

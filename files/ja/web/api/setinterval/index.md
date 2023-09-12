@@ -1,7 +1,6 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 l10n:
   sourceCommit: c8485a8f94319d289a8892fd261d2fe38b623aa0
 ---
@@ -51,14 +50,13 @@ setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 以下の例は、 `setInterval()` の基本的な構文を示します。
 
 ```js
-const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 
-function myCallback(a, b)
-{
- // ここにコードを記述します。
- // 引数は完全に省略可能です。
- console.log(a);
- console.log(b);
+function myCallback(a, b) {
+  // ここにコードを記述します。
+  // 引数は完全に省略可能です。
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -130,7 +128,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 `setInterval()` によって実行されるコードは、呼び出し元とは別の実行コンテキスト内で実行されます。その結果、呼び出された関数の [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) キーワードは `window` （または `global`）オブジェクトに設定されます。これは `setTimeout` を呼び出した関数とは `this` の値が異なります。以下の例をご覧ください（ここでは `setInterval()` ではなく `setTimeout()` を使用していますが、どちらのタイマーでも問題は同じです）。
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
@@ -176,10 +174,10 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 
 ```js
 (function loop() {
-   setTimeout(() => {
-      // Your logic here
+  setTimeout(() => {
+    // Your logic here
 
-      loop();
+    loop();
   }, delay);
 })();
 ```

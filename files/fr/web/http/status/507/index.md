@@ -1,7 +1,6 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
-translation_of: Web/HTTP/Status/507
 ---
 
 {{HTTPSidebar}}

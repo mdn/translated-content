@@ -1,26 +1,29 @@
 ---
-title: Storage.getItem()
+title: "Storage: getItem() メソッド"
+short-title: getItem()
 slug: Web/API/Storage/getItem
+l10n:
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} インターフェイスの `getItem()` メソッドはキーの名称を渡すと、そのキーに対する値を返します。
+**`getItem()`** は {{domxref("Storage")}} インターフェイスのメソッドで、キーの名称を渡すと、そのキーに対する値を返します。指定された `Storage` オブジェクトにそのキーが存在しない場合は `null` を返します。
 
 ## 構文
 
-```js
-var aValue = storage.getItem(keyName);
+```js-nolint
+getItem(keyName)
 ```
 
 ### 引数
 
 - `keyName`
-  - : 値を取り出したいキーの名称を持つ {{domxref("DOMString")}}。
+  - : 文字列で、値を取り出したいキーの名前を指定します。
 
 ### 返値
 
-キーに対する値を持つ {{domxref("DOMString")}}。キーが存在しない場合は `null` が返ります。
+キーに対する値を持つ文字列です。キーが存在しない場合は `null` が返ります。
 
 ## 例
 
@@ -28,21 +31,21 @@ var aValue = storage.getItem(keyName);
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem("bgcolor");
+  const currentFont = localStorage.getItem("font");
+  const currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
-> **メモ:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **メモ:** 現実世界の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 
@@ -50,10 +53,9 @@ function setStyles() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Storage.getItem")}}
+{{Compat}}
 
 ## 関連情報
 
 - [Storage.setItem()](/ja/docs/Web/API/Storage/setItem)
-- [Storage.removeItem()](/ja/docs/Web/API/Storage/removeItem)
-- [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

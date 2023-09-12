@@ -1,7 +1,6 @@
 ---
 title: ":visited"
 slug: Web/CSS/:visited
-translation_of: Web/CSS/:visited
 ---
 
 {{CSSRef}}

@@ -1,6 +1,9 @@
 ---
-title: History.back()
+title: "History: back() メソッド"
+short-title: back()
 slug: Web/API/History/back
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("History API")}}
@@ -13,9 +16,17 @@ slug: Web/API/History/back
 
 ## 構文
 
-```js
-history.back()
+```js-nolint
+back()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -30,7 +41,7 @@ history.back()
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   history.back();
 });
 ```
@@ -46,4 +57,4 @@ document.getElementById('go-back').addEventListener('click', () => {
 ## 関連情報
 
 - {{domxref("History")}}
-- [履歴 API での作業](/ja/docs/Web/API/History_API/Working_with_the_History_API)
+- [履歴 API の操作](/ja/docs/Web/API/History_API/Working_with_the_History_API)

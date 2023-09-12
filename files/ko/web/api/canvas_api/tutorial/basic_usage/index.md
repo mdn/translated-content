@@ -1,7 +1,6 @@
 ---
 title: 캔버스(Canvas) 기본 사용법
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
@@ -14,11 +13,11 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-{{HTMLElement ( "canvas")}}는 처음에는 src 및 alt 속성이 없다는 점만 제외하면 {{HTMLElement ( "img")}} 요소처럼 보입니다. 실제로 `<canvas>` 요소에는 {{htmlattrxref ( "width", "canvas")}}와 {{htmlattrxref ( "height", "canvas")}}의 두 속성만 있습니다. 이것들은 모두 선택사항이며 {{Glossary ( "DOM")}} [프로퍼티](/ko/docs/Web/API/HTMLCanvasElement)를 사용하여 설정할 수도 있습니다. width 및 height 속성을 지정하지 않으면 캔버스의 처음 너비는 **300 픽셀**이고 높이는 **150 픽셀**입니다. 요소는 {{Glossary ( "CSS")}}에 의해 임의로 크기를 정할 수 있지만 렌더링하는 동안 이미지는 레이아웃 크기에 맞게 크기가 조정됩니다. CSS 크기 지정이 초기 캔버스의 비율을 고려하지 않으면 왜곡되어 나타납니다 .
+{{HTMLElement ( "canvas")}}는 처음에는 src 및 alt 속성이 없다는 점만 제외하면 {{HTMLElement ( "img")}} 요소처럼 보입니다. 실제로 `<canvas>` 요소에는 [`width`](/ko/docs/Web/HTML/Element/canvas#width)와 [`height`](/ko/docs/Web/HTML/Element/canvas#height)의 두 속성만 있습니다. 이것들은 모두 선택사항이며 {{Glossary ( "DOM")}} [프로퍼티](/ko/docs/Web/API/HTMLCanvasElement)를 사용하여 설정할 수도 있습니다. width 및 height 속성을 지정하지 않으면 캔버스의 처음 너비는 **300 픽셀**이고 높이는 **150 픽셀**입니다. 요소는 {{Glossary ( "CSS")}}에 의해 임의로 크기를 정할 수 있지만 렌더링하는 동안 이미지는 레이아웃 크기에 맞게 크기가 조정됩니다. CSS 크기 지정이 초기 캔버스의 비율을 고려하지 않으면 왜곡되어 나타납니다 .
 
 > **참고:** **노트:** 만약 렌더링이 왜곡된 것처럼 보이는 경우 CSS를 사용하지 않고 `<canvas>` 속성에서 `width` 및 `height` 속성을 명시적으로 지정하십시오.
 
-[`id`](/ko/docs/Web/HTML/Global_attributes/id) 속성(어트리뷰트)는 `<canvas>` 요소에 국한되지 않는 글로벌HTML 속성 ([global HTML attributes](/ko/docs/Web/HTML/Global_attributes) )중 하나로, 모든 HTML 요소에 적용 ( [`class`](/en-US/docs/Web/HTML/Global_attributes/class) 등등)될 수 있습니다. 대체로 항상 `id` 속성을 사용해 주는것이 좋은데, 이는 스크립트 내에서 구분을 쉽게 해 줄 수 있기 때문입니다.
+[`id`](/ko/docs/Web/HTML/Global_attributes/id) 속성(어트리뷰트)는 `<canvas>` 요소에 국한되지 않는 글로벌HTML 속성 ([global HTML attributes](/ko/docs/Web/HTML/Global_attributes) )중 하나로, 모든 HTML 요소에 적용 ( [`class`](/ko/docs/Web/HTML/Global_attributes/class) 등등)될 수 있습니다. 대체로 항상 `id` 속성을 사용해 주는것이 좋은데, 이는 스크립트 내에서 구분을 쉽게 해 줄 수 있기 때문입니다.
 
 `<canvas>`요소는 일반적인 이미지 ({{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("background")}}…) 처럼 스타일을 적용시킬 수 있습니다. 하지만 이 방법은 실제 캔버스 위에 그리는 것에는 영향을 끼치지 않습니다. 이 방법이 어떻게 사용되는지는 [해당 챕터](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)에서 확인 할 수 있습니다. 캔버스에 스타일링이 따로 지정 되있지 않았다면, 캔버스 스타일은 투명으로 설정되어있습니다.
 
@@ -36,7 +35,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -55,8 +54,8 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 캔버스는 처음에 비어있습니다. 무언가를 표시하기 위해서, 어떤 스크립트가 랜더링 컨텍스트에 접근하여 그리도록 할 필요가 있습니다. {{HTMLElement("canvas")}} 요소는 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 메서드를 이용해서, 랜더링 컨텍스트와 (렌더링 컨텍스트의) 그리기 함수들을 사용할 수 있습니다. getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가집니다. 본 튜토리얼에서 다루고 있는 2D 그래픽의 경우, {{domxref("CanvasRenderingContext2D")}}을 얻기위해 `"2d"`로 지정합니다.
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 첫 번째 줄의 스크립트는 {{domxref ( "document.getElementById()")}} 메서드를 호출하여 {{HTMLElement ( "canvas")}} 요소를 표시할 DOM을 검색합니다. 요소가 있으면 `getContext()` 메서드를 사용하여 드로잉 컨텍스트에 액세스 할 수 있습니다.
@@ -66,10 +65,10 @@ var ctx = canvas.getContext('2d');
 대체 콘텐츠는 {{HTMLElement ( "canvas")}}를 지원하지 않는 브라우저에 표시됩니다. 스크립트 역시 간단하게 `getContext()` 메소드의 존재 여부를 테스트함으로써 프로그래밍 방식으로 지원하는지를 확인할 수 있습니다. 위의 코드 예제는 다음과 같이 될 수 있습니다:
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  var ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -83,21 +82,23 @@ if (canvas.getContext){
 > **참고:** **알아두기:** HTML 내에 스크립트(script)를 사용하는것은 좋은 연습 방법이 아닙니다. 다음의 예시에서는 간결하게 나타내기 위해 사용 한 것입니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        var canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -117,28 +118,28 @@ if (canvas.getContext){
 먼저 두 개의 직사각형을 그린 간단한 예제를 보도록하겠습니다. 그 중 하나는 투명도(alpha transparency)를가집니다. 나중에 이 예제가 어떻게 작동하는지 자세히 살펴 보겠습니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-  <meta charset="utf-8"/>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <meta charset="utf-8" />
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 50, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 50, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 50, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 50, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

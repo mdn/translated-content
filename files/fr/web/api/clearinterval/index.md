@@ -1,7 +1,6 @@
 ---
 title: clearInterval()
 slug: Web/API/clearInterval
-translation_of: Web/API/clearInterval
 ---
 
 {{APIRef("HTML DOM")}}

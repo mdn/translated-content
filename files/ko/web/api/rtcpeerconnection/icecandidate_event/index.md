@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.onicecandidate
 slug: Web/API/RTCPeerConnection/icecandidate_event
-original_slug: Web/API/RTCPeerConnection/onicecandidate
 ---
 
 {{APIRef("WebRTC")}}
@@ -23,14 +22,14 @@ RTCPeerConnection.onicecandidate = eventHandler;
 아래는 [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling) 문서의 코드를 기반으로 원격 피어에게 ICE candidate를 전달하는 {{event("icecandidate")}} 이벤트에 대한 핸들러를 설정합니다.
 
 ```js
-pc.onicecandidate = function(event) {
+pc.onicecandidate = function (event) {
   if (event.candidate) {
     // event.candidate가 존재하면 원격 유저에게 candidate를 전달합니다.
   } else {
     // 모든 ICE candidate가 원격 유저에게 전달된 조건에서 실행됩니다.
     // candidate = null
   }
-}
+};
 ```
 
 위에서 알 수 있듯이, 이벤트의 {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} 속성이 `null`이면 네고시에이션의 종료가 감지됩니다.

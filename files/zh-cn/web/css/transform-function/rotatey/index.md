@@ -1,7 +1,6 @@
 ---
 title: rotateY()
 slug: Web/CSS/transform-function/rotateY
-original_slug: Web/CSS/transform-function/rotateY()
 ---
 
 {{CSSRef}}

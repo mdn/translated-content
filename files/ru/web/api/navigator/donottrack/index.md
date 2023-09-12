@@ -1,8 +1,8 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-translation_of: Web/API/Navigator/doNotTrack
 ---
+
 {{ ApiRef("HTML DOM") }}{{SeeCompatTable}}
 
 Возвращает настройки пользователя do-not-track. Будет "yes" если пользователь попросил не отслеживать его на веб-сайтах, контенте, рекламе.

@@ -1,7 +1,6 @@
 ---
 title: Navigator.platform
 slug: Web/API/Navigator/platform
-original_slug: Web/API/NavigatorID/platform
 ---
 
 {{ APIRef("HTML DOM") }} {{Deprecated_Header}}
@@ -11,7 +10,7 @@ original_slug: Web/API/NavigatorID/platform
 ## 構文
 
 ```js
-platform = navigator.platform
+platform = navigator.platform;
 ```
 
 ### 値

@@ -51,10 +51,10 @@ Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exe
 
 ## Especificações
 
-| Especificação                                            | Título                                 |
-| -------------------------------------------------------- | -------------------------------------- |
+| Especificação                              | Título                                 |
+| ------------------------------------------ | -------------------------------------- |
 | {{RFC("7235", "WWW-Authenticate", "4.1")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                     | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                            | The 'Basic' HTTP Authentication Scheme |
 
 ## Compatibilidade com navegadores
 

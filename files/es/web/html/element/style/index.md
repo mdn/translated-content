@@ -1,7 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Element/style
-original_slug: Web/HTML/Elemento/style
 ---
 
 ### Definición

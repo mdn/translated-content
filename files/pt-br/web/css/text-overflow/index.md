@@ -55,9 +55,9 @@ text-overflow: inherit
 p {
   white-space: nowrap;
   width: 100%;
-  overflow: hidden;              /* "overflow" value must be different from "visible" */
+  overflow: hidden; /* "overflow" value must be different from "visible" */
 
-  text-overflow:    ellipsis;
+  text-overflow: ellipsis;
 }
 ```
 
@@ -493,18 +493,20 @@ We have the example of the use of abbr tag inside a div with width 250px;
 
 ```css
 div {
-    width: 250px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    direction: ltr;
+  width: 250px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 ```
 
 ```html
 <div>
-    <abbr title="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow">https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow</abbr>
+  <abbr title="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow"
+    >https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow</abbr
+  >
 </div>
 ```
 
@@ -512,8 +514,8 @@ The full path of the URL will be displayed over the mouse, and the screen will b
 
 ## Specifications
 
-| Specification                                                                    | Status                       | Comment |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| Specification                                                | Status                 | Comment |
+| ------------------------------------------------------------ | ---------------------- | ------- |
 | {{ SpecName('CSS3 UI', '#text-overflow', 'text-overflow') }} | {{ Spec2('CSS3 UI') }} |         |
 
 A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.

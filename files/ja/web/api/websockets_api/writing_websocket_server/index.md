@@ -185,8 +185,8 @@ if (Regex.IsMatch(data, "^GET")) {
 現在 131 の値を持つ 2 番目のバイトは、次のように分解する別のビットフィールドです。
 
 | MASK (Bit 0) | ペイロード長 (Bit 1:7) |
-| ------------ | ------------------------ |
-| 1            | 0x83=0000011             |
+| ------------ | ---------------------- |
+| 1            | 0x83=0000011           |
 
 - MASK ビット: "ペイロードデータ" がマスクされているかどうかを定義します。1 に設定すると、マスキングキーが Masking-Key にあり、これは "ペイロードデータ" のマスクを解除するために使用されます。クライアントからサーバーへのすべてのメッセージはこのビットが設定されています。
 - ペイロードの長さ: この値が 0〜125 の場合、メッセージの長さになります。 126 の場合、次の 2 バイト (16 ビットの符号なし整数) が長さになります。127 の場合、次の 8 バイト (64ビットの符号なし整数) が長さになります。
@@ -319,61 +319,71 @@ class Server {
 ```html
 <!doctype html>
 <style>
-    textarea { vertical-align: bottom; }
-    #output { overflow: auto; }
-    #output > p { overflow-wrap: break-word; }
-    #output span { color: blue; }
-    #output span.error { color: red; }
+  textarea {
+    vertical-align: bottom;
+  }
+  #output {
+    overflow: auto;
+  }
+  #output > p {
+    overflow-wrap: break-word;
+  }
+  #output span {
+    color: blue;
+  }
+  #output span.error {
+    color: red;
+  }
 </style>
 <h2>WebSocket Test</h2>
-<textarea cols=60 rows=6></textarea>
+<textarea cols="60" rows="6"></textarea>
 <button>send</button>
-<div id=output></div>
+<div id="output"></div>
 <script>
-    // http://www.websocket.org/echo.html
+  // http://www.websocket.org/echo.html
 
-    var button = document.querySelector("button"),
-        output = document.querySelector("#output"),
-        textarea = document.querySelector("textarea"),
-        // wsUri = "ws://echo.websocket.org/",
-        wsUri = "ws://127.0.0.1/",
-        websocket = new WebSocket(wsUri);
+  var button = document.querySelector("button"),
+    output = document.querySelector("#output"),
+    textarea = document.querySelector("textarea"),
+    // wsUri = "ws://echo.websocket.org/",
+    wsUri = "ws://127.0.0.1/",
+    websocket = new WebSocket(wsUri);
 
-    button.addEventListener("click", onClickButton);
+  button.addEventListener("click", onClickButton);
 
-    websocket.onopen = function (e) {
-        writeToScreen("CONNECTED");
-        doSend("WebSocket rocks");
-    };
+  websocket.onopen = function (e) {
+    writeToScreen("CONNECTED");
+    doSend("WebSocket rocks");
+  };
 
-    websocket.onclose = function (e) {
-        writeToScreen("DISCONNECTED");
-    };
+  websocket.onclose = function (e) {
+    writeToScreen("DISCONNECTED");
+  };
 
-    websocket.onmessage = function (e) {
-        writeToScreen("<span>RESPONSE: " + e.data + "</span>");
-    };
+  websocket.onmessage = function (e) {
+    writeToScreen("<span>RESPONSE: " + e.data + "</span>");
+  };
 
-    websocket.onerror = function (e) {
-        writeToScreen("<span class=error>ERROR:</span> " + e.data);
-    };
+  websocket.onerror = function (e) {
+    writeToScreen("<span class=error>ERROR:</span> " + e.data);
+  };
 
-    function doSend(message) {
-        writeToScreen("SENT: " + message);
-        websocket.send(message);
-    }
+  function doSend(message) {
+    writeToScreen("SENT: " + message);
+    websocket.send(message);
+  }
 
-    function writeToScreen(message) {
-        output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
-    }
+  function writeToScreen(message) {
+    output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
+  }
 
-    function onClickButton() {
-        var text = textarea.value;
+  function onClickButton() {
+    var text = textarea.value;
 
-        text && doSend(text);
-        textarea.value = "";
-        textarea.focus();
-    }
+    text && doSend(text);
+    textarea.value = "";
+    textarea.focus();
+  }
 </script>
 ```
 

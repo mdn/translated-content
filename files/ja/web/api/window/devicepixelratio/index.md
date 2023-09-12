@@ -32,8 +32,8 @@ Retina 画面では {{htmlelement("canvas")}} がぼやけて見えることが�
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 表示サイズを設定（CSS におけるピクセル数です）。
 const size = 200;
@@ -41,7 +41,7 @@ canvas.style.width = `${size}px`;
 canvas.style.height = `${size}px`;
 
 // メモリ上における実際のサイズを設定（ピクセル密度の分だけ倍増させます）。
-const scale = window.devicePixelRatio;  // Retina でこの値を 1 にするとぼやけた canvas になります
+const scale = window.devicePixelRatio; // Retina でこの値を 1 にするとぼやけた canvas になります
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
@@ -51,9 +51,9 @@ ctx.scale(scale, scale);
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
 ctx.fillStyle = "#ffffff";
-ctx.font = '18px Arial';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
+ctx.font = "18px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
 const x = size / 2;
 const y = size / 2;
@@ -79,8 +79,12 @@ const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
-}
+  matchMedia(`(resolution: ${pr}dppx)`).addEventListener(
+    "change",
+    updatePixelRatio,
+    { once: true },
+  );
+};
 
 updatePixelRatio();
 ```
@@ -98,12 +102,14 @@ updatePixelRatio();
 ```html
 <div class="container">
   <div class="inner-container">
-    <p>この使用例により、ページをズームまたはズームアウトすること
-       (または異なる表示倍率の画面にページを移動させること) の
-       <code>Window.devicePixelRatio</code> プロパティに与える影響がわかります。
-       どのようなことが起こるか、試してみましょう！</p>
+    <p>
+      この使用例により、ページをズームまたはズームアウトすること
+      (または異なる表示倍率の画面にページを移動させること) の
+      <code>Window.devicePixelRatio</code> プロパティに与える影響がわかります。
+      どのようなことが起こるか、試してみましょう！
+    </p>
   </div>
-    <div class="pixel-ratio"></div>
+  <div class="pixel-ratio"></div>
 </div>
 ```
 
@@ -111,7 +117,9 @@ updatePixelRatio();
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 .container {

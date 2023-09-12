@@ -1,12 +1,8 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - Прокси
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
+
 {{JSRef}}
 
 Метод **handler.set()** является ловушкой для установки значения свойству.
@@ -15,8 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 
 ```js
 var p = new Proxy(target, {
-  set: function(target, property, value, receiver) {
-  }
+  set: function (target, property, value, receiver) {},
 });
 ```
 
@@ -66,26 +61,29 @@ var p = new Proxy(target, {
 Следующий код перехватывает установку значения свойству.
 
 ```js
-var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value
-    console.log('property set: ' + prop + ' = ' + value)
-    return true
-  }
-})
+var p = new Proxy(
+  {},
+  {
+    set: function (target, prop, value, receiver) {
+      target[prop] = value;
+      console.log("property set: " + prop + " = " + value);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p)  // false
+console.log("a" in p); // false
 
-p.a = 10               // "property set: a = 10"
-console.log('a' in p)  // true
-console.log(p.a)       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## Specifications
 
-| Спецификация                                                                                                                                     | Статус                       | Комментарий         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Спецификация                                                                                                 | Статус               | Комментарий         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Совместимость с браузерами

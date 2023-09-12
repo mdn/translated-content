@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
-translation_of: Web/API/MouseEvent/clientY
 ---
 
 {{APIRef("DOM Events")}}
@@ -21,24 +20,28 @@ var y = instanceOfMouseEvent.clientY
 ## Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Пример для clientX\clientY</title>
+  <head>
+    <title>Пример для clientX\clientY</title>
 
-<script>
-function showCoords(evt){
-  alert(
-    "clientX value: " + evt.clientX + "\n" +
-    "clientY value: " + evt.clientY + "\n"
-  );
-}
-</script>
-</head>
+    <script>
+      function showCoords(evt) {
+        alert(
+          "clientX value: " +
+            evt.clientX +
+            "\n" +
+            "clientY value: " +
+            evt.clientY +
+            "\n",
+        );
+      }
+    </script>
+  </head>
 
-<body onmousedown="showCoords(event)">
-<p>Для показа координат мышки нажмите в любом месте страницы.</p>
-</body>
+  <body onmousedown="showCoords(event)">
+    <p>Для показа координат мышки нажмите в любом месте страницы.</p>
+  </body>
 </html>
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: Кривая Безье
 slug: Glossary/Bezier_curve
-tags:
-  - Графика
-  - Кривая Безье
-  - Глоссарий
-translation_of: Glossary/Bézier_curve
-original_slug: Glossary/Bézier_curve
 ---
 
 **Кривая Безье** — это математически описанная кривая, используемая в компьютерной графике и анимации. В {{Glossary("vector image", "vector images")}} они используются для создания плавных кривых, которые можно бесконечно сильно масштабировать.

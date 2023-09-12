@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
-translation_of: Web/API/HTMLFormElement/method
 ---
 
 {{APIRef("HTML DOM")}}

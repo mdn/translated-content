@@ -237,11 +237,10 @@ function startup() {
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: [0.0, 0.75]
+    threshold: [0.0, 0.75],
   };
 
-  adObserver = new IntersectionObserver(intersectionCallback,
-                    observerOptions);
+  adObserver = new IntersectionObserver(intersectionCallback, observerOptions);
 
   buildContents();
   refreshIntervalID = setInterval(handleRefreshInterval, 1000);
@@ -305,7 +304,10 @@ function intersectionCallback(entries) {
       }
     } else {
       visibleAds.delete(adBox);
-      if ((entry.intersectionRatio === 0.0) && (adBox.dataset.totalViewTime >= 60000)) {
+      if (
+        entry.intersectionRatio === 0.0 &&
+        adBox.dataset.totalViewTime >= 60000
+      ) {
         replaceAd(adBox);
       }
     }
@@ -362,7 +364,8 @@ function updateAdTimer(adBox) {
   if (lastStarted) {
     const diff = currentTime - lastStarted;
 
-    adBox.dataset.totalViewTime = parseFloat(adBox.dataset.totalViewTime) + diff;
+    adBox.dataset.totalViewTime =
+      parseFloat(adBox.dataset.totalViewTime) + diff;
   }
 
   adBox.dataset.lastViewStarted = currentTime;
@@ -406,7 +409,8 @@ function drawAdTimer(adBox) {
 `buildContents()` 関数は、[スタートアップコード](#セットアップ)から呼び出され、表示する記事や広告を選択して文書内に挿入します。
 
 ```js
-const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+const loremIpsum =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
   " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
   " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
@@ -415,7 +419,7 @@ const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " cursus nunc.</p>";
 
 function buildContents() {
-  for (let i=0; i<5; i++) {
+  for (let i = 0; i < 5; i++) {
     contentBox.appendChild(createArticle(loremIpsum));
 
     if (!(i % 2)) {
@@ -445,7 +449,7 @@ function createArticle(contents) {
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
-  nextArticleID +=1 ;
+  nextArticleID += 1;
 
   return articleElem;
 }
@@ -462,24 +466,24 @@ function loadRandomAd(replaceBox) {
   const ads = [
     {
       bgcolor: "#cec",
-      title: 'Eat Green Beans',
-      body: "Make your mother proud—they're good for you!"
+      title: "Eat Green Beans",
+      body: "Make your mother proud—they're good for you!",
     },
     {
       bgcolor: "aquamarine",
-      title: 'MillionsOfFreeBooks.whatever',
-      body: "Read classic literature online free!"
+      title: "MillionsOfFreeBooks.whatever",
+      body: "Read classic literature online free!",
     },
     {
       bgcolor: "lightgrey",
-      title: '3.14 Shades of Gray: A novel',
-      body: "Love really does make the world go round…"
+      title: "3.14 Shades of Gray: A novel",
+      body: "Love really does make the world go round…",
     },
     {
       bgcolor: "#fee",
-      title: 'Flexbox Florist',
-      body: "When life's layout gets complicated, send flowers."
-    }
+      title: "Flexbox Florist",
+      body: "When life's layout gets complicated, send flowers.",
+    },
   ];
   let adBox, title, body, timerElem;
 
@@ -512,7 +516,7 @@ function loadRandomAd(replaceBox) {
   adBox.dataset.totalViewTime = 0;
   adBox.dataset.lastViewStarted = 0;
 
-  timerElem.className="timer";
+  timerElem.className = "timer";
   timerElem.innerText = "0:00";
 
   if (!replaceBox) {
@@ -559,7 +563,11 @@ function replaceAd(adBox) {
   updateAdTimer(adBox);
 
   const visibleTime = adBox.dataset.totalViewTime;
-  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`);
+  console.log(
+    `Replacing ad: ${
+      adBox.querySelector("h2").innerText
+    } - visible for ${visibleTime}`,
+  );
 
   loadRandomAd(adBox);
 }

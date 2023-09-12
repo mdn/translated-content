@@ -1,7 +1,6 @@
 ---
 title: Méthodes de mises en page traditionnelles
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
 
 {{LearnSidebar}}

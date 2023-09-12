@@ -1,7 +1,6 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
 
 {{JSRef}}

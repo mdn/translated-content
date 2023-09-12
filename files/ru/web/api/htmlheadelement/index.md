@@ -1,7 +1,6 @@
 ---
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
-translation_of: Web/API/HTMLHeadElement
 ---
 
 {{APIRef("HTML DOM")}}

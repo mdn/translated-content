@@ -1,7 +1,6 @@
 ---
 title: Console.groupCollapsed()
 slug: Web/API/console/groupCollapsed
-translation_of: Web/API/Console/groupCollapsed
 ---
 
 {{APIRef("Console API")}}

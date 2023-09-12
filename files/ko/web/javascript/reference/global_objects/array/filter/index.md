@@ -1,193 +1,211 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}
 
-**`filter()`** 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+{{jsxref("Array")}} 인스턴스의 `filter()` 메서드는 주어진 배열의 일부에 대한 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)을 생성하고, 주어진 배열에서 제공된 함수에 의해 구현된 테스트를 통과한 요소로만 필터링 합니다.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
 
 ## 구문
 
-```js
-    arr.filter(callback(element[, index[, array]])[, thisArg])
+```js-nolint
+filter(callbackFn)
+filter(callbackFn, thisArg)
 ```
 
 ### 매개변수
 
-- `callback`
-  - : 각 요소를 시험할 함수. `true`를 반환하면 요소를 유지하고, `false`를 반환하면 버립니다.
-
-    다음 세 가지 매개변수를 받습니다.
-
+- `callbackFn`
+  - : 배열의 각 요소에 대해 실행할 함수입니다. 결과 배열에 요소를 유지하려면 [참](/ko/docs/Glossary/Truthy) 값을 반환하고 그렇지 않으면 [거짓](/ko/docs/Glossary/Falsy) 값을 반환해야 합니다. 이 함수는 다음 인수를 사용하여 호출됩니다.
     - `element`
-      - : 처리할 현재 요소.
-    - `index` {{optional_inline}}
-      - : 처리할 현재 요소의 인덱스.
-    - `array` {{optional_inline}}
-      - : `filter`를 호출한 배열.
-
+      - : 배열에서 처리 중인 현재 요소.
+    - `index`
+      - : 배열에서 처리 중인 현재 요소의 인덱스.
+    - `array`
+      - : `filter()`가 호출된 배열.
 - `thisArg` {{optional_inline}}
-  - : `callback`을 실행할 때 `this`로 사용하는 값.
+  - : `callbackFn`을 실행할 때 `this` 값으로 사용할 값입니다. [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드)를 참조하세요.
 
 ### 반환 값
 
-테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환합니다.
+주어진 배열의 일부에 대한 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)으로, 주어진 배열에서 제공된 함수에 의해 구현된 테스트를 통과한 요소로만 필터링 합니다. 테스트를 통과한 요소가 없으면 빈 배열이 반환됩니다.
 
 ## 설명
 
-`filter()`는 배열 내 각 요소에 대해 한 번 제공된 `callback` 함수를 호출해, `callback`이 [`true`로 강제하는 값](/ko/docs/Glossary/Truthy)을 반환하는 모든 값이 있는 새로운 배열을 생성합니다. `callback`은 할당된 값이 있는 배열의 인덱스에 대해서만 호출됩니다; 삭제됐거나 값이 할당된 적이 없는 인덱스에 대해서는 호출되지 않습니다. `callback` 테스트를 통과하지 못한 배열 요소는 그냥 건너뛰며 새로운 배열에 포함되지 않습니다.
+`filter()` 메서드는 [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드)입니다. 이 메서드는 배열의 각 요소에 대해 제공된 `callbackFn` 함수를 한 번씩 호출하고, `callbackFn`이 [참](/ko/docs/Glossary/Truthy) 값을 반환하는 모든 값으로 새 배열을 구성합니다. `callbackFn` 테스트를 통과하지 못한 배열 요소는 새 배열에 포함되지 않습니다.
 
-`callback`은 다음 세 인수와 함께 호출됩니다:
+`callbackFn`은 값이 할당된 배열 인덱스에 대해서만 호출됩니다. [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯에는 호출되지 않습니다.
 
-1. 요소값
-2. 요소 인덱스
-3. 순회(traverse)되는 배열 객체
+`filter()` 메서드는 [복사 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#복사_메서드와_변경_메서드)입니다. 이 메서드는 `this`를 변경하지 않는 대신 원래 배열의 요소와 동일한 요소를 포함하는 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)을 반환합니다(일부 필터링 된 요소 제외). 하지만, `callbackFn`으로 제공된 함수는 배열을 변경할 수 있습니다. 그러나 배열의 length는 `callbackFn`을 처음 호출하기 전에 저장된다는 점에 유의하세요. 따라서,
 
-`thisArg` 매개변수가 `filter`에 제공된 경우, 호출될 때 그 값은 `callback`의 `this` 값으로 전달됩니다. 그 이외에, `undefined`값도 `callback`의 `this` 값으로 쓰기 위해 전달됩니다. 결국 `callback`에 의해 관찰될 수 있는 `this` 값은 [`this`를 결정하는 함수의 평소 규칙](/ko/docs/Web/JavaScript/Reference/Operators/this)에 따라 결정됩니다.
+- `callbackFn`은 `filter()` 호출이 시작되었을 때 배열의 초기 length 값을 초과하여 추가된 요소는 방문하지 않습니다.
+- 이미 방문한 인덱스를 변경해도 `callbackFn`이 해당 인덱스에 대해 다시 호출되지 않습니다.
+- 배열의 아직 방문하지 않은 기존 요소가 `callbackFn`에 의해 변경되는 경우, `callbackFn`에 전달된 값은 해당 요소가 방문될 당시의 값이 됩니다. [삭제된](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 방문되지 않습니다.
 
-`filter()`는 호출되는 배열을 변화시키지(mutate) 않습니다.
+> **경고:** 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
 
-`filter()`에 의해 처리되는 요소의 범위는 `callback`의 첫 호출 전에 설정됩니다. `filter()` 호출 시작 이후로 배열에 추가된 요소는 `callback`에 의해 방문되지 않습니다. 배열의 기존 요소가 변경 또는 삭제된 경우, `callback`에 전달된 그 값은 `filter()`가 그 요소를 방문한 시점에 값이 됩니다; 삭제된 요소는 반영되지 않습니다.
+`filter()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
 ## 예제
 
 ### 모든 작은 값 걸러내기
 
-다음 예는 값이 10 이하인 모든 요소가 제거된 걸러진 배열을 만들기 위해 `filter()`를 사용합니다.
+다음 예제는 `filter()`를 사용하여 값이 10 미만인 요소가 모두 제거된 필터링된 배열을 만듭니다.
 
 ```js
 function isBigEnough(value) {
   return value >= 10;
 }
 
-var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
-// filtered 는 [12, 130, 44]
+const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// 필터링된 값은 [12, 130, 44]
 ```
 
-### JSON에서 무효한 항목 거르기
+### 배열의 모든 소수 찾기
 
-다음 예는 0이 아닌, 숫자 `id`인 모든 요소의 걸러진 json을 만들기 위해 `filter()`를 사용합니다.
+다음 예제는 배열의 모든 소수를 반환합니다.
 
 ```js
-var arr = [
+const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+function isPrime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
+```
+
+### JSON에서 유효하지 않은 항목 걸러내기
+
+다음 예제는 `filter()`를 사용하여 모든 요소의 `id`가 0이 아닌 숫자인 필터링된 JSON을 생성합니다.
+
+```js
+const arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
+  { id: "undefined" },
 ];
 
-var invalidEntries = 0;
-
-function isNumber(obj) {
-  return obj !== undefined && typeof(obj) === 'number' && !isNaN(obj);
-}
+let invalidEntries = 0;
 
 function filterByID(item) {
-  if (isNumber(item.id) && item.id !== 0) {
+  if (Number.isFinite(item.id) && item.id !== 0) {
     return true;
   }
   invalidEntries++;
   return false;
 }
 
-var arrByID = arr.filter(filterByID);
+const arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID);
-// Filtered Array
+console.log("필터링된 배열\n", arrByID);
+// 필터링된 배열
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries);
-// Number of Invalid Entries = 5
+console.log("유효하지 않은 항목의 수 =", invalidEntries);
+// 유효하지 않은 항목의 수 = 5
 ```
 
-### 배열 내용 검색
+### 배열 검색
 
-다음 예는 배열 내용을 조건에 따라 검색하기 위해 `filter()` 를 사용합니다.
+다음 예제는 `filter()`를 사용하여 검색 조건에 따라 배열 콘텐츠를 필터링합니다.
 
 ```js
-var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * 검색 조건에 따른 배열 필터링(쿼리)
  */
-function filterItems(query) {
-  return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+function filterItems(arr, query) {
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
-### ES2015로 구현
+### 희소 배열에 filter() 사용
+
+`filter()`는 빈 슬롯을 건너뜁니다.
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
-
-/**
- * 검색 조건에 따른 배열 필터링(쿼리)
- */
-const filterItems = (query) => {
-  return fruits.filter((el) =>
-    el.toLowerCase().indexOf(query.toLowerCase()) > -1
-  );
-}
-
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
+console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
 ```
 
-## 폴리필
+### 배열이 아닌 객체에서 filter() 호출하기
 
-`filter`는 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 `filter`를 사용할 수 있습니다. 아래 알고리즘은 `fn.call`의 계산 값이 원래의 [`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)과 같고, {{jsxref("Array.prototype.push()")}}가 변형되지 않은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.
+`filter()` 메서드는 `this`의 `length` 속성을 읽은 다음, 키가 `length`보다 작은 음수가 아닌 정수 키의 각 속성에 모두 접근합니다.
 
 ```js
-if (!Array.prototype.filter){
-  Array.prototype.filter = function(func, thisArg) {
-    'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
-        throw new TypeError();
-
-    var len = this.length >>> 0,
-        res = new Array(len), // preallocate array
-        t = this, c = 0, i = -1;
-    if (thisArg === undefined){
-      while (++i !== len){
-        // checks to see if the key was set
-        if (i in this){
-          if (func(t[i], i, t)){
-            res[c++] = t[i];
-          }
-        }
-      }
-    }
-    else{
-      while (++i !== len){
-        // checks to see if the key was set
-        if (i in this){
-          if (func.call(thisArg, t[i], i, t)){
-            res[c++] = t[i];
-          }
-        }
-      }
-    }
-
-    res.length = c; // shrink down array to proper size
-    return res;
-  };
-}
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: "a", // length가 3이므로 filter에 의해 무시됩니다.
+};
+console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+// [ 'a', 'b' ]
 ```
 
-## 명세
+### 초기 배열에 영향주기(수정, 추가, 삭제)
+
+다음 예제는 배열이 수정되었을 때 `filter` 메서드의 동작을 테스트합니다.
+
+```js
+// 각 단어 수정
+let words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
+
+const modifiedWords = words.filter((word, index, arr) => {
+  arr[index + 1] += " extra";
+  return word.length < 6;
+});
+
+console.log(modifiedWords);
+// 길이 6 아래에 세 단어가 있지만, 수정되었으므로 한 단어가 반환됩니다.
+// ["spray"]
+
+// 새 단어 추가
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
+const appendedWords = words.filter((word, index, arr) => {
+  arr.push("new");
+  return word.length < 6;
+});
+
+console.log(appendedWords);
+// 이제 `words` 자체에는 문자 길이가 6자 미만인 단어가 훨씬 더 많음에도 불구하고 조건에 맞는 단어는 3개뿐입니다.
+// ["spray" ,"limit" ,"elite"]
+
+// 단어 삭제
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
+const deleteWords = words.filter((word, index, arr) => {
+  arr.pop();
+  return word.length < 6;
+});
+
+console.log(deleteWords);
+// filter가 'elite'에 도달하기도 전에 'words'가 pop되기 때문에 'elite'는 표시되지 않습니다.
+// ["spray" ,"limit"]
+```
+
+## 명세서
 
 {{Specifications}}
 
@@ -197,7 +215,12 @@ if (!Array.prototype.filter){
 
 ## 같이 보기
 
+- [`core-js`의 `Array.prototype.filter` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [인덱스된 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}

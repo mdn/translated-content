@@ -26,13 +26,13 @@ Usando essa propriedade com um valor diferente de 1, o elemento é colocado em u
 ```css
 /* Totalmente opaco */
 opacity: 1;
-opacity: 1.0;
+opacity: 1;
 
 /* Translúcido */
 opacity: 0.6;
 
 /* Totalmente transparente */
-opacity: 0.0;
+opacity: 0;
 opacity: 0;
 
 /* Valores globais */
@@ -47,11 +47,11 @@ opacity: unset;
 
   - : É um {{cssxref("number")}} no intervalo de 0.0 a 1.0, sendo estes incluídos, representando a opacidade do canal, que é o valor de seu canal alfa. Qualquer valor fora do intervalo, apesar de válido, é aproximado ao valor mais próximo dentro do intervalo.
 
-    | Valor                                             | Significado                                                |
-    | ------------------------------------------------- | ---------------------------------------------------------- |
-    | `0`                                               | O elemento é totalmente transparente (isto é, invisível).  |
+    | Valor                                      | Significado                                                |
+    | ------------------------------------------ | ---------------------------------------------------------- |
+    | `0`                                        | O elemento é totalmente transparente (isto é, invisível).  |
     | Qualquer {{cssxref("number")}} entre 0 e 1 | O elemento é translúcido (isto é, o background é visível). |
-    | `1`                                               | O elemento é totalmente opaco (sólido).                    |
+    | `1`                                        | O elemento é totalmente opaco (sólido).                    |
 
 ### Sintaxe formal
 
@@ -62,7 +62,9 @@ opacity: unset;
 ### Exemplo básico
 
 ```css
-div { background-color: yellow; }
+div {
+  background-color: yellow;
+}
 .light {
   opacity: 0.2; /* Mal consegue ver o texto acima do background */
 }
@@ -99,19 +101,22 @@ img.opacity:hover {
 ```
 
 ```html
-<img src="//developer.mozilla.org/media/img/mdn-logo.png"
-     alt="MDN logo" width="128" height="146"
-     class="opacity">
+<img
+  src="//developer.mozilla.org/media/img/mdn-logo.png"
+  alt="MDN logo"
+  width="128"
+  height="146"
+  class="opacity" />
 ```
 
 {{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}
 
 ## Especificações
 
-| Especificação                                                                        | Status                                   | Comentário                    |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------- |
+| Especificação                                                  | Status                        | Comentário                    |
+| -------------------------------------------------------------- | ----------------------------- | ----------------------------- |
 | {{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}} | {{Spec2('CSS3 Transitions')}} | Define opacity como animável. |
-| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}                 | {{Spec2('CSS3 Colors')}}         | Definição inicial.            |
+| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}             | {{Spec2('CSS3 Colors')}}      | Definição inicial.            |
 
 ## Compatibilidade com navegadores
 

@@ -1,13 +1,8 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -38,23 +33,23 @@ Math.acos(x)
 ### Пример: использование метода `Math.acos()`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 Для значений, меньших -1 или больших 1, метод `Math.acos()` возвращает {{jsxref("NaN")}}.
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                        | Статус             | Комментарии                                            |
+| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                             | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.2', 'Math.acos')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}} | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}}  | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

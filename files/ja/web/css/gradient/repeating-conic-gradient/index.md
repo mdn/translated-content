@@ -1,12 +1,11 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
-original_slug: Web/CSS/gradient/repeating-conic-gradient()
 ---
 
 {{CSSRef}}
 
-**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 ([単一のグラデーション](conic-gradient())ではなく) 繰り返しのグラデーションからなる、色の遷移が (中心から[放射状に広がるのではなく](repeating-radial-gradient\(\))) 中心点の周りを回転する画像を生成します。
+**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 ([単一のグラデーション](<conic-gradient()>)ではなく) 繰り返しのグラデーションからなる、色の遷移が (中心から[放射状に広がるのではなく](<repeating-radial-gradient()>)) 中心点の周りを回転する画像を生成します。
 
 ## 構文
 
@@ -114,8 +113,7 @@ div {
 
 ```css
 div {
-  background-image:
-     repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
 }
 ```
 
@@ -140,7 +138,12 @@ div {
 div {
   background: repeating-conic-gradient(
     from 3deg at 25% 25%,
-    green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
 }
 ```
 

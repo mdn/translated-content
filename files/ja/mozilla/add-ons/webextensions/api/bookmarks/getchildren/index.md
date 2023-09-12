@@ -11,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 
 ```js
 browser.bookmarks.getChildren(
-  id,      // 文字列
-  callback // 関数
-)
+  id, // 文字列
+  callback, // 関数
+);
 ```
 
 ### Parameters
@@ -49,8 +49,8 @@ chrome.bookmarks.getChildren(bookmarkItemId, gotChildren);
 
 ```js
 function toggleBookmark(folderNode, title, url) {
-  chrome.bookmarks.getChildren(folderNode.id, function(results) {
-    let node = results.find(function(el) {
+  chrome.bookmarks.getChildren(folderNode.id, function (results) {
+    let node = results.find(function (el) {
       return el.title === title;
     });
 
@@ -63,7 +63,7 @@ function toggleBookmark(folderNode, title, url) {
       chrome.bookmarks.create({
         parentId: folderNode.id,
         title: title,
-        url: url
+        url: url,
       });
     }
   });

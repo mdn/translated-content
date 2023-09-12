@@ -15,7 +15,7 @@ slug: Web/CSS/border-block-color
 
 ```css
 border-block-color: yellow;
-border-block-color: #F5F6F7;
+border-block-color: #f5f6f7;
 
 /* グローバル値 */
 border-block-color: inherit;

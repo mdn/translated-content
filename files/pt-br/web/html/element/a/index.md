@@ -145,7 +145,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code> when <code>href</code> attribute is
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code> when <code>href</code> attribute is
         present, otherwise
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >no corresponding role</a
@@ -157,16 +157,16 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code></li>
-          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>
@@ -306,7 +306,7 @@ function draw(x, y) {
 }
 
 canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY)
+  draw(event.offsetX, event.offsetY),
 );
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
@@ -315,7 +315,7 @@ document
   .querySelector("a")
   .addEventListener(
     "click",
-    (event) => (event.target.href = canvas.toDataURL())
+    (event) => (event.target.href = canvas.toDataURL()),
   );
 ```
 

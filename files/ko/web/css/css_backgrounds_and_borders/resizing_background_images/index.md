@@ -1,7 +1,6 @@
 ---
 title: 배경 이미지 크기 조정하기
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 
 {{cssref}}
@@ -15,8 +14,7 @@ CSS 배경 이미지의 기본 설정값에서는 원본 이미지가 크기 변
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS

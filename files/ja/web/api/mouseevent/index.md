@@ -104,7 +104,9 @@ _このインターフェイスは、親インターフェイスである {{domx
   <label><input type="checkbox" id="checkbox" /> チェック</label>
 </p>
 <p>
-  <button id="button">クリックすると MouseEvent をチェックボックスに送信します</button>
+  <button id="button">
+    クリックすると MouseEvent をチェックボックスに送信します
+  </button>
 </p>
 ```
 

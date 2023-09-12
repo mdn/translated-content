@@ -5,11 +5,11 @@ slug: Web/JavaScript
 
 {{JsSidebar}}
 
-**JavaScript** (簡稱 **JS**) 是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages)，像是 [node.js](http://nodejs.org/)、[Apache CouchDB](http://couchdb.apache.org)。JavaScript 是一個基於原型的 ({{Glossary("Prototype-based programming", "Prototype-based")}})、多範型的、動態語言，支援物件導向、指令式以及宣告式 (如函數式程式設計) 風格。
+**JavaScript** (簡稱 **JS**) 是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages)，像是 [node.js](https://nodejs.org/)、[Apache CouchDB](https://couchdb.apache.org)。JavaScript 是一個基於原型的 ({{Glossary("Prototype-based programming", "Prototype-based")}})、多範型的、動態語言，支援物件導向、指令式以及宣告式 (如函數式程式設計) 風格。
 
 本章節主要說明 JavaScript，不涉及網頁特有項目或主機環境。有關網頁特有的 {{Glossary("API","APIs")}} ，請參考 [Web API](/zh-TW/docs/Web/API) 和 [DOM](/zh-TW/docs/Glossary/DOM)。
 
-JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resources)，自 2012 年起，所有[現代的瀏覽器](http://kangax.github.io/compat-table/es5/)均已全面支援 ECMAScript 5.1。較老舊的瀏覽器最少也會支援 ECMAScript 3。[ECMA International](http://www.ecma-international.org/) 於 2015 年 6 月 17 日發布第六版的 ECMAScript，其正式名稱是 ECMAScript 2015，原先被稱作 ECMAScript 6 或 ES6。從那時起， ECMAScript 標準的發布週期是一年，本文件參考了最新的草稿版本，也就是目前的 [ECMAScript 2017](http://tc39.github.io/ecma262/)。
+JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc39.es/ecma262/)（ECMA-262），自 2012 年起，所有[現代的瀏覽器](http://kangax.github.io/compat-table/es5/)均已全面支援 ECMAScript 5.1。較老舊的瀏覽器最少也會支援 ECMAScript 3。[ECMA International](https://www.ecma-international.org/) 於 2015 年 6 月 17 日發布第六版的 ECMAScript，其正式名稱是 ECMAScript 2015，原先被稱作 ECMAScript 6 或 ES6。從那時起， ECMAScript 標準的發布週期是一年，本文件參考了最新的草稿版本，也就是目前的 [ECMAScript 2017](http://tc39.github.io/ecma262/)。
 
 別搞混了 JavaScript 和 [Java 程式語言](<https://en.wikipedia.org/wiki/Java_(programming_language)>)。雖然 "Java" 和 "JavaScript" 都是 Oracle 公司在美國和其他國家的商標或註冊商標，但兩個語言有著非常不同的語法、語意和用途。
 
@@ -37,7 +37,7 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
 
 - [客戶端 web APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)
   - : 在為網站或應用程序編寫客戶端 JavaScript 時，您將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用您在開發工作中經常遇到的一些最常見的 API。
-- [重新介紹 JavaScript](/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [重新介紹 JavaScript](/zh-TW/docs/Web/JavaScript/Language_overview)
   - : 為了那些*以為*他們懂 JavaScript 的人寫的簡介。
 - [JavaScript 資料結構](/zh-TW/docs/Web/JavaScript/Data_structures)
   - : 簡介在 JavaScript 可用的資料結構。
@@ -54,7 +54,7 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
   - : 嚴謹模式會禁止您使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
 - [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
-- [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_Management)
+- [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_management)
   - : JavaScript 的記憶體生命週期和垃圾回收機制。
 - [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/Event_loop)
   - : JavaScript 具有基於「事件循環」的併行模組。
@@ -66,7 +66,7 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
 - [標準內建物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects)
   - : 瞭解標準內建物件： {{jsxref("Array")}}、 {{jsxref("Boolean")}}、 {{jsxref("Date")}}、 {{jsxref("Error")}}、 {{jsxref("Function")}}、 {{jsxref("JSON")}}、 {{jsxref("Math")}}、 {{jsxref("Number")}}、 {{jsxref("Object")}}、 {{jsxref("RegExp")}}、 {{jsxref("String")}}、 {{jsxref("Map")}}、 {{jsxref("Set")}}、 {{jsxref("WeakMap")}}、 {{jsxref("WeakSet")}} 等等。
 - [表式法與運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)
-  - : 瞭解更多 JavaScript 運算子的行為：{{jsxref("Operators/instanceof", "instanceof")}}、 {{jsxref("Operators/typeof", "typeof")}}、 {{jsxref("Operators/new", "new")}}、 {{jsxref("Operators/this", "this")}}、[運算子優先序](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)等等。
+  - : 瞭解更多 JavaScript 運算子的行為：{{jsxref("Operators/instanceof", "instanceof")}}、 {{jsxref("Operators/typeof", "typeof")}}、 {{jsxref("Operators/new", "new")}}、 {{jsxref("Operators/this", "this")}}、[運算子優先序](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)等等。
 - [敘述和宣告](/zh-TW/docs/Web/JavaScript/Reference/Statements)
   - : 瞭解 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、 {{jsxref("Statements/for...of", "for-of")}}、 {{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、 {{jsxref("Statements/var", "var")}}、 {{jsxref("Statements/const", "const")}}、 {{jsxref("Statements/if...else", "if-else")}}、 {{jsxref("Statements/switch", "switch")}} 和其他 JavaScript 敘述和關鍵字的運作方式。
 - [函數](/zh-TW/docs/Web/JavaScript/Reference/Functions)
@@ -82,9 +82,7 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
   - : JavaScript Shell 讓你更快的測試片段的 JavaScript。
 - [TogetherJS](https://togetherjs.com/)Paste
   - : 合作更簡單了。藉著在你的網站增加 TogetherJS，你的用戶們能在網站上互助 in real time！
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/javascript)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
   - : Stack Overflow 上有關 JavaScript 的問題。
-- [JavaScript 版本和發行說明](/zh-TW/docs/Web/JavaScript/New_in_JavaScript)
-  - : 瀏覽 JavaScript 的功能歷史和兼容狀態。
 - [JSFiddle](https://jsfiddle.net/)
   - : 編輯 JavaScript、CSS、HTML 並取得及時結果。可以使用外部資源和與在線上與你的夥伴協作。

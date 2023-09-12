@@ -1,12 +1,11 @@
 ---
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
-translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne l'emplacement d'une variable d'attribut dans le {{domxref("WebGLProgram")}} indiqué.
+La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne l'emplacement d'une variable d'attribut dans le {{domxref("WebGLProgram")}} indiqué.
 
 ## Syntaxe
 

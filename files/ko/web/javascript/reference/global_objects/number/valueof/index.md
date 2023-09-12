@@ -2,6 +2,7 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 메서드는 {{jsxref("Number")}} 객체가 감싼(wrapped) {{Glossary("primitive", "원시")}} 값을 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ## 구문
 
 ```js
-    numObj.valueOf()
+numObj.valueOf();
 ```
 
 ### 반환 값
@@ -31,8 +32,8 @@ var numObj = new Number(10);
 console.log(typeof numObj); // object
 
 var num = numObj.valueOf();
-console.log(num);           // 10
-console.log(typeof num);    // number
+console.log(num); // 10
+console.log(typeof num); // number
 ```
 
 ## 명세

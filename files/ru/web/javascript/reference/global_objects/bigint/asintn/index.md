@@ -1,14 +1,8 @@
 ---
 title: BigInt.asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
-tags:
-  - BigInt
-  - JavaScript
-  - Method
-  - Reference
-  - asIntN
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
+
 {{JSRef}}
 
 **`BigInt.asIntN`** — это статический метод, который позволяет перенести BigInt-значение в целое число со знаком между -2ширина-1 and 2ширина-1-1.

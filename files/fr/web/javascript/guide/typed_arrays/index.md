@@ -1,7 +1,6 @@
 ---
 title: Les tableaux typés en JavaScript
 slug: Web/JavaScript/Guide/Typed_arrays
-translation_of: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}

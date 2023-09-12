@@ -1,10 +1,6 @@
 ---
-title: 'y'
+title: "y"
 slug: Web/SVG/Attribute/y
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/y
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
