@@ -1,6 +1,9 @@
 ---
-title: Navigator.appVersion
+title: "Navigator: appVersion プロパティ"
+short-title: appVersion
 slug: Web/API/Navigator/appVersion
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
@@ -9,24 +12,14 @@ slug: Web/API/Navigator/appVersion
 
 > **メモ:** このプロパティがブラウザーの正しいバージョンを返すことを期待しないでください。
 
-## 構文
-
-```js
-window.navigator.appVersion;
-```
-
-### 値
+## 値
 
 "`4.0`" またはそのブラウザーのバージョン情報を表す文字列のどちらかです。
 
 ## 例
 
 ```js
-alert(
-  "このブラウザーのバージョンは " +
-    navigator.appVersion +
-    " と報告されています。",
-);
+alert(`このブラウザーのバージョンは ${navigator.appVersion} と報告されています。`);
 ```
 
 ## 注
