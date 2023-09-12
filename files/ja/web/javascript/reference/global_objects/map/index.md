@@ -221,6 +221,40 @@ contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
 ```
 
+## Map 風のブラウザー API
+
+**ブラウザーの `Map` 風オブジェクト** (または「Map 風オブジェクト」) は、多くの点で `Map` のようにふるまう [Web API](/ja/docs/Web/API) のインターフェイスです。
+
+`Map` と同様に、エントリーはオブジェクトに追加されたのと同じ順番で走査できます。
+また、`Map` 風オブジェクトと `Map` は同じ名前で同じ挙動のプロパティおよびメソッドを持ちます。
+しかし、`Map` と違い、各エントリーのキーと値には事前に定義された特定の型しか使用できません。
+
+使用可能な型は、仕様書の IDL 定義で設定されています。
+たとえば、{{domxref("RTCStatsReport")}} はキーには文字列を、値にはオブジェクトを用いなければならない `Map` 風オブジェクトです。
+これは、仕様書の IDL で以下のように定義されています。
+
+```webidl
+interface RTCStatsReport {
+  readonly maplike<DOMString, object>;
+};
+```
+
+`Map` 風オブジェクトは読み取り専用のことも、読み書き可能なこともあります。(上の IDL の `readonly` キーワードに注目してください)
+
+- 読み取り専用の `Map` 風オブジェクトは、プロパティ [`size`](#map.prototype.size) と、メソッド [`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values)、[`@@iterator`](#map.prototypeiterator) を持ちます。
+- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド [`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete)、[`set()`](#map.prototype.set) を持ちます。
+
+これらのメソッドとプロパティは、キーと値の型の制約を除いて、`Map` の対応するエンティティと同様にふるまいます。
+
+以下は、読み取り専用の `Map` 風ブラウザーオブジェクトの例です。
+
+- {{domxref("AudioParamMap")}}
+- {{domxref("RTCStatsReport")}}
+- {{domxref("EventCounts")}}
+- {{domxref("KeyboardLayoutMap")}}
+- {{domxref("MIDIInputMap")}}
+- {{domxref("MIDIOutputMap")}}
+
 ## コンストラクター
 
 - {{jsxref("Map/Map", "Map()")}}

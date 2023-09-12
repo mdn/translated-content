@@ -13,7 +13,7 @@ slug: Learn/JavaScript/First_steps
 
 - [開始使用 Web](/zh-TW/docs/Learn/Getting_started_with_the_web) (包括 [JavaScript 基礎簡介](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
 - [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML).
-- [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS).
+- [CSS 簡介](/zh-TW/docs/Learn/CSS/First_steps).
 
 > **備註：** 假如你正在使用 電腦/平板/其他裝置，你還不需要知道如何建立自己的檔案，你可以在線上程式撰寫系統來嘗試範例程式，像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 

@@ -117,7 +117,7 @@ Une utilisation plus pertinente de ces pseudo-éléments consiste à insérer un
 
 Ces pseudo-éléments sont aussi fréquemment utilisés pour insérer une chaîne vide, qui peut ensuite être stylisée comme n'importe quel élément de la page.
 
-Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le e pseudo-élément `::before` pseudo-element. Nous l'avons défini en `display: block` afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.
+Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le pseudo-élément `::before` pseudo-element. Nous l'avons défini en `display: block` afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
 

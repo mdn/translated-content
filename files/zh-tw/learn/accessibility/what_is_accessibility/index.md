@@ -47,7 +47,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - 有些是商業軟體，例如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS)（Windows）和 [Window Eyes](http://www.gwmicro.com/window-eyes/)（Windows）。
 - 也有些是自由軟體，例如 [NVDA](http://www.nvaccess.org/)（Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome、Windows、Mac OS X）、[Orca](https://wiki.gnome.org/Projects/Orca)（Linux）
-- 還有些是系統內建，例如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome OS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
+- 還有些是系統內建，例如 [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome OS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
 
 熟悉螢幕閱讀器是個好主意；你得設定好螢幕閱讀器、還要會使用它，以理解其工作原理。請參見[cross browser testing screen readers guide](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)以深入理解。以下影片提供了簡單的體驗。
 
@@ -96,7 +96,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 康乃爾大學 [2014 年的殘疾報告](http://www.disabilitystatistics.org/StatusReports/2014-PDF/2014-StatusReport_US.pdf)顯示，2014 年美國 21 歲至 64 歲的人中，有 4.5% 的人有認知障礙。
 
-> **備註：** WebAIM 的[認知頁面](http://webaim.org/articles/cognitive/)提供了更多資訊，值得一讀
+> **備註：** WebAIM 的[認知頁面](https://webaim.org/articles/cognitive/)提供了更多資訊，值得一讀
 
 ## 專案引入無障礙
 
