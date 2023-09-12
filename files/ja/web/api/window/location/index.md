@@ -27,7 +27,7 @@ alert(location); // alerts "https://developer.mozilla.org/ja/docs/Web/API/Window
 
 ### 例 1: 新しいページへ移動
 
-location オブジェクトに新しい値が代入されるたびに、 `location.assign()` が変更された URL で呼び出されたかのうように、その URL の文書が読み込まれます。
+location オブジェクトに新しい値が代入されるたびに、 `location.assign()` が変更された URL で呼び出されたかのように、その URL の文書が読み込まれます。
 
 なお、[ナビゲーション関連のサンドボックスフラグ](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate)によっては、例外が発生して移動に失敗する場合があります。
 

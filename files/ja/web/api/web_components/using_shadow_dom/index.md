@@ -191,7 +191,7 @@ wrapper.appendChild(info);
 
 ### カスタム要素の使用
 
-一度クラスを定義すれば、[カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)で説明したように、その要素を定義し、ページに配置するだけで簡単に使用できるようになります。
+一度クラスを定義すれば、[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)で説明したように、その要素を定義し、ページに配置するだけで簡単に使用できるようになります。
 
 ```js
 // 新しい要素を定義
@@ -226,5 +226,5 @@ shadow.appendChild(linkElem);
 
 ## 関連情報
 
-- [カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)
-- [テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)
+- [カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)
+- [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)

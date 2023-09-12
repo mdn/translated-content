@@ -6,8 +6,7 @@
 //
 // Written by Queen Vinyl Da.i'gyu-Kazotetsu (@queengooborg, https://www.queengoob.org)
 
-import fs from "node:fs/promises";
-import fse from "fs-extra";
+import fs from "fs-extra";
 import cld from "cld";
 import { fdir } from "fdir";
 import MarkdownIt from "markdown-it";
@@ -39,30 +38,26 @@ const mdConverter = MarkdownIt({
 });
 
 const removeIgnoredSections = (content) => {
-  let newContent = content;
-  let complete = false;
-
-  while (!complete) {
+  while (true) {
     const posStart = content.search(IGNORE_BLOCK_STRINGS[0]);
     const posEnd = content.search(IGNORE_BLOCK_STRINGS[1]);
 
     if (posStart === -1 || posEnd === -1) {
       // If there isn't a full lang-detect ignore block left, we're finished
-      complete = true;
-    } else {
-      newContent = newContent.replace(
-        newContent.slice(posStart, posEnd + IGNORE_BLOCK_STRINGS[1].length),
-        "",
-      );
+      break;
     }
+    content = content.replace(
+      content.slice(posStart, posEnd + IGNORE_BLOCK_STRINGS[1].length),
+      "",
+    );
   }
 
-  return newContent;
+  return content;
 };
 
 const convertToHTML = async (doc) => {
   const data = await fs.readFile(doc, "utf8");
-  return removeIgnoredSections(await mdConverter.render(data));
+  return removeIgnoredSections(mdConverter.render(data));
 };
 
 const getDocumentLanguages = async (doc, expectedLocale = "ENGLISH") => {
@@ -120,7 +115,7 @@ const printTable = (data, md = true) => {
     }
 
     // Strip last comma
-    str = str.substr(0, str.length - 1);
+    str = str.substring(0, str.length - 1);
 
     if (md) {
       str = "| " + str.replace(/,/g, " | ") + " |";

@@ -1,11 +1,13 @@
 ---
 title: セレクターを使用した DOM 要素の特定
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+l10n:
+  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-セレクター API により提供されるメソッドを用いると、一連の[セレクター](/ja/docs/Web/CSS/CSS_Selectors)に一致する要素 ({{domxref("Element")}}) ノードを DOM から簡単かつ素早く取り出すことができます。これは過去の技術よりもはるかに速く、必要な場所で、例えば、 JavaScript コードでループを使用して検索する必要があるアイテムを特定するために使います。
+セレクター API により提供されるメソッドを用いると、一連の[セレクター](/ja/docs/Web/CSS/CSS_selectors)に一致する要素 ({{domxref("Element")}}) ノードを DOM から簡単かつ素早く取り出すことができます。これは過去の技術よりもはるかに速く、必要な場所で、例えば、 JavaScript コードでループを使用して検索する必要があるアイテムを特定するために使います。
 
 ## NodeSelector インターフェース
 
@@ -22,7 +24,7 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 
 ## セレクター
 
-セレクターのメソッドは[セレクター](/ja/docs/Web/CSS/CSS_Selectors)を受け入れて、どの要素または要素群を返すかを判断します。これは[セレクターリスト](/ja/docs/Web/CSS/Selector_list)を含みますので、単一の問い合わせで複数のセレクターをグループ化することができます。
+セレクターのメソッドは[セレクター](/ja/docs/Web/CSS/CSS_selectors)を受け入れて、どの要素または要素群を返すかを判断します。これは[セレクターリスト](/ja/docs/Web/CSS/Selector_list)を含みますので、単一の問い合わせで複数のセレクターをグループ化することができます。
 
 ユーザーのプライバシーを保護するために、一部の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)には対応していなかったり、異なる動作をしたりすることがあります。例えば {{cssxref(":visited")}} に一致するものは返されなかったり、 {{cssxref(":link")}} は {{cssxref(":any-link")}} と同様に扱われたりします。
 
@@ -47,7 +49,7 @@ const el = document.querySelector("#main, #basic, #exclamation");
 ## 関連情報
 
 - [セレクター仕様書](https://drafts.csswg.org/selectors/)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
