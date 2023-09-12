@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetLeft`** 읽기 전용 속성은 현재 요소의 왼쪽 상단 모서리가 {{domxref("HTMLElement.offsetParent")}} 노드 내에서 왼쪽으로 오프셋된 픽셀 수를 반환합니다.
+**`HTMLElement.offsetLeft`** 읽기 전용 속성은 현재 요소의 왼쪽 상단 모서리가 {{domxref("HTMLElement.offsetParent")}} 노드 내에서 왼쪽으로 얼마나 떨어져 있는지를 픽셀 수로 반환합니다.
 
 블록 레벨 요소의 경우 `offsetTop`, `offsetLeft`, `offsetWidth`, `offsetHeight`는 `offsetParent`를 기준으로 요소의 테두리 상자를 설명합니다.
 
