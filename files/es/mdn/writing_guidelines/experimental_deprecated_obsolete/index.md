@@ -7,13 +7,13 @@ l10n:
 
 {{MDNSidebar}}
 
-Estos términos se asocian comúnmente con tecnologías y especificaciones y se utilizan en MDN Web Docs para etiquetar el estado de una tecnología. Para la definición de estos términos, MDN Web Docs se alinea con el repositorio [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md# status-information).
+Estos términos se asocian comúnmente con tecnologías y especificaciones y se utilizan en MDN Web Docs para etiquetar el estado de una tecnología. Para la definición de estos términos, MDN Web Docs se alinea con el repositorio [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
 Estos términos se describen a continuación en el contexto de su uso en MDN Web Docs.
 
 ## Experimental
 
 Cuando una tecnología se describe como experimental en MDN Web Docs, significa que la tecnología es emergente e inmadura y actualmente está _en proceso_ de ser añadida a la plataforma web (o de ser considerada para su adición).
-Marcar una tecnología como experimental indica que los lectores deben pensar cuidadosamente antes de usar esa tecnología en cualquier tipo de proyecto en producción (es decir, un proyecto que no sea solo una demostración o un experimento). Se [anima a los lectores a probar funciones experimentales](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md #status-information) y proporcionar comentarios a los proveedores de navegadores y autores de estándares.
+Marcar una tecnología como experimental indica que los lectores deben pensar cuidadosamente antes de usar esa tecnología en cualquier tipo de proyecto en producción (es decir, un proyecto que no sea solo una demostración o un experimento). Se [anima a los lectores a probar funciones experimentales](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) y proporcionar comentarios a los proveedores de navegadores y autores de estándares.
 
 Para una tecnología marcada como **experimental**, se aplican una o más de las siguientes condiciones:
 
@@ -73,7 +73,7 @@ Si el elemento _nunca_ fue implementado en una versión de _cualquier_ navegador
 
 Si el elemento se implementó en cualquier versión de lanzamiento de uno o más navegadores pero _solo_ detrás de una preferencia o un argumento, no lo elimine de la documentación de inmediato. En su lugar, marca el artículo como **desaprobado** de la siguiente manera:
 
-- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close ()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
+- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
 
   ```yaml
   status:
@@ -91,7 +91,7 @@ Si el elemento se implementó en cualquier versión de lanzamiento de uno o más
 
 Si el elemento se implementó en una o más compilaciones de versiones de navegadores sin requerir una preferencia o un parámetro, marque el elemento como **desaprobado**, de la siguiente manera:
 
-- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close ()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
+- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
 
   ```yaml
   status:
