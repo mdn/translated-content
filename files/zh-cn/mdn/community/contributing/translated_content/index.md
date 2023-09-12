@@ -5,13 +5,17 @@ slug: MDN/Community/Contributing/Translated_content
 
 {{MDNSidebar}}
 
-自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。因为我们有许多不再维护且过时的本地化内容，我们希望在未来能够更好地管理这些内容。
+自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。这是因为在我们的非英语本地化语言中，有很多内容未经维护且已经过时，我们希望将来能更好地管理这些内容。
 
-除了以下语言（这些语言有专门的团队负责维护），其他所有的本地化内容都被冻结了。也就意味着，我们不再接受对这些内容的任何更新，它们是只读的。
+除了以下语言，其他所有的本地化内容都已经归档，这意味着它们在 GitHub 上是只读的，不能在 MDN 上查看。活跃的本地语言有专门的团队负责维护。
+
+## 如何贡献
+
+如果你想为现有的某个活跃本地化语言做出贡献，请访问 [mdn/translated-content GitHub 仓库](https://github.com/mdn/translated-content)。该仓库包含所有本地化文档以及议题跟踪。我们建议先阅读[翻译指南](https://github.com/mdn/translated-content/tree/main/docs)。
+
+如果你需要帮助或有任何疑问，请随时与下列活跃成员或社区取得联系，或[联系我们](/zh-CN/docs/MDN/Community/Communication_channels)。
 
 ## 活跃语言
-
-> **备注：** 如果你有意向为某个活跃语言做出贡献，请联系下面这些小组中的成员；如果你有任何疑问，也欢迎[联系我们](/zh-CN/docs/MDN/Community/Communication_channels)。
 
 ### 巴西葡萄牙语（pt-BR）
 
@@ -50,7 +54,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ## 参见
 
-- [MDN localization update, February 2021](https://hacks.mozilla.org/mdn-localization-update-february-2021/)——MDN 内容本地化工作的最新进展
-- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/)——基于社区反馈的更新策略
-- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)——新平台的优势，以及为何本地化工作有所改变。
+- [MDN 本地化更新，2021 年 2 月](https://hacks.mozilla.org/mdn-localization-update-february-2021/)——MDN 内容本地化工作的最新进展
+- [MDN Web 文档本地化策略的更新](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/)——基于社区反馈的更新策略
+- [MDN Web 文档不断发展！即将推出的新平台简介](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)——新平台的优势，以及为何本地化工作有所改变。
 - [MDN 沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)

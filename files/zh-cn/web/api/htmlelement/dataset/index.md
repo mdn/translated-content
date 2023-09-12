@@ -16,7 +16,7 @@ slug: Web/API/HTMLElement/dataset
 - 在 JavaScript
   - : 自定义 data 属性的属性名与没有 `data-` 前缀的 HTML 属性相同，并且在移除单个破折号（`-`）后，大写之后的字母以获得属性的“驼峰”命名。
 
-除了以下属性，你还可以在我们的文章[_使用 data 属性_](/zh/docs/Learn/HTML/Howto/Use_data_attributes)中找到使用 HTML 数据属性的操作指南。
+除了以下属性，你还可以在我们的文章[_使用 data 属性_](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)中找到使用 HTML 数据属性的操作指南。
 
 ### 名称转换
 

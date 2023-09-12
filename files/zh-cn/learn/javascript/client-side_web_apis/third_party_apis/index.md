@@ -293,7 +293,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 
 ### 从 api 请求数据
 
-现在 URL 已经构造好了，下面向它发起请求。本例使用 [Fetch API](/ch-CN/docs/Web/API/Fetch_API/Using_Fetch)
+现在 URL 已经构造好了，下面向它发起请求。本例使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 
 把下面的代码块添加到 `fetchResults()` 函数末尾的大括号里面：
 

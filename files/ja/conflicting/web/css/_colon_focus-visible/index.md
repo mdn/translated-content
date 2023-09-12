@@ -14,7 +14,7 @@ original_slug: Web/CSS/:-moz-focusring
 
 作業グループは以前、[この機能を CSS Selectors 4 または 5 で](https://lists.w3.org/Archives/Public/www-style/2015Oct/0012.html) `:focus-ring` として追加する意向を持っており、[改名が決定され](https://lists.w3.org/Archives/Public/www-style/2017Dec/0018.html) {{cssxref(":focus-visible")}} となり、 CSS Selectors 4 に追加されました。
 
-> **メモ:** 開発者は `:-moz-focusring` を、 `focus` 状態がユーザーによる**マウスのクリック**と**キーボードのタブ移動**のどちらで行なわれたのかを区別するために使う傾向があります。これは[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を作成し、振る舞いに応じてスタイルを変更したい場合にも便利かもしれません。
+> **メモ:** 開発者は `:-moz-focusring` を、 `focus` 状態がユーザーによる**マウスのクリック**と**キーボードのタブ移動**のどちらで行なわれたのかを区別するために使う傾向があります。これは[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成し、振る舞いに応じてスタイルを変更したい場合にも便利かもしれません。
 
 ## 構文
 

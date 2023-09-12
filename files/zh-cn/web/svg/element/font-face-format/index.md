@@ -25,7 +25,7 @@ slug: Web/SVG/Element/font-face-format
 
 ## DOM 接口
 
-该元素实现了[`SVGFontFaceFormatElement`](/zh-CN/DOM/SVGFontFaceFormatElement)接口。
+该元素实现了 [`SVGFontFaceFormatElement`](/zh-CN/DOM/SVGFontFaceFormatElement) 接口。
 
 ## 参见
 

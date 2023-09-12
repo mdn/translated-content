@@ -68,7 +68,7 @@ A la différence des fonctions de trajet que nous allons voir dans la prochaine 
 Les seules autres formes primitives sont les _trajets_. Un trajet est une liste de points, reliés par des segments de lignes qui peuvent être de différentes formes, incurvées ou non, de largeur différente et de couleur différente. Un trajet, ou même un sous-trajet, peut être fermé. La réalisation de formes utilisant des trajets requiert quelques étapes supplémentaires :
 
 1. Tout d'abord, vous devez créer le trajet.
-2. Ensuite vous devez utiliser des [instructions de dessin](/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths) pour dessiner sur le trajet.
+2. Ensuite vous devez utiliser des [instructions de dessin](/fr/docs/Web/API/CanvasRenderingContext2D#paths) pour dessiner sur le trajet.
 3. Finalement, vous devez fermer le trajet.
 4. Une fois que le trajet a été créé, vous devez le tracer ou le remplir pour le faire apparaître.
 
@@ -76,7 +76,7 @@ Voici les functions utilisées pour réaliser ces étapes :
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
   - : Crée un nouveau trajet. Une fois créé, les fonctions de dessin ultérieures seront dirigées vers le trajet et utilisées pour le construire.
-- [Méthodes de trajet](/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths)
+- [Méthodes de trajet](/fr/docs/Web/API/CanvasRenderingContext2D#paths)
   - : Méthodes pour définir différents trajets pour les objets.
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
   - : Ferme le trajet pour que les fonctions de dessin ultérieures soient à nouveau dirigées vers le contexte.
@@ -236,7 +236,7 @@ Regardons plus en détail la méthode `arc`, qui prend six paramètres : `x` et 
 
 L'exemple suivant est un peu plus complexe que ceux que nous avons vus plus haut. Il dessine 12 arcs différents, avec des angles et des remplissages différents.
 
-Les deux [boucles `for`](/fr-FR/docs/Web/JavaScript/Reference/Statements/for) bouclent sur les lignes et les colonnes des arcs. Pour chaque arc, on commence un nouveau trajet en appelant `beginPath()`. Dans le code, chacun des paramètres dans l'arc est une variable pour des raisons de clarté, mais en réalité, vous n'avez pas besoin de le faire.
+Les deux [boucles `for`](/fr/docs/Web/JavaScript/Reference/Statements/for) bouclent sur les lignes et les colonnes des arcs. Pour chaque arc, on commence un nouveau trajet en appelant `beginPath()`. Dans le code, chacun des paramètres dans l'arc est une variable pour des raisons de clarté, mais en réalité, vous n'avez pas besoin de le faire.
 
 Les coordonnées `x` et `y` devraient être claires. `rayon` et `angleInitial` sont fixés. L'`angleFinal` commence à 180 degrés (demi-cercle) dans la première colonne et il est augmenté par pas de 90 degrés, pour finir par un cercle complet dans la dernière colonne.
 
@@ -495,7 +495,7 @@ Nous reviendrons sur `fillStyle` plus en détail plus loin dans ce tutoriel. Pou
 Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de trajets et d'instructions de dessin pour dessiner des objets sur votre canevas. Pour simplifier le code et améliorer les performances, l'objet [`Path2D`](/fr/docs/Web/API/Path2D), disponible dans les versions récentes des navigateurs, vous permet de mettre en cache ou d'enregistrer ces instructions de dessin. Vous pourrez alors rejouer vos trajets rapidement. Voyons comment nous pouvons construire un objet `Path2D`&nbsp;:
 
 - {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths).
+  - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr/docs/Web/SVG/Tutorial/Paths).
 
 ```js
 new Path2D(); // objet trajet vide
@@ -545,7 +545,7 @@ function draw() {
 
 ### Utilisation de trajets SVG
 
-Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
+Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
 
 Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
 

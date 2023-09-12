@@ -62,7 +62,7 @@ slug: Web/SVG/Element/stop
 
 ## DOM 接口
 
-该元素实现了[`SVGStopElement`](/zh-CN/docs/Web/API/SVGStopElement)接口。
+该元素实现了 [`SVGStopElement`](/zh-CN/docs/Web/API/SVGStopElement) 接口。
 
 ## 浏览器兼容性
 

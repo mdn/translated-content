@@ -3,6 +3,8 @@ title: 如何设置一个本地测试服务器？
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文将会介绍如何在你的计算机上安装一个简单的本地测试服务器，以及它的基本用法。
 
 <table class="learn-box standard-table">
@@ -34,7 +36,7 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 某些示例如果你将其作为本地文件打开的话，它将不会运行。这可能是由于各种原因，最有可能是：
 
-- **它们具有异步请求。** 如果你只是从本地文件运行示例，一些浏览器（包括 Chrome）将不会运行异步请求（请参阅 [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)）。这是因为安全限制（更多关于 Web 安全的信息，请参阅 [站点安全](/zh-CN/docs/learn/Server-side/First_steps/Website_security)）。
+- **它们具有异步请求。** 如果你只是从本地文件运行示例，一些浏览器（包括 Chrome）将不会运行异步请求（请参阅 [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)）。这是因为安全限制（更多关于 Web 安全的信息，请参阅 [站点安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)）。
 - **它们具有服务端代码。** 服务器端语言（如 PHP 或 Python）需要一个特殊的服务器来解释代码并提供结果。
 
 ## 运行一个简单的本地 HTTP 服务器
@@ -84,6 +86,6 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 Python 的`SimpleHTTPServer`模块是有用的，但它不知道如何运行用 PHP 或 Python 等语言编写的代码。为了处理这个问题，你需要更多的东西 - 正是你需要的东西取决于你正在运行的服务器端语言。这里有几个例子：
 
-- 要运行 Python 服务器端代码，你需要使用 Python 网络框架。你可以通过阅读[Django Web Framework（Python）](/zh-CN/docs/Learn/Server-side/Django)来了解如何使用 Django 框架。[Flask](http://flask.pocoo.org/)也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先[安装 Python / PIP](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask` 来安装 Flask。此时，你应该能够运行 Python Flask 示例`python3 python-example.py`，然后在你的浏览器中打开 `localhost:5000` 查看。
+- 要运行 Python 服务器端代码，你需要使用 Python 网络框架。你可以通过阅读 [Django Web 框架（Python）](/zh-CN/docs/Learn/Server-side/Django)来了解如何使用 Django 框架。[Flask](https://flask.palletsprojects.com/) 也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先[安装 Python / PIP](/zh-CN/docs/Learn/Server-side/Django/development_environment#安装_python_3)，然后使用`pip3 install flask` 来安装 Flask。此时，你应该能够运行 Python Flask 示例 `python3 python-example.py`，然后在你的浏览器中打开 `localhost:5000` 查看。
 - 要运行 Node.js（JavaScript）服务器端代码，你可以直接使用 Node 或选择构建于其上的框架。Express 是一个不错的选择 - 请参阅[Express Web Framework（Node.js / JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)。
 - 要运行 PHP 服务器端代码，你需要一个可以解释 PHP 的服务器设置。本地 PHP 测试的好选择是[MAMP](https://www.mamp.info/en/downloads/)（Mac 和 Windows）， [AMPPS](http://ampps.com/download)（Mac，Windows，Linux）和[LAMP](https://www.linux.com/learn/easy-lamp-server-installation)（Linux，Apache，MySQL 和 PHP / Python / Perl）。这些是完整的包，创建本地设置，允许你运行 Apache 服务器，PHP 和 MySQL 数据库。

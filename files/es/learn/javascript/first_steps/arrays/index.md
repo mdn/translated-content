@@ -1,5 +1,5 @@
 ---
-title: Arrays
+title: Arreglos
 slug: Learn/JavaScript/First_steps/Arrays
 ---
 
@@ -19,14 +19,14 @@ Las matrices se describen como "objetos tipo lista"; básicamente son objetos in
 
 Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada, luego llamar al código que hace la impresión y agregarlo por separado para cada artículo. Esto sería mucho más largo de escribir, menos eficiente y más propenso a errores. si tuviéramos 10 elementos para agregar a la factura, ya sería suficientemente malo, pero ¿ qué pasa con 100 o 1000 artículos? Volveremos a este ejemplo más adelante en el artículo.
 
-Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes [abrir en consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separadas, o usar la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), si lo prefieres).
+Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes [abrir en consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separadas, o usar la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>JavaScript console</title>
+    <title>Consola JavaScript</title>
     <style>
       * {
         box-sizing: border-box;
@@ -109,7 +109,7 @@ Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de 
       var outputPara = document.createElement("p");
 
       outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
+      outputPara.textContent = "Resultado: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
@@ -148,13 +148,13 @@ Las matrices se construyen con corchetes, que contiene una lista de elementos se
 
 ### Accediendo y modificando elementos de la matriz
 
-Puedes entonces acceder a elementos individuales en la matriz mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/es/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character).
+Puedes entonces acceder a elementos individuales en la matriz mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Ingresa lo siguiente en tu consola:
 
    ```js
    shopping[0];
-   // returns "bread"
+   // devuelve "bread"
    ```
 
 2. también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
@@ -162,7 +162,7 @@ Puedes entonces acceder a elementos individuales en la matriz mediante la notaci
    ```js
    shopping[0] = "tahini";
    shopping;
-   // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   // shopping ahora devolverá [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
    > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
@@ -181,7 +181,7 @@ Puedes averiguar la longitud de una matriz (cuántos elementos contiene) exactam
 
 ```js
 sequence.length;
-// should return 7
+// Deve devolver 7
 ```
 
 Esto tiene otros usos, pero se usa más comunmente para indicarle a un ciclo que continúe hasta que haya recorrido todos los elementos de la matriz. Así por ejemplo:
@@ -197,7 +197,7 @@ Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemen
 
 1. Comienza el bucle en el elemento de la posición 0 en la matriz.
 2. Detén el bucle en el número de item igual a la longitud de la matriz. Esto funcionará para una matriz de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
-3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/es/docs/Web/API/Console/log).
+3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/es/docs/Web/API/console/log).
 
 ## Alguno métodos de matriz útiles
 
@@ -226,9 +226,9 @@ A menudo se te presentarán algunos datos brutos contenidos en una cadena larga 
 
    ```js
    myArray.length;
-   myArray[0]; // the first item in the array
-   myArray[1]; // the second item in the array
-   myArray[myArray.length - 1]; // the last item in the array
+   myArray[0]; // el primer elemento del arreglo
+   myArray[1]; // el segundo elemento del arreglo
+   myArray[myArray.length - 1]; // el último elemento del arreglo
    ```
 
 4. También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
@@ -315,14 +315,14 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
 Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:
 
 1. Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda `products`.
-2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el [bucle for](/es/Learn/JavaScript/First_steps/A_first_splash#Loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
-3. justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Converting between strings and arrays](#converting_between_strings_and_arrays) de este artículo.
-4. Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/es/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
-5. Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/es/Learn/JavaScript/First_steps/Math#Assignment_operators) para hacer esto.
+2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el [bucle for](/es/docs/Learn/JavaScript/First_steps/A_first_splash#loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
+3. Justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Conversión entre cadenas y matrices](#converting_between_strings_and_arrays) de este artículo.
+4. Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/es/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
+5. Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/es/docs/Learn/JavaScript/First_steps/Math#assignment_operators) para hacer esto.
 6. Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la información correcta del artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
 
 ```html hidden
-<h2>Live output</h2>
+<h2>Salida en vivo</h2>
 
 <div class="output" style="min-height: 150px;">
   <ul></ul>
@@ -330,10 +330,11 @@ Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los
   <p></p>
 </div>
 
-<h2>Editable code</h2>
+<h2>Código editable</h2>
 
 <p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
+  de tabulación).
 </p>
 
 <textarea id="code" class="playable-code" style="height: 410px;width: 95%">
@@ -366,8 +367,8 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
@@ -386,17 +387,17 @@ reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = "Show solution";
+  solution.value = "Mostrar solución";
   updateCode();
 });
 
 solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
+  if (solution.value === "Mostrar solución") {
     textarea.value = solutionEntry;
-    solution.value = "Hide solution";
+    solution.value = "Ocultar solución";
   } else {
     textarea.value = userEntry;
-    solution.value = "Show solution";
+    solution.value = "Mostrar solución";
   }
   updateCode();
 });
@@ -408,8 +409,8 @@ var solutionEntry = jsSolution;
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// detener la tecla de tabulación fuera del área de texto y
+// hacer que escriba una tabulación en la posición del cursor
 
 textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
@@ -439,12 +440,12 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
 
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no la solución, para que esa solución no se guarde sobre el código de usuario.
+  if (solution.value === "Mostrar solución") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -492,17 +493,18 @@ Para completar la aplicación necesitamos:
 2. Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final de la matriz.
 
 ```html hidden
-<h2>Live output</h2>
+<h2>Salida en vivo</h2>
 <div class="output" style="min-height: 150px;">
-  <input type="text" /><button>Search</button>
+  <input type="text" /><button>Buscar</button>
 
   <ul></ul>
 </div>
 
-<h2>Editable code</h2>
+<h2>Código editable</h2>
 
 <p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
+  de tabulación).
 </p>
 
 <textarea id="code" class="playable-code" style="height: 370px; width: 95%">
@@ -515,15 +517,15 @@ list.innerHTML = '';
 var myHistory = [];
 
 searchBtn.onclick = function() {
-  // we will only allow a term to be entered if the search input isn't empty
+  // Solo permitiremos que se ingrese un término si la entrada de búsqueda no está vacía.
   if (searchInput.value !== '') {
     // number 1
 
-    // empty the list so that we don't display duplicate entries
-    // the display is regenerated every time a search term is entered.
+    // Vacíe la lista para no mostrar entradas duplicadas. La pantalla
+    // se regenera cada vez que se ingresa un término de búsqueda.
     list.innerHTML = '';
 
-    // loop through the array, and display all the search terms in the list
+    // recorrer el arreglo y mostrar todos los términos de búsqueda en la lista
     for (var i = 0; i < myHistory.length; i++) {
       itemText = myHistory[i];
       var listItem = document.createElement('li');
@@ -531,13 +533,13 @@ searchBtn.onclick = function() {
       list.appendChild(listItem);
     }
 
-    // If the array length is 5 or more, remove the oldest search term
+    // Si la longitud del arreglo es 5 o más, elimine el término de búsqueda más antiguo
     if (myHistory.length >= 5) {
       // number 2
 
     }
 
-    // empty the search input and focus it, ready for the next term to be entered
+    // vacíe la entrada de búsqueda y enfóquela, listo para ingresar el siguiente término
     searchInput.value = '';
     searchInput.focus();
   }
@@ -545,8 +547,8 @@ searchBtn.onclick = function() {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
@@ -587,17 +589,17 @@ reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = "Show solution";
+  solution.value = "Mostrar solución";
   updateCode();
 });
 
 solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
+  if (solution.value === "Mostrar solución") {
     textarea.value = solutionEntry;
-    solution.value = "Hide solution";
+    solution.value = "Ocultar solución";
   } else {
     textarea.value = userEntry;
-    solution.value = "Show solution";
+    solution.value = "Mostrar solución";
   }
   updateCode();
 });
@@ -609,8 +611,8 @@ var solutionEntry = jsSolution;
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// detener la tecla de tabulación fuera del área de texto y
+// hacer que escriba una tabulación en la posición del cursor
 
 textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
@@ -640,12 +642,12 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
 
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no la solución, para que esa solución no se guarde sobre el código de usuario.
+  if (solution.value === "Mostrar solución") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -665,7 +667,7 @@ Lo único que queda por hacer es trabajar a través de la evaluación de este m�
 
 ## See also
 
-- [Indexed collections](/es/docs/Web/JavaScript/Guide/Indexed_collections) — an advanced level guide to arrays and their cousins, typed arrays.
-- {{jsxref("Array")}} — the `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
+- [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) — una guía de nivel avanzado sobre arreglos y sus primos, los arreglos tipadosa.
+- {{jsxref("Array")}}: la página de referencia del objeto `Array`, para obtener una guía de referencia detallada de las funciones analizadas en esta página y muchas más.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
