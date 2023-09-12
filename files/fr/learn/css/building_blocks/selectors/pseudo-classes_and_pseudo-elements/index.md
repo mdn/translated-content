@@ -189,7 +189,7 @@ Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne list
 | {{ Cssxref("::after") }}          | Correspond à un élément stylisable apparaissant après le contenu réel de l'élément d'origine. |
 | {{ Cssxref("::before") }}         | Correspond à un élément stylisable apparaissant avant le contenu réel de l'élément d'origine. |
 | {{ Cssxref("::first-letter") }}   | Correspond à la première lettre de l'élément.                                                 |
-| {{ Cssxref("::first-line") }}     | Matches the first line of the containing element.                                             |
+| {{ Cssxref("::first-line") }}     | Correspond à la première ligne de l'élément contenant.                                        |
 | {{ Cssxref("::grammar-error") }}  | Matches a portion of the document containing a grammar error as flagged by the browser.       |
 | {{ Cssxref("::selection") }}      | Matches the portion of the document that has been selected.                                   |
 | {{ Cssxref("::spelling-error") }} | Matches a portion of the document containing a spelling error as flagged by the browser.      |
