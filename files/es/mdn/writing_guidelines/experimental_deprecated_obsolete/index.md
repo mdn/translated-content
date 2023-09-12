@@ -1,7 +1,8 @@
 ---
 title: Experimental, desaprobado y obsoleto
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-page-type: mdn-writing-guide
+l10n:
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{MDNSidebar}}
@@ -22,9 +23,9 @@ Para una tecnología marcada como **experimental**, se aplican una o más de las
 
 > **Nota:** Una función que solo se publica en un motor de renderizado se sigue considerando experimental, incluso si está disponible en compilaciones de vista previa de otros motores de renderizado (o estableciendo una preferencia o indicador).
 
-El estado **experimental * * de una tecnología puede caducar si se cumple una o más de las siguientes condiciones:
+El estado **experimental** de una tecnología puede caducar si se cumple una o más de las siguientes condiciones:
 
-- Es compatible de forma predeterminada en **dos o más * * de los principales motores de renderizado de los navegadores.
+- Es compatible de forma predeterminada en **dos o más** de los principales motores de renderizado de los navegadores.
 - Es compatible de forma predeterminada con un único motor de renderizado de navegador durante dos o más años y no sufre cambios importantes.
 - Es poco probable que su especificación definitiva cambie de manera que rompa la compatibilidad.
 
@@ -39,7 +40,7 @@ Una característica o tecnología que forma parte de una especificación activa 
 
 El término **desaprobado** en MDN Web Docs se utiliza para marcar una API o tecnología que ya no se recomienda. Una API o tecnología obsoleta podría eliminarse en el futuro o podría conservarse solo por motivos de compatibilidad y seguir funcionando. Recomendamos evitar el uso de las funcionalidades marcadas como desaprobadas.
 
-Para más información en la definición de **desaprobado**, vea la [la bandera desaprobado](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#encuadre-deprecated)  de la documentación de BCD.
+Para más información en la definición de **desaprobado**, vea la [la bandera desaprobado](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#encuadre-deprecated) de la documentación de BCD.
 
 ## Obsoleto
 
