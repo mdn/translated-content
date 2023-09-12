@@ -1,21 +1,18 @@
 ---
-title: Navigator.language
+title: "Navigator: language プロパティ"
+short-title: language
 slug: Web/API/Navigator/language
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`Navigator.language`** は読み取り専用プロパティで、ユーザーの言語を表す文字列を返します。普通、ブラウザー UI の言語が返されます。
 
-## 構文
+## 値
 
-```js
-const lang = navigator.language;
-```
-
-### 値
-
-{{domxref("DOMString")}} です。`lang` は、[BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) で定義された言語バージョンを表す文字列が格納されます。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。
+文字列で、 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定義された言語バージョンを表します。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。
 
 iOS 10.2 以前の Safari では、国コードは "en-us"、"fr-fr" のように小文字で返されます。
 
