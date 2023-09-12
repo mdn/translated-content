@@ -9,7 +9,7 @@ slug: Web/JavaScript
 
 本章節主要說明 JavaScript，不涉及網頁特有項目或主機環境。有關網頁特有的 {{Glossary("API","APIs")}} ，請參考 [Web API](/zh-TW/docs/Web/API) 和 [DOM](/zh-TW/docs/Glossary/DOM)。
 
-JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resources)，自 2012 年起，所有[現代的瀏覽器](http://kangax.github.io/compat-table/es5/)均已全面支援 ECMAScript 5.1。較老舊的瀏覽器最少也會支援 ECMAScript 3。[ECMA International](https://www.ecma-international.org/) 於 2015 年 6 月 17 日發布第六版的 ECMAScript，其正式名稱是 ECMAScript 2015，原先被稱作 ECMAScript 6 或 ES6。從那時起， ECMAScript 標準的發布週期是一年，本文件參考了最新的草稿版本，也就是目前的 [ECMAScript 2017](http://tc39.github.io/ecma262/)。
+JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc39.es/ecma262/)（ECMA-262），自 2012 年起，所有[現代的瀏覽器](http://kangax.github.io/compat-table/es5/)均已全面支援 ECMAScript 5.1。較老舊的瀏覽器最少也會支援 ECMAScript 3。[ECMA International](https://www.ecma-international.org/) 於 2015 年 6 月 17 日發布第六版的 ECMAScript，其正式名稱是 ECMAScript 2015，原先被稱作 ECMAScript 6 或 ES6。從那時起， ECMAScript 標準的發布週期是一年，本文件參考了最新的草稿版本，也就是目前的 [ECMAScript 2017](http://tc39.github.io/ecma262/)。
 
 別搞混了 JavaScript 和 [Java 程式語言](<https://en.wikipedia.org/wiki/Java_(programming_language)>)。雖然 "Java" 和 "JavaScript" 都是 Oracle 公司在美國和其他國家的商標或註冊商標，但兩個語言有著非常不同的語法、語意和用途。
 
@@ -84,7 +84,5 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
   - : 合作更簡單了。藉著在你的網站增加 TogetherJS，你的用戶們能在網站上互助 in real time！
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
   - : Stack Overflow 上有關 JavaScript 的問題。
-- [JavaScript 版本和發行說明](/zh-TW/docs/Web/JavaScript/New_in_JavaScript)
-  - : 瀏覽 JavaScript 的功能歷史和兼容狀態。
 - [JSFiddle](https://jsfiddle.net/)
   - : 編輯 JavaScript、CSS、HTML 並取得及時結果。可以使用外部資源和與在線上與你的夥伴協作。

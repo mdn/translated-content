@@ -25,7 +25,6 @@ SVG 是一種向量圖形格式。向量圖形可縮可放，圖形完全不會�
 
 SVG 可和 HTML、CSS 及 JavaScript 一同運作。使用 SVG 增強普通 HTML 頁面或 web 應用程式。
 
-- 如何[在 XHTML 中使用 SVG](/zh-TW/SVG_In_HTML_Introduction) 教程
 - Google [Maps](https://maps.google.com) (路徑圖) & [Docs](https://docs.google.com) (試算表繪圖)
 - [SVG 泡沫選單](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
 
