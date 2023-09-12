@@ -2,7 +2,7 @@
 title: 웹 성능 측정하기
 slug: Learn/Performance/Measuring_performance
 l10n:
-  commitSource: 79b1494aa78ef35b13ee8c028f6d4838478a6420
+  sourceCommit: 79b1494aa78ef35b13ee8c028f6d4838478a6420
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

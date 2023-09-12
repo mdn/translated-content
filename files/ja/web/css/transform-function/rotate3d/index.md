@@ -47,7 +47,7 @@ rotate3d(x, y, z, a)
       <th scope="col">ℝ^3 のデカルト座標</th>
       <td>
         <a
-          href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
+          href="/ja/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_cart.png"
           ><img src="transform-functions-rotate3d_cart.png" /></a
         ><math>
           <mfenced
@@ -231,7 +231,7 @@ rotate3d(x, y, z, a)
       <th scope="col">ℝℙ^3 の同次座標</th>
       <td>
         <a
-          href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_hom4.png"
+          href="/ja/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
           ><img src="transform-functions-rotate3d_hom4.png"
         /></a>
       </td>

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 
 {{JSRef}}
 
-{{jsxref("String")}} 的 **`trimEnd()`** 方法会从字符串的开头移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`trimRight()` 是该方法的别名。
+{{jsxref("String")}} 的 **`trimEnd()`** 方法会从字符串的结尾移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`trimRight()` 是该方法的别名。
 
 {{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 

@@ -3,6 +3,8 @@ title: 什么是 URL？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文讨论了统一资源定位符 (URL)，并解释了他们是什么，以及如何被构建的。
 
 <table class="learn-box standard-table">
@@ -36,7 +38,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 
 ## 自主学习
 
-_还没有可用的资料。[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
+_还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## 深入探索
 
@@ -181,4 +183,4 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 ## 下一步
 
-- [理解域名](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)
+- [理解域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
