@@ -217,7 +217,7 @@ Cela fonctionne, mais l'accessibilité n'est pas au rendez-vous&nbsp;: la mise �
 
 Heureusement, WAI-ARIA fournit un mécanisme pour ces alertes&nbsp;: [la propriété `aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live). Appliquer cette propriété à un élément permet aux lecteurs d'écran d'annoncer le contenu mis à jour. La rapidité à laquelle le contenu est énoncé dépend de la valeur de l'attribut&nbsp;:
 
-- `off:`
+- `off`
   - : Il s'agit de la valeur par défaut, les mises à jour ne doivent pas être annoncées.
 - `polite`
   - : Les mises à jour devraient être annoncées uniquement si la personne n'est pas active sur la page.
