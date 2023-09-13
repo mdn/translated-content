@@ -63,7 +63,7 @@ slug: Web/HTML/Global_attributes
 - [`itemtype`](/ko/docs/Web/HTML/Global_attributes/itemtype)
   - : 데이터 구조에서 `itemprop`s (item properties)을 정의하는 데 사용할 단어의 URL을 지정합니다. [`itemscope`](/ko/docs/Web/HTML/Global_attributes/itemscope)은 데이터 구조 내에서 `itemtype`에 의해 설정된 어휘가 활성화되는 범위를 설정하는 데 사용됩니다.
 - [`lang`](/ko/docs/Web/HTML/Global_attributes/lang)
-  - : 요소의 언어를 정의하는데 도움을 줍니다: 편집할 수 없는 요소가 있는 언어 또는 사용자가 요소를 편집할 수 있는 언어를 정의하는 데 도움이 됩니다(the language that non-editable elements are in, or the language that editable elements should be written in by the user). 이 특성은 언어 식별 태그([_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt))에 정의된 형식의 하나의 "언어 태그"(하이픈으로 구분된 "언어 하위 태그(language subtags)"로 구성된)를 포함합니다. [**xml:lang**](#xml:lang)은 이보다 우선합니다.
+  - : 요소의 언어를 정의하는데 도움을 줍니다: 편집할 수 없는 요소가 있는 언어 또는 사용자가 요소를 편집할 수 있는 언어를 정의하는 데 도움이 됩니다(the language that non-editable elements are in, or the language that editable elements should be written in by the user). 이 특성은 언어 식별 태그([_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt))에 정의된 형식의 하나의 "언어 태그"(하이픈으로 구분된 "언어 하위 태그(language subtags)"로 구성된)를 포함합니다. `xml:lang` 은 이보다 우선합니다.
 - [`part`](/ko/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`slot`](/ko/docs/Web/HTML/Global_attributes/slot)
