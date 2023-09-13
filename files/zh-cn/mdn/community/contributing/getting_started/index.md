@@ -44,6 +44,6 @@ slug: MDN/Community/Contributing/Getting_started
 
 ### 贡献
 
-如若参与贡献，视为你同意 [署名—相同方式共享许可](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)（或已经在所编辑页面中指定的其他许可）许可。此外，代码示例的许可为[知识共享 CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/)（专用于公有领域）。
+如若参与贡献，视为你同意[署名—相同方式共享许可](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)（或已经在所编辑页面中指定的其他许可）。此外，代码示例的许可为[知识共享 CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/)（专用于公有领域）。
 
 > 如果你对这里提到的内容有任何疑问，请[与我们联系](/zh-CN/docs/MDN/Community/Communication_channels)。
