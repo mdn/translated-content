@@ -89,6 +89,6 @@ ws --https
 
 ## 接下来
 
-我们能够查看我们将要构建的经期跟踪器应用程序外壳的样式化静态版本。现在我们知道了如何查看我们即将构建的应用程序，那么让我们开始构建它。 接下来，我们创建 `app.js`，这是将我们的静态设计转换为功能完全 Web 应用程序的 JavaScript, 该应用程序在用户的机器上本地存储数据。
+我们能够查看我们将要构建的经期跟踪器应用程序外壳的样式化静态版本。现在我们知道了如何查看我们即将构建的应用程序，那么让我们开始构建它。接下来，我们创建 `app.js`，这是将我们的静态设计转换为功能完全 Web 应用程序的 JavaScript, 该应用程序在用户的机器上本地存储数据。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
