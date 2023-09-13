@@ -207,7 +207,7 @@ scroll-snap-type: unset;
   font-size: 64px;
 }
 
-/* 着色 */
+/* 上色 */
 .container > div:nth-child(even) {
   background-color: #87ea87;
 }
