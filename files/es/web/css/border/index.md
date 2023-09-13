@@ -81,5 +81,5 @@ La propiedad abreviada `border` es especialmente útil cuando deseas que los cua
 
 Los bordes y los [contornos](/es/docs/Web/CSS/outline) son muy parecidos. Sin embargo, los contornos se distinguen de los bordes de la siguiente forma:
 
-- Los conronos nunca toman espacio, ya que se dibujan fuera del contenido de un elemento.
+- Los contornos nunca toman espacio, ya que se dibujan fuera del contenido de un elemento.
 - De conformidad con las especificaciones, si bien los contornos suelen ser rectangulares, no necesitan serlo.
