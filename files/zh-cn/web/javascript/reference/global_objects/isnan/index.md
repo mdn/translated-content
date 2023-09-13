@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 ## 语法
 
-```plain
+```js-nolint
 isNaN(value)
 ```
 
