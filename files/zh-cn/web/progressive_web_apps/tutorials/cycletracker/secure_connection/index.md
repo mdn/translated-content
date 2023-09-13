@@ -77,18 +77,18 @@ ws --https
 
 你可以在 GitHub 上查看经期跟踪器应用程序的最新状态，它安全地托管在 [https://mdn.github.io/pwa-examples/cycletracker/html_and_css](http://www.bing.com/translator/?ref=TThis&text=&from=en&to=zh-cn) 这个网址上。我们将文件发布到 MDN GitHub 帐户。同样，如果你有一个 [GitHub](https://github.com) 帐户，你也可以发布到你的帐户。只需注意，虽然通过 SSL 安全地提供服务，但 GitHub 上的操作不一定是私人的，所有 GitHub 页面都是公共的。如果你生活在一个跟踪月经周期的压迫政府掌控的地区，请考虑复制粘贴代码而不是分叉它。
 
-要创建公开可用的安全站点，请创建 [GitHub pages 站点](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)。创建一个名为 `<username>.github.io` 的仓库，其中 `<username>` 是你的 GitHub 用户名。 创建一个 `gh-pages` 分支。你的应用程序的这个分支将可在 `https://<username>.github.io` 访问。
+要创建公开可用的安全站点，请创建 [GitHub pages 站点](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)。创建一个名为 `<username>.github.io` 的仓库，其中 `<username>` 是你的 GitHub 用户名。创建一个 `gh-pages` 分支。你的应用程序的这个分支将可在 `https://<username>.github.io` 访问。
 
 如前所述，所有 GitHub 页面都可以通过互联网公开访问，即使你将仓库设置为私有。由于数据使用 localStorage 保存，因此通过 GitHub URL 可以使用该应用程序，但用户的数据只能在输入数据的那台设备的那个浏览器上访问。直接删除 localStorage（这是在浏览器中完成的）将删除所有存储的数据。
 
-如果你不希望你的 PWA 成为顶级应用，那么你可以让你的应用程序看起来像它驻留在子目录中。你可以在 `<username>.github.io` 仓库中创建子目录，或者从你的 PWA 的单独仓库发布。通过在 PWA 仓库中[配置发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), 你的应用程序将可在 `https://<username>.github.io/<repository>` 可见，其中 `<repository>` 是仓库的名称。 你可以设置 GitHub 在将更改[发布到该仓库内的特定分支](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) 时自动发布你的网站，包括 `main`。
+如果你不希望你的 PWA 成为顶级应用，那么你可以让你的应用程序看起来像它驻留在子目录中。你可以在 `<username>.github.io` 仓库中创建子目录，或者从你的 PWA 的单独仓库发布。通过在 PWA 仓库中[配置发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), 你的应用程序将可在 `https://<username>.github.io/<repository>` 可见，其中 `<repository>` 是仓库的名称。你可以设置 GitHub 在将更改[发布到该仓库内的特定分支](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) 时自动发布你的网站，包括 `main`。
 
-就经期跟踪器演示应用程序在各个开发阶段而言，`<username>` 是 `mdn`, 仓库是 `pwa-examples`。 因为这个仓库有多个示例 PWA, 每个示例都有几个开发过程中的进度，文件和 PWA 嵌套了几层。
+就经期跟踪器演示应用程序在各个开发阶段而言，`<username>` 是 `mdn`, 仓库是 `pwa-examples`。因为这个仓库有多个示例 PWA, 每个示例都有几个开发过程中的进度，文件和 PWA 嵌套了几层。
 
 请注意，你可以为 [GitHub 页面站点配置自定义域名](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)。
 
 ## 接下来
 
-我们能够查看我们将要构建的经期跟踪器应用程序外壳的样式化静态版本。 现在我们知道了如何查看我们即将构建的应用程序，那么让我们开始构建它。 接下来，我们创建 `app.js`，这是将我们的静态设计转换为功能完全 Web 应用程序的 JavaScript, 该应用程序在用户的机器上本地存储数据。
+我们能够查看我们将要构建的经期跟踪器应用程序外壳的样式化静态版本。现在我们知道了如何查看我们即将构建的应用程序，那么让我们开始构建它。 接下来，我们创建 `app.js`，这是将我们的静态设计转换为功能完全 Web 应用程序的 JavaScript, 该应用程序在用户的机器上本地存储数据。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
