@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 255 === 0.255e3; // true (decimal exponential notation)
 ```
 
-在 JavaScript 代码中，像 `37` 这样的数字字面量是浮点数值，而不是整数。在常见的日常使用中，JavaScript 没有单独的整数类型。（JavaScript还有一个 {{jsxref("BigInt")}} 类型，但它并不是为了取代 Number 而设计的，`37` 仍然是一个数字，而不是一个 BigInt。）
+在 JavaScript 代码中，像 `37` 这样的数字字面量是浮点数值，而不是整数。在常见的日常使用中，JavaScript 没有单独的整数类型。（JavaScript 还有一个 {{jsxref("BigInt")}} 类型，但它并不是为了取代 Number 而设计的，`37` 仍然是一个数字，而不是一个 BigInt。）
 
 当作为一个函数使用时，`Number(value)` 将字符串或者其他值转换到 Number 类型。如果该值不能被转换，它会返回 {{jsxref("NaN")}}。
 
