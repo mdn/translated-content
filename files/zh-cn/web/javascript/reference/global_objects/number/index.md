@@ -14,12 +14,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
 
 ```js
-255; // two-hundred and fifty-five
-255.0; // same number
+255; // 二百五十五
+255.0; // 相同的数字
 255 === 255.0; // true
-255 === 0xff; // true (hexadecimal notation)
-255 === 0b11111111; // true (binary notation)
-255 === 0.255e3; // true (decimal exponential notation)
+255 === 0xff; // true（十六进制表示）
+255 === 0b11111111; // true（二进制表示）
+255 === 0.255e3; // true（十进制指数记数法）
 ```
 
 在 JavaScript 代码中，像 `37` 这样的数字字面量是浮点数值，而不是整数。在常见的日常使用中，JavaScript 没有单独的整数类型。（JavaScript 还有一个 {{jsxref("BigInt")}} 类型，但它并不是为了取代 Number 而设计的，`37` 仍然是一个数字，而不是一个 BigInt。）
@@ -46,7 +46,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 <math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
 
-尾数使用 52 比特存储，在二进制小数中解释为 `1.…` 之后的数字。因此，尾数的精度是 2<sup>-52</sup>（可以通过 {{jsxref("Number.EPSILON")}} 获得），或者十进制数小数点后大约 15 到 17 位；超过这个精度的算术会收到[舍入](https://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E6%95%B0)的影响。
+尾数使用 52 比特存储，在二进制小数中解释为 `1.…` 之后的数字。因此，尾数的精度是 2<sup>-52</sup>（可以通过 {{jsxref("Number.EPSILON")}} 获得），或者十进制数小数点后大约 15 到 17 位；超过这个精度的算术会受到[舍入](https://zh.wikipedia.org/wiki/浮点数#准确性)的影响。
 
 一个数值可以容纳的最大值是 2<sup>1024</sup> - 1（基于二进制，指数为 1023，尾数为 0.1111…），可以通过 {{jsxref("Number.MAX_VALUE")}} 获得。超过这个值的数会被替换为特殊的数值常量{{jsxref("Infinity")}}。
 
@@ -71,7 +71,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
   - 不允许使用[数字分隔符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数值分隔符)。
 - [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 抛出 {{jsxref("TypeError")}}，以防止意外的强制隐式转换导致精度损失。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对象首先通过按顺序调用它们的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（带有 `"number"` 作为提示）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将得到的原始值转换为数字。
+- 对象首先通过按顺序调用它们的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（使用 `"number"` 提示）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将得到的原始值转换为数字。
 
 有两种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -88,23 +88,23 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 #### 固定宽度数值转换
 
-JavaScript 有一些较低级别的函数，用于处理整数的二进制编码，最值得注意的是[按位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)和 {{jsxref("TypedArray")}} 对象。按位运算总是将操作数转换为 32 位整数。在这些情况下，将值转换为数字后，数字将首先[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)小数部分，然后再取整数的二进制的补码编码中的最低位来将数值归一化为给定的宽度。
+JavaScript 有一些较低级别的函数，用于处理整数的二进制编码，最值得注意的是[按位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)和 {{jsxref("TypedArray")}} 对象。按位运算总是将操作数转换为 32 位整数。在这些情况下，将值转换为数字后，数字将首先[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)小数部分，然后再取整数的二进制的补码编码中的最低几位来将数值标准化为给定的宽度。
 
 ```js
 new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
 
 new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
 // 257 = 0001 0000 0001
-//     =      0000 0001 (mod 2^8)
+//     =      0000 0001（模 2^8）
 //     = 1
 // -257 = 1110 1111 1111
-//      =      1111 1111 (mod 2^8)
-//      = -1 (as signed integer)
+//      =      1111 1111（模 2^8）
+//      = -1（带符号整数）
 
 new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 // -257 = 1110 1111 1111
-//      =      1111 1111 (mod 2^8)
-//      = 255 (as unsigned integer)
+//      =      1111 1111（模 2^8）
+//      = 255（无符号整数）
 ```
 
 ## 构造函数
@@ -134,7 +134,6 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
   - : 特殊的负无穷大值，在溢出时返回该值。
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : 特殊的正无穷大值，在溢出时返回该值。
-  -
 
 ## 静态方法
 
@@ -243,6 +242,6 @@ Number("-Infinity"); // -Infinity
 
 - [在 `core-js` 中现代 `Number` 行为的 Polyfill（支持二进制和八进制字面量）](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("NaN")}}
-- [算术操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators#算术运算符)
+- [算术运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#算术运算符)
 - {{jsxref("Math")}}
 - {{jsxref("BigInt")}}
