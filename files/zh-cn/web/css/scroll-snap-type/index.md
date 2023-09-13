@@ -218,7 +218,7 @@ scroll-snap-type: unset;
 
 #### 结果
 
-{{EmbedLiveSample("不同轴上的吸附", "100%", 1630)}}
+{{EmbedLiveSample("不同轴上的吸附", "100%", 1800)}}
 
 ## 规范
 
