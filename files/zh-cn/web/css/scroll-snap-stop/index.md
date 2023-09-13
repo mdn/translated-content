@@ -154,7 +154,7 @@ div > div {
   height: 80%;
 }
 
-/* 着色 */
+/* 上色 */
 div > div:nth-child(even) {
   background-color: #87ea87;
 }
