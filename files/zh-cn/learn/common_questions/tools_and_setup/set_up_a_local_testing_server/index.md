@@ -75,9 +75,10 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    python3 -V
    # 或者，如果 "py" 命令可用，尝试：
    py -V
+   ```
 
 
-   ````bash
+   ```bash
    # 包含目录名字以进入它，例如
    cd Desktop
    # 如果需要的话，使用两个点来跳出一个目录级别
