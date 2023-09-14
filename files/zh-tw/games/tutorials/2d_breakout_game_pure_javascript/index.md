@@ -11,7 +11,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 每個步驟均提供可測試修改的實際範例，讓你能看到各個步驟所產生的影響。你將了解該如何使用 {{htmlelement("canvas")}} 元件完成基礎的遊戲機制，例如繪製 (Render)、移動圖形、碰撞偵測、操控機制、輸贏狀態等。
 
-若要能充分了解此一系列文章，你應具備基礎至中等的 [JavaScript](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics) 知識。結束此教學之後即可寫出自己的簡易網頁遊戲。
+若要能充分了解此一系列文章，你應具備基礎至中等的 [JavaScript](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 知識。結束此教學之後即可寫出自己的簡易網頁遊戲。
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 
@@ -19,9 +19,9 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 所有課程和其他不同版本的 [MDN 打磚塊遊戲](http://breakout.enclavegames.com/lesson10.html)，均可至 [GitHub 找到：](https://github.com/end3r/Canvas-gamedev-workshop)
 
-1. [建立 Canvas 並繪製](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
-2. [讓球移動](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)
-3. [讓球反彈](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
+1. [建立 Canvas 並繪製](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+2. [讓球移動](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
+3. [讓球反彈](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
 4. [搖桿和鍵盤控制](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
 5. [判斷遊戲結束](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over)
 6. [建立磚塊場地](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
@@ -39,6 +39,6 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 ## 下一步
 
-好吧！讓我們開始第一章 — [建立 Canvas 並繪製。](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+好吧！讓我們開始第一章 — [建立 Canvas 並繪製。](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
