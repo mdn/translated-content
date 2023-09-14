@@ -82,7 +82,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 #### 整数转换
 
-一些操作需要整数，最值得注意的是那些适用于数组/字符串索引、日期/时间组件和数值基数的整数。执行上述数值强制转换步骤后，结果被[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)为整数（通过丢弃分数部分）。如果数值为 ±Infinity，则按原样返回。如果数值是 `NaN` 或 `-0`，则返回为 `0`。因此，结果总是整数（不是 `-0`）或 ±Infinity。
+某些操作需要整数作为参数，尤其是那些与数组/字符串索引、日期/时间组件和数字进制相关的操作。在执行上述数值强制转换步骤后，结果将被[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)为整数（即舍弃小数部份）。如果数值为 ±Infinity，则按原样返回。如果数值是 `NaN` 或 `-0`，则返回为 `0`。因此，结果总是整数（不包括 `-0`）或 ±Infinity。
 
 值得注意的是，当转换到整数时，`undefined` 和 `null` 都会变成 `0`，因为 `undefined` 被转换为 `NaN`，`NaN` 也变成了 `0`。
 
