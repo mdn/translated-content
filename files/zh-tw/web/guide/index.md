@@ -9,9 +9,9 @@ slug: Web/Guide
 
 {{LandingPageListSubpages}}
 
-- [JavaScript](/zh-TW/docs/JavaScript)
+- [JavaScript](/zh-TW/docs/Web/JavaScript)
   - : JavaScript 是用來創造網頁應用程式的腳本化語言.
 
 ## 參見
 
-- [Web Developer Reference](/zh-TW/docs/Web/Reference)
+- [Web Developer Reference](/zh-TW/docs/Web)

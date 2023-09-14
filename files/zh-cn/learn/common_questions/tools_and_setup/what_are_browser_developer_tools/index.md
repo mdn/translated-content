@@ -3,6 +3,8 @@ title: 什么是浏览器开发者工具？
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
 
 > **备注：** 在你运行下面的例子之前，打开我们在[Web 开发入门](/zh-CN/docs/Learn/Getting_started_with_the_web)系列文章中建立的[初学者示例网站](http://mdn.github.io/beginner-html-site-scripted/)。你应该按照下面的步骤打开。
@@ -80,7 +82,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 了解更多 Inspector 在不同的浏览器中的细节：
 
-- [Firefox Page inspector](/zh-CN/docs/Tools/Page_Inspector)
+- [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
 - [Chrome DOM inspector](https://developer.chrome.com/devtools/docs/dom-and-styles) (Opera 的 inspector 和它一样)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
@@ -133,7 +135,7 @@ Safari：开打开发者工具，然后选择 "Debugger" 标签。
 
 了解不同浏览器中的 JavaScript 调试器：
 
-- [Firefox JavaScript Debugger](/zh-CN/docs/Tools/Debugger)
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Microsoft Edge Debugger](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/debugger)
 - [Chrome Debugger](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 - [Safari Debugger](https://developer.apple.com/safari/tools/)
@@ -193,7 +195,7 @@ document.querySelector("h1").appendChild(my_Image);
 
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
-- [Firefox Web Console](/zh-CN/docs/Tools/Web_Console)
+- [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
 - [Chrome JavaScript Console](https://developer.chrome.com/devtools/docs/console) (Opera 与它相同)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
@@ -201,4 +203,4 @@ document.querySelector("h1").appendChild(my_Image);
 ## 参见
 
 - [Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
+- [Debugging CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
