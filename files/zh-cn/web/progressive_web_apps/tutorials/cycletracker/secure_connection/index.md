@@ -1,5 +1,5 @@
 ---
-title: 周期跟踪器：安全连接
+title: 经期跟踪器：安全连接
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 ---
 
