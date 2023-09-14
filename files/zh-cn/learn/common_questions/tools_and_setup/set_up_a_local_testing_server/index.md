@@ -28,7 +28,7 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 ## 本地文件与远程文件
 
-在大多数示例中，我们告诉你只需在浏览器中直接打开你的示例，有很多方法可以实现这一点，你可以通过双击 HTML 文件或将其拖拽到浏览器窗口中，或者在浏览器中选择 *文件 > 打开...* 选择 HTML 文件等。
+在大多数示例中，我们告诉你只需在浏览器中直接打开你的示例，有很多方法可以实现这一点，你可以通过双击 HTML 文件或将其拖拽到浏览器窗口中，或者在浏览器中选择 _文件 > 打开..._ 选择 HTML 文件等。
 
 如果你打开的是本地示例的话，你可以在地址栏看到这个地址是以 `file://` 开头的，接着本地硬盘上该示例文件的路径。相比之下，如果你查看的是我们在 GitHub 上托管的示例（或其他远程服务器上的示例），Web 地址会以 `http://` 或 `https://` 开头，说明该文件是通过 HTTP 传输的。
 
@@ -65,7 +65,7 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    - 在页面底部，点击 *Windows 安装程序*链接来下载安装文件。
    - 下载完成后，运行它。
    - 在第一个安装程序页面，确保你勾选了“Add Python 3.xxx to PATH”（添加 Python 3.xxx 到系统路径）的复选框。
-   - 点击 *安装*，然后在安装完成后点击 *关闭*。
+   - 点击 _安装_，然后在安装完成后点击 _关闭_。
 
 2. 打开你的命令提示符（Windows）/终端（macOS/ Linux）。要检查 Python 是否已安装，输入以下命令：
 
@@ -76,7 +76,6 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    # 或者，如果 "py" 命令可用，尝试：
    py -V
 
-3. 这应该会返回一个版本号。如果没有问题，使用 `cd` 命令导航到你的示例所在的目录。
 
    ````bash
    # 包含目录名字以进入它，例如
@@ -85,7 +84,6 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    cd ..
    ```
 
-4. 在该目录中输入命令以启动服务器：
 
    ````bash
    # 如果上面返回的 Python 版本是 3.X
@@ -95,7 +93,6 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    python -m SimpleHTTPServer
    ```
 
-5. 默认情况下，这将在本地 web 服务器上运行目录的内容，端口为 8000。你可以通过在 web 浏览器中访问 URL `localhost:8000` 来访问此服务器。在这里你会看到目录的内容列表——点击你想要运行的 HTML 文件。
 
 > **备注：**如果你已经在端口 8000 上运行了一些内容，你可以通过在服务器命令后面加上另一个端口号来选择另一个端口，例如 `python3 -m http.server 7800`（Python 3.x）或 `python -m SimpleHTTPServer 7800`（Python 2.x）。然后你可以在 `localhost:7800` 访问你的内容。
 
