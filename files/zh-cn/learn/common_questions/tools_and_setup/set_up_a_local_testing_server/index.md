@@ -77,14 +77,12 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    py -V
    ```
 
-
    ```bash
    # 包含目录名字以进入它，例如
    cd Desktop
    # 如果需要的话，使用两个点来跳出一个目录级别
    cd ..
    ```
-
 
    ````bash
    # 如果上面返回的 Python 版本是 3.X
@@ -93,7 +91,6 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    # 如果上面返回的 Python 版本是 2.X
    python -m SimpleHTTPServer
    ```
-
 
 > **备注：**如果你已经在端口 8000 上运行了一些内容，你可以通过在服务器命令后面加上另一个端口号来选择另一个端口，例如 `python3 -m http.server 7800`（Python 3.x）或 `python -m SimpleHTTPServer 7800`（Python 2.x）。然后你可以在 `localhost:7800` 访问你的内容。
 
