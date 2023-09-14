@@ -84,7 +84,7 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
    cd ..
    ```
 
-   ````bash
+   ```bash
    # 如果上面返回的 Python 版本是 3.X
    # 在 Windows 上，尝试 "python -m http.server" 或 "py -3 -m http.server"
    python3 -m http.server
