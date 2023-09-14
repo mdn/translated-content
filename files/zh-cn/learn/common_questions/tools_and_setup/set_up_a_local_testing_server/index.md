@@ -54,15 +54,15 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 实现这一目标的另一种方法是使用 Python 的 `http.server` 模块。
 
-> **备注：**旧版本的 Python（直到版本2.7）提供了一个类似的模块，名为 `SimpleHTTPServer`。如果你正在使用 Python 2.x，你可以通过将所有的 `http.server` 替换为 `SimpleHTTPServer` 来遵循这个指南。然而，我们建议你使用 Python 的最新版本。
+> **备注：**旧版本的 Python（直到版本 2.7）提供了一个类似的模块，名为 `SimpleHTTPServer`。如果你正在使用 Python 2.x，你可以通过将所有的 `http.server` 替换为 `SimpleHTTPServer` 来遵循这个指南。然而，我们建议你使用 Python 的最新版本。
 
 要做到这一点：
 
 1. 安装 Python。如果你正在使用 Linux 或 macOS，那么它应该已经在你的系统上。如果你是 Windows 用户，你可以从 Python 主页获取安装程序，然后按照说明来安装它：
 
    - 访问 [python.org](https://www.python.org/)
-   - 在下载部分，点击 Python “3.xxx” 的链接。
-   - 在页面底部，点击 *Windows 安装程序* 链接来下载安装文件。
+   - 在下载部分，点击 Python“3.xxx”的链接。
+   - 在页面底部，点击 *Windows 安装程序*链接来下载安装文件。
    - 下载完成后，运行它。
    - 在第一个安装程序页面，确保你勾选了“Add Python 3.xxx to PATH”（添加 Python 3.xxx 到系统路径）的复选框。
    - 点击 *安装*，然后在安装完成后点击 *关闭*。
@@ -103,7 +103,7 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 Python 的 `http.server`（或 Python 2 的 `SimpleHTTPServer`）模块是有用的，但它仅仅是一个*静态*文件服务器，不知道如何运行用 PHP 或 Python 等语言编写的代码。为了处理这个问题，你需要更多的东西——你需要的东西取决于你正在运行的服务器端语言。这里有几个例子：
 
-- 要运行 Python 服务器端代码，你需要使用 Python 网络框架。Python有很多流行的web框架，例如Django（有一个[指南](/zh-CN/docs/Learn/Server-side/Django)可供参考）、[Flask](https://flask.palletsprojects.com/) 和[Pyramid](https://trypyramid.com)。
+- 要运行 Python 服务器端代码，你需要使用 Python 网络框架。Python 有很多流行的 web框架，例如 Django（有一个[指南](/zh-CN/docs/Learn/Server-side/Django)可供参考）、[Flask](https://flask.palletsprojects.com/) 和 [Pyramid](https://trypyramid.com)。
 - 要运行 Node.js（JavaScript）服务器端代码，你可以直接使用 Node 或选择构建于其上的框架。Express 是一个不错的选择——请参阅 [Express Web Framework（Node.js / JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)。
 - 要运行 PHP 服务器端代码，启动 [PHP 的内置开发服务器](https://www.php.net/manual/en/features.commandline.webserver.php)：
 
