@@ -73,7 +73,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 이벤트 핸들러와 완성되지 않은 함수 정리:
 
-1. 가공전 텍스트 파일("raw text file")로 돌아가자.
+1. 가공전 텍스트 파일("raw text file")로 돌아가 봅시다.
 2. "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" 밑의 코드를 복사하고, `main.js` 파일의 맨 밑에다 붙여 넣으세요:
 
    - `randomize` 변수에 클릭 이벤트 리스너를 추가하세요. 그러면 버튼이 클릭되었을 때, `result()` 함수가 실행됩니다.
@@ -85,10 +85,10 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 2. 세 개의 새로운 변수 `xItem`, `yItem`, 와 `zItem` 를 만들고 이 세 개의 변수는 `randomValueFromArray()` 를 반환 결과인 세개의 배열과 같도록 만듭니다(각 경우의 호출 결과는 각 배열에 임의의 아이템). 예를 들어 `randomValueFromArray(insertX)`함수를 호출하면 `insertX` 에서 문자열의 하나를 랜덤하게 가질 수 있다.
 3. 그 다음으로 `newStory` 문자열에 있는 세 개의 placeholders— `:insertx:`, `:inserty:`, `:insertz:` —저장된 `xItem`, `yItem`와 `zItem` 문자열을 이용하여 로 변환하세요. 여기서 특정 문자열 함수가 도움될 것입니다. 이 함수는 각 경우에 `newStory`와 같게되며(대입), 호출 시 마다 `newStory` 의 원래 값과 동일하지만 대체 될 수 있습니다(랜덤으로 값이 변경되는 것을 표현하는 것으로 추정됨) 그러므로 버튼이 눌러질때마다, 이 placeholder는 꾸며진('silly') 문자열로 랜덤하게 교체되게 됩니다. 추가적인 힌트로, 이 문제의 함수는 하위 문자열에서 찾아진 첫번째 인스턴스만 변경되므로, 아마도 두번 이상 이 함수를 호출해야 할 수도 있습니다.
 4. 첫번째 `if` 블록에서, `newStory` 의 'Bob'이라는 이름을 `name` 변수를 사용하여 변환하는 함수를 추가하세요. 이 블록에서 말하는 내용은 "만약 `customName` 텍스트 입력에 값이 들어가 있다면, 이야기속의 Bob을 사용자가 정의한 이름으로 바꾸세요" 라는 의미입니다.
-5. 두번째 `if` 블록에서는 `uk` 라디오 버튼이 선택되었는지 확인합시다. `uk` 라디오 버튼이 눌려졌다면, 이야기('story') 상의 무게('weight')와 온도('temperature') 값 들인 파운드('pounds')와 화씨온도(Fahrenheit) 를 'stones'과 섭씨온도('centigrade')를 바꾸어야 합니다. 필요한 것은 아래와 같습니다:
+5. 두번째 `if` 블록에서는 `uk` 라디오 버튼이 선택되었는지 확인합시다. `uk` 라디오 버튼이 눌려졌다면, 이야기('story') 상의 무게('weight')와 온도('temperature') 값 들인 파운드('pounds')와 화씨온도(Fahrenheit) 를 'stones'와 섭씨온도('centigrade')를 바꾸어야 합니다. 필요한 것은 아래와 같습니다:
 
    1. 파운드(pound)를 stone, 화씨온도(Fahrenheit) 를 섭씨온도(centigrade)로 변환하는 공식을 참조하라.
-   2. `weight` 변수를 정의하는 라인에서는, 300를 300 파운드를 stones 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' stone'` 을 결합한다(문자열 더하기 연산 또는 concat())
+   2. `weight` 변수를 정의하는 라인에서는, 300 파운드를 stones로 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' stone'` 을 결합한다(문자열 더하기 연산 또는 concat())
    3. `temperature` 변수를 정의하는 라인에서는, 94를 화씨(Fahrenheit) 94도를 섭씨온도(centigrade)로 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' centigrade'`을 결합한다(문자열 더하기 연산 또는 concat())
    4. 두 변수 정의 바로 밑에, '94 화씨온도('farenheit')로 `temperature` 변수의 내용을 변환하는 것과, '300 pounds'을 `weight` 변수의 내용을 바꾸는 두줄의 문자열 변환라인을 추가한다 .
 
