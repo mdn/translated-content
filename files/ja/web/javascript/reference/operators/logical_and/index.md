@@ -76,7 +76,7 @@ console.log(A() && B());
 
 ### 演算子の優先順位
 
-以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)を参照）。
+以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
 ```js
 false || (true && true); // true を返す
