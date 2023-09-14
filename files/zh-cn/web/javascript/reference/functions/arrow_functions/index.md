@@ -63,7 +63,7 @@ elements.map((element) => {
 }); // [8, 6, 7, 9]
 
 // 当箭头函数只有一个参数时，可以省略参数的圆括号
-elements.map((element) => {
+elements.map(element => {
   return element.length;
 }); // [8, 6, 7, 9]
 
