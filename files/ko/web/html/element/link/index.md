@@ -182,15 +182,15 @@ Other usage notes:
   > **참고:** `importance` 특성은 `<link>` 요소가 `rel="preload"` 또는 `rel="prefetch"`를 가지고 있어야 사용할 수 있습니다.
 
 - {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
-  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/ko/docs/Web/Security/Subresource_Integrity).
 - {{htmlattrdef("media")}}
 
   - : 연결된 리소스를 적용할 미디어를 명시합니다. 값으로는 반드시 미디어 유형이나 미디어 쿼리를 사용해야 합니다. `media` 특성은 사용자 에이전트가 현재 장치에 맞춰 최적의 스타일시트를 선택하도록 할 수 있으므로 주로 외부 스타일시트를 연결할 때 유용합니다.
 
     > **참고:**
     >
-    > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/en-US/docs/CSS/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의[media queries](/en-US/docs/CSS/Media_queries)든 사용할 수 있습니다.
-    > - [CSS3 Media Queries](/en-US/docs/CSS/Media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로HTML 4에 정의되어 있는제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기바랍니다.
+    > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/ko/docs/Web/CSS/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의[media queries](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)든 사용할 수 있습니다.
+    > - [CSS3 Media Queries](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로HTML 4에 정의되어 있는제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기바랍니다.
 
 - {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
 
