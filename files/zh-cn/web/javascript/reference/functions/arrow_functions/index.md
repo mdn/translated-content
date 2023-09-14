@@ -50,7 +50,7 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 
 ### 更短的函数
 
-```js
+```js-nolint
 var elements = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
 elements.map(function (element) {
