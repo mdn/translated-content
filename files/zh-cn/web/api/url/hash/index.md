@@ -32,6 +32,6 @@ console.log(url.hash); // 输出：'#%E7%A4%BA%E4%BE%8B'
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 所属的 {{domxref("URL")}} 接口。
