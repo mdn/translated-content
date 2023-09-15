@@ -288,7 +288,6 @@ console.log(o.average, o.sum); // 2, 6
 
 함수를 {{jsxref("Operators/new", "new")}} 키워드와 함께 생성자로 사용하면 `this`는 새로 생긴 객체에 묶입니다.
 
-<div class="blockIndicator note"><p>While the default for a constructor is to return the object referenced by <code>this</code>, it can instead return some other object (if the return value isn't an object, then the <code>this</code> object is returned).</p></div>
 <div class="blockIndicator note"><p>생성자의 기본값은 <code>this</code>가 참조하는 객체를 반환하는 것이지만, 대신 다른 객체를 반환할 수도 있습니다(반환값이 객체가 아닌 경우 <code>this</code> 객체가 반환됨).</p></div>
 ```js
 /*
