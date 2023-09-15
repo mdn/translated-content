@@ -169,6 +169,22 @@ JSON.stringify(obj); // '"bar"'
 JSON.stringify({ x: obj }); // '{"x":"bar"}'
 ```
 
+### 关于序列化循环引用的问题
+
+由于 [JSON 格式](https://www.json.org/)不支持对象引用（尽管有一个 [IETF 草案存在](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)），如果尝试编码带有循环引用的对象，将会抛出 {{jsxref("TypeError")}} 异常。
+
+```js example-bad
+const circularReference = {};
+circularReference.myself = circularReference;
+
+// 序列化循环引用会抛出 "TypeError: cyclic object value" 错误
+JSON.stringify(circularReference);
+```
+
+要序列化循环引用，你可以使用支持循环引用的库（例如 Douglas Crockford 的 [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)），或者自己实现一个解决方案，这需要找到循环引用，并用可序列化的值替换（或移除）它们。
+
+如果你在使用 `JSON.stringify()` 来深拷贝一个对象，你可能想要使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone)，它支持循环引用。JavaScript 引擎的二进制序列化 API，比如 [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue)，也支持循环引用。
+
 ### `JSON.stringify`用作 JavaScript
 
 注意 JSON 不是 JavaScript 严格意义上的子集，在 JSON 中不需要省略两条终线（Line separator 和 Paragraph separator），但在 JavaScript 中需要被省略。因此，如果 JSON 被用作 JSONP 时，下面方法可以使用：
