@@ -43,7 +43,7 @@ Service worker，以及因此的 PWA，都[被限制在安全上下文中](/zh-C
 
 你还可以使用 IntelliJ IDE 创建 [本地服务器](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html)，它搭载了一个[可配置的内置 PHP Web 服务器](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server)。
 
-了解如何使用 [Python](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#使用_Python) 或本地服务器端语言（如 PHP）来[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#在本地运行服务器端语言)。
+了解如何使用 [Python](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#使用_python) 或本地服务器端语言（如 PHP）来[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#在本地运行服务器端语言)。
 
 ## 使用 npx 的本地主机
 
@@ -85,7 +85,7 @@ ws --https
 
 就经期跟踪器演示应用程序在各个开发阶段而言，`<username>` 是 `mdn`, 仓库是 `pwa-examples`。因为这个仓库有多个示例 PWA, 每个示例都有几个开发过程中的进度，文件和 PWA 嵌套了几层。
 
-请注意，你可以为 [GitHub 页面站点配置自定义域名](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)。
+请注意，你可以为 [GitHub 页面站点配置自定义域名](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site)。
 
 ## 接下来
 
