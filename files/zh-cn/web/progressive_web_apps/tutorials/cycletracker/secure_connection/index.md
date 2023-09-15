@@ -43,7 +43,7 @@ Service worker，以及因此的 PWA，都[被限制在安全上下文中](/zh-C
 
 你还可以使用 IntelliJ IDE 创建 [本地服务器](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html)，它搭载了一个[可配置的内置 PHP Web 服务器](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server)。
 
-了解如何使用 [Python](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#使用 Python) 或本地服务器端语言（如 PHP）来[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#在本地运行服务器端语言)。
+了解如何使用 [Python](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#使用_Python) 或本地服务器端语言（如 PHP）来[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#在本地运行服务器端语言)。
 
 ## 使用 npx 的本地主机
 
@@ -81,7 +81,7 @@ ws --https
 
 如前所述，所有 GitHub 页面都可以通过互联网公开访问，即使你将仓库设置为私有。由于数据使用 localStorage 保存，因此通过 GitHub URL 可以使用该应用程序，但用户的数据只能在输入数据的那台设备的那个浏览器上访问。直接删除 localStorage（这是在浏览器中完成的）将删除所有存储的数据。
 
-如果你不希望你的 PWA 成为顶级应用，那么你可以让你的应用程序看起来像它驻留在子目录中。你可以在 `<username>.github.io` 仓库中创建子目录，或者从你的 PWA 的单独仓库发布。通过在 PWA 仓库中[配置发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), 你的应用程序将可在 `https://<username>.github.io/<repository>` 可见，其中 `<repository>` 是仓库的名称。你可以设置 GitHub 在将更改[发布到该仓库内的特定分支](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) 时自动发布你的网站，包括 `main`。
+如果你不希望你的 PWA 成为顶级应用，那么你可以让你的应用程序看起来像它驻留在子目录中。你可以在 `<username>.github.io` 仓库中创建子目录，或者从你的 PWA 的单独仓库发布。通过在 PWA 仓库中[配置发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), 你的应用程序将可在 `https://<username>.github.io/<repository>` 可见，其中 `<repository>` 是仓库的名称。你可以设置 GitHub 在将更改[发布到该仓库内的特定分支](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)时自动发布你的网站，包括 `main`。
 
 就经期跟踪器演示应用程序在各个开发阶段而言，`<username>` 是 `mdn`, 仓库是 `pwa-examples`。因为这个仓库有多个示例 PWA, 每个示例都有几个开发过程中的进度，文件和 PWA 嵌套了几层。
 
