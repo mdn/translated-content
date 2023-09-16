@@ -304,7 +304,6 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 - デプロイメントは、変更を GitHub (「main」ブランチ上) にプッシュすることで処理されます。これにより、 Netlify でのビルドとデプロイメントがトリガーされ、プロジェクトが公開されます。この例の場合、この URL は [near-misses.netlify.com](https://near-misses.netlify.app/) です。独自の一意の URL が作成されます。
 - NASA API フィードが正しいデータ形式を提供しない場合、サイトの構築と展開をブロックする簡単なテストもあります。
 
-
 挑戦したい方は、このツールチェーンの一部を最適化できないか検討してください。自問すべきいくつかの質問
 
 - ビルドステップ中に[画像を圧縮](https://github.com/ralscha/parcel-plugin-compress)できますか?
