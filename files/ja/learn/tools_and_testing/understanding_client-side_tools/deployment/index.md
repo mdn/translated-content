@@ -99,79 +99,79 @@ GitHub のコードリポジトリを更新するたびに、 Netlify がその�
 
 このプロジェクトの独自のインスタンスを作成するには、このプロジェクトのコードを独自の git リポジトリでホストする必要があります。 次のステップは、プロジェクトを GitHub にプッシュすることです。
 
-## Committing changes to GitHub
+## GitHub への変更のコミット
 
-This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There are many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
+このセクションでは、コードを git リポジトリに保存するまでの手順を説明しますが、これは git チュートリアルとは程遠いものです。優れたチュートリアルや書籍が数多く提供されており、[Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) ページから始めるのが適しています。
 
-We initialized our working directory as a git working directory earlier on. A quick way to verify this is to run the following command:
+先ほど作業ディレクトリを git 作業ディレクトリとして初期化しました。 これを簡単に確認するには、次のコマンドを実行します。
 
 ```bash
 git status
 ```
 
-You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you'll need to initialise git using `git init`.
+どのファイルが追跡されているか、どのファイルがステージングされているかなどのステータスレポートを取得する必要があります。これらの用語はすべて git 文法の一部です。 `fatal: not a git repository` というエラーが返された場合、作業ディレクトリは git 作業ディレクトリではないため、 `git init` を使用して git を初期化する必要があります。
 
-Now we have three tasks ahead of us:
+今、私たちの前には 3 つのタスクがあります。
 
-- Add any changes we've made to the stage (a special name for the place that git will commit files from).
-- Commit the changes to the repository.
-- Push the changes to GitHub.
+- ステージに加えた変更を追加します ( git がファイルをコミットする場所の特別な名前)。
+- 変更をリポジトリにコミットします。
+- 変更を GitHub にプッシュします。
 
-1. To add changes, run the following command:
+1. 変更を追加するには、次のコマンドを実行します。
 
    ```bash
    git add .
    ```
 
-   Note the period at the end, it means "everything in this directory". The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
+   最後のピリオドに注意してください。これは「このディレクトリ内のすべて」を意味します。 `git add .` コマンドは、少し強力なアプローチです。これまでに行ったすべてのローカル変更を一度に追加します。追加するものをより細かく制御したい場合は、対話型プロセスに `git add -p` を使用するか、 `git add path/to/file` を使用して個々のファイルを追加します。
 
-2. Now all the code is staged, we can commit; run the following command:
+2. これですべてのコードがステージングされ、コミットできるようになりました。 次のコマンドを実行します。
 
    ```bash
    git commit -m 'committing initial code'
    ```
 
-   > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
+   > **メモ:** コミットメッセージには自由に何を書き込んでも構いませんが、適切なコミットメッセージに関する役立つヒントがウェブ上にいくつかあります。変更の内容を明確に説明できるように、短く簡潔に説明するようにしてください。
 
-3. Finally, the code needs to be pushed to your GitHub-hosted repository. Let's do that now.
+3. 最後にコードを GitHub でホストされているリポジトリにプッシュする必要があります。今すぐそうしましょう。
+   
+   GitHub で <https://github.com/new> にアクセスし、このコードをホストする独自のリポジトリを作成します。
 
-   Over at GitHub, visit <https://github.com/new> and create your own repository to host this code.
+4. リポジトリにスペースを含まない短くて覚えやすい名前 (単語を区切るにはハイフンを使用します) と説明を付けて、ページの下部にある _Create repository_ をクリックします。
 
-4. Give your repository a short, memorable name, without spaces in it (use hyphens to separate words), and a description, then click _Create repository_ at the bottom of the page.
-
-   You should now have a "remote" URL that points to your new GitHub repo.
+    これで、新しい GitHub リポジトリを指す「リモート」 URL が作成されたはずです。
 
    ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
-5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run a command with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
+5. これで、コードを GitHub にプッシュする準備が整いました。 今すぐ次のコマンドを実行します。 
 
    ```bash
    git remote add github https://github.com/yourname/repo-name.git
    ```
 
-   So if your remote URL was `https://github.com/remy/super-website.git`, as in the screenshot above, your command would be
+   したがって、上のスクリーンショットのように、「リモート」 URL が `https://github.com/remy/super-website.git` の場合、コマンドは次のようになります。
 
    ```bash
    git remote add github https://github.com/remy/super-website.git
    ```
 
-   Change the URL to your own repository, and run it now.
+   URL を独自のリポジトリに変更し、今すぐ実行します。
 
-6. Now we're ready to push our code to GitHub; run the following command now:
+6. これで、コードを GitHub にプッシュする準備が整いました。今すぐ次のコマンドを実行します。
 
    ```bash
    git push github main
    ```
 
-   At this point, you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this, you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+   この時点で、 Git がプッシュの送信を許可する前に、ユーザー名とパスワードの入力を求められます。これは、前のスクリーンショットに見られるように、 SSH オプションではなく HTTPS オプションを使用したためです。 このためには、 GitHub ユーザー名が必要です。次に、2 要素認証 (2FA) が有効になっていない場合は、 GitHub パスワードが必要です。可能であれば 2FA を使用することを常にお勧めしますが、その場合は「個人アクセストークン」も使用する必要があることに注意してください。 GitHub のヘルプページには、 [その入手方法を説明する優れた簡単なチュートリアル](https://docs.github.com/en/authentication/keeper-your-account-and-data-secure/creating-a-personal-access) が記載されています。
 
-> **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+> **メモ:** SSH オプションを使用して、GitHub にプッシュするたびにユーザー名とパスワードを入力する必要をなくすことに興味がある場合は、 [このチュートリアルでその方法を説明します](https://docs.github.com/en/authentication/) 。 
 
-This final command instructs git to push the code (aka publish) to the "remote" location that we called `github` (that's the repository hosted on github.com — we could have called it anything we like) using the branch `main`. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. It's also the default branch that Netlify will look for, which is convenient.
+この最後のコマンドは、ブランチ `main` を使用して、 `github` と呼ばれる「リモート」の場所（github.com でホストされているリポジトリです。好きな名前にすることができます）にコードをプッシュする（別名パブリッシュする）ように git に指示します。 ブランチにはまったく遭遇しませんでしたが、 `main` ブランチが作業のデフォルトの場所であり、git がそこから開始されます。 これは Netlify が検索するデフォルトのブランチでもあり、便利です。
 
-> **Note:** Until October 2020 the default branch on GitHub was `master`, which for various social reasons was switched to `main`. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using `main` for your own projects.
+> **メモ:** 2020 年 10 月まで、GitHub のデフォルト ブランチは `master` でしたが、さまざまな社会的理由により `main` に切り替えられました。 この古いデフォルト ブランチは、遭遇するさまざまなプロジェクトに表示される可能性があることに注意してください。ただし、独自のプロジェクトには `main` を使用することをお勧めします。
 
-So with our project committed in git and pushed to our GitHub repository, the next step in the toolchain is to connect GitHub to Netlify so our project can be deployed live on the web!
+プロジェクトを Git でコミットし、GitHub リポジトリにプッシュしたら、ツールチェーンの次のステップは、GitHub を Netlify に接続して、プロジェクトをウェブ上でライブデプロイできるようにすることです。
 
 ## Using Netlify for deployment
 
