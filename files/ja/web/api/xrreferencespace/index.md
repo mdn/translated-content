@@ -61,8 +61,10 @@ xrSession.requestReferenceSpace("local").then((refSpace) => {
 ユーザーの世界のビューを移動または回転するには、その視点を表すために使用される `XRReferenceSpace` を変更する必要があります。 ただし、`XRReferenceSpace` は不変であるため、代わりに、変更された視点を表す新しい参照空間を作成する必要があります。 これは、{{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} メソッドを使用して簡単に実行できます。
 
 ```js
-let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
-                                           {x: 0, y: 1, z: 0, w: 1});
+let offsetTransform = new XRRigidTransform(
+  { x: 2, y: 0, z: 1 },
+  { x: 0, y: 1, z: 0, w: 1 },
+);
 xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
 ```
 

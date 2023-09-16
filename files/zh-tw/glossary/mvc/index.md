@@ -21,4 +21,4 @@ MVC 在定義方面有爭議，但通常會包含：
 
 ### 學習 MVC
 
-- MDN 的 [MVC 架構](/zh-TW/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)
+- MDN 的 [MVC 架構](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)

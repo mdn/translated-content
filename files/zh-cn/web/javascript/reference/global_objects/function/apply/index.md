@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 {{JSRef}}
 
-`apply()` 方法调用一个具有给定 `this` 值的函数，以及以一个数组（或一个[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)）的形式提供的参数。
+{{jsxref("Function")}} 实例的 **`apply()`** 方法会以给定的 `this` 值和作为数组（或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)）提供的 `arguments` 调用该函数。
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
@@ -19,42 +19,47 @@ apply(thisArg, argsArray)
 ### 参数
 
 - `thisArg`
-
-  - : 在 `func` 函数运行时使用的 `this` 值。请注意，`this` 可能不是该方法看到的实际值：如果这个函数处于{{jsxref("Strict_mode", "非严格模式", "", 1)}}下，则指定为 `null` 或 `undefined` 时会自动替换为指向全局对象，原始值会被包装。
-
+  - : 调用 `func` 时提供的 `this` 值。如果函数不处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，则 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 会被替换为全局对象，原始值会被转换为对象。
 - `argsArray` {{optional_inline}}
-
-  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或 {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
+  - : 一个类数组对象，用于指定调用 `func` 时的参数，或者如果不需要向函数提供参数，则为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
 
 ### 返回值
 
-调用有指定 **`this`** 值和参数的函数的结果。
+使用指定的 `this` 值和参数调用函数的结果。
 
 ## 描述
 
-> **备注：** 虽然这个函数的语法与 {{jsxref("Function.call", "call()")}} 几乎相同，但根本区别在于，`call()` 接受一个**参数列表**，而 `apply()` 接受一个**参数的单数组**。
+> **备注：** 这个函数与 {{jsxref("Function/call", "call()")}} 几乎完全相同，只是函数参数在 `call()` 中逐个作为列表传递，而在 `apply()` 中它们会组合在一个对象中，通常是一个数组——例如，`func.call(this, "eat", "bananas")` 与 `func.apply(this, ["eat", "bananas"])`。
 
-> **备注：** 当第一个参数为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
+通常情况下，在调用函数时，函数内部的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值是访问该函数的对象。使用 `apply()`，你可以在调用现有函数时将任意值分配给 `this`，而无需先将函数作为属性附加到对象上。这使得你可以将一个对象的方法用作通用的实用函数。
 
-在调用一个存在的函数时，你可以为其指定一个 `this` 对象。`this` 指当前对象，也就是正在调用这个函数的对象。使用 `apply`，你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。
+你还可以使用任何类数组对象作为第二个参数。实际上，这意味着它需要具有 `length` 属性，并且整数（“索引”）属性的范围在 `(0..length - 1)` 之间。例如，你可以使用一个 {{domxref("NodeList")}}，或者像 `{ 'length': 2, '0': 'eat', '1': 'bananas' }` 这样的自定义对象。你还可以使用 {{jsxref("Functions/arguments", "arguments")}}，例如：
 
-`apply` 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。`apply` 使用参数数组而不是一组参数列表。`apply` 可以使用数组字面量（array literal），如 `fun.apply(this, ['eat', 'bananas'])`，或数组对象，如 `fun.apply(this, new Array('eat', 'bananas'))`。
+```js
+function wrapper() {
+  return anotherFn.apply(null, arguments);
+}
+```
 
-你也可以使用 {{jsxref("Functions/arguments", "arguments")}} 对象作为 `argsArray` 参数。`arguments` 是一个函数的局部变量。它可以被用作被调用对象的所有未指定的参数。这样，你在使用 apply 函数的时候就不需要知道被调用对象的所有参数。你可以使用 arguments 来把所有的参数传递给被调用对象。被调用对象接下来就负责处理这些参数。
+使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)和参数的[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，可以重写为：
 
-从 ECMAScript 第 5 版开始，可以使用任何种类的类数组对象，就是说只要有一个 `length` 属性和 `(0..length-1)` 范围的整数属性。例如现在可以使用 {{domxref("NodeList")}} 或一个自己定义的类似 `{'length': 2, '0': 'eat', '1': 'bananas'}` 形式的对象。
+```js
+function wrapper(...args) {
+  return anotherFn(...args);
+}
+```
 
-> **备注：** 许多较旧的浏览器，包括 Chrome <17 以及 Internet Explorer <9 不接受类数组对象。如果传入类数组对象，它们会抛出异常。
+一般而言，`fn.apply(null, args)` 等同于使用参数展开语法的 `fn(...args)`，只是在前者的情况下，`args` 期望是类数组对象，而在后者的情况下，`args` 期望是[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
+
+> **警告：** 不要使用 `apply()` 进行构造函数链式调用（例如，实现继承）。这会将构造函数作为普通函数调用，这意味着 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 是 `undefined`，从而类会抛出错误，因为它们不能在没有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。请改用 {{jsxref("Reflect.construct()")}} 或 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
 
 ## 示例
 
-### 用 `apply` 将数组各项添加到另一个数组
+### 用 apply() 将数组各项添加到另一个数组
 
-我们可以使用 `push` 将元素追加到数组中。由于 push 接受可变数量的参数，所以也可以一次追加多个元素。
+你可以使用 {{jsxref("Array.prototype.push()")}} 方法将元素追加到数组中。因为 `push()` 接受可变数量的参数，所以你也可以一次性添加多个元素。但是，如果你将一个数组传递给 `push()`，它实际上会将该数组作为单个元素添加，而不是逐个添加元素，导致最终得到一个数组内嵌的数组。另一方面，{{jsxref("Array.prototype.concat()")}} 在这种情况下具有期望的行为，但它不会将元素追加到*已有*数组中，而是创建并返回一个新数组。
 
-但是，如果 `push` 的参数是数组，它会将该数组作为单个元素添加，而不是将这个数组内的每个元素添加进去，因此我们最终会得到一个数组内的数组。如果不想这样呢？`concat` 符合我们的需求，但它并不是将元素添加到现有数组，而是创建并返回一个新数组。然而我们需要将元素追加到现有数组......那么怎么做好？难道要写一个循环吗？别当然不是！
-
-`apply` 正派上用场！
+在这种情况下，你可以使用 `apply` 隐式地将一个数组作为一系列参数展开。
 
 ```js
 const array = ["a", "b"];
@@ -63,44 +68,60 @@ array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 ```
 
-### 使用 `apply` 和内置函数
-
-对于一些需要写循环以遍历数组各项的需求，我们可以用 `apply` 完成以避免循环。
-
-下面是示例，我们将用 `Math.max`/`Math.min` 求得数组中的最大/小值。
+使用展开语法可以达到相同的效果。
 
 ```js
-// 找出数组中最大/小的数字
+const array = ["a", "b"];
+const elements = [0, 1, 2];
+array.push(...elements);
+console.info(array); // ["a", "b", 0, 1, 2]
+```
+
+### 使用 apply() 和内置函数
+
+巧妙地使用 `apply()` 可以让你在某些情况下使用内置函数来完成一些任务，而这些任务通常需要手动遍历集合（或使用展开语法）。
+
+例如，我们可以使用 {{jsxref("Math.max()")}} 和 {{jsxref("Math.min()")}} 来找出数组中的最大值和最小值。
+
+```js
+// 数组中的最小/最大值
 const numbers = [5, 6, 2, 3, 7];
 
-// 使用 Math.min/Math.max 以及 apply 函数时的代码
-let max = Math.max.apply(null, numbers); // 基本等同于 Math.max(numbers[0], ...) 或 Math.max(5, 6, ..)
+// 用 apply 调用 Math.min/Math.max
+let max = Math.max.apply(null, numbers);
+// 这等价于 Math.max(numbers[0], …) 或 Math.max(5, 6, …)
+
 let min = Math.min.apply(null, numbers);
 
-// 对比：简单循环算法
-(max = -Infinity), (min = +Infinity);
+// 与基于简单循环的算法相比
+max = -Infinity;
+min = +Infinity;
 
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max) max = numbers[i];
-  if (numbers[i] < min) min = numbers[i];
+  if (numbers[i] > max) {
+    max = numbers[i];
+  }
+  if (numbers[i] < min) {
+    min = numbers[i];
+  }
 }
 ```
 
-注意：如果按上面方式调用 `apply`，有超出 JavaScript 引擎参数长度上限的风险。一个方法传入过多参数（比如一万个）时的后果在不同 JavaScript 引擎中表现不同。（JavaScriptCore 引擎中有被硬编码的[参数个数上限：65536](https://bugs.webkit.org/show_bug.cgi?id=80797)）。
+但要注意：通过使用 `apply()`（或展开语法）来处理任意长的参数列表，你可能会超过 JavaScript 引擎的参数长度限制。
 
-这是因为此限制（实际上也是任何用到超大栈空间的行为的自然表现）是不明确的。一些引擎会抛出异常，更糟糕的是其他引擎会直接限制传入到方法的参数个数，导致参数丢失。比如：假设某个引擎的方法参数上限为 4（实际上限当然要高得多），这种情况下，上面的代码执行后，真正被传递到 `apply`的参数为 `5, 6, 2, 3` ，而不是完整的数组。
+调用具有太多参数的函数（即超过数万个参数）的后果是未指定的，并且在不同的引擎中会有所不同。（JavaScriptCore 引擎[将参数限制硬编码为 65536](https://webkit.org/b/80797)。）大多数引擎会抛出异常；但并没有规范要求阻止其他行为，例如任意限制应用函数实际接收的参数数量。为了说明后一种情况：假设这样的引擎限制为四个参数（实际限制当然要高得多），那么在上面的示例中，传递给 `apply` 的参数将变为 `5, 6, 2, 3`，而不是完整的数组。
 
-如果你的参数数组可能非常大，那么推荐使用下面这种混合策略：将数组切块后循环传入目标方法：
+如果你的值数组可能会增长到数万个，可以使用混合策略：将数组的片段分批通过 `apply` 调用函数：
 
 ```js
 function minOfArray(arr) {
   let min = Infinity;
-  let QUANTUM = 32768;
+  const QUANTUM = 32768;
 
-  for (let i = 0, len = arr.length; i < len; i += QUANTUM) {
+  for (let i = 0; i < arr.length; i += QUANTUM) {
     const submin = Math.min.apply(
       null,
-      arr.slice(i, Math.min(i + QUANTUM, len)),
+      arr.slice(i, Math.min(i + QUANTUM, arr.length)),
     );
     min = Math.min(submin, min);
   }
@@ -108,39 +129,8 @@ function minOfArray(arr) {
   return min;
 }
 
-let min = minOfArray([5, 6, 2, 3, 7]);
+const min = minOfArray([5, 6, 2, 3, 7]);
 ```
-
-### 使用 apply 来链接构造器
-
-你可以使用 apply 来链接一个对象{{jsxref("Operators/new", "构造器", "", 1)}}，类似于 Java。在接下来的例子中我们会创建一个全局 {{jsxref("Global_Objects/Function")}} 对象的 `construct` 方法，来使你能够在构造器中使用一个类数组对象而非参数列表。
-
-```js
-Function.prototype.construct = function (aArgs) {
-  let oNew = Object.create(this.prototype);
-  this.apply(oNew, aArgs);
-  return oNew;
-};
-```
-
-使用示例：
-
-```js
-function MyConstructor() {
-  for (let nProp = 0; nProp < arguments.length; nProp++) {
-    this["property" + nProp] = arguments[nProp];
-  }
-}
-
-let myArray = [4, "Hello world!", false];
-let myInstance = MyConstructor.construct(myArray);
-
-console.log(myInstance.property1); // logs 'Hello world!'
-console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor); // logs 'MyConstructor'
-```
-
-> **备注：** 这个非原生的 `Function.construct` 方法无法和一些原生构造器（例如 {{jsxref("Global_Objects/Date", "Date")}}）一起使用。在这种情况下你必须使用 {{jsxref("Function.prototype.bind")}} 方法。例如，想象有如下一个数组要用在 Date 构造器中：`[2012, 11, 4]`；这时你需要这样写：`new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` ——无论如何这不是最好的实现方式并且也许不该用在任何生产环境中。
 
 ## 规范
 
@@ -152,9 +142,9 @@ console.log(myInstance.constructor); // logs 'MyConstructor'
 
 ## 参见
 
-- {{jsxref("Functions/arguments", "arguments")}} 对象
+- {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions")}}
 - {{jsxref("Reflect.apply()")}}
-- {{jsxref("Operators/Spread_syntax", "Spread syntax", "", 1)}}
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- [展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

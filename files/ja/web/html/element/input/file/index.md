@@ -192,7 +192,9 @@ div {
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="image_uploads">アップロードする画像を選択してください (PNG, JPG)</label>
+    <label for="image_uploads"
+      >アップロードする画像を選択してください (PNG, JPG)</label
+    >
     <input
       type="file"
       id="image_uploads"
@@ -323,9 +325,9 @@ function updateImageDisplay() {
       const listItem = document.createElement("li");
       const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `ファイル名: ${file.name}, ファイルサイズ: ${returnFileSize(
-          file.size
-        )}.`;
+        para.textContent = `ファイル名: ${
+          file.name
+        }, ファイルサイズ: ${returnFileSize(file.size)}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 

@@ -29,9 +29,9 @@ Firefox と Internet Explorer では、ブラウザーをオフラインモー�
 
 ```js
 if (navigator.onLine) {
-  console.log('online');
+  console.log("online");
 } else {
-  console.log('offline');
+  console.log("offline");
 }
 ```
 
@@ -42,9 +42,13 @@ if (navigator.onLine) {
 ネットワーク状態の変化を監視する場合は、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して `online` および `offline` のイベントを待ち受けしてください。以下の例のようにします。
 
 ```js
-addEventListener('offline', (e) => { console.log('offline'); });
+addEventListener("offline", (e) => {
+  console.log("offline");
+});
 
-addEventListener('online', (e) => { console.log('online'); });
+addEventListener("online", (e) => {
+  console.log("online");
+});
 ```
 
 ## 仕様書

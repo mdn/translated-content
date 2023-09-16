@@ -26,21 +26,21 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 ## 什么是跨浏览器测试？
 
-跨浏览器测试（cross browser testing）是确保您的网站或 web 应用能在可接受数量的浏览器（across an acceptable number of web browsers）上正常使用的测试方法。作为网站开发者，您有责任确保项目能供所有用户使用，无论他们使用的是哪种浏览器，设备或辅助工具。您需要注意的点：
+跨浏览器测试（cross browser testing）是确保你的网站或 web 应用能在可接受数量的浏览器（across an acceptable number of web browsers）上正常使用的测试方法。作为网站开发者，你有责任确保项目能供所有用户使用，无论他们使用的是哪种浏览器，设备或辅助工具。你需要注意的点：
 
-- 除了您在工作中经常使用的一两种浏览器，还有一些老旧的浏览器也会有用户在使用。这些浏览器对 CSS 和 JavaScript 的新特性支持的不够。
+- 除了你在工作中经常使用的一两种浏览器，还有一些老旧的浏览器也会有用户在使用。这些浏览器对 CSS 和 JavaScript 的新特性支持的不够。
 - 不同的设备支持的功能也不一样，有功能强大的新平板电脑，智能手机，智能电视，也有功能不全的廉价平板电脑，老旧手机。
 - 残疾人士通过屏幕阅读器等辅助技术上网，可能不会使用鼠标（有些人只使用键盘）。
 
-请记住，您不能代表产品的用户 - 您的网站能适配 Macbook Pro 或高端 Galaxy Nexus，并不意味它适用于所有用户 - 还有很多测试工作要做！
+请记住，你不能代表产品的用户 - 你的网站能适配 Macbook Pro 或高端 Galaxy Nexus，并不意味它适用于所有用户 - 还有很多测试工作要做！
 
 > **备注：** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) 文章列出了浏览器的市场份额，使用情况和相关兼容性问题。
 
 我们先解释下术语。首先，我们所讨论的“跨浏览器使用（working cross browser）”，应该在不同浏览器中提供可接受的用户体验。虽然无法在所有浏览器上提供相同的体验，但确保核心功能使用顺畅就算可以。比如在现代浏览器上，能显示动画、3D 或闪光效果，而在较旧的浏览器上，可以呈现出相同信息的平面图片。只要网站主满意，你的工作就算完成了。
 
-另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要您能兼容屏幕阅读器软件。
+另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要你能兼容屏幕阅读器软件。
 
-其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的——参见[是否需要测试？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其他浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
+其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。你可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的——参见[是否需要测试？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)）。作为 web 开发者，你自然要确保网站主要求的浏览器都能正常工作，但除此之外，你需要防御性编程（code defensively），尽可能让其他浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
 
 > **备注：** 后面会详细介绍防御性编程（code defensively）
 

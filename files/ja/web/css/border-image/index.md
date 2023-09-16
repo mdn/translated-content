@@ -101,7 +101,8 @@ border-image: unset;
   margin: 30px;
   padding: 10px;
 
-  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px round;
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 

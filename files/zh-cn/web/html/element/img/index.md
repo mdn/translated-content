@@ -318,7 +318,7 @@ Web 最常用的图像格式是：
 
 `title` 属性也不该被用作一幅图片在 `alt` 之外的补充说明信息。如果一幅图片需要小标题，使用 [`figure`](/zh-CN/docs/Web/HTML/Element/figure) 或 [`figcaption`](/zh-CN/docs/Web/HTML/Element/figcaption) 元素。
 
-`title` 元素的值一般作为提示条（tooltip）呈现给用户，在光标于图片上停下后显示出来。尽管这*确实*能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 `title`。
+`title` 元素的值一般作为提示条（tooltip）呈现给用户，在光标于图片上停下后显示出来。尽管这*确实*能给用户提供更多的信息，你不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 `title`。
 
 - [使用 HTML title 属性 | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 

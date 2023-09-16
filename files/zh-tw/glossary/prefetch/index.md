@@ -35,7 +35,7 @@ Link: </images/big.jpeg>; rel=prefetch
 <meta http-equiv="Link" content="</images/big.jpeg>; rel=prefetch">
 ```
 
-`Link:` header 的格式請參閱 [RFC 5988](http://tools.ietf.org/html/rfc5988) section 5。
+`Link:` header 的格式請參閱 [RFC 5988](https://tools.ietf.org/html/rfc5988) section 5。
 
 可以指定多個預先取回資源，當瀏覽器閒置時，就會開始預先取回這些資源，例如:
 
@@ -50,7 +50,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 預先取回 (Prefetch) 符合標準嗎 ?
 
-預先取回並沒有違反標準規範；事實上 HTML 4.01 允許新定義的 rel 型態 ([see Section 6.12: Link types](http://www.w3.org/TR/html4/types.html#type-links))，只是 Mozilla 現在的機制還在 HTML5 標準化草稿作業中，請見 HTML5 標準: [Link type "prefetch"](http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
+預先取回並沒有違反標準規範；事實上 HTML 4.01 允許新定義的 rel 型態 ([see Section 6.12: Link types](https://www.w3.org/TR/html4/types.html#type-links))，只是 Mozilla 現在的機制還在 HTML5 標準化草稿作業中，請見 HTML5 標準: [Link type "prefetch"](https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
 
 ### 如何判定瀏覽器是否閒置 ?
 

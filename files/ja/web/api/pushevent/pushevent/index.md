@@ -1,8 +1,9 @@
 ---
-title: PushEvent()
+title: "PushEvent: PushEvent() コンストラクター"
+short-title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: bb65fd3482d5c3d32d1c56e5880600b1299f7669
 ---
 
 {{APIRef("Push API")}}
@@ -34,10 +35,10 @@ new PushEvent(type, options)
 
 ```js
 const dataInit = {
-  data : 'Some sample text'
-}
+  data: "Some sample text",
+};
 
-const myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent("push", dataInit);
 
 myPushEvent.data.text(); // 'Some sample text' を返す
 ```

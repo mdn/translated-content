@@ -18,7 +18,7 @@ l10n:
 ```js
 mediaRecorder.onwarning = (e) => {
   console.warn(`A warning has been raised: ${e.message}`);
-}
+};
 ```
 
 ## ブラウザーの互換性

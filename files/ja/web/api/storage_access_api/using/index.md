@@ -18,7 +18,8 @@ Storage Access API は、ユーザーのブラウザーがすべてのサード�
 まず、`<iframe>` がサンドボックス化されている場合、次のように、埋め込まれたウェブサイトは `allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Element/iframe#attr-sandbox)を追加して、ストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
 
 ```html
-<iframe sandbox="allow-storage-access-by-user-activation
+<iframe
+  sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
   ...
@@ -28,25 +29,29 @@ Storage Access API は、ユーザーのブラウザーがすべてのサード�
 次に、埋め込まれた文書内で実行されるコードに進みます。 現在ストレージにアクセスできるかどうかはわからないため、最初に {{domxref("Document.hasStorageAccess()")}} を呼び出す必要があります。 その呼び出しが `false` を返す場合、{{domxref("Document.requestStorageAccess()")}} を呼び出すことができます。 それが返した結果は、前の Promise 呼び出しにチェーンできます。 最後の `then` では、ファーストパーティストレージへのアクセスが可能になります。
 
 ```js
-document.hasStorageAccess().then(hasAccess => {
-  if (!hasAccess) {
-    return document.requestStorageAccess();
-  }
-}).then(_ => {
-  // これで、ファーストパーティストレージにアクセスできます！
+document
+  .hasStorageAccess()
+  .then((hasAccess) => {
+    if (!hasAccess) {
+      return document.requestStorageAccess();
+    }
+  })
+  .then((_) => {
+    // これで、ファーストパーティストレージにアクセスできます！
 
-  // ファーストパーティのクッキージャーからいくつかのアイテムにアクセスしましょう
-  document.cookie = "foo=bar";              // クッキーを設定
-  localStorage.setItem("username", "John"); // localStorage エントリにアクセス
-}).catch(_ => {
-  // ストレージアクセスの取得エラー。
-});
+    // ファーストパーティのクッキージャーからいくつかのアイテムにアクセスしましょう
+    document.cookie = "foo=bar"; // クッキーを設定
+    localStorage.setItem("username", "John"); // localStorage エントリにアクセス
+  })
+  .catch((_) => {
+    // ストレージアクセスの取得エラー。
+  });
 ```
 
 埋め込まれたコンテンツがタップやクリックなどのユーザージェスチャーを現在処理していない限り、アクセス要求は自動的に拒否されることに注意してください。 このコードは、例えば、次のようなユーザージェスチャーベースのイベントハンドラー内で実行する必要があります。
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   // ここでコードを実行します
 });
 ```

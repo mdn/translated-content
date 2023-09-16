@@ -56,7 +56,7 @@ slug: Learn/Performance/Multimedia
 
 ## 優化影像傳送
 
-為了確保您不會將不必要的大文件發送給用戶，最好 [壓縮所有你要傳輸的影像](#compress)，[優化`<source>` 順序](#omptimize), 設定 [autoplay](/zh-TW/docs/Learn/Performance/Multimedia#Video_autoplay), [移除靜音影像的聲音](#muted), [優化影像預載](/zh-TW/docs/Learn/Performance/Multimedia#Video_preload), 還有 [考慮串流](/zh-TW/docs/Learn/Performance/Multimedia#Consider_streaming) 這部影像。
+為了確保您不會將不必要的大文件發送給用戶，最好 [壓縮所有你要傳輸的影像](#壓縮所有影像)、[優化`<source>` 順序](#優化_source_順序)、設定 [autoplay](#影像自動播放)、[移除靜音影像的聲音](#移除靜音影像的聲音)、[優化影像預載](#影像預載)，還有[考慮串流](#考慮串流)這部影像。
 
 ### 壓縮所有影像
 

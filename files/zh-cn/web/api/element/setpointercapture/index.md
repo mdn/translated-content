@@ -30,7 +30,7 @@ targetElement.setPointerCapture(pointerId);
 
 ## 示例
 
-当您按下它时，此示例在 {{HtmlElement("div")}} 上设置指针捕获。这使您可以滑动元素，即使指针移动到其边界之外也是如此。
+当你按下它时，此示例在 {{HtmlElement("div")}} 上设置指针捕获。这使你可以滑动元素，即使指针移动到其边界之外也是如此。
 
 ### HTML
 

@@ -20,7 +20,7 @@ mql = window.matchMedia(mediaQueryString)
 ## 例
 
 ```js
-if (window.matchMedia( "(min-width: 400px)" ).matches) {
+if (window.matchMedia("(min-width: 400px)").matches) {
   /* ビューポートの幅が 400 ピクセル以上の場合のコードをここに */
 } else {
   /* ビューポートの幅は 400 ピクセル未満の場合のコードをここに */

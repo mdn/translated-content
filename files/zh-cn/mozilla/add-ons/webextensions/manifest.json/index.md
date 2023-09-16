@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 
 {{AddonSidebar}}
 
-> **备注：** 本文描述的是适用于 WebExtensions 的 manifest.json。若您正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App Manifest](/zh-CN/docs/Web/Manifest)。
+> **备注：** 本文描述的是适用于 WebExtensions 的 manifest.json。若你正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App Manifest](/zh-CN/docs/Web/Manifest)。
 
 `manifest.json` 是每个 WebExtension 唯一必须包含的元数据文件。
 
-通过使用 `manifest.json`，您可以指定扩展的基本元数据，例如名称和版本，还可以指定扩展各个方面的功能（例如后台脚本，内容脚本和某些浏览器行为）。
+通过使用 `manifest.json`，你可以指定扩展的基本元数据，例如名称和版本，还可以指定扩展各个方面的功能（例如后台脚本，内容脚本和某些浏览器行为）。
 
 它是一个允许使用 "`//`" 撰写单行注释的、特殊的 [JSON](/zh-CN/docs/Glossary/JSON) 文件。
 

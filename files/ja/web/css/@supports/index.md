@@ -102,12 +102,10 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 括弧を増やすことなく、複数の論理和を並記することができます。以下の式はどちらも等価です。
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
-  (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {
 }
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or
-          ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
 ```
 
 > **メモ:** `and` 演算子と `or` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
