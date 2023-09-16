@@ -76,13 +76,12 @@ GitHub のコードリポジトリを更新するたびに、 Netlify がその�
 
    > **メモ：** `scripts` プロパティ内にすでにコマンドが含まれている場合は、コマンドの末尾にカンマを入れます。 JSON を有効なままにしておきます。
 
-3. You should now be able to run the following command in the root of your project directory to run the production build step (first quit the running process with <kbd>Ctrl</kbd> + <kbd>C</kbd> if you need to):
-
+3. これで、プロジェクトディレクトリのルートで次のコマンドを実行して実稼働ビルドステップを実行できるようになります。 (必要に応じて、まず最初に <kbd>Ctrl</kbd> + <kbd>C</kbd> を押して実行中のプロセスを終了します）
    ```bash
    npm run build
    ```
 
-   This should give you an output like the following, showing you the production files that were created, how big they are, and how long they took to build:
+   これにより次のような出力が得られ作成された実稼働ファイル、そのサイズ、およびビルドにかかった時間が示されます。
 
    ```bash
    dist/src.99d8a31a.js.map       446.15 KB     63ms
@@ -96,9 +95,9 @@ GitHub のコードリポジトリを更新するたびに、 Netlify がその�
    dist/index.html                    354 B    944ms
    ```
 
-   Try it now!
+   やってみましょう！
 
-For you to create your own instance of this project you will need to host this project's code in your own git repository. Our next step is to push the project to GitHub.
+このプロジェクトの独自のインスタンスを作成するには、このプロジェクトのコードを独自の git リポジトリでホストする必要があります。 次のステップは、プロジェクトを GitHub にプッシュすることです。
 
 ## Committing changes to GitHub
 
