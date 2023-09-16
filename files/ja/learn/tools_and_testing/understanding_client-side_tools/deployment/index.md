@@ -143,7 +143,7 @@ git status
 
    ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
-5. これで、コードを GitHub にプッシュする準備が整いました。 今すぐ次のコマンドを実行します。 
+5. これで、コードを GitHub にプッシュする準備が整いました。 今すぐ次のコマンドを実行します。
 
    ```bash
    git remote add github https://github.com/yourname/repo-name.git
