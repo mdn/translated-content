@@ -173,33 +173,33 @@ git status
 
 プロジェクトを Git でコミットし、GitHub リポジトリにプッシュしたら、ツールチェーンの次のステップは、GitHub を Netlify に接続して、プロジェクトをウェブ上でライブデプロイできるようにすることです。
 
-## Using Netlify for deployment
+## デプロイに Netlify を使用する
 
-Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.
+GitHub から Netlify へのデプロイは、手順さえわかれば、特にこのプロジェクトのような「静的ウェブサイト」の場合、驚くほど簡単です。
 
-> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/blog/tags/tutorial/) to help you improve your development workflow.
+> **メモ:** 開発ワークフローの改善に役立つ [Netlify のガイドとチュートリアル](https://www.netlify.com/blog/tags/tutorial/)も多数あります。
 
-Let's get this done:
+これをやってみましょう。
 
-1. Go to <https://app.netlify.com/start>.
-2. Press the GitHub button underneath the _Continuous Deployment_ heading. "Continuous Deployment" means that whenever the code repository changes, Netlify will (try) to deploy the code, thus it being "continuous".
+1. <https://app.netlify.com/start> に移動します。
+2. _Continuous Deploymen(継続的デプロイメント)_ という見出しの下にある GitHub ボタンを押します。 _Continuous Deployment(継続的デプロイメント)_ とは、コードリポジトリが変更されるたびに、Netlify がコードのデプロイメントを試みる(つまり _continuous(継続的)_ である)ことを意味します。
 
    ![netlify deployment options, as described in the surrounding text](netlify-deploy.png)
 
-3. Depending on whether you authorized Netlify before, you might need to authorize Netlify with GitHub, and choose what account you want to authorize it for (if you have multiple GitHub accounts or orgs). Choose the one you pushed your project to.
-4. Netlify will prompt you with a list of the GitHub repositories it can find. Select your project repository and proceed to the next step.
-5. Since we've connected Netlify to our GitHub account and given it access to deploy the project repository, Netlify will ask _how_ to prepare the project for deployment and _what_ to deploy.
+3. 以前に Netlify を認証したかどうかに応じて、GitHub で Netlify を認証し、それを認証するアカウントを選択する必要がある場合があります(複数の GitHub アカウントまたは組織がある場合)。プロジェクトをプッシュしたものを選択します。
+4. Netlify は、検索できる GitHub リポジトリのリストを表示します。プロジェクトリポジトリを選択し、次のステップに進みます。
+5. Netlify を GitHub アカウントに接続し、プロジェクトリポジトリをデプロイするためのアクセス権を付与したため、 Netlify はプロジェクトのデプロイメントを _どのように_ 準備するか、 _何を_ デプロイするかを尋ねます。
 
-   You should enter the command `npm run build` for the _Build command_, and specify the `dist` directory for the _Publish directory_ — this contains the code that we want to make public.
+   _Build コマンド_ としてコマンド `npm run build` を入力し、 _Publish ディレクトリ_ として `dist` ディレクトリを指定する必要があります。これには公開したいコードが含まれています。
 
-6. To finish up, click _Deploy site_.
+6. 最後に、 _サイトのデプロイ_ をクリックします。
 
    ![netlify distribution options, as described in the surrounding text](netlify-dist.png)
 
-7. After a short wait for the deployment to occur, you should get a URL that you can go to, to see your published site — try it out!
-8. And even better, whenever we make a change and _push_ the change to our remote git repository (on GitHub), this will trigger a notification to Netlify which will then run our specified build task and then deploy the resulting `dist` directory to our published site.
-
-   Try it now — make a small change to your app, and then push it to GitHub using these commands:
+7. デプロイメントが行われるまで少し待った後、公開されたサイトを表示するためにアクセスできる URL を取得します。試してみてください。
+8. さらに良いことに変更を加えてリモート git リポジトリ (GitHub 上) にその変更を _プッシュ_ するたびに、 Netlify への通知がトリガーされ、指定されたビルドタスクが実行され、結果として得られる `dist` ディレクトリが公開されたディレクトリにデプロイされます。
+   
+   今すぐ試してください。アプリに小さな変更を加えてから、次のコマンドを使用して GitHub にプッシュします。 
 
    ```bash
    git add .
@@ -207,11 +207,11 @@ Let's get this done:
    git push github main
    ```
 
-   You should see your published site update with the change — this might take a few minutes to publish, so have a little patience.
+   公開されたサイトが変更に応じて更新されるはずです。公開には数分かかる場合があるので、少しお待ちください。
 
-That's it for Netlify. We can optionally change the name of the Netlify project or specify to use our own domain name, which Netlify offers some [excellent documentation](https://docs.netlify.com/) on.
+Netlify については以上です。 必要に応じて、Netlify プロジェクトの名前を変更したり、独自のドメイン名を使用するように指定したりできます。 Netlify では、[優れたドキュメント](https://docs.netlify.com/) を提供しています。
 
-Now for one final link in our toolchain: a test to ensure our code works.
+ここで、ツールチェーンの最後のリンクとして、コードが機能することを確認するテストを説明します。
 
 ## Testing
 
