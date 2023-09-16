@@ -293,23 +293,23 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 
 さて、最後に、プッシュ後 1 分ほどで、 Netlify はプロジェクトの更新をデプロイします。ただし、導入されたテストに合格した場合に限ります。
 
-## Summary
+## まとめ
+サンプルケーススタディとモジュールはこれで終わりです。お役に立てば幸いです。自分をクライアント側ツールのウィザードとみなすまでには長い道のりがありますが、このモジュールが、クライアント側のツールを理解するための重要な第一歩となり、さらに学んで新しいツールを試す自信を与えてくれることを願っています。
 
-That's it for our sample case study, and for the module! We hope you found it useful. While there is a long way to go before you can consider yourself a client-side tooling wizard, we are hoping that this module has given you that first important step towards understanding client-side tooling, and the confidence to learn more and try out new things.
+ツールチェーンのすべての部分を要約してみましょう。
 
-Let's summarize all the parts of the toolchain:
+- コードの品質とメンテナンスは ESLint と Prettier によって実行されます。 これらのツールは、 `npm install --dev eslint prettier eslint-plugin-react` を介して `devDependencies` としてプロジェクトに追加されます（この特定のプロジェクトは React を使用しているため、 ESLint プラグインが必要です）。
+- コード品質ツールが読み取る 2 つの構成ファイル: `.eslintrc` と `.prettierrc` です。
+- 開発中、依存関係を処理するために Parcel を使用します。 `parcel src/index.html` はバックグラウンドで実行され、変更を監視し、ソースを自動的に構築します。
+- デプロイメントは、変更を GitHub (「main」ブランチ上) にプッシュすることで処理されます。これにより、 Netlify でのビルドとデプロイメントがトリガーされ、プロジェクトが公開されます。この例の場合、この URL は [near-misses.netlify.com](https://near-misses.netlify.app/) です。 独自の一意の URL が作成されます。
+- NASA API フィードが正しいデータ形式を提供しない場合、サイトの構築と展開をブロックする簡単なテストもあります。
 
-- Code quality and maintenance are performed by ESLint and Prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react` (the ESLint plugin is needed because this particular project uses React).
-- There are two configuration files that the code quality tools read: `.eslintrc` and `.prettierrc`.
-- During development, we use Parcel to handle our dependencies. `parcel src/index.html` is running in the background to watch for changes and to automatically build our source.
-- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is [near-misses.netlify.com](https://near-misses.netlify.app/); you will have your own unique URL.
-- We also have a simple test that blocks the building and deployment of the site if the NASA API feed isn't giving us the correct data format.
 
-For those of you wanting a challenge, consider whether you can optimize some part of this toolchain. Some questions to ask yourself:
+挑戦したい方は、このツールチェーンの一部を最適化できないか検討してください。自問すべきいくつかの質問
 
-- Can [images be compressed](https://github.com/ralscha/parcel-plugin-compress) during the build step?
-- Could React be swapped out for [something smaller](https://preactjs.com/)?
-- Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://web.dev/lighthouse-performance/)?
-- Could you set up a notification to let you know when a new deploy succeeded or failed?
+- ビルドステップ中に[画像を圧縮](https://github.com/ralscha/parcel-plugin-compress)できますか?
+- React を [もっと小さいもの](https://preactjs.com/) に置き換えることはできますか?
+- [パフォーマンス監査](https://web.dev/lighthouse-performance/) など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
+- 新しいデプロイが成功したか失敗したかを知らせる通知を設定していただけますか?
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
