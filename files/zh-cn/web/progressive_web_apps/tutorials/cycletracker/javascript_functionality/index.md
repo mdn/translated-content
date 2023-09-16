@@ -115,9 +115,9 @@ function checkDatesInvalid(startDate, endDate) {
 
 我们使用 [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)，具体来说是 [window.localStorage](/zh-CN/docs/Web/API/Window/localStorage)，以字符串化的 JSON 对象形式存储开始日期和结束日期对。
 
-[LocalStorage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) 有几个局限，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
+[LocalStorage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#存储简单数据_—_web_storage) 有一些局限性，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
 
-对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) 选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)(IDB) 和后面讨论的 service worker 性能更好。
+对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)（IDB）和后面讨论的 service worker 具有更好的性能。
 
 `localStorage` 的局限包括：
 
@@ -143,7 +143,7 @@ function storeNewPeriod(startDate, endDate) {
   // 将新的经期对象添加到经期对象数组的末尾
   periods.push({ startDate, endDate });
 
-  // 对数组排序，所以经期按开始日期排序，从最新到最旧
+  // 对数组排序，以便经期按开始日期排序，从最新到最旧
   periods.sort((a, b) => {
     return new Date(b.startDate) - new Date(a.startDate);
   });
@@ -164,7 +164,7 @@ function getAllStoredPeriods() {
 }
 ```
 
-### 将渲染数据到屏幕上
+### 将数据渲染到屏幕上
 
 我们应用程序的最后一步是将过去经期列表渲染到屏幕上，并添加标题。
 
@@ -176,7 +176,7 @@ function getAllStoredPeriods() {
 const pastPeriodContainer = document.getElementById("past-periods");
 ```
 
-我们检索解析后的过去经期字符串或空数组。如果为空，我们退出。如果过去经期存在，我们清除 past period container 的当前内容。我们创建一个标题和一个无序列表。我们循环遍历过去的经期，添加包含格式化开始日期和结束日期的列表项。
+接着，我们需要检索解析后的过去经期字符串或空数组。如果为空，则退出。如果过去经期存在，会清除 past period 容器的当前内容。然后，创建一个标题和一个无序列表，并循环遍历过去的经期，添加包含格式化的起始日期和终止日期的列表项。
 
 ```javascript
 function renderPastPeriods() {
@@ -215,7 +215,7 @@ function formatDate(dateString) {
 
   // 将日期格式化为特定于语言环境的字符串
   // 包括你的语言环境以获得更好的用户体验
-  return date.toLocaleDateString("en-UK", { timeZone: "UTC" });
+  return date.toLocaleDateString("en-US", { timeZone: "UTC" });
 }
 ```
 
@@ -230,7 +230,7 @@ renderPastPeriods();
 
 ## 完整的 JavaScript
 
-你的 `app.js` 文件应该类似下面的 JavaScript：
+你的 `app.js` 文件中的 JavaScript 代码应该类似如下：
 
 ```javascript
 const newPeriodFormEl = document.getElementsByTagName("form")[0];
@@ -302,7 +302,7 @@ function renderPastPeriods() {
 
 function formatDate(dateString) {
   const date = new Date(dateString);
-  return date.toLocaleDateString("en-UK", { timeZone: "UTC" });
+  return date.toLocaleDateString("en-US", { timeZone: "UTC" });
 }
 
 renderPastPeriods();
