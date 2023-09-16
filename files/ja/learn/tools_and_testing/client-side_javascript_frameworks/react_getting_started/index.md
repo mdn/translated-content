@@ -40,7 +40,7 @@ l10n:
 
 ## React の基礎
 
-公式のキャッチフレーズにあるように、[React](https://react.dev/) はユーザーインターフェイスを構築するためのライブラリーです。React はフレームワークではなく、ウェブに限定されるものでもありません。他のライブラリーと共に使用して、特定の環境にレンダリングしますます。たとえば、[React Native](https://reactnative.dev/) はモバイルアプリケーションの構築に使用できます。
+公式のキャッチフレーズにあるように、[React](https://react.dev/) はユーザーインターフェイスを構築するためのライブラリーです。React はフレームワークではなく、ウェブに限定されるものでもありません。他のライブラリーと共に使用して、特定の環境にレンダリングします。たとえば、[React Native](https://reactnative.dev/) はモバイルアプリケーションの構築に使用できます。
 
 ウェブ向けに構築するには、開発者は [ReactDOM](https://reactjs.org/docs/react-dom.html) と連携して React を使用します。React と ReactDOM は、他の本当のウェブ開発フレームワークと同じ土台で頻繫に議論され、同じような問題を解決するために用いられます。React を「フレームワーク」と呼ぶとき、それは口語的な理解として扱います。
 
@@ -104,7 +104,7 @@ JSX の詳細については、React チームの [Writing Markup with JSX](http
 
 ## 最初の React アプリをセットアップする
 
-React を使用する方法はたくさんありますが、前述のように、コマンドラインインターフェイス (CLI) ツールの create-react-app を使用します。これにより、いくつかのパッケージをインストールしていくつかを作成することにより、React アプリケーションの開発プロセスをスムーズにします。
+React を使用する方法はたくさんありますが、前述のように、コマンドラインインターフェイス (CLI) ツールの create-react-app を使用します。これにより、いくつかのパッケージをインストールして作成することにより、React アプリケーションの開発プロセスをスムーズにします。
 
 [`<script>`](/ja/docs/Web/HTML/Element/script) を HTML ファイルにコピーすることで [create-react-app なしでウェブサイトに React を追加する](https://reactjs.org/docs/add-react-to-a-website.html)ことは可能ですが、 create-react-app CLI は、React アプリケーションの一般的な始め方です。これを使うことで、アプリの作成に集中でき、セットアップに煩わされなくなります。
 
