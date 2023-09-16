@@ -213,31 +213,31 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 
 ここで、ツールチェーンの最後のリンクとして、コードが機能することを確認するテストを説明します。
 
-## Testing
+## テスト
 
-Testing itself is a vast subject, even within the realm of front-end development. I'll show you how to add an initial test to your project and how to use the test to prevent or to allow the project deployment to happen.
+テスト自体は、フロントエンド開発の領域内であっても、広大なテーマです。プロジェクトに初期テストを追加する方法と、そのテストを使用してプロジェクトのデプロイメントの発生を防止または許可する方法を説明します。
 
-When approaching tests there are a good deal of ways to approach the problem:
+テストに近づくとき、問題に対処する方法はたくさんあります。
 
-- End-to-end testing, which involves your visitor clicking a thing and some other thing happening.
-- Integration testing, which basically says "does one block of code still work when connected to another block?"
-- Unit testing, where small and specific bits of functionality are tested to see if they do what they are supposed to do.
-- [And many more types](https://en.wikipedia.org/wiki/Functional_testing). Also, see our [cross browser testing module](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) for a bunch of useful testing information
+- エンドツーエンドのテスト。訪問者が何かをクリックすると、別のことが起こります。
+- 統合テスト。基本的には、「あるコードブロックが別のブロックに接続されても機能するかどうか」をテストします。
+- ユニットテスト。機能の小さな特定のビットをテストして、期待どおりに動作するかどうかを確認します。
+- [その他にも多くの種類](https://en.wikipedia.org/wiki/Functional_testing)テストがあります。また多数の有用なテスト情報については、[クロスブラウザテストモジュール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を参照してください。
 
-Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
+また、テストは JavaScript に限定されないことにも注意してください。 テストはレンダリングされた DOM 、ユーザーインタラクション、 CSS 、さらにはページの外観に対して実行できます。
 
-However, for this project we're going to create a small test that will check the third-party NASA data feed and ensure it's in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
+ただし、このプロジェクトではサードパーティの NASA データフィードをチェックし、それが正しい形式であることを確認する小さなテストを作成します。 そうでない場合、テストは失敗し、プロジェクトは稼働できなくなります。 それ以外のことを行うことは、このモジュールの範囲を超えます。テストは実際には独自の別個のモジュールを必要とする巨大な主題です。私たちは、このセクションが少なくともテストの必要性を認識してもらい、テストに行ってもっと学びたいという動機を与える種を植えることを願っています。
 
-Although the test for this project does not include a test framework, as with all things in the front-end development world, there are a slew of [framework options](https://www.npmjs.com/search?q=keywords%3Atesting).
+このプロジェクトのテストにはテストフレームワークは含まれていませんが、フロントエンド開発の世界のすべてのものと同様に、多数の[フレームワークオプション](https://www.npmjs.com/search?q=keywords%3Atesting)があります。
 
-The test itself isn't what is important. What is important is how the failure or success is handled. Some deployment platforms will include a specific method for testing as part of their pipeline. Products like GitHub, GitLab, etc., all support running tests against individual commits.
+大切なのはテストそのものではありません。重要なのは、失敗または成功をどのように処理するかです。一部の展開プラットフォームには、パイプラインの一部としてテストのための特定の方法が含まれています。 GitHub、GitLab などの製品はすべて、個々のコミットに対するテストの実行をサポートしています。
 
-As this project is deploying to Netlify, and Netlify only asks about the build command, we will have to make the tests part of the build. If the test fails, the build fails, and Netlify won't deploy.
+このプロジェクトは Netlify にデプロイされており、 Netlify はビルドコマンドについてのみ尋ねるため、テストをビルドの一部にする必要があります。テストが失敗すると、ビルドは失敗し、 Netlify はデプロイされません。
 
-Let's get started.
+始めましょう。 
 
-1. Go to your `package.json` file and open it up.
-2. Find your `scripts` member, and update it so that it contains the following test and build commands:
+1. あなたの `package.json` を開いてください。
+2. `scripts` を確認し、次のテストコマンドとビルドコマンドが含まれるように更新します。
 
    ```json
    "scripts": {
@@ -247,41 +247,41 @@ Let's get started.
    }
    ```
 
-3. Now of course we need to add the test to our codebase; create a new directory in your root directory called tests:
+3. もちろん、コードベースにテストを追加する必要があります。ルートディレクトリに test という名前の新しいディレクトリを作成します。
 
    ```bash
    mkdir tests
    ```
 
-4. Inside the new directory, create a test file:
+4. 新しいディレクトリ内にテストファイルを作成します。
 
    ```bash
    cd tests
    touch nasa-feed.test.js
    ```
 
-5. Open this file, and add the contents of [nasa-feed.test.js](https://raw.githubusercontent.com/remy/mdn-will-it-miss/master/tests/nasa-feed.test.js) to it:
-6. This test uses the axios package to fetch the data feed we want to test; to install this dependency, run the following command:
+5. このファイルを開き、 [nasa-feed.test.js](https://raw.githubusercontent.com/remy/mdn-will-it-miss/master/tests/nasa-feed.test.js) の内容を追加します。
+6. このテストでは、axios パッケージを使用して、テストするデータフィードを取得します。この依存関係をインストールするには、次のコマンドを実行します。
 
    ```bash
    npm install --save-dev axios
    ```
 
-   We need to manually install axios because Parcel won't help us with this dependency. Our tests are outside of Parcel's view of our system — since Parcel never sees nor runs any of the test code, we're left to install the dependency ourselves.
+   Parcel ではこの依存関係を解決できないため、 axios を手動でインストールする必要があります。私たちのテストは、 Parcel のシステムの範囲外にあります。 Parcel はテストコードをまったく参照したり実行したりしないため、依存関係を自分でインストールする必要があります。
 
-7. Now to manually run the test, from the command line we can run:
+7. ここでテストを手動で実行するには、コマンドラインから次のコマンドを実行します。
 
    ```bash
    npm run test
    ```
 
-   The result, if successful, is … nothing. This is considered a success. In general, we only want tests to be noisy if there's something wrong. The test also exited with a special signal that tells the command line that it was successful — an exit signal of 0. If there's a failure the test fails with an exit code of 1 — this is a system-level value that says "something failed".
+   成功した場合、結果は…何もありません。これは成功とみなされます。一般に、テストにノイズが多くなるのは、何か問題がある場合のみです。テストはまた、コマンドラインに成功を伝える特別な信号 (終了信号 0) で終了しました。失敗した場合、テストは終了コード 1 で失敗します。これは、「何かが失敗しました」というシステムレベルの値です。
 
-   The `npm run test` command will use node to run all the files that are in the tests directory that end with `.js`.
+    `npm run test` コマンドは、node を使用して、tests ディレクトリ内の `.js` で終わるすべてのファイルを実行します。
 
-   In our build script, `npm run test` is called, then you see the string `&&` — this means "if the thing on the left succeeded (exited with zero), then do this thing on the right". So this translates into: if the tests pass, then build the code.
+   ビルド スクリプトでは、 `npm run test` が呼び出され、文字列 `&&` が表示されます。 — これは、「左側の処理が成功した場合 (ゼロで終了)、右側の処理を実行する」ことを意味します。 つまり、これは、テストに合格したら、コードをビルドするということになります。
 
-8. You'll have to upload your new code to GitHub, using similar commands to what you used before:
+8. 以前に使用したものと同様のコマンドを使用して、新しいコードを GitHub にアップロードする必要があります。
 
    ```bash
    git add .
@@ -289,9 +289,9 @@ Let's get started.
    git push github main
    ```
 
-   In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
+   場合によっては、ビルドされたコードの結果をテストしたい場合があります(これは、私たちが作成したオリジナルのコードとは異なるため)。そのため、ビルド コマンドの後にテストを実行する必要があるかもしれません。 独自のプロジェクトに取り組んでいるときは、これらすべての個別の側面を考慮する必要があります。
 
-Now, finally, a minute or so after pushing, Netlify will deploy the project update. But only if it passes the test that was introduced.
+さて、最後に、プッシュ後 1 分ほどで、 Netlify はプロジェクトの更新をデプロイします。ただし、導入されたテストに合格した場合に限ります。
 
 ## Summary
 
