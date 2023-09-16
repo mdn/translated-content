@@ -5,7 +5,7 @@ slug: Glossary/Boolean/JavaScript
 
 {{GlossarySidebar}}
 
-JavaScript において **Boolean** は [プリミティブ値](/ja/docs/Glossary/Primitive)は `true` か `false` を表します。
+JavaScript において **Boolean** は [プリミティブ値](/ja/docs/Glossary/Primitive)で `true` か `false` を表します。
 
 {{jsxref("Boolean")}} オブジェクトはプリミティブ値の {{Glossary("wrapper")}} です。
 
