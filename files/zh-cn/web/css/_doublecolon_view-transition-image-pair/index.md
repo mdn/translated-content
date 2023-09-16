@@ -7,7 +7,7 @@ slug: Web/CSS/::view-transition-image-pair
 
 **`::view-transition-image-pair`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示一个视图过渡的旧视图状态和新视图状态的容器——即过渡前和过渡后的状态。
 
-在视图过渡期间，`::view-transition-image-pair` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition-group")}} 的子节点。就子节点而言，它可以有一个 {{cssxref("::view-transition-new")}} 或一个 {{cssxref("::view-transition-old")}}，或者两者都有。
+在视图过渡期间，`::view-transition-image-pair` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition-group")}} 的子节点。并且可以有一个 {{cssxref("::view-transition-new")}} 或一个 {{cssxref("::view-transition-old")}} 子节点，亦或是两者都有。
 
 `::view-transition-image-pair` 在 UA 样式表中具有以下默认样式：
 
@@ -38,7 +38,7 @@ html::view-transition-image-pair(*) {
 - `root`
   - : 使伪元素选择器匹配由 UA 创建的默认 `root` 视图过渡组，该组用于包含整个页面的视图过渡，这意味着任何未通过 {{cssxref("view-transition-name")}} 属性分配给特定视图过渡组的元素。
 - {{cssxref("custom-ident")}}
-  - : 使伪元素选择器匹配通过 {{cssxref("view-transition-name")}} 属性将 {{cssxref("custom-ident")}} 分配给元素，而创建的特定视图转换组。
+  - : 使伪元素选择器匹配（通过 {{cssxref("view-transition-name")}} 属性将 {{cssxref("custom-ident")}} 分配给元素而创建的）特定视图转换组。
 
 ## 示例
 
