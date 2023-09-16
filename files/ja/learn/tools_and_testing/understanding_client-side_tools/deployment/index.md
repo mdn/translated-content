@@ -139,7 +139,7 @@ git status
 
 4. リポジトリーにスペースを含まない短くて覚えやすい名前 (単語を区切るにはハイフンを使用します) と説明を付けて、ページの下部にある _Create repository_ をクリックします。
 
-    これで、新しい GitHub リポジトリーを指す「リモート」 URL が作成されたはずです。
+   これで、新しい GitHub リポジトリーを指す「リモート」 URL が作成されたはずです。
 
    ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
