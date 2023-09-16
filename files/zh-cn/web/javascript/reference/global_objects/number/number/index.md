@@ -25,7 +25,7 @@ Number(value)
 
 当 `Number` 作为构造函数调用（使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)）时，它创建一个 {{jsxref("Number")}} 对象，这个对象**不是**原始值。
 
-当 `Number` 作为普通函数调用时，它[将参数强制转换为数字原始值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#Number_强制转换)。[BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 被转换为数字。如果值不能转换，则返回 {{jsxref("NaN")}}。
+当 `Number` 作为普通函数调用时，它[将参数强制转换为数字原始值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。[BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 被转换为数字。如果值不能转换，则返回 {{jsxref("NaN")}}。
 
 > **警告：** 你会发现你很少会使用 `Number` 作为构造函数。
 
@@ -44,7 +44,7 @@ typeof b; // "number"
 
 ### 使用 Number() 将 BigInt 转换为数字
 
-`Number()` 是唯一可以将 BigInt 转换为数字而不抛出错误的情况，因为它非常明确。
+`Number()` 是唯一可以将 BigInt 转换为数字而不抛出错误的情况，因为其预期行为非常明确。
 
 ```js example-bad
 +1n; // TypeError: Cannot convert a BigInt value to a number
