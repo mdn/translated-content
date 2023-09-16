@@ -98,7 +98,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 语法部分不应使用形式语法符号（使用[巴科斯范式](https://zh.wikipedia.org/wiki/巴科斯范式)），而应使用[如上所述](#多行可选参数)的扩展多行格式。
 
-虽然形式化符号为复杂语法的描述提供了一种简洁的机制，但它并不为许多开发人员所熟悉，而且可能与特定编程语言的有效语法相冲突。例如，“`[ ]`”既表示“可选参数”，也表示 JavaScript {{jsxref("Array")}}} 。你可以从下面 {{jsxref("Array.prototype.slice()")}} 的形式语法中看到这一点：
+虽然形式化符号为复杂语法的描述提供了一种简洁的机制，但它并不为许多开发人员所熟悉，而且可能与特定编程语言的有效语法相冲突。例如，“`[ ]`”既表示“可选参数”，也表示 JavaScript {{jsxref("Array")}} 。你可以从下面 {{jsxref("Array.prototype.slice()")}} 的形式语法中看到这一点：
 
 ```js-nolint
 arr.slice([begin[, end]])
