@@ -5,7 +5,7 @@ slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 
 {{MDNSidebar}}
 
-MDN 参考页面的语法章节包含一个语法框，定义了某个特性的确切语法（例如，它可以接受哪些参数，哪些参数是可选的）。本文将解释如何编写参考页面的语法框。
+MDN 参考页面的语法小节包含一个语法框，其定义了某个特性的确切语法（例如，它可以接受哪些参数，哪些参数是可选的）。本文将解释如何编写参考页面的语法框。
 
 ## API 参考语法
 
@@ -33,7 +33,7 @@ slice(start, end)
 
   ```js-nolint
   querySelector(selector)
-  //responseStr = element.querySelector(selector)
+  // responseStr = element.querySelector(selector)
 
   new IntersectionObserver(callback, options)
   // const observer = new IntersectionObserver(callback, options)
@@ -43,7 +43,7 @@ slice(start, end)
 
 #### 语法块
 
-以语法块开头，就像这样（节选自 {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver 构造函数")}}页）：
+以语法块开头，就像这样（节选自 {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver")}} 构造函数页）：
 
 ```js-nolint
 new IntersectionObserver(callback, options)
@@ -155,13 +155,13 @@ unshift(element1, element2)
 unshift(element1, element2, /* …, */ elementN)
 ```
 
-这里更倾向于从 1 开始编号，这样可以写出“`unshift` 在数组开头添加 N 个元素“这样的描述，也可以写成“第一个元素”（而不是“第零个元素”）。
+这里更倾向于从 1 开始编号，这样可以写出“`unshift` 在数组开头添加 N 个元素”这样的描述，也可以写成“第一个元素”（而不是“第零个元素”）。
 
 请注意，这里总是包含没有传递剩余参数的情况（即使没有意义）。然后，在“参数”章节中，像这样记录：
 
 ```md
 - `element1`、…、`elementN`
-  - : 添加到 `arr` 开头的元素。
+  - : 添加到数组开头的元素。
 ```
 
 如果不传递剩余参数具有意义，请在这里添加 `\{{optional_inline}}`。
@@ -194,9 +194,9 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
 #### 异常章节
 
-最后，加入一个“异常”小节，说明在调用构造函数/方法时如果遇到问题会抛出哪些异常。这可能是因为参数名拼写错误或给定的数据类型错误，也可能是因为调用环境有问题（例如，试图在非安全环境中运行仅安全上下文功能）或其他原因。
+最后，加入一个“异常”小节，说明在调用构造函数/方法时如果遇到问题会抛出哪些异常。这可能是因为参数名拼写错误或给定的数据类型错误，也可能是因为调用环境有问题（例如，试图在非安全环境中运行仅限于安全上下文的特性）或其他原因。
 
-确定一个方法会抛出哪些异常需要仔细阅读规范。一般来说，通过规范中对某一功能如何运行的逐步解释，就能提供一份异常和导致异常抛出的情况的可靠列表。
+确定一个方法会抛出哪些异常需要仔细阅读规范。一般来说，通过规范中对某一特性如何运行的逐步解释，就能提供一份异常和导致异常抛出的情况的可靠列表。
 
 异常情况名称和解释应使用描述列表的形式。
 
