@@ -90,7 +90,7 @@ PWA 的安装后和离线体验的外观由清单文件定义。外观清单成�
 ```js
 {
   "name": "...",
-  "short_name": "...", 
+  "short_name": "...",
   "description": "...",
   "start_url": "/",
   "theme_color": "#eeffee",
@@ -110,13 +110,13 @@ PWA 图标帮助用户识别你的应用程序，使其更具视觉吸引力，�
   "name": "MyApp",
   "icons": [
     {
-      "src": "icons/tiny.webp", 
+      "src": "icons/tiny.webp",
       "sizes": "48x48"
     },
     {
       "src": "icons/small.png",
       "sizes": "72x72 96x96 128x128 256x256",
-      "purpose": "maskable" 
+      "purpose": "maskable"
     },
     {
       "src": "icons/large.png",
@@ -144,11 +144,11 @@ PWA 图标帮助用户识别你的应用程序，使其更具视觉吸引力，�
 <div>
   <img alt="一个绿色圆圈" src="circle.svg" role="img" />
   <img alt="一个简单的轮子" src="tire.svg" role="img" />
-  <img alt="一个详细的轮子" src="wheel.svg" role="img" />  
+  <img alt="一个详细的轮子" src="wheel.svg" role="img" />
 </div>
 ```
 
-```css hidden  
+```css hidden
 div {
   display: flex;
   gap: 5px;
@@ -186,7 +186,6 @@ img {
       "sizes": "128x128 256x256"
     },
     {
-  
       "src": "icons/wheel.svg",
       "sizes": "512x512"
     }
