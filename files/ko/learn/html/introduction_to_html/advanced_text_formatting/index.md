@@ -7,9 +7,9 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-텍스트 서식에 있어서 [HTML 텍스트 기본](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다. (그리고 이것은 완전한 목록이 아닙니다). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 아래 첨자, 위 첨자, 연락처 정보 등을 표시하는 방법에 대해 알아봅시다.
+텍스트 서식에 있어서 [HTML 텍스트 기본](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다(그리고 이것은 완전한 목록이 아닙니다). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 아래 첨자, 위 첨자, 연락처 정보 등을 표시하는 방법에 대해 배울 것입니다.
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">필요한 사전 지식:</th>
@@ -82,7 +82,7 @@ aside
 
 ### 하나의 용어에 대한 다중 설명
 
-예를 들어 하나의 용어에 여러 개의 설명이 포함될 수 있다는 점에 유의하세요.
+하나의 용어에 여러 개의 설명이 포함될 수 있다는 점에 유의하세요. 아래는 예시입니다.
 
 ```html
 <dl>
@@ -100,11 +100,11 @@ aside
 
 {{EmbedLiveSample('Multiple_descriptions_for_one_term', '100%', '193px')}}
 
-### 추가학습: 일련의 정의 표시
+### 추가 학습: 일련의 정의 표시
 
 이제 설명 목록을 사용해 볼 차례입니다. 입력 필드에 요소들을 추가하여 출력 필드에 설명목록이 표시되도록 하세요. 원하시는 경우 자신만의 용어와 설명을 사용해 볼 수도 있습니다.
 
-실수를 하셨을 경우에는, _Reset_ 버튼을 통해서 재시작하실 수 있습니다. 해답을 찾지 못하셨을 경우에 _Show solution_ 버튼을 통해서 해답을 보실 수 있습니다.
+실수를 하셨을 경우에는, Reset 버튼을 통해서 재시작하실 수 있습니다. 해답을 찾지 못하셨을 경우에 Show solution 버튼을 통해서 해답을 보실 수 있습니다.
 
 ```html hidden
 <h2>실시간 출력</h2>
@@ -117,13 +117,13 @@ aside
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
-Bacon
-The glue that binds the world together.
-Eggs
-The glue that binds the cake together.
-Coffee
-The drink that gets the world running in the morning.
-A light brown color.
+베이컨
+세상을 하나로 묶는 접착제.
+달걀
+케이크를 하나로 묶어주는 접착제.
+커피
+아침에 세상을 움직이게 하는 음료.
+연한 갈색.
 </textarea>
 
 <div class="playable-buttons">
@@ -167,7 +167,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  "<dl>\n <dt>Bacon</dt>\n <dd>The glue that binds the world together.</dd>\n <dt>Eggs</dt>\n <dd>The glue that binds the cake together.</dd>\n <dt>Coffee</dt>\n <dd>The drink that gets the world running in the morning.</dd>\n <dd>A light brown color.</dd>\n</dl>";
+  "<dl>\n <dt>베이컨</dt>\n <dd>세상을 하나로 묶는 접착제.</dd>\n <dt>달걀</dt>\n <dd>케이크를 하나로 묶어주는 접착제.</dd>\n <dt>커피</dt>\n <dd>아침에 세상을 움직이게 하는 음료.</dd>\n <dd>연한 갈색.</dd>\n</dl>";
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -246,7 +246,7 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 
 ### 블록 인용구
 
-블록 레벨 컨텐츠의 섹션(문단, 여러 단락, 리스트등)이 인용된 경우, 이를 나타내는 {{htmlelement("blockquote")}} 요소로 감싸야합니다. 그리고 [`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 속성에 출처를 표기합니다. 아래의 예시는 MDN `<blockquote>` 요소 페이지를 인용한 것 입니다.
+블록 레벨 컨텐츠의 섹션(문단, 여러 단락, 리스트 등)이 인용된 경우, 이를 나타내는 {{htmlelement("blockquote")}} 요소로 감싸야합니다. 그리고 [`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 속성에 출처를 표기합니다. 아래의 예시는 MDN `<blockquote>` 요소 페이지를 인용한 것 입니다.
 
 ```html
 <p>
@@ -291,7 +291,7 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 
 ### 인용
 
-[`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 속성의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 JavaScript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 링크나 다른 적절한 방법을 통해 텍스트에서 볼 수 있게 만들어야 합니다
+[`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 속성의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 JavaScript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 링크나 다른 적절한 방법을 통해 텍스트에서 볼 수 있게 만들어야 합니다.
 
 {{htmlelement("cite")}} 요소가 있지만 이는 인용되는 자료의 제목(예: 책 이름)을 포함하기 위한 것입니다. 그러나 `<cite>` 안에 있는 텍스트를 어떤 식으로든 인용 출처에 연결하지 못할 이유는 없습니다.
 
@@ -318,11 +318,11 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 </p>
 ```
 
-Citations는 기본적으로 이탤릭체로 스타일이 지정됩니다.
+인용은 기본적으로 이탤릭체로 스타일이 지정됩니다.
 
 {{EmbedLiveSample('Citations', '100%', '179px')}}
 
-### 추가학습: 누가 말했나요?
+### 추가 학습: 누가 말했나요?
 
 다른 실습 과제를 할 시간입니다! 이번 예제에서는 아래 항목을 수행하고자 합니다.
 
@@ -335,7 +335,7 @@ Citations는 기본적으로 이탤릭체로 스타일이 지정됩니다.
 - `http://www.brainyquote.com/quotes/authors/c/confucius.html` 공자 명언
 - `http://example.com/affirmationsforpositivethinking` "부정적인 자기 대화를 없애야 할 필요성"
 
-실수를 하셨을 경우에는, _Reset_ 버튼을 통해서 재시작하실 수 있습니다. 해답을 찾지 못하셨을 경우에 _Show solution_ 버튼을 통해서 해답을 보실 수 있습니다.
+실수를 하셨을 경우에는, Reset 버튼을 통해서 재시작하실 수 있습니다. 해답을 찾지 못하셨을 경우에 Show solution 버튼을 통해서 해답을 보실 수 있습니다.
 
 ```html hidden
 <h2>실시간 출력</h2>
@@ -348,9 +348,9 @@ Citations는 기본적으로 이탤릭체로 스타일이 지정됩니다.
 </p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
-<p>Hello and welcome to my motivation page. As Confucius' quotes site says:</p>
-<p>It does not matter how slowly you go as long as you do not stop.</p>
-<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)</p>
+<p>안녕하세요, 제 동기 부여 페이지에 오신 것을 환영합니다. 공자의 명언 사이트에서 말했듯이.</p>
+<p>멈추지 않는 한 얼마나 천천히 가느냐는 중요하지 않습니다.</p>
+<p>저는 또한 긍정적 사고의 개념과 부정적인 자기 대화를 없애야 할 필요성(긍정적 사고를 위한 긍정의 힘에서 언급된 바와 같이)을 좋아합니다.</p>
 </textarea>
 
 <div class="playable-buttons">
@@ -394,7 +394,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+  '<p>안녕하세요, 제 동기 부여 페이지에 오신 것을 환영합니다. <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>공자의 명언 사이트</cite></a>에서 말했듯이.</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>멈추지 않는 한 얼마나 천천히 가느냐는 중요하지 않습니다.</p>\n</blockquote>\n\n<p>저는 또한 긍정적 사고의 개념과 <q cite="http://example.com/affirmationsforpositivethinking">부정적인 자기 대화를 없애야 할 필요성</q>(<a href="http://example.com/affirmationsforpositivethinking"><cite>긍정적 사고를 위한 긍정의 힘</cite></a>에서 언급된 바와 같이)을 좋아합니다.</p>';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -494,7 +494,7 @@ textarea.onkeyup = () => {
 
 > **참고:** 이전 버전의 HTML에는 {{htmlelement("acronym")}} 요소에 대한 지원도 포함되어 있었지만, 약어와 두문자어를 모두 표현하기 위해 `<abbr>`을 사용하는 것을 선호하여 HTML 사양에서 제거되었습니다. `<acronym>`는 사용해서는 안 됩니다.
 
-### 추가학습: 약어 만들기
+### 추가 학습: 약어 만들기
 
 아래의 간단한 실습 과제를 통해 약어 사용에 대한 학습을 하고자 합니다. 아래의 샘플을 그대로 사용하시거나 여러분의 샘플로 교체 하실 수 있습니다.
 
@@ -509,7 +509,7 @@ textarea.onkeyup = () => {
 </p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
-<p>NASA, the National Aeronautics and Space Administration, sure does some exciting work.</p>
+<p>NASA(미국 항공우주국)는 흥미로운 일을 많이 하고 있습니다.</p>
 </textarea>
 
 <div class="playable-buttons">
@@ -553,7 +553,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  "<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>";
+  "<p><abbr>NASA</abbr>(미국 항공 우주)는 흥미로운 일을 많이 하고 있습니다.</p>";
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -627,13 +627,13 @@ textarea.onkeyup = () => {
 
 ## 연락처 세부 사항 표시
 
-HTML 에서 {{htmlelement("address")}} 요소를 이용해서 연락처 세부 정보를 표시할 수 있습니다. 이것은 단순히 연락처 정보를 표시하는 것입니다.
+HTML에서 {{htmlelement("address")}} 요소를 이용해서 연락처 세부 정보를 표시할 수 있습니다. 이 요소는 연락처 세부 정보를 감싸고 있습니다. 아래는 예시입니다.
 
 ```html
 <address>크리스 밀스, 맨체스터, 그림노스, 영국</address>
 ```
 
-예를 들어 더 복잡한 마크업이나 다른 형태의 연락처 정보도 포함될 수 있습니다.
+아래 예시와 같이 더 복잡한 마크업이나 다른 형태의 연락처 정보도 포함할 수도 있습니다.
 
 ```html
 <address>
@@ -663,7 +663,7 @@ HTML 에서 {{htmlelement("address")}} 요소를 이용해서 연락처 세부 �
 
 ## 위 첨자와 아래 첨자
 
-여러분은 종종 날짜, 화학 공식 및 수학 방적식과 같은 항목을 표시 할 때 올바른 의미를 갖도록 위첨자 아래 첨자를 사용해야 할 수도 있습니다. {{htmlelement("sup")}} 과 {{htmlelement("sub")}} 요소들은 이를 위해 사용할 수 있습니다.
+여러분은 종종 날짜, 화학 공식 및 수학 방적식과 같은 항목을 표시할 때 올바른 의미를 갖도록 위 첨자 아래 첨자를 사용해야 할 수도 있습니다. {{htmlelement("sup")}} 과 {{htmlelement("sub")}} 요소들은 이를 위해 사용할 수 있습니다.
 
 ```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
@@ -684,7 +684,7 @@ HTML 을 이용해 컴퓨터 코드를 나타낼 때 아래와 같은 많은 요
 
 - {{htmlelement("code")}}: 일반적인 컴퓨터 코드를 표시합니다.
 - {{htmlelement("pre")}}: 공백(일반적으로 코드 블록)을 유지하기 위해 사용합니다. 택스트 내에서 들여 쓰기 또는 초과 공백을 사용하면 브라우저가 이를 무시하고 렌더링 된 페이지에 공백을 표시하지 않습니다. 그러나 `<pre></pre>` 태그로 텍스트를 감싸면 공백이 텍스트 편집기에서 보는 것과 동일하게 렌더링 됩니다.
-- {{htmlelement("var")}}: 변수이름을 특별하게 표시합니다.
+- {{htmlelement("var")}}: 변수 이름을 명확하게 표시합니다.
 - {{htmlelement("kbd")}}: 컴퓨터에 입력 된 키보드 (및 기타 유형) 입력을 표시합니다.
 - {{htmlelement("samp")}}: 컴퓨터 프로그램의 출력을 표시합니다.
 
@@ -720,7 +720,7 @@ para.onclick = function() {
 
 ## 시간과 날짜 표시
 
-HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 날짜를 표시하기 위한 {{htmlelement("time")}} 요소를 제공합니다. 예를 들면 아래와 같습니다.
+HTML은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 날짜를 표시하기 위한 {{htmlelement("time")}} 요소를 제공합니다. 예를 들면 아래와 같습니다.
 
 ```html
 <time datetime="2016-01-20">20 January 2016</time>
@@ -742,7 +742,7 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 
 <!-- markdownlint-enable MD033 -->
 
-그러나 이러한 다른 형식들은 컴퓨터가 쉽게 인식할 수 없습니다. 페이지의 모든 이벤트 날짜를 자동으로 인식하여 캘린더에 삽입하려면 어떻게 해야합니까? {{htmlelement("time")}} 요소를 사용하면 기계가 읽을 수 있는 명확한 시간 / 날짜를 첨부 할 수 있습니다.
+그러나 이러한 다른 형식들은 컴퓨터가 쉽게 인식할 수 없습니다. 페이지의 모든 이벤트 날짜를 자동으로 인식하여 캘린더에 삽입하려면 어떻게 해야합니까? {{htmlelement("time")}} 요소를 사용하면 기계가 읽을 수 있는 명확한 시간/날짜를 첨부 할 수 있습니다.
 
 아래의 기본 예제는 간단한 기계 판독 가능 날짜를 제공하지만 사용 가능한 다른 많은 옵션들이 존재합니다.
 
@@ -773,6 +773,6 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 
 ## 요약
 
-HTML 텍스트 의미론에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element) 를 살펴보십시오.([Inline text semantics](/ko/docs/Web/HTML/Element#Inline_text_semantics) 섹션은 시작하기에 좋은 장소입니다). 다음 장에서는 [HTML 문서의 다른 부분을 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)하는 데 사용할 HTML 요소를 살펴 보겠습니다.
+HTML 텍스트 의미론에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element)를 살펴보십시오.([인라인 텍스트 시멘틱](/ko/docs/Web/HTML/Element#인라인 텍스트 시멘틱) 섹션은 시작하기에 좋은 장소입니다). 다음 장에서는 [HTML 문서의 다른 부분을 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)하는 데 사용할 HTML 요소를 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
