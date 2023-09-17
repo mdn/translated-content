@@ -21,6 +21,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callback`
+
   - : この集合のそれぞれの項目に対して実行する関数です。この関数は次の引数で呼び出されます。
 
     - `value`
