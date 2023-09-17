@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-마지막 기사에서는 학습을 더 진행하는 데 사용할 수 있는 React 리소스 목록을 제공합니다.
+마지막 글에서는 학습을 더 진행하는 데 사용할 수 있는 React 리소스 목록을 제공합니다.
 
 <table>
   <tbody>
@@ -27,7 +27,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">목표:</th>
-      <td>React에 대해 자세히 알아보기 위한 추가 리소르르 제공하기 위함입니다.</td>
+      <td>React에 대해 자세히 알아보기 위한 추가 리소스를 제공하기 위함입니다.</td>
     </tr>
   </tbody>
 </table>
@@ -43,9 +43,9 @@ import Form from "./Form";
 import "./Form.css";
 ```
 
-이 접근 방식을 사용하면 특정 컴포넌트에 속하는 CSS를 쉽게 식별하고 관리할 수 있습니다. 그러나, 코드베이스 전체에서 스타일시트를 분할하기도 하며, 이러한 분할은 가치가 없을 수 있습니다. 수백 개의 고유한 view(보기)와 많은 이동 부분이 있는 대규모 애플리케이션의 경우, 사용자에게 전송되는 관련없는 코드의 양을 제한하는 것이 좋습니다. 애플리케이션 전체 스타일과 그 위에 빌드되는 특정 컴포넌트 스타일이 있을 수 있습니다.
+이 접근 방식을 사용하면 특정 컴포넌트에 속하는 CSS를 쉽게 식별하고 관리할 수 있습니다. 그러나 코드베이스 전체에서 스타일시트를 산산조각 내기도 하며, 스타일시트 분할이 그닥 가치가 없을 수도 있습니다. 수백 개의 고유한 시각적인 요소와 많은 이동 요소가 있는 대규모 애플리케이션의 경우, 사용자에게 전송되는 관련없는 코드의 양을 제한하는 것이 좋습니다. 애플리케이션 전체 스타일이 있고 그 위에 특정 컴포넌트 스타일을 빌드하는 편이 좋을 수 있습니다.
 
-[create-react-app 문서에서 컴포넌트 스타일시트에 대해 자세히 알아보세요](https://create-react-app.dev/docs/adding-a-stylesheet/)
+[create-react-app 문서에서 컴포넌트 스타일시트에 대해 자세히 알아보세요.](https://create-react-app.dev/docs/adding-a-stylesheet/)
 
 ## React DevTools
 
@@ -57,7 +57,7 @@ React DevTools 유틸리티를 사용하면 브라우저에서 직접 React 애�
 
 ![React devtools에 표시되는 프로젝트](react-devtools.png)
 
-왼쪽에는, 배열에서 렌더링되는 항목에 대한 일부 고유 키를 포함하여, 응용 프로그램을 구성하는 모든 컴포넌트가 표시됩니다. 오른쪽에는 애플리케이션 컴포넌트가 활용하는 props와 훅이 표시됩니다. 또한, `Form`, `FilterButton` 및 `Todo` 컴포넌트가 오른쪽으로 들여쓰기되어 있다는 점에 유의하세요. 이는 `App`이 해당 컴포넌트의 부모임을 나타냅니다. 더 복잡한 어플리케이션에서, 이 view는 부모/자식 관계를 한눈에 이해하는 데 유용합니다.
+왼쪽에는, 배열에서 렌더링되는 항목에 대한 일부 고유 키를 포함하여, 응용 프로그램을 구성하는 모든 컴포넌트가 표시됩니다. 오른쪽에는 애플리케이션 컴포넌트가 활용하는 props와 훅이 표시됩니다. 또한, `Form`, `FilterButton` 및 `Todo` 컴포넌트가 오른쪽으로 들여쓰기되어 있다는 점에 유의하세요. 이는 `App`이 해당 컴포넌트의 부모임을 나타냅니다. 더 복잡한 어플리케이션에서, 이 화면은 부모/자식 관계를 한눈에 이해하는 데 유용합니다.
 
 React DevTools는 다양한 형태로 제공됩니다.
 
@@ -68,7 +68,7 @@ React DevTools는 다양한 형태로 제공됩니다.
 
 이 중에 하나를 설치한 다음, 이를 사용하여 방금 빌드한 애플리케이션을 검사하세요!
 
-[React 블로그에서 React DevTools에 대해 자세히 읽어보세요](https://reactjs.org/blog/2019/08/15/new-react-devtools.html).
+[React 블로그에서 React DevTools에 대해 자세히 읽어보세요.](https://reactjs.org/blog/2019/08/15/new-react-devtools.html)
 
 ## Context API
 
