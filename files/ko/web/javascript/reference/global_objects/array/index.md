@@ -303,7 +303,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 배열 내의 배열 요소 시퀀스를 복사합니다.
 - {{jsxref("Array.prototype.entries()")}}
-  - : 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새 [배열 순회자](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) 객체를 반환합니다.
+  - : 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새 [배열 반복자](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) 객체를 반환합니다.
 - {{jsxref("Array.prototype.every()")}}
   - : 호출 배열의 모든 요소가 테스트 함수를 만족하면 `true`를 반환합니다.
 - {{jsxref("Array.prototype.fill()")}}
