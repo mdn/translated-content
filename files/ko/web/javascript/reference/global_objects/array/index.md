@@ -331,7 +331,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.join()")}}
   - : 배열의 모든 요소를 문자열로 결합합니다.
 - {{jsxref("Array.prototype.keys()")}}
-  - : 호출 배열의 각 인덱스에 대한 키를 포함하는 새 [배열 순회자](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)를 반환합니다.
+  - : 호출 배열의 각 인덱스에 대한 키를 포함하는 새 [배열 반복자](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)를 반환합니다.
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 호출 배열에서 지정된 요소를 찾을 수 있는 마지막(가장 큰) 인덱스를 반환하고, 찾을 수 없는 경우 `-1`을 반환합니다.
 - {{jsxref("Array.prototype.map()")}}
