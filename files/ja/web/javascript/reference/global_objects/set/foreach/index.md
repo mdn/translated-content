@@ -30,6 +30,7 @@ forEach(callbackFn, thisArg)
       - : それぞれの反復処理のキーです。これは常に `value` と同じです。
     - `set`
       - : 反復処理が行われる集合です。
+
 - `thisArg` {{optional_inline}}
   - : `callbackFn` を実行するときｎ、`this` として使用する値です。
 
