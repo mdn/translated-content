@@ -82,7 +82,7 @@ document["createElement"]("pre");
 
 ブラケット表記法の前には空白を入れることができます。
 
-```js
+```js-nolint
 document ["createElement"]("pre");
 ```
 
