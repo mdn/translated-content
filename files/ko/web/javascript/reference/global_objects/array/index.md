@@ -44,7 +44,7 @@ JavaScript 배열의 {{jsxref("Array/length", "length")}} 속성과 숫자 속�
 
 내장 배열 메서드 중 일부(예: {{jsxref("Array/join", "join()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/indexOf", "indexOf()")}} 등)는 호출 시 배열의 {{jsxref("Array/length", "length")}} 속성 값을 고려합니다.
 
-다른 메서드(예: {{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}} 등)도 배열의 {{jsxref("Array/length", "length")}} 속성을 업데이트합니다.
+다른 메서드(예: {{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}} 등)도 배열의 {{jsxref("Array/length", "length")}} 속성을 갱신합니다.
 
 ```js
 const fruits = [];
