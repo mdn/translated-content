@@ -1,8 +1,9 @@
 ---
-title: PushEvent.data
+title: "PushEvent: data プロパティ"
+short-title: data
 slug: Web/API/PushEvent/data
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Push API")}}

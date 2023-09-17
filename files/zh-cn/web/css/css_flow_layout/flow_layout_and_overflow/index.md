@@ -25,7 +25,7 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/scroll.html", '100%', 700)}}
 
-如果内容适合方框，则使用值 auto 将显示不带滚动条的内容。如果它不适合，则会添加滚动条。将下一个示例与溢出示例进行比较：当溢出滚动只需要垂直滚动时，您应该看到它有水平滚动条和垂直滚动条。下面的自动示例只在我们需要滚动的直接位置添加滚动条。
+如果内容适合方框，则使用值 auto 将显示不带滚动条的内容。如果它不适合，则会添加滚动条。将下一个示例与溢出示例进行比较：当溢出滚动只需要垂直滚动时，你应该看到它有水平滚动条和垂直滚动条。下面的自动示例只在我们需要滚动的直接位置添加滚动条。
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/auto.html", '100%', 700)}}
 
@@ -33,7 +33,7 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 
 注意：在 [Overflow Level 3 的工作草案](https://www.w3.org/TR/css-overflow-3/)中，还有一个附加值 `overflow: clip`。这将类似于 `overflow: hidden`，但不允许编程滚动，框将变为不可滚动。此外，它不会创建块格式上下文。
 
-实际上，overflow 属性是 [`overflow-x`](/zh-CN/docs/Web/CSS/overflow-x) 和 [`overflow-y`](/zh-CN/docs/Web/CSS/overflow-y) 属性的简写。如果只为溢出指定一个值，则此值用于两个轴。但是，您可以指定两个值，在这种情况下，第一个值用于 `overflow-x`，因此是水平方向，第二个值用于 `overflow-y` 和垂直方向。在下面的示例中，我只指定了 `overflow-y: scroll`，这样我们就不会得到不需要的水平滚动条。
+实际上，overflow 属性是 [`overflow-x`](/zh-CN/docs/Web/CSS/overflow-x) 和 [`overflow-y`](/zh-CN/docs/Web/CSS/overflow-y) 属性的简写。如果只为溢出指定一个值，则此值用于两个轴。但是，你可以指定两个值，在这种情况下，第一个值用于 `overflow-x`，因此是水平方向，第二个值用于 `overflow-y` 和垂直方向。在下面的示例中，我只指定了 `overflow-y: scroll`，这样我们就不会得到不需要的水平滚动条。
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow-y.html", '100%', 700)}}
 
@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 
 在[书写模式和流布局指南](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)中，我们研究了 `block-size` 和 `inline-size` 这两个较新的属性，这些属性在使用不同的编写模式时比将布局与屏幕的物理尺寸联系起来更有意义。3 级溢出模块还包括溢出——[`overflow-block`](/zh-CN/docs/Web/CSS/@media/overflow-block) 和 [`overflow-inline`](/zh-CN/docs/Web/CSS/@media/overflow-inline) 的流相关属性。这些对应于 `overflow-x` 和 `overflow-y`，但映射取决于文档的书写模式。
 
-这些属性当前在浏览器中没有实现，因此您需要在当前使用物理属性并根据你的书写模式进行调整。
+这些属性当前在浏览器中没有实现，因此你需要在当前使用物理属性并根据你的书写模式进行调整。
 
 ## 指示溢出
 
@@ -61,4 +61,4 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 
 ## 总结
 
-无论您是在 Web 上的连续媒体中，还是在页面媒体格式（如 print 或 epub）中，了解在处理任何布局方法时内容溢出是如何有用的。通过了解正常流中溢出的工作方式，你应该会发现更容易理解布局方法（如网格和弹性盒子）中溢出内容的含义。
+无论你是在 Web 上的连续媒体中，还是在页面媒体格式（如 print 或 epub）中，了解在处理任何布局方法时内容溢出是如何有用的。通过了解正常流中溢出的工作方式，你应该会发现更容易理解布局方法（如网格和弹性盒子）中溢出内容的含义。

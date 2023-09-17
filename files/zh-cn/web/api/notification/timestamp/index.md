@@ -21,7 +21,7 @@ slug: Web/API/Notification/timestamp
 const dts = Math.floor(Date.now());
 
 const options = {
-  body: "您提交的代码收到了 3 条新的审阅意见。",
+  body: "你提交的代码收到了 3 条新的审阅意见。",
   timestamp: dts,
 };
 

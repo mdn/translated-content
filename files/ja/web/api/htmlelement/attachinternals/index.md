@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef('DOM')}}
 
-**`HTMLElement.attachInternals()`** メソッドは、 {{domxref("ElementInternals")}} オブジェクトを返します。このメソッドにより、[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)が HTML フォームに参加することができるようになります。 `ElementInternals` インターフェイスは、標準的な HTML フォーム要素と同じようにこれらの要素を扱うためのユーティリティを提供し、また、要素に対して[アクセシビリティオブジェクトモデル](https://wicg.github.io/aom/explainer.html)を公開します。
+**`HTMLElement.attachInternals()`** メソッドは、 {{domxref("ElementInternals")}} オブジェクトを返します。このメソッドにより、[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)が HTML フォームに参加することができるようになります。 `ElementInternals` インターフェイスは、標準的な HTML フォーム要素と同じようにこれらの要素を扱うためのユーティリティを提供し、また、要素に対して[アクセシビリティオブジェクトモデル](https://wicg.github.io/aom/explainer.html)を公開します。
 
 ## 構文
 

@@ -10,7 +10,7 @@ l10n:
 
 **`slot`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素が挿入されたシャドウ DOM のスロットの名前を返します。
 
-スロットは[ウェブコンポーネント](/ja/docs/Web/Web_Components)内のプレースホルダーで、ユーザーが独自のマークアップで埋めることができます（詳しくは、[テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください）。
+スロットは[ウェブコンポーネント](/ja/docs/Web/Web_Components)内のプレースホルダーで、ユーザーが独自のマークアップで埋めることができます（詳しくは、[テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)をご覧ください）。
 
 ## 値
 

@@ -419,7 +419,7 @@ var func = (a, b, c) => 1;
 
 ### 解釈の順序
 
-アロー関数のアロー (矢印) は演算子ではありませんが、アロー関数には特別な解釈ルールがあり、通常の関数とは[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)の扱いが異なります。
+アロー関数のアロー (矢印) は演算子ではありませんが、アロー関数には特別な解釈ルールがあり、通常の関数とは[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)の扱いが異なります。
 
 ```js
 let callback;

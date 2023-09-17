@@ -21,7 +21,7 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 ## 包装和弹性方向
 
-当结合 `flex-direction` 属性，包装就如您所期待的方式工作。如果 `flex-direction` 被设置成 row-reverse 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。
+当结合 `flex-direction` 属性，包装就如你所期待的方式工作。如果 `flex-direction` 被设置成 row-reverse 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}
 
