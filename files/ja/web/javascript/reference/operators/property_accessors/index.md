@@ -83,7 +83,7 @@ document["createElement"]("pre");
 ブラケット表記法の前には空白を入れることができます。
 
 ```js
-document["createElement"]("pre");
+document ["createElement"]("pre");
 ```
 
 ### プロパティ名
