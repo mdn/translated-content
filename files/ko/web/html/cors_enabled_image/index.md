@@ -104,7 +104,7 @@ function imageReceived() {
 
 캔버스 크기가 수신된 이다지와 일치하도록 조정된 다음 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}를 사용하여 이미지를 캔버스에 그립니다. 그런 다음 캔버스가 문서에 삽입되어 이미지가 표시됩니다.
 
-이제 이미지를 실제로 로컬에 저장할 차례입니다. 이를 위해 {{domxref("Window.localStorage", "localStorage")}} 전역객체을 통해 액세스되는 웹 스토리지 API의 로컬 스토리지 매커니즘을 사용합니다. 캔버스 매서드 {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}}을 사용하여 이미지를 PNG 이미지를 나타내는 data:// URL 로 변환한 다음 {{domxref("Storage.setItem", "setItem()")}}을 사용하여 로컬 스토리지에 저장합니다.
+이제 이미지를 실제로 로컬에 저장할 차례입니다. 이를 위해 {{domxref("Window.localStorage", "localStorage")}} 전역 객체을 통해 액세스되는 웹 스토리지 API의 로컬 스토리지 매커니즘을 사용합니다. 캔버스 메서드 {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}}을 사용하여 이미지를 PNG 이미지를 나타내는 data:// URL 로 변환한 다음 {{domxref("Storage.setItem", "setItem()")}}을 사용하여 로컬 스토리지에 저장합니다.
 
 ## See also
 
