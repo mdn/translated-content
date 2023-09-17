@@ -52,7 +52,7 @@ fruits.push("banana", "apple", "peach");
 console.log(fruits.length); // 3
 ```
 
-속성이 유효한 배열 인덱스이고 해당 인덱스가 배열의 현재 범위를 벗어날 때 JavaScript 배열에 속성을 설정하면, 엔진은 배열의 {{jsxref("Array/length", "length")}} 속성을 적절히 업데이트합니다.
+속성이 유효한 배열 인덱스이고 해당 인덱스가 배열의 현재 범위를 벗어날 때 JavaScript 배열에 속성을 설정하면, 엔진은 배열의 {{jsxref("Array/length", "length")}} 속성을 적절히 갱신합니다.
 
 ```js
 fruits[5] = "mango";
