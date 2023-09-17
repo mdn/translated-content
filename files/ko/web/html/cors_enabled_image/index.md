@@ -100,7 +100,7 @@ function imageReceived() {
 }
 ```
 
-`imageReceived()` 가 호출되어 다운로드한 이미지를 수신하는 `HTMLImageElement` 의 `"load"` 이벤트를 처리합니다. 이 이벤트는 다운로드한 데이터를 모두 사용할 수 있게 되면 트리거 됩니다. 이미지를 데이터 URL로 변환하는 데 사용할 새 {{HTMLElement("canvas")}} 요소를 생성하고 변수 `context` 에서 캔버스의 2D 드로잉 컨텍스트({{domxref("CanvasRenderingContext2D")}})에 엑세스 하는 것으로 시작됩니다.
+`imageReceived()` 가 호출되어 다운로드한 이미지를 수신하는 `HTMLImageElement` 의 `"load"` 이벤트를 처리합니다. 이 이벤트는 다운로드한 데이터를 모두 사용할 수 있게 되면 트리거 됩니다. 이미지를 데이터 URL로 변환하는 데 사용할 새 {{HTMLElement("canvas")}} 요소를 생성하고 변수 `context` 에서 캔버스의 2D 드로잉 컨텍스트({{domxref("CanvasRenderingContext2D")}})에 접근하는 것으로 시작됩니다.
 
 캔버스 크기가 수신된 이다지와 일치하도록 조정된 다음 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}를 사용하여 이미지를 캔버스에 그립니다. 그런 다음 캔버스가 문서에 삽입되어 이미지가 표시됩니다.
 
