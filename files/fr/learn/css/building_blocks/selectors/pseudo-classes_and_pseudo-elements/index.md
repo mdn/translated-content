@@ -122,3 +122,18 @@ Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le pseu
 {{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
 
 L'utilisation des pseudo-éléments `::before` et `::after` avec la propriété `content` est appelée "Generated Content" en CSS, et vous verrez souvent cette technique utilisée pour diverses tâches. Un bon exemple est le site [CSS Arrow Please](http://www.cssarrowplease.com/), qui vous aide à générer une flèche avec le CSS. Examinez le CSS lorsque vous créez votre flèche et vous verrez les pseudo-éléments {{cssxref("::before")}} and {{cssxref("::after")}}utilisés. Chaque fois que vous voyez ces sélecteurs, regardez la propriété {{cssxref("content")}} pour voir ce qui est ajouté au document.
+
+## Résumé
+
+Dans cet article, nous avons présenté les pseudo-classes et les pseudo-éléments CSS, qui sont des types particuliers de sélecteurs.
+
+Les pseudo-classes vous permettent de cibler un élément lorsqu'il se trouve dans un état particulier, comme si vous aviez ajouté une classe pour cet état au DOM. Les pseudo-éléments agissent comme si vous aviez ajouté un nouvel élément au DOM, et vous permettent de le styliser. Les pseudo-éléments `::before` et `::after` vous permettent d'insérer du contenu dans le document à l'aide de CSS.
+
+Dans le prochain article, nous aborderons les sujets suivants d[combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators).
+
+## See also
+
+- [Références pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
+- [Références pseudo-elements](/fr/docs/Web/CSS/Pseudo-elements)
+
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
