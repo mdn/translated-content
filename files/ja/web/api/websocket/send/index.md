@@ -29,7 +29,7 @@ send(data)
       - : 型付きの配列オブジェクトで使用される基本的なバイナリーデータを送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファーのキューに入れられます。
     - {{domxref("Blob")}}
       - : `Blob` を指定すると、バイナリーフレームで送信される blob の生データをキューに入れます（{{domxref("Blob.type")}} は無視されます）。
-      `bufferedAmount` の値は、その生データのバイトサイズだけ増えます。
+        `bufferedAmount` の値は、その生データのバイトサイズだけ増えます。
     - {{jsxref("TypedArray")}} または {{jsxref("DataView")}}
       - : [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)オブジェクトをバイナリーフレームとして送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファのキューに入れられます。
 
