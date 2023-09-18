@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
 
-{{domxref("BluetoothCharacteristicProperties")}} インターフェイスの読み取り専用プロパティ **`notify`** は、キャラクタリスティックの値のアクノーレッジメントなしのノーティフィケーションが許可されているならば `true` となる `boolean` 値を返します。
+{{domxref("BluetoothCharacteristicProperties")}} インターフェイスの読み取り専用プロパティ **`notify`** は、キャラクタリスティックの値のアクノリッジメントなしのノーティフィケーションが許可されているならば `true` となる `boolean` 値を返します。
 
 ## 値
 

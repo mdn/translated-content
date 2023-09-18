@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-{{domxref("BluetoothCharacteristicProperties")}} インターフェイスの読み取り専用プロパティ **`indicate`** は、キャラクタリスティックの値のアクノーレッジメントありのインジケーションが許可されているならば `true` となる `boolean` 値を返します。
+{{domxref("BluetoothCharacteristicProperties")}} インターフェイスの読み取り専用プロパティ **`indicate`** は、キャラクタリスティックの値のアクノリッジメントありのインジケーションが許可されているならば `true` となる `boolean` 値を返します。
 
 ## 値
 

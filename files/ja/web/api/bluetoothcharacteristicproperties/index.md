@@ -18,9 +18,9 @@ l10n:
 - {{DOMxRef("BluetoothCharacteristicProperties.broadcast", "broadcast")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Server Characteristic Configuration Descriptor によりキャラクタリスティックの値のブロードキャストが許可されているならば `true` となる `boolean` 値を返します。
 - {{DOMxRef("BluetoothCharacteristicProperties.indicate","indicate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックの値のアクノーレッジメントありのインジケーションが許可されているならば `true` となる `boolean` 値を返します。
+  - : キャラクタリスティックの値のアクノリッジメントありのインジケーションが許可されているならば `true` となる `boolean` 値を返します。
 - {{DOMxRef("BluetoothCharacteristicProperties.notify","notify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックの値のアクノーレッジメントなしのノーティフィケーションが許可されているならば `true` となる `boolean` 値を返します。
+  - : キャラクタリスティックの値のアクノリッジメントなしのノーティフィケーションが許可されているならば `true` となる `boolean` 値を返します。
 - {{DOMxRef("BluetoothCharacteristicProperties.read", "read")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : キャラクタリスティックの値の読み取りが許可されているならば `true` となる `boolean` 値を返します。
 - {{DOMxRef("BluetoothCharacteristicProperties.reliableWrite","reliableWrite")}} {{ReadOnlyInline}} {{Experimental_Inline}}
