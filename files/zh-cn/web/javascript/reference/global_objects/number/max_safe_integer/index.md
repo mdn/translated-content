@@ -33,7 +33,7 @@ Number.MAX_SAFE_INTEGER; // 9007199254740991
 
 ### MAX_SAFE_INTEGER 和 EPSILON 之间的关系
 
-{{jsxref("Number.EPSILON")}} 是 2<sup>-52</sup>，而 `MAX_SAFE_INTEGER` 是 2<sup>53</sup> – 1，它们都源自尾数的宽度，即 53位（最高位始终为 1）。将它们相乘会得到一个非常接近但不等于 2 的值。
+{{jsxref("Number.EPSILON")}} 是 2<sup>-52</sup>，而 `MAX_SAFE_INTEGER` 是 2<sup>53</sup> – 1，它们都源自尾数的宽度，即 53 位（最高位始终为 1）。将它们相乘会得到一个非常接近但不等于 2 的值。
 
 ```js
 Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
