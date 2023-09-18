@@ -1,40 +1,64 @@
 ---
-title: ReadableByteStreamController.enqueue()
+title: "ReadableByteStreamController: enqueue() メソッド"
+short-title: enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
+l10n:
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-{{domxref("ReadableByteStreamController")}} インターフェイスの **`enqueue()`** メソッドは、所与のチャンクを関連するストリームのキューに入れます。
+**`enqueue()`** は {{domxref("ReadableByteStreamController")}} で、指定された塊を、関連する読み取り可能なバイトストリームのキューに入れます（塊はストリーム内部のキューにコピーされます）。
+
+これは、 {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} が `null` である場合にのみ、キューへのデータ移譲に使用しましょう。
 
 ## 構文
 
-```
-readableByteStreamController.enqueue(chunk);
+```js-nolint
+enqueue(chunk)
 ```
 
-### パラメーター
+### 引数
 
-- _chunk_
+- `chunk`
   - : キューに入れるチャンク。
 
-### 戻り値
+### 返値
 
-`undefined`。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : ソースオブジェクトが `ReadableByteStreamController` ではないか、何らかの理由でストリームを読み取れないか、チャンクがオブジェクトではないか、チャンクの内部配列バッファーが存在しないか、切り離されています。
+    ストリームが既に閉じられていたときにも発生します。
 
 ## 例
 
-未定。
+[読み取り可能なバイトストリームの使用 > 読み取り可能なソケットプッシュバイトストリームの作成](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams#読み取り可能なソケットプッシュバイトストリームの作成) の例では、未処理の {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} がない場合に `enqueue()` を使用してデータをストリームにコピーする方法を示します。
+もし `byobRequest` があれば、それを使用しましょう。
 
-## 仕様
+下記のコードでは、「仮定の」 `socket.readInto()` メソッドを使用してデータを `ArrayBuffer` に読み込ませ、その後キューに入れています（ただし、実際にデータがコピーされた場合のみ）。
+
+```js
+const buffer = new ArrayBuffer(DEFAULT_CHUNK_SIZE);
+bytesRead = socket.readInto(buffer, 0, DEFAULT_CHUNK_SIZE);
+if (bytesRead === 0) {
+  controller.close();
+} else {
+  controller.enqueue(new Uint8Array(buffer, 0, bytesRead));
+}
+```
+
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableByteStreamController.enqueue")}}
+{{Compat}}
+
+## 関連情報
+
+- [読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}
