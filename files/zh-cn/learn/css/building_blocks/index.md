@@ -7,7 +7,7 @@ slug: Learn/CSS/Building_blocks
 
 这个模块承接[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)——即你对 (CSS) 语言和其语法已经足够熟悉、并且有了一些基本的使用经验，该是稍微深入点学习的时候了。这个模块着眼于级联和继承，所有可供使用的选择器类型，单位，尺寸，背景、边框样式，调试，等等等等。
 
-本文目标是，在你进一步了解 [为文本添加样式](/zh-CN/docs/Learn/CSS/为文本添加样式)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)之前，为你提供一个助你写出合格 CSS 和理解所有基本理论的工具箱。
+本文目标是，在你进一步了解[为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)之前，为你提供一个助你写出合格 CSS 和理解所有基本理论的工具箱。
 
 ## 先决条件
 
@@ -60,17 +60,13 @@ slug: Learn/CSS/Building_blocks
 
 想要测试一下你的 CSS 技能吗？下面这些评估将测试你对以上那些指南中的 CSS 技能的掌握。
 
-[CSS 基本了解](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
+- [基本的 CSS 理解](/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+  - : 这项评估测试你对基本语法、选择器、特异性、盒子模型的掌握。
 
-这项评估测试你对基本语法、选择器、特异性、盒子模型的掌握。
-
-[设计漂亮的信头信笺](/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-
-如果你想留下良好的印象，用一张漂亮的信头信笺写一封信一定是个好的开始。在这一评估中，你将挑战创建这样一个漂亮的网络样板。
-
-[一个炫酷的盒子](/zh-CN/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
-
-在这里，你将练习使用背景和边距来创建一个吸引眼球的盒子。
+- [设计漂亮的信头信笺](/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+  - : 如果你想留下良好的印象，用一张漂亮的信头信笺写一封信一定是个好的开始。在这一评估中，你将挑战创建这样一个漂亮的网络样板。
+- [一个炫酷的盒子](/zh-CN/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+  - : 在这里，你将练习使用背景和边距来创建一个吸引眼球的盒子。
 
 ## 参见
 
