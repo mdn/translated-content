@@ -1,8 +1,9 @@
 ---
-title: WebSocket.send()
+title: "WebSocket: send() メソッド"
+short-title: send()
 slug: Web/API/WebSocket/send
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: 6a0f22ee0b3a854ed37271373cbc1d1099c0d361
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -27,9 +28,10 @@ send(data)
     - {{jsxref("ArrayBuffer")}}
       - : 型付きの配列オブジェクトで使用される基本的なバイナリーデータを送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファーのキューに入れられます。
     - {{domxref("Blob")}}
-      - : `Blob` を指定すると、バイナリーフレームで送信される blob の生データをキューに入れます。`bufferedAmount` の値は、その生データのバイトサイズだけ増えます。
+      - : `Blob` を指定すると、バイナリーフレームで送信される blob の生データをキューに入れます（{{domxref("Blob.type")}} は無視されます）。
+      `bufferedAmount` の値は、その生データのバイトサイズだけ増えます。
     - {{jsxref("TypedArray")}} または {{jsxref("DataView")}}
-      - : [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)オブジェクトをバイナリーフレームとして送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファのキューに入れられます。
+      - : [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)オブジェクトをバイナリーフレームとして送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファのキューに入れられます。
 
 ### 返値
 

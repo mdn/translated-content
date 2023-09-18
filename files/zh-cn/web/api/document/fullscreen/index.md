@@ -1,42 +1,52 @@
 ---
-title: document.mozFullScreen
+title: Document：fullscreen 属性
 slug: Web/API/Document/fullscreen
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
-过时的{{domxref("Document")}}接口的 **`fullscreen`** 只读属性报告文档当前是否以全屏模式显示内容。
+过时的 {{domxref("Document")}} 接口的 **`fullscreen`** 只读属性表明页面当前是否以全屏模式显示内容。
 
-虽然这个属性是只读的，但如果修改它，它不会抛出 (即使在严格模式下);setter 是一个非操作，它将被忽略。
+尽管这个属性是只读的，但如果修改它，即使在严格模式下也不会抛出错误；它的 `setter` 方法是空操作将被忽略。
 
-> **备注：** 由于不推荐使用此属性，你可以通过检查{{DOMxRef("document.fullscreenelement")}}是否为 **`null`** 来确定文档上是否启用全屏模式。
+> **备注：** 由于该属性已被弃用，你可以通过检查 {{DOMxRef("Document.fullscreenElement")}} 是否不为 `null` 来确定页面是否处于全屏模式。
 
-### 概述
+## 值
 
-返回一个布尔值，表明当前文档是否处于全屏模式。
+返回一个布尔值，如果页面当前在全屏模式下显示元素，则为 `true`；否则为 `false`。
 
-### 语法
+## 示例
 
-```
-var isFullScreen = document.mozFullScreen || document.webkitIsFullScreen;
-```
-
-### 例子
+这个简单的函数使用过时的 `fullscreen` 属性报告当前是否激活了全屏模式。
 
 ```js
 function isDocumentInFullScreenMode() {
-  // 过去由 F11 触发的那种浏览器全屏模式和 HTML5 中内容的全屏模式是不一样的
-  return (
-    (document.fullscreenElement && document.fullscreenElement !== null) ||
-    (!document.mozFullScreen && !document.webkitIsFullScreen)
-  );
+  return document.fullscreen;
 }
 ```
 
-### 备注
+另一方面，下面的示例使用当前的 `fullscreenElement` 属性来确定同样的事情：
 
-查看[使用全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)来了解更多相关内容。
+```js
+function isDocumentInFullScreenMode() {
+  return document.fullscreenElement !== null;
+}
+```
 
-### 浏览器兼容性
+如果 `fullscreenElement` 不为 `null`，则返回 `true`，表示全屏模式正处于生效状态。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [全屏指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
+- {{DOMxRef("Document.fullscreenEnabled")}}
