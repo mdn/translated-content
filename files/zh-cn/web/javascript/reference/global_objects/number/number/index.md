@@ -44,7 +44,7 @@ typeof b; // "number"
 
 ### 使用 Number() 将 BigInt 转换为数字
 
-`Number()` 是唯一可以将 BigInt 转换为数字而不抛出错误的情况，因为其预期行为非常明确。
+`Number()` 是唯一可以将 BigInt 转换为数字而不抛出错误的情况，因为这是完全显式的转换。
 
 ```js example-bad
 +1n; // TypeError: Cannot convert a BigInt value to a number
