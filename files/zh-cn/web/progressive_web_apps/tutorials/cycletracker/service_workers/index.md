@@ -372,7 +372,7 @@ if ("serviceWorker" in navigator) {
 - Windows：Ctrl+F5，Shift+F5 或 Ctrl+Shift+R。
 - MacOS：Shift+Command+R。
 - MacOS 上的 Safari：按 Option+Command+E 清空缓存，然后按 Option+Command+R。
-- 移动设备：前往浏览器（Android）或操作系统（Samsung、iOS）设置，在高级设置下找到浏览器（iOS）或站点数据（Android、Samsung）网站设置，然后删除经期跟踪器的数据，再重新下载页面。
+- 移动设备：前往浏览器（Android）或操作系统（Samsung、iOS）设置，在高级设置下找到浏览器（iOS）或站点数据（Android、Samsung）网站设置，然后删除经期跟踪器的数据，再重新加载页面。
 
 ### 使用开发人员工具
 
