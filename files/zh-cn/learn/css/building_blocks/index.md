@@ -62,7 +62,6 @@ slug: Learn/CSS/Building_blocks
 
 - [基本的 CSS 理解](/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : 这项评估测试你对基本语法、选择器、特异性、盒子模型的掌握。
-
 - [设计漂亮的信头信笺](/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
   - : 如果你想留下良好的印象，用一张漂亮的信头信笺写一封信一定是个好的开始。在这一评估中，你将挑战创建这样一个漂亮的网络样板。
 - [一个炫酷的盒子](/zh-CN/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
