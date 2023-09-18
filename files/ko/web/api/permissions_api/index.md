@@ -2,7 +2,7 @@
 title: Permissions API
 slug: Web/API/Permissions_API
 l10n:
-  sourceCommit: 3dbfd299e6f34873d6355bae4b12b5c1c69242f1
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -17,9 +17,9 @@ l10n:
 
 예를 들어, [Notifications API](/ko/docs/Web/API/Notifications_API)는 권한을 요청하고 권한 상태를 확인하는 자체 메서드를 제공한 반면, [Geolocation API](/ko/docs/Web/API/Geolocation)는 그렇지 않았습니다. Permissions API는 개발자가 권한 작업을 위한 일관되고 더 나은 사용자 환경을 구현할 수 있는 도구를 제공합니다.
 
-`permissions` 속성은 표준 브라우징 맥락과 작업자 맥락(WorkerNavigator - 작업자 내부에서 권한 확인이 가능) 모두에서 {{domxref("Navigator")}} 객체에서 사용할 수 있게 되었으며, Permissions API 기능에 대한 접근을 제공하는 {{domxref("Permissions")}} 객체를 반환합니다.
+`permissions` 속성은 표준 브라우징 맥락과 작업자 맥락({{domxref("WorkerNavigator")}} - 작업자 내부에서 권한 확인이 가능) 모두에서 {{domxref("Navigator")}} 객체에서 사용할 수 있게 되었으며, Permissions API 기능에 대한 접근을 제공하는 {{domxref("Permissions")}} 객체를 반환합니다.
 
-이 객체가 있으면, {{domxref("Permissions.query()")}} 메서드를 사용하여 권한을 조회하여, 특정 API에 대한 {{domxref("PermissionStatus")}}로 확인되는 프로미스를 반환하는 등 권한 관련 작업을 수행할 수 있습니다. for a specific API.
+이 객체가 있으면, {{domxref("Permissions.query()")}} 메서드를 사용하여 권한을 조회하여, 특정 API에 대한 {{domxref("PermissionStatus")}}로 확인되는 프로미스를 반환하는 등 권한 관련 작업을 수행할 수 있습니다.
 
 ### 권한 인식 API 목록(Permission-aware APIs)
 
@@ -66,5 +66,5 @@ Permissions API를 사용하여 모든 API의 권한 상태를 조회할 수 있
 
 - [Permissions API 사용하기](/ko/docs/Web/API/Permissions_API/Using_the_Permissions_API)
 - [Permissions API를 사용하여 사용자가 카메라 액세스를 허용하거나 거부하는 빈도 감지하기](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
-- {{DOMxRef("Notification.permission")}}
+- {{DOMxref("Notification.permission_static", "Notification.permission")}}
 - [개인정보 보호, 권한 및 정보 보안](/ko/docs/Web/Privacy)
