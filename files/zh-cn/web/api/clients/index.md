@@ -12,7 +12,7 @@ slug: Web/API/Clients
 - {{domxref("Clients.get()")}}
   - : 返回一个匹配给定 {{domxref("Client.id", "id")}} 的 {{domxref("Client")}} 的 {{jsxref("Promise")}} .
 - {{domxref("Clients.matchAll()")}}
-  - : 返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许您控制返回的 clients 类型。
+  - : 返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许你控制返回的 clients 类型。
 - {{domxref("Clients.openWindow()")}}
   - : 打开给定 URL 的新浏览器窗口，并返回新 {{domxref("WindowClient")}} a 的 {{jsxref("Promise")}} .
 - {{domxref("Clients.claim()")}}

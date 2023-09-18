@@ -12,7 +12,7 @@ slug: Web/HTML/Attributes/multiple
 `multiple` が {{HTMLElement("input/email", "email")}} 入力型に設定されている場合、ユーザーは 0 個 ([`required`](/ja/docs/Web/HTML/Attributes/required) がない場合)、1 個、またはそれ以上のカンマ区切りのメールアドレスを入れることができます。
 
 ```html
-<input type="email" multiple name="emails" id="emails">
+<input type="email" multiple name="emails" id="emails" />
 ```
 
 `multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾と先頭の空白はすべて削除されます。
@@ -20,7 +20,7 @@ slug: Web/HTML/Attributes/multiple
 `multiple` が {{HTMLElement("input/file", "file")}} 入力型に設定された場合、ユーザーは 1 つ以上のファイルを選択することができます。ユーザーはファイルピッカーから複数のファイルを、選択したプラットフォームが許可する任意の方法 (<kbd>Shift</kbd> か <kbd>Control</kbd> を押したまま、それからクリックするなど) で選択することができます。
 
 ```html
-<input type="file" multiple name="uploads" id="uploads">
+<input type="file" multiple name="uploads" id="uploads" />
 ```
 
 この属性を省略した場合は、 `<input>` あたりに 1 つのファイルしか選択することができません。
@@ -53,7 +53,14 @@ slug: Web/HTML/Attributes/multiple
 
 ```html
 <label for="emails">誰にメールしますか？</label>
-<input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64">
+<input
+  type="email"
+  multiple
+  name="emails"
+  id="emails"
+  list="drawfemails"
+  required
+  size="64" />
 
 <datalist id="drawfemails">
   <option value="grumpy@woodworkers.com">Grumpy</option>
@@ -67,7 +74,9 @@ slug: Web/HTML/Attributes/multiple
 ```
 
 ```css hidden
-input:invalid {border: red solid 3px;}
+input:invalid {
+  border: red solid 3px;
+}
 ```
 
 `multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾の空白と先頭の空白はすべて削除されます。 [`required`](/ja/docs/Web/HTML/Attributes/required) 属性が存在する場合、少なくとも 1 つのメールアドレスが必要です。
@@ -83,17 +92,22 @@ input:invalid {border: red solid 3px;}
 ```html
 <form method="post" enctype="multipart/form-data">
   <p>
-    <label for="uploads">
-       アップロードする画像を選択してください:
-    </label>
-    <input type="file" id="uploads" name="uploads" accept=".jpg, .jpeg, .png, .svg, .gif" multiple>
+    <label for="uploads"> アップロードする画像を選択してください: </label>
+    <input
+      type="file"
+      id="uploads"
+      name="uploads"
+      accept=".jpg, .jpeg, .png, .svg, .gif"
+      multiple />
   </p>
   <p>
-    <label for="text">アップロードするテキストファイルを選択してください: </label>
-    <input type="file" id="text" name="text" accept=".txt">
- </p>
+    <label for="text"
+      >アップロードするテキストファイルを選択してください:
+    </label>
+    <input type="file" id="text" name="text" accept=".txt" />
+  </p>
   <p>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
   </p>
 </form>
 ```
@@ -110,33 +124,33 @@ input:invalid {border: red solid 3px;}
 
 ```html
 <form method="get" action="#">
-<p>
- <label for="dwarfs">好きな木こりを選ぶ:</label>
-  <select multiple name="drawfs" id="drawfs">
-    <option>grumpy@woodworkers.com</option>
-    <option>happy@woodworkers.com</option>
-    <option>sleepy@woodworkers.com</option>
-    <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
-    <option>dopey@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
- <label for="favoriteOnly">好きなものを選ぶ:</label>
-  <select name="favoriteOnly" id="favoriteOnly">
-    <option>grumpy@woodworkers.com</option>
-    <option>happy@woodworkers.com</option>
-    <option>sleepy@woodworkers.com</option>
-    <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
-    <option>dopey@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
-  <input type="submit" value="Submit">
-</p>
+  <p>
+    <label for="dwarfs">好きな木こりを選ぶ:</label>
+    <select multiple name="drawfs" id="drawfs">
+      <option>grumpy@woodworkers.com</option>
+      <option>happy@woodworkers.com</option>
+      <option>sleepy@woodworkers.com</option>
+      <option>bashful@woodworkers.com</option>
+      <option>sneezy@woodworkers.com</option>
+      <option>dopey@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <label for="favoriteOnly">好きなものを選ぶ:</label>
+    <select name="favoriteOnly" id="favoriteOnly">
+      <option>grumpy@woodworkers.com</option>
+      <option>happy@woodworkers.com</option>
+      <option>sleepy@woodworkers.com</option>
+      <option>bashful@woodworkers.com</option>
+      <option>sneezy@woodworkers.com</option>
+      <option>dopey@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <input type="submit" value="Submit" />
+  </p>
 </form>
 ```
 

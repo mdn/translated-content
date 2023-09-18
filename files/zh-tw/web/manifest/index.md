@@ -7,7 +7,7 @@ slug: Web/Manifest
 
 Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。
 
-Web App manifests 是屬於 [progressive web apps](/zh-TW/docs/Web/Apps/Progressive) 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。
+Web App manifests 是屬於 [progressive web apps](/zh-TW/docs/Web/Progressive_web_apps) 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。
 
 ## 部署 manifest
 

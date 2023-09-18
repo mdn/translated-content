@@ -29,7 +29,7 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 console.log(arr.0); // 構文エラー
 ```
 
-JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
+JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
 `years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
 
@@ -795,7 +795,7 @@ console.table(values);
 console.log(arr.0); // 構文エラー
 ```
 
-JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
+JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
 `years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
 
@@ -881,7 +881,7 @@ console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
 
 - JavaScript ガイドより
 
-  - [オブジェクトプロパティのインデックス付け](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#オブジェクトプロパティのインデックス付け)
+  - [オブジェクトプロパティのインデックス付け](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトプロパティのインデックス付け)
   - [インデックス付きコレクション: `Array` オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 
 - [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)

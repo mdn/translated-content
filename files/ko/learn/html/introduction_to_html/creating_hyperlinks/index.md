@@ -46,7 +46,7 @@ l10n:
 
 ## 링크의 구조
 
-기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 {{htmlattrxref("href", "a")}} 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
+기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
 
 ```html
 <p>
@@ -338,7 +338,7 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 > **참고:** 각 필드의 값은 인쇄되지 않는 문자(탭, 캐리지 리턴, 페이지 구분과 같은 보이지 않는 문자 [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding))와 공백을 사용하여 URL로 인코딩해야 합니다.
 > 또한 물음표(`?`)를 사용하여 필드 값에서 기본 URL을 구분하고, `mailto:` URL의 각 필드를 구분하는 `&`를 사용합니다.
 > 이것은 표준 URL 쿼리 표기법입니다.
-> 어떤 URL 쿼리 표기법이 더 일반적으로 사용되는지 이해하기 위해 [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) 문서를 읽어보세요.
+> 어떤 URL 쿼리 표기법이 더 일반적으로 사용되는지 이해하기 위해 [The GET method](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) 문서를 읽어보세요.
 
 여기 다른 몇 가지 `mailto` URL 샘플들이 있습니다.
 
@@ -350,10 +350,10 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 ## 실력을 시험해 보세요
 
-이 글의 끝에 도달한 여러분은 가장 중요했던 정보들을 기억하고 계신가요? 다음 단계로 넘어가기 전에 이 정보를 알고있는지 확인하기 위한 추가 테스트 해볼 수 있습니다. 자세한 내용은 [Test your skills: Links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) 링크를 참조하세요.
+이 글의 끝에 도달한 여러분은 가장 중요했던 정보들을 기억하고 계신가요? 다음 단계로 넘어가기 전에 이 정보를 알고있는지 확인하기 위한 추가 테스트 해볼 수 있습니다. 자세한 내용은 [Test your skills: Links](/ko/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) 링크를 참조하세요.
 
 ## 요약
 
-이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)입니다.
+이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)입니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

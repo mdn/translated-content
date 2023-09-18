@@ -33,8 +33,8 @@ slug: Web/API/Window/copy_event
 ## 例
 
 ```js
-window.addEventListener('copy', (event) => {
-    console.log('copy action initiated')
+window.addEventListener("copy", (event) => {
+  console.log("copy action initiated");
 });
 ```
 

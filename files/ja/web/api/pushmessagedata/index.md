@@ -1,15 +1,17 @@
 ---
 title: PushMessageData
 slug: Web/API/PushMessageData
+l10n:
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
-[Push API](/ja/docs/Web/API/Push_API) の **`PushMessageData`** インターフェイスは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。
+**`PushMessageData`** は[プッシュ API](/ja/docs/Web/API/Push_API) のインターフェイスで、さまざまな形式でサーバーから送信されるプッシュテータを取得する方法を提供します。
 
-[Fetch API](/ja/docs/Web/API/Fetch_API) の同様のメソッドが 1 回しか呼び出せないのと異なり、これらは複数回呼び出せます。
+[フェッチ API](/ja/docs/Web/API/Fetch_API) の同様のメソッドが 1 回しか呼び出せないのと異なり、これらは複数回呼び出せます。
 
-Push API を通して受け取ったメッセージはプッシュサービスによって暗号化されて送信され、`PushMessageData` インターフェースのメソッドで利用可能になる前にブラウザーによって自動的に 復号化されます。
+プッシュ API を通して受け取ったメッセージはプッシュサービスによって暗号化されて送信され、`PushMessageData` インターフェースのメソッドで利用可能になる前にブラウザーによって自動的に復号されます。
 
 ## インスタンスプロパティ
 
@@ -29,13 +31,13 @@ Push API を通して受け取ったメッセージはプッシュサービス�
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
-  var obj = event.data.json();
+self.addEventListener("push", (event) => {
+  const obj = event.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     fireNotification(obj, event);
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });
@@ -47,4 +49,4 @@ self.addEventListener('push', function(event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushMessageData")}}
+{{Compat}}

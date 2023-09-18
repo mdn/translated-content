@@ -25,7 +25,7 @@ mySet[Symbol.iterator]();
 
 ### for..of とともに \[@@iterator]\() を使う
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
 
 ```js
 const mySet = new Set();

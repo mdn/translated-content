@@ -1,6 +1,9 @@
 ---
-title: Navigator.appCodeName
+title: "Navigator: appCodeName プロパティ"
+short-title: appCodeName
 slug: Web/API/Navigator/appCodeName
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
@@ -9,13 +12,7 @@ slug: Web/API/Navigator/appCodeName
 
 > **メモ:** このプロパティが実際の製品名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`Mozilla`" を返します。
 
-## 構文
-
-```js
-codeName = navigator.appCodeName;
-```
-
-### 値
+## 値
 
 "`Mozilla`" という文字列です。
 

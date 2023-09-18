@@ -1,21 +1,24 @@
 ---
-title: NDEFRecord.mediaType
+title: "NDEFRecord: mediaType プロパティ"
+short-title: mediaType
 slug: Web/API/NDEFRecord/mediaType
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`mediaType`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードの {{Glossary("MIME type", "MIME タイプ")}}を返します。この値は `recordType` が `"mime"` と等しくない場合は `null` になります。
 
 ## 構文
 
-```js
+```js-nolint
 NDEFRecord.mediaType
 ```
 
 ### 値
 
-{{DOMxRef("USVString")}} で、このレコードのペイロードの {{Glossary("MIME type", "MIME タイプ")}}が入ります。
+文字列で、このレコードのペイロードの {{Glossary("MIME type", "MIME タイプ")}}が入ります。
 
 ## 例
 
@@ -23,17 +26,17 @@ NDEFRecord.mediaType
 
 ```js
 const ndef = new NDEFReader();
-  await ndef.scan();
-  ndef.onreading = (event) => {
-    const decoder = new TextDecoder();
-    for (const record of event.message.records) {
-      if (record.mediaType === "application/json") {
-        const json = JSON.parse(decoder.decode(record.data));
-        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
-        console.log(`${json.name} is ${article} ${json.title}`);
-      }
+await ndef.scan();
+ndef.onreading = (event) => {
+  const decoder = new TextDecoder();
+  for (const record of event.message.records) {
+    if (record.mediaType === "application/json") {
+      const json = JSON.parse(decoder.decode(record.data));
+      const article = /^[aeio]/i.test(json.title) ? "an" : "a";
+      console.log(`${json.name} is ${article} ${json.title}`);
     }
-  };
+  }
+};
 ```
 
 ## 仕様書
