@@ -99,11 +99,11 @@ const APP_STATIC_RESOURCES = [
 
 #### 任务
 
-使用 `VERSION` 版本号赖创建一个版本化的 `CACHE_NAME` 缓存名，作为常量添加到 `sw.js`。
+使用 `VERSION` 版本号来创建一个版本化的 `CACHE_NAME` 缓存名，作为常量添加到 `sw.js`。
 
 #### 示例方案
 
-我们将我们缓存命名为 `period-tracker-` 后跟 `VERSION`版本号。鉴于我们的常量声明都是单行的，为了方便阅读，我们将其放在了资源数组常量的前面。
+我们将缓存命名为 `period-tracker-` 后跟 `VERSION`版本号。鉴于我们的常量声明都是单行的，为了方便阅读，我们将其放在了资源数组常量的前面。
 
 ```JavaScript
 const VERSION = "v1";
@@ -298,7 +298,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员，也包括你自己的好习惯。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#with_developer_tools)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
+当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员的好习惯，也包括你自己。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#with_developer_tools)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
 
 **备注：** 在对应用的任何资源做出更改后更新版本号是非常重要的，包括 CSS、HTML、JS 代码和图像素材。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
 
@@ -318,6 +318,7 @@ self.addEventListener("fetch", (event) => {
 ```
 
 如果这个属性受支持，我们就可以使用 service worker API 的 [`ServiceWorkerContainer`](/zh-CN/docs/Web/API/ServiceWorkerContainer) 接口的 [`register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 方法。
+
 ```html
 <script>
   if ("serviceWorker" in navigator) {
@@ -358,7 +359,7 @@ if ("serviceWorker" in navigator) {
 </script>
 ```
 
-您可以体验功能完整的[CycleTracker 月经周期跟踪 Web 应用](https://mdn.github.io/pwa-examples/cycletracker/service_workers)，并可以在 GitHub 上查看该 [Web 应用的源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers)。是的，它能运行，并且现在正式成为了一个 PWA！
+你可以体验功能完整的[CycleTracker 月经周期跟踪 Web 应用](https://mdn.github.io/pwa-examples/cycletracker/service_workers)，并可以在 GitHub 上查看该 [Web 应用的源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers)。是的，它能运行，并且现在正式成为了一个 PWA！
 
 ## 调试 service worker
 
