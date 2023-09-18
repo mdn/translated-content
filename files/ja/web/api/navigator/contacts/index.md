@@ -1,15 +1,16 @@
 ---
-title: Navigator.contacts
+title: "Navigator: contacts プロパティ"
+short-title: contacts
 slug: Web/API/Navigator/contacts
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 **`contacts`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、 {{domxref('ContactsManager')}} インターフェイスを返します。ユーザーが連絡先リストから項目を選択し、選択した項目の限定された詳細をウェブサイトやアプリケーションと共有することができます。
 
-### 値
+## 値
 
 {{domxref('ContactsManager')}} オブジェクトです、 2 回連続して呼び出すと、同じオブジェクトを返します。
 

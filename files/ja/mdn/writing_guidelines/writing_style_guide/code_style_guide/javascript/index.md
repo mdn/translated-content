@@ -327,7 +327,7 @@ class Teacher extends Person {
 
 ### 条件演算子
 
-[条件（または三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)は、以下のように単一の行にまとめて記述してください。
+[条件（または三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)は、以下のように単一の行にまとめて記述してください。
 
 ```js example-good
 let status = age >= 18 ? "adult" : "minor";

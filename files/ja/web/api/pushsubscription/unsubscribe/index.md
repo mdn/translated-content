@@ -1,16 +1,19 @@
 ---
-title: PushSubscription.unsubscribe()
+title: "PushSubscription: unsubscribe() メソッド"
+short-title: unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェイスの **`unsubscribe()`** メソッドは、現在のサブスクリプションが成功裏に登録解除されたときに {{jsxref("Boolean")}} で解決される{{jsxref("Promise")}} を返します。
+`unsubscribe()` は {{domxref("PushSubscription")}} インターフェイスのメソッドで、現在のサブスクリプションから脱退に成功したときに論理値で解決される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
 ```js-nolint
-PushSubscription.unsubscribe().then(function(Boolean) { ... });
+unsubscribe()
 ```
 
 ### 引数
@@ -19,20 +22,20 @@ PushSubscription.unsubscribe().then(function(Boolean) { ... });
 
 ### 返値
 
-現在のサブスクリプションが成功裏に登録解除されたときに {{jsxref("Boolean")}} で解決される{{jsxref("Promise")}}。
+現在のサブスクリプションから脱退に成功したときに論理値で解決される {{jsxref("Promise")}} です。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function (reg) {
-  reg.pushManager.getSubscription().then(function (subscription) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
     subscription
       .unsubscribe()
-      .then(function (successful) {
-        // 登録解除が成功
+      .then((successful) => {
+        // 登録脱退が成功
       })
-      .catch(function (e) {
-        // 登録解除が失敗
+      .catch((e) => {
+        // 登録脱退が失敗
       });
   });
 });
@@ -44,9 +47,8 @@ navigator.serviceWorker.ready.then(function (reg) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushSubscription.unsubscribe")}}
+{{Compat}}
 
 ## 関連項目
 
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
 - {{domxref("PushManager.getSubscription")}}
