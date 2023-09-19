@@ -10,7 +10,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基础计算机能力，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"

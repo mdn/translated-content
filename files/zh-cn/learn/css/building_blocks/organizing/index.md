@@ -10,7 +10,7 @@ slug: Learn/CSS/Building_blocks/Organizing
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         电脑的基本操作，<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"

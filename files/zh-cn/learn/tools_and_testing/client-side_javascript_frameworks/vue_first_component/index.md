@@ -12,7 +12,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉<a href="/zh-CN/docs/learn/HTML">HTML</a>、<a
