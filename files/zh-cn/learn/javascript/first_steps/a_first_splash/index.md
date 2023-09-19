@@ -10,7 +10,7 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>计算机基础知识，初步理解 HTML 和 CSS，了解 JavaScript。</td>
     </tr>
     <tr>

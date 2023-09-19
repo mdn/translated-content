@@ -12,7 +12,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识（Prerequisites）:</th>
+      <th scope="row">前提rerequisites）:</th>
       <td>
         <p>
           基本的计算机知识，<a

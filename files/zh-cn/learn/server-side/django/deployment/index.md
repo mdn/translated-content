@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/Deployment
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row"><strong>先决条件</strong>：</th>
+      <th scope="row"><strong>前提</strong>：</th>
       <td>
         完成所有先前的教程，包括：
         <p>
@@ -21,7 +21,7 @@ slug: Learn/Server-side/Django/Deployment
       </td>
     </tr>
     <tr>
-      <th scope="row"><strong>目的</strong>：</th>
+      <th scope="row"><strong>目标</strong>：</th>
       <td>了解你可以在何处以及如何将 Django 应用程序部署到生产环境。</td>
     </tr>
   </tbody>

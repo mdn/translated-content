@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识</th>
+      <th scope="row">前提</th>
       <td>
         基本计算机知识，对于 HTML 和 CSS 的基本理解（见<a
           href="/zh-CN/docs/Learn/JavaScript/First_steps"

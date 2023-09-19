@@ -10,7 +10,7 @@ slug: Learn/Forms/Form_validation
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础能力，对 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
           href="/zh-CN/docs/Learn/CSS"

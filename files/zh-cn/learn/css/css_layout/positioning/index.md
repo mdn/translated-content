@@ -12,7 +12,7 @@ slug: Learn/CSS/CSS_layout/Positioning
 <table>
   <tbody>
     <tr>
-      <th>预备知识：</th>
+      <th>前提：</th>
       <td>
         HTML 基础 (学习
         <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML">HTML 导学</a>) 和
@@ -22,7 +22,7 @@ slug: Learn/CSS/CSS_layout/Positioning
       </td>
     </tr>
     <tr>
-      <th>目的：</th>
+      <th>目标：</th>
       <td>了解 CSS 定位的工作原理</td>
     </tr>
   </tbody>
