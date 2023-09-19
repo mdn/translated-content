@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 ## 值
 
-`9007199254740991` (9,007,199,254,740,991，或者 \~9 千万亿).
+`9007199254740991`（9,007,199,254,740,991，或者约 9 千万亿）。
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -49,7 +49,7 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 
 ## 参见
 
-- [Polyfill of `Number.MAX_SAFE_INTEGER` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [`core-js` 中 `Number.MAX_SAFE_INTEGER` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.isSafeInteger()")}}
 - {{jsxref("BigInt")}}
