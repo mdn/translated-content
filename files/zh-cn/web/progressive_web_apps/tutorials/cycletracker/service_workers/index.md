@@ -38,7 +38,7 @@ Service worker 还需要负责：
 
 ### 版本号
 
-PWA 一但在用户的机器上被安装，唯一通知浏览器有要检索的更新文件的方法就是对 service worker 作出修改。如果 PWA 的其他资源发生了改动——比如 HTML 更新了、CSS 里的 bug 被修复了、`app.js` 添加了新函数、一张图片被压缩了以减少文件体积，等等——你安装的 PWA 的 service worker 是不会知道它需要下载更新资源的。只有 service worker 被改动了，PWA 才会知道它也许该更新缓存了，然后去发起更新的任务。
+PWA 一但在用户的机器上被安装，唯一通知浏览器有要检索的更新文件的方法就是对 service worker 作出修改。如果 PWA 的其他资源发生了改动——比如 HTML 更新了、CSS 里的 bug 被修复了、`app.js` 添加了新功能、一张图片被压缩了以减少文件体积，等等——你安装的 PWA 的 service worker 是不会知道它需要下载更新资源的。只有 service worker 被改动了，PWA 才会知道它也许该更新缓存了，然后去发起更新的任务。
 
 虽然修改任意字符在技术上都足以达成，但 PWA 的最佳做法是创建一个按顺序更新的版本号常量用以指示文件的更新。即使 service worker 本身没有其他任何的改动，也应当以更新版本号（或者日期）这种较为正式的方式对 service worker 做出修改，这也是给开发人员提供一种辨别应用版本的方法。
 
@@ -228,7 +228,7 @@ self.addEventListener("fetch", (event) => {
 
 ## 完善 service worker 文件
 
-你的 `sw.js` 文件现在应该和下面的 JavaScript 脚本相似。要注意，当 `APP_STATIC_RESOURCES` 数组中的资源列表发生了任何改动，我们唯一需要在这个 service worker 中更新的常量或函数就是 `VERSION` 的值。
+你的 `sw.js` 文件现在应该和下面的 JavaScript 脚本相似。要注意，当 `APP_STATIC_RESOURCES` 数组中的资源列表发生了任何改动，我们唯一需要在这个 service worker 中更新的常量或功能就是 `VERSION` 的值。
 
 ```JavaScript
 // 缓存的版本
