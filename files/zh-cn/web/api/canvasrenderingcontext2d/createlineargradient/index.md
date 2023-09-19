@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.createLinearGradient()`** 方法创建一个沿参数坐标指定的直线的渐变。
+这个 **`CanvasRenderingContext2D.createLinearGradient()`** 方法会根据两个给定的坐标值所构成的线段创建一个渐变。
 
 ![](mdn-canvas-lineargradient.png)
 
