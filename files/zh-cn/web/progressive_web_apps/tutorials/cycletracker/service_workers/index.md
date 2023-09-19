@@ -382,7 +382,7 @@ if ("serviceWorker" in navigator) {
 
 ![带有停止和注销 service worker 按钮的 Firefox 开发人员工具应用程序面板](firefox_sw.jpg)
 
-在某些开发者工具里，你可以手动注销一个 service worker，或者你可以选择 service worker 的“重新加载时更新”选项来设置当开发人员工具打开时，每次重新加载都重置并重新激活 service worker。还有一个选项可以绕过 service worker 从网络加载资源。这个面板包含了本教程中我们未覆盖到的特性，但会对你在创建包含 [同步](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#周期性后台同步)和[推送消息](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#推送消息)等特性的更高级的 PWA 时有所帮助，这些都涵盖在了[离线和后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)中。
+在某些开发者工具里，你可以手动注销一个 service worker，或者你可以选择 service worker 的“重新加载时更新”选项来设置当开发人员工具打开时，每次重新加载都重置并重新激活 service worker。还有一个选项可以绕过 service worker 从网络加载资源。这个面板包含了本教程中我们未涵盖的特性，但会对你在创建包含[同步](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#周期性后台同步)和[推送消息](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#推送消息)等特性的更高级的 PWA 时有所帮助，这些内容都涵盖在了[离线和后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)中。
 
 ![Edge 开发人员工具显示针对 service worker 的应用程序面板集](edge_sw.jpg)
 
