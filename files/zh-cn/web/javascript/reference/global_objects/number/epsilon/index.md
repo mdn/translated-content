@@ -27,16 +27,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 
 ### 相等测试
 
-任何占用位数有限的数字编码系统，无论你选择的是什么基数（例如十进制或二进制），都*必定*无法精确表示所有数字，因为你试图使用有限的内存来表示数轴上的无限点。例如，十进制系统无法准确表示 1/3，而二进制系统无法准确表示 `0.1`。因此，例如，`0.1 + 0.2` 并不完全等于 `0.3`：
+任何占用位数有限的数字编码系统，无论你选择的是什么基数（例如十进制或二进制），都*必定*无法精确表示所有数字，因为你试图使用有限的内存来表示数轴上无限数量的点。例如，十进制系统无法准确表示 1/3，而二进制系统无法准确表示 `0.1`。因此，例如，`0.1 + 0.2` 并不完全等于 `0.3`：
 
 ```js
 console.log(0.1 + 0.2); // 0.30000000000000004
 console.log(0.1 + 0.2 === 0.3); // false
 ```
 
-For this reason, it is often advised that **floating point numbers should never be compared with `===`**. Instead, we can deem two numbers as equal if they are _close enough_ to each other. The `Number.EPSILON` constant is usually a reasonable threshold for errors if the arithmetic is around the magnitude of `1`, because `EPSILON`, in essence, specifies how accurate the number "1" is.
-
-因此，通常建议**不要使用 `===` 比较浮点数**。相反，我们可以认为两个数在彼此之间是*足够接近*的时候它们是相等的。如果算术运算的数量级在 `1` 附近，那么 `Number.EPSILON` 常数通常是一个合理的误差阈值，因为实质上，`EPSILON`指定了数字“1”的精确度。
+因此，通常建议**不要使用 `===` 比较浮点数**。相反，我们可以认为两个数在彼此之间是*足够接近*的时候它们是相等的。如果算术运算的数量级在 `1` 附近，那么 `Number.EPSILON` 常数通常是一个合理的误差阈值，因为实质上，`EPSILON` 指定了数字“1”的精确度。
 
 ```js
 function equal(x, y) {
@@ -63,7 +61,7 @@ console.log(x + y); // 2000.3000000000002；误差为 10^-13 而不是 10^-16
 console.log(equal(x + y, z)); // false
 ```
 
-在这种情况下，需要更大的容差。由于进行比较的数字具有大约 `2000` 的数量级，使用类似于 `2000 * Number.EPSILON` 的乘积可以为此情况提供足够的容差。
+在这种情况下，需要更大的容差。由于进行比较的数字的数量级大约为 `2000`，使用类似于 `2000 * Number.EPSILON` 的乘积可以为此情况提供足够的容差。
 
 ```js
 function equal(x, y, tolerance = Number.EPSILON) {
