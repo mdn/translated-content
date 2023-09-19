@@ -23,7 +23,7 @@ slice(start, end)
 ```
 ````
 
-> **备注：** 这里使用的标记语言是 `js-nolint`，其中 `js` 指示了应使用 JavaScript 语法进行高亮。对于 JavaScript 语法部分，也需要指定 `nolint`，因为该部分并不是完全的合法 JavaScript 代码，我们并不想让 linter “修复”它（这里省略了返回值和行尾分号）。
+> **备注：** 这里使用的标记语言是 `js-nolint`，其中 `js` 指示了应使用 JavaScript 语法进行高亮。对于 JavaScript 语法部分，也需要指定 `nolint`，因为该部分并不是完全的合法 JavaScript 代码，我们并不想让 linter“修正”它（这里省略了返回值和行尾分号）。
 
 ### 通用风格规则
 
