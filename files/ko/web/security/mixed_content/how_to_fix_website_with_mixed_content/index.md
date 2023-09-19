@@ -17,7 +17,7 @@ Firefox 23부터는 기본적으로 [액티브 혼합 콘텐츠](/ko/docs/Web/Se
 
 이미 Chrome부터 혼합 콘텐츠 차단을 시행했기 때문에 웹사이트가 Chrome에서 정상적으로 작동하는 경우, 혼합 콘텐츠 차단 기능이 있는 Firefox에서도 동일하게 작동할 가능성이 높습니다.
 
-어떤 경우든 Firefox에 문제가 있는지 확인하는 가장 좋은 방법은 [최신 Firefox 에디션](https://www.mozilla.org/en-US/firefox/developer/)을 다운로드하고, 다른 페이지에서 [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)을 열고 ("Security" 메시지 활성화) 웹 사이트에 접속하여 혼합 콘텐츠와 관련된 사항이 보고되는지 확인하는 것입니다. 또는 [SSL-check](https://www.jitbit.com/sslcheck/)나 [Missing Padlock](https://www.missingpadlock.com)과 같은무료 온라인 크롤러, [HTTPSChecker](https://httpschecker.net/how-it-works)와 같은 데스크톱 크롤러, 아니면 [mcdetect](https://github.com/agis/mcdetect)과 같은 CLI 도구를 사용하여 웹사이트를 반복적으로 검사하고 안전하지 않은 콘텐츠의 링크를 찾을 수 있습니다. 혼합 콘텐츠에 대한 언급이 없다면 웹사이트는 좋은 상태입니다. 계속해서 멋진 웹사이트를 만드세요!
+어떤 경우든 Firefox에 문제가 있는지 확인하는 가장 좋은 방법은 [최신 Firefox 에디션](https://www.mozilla.org/en-US/firefox/developer/)을 다운로드하고, 검사할 여러 페이지에서 [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)을 열고 ("Security" 메시지 활성화) 웹 사이트에 접속하여 혼합 콘텐츠와 관련된 사항이 보고되는지 확인하는 것입니다. 또는 [SSL-check](https://www.jitbit.com/sslcheck/)나 [Missing Padlock](https://www.missingpadlock.com)과 같은 무료 온라인 크롤러, [HTTPSChecker](https://httpschecker.net/how-it-works)와 같은 데스크톱 크롤러, 아니면 [mcdetect](https://github.com/agis/mcdetect)과 같은 CLI 도구를 사용하여 웹사이트를 재귀적으로 검사하고 안전하지 않은 콘텐츠의 링크를 찾을 수 있습니다. 혼합 콘텐츠에 대한 언급이 없다면 웹사이트는 좋은 상태입니다. 계속해서 멋진 웹사이트를 만드세요!
 
 ## 웹사이트를 고치는 방법
 
