@@ -300,7 +300,7 @@ self.addEventListener("fetch", (event) => {
 
 当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员（也包括你自己）的好习惯。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#使用开发人员工具)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
 
-**备注：** 在对应用的任何资源做出更改后更新版本号是非常重要的，包括 CSS、HTML、JS 代码和图像素材。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
+**备注：** 在对应用的任何资源（包括 CSS、HTML、JS 代码和图像素材）做出更改后更新版本号是非常重要的。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
 
 ## 注册 service worker
 
