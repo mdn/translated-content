@@ -17,7 +17,7 @@ Marcar una tecnología como experimental indica que los lectores deben pensar cu
 
 Para una tecnología marcada como **experimental**, se aplican una o más de las siguientes condiciones:
 
-- Se implementa y habilita de forma predeterminada en la compilación de la versión de **solo un ** motor de renderizado de los navegadores principales modernos.
+- Se implementa y habilita de forma predeterminada en la compilación de la versión de **solo un** motor de renderizado de los navegadores principales modernos.
 - Solo se admite a través de cambios de configuración como preferencias o parámetros, independientemente del número de motores de renderizado admitidos.
 - Es probable que su especificación definitiva cambie significativamente en formas incompatibles con versiones anteriores (es decir, puede romper el código existente que se basa en la característica).
 
