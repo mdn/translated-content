@@ -129,11 +129,11 @@ Dans cet article, nous avons présenté les pseudo-classes et les pseudo-éléme
 
 Les pseudo-classes vous permettent de cibler un élément lorsqu'il se trouve dans un état particulier, comme si vous aviez ajouté une classe pour cet état au DOM. Les pseudo-éléments agissent comme si vous aviez ajouté un nouvel élément au DOM, et vous permettent de le styliser. Les pseudo-éléments `::before` et `::after` vous permettent d'insérer du contenu dans le document à l'aide de CSS.
 
-Dans le prochain article, nous aborderons les sujets suivants d[combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators).
+Dans le prochain article, nous aborderons [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators).
 
-## See also
+## Voir aussi
 
-- [Références pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
-- [Références pseudo-elements](/fr/docs/Web/CSS/Pseudo-elements)
+- [La référence des pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
+- [La référence des pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
