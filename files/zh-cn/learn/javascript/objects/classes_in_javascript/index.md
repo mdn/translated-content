@@ -14,7 +14,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript
         基础（参见<a

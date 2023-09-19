@@ -10,7 +10,7 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">
           HTML 简介</a

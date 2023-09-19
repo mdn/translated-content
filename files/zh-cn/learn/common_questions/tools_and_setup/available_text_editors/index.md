@@ -10,7 +10,7 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 <table class="learn-box nostripe standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         你应该已经知晓了<a
           href="/zh-CN/docs/Learn/Common_questions/What_software_do_I_need">为了建立一个网站所需的各种软件</a

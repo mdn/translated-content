@@ -10,7 +10,7 @@ slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章的前提条件：</th>
+      <th scope="row">前提：</th>
       <td>在尝试这个测验之前，你应该已经完成了这个模块中所有文章的学习。</td>
     </tr>
     <tr>

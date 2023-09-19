@@ -10,7 +10,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         你必须知道<a
           href="/zh-CN/docs/Learn/Common_questions/What_is_a_web_server"
