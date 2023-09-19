@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps"

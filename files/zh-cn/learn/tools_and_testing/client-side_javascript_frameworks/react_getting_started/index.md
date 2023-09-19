@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
@@ -31,7 +31,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>要设置本地 React 开发环境，创建一个启动应用程序，并了解其工作原理</td>
     </tr>
   </tbody>

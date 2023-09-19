@@ -10,7 +10,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟悉 HTML 基础（包含在
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"

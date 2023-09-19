@@ -15,7 +15,7 @@ slug: Learn/Forms
 >
 > [**开始使用**](/zh-CN/docs/Learn/Front-end_web_developer)
 
-## 预备知识
+## 前提
 
 在开始这个模块之前，你至少应该熟悉[对 HTML 的介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，你应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
 

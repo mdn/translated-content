@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         完成本章之前的全部课程，特别是
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/文件和网站结构"

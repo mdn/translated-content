@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/Authentication
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         完成之前的所有教程主题，包括<a
           href="/zh-CN/docs/Learn/Server-side/Django/Sessions"
@@ -19,7 +19,7 @@ slug: Learn/Server-side/Django/Authentication
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>了解如何设置和使用用户身份验证和权限。</td>
     </tr>
   </tbody>

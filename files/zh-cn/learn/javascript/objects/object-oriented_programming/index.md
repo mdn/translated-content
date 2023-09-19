@@ -14,7 +14,7 @@ slug: Learn/JavaScript/Objects/Object-oriented_programming
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         理解 JavaScript 函数，熟悉 JavaScript 基础
         （参见
