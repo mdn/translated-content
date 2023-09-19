@@ -1,5 +1,5 @@
 ---
-title: CycleTracker：清单和图标
+title: 经期跟踪器：清单和图标
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
 ---
 
@@ -29,7 +29,7 @@ PWA 清单文件是一个 JSON 文件，它提供了关于该应用程序的特�
 
 在保存清单文件并从我们的 HTML 文件中链接到它之前，我们可以开发一个仍然简洁但具有更多信息的 JSON 对象，以定义 PWA 的身份、展示和图标。是的，上面的内容会起作用，但让我们讨论一下这个示例中的成员以及其他一些成员，这些成员使清单文件能够更好地定义我们的经期跟踪器 PWA 的外观。
 
-## 应用身份
+## 应用标识
 
 为了识别你的 PWA，JSON 必须包含一个 `name` 或 `short_name` 成员，或者两者都包含，以定义 PWA 的名称。它还可以包含一个 `description`。
 
