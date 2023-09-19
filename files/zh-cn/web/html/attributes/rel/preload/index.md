@@ -75,6 +75,39 @@ slug: Web/HTML/Attributes/rel/preload
 
 > **注意：** 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到 — 请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束 — 请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
 
+## 包括 MIME 类型
+
+`<link>` 元素可以接受一个 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性，其中包含元素指向的资源的 MIME 类型。这在预加载资源时特别有用 — 浏览器将使用 `type` 属性的值来确定是否支持该资源，如果不支持，则会忽略它，仅在支持时才会下载它。
+
+你可以在我们的视频示例中看到这个示例（查看[完整的源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)，以及[在线版本](https://mdn.github.io/html-examples/link-rel-preload/video/)），以下是其中一部分代码片段。这展示了一般情况下预加载背后的核心行为。
+
+```html
+<head>
+  <meta charset="utf-8" />
+  <title>Video preload example</title>
+
+  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
+</head>
+<body>
+  <video controls>
+    <source src="sintel-short.mp4" type="video/mp4" />
+    <source src="sintel-short.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="sintel-short.mp4">link to the video</a> instead.
+    </p>
+  </video>
+</body>
+```
+
+上面的示例代码只会在支持的浏览器中预加载 `video/mp4` 格式的视频，对于那些浏览器中支持 `video/mp4` 格式的用户，实际上会使用 `video/mp4` 格式的视频（因为它是首个指定的 {{htmlelement("source")}}）。这可以让拥有支持 `video/mp4` 格式的浏览器的用户获得更流畅和更响应的视频播放体验。
+
+请注意，对于那些浏览器既支持 `video/mp4` 格式又支持 `video/webm` 格式的用户，如果在上述代码中还指定了一个 `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` 元素，那么两种格式的视频（`video/mp4` 和 `video/webm`）_都_ 会被预加载，尽管实际上只有其中一种会被使用。
+
+因此，不建议为同一资源的多种类型指定预加载。相反，最佳实践是仅为大多数用户可能实际使用的类型指定预加载。这就是为什么上面示例中的代码没有为 `video/webm` 视频指定预加载的原因。
+
+然而，缺少预加载并不会阻止那些需要的用户实际使用 `video/webm` 视频：对于那些浏览器不支持 `video/mp4` 但支持 `video/webm` 的用户，上述示例中的代码仍然会使 `video/webm` 视频被使用——但它这样做的同时也不会导致对大多数其他用户不必要地进行预加载。
+
 
 更多细节见[通过 rel="preload"进行内容预加载](/zh-CN/docs/Web/HTML/Preloading_content)。
 
