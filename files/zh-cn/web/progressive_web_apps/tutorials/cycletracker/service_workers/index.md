@@ -10,7 +10,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 
 目前为止，我们已经为经期跟踪器编写了 HTML、CSS 和 JavaScript，添加了清单文件用于定义颜色、图标、URL 以及其他的应用特性。我们已经有了一个能运行的 Web 应用！但它还不是一个 PWA。在这一章节，我们将要编写将我们的功能完整、能够作为独立应用分发并且能无缝地在离线状态下运行的 Web 应用转化为 PWA 所需的 JavaScript 脚本。
 
-如果你还没有完成到这一步，请复制这些 [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html)、[CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css)、[JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js)，还有[清单](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON 文件的内容，并分别按照以下文件名保存：`index.html`、`styles.css`、`app.js`，以及 `cycletracker.json`。
+如果你还没有完成到这一步，请复制这些 [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html)、[CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css)、[JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js)，还有[清单](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON 文件的内容，并分别按照以下文件名保存：`index.html`、`styles.css`、`app.js` 以及 `cycletracker.json`。
 
 在本章节，我们要创建 `sw.js`——service worker 脚本，用于将我们的 Web 应用转化成 PWA。我们已经有了一个 JavaScript 文件——在 HTML 文件的最后一行里名为 `app.js`的那一个。这个 JavaScript 脚本提供了全部标准 Web 应用特性的功能。我们并不会像使用 `app.js` 那样通过 {{HTMLElement("script")}} 元素的 `src` 属性来调用 `sw.js`，而是通过注册 service worker 来建立它与 Web 应用的联系。
 
@@ -298,7 +298,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员的好习惯，也包括你自己。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#with_developer_tools)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
+当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员（也包括你自己）的好习惯。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#使用开发人员工具)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
 
 **备注：** 在对应用的任何资源做出更改后更新版本号是非常重要的，包括 CSS、HTML、JS 代码和图像素材。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
 
