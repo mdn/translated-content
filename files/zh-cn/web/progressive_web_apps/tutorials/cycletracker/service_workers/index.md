@@ -62,7 +62,7 @@ const APP_STATIC_RESOURCES = [
   "/index.html",
   "/styles.css",
   "/app.js",
-  "/icon-512x512.png"
+  "/icon-512x512.png",
 ];
 ```
 
@@ -151,7 +151,7 @@ self.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       cache.addAll(APP_STATIC_RESOURCES);
-    })()
+    })(),
   );
 });
 ```
@@ -178,10 +178,10 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
-        })
+        }),
       );
       await clients.claim();
-    })()
+    })(),
   );
 });
 ```
@@ -221,7 +221,7 @@ self.addEventListener("fetch", (event) => {
         // 响应 HTTP 404 状态码
         return new Response(null, { status: 404 });
       }
-    })()
+    })(),
   );
 });
 ```
@@ -252,7 +252,7 @@ self.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       cache.addAll(APP_STATIC_RESOURCES);
-    })()
+    })(),
   );
 });
 
@@ -266,10 +266,10 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
-        })
+        }),
       );
       await clients.claim();
-    })()
+    })(),
   );
 });
 
@@ -293,7 +293,7 @@ self.addEventListener("fetch", (event) => {
         // 如果资源不在缓存中，返回 404
         return new Response(null, { status: 404 });
       }
-    })()
+    })(),
   );
 });
 ```
