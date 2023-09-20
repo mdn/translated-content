@@ -65,13 +65,13 @@ slug: Web/HTML/Element/ul
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+- `compact` {{Deprecated_inline}}
 
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > **Warning:** Do not use this attribute, as it has been deprecated: use [CSS](/ko/docs/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : This attribute sets the bullet style for the list. The values defined under [HTML3.2](/ko/docs/HTML3.2) and the transitional version of [HTML 4.0/4.01](/ko/docs/HTML4.01) are:
 
