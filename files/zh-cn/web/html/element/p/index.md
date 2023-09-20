@@ -7,7 +7,7 @@ slug: Web/HTML/Element/p
 
 [HTML](/zh-CN/docs/Web/HTML) **`<p>`** 元素表示文本的一个段落。在视觉媒体中，段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。
 
-段落是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，如果在关闭的 `</p>` 标记之前解析了另一个块级元素，则该标记将自动关闭。请参阅下面的“标签省略”。
+段落是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，如果在关闭的 `</p>` 标签之前解析了另一个块级元素，则该标签将自动关闭。请参阅下面的“标签省略”。
 
 {{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
 
@@ -36,7 +36,7 @@ slug: Web/HTML/Element/p
     <tr>
       <th scope="row">标签省略</th>
       <td>
-        开始标记是必要的。如果 {{HTMLElement("p")}} 元素后面紧跟 {{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hr")}}、{{HTMLElement("menu")}}、{{HTMLElement("nav")}}、{{HTMLElement("ol")}}、{{HTMLElement("pre")}}、{{HTMLElement("section")}}、{{HTMLElement("table")}}、{{HTMLElement("ul")}} 或其他 {{HTMLElement("p")}} 元素，或者父元素中已没有内容，且父元素不是 {{HTMLElement("a")}} 元素，则可以省略结束标记。
+        开始标签是必要的。如果 {{HTMLElement("p")}} 元素后面紧跟 {{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hr")}}、{{HTMLElement("menu")}}、{{HTMLElement("nav")}}、{{HTMLElement("ol")}}、{{HTMLElement("pre")}}、{{HTMLElement("section")}}、{{HTMLElement("table")}}、{{HTMLElement("ul")}} 或其他 {{HTMLElement("p")}} 元素，或者父元素中已没有内容，且父元素不是 {{HTMLElement("a")}} 元素，则可以省略结束标签。
       </td>
     </tr>
     <tr>
