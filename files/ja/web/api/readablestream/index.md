@@ -41,7 +41,7 @@ l10n:
 
 ## 非同期の反復処理
 
-`ReadableStream` は[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)を実装しています。
+`ReadableStream` は[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を実装しています。
 これにより、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) 構文を使用して、ストリーム内の塊を非同期に反復処理することができます。
 
 ```js
