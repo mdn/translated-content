@@ -9,7 +9,7 @@ l10n:
 
 **`Accept-Post`** 응답 HTTP 헤더는 HTTP 포스트 요청에 대해 서버가 수락하는 [미디어 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 알립니다.
 
-모든 메소드에 대한 응답으로 **`Accept-Post`**를 사용하면 요청된 리소스에서 `POST`가 허용됨을 의미합니다. 헤더의 모든 문서/미디어 형식은 해당 문서 형식이 허용됨을 추가로 나타냅니다.
+모든 메소드에 대한 응답으로 **`Accept-Post`** 를 사용하면 요청된 리소스에서 `POST`가 허용됨을 의미합니다. 헤더의 모든 문서/미디어 형식은 해당 문서 형식이 허용됨을 추가로 나타냅니다.
 
 예를 들어, 지원되지 않는 미디어 유형이 포함된 `POST` 요청을 수신하는 서버는 {{HTTPStatus("415")}} `Unsupported Media Type`과 하나 이상의 지원되는 미디어 유형을 참조하는 **`Accept-Post`** 헤더를 사용하여 응답할 수 있습니다.
 
@@ -19,11 +19,11 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">헤더 유형</th>
-      <td>{{Glossary("Response header")}}</td>
+      <td>{{Glossary("Response header", "응답 헤더")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더 이름")}}</th>
+      <td>예</td>
     </tr>
   </tbody>
 </table>
