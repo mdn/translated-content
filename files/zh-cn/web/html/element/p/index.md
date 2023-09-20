@@ -22,7 +22,7 @@ slug: Web/HTML/Element/p
       <td>
         <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
           >流式内容</a
-        >，可感知内容。
+        >、可感知内容。
       </td>
     </tr>
     <tr>
