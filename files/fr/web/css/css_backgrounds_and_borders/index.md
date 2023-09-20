@@ -89,9 +89,9 @@ Pour voir le code de cet exemple, [regardez la source sur GitHub](https://github
 
 - [Apprendre CSS: Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : Dans cet article, on voit comment implémenter des images décoratives à l'aide d'images d'arrière-plan CSS.
-- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Dans cet article, on voit comment paramétrer un ou plusieurs arrière-plans pour un élément.
-- [Mettre à l'échelle des images en arrière-plan](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images)
+- [Redimensionner les images d'arrière-plan avec background-size](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Dans cet article, on voit comment modifier la taille et paramétrer la répétition d'une image d'arrière-plan.
 - [Apprendre CSS: Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Dans cet article, on voit comment les bordures, ainsi que d'autres propriétés du modèle de boîte, affectent le modèle de boîte CSS.
@@ -136,8 +136,8 @@ Pour voir le code de cet exemple, [regardez la source sur GitHub](https://github
 ## Voir aussi
 
 - Des outils interactifs qui vous permettent de créer visuellement des bordures, des coins arrondis et des ombres :
-  - [Générateur pour `border-image`](/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-image)
-  - [Générateur pour `border-radius`](/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-radius)
-  - [Générateur pour `box-shadow`](/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Générateur_box-shadow)
+  - [Générateur pour `border-image`](/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Border-image_generator)
+  - [Générateur pour `border-radius`](/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Border-radius_generator)
+  - [Générateur pour `box-shadow`](/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Box-shadow_generator)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color), incluant les bordures.
 - Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow) qui applique un effet d'ombre portée à une image en entrée. Cette fonction est utilisée par les propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}}.
