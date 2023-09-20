@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         回顾
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"

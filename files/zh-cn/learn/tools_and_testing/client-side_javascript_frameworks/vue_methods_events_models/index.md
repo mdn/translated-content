@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_even
 <table>
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a

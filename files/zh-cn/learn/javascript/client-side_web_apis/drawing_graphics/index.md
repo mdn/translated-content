@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         JavaScript 基础（见
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a

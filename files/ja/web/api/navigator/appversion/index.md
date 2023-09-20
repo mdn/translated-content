@@ -19,7 +19,9 @@ l10n:
 ## 例
 
 ```js
-alert(`このブラウザーのバージョンは ${navigator.appVersion} と報告されています。`);
+alert(
+  `このブラウザーのバージョンは ${navigator.appVersion} と報告されています。`,
+);
 ```
 
 ## 注

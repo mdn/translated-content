@@ -10,7 +10,7 @@ slug: Learn/CSS/Styling_text/Web_fonts
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本计算机素养，HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

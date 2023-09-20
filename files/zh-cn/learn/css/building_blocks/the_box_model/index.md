@@ -12,7 +12,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识（Prerequisites）:</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           基本的计算机知识，<a
@@ -30,7 +30,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
       </td>
     </tr>
     <tr>
-      <th scope="row">学习目标（Objective）:</th>
+      <th scope="row">目标：</th>
       <td>
         学习盒模型的基本理论，了解盒装模型的工作原理，了解盒模型与替代模型的区别以及如何进行切换。
       </td>
