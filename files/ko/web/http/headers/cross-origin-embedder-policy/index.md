@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 응답 헤더는 문서에 교차 출처 리소스를 임베딩하도록 구성합니다.
+HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 응답 헤더는 문서에 교차 출처 리소스를 포함하도록 구성합니다.
 
 <table class="properties">
   <tbody>
@@ -41,7 +41,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 
 ### 특정 기능은 교차 출처 격리에 따라 달라집니다
 
-문서에 `require-corp` 또는 `credentialless` 값이 설정된 COEP 헤더가 있는 경우, 스로틀링되지 않은 타이머를 사용하여 {{jsxref("SharedArrayBuffer")}} 객체나 {{domxref("Performance.now()")}} 같은 특정 기능에만 액세스할 수 있습니다.
+문서에 `require-corp` 또는 `credentialless` 값이 설정된 COEP 헤더가 있는 경우, 스로틀링되지 않은 타이머를 사용하여 {{jsxref("SharedArrayBuffer")}} 객체나 {{domxref("Performance.now()")}} 같은 특정 기능에만 접근할 수 있습니다.
 
 ```http
 Cross-Origin-Embedder-Policy: require-corp
@@ -72,7 +72,7 @@ if (crossOriginIsolated) {
 <img src="https://thirdparty.com/img.png" crossorigin />
 ```
 
-일부 이미지에 대해 CORS가 지원되지 않는 경우, 쿠키 없이 요청하는 대신 크로스 오리진 서버에서 명시적인 옵트인 없이 이미지를 로드하는 대안으로 `credentialless` COEP 값을 사용할 수 있습니다.
+일부 이미지에 대해 CORS가 지원되지 않는 경우, 쿠키 없이 요청하는 대신 교차 출처 서버에서 명시적인 동의 없이 이미지를 로드하는 대안으로 `credentialless` COEP 값을 사용할 수 있습니다.
 
 ## 명세서
 
