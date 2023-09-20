@@ -12,7 +12,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 
 如果你还没有完成到这一步，请复制这些 [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html)、[CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css)、[JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js)，还有[清单](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON 文件的内容，并分别按照以下文件名保存：`index.html`、`styles.css`、`app.js` 以及 `cycletracker.json`。
 
-在本章节，我们要创建 `sw.js`——service worker 脚本，用于将我们的 Web 应用转化成 PWA。我们已经有了一个 JavaScript 文件——在 HTML 文件的最后一行里名为 `app.js`的那一个。这个 JavaScript 脚本提供了全部标准 Web 应用特性的功能。我们并不会像使用 `app.js` 那样通过 {{HTMLElement("script")}} 元素的 `src` 属性来调用 `sw.js`，而是通过注册 service worker 来建立它与 Web 应用的联系。
+在本章节，我们要创建 `sw.js`——service worker 脚本，用于将我们的 Web 应用转化成 PWA。我们已经有了一个 JavaScript 文件——在 HTML 文件的最后一行里名为 `app.js` 的那一个。这个 JavaScript 脚本提供了全部标准 Web 应用特性的功能。我们并不会像使用 `app.js` 那样通过 {{HTMLElement("script")}} 元素的 `src` 属性来调用 `sw.js`，而是通过注册 service worker 来建立它与 Web 应用的联系。
 
 在本课程的最后，你将会拥有一个功能完整的 PWA——一个能够被完整安装的、即使用户处于离线状态也能运行的逐步增强的 Web 应用。
 
@@ -32,13 +32,13 @@ Service worker 还需要负责：
 
 我们通过响应以下三种 service worker 事件来实现这些任务：
 
-- [`fetch`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) 事件。
-- [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 事件。
+- [`fetch`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) 事件、
+- [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 事件，以及
 - [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件。
 
 ### 版本号
 
-PWA 一但在用户的机器上被安装，唯一通知浏览器有要检索的更新文件的方法就是对 service worker 作出修改。如果 PWA 的其他资源发生了改动——比如 HTML 更新了、CSS 里的 bug 被修复了、`app.js` 添加了新功能、一张图片被压缩了以减少文件体积，等等——你安装的 PWA 的 service worker 是不会知道它需要下载更新资源的。只有 service worker 被改动了，PWA 才会知道它也许该更新缓存了，然后去发起更新的任务。
+PWA 一但在用户的机器上被安装，唯一通知浏览器有要检索的更新文件的方法就是对 service worker 作出修改。如果 PWA 的其他资源发生了改动——比如 HTML 更新了、CSS 里的 bug 被修复了、`app.js` 添加了新函数、一张图片被压缩了以减少文件体积，等等——你安装的 PWA 的 service worker 是不会知道它需要下载更新资源的。只有 service worker 被改动了，PWA 才会知道它也许该更新缓存了，然后去发起更新的任务。
 
 虽然修改任意字符在技术上都足以达成，但 PWA 的最佳做法是创建一个按顺序更新的版本号常量用以指示文件的更新。即使 service worker 本身没有其他任何的改动，也应当以更新版本号（或者日期）这种较为正式的方式对 service worker 做出修改，这也是给开发人员提供一种辨别应用版本的方法。
 
@@ -76,7 +76,7 @@ const APP_STATIC_RESOURCES = [
 
 #### 示例方案
 
-我们收纳了在本教程的其他章节中所创建的经期跟踪器在离线状态下运作所需的静态资源。我们的 `sw.js` 文件目前是这样的：
+我们包括了在本教程的其他章节中所创建的经期跟踪器在离线状态下运作所需的静态资源。我们的 `sw.js` 文件目前是这样的：
 
 ```JavaScript
 const VERSION = "v1";
@@ -91,7 +91,7 @@ const APP_STATIC_RESOURCES = [
 ];
 ```
 
-我们收纳了 `wheel.svg` 图标，以备你要增强 PWA 的 UI 时使用，比如在没有经期数据时显示 logo，虽然我们的应用目前并没有使用它。
+我们包括了 `wheel.svg` 图标，以备你要增强 PWA 的 UI 时使用，比如在没有经期数据时显示 logo，虽然我们的应用目前并没有使用它。
 
 ### 应用缓存名称
 
@@ -103,7 +103,7 @@ const APP_STATIC_RESOURCES = [
 
 #### 示例方案
 
-我们将缓存命名为 `period-tracker-` 后跟 `VERSION`版本号。鉴于我们的常量声明都是单行的，为了方便阅读，我们将其放在了资源数组常量的前面。
+我们将缓存命名为 `period-tracker-` 后跟 `VERSION` 版本号。鉴于我们的常量声明都是单行的，为了方便阅读，我们将其放在了资源数组常量的前面。
 
 ```JavaScript
 const VERSION = "v1";
@@ -116,7 +116,7 @@ const APP_STATIC_RESOURCES = [ ... ];
 
 ### 在 PWA 安装过程中保存缓存
 
-当用户安装 PWA 或者只是单纯的访问带有 service worker 的网站时，会在 service worker 的作用域触发一个 `install` 事件。我们想要监听这个事件，在安装期间用 PWA 的静态资源充实缓存。每当 service worker 的版本更新，浏览器都会安装新的 service worker 并触发安装事件。
+当用户安装 PWA 或者只是单纯的访问带有 service worker 的网站时，会在 service worker 的作用域触发一个 `install` 事件。我们想要监听这个事件，在安装期间用 PWA 的静态资源填充缓存。每当 service worker 的版本更新，浏览器都会安装新的 service worker 并触发安装事件。
 
 `install` 事件会在应用第一次被安装或者浏览器检测到有新版本的 service worker 时触发。当旧的 service worker 将要被新的替换时，旧的 service worker 仍然会作为 PWA 的 service worker，直到新的 service worker 被激活。
 
@@ -143,7 +143,7 @@ self.addEventListener("install", (e) => {
 
 添加一个安装事件监听器，用于检索并存储 `APP_STATIC_RESOURCES` 列表中的文件到名为 `CACHE_NAME` 的缓存中。
 
-#### 实例方案
+#### 示例方案
 
 ```JavaScript
 self.addEventListener("install", (event) => {
@@ -300,7 +300,7 @@ self.addEventListener("fetch", (event) => {
 
 当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员（也包括你自己）的好习惯。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#使用开发人员工具)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
 
-**备注：** 在对应用的任何资源（包括 CSS、HTML、JS 代码和图像素材）做出更改后更新版本号是非常重要的。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
+**备注**：在对应用的任何资源（包括 CSS、HTML、JS 代码和图像素材）做出更改后更新版本号是非常重要的。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
 
 ## 注册 service worker
 
@@ -359,7 +359,7 @@ if ("serviceWorker" in navigator) {
 </script>
 ```
 
-你可以体验功能完整的[CycleTracker 月经周期跟踪 Web 应用](https://mdn.github.io/pwa-examples/cycletracker/service_workers)，并可以在 GitHub 上查看该 [Web 应用的源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers)。是的，它能运行，并且现在正式成为了一个 PWA！
+你可以体验功能完整的 [CycleTracker 月经周期跟踪 Web 应用](https://mdn.github.io/pwa-examples/cycletracker/service_workers)，并可以在 GitHub 上查看该 [Web 应用的源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers)。是的，它能运行，并且现在正式成为了一个 PWA！
 
 ## 调试 service worker
 
@@ -374,17 +374,17 @@ if ("serviceWorker" in navigator) {
 - MacOS 上的 Safari：按 Option+Command+E 清空缓存，然后按 Option+Command+R。
 - 移动设备：前往浏览器（Android）或操作系统（Samsung、iOS）设置，在高级设置下找到浏览器（iOS）或站点数据（Android、Samsung）网站设置，然后删除经期跟踪器的数据，再重新加载页面。
 
-### 使用开发人员工具
+### 使用开发者工具
 
 你可能会不想每次保存都要更新版本号。在你准备好将你的 PWA 的新版本投入生产并为所有人提供你的 PWA 的新版本前，你可以用注销 service worker 的方法来代替在每次保存时更改版本号。
 
-你可以通过在[浏览器开发人员工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
+你可以通过在[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
 
 ![带有停止和注销 service worker 按钮的 Firefox 开发人员工具应用程序面板](firefox_sw.jpg)
 
 在某些开发者工具里，你可以手动注销一个 service worker，或者你可以选择 service worker 的“重新加载时更新”选项来设置当开发人员工具打开时，每次重新加载都重置并重新激活 service worker。还有一个选项可以绕过 service worker 从网络加载资源。这个面板包含了本教程中我们未涵盖的特性，但会对你在创建包含[同步](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#周期性后台同步)和[推送消息](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#推送消息)等特性的更高级的 PWA 时有所帮助，这些内容都涵盖在了[离线和后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)中。
 
-![Edge 开发人员工具显示针对 service worker 的应用程序面板集](edge_sw.jpg)
+![Edge 开发者工具显示针对 service worker 的应用程序面板集](edge_sw.jpg)
 
 开发人员工具的应用程序面板中的 service worker 窗口，提供了访问包含浏览器所有已注册的 service worker 的列表的弹出窗口的链接，不只是在当前标签页中打开的应用的 service worker。列表中的每个 service worker 都有单独的停止、启动或注销按钮。
 
