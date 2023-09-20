@@ -41,23 +41,23 @@ removeChild(child)
 Dado este HTML:
 
 ```html
-<div id="top">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
 Para eliminar un elemento específico cuando se conoce su nodo principal:
 
 ```js
-let d = document.getElementById("top");
-let d_nested = document.getElementById("nested");
-let throwawayNode = d.removeChild(d_nested);
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+const throwawayNode = parent.removeChild(child);
 ```
 
 Para eliminar un elemento específico sin tener que especificar su nodo principal:
 
 ```js
-let node = document.getElementById("nested");
+const node = document.getElementById("child");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
@@ -66,7 +66,7 @@ if (node.parentNode) {
 Para eliminar todos los hijos de un elemento:
 
 ```js
-let element = document.getElementById("idOfParent");
+const element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
@@ -76,35 +76,35 @@ while (element.firstChild) {
 
 ```html
 <!--Código HTML de muestra-->
-<div id="top"></div>
+<div id="parent"></div>
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
 // Arroja Uncaught TypeError
-let garbage = top.removeChild(nested);
+const garbage = parent.removeChild(child);
 ```
 
 ### Causar un NotFoundError
 
 ```html
 <!--Código HTML de muestra-->
-<div id="top">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
 // Esta primera llamada elimina correctamente el nodo.
-let garbage = top.removeChild(nested);
+const garbage = parent.removeChild(child);
 
 // Arroja NotFoundError
-garbage = top.removeChild(nested);
+garbage = parent.removeChild(child);
 ```
 
 ## Especificaciones
