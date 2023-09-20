@@ -25,9 +25,9 @@ new CookieChangeEvent(type, options)
 - `options` {{Optional_Inline}}
   - : _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを持ちうるオブジェクトです。
     - `changed`
-      - : 変更されたクッキーが格納された配列です。
+      - : 変更された Cookie が格納された配列です。
     - `deleted`
-      - : 削除されたクッキーが格納された配列です。
+      - : 削除された Cookie が格納された配列です。
 
 ### 返値
 
