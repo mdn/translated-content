@@ -103,7 +103,7 @@ Enumere la API relacionada y las interfaces proporcionadas por el módulo. Omita
 - EnlaceAGuia2
   - : Descripción de la guía en una o dos frases.
 
-## Conceptos relacionados:
+## Conceptos relacionados
 
 Enumere todas las demás propiedades, tipos de datos o términos del glosario que puedan ser relevantes o estar relacionados con este módulo.
 
@@ -115,7 +115,7 @@ _Para usar esta macro, elimine las comillas inveritdas y la barra invertida en e
 
 Vease también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Consulta la sección [Vease también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para obtener más consejos e instrucciones.	
+Incluya enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Consulta la sección [Vease también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para obtener más consejos e instrucciones.
 
 - enlace1
 - enlace2
