@@ -13,7 +13,7 @@ Vous pouvez ajouter différents types de styles de bordures, y compris des bordu
 
 Les ombres des boîtes comprennent les ombres intérieures et extérieures, les ombres simples ou multiples, et les ombres solides ou transparentes. Une ombre extérieure projette une ombre comme si la bordure de l'élément était opaque. Une ombre de boîte intérieure projette une ombre comme si tout ce qui se trouve à l'extérieur du bord de remplissage était opaque. L'ombre peut être solide ou inclure une distance d'étalement avec une transition de la couleur de l'ombre vers la transparence.
 
-Les propriétés de ce module vous permettent également de définir si les cellules à l'intérieur d'un [`&lt;table&gt;`](/fr/docs/Web/HTML/Element/table) doivent avoir des bordures communes ou séparées.
+Les propriétés de ce module vous permettent également de définir si les cellules à l'intérieur d'un [`<table>`](/fr/docs/Web/HTML/Element/table) doivent avoir des bordures communes ou séparées.
 
 ### Arrière-plans, bordures et ombres de boîtes en action
 
