@@ -46,7 +46,7 @@ PWA 一但在用户的机器上被安装，唯一通知浏览器有要检索的�
 
 新建一个包含版本号的 JavaScript 文件：
 
-```JavaScript
+```js
 const VERSION = "v1";
 ```
 
@@ -56,7 +56,7 @@ const VERSION = "v1";
 
 为了能有优良的离线体验，缓存文件列表应当包含 PWA 离线时需要使用的所有资源。即使清单文件里可能会罗列出一大堆各种大小的图标，应用缓存也只需要包含应用在离线模式下需要使用的资源。
 
-```JavaScript
+```js
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
@@ -78,7 +78,7 @@ const APP_STATIC_RESOURCES = [
 
 我们包括了在本教程的其他章节中所创建的经期跟踪器在离线状态下运作所需的静态资源。我们的 `sw.js` 文件目前是这样的：
 
-```JavaScript
+```js
 const VERSION = "v1";
 
 const APP_STATIC_RESOURCES = [
@@ -105,7 +105,7 @@ const APP_STATIC_RESOURCES = [
 
 我们将缓存命名为 `period-tracker-` 后跟 `VERSION` 版本号。鉴于我们的常量声明都是单行的，为了方便阅读，我们将其放在了资源数组常量的前面。
 
-```JavaScript
+```js
 const VERSION = "v1";
 const CACHE_NAME = `period-tracker-${VERSION}`;
 
@@ -124,7 +124,7 @@ const APP_STATIC_RESOURCES = [ ... ];
 
 {{domxref("Cache.addAll()")}} 方法接收一个 URL 数组作为参数，然后会检索这些 URL，将它们的响应添加到指定的缓存中。[`waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil) 方法可以告诉浏览器在 Promise 被敲定前，工作仍在进行中，浏览器如果想让工作能够完成就不应该终止 service worker。浏览器负责执行并在必要时终止 service worker，`waitUntil` 方法可用于请求浏览器在任务执行时不要终止 service worker。
 
-```JavaScript
+```js
 self.addEventListener("install", (e) => {
   e.waitUntil((async () => {
       const cache = await caches.open("cacheName_identifier");
@@ -145,7 +145,7 @@ self.addEventListener("install", (e) => {
 
 #### 示例方案
 
-```JavaScript
+```js
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
@@ -168,7 +168,7 @@ self.addEventListener("install", (event) => {
 
 最后一行 `await clients.claim()` 使用 [`Clients`](/zh-CN/docs/Web/API/Clients) 接口的 [`claim()`](/zh-CN/docs/Web/API/Clients/claim) 方法来启用我们的 service worker 以将其设为我们客户端的控制器，“客户端”指正在运行的一个 PWA 实例。`claim()` 方法用于使 service worker 接管控制其作用域内的所有客户端。这样，作用域内已加载的客户端就不需要重新加载。
 
-```JavaScript
+```js
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
@@ -200,7 +200,7 @@ self.addEventListener("activate", (event) => {
 
 使用 [`Response()`](/zh-CN/docs/Web/API/Response/Response) 构造器，传递为 `null` 的主体以及一个 `404` 的状态码作为选项，并不意味着我们的 PWA 出错了。相反，我们需要的所有东西应该都已经在缓存里了，如果没有，我们也不用去服务器解决这个小问题。
 
-```JavaScript
+```js
 self.addEventListener("fetch", (event) => {
   // 当在查找 HTML 页面时
   if (event.request.mode === "navigate") {
@@ -230,7 +230,7 @@ self.addEventListener("fetch", (event) => {
 
 你的 `sw.js` 文件现在应该和下面的 JavaScript 脚本相似。要注意，当 `APP_STATIC_RESOURCES` 数组中的资源列表发生了任何改动，我们唯一需要在这个 service worker 中更新的常量或功能就是 `VERSION` 的值。
 
-```JavaScript
+```js
 // 缓存的版本
 const VERSION = "v1";
 
@@ -298,7 +298,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员（也包括你自己）的好习惯。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#使用开发人员工具)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
+当更新 service worker 本身时，不需要更新 VERSION 常量，因为 service worker 脚本内容的任何更改都会触发浏览器去安装新的 service worker。但不论如何，更新版本号是方便开发人员（也包括你自己）的好习惯。可以在浏览器中通过[在应用程序工具中检查缓存的名称](#使用开发者工具)（或在源代码工具）来查看当前正在运行的是哪一个版本的 service worker。
 
 **备注**：在对应用的任何资源（包括 CSS、HTML、JS 代码和图像素材）做出更改后更新版本号是非常重要的。版本号或者对 service worker 文件所做的任何更改是唯一为你的用户强制更新应用的方式。
 
@@ -331,7 +331,7 @@ self.addEventListener("fetch", (event) => {
 
 虽然上述内容已经满足了经期跟踪器应用的需要，但是 `register()` 方法返回的是一个兑现 {{domxref("ServiceWorkerRegistration")}} 对象的 {{jsxref("Promise")}}。为了使应用更加健壮，最好对注册进行错误检查：
 
-```javascript
+```js
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").then(
     (registration) => {
@@ -380,13 +380,13 @@ if ("serviceWorker" in navigator) {
 
 你可以通过在[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
 
-![带有停止和注销 service worker 按钮的 Firefox 开发人员工具应用程序面板](firefox_sw.jpg)
+![带有停止和注销 service worker 按钮的 Firefox 开发者工具应用程序面板](firefox_sw.jpg)
 
-在某些开发者工具里，你可以手动注销一个 service worker，或者你可以选择 service worker 的“重新加载时更新”选项来设置当开发人员工具打开时，每次重新加载都重置并重新激活 service worker。还有一个选项可以绕过 service worker 从网络加载资源。这个面板包含了本教程中我们未涵盖的特性，但会对你在创建包含[同步](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#周期性后台同步)和[推送消息](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#推送消息)等特性的更高级的 PWA 时有所帮助，这些内容都涵盖在了[离线和后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)中。
+在某些开发者工具里，你可以手动注销一个 service worker，或者你可以选择 service worker 的“重新加载时更新”选项来设置当开发者工具打开时，每次重新加载都重置并重新激活 service worker。还有一个选项可以绕过 service worker 从网络加载资源。这个面板包含了本教程中我们未涵盖的特性，但会对你在创建包含[同步](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#周期性后台同步)和[推送消息](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#推送消息)等特性的更高级的 PWA 时有所帮助，这些内容都涵盖在了[离线和后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)中。
 
 ![Edge 开发者工具显示针对 service worker 的应用程序面板集](edge_sw.jpg)
 
-开发人员工具的应用程序面板中的 service worker 窗口，提供了访问包含浏览器所有已注册的 service worker 的列表的弹出窗口的链接，不只是在当前标签页中打开的应用的 service worker。列表中的每个 service worker 都有单独的停止、启动或注销按钮。
+开发者工具的应用程序面板中的 service worker 窗口，提供了访问包含浏览器所有已注册的 service worker 的列表的弹出窗口的链接，不只是在当前标签页中打开的应用的 service worker。列表中的每个 service worker 都有单独的停止、启动或注销按钮。
 
 ![localhost:8080 存在两个 service worker，它们能在列表中被注销](edge_sw_list.jpg)
 
