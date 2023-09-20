@@ -15,6 +15,16 @@ Les ombres des boîtes comprennent les ombres intérieures et extérieures, les 
 
 Les propriétés de ce module vous permettent également de définir si les cellules à l'intérieur d'un [`&lt;table&gt;`](/fr/docs/Web/HTML/Element/table) doivent avoir des bordures communes ou séparées.
 
+### Arrière-plans, bordures et ombres de boîtes en action
+
+Cet exemple de bordures, d'arrière-plans et d'ombres en boîte se compose d'images d'arrière-plan centrées composées de dégradés linéaires et radiaux. Une série d'ombres en boîte fait ressortir la bordure. L'élément de gauche a une image de bordure définie. L'élément de droite a une bordure arrondie en pointillés.
+
+{{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
+
+Les images d'arrière-plan sont définies avec la propriété CSS [`background-image`](/fr/docs/Web/CSS/background-image). Les images sont centrées avec la propriété [`background-position`](/fr/docs/Web/CSS/background-position). Différentes valeurs de la propriété [`background-clip`](/fr/docs/Web/CSS/background-clip) pour les images d'arrière-plan multiples sont utilisées pour faire en sorte que les images d'arrière-plan restent à l'intérieur de la boîte de contenu. La couleur d'arrière-plan est découpée dans le cadre de remplissage, ce qui empêche l'arrière-plan d'apparaître à travers les sections transparentes pour les propriétés [`border-image`](/fr/docs/Web/CSS/border-image) et [`dotted`](/fr/docs/Web/CSS/border-style) [`border`](/fr/docs/Web/CSS/border). Les coins arrondis de l'élément de droite sont créés à l'aide de la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius). Une seule déclaration [`box-shadow`](/fr/docs/Web/CSS/box-shadow) est utilisée pour définir toutes les ombres, tant à l'intérieur qu'à l'extérieur.
+
+Pour voir le code de cet exemple, [regardez la source sur GitHub](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
+
 ## Référence
 
 ### Propriétés CSS
@@ -71,6 +81,10 @@ Les propriétés de ce module vous permettent également de définir si les cell
 
 - [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
 
+### Types de données
+
+- [`line-type`](/fr/docs/Web/CSS/line-type") type énuméré
+
 ## Guides
 
 - [Apprendre CSS: Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
@@ -126,4 +140,4 @@ Les propriétés de ce module vous permettent également de définir si les cell
   - [Générateur pour `border-radius`](/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-radius)
   - [Générateur pour `box-shadow`](/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Générateur_box-shadow)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color), incluant les bordures.
-- Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow) qui applique un effet d'ombre portée à  une image en entrée. Cette fonction est utilisée par les propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}}.
+- Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow) qui applique un effet d'ombre portée à une image en entrée. Cette fonction est utilisée par les propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}}.
