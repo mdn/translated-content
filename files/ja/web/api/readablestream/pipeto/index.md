@@ -68,7 +68,7 @@ fetch("png-logo.png")
 
 ```js
 (async () => {
-// 元の画像を読み取る
+  // 元の画像を読み取る
   const response = await fetch("png-logo.png");
   // その body を ReadableStream として取得
   response.body
