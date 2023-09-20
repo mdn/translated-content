@@ -11,17 +11,17 @@ The HTTP **`203 Non-Authoritative Information`** 는 요청이 성공했지만 �
 
 `203` 응답은 {{HTTPHeader("Warning")}} 헤더 코드의 변환 적용을 의미하는 [`214`](/ko/docs/Web/HTTP/Headers/Warning#warning_codes) 값과 유사하며, 모든 상태 코드가 있는 응답에 적용할 수 있다는 추가적인 이점이 있습니다.
 
-## Status
+## 상태
 
 ```http
 203 Non-Authoritative Information
 ```
 
-## Specifications
+## 명세
 
 {{Specifications}}
 
-## See also
+## 같이 보기
 
 - {{HTTPStatus("200")}}
 - {{Glossary("Proxy server")}}
