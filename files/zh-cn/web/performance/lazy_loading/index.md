@@ -60,7 +60,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 #### Loading 属性
 
-{{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/Element/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
+{{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/img#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />
