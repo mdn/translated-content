@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 
 ## 描述
 
-因为 `NaN` 是一个静态属性，所以你应该使用用作 `Number.NaN`，而不是作为一个数字值的属性来使用。
+由于 `NaN` 是 {{jsxref("Number")}} 的静态属性，你应该始终将其用作 `Number.NaN`，而不是作为一个数字值的属性。
 
 ## 示例
 
