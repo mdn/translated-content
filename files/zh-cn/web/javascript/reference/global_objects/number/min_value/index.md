@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 
 ## 描述
 
-`Number.MIN_VALUE` 是能够在浮点精度范围内表示的最小正数（不是最小负数），换句话说，它是最接近 0 的数。ECMAScript 规范并没有定义引擎实现必须支持的精确值，而是规定：_“必须是实现实际上可以表示的最小非零正值”_。这是因为小的 IEEE-754 浮点数是[非规格化数](https://en.wikipedia.org/wiki/Subnormal_number)，但是实现并不要求支持这种表示方式，这种情况下 `Number.MIN_VALUE` 可能会更大。
+`Number.MIN_VALUE` 是能够在浮点精度范围内表示的最小正数（不是最小负数），换句话说，它是最接近 0 的数。ECMAScript 规范并没有定义引擎实现必须支持的精确值，而是规定：_“必须是实现实际上可以表示的最小非零正值”_。这是因为小的 IEEE-754 浮点数是[非正规数](https://en.wikipedia.org/wiki/Subnormal_number)，但是实现并不要求支持这种表示方式，这种情况下 `Number.MIN_VALUE` 可能会更大。
 
 在实践中，在主流引擎（如 Chrome、Edge、Node.js 使用的 V8 引擎，Firefox 使用的 SpiderMonkey 引擎，以及 Safari 使用的 JavaScriptCore 引擎）中，`Number.MIN_VALUE` 的精确值为 2<sup>-1074</sup>，即 `5E-324`。
 
