@@ -45,7 +45,7 @@ drawArrays(mode, first, count)
   `gl.INVALID_ENUM` 오류가 발생합니다.
 - `first` 또는 `count` 가 음수인 경우,
   `gl.INVALID_VALUE` 오류가 발생합니다.
-- `gl.CURRENT_PROGRAM` 이 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)인 경우,
+- `gl.CURRENT_PROGRAM` 이 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)인 경우,
   `gl.INVALID_OPERATION` 오류가 발생합니다.
 
 ## 예제

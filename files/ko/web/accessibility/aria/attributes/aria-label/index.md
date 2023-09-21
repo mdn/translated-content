@@ -30,7 +30,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-label
 
 대부분의 콘텐츠에는 이를 직접 감싸는 요소의 텍스트 콘텐츠로부터 생성된 접근자 이름이 있습니다. 또한, 접근자이름들은 특정 속성들 또는 연관된 요소들로부터 생성될 수 있습니다.
 
-기본적으로, 버튼의 접근자 이름은 {{HTMLElement('button')}}의 여는 태그와, 닫는 태그 사이의 콘텐츠이고, image 요소의 접근자 이름은 [`alt`](/ko/docs/Web/HTML/Element/img#attr-alt) 속성의 콘텐츠, 그리고 form input요소의 접근자 이름은 연결된 {{HTMLElement('label')}} 요소의 콘텐츠입니다.
+기본적으로, 버튼의 접근자 이름은 {{HTMLElement('button')}}의 여는 태그와, 닫는 태그 사이의 콘텐츠이고, image 요소의 접근자 이름은 [`alt`](/ko/docs/Web/HTML/Element/img#alt) 속성의 콘텐츠, 그리고 form input요소의 접근자 이름은 연결된 {{HTMLElement('label')}} 요소의 콘텐츠입니다.
 
 만약 이러한 옵션들 중 가능한 것이 없거나, 초기 접근자 이름이 적합하지 않은 경우, `aria-label` 속성을 사용하여 요소의 접근자 이름을 정의합니다.
 

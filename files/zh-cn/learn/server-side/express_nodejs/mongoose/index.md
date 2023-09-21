@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/mongoose
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Express 教程 2: 创建站点骨架</a
@@ -105,7 +105,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 ### 安装 Mongoose 和 MongoDB
 
-Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在您的项目（**package.json**）中。请在项目文件夹中运行下面的命令以完成安装：
+Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在你的项目（**package.json**）中。请在项目文件夹中运行下面的命令以完成安装：
 
 ```bash
 npm install mongoose

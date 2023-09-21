@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，对 HTML 和 CSS 有基本的了解，已经阅读了 <a
           href="/zh-CN/docs/Learn/JavaScript/First_steps"
@@ -204,7 +204,7 @@ if (choice === "sunny") {
 
 ### 逻辑运算符：与、或、非
 
-如果要测试多个条件，而不需要编写嵌套 `if...else` 语句，[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)可以帮助您。当在条件下使用时，前两个执行以下操作：
+如果要测试多个条件，而不需要编写嵌套 `if...else` 语句，[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)可以帮助你。当在条件下使用时，前两个执行以下操作：
 
 - `&&`——逻辑与。允许你把两个或多个表达式连在一起，这样所有的表达式都必须单独评估为 `true`，整个表达式才能返回 `true`。
 - `||`——逻辑或。允许你把两个或多个表达式连在一起，其中一个或多个表达式必须单独评估为 `true`，整个表达式才能返回 `true`。

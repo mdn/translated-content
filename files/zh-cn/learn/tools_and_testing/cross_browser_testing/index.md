@@ -15,7 +15,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing
 >
 > [**开始使用**](/zh-CN/docs/Learn/Front-end_web_developer)
 
-## 先决条件
+## 前提
 
 在你尝试使用这里详细介绍的工具时，你需要已经学习核心 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 语言。
 

@@ -13,9 +13,13 @@ En este artículo vamos a exponer lo más básico del HTML. Para comenzar defini
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática,
-        [tener instalado el software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+        <a href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software">
+          tener instalado el software básico
+        </a>
         y conocimientos básicos de cómo
-        [trabajar con archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files">
+          trabajar con archivos
+        </a>.
       </td>
     </tr>
     <tr>
@@ -226,7 +230,7 @@ Considera el siguiente ejemplo:
 <p>sexto</p>
 ```
 
-{{htmlelement("em")}} es un elemento en línea. Así, como puedes observar, los tres primeros elementos se sitúan en la misma línea, uno tras otro sin espacio entre ellos. Por otro lado, {{htmlelement("p")}} es un elemento a nivel de bloque. Cada elemento _p_ aparece en una nueva línea, con un espacio arriba y abajo. (El espaciado se debe al [estilo CSS](/es/docs/Learn/CSS/Introduction_to_CSS) predeterminado que el navegador aplica a los párrafos).
+{{htmlelement("em")}} es un elemento en línea. Así, como puedes observar, los tres primeros elementos se sitúan en la misma línea, uno tras otro sin espacio entre ellos. Por otro lado, {{htmlelement("p")}} es un elemento a nivel de bloque. Cada elemento _p_ aparece en una nueva línea, con un espacio arriba y abajo. (El espaciado se debe al [estilo CSS](/es/docs/Learn/CSS/First_steps) predeterminado que el navegador aplica a los párrafos).
 
 {{ EmbedLiveSample('Elementos_de_bloque_y_elementos_en_línea', 700, 200, "", "") }}
 
@@ -234,7 +238,7 @@ Considera el siguiente ejemplo:
 
 > **Nota:** Los términos «en bloque» (block) y «en línea» (inline), tal como se usan en este tema, no se deberían confundir con [los tipos de casillas de CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) que se conocen con el mismo nombre. Aunque de manera predeterminada están relacionados, el hecho de cambiar el tipo de aspecto visual del CSS no cambia la categoría del elemento ni afecta a aquellos elementos que pueda contener. Una de las razones por las que HTML5 abandonó el uso de estos términos fue para evitar este tipo de confusión.
 
-> **Nota:** Puedes encontrar referencias útiles que incluyen listas de elementos de bloque y elementos en línea. Consulta [Elementos en bloque](/es/docs/Web/HTML/Block-level_elements) y [Elementos en línea](/es/docs/Web/HTML/Elementos_en_línea).
+> **Nota:** Puedes encontrar referencias útiles que incluyen listas de elementos de bloque y elementos en línea. Consulta [Elementos en bloque](/es/docs/Glossary/Block-level_content) y [Elementos en línea](/es/docs/orphaned/Web/HTML/Inline_elements).
 
 ### Elementos vacíos
 
@@ -448,10 +452,10 @@ Cuando observas diferentes páginas web, puedes encontrarte con todo tipo de est
 Sin embargo, las cosas no funcionarán cuando a este estilo se añada el atributo `title`:
 
 ```html example-bad
-<a href=https://www.mozilla.org/ title=The Mozilla homepage>mi sitio web favorito</a>
+<a href=https://www.mozilla.org/ title=La pagina de Mozilla>mi sitio web favorito</a>
 ```
 
-En este punto el navegador interpretará mal el cambio y pensará que el atributo `title` corresponde a tres atributos: un atributo `title` con el valor _The_ y dos atributos booleanos: `Mozilla` y `homepage`. ¡Obviamente, esta no es la intensión! Causará errores o comportamientos inesperados, como puedes ver en el ejemplo en vivo a continuación. ¡Intenta colocar el cursor sobre el enlace para ver el texto del título!
+En este punto el navegador interpretará mal el cambio y pensará que el atributo `title` corresponde a tres atributos: un atributo `title` con el valor _La_ y dos atributos booleanos: `Mozilla` y `homepage`. ¡Obviamente, esta no es la intensión! Causará errores o comportamientos inesperados, como puedes ver en el ejemplo en vivo a continuación. ¡Intenta colocar el cursor sobre el enlace para ver el texto del título!
 
 {{ EmbedLiveSample('Omitir_comillas_en_valores_de_atributos', 700, 100, "", "", "hide-codepen-jsfiddle") }}
 
@@ -548,8 +552,8 @@ En este ejercicio, puedes editar el código en tu ordenador como se indica arrib
 - Justo debajo de la etiqueta de apertura {{htmlelement("body")}}, añade un título principal para el documento. Este deberá estar dentro de una etiqueta de apertura `<h1>` y una etiqueta de cierre `</h1>`.
 - Edita el contenido del párrafo e incluye algún texto sobre algo que te interese.
 - Pon las palabras importantes dentro de etiquetas `<strong>` de apertura y `</strong>` de cierre para que destaquen en negrita.
-- Añade un enlace a tu párrafo, como se ha explicado [anteriormente en este mismo artículo](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element).
-- Agrega una imagen a tu documento. Colócala debajo del párrafo, como [se explicó anteriormente en el artículo](/es/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements). Ganarás puntos extra si consigues enlazar a una imagen diferente (de tu propio ordenador o de cualquier otro lugar de la web).
+- Añade un enlace a tu párrafo, como se ha explicado [anteriormente en este mismo artículo](#active_learning_adding_attributes_to_an_element).
+- Agrega una imagen a tu documento. Colócala debajo del párrafo, como [se explicó anteriormente en el artículo](#empty_elements). Ganarás puntos extra si consigues enlazar a una imagen diferente (de tu propio ordenador o de cualquier otro lugar de la web).
 
 Si te equivocas, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente atascado, pulsa el botón _Mostrar la solución_ para ver la solución.
 
@@ -733,7 +737,7 @@ En la salida en vivo de abajo, puedes ver que el primer párrafo salió mal. El 
 
 {{ EmbedLiveSample('Referencias_a_entidades_Inclusión_de_caracteres_especiales_en_HTML', 700, 200) }}
 
-> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML). Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding).
+> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML). Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_document's_character_encoding).
 
 ## Comentarios HTML
 

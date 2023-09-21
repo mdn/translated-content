@@ -5,12 +5,12 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
-到目前为止我们已经介绍的 API 是内置在浏览器中的，但并不是所有的 API 都是。许多大型网站和服务（例如 Google 地图，Twitter，Facebook，PayPal 等）提供的 API 允许开发者使用他们的数据（例如在博客上显示您的 Twitter 流）或服务（例如在您的网站上显示自定义 Google 地图，或者使用 Facebook 登录来登录你的用户）。本文着眼于浏览器 API 和第三方 API 的区别，并展示了后者的一些典型用途。
+到目前为止我们已经介绍的 API 是内置在浏览器中的，但并不是所有的 API 都是。许多大型网站和服务（例如 Google 地图，Twitter，Facebook，PayPal 等）提供的 API 允许开发者使用他们的数据（例如在博客上显示你的 Twitter 流）或服务（例如在你的网站上显示自定义 Google 地图，或者使用 Facebook 登录来登录你的用户）。本文着眼于浏览器 API 和第三方 API 的区别，并展示了后者的一些典型用途。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         JavaScript 基础知识 (see
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps">first steps</a>,
@@ -25,7 +25,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>学习了解第三方 API 的运作方式，以及如何运用它们来提高你的网站性能</td>
     </tr>
   </tbody>
@@ -33,11 +33,11 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 ## 什么是第三方 API?
 
-第三方 API 是由第三方（通常是 Facebook，Twitter 或 Google 等公司）提供的 API，允许您通过 JavaScript 访问其功能，并在您自己的站点上使用它。正如我们在 [API 介绍章节](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) 所展示的，最显著的例子就是运用 [Google Maps APIs](https://developers.google.com/maps/) 在你的网页上展示自定义地图。
+第三方 API 是由第三方（通常是 Facebook，Twitter 或 Google 等公司）提供的 API，允许你通过 JavaScript 访问其功能，并在你自己的站点上使用它。正如我们在 [API 介绍章节](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) 所展示的，最显著的例子就是运用 [Google Maps APIs](https://developers.google.com/maps/) 在你的网页上展示自定义地图。
 
 让我们再来瞧一眼这个地图的例子 (see the [source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/maps-example.html); [see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。
 
-> **备注：** 您可能想要一次获得所有的代码示例，在这种情况下，您可以搜索 repo 来获取每个部分中需要的示例文件。
+> **备注：** 你可能想要一次获得所有的代码示例，在这种情况下，你可以搜索 repo 来获取每个部分中需要的示例文件。
 
 ### 它们植根于第三方服务器
 
@@ -47,7 +47,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 navigator.geolocation.getCurrentPosition(function(position) { ... });
 ```
 
-第三方 API，从某种角度讲，植根于第三方服务器上。要通过 JavaScript 获取它们，您首先需要链接到其功能接口上并使其在您的页面上生效。通常来说，这首先需要您通过一个 {{htmlelement("script")}} 元素连接到第三方服务器所开放的 JavaScript 库，如下所示：
+第三方 API，从某种角度讲，植根于第三方服务器上。要通过 JavaScript 获取它们，你首先需要链接到其功能接口上并使其在你的页面上生效。通常来说，这首先需要你通过一个 {{htmlelement("script")}} 元素连接到第三方服务器所开放的 JavaScript 库，如下所示：
 
 ```js
 <script
@@ -55,7 +55,7 @@ navigator.geolocation.getCurrentPosition(function(position) { ... });
   src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
-然后您便可使用该库中可用的对象了，如：
+然后你便可使用该库中可用的对象了，如：
 
 ```js
 var latlng = new google.maps.LatLng(
@@ -109,7 +109,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
    6. 单击创建凭据，然后选择 API 密钥。
    7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
-   > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
+   > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因你是否设置账户而变得细微的不同。如果你在执行此步骤时遇到了困难，我们将很乐意为你提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
 
 3. 打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
 
@@ -156,7 +156,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 Google 地图的另一个常见用例是在点击其名称或标记时显示有关某个地点的更多信息（弹出式广告在 Google Maps API 中称为信息窗口）。这也很容易实现，所以让我们来看看它。
 
-1. 首先，您需要指定一个包含 HTML 的 JavaScript 字符串，该字符串将定义弹出窗口的内容。这将由 API 注入弹出窗口，并且可以包含您想要的任何内容。在`google.maps.Marker()`构造函数定义下面添加以下行：
+1. 首先，你需要指定一个包含 HTML 的 JavaScript 字符串，该字符串将定义弹出窗口的内容。这将由 API 注入弹出窗口，并且可以包含你想要的任何内容。在`google.maps.Marker()`构造函数定义下面添加以下行：
 
    ```js
    var contentString =
@@ -187,7 +187,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 ### Controlling what map controls are displayed
 
-在原始 `google.maps.Map()`构造函数中，将看到 `disableDefaultUI: true` 。这将禁用您通常在 Google 地图上获得的所有标准 UI 控件。
+在原始 `google.maps.Map()`构造函数中，将看到 `disableDefaultUI: true` 。这将禁用你通常在 Google 地图上获得的所有标准 UI 控件。
 
 1. 将其值设置为 `false` （或完全删除此属性），重新加载示例，将看到地图缩放按钮、scale indicator 等等。
 2. 现在撤销上一次更改。
@@ -199,25 +199,25 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
    scaleControl: true,
    ```
 
-4. 现在尝试重新加载示例以查看这些属性的效果。您可以在 [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions)找到更多属性。
+4. 现在尝试重新加载示例以查看这些属性的效果。你可以在 [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions)找到更多属性。
 
 就是现在 - 看看 [Google Maps APIs documentation](https://developers.google.com/maps/documentation/javascript/)，发现更多乐趣！
 
 ## 一个 RESTful API — NYTimes
 
-现在让我们看看另一个 API 示例 - [New York Times API](https://developer.nytimes.com)。此 API 允许您检索纽约时报的新闻故事信息并将其显示在您的网站上。这种类型的 API 称为 RESTful API - 我们不像使用 Google 地图那样使用 JavaScript 库的功能获取数据，而是通过向特定网址发出 HTTP 请求来获取数据，其中包含搜索术语和其他属性编码的数据 URL（通常作为 URL 参数）。这是您在 API 中遇到的常见模式。
+现在让我们看看另一个 API 示例 - [New York Times API](https://developer.nytimes.com)。此 API 允许你检索纽约时报的新闻故事信息并将其显示在你的网站上。这种类型的 API 称为 RESTful API - 我们不像使用 Google 地图那样使用 JavaScript 库的功能获取数据，而是通过向特定网址发出 HTTP 请求来获取数据，其中包含搜索术语和其他属性编码的数据 URL（通常作为 URL 参数）。这是你在 API 中遇到的常见模式。
 
 ## 使用第三方 API 的方法
 
-下面我们将带您完成练习，向您展示如何使用 NYTimes API，它还提供了一组更为通用的步骤，您可以将其用作处理新 API 的方法。
+下面我们将带你完成练习，向你展示如何使用 NYTimes API，它还提供了一组更为通用的步骤，你可以将其用作处理新 API 的方法。
 
 ### 查找文档
 
-当您想要使用第三方 API 时，必须找出文档的位置，以便了解 API 具有哪些功能，以及如何使用它们等等。NYTimes API 文档位于 <https://developer.nytimes.com/>。
+当你想要使用第三方 API 时，必须找出文档的位置，以便了解 API 具有哪些功能，以及如何使用它们等等。NYTimes API 文档位于 <https://developer.nytimes.com/>。
 
 ### 获取一个开发者密钥
 
-出于安全性和问责制的原因，大多数 API 都要求您使用某种开发人员密钥。要注册 NYTimes API 密钥，您需要访问 <https://developer.nytimes.com/signup>。
+出于安全性和问责制的原因，大多数 API 都要求你使用某种开发人员密钥。要注册 NYTimes API 密钥，你需要访问 <https://developer.nytimes.com/signup>。
 
 1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
 2. 从结果页面获取 API。
@@ -293,7 +293,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 
 ### 从 api 请求数据
 
-现在 URL 已经构造好了，下面向它发起请求。本例使用 [Fetch API](/ch-CN/docs/Web/API/Fetch_API/Using_Fetch)
+现在 URL 已经构造好了，下面向它发起请求。本例使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 
 把下面的代码块添加到 `fetchResults()` 函数末尾的大括号里面：
 

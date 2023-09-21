@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>请确保完整学习本章所有内容后再开始测验。</td>
     </tr>
     <tr>
@@ -426,6 +426,6 @@ window.onkeydown = (e) => {
 
 ## 评定
 
-如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给您的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
+如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给你的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

@@ -68,11 +68,11 @@ slug: Web/HTML/Element/canvas
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 좌표 공간의 높이입니다. CSS 픽셀 단위로, 기본값은 150입니다.
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : 투명도가 중요한 요소인지를 캔버스에 알려줍니다. 투명도가 없음을 알게되면 페인팅 성능이 최적화됩니다. Mozilla 기반 브라우저에서만 지원하므로, 표준 {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} 를 대신 사용하세요.
-- {{htmlattrdef("width")}}
+- `width`
   - : 좌표 공간의 너비입니다. CSS 픽셀 단위로, 기본값은 300입니다.
 
 ## 사용 일람

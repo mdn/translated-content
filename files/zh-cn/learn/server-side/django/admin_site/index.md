@@ -19,7 +19,7 @@ slug: Learn/Server-side/Django/Admin_site
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         <p>
           了解关于管理站点的优点与缺点，并且可以使用它为我们模型创建一些记录。
@@ -31,9 +31,9 @@ slug: Learn/Server-side/Django/Admin_site
 
 ## 综述
 
-Django 管理应用程序可以使用您的模型自动构建可用于创建，查看，更新和删除记录的站点区域。这可以在开发过程中节省大量的时间，从而很容易测试您的模型，并了解您是否拥有正确的数据。根据网站的类型，管理应用程序也可用于管理生产中的数据。Django 项目建议仅用于内部数据管理（即仅供管理员或组织内部人员使用），因为以模型为中心的方法不一定是所有用户最好的界面，并且暴露了大量不必要的细节关于模型。
+Django 管理应用程序可以使用你的模型自动构建可用于创建，查看，更新和删除记录的站点区域。这可以在开发过程中节省大量的时间，从而很容易测试你的模型，并了解你是否拥有正确的数据。根据网站的类型，管理应用程序也可用于管理生产中的数据。Django 项目建议仅用于内部数据管理（即仅供管理员或组织内部人员使用），因为以模型为中心的方法不一定是所有用户最好的界面，并且暴露了大量不必要的细节关于模型。
 
-[创建基础项目时，](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息 (如有需要请看 [Django docs here](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). 其结果是，你必须做你的模型添加到管理应用程序是 注册 他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。
+[创建基础项目时，](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)自动完成所有将你的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息 (如有需要请看 [Django docs here](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). 其结果是，你必须做你的模型添加到管理应用程序是 注册 他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。
 
 注册模型后，我们将展示如何创建一个新的“超级用户”，登录到该网站，并创建一些书籍，作者，书籍实例和流派。这些将有助于测试我们将在下一个教程中开始创建的视图和模板。
 
@@ -99,13 +99,13 @@ python3 manage.py runserver
 
 ![Admin Site - List of book objects](admin_book_list.png)
 
-从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。
+从该列表中，你可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作，然后按 Go 按钮。你也可以通过按下 ADD BOOK 按钮添加新书。
 
-您可以通过在链接中选择其名称来编辑书籍。一本书的编辑页面如下所示，与“添加”页面几乎相同。主要的区别是页面标题（更改书）和添加 删除，历史和`VIEW ON SITE`按钮（最后一个按钮出现，因为我们定义了`get_absolute_url()`我们的模型中的 方法）。
+你可以通过在链接中选择其名称来编辑书籍。一本书的编辑页面如下所示，与“添加”页面几乎相同。主要的区别是页面标题（更改书）和添加 删除，历史和`VIEW ON SITE`按钮（最后一个按钮出现，因为我们定义了`get_absolute_url()`我们的模型中的 方法）。
 
 ![Admin Site - Book Edit](admin_book_modify.png)
 
-现在回到主页（使用主页链接的导航痕迹），然后查看作者 和类型 列表 - 您应该已经有很多创建从添加新书，但可以自由添加一些更多。
+现在回到主页（使用主页链接的导航痕迹），然后查看作者 和类型 列表 - 你应该已经有很多创建从添加新书，但可以自由添加一些更多。
 
 你不会有任何书籍实例，因为这些不是从图书创建的（虽然你可以从 **BookInstance** - 创建一个书 - 这是 ForeignKey 字段的性质）。返回主页，然后按关联的添加按钮显示下面的添加书实例屏幕。请注意，全球唯一的 ID，可用于单独标识库中单书的副本。
 
@@ -113,7 +113,7 @@ python3 manage.py runserver
 
 为你的书创建一些记录。将状态设置为可用于至少一些记录，并为其他记录贷款。如果状态 不可 用，则还设置未来到期日期。
 
-而已！您现在已经学会了如何 设置和使用管理站点。您还创建书的记录，BookInstance，Genre，和 Author 我们就可以一次我们创造我们自己的观点和模板使用。
+而已！你现在已经学会了如何 设置和使用管理站点。你还创建书的记录，BookInstance，Genre，和 Author 我们就可以一次我们创造我们自己的观点和模板使用。
 
 ## 高级配置
 
@@ -210,7 +210,7 @@ class BookAdmin(admin.ModelAdmin):
 
 不幸的是，我们不能直接指定 **list_display** 中的 **genre** 字段，因为它是一个**ManyToManyField** （Django 可以防止这种情况，因为在这样做时会有大量的数据库访问“成本”）。相反，我们将定义一个 `display_genre` 函数来获取信息作为一个字符串（这是我们上面调用的函数;下面我们将定义它）。
 
-> **备注：** 在**genre**这里获取可能不是一个好主意，因为数据库操作的“成本”。我们向您展示了如何在模型中调用函数的其他原因非常有用 - 例如在列表中的每个项目旁边添加一个“删除”链接。
+> **备注：** 在**genre**这里获取可能不是一个好主意，因为数据库操作的“成本”。我们向你展示了如何在模型中调用函数的其他原因非常有用 - 例如在列表中的每个项目旁边添加一个“删除”链接。
 
 将以下代码添加到 Book 模型（**models.py**）中。这将从 genre 字段的前三个值（如果存在）创建一个字符串，并创建一个`short_description`可以在此方法的管理站点中使用的字符串。
 
@@ -246,13 +246,13 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### 整理细节视图布局
 
-默认情况下，详细视图按照其在模型中声明的顺序垂直排列所有字段。您可以更改声明的顺序，哪些字段显示（或排除），区段是否用于组织信息，字段是水平还是垂直显示，甚至是管理窗体中使用的编辑窗口小部件。
+默认情况下，详细视图按照其在模型中声明的顺序垂直排列所有字段。你可以更改声明的顺序，哪些字段显示（或排除），区段是否用于组织信息，字段是水平还是垂直显示，甚至是管理窗体中使用的编辑窗口小部件。
 
 > **备注：** LocalLibrary 模型比较简单，因此我们不需要更改布局; 不管怎样，我们会做一些改变，只是为了向你展示如何。
 
 #### 控制哪些字段被显示和布局
 
-更新您的 `AuthorAdmin` 类以添加`fields`行，如下所示（粗体）：
+更新你的 `AuthorAdmin` 类以添加`fields`行，如下所示（粗体）：
 
 ```python
 class AuthorAdmin(admin.ModelAdmin):
@@ -260,13 +260,13 @@ class AuthorAdmin(admin.ModelAdmin):
     fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
 ```
 
-在`fields` 属性列表只是要显示在表格上那些领域，如此才能。字段默认情况下垂直显示，但如果您进一步将它们分组在元组中（如上述“日期”字段中所示），则会水平显示。
+在`fields` 属性列表只是要显示在表格上那些领域，如此才能。字段默认情况下垂直显示，但如果你进一步将它们分组在元组中（如上述“日期”字段中所示），则会水平显示。
 
-重新启动您的应用程序并转到作者详细信息视图 - 现在应该如下所示：
+重新启动你的应用程序并转到作者详细信息视图 - 现在应该如下所示：
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **备注：** 您还可以使用`exclude`属性来声明要从表单中排除的属性列表（将显示模型中的所有其他属性）。
+> **备注：** 你还可以使用`exclude`属性来声明要从表单中排除的属性列表（将显示模型中的所有其他属性）。
 
 #### 剖切细节视图
 
@@ -297,9 +297,9 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### 关联记录的内联编辑
 
-有时，可以同时添加关联记录是有意义的。例如，将书籍信息和有关您在同一详细信息页面上的特定副本的信息同时显示可能是有意义的。
+有时，可以同时添加关联记录是有意义的。例如，将书籍信息和有关你在同一详细信息页面上的特定副本的信息同时显示可能是有意义的。
 
-你可以通过声明 [inlines](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), 类型 [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) (水平布局 ) or [StackedInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline) (垂直布局，就像默认布局) 这样做。您可以通过在您的以下的粗体中添加以下行，将内容中的`BookInstance`信息添加到我们的 Book 详细信息中`BookAdmin`：
+你可以通过声明 [inlines](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), 类型 [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) (水平布局 ) or [StackedInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline) (垂直布局，就像默认布局) 这样做。你可以通过在你的以下的粗体中添加以下行，将内容中的`BookInstance`信息添加到我们的 Book 详细信息中`BookAdmin`：
 
 ```python
 class BooksInstanceInline(admin.TabularInline):
@@ -311,11 +311,11 @@ class BookAdmin(admin.ModelAdmin):
     inlines = [BooksInstanceInline]
 ```
 
-尝试重新启动您的应用程序，然后查看图书的视图 - 在底部您应该看到与本书相关的图书实例：
+尝试重新启动你的应用程序，然后查看图书的视图 - 在底部你应该看到与本书相关的图书实例：
 
 ![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
 
-在这种情况下，我们所做的就是声明我们的`tablular`内联类，它只是从内联模型添加所有字段。您可以为布局指定各种附加信息，包括要显示的字段，其顺序，是否只读等。（有关详细信息，请参阅 [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) ).
+在这种情况下，我们所做的就是声明我们的`tablular`内联类，它只是从内联模型添加所有字段。你可以为布局指定各种附加信息，包括要显示的字段，其顺序，是否只读等。（有关详细信息，请参阅 [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) ).
 
 > **备注：** 这个功能有一些痛苦的限制！在上面的屏幕截图中，我们有三个现有的书籍实例，其次是新的书籍实例的三个占位符（看起来非常相似！）。默认情况下没有备用书实例会更好，只需使用“添加另一个书”实例链接添加它们，或者可以`BookInstance`从这里列出作为不可读的链接。第一个选项可以通过`extra`在`BookInstanceInline`模型中将属性设置为 0 来完成，自己尝试一下。
 
@@ -328,7 +328,7 @@ class BookAdmin(admin.ModelAdmin):
 
 ## 概要
 
-而已！您现在已经了解了如何以最简单和改进的形式设置管理站点，如何创建超级用户以及如何导航管理站点以及查看，删除和更新记录。一路上，您创建了一堆书籍，BookInstances，流派和作者，一旦我们创建了自己的视图和模板，我们就可以列出和展示。
+而已！你现在已经了解了如何以最简单和改进的形式设置管理站点，如何创建超级用户以及如何导航管理站点以及查看，删除和更新记录。一路上，你创建了一堆书籍，BookInstances，流派和作者，一旦我们创建了自己的视图和模板，我们就可以列出和展示。
 
 ## 进阶阅读
 

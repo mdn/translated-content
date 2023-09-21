@@ -5,7 +5,7 @@ slug: Web/API/WebGLFramebuffer
 
 {{APIRef("WebGL")}}
 
-L'interface **WebGL Framebuffer** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et représente une collection de tampons servant de destination de rendu.
+L'interface **WebGL Framebuffer** fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente une collection de tampons servant de destination de rendu.
 
 ## Description
 

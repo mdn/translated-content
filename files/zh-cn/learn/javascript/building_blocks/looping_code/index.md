@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
@@ -57,9 +57,9 @@ loop(food = 0; foodNeeded = 10) {
 
 ### 为何？
 
-在这一点上，您可能会了解循环中的高级概念，但您可能会认为“好的，但是，这有助于我编写更好的 JavaScript 代码？”正如我们前面所说，循环与所做的事情都是一样的，这对于快速完成重复任务是非常有用的。
+在这一点上，你可能会了解循环中的高级概念，但你可能会认为“好的，但是，这有助于我编写更好的 JavaScript 代码？”正如我们前面所说，循环与所做的事情都是一样的，这对于快速完成重复任务是非常有用的。
 
-通常，循环的每个连续迭代的代码将略有不同，这意味着您可以完成相同但略有不同的任务的全部负载 - 如果您有很多不同的计算要做，做不同的一个，不一样的一个又一个！
+通常，循环的每个连续迭代的代码将略有不同，这意味着你可以完成相同但略有不同的任务的全部负载 - 如果你有很多不同的计算要做，做不同的一个，不一样的一个又一个！
 
 让我们来看一个例子来完美地说明为什么循环是一件好事。假设我们想在{{htmlelement("canvas")}}元素上绘制 100 个随机圆（按更新按钮一次又一次地运行示例以查看不同的随机集）：
 
@@ -129,7 +129,7 @@ loop(food = 0; foodNeeded = 10) {
 
 {{ EmbedLiveSample('为何？', '100%', 400) }}
 
-您现在不需要理解所有代码，但我们来看看实际绘制 100 个圆的那部分代码：
+你现在不需要理解所有代码，但我们来看看实际绘制 100 个圆的那部分代码：
 
 ```js
 for (var i = 0; i < 100; i++) {
@@ -143,7 +143,7 @@ for (var i = 0; i < 100; i++) {
 - `random()`,在前面的代码中定义过了，返回一个 `0` 到 x-1 间的整数。
 - `WIDTH` 和`HEIGHT` 浏览器内部窗口的宽度和高度。
 
-您应该有一个基本的想法 - 我们使用一个循环来运行这个代码的 100 次迭代，其中每一个在页面上的随机位置绘制一个圆。无论我们绘制 100 个圆，1000 还是 10,000，所需的代码量将是相同的。只有一个数字必须改变。
+你应该有一个基本的想法 - 我们使用一个循环来运行这个代码的 100 次迭代，其中每一个在页面上的随机位置绘制一个圆。无论我们绘制 100 个圆，1000 还是 10,000，所需的代码量将是相同的。只有一个数字必须改变。
 
 如果我们在这里没有使用循环，我们必须为我们想要绘制的每个圆重复以下代码：
 
@@ -221,7 +221,7 @@ para.textContent = info;
 
 {{ EmbedLiveSample('循环的标准', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **备注：** 您可以[在 GitHub 上找到这段示例代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html)。 （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)）。
+> **备注：** 你可以[在 GitHub 上找到这段示例代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html)。 （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)）。
 
 这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：
 
@@ -255,9 +255,9 @@ for (var i = 0; i < cats.length; i++) {
 }
 ```
 
-> **备注：** 您可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html)。（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)）
+> **备注：** 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html)。（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)）
 
-> **警告：** 使用`for`- 与所有循环一样，您必须确保初始化程序被迭代，以便最终达到退出条件。如果没有，循环将永不停止，浏览器将强制它停止，否则会崩溃。这被称为无限循环。
+> **警告：** 使用`for`- 与所有循环一样，你必须确保初始化程序被迭代，以便最终达到退出条件。如果没有，循环将永不停止，浏览器将强制它停止，否则会崩溃。这被称为无限循环。
 
 ## 使用 break 退出循环
 
@@ -359,7 +359,7 @@ btn.addEventListener("click", function () {
 
 5. 在`(contacts.length-1)` 迭代后，如果联系人姓名与输入的搜索不符，则段落文本设置为“未找到联系人”，循环继续迭代。
 
-> **备注：** 您可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html)或[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)。
+> **备注：** 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html)或[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)。
 
 ## 使用 continue 跳过迭代
 
@@ -428,7 +428,7 @@ Here's the output:
 3. 如果平方根和四舍五入的平方根不相等（`!==`），则表示平方根不是整数，因此我们对此不感兴趣。在这种情况下，我们使用 continue 语句跳过当前循环而执行下一个循环迭代，而不在任何地方记录该数字。
 4. 如果平方根是一个整数，我们完全跳过 if 块，所以 continue 语句不被执行; 相反，我们将当前 i 值加上一个空格连接到段落内容的末尾。
 
-> **备注：** 您可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
+> **备注：** 你可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
 
 ## while 语句和 do ... while 语句
 
@@ -447,7 +447,7 @@ while (exit-condition) {
 
 除了在循环之前设置初始化器变量，并且在运行代码之后，循环中包含 final-expression，而不是这两个项目被包含在括号中，这与以前的 for 循环非常类似。退出条件包含在括号内，前面是 while 关键字而不是 for。
 
-同样的三个项目仍然存在，它们仍然以与 for 循环中相同的顺序定义 - 这是有道理的，因为您必须先定义一个初始化器，然后才能检查它是否已到达退出条件; 在循环中的代码运行（迭代已经完成）之后，运行最后的条件，这只有在尚未达到退出条件时才会发生。
+同样的三个项目仍然存在，它们仍然以与 for 循环中相同的顺序定义 - 这是有道理的，因为你必须先定义一个初始化器，然后才能检查它是否已到达退出条件; 在循环中的代码运行（迭代已经完成）之后，运行最后的条件，这只有在尚未达到退出条件时才会发生。
 
 我们再来看看我们的猫列表示例，但是重写了一个 while 循环：
 
@@ -506,14 +506,14 @@ do {
 
 在这个练习中，我们希望你打印出一个简单的启动倒计时到输出框，从 10 到关闭。具体来说，我们希望你：
 
-- 从 10 下降到 0.我们为您提供了一个初始化器 - var i = 10;
-- 对于每次迭代，创建一个新的段落并将其附加到输出\<div>，我们使用`var output = document.querySelector('.output');`。在评论中，我们为您提供了需要在循环中某处使用的三条代码行：
+- 从 10 下降到 0.我们为你提供了一个初始化器 - var i = 10;
+- 对于每次迭代，创建一个新的段落并将其附加到输出\<div>，我们使用`var output = document.querySelector('.output');`。在评论中，我们为你提供了需要在循环中某处使用的三条代码行：
 
   - `var para = document.createElement('p');` —新建一个段落。
   - `output.appendChild(para);` — 将段落附加到输出 `<div>`中。
-  - `para.textContent =` — 段落内的文字等于您放在右侧的任何内容。
+  - `para.textContent =` — 段落内的文字等于你放在右侧的任何内容。
 
-- 不同的迭代数字需要将不同的文本放在该迭代的段落中（您需要一个条件语句和多个`para.textContent = lines`）：
+- 不同的迭代数字需要将不同的文本放在该迭代的段落中（你需要一个条件语句和多个`para.textContent = lines`）：
 
   - 如果数字是 10，打印“Countdown 10”到段落。
   - 如果数字为 0，请打印“Blast off！”到段落。
@@ -521,7 +521,7 @@ do {
 
 - 记住要包括一个迭代器！然而，在这个例子中，我们在每次迭代之后都下降，而不是上升，所以你不想要`i++` - 你如何向下迭代？
 
-如果您犯了错误，您可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。
+如果你犯了错误，你可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。
 
 ```html hidden
 <div class="output" style="height: 410px;overflow: auto;"></div>
@@ -574,7 +574,7 @@ window.addEventListener("load", updateCode);
 
 ## 主动学习：填写来宾列表
 
-在本练习中，我们希望您获取存储在数组中的名称列表，并将其放入来宾列表中。但这不是那么容易 - 我们不想让菲尔和洛拉进来，因为他们是贪婪和粗鲁的，总是吃所有的食物！我们有两个名单，一个是客人承认的，一个是客人拒绝的。
+在本练习中，我们希望你获取存储在数组中的名称列表，并将其放入来宾列表中。但这不是那么容易 - 我们不想让菲尔和洛拉进来，因为他们是贪婪和粗鲁的，总是吃所有的食物！我们有两个名单，一个是客人承认的，一个是客人拒绝的。
 
 具体来说，我们希望你：
 
@@ -584,15 +584,15 @@ window.addEventListener("load", updateCode);
   - 如果是，则将数组项连接到拒绝段落的`textContent`的末尾，后跟逗号和空格。
   - 如果不是，则将数组项连接到接收段落的`textContent`的末尾，后跟逗号和空格。
 
-我们已经提供给您：
+我们已经提供给你：
 
 - `var i = 0;` — 你的初始化程序
 - `refused.textContent +=` - 将连接某些东西的行的开头，结束于`refused.textContent`。
 - `admitted.textContent +=` - 将连接某些内容到一行的结尾的行的开始。
 
-额外的奖金问题 - 成功完成上述任务后，您将留下两个名称列表，用逗号分隔，但它们将不整齐 - 每个结尾处都会有一个逗号。你可以制定出如何在每种情况下编写最后一个逗号的行，并添加一个完整的停止？看看有用的字符串方法文章的帮助。
+额外的奖金问题 - 成功完成上述任务后，你将留下两个名称列表，用逗号分隔，但它们将不整齐 - 每个结尾处都会有一个逗号。你可以制定出如何在每种情况下编写最后一个逗号的行，并添加一个完整的停止？看看有用的字符串方法文章的帮助。
 
-如果您犯了错误，您可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。
+如果你犯了错误，你可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。
 
 ```html hidden
 <div class="output" style="height: 100px;overflow: auto;">
@@ -686,13 +686,13 @@ do {
 
 我们建议使用`for`，因为它可能是最简单地帮你记住一切 - 初始化程序，退出条件和最终表达式都必须整齐地放入括号，所以很容易看到他们在哪里并检查你没有丢失他们。
 
-> **备注：** 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级[循环和迭代指南](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)。
+> **备注：** 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果你想进一步了解循环学习，请阅读我们的高级[循环和迭代指南](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)。
 
 ## 结论
 
-本文向您展示了背后的基本概念，以及 JavaScript 中循环代码时可用的不同选项。你现在应该明白为什么循环是一个处理重复代码的好机制，并且在你自己的例子中使用它们！
+本文向你展示了背后的基本概念，以及 JavaScript 中循环代码时可用的不同选项。你现在应该明白为什么循环是一个处理重复代码的好机制，并且在你自己的例子中使用它们！
 
-如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
+如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
 ## 相关链接
 

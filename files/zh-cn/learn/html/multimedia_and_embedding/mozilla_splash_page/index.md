@@ -10,7 +10,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章节的要求：</th>
+      <th scope="row">前提：</th>
       <td>
         在开始这个测验之前，你应该了解了
         <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding"
@@ -20,7 +20,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         测试这些知识的掌握程度：在页面中嵌入图片和视频，框架，和 HTML
         响应式图片技术。

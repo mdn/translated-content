@@ -22,7 +22,7 @@ slug: Learn/Server-side/Django/Home_page
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         了解如何创建简单的 URL 映射和视图（没有数据编码在 URL
         中）以及如何从模型中获取数据并创建模版。
@@ -43,7 +43,7 @@ slug: Learn/Server-side/Django/Home_page
 
 ![](basic-django.png)
 
-正如你将在下一节中看到的，我们将要显示 5 个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让您对 URL 映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。
+正如你将在下一节中看到的，我们将要显示 5 个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让你对 URL 映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。
 
 ## 定义资源 URL
 
@@ -61,7 +61,7 @@ slug: Learn/Server-side/Django/Home_page
 
 相比之下，最后两个 URL 用于显示有关特定书籍或作者的详细信息 - 这些 URL 将编码要显示在 URL 中的项目的标识（如上所示\<id>）。URL 映射器可以提取编码信息并将其传递给视图，然后将动态地确定从数据库获取哪些信息。通过对我们的 URL 中的信息进行编码，我们只需要一个 URL 映射，视图和模板来处理每本书（或作者）。
 
-> **备注：** Django 允许您以任何您喜欢的方式构建您的 URL - 您可以如上所示编码 URL 正文中的信息，或使用 URL `GET`参数（例如 `/book/?id=6`）。无论您使用哪种方法，URL 都应保持清洁，逻辑和可读性 ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> **备注：** Django 允许你以任何你喜欢的方式构建你的 URL - 你可以如上所示编码 URL 正文中的信息，或使用 URL `GET`参数（例如 `/book/?id=6`）。无论你使用哪种方法，URL 都应保持清洁，逻辑和可读性 ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 >
 > Django 文档倾向于在 URL 的主体中推荐编码信息，这是他们觉得鼓励更好的 URL 设计的实践。
 
@@ -143,7 +143,7 @@ def index(request):
     )
 ```
 
-视图函数的第一部分使用`objects.all()`模型类的属性来获取记录计数。它还会获取一个`BookInstance`状态字段值为“a”（可用）的对象列表。您可以在前面的教程 ([Django Tutorial Part 3: Using models > Searching for records](/zh-CN/docs/Learn/Server-side/Django/Models#Searching_for_records)) 中找到更多关于如何访问模型的信息。
+视图函数的第一部分使用`objects.all()`模型类的属性来获取记录计数。它还会获取一个`BookInstance`状态字段值为“a”（可用）的对象列表。你可以在前面的教程 ([Django Tutorial Part 3: Using models > Searching for records](/zh-CN/docs/Learn/Server-side/Django/Models#Searching_for_records)) 中找到更多关于如何访问模型的信息。
 
 在函数结束时，我们将该函数称为`render()`创建和返回 HTML 页面作为响应（此快捷方式函数包含许多其他函数，简化了这种非常常见的用例）。它将原始`request`对象（an HttpRequest）作为参数，具有数据占位符的 HTML 模板以及`context`变量（包含要插入到这些占位符中的数据的 Python 字典）。
 
@@ -321,7 +321,7 @@ return render(
 <li><a href="{% url 'index' %}">Home</a></li>
 ```
 
-此标记`url()`使用您的**urls.py**中调用的函数的名称 和相关视图将从该函数接收的任何参数的值，并返回可用于链接到该资源的 URL。
+此标记`url()`使用你的**urls.py**中调用的函数的名称 和相关视图将从该函数接收的任何参数的值，并返回可用于链接到该资源的 URL。
 
 ## 它看起来什么样？
 
@@ -329,18 +329,18 @@ return render(
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> **备注：** 由于尚未定义这些网页的网址，视图和模板，因此您将无法使用“**所有图书**和**所有作者**”链接（目前我们刚刚在 `base_generic.html` 模板中插入了这些链接的占位符）
+> **备注：** 由于尚未定义这些网页的网址，视图和模板，因此你将无法使用“**所有图书**和**所有作者**”链接（目前我们刚刚在 `base_generic.html` 模板中插入了这些链接的占位符）
 
 ## 挑战自己
 
-以下是一些测试您熟悉模型查询，视图和模板的任务。
+以下是一些测试你熟悉模型查询，视图和模板的任务。
 
 1. 在索引模板中声明一个新的标题块，并更改页面标题以匹配此特定页面。
 2. 修改视图以生成包含特定单词（不区分大小写）的类型计数和书数，然后将这些字段添加到模板。
 
 ## 概要
 
-我们现在已经为我们的网站创建了主页 - 一个 HTML 页面，显示数据库中的一些记录数，并且链接到我们其他尚待创建的页面。一路上，我们已经学到了很多有关 url 映射器，视图，使用我们的模型查询数据库的基本信息，如何从您的视图传递信息到模板，以及如何创建和扩展模板。
+我们现在已经为我们的网站创建了主页 - 一个 HTML 页面，显示数据库中的一些记录数，并且链接到我们其他尚待创建的页面。一路上，我们已经学到了很多有关 url 映射器，视图，使用我们的模型查询数据库的基本信息，如何从你的视图传递信息到模板，以及如何创建和扩展模板。
 
 在我们的下一篇文章中，我们将基于我们的知识来创建其他四个页面。
 

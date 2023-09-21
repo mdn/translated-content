@@ -3,6 +3,8 @@ title: 在互联网上做一件事要花费多少？
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。
 
 <table class="learn-box standard-table">
@@ -22,7 +24,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>评估创建一个网站的完整流程，计算每个步骤的花费。</td>
     </tr>
   </tbody>
@@ -54,7 +56,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 ### 媒体编辑器
 
-如果你想在你的网站中添加音频或者视频，那么您可以嵌入在线服务（例如 YouTube，Vimeo 或 Dailymotion）或包含您自己的视频（请参阅下面的带宽费用)。
+如果你想在你的网站中添加音频或者视频，那么你可以嵌入在线服务（例如 YouTube，Vimeo 或 Dailymotion）或包含你自己的视频（请参阅下面的带宽费用)。
 
 对于音频文件，你可以找到免费软件（Audacity，Wavosaur）或支付高达几百美元（Sony Sound Forge，Adobe Audition）。视频编辑软件同样可以免费使用（PiTiVi，OpenShot for Linux，iMovie for Mac），少于 100 美元（Adobe Premiere Elements）或几百美元（Adobe Premiere Pro，Avid Media Composer，Final Cut Pro）。你使用数码相机购买的软件可能已经涵盖了你的所有需求。
 
@@ -99,23 +101,23 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 ### 域名
 
-您的域名必须由域名提供商（注册商）购买。您的托管服务提供商也可能是注册服务商（[1＆1](https://www.1and1.com/)，例如 [甘地](https://www.gandi.net/?lang=en) 同时是注册商和托管服务提供商）。域名通常每年花费 5-15 美元。费用取决于：
+你的域名必须由域名提供商（注册商）购买。你的托管服务提供商也可能是注册服务商（[1＆1](https://www.1and1.com/)，例如 [甘地](https://www.gandi.net/?lang=en) 同时是注册商和托管服务提供商）。域名通常每年花费 5-15 美元。费用取决于：
 
 - 地方合同（一些国家顶级域名的成本非常高，因为不同的国家设定了不同的价格）
-- 与域名相关的服务：一些注册商通过将您的邮政地址和电子邮件地址隐藏在他们自己的地址后面来提供垃圾邮件保护（相应地，邮政地址可以提供给注册服务商，邮件地址可以隐藏在属于注册服务商的别名下）。
+- 与域名相关的服务：一些注册商通过将你的邮政地址和电子邮件地址隐藏在他们自己的地址后面来提供垃圾邮件保护（相应地，邮政地址可以提供给注册服务商，邮件地址可以隐藏在属于注册服务商的别名下）。
 
 ### 自己动手托管与“打包”托管
 
 当你想发布一个网站时，你可以自己做所有事情：建立一个数据库（如果需要的话），建立一个内容管理系统或{{Glossary("CMS")}}（如 [Wordpress](http://wordpress.org/) ， [Dotclear](http://dotclear.org/) ，[spip](http://www.spip.net/en_rubrique25.html) ，等等），上传预制的模板或你自己的模板。
 
-您还可以依赖您的托管服务提供商已设置的环境，通常每月支付十美元至十五美元的费用，或者直接通过预先打包的 CMS（例如 [Wordpress](http://wordpress.com/) ，[Tumblr](https://www.tumblr.com/)，[Blogger](https://www.blogger.com/) ）直接订阅专用托管服务。在后一种情况下，您不需要支付任何费用，但是您对模板的控制可能较少。
+你还可以依赖你的托管服务提供商已设置的环境，通常每月支付十美元至十五美元的费用，或者直接通过预先打包的 CMS（例如 [Wordpress](http://wordpress.com/) ，[Tumblr](https://www.tumblr.com/)，[Blogger](https://www.blogger.com/) ）直接订阅专用托管服务。在后一种情况下，你不需要支付任何费用，但是你对模板的控制可能较少。
 
 ### 免费托管与付费托管对比
 
-您可能会问，为什么在有这么多免费服务时，我还应该去支付我的托管费用？
+你可能会问，为什么在有这么多免费服务时，我还应该去支付我的托管费用？
 
 1. 当你付费，你有更多的自由。你的网站是你的，你可以从一个主机提供商无缝迁移到下一个。
-2. 免费托管服务提供商可能会将您的内容广告添加到您的内容中，而不受您的控制
+2. 免费托管服务提供商可能会将你的内容广告添加到你的内容中，而不受你的控制
 
 有些人选择了一种混合的方式：例如，将他们的主博客放在带有适当域名的付费主机上，并使用另一种免费服务来托管自发的，不太具有战略性的内容。
 
@@ -129,7 +131,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 - 你想定期更新吗？或者它将成为一个静态网站？
 - 网站必须连接到公司的 IT 部门以收集内容（比如内部数据）吗？
 - 你是否想要一些在当下的闪亮的新功能？ （例如：在撰写本文时，页面客户端具有复杂视差）
-- 您是否需要该机构来考虑用户信息或解决复杂的`{{Glossary("UX")}}`问题（例如，创建一个吸引用户的策略或者进行一些 A 或 B 测试以在几个想法中选择最佳解决方案）？
+- 你是否需要该机构来考虑用户信息或解决复杂的 {{Glossary("UX")}} 问题（例如，创建一个吸引用户的策略或者进行一些 AB 测试以在几个想法中选择最佳解决方案）？
 
 另外，为了托管的目的，
 
@@ -137,11 +139,11 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 - 95％的可靠性已经足够了，还是需要专业的全天候服务？
 - 你需要高性能，高响应速度的专用服务器，还是只可以应付慢速共享的机器？
 
-根据您对这些问题的选择，您的网站可能会花费数千到数十万美元。
+根据你对这些问题的选择，你的网站可能会花费数千到数十万美元。
 
 ## 下一步
 
-现在您已经了解了您的网站可能会花费哪些方面的资金，现在该开始设计该网站，并[设置您的工作环境](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)了。
+现在你已经了解了你的网站可能会花费哪些方面的资金，现在该开始设计该网站，并[设置你的工作环境](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)了。
 
 - 阅读[如何选择和安装文本编辑器](/zh-CN/docs/Learn/Common_questions/实用文本编辑器) 。
-- 如果您更专注于设计，请查看[网页的解剖结构](/zh-CN/docs/Learn/Common_questions/Common_web_layouts) 。
+- 如果你更专注于设计，请查看[网页的解剖结构](/zh-CN/docs/Learn/Common_questions/Common_web_layouts) 。

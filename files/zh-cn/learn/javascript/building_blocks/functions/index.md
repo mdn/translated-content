@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
@@ -68,7 +68,7 @@ var myNumber = Math.random();
 
 > **备注：** 如果需要，你可以随意将这些代码输入浏览器控制台以便于你熟悉其功能。
 
-JavaScript 有许多内置的函数，可以让您做很多有用的事情，而无需自己编写所有的代码。事实上，许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
+JavaScript 有许多内置的函数，可以让你做很多有用的事情，而无需自己编写所有的代码。事实上，许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
 
 请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地使用浏览器 API。
 
@@ -84,7 +84,7 @@ JavaScript 有许多内置的函数，可以让您做很多有用的事情，而
 
 ## 自定义函数
 
-您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
+你在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当你看到一个自定义名称后面都带有括号，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
 
 ```js
 function draw() {
@@ -104,7 +104,7 @@ function draw() {
 draw();
 ```
 
-而不是每次我们想重复一遍，都要写出所有的代码。函数可以包含任何您喜欢的代码 - 甚至可以从内部函数调用其他函数。以上函数例如调用`random()`函数三次，由以下代码定义：
+而不是每次我们想重复一遍，都要写出所有的代码。函数可以包含任何你喜欢的代码 - 甚至可以从内部函数调用其他函数。以上函数例如调用`random()`函数三次，由以下代码定义：
 
 ```js
 function random(number) {
@@ -129,7 +129,7 @@ myFunction();
 
 ## 匿名函数
 
-您可能会以稍微不同的方式看到定义和调用的函数。到目前为止，我们刚刚创建了如下函数：
+你可能会以稍微不同的方式看到定义和调用的函数。到目前为止，我们刚刚创建了如下函数：
 
 ```js
 function myFunction() {
@@ -137,7 +137,7 @@ function myFunction() {
 }
 ```
 
-但是您也可以创建一个没有名称的函数：
+但是你也可以创建一个没有名称的函数：
 
 ```js
 function() {
@@ -155,7 +155,7 @@ myButton.onclick = function () {
 };
 ```
 
-上述示例将要求 {{htmlelement("button")}} 在页面上提供可用于选择并单击的元素。您在整个课程中已经看到过这种结构了几次，您将在下一篇文章中了解更多信息并在其中使用。
+上述示例将要求 {{htmlelement("button")}} 在页面上提供可用于选择并单击的元素。你在整个课程中已经看到过这种结构了几次，你将在下一篇文章中了解更多信息并在其中使用。
 
 你还可以将匿名函数分配为变量的值，例如：
 
@@ -252,9 +252,9 @@ console.log(madeAnotherString);
 
 所有函数的最外层被称为全局作用域。在全局作用域内定义的值可以在任意地方访问。
 
-JavaScript 由于各种原因而建立，但主要是由于安全性和组织性。有时您不希望变量可以在代码中的任何地方访问 - 您从其他地方调用的外部脚本可能会开始搞乱您的代码并导致问题，因为它们恰好与代码的其他部分使用了相同的变量名称，造成冲突。这可能是恶意的，或者是偶然的。
+JavaScript 由于各种原因而建立，但主要是由于安全性和组织性。有时你不希望变量可以在代码中的任何地方访问 - 你从其他地方调用的外部脚本可能会开始搞乱你的代码并导致问题，因为它们恰好与代码的其他部分使用了相同的变量名称，造成冲突。这可能是恶意的，或者是偶然的。
 
-例如，假设您有一个 HTML 文件，它调用两个外部 JavaScript 文件，并且它们都有一个使用相同名称定义的变量和函数：
+例如，假设你有一个 HTML 文件，它调用两个外部 JavaScript 文件，并且它们都有一个使用相同名称定义的变量和函数：
 
 ```html
 <!-- Excerpt from my HTML -->
@@ -305,9 +305,9 @@ function greeting() {
    output(x);
    ```
 
-   您应该看到变量`x`输出到屏幕的值。
+   你应该看到变量`x`输出到屏幕的值。
 
-4. 现在尝试在您的控制台中输入以下内容
+4. 现在尝试在你的控制台中输入以下内容
 
    ```js
    output(y);
@@ -339,7 +339,7 @@ function greeting() {
 
    你应该看到页面中输出的 `y` 和 `z` 的值。这样就没问题，因为 `output()` 函数在其他函数的内部被调用——在这种情况下，输出变量的定义和函数的调用都在同一个作用域中。`output()` 它可以从任何地方被调用，因为它在全局作用域中被定义。
 
-6. 现在尝试更新您的代码，如下所示：
+6. 现在尝试更新你的代码，如下所示：
 
    ```js
    function a() {
@@ -362,7 +362,7 @@ function greeting() {
 
    函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
 
-8. 最后，尝试更新您的代码，如下所示：
+8. 最后，尝试更新你的代码，如下所示：
 
    ```js
    function a() {
@@ -387,11 +387,11 @@ function greeting() {
 
 > **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
 
-> **备注：** ReferenceError："x"未定义错误是您遇到的最常见的错误。如果您收到此错误，并且确定您已经定义了该问题的变量，请检查它的范围。
+> **备注：** ReferenceError："x"未定义错误是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该问题的变量，请检查它的范围。
 
 ### 函数内部的函数
 
-请记住，您可以从任何地方调用函数，甚至可以在另一个函数中调用函数。这通常被用作保持代码整洁的方式 - 如果您有一个复杂的函数，如果将其分解成几个子函数，它更容易理解：
+请记住，你可以从任何地方调用函数，甚至可以在另一个函数中调用函数。这通常被用作保持代码整洁的方式 - 如果你有一个复杂的函数，如果将其分解成几个子函数，它更容易理解：
 
 ```js
 function myBigFunction() {

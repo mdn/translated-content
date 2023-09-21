@@ -1,16 +1,19 @@
 ---
-title: PushMessageData.arrayBuffer()
+title: "PushMessageData: arrayBuffer() メソッド"
+short-title: arrayBuffer()
 slug: Web/API/PushMessageData/arrayBuffer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
-{{domxref("PushMessageData")}} インターフェイスの **`arrayBuffer()`** メソッドは、プッシュメッセージデータを {{jsxref("ArrayBuffer")}} オブジェクトとして抽出します。
+**`arrayBuffer()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージデータを {{jsxref("ArrayBuffer")}} オブジェクトとして抽出します。
 
 ## 構文
 
-```js
-var myArrayBuffer = PushEvent.data.arrayBuffer();
+```js-nolint
+arrayBuffer()
 ```
 
 ### 引数
@@ -19,15 +22,15 @@ var myArrayBuffer = PushEvent.data.arrayBuffer();
 
 ### 返値
 
-{{jsxref("ArrayBuffer")}}。
+{{jsxref("ArrayBuffer")}} です。
 
 ## 例
 
 ```js
-self.addEventListener("push", function (event) {
-  var buffer = event.data.arrayBuffer();
+self.addEventListener("push", (event) => {
+  const buffer = event.data.arrayBuffer();
 
-  // array buffer を使用して何かを実行する。
+  // 配列バッファーを使用して何かを実行する。
 });
 ```
 
@@ -37,8 +40,4 @@ self.addEventListener("push", function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushMessageData.arrayBuffer")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

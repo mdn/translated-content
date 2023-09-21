@@ -21,7 +21,7 @@ navigator.clipboard.readText().then((text) => (outputElem.innerText = text));
 
 这将请求剪贴板内容，并且当接收到响应时存储剪贴板文本到一个元素的 {{domxref("Node.innerText", "innerText")}}.
 
-> **备注：** 异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足您的需求。
+> **备注：** 异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足你的需求。
 
 ## 写入系统粘贴板
 

@@ -10,7 +10,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -32,7 +32,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 ## 盒子阴影
 
-回到我们的[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)模块，我们查看了{{cssxref("text-shadow")}}属性，它允许您将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许您将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。
+回到我们的[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)模块，我们查看了{{cssxref("text-shadow")}}属性，它允许你将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许你将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。
 
 你可以 [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html)在这部分找到例子 (见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html))。
 
@@ -338,7 +338,7 @@ article div:last-child {
 
 ## -webkit-background-clip: text
 
-另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和 Firefox 正在实现) 是{{cssxref("background-clip")}}的 `text` 值。当与专有 `-webkit-text-fill-color: transparent;` 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个`-webkit-`供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。
+另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和 Firefox 正在实现) 是{{cssxref("background-clip")}}的 `text` 值。当与专有 `-webkit-text-fill-color: transparent;` 特性一起使用时，这允许你将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个`-webkit-`供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。
 
 ```css
 .text-clip {
@@ -349,13 +349,13 @@ article div:last-child {
 
 那么为什么其他浏览器会实现一个 `-webkit-` 前缀？主要是为了浏览器兼容性——许多 web 开发人员已经开始使用 `-webkit-` 前缀来实现 web 站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的 CSS 特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。
 
-如果您确实希望在您的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。
+如果你确实希望在你的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。
 
 > **备注：** 对于一个完整的 `-webkit-background-clip: text` 代码示例，见[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
 
 ## 自主学习：尝试一些效果
 
-现在轮到你了。对于这种自主学习，我们希望您使用下面所提供的代码来试验上面所读到的一些效果。
+现在轮到你了。对于这种自主学习，我们希望你使用下面所提供的代码来试验上面所读到的一些效果。
 
 如果你犯了一个错误，你可以用 _Reset_ 按钮来重置这个例子。
 
@@ -435,6 +435,6 @@ window.addEventListener("load", drawOutput);
 
 ## 总结
 
-我们希望这篇文章被证明是很有趣的——玩着闪亮的玩具通常是很有趣的，而且看看什么样的工具在尖端的浏览器中是可以得到的是我们很感兴趣的。您已经到达了样式盒文章的末尾，因此，接下来您将通过我们的评估来测试您的 box syling 技能。
+我们希望这篇文章被证明是很有趣的——玩着闪亮的玩具通常是很有趣的，而且看看什么样的工具在尖端的浏览器中是可以得到的是我们很感兴趣的。你已经到达了样式盒文章的末尾，因此，接下来你将通过我们的评估来测试你的 box syling 技能。
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}

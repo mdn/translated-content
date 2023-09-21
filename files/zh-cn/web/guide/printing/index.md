@@ -49,88 +49,43 @@ slug: Web/Guide/Printing
 
 以下是一些常见示例。
 
-### 完成后打开并自动关闭弹出窗口
+### 完成后自动关闭窗口
 
-如果你希望在用户打印完内容后自动关闭[弹出窗口](/zh-CN/docs/Web/API/Window/open)（例如文档的打印机友好版本），你可以使用这样的代码：
-
-```html
-<div>
-  <p>
-    To try out the <code>afterprint</code> event, click the link below to open
-    the window to print. You can also try changing the code to use
-    <code>beforeprint</code> to see the difference.
-  </p>
-  <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
-</div>
-```
+以下示例将在用户打印其内容后关闭窗口：
 
 ```js
-function popuponclick() {
-  const my_window = window.open(
-    "",
-    "mywindow",
-    "status=1,width=350,height=150",
-  );
-  my_window.document.write("<html><head><title>Print Me</title></head>");
-  my_window.document.write('<body onafterprint="self.close()">');
-  my_window.document.write(
-    "<p>When you print this window, it will close afterward.</p>",
-  );
-  my_window.document.write("</body></html>");
-}
+window.addEventListener("afterprint", () => self.close);
 ```
-
-[查看实时示例](https://mdn.dev/archives/media/samples/domref/printevents.html)
 
 ### 无需打开弹出窗口即可打印外部页面
 
 如果你想在不打开弹窗的情况下打印外部页面，可以使用隐藏的 {{HTMLElement("iframe")}} 元素（请参阅：[HTMLIFrameElement](/zh-CN/docs/Web/API/HTMLIFrameElement)），在用户打印其内容后自动将其移除。下面是一个可能的示例，它将打印一个名为 `externalPage.html` 的文件：
 
+#### HTML
+
 ```html
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>MDN 示例</title>
-    <script>
-      function closePrint() {
-        document.body.removeChild(this.__container__);
-      }
+<button id="print_external">打印外部页面！</button>
+```
 
-      function setPrint() {
-        this.contentWindow.__container__ = this;
-        this.contentWindow.onbeforeunload = closePrint;
-        this.contentWindow.onafterprint = closePrint;
-        this.contentWindow.focus(); // IE 所必须的
-        this.contentWindow.print();
-      }
+#### JavaScript
 
-      function printPage(sURL) {
-        const hideFrame = document.createElement("iframe");
-        hideFrame.onload = setPrint;
-        hideFrame.style.position = "fixed";
-        hideFrame.style.right = "0";
-        hideFrame.style.bottom = "0";
-        hideFrame.style.width = "0";
-        hideFrame.style.height = "0";
-        hideFrame.style.border = "0";
-        hideFrame.src = sURL;
-        document.body.appendChild(hideFrame);
-      }
-    </script>
-  </head>
+```js
+function setPrint() {
+  const closePrint = () => {
+    document.body.removeChild(this);
+  };
+  this.contentWindow.onbeforeunload = closePrint;
+  this.contentWindow.onafterprint = closePrint;
+  this.contentWindow.print();
+}
 
-  <body>
-    <p>
-      <span
-        onclick="printPage('externalPage.html');"
-        style="cursor:pointer;text-decoration:underline;color:#0000ff;">
-        打印外部页面！
-      </span>
-    </p>
-  </body>
-</html>
+document.getElementById("print_external").addEventListener("click", () => {
+  const hideFrame = document.createElement("iframe");
+  hideFrame.onload = setPrint;
+  hideFrame.style.display = "none"; // 隐藏 iframe
+  hideFrame.src = "external-page.html";
+  document.body.appendChild(hideFrame);
+});
 ```
 
 ## 参见

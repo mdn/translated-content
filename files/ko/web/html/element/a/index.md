@@ -13,7 +13,7 @@ slug: Web/HTML/Element/a
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("download")}}
+- `download`
 
   - : 링크로 이동하는 대신 사용자에게 URL을 저장할지 물어봅니다. 값을 지정할 수도 있고, 지정하지 않을 수도 있습니다.
 
@@ -29,7 +29,7 @@ slug: Web/HTML/Element/a
     >
     > - `Content-Disposition`의 `filename`이 `download`와 다를 땐 헤더가 우선권을 가집니다. (`Content-Disposition: inline`일 때, Firefox는 헤더를 우선하고 Chrome은 `download`를 우선합니다.)
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : 하이퍼링크가 가리키는 URL. 링크는 HTTP 기반 URL일 필요는 없고, 브라우저가 지원하는 모든 URL 스킴을 사용할 수 있습니다.
 
@@ -39,15 +39,15 @@ slug: Web/HTML/Element/a
     - `mailto:` URL을 사용하는 이메일 주소
     - 웹 브라우저는 다른 URL 스킴을 지원하지 않지만, 웹사이트는 {{domxref("Navigator.registerProtocolHandler()")}}를 통해 지원할 수 있습니다.
 
-- {{htmlattrdef("hreflang")}}
+- `hreflang`
   - : 링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없습니다. 가능한 값은 [전역 `lang` 특성](/ko/docs/Web/HTML/Global_attributes/lang)과 동일합니다.
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : 하나의 스페이스로 구분하는 URL 목록. 링크를 클릭해 따라갈 경우, 브라우저가 URL 각각에 {{HTTPMethod("POST")}} 요청을 전송합니다. 대개 추적 용도로 사용합니다.
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
   - : URL을 가져올 때 사용할 리퍼러. {{httpheader("Referrer-Policy")}} 문서에서 가능한 값과 효과를 확인하세요.
-- {{htmlattrdef("rel")}}
+- `rel`
   - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Link_types) 목록.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : 링크한 URL을 표시할 위치. 가능한 값은 브라우징 맥락으로, 즉 탭, 창, `<iframe>`의 이름이나 특정 키워드입니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
 
@@ -60,7 +60,7 @@ slug: Web/HTML/Element/a
 
     > **참고:** 최근의 브라우저(Firefox 79+ 등)에서는 target="\_blank"를 지정하면 `rel="noopener"`를 적용한 것과 같은 동작을 합니다.
 
-- {{htmlattrdef("type")}}
+- `type`
   - : 링크 URL의 {{Glossary("MIME type")}}에 대한 힌트. 특별한 내장 기능은 없습니다.
 
 ## 속성

@@ -403,9 +403,9 @@ const myVideo = document.querySelector("video");
 const myNotification = new Notification("Hello!");
 ```
 
-## スキルをテストしましょう!
+## スキルテスト
 
-この記事の最後に到達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Object basics](/ja/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Object basics](/ja/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics) を見てください。
 
 ## おさらい
 
