@@ -110,11 +110,7 @@ h3 {
 
 ## Especificações
 
-| Especificação                                                   | Status                  | Observações       |
-| --------------------------------------------------------------- | ----------------------- | ----------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding') }}           | {{ Spec2('CSS3 Box') }} | Sem alteração     |
-| {{ SpecName('CSS2.1', 'box.html#propdef-padding', 'padding') }} | {{ Spec2('CSS2.1') }}   | Sem alteração     |
-| {{ Specname('CSS1', '#padding', 'padding') }}                   | {{ Spec2('CSS1') }}     | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade
 

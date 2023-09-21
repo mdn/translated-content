@@ -131,11 +131,7 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ## Especificações
 
-| Especificação                                                                               | Status                   | Comment |
-| ------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-iframe-element', '&lt;iframe&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                    | {{Spec2('HTML4.01')}}    |         |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 

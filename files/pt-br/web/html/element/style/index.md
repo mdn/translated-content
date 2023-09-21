@@ -69,11 +69,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ## Especificações
 
-| Specification                                                                      | Status                     | Comment                                     |
-| ---------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'document-metadata.html#the-style-element', 'style') }} | {{ Spec2('HTML WHATWG') }} | No change from {{ SpecName('HTML5 W3C') }}. |
-| {{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }}   | {{ Spec2('HTML5 W3C') }}   | Added the `scoped` attribute                |
-| {{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}                | {{ Spec2('HTML4.01') }}    |                                             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -66,11 +66,7 @@ _A Internet_ é um sistema global de redes interconectadas que usam o Internet P
 
 ## Especificações
 
-| Especificação                                                                           | Status                   | Comentário |
-| --------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                     | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

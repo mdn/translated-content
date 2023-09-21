@@ -95,12 +95,7 @@ div {
 
 ## Especificações
 
-| Especificação                                                         | Status                        | Comentário                                |
-| --------------------------------------------------------------------- | ----------------------------- | ----------------------------------------- |
-| {{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}           | {{Spec2('CSS3 Box')}}         | Nenhuma mudança significativa             |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}}  | {{Spec2('CSS3 Transitions')}} | Definir o `margin-bottom` como "animavel" |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}           | Remove seu efeito nos elementos in-line.  |
-| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}               | {{Spec2('CSS1')}}             | Definição inicial                         |
+{{Specifications}}
 
 {{cssinfo}}
 

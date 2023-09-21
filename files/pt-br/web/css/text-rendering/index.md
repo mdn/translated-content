@@ -68,11 +68,7 @@ A opção optimizeSpeed não tem efeito na versão 2.0 do Gecko, devido ao códi
 
 ## Especificações
 
-| Specification                                                                     | Status                | Comment |
-| --------------------------------------------------------------------------------- | --------------------- | ------- |
-| {{ SpecName('SVG1.1', 'painting.html#TextRenderingProperty', 'text-rendering') }} | {{ Spec2('SVG1.1') }} |         |
-
-Essa é uma especificação SVG, e não é definida em nenhum padrão CSS. Gecko (Firefox) e WebKit aplicam a propriedade `text-rendering` para códigos HTML e XML.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

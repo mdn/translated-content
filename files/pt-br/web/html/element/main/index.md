@@ -55,11 +55,7 @@ Este elemento admite apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ## Especificações
 
-| Especificação                                                                       | Estado                   | Comentário                                                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                    | {{Spec2('HTML WHATWG')}} | Removida a restrição sobre não usar \<main> como um filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}. |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}   | {{Spec2('HTML5.1')}}     | Não há mudança na {{SpecName('HTML5 W3C')}}                                                                                                                                                                    |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}   | Definição inicial.                                                                                                                                                                                             |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

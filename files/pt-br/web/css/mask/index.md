@@ -55,10 +55,7 @@ Se o valor é um valor URI, o elemento apontado pelo URI é usado como uma másc
 
 ## Especificações
 
-| Especificação                                               | Estado                 | Comentário                                                                                                                                                               |
-| ----------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("CSS Masks", "#the-mask", 'mask')}}              | {{Spec2("CSS Masks")}} | Estende-se a sua utilização para elementos HTML. Estende sua sintaxe, tornando-a uma simplificação para as novas propriedades da `mask-*` definidos nessa especificação. |
-| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}    | Definição inicial.                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

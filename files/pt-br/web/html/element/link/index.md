@@ -140,11 +140,7 @@ Você pode determinar quando um stylesheet foi carregado observando um `load` ev
 
 ## Especificações
 
-| Specification                                                                        | Status                   | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}       | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}   |         |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                 | {{Spec2('HTML4.01')}}    |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -327,9 +327,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Especificações
 
-| Especificação                                                                      | Status                        | Comentário        |
-| ---------------------------------------------------------------------------------- | ----------------------------- | ----------------- |
-| {{SpecName('CSS3 Transitions', '#transition-delay-property', 'transition-delay')}} | {{Spec2('CSS3 Transitions')}} | Definição inicial |
+{{Specifications}}
 
 {{cssinfo}}
 

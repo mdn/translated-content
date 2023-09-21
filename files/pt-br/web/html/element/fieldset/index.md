@@ -371,12 +371,7 @@ O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 
 ## Especificações
 
-| Especificação                                                                      | Status                   | Comentário                                                      |
-| ---------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento fieldset                                  |
-| {{SpecName('HTML WHATWG', 'rendering.html#the-fieldset-and-legend-elements')}}     | {{Spec2('HTML WHATWG')}} | Padrão sugerido de renderização dos elementos fieldset e legend |
-| {{SpecName('HTML5 W3C', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}   | {{Spec2('HTML5 W3C')}}   |                                                                 |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}        | {{Spec2('HTML4.01')}}    | Definição inicial                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

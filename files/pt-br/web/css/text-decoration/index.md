@@ -80,11 +80,7 @@ p.underover {
 
 ## Especificações
 
-| Especificação                                                                        | Status                            | Comentários                                                                                                     |
-| ------------------------------------------------------------------------------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}} | {{Spec2('CSS3 Text Decoration')}} | Transformado em uma propriedade reduzida. Adicionado suporte para o valor {{cssxref('text-decoration-style')}}. |
-| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}         | {{Spec2('CSS2.1')}}               | Sem mudanças significantes.                                                                                     |
-| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                          | {{Spec2('CSS1')}}                 | Definição inicial.                                                                                              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

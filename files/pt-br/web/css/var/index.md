@@ -59,9 +59,7 @@ body {
 
 ## Especificações
 
-| Especificação                                               | Status                      | Comentário        |
-| ----------------------------------------------------------- | --------------------------- | ----------------- |
-| {{SpecName('CSS3 Variables', '#using-variables', 'var()')}} | {{Spec2('CSS3 Variables')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

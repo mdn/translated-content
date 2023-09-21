@@ -103,11 +103,7 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 ## Especificações
 
-| Especificação                                                                               | Status                   | Comentário |
-| ------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-strong-element', '&lt;strong&gt;')}}          | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                  | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Navegadores Compatíveis
 

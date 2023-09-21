@@ -329,10 +329,7 @@ Scrolling elements containing `fixed` or `sticky` content can cause performance 
 
 ## Especificações
 
-| Specification                                                       | Status                        | Comment                       |
-| ------------------------------------------------------------------- | ----------------------------- | ----------------------------- |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}           |                               |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}    | {{Spec2('CSS3 Positioning')}} | Adds `sticky` property value. |
+{{Specifications}}
 
 {{cssinfo}}
 

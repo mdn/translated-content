@@ -37,11 +37,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificações                                                                  | Estado                   | Comentários |
-| ------------------------------------------------------------------------------- | ------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}}  | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML5 W3C')}}   |             |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}            | {{Spec2('HTML4.01')}}    |             |
+{{Specifications}}
 
 ## Navegadores Compatíveis
 

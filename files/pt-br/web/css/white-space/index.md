@@ -60,10 +60,7 @@ code {
 
 ## Especificações
 
-| Especificação                                                       | Estado                 | Comentário                                   |
-| ------------------------------------------------------------------- | ---------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}    | {{Spec2('CSS3 Text')}} | Aumenta a precisão dos algoritmos de quebra. |
-| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}    | Especificação inicial.                       |
+{{Specifications}}
 
 ## Compatibilidade de Navegadores
 

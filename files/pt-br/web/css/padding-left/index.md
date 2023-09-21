@@ -46,12 +46,7 @@ padding-left: inherit
 
 ## Especificações
 
-| Especificação                                                           | Status                          | Comentário                             |
-| ----------------------------------------------------------------------- | ------------------------------- | -------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-left') }}              | {{ Spec2('CSS3 Box') }}         | Nenhuma mudança.                       |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-left') }}   | {{ Spec2('CSS3 Transitions') }} | Define `padding-left` como animatable. |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left') }} | {{ Spec2('CSS2.1') }}           | Nenhuma mudança.                       |
-| {{ Specname('CSS1', '#padding-left', 'padding-left') }}                 | {{ Spec2('CSS1') }}             | Definição inicial.                     |
+{{Specifications}}
 
 ## Compatibilidade do Navegador
 

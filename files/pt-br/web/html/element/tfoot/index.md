@@ -122,10 +122,7 @@ Por favor veja a página {{HTMLElement("table")}} para exemplos sobre `<tfoot>`.
 
 ## Especificações
 
-| Especificações                                                                  | Status                   | Comentários |
-| ------------------------------------------------------------------------------- | ------------------------ | ----------- |
-| {{SpecName('HTML WHATWG','tables.html#the-tfoot-element','tfoot element')}}     | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-tfoot-element','tfoot element')}} | {{Spec2('HTML5 W3C')}}   |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

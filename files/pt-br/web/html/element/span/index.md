@@ -36,11 +36,7 @@ Some text
 
 ## Especificações
 
-| Specification                                                                           | Status                   | Comment                                                       |
-| --------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-span-element', '&lt;span&gt;')}}          | {{Spec2('HTML WHATWG')}} |                                                               |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML5 W3C')}}   | A interface com o DOM agora é {{domxref("HTMLSpanElement")}}. |
-| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                | {{Spec2('HTML4.01')}}    |                                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

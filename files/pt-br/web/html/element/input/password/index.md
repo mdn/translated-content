@@ -238,10 +238,7 @@ cpf.oninput = function (event) {
 
 ## Especificações
 
-| Especificação                                                                                             | Status                   | Comentário        |
-| --------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
-| {{SpecName('HTML5.1', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

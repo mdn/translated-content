@@ -196,11 +196,7 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 ## Especificações
 
-| Specification                                                                         | Status                   | Comment |
-| ------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'embedded-content-1.html#the-img-element', '&lt;img&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                 | {{Spec2('HTML4.01')}}    |         |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 
