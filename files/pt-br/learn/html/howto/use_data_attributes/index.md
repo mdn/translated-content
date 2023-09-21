@@ -3,7 +3,7 @@ title: Utilizando data attributes
 slug: Learn/HTML/Howto/Use_data_attributes
 ---
 
-O [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element.classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
+O [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element.classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
 
 ## Sintaxe HTML
 

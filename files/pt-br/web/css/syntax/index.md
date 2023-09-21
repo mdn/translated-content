@@ -28,7 +28,7 @@ Esses blocos são chamados de **blocos de declaração** e as declarações dent
 
 ![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
 
-> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#attr-style).
+> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#style).
 
 ## Regras CSS
 

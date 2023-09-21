@@ -78,7 +78,7 @@ Podemos estilizar textos ou imagens na propriedade {{cssxref("content")}} pratic
 
 ### Dicas
 
-O exemplo a seguir mostra o uso do `::after` [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) em conjunto com a expressão CSS [`attr()`](/pt-BR/docs/Web/CSS/attr) e um [atributo data personalizado](/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` para criar uma _dica_ em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em [página separada.](/files/4591/css-only_tooltips.html)
+O exemplo a seguir mostra o uso do `::after` [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) em conjunto com a expressão CSS [`attr()`](/pt-BR/docs/Web/CSS/attr) e um [atributo data personalizado](/pt-BR/docs/Web/HTML/Global_attributes#dataset) `data-descr` para criar uma _dica_ em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em [página separada.](/files/4591/css-only_tooltips.html)
 
 ```html
 <p>
