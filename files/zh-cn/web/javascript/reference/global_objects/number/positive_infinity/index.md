@@ -28,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 - `POSITIVE_INFINITY`，除以任何负值（除了 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}）都等于 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}。
 - `POSITIVE_INFINITY`，除以任何正值（除了 `POSITIVE_INFINITY`）都等于 `POSITIVE_INFINITY`。
 - `POSITIVE_INFINITY`，除以 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} 或 `POSITIVE_INFINITY`，都等于 {{jsxref("NaN")}}。
-- `Number.POSITIVE_INFINITY < x` 对于任何不是 `POSITIVE_INFINITY` 的数字 _x_ 都为真。
+- `Number.POSITIVE_INFINITY > x` 对于任何不是 `POSITIVE_INFINITY` 的数字 _x_ 都为真。
 
 你可以使用 `Number.POSITIVE_INFINITY` 属性来表示成功时返回有限数值的错误条件。不过，{{jsxref("NaN")}} 更适合于这种情况。
 
