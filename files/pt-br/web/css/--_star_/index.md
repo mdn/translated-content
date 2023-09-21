@@ -78,9 +78,7 @@ Propriedades personalizadas participam na cascata: cada uma delas pode aparecer 
 
 ## Especificações
 
-| Specification                                                | Status                      | Comment            |
-| ------------------------------------------------------------ | --------------------------- | ------------------ |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

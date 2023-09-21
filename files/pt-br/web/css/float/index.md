@@ -129,12 +129,7 @@ p.withRedBoxes {
 
 ## Especificações
 
-| Especificação                                                             | Situação                            | Comentário                                                                                                                                                           |
-| ------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Adiciona os valores `inline-start` e `inline-end`.                                                                                                                   |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                               | {{Spec2('CSS3 Box')}}               | Muitos valores novos, nem todos claramente definidos ainda. Qualquer diferença em comportamento não relacionado a novas funções são involutárias; por favor informe. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}            | {{Spec2('CSS2.1')}}                 | Sem mudanças                                                                                                                                                         |
-| {{SpecName('CSS1', '#float', 'float')}}                                   | {{Spec2('CSS1')}}                   | Definição inicial                                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

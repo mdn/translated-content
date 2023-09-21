@@ -56,13 +56,7 @@ p::first-letter {
 
 ## Especificações
 
-| Especificações                                                                           | Status                             | Comentários                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS4 Pseudo-Elements', '#first-letter-pseudo', '::first-letter')}}          | {{ Spec2('CSS4 Pseudo-Elements')}} | Propriedades permitidas generalizadas para tipografia, decoração de texto e propriedades de layout embutido, {{ cssxref("opacity") }} e {{ cssxref("box-shadow") }}.                                                          |
-| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow with ::first-letter')}} | {{ Spec2('CSS3 Text Decoration')}} | Permitido uso de {{cssxref("text-shadow")}} com `::first-letter`.                                                                                                                                                             |
-| {{ SpecName('CSS3 Selectors', '#first-letter', '::first-letter') }}                      | {{ Spec2('CSS3 Selectors') }}      | Comportamento definido entre maiúsculas e minúsculas, como nos itens da lista, ou com comportamento específico do idioma (como o dígrafo holandês `IJ`). A sintaxe de dois dois-pontos para pseudo-elementos foi introduzida. |
-| {{ SpecName('CSS2.1', 'selector.html#first-letter', '::first-letter') }}                 | {{ Spec2('CSS2.1') }}              | Sem mudanças significativas, apesar que CSS nível 2 continuar aceitando apenas um dois-pontos.                                                                                                                                |
-| {{ SpecName('CSS1', '#the-first-letter-pseudo-element', '::first-letter') }}             | {{ Spec2('CSS1') }}                | Definição inicial de um dois-pontos.                                                                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

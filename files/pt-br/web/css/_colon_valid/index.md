@@ -26,11 +26,7 @@ Veja {{cssxref(":invalid")}} para um exemplo.
 
 ## Especificações
 
-| Specification                                                 | Status                      | Comment                                                 |
-| ------------------------------------------------------------- | --------------------------- | ------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}      | {{Spec2('HTML WHATWG')}}    | Sem alterações.                                         |
-| {{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}        | {{Spec2('HTML5 W3C')}}      | Define a semântica do HTML e a validação de restrições. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}} | {{Spec2('CSS4 Selectors')}} | Definição inicial                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

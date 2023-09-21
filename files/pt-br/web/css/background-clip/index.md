@@ -159,9 +159,7 @@ p {
 
 ## Especificações
 
-| Especificação                                                               | Estado                        | Comentário |
-| --------------------------------------------------------------------------- | ----------------------------- | ---------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

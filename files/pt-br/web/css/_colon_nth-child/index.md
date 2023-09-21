@@ -154,10 +154,7 @@ div em {
 
 ## Especificações
 
-| Especificação                                                     | Status                      | Comentário                                                                                                                    |
-| ----------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Adiciona a sintaxe `of <selector>` e especifica que os elementos correspondentes ao seletor não precisam ter um elemento pai. |
-| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                                                                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

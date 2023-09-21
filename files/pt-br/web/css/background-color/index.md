@@ -104,11 +104,7 @@ A cor do contrast é determinada comparando a luminância da cor do texto e da c
 
 ## Especificações
 
-| Specification                                                                      | Comment                                                                                                                                                | Feedback                                                                                          |
-| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}          | Though technically removing the `transparent` keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}} | [Backgrounds Level 3 GitHub issues](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} |                                                                                                                                                        |                                                                                                   |
-| {{SpecName('CSS1', '#background-color', 'background-color')}}                      | Initial definition                                                                                                                                     |                                                                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -130,9 +130,7 @@ Isso garante que o tamanho do texto será redimensionado se a página for amplia
 
 ## Especificações
 
-| Especificação                                           | Status                   | Comentário        |
-| ------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -22,12 +22,7 @@ a:link {
 
 ## Especificações
 
-| Especificação                                                          | Status                        | Comentário                                       |
-| ---------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------ |
-| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS4 Selectors') }} | Nenhuma mudança.                                 |
-| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS3 Selectors') }} | Nenhuma mudança.                                 |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}         | Uso estrito ao elemento {{ HTMLElement("a") }} . |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}              | {{ Spec2('CSS1') }}           | Definição Inicial.                               |
+{{Specifications}}
 
 ## Compatibilidade do navegador
 

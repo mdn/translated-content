@@ -82,11 +82,7 @@ p:read-write {
 
 ## Especificações
 
-| Especificação                                                        | Status                        | Comentário                                                     |
-| -------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }} | {{ Spec2('HTML WHATWG') }}    | Nenhuma mudança.                                               |
-| {{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}   | {{ Spec2('HTML5 W3C') }}      | Define a semântica em relação à validação de HTML e restrição. |
-| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}       | {{ Spec2('CSS4 Selectors') }} | Define a pseudo-classe, mas não a semântica associada.         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

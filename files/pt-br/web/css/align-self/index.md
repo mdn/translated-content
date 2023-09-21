@@ -121,12 +121,7 @@ div:nth-child(3) {
 
 ## Especificações
 
-| Especificação                                                           | Status                          | Comentário                                   |
-| ----------------------------------------------------------------------- | ------------------------------- | -------------------------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} | Atualiza para últimas definições de sintaxe. |
-| {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}       | {{Spec2("CSS3 Flexbox")}}       | Definição inicial.                           |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

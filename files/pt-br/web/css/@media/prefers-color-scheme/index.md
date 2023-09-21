@@ -83,9 +83,7 @@ Os elementos abaixo têm um tema de cores inicial. Eles podem ser mais temático
 
 ## Especificações
 
-| Especificação                                                                                     | Estado                          | Comentários        |
-| ------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------ |
-| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}} | {{Spec2('CSS5 Media Queries')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -17,9 +17,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 
 ## Especificações
 
-| Specification                                             | Status                      | Comment            |
-| --------------------------------------------------------- | --------------------------- | ------------------ |
-| {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

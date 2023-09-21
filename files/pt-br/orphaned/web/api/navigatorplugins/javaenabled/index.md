@@ -27,9 +27,7 @@ O valor de retorno para este método indica se a preferência que controla o Jav
 
 ## Especificações
 
-| Esécificações                                                                                                            | Estado                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-navigator-javaenabled', 'NavigatorPlugins.javaEnabled')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegadores compativeis
 

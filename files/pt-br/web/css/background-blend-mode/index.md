@@ -80,9 +80,7 @@ console.log(document.getElementById("div"));
 
 ## Especificações
 
-| Especificação                                                                    | Status                     | Comentário         |
-| -------------------------------------------------------------------------------- | -------------------------- | ------------------ |
-| {{ SpecName('Compositing', '#background-blend-mode', 'background-blend-mode') }} | {{ Spec2('Compositing') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

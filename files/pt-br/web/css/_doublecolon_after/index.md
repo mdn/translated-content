@@ -122,13 +122,7 @@ span[data-descr]:hover::after {
 
 ## Especificações
 
-| Especificação                                                                                          | Status                            | Comentário                                                        |
-| ------------------------------------------------------------------------------------------------------ | --------------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}                                  | {{Spec2('CSS4 Pseudo-Elements')}} | Sem mudanças significativas em relação à especificação anterior.  |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "transitions on pseudo-element properties")}} | {{Spec2("CSS3 Transitions")}}     | Permite transições em propriedades definidas em pseudo-elementos. |
-| {{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}                         | {{Spec2("CSS3 Animations")}}      | Permite animações em propriedades definidas em pseudo-elementos.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::after')}}                                              | {{Spec2('CSS3 Selectors')}}       | Introduz a sintaxe de dois sinais de dois pontos.                 |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}                                | {{Spec2('CSS2.1')}}               | Definição inicial, usando a sintaxe de um sinal de dois pontos.   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

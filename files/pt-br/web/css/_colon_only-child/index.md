@@ -94,10 +94,7 @@ li:only-child {
 
 ## Especificações
 
-| Especificação                                                       | Status                      | Comentário                                                             |
-| ------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS4 Selectors')}} | Não é necessário que os elementos selecionados tenham um elemento-pai. |
-| {{SpecName('CSS3 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

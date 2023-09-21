@@ -68,9 +68,7 @@ Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _backgr
 
 ## Especificações
 
-| Especificação                                                                                        | Estatus                  | Comentário                      |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------- |
-| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Actualmente adiado para o CSS4. |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 

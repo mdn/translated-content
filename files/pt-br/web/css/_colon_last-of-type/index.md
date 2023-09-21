@@ -49,10 +49,7 @@ p em:last-of-type {
 
 ## Especificações
 
-| Specification                                                           | Status                      | Comment            |
-| ----------------------------------------------------------------------- | --------------------------- | ------------------ |
-| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | No change          |
-| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

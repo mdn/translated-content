@@ -98,11 +98,7 @@ Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completam
 
 ## Especificações
 
-| Especificação                                                   | Status                      | Comentário                                            |
-| --------------------------------------------------------------- | --------------------------- | ----------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}    | {{Spec2('HTML WHATWG')}}    | Nenhuma alteração.                                    |
-| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}      | {{Spec2('HTML5 W3C')}}      | Define a semântica do HTML e validação de restrições. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}} | {{Spec2('CSS4 Selectors')}} | Definição inicial.                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

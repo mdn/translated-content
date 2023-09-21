@@ -239,10 +239,7 @@ li {
 
 ## Especificações
 
-| Especificação                                                | Status                    | Comentário        |
-| ------------------------------------------------------------ | ------------------------- | ----------------- |
-| {{SpecName("CSS3 Content", "#content-property", "content")}} | {{Spec2("CSS3 Content")}} |                   |
-| {{SpecName("CSS2.1", "generate.html#content", "content")}}   | {{Spec2("CSS2.1")}}       | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

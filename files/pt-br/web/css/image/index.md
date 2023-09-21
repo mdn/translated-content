@@ -66,10 +66,7 @@ element(#fakeid)  /* Um elemento ID deve ser um ID existente na página. */
 
 ## Especificações
 
-| Especificações                                                 | Status                   | Comentário                                                                                                                                                                |
-| -------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS4 Images')}} | Adiciona {{cssxref("element()")}}, {{cssxref("image()")}}, {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}, e {{cssxref("image-resolution")}}. |
-| {{SpecName('CSS3 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS3 Images')}} | Definição inicial. Depois disso, não existe definição explicita do tipo de data `<image>`. Imagens podem ser somente definidas usando a notação funciona `url()` .        |
+{{Specifications}}
 
 ## Compatibilidade do navegador
 

@@ -33,9 +33,7 @@ O recurso `display-mode` é especificado como um valor de uma palavra chave esco
 
 ## Especificações
 
-| Specification                                                               | Status                | Comment            |
-| --------------------------------------------------------------------------- | --------------------- | ------------------ |
-| {{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}} | {{Spec2('Manifest')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

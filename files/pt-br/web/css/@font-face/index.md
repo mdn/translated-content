@@ -124,11 +124,7 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 
 ## Especificações
 
-| Especificação                                               | Status                  | Comentário                                                           |
-| ----------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------- |
-| {{SpecName('WOFF2.0', '', 'WOFF2 font format')}}            | {{Spec2('WOFF2.0')}}    | Especificação de formato de fonte com novo algoritmo de compactação. |
-| {{SpecName('WOFF1.0', '', 'WOFF font format')}}             | {{Spec2('WOFF1.0')}}    | Especificação de formato                                             |
-| {{SpecName('CSS3 Fonts', '#font-face-rule', '@font-face')}} | {{Spec2('CSS3 Fonts')}} | Definição Inicial                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -88,11 +88,7 @@ Um ou mais dos seguintes, por qualquer ordem:
 
 ## Especificações
 
-| Especificação                                                         | estado                     | Comente                                                                                                                                                                                           |
-| --------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName ( 'Fundos CSS3', '# a-fundo', 'fundo')}}                   | {{Spec2 ( 'Fundos CSS3')}} | A propriedade taquigráfica foi estendido para suportar múltiplas origens e a nova {{cssxref("background-size")}}, {{cssxref("background-origem")}} e {{cssxref("background-clip")}} propriedades. |
-| {{SpecName ( 'CSS2.1', '# propdef-fundo colors.html', 'background')}} | {{Spec2 ( 'CSS2.1')}}      | Não ocorreram alterações significativas                                                                                                                                                           |
-| {{SpecName ( 'CSS1', '#background', 'background')}}                   | {{Spec2 ( 'CSS1')}}        | definição inicial                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

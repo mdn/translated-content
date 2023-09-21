@@ -42,11 +42,7 @@ where:
 
 ## Especificações
 
-| Especificação                                               | Situação                        | Comentário                                                                                                                                                        |
-| ----------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Media Queries', '#media0', '@import')}}    | {{Spec2('CSS3 Media Queries')}} | Estendeu a sintaxe para apoiar qualquer consulta de mídia e não apenas simples [tipos de mídia (media types)](/pt-BR/docs/Web/CSS/@media#Media_types).            |
-| {{SpecName('CSS2.1', 'cascade.html#at-import', '@import')}} | {{Spec2('CSS2.1')}}             | Adicionado suporte para {{cssxref("&lt;string&gt;")}} para denotar a URL de uma folha de estilo, e obrigatoriedade da regra `@import` no início do documento CSS. |
-| {{SpecName('CSS1', '#the-cascade', '@import')}}             | {{Spec2('CSS1')}}               | Definição inicial                                                                                                                                                 |
+{{Specifications}}
 
 ## Browser compatibilidade
 

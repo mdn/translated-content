@@ -22,10 +22,7 @@ _A interface **`NavigatorOnLine`** não implementa nem herda nenhum método._
 
 ## Especificações
 
-| Especificação                                                                            | Status                           | Comentário                                                                      |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#navigatoronline', 'NavigatorOnLine')}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde a ultima atualização, do {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', '#navigatoronline', 'NavigatorOnLine')}}     | {{Spec2('HTML5 W3C')}}     | Snapshot do {{SpecName('HTML WHATWG')}} com sua especificação inicial  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -23,9 +23,7 @@ A interface NavigatorPlugins* `NavigatorPlugins`* não herda nenhum método.
 
 ## Especificações
 
-| Especificação                                                                                | Estado                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegador compativeis
 

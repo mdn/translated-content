@@ -22,9 +22,7 @@ myContentObject.select = "h1 .error";
 
 ## Especificações
 
-| Especificações                                                                   | Status                           | Commentário |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -83,11 +83,7 @@ Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, e
 
 ## Especificações
 
-| Especificação                                                                           | Status                        | Comentário                                    |
-| --------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------- |
-| {{ SpecName('CSS4 Selectors', '#hover', ':hover') }}                                    | {{ Spec2('CSS4 Selectors') }} | Pode ser aplicado a qualquer pseudo-elemento. |
-| {{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }} | {{ Spec2('CSS3 Selectors') }} | Sem mudança significativa.                    |
-| {{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}              | {{ Spec2('CSS2.1') }}         | definição inicial.                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

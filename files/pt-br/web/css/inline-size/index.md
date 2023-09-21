@@ -66,9 +66,7 @@ A propriedade `inline-size` aproveita os mesmos valores que as propriedades {{cs
 
 ## Especificações
 
-| Especificação                                                                          | Status                              | Comentário        |
-| -------------------------------------------------------------------------------------- | ----------------------------------- | ----------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

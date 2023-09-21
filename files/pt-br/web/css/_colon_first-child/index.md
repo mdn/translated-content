@@ -69,10 +69,7 @@ li:first-child {
 
 ## Especificações
 
-| Especificação                                                           | Status                        | Comentário         |
-| ----------------------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{ SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child') }} | {{ Spec2('CSS4 Selectors') }} | Sem mudança.       |
-| {{ SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial. |
+{{Specifications}}
 
 ## Browsers compatíveis
 
