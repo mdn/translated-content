@@ -22,13 +22,15 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then((response) => {
-  console.log(response.url); // 返回 https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg
-  response.blob().then((myBlob) => {
+fetch(myRequest)
+  .then((response) => {
+    console.log("response.url =", response.url); // response.url = https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg
+    return response.blob();
+  })
+  .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});
 ```
 
 ## 规范
