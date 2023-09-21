@@ -32,7 +32,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 
 你可以使用 `Number.POSITIVE_INFINITY` 属性来表示成功时返回有限数值的错误条件。不过，{{jsxref("NaN")}} 更适合于这种情况。
 
-因为 `POSITIVE_INFINITY` 是 {{jsxref("Number")}} 的静态属性，所以你应该始终使用 `Number.POSITIVE_INFINITY`，而不是一个数字值的属性。
+由于 `POSITIVE_INFINITY` 是 {{jsxref("Number")}} 的静态属性，你应该始终将其用作 `Number.POSITIVE_INFINITY`，而不是作为一个数字值的属性。
 
 ## 示例
 
