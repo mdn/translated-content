@@ -2,7 +2,7 @@
 title: "CookieStoreManager: unsubscribe() メソッド"
 slug: Web/API/CookieStoreManager/unsubscribe
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 010a96869db46dc6e1a9bc9808dc3a1588bf025a
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
@@ -28,7 +28,7 @@ unsubscribe(subscriptions)
 
 ### 返値
 
-購読の解除が完了したら {{jsxref("undefined")}} で解決する {{jsxref("Promise")}} を返します。
+サービスワーカーの購読の解除が完了したら {{jsxref("undefined")}} で解決する {{jsxref("Promise")}} を返します。
 
 ### 例外
 
