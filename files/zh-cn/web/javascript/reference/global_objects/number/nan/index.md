@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 
 ## 值
 
-{{jsxref("NaN")}} 的数字值。
+数字值 {{jsxref("NaN")}}。
 
 {{js_property_attributes(0, 0, 0)}}
 
