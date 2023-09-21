@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，对 HTML 和 CSS 有基本的了解，已经阅读了 <a
           href="/zh-CN/docs/Learn/JavaScript/First_steps"

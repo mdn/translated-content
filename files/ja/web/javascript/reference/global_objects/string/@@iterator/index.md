@@ -41,7 +41,7 @@ string[Symbol.iterator]()
 
 ### for...of ループを用いた反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドが存在することで、文字列は[反復処理可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドが存在することで、文字列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
 
 ```js
 const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";

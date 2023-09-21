@@ -10,11 +10,11 @@ slug: Learn/CSS/Building_blocks/A_cool_looking_box
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>在开始这个评估之前你应该已经学习过这个模块里的所有其他文章。</td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>测试对 CSS 盒模型和其他盒相关特性的掌握程度，比如背景和边框。</td>
     </tr>
   </tbody>

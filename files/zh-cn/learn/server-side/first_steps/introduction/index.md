@@ -10,7 +10,7 @@ slug: Learn/Server-side/First_steps/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>基础电脑知识、对“Web 服务器是什么”的基本理解</td>
     </tr>
     <tr>

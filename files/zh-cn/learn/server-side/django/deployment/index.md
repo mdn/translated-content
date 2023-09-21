@@ -1,5 +1,5 @@
 ---
-title: "Django 教程 11: 部署 Django 到生产环境"
+title: Django 教程 11：部署 Django 到生产环境
 slug: Learn/Server-side/Django/Deployment
 ---
 
@@ -7,10 +7,10 @@ slug: Learn/Server-side/Django/Deployment
 
 现在，你已经创建（并测试）了一个令人敬畏的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，如果你希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能让你的网站准备好生产。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row"><strong>先决条件</strong>：</th>
+      <th scope="row">前提：</th>
       <td>
         完成所有先前的教程，包括：
         <p>
@@ -21,7 +21,7 @@ slug: Learn/Server-side/Django/Deployment
       </td>
     </tr>
     <tr>
-      <th scope="row"><strong>目的</strong>：</th>
+      <th scope="row">目标：</th>
       <td>了解你可以在何处以及如何将 Django 应用程序部署到生产环境。</td>
     </tr>
   </tbody>

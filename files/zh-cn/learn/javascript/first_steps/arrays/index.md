@@ -16,7 +16,7 @@ slug: Learn/JavaScript/First_steps/Arrays
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>理解什么是数组，和如何在 JavaScript 中操作数组。</td>
     </tr>
   </tbody>

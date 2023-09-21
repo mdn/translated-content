@@ -10,7 +10,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>基本电脑素养、对于什么是网络服务器的基本了解</td>
     </tr>
     <tr>

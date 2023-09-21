@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/Testing
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>完成之前的所有教程主题，包括 Django 教程 9：使用表单。</td>
     </tr>
     <tr>
