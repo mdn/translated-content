@@ -24,7 +24,7 @@ O `<textarea>` O elemento também aceita vários atributos comuns para formar `<
 
 Este elemento inclui os atributos globais.
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+- `autocapitalize` {{non-standard_inline}}
 
   - : Este é um atributo não padrão suportado pelo WebKit no iOS (portanto, quase todos os navegadores executados no iOS, incluindo Safari, Firefox e Chrome), que controla se e como o valor do texto deve ser automaticamente capitalizado quando é inserido / editado pelo do utilizador. Os valores não preteridos estão disponíveis no iOS 5 e posterior. Os valores possíveis são:
 
@@ -35,7 +35,7 @@ Este elemento inclui os atributos globais.
     - `on`: {{deprecated_inline()}} Descontinuado desde o iOS 5.
     - `off`: {{deprecated_inline()}} Descontinuado desde o iOS 5.
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : Este atributo indica se o valor do controle pode ser preenchido automaticamente pelo navegador. Os valores possíveis são:
 

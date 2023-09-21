@@ -26,9 +26,9 @@ Este elemento é destinado a apresentar datas e horas no dispositivo em um forma
 
 Como todo outro elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Esse atributo indica a hora e a data do elemento e deve ser uma data válida com uma string de tempo opcional. Se o valor não puder ser analisado como uma data com uma string de tempo opcional, o elemento não possui um timestamp associado.
-- {{htmlattrdef("pubdate")}}
+- `pubdate`
   - : (This feature is still being discussed by the WHATWG and the W3C HTML5 Working Group.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/pt-BR/docs/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
 
 ## DOM interface

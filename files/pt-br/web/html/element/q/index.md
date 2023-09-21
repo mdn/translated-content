@@ -58,7 +58,7 @@ slug: Web/HTML/Element/q
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : O valor deste atributo é uma URL que designa uma fonte ou mensagem para a informação citada. A intenção deste atributo é indicar a informação e explicar o contexto ou referência para a citação.
 
 ## Exemplo

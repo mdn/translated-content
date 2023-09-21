@@ -23,13 +23,13 @@ Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o sup
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : A altura apresentada do recurso, em [CSS pixels.](https://drafts.csswg.org/css-values/#px) Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
-- {{htmlattrdef("src")}}
+- `src`
   - : A URL do recurso que está sendo incorporado.
-- {{htmlattrdef("type")}}
+- `type`
   - : O [tipo MIME](/pt-BR/docs/Glossary/MIME_type) a ser usado para a seleção do _plug-in_ de instanciação.
-- {{htmlattrdef("width")}}
+- `width`
   - : A largura apresentada do recurso, em CSS pixels. Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
 
 ## Exemplo

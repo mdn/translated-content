@@ -67,7 +67,7 @@ O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substitui
 
 Os atributos desse elemento incluem os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : Direção de texto neste elemento. Os valores possíveis são:
 

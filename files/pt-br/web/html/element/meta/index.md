@@ -65,7 +65,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 > **Nota:** o atributo global [`name`](/pt-BR/docs/Web/HTML/Element/meta#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](/pt-BR/docs/Web/HTML/Element/meta#name), [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset).
 
-- {{htmlattrdef("charset")}}
+- `charset`
 
   - : Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
 
@@ -82,9 +82,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > - É uma boa prática, e altamente recomendável, definir o conjunto de caracteres usando este atributo. Se nenhum conjunto de caracteres estiver definido para uma página, várias técnicas de scripts cruzados poderão prejudicar o usuário da página, como a técnica de cross-scripting de fallback UTF-7. Sempre definindo esta meta irá proteger contra esses riscos.
     > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo `IANAcharset` corresponde ao valor equivalente de [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset). Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
 
-- {{htmlattrdef("content")}}
+- `content`
   - : Esse atributo fornece o valor associado ao atributo [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`name`](/pt-BR/docs/Web/HTML/Element/meta#name), dependendo do contexto.
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) e pode ser um dos seguintes:
 
@@ -120,7 +120,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
         > **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop), [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) já estiver preparado.
     este document-level metadata name é associado a um valor, contido pelo atributo [`content`](/pt-BR/docs/Web/HTML/Element/meta#content). os possíveis valores para o elemento name são, com seu valor associado, guardado via [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) attribute:
@@ -198,7 +198,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       > - Os valores padrão podem mudar de um dispositivo e navegador para outro.
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}}
+- `scheme`
 
   - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) valores, como um formato.
 

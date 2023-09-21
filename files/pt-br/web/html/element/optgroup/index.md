@@ -19,9 +19,9 @@ Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opç�
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Se este atributo booleano for definido, nenhum dos itens neste **optgroup** poderá ser selecionado. Muitos navegadores marcam como cinza e não permitem que o elemento receba nenhum evento de navegação, como cliques do mouse ou foco.
-- {{htmlattrdef("label")}}
+- `label`
   - : É o nome do optgroup, é o que os navegadores irão exibir como rótulo. Este atributo é obrigatório se o elemento for usado.
 
 ## Exemplo
