@@ -75,8 +75,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - Autores não devem usar CESU-8, UTF-7, BOCU-1 e SCSU, also falling in that category and not intended to be used on the web. Cross-scripting attacks with some of these encodings have been documented.
     - Autores não devem usar UTF-32 pois nem todos algorítimos de codificação HTML5 conseguem distingui-lo do UTF-16.
 
-    > **Note:** **Notas:**- O conjunto de caracteres declarado deve corresponder ao da página. Não há motivo válido para declarar um conjunto de caracteres imprecisos.
+    > **Nota:**
     >
+    > - O conjunto de caracteres declarado deve corresponder ao da página. Não há motivo válido para declarar um conjunto de caracteres imprecisos.
     > - Esse elemento {{HTMLElement ("meta")}} deve estar dentro do elemento {{HTMLElement ("head")}} e dentro dos primeiros 1024 bytes da página, pois alguns navegadores só olham para esses primeiros bytes antes de escolher um caractere definido para a página.
     > - Esse elemento {{HTMLElement ("meta")}} é apenas uma parte do algoritmo para determinar o conjunto de caracteres de uma página que os navegadores aplicam. O cabeçalho HTTP Content-Type e quaisquer elementos da BOM têm precedência sobre esse elemento.
     > - É uma boa prática, e altamente recomendável, definir o conjunto de caracteres usando este atributo. Se nenhum conjunto de caracteres estiver definido para uma página, várias técnicas de scripts cruzados poderão prejudicar o usuário da página, como a técnica de cross-scripting de fallback UTF-7. Sempre definindo esta meta irá proteger contra esses riscos.
@@ -92,7 +93,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : este pragma define a linguagem default da página
 
-        > **Note:** não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
+        > **Nota:** não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
 
     - `"Content-Security-Policy"`
       - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
@@ -100,8 +101,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
-        > **Note:** **nota de uso:**- Nao use esta pragma ela esta obsoleta. use [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) atributo {{HTMLElement("meta")}} element instead.
+        > **Nota:**
         >
+        > - Nao use esta pragma ela esta obsoleta. use [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) atributo {{HTMLElement("meta")}} element instead.
         > - como o {{HTMLElement("meta")}} pode nao ser usado para mudar o tipo de documento no XHTML, ou em um documento de HTML5 seguindo uma syntax de XHTML, nunca marque MIME type para um XHTML MIME type desta forma. isso sera incoerente.
         > - somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset).
 
@@ -127,8 +129,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
-      > **Nota:**- Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
+      > **Nota:**
       >
+      > - Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
       > - Webpages simples não deveriam definir application-name meta.
 
     - `author`, definindo, em formato livre, o nome do author do documento;
@@ -167,8 +170,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `noimageindex` | previne esta página de aparecer como referencia de alguma imagem indexada                                                                              | [Google](https://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=79812)                                                                                                                                                                                                                                                                         |
       | `nocache`      | sinônimo de `noarchive`                                                                                                                                | [Bing](https://www.bing.com/toolbox/blogs/webmaster/archive/2008/06/03/robots-exclusion-protocol-joining-together-to-provide-better-documentation.aspx)                                                                                                                                                                                                      |
 
-      > **Note:** **Notes:**- Somente robôs cooperativos seguirão as regras definidas pelo nome do robô. Não espere manter as colheitadeiras de e-mail à distância com isso.
+      > **Nota:**
       >
+      > - Somente robôs cooperativos seguirão as regras definidas pelo nome do robô. Não espere manter as colheitadeiras de e-mail à distância com isso.
       > - O robô ainda precisa acessar a página para ler o valor meta. Se você quiser mantê-los sob controle, por exemplo, para evitar o consumo de largura de banda, use um arquivo robots.txt (ou em complemento).
       > - Se você quiser remover a página de um índice, a alteração do meta para `noindex` funcionará, mas somente quando o robô visitar a página novamente. Verifique se o arquivo robots.txt não está impedindo essas visitas. Alguns mecanismos de busca possuem ferramentas para desenvolvedores, permitindo uma remoção rápida de algumas páginas.
       > - Alguns valores possíveis são mutuamente exclusivos, como usar `index` e `noindex`, ou `follow` e `nofollow`, ao mesmo tempo. Nestes casos, o comportamento do robô é indefinido e pode variar de um para o outro. Então evite esses casos.
@@ -193,8 +197,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | ----------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
       | {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Non-normatively describes the Viewport META element |
 
-      > **Note:** **Notes:**- Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
+      > **Nota:**
       >
+      > - Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
       > - Os valores padrão podem mudar de um dispositivo e navegador para outro.
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
@@ -202,7 +207,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) valores, como um formato.
 
-    > **Note:** **Notes:** Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
+    > **Nota:** Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
 
 ## Notes
 
