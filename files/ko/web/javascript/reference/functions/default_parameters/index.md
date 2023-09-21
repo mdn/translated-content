@@ -101,7 +101,7 @@ f(5); // 5
 
 ## 예제
 
-### 정의되지 않은 값 vs 다른 거짓 값(falsy values) 전달하기
+### `undefined` vs 다른 거짓같은 값(falsy values) 전달하기
 
 아래 예제중 두 번째 호출에서, 첫 번째 인수가 명시적으로 `undefined`(`null` 또는 다른 {{glossary("falsy")}} 값은 아니지만)로 설정되어 있어도 여전히 `num` 인수의 값은 여전히 기본값입니다.
 
