@@ -42,7 +42,7 @@ l10n:
 
 以下の例は、[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams#例)から取ったものです。
 
-まず、ストリーム上で {{domxref("ReadableStream.getReader()")}} を使用してリーダーを作成します。オプション引数に "byob"` を指定します。
+まず、ストリーム上で {{domxref("ReadableStream.getReader()")}} を使用してリーダーを作成します。 options 引数に `mode: "byob"` を指定します。
 これは "Bring Your Own Buffer" リーダーなので、読み込むための `ArrayBuffer` も作成する必要があります。
 
 ```js
