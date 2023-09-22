@@ -13,4 +13,4 @@ slug: Glossary/Prototype-based_programming
 
 ### 常识
 
-- [原型编程](https://zh.wikipedia.org/wiki/Prototype-based_programming) 的维基页面
+- [原型编程](https://zh.wikipedia.org/wiki/%E5%9F%BA%E4%BA%8E%E5%8E%9F%E5%9E%8B%E7%BC%96%E7%A8%8B) 的维基页面
