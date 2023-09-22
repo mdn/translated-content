@@ -108,6 +108,42 @@ slug: Web/HTML/Attributes/rel/preload
 
 然而，缺少预加载并不会阻止那些需要的用户实际使用 `video/webm` 视频：对于那些浏览器不支持 `video/mp4` 但支持 `video/webm` 的用户，上述示例中的代码仍然会使 `video/webm` 视频被使用——但它这样做的同时也不会导致对大多数其他用户不必要地进行预加载。
 
+## 启用 CORS 的获取请求
+
+在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
+
+如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
+
+Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
+让我们以这个案例作为示例。您可以在 GitHub 上查看完整的[示例源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts)（也可以[在线查看](https://mdn.github.io/html-examples/link-rel-preload/fonts/)）：
+
+```html
+<head>
+  <meta charset="utf-8" />
+  <title>Web font example</title>
+
+  <link
+    rel="preload"
+    href="fonts/cicle_fina-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
+  <link
+    rel="preload"
+    href="fonts/zantroke-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
+
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  …
+</body>
+```
+
+我们不仅在 `type` 属性中提供了 MIME 类型提示，还提供了 `crossorigin` 属性，以确保预加载的 CORS 模式与最终的字体资源请求相匹配。
+
 
 更多细节见[通过 rel="preload"进行内容预加载](/zh-CN/docs/Web/HTML/Preloading_content)。
 
