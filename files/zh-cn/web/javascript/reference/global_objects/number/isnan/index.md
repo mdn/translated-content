@@ -43,7 +43,7 @@ Number.isNaN(0 / 0); // true
 Number.isNaN(37); // false
 ```
 
-### Number.isNaN() 和 全局 isNaN() 之间的区别
+### Number.isNaN() 和全局 isNaN() 之间的区别
 
 `Number.isNaN()` 不会尝试将参数转换为数字，因此非数字总是返回 `false`。以下都返回 `false`：
 
