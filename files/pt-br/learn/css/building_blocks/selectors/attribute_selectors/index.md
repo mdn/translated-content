@@ -57,7 +57,7 @@ No exemplo abaixo você pode ver esses seletores sendo usados.
 
 Esses seletores permitem uma correspondência mais avançada de substrings dentro do valor do seu atributo. Por exemplo, se você tivesse classes de `box-warning` e `box-error` e quisesse combinar tudo que começou com a string "box-", você poderia usar `[class^="box-"]` para selecionar os dois (ou `[class|="box"]` como descrito abaixo).
 
-| Selector        | Exemplo             | Descrição                                                                                                      |
+| Selector        | Exemplo             | Descrição                                                                                                        |
 | --------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `[attr^=value]` | `li[class^="box-"]` | Corresponde a elementos com um atributo attr (cujo nome é o valor entre colchetes), cujo valor começa com valor. |
 | `[attr$=value]` | `li[class$="-box"]` | Corresponde a elementos com um atributo attr cujo valor termina com valor.                                       |
