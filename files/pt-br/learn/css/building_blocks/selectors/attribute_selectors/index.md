@@ -38,7 +38,7 @@ Como você sabe de seu estudo de HTML, os elementos podem ter atributos que forn
 
 Esses seletores permitem a seleção de um elemento com base na presença de um atributo sozinho (por exemplo, href) ou em várias correspondências diferentes com o valor do atributo.
 
-| Selector         | Example                         | Description                                                                                                                                 |
+| Seletor         | Example                         | Description                                                                                                                                 |
 | ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `[attr]`         | `a[title]`                      | Corresponde a elementos com um atributo attr (cujo nome é o valor entre colchetes).                                                         |
 | `[attr=value]`   | `a[href="https://example.com"]` | Corresponde a elementos com um atributo attr cujo valor é exatamente value - a string entre aspas.                                          |
@@ -57,7 +57,7 @@ No exemplo abaixo você pode ver esses seletores sendo usados.
 
 Esses seletores permitem uma correspondência mais avançada de substrings dentro do valor do seu atributo. Por exemplo, se você tivesse classes de `box-warning` e `box-error` e quisesse combinar tudo que começou com a string "box-", você poderia usar `[class^="box-"]` para selecionar os dois (ou `[class|="box"]` como descrito abaixo).
 
-| Selector        | Exemplo             | Descrição                                                                                                        |
+| Seletor        | Exemplo             | Descrição                                                                                                        |
 | --------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `[attr^=value]` | `li[class^="box-"]` | Corresponde a elementos com um atributo attr (cujo nome é o valor entre colchetes), cujo valor começa com valor. |
 | `[attr$=value]` | `li[class$="-box"]` | Corresponde a elementos com um atributo attr cujo valor termina com valor.                                       |
