@@ -49,7 +49,7 @@ body:
     id: more-info
     attributes:
       label: Souhaitez-vous ajouter autre chose ?
-      description: Cela peut être des étapes de reproduction du bogue, des captures ou enregistrement d'écran, un fragment de code.
+      description: Cela peut être des étapes de reproduction du bogue, des captures ou enregistrements d'écran, un fragment de code.
   - type: markdown
     attributes:
       value: |
