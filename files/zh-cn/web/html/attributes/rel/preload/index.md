@@ -7,7 +7,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 {{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性的 `preload` 值允许你在 HTML 的 {{htmlelement("head")}} 中声明获取请求，指定页面很快就需要的资源，这些资源是你希望在页面生命周期的早期就开始加载的，早于浏览器的主要渲染机制启动。这可以确保它们更早可用，并且不太可能阻塞页面的渲染，从而提高性能。尽管名称中包含“load”一词，但它并不加载和执行脚本，而只是安排脚本以更高的优先级进行下载和缓存。
 
-## The basics
+## 基础知识
 
 你最常使用 `<link>` 标签来加载一个 CSS 文件，以为你的页面添加样式：
 
@@ -225,9 +225,6 @@ document.body.appendChild(preloadedScript);
 - `<link rel="subresource">` {{non-standard_inline}} 一段时间以前在 Chrome 中得到了支持，其目的是解决与 `preload` 相同的问题，但它存在一个问题：没有办法确定项目的优先级（`as` 当时还不存在），所以它们都是以相当低的优先级获取的。
 - 有许多基于脚本的资源加载器，但它们无法控制浏览器的获取优先级队列，并面临着同样的性能问题。
 
-
-更多细节见[通过 rel="preload"进行内容预加载](/zh-CN/docs/Web/HTML/Preloading_content)。
-
 ## 规范
 
 {{Specifications}}
@@ -235,3 +232,7 @@ document.body.appendChild(preloadedScript);
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss
