@@ -33,7 +33,7 @@ Number.isSafeInteger(testValue)
 
 例如，2<sup>53</sup> - 1 是一个安全整数：它可以精确地表示，并且在任何 IEEE-754 舍入模式下都没有其他整数舍入结果为该整数。相比之下，2<sup>53</sup> *不是*一个安全整数：它可以在 IEEE-754 中精确地表示，但整数 2<sup>53</sup> + 1 不能直接在 IEEE-754 中表示，而是采用就近舍入和向零舍入时，会舍入到 2<sup>53</sup>。
 
-处理比大约 9 千万亿左右的值时，需要使用[任意精度算术库](https://zh.wikipedia.org/wiki/高精度计算)来实现完全精确性。有关浮点数表示的更多信息，请参阅[程序员需要了解的浮点数算术知识](https://floating-point-gui.de/)。
+处理大约 9 千万亿左右的值时，需要使用[任意精度算术库](https://zh.wikipedia.org/wiki/高精度计算)来实现完全精确性。有关浮点数表示的更多信息，请参阅[程序员需要了解的浮点数算术知识](https://floating-point-gui.de/)。
 
 对于更大的整数，请考虑使用 {{jsxref("BigInt")}} 类型。
 
