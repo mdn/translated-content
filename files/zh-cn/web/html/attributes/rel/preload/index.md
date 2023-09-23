@@ -54,7 +54,7 @@ slug: Web/HTML/Attributes/rel/preload
 - 对资源应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。
 - 为其设置正确的 {{HTTPHeader("Accept")}} 请求头。
 
-### 什么类型的内容可以被预加载?
+### 什么类型的内容可以被预加载？
 
 可以预加载多种类型的内容。`as` 属性可能的值包括：
 
@@ -71,7 +71,7 @@ slug: Web/HTML/Attributes/rel/preload
 - `worker`: JavaScript web worker 或 shared worker。
 - `video`: 视频文件，通常在 {{htmlelement("video")}} 中使用。
 
-> **注意：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[CORS启用的获取](#CORS启用的获取)。
+> **注意：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_CORS_的获取请求)。
 
 > **注意：** 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到 — 请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束 — 请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
 
@@ -194,7 +194,7 @@ Let's use this case as an example. You can see the full [example source code on 
 
 ## 脚本和预加载
 
-> **注意：** 如果你正在使用 [JavaScript模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+> **注意：** 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
 
 关于这些预加载的另一个好处是，你可以使用脚本来执行它们。例如，这里我们创建一个 {{domxref("HTMLLinkElement")}} 实例，然后将其附加到 DOM 中：
 
@@ -218,7 +218,7 @@ document.body.appendChild(preloadedScript);
 
 ## 其他资源预加载机制
 
-还存在其他预加载特性，但都不如 `<link rel="preload">` 适合该目的:
+还存在其他预加载特性，但都不如 `<link rel="preload">` 适合该目的：
 
 - `<link rel="prefetch">` 在浏览器中支持已久，但它是用于预获取将在下一次导航/页面加载时使用的资源（例如，当你跳转到下一页时）。这是可以的，但对于当前页面没有用！此外，浏览器会给预获取（`prefetch`）的资源比预加载（`preload`）的资源更低的优先级——当前页面比下一页更重要。有关更多详细信息，请参阅 {{Glossary("prefetch", "预获取")}}。
 - `<link rel="prerender">` 在后台渲染指定的网页，如果用户导航到该页面，可以加速其加载。由于有可能浪费用户的带宽，Chrome 将 `prerender` 视为 [NoState 预取](https://developer.chrome.com/blog/nostate-prefetch/)。
