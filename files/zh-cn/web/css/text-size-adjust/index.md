@@ -60,4 +60,4 @@ text-size-adjust: unset;
 
 - [Apple 的文档](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16)
 - [Google Chrome 的行为描述](https://docs.google.com/document/d/1PPcEwAhXJJ1TQShor29KWB17KJJq7UJOM34oHwYP3Zg/edit)
-- [Gecko 的行为描述](http://dbaron.org/log/20111126-font-inflation)，来自 L. David Baron
+- [Gecko 的行为描述](https://dbaron.org/log/20111126-font-inflation)，来自 L. David Baron
