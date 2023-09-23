@@ -144,6 +144,54 @@ Let's use this case as an example. You can see the full [example source code on 
 
 我们不仅在 `type` 属性中提供了 MIME 类型提示，还提供了 `crossorigin` 属性，以确保预加载的 CORS 模式与最终的字体资源请求相匹配。
 
+## 包括 media
+
+`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，让你可以进行响应式的预加载！
+
+让我们来看一个例子（在 GitHub 上查看，包括[源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)和[在线示例](https://mdn.github.io/html-examples/link-rel-preload/media/)）：
+
+```html
+<head>
+  <meta charset="utf-8" />
+  <title>Responsive preload example</title>
+
+  <link
+    rel="preload"
+    href="bg-image-narrow.png"
+    as="image"
+    media="(max-width: 600px)" />
+  <link
+    rel="preload"
+    href="bg-image-wide.png"
+    as="image"
+    media="(min-width: 601px)" />
+
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header>
+    <h1>My site</h1>
+  </header>
+
+  <script>
+    const mediaQueryList = window.matchMedia("(max-width: 600px)");
+    const header = document.querySelector("header");
+
+    if (mediaQueryList.matches) {
+      header.style.backgroundImage = "url(bg-image-narrow.png)";
+    } else {
+      header.style.backgroundImage = "url(bg-image-wide.png)";
+    }
+  </script>
+</body>
+```
+
+我们在 `<link>` 元素上包含 `media` 属性，以便在用户的视口较窄时预加载窄图像，在视口较宽时加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（查看[测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)以获取更多信息）。
+
+这使得字体在页面渲染时更有可能可用，减少了 FOUT（未经样式处理的文本闪烁）。
+
+这并不局限于图像，甚至不局限于同类型的文件 —— 大胆想！如果用户使用的是带宽和 CPU 可能更受限的窄屏幕，你可以预加载和显示一个简单的 SVG 图表，或者如果用户的资源更丰富，可以预加载一个复杂的 JavaScript 代码块，然后用它来渲染一个交互式的 3D 模型。
+
 
 更多细节见[通过 rel="preload"进行内容预加载](/zh-CN/docs/Web/HTML/Preloading_content)。
 
