@@ -5,7 +5,7 @@ slug: Web/API/File
 
 {{APIRef}}
 
-L'interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d'une une page web d'accéder à leurs contenus.
+L'interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d'une page web d'accéder à leurs contenus.
 
 Les objets `File` sont généralements obtenus à partir de&nbsp;:
 
