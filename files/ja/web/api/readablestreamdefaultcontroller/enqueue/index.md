@@ -1,31 +1,34 @@
 ---
-title: ReadableStreamDefaultController.enqueue()
+title: "ReadableStreamDefaultController: enqueue() メソッド"
+short-title: enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
+l10n:
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultController")}} インターフェイスの **`enqueue()`** メソッドは、所与のチャンクを関連するストリームのキューに入れます。
+**`enqueue()`** は {{domxref("ReadableStreamDefaultController")}} インターフェイスのメソッドで、受け取ったのチャンクを関連するストリームのキューに入れます。
 
 ## 構文
 
-```
-readableStreamDefaultController.enqueue(chunk);
+```js-nolint
+enqueue(chunk)
 ```
 
-### パラメーター
+### 引数
 
-- _chunk_
+- `chunk`
   - : キューに入れるチャンク。
 
-### 戻り値
+### 返値
 
-`undefined`。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-- TypeError
-  - : ソースオブジェクトは `ReadableStreamDefaultController` ではありません。
+- {{jsxref("TypeError")}}
+  - : ソースオブジェクトが `ReadableStreamDefaultController` ではありません。
 
 ## 例
 
@@ -34,6 +37,7 @@ readableStreamDefaultController.enqueue(chunk);
 ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -48,7 +52,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
@@ -65,10 +69,15 @@ const stream = new ReadableStream({
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStreamDefaultController.enqueue")}}
+{{Compat}}
+
+## 関連情報
+
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}
