@@ -15,7 +15,7 @@ slug: Web/HTML/Attributes/rel/preload
 <link rel="stylesheet" href="styles/main.css" />
 ```
 
-然而，在这里，我们将使用值为 `preload` 的 `rel` 属性，这会将 `<link>` 标签转变成任何我们想要的资源的预加载器。您还需要指定：
+然而，在这里，我们将使用值为 `preload` 的 `rel` 属性，这会将 `<link>` 标签转变成任何我们想要的资源的预加载器。你还需要指定：
 
 - [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性中的资源路径。
 - [`as`](/zh-CN/docs/Web/HTML/Element/link#as) 属性中的资源类型。
@@ -115,7 +115,7 @@ slug: Web/HTML/Attributes/rel/preload
 如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 
 Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
-让我们以这个案例作为示例。您可以在 GitHub 上查看完整的[示例源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts)（也可以[在线查看](https://mdn.github.io/html-examples/link-rel-preload/fonts/)）：
+让我们以这个案例作为示例。你可以在 GitHub 上查看完整的[示例源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts)（也可以[在线查看](https://mdn.github.io/html-examples/link-rel-preload/fonts/)）：
 
 ```html
 <head>
@@ -214,7 +214,7 @@ preloadedScript.src = "myscript.js";
 document.body.appendChild(preloadedScript);
 ```
 
-当您想要预加载一个脚本，但需要将执行推迟到确切需要它的时候，这很有用。
+当你想要预加载一个脚本，但需要将执行推迟到确切需要它的时候，这很有用。
 
 ## 其他资源预加载机制
 
