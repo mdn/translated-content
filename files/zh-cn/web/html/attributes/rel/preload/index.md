@@ -192,6 +192,30 @@ Let's use this case as an example. You can see the full [example source code on 
 
 这并不局限于图像，甚至不局限于同类型的文件 —— 大胆想！如果用户使用的是带宽和 CPU 可能更受限的窄屏幕，你可以预加载和显示一个简单的 SVG 图表，或者如果用户的资源更丰富，可以预加载一个复杂的 JavaScript 代码块，然后用它来渲染一个交互式的 3D 模型。
 
+## 脚本和预加载
+
+> **注意：** 如果你正在使用 [JavaScript模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+
+关于这些预加载的另一个好处是，你可以使用脚本来执行它们。例如，这里我们创建一个 {{domxref("HTMLLinkElement")}} 实例，然后将其附加到 DOM 中：
+
+```js
+const preloadLink = document.createElement("link");
+preloadLink.href = "myscript.js";
+preloadLink.rel = "preload";
+preloadLink.as = "script";
+document.head.appendChild(preloadLink);
+```
+
+这意味着浏览器将预加载 `myscript.js` 文件，但实际上还没有使用它。要使用它，你可以这样做：
+
+```js
+const preloadedScript = document.createElement("script");
+preloadedScript.src = "myscript.js";
+document.body.appendChild(preloadedScript);
+```
+
+当您想要预加载一个脚本，但需要将执行推迟到确切需要它的时候，这很有用。
+
 
 更多细节见[通过 rel="preload"进行内容预加载](/zh-CN/docs/Web/HTML/Preloading_content)。
 
