@@ -39,12 +39,12 @@ Number.isFinite(2e64); // true
 
 ### Number.isFinite() 和全局 isFinite() 之间的不同
 
-与全局 {{jsxref("isFinite", "isFinite()")}} 函数相比，此方法不回先将参数转换为数字，这意味着只有类型为数字*且*为有限数的值才返回 `true`，而非数字的值始终返回 `false`。
+与全局 {{jsxref("isFinite", "isFinite()")}} 函数相比，此方法不会先将参数转换为数字，这意味着只有类型为数字*且*为有限数的值才返回 `true`，而非数字的值始终返回 `false`。
 
 ```js
-isFinite("0"); // true; coerced to number 0
+isFinite("0"); // true；强制转换为数字 0
 Number.isFinite("0"); // false
-isFinite(null); // true; coerced to number 0
+isFinite(null); // true；强制转换为数字 0
 Number.isFinite(null); // false
 ```
 
