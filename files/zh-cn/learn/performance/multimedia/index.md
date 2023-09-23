@@ -59,7 +59,7 @@ slug: Learn/Performance/Multimedia
 
 最优的文件格式通常取决于图像的特点。
 
-> **备注:** 有关图像类型的一般信息，请参阅[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)。
+> **备注：** 有关图像类型的一般信息，请参阅[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)。
 
 [SVG](/zh-CN/docs/Web/Media/Formats/Image_types#svg_可缩放矢量图形) 格式更适合颜色较少且不太逼真的照片的图像。这需要源文件以矢量图形格式提供。如果这样的图像仅以位图形式存在，则应选择 [PNG](/zh-CN/docs/Web/Media/Formats/Image_types#png_便携式网络图形) 作为后备格式。这种类型的图案示例是徽标、插图、图表或图标（注意：SVG 比图标字体好得多！）。两种格式都支持透明度。
 
@@ -69,7 +69,7 @@ PNG 可以以三种不同的输出组合进行保存：
 - 8 位色 + 8 位透明度——提供不超过 255 种颜色，但保持平滑的透明度。大小不太大。这些可能是你想要的 PNG。
 - 8 位色 + 1 位透明度——提供不超过 255 种颜色，并仅为每个像素提供无或完全透明度，这使透明边界看起来生硬并且有锯齿。尺寸小，但视觉保真度付出了代价。
 
-优化SVG的一个不错的在线工具是 [SVGOMG](https://jakearchibald.github.io/svgomg/)。对于PNG，有 [ImageOptim 在线](https://imageoptim.com/online)或 [Squoosh](https://squoosh.app/)。
+优化 SVG 的一个不错的在线工具是 [SVGOMG](https://jakearchibald.github.io/svgomg/)。对于 PNG，有 [ImageOptim 在线](https://imageoptim.com/online)或 [Squoosh](https://squoosh.app/)。
 
 对于不具有透明度的摄影素材，有更广泛的格式可供选择。如果要谨慎行事，那么你应该选择压缩良好的**渐进式 JPEG**。渐进式 JPEG 与普通 JPEG 不同，它们是渐进式显示的（因此得名），这意味着用户先看到的是一个低分辨率的图像版本，随着图像下载而逐渐清晰，而不是图像以全分辨率从上到下加载，或者只有在完全下载后才显示。对于这些图片，一个好的压缩工具是 MozJPEG，例如能够在在线图像优化工具 [Squoosh](https://squoosh.app/) 中使用。75% 的质量设置能够得到优秀的结果。
 
@@ -77,10 +77,10 @@ PNG 可以以三种不同的输出组合进行保存：
 
 - [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像)——既适用于图像又适用于动图的绝佳选择。WebP 提供比 PNG 或 JPEG 更好的压缩，支持更高的色深、动画帧和透明度等（但不支持渐进式显示）。除 macOS 桌面版 Safari 14 外，所有主流浏览器都支持它。
 
-  > **备注:** 尽管[宣布](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) 在 Safari 14 中支持 WebP，但在版本14.0中，.webp 图像在 macOS 桌面上不显示原生图像，而 Safari 在 iOS 14 上可以正确显示 .webp 图像。
+  > **备注：** 尽管[宣布](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) 在 Safari 14 中支持 WebP，但在版本 14.0 中，.webp 图像在 macOS 桌面上不显示原生图像，而 Safari 在 iOS 14 上可以正确显示 .webp 图像。
 
-- [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比WebP更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。另请参阅[将以前的图像格式转换为 AVIF 的在线工具](https://avif.io/)。
-- **JPEG2000**——曾经是JPEG的继任者，但仅受Safari支持。也不支持渐进式显示。
+- [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比 WebP 更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。另请参阅[将以前的图像格式转换为 AVIF 的在线工具](https://avif.io/)。
+- **JPEG2000**——曾经是 JPEG 的继任者，但仅受 Safari 支持。也不支持渐进式显示。
 
 鉴于 JPEG-XR 和 JPEG2000 的支持范围很窄，并且还要考虑解码成本，JPEG 的唯一真正竞争对手是 WebP。这就是为什么你也可以以该格式提供图像。这可以通过使用配备了 [type 属性](/zh-CN/docs/Web/HTML/Element/picture#type_属性)的 `<picture>` 元素和 `<source>` 元素来完成。
 
@@ -91,8 +91,8 @@ PNG 可以以三种不同的输出组合进行保存：
 ```html
 <picture>
   <source type="video/mp4" src="giphy.mp4" />
-  <source type="image/webp" src="giphy.webp" /> 
-  <img src="giphy.gif" alt="动画 GIF" /> 
+  <source type="image/webp" src="giphy.webp" />
+  <img src="giphy.gif" alt="动画 GIF" />
 </picture>
 ```
 
@@ -103,13 +103,13 @@ PNG 可以以三种不同的输出组合进行保存：
 关于高 DPI 屏幕，有两个有趣的效果需要记住：
 
 - 在高 DPI 屏幕上，人眼对压缩伪影的敏感度要低得多，这意味着对于这些屏幕上的图像，你可以超过通常的压缩程度。
-- [只有很少的人能够察觉到超过 2 倍 DPI 的分辨率增加](https://observablehq.com/@eeeps/visual-acuity-and-device-pixel-ratio)，这意味着你不需要提供超过2倍分辨率的图像。
+- [只有很少的人能够察觉到超过 2 倍 DPI 的分辨率增加](https://observablehq.com/@eeeps/visual-acuity-and-device-pixel-ratio)，这意味着你不需要提供超过 2 倍分辨率的图像。
 
 #### 控制下载图像的优先级（和顺序）
 
 将最重要的图像优先展示给访问者会提供更好的感知性能。
 
-首先，检查你的内容图像是否使用 `<img>` 或 `<picture>` 元素，并且你的背景图像是否在CSS中使用 `background-image` 定义——`<img>` 元素中引用的图像比背景图像具有更高的加载优先级。
+首先，检查你的内容图像是否使用 `<img>` 或 `<picture>` 元素，并且你的背景图像是否在 CSS 中使用 `background-image` 定义——`<img>` 元素中引用的图像比背景图像具有更高的加载优先级。
 
 其次，通过采用优先级提示（Priority Hints），你可以进一步控制优先级，只需在图像标签中添加 `fetchPriority` 属性即可。图像优先级提示的一个示例用例是幻灯片轮播，其中第一张图像的优先级高于后续的图像。
 
@@ -148,6 +148,6 @@ img {
 
 ## 结论
 
-本节我们学习了图像优化的方法。你已经大概掌握了如何优化占一般网站带宽总量一半的图像。但这只是影响用户带宽和页面加载速度的媒体类型之一。接下来，我们要看看视频优化，它可以解决带宽消耗的另外20%。
+本节我们学习了图像优化的方法。你已经大概掌握了如何优化占一般网站带宽总量一半的图像。但这只是影响用户带宽和页面加载速度的媒体类型之一。接下来，我们要看看视频优化，它可以解决带宽消耗的另外 20%。
 
 {{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
