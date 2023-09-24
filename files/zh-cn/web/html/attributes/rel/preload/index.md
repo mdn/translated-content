@@ -44,7 +44,7 @@ slug: Web/HTML/Attributes/rel/preload
 在这里，我们预加载我们的 CSS 和 JavaScript 文件，以便它们在稍后渲染页面时立即可用。这个示例可能过于简单，因为浏览器很可能在与预加载的 HTML 块中相同的位置发现了 `<link rel="stylesheet">` 和 `<script>` 元素，但在稍后发现资源并且资源越大时，好处就会更加明显。例如：
 
 - 从 CSS 内部指向的资源，如字体或图像。
-- JavaScript 可以请求的资源，如 JSON、导入的脚本或 Web Workers。
+- JavaScript 可以请求的资源，如 JSON、导入的脚本或 Web Worker。
 - 较大的图像和视频文件。
 
 `preload` 还有其他优点。使用 `as` 来指定要预加载的内容类型允许浏览器：
