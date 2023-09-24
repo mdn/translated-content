@@ -85,7 +85,7 @@ slug: Learn/Performance/video
   src="backgroundvideo.mp4"></video>
 ```
 
-虽然 `loop` 和 `autoplay` 足以使视频循环和自动播放，但在移动浏览器中想要自动播放的话，`muted` 属性是必需的。
+虽然 `loop` 和 `autoplay` 足以使视频循环和自动播放，但想要在移动浏览器中自动播放的话，`muted` 属性是必需的。
 
 `Playsinline` 对于移动 Safari 浏览器来说是必需的，它允许视频播放时不强制全屏模式。
 
