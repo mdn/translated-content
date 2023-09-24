@@ -102,7 +102,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 上面的示例代码只会在支持的浏览器中预加载 `video/mp4` 格式的视频，对于那些浏览器中支持 `video/mp4` 格式的用户，实际上会使用 `video/mp4` 格式的视频（因为它是首个指定的 {{htmlelement("source")}}）。这可以让拥有支持 `video/mp4` 格式的浏览器的用户获得更流畅和更响应的视频播放体验。
 
-请注意，对于那些浏览器既支持 `video/mp4` 格式又支持 `video/webm` 格式的用户，如果在上述代码中还指定了一个 `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` 元素，那么两种格式的视频（`video/mp4` 和 `video/webm`）_都_ 会被预加载，尽管实际上只有其中一种会被使用。
+请注意，对于那些浏览器既支持 `video/mp4` 格式又支持 `video/webm` 格式的用户，如果在上述代码中还指定了一个 `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` 元素，那么两种格式的视频（`video/mp4` 和 `video/webm`）*都*会被预加载，尽管实际上只有其中一种会被使用。
 
 因此，不建议为同一资源的多种类型指定预加载。相反，最佳实践是仅为大多数用户可能实际使用的类型指定预加载。这就是为什么上面示例中的代码没有为 `video/webm` 视频指定预加载的原因。
 
