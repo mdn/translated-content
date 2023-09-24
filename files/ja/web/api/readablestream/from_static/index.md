@@ -83,7 +83,7 @@ const myReadableStream = ReadableStream.from(asyncIterator);
 
 [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)では、ストリームを利用する何通りかの方法を示しています。
 以下のコードは `for ...await` ループを使用しています。このメソッドは最もシンプルだからです。
-ループのそれぞれの反復処理は、ストリームから現在の塊をログ出力します。
+ループのそれぞれの反復処理は、ストリームから現在のチャンクをログ出力します。
 
 ```js
 consumeStream(myReadableStream);
@@ -141,7 +141,7 @@ consumeStream(myReadableStream);
 // ReadableStream を非同期に反復処理
 async function consumeStream(readableStream) {
   for await (const chunk of myReadableStream) {
-    // 塊ごとに何かをする
+    // チャンクごとに何かをする
     // ここでは値をログ出力するだけ
     log(`chunk: ${chunk}`);
   }

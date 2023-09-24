@@ -42,7 +42,7 @@ l10n:
 ## 非同期の反復処理
 
 `ReadableStream` は[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を実装しています。
-これにより、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) 構文を使用して、ストリーム内の塊を非同期に反復処理することができます。
+これにより、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) 構文を使用して、ストリーム内のチャンクを非同期に反復処理することができます。
 
 ```js
 const stream = new ReadableStream(getSomeSource());
@@ -145,7 +145,7 @@ function iteratorToStream(iterator) {
 
 ### for await...of を用いたストリームの非同期反復処理
 
-この例では、 `fetch()` レスポンスを処理するために [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループを使用して、到着した塊を反復処理する方法を示します。
+この例では、 `fetch()` レスポンスを処理するために [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループを使用して、到着したチャンクを反復処理する方法を示します。
 
 ```js
 const response = await fetch("https://www.example.org");
