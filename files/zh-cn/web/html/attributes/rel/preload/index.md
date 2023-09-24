@@ -71,9 +71,9 @@ slug: Web/HTML/Attributes/rel/preload
 - `worker`：JavaScript web worker 或 shared worker。
 - `video`：视频文件，通常在 {{htmlelement("video")}} 中使用。
 
-> **注意：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_CORS_的获取请求)。
+> **备注：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_cors_的获取请求)。
 
-> **注意：** 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到 — 请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束 — 请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
+> **备注：** 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到——请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束——请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
 
 ## 包括 MIME 类型
 
