@@ -234,4 +234,4 @@ document.body.appendChild(preloadedScript);
 
 ## 参见
 
-- [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss
+- [预加载的好处是什么？](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/)作者 Yoav Weiss
