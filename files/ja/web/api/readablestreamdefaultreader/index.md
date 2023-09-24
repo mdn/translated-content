@@ -1,28 +1,35 @@
 ---
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
+l10n:
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
 
-[Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableStreamDefaultReader`** インターフェイスは、ネットワークから提供されたストリームデータ（フェッチ要求など）を読み取るために使用できるデフォルトのリーダーを表します。
+**`ReadableStreamDefaultReader`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、ネットワークから提供されたストリームデータ（フェッチリクエストなど）を読み取るために使用できる既定のリーダーを表します。
+
+`ReadableStreamDefaultReader` は、任意の種類の基盤ソースを持つ {{domxref("ReadableStream")}} からの読み取りに使用することができます（基盤バイトソースを持つ読み取り可能なストリームにのみ使用することができる {{domxref("ReadableStreamBYOBReader")}} とは異なります）。
+
+ただし、基盤ソースからのゼロコピー移譲は、バッファーを自動割り当てするバイトソースにのみ対応していることに注意してください。
+言い換えれば、ストリームは[構築時](/ja/docs/Web/API/ReadableStream/ReadableStream)に、[`type="bytes"`](/ja/docs/Web/API/ReadableStream/ReadableStream#type) と [`autoAllocateChunkSize`](/ja/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) の両方が指定されたものでなければなりません。他にも基盤ソースがある場合、ストリームは常に内部キューからのデータで読み取りリクエストを満たします。
 
 ## コンストラクター
 
 - {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}}
   - : `ReadableStreamDefaultReader` オブジェクトのインスタンスを作成して返します。
 
-## プロパティ
+## インスタンスプロパティ
 
-- {{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}
-  - : ストリーミングプロセスの終了に応答するコードを記述できます。 ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たされる promise を返します。 ストリームがエラーの場合は拒否します。
+- {{domxref("ReadableStreamDefaultReader.closed")}} {{ReadOnlyInline}}
+  - : ストリーミングプロセスの終了に応答するコードを記述できます。 ストリームが閉じられた場合、またはリーダーのロックが解除された場合に履行されるプロミスを返します。 ストリームがエラーの場合は拒否されます。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("ReadableStreamDefaultReader.cancel()")}}
-  - : ストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された reason 引数は、基になるソースに与えられ、使用する場合もしない場合もあります。
+  - : ストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された引数 `reason` は、基盤ソースに与えられ、使用する場合もしない場合もあります。
 - {{domxref("ReadableStreamDefaultReader.read()")}}
-  - : ストリームの内部キュー内の次のチャンクへのアクセスを提供する promise を返します。
+  - : ストリームの内部キュー内の次のチャンクへのアクセスを提供するプロミスを返します。
 - {{domxref("ReadableStreamDefaultReader.releaseLock()")}}
   - : ストリームのリーダーのロックを解除します。
 
@@ -62,10 +69,18 @@ fetch("https://www.example.org/").then((response) => {
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStreamDefaultReader")}}
+{{Compat}}
+
+## 関r根情報
+
+- [ストリーム API の概念](/ja/docs/Web/API/Streams_API)
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
