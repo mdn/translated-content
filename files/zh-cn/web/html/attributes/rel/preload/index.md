@@ -52,7 +52,7 @@ slug: Web/HTML/Attributes/rel/preload
 - 更准确地优先加载资源。
 - 将资源存储在缓存中以备将来使用，在适当的情况下复用资源。
 - 对资源应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。
-- 为其设置正确的 {{HTTPHeader("Accept")}} 请求头。
+- 为其设置正确的 {{HTTPHeader("Accept")}} 请求标头。
 
 ### 什么类型的内容可以被预加载？
 
