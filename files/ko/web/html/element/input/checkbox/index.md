@@ -43,13 +43,13 @@ l10n:
 
 모든 {{HTMLElement("input")}} 요소들에 의해 공유되는 공통 특성들 외에도, `checkbox` input은 아래의 특성들을 지원합니다.
 
-- {{htmlattrdef("checked")}}
+- `checked`
 
   - : (페이지가 로드될 때) 체크박스가 기본적으로 체크된 상태로 보여질 것인지를 지칭하는 불리언 특성입니다. 이 특성은 체크박스가 "현재 체크된 상태"인지를 나타내지 않습니다. 만약 체크박스의 상태가 변경되면, 이 특성은 그 변경을 반영하지 않습니다 (단지 {{domxref("HTMLInputElement")}} 의 `checked` IDL 특성이 변경됩니다.)
     > **참고:** 다른 Input 컨트롤들과는 다르게, 체크박스의 값은 현재 체크박스의 상태가 `checked`일 때에만 제출되는 데이터에 포함됩니다. 이 경우, 체크박스의 `value` 특성에 지정된 값이 Input의 `value`으로서 전달됩니다.
     > 다른 브라우저들과는 다르게, Firefox의 경우 기본적으로 페이지 로드에 걸쳐서 `<input>`의 [`checked` 상태를 동적으로 유지합니다.](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) 이 기능을 제어하기 위해서는 [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) 특성을 사용해야 합니다.
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : The `value` 특성은 {{HTMLElement("input")}} 요소가 공유하는 특성입니다. 하지만, `checkbox` 유형의 `input`에서는 특별한 용도로 사용됩니다. 폼이 제출될 때, 현재 활성화되어 있는 체크박스만이 서버 측에 전달됩니다. 그리고 `value` 특성에 지정된 값이 바로 전달되는 값이 됩니다. 만약 `value` 특성의 값이 지정되어 있지 않다면, 서버 측에는 기본 값으로 `on`이 전달됩니다. 이는 위의 [Value](#Value) 구획에서도 설명하고 있습니다.
 
@@ -279,9 +279,9 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>IDL 특성</strong></td>
       <td>
-        <code><a href="#attr-checked">checked</a></code>,
-        <code><a href="#attr-indeterminate">indeterminate</a></code> 그리고
-        <code><a href="#attr-value">value</a></code>
+        <code><a href="#checked">checked</a></code>,
+        <code><a href="#indeterminate">indeterminate</a></code> 그리고
+        <code><a href="#value">value</a></code>
       </td>
     </tr>
     <tr>

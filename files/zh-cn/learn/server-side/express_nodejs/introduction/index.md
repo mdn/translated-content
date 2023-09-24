@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         掌握计算机基础知识。了解
         <a href="/zh-CN/docs/Learn/Server-side">服务器端编程</a>，特别是

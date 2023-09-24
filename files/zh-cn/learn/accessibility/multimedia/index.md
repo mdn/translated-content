@@ -20,7 +20,7 @@ slug: Learn/Accessibility/Multimedia
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>了解多媒体背后的无障碍问题，以及如何克服这些问题。</td>
     </tr>
   </tbody>

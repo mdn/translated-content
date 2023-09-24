@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/Generic_views
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         完成所有先前的教程主题，包含<a
           href="/zh-CN/docs/Learn/Server-side/Django/Home_page"

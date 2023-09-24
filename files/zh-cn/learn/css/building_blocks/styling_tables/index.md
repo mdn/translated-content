@@ -3,14 +3,14 @@ title: 样式化表格
 slug: Learn/CSS/Building_blocks/Styling_tables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 设计一个 HTML 表格不是世界上最迷人的工作，但有时我们必须这样做。本文提供了一个使 HTML 表格看起来不错的指南，其中一些功能在前面的文章中已作详细介绍。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

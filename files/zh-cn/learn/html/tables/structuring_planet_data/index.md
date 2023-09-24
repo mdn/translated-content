@@ -10,11 +10,11 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章的前提条件：</th>
+      <th scope="row">前提：</th>
       <td>在尝试这个评定之前，你应该已经把这个模块的所有文章都学习完成了。</td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>检测对 HTML 表格及相关功能的理解。</td>
     </tr>
   </tbody>

@@ -5,7 +5,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
 
 {{LearnSidebar}}
 
-[HTML5](/ko/docs/Web/Guide/HTML/HTML5) 특정 요소와 연관되어 있지만 확정된 의미는 갖지 않는 데이터에 대한 확장 가능성을 염두에 두고 디자인되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Global_attributes#attr-dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성, {{domxref("Node.setUserData()")}}과 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있도록 해줍니다.
+[HTML5](/ko/docs/Web/Guide/HTML/HTML5) 특정 요소와 연관되어 있지만 확정된 의미는 갖지 않는 데이터에 대한 확장 가능성을 염두에 두고 디자인되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Global_attributes#dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성, {{domxref("Node.setUserData()")}}과 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있도록 해줍니다.
 
 ## HTML 문법
 
