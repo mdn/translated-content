@@ -17,7 +17,7 @@ HTML DOM API に含まれる機能領域には、以下のようなものがあ�
 - HTML のメディア要素 ({{HTMLElement("audio")}} と {{HTMLElement("video")}} に接続されたメディアの管理。
 - ウェブページ上のコンテンツのドラッグ＆ドロップ。
 - ブラウザーのナビゲーション履歴へのアクセス。
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)、{{DOMxRef("Web_Storage_API", "ウェブストレージ", "", "1")}}、{{DOMxRef("Web_Workers_API", "ウェブワーカー", "", "1")}}、{{DOMxRef("WebSockets_API", "ウェブソケット", "", "1")}}、{{DOMxRef("Server-sent_events", "サーバー側イベント", "", "1")}} などの他の API のサポートおよび接続インターフェイス。
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)、{{DOMxRef("Web_Storage_API", "ウェブストレージ", "", "1")}}、{{DOMxRef("Web_Workers_API", "ウェブワーカー", "", "1")}}、{{DOMxRef("WebSockets_API", "ウェブソケット", "", "1")}}、{{DOMxRef("Server-sent_events", "サーバー側イベント", "", "1")}} などの他の API のサポートおよび接続インターフェイス。
 
 ## HTML DOM の概念と利用方法
 
@@ -239,7 +239,7 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 
 ### ウェブコンポーネントインターフェイス
 
-これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/Web_Components) で使用され、利用可能な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成・管理します。
+これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/API/Web_components) で使用され、利用可能な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成・管理します。
 
 - {{DOMxRef("CustomElementRegistry")}}
 
