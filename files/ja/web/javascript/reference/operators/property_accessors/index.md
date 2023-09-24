@@ -52,7 +52,7 @@ document.createElement("pre");
 
 数値リテラルに対してメソッドを使用する場合で、その数値リテラルに指数や小数点がない場合、メソッド呼び出しをするドットの前に[ホワイトスペース](/ja/docs/Glossary/Whitespace)を入れることで、ドットが小数点とみなされることを防ぐことができます。
 
-```js
+```js-nolint
 77 .toExponential();
 // or
 77
