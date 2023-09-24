@@ -58,18 +58,18 @@ slug: Web/HTML/Attributes/rel/preload
 
 可以预加载多种类型的内容。`as` 属性可能的值包括：
 
-- `audio`: 音频文件，通常在 {{htmlelement("audio")}} 中使用。
-- `document`: 用于嵌入在 {{htmlelement("frame")}} 或 {{htmlelement("iframe")}} 中的 HTML 文档。
-- `embed`: 用于嵌入在 {{htmlelement("embed")}} 元素中的资源。
-- `fetch`: 通过 fetch 或 XHR 请求访问的资源，例如 ArrayBuffer、WebAssembly 二进制文件或 JSON 文件。
-- `font`: 字体文件。
-- `image`: 图像文件。
-- `object`: 要嵌入在 {{htmlelement("object")}} 元素中的资源。
-- `script`: JavaScript 文件。
-- `style`: CSS 样式表。
-- `track`: WebVTT 文件。
-- `worker`: JavaScript web worker 或 shared worker。
-- `video`: 视频文件，通常在 {{htmlelement("video")}} 中使用。
+- `audio`：音频文件，通常在 {{htmlelement("audio")}} 中使用。
+- `document`：用于嵌入在 {{htmlelement("frame")}} 或 {{htmlelement("iframe")}} 中的 HTML 文档。
+- `embed`：用于嵌入在 {{htmlelement("embed")}} 元素中的资源。
+- `fetch`：通过 fetch 或 XHR 请求访问的资源，例如 ArrayBuffer、WebAssembly 二进制文件或 JSON 文件。
+- `font`：字体文件。
+- `image`：图像文件。
+- `object`：要嵌入在 {{htmlelement("object")}} 元素中的资源。
+- `script`：JavaScript 文件。
+- `style`：CSS 样式表。
+- `track`：WebVTT 文件。
+- `worker`：JavaScript web worker 或 shared worker。
+- `video`：视频文件，通常在 {{htmlelement("video")}} 中使用。
 
 > **注意：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_CORS_的获取请求)。
 
