@@ -77,7 +77,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 包括 MIME 类型
 
-`<link>` 元素可以接受一个 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性，其中包含元素指向的资源的 MIME 类型。这在预加载资源时特别有用 — 浏览器将使用 `type` 属性的值来确定是否支持该资源，如果不支持，则会忽略它，仅在支持时才会下载它。
+`<link>` 元素可以接受一个 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性，其中包含元素指向的资源的 MIME 类型。这在预加载资源时特别有用——浏览器将使用 `type` 属性的值来确定是否支持该资源，如果不支持，则会忽略它，仅在支持时才会下载它。
 
 你可以在我们的视频示例中看到这个示例（查看[完整的源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)，以及[在线版本](https://mdn.github.io/html-examples/link-rel-preload/video/)），以下是其中一部分代码片段。这展示了一般情况下预加载背后的核心行为。
 
