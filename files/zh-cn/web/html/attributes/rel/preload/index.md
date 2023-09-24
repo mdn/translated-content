@@ -193,7 +193,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 脚本和预加载
 
-> **注意：** 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+> **备注：** 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
 
 关于这些预加载的另一个好处是，你可以使用脚本来执行它们。例如，这里我们创建一个 {{domxref("HTMLLinkElement")}} 实例，然后将其附加到 DOM 中：
 
