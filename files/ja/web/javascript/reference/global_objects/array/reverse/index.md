@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`reverse()`** メソッドは、配列の要素を[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
+**`reverse()`** メソッドは、配列の要素を [in-place(その場)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
@@ -19,7 +19,7 @@ reverse();
 
 ### 返値
 
-元の配列を反転されたものへの参照です。なお、配列は[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)で反転され、コピーは作られません。
+元の配列を反転されたものへの参照です。なお、配列は [in-place(その場)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転され、コピーは作られません。
 
 ## 解説
 
