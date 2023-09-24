@@ -64,7 +64,7 @@ _変更なし。_
 
 #### 新規 API
 
-- Shadow DOM ([Firefox バグ 1471947](https://bugzil.la/1471947)) および Custom Elements ([Firefox バグ 1471948](https://bugzil.la/1471948)) API をデフォルトで有効にしました。詳しくは [Web components](/ja/docs/Web/Web_Components) をご覧ください。
+- Shadow DOM ([Firefox バグ 1471947](https://bugzil.la/1471947)) および Custom Elements ([Firefox バグ 1471948](https://bugzil.la/1471948)) API をデフォルトで有効にしました。詳しくは [Web components](/ja/docs/Web/API/Web_components) をご覧ください。
 - {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} を実装しました ([Firefox バグ 1409664](https://bugzil.la/1409664))。
 - {{domxref("Clipboard", "Async Clipboard API", "", "1")}} を実装して、デフォルトですべてのチャンネルで有効化しました。Chrome および Firefox では現在 {{domxref("Clipboard.writeText", "writeText()")}} および {{domxref("Clipboard.readText", "readText()")}} メソッドのみ実装しています。ただし、`readText()` が [ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions) に限り使用可能であることが Chrome とは異なります。
 - {{domxref("SecurityPolicyViolationEvent")}} インターフェイスをサポートしました。{{HTTPHeader("Content-Security-Policy")}} に違反したときにイベントを送信できます ([Firefox バグ 1472661](https://bugzil.la/1472661))。
