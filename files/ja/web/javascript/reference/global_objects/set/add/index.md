@@ -1,18 +1,20 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
+l10n:
+  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
 {{JSRef}}
 
-**`add()`** メソッドは `Set` 内に同じ値を持つ要素がない場合、指定した値を持つ新しい要素を `Set` オブジェクトの末尾に追加します。
+**`add()`** は {{jsxref("Set")}} インスタンスのメソッドで、この集合に同じ値を持つ要素がない場合、指定した値を持つ新しい要素をこの集合に追加します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
 ## 構文
 
-```js
-add(value);
+```js-nolint
+add(value)
 ```
 
 ### 引数
@@ -29,7 +31,7 @@ add(value);
 ### add() メソッドの使用
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add("some text"); // 連鎖可能

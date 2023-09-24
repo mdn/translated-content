@@ -11,7 +11,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟练使用 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的核心概念</a

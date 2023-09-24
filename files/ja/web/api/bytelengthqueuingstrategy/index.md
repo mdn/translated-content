@@ -1,50 +1,62 @@
 ---
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-[Streams API](/ja/docs/Web/API/Streams_API) の **`ByteLengthQueuingStrategy`** インターフェイスは、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。
+**`ByteLengthQueuingStrategy`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。
 
 ## コンストラクター
 
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
   - : 新しい `ByteLengthQueuingStrategy` オブジェクトのインスタンスを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
-なし。
+- {{domxref("ByteLengthQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : [背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)が適用される前に内部キューに格納することができるバイト数の合計。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
-  - : 所与のチャンクの `byteLength` プロパティを返します。
+  - : 指定されたチャンクの `byteLength` プロパティを返します。
 
 ## 例
 
 ```js
-const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    ...
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    ...
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy,
+);
 
-var size = queueingStrategy.size(chunk);
+const size = queueingStrategy.size(chunk);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ByteLengthQueuingStrategy")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Streams API", "ストリーム API", "", "nocode")}}
+- [内部キューとキューイング戦略](/ja/docs/Web/API/Streams_API/Concepts#内部キューとキューイング戦略)
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} コンストラクター
