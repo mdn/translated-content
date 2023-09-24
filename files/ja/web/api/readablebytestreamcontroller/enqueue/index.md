@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Streams")}}
 
-**`enqueue()`** は {{domxref("ReadableByteStreamController")}} で、指定された塊を、関連する読み取り可能なバイトストリームのキューに入れます（塊はストリーム内部のキューにコピーされます）。
+**`enqueue()`** は {{domxref("ReadableByteStreamController")}} で、指定されたチャンクを、関連する読み取り可能なバイトストリームのキューに入れます（チャンクはストリーム内部のキューにコピーされます）。
 
 これは、 {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} が `null` である場合にのみ、キューへのデータ移譲に使用しましょう。
 
