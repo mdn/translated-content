@@ -114,7 +114,6 @@ slug: Web/HTML/Attributes/rel/preload
 
 如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 
-Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
 让我们以这个案例作为示例。你可以在 GitHub 上查看完整的[示例源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts)（也可以[在线查看](https://mdn.github.io/html-examples/link-rel-preload/fonts/)）：
 
 ```html
