@@ -82,7 +82,7 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
 
 - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
 
-  - : Ajuste le contraste de l'image. Une valeur de `0%` rendra l'image grise, `100%` n'aura pas d'effet et les valeurs supérieures à 100% renforceront le contraste.
+  - : Ajuste le contraste de l'image. Une valeur de `0%` rendra l'image grise, `100%` n'aura pas d'effet et les valeurs supérieures à `100%` renforceront le contraste.
 
     ```css
     filter: contrast(200%);
@@ -90,7 +90,7 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
 
 - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
 
-  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que [`box-shadow`](/fr/docs/Web/CSS/box-shadow), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
+  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
 
     ```css
     filter: drop-shadow(16px 16px 10px black);
