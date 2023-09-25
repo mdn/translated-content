@@ -153,7 +153,7 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 #### Résultat
 
-{{EmbedLiveSample('Définir la colonne de début pour un élément de grille', '230', '420')}}
+{{EmbedLiveSample('définir_la_colonne_de_début_pour_un_élément_de_grille', '230', '420')}}
 
 ### Placement relatif aux lignes
 
@@ -222,7 +222,7 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 #### Résultat
 
-{{EmbedLiveSample('Placement relatif aux lignes', '230', '220')}}
+{{EmbedLiveSample('placement_relatif_aux_lignes', '230', '220')}}
 
 ## Spécifications
 
