@@ -22,7 +22,7 @@ Number.parseFloat(string)
 
 ### 返回值
 
-由给定 `strin` 解析得到的浮点数。
+由给定 `string` 解析得到的浮点数。
 
 如果第一个非空白字符不能被转换为数字，则返回 {{jsxref("NaN")}}。
 
