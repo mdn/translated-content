@@ -76,7 +76,7 @@ numObj.toFixed(6); // '12345.678900'；用零补足位数
 
 ### 对负数使用 toFixed()
 
-由于成员访问的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)高于一元减号，你需要将负数表达式分组以获得一个字符串。
+由于成员访问的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)高于一元减号，你需要将负数表达式组合以获得一个字符串。
 
 ```js-nolint
 -2.34.toFixed(1); // -2.3, a number
