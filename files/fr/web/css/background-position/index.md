@@ -161,7 +161,7 @@ div {
   background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exemple_deux {
-  background: url("startransparent.gif") #ffee99 3em 50% no-repeat;
+  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /*
@@ -173,7 +173,7 @@ L'ordre est le même entre background-image et -position.
   background-image: url("startransparent.gif"), url("catfront.png");
   background-position:
     0px 0px,
-    center;
+    right 3em bottom 2em;
 }
 ```
 
