@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
 {{JSRef}}
 
-{{jsxref("Number")}} 值的 **`toFixed()`** 方法使用定点表示法来格式化改数值。
+{{jsxref("Number")}} 值的 **`toFixed()`** 方法使用定点表示法来格式化该数值。
 
 {{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
 
