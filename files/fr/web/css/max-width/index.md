@@ -92,7 +92,7 @@ Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 
   width: 300px;
 }
 
-#child {
+#enfant {
   background: gold;
   width: 100%;
   max-width: 150px;
