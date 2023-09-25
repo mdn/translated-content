@@ -1,7 +1,8 @@
 ---
-title: Tree shaking
+title: 트리 셰이킹(Tree shaking)
 slug: Glossary/Tree_shaking
-page-type: glossary-definition
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
