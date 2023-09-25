@@ -36,7 +36,7 @@ toFixed(digits)
 
 `toFixed()` 方法返回一个表示 `numObj` 的字符串，但不使用指数计数法，并且小数点后有精确到 `digits` 位的数字。如果需要截断，则将数字四舍五入；如果小数位数不足，则小数部分用零填充，以使其具有指定长度。
 
-如果 `numObj` 的绝对值大于或等于 10<sup>21</sup>，则该方法使用与 {{jsxref("Number.prototype.toString()")}} 相同的算法，并以指数计数法返回字符串。如果 `numObj` 的值不是有限的，则 `toFixed()` 会返回 `"Infinity"`, `"NaN"`, 或 `"-Infinity"`。
+如果 `numObj` 的绝对值大于或等于 10<sup>21</sup>，则该方法使用与 {{jsxref("Number.prototype.toString()")}} 相同的算法，并以指数计数法返回字符串。如果 `numObj` 的值不是有限的，则 `toFixed()` 会返回 `"Infinity"`、`"NaN"` 或 `"-Infinity"`。
 
 `toFixed()` 对于某些值可能具有比 [`toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 更加精确的输出，因为 `toString()` 只输出足够的有效数字来区分该数值与邻近的数值。例如：
 
@@ -45,7 +45,7 @@ toFixed(digits)
 (1000000000000000128).toFixed(0); // '1000000000000000128'
 ```
 
-然而，选这个一个过高的 `digits` 精度会导致意外的结果，因为小数部分的数字不能精确的表示成浮点数。例如：
+然而，选择一个过高的 `digits` 精度会导致意外的结果，因为小数部分的数字不能精确地表示成浮点数。例如：
 
 ```js
 (0.3).toFixed(50); // '0.29999999999999998889776975374843459576368331909180'
@@ -76,10 +76,10 @@ numObj.toFixed(6); // '12345.678900'；用零补足位数
 
 ### 对负数使用 toFixed()
 
-由于成员访问的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)高于一元减号，你需要将负数表达式组合以获得一个字符串。
+由于成员访问的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)高于一元减号，你需要将负数表达式组合以获得一个字符串。
 
 ```js-nolint
--2.34.toFixed(1); // -2.3, a number
+-2.34.toFixed(1); // -2.3，数字
 (-2.34).toFixed(1); // '-2.3'
 ```
 
