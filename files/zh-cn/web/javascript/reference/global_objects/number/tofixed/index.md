@@ -28,7 +28,7 @@ toFixed(digits)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果 `digits` 不是介于 `0` 和 `100` 之间(含两端)的值，则抛出该异常。
+  - : 如果 `digits` 不是介于 `0` 和 `100` 之间（含两端）的值，则抛出该异常。
 - {{jsxref("TypeError")}}
   - : 如果不是在 {{jsxref("Number")}} 上调用该方法，则抛出该异常。
 
