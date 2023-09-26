@@ -23,7 +23,7 @@ toExponential(fractionDigits)
 
 ### 返回值
 
-一个以指数记数法表示给定 {{jsxref("Number")}} 对象的的字符串，其小数点前为一位数字，小数点后舍入到 `fractionDigits` 位。
+一个以指数表示法表示给定 {{jsxref("Number")}} 对象的的字符串，其小数点前为一位数字，小数点后舍入到 `fractionDigits` 位。
 
 ### 异常
 
