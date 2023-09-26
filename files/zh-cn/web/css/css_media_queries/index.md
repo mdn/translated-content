@@ -53,5 +53,5 @@ l10n:
 
 ## 参见
 
-- [容器查询](/en-US/docs/Web/CSS/CSS_container_queries)
+- [容器查询](/zh-CN/docs/Web/CSS/CSS_container_queries)
 - 使用 {{cssxref("@supports")}} 来根据浏览器支持的 CSS 技术应用样式。
