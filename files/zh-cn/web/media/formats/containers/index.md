@@ -1,40 +1,85 @@
 ---
-title: Media container formats (file types)
+title: 媒体容器格式（文件类型）
 slug: Web/Media/Formats/Containers
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
-一个音频/视频文件包含两部分：编码器（codec）和媒体容器（container）。本文讨论通用的多媒体容器的优点、局限性以及用法。
+音频和视频媒体文件格式由两部分组成（当然，如果文件中同时包含音频和视频，则由三部分组成）：使用的音频和/或视频编解码器以及使用的媒体容器格式（或文件类型）。在本指南中，我们将介绍网络上最常用的容器格式，包括它们的基本规范、优点、限制和理想的使用案例。
 
-[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) does not use a container at all. Instead, it streams the encoded audio and video tracks directly from one peer to another using {{domxref("MediaStreamTrack")}} objects to represent each track. See [Codecs used by WebRTC](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs commonly used for making WebRTC calls, as well as browser compatibility information around codec support in WebRTC.
+[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 完全不使用容器。相反，它使用 {{domxref("MediaStreamTrack")}} 对象代表每个音轨，直接将编码后的音频和视频音轨从一个对等点串流到另一个对等点。请参见 [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)，了解有关 WebRTC 通话常用编解码器的信息，以及有关 WebRTC 中编解码器支持的浏览器兼容性信息。
 
-## Common container formats
+## 常见容器格式
 
 最常用的几个媒体容器格式：MPEG-4（MP4）、QuickTime Movie（MOV）、Wavafile Audio File Format（WAV）。当然你也可能听说过：MP3, Ogg, WebM, AVI 等等。下面列出了常用的几种媒体容器格式，有些仅支持音频，有些即支持音频又支持视频。
 
 一个媒体文件的扩展名和 MIME 类型，与它的容器格式以及它的编码方式没有特定的关系。例如 MP3 的扩展名是`.mp3`，MIME 类型是`audio/mp3`，但是它的容器格式是 MPEG-1，编码方式是 MPEG-1 Audio Layer III。
 
-### Index of media container formats (file types)
+### 媒体容器格式（文件类型）索引
 
 要了解有关特定容器格式的更多信息，请在此列表中找到它并单击查看详细信息，其中包括有关容器通常用于哪些用途、它支持哪些编解码器以及哪些浏览器支持它等详细信息。
 
-| Codec name (short)            | Full codec name                        | Browser compatibility[1](#index-foot-1)                                                           |
-| ----------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [3GP](#3gp)                   | Third Generation Partnership           | Firefox for Android                                                                               |
-| [ADTS](#adts)                 | Audio Data Transport Stream            | Firefox[2](#index-foot-2)                                                                         |
-| [FLAC](#flac)                 | Free Lossless Audio Codec              | Chrome 56, Edge 16, Firefox 51, Safari 11                                                         |
-| [MPEG / MPEG-2](#mpegmpeg-2)  | Moving Picture Experts Group (1 and 2) | —                                                                                                 |
-| [MPEG-4 (MP4)](#mpeg-4_mp4)   | Moving Picture Experts Group 4         | Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1                             |
-| [Ogg](#ogg)                   | Ogg                                    | Chrome 3, Firefox 3.5, Edge 17[3](#index-foot-3) (desktop only), Internet Explorer 9, Opera 10.50 |
-| [QuickTime (MOV)](#quicktime) | Apple QuickTime movie                  | Only older versions of Safari, plus other browsers that supported Apple's QuickTime plugin        |
-| [WebM](#webm)                 | Web Media                              | Chrome 6, Edge 17[3](#index-foot-3) (desktop only), Firefox 4, Opera 10.6, Safari (WebRTC only)   |
-
-<a id="index-foot-1" name="index-foot-1">[1]</a> Unless otherwise specified, both mobile and desktop browser compatibility is implied if a browser is listed here. Support is also implied only for the container itself, not for any specific codecs.
-
-<a id="index-foot-2" name="index-foot-2">[2]</a> Available only if available on the underlying operating system's media framework.
-
-<a name="index-foot-3">[3]</a> Requires [Web Media Extensions](https://www.microsoft.com/store/productId/9N5TDP8VCMHS) to be installed.
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">编解码器名称（简称）</th>
+      <th scope="col">编解码器全名</th>
+      <th scope="col">浏览器兼容性</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="#3gp">3GP</a></th>
+      <td>Third Generation Partnership</td>
+      <td>Firefox for Android</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#adts">ADTS</a></th>
+      <td>Audio Data Transport Stream</td>
+      <td>
+        <p>Firefox</p>
+        <p>Available only if available on the underlying operating system's media framework.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#flac">FLAC</a></th>
+      <td>Free Lossless Audio Codec</td>
+      <td>Chrome 56, Edge 16, Firefox 51, Safari 11</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#mpegmpeg-2">MPEG / MPEG-2</a></th>
+      <td>Moving Picture Experts Group (1 and 2)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
+      <td>Moving Picture Experts Group 4</td>
+      <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#ogg">Ogg</a></th>
+      <td>Ogg</td>
+      <td>
+        <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
+        <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
+      <td>Apple QuickTime movie</td>
+      <td>Only older versions of Safari, plus other browsers that supported Apple's QuickTime plugin</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#webm">WebM</a></th>
+      <td>Web Media</td>
+      <td>
+        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS), Safari 15 (iOS).</p>
+        <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3GP
 
@@ -42,7 +87,7 @@ The **3GP** or **3GPP** media container is used to encapsulate audio and/or vide
 
 This media container format is derived from the ISO Base Media File Format and MPEG-4, but is specifically streamlined for lower bandwidth scenarios.
 
-| Audio         | Video         |
+| 音频          | 视频          |
 | ------------- | ------------- |
 | `audio/3gpp`  | `video/3gpp`  |
 | `audio/3gpp2` | `video/3gpp2` |
@@ -989,11 +1034,11 @@ WebM was first introduced in 2010 and is now widely supported. Compliant impleme
   </tbody>
 </table>
 
-## Choosing the right container
+## 选择正确的容器
 
 There are a few factors to consider when selecting the best container or containers to use for your media. The relative importance of each will depend on your needs, your license requirements, and the compatibility requirements of your target audience.
 
-### Guidelines
+### 准则
 
 The best choice also depends on what you'll be doing with the media. Playing back media is a different thing than recording and/or editing it. If you're going to be manipulating the media data, using an uncompressed format can improve performance, while using a lossless compressed format at least prevent the accumulation of noise as compression artifacts are multiplied with each re-compression that occurs.
 
@@ -1005,13 +1050,13 @@ The best choice also depends on what you'll be doing with the media. Playing bac
 
 Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported. FLAC is the more broadly supported of the two, but is not supported by macOS without additional software installed, and is not supported at all on iOS. If you need to offer lossless audio, you may need to provide both FLAC and ALAC to get close to universal compatibility.
 
-### Container selection advice
+### 容器选择建议
 
 The tables below offer suggested containers to use in various scenarios. These are just suggestions. Be sure to consider the needs of your application and your organization before selecting a container format.
 
-#### Audio-only files
+#### 仅音频文件
 
-| If you need...                                | Consider using this container format |
+| 如果你的需求是...                             | 考虑使用这个容器格式                 |
 | --------------------------------------------- | ------------------------------------ |
 | Compressed files for general-purpose playback | MP3 (MPEG-1 Audio Layer III)         |
 | Losslessly compressed files                   | FLAC with ALAC fallback              |
@@ -1019,9 +1064,9 @@ The tables below offer suggested containers to use in various scenarios. These a
 
 Now that MP3's patents have all expired, the choice of audio file format has become much easier to make. It's no longer necessary to choose between MP3's broad compatibility and the need to pay royalties when using it.
 
-#### Video files
+#### 视频文件
 
-| If you need...                                      | Consider using this container format                |
+| 如果你的需求是...                                   | 考虑使用这个容器格式                                |
 | --------------------------------------------------- | --------------------------------------------------- |
 | General purpose video, preferably in an open format | WebM (ideally with MP4 fallback)                    |
 | General purpose video                               | MP4 (ideally with WebM or Ogg fallback)             |
@@ -1030,7 +1075,7 @@ Now that MP3's patents have all expired, the choice of audio file format has bec
 
 These suggestions make a number of assumptions. You should carefully consider the options before making a final decision, especially if you have a lot of media that will need to be encoded.
 
-## Maximizing compatibility with multiple containers
+## 最大限度地兼容多个容器
 
 To optimize compatibility, it's worth considering providing more than one version of media files, using the {{HTMLElement("source")}} element to specify each source within the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element. For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format. You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
@@ -1042,62 +1087,59 @@ In the example shown here, a video is offered to the browser in two formats: Web
 
 The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTML/Element/video#type) attribute set to `video/webm`). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
 
-## Specifications
+## 规范
 
-| Specification                                                                                                                                                | Comment                                                                                                         |
+| 规范                                                                                                                                                | 注释                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                                            | Defines the 3GP container format                                                                                |
-| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html) (MPEG-4 Part 3 Audio)                                                                             | Defines MP4 audio including ADTS                                                                                |
-| [FLAC Format](https://xiph.org/flac/format.html)                                                                                                             | The FLAC format specification                                                                                   |
-| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html) (MPEG-1 Part 1 Systems)                                                                           | Defines the MPEG-1 container format                                                                             |
-| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 Systems)                                                                           | Defines the MPEG-2 container format                                                                             |
-| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 file format)                                                                | Defines the MPEG-4 (MP4) version 2 container format                                                             |
-| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | Defines the original MPEG-4 (MP4) container format                                                              |
-| {{RFC(3533)}}                                                                                                                                                | Defines the Ogg container format                                                                                |
-| {{RFC(5334)}}                                                                                                                                                | Defines the Ogg media types and file extensions                                                                 |
-| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
-| [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
-| [Resource Interchange File Format](https://docs.microsoft.com/en-us/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
-| [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Guide for adapting Matroska for WebM                                                                            |
-| [Matroska Specifications](https://matroska.org/technical/specs/index.html)                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
-| [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | WebM byte stream format for use with [Media Source Extensions](/zh-CN/docs/Web/API/Media_Source_Extensions_API) |
+| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                                            | 定义了 3GP 容器格式                                                                                |
+| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html)（MPEG-4 Part 3：音频）                                                                             | 定义了包含 ADTS 的 MP4 音频                                                                                |
+| [FLAC Format](https://xiph.org/flac/format.html)                                                                                                             | FLAC 格式规范                                                                                   |
+| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html)（MPEG-1 Part 1：系统）                                                                           | 定义了 MPEG-1 容器格式                                                                            |
+| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html)（MPEG-2 Part 1：系统）                                                                           | 定义了 MPEG-2 容器格式                                                                             |
+| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html)（MPEG-4 Part 14：MP4 文件格式）                                                                | 定义了 MPEG-4（MP4）版本 2 容器格式                                                             |
+| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html)（MPEG-4 Part 1：系统）                                                                           | 定义了原始 MPEG-4（MP4）容器格式                                                              |
+| {{RFC(3533)}}                                                                                                                                                | 定义了 OGG 容器格式                                                                                |
+| {{RFC(5334)}}                                                                                                                                                | 定义了 OGG 媒体类型和文件扩展名                                                                 |
+| [QuickTime 文件格式规范](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | 定义了 QuickTime movie（MOV）格式                                                                        |
+| [多媒体程序接口和数据定义 1.0 版本](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 最接近官方 WAVE 规范的产品                                                             |
+| [Resource Interchange File Format](https://docs.microsoft.com/zh-cn/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | 定义了 RIFF 格式，WAVE 文件是 RIFF 的一种形式                                                          |
+| [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | 为 WebM 适配 Matroska 的指南                                                                            |
+| [Matroska Specifications](https://matroska.org/technical/specs/index.html)                                                                                   | 作为 WebM 基础的 Matroska 容器格式规范                                    |
+| [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
 
-## Browser compatibility
+## 浏览器兼容性
 
 <table class="standard-table">
   <thead>
     <tr>
       <th rowspan="2" scope="row" style="vertical-align: bottom">
-        Container format name
+        容器格式名称
       </th>
       <th
         colspan="3"
-        rowspan="1"
         scope="col"
         style="text-align: center; border-right: 2px solid #d4dde4"
       >
-        Audio
+        音频
       </th>
-      <th colspan="3" rowspan="1" scope="col" style="text-align: center">
-        Video
-      </th>
+      <th colspan="3" scope="col" style="text-align: center">视频</th>
     </tr>
     <tr>
-      <th scope="col" style="vertical-align: bottom">MIME type</th>
-      <th scope="col" style="vertical-align: bottom">Extension(s)</th>
+      <th scope="col" style="vertical-align: bottom">MIME 类型</th>
+      <th scope="col" style="vertical-align: bottom">扩展</th>
       <th
         scope="col"
         style="vertical-align: bottom; border-right: 2px solid #d4dde4"
       >
-        Browser support
+        浏览器支持
       </th>
-      <th scope="col" style="vertical-align: bottom">MIME type</th>
-      <th scope="col" style="vertical-align: bottom">Extension(s)</th>
+      <th scope="col" style="vertical-align: bottom">MIME 类型</th>
+      <th scope="col" style="vertical-align: bottom">扩展</th>
       <th
         scope="col"
         style="vertical-align: bottom; border-right: 2px solid #d4dde4"
       >
-        Browser support
+        浏览器支持
       </th>
     </tr>
   </thead>
@@ -1115,7 +1157,7 @@ The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTM
     </tr>
     <tr>
       <th scope="row" style="vertical-align: top">
-        ADTS (Audio Data Transport Stream)
+        ADTS（音频数据传输流）
       </th>
       <td style="vertical-align: top"><code>audio/aac</code></td>
       <td style="vertical-align: top"><code>.aac</code></td>
@@ -1139,7 +1181,7 @@ The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTM
     </tr>
     <tr>
       <th rowspan="2" scope="row" style="vertical-align: top">
-        MPEG-1 / MPEG-2 (MPG or MPEG)
+        MPEG-1 / MPEG-2（MPG 或 MPEG）
       </th>
       <td style="vertical-align: top"><code>audio/mpeg</code></td>
       <td style="vertical-align: top">
@@ -1192,7 +1234,7 @@ The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTM
       <td style="vertical-align: top">Firefox</td>
     </tr>
     <tr>
-      <th scope="row" style="vertical-align: top">QuickTime Movie (MOV)</th>
+      <th scope="row" style="vertical-align: top">QuickTime Movie（MOV）</th>
       <td style="vertical-align: top">—</td>
       <td style="vertical-align: top">—</td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">—</td>
@@ -1201,7 +1243,7 @@ The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTM
       <td style="vertical-align: top">Safari</td>
     </tr>
     <tr>
-      <th scope="row" style="vertical-align: top">WAV (Waveform Audiofile)</th>
+      <th scope="row" style="vertical-align: top">WAV（波形音频文件）</th>
       <td style="vertical-align: top"><code>audio/wav</code></td>
       <td style="vertical-align: top"><code>.wav</code></td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">
@@ -1225,8 +1267,8 @@ The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTM
   </tbody>
 </table>
 
-## See also
+## 参见
 
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API)
-- {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
+- {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素
