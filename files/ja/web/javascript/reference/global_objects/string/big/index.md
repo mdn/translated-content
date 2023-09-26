@@ -9,7 +9,7 @@ l10n:
 
 **`big()`** メソッドは、文字列を {{HTMLElement("big")}} 要素の中に埋め込み (`<big>str</big>`)、文字列が大きなフォントで表示されるようにします。
 
-> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。`<big>` 要素自体は [HTML5](/ja/docs/Glossary/HTML5) で削除されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`<big>` 要素自体は [HTML5](/ja/docs/Glossary/HTML5) で削除されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 
