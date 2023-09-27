@@ -43,7 +43,7 @@ background-clip: unset;
 
 ## Примеры
 
-#### HTML
+### HTML
 
 ```html
 <p class="border-box">The background extends behind the border.</p>
@@ -56,7 +56,7 @@ background-clip: unset;
 <p class="text">The background is clipped to the foreground text.</p>
 ```
 
-#### CSS
+### CSS
 
 ```css
 p {
