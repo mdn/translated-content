@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 {{jsxref("Number")}} 值的 **`toLocaleString()`** 方法返回这个数字特定于语言环境的表示字符串。在具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现中，此方法仅仅简单调用了 `Intl.NumberFormat`。
 
-当格式化大量数字时，最好创建一个 {{jsxref("Intl.NumberFormat")}} 对象，并使用其 {{jsxref("Intl/NumberFormat/format", "format()")}} 方法提供的函数。
+当格式化大量数字时，最好创建一个 {{jsxref("Intl.NumberFormat")}} 对象，并使用其提供的 {{jsxref("Intl/NumberFormat/format", "format()")}} 方法。
 
 {{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
 
@@ -23,7 +23,7 @@ toLocaleString(locales, options)
 
 `locales` 和 `options` 参数让应用程序可以指定要进行格式转换的语言，并且定制函数的行为。
 
-在使用具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现时，这些参数与 [`Intl.NumberFormat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 构造器的参数相同。不支持 `Intl.NumberFormat` 时，会忽略参数，使得使用的区域设置和返回的字符串格式完全由实现决定。
+在使用具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现时，这些参数与 [`Intl.NumberFormat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 构造函数的参数相同。不支持 `Intl.NumberFormat` 时，会忽略参数，使得使用的区域设置和返回的字符串格式完全由实现决定。
 
 - `locales` {{optional_inline}}
 
@@ -35,7 +35,7 @@ toLocaleString(locales, options)
 
   - : 调整输出格式的对象。与 `Intl.NumberFormat()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数相同。
 
-    在无 `Intl.NumberFormat` 支持的实现中，这个参数是忽略的。
+    在无 `Intl.NumberFormat` 支持的实现中，这个参数是被忽略的。
 
 请查阅 [`Intl.NumberFormat()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)以了解这些参数的详细信息，以及如何使用它们。
 
