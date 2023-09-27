@@ -29,6 +29,7 @@
   "dependencies": {
     "cld": "^2.9.0",
     "fdir": "^6.1.0",
+    "front-matter": "^4.0.2",
     "fs-extra": "^11.1.1",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
