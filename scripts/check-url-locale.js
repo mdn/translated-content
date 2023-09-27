@@ -185,11 +185,14 @@ function fixUrlLocale(content, errors, expectedLocale) {
     }
     return a.line - b.line;
   });
+  expectedLocale = `/${expectedLocale}/`;
   const lines = content.split("\n");
   for (const { url, line, column, urlLocale } of errors) {
     let lineContent = lines[line - 1];
     const prefix = lineContent.slice(0, column - 1);
-    const newUrl = url.replace(urlLocale, expectedLocale);
+    // replace the slashed locale with the expected locale
+    // to prevent replacing the empty url locale
+    const newUrl = url.replace(`/${urlLocale}/`, expectedLocale);
     const suffix = lineContent.slice(column - 1).replace(url, newUrl);
     lines[line - 1] = `${prefix}${suffix}`;
   }
@@ -221,7 +224,7 @@ async function main() {
 
   spinner.text = "Crawling files...";
 
-  const dryRun = argv.dry;
+  const dryRun = !argv.fix;
 
   for (const fp of argv.files) {
     const fstats = await fs.stat(fp);
