@@ -269,9 +269,9 @@ Firefox 对 AAC 的支持依赖于操作系统的媒体基础架构，因此只�
 
 **自由无损音频编解码器**（**FLAC**）是一种无损音频编解码器；还有一种相关的简单容器格式，也称为 FLAC，可以包含这种音频。该格式没有任何专利，因此其使用不会受到干扰。FLAC 文件只能包含 FLAC 音频数据。
 
-| 音频                    |
-| ----------------------- |
-| `audio/flac`            |
+| 音频                     |
+| ------------------------ |
+| `audio/flac`             |
 | `audio/x-flac`（非标准） |
 
 <table class="standard-table">
@@ -699,7 +699,7 @@ QuickTime 文件支持任何类型的基于时间的数据，包括音频和视�
       <th scope="row">H.261</th>
       <td></td>
       <td></td>
-      <td>否o</td>
+      <td>否</td>
       <td></td>
     </tr>
     <tr>
@@ -994,7 +994,7 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 - 如果你的目标受众可能包括移动用户，特别是使用低端设备或低速网络的用户，请考虑以 3GP 容器提供适当压缩的媒体版本。
 - 如果你有任何特定的编码要求，请确保你选择的容器支持适当的编解码器。
 - 如果你希望媒体采用非专有的开放格式，可考虑使用 FLAC（音频）或 WebM（视频）等开放式容器格式。
-- 如果出于某种原因，您只能提供单一格式的媒体，请选择可用于最广泛设备和浏览器的格式，如 MP3（用于音频）或 MP4（用于视频和/或音频）。
+- 如果出于某种原因，只能提供单一格式的媒体，请选择可用于最广泛设备和浏览器的格式，如 MP3（用于音频）或 MP4（用于视频和/或音频）。
 - 如果你的媒体是纯音频的，那么选择纯音频的容器格式也是合理的。现在专利都已过期，MP3 是一种受广泛支持的良好选择。WAVE 很好，但未经压缩，因此在使用它来处理大样本音频之前要注意这一点。如果目标浏览器都支持 FLAC，那么由于其无损压缩，FLAC 是一个很好的选择。
 
 遗憾的是，相对主要的无损压缩格式（FLAC 和 ALAC）都不受普遍支持。FLAC 是这两种格式中支持范围较广的一种，但 macOS 在不安装额外软件的情况下不支持 FLAC，而 iOS 则完全不支持 FLAC。如果你需要提供无损音频，你可能需要同时提供 FLAC 和 ALAC 才能接近通用兼容性。
@@ -1183,7 +1183,7 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
       <td style="vertical-align: top">Firefox</td>
     </tr>
     <tr>
-      <th scope="row" style="vertical-align: top">QuickTime Movie（MOV）</th>
+      <th scope="row" style="vertical-align: top">QuickTime Movie (MOV)</th>
       <td style="vertical-align: top">—</td>
       <td style="vertical-align: top">—</td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">—</td>
