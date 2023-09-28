@@ -1,6 +1,8 @@
 ---
 title: 媒体容器格式（文件类型）
 slug: Web/Media/Formats/Containers
+l10n:
+  sourceCommit: d68dc0cf0f0caff5572ce83cb28df898ac815e40
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
