@@ -6,8 +6,8 @@ slug: Web/API/Element/replaceWith
 
 {{APIRef("DOM")}}
 
-**`Element.replaceWith()`** 메서드는 부모 노드의 자식 목록에 있는 
-`Element` 를 {{domxref("Node")}} 집합 또는 문자열 객체로 대체합니다. 
+**`Element.replaceWith()`** 메서드는 부모 노드의 자식 목록에 있는
+`Element` 를 {{domxref("Node")}} 집합 또는 문자열 객체로 대체합니다.
 문자열 객체는 동등한 {{domxref("Text")}} 노드로 추가됩니다.
 
 ## 구문
