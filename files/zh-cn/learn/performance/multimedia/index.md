@@ -12,12 +12,10 @@ slug: Learn/Performance/Multimedia
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机操作能力，
-        <a
+        基本的计算机操作能力，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >已安装基本软件</a
-        >，以及基本的
-        <a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        >，以及基本的<a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
           >客户端 Web 技术知识</a
         >。
       </td>
@@ -47,7 +45,7 @@ slug: Learn/Performance/Multimedia
 
 ### 加载策略
 
-对于大多数网站来说，最大的改进之一是[延迟加载](/zh-CN/docs/Web/Performance/Lazy_loading)可视区域以下的图像，而不是无论访问者是否滚动页面查看都在初始页面加载时全部下载它们。许多 JavaScript 库可以为你实现此功能，例如 [lazysizes](https://github.com/aFarkas/lazysizes)，浏览器供应商目前正在开发一种原生的 `lazyload` 属性，目前处于实验阶段。
+对于大多数网站来说，最大的改进之一是[延迟加载](/zh-CN/docs/Web/Performance/Lazy_loading)可视区域以下的图像，而不是在初始页面加载时，无论访客是否滚动查看，都下载所有这些内容。许多 JavaScript 库可以为你实现此功能，例如 [lazysizes](https://github.com/aFarkas/lazysizes)，浏览器供应商目前正在开发一种原生的 `lazyload` 属性，目前处于实验阶段。
 
 除了加载一部分图像之外，接下来你应该考虑图像本身的格式：
 
@@ -65,19 +63,19 @@ slug: Learn/Performance/Multimedia
 
 PNG 可以以三种不同的输出组合进行保存：
 
-- 24 位色 + 8 位透明度——提供全色准确性和平滑透明度，以牺牲大小为代价。你可能希望为了 WebP（见下文）而避免此组合。
+- 24 位色 + 8 位透明度——提供全色准确性和平滑透明度，以牺牲大小为代价。你可能希望为了避免这种组合，而选择 WebP（见下文）。
 - 8 位色 + 8 位透明度——提供不超过 255 种颜色，但保持平滑的透明度。大小不太大。这些可能是你想要的 PNG。
 - 8 位色 + 1 位透明度——提供不超过 255 种颜色，并仅为每个像素提供无或完全透明度，这使透明边界看起来生硬并且有锯齿。尺寸小，但视觉保真度付出了代价。
 
-优化 SVG 的一个不错的在线工具是 [SVGOMG](https://jakearchibald.github.io/svgomg/)。对于 PNG，有 [ImageOptim 在线](https://imageoptim.com/online)或 [Squoosh](https://squoosh.app/)。
+优化 SVG 的一个不错的在线工具是 [SVGOMG](https://jakearchibald.github.io/svgomg/)。对于 PNG，有 [ImageOptim 在线](https://imageoptim.com/online)或 [Squoosh](https://squoosh.app/) 这几种工具。
 
-对于不具有透明度的摄影素材，有更广泛的格式可供选择。如果要谨慎行事，那么你应该选择压缩良好的**渐进式 JPEG**。渐进式 JPEG 与普通 JPEG 不同，它们是渐进式显示的（因此得名），这意味着用户先看到的是一个低分辨率的图像版本，随着图像下载而逐渐清晰，而不是图像以全分辨率从上到下加载，或者只有在完全下载后才显示。对于这些图片，一个好的压缩工具是 MozJPEG，例如能够在在线图像优化工具 [Squoosh](https://squoosh.app/) 中使用。75% 的质量设置能够得到优秀的结果。
+对于不具有透明度的摄影素材，有更广泛的格式可供选择。如果要谨慎行事，那么你应该选择压缩良好的**渐进式 JPEG**。渐进式 JPEG 与普通 JPEG 不同，它们是渐进式显示的（因此得名），这意味着用户先看到的是一个低分辨率的图像版本，随着图像下载而逐渐清晰，而不是图像以全分辨率从上到下加载，或者只有在完全下载后才显示。对于这些图片，一个好的压缩工具是 MozJPEG，可用于在线图像优化工具 [Squoosh](https://squoosh.app/) 中，75% 的质量设置就能够得到优秀的结果。
 
 其他格式在压缩方面改进了 JPEG，但并非所有浏览器都支持：
 
 - [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像)——既适用于图像又适用于动图的绝佳选择。WebP 提供比 PNG 或 JPEG 更好的压缩，支持更高的色深、动画帧和透明度等（但不支持渐进式显示）。除 macOS 桌面版 Safari 14 外，所有主流浏览器都支持它。
 
-  > **备注：** 尽管[宣布](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) 在 Safari 14 中支持 WebP，但在版本 14.0 中，.webp 图像在 macOS 桌面上不显示原生图像，而 Safari 在 iOS 14 上可以正确显示 .webp 图像。
+  > **备注：** 尽管 Safari 14 已[宣布支持](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) WebP，但截至 14.0 版本为止，.webp 图像无法在 macOS 桌面上原生显示，而 iOS 14 上的 Safari 却能正常显示 .webp 图像。
 
 - [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比 WebP 更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。另请参阅[将以前的图像格式转换为 AVIF 的在线工具](https://avif.io/)。
 - **JPEG2000**——曾经是 JPEG 的继任者，但仅受 Safari 支持。也不支持渐进式显示。
@@ -98,7 +96,7 @@ PNG 可以以三种不同的输出组合进行保存：
 
 #### 提供最佳尺寸
 
-在图像传输中，采用“一刀切”的方法不会得到最佳结果，这意味着对于较小的屏幕，你希望提供更低分辨率的图像，而对于较大的屏幕则相反。此外，你还希望为那些具有高 DPI 屏幕（例如“Retina”）的设备提供更高分辨率的图像。因此，除了创建许多中间图像变体之外，你还需要一种方法将正确的文件提供给正确的浏览器。这就是你需要通过使用 [media](/zh-CN/docs/Web/HTML/Element/source#media) 和/或 [sizes](/zh-CN/docs/Web/HTML/Element/source#sizes)属性来升级你的 `<picture>` 和 `<source>` 元素的地方。有关如何组合所有这些属性的详细文章可以在[这里](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)找到。
+在图像传输中，采用“一刀切”的方法不会得到最佳结果，这意味着对于较小的屏幕，你希望提供更低分辨率的图像，而对于较大的屏幕则相反。此外，你还希望为那些具有高 DPI 屏幕（例如“Retina”）的设备提供更高分辨率的图像。因此，除了创建许多中间图像变体之外，你还需要一种方法将正确的文件提供给正确的浏览器。这就是你需要通过使用 [media](/zh-CN/docs/Web/HTML/Element/source#media) 和/或 [sizes](/zh-CN/docs/Web/HTML/Element/source#sizes) 属性来升级你的 `<picture>` 和 `<source>` 元素的地方。有关如何组合所有这些属性的详细文章可以在[这里](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)找到。
 
 关于高 DPI 屏幕，有两个有趣的效果需要记住：
 
@@ -123,7 +121,7 @@ PNG 可以以三种不同的输出组合进行保存：
 
 ![两个截图，第一个没有图像但预留了空间，第二个显示了加载到预留空间的图像。](ar-guide.jpg)
 
-没有 `width` 和 `height` 属性，将不会创建占位空间，导致页面在渲染后加载图片时出现明显的 {{glossary('jank', '卡顿')}} 或布局移动。页面的重新布局和重绘是性能和可用性问题。
+没有 `width` 和 `height` 属性，将不会创建占位空间，导致页面在渲染后加载图片时出现明显的{{glossary('jank', '卡顿')}}或布局移动。页面的重新布局和重绘是性能和可用性问题。
 
 在响应式设计中，当容器比图片更窄时，通常使用以下 CSS 代码来防止图片溢出容器：
 
@@ -134,7 +132,7 @@ img {
 }
 ```
 
-虽然在响应式布局中很有用，但如果不包括宽度和高度信息，就会导致卡顿。如果在解析`<img>` 元素时没有提供高度信息，则在图片加载之前，此 CSS 实际上将高度设置为 0。当页面在初始显示到屏幕后加载图片时，页面会重新布局和重绘，为新确定的高度创建空间，从而导致布局移动。
+虽然在响应式布局中很有用，但如果不包括宽度和高度信息，就会导致卡顿。如果在解析 `<img>` 元素时没有提供高度信息，则在图片加载之前，此 CSS 实际上将高度设置为 0。当页面在初始显示到屏幕后加载图片时，页面会重新布局和重绘，为新确定的高度创建空间，从而导致布局移动。
 
 浏览器在实际加载图像之前有一种调整图像大小的机制。当 `<img>`、`<video>` 或 `<input type="button">` 元素设置了 `width` 和 `height` 属性时，它的宽高比会在加载前计算出来，并使用提供的尺寸提供给浏览器。
 
