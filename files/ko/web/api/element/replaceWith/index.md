@@ -69,5 +69,6 @@ with (node) {
 {{Compat}}
 
 ## 추가 자료
+
 - {{domxref("NodeList")}}
 - {{domxref("Node.replaceChild()")}}
