@@ -30,7 +30,7 @@ toPrecision(precision)
 ### 异常
 
 - {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - :如果 `precision` 不在 `1` 和 `100` 之间（包含两端），则抛出该错误。
+  - : 如果 `precision` 不在 `1` 和 `100` 之间（包含两端），则抛出该错误。
 
 ## 示例
 
