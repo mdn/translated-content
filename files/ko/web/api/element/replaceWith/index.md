@@ -2,8 +2,6 @@
 title: "Element: replaceWith() method"
 short-title: replaceWith()
 slug: Web/API/Element/replaceWith
-page-type: web-api-instance-method
-browser-compat: api.Element.replaceWith
 ---
 
 {{APIRef("DOM")}}
