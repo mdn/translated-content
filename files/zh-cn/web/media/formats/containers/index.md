@@ -1038,22 +1038,23 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 
 ## 规范
 
+| 规范                                                                                                                              | 注释                                                                                      |
 | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441) | 定义了 3GP 容器格式 |
-| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html)（MPEG-4 Part 3：音频） | 定义了包含 ADTS 的 MP4 音频 |
-| [FLAC 格式](https://xiph.org/flac/format.html) | FLAC 格式规范 |
-| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html)（MPEG-1 Part 1：系统） | 定义了 MPEG-1 容器格式 |
-| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html)（MPEG-2 Part 1：系统） | 定义了 MPEG-2 容器格式 |
-| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html)（MPEG-4 Part 14：MP4 文件格式） | 定义了 MPEG-4（MP4）版本 2 容器格式 |
-| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html)（MPEG-4 Part 1：系统） | 定义了原始 MPEG-4（MP4）容器格式 |
-| {{RFC(3533)}} | 定义了 OGG 容器格式 |
-| {{RFC(5334)}} | 定义了 OGG 媒体类型和文件扩展名 |
-| [QuickTime 文件格式规范](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html) | 定义了 QuickTime movie（MOV）格式 |
-| [多媒体程序接口和数据定义 1.0 版本](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 最接近官方 WAVE 规范的产品 |
-| [资源交换文件格式](https://docs.microsoft.com/zh-cn/windows/desktop/xaudio2/resource-interchange-file-format--riff-)（WAV 使用） | 定义了 RIFF 格式，WAVE 文件是 RIFF 的一种形式 |
-| [WebM 容器指南](https://www.webmproject.org/docs/container/) | 为 WebM 适配 Matroska 的指南 |
-| [Matroska 规范](https://matroska.org/technical/specs/index.html) | 作为 WebM 基础的 Matroska 容器格式规范 |
-| [WebM 字节流格式](https://w3c.github.io/media-source/webm-byte-stream-format.html) | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
+| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                 | 定义了 3GP 容器格式                                                                       |
+| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html)（MPEG-4 Part 3：音频）                                                 | 定义了包含 ADTS 的 MP4 音频                                                               |
+| [FLAC 格式](https://xiph.org/flac/format.html)                                                                                    | FLAC 格式规范                                                                             |
+| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html)（MPEG-1 Part 1：系统）                                                 | 定义了 MPEG-1 容器格式                                                                    |
+| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html)（MPEG-2 Part 1：系统）                                                 | 定义了 MPEG-2 容器格式                                                                    |
+| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html)（MPEG-4 Part 14：MP4 文件格式）                                       | 定义了 MPEG-4（MP4）版本 2 容器格式                                                       |
+| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html)（MPEG-4 Part 1：系统）                                                 | 定义了原始 MPEG-4（MP4）容器格式                                                          |
+| {{RFC(3533)}}                                                                                                                     | 定义了 OGG 容器格式                                                                       |
+| {{RFC(5334)}}                                                                                                                     | 定义了 OGG 媒体类型和文件扩展名                                                           |
+| [QuickTime 文件格式规范](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)   | 定义了 QuickTime movie（MOV）格式                                                         |
+| [多媒体程序接口和数据定义 1.0 版本](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 最接近官方 WAVE 规范的产品                                                                |
+| [资源交换文件格式](https://docs.microsoft.com/zh-cn/windows/desktop/xaudio2/resource-interchange-file-format--riff-)（WAV 使用）  | 定义了 RIFF 格式，WAVE 文件是 RIFF 的一种形式                                             |
+| [WebM 容器指南](https://www.webmproject.org/docs/container/)                                                                      | 为 WebM 适配 Matroska 的指南                                                              |
+| [Matroska 规范](https://matroska.org/technical/specs/index.html)                                                                  | 作为 WebM 基础的 Matroska 容器格式规范                                                    |
+| [WebM 字节流格式](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
 
 ## 浏览器兼容性
 
