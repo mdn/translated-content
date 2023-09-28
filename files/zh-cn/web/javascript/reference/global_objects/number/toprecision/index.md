@@ -51,7 +51,7 @@ console.log(numObj.toPrecision(5)); // 输出 '0.00012300'
 console.log(numObj.toPrecision(2)); // 输出 '0.00012'
 console.log(numObj.toPrecision(1)); // 输出 '0.0001'
 
-// 请注意，在某些情况下可能会返回科学计数法字符串
+// 请注意，在某些情况下可能会返回指数表示法字符串
 console.log((1234.5).toPrecision(2)); // 输出 '1.2e+3'
 ```
 
