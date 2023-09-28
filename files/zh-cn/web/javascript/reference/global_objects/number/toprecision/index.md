@@ -23,7 +23,7 @@ toPrecision(precision)
 
 ### 返回值
 
-一个以定点表示法或指数记法表示 {{jsxref("Number")}} 对象的字符串，该字符串四舍五入到 `precision` 个有效数字。有关四舍五入的讨论，请参阅 {{jsxref("Number.prototype.toFixed()")}} 方法的描述，其也适用于 `toPrecision()`。
+一个以定点表示法或指数表示法表示 {{jsxref("Number")}} 对象的字符串，该字符串四舍五入到 `precision` 个有效数字。有关四舍五入的讨论，请参阅 {{jsxref("Number.prototype.toFixed()")}} 方法的描述，其也适用于 `toPrecision()`。
 
 如果 `precision` 参数被省略，则与 {{jsxref("Number.prototype.toString()")}} 行为相同。如果 `precision` 参数不是整数，则将其四舍五入到最近的整数。
 
