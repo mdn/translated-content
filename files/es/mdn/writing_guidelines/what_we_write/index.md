@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-MDN Web Docs contiene documentation _neutral al navegador_ que permite a los desarrolladores web escribir codigo _agnostico al navegador_. En este artículo, encontrarás información sobre si un tema o tipo de contenido determinado debe incluirse en MDN Web Docs.
+MDN Web Docs contiene documentación _neutral al navegador_ que permite a los desarrolladores web escribir código _agnostico al navegador_. En este artículo, encontrarás información sobre si un tema o tipo de contenido determinado debe incluirse en MDN Web Docs.
 
 ## Políticas editoriales
 
