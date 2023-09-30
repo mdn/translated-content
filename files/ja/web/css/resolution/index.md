@@ -20,7 +20,7 @@ slug: Web/CSS/resolution
 - `dpcm`
   - : [センチメートルあたりのドット数](https://en.wikipedia.org/wiki/Dots_per_inch) を表します。1 インチは 2.54 cm なので、`1dpcm ≈ 2.54dpi` です。
 - `dppx`
-  - : ピクセル (`[px](/ja/docs/Web/CSS/length#px)`) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
+  - : ピクセル ([`px`](/ja/docs/Web/CSS/length#px)) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
 - `x`
   - : `dppx` の別名です。
 
