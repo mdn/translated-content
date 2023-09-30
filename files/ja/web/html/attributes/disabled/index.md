@@ -98,9 +98,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 <fieldset disabled>
   <legend>無効なフィールドセット</legend>
   <p>
-    <label>
-      名前: <input type="name" name="radio" value="通常" /> 通常
-    </label>
+    <label> 名前: <input type="name" name="radio" value="通常" /> 通常 </label>
   </p>
   <p>
     <label>数値: <input type="number" /></label>
