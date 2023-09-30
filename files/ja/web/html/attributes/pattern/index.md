@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: pattern'
+title: "HTML 属性: pattern"
 slug: Web/HTML/Attributes/pattern
 l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
