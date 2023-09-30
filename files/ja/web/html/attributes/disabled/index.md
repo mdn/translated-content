@@ -53,9 +53,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 <fieldset>
   <legend>チェックボックス</legend>
   <p>
-    <label>
-      <input type="checkbox" name="chbox" value="regular" /> 通常
-    </label>
+    <label> <input type="checkbox" name="chbox" value="regular" /> 通常 </label>
   </p>
   <p>
     <label>
