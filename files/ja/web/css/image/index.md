@@ -37,11 +37,11 @@ CSS はオブジェクトの*実際の*寸法を、 (1) _内在的な寸法_、 
 | {{CSSxRef("list-style-image")}}                                                     | `1em` の文字の寸法                                                                                             |
 | {{CSSxRef("border-image-source")}}                                                  | 要素の境界画像領域の寸法                                                                                       |
 | {{CSSxRef("cursor")}}                                                               | クライアントのシステムにおける通常のカーソルの寸法に合わせたブラウザー定義の寸法                               |
-| {{CSSxRef("mask-image")}}                                                                    | ?                                                                                                             |
-| {{CSSxRef("shape-outside")}}                                                                 | ?                                                                                                             |
-| {{CSSxRef("mask-border-source")}}                                                            | ?                                                                                                             |
-| @counter-style の {{CSSxRef("symbols", "symbols()")}}                                          | リスクあり。対応している場合、クライアントのシステムにおける通常のカーソルの寸法に合わせたブラウザー定義の寸法 |
-| 擬似要素 ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) の {{CSSxRef("content")}} | 300px × 150px の矩形                                                                                          |
+| {{CSSxRef("mask-image")}}                                                           | ?                                                                                                              |
+| {{CSSxRef("shape-outside")}}                                                        | ?                                                                                                              |
+| {{CSSxRef("mask-border-source")}}                                                   | ?                                                                                                              |
+| @counter-style の {{CSSxRef("symbols", "symbols()")}}                               | リスクあり。対応している場合、クライアントのシステムにおける通常のカーソルの寸法に合わせたブラウザー定義の寸法 |
+| 擬似要素 ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) の {{CSSxRef("content")}} | 300px × 150px の矩形                                                                                           |
 
 正しいオブジェクトの寸法は、次のアルゴリズムを使って計算されます。
 
