@@ -107,7 +107,9 @@ input:invalid {
       multiple />
   </p>
   <p>
-    <label for="text">アップロードするテキストファイルを選択してください: </label>
+    <label for="text"
+      >アップロードするテキストファイルを選択してください:
+    </label>
     <input type="file" id="text" name="text" accept=".txt" />
   </p>
   <p>
