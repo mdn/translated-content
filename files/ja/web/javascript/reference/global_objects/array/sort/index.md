@@ -2,47 +2,38 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`sort()`** メソッドは、配列の要素を[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)でソートし、ソートされた同じ配列の参照を返します。既定のソート順は昇順で、要素を文字列に変換してから、 UTF-16 コード単位の値の並びとして比較します。
+**`sort()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)でソートし、ソートされた同じ配列の参照を返します。既定のソート順は昇順で、要素を文字列に変換してから、 UTF-16 コード単位の値の並びとして比較します。
 
 ソートの時間的・空間的予測値は実装に依存するため、保証はできません。
+
+元の配列を変更せずに配列内の要素をソートするには、 {{jsxref("Array/toSorted", "toSorted()")}} を使用してください。
 
 {{EmbedInteractiveExample("pages/js/array-sort.html")}}
 
 ## 構文
 
-```js
-// 関数なし
-sort();
-
-// アロー関数
-sort((a, b) => {
-  /* … */
-});
-
-// 比較関数
-sort(compareFn);
-
-// インライン比較関数
-sort(function compareFn(a, b) {
-  /* … */
-});
+```js-nolint
+sort()
+sort(compareFn)
 ```
 
 ### 引数
 
 - `compareFn` {{optional_inline}}
 
-  - : ソート順を定義する関数を指定します。省略された場合、配列の各要素は文字列に変換され、各文字の Unicode コードポイント順に従ってソートされます。
+  - : ソート順を定義する関数です。返値は、 2 つの要素の相対順序を示す符号を持つ数値である必要があります。 `a` が `b` より小さい場合は負の値、`a` が `b` より大きい場合は正の値、等しい場合は 0 とします。 `NaN` は `0` として扱われます。この関数は次の引数で呼び出されます。
 
     - `a`
-      - : 比較する第一要素。
+      - : 比較する第一要素。 `undefined` になることはありません。
     - `b`
-      - : 比較する第二要素。
+      - : 比較する第二要素。 `undefined` になることはありません。
+
+    省略した場合、配列の要素は文字列に変換され、各文字の Unicode コードポイント値に従って並べ替えられます。
 
 ### 返値
 
@@ -52,27 +43,28 @@ sort(function compareFn(a, b) {
 
 `compareFn` が与えられなかった場合、`undefined` 以外のすべての配列要素は文字列に変換され、文字列が UTF-16 コード単位順でソートされます。例えば、"banana" は "cherry" の前に来ます。数値のソートでは、9 が 80 の前に来ますが、数値は文字列に変換されるため、Unicode 順で "80" が "9" の前に来ます。`undefined` の要素はすべて、配列の末尾に並べられます。
 
-> **メモ:** UTF-16 では、`\uFFFF` を超える Unicode 文字は 2 つのサロゲートコード単位にエンコードされ、`\uD800`-`\uDFFF` の範囲になります。それぞれのコード単位の値は比較では別々に扱われます。したがって、`\uD855\uDE51` というサロゲートペアで形成される文字は、`\uFF3A` の文字よりも前に並べられます。
+`sort()` メソッドは空のスロットを保持します。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、空のスロットは配列の末尾に移動され、常にすべての `undefined` の後に置かれます。
+
+> **メモ:** UTF-16 では、`\uFFFF` を超える Unicode 文字は 2 つのサロゲートコード単位にエンコードされ、`\uD800` - `\uDFFF` の範囲になります。それぞれのコード単位の値は比較では別々に扱われます。したがって、`\uD855\uDE51` というサロゲートペアで形成される文字は、`\uFF3A` の文字よりも前に並べられます。
 
 `compareFn` が与えられた場合、`undefined` 以外のすべての配列要素は比較関数の返値に基づきソートされます（`undefined` の要素はすべて、`compareFn` を呼び出すことなく配列の末尾へ並べられます）。
 
-| `compareFn(a, b)` の返値 | ソート順                        |
-| ------------------------ | ------------------------------- |
-| > 0                      | `a` を `b` の後に並べる         |
-| < 0                      | `a` を `b` の前に並べる         |
-| === 0                    | `a` と `b` の元の順序を維持する |
+| `compareFn(a, b)` の返値 | ソート順                                   |
+| ------------------------ | ------------------------------------------ |
+| > 0                      | `a` を `b` の後に並べる（例えば `[b, a]`） |
+| < 0                      | `a` を `b` の前に並べる（例えば `[a, b]`） |
+| === 0                    | `a` と `b` の元の順序を維持する            |
 
 よって、比較関数は以下のような形式をもちます。
 
-```js
+```js-nolint
 function compareFn(a, b) {
   if (ある順序の基準において a は b より小さい) {
     return -1;
-  }
-  if (その順序の基準において a は b より大きい) {
+  } else if (その順序の基準において a は b より大きい) {
     return 1;
   }
-  // a は b と等しくなければならない
+  // a は b と等しい
   return 0;
 }
 ```
@@ -82,10 +74,10 @@ function compareFn(a, b) {
 - _無害_: 比較関数は比較されるオブジェクトや外部の状態を変更しません。（これは重要です。比較関数がいつ、どのように呼び出されるかは保証されていないので、特定の呼び出しが外部に見える影響を及ぼしてはいけません）。
 - _安定的_: 比較関数は、同じ組の入力に対して常に同じ結果を返します。
 - _反射的_: `compareFn(a, a) === 0` となります。
-- _対称的_: `compareFn(a, b)` と `compareFn(b, a)` はともに `0` であるか、逆の符号でなければなりません。
+- _反対称的_: `compareFn(a, b)` と `compareFn(b, a)` はともに `0` であるか、逆の符号でなければなりません。
 - _推移的_: `compareFn(a, b)` と `compareFn(b, c)` がともに正、0、負のいずれかであれば、 `compareFn(a, c)` は前の 2 つと同じ符号になります。
 
-上記の制約に適合する比較関数は、常に `1`, `0`, `-1` のすべてを返すか、あるいは一貫して `0` を返すことができます。例えば、比較関数が `1` と `0` のみを返す場合、あるいは `0` と `-1` のみを返す場合は、_対称性_ が崩れるので、確実にソートすることはできません。常に `0` を返す比較関数では、配列は全く変更されませんが、それでも信頼できます。
+上記の制約に適合する比較関数は、常に `1`, `0`, `-1` のすべてを返すか、あるいは一貫して `0` を返すことができます。例えば、比較関数が `1` と `0` のみを返す場合、あるいは `0` と `-1` のみを返す場合は、_反対称性_ が崩れるので、確実にソートすることはできません。常に `0` を返す比較関数では、配列は全く変更されませんが、それでも信頼できます。
 
 既定の字句比較関数は、上記の制約をすべて満たしています。
 
@@ -97,54 +89,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-`sort` メソッドは[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)や[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)と共に使用すると便利です。
-
-```js
-const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function (a, b) {
-  return a - b;
-});
-console.log(numbers);
-// [1, 2, 3, 4, 5]
-
-// または
-
-const numbers2 = [4, 2, 5, 1, 3];
-numbers2.sort((a, b) => a - b);
-console.log(numbers2);
-// [1, 2, 3, 4, 5]
-```
-
-オブジェクトはプロパティの値の 1 つを指定して並べ替えることができます。
-
-```js
-const items = [
-  { name: "Edward", value: 21 },
-  { name: "Sharpe", value: 37 },
-  { name: "And", value: 45 },
-  { name: "The", value: -12 },
-  { name: "Magnetic", value: 13 },
-  { name: "Zeros", value: 37 },
-];
-
-// value 順にソート
-items.sort((a, b) => a.value - b.value);
-
-// name 順にソート
-items.sort((a, b) => {
-  const nameA = a.name.toUpperCase(); // 大文字と小文字を無視する
-  const nameB = b.name.toUpperCase(); // 大文字と小文字を無視する
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-
-  // 名前が等しい
-  return 0;
-});
-```
+`sort()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変なので、このメソッドを適用するのには適していません。
 
 ## 例
 
@@ -178,9 +123,42 @@ mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
 mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 ```
 
+### オブジェクトの配列のソート
+
+オブジェクトの配列は、プロパティの値を比較することで並べ替えることができます。
+
+```js
+const items = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
+
+// value によるソート
+items.sort((a, b) => a.value - b.value);
+
+// name によるソート
+items.sort((a, b) => {
+  const nameA = a.name.toUpperCase(); // 大文字小文字を無視
+  const nameB = b.name.toUpperCase(); // 大文字小文字を無視
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+});
+```
+
 ### 非 ASCII 文字のソート
 
-非 ASCII 文字、つまりアクセント記号付き文字（e, é, è, a, ä など）を含む文字列をソートする場合、英語以外の文字列は {{jsxref("String.prototype.localeCompare()")}} を使用してください。この関数は、それらの文字を比較して正しい順序で表示することができます。
+非 {{Glossary("ASCII")}} 文字、つまりアクセント記号付き文字（e, é, è, a, ä など）を含む文字列をソートする場合、英語以外の文字列は {{jsxref("String.prototype.localeCompare()")}} を使用してください。この関数は、それらの文字を比較して正しい順序で表示することができます。（訳注: 日本語をソートする場合も含みます。）
 
 ```js
 const items = ["réservé", "premier", "communiqué", "café", "adieu", "éclair"];
@@ -230,7 +208,7 @@ sorted[0] = 10;
 console.log(numbers[0]); // 10
 ```
 
-元の配列を変更せずに `sort()` を行いたいが、他の配列のメソッド（[`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) など）のように[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返したい場合、 `sort()` を呼び出す前に[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)または [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from) を使用してシャローコピーを行うことができます。
+元の配列を変更せずに `sort()` を行いたいが、他の配列のメソッド（[`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) など）のように[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返したい場合は、 {{jsxref("Array/toSorted", "toSorted()")}} メソッドを使用してください。他にも、 `sort()` を呼び出す前に[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)または [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from) を使用してシャローコピーを行うことができます。
 
 ```js
 const numbers = [3, 1, 4, 1, 5];
@@ -242,7 +220,7 @@ console.log(numbers[0]); // 3
 
 ### ソートの安定性
 
-バージョン 10 （または ECMAScript 2019）以降、[仕様書](https://tc39.es/ecma262/#sec-array.prototype.sort)では `Array.prototype.sort` が安定していることが決められています。
+バージョン 10 （または ECMAScript 2019）以降、仕様書では `Array.prototype.sort` が安定していることが決められています。
 
 例えば、成績と横に並んだ生徒のリストがあったとします。生徒のリストはすでにアルファベット順の名前でソートされていることに注意してください。
 
@@ -287,7 +265,7 @@ students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 
 ### 正しくない形の比較関数でのソート
 
-比較関数が[解説](#解説)で説明した無害性、安定性、反射性、対称性、推移性のルールをすべて満たしていない場合、プログラムの動作はうまく定義されません。
+比較関数が[解説](#解説)で説明した無害性、安定性、反射性、反対称性、推移性のルールをすべて満たしていない場合、プログラムの動作はうまく定義されません。
 
 例えば、このコードを考えてください。
 
@@ -297,7 +275,7 @@ const compareFn = (a, b) => (a > b ? 1 : 0);
 arr.sort(compareFn);
 ```
 
-ここでの `compareFn` 関数は、対称性を満たしていないため、正しい形式ではありません。 `a > b` ならば `1` を返しますが、 `a` と `b` を入れ替えると、負の値ではなく `0` を返すようになります。そのため、生成される配列はエンジンによって異なります。例えば、V8（Chrome、Node.jsなどで使用）やJavaScriptCore（Safariで使用）は配列を全くソートせず、 `[3, 1, 4, 1, 5, 9]` を返しますが、SpiderMonkey（Firefoxで使用）は `[1, 1, 3, 4, 5, 9]` のように昇順に並べた配列を返すことになります。
+ここでの `compareFn` 関数は、反対称性を満たしていないため、正しい形式ではありません。 `a > b` ならば `1` を返しますが、 `a` と `b` を入れ替えると、負の値ではなく `0` を返すようになります。そのため、生成される配列はエンジンによって異なります。例えば、V8（Chrome、Node.js などで使用）や JavaScriptCore（Safari で使用）は配列を全くソートせず、 `[3, 1, 4, 1, 5, 9]` を返しますが、SpiderMonkey（Firefox で使用）は `[1, 1, 3, 4, 5, 9]` のように昇順に並べた配列を返すことになります。
 
 しかし、`compareFn` 関数を少し変更して、`-1` や `0` を返すようにすると、次のようになります。
 
@@ -311,6 +289,30 @@ arr.sort(compareFn);
 
 この実装上の不整合があるため、常に 5 つの制約に従うことで、比較器を正しい形にすることをお勧めします。
 
+### 疎配列における sort() の使用
+
+空のスロットは配列の末尾に移されます。
+
+```js
+console.log(["a", "c", , "b"].sort()); // ['a', 'b', 'c', empty]
+console.log([, undefined, "a", "b"].sort()); // ["a", "b", undefined, empty]
+```
+
+### 配列以外のオブジェクトに対する sort() の呼び出し
+
+`sort()` メソッドは `this` の `length` プロパティを読み取ります。そして、`0` から `length - 1` までの範囲にある既存の整数キーのプロパティをすべて集合し、ソートして書き戻します。範囲内に存在しないプロパティがある場合、対応する末尾のプロパティは[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)され、あたかも存在しないプロパティが末尾にソートされたかのようになります。
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.sort.call(arrayLike));
+// { '0': 4, '1': 5, length: 3, unrelated: 'foo' }
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -322,8 +324,12 @@ arr.sort(compareFn);
 ## 関連情報
 
 - [`Array.prototype.sort` の安定性などを含んだ現代の実装 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
+- {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
-- [V8 sort stability](https://v8.dev/features/stable-sort)
-- [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)
+- {{jsxref("TypedArray.prototype.sort()")}}
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (2018)
+- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (2019)
+- [`Array.prototype.sort` stability](https://mathiasbynens.be/demo/sort-stability) by Mathias Bynens

@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/lineCap
 
 La propriété **CanvasRenderingContext2D.lineCap** de l'API Canvas 2D détermine la façon dont les extrémités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour cette propriété, qui sont : `butt`, `round` et `square`. Par défaut, cette propriété est définie comme `butt`.
 
-Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
+Voir aussi le chapitre [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial).
 
 ## Syntaxe
 

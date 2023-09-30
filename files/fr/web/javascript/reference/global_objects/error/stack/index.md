@@ -112,7 +112,6 @@ Ne fait partie d'aucune spécification. Non-standard.
 
 ## Voir aussi
 
-- [Components.stack](/fr-FR/docs/Components.stack)
 - Projets externes : [TraceKit](https://github.com/csnover/TraceKit/) et [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
 - MSDN : docs [error.stack](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)
 - [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)

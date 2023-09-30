@@ -48,9 +48,9 @@ WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来�
 
 ### WebAssembly 关键概念
 
-为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念都是一一映射到了[WebAssembly 的 JavaScript API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)中。
+为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念都是一一映射到了 [WebAssembly 的 JavaScript API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)中。
 
-- **模块**：表示一个已经被浏览器编译为可执行机器码的 WebAssembly 二进制代码。一个模块是无状态的，并且像一个[二进制大对象](/zh-CN/docs/Web/API/Blob)（Blob）一样能够[被缓存到 IndexedDB](/zh-CN/docs/WebAssembly/Caching_modules)中或者在 windows 和 workers 之间进行共享（通过[postMessage()](/zh-CN/docs/Web/API/MessagePort/postMessage)函数）。一个模块能够像一个 ES2015 的模块一样声明导入和导出。
+- **模块**：表示一个已经被浏览器编译为可执行机器码的 WebAssembly 二进制代码。一个模块是无状态的，并且像一个[二进制大对象](/zh-CN/docs/Web/API/Blob)（Blob）一样能够[被缓存到 IndexedDB](/zh-CN/docs/WebAssembly/Caching_modules) 中或者在 window 和 worker 之间进行共享（通过 [postMessage()](/zh-CN/docs/Web/API/MessagePort/postMessage) 函数）。一个模块能够像一个 ES2015 的模块一样声明导入和导出。
 - **内存**：ArrayBuffer，大小可变。本质上是连续的字节数组，WebAssembly 的低级内存存取指令可以对它进行读写操作。
 - **表格**：带类型数组，大小可变。表格中的项存储了**不能作为原始字节存储在内存里的对象**的引用（为了安全和可移植性的原因）。
 - **实例**：一个模块及其在运行时使用的所有状态，包括内存、表格和一系列导入值。一个实例就像一个已经被加载到一个拥有一组特定导入的特定的全局变量的 ES2015 模块。
@@ -75,13 +75,13 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 - 使用 Emscripten 移植一个 C/C++应用程序。
 - 直接在汇编层，编写或生成 WebAssembly 代码。
 - 编写 Rust 程序，将 WebAssembly 作为它的输出。
-- 使用[AssemblyScript](https://www.assemblyscript.org/)，它类似于 TypeScript 并且可编译成二进制 WebAssmebly 代码
+- 使用 [AssemblyScript](https://www.assemblyscript.org/)，它类似于 TypeScript 并且可编译成二进制 WebAssmebly 代码
 
 让我们讨论这几项：
 
 ### 从 C/C++移植
 
-创建 WASM 代码的众多选项中有两个是在线 WASM 汇编程序或[Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)。有许多在线 WASM 汇编程序可供选择，例如：
+创建 WASM 代码的众多选项中有两个是在线 WASM 汇编程序或 [Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)。有许多在线 WASM 汇编程序可供选择，例如：
 
 - [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddle/)
@@ -105,7 +105,7 @@ Emscripten 工具能够将一段 C/C++代码，编译出：
 
 > **备注：** 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
-JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++库，比如， [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、 [OpenGL](https://en.wikipedia.org/wiki/OpenGL)、 [OpenAL](https://en.wikipedia.org/wiki/OpenAL)以及部分[POSIX](https://en.wikipedia.org/wiki/POSIX)。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 胶水代码来连接 WebAssembly 和低层的 Web API。
+JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++库，比如， [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、 [OpenGL](https://en.wikipedia.org/wiki/OpenGL)、 [OpenAL](https://en.wikipedia.org/wiki/OpenAL)以及部分 [POSIX](https://en.wikipedia.org/wiki/POSIX)。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 胶水代码来连接 WebAssembly 和低层的 Web API。
 
 因此，部分胶水代码实现了 C/C++代码使用的库的功能。而且，胶水代码还包括调用前面提到的 WebAssembly 的 JavaScript API 来获取、加载和运行.wasm 文件的逻辑。
 
@@ -113,7 +113,7 @@ JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripte
 
 修改 Emscripten 的输出文件并将其转换为需要的 web app 是很容易的。
 
-你可以在[emscripten.org](http://emscripten.org)找到关于 Emscripten 的完整文档以及在[Compiling from C/C++ to WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)找到一个实现工具链并交叉编译你自己的 C/C++应用程序为 wasm 的指南。
+你可以在 [emscripten.org](http://emscripten.org)找到关于 Emscripten 的完整文档以及在 [Compiling from C/C++ to WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)找到一个实现工具链并交叉编译你自己的 C/C++应用程序为 wasm 的指南。
 
 ### 直接编写 WebAssembly 代码
 

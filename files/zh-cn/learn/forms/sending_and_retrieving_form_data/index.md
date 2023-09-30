@@ -10,7 +10,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           基本计算机素养，对<a

@@ -114,7 +114,7 @@ function changeGridAutoFlow() {
 }
 ```
 
-{{EmbedLiveSample("Example", "200px", "230px")}}
+{{EmbedLiveSample("Exemplo", "200px", "230px")}}
 
 ## Especificações
 

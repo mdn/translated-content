@@ -67,7 +67,7 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ### 第一种重载例子
 
-使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的[Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
+使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的 [Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
 
 ```js
 var importObject = {
@@ -89,7 +89,7 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports);
 ```
 
-> **备注：** 查看 GitHub([在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)) 的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的[`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1)库函数
+> **备注：** 查看 GitHub（[在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)）的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) 库函数
 
 ### 第二种重载例子
 

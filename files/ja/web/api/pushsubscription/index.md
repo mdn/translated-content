@@ -1,49 +1,48 @@
 ---
 title: PushSubscription
 slug: Web/API/PushSubscription
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
-[Push API](/ja/docs/Web/API/Push_API) の `PushSubscription` インターフェイスは、サブスクリプションの URL エンドポイントを提供するとともに、プッシュサービスの登録を解除できます。
+`PushSubscription` は[プッシュ API](/ja/docs/Web/API/Push_API) のインターフェイスで、サブスクリプションの URL エンドポイントを提供し、ここからプッシュサービスの登録を脱退できます。
 
 このインターフェイスのインスタンスはシリアライズできます。
 
 ## インスタンスプロパティ
 
-- {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
-  - : プッシュサービスに関連したエンドポイントを含む {{domxref("USVString")}}。
-- {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
-  - : プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}}。存在しない場合は `null`。
-- {{domxref("PushSubscription.options")}} {{readonlyinline}}
+- {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}}
+  - : 文字列で、このプッシュサブスクリプションに関連づけられたエンドポイントが入ります。
+- {{domxref("PushSubscription.expirationTime")}} {{ReadOnlyInline}}
+  - : {{domxref("DOMHighResTimeStamp")}} で、存在すれば、プッシュサブスクリプションに関連付いたサブスクリプションの期限です。存在しない場合は `null` です。
+- {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}
   - : サブスクリプションを作成するために用いられるオプションを含むオブジェクト。
-
-<!---->
-
-- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
-  - : プッシュサービスに関連したサブスクリプション ID を含む {{domxref("DOMString")}}。
+- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}}
+  - : 文字列で、このプッシュサブスクリプションに関連したサブスクリプション ID が入ります。
 
 ## インスタンスメソッド
 
 - {{domxref("PushSubscription.getKey()")}}
-  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントのパブリックキーを含む {{jsxref("ArrayBuffer")}} を返します。
+  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントの公開鍵を含む {{jsxref("ArrayBuffer")}} を返します。
 - {{domxref("PushSubscription.toJSON()")}}
-  - : 標準シリアライザー — サブスクリプションプロパティの JSON 記法を返します。
+  - : 標準シリアライザーです。サブスクリプションプロパティの JSON 記法を返します。
 - {{domxref("PushSubscription.unsubscribe()")}}
-  - : プッシュサービスの登録を解除する非同期プロセスを開始します。現在のサブスクリプションが成功裏に登録解除できた場合、{{domxref("Boolean")}} で解決される {{jsxref("Promise")}} を返します。
+  - : プッシュサービスのサブスクリプションを脱退する非同期プロセスを開始します。現在のサブスクリプションが成功裏に脱退できた場合、論理値で解決される {{jsxref("Promise")}} を返します。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function (reg) {
-  reg.pushManager.getSubscription().then(function (subscription) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
     subscription
       .unsubscribe()
-      .then(function (successful) {
-        // 成功裏に登録解除。
+      .then((successful) => {
+        // 成功裏に脱退。
       })
-      .catch(function (e) {
-        // 登録解除失敗。
+      .catch((e) => {
+        // 脱退に失敗。
       });
   });
 });
@@ -55,9 +54,9 @@ navigator.serviceWorker.ready.then(function (reg) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushSubscription")}}
+{{Compat}}
 
 ## 関連項目
 
-- [Push API](/ja/docs/Web/API/Push_API)
-- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)
+- [プッシュ API](/ja/docs/Web/API/Push_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)

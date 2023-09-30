@@ -19,7 +19,7 @@ O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transfe
 
 Todos, realmente.
 
-Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/en-US/docs/Web/HTTP/Server-Side_Access_Control), pode ser uma leitura complementar.
+Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/pt-BR/docs/Web/HTTP/CORS), pode ser uma leitura complementar.
 
 ## Quais solicitações usam o CORS?
 

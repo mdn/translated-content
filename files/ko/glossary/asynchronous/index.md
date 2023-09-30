@@ -2,8 +2,10 @@
 title: 비동기(Asynchronous)
 slug: Glossary/Asynchronous
 l10n:
-  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 **비동기**라는 용어는 둘 이상의 객체 또는 이벤트가 동시에 **존재하지 않거나 발생하지 않는 경우**(또는 이전 객체 또는 이벤트가 완료될 때까지 기다리지 않고 발생하는 여러 관련 작업)를 말합니다. 컴퓨팅에서 "비동기"라는 단어는 두 가지 주요 맥락에서 사용됩니다.
 

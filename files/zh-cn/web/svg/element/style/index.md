@@ -51,7 +51,7 @@ slug: Web/SVG/Element/style
 
 ## DOM 接口
 
-该元素实现了[`SVGStyleElement`](/zh-CN/DOM/SVGStyleElement)接口。
+该元素实现了 [`SVGStyleElement`](/zh-CN/DOM/SVGStyleElement) 接口。
 
 ## 浏览器兼容性
 

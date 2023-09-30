@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，了解 HTML 与 CSS 的基本概念，熟悉 JavaScript
         基本知识（请参阅

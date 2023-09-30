@@ -7,7 +7,7 @@ slug: Learn/Server-side/Django
 
 Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服务器端网站框架。本模块将为你展示为什么 Django 能够成为一个广受欢迎的服务器端框架，如何设置开发环境，以及如何开始创建你自己的网络应用。
 
-## 先决条件
+## 前提
 
 开始学习本模块并不需要任何 Django 知识。但你要理解什么是服务器端网络编程、什么是网络框架，最好能够阅读我们的[服务端网站编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)模块。
 

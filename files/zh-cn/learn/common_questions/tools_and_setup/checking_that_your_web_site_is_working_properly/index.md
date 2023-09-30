@@ -3,14 +3,14 @@ title: 如何确保你的网站正常运行？
 slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         你需要知道怎么<a href="/zh-CN/docs/Learn/Upload_files_to_a_web_server"
           >上传文件到 web 服务器</a

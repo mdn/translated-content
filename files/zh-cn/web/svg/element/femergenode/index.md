@@ -25,7 +25,7 @@ slug: Web/SVG/Element/feMergeNode
 
 ## DOM 接口
 
-该元素实现了[`SVGFEMergeNodeElement`](/zh-CN/DOM/SVGFEMergeNodeElement)接口。
+该元素实现了 [`SVGFEMergeNodeElement`](/zh-CN/DOM/SVGFEMergeNodeElement) 接口。
 
 ## 参见
 

@@ -17,7 +17,7 @@ slug: Learn/JavaScript/First_steps/Useful_string_methods
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>明白字符串这个对象，学会使用字符串的基本方法去处理字符串</td>
     </tr>
   </tbody>

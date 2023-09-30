@@ -10,7 +10,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 当规定 SVG 时，在浏览器支持 web 字体并不流行。因为访问正确的字体文件对于正确呈现字体是有确定性的，SVG 中添加了一个字体描述技术，以提供这个能力。它并不是为了和别的格式比如说 PostScript 或 OTF 兼容，而是为了将字形信息嵌入 SVG 呈现的一个简单的方法。
 
 > **备注：** **SVG 字体当前只在 Safari 和 Android 浏览器中受支持。**
-> Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现[WOFF](/zh-CN/docs/Web/Guide/WOFF)。别的工具，如 Batik 和部分 Inkscape 支持 SVG 字体嵌入。
+> Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现 [WOFF](/zh-CN/docs/Web/Guide/WOFF)。别的工具，如 Batik 和部分 Inkscape 支持 SVG 字体嵌入。
 
 定义一个 SVG 字体的基础是 {{ SVGElement("font") }} 元素。
 
@@ -53,7 +53,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 紧跟着{{ SVGElement("font-face-src") }}元素的是一个{{ SVGElement("missing-glyph") }}元素。它定义了如果一个特定的字形在字体中找不到，而且也没有回调机制的话，该如何显示。它同时还显示了如何创建字形：在里面简单添加任一个图形化 SVG 内容。你可以在这里使用任何其他的 SVG 元素，甚至是 {{ SVGElement("filter") }}元素、{{ SVGElement("a") }}元素或者 {{ SVGElement("script") }}元素。然而，为了简化字形，你可以简单添加一个属性`d`——它精确定义了字形的形状，就像标准 SVG 路径所做的那样。
 
-真正的字形是用{{ SVGElement("glyph") }}元素定义的。它最重要的属性是`unicode`。它定义了表达这个字形的 unicode 代码点。如果你还在一个字形上指定了[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)属性，你可以更进一步专门限定它为特定的语言（由目标上的`xml:lang`属性表达）。而且，你可以使用任意的 SVG 来定义这个字形，它允许用户代理所支持的很多效果。
+真正的字形是用{{ SVGElement("glyph") }}元素定义的。它最重要的属性是`unicode`。它定义了表达这个字形的 unicode 代码点。如果你还在一个字形上指定了 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)属性，你可以更进一步专门限定它为特定的语言（由目标上的`xml:lang`属性表达）。而且，你可以使用任意的 SVG 来定义这个字形，它允许用户代理所支持的很多效果。
 
 有两个进一步的元素，可以定义在`font`元素里面：{{ SVGElement("hkern") }}元素和{{ SVGElement("vkern") }}元素。这两个元素每个引用到至少两个字符（属性 u1 和属性 u2）以及一个属性 k。属性 k 决定了那些字符之间的距离应该减少多少。下面的示例指示用户代理把“A”和“V”字符放得比标准的字符间距更靠近一些。
 

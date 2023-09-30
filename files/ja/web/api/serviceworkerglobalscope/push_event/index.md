@@ -1,8 +1,9 @@
 ---
 title: "ServiceWorkerGlobalScope: push イベント"
+short-title: push
 slug: Web/API/ServiceWorkerGlobalScope/push_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Push API")}}

@@ -24,7 +24,7 @@ Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
 
 一个 `Promise`，通过 resolve 返回一个包含两个属性的 `ResultObject` ：
 
-- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个`Module`能够再次被实例化 或 通过[postMessage()](/zh-CN/docs/Web/API/Worker/postMessage)共享。
+- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个 `Module` 能够再次被实例化 或 通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 共享。
 - `instance`: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 [Exported WebAssembly functions](/zh-CN/docs/WebAssembly/Exported_functions).
 
 ### Exceptions
