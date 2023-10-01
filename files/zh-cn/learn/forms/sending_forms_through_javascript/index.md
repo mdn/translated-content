@@ -105,7 +105,7 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("构建_xmlhttprequest", "100%", 50)}}
 
-> **备注：** 当你想要往第三方网站传输数据时，使用 {{domxref("XMLHttpRequest")}} 会受到{{glossary('same-origin policy', '同源策略')}}的影响。如果你需要执行跨域请求，你需要熟悉一下 [CORS 和 HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)。
+> **备注：** 当你想要往第三方网站传输数据时，使用 {{domxref("XMLHttpRequest")}} 会受到{{glossary('same-origin policy', '同源策略')}}的影响。如果你需要执行跨源请求，你需要熟悉一下 [CORS 和 HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)。
 
 ### 使用 XMLHttpRequest 和 FormData 对象
 
@@ -218,13 +218,13 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("使用绑定到表单元素上的_FormData", "100%", 50)}}
 
-你甚至可以通过使用表单的 {{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
+你甚至可以通过使用表单的 {{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理它们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
 
 ## 处理二进制数据
 
 如果你使用一个含有 `<input type="file">` 组件的 {{domxref("FormData","FormData")}} 表单对象，数据会被自动处理。但是要手动发送二进制数据的话，还有额外的工作要做。
 
-在现代网络上，二进制数据有很多来源：例如 {{domxref("FileReader")}} API、{{domxref("HTMLCanvasElement","Canvas")}} API、[WebRTC](/zh-CN/docs/Web/API/Navigator/getUserMedia) API，等等。不幸的是，一些过时的浏览器无法访问二进制数据，或是需要非常复杂的工作环境。这些遗留问题已经超出了本文的涵盖范围。如果你想了解更多关于 `FileReader` API 的知识，参见[如何在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)。
+在现代网络上，二进制数据有很多来源：例如 {{domxref("FileReader")}}、{{domxref("HTMLCanvasElement","Canvas")}}、[WebRTC](/zh-CN/docs/Web/API/Navigator/getUserMedia)，等等。不幸的是，一些过时的浏览器无法访问二进制数据，或是需要非常复杂的工作环境。这些遗留问题已经超出了本文的涵盖范围。如果你想了解更多关于 `FileReader` API 的知识，参见[如何在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)。
 
 发送二进制数据最简单的方法是使用 {{domxref("FormData", "FormData")}} 的 `append()` 方法，如上图所示。如果必须手工操作，就比较麻烦了。
 
@@ -375,7 +375,7 @@ window.addEventListener("load", () => {
 
 ## 总结
 
-取决于不同的浏览器和正在处理数据的类型，通过 JavaScript 发送数据可能会很简单，也可能会很困难。{{domxref("FormData","FormData")}} 对象是通用的答案，所以请毫不犹豫的在旧浏览器上通过 [polyfill](https://github.com/jimmywarting/FormData) 使用它：
+取决于不同的浏览器和正在处理数据的类型，通过 JavaScript 发送数据可能会很简单，也可能会很困难。{{domxref("FormData","FormData")}} 对象是通用的答案，所以请毫不犹豫地在旧浏览器上通过 [polyfill](https://github.com/jimmywarting/FormData) 使用它：
 
 ## 参见
 
