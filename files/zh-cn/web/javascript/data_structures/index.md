@@ -41,8 +41,8 @@ console.log(result); // 421
 
 | 类型                         | `typeof` 返回值 | 对象包装器            |
 | ---------------------------- | --------------- | --------------------- |
-| [Null](#null_类型)           | `"object"`      | 不适用                 |
-| [Undefined](#undefined_类型) | `"undefined"`   | 不适用                 |
+| [Null](#null_类型)           | `"object"`      | 不适用                |
+| [Undefined](#undefined_类型) | `"undefined"`   | 不适用                |
 | [Boolean](#boolean_类型)     | `"boolean"`     | {{jsxref("Boolean")}} |
 | [Number](#number_类型)       | `"number"`      | {{jsxref("Number")}}  |
 | [BigInt](#bigint_类型)       | `"bigint"`      | {{jsxref("BigInt")}}  |
