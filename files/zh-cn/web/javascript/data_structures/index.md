@@ -29,7 +29,7 @@ const result = foo + "1"; // JavaScript 将 foo 强制转换为字符串，因�
 console.log(result); // 421
 ```
 
-隐式强制转换是非常方便的，但当转换发生在预期之外的地方，或发生在预期的另一个方向（例如，字符串转换为数值，而不是数值转换为字符串）时，就会产生一些微妙的错误。对于 [symbol](#symbol-类型) 和 [BigInt](#bigint-类型)，JavaScript 有意禁止了某些隐式类型转换。
+隐式强制转换是非常方便的，但当转换发生在预期之外的地方，或发生在预期的另一个方向（例如，字符串转换为数值，而不是数值转换为字符串）时，就会产生一些微妙的错误。对于 [symbol](#symbol_类型) 和 [BigInt](#bigint_类型)，JavaScript 有意禁止了某些隐式类型转换。
 
 ## 原始值
 
@@ -37,7 +37,7 @@ console.log(result); // 421
 
 除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，所有原始类型都可以使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 运算符进行测试。`typeof null` 返回 `"object"`，因此必须使用 `=== null` 来测试 `null`。
 
-除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)，所有原始类型都有它们相应的对象包装器类型，这为处理原始值提供可用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装到相应的包装器对象中，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要采用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
+除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)，所有原始类型都有它们相应的对象包装类型，这为处理原始值提供可用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装到相应的包装对象中，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要采用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
 
 | 类型                         | `typeof` 返回值 | 对象包装器            |
 | ---------------------------- | --------------- | --------------------- |
@@ -204,7 +204,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组成为表示有序列表的理想选择。
 
-[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了与数组相对应的类似语义的方法。“类型化数组”是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)页。类型化数组通常与 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}} 一起使用。
+[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了与数组相对应的类似语义的方法。“类型化数组”是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)页。类型化数组通常与 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}} 一起使用。
 
 ### 带键的集合：Map、Set、WeakMap、WeakSet
 
