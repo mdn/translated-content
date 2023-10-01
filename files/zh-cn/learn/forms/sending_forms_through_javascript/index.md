@@ -109,7 +109,7 @@ btn.addEventListener("click", () => {
 
 ### 使用 XMLHttpRequest 和 FormData 对象
 
-手动建立一个 HTTP 请求非常困难。幸运的是，[XMLHttpRequest 规范](http://www.w3.org/TR/XMLHttpRequest/)提供了一种方便简单的方法——利用 {{domxref("FormData","FormData")}} 对象来处理表单数据请求。
+手动建立一个 HTTP 请求非常困难。幸运的是，[XMLHttpRequest 规范](https://www.w3.org/TR/XMLHttpRequest/)提供了一种方便简单的方法——利用 {{domxref("FormData","FormData")}} 对象来处理表单数据请求。
 
 {{domxref("FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。
 
