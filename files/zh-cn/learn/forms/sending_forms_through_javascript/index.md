@@ -379,7 +379,7 @@ window.addEventListener("load", () => {
 
 ## 参见
 
-### 学习之路
+### 学习路径
 
 - [你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)
 - [如何构建 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
