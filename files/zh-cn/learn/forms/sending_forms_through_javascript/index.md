@@ -135,7 +135,6 @@ function sendData(data) {
     FD.append(name, value);
   }
 
-
   // 定义数据成功发送并返回后执行的操作
   XHR.addEventListener("load", (event) => {
     alert("耶！已发送数据并加载响应。");
