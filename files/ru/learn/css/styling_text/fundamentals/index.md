@@ -824,7 +824,7 @@ p {
   также можно включить отображение строчных букв как уменьшенных заглавных.
 - {{cssxref("font-kerning")}}: Включает и выключает кернинг шрифта.
 - {{cssxref("font-feature-settings")}}: Включает и выключает опции формата
-[OpenType](https://en.wikipedia.org/wiki/OpenType).
+  [OpenType](https://en.wikipedia.org/wiki/OpenType).
 - {{cssxref("font-variant-alternates")}}: Управляет альтернативными глифами для
 вашего шрифта.
 - {{cssxref("font-variant-caps")}}: Использование альтернативных заглавных
