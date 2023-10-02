@@ -903,8 +903,7 @@ font:
 ```html hidden
 <div
   class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"
->
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
   <textarea
     id="code"
