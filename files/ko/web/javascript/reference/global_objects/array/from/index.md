@@ -2,14 +2,14 @@
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 l10n:
-  sourceCommit: 401fb1dc7295cdd0ad29fad8a52fd37bd176d0b2
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
 
 **`Array.from()`** 정적 메서드는 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#순회_가능_프로토콜) 또는 [유사 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections##유사_배열_객체_다루기) 객체에서 얕게 복사된 새로운 `Array` 인스턴스를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
 
 ## 구문
 
@@ -23,13 +23,13 @@ Array.from(arrayLike, mapFn, thisArg)
 
 - `arrayLike`
   - : 배열로 변환할 순회 가능 또는 유사 배열 객체입니다.
-- `mapFn`{{Optional_inline}}
+- `mapFn`{{optional_inline}}
   - : 배열의 모든 요소에 대해 호출할 함수입니다. 이 함수를 제공하면 배열에 추가할 모든 값이 이 함수를 통해 먼저 전달되고, `mapFn`의 반환 값이 대신 배열에 추가됩니다. 이 함수는 다음 인수를 사용하여 호출됩니다.
     - `element`
       - : 배열에서 처리 중인 현재 요소.
     - `index`
       - : 배열에서 처리 중인 현재 요소의 인덱스.
-- `thisArg`{{Optional_inline}}
+- `thisArg`{{optional_inline}}
   - : `mapFn` 실행 시에 `this`로 사용할 값입니다.
 
 ### 반환 값
@@ -47,7 +47,7 @@ Array.from(arrayLike, mapFn, thisArg)
 
 `Array.from()`은 희소 배열을 생성하지 않습니다. `arrayLike` 객체에 일부 인덱스 속성이 누락된 경우, 새 배열에서 해당 속성은 `undefined`가 됩니다.
 
-`Array.from()`에는 생성되는 배열의 각 요소에 대해 함수를 실행할 수 있는 {{jsxref("Array.prototype.map()", "map()")}}과 비슷한 선택적 매개변수 `mapFn`이 있습니다. 좀 더 명확하게 설명하자면, `Array.from(obj, mapFn, thisArg)`는 중간 배열을 생성하지 않는다는 점과 배열이 아직 생성 중이기 때문에 전체 배열 없어 두 개의 인수(`element`, `index`)만 받는다는 점을 제외하면 `Array.from(obj).map(mapFn, thisArg)`과 동일한 결과를 가져옵니다.
+`Array.from()`에는 생성되는 배열의 각 요소에 대해 함수를 실행할 수 있는 {{jsxref("Array/map", "map()")}}과 비슷한 선택적 매개변수 `mapFn`이 있습니다. 좀 더 명확하게 설명하자면, `Array.from(obj, mapFn, thisArg)`는 중간 배열을 생성하지 않는다는 점과 배열이 아직 생성 중이기 때문에 전체 배열 없어 두 개의 인수(`element`, `index`)만 받는다는 점을 제외하면 `Array.from(obj).map(mapFn, thisArg)`과 동일한 결과를 가져옵니다.
 
 > **참고:** 이 동작은 [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)에서 더 중요한데, 중간 배열에는 적절한 형식에 맞게 잘린 값이 있어야 하기 때문입니다. `Array.from()`은 {{jsxref("TypedArray.from()")}}과 동일한 동작을 하도록 구현되었습니다.
 
@@ -186,7 +186,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## 같이 보기
 
 - [`core-js`의 `Array.from` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
-- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서 
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
