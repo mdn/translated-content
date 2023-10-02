@@ -619,7 +619,7 @@ p {
 {{ EmbedLiveSample('Multiple_shadows', '100%', 260) }}
 
 > **Примечание:** Больше интересных примеров с `text-shadow` в статье Sitepoint
-[Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
+> [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## Текстовый макет
 
