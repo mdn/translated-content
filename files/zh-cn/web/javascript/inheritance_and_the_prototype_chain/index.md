@@ -414,7 +414,7 @@ console.log(doSomeInstancing);
 
 如果 `doSomeInstancing` 没有该属性，那么运行时会在 `doSomeInstancing.[[Prototype]]`（也就是 `doSomething.prototype`）中查找该属性。如果 `doSomeInstancing.[[Prototype]]` 有该属性，那么就会使用 `doSomeInstancing.[[Prototype]]` 上的该属性。
 
-否则，如果 `doSomeInstancing.[[Prototype]]` 没有该属性，那么就会在 `doSomeInstancing.[[Prototype]].[[Prototype]]` 中查找该属性。默认情况下，任何函数的 `prototype` 属性的 `[[Prototype]]` 都是 `Object.prototype`。因此，然后会在 `doSomeInstancing.[[Prototype]].[[Prototype]]`（也就是 `doSomething.prototype.[[Prototype]]`（也就是 `Object.prototype`））上查找该属性。
+否则，如果 `doSomeInstancing.[[Prototype]]` 没有该属性，那么就会在 `doSomeInstancing.[[Prototype]].[[Prototype]]` 中查找该属性。默认情况下，任何函数的 `prototype` 属性的 `[[Prototype]]` 都是 `Object.prototype`。因此会在 `doSomeInstancing.[[Prototype]].[[Prototype]]`（也就是 `doSomething.prototype.[[Prototype]]`（也就是 `Object.prototype`））上查找该属性。
 
 如果在 `doSomeInstancing.[[Prototype]].[[Prototype]]` 中没有找到该属性，那么就会在 `doSomeInstancing.[[Prototype]].[[Prototype]].[[Prototype]]` 中查找该属性。但是，这里有一个问题：`doSomeInstancing.[[Prototype]].[[Prototype]].[[Prototype]]` 不存在，因为 `Object.prototype.[[Prototype]]` 是 `null`。然后，只有在查找完整个 `[[Prototype]]` 链之后，运行时才会断言该属性不存在，并得出该属性的值为 `undefined`。
 
