@@ -186,7 +186,7 @@ Neste exemplo, são válidos apenas valores consistindo de no mínimo quatro e n
 
 {{EmbedLiveSample("Validation_sample1", 600, 40)}}
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Esse atributo booleano indica que o campo de senha não está disponível para interação. Além disso, os valores dos campos marcados com ele não são enviados com o formulário.
 
 ## Exemplos

@@ -66,7 +66,7 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) como seus.
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : Se o valor deste atributo for `yes`, o texto de definição não será envolvido. O valor padrão é `no`.
 
 ## Exemplo

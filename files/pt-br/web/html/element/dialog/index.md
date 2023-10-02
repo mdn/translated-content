@@ -55,7 +55,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
 
 Este elemento inclui os atributos globais. O atributo `tabindex` não deve ser utilizado no elemento `<dialog>`.
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Indica que o Dialog está ativo e pronto para uso. Quando o atributo `open` não for definido, ele não deve ser mostrado ao usuário.
 
 ## Notas de uso

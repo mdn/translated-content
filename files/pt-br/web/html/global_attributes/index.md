@@ -30,7 +30,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
     - `false`, indica que o elemento não deve ser editável.
 
 - [`contextmenu`](/pt-BR/docs/Web/HTML/Global_attributes/contextmenu)
-  - : É o **[`id`](#attr-id)** de um {{HTMLElement("menu")}} para usar como o menu contextual para este elemento.
+  - : É o **[`id`](#id)** de um {{HTMLElement("menu")}} para usar como o menu contextual para este elemento.
 - [`data-*`](/pt-BR/docs/Web/HTML/Global_attributes/data-*)
   - : Forma uma classe de atributos, denominado de dados personalizados, que permite troca de informações proprietárias entre o [HTML](/pt-BR/docs/Web/HTML) e a sua representação no [DOM](/pt-BR/docs/Glossary/DOM) pode ser usada por scripts. Todos esses dados personalizados estão disponíveis através da interface do elemento {{domxref("HTMLElement")}} em que o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} dá acesso a eles.
 - [`dir`](/pt-BR/docs/Web/HTML/Global_attributes/dir)
@@ -74,7 +74,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
 - [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
   - : Especifica a URL do vocabulário que será usado para definir as propriedades do item na estrutura de dados. [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes/itemscope) é usado para alterar o escopo na estrutura de dados onde o vocabulário definido por [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) estará ativo.
 - [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang)
-  - : Participa da definição do idioma do elemento, o idioma no qual os elementos não-editáveis estão escritos, ou o idioma no qual elementos editáveis devem ser escritos. A Tag contém um único valor no formato definido no documento da IEFT [Tags para Identificação de Idiomas (BCP47)](http://www.ietf.org/rfc/bcp/bcp47.txt). [**xml:lang**](#attr-xml:lang) tem prioridade mais alta que [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang).
+  - : Participa da definição do idioma do elemento, o idioma no qual os elementos não-editáveis estão escritos, ou o idioma no qual elementos editáveis devem ser escritos. A Tag contém um único valor no formato definido no documento da IEFT [Tags para Identificação de Idiomas (BCP47)](http://www.ietf.org/rfc/bcp/bcp47.txt). `xml:lang` tem prioridade mais alta que [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang).
 - [`spellcheck`](/pt-BR/docs/Web/HTML/Global_attributes/spellcheck) {{experimental_inline}}
 
   - : É um atributo enumerado que define se o elemento pode ser verificado por errors de ortografia. Pode ter os seguintes valores:
