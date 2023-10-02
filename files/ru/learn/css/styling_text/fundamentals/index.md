@@ -935,8 +935,7 @@ p {
       id="reset"
       type="button"
       value="Reset"
-      style="margin: 10px 10px 0 0;"
-    />
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
