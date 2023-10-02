@@ -928,8 +928,7 @@ p {
   <h2>Output</h2>
   <div
     class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"
-  ></div>
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
     <input
       id="reset"
