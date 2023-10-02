@@ -38,7 +38,7 @@ Como você sabe de seu estudo de HTML, os elementos podem ter atributos que forn
 
 Esses seletores permitem a seleção de um elemento com base na presença de um atributo sozinho (por exemplo, href) ou em várias correspondências diferentes com o valor do atributo.
 
-| Seletor          | Example                         | Description                                                                                                                                 |
+| Seletor          | Exemplo                         | Descrição                                                                                                                                 |
 | ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `[attr]`         | `a[title]`                      | Corresponde a elementos com um atributo attr (cujo nome é o valor entre colchetes).                                                         |
 | `[attr=value]`   | `a[href="https://example.com"]` | Corresponde a elementos com um atributo attr cujo valor é exatamente value - a string entre aspas.                                          |
