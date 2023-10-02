@@ -186,7 +186,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## 같이 보기
 
 - [`core-js`의 `Array.from` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
-- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서 
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
