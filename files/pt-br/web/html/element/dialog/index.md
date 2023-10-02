@@ -132,10 +132,7 @@ Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão 
 
 ## Especificações
 
-| Especificação                                                                             | Status                   | Comentário        |
-| ----------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}            | {{Spec2('HTML WHATWG')}} |                   |
-| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | Difinição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

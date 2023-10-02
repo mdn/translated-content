@@ -71,11 +71,7 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 
 ## Especificações
 
-| Especificação                                                                     | Estado                   | Observação |
-| --------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                       | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

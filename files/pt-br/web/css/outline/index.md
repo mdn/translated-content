@@ -59,10 +59,7 @@ Um, dois ou três valores, dada em ordem arbitrária:
 
 ## Especificações
 
-| Especificação                                                | Estado                     | Comentário         |
-| ------------------------------------------------------------ | -------------------------- | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}         | {{Spec2('CSS3 Basic UI')}} | No change          |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}        | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

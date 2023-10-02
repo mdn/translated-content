@@ -231,12 +231,7 @@ Dependendo do conjunto escolhido, o tipo de metadata pode ser uma das seguintes:
 
 ## Especificações
 
-| Specification                                                                                     | Status                       | Comment                                              |
-| ------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', '&lt;meta name="referrer"&gt;')}} | {{Spec2('Referrer Policy')}} | Define valores e semantica `<meta name="referrer">`. |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-meta-element', '&lt;meta&gt;')}}                    | {{Spec2('HTML WHATWG')}}     | Adiciona o atributo `itemprop`                       |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-meta-element', '&lt;meta&gt;')}}              | {{Spec2('HTML5 W3C')}}       | Adiciona o atributo `charset`                        |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.4.2', '&lt;meta&gt;')}}                          | {{Spec2('HTML4.01')}}        |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

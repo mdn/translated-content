@@ -290,11 +290,7 @@ otherCheckbox.onchange = function () {
 
 ## Especificações
 
-| Especificação                                                                                                             | Status                    | Comente |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------- |
-|                                                                                                                           |                           |         |
-| {{SpecName ('HTML WHATWG', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}} | {{Spec2 ('HTML WHATWG')}} |         |
-| {{SpecName ('HTML5 W3C', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}}   | {{Spec2 ('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

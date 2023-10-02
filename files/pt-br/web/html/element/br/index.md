@@ -87,11 +87,7 @@ USA
 
 ## Especificações
 
-| Especificação                                                                         | Status                   | Comentário |
-| ------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}                  | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com o browser
 

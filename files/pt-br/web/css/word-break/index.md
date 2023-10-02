@@ -105,9 +105,7 @@ word-break: unset;
 
 ## Especificações
 
-| Especificação                                                   | Status                 | Commentário       |
-| --------------------------------------------------------------- | ---------------------- | ----------------- |
-| {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -61,11 +61,7 @@ A seguir um exemplo de como simular uma lista de seleção com opções editáve
 
 ## Especificações
 
-| Especificação                                                                | Estado                 | Comentários |
-| ---------------------------------------------------------------------------- | ---------------------- | ----------- |
-| {{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}} |             |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}     | {{Spec2('HTML4.01')}}  |             |
-|                                                                              |                        |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
