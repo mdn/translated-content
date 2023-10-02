@@ -61,7 +61,7 @@ button.addEventListener('mouseup', (e) => {
     default:
       log.textContent = `不明なボタンコード: ${e.button}`;
   }
-}
+});
 ```
 
 ### 結果

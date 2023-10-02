@@ -5,9 +5,9 @@ slug: Web/API/Window
 
 {{APIRef}}
 
-L'objet `window` représente une fenêtre contenant un document DOM ; la propriété `document` pointe vers le [document DOM](/fr-FR/docs/DOM/document) chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.
+L'objet `window` représente une fenêtre contenant un document DOM ; la propriété `document` pointe vers le [document DOM](/fr/docs/Web/API/Document) chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.
 
-Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM `window`. L'objet `window` implémente l'interface `Window`, qui à son tour hérite de l'interface [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la [Référence JavaScript](/fr-FR/docs/JavaScript/Reference) et la [Référence DOM](/fr-FR/docs/Web/API/Document_Object_Model).
+Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM `window`. L'objet `window` implémente l'interface `Window`, qui à son tour hérite de l'interface [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference) et la [Référence DOM](/fr/docs/Web/API/Document_Object_Model).
 
 Dans un navigateur utilisant des onglets, comme Firefox, chaque onglet contient son propre objet `window` (et si vous écrivez une extension, la fenêtre du navigateur elle-même est un objet `window` séparé — consultez [Travailler avec des fenêtres dans du code chrome](/fr/docs/Mozilla/Working_with_windows_in_chrome_code#Fen.C3.AAtres_de_contenu) pour plus d'informations). C'est-à-dire que l'objet `window` n'est pas partagé entre les onglets dans la même fenêtre. Certaines méthodes, notamment {{ Domxref("window.resizeTo") }} et {{ Domxref("window.resizeBy") }}, s'appliquent à la fenêtre entière et non à l'onglet spécifique auquel l'objet `window` appartient. En général, ce qui ne peut raisonnablement pas concerner un onglet se rapporte à la fenêtre à la place.
 
@@ -28,7 +28,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie les objets du contrôleur XUL pour la fenêtre chrome en cours.
 - {{domxref("Window.customElements")}}{{ReadOnlyInline}}
-  - : renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr-FR/docs/Web/Web_Components/Using_custom_elements) et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.
+  - : renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Retourne l'objet crypto du navigateur.
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
@@ -82,8 +82,6 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Renvoie une référence à l'objet de stockage local utilisé pour stocker les données accessibles uniquement par l'origine qui les a créées.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Renvoie l'objet barre de menus, dont la visibilité peut être inversée dans la fenêtre.
-- {{domxref("Window.messageManager")}}
-  - : Renvoie l'objet [gestionnaire de messages](/fr-FR/docs/The_message_manager) pour cette fenêtre.
 - {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}
   - : Le temps en millisecondes depuis l'instant auquel le cycle d'animation en cours a commencé.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
@@ -115,7 +113,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : Renvoie une référence au parent de la fenêtre ou du sous-cadre en cours.
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Renvoie un objet {{domxref("Performance")}}, qui inclut les attributs {{domxref("Performance.timing", "timing")}} et {{domxref("Performance.navigation", "navigation")}}, dont chacun est un objet fournissant des données liées aux performances. Voir aussi [Utilisation de Chronométrage de Navigation](/fr-FR/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) pour plus d'informations et d'exemples.
+  - : Renvoie un objet {{domxref("Performance")}}, qui inclut les attributs {{domxref("Performance.timing", "timing")}} et {{domxref("Performance.navigation", "navigation")}}, dont chacun est un objet fournissant des données liées aux performances. Voir aussi [Utilisation de Chronométrage de Navigation](/fr/docs/Web/API/Performance_API/Navigation_timing) pour plus d'informations et d'exemples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Renvoie l'objet barre personnelle, dont la visibilité peut être inversée dans la fenêtre.
 - {{domxref("Window.pkcs11")}} {{deprecated_inline}}
@@ -145,7 +143,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.sidebar")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie une référence à l'objet fenêtre de la barre latérale.
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
-  - : Renvoie un objet {{domxref("SpeechSynthesis")}}, qui est le point d'entrée pour l'utilisation de la fonctionnalité de synthèse vocale de l'[API Web Speech](/fr-FR/docs/Web/API/Web_Speech_API).
+  - : Renvoie un objet {{domxref("SpeechSynthesis")}}, qui est le point d'entrée pour l'utilisation de la fonctionnalité de synthèse vocale de l'[API Web Speech](/fr/docs/Web/API/Web_Speech_API).
 - {{domxref("Window.status")}}
   - : Récupère/définit le texte dans la barre d'état en bas du navigateur.
 - {{domxref("Window.statusbar")}} {{readOnlyInline}}
@@ -448,10 +446,10 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 ## Constructeurs
 
-Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
+Voir aussi les [Interfaces DOM](/fr/docs/Web/API/Document_Object_Model).
 
 - {{domxref("DOMParser")}}
-  - : `DOMParser` peut analyser un source XML ou HTML stocké dans une chaîne de caractères en un [Document](/fr-FR/docs/DOM/document) DOM. `DOMParser` est spécifié dans [DOM Parsing et Serialization](https://w3c.github.io/DOM-Parsing/).
+  - : `DOMParser` peut analyser un source XML ou HTML stocké dans une chaîne de caractères en un [Document](/fr/docs/Web/API/Document) DOM. `DOMParser` est spécifié dans [DOM Parsing et Serialization](https://w3c.github.io/DOM-Parsing/).
 - {{domxref("Window.GeckoActiveXObject")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Image")}}

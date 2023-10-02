@@ -3,6 +3,8 @@ title: 在互联网上做一件事要花费多少？
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。
 
 <table class="learn-box standard-table">
@@ -22,7 +24,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>评估创建一个网站的完整流程，计算每个步骤的花费。</td>
     </tr>
   </tbody>

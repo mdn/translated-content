@@ -16,4 +16,4 @@ _同步_（Synchronous）是指各方在接收（必要的話還會執行與回�
 ### 技術參考
 
 - {{glossary("Asynchronous","非同步")}}
-- 使用 [XMLHttpRequest()](/zh-TW//docs/Web/API/XMLHttpRequest) {{glossary("API")}} 完成 [同步與非同步請求](/zh-TW/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
+- 使用 [XMLHttpRequest()](/zh-TW/docs/Web/API/XMLHttpRequest) {{glossary("API")}} 完成 [同步與非同步請求](/zh-TW/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)

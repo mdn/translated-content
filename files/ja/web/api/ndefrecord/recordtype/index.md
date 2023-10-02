@@ -1,21 +1,24 @@
 ---
-title: NDEFRecord.recordType
+title: "NDEFRecord: recordType プロパティ"
+short-title: recordType
 slug: Web/API/NDEFRecord/recordType
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`recordType`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードのレコード型を返します。
 
 ## 構文
 
-```js
-NDEFRecord.recordType;
+```js-nolint
+NDEFRecord.recordType
 ```
 
 ### 値
 
-{{DOMxRef("USVString")}} で、以下のうちのいずれかを取ります。
+文字列で、以下のうちのいずれかを取ります。
 
 - `"empty"`
   - : 空の NDEF レコードです。

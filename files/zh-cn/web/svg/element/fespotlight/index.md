@@ -32,7 +32,7 @@ slug: Web/SVG/Element/feSpotLight
 
 ## DOM 接口
 
-该元素实现了[`SVGFESpotLightElement`](/zh-CN/DOM/SVGFESpotLightElement)接口。
+该元素实现了 [`SVGFESpotLightElement`](/zh-CN/DOM/SVGFESpotLightElement) 接口。
 
 ## 参见
 

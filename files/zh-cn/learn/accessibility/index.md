@@ -29,7 +29,7 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 >
 > [**从这里开始**](/zh-CN/docs/Learn/Front-end_web_developer)
 
-## 预备知识
+## 前提
 
 为了充分理解这个模块，你至少需要读过 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 各个主题的前两个模块，或者有可能的话，在你学习相关联的技术话题时也把无障碍相关的内容学习了，这样会更好。
 

@@ -21,8 +21,6 @@ slug: MDN/At_ten
 
 {{TenthCampaignQuote}}
 
-## Subnav
+## 參見
 
-1. [MDN 10 週年](/zh-TW/docs/MDN_at_ten/)
-2. [MDN 的歷史](/zh-TW/docs/MDN_at_ten/History_of_MDN)
-3. [協助 MDN](/zh-TW/docs/MDN_at_ten/Contributing_to_MDN)
+- [MDN 的歷史](/zh-TW/docs/MDN/At_ten/History_of_MDN)

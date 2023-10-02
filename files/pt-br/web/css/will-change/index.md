@@ -92,9 +92,7 @@ Entretanto pode ser apropriado incluir `will-change` no seu estilo css para uma 
 
 ## Especificações
 
-| Especificação                                                  | Estado                       | Comentário         |
-| -------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

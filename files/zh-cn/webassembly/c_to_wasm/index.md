@@ -20,7 +20,7 @@ slug: WebAssembly/C_to_Wasm
 - 主系统编译器 — 在 Linux 下，[安装 GCC](http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts)。在 macOS 下，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835)。在 Windows 下，安装 [Visual Studio Community 2015 with Update 3 or newer](https://www.microsoft.com/zh-CN/download/details.aspx?id=48146)。
 - Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 [初学者指南](https://wiki.python.org/moin/BeginnersGuide/Downloadhere) 获取帮助。在 Windows 上，从 [Python 主页](https://www.python.org/downloads/)获取安装包。
 
-> **备注：** 在 Windows 下你可能需要[pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
+> **备注：** 在 Windows 下你可能需要 [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
 
 ### 编译 Emscripten
 
@@ -95,7 +95,7 @@ emsdk_env.bat
 
 下面列出了我们命令中选项的细节：
 
-- `-s WASM=1` — 指定我们想要的 wasm 输出形式。如果我们不指定这个选项，Emscripten 默认将只会生成[asm.js](http://asmjs.org/)。
+- `-s WASM=1` — 指定我们想要的 wasm 输出形式。如果我们不指定这个选项，Emscripten 默认将只会生成 [asm.js](http://asmjs.org/)。
 - `-o hello.html` — 指定这个选项将会生成 HTML 页面来运行我们的代码，并且会生成 wasm 模块，以及编译和实例化 wasm 模块所需要的“胶水”js 代码，这样我们就可以直接在 web 环境中使用了。
 
 这个时候在你的源码文件夹应该有下列文件：

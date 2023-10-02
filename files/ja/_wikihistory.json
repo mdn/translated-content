@@ -15055,10 +15055,6 @@
     "modified": "2020-04-13T14:03:23.203Z",
     "contributors": ["mfuji09", "Marsf"]
   },
-  "Web/API/XSLTProcessor/Resources": {
-    "modified": "2020-04-13T14:00:58.038Z",
-    "contributors": ["mfuji09", "SphinxKnight", "Marsf"]
-  },
   "Web/API/atob": {
     "modified": "2020-10-15T21:16:19.721Z",
     "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
@@ -30056,49 +30052,6 @@
     "modified": "2019-03-18T20:50:35.595Z",
     "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto", "Mgjbot", "Okome"]
   },
-  "Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations": {
-    "modified": "2019-03-18T20:50:25.643Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "silverskyvicto",
-      "ethertank",
-      "kohei.yoshino",
-      "Mgjbot"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko": {
-    "modified": "2019-03-23T22:00:06.933Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto", "ethertank"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example": {
-    "modified": "2019-03-18T20:50:31.655Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example": {
-    "modified": "2019-03-18T20:50:32.089Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Interface_List": {
-    "modified": "2019-03-18T20:50:31.344Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction": {
-    "modified": "2019-03-18T20:50:31.925Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings": {
-    "modified": "2019-03-18T20:50:31.798Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Resources": {
-    "modified": "2019-03-18T20:50:27.169Z",
-    "contributors": ["mfuji09", "SphinxKnight", "ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters": {
-    "modified": "2019-03-18T20:50:31.495Z",
-    "contributors": ["mfuji09", "ExE-Boss", "silverskyvicto"]
-  },
   "WebAssembly": {
     "modified": "2020-10-15T21:52:54.116Z",
     "contributors": ["mfuji09", "mosh", "ukyo", "silverskyvicto", "dskmori"]
@@ -30485,10 +30438,6 @@
     "modified": "2019-03-23T23:28:50.521Z",
     "contributors": ["yyss", "teoli"]
   },
-  "conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": ["Uemmra3"]
-  },
   "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
@@ -30748,25 +30697,6 @@
   "orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html": {
     "modified": "2019-03-23T23:03:34.917Z",
     "contributors": ["wtrfp"]
-  },
-  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-08-09T13:53:14.893Z",
-    "contributors": [
-      "mfuji09",
-      "taku-furuta",
-      "miyah-kun",
-      "8845musign",
-      "michi-h0623",
-      "SphinxKnight",
-      "webooker",
-      "yyss",
-      "ethertank",
-      "teoli",
-      "DavidWalsh",
-      "Potappo",
-      "saneyuki_s",
-      "kj"
-    ]
   },
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",

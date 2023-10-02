@@ -1,26 +1,23 @@
 ---
-title: Navigator.locks
+title: "Navigator: locks プロパティ"
+short-title: locks
 slug: Web/API/Navigator/locks
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+{{APIRef("Web Locks")}}
 
-{{domxref("Navigator")}} インターフェイスの **`locks`** 読み取り専用プロパティは、新しい{{domxref('Lock')}} オブジェクトを要求するためのメソッドを提供する {{domxref("LockManager")}} オブジェクトを返します。既存の `Lock` オブジェクトを照会します。
+**`locks`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、新しい{{domxref('Lock')}} オブジェクトを要求するためのメソッドを提供する {{domxref("LockManager")}} オブジェクトを返します。既存の `Lock` オブジェクトを照会します。
 
-## 構文
-
-```
-var lockManager = Navigator.locks
-```
-
-### 値
+## 値
 
 {{domxref("LockManager")}} オブジェクト。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Navigator.locks")}}
+{{Compat}}

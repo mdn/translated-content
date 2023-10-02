@@ -46,7 +46,7 @@ p {
   - [鄰接同層選擇器](/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
   - [通用同層選擇器](/zh-TW/docs/Web/CSS/General_sibling_selectors) `A ~ B`
   - [直屬選擇器](/zh-TW/docs/Web/CSS/Child_selectors) `A > B`
-  - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_selectors) `A B`
+  - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator) `A B`
 
 - [虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)
 - [虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)

@@ -16,7 +16,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 
 将 SSR 与 CSR 混用可以获得最佳效果：你可以在服务器上渲染网站，缓存其内容，然后在客户端需要时更新渲染。因为使用了 SSR，第一页加载很快；因为客户端可以仅使用已更改的部分重新渲染页面，所以页面之间的导航也是平滑的。
 
-你可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及[Streams API](/zh-CN/docs/Web/API/Streams_API)的新方法
+你可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的新方法
 
 ## App Shell 概念
 

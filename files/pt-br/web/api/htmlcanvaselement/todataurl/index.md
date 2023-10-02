@@ -120,11 +120,7 @@ function removeColors() {
 
 ## Especificações
 
-| Specification                                                                                     | Status                   | Comment                                                                        |
-| ------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName('HTML5 W3C')}}                 |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}   | {{Spec2('HTML5.1')}}     |                                                                                |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5 W3C')}}   | Snapshot of the {{SpecName('HTML WHATWG')}} containing the initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

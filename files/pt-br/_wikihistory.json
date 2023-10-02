@@ -4149,6 +4149,10 @@
     "modified": "2019-03-23T22:27:06.677Z",
     "contributors": ["trestini"]
   },
+  "Web/API/XSLTProcessor": {
+    "modified": "2019-03-23T23:03:40.500Z",
+    "contributors": ["EduardoRedressa"]
+  },
   "Web/API/atob": {
     "modified": "2020-10-15T21:46:04.009Z",
     "contributors": ["mateusvelleda", "joaoricardo_rm"]
@@ -10327,10 +10331,6 @@
       "teoli",
       "MatCAlv"
     ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example": {
-    "modified": "2019-03-23T23:03:40.500Z",
-    "contributors": ["EduardoRedressa"]
   },
   "WebAssembly": {
     "modified": "2019-03-23T22:13:27.780Z",

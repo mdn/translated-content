@@ -19,13 +19,13 @@ slug: Web/HTML/Element/embed
 
 이 요소는 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 리소스의 표시될 높이 길이를 CSS 픽셀로 지정
-- {{htmlattrdef("src")}}
+- `src`
   - : 포함된 리소스의 URL
-- {{htmlattrdef("type")}}
+- `type`
   - : 인스턴스화할 플러그인을 고르기 위해 사용되는 MIME 타입
-- {{htmlattrdef("width")}}
+- `width`
   - : 리소스의 표시될 가로 길이를 CSS 픽셀로 지정
 
 ## 예제

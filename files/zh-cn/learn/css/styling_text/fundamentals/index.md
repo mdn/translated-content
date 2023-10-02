@@ -10,7 +10,7 @@ slug: Learn/CSS/Styling_text/Fundamentals
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的电脑操作，HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -22,7 +22,7 @@ slug: Learn/CSS/Styling_text/Fundamentals
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>了解在网页上设计文本所需的基本属性和技术。</td>
     </tr>
   </tbody>

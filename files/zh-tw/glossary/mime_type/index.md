@@ -17,7 +17,7 @@ slug: Glossary/MIME_type
 
 ### 技術參考
 
-- [MIME 類型列表](http://www.iana.org/assignments/media-types/media-types.xhtml)
+- [MIME 類型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [正確的伺服器 MIME 類型配置](/zh-TW/docs/Properly_Configuring_Server_MIME_Types)
 - [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)在網頁文本中的詳細用法
 - [Incomplete list of MIME types](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)

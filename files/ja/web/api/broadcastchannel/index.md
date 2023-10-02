@@ -23,7 +23,7 @@ l10n:
 _このインターフェイスは、その親である {{domxref("EventTarget")}} からもプロパティを継承します。_
 
 - {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
-  - : 文字列で、チャンネルの名前であるを返します。
+  - : チャンネルの名前を表す文字列を返します。
 
 ## インスタンスメソッド
 
