@@ -917,8 +917,7 @@ font:
   <textarea
     id="code"
     class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"
-  >
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 p {
 
 }
