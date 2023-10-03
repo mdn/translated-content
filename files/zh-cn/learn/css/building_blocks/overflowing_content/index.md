@@ -22,7 +22,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 简介</a
         >），对 CSS 的工作原理有所了解（学习
-        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 入门概述</a>)。
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 入门概述</a>）。
       </td>
     </tr>
     <tr>
