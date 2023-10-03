@@ -63,7 +63,7 @@ div {
 }
 ```
 
-```css 
+```css
 .degrade-horizontal {
   background: linear-gradient(to right, blue, pink);
 }
@@ -647,7 +647,7 @@ div {
 
 ## Dégradés coniques
 
-La fonction [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** permet de créer une image composée d'un dégradé de couleurs tournant autour d'un point (plutôt qu'une progression radiale). On pourra ainsi utiliser des dégradés coniques pour créer des camemberts ou des [cercles chromatiques](fr/docs/Glossary/Color_wheel).
+La fonction [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** permet de créer une image composée d'un dégradé de couleurs tournant autour d'un point (plutôt qu'une progression radiale). On pourra ainsi utiliser des dégradés coniques pour créer des camemberts ou des [cercles chromatiques](/fr/docs/Glossary/Color_wheel).
 
 La syntaxe de `conic-gradient()` est semblable à celle de `radial-gradient()` mais les arrêts de couleur seront placés le long d'un arc plutôt que le long de la ligne émise depuis le centre. Les arrêts de couleur seront exprimés en pourcentages ou en degrés, ils ne pourront pas être exprimés sous forme de longueurs absolues.
 
