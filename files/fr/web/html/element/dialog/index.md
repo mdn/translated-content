@@ -9,7 +9,7 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
 
-L'élément HTML  `<dialog>` est utilisé pour créer des boîtes de dialogue modale qui peuvent être interactives ou non. Les boîtes de dialogue modale interrompent l'interaction, le reste de la page étant inerte, tandis que les boîtes de dialogue non-modale permettent une interaction avec le reste de la page.
+L'élément HTML `<dialog>` est utilisé pour créer des boîtes de dialogue modale qui peuvent être interactives ou non. Les boîtes de dialogue modale interrompent l'interaction, le reste de la page étant inerte, tandis que les boîtes de dialogue non-modale permettent une interaction avec le reste de la page.
 
 JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisation de la méthode [`.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour afficher une boîte de dialogue modale et la méthode [`.show()`](/fr/docs/Web/API/HTMLDialogElement/show) pour afficher une boîte de dialogue non-modale. La boîte de dialogue peut être fermée à l'aide de la méthode [`.close()`](/fr/docs/Web/API/HTMLDialogElement/close) ou en utilisant la méthode [`dialog`](/fr/docs/Web/HTML/Element/form#method) lors de la soumission d'un formulaire `<form>` imbriqué dans l'élément `<dialog>`. Les boîtes de dialogue modales peuvent également être fermées en appuyant sur la touche <kbd>Esc</kbd> («&nbsp;Échap&nbsp;»).
 
