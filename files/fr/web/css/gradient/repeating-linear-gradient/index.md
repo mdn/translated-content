@@ -1,6 +1,8 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
+l10n:
+  sourceCommit: 581b0f5068b7417e525abfe5c230e35cceca04df
 ---
 
 {{CSSRef}}
@@ -28,7 +30,9 @@ repeating-linear-gradient(45deg, blue, red 33.3%);
 repeating-linear-gradient(to left top, blue, red 20px);
 
 /* Un dégradé répétitif allant du bas vers le haut,
-   débutant bleu, étant vert après 40% et finissant rouge */
+   débutant bleu, étant vert après 40% et finissant rouge.
+   Ce dégradé ne se répète pas car le dernier arrêt de couleur
+   est par défaut à 100%. */
 repeating-linear-gradient(0deg, blue, green 40%, red);
 
 /* Un dégradé répété cinq fois, progressant de gauche à
@@ -50,7 +54,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 - `<linear-color-stop>`
   - : Un arrêt de couleur décrit par une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions optionnelles (une position étant donnée par un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur à `0` représente le début du dégradé. La valeur `100%` correspond à 100% de la taille de l'image, indiquant que le dégradé ne se répètera pas.
 - `<color-hint>`
-  - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit l'emplacement où la transition entre les deux couleurs est appliquée à moitié. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
+  - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit à quel point, entre deux arrêts de couleur, la couleur du dégradé doit atteindre le point médian de la transition de couleur. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
 
 > **Note :** Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
 
