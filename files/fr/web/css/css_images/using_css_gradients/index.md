@@ -494,7 +494,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 270, 130)}}
+{{EmbedLiveSample("utiliser_closest-side_pour_les_ellipses", 270, 130)}}
 
 #### Utiliser `farthest-corner` pour les ellipses
 
@@ -523,7 +523,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 240, 130)}}
+{{EmbedLiveSample("utiliser_farthest-corner_pour_les_ellipses", 240, 130)}}
 
 #### Utiliser `closest-side` pour les cercles
 
@@ -552,7 +552,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 240, 150)}}
+{{EmbedLiveSample("utiliser_closest-side_pour_les_cercles", 240, 150)}}
 
 #### Longueur ou pourcentage pour le dimensionnement des ellipses
 
@@ -581,7 +581,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('', 240, 150)}}
+{{EmbedLiveSample('longueur_ou_pourcentage_pour_le_dimensionnement_des_ellipses', 240, 150)}}
 
 #### Longueur pour le dimensionnement des cercles
 
@@ -604,7 +604,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('', 240, 150)}}
+{{EmbedLiveSample('longueur_pour_le_dimensionnement_des_cercles', 240, 150)}}
 
 ### Empiler des dégradés radiaux
 
