@@ -255,14 +255,14 @@ confirmBtn.addEventListener("click", (event) => {
 
 Cet exemple présente les trois méthodes suivantes pour fermer les boîtes de dialogue modales :
 
-- En soumettant le formulaire dans la boîte de dialogue à l'aide de la méthode `dialog` (comme dans [l'exemple n'utilisant que du HTML](#mises_en_garde_concernant_la_création_d’un_dialogue_en_utilisant_uniquement_du_html))
+- En soumettant le formulaire dans la boîte de dialogue à l'aide de la méthode `dialog` (comme dans [l'exemple n'utilisant que du HTML](#mises_en_garde_concernant_la_création_d'un_dialogue_en_utilisant_uniquement_du_html))
 - En appuyant sur la touche <kbd>Esc</kbd> («&nbsp;Échap&nbsp;»).
-- En appelant la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close) (comme dans l'[exemple de création d'une boîte modale](#création_d’une_boîte_de_dialogue_modale)).
+- En appelant la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close) (comme dans l'[exemple de création d'une boîte modale](#création_d'une_boîte_de_dialogue_modale)).
   Dans cet exemple, le bouton «&nbsp;Annuler&nbsp;» ferme la boîte de dialogue via la méthode de formulaire `dialog` et le bouton «&nbsp;Confirmer&nbsp;» ferme la boîte de dialogue via la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close).
 
-Le bouton «&nbsp;Annuler&nbsp;» comprend l'attribut [`formmethod="dialog"`](fr/docs/Web/HTML/Element/input/submit#formmethod), qui remplace la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form). Lorsque la méthode d'un formulaire est [`dialog`](#notes_dutilisation), l'état du formulaire est sauvegardé mais non soumis, et la boîte de dialogue est fermée.
+Le bouton «&nbsp;Annuler&nbsp;» comprend l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Element/input/submit#formmethod), qui remplace la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form). Lorsque la méthode d'un formulaire est [`dialog`](#notes_dutilisation), l'état du formulaire est sauvegardé mais non soumis, et la boîte de dialogue est fermée.
 
-Sans `action`, la soumission du formulaire via la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) entraîne le rechargement de la page. Nous utilisons JavaScript pour empêcher la soumission et fermer le dialogue avec les méthodes [`event.preventDefault()`](fr/docs/Web/API/Event/preventDefault) et [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close), respectivement.
+Sans `action`, la soumission du formulaire via la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) entraîne le rechargement de la page. Nous utilisons JavaScript pour empêcher la soumission et fermer le dialogue avec les méthodes [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) et [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close), respectivement.
 
 Il est important de prévoir un mécanisme de fermeture dans chaque élément `<dialog>`. La touche <kbd>Esc</kbd> («&nbsp;Échap&nbsp;») ne ferme pas les dialogues non modaux par défaut, et l'on ne peut pas non plus supposer que l'utilisateur aura accès à un clavier physique (par exemple, une personne utilisant un écran tactile sans accès à un clavier).
 
