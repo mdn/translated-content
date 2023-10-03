@@ -15,8 +15,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
         基础的电脑知识，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了基本的软件</a
-        >，
-        <a
+        >，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识，HTML 基础（学习
@@ -87,11 +86,11 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 
 **在下面的例子里面，移除一些内容，直到能够装在盒子里面，你还会看到滚动条消失了。**
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 700)}}
 
 ## 溢出建立了区块格式化上下文
 
-CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC）**](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)的概念**。现在你不用太过在意，但是你应该知道，在你使用诸如 `scroll` 或者 `auto` 的时候，你就建立了一个块级排版上下文。结果就是，你改变了 `overflow` 的值的话，对应的盒子就变成了更加小巧的状态。在容器之外的东西没法混进容器内，也没有东西可以突出盒子，进入周围的版面。激活了滚动动作，你的盒子里面所有的内容会被收纳，而且不会遮到页面上其他的物件，于是就产生了一个协调的滚动体验。
+CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC）](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)的概念。现在你不用太过在意，但是你应该知道，在你使用诸如 `scroll` 或者 `auto` 的时候，你就建立了一个块级排版上下文。结果就是，你改变了 `overflow` 的值的话，对应的盒子就变成了更加小巧的状态。在容器之外的东西没法混进容器内，也没有东西可以突出盒子，进入周围的版面。激活了滚动动作，你的盒子里面所有的内容会被收纳，而且不会遮到页面上其他的物件，于是就产生了一个协调的滚动体验。
 
 ## 网页设计时不需要的溢出
 
