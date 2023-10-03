@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的电脑知识。对
         <a href="/zh-CN/docs/Learn/Server-side/First_steps"
@@ -23,7 +23,7 @@ slug: Learn/Server-side/Django/Introduction
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         了解 Django 是什么，它提供了哪些功能，以及 Django 应用程序的主要构建块。
       </td>

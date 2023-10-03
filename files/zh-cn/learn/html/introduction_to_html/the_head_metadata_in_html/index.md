@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>初步了解 HTML（参见 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）。</td>
     </tr>
     <tr>

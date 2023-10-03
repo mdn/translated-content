@@ -1535,7 +1535,7 @@
 /ja/docs/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
 /ja/docs/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
-/ja/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/HTML/属性	/ja/docs/Web/HTML/Attributes
@@ -2361,7 +2361,7 @@
 /ja/docs/SVG_Namespace_Tips_(external)	/ja/docs/Web/SVG/Namespaces_Crash_Course
 /ja/docs/SVG_improvements_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements
 /ja/docs/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
-/ja/docs/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Security/CSP/Default_CSP_restrictions	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -3465,8 +3465,8 @@
 /ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /ja/docs/Web/Accessibility/ARIA/forms/Multipart_labels	/ja/docs/Web/Accessibility/ARIA/Multipart_labels
 /ja/docs/Web/Accessibility/ARIA/forms/alerts	/ja/docs/conflicting/Web/Accessibility/ARIA
-/ja/docs/Web/Accessibility/ARIA/widgets	/ja/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
-/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
+/ja/docs/Web/Accessibility/ARIA/widgets	/ja/docs/Web/Accessibility/ARIA
+/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility
 /ja/docs/Web/Accessibility/Community	/ja/docs/Web/Accessibility
 /ja/docs/Web/Accessibility/FAQ	/ja/docs/Web/Accessibility
@@ -3925,7 +3925,7 @@
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
-/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/Guide/HTML/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
@@ -4047,7 +4047,7 @@
 /ja/docs/Web/HTML/Link_types/prerender	/ja/docs/Web/HTML/Attributes/rel/prerender
 /ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/Speculative_parsing
 /ja/docs/Web/HTML/Preloading_content	/ja/docs/Web/HTML/Attributes/rel/preload
-/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes

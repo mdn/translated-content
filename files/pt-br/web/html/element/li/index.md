@@ -17,7 +17,7 @@ O **_elemento_** **_HTML_ `<li>`** (ou a Lista dos Itens de um elemento HTML) é
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : Este atributo de número inteiro indica o valor ordinal atual do item na lista, definido pelo elemento {{HTMLElement("ol")}}. O único valor possível para este atributo é um número, ainda que a lista seja exibida com algarismos romanos, ou letras. A lista de itens que virá em seguida continuará a ser numerada a partir desta posição. O atributo **value** não tem significado para listas desordenadas ({{HTMLElement("ul")}}), nem para menus ({{HTMLElement("menu")}}).
 
@@ -25,7 +25,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Nota:** Antes de Gecko 9.0, os valores negativos eram, incorretamente, convertidos a 0. A partir de Gecko 9.0 todos os valores inteiros são analisados corretamente.
 
-- {{htmlattrdef("type")}} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : A característica deste atributo é indicar o tipo de numeração:
 
@@ -71,11 +71,7 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 
 ## Especificações
 
-| Especificação                                                                     | Estado                   | Observação |
-| --------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                       | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

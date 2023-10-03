@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Promise`** オブジェクトは、非同期処理の完了 (もしくは失敗) の結果およびその結果の値を表します。
+**`Promise`** オブジェクトは、非同期処理の完了（もしくは失敗）の結果およびその結果の値を表します。
 
 プロミスの挙動と使用法について学ぶには、最初に[プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)をお読みください。
 
@@ -95,7 +95,7 @@ myPromise
 
 プロミスの終了条件は、その連鎖内の次のプロミスの「決定」状態を決定します。「履行」状態はプロミスの完了が成功したことを示し、「拒否」状態は成功しなかったことを示します。連鎖内で履行されたそれぞれのプロミスの返値は、次の `.then()` に渡され、拒否された理由は連鎖内の次の拒否ハンドラー関数に渡されます。
 
-連鎖のプロミスは、ロシア人形のように入れ子になっていますが、スタックの一番上のように取り出されます。連鎖の最初のプロミスは最も深くネストされており、最初に取り出されます。
+連鎖のプロミスは、他のものの中に入れ子になっていますが、スタックの一番上のように取り出されます。連鎖の最初のプロミスは最も深くネストされており、最初に取り出されます。
 
 ```plain
 (プロミス D, (プロミス C, (プロミス B, (プロミス A) ) ) )
@@ -115,7 +115,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-既に「決定」状態のプロミスにアクションを割り当てることができます。その場合、アクションは (適切であれば) 最初の非同期の機会に実行されます。プロミスは非同期であることが保証されていることに注意してください。したがって、既に「解決」状態のプロミスに対するアクションは、スタックがクリアされ、クロックティックが経過した後にのみ実行されます。この効果は `setTimeout(action,10)` とよく似ています
+既に「決定」状態のプロミスにアクションを割り当てることができます。その場合、アクションは (適切であれば) 最初の非同期の機会に実行されます。プロミスは非同期であることが保証されていることに注意してください。したがって、既に「解決」状態のプロミスに対するアクションは、スタックがクリアされ、クロックティックが経過した後にのみ実行されます。この効果は `setTimeout(action, 0)` とよく似ています
 
 ```js
 const promiseA = new Promise((resolve, reject) => {
@@ -173,56 +173,44 @@ JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)�
 - {{jsxref("Promise/Promise", "Promise()")}}
   - : 新しい `Promise` オブジェクトを生成します。このコンストラクターは主に、まだプロミスに対応していない関数をラップするために使われます。
 
+## 静的プロパティ
+
+- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+  - : プロミスのメソッドから返値を構築するために使用するコンストラクターを返します。
+
 ## 静的メソッド
 
-- {{JSxRef("Promise.all()")}}
-
-  - : すべてのプロミスが履行されるか、拒否されるかするまで待ちます。
-
-    返却されたプロミスが履行された場合、履行されたプロミスが、複数のプロミスが含まれる反復可能オブジェクトで定義された順番で入った集合配列の値によって履行されます。
-
-    拒否された場合は、反復可能オブジェクトの中で拒否された最初のプロミスの理由によって拒否されます。
-
-- {{JSxRef("Promise.allSettled()")}}
-
-  - : すべてのプロミスが決定する (それぞれが履行されるか、拒否される) まで待ちます。
-
-    これはすべての与えられたプロミスが履行または拒否された後で、それぞれのプロミスの結果を記述したオブジェクトの配列で解決される Promise を返します。
-
-- {{JSxRef("Promise.any()")}}
-  - : Promise オブジェクトの反復可能オブジェクトを取り、反復可能オブジェクトの中のプロミスのうちの一つが履行され次第、そのプロミスから受け取った値で履行される単一のプロミスを返します。
-- {{JSxRef("Promise.race()")}}
-
-  - : プロミスのうちの 1 つが履行または拒否されるまで待ちます。
-
-    返されたプロミスが履行された場合、反復可能オブジェクトの中で最初に履行されたプロミスの値によって履行されます。
-
-    拒否された場合、最初に拒否されたプロミスの理由によって拒否されます。
-
-- {{JSxRef("Promise.reject()")}}
+- {{jsxref("Promise.all()")}}
+  - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返されたプロミスは、入力さ れたプロミスがすべて履行されたとき（空の反復可能オブジェクトが渡されたときを含める）に、履行された値の配列で履行されます。入力のプロミスのいずれかが拒否されると、この最初の拒否理由によって拒否されます。
+- {{jsxref("Promise.allSettled()")}}
+  - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返されたプロミスは、入力のプロミスがすべて決定されたときに履行されます（空の反復可能オブジェクトが渡された場合を含む）。
+- {{jsxref("Promise.any()")}}
+  - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返されたプロミスは、入力されたプロミスのいずれかが履行されたときに履行され、最初の履行値を返します。入力されたプロミスがすべて拒否された場合（空の反復可能オブジェクトが渡された場合も含む）、拒否された理由の配列を含む {{jsxref("AggregateError")}} を返します。
+- {{jsxref("Promise.race()")}}
+  - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返すプロミスは、最初に決定したプロミスの最終的な状態で決定します。
+- {{jsxref("Promise.reject()")}}
   - : 与えられた理由で拒否された新しい `Promise` オブジェクトを返します。
-- {{JSxRef("Promise.resolve()")}}
-
-  - : 与えられた値で解決された新しい `Promise` オブジェクトを返します。もし値が Thenable （つまり `then` メソッドを持っているオブジェクト）ならば、返されるプロミスはその Thenable をたどり、その結果を採用します。そうでなければ、返されるプロミスは与えられた値で履行されます。
-
-    一般に、ある値がプロミスであるかどうかがわからない場合は、代わりに {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} を使用し、返値をプロミスとして扱います。
+- {{jsxref("Promise.resolve()")}}
+  - : 与えられた値で解決された `Promise` オブジェクトを返します。もし値が Thenable （つまり `then` メソッドを持っているオブジェクト）ならば、返されるプロミスはその Thenable をたどり、その結果を採用します。そうでなければ、返されるプロミスは与えられた値で履行されます。
 
 ## インスタンスプロパティ
 
+これらのプロパティは `Promise.prototype` で定義されており、すべての `Promise` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
+  - : インスタンスオブジェクトを作成したコンストラクター関数。 `Promise` インスタンスの場合、初期値は {{jsxref("Promise/Promise", "Promise")}} コンストラクターです。
 - `Promise.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Promise"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
-マイクロタスクのキューやサービスを使用する方法については、[マイクロタスクのガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)を参照してください。
-
 - {{jsxref("Promise.prototype.catch()")}}
   - : プロミスに拒否ハンドラーコールバックを追加し、コールバックが呼び出されたときの返値で解決する、または、プロミスが履行された場合は、元の履行結果で解決する
     新しいプロミスを返します。
-- {{jsxref("Promise.prototype.then()")}}
-  - : プロミスに履行ハンドラーと拒否ハンドラーを追加し、呼び出されたハンドラーの返値で解決する新しいプロミスを返します。プロミスが処理されなかった場合 (すなわち、関連するハンドラー `onFulfilled` または `onRejected` が関数ではない場合) は、元の解決値を返します。
 - {{jsxref("Promise.prototype.finally()")}}
   - : プロミスにハンドラーを追加し、元のプロミスが解決されたときに解決される新しいプロミスを返します。このハンドラーは、成功か失敗かに関わらず、元のプロミスが完了したときに呼び出されます。
+- {{jsxref("Promise.prototype.then()")}}
+  - : プロミスに履行ハンドラーと拒否ハンドラーを追加し、呼び出されたハンドラーの返値で解決する新しいプロミスを返します。プロミスが処理されなかった場合（すなわち、関連するハンドラー `onFulfilled` または `onRejected` が関数ではない場合）は、元の解決値を返します。
 
 ## 例
 
@@ -315,7 +303,7 @@ new Promise(tetheredGetNumber)
 
 以下の例は `Promise` の仕組みを示したものです。 `testPromise()` メソッドは {{HTMLElement("button")}} をクリックする度に呼び出されます。`testPromise()` メソッドは、 {{domxref("setTimeout()")}} を用いて、 1 秒から 3 秒のランダムな時間の後、メソッドがこれまでに呼ばれた回数で履行されるプロミスを作成します。 `Promise()` コンストラクターを使用してプロミスを生成します。
 
-プロミスが履行されたことは、 {{JSxRef("Promise.prototype.then()","p1.then()")}} で設定されたコールバックによって記録されます。この記録から、メソッドの同期処理部分が、プロミスによる非同期処理からどのように分離されているかがわかります。
+プロミスが履行されたことは、 {{jsxref("Promise/then", "p1.then()")}} で設定されたコールバックによって記録されます。この記録から、メソッドの同期処理部分が、プロミスによる非同期処理からどのように分離されているかがわかります。
 
 短時間に何度もボタンをクリックすると、さまざまなプロミスが次々と履行されていく様子を見ることもできます。
 
@@ -330,6 +318,7 @@ new Promise(tetheredGetNumber)
 
 ```js
 "use strict";
+
 let promiseCount = 0;
 
 function testPromise() {
@@ -393,8 +382,8 @@ btn.addEventListener("click", testPromise);
 <script>
   // ここも同様に領域です
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
-  // bound は組み込み関数です -- スタック上にはユーザー
-  // コードがありません -- が、どの領域を使うのでしょうか？
+  // bound は組み込み関数です — スタック上にはユーザー
+  // コードがありません — が、どの領域を使うのでしょうか？
   setTimeout(bound);
   // これでも動作します。スタック上の最も若い（現行の）
   // 領域を使用するからです。
@@ -409,8 +398,8 @@ btn.addEventListener("click", testPromise);
 <script>
   // ここも同様に領域です
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
-  // bound は組み込み関数です -- スタック上にはユーザー
-  // コードがありません -- が、どの領域を使うのでしょうか？
+  // bound は組み込み関数です — スタック上にはユーザー
+  // コードがありません — が、どの領域を使うのでしょうか？
   Promise.resolve(undefined).then(bound);
   // これでも動作します。スタック上の最も若い（現行の）
   // 領域を使用するからです。
@@ -460,7 +449,7 @@ btn.addEventListener("click", testPromise);
 ## 関連情報
 
 - [`Promise` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
-- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
+- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [JavaScript Promises: an introduction](https://web.dev/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [JavaScript Promises: an introduction](https://web.dev/promises/) (web.dev, 2013)
+- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) Domenic Denicola によるスライドショー (2011)

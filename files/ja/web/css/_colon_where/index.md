@@ -153,4 +153,4 @@ footer a {
 
 - {{CSSxRef(":is", ":is()")}}
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
-- [ウェブコンポーネント](/ja/docs/Web/Web_components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

@@ -47,12 +47,7 @@ a:active {
 
 ## Especificações
 
-| Especificação                                                             | Status                      | Comentário         |
-| ------------------------------------------------------------------------- | --------------------------- | ------------------ |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}               | {{Spec2('CSS4 Selectors')}} | Nenhuma mudança.   |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}          | {{Spec2('CSS3 Selectors')}} | Nenhuma mudança.   |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}         | Nenhuma mudança.   |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                 | {{Spec2('CSS1')}}           | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

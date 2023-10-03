@@ -10,7 +10,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 <table>
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         阅读
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
@@ -19,7 +19,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         学习如何用标记（段落、标题、列表、强调、引用等）来建立页面的基本文本结构和文本内容。
       </td>

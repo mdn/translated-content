@@ -12,7 +12,7 @@ slug: Learn/CSS/Styling_text/Styling_links
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章节的前提：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机使用能力，HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -27,7 +27,7 @@ slug: Learn/CSS/Styling_text/Styling_links
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         学习如何将样式应用到链接状态，以及如何使用链接实现常见的 UI
         功能，比如导航菜单。

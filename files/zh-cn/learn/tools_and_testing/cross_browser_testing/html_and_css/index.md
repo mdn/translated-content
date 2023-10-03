@@ -12,7 +12,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
