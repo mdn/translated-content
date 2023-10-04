@@ -826,11 +826,11 @@ p {
 - {{cssxref("font-feature-settings")}}: Включает и выключает опции формата
   [OpenType](https://en.wikipedia.org/wiki/OpenType).
 - {{cssxref("font-variant-alternates")}}: Управляет альтернативными глифами для
-вашего шрифта.
+  вашего шрифта.
 - {{cssxref("font-variant-caps")}}: Использование альтернативных заглавных
-символов.
+  символов.
 - {{cssxref("font-variant-east-asian")}}: Управляет альтернативными глифами для
-восточноазиатских языков.
+  восточноазиатских языков.
 - {{cssxref("font-variant-ligatures")}}: Управляет контекстными формами и
   лигатурами.
 - {{cssxref("font-variant-numeric")}}: Альтернативные глифы для порядковых
@@ -910,7 +910,7 @@ font:
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>Some sample text for your delight</p>
+  <p>Some sample text for your delight</p>
   </textarea>
 
   <h2>CSS Input</h2>
@@ -918,11 +918,10 @@ font:
     id="code"
     class="css-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-p {
+    p {
 
-}
-</textarea
-  >
+    }
+</textarea>
 
   <h2>Output</h2>
   <div
