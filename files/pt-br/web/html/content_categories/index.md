@@ -28,8 +28,8 @@ Elementos pertencentes a categoria de conteúdo de fluxo tipicamente contém tex
 Alguns outros elementos pertencem a essa categoria, mas somente se uma condição específica é realizada:
 
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop)** estiver presente
-- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop)** estiver presente
+- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#itemprop)** estiver presente
+- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#itemprop)** estiver presente
 - {{HTMLElement("style")}}, se o atributo [`scoped`](/pt-BR/docs/Web/HTML/Element/style#scoped) estiver presente
 
 ### Conteúdo de seccionamento
@@ -60,9 +60,9 @@ Alguns outros elementos pertencem a essa categoria, mas somente se uma condiçã
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, se contém somente conteúdo fraseado
 - {{HTMLElement("ins")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop) estiver presente
+- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#itemprop) estiver presente
 - {{HTMLElement("map")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop) estiver presente
+- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#itemprop) estiver presente
 
 ### Conteúdo embutido
 

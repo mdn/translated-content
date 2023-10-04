@@ -50,11 +50,7 @@ Para ajudar o usuário, atualize o valor do `title` para refletir mudanças sign
 
 ## Especificações
 
-| Especificação                                                                          | Status                   | Comentário |
-| -------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}       | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}                | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

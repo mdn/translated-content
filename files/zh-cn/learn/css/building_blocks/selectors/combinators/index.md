@@ -3,7 +3,7 @@ title: 关系选择器
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}
 
 我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
@@ -103,6 +103,6 @@ ul > li[class="a"] {
 
 ## 继续学习
 
-这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[CSS 盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
+这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}

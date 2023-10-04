@@ -16214,10 +16214,6 @@
     "modified": "2020-11-30T12:30:31.824Z",
     "contributors": ["mfuji09", "yyss"]
   },
-  "Web/CSS/Adjacent_sibling_combinator": {
-    "modified": "2020-10-15T21:20:46.943Z",
-    "contributors": ["mfuji09", "uknmr", "sii", "lv7777", "ethertank"]
-  },
   "Web/CSS/Alternative_style_sheets": {
     "modified": "2020-10-15T21:15:43.078Z",
     "contributors": [
@@ -16853,18 +16849,6 @@
     "modified": "2020-10-15T21:22:42.147Z",
     "contributors": ["mfuji09", "ethertank", "sosleepy"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2020-10-15T21:22:37.143Z",
-    "contributors": [
-      "dlwe",
-      "h-subaru",
-      "mfuji09",
-      "yassh",
-      "SphinxKnight",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-12-03T15:27:41.759Z",
     "contributors": ["mfuji09", "FumiyaShibusawa", "ethertank", "sii"]
@@ -16967,6 +16951,10 @@
       "Piro"
     ]
   },
+  "Web/CSS/Next-sibling_combinator": {
+    "modified": "2020-10-15T21:20:46.943Z",
+    "contributors": ["mfuji09", "uknmr", "sii", "lv7777", "ethertank"]
+  },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2020-12-01T21:03:57.973Z",
     "contributors": ["mfuji09", "SphinxKnight", "ethertank", "sosleepy"]
@@ -17028,6 +17016,18 @@
   "Web/CSS/Specificity": {
     "modified": "2020-04-20T23:20:01.731Z",
     "contributors": ["mfuji09", "sakai-akinobu", "yoshidax", "ethertank", "sii"]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2020-10-15T21:22:37.143Z",
+    "contributors": [
+      "dlwe",
+      "h-subaru",
+      "mfuji09",
+      "yassh",
+      "SphinxKnight",
+      "ethertank",
+      "sosleepy"
+    ]
   },
   "Web/CSS/Syntax": {
     "modified": "2020-08-16T03:09:34.358Z",
@@ -30438,10 +30438,6 @@
     "modified": "2019-03-23T23:28:50.521Z",
     "contributors": ["yyss", "teoli"]
   },
-  "conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": ["Uemmra3"]
-  },
   "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
@@ -30701,25 +30697,6 @@
   "orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html": {
     "modified": "2019-03-23T23:03:34.917Z",
     "contributors": ["wtrfp"]
-  },
-  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-08-09T13:53:14.893Z",
-    "contributors": [
-      "mfuji09",
-      "taku-furuta",
-      "miyah-kun",
-      "8845musign",
-      "michi-h0623",
-      "SphinxKnight",
-      "webooker",
-      "yyss",
-      "ethertank",
-      "teoli",
-      "DavidWalsh",
-      "Potappo",
-      "saneyuki_s",
-      "kj"
-    ]
   },
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
