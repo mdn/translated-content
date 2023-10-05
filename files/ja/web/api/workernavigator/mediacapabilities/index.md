@@ -27,9 +27,7 @@ navigator.mediaCapabilities
     },
   })
   .then((result) => {
-    console.log(
-      `この構成に対応していま${result.supported ? "す" : "せん"}。`,
-    );
+    console.log(`この構成に対応していま${result.supported ? "す" : "せん"}。`);
     console.log(`スムーズ${result.smooth ? "" : "じゃない"}です。`);
     console.log(`電力効率が${result.powerEfficient ? "よい" : "よくない"}です。`);
   });
