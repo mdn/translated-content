@@ -1,7 +1,6 @@
 ---
 title: ビュートランジション API
 slug: Web/API/View_Transitions_API
-page-type: web-api-overview
 l10n:
   sourceCommit: 6d4b6a0f9df94de158c373d6b08c504caafcee5f
 ---
