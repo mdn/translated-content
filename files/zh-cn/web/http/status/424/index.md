@@ -13,6 +13,12 @@ HTTP **`424 Failed Dependency`** 客户端错误响应代码表明，由于请�
 
 ## 状态
 
+```http
+424 Failed Dependency
+```
+
+## 规范
+
 {{Specifications}}
 
 ## 参见
