@@ -35,12 +35,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## Especificações
 
-| Especificação                                           | Status               | Comentário                                                                                     |
-| ------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                     | {{Spec2('ES1')}}     | Definição inicial.                                                                             |
-| {{SpecName('ES5.1', '#sec-B.2.1', 'escape')}}           | {{Spec2('ES5.1')}}   | Definido no (informativo) de compatibilidade Anexo B                                           |
-| {{SpecName('ES6', '#sec-escape-string', 'escape')}}     | {{Spec2('ES6')}}     | Definido no (normativo) Anexo B para recursos adicionais do ECMAScript para navegadores da web |
-| {{SpecName('ESDraft', '#sec-escape-string', 'escape')}} | {{Spec2('ESDraft')}} | Definido no (normativa) Anexo B para recursos adicionais do ECMAScript para navegadores da web |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -78,11 +78,7 @@ function encodeRFC5987ValueChars(str) {
 
 ## Especificações
 
-| Especificação                                                                     | Status             | Comentario         |
-| --------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| {{SpecName('ES3')}}                                                               | {{Spec2('ES3')}}   | Definição Inicial. |
-| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                      | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
