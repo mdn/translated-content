@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 {{JSRef}}
 
-**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为一个键或一个值。
+**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为键或值。
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
@@ -45,7 +45,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
         </p>
         <div class="notecard note">
           <p>
-            <strong>请注意：</strong> 这可以通过使用 {{jsxref("Object.create", "Object.create(null)")}} 来绕过，但很少这样做。
+            <strong>备注：</strong>这可以通过使用 {{jsxref("Object.create", "Object.create(null)")}} 来绕过，但很少这样做。
           </p>
         </div>
       </td>
@@ -57,7 +57,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
       </td>
       <td>
         <p>
-          在 <code>Object</code> 上设置用户提供的键值对可能会允许攻击者覆盖对象的原型，这可能会导致<a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">对象注入攻击</a>。就像意外的键问题一样，这也可以通过使用<code>null</code>原型对象来缓解。
+          在 <code>Object</code> 上设置用户提供的键值对可能会允许攻击者覆盖对象的原型，这可能会导致<a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">对象注入攻击</a>。就像意外的键问题一样，这也可以通过使用 <code>null</code> 原型对象来缓解。
         </p>
       </td>
     </tr>
@@ -89,10 +89,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
     <tr>
       <th scope="row"><p>大小</p></th>
       <td>
-        <code>Map</code>中的项目数量很容易从其 {{jsxref("Map.prototype.size", "size")}} 属性中获得。
+        <code>Map</code> 中的项目数量很容易从其 {{jsxref("Map.prototype.size", "size")}} 属性中获得。
       </td>
       <td>
-        确定 <code>Object</code> 中的项目数量通常更麻烦，效率也较低。一种常见的方法是通过获取 {{jsxref("Object.keys()")}} 返回的数组的{{jsxref("Array/length", "长度")}}。
+        确定 <code>Object</code> 中的项目数量通常更麻烦，效率也较低。一种常见的方法是通过获取 {{jsxref("Object.keys()")}} 返回的数组的{{jsxref("Array/length", "长度", "", 1)}}。
       </td>
     </tr>
     <tr>
@@ -102,16 +102,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
       </td>
       <td>
         <p>
-          <code>Object</code> 没有实现<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">可迭代协议</a>，因此对象默认情况下不能直接通过 JavaScript 的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> 语句进行迭代。
+          <code>Object</code> 没有实现<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议">迭代协议</a>，因此对象默认情况下不能直接通过 JavaScript 的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> 语句进行迭代。
         </p>
         <div class="notecard note">
-          <p><strong>请注意：</strong></p>
+          <p><strong>备注：</strong></p>
           <ul>
             <li>
-              一个对象可以实现迭代协议，或者你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a> 或 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"><code>Object.entries</code></a> 来获取一个对象的可迭代对象。
+              一个对象可以实现迭代协议，或者你可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a> 或 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"><code>Object.entries</code></a> 来获取一个对象的可迭代对象。
             </li>
             <li>
-              <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> 语句允许你迭代对象的可枚举属性。
+              <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> 语句允许你迭代对象的<em>可枚举</em>属性。
             </li>
           </ul>
         </div>
@@ -178,13 +178,13 @@ contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
 ```
 
-### 类似 Map 的浏览器 API
+### 类 Map 浏览器 API
 
-**浏览器中类似 Map 的对象**（或称为“maplike 对象”）是 [Web API](/zh-CN/docs/Web/API) 接口，其行为在很多方面都类型 `Map`。
+**浏览器类 Map 对象**（或称为“maplike 对象”）是其行为在很多方面都类似于 `Map` 的 [Web API](/zh-CN/docs/Web/API) 接口。
 
 就像 `Map` 一样，对象中的条目可以以添加的顺序迭代。类似 `Map` 的对象和 `Map` 具有相同的属性和方法。但是，与 `Map` 不同的是，它们仅允许每个条目中的键和值具有特定预定义的类型。
 
-允许的类型在规范 IDL 定义中设置。例如，{{domxref("RTCStatsReport")}} 是一个类似 `Map` 的对象，必须使用字符串作为键，对象作为值。这是在规范 IDL 中定义的：
+允许的类型规范的 IDL 定义给出。例如，{{domxref("RTCStatsReport")}} 是一个类似 `Map` 的对象，必须使用字符串作为键，对象作为值。这是在规范 IDL 中定义的：
 
 ```webidl
 interface RTCStatsReport {
@@ -192,14 +192,14 @@ interface RTCStatsReport {
 };
 ```
 
-类似 `Map` 的对象可以是只读的，也可以是可写的（参见上面 IDL 中的 `readonly` 关键字）。
+类 `Map` 对象可以是只读的，也可以是可写的（参见上面 IDL 中的 `readonly` 关键字）。
 
-- 只读的类似 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`@@iterator`](#map.prototypeiterator) 。
-- 可写的类似 `Map` 对象还额外具有这些方法：[`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete) 和 [`set()`](#map.prototype.set)。
+- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`@@iterator`](#map.prototypeiterator) 。
+- 可写的类 `Map` 对象还额外具有这些方法：[`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete) 和 [`set()`](#map.prototype.set)。
 
 除了对键和值类型的限制外，其方法和属性的行为与 `Map` 中的对应实体相同。
 
-以下是浏览器中只读的类似 `Map` 对象的示例：
+以下是浏览器中只读的类 `Map` 对象的示例：
 
 - {{domxref("AudioParamMap")}}
 - {{domxref("RTCStatsReport")}}
