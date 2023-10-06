@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-{{domxref("GPUAdapterInfo")}} インターフェイスの読み取り専用プロパティ  **`description`** は、アダプターを表現する人間に読める文字列を返します。取得できない場合は空文字列を返します。
+{{domxref("GPUAdapterInfo")}} インターフェイスの読み取り専用プロパティ **`description`** は、アダプターを表現する人間に読める文字列を返します。取得できない場合は空文字列を返します。
 
 ## 値
 
