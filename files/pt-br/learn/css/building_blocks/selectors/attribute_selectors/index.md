@@ -73,7 +73,7 @@ O próximo exemplo mostra o uso desses seletores:
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
 
-## Sensibilidade a maiúsculas
+## Sensibilidade à maiúsculas
 
 Se você deseja combinar valores de atributo sem distinção entre maiúsculas e minúsculas, você pode usar o valor i antes do colchete de fechamento. Este sinalizador informa ao navegador para corresponder caracteres ASCII sem distinção entre maiúsculas e minúsculas. Sem o sinalizador, os valores serão correspondidos de acordo com a distinção entre maiúsculas e minúsculas do idioma do documento - no caso do HTML, será sensível a maiúsculas e minúsculas.
 
