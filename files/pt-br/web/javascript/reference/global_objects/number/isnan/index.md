@@ -51,9 +51,7 @@ Number.isNaN("blabla"); // e.g. este teria sido true com isNaN
 
 ## Especificações
 
-| Especificação                                            | Status           | Comentário         |
-| -------------------------------------------------------- | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

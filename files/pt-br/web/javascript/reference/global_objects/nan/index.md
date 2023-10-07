@@ -38,11 +38,7 @@ isNaN(Number.NaN); // verdadeiro
 
 ## Especificações
 
-| Especificação                                                                | Status             | Comentários                                       |
-| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                      | Standard           | Definição inicial. Implementado no JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}                                | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

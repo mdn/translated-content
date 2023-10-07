@@ -69,9 +69,7 @@ O exemplo acima usa uma conversão de uma _string_ não-padrão que pode não se
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
