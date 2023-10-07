@@ -187,6 +187,6 @@ Pour créer un espace entre des éléments flexibles, utilisez les propriétés 
 
 ## Voir aussi
 
-- [Le module*CSS Box Alignment*](/fr/docs/Web/CSS/CSS_Box_Alignment)
-- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [L'alignement des boîtes avec une grille CSS](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [Le module*CSS Box Alignment*](/fr/docs/Web/CSS/CSS_box_alignment)
+- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_Alignment_in_Flexbox)
+- [L'alignement des boîtes avec une grille CSS](/fr/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)

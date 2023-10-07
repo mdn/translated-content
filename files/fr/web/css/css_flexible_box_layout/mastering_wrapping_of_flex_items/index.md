@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-Les boîtes flexibles ont été conçues comme une méthode de disposition unidimensionnelle. Autrement dit, elles permettent de disposer des éléments en lignes ou en colonnes mais pas en lignes et en colonnes en même temps. Il existe toutefois la possibilité de passer des éléments flexibles à la ligne pour créer de nouvelles lignes horizontales si [`flex-direction`](/fr/docs/Web/CSS/flex-direction) vaut `row` ou de nouvelles colonnes si `flex-direction` vaut `column`. Dans ce guide, nous verrons comment cela fonctionne, les cas pour lesquels cela a été prévu et les situations qui nécessitent plutôt d'utiliser [une disposition en grille (_CSS Grid_)](/fr/docs/Web/CSS/CSS_Grid_Layout).
+Les boîtes flexibles ont été conçues comme une méthode de disposition unidimensionnelle. Autrement dit, elles permettent de disposer des éléments en lignes ou en colonnes mais pas en lignes et en colonnes en même temps. Il existe toutefois la possibilité de passer des éléments flexibles à la ligne pour créer de nouvelles lignes horizontales si [`flex-direction`](/fr/docs/Web/CSS/flex-direction) vaut `row` ou de nouvelles colonnes si `flex-direction` vaut `column`. Dans ce guide, nous verrons comment cela fonctionne, les cas pour lesquels cela a été prévu et les situations qui nécessitent plutôt d'utiliser [une disposition en grille (_CSS Grid_)](/fr/docs/Web/CSS/CSS_grid_layout).
 
 ## Créer des passages à la ligne
 
