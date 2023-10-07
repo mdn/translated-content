@@ -1,6 +1,7 @@
 ---
 title: 일반 형제 결합자
-slug: Web/CSS/General_sibling_combinator
+slug: Web/CSS/Subsequent-sibling_combinator
+original_slug: Web/CSS/General_sibling_combinator
 ---
 
 {{CSSRef("Selectors")}}
