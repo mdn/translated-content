@@ -1,8 +1,6 @@
 ---
 title: Data URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}
@@ -102,8 +100,8 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## Спецификации
 
-| Спецификация         | Заголовок             |
-| -------------------- | --------------------- |
+| Спецификация    | Заголовок             |
+| --------------- | --------------------- |
 | {{RFC("2397")}} | The "data" URL scheme |
 
 ## Совместимость с браузерами

@@ -1,11 +1,6 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
-tags:
-  - CSS
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:out-of-range
 ---
 
 {{CSSRef}}
@@ -34,24 +29,24 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:out-o
 
 ```css
 li {
-    list-style: none;
-    margin-bottom: 1em;
+  list-style: none;
+  margin-bottom: 1em;
 }
 input {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 input:in-range {
-    background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgba(0, 255, 0, 0.25);
 }
 input:out-of-range {
-    background-color: rgba(255, 0, 0, 0.25);
-    border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
 }
 input:in-range + label::after {
-    content:' НОРМАЛЬНОЕ';
+  content: " НОРМАЛЬНОЕ";
 }
 input:out-of-range + label::after {
-    content:'вне диапазона!';
+  content: "вне диапазона!";
 }
 ```
 
@@ -59,10 +54,10 @@ input:out-of-range + label::after {
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                               | Комментарий                                                |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Определяет, когда `:out-of-range` находит элементы в HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Изначальное определение.                                   |
+| Спецификация                                                                         | Статус                      | Комментарий                                                |
+| ------------------------------------------------------------------------------------ | --------------------------- | ---------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}    | Определяет, когда `:out-of-range` находит элементы в HTML. |
+| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}              | {{Spec2('CSS4 Selectors')}} | Изначальное определение.                                   |
 
 ## Поддержка браузерами
 

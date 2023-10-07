@@ -1,239 +1,285 @@
 ---
-title: Usando a API JavaScript do WebAssembly
+title: Usando a API JavaScript WebAssembly
 slug: WebAssembly/Using_the_JavaScript_API
-original_slug: WebAssembly/Usando_a_API_JavaScript_do_WebAssembly
 ---
 
 {{WebAssemblySidebar}}
 
-Se você já [compilou um módulo de outra linguagem utilizando ferramentas como o Emscripten](/pt-BR/docs/WebAssembly/C_to_wasm), ou [carregou e executou o código sozinho](/pt-BR/docs/WebAssembly/Loading_and_running), o próximo passo é aprender mais sobre o uso de outros recursos da API JavaScript do WebAssembly. Este artigo te ensina o que você precisará saber.
+Se você já [compilou um módulo de outra linguagem usando ferramentas como Emscripten](/pt-BR/docs/WebAssembly/C_to_Wasm) ou [carregou e executou o código você mesmo](/pt-BR/docs/WebAssembly/Loading_and_running), a próxima etapa é aprender mais sobre como usar os outros recursos da API JavaScript WebAssembly. Este artigo ensina o que você precisa saber.
 
-> **Nota:** Se você não estiver familiarizado com os conceitos básicos mencionados neste artigo e precisar de mais explicação, leia [WebAssembly concepts](/pt-BR/docs/WebAssembly/Concepts) primeiro, e depois volte aqui.
+> **Nota:** Se você não estiver familiarizado com os conceitos básicos mencionados neste artigo e precisar de mais explicações, leia [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts) primeiro e depois volte.
 
-## Um exemplo simples
+## Alguns exemplos simples
 
-Vamos percorrer o passo a passo de um exemplo que explica como usar a API JavaScript do WebAssembly, e como usá-la para carregar um módulo wasm em uma página web.
+Vamos percorrer alguns exemplos que explicam como usar a API WebAssembly JavaScript e como usá-la para carregar um módulo Wasm em uma página da web.
 
-> **Nota:** Você pode encontrar o código de exemplo no nosso repositório di GitHub [webassembly-examples](https://github.com/mdn/webassembly-examples).
+> **Nota:** você pode encontrar o código de exemplo em nosso [webassembly-examples](https://github.com/mdn/webassembly-examples) repositório do GitHub.
 
 ### Preparando o exemplo
 
-1. Primeiro precisamos de um módulo wasm! Pegue o nosso arquivo [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) e salve uma cópia em um novo diretório em sua máquina local.
-2. Depois, tenha certeza de que você está usando um browser com suporte ao WebAssembly. O Firefox 52+ e o Chrome 57+ já vem com WebAssembly habilitado por padrão.
-3. Depois, crie um arquivo html simples chamado `index.html` no mesmo diretório que seu arquivo wasm (você pode usar o nosso [template simples](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) caso você não tenha algum por aí).
-4. Agora, para ajudar a entender o que está acontecendo aqui, vamos olhar a representação textual do nosso módulo wasm (do qual também encontramos em [Converting WebAssembly format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
+1. Primeiro precisamos de um módulo Wasm! Pegue nosso arquivo [`simple.wasm`](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) e salve uma cópia em um novo diretório em seu local máquina.
+2. Em seguida, vamos criar um arquivo HTML simples chamado `index.html` no mesmo diretório do seu arquivo Wasm (pode usar nosso [modelo simples](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) se você não tiver um facilmente disponível).
+3. Agora, para nos ajudar a entender o que está acontecendo aqui, vamos ver a representação de texto do nosso módulo Wasm (que também encontramos em [Converting WebAssembly format to Wasm](/pt-BR/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)):
 
-    ```
-    (module
-      (func $i (import "imports" "imported_func") (param i32))
-      (func (export "exported_func")
-        i32.const 42
-        call $i))
-    ```
+   ```wasm
+   (module
+     (func $i (import "imports" "imported_func") (param i32))
+     (func (export "exported_func")
+       i32.const 42
+       call $i))
+   ```
 
-5. Na segunda linha, você perceberá que o import tem um namespace de dois níveis — a função interna `$i` que é importada do `imports.imported_func`. Precisamos refletir esse namespace de dois níveis no JavaScript ao escrever o objeto que será importado no módulo wasm. Crie um elemento `<script></script>` no seu arquivo HTML, e adicione o seguinte código:
+4. Na segunda linha, você verá que a importação tem um namespace de dois níveis — a função interna `$i` é importada de `imports.imported_func`. Precisamos refletir esse namespace de dois níveis em JavaScript ao escrever o objeto a ser importado para o módulo Wasm. Crie um elemento `<script></script>` em seu arquivo HTML e adicione o seguinte código a ele:
 
-    ```js
-    var importObject = {
-      imports: {
-          imported_func: function(arg) {
-            console.log(arg);
-          }
-        }
-      };
-    ```
+   ```js
+   const importObject = {
+     imports: { imported_func: (arg) => console.log(arg) },
+   };
+   ```
 
-Conforme explicado acima, temos nossa função que será importada em `imports.imported_func`.
+### Transmitindo o módulo WebAssembly
 
-> **Nota:** Isto poderia ser mais conciso usando [a sintaxe de arrow function do ES6](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
->
-> ```js
-> var importObject = { imports: { imported_func: arg => console.log(arg) } };
-> ```
+Uma novidade no Firefox 58 é a capacidade de compilar e instanciar módulos WebAssembly diretamente de fontes subjacentes. Isso é obtido usando [`WebAssembly.compileStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compileStreaming) e [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming). Esses métodos são mais fáceis do que suas contrapartes sem streaming, porque eles podem transformar o código de byte diretamente em instâncias `Module`/`Instance`, eliminando a necessidade de colocar separadamente o {{domxref("Response")}} em um {{jsxref("ArrayBuffer")}}.
 
-O estilo que você preferir fica a sua escolha.
+Este exemplo (consulte nossa demonstração [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) no GitHub e [visualize it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) também) mostra como usar `instantiateStreaming()` para buscar um módulo Wasm, importar uma função JavaScript nele, compilá-lo e instanciá-lo e acessar sua função exportada - tudo em uma única etapa.
 
-### Carregando e utilizando o nosso módulo wasm
-
-Com o objeto que iremos importar preparado, vamos baixar o nosso arquivo wasm, torná-lo disponível em um array buffer, e em seguida fazer uso de sua função exportada.
-
-Adicione o código abaixo no seu script:
+Adicione o seguinte ao seu script, abaixo do primeiro bloco:
 
 ```js
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  results.instance.exports.exported_func();
-});
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
-> **Nota:** Já explicamos com grandes detalhes como funciona essa síntaxe em [Loading and running WebAssembly code](/pt-BR/docs/WebAssembly/Loading_and_running#Using_Fetch). Volte lá e se atualize caso não se sinta confortável com o assunto.
+O resultado disso é que chamamos nossa função WebAssembly exportada `exported_func`, que por sua vez chama nossa função JavaScript importada `imported_func`, que registra o valor fornecido dentro da instância WebAssembly (42) no console. Se você salvar seu código de exemplo agora e carregá-lo em um navegador compatível com WebAssembly, verá isso em ação!
 
-O resultado liquido disto é que nós chamamos nossa função `exported_func` exportada pelo WebAssembly, que por sua vez chama a nossa função JavaScript importada `imported_func`, que mostra no console o valor fornecido (42) dentro da instância do WebAssembly. Se você salvar seu código de exemplo agora e carregá-lo em um browser que suporta WebAssembly, você verá isso em ação!
+> **Nota:** Este é um exemplo complicado e prolixo que alcança muito pouco, mas serve para ilustrar o que é possível — usar código WebAssembly juntamente com JavaScript em seus aplicativos da web. Como dissemos em outro lugar, o WebAssembly não pretende substituir o JavaScript; os dois, em vez disso, podem trabalhar juntos aproveitando os pontos fortes um do outro.
 
-> **Nota:** O WebAssembly está habilitado por padrão no Firefox 52+, no Chrome 57+ e no Opera mais recente (você também pode executar código wasm no Firefox 47+ habilitando a flag `javascript.options.wasm` em _about:config_, ou no Chrome (51+) e no Opera (38+) indo em _chrome://flags_ e habilitando a flag _Experimental WebAssembly_ .)
+### Carregando nosso módulo Wasm sem streaming
 
-Este exemplo é longo e um pouco complicado que alcança muito pouco, mas serve para mostrar o que é possível — usando código WebAssembly junto com JavaScript em suas aplicações web. Como já dissemos em outro lugar, o WebAssembly não pretende substituir o JavaScript; ambos podem trabalhar juntos, juntando forças.
+Se você não pode ou não quer usar os métodos de streaming descritos acima, você pode usar os métodos sem streaming [`WebAssembly.compile()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compile) / [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate) em vez disso.
 
-### Visualizando o wasm no developer tools
+Esses métodos não acessam diretamente o código de byte, então requerem uma etapa extra para transformar a resposta em um {{jsxref("ArrayBuffer")}} antes de compilar/instanciar o módulo Wasm.
 
-No Firefox 54+, o painel Debugger do Developer Tool consegue exibir a representação textual do qualquer código wasm inserido em uma página web. Para visualizá-lo, abra o painel Debugger e clique em “xxx > wasm”.
+O código equivalente ficaria assim:
 
-![](wasm-debugger-output.png)
+```js
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    results.instance.exports.exported_func();
+  });
+```
 
-Muito em breve no Firefox, além de visualizar o WebAssembly em seu formato textual, os desenvolvedores serão capazes de depurar (colocar breakpoints, inspecionar o callstack, etc.) o WebAssembly utilizando o formato textual. Assista o vídeo [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) para ter uma prévia.
+### Como visualizar o Wasm nas ferramentas do desenvolvedor
+
+No Firefox 54+, o painel do depurador da ferramenta do desenvolvedor tem funcionalidade para expor a representação de texto de qualquer código Wasm incluído em uma página da web. Para visualizá-lo, você pode ir ao Painel do Depurador e clicar na entrada "wasm://".
+
+![Painel do depurador de ferramentas do desenvolvedor destacando um módulo.](wasm-debug.png)
+
+Além de visualizar o WebAssembly como texto, os desenvolvedores podem depurar (colocar pontos de interrupção, inspecionar a pilha de chamadas, passo único, etc.) WebAssembly usando o formato de texto.
 
 ## Memória
 
-No modelo de memória de baixo nível do WebAssembly, a memória é representada como uma faixa contínua de bytes não tipados chamados de [Memória Linear](http://webassembly.org/docs/semantics/#linear-memory) que são lidos e escritos por [instruções de carga e armazenamento](http://webassembly.org/docs/semantics/#linear-memory-accesses) dentro do módulo. Neste modelo de memória, qualquer carga ou armazenamento pode acessar qualquer byte na memória linear inteira, o que é necessário para representar fielmente conceitos de C/C++ como ponteiros.
+No modelo de memória de baixo nível do WebAssembly, a memória é representada como um intervalo contíguo de bytes não digitados chamados [Linear Memory](https://webassembly.github.io/spec/core/exec/index.html) que são lidos e escrito por [instruções de carregamento e armazenamento](https://webassembly.github.io/spec/core/exec/instructions.html#memory-instructions) dentro do módulo. Nesse modelo de memória, qualquer load ou store pode acessar qualquer byte em toda a memória linear, o que é necessário para representar fielmente conceitos C/C++ como ponteiros.
 
-Ao contrário de um programa C/C++ nativo, contudo, onde a coleção de memória disponível se estende por todo o processo, a memória que é acessível por uma instância de WebAssembly em particular se limita a uma única — e potencialmente muito pequena — coleção contida por um objeto do tipo WebAssembly Memory. Isto possibilita que uma única aplicação web utilize diversas bibliotecas independentes — cada uma das quais estiverem utilizando o WebAssembly internamente — para ter memórias separadas que são totalmente isoladas umas das outras.
+Ao contrário de um programa C/C++ nativo, no entanto, onde o intervalo de memória disponível abrange todo o processo, a memória acessível por uma Instância WebAssembly específica é confinada a um intervalo específico — potencialmente muito pequeno — contido por um objeto WebAssembly Memory. Isso permite que um único aplicativo da Web use várias bibliotecas independentes — cada uma delas usando o WebAssembly internamente — para ter memórias separadas totalmente isoladas umas das outras. Além disso, implementações mais recentes também podem criar [memórias compartilhadas](/pt-BR/docs/WebAssembly/Understanding_the_text_format#shared_memories), que podem ser transferidas entre os contextos Window e Worker usando [`postMessage()`](/pt-BR/docs/Web/API/Window/postMessage) e usadas em vários lugares.
 
-In JavaScript, a Memory instance can be thought of as a resizable ArrayBuffer and, just as with ArrayBuffers, a single web app can create many independent Memory objects. You can create one using the {{jsxref("WebAssembly.Memory()")}} constructor, which takes as arguments an initial size and (optionally) a maximum size.
+Em JavaScript, uma instância de Memory pode ser considerada como um [`ArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) redimensionável (ou [`SharedArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer), no caso de memórias compartilhadas) e, assim como com `ArrayBuffers`, um único aplicativo da web pode criar muitos objetos Memory independentes. Você pode criar um usando o construtor [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory), que recebe como argumentos um tamanho inicial e (opcionalmente) um tamanho máximo e um `shared` propriedade que informa se é uma memória compartilhada ou não.
 
-Let’s start exploring this by looking at a quick example.
+Vamos começar a explorar isso observando um exemplo rápido.
 
-1. Create another new simple HTML page (copy our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) and call it `memory.html`. Add a `<script></script>` element to the page.
-2. Now add the following line to the top of your script, to create a memory instance:
+1. Crie outra nova página HTML simples (copie nosso [modelo simples](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) e chame-a de `memory.html`. Adicione um elemento `<script></script>` à página.
+2. Agora adicione a seguinte linha ao topo do seu script, para criar uma instância de memória:
 
-    ```js
-    var memory = new WebAssembly.Memory({initial:10, maximum:100});
-    ```
+   ```js
+   const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+   ```
 
-    The unit of `initial` and `maximum` is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.
+   A unidade de `initial` e `maximum` são as páginas WebAssembly — elas são fixadas em 64KB de tamanho. Isso significa que a instância de memória acima tem um tamanho inicial de 640 KB e um tamanho máximo de 6,4 MB.
 
-    WebAssembly memory exposes its bytes by simply providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
+   A memória WebAssembly expõe seus bytes fornecendo um getter/setter de buffer que retorna um ArrayBuffer. Por exemplo, para escrever 42 diretamente na primeira palavra da memória linear, você pode fazer isso:
 
-    ```js
-    new Uint32Array(memory.buffer)[0] = 42;
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0] = 42;
+   ```
 
-    You can then return the same value using:
+   Você pode retornar o mesmo valor usando:
 
-    ```js
-    new Uint32Array(memory.buffer)[0]
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0];
+   ```
 
-3. Try this now in your demo — save what you’ve added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
+3. Tente isso agora em sua demonstração — salve o que você adicionou até agora, carregue-o em seu navegador e tente inserir as duas linhas acima em seu console JavaScript.
 
-### Growing memory
+### Aumentando a memória
 
-A memory instance can be grown by calls to {{jsxref("Memory.prototype.grow()")}}, where again the argument is specified in units of WebAssembly pages:
+Uma instância de memória pode ser aumentada por chamadas para [`Memory.prototype.grow()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/grow), onde novamente o argumento é especificado em unidades de páginas WebAssembly:
 
 ```js
 memory.grow(1);
 ```
 
-If a maximum value was supplied upon creation of the memory instance, attempts to grow past this maximum will throw a {{jsxref("WebAssembly.RangeError")}} exception. The engine takes advantage of this supplied upper-bounds to reserve memory ahead of time, which can make resizing more efficient.
+Se um valor máximo foi fornecido na criação da instância de memória, as tentativas de ultrapassar esse máximo gerarão uma exceção {{jsxref("RangeError")}}. O mecanismo aproveita esses limites superiores fornecidos para reservar memória antecipadamente, o que pode tornar o redimensionamento mais eficiente.
 
-Note: Since an {{domxref("ArrayBuffer")}}’s byteLength is immutable, after a successful {{jsxref("Memory.prototype.grow()")}} operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become “detached”, or disconnected from the underlying memory they previously pointed to.
+Nota: Como o byteLength de um {{jsxref("ArrayBuffer")}} é imutável, após um [`Memory.prototype.grow()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/grow) bem-sucedido operação, o buffer getter retornará um novo objeto ArrayBuffer (com o novo byteLength) e quaisquer objetos ArrayBuffer anteriores serão "desconectados" ou desconectados da memória subjacente para a qual apontaram anteriormente.
 
-Just like functions, linear memories can be defined inside a module or imported. Similarly, a module may also optionally export its memory. This means that JavaScript can get access to the memory of a WebAssembly instance either by creating a new `WebAssembly.Memory` and passing it in as an import or by receiving a Memory export (via [`Instance.prototype.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
+Assim como as funções, as memórias lineares podem ser definidas dentro de um módulo ou importadas. Da mesma forma, um módulo também pode, opcionalmente, exportar sua memória. Isso significa que o JavaScript pode obter acesso à memória de uma instância do WebAssembly criando um novo `WebAssembly.Memory` e transmitindo-o como uma importação ou recebendo uma exportação de memória (através de [`Instance.prototype.exports`](/pt-BR/docs/WebAssembly/JavaScript_interface/Instance/exports)).
 
-### More involved memory example
+### Exemplo de memória mais envolvida
 
-Let’s make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that sums an array of integers. You can find this at [memory.wasm.](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)
+Vamos tornar as afirmações acima mais claras observando um exemplo de memória mais envolvido — um módulo WebAssembly que importa a instância de memória que definimos anteriormente, a preenche com uma matriz de inteiros e os soma. Você pode encontrar isso em [memory.wasm.](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm)
 
-1. make a local copy of `memory.wasm` in the same directory as before.
+1. faça uma cópia local de `memory.wasm` no mesmo diretório de antes.
 
-    > **Nota:** You can see the module’s text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+   > **Nota:** você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
-2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
+2. Volte para seu arquivo de exemplo `memory.html` e busque, compile e instancie seu módulo Wasm como antes — adicione o seguinte ao final de seu script:
 
-    ```js
-    fetch('memory.wasm').then(response =>
-      response.arrayBuffer()
-    ).then(bytes =>
-      WebAssembly.instantiate(bytes)
-    ).then(results => {
-      // add your code here
-    });
-    ```
+   ```js
+   WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+     js: { mem: memory },
+   }).then((results) => {
+     // adicione o código aqui
+   });
+   ```
 
-3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance’s linear memory (`mem`). Add the following into your code, where indicated:
+3. Como este módulo exporta sua memória, dada uma instância deste módulo chamada instance podemos usar uma função exportada `accumulate()` para criar e preencher um array de entrada diretamente na memória linear da instância do módulo (`mem`). Adicione o seguinte em seu código, onde indicado:
 
-    ```js
-    var i32 = new Uint32Array(results.instance.exports.mem.buffer);
-    for (var i = 0; i < 10; i++) {
-      i32[i] = i;
-    }
+   ```js
+   const i32 = new Uint32Array(memory.buffer);
 
-    var sum = results.instance.exports.accumulate(0, 10);
-    console.log(sum);
-    ```
+   for (let i = 0; i < 10; i++) {
+     i32[i] = i;
+   }
 
-Note how we create the {{domxref("Uint32Array")}} view on the Memory object’s buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
+   const sum = results.instance.exports.accumulate(0, 10);
+   console.log(sum);
+   ```
 
-As importações de memória funcionam como importações de função, apenas objetos de memória são passados como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
+Observe como criamos a visualização {{jsxref("Uint32Array")}} no buffer do objeto Memory ([`Memory.prototype.buffer`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/buffer)), não na própria Memória.
+
+As importações de memória funcionam exatamente como as importações de função, apenas objetos de memória são passados como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
 
 - Eles permitem que o JavaScript busque e crie o conteúdo inicial da memória antes ou simultaneamente com a compilação do módulo.
-- Eles permitem que um único objeto Memory seja importado por várias instâncias do módulo, o que é um bloco de construção crítico para implementar a vinculação dinâmica no WebAssembly.
+- Eles permitem que um único objeto de memória seja importado por várias instâncias de módulo, o que é um bloco de construção crítico para implementar a vinculação dinâmica no WebAssembly.
 
-> **Nota:** You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) — this version uses the [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) function.
+> **Nota:** Você pode encontrar nossa demonstração completa em [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
 
-## Tables
+## Tabelas
 
-A WebAssembly Table is a resizable typed array of [references](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) that can be accessed by both JavaScript and WebAssembly code. While Memory provides a resizable typed array of raw bytes, it is unsafe for references to be stored in a Memory since a reference is an engine-trusted value whose bytes must not be read or written directly by content for safety, portability, and stability reasons.
+Uma tabela WebAssembly é uma matriz redimensionável de [referências](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) que pode ser acessada por código JavaScript e WebAssembly. Embora a memória forneça uma matriz digitada redimensionável de bytes brutos, não é seguro que as referências sejam armazenadas em uma memória, pois uma referência é um valor confiável do mecanismo cujos bytes não devem ser lidos ou gravados diretamente pelo conteúdo por motivos de segurança, portabilidade e estabilidade .
 
-Tables have an element type, which limits the types of reference that can be stored in the table. In the current iteration of WebAssembly, there is only one type of reference needed by WebAssembly code — functions — and thus only one valid element type. In future iterations, more element types will be added.
+As tabelas possuem um tipo de elemento, que limita os tipos de referência que podem ser armazenados na tabela. Na iteração atual do WebAssembly, há apenas um tipo de referência necessária para o código do WebAssembly — funções — e, portanto, apenas um tipo de elemento válido. Em iterações futuras, mais tipos de elementos serão adicionados.
 
-Function references are necessary to compile languages like C/C++ that have function pointers. In a native implementation of C/C++, a function pointer is represented by the raw address of the function’s code in the process’s virtual address space and so, for the safety reasons mentioned above, cannot be stored directly in linear memory. Instead, function references are stored in a table and their indexes, which are integers and can be stored in linear memory, are passed around instead.
+Referências de função são necessárias para compilar linguagens como C/C++ que possuem ponteiros de função. Em uma implementação nativa de C/C++, um ponteiro de função é representado pelo endereço bruto do código da função no espaço de endereço virtual do processo e, portanto, pelas razões de segurança mencionadas acima, não pode ser armazenado diretamente na memória linear. Em vez disso, as referências de função são armazenadas em uma tabela e seus índices, que são inteiros e podem ser armazenados na memória linear, são passados.
 
-When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference. Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
+Quando chega a hora de chamar um ponteiro de função, o chamador do WebAssembly fornece o índice, que pode então ter limites de segurança verificados na tabela antes de indexar e chamar a referência de função indexada. Assim, as tabelas são atualmente um primitivo de baixo nível usado para compilar recursos de linguagem de programação de baixo nível com segurança e portabilidade.
 
-Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](http://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
+Tabelas podem ser modificadas via [`Table.prototype.set()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/set), que atualiza um dos valores em uma tabela, e [`Table.prototype.grow()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/grow), que aumenta o número de valores que podem ser armazenados em uma tabela. Isso permite que o conjunto de funções que podem ser chamadas indiretamente mude com o tempo, o que é necessário para [técnicas de vinculação dinâmica](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). As mutações são imediatamente acessíveis via [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get) em JavaScript e para módulos Wasm.
 
-### A table example
+### Um exemplo de tabela
 
-Let’s looking at an simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
+Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e exporta uma tabela com dois elementos: o elemento 0 retorna 13 e o elemento 1 retorna 42. Você pode encontrar isso em [table.wasm](https://raw.githubusercontent. com/mdn/webassembly-examples/master/js-api-examples/table.wasm).
 
-1. Make a local copy of `table.wasm` in a new directory.
+1. Faça uma cópia local de `table.wasm` em um novo diretório.
 
-    > **Nota:** You can see the module’s text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
+   > **Nota:** você pode ver a representação de texto do módulo em [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
-2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
-3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
+2. Crie uma nova cópia do nosso [modelo HTML](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) no mesmo diretório e chame-o de `table.html`.
+3. Como antes, busque, compile e instancie seu módulo Wasm — adicione o seguinte a um elemento {{htmlelement("script")}} na parte inferior do corpo do HTML:
 
-    ```js
-    fetch('table.wasm').then(response =>
-      response.arrayBuffer()
-    ).then(bytes =>
-      WebAssembly.instantiate(bytes)
-    ).then(results => {
-      // add your code here
-    });
-    ```
+   ```js
+   WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
+     // adicione o código aqui
+   });
+   ```
 
-4. Now let’s access the data in the tables — add the following lines to your code in the indicated place:
+4. Agora vamos acessar os dados nas tabelas — adicione as seguintes linhas ao seu código no local indicado:
 
-    ```js
-    var tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
-    ```
+   ```js
+   const tbl = results.instance.exports.tbl;
+   console.log(tbl.get(0)()); // 13
+   console.log(tbl.get(1)()); // 42
+   ```
 
-This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
+Este código acessa cada referência de função armazenada na tabela por sua vez e as instâncias para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
 
-> **Nota:** You can find our complete demo at [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) — this version uses the [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) function.
+> **Nota:** você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
-## Multiplicity
+## Globais
 
-Now we’ve demonstrated usage of the main key WebAssembly building blocks, this is a good place to mention the concept of multiplicity. This provides WebAssembly with a multitude of advances in terms of architectural efficiency:
+O WebAssembly tem a capacidade de criar instâncias de variáveis globais, acessíveis a partir de JavaScript e importáveis/exportáveis em uma ou mais instâncias [`WebAssembly.Module`](/pt-BR/docs/WebAssembly/JavaScript_interface/Module). Isso é muito útil, pois permite a vinculação dinâmica de vários módulos.
 
-- One module can have N Instances, in the same way that one function literal can produce N closure values.
-- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Tables and Memories](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)).
-- One module instance can use 0–1 table instances — this is the "function address space" of the instance, used to implement C function pointers. Future versions of WebAssembly may allow 0–N table instances per module instance in the future.
-- One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](http://webassembly.org/docs/dynamic-linking).
+Para criar uma instância global WebAssembly de dentro do seu JavaScript, você usa o construtor [`WebAssembly.Global()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Global), que se parece com isto:
 
-You can see multiplicity in action in our Understanding text format article — see the Mutating tables and dynamic linking section (TBD).
+```js
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+```
 
-## Summary
+Você pode ver que isso requer dois parâmetros:
 
-This article has taken you through the basics of using the WebAssembly JavaScript API to include a WebAssembly module in a JavaScript context and make use of its functions, and how to use WebAssembly memory and tables in JavaScript. We also touched on the concept of multiplicity.
+- Um objeto que contém duas propriedades que descrevem a variável global:
 
-## See also
+  - `value`: seu tipo de dados, que pode ser qualquer tipo de dados aceito nos módulos WebAssembly — `i32`, `i64`, `f32` ou `f64`.
+  - `mutável`: um booleano que define se o valor é mutável ou não.
 
-- [webassembly.org](http://webassembly.org/)
-- [WebAssembly concepts](/pt-BR/docs/WebAssembly/Concepts)
+- Um valor contendo o valor real da variável. Pode ser qualquer valor, desde que seu tipo corresponda ao tipo de dados especificado.
+
+Então, como usamos isso? No exemplo a seguir, definimos um global como um tipo `i32` mutável, com valor 0.
+
+O valor do global é então alterado, primeiro para `42` usando a propriedade `Global.value`, e então para 43 usando a função `incGlobal()` exportada do módulo `global.wasm` (isso adiciona 1 a qualquer valor que lhe for atribuído e, em seguida, retorna o novo valor).
+
+```js
+const output = document.getElementById("output");
+
+function assertEq(msg, got, expected) {
+  const result =
+    got === expected
+      ? `SUCESSO! Obteve: ${got}<br>`
+      : `FALHA!<br>Obteve: ${got}<br>Esperado: ${expected}<br>`;
+  output.innerHTML += `Testando ${msg}: ${result}`;
+}
+
+assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
+
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq("obtendo valor inicial de wasm", instance.exports.getGlobal(), 0);
+    global.value = 42;
+    assertEq(
+      "obtendo valor atualizado por JS do wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
+    instance.exports.incGlobal();
+    assertEq("obtendo valor atualizado de JS", global.value, 43);
+  },
+);
+```
+
+> **Nota:** Você pode ver o exemplo [executando ao vivo no GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); consulte também o [código-fonte](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+
+## Multiplicidade
+
+Agora que demonstramos o uso dos principais blocos de construção do WebAssembly, este é um bom lugar para mencionar o conceito de multiplicidade. Isso fornece ao WebAssembly uma infinidade de avanços em termos de eficiência arquitetônica:
+
+- Um módulo pode ter N instâncias, da mesma forma que um literal de função pode produzir N valores de fechamento.
+- Uma instância de módulo pode usar instâncias de memória 0–1, que fornecem o "espaço de endereço" da instância. Versões futuras do WebAssembly podem permitir instâncias de memória 0–N por instância de módulo (consulte [Múltiplas memórias](https://webassembly.org/roadmap/)).
+- Uma instância de módulo pode usar instâncias de tabela 0–1 — este é o "espaço de endereço de função" da instância, usado para implementar ponteiros de função C. Versões futuras do WebAssembly podem permitir 0–N instâncias de tabela por instância de módulo.
+- Uma instância de memória ou tabela pode ser usada por instâncias de módulo 0–N — todas essas instâncias compartilham o mesmo espaço de endereço, permitindo [vinculação dinâmica](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md).
+
+Você pode ver a multiplicidade em ação em nosso artigo Compreendendo o formato de texto — consulte a [seção Tabelas mutantes e vinculação dinâmica](/pt-BR/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
+
+## Resumo
+
+Este artigo apresentou os fundamentos do uso da API WebAssembly JavaScript para incluir um módulo WebAssembly em um contexto JavaScript e fazer uso de suas funções e como usar a memória e as tabelas do WebAssembly em JavaScript. Também tocamos no conceito de multiplicidade.
+
+## Veja também
+
+- [webassembly.org](https://webassembly.org/)
+- [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
+- [WebAssembly no Mozilla Research](https://research.mozilla.org/)

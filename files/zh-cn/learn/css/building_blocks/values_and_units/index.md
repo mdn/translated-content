@@ -10,7 +10,7 @@ CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上�
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -193,11 +193,11 @@ CSS 中的值类型是一种定义了一些可使用的值的集合的方式。�
     </tr>
     <tr>
       <td><code>vb</code></td>
-      <td>在根元素的<a href="/zh-CN/docs/Web/CSS/CSS_Logical_Properties#块向与行向">块向</a>上，初始包含块的尺寸的 1%。</td>
+      <td>在根元素的<a href="/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向与行向">块向</a>上，初始包含块的尺寸的 1%。</td>
     </tr>
     <tr>
       <td><code>vi</code></td>
-      <td>在根元素的<a href="/zh-CN/docs/Web/CSS/CSS_Logical_Properties#块向与行向">行向</a>上，初始包含块的尺寸的 1%。</td>
+      <td>在根元素的<a href="/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向与行向">行向</a>上，初始包含块的尺寸的 1%。</td>
     </tr>
     <tr>
       <td><code>svw</code>、<code>svh</code></td>

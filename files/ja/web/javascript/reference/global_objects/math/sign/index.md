@@ -38,13 +38,13 @@ Math.sign(x)
 
 ```js
 if (!Math.sign) {
-  Math.sign = function(x) {
+  Math.sign = function (x) {
     // If x is NaN, the result is NaN.
     // If x is -0, the result is -0.
     // If x is +0, the result is +0.
     // If x is negative and not -0, the result is -1.
     // If x is positive and not +0, the result is +1.
-    return ((x > 0) - (x < 0)) || +x;
+    return (x > 0) - (x < 0) || +x;
     // A more aesthetic pseudo-representation:
     //
     // ( (x > 0) ? 1 : 0 )  // if x is positive, then positive one
@@ -64,14 +64,14 @@ if (!Math.sign) {
 ### Math.sign() の使用
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## 仕様書

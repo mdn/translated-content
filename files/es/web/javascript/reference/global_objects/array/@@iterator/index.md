@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator
 ---
 
 {{JSRef}}
@@ -23,7 +22,7 @@ El valor inicial dado por el **iterador** {{jsxref("Array.prototype.values()", "
 ### Iteración usando el bucle `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 // nuestro navegador debe ser compatible con el bucle for..of
 // y variables let-scoped en bucles for
@@ -35,7 +34,7 @@ for (let letter of eArr) {
 ### Iteración alternativa
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y

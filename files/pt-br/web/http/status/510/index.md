@@ -17,6 +17,6 @@ Na especificação, um cliente pode mandar uma requisição que contenha uma dec
 
 ## Especificações
 
-| Especificação                                            | Título                      |
-| -------------------------------------------------------- | --------------------------- |
+| Especificação                             | Título                      |
+| ----------------------------------------- | --------------------------- |
 | {{RFC("2774", "510 Not Extended" , "7")}} | An HTTP Extension Framework |

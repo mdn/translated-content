@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
-translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -81,13 +80,11 @@ draw();
 - array
   - : {{domxref("Uint8Array")}}, в который будут скопированы данные частотной области.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-analysernode-getbytefrequencydata', 'getByteFrequencyData()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,13 +1,8 @@
 ---
 title: Primitive
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/Primitive
-original_slug: Глоссарий/Primitive
 ---
+
 **Примитив** (значение примитивного типа, примитивный тип данных) это данные, которые не являются {{glossary("object", "объектом")}} и не имеют {{glossary("method","методов")}}. В {{Glossary("JavaScript")}} 7 простых типов данных: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("boolean")}}, {{Glossary("null")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}} (новое в {{Glossary("ECMAScript")}} 2015), {{Glossary("bigint")}}.
 
 Чаще всего значение примитивного типа представлено в низкоуровневой реализации языка.
@@ -23,18 +18,18 @@ original_slug: Глоссарий/Primitive
 ```js
 // Using a string method doesn't mutate the string
 var bar = "baz";
-console.log(bar);               // baz
+console.log(bar); // baz
 bar.toUpperCase();
-console.log(bar);               // baz
+console.log(bar); // baz
 
 // Using an array method mutates the array
 var foo = [];
-console.log(foo);               // []
+console.log(foo); // []
 foo.push("plugh");
-console.log(foo);               // ["plugh"]
+console.log(foo); // ["plugh"]
 
 // Assignment gives the primitive a new (not a mutated) value
-bar = bar.toUpperCase();       // BAZ
+bar = bar.toUpperCase(); // BAZ
 ```
 
 Примитив может быть заменён, но он не может быть напрямую изменён.
@@ -51,21 +46,21 @@ let foo = 5;
 
 // Defining a function that should change the Primitive value
 function addTwo(num) {
-   num += 2;
+  num += 2;
 }
 // Another function trying to do the same thing
 function addTwo_v2(foo) {
-   foo += 2;
+  foo += 2;
 }
 
 // Calling our first function while passing our Primitive as an argument
 addTwo(foo);
 // Getting the current Primitive value
-console.log(foo);   // 5
+console.log(foo); // 5
 
 // Trying again with our second function...
 addTwo_v2(foo);
-console.log(foo);   // 5
+console.log(foo); // 5
 ```
 
 Вы ожидали, что будет 7 вместо 5? Если так, тогда прочитайте, как работает этот код:

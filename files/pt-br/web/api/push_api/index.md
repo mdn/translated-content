@@ -1,7 +1,6 @@
 ---
 title: API Push
 slug: Web/API/Push_API
-original_slug: Web/API/API_Push
 ---
 
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
@@ -50,9 +49,7 @@ As seguintes informações adicionais para a [Service Worker API](/pt-BR/docs/We
 
 ## Especificações
 
-| Especificação                    | Status                       | Comentário        |
-| -------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

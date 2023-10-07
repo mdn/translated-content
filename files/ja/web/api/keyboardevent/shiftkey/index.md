@@ -26,7 +26,7 @@ l10n:
       function showChar(e) {
         alert(
           "押されたキー: " +
-            String.fromCharCode(e.charCode) + 
+            String.fromCharCode(e.charCode) +
             "\n" +
             "charCode: " +
             e.charCode +
@@ -36,7 +36,7 @@ l10n:
             "\n" +
             "ALT key pressed: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>
@@ -44,7 +44,8 @@ l10n:
 
   <body onkeypress="showChar(event);">
     <p>
-      SHIFT キーを押しながら、または押さずに、任意の文字キーを押してください。<br />
+      SHIFT
+      キーを押しながら、または押さずに、任意の文字キーを押してください。<br />
       SHIFT キーと ALT キーを併用することもできます。
     </p>
   </body>

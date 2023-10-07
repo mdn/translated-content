@@ -2,12 +2,12 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: 4f5e90f47c518afd1e3c11a9fb32b933cc8434e9
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
-**`AnimationEvent`** インターフェイスは、[アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)に関する情報を提供するイベントを表します。
+**`AnimationEvent`** インターフェイスは、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)に関する情報を提供するイベントを表します。
 
 {{InheritanceDiagram}}
 
@@ -16,7 +16,7 @@ l10n:
 - {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
   - : 指定された引数で `AnimationEvent` イベントを生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("Event")}} から継承されるプロパティもあります_。
 
@@ -27,7 +27,7 @@ _親である {{domxref("Event")}} から継承されるプロパティもあり
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
   - : 文字列で、 `'::'` で始まる、アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。このアニメーションが擬似要素ではなく要素で実行されている場合は、空文字列 `''` になります。
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("Event")}} からメソッドを継承しています_。
 
@@ -41,5 +41,5 @@ _親である {{domxref("Event")}} からメソッドを継承しています_�
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - アニメーションに関する CSS プロパティとアットルール: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

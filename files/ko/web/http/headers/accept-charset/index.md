@@ -11,7 +11,7 @@ slug: Web/HTTP/Headers/Accept-Charset
 
 현재는 UTF-8이 잘 지원되고 있고 문자 인코딩을 위해 압도적으로 선호되는 선택입니다. [더 적은 설정 기반의 엔트로피(불확실성)를 통해 좀 더 나은 개인정보 보호를 보장하기 위해](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), 모든 브라우저들은 `Accept-Charset` 헤더를 생략합니다. Chrome, Firefox, Internet Explorer, Opera, Safari는 이 헤더를 폐기했습니다.
 
-오늘날 `Accept-Charset`은 널리 알려진 [금지된 헤더](/en-US/docs/Glossary/Forbidden_header_name) 중 하나입니다.
+오늘날 `Accept-Charset`은 널리 알려진 [금지된 헤더](/ko/docs/Glossary/Forbidden_header_name) 중 하나입니다.
 
 <table class="properties">
   <tbody>

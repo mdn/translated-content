@@ -1,13 +1,6 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-tags:
-  - En-tête de réponse
-  - HTTP
-  - Reference
-  - Réponse
-  - en-tête
-translation_of: Web/HTTP/Headers/Vary
 ---
 
 {{HTTPSidebar}}

@@ -26,13 +26,13 @@ Void.
 ## 例子
 
 ```js
-var button = document.querySelector('button');
-var evtSource = new EventSource('sse.php');
+var button = document.querySelector("button");
+var evtSource = new EventSource("sse.php");
 
-button.onclick = function() {
-  console.log('Connection closed');
+button.onclick = function () {
+  console.log("Connection closed");
   evtSource.close();
-}
+};
 ```
 
 > **备注：** 你可以在 Github 上查看这整个例子： [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)

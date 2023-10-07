@@ -1,7 +1,6 @@
 ---
 title: Stacking context
 slug: Glossary/Stacking_context
-original_slug: Glossario/Stacking_context
 ---
 
 **Stacking context** refere-se refere a como elementos de uma página se empilham sobre outros elementos, assim como você pode organizar cards em cima de sua mesa, lado a lado ou sobrepostas.

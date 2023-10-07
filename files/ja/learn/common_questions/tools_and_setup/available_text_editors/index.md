@@ -1,7 +1,6 @@
 ---
 title: どんなテキストエディターが利用可能？
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
-original_slug: Learn/Common_questions/Available_text_editors
 ---
 
 この記事ではウェブ開発向けのテキストエディターをインストールする際に考慮すべき点をいくつか取り上げます。
@@ -381,7 +380,7 @@ original_slug: Learn/Common_questions/Available_text_editors
 - 構文強調表示の設定や色の変更
 - [インデント](<https://en.wikipedia.org/wiki/Indentation_(typesetting)#Indentation_in_programming>)の幅をいじって、ニーズに合わせて適切な設定にする。
 - 自動保存とセッション保存の設定を確認する
-- 何らかの利用できる[プラグイン](<https://ja.wikipedia.org/wiki/プラグイン>)を設定し、新しいプラグインの入手方法を調査する
+- 何らかの利用できる[プラグイン](https://ja.wikipedia.org/wiki/プラグイン)を設定し、新しいプラグインの入手方法を調査する
 - カラースキームの変更
 - ビューの設定を調整し、ビューのレイアウトを変更する方法を確認する
 - エディターが対応しているプログラミング言語/技術を確認する
@@ -406,7 +405,7 @@ original_slug: Learn/Common_questions/Available_text_editors
 
 - **[構文強調](https://ja.wikipedia.org/wiki/シンタックスハイライト)**。使用する技術のキーワードを着色表示することで、ファイルが読みやすくなります。
 - **[コードの補完](https://ja.wikipedia.org/wiki/自動補完#ソースコードエディタ)**。よく出てくる構造を自動的に補完して、入力を手助けしてくれます（例えば、 HTML のタグを自動的に閉じたり、正しい CSS 属性の候補を挙げるなど）。
-- **[コードスニペット](<https://ja.wikipedia.org/wiki/スニペット>)**。新規に HTML 文書を作成していると、同じ構文が何度も出てきます。コードスニペットとして登録した文書の断片を埋めていくことで、何度も入力する労苦から解放されます。
+- **[コードスニペット](https://ja.wikipedia.org/wiki/スニペット)**。新規に HTML 文書を作成していると、同じ構文が何度も出てきます。コードスニペットとして登録した文書の断片を埋めていくことで、何度も入力する労苦から解放されます。
 
 構文強調はほとんどのテキストエディターが対応していますが、他の 2 つの機能はまだのものが多いのが現状です。使用する予定のテキストエディターが、 {{Glossary("HTML")}}、 {{Glossary("CSS")}}、それに {{Glossary("JavaScript")}} を強調できるか確認しておきましょう。
 

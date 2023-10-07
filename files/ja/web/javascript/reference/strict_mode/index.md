@@ -65,7 +65,7 @@ function sum(a = 1, b = 2) {
 
 ```js
 function myStrictFunction() {
-    // これはモジュールなので、既定で厳格モードです
+  // これはモジュールなので、既定で厳格モードです
 }
 export default myStrictFunction;
 ```

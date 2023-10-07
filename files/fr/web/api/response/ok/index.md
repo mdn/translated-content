@@ -1,15 +1,6 @@
 ---
 title: Response.ok
 slug: Web/API/Response/ok
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - ok
-translation_of: Web/API/Response/ok
 ---
 
 {{APIRef("Fetch")}}
@@ -33,13 +24,13 @@ Dans [notre exemple](https://github.com/mdn/fetch-examples/tree/master/fetch-res
 > **Note :** Nous affichons la valeur de la propriété `ok` de la réponse dans la console en haut du bloc `fetch()`.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   console.log(response.ok); // retourne true si la réponse est retournée avec succès
-  response.blob().then(function(myBlob) {
+  response.blob().then(function (myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });

@@ -19,7 +19,7 @@ slug: Learn/Performance
 - [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)
 - [JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)
 
-一旦你完成了这个模块的学习，你可能会对深入研究网络性能感到兴奋——你可以在我们的 [MDN 网络主要性能部分](/zh-CN/docs/Web/Performance)找到很多进一步的教学内容，包括性能 API的概述、测试和分析工具，以及性能瓶颈问题。
+一旦你完成了这个模块的学习，你可能会对深入研究网络性能感到兴奋——你可以在我们的 [MDN 网络主要性能部分](/zh-CN/docs/Web/Performance)找到很多进一步的教学内容，包括性能 API 的概述、测试和分析工具，以及性能瓶颈问题。
 
 ## 指南
 

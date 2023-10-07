@@ -1,17 +1,6 @@
 ---
-title: '<details> : l''élément de divulgation des détails'
+title: "<details> : l'élément de divulgation des détails"
 slug: Web/HTML/Element/details
-tags:
-  - Disclosure Box
-  - Disclosure Widget
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
-translation_of: Web/HTML/Element/details
-browser-compat: html.elements.details
 ---
 
 {{HTMLSidebar}}
@@ -121,13 +110,17 @@ En plus des évènements classiques pris en charge par les éléments HTML, l'é
 On peut alors écouter cet évènement en JavaScript afin de détecter le changement d'état du contrôle :
 
 ```js
-details.addEventListener("toggle", function(evt){
-  if(details.open) {
-    /* l'état est passé en "ouvert" */
-  } else {
-    /* l'état est passé en "fermé" */
-  }
-}, false);
+details.addEventListener(
+  "toggle",
+  function (evt) {
+    if (details.open) {
+      /* l'état est passé en "ouvert" */
+    } else {
+      /* l'état est passé en "fermé" */
+    }
+  },
+  false,
+);
 ```
 
 ## Exemples
@@ -138,10 +131,11 @@ Dans cet exemple, on utilise un élément `<details>` sans résumé/intitulé.
 
 ```html
 <details>
-  <p>Il faut un ordinateur équipé d'un système d'exploitation.
-  L'ordinateur doit disposer d'une mémoire et, idéalement, d'une sorte
-  de stockage à long terme. Un dispositif d'entrée et un dispositif de
-  sortie sont recommandés.</p>
+  <p>
+    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
+    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
+    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+  </p>
 </details>
 ```
 
@@ -158,10 +152,11 @@ Pour obtenir une boîte `<details>` dans un état ouvert, il suffit d'ajouter l'
 ```html
 <details open>
   <summary>Configuration requise</summary>
-  <p>Il faut un ordinateur équipé d'un système d'exploitation.
-  L'ordinateur doit disposer d'une mémoire et, idéalement, d'une sorte
-  de stockage à long terme. Un dispositif d'entrée et un dispositif de
-  sortie sont recommandés.</p>
+  <p>
+    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
+    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
+    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+  </p>
 </details>
 ```
 
@@ -177,7 +172,10 @@ Utilisons un peu de CSS afin de personnaliser l'apparence du contrôle fourni pa
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 
@@ -212,10 +210,11 @@ Le sélecteur `details[open]` peut être utilisé pour donner un style à l'él�
 ```html
 <details open>
   <summary>Configuration requise</summary>
-  <p>Il faut un ordinateur équipé d'un système d'exploitation.
-  L'ordinateur doit disposer d'une mémoire et, idéalement, d'une sorte
-  de stockage à long terme. Un dispositif d'entrée et un dispositif de
-  sortie sont recommandés.</p>
+  <p>
+    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
+    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
+    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+  </p>
 </details>
 ```
 
@@ -235,7 +234,10 @@ Actuellement, Chrome ne prend pas en charge cette fonctionnalité et il faut uti
 
 ```css
 details {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
   width: 620px;
 }
 
@@ -268,10 +270,11 @@ Ce CSS crée un aspect similaire à celui d'une interface à onglets, où l'acti
 ```html
 <details open>
   <summary>Configuration requise</summary>
-  <p>Il faut un ordinateur équipé d'un système d'exploitation.
-  L'ordinateur doit disposer d'une mémoire et, idéalement, d'une sorte
-  de stockage à long terme. Un dispositif d'entrée et un dispositif de
-  sortie sont recommandés.</p>
+  <p>
+    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
+    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
+    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+  </p>
 </details>
 ```
 

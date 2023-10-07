@@ -26,8 +26,10 @@ _一个 {{domxref("MediaStreamEvent")}} 作为一个 {{domxref("Event")}}, 这�
 ## 示例
 
 ```js
-pc.onaddstream = function( ev ) {
-  alert("A stream (id: '" + ev.stream.id + "') has been added to this connection.");
+pc.onaddstream = function (ev) {
+  alert(
+    "A stream (id: '" + ev.stream.id + "') has been added to this connection.",
+  );
 };
 ```
 

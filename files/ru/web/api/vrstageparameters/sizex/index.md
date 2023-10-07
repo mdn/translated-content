@@ -1,9 +1,6 @@
 ---
 title: VRStageParameters.sizeX
 slug: Web/API/VRStageParameters/sizeX
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRStageParameters/sizeX
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -28,9 +25,7 @@ var mySizeX = vrStageParametersInstance.sizeX;
 
 ## Specifications
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizex', 'sizeX')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

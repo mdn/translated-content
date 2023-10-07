@@ -1,17 +1,6 @@
 ---
 title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPackageDirectoryEntry
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 ---
 
 {{AddonSidebar()}}
@@ -23,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingEntry = browser.runtime.getPackageDirectoryEntry()
+var gettingEntry = browser.runtime.getPackageDirectoryEntry();
 ```
 
 ### Paramètres

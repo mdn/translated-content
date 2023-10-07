@@ -1,11 +1,11 @@
 ---
 title: CSS 容器查询
-slug: Web/CSS/CSS_Container_Queries
+slug: Web/CSS/CSS_container_queries
 ---
 
 {{CSSRef}}
 
-容器查询使你能够根据元素容器的大小应用样式。例如，如果容器在周围的上下文中可用的空间更少，你可以隐藏某些元素或使用较小的字体。容器查询是[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的另一种选择，后者根据视口大小或其他设备特征为元素应用样式。
+容器查询使你能够根据元素容器的大小应用样式。例如，如果容器在周围的上下文中可用的空间更少，你可以隐藏某些元素或使用较小的字体。容器查询是[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的另一种选择，后者根据视口大小或其他设备特征为元素应用样式。
 
 ![一个基于视口宽度（即浏览器的完整宽度）的媒体查询和一个基于容器上下文宽度（即容器元素的宽度）的容器查询](container-query.svg)
 
@@ -16,9 +16,9 @@ slug: Web/CSS/CSS_Container_Queries
 这些值具有以下效果：
 
 - `size`
-  - : 查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
+  - : 查询将基于容器的[行向和块向](Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
 - `inline-size`
-  - : 查询将基于容器的[行向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
+  - : 查询将基于容器的[行向](Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
 - `normal`
   - : 该元素不是任何容器大小查询的查询容器，但仍然是容器样式查询的查询容器。
 
@@ -144,7 +144,7 @@ slug: Web/CSS/CSS_Container_Queries
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)
 - CSS {{Cssxref("@container")}} at 规则
 - CSS {{Cssxref("contain")}} 属性
 - CSS {{Cssxref("container")}} 简写属性

@@ -1,17 +1,6 @@
 ---
-title: 'Django didactique Section 2: Créer le squelette du site web'
+title: "Django didactique Section 2: Créer le squelette du site web"
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Apprentissage
-  - Article
-  - Didactitiel
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation
-  - Tutoriel
-  - django
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
@@ -51,7 +40,7 @@ La création est aisée:
 1. Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
 2. Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
 
-    > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
+   > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
 
 3. Enregistrez la nouvelle application dans le projet.
 4. Liez les urls et chemins pour chaque application.
@@ -233,7 +222,7 @@ urlpatterns = [
 
 Le routage des URLs est géré à l'aide de la variable `urlpatterns`. Elle consititue une liste Python de fonctions `path()`. Chaque instance `path()` peut associer des motifs d'URL à une vue particulière, qui sera appelée si l'URL appellée correspond au motif décrit, ou vers une autre liste d'URL (dans ce cas, le motif est à considérer comme le motif de base pour le module dans lequel il est décrit). La variable `urlpatterns` contient au démarrage une seule fonction qui permet de gérer l'URL d'administration du site et utilisant le module par défaut de Django `admin.site.urls`.
 
-> **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/*des_caractères*/**. La chaîne *des_caractères* sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
+> **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/_des_caractères_/**. La chaîne _des_caractères_ sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
 
 Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
 
@@ -362,7 +351,7 @@ Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de d
 
 > **Note :** Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
 
-## Relevez le défi...
+## Relevez le défi
 
 Le dossier **catalog/** a été créé automatiquement et contient des fichiers pour les vues, modèles de données, etc. Ouvrez-les pour les consulter.
 

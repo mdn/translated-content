@@ -40,12 +40,12 @@ Reflect.preventExtensions(target)
 
 ```js
 // オブジェクトは既定で拡張可能。
-let empty = {}
-Reflect.isExtensible(empty)  // === true
+let empty = {};
+Reflect.isExtensible(empty); // === true
 
 // ...しかし、変更できる。
-Reflect.preventExtensions(empty)
-Reflect.isExtensible(empty)  // === false
+Reflect.preventExtensions(empty);
+Reflect.isExtensible(empty); // === false
 ```
 
 ### Object.preventExtensions() との違い
@@ -53,10 +53,10 @@ Reflect.isExtensible(empty)  // === false
 このメソッドへの最初の引数がオブジェクトではない (プリミティブである) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.preventExtensions()")}} では、 `target` がオブジェクトではない場合はオブジェクトに強制的に変換されます。
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 

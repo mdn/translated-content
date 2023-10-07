@@ -14,9 +14,9 @@ slug: Web/HTTP/Headers/If-Match
 - 对于 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 方法，搭配 {{HTTPHeader("Range")}}首部使用，可以用来保证新请求的范围与之前请求的范围是对同一份资源的请求。如果 ETag 无法匹配，那么需要返回 {{HTTPStatus("416")}} (Range Not Satisfiable，范围请求无法满足) 响应。
 - 对于其他方法来说，尤其是 {{HTTPMethod("PUT")}}, `If-Match` 首部可以用来避免[更新丢失问题](https://www.w3.org/1999/04/Editing/#3.1)。它可以用来检测用户想要上传的不会覆盖获取原始资源之后做出的更新。如果请求的条件不满足，那么需要返回 {{HTTPStatus("412")}} (Precondition Failed，先决条件失败) 响应。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

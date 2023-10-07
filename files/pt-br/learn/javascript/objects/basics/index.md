@@ -1,7 +1,6 @@
 ---
 title: O básico sobre objetos JavaScript
 slug: Learn/JavaScript/Objects/Basics
-original_slug: Aprender/JavaScript/Objetos/Básico
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
@@ -15,9 +14,9 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
       <td>
         Interação básica com o computador, entendimento básico de HTML e CSS,
         familiaridade com o básico de JavaScript (ver
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
         e
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >Elementos construtivos</a
         >).
       </td>
@@ -55,28 +54,39 @@ Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas est
 
 ```js
 var pessoa = {
-  nome: ['Bob', 'Smith'],
+  nome: ["Bob", "Smith"],
   idade: 32,
-  sexo: 'masculino',
-  interesses: ['música', 'esquiar'],
-  bio: function() {
-    alert(this.nome[0] + ' ' + this.nome[1] + ' tem ' + this.idade + ' anos de idade. Ele gosta de ' + this.interesses[0] + ' e ' + this.interesses[1] + '.');
+  sexo: "masculino",
+  interesses: ["música", "esquiar"],
+  bio: function () {
+    alert(
+      this.nome[0] +
+        " " +
+        this.nome[1] +
+        " tem " +
+        this.idade +
+        " anos de idade. Ele gosta de " +
+        this.interesses[0] +
+        " e " +
+        this.interesses[1] +
+        ".",
+    );
   },
-  saudacao: function() {
-    alert('Oi! Eu sou ' + this.nome[0] + '.');
-  }
+  saudacao: function () {
+    alert("Oi! Eu sou " + this.nome[0] + ".");
+  },
 };
 ```
 
 Depois de salvar e atualizar, tente inserir alguns dos itens a seguir no console JavaScript no devtools do seu navegador:
 
 ```js
-pessoa.nome
-pessoa.nome[0]
-pessoa.idade
-pessoa.interesses[1]
-pessoa.bio()
-pessoa.saudacao()
+pessoa.nome;
+pessoa.nome[0];
+pessoa.idade;
+pessoa.interesses[1];
+pessoa.bio();
+pessoa.saudacao();
 ```
 
 Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!
@@ -89,7 +99,7 @@ Então, o que está acontecendo? Bem, um objeto é composto de vários membros, 
 var nomeDoObjeto = {
   nomeMembro1: valorMembro1,
   nomeMembro2: valorMembro2,
-  nomeMembro3: valorMembro3
+  nomeMembro3: valorMembro3,
 };
 ```
 
@@ -104,9 +114,9 @@ Um objeto como esse é chamado de **objeto literal** — ao pé da letra, escrev
 Acima, você acessou as propriedades de objetos e métodos usando **notação de ponto**. O objeto nome (pessoa) atua como **namespace** (espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer coisa **encapsulada** dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo:
 
 ```js
-pessoa.idade
-pessoa.interesse[1]
-pessoa.bio()
+pessoa.idade;
+pessoa.interesse[1];
+pessoa.bio();
 ```
 
 ### Sub-namespaces
@@ -129,22 +139,22 @@ nome : {
 Aqui estamos efetivamente criando um **sub-namespace**. Parece difícil, mas não é — para acessar esses itens você apenas precisa encadear mais um passo ao final de outro ponto. Tente isso aqui no console:
 
 ```js
-pessoa.nome.primeiro
-pessoa.nome.ultimo
+pessoa.nome.primeiro;
+pessoa.nome.ultimo;
 ```
 
 **Importante**: Nesse ponto você também precisará revisar seus métodos e mudar quaisquer instâncias de
 
 ```js
-nome[0]
-nome[1]
+nome[0];
+nome[1];
 ```
 
 para
 
 ```js
-nome.primeiro
-nome.ultimo
+nome.primeiro;
+nome.ultimo;
 ```
 
 Caso contrário seus métodos não funcionarão.
@@ -154,15 +164,15 @@ Caso contrário seus métodos não funcionarão.
 Há outra forma de acessar propriedades do objeto — usando notação de colchetes. Ao invés desses:
 
 ```js
-pessoa.idade
-pessoa.nome.primeiro
+pessoa.idade;
+pessoa.nome.primeiro;
 ```
 
 Você pode usar:
 
 ```js
-pessoa['idade']
-pessoa['nome']['primeiro']
+pessoa["idade"];
+pessoa["nome"]["primeiro"];
 ```
 
 Fica muito parecido com a maneira que acessamos itens de um array, e é basicamente a mesma coisa, só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de **arrays associativos** — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.
@@ -173,27 +183,28 @@ Até agora nós apenas procuramos receber (ou **apanhar**) membros de objetos �
 
 ```js
 pessoa.idade = 45;
-pessoa['nome']['ultimo'] = 'Cratchit';
+pessoa["nome"]["ultimo"] = "Cratchit";
 ```
 
 Tente escrever as linhas acima e então apanhar seus membros novamente para ver como mudaram. Assim:
 
 ```js
-pessoa.idade
-pessoa['nome']['ultimo']
+pessoa.idade;
+pessoa["nome"]["ultimo"];
 ```
 
 Não podemos apenas atualizar valores existentes de propriedades e métodos; podemos também criar membros completamente novos. Tente isso aqui no console:
 
 ```js
-pessoa['olhos'] = 'castanho'.
-pessoa.despedida = function() { alert( "Adeus a todos!" ); }
+pessoa["olhos"] = "castanho".pessoa.despedida = function () {
+  alert("Adeus a todos!");
+};
 ```
 
 Podemos testar nossos novos membros:
 
 ```js
-pessoa['olhos'];
+pessoa["olhos"];
 pessoa.despedida();
 ```
 
@@ -213,15 +224,15 @@ pessoa[myDataName] = myDataValue;
 Para testar isso, tente adicionar as seguinte linhas em seu código, abaixo do fechamento da chaves do objeto `pessoa` :
 
 ```js
-var myDataName = 'altura';
-var myDataValue = '1.75m';
+var myDataName = "altura";
+var myDataValue = "1.75m";
 pessoa[myDataName] = myDataValue;
 ```
 
 Agora tente salvar e atualizar, entrando o seguinte no seu input de texto:
 
 ```js
-pessoa.altura
+pessoa.altura;
 ```
 
 Adicionar uma propriedade a um objeto usando o método acima não é possível com a notação ponto, que só aceita um nome de membro literal, não aceita valor de variável apontando para um nome.
@@ -242,18 +253,18 @@ Vamos ilustrar o que queremos dizer com um par de objetos pessoa:
 
 ```js
 var pessoa1 = {
-  nome: 'Chris',
-  saudacao: function() {
-    alert('Oi! Meu nome é ' + this.nome + '.');
-  }
-}
+  nome: "Chris",
+  saudacao: function () {
+    alert("Oi! Meu nome é " + this.nome + ".");
+  },
+};
 
 var pessoa2 = {
-  nome: 'Brian',
-  saudacao: function() {
-    alert('Oi! Meu nome é ' + this.nome + '.');
-  }
-}
+  nome: "Brian",
+  saudacao: function () {
+    alert("Oi! Meu nome é " + this.nome + ".");
+  },
+};
 ```
 
 Neste caso, `pessoa1.saudacao()` gerará "Oi! Meu nome é Chris."; No entanto, `pessoa2.saudacao()` retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o `this` é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando **construtores**). Tudo ficará mais claro mais para frente.
@@ -265,26 +276,26 @@ Enquanto passava por esses exemplos, você provavelmente andou pensando que essa
 Então quando usamos métodos de strings como:
 
 ```js
-minhaString.split(',');
+minhaString.split(",");
 ```
 
-Estamos usando um método disponível na instância da class [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de `String`, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.
+Estamos usando um método disponível na instância da class [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String). Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de `String`, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.
 
 Quando você acessa o document object model usando linhas como estas:
 
 ```js
-var minhaDiv = document.createElement('div');
-var meuVideo = document.querySelector('video');
+var minhaDiv = document.createElement("div");
+var meuVideo = document.querySelector("video");
 ```
 
-Você está usando métodos disponíveis na instância da class [`Document`](/en-US/docs/Web/API/Document). Cada vez que a página é recarrecada, uma instância de `Document` é criada, chamando `document`, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.
+Você está usando métodos disponíveis na instância da class [`Document`](/pt-BR/docs/Web/API/Document). Cada vez que a página é recarrecada, uma instância de `Document` é criada, chamando `document`, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.
 
-O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
+O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
 
 Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações](/pt-BR/docs/Web/API/Notifications_API) — que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
 
 ```js
-var minhaNotificacao = new Notification('Hello!');
+var minhaNotificacao = new Notification("Hello!");
 ```
 
 Novamente, olharemos constructores num artigo mais na frente.

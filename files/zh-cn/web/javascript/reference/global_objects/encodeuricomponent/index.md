@@ -36,9 +36,9 @@ encodeURIComponent(str);
 `encodeURIComponent()` 和 **`encodeURI`** 有以下几个不同点：
 
 ```js
-var set1 = ";,/?:@&=+$";  // 保留字符
-var set2 = "-_.!~*'()";   // 不转义字符
-var set3 = "#";           // 数字标志
+var set1 = ";,/?:@&=+$"; // 保留字符
+var set2 = "-_.!~*'()"; // 不转义字符
+var set3 = "#"; // 数字标志
 var set4 = "ABC abc 123"; // 字母数字字符和空格
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$
@@ -56,13 +56,13 @@ console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (空格被编码为 %2
 
 ```js
 // 高低位完整
-alert(encodeURIComponent('\uD800\uDFFF'));
+alert(encodeURIComponent("\uD800\uDFFF"));
 
 // 只有高位，将抛出"URIError: malformed URI sequence"
-alert(encodeURIComponent('\uD800'));
+alert(encodeURIComponent("\uD800"));
 
 // 只有低位，将抛出"URIError: malformed URI sequence"
-alert(encodeURIComponent('\uDFFF'));
+alert(encodeURIComponent("\uDFFF"));
 ```
 
 为了避免服务器收到不可预知的请求，对任何用户输入的作为 URI 部分的内容你都需要用 encodeURIComponent 进行转义。比如，一个用户可能会输入"`Thyme &time=again`"作为`comment`变量的一部分。如果不使用 encodeURIComponent 对此内容进行转义，服务器得到的将是`comment=Thyme%20&time=again`。请注意，"&"符号和"="符号产生了一个新的键值对，所以服务器得到两个键值对（一个键值对是`comment=Thyme`，另一个则是`time=again`），而不是一个键值对。
@@ -72,9 +72,9 @@ alert(encodeURIComponent('\uDFFF'));
 为了更严格的遵循 {{rfc("3986")}}（它保留 !, ', (, ), 和 \*），即使这些字符并没有正式划定 URI 的用途，下面这种方式是比较安全的：
 
 ```js
-function fixedEncodeURIComponent (str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16).toUpperCase();
+function fixedEncodeURIComponent(str) {
+  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+    return "%" + c.charCodeAt(0).toString(16).toUpperCase();
   });
 }
 ```
@@ -84,35 +84,41 @@ function fixedEncodeURIComponent (str) {
 下面这个例子提供了 UTF-8 下 {{HTTPHeader("Content-Disposition")}} 和 {{HTTPHeader("Link")}} 的服务器响应头信息的参数（例如 UTF-8 文件名)：
 
 ```js
-var fileName = 'my file(2).txt';
-var header = "Content-Disposition: attachment; filename*=UTF-8''"
-             + encodeRFC5987ValueChars(fileName);
+var fileName = "my file(2).txt";
+var header =
+  "Content-Disposition: attachment; filename*=UTF-8''" +
+  encodeRFC5987ValueChars(fileName);
 
 console.log(header);
 // 输出 "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
 
-
-function encodeRFC5987ValueChars (str) {
-    return encodeURIComponent(str).
-        // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有
-        // 所以我们并不需要过滤它。
-        replace(/['()]/g, escape). // i.e., %27 %28 %29
-        replace(/\*/g, '%2A').
-            // 下面的并不是 RFC5987 中 URI 编码必须的
-            // 所以对于 |`^ 这 3 个字符我们可以稍稍提高一点可读性
-        replace(/%(?:7C|60|5E)/g, unescape);
+function encodeRFC5987ValueChars(str) {
+  return (
+    encodeURIComponent(str)
+      // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有
+      // 所以我们并不需要过滤它。
+      .replace(/['()]/g, escape) // i.e., %27 %28 %29
+      .replace(/\*/g, "%2A")
+      // 下面的并不是 RFC5987 中 URI 编码必须的
+      // 所以对于 |`^ 这 3 个字符我们可以稍稍提高一点可读性
+      .replace(/%(?:7C|60|5E)/g, unescape)
+  );
 }
 
 // 以下是上述功能的替换方案
 function encodeRFC5987ValueChars2(str) {
-  return encodeURIComponent(str).
-    // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有，
-    // 所以我们并不需要过滤它。
-    replace(/['()*]/g, c => "%" + c.charCodeAt(0).toString(16)). // i.e., %27 %28 %29 %2a (请注意，"*" 的有效编码是 %2A
-                                                                 // 这需要调用 toUpperCase() 方法来正确编码)
-    // 以下并不是 RFC5987 编码所必须的，
-    // 这样我们可以让 |`^ 在网络上获取更好的可读性
-    replace(/%(7C|60|5E)/g, (str, hex) => String.fromCharCode(parseInt(hex, 16)));
+  return (
+    encodeURIComponent(str)
+      // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有，
+      // 所以我们并不需要过滤它。
+      .replace(/['()*]/g, (c) => "%" + c.charCodeAt(0).toString(16)) // i.e., %27 %28 %29 %2a (请注意，"*" 的有效编码是 %2A
+      // 这需要调用 toUpperCase() 方法来正确编码)
+      // 以下并不是 RFC5987 编码所必须的，
+      // 这样我们可以让 |`^ 在网络上获取更好的可读性
+      .replace(/%(7C|60|5E)/g, (str, hex) =>
+        String.fromCharCode(parseInt(hex, 16)),
+      )
+  );
 }
 ```
 

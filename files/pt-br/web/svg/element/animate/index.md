@@ -8,13 +8,23 @@ slug: Web/SVG/Element/animate
 O elemento SVG **`<animate>`** fornece uma maneira de animar um atributo de um elemento ao longo do tempo.
 
 ```css hidden
-html,body,svg { height:100%; margin:0; padding:0; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="https://www.w3.org/2000/svg">
   <rect width="10" height="10">
-    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+    <animate
+      attributeName="rx"
+      values="0;5;0"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -61,10 +71,10 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Specifications
 
-| Specification                                                                                    | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
+| Specification                                                            | Status                        | Comment            |
+| ------------------------------------------------------------------------ | ----------------------------- | ------------------ |
+| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}   | {{Spec2("SVG Animations 2")}} | No change          |
+| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}           | Initial definition |
 
 ## Compatibilidade com navegadores
 

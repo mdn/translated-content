@@ -1,7 +1,6 @@
 ---
 title: Long Tasks API
 slug: Web/API/PerformanceLongTaskTiming
-original_slug: Web/API/Long_Tasks_API
 ---
 
 {{DefaultAPISidebar("Long Tasks")}}
@@ -40,16 +39,16 @@ original_slug: Web/API/Long_Tasks_API
 ## 用法
 
 ```js
-var observer = new PerformanceObserver(function(list) {
-    var perfEntries = list.getEntries();
-    for (var i = 0; i < perfEntries.length; i++) {
-        // Process long task notifications:
-        // report back for analytics and monitoring
-        // ...
-    }
+var observer = new PerformanceObserver(function (list) {
+  var perfEntries = list.getEntries();
+  for (var i = 0; i < perfEntries.length; i++) {
+    // Process long task notifications:
+    // report back for analytics and monitoring
+    // ...
+  }
 });
 // register observer for long task notifications
-observer.observe({entryTypes: ["longtask"]});
+observer.observe({ entryTypes: ["longtask"] });
 // Long script execution after this will result in queueing
 // and receiving "longtask" entries in the observer.
 ```

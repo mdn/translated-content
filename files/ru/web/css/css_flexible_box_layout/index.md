@@ -1,15 +1,8 @@
 ---
 title: CSS Flexible Box Layout
-slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
+slug: Web/CSS/CSS_flexible_box_layout
 ---
+
 {{CSSRef}}
 
 **Способ CSS раскладки Flexible Box** (CSS Flexible Box Layout или **Flexbox**) — это способ CSS раскладки, означающий [блочную модель CSS](/ru/docs/Web/CSS/CSS_Box_Model), оптимизированную для построения пользовательских интерфейсов. Во флекс-модели потомки флекс-контейнера могут выстраиваться в любом направлении (право/лево, верх/низ), растягиваться, заполняя свободное пространство, или сжиматься во избежание переполнения родительского контейнера. Доступно различное выравнивание потомков по горизонтали и вертикали. Комбинация из родительского и вложенных блоков позволяют создавать такой layout, при котором элементы автоматически выстраиваются в столбы или строки.
@@ -46,6 +39,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                  | Status                      | Comment             |
+| ------------------------------ | --------------------------- | ------------------- |
 | {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |

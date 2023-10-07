@@ -1,7 +1,6 @@
 ---
 title: Grid 行
 slug: Glossary/Grid_Row
-original_slug: Glossary/Grid_Rows
 ---
 
 **グリッド行**とは [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)における水平トラックであり、二つの水平方向のグリッドラインに挟まれた領域のことです。グリッド行は {{cssxref("grid-template-rows")}} プロパティまたは短縮記法の {{cssxref("grid")}} や {{cssxref("grid-template")}} プロパティで定義されます。

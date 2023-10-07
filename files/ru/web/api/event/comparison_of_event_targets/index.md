@@ -1,7 +1,6 @@
 ---
 title: Сравнение разных Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
-translation_of: Web/API/Event/Comparison_of_Event_Targets
 ---
 
 {{ ApiRef() }}
@@ -113,7 +112,7 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
         {{ Non-standard_inline() }} Первоначальная цель события перед
         любым перенацеливанием. Подробнее см.
         <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
+          href="/ru/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Анонимный контент#Event_Flow_and_Targeting</a
         >.
       </td>
@@ -128,70 +127,89 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
 ### Примеры
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Comparison of Event Targets</title>
     <style>
-        table {
-            border-collapse: collapse;
-            height: 150px;
-            width: 100%;
-        }
-        td {
-            border: 1px solid #ccc;
-            font-weight: bold;
-            padding: 5px;
-            min-height: 30px;
-        }
-        .standard {
-            background-color: #99ff99;
-        }
-        .non-standard {
-            background-color: #902D37;
-        }
+      table {
+        border-collapse: collapse;
+        height: 150px;
+        width: 100%;
+      }
+      td {
+        border: 1px solid #ccc;
+        font-weight: bold;
+        padding: 5px;
+        min-height: 30px;
+      }
+      .standard {
+        background-color: #99ff99;
+      }
+      .non-standard {
+        background-color: #902d37;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <table>
-    <thead>
+      <thead>
         <tr>
-            <td class="standard">Изначальная цель, отправляющая событие <small>event.target</small></td>
-            <td class="standard">Цель, кто обрабатывает события <small>event.currentTarget</small></td>
-            <td class="standard">Идентифицировать другой элемент (если он есть), участвующий в событии <small>event.relatedTarget</small></td>
-            <td class="non-standard">Если по какой-то причине произошло перенацеливание события <small>event.explicitOriginalTarget</small> содержит цель перед перенацеливанием (никогда не содержит анонимных целей)</td>
-            <td class="non-standard">Если по какой-то причине произошло перенацеливание события <small>event.originalTarget</small> содержит цель перед перенацеливанием (может содержать анонимные цели)</td>
+          <td class="standard">
+            Изначальная цель, отправляющая событие <small>event.target</small>
+          </td>
+          <td class="standard">
+            Цель, кто обрабатывает события <small>event.currentTarget</small>
+          </td>
+          <td class="standard">
+            Идентифицировать другой элемент (если он есть), участвующий в
+            событии <small>event.relatedTarget</small>
+          </td>
+          <td class="non-standard">
+            Если по какой-то причине произошло перенацеливание события
+            <small>event.explicitOriginalTarget</small> содержит цель перед
+            перенацеливанием (никогда не содержит анонимных целей)
+          </td>
+          <td class="non-standard">
+            Если по какой-то причине произошло перенацеливание события
+            <small>event.originalTarget</small> содержит цель перед
+            перенацеливанием (может содержать анонимные цели)
+          </td>
         </tr>
-    </thead>
-    <tr>
+      </thead>
+      <tr>
         <td id="target"></td>
         <td id="currentTarget"></td>
         <td id="relatedTarget"></td>
         <td id="explicitOriginalTarget"></td>
         <td id="originalTarget"></td>
-    </tr>
-</table>
-<p>Нажав на текст, вы увидите разницу между explicitOriginalTarget, originalTarget и target</p>
-<script>
-    function handleClicks(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('currentTarget').innerHTML = e.currentTarget;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-        document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
-        document.getElementById('originalTarget').innerHTML = e.originalTarget;
-    }
+      </tr>
+    </table>
+    <p>
+      Нажав на текст, вы увидите разницу между explicitOriginalTarget,
+      originalTarget и target
+    </p>
+    <script>
+      function handleClicks(e) {
+        document.getElementById("target").innerHTML = e.target;
+        document.getElementById("currentTarget").innerHTML = e.currentTarget;
+        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+        document.getElementById("explicitOriginalTarget").innerHTML =
+          e.explicitOriginalTarget;
+        document.getElementById("originalTarget").innerHTML = e.originalTarget;
+      }
 
-    function handleMouseover(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-    }
+      function handleMouseover(e) {
+        document.getElementById("target").innerHTML = e.target;
+        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+      }
 
-    document.addEventListener('click', handleClicks, false);
-    document.addEventListener('mouseover', handleMouseover, false);
-</script>
-</body>
+      document.addEventListener("click", handleClicks, false);
+      document.addEventListener("mouseover", handleMouseover, false);
+    </script>
+  </body>
 </html>
 ```
 
@@ -199,10 +217,10 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
 
 Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указана мышь. Для события `mouseout` он удерживает узел, к которому движется мышь.
 
-| Тип события | [event.target](/ru/docs/Web/API/Event/target)  | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `mouseover` | EventTarget, в который входим указателем                   | EventTarget, из которого выходим указателем                                     |
-| `mouseout`  | EventTarget, из которого выходим указателем                | EventTarget, в который входим указателем                                        |
+| Тип события | [event.target](/ru/docs/Web/API/Event/target) | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
+| ----------- | --------------------------------------------- | ---------------------------------------------------------------- |
+| `mouseover` | EventTarget, в который входим указателем      | EventTarget, из которого выходим указателем                      |
+| `mouseout`  | EventTarget, из которого выходим указателем   | EventTarget, в который входим указателем                         |
 
 TODO: Также требуется описание событий `dragenter` и `dragexit`.
 

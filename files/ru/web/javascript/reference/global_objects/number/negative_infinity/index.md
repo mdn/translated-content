@@ -1,11 +1,6 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 
 {{JSRef("Global_Objects", "Number")}}
@@ -42,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 В следующем примере переменной `smallNumber` присваивается значение, меньшее минимального. Когда выполняется инструкция {{jsxref("Statements/if...else", "if")}}, переменная `smallNumber` имеет значение `-Infinity`, так что перед продолжением вычислений она устанавливается в более приемлемое значение.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber == Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();
@@ -51,11 +46,11 @@ if (smallNumber == Number.NEGATIVE_INFINITY) {
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                     | Статус             | Комментарии                                            |
+| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                          | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}               | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

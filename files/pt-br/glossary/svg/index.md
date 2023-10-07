@@ -1,7 +1,6 @@
 ---
 title: SVG
 slug: Glossary/SVG
-original_slug: Glossario/SVG
 ---
 
 _Scalable Vector Graphics_ (**SVG**) é um formato de imagem vetorial 2D baseado em uma sintaxe {{Glossary("XML")}}.
@@ -29,7 +28,7 @@ Repare que `cx` e `cy` são para definir as coordenadas x e y do círculo, `r` �
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "SVG")}} na Wikipedia
+- [SVG](https://pt.wikipedia.org/wiki/SVG) na Wikipedia
 
 ### Aprendendo SVG
 

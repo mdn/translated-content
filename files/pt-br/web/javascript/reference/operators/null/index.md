@@ -1,7 +1,6 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
-original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 
 {{jsSidebar("Objects")}}
@@ -33,19 +32,19 @@ O valor `null` é um literal, e não uma propriedade do objeto global (como o [`
 ### Diferenças entre `null` e `undefined`
 
 ```js
-typeof null        // object (bug no ECMAScript, deveria ser null - http://2ality.com/2013/10/typeof-null.html)
-typeof undefined   // undefined
-null === undefined // falso
-null  == undefined // verdadeiro
+typeof null; // object (bug no ECMAScript, deveria ser null - http://2ality.com/2013/10/typeof-null.html)
+typeof undefined; // undefined
+null === undefined; // falso
+null == undefined; // verdadeiro
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentários       |
-| -------------------------------------------------------------------- | ------------------------ | ----------------- |
-| ECMAScript 1st Edition.                                              | Standard                 | Definição inicial |
-| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}} | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-null-value', 'null value')}} | {{Spec2('ES6')}}     |                   |
+| Especificação                                        | Status             | Comentários       |
+| ---------------------------------------------------- | ------------------ | ----------------- |
+| ECMAScript 1st Edition.                              | Standard           | Definição inicial |
+| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}}   | {{Spec2('ES5.1')}} |                   |
+| {{SpecName('ES6', '#sec-null-value', 'null value')}} | {{Spec2('ES6')}}   |                   |
 
 ## Compatibilidade com navegadores
 

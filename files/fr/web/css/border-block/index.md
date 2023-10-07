@@ -1,13 +1,6 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

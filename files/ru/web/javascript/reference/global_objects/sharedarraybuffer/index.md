@@ -1,13 +1,6 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - Класс
-  - JavaScript
-  - Разделяемая память
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 
 {{JSRef}}

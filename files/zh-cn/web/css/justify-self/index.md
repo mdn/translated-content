@@ -13,9 +13,9 @@ slug: Web/CSS/justify-self
 
 - 在块级布局中，它对齐一个项目在其包含块的内联轴上。
 - 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）
-- 在表格布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) 关于块、绝对定位以及表格布局中的对齐方式）
-- 在弹性布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)关于弹性布局中的对齐方式）
-- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
+- 在表格布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Block_Abspos_Tables) 关于块、绝对定位以及表格布局中的对齐方式）
+- 在弹性布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)关于弹性布局中的对齐方式）
+- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
 
 ## 语法
 
@@ -26,15 +26,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* 位置对齐 */
-justify-self: center;     /* 在中间放置元素 */
-justify-self: start;      /* 在开始处放置元素 */
-justify-self: end;        /* 在结束处放置元素 */
+justify-self: center; /* 在中间放置元素 */
+justify-self: start; /* 在开始处放置元素 */
+justify-self: end; /* 在结束处放置元素 */
 justify-self: flex-start; /* 与 'start' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
-justify-self: flex-end;   /* 与 'end' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
+justify-self: flex-end; /* 与 'end' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* 在左侧放置元素 */
-justify-self: right;      /* 在右侧放置元素 */
+justify-self: left; /* 在左侧放置元素 */
+justify-self: right; /* 在右侧放置元素 */
 
 /* 基线对齐 */
 justify-self: baseline;
@@ -153,11 +153,11 @@ span:nth-child(2) {
 }
 
 span:nth-child(3) {
-justify-self: center;
+  justify-self: center;
 }
 
 span:nth-child(4) {
-justify-self: end;
+  justify-self: end;
 }
 
 article span {
@@ -167,7 +167,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
@@ -191,6 +192,6 @@ article {
 
 ## 参见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
 - The {{CSSxRef("justify-items")}} property

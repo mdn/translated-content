@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/entries
 ---
 
 {{JSRef}}
@@ -28,9 +27,9 @@ Un nuevo objeto de tipo `Iterator` que contiene un array de tuplas `[value, valu
 
 ```js
 var mySet = new Set();
-mySet.add('foobar');
+mySet.add("foobar");
 mySet.add(1);
-mySet.add('baz');
+mySet.add("baz");
 
 var setIter = mySet.entries();
 

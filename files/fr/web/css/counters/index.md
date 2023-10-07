@@ -1,12 +1,6 @@
 ---
 title: counters()
 slug: Web/CSS/counters
-tags:
-  - CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/counters()
-original_slug: Web/CSS/counters()
 ---
 
 {{CSSRef}}
@@ -58,25 +52,25 @@ Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`c
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -91,10 +85,14 @@ li {
   counter-increment: listCounter;
 }
 li::marker {
-   content:  counters(listCounter, '.', upper-roman) ') ';
+  content: counters(listCounter, ".", upper-roman) ") ";
 }
 li::before {
-  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
+  content: counters(listCounter, ".") " == " counters(
+      listCounter,
+      ".",
+      lower-roman
+    );
 }
 ```
 
@@ -109,25 +107,25 @@ li::before {
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -142,10 +140,14 @@ li {
   counter-increment: count;
 }
 li::marker {
-   content: counters(count, '.', upper-alpha) ') ';
+  content: counters(count, ".", upper-alpha) ") ";
 }
 li::before {
-  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
+  content: counters(count, ".", decimal-leading-zero) " == " counters(
+      count,
+      ".",
+      lower-alpha
+    );
 }
 ```
 

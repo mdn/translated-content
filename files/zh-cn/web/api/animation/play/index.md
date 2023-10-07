@@ -27,29 +27,28 @@ animation.play();
 
 ```js
 // 蛋糕拥有其自己的动画：
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 
 // 暂停蛋糕的动画，以避免动画立即播放。
 nommingCake.pause();
 
 // 该函数会在用户点击时触发
-var growAlice = function() {
-
+var growAlice = function () {
   // Play Alice's animation.
   aliceChange.play();
 
   // Play the cake's animation.
   nommingCake.play();
-
-}
+};
 
 // 当用户持续按下或点击时，调用 growAlice 函数使得所有的动画播放。
 cake.addEventListener("mousedown", growAlice, false);

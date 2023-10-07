@@ -34,12 +34,18 @@ slug: Web/API/PerformancePaintTiming
 function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) => {
-      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
+    let performanceEntries = performance.getEntriesByType("paint");
+    performanceEntries.forEach((performanceEntry, i, entries) => {
+      console.log(
+        "The time to " +
+          performanceEntry.name +
+          " was " +
+          performanceEntry.startTime +
+          " milliseconds.",
+      );
     });
   } else {
-    console.log('Performance timing isn\'t supported.');
+    console.log("Performance timing isn't supported.");
   }
 }
 ```

@@ -13,8 +13,8 @@ ID で指定されたタブを複製します。
 
 ```js
 var duplicating = browser.tabs.duplicate(
-  tabId              // integer
-)
+  tabId, // integer
+);
 ```
 
 ### パラメータ
@@ -44,7 +44,8 @@ function onError(error) {
 }
 
 // Duplicate the first tab in the array
-function duplicateFirstTab(tabs) {console.log(tabs);
+function duplicateFirstTab(tabs) {
+  console.log(tabs);
   if (tabs.length > 0) {
     var duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);

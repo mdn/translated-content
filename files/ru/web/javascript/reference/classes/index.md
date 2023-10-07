@@ -1,14 +1,6 @@
 ---
 title: Классы
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Reference
-  - Классы
-  - Наследование
-translation_of: Web/JavaScript/Reference/Classes
 ---
 
 {{JsSidebar("Классы")}}
@@ -111,7 +103,7 @@ console.log(square.area); // 100
 
 ### Статические методы и свойства
 
-Ключевое слово [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static), определяет статический метод или свойства для класса. Статические методы и свойства вызываются без [инстанцирования](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Object_.28Class_Instance.29) их класса, и **не могут** быть вызваны у экземпляров (_instance_) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.
+Ключевое слово [`static`](/ru/docs/Web/JavaScript/Reference/Classes/static), определяет статический метод или свойства для класса. Статические методы и свойства вызываются без [инстанцирования](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Object_.28Class_Instance.29) их класса, и **не могут** быть вызваны у экземпляров (_instance_) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.
 
 ```js
 class Point {
@@ -132,11 +124,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; //undefined
-p1.distance;    //undefined
+p1.distance; //undefined
 p2.displayName; //undefined
-p2.distance;    //undefined
+p2.distance; //undefined
 
-console.log(Point.displayName);      // "Точка"
+console.log(Point.displayName); // "Точка"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -159,7 +151,7 @@ obj.speak(); // объект Animal
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // класс Animal
+Animal.eat(); // класс Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -167,13 +159,13 @@ eat(); // undefined
 Если мы напишем этот же код используя классы основанные на функциях, тогда произойдёт автоупаковка основанная на значении this, в течение которого функция была вызвана. В строгом режиме автоупаковка не произойдёт - значение this останется прежним.
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function(){
+Animal.prototype.speak = function () {
   return this;
 };
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
 };
 
@@ -253,7 +245,7 @@ class Rectangle {
 
 ## Наследование классов с помощью `extends`
 
-Ключевое слово [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) используется в _объявлениях классов_ и _выражениях классов_ для создания класса, дочернего относительно другого класса.
+Ключевое слово [`extends`](/ru/docs/Web/JavaScript/Reference/Classes/extends) используется в _объявлениях классов_ и _выражениях классов_ для создания класса, дочернего относительно другого класса.
 
 ```js
 class Animal {
@@ -276,7 +268,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Митци');
+let d = new Dog("Митци");
 d.speak(); // Митци лает
 ```
 
@@ -285,12 +277,12 @@ d.speak(); // Митци лает
 Аналогичным образом можно расширять традиционные, основанные на функциях "классы":
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
   console.log(`${this.name} издаёт звук.`);
-}
+};
 
 class Dog extends Animal {
   speak() {
@@ -298,7 +290,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Митци');
+let d = new Dog("Митци");
 d.speak(); // Митци лает
 
 // Для аналогичных методов дочерний метод имеет приоритет над родительским.
@@ -310,7 +302,7 @@ d.speak(); // Митци лает
 var Animal = {
   speak() {
     console.log(`${this.name} издаёт звук.`);
-  }
+  },
 };
 
 class Dog {
@@ -322,7 +314,7 @@ class Dog {
 // Если вы этого не сделаете, вы получите ошибку TypeError при вызове speak.
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-let d = new Dog('Митци');
+let d = new Dog("Митци");
 d.speak(); // Митци издаёт звук.
 ```
 
@@ -335,13 +327,15 @@ d.speak(); // Митци издаёт звук.
 ```js
 class MyArray extends Array {
   // Изменить species на родительский конструктор Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Обращение к родительскому классу с помощью `super`
@@ -366,7 +360,7 @@ class Lion extends Cat {
   }
 }
 
-let l = new Lion('Фаззи');
+let l = new Lion("Фаззи");
 l.speak();
 // Фаззи издаёт звук.
 // Фаззи рычит.
@@ -379,20 +373,22 @@ l.speak();
 Для реализации mix-ins в ECMAScript можно использовать функцию, которая в качестве аргумента принимает родительский класс, а возвращает подкласс, его расширяющий:
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 Класс, использующий такие mix-ins, можно описать следующим образом:
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## Спецификации

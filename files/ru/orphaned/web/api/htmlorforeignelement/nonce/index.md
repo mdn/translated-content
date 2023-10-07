@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.nonce
 slug: orphaned/Web/API/HTMLOrForeignElement/nonce
-translation_of: Web/API/HTMLOrForeignElement/nonce
-original_slug: Web/API/HTMLOrForeignElement/nonce
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}

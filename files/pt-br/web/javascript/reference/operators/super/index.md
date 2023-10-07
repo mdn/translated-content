@@ -29,12 +29,12 @@ Esse trecho de código foi obtido através de [classes sample](https://github.co
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log("Hi, I am a ", this.name + ".");
   }
 }
 
@@ -48,7 +48,7 @@ class Square extends Polygon {
 
     // Nota: Em classes derivadas, super() deve ser chamado antes de
     // usar this. Deixar isso de fora vai causar um ReferenceError.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -69,14 +69,14 @@ Você também pode chamar o super em métodos [estáticos](/pt-BR/docs/Web/JavaS
 class Human {
   constructor() {}
   static ping() {
-    return 'ping';
+    return "ping";
   }
 }
 
 class Computer extends Human {
   constructor() {}
   static pingpong() {
-    return super.ping() + ' pong';
+    return super.ping() + " pong";
   }
 }
 Computer.pingpong(); // 'ping pong'
@@ -111,7 +111,7 @@ class X {
     Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
-      value: 1
+      value: 1,
     });
   }
   f() {
@@ -132,14 +132,14 @@ console.log(x.prop); // 1
 var obj1 = {
   method1() {
     console.log("method 1");
-  }
-}
+  },
+};
 
 var obj2 = {
   method2() {
-   super.method1();
-  }
-}
+    super.method1();
+  },
+};
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // retorna "method 1"
@@ -147,9 +147,9 @@ obj2.method2(); // retorna "method 1"
 
 ## Especificações
 
-| Specification                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-super-keyword', 'super')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Specification                                          | Status               | Comment            |
+| ------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-super-keyword', 'super')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-super-keyword', 'super')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

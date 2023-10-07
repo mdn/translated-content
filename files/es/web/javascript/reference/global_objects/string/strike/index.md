@@ -1,7 +1,6 @@
 ---
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/strike
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -29,12 +28,12 @@ Usa el método `strike` para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa los métodos de `string` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola mundo!"
+var cadenaMundo = "¡Hola mundo!";
 
-console.log(cadenaMundo.blink())
-console.log(cadenaMundo.bold())
-console.log(cadenaMundo.italics())
-console.log(cadenaMundo.strike())
+console.log(cadenaMundo.blink());
+console.log(cadenaMundo.bold());
+console.log(cadenaMundo.italics());
+console.log(cadenaMundo.strike());
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

@@ -49,7 +49,7 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
 
 ```html
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
-<del ><p >This paragraph has been deleted.</p ></del >
+<del><p>This paragraph has been deleted.</p></del>
 ```
 
 ### 结果

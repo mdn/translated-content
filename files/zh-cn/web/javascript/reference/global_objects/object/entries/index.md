@@ -5,91 +5,100 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 {{JSRef}}
 
-**`Object.entries()`** 方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。
+**`Object.entries()`** 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}
+{{EmbedInteractiveExample("pages/js/object-entries.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 Object.entries(obj)
 ```
 
 ### 参数
 
 - `obj`
-  - : 可以返回其可枚举属性的键值对的对象。
+  - : 一个对象。
 
 ### 返回值
 
-给定对象自身可枚举属性的键值对数组。
+一个由给定对象自有的可枚举字符串键属性的键值对组成的数组。每个键值对都是一个包含两个元素的数组：第一个元素是属性的键（始终是字符串），第二个元素是属性值。
 
 ## 描述
 
-`Object.entries()`返回一个数组，其元素是与直接在`object`上找到的可枚举属性键值对相对应的数组。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
+`Object.entries()` 返回一个数组，其元素是直接在 `object` 上找到相应的可枚举字符串键属性的键值对数组。这与使用 {{jsxref("Statements/for...in", "for...in")}} 循环迭代相同，只是使用 `for...in` 循环也枚举原型链中的属性。`Object.entries()` 返回的数组顺序和 {{jsxref("Statements/for...in", "for...in")}} 循环提供的顺序相同。
+
+如果只需要属性的键，请使用 {{jsxref("Object.keys()")}}。如果只需要属性的值，请使用 {{jsxref("Object.values()")}}。
 
 ## 示例
 
+### 使用 Object.entries()
+
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
-// array like object
-const obj = { 0: 'a', 1: 'b', 2: 'c' };
+// 类数组对象
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
-// array like object with random key ordering
-const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+// 具有随机键排序的类数组对象
+const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(anObj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
-// getFoo is property which isn't enumerable
-const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
-myObj.foo = 'bar';
+// getFoo 是一个不可枚举的属性
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+    },
+  },
+);
+myObj.foo = "bar";
 console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
+```
 
-// non-object argument will be coerced to an object
-console.log(Object.entries('foo')); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+### 在基本类型中使用 Object.entries()
 
-// iterate through key-value gracefully
+非对象参数会[强制转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。只有字符串可以有自己的可枚举属性，所有其他基本类型均返回一个空数组。
+
+```js
+// 字符串具有索引作为可枚举的自有属性
+console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+
+// 其他基本类型没有自有属性
+console.log(Object.entries(100)); // []
+```
+
+### 将 Object 转换成 Map
+
+{{jsxref("Map/Map", "Map()")}} 构造函数接受一个 `entries` 可迭代对象。使用 `Object.entries`，你可以很容易地将 {{jsxref("Object")}} 转换成 {{jsxref("Map")}}：
+
+```js
+const obj = { foo: "bar", baz: 42 };
+const map = new Map(Object.entries(obj));
+console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
+```
+
+### 遍历对象
+
+使用[数组解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构数组)，你可以很容易地遍历对象。
+
+```js
+// 使用 for...of 循环
 const obj = { a: 5, b: 7, c: 9 };
 for (const [key, value] of Object.entries(obj)) {
   console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 }
 
-// Or, using array extras
+// 使用数组方法
 Object.entries(obj).forEach(([key, value]) => {
-console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 });
 ```
-
-### 将`Object`转换为`Map`
-
-{{jsxref("Map", "new Map()")}} 构造函数接受一个可迭代的`entries`。借助`Object.entries`方法你可以很容易的将{{jsxref("Object")}}转换为{{jsxref("Map")}}:
-
-```js
-var obj = { foo: "bar", baz: 42 };
-var map = new Map(Object.entries(obj));
-console.log(map); // Map { foo: "bar", baz: 42 }
-```
-
-## Polyfill
-
-要在较旧环境中添加兼容的`Object.entries`支持，你可以在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 中找到 Object.entries 的示例（如果你不需要任何对 IE 的支持），在 [es-shims/Object.entries](https://github.com/es-shims/Object.entries) 资料库中的一个 polyfill，或者你可以使用下面列出的简易 polyfill。
-
-```js
-if (!Object.entries)
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
-
-    return resArray;
-  };
-```
-
-对于上述 polyfill 代码片段，如果你需要 IE9 以下的支持，那么你还需要一个 Object.keys polyfill（如 {{jsxref("Object.keys")}}页面上的）。
 
 ## 规范
 
@@ -99,11 +108,14 @@ if (!Object.entries)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `Object.entries` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}} {{experimental_inline}}
+- {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
+- {{jsxref("Object.fromEntries()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Map.prototype.entries()")}}

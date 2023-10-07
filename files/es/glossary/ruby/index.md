@@ -1,7 +1,6 @@
 ---
 title: Ruby
 slug: Glossary/Ruby
-page-type: glossary-definition
 l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---

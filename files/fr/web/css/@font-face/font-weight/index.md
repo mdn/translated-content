@@ -1,12 +1,6 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
-tags:
-  - '@font-face'
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/font-weight
 ---
 
 {{CSSRef}}
@@ -78,8 +72,9 @@ Dans l'exemple suivant, on récupère une police Open Sans et on l'importe en ut
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-weight: 400;
 }
 ```

@@ -8,7 +8,11 @@ slug: Web/SVG/Element/line
 **`<line>`** 要素は SVG の基本図形であり、2 つの点をつなぐ直線を作成するために使用します。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

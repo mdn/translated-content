@@ -1,13 +1,6 @@
 ---
 title: Sélecteurs enfant
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Child_combinator
-original_slug: Web/CSS/Sélecteurs_enfant
 ---
 
 {{CSSRef("Selectors")}}
@@ -17,7 +10,7 @@ Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments co
 ```css
 /* Les éléments <li> qui sont des enfant d'un */
 /* <ul class="mon-truc"> */
-ul.mon-truc>li {
+ul.mon-truc > li {
   margin: 2em;
 }
 ```
@@ -48,7 +41,8 @@ div > span {
 
 ```html
 <div>
-  <span>Premier span du div.
+  <span
+    >Premier span du div.
     <span>Deuxième span, dans un span dans un div.</span>
   </span>
 </div>

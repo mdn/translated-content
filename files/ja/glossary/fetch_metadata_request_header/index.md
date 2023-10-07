@@ -16,11 +16,11 @@ slug: Glossary/Fetch_metadata_request_header
 
 1. Fetch Me
 
-    1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
+   1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
 
 2. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Entity header")}}
-    2. {{Glossary("Header")}}
-    3. {{Glossary("Response header")}}
-    4. {{Glossary("Request header")}}
+   1. {{Glossary("Entity header")}}
+   2. {{Glossary("Header")}}
+   3. {{Glossary("Response header")}}
+   4. {{Glossary("Request header")}}

@@ -1,14 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - CSS-свойство
-  - NeedsContent
-  - Reference
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}
@@ -49,7 +41,9 @@ flex-grow: unset;
 
 ```html
 <h4>Это — Flex-Grow</h4>
-<h5>A,B,C и F имеют коэффициент увеличения flex-grow:1, а D и E — flex-grow:2 .</h5>
+<h5>
+  A,B,C и F имеют коэффициент увеличения flex-grow:1, а D и E — flex-grow:2 .
+</h5>
 <div id="content">
   <div class="box" style="background-color:red;">A</div>
   <div class="box" style="background-color:lightblue;">B</div>
@@ -82,12 +76,12 @@ flex-grow: unset;
 
 .box {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 2;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -97,8 +91,8 @@ flex-grow: unset;
 
 ## Спецификации
 
-| Спецификация                                                             | Статус                           | Комментарий           |
-| ------------------------------------------------------------------------ | -------------------------------- | --------------------- |
+| Спецификация                                          | Статус                    | Комментарий           |
+| ----------------------------------------------------- | ------------------------- | --------------------- |
 | {{SpecName('CSS3 Flexbox','#flex-grow','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Первичное определение |
 
 {{cssinfo}}

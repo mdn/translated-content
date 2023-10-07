@@ -1,7 +1,6 @@
 ---
 title: O que é JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
@@ -48,18 +47,18 @@ Nós podemos adicionar um pouco de CSS na mistura, para deixar nosso parágrafo 
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 ```
 
@@ -68,13 +67,13 @@ p {
 E finalmente, nós podemos adicionar JavaScript para implementar um comportamento dinâmico:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', atualizarNome);
+para.addEventListener("click", atualizarNome);
 
 function atualizarNome() {
-  var nome = prompt('Insira um novo nome');
-  para.textContent = 'Jogador 1: ' + nome;
+  var nome = prompt("Insira um novo nome");
+  para.textContent = "Jogador 1: " + nome;
 }
 ```
 
@@ -140,13 +139,13 @@ Cada guia do navegador tem seu próprio espaço para executar código (esses esp
 Quando o navegador encontra um bloco de código JavaScript, ele geralmente executa na ordem, de cima para baixo. Isso significa que você precisa ter cuidado com a ordem na qual você coloca as coisas. Por exemplo, vamos voltar ao bloco JavaScript que nós vimos no primeiro exemplo:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', atualizarNome);
+para.addEventListener("click", atualizarNome);
 
 function atualizarNome() {
-  let nome = prompt('Informe um novo nome:');
-  para.textContent = 'Jogador 1: ' + nome;
+  let nome = prompt("Informe um novo nome:");
+  para.textContent = "Jogador 1: " + nome;
 }
 ```
 
@@ -188,29 +187,27 @@ O JavaScript é inserido na sua página de uma maneira similar ao CSS. Enquanto 
 2. Abra o arquivo no seu navegador web e no seu editor de texto. Você verá que o HTML cria uma simples página web contendo um botão clicável.
 3. Agora, vá até o seu editor de texto e adicione o código a seguir antes da tag de fechamento `</body>`:
 
-    ```html
-    <script>
-
-      // O JavaScript fica aqui
-
-    </script>
-    ```
+   ```html
+   <script>
+     // O JavaScript fica aqui
+   </script>
+   ```
 
 4. Agora nós vamos adicionar um pouco de JavaScript dentro do nosso elemento {{htmlelement("script")}} para que a página faça algo mais interessante — adicione o seguinte código abaixo da linha "// O JavaScript fica aqui":
 
-    ```js
-    function criarParagrafo() {
-      let para = document.createElement('p');
-      para.textContent = 'Você clicou no botão!';
-      document.body.appendChild(para);
-    }
+   ```js
+   function criarParagrafo() {
+     let para = document.createElement("p");
+     para.textContent = "Você clicou no botão!";
+     document.body.appendChild(para);
+   }
 
-    const botoes = document.querySelectorAll('button');
+   const botoes = document.querySelectorAll("button");
 
-    for(var i = 0; i < botoes.length ; i++) {
-      botoes[i].addEventListener('click', criarParagrafo);
-    }
-    ```
+   for (var i = 0; i < botoes.length; i++) {
+     botoes[i].addEventListener("click", criarParagrafo);
+   }
+   ```
 
 5. Salve seu arquivo e recarregue a página — agora você deveria ver que quando você clique no botão, um novo parágrafo é gerado e colocado logo abaixo.
 
@@ -225,25 +222,25 @@ Isso funciona muito bem, mas e se nós quiséssemos colocar nosso JavaScript em 
 1. Primeiro, crie um novo arquivo na mesma pasta que está o arquivo HTML de exemplo. Chame-o de `script.js` — tenha certeza de que o nome do arquivo tem a extensão `.js`, pois é assim que ele será reconhecido como JavaScript.
 2. Agora substitua o elemento atual {{htmlelement("script")}} pelo seguinte código:
 
-    ```html
-    <script src="script.js" defer></script>
-    ```
+   ```html
+   <script src="script.js" defer></script>
+   ```
 
 3. Em `script.js`, adicione o seguinte script:
 
-    ```js
-    function createParagraph() {
-      let para = document.createElement('p');
-      para.textContent = 'Você clicou no botão!';
-      document.body.appendChild(para);
-    }
+   ```js
+   function createParagraph() {
+     let para = document.createElement("p");
+     para.textContent = "Você clicou no botão!";
+     document.body.appendChild(para);
+   }
 
-    const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
-    for(let i = 0; i < buttons.length ; i++) {
-      buttons[i].addEventListener('click', createParagraph);
-    }
-    ```
+   for (let i = 0; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", createParagraph);
+   }
+   ```
 
 4. Salve e atualize seu navegador, e você deverá ver a mesma coisa! Funciona igualmente, mas agora nós temos o JavaScript em um arquivo externo. Isso é geralmente uma coisa boa em termos de organização de código, e faz com que seja possível reutilizar o código em múltiplos arquivos HTML. Além disso, o HTML fica mais legível sem grandes pedaços de script no meio dele.
 
@@ -255,8 +252,8 @@ Note que às vezes você vai encontrar código JavaScript escrito dentro do HTML
 
 ```js example-bad
 function criarParagrafo() {
-  let para = document.createElement('p');
-  para.textContent = 'Você clicou o botao!';
+  let para = document.createElement("p");
+  para.textContent = "Você clicou o botao!";
   document.body.appendChild(para);
 }
 ```
@@ -276,10 +273,10 @@ Essa demonstração tem exatamente a mesma funcionalidade que vimos nas primeira
 Usando uma estrutura feita de puro JavaScript permite a você selecionar todos os botões usando uma instrução. O código que nós usamos acima para servir a esse propósito se parece com isso:
 
 ```js
-const botoes = document.querySelectorAll('button');
+const botoes = document.querySelectorAll("button");
 
-for(var i = 0; i < botoes.length ; i++) {
-  botoes[i].addEventListener('click', criarParagrafo);
+for (var i = 0; i < botoes.length; i++) {
+  botoes[i].addEventListener("click", criarParagrafo);
 }
 ```
 
@@ -378,8 +375,8 @@ Então, por exemplo, você poderia fazer anotações na nossa última demonstra�
 // Função: Cria um novo parágrafo e o insere no fim do arquivo HTML.
 
 function criarParagrafo() {
-  var para = document.createElement('p');
-  para.textContent = 'Você clicou no botão!';
+  var para = document.createElement("p");
+  para.textContent = "Você clicou no botão!";
   document.body.appendChild(para);
 }
 
@@ -390,10 +387,10 @@ function criarParagrafo() {
   Quando cada botão é clicado, a função criarParagrafo() será executada.
 */
 
-const botoes = document.querySelectorAll('button');
+const botoes = document.querySelectorAll("button");
 
-for(var i = 0; i < botoes.length ; i++) {
-  botoes[i].addEventListener('click', criarParagrafo);
+for (var i = 0; i < botoes.length; i++) {
+  botoes[i].addEventListener("click", criarParagrafo);
 }
 ```
 

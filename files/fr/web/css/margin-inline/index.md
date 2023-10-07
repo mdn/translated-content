@@ -1,13 +1,6 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/margin-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -17,10 +10,10 @@ La propriété **`margin-inline`** définit la marge sur les côtés de l'élém
 ```css
 /* Valeurs de longueur */
 /* Type <length> */
-margin-inline: 10px 20px;  /* Une longueur absolue */
-margin-inline: 1em 2em;    /* Une longueur relative à la taille du texte */
-margin-inline: 5% 2%;      /* Une longueur relative à la largeur ou hauteur du bloc englobant */
-margin-inline: 10px;       /* Une valeur utilisée pour les deux côtés */
+margin-inline: 10px 20px; /* Une longueur absolue */
+margin-inline: 1em 2em; /* Une longueur relative à la taille du texte */
+margin-inline: 5% 2%; /* Une longueur relative à la largeur ou hauteur du bloc englobant */
+margin-inline: 10px; /* Une valeur utilisée pour les deux côtés */
 
 /* Valeurs avec un mot-clé */
 margin-inline: auto;

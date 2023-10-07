@@ -31,22 +31,21 @@ slug: Web/API/MutationObserver
 
 ```js
 // 変更を監視するノードを選択
-const targetNode = document.getElementById('some-id');
+const targetNode = document.getElementById("some-id");
 
 // (変更を監視する) オブザーバーのオプション
 const config = { attributes: true, childList: true, subtree: true };
 
 // 変更が発見されたときに実行されるコールバック関数
-const callback = function(mutationsList, observer) {
-    // Use traditional 'for loops' for IE 11
-    for(const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
-        }
-        else if (mutation.type === 'attributes') {
-            console.log('The ' + mutation.attributeName + ' attribute was modified.');
-        }
+const callback = function (mutationsList, observer) {
+  // Use traditional 'for loops' for IE 11
+  for (const mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      console.log("A child node has been added or removed.");
+    } else if (mutation.type === "attributes") {
+      console.log("The " + mutation.attributeName + " attribute was modified.");
     }
+  }
 };
 
 // コールバック関数に結びつけられたオブザーバーのインスタンスを生成

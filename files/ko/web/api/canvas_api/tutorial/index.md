@@ -1,7 +1,6 @@
 ---
 title: 캔버스 튜토리얼
 slug: Web/API/Canvas_API/Tutorial
-original_slug: Web/HTML/Canvas/Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}}[![](canvas_tut_examples.jpg)](/ko/docs/HTML/Canvas)

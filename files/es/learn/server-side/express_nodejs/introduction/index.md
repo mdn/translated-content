@@ -59,17 +59,18 @@ var http = require("http");
 
 // Creación del servidor HTTP, y se define la escucha
 // de peticiones en el puerto 8000
-http.createServer(function(request, response) {
+http
+  .createServer(function (request, response) {
+    // Se define la cabecera HTTP, con el estado HTTP (OK: 200) y el tipo de contenido
+    response.writeHead(200, { "Content-Type": "text/plain" });
 
-   // Se define la cabecera HTTP, con el estado HTTP (OK: 200) y el tipo de contenido
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-
-   // Se responde, en el cuerpo de la respuesta con el mensaje "Hello World"
-   response.end('Hola Mundo!\n');
-}).listen(8000);
+    // Se responde, en el cuerpo de la respuesta con el mensaje "Hello World"
+    response.end("Hola Mundo!\n");
+  })
+  .listen(8000);
 
 // Se escribe la URL para el acceso al servidor
-console.log('Servidor en la url http://127.0.0.1:8000/');
+console.log("Servidor en la url http://127.0.0.1:8000/");
 ```
 
 Otras tareas comunes de desarrollo web no están directamente soportadas por el mismo _Node_. Si quieres añadir el manejo específico de diferentes verbos HTTP (ej, `GET`, `POST`, `DELETE`, etc.), gestionar de forma separada las peticiones por medio de diferentes direcciones URL ("rutas"), servir ficheros estáticos o usar plantillas para crear la respuesta de forma dinámica, necesitarás escribir el código por tí mismo, o ¡puedes evitar reinventar la rueda usando un framework web!
@@ -124,15 +125,15 @@ Primero consideremos el tradicional ejemplo de [Hola Mundo!](https://expressjs.c
 > **Nota:** Si tiene _Node_ y _Express_ instalado (o piensa instalarlos posteriormente) puede guardar este código en un archivo llamado **app.js** y ejecutarlo posteriormente en la linea de comandos invocándolo mediante: `node app.js`.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
-app.get('/', function(req, res) {
-  res.send('Hola Mundo!');
+app.get("/", function (req, res) {
+  res.send("Hola Mundo!");
 });
 
-app.listen(3000, function() {
-  console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+app.listen(3000, function () {
+  console.log("Aplicación ejemplo, escuchando el puerto 3000!");
 });
 ```
 
@@ -151,7 +152,7 @@ El código mostrado abajo, muestra como puede importarse un modulo con base a su
 Posteriormente, se puede acceder a las propiedades y funciones del objeto Aplicación.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 ```
 
@@ -162,17 +163,21 @@ También podemos crear nuestros propios módulos que puedan posteriormente ser i
 Para hacer que los objetos esten disponibles fuera de un modulo, solamente es necesario asignarlos al objeto `exports`. Por ejemplo, el modulo mostrado a continuación **square.js** es un archivo que exporta los métodos `area()` y `perimeter()` :
 
 ```js
-exports.area = function(width) { return width * width; };
-exports.perimeter = function(width) { return 4 * width; };
+exports.area = function (width) {
+  return width * width;
+};
+exports.perimeter = function (width) {
+  return 4 * width;
+};
 ```
 
 Nosotros podemos importar este módulo utilizando la función `require()`, y entonces podremos invocar los métodos exportados de la siguiente manera:
 
 ```js
 // Utilizamos la función require() El nombre del archivo se ingresa sin la extensión (opcional) .js
-var square = require('./square');
+var square = require("./square");
 // invocamos el metodo area()
-console.log('El área de un cuadrado con lado de 4 es ' + square.area(4));
+console.log("El área de un cuadrado con lado de 4 es " + square.area(4));
 ```
 
 > **Nota:** Usted también puede especificar una ruta absoluta a la ubicación del módulo (o un nombre como se realizó inicialmente).
@@ -181,13 +186,13 @@ Si usted desea exportar completamente un objeto en una asignación en lugar de c
 
 ```js
 module.exports = {
-  area: function(width) {
+  area: function (width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter: function (width) {
     return 4 * width;
-  }
+  },
 };
 ```
 
@@ -198,17 +203,17 @@ Para más información acerca de módulos vea [Modulos](https://nodejs.org/api/m
 El código JavaScript usa frecuentemente APIs asíncronas antes que sincrónicas para operaciones que tomen algún tiempo en completarse. En una API sincrónica cada operación debe completarse antes de que la siguiente pueda comenzar. Por ejemplo, la siguiente función de registro es síncrona, y escribirá en orden el texto en la consola (Primero, Segundo).
 
 ```js
-console.log('Primero');
-console.log('Segundo');
+console.log("Primero");
+console.log("Segundo");
 ```
 
 En contraste, en una API asincrónica, la API comenzará una operación e inmediatamente retornará (antes de que la operación se complete). Una vez que la operación finalice, la API usará algún mecanismo para realizar operaciones adicionales. Por ejemplo, el código de abajo imprimirá "Segundo, Primero" porque aunque el método `setTimeout()` es llamado primero y retorna inmediatamente, la operación no se completa por varios segundos.
 
 ```js
-setTimeout(function() {
-   console.log('Primero');
-   }, 3000);
-console.log('Segundo');
+setTimeout(function () {
+  console.log("Primero");
+}, 3000);
+console.log("Segundo");
 ```
 
 Usar APIs asíncronas sin bloques es aun mas importante en _Node_ que en el navegador, porque _Node_ es un entorno de ejecución controlado por eventos de un solo hilo. "Un solo hilo" quiere decir que todas las peticiones al servidor son ejecutadas en el mismo hilo ( en vez de dividirse en procesos separados). Este modelo es extremadamente eficiente en términos de velocidad y recursos del servidor, pero eso significa que si alguna de sus funciones llama a métodos sincrónicos que tomen demasiado tiempo en completarse, bloquearan no solo la solicitud actual, sino también cualquier otra petición que este siendo manejada por tu aplicación web.
@@ -224,8 +229,8 @@ Hay muchas maneras para una API asincrónica de notificar a su aplicación que s
 En nuestro ejemplo anterior de "Hola Mundo!" en _Express_ (véase mas arriba), definimos una función (callback) manejadora de ruta para peticiones HTTP `GET` a la raíz del sitio (`'/'`).
 
 ```js
-app.get('/', function(req, res) {
-  res.send('Hello World!');
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 ```
 
@@ -238,8 +243,8 @@ El objeto que representa una aplicación de _Express_, también posee métodos p
 Hay un método general para definir las rutas: `app.all()`, el cual será llamado en respuesta a cualquier método HTTP. Se usa para cargar funciones del middleware en una dirección particular para todos los métodos de peticiones. El siguiente ejemplo (de la documentación de _Express_) muestra el uso de los manejadores a `/secret` sin tener en cuenta el verbo HTTP utilizado (siempre que esté definido por el [módulo http](https://nodejs.org/api/http.html#http_http_methods)).
 
 ```js
-app.all('/secret', function(req, res, next) {
-  console.log('Accediendo a la seccion secreta ...');
+app.all("/secret", function (req, res, next) {
+  console.log("Accediendo a la seccion secreta ...");
   next(); // pasa el control al siguiente manejador
 });
 ```
@@ -251,17 +256,17 @@ Usualmente es útil agrupar manejadores de rutas para una parte del sitio juntos
 ```js
 // wiki.js - Modulo de rutas Wiki
 
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Home page route
-router.get('/', function(req, res) {
-  res.send('Página de inicio Wiki');
+router.get("/", function (req, res) {
+  res.send("Página de inicio Wiki");
 });
 
 // About page route
-router.get('/about', function(req, res) {
-  res.send('Acerca de esta wiki');
+router.get("/about", function (req, res) {
+  res.send("Acerca de esta wiki");
 });
 
 module.exports = router;
@@ -272,9 +277,9 @@ module.exports = router;
 Para usar el router en nuestro archivo app principal, necesitamos `require()` el módulo de rutas (**wiki.js**), entonces llame `use()` en la aplicación _Express_ para agregar el Router al software intermediario que maneja las rutas. Las dos rutas serán accesibles entonces desde `/wiki/` y `/wiki/about/`.
 
 ```js
-var wiki = require('./wiki.js');
+var wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 Le mostraremos mucho más sobre como trabajar con rutas, y en particular, acerca de como usar el `Router`, más adelante en la sección [Rutas y controladores .](/es/docs/Learn/Server-side/Express_Nodejs/routes)
@@ -312,23 +317,23 @@ Puede agregar una función middleware a la cadenan de procesamiento con cualquie
 El ejemplo de abajo muestra como puede agregar la función middleware usando ambos métodos, y con/sin una ruta.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 // An example middleware function
-var a_middleware_function = function(req, res, next) {
+var a_middleware_function = function (req, res, next) {
   // ... perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
-}
+};
 
 // Function added with use() for all routes and verbs
 app.use(a_middleware_function);
 
 // Function added with use() for a specific route
-app.use('/someroute', a_middleware_function);
+app.use("/someroute", a_middleware_function);
 
 // A middleware function added for a specific HTTP verb and route
-app.get('/', a_middleware_function);
+app.get("/", a_middleware_function);
 
 app.listen(3000);
 ```
@@ -342,7 +347,7 @@ La documentación Express tiene mucha mas documentación excelente acerca del us
 Puede utilizar el middleware [express.static](http://expressjs.com/en/4x/api.html#express.static) para servir archivos estáticos, incluyendo sus imagenes, CSS y JavaScript (`static()` es la única función middleware que es actualmente **parte** de _Express_). Por ejemplo, podria utilizar la linea de abajo para servir imágenes, archivos CSS, y archivos JavaScript desde un directorio nombrado '**public'** al mismo nivel desde donde llama a node:
 
 ```js
-app.use(express.static('public'));
+app.use(express.static("public"));
 ```
 
 Cualesquiere archivos en el directorio público son servidos al agregar su nombre de archivo (_relativo_ a la ubicación del directorio "público" ) de la ubicación URL. Por ejemplo:
@@ -357,14 +362,14 @@ http://localhost:3000/about.html
 Puede llamar `static()` multiples ocasiones a servir multiples directorios. Si un archivo no puede ser encontrado por una función middleware entonces este simplemente será pasado en la subsequente middleware (el orden en que el middleware está basado en su orden de declaración).
 
 ```js
-app.use(express.static('public'));
-app.use(express.static('media'));
+app.use(express.static("public"));
+app.use(express.static("media"));
 ```
 
 Tambien puede crear un prefijo virtual para sus URLs estáticas, aun más teniendo los archivos agregados en la ubicación URL. Por ejemplo, aqui especificamos [a mount path](http://expressjs.com/en/4x/api.html#app.use) tal que los archivos son bajados con el prefijo "/media":
 
 ```js
-app.use('/media', express.static('public'));
+app.use("/media", express.static("public"));
 ```
 
 Ahora, puede bajar los archivos que estan en el directorio `publico` del path con prefijo `/media`.
@@ -382,9 +387,9 @@ Para más información, ver [Sirviendo archivos estáticos en Express](https://e
 Los errores manejados por una o más funciones especiales middleware que tienen cuatro argumentos, en lugar de las usuales tres: `(err, req, res, next)`. For example:
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send("Something broke!");
 });
 ```
 
@@ -411,16 +416,18 @@ npm install mongodb
 La base de datos por si misma puede ser instalada localmente o en un servidor de la nube. En su codigo Express requiere el manejador, conectarse a la base de datos, y entonces ejecutar operaciones crear, leer, actualizar, y borrar (CLAB). }El ejemplo de abajo (de la documentación Express documentation) muestra como puede encontrar registros en la colección "mamiferos" usando MongoDB.
 
 ```js
-var MongoClient = require('mongodb').MongoClient;
+var MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+MongoClient.connect("mongodb://localhost:27017/animals", function (err, db) {
   if (err) throw err;
 
-  db.collection('mammals').find().toArray(function (err, result) {
-    if (err) throw err;
+  db.collection("mammals")
+    .find()
+    .toArray(function (err, result) {
+      if (err) throw err;
 
-    console.log(result);
-  });
+      console.log(result);
+    });
 });
 ```
 
@@ -435,21 +442,21 @@ El Motor de plantilla (referido como "motor de vistas" por _Express_) le permite
 En su código de configuración de su aplicación usted configura el motor de plantillas para usar y su localización Express podiría buscar plantillas usando las configuraciones de 'vistas' y 'motores de vistas', mostrado abajo (tendría también que instalar el paquete conteniendo su librería de plantillas!)
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 // Set directory to contain the templates ('views')
-app.set('views', path.join(__dirname, 'views'));
+app.set("views", path.join(__dirname, "views"));
 
 // Set view engine to use, in this case 'some_template_engine_name'
-app.set('view engine', 'some_template_engine_name');
+app.set("view engine", "some_template_engine_name");
 ```
 
 La apariencia de la plantilla dependera de qué motor use. Asumiendo que tiene un archivo de plantillas nombrado "index.\<template_extension>" este contiene placeholders para variables de datos nombradas 'title' y "message", podría llamar [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) en una función manejadora de rutas para crear y enviar la HTML response:
 
 ```js
-app.get('/', function(req, res) {
-  res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
+app.get("/", function (req, res) {
+  res.render("index", { title: "About dogs", message: "Dogs rock!" });
 });
 ```
 

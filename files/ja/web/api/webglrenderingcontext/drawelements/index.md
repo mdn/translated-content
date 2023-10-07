@@ -10,7 +10,7 @@ slug: Web/API/WebGLRenderingContext/drawElements
 ## 構文
 
 ```js
-drawElements(mode, count, type, offset)
+drawElements(mode, count, type, offset);
 ```
 
 ### 引数

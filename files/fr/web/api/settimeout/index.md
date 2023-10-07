@@ -1,10 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-page-type: web-api-global-function
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
-browser-compat: api.setTimeout
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,14 +10,14 @@ La méthode globale **`setTimeout()`** permet de définir un minuteur qui exécu
 ## Syntaxe
 
 ```js
-setTimeout(code)
-setTimeout(code, delay)
+setTimeout(code);
+setTimeout(code, delay);
 
-setTimeout(functionRef)
-setTimeout(functionRef, delay)
-setTimeout(functionRef, delay, param1)
-setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN)
+setTimeout(functionRef);
+setTimeout(functionRef, delay);
+setTimeout(functionRef, delay, param1);
+setTimeout(functionRef, delay, param1, param2);
+setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN);
 ```
 
 ### Paramètres
@@ -31,6 +27,7 @@ setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN)
 - `code`
   - : Une syntaxe alternative qui permet d'inclure une chaîne de caractères plutôt qu'une fonction. Le code contenu est compilé et exécuté lorsque le minuteur expire. Cette syntaxe est **déconseillée** pour les mêmes raisons qu'[`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) et représente un risque de sécurité.
 - `delay` {{optional_inline}}
+
   - : La durée, exprimée en millisecondes, que le minuteur devrait attendre avant l'exécution de la fonction indiquée. Si ce paramètre est absent, c'est 0 qui est utilisé comme valeur par défaut, indiquant que la fonction doit être exécutée au plus vite, c'est-à-dire au prochain cycle d'évènements.
 
     Que le paramètre soit fourni ou non, la durée attendue avant l'exécution peut être plus longue que le nombre de millisecondes exprimées, voir [les raisons pour lesquelles la durée effective est plus longue](#raisons_pour_lesquelles_la_durée_effective_est_plus_longue) ci-après.
@@ -60,7 +57,7 @@ Lorsque `setTimeout()` est appelée avec une valeur du paramètre `delay` qui n'
 ```js example-bad
 setTimeout(() => {
   console.log("Retardée d'une seconde.");
-}, "1000")
+}, "1000");
 ```
 
 Toutefois, dans de nombreux cas, la conversion implicite peut mener à des résultats inattendus voire surprenants. Par exemple, lorsque le code qui suit est exécuté, la chaîne de caractères `"1 seconde"` est en fait transformée dans le nombre `0`, et le code est donc exécuté immédiatement.
@@ -68,7 +65,7 @@ Toutefois, dans de nombreux cas, la conversion implicite peut mener à des résu
 ```js example-bad
 setTimeout(() => {
   console.log("Retardée d'une seconde.");
-}, "1 seconde")
+}, "1 seconde");
 ```
 
 Aussi, on veillera à ne pas utiliser de chaîne de caractères pour le paramètre `delay` et à utiliser uniquement des nombres&nbsp;:
@@ -76,7 +73,7 @@ Aussi, on veillera à ne pas utiliser de chaîne de caractères pour le paramèt
 ```js example-good
 setTimeout(() => {
   console.log("Retardée d'une seconde.");
-}, 1000)
+}, 1000);
 ```
 
 ### Fonctionnement avec les fonctions asynchrones
@@ -86,9 +83,15 @@ setTimeout(() => {
 Prenons cet exemple&nbsp;:
 
 ```js
-setTimeout(() => {console.log("Voici le premier message")}, 5000);
-setTimeout(() => {console.log("Voici le second message")}, 3000);
-setTimeout(() => {console.log("Voici le troisième message")}, 1000);
+setTimeout(() => {
+  console.log("Voici le premier message");
+}, 5000);
+setTimeout(() => {
+  console.log("Voici le second message");
+}, 3000);
+setTimeout(() => {
+  console.log("Voici le troisième message");
+}, 1000);
 
 // Produira ceci dans la console&nbsp;:
 
@@ -110,20 +113,20 @@ Le code exécuté par `setTimeout()` est appelé par un contexte d'exécution s�
 Prenons l'exemple suivant&nbsp;:
 
 ```js
-const monTableau = ['zéro', 'un', 'deux'];
+const monTableau = ["zéro", "un", "deux"];
 monTableau.maMethode = function (sPropriete) {
   console.log(arguments.length > 0 ? this[sPropriete] : this);
 };
 
-monTableau.maMethode();  // affiche "zéro,un,deux"
+monTableau.maMethode(); // affiche "zéro,un,deux"
 monTableau.maMethode(1); // affiche "un"
 ```
 
 Cela fonctionne, car, lorsque `maMethode` est appelée, `this` vaut `monTableau` et, au sein de la fonction, `this[sPropriete]` est donc équivalent à `monTableau[sPropriete]`. Toutefois, si on écrit ceci&nbsp;:
 
 ```js
-setTimeout(monTableau.maMethode, 1.0*1000); // affiche "[object Window]" après 1 seconde
-setTimeout(monTableau.maMethode, 1.5*1000, '1'); // affiche "undefined" après 1.5 secondes
+setTimeout(monTableau.maMethode, 1.0 * 1000); // affiche "[object Window]" après 1 seconde
+setTimeout(monTableau.maMethode, 1.5 * 1000, "1"); // affiche "undefined" après 1.5 secondes
 ```
 
 La fonction `monTableau.maMethode` est passée à `setTimeout`, et lorsqu'elle est appelée, la valeur de `this` n'est pas définie et vaut `window` par défaut.
@@ -131,8 +134,8 @@ La fonction `monTableau.maMethode` est passée à `setTimeout`, et lorsqu'elle e
 Il n'y a pas d'argument `thisArg` pour `setTimeout` (comme on peut en voir pour [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) et [`reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). Comme indiqué après, utiliser `call()` ne fonctionne pas non plus.
 
 ```js
-setTimeout.call(monTableau, monTableau.maMethode, 2.0*1000); // erreur
-setTimeout.call(monTableau, monTableau.maMethode, 2.5*1000, 2); // erreur également
+setTimeout.call(monTableau, monTableau.maMethode, 2.0 * 1000); // erreur
+setTimeout.call(monTableau, monTableau.maMethode, 2.5 * 1000, 2); // erreur également
 ```
 
 #### Solutions
@@ -142,18 +145,26 @@ setTimeout.call(monTableau, monTableau.maMethode, 2.5*1000, 2); // erreur égale
 Une méthode pour résoudre ce problème consiste à englober la méthode dans une fonction afin que `this` ait la valeur attendue&nbsp;:
 
 ```js
-setTimeout(function(){monTableau.maMethode()}, 2.0*1000);
+setTimeout(function () {
+  monTableau.maMethode();
+}, 2.0 * 1000);
 // affiche "zéro,un,deux" après 2 secondes
-setTimeout(function(){monTableau.maMethode('1')}, 2.5*1000);
+setTimeout(function () {
+  monTableau.maMethode("1");
+}, 2.5 * 1000);
 // affiche "un" après 2.5 secondes
 ```
 
 La fonction englobante peut être une fonction fléchée&nbsp;:
 
 ```js
-setTimeout(() => {monTableau.maMethode()}, 2.0*1000);
+setTimeout(() => {
+  monTableau.maMethode();
+}, 2.0 * 1000);
 // affiche "zéro,un,deux" après 2 secondes
-setTimeout(() => {monTableau.maMethode('1')}, 2.5*1000); 
+setTimeout(() => {
+  monTableau.maMethode("1");
+}, 2.5 * 1000);
 // affiche "un" après 2.5 secondes
 ```
 
@@ -162,19 +173,19 @@ setTimeout(() => {monTableau.maMethode('1')}, 2.5*1000);
 On peut aussi utiliser la fonction [`bind()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) afin de fixer la valeur de `this` pour tous les appels à une fonction donnée&nbsp;:
 
 ```js
-const monTableau = ['zéro', 'un', 'deux'];
-const maMethodeLiee = (function (sPropriete) {
-    console.log(arguments.length > 0 ? this[sPropriete] : this);
-}).bind(monTableau);
+const monTableau = ["zéro", "un", "deux"];
+const maMethodeLiee = function (sPropriete) {
+  console.log(arguments.length > 0 ? this[sPropriete] : this);
+}.bind(monTableau);
 
 maMethodeLiee();
 // affiche "zéro,un,deux" car 'this' est lié à monTableau
 // dans la fonction
 maMethodeLiee(1);
 // affiche "un"
-setTimeout(maMethodeLiee, 1.0*1000);
+setTimeout(maMethodeLiee, 1.0 * 1000);
 // Affiche "zéro,un,deux" après 1 seconde grâce à la liaison
-setTimeout(maMethodeLiee, 1.5*1000, "1");
+setTimeout(maMethodeLiee, 1.5 * 1000, "1");
 // Affiche "un" après 1.5 secondes
 ```
 
@@ -189,8 +200,8 @@ setTimeout("console.log('Hello World!');", 500);
 
 ```js example-good
 // On privilégiera cette forme
-setTimeout(function() {
-  console.log('Hello World!');
+setTimeout(function () {
+  console.log("Hello World!");
 }, 500);
 ```
 
@@ -250,7 +261,9 @@ function logline(now) {
   // Afficher le dernier horodatage, le nouveau, et la
   // différence
   const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}           ${pad(now)}          ${now - last}`;
+  newLine.textContent = `${pad(last)}           ${pad(now)}          ${
+    now - last
+  }`;
   document.getElementById("log").appendChild(newLine);
   last = now;
 }
@@ -284,10 +297,10 @@ Par exemple, on notera que la fonction passée en argument de `setTimeout()` ne 
 
 ```js
 function toto() {
-  console.log('toto a été appelée');
+  console.log("toto a été appelée");
 }
 setTimeout(toto, 0);
-console.log('Après setTimeout()');
+console.log("Après setTimeout()");
 ```
 
 Affichera ce qui suit dans la console&nbsp;:
@@ -322,8 +335,12 @@ Dans l'exemple qui suit, on a deux boutons simples sur une page web qui sont rel
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">Afficher un message après deux secondes</button>
-<button onclick="clearMessage();">Annuler le message avant qu'il apparaisse</button>
+<button onclick="delayedMessage();">
+  Afficher un message après deux secondes
+</button>
+<button onclick="clearMessage();">
+  Annuler le message avant qu'il apparaisse
+</button>
 
 <div id="output"></div>
 ```
@@ -334,12 +351,12 @@ Dans l'exemple qui suit, on a deux boutons simples sur une page web qui sont rel
 let timeoutID;
 
 function setOutput(outputContent) {
-  document.querySelector('#output').textContent = outputContent;
+  document.querySelector("#output").textContent = outputContent;
 }
 
 function delayedMessage() {
-  setOutput('');
-  timeoutID = setTimeout(setOutput, 2*1000, "C'était lent !");
+  setOutput("");
+  timeoutID = setTimeout(setOutput, 2 * 1000, "C'était lent !");
 }
 
 function clearMessage() {
@@ -349,7 +366,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 

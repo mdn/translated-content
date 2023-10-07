@@ -27,18 +27,18 @@ var signal = controller.signal;
 
 // ...
 
-signal.aborted ? console.log('Pedido foi abortado') : console.log('Pedido nao foi abortado');
+signal.aborted
+  ? console.log("Pedido foi abortado")
+  : console.log("Pedido nao foi abortado");
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Estado                           | Comentário        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('DOM WHATWG', '#dom-abortsignal-onabort', 'onabort')}} | {{Spec2('DOM WHATWG')}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AbortSignal.aborted")}}
+{{Compat}}
 
 ## Veja Também
 

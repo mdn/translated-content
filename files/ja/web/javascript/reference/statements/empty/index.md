@@ -46,8 +46,8 @@ console.log(arr);
 次の例は、おそらく意図的でない使用例です。
 
 ```js example-bad
-if (condition);      // 注意: この "if" は何の意味もない!
-  killTheUniverse(); // この関数が常に実行される!!!
+if (condition); // 注意: この "if" は何の意味もない!
+killTheUniverse(); // この関数が常に実行される!!!
 ```
 
 ## 仕様書

@@ -75,7 +75,7 @@ color-scheme: unset;
 ## 参见
 
 - [`prefers-color-scheme`](/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) 媒体查询来检测用户对配色方案的偏好。
-- [使用 CSS 将颜色应用于 HTML 元素](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 将颜色应用于 HTML 元素](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 - 其他与颜色相关的属性：{{cssxref("color")}}、{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}} 和 {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}

@@ -14,17 +14,23 @@ CSS **`inherit`** 키워드를 사용한 속성은 부모 요소로부터 해당
 ## 예제
 
 ```css
- /* h2를 green으로 만듦 */
- h2 { color: green; }
+/* h2를 green으로 만듦 */
+h2 {
+  color: green;
+}
 
- /* 부모 요소의 color를 사용하도록 sidebar 내의 h2를 홀로 남김 */
- #sidebar h2 { color: inherit; }
+/* 부모 요소의 color를 사용하도록 sidebar 내의 h2를 홀로 남김 */
+#sidebar h2 {
+  color: inherit;
+}
 ```
 
 이 예제에서 sidebar 내부의 `h2` 요소는 다른 색일지도 모릅니다. 예를 들어, 그 중 하나는 규칙과 일치하는 div의 자식이라면
 
 ```css
- div#current { color: blue; }
+div#current {
+  color: blue;
+}
 ```
 
 파란색이 됩니다.

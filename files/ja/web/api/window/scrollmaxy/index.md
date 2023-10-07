@@ -10,7 +10,7 @@ slug: Web/API/Window/scrollMaxY
 ## 構文
 
 ```js
-yMax = window.scrollMaxY
+yMax = window.scrollMaxY;
 ```
 
 - `yMax` はピクセル数です。

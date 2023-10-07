@@ -24,7 +24,10 @@ transition-property: sliding-vertically;
 transition-property: test1;
 transition-property: test1, animation4;
 transition-property: all, height, all;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 transition-property: inherit;
@@ -51,7 +54,7 @@ transition-property: unset;
 
 ## 示例
 
-在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)中有几个示例可以参考。
+在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)中有几个示例可以参考。
 
 ## 规范
 
@@ -63,5 +66,5 @@ transition-property: unset;
 
 ## 参见
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/lastIndexOf
 ---
 
 {{JSRef}}
@@ -22,8 +12,8 @@ La méthode **`lastIndexOf()`** permet de renvoyer le dernier indice pour lequel
 ## Syntaxe
 
 ```js
-arr.lastIndexOf(élémentRecherché)
-arr.lastIndexOf(élémentRecherché, indexDébut)
+arr.lastIndexOf(élémentRecherché);
+arr.lastIndexOf(élémentRecherché, indexDébut);
 ```
 
 ### Paramètres
@@ -49,33 +39,33 @@ Dans l'exemple suivant, on utilise `lastIndexOf` afin de situer une valeur dans 
 
 ```js
 var tableau = [2, 5, 9, 2];
-tableau.lastIndexOf(2);     // 3
-tableau.lastIndexOf(7);     // -1
-tableau.lastIndexOf(2, 3);  // 3
-tableau.lastIndexOf(2, 2);  // 0
+tableau.lastIndexOf(2); // 3
+tableau.lastIndexOf(7); // -1
+tableau.lastIndexOf(2, 3); // 3
+tableau.lastIndexOf(2, 2); // 0
 tableau.lastIndexOf(2, -2); // 0
 tableau.lastIndexOf(2, -1); // 3
 ```
 
 ### Trouver toutes les occurrences d'un élément
 
-L’exemple suivant utilise `lastIndexOf` pour trouver tous les index (`indices`) d’un élément dans un tableau donné, en utilisant {{jsxref("Array.prototype.push", "push")}} pour les ajouter dans un autre tableau quand ils sont trouvés.
+L'exemple suivant utilise `lastIndexOf` pour trouver tous les index (`indices`) d'un élément dans un tableau donné, en utilisant {{jsxref("Array.prototype.push", "push")}} pour les ajouter dans un autre tableau quand ils sont trouvés.
 
 ```js
 var indices = [];
-var tableau = ['a', 'b', 'a', 'c', 'a', 'd'];
-var élément = 'a';
+var tableau = ["a", "b", "a", "c", "a", "d"];
+var élément = "a";
 var idx = tableau.lastIndexOf(élément);
 while (idx !== -1) {
   indices.push(idx);
-  idx = (idx > 0 ? tableau.lastIndexOf(élément, idx - 1) : -1);
+  idx = idx > 0 ? tableau.lastIndexOf(élément, idx - 1) : -1;
 }
 
 console.log(indices);
 // [4, 2, 0]
 ```
 
-Remarquez que nous avons dû traiter le cas de `idx === 0` séparément (`idx > 0`) parce que l’élément sera toujours trouvé, indépendamment du paramètre de `fromIndex`, si c’est le premier élément du tableau. C’est une différence avec la méthode {{jsxref("Array.prototype.indexOf", "indexOf")}}.
+Remarquez que nous avons dû traiter le cas de `idx === 0` séparément (`idx > 0`) parce que l'élément sera toujours trouvé, indépendamment du paramètre de `fromIndex`, si c'est le premier élément du tableau. C'est une différence avec la méthode {{jsxref("Array.prototype.indexOf", "indexOf")}}.
 
 ## Prothèse d'émulation (_polyfill_)
 
@@ -85,14 +75,15 @@ Remarquez que nous avons dû traiter le cas de `idx === 0` séparément (`idx > 
 // Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
-    'use strict';
+  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
     }
 
-    var n, k,
+    var n,
+      k,
       t = Object(this),
       len = t.length >>> 0;
     if (len === 0) {
@@ -104,8 +95,7 @@ if (!Array.prototype.lastIndexOf) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
         n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }

@@ -82,6 +82,6 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
 - 此属性对应的实体边框属性：{{CSSXref("border-top-style")}}、{{CSSXref("border-right-style")}}、{{CSSXref("border-bottom-style")}} 或 {{CSSXref("border-left-style")}}
 - {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

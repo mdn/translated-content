@@ -31,13 +31,11 @@ Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("Console API", "#consolewarnobject--object-", "console.warn()")}} | {{Spec2("Console API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.warn")}}
+{{Compat}}
 
 ## Ver também
 

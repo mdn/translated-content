@@ -1,8 +1,6 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-translation_of: Web/HTTP/Headers/DNT
-original_slug: Web/HTTP/Заголовки/DNT
 ---
 
 {{HTTPSidebar}}

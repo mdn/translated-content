@@ -1,15 +1,6 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission_static
-tags:
-  - API
-  - API Notifications
-  - Méthode
-  - Notification
-  - Notifications
-  - Reference
-translation_of: Web/API/Notification/requestPermission
-original_slug: Web/API/Notification/requestPermission
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -61,24 +52,24 @@ Il est possible d'envoyer une notification comme suit - nous présentons ici un 
 ```js
 function notifyMe() {
   // Vérifions si le navigateur prend en charge les notifications
-  if (!('Notification' in window)) {
-    alert('Ce navigateur ne prend pas en charge la notification de bureau')
+  if (!("Notification" in window)) {
+    alert("Ce navigateur ne prend pas en charge la notification de bureau");
   }
 
   // Vérifions si les autorisations de notification ont déjà été accordées
-  else if (Notification.permission === 'granted') {
+  else if (Notification.permission === "granted") {
     // Si tout va bien, créons une notification
-    const notification = new Notification('Salut toi!')
+    const notification = new Notification("Salut toi!");
   }
 
   // Sinon, nous devons demander la permission à l'utilisateur
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission().then((permission) => {
       // Si l'utilisateur accepte, créons une notification
-      if (permission === 'granted') {
-        const notification = new Notification('Salut toi!')
+      if (permission === "granted") {
+        const notification = new Notification("Salut toi!");
       }
-    })
+    });
   }
 
   // Enfin, si l'utilisateur a refusé les notifications, et que vous

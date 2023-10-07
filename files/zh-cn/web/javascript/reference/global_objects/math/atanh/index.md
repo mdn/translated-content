@@ -26,15 +26,15 @@ Math.atanh(x)
 
 ## 示例
 
-### `使用 Math.atanh()`
+### 使用 `Math.atanh()`
 
 ```js
-Math.atanh(-2);  // NaN
-Math.atanh(-1);  // -Infinity
-Math.atanh(0);   // 0
+Math.atanh(-2); // NaN
+Math.atanh(-1); // -Infinity
+Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1);   // Infinity
-Math.atanh(2);   // NaN
+Math.atanh(1); // Infinity
+Math.atanh(2); // NaN
 ```
 
 对于大于 1 或是小于－1 的值，函数返回 {{jsxref("NaN")}} 。
@@ -44,9 +44,11 @@ Math.atanh(2);   // NaN
 For \left|x\right| < 1, we have \operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right) so this can be emulated by the following function:
 
 ```js
-Math.atanh = Math.atanh || function(x) {
-  return Math.log((1+x)/(1-x)) / 2;
-};
+Math.atanh =
+  Math.atanh ||
+  function (x) {
+    return Math.log((1 + x) / (1 - x)) / 2;
+  };
 ```
 
 ## 规范

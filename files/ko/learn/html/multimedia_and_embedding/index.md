@@ -1,6 +1,8 @@
 ---
-title: Multimedia and embedding
+title: 멀티미디어와 임베딩
 slug: Learn/HTML/Multimedia_and_embedding
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}
@@ -11,7 +13,7 @@ slug: Learn/HTML/Multimedia_and_embedding
 
 이 단원을 시작하기 전에 앞서 [HTML소개](/ko/docs/Learn/HTML/Introduction_to_HTML)에서 설명한대로 HTML에 대한 기본 지식이 있어야합니다. 이 모듈 (또는 이와 비슷한 것)을 사용해 보지 않았다면, 처음부터 다시 시작후 돌아오세요!
 
-> **참고:** 자신만의 파일을 만들수 없는 컴퓨터/테블릿/그외 기기에서 작업하는 경우, 코드 예제를 (대부분을) [JSBin](https://jsbin.com/) 이나 [Thimble](https://thimble.mozilla.org/)같은 온라인 코딩 프로그램을 통해 수행해 볼 수 있습니다
+> **참고:** 자신만의 파일을 만들수 없는 컴퓨터/테블릿/그외 기기에서 작업하는 경우, 코드 예제를 (대부분을) [JSBin](https://jsbin.com/) 이나 [Glitch](https://glitch.com/)같은 온라인 코딩 프로그램을 통해 수행해 볼 수 있습니다
 
 ## 가이드
 
@@ -32,12 +34,12 @@ slug: Learn/HTML/Multimedia_and_embedding
 
 아래의 평가는 위의 가이드에서 다루는 HTML 기본 사항에 대한 이해를 테스트합니다.
 
-- [Mozilla splash page](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+- [Mozilla 스플래시 페이지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
   - : 이 평가에서, 우리는 당신이 Mozilla 에 관한 모든 펑키한 스플래시 페이지에 몇 개의 이미지와 비디오를 추가하도록 하며, 이 모듈의 기사에서 논의된 몇 가지 기술에 대하여 당신의 지식을 테스트할 것입니다!
 
 ## 같이 보기
 
 - [이미지 위에 히트맵 추가](/ko/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
   - : 이미지 맵은 이미지 링크의 다른 부분을 다른 곳에 연결하는 메커니즘을 제공합니다(당신이 클릭하는 각 나라에 대한 추가 정보들과 연결되는 지도를 생각해 봅시다). 이 기술은 때때로 유용하게 활용될 수 있습니다.
-- [Web literacy basics 2](https://teach.mozilla.org/activities/web-lit-basics-two/)
-  - : An excellent Mozilla foundation course that explores and tests some of the skills talked about in the _Multimedia and embedding_ module. Dive deeper into the basics of composing webpages, designing for accessibility, sharing resources, using online media, and working open (meaning that your content is freely available, and shareable by others).
+- [Web literacy basics 2](https://mozilla.github.io/curriculum-final/web-lit-basics-two/session01-why-do-we-use-the-web.html#overview)
+  - : 멀티미디어 및 임베딩 모듈에서 다룬 몇 가지 기술을 탐구하고 테스트하는 훌륭한 Mozilla 기초 과정입니다. 웹 페이지 작성, 접근성을 위한 디자인, 리소스 공유, 온라인 미디어 사용, 오픈 작업(콘텐츠를 다른 사람이 자유롭게 사용할 수 있고 공유할 수 있도록 하는 것)의 기본 사항에 대해 자세히 알아볼 수 있습니다.

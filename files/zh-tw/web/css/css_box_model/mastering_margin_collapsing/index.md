@@ -1,6 +1,6 @@
 ---
 title: 理解邊界重疊的原因
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
 {{CSSRef}}當一個 Block 的 [下邊界範圍](/zh-TW/docs/Web/CSS/margin-bottom) ( margin-bottom ) 和一個 Block 的 [上邊界範圍](/zh-TW/docs/Web/CSS/margin-top) ( margin-top ) 都有設定時只會留下最大那個，這種情況我們稱為**邊界重疊** ( margin collapsing )。請留意設定了 float 或[絕對定位](/zh-TW/docs/Web/CSS/position#absolute)的元件並不會產生邊界重疊。
@@ -83,11 +83,7 @@ slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 
 以上這些內容都是發生在 Block-Level 的元素，設定 floating 和 absolutely positioned 的元素完全不用擔心邊界重疊的計算。
 
-## 標準文件
-
-{{Specifications}}
-
-## 參考
+## 參見
 
 - [CSS Reference](/zh-TW/docs/Web/CSS/CSS_Reference)
 - CSS 重要概念：
@@ -97,10 +93,10 @@ slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
   - [繼承](/zh-TW/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-TW/docs/Web/CSS/initial_value)

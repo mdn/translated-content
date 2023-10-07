@@ -1,7 +1,6 @@
 ---
 title: Propiedades abreviadas
 slug: Web/CSS/Shorthand_properties
-original_slug: Web/CSS/Shorthand_properties
 ---
 
 {{CSSRef}}
@@ -90,7 +89,7 @@ Las siguientes declaraciones...
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
@@ -98,7 +97,9 @@ font-family: Arial, sans-serif;
 ... se puede acortar a lo siguiente:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 Esta declaración abreviada es en realidad equivalente a las declaraciones anteriores más `font-variant: normal` y `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).

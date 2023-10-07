@@ -1,11 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - HTTP
-  - Reference
-  - en-tête
-translation_of: Web/HTTP/Headers/Content-Type
 ---
 
 {{HTTPSidebar}}
@@ -57,8 +52,8 @@ Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formul
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="du texte">
-  <input type="file" name="monFichier">
+  <input type="text" name="description" value="du texte" />
+  <input type="file" name="monFichier" />
   <button type="submit">Envoyer</button>
 </form>
 ```

@@ -74,13 +74,13 @@ TypeError: Cannot freeze array buffer views with elements
 ```js
 const obj = {
   prop() {},
-  foo: 'bar'
+  foo: "bar",
 };
 
 // 凍結前: 新しいプロパティが追加でき、
 // 既存のプロパティは変更や削除ができます
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // 凍結
@@ -93,30 +93,30 @@ o === obj; // true
 Object.isFrozen(obj); // === true
 
 // すべての変更が失敗するようになりました
-obj.foo = 'quux'; // 暗黙的に何も行われません
+obj.foo = "quux"; // 暗黙的に何も行われません
 // 暗黙的にプロパティは追加されません
-obj.quaxxor = 'the friendly duck';
+obj.quaxxor = "the friendly duck";
 
 // また、厳格モードではこれらの試みに対して TypeError が発生します
-function fail(){
-  'use strict';
-  obj.foo = 'sparky'; // TypeError が発生
+function fail() {
+  "use strict";
+  obj.foo = "sparky"; // TypeError が発生
   delete obj.foo; // TypeError が発生
   delete obj.quaxxor; // 属性 'quaxxor' が追加されたことがないため true を返す
-  obj.sparky = 'arf'; // TypeError が発生
+  obj.sparky = "arf"; // TypeError が発生
 }
 
 fail();
 
 // Object.defineProperty; から変更を試みますが、
 // 以下のどちらの文も TypeError が発生します。
-Object.defineProperty(obj, 'ohai', { value: 17 });
-Object.defineProperty(obj, 'foo', { value: 'eit' });
+Object.defineProperty(obj, "ohai", { value: 17 });
+Object.defineProperty(obj, "foo", { value: "eit" });
 
 // プロトタイプを変更することもできず、
 // 以下のどちらの文も TypeError が発生します。
-Object.setPrototypeOf(obj, { x: 20 })
-obj.__proto__ = { x: 20 }
+Object.setPrototypeOf(obj, { x: 20 });
+obj.__proto__ = { x: 20 };
 ```
 
 ### 配列の凍結
@@ -129,7 +129,7 @@ a[0] = 1; // 暗黙に失敗
 
 // 厳格モードで試みると TypeError が発生します
 function fail() {
-  "use strict"
+  "use strict";
   a[0] = 1;
 }
 
@@ -143,13 +143,13 @@ a.push(2); // TypeError が発生
 
 ```js
 const obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'aValue';
+obj1.internal.a = "aValue";
 
-obj1.internal.a // 'aValue'
+obj1.internal.a; // 'aValue'
 ```
 
 定数オブジェクトになるには、参照のつながり全体 (他のオブジェクトへの直接または間接的な参照) が不変で凍結されたオブジェクトのみを参照していなければなりません。凍結されるオブジェクトは、オブジェクト全体の中にあるオブジェクトの*状態* (値と他のオブジェクトへの参照) がすべて固定されているので、不変ということができます。なお、文字列、数値、真偽値はすべて不変となり、関数や配列はオブジェクト扱いです。
@@ -164,8 +164,8 @@ const employee = {
   designation: "Developer",
   address: {
     street: "Rohini",
-    city: "Delhi"
-  }
+    city: "Delhi",
+  },
 };
 
 Object.freeze(employee);
@@ -173,7 +173,7 @@ Object.freeze(employee);
 employee.name = "Dummy"; // 非 strict モードでは暗黙に失敗
 employee.address.city = "Noida"; // 子オブジェクトの属性は変更できる
 
-console.log(employee.address.city) // 出力: "Noida"
+console.log(employee.address.city); // 出力: "Noida"
 ```
 
 オブジェクトを不変にするには、オブジェクト型のプロパティをそれぞれ再帰的に凍結させてください (深い凍結)。オブジェクトが参照グラフに[閉路](https://ja.wikipedia.org/wiki/閉路)を含まないことが分かっている場合は、デザインパターンに基づいてケースバイケースのパターンを使用してください。そうでないと、無限ループが発生します。`deepFreeze()` をパス (例えば配列) 引数を受け取る内部関数を持つよう拡張すると、オブジェクトを不変にするプロセスにいるときに、`deepFreeze()` が再帰的に呼び出されることを防ぐことができます。凍結させてはいけない \[window] のようなオブジェクトを凍結させる危険性がなおあります。
@@ -198,13 +198,13 @@ function deepFreeze(object) {
 
 const obj2 = {
   internal: {
-    a: null
-  }
+    a: null,
+  },
 };
 
 deepFreeze(obj2);
 
-obj2.internal.a = 'anotherValue'; // 非 strict モードでは暗黙に失敗
+obj2.internal.a = "anotherValue"; // 非 strict モードでは暗黙に失敗
 obj2.internal.a; // null
 ```
 

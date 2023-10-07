@@ -1,13 +1,15 @@
 ---
-title: <ruby>
+title: "<ruby>: ルビ注釈要素"
 slug: Web/HTML/Element/ruby
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
 
-The **HTML `<ruby>` element** はベーステキストの上、下、隣に描画される小さな注釈で、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。
+**`<ruby>`** は [HTML](/ja/docs/Web/HTML) の要素で、ベーステキストの上、下、隣に描画される小さな注釈であり、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。
 
-*ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.org/wiki/Agate_(typography)>)に由来しており、読みやすい状態を保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
+*ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.org/wiki/Agate_(typography)>)に由来しており、読みやすさ保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
 
@@ -15,15 +17,15 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリ</a
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -31,7 +33,7 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -43,7 +45,7 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -73,22 +75,27 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
 
 ## 例
 
-### 例 1: 文字ごとのルビ
+### 例 1: 文字ごと
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
-  字 <rp>(</rp><rt>じ</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
-### 例 2: 熟語のルビ
+#### 結果
+
+{{EmbedLiveSample('Example 1: Character')}}
+
+### 例 2: 熟語
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>あした</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
+
+#### 結果
+
+{{EmbedLiveSample('Example 1: Word')}}
 
 ## 仕様書
 
@@ -96,7 +103,7 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -104,5 +111,4 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
-- {{HTMLElement("rbc")}}
 - {{CSSxRef("text-transform")}}: full-size-kana

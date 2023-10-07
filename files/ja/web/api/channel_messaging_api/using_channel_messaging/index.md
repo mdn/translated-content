@@ -34,10 +34,10 @@ slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 デモのメインページには、 {{htmlelement("iframe")}} に送信するメッセージを入力するためのテキスト入力を含む単純なフォームがあります。 また、 {{htmlelement("iframe")}} から返される確認メッセージを表示するために後で使用する段落もあります。
 
 ```js
-var input = document.getElementById('message-input');
-var output = document.getElementById('message-output');
-var button = document.querySelector('button');
-var iframe = document.querySelector('iframe');
+var input = document.getElementById("message-input");
+var output = document.getElementById("message-output");
+var button = document.querySelector("button");
+var iframe = document.querySelector("iframe");
 
 var channel = new MessageChannel();
 var port1 = channel.port1;
@@ -47,13 +47,13 @@ iframe.addEventListener("load", onLoad);
 
 function onLoad() {
   // ボタンのクリックを待ち受けする
-  button.addEventListener('click', onClick);
+  button.addEventListener("click", onClick);
 
   // port1 でメッセージを待ち受けする
   port1.onmessage = onMessage;
 
   // port2 を iframe に移管する
-  iframe.contentWindow.postMessage('init', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("init", "*", [channel.port2]);
 }
 
 // ボタンがクリックされたときに port1 にメッセージを投稿する
@@ -65,7 +65,7 @@ function onClick(e) {
 // port1 で受信したメッセージを処理する
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 
@@ -86,11 +86,11 @@ IFrame が読み込まれたら、ボタン用の `onclick` ハンドラーと {
 IFrame では、次の JavaScript があります。
 
 ```js
-var list = document.querySelector('ul');
+var list = document.querySelector("ul");
 var port2;
 
 // 初期ポート移管メッセージを待ち受けする
-window.addEventListener('message', initPort);
+window.addEventListener("message", initPort);
 
 // 移管されたポートを設定する
 function initPort(e) {
@@ -100,7 +100,7 @@ function initPort(e) {
 
 // port2 で受信したメッセージを処理する
 function onMessage(e) {
-  var listItem = document.createElement('li');
+  var listItem = document.createElement("li");
   listItem.textContent = e.data;
   list.appendChild(listItem);
   port2.postMessage('Message received by IFrame: "' + e.data + '"');
@@ -121,7 +121,7 @@ function onMessage(e) {
 // port1 で受信したメッセージを処理する
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 

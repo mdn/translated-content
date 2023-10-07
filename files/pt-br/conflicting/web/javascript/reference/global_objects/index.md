@@ -1,7 +1,6 @@
 ---
 title: uneval()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects
-original_slug: Web/JavaScript/Reference/Global_Objects/uneval
 ---
 
 {{jsSidebar("Objects")}}{{Non-standard_header}}

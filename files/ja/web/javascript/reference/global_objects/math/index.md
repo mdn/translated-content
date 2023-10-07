@@ -120,11 +120,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### 正三角形の高さの計算

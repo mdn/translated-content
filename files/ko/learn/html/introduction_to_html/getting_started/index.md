@@ -2,6 +2,7 @@
 title: HTML 시작하기
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 이 문서는 HTML 의 기본적인 내용에 대한 글입니다. 이 글에서는 HTML 에 관련된 용어들(Element, Attribute ..)의 정의에 대해 설명할 것입니다. 또한 HTML이 무엇으로 이루어져 있는지(구성요소), 어떻게 구성되어 있는지(구조), 중요한 특징은 무엇인지에 대해 설명할 것입니다. 독자의 흥미를 위해 간단한 HTML 을 작성하는 과정도 포함되어 있습니다.
@@ -66,11 +67,12 @@ Input 영역 아래의 줄을 `<em>` 과 `</em>` 태그를 이용해서 감싸 �
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">코드 영역에서 포커스를 이동하려면 Esc키를 누르십시오 (Tab키로 탭 문자를 삽입).</p>
+<p class="a11y-label">
+  코드 영역에서 포커스를 이동하려면 Esc키를 누르십시오 (Tab키로 탭 문자를 삽입).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
   This is my text.
@@ -84,7 +86,7 @@ Input 영역 아래의 줄을 `<em>` 과 `</em>` 태그를 이용해서 감싸 �
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -105,10 +107,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -116,38 +118,38 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<em>This is my text.</em>';
+var htmlSolution = "<em>This is my text.</em>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -159,8 +161,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -171,10 +176,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -212,9 +217,13 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 다음 예시를 봅시다:
 
 ```html
-<em>first</em><em>second</em><em>third</em>
+<em>first</em>
+<em>second</em>
+<em>third</em>
 
-<p>fourth</p><p>fifth</p><p>sixth</p>
+<p>fourth</p>
+<p>fifth</p>
+<p>sixth</p>
 ```
 
 {{htmlelement("em")}} 은 인라인 요소(inline element) 이므로, 밑에서 보실 수 있듯이, 처음 세 개의 요소는 서로 같은 줄에, 사이에 공백이 없이 위치합니다. 한편, {{htmlelement("p")}} 는 블록 레벨 요소이므로, 각 요소들은 새로운 줄에 나타나며, 위와 아래에 여백이 있습니다 (여백은 브라우저가 문단에 적용하는 기본 [CSS styling](/ko/docs/Learn/CSS/Introduction_to_CSS) 때문에 적용됩니다).
@@ -232,7 +241,8 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 모든 요소가 위에 언급된 여는 태그, 내용, 닫는 태그 패턴을 따르는 것은 아닙니다. 주로 문서에 무언가를 첨부하기 위해 단일 태그(Single tag)를 사용하는 요소도 있습니다. 예를 들어 {{htmlelement("img")}} 요소는 해당 위치에 이미지를 삽입하기 위한 요소입니다:
 
 ```html
-<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
 ```
 
 위에 대한 결과는 다음과 같이 나올 것입니다:
@@ -245,7 +255,7 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 
 요소는 아래 이미지와 같이 속성을 가질 수 있습니다:
 
-![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](grumpy-cat-attribute-small.png)
+![My cat is very grumpy](grumpy-cat-attribute-small.png)
 
 속성은 요소에 실제론 나타내고 싶지 않지만 추가적인 내용을 담고 싶을 때 사용합니다. 위에는 나중에 스타일에 관련된 내용이나 기타 내용을 위해 해당 목표를 구분할 수 있는 `class` 속성을 부여했습니다.
 
@@ -273,19 +283,20 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
   &lt;p&gt;A link to my favorite website.&lt;/p&gt;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -312,10 +323,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -323,38 +334,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+var htmlSolution =
+  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -366,8 +378,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -378,10 +393,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -395,7 +410,7 @@ textarea.onkeyup = function(){
 
 ### 참과 거짓 속성(Boolean attributes)
 
-때때로 값이 없는 속성을 볼 수 있을텐데 이것은 허용되는 것입니다. 이를 불 속성이라고 하며, 일반적으로 그 속성의 이름과 동일한 하나의 값만을 가질 수 있습니다. 예를 들어 {{htmlattrxref("disabled", "input")}} 속성을 양식 입력 요소에 할당하면 사용자가 데이터를 입력할 수 없도록 비활성화(회색으로 표시) 할 수 있습니다.
+때때로 값이 없는 속성을 볼 수 있을텐데 이것은 허용되는 것입니다. 이를 불 속성이라고 하며, 일반적으로 그 속성의 이름과 동일한 하나의 값만을 가질 수 있습니다. 예를 들어 [`disabled`](/ko/docs/Web/HTML/Element/input#disabled) 속성을 양식 입력 요소에 할당하면 사용자가 데이터를 입력할 수 없도록 비활성화(회색으로 표시) 할 수 있습니다.
 
 ```
 <input type="text" disabled="disabled">
@@ -404,9 +419,9 @@ textarea.onkeyup = function(){
 이것은 다음과 같이 줄여쓸 수 있습니다. (당신이 참고할 수 있도록 비활성화를 하지 않은 형태도 포함했습니다.)
 
 ```html
-<input type="text" disabled>
+<input type="text" disabled />
 
-<input type="text">
+<input type="text" />
 ```
 
 이 둘은 다음과 같은 결과를 보여줍니다.
@@ -440,7 +455,7 @@ textarea.onkeyup = function(){
 ```html
 <a href="http://www.example.com">A link to my example.</a>
 
-<a href='http://www.example.com'>A link to my example.</a>
+<a href="http://www.example.com">A link to my example.</a>
 ```
 
 주의해야할 점은 두 개를 섞어 쓰면 안된다는 것입니다. 다음은 잘못 사용한 예입니다.
@@ -452,7 +467,9 @@ textarea.onkeyup = function(){
 만약 한 가지 따옴표를 사용했다면 다른 따옴표로 속성값을 둘러싸서 오류를 방지할 수 있습니다.
 
 ```html
-<a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="http://www.example.com" title="Isn't this fun?"
+  >A link to my example.</a
+>
 ```
 
 하지만 만약 당신이 따옴표 안에 같은 따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든) 따옴표를 표시하기 위해서 [HTML entities](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML)를 사용하세요. 예를 들어 이렇게 하면 잘못됩니다.
@@ -472,10 +489,10 @@ textarea.onkeyup = function(){
 That wraps up the basics of individual HTML elements, but they aren't very useful on their own. 이제 어떻게 개별 요소를 결합해 전체 HTML 페이지를 구성하는지에 대해 살펴봅시다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -488,12 +505,11 @@ That wraps up the basics of individual HTML elements, but they aren't very usefu
 
 1. `<!DOCTYPE html>`: 문서 형식을 나타냅니다. HTML 초창기에 (1991\~2년) doctype은 HTML 페이지가 자동 오류 검사나 다른 유용한 것이 가능한 좋은 HTML을 의미하는 연결고리처럼 작동하는 것을 뜻했습니다. 이런 형식으로 사용했습니다.
 
-    ```html
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    ```
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    하지만 요즘에는 아무도 신경쓰지 않으며, 그저 모든 것이 제대로 작동하기 위해 포함되어야 하는 역사적 유물일 뿐입니다. `<!DOCTYPE html>` 은 유효한 문서 형식을 나타내는 짧은 문장이고, 이 것만 알고 있으면 됩니다.
+   하지만 요즘에는 아무도 신경쓰지 않으며, 그저 모든 것이 제대로 작동하기 위해 포함되어야 하는 역사적 유물일 뿐입니다. `<!DOCTYPE html>` 은 유효한 문서 형식을 나타내는 짧은 문장이고, 이 것만 알고 있으면 됩니다.
 
 2. `<html></html>`: {{htmlelement("html")}} 요소입니다. 이 요소는 전체 페이지의 콘텐츠를 포함하며, 기본 요소로도 알려져 있습니다.
 3. `<head></head>`: `<head>` 요소입니다. 이 요소는 홈페이지 이용자에게는 보이지 않지만 검색 결과에 노출 될 키워드, 홈페이지 설명, CSS 스타일, character setdeclaration 등 HTML 페이지의 모든 내용을 담고 있습니다. 자세한 내용은 다음 장에서 다룹니다.
@@ -530,7 +546,10 @@ That wraps up the basics of individual HTML elements, but they aren't very usefu
 <div class="output" style="min-height: 50px"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">코드 영역에서 포커스를 이동하려면 Esc 키를 누르십시오 (탭은 탭 문자를 삽입합니다).</p>
+<p class="a11y-label">
+  코드 영역에서 포커스를 이동하려면 Esc 키를 누르십시오 (탭은 탭 문자를
+  삽입합니다).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
   &lt;p&gt;This is my page&lt;/p&gt;
@@ -548,7 +567,7 @@ html {
 }
 
 h1 {
- color: blue;
+  color: blue;
 }
 
 h2 {
@@ -573,10 +592,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -584,38 +603,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
+var htmlSolution =
+  '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -627,8 +647,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -639,10 +662,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -658,7 +681,7 @@ textarea.onkeyup = function(){
 
 위의 예에서 많은 공백이 코드에 포함되어 있음을 알 수 있습니다. 이것은 선택 사항입니다. 이 두 코드 스니펫은 동일합니다.
 
-```html
+```html-nolint
 <p>Dogs are silly.</p>
 
 <p>Dogs        are
@@ -687,7 +710,7 @@ HTML에서 문자 `<`,`>`, `"`및 `&`는 특수 문자입니다. 이들은 HTML 
 
 아래 예시는 두 개의 단락이 있습니다.
 
-```html
+```html-nolint
 <p>In HTML, you define a paragraph using the <p> element.</p>
 
 <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>

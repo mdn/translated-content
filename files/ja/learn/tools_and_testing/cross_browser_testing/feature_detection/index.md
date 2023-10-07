@@ -8,8 +8,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 機能検出は、あるブラウザーがあるコードのブロックに対応しているかどうかを調べ、対応しているか (またはしていないか) に応じて異なるコードを実行することで、ブラウザーが常に動作し、ブラウザーによってクラッシュやエラーが発生しないようにします。この記事では、独自の単純な機能検出の書き方、実装をスピードアップするためのライブラリの使い方、 `@supports` などの機能検出のためのネイティブ機能について詳しく説明します。
 
 | 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザーテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | 機能検出の概念について理解し、CSS と JavaScript で適切な解決方法を実装できるようにする。                                                                                                                                                                    |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | 機能検出の概念について理解し、CSS と JavaScript で適切な解決方法を実装できるようにする。                                                                                                                                                                      |
 
 ## 機能検出の概念
 
@@ -19,7 +19,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // Google Maps API を用いて現在位置をマップ上に表示します
   });
 } else {
@@ -46,24 +46,27 @@ Let's implement something that demonstrates this, although we'll keep it simple 
 1. Start by making local copies of our [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout-css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), and [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css) files. Save them in a new directory.
 2. We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see [Manual installation](https://github.com/aFarkas/html5shiv#manual-installation)), unzip the ZIP file, copy the `html5shiv-printshiv.min.js` and `html5shiv.min.js` files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
 
-    ```
-    <script src="html5shiv.min.js"></script>
-    ```
+   ```
+   <script src="html5shiv.min.js"></script>
+   ```
 
 3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browser depending on their support levels. You can look at the different effects these two files they have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
 4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
 5. Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
 6. Give it the following contents:
 
-    ```js
-    const conditional = document.querySelector('.conditional');
-    const testElem = document.createElement('div');
-    if (testElem.style.flex !== undefined && testElem.style.flexFlow !== undefined) {
-      conditional.setAttribute('href', 'flex-layout.css');
-    } else {
-      conditional.setAttribute('href', 'float-layout.css');
-    }
-    ```
+   ```js
+   const conditional = document.querySelector(".conditional");
+   const testElem = document.createElement("div");
+   if (
+     testElem.style.flex !== undefined &&
+     testElem.style.flexFlow !== undefined
+   ) {
+     conditional.setAttribute("href", "flex-layout.css");
+   } else {
+     conditional.setAttribute("href", "float-layout.css");
+   }
+   ```
 
 Here we are grabbing a reference to the second `<link>` element, and creating a `<div>` element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.
 
@@ -81,7 +84,6 @@ For example, we could rewrite our previous example to use `@supports` — see [`
 
 ```css
 @supports (flex-flow: row) and (flex: 1) {
-
   main {
     display: flex;
   }
@@ -94,7 +96,6 @@ For example, we could rewrite our previous example to use `@supports` — see [`
   main div:last-child {
     padding-right: 0;
   }
-
 }
 ```
 
@@ -104,9 +105,7 @@ This at-rule block applies the CSS rule within only if the current browser suppo
 
 ```css
 @supports not (flex-flow: row) and (flex: 1) {
-
   /* rules in here */
-
 }
 ```
 
@@ -116,9 +115,9 @@ This may look a lot more convenient than the previous example — we can do all 
 
 We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of the following common patterns:
 
-| Feature detection type              | Explanation                                                                                                                                                                                                                    | Example                                                                                                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| _If member in object_               | Check whether a certain method or property (typically an entry point into using the API or other feature you are detecting for) exists in its parent Object.                                                                   | `if("geolocation" in navigator) { ... }`                                                                             |
+| Feature detection type              | Explanation                                                                                                                                                                                                       | Example                                                                                                              |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| _If member in object_               | Check whether a certain method or property (typically an entry point into using the API or other feature you are detecting for) exists in its parent Object.                                                      | `if("geolocation" in navigator) { ... }`                                                                             |
 | _Property on element_               | Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it. The example shown is a way of detecting [HTML5 Canvas](/ja/docs/Web/API/Canvas_API) support. | `function supports_canvas() { return !!document.createElement('canvas').getContext; } if(supports_canvas()) { ... }` |
 | _Method on element return value_    | Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.                                                       | See [Dive Into HTML5 Video Formats detection](http://diveinto.html5doctor.com/detect.html#video-formats) test.       |
 | _Property on element retains value_ | Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a certain value, then check to see if the value is retained.                                                         | See [Dive into HTML5 `<input>` types detection](http://diveinto.html5doctor.com/detect.html#input-types) test.       |
@@ -172,21 +171,21 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 1. First, make a copy of [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Save them as `modernizr-css.html` and `modernizr-css.css`.
 2. Update your {{htmlelement("link")}} element in your HTML so it points to the correct CSS file (you should also update your {{htmlelement("title")}} element to something more suitable!):
 
-    ```html
-    <link href="modernizr-css.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="modernizr-css.css" rel="stylesheet" />
+   ```
 
 3. Above this `<link>` element, add a {{htmlelement("script")}} element to apply the Modernizr library to the page, as shown below. This needs to be applied to the page before any CSS (or JavaScript) that might make use of it.
 
-    ```html
-    <script src="modernizr-custom.js"></script>
-    ```
+   ```html
+   <script src="modernizr-custom.js"></script>
+   ```
 
 4. Now edit your opening `<html>` tag, so that it looks like this:
 
-    ```html
-    <html class="no-js">
-    ```
+   ```html
+   <html class="no-js"></html>
+   ```
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
 
@@ -266,27 +265,30 @@ Let's look at an example to show how you'd use those properties.
 3. Next, fill in the `YOUR-API-KEY` placeholder text in the second `<script>` element (as it is now) with a valid Google Maps API key. To get a key, sign in to a Google account, go to the [Get a Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key) page, then click the blue _Get a Key_ button and follow the instructions.
 4. Finally, add another `<script>` element at the bottom of the HTML body (just before the `</body>` tag), and put the following script inside the tags:
 
-    ```js
-    if (Modernizr.geolocation) {
-
-      navigator.geolocation.getCurrentPosition(function(position) {
-
-        let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-        let myOptions = {
-          zoom: 8,
-          center: latlng,
-          mapTypeId: google.maps.MapTypeId.TERRAIN,
-          disableDefaultUI: true
-        }
-        let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-      });
-
-    } else {
-      const para = document.createElement('p');
-      para.textContent = 'Argh, no geolocation!';
-      document.body.appendChild(para);
-    }
-    ```
+   ```js
+   if (Modernizr.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+       let latlng = new google.maps.LatLng(
+         position.coords.latitude,
+         position.coords.longitude,
+       );
+       let myOptions = {
+         zoom: 8,
+         center: latlng,
+         mapTypeId: google.maps.MapTypeId.TERRAIN,
+         disableDefaultUI: true,
+       };
+       let map = new google.maps.Map(
+         document.getElementById("map_canvas"),
+         myOptions,
+       );
+     });
+   } else {
+     const para = document.createElement("p");
+     para.textContent = "Argh, no geolocation!";
+     document.body.appendChild(para);
+   }
+   ```
 
 Try your example out! Here we use the `Modernizr.geolocation` test to check whether geolocation is supported by the current browser. If it is, we run some code that gets your device's current location, and plots it on a Google Map.
 

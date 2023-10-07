@@ -33,7 +33,8 @@ En el siguiente ejemplo se muestran los dos usos del método `clearMeasures()` .
 // Create a small helper to show how many PerformanceMeasure entries there are.
 function logMeasureCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("measure").length
+    "Found this many entries: " +
+      performance.getEntriesByType("measure").length,
   );
 }
 
@@ -46,15 +47,15 @@ performance.measure("from mark a", "a");
 performance.mark("b");
 performance.measure("between a and b", "a", "b");
 
-logMeasureCount() // "Found this many entries: 5"
+logMeasureCount(); // "Found this many entries: 5"
 
 // Delete just the "from navigation" PerformanceMeasure entries.
 performance.clearMeasures("from navigation");
-logMeasureCount() // "Found this many entries: 3"
+logMeasureCount(); // "Found this many entries: 3"
 
 // Delete all of the PerformanceMeasure entries.
 performance.clearMeasures();
-logMeasureCount() // "Found this many entries: 0"
+logMeasureCount(); // "Found this many entries: 0"
 ```
 
 ## Especificaciones

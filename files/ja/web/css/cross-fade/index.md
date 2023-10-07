@@ -1,7 +1,6 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
-original_slug: Web/CSS/cross-fade()
 l10n:
   sourceCommit: def614b0d1e298c5942205468c78b9d0ff798f46
 ---

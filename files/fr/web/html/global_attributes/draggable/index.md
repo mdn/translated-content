@@ -1,13 +1,6 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/draggable
-original_slug: Web/HTML/Attributs_universels/draggable
 ---
 
 {{HTMLSidebar("Global_attributes")}}

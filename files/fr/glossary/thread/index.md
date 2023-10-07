@@ -1,7 +1,6 @@
 ---
 title: Fil d'exécution
 slug: Glossary/Thread
-translation_of: Glossary/Thread
 ---
 
 Dans les sciences de l'informatique, le **fil d'exécution** correspond au lancement de plusieurs tâches ou programmes au même moment. Chaque unité capable d'exécuter du code est nommée un **fil d'exécution**.

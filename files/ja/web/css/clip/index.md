@@ -85,10 +85,13 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img src="hut.jpg" title="Original graphic">
-  <img id="top-left" src="hut.jpg" title="Graphic clipped to upper left">
-  <img id="middle" src="hut.jpg" title="Graphic clipped towards middle">
-  <img id="bottom-right" src="hut.jpg" title="Graphic clipped to bottom right">
+  <img src="hut.jpg" title="Original graphic" />
+  <img id="top-left" src="hut.jpg" title="Graphic clipped to upper left" />
+  <img id="middle" src="hut.jpg" title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="hut.jpg"
+    title="Graphic clipped to bottom right" />
 </p>
 ```
 

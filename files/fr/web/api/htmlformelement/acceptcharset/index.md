@@ -1,9 +1,6 @@
 ---
 title: HTMLFormElement.acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
-tags:
-  - HTMLFormElement
-translation_of: Web/API/HTMLFormElement/acceptCharset
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,7 +17,7 @@ form.acceptCharset = string;
 ## Exemple
 
 ```js
-inputs = document.forms["myform"].acceptCharset
+inputs = document.forms["myform"].acceptCharset;
 ```
 
 ## Spécification

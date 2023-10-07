@@ -1,7 +1,6 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-translation_of: Web/CSS/grid-row-start
 ---
 
 Свойство CSS **`grid-row-start`** определяет начальную позицию элемента грид в строке, добавляя линию, span или ничего (автоматически) к его расположению в сетке, тем самым определяя начальный край inline-элемента его {{glossary("grid areas", "grid area")}}.
@@ -45,13 +44,15 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 - `auto`
   - : Ключевое слово, указывающее, что свойство никак не влияет на размещение элемента сетки, обозначающее автоматическое размещение, автоматический диапазон или диапазон по умолчанию, равный 1.
 - `<custom-ident>`
+
   - : Если есть именованная строка с именем '\<custom-ident>-start', он вносит первую такую строку в размещение элемента сетки.
 
     > **Примечание:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).В противном случае это обрабатывается так, как если бы целое число 1 было указано вместе с `<custom-ident>`.
+
 - `<integer> && <custom-ident>?`
   - : Вносит n-ю линию сетки в размещение элемента сетки. Если задано отрицательное целое число, вместо этого начинается обратный отсчёт, начиная с конечного края явной сетки. Если имя задано как \<custom-ident>, подсчитываются только строки с этим именем. Если существует недостаточно строк с таким именем, предполагается, что все неявные линии сетки имеют это имя для нахождения этой позиции.An {{cssxref("integer")}} value of `0` is invalid.
 - `span && [ <integer> || <custom-ident> ]`
-  - : Contributes a grid span to the grid item’s placement; such that the row start edge of the grid item’s grid area is n lines from the end edge.If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid, corresponding to the search direction, are assumed to have that name for the purpose of counting this span.If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.The `<custom-ident>` cannot take the `span` value.
+  - : Contributes a grid span to the grid item's placement; such that the row start edge of the grid item's grid area is n lines from the end edge.If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid, corresponding to the search direction, are assumed to have that name for the purpose of counting this span.If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.The `<custom-ident>` cannot take the `span` value.
 
 ### Formal syntax
 
@@ -91,7 +92,9 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -119,8 +122,8 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 ## Specifications
 
-| Specification                                                                                | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| Specification                                                          | Status                 | Comment            |
+| ---------------------------------------------------------------------- | ---------------------- | ------------------ |
 | {{SpecName("CSS3 Grid", "#propdef-grid-row-start", "grid-row-start")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
 
 {{cssinfo}}

@@ -1,13 +1,6 @@
 ---
 title: Arbre d'accessibilité (MOA)
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Accessibilité
-  - DOM
-  - Glossaire
-  - Reference
-translation_of: Glossary/Accessibility_tree
 ---
 
 L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'{{Glossary("accessibility")}} pour la plupart des éléments HTML.
@@ -31,5 +24,5 @@ De plus, l'arbre d'accessibilité contient souvent des informations concernant c
 
 1. [Glossaire](/fr/docs/Glossaire)
 
-    1. {{Glossary("Accessibility")}}
-    2. {{Glossary("ARIA")}}
+   1. {{Glossary("Accessibility")}}
+   2. {{Glossary("ARIA")}}

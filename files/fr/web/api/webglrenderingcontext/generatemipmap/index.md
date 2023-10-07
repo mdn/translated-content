@@ -1,19 +1,11 @@
 ---
 title: WebGLRenderingContext.generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/generateMipmap
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.generateMipmap()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) génère un ensemble de mipmaps pour un objet {{domxref("WebGLTexture")}}.
+La méthode **`WebGLRenderingContext.generateMipmap()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) génère un ensemble de mipmaps pour un objet {{domxref("WebGLTexture")}}.
 
 Les mipmaps sont utilisées pour créer de la distance avec des objets. Une mipmap de haute résolution est utilisée pour les objets qui sont proches, et une mipmap de résolution inférieure est utilisée pour les objets qui sont plus éloignés. Elles commencent avec la résolution de l'image de texture, puis la résolution est divisée par deux jusqu'à ce qu'une image de texture de dimension 1x1 soit créée.
 

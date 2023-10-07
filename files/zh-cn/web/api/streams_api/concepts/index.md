@@ -3,7 +3,7 @@ title: Stream API 概念
 slug: Web/API/Streams_API/Concepts
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 [Stream API](/zh-CN/docs/Web/API/Streams_API) 为 Web 平台提供了一组十分有用的工具，提供了一系列对象以允许 JavaScript 访问来自网络的数据流，并根据开发人员的需要对其进行处理。与流相关的一些概念和术语可能会令你感到陌生——本文将解释你需要了解的所有内容。
 
@@ -40,7 +40,7 @@ slug: Web/API/Streams_API/Concepts
 
 举例而言，你在 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) 中可能会用到该方法，当你从服务器 fetch 资源，得到一个响应的可读流，你可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于响应的主体无法被消费两次，以及可读流无法被两个 reader 同时读取，你会需要两个可读流副本来实现需求。
 
-![](tee.png)
+![拷贝数据流](tee.png)
 
 ## 可写流
 

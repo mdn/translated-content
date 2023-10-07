@@ -1,17 +1,6 @@
 ---
 title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChildrenReordered
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 ---
 
 {{AddonSidebar()}}
@@ -21,9 +10,9 @@ Lancé lorsque les enfants d'un dossier ont changé leur commande en raison de l
 ## Syntaxe
 
 ```js
-browser.bookmarks.onChildrenReordered.addListener(listener)
-browser.bookmarks.onChildrenReordered.removeListener(listener)
-browser.bookmarks.onChildrenReordered.hasListener(listener)
+browser.bookmarks.onChildrenReordered.addListener(listener);
+browser.bookmarks.onChildrenReordered.removeListener(listener);
+browser.bookmarks.onChildrenReordered.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

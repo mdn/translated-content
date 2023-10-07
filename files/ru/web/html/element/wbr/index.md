@@ -1,21 +1,21 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-translation_of: Web/HTML/Element/wbr
 ---
+
 {{HTMLSidebar}}
 
 **Элемент HTML `<wbr>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте.
 
 **{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}**
 
-| Категории контента                | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое             | Отсутствует                                                                                                                                                 |
-| Пропуск тегов                     | It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.                                                  |
-| Допустимые родители               | Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                  |
-| Допустимые ARIA-роли              | Любые                                                                                                                                                       |
-| DOM-интерфейс                     | {{domxref("HTMLElement")}}                                                                                                                        |
+| Категории контента    | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое | Отсутствует                                                                                                                                                 |
+| Пропуск тегов         | It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.                                                             |
+| Допустимые родители   | Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                  |
+| Допустимые ARIA-роли  | Любые                                                                                                                                                       |
+| DOM-интерфейс         | {{domxref("HTMLElement")}}                                                                                                                                  |
 
 ## Атрибуты
 
@@ -34,17 +34,19 @@ translation_of: Web/HTML/Element/wbr
 [Руководство по стилю Yahoo](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/) рекомендует [разбивать URL перед пунктуацией](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), чтобы не оставлять знаки препинания в конце строки, которые читатель может ошибочно принять за конец URL.
 
 ```html
-<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+<p>
+  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+</p>
 ```
 
 **{{EmbedLiveSample("Пример")}}**
 
 ## Спецификация
 
-| Спецификация                                                                                                         | **Статус**                           | Комментарии |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| **{{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}**             | **{{Spec2('HTML WHATWG')}}** |             |
-| **{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}}** | **{{Spec2('HTML5 W3C')}}**     |             |
+| Спецификация                                                                              | **Статус**                   | Комментарии |
+| ----------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| **{{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}**          | **{{Spec2('HTML WHATWG')}}** |             |
+| **{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}}** | **{{Spec2('HTML5 W3C')}}**   |             |
 
 ## Поддержка браузерами
 

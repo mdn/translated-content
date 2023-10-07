@@ -48,7 +48,7 @@ range2.setEnd(parentNode, 60);
 const highlight = new Highlight(range1, range2);
 ```
 
-但你也可以根据需要创建任意多的高亮。例如，如果你正在构建一个协作文本编辑器，其中每个用户获得不同的文本颜色，那么你可以为每个用户创建一个高亮显示，如下所示:
+但你也可以根据需要创建任意多的高亮。例如，如果你正在构建一个协作文本编辑器，其中每个用户获得不同的文本颜色，那么你可以为每个用户创建一个高亮显示，如下所示：
 
 ```js
 const user1Highlight = new Highlight(user1Range1, user1Range2);
@@ -109,32 +109,32 @@ CSS.highlights.clear();
 下面的 HTML 代码片段定义了一个搜索框和有几段文字的文章：
 
 ```html
-<label>Search within text <input id="query" type="text"></label>
+<label>Search within text <input id="query" type="text" /></label>
 <article>
   <p>
     Maxime debitis hic, delectus perspiciatis laborum molestiae labore,
-    deleniti, quam consequatur iure veniam alias voluptas nisi quo.
-    Dolorem eaque alias, quo vel quas repudiandae architecto deserunt
-    quidem, sapiente laudantium nulla.
+    deleniti, quam consequatur iure veniam alias voluptas nisi quo. Dolorem
+    eaque alias, quo vel quas repudiandae architecto deserunt quidem, sapiente
+    laudantium nulla.
   </p>
   <p>
-    Maiores odit molestias, necessitatibus doloremque dolor illum
-    reprehenderit provident nostrum laboriosam iste, tempore perferendis!
-    Ab porro neque esse voluptas libero necessitatibus fugiat, ex, minus
-    atque deserunt veniam molestiae tempora? Vitae.
+    Maiores odit molestias, necessitatibus doloremque dolor illum reprehenderit
+    provident nostrum laboriosam iste, tempore perferendis! Ab porro neque esse
+    voluptas libero necessitatibus fugiat, ex, minus atque deserunt veniam
+    molestiae tempora? Vitae.
   </p>
   <p>
-    Dolorum facilis voluptate eaque eius similique ducimus dignissimos
-    assumenda quos architecto. Doloremque deleniti non exercitationem
-    rerum quam alias harum, nisi obcaecati corporis temporibus vero sapiente
-    voluptatum est quibusdam id ipsa.
+    Dolorum facilis voluptate eaque eius similique ducimus dignissimos assumenda
+    quos architecto. Doloremque deleniti non exercitationem rerum quam alias
+    harum, nisi obcaecati corporis temporibus vero sapiente voluptatum est
+    quibusdam id ipsa.
   </p>
 </article>
 ```
 
 #### JavaScript
 
-使用 JavaScript 监听搜索框上的 `input` 事件，当事件触发，这段代码将在文章的文本中为输入文本查找匹配项。然后它创建匹配的范围，并使用 CSS 自定义高亮 API 创建并注册一个 `search-results` 高亮对象:
+使用 JavaScript 监听搜索框上的 `input` 事件，当事件触发，这段代码将在文章的文本中为输入文本查找匹配项。然后它创建匹配的范围，并使用 CSS 自定义高亮 API 创建并注册一个 `search-results` 高亮对象：
 
 ```js
 const query = document.getElementById("query");
@@ -159,7 +159,7 @@ query.addEventListener("input", () => {
     return;
   }
 
-  // Clear the HighlightRegistry to remove the 
+  // Clear the HighlightRegistry to remove the
   // previous search results.
   CSS.highlights.clear();
 
@@ -185,7 +185,7 @@ query.addEventListener("input", () => {
         startPos = index + str.length;
       }
 
-      // Create a range object for each instance of 
+      // Create a range object for each instance of
       // str we found in the text node.
       return indices.map((index) => {
         const range = new Range();

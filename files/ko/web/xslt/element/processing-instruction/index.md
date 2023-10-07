@@ -1,7 +1,6 @@
 ---
 title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
-original_slug: Web/XSLT/processing-instruction
 ---
 
 {{ XsltRef() }}

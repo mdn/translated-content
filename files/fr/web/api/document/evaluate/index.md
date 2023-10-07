@@ -1,13 +1,6 @@
 ---
 title: document.evaluate
 slug: Web/API/Document/evaluate
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - XPath
-translation_of: Web/API/Document/evaluate
 ---
 
 {{ ApiRef("DOM") }}
@@ -22,14 +15,14 @@ var xpathResult = document.evaluate(
   contextNode,
   namespaceResolver,
   resultType,
-  result
+  result,
 );
 ```
 
 - `xpathExpression` est une chaîne de caractères représentant le XPath à évaluer.
 - `contextNode` spécifie le noeud de contexte pour la requête (voir [XPath specification](http://www.w3.org/TR/xpath)) . Il est courant de transmettre un document en tant que nœud de contexte.
 - `namespaceResolver` est une fonction qui recevra tous les préfixes d'espace de noms et devrait renvoyer une chaîne représentant l'URI de l'espace de noms associé à ce préfixe. Il sera utilisé pour résoudre les préfixes dans le XPath lui-même, afin qu'ils puissent être mis en correspondance avec le document. `null` est commun pour les documents HTML ou lorsque aucun préfixe d'espace de noms n'est utilisé.
-- `resultType` est un nombre entier qui correspond au type de résultat `XPathResult` à retourner. Utilisez des [propriétés de constantes nommées](#Types_de_resultats), comme `XPathResult.ANY_TYPE`  du constructeur de XPathResult , lequel correspond à un nombre entier compris entre 0 et 9.
+- `resultType` est un nombre entier qui correspond au type de résultat `XPathResult` à retourner. Utilisez des [propriétés de constantes nommées](#Types_de_resultats), comme `XPathResult.ANY_TYPE` du constructeur de XPathResult , lequel correspond à un nombre entier compris entre 0 et 9.
 - `result` est un `XPathResult` existant à utiliser pour les résultats. `null` est le plus commun et va créer un nouveau XPathResult
 
 ## Exemples
@@ -52,12 +45,12 @@ Note : dans l'exemple ci-dessus, un XPath plus verbeux est préféré aux raccou
 Une optimisation supplémentaire peut être obtenue en utilisant soigneusement le paramètre de contexte. Par exemple, si vous savez que le contenu que vous recherchez se trouve quelque part dans la balise body, vous pouvez utiliser ceci :
 
 ```js
-document .  evaluate  ( " .  //h2", document.body, null, XPathResult.ANY_TYPE, null);
+document.evaluate(" .  //h2", document.body, null, XPathResult.ANY_TYPE, null);
 ```
 
 Remarquez ci-dessus, `document.body` a été utilisé comme contexte plutôt que comme document, de sorte que le XPath commence à partir de l'élément body. (Dans cet exemple, le `"."` est important pour indiquer que l'interrogation doit commencer à partir du noeud contextuel, document.body . Si le "." est omis (en quittant `//h2`), la requête démarrera à partir du noeud racine ( `html`) ce qui serait plus inutile.)
 
-Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Introduction_%C3%A0_l'utilisation_de_XPath_avec_JavaScript) pour plus d'informations.
+Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Introduction_à_l'utilisation_de_XPath_avec_JavaScript) pour plus d'informations.
 
 ## Notes
 

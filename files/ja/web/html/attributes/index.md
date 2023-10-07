@@ -2,7 +2,7 @@
 title: HTML 属性リファレンス
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: 076a9f924e4619b4f5129c2ec7440420d05b5ec5
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -72,7 +72,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#attr-allow">allow</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>iframe の機能ポリシーを指定します。</td>
@@ -404,7 +404,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#attr-decoding">decoding</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>画像をデコードする推奨の方法を示します。</td>
@@ -696,7 +696,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/img#attr-intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/ja/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -718,7 +718,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#attr-ismap">ismap</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>画像がサーバーサイドイメージマップの一部であることを示します。</td>
@@ -1098,7 +1098,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1204,7 +1204,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#attr-srcdoc">srcdoc</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>

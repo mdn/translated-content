@@ -2,6 +2,7 @@
 title: starts-with
 slug: Web/XPath/Functions/starts-with
 ---
+
 {{ XsltRef() }}
 
 `starts-with` 함수는 첫 번째 문자열이 두 번째 문자열로 시작하는 지를 확인한 뒤 true나 false를 반환합니다.

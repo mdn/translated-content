@@ -1,7 +1,6 @@
 ---
 title: DOM on-event 處理器
 slug: Web/Events/Event_handlers
-original_slug: Web/Guide/Events/Event_handlers
 ---
 
 Web 平台提供了多種獲得 [DOM 事件](/zh-TW/docs/Web/Events)通知的方式。兩種常見的風格為：通用的 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 及一組特定的 _**on-event**_ 處理器。本頁聚焦在後者如何運作的細節。
@@ -83,14 +82,6 @@ When discussing the various methods of listening to events,
 - **event listener** refers to a function or object registered via {{domxref("EventTarget.addEventListener()")}},
 - whereas **event handler** refers to a function registered via `on...` attributes or properties.
 
-## 規格
-
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
-
 ### Event handler changes in Firefox 9
 
 In order to better match the specifications, and improve cross-browser compatibility, the way event handlers were implemented at a fundamental level changed in Gecko 9.0.
@@ -99,7 +90,7 @@ Specifically, in the past, event handlers were not correctly implemented as stan
 
 #### Detecting the presence of event handler properties
 
-You can now detect the presence of an event handler property (that is, for example, `onload`), using the JavaScript [`in`](/zh-TW/JavaScript/Reference/Operators/in) operator. For example:
+You can now detect the presence of an event handler property (that is, for example, `onload`), using the JavaScript [`in`](/zh-TW/docs/JavaScript/Reference/Operators/in) operator. For example:
 
 ```js
 if ("onsomenewfeature" in window) {

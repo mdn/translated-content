@@ -1,7 +1,6 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-translation_of: Web/CSS/will-change
 ---
 
 {{ CSSRef() }}{{SeeCompatTable}}
@@ -13,9 +12,9 @@ translation_of: Web/CSS/will-change
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Example of <custom-ident> */
-will-change: opacity;          /* Example of <custom-ident> */
-will-change: left, top;        /* Example of two <animateable-feature> */
+will-change: transform; /* Example of <custom-ident> */
+will-change: opacity; /* Example of <custom-ident> */
+will-change: left, top; /* Example of two <animateable-feature> */
 
 /* Global values */
 will-change: inherit;
@@ -59,20 +58,20 @@ will-change: unset;
 В примере выше прямо в таблицу стилей добавляется свойство `will-change`, которое заставит браузер держать оптимизацию в памяти намного дольше, чем нужно, а мы уже видели почему следует этого избегать. Ниже приведён ещё один пример, показывающий, как применить свойство `will-change` с помощью скриптов, что вероятно, вам следует делать в большинстве случаев.
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // Set will-change when the element is hovered
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // The optimizable properties that are going to change
   // in the animation's keyframes block
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

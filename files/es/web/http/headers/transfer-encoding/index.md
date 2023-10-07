@@ -11,9 +11,9 @@ El encabezado Transfer-Encoding especifica la forma de codificación utilizada p
 
 Cuando está presente en una respuesta a una solicitud {{HTTPMethod ("HEAD")}} que no tiene cuerpo, indica el valor que se habría aplicado al mensaje {{HTTPMethod ("GET")}} correspondiente.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                             |
 
 ## Sintaxis
 
@@ -71,7 +71,7 @@ Network\r\n
 
 {{Compat}}
 
-## Ver además:
+## Ver además
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Content-Encoding")}}

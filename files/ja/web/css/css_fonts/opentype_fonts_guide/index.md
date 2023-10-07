@@ -1,6 +1,6 @@
 ---
 title: OpenType フォント特性の手引き
-slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
+slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 ---
 
 {{CSSRef}}
@@ -148,7 +148,9 @@ OpenType 特性の一般的な使用例の 1 つに、適切なスモールキ�
 
 ```css
 .no-ligatures {
-  font-feature-settings: "liga" 0, "dlig" 0;
+  font-feature-settings:
+    "liga" 0,
+    "dlig" 0;
 }
 ```
 
@@ -165,14 +167,14 @@ OpenType 特性の一般的な使用例の 1 つに、適切なスモールキ�
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 

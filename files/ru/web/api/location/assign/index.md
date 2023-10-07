@@ -1,14 +1,8 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Method
-  - Reference
-translation_of: Web/API/Location/assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`Location.assign()`** запускает загрузку и отображение нового документа по указанному URL.
@@ -32,7 +26,9 @@ object.assign(url);
 
 ```js
 // Перейти на статью Location.reload
-document.location.assign('https://developer.mozilla.org/ru/docs/Web/API/Location.reload');
+document.location.assign(
+  "https://developer.mozilla.org/ru/docs/Web/API/Location.reload",
+);
 ```
 
 ## Спецификации

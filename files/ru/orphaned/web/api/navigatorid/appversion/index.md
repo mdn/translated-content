@@ -1,8 +1,6 @@
 ---
 title: NavigatorID.appVersion
 slug: orphaned/Web/API/NavigatorID/appVersion
-translation_of: Web/API/NavigatorID/appVersion
-original_slug: Web/API/NavigatorID/appVersion
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}

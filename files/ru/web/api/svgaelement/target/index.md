@@ -1,7 +1,6 @@
 ---
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
-translation_of: Web/API/SVGAElement/target
 ---
 
 {{APIRef("SVGAElement")}}
@@ -36,9 +35,7 @@ linkRef.target ='_blank';
 
 ## Характеристики
 
-| Спецификация                                                                             | Статус                   | Коммент |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}} | {{Spec2('SVG1.1')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

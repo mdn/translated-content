@@ -66,9 +66,10 @@ JavaScript 部分会介绍更多细节。
 之前有说到过，Chrome 现在支持的是带有前缀的 speech recognition，因此在 code 开始部分得加些内容保证在需要前缀的 Chrome 和不需要前缀的像 Firefox 中，使用的 object 都是正确的。
 
 ```js
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+var SpeechRecognitionEvent =
+  SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 ```
 
 #### The grammar
@@ -111,7 +112,7 @@ speechRecognitionList.addFromString(grammar, 1);
 ```js
 recognition.grammars = speechRecognitionList;
 //recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 ```
@@ -123,21 +124,24 @@ recognition.maxAlternatives = 1;
 在获取输出的`<div>` 和 html 元素引用之后 (这些我们可以用来待会输出语音识别诊断的结果，更新应用的背景颜色)，我们添加了一个`onclick` 事件处理，作用是当屏幕被点击后，语音识别服务将开启——这通过调用 [`SpeechRecognition.start()`](/zh-CN/docs/Web/API/SpeechRecognition/start) 实现。`forEach()` 方法内部的工作是，为每个颜色关键字添加一个这个颜色的背景色，这样就直观知道了这个颜色关键字指向什么颜色。
 
 ```js
-var diagnostic = document.querySelector('.output');
-var bg = document.querySelector('html');
-var hints = document.querySelector('.hints');
+var diagnostic = document.querySelector(".output");
+var bg = document.querySelector("html");
+var hints = document.querySelector(".hints");
 
-var colorHTML= '';
-colors.forEach(function(v, i, a){
+var colorHTML = "";
+colors.forEach(function (v, i, a) {
   console.log(v, i);
-  colorHTML += '<span style="background-color:' + v + ';"> ' + v + ' </span>';
+  colorHTML += '<span style="background-color:' + v + ';"> ' + v + " </span>";
 });
-hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try '+ colorHTML + '.';
+hints.innerHTML =
+  "Tap/click then say a color to change the background color of the app. Try " +
+  colorHTML +
+  ".";
 
-document.body.onclick = function() {
+document.body.onclick = function () {
   recognition.start();
-  console.log('Ready to receive a color command.');
-}
+  console.log("Ready to receive a color command.");
+};
 ```
 
 #### 接收、处理结果
@@ -145,13 +149,13 @@ document.body.onclick = function() {
 一旦语音识别开始，有许多 event handlers 可以用于做结果返回的后续操作，除了识别的结果外还有些零碎的相关信息可供操作 (可查看 [`SpeechRecognition` event handlers list](/zh-CN/docs/Web/API/SpeechRecognition#Event_handlers) )。最常见会使用的一个是 [`SpeechRecognition.onresult`](/zh-CN/docs/Web/API/SpeechRecognition/onresult) ，这在收到一个成功的结果时候触发。
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
   var last = event.results.length - 1;
   var color = event.results[last][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
-  console.log('Confidence: ' + event.results[0][0].confidence);
-}
+  console.log("Confidence: " + event.results[0][0].confidence);
+};
 ```
 
 代码中第三行看上去有一点复杂，让我们一步一步解释以下。[`SpeechRecognitionEvent.results`](/zh-CN/docs/Web/API/SpeechRecognitionEvent/results) 属性返回的是一个[`SpeechRecognitionResultList`](/zh-CN/docs/Web/API/SpeechRecognitionResultList) 对象 (这个对象会包含[`SpeechRecognitionResult`](/zh-CN/docs/Web/API/SpeechRecognitionResult) 对象们)，它有一个 getter，所以它包含的这些对象可以像一个数组被访问到——所以`[last]` 返回的是排在最后位置 (最新) 的`SpeechRecognitionResult`对象。每个`SpeechRecognitionResult` 对象包含的 [`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象含有一个被识别的单词。这些`SpeechRecognitionResult` 对象也有一个 getter，所以`[0]` 返回的是其中包含的第一个[`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象。最后返回的`transcript`属性就是被识别单词的字符串，把背景颜色设置为这个颜色，并在 UI 中报告出这个结果信息。
@@ -159,9 +163,9 @@ recognition.onresult = function(event) {
 也使用了 [`SpeechRecognition.onspeechend`](/zh-CN/docs/Web/API/SpeechRecognition/onspeechend) 这个 handle 停止语音识别服务 (具体工作在[`SpeechRecognition.stop()`](/zh-CN/docs/Web/API/SpeechRecognition/stop)) ，一旦一个单词被识别就不能再说咯 (必须再点击屏幕再次开启语音识别)
 
 ```js
-recognition.onspeechend = function() {
+recognition.onspeechend = function () {
   recognition.stop();
-}
+};
 ```
 
 #### 处理 error 和未能识别的语音
@@ -171,17 +175,17 @@ recognition.onspeechend = function() {
 [`SpeechRecognition.onnomatch`](/zh-CN/docs/Web/API/SpeechRecognition/onnomatch) 支持的就是第一种，但是得注意它似乎在 Firefox 或者 Chrome 中触发会有问题；它只是返回任何被识别的内容：
 
 ```js
-recognition.onnomatch = function(event) {
-  diagnostic.textContent = 'I didnt recognise that color.';
-}
+recognition.onnomatch = function (event) {
+  diagnostic.textContent = "I didnt recognise that color.";
+};
 ```
 
 [`SpeechRecognition.onerror`](/zh-CN/docs/Web/API/SpeechRecognition/onerror) 处理的是第二种情况，识别成功了但是有 error 出现—— [`SpeechRecognitionError.error`](/zh-CN/docs/Web/API/SpeechRecognitionError/error) 属性包含的信息就是返回的确切的 error 是什么。
 
 ```js
-recognition.onerror = function(event) {
-  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-}
+recognition.onerror = function (event) {
+  diagnostic.textContent = "Error occurred in recognition: " + event.error;
+};
 ```
 
 ## Speech synthesis
@@ -213,23 +217,26 @@ HTML 和 CSS 还是无足轻重，只是简单包含一个标题，一段介绍�
 ```html
 <h1>Speech synthesiser</h1>
 
-<p>Enter some text in the input below and press return to hear it. change voices using the dropdown menu.</p>
+<p>
+  Enter some text in the input below and press return to hear it. change voices
+  using the dropdown menu.
+</p>
 
 <form>
-  <input type="text" class="txt">
+  <input type="text" class="txt" />
   <div>
-    <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+    <label for="rate">Rate</label
+    ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
     <div class="rate-value">1</div>
     <div class="clearfix"></div>
   </div>
   <div>
-    <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+    <label for="pitch">Pitch</label
+    ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
     <div class="pitch-value">1</div>
     <div class="clearfix"></div>
   </div>
-  <select>
-
-  </select>
+  <select></select>
 </form>
 ```
 
@@ -244,14 +251,14 @@ HTML 和 CSS 还是无足轻重，只是简单包含一个标题，一段介绍�
 ```js
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('.txt');
-var voiceSelect = document.querySelector('select');
+var inputForm = document.querySelector("form");
+var inputTxt = document.querySelector(".txt");
+var voiceSelect = document.querySelector("select");
 
-var pitch = document.querySelector('#pitch');
-var pitchValue = document.querySelector('.pitch-value');
-var rate = document.querySelector('#rate');
-var rateValue = document.querySelector('.rate-value');
+var pitch = document.querySelector("#pitch");
+var pitchValue = document.querySelector(".pitch-value");
+var rate = document.querySelector("#rate");
+var rateValue = document.querySelector(".rate-value");
 
 var voices = [];
 ```
@@ -266,16 +273,16 @@ var voices = [];
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for (i = 0; i < voices.length; i++) {
+    var option = document.createElement("option");
+    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
 
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
+    if (voices[i].default) {
+      option.textContent += " -- DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voices[i].lang);
+    option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
 }
@@ -317,11 +324,18 @@ inputForm.onsubmit = function(event) {
 在事件处理器的最后部分，我们加入了一个 [`SpeechSynthesisUtterance.onpause`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/onpause) 处理器，来展示[`SpeechSynthesisEvent`](/zh-CN/docs/Web/API/SpeechSynthesisEvent) 如何可以很好地使用。当 [`SpeechSynthesis.pause()`](/zh-CN/docs/Web/API/SpeechSynthesis/pause) 被调用，这将返回一条消息，报告该语音暂停的字符编号和名称。
 
 ```js
-   utterThis.onpause = function(event) {
-    var char = event.utterance.text.charAt(event.charIndex);
-    console.log('Speech paused at character ' + event.charIndex + ' of "' +
-    event.utterance.text + '", which is "' + char + '".');
-  }
+utterThis.onpause = function (event) {
+  var char = event.utterance.text.charAt(event.charIndex);
+  console.log(
+    "Speech paused at character " +
+      event.charIndex +
+      ' of "' +
+      event.utterance.text +
+      '", which is "' +
+      char +
+      '".',
+  );
+};
 ```
 
 最后，我们在文本输入框添加了 [blur()](/zh-CN/docs/Web/API/HTMLElement/blur) 方法。这主要是在 Firefox 操作系统上隐藏键盘
@@ -336,11 +350,11 @@ inputForm.onsubmit = function(event) {
 代码的最后部分，在每次滑动条移动时，简单地更新`pitch/rate`在 UI 中展示的值。
 
 ```js
-pitch.onchange = function() {
+pitch.onchange = function () {
   pitchValue.textContent = pitch.value;
-}
+};
 
-rate.onchange = function() {
+rate.onchange = function () {
   rateValue.textContent = rate.value;
-}
+};
 ```

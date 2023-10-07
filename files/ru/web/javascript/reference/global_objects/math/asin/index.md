@@ -1,13 +1,8 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -38,23 +33,23 @@ Math.asin(x)
 ### Пример: использование метода `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.5707963267948966 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.570796326794897 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.570796326794897 (pi/2)
+Math.asin(2); // NaN
 ```
 
 Для значений, меньших -1 или больших 1, метод `Math.asin()` возвращает {{jsxref("NaN")}}.
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                        | Статус             | Комментарии                                            |
+| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                             | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}  | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

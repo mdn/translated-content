@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: waiting イベント'
+title: "HTMLMediaElement: waiting イベント"
 slug: Web/API/HTMLMediaElement/waiting_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('waiting', (event) => {});
+addEventListener("waiting", (event) => {});
 
-onwaiting = (event) => { };
+onwaiting = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onwaiting = (event) => { };
 `addEventListener()` を使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('waiting', (event) => {
-  console.log('Video is waiting for more data.');
+video.addEventListener("waiting", (event) => {
+  console.log("Video is waiting for more data.");
 });
 ```
 
 `onwaiting` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onwaiting = (event) => {
-  console.log('Video is waiting for more data.');
+  console.log("Video is waiting for more data.");
 };
 ```
 

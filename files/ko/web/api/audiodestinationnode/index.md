@@ -2,6 +2,7 @@
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
 ---
+
 {{APIRef()}}
 
 `AudioDestinationNode` 은 주어진 컨택스트의 음원의 종착점을 나타냅니다. 보통 스피커를 가리킵니다. 이는 또한 `OfflineAudioContext` 를 사용해 데이터가 녹음되는 노드가 되기도 합니다.

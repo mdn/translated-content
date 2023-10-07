@@ -33,8 +33,8 @@ Math.atan(x)
 ### 示例：使用 `Math.atan`
 
 ```js
-Math.atan(1);  // 0.7853981633974483
-Math.atan(0);  // 0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
 ```
 
 ## 规范

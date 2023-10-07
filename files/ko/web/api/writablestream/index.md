@@ -29,7 +29,7 @@ slug: Web/API/WritableStream
 아래 예시는 본 인터페이스의 몇 가지 기능을 소개합니다. 커스텀 콜백과 API를 통한 queuing strategy 값을 가지고 `WritableStream`을 생성하는 법을 보여줍니다. 그 후 생성된 스트림과 문자열을 전달하여 `sendMessage()`를 합니다. 함수 내부에선 {{domxref("WritableStreamDefaultWriter")}} 인스턴스를 반환하는 스트림의 `getWriter()` 메소드를 호출합니다. 문자열 조각들을 각각 스트림에 쓰기 위해 `forEach()` 를 사용하구요. 마지막으로 문자열 조각과 스트림 성공/실패를 처리하기 위해 `write()`와 `close()`는 Promise를 반환합니다.
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
@@ -65,30 +65,33 @@ function sendMessage(message, writableStream) {
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
-      view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        var buffer = new ArrayBuffer(2);
+        var view = new Uint16Array(buffer);
+        view[0] = chunk;
+        var decoded = decoder.decode(view, { stream: true });
+        var listItem = document.createElement("li");
+        listItem.textContent = "Chunk decoded: " + decoded;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      var listItem = document.createElement("li");
+      listItem.textContent = "[MESSAGE RECEIVED] " + result;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 sendMessage("Hello, world.", writableStream);
 ```

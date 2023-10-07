@@ -1,13 +1,6 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - Transformations CSS
-translation_of: Web/CSS/transform-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

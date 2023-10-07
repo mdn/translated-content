@@ -12,8 +12,8 @@ slug: Learn/CSS/CSS_layout
 開始這個單元之前，需要做如下準備：
 
 1. 對 HTML 有基本的認知，如 [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 單元中所述。
-2. 熟悉 CSS 基本原理，如 [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)中所述。
-3. 了解如何 [樣式框](/zh-TW/docs/Learn/CSS/Styling_boxes)。
+2. 熟悉 CSS 基本原理，如 [CSS 簡介](/zh-TW/docs/Learn/CSS/First_steps)中所述。
+3. 了解如何 [樣式框](/zh-TW/docs/Learn/CSS/Building_blocks)。
 
 > **備註：** 如果你正在使用的電腦/平板/其他設備讓你無法建立自己的文件，你可以透過線上工具如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 編輯並嘗試（大部分的）範例程式碼。
 
@@ -26,7 +26,7 @@ slug: Learn/CSS/CSS_layout
 - [常規流](/zh-TW/docs/Learn/CSS/CSS_layout/Normal_Flow)
   - : 在我們做任何事之前，網頁上的元素會根據常規流自行排列。這篇文章解釋常規流的基礎知識，用來學習如何改變它。
 - [彈性盒子](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox)
-  - : [彈性盒子](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications)是一維空間的排版方式，用來讓項目以行或列的方式排列。項目會延展或限縮來符合較大或較小的空間。這篇文章會解釋基礎原理。
+  - : [彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Using_flexbox_to_lay_out_web_applications)是一維空間的排版方式，用來讓項目以行或列的方式排列。項目會延展或限縮來符合較大或較小的空間。這篇文章會解釋基礎原理。
 - [網格](/zh-TW/docs/Learn/CSS/CSS_layout/Grids)
   - : CSS 網格排版是一個二維空間的網頁排版系統。它讓你將內容排入行與列中，且它有許多功能讓你在建立複雜的排版時變得簡單明瞭。這篇文章會告訴你全部。
 - [浮動](/zh-TW/docs/Learn/CSS/CSS_layout/Floats)

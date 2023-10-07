@@ -52,9 +52,9 @@ navigator.sendBeacon(url, data);
 网站通常希望在用户完成页面浏览后向服务器发送分析或诊断数据，最可靠的方法是在 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件发生时发送数据：
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```
@@ -80,9 +80,9 @@ Firefox 也会在 bfcache 中排除包含 `beforeunload` 事件处理器的页�
 示例代码使用 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件来调用 `sendBeacon()` 以发送统计数据。
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```

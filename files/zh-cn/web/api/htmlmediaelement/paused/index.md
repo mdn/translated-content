@@ -22,7 +22,7 @@ _仅限暂停状态 因网络原因造成的缓冲状态仍然会告诉你不在
 ## 例子
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 

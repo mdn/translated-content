@@ -1,19 +1,6 @@
 ---
-title: '<track>: Встраиваемая текстовая дорожка'
+title: "<track>: Встраиваемая текстовая дорожка"
 slug: Web/HTML/Element/track
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Multimedia
-  - Reference
-  - TextTrack
-  - Web
-  - Веб
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/track
 ---
 
 {{HTMLSidebar}}
@@ -24,12 +11,12 @@ translation_of: Web/HTML/Element/track
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                             |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | Нет, это {{Glossary("empty element", "пустой элемент")}}.                                                                                                      |
+| Допустимое содержимое                                            | Нет, это {{Glossary("empty element", "пустой элемент")}}.                                                                                                                                       |
 | Пропуск тегов                                                    | Так как это пустой элемент, то открывающий тег обязателен, закрывающего не должно быть.                                                                                                         |
 | Неявная ARIA-роль                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                          |
 | Допустимые родители                                              | Медиа элемент, перед любым [потоковым контентом](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82). |
 | Допустимые ARIA-роли                                             | Нет                                                                                                                                                                                             |
-| DOM интерфейс                                                    | {{domxref("HTMLTrackElement")}}                                                                                                                                                        |
+| DOM интерфейс                                                    | {{domxref("HTMLTrackElement")}}                                                                                                                                                                 |
 
 ## Атрибуты
 
@@ -88,24 +75,20 @@ translation_of: Web/HTML/Element/track
 
 ```html
 <video controls poster="/images/sample.gif">
-   <source src="sample.mp4" type="video/mp4">
-   <source src="sample.ogv" type="video/ogv">
-   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-   <track kind="descriptions"
-     src="sampleDescriptions.vtt" srclang="en">
-   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-   <track kind="metadata" src="keyStage1.vtt" srclang="en"
-     label="Key Stage 1">
-   <track kind="metadata" src="keyStage2.vtt" srclang="en"
-     label="Key Stage 2">
-   <track kind="metadata" src="keyStage3.vtt" srclang="en"
-     label="Key Stage 3">
-   <!-- Fallback -->
-   ...
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+  <!-- Fallback -->
+  ...
 </video>
 ```
 

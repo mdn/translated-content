@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
 ---
 
 {{WebAssemblySidebar}}
@@ -9,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/expo
 **`exports`** は {{jsxref("WebAssembly.Instance")}} オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
 
 ```js
-instance.exports
+instance.exports;
 ```
 
 ## 例
@@ -21,17 +20,19 @@ fetch を使用して WebAssembly バイトコードを読み取った後、 {{j
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 > **メモ:** この例は GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) ([実行例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) で見ることができます。</p>
+
 </div>
 
 ## 仕様書

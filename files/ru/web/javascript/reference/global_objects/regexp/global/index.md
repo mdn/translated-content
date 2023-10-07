@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -30,18 +22,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ### Пример: использование свойства `global`
 
 ```js
-var regex = new RegExp('foo', 'g');
+var regex = new RegExp("foo", "g");
 
 console.log(regex.global); // true
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                   | Комментарии                                                                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ECMAScript 3-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `global` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
-| {{SpecName('ES5.1', '#sec-15.10.7.2', 'RegExp.prototype.global')}}                     | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                                                        |
-| {{SpecName('ES6', '#sec-get-regexp.prototype.global', 'RegExp.prototype.global')}} | {{Spec2('ES6')}}     | Свойство `global` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                                                 |
+| Спецификация                                                                       | Статус             | Комментарии                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ECMAScript 3-е издание.                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `global` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
+| {{SpecName('ES5.1', '#sec-15.10.7.2', 'RegExp.prototype.global')}}                 | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                          |
+| {{SpecName('ES6', '#sec-get-regexp.prototype.global', 'RegExp.prototype.global')}} | {{Spec2('ES6')}}   | Свойство `global` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                   |
 
 ## Совместимость с браузерами
 

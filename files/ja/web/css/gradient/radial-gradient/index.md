@@ -1,12 +1,11 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-original_slug: Web/CSS/gradient/radial-gradient()
 ---
 
 {{CSSRef}}
 
-**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形にになります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
+**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
 
 {{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}
 
@@ -18,7 +17,7 @@ original_slug: Web/CSS/gradient/radial-gradient()
 radial-gradient(circle at center, red 0, blue, green 100%)
 ```
 
-放射状のグラデーションは、グラデーションの中心 (0％ の楕円の位置) と、*末端図形* (100％ の楕円) の大きさと形状を示すことで指定します。
+放射状のグラデーションは、グラデーションの中心 (0％ の楕円の位置) と、_末端図形_ (100％ の楕円) の大きさと形状を示すことで指定します。
 
 ## 値
 
@@ -58,7 +57,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ### 放射グラデーションの構成
 
-![](radial_gradient.png)放射グラデーションは*中心点*、*末端図形*、および二つ以上の*色経由点*で定義されます。
+![](radial_gradient.png)放射グラデーションは*中心点*、_末端図形_、および二つ以上の*色経由点*で定義されます。
 
 滑らかなグラデーションを生成するために、 `radial-gradient()` 関数は中央から*末端図形* (およびその先) に向けて一連の同心円の形状を描きます。図形の端は円または楕円です。
 
@@ -102,8 +101,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ```css
 .radial-gradient {
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f35 0%, #43e 100%);
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 0%,
+    #43e 100%
+  );
 }
 ```
 

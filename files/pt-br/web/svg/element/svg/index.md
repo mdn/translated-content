@@ -12,11 +12,19 @@ O elemento `svg` é um contêiner que define um novo sistema de coordenadas e [j
 ## Exemplo
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="https://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="https://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 
@@ -84,9 +92,9 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-| Specification                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |                    |
+| Specification                                                    | Status              | Comment            |
+| ---------------------------------------------------------------- | ------------------- | ------------------ |
+| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}}   | {{Spec2('SVG2')}}   |                    |
 | {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Compatibilidade com navegadores

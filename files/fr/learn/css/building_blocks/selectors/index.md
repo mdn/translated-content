@@ -1,8 +1,6 @@
 ---
 title: Sélecteurs CSS
 slug: Learn/CSS/Building_blocks/Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors
-original_slug: Apprendre/CSS/Building_blocks/Selectors
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
@@ -62,7 +60,8 @@ h1 {
 ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :
 
 ```css
-h1, .special {
+h1,
+.special {
   color: blue;
 }
 ```
@@ -97,7 +96,8 @@ h1 {
 En combinant les sélecteurs, la règle est considérée invalide et donc ignorée : ni `h1` ni les éléments de classe `.special` ne seront mis en forme.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -111,19 +111,22 @@ On peut regrouper les sélecteurs en différents groupes ; classer les sélecteu
 Ce groupe inclut les sélecteurs ciblant les élements HTML tels que `<h1>` :
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 On trouve aussi les sélecteurs ciblant une classe :
 
 ```css
-.box { }
+.box {
+}
 ```
 
 ou un ID :
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Sélecteurs d'attribut
@@ -131,13 +134,16 @@ ou un ID :
 Ce groupe de sélecteurs offre différents mécanismes pour cibler des éléments en fonction de la présence d'un attribut donné pour un élément donné :
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 Ou même de baser la sélection sur la présence d'un attribut avec une valeur bien précise :
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Pseudo-classes et pseudo-éléments
@@ -145,13 +151,15 @@ a[href="https://example.com"] { }
 Ce groupe de sélecteurs inclut les pseudo-classes, qui ciblent des éléments dans un état donné. Par exemple, la pseudo-classe `:hover` sélectionne un élément seulement s'il est survolé par le pointeur de la souris :
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 Ce groupe inclut aussi les pseudo-éléments, qui ciblent une certaine partie d'un élément plutôt que l'élément tout entier. Par exemple, `::first-line` sélectionne la première ligne d'un texte contenu dans un élément (un `<p>` dans l'exemple ci-dessous), comme si la première ligne du texte mis en forme était placée entre `<span>` et qu'après coup on appliquait un style sur cet élément.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Combinateurs
@@ -159,7 +167,8 @@ p::first-line { }
 Dans la dernière catégorie, on combine les sélecteurs pour cibler plus finement les éléments dans nos documents. L'exemple suivant sélectionne les paragraphes enfants directs de `<article>` grâce au combinateur enfant (`>`) :
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## À faire ensuite

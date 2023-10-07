@@ -28,7 +28,10 @@ var doc = document.implementation.createHTMLDocument(title);
 
 ```html
 <body>
-  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
   <iframe id="theFrame" src="about:blank" />
 </body>
 ```
@@ -45,7 +48,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -70,11 +73,10 @@ function makeDocument() {
 ```html
 <!doctype html>
 <html>
-<head>
-<title>title</title>
-</head>
-<body>
-</body>
+  <head>
+    <title>title</title>
+  </head>
+  <body></body>
 </html>
 ```
 

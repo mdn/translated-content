@@ -1,12 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - display
-translation_of: Web/CSS/display
 ---
 
 {{CSSRef}}
@@ -133,12 +127,8 @@ En plus de l'exemple qui suit, vous pouvez voir d'autres exemples sur les sectio
 ### HTML
 
 ```html
-<p>
-  Texte visible
-</p>
-<p class="secret">
-  Texte invisible
-</p>
+<p>Texte visible</p>
+<p class="secret">Texte invisible</p>
 ```
 
 ### CSS
@@ -174,7 +164,7 @@ Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML
 
 - [Une rapide note sur l'impact de la propriété CSS `display` sur la sémantique des tableaux — The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Du contenu masqué avec une meilleure accessibilité - Go Make Things (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
 - [_Understanding Success Criterion 1.3.1, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Spécifications

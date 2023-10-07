@@ -3,7 +3,7 @@ title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 
-{{JSRef}}O objeto **WeakSet** pertmite que você armazene objetos mantidos “fracamente” na coleção.
+{{JSRef}}O objeto **WeakSet** pertmite que você armazene objetos mantidos "fracamente" na coleção.
 
 ## Syntaxe
 
@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ### Parâmetros
 
 - iterable
-  - : Se um[objeto interagível](pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
+  - : Se um[objeto interagível](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
 
 ## Descrição
 
@@ -57,17 +57,17 @@ ws.add(window);
 ws.add(obj);
 
 ws.has(window); // true
-ws.has(foo);    // false, foo não foi adicionado ao set
+ws.has(foo); // false, foo não foi adicionado ao set
 
 ws.delete(window); // remove window do set
-ws.has(window);    // false, window foi removido
+ws.has(window); // false, window foi removido
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}     | {{Spec2('ES6')}}         | Definição inicial |
+| Especificação                                              | Status               | Comentário        |
+| ---------------------------------------------------------- | -------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}     | {{Spec2('ES6')}}     | Definição inicial |
 | {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatilidade de Browser

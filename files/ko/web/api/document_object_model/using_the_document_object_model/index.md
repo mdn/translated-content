@@ -1,7 +1,6 @@
 ---
 title: W3C DOM Level 1 Core 사용하기
 slug: Web/API/Document_object_model/Using_the_Document_Object_Model
-original_slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -14,13 +13,13 @@ The W3C's DOM Level 1 Core 는 documents의 콘텐츠 트리를 변경하기 위
 
 ```html
 <html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>Paragraph</p>
-</body>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -42,37 +41,37 @@ The W3C DOM Level 1은 컨텐츠 트리를 웹 페이지 **개발자가 원하�
 
 ```html
 <body>
-<input type="button" value="Change this document." onclick="change()">
-<h2>Header</h2>
-<p>Paragraph</p>
+  <input type="button" value="Change this document." onclick="change()" />
+  <h2>Header</h2>
+  <p>Paragraph</p>
 </body>
 ```
 
 ### JavaScript Content
 
 ```js
-  function change() {
-    // document.getElementsByTagName("H2") 는 <h2> 엘리먼트의
-    // NodeList를 반환(return)합니다. 0부터 시작합니다.
+function change() {
+  // document.getElementsByTagName("H2") 는 <h2> 엘리먼트의
+  // NodeList를 반환(return)합니다. 0부터 시작합니다.
 
-    var header = document.getElementsByTagName("H2").item(0);
-    // 헤더의 첫번째 자식 노드는 Text 노드입니다.
-    header.firstChild.data = "A dynamic document";
-    // 이제 헤더는 "A dynamic document"가 되었습니다.
+  var header = document.getElementsByTagName("H2").item(0);
+  // 헤더의 첫번째 자식 노드는 Text 노드입니다.
+  header.firstChild.data = "A dynamic document";
+  // 이제 헤더는 "A dynamic document"가 되었습니다.
 
-    var para = document.getElementsByTagName("P").item(0);
-    para.firstChild.data = "This is the first paragraph.";
+  var para = document.getElementsByTagName("P").item(0);
+  para.firstChild.data = "This is the first paragraph.";
 
-    // 두번째 문단을 만들기 위한 새로운 Text 노드를 만들었습니다.
-    var newText = document.createTextNode("This is the second paragraph.");
-    // 두번째 문단을 만들기 위한 새로운 p 엘리먼트를 만들었습니다.
-    var newElement = document.createElement("P");
-    // 새로운 p 엘리먼트에 텍스트를 넣어 문단을 만듭니다.
-    newElement.appendChild(newText);
-    // 생성한 문단을 HTML 문서 마지막에 넣기 위해
-    // (para의 부모인) HTML BODY에 append합니다.
-    para.parentNode.appendChild(newElement);
-  }
+  // 두번째 문단을 만들기 위한 새로운 Text 노드를 만들었습니다.
+  var newText = document.createTextNode("This is the second paragraph.");
+  // 두번째 문단을 만들기 위한 새로운 p 엘리먼트를 만들었습니다.
+  var newElement = document.createElement("P");
+  // 새로운 p 엘리먼트에 텍스트를 넣어 문단을 만듭니다.
+  newElement.appendChild(newText);
+  // 생성한 문단을 HTML 문서 마지막에 넣기 위해
+  // (para의 부모인) HTML BODY에 append합니다.
+  para.parentNode.appendChild(newElement);
+}
 ```
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}

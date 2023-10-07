@@ -7,7 +7,7 @@ slug: Web/HTTP/Status/502
 
 O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que ele, enquanto atuando como um servidor intermediário (_gateway_ ou _proxy_), recebeu uma resposta inválida do servidor para o qual a requisição foi encaminhada (_upstream server_).
 
-> **Nota:**Um {{interwiki("wikipedia", "Gateway_(telecommunications)", "<em>Gateway</em>")}} pode se referir a coisas diferentes na rede e um erro 502 geralmente não é algo que você possa corrigir, mas requer uma correção por parte do servidor web ou dos proxies através dos quais você está tentando obter acesso.
+> **Nota:** Um _[Gateway](https://pt.wikipedia.org/wiki/Gateway)_ pode se referir a coisas diferentes na rede e um erro 502 geralmente não é algo que você possa corrigir, mas requer uma correção por parte do servidor web ou dos proxies através dos quais você está tentando obter acesso.
 
 ## Status
 
@@ -17,8 +17,8 @@ O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que 
 
 ## Especificações
 
-| Especificação                                                | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                                | Título                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "502 Bad Gateway" , "6.6.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

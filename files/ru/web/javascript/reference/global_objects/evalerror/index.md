@@ -1,13 +1,8 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Error
-  - EvalError
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
 ## Сводка
@@ -60,25 +55,25 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 ```js
 try {
-  throw new EvalError('Привет', 'someFile.js', 10);
+  throw new EvalError("Привет", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Привет"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Привет"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарии                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------------------------------- |
-| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение.                                                      |
-| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                                     | {{Spec2('ES5.1')}} | Не используется в этой спецификации. Присутствует для обратной совместимости. |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ES6')}}     | Не используется в этой спецификации. Присутствует для обратной совместимости. |
+| Спецификация                                                                                | Статус             | Комментарии                                                                   |
+| ------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------- |
+| ECMAScript 3-е издание.                                                                     | Стандарт           | Изначальное определение.                                                      |
+| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                        | {{Spec2('ES5.1')}} | Не используется в этой спецификации. Присутствует для обратной совместимости. |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ES6')}}   | Не используется в этой спецификации. Присутствует для обратной совместимости. |
 
 ## Совместимость с браузерами
 

@@ -1,5 +1,5 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
 
@@ -49,7 +49,11 @@ slug: Web/CSS/::placeholder
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -76,7 +80,7 @@ slug: Web/CSS/::placeholder
 #### HTML
 
 ```html
-<input placeholder="こちらに入力...">
+<input placeholder="こちらに入力..." />
 ```
 
 #### CSS
@@ -100,8 +104,8 @@ Firefox など一部のブラウザーでは、プレースホルダーの既定
 #### HTML
 
 ```html
-<input placeholder="既定の透明度...">
-<input placeholder="完全に不透明..." class="force-opaque">
+<input placeholder="既定の透明度..." />
+<input placeholder="完全に不透明..." class="force-opaque" />
 ```
 
 #### CSS

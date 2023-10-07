@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 
 ## 语法
 
-```js
-dateObj.getTimezoneOffset()
+```js-nolint
+getTimezoneOffset()
 ```
 
 ### 参数

@@ -5,7 +5,7 @@ slug: Web/CSS/widows
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/Paged_Media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_Columns)的**顶部**需要结合在一起的最小行数。
+[CSS](/zh-CN/docs/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/CSS_paged_media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)的**顶部**需要结合在一起的最小行数。
 
 ```css
 /* <integer> values */
@@ -44,8 +44,14 @@ widows: unset;
 ```html
 <div>
   <p>This is the first paragraph containing some text.</p>
-  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.</p>
-  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+  <p>
+    This is the second paragraph containing some more text than the first one.
+    It is used to demonstrate how widows work.
+  </p>
+  <p>
+    This is the third paragraph. It has a little bit more text than the first
+    one.
+  </p>
 </div>
 ```
 
@@ -82,4 +88,4 @@ p:first-child {
 ## 参见
 
 - {{cssxref("orphans")}}
-- [Paged media](/zh-CN/docs/Web/CSS/Paged_Media)
+- [分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)

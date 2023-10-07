@@ -37,13 +37,13 @@ Este ejemplo usa el método `save()` para guardar el estado por defecto y el mé
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Guardar el estado por defecto
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // Restaurar el estado por defecto

@@ -2,6 +2,7 @@
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`eventPhase`** 읽기 전용 속성은 현재 평가 중인 이벤트 흐름 단계를 나타냅니다.
@@ -34,13 +35,16 @@ slug: Web/API/Event/eventPhase
 </ul>
 <input type="checkbox" id="chCapture" />
 <label for="chCapture">캡처 사용</label>
-  <div id="d1">d1
-    <div id="d2">d2
-      <div id="d3">d3
-        <div id="d4">d4</div>
-      </div>
+<div id="d1">
+  d1
+  <div id="d2">
+    d2
+    <div id="d3">
+      d3
+      <div id="d4">d4</div>
     </div>
   </div>
+</div>
 <div id="divInfo"></div>
 ```
 
@@ -56,8 +60,8 @@ div {
 #divInfo {
   margin: 18px;
   padding: 8px;
-  background-color:white;
-  font-size:80%;
+  background-color: white;
+  font-size: 80%;
 }
 ```
 
@@ -65,71 +69,76 @@ div {
 
 ```js
 let clear = false,
-    divInfo = null,
-    divs = null,
-    useCapture = false;
+  divInfo = null,
+  divs = null,
+  useCapture = false;
 
 window.onload = function () {
-  divInfo = document.getElementById('divInfo')
-  divs = document.getElementsByTagName('div')
-  chCapture = document.getElementById('chCapture')
+  divInfo = document.getElementById("divInfo");
+  divs = document.getElementsByTagName("div");
+  chCapture = document.getElementById("chCapture");
   chCapture.onclick = function () {
-    RemoveListeners()
-    AddListeners()
-  }
-  Clear()
-  AddListeners()
-}
+    RemoveListeners();
+    AddListeners();
+  };
+  Clear();
+  AddListeners();
+};
 
 function RemoveListeners() {
   for (let i = 0; i < divs.length; i++) {
-    let d = divs[i]
+    let d = divs[i];
     if (d.id != "divInfo") {
-      d.removeEventListener("click", OnDivClick, true)
-      d.removeEventListener("click", OnDivClick, false)
+      d.removeEventListener("click", OnDivClick, true);
+      d.removeEventListener("click", OnDivClick, false);
     }
   }
 }
 
 function AddListeners() {
   for (let i = 0; i < divs.length; i++) {
-    let d = divs[i]
+    let d = divs[i];
     if (d.id != "divInfo") {
-        if (chCapture.checked) {
-            d.addEventListener("click", OnDivClick, true)
-        }
-        else {
-            d.addEventListener("click", OnDivClick, false)
-            d.onmousemove = function () { clear = true }
-        }
+      if (chCapture.checked) {
+        d.addEventListener("click", OnDivClick, true);
+      } else {
+        d.addEventListener("click", OnDivClick, false);
+        d.onmousemove = function () {
+          clear = true;
+        };
+      }
     }
   }
 }
 
 function OnDivClick(e) {
   if (clear) {
-    Clear()
-    clear = false
+    Clear();
+    clear = false;
   }
-  if (e.eventPhase == 2)
-    e.currentTarget.style.backgroundColor = 'red';
-    const level =
-        e.eventPhase == 0 ? "없음" :
-        e.eventPhase == 1 ? "캡처" :
-        e.eventPhase == 2 ? "대상" :
-        e.eventPhase == 3 ? "버블" : "오류";
-    const p = document.createElement('p')
-    p.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
-    divInfo.appendChild(p);
+  if (e.eventPhase == 2) e.currentTarget.style.backgroundColor = "red";
+  const level =
+    e.eventPhase == 0
+      ? "없음"
+      : e.eventPhase == 1
+      ? "캡처"
+      : e.eventPhase == 2
+      ? "대상"
+      : e.eventPhase == 3
+      ? "버블"
+      : "오류";
+  const p = document.createElement("p");
+  p.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
+  divInfo.appendChild(p);
 }
 
 function Clear() {
   for (let i = 0; i < divs.length; i++) {
     if (divs[i].id != "divInfo") {
-      divs[i].style.backgroundColor = (i & 1) ? "#f6eedb" : "#cceeff"
+      divs[i].style.backgroundColor = i & 1 ? "#f6eedb" : "#cceeff";
     }
   }
-  divInfo.textContent = '';
+  divInfo.textContent = "";
 }
 ```
 

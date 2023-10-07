@@ -1,14 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/HTMLElement/change_event
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - onchange
-translation_of: Web/API/GlobalEventHandlers/onchange
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -30,11 +22,9 @@ var handlerFunction = element.onchange;
 
 Документация по событию {{event("change")}}.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

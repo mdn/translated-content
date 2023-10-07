@@ -1,5 +1,5 @@
 ---
-title: ':left'
+title: ":left"
 slug: Web/CSS/:left
 ---
 

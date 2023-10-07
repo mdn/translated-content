@@ -16,7 +16,7 @@ l10n:
 ## 構文
 
 ```js
-[Symbol.iterator]()
+[Symbol.iterator]();
 ```
 
 ### 返値
@@ -30,18 +30,17 @@ l10n:
 #### HTML
 
 ```html
-<ul id="letterResult">
-</ul>
+<ul id="letterResult"></ul>
 ```
 
 #### JavaScript
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 const arrIter = arr[Symbol.iterator]();
-const letterResult = document.getElementById('letterResult');
+const letterResult = document.getElementById("letterResult");
 for (const letter of arrIter) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.textContent = letter;
   letterResult.appendChild(li);
 }
@@ -54,7 +53,7 @@ for (const letter of arrIter) {
 ### 他の反復方法
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const arrIter = arr[Symbol.iterator]();
 console.log(arrIter.next().value); // a
 console.log(arrIter.next().value); // b
@@ -70,7 +69,7 @@ console.log(arrIter.next().value); // e
 ```js
 function logIterable(it) {
   if (!(Symbol.iterator in it)) {
-    console.log(it, ' is not an iterable object.');
+    console.log(it, " is not an iterable object.");
     return;
   }
 
@@ -81,13 +80,13 @@ function logIterable(it) {
 }
 
 // Array
-logIterable(['a', 'b', 'c']);
+logIterable(["a", "b", "c"]);
 // a
 // b
 // c
 
 // string
-logIterable('abc');
+logIterable("abc");
 // a
 // b
 // c

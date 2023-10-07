@@ -1,7 +1,6 @@
 ---
 title: Navegador
 slug: Glossary/Browser
-original_slug: Glossario/Navegador
 ---
 
 Um navegador _Web_ é um programa que obtém e exibe páginas da {{Glossary("World Wide Web","Web")}}, e permite que os usuários acessem outras páginas através de {{Glossary("hyperlink","hyperlinks")}}.
@@ -10,7 +9,7 @@ Um navegador _Web_ é um programa que obtém e exibe páginas da {{Glossary("Wor
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Navegador web")}} na Wikipedia
+- [Navegador web](https://pt.wikipedia.org/wiki/Navegador_web) na Wikipedia
 - [The evolution of the web](http://www.evolutionoftheweb.com/)
 
 ### Baixar um navegador

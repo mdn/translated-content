@@ -21,21 +21,21 @@ Você consegue definir seu próprio iterável assíncrono configurando a proprie
 
 ```js
 const myAsyncIterable = {
-    async* [Symbol.asyncIterator]() {
-        yield "hello";
-        yield "async";
-        yield "iteration!";
-    }
+  async *[Symbol.asyncIterator]() {
+    yield "hello";
+    yield "async";
+    yield "iteration!";
+  },
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // resultado esperado:
-        //    "hello"
-        //    "async"
-        //    "iteration!"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // resultado esperado:
+    //    "hello"
+    //    "async"
+    //    "iteration!"
+  }
 })();
 ```
 
@@ -47,8 +47,8 @@ Não há atualmente objetos Javascript built-in que tenha a chave `[Symbol.async
 
 ## Especificações
 
-| Especificação                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
+| Especificação                                                                |
+| ---------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} |
 
 ## Compatibilidade com navegadores

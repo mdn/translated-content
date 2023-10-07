@@ -1,8 +1,8 @@
 ---
 title: 페이지 생성 및 수정
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 신규 공헌자가 이미 있는 문서를 수정하거나 신규 문서를 생성하는 법에 대해 설명합니다.
@@ -88,7 +88,7 @@ MDN에 탑재된 편집기 사용에 대한 좀 더 세부적인 내용은 [MDN 
 
 다른 페이지의 링크를 걸지 않은 새로운 페이지를 만들기 위해서는, 브라우저의 URL 항목에 고유한 페이지 이름을 입력합니다. 예를 들면, 아래와 같이 입력한다면..
 
-`<pre class="language-html">https://developer.mozilla.org/en-US/docs/FooBar</pre>`
+`<pre class="language-html">https://developer.mozilla.org/ko/docs/FooBar</pre>`
 
 MDN은 제목이 "FooBar"로 된 새로운 페이지가 생성하고, 편집기가 실행되어 새로운 페이지에 내용을 추가할 수 있게 해줍니다. 편집기 모드를 이용하는 방법에 대한 내용은 이 글의 [이미 존재하는 페이지 편집하기](/ko/docs/MDN/Contribute/Howto/Create_and_edit_pages#Editing_an_existing_page) 섹션을 참고하세요.
 
@@ -118,7 +118,7 @@ MDN은 제목이 "FooBar"로 된 새로운 페이지가 생성하고, 편집기�
 
 1. 이미 존재하는 페이지의 텍스트 안에 넣고자 하는 새로운 페이지의 이름을 입력합니다.
 2. 이름을 선택하고, 편집기의 툴바에서 링크 아이콘 클릭(**click the Link icon**)을 클릭합니다. "**Update Link**" 다이얼로그가 열리고, "**Link To**" 항목에 선택된 텍스트로 채워집니다.
-3. 기본적으로, URL 항목의 시작 부분은 "/en-US/docs/"가 삽입됩니다. "/en-US/docs/" 다음에 페이지의 이름을 입력하세요. (페이지 이름은 링크 텍스트와 동일하지 않아도 됩니다.)
+3. 기본적으로, URL 항목의 시작 부분은 "/ko/docs/"가 삽입됩니다. "/ko/docs/" 다음에 페이지의 이름을 입력하세요. (페이지 이름은 링크 텍스트와 동일하지 않아도 됩니다.)
 4. 링크를 생성하고 삽입하기 위해 OK를 클릭합니다.
 
 페이지가 존재하지 않는다면, 링크는 붉은색으로 보여집니다. 페이지가 존재한다면 링크는 파란색으로 보여집니다. 새로운 페이지를 만들고 싶은데 원하는 페이지 제목이 이미 존재한다면, 먼저 해당 페이지에 있는 내용을 추가 편집하거나 좀 더 개선할 부분은 없는지 확인하십시오. 아니면, 생성하고자 하는 페이지에 대한 다른 제목을 고민해보고 링크를 만들어 보세요. 페이지 이름에 대한 안내는 [페이지 네이밍 가이드](/ko/docs/Project:Page_Naming_Guide)를 참고하세요.

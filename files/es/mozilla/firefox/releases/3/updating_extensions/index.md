@@ -1,7 +1,6 @@
 ---
 title: Actualizar extensiones para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-original_slug: Actualizar_extensiones_para_Firefox_3
 ---
 
 {{FirefoxSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
-original_slug: Glossario/Endianness
 ---
 
 "Endian" and "endianness" (ou "ordem-de-bytes") descrevem como os computadores organizam os bytes que compõem os números.
@@ -21,4 +20,4 @@ Exemplos com o numero `0x12345678` (ou seja, 305 419 896 em decimal):
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [Typed Arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
-- {{Interwiki("wikipedia", "Endianness")}} na Wikipedia
+- [Endianness](<https://pt.wikipedia.org/wiki/Extremidade_(ordenação)>) na Wikipedia

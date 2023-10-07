@@ -39,7 +39,7 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
   - : 元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。`fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform`、`perspective`、`filter` 或 `backdrop-filter` 属性非 `none` 时，容器由视口改为该祖先。
 - `sticky`
   - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*（nearest scrolling ancestor）和 [containing block](/zh-CN/docs/Web/CSS/Containing_Block)（最近块级祖先 nearest block-level ancestor），包括 table-related 元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
-    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)（stacking context）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见 [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
+    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)（stacking context）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见 [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
 
 ### 形式语法
 
@@ -161,22 +161,30 @@ span {
 ```html
 <div class="outer">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <div class="box" id="one">One</div>
 </div>
@@ -214,7 +222,10 @@ span {
 粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。例如：
 
 ```css
-#one { position: sticky; top: 10px; }
+#one {
+  position: sticky;
+  top: 10px;
+}
 ```
 
 在 viewport 视口滚动到元素 top 距离小于 10px 之前，元素为相对定位。之后，元素将固定在与顶部距离 10px 的位置，直到 viewport 视口回滚到阈值以下。
@@ -271,11 +282,14 @@ dl {
 }
 
 dt {
-  background: #B8C1C8;
-  border-bottom: 1px solid #989EA4;
-  border-top: 1px solid #717D85;
-  color: #FFF;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -284,14 +298,17 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #CCC
+  border-top: 1px solid #ccc;
 }
 ```
 

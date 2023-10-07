@@ -1,5 +1,5 @@
 ---
-title: '::slotted()'
+title: "::slotted()"
 slug: Web/CSS/::slotted
 ---
 
@@ -47,26 +47,29 @@ slug: Web/CSS/::slotted
 自定义元素 `<person-details>` 的定义如下：
 
 ```js
-customElements.define('person-details',
+customElements.define(
+  "person-details",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('person-template');
+      let template = document.getElementById("person-template");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement('style');
-      style.textContent = 'div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }' +
-                           'h2 { margin: 0 0 10px; }' +
-                           'ul { margin: 0; }' +
-                           'p { margin: 10px 0; }' +
-                           '::slotted(*) { color: gray; font-family: sans-serif; } ';
+      let style = document.createElement("style");
+      style.textContent =
+        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
+        "h2 { margin: 0 0 10px; }" +
+        "ul { margin: 0; }" +
+        "p { margin: 10px 0; }" +
+        "::slotted(*) { color: gray; font-family: sans-serif; } ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 ```
 
 为了更好地区分**未被成功填充的插槽**和**成功填充的插槽**, 我们在 CSS 中选择了所有的插槽元素 (`::slotted(*)`), 并填充了不一样的颜色和字体。结果也是如此。

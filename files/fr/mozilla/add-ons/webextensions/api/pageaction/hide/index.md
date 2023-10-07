@@ -1,17 +1,6 @@
 ---
 title: pageAction.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - hide
-  - pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 ---
 
 {{AddonSidebar()}}
@@ -24,8 +13,8 @@ Masque l'action de page pour un onglet donné.
 
 ```js
 browser.pageAction.hide(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Paramètres

@@ -1,28 +1,29 @@
 ---
-title: '<label>: 入力欄ラベル要素'
+title: "<label>: ラベル要素"
 slug: Web/HTML/Element/label
 l10n:
-  sourceCommit: d2758b52647c72eab555b05941c8bc613a1e65d2
+  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<label>` 要素**は、ユーザーインターフェイスの項目のキャプションを表します。
+**`<label>`**は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーインターフェイスの項目のキャプションを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
-`<label>` を {{htmlelement("input")}} 要素と関連付けると、いくらかの利点が発生します。
+`<label>` を {{htmlelement("input")}} や {{htmlelement("textarea")}} などのフォーム要素と関連付けると、いくらかの利点が発生します。
 
 - ラベルのテキストが、対応するテキスト入力欄に視覚的に関連付けられるだけではありません。プログラム的にも関連付けられます。つまり、例えばユーザーがフォーム入力欄にフォーカスを移動した時、読み上げソフトがラベルを読み上げ、支援技術のユーザーが何のデータを入力するべきか理解しやすくすることができます。
 - 関連付けられたラベルをクリックして、入力欄自体をクリックした場合と同様に、入力欄にフォーカスを与えたりアクティブ化にしたりすることができます。こうしてヒット領域を拡大すると、タッチパネルの端末を使用している場合を含めて、入力欄をアクティブ化させやすくなります。
 
-`<label>` を `<input>` 要素に関連付けるには、 `<input>` に `id` 属性を設定しなければなりません。そして `<label>` に `for` 属性を設定して、値を input の `id` と同じにします。
+`<label>` 要素と `<input>` 要素を明示的に関連付けるには、最初に `id` 属性を `<input>` 要素に追加します。次に、`for` 属性を `<label>` 要素に追加します。`for` の値は `<input>` 要素の `id` と同じにします。
 
 他の方法として、 `<input>` を直接 `<label>` の内側に入れることができますが、この場合は関連付けが明確なので、 `for` および `id` 属性は必要ありません。
 
 ```html
-<label>Do you like peas?
-  <input type="checkbox" name="peas">
+<label>
+  Do you like peas?
+  <input type="checkbox" name="peas" />
 </label>
 ```
 
@@ -30,7 +31,7 @@ l10n:
 
 ```html
 <label for="username">名前を入力してください:</label>
-<input id="username">
+<input id="username" name="username" type="text" />
 <label for="username">名前を忘れてしまいましたか？</label>
 ```
 
@@ -42,7 +43,7 @@ l10n:
 
 - `for`
 
-  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes#id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
+  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes#id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
     > **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 
@@ -58,22 +59,22 @@ l10n:
 
 ## 例
 
-### シンプルな label の例
+### 暗黙のラベルの定義
 
 ```html
-<label>Click me <input type="text"></label>
+<label>Click me <input type="text" /></label>
 ```
 
-{{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
+{{EmbedLiveSample('Simple_label_example', '200', '50')}}
 
-### "for" 属性の使用例
+### "for" 属性をつけた明示的なラベルの定義
 
 ```html
-<label for="username">Click me</label>
-<input type="text" id="username">
+<label for="username">Click me to focus on the input field</label>
+<input type="text" id="username" />
 ```
 
-{{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
+{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
 
 ## アクセシビリティの考慮
 
@@ -81,20 +82,20 @@ l10n:
 
 `label` の中に{{HTMLElement("a", "アンカー")}}や{{HTMLElement("button", "ボタン")}}のような対話型要素を配置しないでください。そのようにすると、ユーザーが `label` に関連したフォーム入力欄を有効化しにくくなります。
 
-#### 悪い例
+**悪い例:**
 
 ```html example-bad
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   <a href="terms-and-conditions.html">利用規約と利用条件</a>に同意します。
 </label>
 ```
 
-#### 良い例
+**良い例:**
 
 ```html example-good
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   利用規約と利用条件に同意します。
 </label>
 <p>
@@ -108,21 +109,21 @@ l10n:
 
 [フォーム](/ja/docs/Web/HTML/Element/form)、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("legend")}} を {{HTMLElement("fieldset")}} の中に配置して使用してください。
 
-#### 悪い例
+**悪い例:**
 
 ```html example-bad
 <label for="your-name">
   <h3>Your name</h3>
-  <input id="your-name" name="your-name" type="text">
+  <input id="your-name" name="your-name" type="text" />
 </label>
 ```
 
-#### 良い例
+**良い例:**
 
 ```html example-good
 <label class="large-label" for="your-name">
   Your name
-  <input id="your-name" name="your-name" type="text">
+  <input id="your-name" name="your-name" type="text" />
 </label>
 ```
 
@@ -161,7 +162,7 @@ l10n:
         >、ただし、子孫に
         <code>label</code>
         要素を持つことはできない。ラベル付けの対象となるコントロール以外の<a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能"
+          href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
           >ラベル付け可能</a
         >要素を入れてはならない。
       </td>

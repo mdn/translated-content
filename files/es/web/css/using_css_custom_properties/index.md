@@ -85,10 +85,10 @@ Lo aplicaremos a este HTML:
 
 ```html
 <div>
-    <div class="uno">1:</div>
-    <div class="dos">2: Texto <span class="cinco">5 - más texto</span></div>
-    <input class="tres">
-    <textarea class="cuatro">4: Lorem Ipsum</textarea>
+  <div class="uno">1:</div>
+  <div class="dos">2: Texto <span class="cinco">5 - más texto</span></div>
+  <input class="tres" />
+  <textarea class="cuatro">4: Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -188,11 +188,18 @@ El primer argumento a la función es el nombre de la [propiedad personalizada](h
 }
 
 .tres {
-  background-color: var(--my-var, var(--my-background, pink)); /* Rosa (pink) si my-var y --my-background no están definidas */
+  background-color: var(
+    --my-var,
+    var(--my-background, pink)
+  ); /* Rosa (pink) si my-var y --my-background no están definidas */
 }
 
 .tres {
-  background-color: var(--my-var, --my-background, pink); /* Invalido: "--background, pink" */
+  background-color: var(
+    --my-var,
+    --my-background,
+    pink
+  ); /* Invalido: "--background, pink" */
 }
 ```
 
@@ -221,9 +228,15 @@ Considera el siguiente fragmento:
 ### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+:root {
+  --text-color: 16px;
+}
+p {
+  color: blue;
+}
+p {
+  color: var(--text-color);
+}
 ```
 
 Como esperaríamos, el navegador sustituye `var(--text-color)` con el valor de `--text-color`, pero `16px` no es un valor válido para la propiedad {{cssxref("color")}}. Después de la sustitución, la propiedad no tiene sentido. El navegador maneja esta situación en dos pasos:

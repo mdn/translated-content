@@ -1,10 +1,8 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - Контекст
-translation_of: Web/CSS/content
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`content`** заменяет элемент сгенерированным значением. Объекты, добавленные с помощью свойства `content` являются _анонимными_ property are _anonymous [замещаемыми элементами](/ru/docs/Web/CSS/Replaced_element)._
@@ -86,21 +84,25 @@ content: unset;
 
 ```html
 <h1>5</h1>
-<p>According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  We must understand that there is nothing fundamentally wrong
-  with building on the contributions of others.
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"
+    >I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.</q
+  >
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
-    must have the ability to shape the Internet and
-    their own experiences on the Internet.</q>
-  Therefore, we can infer that contributing to the open web
-  can protect our own individual experiences on it.
+<p>
+  According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/"
+    >Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.</q
+  >
+  Therefore, we can infer that contributing to the open web can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -119,8 +121,8 @@ q::after {
   content: close-quote;
 }
 
-h1::before  {
-  content: "Chapter ";  /* Пробел в конце создаёт разделение
+h1::before {
+  content: "Chapter "; /* Пробел в конце создаёт разделение
                             между добавленным контентом
                            и остальным контентом*/
 }
@@ -144,8 +146,11 @@ h1::before  {
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") " MOZILLA: ";
-  font: x-small Arial, sans-serif;
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
+    " MOZILLA: ";
+  font:
+    x-small Arial,
+    sans-serif;
   color: gray;
 }
 ```
@@ -174,7 +179,7 @@ a::before {
 
 ```css
 .new-entry::after {
-  content: " New!";  /* Начальный пробел создаёт разделение
+  content: " New!"; /* Начальный пробел создаёт разделение
                         между добавленным контентом
                         и остальным контентом */
   color: red;
@@ -193,10 +198,12 @@ a::before {
 
 ```html
 <ul>
-  <li><a id="moz" href="http://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+  <li><a id="moz" href="http://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -213,11 +220,11 @@ a::after {
 }
 
 #moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") ;
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
 }
 
 #mdn::before {
-  content: url("mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png");
 }
 
 li {
@@ -246,7 +253,8 @@ li {
   content: url("mdn.svg");
 }
 
-#replaced::after { /* не будет отображаться, если замена элемента поддерживается */
+#replaced::after {
+  /* не будет отображаться, если замена элемента поддерживается */
   content: " (" attr(id) ")";
 }
 ```

@@ -17,10 +17,10 @@ slug: Web/API/CSS_Properties_and_Values_API/guide
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-prop',
-  syntax: '<color>',
+  name: "--my-prop",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -30,7 +30,7 @@ CSS で同じ登録を行うことができます。 次の例では、{{cssxref
 
 ```css
 @property --my-prop {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -104,10 +104,10 @@ button {
 
 ```js hidden
 window.CSS.registerProperty({
-  name: '--registered',
-  syntax: '<color>',
+  name: "--registered",
+  syntax: "<color>",
   inherits: false,
-  initialValue: 'red',
+  initialValue: "red",
 });
 ```
 

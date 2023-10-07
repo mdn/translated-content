@@ -1,11 +1,6 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-iteration-count
 ---
 
 {{CSSRef}}
@@ -88,15 +83,15 @@ p {
 
 ```html
 <p class="infini">
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 
 <p class="dix">
-  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois
-  cinq font douze, quatre fois six font treize, quatre fois sept font
-  — je n’arriverai jamais à vingt de ce train-là.
+  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois cinq
+  font douze, quatre fois six font treize, quatre fois sept font — je
+  n’arriverai jamais à vingt de ce train-là.
 </p>
 ```
 

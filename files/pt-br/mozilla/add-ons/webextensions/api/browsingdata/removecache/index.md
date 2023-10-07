@@ -15,8 +15,8 @@ Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.removeCache(
-  removalOptions            // objeto RemovalOptions
-)
+  removalOptions, // objeto RemovalOptions
+);
 ```
 
 ### Parâmetros
@@ -41,8 +41,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCache({}).
-then(onRemoved, onError);
+browser.browsingData.removeCache({}).then(onRemoved, onError);
 ```
 
 ## Compatibilidade com navegadores

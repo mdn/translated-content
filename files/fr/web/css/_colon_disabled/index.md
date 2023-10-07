@@ -1,11 +1,6 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:disabled
 ---
 
 {{CSSRef}}
@@ -29,7 +24,9 @@ input[type="text"]:disabled {
 ### CSS
 
 ```css
-input[type="text"]:disabled { background: #ccc; }
+input[type="text"]:disabled {
+  background: #ccc;
+}
 ```
 
 ### HTML
@@ -38,18 +35,24 @@ input[type="text"]:disabled { background: #ccc; }
 <form action="#">
   <fieldset>
     <legend>Adresse de livraison</legend>
-    <input type="text" placeholder="Nom">
-    <input type="text" placeholder="Adresse">
-    <input type="text" placeholder="Code postal">
+    <input type="text" placeholder="Nom" />
+    <input type="text" placeholder="Adresse" />
+    <input type="text" placeholder="Code postal" />
   </fieldset>
   <fieldset id="facturation">
     <legend>Adresse de facturation</legend>
-    <label for="facturation_livraison">Identique à l'adresse de livraison</label>
-    <input type="checkbox" id="facturation_livraison" onchange="javascript:toggleBilling()" checked>
+    <label for="facturation_livraison"
+      >Identique à l'adresse de livraison</label
+    >
+    <input
+      type="checkbox"
+      id="facturation_livraison"
+      onchange="javascript:toggleBilling()"
+      checked />
     <br />
-    <input type="text" placeholder="Nom" disabled>
-    <input type="text" placeholder="Adresse" disabled>
-    <input type="text" placeholder="Code postal" disabled>
+    <input type="text" placeholder="Nom" disabled />
+    <input type="text" placeholder="Adresse" disabled />
+    <input type="text" placeholder="Code postal" disabled />
   </fieldset>
 </form>
 ```
@@ -58,7 +61,9 @@ input[type="text"]:disabled { background: #ccc; }
 
 ```js
 function toggleBilling() {
-  var billingItems = document.querySelectorAll('#facturation input[type="text"]');
+  var billingItems = document.querySelectorAll(
+    '#facturation input[type="text"]',
+  );
   for (var i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
   }

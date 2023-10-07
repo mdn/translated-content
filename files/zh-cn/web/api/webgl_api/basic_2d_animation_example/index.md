@@ -223,7 +223,7 @@ function compileShader(id, type) {
     console.log(
       `Error compiling ${
         type === gl.VERTEX_SHADER ? "vertex" : "fragment"
-      } shader:`
+      } shader:`,
     );
     console.log(gl.getShaderInfoLog(shader));
   }
@@ -274,7 +274,7 @@ function animateScene() {
     gl.FLOAT,
     false,
     0,
-    0
+    0,
   );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);

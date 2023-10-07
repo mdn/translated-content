@@ -19,7 +19,7 @@ cerrar/eliminar una notificación mostrada anteriormente.
 ## Sintaxis
 
 ```js
-close()
+close();
 ```
 
 ### Parámetros
@@ -42,12 +42,12 @@ notificación cuando el contenido relevante ha sido leído en la página web.
 function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
     body: theBody,
-    icon: theIcon
+    icon: theIcon,
   };
 
-  var n = new Notification(theTitle,options);
-  document.addEventListener('visibilitychange', function() {
-    if (document.visibilityState === 'visible') {
+  var n = new Notification(theTitle, options);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") {
       // La pestaña es ahora visible, así que cierro/elimino la notificación obsoleta.
       n.close();
     }

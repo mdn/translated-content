@@ -1,7 +1,6 @@
 ---
-title: 'Document: beforescriptexecute イベント'
+title: "Document: beforescriptexecute イベント"
 slug: Web/API/Document/beforescriptexecute_event
-original_slug: Web/API/Document/onbeforescriptexecute
 ---
 
 {{APIRef}}{{non-standard_header}}
@@ -13,9 +12,9 @@ original_slug: Web/API/Document/onbeforescriptexecute
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
 ```js
-addEventListener('beforescriptexecute', (event) => { });
+addEventListener("beforescriptexecute", (event) => {});
 
-onbeforescriptexecute = (event) => { };
+onbeforescriptexecute = (event) => {};
 ```
 
 ## イベント型
@@ -29,12 +28,12 @@ function starting(e) {
   logMessage(`スクリプト実行開始 (ID:  ${e.target.id})`);
 }
 
-document.addEventListener('beforescriptexecute', starting, true);
+document.addEventListener("beforescriptexecute", starting, true);
 // または
 document.onbeforescriptexecute = starting;
 ```
 
-[ライブ例を表示](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[ライブ例を表示](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 仕様書
 

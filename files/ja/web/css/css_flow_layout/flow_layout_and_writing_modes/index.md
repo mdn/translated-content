@@ -1,6 +1,6 @@
 ---
 title: フローレイアウトと書字方向
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 ---
 
 通常フローの動きについて詳細を説明している CSS 2.1 仕様書は、横書きを想定しています。[レイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)プロパティは縦書きモードでも同様に動作するべきです。このガイドでは、異なる文書の書字方向が使われた場合のフローレイアウトの動作を見てみましょう。
@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
 
 CSS Writing Modes Level 3 仕様書では、フローレイアウトで文書の書字方向が変更された時の影響を定義しています。[仕様書](https://drafts.csswg.org/css-writing-modes-3/#text-flow)の書字方向の導入部では、以下のように書かれています。
 
-> “CSS の書字方向は {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} プロパティによって決められます。これは主にインラインベース方向とブロックフロー方向から決まります。”
+> "CSS の書字方向は {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} プロパティによって決められます。これは主にインラインベース方向とブロックフロー方向から決まります。"
 
 仕様書では*インラインベース方向*を、行内でコンテンツが並べられる方向として定義しています。ここでは、インライン方向の始点と終点を定義しています。始点は文が始まるところであり、終点はテキストの行が終わり、新しい行への折り返しが始まる前です。
 

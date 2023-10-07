@@ -1,10 +1,6 @@
 ---
 title: Manifeste des applications web
 slug: Web/Manifest
-tags:
-  - Applications
-  - Manifeste
-translation_of: Web/Manifest
 ---
 
 Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
@@ -16,7 +12,7 @@ Les manifestes font partie d'un ensemble de technologies appelées les [applicat
 Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (_link_) dans l'entête (_head_) de votre document :
 
 ```html
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest" />
 ```
 
 ## Exemple de manifeste
@@ -27,37 +23,47 @@ Les manifestes des applications Web sont déployés dans vos pages HTML en utili
   "short_name": "I/O 2015",
   "start_url": "./?utm_source=web_app_manifest",
   "display": "standalone",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen168.png",
-    "sizes": "168x168",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "web"
-  }, {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.google.samples.apps.iosched"
-  }]
+  "icons": [
+    {
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.google.samples.apps.iosched"
+    }
+  ]
 }
 ```
 
@@ -111,7 +117,7 @@ Les valeurs valides sont :
 
 | Mode d'affichage | Description                                                                                                                                                                                                                                                                                                                                                                             | Affichage de rattrapage |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| `fullscreen`     | Toute la zone d'affichage disponible est utilisée et aucun agent utilisateur {{Glossary("chrome")}} n'est montré.                                                                                                                                                                                                                                                                 | `standalone`            |
+| `fullscreen`     | Toute la zone d'affichage disponible est utilisée et aucun agent utilisateur {{Glossary("chrome")}} n'est montré.                                                                                                                                                                                                                                                                       | `standalone`            |
 | `standalone`     | L'application va ressembler à une application autonome et se comporter comme telle. Cela peut inclure que l'application ait une fenêtre différente, sa propre icône dans le lanceur d'applications, etc. Dans ce mode, l'agent utilisateur va exclure les élements d'interface qui permettent de contrôler la navigation mais peut inclure d'autres éléments comme une barre de statut. | `minimal-ui`            |
 | `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |

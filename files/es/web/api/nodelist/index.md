@@ -14,10 +14,10 @@ Los objetos **`NodeList`** son colecciones de nodos como los devueltos por propi
 En algunos casos, `NodeList` es una colección _en vivo_, lo que significa que los cambios en el DOM se reflejan en la colección. Por ejemplo, {{domxref ("Node.childNodes")}} está en vivo:
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // asumamos "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // debería imprimir "3"
 ```
 
@@ -49,7 +49,7 @@ Es posible iterar sobre los items en un `NodeList` usando:
 
 ```js
 for (var i = 0; i < myNodeList.length; i++) {
-  var item = myNodeList[i];  // No es necesario llamar a myNodeList.item(i) en JavaScript
+  var item = myNodeList[i]; // No es necesario llamar a myNodeList.item(i) en JavaScript
 }
 ```
 
@@ -58,7 +58,7 @@ No se sienta tentado a [`for...in`](/es/docs/JavaScript/Reference/Statements/for
 Los bucles [`for...of`](/es/docs/JavaScript/Reference/Statements/for...of) harán un bucle sobre los objetos `NodeList` correctamente:
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var item of list) {
   item.checked = true;
 }
@@ -69,7 +69,7 @@ Los navegadores recientes también son compatibles con los métodos de iteració
 También hay una forma compatible con Internet Explorer de usar {{jsxref ("Array.forEach ()", "Array.prototype.forEach")}} para la iteración.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
 });

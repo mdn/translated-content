@@ -1,15 +1,6 @@
 ---
 title: NavigatorID.platform
 slug: orphaned/Web/API/NavigatorID/platform
-tags:
-  - API
-  - Navigator
-  - NavigatorID
-  - Property
-  - Refe
-  - platform
-translation_of: Web/API/NavigatorID/platform
-original_slug: Web/API/NavigatorID/platform
 ---
 
 {{ APIRef("HTML DOM") }}

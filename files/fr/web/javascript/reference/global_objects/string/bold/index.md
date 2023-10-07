@@ -1,15 +1,6 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/bold
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -19,7 +10,7 @@ La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affich
 ## Syntaxe
 
 ```js
-str.bold()
+str.bold();
 ```
 
 ### Valeur de retour
@@ -38,10 +29,10 @@ L'exemple suivant utilise des méthodes de `String` pour changer l'affichage de 
 ```js
 var chaîneMonde = "Coucou monde";
 
-console.log( chaîneMonde.blink()   );
-console.log( chaîneMonde.bold()    );
-console.log( chaîneMonde.italics() );
-console.log( chaîneMonde.strike()  );
+console.log(chaîneMonde.blink());
+console.log(chaîneMonde.bold());
+console.log(chaîneMonde.italics());
+console.log(chaîneMonde.strike());
 ```
 
 Cet exemple produit le même HTML que le code suivant :

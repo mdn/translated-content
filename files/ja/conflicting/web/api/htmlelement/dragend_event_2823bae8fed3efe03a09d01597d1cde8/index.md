@@ -1,5 +1,5 @@
 ---
-title: 'Document: dragend イベント'
+title: "Document: dragend イベント"
 slug: conflicting/Web/API/HTMLElement/dragend_event_2823bae8fed3efe03a09d01597d1cde8
 original_slug: Web/API/Document/dragend_event
 ---

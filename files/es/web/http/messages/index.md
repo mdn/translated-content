@@ -35,14 +35,14 @@ Las peticiones HTTP son mensajes enviados por un cliente, para iniciar una acci�
 1. Un _[método HTTP](/es/docs/Web/HTTP/Methods)_, un verbo como: {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} o {{HTTPMethod("POST")}}) o un nombre como: {{HTTPMethod("HEAD")}} o {{HTTPMethod("OPTIONS")}}), que describan la acción que se pide sea realizada. Por ejemplo, `GET` indica que un archivo ha de ser enviado hacia el cliente, o `POST` indica que hay datos que van a ser enviados hacia el servidor (creando o modificando un recurso, o generando un documento temporal para ser enviado).
 2. El objetivo de una petición, normalmente es una {{glossary("URL")}}, o la dirección completa del protocolo, puerto y dominio también suelen ser especificados por el contexto de la petición. El formato del objetivo de la petición varia según los distintos métodos HTTP. Puede ser:
 
-    - Una dirección absoluta, seguida de un signo de cierre de interrogación `'?'` y un texto de consulta. Este es el formato más comun, conocido como el formato original ('_origin form_' en inglés), se usa en los métodos `GET`, `POST`, `HEAD`, y `OPTIONS` .
-      `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
-    - Una URL completa; conocido como el formato absoluto, usado mayormente con `GET` cuando se conecta a un proxy.
-      `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - El componente de autoriade de una URL, formado por el nombre del domínio y opcionalmente el puerto (el puerto precedido por el simbolo `':'` ), se denomina a este formato como el formato de autoridad. Unicamente se usa con `CONNECT` cuando se establece un tunel HTTP.
-      `CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - El formato de asterisco, se utliza un asterisco (`'*'`) junto con las opciones: `OPTIONS` , representando al servidor entero en conjunto.
-      `OPTIONS * HTTP/1.1`
+   - Una dirección absoluta, seguida de un signo de cierre de interrogación `'?'` y un texto de consulta. Este es el formato más comun, conocido como el formato original ('_origin form_' en inglés), se usa en los métodos `GET`, `POST`, `HEAD`, y `OPTIONS` .
+     `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
+   - Una URL completa; conocido como el formato absoluto, usado mayormente con `GET` cuando se conecta a un proxy.
+     `GET http://developer.mozilla.org/es/docs/Web/HTTP/Messages HTTP/1.1`
+   - El componente de autoriade de una URL, formado por el nombre del domínio y opcionalmente el puerto (el puerto precedido por el simbolo `':'` ), se denomina a este formato como el formato de autoridad. Unicamente se usa con `CONNECT` cuando se establece un tunel HTTP.
+     `CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - El formato de asterisco, se utliza un asterisco (`'*'`) junto con las opciones: `OPTIONS` , representando al servidor entero en conjunto.
+     `OPTIONS * HTTP/1.1`
 
 3. la versión de HTTP, la cual define la estructura de los mensajes, actuando como indicador, de la versión que espera que se use para la respuesta.
 

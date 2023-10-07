@@ -1,7 +1,6 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-translation_of: Web/API/Window/sessionStorage
 ---
 
 {{APIRef()}}
@@ -12,10 +11,10 @@ translation_of: Web/API/Window/sessionStorage
 
 ```js
 // Сохранение данных в sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // Получение данных из sessionStorage
-var data = sessionStorage.getItem('key');
+var data = sessionStorage.getItem("key");
 ```
 
 ### Значение
@@ -27,7 +26,7 @@ var data = sessionStorage.getItem('key');
 Следующий код получает доступ к объекту {{domxref("Storage")}} текущей сессии домена и добавляет данные в него используя {{domxref("Storage.setItem()")}}.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 Следующий пример автоматически сохраняет содержимое текстового поля. Если страница случайно будет обновлена значение текстового поля будет восстановлено. Таким образом ничего из введённого пользователем не потеряется даже в этом случае.
@@ -45,7 +44,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Отслеживаем все изменения в текстовом поле
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // И сохраняем их в объект session storage
   sessionStorage.setItem("autosave", field.value);
 });

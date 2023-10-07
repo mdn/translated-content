@@ -3,6 +3,8 @@ title: Character set
 slug: Glossary/Character_set
 ---
 
+{{GlossarySidebar}}
+
 **字符集**是一种让计算机知道如何识别 {{Glossary("Character")}} 的编码系统，这些字符包括字母、数字、标点符号和空白字符。
 
 早期，由于各国使用的语言不同而发展出各自的字符集，例如日语的 Kanji JIS(例如 Shift-JIS, EUC-JP 等)，繁体中文的 Big5 和俄罗斯的 KOI8-R。然而，{{Glossary("Unicode")}} 因其对通用语言的支持，逐渐成为最被接受的字符集。

@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.6
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -70,7 +61,7 @@ arr.every(callback(currentValue[, index[, array]])[, thisArg])
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
@@ -79,8 +70,8 @@ function isBigEnough(element, index, array) {
 [Стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) предоставляют более краткий синтаксис для подобных проверок.
 
 ```js
-[12, 5, 8, 130, 44].every(elem => elem >= 10);   // false
-[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
+[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
+[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
 ```
 
 ## Полифил
@@ -89,12 +80,12 @@ function isBigEnough(element, index, array) {
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Положим O равным результату вызова ToObject над значением
@@ -107,7 +98,7 @@ if (!Array.prototype.every) {
     var len = O.length >>> 0;
 
     // 4. Если IsCallable(callbackfn) равен false, выкинем исключение TypeError.
-    if (typeof callbackfn !== 'function') {
+    if (typeof callbackfn !== "function") {
       throw new TypeError();
     }
 
@@ -121,7 +112,6 @@ if (!Array.prototype.every) {
 
     // 7. Пока k < len, будем повторять
     while (k < len) {
-
       var kValue;
 
       // a. Положим Pk равным ToString(k).
@@ -131,7 +121,6 @@ if (!Array.prototype.every) {
       //   Этот шаг может быть объединён с шагом c
       // c. Если kPresent равен true, то
       if (k in O) {
-
         // i. Положим kValue равным результату вызова внутреннего метода Get
         //    объекта O с аргументом Pk.
         kValue = O[k];

@@ -1,22 +1,24 @@
 ---
-title: Document.querySelectorAll()
+title: "Document: querySelectorAll() メソッド"
 slug: Web/API/Document/querySelectorAll
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} の **`querySelectorAll()`** メソッドは、与えられた CSS セレクターに一致する文書中の要素のリストを示す静的な (ライブではない) {{domxref("NodeList")}} を返します。
+{{domxref("Document")}} の **`querySelectorAll()`** メソッドは、指定された CSS セレクターに一致する文書中の要素のリストを示す静的な（生きていない）{{domxref("NodeList")}} を返します。
 
 ## 構文
 
-```js
-elementList = parentNode.querySelectorAll(selectors);
+```js-nolint
+querySelectorAll(selectors)
 ```
 
 ### 引数
 
 - `selectors`
-  - : {{domxref("DOMString")}} で、照合対象となる 1 つまたは複数のセレクターを含みます。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターは、カンマで区切って指定することができます。
+  - : 文字列で、照合対象となる 1 つまたは複数のセレクターを含みます。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターは、カンマで区切って指定することができます。
 
 > **メモ:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/API/Document/querySelector#特殊文字のエスケープ)を参照してください。
 
@@ -28,7 +30,7 @@ elementList = parentNode.querySelectorAll(selectors);
 
 ### 例外
 
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : 指定された `selectors` の構文が妥当ではない場合です。
 
 ## 例
@@ -76,44 +78,9 @@ const matches = container.querySelectorAll("li[data-active='1']");
 ```js
 const highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach((userItem) => {
   deleteUser(userItem);
 });
-```
-
-## ユーザーのメモ
-
-`querySelectorAll()` は、最も一般的な JavaScript DOM ライブラリーと異なる動作を持ち、意図しない結果をもたらすことがあります。
-
-### HTML
-
-次の、入れ子になった 3 つの {{HTMLElement("div")}} ブロックを持つ HTML について検討します。
-
-```html
-<div class="outer">
-  <div class="select">
-    <div class="inner">
-    </div>
-  </div>
-</div>
-```
-
-### JavaScript
-
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1 です。0 ではありません!
-```
-
-この例で、`.outer .inner` を`<div>` に `select` クラスがついたコンテキストで選択する場合、`.outer` が検索が行われる基底要素 (`.select`) の子孫ではないにもかかわらず、`.inner` クラスの要素が見つかります。既定では、`querySelectorAll()` はセレクターの最後の要素のみを、検索スコープ内にあるかどうか検証します。
-
-{{cssxref(":scope")}} 擬似クラスを使うと、基準となる要素の子孫だけが一致するようになり、期待される挙動を取り戻すことができます。
-
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
-inner.length; // 0
 ```
 
 ## 仕様書

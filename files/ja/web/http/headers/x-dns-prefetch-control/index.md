@@ -28,7 +28,7 @@ slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
 
 ## 構文
 
-```html
+```http
 X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
 ```
@@ -61,7 +61,7 @@ DNS リクエストは帯域で見ればとても小さいものですが、遅�
 次のように、サーバー側から `X-DNS-Prefetch-Control` ヘッダーを送信するか、個別の文書で [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性を {{ HTMLElement("meta") }} 要素に設定します。
 
 ```html
-<meta http-equiv="x-dns-prefetch-control" content="off">
+<meta http-equiv="x-dns-prefetch-control" content="off" />
 ```
 
 逆の設定をするには `content` を "`on`" にしてください。
@@ -71,7 +71,7 @@ DNS リクエストは帯域で見ればとても小さいものですが、遅�
 [リンク種別](/ja/docs/Web/HTML/Link_types)を `dns-prefetch` にした {{ HTMLElement("link") }} 要素に [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用することで、そのホスト名を使用した特定のアンカーを提供せずに、特定のホスト名を強制的に検索することができます。
 
 ```html
-<link rel="dns-prefetch" href="https://www.mozilla.org/contribute/">
+<link rel="dns-prefetch" href="https://www.mozilla.org/contribute/" />
 ```
 
 この例では、 "[www.mozilla.org/contribute](https://www.mozilla.org/contribute/)" というドメイン名が事前に解決されます。
@@ -79,7 +79,7 @@ DNS リクエストは帯域で見ればとても小さいものですが、遅�
 同様に、 link 要素は完全な URL を提供せずにホスト名を解決するために使用することができますが、ホスト名の前に 2 つのスラッシュを付けた場合だけです。
 
 ```html
-<link rel="dns-prefetch" href="//www.mozilla.org/contribute/">
+<link rel="dns-prefetch" href="//www.mozilla.org/contribute/" />
 ```
 
 ホスト名の強制的な先読みは、例えば、あるサイトのホームページ自体では使用されていないにもかかわらず、サイト全体で頻繁に参照されるドメイン名を強制的に事前解決するために有用かもしれません。これは、ホームページの性能には影響しないかもしれませんが、サイトの全体的なパフォーマンスを向上させます。

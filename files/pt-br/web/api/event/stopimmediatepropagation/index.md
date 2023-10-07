@@ -19,11 +19,8 @@ No caso de um evento onde vários _listeners_ o estão escutando, os mesmos são
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                           | Comentários        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}} | {{Spec2('DOM WHATWG')}} |                    |
-| {{SpecName('DOM4', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}}         | {{Spec2('DOM4')}}         | Initial definition |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.Event.stopImmediatePropagation")}}
+{{Compat}}

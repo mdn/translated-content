@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/includes
 ---
 
 {{JSRef}}
@@ -20,7 +19,7 @@ arr.includes(searchElement[, fromIndex])
 
 - `valueToFind`
   - : El valor a buscar.
-      > **Nota:** Al comparar cadenas de texto y caracteres, `includes()` **distingue mayúsculas y minúsculas**.
+    > **Nota:** Al comparar cadenas de texto y caracteres, `includes()` **distingue mayúsculas y minúsculas**.
 - `fromIndex` {{optional_inline}}
   - : Posición en la matriz en la cuál se debe comenzar a buscar `valueToFind`; el primer caracter a buscar se encuentra en `fromIndex`. Un valor negativo inicia la búsqueda desde array.length + fromIndex en adelante. El valor por defecto es 0.
 
@@ -33,9 +32,9 @@ Un {{jsxref ("Boolean")}} que es `true` si el valor `valueToFind` se encuentra d
 ## Ejemplos
 
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
 ```
@@ -45,10 +44,10 @@ Un {{jsxref ("Boolean")}} que es `true` si el valor `valueToFind` se encuentra d
 Si `fromIndex` es mayor o igual que la longitud de la matriz, se devuelve `false`. No se buscará en la matriz.
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 
-arr.includes('c', 3);   // false
-arr.includes('c', 100); // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### El índice calculado es menor que 0
@@ -60,11 +59,11 @@ Si `fromIndex` es negativo, el índice calculado se calcula para usarse como una
 // fromIndex es -100
 // el índice calculado es 3 + (-100) = -97
 
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 
-arr.includes('a', -100); // true
-arr.includes('b', -100); // true
-arr.includes('c', -100); // true
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
 ```
 
 ### `includes()` utilizado como método genérico
@@ -72,10 +71,10 @@ arr.includes('c', -100); // true
 El método `includes()` es intencionalmente genérico. No requiere que este valor sea un objeto Array, por lo que se puede aplicar a otros tipos de objetos (por ejemplo, objetos tipo array). El siguiente ejemplo ilustra el método `includes()` llamado en el objeto de argumentos de la función.
 
 ```js
-(function() {
-  console.log([].includes.call(arguments, 'a')); // true
-  console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');
+(function () {
+  console.log([].includes.call(arguments, "a")); // true
+  console.log([].includes.call(arguments, "d")); // false
+})("a", "b", "c");
 ```
 
 ## Polyfill
@@ -83,9 +82,8 @@ El método `includes()` es intencionalmente genérico. No requiere que este valo
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, 'includes', {
-    value: function(searchElement, fromIndex) {
-
+  Object.defineProperty(Array.prototype, "includes", {
+    value: function (searchElement, fromIndex) {
       if (this == null) {
         throw new TypeError('"this" es null o no está definido');
       }
@@ -113,7 +111,13 @@ if (!Array.prototype.includes) {
       var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
       function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
+        return (
+          x === y ||
+          (typeof x === "number" &&
+            typeof y === "number" &&
+            isNaN(x) &&
+            isNaN(y))
+        );
       }
 
       // 7. Repite, mientras k < len
@@ -129,7 +133,7 @@ if (!Array.prototype.includes) {
 
       // 8. Devuelve false
       return false;
-    }
+    },
   });
 }
 ```

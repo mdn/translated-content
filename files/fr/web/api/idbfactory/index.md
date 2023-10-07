@@ -1,7 +1,6 @@
 ---
 title: IDBFactory
 slug: Web/API/IDBFactory
-translation_of: Web/API/IDBFactory
 ---
 
 {{APIRef("IndexedDB")}}
@@ -30,14 +29,22 @@ var note = document.querySelector("ul");
 
 // Dans la ligne suivante, inclure les préfixes des
 // implémentations à tester
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // attention à ne pas utiliser "var indexedDB = ..."
 // si on n'est pas dans une fonction
 
 // On pourra éventuellement avoir besoin de références
 // envers les objets window.IDB* :
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla n'a jamais préfixé ces objets,
 // il n'est pas nécessaire d'écrire window.mozIDB*)
 
@@ -47,12 +54,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // On ajoute ensuite les gestionnaires d'évènements
 // pour gérer le succès ou l'échec de l'ouverture
 // de la base de données
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on, for opening

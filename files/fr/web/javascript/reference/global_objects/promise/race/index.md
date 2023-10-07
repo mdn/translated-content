@@ -1,14 +1,6 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/race
 ---
 
 {{JSRef}}
@@ -58,9 +50,9 @@ console.log(p);
 
 // Avec setTimeout on peut exécuter du code
 // une fois que la pile est vide
-setTimeout(function(){
-    console.log('La pile est désormais vide');
-    console.log(p);
+setTimeout(function () {
+  console.log("La pile est désormais vide");
+  console.log(p);
 });
 
 // affichera, dans cet ordre :
@@ -74,9 +66,9 @@ Un itérable vide renverra une promesse qui restera en attente :
 ```js
 var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
-setTimeout(function(){
-    console.log('La pile est désormais vide');
-    console.log(foreverPendingPromise);
+setTimeout(function () {
+  console.log("La pile est désormais vide");
+  console.log(foreverPendingPromise);
 });
 
 // affichera, dans cet ordre :
@@ -98,10 +90,10 @@ var p2 = Promise.race(arr2);
 
 console.log(p);
 console.log(p2);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
-    console.log(p2);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
+  console.log(p2);
 });
 
 // affichera dans l'ordre :
@@ -115,45 +107,51 @@ setTimeout(function(){
 ### Utilisation de `Promise.race` – exemples avec `setTimeout`
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 500, "un");
+var p1 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "un");
 });
-var p2 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 100, "deux");
+var p2 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "deux");
 });
 
-Promise.race([p1, p2]).then(function(value) {
+Promise.race([p1, p2]).then(function (value) {
   console.log(value); // "deux"
   // Les deux promesses sont résolues mais p2 est plus rapide
 });
 
-var p3 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 100, "trois");
+var p3 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "trois");
 });
-var p4 = new Promise(function(resolve, reject) {
-    setTimeout(reject, 500, "quatre");
-});
-
-Promise.race([p3, p4]).then(function(value) {
-  console.log(value); // "trois"
-  // p3 est plus rapide et entraîne la résolution de la promesse de compétition
-}, function(reason) {
-  // N'est pas appelée
+var p4 = new Promise(function (resolve, reject) {
+  setTimeout(reject, 500, "quatre");
 });
 
-var p5 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 500, "cinq");
+Promise.race([p3, p4]).then(
+  function (value) {
+    console.log(value); // "trois"
+    // p3 est plus rapide et entraîne la résolution de la promesse de compétition
+  },
+  function (reason) {
+    // N'est pas appelée
+  },
+);
+
+var p5 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "cinq");
 });
-var p6 = new Promise(function(resolve, reject) {
-    setTimeout(reject, 100, "six");
+var p6 = new Promise(function (resolve, reject) {
+  setTimeout(reject, 100, "six");
 });
 
-Promise.race([p5, p6]).then(function(value) {
-  // N'est pas appelée
-}, function(reason) {
-  console.log(reason); // "six"
-  // p6 est plus rapide et rejète la promesse de compétition
-});
+Promise.race([p5, p6]).then(
+  function (value) {
+    // N'est pas appelée
+  },
+  function (reason) {
+    console.log(reason); // "six"
+    // p6 est plus rapide et rejète la promesse de compétition
+  },
+);
 ```
 
 > **Note :** voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/WindowTimers/setTimeout)

@@ -15,7 +15,7 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 出于安全考量，Service worker 只能由 HTTPS 承载，毕竟修改网络请求的能力暴露给{{Glossary("MitM", "中间人攻击")}}会非常危险，如果允许访问这些强大的 API，此类攻击将会变得很严重。在 Firefox 浏览器的[用户隐私模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Service Worker 不可用。
 
-> **备注：** 在 Firfox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
+> **备注：** 在 Firefox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
 
 > **备注：** 与之前在该领域的尝试不同，如 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
 
@@ -44,7 +44,7 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 如果这是首次启用 service worker，页面会首先尝试安装，安装成功后它会被激活。
 
-如果现有 service worker 已启用，新版本会在后台安装，但仍不会被激活——这个时序称为 *worker in waiting*。直到所有已加载的页面不再使用旧的 service worker 才会激活新的 service worker。只要页面不再依赖旧的 service worker，新的 service worker 会被激活（成为 *active worker*）。使用 {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} 可以更快地进行激活，active worker 可以使用 {{DOMxRef("Clients.claim()")}} 声明现有的页面
+如果现有 service worker 已启用，新版本会在后台安装，但仍不会被激活——这个时序称为 _worker in waiting_。直到所有已加载的页面不再使用旧的 service worker 才会激活新的 service worker。只要页面不再依赖旧的 service worker，新的 service worker 会被激活（成为 _active worker_）。使用 {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} 可以更快地进行激活，active worker 可以使用 {{DOMxRef("Clients.claim()")}} 声明现有的页面
 
 你可以监听 {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} 事件；该事件触发时的标准行为是准备 service worker 用于使用，例如使用内建的 storage API 来创建缓存，并且放置应用离线时所需资源。
 

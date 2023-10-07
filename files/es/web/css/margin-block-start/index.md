@@ -13,9 +13,9 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`margin-block-start`** [CSS](/es/docs/
 
 ```css
 /* <length> values */
-margin-block-start: 10px;  /* An absolute length */
-margin-block-start: 1em;   /* relative to the text size */
-margin-block-start: 5%;    /* relative to the nearest block container's width */
+margin-block-start: 10px; /* An absolute length */
+margin-block-start: 1em; /* relative to the text size */
+margin-block-start: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-block-start: auto;

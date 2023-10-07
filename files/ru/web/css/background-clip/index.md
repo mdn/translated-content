@@ -1,7 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-translation_of: Web/CSS/background-clip
 ---
 
 {{CSSRef}}
@@ -48,8 +47,12 @@ background-clip: unset;
 
 ```html
 <p class="border-box">The background extends behind the border.</p>
-<p class="padding-box">The background extends to the inside edge of the border.</p>
-<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="padding-box">
+  The background extends to the inside edge of the border.
+</p>
+<p class="content-box">
+  The background extends only to the edge of the content box.
+</p>
 <p class="text">The background is clipped to the foreground text.</p>
 ```
 
@@ -57,7 +60,7 @@ background-clip: unset;
 
 ```css
 p {
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -66,13 +69,19 @@ p {
   text-decoration: underline;
 }
 
-.border-box { background-clip: border-box; }
-.padding-box { background-clip: padding-box; }
-.content-box { background-clip: content-box; }
+.border-box {
+  background-clip: border-box;
+}
+.padding-box {
+  background-clip: padding-box;
+}
+.content-box {
+  background-clip: content-box;
+}
 
 .text {
   background-clip: text;
-  color: rgba(0,0,0,.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -82,8 +91,8 @@ p {
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус                                   | Комментарий                 |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
+| Спецификация                                                                | Статус                        | Комментарий                 |
+| --------------------------------------------------------------------------- | ----------------------------- | --------------------------- |
 | {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} | Первоначальное определение. |
 | {{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}     | {{Spec2('CSS4 Backgrounds')}} | Добавляет значение `text`.  |
 

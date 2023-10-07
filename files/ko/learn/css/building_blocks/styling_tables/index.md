@@ -12,10 +12,10 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
     <tr>
       <th scope="row">전제조건:</th>
       <td>
-        HTML 기본 사항 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 기본 사항 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
-        학습), <a href="/en-US/docs/Learn/HTML/Tables">HTML 표</a> 에 대한 지식
+        학습), <a href="/ko/docs/Learn/HTML/Tables">HTML 표</a> 에 대한 지식
         및 CSS 작동 방식에 대한 이해 (CSS 첫 번째 단계 학습.)
       </td>
     </tr>
@@ -32,7 +32,9 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -55,7 +57,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
       <td>London Calling</td>
     </tr>
 
-      ... some rows removed for brevity
+    ... some rows removed for brevity
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -73,7 +75,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 </table>
 ```
 
-{{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다 ([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조):
+[`scope`](/ko/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다 ([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조):
 
 ![](table-unstyled.png)
 
@@ -87,9 +89,9 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 2. 다음으로, `style.css` 라는 새 파일을 만들고 다른 파일과 같은 디렉토리에 저장하십시오.
 3. {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하십시오:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### 간격 및 레이아웃
 
@@ -121,7 +123,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -149,7 +152,10 @@ th, td {
 먼저, 다음 {{htmlelement("link")}} 요소를 기존 `<link>` 요소 바로 위의 HTML head 에 추가하십시오:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 이제 이전 CSS 아래의 `style.css` 파일에, 다음 CSS 를 추가하십시오:
@@ -158,11 +164,12 @@ th, td {
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -200,14 +207,21 @@ tfoot th {
 아래에서 다시 CSS 를 `style.css` 파일에 추가하고, 다시 시작하십시오:
 
 ```css
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -256,7 +270,7 @@ table {
 
 ```css
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

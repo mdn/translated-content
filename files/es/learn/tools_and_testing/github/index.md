@@ -1,7 +1,6 @@
 ---
 title: Git y GitHub
 slug: Learn/Tools_and_testing/GitHub
-original_slug: Learn/Herramientas_y_pruebas/GitHub
 ---
 
 {{LearnSidebar}}

@@ -76,7 +76,7 @@ const processor = {
         this.height = this.video.height;
         this.timerCallback();
       },
-      false
+      false,
     );
   },
 
@@ -205,11 +205,11 @@ window.addEventListener("load", setPlaybackRate);
 
 Web Audio API 可接收各种音源的音频，处理好音频后将其发送回 {{domxref("AudioDestinationNode")}}，代表的是声音处理后发送到的那个输出设备。
 
-| 如果音频源是...                                                                                                                         | 使用这种网页音频节点类型                      |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| 来自 HTML {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的音频轨道                                                            | {{domxref("MediaElementAudioSourceNode")}} |
-| 内存中的简单原始音频数据缓冲区                                                                                                             | {{domxref("AudioBufferSourceNode")}}       |
-| 产生正弦波或其他计算波形的振荡器                                                                                                           | {{domxref("OscillatorNode")}}              |
+| 如果音频源是...                                                                                                                             | 使用这种网页音频节点类型                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| 来自 HTML {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的音频轨道                                                               | {{domxref("MediaElementAudioSourceNode")}} |
+| 内存中的简单原始音频数据缓冲区                                                                                                              | {{domxref("AudioBufferSourceNode")}}       |
+| 产生正弦波或其他计算波形的振荡器                                                                                                            | {{domxref("OscillatorNode")}}              |
 | 来自 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 的音频轨道（比如麦克风输入，可使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} | {{domxref("MediaStreamAudioSourceNode")}}  |
 
 ### 音频滤镜
@@ -227,7 +227,7 @@ Web Audio API 拥有多种不同的滤镜和效果，可以使用 {{domxref("Biq
 ```js
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video")
+  document.getElementById("my-video"),
 );
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -269,7 +269,7 @@ filter.gain.value = 25;
 ```js hidden
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video")
+  document.getElementById("my-video"),
 );
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);

@@ -27,13 +27,13 @@ Math.log10(x)
 ## 示例
 
 ```js
-Math.log10(10)   // 1
-Math.log10(100)  // 2
-Math.log10("100")// 2
-Math.log10(1)    // 0
-Math.log10(0)    // -Infinity
-Math.log10(-2)   // NaN
-Math.log10("foo")// NaN
+Math.log10(10); // 1
+Math.log10(100); // 2
+Math.log10("100"); // 2
+Math.log10(1); // 0
+Math.log10(0); // -Infinity
+Math.log10(-2); // NaN
+Math.log10("foo"); // NaN
 ```
 
 ## 规范

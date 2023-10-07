@@ -58,15 +58,15 @@ flex-direction: unset;
 ```html
 <h4>This is a Column-Reverse</h4>
 <div id="content">
-    <div id="box" style="background-color:red;">A</div>
-    <div id="box" style="background-color:lightblue;">B</div>
-    <div id="box" style="background-color:yellow;">C</div>
+  <div id="box" style="background-color:red;">A</div>
+  <div id="box" style="background-color:lightblue;">B</div>
+  <div id="box" style="background-color:yellow;">C</div>
 </div>
 <h4>This is a Row-Reverse</h4>
 <div id="content1">
-    <div id="box1" style="background-color:red;">A</div>
-    <div id="box1" style="background-color:lightblue;">B</div>
-    <div id="box1" style="background-color:yellow;">C</div>
+  <div id="box1" style="background-color:red;">A</div>
+  <div id="box1" style="background-color:lightblue;">B</div>
+  <div id="box1" style="background-color:yellow;">C</div>
 </div>
 ```
 
@@ -118,4 +118,4 @@ flex-direction: unset;
 
 ## 参考
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)

@@ -11,9 +11,9 @@ slug: Web/JavaScript/Reference/Statements/label
 
 ## 문법
 
-```js
-    label :
-       statement
+```js-nolint
+label:
+  statement;
 ```
 
 - `label`
@@ -27,7 +27,7 @@ slug: Web/JavaScript/Reference/Statements/label
 
 자바스크립트에는 goto 구문이 없다는 것에 주의. break나 continue에서만 레이블을 사용할 수 있다.
 
-[strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 코드에서 "let"을 레이블 이름으로 사용할 수 없다. {{jsxref("SyntaxError")}}를 발생시킨다. (let은 허용되지 않는 식별자이다.)
+[strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 코드에서 "let"을 레이블 이름으로 사용할 수 없다. {{jsxref("SyntaxError")}}를 발생시킨다. (let은 허용되지 않는 식별자이다.)
 
 ## 예제
 
@@ -36,15 +36,15 @@ slug: Web/JavaScript/Reference/Statements/label
 ```js
 var i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //첫번째 for문은 "loop1" 레이블을 붙였다.
-   loop2:
-   for (j = 0; j < 3; j++) {   //두번째 for문은 "loop2" 레이블을 붙였다.
-      if (i === 1 && j === 1) {
-         continue loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //첫번째 for문은 "loop1" 레이블을 붙였다.
+  loop2: for (j = 0; j < 3; j++) {
+    //두번째 for문은 "loop2" 레이블을 붙였다.
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // 출력 결과:
@@ -66,8 +66,7 @@ items, tests 배열을 보면 이 예제는 tests를 통과하는 items의 수�
 var itemsPassed = 0;
 var i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -83,15 +82,15 @@ for (i = 0; i < items.length; i++) {
 ```js
 var i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         break loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Output is:
@@ -110,8 +109,7 @@ items, tests 배열을 보면, 다음 예제는 items가 tests를 모두 통과�
 var allPass = true;
 var i, j;
 
-top:
-for (i = 0; items.length; i++)
+top: for (i = 0; items.length; i++)
   for (j = 0; j < tests.length; i++)
     if (!tests[j].pass(items[i])) {
       allPass = false;
@@ -125,11 +123,11 @@ for (i = 0; items.length; i++)
 
 ```js
 foo: {
-  console.log('face');
+  console.log("face");
   break foo;
-  console.log('this will not be executed');
+  console.log("this will not be executed");
 }
-console.log('swap');
+console.log("swap");
 
 // 로그는 이렇게 출력된다:
 
@@ -145,15 +143,15 @@ ECMAScript 2015에서, 레이블 붙인 함수 선언문은 [web compatibility a
 L: function F() {}
 ```
 
-[strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 에서는 {{jsxref("SyntaxError")}}를 발생시킨다.
+[strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 에서는 {{jsxref("SyntaxError")}}를 발생시킨다.
 
 ```js
-'use strict';
+"use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```
 
-[Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)는 strict code도 non-strict code에서도 레이블 붙일 수 없다.
+[Generator functions](/ko/docs/Web/JavaScript/Reference/Statements/function*)는 strict code도 non-strict code에서도 레이블 붙일 수 없다.
 
 ```js
 L: function* F() {}

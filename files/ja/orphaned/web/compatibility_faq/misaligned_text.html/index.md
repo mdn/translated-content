@@ -1,7 +1,6 @@
 ---
 title: 文字列の表示位置がずれる
 slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
-original_slug: Web/Compatibility_FAQ/Misaligned_Text.html
 ---
 
 ## 概要

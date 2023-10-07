@@ -24,13 +24,13 @@ En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/m
 Tenga en cuenta que en la parte superior del bloque `fetch()` registramos el valor de la respuesta `status` en la consola.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   console.log(response.status); // returns 200
-  response.blob().then(function(myBlob) {
+  response.blob().then(function (myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });

@@ -1,19 +1,6 @@
 ---
 title: DoubleRange
 slug: Web/API/MediaTrackConstraints
-tags:
-  - API
-  - API Media Streams
-  - API de capture multimédia et de flux
-  - Contraintes
-  - Dictionnaire
-  - DoubleRange
-  - Interface
-  - Media
-  - Reference
-  - WebRTC
-translation_of: Web/API/DoubleRange
-original_slug: Web/API/DoubleRange
 ---
 
 {{APIRef("Media Capture and Streams")}}

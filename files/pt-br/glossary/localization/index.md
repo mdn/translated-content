@@ -1,7 +1,6 @@
 ---
 title: Localização
 slug: Glossary/Localization
-original_slug: Localização
 ---
 
 Localização (L10n) é o processo de tradução de interfaces de software a partir de uma língua para outra e adaptá-lo para atender a uma cultura estrangeira. Esses recursos são para qualquer pessoa com interesse nos aspectos técnicos envolvidos na localização. Eles são para os desenvolvedores e todos os colaboradores.

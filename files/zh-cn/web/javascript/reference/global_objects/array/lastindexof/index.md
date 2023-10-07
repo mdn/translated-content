@@ -34,7 +34,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ## 描述
 
-`lastIndexOf` 使用[严格相等](zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 运算符使用的算法相同）比较 `searchElement` 和数组中的元素。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值永远不会被比较为相等，因此当 `searchElement` 为 `NaN` 时 `lastIndexOf()` 总是返回 `-1`。
+`lastIndexOf` 使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 运算符使用的算法相同）比较 `searchElement` 和数组中的元素。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值永远不会被比较为相等，因此当 `searchElement` 为 `NaN` 时 `lastIndexOf()` 总是返回 `-1`。
 
 `lastIndexOf()` 方法会跳过[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
 

@@ -31,7 +31,7 @@ slug: Learn/JavaScript/First_steps/Useful_string_methods
 이전에 말했지만, 다시 말하면 - JavaScript의 모든 것이 객체입니다. 문자열을 만들 때, 예를 들면
 
 ```js
-var string = 'This is my string';
+var string = "This is my string";
 ```
 
 변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!
@@ -45,7 +45,7 @@ var string = 'This is my string';
 간단합니다 — 간단하게 {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
 
 ```js
-var browserType = 'mozilla';
+var browserType = "mozilla";
 browserType.length;
 ```
 
@@ -71,43 +71,43 @@ browserType[browserType.length - 1];
 
 1. 때때로 큰 문자열 안의 작은 문자열(우리는 이것을 하위 문자열이라고 이야기 한다.)을 찾고 싶을 것입니다. 이 작업은 {{jsxref("String.prototype.indexOf()", "indexOf()")}}를 사용하여 완료할 수 있습니다, which takes a single {{glossary("parameter")}} — 찾기 원하는 하위 문자열을 찾을 수 있습니다. 시도해 봅시다:
 
-    ```js
-    browserType.indexOf('zilla');
-    ```
+   ```js
+   browserType.indexOf("zilla");
+   ```
 
-    결과는 2입니다. 하위 문자열인 "zilla"는 "mozilla'의 2번 위치(0, 1, 2— 그러므로 3번째 문자열)에서 시작합니다. 이러한 코드는 문자열을 필터링하는 데 사용될 수 있습니다. 예를 들어 웹 주소 목록에서 "mozilla"가 포함된 주소만 인쇄하고 싶은 경우입니다.
+   결과는 2입니다. 하위 문자열인 "zilla"는 "mozilla'의 2번 위치(0, 1, 2— 그러므로 3번째 문자열)에서 시작합니다. 이러한 코드는 문자열을 필터링하는 데 사용될 수 있습니다. 예를 들어 웹 주소 목록에서 "mozilla"가 포함된 주소만 인쇄하고 싶은 경우입니다.
 
 2. 다른 방법으로도 할 수 있으며, 더욱 효율적일 수 있습니다. 다음 예제를 따라해 봅시다:
 
-    ```js
-    browserType.indexOf('vanilla');
-    ```
+   ```js
+   browserType.indexOf("vanilla");
+   ```
 
-    이렇게 하면 -1( 하위 문자열 (이 경우 'vanilla')이 기본 문자열에서 발견되지 않으면 반환한다.)의 결과를 얻을 수 있습니다.
+   이렇게 하면 -1( 하위 문자열 (이 경우 'vanilla')이 기본 문자열에서 발견되지 않으면 반환한다.)의 결과를 얻을 수 있습니다.
 
-    하위 문자열 'mozilla'가 포함되지 않은 문자열의 모든 인스턴스를 찾으려면 이 연산자를 사용하고 아래에 표시된 것처럼 부정 연산자를 사용해서 작업을 수행할 수 있습니다. 다음과 같이 할 수 있습니다:
+   하위 문자열 'mozilla'가 포함되지 않은 문자열의 모든 인스턴스를 찾으려면 이 연산자를 사용하고 아래에 표시된 것처럼 부정 연산자를 사용해서 작업을 수행할 수 있습니다. 다음과 같이 할 수 있습니다:
 
-    ```js
-    if (browserType.indexOf('mozilla') !== -1) {
-      // do stuff with the string
-    }
-    ```
+   ```js
+   if (browserType.indexOf("mozilla") !== -1) {
+     // do stuff with the string
+   }
+   ```
 
 3. 문자열 내에서 부분 문자열이 어디에서 시작되고 어떤 문자로 끝나는지 알고 싶으면 {{jsxref("String.prototype.slice()", "slice()")}}를 사용하여 문자열을 추출할 수 있습니다. 다음을 시도해 봅시다:
 
-    ```js
-    browserType.slice(0, 3);
-    ```
+   ```js
+   browserType.slice(0, 3);
+   ```
 
-    "moz"를 반환합니다 - 첫 번째 파라메터는 추출을 시작할 문자 위치이고 두 번째 파라메터는 추출할 문자의 갯수입니다. 따라서 슬라이스는 첫 번째 위치에서부터 세 번째 위치까지 포함됩니다.
+   "moz"를 반환합니다 - 첫 번째 파라메터는 추출을 시작할 문자 위치이고 두 번째 파라메터는 추출할 문자의 갯수입니다. 따라서 슬라이스는 첫 번째 위치에서부터 세 번째 위치까지 포함됩니다.
 
 4. 또한 특정 문자 뒤에 문자열의 나머지 문자를 모두 추출하려는 경우 두 번째 매개 변수를 포함하지 않고 문자열에서 나머지 문자를 추출할 위치의 문자 위치만 포함하면 됩니다. 다음을 시도해보십시오.
 
-    ```js
-    browserType.slice(2);
-    ```
+   ```js
+   browserType.slice(2);
+   ```
 
-    이렇게 하면 "zilla"가 반환됩니다. 문자의 2번째 위치는 "z"이고 두 번째 매개 변수를 포함하지 않았기 때문에 반환된 하위 문자열은 문자열의 나머지 문자 모두입니다.
+   이렇게 하면 "zilla"가 반환됩니다. 문자의 2번째 위치는 "z"이고 두 번째 매개 변수를 포함하지 않았기 때문에 반환된 하위 문자열은 문자열의 나머지 문자 모두입니다.
 
 > **참고:** `slice()` has other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
 
@@ -118,7 +118,7 @@ browserType[browserType.length - 1];
 다음 행을 입력하여 어떻게 되는지 살펴보겠습니다.
 
 ```js
-var radData = 'My NaMe Is MuD';
+var radData = "My NaMe Is MuD";
 radData.toLowerCase();
 radData.toUpperCase();
 ```
@@ -130,7 +130,7 @@ radData.toUpperCase();
 그것은 2개의 매개변수를 가집니다. — 바뀜을 당하는 문자와 바꾸려는 문자입니다. 다음 예제를 따라해보세요.:
 
 ```js
-browserType.replace('moz', 'van');
+browserType.replace("moz", "van");
 ```
 
 ## 예제
@@ -151,15 +151,13 @@ browserType.replace('moz', 'van');
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -182,8 +180,8 @@ for (let greeting of greetings) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -210,9 +208,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -220,21 +218,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -259,16 +257,16 @@ for (let greeting of greetings) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -279,8 +277,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -292,10 +293,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -322,15 +323,13 @@ textarea.onkeyup = function(){
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -348,8 +347,8 @@ for (let city of cities) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -376,9 +375,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -386,21 +385,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -422,16 +421,16 @@ for (let city of cities) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -442,8 +441,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -455,10 +457,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -496,15 +498,13 @@ We'd recommend doing it like this:
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -526,8 +526,8 @@ for (let station of stations) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -554,9 +554,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -564,21 +564,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -604,16 +604,16 @@ for (let station of stations) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -624,8 +624,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -637,10 +640,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

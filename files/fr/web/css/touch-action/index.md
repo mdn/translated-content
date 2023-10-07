@@ -1,11 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/touch-action
 ---
 
 {{CSSRef}}
@@ -78,9 +73,12 @@ La propriété `touch-action` peut être définie grâce à :
 ### HTML
 
 ```html
-<ul>Ma list
+<ul>
+  Ma list
   <li>UnLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
-  <li>UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
+  <li>
+    UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll
+  </li>
 </ul>
 ```
 
@@ -109,7 +107,7 @@ ul > li {
 Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela peut empêcher les personnes à faible vision de lire et de comprendre le contenu de la page.
 
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- _[Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)_
 
 ## Spécifications
 

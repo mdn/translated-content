@@ -1,16 +1,8 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
-tags:
-  - API
-  - Cookies
-  - cookie
-  - Дополнения
-  - Расширения
-  - Справка
-  - данные
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
+
 {{AddonSidebar()}}
 
 Тип `Cookie` из {{WebExtAPIRef("cookies")}} API представляет собой информацию о HTTP cookie.

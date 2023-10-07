@@ -32,7 +32,7 @@ return x + y / 3;
 
 A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
 
-```js
+```js-nolint
 return
 a + b;
 ```
@@ -56,7 +56,7 @@ A função a seguir retorna o quadro do seu argumento, `x`, quando `x` é um nú
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
 ```
 
@@ -66,14 +66,15 @@ Uma função para imediatamente no ponto em que `return` é chamado.
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // loop infinito
-    console.log(count + 'A'); // até 5
-      if (count === 5) {
-        return;
-      }
-      console.log(count + 'B');  // até 4
+  for (var count = 1; ; count++) {
+    // loop infinito
+    console.log(count + "A"); // até 5
+    if (count === 5) {
+      return;
     }
-  console.log(count + 'C');  // nunca aparece
+    console.log(count + "B"); // até 4
+  }
+  console.log(count + "C"); // nunca aparece
 }
 
 counter();
@@ -96,7 +97,9 @@ Veja também o artigo sobre [Closures](/pt-BR/docs/Web/JavaScript/Closures).
 
 ```js
 function magic(x) {
-  return function calc(x) { return x * 42; };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 var answer = magic();
@@ -105,11 +108,11 @@ answer(1337); // 56154
 
 ## Especificações
 
-| Especificação                                                                                | Situação                     | Comentário         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}                     | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}         | {{Spec2('ES6')}}         |                    |
+| Especificação                                                        | Situação             | Comentário         |
+| -------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES1')}}                                                  | {{Spec2('ES1')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}               | {{Spec2('ES5.1')}}   |                    |
+| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}     | {{Spec2('ES6')}}     |                    |
 | {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

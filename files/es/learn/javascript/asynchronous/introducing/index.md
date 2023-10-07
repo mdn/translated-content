@@ -1,7 +1,6 @@
 ---
 title: Introducción a JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Concepts
 l10n:
   sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
@@ -45,7 +44,7 @@ En este artículo, comenzaremos viendo el problema de las funciones síncronas d
 Considere el siguiente código:
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `¡Hola, mi nombre es ${name}!`;
 console.log(greeting);
 // "¡Hola, mi nombre es Miriam!"
@@ -66,7 +65,7 @@ function makeGreeting(name) {
   return `¡Hola, mi nombre es ${name}!`;
 }
 
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "¡Hola, mi nombre es Miriam!"
@@ -102,7 +101,7 @@ function isPrime(n) {
   return n > 1;
 }
 
-const random = (max) => Math.floor(Math.random() * max); 
+const random = (max) => Math.floor(Math.random() * max);
 
 function generatePrimes(quota) {
   const primes = [];
@@ -115,15 +114,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `¡Finalizado! se han generado ${quota.value} números primos`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -184,15 +183,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `¡Finalizado! se han generado ${quota.value} números primos`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -232,30 +231,34 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}Finalizado con el estado: ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}Inicio de la solicitud XHR\n`;});
+  log.textContent = `${log.textContent}Inicio de la solicitud XHR\n`;
+});
 
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
 
 {{EmbedLiveSample("Event handlers", 600, 120)}}
 
-Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es-US/docs/Learn/JavaScript/Building_blocks/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
+Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es/docs/Learn/JavaScript/Building_blocks/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
 
 ## Callbacks (devoluciones de llamada)
 

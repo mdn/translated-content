@@ -1,7 +1,6 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-translation_of: Web/HTTP/Status/506
 ---
 
 {{HTTPSidebar}}

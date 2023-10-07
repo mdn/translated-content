@@ -157,13 +157,13 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.keys()")}}
   - : 返回一个新的数组迭代器对象，该对象包含数组中每个索引的键。参见 {{jsxref("Array.prototype.keys()")}}。
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
-  - : 返回在调用数组中可以找到给定元素的最后一个（最大）索引，如果找不到，则返回 `-1`。 参见 {{jsxref("Array.prototype.lastIndexOf()")}}。
+  - : 返回在调用数组中可以找到给定元素的最后一个（最大）索引，如果找不到，则返回 `-1`。参见 {{jsxref("Array.prototype.lastIndexOf()")}}。
 - {{jsxref("TypedArray.prototype.map()")}}
   - : 返回一个新数组，其中包含对调用数组中的每个元素调用函数的结果。参见 {{jsxref("Array.prototype.map()")}}。
 - {{jsxref("TypedArray.prototype.reduce()")}}
-  - : 对数组的每个元素（从左到右）执行用户提供的 “reducer” 回调函数，将其简化为单个值。参见 {{jsxref("Array.prototype.reduce()")}}。
+  - : 对数组的每个元素（从左到右）执行用户提供的“reducer”回调函数，将其简化为单个值。参见 {{jsxref("Array.prototype.reduce()")}}。
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
-  - : 对数组的每个元素（从右到左）执行用户提供的 “reducer” 回调函数，将其简化为单个值。参见 {{jsxref("Array.prototype.reduceRight()")}}。
+  - : 对数组的每个元素（从右到左）执行用户提供的“reducer”回调函数，将其简化为单个值。参见 {{jsxref("Array.prototype.reduceRight()")}}。
 - {{jsxref("TypedArray.prototype.reverse()")}}
   - : 反转数组元素的顺序——第一个成为最后一个，最后一个成为第一个。参见 {{jsxref("Array.prototype.reverse()")}}。
 - {{jsxref("TypedArray.prototype.set()")}}

@@ -1,12 +1,6 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-tags:
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Классы
-translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
 
 {{jsSidebar("Classes")}}
@@ -128,7 +122,7 @@ class Square extends Polygon {
     super(length, length);
     // Примечание: В производном классе, super() должен вызываться перед тем, как
     // вы сможете использовать 'this'. Иначе будет сгенерировано исключение reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -171,7 +165,7 @@ console.log(newInstance.name); //Polygon
 
 Здесь прототип **Square** класса изменён, но в то же время constructor предыдущего базового класса **Polygon** вызывается при создании нового экземпляра **Square**.
 
-### Constructors по умолчанию.
+### Constructors по умолчанию
 
 Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:
 

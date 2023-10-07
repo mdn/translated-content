@@ -23,7 +23,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* Global keywords */
 box-shadow: inherit;
@@ -40,7 +42,9 @@ box-shadow: 10px 5px 5px black;
 ```
 
 ```css
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 ```
 
 ```css
@@ -56,7 +60,9 @@ box-shadow: inset 0 0 1em gold;
 ```
 
 ```css
-box-shadow: inset 0 0 1em gold, 0 0 1em red;
+box-shadow:
+  inset 0 0 1em gold,
+  0 0 1em red;
 ```
 
 A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
@@ -71,7 +77,7 @@ Especificando uma única box-shadow usando:
 
 - Dois, três ou quatro valores para [`<length>`](/pt-BR/docs/Web/CSS/length).
 
-  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](<#offset-x_<offset-y).
+  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](#offset-x_<offset-y).
   - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#blur-radius).
   - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#spread-radius).
 
@@ -123,8 +129,8 @@ Each shadow in the list (treating `none` as a 0-length list) is interpolated via
 
 ## Specifications
 
-| Specification                                                                    | Status                                   | Comment            |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| Specification                                                 | Status                        | Comment            |
+| ------------------------------------------------------------- | ----------------------------- | ------------------ |
 | {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition |
 
 ## Compatibilidade com navegadores

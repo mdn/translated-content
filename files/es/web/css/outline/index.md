@@ -19,11 +19,19 @@ Los bordes y los contornos son muy similares. Sin embargo, los contornos difiere
 - Los contornos pueden no ser rectangulares. Si el elemento se distribuye en varias líneas, el contorno no forma un rectágulo para encerrar a todo el elemento. A **diferencia de los bordes**, el contorno no está abierto en algunos lados:
 
   ```html hidden
-  <p><span style="outline: 2px solid #666666;">Ejemplo: contorno aplicado a<br>
-   varias líneas</span></p>
+  <p>
+    <span style="outline: 2px solid #666666;"
+      >Ejemplo: contorno aplicado a<br />
+      varias líneas</span
+    >
+  </p>
 
-  <p><span style="border: 2px solid #666666;">Ejemplo: borde aplicado a<br>
-   varias líneas</span></p>
+  <p>
+    <span style="border: 2px solid #666666;"
+      >Ejemplo: borde aplicado a<br />
+      varias líneas</span
+    >
+  </p>
   ```
 
   {{EmbedLiveSample}}

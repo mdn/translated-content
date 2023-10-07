@@ -47,11 +47,9 @@ input.addEventListener("change", (event) => {
   }
 
   const allAllowed = Array.from(files).every((file) =>
-    allowedFileTypes.includes(file.type)
+    allowedFileTypes.includes(file.type),
   );
-  output.innerText = allAllowed
-    ? "所有文件都符合！"
-    : "请只选择图片文件。";
+  output.innerText = allAllowed ? "所有文件都符合！" : "请只选择图片文件。";
 });
 ```
 

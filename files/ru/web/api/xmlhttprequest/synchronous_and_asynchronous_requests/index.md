@@ -1,8 +1,8 @@
 ---
 title: Синхронные и асинхронные запросы
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
+
 `XMLHttpRequest` поддерживает как синхронные, так и асинхронные запросы. В основном предпочтительно использовать асинхронные запросы вместо синхронных из-за соображений производительности.
 
 Синхронный запрос приводит к выполнению кода, который "блокирует" взаимодействие с вкладкой браузера до тех пор, пока запрос не будет полностью выполнен, что существенно ухудшает отклик страницы.
@@ -46,21 +46,21 @@ xhr.send(null);
 
 ```js
 function xhrSuccess() {
-    this.callback.apply(this, this.arguments);
+  this.callback.apply(this, this.arguments);
 }
 
 function xhrError() {
-    console.error(this.statusText);
+  console.error(this.statusText);
 }
 
 function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    var xhr = new XMLHttpRequest();
-    xhr.callback = callback;
-    xhr.arguments = Array.prototype.slice.call(arguments, 2);
-    xhr.onload = xhrSuccess;
-    xhr.onerror = xhrError;
-    xhr.open("GET", url, true);
-    xhr.send(null);
+  var xhr = new XMLHttpRequest();
+  xhr.callback = callback;
+  xhr.arguments = Array.prototype.slice.call(arguments, 2);
+  xhr.onload = xhrSuccess;
+  xhr.onerror = xhrError;
+  xhr.open("GET", url, true);
+  xhr.send(null);
 }
 ```
 
@@ -68,7 +68,7 @@ function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
 
 ```js
 function showMessage(message) {
-    console.log(message + this.responseText);
+  console.log(message + this.responseText);
 }
 
 loadFile("message.txt", showMessage, "New message!\n\n");
@@ -94,23 +94,23 @@ loadFile("message.txt", showMessage, "New message!\n\n");
 
 ```js
 function loadFile(url, timeout, callback) {
-    var args = Array.prototype.slice.call(arguments, 3);
-    var xhr = new XMLHttpRequest();
-    xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
-    };
-    xhr.onload = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                callback.apply(xhr, args);
-            } else {
-                console.error(xhr.statusText);
-            }
-        }
-    };
-    xhr.open("GET", url, true);
-    xhr.timeout = timeout;
-    xhr.send(null);
+  var args = Array.prototype.slice.call(arguments, 3);
+  var xhr = new XMLHttpRequest();
+  xhr.ontimeout = function () {
+    console.error("The request for " + url + " timed out.");
+  };
+  xhr.onload = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        callback.apply(xhr, args);
+      } else {
+        console.error(xhr.statusText);
+      }
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.timeout = timeout;
+  xhr.send(null);
 }
 ```
 
@@ -119,8 +119,8 @@ function loadFile(url, timeout, callback) {
 Использование:
 
 ```js
-function showMessage (message) {
-    console.log(message + this.responseText);
+function showMessage(message) {
+  console.log(message + this.responseText);
 }
 
 loadFile("message.txt", 2000, showMessage, "New message!\n");
@@ -144,7 +144,7 @@ This example demonstrates how to make a simple synchronous request.
 
 ```js
 var request = new XMLHttpRequest();
-request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
+request.open("GET", "/bar/foo.txt", false); // `false` makes the request synchronous
 request.send(null);
 
 if (request.status === 200) {
@@ -154,46 +154,46 @@ if (request.status === 200) {
 
 Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
+Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a `Worker`
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/en-US/docs/Web/API/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/ru/docs/Web/API/Worker).
 
 **`example.html`** (the main page):
 
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-  var worker = new Worker("myTask.js");
-  worker.onmessage = function(event) {
-    alert("Worker said: " + event.data);
-  };
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MDN Example</title>
+    <script type="text/javascript">
+      var worker = new Worker("myTask.js");
+      worker.onmessage = function (event) {
+        alert("Worker said: " + event.data);
+      };
 
-  worker.postMessage("Hello");
-</script>
-</head>
-<body></body>
+      worker.postMessage("Hello");
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) invocation):
+**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) invocation):
 
 ```
 Hello World!!
 ```
 
-**`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
+**`myTask.js`** (the [`Worker`](/ru/docs/Web/API/Worker)):
 
 ```js
 self.onmessage = function (event) {
   if (event.data === "Hello") {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "myFile.txt", false);  // synchronous request
+    xhr.open("GET", "myFile.txt", false); // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
   }
@@ -211,13 +211,13 @@ There are some cases in which the synchronous usage of XMLHttpRequest was not re
 The following example (from the [sendBeacon docs](/ru/docs/Web/API/Navigator/sendBeacon)) shows a theoretical analytics code that attempts to submit data to a server by using a synchronous XMLHttpRequest in an unload handler. This results in the unloading of the page to be delayed.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    var client = new XMLHttpRequest();
-    client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
-    client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    client.send(analyticsData);
+  var client = new XMLHttpRequest();
+  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
+  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+  client.send(analyticsData);
 }
 ```
 
@@ -226,10 +226,10 @@ Using the **`sendBeacon()`** method, the data will be transmitted asynchronously
 The following example shows a theoretical analytics code pattern that submits data to a server by using the **`sendBeacon()`** method.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    navigator.sendBeacon("/log", analyticsData);
+  navigator.sendBeacon("/log", analyticsData);
 }
 ```
 
@@ -238,4 +238,4 @@ function logData() {
 - [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/ru/docs/Web/Guide/AJAX)
-- [`navigator.sendBeacon`](/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/ru/docs/Web/API/Navigator/sendBeacon)

@@ -1,7 +1,6 @@
 ---
 title: Extensões CSS da Microsoft
 slug: orphaned/Web/CSS/Microsoft_Extensions
-original_slug: Web/CSS/Microsoft_Extensions
 ---
 
 {{CSSRef}}

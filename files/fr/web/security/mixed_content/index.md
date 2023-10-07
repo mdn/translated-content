@@ -1,7 +1,6 @@
 ---
 title: Contenu mixte
 slug: Web/Security/Mixed_content
-translation_of: Web/Security/Mixed_content
 ---
 
 Lorsqu'une personne visite une page servie en [HTTPS](/fr/docs/Glossary/https), la connexion entre le navigateur et le serveur web est chiffrée avec [`TLS`](/fr/docs/Glossary/TLS) et est donc protégée des risques d'interception des données et d'attaques de l'homme du milieu. Une page HTTPS qui inclut du contenu récupéré en clair avec HTTP est appelée une page **de contenu mixte** (<i lang="en">mixed content</i> en anglais). De telles pages ne sont que partiellement chiffrées et le contenu non-chiffré reste alors sujet aux risques d'interception. Ces pages ne sont pas complètement sécurisées.
@@ -48,7 +47,7 @@ D'autres types de ressources comme les polices de caractères ou les <i lang="en
 
 ## Chargement des ressources avec du contenu mixte
 
-La plupart des navigateurs empêchent le chargement *du contenu mixte actif*. D'autres bloquent également le chargement *du contenu mixte passif*.
+La plupart des navigateurs empêchent le chargement _du contenu mixte actif_. D'autres bloquent également le chargement _du contenu mixte passif_.
 
 ### Charger des ressources mixtes locales
 

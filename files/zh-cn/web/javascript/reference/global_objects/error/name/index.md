@@ -20,8 +20,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ```js
 var e = new Error("Malformed input"); // e.name 默认是"Error"
 
-e.name = "ParseError";                // 修改之后，e.toString() 会成为下面这样的字符串
-throw e;                              // "ParseError: Malformed input"
+e.name = "ParseError"; // 修改之后，e.toString() 会成为下面这样的字符串
+throw e; // "ParseError: Malformed input"
 ```
 
 ## 规范

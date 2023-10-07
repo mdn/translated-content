@@ -1,8 +1,6 @@
 ---
 title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
-browser-compat: api.HTMLMediaElement.controlsList
-translation_of: Web/API/HTMLMediaElement/controlsList
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}

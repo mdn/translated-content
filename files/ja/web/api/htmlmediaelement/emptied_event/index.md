@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: emptied イベント'
+title: "HTMLMediaElement: emptied イベント"
 slug: Web/API/HTMLMediaElement/emptied_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('emptied', (event) => {});
+addEventListener("emptied", (event) => {});
 
-onemptied = (event) => { };
+onemptied = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onemptied = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('emptied', (event) => {
-  console.log('ええっと。メディアが空です。 load() を呼び出しましたか？');
+video.addEventListener("emptied", (event) => {
+  console.log("ええっと。メディアが空です。 load() を呼び出しましたか？");
 });
 ```
 
 `onemptied` イベントハンドラプロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onemptied = (event) => {
-  console.log('ええっと。メディアが空です。 load() を呼び出しましたか？');
+  console.log("ええっと。メディアが空です。 load() を呼び出しましたか？");
 };
 ```
 

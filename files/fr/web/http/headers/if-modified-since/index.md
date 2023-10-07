@@ -1,10 +1,6 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-tags:
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
 
 {{HTTPSidebar}}

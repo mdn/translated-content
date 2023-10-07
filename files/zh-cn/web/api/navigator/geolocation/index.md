@@ -12,7 +12,7 @@ slug: Web/API/Navigator/geolocation
 ## 语法
 
 ```js
-geo = navigator.geolocation
+geo = navigator.geolocation;
 ```
 
 ## 规范

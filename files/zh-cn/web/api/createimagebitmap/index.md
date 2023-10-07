@@ -44,21 +44,21 @@ createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ..
 ## Example
 
 ```js
-var canvas = document.getElementById('myCanvas'),
-ctx = canvas.getContext('2d'),
-image = new Image();
+var canvas = document.getElementById("myCanvas"),
+  ctx = canvas.getContext("2d"),
+  image = new Image();
 
-image.onload = function() {
+image.onload = function () {
   Promise.all([
     createImageBitmap(this, 0, 0, 32, 32),
-    createImageBitmap(this, 32, 0, 32, 32)
-  ]).then(function(sprites) {
+    createImageBitmap(this, 32, 0, 32, 32),
+  ]).then(function (sprites) {
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);
   });
-}
+};
 
-image.src = 'sprites.png';
+image.src = "sprites.png";
 ```
 
 ## Specifications

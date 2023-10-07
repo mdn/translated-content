@@ -2,12 +2,12 @@
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
 l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef('Web Components')}}
 
-**`HTMLSlotElement`** は [Shadow DOM API](/ja/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
+**`HTMLSlotElement`** は[シャドウ DOM API](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
 
 {{InheritanceDiagram}}
 
@@ -21,9 +21,9 @@ l10n:
 - {{domxref('HTMLSlotElement.assign()')}}
   - : このスロットに手動で割り当てられたノードを、指定されたノードに設定します。
 - {{domxref('HTMLSlotElement.assignedNodes()')}}
-  - : このスロットに割り当てられた一連のノードを返し、 `flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられたノードも返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
+  - : このスロットに割り当てられた一連のノードを返し、`flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられたノードも返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
 - {{domxref('HTMLSlotElement.assignedElements()')}}
-  - : このスロットに割り当てられた一連の要素を返します (それ以外のノードは返しません)。 `flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられた要素も返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
+  - : このスロットに割り当てられた一連の要素を返します (それ以外のノードは返しません)。`flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられた要素も返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
 
 ## イベント
 
@@ -35,10 +35,12 @@ l10n:
 以下のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)からとりました ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/))。
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', (e) => {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

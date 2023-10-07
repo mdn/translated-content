@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ## 구문
 
 ```js
-new SharedArrayBuffer(length)
+new SharedArrayBuffer(length);
 ```
 
 ### 파라미터
@@ -100,4 +100,4 @@ var sab = new SharedArrayBuffer(1024);
 - [Web Workers](/ko/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 동기화 및 작업 분리 추상화를 제공하는 간단한 라이브러리.
 - [Shared Memory – 간단한 튜토리얼](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

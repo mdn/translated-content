@@ -22,7 +22,6 @@ Para empezar, crea un nuevo directorio llamado "modify-page". En este directorio
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -33,7 +32,6 @@ Para empezar, crea un nuevo directorio llamado "modify-page". En este directorio
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
@@ -48,7 +46,7 @@ Después, crea un archivo llamado "page-eater.js" dentro del directorio "modify-
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+var header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
@@ -67,20 +65,15 @@ Primero actualiza "manifest.json" para que incluya el contenido a continuación:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -94,13 +87,13 @@ Ahora generaremos este archivo. Crea un archivo llamado "background.js" en el di
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -110,7 +103,7 @@ En esta script estamos creando un [item del menu de contexto](/es/Add-ons/WebExt
 
 Ahora mismo la extensión debería ser algo como esto:
 
-```html
+```plain
 modify-page/
     background.js
     manifest.json
@@ -127,10 +120,10 @@ Ahora [recarga la extensión](/es/Add-ons/WebExtensions/Temporary_Installation_i
 
 Scripts de contenido y scripts de fondo no pueden acceder directamente al estado del otro. Sin embargo, pueden comunicarse mediante el uso de mensajes. Una terminal configura un escuchador de mensajes y la otra terminal puede mandarle un mensaje. La siguente tabla resume las APIs involucradas en cada parte:
 
-|                    | En el script de contenido                                                                   | En el script de fondo                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+|                    | En el script de contenido                                                                   | En el script de fondo                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Mandar un mensaje  | [`browser.runtime.sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/es/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| Recibir un mensaje | [`browser.runtime.onMessage`](/es/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/es/Add-ons/WebExtensions/API/runtime#onMessage) |
+| Recibir un mensaje | [`browser.runtime.onMessage`](/es/Add-ons/WebExtensions/API/runtime/onMessage)              | [`browser.runtime.onMessage`](/es/Add-ons/WebExtensions/API/runtime#onMessage) |
 
 Actualicemos nuestro ejemplo para ilustrar como mandar un mensaje desde una script de fondo.
 
@@ -139,27 +132,27 @@ Primero, hemos de editar "background.js" para que tenga el siguiente contenido:
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the extension!"
+    replacement: "Message from the extension!",
   });
 }
 
 function onExecuted(result) {
-    var querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(messageTab);
+  var querying = browser.tabs.query({
+    active: true,
+    currentWindow: true,
+  });
+  querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     let executing = browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
     executing.then(onExecuted);
   }
@@ -173,7 +166,7 @@ Después, actualiza "page-eater.js" de esta forma:
 ```js
 function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
-  var header = document.createElement('h1');
+  var header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
@@ -190,7 +183,7 @@ Si queremos enviar mensajes directamente desde el contenido script de vuelta a l
 
 ```js
 browser.runtime.sendMessage({
-    title: "from page-eater.js"
+  title: "from page-eater.js",
 });
 ```
 

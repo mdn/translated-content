@@ -1,14 +1,6 @@
 ---
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/compareExchange
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Atomics.compareExchange()`** échange une valeur d'un ta
 ## Syntaxe
 
 ```js
-Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement)
+Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement);
 ```
 
 ### Paramètres
@@ -52,7 +44,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 7;
 
 Atomics.compareExchange(ta, 0, 7, 12); // renvoie 7, l'ancienne valeur
-Atomics.load(ta, 0);                   // 12
+Atomics.load(ta, 0); // 12
 ```
 
 ## Spécifications

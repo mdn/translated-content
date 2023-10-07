@@ -622,7 +622,8 @@ Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para na
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    var nBytes = sData.length,
+      ui8Data = new Uint8Array(nBytes);
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
@@ -647,11 +648,15 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on\* propriedades para uma função de manipulador.
+avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
 
-## Compatibilidade do navegador
+## Especificações
 
-{{Compat("api.XMLHttpRequest")}}
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

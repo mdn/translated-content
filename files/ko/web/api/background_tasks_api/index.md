@@ -2,6 +2,7 @@
 title: Cooperative Scheduling of Background Tasks API
 slug: Web/API/Background_Tasks_API
 ---
+
 {{DefaultAPISidebar("Background Tasks")}}
 
 **Cooperative Scheduling of Background Tasks API** (Background Tasks API 또는 간단하게 `requestIdleCallback()` API 라고도 부릅니다.) 는 user agnet가 자유 시간이 있다고 판단되면, 자동으로 실행될 작업을 대기열(queue tasks)에 넣을 수 있는 기능을 제공합니다.
@@ -27,18 +28,20 @@ slug: Web/API/Background_Tasks_API
 Background Tasks API는 매우 새롭기 때문에, 우리의 코드가 아직 이 API를 지원하지 않는 브라우저에서 작동해야 하는 경우가 있을 수 있습니다. 우리는 {{domxref("WindowTimers.setTimeout()", "setTimeout()")}}을 fallback 옵션으로 사용하는 간단한 shim으로 그렇게 할 수 있습니다. 이것은 기능적으로 동일하지 않기 때문에 {{Glossary("polyfill")}}이 아닙니다. `setTimeout()`을 사용하면 유휴 기간(idle periods)을 사용할 수 없습니다. 하지만 대신에 가능한 경우 코드를 실행하여, 사용자가 성능 지연을 경험하지 못하도록 최대한 방지합니다.
 
 ```js
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (handler) {
+    let startTime = Date.now();
 
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining: function() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-}
+    return setTimeout(function () {
+      handler({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  };
 ```
 
 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}}이 선언되지 않았다면, 위와같이 만들어 줍니다. 함수는 우리의 코드가 호출 된 시간을 기록하는 것으로 시작합니다. 우리는 이것을 사용하여 {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}에 대해 shim에서 반환 한 값을 계산합니다.
@@ -50,9 +53,11 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
 {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}}에 대한 shim 구현은 훨씬 간단합니다:
 
 ```js
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-}
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  };
 ```
 
 `cancelIdleCallback()`이 선언되지 않은 경우, 이는 단순히 지정된 콜백 ID를 {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}에 전달하는 메서드를 생성합니다.
@@ -80,28 +85,27 @@ Background Tasks API 는 단 하나의 새 인터페이스를 추가합니다:
 
 ```html
 <p>
-  Demonstration of using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
-  cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
+  Demonstration of using
+  <a href="https://developer.mozilla.org/ko/docs/Web/API/Background_Tasks_API">
+    cooperatively scheduled background tasks</a
+  >
+  using the <code>requestIdleCallback()</code>
   method.
 </p>
 
 <div class="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
   <progress id="progress" value="0"></progress>
-  <div class="button" id="startButton">
-    Start
-  </div>
+  <div class="button" id="startButton">Start</div>
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
 <div class="logBox">
-  <div class="logHeader">
-    Log
-  </div>
-  <div id="log">
-  </div>
+  <div class="logHeader">Log</div>
+  <div id="log"></div>
 </div>
 ```
 
@@ -116,7 +120,7 @@ body {
 .logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;
@@ -132,7 +136,9 @@ body {
 }
 
 #log {
-  font: 12px "Courier", monospace;
+  font:
+    12px "Courier",
+    monospace;
   padding: 6px;
   overflow: auto;
   overflow-y: scroll;
@@ -230,22 +236,26 @@ let statusRefreshScheduled = false;
 The shim to function even if idle callbacks aren't supported. Already discussed above, so it's hidden here to save space in the article.
 
 ```js
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (handler) {
+    let startTime = Date.now();
 
-return setTimeout(function() {
-handler({
-didTimeout: false,
-timeRemaining: function() {
-return Math.max(0, 50.0 - (Date.now() - startTime));
-}
-});
-}, 1);
-};
+    return setTimeout(function () {
+      handler({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  };
 
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-clearTimeout(id);
-};
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  };
 ```
 
 #### Managing the task queue
@@ -260,7 +270,7 @@ clearTimeout(id);
 function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
-    data: taskData
+    data: taskData,
   });
 
   totalTaskCount++;
@@ -288,7 +298,10 @@ function enqueueTask(taskHandler, taskData) {
 
 ```js
 function runTaskQueue(deadline) {
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
+  while (
+    (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
+    taskList.length
+  ) {
     let task = taskList.shift();
     currentTaskNumber++;
 
@@ -297,7 +310,7 @@ function runTaskQueue(deadline) {
   }
 
   if (taskList.length) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
   } else {
     taskHandle = 0;
   }
@@ -326,9 +339,9 @@ DOM 변경은 `scheduleStatusRefresh()`함수를 호출하여 예약합니다.
 
 ```js
 function scheduleStatusRefresh() {
-    if (!statusRefreshScheduled) {
-      requestAnimationFrame(updateDisplay);
-      statusRefreshScheduled = true;
+  if (!statusRefreshScheduled) {
+    requestAnimationFrame(updateDisplay);
+    statusRefreshScheduled = true;
   }
 }
 ```
@@ -341,7 +354,8 @@ function scheduleStatusRefresh() {
 
 ```js
 function updateDisplay() {
-  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  let scrolledToEnd =
+    logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max != totalTaskCount) {
@@ -361,7 +375,7 @@ function updateDisplay() {
   }
 
   if (scrolledToEnd) {
-      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+    logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
   }
 
   statusRefreshScheduled = false;
@@ -386,7 +400,7 @@ function updateDisplay() {
 ```js
 function log(text) {
   if (!logFragment) {
-      logFragment = document.createDocumentFragment();
+    logFragment = document.createDocumentFragment();
   }
 
   let el = document.createElement("div");
@@ -411,8 +425,8 @@ function log(text) {
 function logTaskHandler(data) {
   log("<strong>Running task #" + currentTaskNumber + "</strong>");
 
-  for (i=0; i<data.count; i+=1) {
-    log((i+1).toString() + ". " + data.text);
+  for (i = 0; i < data.count; i += 1) {
+    log((i + 1).toString() + ". " + data.text);
   }
 }
 ```
@@ -421,7 +435,7 @@ function logTaskHandler(data) {
 
 사용자가 시작 버튼을 클릭하면 `decodeTechnoStuff()` 함수가 호출되며 모든것이 시작됩니다.
 
-The `[getRandomIntInclusive()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive)` method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.
+The `[getRandomIntInclusive()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive)` method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.
 
 ```js
 function getRandomIntInclusive(min, max) {
@@ -439,17 +453,19 @@ function decodeTechnoStuff() {
 
   let n = getRandomIntInclusive(100, 200);
 
-  for (i=0; i<n; i++) {
+  for (i = 0; i < n; i++) {
     let taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: "This text is from task number " + (i+1).toString() + " of " + n
+      text: "This text is from task number " + (i + 1).toString() + " of " + n,
     };
 
     enqueueTask(logTaskHandler, taskData);
   }
 }
 
-document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
+document
+  .getElementById("startButton")
+  .addEventListener("click", decodeTechnoStuff, false);
 ```
 
 `decodeTechnoStuff()`가 시작하면 `totalTaskCount`(현재까지 큐에 추가된 태스크의 수)의 값과 `currentTaskNumber`(현재 실행중인 태스크의 수) 값을 0으로 설정합니다. 그리고 `updateDisplay()`를 호출하여 "아직 아무일도 일어나지 않았습니다(nothing's happened yet)" 상태로 재설정합니다.

@@ -18,17 +18,21 @@ O valor da propriedade arguments é normalmente nulo (`null`) se não houver nen
 ## Exemplos
 
 ```js
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
+console.log("returned: " + g.arguments);
 
 // Output
 
@@ -41,11 +45,11 @@ console.log('returned: ' + g.arguments);
 
 ## Especificações
 
-| Especificação                                                                                | Status                       | Comentário                                                                                                                                   |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Definiçao inicial. Implementado em JavaScript 1.0. Obsoleto em favor de {{jsxref("Functions/arguments", "arguments")}} em ES3. |
-| {{SpecName('ES5.1', '#sec-10.6', 'arguments object')}}                     | {{Spec2('ES5.1')}}     | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
-| {{SpecName('ES6', '#sec-arguments-object', 'arguments object')}}         | {{Spec2('ES6')}}         | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
+| Especificação                                                        | Status               | Comentário                                                                                                                     |
+| -------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ES1')}}                                                  | {{Spec2('ES1')}}     | Definiçao inicial. Implementado em JavaScript 1.0. Obsoleto em favor de {{jsxref("Functions/arguments", "arguments")}} em ES3. |
+| {{SpecName('ES5.1', '#sec-10.6', 'arguments object')}}               | {{Spec2('ES5.1')}}   | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
+| {{SpecName('ES6', '#sec-arguments-object', 'arguments object')}}     | {{Spec2('ES6')}}     | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
 | {{SpecName('ESDraft', '#sec-arguments-object', 'arguments object')}} | {{Spec2('ESDraft')}} | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
 
 ## Compatibilidade com navegadores

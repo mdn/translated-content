@@ -1,7 +1,6 @@
 ---
 title: Que es un servidor WEB?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 En este articulo veremos que son los servidores, cómo funcionan y por qué son importantes.
@@ -12,10 +11,10 @@ En este articulo veremos que son los servidores, cómo funcionan y por qué son 
       <th scope="row">Prerequisitos:</th>
       <td>
         Debes saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >como funciona internet</a
         >, y
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >entendiendo la diferencia entre pagina web, sitio web, servidor y
           motor de busqueda</a
         >

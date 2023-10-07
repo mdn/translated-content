@@ -1,8 +1,6 @@
 ---
 title: Manipuler des documents
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -47,17 +45,22 @@ Le document chargé dans chaque onglet de votre navigateur, et donc son contenu,
 Nous avons créé une simple page d'exemple, [`dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Essayez de l'ouvrir dans votre navigateur — c'est une page très simple qui contient un élément [`<section>`](/fr/docs/Web/HTML/Element/section), à l'intérieur duquel se trouve une image et un paragraphe avec un lien. Le code source HTML ressemble à ça&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -97,21 +100,21 @@ Pour commencer l'apprentissage de la manipulation du DOM, commençons par un exe
 2. Ajoutez un élément `<script></script>` juste avant la balise fermante `</body>`.
 3. Pour manipuler un élément dans le DOM, vous allez d'abord sélectionner cet élément et stocker une référence à cet élément dans une variable. À l'intérieur de votre élément `<script>`, ajoutez la ligne suivante&nbsp;:
 
-    ```js
-    const link = document.querySelector('a');
-    ```
+   ```js
+   const link = document.querySelector("a");
+   ```
 
 4. Maintenant que nous avons la référence à l'élément enregistrée dans une variable, nous pouvons commencer à le manipuler en utilisant les propriétés et les méthodes qui lui sont associées (celles-ci sont définies sur les interfaces telles que [`HTMLAnchorElement`](/fr/docs/Web/API/HTMLAnchorElement) dans le cas d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a), et sur les interfaces plus génériques [`HTMLElement`](/fr/docs/Web/API/HTMLElement), et [`Node`](/fr/docs/Web/API/Node) — qui représente tous les nœuds d'un DOM). Tout d'abord, changeons le texte du lien en mettant à jour la valeur de la propriété [`Node.textContent`](/fr/docs/Web/API/Node/textContent). Ajoutez la ligne suivante à la suite de la précédente&nbsp;:
 
-    ```js
-    link.textContent = 'Mozilla Developer Network';
-    ```
+   ```js
+   link.textContent = "Mozilla Developer Network";
+   ```
 
 5. Nous devons également modifier l'URL ciblée par le lien, pour qu'il ne renvoie pas au mauvais endroit quand on clique dessus. Ajoutez la ligne suivante, en bas de votre JavaScript&nbsp;:
 
-    ```js
-    link.href = 'https://developer.mozilla.org';
-    ```
+   ```js
+   link.href = "https://developer.mozilla.org";
+   ```
 
 Notez que, comme souvent en JavaScript, il y a plusieurs façons de sélectionner et d'enregistrer une référence à un élément dans une variable. [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) est l'approche moderne recommandée — elle est pratique puisqu'elle permet de sélectionner des éléments en utilisant les sélecteurs CSS. L'appel à `querySelector()` que nous avons utilisé plus tôt récupère le premier élément [`<a>`](/fr/docs/Web/HTML/Element/a) qui apparaît dans le document. Si vous souhaitez au contraire récupérer plusieurs éléments, vous pouvez utiliser [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll), qui récupère tous les éléments du document correspondant au sélecteur, et retourne des références vers ces éléments dans un objet similaire à un [tableau](/fr/docs/Learn/JavaScript/First_steps/Arrays) appelé un [`NodeList`](/fr/docs/Web/API/NodeList).
 
@@ -128,35 +131,37 @@ Ce qui précède vous a donné un petit avant-goût de ce que vous pouvez faire,
 
 1. Pour revenir à notre exemple, commençons par récupérer une référence à notre élément [`<section>`](/fr/docs/Web/HTML/Element/section) — ajoutez le code suivant au bas de votre script existant (idem avec les lignes qui suivront)&nbsp;:
 
-    ```js
-    const sect = document.querySelector('section');
-    ```
+   ```js
+   const sect = document.querySelector("section");
+   ```
 
 2. Nous allons maintenant créer un nouveau paragraphe grâce à [`Document.createElement()`](/fr/docs/Web/API/Document/createElement), et lui donner du contenu texte de la même manière que précédemment&nbsp;:
 
-    ```js
-    const para = document.createElement('p');
-    para.textContent = 'We hope you enjoyed the ride.';
-    ```
+   ```js
+   const para = document.createElement("p");
+   para.textContent = "We hope you enjoyed the ride.";
+   ```
 
 3. Nous pouvons à présent ajouter ce paragraphe au bas de la section en utilisant [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
 
-    ```js
-    sect.appendChild(para);
-    ```
+   ```js
+   sect.appendChild(para);
+   ```
 
 4. Enfin, ajoutons un nœud texte au premier paragraphe, pour finir la phrase joliment. Créons d'abord un nœud texte avec [`Document.createTextNode()`](/fr/docs/Web/API/Document/createTextNode)&nbsp;:
 
-    ```js
-    const text = document.createTextNode(' — the premier source for web development knowledge.');
-    ```
+   ```js
+   const text = document.createTextNode(
+     " — the premier source for web development knowledge.",
+   );
+   ```
 
 5. Puis, après avoir récupéré une référence au premier paragraphe, ajoutons-y le nœud texte&nbsp;:
 
-    ```js
-    const linkPara = document.querySelector('p');
-    linkPara.appendChild(text);
-    ```
+   ```js
+   const linkPara = document.querySelector("p");
+   linkPara.appendChild(text);
+   ```
 
 C'est l'essentiel de ce dont vous aurez besoin pour ajouter des nœuds au DOM — vous utiliserez beaucoup ces méthodes lorsque vous construirez des interfaces dynamiques (nous en verrons quelques exemples plus tard).
 
@@ -202,19 +207,22 @@ La première d'entre elles consiste à ajouter des styles en ligne (<i lang="en"
 
 1. À titre d'exemple, essayez d'ajouter les lignes suivantes à notre exemple&nbsp;:
 
-    ```js
-    para.style.color = 'white';
-    para.style.backgroundColor = 'black';
-    para.style.padding = '10px';
-    para.style.width = '250px';
-    para.style.textAlign = 'center';
-    ```
+   ```js
+   para.style.color = "white";
+   para.style.backgroundColor = "black";
+   para.style.padding = "10px";
+   para.style.width = "250px";
+   para.style.textAlign = "center";
+   ```
 
 2. Rafraichissez la page, et vous verrez que les styles ont été appliqués au paragraphe. Si vous regardez ce paragraphe dans l'[Inspecteur](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) du navigateur, vous verrez que ces lignes sont en effet ajoutées comme du style en ligne au document&nbsp;:
 
-    ```html
-    <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
-    ```
+   ```html
+   <p
+     style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
+     We hope you enjoyed the ride.
+   </p>
+   ```
 
 > **Note :** Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) tandis que les versions CSS sont reliées par des tirets (par exemple `backgroundColor` au lieu de `background-color`). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.
 
@@ -223,23 +231,23 @@ Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, 
 1. Supprimez les cinq lignes précédentes que nous avons ajoutées à notre code JavaScript.
 2. Ajoutez ce qui suit au sein de la balise [`<head>`](/fr/docs/Web/HTML/Element/head) de votre HTML&nbsp;:
 
-    ```html
-    <style>
-    .highlight {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      width: 250px;
-      text-align: center;
-    }
-    </style>
-    ```
+   ```html
+   <style>
+     .highlight {
+       color: white;
+       background-color: black;
+       padding: 10px;
+       width: 250px;
+       text-align: center;
+     }
+   </style>
+   ```
 
 3. Nous allons maintenant utiliser une méthode très utile pour la manipulation HTML de manière générale&nbsp;: [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute). Cette fonction prend deux paramètres&nbsp;: le nom de l'attribut que vous voulez définir sur l'élément, et la valeur que vous voulez lui attribuer. Ici nous allons ajouter une classe `highlight` à notre élément&nbsp;:
 
-    ```js
-    para.setAttribute('class', 'highlight');
-    ```
+   ```js
+   para.setAttribute("class", "highlight");
+   ```
 
 4. Rafraîchissez votre page, et vous constaterez qu'il n'y a aucun changement par rapport au dernier exemple. Le CSS est toujours appliqué au paragraphe, mais la seule différence c'est qu'on a utilisé une classe pour le faire et non des styles en ligne.
 

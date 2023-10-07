@@ -59,8 +59,7 @@ mask-mode: unset;
 ```
 
 ```html hidden
-<div id="masked">
-</div>
+<div id="masked"></div>
 <select id="maskMode">
   <option value="alpha">alpha</option>
   <option value="luminance">luminance</option>

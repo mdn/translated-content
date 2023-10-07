@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-ArrayBuffer[Symbol.species]
+ArrayBuffer[Symbol.species];
 ```
 
 ### 返値

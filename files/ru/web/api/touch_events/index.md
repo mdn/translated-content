@@ -1,8 +1,8 @@
 ---
 title: События касаний (тач-события)
 slug: Web/API/Touch_events
-translation_of: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 Чтобы предоставить качественную поддержку пользовательского интерфейса, связанного с касаниями, тач-события предлагают возможность интерпретировать действия пальца (или стилуса) на сенсорных экранах или трекпадах.
@@ -42,8 +42,9 @@ translation_of: Web/API/Touch_events
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Ваш браузер не поддерживает элемент canvas.
 </canvas>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Добавление обработчиков событий
@@ -87,7 +88,7 @@ function handleStart(evt) {
     ongoingTouches.push(copyTouch(touches[i]));
     var color = colorForTouch(touches[i]);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
     console.log("touchstart:" + i + ".");
@@ -115,17 +116,25 @@ function handleMove(evt) {
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      console.log("continuing touch "+idx);
+      console.log("continuing touch " + idx);
       ctx.beginPath();
-      console.log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      console.log(
+        "ctx.moveTo(" +
+          ongoingTouches[idx].pageX +
+          ", " +
+          ongoingTouches[idx].pageY +
+          ");",
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      console.log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
+      console.log(
+        "ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");",
+      );
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
       console.log(".");
     } else {
       console.log("can't figure out which touch to continue");
@@ -162,8 +171,8 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
       console.log("can't figure out which touch to end");
     }
@@ -185,7 +194,7 @@ function handleCancel(evt) {
 
   for (var i = 0; i < touches.length; i++) {
     var idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   }
 }
 ```
@@ -209,7 +218,9 @@ function colorForTouch(touch) {
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
   var color = "#" + r + g + b;
-  console.log("color for touch with identifier " + touch.identifier + " = " + color);
+  console.log(
+    "color for touch with identifier " + touch.identifier + " = " + color,
+  );
   return color;
 }
 ```
@@ -239,7 +250,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -247,7 +258,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
+  var p = document.getElementById("log");
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```
@@ -269,7 +280,10 @@ function log(msg) {
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
   var newEvt = document.createEvent("MouseEvents");
@@ -291,9 +305,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```

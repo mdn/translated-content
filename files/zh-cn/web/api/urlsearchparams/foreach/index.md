@@ -36,13 +36,13 @@ searchParams.forEach(callback(value,key,searchParams));
 // 创建 URLSearchParams 对象的实例对象，用于测试
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
-let returnValue = searchParams.forEach(function(value, key,searchParams) {
-     // 打印值
-     console.log(value, key,searchParams);
+let returnValue = searchParams.forEach(function (value, key, searchParams) {
+  // 打印值
+  console.log(value, key, searchParams);
 });
 
 // 输出返回值
-console.log(returnValue)
+console.log(returnValue);
 ```
 
 结果是：

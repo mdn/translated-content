@@ -1,15 +1,6 @@
 ---
 title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log10
 ---
 
 {{JSRef}}
@@ -23,7 +14,7 @@ La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, don
 ## Syntaxe
 
 ```js
-Math.log10(x)
+Math.log10(x);
 ```
 
 ### Paramètres
@@ -46,10 +37,10 @@ Si la valeur de l'argument est strictement inférieure à 0, la valeur renvoyée
 ### Utiliser `Math.log10()`
 
 ```js
-Math.log10(2);      // 0.3010299956639812
-Math.log10(1);      // 0
-Math.log10(0);      // -Infinity
-Math.log10(-2);     // NaN
+Math.log10(2); // 0.3010299956639812
+Math.log10(1); // 0
+Math.log10(0); // -Infinity
+Math.log10(-2); // NaN
 Math.log10(100000); // 5
 ```
 
@@ -58,9 +49,11 @@ Math.log10(100000); // 5
 Il est possible d'avoir un résultat approximatif avec la fonction suivante :
 
 ```js
-Math.log10 = Math.log10 || function(x) {
-  return Math.log(x) * Math.LOG10E;
-};
+Math.log10 =
+  Math.log10 ||
+  function (x) {
+    return Math.log(x) * Math.LOG10E;
+  };
 ```
 
 ## Spécifications

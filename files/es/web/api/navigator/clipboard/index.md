@@ -25,7 +25,7 @@ El siguiente código usa `navigator.clipboard` para acceder al portapapeles del 
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".cliptext").innerText = clipText)
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
   );
 ```
 

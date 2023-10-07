@@ -1,14 +1,8 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
+
 {{JSRef("Global_Objects", "WeakSet")}}
 
 Метод **`has()`** определяет, содержит ли WeakSet определённый элемент, возвращая в зависимости от этого true или false.
@@ -38,8 +32,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // вернёт true
-mySet.has(obj);     // вернёт false
+mySet.has(window); // вернёт true
+mySet.has(obj); // вернёт false
 ```
 
 ## Спецификации

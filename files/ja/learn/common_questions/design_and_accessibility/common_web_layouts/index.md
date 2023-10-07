@@ -1,7 +1,6 @@
 ---
 title: 一般的なウェブレイアウトには何が含まれているのか？
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
-original_slug: Learn/Common_questions/Common_web_layouts
 ---
 
 ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。
@@ -72,7 +71,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 **[Invision application](https://www.invisionapp.com/)**. 一般的な 1 列レイアウトで、ひとつのページにすべての情報を直線的に提供するものです。
 
-![1　列レイアウトの例](screenshot-product.jpg)        ![ヘッダー、本文、サイド記事の積み重ね、フッターの1列レイアウト](screenshot-product-overlay.jpg)
+![1　列レイアウトの例](screenshot-product.jpg) ![ヘッダー、本文、サイド記事の積み重ね、フッターの1列レイアウト](screenshot-product-overlay.jpg)
 
 とても簡単です。ただ、多くの人がデスクトップからサイトを閲覧することに変わりはないので、デスクトップでも使いやすく、読みやすいコンテンツにしてください。
 
@@ -80,7 +79,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 **[Abduzeedo](https://abduzeedo.com/typography-mania-261)** はシンプルなブログレイアウトです。ブログは通常、 2 つの列を持っています。太い列は本分用で、細い列は横に並べるもの（ウィジェット、副次ナビゲーションレベル、広告など）用の列です。
 
-![Example of a 2 column layout for a blog](screenshot-blog.jpg)        ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
+![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
 この例では、ヘッダーのすぐ下にある画像（B1）を見てください。これは本文と関係がありますが、本文はこれがなくても意味をなすので、この画像を本文と考えることも、横に並んでいるコンテンツと考えることもできます。それはどうでもいいことです。重要なのは、ヘッダーの下に何かを置く場合、それは本文か、本文に直接関連するものでなければならないということです。
 
@@ -88,7 +87,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 **[MICA](https://www.mica.edu/about-mica/)**. これはちょっとやっかいですね。3 列レイアウトのようです。
 
-![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
+![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
 しかし、そうではありません。 B1 と B2 は本文の周りに浮かんでいるのです。 "float" という単語を覚えておいてください。 {{Glossary("CSS")}} について学び始めると、ピンとくるはずです。
 
@@ -100,7 +99,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 **The Opera de Paris**.
 
-![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
+![An example of a tricky layout.](screenshot-opera.jpg) ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 
 基本的には 2 列レイアウトですが、視覚的にレイアウトを崩すような工夫があちこちに見受けられます。特に、ヘッダーが本文の画像に重なっていること。ヘッダーのメニューの曲線と画像の下部の曲線が結びついて、ヘッダーと本文は技術的には完全に別物であるにもかかわらず、一つのもののように見えます。 Opera の例は MICA の例よりも複雑に見えますが、実際には簡単に実装できます（正確には、「簡単」というのは相対的な概念です）。
 

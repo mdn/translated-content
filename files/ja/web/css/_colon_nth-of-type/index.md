@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type()'
+title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -46,7 +46,7 @@ p:nth-of-type(4n) {
 
 ```css
 /* 奇数の段落 */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
@@ -62,7 +62,7 @@ p:nth-of-type(1) {
 
 /* これは 2n+1 であり、かつ fancy のクラスを持つ要素に一致するので、第 3 段落に一致します。
 2 番目の段落は fancy というクラスを持っていますが、 :nth-of-type(2n+1) ではないので一致しません。 */
-p.fancy:nth-of-type(2n+1) {
+p.fancy:nth-of-type(2n + 1) {
   text-decoration: underline;
 }
 ```

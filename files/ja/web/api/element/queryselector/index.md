@@ -1,6 +1,9 @@
 ---
-title: Element.querySelector()
+title: "Element: querySelector() メソッド"
+short-title: querySelector()
 slug: Web/API/Element/querySelector
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/Element/querySelector
 
 ## 構文
 
-```js
-element = baseElement.querySelector(selectors);
+```js-nolint
+querySelector(selectors)
 ```
 
 ### 引数
@@ -26,8 +29,8 @@ element = baseElement.querySelector(selectors);
 
 ### 例外
 
-- `SyntaxError`
-  - : 指定された `selectors` が無効であった場合。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 指定された `selectors` が無効であった場合に発生します。
 
 ## 例
 
@@ -38,7 +41,9 @@ element = baseElement.querySelector(selectors);
 この最初の例では、 HTML 文書の本文内で type 属性がないか、 type 属性が "text/css" である要素のうち最初のものを返します。
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+const el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### :scope 擬似クラスを使用して直接の子を取得
@@ -65,22 +70,22 @@ var el = document.body.querySelector("style[type='text/css'], style:not([type])"
 #### CSS
 
 ```css
-  span {
-    display:block;
-    margin-bottom: 5px;
-  }
-  .red span {
-    background-color: red;
-    padding:5px;
-  }
+span {
+  display: block;
+  margin-bottom: 5px;
+}
+.red span {
+  background-color: red;
+  padding: 5px;
+}
 ```
 
 #### JavaScript
 
 ```js
-  const parentElement = document.querySelector('#parent');
-  let allChildren = parentElement.querySelectorAll(":scope > span");
-  allChildren.forEach(item => item.classList.add("red"));
+const parentElement = document.querySelector("#parent");
+let allChildren = parentElement.querySelectorAll(":scope > span");
+allChildren.forEach((item) => item.classList.add("red"));
 ```
 
 #### 結果
@@ -111,9 +116,9 @@ var el = document.body.querySelector("style[type='text/css'], style:not([type])"
 #### JavaScript
 
 ```js
-var baseElement = document.querySelector("p");
+const baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-  (baseElement.querySelector("div span").innerHTML);
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### 結果
@@ -146,5 +151,5 @@ document.getElementById("output").innerHTML =
   {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および
   {{domxref("DocumentFragment.querySelectorAll()")}}
-- セレクターを取る他のメソッドOther: {{domxref("element.closest()")}} および
+- セレクターを取る他のメソッド: {{domxref("element.closest()")}} および
   {{domxref("element.matches()")}}.

@@ -1,8 +1,8 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
-translation_of: Web/API/Gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 Интерфейс **`Gamepad`** [Gamepad API](/ru/docs/Web/API/Gamepad_API) определяет отдельный геймпад или контроллер, предоставляющий доступ к такой информации, как: нажатие кнопок, позиции осей, и id.
@@ -42,10 +42,14 @@ translation_of: Web/API/Gamepad
 ## Пример
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (e) {
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 

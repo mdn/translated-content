@@ -1,8 +1,6 @@
 ---
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
-browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
 
 {{APIRef('XMLHttpRequest')}}

@@ -58,7 +58,7 @@ JavaScript について学びたいと思っているが、JavaScript あるい�
 
 - [クライアント側の JavaScript フレームワークの理解](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript フレームワークは、最新のフロントエンドウェブ開発に欠かせないもので、拡張性のある双方向のウェブアプリケーションを構築するための、試行錯誤されたツールを開発者に提供します。幾つかの有名なツールについて取り扱うチュートリアルに移動する前に、クライアントサイドのフレームワークがどのように動作するのか、自分のツールセットにどのように適合させるか、についての基本的な背景知識を提供します。
-- [JavaScript 言語概要](/ja/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 言語概要](/ja/docs/Web/JavaScript/Language_overview)
   - : 他のプログラミング言語から来た人がスピードアップするために、 JavaScript の基本的な構文と意味づけの概要を説明します。
 - [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
   - : JavaScript で利用可能なデータ構造の概要です。
@@ -73,11 +73,9 @@ JavaScript について学びたいと思っているが、JavaScript あるい�
 
 - [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : よく誤解されたり過小評価されたりしているプロトタイプベースの継承に対する説明です。
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
-  - : JavaScript の型付き配列は未加工のバイナリーデータにアクセスするメカニズムを提供します。
-- [メモリー管理](/ja/docs/Web/JavaScript/Memory_Management)
+- [メモリー管理](/ja/docs/Web/JavaScript/Memory_management)
   - : JavaScript におけるメモリーのライフサイクルとガベージコレクションです。
-- [同時実行モデルとイベントループ](/ja/docs/Web/JavaScript/EventLoop)
+- [同時実行モデルとイベントループ](/ja/docs/Web/JavaScript/Event_loop)
   - : JavaScript は「イベントループ」に基づく同時実行モデルを持っています。
 
 ## リファレンス
@@ -87,7 +85,7 @@ JavaScript について学びたいと思っているが、JavaScript あるい�
 - [標準オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects)
   - : 標準組み込みオブジェクトである {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} などについて理解しましょう。
 - [式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript の演算子である {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}} などの挙動、そして[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)などについて学びましょう。
+  - : JavaScript の演算子である {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}} などの挙動、そして[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)などについて学びましょう。
 - [文と宣言](/ja/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} などの JavaScript の文やキーワードがどのように機能するか学びましょう。
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)

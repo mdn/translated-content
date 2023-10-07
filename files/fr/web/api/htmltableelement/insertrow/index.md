@@ -1,14 +1,6 @@
 ---
 title: table.insertRow
 slug: Web/API/HTMLTableElement/insertRow
-tags:
-  - API
-  - DOM HTML
-  - HTMLTableElement
-  - Méthode
-  - NeedsMobileBrowserCompatibility
-  - Reference
-translation_of: Web/API/HTMLTableElement/insertRow
 ---
 
 {{APIRef("HTML DOM")}}
@@ -28,37 +20,35 @@ var ligne = HTMLTableElement.insertRow(optionnel indice = -1);
 
 ```js
 var tbody_particulier = document.getElementById(id_tbody);
-var ligne = tbody_particulier.insertRow(indice)
+var ligne = tbody_particulier.insertRow(indice);
 ```
 
 ## Exemple
 
 ```html
 <table id="TableA">
-<tr>
-<td>Ancienne ligne supérieure</td>
-</tr>
+  <tr>
+    <td>Ancienne ligne supérieure</td>
+  </tr>
 </table>
 <script type="text/javascript">
+  function ajouteLigne(tableID) {
+    // Récupération d'une référence à la table
+    var refTable = document.getElementById(tableID);
 
-function ajouteLigne(tableID) {
-  // Récupération d'une référence à la table
-  var refTable = document.getElementById(tableID);
+    // Insère une ligne dans la table à l'indice de ligne 0
+    var nouvelleLigne = refTable.insertRow(0);
 
-  // Insère une ligne dans la table à l'indice de ligne 0
-  var nouvelleLigne = refTable.insertRow(0);
+    // Insère une cellule dans la ligne à l'indice 0
+    var nouvelleCellule = nouvelleLigne.insertCell(0);
 
-  // Insère une cellule dans la ligne à l'indice 0
-  var nouvelleCellule = nouvelleLigne.insertCell(0);
+    // Ajoute un nœud texte à la cellule
+    var nouveauTexte = document.createTextNode("Nouvelle ligne supérieure");
+    nouvelleCellule.appendChild(nouveauTexte);
+  }
 
-  // Ajoute un nœud texte à la cellule
-  var nouveauTexte = document.createTextNode('Nouvelle ligne supérieure')
-  nouvelleCellule.appendChild(nouveauTexte);
-}
-
-// Appelle ajouteLigne() avec l'ID d'une table
-ajouteLigne('TableA');
-
+  // Appelle ajouteLigne() avec l'ID d'une table
+  ajouteLigne("TableA");
 </script>
 ```
 

@@ -27,18 +27,18 @@ Object.getOwnPropertyNames(obj)
 ### Usando `Object.getOwnPropertyNames()`
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort());
 // logs ["0", "1", "2", "length"]
 
 // Array-like object
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort());
 // logs ["0", "1", "2"]
 
 // Logging property names and values using Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-  console.log(val + ' -> ' + obj[val]);
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
+  console.log(val + " -> " + obj[val]);
 });
 // logs
 // 0 -> a
@@ -46,12 +46,17 @@ Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
 // 2 -> c
 
 // non-enumerable property
-var my_obj = Object.create({}, {
-  getFoo: {
-    value: function() { return this.foo; },
-    enumerable: false
-  }
-});
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+      enumerable: false,
+    },
+  },
+);
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
@@ -64,19 +69,19 @@ Se voce quer somente as propriedades enumeráveis, veja {{jsxref("Object.keys()"
 
 ```js
 function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function() {};
+ParentClass.prototype.inheritedMethod = function () {};
 
 function ChildClass() {
   this.prop = 5;
-  this.method = function() {};
+  this.method = function () {};
 }
-ChildClass.prototype = new ParentClass;
-ChildClass.prototype.prototypeMethod = function() {};
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
 
 console.log(
   Object.getOwnPropertyNames(
-    new ChildClass() // ["prop", "method"]
-  )
+    new ChildClass(), // ["prop", "method"]
+  ),
 );
 ```
 
@@ -88,7 +93,7 @@ Isto usa a função {{jsxref("Array.prototype.filter()")}} para remover as chave
 var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
+var nonenum_only = enum_and_nonenum.filter(function (key) {
   var indexInEnum = enum_only.indexOf(key);
   if (indexInEnum == -1) {
     // not found in enum_only keys mean the key is non-enumerable,
@@ -107,19 +112,19 @@ console.log(nonenum_only);
 No ES5, se o argumento desse método não é um objeto (um tipo primitivo), então isso causará um {{jsxref("TypeError")}}. No ES6, um argumento diferente de objeto será transformado em um objeto.
 
 ```js
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // ["0", "1", "2", "length"]  (ES6 code)
 ```
 
 ## Especificações
 
-| Esperificação                                                                                                        | Status                       | Comentário                                           |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                         | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}     | {{Spec2('ES6')}}         |                                                      |
+| Esperificação                                                                            | Status               | Comentário                                           |
+| ---------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                     | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores
@@ -128,7 +133,7 @@ Object.getOwnPropertyNames('foo');
 
 ## Notas específicas para SpiderMonkey
 
-Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).
+Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ([Erro do Firefox 724768](https://bugzil.la/724768)).
 
 ## Veja também
 

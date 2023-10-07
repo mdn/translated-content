@@ -1,7 +1,6 @@
 ---
 title: Sentencias
 slug: Glossary/Statement
-original_slug: Glossary/Sentencias
 ---
 
 En un lenguaje de programación, una **sentencia** es una línea de código al mando de una tarea Cada programa consiste en una secuencia de sentencias.

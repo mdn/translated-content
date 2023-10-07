@@ -1,9 +1,6 @@
 ---
 title: Constructeur WebAssembly.Module()
 slug: WebAssembly/JavaScript_interface/Module/Module
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
-browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
 
 {{WebAssemblySidebar}}
@@ -17,7 +14,7 @@ Le constructeur `WebAssembly.Module()` peut être appelé de façon synchrone af
 > **Attention :** Étant donné que la compilation de grands modules peut être coûteuse, il est préférable d'utiliser `Module()` uniquement lorsqu'une compilation synchrone est nécessaire. Dans tous les autres cas, on privilégiera la méthode [`WebAssembly.compileStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming).
 
 ```js
-new WebAssembly.Module(bufferSource)
+new WebAssembly.Module(bufferSource);
 ```
 
 ### Parameters
@@ -32,25 +29,24 @@ new WebAssembly.Module(bufferSource)
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
 function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes => {
-  let mod = createWasmModule(bytes);
-  WebAssembly.instantiate(mod, importObject)
-  .then(result =>
-     result.exports.exported_func()
-  );
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    let mod = createWasmModule(bytes);
+    WebAssembly.instantiate(mod, importObject).then((result) =>
+      result.exports.exported_func(),
+    );
+  });
 ```
 
 ## Spécifications

@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toGMTString()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-tags:
-  - Date
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 original_slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
 

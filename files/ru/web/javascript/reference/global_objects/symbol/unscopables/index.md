@@ -1,22 +1,17 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
+
 {{JSRef}}
 
-Широко известный символ **`Symbol.unscopables`** используется для указания значения объекта, чьи собственные и наследуемые имена свойств исключаются из привязок связанного объекта оператора [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with).
+Широко известный символ **`Symbol.unscopables`** используется для указания значения объекта, чьи собственные и наследуемые имена свойств исключаются из привязок связанного объекта оператора [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 {{js_property_attributes(0,0,0)}}
 
 ## Описание
 
-`Символ @@unscopables` (`Symbol.unscopables`) может быть определён к любому объекту, чтобы исключить имена свойств из-за того, что они отображаются как лексические переменные с привязкой окружения [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). Обратите внимание: если использовать ["Строгий режим"](/ru/docs/Web/JavaScript/Reference/Strict_mode), оператор `with` будет недоступен и вероятнее всего также не понадобится этот символ.
+`Символ @@unscopables` (`Symbol.unscopables`) может быть определён к любому объекту, чтобы исключить имена свойств из-за того, что они отображаются как лексические переменные с привязкой окружения [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with). Обратите внимание: если использовать ["Строгий режим"](/ru/docs/Web/JavaScript/Reference/Strict_mode), оператор `with` будет недоступен и вероятнее всего также не понадобится этот символ.
 
 Если вы зададите свойству значение `true` в объекте `unscopables` сделает его "_unscopable_" и, следовательно, оно не будет задействовано в области лексических переменных. Придав свойству значение `false`, Вы сделаете его `scopable` и, как следствие, оно будет задействовано в области лексических переменных.
 
@@ -28,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('что-то');
+  keys.push("что-то");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -41,12 +36,12 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {
@@ -66,4 +61,4 @@ with (obj) {
 ## Смотрите также
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- оператор [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) (не доступен в [режиме Strict](/ru/docs/Web/JavaScript/Reference/Strict_mode))
+- оператор [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with) (не доступен в [режиме Strict](/ru/docs/Web/JavaScript/Reference/Strict_mode))

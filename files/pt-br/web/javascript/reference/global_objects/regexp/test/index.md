@@ -44,12 +44,12 @@ console.log(result); // true
 O exemplo a seguir mostra uma mensagem dependendo do sucesso do teste.
 
 ```js
-function testinput(re, str){
+function testinput(re, str) {
   var midstring;
   if (re.test(str)) {
-    midstring = ' Contém ';
+    midstring = " Contém ";
   } else {
-    midstring = ' não contém ';
+    midstring = " não contém ";
   }
   console.log(str + midstring + re.source);
 }
@@ -57,11 +57,11 @@ function testinput(re, str){
 
 ## Specificações
 
-| Specificações                                                                        | Status                   | Comentário                                         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                             | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ES6')}}     |                                                    |
+| Specificações                                                    | Status             | Comentário                                         |
+| ---------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                              | {{Spec2('ES3')}}   | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}           | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

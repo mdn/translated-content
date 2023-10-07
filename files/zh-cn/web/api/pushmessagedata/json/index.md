@@ -24,7 +24,7 @@ A [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var jsonObj = event.data.json();
 
   // do something with your JSON

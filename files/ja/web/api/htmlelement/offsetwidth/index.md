@@ -1,6 +1,8 @@
 ---
-title: HTMLElement.offsetWidth
+title: "HTMLElement: offsetWidth プロパティ"
 slug: Web/API/HTMLElement/offsetWidth
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -19,7 +21,7 @@ slug: Web/API/HTMLElement/offsetWidth
 
 ## 例
 
-![](dimensions-offset.png)
+![大きなパディング、境界、マージンを持つ要素の例です。offsetWidth` は、パディングと境界を含み、マージンを除いた要素のレイアウト幅である。](dimensions-offset.png)
 
 ## 仕様書
 

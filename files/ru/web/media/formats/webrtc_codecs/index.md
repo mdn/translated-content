@@ -1,13 +1,9 @@
 ---
 title: Кодеки, используемые WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
-tags:
-  - Кодеки WebRTC
-translation_of: Web/Media/Formats/WebRTC_codecs
-original_slug: Web/Media/Formats/WebRTC_кодеки
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
 
 С [WebRTC API](/ru/docs/Web/API/WebRTC_API) возможно создание сайтов и приложений, позволяющих пользователям общаться в реальном времени, используя аудио и/или видео, а также передавать данные или другую информацию. Для общения, двум устройствам необходима возможность согласования использования кодеков, для каждой дорожки в потоке данных, для успешного взаимодействия и обмена медиаданными. В этом руководстве рассматриваются кодеки, которые требуются браузерам для этого, а также другие кодеки, которые поддерживаются некоторыми или всеми браузерами, поддерживающими WebRTC.
 
@@ -237,7 +233,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
-  transceivers.forEach(transceiver => {
+  transceivers.forEach((transceiver) => {
     const kind = transceiver.sender.track.kind;
     let sendCodecs = RTCRtpSender.getCapabilities(kind).codecs;
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
@@ -271,7 +267,7 @@ function preferCodec(codecs, mimeType) {
   let sortedCodecs = [];
   let count = codecs.length;
 
-  codecs.forEach(codec => {
+  codecs.forEach((codec) => {
     if (codec.mimeType === mimeType) {
       sortedCodecs.push(codec);
     } else {
@@ -335,7 +331,7 @@ function preferCodec(codecs, mimeType) {
 
 Подробнее о безопасности при использовании AVC в WebRTC см. {{RFC(6184, "RTP Payload Format for H.264 Video: Security Considerations", 9)}}.
 
-## Смотрите также :
+## Смотрите также
 
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - [Введение в протоколы WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)

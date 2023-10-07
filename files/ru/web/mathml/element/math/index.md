@@ -1,8 +1,8 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-translation_of: Web/MathML/Element/math
 ---
+
 {{MathMLRef()}}
 
 Элементом верхнего уровня в MathML является тэг `<math>`. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.
@@ -44,34 +44,32 @@ translation_of: Web/MathML/Element/math
 ### Обозначения HTML5
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>MathML in HTML5</title>
   </head>
   <body>
-
-  <math>
-    <mrow>
+    <math>
       <mrow>
+        <mrow>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mo>=</mo>
         <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
+          <mi>c</mi>
           <mn>2</mn>
         </msup>
       </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
+    </math>
   </body>
 </html>
 ```
@@ -114,22 +112,13 @@ translation_of: Web/MathML/Element/math
 
 **Примечания:** XHTML документы с MathML должны быть поданы как `application/xhtml+xml`. Вы можете легко добиться этого, добавив `.xhtml` расширение для локальных файлов. Для серверов Apache вы можете [настроить `.htaccess` файл](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) для этого расширения на правильный тип MIME. Поскольку мы сохранили наш MathML в виде XML-документа, необходимо быть уверенным в правильно оформленном XML-документе.
 
-## Совместимость браузеров
-
-{{Compat}}
-
-### Особенности ядра Gecko
-
-В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle) элемента). Тем не менее, `displaystyle` атрибут не отрабатывается. Его поддержка [была добавлена](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
-
-Альтернативные текстовые описания (`alttext`) или ссылки на альтернативное изображение, (атрибуты `altimg` , `altimg-width` , `altimg-height` и `altimg-valign`) в настоящее время не реализованы в Gecko.
-
 ## Спецификации
 
-| Спецификация                                                                                                                             | Статус       | Комментарий            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------- |
-| [MathML 3.0](http://www.w3.org/TR/MathML3/chapter2.html) | Рекомендация | Текущая спецификация   |
-| [MathML 2.0](http://www.w3.org/TR/MathML2/chapter7.html) | Рекомендация | Начальная спецификация |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

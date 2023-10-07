@@ -1,14 +1,6 @@
 ---
-title: 'HTMLMediaElement: abort event'
+title: "HTMLMediaElement: abort event"
 slug: Web/API/HTMLMediaElement/abort_event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - abort
-translation_of: Web/API/HTMLMediaElement/abort_event
 ---
 
 {{APIRef}}
@@ -41,16 +33,16 @@ L'événement **`abort`** se déclenche si l'élément écouté ne s'est pas cha
 ## Exemples
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://path/to/video.webm";
 
-video.addEventListener('abort', () => {
+video.addEventListener("abort", () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
 
 video.appendChild(source);
 ```

@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete
 ---
 
 {{JSRef}}

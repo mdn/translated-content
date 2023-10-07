@@ -10,7 +10,9 @@ slug: Web/SVG/Attribute/scale
 1 つの要素のみがこの属性を用います: {{SVGElement("feDisplacementMap")}}
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

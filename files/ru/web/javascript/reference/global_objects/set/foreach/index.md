@@ -1,8 +1,8 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
+
 {{JSRef}}
 
 Метод **`forEach()`** выполняет функцию по одному разу для каждого элемента из `Set` в порядке их расположения.
@@ -59,10 +59,10 @@ mySet.forEach(callback[, thisArg])
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log("s[" + value1 + "] = " + value2);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 // logs:
 // "s[foo] = foo"

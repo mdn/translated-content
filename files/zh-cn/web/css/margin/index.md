@@ -88,27 +88,27 @@ margin: unset;
 ### 更多的例子
 
 ```css
-margin: 5%;                 /* 所有边：5% 的外边距 */
+margin: 5%; /* 所有边：5% 的外边距 */
 
-margin: 10px;               /* 所有边：10px 的外边距 */
+margin: 10px; /* 所有边：10px 的外边距 */
 
-margin: 1.6em 20px;         /* 上边和下边：1.6em 的外边距 */
-                            /* 左边和右边：20px 的外边距  */
+margin: 1.6em 20px; /* 上边和下边：1.6em 的外边距 */
+/* 左边和右边：20px 的外边距  */
 
-margin: 10px 3% -1em;       /* 上边：10px 的外边距 */
-                            /* 左边和右边：3% 的外边距   */
-                            /* 下边：     -1em 的外边距 */
+margin: 10px 3% -1em; /* 上边：10px 的外边距 */
+/* 左边和右边：3% 的外边距   */
+/* 下边：     -1em 的外边距 */
 
-margin: 10px 3px 30px 5px;  /* 上边：10px 的外边距 */
-                            /* 右边：3px 的外边距  */
-                            /* 下边：30px 的外边距 */
-                            /* 左边：5px 的外边距  */
+margin: 10px 3px 30px 5px; /* 上边：10px 的外边距 */
+/* 右边：3px 的外边距  */
+/* 下边：30px 的外边距 */
+/* 左边：5px 的外边距  */
 
-margin: 2em auto;           /* 上边和下边：2em 的外边距 */
-                            /* 水平方向居中            */
+margin: 2em auto; /* 上边和下边：2em 的外边距 */
+/* 水平方向居中            */
 
-margin: auto;               /* 上边和下边：无外边距 */
-                            /* 水平方向居中        */
+margin: auto; /* 上边和下边：无外边距 */
+/* 水平方向居中        */
 ```
 
 ## 贴士
@@ -121,7 +121,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ### 外边距重叠
 
-上下元素的下上外边距有时会重叠，实际空出的空间长度变为两外边距中的较长值。查看[外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)可找到更多信息。
+上下元素的下上外边距有时会重叠，实际空出的空间长度变为两外边距中的较长值。查看[外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)可找到更多信息。
 
 ## 规范
 
@@ -135,7 +135,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ## 参阅
 
-- [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - 逻辑相关的属性：{{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}，和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}

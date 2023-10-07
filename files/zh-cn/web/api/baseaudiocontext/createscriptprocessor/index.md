@@ -11,7 +11,11 @@ slug: Web/API/BaseAudioContext/createScriptProcessor
 
 ```js
 var audioCtx = new AudioContext();
-myScriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+myScriptProcessor = audioCtx.createScriptProcessor(
+  bufferSize,
+  numberOfInputChannels,
+  numberOfOutputChannels,
+);
 ```
 
 ### 参数
@@ -39,9 +43,9 @@ A {{domxref("ScriptProcessorNode")}}.
 > **备注：** 完整的示例参照 [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) github (查看源码 [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
 
 ```js
-var myScript = document.querySelector('script');
-var myPre = document.querySelector('pre');
-var playButton = document.querySelector('button');
+var myScript = document.querySelector("script");
+var myPre = document.querySelector("pre");
+var playButton = document.querySelector("button");
 
 // Create AudioContext and buffer source
 var audioCtx = new AudioContext();
@@ -55,22 +59,27 @@ console.log(scriptNode.bufferSize);
 
 function getData() {
   request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-    myBuffer = buffer;
-    source.buffer = myBuffer;
-  },
-    function(e){"Error with decoding audio data" + e.err});
-  }
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
+        myBuffer = buffer;
+        source.buffer = myBuffer;
+      },
+      function (e) {
+        "Error with decoding audio data" + e.err;
+      },
+    );
+  };
   request.send();
 }
 
 // Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
+scriptNode.onaudioprocess = function (audioProcessingEvent) {
   // The input buffer is the song we loaded earlier
   var inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -88,25 +97,25 @@ scriptNode.onaudioprocess = function(audioProcessingEvent) {
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-}
+};
 
 getData();
 
 // wire up play button
-playButton.onclick = function() {
+playButton.onclick = function () {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
-}
+};
 
 // When the buffer source stops playing, disconnect everything
-source.onended = function() {
+source.onended = function () {
   source.disconnect(scriptNode);
   scriptNode.disconnect(audioCtx.destination);
-}
+};
 ```
 
 ## 规范

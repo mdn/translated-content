@@ -1,14 +1,6 @@
 ---
 title: USVString
-slug: >-
-  conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
-tags:
-  - API
-  - DOM
-  - Reference
-  - String
-  - WebIDL
-translation_of: Web/API/USVString
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 original_slug: Web/API/USVString
 ---
 

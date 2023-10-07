@@ -31,10 +31,10 @@ Object.getOwnPropertyNames(obj)
 ES5 では、このメソッドの引数がオブジェクトではない (プリミティブである) 場合、 {{jsxref("TypeError")}} が発生します。 ES2015 では、引数がオブジェクトではない場合はオブジェクトに型変換されます。
 
 ```js
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // ["0", "1", "2", "length"]  (ES2015 code)
 ```
 
@@ -43,33 +43,36 @@ Object.getOwnPropertyNames('foo');
 ### Object.getOwnPropertyNames() の使用
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() は配列のメソッド
 // ["0", "1", "2", "length"] と出力される
 
 // 配列風オブジェクト
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() は配列のメソッド
 // ["0", "1", "2"] と出力される
 
 // Array.forEach を使ったプロパティと値の出力
-Object.getOwnPropertyNames(obj).forEach(
-  function (val, idx, array) {
-    console.log(val + ' -> ' + obj[val]);
-  }
-);
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
+  console.log(val + " -> " + obj[val]);
+});
 // 出力結果
 // 0 -> a
 // 1 -> b
 // 2 -> c
 
 // 列挙不可能なプロパティ
-var my_obj = Object.create({}, {
-  getFoo: {
-    value: function() { return this.foo; },
-    enumerable: false
-  }
-});
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+      enumerable: false,
+    },
+  },
+);
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
@@ -82,19 +85,19 @@ console.log(Object.getOwnPropertyNames(my_obj).sort());
 
 ```js
 function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function() {};
+ParentClass.prototype.inheritedMethod = function () {};
 
 function ChildClass() {
   this.prop = 5;
-  this.method = function() {};
+  this.method = function () {};
 }
-ChildClass.prototype = new ParentClass;
-ChildClass.prototype.prototypeMethod = function() {};
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
 
 console.log(
   Object.getOwnPropertyNames(
-    new ChildClass() // ["prop", "method"]
-  )
+    new ChildClass(), // ["prop", "method"]
+  ),
 );
 ```
 
@@ -106,7 +109,7 @@ console.log(
 var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
+var nonenum_only = enum_and_nonenum.filter(function (key) {
   var indexInEnum = enum_only.indexOf(key);
   if (indexInEnum == -1) {
     // このキーが enum_only の中になければ、

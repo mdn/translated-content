@@ -1,12 +1,6 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Étiquettes
-translation_of: Web/API/HTMLInputElement/labels
 ---
 
 {{APIRef("DOM")}}
@@ -29,16 +23,16 @@ Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<input id="test"/>
+<input id="test" />
 <label id="label2" for="test">Label 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("test");
-  for(var i = 0; i < input.labels.length; i++) {
+  for (var i = 0; i < input.labels.length; i++) {
     console.log(input.labels[i].textContent); // "Label 1" et "Label 2"
   }
 });

@@ -1,7 +1,6 @@
 ---
-title: 'MediaStreamTrack: overconstrained イベント'
+title: "MediaStreamTrack: overconstrained イベント"
 slug: Web/API/MediaStreamTrack/overconstrained_event
-original_slug: Web/API/MediaStreamTrack/onoverconstrained
 ---
 
 {{ APIRef("Media Capture and Streams") }}{{deprecated_header}}
@@ -13,9 +12,9 @@ original_slug: Web/API/MediaStreamTrack/onoverconstrained
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('overconstrained', event => { });
+addEventListener("overconstrained", (event) => {});
 
-onoverconstrained = event => { };
+onoverconstrained = (event) => {};
 ```
 
 ## イベント型
@@ -25,7 +24,9 @@ onoverconstrained = event => { };
 ## 例
 
 ```js
-dc.onoverconstrained = function() { alert("overconstrained event detected!"); };
+dc.onoverconstrained = function () {
+  alert("overconstrained event detected!");
+};
 ```
 
 ## ブラウザーの互換性

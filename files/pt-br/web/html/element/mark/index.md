@@ -27,15 +27,14 @@ Este elemento inclue apenas [atributos Globais](/pt-BR/docs/HTML/Global_attribut
 ## Exemplo
 
 ```html
-<p>O elemento &lt;mark&gt; é usado para <mark>destacar</mark> partes do texto</p>
+<p>
+  O elemento &lt;mark&gt; é usado para <mark>destacar</mark> partes do texto
+</p>
 ```
 
 ## Especificações
 
-| Especificações                                                                                                           | Status                           | Comentários |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'the-mark-element.html#the-mark-element', '&lt;mark&gt;')}}         | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilidade
 

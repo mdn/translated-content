@@ -1,13 +1,8 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Reference
-  - Глобальные объекты
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 Массив (**`Array`**) в JavaScript является глобальным объектом, который используется для создания массивов; которые представляют собой высокоуровневые спископодобные объекты.
@@ -15,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array
 **Создание массива**
 
 ```js
-var fruits = ['Яблоко', 'Банан'];
+var fruits = ["Яблоко", "Банан"];
 
 console.log(fruits.length);
 // 2
@@ -34,7 +29,7 @@ var last = fruits[fruits.length - 1];
 **Итерирование по массиву**
 
 ```js
-fruits.forEach(function(item, index, array) {
+fruits.forEach(function (item, index, array) {
   console.log(item, index);
 });
 // Яблоко 0
@@ -44,7 +39,7 @@ fruits.forEach(function(item, index, array) {
 **Добавление элемента в конец массива**
 
 ```js
-var newLength = fruits.push('Апельсин');
+var newLength = fruits.push("Апельсин");
 // ["Яблоко", "Банан", "Апельсин"]
 ```
 
@@ -65,17 +60,17 @@ var first = fruits.shift(); // удалим Яблоко (из начала)
 **Добавление элемента в начало массива**
 
 ```js
-var newLength = fruits.unshift('Клубника') // добавляет в начало
+var newLength = fruits.unshift("Клубника"); // добавляет в начало
 // ["Клубника", "Банан"];
 ```
 
 **Поиск номера элемента в массиве**
 
 ```js
-fruits.push('Манго');
+fruits.push("Манго");
 // ["Клубника", "Банан", "Манго"]
 
-var pos = fruits.indexOf('Банан');
+var pos = fruits.indexOf("Банан");
 // 1
 ```
 
@@ -90,11 +85,12 @@ var removedItem = fruits.splice(pos, 1); // так можно удалить э�
 **Удаление нескольких элементов, начиная с определённого индекса**
 
 ```js
-var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+var vegetables = ["Капуста", "Репа", "Редиска", "Морковка"];
 console.log(vegetables);
 // ["Капуста", "Репа", "Редиска", "Морковка"]
 
-var pos = 1, n = 2;
+var pos = 1,
+  n = 2;
 
 var removedItems = vegetables.splice(pos, n);
 // так можно удалить элементы, n определяет количество элементов для удаления,
@@ -138,9 +134,9 @@ new Array(arrayLength)
 Массивы в JavaScript индексируются с нуля: первый элемент массива имеет индекс, равный `0`, а индекс последнего элемента равен значению свойства массива {{jsxref("Array.length", "length")}} минус 1.
 
 ```js
-var arr = ['первый элемент', 'второй элемент', 'последний элемент'];
-console.log(arr[0]);              // напечатает 'первый элемент'
-console.log(arr[1]);              // напечатает 'второй элемент'
+var arr = ["первый элемент", "второй элемент", "последний элемент"];
+console.log(arr[0]); // напечатает 'первый элемент'
+console.log(arr[1]); // напечатает 'второй элемент'
 console.log(arr[arr.length - 1]); // напечатает 'последний элемент'
 ```
 
@@ -166,18 +162,18 @@ renderer['3d'].setTexture(model, 'character.png');  // работает как �
 Обратите внимание, что во втором примере `3d` заключено в кавычки: `'3d'`. Индексы можно заключать в кавычки (например `years['2']` вместо `years[2]`), но в этом нет необходимости. Значение 2 в выражении `years[2]` будет неявно приведено к строке движком JavaScript через метод преобразования `toString`. Именно по этой причине ключи `'2'` и `'02'` будут ссылаться на два разных элемента в объекте `years` и следующий пример выведет `true`:
 
 ```js
-console.log(years['2'] != years['02']);
+console.log(years["2"] != years["02"]);
 ```
 
 Аналогично, к свойствам объекта, являющимся зарезервированными словами(!) можно получить доступ только посредством скобочной нотации:
 
 ```js
 var promise = {
-  'var'  : 'text',
-  'array': [1, 2, 3, 4]
+  var: "text",
+  array: [1, 2, 3, 4],
 };
 
-console.log(promise['array']);
+console.log(promise["array"]);
 ```
 
 ### Взаимосвязь свойства `length` с числовыми свойствами
@@ -186,7 +182,7 @@ console.log(promise['array']);
 
 ```js
 var fruits = [];
-fruits.push('банан', 'яблоко', 'персик');
+fruits.push("банан", "яблоко", "персик");
 
 console.log(fruits.length); // 3
 ```
@@ -194,18 +190,18 @@ console.log(fruits.length); // 3
 При установке свойства в массиве, если свойство имеет действительный индекс и этот индекс выходит за пределы текущих границ массива, движок соответствующим образом обновит свойство {{jsxref("Array.length", "length")}}:
 
 ```js
-fruits[5] = 'манго';
-console.log(fruits[5]);             // 'манго'
-console.log(Object.keys(fruits));   // ['0', '1', '2', '5']
-console.log(fruits.length);         // 6
+fruits[5] = "манго";
+console.log(fruits[5]); // 'манго'
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 6
 ```
 
 Увеличиваем свойство `length`
 
 ```js
 fruits.length = 10;
-console.log(Object.keys(fruits));   // ['0', '1', '2', '5']
-console.log(fruits.length);         // 10
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 10
 ```
 
 Однако, уменьшение свойства {{jsxref("Array.length", "length")}} приведёт к удалению элементов.
@@ -229,7 +225,7 @@ console.log(fruits.length); // 2
 // Регистр игнорируется
 
 var myRe = /d(b+)(d)/i;
-var myArray = myRe.exec('cdbBdbsbz');
+var myArray = myRe.exec("cdbBdbsbz");
 ```
 
 Свойства и элементы, возвращаемые из данного сопоставления, описаны ниже:
@@ -287,7 +283,7 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 ```js
 function isLetter(character) {
-  return character >= 'a' && character <= 'z';
+  return character >= "a" && character <= "z";
 }
 
 if (Array.prototype.every.call(str, isLetter)) {
@@ -309,8 +305,8 @@ if (Array.every(str, isLetter)) {
 
 ```js
 // Предполагаем, что дополнения массива уже присутствуют (для них так же можно использовать polyfill'ы)
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   var i,
     // Мы могли построить массив методов следующим образом, однако метод
@@ -319,17 +315,32 @@ if (Array.every(str, isLetter)) {
     //   return typeof Array[methodName] === 'function'
     // });
     methods = [
-      'join', 'reverse', 'sort', 'push', 'pop', 'shift', 'unshift',
-      'splice', 'concat', 'slice', 'indexOf', 'lastIndexOf',
-      'forEach', 'map', 'reduce', 'reduceRight', 'filter',
-      'some', 'every'
+      "join",
+      "reverse",
+      "sort",
+      "push",
+      "pop",
+      "shift",
+      "unshift",
+      "splice",
+      "concat",
+      "slice",
+      "indexOf",
+      "lastIndexOf",
+      "forEach",
+      "map",
+      "reduce",
+      "reduceRight",
+      "filter",
+      "some",
+      "every",
     ],
     methodCount = methods.length,
-    assignArrayGeneric = function(methodName) {
+    assignArrayGeneric = function (methodName) {
       if (!Array[methodName]) {
         var method = Array.prototype[methodName];
-        if (typeof method === 'function') {
-          Array[methodName] = function() {
+        if (typeof method === "function") {
+          Array[methodName] = function () {
             return method.call.apply(method, arguments);
           };
         }
@@ -339,7 +350,7 @@ if (Array.every(str, isLetter)) {
   for (i = 0; i < methodCount; i++) {
     assignArrayGeneric(methods[i]);
   }
-}());
+})();
 ```
 
 ## Примеры
@@ -350,11 +361,11 @@ if (Array.every(str, isLetter)) {
 
 ```js
 var msgArray = [];
-msgArray[0] = 'Привет';
-msgArray[99] = 'мир';
+msgArray[0] = "Привет";
+msgArray[99] = "мир";
 
 if (msgArray.length === 100) {
-  console.log('Длина равна 100.');
+  console.log("Длина равна 100.");
 }
 ```
 
@@ -364,21 +375,22 @@ if (msgArray.length === 100) {
 
 ```js
 var board = [
-  ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ];
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
 
-console.log(board.join('\n') + '\n\n');
+console.log(board.join("\n") + "\n\n");
 
 // Двигаем королевскую пешку вперёд на две клетки
 board[4][4] = board[6][4];
-board[6][4] = ' ';
-console.log(board.join('\n'));
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 Ниже показан вывод:

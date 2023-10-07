@@ -1,17 +1,6 @@
 ---
 title: tabs.onDetached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onDetached
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
 ---
 
 {{AddonSidebar()}}
@@ -21,9 +10,9 @@ Lancé lorsqu'un onglet est détaché d'une fenêtre, par exemple parce qu'il es
 ## Syntaxe
 
 ```js
-browser.tabs.onDetached.addListener(listener)
-browser.tabs.onDetached.removeListener(listener)
-browser.tabs.onDetached.hasListener(listener)
+browser.tabs.onDetached.addListener(listener);
+browser.tabs.onDetached.removeListener(listener);
+browser.tabs.onDetached.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

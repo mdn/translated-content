@@ -28,8 +28,8 @@ WebGLTexture gl.createTexture();
 ### 创建一个纹理
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 ```
 

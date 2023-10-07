@@ -1,7 +1,6 @@
 ---
 title: Clases de caracteres
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 ---
 
 {{JsSidebar("Guía de JavaScript")}}
@@ -145,7 +144,6 @@ var regexpCuatroDigitos = /\b\d{4}\b/g;
 // \d{4} indica un dígito, cuatro veces
 // \b indica otro límite (es decir, no termina la coincidencia en medio de una palabra)
 
-
 console.table(datosAleatorios.match(regexpCuatroDigitos));
 // ['8787', '3512', '8735']
 ```
@@ -153,7 +151,8 @@ console.table(datosAleatorios.match(regexpCuatroDigitos));
 ### Busca una palabra (del alfabeto latino) que comience con A
 
 ```js
-var extractoAlicia = "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
+var extractoAlicia =
+  "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
 var regexpPalabraEmpiezaConA = /\b[aA]\w+/g;
 // \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
 // [aA] indica las letras a o A
@@ -173,7 +172,7 @@ var regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP pasa por U+0000 a U+FFFF pero el espacio es U+0020
 
 console.table(textoNoEs.match(regexpPalabraBMP));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emojis, ya que esos caracteres no los maneja la plataforma (Kuma).

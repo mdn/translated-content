@@ -35,14 +35,14 @@ var formData = new FormData();
 使用 {{domxref("FormData.append")}} 添加两个 `username 的值：`
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 下列 `getAll()` 方法会返回一个数组，包含了所有 `username` 的值：
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
 ## 规范

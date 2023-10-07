@@ -16,11 +16,11 @@ slug: Web/CSS/align-content
 ```css
 /* 基本的な位置による配置 */
 /* align-content は left および right の値を取りません */
-align-content: center;     /* アイテムを中央に寄せる */
-align-content: start;      /* アイテムを先頭に寄せる */
-align-content: end;        /* アイテムを末尾に寄せる */
+align-content: center; /* アイテムを中央に寄せる */
+align-content: start; /* アイテムを先頭に寄せる */
+align-content: end; /* アイテムを末尾に寄せる */
 align-content: flex-start; /* フレックスアイテムを先頭に寄せる */
-align-content: flex-end;   /* フレックスアイテムを末尾に寄せる */
+align-content: flex-end; /* フレックスアイテムを末尾に寄せる */
 
 /* 通常の配置 */
 align-content: normal;
@@ -34,12 +34,12 @@ align-content: last baseline;
 align-content: space-between; /* アイテムを均等に配置し
                                  最初のアイテムは先頭に寄せ、
                                  最後のアイテムは末尾に寄せる */
-align-content: space-around;  /* アイテムを均等に配置し
+align-content: space-around; /* アイテムを均等に配置し
                                  各アイテムの両側に半分の大きさの
                                  間隔を置く */
-align-content: space-evenly;  /* アイテムを均等に配置し
+align-content: space-evenly; /* アイテムを均等に配置し
                                  各アイテムの周りに同じ大きさの間隔を置く */
-align-content: stretch;       /* アイテムを均等に配置し
+align-content: stretch; /* アイテムを均等に配置し
                                  コンテナーに合うようにサイズ「自動」の
                                  アイテムを引き伸ばす */
 
@@ -62,10 +62,10 @@ align-content: unset;
   - : 各アイテムは、交差軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。
 - `flex-start`
   - : 各アイテムは、フレックスコンテナーに依存して、交差軸の先頭側である配置コンテナーの端に向けて互いに寄せて配置されます。
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
 - `flex-end`
   - : 各アイテムは、フレックスコンテナーに依存して、交差軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
 - `center`
   - : 各アイテムは、交差軸方向で配置コンテナーの中央に互いに寄せて配置されます。
 - `normal`
@@ -77,6 +77,7 @@ align-content: unset;
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
 
     `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
+
 - `space-between`
   - : 各アイテムは、配置コンテナーの中で交差軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは配置コンテナーの交差軸の先頭側に寄せられ、最後のアイテムは配置コンテナーの交差軸の末尾側に寄せられます。
 - `space-around`
@@ -104,7 +105,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -223,15 +224,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

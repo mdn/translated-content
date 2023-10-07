@@ -1,7 +1,6 @@
 ---
 title: アイコン、画像が期待と異なるサイズで表示される
 slug: orphaned/Web/Compatibility_FAQ/Invalid_Icon_Size.html
-original_slug: Web/Compatibility_FAQ/Invalid_Icon_Size.html
 ---
 
 ## 概要

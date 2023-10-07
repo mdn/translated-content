@@ -15,7 +15,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 - [デバッガー](/ja/docs/Tools/Debugger) で [DOM Mutation](/ja/docs/Tools/Debugger/Break_on_DOM_mutation) にブレークポイントを設定できるようになりました。ノードやその属性が変化したときや、ノードが DOM から削除されたときに一時停止できます ([Firefox バグ 1576219](https://bugzil.la/1576219))。
 - デバッガーで一時停止したときに、ステップ実行や復帰ができるボタンを持つオーバーレイをページ上に表示するようになりました ([Firefox バグ 1574646](https://bugzil.la/1574646))。
-- デバッガーで、すでにエンジンによって破棄されているソース (たいてい、ページを読み込むときにに 1 回実行するスクリプト) を表示するようになりました。よって次に実行するとき、デバッグするためのブレークポイントを正しく設定できます ([Firefox バグ 1572280](https://bugzil.la/1572280))。
+- デバッガーで、すでにエンジンによって破棄されているソース (たいてい、ページを読み込むときに 1 回実行するスクリプト) を表示するようになりました。よって次に実行するとき、デバッグするためのブレークポイントを正しく設定できます ([Firefox バグ 1572280](https://bugzil.la/1572280))。
 - デバッガーの [スコープパネル](/ja/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) のグループ化を簡単にして、以前表示した追加スコープをトップレベル関数の上に統合しました (例: [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`with`](/ja/docs/Web/JavaScript/Reference/Statements/with)、[`if`/`else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) で作成されたブロック) ([Firefox バグ 1448166](https://bugzil.la/1448166))。
 - デバッガーが、ステップ実行中に [スコープパネル](/ja/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) で現在選択および展開している変数を維持するようになりました ([Firefox バグ 1405402](https://bugzil.la/1405402))。
 - デバッガーが、非同期関数のステップオーバーを正しく扱うようになりました。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function) のデバッグが容易になります ([Firefox バグ 1570178](https://bugzil.la/1570178))。

@@ -30,17 +30,17 @@ O elemento associado à chave especificada no objeto `WeakMap`. Se a chave não 
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Retorna "foo".
-wm.get('baz');  // Retorna undefined.
+wm.get("baz"); // Retorna undefined.
 ```
 
 ## Especificações
 
-| Specification                                                                                            | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Specification                                                                  | Status               | Comment             |
+| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

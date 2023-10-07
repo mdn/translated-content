@@ -1,7 +1,8 @@
 ---
-title: HTMLAreaElement.username
+title: "HTMLAreaElement: username プロパティ"
 slug: Web/API/HTMLAreaElement/username
-original_slug: Web/API/HTMLHyperlinkElementUtils/username
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -17,7 +18,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ### エリアのリンクからユーザー名を取得
 
 ```js
-// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementByID("myArea");
 area.username; // 'anonymous' を返す
 ```

@@ -25,14 +25,14 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
+console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 // resultado esperado: 3
 ```
 
 ## Especificações
 
-| Especificação                                                                        |
-| ------------------------------------------------------------------------------------ |
+| Especificação                                                  |
+| -------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} |
 
 ## Compatibilidade com navegadores

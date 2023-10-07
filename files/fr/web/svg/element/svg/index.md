@@ -1,7 +1,6 @@
 ---
 title: <svg>
 slug: Web/SVG/Element/svg
-translation_of: Web/SVG/Element/svg
 ---
 
 {{SVGRef}}
@@ -29,22 +28,20 @@ Prenons le fichier SVG suivant (représentant le drapeau nationnal de l'Italie) 
 Ce fichier peut être inclus dans un document HTML5 de cette façon :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Exemple mêlant HTML & SVG</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemple mêlant HTML & SVG</title>
+  </head>
 
-<body>
-
-  <svg width="150" height="100" viewBox="0 0 3 2">
-    <rect width="1" height="2" x="0" fill="#008d46" />
-    <rect width="1" height="2" x="1" fill="#ffffff" />
-    <rect width="1" height="2" x="2" fill="#d2232c" />
-  </svg>
-
-</body>
+  <body>
+    <svg width="150" height="100" viewBox="0 0 3 2">
+      <rect width="1" height="2" x="0" fill="#008d46" />
+      <rect width="1" height="2" x="1" fill="#ffffff" />
+      <rect width="1" height="2" x="2" fill="#d2232c" />
+    </svg>
+  </body>
 </html>
 ```
 

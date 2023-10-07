@@ -27,7 +27,7 @@ canvas.width = pxl;
 你能够通过下面的代码得到 canvas 的宽度：
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 console.log(canvas.width); // 300
 ```
 

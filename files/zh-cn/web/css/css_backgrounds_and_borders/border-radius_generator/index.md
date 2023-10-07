@@ -1,6 +1,6 @@
 ---
 title: 圆角边框生成器
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+slug: Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 ---
 
 {{CSSRef}}

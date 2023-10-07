@@ -1,14 +1,6 @@
 ---
 title: Синхронизация видимости элемента с Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
-tags:
-  - API
-  - Example
-  - Intermediate
-  - Intersection Observer
-  - Intersection Observer API
-  - Гайды
-translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -42,8 +34,7 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
     </nav>
   </aside>
 
-  <main>
-  </main>
+  <main></main>
 </div>
 ```
 
@@ -242,11 +233,10 @@ function startup() {
   let observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: [0.0, 0.75]
+    threshold: [0.0, 0.75],
   };
 
-  adObserver = new IntersectionObserver(intersectionCallback,
-                    observerOptions);
+  adObserver = new IntersectionObserver(intersectionCallback, observerOptions);
 
   buildContents();
   refreshIntervalID = window.setInterval(handleRefreshInterval, 1000);
@@ -275,13 +265,13 @@ function handleVisibilityChange() {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
       visibleAds = [];
-      previouslyVisibleAds.forEach(function(adBox) {
+      previouslyVisibleAds.forEach(function (adBox) {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
       });
     }
   } else {
-    previouslyVisibleAds.forEach(function(adBox) {
+    previouslyVisibleAds.forEach(function (adBox) {
       adBox.dataset.lastViewStarted = performance.now();
     });
     visibleAds = previouslyVisibleAds;
@@ -302,7 +292,7 @@ function handleVisibilityChange() {
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach(function (entry) {
     let adBox = entry.target;
 
     if (entry.isIntersecting) {
@@ -312,7 +302,10 @@ function intersectionCallback(entries) {
       }
     } else {
       visibleAds.delete(adBox);
-      if ((entry.intersectionRatio === 0.0) && (adBox.dataset.totalViewTime >= 60000)) {
+      if (
+        entry.intersectionRatio === 0.0 &&
+        adBox.dataset.totalViewTime >= 60000
+      ) {
         replaceAd(adBox);
       }
     }
@@ -332,7 +325,7 @@ function intersectionCallback(entries) {
 function handleRefreshInterval() {
   let redrawList = [];
 
-  visibleAds.forEach(function(adBox) {
+  visibleAds.forEach(function (adBox) {
     let previousTime = adBox.dataset.totalViewTime;
     updateAdTimer(adBox);
 
@@ -342,8 +335,8 @@ function handleRefreshInterval() {
   });
 
   if (redrawList.length) {
-    window.requestAnimationFrame(function(time) {
-      redrawList.forEach(function(adBox) {
+    window.requestAnimationFrame(function (time) {
+      redrawList.forEach(function (adBox) {
         drawAdTimer(adBox);
       });
     });
@@ -369,7 +362,8 @@ function updateAdTimer(adBox) {
   if (lastStarted) {
     let diff = currentTime - lastStarted;
 
-    adBox.dataset.totalViewTime = parseFloat(adBox.dataset.totalViewTime) + diff;
+    adBox.dataset.totalViewTime =
+      parseFloat(adBox.dataset.totalViewTime) + diff;
   }
 
   adBox.dataset.lastViewStarted = currentTime;
@@ -415,7 +409,8 @@ function drawAdTimer(adBox) {
 Функция `buildContents()` вызывается при старте приложения. Она формирует тело статьи и добавляет рекламные блоки:
 
 ```js
-let loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+let loremIpsum =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
   " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
   " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
@@ -424,7 +419,7 @@ let loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " cursus nunc.</p>";
 
 function buildContents() {
-  for (let i=0; i<5; i++) {
+  for (let i = 0; i < 5; i++) {
     contentBox.appendChild(createArticle(loremIpsum));
 
     if (!(i % 2)) {
@@ -455,7 +450,7 @@ function createArticle(contents) {
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
-  nextArticleID +=1 ;
+  nextArticleID += 1;
 
   return articleElem;
 }
@@ -473,27 +468,27 @@ function loadRandomAd(replaceBox) {
     {
       bgcolor: "#cec",
       title: "Eat Green Beans",
-      body: "Make your mother proud—they're good for you!"
+      body: "Make your mother proud—they're good for you!",
     },
     {
       bgcolor: "aquamarine",
       title: "MillionsOfFreeBooks.whatever",
-      body: "Read classic literature online free!"
+      body: "Read classic literature online free!",
     },
     {
       bgcolor: "lightgrey",
       title: "3.14 Shades of Gray: A novel",
-      body: "Love really does make the world go round..."
+      body: "Love really does make the world go round...",
     },
     {
       bgcolor: "#fee",
       title: "Flexbox Florist",
-      body: "When life's layout gets complicated, send flowers."
-    }
+      body: "When life's layout gets complicated, send flowers.",
+    },
   ];
   let adBox, title, body, timerElem;
 
-  let ad = ads[Math.floor(Math.random()*ads.length)];
+  let ad = ads[Math.floor(Math.random() * ads.length)];
 
   if (replaceBox) {
     adObserver.unobserve(replaceBox);
@@ -522,7 +517,7 @@ function loadRandomAd(replaceBox) {
   adBox.dataset.totalViewTime = 0;
   adBox.dataset.lastViewStarted = 0;
 
-  timerElem.className="timer";
+  timerElem.className = "timer";
   timerElem.innerText = "0:00";
 
   if (!replaceBox) {
@@ -570,8 +565,13 @@ function replaceAd(adBox) {
 
   updateAdTimer(adBox);
 
-  visibleTime = adBox.dataset.totalViewTime
-  console.log("  Replacing ad: " + adBox.querySelector("h2").innerText + " - visible for " + visibleTime)
+  visibleTime = adBox.dataset.totalViewTime;
+  console.log(
+    "  Replacing ad: " +
+      adBox.querySelector("h2").innerText +
+      " - visible for " +
+      visibleTime,
+  );
 
   loadRandomAd(adBox);
 }
@@ -585,7 +585,7 @@ function replaceAd(adBox) {
 
 {{EmbedLiveSample("fullpage_example", 750, 800)}}
 
-## Смотрите также:
+## Смотрите также
 
 - [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API)
 - [Page Visibility API](/ru/docs/Web/API/Page_Visibility_API)

@@ -1,8 +1,6 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-translation_of: Web/HTTP/Status/303
-browser-compat: http.status.303
 ---
 
 {{HTTPSidebar}}

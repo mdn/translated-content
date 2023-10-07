@@ -2,6 +2,7 @@
 title: 웹어셈블리의 컨셉
 slug: WebAssembly/Concepts
 ---
+
 {{WebAssemblySidebar}}
 
 본 글에서는 웹어셈블리의 작동원리 뒤에 숨어있는 컨셉을 설명함과 동시에 웹어셈블리의 목표, 웹어셈블리가 해결할 수 있는 문제, 그리고 웹브라우저 렌더링 엔진 안에서 웹어셈블리가 작동하는 원리에 관해 설명하려고 합니다.
@@ -49,7 +50,7 @@ WebAssembly는 자바스크립트와는 다른 언어이지만, 자바스크립�
 
 어떻게 웹어셈블리가 브라우저에서 돌아가는지 이해하기 위해서 필요한 몇가지 핵심 컨셉들이 있습니다. 이 모든 컨셉은 [웹어셈블리 자바스크립트 API](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)에 반영돼있습니다.
 
-- **모듈**: 실행 가능한 컴퓨터 코드로 브라우저에서 컴파일된 WebAssembly 바이너리입니다. 모듈은 stateless이며 [Blob](/ko/docs/Web/API/Blob)처럼 Windows와 [worker](/ko/docs/MDN/Doc_status/API/WebWorkers) 간에 [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)를 통해 명시적으로 공유 할 수 있습니다. 모듈은 ES2015 모듈과 마찬가지로 가져오기 및 내보내기를 선언합니다.
+- **모듈**: 실행 가능한 컴퓨터 코드로 브라우저에서 컴파일된 WebAssembly 바이너리입니다. 모듈은 stateless이며 [Blob](/ko/docs/Web/API/Blob)처럼 Windows와 [worker](/ko/docs/MDN/Doc_status/API/WebWorkers) 간에 [`postMessage()`](/ko/docs/Web/API/MessagePort/postMessage)를 통해 명시적으로 공유 할 수 있습니다. 모듈은 ES2015 모듈과 마찬가지로 가져오기 및 내보내기를 선언합니다.
 - **메모리**: 웹어셈블리의 저수준 메모리 접근 명령어에 의해 읽고 쓰여지는 바이트들의 선형 배열인, 사이즈 조절이 가능한 어레이버퍼(ArrayBuffer)입니다.
 - **테이블**: (안전성이나 이식성 등을 위해서) 날(raw) 바이트로 메모리에 저장될 수 없는 (예를 들면 함수를 가리키는) 레퍼런스의, 사이즈 조절 가능한 형식 지정된 배열입니다.
 - **인스턴스**: 모듈과 그 모듈이 사용하는 모든 상태의 쌍입니다. 모듈의 상태로는 메모리, 테이블, 임포트된 값의 집합 등이 있습니다. 인스턴스는 ES6 모듈처럼 특정한 전역에 특정한 임포트의 집합과 함께 로드됩니다.

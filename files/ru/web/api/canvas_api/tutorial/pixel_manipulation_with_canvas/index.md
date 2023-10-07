@@ -1,12 +1,6 @@
 ---
 title: Пиксельная манипуляция с холстом
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-tags:
-  - Графика
-  - Промежуточный
-  - Руководство
-  - Холст
-translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
@@ -31,7 +25,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 Например, чтобы прочитать значение синего компонента из пикселя в столбце 200, строка 50 на изображении, вы должны сделать следующее:
 
 ```js
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 Вы можете получить доступ к размеру массива пикселей в байтах, прочитав атрибут `Uint8ClampedArray.length`:
@@ -81,25 +75,33 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+img.src = "rhino.jpg";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+img.onload = function () {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 };
-var color = document.getElementById('color');
+var color = document.getElementById("color");
 function pick(event) {
   var x = event.layerX;
   var y = event.layerY;
   var pixel = ctx.getImageData(x, y, 1, 1);
   var data = pixel.data;
-  var rgba = 'rgba(' + data[0] + ', ' + data[1] +
-             ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-  color.style.background =  rgba;
+  var rgba =
+    "rgba(" +
+    data[0] +
+    ", " +
+    data[1] +
+    ", " +
+    data[2] +
+    ", " +
+    data[3] / 255 +
+    ")";
+  color.style.background = rgba;
   color.textContent = rgba;
 }
-canvas.addEventListener('mousemove', pick);
+canvas.addEventListener("mousemove", pick);
 ```
 
 {{ EmbedLiveSample('Выбор_цвета', 610, 240) }}
@@ -127,49 +129,49 @@ ctx.putImageData(myImageData, 0, 0);
 ```html hidden
 <canvas id="canvas" width="300" height="227"></canvas>
 <div>
-  <input id="grayscalebtn" value="Grayscale" type="button">
-  <input id="invertbtn" value="Invert" type="button">
+  <input id="grayscalebtn" value="Grayscale" type="button" />
+  <input id="invertbtn" value="Invert" type="button" />
 </div>
 ```
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-img.onload = function() {
+img.src = "rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
   var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   var data = imageData.data;
 
-  var invert = function() {
+  var invert = function () {
     for (var i = 0; i < data.length; i += 4) {
-      data[i]     = 255 - data[i];     // red
+      data[i] = 255 - data[i]; // red
       data[i + 1] = 255 - data[i + 1]; // green
       data[i + 2] = 255 - data[i + 2]; // blue
     }
     ctx.putImageData(imageData, 0, 0);
   };
 
-  var grayscale = function() {
+  var grayscale = function () {
     for (var i = 0; i < data.length; i += 4) {
       var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-      data[i]     = avg; // red
+      data[i] = avg; // red
       data[i + 1] = avg; // green
       data[i + 2] = avg; // blue
     }
     ctx.putImageData(imageData, 0, 0);
   };
 
-  var invertbtn = document.getElementById('invertbtn');
-  invertbtn.addEventListener('click', invert);
-  var grayscalebtn = document.getElementById('grayscalebtn');
-  grayscalebtn.addEventListener('click', grayscale);
+  var invertbtn = document.getElementById("invertbtn");
+  invertbtn.addEventListener("click", invert);
+  var grayscalebtn = document.getElementById("grayscalebtn");
+  grayscalebtn.addEventListener("click", grayscale);
 }
 ```
 
@@ -182,9 +184,17 @@ function draw(img) {
 Мы получаем положение мыши и обрезаем изображение на 5 пикселей левее и выше и на 5 пикселей правее и ниже положения мыши. Затем мы копируем его на другой холст и изменяем размер изображения до размера, который мы хотим. При масштабировании мы изменяем холст с исходного размера 10×10 пикселей до 200×200.
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.abs(x - 5), Math.abs(y - 5),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.abs(x - 5),
+  Math.abs(y - 5),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200,
+);
 ```
 
 Поскольку по умолчанию включено сглаживание, мы можем захотеть отключить сглаживание, чтобы увидеть чёткие пиксели. Вы можете переключить флажок, чтобы увидеть эффект свойства `imageSmoothingEnabled` (которому нужны префиксы для разных браузеров).
@@ -193,48 +203,53 @@ zoomctx.drawImage(canvas,
 <canvas id="canvas" width="300" height="227"></canvas>
 <canvas id="zoom" width="300" height="227"></canvas>
 <div>
-<label for="smoothbtn">
-  <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
-  Enable image smoothing
-</label>
+  <label for="smoothbtn">
+    <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn" />
+    Enable image smoothing
+  </label>
 </div>
 ```
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-img.onload = function() {
+img.src = "rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-  var zoomctx = document.getElementById('zoom').getContext('2d');
+  img.style.display = "none";
+  var zoomctx = document.getElementById("zoom").getContext("2d");
 
-  var smoothbtn = document.getElementById('smoothbtn');
-  var toggleSmoothing = function(event) {
+  var smoothbtn = document.getElementById("smoothbtn");
+  var toggleSmoothing = function (event) {
     zoomctx.imageSmoothingEnabled = this.checked;
     zoomctx.mozImageSmoothingEnabled = this.checked;
     zoomctx.webkitImageSmoothingEnabled = this.checked;
     zoomctx.msImageSmoothingEnabled = this.checked;
   };
-  smoothbtn.addEventListener('change', toggleSmoothing);
+  smoothbtn.addEventListener("change", toggleSmoothing);
 
-  var zoom = function(event) {
+  var zoom = function (event) {
     var x = event.layerX;
     var y = event.layerY;
-    zoomctx.drawImage(canvas,
-                      Math.abs(x - 5),
-                      Math.abs(y - 5),
-                      10, 10,
-                      0, 0,
-                      200, 200);
+    zoomctx.drawImage(
+      canvas,
+      Math.abs(x - 5),
+      Math.abs(y - 5),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200,
+    );
   };
 
-  canvas.addEventListener('mousemove', zoom);
+  canvas.addEventListener("mousemove", zoom);
 }
 ```
 
@@ -245,11 +260,9 @@ function draw(img) {
 {{Domxref ("HTMLCanvasElement")}} предоставляет метод `toDataURL()`, который полезен при сохранении изображений. Он возвращает [data URI](/ru/docs/Web/HTTP/data_URIs), содержащий представление изображения в формате, заданном параметром `type` (по умолчанию используется в [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). Возвращаемое изображение имеет разрешение 96 точек на дюйм.
 
 - **Примечание:**
-  - : Имейте в виду, что если холст содержит пиксели, полученные из другого {{Glossary ("origin")}} без использования CORS, холст будет **испорчен**, и его содержимое больше не будет считываться и сохраняться. Смотрите {{SectionOnPage ("/en-US/docs/Web/HTML/CORS_enabled_image", "Безопасность и испорченные холсты")}}
+  - : Имейте в виду, что если холст содержит пиксели, полученные из другого {{Glossary ("origin")}} без использования CORS, холст будет **испорчен**, и его содержимое больше не будет считываться и сохраняться. Смотрите [Безопасность и испорченные холсты](/ru/docs/Web/HTML/CORS_enabled_image#безопасность_и_испорченные_холсты_canvas)
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
-
   - : Настройки по умолчанию. Создаёт изображение в формате PNG.
-
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Создаёт изображение в формате JPG. Дополнительно вы можете задать параметр "качество" (quality) в диапазоне от 0 до 1, причём единица задаёт лучшее качество и 0 - почти не распознаваемый, но небольшой по размеру файл.
 

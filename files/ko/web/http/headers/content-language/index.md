@@ -43,17 +43,17 @@ Content-Language: de-DE, en-CA
 
 ### 문서가 작성된 언어 나타내기
 
-글로벌 [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) 어트리뷰는 HTML 엘리먼트 상에서 전체 [HTML](/ko/docs/Web/HTML) 문서 혹은 그의 일부의 언어를 나타내기 위해 사용됩니다.
+글로벌 [`lang`](/ko/docs/Web/HTML/Global_attributes/lang) 어트리뷰는 HTML 엘리먼트 상에서 전체 [HTML](/ko/docs/Web/HTML) 문서 혹은 그의 일부의 언어를 나타내기 위해 사용됩니다.
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 다음과 같이 문서 언어를 나타내기 위해 이와 같은 메타 엘리먼트를 사용하지 **마세요**:
 
 ```html example-bad
 <!-- /!\ This is bad practice -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### 리소스에 대해 대상 청중 나타내기

@@ -1,7 +1,6 @@
 ---
 title: height
 slug: Web/CSS/height
-translation_of: Web/CSS/height
 ---
 
 {{CSSRef}}
@@ -60,7 +59,7 @@ height: unset;
 
 {{csssyntax}}
 
-## Пример:
+## Пример
 
 ### HTML
 
@@ -68,9 +67,7 @@ height: unset;
 <div id="taller">Я 50 пикселей в высоту.</div>
 <div id="shorter">Я 25 пикселей в высоту.</div>
 <div id="parent">
-  <div id="child">
-    Моя высота - половина от высоты родителя.
-  </div>
+  <div id="child">Моя высота - половина от высоты родителя.</div>
 </div>
 ```
 

@@ -28,11 +28,11 @@ slug: Web/Events/Event_handlers
 以下の例では、 `greet()` 関数を `click` イベントに割り当てるために `onclick` プロパティを使用しています。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-function greet(event){
+function greet(event) {
   // print the event object to console
-  console.log('greet:', arguments)
+  console.log("greet:", arguments);
 }
 
 btn.onclick = greet;
@@ -49,14 +49,14 @@ btn.onclick = greet;
 以下では、単純な `greet()` 関数をクリックイベントのリスナーまたはイベントハンドラーとして設定する方法を示します (必要に応じて、名前付き関数の代わりにラムダ関数を使用することもできます)。繰り返しますが、イベントは、イベントハンドラーの第一引数として渡されます。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-function greet(event){
+function greet(event) {
   // print the event object to console
-  console.log('greet:', arguments)
+  console.log("greet:", arguments);
 }
 
-btn.addEventListener('click', greet);
+btn.addEventListener("click", greet);
 ```
 
 このメソッドは、イベントのキャプチャおよび削除の制御をするために、追加の引数/オプションを取ることもできます。詳細については、 {{domxref("EventTarget.addEventListener")}} のリファレンスページを参照してください。
@@ -70,10 +70,14 @@ btn.addEventListener('click', greet);
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', function(event) {
-  // イベントオブジェクトをコンソールに表示
-  console.log('greet:', arguments)
-  }, { signal: controller.signal }); // このハンドラーに AbortSignal を渡す
+btn.addEventListener(
+  "click",
+  function (event) {
+    // イベントオブジェクトをコンソールに表示
+    console.log("greet:", arguments);
+  },
+  { signal: controller.signal },
+); // このハンドラーに AbortSignal を渡す
 ```
 
 上記のコードで生成したイベントハンドラーは、次のようにして削除することができます。

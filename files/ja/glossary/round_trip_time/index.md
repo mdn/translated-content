@@ -1,7 +1,6 @@
 ---
 title: Round Trip Time (ラウンドトリップタイム)
 slug: Glossary/Round_Trip_Time
-original_slug: Glossary/Round_Trip_Time_(RTT)
 ---
 
 **ラウンドトリップタイム (RTT)** とは、データパケットが宛先に送信されるのにかかる時間と、そのパケットの確認応答が発信元で受信されるのにかかる時間の長さです。ネットワークとサーバー間の RTT は、`ping` コマンドを使用して計測できます。

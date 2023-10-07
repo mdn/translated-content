@@ -30,10 +30,10 @@ HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不
 
 ## 什麼是 HTML head?
 
-讓我們再看一次之前所看過的 [HTML 文件](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)：
+讓我們再看一次之前所看過的 [HTML 文件](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#解析_html_文件)：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -155,7 +155,7 @@ The description is also used on search engine result pages. Let's go through an 
 
    ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
-> **備註：** In Google, you will see some relevant subpages of MDN listed below the main MDN homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](http://www.google.com/webmasters/tools/) — a way to make your site's search results better in the Google search engine.
+> **備註：** In Google, you will see some relevant subpages of MDN listed below the main MDN homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](https://www.google.com/webmasters/tools/) — a way to make your site's search results better in the Google search engine.
 
 > **備註：** Many `<meta>` features just aren't used any more. For example, the keyword `<meta>` element (`<meta name="keywords" content="fill, in, your, keywords, here">`) — which is supposed to provide keywords for search engines to determine relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.
 
@@ -163,12 +163,12 @@ The description is also used on search engine result pages. Let's go through an 
 
 As you travel around the web, you'll find other types of metadata, too. A lot of the features you'll see on websites are proprietary creations, designed to provide certain sites (such as social networking sites) with specific pieces of information they can use.
 
-For example, [Open Graph Data](http://ogp.me/) is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN sourcecode, you'll find this:
+For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN sourcecode, you'll find this:
 
 ```html
 <meta
   property="og:image"
-  content="https://developer.mozilla.org/static/img/opengraph-logo.png" />
+  content="https://developer.mozilla.org/mdn-social-share.png" />
 <meta
   property="og:description"
   content="The Mozilla Developer Network (MDN) provides

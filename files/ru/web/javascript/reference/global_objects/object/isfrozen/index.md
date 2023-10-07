@@ -1,14 +1,8 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка
@@ -54,32 +48,36 @@ delete oneProp.p;
 assert(Object.isFrozen(oneProp) === true);
 
 // Не расширяемый объект с не записываемым, но всё ещё настраиваемым свойством, не является замороженным.
-var nonWritable = { e: 'plep' };
+var nonWritable = { e: "plep" };
 Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, 'e', { writable: false }); // делаем свойство не записываемым
+Object.defineProperty(nonWritable, "e", { writable: false }); // делаем свойство не записываемым
 assert(Object.isFrozen(nonWritable) === false);
 
 // Изменение свойства на не настраиваемое делает объект замороженным.
-Object.defineProperty(nonWritable, 'e', { configurable: false }); // делаем свойство не настраиваемым
+Object.defineProperty(nonWritable, "e", { configurable: false }); // делаем свойство не настраиваемым
 assert(Object.isFrozen(nonWritable) === true);
 
 // Не расширяемый объект с не настраиваемым, но всё ещё записываемым свойством, также не является замороженным.
-var nonConfigurable = { release: 'кракен!' };
+var nonConfigurable = { release: "кракен!" };
 Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, 'release', { configurable: false });
+Object.defineProperty(nonConfigurable, "release", { configurable: false });
 assert(Object.isFrozen(nonConfigurable) === false);
 
 // Изменение свойства на не записываемое делает объект замороженным.
-Object.defineProperty(nonConfigurable, 'release', { writable: false });
+Object.defineProperty(nonConfigurable, "release", { writable: false });
 assert(Object.isFrozen(nonConfigurable) === true);
 
 // Не расширяемый объект с настраиваемым свойством доступа не является замороженным.
-var accessor = { get food() { return 'ням'; } };
+var accessor = {
+  get food() {
+    return "ням";
+  },
+};
 Object.preventExtensions(accessor);
 assert(Object.isFrozen(accessor) === false);
 
 // ...но сделав это свойство не настраиваемым, объект становится замороженным.
-Object.defineProperty(accessor, 'food', { configurable: false });
+Object.defineProperty(accessor, "food", { configurable: false });
 assert(Object.isFrozen(accessor) === true);
 
 // Самым же простым способом заморозить объект можно через вызов на нём метода Object.freeze.

@@ -1,12 +1,6 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/wbr
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +24,9 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ### HTML
 
 ```html
-<p>http://voici<wbr>.une<wbr>.très<wbr>.très<wbr>.longue<wbr>.URL<wbr>.com/avec<wbr>/pleins<wbr>/de<wbr>/niveaux<wbr>/de<wbr>/pages</p>
+<p>
+  http://voici<wbr />.une<wbr />.très<wbr />.très<wbr />.longue<wbr />.URL<wbr />.com/avec<wbr />/pleins<wbr />/de<wbr />/niveaux<wbr />/de<wbr />/pages
+</p>
 ```
 
 ### Résultat

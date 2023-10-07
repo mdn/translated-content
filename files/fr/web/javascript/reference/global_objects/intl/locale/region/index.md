@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale.prototype.region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/region
 ---
 
 {{JSRef}}
@@ -38,7 +29,7 @@ console.log(regionStr.region);
 Le constructeur {{jsxref("Locale", "Locale")}} prend comme second argument un objet de paramétrage dont chacune des propriétés permet de définir une extension ou une composante de la locale.
 
 ```js
-let regionObj = new Intl.Locale("fr-Latn", {region: "FR"});
+let regionObj = new Intl.Locale("fr-Latn", { region: "FR" });
 
 console.log(regionObj.region);
 // Affichera "FR" dans la console

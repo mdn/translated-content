@@ -1,7 +1,6 @@
 ---
 title: CSS
 slug: Glossary/CSS
-original_slug: Glossario/CSS
 ---
 
 **CSS** (Cascading Style Sheets) é uma linguagem declarativa que controla a apresentação visual de páginas web em um {{glossary("browser","navegador")}}. O navegador aplica as declarações de estilo CSS aos elementos selecionados para exibi-los apropriadamente. Uma declaração de estilo contem as propriedades e seus valores, que determinam a aparência de uma página web.
@@ -17,7 +16,7 @@ p {
   color: yellow;
 
   /* A propriedade "background-color" define a cor ao fundo, neste caso preto. */
-  background-color: black
+  background-color: black;
 }
 ```
 
@@ -28,7 +27,7 @@ p {
 ### Conhecimento geral
 
 - [Aprenda CSS](/pt-BR/docs/Aprender/CSS)
-- {{interwiki("wikipedia", "Cascading Style Sheets")}} na Wikipedia
+- [Cascading Style Sheets](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets) na Wikipedia
 
 ### Referências técnicas
 

@@ -35,13 +35,13 @@ No exemplo seguinte, o laço **do...while** soma pelo menos uma vez e executa no
 ### Conteúdo JavaScript
 
 ```js
-var resultado = '';
+var resultado = "";
 var i = 0;
 do {
-   i += 1;
-   resultado += i + ' ';
+  i += 1;
+  resultado += i + " ";
 } while (i < 5);
-document.getElementById('exemplo').innerHTML = resultado;
+document.getElementById("exemplo").innerHTML = resultado;
 ```
 
 ### Resultado
@@ -50,11 +50,11 @@ document.getElementById('exemplo').innerHTML = resultado;
 
 ## Especificações
 
-| Specification                                                                                | Status                   | Comment                                           |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                                      | Standard                 | Initial definition. Implemented in JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.6.1', 'do-while statement')}}                 | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-do-while-statement', 'do-while statement')}} | {{Spec2('ES6')}}     | Trailing ; is now optional.                       |
+| Specification                                                        | Status             | Comment                                           |
+| -------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition.                                              | Standard           | Initial definition. Implemented in JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-12.6.1', 'do-while statement')}}           | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-do-while-statement', 'do-while statement')}} | {{Spec2('ES6')}}   | Trailing ; is now optional.                       |
 
 ## Compatibilidade com navegadores
 

@@ -1,14 +1,6 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
-tags:
-  - API
-  - Constructeur
-  - Experimental
-  - Fetch
-  - Reference
-  - request
-translation_of: Web/API/Request/Request
 ---
 
 {{APIRef("Fetch API")}}
@@ -49,8 +41,8 @@ var maRequete = new Request(entree[, init]);
 
 ## Erreurs
 
-| **Type**    | **Description**                                                                                                                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**    | **Description**                                                                                                                                                                                        |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `TypeError` | Depuis [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43), `Request()` déclenchera une TypeError si l'URL contient des informations d'authentification, comme dans `http://user:password@example.com`. |
 
 ## Exemple
@@ -60,16 +52,18 @@ Dans notre [exemple de Fetch Request](https://github.com/mdn/fetch-examples/tree
 Object URL et nous l'affichons dans un élément {{htmlelement ("img")}}.
 
 ```js
-var monImage = document.querySelector('img');
+var monImage = document.querySelector("img");
 
-var maRequete = new Request('fleurs.jpg');
+var maRequete = new Request("fleurs.jpg");
 
-fetch(maRequete).then(function(reponse) {
-  return reponse.blob();
-}).then(function(reponse) {
-  var URLdobjet = URL.createObjectURL(reponse);
-  monImage.src = URLdobjet;
-});
+fetch(maRequete)
+  .then(function (reponse) {
+    return reponse.blob();
+  })
+  .then(function (reponse) {
+    var URLdobjet = URL.createObjectURL(reponse);
+    monImage.src = URLdobjet;
+  });
 ```
 
 Dans notre [exemple de Fetch Request avec init](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (see [Fetch Request init en direct](http://mdn.github.io/fetch-examples/fetch-request-with-init/)), nous faisons la même chose, excepté que nous passons un objet init quand nous invoquons `fetch()`:
@@ -103,14 +97,16 @@ fetch(maRequete,monInit).then(function(reponse) {
 Vous pouvez aussi utilier un littéral d'objet tel que `headers` dans `init`.
 
 ```js
-var monInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+var monInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-var maRequete = new Request('fleurs.jpg', monInit);
+var maRequete = new Request("fleurs.jpg", monInit);
 ```
 
 Vous pouvez aussi passer un objet {{domxref("Request")}} au constructeur `Request()` pour créer une copie de la Request (c'est similaire au fait d'appeler la méthode {{domxref("Request.clone","clone()")}}).

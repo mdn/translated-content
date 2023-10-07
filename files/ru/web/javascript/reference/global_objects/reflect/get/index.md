@@ -1,12 +1,6 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reflect
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
 
 {{JSRef}}
@@ -49,17 +43,19 @@ Reflect.get(target, propertyKey[, receiver])
 ```js
 // Объект
 var obj = { x: 1, y: 2 };
-Reflect.get(obj, 'x'); // 1
+Reflect.get(obj, "x"); // 1
 
 // Массив
-Reflect.get(['ноль', 'один'], 1); // "один"
+Reflect.get(["ноль", "один"], 1); // "один"
 
 // Proxy, перехватывающий get
-var x = {p: 1};
+var x = { p: 1 };
 var obj = new Proxy(x, {
-  get(t, k, r) { return k + 'bar'; }
+  get(t, k, r) {
+    return k + "bar";
+  },
 });
-Reflect.get(obj, 'foo'); // "foobar"
+Reflect.get(obj, "foo"); // "foobar"
 ```
 
 ## Спецификации

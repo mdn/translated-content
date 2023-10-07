@@ -1,9 +1,6 @@
 ---
-title: '<del>: The Deleted Text element'
+title: "<del>: The Deleted Text element"
 slug: Web/HTML/Element/del
-tags:
-  - доступность
-translation_of: Web/HTML/Element/del
 ---
 
 Элемент **HTML `<del>` **представляет диапазон текста, который был удалён из документа. Он может быть использован, например, при отображении "отслеживания изменений" или различий в исходном коде. Элемент {{HTMLElement("ins")}} можно использовать для противоположной цели: указание текста, который был добавлен в документ.
@@ -15,10 +12,10 @@ translation_of: Web/HTML/Element/del
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) или [потоковый контент](/ru/docs/HTML/Content_categories#Flow_content). |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                  | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                      |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                           |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
 | Допустимые ARIA-роли                                   | Любые                                                                                                                                         |
-| DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
+| DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                                 |
 
 ## Атрибуты
 
@@ -27,13 +24,12 @@ translation_of: Web/HTML/Element/del
 - {{htmlattrdef("cite")}}
   - : URI для ресурса, который объясняет изменение (например, протоколы соединений).
 - {{htmlattrdef("datetime")}}
-  - : Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}. Формат строки с датой и временем описан в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local date and time string")}}.
+  - : Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в [Format of a valid date string](/ru/docs/Web/HTML/Date_and_time_formats#date_strings). Формат строки с датой и временем описан в [Format of a valid local date and time string](/ru/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
 ## Примеры
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 

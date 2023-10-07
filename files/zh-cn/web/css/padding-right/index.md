@@ -40,8 +40,12 @@ padding-right: unset;
 ## Examples
 
 ```css
-.content { padding-right: 5%; }
-.sidebox { padding-right: 10px; }
+.content {
+  padding-right: 5%;
+}
+.sidebox {
+  padding-right: 10px;
+}
 ```
 
 ## Specifications

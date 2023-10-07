@@ -1,7 +1,6 @@
 ---
 title: Cuantificadores
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Cuantificadores
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -99,11 +98,12 @@ var palabraDeUnaLetra = /\b\w\b/g;
 var palabraNoTanLarga = /\b\w{1,6}\b/g;
 var palabraLaaaaarga = /\b\w{10,}\b/g;
 
-var frase = "¿Por qué me tengo que sentar a estudiar las tablas de multiplicar?";
+var frase =
+  "¿Por qué me tengo que sentar a estudiar las tablas de multiplicar?";
 
 console.table(frase.match(palabraDeUnaLetra)); // ["a"]
-console.table(frase.match(palabraNoTanLarga));    // ["Por", "qu", "me", "tengo", "que", "sentar", "a", "las", "tablas", "de"]
-console.table(frase.match(palabraLaaaaarga));      // ["multiplicar"]
+console.table(frase.match(palabraNoTanLarga)); // ["Por", "qu", "me", "tengo", "que", "sentar", "a", "las", "tablas", "de"]
+console.table(frase.match(palabraLaaaaarga)); // ["multiplicar"]
 ```
 
 ### Caracter opcional

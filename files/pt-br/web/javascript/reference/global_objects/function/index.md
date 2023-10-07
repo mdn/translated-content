@@ -50,7 +50,7 @@ O objeto global `Function` não tem métodos ou propriedades próprias, no entan
 
 `Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
 
-## Exemplos:
+## Exemplos
 
 ### Exemplos: Especificando argumentos com o construtor `Function`
 
@@ -60,7 +60,7 @@ O código a seguir cria um objeto `Function` que recebe dois argumentos.
 // O exemplo pode ser executado direto no seu console JavaScript
 
 // Cria uma função que recebe 2 argumentos e retorna a soma entre os dois:
-var adder = new Function('a', 'b', 'return a + b');
+var adder = new Function("a", "b", "return a + b");
 
 // Chamada da função
 adder(2, 6);
@@ -76,77 +76,98 @@ Creating functions with the `Function` constructor is one of the ways to dynamic
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example - a recursive shortcut to massively modify the DOM</title>
-<script type="text/javascript">
-var domQuery = (function() {
-  var aDOMFunc = [
-    Element.prototype.removeAttribute,
-    Element.prototype.setAttribute,
-    CSSStyleDeclaration.prototype.removeProperty,
-    CSSStyleDeclaration.prototype.setProperty
-  ];
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+      MDN Example - a recursive shortcut to massively modify the DOM
+    </title>
+    <script type="text/javascript">
+      var domQuery = (function () {
+        var aDOMFunc = [
+          Element.prototype.removeAttribute,
+          Element.prototype.setAttribute,
+          CSSStyleDeclaration.prototype.removeProperty,
+          CSSStyleDeclaration.prototype.setProperty,
+        ];
 
-  function setSomething(bStyle, sProp, sVal) {
-    var bSet = Boolean(sVal), fAction = aDOMFunc[bSet | bStyle << 1],
-        aArgs = Array.prototype.slice.call(arguments, 1, bSet ? 3 : 2),
-        aNodeList = bStyle ? this.cssNodes : this.nodes;
+        function setSomething(bStyle, sProp, sVal) {
+          var bSet = Boolean(sVal),
+            fAction = aDOMFunc[bSet | (bStyle << 1)],
+            aArgs = Array.prototype.slice.call(arguments, 1, bSet ? 3 : 2),
+            aNodeList = bStyle ? this.cssNodes : this.nodes;
 
-    if (bSet && bStyle) { aArgs.push(''); }
-    for (
-      var nItem = 0, nLen = this.nodes.length;
-      nItem < nLen;
-      fAction.apply(aNodeList[nItem++], aArgs)
-    );
-    this.follow = setSomething.caller;
-    return this;
-  }
+          if (bSet && bStyle) {
+            aArgs.push("");
+          }
+          for (
+            var nItem = 0, nLen = this.nodes.length;
+            nItem < nLen;
+            fAction.apply(aNodeList[nItem++], aArgs)
+          );
+          this.follow = setSomething.caller;
+          return this;
+        }
 
-  function setStyles(sProp, sVal) { return setSomething.call(this, true, sProp, sVal); }
-  function setAttribs(sProp, sVal) { return setSomething.call(this, false, sProp, sVal); }
-  function getSelectors() { return this.selectors; };
-  function getNodes() { return this.nodes; };
+        function setStyles(sProp, sVal) {
+          return setSomething.call(this, true, sProp, sVal);
+        }
+        function setAttribs(sProp, sVal) {
+          return setSomething.call(this, false, sProp, sVal);
+        }
+        function getSelectors() {
+          return this.selectors;
+        }
+        function getNodes() {
+          return this.nodes;
+        }
 
-  return (function(sSelectors) {
-    var oQuery = new Function('return arguments.callee.follow.apply(arguments.callee, arguments);');
-    oQuery.selectors = sSelectors;
-    oQuery.nodes = document.querySelectorAll(sSelectors);
-    oQuery.cssNodes = Array.prototype.map.call(oQuery.nodes, function(oInlineCSS) { return oInlineCSS.style; });
-    oQuery.attributes = setAttribs;
-    oQuery.inlineStyle = setStyles;
-    oQuery.follow = getNodes;
-    oQuery.toString = getSelectors;
-    oQuery.valueOf = getNodes;
-    return oQuery;
-  });
-})();
-</script>
-</head>
+        return function (sSelectors) {
+          var oQuery = new Function(
+            "return arguments.callee.follow.apply(arguments.callee, arguments);",
+          );
+          oQuery.selectors = sSelectors;
+          oQuery.nodes = document.querySelectorAll(sSelectors);
+          oQuery.cssNodes = Array.prototype.map.call(
+            oQuery.nodes,
+            function (oInlineCSS) {
+              return oInlineCSS.style;
+            },
+          );
+          oQuery.attributes = setAttribs;
+          oQuery.inlineStyle = setStyles;
+          oQuery.follow = getNodes;
+          oQuery.toString = getSelectors;
+          oQuery.valueOf = getNodes;
+          return oQuery;
+        };
+      })();
+    </script>
+  </head>
 
-<body>
+  <body>
+    <div class="testClass">Lorem ipsum</div>
+    <p>Some text</p>
+    <div class="testClass">dolor sit amet</div>
 
-<div class="testClass">Lorem ipsum</div>
-<p>Some text</p>
-<div class="testClass">dolor sit amet</div>
-
-<script type="text/javascript">
-domQuery('.testClass')
-  .attributes('lang', 'en')('title', 'Risus abundat in ore stultorum')
-  .inlineStyle('background-color', 'black')('color', 'white')('width', '100px')('height', '50px');
-</script>
-</body>
-
+    <script type="text/javascript">
+      domQuery(".testClass")
+        .attributes("lang", "en")("title", "Risus abundat in ore stultorum")
+        .inlineStyle("background-color", "black")("color", "white")(
+        "width",
+        "100px",
+      )("height", "50px");
+    </script>
+  </body>
 </html>
 ```
 
 ## Especificação
 
-| Especificação                                                                | Status                   | Comentário                                         |
-| ---------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                      | Standard                 | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.3', 'Function')}}                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-objects', 'Function')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                            | Status             | Comentário                                         |
+| -------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                  | Standard           | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.3', 'Function')}}           | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-function-objects', 'Function')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade
 

@@ -3,9 +3,9 @@ title: primitiveUnits
 slug: Web/SVG/Attribute/primitiveUnits
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`primitiveUnits 属性为过滤器原语和定义过滤器原语子域中的各种各样的长度单位指定坐标系统`.
+`primitiveUnits` 属性为过滤器原语和定义过滤器原语子域中的各种各样的长度单位指定坐标系统。
 
 如果 primitiveUnits 属性未指定，那么效果就如同指定值为 userSpaceOnUse 的效果是一样的。
 

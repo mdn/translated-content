@@ -1,5 +1,5 @@
 ---
-title: 'レシピ: メディアオブジェクト'
+title: "レシピ: メディアオブジェクト"
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
 

@@ -6,9 +6,9 @@
 
 ## Redirects Files
 
-보통의 경우 파일 삭제시 [_redirects.txt](https://github.com/mdn/translated-content/blob/main/files/ko/_redirects.txt)를 갱신해주어야 합니다.
+보통의 경우 파일 삭제시 [\_redirects.txt](https://github.com/mdn/translated-content/blob/main/files/ko/_redirects.txt)를 갱신해주어야 합니다.
 
-[yari](https://github.com/mdn/yari)에서 아래 명령어를 통해 [translated-content](https://github.com/mdn/translated-content)의 [_redirects.txt](https://github.com/mdn/translated-content/blob/main/files/ko/_redirects.txt) 파일을 검증 및 갱신할 수 있습니다.
+[yari](https://github.com/mdn/yari)에서 아래 명령어를 통해 [translated-content](https://github.com/mdn/translated-content)의 [\_redirects.txt](https://github.com/mdn/translated-content/blob/main/files/ko/_redirects.txt) 파일을 검증 및 갱신할 수 있습니다.
 
 ```bash
 yarn tool validate-redirects ko --strict

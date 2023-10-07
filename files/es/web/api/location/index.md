@@ -52,17 +52,18 @@ _La interface `Location` no hereda ningun metodo, pero los implementa desde {{do
 ```js
 // Crear un elemento <a> y usar la propiedad href para el proposito de este ejemplo.
 // Una alternativa mas correcta es navegar a la URL y usar document.location o window.location
-var url = document.createElement('a');
-url.href = 'https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container';
-console.log(url.href);      // https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol);  // https:
-console.log(url.host);      // developer.mozilla.org:8080
-console.log(url.hostname);  // developer.mozilla.org
-console.log(url.port);      // 8080
-console.log(url.pathname);  // /en-US/search
-console.log(url.search);    // ?q=URL
-console.log(url.hash);      // #search-results-close-container
-console.log(url.origin);    // https://developer.mozilla.org
+var url = document.createElement("a");
+url.href =
+  "https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container";
+console.log(url.href); // https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container
+console.log(url.protocol); // https:
+console.log(url.host); // developer.mozilla.org:8080
+console.log(url.hostname); // developer.mozilla.org
+console.log(url.port); // 8080
+console.log(url.pathname); // /en-US/search
+console.log(url.search); // ?q=URL
+console.log(url.hash); // #search-results-close-container
+console.log(url.origin); // https://developer.mozilla.org
 ```
 
 ## Especificaciones

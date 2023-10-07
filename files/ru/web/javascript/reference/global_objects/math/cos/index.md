@@ -1,12 +1,6 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -37,20 +31,20 @@ Math.cos(x)
 ### Пример: использование метода `Math.cos()`
 
 ```js
-Math.cos(0);           // 1
-Math.cos(1);           // 0.5403023058681398
+Math.cos(0); // 1
+Math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI);     // -1
+Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
 ```
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                       | Статус             | Комментарии                                            |
+| -------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.7', 'Math.cos')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.cos', 'Math.cos')}}     | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.cos', 'Math.cos')}}   | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

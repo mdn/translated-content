@@ -21,19 +21,13 @@ var offsetWidth =element.offsetWidth;
 
 ![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                    | Situação                         | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}} | {{Spec2('CSSOM View')}} |            |
-
-### Notas
-
-`offsetWidth` é uma propriedade do modelo de objeto DHTML que foi primeiro apresentado pelo MSIE. Algumas vezes referenciado como as dimensões físicas/gráficas do elemento, ou a largura do border-box.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetWidth")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,18 +1,6 @@
 ---
-title: 'Руководство часть 10: Тестирование приложений Django'
+title: "Руководство часть 10: Тестирование приложений Django"
 slug: Learn/Server-side/Django/Testing
-tags:
-  - TDD
-  - django
-  - Для начинающих
-  - Разработка через тесты
-  - Руководство
-  - Сервер
-  - Тестирование в django
-  - сторона сервера
-  - тестирование
-  - юнит-тесты
-translation_of: Learn/Server-side/Django/Testing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}

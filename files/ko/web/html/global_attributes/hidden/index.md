@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/hidden
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 하나의 표시 방식에서만 숨기려 할 땐 `hidden` 특성이 적합하지 않습니다. 임의의 요소에 `hidden`을 추가하면, 그 요소는 시각적 방식 외에도 스크린 리더 등 다른 모든 표시 방식에서 숨겨집니다.
 
 숨겨지지 않은 요소에서 숨겨진 요소로 연결해서는 안됩니다. 또한, 숨겨진 요소의 자손 요소는 여전히 활성 상태이므로, {{htmlelement("script")}} 요소를 실행할 수 있고 양식 요소도 제출할 수 있습니다. 그러나 스크립트와 요소는 다른 맥락에서 숨겨진 요소를 참조할 수 있습니다.

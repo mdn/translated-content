@@ -1,17 +1,6 @@
 ---
-title: 'Django Tutorial Part 10: Testing a Django web application'
+title: "Django Tutorial Part 10: Testing a Django web application"
 slug: Learn/Server-side/Django/Testing
-tags:
-  - Beginner
-  - CodingScripting
-  - Django Testing
-  - Testing
-  - Tutorial
-  - django
-  - server-side
-  - tests
-  - unit tests
-translation_of: Learn/Server-side/Django/Testing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
@@ -201,7 +190,7 @@ python3 manage.py test
 
 Cette commande va lancer la recherche de tous les fichiers ayant la forme **test.py** sous le répertoire courant, et lancer tous les tests définis, en utilisant les classes de base appropriées (ici nous avons un certain nombre de fichiers de test, mais pour le moment seul **/catalog/tests/test_models.py** contient des tests). Par défaut, chaque test ne fera de rapport qu'en cas d'échec, avec ensuite un résumé du test.
 
-> **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas *collectstatic* par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement *collectstatic* avant de lancer les tests :
+> **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas _collectstatic_ par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement _collectstatic_ avant de lancer les tests :
 >
 > ```bash
 > python3 manage.py collectstatic

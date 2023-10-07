@@ -41,8 +41,8 @@ let gettingItem = browser.storage.<storageType>.get(
 ```js
 // "kitten" と "monster" を格納
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -89,7 +89,11 @@ gettingItem.then(onGot, onError);
 オブジェクト名の配列を指定すると合致するものを全て返します。
 
 ```js
-let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+let gettingItem = browser.storage.local.get([
+  "kitten",
+  "monster",
+  "grapefruit",
+]);
 gettingItem.then(onGot, onError);
 
 // -> Object { kitten: Object, monster: Object }
@@ -103,8 +107,8 @@ let gettingItem = browser.storage.local.get({
   monster: "no monster",
   grapefruit: {
     name: "Grape Fruit",
-    eats: "Water"
-  }
+    eats: "Water",
+  },
 });
 
 // -> Object { kitten: Object, monster: Object, grapefruit: Object }
@@ -115,15 +119,15 @@ let gettingItem = browser.storage.local.get({
 ### Chrome での例
 
 ```js
-chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+chrome.storage.local.get("kitten", function (items) {
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
 Or with an arrow function
 
 ```js
-chrome.storage.local.get("kitten", items=>{
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```

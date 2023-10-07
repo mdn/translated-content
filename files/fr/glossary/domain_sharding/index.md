@@ -1,7 +1,6 @@
 ---
 title: Partage de domaine
 slug: Glossary/Domain_sharding
-translation_of: Glossary/Domain_sharding
 ---
 
 Les navigateurs limitent le nombre de connexions actives pour chaque domaine. Pour permettre des téléchargements simultanés de ressources dépassant cette limite, le **partage de domaine**(ou <i lang="en">domain_sharding</i> en anglais) divise le contenu sur plusieurs sous-domaines. Lorsque plusieurs domaines sont utilisés pour servir plusieurs actifs, les navigateurs peuvent télécharger plus de ressources simultanément, ce qui accélère le temps de chargement des pages et améliore l'expérience utilisateur.

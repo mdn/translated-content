@@ -19,8 +19,8 @@ slug: Web/API/WebGLShaderPrecisionFormat
 `WebGLShaderPrecisionFormat` 对象通过{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} 方法来返回。
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }
 ```

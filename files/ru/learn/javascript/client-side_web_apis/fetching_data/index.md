@@ -1,14 +1,6 @@
 ---
 title: Получение данных с сервера
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - AJAX
-  - API
-  - Fetch
-  - JavaScript
-  - XHR
-  - Новичку
-translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -64,73 +56,71 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 1. Чтобы начать этот пример, создайте локальную копию [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) и четырёх текстовых файлов - [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) и [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) - в новом каталоге на вашем компьютере. В этом примере мы загрузим другое стихотворение (который вы вполне можете распознать) через XHR, когда он будет выбран в выпадающем меню.
 2. Внутри элемента {{htmlelement("script")}} добавьте следующий код. В нем хранится ссылка на элементы {{htmlelement("select")}} и {{htmlelement("pre")}} в переменных и определяется {{domxref ("GlobalEventHandlers.onchange", "onchange")}} обработчика событий, так что, когда значение select изменяется, его значение передаётся вызываемой функции `updateDisplay()` в качестве параметра.
 
-    ```js
-    var verseChoose = document.querySelector('select');
-    var poemDisplay = document.querySelector('pre');
+   ```js
+   var verseChoose = document.querySelector("select");
+   var poemDisplay = document.querySelector("pre");
 
-    verseChoose.onchange = function() {
-      var verse = verseChoose.value;
-      updateDisplay(verse);
-    };
-    ```
+   verseChoose.onchange = function () {
+     var verse = verseChoose.value;
+     updateDisplay(verse);
+   };
+   ```
 
 3. Давайте определим нашу функцию `updateDisplay()`. Прежде всего, поставьте следующее ниже своего предыдущего блока кода - это пустая оболочка функции:
 
-    ```js
-    function updateDisplay(verse) {
-
-    };
-    ```
+   ```js
+   function updateDisplay(verse) {}
+   ```
 
 4. Мы начнём нашу функцию с создания относительного URL-адреса, указывающего на текстовый файл, который мы хотим загрузить и который понадобится нам позже. Значение элемента {{htmlelement("select")}} в любой момент совпадает с текстом внутри выбранного {{htmlelement("option")}} (если вы не укажете другое значение в атрибуте value) - например, «Verse 1». Соответствующий текстовый файл стиха является «verse1.txt» и находится в том же каталоге, что и файл HTML, поэтому будет использоваться только имя файла.
 
-    Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой [конкатенации строк](/ru/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings). Добавьте следующие строки внутри функции `updateDisplay()`:
+   Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой [конкатенации строк](/ru/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings). Добавьте следующие строки внутри функции `updateDisplay()`:
 
-    ```js
-    verse = verse.replace(" ", "");
-    verse = verse.toLowerCase();
-    var url = verse + '.txt';
-    ```
+   ```js
+   verse = verse.replace(" ", "");
+   verse = verse.toLowerCase();
+   var url = verse + ".txt";
+   ```
 
 5. Чтобы начать создание запроса XHR, вам нужно создать новый объект запроса, используя конструктор {{domxref("XMLHttpRequest()")}}. Вы можете назвать этот объект так, как вам нравится, но мы будем называть его `request` (запросом), чтобы все было просто. Добавьте следующие ниже строки:
 
-    ```js
-    var request = new XMLHttpRequest();
-    ```
+   ```js
+   var request = new XMLHttpRequest();
+   ```
 
-6. Затем вам нужно использовать метод {{domxref("XMLHttpRequest.open", "open()")}}, чтобы указать, какой [HTTP request method](/ru/docs/Web/HTTP/Methods) использовать для запроса ресурса из сети и какой его URL-адрес. Мы просто используем метод [`GET`](/en-US/docs/Web/HTTP/Methods/GET) здесь и задаём URL как нашу переменную `url`. Добавьте это ниже вашей предыдущей строки:
+6. Затем вам нужно использовать метод {{domxref("XMLHttpRequest.open", "open()")}}, чтобы указать, какой [HTTP request method](/ru/docs/Web/HTTP/Methods) использовать для запроса ресурса из сети и какой его URL-адрес. Мы просто используем метод [`GET`](/ru/docs/Web/HTTP/Methods/GET) здесь и задаём URL как нашу переменную `url`. Добавьте это ниже вашей предыдущей строки:
 
-    ```js
-    request.open('GET', url);
-    ```
+   ```js
+   request.open("GET", url);
+   ```
 
 7. Затем мы зададим тип ожидаемого ответа, который определяется как свойство {{domxref("XMLHttpRequest.responseType", "responseType")}} - как `text`. Здесь это не является абсолютно необходимым - XHR возвращает текст по умолчанию - но это хорошая идея, чтобы привыкнуть к настройке этого, если вы хотите получить другие типы данных в будущем. Добавьте следующее:
 
-    ```js
-    request.responseType = 'text';
-    ```
+   ```js
+   request.responseType = "text";
+   ```
 
 8. Получение ресурса из сети - это {{glossary("asynchronous")}} операция, означающая, что вам нужно дождаться завершения этой операции (например, ресурс возвращается из сети), прежде чем вы сможете сделать что-либо с этим ответом, иначе будет выброшена ошибка. XHR позволяет вам обрабатывать это, используя обработчик события {{domxref("XMLHttpRequest.onload", "onload")}} - он запускается при возникновении события {{event("load")}} (когда ответ вернулся). Когда это произойдёт, данные ответа будут доступны в свойстве `response` (ответ) объекта запроса XHR.
 
-    Добавьте следующее ниже вашего последнего дополнения. Вы увидите, что внутри обработчика события `onload` мы устанавливаем textContent `poemDisplay` (элемент {{htmlelement("pre")}}) в значение {{domxref("XMLHttpRequest.response", "request. response ")}}.
+   Добавьте следующее ниже вашего последнего дополнения. Вы увидите, что внутри обработчика события `onload` мы устанавливаем textContent `poemDisplay` (элемент {{htmlelement("pre")}}) в значение {{domxref("XMLHttpRequest.response", "request. response ")}}.
 
-    ```js
-    request.onload = function() {
-      poemDisplay.textContent = request.response;
-    };
-    ```
+   ```js
+   request.onload = function () {
+     poemDisplay.textContent = request.response;
+   };
+   ```
 
 9. Вышеприведённая конфигурация запроса XHR фактически не будет выполняться до тех пор, пока мы не вызовем метод {{domxref("XMLHttpRequest.send", "send()")}}. Добавьте следующее ниже вашего предыдущего дополнения для вызова функции:
 
-    ```js
-    request.send();
-    ```
+   ```js
+   request.send();
+   ```
 
 10. Одна из проблем с примером заключается в том, что он не покажет ни одного стихотворения, когда он впервые загружается. Чтобы исправить это, добавьте следующие две строки внизу вашего кода (чуть выше закрывающего тега `</script>`), чтобы загрузить стих 1 по умолчанию и убедитесь, что элемент {{htmlelement("select")}} всегда показывает правильное значение:
 
     ```js
-    updateDisplay('Verse 1');
-    verseChoose.value = 'Verse 1';
+    updateDisplay("Verse 1");
+    verseChoose.value = "Verse 1";
     ```
 
 ### Обслуживание вашего примера с сервера
@@ -148,27 +138,27 @@ API-интерфейс Fetch - это, в основном, современна
 1. Сделайте копию своего предыдущего готового каталога примеров. (Если вы не работали над предыдущим упражнением, создайте новый каталог и внутри него создайте копии [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) и четырёх текстовых файлов — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) и [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt).)
 2. Внутри функции `updateDisplay()` найдите код XHR:
 
-    ```js
-    var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'text';
+   ```js
+   var request = new XMLHttpRequest();
+   request.open("GET", url);
+   request.responseType = "text";
 
-    request.onload = function() {
-      poemDisplay.textContent = request.response;
-    };
+   request.onload = function () {
+     poemDisplay.textContent = request.response;
+   };
 
-    request.send();
-    ```
+   request.send();
+   ```
 
 3. Замените весь XHR-код следующим:
 
-    ```js
-    fetch(url).then(function(response) {
-      response.text().then(function(text) {
-        poemDisplay.textContent = text;
-      });
-    });
-    ```
+   ```js
+   fetch(url).then(function (response) {
+     response.text().then(function (text) {
+       poemDisplay.textContent = text;
+     });
+   });
+   ```
 
 4. Загрузите пример в свой браузер (запустите его через веб-сервер), и он должен работать так же, как и версия XHR, при условии, что вы используете современный браузер.
 
@@ -191,8 +181,8 @@ API-интерфейс Fetch - это, в основном, современна
 Давайте посмотрим на структуру промисов сверху, чтобы увидеть, можем ли мы ещё немного понять это:
 
 ```js
-fetch(url).then(function(response) {
-  response.text().then(function(text) {
+fetch(url).then(function (response) {
+  response.text().then(function (text) {
     poemDisplay.textContent = text;
   });
 });
@@ -205,8 +195,8 @@ fetch(url).then(function(response) {
 ```js
 var myFetch = fetch(url);
 
-myFetch.then(function(response) {
-  response.text().then(function(text) {
+myFetch.then(function (response) {
+  response.text().then(function (text) {
     poemDisplay.textContent = text;
   });
 });
@@ -215,8 +205,8 @@ myFetch.then(function(response) {
 Поскольку метод `fetch()` возвращает промис, который разрешает HTTP-ответ, любая функция, которую вы определяете внутри `.then()`, прикованная к концу, будет автоматически передаваться как параметр. Вы можете вызвать параметр, который вам нравится - приведённый ниже пример будет работать:
 
 ```js
-fetch(url).then(function(dogBiscuits) {
-  dogBiscuits.text().then(function(text) {
+fetch(url).then(function (dogBiscuits) {
+  dogBiscuits.text().then(function (text) {
     poemDisplay.textContent = text;
   });
 });
@@ -234,21 +224,23 @@ function(response) {
 }
 ```
 
-Объект ответа имеет метод {{domxref("Body.text", "text()")}}, который берёт необработанные данные, содержащиеся в теле ответа, и превращает его в обычный текст, который является форматом, который мы хотим в нем А также возвращает промис (который разрешает полученную текстовую строку), поэтому здесь мы используем другой {{jsxref("Promise.then", ".then()")}}, внутри которого мы определяем другую функцию, которая диктует что мы хотим сделать с этой текстовой строкой. Мы просто устанавливаем свойство [`textContent`](/en-US/docs/Web/API/Node/textContent) элемента {{htmlelement("pre")}} нашего стихотворения равным текстовой строке, так что это получается довольно просто.
+Объект ответа имеет метод {{domxref("Body.text", "text()")}}, который берёт необработанные данные, содержащиеся в теле ответа, и превращает его в обычный текст, который является форматом, который мы хотим в нем А также возвращает промис (который разрешает полученную текстовую строку), поэтому здесь мы используем другой {{jsxref("Promise.then", ".then()")}}, внутри которого мы определяем другую функцию, которая диктует что мы хотим сделать с этой текстовой строкой. Мы просто устанавливаем свойство [`textContent`](/ru/docs/Web/API/Node/textContent) элемента {{htmlelement("pre")}} нашего стихотворения равным текстовой строке, так что это получается довольно просто.
 
 Также стоит отметить, что вы можете напрямую связывать несколько блоков промисов (`.then()`, но есть и другие типы) на конце друг друга, передавая результат каждого блока следующему блоку по мере продвижения по цепочке , Это делает промисы очень мощными.
 
 Следующий блок делает то же самое, что и наш оригинальный пример, но написан в другом стиле:
 
 ```js
-fetch(url).then(function(response) {
-  return response.text()
-}).then(function(text) {
-  poemDisplay.textContent = text;
-});
+fetch(url)
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    poemDisplay.textContent = text;
+  });
 ```
 
-Многие разработчики любят этот стиль больше, поскольку он более плоский и, возможно, легче читать для более длинных цепочек промисов - каждое последующее промис приходит после предыдущего, а не внутри предыдущего (что может стать громоздким). Единственное отличие состоит в том, что мы должны были включить оператор [`return`](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values) перед `response.text()`, чтобы заставить его передать результат в следующую ссылку в цепочке.
+Многие разработчики любят этот стиль больше, поскольку он более плоский и, возможно, легче читать для более длинных цепочек промисов - каждое последующее промис приходит после предыдущего, а не внутри предыдущего (что может стать громоздким). Единственное отличие состоит в том, что мы должны были включить оператор [`return`](/ru/docs/Learn/JavaScript/Building_blocks/Return_values) перед `response.text()`, чтобы заставить его передать результат в следующую ссылку в цепочке.
 
 ### Какой механизм следует использовать?
 
@@ -273,14 +265,19 @@ fetch(url).then(function(response) {
 Первый блок, который использует Fetch, можно найти в начале JavaScript:
 
 ```js
-fetch('products.json').then(function(response) {
-  if(response.ok) {
-    response.json().then(function(json) {
+fetch("products.json").then(function (response) {
+  if (response.ok) {
+    response.json().then(function (json) {
       products = json;
       initialize();
     });
   } else {
-    console.log('Network request for products.json failed with response ' + response.status + ': ' + response.statusText);
+    console.log(
+      "Network request for products.json failed with response " +
+        response.status +
+        ": " +
+        response.statusText,
+    );
   }
 });
 ```
@@ -301,14 +298,21 @@ fetch('products.json').then(function(response) {
 Второй блок Fetch можно найти внутри функции `fetchBlob()`:
 
 ```js
-fetch(url).then(function(response) {
-  if(response.ok) {
-    response.blob().then(function(blob) {
+fetch(url).then(function (response) {
+  if (response.ok) {
+    response.blob().then(function (blob) {
       objectURL = URL.createObjectURL(blob);
       showProduct(objectURL, product);
     });
   } else {
-    console.log('Network request for "' + product.name + '" image failed with response ' + response.status + ': ' + response.statusText);
+    console.log(
+      'Network request for "' +
+        product.name +
+        '" image failed with response ' +
+        response.status +
+        ": " +
+        response.statusText,
+    );
   }
 });
 ```

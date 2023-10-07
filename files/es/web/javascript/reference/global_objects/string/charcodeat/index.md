@@ -1,7 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -36,19 +35,19 @@ En JavaScript 1.2 el método `charCodeAt` devuelve un número indicando el valor
 El siguiente ejemplo devuelve 65, el valor Unicode para A.
 
 ```js
-"ABC".charCodeAt(0) // returns 65
+"ABC".charCodeAt(0); // returns 65
 ```
 
 El siguiente ejemplo devuelve 83.
 
 ```js
-"AaSdas".charCodeAt(2) // returns 83
+"AaSdas".charCodeAt(2); // returns 83
 ```
 
 teniendo en cuenta que 2 es la posicion de la letra. Si "S" fuera minuscula, el Unicode es diferente
 
 ```js
-"Aasdas".charCodeAt(2) // returns 115
+"Aasdas".charCodeAt(2); // returns 115
 ```
 
 ## Vea También

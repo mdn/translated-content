@@ -2,6 +2,7 @@
 title: Understanding client-side JavaScript frameworks
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
+
 {{LearnSidebar}}
 
 자바스크립트 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 대화형 웹 응용 프로그램을 구축하기 위한 검증된 도구를 제공합니다. 많은 현대 기업들은 프레임워크를 도구화(tooling)의 표준 부분으로 사용하기때문에, 프론트엔드 개발에는 이제 프레임워크 경험이 필요합니다.

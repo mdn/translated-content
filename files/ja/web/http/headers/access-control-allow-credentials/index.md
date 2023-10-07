@@ -55,7 +55,7 @@ Access-Control-Allow-Credentials: true
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -64,8 +64,8 @@ xhr.send(null);
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
 ```
 
 ## 仕様書

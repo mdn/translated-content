@@ -1,12 +1,6 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/border-block-start-style
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-block-start-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

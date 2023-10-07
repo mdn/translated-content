@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-composite'
+title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
 ---
 
@@ -55,8 +55,8 @@ Donde:
 
 ```css
 .example {
-    -webkit-mask-image: url(mask1.png), url('mask2.png');
-    -webkit-mask-composite: xor, source-over;
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
+  -webkit-mask-composite: xor, source-over;
 }
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - Constructeur
-  - FileReader
-  - Reference
-translation_of: Web/API/FileReader/FileReader
 ---
 
 **`FileReader()`** est un constructeur qui permet de créer un nouvel objet FileReader.
@@ -25,12 +19,12 @@ Aucun.
 
 ## Exemple
 
-L'extrait de code ci-dessous montre la création d'un objet [`FileReader`](/fr/docs/Web/API/FileReader) en utilisant le constructeur `FileReader()`  ainsi qu'une utilisation subséquente de cet objet:
+L'extrait de code ci-dessous montre la création d'un objet [`FileReader`](/fr/docs/Web/API/FileReader) en utilisant le constructeur `FileReader()` ainsi qu'une utilisation subséquente de cet objet:
 
 ```js
 function printFile(file) {
   var reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = function (evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);

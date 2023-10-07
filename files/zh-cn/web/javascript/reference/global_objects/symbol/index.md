@@ -28,8 +28,8 @@ Symbol([description])
 
 ```js
 var sym1 = Symbol();
-var sym2 = Symbol('foo');
-var sym3 = Symbol('foo');
+var sym2 = Symbol("foo");
+var sym3 = Symbol("foo");
 ```
 
 上面的代码创建了三个新的 symbol 类型。注意，`Symbol("foo")` 不会强制将字符串“foo”转换成 symbol 类型。它每次都会创建一个新的 symbol 类型：
@@ -50,9 +50,9 @@ var sym = new Symbol(); // TypeError
 
 ```js
 var sym = Symbol("foo");
-typeof sym;     // "symbol"
+typeof sym; // "symbol"
 var symObj = Object(sym);
-typeof symObj;  // "object"
+typeof symObj; // "object"
 ```
 
 ### 全局共享的 Symbol
@@ -133,9 +133,9 @@ typeof symObj;  // "object"
 {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Symbol 类型转换
@@ -160,7 +160,7 @@ obj["c"] = "c";
 obj.d = "d";
 
 for (var i in obj) {
-   console.log(i); // logs "c" and "d"
+  console.log(i); // logs "c" and "d"
 }
 ```
 
@@ -169,7 +169,7 @@ for (var i in obj) {
 当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：
 
 ```js
-JSON.stringify({[Symbol("foo")]: "foo"});
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -181,9 +181,9 @@ JSON.stringify({[Symbol("foo")]: "foo"});
 
 ```js
 var sym = Symbol("foo");
-var obj = {[sym]: 1};
-obj[sym];            // 1
-obj[Object(sym)];    // still 1
+var obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // still 1
 ```
 
 ## 规范

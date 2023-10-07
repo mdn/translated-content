@@ -14,7 +14,11 @@ slug: Web/SVG/Element/rect
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

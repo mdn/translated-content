@@ -1,7 +1,6 @@
 ---
 title: Реализация функции обнаружения
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -12,7 +11,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Задача:      | Понять, что такое концепция выявления функций, и уметь внедрять подходящие решения в CSS и JavaScript.                                                                                                                                                                   |
 
-## Концепция обнаружения функций.
+## Концепция обнаружения функций
 
 Идея обнаружения функции заключается в том, что вы можете запустить тест, чтобы определить, поддерживается ли функция в текущем браузере, а затем условно запустить код, чтобы обеспечить приемлемый опыт как в браузерах, которые поддерживают функцию, так и в браузере, который не поддерживает. Если вы этого не сделаете, браузеры, которые не поддерживают функции, которые вы используете в своём коде, не будут отображать ваши сайты должным образом и просто не сработают, создавая плохой опыт пользователя.
 
@@ -20,7 +19,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // show the location on a map, perhaps using the Google Maps API
   });
 } else {
@@ -47,24 +46,27 @@ if ("geolocation" in navigator) {
 1. Начните с создания локальных копий наших файлов [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout-css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), и [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css). Сохраните их в новой дирекции.
 2. Мы добавим HTML5 Shiv и в наш пример, чтобы семантические элементы HTML5 правильно стилизовались в старых версиях IE. Загрузите последнюю версию (См. [Ручная установка](https://github.com/aFarkas/html5shiv#manual-installation)), разархивируйте ZIP, скопируйте файлы `html5shiv-printshiv.min.js` и `html5shiv.min.js` в ваш пример дирекции и создайте ссылку на один из файлов, поместив следующее в свой {{htmlelement("title")}} элемент:
 
-    ```
-    <script src="html5shiv.min.js"></script>
-    ```
+   ```
+   <script src="html5shiv.min.js"></script>
+   ```
 
 3. Посмотрите ваши примеры CSS-файлов - вы увидите, что `basic-styling.css` обрабатывает все стили, которые мы хотим дать каждому браузеру, тогда как два других CSS-файла содержат CSS, который мы хотим выборочно применять к браузеру в зависимости от их уровни поддержки. Вы можете посмотреть на различные эффекты этих двух файлов, вручную изменив CSS-файл, на который ссылается второй элемент {{htmlelement("link")}}, но давайте вместо этого реализуем некоторый JavaScript, чтобы автоматически заменять их при необходимости.
 4. Сначала удалите содержимое атрибута `href` второго элемента `<link>` . Мы будем заполнять это динамически позже.
 5. Затем добавьте элемент `<script></script>` внизу вашего контекста (непосредственно перед закрывающим тегом `</body>`).
 6. Дайте ему следующее содержание:
 
-    ```js
-    const conditional = document.querySelector('.conditional');
-    const testElem = document.createElement('div');
-    if (testElem.style.flex !== undefined && testElem.style.flexFlow !== undefined) {
-      conditional.setAttribute('href', 'flex-layout.css');
-    } else {
-      conditional.setAttribute('href', 'float-layout.css');
-    }
-    ```
+   ```js
+   const conditional = document.querySelector(".conditional");
+   const testElem = document.createElement("div");
+   if (
+     testElem.style.flex !== undefined &&
+     testElem.style.flexFlow !== undefined
+   ) {
+     conditional.setAttribute("href", "flex-layout.css");
+   } else {
+     conditional.setAttribute("href", "float-layout.css");
+   }
+   ```
 
 Здесь мы берём ссылку на второй элемент `<link>` и создаём элемент `<div>` как часть нашего теста. В нашем условном выражении мы проверяем, что свойства {{cssxref ("flex")}} и {{cssxref ("flex-flow")}} существуют в браузере. Обратите внимание, что представления JavaScript этих свойств, которые хранятся внутри объекта {{domxref ("HTMLElement.style")}}, используют нижний горбатый регистр, а не дефисы, для разделения слов.
 
@@ -82,7 +84,6 @@ if ("geolocation" in navigator) {
 
 ```css
 @supports (flex-flow: row) and (flex: 1) {
-
   main {
     display: flex;
   }
@@ -95,7 +96,6 @@ if ("geolocation" in navigator) {
   main div:last-child {
     padding-right: 0;
   }
-
 }
 ```
 
@@ -105,9 +105,7 @@ if ("geolocation" in navigator) {
 
 ```css
 @supports not (flex-flow: row) and (flex: 1) {
-
   /* rules in here */
-
 }
 ```
 
@@ -117,9 +115,9 @@ if ("geolocation" in navigator) {
 
 Мы уже видели пример теста на обнаружение функций JavaScript ранее. Как правило, такие тесты выполняются по одному из следующих общих шаблонов:
 
-| Тип обнаружения функции                     | Объяснение                                                                                                                                                                                                                                            | Пример                                                                                                               |
-| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| _Если член в объекте_                       | Проверьте, существует ли определённый метод или свойство (обычно точка входа в использование API или другой функции, которую вы обнаруживаете) в его родительском объекте.                                                                            | `if("geolocation" in navigator) { ... }`                                                                             |
+| Тип обнаружения функции                     | Объяснение                                                                                                                                                                                                                                | Пример                                                                                                               |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| _Если член в объекте_                       | Проверьте, существует ли определённый метод или свойство (обычно точка входа в использование API или другой функции, которую вы обнаруживаете) в его родительском объекте.                                                                | `if("geolocation" in navigator) { ... }`                                                                             |
 | _Свойство на элементе_                      | Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, а затем проверьте, существует ли свойство для него. Показанный пример является способом определения поддержки [HTML5 Canvas](/ru/docs/Web/API/Canvas_API). | `function supports_canvas() { return !!document.createElement('canvas').getContext; } if(supports_canvas()) { ... }` |
 | _Метод на возвращаемое значение элемента_   | Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, а затем проверьте, существует ли метод для него. Если это так, проверьте, какое значение он возвращает.                                                    | См. [Dive Into HTML5 Video Formats detection](http://diveinto.html5doctor.com/detect.html#video-formats).            |
 | _Свойство на сохраняемое значение элемента_ | Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, установите для свойства определённое значение, затем проверьте, сохраняется ли значение.                                                                   | См. [Dive into HTML5 `<input>` types detection](http://diveinto.html5doctor.com/detect.html#input-types).            |
@@ -173,21 +171,21 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 1. Во-первых, создайте копию [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Сохраните их как `modernizr-css.html` и `modernizr-css.css`.
 2. Обновите ваш элемент {{htmlelement ("link")}} в своём HTML-коде, чтобы он указывал на правильный файл CSS (также следует обновить элемент {{htmlelement ("title")}} на что-то более подходящее!):
 
-    ```html
-    <link href="modernizr-css.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="modernizr-css.css" rel="stylesheet" />
+   ```
 
 3. Над этим элементом `<link>` добавьте элемент {{htmlelement ("script")}}, чтобы применить библиотеку Modernizr к странице, как показано ниже. Это должно быть применено к странице перед любым CSS (или JavaScript), который может её использовать.
 
-    ```html
-    <script src="modernizr-custom.js"></script>
-    ```
+   ```html
+   <script src="modernizr-custom.js"></script>
+   ```
 
 4. Теперь отредактируйте открывающий тег `<html>`, чтобы он выглядел так:
 
-    ```html
-    <html class="no-js">
-    ```
+   ```html
+   <html class="no-js"></html>
+   ```
 
 На этом этапе попробуйте загрузить свою страницу, и вы получите представление о том, как Modernizr работает с функциями CSS. Если вы посмотрите на инспектор DOM инструментов разработчика вашего браузера, вы увидите, что Modernizr обновил значение вашего `<html>` `class` следующим образом:
 
@@ -267,27 +265,30 @@ Modernizr.fetch
 3. Затем заполните текст-заполнитель `YOUR-API-KEY` во втором элементе `<script>` (как он есть сейчас) действительным ключом API Google Maps. Чтобы получить ключ, войдите в учётную запись Google, перейдите на страницу [Получить ключ / Аутентификация](https://developers.google.com/maps/documentation/javascript/get-api-key) затем нажмите синюю кнопку _Get a Key_ и следуйте инструкциям.
 4. Наконец, добавьте ещё один элемент `<script>` внизу тела HTML (непосредственно перед тегом `</body>` ) и поместите следующий скрипт в теги:
 
-    ```js
-    if (Modernizr.geolocation) {
-
-      navigator.geolocation.getCurrentPosition(function(position) {
-
-        let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-        let myOptions = {
-          zoom: 8,
-          center: latlng,
-          mapTypeId: google.maps.MapTypeId.TERRAIN,
-          disableDefaultUI: true
-        }
-        let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-      });
-
-    } else {
-      const para = document.createElement('p');
-      para.textContent = 'Argh, no geolocation!';
-      document.body.appendChild(para);
-    }
-    ```
+   ```js
+   if (Modernizr.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+       let latlng = new google.maps.LatLng(
+         position.coords.latitude,
+         position.coords.longitude,
+       );
+       let myOptions = {
+         zoom: 8,
+         center: latlng,
+         mapTypeId: google.maps.MapTypeId.TERRAIN,
+         disableDefaultUI: true,
+       };
+       let map = new google.maps.Map(
+         document.getElementById("map_canvas"),
+         myOptions,
+       );
+     });
+   } else {
+     const para = document.createElement("p");
+     para.textContent = "Argh, no geolocation!";
+     document.body.appendChild(para);
+   }
+   ```
 
 Опробуйте свой пример! Здесь мы используем тест `Modernizr.geolocation`, чтобы проверить, поддерживается ли геолокация текущим браузером. Если это так, мы запускаем некоторый код, который получает текущее местоположение вашего устройства и отображает его на карте Google.
 

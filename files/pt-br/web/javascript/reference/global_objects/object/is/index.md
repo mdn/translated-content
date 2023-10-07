@@ -47,21 +47,21 @@ Isso também _não_ _é_ o mesmo que ser igual de acordo com o operador {{jsxref
 ## Exemplos
 
 ```js
-Object.is('foo', 'foo');     // true
-Object.is(window, window);   // true
+Object.is("foo", "foo"); // true
+Object.is(window, window); // true
 
-Object.is('foo', 'bar');     // false
-Object.is([], []);           // false
+Object.is("foo", "bar"); // false
+Object.is([], []); // false
 
 var test = { a: 1 };
-Object.is(test, test);       // true
+Object.is(test, test); // true
 
-Object.is(null, null);       // true
+Object.is(null, null); // true
 
 // Casos especiais
-Object.is(0, -0);            // false
-Object.is(-0, -0);           // true
-Object.is(NaN, 0/0);         // true
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 ```
 
 ## Polyfill para navegadores que não suportam ES6
@@ -70,9 +70,10 @@ Object.is(NaN, 0/0);         // true
 
 ```js
 if (!Object.is) {
-  Object.is = function(x, y) {
+  Object.is = function (x, y) {
     // Algoritmo para verificar se os valores sao iguais
-    if (x === y) { // Passos 1-5, 7-10
+    if (x === y) {
+      // Passos 1-5, 7-10
       // Passos 6.b-6.e: +0 != -0
       return x !== 0 || 1 / x === 1 / y;
     } else {
@@ -85,9 +86,9 @@ if (!Object.is) {
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-object.is', 'Object.is')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificação                                          | Status               | Comentário         |
+| ------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-object.is', 'Object.is')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-object.is', 'Object.is')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

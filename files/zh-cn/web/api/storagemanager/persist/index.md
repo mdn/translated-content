@@ -25,7 +25,7 @@ navigator.storage.persist().then(function(persistent) { ... })
 
 ```js
 if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persist().then(function(persistent) {
+  navigator.storage.persist().then(function (persistent) {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else

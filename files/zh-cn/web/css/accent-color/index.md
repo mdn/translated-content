@@ -94,4 +94,4 @@ input.custom {
 - {{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("caret-color")}}、{{CSSXref("color")}}、{{CSSXref("column-rule-color")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-decoration-color")}}、{{CSSXref("text-emphasis-color")}}、{{CSSXref("text-shadow")}}——其他颜色相关属性
 - {{CSSXref("&lt;color&gt;")}}——相关数据类型
 - {{HTMLElement("input")}}——相关 HTML 元素
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)

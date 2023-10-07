@@ -1,7 +1,6 @@
 ---
 title: Веб хранилище (API)
 slug: Web/API/Web_Storage_API
-translation_of: Web/API/Web_Storage_API
 ---
 
 Web Storage API предоставляет механизмы, при помощи которых браузеры могут безопасно хранить пары ключ/значение в более интуитивно понятной манере, чем куки (cookies).

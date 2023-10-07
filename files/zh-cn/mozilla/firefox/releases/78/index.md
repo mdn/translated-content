@@ -15,7 +15,7 @@ slug: Mozilla/Firefox/Releases/78
 
 #### 调试器
 
-- 现在，您可以从[关于：调试](/zh-CN/docs/Tools/about:debugging#Connecting_to_a_remote_device)面板更改远程设备访问的 URL。([Firefox bug 1617237](https://bugzil.la/1617237))
+- 现在，你可以从[关于：调试](/zh-CN/docs/Tools/about:debugging#Connecting_to_a_remote_device)面板更改远程设备访问的 URL。([Firefox bug 1617237](https://bugzil.la/1617237))
 - 现在，[调试器](/zh-CN/docs/Tools/Debugger/UI_Tour)中的 **禁用 JavaScript** 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。([Firefox bug 1640318](https://bugzil.la/1640318))
 - 如果在[作用域](/zh-CN/docs/Tools/Debugger/UI_Tour#Scopes)中启用**映射**，则[日志点](/zh-CN/docs/Tools/Debugger/Set_a_logpoint)可以将源映射代码中的变量名称映射回其原始名称。([Firefox bug 1536857](https://bugzil.la/1536857))
 

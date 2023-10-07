@@ -11,7 +11,7 @@ l10n:
 
 ## 値
 
-要素で、フォームに送信した {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを送った要素を表します。これは、 {{HTMLElement("input")}} 要素で [`type`](/ja/docs/Web/HTML/Element/input#type) が `submit` であるものや、 {{HTMLElement("button")}} 要素で [`type`](/en-US/docs/Web/HTML/Element/input#type) が `submit` であるものが多いのですが、送信処理を開始した要素は他のものである可能性があります。
+要素で、フォームに送信した {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを送った要素を表します。これは、 {{HTMLElement("input")}} 要素で [`type`](/ja/docs/Web/HTML/Element/input#type) が `submit` であるものや、 {{HTMLElement("button")}} 要素で [`type`](/ja/docs/Web/HTML/Element/input#type) が `submit` であるものが多いのですが、送信処理を開始した要素は他のものである可能性があります。
 
 送信が何らかのボタンによって発生したものでない場合、 `submitter` の値は `null` になります。
 

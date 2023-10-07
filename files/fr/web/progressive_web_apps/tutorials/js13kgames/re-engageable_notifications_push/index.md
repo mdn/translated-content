@@ -1,10 +1,6 @@
 ---
-title: >-
-  Comment faire pour que les PWAs relancent les utilisateurs en utilisant des
-  notifications et des messages poussés
+title: Comment faire pour que les PWAs relancent les utilisateurs en utilisant des notifications et des messages poussés
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
@@ -27,12 +23,12 @@ Pour afficher une notification, nous devons d'abord demander la permission de le
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -50,16 +46,16 @@ L'application exemple crée une notification en utilisant les données disponibl
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Créé par '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Créé par " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -74,7 +70,7 @@ La technologie en est toujours à ses tous débuts — certains exemples fonctio
 Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
 
 ```js
-registration.pushManager.getSubscription() .then( /* ... */ );
+registration.pushManager.getSubscription().then(/* ... */);
 ```
 
 Une fois que l'utilisateur est enrôlé, il peut recevoir des notifications poussées du serveur.
@@ -84,7 +80,9 @@ Du côté serveur, le processus tout entier doit être chiffré avec des clefs p
 Pour recevoir des messages poussés, nous pouvons écouter l'événement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event) dans le fichier du Service Worker:
 
 ```js
-self.addEventListener('push', function(e) { /* ... */ });
+self.addEventListener("push", function (e) {
+  /* ... */
+});
 ```
 
 Les données peuvent être récupérées puis affichées immédiatement à l'utilisateur sous forme d'une notification. Ceci, par exemple, peut être utilisé pour rappeler à l'utilisateur quelque chose ou pour l'informer d'un nouveau contenu disponible dans l'application.
@@ -106,16 +104,18 @@ Explorons tout ceci
 Le fichier `index.js` commence par enregistrer le service worker:
 
 ```js
-navigator.serviceWorker.register('service-worker.js')
-.then(function(registration) {
-  return registration.pushManager.getSubscription()
-  .then(async function(registration) {
-      // partie relative à l'enregistrement
-  });
-})
-.then(function(subscription) {
+navigator.serviceWorker
+  .register("service-worker.js")
+  .then(function (registration) {
+    return registration.pushManager
+      .getSubscription()
+      .then(async function (registration) {
+        // partie relative à l'enregistrement
+      });
+  })
+  .then(function (subscription) {
     // partie relative à l'abonnement
-});
+  });
 ```
 
 C'est un petit peu plus compliqué que le service worker que nous avons vu dans la [démonstration de js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/). Dans ce cas particulier, après l'enregistrement, nous utilisons l'objet d'enregistrement pour s'abonner puis utiliser ensuite l'objet d'abonnement résultant pour achever le processus complet.
@@ -123,15 +123,15 @@ C'est un petit peu plus compliqué que le service worker que nous avons vu dans 
 Dans la partie enregistrement, le code ressemble à ceci:
 
 ```js
-if(registration) {
-    return registration;
+if (registration) {
+  return registration;
 }
 ```
 
 Si l'utilisateur s'est déjà abonné, nous renvoyons alors l'objet de souscription et accède à la partir de la souscription. Si ce n'est pas le cas, nous initialisation une nouvelle souscription:
 
 ```js
-const response = await fetch('./vapidPublicKey');
+const response = await fetch("./vapidPublicKey");
 const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
@@ -142,45 +142,45 @@ L'application peut maintenant utiliser le {{domxref("PushManager")}} pour abonne
 
 ```js
 return registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: convertedVapidKey
+  userVisibleOnly: true,
+  applicationServerKey: convertedVapidKey,
 });
 ```
 
 Maintenant, allons voir la partie abonnement — l'application envoie d'abord les détails de l'abonnement au format JSON au serveur en utilisant Fetch.
 
 ```js
-fetch('./register', {
-    method: 'post',
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        subscription: subscription
-    }),
+fetch("./register", {
+  method: "post",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: JSON.stringify({
+    subscription: subscription,
+  }),
 });
 ```
 
 Puis la fonction {{domxref("onclick","GlobalEventHandlers.onclick")}} du bouton _Abonnement_ est définie:
 
 ```js
-document.getElementById('doIt').onclick = function() {
-    const payload = document.getElementById('notification-payload').value;
-    const delay = document.getElementById('notification-delay').value;
-    const ttl = document.getElementById('notification-ttl').value;
+document.getElementById("doIt").onclick = function () {
+  const payload = document.getElementById("notification-payload").value;
+  const delay = document.getElementById("notification-delay").value;
+  const ttl = document.getElementById("notification-ttl").value;
 
-    fetch('./sendNotification', {
-        method: 'post',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify({
-            subscription: subscription,
-            payload: payload,
-            delay: delay,
-            ttl: ttl,
-        }),
-    });
+  fetch("./sendNotification", {
+    method: "post",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      subscription: subscription,
+      payload: payload,
+      delay: delay,
+      ttl: ttl,
+    }),
+  });
 };
 ```
 
@@ -195,52 +195,54 @@ La partie serveur est écrite en Node.js et doit être hébergée à un endroit 
 Le [module web-pus](https://www.npmjs.com/package/web-push) est utilisé pour configurer les clefs VAPID keys et éventuellement les générer si elles ne sont pas encore disponibles.
 
 ```js
-const webPush = require('web-push');
+const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log("Vous devez configurer les variables d'environnement " +
-  "VAPID_PUBLIC_KEY et VAPID_PRIVATE_KEY."+
-    "Vous pouvez utiliser celles-ci:");
+  console.log(
+    "Vous devez configurer les variables d'environnement " +
+      "VAPID_PUBLIC_KEY et VAPID_PRIVATE_KEY." +
+      "Vous pouvez utiliser celles-ci:",
+  );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  'https://github.com/mdn/serviceworker-cookbook/',
+  "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
 Ensuite, un module définit et exporte toutes les routes que l'application doit prendre en charge: obtenir la clef publique VAPID, l'enregistrement puis l'envoi de notifications. Vous pouvez voir comment les variables du fichier `index.js` sont utilisées: `payload`, `delay` et `ttl`.
 
 ```js
-module.exports = function(app, route) {
-  app.get(route + 'vapidPublicKey', function(req, res) {
+module.exports = function (app, route) {
+  app.get(route + "vapidPublicKey", function (req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', function(req, res) {
-
+  app.post(route + "register", function (req, res) {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', function(req, res) {
+  app.post(route + "sendNotification", function (req, res) {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
-      TTL: req.body.ttl
+      TTL: req.body.ttl,
     };
 
-    setTimeout(function() {
-      webPush.sendNotification(subscription, payload, options)
-      .then(function() {
-        res.sendStatus(201);
-      })
-      .catch(function(error) {
-        console.log(error);
-        res.sendStatus(500);
-      });
+    setTimeout(function () {
+      webPush
+        .sendNotification(subscription, payload, options)
+        .then(function () {
+          res.sendStatus(201);
+        })
+        .catch(function (error) {
+          console.log(error);
+          res.sendStatus(500);
+        });
     }, req.body.delay * 1000);
   });
 };
@@ -251,13 +253,13 @@ module.exports = function(app, route) {
 Le dernier fichier que nous allons regarder est celui du service worker:
 
 ```js
-self.addEventListener('push', function(event) {
-    const payload = event.data ? event.data.text() : 'no payload';
-    event.waitUntil(
-        self.registration.showNotification('ServiceWorker Cookbook', {
-            body: payload,
-        })
-    );
+self.addEventListener("push", function (event) {
+  const payload = event.data ? event.data.text() : "no payload";
+  event.waitUntil(
+    self.registration.showNotification("ServiceWorker Cookbook", {
+      body: payload,
+    }),
+  );
 });
 ```
 
@@ -267,4 +269,4 @@ N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](ht
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

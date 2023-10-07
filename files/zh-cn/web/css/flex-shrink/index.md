@@ -14,12 +14,12 @@ flex-shrink: 0.6;
 /* Global values */
 flex-shrink: inherit;
 flex-shrink: initial;
-flex-shrink: unset
+flex-shrink: unset;
 ```
 
 {{cssinfo}}
 
-更多属性和定义请参见[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+更多属性和定义请参见[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)
 
 ## 语法
 
@@ -61,7 +61,7 @@ flex-shrink: unset
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {
@@ -87,4 +87,4 @@ flex-shrink: unset
 
 ## 参考
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)

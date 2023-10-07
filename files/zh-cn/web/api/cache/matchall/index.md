@@ -10,7 +10,7 @@ slug: Web/API/Cache/matchAll
 ## 语法
 
 ```js
-cache.matchAll(request,{options}).then(function(response) {
+cache.matchAll(request, { options }).then(function (response) {
   //do something with the response array
 });
 ```
@@ -37,13 +37,13 @@ cache.matchAll(request,{options}).then(function(response) {
 ## 示例
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.matchAll("/images/").then(function (response) {
+    response.forEach(function (element, index, array) {
       cache.delete(element);
     });
   });
-})
+});
 ```
 
 ## 规范

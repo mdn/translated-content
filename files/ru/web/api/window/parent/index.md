@@ -1,17 +1,6 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/parent
 ---
 
 {{APIRef}}

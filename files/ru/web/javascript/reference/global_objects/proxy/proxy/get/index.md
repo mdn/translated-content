@@ -1,8 +1,8 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
+
 {{JSRef}}
 
 Метод **`handler.get()`** является ловушкой для получения значения свойства.
@@ -59,32 +59,35 @@ const p = new Proxy(target, {
 Следующий код перехватывает получение значения свойства.
 
 ```js
-const p = new Proxy({}, {
-  get: function(target, property, receiver) {
-    console.log('called: ' + property);
-    return 10;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    get: function (target, property, receiver) {
+      console.log("called: " + property);
+      return 10;
+    },
+  },
+);
 
 console.log(p.a); // "called: a"
-                  // 10
+// 10
 ```
 
 Следующий код нарушает инвариант.
 
 ```js
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 const p = new Proxy(obj, {
-  get: function(target, property) {
+  get: function (target, property) {
     return 20;
-  }
+  },
 });
 
 p.a; // TypeError is thrown

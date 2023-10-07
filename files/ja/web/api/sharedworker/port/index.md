@@ -18,7 +18,7 @@ l10n:
 次のコードスニペットでは、 `SharedWorker` オブジェクトを {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して生成しています。 {{domxref("MessagePort")}} オブジェクトを`SharedWorker.port` プロパティ経由で使用することで、複数のスクリプトからワーカーにアクセスできます。 port は `start()` メソッドを使用して開始します。
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 

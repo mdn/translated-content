@@ -40,7 +40,7 @@ Content scripts 可以访问和修改页面的 DOM，就像普通的页面脚本
 举个例子，考虑一个网页如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -67,9 +67,9 @@ document.body.appendChild(p);
 window.foo = "This global variable was added by a page script";
 
 // redefine the built-in window.confirm() function
-window.confirm = function() {
+window.confirm = function () {
   alert("The page script has also redefined 'confirm'");
-}
+};
 ```
 
 现在一个扩展插入一个 content script 如下：
@@ -82,7 +82,7 @@ var pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // can't see page-script-added properties
-console.log(window.foo);  // undefined
+console.log(window.foo); // undefined
 
 // sees the original form of redefined properties
 window.confirm("Are you sure?"); // calls the original window.confirm()
@@ -203,7 +203,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -216,10 +216,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "You clicked a link!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "You clicked a link!",
+    message: message.url,
   });
 }
 ```
@@ -249,16 +249,16 @@ function notify(message) {
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener(function (m) {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "they clicked the page!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -280,17 +280,17 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("In background script, received message from content script")
+  portFromCS.postMessage({ greeting: "hi there content script!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
@@ -317,11 +317,13 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data.direction &&
-      event.data.direction == "from-page-script") {
-    alert("Content script received message: \"" + event.data.message + "\"");
+window.addEventListener("message", function (event) {
+  if (
+    event.source == window &&
+    event.data.direction &&
+    event.data.direction == "from-page-script"
+  ) {
+    alert('Content script received message: "' + event.data.message + '"');
   }
 });
 ```
@@ -335,10 +337,12 @@ window.addEventListener("message", function(event) {
 > ```js
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", function (event) {
+>   if (
+>     event.source == window &&
+>     event.data.direction &&
+>     event.data.direction == "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -382,10 +386,10 @@ window.addEventListener("message", function(event) {
 让我们来看一个简单的例子，假定一个页面载入脚本如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <script type="text/javascript" src="main.js"></script>
@@ -446,7 +450,7 @@ Execute content script in the active tab.
 */
 function loadContentScript() {
   browser.tabs.executeScript({
-    file: "/content_scripts/export.js"
+    file: "/content_scripts/export.js",
   });
 }
 
@@ -464,7 +468,7 @@ browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
-    message: message.content
+    message: message.content,
   });
 });
 ```
@@ -482,10 +486,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: "Function call: " + message});
+  browser.runtime.sendMessage({ content: "Function call: " + message });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 该脚本定义了一个函数 notify（）用以发送其参数到后台脚本，而后他导出了这个函数至页面脚本域。现在页面脚本可以调用该函数：
@@ -513,17 +517,16 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 var messenger = {
-  notify: function(message) {
+  notify: function (message) {
     browser.runtime.sendMessage({
-      content: "Object method call: " + message
+      content: "Object method call: " + message,
     });
-  }
+  },
 };
 
-window.wrappedJSObject.messenger = cloneInto(
-  messenger,
-  window,
-  {cloneFunctions: true});
+window.wrappedJSObject.messenger = cloneInto(messenger, window, {
+  cloneFunctions: true,
+});
 ```
 
 现在页面脚本将看到新的含有 `notify` 方法的属性：
@@ -548,15 +551,18 @@ window.messenger.notify("Message from the page script!");
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`In content script, window.x: ${window.x}`);
 console.log(`In content script, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*",
+);
 ```
 
 这段代码仅仅通过调用`window.eval()` 和 `eval()`创建了变量 x 和 y。然后记录它们的值并通知页面更新。
@@ -564,7 +570,7 @@ window.postMessage({
 接收到消息后页面的脚本记录下这些变量：
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", function (event) {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -599,13 +605,13 @@ In page script, window.y: undefined
 
 var original = console.log;
 
-console.log = function() {
+console.log = function () {
   original(true);
-}
+};
 ```
 
 ```js
 // content-script.js calls the redefined version
 
-window.eval('console.log(false)');
+window.eval("console.log(false)");
 ```

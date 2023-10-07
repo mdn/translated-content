@@ -1,7 +1,6 @@
 ---
 title: API del portapapeles
 slug: Web/API/Clipboard_API
-original_slug: Web/API/API_del_portapapeles
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}
@@ -15,8 +14,11 @@ Esta API está diseñada para reemplazar el acceso al portapapeles usando {{domx
 En vez de instanciar un objeto `Clipboard`, se puede acceder al portapapeles del sistema a través de la variable global {{domxref("Navigator.clipboard")}}:
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
 ```
 
 Esta pieza de código lee el texto que hay en el portapapeles y lo añade al primer elemento que tenga la clase `editor`. Desde que {{domxref("Clipboard.readText", "readText()")}} (y también {{domxref("Clipboard.read", "read()")}}, de hecho) devuelve una cadena de texto vacía si el contenido del portapapeles no es texto, este código es seguro.

@@ -5,7 +5,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
-{{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如“段落”或“圖片”），還可以使用區塊級元素（例如“標題欄”、“導覽選單”、“主內容列”）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
+{{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如「段落」或「圖片」），還可以使用區塊級元素（例如「標題欄」、「導覽選單」、「主內容列」）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +48,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - 頁尾:
   - : 橫跨頁面底部的狹長區域。和頁首一樣，頁尾是放置共用資訊（比如版權聲明或聯繫方式）的，一般使用較小字體，且通常為次要內容。還可以通過提供快速訪問連結來進行{{Glossary("SEO")}} 。
 
-一個“典型的網站”可能會這樣佈局:
+一個「典型的網站」可能會這樣佈局:
 
 ![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
@@ -60,7 +60,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 > **備註：** Colorblind people represent around [4% of the world population](http://www.color-blindness.com/2006/04/28/colorblind-population/) or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women are colorblind. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were [285 million such people in the world](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
 
-In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/zh-TW/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure).
+In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
 
 To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:
 
@@ -75,7 +75,7 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -192,9 +192,9 @@ It's good to understand the overall meaning of all the HTML sectioning elements 
 
 - {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
 - {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
+- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
 - {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).
-- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title)).
+- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title)).
 - {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
 - {{HTMLElement('footer')}} represents a group of end content for a page.
 
@@ -257,7 +257,7 @@ Two elements that you'll use occasionally and will want to know about are {{html
 </p>
 ```
 
-Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)); with `<br>` elements in the code, the markup renders like this:
+Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_中的空格（whitespace）)); with `<br>` elements in the code, the markup renders like this:
 
 {{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
 

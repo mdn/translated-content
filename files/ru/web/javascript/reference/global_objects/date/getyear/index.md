@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
-tags:
-  - Date
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
 {{JSRef("Global_Objects", "Date")}} {{deprecated_header("")}}
@@ -53,7 +45,7 @@ dateObj.getYear()
 Вторая инструкция присваивает значение 95 переменной `year`.
 
 ```js
-var Xmas = new Date('December 25, 1995 23:15:00');
+var Xmas = new Date("December 25, 1995 23:15:00");
 var year = Xmas.getYear(); // вернёт 95
 ```
 
@@ -62,7 +54,7 @@ var year = Xmas.getYear(); // вернёт 95
 Вторая инструкция присваивает значение 100 переменной `year`.
 
 ```js
-var Xmas = new Date('December 25, 2000 23:15:00');
+var Xmas = new Date("December 25, 2000 23:15:00");
 var year = Xmas.getYear(); // вернёт 100
 ```
 
@@ -71,7 +63,7 @@ var year = Xmas.getYear(); // вернёт 100
 Вторая инструкция присваивает значение -100 переменной `year`.
 
 ```js
-var Xmas = new Date('December 25, 1800 23:15:00');
+var Xmas = new Date("December 25, 1800 23:15:00");
 var year = Xmas.getYear(); // вернёт -100
 ```
 

@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-padding
 
 {{CSSRef}}
 
-**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のすべての辺にに一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
+**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
 
 {{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
 
@@ -28,7 +28,7 @@ scroll-padding: auto;
 
 /* <length> 値 */
 scroll-padding: 10px;
-scroll-padding: 1em .5em 1em 1em;
+scroll-padding: 1em 0.5em 1em 1em;
 scroll-padding: 10%;
 
 /* グローバル値 */

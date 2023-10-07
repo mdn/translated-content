@@ -44,10 +44,12 @@ Usando a propriedade mais antiga [`Object.prototype.__proto__`](/pt-BR/docs/Web/
 
 ```js
 // Funciona somente no Chrome e FireFox, não funciona no IE:
-Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
-  obj.__proto__ = proto;
-  return obj;
-}
+Object.setPrototypeOf =
+  Object.setPrototypeOf ||
+  function (obj, proto) {
+    obj.__proto__ = proto;
+    return obj;
+  };
 ```
 
 ## Adicionando 'Prototype' em cadeia
@@ -56,32 +58,38 @@ Uma combinação de `Object.getPrototypeOf()` e [`Object.prototype.__proto__`](/
 
 ```js
 /**
-*** Object.appendChain(@object, @prototype)
-*
-* Acrescente o primeiro 'prototype' não nativo de uma cadeia a um novo 'prototype'.
-* Retorna @object (se for um valor primitivo, será transformado em um objeto).
-*
-*** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
-*** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
-*
-* Adicione o primeiro 'prototype' não nativo de uma cadeia ao objeto nativo Function.prototype, então anexar a nova função
-* Function(["@arg"(s)], "@function_body") àquela cadeia.
-* Retorna a função.
-*
-**/
+ *** Object.appendChain(@object, @prototype)
+ *
+ * Acrescente o primeiro 'prototype' não nativo de uma cadeia a um novo 'prototype'.
+ * Retorna @object (se for um valor primitivo, será transformado em um objeto).
+ *
+ *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
+ *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
+ *
+ * Adicione o primeiro 'prototype' não nativo de uma cadeia ao objeto nativo Function.prototype, então anexar a nova função
+ * Function(["@arg"(s)], "@function_body") àquela cadeia.
+ * Retorna a função.
+ *
+ **/
 
-Object.appendChain = function(oChain, oProto) {
+Object.appendChain = function (oChain, oProto) {
   if (arguments.length < 2) {
-    throw new TypeError('Object.appendChain - Argumentos insuficientes');
+    throw new TypeError("Object.appendChain - Argumentos insuficientes");
   }
-  if (typeof oProto !== 'object' && typeof oProto !== 'string') {
-    throw new TypeError('segundo argumento de Object.appendChain deve ser um objeto ou uma string');
+  if (typeof oProto !== "object" && typeof oProto !== "string") {
+    throw new TypeError(
+      "segundo argumento de Object.appendChain deve ser um objeto ou uma string",
+    );
   }
 
   var oNewProto = oProto,
-      oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
+    oReturn =
+      (o2nd =
+      oLast =
+        oChain instanceof this ? oChain : new oChain.constructor(oChain));
 
-  for (var o1st = this.getPrototypeOf(o2nd);
+  for (
+    var o1st = this.getPrototypeOf(o2nd);
     o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
@@ -96,16 +104,16 @@ Object.appendChain = function(oChain, oProto) {
 
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
-}
+};
 ```
 
 ### Exemplos
 
-#### Primeiro exemplo: Adicionar uma cadeia a um 'prototype'.
+#### Primeiro exemplo: Adicionar uma cadeia a um 'prototype'
 
 ```js
 function Mammal() {
-  this.isMammal = 'yes';
+  this.isMammal = "yes";
 }
 
 function MammalSpecies(sMammalSpecies) {
@@ -115,12 +123,12 @@ function MammalSpecies(sMammalSpecies) {
 MammalSpecies.prototype = new Mammal();
 MammalSpecies.prototype.constructor = MammalSpecies;
 
-var oCat = new MammalSpecies('Felis');
+var oCat = new MammalSpecies("Felis");
 
 console.log(oCat.isMammal); // 'yes'
 
 function Animal() {
-  this.breathing = 'yes';
+  this.breathing = "yes";
 }
 
 Object.appendChain(oCat, new Animal());
@@ -128,11 +136,11 @@ Object.appendChain(oCat, new Animal());
 console.log(oCat.breathing); // 'yes'
 ```
 
-#### Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'.
+#### Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'
 
 ```js
 function MySymbol() {
-  this.isSymbol = 'yes';
+  this.isSymbol = "yes";
 }
 
 var nPrime = 17;
@@ -146,15 +154,17 @@ console.log(oPrime.isSymbol); // 'yes'
 console.log(typeof oPrime); // 'object'
 ```
 
-#### Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia.
+#### Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia
 
 ```js
 function Person(sName) {
   this.identity = sName;
 }
 
-var george = Object.appendChain(new Person('George'),
-                                'console.log("Hello guys!!");');
+var george = Object.appendChain(
+  new Person("George"),
+  'console.log("Hello guys!!");',
+);
 
 console.log(george.identity); // 'George'
 george(); // 'Hello guys!!'
@@ -162,9 +172,9 @@ george(); // 'Hello guys!!'
 
 ## Especificações
 
-| Especificação                                                                                            | Situação                     | Comentário         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                                                 | Situação             | Comentário         |
+| ----------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

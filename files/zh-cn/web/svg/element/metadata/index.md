@@ -25,7 +25,7 @@ _没有专有属性_
 
 ## DOM 接口
 
-该元素实现了[`SVGMetadataElement`](/zh-CN/DOM/SVGMetadataElement)接口。
+该元素实现了 [`SVGMetadataElement`](/zh-CN/DOM/SVGMetadataElement) 接口。
 
 ## 浏览器兼容性
 

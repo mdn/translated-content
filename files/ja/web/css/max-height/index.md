@@ -68,9 +68,13 @@ max-height: unset;
 ### パーセント値とキーワード値を用いた max-height の設定
 
 ```css
-table { max-height: 75%; }
+table {
+  max-height: 75%;
+}
 
-form { max-height: none; }
+form {
+  max-height: none;
+}
 ```
 
 ## 仕様書

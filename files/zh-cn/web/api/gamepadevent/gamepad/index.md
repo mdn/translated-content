@@ -18,10 +18,14 @@ slug: Web/API/GamepadEvent/gamepad
 在触发的 {{domxref("Window.gamepadconnected")}} 事件上调用 `gamepad` 属性。
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (e) {
+  console.log(
+    "控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 

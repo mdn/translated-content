@@ -126,16 +126,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `normal`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: normal;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: normal;
 }
 ```
 
@@ -144,16 +143,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `multiply`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: multiply;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: multiply;
 }
 ```
 
@@ -162,16 +160,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `screen`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
 }
 ```
 
@@ -180,16 +177,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `overlay`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: overlay;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: overlay;
 }
 ```
 
@@ -198,16 +194,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `darken`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: darken;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: darken;
 }
 ```
 
@@ -216,16 +211,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `lighten`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: lighten;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: lighten;
 }
 ```
 
@@ -234,16 +228,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `color-dodge`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: color-dodge;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: color-dodge;
 }
 ```
 
@@ -252,16 +245,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `color-burn`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: color-burn;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: color-burn;
 }
 ```
 
@@ -270,16 +262,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `hard-light`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: hard-light;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: hard-light;
 }
 ```
 
@@ -288,16 +279,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `soft-light`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: soft-light;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: soft-light;
 }
 ```
 
@@ -306,16 +296,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `difference`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: difference;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: difference;
 }
 ```
 
@@ -324,16 +313,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `exclusion`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: exclusion;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: exclusion;
 }
 ```
 
@@ -342,16 +330,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `hue`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: hue;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: hue;
 }
 ```
 
@@ -360,16 +347,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `saturation`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: saturation;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: saturation;
 }
 ```
 
@@ -378,16 +364,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `color`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: color;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: color;
 }
 ```
 
@@ -396,16 +381,15 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Ejemplo usando `luminosity`
 
 ```html hidden
-<div id=div></div>
+<div id="div"></div>
 ```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),
-                url('tr.png');
-    background-blend-mode: luminosity;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: luminosity;
 }
 ```
 

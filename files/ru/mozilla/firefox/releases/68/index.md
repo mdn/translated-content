@@ -1,13 +1,8 @@
 ---
 title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
-tags:
-  - '68'
-  - Firefox
-  - Mozzila
-  - Релиз
-translation_of: Mozilla/Firefox/Releases/68
 ---
+
 {{FirefoxSidebar}}
 
 Эта статья содержит информацию об изменениях в Firefox 68, которые касаются разработчиков. Firefox 68 был выпущен 9 июля 2019.
@@ -83,7 +78,7 @@ translation_of: Mozilla/Firefox/Releases/68
 
 #### Удалённые
 
-- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) больше не поддерживается ({{bug(1457503)}}).
+- [`<meta http-equiv="set-cookie">`](/ru/docs/Web/HTML/Element/meta) больше не поддерживается ({{bug(1457503)}}).
 
 ### CSS
 
@@ -99,7 +94,7 @@ translation_of: Mozilla/Firefox/Releases/68
 - Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})
 - Свойство {{CSSxRef("counter-set")}} реализовано. ({{bug(1518201)}}).
 - Мы реализовали нумерацию списков, используя встроенный счётчик "list-item"; это исправило баги с нумерацией списков ({{bug(288704)}}).
-- Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
+- Selector matching and parsing support has been implemented for [`::part()`](/ru/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
 - [CSS Transforms](/ru/docs/Web/CSS/CSS_Transforms) теперь поддерживаются в косвенно рендерящихся вещах e.g.) {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ({{bug(1323962)}}).
 - While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, and {{cssxref("repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
@@ -127,7 +122,7 @@ _Без изменений._
 #### DOM
 
 - [Visual Viewport API](/ru/docs/Web/API/Visual_Viewport_API) было включено по умолчанию на Android ({{bug(1512813)}}). Добавление API для настольной версии Firefox теперь отслеживается в {{bug(1551302)}}.
-- Возможность {{domxref("Window")}} [`noreferrer`](/en-US/docs/Web/API/Window/open#noreferrer) теперь поддерживается; если указана, то новый контент окон будет загружен без передачи имени хоста, IP адреса, URL и прочей идентифицирующей устройство информации ({{bug(1527287)}}).
+- Возможность {{domxref("Window")}} [`noreferrer`](/ru/docs/Web/API/Window/open#noreferrer) теперь поддерживается; если указана, то новый контент окон будет загружен без передачи имени хоста, IP адреса, URL и прочей идентифицирующей устройство информации ({{bug(1527287)}}).
 - Метод {{domxref("HTMLImageElement.decode", "decode()")}} на `HTMLImageElement` реализован. Это может быть использовано для запуска загрузки и декодирования изображения до добавления его в DOM ({{bug(1501794)}}).
 - {{domxref("XMLHttpRequest")}} был обновлён и больше не принимает нестандартное значение `moz-chunked-arraybuffer` для {{domxref("XMLHttpRequest.responseType", "responseType")}}. Код, использующий это, должен быть обновлён, чтобы [использовать Fetch API как поток](/ru/docs/Web/API/Streams_API/Using_readable_streams#Consuming_a_fetch_as_a_stream) ({{bug(1120171)}}).
 - `XMLHttpRequest` теперь выводит предупреждения в консоль, если выполняется синхронный запрос во время обработки {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, {{domxref("Window.pagehide_event", "pagehide")}} ({{bug(980902)}}).
@@ -191,7 +186,7 @@ _Без изменений._
 
 - Функции [proxy.register()](/ru/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) и [proxy.unregister()](/ru/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) объявлены устаревшими и будут удалены в Firefox 71 ({{bug(1545811)}}).
 - Сообщения об ошибке, когда дополнение пытается добавить папку с закладками в основную папку, теперь более интуитивно понятное ({{bug(1512171)}}).
-- Promise, возвращённый [`browser.tabs.duplicate()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate), выполняется сразу, пока вкладки не загружены полностью, для повышения производительности ({{bug(1394376)}}).
+- Promise, возвращённый [`browser.tabs.duplicate()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate), выполняется сразу, пока вкладки не загружены полностью, для повышения производительности ({{bug(1394376)}}).
 - Была добавлена поддержка chrome.storage.managed, позволяющая настройкам быть реализованным через корпоративную политику ({{bug(1230802)}}).
 - Появилась опция Групповой Политики, позволяющая добавить все расширения в чёрный список, за исключением тех, что внесены в белый, ({{bug(1522823)}}).
 

@@ -10,9 +10,8 @@ slug: Web/API/Document/bgColor
 ### Sintaxis
 
 ```js
-color = document.bgColor
-document.bgColor =
-color
+color = document.bgColor;
+document.bgColor = color;
 ```
 
 ### Parámetros

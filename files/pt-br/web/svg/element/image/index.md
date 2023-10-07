@@ -51,9 +51,12 @@ Basic rendering of a PNG image in SVG:
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-  <image href="mdn_logo_only_color.png" height="200" width="200"/>
+<svg
+  width="200"
+  height="200"
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
+  <image href="mdn_logo_only_color.png" height="200" width="200" />
 </svg>
 ```
 
@@ -63,9 +66,9 @@ Basic rendering of a PNG image in SVG:
 
 ## Specifications
 
-| Specification                                                                            | Status                   | Comment                              |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------ |
-| {{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG2')}} | Allows omitting `height` and `width` |
+| Specification                                                       | Status              | Comment                              |
+| ------------------------------------------------------------------- | ------------------- | ------------------------------------ |
+| {{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG2')}}   | Allows omitting `height` and `width` |
 | {{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition                   |
 
 ## Compatibilidade com navegadores

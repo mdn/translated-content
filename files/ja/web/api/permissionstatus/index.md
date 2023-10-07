@@ -22,12 +22,20 @@ slug: Web/API/PermissionStatus
 ## 例
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
-  console.log('位置情報のパーミッションの状態は ' + permissionStatus.state + ' です。');
-  permissionStatus.onchange = function() {
-    console.log('位置情報のパーミッションの状態が ' + this.state + ' に変更されました。');
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then(function (permissionStatus) {
+    console.log(
+      "位置情報のパーミッションの状態は " + permissionStatus.state + " です。",
+    );
+    permissionStatus.onchange = function () {
+      console.log(
+        "位置情報のパーミッションの状態が " +
+          this.state +
+          " に変更されました。",
+      );
+    };
+  });
 ```
 
 ## 仕様

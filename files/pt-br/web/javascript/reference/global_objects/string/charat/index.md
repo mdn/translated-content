@@ -35,13 +35,13 @@ Se nenhum índice for passado para `charAt()`, `0` será usado por padrão.
 O exemplo a seguir mostra caracteres em diferentes locais em uma string `"Brave new world"`:
 
 ```js
-var anyString = 'Brave new world';
+var anyString = "Brave new world";
 
-console.log("A letra no índice 0 é '" + anyString.charAt(0)   + "'");
-console.log("A letra no índice 1 é '" + anyString.charAt(1)   + "'");
-console.log("A letra no índice 2 é '" + anyString.charAt(2)   + "'");
-console.log("A letra no índice 3 é '" + anyString.charAt(3)   + "'");
-console.log("A letra no índice 4 é '" + anyString.charAt(4)   + "'");
+console.log("A letra no índice 0 é '" + anyString.charAt(0) + "'");
+console.log("A letra no índice 1 é '" + anyString.charAt(1) + "'");
+console.log("A letra no índice 2 é '" + anyString.charAt(2) + "'");
+console.log("A letra no índice 3 é '" + anyString.charAt(3) + "'");
+console.log("A letra no índice 4 é '" + anyString.charAt(4) + "'");
 console.log("A letra no índice 99 é '" + anyString.charAt(999) + "'");
 ```
 
@@ -61,7 +61,7 @@ A letra no índice 99 é ''
 O seguinte código fornece um meio de garantir que passar por um loop de string sempre forneça um caractere inteiro, mesmo se a string contiver caracteres que não estão no [Plano Multilíngue Básico](<https://pt.wikipedia.org/wiki/Plano_(Unicode)>).
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+var str = "A \uD87E\uDC04 Z"; // We could also use a non-BMP character directly
 for (var i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
@@ -77,34 +77,34 @@ function getWholeChar(str, i) {
   var code = str.charCodeAt(i);
 
   if (isNaN(code)) {
-    return ''; // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return str.charAt(i);
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return str.charAt(i) + str.charAt(i + 1);
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return str.charAt(i) + str.charAt(i + 1);
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
+    throw "Low surrogate without preceding high surrogate";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
   }
   // We can pass over low surrogates now as the second component
   // in a pair which we have already processed
@@ -115,7 +115,7 @@ function getWholeChar(str, i) {
 Em um ambiente ECMAScript 2016 que permite atribuição desestruturada, o seguinte código é uma alternativa mais sucinta e um pouco mais flexível, pois faz incremento para uma variável de incremento automaticamente (se o caractere justificar que seja um par substituto).
 
 ```js
-var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
+var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
 for (var i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Adapt this line at the top of each loop, passing in the whole string and
@@ -129,34 +129,34 @@ function getWholeCharAndI(str, i) {
   var code = str.charCodeAt(i);
 
   if (isNaN(code)) {
-    return ''; // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return [str.charAt(i) + str.charAt(i + 1), i + 1];
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
+    throw "Low surrogate without preceding high surrogate";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
   }
   // Return the next character instead (and increment)
   return [str.charAt(i + 1), i + 1];
@@ -169,12 +169,12 @@ Embora o exemplo anterior possa ser mais útil para programas que devem suportar
 
 ```js
 function fixedCharAt(str, idx) {
-  var ret = '';
-  str += '';
+  var ret = "";
+  str += "";
   var end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
@@ -184,12 +184,15 @@ function fixedCharAt(str, idx) {
   }
 
   if (idx >= end || idx < 0) {
-    return '';
+    return "";
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (
+    /[\uD800-\uDBFF]/.test(ret) &&
+    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  ) {
     // Go one further, since one of the "characters" is part of a surrogate pair
     ret += str.charAt(idx + 1);
   }
@@ -199,11 +202,11 @@ function fixedCharAt(str, idx) {
 
 ## Especificações
 
-| Especificação                                                                                            | Status                   | Comentário          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}     | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                     |
+| Especificação                                                                  | Status             | Comentário          |
+| ------------------------------------------------------------------------------ | ------------------ | ------------------- |
+| {{SpecName('ES1')}}                                                            | {{Spec2('ES1')}}   | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}              | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}   |                     |
 
 ## Navegadores compatíveis
 

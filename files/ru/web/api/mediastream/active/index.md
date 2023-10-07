@@ -1,7 +1,6 @@
 ---
 title: active
 slug: Web/API/MediaStream/active
-translation_of: Web/API/MediaStream/active
 ---
 
 {{APIRef("Media Capture and Streams")}}

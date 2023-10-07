@@ -1,8 +1,8 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
-translation_of: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
 [Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) [CSS](/ru/docs/Web/CSS) **`::cue`** соответствует репликам [WebVTT](/ru/docs/Web/API/WebVTT_API) в выбранном элементе. Он может быть использован для задания [стилей титров и других реплик](/docs/Web/API/WebVTT_API#Styling_WebTT_cues) в медиа с VTT треками.

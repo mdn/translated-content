@@ -1,12 +1,6 @@
 ---
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/scroll-margin-block-start
 ---
 
 {{CSSRef}}

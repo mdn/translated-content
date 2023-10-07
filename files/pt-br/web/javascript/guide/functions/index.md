@@ -1,7 +1,6 @@
 ---
 title: Funções
 slug: Web/JavaScript/Guide/Functions
-original_slug: Web/JavaScript/Guide/Funções
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
@@ -43,14 +42,14 @@ function minhaFuncao(objeto) {
   objeto.make = "Toyota";
 }
 
-var meucarro = {make: "Honda", model: "Accord", year: 1998};
+var meucarro = { make: "Honda", model: "Accord", year: 1998 };
 var x, y;
 
-x = meucarro.make;     // x recebe o valor "Honda"
+x = meucarro.make; // x recebe o valor "Honda"
 
 minhaFuncao(meucarro);
-y = meucarro.make;     // y recebe o valor "Toyota"
-                    // (a propriedade make foi alterada pela função)
+y = meucarro.make; // y recebe o valor "Toyota"
+// (a propriedade make foi alterada pela função)
 ```
 
 ### Expressão de função
@@ -58,14 +57,18 @@ y = meucarro.make;     // y recebe o valor "Toyota"
 Embora a declaração de função acima seja sintaticamente uma declaração, funções também podem ser criadas por uma **expressão de função**. Tal função pode ser **anônima**; ele não tem que ter um nome. Por exemplo, a função `square` poderia ter sido definida como:
 
 ```js
-var square = function(numero) {return numero * numero};
-var x = square(4) //x recebe o valor 16
+var square = function (numero) {
+  return numero * numero;
+};
+var x = square(4); //x recebe o valor 16
 ```
 
 No entanto, um nome pode ser fornecido com uma expressão de função e pode ser utilizado no interior da função para se referir a si mesma, ou em um debugger para identificar a função em stack traces:
 
 ```js
-var fatorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
+var fatorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
 console.log(fatorial(3));
 ```
@@ -73,11 +76,10 @@ console.log(fatorial(3));
 As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função `map` sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:
 
 ```js
-function map(f,a) {
+function map(f, a) {
   var result = []; // Cria um novo Array
   var i;
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
 ```
@@ -85,7 +87,12 @@ function map(f,a) {
 O código a seguir:
 
 ```js
-map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
+map(
+  function (x) {
+    return x * x * x;
+  },
+  [0, 1, 2, 5, 10],
+);
 ```
 
 retorna \[0, 1, 8, 125, 1000].
@@ -94,10 +101,10 @@ Em JavaScript, uma função pode ser definida com base numa condição. Por exem
 
 ```js
 var minhaFuncao;
-if (num == 0){
-  minhaFuncao = function(objeto) {
-    objeto.make = "Toyota"
-  }
+if (num == 0) {
+  minhaFuncao = function (objeto) {
+    objeto.make = "Toyota";
+  };
 }
 ```
 
@@ -131,7 +138,7 @@ O escopo de uma função é a função na qual ela é declarada, ou todo o progr
 console.log(square(5));
 var square = function (n) {
   return n * n;
-}
+};
 ```
 
 Os argumentos de uma função não estão limitados a strings e números. Você pode passar objetos para uma função. A função `show_props` (definido em [Trabalhando com Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)) é um exemplo de uma função que recebe um objeto como um argumento.
@@ -139,11 +146,9 @@ Os argumentos de uma função não estão limitados a strings e números. Você 
 Um função pode chamar a si mesma. Por exemplo, a função que calcula os fatoriais recursivamente:
 
 ```js
-function fatorial(n){
-  if ((n == 0) || (n == 1))
-    return 1;
-  else
-    return (n * fatorial(n - 1));
+function fatorial(n) {
+  if (n == 0 || n == 1) return 1;
+  else return n * fatorial(n - 1);
 }
 ```
 
@@ -167,8 +172,8 @@ As variáveis definidas no interior de uma função não podem ser acessadas de 
 ```js
 // As seguintes variáveis são definidas no escopo global
 var num1 = 20,
-    num2 = 3,
-    nome = "Chamahk";
+  num2 = 3,
+  nome = "Chamahk";
 
 // Esta função é definida no escopo global
 function multiplica() {
@@ -178,9 +183,9 @@ function multiplica() {
 multiplica(); // Retorna 60
 
 // Um exemplo de função aninhada
-function getScore () {
+function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function add() {
     return nome + " scored " + (num1 + num2);
@@ -206,7 +211,7 @@ Por exemplo, considere a seguinte definição de função:
 
 ```js
 var foo = function bar() {
-   // declaracoes
+  // declaracoes
 };
 ```
 
@@ -220,9 +225,10 @@ Uma função que chama a si mesma é chamada de função recursiva. Em alguns ca
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" a condição do laço
-   // faça coisas
-   x++;
+while (x < 10) {
+  // "x < 10" a condição do laço
+  // faça coisas
+  x++;
 }
 ```
 
@@ -230,10 +236,11 @@ pode ser convertido em função recursiva e uma chamada para a função:
 
 ```js
 function loop(x) {
-   if (x >= 10) // "x >= 10" a condição de parada (equivalente a "!(x < 10)")
-      return;
-   // faça coisas
-   loop(x + 1); // chamada recursiva
+  if (x >= 10)
+    // "x >= 10" a condição de parada (equivalente a "!(x < 10)")
+    return;
+  // faça coisas
+  loop(x + 1); // chamada recursiva
 }
 loop(0);
 ```
@@ -242,12 +249,13 @@ No entanto, alguns algoritmos não podem ser simples laços iterativos. Por exem
 
 ```js
 function walkTree(node) {
-   if (node == null) //
-      return;
-   // faça algo com o nó
-   for (var i = 0; i < node.childNodes.length; i++) {
-      walkTree(node.childNodes[i]);
-   }
+  if (node == null)
+    //
+    return;
+  // faça algo com o nó
+  for (var i = 0; i < node.childNodes.length; i++) {
+    walkTree(node.childNodes[i]);
+  }
 }
 ```
 
@@ -259,11 +267,10 @@ O comportamento da pilha pode ser vista a seguir no exemplo:
 
 ```js
 function foo(i) {
-   if (i < 0)
-      return;
-   document.writeln('begin:' + i);
-   foo(i - 1);
-   document.writeln('end:' + i);
+  if (i < 0) return;
+  document.writeln("begin:" + i);
+  foo(i - 1);
+  document.writeln("end:" + i);
 }
 foo(3);
 ```
@@ -295,25 +302,25 @@ Em resumo:
 O exemplo a seguir mostra as funções aninhadas:
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
 }
-a = addSquares(2,3); // retorna 13
-b = addSquares(3,4); // retorna 25
-c = addSquares(4,5); // retorna 41
+a = addSquares(2, 3); // retorna 13
+b = addSquares(3, 4); // retorna 25
+c = addSquares(4, 5); // retorna 41
 ```
 
 Uma vez que a função interna forma uma _closure_, você pode chamar a função externa e especificar argumentos para a função externa e interna:
 
 ```js
 function fora(x) {
-   function dentro(y) {
-      return x + y;
-   }
-   return dentro;
+  function dentro(y) {
+    return x + y;
+  }
+  return dentro;
 }
 fn_inside = fora(3); // Pense nisso como: Receba uma função que adicionará 3 ao que quer que você repasse para ela
 result = fn_inside(5); // retorna 8
@@ -335,13 +342,13 @@ Considere o seguinte exemplo:
 
 ```js
 function A(x) {
-   function B(y) {
-      function C(z) {
-         alert(x + y + z);
-      }
-      C(3);
-   }
-   B(2);
+  function B(y) {
+    function C(z) {
+      alert(x + y + z);
+    }
+    C(3);
+  }
+  B(2);
 }
 A(1); // Exibe um alerta com o valor 6 (1 + 2 + 3)
 ```
@@ -360,11 +367,11 @@ Quando dois argumentos ou variáveis nos escopos da _closure_ tem o mesmo nome, 
 
 ```js
 function fora() {
-   var x = 10;
-   function dentro(x) {
-      return x;
-   }
-   return dentro;
+  var x = 10;
+  function dentro(x) {
+    return x;
+  }
+  return dentro;
 }
 result = fora()(20); // retorna 20 em vez de 10
 ```
@@ -376,78 +383,84 @@ O conflito de nome acontece na declaração `return x` e está entre o parâmetr
 _Closures_ são um dos recursos mais poderosos de JavaScript. JavaScript permite o aninhamento de funções e garante acesso completo à função interna a todas as variáveis e funções definidas dentro da função externa (e todas as outras variáveis e funções que a função externa tem acesso). No entanto, a função externa não tem acesso às variáveis e funções definidas dentro da função interna. Isto proporciona uma espécie de segurança para as variáveis da função interna. Além disso, uma vez que a função interna tem acesso ao escopo da função externa, as variáveis e funções definidas na função externa vão durar na memória mais do que a própria função externa, isto se a função interna permanecer na memória mais tempo do que a função externa. Uma _closure_ é criada quando a função interna é de alguma forma disponibilizada para qualquer escopo fora da função externa.
 
 ```js
-var pet = function(nome) {          // A função externa define uma variável "nome"
-      var getNome = function() {
-        return nome;                // A função interna tem acesso à variável "nome"  da função externa
-      }
+var pet = function (nome) {
+    // A função externa define uma variável "nome"
+    var getNome = function () {
+      return nome; // A função interna tem acesso à variável "nome"  da função externa
+    };
 
-      return getNome;               // Retorna a função interna, expondo-a assim para escopos externos
-    },
-    myPet = pet("Vivie");
+    return getNome; // Retorna a função interna, expondo-a assim para escopos externos
+  },
+  myPet = pet("Vivie");
 
-myPet();                            // Retorna "Vivie"
+myPet(); // Retorna "Vivie"
 ```
 
 Ela pode ser mais complexa que o código acima. Um objeto contendo métodos para manipular as variáveis da função externa pode ser devolvida.
 
 ```js
-var criarPet = function(nome) {
+var criarPet = function (nome) {
   var sex;
 
   return {
-    setNome: function(newNome) {
+    setNome: function (newNome) {
       nome = newNome;
     },
 
-    getNome: function() {
+    getNome: function () {
       return nome;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex == "string" && (newSex.toLowerCase() == "macho" || newSex.toLowerCase() == "fêmea")) {
+    setSex: function (newSex) {
+      if (
+        typeof newSex == "string" &&
+        (newSex.toLowerCase() == "macho" || newSex.toLowerCase() == "fêmea")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
+};
 
 var pet = criarPet("Vivie");
-pet.getNome();                  // Vivie
+pet.getNome(); // Vivie
 
 pet.setNome("Oliver");
 pet.setSex("macho");
-pet.getSex();                   // macho
-pet.getNome();                  // Oliver
+pet.getSex(); // macho
+pet.getNome(); // Oliver
 ```
 
 Nos códigos acima, a variável `nome` da função externa é acessível para as funções internas, e não há nenhuma outra maneira para acessar as variáveis internas, exceto pelas funções internas. As variáveis internas da função interna atuam como armazenamento seguro para as funções internas. Elas armazenam "persistentes", mas seguros, os dados com os quais as funções internas irão trabalhar. As funções não tem que ser atribuídas a uma variável, ou ter um nome.
 
 ```js
-var getCode = (function(){
-  var secureCode = "0]Eal(eh&2";    // Um código que não queremos que pessoas de fora sejam capazes de modificar
+var getCode = (function () {
+  var secureCode = "0]Eal(eh&2"; // Um código que não queremos que pessoas de fora sejam capazes de modificar
 
   return function () {
     return secureCode;
   };
 })();
 
-getCode();    // Retorna o secureCode
+getCode(); // Retorna o secureCode
 ```
 
 Há, no entanto, uma série de armadilhas que se deve ter cuidado ao usar closures. Se uma função fechada define uma variável com o mesmo nome de uma variável em um escopo externo, não há nenhuma maneira de se referir para a variável em um escopo externo novamente.
 
 ```js
-var createPet = function(nome) {  // Função externa define uma variável chamada "nome"
+var createPet = function (nome) {
+  // Função externa define uma variável chamada "nome"
   return {
-    setNome: function(nome) {    // Função fechada define uma variável chamada "nome"
-      nome = nome;               // ??? Como podemos acessar o "nome" definido pela função externa ???
-    }
-  }
-}
+    setNome: function (nome) {
+      // Função fechada define uma variável chamada "nome"
+      nome = nome; // ??? Como podemos acessar o "nome" definido pela função externa ???
+    },
+  };
+};
 ```
 
 A palavra reservada [this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) é muito complicada em _closures,_ elas têm de ser usadas com muito cuidado. O objeto ao que `this` se refere depende completamente de onde a função foi chamada, ao invés de onde ela foi definida.
@@ -457,7 +470,7 @@ A palavra reservada [this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) 
 Os argumentos de uma função são mantidos em um objeto do tipo array. Dentro de uma função, você pode endereçar os argumentos passados para ele conforme:
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 onde `i` é um número ordinal do argumento, começando com zero. Então, o primeiro argumento passado para a função seria `arguments[0]`. O número total de argumentos é indicado por `arguments.length`.
@@ -468,13 +481,13 @@ Por exemplo, considere uma função que concatena várias _strings_. O argumento
 
 ```js
 function myConcat(separador) {
-   var result = "", // inicializa a lista
-       i;
-   // itera por meio de argumentos
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separador;
-   }
-   return result;
+  var result = "", // inicializa a lista
+    i;
+  // itera por meio de argumentos
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separador;
+  }
+  return result;
 }
 ```
 
@@ -507,9 +520,9 @@ No passado, a estratégia geral para definir padrões era testar os valores de p
 
 ```js
 function multiplicar(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
-  return a*b;
+  return a * b;
 }
 
 multiplicar(5); // 5
@@ -519,7 +532,7 @@ Com parâmetros padrão, a verificação no corpo da função não é mais neces
 
 ```js
 function multiplicar(a, b = 1) {
-  return a*b;
+  return a * b;
 }
 
 multiplicar(5); // 5
@@ -533,7 +546,7 @@ A sintaxe de [parâmetro rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/re
 
 ```js
 function multiplicar(multiplicador, ...args) {
-  return args.map(x => multiplicador * x);
+  return args.map((x) => multiplicador * x);
 }
 
 var arr = multiplicar(2, 1, 2, 3);
@@ -551,16 +564,13 @@ Dois fatores influenciaram a introdução de funções de seta: funções mais c
 Em alguns padrões funcionais, funções curtas são bem-vindas. Compare:
 
 ```js
-var a = [
-  "Hydrogen",
-  "Helium",
-  "Lithium",
-  "Beryl­lium"
-];
+var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s){ return s.length });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 
-var a3 = a.map( s => s.length );
+var a3 = a.map((s) => s.length);
 ```
 
 ### Léxico this
@@ -568,13 +578,15 @@ var a3 = a.map( s => s.length );
 Até as funções de seta, cada nova função definia seu próprio valor [this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) (um novo objeto no caso de um construtor, indefinido em chamadas de função no modo estrito, o objeto de contexto se a função é chamada como um "método de objeto", etc.). Isso pode ser irritante com um estilo de programação orientada a objetos.
 
 ```js
-function Pessoa() {      // O construtor Pessoa() define 'this' como sendo ele.
-    this.idade = 0;
-    setInterval(function crescer() {    // No modo não estrito, a função crescer define 'this'
-            // como o objeto global, o que é diferente do 'this'
-            // definido pelo construtor Pessoa().
-            this.idade++;
-     }, 1000);
+function Pessoa() {
+  // O construtor Pessoa() define 'this' como sendo ele.
+  this.idade = 0;
+  setInterval(function crescer() {
+    // No modo não estrito, a função crescer define 'this'
+    // como o objeto global, o que é diferente do 'this'
+    // definido pelo construtor Pessoa().
+    this.idade++;
+  }, 1000);
 }
 var p = new Pessoa();
 ```
@@ -584,7 +596,7 @@ No ECMAScript 3/5, este problema foi resolvido atribuindo o valor em `this` a um
 ```js
 function Pessoa() {
   var self = this; // Alguns preferem 'that' em vez de 'self'.
-                   // Escolha um e seja consistente.
+  // Escolha um e seja consistente.
   self.idade = 0;
 
   setInterval(function crescer() {

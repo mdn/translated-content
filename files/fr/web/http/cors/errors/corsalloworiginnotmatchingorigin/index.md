@@ -1,8 +1,6 @@
 ---
 title: "Raison : l'en-tête CORS « Access-Control-Allow-Origin » ne correspond pas à « xyz »"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSAllowOriginNeCorrespondPas
 ---
 
 {{HTTPSidebar}}

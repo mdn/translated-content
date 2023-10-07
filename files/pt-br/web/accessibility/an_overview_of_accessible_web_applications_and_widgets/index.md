@@ -1,7 +1,6 @@
 ---
 title: Visão geral da acessibilidade nas aplicações web e widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and_widgets
 ---
 
 A Rede Mundial está mudando. Estatísticamente, os sítios baseados em páginas estão, cada vez mais, sendo repostos por aplicações dinâmicas, em estilo Ambiente, que fazem uso intenso de JavaScript e AJAX. Estilistas estão criando novos _widgets_ e controles inteiramente com a combinação de JavaScript, HTML e CSS. Este salto tem o potencial de aperfeiçoar, dramaticamente, a capacidade de resposta e a usabilidade da Rede, mas milhares de utilizadores estão sob o risco de exclusão, devido a algumas lacunas na acessibilidade. A JavaScript tem, tradicionalmente, tido a reputação de ser inviável para quem usa tecnologias assistivas, como leitores de tela mas, agora, existem maneiras de criar interfaces de utilização dinâmicas acessíveis a uma ampla variedade de pessoas.
@@ -63,9 +62,15 @@ _Exemplo 3: Marcação para um widget de abas com os atributos ARIA adicionados:
 
 <div>
   <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
+    Chapter 1 content goes here
+  </div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
+    Chapter 2 content goes here
+  </div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
+    Quiz content goes here
+  </div>
 </div>
 ```
 
@@ -98,19 +103,26 @@ _Exemplo 1a: HTML para um menu selecionável._
 
 ```html
 <ul id="fontMenu" class="menu" role="menu" aria-hidden="true">
-  <li id="sans-serif"
-      class="menu-item"
-      role="menuitemradio"
-      tabindex="-1"
-      aria-controls="st1"
-      aria-checked="true">Sans-serif</li>
-  <li id="serif"
-      class="menu-item"
-      role="menuitemradio"
-      tabindex="-1"
-      aria-controls="st1"
-      aria-checked="false">Serif</li>
+  <li
+    id="sans-serif"
+    class="menu-item"
+    role="menuitemradio"
+    tabindex="-1"
+    aria-controls="st1"
+    aria-checked="true">
+    Sans-serif
+  </li>
+  <li
+    id="serif"
+    class="menu-item"
+    role="menuitemradio"
+    tabindex="-1"
+    aria-controls="st1"
+    aria-checked="false">
+    Serif
+  </li>
   ...
+</ul>
 ```
 
 A CSS usada para alterar a aparência do item selecionado é mostrada no Exemplo 1b. Perceba que não existe um nome de classe (_classname_) de personalização, apenas o estado do atributo **`aria-checked`**, na linha 1.
@@ -120,7 +132,7 @@ _Exemplo 1b: Seletor baseado em atributo para indicar um estado._
 ```css
 li[aria-checked="true"] {
   font-weight: bold;
-  background-image: url('images/dot.png');
+  background-image: url("images/dot.png");
   background-repeat: no-repeat;
   background-position: 5px 10px;
 }
@@ -131,14 +143,14 @@ O JavaScript para atualizar a propriedade **`aria-checked`** tem a forma exibida
 _Exemplo 1c: A JavaScript atualiza o atributo aria-checked_.
 
 ```js
-var processMenuChoice = function(item) {
+var processMenuChoice = function (item) {
   // 'check' the selected item
-  item.setAttribute('aria-checked', 'true');
+  item.setAttribute("aria-checked", "true");
   // 'un-check' the other menu items
   var sib = item.parentNode.firstChild;
-  for (; sib; sib = sib.nextSibling ) {
-    if ( sib.nodeType === 1 && sib !== item ) {
-      sib.setAttribute('aria-checked', 'false');
+  for (; sib; sib = sib.nextSibling) {
+    if (sib.nodeType === 1 && sib !== item) {
+      sib.setAttribute("aria-checked", "false");
     }
   }
 };
@@ -156,14 +168,18 @@ _Exemplo 2a: HTML para dicas de tela._
 
 ```html
 <div class="text">
-    <label id="tp1-label" for="first">First Name:</label>
-    <input type="text" id="first" name="first" size="20"
-           aria-labelledby="tp1-label"
-           aria-describedby="tp1"
-           aria-required="false" />
-    <div id="tp1" class="tooltip"
-         role="tooltip"
-         aria-hidden="true">Your first name is optional</div>
+  <label id="tp1-label" for="first">First Name:</label>
+  <input
+    type="text"
+    id="first"
+    name="first"
+    size="20"
+    aria-labelledby="tp1-label"
+    aria-describedby="tp1"
+    aria-required="false" />
+  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+    Your first name is optional
+  </div>
 </div>
 ```
 
@@ -174,7 +190,7 @@ _Exemplo 2b: Seletor basedo em atributo para indicar um estado._
 ```css
 div.tooltip[aria-hidden="true"] {
   display: none;
-  }
+}
 ```
 
 O JavaScript que atualiza a propriedade **`aria-hidden`** tem a forma exposta no Exemplo 2c. Observe que o roteiro apenas atualiza o atributo **`aria-hidden`** (linha 2); não é necessário adicionar, nem remover, uma _classname_ customizada.
@@ -182,9 +198,9 @@ O JavaScript que atualiza a propriedade **`aria-hidden`** tem a forma exposta no
 _Exemplo 2c: JavaScript para atualização do atributo aria-checked._
 
 ```js
-var showTip = function(el) {
-  el.setAttribute('aria-hidden', 'false');
-}
+var showTip = function (el) {
+  el.setAttribute("aria-hidden", "false");
+};
 ```
 
 ### Mudança de Atributo (_Role_)

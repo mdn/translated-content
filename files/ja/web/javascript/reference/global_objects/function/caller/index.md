@@ -20,8 +20,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 再帰呼び出しの場合、このプロパティを用いてコールスタックを再現することはできません。以下について考えてみましょう。
 
 ```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) {
+    f(n);
+  } else {
+    stop();
+  }
+}
 f(2);
 ```
 
@@ -34,16 +42,16 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 以下は真になります。
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 従って、`stop()` 関数のスタックトレースを以下のようにして取得するとします。
 
 ```js
 var f = stop;
-var stack = 'Stack trace:';
+var stack = "Stack trace:";
 while (f) {
-  stack += '\n' + f.name;
+  stack += "\n" + f.name;
   f = f.caller;
 }
 ```
@@ -59,9 +67,9 @@ while (f) {
 ```js
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return "This function's caller was " + myFunc.caller;
   }
 }
 ```

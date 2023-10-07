@@ -2,17 +2,18 @@
 title: <var>
 slug: Web/HTML/Element/var
 ---
+
 ## Resumo
 
 O elemento HTML Variable (`<var>`) representa uma variável em uma expressão matemática ou um contexto de programação.
 
 ## Contexto de utilização
 
-| Permitted content         | Phrasing content                                                                                                                              |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission              | Both start and end tags are required                                                                                                          |
+| Permitted content         | Phrasing content                                                                                   |
+| ------------------------- | -------------------------------------------------------------------------------------------------- |
+| Tag omission              | Both start and end tags are required                                                               |
 | Permitted parent elements | Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content). |
-| Normative document        | [HTML, "The `var` element"](http://www.whatwg.org/html/#the-var-element)                                                                      |
+| Normative document        | [HTML, "The `var` element"](http://www.whatwg.org/html/#the-var-element)                           |
 
 ## Atributos
 
@@ -35,7 +36,7 @@ var {
 ## Exemplo
 
 ```html
-<p> A simple equation: <var>x</var> = <var>y</var> + 2 </p>
+<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
 ```
 
 A simple equation: _x_ = _y_ + 2

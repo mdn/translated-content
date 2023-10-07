@@ -1,11 +1,11 @@
 ---
-title: CSS values and units
+title: CSS 值与单位
 slug: Web/CSS/CSS_Values_and_Units
 ---
 
 {{CSSRef}}
 
-所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
+所有的 CSS 声明都包括一个“属性/值”对。由于属性不同，对应的值可能是单个整数或关键字，也可能是一串包含或不包含单位的关键字和值的集合。CSS 属性接受一组共同的数据类型（属性的值和对应的单位）。下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
 
 ## 文本数据类型
 
@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_Values_and_Units
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -61,7 +61,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -170,7 +170,7 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 
 #### Time units
 
-Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the `s` or `ms` -- is required. It accepts the following values.
+Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
 | Unit | Name         | Description                               |
 | ---- | ------------ | ----------------------------------------- |

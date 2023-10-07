@@ -1,8 +1,6 @@
 ---
 title: Qu'est-ce que CSS ?
 slug: Learn/CSS/First_steps/What_is_CSS
-translation_of: Learn/CSS/First_steps/What_is_CSS
-original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
@@ -90,11 +88,11 @@ On retient facilement certaines valeurs, d'autres sont plus difficiles à mémor
 
 ## Modules CSS
 
-Il y a beaucoup de choses qu'on peut mettre en forme en utilisant CSS. C'est pour ça que le langage et ses spécifications ont été découpés en _modules_. En naviguant dans le site MDN vous croiserez ces modules&nbsp;: quand des pages de documentation sont regroupées, c'est la plupart du temps qu'elles réfèrent à un même module. Par exemple, jetez un œil à la référence MDN pour le module *[Backgrounds and Borders](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)*, vous y trouverez ce pour quoi il a été conçu, les différentes propriétés et fonctionnalités qu'il regroupe. Vous trouverez aussi des liens vers la spécification CSS qui définit cette technologie (voir plus bas).
+Il y a beaucoup de choses qu'on peut mettre en forme en utilisant CSS. C'est pour ça que le langage et ses spécifications ont été découpés en _modules_. En naviguant dans le site MDN vous croiserez ces modules&nbsp;: quand des pages de documentation sont regroupées, c'est la plupart du temps qu'elles réfèrent à un même module. Par exemple, jetez un œil à la référence MDN pour le module _[Backgrounds and Borders](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)_, vous y trouverez ce pour quoi il a été conçu, les différentes propriétés et fonctionnalités qu'il regroupe. Vous trouverez aussi des liens vers la spécification CSS qui définit cette technologie (voir plus bas).
 
 À ce stade, inutile de se préoccuper de la structure de CSS (même s'il est parfois plus simple de trouver une information quand on a compris qu'une propriété est reliée à une famille d'autres propriétés au sein d'un même module de spécification).
 
-Prenons un exemple précis et revenons au module *Backgrounds and Borders* — les propriétés [`background-color`](/fr/docs/Web/CSS/background-color) et [`border-color`](/fr/docs/Web/CSS/border-color) qui agissent sur l'arrière-plan et les bordures appartiennent toutes les deux à ce module.
+Prenons un exemple précis et revenons au module _Backgrounds and Borders_ — les propriétés [`background-color`](/fr/docs/Web/CSS/background-color) et [`border-color`](/fr/docs/Web/CSS/border-color) qui agissent sur l'arrière-plan et les bordures appartiennent toutes les deux à ce module.
 
 ### Spécifications CSS
 

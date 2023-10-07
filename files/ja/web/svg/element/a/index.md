@@ -11,21 +11,23 @@ SVG の `<a>` 要素はコンテナーですので、 (HTML のような) テキ
 
 ```css hidden
 @namespace svg url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- 図形を囲むリンク -->
   <a href="/ja/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- テキストを囲むリンク -->
   <a href="/ja/docs/Web/SVG/Element/text">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```
@@ -38,7 +40,8 @@ html,body,svg { height:100% }
 /* SVG の <a> 要素のみを選択し、 HTML を除外するために必要。
    下記の警告を参照 */
 
-svg|a:link, svg|a:visited {
+svg|a:link,
+svg|a:visited {
   cursor: pointer;
 }
 
@@ -48,7 +51,8 @@ text svg|a {
   text-decoration: underline;
 }
 
-svg|a:hover, svg|a:active {
+svg|a:hover,
+svg|a:active {
   outline: dotted 1px blue;
 }
 ```

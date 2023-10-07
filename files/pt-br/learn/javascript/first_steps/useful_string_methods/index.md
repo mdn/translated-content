@@ -33,7 +33,7 @@ Agora que nós vimos o básico de strings, vamos engatar a próxima marcha e com
 Como dissemos antes e diremos novamente — _tudo_ é um objeto em JavaScript. Quando você cria um string, usando por exemplo
 
 ```js
-var string = 'This is my string';
+var string = "This is my string";
 ```
 
 sua variável torna-se uma instância do objeto string e, como resultado, tem um grande número de propriedades e métodos diponíveis para ela. Você pode ver isso se você for na página do objeto {{jsxref("String")}} e olhar para baixo na lista do lado da página!
@@ -45,10 +45,10 @@ Vamos digitar alguns exemplos em um console novo. Nós fornecemos um abaixo (voc
 Nós fornecemos um abaixo (você também pode [abrir esse console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma aba ou janela separada, ou usar o [console do navegador do desenvolvedor](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se você preferir).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -56,7 +56,7 @@ Nós fornecemos um abaixo (você também pode [abrir esse console](https://mdn.g
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -90,60 +90,55 @@ Nós fornecemos um abaixo (você também pode [abrir esse console](https://mdn.g
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class', 'input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -155,7 +150,7 @@ Nós fornecemos um abaixo (você também pode [abrir esse console](https://mdn.g
 Essa é fácil — você simplesmente usa a propriedade {{jsxref("String.prototype.length", "length")}}. Tente digitar as linhas a seguir:
 
 ```js
-var browserType = 'mozilla';
+var browserType = "mozilla";
 browserType.length;
 ```
 
@@ -172,7 +167,7 @@ browserType[0];
 Computadores contam a partir de 0, não 1! Para recuperar o último caractere de _qualquer_ string, nós podemos usar a linha a seguir, combinando essa técnica com a propriedade `length` que vimos anteriormente:
 
 ```js
-browserType[browserType.length-1];
+browserType[browserType.length - 1];
 ```
 
 O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição do caractere é 6, daí precisamos usar `length-1`. Você pode usar isso para, por exemplo, encontrar a primeira letra de uma série de strings e ordená-los alfabeticamente.
@@ -181,35 +176,35 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
 
 1. Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
 
-    ```js
-    browserType.indexOf('zilla');
-    ```
+   ```js
+   browserType.indexOf("zilla");
+   ```
 
-    Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
+   Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
 
 2. Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
 
-    ```js
-    browserType.indexOf('vanilla');
-    ```
+   ```js
+   browserType.indexOf("vanilla");
+   ```
 
-    Isso deve lhe dar um resultado `-1` — isso é retornado quando a substring, neste caso 'vanilla', não é encontrada na string principal.
+   Isso deve lhe dar um resultado `-1` — isso é retornado quando a substring, neste caso 'vanilla', não é encontrada na string principal.
 
-    Você pode usar isso para encontrar todas as instâncias de strings que **não contém** a substring 'mozilla', ou **contém**, se você usar o operador de negação, conforme mostrado abaixo. Você poderia fazer algo assim:
+   Você pode usar isso para encontrar todas as instâncias de strings que **não contém** a substring 'mozilla', ou **contém**, se você usar o operador de negação, conforme mostrado abaixo. Você poderia fazer algo assim:
 
-    ```js
-    if(browserType.indexOf('mozilla') !== -1) {
-      // faz coisas com a string
-    }
-    ```
+   ```js
+   if (browserType.indexOf("mozilla") !== -1) {
+     // faz coisas com a string
+   }
+   ```
 
 3. Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
 
-    ```js
-    browserType.slice(0,3);
-    ```
+   ```js
+   browserType.slice(0, 3);
+   ```
 
-    Isso retorna "moz" — o primeiro parâmetro é a posição do caractere a partir da qual será iniciada a extração, e o segundo parâmetro é a posição seguinte do último caractere a ser extraído. Então, a fatia ocorre da primeira posição, até a última posição, mas não incluindo. Você também pode dizer que o segundo parâmetro é igual ao comprimento da string que está sendo retornada.
+   Isso retorna "moz" — o primeiro parâmetro é a posição do caractere a partir da qual será iniciada a extração, e o segundo parâmetro é a posição seguinte do último caractere a ser extraído. Então, a fatia ocorre da primeira posição, até a última posição, mas não incluindo. Você também pode dizer que o segundo parâmetro é igual ao comprimento da string que está sendo retornada.
 
 Também, se você sabe que você deseja extrair todos os caracteres restantes em uma string após um certo caracter, você não tem que incluir o segundo parametro! Você apenas precisa incluir a posição do caracter a partir de onde você deseja extrar os caracteres restantes em uma string. Tente o seguinte:
 
@@ -228,7 +223,7 @@ O método string {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} e
 Vamos testar inserindo as seguintes linhas para ver o que acontece:
 
 ```js
-var radData = 'My NaMe Is MuD';
+var radData = "My NaMe Is MuD";
 radData.toLowerCase();
 radData.toUpperCase();
 ```
@@ -240,7 +235,7 @@ Você pode substituir uma substring dentro de uma string com uma outra substring
 Ele toma dois parametros — A string que você quer substituir e a string que você quer que substitua o primeiro parametro. Tente este exemplo:
 
 ```js
-browserType.replace('moz','van');
+browserType.replace("moz", "van");
 ```
 
 Observe que para realmente obter o valor atualizado refletido na variavel `browserType` em um programa real, você teria que setar o valor da variavel para ser o resultado da operação; não apenas atualizar o valor da substring automaticamente. Assim você teria que realmente escrever isso: `browserType = browserType.replace('moz','van');`
@@ -261,11 +256,7 @@ No primeiro exercício, começaremos com simplicidade - temos várias mensagens 
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 290px;">
@@ -291,35 +282,36 @@ for (var i = 0; i < greetings.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['Happy Birthday!',\n                 'Merry Christmas my love',\n                 'A happy Christmas to all the family',\n                 'You\\'re all I want for Christmas',\n                 'Get well soon'];\n\nfor(var i = 0; i < greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf('Christmas') !== -1) {\n    var result = input;\n    var listItem = document.createElement('li');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Playable_code', '100%', 490) }}
@@ -337,11 +329,7 @@ Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalizaç�
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 250px;">
@@ -360,35 +348,36 @@ for(var i = 0; i < cities.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];\n\nfor(var i = 0; i < cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement('li');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Playable_code_2', '100%', 450) }}
@@ -417,11 +406,7 @@ Nós recomendamos que faça assim:
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 285px;">
@@ -445,36 +430,36 @@ for (var i = 0; i < stations.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var result = code + \': \' + name;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar stations = ['MAN675847583748sjt567654;Manchester Piccadilly',\n                'GNF576746573fhdg4737dh4;Greenfield',\n                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',\n                'SYB4f65hf75f736463;Stalybridge',\n                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(';');\n  var name = input.slice(semiC + 1);\n  var result = code + ': ' + name;\n  var listItem = document.createElement('li');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}";
 
-
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Playable_code_3', '100%', 485) }}

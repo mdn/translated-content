@@ -1,12 +1,6 @@
 ---
 title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/overscroll-behavior-x
 ---
 
 {{CSSRef}}

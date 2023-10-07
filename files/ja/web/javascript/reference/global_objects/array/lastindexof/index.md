@@ -27,7 +27,7 @@ arr.lastIndexOf(searchElement[, fromIndex])
 
   `fromIndex` の値が配列の長さ以上であれば、配列全体を検索します。（この場合、概念的には、配列の末尾から先の存在しない位置からメソッドの検索を開始させ、そこから配列の実際の末尾の位置を探して、実在する配列の要素を逆方向に検索し始めると考えることができます。）
 
-    `fromIndex` の値が 0 より大きい場合は、配列の先頭からのオフセットとして受け取られます。
+  `fromIndex` の値が 0 より大きい場合は、配列の先頭からのオフセットとして受け取られます。
 
 `fromIndex` に 0 よりも小さい値を指定すると、配列の末尾からのオフセットとして受け取られます。言い換えると、 `array.length + fromIndex` の位置を指定したものとみなされます。したがって、 `array.length + fromIndex` が 0 よりも小さい場合、配列の探索は行われず、メソッドは -1 を返します（この場合、 `fromIndex` は配列の先頭の存在しない位置を指定しているので、概念的には、メソッドがその存在しない位置から探索して、そこから配列要素を探すと考えることができますが、決して見つかることはありません）。
 
@@ -47,10 +47,10 @@ arr.lastIndexOf(searchElement[, fromIndex])
 
 ```js
 const numbers = [2, 5, 9, 2];
-numbers.lastIndexOf(2);     // 3
-numbers.lastIndexOf(7);     // -1
-numbers.lastIndexOf(2, 3);  // 3
-numbers.lastIndexOf(2, 2);  // 0
+numbers.lastIndexOf(2); // 3
+numbers.lastIndexOf(7); // -1
+numbers.lastIndexOf(2, 3); // 3
+numbers.lastIndexOf(2, 2); // 0
 numbers.lastIndexOf(2, -2); // 0
 numbers.lastIndexOf(2, -1); // 3
 ```
@@ -61,12 +61,12 @@ numbers.lastIndexOf(2, -1); // 3
 
 ```js
 const indices = [];
-const array = ['a', 'b', 'a', 'c', 'a', 'd'];
-const element = 'a';
+const array = ["a", "b", "a", "c", "a", "d"];
+const element = "a";
 let idx = array.lastIndexOf(element);
 while (idx !== -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);

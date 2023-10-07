@@ -1,12 +1,8 @@
 ---
 title: Использование dns-prefetch
 slug: Web/Performance/dns-prefetch
-tags:
-  - Web Performance
-  - dns-prefetch
-  - preconnect
-translation_of: Web/Performance/dns-prefetch
 ---
+
 **`DNS-prefetch`** (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь.
 
 ## Зачем использовать dns-prefetch?
@@ -18,7 +14,7 @@ translation_of: Web/Performance/dns-prefetch
 ## Синтаксис
 
 ```html
-<link rel="dns-prefetch" href="https://fonts.gstatic.com/" >
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
 ```
 
 ## Примеры
@@ -26,7 +22,7 @@ translation_of: Web/Performance/dns-prefetch
 ```html
 <html>
   <head>
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
     <!-- and all other head elements -->
   </head>
   <body>
@@ -52,8 +48,8 @@ Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
 **В третьих,** хорошей практикой считается использование `dns-prefetch` в паре с `preconnect`. В то время, как `dns-prefetch` срабатывает только при DNS поиске, `preconnect` устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения ([TLS](/ru/docs/Glossary/TLS) рукопожатие), если оно доступно. Комбинирование этих двух инструкций даёт возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:
 
 ```html
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
 ```
 
 > **Примечание:** если приложению необходимо установить соединение со множеством доменов, использование preconnect контрпродуктивно. `preconnect` лучше использовать для наиболее критических соединений. Для менее важных достаточно использовать `<link rel="dns-prefetch">` для сокращения времени DNS запроса.
@@ -62,7 +58,7 @@ Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
 
 Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать [crossorigin](/ru/docs/Web/HTML/CORS_settings_attributes) атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.
 
-## See also
+## Смотрите также
 
 - [\<link>](/ru/docs/Web/HTML/Element/link)
 - [HTML атрибут: rel](/ru/docs/Web/HTML/Attributes/rel)

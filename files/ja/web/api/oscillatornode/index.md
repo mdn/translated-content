@@ -79,7 +79,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // Oscillator　ノードを作成します。
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // ヘルツ単位の値
 oscillator.connect(audioCtx.destination);
 oscillator.start();

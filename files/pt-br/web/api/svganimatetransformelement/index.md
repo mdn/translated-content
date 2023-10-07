@@ -19,11 +19,8 @@ _Essa interface não possui métodos próprios mas os herda do seu pai, {{domxre
 
 ## Especificações
 
-| Especificação                                                                                                                                | Status                                   | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#InterfaceSVGAnimateTransformElement", "SVGAnimateTransformElement")}}     | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#InterfaceSVGAnimateTransformElement", "SVGAnimateTransformElement")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.SVGAnimateTransformElement")}}
+{{Compat}}

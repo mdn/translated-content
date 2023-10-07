@@ -1,15 +1,6 @@
 ---
 title: Démarrer avec CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - CSS
-  - Classes
-  - Débutant
-  - Element
-  - Etat
-  - Syntaxe
-  - Sélecteurs
-translation_of: Learn/CSS/First_steps/Getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
@@ -50,28 +41,31 @@ Notre point de départ est un document HTML. Pour suivre la leçon en travaillan
 ```html
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Démarrer avec CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Je suis un titre de niveau un</h1>
 
-    <p>Ceci est un paragraphe. Dans ce texte il y a un <span>élément span</span>
- et aussi un <a href="http://example.com">lien</a>.</p>
+    <p>
+      Ceci est un paragraphe. Dans ce texte il y a un
+      <span>élément span</span> et aussi un
+      <a href="http://example.com">lien</a>.
+    </p>
 
-    <p>Ceci est un second paragraphe. On y trouve un élément <em>mis en valeur</em>.</p>
+    <p>
+      Ceci est un second paragraphe. On y trouve un élément
+      <em>mis en valeur</em>.
+    </p>
 
     <ul>
-        <li>Item un</li>
-        <li>Item deux</li>
-        <li>Item <em>trois</em></li>
+      <li>Item un</li>
+      <li>Item deux</li>
+      <li>Item <em>trois</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -86,7 +80,7 @@ Avec votre éditeur de code, dans le dossier où se trouve le document HTML, cr�
 Pour lier `styles.css` à `index.html` ajoutez la ligne suivante dans la section {{htmlelement("head")}} du document HTML :
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 Cet élément {{htmlelement("link")}} indique au navigateur la présence d'une feuille de style, grâce à l'attribut `rel` ; la valeur de l'attribut `href` donne la localisation du fichier CSS. Pour tester que le lien fonctionne, nous allons définir une règle dans `styles.css`. Grâce à votre éditeur de code, ajoutez les lignes suivantes à la feuille de style CSS :
@@ -116,8 +110,9 @@ p {
 On peut cibler plusieurs éléments d'un coup en les listant, séparés par une virgule. Si je veux que tous les paragraphes et tous les items de liste soient verts j'écrirai la règle suivante :
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -205,7 +200,7 @@ li em {
 
 Ce sélecteur cible tout élément `<em>` à l'intérieur (descendant) d'un `<li>`. Ainsi, dans notre exemple, le `<em>` dans le troisième item de la liste sera maintenant pourpre, alors que celui du paragraphe est inchangé.
 
-On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+`  (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
+On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+` (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
 
 Ajoutez cette règle à votre feuille de style :
 

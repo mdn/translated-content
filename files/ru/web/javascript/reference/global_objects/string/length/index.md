@@ -1,13 +1,6 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -35,23 +28,23 @@ str.length
 ### Пример: базовое использование
 
 ```js
-var x = 'Mozilla';
-var empty = '';
+var x = "Mozilla";
+var empty = "";
 
-console.log('Слово «Mozilla» занимает ' + x.length + ' кодовых значений');
+console.log("Слово «Mozilla» занимает " + x.length + " кодовых значений");
 /* "Слово «Mozilla» занимает 7 кодовых значений" */
 
-console.log('Пустая строка имеет длину, равную ' + empty.length);
+console.log("Пустая строка имеет длину, равную " + empty.length);
 /* "Пустая строка имеет длину, равную 0" */
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                                 | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                                 | Статус             | Комментарии                                            |
+| -------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                      | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                            | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

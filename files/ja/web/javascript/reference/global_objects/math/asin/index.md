@@ -37,12 +37,12 @@ Math.asin(x)
 ### Math.asin() の使用
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.5707963267948966 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.5707963267948966 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.5707963267948966 (pi/2)
+Math.asin(2); // NaN
 ```
 
 値が -1 未満か 1 より大きい数値の場合、`Math.asin()` は {{jsxref("NaN")}} を返します。

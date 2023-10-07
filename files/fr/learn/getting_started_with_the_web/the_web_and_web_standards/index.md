@@ -1,14 +1,6 @@
 ---
 title: Le web et ses normes
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Beginner
-  - Front-end
-  - Learn
-  - Web
-  - Web Standards
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Apprendre/Commencer_avec_le_web/The_web_and_web_standards
 ---
 
 {{learnsidebar}}
@@ -96,7 +88,7 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 
   <p>Voilà un paragraphe de texte</p>
 
-  <img src="chat.jpg" alt="Une image de mon chat">
+  <img src="chat.jpg" alt="Une image de mon chat" />
   ```
 
   Si nous faisions une analogie avec la construction d'une maison, le HTML serait les fondations et les murs de la maison, qui lui fournissent une architecture et maintien l'ensemble d'un bloc.
@@ -104,7 +96,7 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 - Les Feuilles de Style en cascade (**CSS** - Cascading Style Sheets) est un langage basé sur un ensemble de règles et utilisé pour appliquer des styles à votre HTML, par exemple pour définir la couleur du texte et de l'arrière-plan, ajouter des bordures, animer des éléments, ou agencer les différentes parties d'une page. Par exemple, le code suivant rendrait notre paragraphe HTML rouge:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```

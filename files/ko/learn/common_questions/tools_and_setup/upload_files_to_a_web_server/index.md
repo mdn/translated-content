@@ -1,7 +1,6 @@
 ---
 title: How do you upload files to a web server?
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-original_slug: Learn/Common_questions/Upload_files_to_a_web_server
 ---
 
 본 글은 어떻게 {{Glossary("FTP")}} 도구를 사용하여 사이트를 발행(publish) 할 수 있는지를 다루고 있습니다.
@@ -85,7 +84,7 @@ To publish to this account, please connect through FTP with the following creden
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 “This website is hosted by \[Hosting Service].”과 같은 페이지를 보게될 것입니다.
+> **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 "This website is hosted by \[Hosting Service]."과 같은 페이지를 보게될 것입니다.
 
 이제 우리의 FTP 클라이언트를 멀리 떨어진 서버에 접속하기 위해 _"Create an account..." 버튼을 누릅니다._ 그리고 호스팅제공자로 부터 받은 정보를 해당 필드에 채워줍니다.
 

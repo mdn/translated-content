@@ -36,11 +36,11 @@ slug: Games/Techniques/3D_on_the_web
 
 虚拟现实这一概念并不新鲜，但由于硬件的进步，它大有席卷网络之势，如[Oculus Rift](https://www.oculus.com/en-us/rift/)和（目前实验性的） [WebVR API](/zh-CN/docs/Web/API/WebVR_API)，它们从 VR 硬件中捕获信息并使其可在 JavaScript 中应用。有关的详细信息请阅读 [WebVR-Web 虚拟现实](/zh-CN/docs/Games/Techniques/3D_on_the_web/WebVR)。
 
-还有一篇[用 A-Frame 构建基本 demo](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)的文章，向您展示了使用[A-Frame](http://aframe.io/)框架构建 3D 环境的虚拟现实是多么的简单。
+还有一篇[用 A-Frame 构建基本 demo](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)的文章，向你展示了使用[A-Frame](http://aframe.io/)框架构建 3D 环境的虚拟现实是多么的简单。
 
 ## 库和框架的兴起
 
-编码原生 WebGL 是相当复杂的，但从长远来看，您需要了解它，如果您的项目变得更加先进（请从参阅我们的[WebGL 文档](/zh-CN/docs/Web/API/WebGL_API)开始）。对于现实世界中的项目，您可能还会使用框架来加快开发，并帮助您管理正在处理的项目。使用 3D 游戏框架还有助于优化性能，因为您使用的工具会处理很多问题，因此您可以专注于构建游戏本身。
+编码原生 WebGL 是相当复杂的，但从长远来看，你需要了解它，如果你的项目变得更加先进（请从参阅我们的[WebGL 文档](/zh-CN/docs/Web/API/WebGL_API)开始）。对于现实世界中的项目，你可能还会使用框架来加快开发，并帮助你管理正在处理的项目。使用 3D 游戏框架还有助于优化性能，因为你使用的工具会处理很多问题，因此你可以专注于构建游戏本身。
 
 最流行的 JavaScript 3D 库是[Three.js](http://threejs.org/)，这是一个多用途工具，它使常见的 3D 技术更易于实现。还有其他流行的游戏开发库和框架值得检查。[A-Frame](https://aframe.io)、[PlayCanvas](https://playcanvas.com/)和[Babylon.js](http://www.babylonjs.com/)是最容易辨认的，拥有丰富的文档、在线编辑器和活跃的社区。
 
@@ -50,7 +50,7 @@ A-Frame 是一个用于搭建 3D 和 VR 体验的 Web 框架。在内部，它�
 
 ### 使用 Babylon.js 搭建一个基础 Demo
 
-Babylon.js 是最受开发者欢迎的 3D 游戏引擎之一。与其他任何 3D 库一样，它提供了内置函数，帮助您更快地实现常见的 3D 功能。请参阅 [Building up a basic demo with Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 子页，其中包括建立一个开发环境，构建必要的 HTML，以及编写 JavaScript 代码。
+Babylon.js 是最受开发者欢迎的 3D 游戏引擎之一。与其他任何 3D 库一样，它提供了内置函数，帮助你更快地实现常见的 3D 功能。请参阅 [Building up a basic demo with Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 子页，其中包括建立一个开发环境，构建必要的 HTML，以及编写 JavaScript 代码。
 
 ### 使用 PlayCanvas 搭建一个基础 Demo
 
@@ -58,7 +58,7 @@ PlayCanvas 是一个流行的 GitHub 开源 3D WebGL 游戏引擎，有在线编
 
 ### 使用 Three.js 搭建一个基础 Demo
 
-Three.js，与任何其他库一样，它给了您一个巨大的便利：不必编写数百行 WebGL 代码来构建任何有趣的东西，您可以使用内置的 helper 函数来轻松、快速地完成任务。请参阅 [Building up a basic demo with Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 子页 逐步创建 Demo。
+Three.js，与任何其他库一样，它给了你一个巨大的便利：不必编写数百行 WebGL 代码来构建任何有趣的东西，你可以使用内置的 helper 函数来轻松、快速地完成任务。请参阅 [Building up a basic demo with Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 子页 逐步创建 Demo。
 
 ### 使用 Whitestorm.js 搭建一个基础 Demo
 

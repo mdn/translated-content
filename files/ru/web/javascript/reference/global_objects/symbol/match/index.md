@@ -1,13 +1,8 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Свойство
-  - Символы
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
+
 {{JSRef}}
 
 **`Symbol.match`** — известный символ, определяющий соответствие строки регулярному выражению. Этот метод вызывается функцией {{jsxref("String.prototype.match()")}}.
@@ -26,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 
 ```js
 "/bar/".startsWith(/bar/); // Бросает TypeError, так как /bar/ является
-                           // регулярным выражением и Symbol.match не изменён.
+// регулярным выражением и Symbol.match не изменён.
 ```
 
 Несмотря на это, если вы зададите свойству `Symbol.match` значение `false`, проверка `isRegExp` (которая использует свойство `match`) покажет, что объект не является регулярным выражением — как следствие, методы `startsWith` и `endsWith` не станут бросать `TypeError`.
@@ -35,13 +30,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 var re = /foo/;
 re[Symbol.match] = false;
 "/foo/".startsWith(re); // true
-"/baz/".endsWith(re);   // false
+"/baz/".endsWith(re); // false
 ```
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус               | Комментарий              |
-| ---------------------------------------------------------------------------- | -------------------- | ------------------------ |
+| Спецификация                                             | Статус           | Комментарий              |
+| -------------------------------------------------------- | ---------------- | ------------------------ |
 | {{SpecName('ES6', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ES6')}} | Изначальное определение. |
 
 ## Поддержка браузерами

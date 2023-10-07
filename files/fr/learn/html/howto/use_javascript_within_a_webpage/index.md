@@ -1,13 +1,6 @@
 ---
 title: Utiliser JavaScript au sein d'une page web
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-tags:
-  - Beginner
-  - HTML
-  - JavaScript
-  - OpenPractices
-translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-original_slug: Apprendre/HTML/Comment/Utiliser_JavaScript_au_sein_d_une_page_web
 ---
 
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
@@ -58,9 +51,11 @@ Il est également possible d'insérer du code JavaScript directement dans la bal
 
 ```html
 <script>
-window.addEventListener('load', function () {
-  console.log('Cette fonction est exécutée une fois quand la page est chargée.');
-});
+  window.addEventListener("load", function () {
+    console.log(
+      "Cette fonction est exécutée une fois quand la page est chargée.",
+    );
+  });
 </script>
 ```
 

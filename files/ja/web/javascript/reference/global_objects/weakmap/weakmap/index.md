@@ -26,14 +26,14 @@ new WeakMap([iterable])
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function() {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // 値は何でもよく、オブジェクトでも関数でもよい
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // キーと値はあらゆるオブジェクトになれる。 WeakMap も同様。

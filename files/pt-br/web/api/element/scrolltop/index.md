@@ -43,9 +43,11 @@ padding-bottom
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}} | {{Spec2("CSSOM View")}} |         |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Referências
 

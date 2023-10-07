@@ -1,7 +1,6 @@
 ---
 title: 伺服器端介紹
 slug: Learn/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/First_steps/介紹
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

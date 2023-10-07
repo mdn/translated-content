@@ -55,7 +55,7 @@ var x = document.getElementById("foo");
 ```js example-bad
 var obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -67,7 +67,7 @@ obj.map(function(num) {
 ```js example-good
 var numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 

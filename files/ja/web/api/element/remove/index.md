@@ -1,17 +1,28 @@
 ---
-title: Element.remove()
+title: "Element: remove() メソッド"
+short-title: remove()
 slug: Web/API/Element/remove
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.remove()`** は所属するツリーから要素を削除します。
+**`Element.remove()`** は DOM から要素を削除します。
 
 ## 構文
 
-```js
+```js-nolint
 remove()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -24,8 +35,8 @@ remove()
 ```
 
 ```js
-var el = document.getElementById('div-02');
-el.remove(); // 'div-02' の id を持った div を削除
+const element = document.getElementById("div-02");
+element.remove(); // 'div-02' の id を持った div を削除
 ```
 
 ### `Element.remove()` はスコープ化に非対応
@@ -33,7 +44,7 @@ el.remove(); // 'div-02' の id を持った div を削除
 `remove()` メソッドは `with` 文によるスコープ化に対応していません。 詳細は {{jsxref("Symbol.unscopables")}} を参照してください。
 
 ```js
-with(node) {
+with (node) {
   remove();
 }
 // ReferenceError: remove is not defined

@@ -1,8 +1,8 @@
 ---
 title: Селектор по типу
 slug: Web/CSS/Type_selectors
-translation_of: Web/CSS/Type_selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Краткое описание

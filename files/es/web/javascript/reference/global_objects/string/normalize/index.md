@@ -1,7 +1,6 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 ---
 
 {{JSRef}}
@@ -45,37 +44,33 @@ El método `normalize()` retorna la Forma de Normalización Unicode de una caden
 
 // U+1E9B: LETRA S LATINA MINÚSCULA CON PUNTO ARRIBA
 // U+0323: COMBINACIÓN CON PUNTO ABAJO
-var str = '\u1E9B\u0323';
-
+var str = "\u1E9B\u0323";
 
 // Forma compuesta canónicamente (NFC)
 
 // U+1E9B: LETRA S LATINA MINÚSCULA CON PUNTO ARRIBA
 // U+0323: COMBINACIÓN CON PUNTO ABAJO
-str.normalize('NFC'); // '\u1E9B\u0323'
-str.normalize();      // lo mismo que arriba
-
+str.normalize("NFC"); // '\u1E9B\u0323'
+str.normalize(); // lo mismo que arriba
 
 // Forma canónicamente descompuesta (NFD)
 
 // U+017F: LETRA S LATINA MINÚSCULA
 // U+0323: COMBINACIÓN CON PUNTO ABAJO
 // U+0307: COMBINACIÓN CON PUNTO ARRIBA
-str.normalize('NFD'); // '\u017F\u0323\u0307'
-
+str.normalize("NFD"); // '\u017F\u0323\u0307'
 
 // Compuesta con compatibilidad (NFKC)
 
 // U+1E69: LETRA S LATINA MINÚSCULA CON PUNTO ARRIBA Y ABAJO
-str.normalize('NFKC'); // '\u1E69'
-
+str.normalize("NFKC"); // '\u1E69'
 
 // Descompuesta con compatibilidad (NFKD)
 
 // U+0073: LETRA S LATINA MINÚSCULA
 // U+0323: COMBINACIÓN CON PUNTO ABAJO
 // U+0307: COMBINACIÓN CON PUNTO ARRIBA
-str.normalize('NFKD'); // '\u0073\u0323\u0307'
+str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ```
 
 ## Especificaciones

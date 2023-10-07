@@ -10,7 +10,7 @@ Este tipo de funcionalidade era obtida anteriormente utilizando {{domxref("XMLHt
 Note que a especificação `fetch()` difere de `jQuery.ajax()`, principalmente, de três formas:
 
 - A Promise retornada do `fetch()` **não rejeitará o status do erro HTTP,** mesmo que a resposta seja um HTTP 404 ou 500. Em vez disso, ela irá resolver normalmente (com o status `ok` definido como falso), e só irá rejeitar se houver falha na rede ou se algo impedir a requisição de ser completada.
-- `fetch()` **não receberá cookies cross-site;** você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos [`Set-Cookie`](/en-US/docs/Web/HTTP/Headers/Set-Cookie) de outros sites são ignorados silenciosamente.
+- `fetch()` **não receberá cookies cross-site;** você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos [`Set-Cookie`](/pt-BR/docs/Web/HTTP/Headers/Set-Cookie) de outros sites são ignorados silenciosamente.
 - `fetch()` **não enviará cookies**, a não ser que seja definida a opção _credentials_ do [parâmetro init](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parâmetros). (Desde [25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). A especificação alterou as políticas padrão de credenciais para `same-origin`. O Firefox mudou desde 61.0b13.)
 
 ## Situação do suporte por navegadores
@@ -26,10 +26,10 @@ Caso tenha interesse no uso da ferramenta, há também uma [Fetch Polyfill](http
 Fetch API support pode ser detectada na existência do escopo {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} ou {{domxref("GlobalFetch.fetch","fetch()")}} no {{domxref("Window")}} ou {{domxref("Worker")}} . Por exemplo, faça o seguinte teste no seu código:
 
 ```js
-if(self.fetch) {
-    // execute minha solicitação do fetch aqui
+if (self.fetch) {
+  // execute minha solicitação do fetch aqui
 } else {
-    // faça alguma coisa com XMLHttpRequest?
+  // faça alguma coisa com XMLHttpRequest?
 }
 ```
 
@@ -38,16 +38,16 @@ if(self.fetch) {
 Uma requisição fetch é realizada para configuração. Temos um exemplo no seguinte código:
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-fetch('flowers.jpg')
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 Aqui estamos procurando uma imagem e inserindo em um elemento {{htmlelement("img")}}. O uso mais básico do`fetch()` acarreta em um argumento — a pasta do recurso que você deseja buscar — e retorna uma promessa contendo a resposta (a {{domxref("Response")}} object).
@@ -67,19 +67,21 @@ O método `fetch()` pode receber um segundo parametro opcional, que consiste em 
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-fetch('flowers.jpg',myInit)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch("flowers.jpg", myInit)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 See {{domxref("GlobalFetch.fetch","fetch()")}} for the full options available, and more descriptions.
@@ -89,19 +91,22 @@ See {{domxref("GlobalFetch.fetch","fetch()")}} for the full options available, a
 Uma promise {{domxref("GlobalFetch.fetch","fetch()")}} será rejeitada com um {{jsxref("TypeError")}} quando um erro de rede é encontrado, embora isso geralmente signifique problemas de permissão ou similar — um 404 não constitui um erro de rede, por exemplo. Uma verificação precisa de um `fetch()` bem-sucedido incluiria a verificação de que a promessa foi resolvida e, em seguida, a verificação de que a propriedade {{domxref("Response.ok")}} tem o valor de `true`. O código seria parecido com o abaixo:
 
 ```js
-fetch('flowers.jpg').then(function(response) {
-  if(response.ok) {
-    response.blob().then(function(myBlob) {
-      var objectURL = URL.createObjectURL(myBlob);
-      myImage.src = objectURL;
-    });
-  } else {
-    console.log('Network response was not ok.');
-  }
-})
-.catch(function(error) {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
-});
+fetch("flowers.jpg")
+  .then(function (response) {
+    if (response.ok) {
+      response.blob().then(function (myBlob) {
+        var objectURL = URL.createObjectURL(myBlob);
+        myImage.src = objectURL;
+      });
+    } else {
+      console.log("Network response was not ok.");
+    }
+  })
+  .catch(function (error) {
+    console.log(
+      "There has been a problem with your fetch operation: " + error.message,
+    );
+  });
 ```
 
 ### Fornecendo seu próprio objeto de solicitação
@@ -111,27 +116,29 @@ Em vez de passar um caminho, para o recurso que você deseja solicitar, dentro d
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
 fetch(myRequest)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 `Request()` aceita exatamente os mesmos parâmetros do método `fetch()`. Você pode até mesmo passar um objeto de solicitação existente para criar uma cópia dele:
 
 ```js
-var anotherRequest = new Request(myRequest,myInit);
+var anotherRequest = new Request(myRequest, myInit);
 ```
 
 Isso é muito útil, pois os conteúdos de cada solicitação e resposta tem apenas um uso. Fazer uma cópia como essa permite que você use a solicitação / resposta novamente, variando as opções de inicialização, se desejar.
@@ -183,7 +190,7 @@ All of the Headers methods throw a TypeError if a header name is used that is no
 var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
+} catch (e) {
   console.log("Cannot pretend to be a bank!");
 }
 ```
@@ -191,10 +198,10 @@ try {
 A good use case for headers is checking whether the content type is correct before you process it further. For example:
 
 ```js
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   var contentType = response.headers.get("content-type");
-  if(contentType && contentType.indexOf("application/json") !== -1) {
-    return response.json().then(function(json) {
+  if (contentType && contentType.indexOf("application/json") !== -1) {
+    return response.json().then(function (json) {
       // process your JSON further
     });
   } else {
@@ -215,7 +222,7 @@ Possible guard values are:
 - `response`: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).
 - `immutable`: Mostly used for ServiceWorkers; renders a headers object read-only.
 
-> **Nota:** You may not append or set a `request` guarded Headers’ `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
+> **Nota:** You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
 
 ## Response objects
 
@@ -226,11 +233,11 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 var myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener("fetch", function (event) {
   event.respondWith(
     new Response(myBody, {
-      headers: { "Content-Type" : "text/plain" }
-    })
+      headers: { "Content-Type": "text/plain" },
+    }),
   );
 });
 ```
@@ -270,10 +277,10 @@ This makes usage of non-textual data much easier than it was with XHR.
 Request bodies can be set by passing body parameters:
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
+var form = new FormData(document.getElementById("login-form"));
 fetch("/login", {
   method: "POST",
-  body: form
+  body: form,
 });
 ```
 
@@ -281,9 +288,7 @@ Both request and response (and by extension the `fetch()` function), will try to
 
 ## Especificações
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

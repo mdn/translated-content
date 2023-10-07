@@ -1,13 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - ECMAScript5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 
 {{JSRef("Global_Objects", "JSON")}}
@@ -42,11 +35,11 @@ JSON.parse(text[, reviver])
 ### Пример: использование метода `JSON.parse()`
 
 ```js
-JSON.parse('{}');              // {}
-JSON.parse('true');            // true
-JSON.parse('"foo"');           // "foo"
+JSON.parse("{}"); // {}
+JSON.parse("true"); // true
+JSON.parse('"foo"'); // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse('null');            // null
+JSON.parse("null"); // null
 ```
 
 ### Пример: использование параметра `reviver`
@@ -56,14 +49,16 @@ JSON.parse('null');            // null
 В конечном итоге, функция `reviver` вызывается с пустой строкой и самым верхним значением, чтобы обеспечить преобразование самого верхнего значения. Убедитесь, что вы правильно обрабатываете этот случай — обычно для этого нужно просто вернуть само значение — или метод `JSON.parse()` вернёт {{jsxref("undefined")}}.
 
 ```js
-JSON.parse('{"p": 5}', function(k, v) {
-  if (k === '') { return v; } // самое верхнее значение - возвращаем его
-  return v * 2;               // иначе возвращаем v * 2.
-});                           // { p: 10 }
+JSON.parse('{"p": 5}', function (k, v) {
+  if (k === "") {
+    return v;
+  } // самое верхнее значение - возвращаем его
+  return v * 2; // иначе возвращаем v * 2.
+}); // { p: 10 }
 
-JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function(k, v) {
+JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
   console.log(k); // пишем имя текущего свойства, последним именем будет ""
-  return v;       // возвращаем неизменённое значение свойства
+  return v; // возвращаем неизменённое значение свойства
 });
 
 // 1
@@ -77,10 +72,10 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function(k, v) {
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}} | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                         | Статус             | Комментарии                                            |
+| ---------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}  | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

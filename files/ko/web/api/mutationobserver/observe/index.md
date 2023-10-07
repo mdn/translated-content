@@ -93,7 +93,7 @@ const observer = new MutationObserver(() => {
   console.log("callback that runs when observer is triggered");
 });
 
-// 
+//
 // 위 MutationObserver 인스턴스의 observe() 메서드를 호출
 // 주시할 요소와 옵션 객체 전달
 observer.observe(elementToObserve, { subtree: true, childList: true });

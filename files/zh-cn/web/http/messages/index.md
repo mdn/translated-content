@@ -5,7 +5,7 @@ slug: Web/HTTP/Messages
 
 {{HTTPSidebar}}
 
-HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息：*请求*（request）——由客户端发送用来触发一个服务器上的动作；*响应*（response）——来自服务器的应答。
+HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息：_请求_（request）——由客户端发送用来触发一个服务器上的动作；_响应_（response）——来自服务器的应答。
 
 HTTP 消息由采用 ASCII 编码的多行文本构成。在 HTTP/1.1 及早期版本中，这些消息通过连接公开地发送。在 HTTP/2 中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个 HTTP 帧中。
 
@@ -30,21 +30,21 @@ HTTP 请求和响应具有相似的结构，由以下部分组成：
 
 ### 起始行
 
-HTTP 请求是由客户端发出的消息，用来使服务器执行动作。*起始行*（start-line）包含三个元素：
+HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_起始行_（start-line）包含三个元素：
 
 1. 一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)_，一个动词（像 {{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}）或者一个名词（像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}），描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据（创建或修改资源，或者产生要返回的临时文件）。
-2. *请求目标*（request target），通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
+2. _请求目标_（request target），通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
 
-    - 一个绝对路径，末尾跟上一个 `'?'` 和查询字符串。这是最常见的形式，称为*原始形式*（origin form），被 `GET`、`POST`、`HEAD` 和 `OPTIONS` 方法所使用。
-      - `POST / HTTP/1.1`
-      - `GET /background.png HTTP/1.0`
-      - `HEAD /test.html?query=alibaba HTTP/1.1`
-      - `OPTIONS /anypage.html HTTP/1.0`
-    - 一个完整的 URL，被称为*绝对形式*（absolute form），主要在使用 `GET` 方法连接到代理时使用。`GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - 由域名和可选端口（以 `':'` 为前缀）组成的 URL 的 authority 部分，称为 _authority form_。仅在使用 `CONNECT` 建立 HTTP 隧道时才使用。`CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - *星号形式*（asterisk form），一个简单的星号（`'*'`），配合 `OPTIONS` 方法使用，代表整个服务器。`OPTIONS * HTTP/1.1`
+   - 一个绝对路径，末尾跟上一个 `'?'` 和查询字符串。这是最常见的形式，称为*原始形式*（origin form），被 `GET`、`POST`、`HEAD` 和 `OPTIONS` 方法所使用。
+     - `POST / HTTP/1.1`
+     - `GET /background.png HTTP/1.0`
+     - `HEAD /test.html?query=alibaba HTTP/1.1`
+     - `OPTIONS /anypage.html HTTP/1.0`
+   - 一个完整的 URL，被称为*绝对形式*（absolute form），主要在使用 `GET` 方法连接到代理时使用。`GET http://developer.mozilla.org/zh-CN/docs/Web/HTTP/Messages HTTP/1.1`
+   - 由域名和可选端口（以 `':'` 为前缀）组成的 URL 的 authority 部分，称为 _authority form_。仅在使用 `CONNECT` 建立 HTTP 隧道时才使用。`CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - _星号形式_（asterisk form），一个简单的星号（`'*'`），配合 `OPTIONS` 方法使用，代表整个服务器。`OPTIONS * HTTP/1.1`
 
-3. *HTTP 版本*（HTTP version），定义了剩余消息的结构，作为对期望的响应版本的指示符。
+3. _HTTP 版本_（HTTP version），定义了剩余消息的结构，作为对期望的响应版本的指示符。
 
 ### 标头（Header）
 
@@ -73,9 +73,9 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。*�
 
 HTTP 响应的起始行被称作*状态行*（status line），包含以下信息：
 
-1. *协议版本*，通常为 `HTTP/1.1`。
-2. *状态码*（status code），表明请求是成功或失败。常见的状态码是 {{HTTPStatus("200")}}、{{HTTPStatus("404")}} 或 {{HTTPStatus("302")}}。
-3. *状态文本*（status text）。一个简短的，纯粹的信息，通过状态码的文本描述，帮助人们理解该 HTTP 消息。
+1. _协议版本_，通常为 `HTTP/1.1`。
+2. _状态码_（status code），表明请求是成功或失败。常见的状态码是 {{HTTPStatus("200")}}、{{HTTPStatus("404")}} 或 {{HTTPStatus("302")}}。
+3. _状态文本_（status text）。一个简短的，纯粹的信息，通过状态码的文本描述，帮助人们理解该 HTTP 消息。
 
 一个典型的状态行看起来像这样：`HTTP/1.1 404 Not Found`。
 

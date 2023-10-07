@@ -1,7 +1,6 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-original_slug: Web/JavaScript/Referencia/Objetos_globales/undefined
 ---
 
 {{jsSidebar("Objects")}}
@@ -31,14 +30,17 @@ Una variable a la que no se le ha asignado valor es de tipo `undefined`. Un mét
 > ```js example-bad
 > //NO HAGAS ESTO
 >
-> (() => { 
->   const undefined = 'foo'; 
->   console.log(undefined, typeof undefined); })() // foo string
+> (() => {
+>   const undefined = "foo";
+>   console.log(undefined, typeof undefined);
+> })()(
+>   // foo string
 >
-> // registra "foo string"
-> ((undefined) => {
->   console.log(undefined, typeof undefined); // foo string
-> })('foo');
+>   // registra "foo string"
+>   (undefined) => {
+>     console.log(undefined, typeof undefined); // foo string
+>   },
+> )("foo");
 > ```
 
 ## Ejemplos
@@ -50,10 +52,9 @@ Puedes usar `undefined` y los operadores de igualdad y desigualdad estricta para
 ```js
 let x;
 if (x === undefined) {
-   // se ejecutan estas instrucciones
-}
-else {
-   // estas instrucciones no se ejecutan
+  // se ejecutan estas instrucciones
+} else {
+  // estas instrucciones no se ejecutan
 }
 ```
 
@@ -65,8 +66,8 @@ Alternativamente se puede usar {{jsxref("Operadores/typeof","typeof")}}. Recuerd
 
 ```js
 let x;
-if (typeof x === 'undefined') {
-   // se ejecutan estas instrucciones
+if (typeof x === "undefined") {
+  // se ejecutan estas instrucciones
 }
 ```
 
@@ -74,12 +75,13 @@ Una razón para usar {{jsxref("Operadores/typeof","typeof")}} es que no devuelve
 
 ```js
 // x no fue declarada antes
-if (typeof x === 'undefined') { // devuelve true
-   //se ejecutan estas instrucciones
+if (typeof x === "undefined") {
+  // devuelve true
+  //se ejecutan estas instrucciones
 }
 
-if (x === undefined) { // lanza un ReferenceError
-
+if (x === undefined) {
+  // lanza un ReferenceError
 }
 ```
 
@@ -100,12 +102,12 @@ El operador {{jsxref("Operadores/void", "void")}} es una tercer alternativa.
 ```js
 let x;
 if (x === void 0) {
-   // se ejecutan estas instrucciones
+  // se ejecutan estas instrucciones
 }
 
 // y no fue declarada antes
 if (y === void 0) {
-   // lanza un ReferenceError (a diferencia de  `typeof`)
+  // lanza un ReferenceError (a diferencia de  `typeof`)
 }
 ```
 

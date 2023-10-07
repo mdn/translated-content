@@ -1,8 +1,6 @@
 ---
 title: Использование псевдокласса :target в селекторах
-slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-translation_of: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-original_slug: Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors
+slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 ---
 
 {{CSSRef}}
@@ -16,13 +14,17 @@ original_slug: Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_
 Предположим, вы хотите стилизовать любой элемент `h2`, который является целью URL, но не хотите, чтобы другие элементы получили стиль цели. Сделать это довольно просто:
 
 ```css
-h2:target { font-weight: bold; }
+h2:target {
+  font-weight: bold;
+}
 ```
 
 Также возможно создать стили, специфичные для определённого фрагмента документа. Это достигается использованием такого же идентификационного значения, как в URI. Таким образом, чтобы добавить рамку к фрагменту `#example` , напишем:
 
 ```css
-#example:target { border: 1px solid black; }
+#example:target {
+  border: 1px solid black;
+}
 ```
 
 ## Отметка всех элементов, как целевых
@@ -30,7 +32,9 @@ h2:target { font-weight: bold; }
 Если вы намерены создать общий стиль, который будет применяться ко всем целевым элементам, то вам пригодится следующий универсальный селектор:
 
 ```css
-:target { color: red; }
+:target {
+  color: red;
+}
 ```
 
 ## Пример
@@ -38,8 +42,10 @@ h2:target { font-weight: bold; }
 В данном примере имеются пять ссылок, которые ссылаются на элементы одного и того же документа. Выбор ссылки "First" , например, приведёт к тому, что `<h1 id="one">` станет целевым элементом. Заметьте, что при прокрутке документа целевые элементы располагаются вверху окна браузера, если это возможно.
 
 ```html
-<h4 id="one">...</h4> <p id="two">...</p>
-<div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
+<h4 id="one">...</h4>
+<p id="two">...</p>
+<div id="three">...</div>
+<a id="four">...</a> <em id="five">...</em>
 
 <a href="#one">First</a>
 <a href="#two">Second</a>

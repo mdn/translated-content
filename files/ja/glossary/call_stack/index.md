@@ -14,12 +14,12 @@ slug: Glossary/Call_stack
 
 ```js
 function greeting() {
-   // [1] Some code here
-   sayHi();
-   // [2] Some code here
+  // [1] Some code here
+  sayHi();
+  // [2] Some code here
 }
 function sayHi() {
-   return "Hi!";
+  return "Hi!";
 }
 
 // Invoke the `greeting` function
@@ -33,23 +33,23 @@ greeting();
 1. `greeting()` 関数の呼び出しまで、すべての関数を無視する。
 2. `greeting()` 関数をコールスタックリストに追加する。
 
-    > **メモ:** コールスタックリスト:
-    > \- greeting
+   > **メモ:** コールスタックリスト:
+   > \- greeting
 
 3. `greeting()` 関数の中にあるコードのすべての行を実行する。
 4. `sayHi()` 関数の呼び出しまで移動する。
 5. コールスタックリストに `sayHi()` 関数を追加する。
 
-    > **メモ:** コールスタックリスト:
-    > \- greeting
-    > \- sayHi
+   > **メモ:** コールスタックリスト:
+   > \- greeting
+   > \- sayHi
 
 6. `sayHi()` 関数の中にあるコードのすべての行を、末尾に達するまで実行する。
 7. 実行を `sayHi()` を呼び出した行に戻し、 `greeting()` 関数の残りの実行を続ける。
 8. `sayHi()` 関数をコールスタックリストから削除する。
 
-    > **メモ:** コールスタックリスト:
-    > \- greeting
+   > **メモ:** コールスタックリスト:
+   > \- greeting
 
 9. `greeting()` 関数の中のすべてを実行したら、これを呼び出した行に戻り、残りの JavaScript コードの実行を続ける。
 10. `greeting()` 関数をコールスタックリストから削除する。

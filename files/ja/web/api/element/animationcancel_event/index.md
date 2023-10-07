@@ -1,14 +1,14 @@
 ---
 title: "Element: animationcancel イベント"
+short-title: animationcancel
 slug: Web/API/Element/animationcancel_event
-original_slug: Web/API/Document/animationcancel_event
 l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
-**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Element/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
+**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Element/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
 
 このイベントのイベントハンドラーは `onanimationcancel` プロパティを設定するか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用することにより追加することができます。
 
@@ -17,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('animationcancel', (event) => {});
+addEventListener("animationcancel", (event) => {});
 
-onanimationcancel = (event) => { };
+onanimationcancel = (event) => {};
 ```
 
 ## イベント型
@@ -44,24 +44,24 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 このコードはリスナーに `animationcancel` イベントを追加します。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
-animated.addEventListener('animationcancel', () => {
-  console.log('アニメーションが取り消されました');
+animated.addEventListener("animationcancel", () => {
+  console.log("アニメーションが取り消されました");
 });
 
-animated.style.display = 'none';
+animated.style.display = "none";
 ```
 
 同様に、 `onanimationcancel` プロパティを `addEventListener()` の代わりに使用するとこうなります。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 animated.onanimationcancel = () => {
-  console.log('アニメーションが取り消されました');
+  console.log("アニメーションが取り消されました");
 };
 
-animated.style.display = 'none';
+animated.style.display = "none";
 ```
 
 ### ライブ例
@@ -112,36 +112,42 @@ animated.style.display = 'none';
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log",
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate",
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
-  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
+  const active = animation.classList.contains("active");
+  applyAnimation.textContent = active
+    ? "Cancel animation"
+    : "Activate animation";
 });
 ```
 
@@ -159,8 +165,8 @@ applyAnimation.addEventListener('click', () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationcancel_event", "animationcancel")}}

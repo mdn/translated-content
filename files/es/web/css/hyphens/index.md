@@ -75,7 +75,7 @@ Este ejemplo usa tres clases, una por cada posible configuración de la propieda
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;

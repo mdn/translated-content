@@ -12,10 +12,10 @@ Notifications API 允許網頁控制向終端用戶顯示系統通知 — 它在
 在受到支持的平台上，顯示系統通知通常涉及兩件事。 首先，用戶需要授予當前的來源權限才能顯示系統通知，通常在應用程式或網站初始化完成後使用{{domxref("Notification.requestPermission()")}} 方法。
 
 ```js
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   let promise = Notification.requestPermission();
   // wait for permission
-})
+});
 ```
 
 這不僅是最佳實踐 — 您不應向用戶發送他們不同意的通知，並且在未來瀏覽器將明確禁止沒有響應用戶請求允許通知對話框的通知。Firefox 72 開始已遵循這項約定。使用此方法將產生一個請求對話框，如下所示：

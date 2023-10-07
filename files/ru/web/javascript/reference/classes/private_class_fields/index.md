@@ -1,8 +1,6 @@
 ---
 title: Приватные поля класса
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
-original_slug: Web/JavaScript/Reference/Classes/Приватные_поля_класса
 ---
 
 {{JsSidebar("Classes")}}
@@ -37,15 +35,15 @@ class ClassWithPrivateStaticField {
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 
   static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
+console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
 ```
 
 Приватные статические поля добавляются в конструктор класса во время обработки класса.
@@ -56,23 +54,25 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
 
 ```js
 class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 
   static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
+    this.#PRIVATE_STATIC_FIELD = 42;
+    return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField { }
+class SubClass extends BaseClassWithPrivateStaticField {}
 
-let error = null
+let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e}
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
-console.assert(error instanceof TypeError)
+console.assert(error instanceof TypeError);
 ```
 
 ### Приватные поля экземпляров
@@ -83,16 +83,16 @@ console.assert(error instanceof TypeError)
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField;
 
   constructor() {
-    this.#privateField = 42
-    this.#randomField = 666 // Syntax error
+    this.#privateField = 42;
+    this.#randomField = 666; // Syntax error
   }
 }
 
-const instance = new ClassWithPrivateField()
-instance.#privateField === 42 // Syntax error
+const instance = new ClassWithPrivateField();
+instance.#privateField === 42; // Syntax error
 ```
 
 ### Приватные методы
@@ -107,17 +107,17 @@ instance.#privateField === 42 // Syntax error
 
 ```js
 class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
 
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+  static publicStaticMethod1() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
@@ -128,15 +128,15 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 
 ```js
 class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
+  static publicStaticMethod1() {
+    return Base.#privateStaticMethod();
+  }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 class Derived extends Base {}
@@ -152,16 +152,16 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world'
+    return "hello world";
   }
 
   getPrivateMessage() {
-      return this.#privateMethod()
+    return this.#privateMethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod()
-console.log(instance.getPrivateMessage())
+const instance = new ClassWithPrivateMethod();
+console.log(instance.getPrivateMessage());
 // expected output: "hello world"
 ```
 
@@ -169,18 +169,18 @@ console.log(instance.getPrivateMessage())
 
 ```js
 class ClassWithPrivateAccessor {
-  #message
+  #message;
 
   get #decoratedMessage() {
-    return `✨${this.#message}✨`
+    return `✨${this.#message}✨`;
   }
   set #decoratedMessage(msg) {
-    this.#message = msg
+    this.#message = msg;
   }
 
   constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
+    this.#decoratedMessage = "hello world";
+    console.log(this.#decoratedMessage);
   }
 }
 

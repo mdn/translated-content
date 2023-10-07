@@ -1,13 +1,6 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - HTML DOM
-  - Obsolete
-  - Propriété
-  - Reference
-translation_of: Web/API/Document/alinkColor
 ---
 
 {{APIRef("DOM")}}{{Deprecated_header}}
@@ -21,7 +14,7 @@ var color = document.alinkColor;
 document.alinkColor = color;
 ```
 
-*color* est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
+_color_ est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
 
 ## Notes
 

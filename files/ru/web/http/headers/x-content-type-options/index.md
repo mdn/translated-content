@@ -1,13 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - HTTP
-  - HTTP заголовки
-  - Ответы заголовка
-  - Справка
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
-original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}
@@ -50,8 +43,8 @@ X-Content-Type-Options: nosniff
 
 ## Спецификации
 
-| Спецификация                                                                                                                 | Статус                   | Комментарий        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| Спецификация                                                                                 | Статус             | Комментарий        |
+| -------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
 | {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Initial definition |
 
 ## Совместимость с браузерами

@@ -1,13 +1,8 @@
 ---
 title: Параметры по умолчанию
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Функции
-  - Экспериментальный
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **Параметры по умолчанию** позволяют задавать формальным параметрам функции значения по умолчанию в случае, если функция вызвана без аргументов, или если параметру явным образом передано значение `undefined`.
@@ -36,15 +31,15 @@ function multiply(a, b) {
 }
 
 multiply(5, 2); // 10
-multiply(5);    // NaN !
+multiply(5); // NaN !
 ```
 
 Чтобы такого не происходило, в теле функции использовался код подобный тому, что находится во второй строчке, где в случае, если функция `multiply` вызывалась только c одним аргументом, параметру `b` присваивалось значение `1`:
 
 ```js
 function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
-  return a*b;
+  b = typeof b !== "undefined" ? b : 1;
+  return a * b;
 }
 
 multiply(5, 2); // 10
@@ -55,7 +50,7 @@ multiply(5); // 5
 
 ```js
 function multiply(a, b = 1) {
-  return a*b;
+  return a * b;
 }
 
 multiply(5, 2); // 10
@@ -75,12 +70,12 @@ function test(num = 1) {
 }
 
 // num не передано, или передано undefined:
-test();          // 'number' (num получил значение 1)
+test(); // 'number' (num получил значение 1)
 test(undefined); // 'number' (и здесь num получил значение 1)
 
 // num передано значение null или другое "ложное" значение:
-test('');        // 'string' (num получил значение '')
-test(null);      // 'object' (num получил значение null)
+test(""); // 'string' (num получил значение '')
+test(null); // 'object' (num получил значение null)
 ```
 
 ### Параметры по умолчанию вычисляются в момент вызова функции
@@ -101,7 +96,7 @@ append(2); // [2], а не [1, 2]
 
 ```js
 function callSomething(thing = something()) {
- return thing;
+  return thing;
 }
 
 let numberOfTimesCalled = 0;
@@ -119,51 +114,57 @@ callSomething(); // 2
 В параметрах по умолчанию можно использовать значения предыдущих (расположенных левее в списке) параметров:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
-    return [name, greeting, message];
+function greet(name, greeting, message = greeting + " " + name) {
+  return [name, greeting, message];
 }
 
-greet('David', 'Hi');  // ["David", "Hi", "Hi David"]
-greet('David', 'Hi', 'Happy Birthday!');  // ["David", "Hi", "Happy Birthday!"]
+greet("David", "Hi"); // ["David", "Hi", "Hi David"]
+greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
 ```
 
 Следующий пример ещё раз иллюстрирует эту возможность, а также позволяет ещё раз сравнить два способа достижения одного и того же результата: с использованием инициализации параметров по умолчанию и без её использования:
 
 ```js
 function go() {
-  return ":P"
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a,b,c,d,e,f,g];
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
+  return [a, b, c, d, e, f, g];
 }
-function withoutDefaults(a, b, c, d, e, f, g){
-  switch(arguments.length){
+function withoutDefaults(a, b, c, d, e, f, g) {
+  switch (arguments.length) {
     case 0:
-      a
+      a;
     case 1:
-      b = 5
+      b = 5;
     case 2:
-      c = b
+      c = b;
     case 3:
       d = go();
     case 4:
-      e = this
+      e = this;
     case 5:
-      f = arguments
+      f = arguments;
     case 6:
       g = this.value;
     default:
   }
-  return [a,b,c,d,e,f,g];
+  return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value:"=^_^="});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-
-withoutDefaults.call({value:"=^_^="});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -174,7 +175,9 @@ withoutDefaults.call({value:"=^_^="});
 ```js
 // Вызовет ошибку ReferenceError!
 function f(a = go()) {
-  function go(){return ":P"}
+  function go() {
+    return ":P";
+  }
 }
 f(); // ReferenceError: go is not defined
 ```
@@ -184,7 +187,7 @@ f(); // ReferenceError: go is not defined
 До появления версии Gecko 26, следующий код приводил к {{jsxref("SyntaxError")}}. Это было исправлено в {{bug(777060)}} и с тех пор работает корректно. Аргументы, передаваемые при вызове функции, становятся значениями формальных параметров независимо от наличия у последних инициализации по умолчанию, а также независимо от присутствия у функции других параметров, находящихся правее в списке параметров и не имеющих инициализации.
 
 ```js
-function f(x=1, y) {
+function f(x = 1, y) {
   return [x, y];
 }
 
@@ -197,7 +200,7 @@ f(2); // [2, undefined];
 При инициализации параметров по умолчанию можно использовать синтаксическую конструкцию деструктурирующего присваивания:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
   return x + y + z;
 }
 

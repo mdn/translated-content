@@ -68,9 +68,9 @@ function f(...[a, b, c]) {
   return a + b + c;
 }
 
-f(1)          // NaN (b and c are undefined)
-f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (the fourth parameter is not destructured)
+f(1); // NaN (b and c are undefined)
+f(1, 2, 3); // 6
+f(1, 2, 3, 4); // 6 (the fourth parameter is not destructured)
 ```
 
 ## 示例
@@ -82,7 +82,7 @@ function fun1(...theArgs) {
   alert(theArgs.length);
 }
 
-fun1();  // 弹出 "0", 因为 theArgs 没有元素
+fun1(); // 弹出 "0", 因为 theArgs 没有元素
 fun1(5); // 弹出 "1", 因为 theArgs 只有一个元素
 fun1(5, 6, 7); // 弹出 "3", 因为 theArgs 有三个元素
 ```
@@ -97,7 +97,7 @@ function multiply(multiplier, ...theArgs) {
 }
 
 var arr = multiply(2, 1, 2, 3);
-console.log(arr);  // [2, 4, 6]
+console.log(arr); // [2, 4, 6]
 ```
 
 下例演示了你可以在剩余参数上使用任意的数组方法，而`arguments`对象不可以：
@@ -108,14 +108,14 @@ function sortRestArgs(...theArgs) {
   return sortedArgs;
 }
 
-alert(sortRestArgs(5,3,7,1)); // 弹出 1,3,5,7
+alert(sortRestArgs(5, 3, 7, 1)); // 弹出 1,3,5,7
 
 function sortArguments() {
   var sortedArgs = arguments.sort();
   return sortedArgs; // 不会执行到这里
 }
 
-alert(sortArguments(5,3,7,1)); // 抛出 TypeError 异常:arguments.sort is not a function
+alert(sortArguments(5, 3, 7, 1)); // 抛出 TypeError 异常:arguments.sort is not a function
 ```
 
 为了在`arguments`对象上使用`Array`方法，它必须首先被转换为一个真正的数组。

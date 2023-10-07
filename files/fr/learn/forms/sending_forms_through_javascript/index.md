@@ -54,10 +54,10 @@ Voyons chacune en détails par la suite.
 #### JavaScript
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function sendData(data) {
-  console.log('Envoi des données en cours');
+  console.log("Envoi des données en cours");
 
   const XHR = new XMLHttpRequest();
 
@@ -66,41 +66,43 @@ function sendData(data) {
   // On transforme l'objet des données en un tableau
   // de paires clé/valeur encodées en URL.
   for (const [name, value] of Object.entries(data)) {
-    urlEncodedDataPairs.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
+    urlEncodedDataPairs.push(
+      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
+    );
   }
 
   // On combine les paires en une seule chaîne de caractères
   // et on remplace les espaces encodés par le caractère +
   // afin de correspondre au comportement des navigateurs
   // pour les envois de formulaires.
-  const urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+  const urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
 
   // On définit ce qui se produit lorsque
   // les données sont bien envoyées
-  XHR.addEventListener('load', (event) => {
-    alert('Les données ont été envoyées et la réponse chargée.');
+  XHR.addEventListener("load", (event) => {
+    alert("Les données ont été envoyées et la réponse chargée.");
   });
 
   // On définit ce qui se produit en cas
   // d'erreur
-  XHR.addEventListener('error', (event) => {
-    alert('Une erreur est survenue.');
+  XHR.addEventListener("error", (event) => {
+    alert("Une erreur est survenue.");
   });
 
   // On prépare la requête
-  XHR.open('POST', 'https://example.com/cors.php');
+  XHR.open("POST", "https://example.com/cors.php");
 
   // On ajoute l'en-tête HTTP nécessaire pour le format
   // des données de formulaires
-  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // Pour finir, on envoie les données.
   XHR.send(urlEncodedData);
 }
 
-btn.addEventListener('click', () => {
-  sendData({ test: 'ok' });
-})
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
+});
 ```
 
 #### Résultat
@@ -128,7 +130,7 @@ L'article [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormD
 ##### JavaScript
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function sendData(data) {
   const XHR = new XMLHttpRequest();
@@ -141,26 +143,26 @@ function sendData(data) {
 
   // On définit ce qui se produit lorsque
   // les données sont bien envoyées
-  XHR.addEventListener('load', (event) => {
-    alert('Les données ont été envoyées et la réponse chargée.');
+  XHR.addEventListener("load", (event) => {
+    alert("Les données ont été envoyées et la réponse chargée.");
   });
 
   // On définit ce qui se produit en cas
   // d'erreur
-  XHR.addEventListener('error', (event) => {
-    alert('Une erreur est survenue.');
+  XHR.addEventListener("error", (event) => {
+    alert("Une erreur est survenue.");
   });
 
   // On prépare la requête
-  XHR.open('POST', 'https://example.com/cors.php');
+  XHR.open("POST", "https://example.com/cors.php");
 
   // On envoie l'objet FormData : les en-têtes HTTP sont
   // paramétrés automatiquement
   XHR.send(FD);
 }
 
-btn.addEventListener('click', () => {
-  sendData({ test: 'ok' });
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
 });
 ```
 
@@ -204,7 +206,7 @@ window.addEventListener("load", () => {
     // On définit ce qui se produit en cas
     // d'erreur
     XHR.addEventListener("error", (event) => {
-      alert('Une erreur est survenue.');
+      alert("Une erreur est survenue.");
     });
 
     // On prépare la requête
@@ -267,8 +269,7 @@ Comme on peut le voir, le fragment HTML reprend un formulaire classique. La logi
 // On souhaite accéder aux nœuds du DOM,
 // on initialise donc le script au chargement
 // de la page
-window.addEventListener('load', () => {
-
+window.addEventListener("load", () => {
   // On utilisera ces variables pour stocker
   // les données du formulaire
   const text = document.getElementById("leTexte");
@@ -326,26 +327,27 @@ window.addEventListener('load', () => {
 
     // Si un fichier a été sélectionné :
     if (file.dom.files[0]) {
-      // On commence un nouveau fragment dans le corps de 
+      // On commence un nouveau fragment dans le corps de
       // la requête
       data += `--${boundary}\r\n`;
 
       // On le décrit comme données de formulaire
-      data += 'content-disposition: form-data; '
-      // On indique le nom des données du formulaire
-            + `name="${file.dom.name}"; `
-      // On fournit le nom effectif du fichier
-            + `filename="${file.dom.files[0].name}"\r\n`;
+      data +=
+        "content-disposition: form-data; " +
+        // On indique le nom des données du formulaire
+        `name="${file.dom.name}"; ` +
+        // On fournit le nom effectif du fichier
+        `filename="${file.dom.files[0].name}"\r\n`;
       // Ainsi que le type MIME du fichier
       data += `Content-Type: ${file.dom.files[0].type}\r\n`;
 
       // Il y a un saut de ligne entre les métadonnées
       // et les données
-      data += '\r\n';
+      data += "\r\n";
 
       // On concatène les données binaires au corps de la
       // requête
-      data += file.binary + '\r\n';
+      data += file.binary + "\r\n";
     }
 
     // Pour les données texte, c'est plus simple :
@@ -358,7 +360,7 @@ window.addEventListener('load', () => {
     data += `content-disposition: form-data; name="${text.name}"\r\n`;
     // Il y a un saut de ligne entre les métadonnées
     // et les données
-    data += '\r\n';
+    data += "\r\n";
 
     // On ajoute les données texte au corps de la requête
     data += text.value + "\r\n";
@@ -367,30 +369,33 @@ window.addEventListener('load', () => {
     data += `--${boundary}--`;
 
     // On définit ce qui se produit en cas de réussite
-    XHR.addEventListener('load', (event) => {
-      alert('Les données ont bien été envoyées et la réponse chargée.');
+    XHR.addEventListener("load", (event) => {
+      alert("Les données ont bien été envoyées et la réponse chargée.");
     });
 
     // On définit ce qui se passe en cas d'échec
-    XHR.addEventListener('error', (event) => {
-      alert('Une erreur est survenue.');
+    XHR.addEventListener("error", (event) => {
+      alert("Une erreur est survenue.");
     });
 
     // On prépare la requête
-    XHR.open('POST', 'https://example.com/cors.php');
+    XHR.open("POST", "https://example.com/cors.php");
 
     // On ajoute l'en-tête HTTP pour le format des données
-    XHR.setRequestHeader('Content-Type', `multipart/form-data; boundary=${boundary}`);
+    XHR.setRequestHeader(
+      "Content-Type",
+      `multipart/form-data; boundary=${boundary}`,
+    );
 
     // On envoie les données
     XHR.send(data);
   }
 
   // On récupère l'élément du formulaire
-  const form = document.getElementById('leFormulaire');
+  const form = document.getElementById("leFormulaire");
 
   // On ajoute un gestionnaire d'évènement 'submit'
-  form.addEventListener('submit', (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
     sendData();
   });

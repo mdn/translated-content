@@ -1,14 +1,6 @@
 ---
 title: Check-list pour l'accessibilité mobile
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Accessibility
-  - Firefox OS
-  - Guidelines
-  - Mobile
-  - checklist
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
-original_slug: Accessibilité/Checklist_accessibilite_mobile
 ---
 
 Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.
@@ -65,7 +57,7 @@ Ce document fournit une liste concise des points à vérifier par les développe
 - Un titre d'application **DOIT** être fourni.
 - Les titres **NE DOIVENT PAS** rompre la structure hiérarchique
 
-  ```html
+  ```html-nolint
   <h1>Titre de premier niveau</h1>
     <h2>Titre secondaire</h2>
     <h2>Un autre titre secondaire</h2>

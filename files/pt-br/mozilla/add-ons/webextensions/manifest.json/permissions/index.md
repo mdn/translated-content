@@ -1,7 +1,6 @@
 ---
 title: permissões
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
 ---
 
 {{AddonSidebar}}
@@ -135,7 +134,7 @@ A intenção desta permissão é permitir que extensões executem um caso de uso
 
 Note que você só pode ter acesso à aba ou dado que estava ali, quando a interação do usuário ocorreu (por exemplo, um clique do mouse). Quando a aba ativa muda para outra página, por exemplo devido a concluir o carregamento ou algum outro evento, a permissão não lhe concede mais acesso à aba.
 
-Normalmente, a aba a qual foi concedido `activeTab` é somente a aba ativa atual, exceto em um caso. A API [`menus`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/menus) permite a uma extensão criar um item de menu que é exibido se o usuário abrir o menu de contexto sobre uma aba (ou seja, no elemento na lista de abas que permite ao usuário mudar de uma aba para outra). Se o usuário clicar em um item desses, a permissão `activeTab` é concedida para a aba em que o usuário clicou, mesmo que essa não seja a aba ativa no momento (de acordo com Firefox 63, {{bug(1446956)}}).
+Normalmente, a aba a qual foi concedido `activeTab` é somente a aba ativa atual, exceto em um caso. A API [`menus`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/menus) permite a uma extensão criar um item de menu que é exibido se o usuário abrir o menu de contexto sobre uma aba (ou seja, no elemento na lista de abas que permite ao usuário mudar de uma aba para outra). Se o usuário clicar em um item desses, a permissão `activeTab` é concedida para a aba em que o usuário clicou, mesmo que essa não seja a aba ativa no momento (de acordo com Firefox 63, [Erro do Firefox 1446956](https://bugzil.la/1446956)).
 
 ## Acesso à área de transferência
 

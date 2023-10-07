@@ -1,7 +1,6 @@
 ---
 title: Paddle과 키보드 컨트롤
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls
 ---
 
 {{GamesSidebar}}
@@ -19,18 +18,18 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 ```js
 var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 여기에서 paddle의 높이와 너비, 그리고 `x` 축 위에 시작 지점을 정의합니다. paddle을 스크린에 그리는 함수를 만듭시다. `drawBall()` 함수 아래에 다음 코드를 추가하세요:
 
 ```js
 function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -61,21 +60,19 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 ```js
 function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = true;
+  } else if (e.keyCode == 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = false;
+  } else if (e.keyCode == 37) {
+    leftPressed = false;
+  }
 }
 ```
 
@@ -88,22 +85,20 @@ function keyUpHandler(e) {
 이제 우리는 눌려진 키, 이벤트 리스너, 관련된 함수에 대한 정보를 저장할 변수를 가지고 있습니다. 이제 실제 코드를 사용하여 이것들을 사용하고 paddle을 화면에서 움직여봅시다. `draw()` 함수에서, 각각의 프레임이 렌더링 될때마다 왼쪽이나 오른쪽 방향키가 눌려졌는지 확인합니다. 코드는 아래와 같습니다:
 
 ```js
-if(rightPressed) {
-    paddleX += 7;
-}
-else if(leftPressed) {
-    paddleX -= 7;
+if (rightPressed) {
+  paddleX += 7;
+} else if (leftPressed) {
+  paddleX -= 7;
 }
 ```
 
 만약 왼쪽 방향키를 누르면, paddle은 좌측으로 7픽셀 움직이고, 오른쪽 방향키를 누르면, 우측으로 7픽셀 움직입니다. 잘 작동하지만, 키를 너무 오래 누르고 있으면 paddle이 캔버스 밖으로 사라집니다. 아래처럼 코드를 수정해서 paddle이 캔버스 안에서만 움직이도록 개선합니다:
 
 ```js
-if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-}
-else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
+if (rightPressed && paddleX < canvas.width - paddleWidth) {
+  paddleX += 7;
+} else if (leftPressed && paddleX > 0) {
+  paddleX -= 7;
 }
 ```
 

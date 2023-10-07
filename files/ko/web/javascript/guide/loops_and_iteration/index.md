@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.
+루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. [JavaScript Guide](/ko/docs/Web/JavaScript/Guide)의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.
 
 반복문을 게임의 컴퓨터화된 버전이라고 생각해 보세요. 누군가에게 한 방향으로 X만큼 가게 시키고 다른 방향으로 Y만큼 더 가게 한다고 생각해 보십시오. 예를들어, "동쪽으로 5만큼 가세요"는 다음과 같이 반복문으로 표현 될 수 있습니다.
 
@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 var step;
 for (step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -53,7 +53,9 @@ for문이 실행될 때, 다음과 같이 실행됩니다.:
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <label for="musicTypes"
+      >Choose some music types, then click the button below:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -67,20 +69,22 @@ for문이 실행될 때, 다음과 같이 실행됩니다.:
 </form>
 
 <script>
-function howMany(selectObject) {
-  var numberSelected = 0;
-  for (var i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    var numberSelected = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
-});
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Number of options selected: " + howMany(document.selectForm.musicTypes),
+    );
+  });
 </script>
 ```
 
@@ -156,7 +160,7 @@ while (true) {
 
 ## 레이블 문
 
-[레이블](/en-US/docs/Web/JavaScript/Reference/Statements/label)은 여러분이 프로그램에서 다른 곳으로 참조할 수 있도록 식별자로 문을 제공합니다. 예를 들어, 여러분은 루프를 식별하기 위해 레이블을 사용하고, 프로그램이 루프를 방해하거나 실행을 계속할지 여부를 나타내기 위해 break나 continue 문을 사용할 수 있습니다.
+[레이블](/ko/docs/Web/JavaScript/Reference/Statements/label)은 여러분이 프로그램에서 다른 곳으로 참조할 수 있도록 식별자로 문을 제공합니다. 예를 들어, 여러분은 루프를 식별하기 위해 레이블을 사용하고, 프로그램이 루프를 방해하거나 실행을 계속할지 여부를 나타내기 위해 break나 continue 문을 사용할 수 있습니다.
 
 레이블 문의 구문은 다음과 같습니다:
 
@@ -172,9 +176,8 @@ while (true) {
 이 예에서, 레이블 markLoop는 while 루프를 식별합니다.
 
 ```js
-markLoop:
-while (theMark == true) {
-   doSomething();
+markLoop: while (theMark == true) {
+  doSomething();
 }
 ```
 
@@ -208,7 +211,7 @@ for (i = 0; i < a.length; i++) {
 
 ```js
 var x = 0;
-var z = 0
+var z = 0;
 labelCancelLoops: while (true) {
   console.log("Outer loops: " + x);
   x += 1;
@@ -227,7 +230,7 @@ labelCancelLoops: while (true) {
 
 ## continue 문
 
-[`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue) 문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.
+[`continue`](/ko/docs/Web/JavaScript/Reference/Statements/continue) 문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.
 
 - 레이블없이 continue를 사용하는 경우, 그것은 가장 안쪽의 while, do-while, for 문을 둘러싼 현재 반복을 종료하고, 다음 반복으로 루프의 실행을 계속합니다. break문과 달리, continue 문은 전체 루프의 실행을 종료하지 않습니다. while 루프에서 그것은 다시 조건으로 이동합니다. for 루프에서 그것은 증가 표현으로 이동합니다.
 - 레이블과 함께 continue를 사용하는 경우, continue는 그 레이블로 식별되는 루프 문에 적용됩니다.
@@ -260,27 +263,25 @@ checkiandj 레이블 문은 checkj 레이블 문을 포함합니다. continue가
 continue가 checkiandj의 레이블을 가지고 있다면, 프로그램은 checkiandj 문 상단에서 계속될 것입니다.
 
 ```js
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) == 0) {
-          continue checkj;
-        }
-        console.log(j + " is odd.");
-      }
-      console.log("i = " + i);
-      console.log("j = " + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 == 0) {
+      continue checkj;
+    }
+    console.log(j + " is odd.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in` 문
 
-[`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 문은 객체의 열거 속성을 통해 지정된 변수를 반복합니다. 각각의 고유한 속성에 대해, JavaScript는 지정된 문을 실행합니다. for...in 문은 다음과 같습니다:
+[`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 문은 객체의 열거 속성을 통해 지정된 변수를 반복합니다. 각각의 고유한 속성에 대해, JavaScript는 지정된 문을 실행합니다. for...in 문은 다음과 같습니다:
 
 ```
 for (variable in object) {
@@ -306,17 +307,17 @@ function dump_props(obj, obj_name) {
 속성 make와 model을 가진 객체 car의 경우, 결과는 다음과 같습니다:
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### **배열**
 
-{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 전통적인 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
+{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 전통적인 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
 
 ## `for...of` 문
 
-[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/en-US/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
+[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
 ```
     for (variable of object) {
@@ -324,18 +325,18 @@ car.model = Mustang
     }
 ```
 
-다음 예는 for...of 루프와 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:
+다음 예는 for...of 루프와 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:
 
 ```js
 let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs "3", "5", "7"
+  console.log(i); // logs "3", "5", "7"
 }
 ```
 

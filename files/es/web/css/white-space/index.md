@@ -25,76 +25,82 @@ white-space: unset;
 
 ```html hidden
 <div class="grid">
-<div class="col">
-  <div class="cell">
-    <div class="label">normal</div>
-    <div>
-  <p class="wspNormal">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
+  <div class="col">
+    <div class="cell">
+      <div class="label">normal</div>
+      <div>
+        <p class="wspNormal">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          pellentesque metus eget massa feugiat lobortis.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="cell">
-    <div class="label">pre-wrap</div>
-    <div>
-  <p class="wspPreWrap">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
+    <div class="cell">
+      <div class="label">pre-wrap</div>
+      <div>
+        <p class="wspPreWrap">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          pellentesque metus eget massa feugiat lobortis.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="cell">
-    <div class="label">pre-line</div>
-    <div>
-  <p class="wspPreLine">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
+    <div class="cell">
+      <div class="label">pre-line</div>
+      <div>
+        <p class="wspPreLine">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          pellentesque metus eget massa feugiat lobortis.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="cell">
-    <div class="label">nowrap</div>
-    <div>
-  <p class="wspNowrap">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
+    <div class="cell">
+      <div class="label">nowrap</div>
+      <div>
+        <p class="wspNowrap">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          pellentesque metus eget massa feugiat lobortis.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="cell">
-    <div class="label">pre</div>
-    <div>
-  <p class="wspPre">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
+    <div class="cell">
+      <div class="label">pre</div>
+      <div>
+        <p class="wspPre">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          pellentesque metus eget massa feugiat lobortis.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="note">
-    Los ejemplos anteriores aplican al siguiente HTML (square represents white spaces):
-    <pre>☐☐&lt;p&gt;
+    <div class="note">
+      Los ejemplos anteriores aplican al siguiente HTML (square represents white
+      spaces):
+      <pre>
+☐☐&lt;p&gt;
 ☐☐☐☐Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ☐☐☐☐Nulla pellentesque metus eget massa feugiat lobortis.
-☐☐&lt;/p&gt;</pre>
+☐☐&lt;/p&gt;</pre
+      >
+    </div>
   </div>
-</div>
 </div>
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
 }
 
-pre { margin-bottom: 0; }
+pre {
+  margin-bottom: 0;
+}
 
 .grid {
   width: 100%;
   height: 100%;
   display: flex;
-  background: #EEE;
+  background: #eee;
   font: 1em monospace;
 }
 
@@ -114,9 +120,9 @@ pre { margin-bottom: 0; }
 
 .cell {
   box-sizing: border-box;
-  margin: .5em;
+  margin: 0.5em;
   padding: 0;
-  background-color: #FFF;
+  background-color: #fff;
   overflow: hidden;
   text-align: center;
 }
@@ -124,30 +130,40 @@ pre { margin-bottom: 0; }
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em;
-  font: .8em sans-serif;
+  margin: 0.5em;
+  font: 0.8em sans-serif;
   text-align: left;
   flex: none;
 }
 
 p {
   width: 50%;
-  font: .8em sans-serif;
+  font: 0.8em sans-serif;
   max-width: 100%;
   box-sizing: border-box;
   overflow: hidden;
   resize: horizontal;
-  background: #E4F0F5;
-  padding: .5em;
-  margin: .5em auto 0;
+  background: #e4f0f5;
+  padding: 0.5em;
+  margin: 0.5em auto 0;
   text-align: left;
 }
 
-.wspNormal  { white-space: normal; }
-.wspNowrap  { white-space: nowrap; }
-.wspPre     { white-space: pre; }
-.wspPreWrap { white-space: pre-wrap; }
-.wspPreLine { white-space: pre-line; }
+.wspNormal {
+  white-space: normal;
+}
+.wspNowrap {
+  white-space: nowrap;
+}
+.wspPre {
+  white-space: pre;
+}
+.wspPreWrap {
+  white-space: pre-wrap;
+}
+.wspPreLine {
+  white-space: pre-line;
+}
 ```
 
 {{EmbedLiveSample("", "100%", 530, "", "", "")}}
@@ -199,33 +215,36 @@ code {
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
+  word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  white-space: pre-wrap;      /* Modern browsers */
+  white-space: pre-wrap; /* Modern browsers */
 }
 ```
 
 ## See it in action
 
 ```html hidden
-    <div id="css-code" class="box">
-     p { white-space: <select>
-       <option>normal</option>
-       <option>nowrap</option>
-       <option>pre</option>
-       <option>pre-wrap</option>
-       <option>pre-line</option>
-     </select> }
-    </div>
-    <div id="results" class="box">
-    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+<div id="css-code" class="box">
+  p { white-space:
+  <select>
+    <option>normal</option>
+    <option>nowrap</option>
+    <option>pre</option>
+    <option>pre-wrap</option>
+    <option>pre-line</option>
+  </select>
+  }
+</div>
+<div id="results" class="box">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
 ```
 
 ```css hidden
@@ -236,12 +255,12 @@ pre {
 }
 
 #css-code {
-  background-color: rgb(220,220,220);
+  background-color: rgb(220, 220, 220);
   font-size: 16px;
 }
 
 #results {
-  background-color: rgb(230,230,230);
+  background-color: rgb(230, 230, 230);
   overflow-x: scroll;
   height: 400px;
   white-space: normal;
@@ -250,11 +269,11 @@ pre {
 ```
 
 ```js hidden
-var select  = document.querySelector("#css-code select");
+var select = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
-select.addEventListener("change", function(e) {
-  results.setAttribute("style", "white-space: "+e.target.value);
-})
+select.addEventListener("change", function (e) {
+  results.setAttribute("style", "white-space: " + e.target.value);
+});
 ```
 
 ### Fuente

@@ -1,12 +1,8 @@
 ---
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
+
 {{JSRef}}
 
 **`TypedArray[@@species]`** - это способ доступа, с помощью которого можно получить конструктор [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
@@ -38,8 +34,8 @@ Float64Array
 Свойство [**`species`**](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) возвращает функцию-конструктор "по умолчанию", которая является одним из конструкторов данного [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects):
 
 ```js
-Int8Array[Symbol.species];    // function Int8Array()
-Uint8Array[Symbol.species];   // function Uint8Array()
+Int8Array[Symbol.species]; // function Int8Array()
+Uint8Array[Symbol.species]; // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
 ```
 
@@ -48,7 +44,9 @@ Float32Array[Symbol.species]; // function Float32Array()
 ```js
 class MyTypedArray extends Uint8Array {
   //Переопределение вида MyTypedArray на родительский Uint8Array
-  static get [Symbol.species]() { return Uint8Array; }
+  static get [Symbol.species]() {
+    return Uint8Array;
+  }
 }
 ```
 

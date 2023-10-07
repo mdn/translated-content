@@ -3,75 +3,60 @@ title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 
-{{JSRef}}
+{{JSRef}} {{deprecated_header}}
 
-> **警告：** 尽管 `String.prototype.substr(…)` 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 替代它。
+{{jsxref("String")}} 值的 **`substr()`** 方法返回该字符串的一部分，从指定的索引开始，然后扩展到给定数量的字符。
 
-**`substr()`** 方法返回一个字符串中从指定位置开始到指定字符数的字符。
+> **备注：** `substr()` 不属于 ECMAScript 主要规范——它在[附件 B: Web 浏览器的附加 ECMAScript 功能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)中定义，这是非浏览器运行时的可选标准。因此，建议人们使用标准的 [`String.prototype.substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 和 [`String.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 方法，以便使他们的代码能够更好地、最大程度地跨平台。[`String.prototype.substring()` 页面](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring#substring_和_substr_之间的区别)对这三种方法进行了一些比较。
+
+{{EmbedInteractiveExample("pages/js/string-substr.html")}}
 
 ## 语法
 
-```plain
-str.substr(start[, length])
+```js-nolint
+substr(start)
+substr(start, length)
 ```
 
 ### 参数
 
 - `start`
-  - : 开始提取字符的位置。如果为负值，则被看作 `strLength + start`，其中 `strLength` 为字符串的长度（例如，如果 `start` 为 `-3`，则被看作 `strLength + (-3)`）。
-- `length`
-  - : 可选。提取的字符数。
+  - : 返回子字符串中要包含的第一个字符的索引。
+- `length` {{optional_inline}}
+  - : 要提取的字符数。
+
+### 返回值
+
+一个包含给定字符串指定部分的新字符串。
 
 ## 描述
 
-`start` 是一个字符的索引。首字符的索引为 0，最后一个字符的索引为 字符串的长度减去 1。`substr` 从 `start` 位置开始提取字符，提取 `length` 个字符（或直到字符串的末尾）。
+字符串的 `substr()` 方法从字符串中提取 `length` 字符，从 `start` 索引开始计数。
 
-如果 `start` 为正值，且大于或等于字符串的长度，则 `substr` 返回一个空字符串。
+- 如果 `start >= str.length`，则返回空字符串。
+- 如果 `start < 0`，则索引从字符串末尾开始计数。更准确地说，在这种情况下，子字符串从 `max(start + str.length, 0)` 开始。
+- 如果省略 `start` 或其值为 {{jsxref("undefined")}}，则将其视为 `0`。
+- 如果省略 `length` 或其值为 {{jsxref("undefined")}}，或者如果 `start + length >= str.length`，则 `substr()` 会提取字符到字符串末尾。
+- 如果 `length < 0`，则返回空字符串。
+- 对于 `start` 和 `length`，{{jsxref("NaN")}} 被视为 `0`。
 
-如果 `start` 为负值，则 `substr` 把它作为从字符串末尾开始的一个字符索引。如果 `start` 为负值且 `abs(start)` 大于字符串的长度，则 `substr` 使用 0 作为开始提取的索引。注意负的 `start` 参数不被 Microsoft JScript 所支持。
-
-如果 `length` 为 0 或负值，则 `substr` 返回一个空字符串。如果忽略 `length`，则 `substr` 提取字符，直到字符串末尾。
+尽管我们建议你避免使用 `substr()`，但是没有简单的方法可以将遗留代码中的 `substr()` 迁移到 `slice()` 或 `substring()`，而无需为 `substr()` 编写一个 polyfill。例如，当 `str = "01234", a = 1, l = -2` 时，`str.substr(a, l)`、`str.slice(a, a + l)` 和 `str.substring(a, a + l)` 都有不同的结果——`substr()` 返回空字符串，`slice()` 返回 `"123"`，而 `substring()` 返回 `"0"`。实际的重构路径取决于对 `a` 和 `l` 范围的了解。
 
 ## 示例
 
-### 示例：使用 `substr`
+### 使用 substr()
 
 ```js
-var str = "abcdefghij";
+const aString = "Mozilla";
 
-console.log("(1,2): "    + str.substr(1,2));   // (1,2): bc
-console.log("(-3,2): "   + str.substr(-3,2));  // (-3,2): hi
-console.log("(-3): "     + str.substr(-3));    // (-3): hij
-console.log("(1): "      + str.substr(1));     // (1): bcdefghij
-console.log("(-20, 2): " + str.substr(-20,2)); // (-20, 2): ab
-console.log("(20, 2): "  + str.substr(20,2));  // (20, 2):
-```
-
-## 兼容旧环境（Polyfill）
-
-Microsoft's JScript 不支持负的 start 索引。如果你想充分利用该方法的功能，则需要使用下面的兼容性代码修复此 bug：
-
-```js
-// only run when the substr function is broken
-if ('ab'.substr(-1) != 'b')
-{
-  /**
-   *  Get the substring of a string
-   *  @param  {integer}  start   where to start the substring
-   *  @param  {integer}  length  how many characters to return
-   *  @return {string}
-   */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
-      // did we get a negative start, calculate how much it is
-      // from the beginning of the string
-      if (start < 0) start = this.length + start;
-
-      // call the original function
-      return substr.call(this, start, length);
-    }
-  }(String.prototype.substr);
-}
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
+console.log(aString.substr(-20, 2)); // 'Mo'
+console.log(aString.substr(20, 2)); // ''
 ```
 
 ## 规范
@@ -82,7 +67,8 @@ if ('ab'.substr(-1) != 'b')
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `String.prototype.substr` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

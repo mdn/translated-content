@@ -1,8 +1,8 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.cloneNode()`** возвращает дубликат узла, из которого этот метод был вызван.
@@ -27,8 +27,8 @@ var dupNode = node.cloneNode(deep);
 ## Пример
 
 ```js
-    var p = document.getElementById("para1");
-    var p_prime = p.cloneNode(true);
+var p = document.getElementById("para1");
+var p_prime = p.cloneNode(true);
 ```
 
 ## Примечание
@@ -47,12 +47,10 @@ var dupNode = node.cloneNode(deep);
 
 Чтобы клонировать узел для добавления к другому документу используйте {{domxref("Document.importNode()")}} вместо этого.
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификации
-
-- {{Spec("http://w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4","DOM Level 2 Core: cloneNode","REC")}}
-- {{Spec("http://w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4","DOM Level 3 Core: cloneNode","REC")}}
-- [DOM4: cloneNode](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-node-clonenode) (черновик)

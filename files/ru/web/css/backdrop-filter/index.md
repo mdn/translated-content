@@ -1,8 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-translation_of: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`backdrop-filter`** позволяет вам использовать визуальные эффекты - такие как размытие или смещение цвета фона - за элементом. Так как это применяется ко всему _за_ элементом, чтобы увидеть эффект, вы должны сделать элемент или его фон по крайней мере частично прозрачными.
@@ -61,7 +61,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;
@@ -75,7 +75,7 @@ body {
 }
 
 body {
-  background-image: url('./anemones.jpg');
+  background-image: url("./anemones.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,14 +1,6 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -32,16 +24,16 @@ str.toLocaleUpperCase()
 ### Пример: использование метода `toLocaleUpperCase()`
 
 ```js
-console.log('алфавит'.toLocaleUpperCase()); // 'АЛФАВИТ'
+console.log("алфавит".toLocaleUpperCase()); // 'АЛФАВИТ'
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                                         | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.19', 'String.prototype.toLocaleUpperCase')}}                             | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                                         | Статус             | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 3-е издание.                                                                              | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.19', 'String.prototype.toLocaleUpperCase')}}                        | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

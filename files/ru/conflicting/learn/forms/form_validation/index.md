@@ -1,11 +1,6 @@
 ---
 title: Constraint validation API
 slug: conflicting/Learn/Forms/Form_validation
-tags:
-  - API
-  - Валидация ограничений
-  - Landing
-  - Reference
 original_slug: Web/API/Constraint_validation
 ---
 
@@ -45,7 +40,7 @@ Constraint Validation API расширяет перечисленные ниже
 #### Свойства
 
 - {{domxref('HTMLObjectElement.validity', 'validity')}}
-  - : Свойство, доступное только для чтения, которое возвращает объект [`ValidityState`](/en-US/docs/Web/API/ValidityState), содержащий ошибки валидации значения данного элемента.
+  - : Свойство, доступное только для чтения, которое возвращает объект [`ValidityState`](/ru/docs/Web/API/ValidityState), содержащий ошибки валидации значения данного элемента.
 - {{domxref('HTMLObjectElement.validationMessage','validationMessage')}}
   - : Доступное только для чтения свойство, которое возвращает пустую строку, если элемент не является кандидатом на участие в валидации ограничений или если значение элемента валидно. Если значение элемента не валидно, оно возвращает локализованное сообщение валидации. Оно отобразится в интерфейсе, если элемент является единственным элементом формы, с проблемой валидности; если кастомное сообщение об ошибке установлено с помощью {{domxref('HTMLObjectElement.setCustomValidity','setCustomValidity()')}}, это будет показано.
 - {{domxref('HTMLObjectElement.willValidate', 'willValidate')}}
@@ -72,7 +67,7 @@ Constraint Validation API расширяет перечисленные ниже
 </form>
 ```
 
-Если вы попытаетесь отправить форму с пустым полем, или полем, значение которого не соответствует шаблону в атрибуте [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) (только строчные и заглавные латинские буквы), базовый механизм валидации HTML-формы приведёт к появлению сообщения об ошибке, дизайн которого определяется браузером и операционной системой.
+Если вы попытаетесь отправить форму с пустым полем, или полем, значение которого не соответствует шаблону в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern) (только строчные и заглавные латинские буквы), базовый механизм валидации HTML-формы приведёт к появлению сообщения об ошибке, дизайн которого определяется браузером и операционной системой.
 
 Если вы хотите вместо этого отобразить своё сообщение об ошибке, вам потребуется написать JavaScript-код вроде того, что показан ниже:
 
@@ -114,5 +109,5 @@ nameInput.addEventListener('invalid', () => {
 
 - [`<input>`](/ru/docs/Web/HTML/Element/input)
 - [`<select>`](/ru/docs/Web/HTML/Element/select)
-- [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
+- [`<textarea>`](/ru/docs/Web/HTML/Element/textarea)
 - `Свойства {{domxref('ValidityState')}}`: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.customError','customError')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}}, {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}}, {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valid','valid')}} и {{domxref('validityState.valueMissing','valueMissing')}}.

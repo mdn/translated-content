@@ -40,9 +40,15 @@ function name([param,[, param,[..., param]]]) {
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    hoisted ? "is" : "is not"
+  } hoisted. typeof foo is ${typeof foo}`,
+);
 if (false) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // 在 Chrome 里：
@@ -62,9 +68,15 @@ if (false) {
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    hoisted ? "is" : "is not"
+  } hoisted. typeof foo is ${typeof foo}`,
+);
 if (true) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // 在 Chrome 里：
@@ -88,7 +100,7 @@ JavaScript 中的**函数声明**被提升到了**函数定义**。你可以在�
 hoisted(); // logs "foo"
 
 function hoisted() {
-  console.log('foo');
+  console.log("foo");
 }
 ```
 
@@ -97,8 +109,8 @@ function hoisted() {
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-  console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -110,7 +122,7 @@ var notHoisted = function() {
 
 ```js
 function calc_sales(units_a, units_b, units_c) {
-   return units_a * 79 + units_b * 129 + units_c * 699;
+  return units_a * 79 + units_b * 129 + units_c * 699;
 }
 ```
 

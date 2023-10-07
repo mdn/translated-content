@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/Admin_site
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-現在，我們已經為本地圖書館網站 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 創建了模型，我們接下來使用 Django 管理網站，去添加 一些 “真實的“ 書本數據。首先，我們展示如何用管理網站註冊模型，然後展示如何登錄和創建一些數據。本文最後，我們介紹可以進一步改進管理網站的建議。
+現在，我們已經為本地圖書館網站 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 創建了模型，我們接下來使用 Django 管理網站，去添加 一些 「真實的」 書本數據。首先，我們展示如何用管理網站註冊模型，然後展示如何登錄和創建一些數據。本文最後，我們介紹可以進一步改進管理網站的建議。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -35,7 +35,7 @@ Django 管理應用程序可以使用您的模型，自動構建可用於創建�
 
 創建基礎項目時，自動完成所有的配置文件，包含您的網站中的管理應用程序在內（有關所需實際依賴關係的信息，如有需要請看 [Django docs here](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/))。其結果是，要將模型添加到管理應用程序，你必須做的，僅僅是註冊他們。在本文末尾，我們將簡要介紹，如何進一步配置管理區域，以更好地顯示我們的模型數據。
 
-註冊模型後，我們將展示，如何創建一個新的 “超級用戶”，登錄到該網站，並創建一些書籍，作者，書籍實例和書籍類別。這些將有助於測試我們將在下一個教程中，開始創建的視圖和模板。
+註冊模型後，我們將展示，如何創建一個新的 「超級用戶」，登錄到該網站，並創建一些書籍，作者，書籍實例和書籍類別。這些將有助於測試我們將在下一個教程中，開始創建的視圖和模板。
 
 ## 註冊模型(Registering models )
 
@@ -222,7 +222,7 @@ class BookAdmin(admin.ModelAdmin):
     display_genre.short_description = 'Genre'
 ```
 
-保存模型並更新管理員後，打開您的網站並轉到“Books”列表頁面； 您應該會看到類似以下的書籍清單：
+保存模型並更新管理員後，打開您的網站並轉到「Books」列表頁面； 您應該會看到類似以下的書籍清單：
 
 ![Admin Site - Improved Book List](admin_improved_book_list.png)
 
@@ -259,7 +259,7 @@ class AuthorAdmin(admin.ModelAdmin):
     fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
 ```
 
-`fields` 屬性僅按順序列出了要在表單上顯示的那些欄位。 默認情況下，字段是垂直顯示的，但是如果您進一步將它們分組到一個元組中，它們將水平顯示（如上面的“日期”字段中所示）。
+`fields` 屬性僅按順序列出了要在表單上顯示的那些欄位。 默認情況下，字段是垂直顯示的，但是如果您進一步將它們分組到一個元組中，它們將水平顯示（如上面的「日期」字段中所示）。
 
 在您的網站上，轉到作者詳細信息視圖-現在應如下所示：
 

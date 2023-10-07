@@ -1,12 +1,6 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 
 {{JSRef("Global_Objects", "Number")}}

@@ -1,13 +1,6 @@
 ---
 title: RegExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - RegExp
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -46,14 +39,14 @@ var re = /(привет)?/g;
 Сопоставляется с пустой строкой.
 
 ```js
-console.log(re.exec('привет'));
+console.log(re.exec("привет"));
 console.log(re.lastIndex);
 ```
 
 Выведет массив `["привет", "привет"]`, а свойство `lastIndex` будет равным 6.
 
 ```js
-console.log(re.exec('привет'));
+console.log(re.exec("привет"));
 console.log(re.lastIndex);
 ```
 
@@ -61,11 +54,11 @@ console.log(re.lastIndex);
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарии                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ECMAScript 3-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `lastIndex` является свойством экземпляра {{jsxref("RegExp")}}, а не самого объекта {{jsxref("RegExp")}}. |
-| {{SpecName('ES5.1', '#sec-15.10.7.5', 'RegExp.lastIndex')}}                         | {{Spec2('ES5.1')}} |                                                                                                                                                                                                           |
-| {{SpecName('ES6', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}} | {{Spec2('ES6')}}     |                                                                                                                                                                                                           |
+| Спецификация                                                                   | Статус             | Комментарии                                                                                                                                                                               |
+| ------------------------------------------------------------------------------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ECMAScript 3-е издание.                                                        | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `lastIndex` является свойством экземпляра {{jsxref("RegExp")}}, а не самого объекта {{jsxref("RegExp")}}. |
+| {{SpecName('ES5.1', '#sec-15.10.7.5', 'RegExp.lastIndex')}}                    | {{Spec2('ES5.1')}} |                                                                                                                                                                                           |
+| {{SpecName('ES6', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}} | {{Spec2('ES6')}}   |                                                                                                                                                                                           |
 
 ## Совместимость с браузерами
 

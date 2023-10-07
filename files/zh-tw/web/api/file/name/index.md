@@ -1,7 +1,6 @@
 ---
 title: File.fileName
 slug: Web/API/File/name
-original_slug: Web/API/File/fileName
 ---
 
 {{APIRef("File API")}}{{non-standard_header}}
@@ -17,7 +16,7 @@ original_slug: Web/API/File/fileName
 ## 語法
 
 ```js
-var name = instanceOfFile.fileName
+var name = instanceOfFile.fileName;
 ```
 
 ## 數值

@@ -1,17 +1,6 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - Workers
-  - hors-ligne
-translation_of: Web/API/PushEvent
 ---
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}
@@ -39,8 +28,8 @@ _Hérite des méthodes de son parent, {{domxref("ExtendableEvent")}}_.
 L'exemple suivant prends les données du `PushEvent` et les affiche sur tous les clients du service worker.
 
 ```js
-self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.notification.permission === 'granted')) {
+self.addEventListener("push", function (event) {
+  if (!(self.Notification && self.notification.permission === "granted")) {
     return;
   }
 
@@ -54,13 +43,15 @@ self.addEventListener('push', function(event) {
 
   var notification = new Notification(title, {
     body: message,
-    tag: 'simple-push-demo-notification',
-    icon: icon
+    tag: "simple-push-demo-notification",
+    icon: icon,
   });
 
-  notification.addEventListener('click', function() {
+  notification.addEventListener("click", function () {
     if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
+      clients.openWindow(
+        "https://example.blog.com/2015/03/04/something-new.html",
+      );
     }
   });
 });

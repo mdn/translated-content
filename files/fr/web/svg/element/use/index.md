@@ -1,7 +1,6 @@
 ---
 title: <use>
 slug: Web/SVG/Element/use
-translation_of: Web/SVG/Element/use
 ---
 
 {{SVGRef}}
@@ -47,8 +46,11 @@ Cet élément est implanté par l'interface {{domxref("SVGUseElement")}}.
 ## Exemple
 
 ```html
-<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="80"
+  height="80"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
     .classA {
       fill: red;
@@ -56,16 +58,16 @@ Cet élément est implanté par l'interface {{domxref("SVGUseElement")}}.
   </style>
   <defs>
     <g id="Port">
-      <circle style="fill: inherit;" r="10"/>
+      <circle style="fill: inherit;" r="10" />
     </g>
   </defs>
 
   <text y="15">black</text>
   <use x="50" y="10" href="#Port" />
   <text y="35">red</text>
-  <use x="50" y="30" href="#Port" class="classA"/>
+  <use x="50" y="30" href="#Port" class="classA" />
   <text y="55">blue</text>
-  <use x="50" y="50" href="#Port" style="fill: blue;"/>
+  <use x="50" y="50" href="#Port" style="fill: blue;" />
 </svg>
 ```
 

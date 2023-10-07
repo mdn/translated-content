@@ -1,6 +1,8 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,13 +11,13 @@ slug: Web/API/HTMLAnchorElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLElement.accessKey")}}
   - : 文字列で、入力フォーカスをこのハイパーリンクに切り替える単一文字を表します。
-- {{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}
+- {{domxref("HTMLAnchorElement.download")}}
   - : 文字列で、リンク先リソースをブラウザーに表示するのではなくダウンロードすることを意図していることを示します。値は、提案するファイル名を表します。そのファイル名が基になる OS の有効なファイル名でなかった場合は、ブラウザーが修正します。
 - {{domxref("HTMLAnchorElement.hash")}}
   - : 文字列で、参照する URL の先頭のハッシュマーク ('`#`') を含むフラグメント識別子を表します。
@@ -73,7 +75,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLAnchorElement.shape")}} {{deprecated_inline}}
   - : 文字列で、アクティブ領域の形状を表します。
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
@@ -84,7 +86,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 - {{domxref("HTMLAnchorElement.toString()")}}
   - : URL 全体を含む文字列を返します。 {{domxref("HTMLAnchorElement.href")}} と同じですが、値の変更に使用することはできません。
 
-`blur()` および `focus()` メソッドは、HTML5 以降の {{domxref("HTMLElement")}} から継承されますが、DOM Level 2 HTML 以前の仕様では `HTMLAnchorElement` で定義されていました。
+`blur()` および `focus()` メソッドは、 {{domxref("HTMLElement")}} から継承されています。
 
 ## 仕様書
 

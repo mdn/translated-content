@@ -11,10 +11,10 @@ A propriedade `sessionStorage` permite acessar um objeto tipo session {{domxref(
 
 ```js
 // Salva os dados na sessionStorage
-sessionStorage.setItem('chave', 'valor');
+sessionStorage.setItem("chave", "valor");
 
 // Obtém os dados da sessionStorage
-var data = sessionStorage.getItem('chave');
+var data = sessionStorage.getItem("chave");
 ```
 
 ### Valor
@@ -26,7 +26,7 @@ Objeto {{domxref("Storage")}}.
 O seguinte trecho acessa o objeto da sessão do domínio atual {{domxref("Storage")}} e adiciona um item usando o {{domxref("Storage.setItem()")}}.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 O exemplo a seguir salva automaticamente o conteúdo da caixa de texto, e caso o browser seja acidentalmente recarregado, o conteúdo da caixa de texto é restaurado.
@@ -43,7 +43,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Verifica as mudanças que ocorrem na caixa de texto
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // E salva o resultado dentro de um objeto session storage
   sessionStorage.setItem("autosave", field.value);
 });
@@ -53,13 +53,11 @@ field.addEventListener("change", function() {
 
 ## Especificações
 
-| Especificações                                                                                           | Status                           | Comentários |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
-## Browser compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,12 +1,6 @@
 ---
 title: Node.contains
 slug: Web/API/Node/contains
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-translation_of: Web/API/Node/contains
 ---
 
 {{APIRef("DOM")}}Метод **`Node.contains()`** возвращает {{jsxref ("Boolean")}} значение, указывающее, является ли узел потомком данного узла, т. е. сам узел, один из его прямых потомков ({{domxref ("Node. childNodes "," childNodes ")}}), один из детей его детей и так далее.
@@ -26,7 +20,7 @@ node.contains( otherNode )
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 

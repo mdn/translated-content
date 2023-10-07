@@ -25,9 +25,9 @@ entries()
 
 ```js
 const mySet = new Set();
-mySet.add('foobar');
+mySet.add("foobar");
 mySet.add(1);
-mySet.add('baz');
+mySet.add("baz");
 
 const setIter = mySet.entries();
 

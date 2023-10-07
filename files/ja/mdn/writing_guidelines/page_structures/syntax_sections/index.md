@@ -1,7 +1,6 @@
 ---
 title: 構文の節
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
-original_slug: MDN/Structures/Syntax_sections
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
@@ -14,7 +13,7 @@ MDN リファレンスページの構文の節には、機能が持つ正確な�
 
 API リファレンスページの構文の節は手作業で書かれており、文書化される機能によって若干異なる場合があります。
 この節は、「構文」という見出し（通常はレベル 2 の見出し `##`）で始まり、リファレンスページの一番上（導入部分のすぐ下）に記述する必要があります。
-見出しの下にはその機能の正確な構文を示すコードブロックがあり、コードフェンス `` ``` [markup-language] `` クラスを使って区分けされています。
+見出しの下にはその機能の正確な構文を示すコードブロックがあり、コードフェンス ` ``` [markup-language] ` クラスを使って区分けされています。
 
 以下の例では典型的な構文セクション（JavaScript 関数）の Markdown コードを示しています。
 
@@ -37,10 +36,10 @@ slice(start, end)
 - 関数と引数のみを指定してください。以下、「修正」した例を示します。
 
   ```js
-  querySelector(selector)
+  querySelector(selector);
   //responseStr = element.querySelector(selector);
 
-  new IntersectionObserver(callback, options)
+  new IntersectionObserver(callback, options);
   // const observer = new IntersectionObserver(callback, options);
   ```
 
@@ -51,13 +50,13 @@ slice(start, end)
 構文ブロックは、次のように始めてください（{{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} ページを参照）。
 
 ```js
-new IntersectionObserver(callback, options)
+new IntersectionObserver(callback, options);
 ```
 
 または、次のようにします（{{DOMxRef("Document.hasStorageAccess")}} を参照）。
 
 ```js
-hasStorageAccess()
+hasStorageAccess();
 ```
 
 ##### オプション引数は複数行で
@@ -67,37 +66,37 @@ hasStorageAccess()
 各オプションはそれ自身の行に記述し、各オプションのコメントと代入は省略する必要があります。例えば、 {{jsxref("Array.prototype.slice()")}} は 2 つのオプションの引数を持っており、以下のように文書化されます。
 
 ```js
-slice()
-slice(begin)
-slice(begin, end)
+slice();
+slice(begin);
+slice(begin, end);
 ```
 
 同様に、 {{DOMxRef("CanvasRenderingContext2D.drawImage")}} の場合です。
 
 ```js
-drawImage(image, dx, dy)
-drawImage(image, dx, dy, dWidth, dHeight)
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+drawImage(image, dx, dy);
+drawImage(image, dx, dy, dWidth, dHeight);
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
 同様に、 {{jsxref("Date")}} コンストラクターの場合です。
 
 ```js
-new Date()
-new Date(value)
-new Date(dateString)
-new Date(year, monthIndex)
-new Date(year, monthIndex, day)
-new Date(year, monthIndex, day, hours)
-new Date(year, monthIndex, day, hours, minutes)
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+new Date();
+new Date(value);
+new Date(dateString);
+new Date(year, monthIndex);
+new Date(year, monthIndex, day);
+new Date(year, monthIndex, day, hours);
+new Date(year, monthIndex, day, hours, minutes);
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
 ##### 形式文法
 
 形式文法記法（[BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form) を使用したもの）は構文の節で使用すべきではありません。代わりに[前述](#オプション引数は複数行で)のような複数行の書式に展開したものを使用してください。
 
-形式的な記法により、複雑な構文を簡潔に記述することができますが、多くの開発者には馴染みがなく、特定のプログラミング言語で有効な構文と_矛盾する可能性があります。例えば、「`[ ]`」は「オプション引数」と JavaScript の配列 ({{jsxref("Array")}}) の両方の意味があります。これは以下の {{jsxref("Array.prototype.slice()")}} の形式文法で見ることができます。
+形式的な記法により、複雑な構文を簡潔に記述することができますが、多くの開発者には馴染みがなく、特定のプログラミング言語で有効な構文と\_矛盾する可能性があります。例えば、「`[ ]`」は「オプション引数」と JavaScript の配列 ({{jsxref("Array")}}) の両方の意味があります。これは以下の {{jsxref("Array.prototype.slice()")}} の形式文法で見ることができます。
 
 ```js
 arr.slice([begin[, end]])
@@ -110,7 +109,7 @@ arr.slice([begin[, end]])
 構文ブロックを簡潔にし、その機能の構文の定義の曖昧さをなくすために — 無関係な構文を含めないでください。例えば、このサイトの多くの場所で、プロミスを説明するために次のような形をよく見かけます。
 
 ```js
-caches.match(request, options).then(function(response) {
+caches.match(request, options).then(function (response) {
   // Do something with the response
 });
 ```
@@ -118,7 +117,7 @@ caches.match(request, options).then(function(response) {
 しかし、次のものははるかに簡潔で、余計な {{JSxRef("Promise.prototype.then()")}} メソッド呼び出しを含んでいません。
 
 ```js
-match(request, options)
+match(request, options);
 ```
 
 ##### コールバックの構文ブロック
@@ -127,19 +126,33 @@ match(request, options)
 
 ```js
 // アロー関数
-filter((currentValue) => { /* … */ } )
-filter((currentValue, index) => { /* … */ } )
-filter((currentValue, index, array) => { /* … */ } )
+filter((currentValue) => {
+  /* … */
+});
+filter((currentValue, index) => {
+  /* … */
+});
+filter((currentValue, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-filter(callbackFn)
-filter(callbackFn, thisArg)
+filter(callbackFn);
+filter(callbackFn, thisArg);
 
 // インラインコールバック関数
-filter(function(currentValue) { /* … */ })
-filter(function(currentValue, index) { /* … */ })
-filter(function(currentValue, index, array){ /* … */ })
-filter(function(currentValue, index, array) { /* … */ }, thisArg)
+filter(function (currentValue) {
+  /* … */
+});
+filter(function (currentValue, index) {
+  /* … */
+});
+filter(function (currentValue, index, array) {
+  /* … */
+});
+filter(function (currentValue, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ##### 任意の数の引数を取る構文
@@ -147,9 +160,9 @@ filter(function(currentValue, index, array) { /* … */ }, thisArg)
 任意の数の引数を受け取るメソッドの場合、構文の節は次のように記述してください。
 
 ```js
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0);
+unshift(element0, element1);
+unshift(element0, element1, /* … ,*/ elementN);
 ```
 
 #### 引数の項

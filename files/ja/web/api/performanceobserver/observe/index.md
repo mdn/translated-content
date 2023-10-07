@@ -28,19 +28,19 @@ observer.observe(options);
 この例では、2 つの `PerformanceObservers` を作成して設定します。1 つは`"mark"` と `"frame"` イベントを監視し、もう 1 つは `"measure"` イベントを監視します。
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
+var observer = new PerformanceObserver(function (list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+  for (var i = 0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
 function perf_observer(list, observer) {
   // Process the "measure" event
 }
 var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## 仕様書

@@ -3,7 +3,7 @@ title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 ---
 
-« [SVG](/zh-CN/SVG/Attribute)属性参考主页
+{{SVGRef}}
 
 `stroke-dashoffset` 属性指定了 dash 模式到路径开始的距离
 
@@ -13,11 +13,11 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 
 ## 使用环境
 
-| 类别   | 显示属性                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------------- |
+| 类别   | 显示属性                                                                                                      |
+| ------ | ------------------------------------------------------------------------------------------------------------- |
 | 值     | [\<percentage>](/zh-CN/SVG/Content_type#Percentage) \| [\<length>](/zh-CN/SVG/Content_type#Length) \| inherit |
-| 初始值 | 1                                                                                                     |
-| 可动画 | Yes                                                                                                   |
+| 初始值 | 1                                                                                                             |
+| 可动画 | Yes                                                                                                           |
 
 ## 示例
 

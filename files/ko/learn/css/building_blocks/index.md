@@ -2,6 +2,7 @@
 title: CSS 구성 블록
 slug: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 이 강의에서는 [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 가 중단된 부분을 처리합니다 — 이제 언어와 구문에 익숙해졌으며, 약간 더 깊이 익힐 때가 되었을 때, 이를 사용하는 기본적인 경험을 얻었습니다. 이 과목에서는 계단식 및 상속, 사용 가능한 모든 선택자 유형, 단위 크기 조정, 배경 및 테두리 스타일 지정, 디버깅 등을 살펴 봅니다.
@@ -35,7 +36,7 @@ slug: Learn/CSS/Building_blocks
     - [결합자 (combinators)](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-  - : CSS 의 모든 것에는 주위에 박스가 있으며, 이러한 박스를 이해하는 것은 CSS 를 사용하여 레이아웃을 만들거나 다른 항목과 항목을 정렬하는 데 중요합니다. 이 수업에서는 CSS ***박스 모델** *을 제대로 살펴보고, 작동 방식 및 관련 용어를 이해하여 보다 복잡한 레이아웃 작업으로 넘어갈 수 있습니다.
+  - : CSS 의 모든 것에는 주위에 박스가 있으며, 이러한 박스를 이해하는 것은 CSS 를 사용하여 레이아웃을 만들거나 다른 항목과 항목을 정렬하는 데 중요합니다. 이 수업에서는 CSS _박스 모델_ 을 제대로 살펴보고, 작동 방식 및 관련 용어를 이해하여 보다 복잡한 레이아웃 작업으로 넘어갈 수 있습니다.
 - [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : 이번 수업에서는 CSS 배경과 테두리로 할 수 있는 창의적인 작업을 살펴 보겠습니다. 그라데이션 (gradients), 배경 이미지 및 둥근 테두리를 추가하는 경우, 배경과 테두리는 CSS 의 많은 스타일 질문에 대한 답입니다.
 - [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)

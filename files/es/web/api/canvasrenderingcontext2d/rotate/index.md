@@ -37,21 +37,21 @@ En este ejemplo se rota un rectangulo 45º. Nótese que el centro de rotación e
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // origen del punto de transformación
 ctx.arc(0, 0, 5, 0, 2 * Math.PI);
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fill();
 
 // rectángulo sin rotar
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(100, 0, 80, 20);
 
 // rectángulo rotado 45º
-ctx.rotate(45 * Math.PI / 180);
-ctx.fillStyle = 'red';
+ctx.rotate((45 * Math.PI) / 180);
+ctx.fillStyle = "red";
 ctx.fillRect(100, 0, 80, 20);
 
 // se reinicia la matriz de transformación a la matriz identidad
@@ -83,11 +83,11 @@ Este ejemplo rota una figura alrededor del punto central de ésta. Para realizar
 La figura es un rectángulo con su esquina en (80, 60), un ancho de 140 y un alto de 30. El centro de la coordenada horizontal está en (80 + 140 / 2) = 150. Su centro en la coordenada vertical será (60 + 30 / 2) = 75. Por tanto, el punto central está en (150, 75).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // rectángulo sin rotar
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(80, 60, 140, 30);
 
 // Matriz de transformación
@@ -96,7 +96,7 @@ ctx.rotate(Math.PI / 2);
 ctx.translate(-150, -75);
 
 // rectángulo rotado
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(80, 60, 140, 30);
 ```
 

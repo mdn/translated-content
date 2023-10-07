@@ -35,14 +35,14 @@ var formData = new FormData();
 使用{{domxref("FormData.append")}}方法添加两个数据：
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 接下来使用 `get()` 来返回第一个和 `"username"` 关联的值：
 
 ```js
-formData.get('username'); // Returns "Chris"
+formData.get("username"); // Returns "Chris"
 ```
 
 ## 规范

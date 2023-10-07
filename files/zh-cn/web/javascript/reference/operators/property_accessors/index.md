@@ -32,7 +32,7 @@ object.property = set;
 以上代码中，`property`必须是一个有效的 JavaScript 标识符，例如，一串字母数字字符，也包括下划线及美元符号，但不能以数字作为开头。比如，`object.$1`是合法的，而 `object.1`是无效不合法的。
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 在上述代码块中，`document`中存在一个名为"createElement"的方法并且被调用了。
@@ -40,16 +40,15 @@ document.createElement('pre');
 如果对数字字面量使用方法，并且数字文字没有指数且没有小数点，请在方法调用之前的点之前留出空格，以防止点被解释为小数点。
 
 ```js
-77 .toExponential();
-// 或
-77
-.toExponential();
+(77).toExponential();
 // 或
 (77).toExponential();
 // 或
-77..toExponential();
+(77).toExponential();
 // 或
-77.0.toExponential();
+(77).toExponential();
+// 或
+(77.0).toExponential();
 // 因为 77. === 77.0，没有歧义（no ambiguity）
 ```
 
@@ -63,7 +62,7 @@ object[property_name] = set;
 `property_name` 是一个字符串。该字符串不一定是一个合法的标识符；它可以是任意值，例如，"1foo"，"!bar!"，甚至是 " "（一个空格）。
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 这里的代码的功能跟上一个例子的作用是相同的。
@@ -71,7 +70,7 @@ document['createElement']('pre');
 括号之前允许有空格。
 
 ```js
-document ['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 ### 属性名称
@@ -80,15 +79,17 @@ document ['createElement']('pre');
 
 ```js
 var object = {};
-object['1'] = 'value';
+object["1"] = "value";
 console.log(object[1]);
 ```
 
 上述代码的输出为"value"，因为 1 被类型转换为'1'。
 
 ```js
-var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value';
+var foo = { unique_prop: 1 },
+  bar = { unique_prop: 2 },
+  object = {};
+object[foo] = "value";
 console.log(object[bar]);
 ```
 
@@ -103,7 +104,7 @@ console.log(object[bar]);
 在那些可通过方括号表示法替换的场景下，JavaScript 新手在使用[eval](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 经常会犯错。例如，下面的语法经常在很多代码中找到。
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 [`eval`](https://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/) 的性能较差，且有安全风险。在任何时候都应该避免使用。而且，此时 `strFormControl` 必须是一个合法的标识符，这在一些表单控件的 name、ID 值之中并不是必要的。所以，使用括号来代替会更好一些：

@@ -23,9 +23,9 @@ Esto hará que a las tres paredes(arriba, izquierda y derecha) les rebote la bol
 
 ```js
 ball.checkWorldBounds = true;
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(function () {
+  alert("Game over!");
+  location.reload();
 }, this);
 ```
 

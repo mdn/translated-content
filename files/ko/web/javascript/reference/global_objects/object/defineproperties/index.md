@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ## 문법
 
 ```js
-Object.defineProperties(obj, props)
+Object.defineProperties(obj, props);
 ```
 
 ### 인자
@@ -20,9 +20,11 @@ Object.defineProperties(obj, props)
 - `obj`
   - : 속성을 정의하거나 수정할 객체.
 - `props`
+
   - : 정의하거나 수정할 속성의 이름을 키로, 그 속성을 서술하는 객체를 값으로 갖는 객체. `props`의 각 값은 데이터 서술자(data descriptor) 혹은 접근자 서술자(accessor descriptor) 중 하나여야 하며, 동시에 두 유형을 포함할 수 없다({{jsxref("Object.defineProperty()")}} 참조).
 
   데이터 서술자와 접근자 서술자 모두 다음 키를 선택적으로 포함할 수 있다.
+
 - `configurable`
   - : `true`일 경우 이 속성 서술자의 형태를 변경하거나, 속성을 해당 객체에서 삭제할 수 있다.
     **기본값은 `false`이다.**
@@ -35,14 +37,14 @@ Object.defineProperties(obj, props)
     **기본값은 {{jsxref("undefined")}}이다.**
 - `writable`
   - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 수정할 수 있다.
-  **기본값은 `false`이다.**
-  접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다.
+    **기본값은 `false`이다.**
+    접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다.
 - `get`
   - : 해당 속성의 getter가 될 함수, 혹은 getter가 없을 경우 {{jsxref("undefined")}}. 이 함수의 반환값이 속성의 값으로 사용된다.<br>**기본값은 {{jsxref("undefined")}}이다.**</dd>
 - `set`
   - : 해당 속성의 setter가 될 함수, 혹은 setter가 없을 경우 {{jsxref("undefined")}}. 이 함수는 이 속성에 할당되는 새로운 값을 유일한 인자로 받는다.
-  **기본값은 {{jsxref("undefined")}}이다.**<
-  서술자가 `value`, `writable`, `get`, `set` 키를 모두 가지고 있지 않을 경우 데이터 서술자로 취급한다. 서술자가 `value`이나 `writable`과 `get`이나 `set` 키를 모두 가지고 있을 경우 예외가 발생한다.
+    **기본값은 {{jsxref("undefined")}}이다.**<
+    서술자가 `value`, `writable`, `get`, `set` 키를 모두 가지고 있지 않을 경우 데이터 서술자로 취급한다. 서술자가 `value`이나 `writable`과 `get`이나 `set` 키를 모두 가지고 있을 경우 예외가 발생한다.
 
 ### 반환값
 
@@ -57,14 +59,14 @@ Object.defineProperties(obj, props)
 ```js
 var obj = {};
 Object.defineProperties(obj, {
-  'property1': {
+  property1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  'property2': {
-    value: 'Hello',
-    writable: false
-  }
+  property2: {
+    value: "Hello",
+    writable: false,
+  },
   // 등등
 });
 ```

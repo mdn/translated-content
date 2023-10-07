@@ -39,6 +39,7 @@ zoom: unset;
   - : No cambia la escala de este elemento si el usuario aplica zoom no basado en toques al documento (p. ej.: presionando los atajos de teclado <kbd>Ctrl</kbd> \- <kbd>-</kbd> o <kbd>Ctrl</kbd> \+ <kbd>+</kbd>). Sólo soportado por `WebKit` (y posiblemente `Blink`).
 
 - {{cssxref("&lt;percentage&gt;")}}
+
   - : Factor de Zoom. `100%` es equivalente a `normal`. Valores superiores a `100%` aumentan y valores inferiores al `100%` alejan el elemento.
 
 - {{cssxref("&lt;number&gt;")}}
@@ -139,5 +140,4 @@ No forma parte de ningún estándar. Esta propiedad tiene su origen en Internet 
 ## Véase también
 
 - [Artículo de `zoom` en la página de CSS-Tricks](https://css-tricks.com/almanac/properties/z/zoom/)
-- El descriptor de viewport `zoom` usado con [`@viewport`](/es/docs/Web/CSS/@viewport)
 - [Bug 390936: Implementar la propiedad `zoom` de Internet Explorer para CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) en el rastreador de problemas de Firefox Bugzilla.

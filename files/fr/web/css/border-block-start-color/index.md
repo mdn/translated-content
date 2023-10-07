@@ -1,13 +1,6 @@
 ---
 title: border-block-start-color
 slug: Web/CSS/border-block-start-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-block-start-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

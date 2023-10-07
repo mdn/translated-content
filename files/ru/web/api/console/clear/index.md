@@ -1,10 +1,6 @@
 ---
 title: clear()
 slug: Web/API/console/clear
-tags:
-  - API
-  - консоль
-translation_of: Web/API/Console/clear
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

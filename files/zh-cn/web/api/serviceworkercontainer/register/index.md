@@ -9,16 +9,15 @@ slug: Web/API/ServiceWorkerContainer/register
 
 如果成功，一个服务工作者注册将提供的脚本 URL 与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 `ServiceWorkerRegistration`，则返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-您可以从受控页无条件调用此方法，即，您不需要首先检查是否有一个有效的注册。
+你可以从受控页无条件调用此方法，即，你不需要首先检查是否有一个有效的注册。
 
 ## 语法
 
 ```js
-ServiceWorkerContainer.register(scriptURL, options)
-    .then(
-        function(ServiceWorkerRegistration) {
-            // do something
-        }
+ServiceWorkerContainer.register(scriptURL, options).then(
+  function (ServiceWorkerRegistration) {
+    // do something
+  },
 );
 ```
 
@@ -39,21 +38,23 @@ ServiceWorkerContainer.register(scriptURL, options)
 ## 示例
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js', {scope: './'})
-  .then(function(registration) {
-    document.querySelector('#status').textContent = 'succeeded';
-  }).catch(function(error) {
-    document.querySelector('#status').textContent = error;
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function (registration) {
+      document.querySelector("#status").textContent = "succeeded";
+    })
+    .catch(function (error) {
+      document.querySelector("#status").textContent = error;
+    });
 } else {
   // The current browser doesn't support service workers.
-  let aElement = document.createElement('a');
+  let aElement = document.createElement("a");
   aElement.href = `
      http://www.chromium.org/blink/serviceworker/service-worker-faq
   `;
-  aElement.textContent = 'unavailable';
-  document.querySelector('#status').appendChild(aElement);
+  aElement.textContent = "unavailable";
+  document.querySelector("#status").appendChild(aElement);
 }
 ```
 

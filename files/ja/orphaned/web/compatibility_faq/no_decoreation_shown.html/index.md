@@ -1,7 +1,6 @@
 ---
 title: 枠のシャドウや角丸が抜けている
 slug: orphaned/Web/Compatibility_FAQ/No_Decoreation_Shown.html
-original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 ---
 
 ## 概要

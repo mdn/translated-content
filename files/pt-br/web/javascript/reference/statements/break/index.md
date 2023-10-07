@@ -28,30 +28,29 @@ A função a seguir possui um comando `break` que encerra o loop {{jsxref("State
 
 ```js
 function testaBreak(x) {
-   var i = 0;
+  var i = 0;
 
-   while (i < 6) {
-      if (i == 3) {
-         break;
-      }
-      i += 1;
-   }
-   return i * x;
+  while (i < 6) {
+    if (i == 3) {
+      break;
+    }
+    i += 1;
+  }
+  return i * x;
 }
 ```
 
 O código a seguir possui o comando break dentro de uma estrutura nomeada. O comando `break` deverá estar dentro da estrutura na qual o label se refere. Veja que `inner_block` está dentro de `outer_block`.
 
 ```js
-bloco_externo:{
-
-  bloco_interno:{
-    console.log ('1');
-    break bloco_externo;      // encerra bloco_interno e bloco_externok
-    console.log (':-(');    // não é executado
+bloco_externo: {
+  bloco_interno: {
+    console.log("1");
+    break bloco_externo; // encerra bloco_interno e bloco_externok
+    console.log(":-("); // não é executado
   }
 
-  console.log ('2');        // não é executado
+  console.log("2"); // não é executado
 }
 ```
 
@@ -70,12 +69,12 @@ bloco_2:{
 
 ## Especificações
 
-| Especificação                                                                        | Status                   | Comentário                                    |
-| ------------------------------------------------------------------------------------ | ------------------------ | --------------------------------------------- |
-| ECMAScript 1st Edition                                                               | Standard                 | Definição inicial. Versão sem o uso do label. |
-| ECMAScript 3rd Edition                                                               | Standard                 | Versão com label adicionada.                  |
-| {{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}             | {{Spec2('ES5.1')}} |                                               |
-| {{SpecName('ES6', '#sec-break-statement', 'Break statement')}} | {{Spec2('ES6')}}     |                                               |
+| Especificação                                                  | Status             | Comentário                                    |
+| -------------------------------------------------------------- | ------------------ | --------------------------------------------- |
+| ECMAScript 1st Edition                                         | Standard           | Definição inicial. Versão sem o uso do label. |
+| ECMAScript 3rd Edition                                         | Standard           | Versão com label adicionada.                  |
+| {{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}          | {{Spec2('ES5.1')}} |                                               |
+| {{SpecName('ES6', '#sec-break-statement', 'Break statement')}} | {{Spec2('ES6')}}   |                                               |
 
 ## Compatibilidade com navegadores
 

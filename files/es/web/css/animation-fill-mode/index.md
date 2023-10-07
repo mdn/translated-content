@@ -40,18 +40,18 @@ animation-fill-mode: unset;
   - : El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}:
     | `animation-direction` | `animation-iteration-count` | ultimo keyframe encontrado |
     | --------------------- | --------------------------- | -------------------------- |
-    | `normal`              | even o odd                  | `100%` or `to`              |
-    | `reverse`             | even o odd                  | `0%` or `from`              |
-    | `alternate`           | even                        | `0%` or `from`              |
-    | `alternate`           | odd                         | `100%` or `to`              |
-    | `alternate-reverse`   | even                        | `100%` or `to`              |
-    | `alternate-reverse`  | odd                         | `0%` or `from`              |
+    | `normal` | even o odd | `100%` or `to` |
+    | `reverse` | even o odd | `0%` or `from` |
+    | `alternate` | even | `0%` or `from` |
+    | `alternate` | odd | `100%` or `to` |
+    | `alternate-reverse` | even | `100%` or `to` |
+    | `alternate-reverse` | odd | `0%` or `from` |
 - `backwards`
   - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
-    | `animation-direction`           | primer keyframe |
+    | `animation-direction` | primer keyframe |
     | ------------------------------- | --------------- |
-    | `normal` o `alternate`          | `0%` or `from`        |
-    | `reverse` o `alternate-reverse` | `100%` or `to`        |
+    | `normal` o `alternate` | `0%` or `from` |
+    | `reverse` o `alternate-reverse` | `100%` or `to` |
 - `both`
   - : La animación seguirá las reglas de las opciones forwards y backwards, extendiendo las propiedades de la animación en ambas direcciones.
 
@@ -78,26 +78,34 @@ CSS
   font-family: sans-serif;
 }
 @keyframes grow {
-    0% { font-size: 0 }
-    100% { font-size: 40px }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 @-webkit-keyframes grow {
-    0% { font-size: 0 }
-    100% { font-size: 40px }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 .demo:hover .grows {
-    animation-name: grow;
-    animation-duration: 3s;
-    -webkit-animation-name: grow;
-    -webkit-animation-duration: 3s;
+  animation-name: grow;
+  animation-duration: 3s;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 3s;
 }
 .demo:hover .growsandstays {
-    animation-name: grow;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: grow;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-fill-mode: forwards;
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
 }
 ```
 

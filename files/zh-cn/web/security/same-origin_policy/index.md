@@ -97,24 +97,24 @@ JavaScript 的 API 中，如 {{domxref("HTMLIFrameElement.contentWindow", "ifram
 
 允许以下对 `Window` 属性的跨源访问：
 
-| 方法                                         |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| 方法                              |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| 属性                                     |         |
-| ---------------------------------------- | ------- |
-| {{domxref("window.closed")}}     | 只读。  |
-| {{domxref("window.frames")}}     | 只读。  |
-| {{domxref("window.length")}}     | 只读。  |
+| 属性                           |         |
+| ------------------------------ | ------- |
+| {{domxref("window.closed")}}   | 只读。  |
+| {{domxref("window.frames")}}   | 只读。  |
+| {{domxref("window.length")}}   | 只读。  |
 | {{domxref("window.location")}} | 读/写。 |
-| {{domxref("window.opener")}}     | 只读。  |
-| {{domxref("window.parent")}}     | 只读。  |
+| {{domxref("window.opener")}}   | 只读。  |
+| {{domxref("window.parent")}}   | 只读。  |
 | {{domxref("window.self")}}     | 只读。  |
-| {{domxref("window.top")}}         | 只读。  |
-| {{domxref("window.window")}}     | 只读。  |
+| {{domxref("window.top")}}      | 只读。  |
+| {{domxref("window.window")}}   | 只读。  |
 
 某些浏览器允许访问除上述外更多的属性。
 
@@ -122,12 +122,12 @@ JavaScript 的 API 中，如 {{domxref("HTMLIFrameElement.contentWindow", "ifram
 
 允许以下对 `Location` 属性的跨源访问：
 
-| 方法                                     |
-| ---------------------------------------- |
+| 方法                            |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| 属性                                             |        |
-| ------------------------------------------------ | ------ |
+| 属性                                  |        |
+| ------------------------------------- | ------ |
 | {{domxref("HTMLAnchorElement.href")}} | 只写。 |
 
 某些浏览器允许访问除上述外更多的属性。

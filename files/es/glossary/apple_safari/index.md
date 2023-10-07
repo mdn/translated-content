@@ -9,7 +9,7 @@ slug: Glossary/Apple_Safari
 
 ### Conocimiento general
 
-- [Safari](https://es.wikipedia.org/wiki/Safari_(web_browser)) en Wikipedia
+- [Safari](<https://es.wikipedia.org/wiki/Safari_(web_browser)>) en Wikipedia
 - [Safari en apple.com](http://www.apple.com/safari/)
 
 ### Información técnica

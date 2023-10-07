@@ -5,7 +5,7 @@ slug: Web/API/DOMStringMap
 
 {{ APIRef("HTML DOM") }}
 
-Usado pelo atributo HTML {{ htmlattrxref("dataset") }} para representar atributos próprios adicionados ao elemento.
+Usado pelo atributo HTML [`dataset`](/pt-BR/docs/Web/HTML/Global_attributes#dataset) para representar atributos próprios adicionados ao elemento.
 
 ## Visão Geral do Método
 
@@ -70,4 +70,4 @@ void removeProp(
 ## Veja também
 
 - {{ domxref("HTMLElement.dataset") }}
-- {{ htmlattrxref("dataset") }}
+- [`dataset`](/pt-BR/docs/Web/HTML/Global_attributes#dataset)

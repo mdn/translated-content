@@ -2,6 +2,7 @@
 title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ---
+
 {{JSRef}}
 
 **`byteOffset`** 접근자(accessor) 속성(property)은 그 {{jsxref("ArrayBuffer")}}의 시작점에서 형식화 배열의 오프셋(단위 바이트)을 나타냅니다.
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ## 구문
 
 ```js
-typedarray.byteOffset
+typedarray.byteOffset;
 ```
 
 ## 설명

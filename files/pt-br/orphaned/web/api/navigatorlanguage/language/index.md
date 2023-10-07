@@ -1,7 +1,6 @@
 ---
 title: NavigatorLanguage.language
 slug: orphaned/Web/API/NavigatorLanguage/language
-original_slug: Web/API/NavigatorLanguage/language
 ---
 
 {{APIRef("HTML DOM")}}

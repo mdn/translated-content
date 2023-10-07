@@ -2,6 +2,7 @@
 title: 안전함 (HTTP 메서드)
 slug: Glossary/Safe/HTTP
 ---
+
 HTTP 메서드가 서버의 상태를 바꾸지 않으면 그 메서드가 **안전**하다고 말합니다. 다른 말로 하면, 읽기
 작업만 수행하는 메서드는 안전합니다. 흔히 쓰이는 HTTP 메서드 중에서는 {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}},
 {{HTTPMethod("OPTIONS")}}가 안전합니다. 모든 안전한 메서드는 [멱등성](/ko/docs/Glossary/Idempotent) 또한

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 메소드는 날짜를 언어별로 구분하여 나타내는 문자열을 반환합니다. [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 를 지원하는 구현에서 이 메소드는 단순히 `Intl.DateTimeFormat`를 호출합니다.
+**`toLocaleString()`** 메소드는 날짜를 언어별로 구분하여 나타내는 문자열을 반환합니다. [`Intl.DateTimeFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 를 지원하는 구현에서 이 메소드는 단순히 `Intl.DateTimeFormat`를 호출합니다.
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
@@ -21,21 +21,21 @@ toLocaleString(locales, options)
 
 `locales`, `options` 인수는 함수의 동작을 사용자 정의하고 응용 프로그램에서 형식 규칙을 사용할 언어를 지정할 수 있도록 합니다.
 
-[`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)를 지원하는 구현에서, 이 파라미터들은 정확하게 [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) 생성자 파라미터와 일치합니다. `Intl.DateTimeFormat` 를 지원하지 않는 구현은 두 매개변수를 무시하도록 요청되어, 사용된 로케일과 반환된 문자열 형식이 완전히 구현에 종속됩니다.
+[`Intl.DateTimeFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)를 지원하는 구현에서, 이 파라미터들은 정확하게 [`Intl.DateTimeFormat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) 생성자 파라미터와 일치합니다. `Intl.DateTimeFormat` 를 지원하지 않는 구현은 두 매개변수를 무시하도록 요청되어, 사용된 로케일과 반환된 문자열 형식이 완전히 구현에 종속됩니다.
 
 - `locales` {{optional_inline}}
 
-  - : BCP 47 언어 태그 문자열 또는 이러한 문자열의 배열입니다. `Intl.DateTimeFormat()` 생성자의 매개변수 [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales)와 일치합니다.
+  - : BCP 47 언어 태그 문자열 또는 이러한 문자열의 배열입니다. `Intl.DateTimeFormat()` 생성자의 매개변수 [`locales`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales)와 일치합니다.
 
     `Intl.DateTimeFormat` 을 지원하지 않는 구현에서는 이 매개변수는 무시되고, 보통 호스트 로케일이 사용됩니다.
 
 - `options` {{optional_inline}}
 
-  - : 출력 형식을 조정하는 객체입니다. `Intl.DateTimeFormat()` 생성자 매개변수 [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 와 일치합니다. 만약 `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, 그리고 `fractionalSecondDigits` 가 전부 undefined이면, `year`, `month`, `day`, `hour`, `minute`, `second` 가`"numeric"` 으로 설정됩니다.
+  - : 출력 형식을 조정하는 객체입니다. `Intl.DateTimeFormat()` 생성자 매개변수 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 와 일치합니다. 만약 `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, 그리고 `fractionalSecondDigits` 가 전부 undefined이면, `year`, `month`, `day`, `hour`, `minute`, `second` 가`"numeric"` 으로 설정됩니다.
 
     `Intl.DateTimeFormat` 를 지원하지 않는 구현에서 이 매개변수는 무시됩니다.
 
-이 매개변수에 대한 자세한 설명과 사용법을 알고싶으면 다음을 참조하십시오. [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
+이 매개변수에 대한 자세한 설명과 사용법을 알고싶으면 다음을 참조하십시오. [`Intl.DateTimeFormat()` constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
 
 ### 반환 값
 

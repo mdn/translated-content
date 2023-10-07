@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
-original_slug: Web/API/AudioContext/sampleRate
 l10n:
   sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---

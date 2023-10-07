@@ -1,125 +1,145 @@
 ---
-title: Mettre à l'échelle des images en arrière-plan
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-  - Reference
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
+title: Redimensionner les images d'arrière-plan avec background-size
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+l10n:
+  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
 ---
 
 {{CSSRef}}
 
-La propriété CSS {{cssxref("background-size")}} permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer un carrelage de l'image à sa pleine grandeur. Il est ainsi possible d'agrandir ou de rapetisser l'image.
+La propriété [CSS](/fr/docs/Web/CSS) [`background-size`](/fr/docs/Web/CSS/background-size) permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer une mosaïque répétant l'image à sa taille normale en indiquant une hauteur et/ou une largeur pour l'image. Il est ainsi possible d'agrandir ou de rapetisser l'image.
 
-## Carreler une image de grande taille
+## Répéter une grande image
 
-Prenons une image de grande taille (par exemple l'ancien logo de Firefox en 2485x2340px). On souhaite la carreler en quatre copies de 300x300 px, comme dans l'image suivante.
+Prenons une grande image, ici le logo de Firefox aux dimensions 2982x2808 pixels. Imaginons qu'on veuille (pour de mauvaises raisons), obtenir une mosaïque avec quatre exemplaires de cette image dans un élément de 300x300 pixels. Pour cela, on pourra fixer la propriété `background-size` à 150 pixels.
 
-![](logo-quantum.9c5e96634f92.png)
+### HTML
 
-On peut utiliser la feuille de style CSS suivante pour obtenir l'effet voulu :
+```html
+<div class="tiledBackground"></div>
+```
+
+### CSS
 
 ```css
-.square {
+.tiledBackground {
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-size: 150px;
   width: 300px;
   height: 300px;
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-  border: solid 2px;
-  text-shadow: white 0px 0px 2px;
-  font-size: 16px;
-  background-size: 150px;
+  border: 2px solid;
+  color: pink;
 }
 ```
 
-On notera que, dans l'exemple précédent, une seule valeur avait été précisée pour {{cssxref("background-size")}} : 150 px. Dans ce cas, cette valeur est utilisée pour la largeur et la hauteur est alors fixée à `auto`.
+### Résultat
+
+{{EmbedLiveSample("", 340, 340)}}
 
 ## Étirer une image
 
-Il est aussi possible de spécifier, respectivement, la largeur et la hauteur de l'image, comme dans l'exemple suivant, où la taille de l'image est imposée à 300x150 px.
+On peut aussi indiquer les dimensions horizontale et verticale de l'image, comme ceci&nbsp;:
+
+### CSS
 
 ```css
 background-size: 300px 150px;
 ```
 
-L'image suivante montre le résultat obtenu.
+### Résultat
 
-![Logo de Firefox étité](s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png)
+![Le logo étiré](stretched_firefox_logo.png)
 
 ## Agrandir une image
 
-On peut agrandir une image en arrière-plan. À l'image suivante, une favicône de 32x32 px est agrandie à 300x300 px.
+À l'inverse, on peut vouloir agrandir une image en arrière-plan. Ici, on passe d'une icône de 32x32 pixels à 300x300 pixels&nbsp;:
 
-![Logo MDN à l'échelle](favicon57.de33179910ae.1.1.png)
+### CSS
 
 ```css
 .square2 {
-  width: 300px;
-  height: 300px;
   background-image: url(favicon.png);
   background-size: 300px;
-  border: solid 2px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
   text-shadow: white 0px 0px 2px;
   font-size: 16px;
 }
 ```
 
-On remarque que la feuille de style utilisée est identique à la précédente, sauf en ce qui concerne le nom de l'image.
+### Résultat
 
-## Valeurs spéciales : `contain` et `cover`
+![Logo de MDN agrandi](scaled_mdn_logo.png)
 
-En plus de {{cssxref("&lt;length&gt;")}}, la propriété CSS {{cssxref("background-size")}} permet d'employer deux autres valeurs : `contain` et `cover`.
+Comme vous pouvez le voir, le CSS est quasi-identique, seul le nom du fichier a été modifié.
+
+## Les valeurs spéciales `contain` et `cover`
+
+En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/length)), la propriété [`background-size`](/fr/docs/Web/CSS/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
 
 ### `contain`
 
-La valeur `contain` spécifie les dimensions de l'image d'arrière-plan de manière à ce que sa largeur et sa hauteur soient aussi grandes que possible, tout en conservant l'image à l'intérieur de son élément conteneur. Ainsi, l'image ne peut déborder de son élément conteneur.
+La valeur `contain` indique que, quelle que soit la taille de la boîte englobante, l'image d'arrière-plan devrait être redimensionnée afin que chaque côté soit aussi grand que possible, sans dépasser la taille du conteneur. Redimensionnez l'exemple qui suit pour observer l'effet obtenu.
 
-Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur `contain` en action (Votre navigateur doit supporter la mise à l'échelle d'images d'arrière-plan).
-
-{{EmbedLiveSample("contain", "100%", "220")}}
+#### HTML
 
 ```html
 <div class="bgSizeContain">
-  <p>Redimensionnez la fenêtre de votre navigateur.</p>
+  <p>Essayez de redimensionner cet élément !</p>
 </div>
 ```
+
+#### CSS
 
 ```css
 .bgSizeContain {
-  height: 200px;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
-  border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  width: 160px;
+  height: 160px;
+  border: 2px solid;
+  resize: both;
+  overflow: scroll;
 }
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('', 250, 250)}}
+
 ### `cover`
 
-La valeur `cover` assure que l'image d'arrière-plan soit aussi petite que possible, tout en maintenant ses dimensions plus grandes ou égales à la taille de l'élément conteneur. L'échelle entre la largeur et la hauteur est maintenue.
+La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite que possible tout en ayant ses deux dimensions supérieures ou égales à celles du conteneur. Vous pouvez redimensionner l'exemple qui suit pour observer l'effet obtenu.
 
-{{EmbedLiveSample("cover", "100%", "220")}}
-
-Cet exemple utilise le document HTML et la feuille de style suivants :
+#### HTML
 
 ```html
 <div class="bgSizeCover">
-  <p>Redimensionnez la fenêtre de votre navigateur.</p>
+  <p>Essayez de redimensionner cet élément !</p>
 </div>
 ```
 
+#### CSS
+
 ```css
 .bgSizeCover {
-  height: 200px;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: cover;
-  border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  width: 160px;
+  height: 160px;
+  border: 2px solid;
+  resize: both;
+  overflow: scroll;
+}
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('', 250, 250)}}
 
 ## Voir aussi
 
-- {{cssxref("background-size")}}
-- {{cssxref("background")}}
+- [`background-size`](/fr/docs/Web/CSS/background-size)
+- [`background`](/fr/docs/Web/CSS/background)
+- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds)

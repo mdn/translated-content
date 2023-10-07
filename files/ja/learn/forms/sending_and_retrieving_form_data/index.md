@@ -56,19 +56,19 @@ l10n:
 この例では、データを絶対 URL の `http://example.com` に送信します。
 
 ```html
-<form action="https://example.com">
+<form action="https://example.com"></form>
 ```
 
 こちらは、相対 URL を使用しています。データは同一オリジン上の別の URL に送信されます。
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 以下のように属性を指定しない場合は、{{HTMLElement("form")}} 要素はフォームが表示されているページ自身に対してデータを送信します。
 
 ```html
-<form>
+<form></form>
 ```
 
 > **メモ:** HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、[`action`](/ja/docs/Web/HTML/Element/form#action) 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。
@@ -93,11 +93,11 @@ l10n:
 <form action="http://www.foo.com" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -133,11 +133,11 @@ Host: foo.com
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -268,7 +268,7 @@ if __name__ == "__main__":
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>

@@ -13,7 +13,8 @@ slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 
 ```js
 <video id="video">
-  Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code> element.
+  Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code>{" "}
+  element.
 </video>
 ```
 
@@ -21,7 +22,8 @@ slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 >
 > ```js
 > <video id="video" src="Firefox.ogv" autoplay>
->   Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code> element.
+>   Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code>{" "}
+>   element.
 > </video>
 > ```
 
@@ -97,7 +99,14 @@ function initTextures() {
 function updateTexture() {
   gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, videoElement);
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    0,
+    gl.RGBA,
+    gl.RGBA,
+    gl.UNSIGNED_BYTE,
+    videoElement,
+  );
 }
 ```
 

@@ -47,12 +47,16 @@ parseFloat(string)
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `parseFloat` 返回 NaN
@@ -69,7 +73,7 @@ parseFloat("FF2");
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 规范

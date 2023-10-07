@@ -43,8 +43,8 @@ element.insertAdjacentHTML(position, text);
 
 ```js
 // 原为 <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // 此时，新结构变成：
 // <div id="one">one</div><div id="two">two</div>

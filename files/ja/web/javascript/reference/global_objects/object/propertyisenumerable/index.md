@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ## 構文
 
 ```js
-propertyIsEnumerable(prop)
+propertyIsEnumerable(prop);
 ```
 
 ### 引数
@@ -39,11 +39,11 @@ propertyIsEnumerable(prop)
 ```js
 var o = {};
 var a = [];
-o.prop = 'is enumerable';
-a[0] = 'is enumerable';
+o.prop = "is enumerable";
+a[0] = "is enumerable";
 
-o.propertyIsEnumerable('prop');   // true を返す
-a.propertyIsEnumerable(0);        // true を返す
+o.propertyIsEnumerable("prop"); // true を返す
+a.propertyIsEnumerable(0); // true を返す
 ```
 
 ### ユーザー定義オブジェクトと組み込みオブジェクト
@@ -51,51 +51,53 @@ a.propertyIsEnumerable(0);        // true を返す
 以下の例は、ユーザー定義プロパティと組み込みプロパティの列挙可能性を実証しています。
 
 ```js
-var a = ['is enumerable'];
+var a = ["is enumerable"];
 
-a.propertyIsEnumerable(0);          // true を返す
-a.propertyIsEnumerable('length');   // false を返す
+a.propertyIsEnumerable(0); // true を返す
+a.propertyIsEnumerable("length"); // false を返す
 
-Math.propertyIsEnumerable('random');   // false を返す
-this.propertyIsEnumerable('Math');     // false を返す
+Math.propertyIsEnumerable("random"); // false を返す
+this.propertyIsEnumerable("Math"); // false を返す
 ```
 
 <h3 id="Direct_versus_inherited_properties" name="Direct_versus_inherited_properties">直接のプロパティと継承されたプロパティ</h3>
 
 ```js
 var a = [];
-a.propertyIsEnumerable('constructor');         // false を返す
+a.propertyIsEnumerable("constructor"); // false を返す
 
 function firstConstructor() {
-  this.property = 'is not enumerable';
+  this.property = "is not enumerable";
 }
 
-firstConstructor.prototype.firstMethod = function() {};
+firstConstructor.prototype.firstMethod = function () {};
 
 function secondConstructor() {
-  this.method = function() { return 'is enumerable'; };
+  this.method = function () {
+    return "is enumerable";
+  };
 }
 
-secondConstructor.prototype = new firstConstructor;
+secondConstructor.prototype = new firstConstructor();
 secondConstructor.prototype.constructor = secondConstructor;
 
 var o = new secondConstructor();
-o.arbitraryProperty = 'is enumerable';
+o.arbitraryProperty = "is enumerable";
 
-o.propertyIsEnumerable('arbitraryProperty');   // true を返す
-o.propertyIsEnumerable('method');              // true を返す
-o.propertyIsEnumerable('property');            // false を返す
+o.propertyIsEnumerable("arbitraryProperty"); // true を返す
+o.propertyIsEnumerable("method"); // true を返す
+o.propertyIsEnumerable("property"); // false を返す
 
-o.property = 'is enumerable';
+o.property = "is enumerable";
 
-o.propertyIsEnumerable('property');            // true を返す
+o.propertyIsEnumerable("property"); // true を返す
 
 // これらはすべて false を返します。これは、 (最後の 2 つは for-in で
 // 反復処理可能であるにもかかわらず) propertyIsEnumerable が考慮しない
 // プロトタイプであるためです。
-o.propertyIsEnumerable('prototype');   // false を返す (as of JS 1.8.1/FF3.6)
-o.propertyIsEnumerable('constructor'); // false を返す
-o.propertyIsEnumerable('firstMethod'); // false を返す
+o.propertyIsEnumerable("prototype"); // false を返す (as of JS 1.8.1/FF3.6)
+o.propertyIsEnumerable("constructor"); // false を返す
+o.propertyIsEnumerable("firstMethod"); // false を返す
 ```
 
 ## Specifications

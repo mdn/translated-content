@@ -1,7 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/format
 ---
 
 {{JSRef}}
@@ -32,8 +31,8 @@ The `format` getter function formats a number into a string according to the loc
 Use the `format` getter function for formatting a single currency value, here for Russia:
 
 ```js
-var options = { style: 'currency', currency: 'RUB' };
-var numberFormat = new Intl.NumberFormat('ru-RU', options);
+var options = { style: "currency", currency: "RUB" };
+var numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
 ```
@@ -44,9 +43,9 @@ Use the `format` getter function for formatting all numbers in an array. Note th
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat('es-ES');
+var numberFormat = new Intl.NumberFormat("es-ES");
 var formatted = a.map(numberFormat.format);
-console.log(formatted.join('; '));
+console.log(formatted.join("; "));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
 

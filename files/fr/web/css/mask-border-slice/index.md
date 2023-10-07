@@ -1,12 +1,6 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-slice
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -85,4 +79,4 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux)
+- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)

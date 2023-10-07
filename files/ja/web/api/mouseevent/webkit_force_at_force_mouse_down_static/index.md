@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 slug: Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static
-original_slug: Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_header()}}

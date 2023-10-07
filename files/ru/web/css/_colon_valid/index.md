@@ -1,10 +1,8 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:valid
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -24,7 +22,7 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:valid
   <br />
   <br />
   <label>Введите адрес эл. почты:</label>
-  <input type="email" required/>
+  <input type="email" required />
 </form>
 ```
 

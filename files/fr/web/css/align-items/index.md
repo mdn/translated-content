@@ -1,11 +1,6 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/align-items
 ---
 
 {{CSSRef}}
@@ -30,10 +25,10 @@ align-items: stretch;
 /* Alignement géométrique */
 /* align-items ne gère pas les valeurs left et right */
 align-items: center; /* Les éléments sont regroupés au centre */
-align-items: start;  /* Les éléments sont regroupés au début */
-align-items: end;    /* Les éléments sont regroupés à la fin */
+align-items: start; /* Les éléments sont regroupés au début */
+align-items: end; /* Les éléments sont regroupés à la fin */
 align-items: flex-start; /* Les éléments flexibles sont regroupés au début */
-align-items: flex-end;   /* Les éléments flexibles sont regroupés à la fin */
+align-items: flex-end; /* Les éléments flexibles sont regroupés à la fin */
 align-items: self-start;
 align-items: self-end;
 
@@ -107,7 +102,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Cette valeur peut être modifiée dans l'exemple */
   background-color: #8c8c8c;
@@ -224,15 +219,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

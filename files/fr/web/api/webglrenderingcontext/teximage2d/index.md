@@ -1,19 +1,11 @@
 ---
 title: WebGLRenderingContext.texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/texImage2D
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) spécifie une image de texture bidimensionnelle.
+La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie une image de texture bidimensionnelle.
 
 ## Syntaxe
 

@@ -1,7 +1,6 @@
 ---
 title: section
 slug: Web/HTML/Element/section
-original_slug: Web/HTML/Elemento/section
 ---
 
 ## Resumen
@@ -15,11 +14,11 @@ El elemento de _HTML section_ (`<section>`) representa una sección genérica de
 
 ## Contexto de uso
 
-| Contenido permitido         | [Contenido dinámico](/en/HTML/Content_categories#Flow_content)                                                                                                                                                                     |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas        | Ninguna, tanto la etiqueta de apertura como la de cierre son obligatorias.                                                                                                                                                                                                   |
+| Contenido permitido         | [Contenido dinámico](/en/HTML/Content_categories#Flow_content)                                                                                                                                                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omisión de etiquetas        | Ninguna, tanto la etiqueta de apertura como la de cierre son obligatorias.                                                                                                                                         |
 | Elementos padres permitidos | Todo elemento que acepte [contenido dinámico](/en/HTML/Content_categories#Flow_content). Nótese que un elemento {{ HTMLElement("section") }} no debe ser descendiente de un elemento {{ HTMLElement("address") }}. |
-| Documento normativo         | [HTML5, sección 4.4.2](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-section-element)                                                                                                                                                        |
+| Documento normativo         | [HTML5, sección 4.4.2](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-section-element)                                                                                              |
 
 ## Atributos
 
@@ -56,7 +55,7 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 ```html
 <div>
   <h2>Encabezado</h2>
-  <img src="roble.jpg" alt="un roble">
+  <img src="roble.jpg" alt="un roble" />
 </div>
 ```
 
@@ -65,7 +64,7 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 ```html
 <section>
   <h2>Encabezado</h2>
-  <img src="roble.jpg" alt="un roble">
+  <img src="roble.jpg" alt="un roble" />
 </section>
 ```
 

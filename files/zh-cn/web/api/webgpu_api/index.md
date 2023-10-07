@@ -439,7 +439,7 @@ commandEncoder.copyBufferToBuffer(
   0, // 来源缓冲区偏移量
   stagingBuffer,
   0, // 目的缓冲区偏移量
-  BUFFER_SIZE
+  BUFFER_SIZE,
 );
 
 // 通过将命令缓冲区数组传递给命令队列以执行来结束
@@ -453,7 +453,7 @@ device.queue.submit([commandEncoder.finish()]);
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // 偏移量
-  BUFFER_SIZE // 长度
+  BUFFER_SIZE, // 长度
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);

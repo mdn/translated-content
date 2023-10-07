@@ -47,6 +47,7 @@ slug: Web/HTML/Element/base
 - `href`
   - : 用于文档中相对 URL 地址的基础 URL。允许绝对和相对 URL。
 - `target`
+
   - : 默认浏览上下文的关键字或作者定义的名称，当没有明确目标的链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 导致导航被激活时显示其结果。该属性值定位到*浏览上下文*（例如选项卡，窗口或内联框 {{HTMLElement("iframe")}}）。以下的关键字指定特殊的意思：
 
     - `_self`: 载入结果到当前浏览上下文中。（该值是元素的默认值）。
@@ -81,9 +82,9 @@ slug: Web/HTML/Element/base
 ## 示例
 
 ```html
-<base href="http://www.example.com/">
-<base target="_blank">
-<base target="_top" href="http://www.example.com/">
+<base href="http://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="http://www.example.com/" />
 ```
 
 ## 规范

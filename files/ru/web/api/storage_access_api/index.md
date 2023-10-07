@@ -1,17 +1,11 @@
 ---
 title: Storage Access API
 slug: Web/API/Storage_Access_API
-tags:
-  - API
-  - Reference
-  - Storage
-  - Storage Access API
-translation_of: Web/API/Storage_Access_API
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
 
-The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin’s _first-party_ storage). The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.
+The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin's _first-party_ storage). The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.
 
 ## Концепции и использование
 
@@ -26,7 +20,8 @@ The Storage Access API is intended to solve this problem; embedded cross-origin 
 In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/ru/docs/Web/HTML/Element/iframe#attr-sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
 ```html
-<iframe sandbox="allow-storage-access-by-user-activation
+<iframe
+  sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
   ...
@@ -36,7 +31,7 @@ In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage acce
 The API is designed to limit the potential storage exceptions to origins for which the user has shown an intent to interact. This is enforced through the following constraints:
 
 - Access requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click. This also prevents embedded content on the page from spamming the browser or user with excessive access requests.
-- Origins that have never been interacted with as a first party do not have a notion of first-party storage. From the user’s perspective, they only have a third-party relationship with that origin. Access requests are automatically denied if the browser detects that the user hasn’t interacted with the embedded content in a first-party context recently (in Firefox, "recently" is "within 30 days").
+- Origins that have never been interacted with as a first party do not have a notion of first-party storage. From the user's perspective, they only have a third-party relationship with that origin. Access requests are automatically denied if the browser detects that the user hasn't interacted with the embedded content in a first-party context recently (in Firefox, "recently" is "within 30 days").
 
 The browser may decide to involve the user in the decision of whether to grant an incoming storage access request. Specifics regarding the lifetime of a storage grant and the circumstances under which the browser may decide to inform the user are currently being worked through and will be announced once ready.
 
@@ -65,7 +60,7 @@ API методы реализованы в интерфейсе {{domxref("Docum
 - {{domxref("Document.requestStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
 
-> **Примечание:** User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox’s pop-up blocker.
+> **Примечание:** User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox's pop-up blocker.
 
 ## Расширение \<iframe> sandbox
 

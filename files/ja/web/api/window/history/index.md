@@ -12,8 +12,8 @@ slug: Web/API/Window/history
 ## 例
 
 ```js
-history.back();     // 戻るボタンを押すのと同等
-history.go(-1);     // history.back(); と同等
+history.back(); // 戻るボタンを押すのと同等
+history.go(-1); // history.back(); と同等
 ```
 
 ## 注

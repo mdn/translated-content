@@ -1,19 +1,33 @@
 ---
-title: <legend>
+title: "<legend>: フィールドセット凡例要素"
 slug: Web/HTML/Element/legend
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<legend>` 要素**は、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
+**`<legend>`** は [HTML](/ja/docs/Web/HTML) の要素で、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+
+## 属性
+
+この要素には、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
+
+## 例
+
+`<legend>` の使用例は、 {{HTMLElement("form")}} のページを参照してください。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
@@ -24,8 +38,8 @@ slug: Web/HTML/Element/legend
           >記述コンテンツ</a
         >
         および
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a> (h1–h6
-        要素)
+        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>
+        （h1–h6 要素）
       </td>
     </tr>
     <tr>
@@ -60,22 +74,14 @@ slug: Web/HTML/Element/legend
   </tbody>
 </table>
 
-## 属性
-
-この要素には、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
-
-## 例
-
-`<legend>` の使用例は、 {{ HTMLElement("form") }} のページを参照してください。
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.legend")}}
+{{Compat}}
 
 ## 関連情報
 
-- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Roles/form_role)

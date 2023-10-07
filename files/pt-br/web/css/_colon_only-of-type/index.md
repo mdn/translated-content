@@ -1,5 +1,5 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
 ---
 
@@ -17,8 +17,8 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) CSS `:only-of-type` repres
 
 ## Especifcações
 
-| Especificação                                                                                    | Status                               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| Especificação                                                           | Status                      | Comentário         |
+| ----------------------------------------------------------------------- | --------------------------- | ------------------ |
 | {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | Sem mudanças.      |
 | {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial. |
 

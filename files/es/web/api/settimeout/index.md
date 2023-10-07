@@ -349,7 +349,9 @@ El siguiente ejemplo configura dos botones simples en una página web y los vinc
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">Mostrar un mensaje después de dos segundos</button>
+<button onclick="delayedMessage();">
+  Mostrar un mensaje después de dos segundos
+</button>
 <button onclick="clearMessage();">Cancelar mensaje antes de que suceda</button>
 
 <div id="output"></div>

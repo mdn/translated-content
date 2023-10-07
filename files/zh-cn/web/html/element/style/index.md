@@ -46,16 +46,16 @@ slug: Web/HTML/Element/style
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -68,25 +68,25 @@ slug: Web/HTML/Element/style
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style>
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -99,25 +99,25 @@ slug: Web/HTML/Element/style
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style media="all and (max-width: 500px)">
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 

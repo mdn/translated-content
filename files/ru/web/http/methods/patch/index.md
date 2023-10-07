@@ -1,12 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - HTTP метод
-  - Методы запроса
-  - Справка
-translation_of: Web/HTTP/Methods/PATCH
 ---
 
 {{HTTPSidebar}}
@@ -70,7 +64,7 @@ PATCH /file.txt HTTP/1.1
 
 ### Запрос
 
-```html
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
@@ -92,8 +86,8 @@ ETag: "e0023aa4f"
 
 ## Спецификации
 
-| Спецификация                     | Заголовок             |
-| -------------------------------- | --------------------- |
+| Спецификация             | Заголовок             |
+| ------------------------ | --------------------- |
 | {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
 ## Смотрите также

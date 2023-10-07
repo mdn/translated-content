@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
 
 {{jsSidebar("Errors")}}
@@ -31,7 +26,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
 
 ```js example-bad
 function f(arg) {
-  let arg = 'foo';
+  let arg = "foo";
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
@@ -41,11 +36,11 @@ function f(arg) {
 
 ```js example-good
 function f(arg) {
-  arg = 'foo';
+  arg = "foo";
 }
 
 function f(arg) {
-  let bar = 'foo';
+  let bar = "foo";
 }
 ```
 

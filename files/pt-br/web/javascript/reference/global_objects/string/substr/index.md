@@ -45,16 +45,16 @@ O `substr()` extrai caracteres de comprimento de uma `str`, contando a partir do
 ### Usando `substr()`
 
 ```js
-var aString = 'Mozilla';
+var aString = "Mozilla";
 
-console.log(aString.substr(0, 1));   // 'M'
-console.log(aString.substr(1, 0));   // ''
-console.log(aString.substr(-1, 1));  // 'a'
-console.log(aString.substr(1, -1));  // ''
-console.log(aString.substr(-3));     // 'lla'
-console.log(aString.substr(1));      // 'ozilla'
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2));  // ''
+console.log(aString.substr(20, 2)); // ''
 ```
 
 ## Polyfill
@@ -63,33 +63,35 @@ JScript da Microsoft não suporta valores negativos para o índice de `start`. S
 
 ```js
 // only run when the substr() function is broken
-if ('ab'.substr(-1) != 'b') {
+if ("ab".substr(-1) != "b") {
   /**
    *  Get the substring of a string
    *  @param  {integer}  start   where to start the substring
    *  @param  {integer}  length  how many characters to return
    *  @return {string}
    */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
+  String.prototype.substr = (function (substr) {
+    return function (start, length) {
       // call the original method
-      return substr.call(this,
+      return substr.call(
+        this,
         // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
-        length)
-    }
-  }(String.prototype.substr);
+        length,
+      );
+    };
+  })(String.prototype.substr);
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                                | Status                       | Comment                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Defined in the (informative) Compatibility Annex B. Implemented in JavaScript 1.0.     |
-| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                         | {{Spec2('ES5.1')}}     | Defined in the (informative) Compatibility Annex B                                     |
-| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}         | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
+| Specification                                                                      | Status               | Comment                                                                                |
+| ---------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                | {{Spec2('ES3')}}     | Defined in the (informative) Compatibility Annex B. Implemented in JavaScript 1.0.     |
+| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                     | {{Spec2('ES5.1')}}   | Defined in the (informative) Compatibility Annex B                                     |
+| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}     | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
 | {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
 
 ## Compatibilidade com navegadores

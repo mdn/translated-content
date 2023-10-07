@@ -3,7 +3,7 @@ title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 一个音频/视频文件包含两部分：编码器（codec）和媒体容器（container）。本文讨论通用的多媒体容器的优点、局限性以及用法。
 
@@ -1053,8 +1053,8 @@ The video is offered first in WebM format (with the [`type`](/zh-CN/docs/Web/HTM
 | [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 Systems)                                                                           | Defines the MPEG-2 container format                                                                             |
 | [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 file format)                                                                | Defines the MPEG-4 (MP4) version 2 container format                                                             |
 | [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | Defines the original MPEG-4 (MP4) container format                                                              |
-| {{RFC(3533)}}                                                                                                                                             | Defines the Ogg container format                                                                                |
-| {{RFC(5334)}}                                                                                                                                             | Defines the Ogg media types and file extensions                                                                 |
+| {{RFC(3533)}}                                                                                                                                                | Defines the Ogg container format                                                                                |
+| {{RFC(5334)}}                                                                                                                                                | Defines the Ogg media types and file extensions                                                                 |
 | [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
 | [Resource Interchange File Format](https://docs.microsoft.com/en-us/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |

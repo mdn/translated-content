@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_Functions
 
 ```css
 selector {
-  property: functional-notation( [argument]? [, argument]! );
+  property: functional-notation([argument]? [, argument]!);
 }
 ```
 

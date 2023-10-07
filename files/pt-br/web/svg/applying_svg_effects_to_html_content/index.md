@@ -14,7 +14,11 @@ Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _style
 Para aplicar um efeito SVG usando o estilo CSS, você precisa primeiro criar um estilo CSS que faz referência ao SVG que deseja aplicar.
 
 ```html
-<style>.stylename { mask: url(#localstyle); }</style>
+<style>
+  .stylename {
+    mask: url(#localstyle);
+  }
+</style>
 ```
 
 Dentro do exemplo acima, o novo estilo, identificado como "stylename", é uma máscara SVG referenciada pelo ID "localstyle". Quando isso é estabelecido, a máscara pode ser aplicada a qualquer elemento usando o estilo CSS.
@@ -31,13 +35,16 @@ Por exemplo, você pod estabelecer um estilo CSS que provêm uma máscara gradie
 
 ```html
 <svg height="0">
-  <mask id="m1" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+  <mask
+    id="m1"
+    maskUnits="objectBoundingBox"
+    maskContentUnits="objectBoundingBox">
     <linearGradient id="g" gradientUnits="objectBoundingBox" x2="0" y2="1">
-      <stop stop-color="white" offset="0"/>
-      <stop stop-color="white" stop-opacity="0" offset="1"/>
+      <stop stop-color="white" offset="0" />
+      <stop stop-color="white" stop-opacity="0" offset="1" />
     </linearGradient>
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/>
-    <rect x="0.5" y="0.2" width="0.5" height="0.8" fill="url(#g)"/>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white" />
+    <rect x="0.5" y="0.2" width="0.5" height="0.8" fill="url(#g)" />
   </mask>
 </svg>
 ```
@@ -60,14 +67,17 @@ Na realidade aplicar o efeito SVG para XHTML ou HTML é simplesmente feito atrib
 
 ```html
 <p class="target" style="background:lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</p>
+
+<p></p>
 <p>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <b class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  >
+  Ut enim ad minim veniam.
 </p>
 ```
 
@@ -81,20 +91,23 @@ Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo de
 
 ```html
 <p class="target" style="background:lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</p>
+
+<p></p>
 <p>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <b class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  >
+  Ut enim ad minim veniam.
 </p>
 <button onclick="toggleRadius()">Toggle radius</button>
 <svg height="0">
   <clipPath id="c1" clipPathUnits="objectBoundingBox">
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle"/>
-    <rect x="0.5" y="0.2" width="0.5" height="0.8"/>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
+    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
   </clipPath>
 </svg>
 ```
@@ -118,7 +131,7 @@ Isso estabelece uma área recortada composta por um círculo e um retângulo, e 
 ```js
 function toggleRadius() {
   var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
+  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
 }
 ```
 
@@ -155,12 +168,24 @@ Os cinco filtros são aplicados usando o seguinte CSS:
 
 ```html
 <style>
-    p.target { filter:url(#f3); }
-    p.target:hover { filter:url(#f5); }
-    b.target { filter:url(#f1); }
-    b.target:hover { filter:url(#f4); }
-    iframe.target { filter:url(#f2); }
-    iframe.target:hover { filter:url(#f3); }
+  p.target {
+    filter: url(#f3);
+  }
+  p.target:hover {
+    filter: url(#f5);
+  }
+  b.target {
+    filter: url(#f1);
+  }
+  b.target:hover {
+    filter: url(#f4);
+  }
+  iframe.target {
+    filter: url(#f2);
+  }
+  iframe.target:hover {
+    filter: url(#f3);
+  }
 </style>
 ```
 
@@ -169,8 +194,8 @@ Os cinco filtros são aplicados usando o seguinte CSS:
 Para borrar um texto há um webkit baseado dos navegadores com o (prefixo) filtro CSS chamado blur. Você pode arquivar o mesmo efeito usando filtros SVG.
 
 ```html
- <p class="blur">Time to clean my glasses</p>
- <svg xmlns="https://www.w3.org/2000/svg" version="1.1">
+<p class="blur">Time to clean my glasses</p>
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
       <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
@@ -183,7 +208,7 @@ Você pode aplicar o SVG e o filtro CSS na mesma classe:
 
 ```css
 .blur {
-  filter:url(#wherearemyglasses);
+  filter: url(#wherearemyglasses);
   /* ^ for Firefox */
   -webkit-filter: blur(1px);
   /* ^ Webkit browsers */
@@ -202,7 +227,9 @@ O elemento SVG vem sendo usado para clipping, masking, e mais pode ser carregado
 Por exemplo, se seu CSS está em um arquivo com nome `default.css`, esse pode parecer com isso:
 
 ```css
-.target { clip-path: url(resources.svg#c1); }
+.target {
+  clip-path: url(resources.svg#c1);
+}
 ```
 
 O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o ID c1.

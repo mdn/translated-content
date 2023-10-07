@@ -2,6 +2,7 @@
 title: Web Audio API로 시각화하기
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
+
 Web Audio API의 가장 흥미로운 기능 중 하나는 주파수, 파형, 그리고 다른 데이터들을 오디오 소스로부터 추출할 수 있는 능력인데, 이는 그리고 나서 시각화하는 데 사용될 수 있습니다. 이 글은 어떻게 시각화를 하는지 설명하고, 기초적인 사용 방법을 두 개 제공합니다.
 
 > **참고:** 모든 코드의 작동 예제를 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모에서 찾을 수 있습니다.
@@ -89,7 +90,7 @@ analyser.getByteTimeDomainData(dataArray);
 다음으로, 시작하기 위해 캔버스를 단색으로 채웁니다.
 
 ```js
-canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -97,33 +98,32 @@ canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
 ```js
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 canvasCtx.beginPath();
 ```
 
 캔버스 너비를 (앞서 정의된 바와 같이 FrequencyBinCount와 동일한) 배열 길이로 나눔으로써 그려질 선의 각 부분의 너비를 결정하고, 선의 각 부분을 그리기 위해 이동할 위치를 정의하기 위해 x 변수를 정의합니다.
 
 ```js
-var sliceWidth = WIDTH * 1.0 / bufferLength;
+var sliceWidth = (WIDTH * 1.0) / bufferLength;
 var x = 0;
 ```
 
 이제 배열로부터의 데이터 포인트 값에 기반한 특정한 높이에서의 버퍼의 각 부분에 대해 파동의 작은 부분의 위치를 정의하고, 다음 파동 부분이 그려질 지점까지 선을 이동하는 반복문을 실행합니다.
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+for (var i = 0; i < bufferLength; i++) {
+  var v = dataArray[i] / 128.0;
+  var y = (v * HEIGHT) / 2;
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
+  x += sliceWidth;
+}
 ```
 
 마지막으로, 우리는 캔버스의 우측 중앙에서 선을 끝내고, 우리가 정의한 획을 그립니다:
@@ -137,7 +137,7 @@ var x = 0;
 코드의 이 섹션의 마지막에서, 우리는 전체 과정을 시작하기 위해 `draw()` 함수를 호출합니다:
 
 ```js
-    draw();
+draw();
 ```
 
 이것은 초당 수 차례 갱신되는 멋진 파형 디스플레이를 보여줍니다:

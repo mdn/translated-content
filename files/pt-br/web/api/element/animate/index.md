@@ -20,7 +20,9 @@ var animation = element.animate(keyframes, options);
 - `keyframes`
   - : An [Object formatted to represent a set of keyframes](/pt-BR/docs/Web/API/Web_Animations_API/Keyframe_Formats).
 - `opções`
+
   - : Ou um inteiro representando a duração da animação (em milisegundos), ou um objeto contendo uma ou mais propriedades de tempo:
+
     - `id {{optional_inline}}`
 
       - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
@@ -60,26 +62,27 @@ Na demonstração [Down the Rabbit Hole (with the Web Animation API)](https://co
 Note o array de quadros-chave passado e também o bloco de opções de temporização.
 
 ```js
-document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
-});
+document.getElementById("tunnel").animate(
+  [
+    // keyframes
+    { transform: "translateY(0px)" },
+    { transform: "translateY(-300px)" },
+  ],
+  {
+    // timing options
+    duration: 1000,
+    iterations: Infinity,
+  },
+);
 ```
 
 ## Especificações
 
-| Specification                                                                                    | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Web Animations', '#the-animatable-interface', 'animate()' )}} | {{Spec2('Web Animations')}} | Initial definition |
+{{Specifications}}
 
-## Compatibildade entre Navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## Veja Também
 

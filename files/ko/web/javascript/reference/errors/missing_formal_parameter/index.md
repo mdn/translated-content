@@ -1,7 +1,6 @@
 ---
 title: "SyntaxError: Malformed formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-original_slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ---
 
 {{jsSidebar("Errors")}}
@@ -18,7 +17,7 @@ original_slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 
 ## 무엇이 잘못 되었을까요?
 
-코드에는 최소한 두 개의 인수가 전달 된 [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) 생성자가 있습니다. 마지막 인수는 작성중인 새 함수의 소스코드 입니다. 나머지는 모두 새 함수의 인수 목록을 구성합니다.
+코드에는 최소한 두 개의 인수가 전달 된 [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 생성자가 있습니다. 마지막 인수는 작성중인 새 함수의 소스코드 입니다. 나머지는 모두 새 함수의 인수 목록을 구성합니다.
 
 인수 목록이 어딘가 잘못되었습니다. 아마도 실수로 인수 이름으로 if 또는 var와 같은 키워드를 선택했거나 인수 목록에 갈곳 잃은 구두점이 있을 수 있습니다. 또는 실수로 숫자나 개체와 같은 잘못된 값을 전달한 것일 수 있습니다.
 
@@ -31,10 +30,10 @@ original_slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ### Invalid cases
 
 ```js example-bad
-var f = Function('x y', 'return x + y;');
+var f = Function("x y", "return x + y;");
 // SyntaxError (missing a comma)
 
-var f = Function('x,', 'return x;');
+var f = Function("x,", "return x;");
 // SyntaxError (extraneous comma)
 
 var f = Function(37, "alert('OK')");
@@ -44,16 +43,18 @@ var f = Function(37, "alert('OK')");
 ### Valid cases
 
 ```js example-good
-var f = Function('x, y', 'return x + y;');  // correctly punctuated
+var f = Function("x, y", "return x + y;"); // correctly punctuated
 
-var f = Function('x', 'return x;');
+var f = Function("x", "return x;");
 
 // if you can, avoid using Function - this is much faster
-var f = function(x) { return x; };
+var f = function (x) {
+  return x;
+};
 ```
 
 ## See also
 
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [About functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [About functions](/ko/docs/Web/JavaScript/Guide/Functions)
 - [_Frankenstein_ by Mary Wollstonecraft Shelley, full e-text](https://www.gutenberg.org/ebooks/84) ("Cursed (although I curse myself) be the hands that formed you! You have made me wretched beyond expression. You have left me no power to consider whether I am just to you or not. Begone! Relieve me from the sight of your detested form.")

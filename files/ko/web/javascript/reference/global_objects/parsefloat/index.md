@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 ## 구문
 
 ```js
-parseFloat(string)
+parseFloat(string);
 ```
 
 ### 매개변수
@@ -49,12 +49,16 @@ parseFloat(string)
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14와 숫자가 아닌 문자들');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14와 숫자가 아닌 문자들");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `NaN`을 반환하는 경우
@@ -62,7 +66,7 @@ parseFloat({ toString: function() { return "3.14" } });
 다음 예제는 {{jsxref("NaN")}}을 반환합니다.
 
 ```js
-parseFloat('FF2');
+parseFloat("FF2");
 ```
 
 ### `parseFloat`과 `BigInt`
@@ -71,7 +75,7 @@ parseFloat('FF2');
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 명세

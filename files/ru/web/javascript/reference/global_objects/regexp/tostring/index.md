@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -38,20 +30,20 @@ regexObj.toString()
 Следующий пример отображает строковое значение объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}:
 
 ```js
-var myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // отобразит '/a+b+c/'
+var myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // отобразит '/a+b+c/'
 
-var foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // отобразит '/bar/g'
+var foo = new RegExp("bar", "g");
+console.log(foo.toString()); // отобразит '/bar/g'
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                       | Статус             | Комментарии                                            |
+| ---------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 3-е издание.                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

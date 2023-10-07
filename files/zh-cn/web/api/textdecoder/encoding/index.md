@@ -46,7 +46,7 @@ slug: Web/API/TextDecoder/encoding
 - 传统的多字节中文（简体）编码：
   [`'gbk'`](https://zh.wikipedia.org/wiki/GBK)、
   [`'gb18030'`](https://zh.wikipedia.org/wiki/GB_18030) 和
-  [`'hz-gb-2312'`](https://zh.wikipedia.org/wiki/HZ_(character_encoding))。
+  [`'hz-gb-2312'`](<https://zh.wikipedia.org/wiki/HZ_(character_encoding)>)。
 - 传统的多字节中文（繁体）编码：
   [`'big5'`](https://zh.wikipedia.org/wiki/Big5)。
 - 传统的多字节日语编码：

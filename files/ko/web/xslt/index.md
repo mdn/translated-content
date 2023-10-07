@@ -7,47 +7,47 @@ slug: Web/XSLT
 
 ## Documentation
 
-- [XSLT Element Reference](/en-US/docs/Web/XSLT/Element)
+- [XSLT Element Reference](/ko/docs/Web/XSLT/Element)
   - : Reference.
-- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transforming XML with XSLT](/ko/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT는 스타일시트 만든 이가 그러길 바란다면 컨텐트를 모조리 다시 정리하고 다른 형식으로 변환하는 것을 포함하는 컨텐트 조작(manipulating)과 정렬이라는 중요한 두 방식으로 본래 XML 문서를 변환하게 합니다.
-- [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [Using the Mozilla JavaScript interface to XSL Transformations](/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
   - : 이 문서는 Mozilla 1.2의 자바스크립트 인터페이스와 XSLT 처리 엔진까지 설명합니다.
-- [Specifying parameters using processing instructions](/en-US/docs/Web/XSLT/PI_Parameters)
+- [Specifying parameters using processing instructions](/ko/docs/Web/XSLT/PI_Parameters)
   - : Firefox allows stylesheet parameters to be specified when using the `<?xml-stylesheet?>` processing instruction. This is done using the `<?xslt-param?>` PI described in this document.
 - [XSLT Tutorial](https://www.w3schools.com/xml/xsl_intro.asp)
   - : 이 [W3Schools](http://www.w3schools.com) 입문서는 읽는 이에게 XML 문서를 XHTML같은 다른 형식으로 변환하기 위해 어떻게 XSLT를 사용하는지를 가르칩니다.
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)
   - : XSLT와 XPath에 대한 이 방대한 해설은 두 기술에 대한 지식이 없다고 가정하고, 배경, 문맥, 구조, 개념, 입문 용어를 통해 읽는 이를 이끕니다.
-- [Common XSLT Errors](/en-US/docs/Web/XSLT/Common_errors)
+- [Common XSLT Errors](/ko/docs/Web/XSLT/Common_errors)
   - : This article lists some common problems using XSLT in Firefox.
 
 ## Related Topics
 
-- [XML](/en-US/docs/Web/XML/XML_introduction), [XPath](/en-US/docs/Web/XPath)
+- [XML](/ko/docs/Web/XML/XML_introduction), [XPath](/ko/docs/Web/XPath)
 
 <div id="Quick_links">
   <ol>
-    <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li>
-    <li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
-    <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XSLT">XSLT</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/EXSLT">EXSLT</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XPath">XPath</a></strong></li>
     <li class="toggle">
       <details open>
         <summary>Guides</summary>
         <ol>
-          <li><a href="/en-US/docs/Web/XSLT/Common_errors">Common XSLT Errors</a></li>
-          <li><a href="/en-US/docs/Web/XSLT/PI_Parameters">PI Parameters</a></li>
-          <li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT/JavaScript Interface in Gecko</a></li>
-          <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li>
-          <li><a href="/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the
+          <li><a href="/ko/docs/Web/XSLT/Common_errors">Common XSLT Errors</a></li>
+          <li><a href="/ko/docs/Web/XSLT/PI_Parameters">PI Parameters</a></li>
+          <li><a href="/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT/JavaScript Interface in Gecko</a></li>
+          <li><a href="/ko/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li>
+          <li><a href="/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the
               Mozilla JavaScript interface to XSL Transformations</a></li>
         </ol>
       </details>
     </li>
     <li class="toggle">
       <details open>
-        <summary><a href="/en-US/docs/XSLT/Element">XSLT Elements</a></summary>
-        {{ListSubpagesForSidebar("/en-US/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
+        <summary><a href="/ko/docs/XSLT/Element">XSLT Elements</a></summary>
+        {{ListSubpagesForSidebar("/ko/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
       </details>
     </li>
   </ol>

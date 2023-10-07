@@ -7,7 +7,7 @@ slug: Web/API/URL/port
 
 {{AvailableInWorkers}}
 
-## **语法**
+## 语法
 
 ```plain
 string = object.port;
@@ -21,7 +21,7 @@ A {{domxref("USVString")}}.
 ## 示例
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
+var url = new URL("https://mydomain.com:80/svn/Repos/");
 var result = url.port; // Returns:'80'
 ```
 
@@ -33,6 +33,6 @@ var result = url.port; // Returns:'80'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - The {{domxref("URL")}} interface it belongs to.

@@ -118,80 +118,80 @@ _부모인 {{domxref("Element")}}의 메서드를 상속합니다._
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`invalid`](/en-US/docs/Web/API/HTMLElement/invalid_event)
+- [`invalid`](/ko/docs/Web/API/HTMLElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.
-    Also available via the [`oninvalid`](/en-US/docs/Web/API/GlobalEventHandlers/oninvalid) property.
+    Also available via the [`oninvalid`](/ko/docs/Web/API/GlobalEventHandlers/oninvalid) property.
 
 ### Animation events
 
-- [`animationcancel`](/en-US/docs/Web/API/HTMLElement/animationcancel_event)
+- [`animationcancel`](/ko/docs/Web/API/HTMLElement/animationcancel_event)
   - : Fired when an animation unexpectedly aborts.
-    Also available via the [`onanimationcancel`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel) property.
-- [`animationend`](/en-US/docs/Web/API/HTMLElement/animationend_event)
+    Also available via the [`onanimationcancel`](/ko/docs/Web/API/GlobalEventHandlers/onanimationcancel) property.
+- [`animationend`](/ko/docs/Web/API/HTMLElement/animationend_event)
   - : Fired when an animation has completed normally.
-    Also available via the [`onanimationend`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationend) property.
-- [`animationiteration`](/en-US/docs/Web/API/HTMLElement/animationiteration_event)
+    Also available via the [`onanimationend`](/ko/docs/Web/API/GlobalEventHandlers/onanimationend) property.
+- [`animationiteration`](/ko/docs/Web/API/HTMLElement/animationiteration_event)
   - : Fired when an animation iteration has completed.
-    Also available via the [`onanimationiteration`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration) property.
-- [`animationstart`](/en-US/docs/Web/API/HTMLElement/animationstart_event)
+    Also available via the [`onanimationiteration`](/ko/docs/Web/API/GlobalEventHandlers/onanimationiteration) property.
+- [`animationstart`](/ko/docs/Web/API/HTMLElement/animationstart_event)
   - : Fired when an animation starts.
-    Also available via the [`onanimationstart`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart) property.
+    Also available via the [`onanimationstart`](/ko/docs/Web/API/GlobalEventHandlers/onanimationstart) property.
 
 ### Input events
 
-- [`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
+- [`beforeinput`](/ko/docs/Web/API/HTMLElement/beforeinput_event)
   - : Fired when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified.
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`input`](/ko/docs/Web/API/HTMLElement/input_event)
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-    Also available via the [`oninput`](/en-US/docs/Web/API/GlobalEventHandlers/oninput) property.
+    Also available via the [`oninput`](/ko/docs/Web/API/GlobalEventHandlers/oninput) property.
 
 ### Pointer events
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - : Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
-    Also available via the [`ongotpointercapture`](/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture) property.
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`gotpointercapture`](/ko/docs/Web/API/HTMLElement/gotpointercapture_event)
+  - : Fired when an element captures a pointer using [`setPointerCapture()`](/ko/docs/Web/API/Element/setPointerCapture).
+    Also available via the [`ongotpointercapture`](/ko/docs/Web/API/GlobalEventHandlers/ongotpointercapture) property.
+- [`lostpointercapture`](/ko/docs/Web/API/HTMLElement/lostpointercapture_event)
   - : Fired when a [captured pointer](/ko/docs/Web/API/Pointer_events#Pointer_capture) is released.
-    Also available via the [`onlostpointercapture`](/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture) property.
-- [`pointercancel`](/en-US/docs/Web/API/HTMLElement/pointercancel_event)
+    Also available via the [`onlostpointercapture`](/ko/docs/Web/API/GlobalEventHandlers/onlostpointercapture) property.
+- [`pointercancel`](/ko/docs/Web/API/HTMLElement/pointercancel_event)
   - : Fired when a pointer event is canceled.
-    Also available via the [`onpointercancel`](/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel) property.
-- [`pointerdown`](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
+    Also available via the [`onpointercancel`](/ko/docs/Web/API/GlobalEventHandlers/onpointercancel) property.
+- [`pointerdown`](/ko/docs/Web/API/HTMLElement/pointerdown_event)
   - : Fired when a pointer becomes active.
-    Also available via the [`onpointerdown`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown) property.
-- [`pointerenter`](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
+    Also available via the [`onpointerdown`](/ko/docs/Web/API/GlobalEventHandlers/onpointerdown) property.
+- [`pointerenter`](/ko/docs/Web/API/HTMLElement/pointerenter_event)
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-    Also available via the [`onpointerenter`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter) property.
-- [`pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
+    Also available via the [`onpointerenter`](/ko/docs/Web/API/GlobalEventHandlers/onpointerenter) property.
+- [`pointerleave`](/ko/docs/Web/API/HTMLElement/pointerleave_event)
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-    Also available via the [`onpointerleave`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave) property.
-- [`pointermove`](/en-US/docs/Web/API/HTMLElement/pointermove_event)
+    Also available via the [`onpointerleave`](/ko/docs/Web/API/GlobalEventHandlers/onpointerleave) property.
+- [`pointermove`](/ko/docs/Web/API/HTMLElement/pointermove_event)
   - : Fired when a pointer changes coordinates.
-    Also available via the [`onpointermove`](/en-US/docs/Web/API/GlobalEventHandlers/onpointermove) property.
-- [`pointerout`](/en-US/docs/Web/API/HTMLElement/pointerout_event)
+    Also available via the [`onpointermove`](/ko/docs/Web/API/GlobalEventHandlers/onpointermove) property.
+- [`pointerout`](/ko/docs/Web/API/HTMLElement/pointerout_event)
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-    Also available via the [`onpointerout`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerout) property.
-- [`pointerover`](/en-US/docs/Web/API/HTMLElement/pointerover_event)
+    Also available via the [`onpointerout`](/ko/docs/Web/API/GlobalEventHandlers/onpointerout) property.
+- [`pointerover`](/ko/docs/Web/API/HTMLElement/pointerover_event)
   - : Fired when a pointer is moved into an element's hit test boundaries.
-    Also available via the [`onpointerover`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerover) property.
-- [`pointerup`](/en-US/docs/Web/API/HTMLElement/pointerup_event)
+    Also available via the [`onpointerover`](/ko/docs/Web/API/GlobalEventHandlers/onpointerover) property.
+- [`pointerup`](/ko/docs/Web/API/HTMLElement/pointerup_event)
   - : Fired when a pointer is no longer active.
-    Also available via the [`onpointerup`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerup) property.
+    Also available via the [`onpointerup`](/ko/docs/Web/API/GlobalEventHandlers/onpointerup) property.
 
 ### Transition events
 
-- [`transitioncancel`](/en-US/docs/Web/API/HTMLElement/transitioncancel_event)
+- [`transitioncancel`](/ko/docs/Web/API/HTMLElement/transitioncancel_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) is canceled.
-    Also available via the [`ontransitioncancel`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel) property.
-- [`transitionend`](/en-US/docs/Web/API/HTMLElement/transitionend_event)
+    Also available via the [`ontransitioncancel`](/ko/docs/Web/API/GlobalEventHandlers/ontransitioncancel) property.
+- [`transitionend`](/ko/docs/Web/API/HTMLElement/transitionend_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) has completed.
-    Also available via the [`ontransitionend`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend) property.
-- [`transitionrun`](/en-US/docs/Web/API/HTMLElement/transitionrun_event)
+    Also available via the [`ontransitionend`](/ko/docs/Web/API/GlobalEventHandlers/ontransitionend) property.
+- [`transitionrun`](/ko/docs/Web/API/HTMLElement/transitionrun_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) is first created.
-    Also available via the [`ontransitionrun`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property.
-- [`transitionstart`](/en-US/docs/Web/API/HTMLElement/transitionstart_event)
+    Also available via the [`ontransitionrun`](/ko/docs/Web/API/GlobalEventHandlers/ontransitionrun) property.
+- [`transitionstart`](/ko/docs/Web/API/HTMLElement/transitionstart_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) has actually started.
-    Also available via the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property.
+    Also available via the [`ontransitionstart`](/ko/docs/Web/API/GlobalEventHandlers/ontransitionstart) property.
 
 ## 명세
 

@@ -1,66 +1,62 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-**`HTMLAudioElement`** インターフェイスは {{HTMLElement("audio")}} 要素のプロパティと、操作するメソッドを提供します。 {{domxref("HTMLMediaElement")}} インターフェイスから派生しています。
+{{APIRef("HTML DOM")}}
 
-{{InheritanceDiagram(600, 120)}}
+**`HTMLAudioElement`** インターフェイスは {{HTMLElement("audio")}} 要素のプロパティと、操作するメソッドへのアクセスを提供します。
 
-## プロパティ
+この要素は {{domxref("HTMLMediaElement")}} インターフェイスから派生しており、プロパティとメソッドを継承しています。
+
+{{InheritanceDiagram}}
+
+## コンストラクター
+
+- {{domxref("HTMLAudioElement.Audio", "Audio()")}}
+  - : 新しい `HTMLAudioElement` オブジェクトを作成し、返します。オプションとして、ファイルの URL が指定された場合は、音声ファイルを読み込む処理を開始します。
+
+## インスタンスプロパティ
 
 _固有のプロパティはありません。親である {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-## メソッド
+## インスタンスメソッド
 
 _{{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からメソッドを継承しています。_
-
-### コンストラクター
-
-#### 構文
-
-```
-mySound = new Audio([URLString]);
-```
-
-#### 説明
-
-audio 要素のコンストラクターです。返されるオブジェクトの `preload` プロパティは `auto` に設定され、 `src` プロパティは引数の値が設定されます。ブラウザーはオブジェクトを返す前、*非同期的に*リソースの選択を始めます。
-
-_メモ: `new Audio()` で作成された audio 要素は、音声を再生中にガベージコレクションされることはありません。 `pause()` メソッドが呼ばれるか、再生が終了するまで、再生を続けます。_
-
-#### 引数
-
-- `URLString` (期待される型: {{domxref("DOMString")}}; 任意)
-  - : 構築される `HTMLAudioElement` の `src` プロパティ
-
-### 通常メソッド
-
-| 名前と引数                                                                          | 返値                 | 説明                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `mozCurrentSampleOffset()` {{non-standard_inline}}                         | `unsigned long long` | `mozWriteAudio()` によって作成された音声ストリームの、現在のオフセットを示します。このオフセットは、ストリームの先頭からのサンプル番号で指定されます。                 |
-| `mozSetup(in PRUint32 channels, in PRUint32 rate)` {{non-standard_inline}} | `void`               | 書き込み用の音声ストリームを初期化します。引数でチャンネル数 (`1` でモノラル、 `2` でステレオ) とサンプリング周波数 (例えば 44.1kHz の場合は `44100`) を指定できます。 |
-| `mozWriteAudio(in jsval data)` {{non-standard_inline}}                     | `unsigned long`      | ストリームの現在のオフセットに音声を書き込みます。実際にストリームに書き込まれたバイト数を返します。                                                                   |
 
 ## 例
 
 ### 基本的な使用
 
-`HTMLAudioElement` を完全に JavaScript で生成します。
+{{domxref("HTMLAudioElement.Audio", "Audio()")}} を使用すると、`HTMLAudioElement` を完全に JavaScript で生成することができます。
 
-```
-var flush = new Audio('toilet_flush.wav');
-flush.play();
+```js
+const audioElement = new Audio("car_horn.wav");
 ```
 
-audio 要素でもっと一般的に使用されるプロパティとしては、 `src`, `currentTime`, `duration`, `paused`, `muted`, `volume` などがあります。
+それからこの要素に対して `play()` を呼び出すことができます。
 
+```js
+audioElement.play();
 ```
-var flush = new Audio('toilet_flush.wav');
-flush.addEventListener('loadeddata',() => {
-    var duration = flush.duration; // the duration variable now holds the duration (in seconds) of the audio clip
-})
+
+> **メモ:** よくあるのが、ページを読み込んだらすぐに audio 要素を再生しようとすることです。現代のブラウザーは、既定の自動再生ポリシーによって、このようなことが起こらないようにブロックしています。良い習慣と回避方法については、[Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) および [Chrome](https://developer.chrome.com/blog/autoplay/) のものを参照してください。
+
+audio 要素のプロパティとしてよく用いられるものには、{{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, {{domxref("HTMLMediaElement.volume", "volume")}} などがあります。このスニペットは、音声ファイルの再生時間を変数にコピーします。
+
+```js
+const audioElement = new Audio("car_horn.wav");
+audioElement.addEventListener("loadeddata", () => {
+  let duration = audioElement.duration;
+  // これで変数 duration に音声クリップの再生時間（2 つ目）が格納される
+});
 ```
+
+## イベント
+
+_親である {{domxref("HTMLMediaElement")}} およびその祖先である {{domxref("HTMLElement")}} からイベントを継承しています。_ イベントを待ち受けするには、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを代入してください。
 
 ## 仕様書
 
@@ -68,10 +64,10 @@ flush.addEventListener('loadeddata',() => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLAudioElement")}}
+{{Compat}}
 
 ## 関連情報
 
+- [ウェブメディア技術](/ja/docs/Web/Media)
+- [HTML での音声と動画の使用](/ja/docs/Web/Media/HTML_media)
 - このインタフェースを実装した HTML 要素: {{HTMLElement("audio")}}
-
-{{APIRef("HTML DOM")}}

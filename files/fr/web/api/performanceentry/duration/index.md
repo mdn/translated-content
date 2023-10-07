@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
-tags:
-  - API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceEntry/duration
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -59,7 +51,7 @@ function run_PerformanceEntry() {
 
   // Utilise getEntries() pour itérer à travers chaque entrée.
   let p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -68,15 +60,14 @@ function check_PerformanceEntry(obj) {
   let properties = ["name", "entryType", "startTime", "duration"];
   let methods = ["toJSON"];
 
-  for (let i=0; i < properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // check each property
     let supported = properties[i] in obj;
     if (supported)
       console.log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      console.log("..." + properties[i] + " = N'est pas pris en charge");
+    else console.log("..." + properties[i] + " = N'est pas pris en charge");
   }
-  for (let i=0; i < methods.length; i++) {
+  for (let i = 0; i < methods.length; i++) {
     // check each method
     let supported = typeof obj[methods[i]] == "function";
     if (supported) {

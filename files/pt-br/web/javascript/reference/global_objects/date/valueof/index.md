@@ -33,14 +33,12 @@ Este método é geralmente chamado internamente pelo JavaScript e não explícit
 
 ```js
 var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // atribui -424713600000 to myVar
+var myVar = x.valueOf(); // atribui -424713600000 to myVar
 ```
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

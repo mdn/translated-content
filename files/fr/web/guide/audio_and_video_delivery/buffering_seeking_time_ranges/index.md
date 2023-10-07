@@ -1,15 +1,6 @@
 ---
 title: Mémoire tampon, position, et plages de temps
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
-tags:
-  - Apps
-  - Buffer
-  - HTML5
-  - TimeRanges
-  - Video
-  - buffering
-  - seeking
-translation_of: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
 
 Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant [TimeRanges](/fr/docs/Web/API/TimeRanges), et d'autres fonctionnalités de l'API Media.
@@ -21,14 +12,13 @@ L'attribut `buffered` indique quelles parties du média ont été téléchargée
 Cela fonctionne avec {{htmlelement("audio") }} et {{htmlelement("video") }}; pour l'instant, considérons un simple exemple audio:
 
 ```html
-<audio id="my-audio" controls src="music.mp3">
-</audio>
+<audio id="my-audio" controls src="music.mp3"></audio>
 ```
 
 On accède à cet attribut ainsi:
 
 ```js
-var myAudio = document.getElementById('my-audio');
+var myAudio = document.getElementById("my-audio");
 
 var bufferedTimeRanges = myAudio.buffered;
 ```
@@ -55,11 +45,11 @@ Sans interraction utilisateur il y a généralement une seule plage de temps, ma
 Pour cette instance audio, l'objet {{ domxref("TimeRanges") }} associé aurait les propriétés suivantes:
 
 ```js
-myAudio.buffered.length;   // returns 2
+myAudio.buffered.length; // returns 2
 myAudio.buffered.start(0); // returns 0
-myAudio.buffered.end(0);   // returns 5
+myAudio.buffered.end(0); // returns 5
 myAudio.buffered.start(1); // returns 15
-myAudio.buffered.end(1);   // returns 19
+myAudio.buffered.end(1); // returns 19
 ```
 
 Pour essayer et visualiser les plages de temps en mémoire tampon, on peut écrire un peu d'HTML:
@@ -67,46 +57,43 @@ Pour essayer et visualiser les plages de temps en mémoire tampon, on peut écri
 ```html
 <p>
   <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
   </audio>
 </p>
 <p>
-  <canvas id="my-canvas" width="300" height="20">
-  </canvas>
+  <canvas id="my-canvas" width="300" height="20"> </canvas>
 </p>
 ```
 
 Et un peu de JavaScript:
 
 ```js
-  window.onload = function(){
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
+  var myCanvas = document.getElementById("my-canvas");
+  var context = myCanvas.getContext("2d");
 
-    var myAudio = document.getElementById('my-audio');
-    var myCanvas = document.getElementById('my-canvas');
-    var context = myCanvas.getContext('2d');
+  context.fillStyle = "lightgray";
+  context.fillRect(0, 0, myCanvas.width, myCanvas.height);
+  context.fillStyle = "red";
+  context.strokeStyle = "white";
 
-    context.fillStyle = 'lightgray';
-    context.fillRect(0, 0, myCanvas.width, myCanvas.height);
-    context.fillStyle = 'red';
-    context.strokeStyle = 'white';
+  var inc = myCanvas.width / myAudio.duration;
 
-    var inc = myCanvas.width / myAudio.duration;
+  // afficher TimeRanges
 
-    // afficher TimeRanges
+  myAudio.addEventListener("seeked", function () {
+    for (i = 0; i < myAudio.buffered.length; i++) {
+      var startX = myAudio.buffered.start(i) * inc;
+      var endX = myAudio.buffered.end(i) * inc;
+      var width = endX - startX;
 
-    myAudio.addEventListener('seeked', function() {
-      for (i = 0; i < myAudio.buffered.length; i++) {
-
-        var startX = myAudio.buffered.start(i) * inc;
-        var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
-
-        context.fillRect(startX, 0, width, myCanvas.height);
-        context.rect(startX, 0, width, myCanvas.height);
-        context.stroke();
-      }
-    });
-  }
+      context.fillRect(startX, 0, width, myCanvas.height);
+      context.rect(startX, 0, width, myCanvas.height);
+      context.stroke();
+    }
+  });
+};
 ```
 
 Cela fonctionne mieux avec les morceaux audio ou vidéo un peu plus longs, mais appuyez sur play et cliquez sur la barre de progression du lecteur et vous devriez obtenir quelque chose comme ci-dessous. Chaque rectangle rouge remplissant le rectangle blanc représente une plage de temps.
@@ -186,29 +173,35 @@ Nous utiliserons le CSS suivant pour styliser l'affichage de la mémoire tampon:
 Et le JavaScript suivant se charge notre fonctionnalité:
 
 ```js
-window.onload = function(){
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
 
-  var myAudio = document.getElementById('my-audio');
-
-  myAudio.addEventListener('progress', function() {
-    var duration =  myAudio.duration;
+  myAudio.addEventListener("progress", function () {
+    var duration = myAudio.duration;
     if (duration > 0) {
       for (var i = 0; i < myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
+        if (
+          myAudio.buffered.start(myAudio.buffered.length - 1 - i) <
+          myAudio.currentTime
+        ) {
+          document.getElementById("buffered-amount").style.width =
+            (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) *
+              100 +
+            "%";
+          break;
         }
+      }
     }
   });
 
-  myAudio.addEventListener('timeupdate', function() {
-    var duration =  myAudio.duration;
+  myAudio.addEventListener("timeupdate", function () {
+    var duration = myAudio.duration;
     if (duration > 0) {
-      document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+      document.getElementById("progress-amount").style.width =
+        (myAudio.currentTime / duration) * 100 + "%";
     }
   });
-}
+};
 ```
 
 L'événement `progress` est déclenché au fur et à mesure que les données sont téléchargées, cela nous permet de réagir pour afficher la progression du téléchargement ou de la mise en mémoire tampon.

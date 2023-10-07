@@ -119,7 +119,7 @@ function loadFile(url, timeout, callback, ...args) {
 使用方法は次の通りです。
 
 ```js
-function showMessage (message) {
+function showMessage(message) {
   console.log(`${message} ${this.responseText}`);
 }
 
@@ -140,7 +140,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ```js
 const request = new XMLHttpRequest();
-request.open('GET', '/bar/foo.txt', false);  // `false` で同期リクエストになる
+request.open("GET", "/bar/foo.txt", false); // `false` で同期リクエストになる
 request.send(null);
 
 if (request.status === 200) {
@@ -159,7 +159,7 @@ if (request.status === 200) {
 **`example.html`** (主ページ):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -192,7 +192,7 @@ Hello World!!
 self.onmessage = (event) => {
   if (event.data === "Hello") {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "myFile.txt", false);  // 同期リクエスト
+    xhr.open("GET", "myFile.txt", false); // 同期リクエスト
     xhr.send(null);
     self.postMessage(xhr.responseText);
   }
@@ -210,7 +210,7 @@ self.onmessage = (event) => {
 次の例は、 unload ハンドラー内で同期 {{domxref('XMLHttpRequest')}} を使用してサーバーにデータを送信することを試みる、実験的な分析コードを示しています。この結果、ページのアンロードに遅延が発生します。
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
   const client = new XMLHttpRequest();
@@ -225,7 +225,7 @@ function logData() {
 次の例は、 **`sendBeacon()`** メソッドを使用してサーバーにデータを送信する実験的な分析コードパターンを示しています。
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
   navigator.sendBeacon("/log", analyticsData);

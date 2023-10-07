@@ -1,5 +1,5 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
 ---
 
@@ -28,19 +28,19 @@ Este exemplo mostra um formulário básico de envio. Ele usa o evento [JavaScrip
 <form action="#">
   <fieldset id="shipping">
     <legend>Shipping address</legend>
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Address">
-    <input type="text" placeholder="Zip Code">
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Address" />
+    <input type="text" placeholder="Zip Code" />
   </fieldset>
-  <br>
+  <br />
   <fieldset id="billing">
     <legend>Billing address</legend>
     <label for="billing-checkbox">Same as shipping address:</label>
-    <input type="checkbox" id="billing-checkbox" checked>
-    <br>
-    <input type="text" placeholder="Name" disabled>
-    <input type="text" placeholder="Address" disabled>
-    <input type="text" placeholder="Zip Code" disabled>
+    <input type="checkbox" id="billing-checkbox" checked />
+    <br />
+    <input type="text" placeholder="Name" disabled />
+    <input type="text" placeholder="Address" disabled />
+    <input type="text" placeholder="Zip Code" disabled />
   </fieldset>
 </form>
 ```
@@ -57,10 +57,14 @@ input[type="text"]:disabled {
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', function () {
-  // Attach `change` event listener to checkbox
-  document.getElementById('billing-checkbox').onchange = toggleBilling;
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    // Attach `change` event listener to checkbox
+    document.getElementById("billing-checkbox").onchange = toggleBilling;
+  },
+  false,
+);
 
 function toggleBilling() {
   // Select the billing text fields
@@ -79,12 +83,12 @@ function toggleBilling() {
 
 ## Expecificações
 
-| Specification                                                                        | Status                               | Comment                                                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}} | {{Spec2('HTML WHATWG')}}     | No change.                                                  |
-| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}     | {{Spec2('HTML5 W3C')}}         | Defines the semantics of HTML and forms.                    |
+| Specification                                                   | Status                      | Comment                                                     |
+| --------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}}  | {{Spec2('HTML WHATWG')}}    | No change.                                                  |
+| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}    | {{Spec2('HTML5 W3C')}}      | Defines the semantics of HTML and forms.                    |
 | {{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS4 Selectors')}} | No change.                                                  |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}     | {{Spec2('CSS3 Basic UI')}} | Links to Selectors Level 3.                                 |
+| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}   | {{Spec2('CSS3 Basic UI')}}  | Links to Selectors Level 3.                                 |
 | {{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS3 Selectors')}} | Defines the pseudo-class, but not the associated semantics. |
 
 ## Compatibilidade com navegadores

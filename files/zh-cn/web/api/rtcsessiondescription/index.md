@@ -44,19 +44,25 @@ _`RTCSessionDescription` 不继承任何方法。_
 
 ```js
 signalingChannel.onmessage = function (evt) {
-    if (!pc)
-        start(false);
+  if (!pc) start(false);
 
-    var message = JSON.parse(evt.data);
-    if (message.sdp)
-        pc.setRemoteDescription(new RTCSessionDescription(message), function () {
-            // if we received an offer, we need to answer
-            if (pc.remoteDescription.type == "offer")
-                pc.createAnswer(localDescCreated, logError);
-        }, logError);
-    else
-        pc.addIceCandidate(new RTCIceCandidate(message.candidate),
-            function () {}, logError);
+  var message = JSON.parse(evt.data);
+  if (message.sdp)
+    pc.setRemoteDescription(
+      new RTCSessionDescription(message),
+      function () {
+        // if we received an offer, we need to answer
+        if (pc.remoteDescription.type == "offer")
+          pc.createAnswer(localDescCreated, logError);
+      },
+      logError,
+    );
+  else
+    pc.addIceCandidate(
+      new RTCIceCandidate(message.candidate),
+      function () {},
+      logError,
+    );
 };
 ```
 

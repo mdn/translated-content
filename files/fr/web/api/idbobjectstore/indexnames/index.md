@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.indexNames
 slug: Web/API/IDBObjectStore/indexNames
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBObjectStore/indexNames
 ---
 
 {{APIRef("IndexedDB")}}

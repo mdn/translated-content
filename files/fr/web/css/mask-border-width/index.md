@@ -1,12 +1,6 @@
 ---
 title: mask-border-width
 slug: Web/CSS/mask-border-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

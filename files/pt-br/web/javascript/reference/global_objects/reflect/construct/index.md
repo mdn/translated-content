@@ -47,11 +47,11 @@ Prior to the introduction of `Reflect`, objects could be constructed using an ar
 
 ```js
 function OneClass() {
-    this.name = 'one';
+  this.name = "one";
 }
 
 function OtherClass() {
-    this.name = 'other';
+  this.name = "other";
 }
 
 // Calling this:
@@ -77,12 +77,12 @@ When invoking `Reflect.construct()`, on the other hand, the `new.target` operato
 
 ```js
 function OneClass() {
-    console.log('OneClass');
-    console.log(new.target);
+  console.log("OneClass");
+  console.log(new.target);
 }
 function OtherClass() {
-    console.log('OtherClass');
-    console.log(new.target);
+  console.log("OtherClass");
+  console.log(new.target);
 }
 
 var obj1 = Reflect.construct(OneClass, args);
@@ -114,9 +114,9 @@ d.getFullYear(); // 1776
 
 ## Specifications
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Specification                                                          | Status               | Comment             |
+| ---------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-reflect.construct', 'Reflect.construct')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

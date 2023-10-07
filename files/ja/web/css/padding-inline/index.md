@@ -18,8 +18,8 @@ slug: Web/CSS/padding-inline
 
 ```css
 /* <length> 値 */
-padding-inline: 10px 20px;  /* 絶対的な長さ */
-padding-inline: 1em 2em;   /* テキストの大きさに対する相対値 */
+padding-inline: 10px 20px; /* 絶対的な長さ */
+padding-inline: 1em 2em; /* テキストの大きさに対する相対値 */
 padding-inline: 10px; /* 先頭と末尾の両方を設定 */
 
 /* <percentage> 値 */

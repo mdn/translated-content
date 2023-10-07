@@ -1,16 +1,6 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/blink
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -22,7 +12,7 @@ La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui a
 ## Syntaxe
 
 ```js
-str.blink()
+str.blink();
 ```
 
 ### Valeur de retour

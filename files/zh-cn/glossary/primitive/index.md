@@ -3,6 +3,8 @@ title: 基本类型
 slug: Glossary/Primitive
 ---
 
+{{GlossarySidebar}}
+
 在 {{Glossary("JavaScript")}} 中，**基本类型**（基本数值、基本数据类型）是一种既非{{Glossary("object", "对象")}}也无{{glossary("method","方法")}}或[属性](/zh-CN/docs/Glossary/property/JavaScript)的数据。有 7 种原始数据类型：
 
 - {{Glossary("string")}}

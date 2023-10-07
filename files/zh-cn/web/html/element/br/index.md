@@ -48,10 +48,10 @@ slug: Web/HTML/Element/br
 ## 示例
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 

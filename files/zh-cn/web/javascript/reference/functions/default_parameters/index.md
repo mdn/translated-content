@@ -31,19 +31,19 @@ function multiply(a, b) {
 }
 
 multiply(5, 2); // 10
-multiply(5);    // NaN !
+multiply(5); // NaN !
 ```
 
 为了防止这种情况，第二行代码解决了这个问题，其中如果只使用一个参数调用`multiply`，则`b`设置为`1`：
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
   return a * b;
 }
 
 multiply(5, 2); // 10
-multiply(5);    // 5
+multiply(5); // 5
 ```
 
 有了默认参数，我们不需要再在函数体内做不必要的检查。现在你可以在函数头将`b`的默认值置为`1`：
@@ -54,7 +54,7 @@ function multiply(a, b = 1) {
 }
 
 multiply(5, 2); // 10
-multiply(5);    // 5
+multiply(5); // 5
 ```
 
 ## 示例
@@ -68,12 +68,12 @@ function test(num = 1) {
   console.log(typeof num);
 }
 
-test();          // 'number' (num is set to 1)
+test(); // 'number' (num is set to 1)
 test(undefined); // 'number' (num is set to 1 too)
 
 // test with other falsy values:
-test('');        // 'string' (num is set to '')
-test(null);      // 'object' (num is set to null)
+test(""); // 'string' (num is set to '')
+test(null); // 'object' (num is set to null)
 ```
 
 ### 调用时解析
@@ -94,7 +94,7 @@ append(2); //[2], not [1, 2]
 
 ```js
 function callSomething(thing = something()) {
- return thing;
+  return thing;
 }
 
 let numberOfTimesCalled = 0;
@@ -112,23 +112,30 @@ callSomething(); // 2
 已经遇到的参数可用于以后的默认参数：
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
-    return [name, greeting, message];
+function greet(name, greeting, message = greeting + " " + name) {
+  return [name, greeting, message];
 }
 
-greet('David', 'Hi');  // ["David", "Hi", "Hi David"]
-greet('David', 'Hi', 'Happy Birthday!');  // ["David", "Hi", "Happy Birthday!"]
+greet("David", "Hi"); // ["David", "Hi", "Hi David"]
+greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
 ```
 
 以下这个例子近似模拟了一些比较简单的情况，并说明了特殊情况是怎么被处理的。
 
 ```js
 function go() {
-  return ':P';
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
   return [a, b, c, d, e, f, g];
 }
 
@@ -153,11 +160,10 @@ function withoutDefaults(a, b, c, d, e, f, g) {
   return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value: '=^_^='});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-
-withoutDefaults.call({value: '=^_^='});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -168,7 +174,9 @@ withoutDefaults.call({value: '=^_^='});
 ```js
 // Doesn't work! Throws ReferenceError.
 function f(a = go()) {
-  function go() { return ':P'; }
+  function go() {
+    return ":P";
+  }
 }
 ```
 
@@ -190,7 +198,7 @@ f(2); // [2, undefined]
 你可以通过[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)为参数赋值：
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
   return x + y + z;
 }
 

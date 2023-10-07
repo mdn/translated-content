@@ -30,9 +30,9 @@ _`PromiseRejectionEvent()` 构造函数继承了 {{domxref("Event.Event", "Event
 ## 例子
 
 ```js
-var myRejectionEvent = new PromiseRejectionEvent('unhandledrejection', {
-  promise : myPromise,
-  reason : 'My house is on fire'
+var myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
+  promise: myPromise,
+  reason: "My house is on fire",
 });
 ```
 

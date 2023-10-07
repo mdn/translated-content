@@ -144,7 +144,7 @@ Si estás más interesado en el código, puedes probar lo siguiente:
 - [Envía un parche al código base de Yari](https://github.com/mdn/yari) (1 hora)
 - [Escribe un ejemplo interactivo](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md) (1 hora)
 
-Si estás interesado en las palabras *y* el código, puede intentar lo siguiente:
+Si estás interesado en las palabras _y_ el código, puede intentar lo siguiente:
 
 - [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos a 2 horas, o más)
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)

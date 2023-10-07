@@ -48,7 +48,7 @@ CSS 中存在一些直观和不是太直观能感受到的限制规则影响着�
 下面的代码片段将在样式表 `myStyle` 的顶部插入一条新规则：
 
 ```js
- myStyle.insertRule("#blanc { color: white }", 0);
+myStyle.insertRule("#blanc { color: white }", 0);
 ```
 
 ### 实现一个添加样式表规则的函数
@@ -71,31 +71,36 @@ addStylesheetRules([
   ]
 ]);
  */
-function addStylesheetRules (decls) {
-    var style = document.createElement('style');
-    document.getElementsByTagName('head')[0].appendChild(style);
-    if (!window.createPopup) { /* For Safari */
-       style.appendChild(document.createTextNode(''));
+function addStylesheetRules(decls) {
+  var style = document.createElement("style");
+  document.getElementsByTagName("head")[0].appendChild(style);
+  if (!window.createPopup) {
+    /* For Safari */
+    style.appendChild(document.createTextNode(""));
+  }
+  var s = document.styleSheets[document.styleSheets.length - 1];
+  for (var i = 0, dl = decls.length; i < dl; i++) {
+    var j = 1,
+      decl = decls[i],
+      selector = decl[0],
+      rulesStr = "";
+    if (Object.prototype.toString.call(decl[1][0]) === "[object Array]") {
+      decl = decl[1];
+      j = 0;
     }
-    var s = document.styleSheets[document.styleSheets.length - 1];
-    for (var i=0, dl = decls.length; i < dl; i++) {
-        var j = 1, decl = decls[i], selector = decl[0], rulesStr = '';
-        if (Object.prototype.toString.call(decl[1][0]) === '[object Array]') {
-            decl = decl[1];
-            j = 0;
-        }
-        for (var rl=decl.length; j < rl; j++) {
-            var rule = decl[j];
-            rulesStr += rule[0] + ':' + rule[1] + (rule[2] ? ' !important' : '') + ';\n';
-        }
+    for (var rl = decl.length; j < rl; j++) {
+      var rule = decl[j];
+      rulesStr +=
+        rule[0] + ":" + rule[1] + (rule[2] ? " !important" : "") + ";\n";
+    }
 
-        if (s.insertRule) {
-            s.insertRule(selector + '{' + rulesStr + '}', s.cssRules.length);
-        }
-        else { /* IE */
-            s.addRule(selector, rulesStr, -1);
-        }
+    if (s.insertRule) {
+      s.insertRule(selector + "{" + rulesStr + "}", s.cssRules.length);
+    } else {
+      /* IE */
+      s.addRule(selector, rulesStr, -1);
     }
+  }
 }
 ```
 

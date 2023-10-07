@@ -17,10 +17,10 @@ let bool = event.cancelBubble;
 ## 用例
 
 ```js
-ele.onclick = function(e) {
+ele.onclick = function (e) {
   // 在这儿可以做点儿有趣的事情
   e.cancelBubble = true;
-}
+};
 ```
 
 ## 规范

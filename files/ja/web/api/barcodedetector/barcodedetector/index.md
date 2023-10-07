@@ -27,13 +27,15 @@ new BarcodeDetector();
 
 ```js
 // 新しい検出器を生成
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+var barcodeDetector = new BarcodeDetector({
+  formats: ["code_39", "codabar", "ean_13"],
+});
 
 // 互換性のチェック
 if (barcodeDetector) {
-  console.log('Barcode Detector に対応しています。');
+  console.log("Barcode Detector に対応しています。");
 } else {
-  console.log('Barcode Detector はこのブラウザーでは対応していません。');
+  console.log("Barcode Detector はこのブラウザーでは対応していません。");
 }
 ```
 

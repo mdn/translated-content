@@ -12,10 +12,10 @@ La función **`Math.max()`** retorna el mayor de cero o más números dados como
 ## Sintaxis
 
 ```js
-Math.max()
-Math.max(valor0)
-Math.max(valor0, valor1)
-Math.max(valor0, valor1, /* ... ,*/ valorN)
+Math.max();
+Math.max(valor0);
+Math.max(valor0, valor1);
+Math.max(valor0, valor1, /* ... ,*/ valorN);
 ```
 
 ### Parámetros
@@ -45,9 +45,9 @@ Si al menos uno de los argumentos no puede ser convertido a número, el resultad
 ### Usando Math.max()
 
 ```js
-Math.max(10, 20);   //  20
+Math.max(10, 20); //  20
 Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20
+Math.max(-10, 20); //  20
 ```
 
 ### Obteniendo el elemento máximo de un arreglo
@@ -56,9 +56,9 @@ Se puede usar {{jsxref("Array.prototype.reduce", "Array.reduce()")}} para encont
 elemento máximo en un arreglo numérico, comparando cada valor:
 
 ```js
-var arr = [1,2,3];
-var max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
+var arr = [1, 2, 3];
+var max = arr.reduce(function (a, b) {
+  return Math.max(a, b);
 }, -Infinity);
 ```
 

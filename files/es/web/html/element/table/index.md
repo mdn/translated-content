@@ -1,7 +1,6 @@
 ---
 title: tabla
 slug: Web/HTML/Element/table
-original_slug: Web/HTML/Elemento/table
 ---
 
 ## Resumen
@@ -68,7 +67,7 @@ El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensione
 
 Al igual que otros elementos HTML, este elemento también soporta [atributos globales](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
 
   - : Este atributo enumerativo indica como va a encontrarse alineada la tabla respecto al contenido del documento en cuestión, pudiendo tener los siguientes valores:
 
@@ -83,7 +82,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : Este atributo define el color de fondo de la tabla . Es un código hexadecimal como el dado en el formato [sRGB](http://www.w3.org/Graphics/Color/sRGB) (bajo el prefijo '#'). Uno de los 16 colores predefinidos podía ser usado:
 
@@ -101,7 +100,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("border")}} {{Deprecated_inline}}
+- `border` {{Deprecated_inline}}
 
   - : Este atributo entero define el tamaño del cuadro alrededor de la tabla . Si estuviese puesta en 0, implicaría que dicho atributo sería nulo.
 
@@ -109,7 +108,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
+- `cellpadding` {{Deprecated_inline}}
 
   - : Este atributo define el espacio entre el contenido de una celda y su borde (mostrado o no), si fuese la longitud de un pixel, dicho espacio será aplicado en los 4 costados, caso que fuese un porcentaje, el contenido será centrado y todo el espacio vertical representará a este porcentaje. Lo mismo será válido para todo el espacio horizontal
 
@@ -117,7 +116,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
+- `cellspacing` {{Deprecated_inline}}
 
   - : Este atributo define el espacio entre el contenido de una celda y su borde (mostrado o no), si fuese la longitud de un pixel, dicho espacio será aplicado en los 4 costados, caso que fuese un porcentaje, el contenido será centrado y todo el espacio vertical representará a este porcentaje. Lo mismo será válido para todo el espacio horizontal.
 
@@ -125,7 +124,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("frame")}} {{Deprecated_inline}}
+- `frame` {{Deprecated_inline}}
 
   - : Este atributo enumerativo define cual lado del cuadro alrededor de la tabla será mostrada. Puede tener los siguientes valores:
 
@@ -140,7 +139,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("rules")}} {{Deprecated_inline}}
+- `rules` {{Deprecated_inline}}
 
   - : Este atributo enumerativo define donde aparecen las reglas en la tabla, por ejemplo líneas. Puede tener los siguientes valores:
 
@@ -157,7 +156,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("summary")}} {{Deprecated_inline}}
+- `summary` {{Deprecated_inline}}
 
   - : Este atributo define un texto alternativo para describir una tabla en un usuario incapaz de mostrarlo, corrientemente contiene una descripcion de él que posibilita a discapacitaos visulaes (como invidentes navegando en pantallas braile) a obtener la información que necesitan.Si la información añadida en este atributo puede ser útil a otras personas, considere el utilizar el elemento {{HTMLElement("caption")}} en vez de este. instead. El atributo de resumen no es obligatorio usuarlo, pudiendo ser omitido si un elemento {{HTMLElement("caption")}} realiza similar labor.
 
@@ -172,7 +171,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
 <!---->
 
-- {{htmlattrdef("width")}} {{Deprecated_inline}}
+- `width` {{Deprecated_inline}}
 
   - : Este atributo define el ancho de una tabla, pudiendo contener una longitud de píxeles o un porcentaje, que representa un porcentaje de anchura del contenedor que la tabla debiera usar.
 
@@ -261,8 +260,8 @@ Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTable
 <!-- Table with colgroup and col -->
 <table>
   <colgroup>
-    <col class="column1">
-    <col class="columns2plus3" span="2">
+    <col class="column1" />
+    <col class="columns2plus3" span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -278,7 +277,9 @@ Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTable
 
 <!-- Simple table with caption -->
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -293,7 +294,8 @@ table {
   width: 100%;
   margin-top: 1rem;
 }
-td, th {
+td,
+th {
   border: 1px solid black;
 }
 ```

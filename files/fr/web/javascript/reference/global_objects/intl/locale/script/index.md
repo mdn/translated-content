@@ -1,14 +1,6 @@
 ---
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/script
 ---
 
 {{JSRef}}
@@ -36,7 +28,7 @@ console.log(scriptStr.script); // Affichera "Latn" dans la console
 Le constructeur {{jsxref("Locale", "Locale")}} permet d'utiliser un objet de configuration dont les propriétés définiront les caractéristiques de la locale :
 
 ```js
-let scriptObj = new Intl.Locale("fr-FR", {script: "Latn"});
+let scriptObj = new Intl.Locale("fr-FR", { script: "Latn" });
 
 console.log(scriptObj.script); // Affichera "Latn" dans la console
 ```

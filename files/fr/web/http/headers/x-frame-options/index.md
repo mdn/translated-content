@@ -1,8 +1,6 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
-browser-compat: http.headers.X-Frame-Options
 ---
 
 {{HTTPSidebar}}
@@ -115,7 +113,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Si on utilise Express, on pourra utiliser le module [helmet](https://helmetjs.github.io/) qui tire parti de [frameguard](https://helmetjs.github.io/docs/frameguard/) afin de régler l'en-tête `X-Frame-Options`. Ajoutez ceci à la configuration serveur&nbsp;:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
 app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
@@ -123,8 +121,8 @@ app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 On pourra également utiliser [frameguard](https://helmetjs.github.io/docs/frameguard/) directement&nbsp;:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Spécifications

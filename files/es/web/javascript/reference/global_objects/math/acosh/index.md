@@ -1,7 +1,6 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acosh
 ---
 
 {{JSRef}}
@@ -34,11 +33,11 @@ Como `acosh()` es un método estático de `Math`, siempre debe ser usado como `M
 ### Utilizando `Math.acosh()`
 
 ```js
-Math.acosh(-1);  // NaN
-Math.acosh(0);   // NaN
+Math.acosh(-1); // NaN
+Math.acosh(0); // NaN
 Math.acosh(0.5); // NaN
-Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166
+Math.acosh(1); // 0
+Math.acosh(2); // 1.3169578969248166
 ```
 
 Para valores menores que 1 `Math.acosh()` retorna {{jsxref("NaN")}}.
@@ -48,9 +47,11 @@ Para valores menores que 1 `Math.acosh()` retorna {{jsxref("NaN")}}.
 Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x mayor ó igual a 1</annotation></semantics></math>, se tiene que el arcosh(x) <math><semantics><annotation encoding="TeX">= ln(x + la raiz cuadrada de(x cuadrado - 1)) </annotation></semantics></math> y esto puede ser emulado con la siguiente funcion:
 
 ```js
-Math.acosh = Math.acosh || function(x) {
-  return Math.log(x + Math.sqrt(x * x - 1));
-};
+Math.acosh =
+  Math.acosh ||
+  function (x) {
+    return Math.log(x + Math.sqrt(x * x - 1));
+  };
 ```
 
 ## Especificaciones

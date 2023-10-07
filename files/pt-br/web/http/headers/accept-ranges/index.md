@@ -44,8 +44,8 @@ Accept-Ranges: bytes
 
 ## Especificações
 
-| Especificação                                        | Título                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------ |
+| Especificação                           | Título                                                 |
+| --------------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "Accept-Ranges", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores

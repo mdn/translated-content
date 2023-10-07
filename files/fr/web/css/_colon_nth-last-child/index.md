@@ -1,11 +1,6 @@
 ---
-title: ':nth-last-child'
+title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:nth-last-child
 ---
 
 {{CSSRef}}
@@ -57,9 +52,10 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 
 ```css
 table {
-  border:1px solid blue;
+  border: 1px solid blue;
 }
-tr:nth-last-child(-n+3) { /* les trois derniers enfants */
+tr:nth-last-child(-n + 3) {
+  /* les trois derniers enfants */
   background-color: lime;
 }
 ```
@@ -73,16 +69,16 @@ tr:nth-last-child(-n+3) { /* les trois derniers enfants */
       <td>Première ligne</td>
     </tr>
     <tr>
-       <td>Deuxième ligne</td>
+      <td>Deuxième ligne</td>
     </tr>
     <tr>
-       <td>Troisième ligne</td>
+      <td>Troisième ligne</td>
     </tr>
     <tr>
-       <td>Quatrième ligne</td>
+      <td>Quatrième ligne</td>
     </tr>
     <tr>
-       <td>Sixième ligne</td>
+      <td>Sixième ligne</td>
     </tr>
   </tbody>
 </table>
@@ -121,7 +117,7 @@ tr:nth-last-child(n) {
   background-color: lightgray;
 }
 
-tr:nth-last-child(n+1){
+tr:nth-last-child(n + 1) {
   font-weight: 600;
 }
 ```
@@ -130,7 +126,7 @@ tr:nth-last-child(n+1){
 
 {{EmbedLiveSample('Cas_aux_limites')}}
 
-### Mise en forme selon le nombre d’éléments
+### Mise en forme selon le nombre d'éléments
 
 Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le nombre d'éléments qu'elle contient. Dans l'exemple qui suit, on met les éléments de la liste en rouge si celle-ci contient au moins trois éléments. Pour cela, on combine la pseudo-classe `nth-last-child` et [le sélecteur de voisins généraux (_general sibling combinator_)](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux).
 
@@ -155,15 +151,15 @@ Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le
 #### CSS
 
 ```css
-li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
   color: red;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Mise_en_forme_selon_le_nombre_d’éléments", '100%', 270)}}
+{{EmbedLiveSample("Mise_en_forme_selon_le_nombre_d'éléments", '100%', 270)}}
 
 ## Spécifications
 

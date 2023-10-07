@@ -39,11 +39,12 @@ if ("serviceWorker" in navigator) {
       registration.unregister().then((boolean) => {
         // boolean = true ならば、登録解除は成功
       });
-    }).catch(function(error) {
+    })
+    .catch(function (error) {
       // 登録に失敗しました
       console.error(`登録に失敗しました: ${error}`);
     });
-};
+}
 ```
 
 ## 仕様書

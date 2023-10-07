@@ -18,12 +18,7 @@ slug: Web/API/WebGL_API/Matrix_math_for_the_web
 単位行列は JavaScript では次のようになります。
 
 ```js
-let identityMatrix = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1
-];
+let identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 ```
 
 単位行列の乗算とはどのようなものでしょうか？ 最も簡単な例は、単一の点に単位行列を乗算することです。 3D の点に必要なのは 3 つの値（x、y、z）だけであり、変換行列は 4x4 の値の行列なので、点には 4 番目の次元を追加する必要があります。 慣例により、この次元は**パースペクティブ**（perspective）と呼ばれ、文字 w で表されます。 一般的には、w を 1 に設定すると、計算がうまくいきます。
@@ -31,12 +26,7 @@ let identityMatrix = [
 w 成分を点に追加した後、行列と点がどのようにきれいに並んでいるかに注目してください。
 
 ```js
-[1, 0, 0, 0,
- 0, 1, 0, 0,
- 0, 0, 1, 0,
- 0, 0, 0, 1]
-
-[4, 3, 2, 1]  // Point at [x, y, z, w]
+[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1][(4, 3, 2, 1)]; // Point at [x, y, z, w]
 ```
 
 w 成分には、この記事の範囲外のいくつかの追加の用途があります。 [WebGL モデルビュー投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)に関する記事を調べて、どのように役立つかを覗いてみてください。
@@ -49,10 +39,22 @@ w 成分には、この記事の範囲外のいくつかの追加の用途があ
 // 点 • 行列
 function multiplyMatrixAndPoint(matrix, point) {
   // 行列の各部分に、列 c、行 r の番号で単純な変数名を付けます
-  let c0r0 = matrix[ 0], c1r0 = matrix[ 1], c2r0 = matrix[ 2], c3r0 = matrix[ 3];
-  let c0r1 = matrix[ 4], c1r1 = matrix[ 5], c2r1 = matrix[ 6], c3r1 = matrix[ 7];
-  let c0r2 = matrix[ 8], c1r2 = matrix[ 9], c2r2 = matrix[10], c3r2 = matrix[11];
-  let c0r3 = matrix[12], c1r3 = matrix[13], c2r3 = matrix[14], c3r3 = matrix[15];
+  let c0r0 = matrix[0],
+    c1r0 = matrix[1],
+    c2r0 = matrix[2],
+    c3r0 = matrix[3];
+  let c0r1 = matrix[4],
+    c1r1 = matrix[5],
+    c2r1 = matrix[6],
+    c3r1 = matrix[7];
+  let c0r2 = matrix[8],
+    c1r2 = matrix[9],
+    c2r2 = matrix[10],
+    c3r2 = matrix[11];
+  let c0r3 = matrix[12],
+    c1r3 = matrix[13],
+    c2r3 = matrix[14],
+    c3r3 = matrix[15];
 
   // 次に、点にある単純な名前を設定します
   let x = point[0];
@@ -61,16 +63,16 @@ function multiplyMatrixAndPoint(matrix, point) {
   let w = point[3];
 
   // 1番目の列の各部分に対して点を乗算し、次に合計します
-  let resultX = (x * c0r0) + (y * c0r1) + (z * c0r2) + (w * c0r3);
+  let resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
 
   // 2番目の列の各部分に対して点を乗算し、次に合計します
-  let resultY = (x * c1r0) + (y * c1r1) + (z * c1r2) + (w * c1r3);
+  let resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
 
   // 3番目の列の各部分に対して点を乗算し、次に合計します
-  let resultZ = (x * c2r0) + (y * c2r1) + (z * c2r2) + (w * c2r3);
+  let resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
 
   // 4番目の列の各部分に対して点を乗算し、次に合計します
-  let resultW = (x * c3r0) + (y * c3r1) + (z * c3r2) + (w * c3r3);
+  let resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
 
   return [resultX, resultY, resultZ, resultW];
 }
@@ -93,9 +95,9 @@ let identityResult = multiplyMatrixAndPoint(identityMatrix, [4, 3, 2, 1]);
 // 行列B • 行列A
 function multiplyMatrices(matrixA, matrixB) {
   // 2番目の行列を行にスライスします
-  let row0 = [matrixB[ 0], matrixB[ 1], matrixB[ 2], matrixB[ 3]];
-  let row1 = [matrixB[ 4], matrixB[ 5], matrixB[ 6], matrixB[ 7]];
-  let row2 = [matrixB[ 8], matrixB[ 9], matrixB[10], matrixB[11]];
+  let row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
+  let row1 = [matrixB[4], matrixB[5], matrixB[6], matrixB[7]];
+  let row2 = [matrixB[8], matrixB[9], matrixB[10], matrixB[11]];
   let row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
 
   // 各行に行列Aを掛けます
@@ -106,10 +108,22 @@ function multiplyMatrices(matrixA, matrixB) {
 
   // 結果の行を単一の行列に戻します
   return [
-    result0[0], result0[1], result0[2], result0[3],
-    result1[0], result1[1], result1[2], result1[3],
-    result2[0], result2[1], result2[2], result2[3],
-    result3[0], result3[1], result3[2], result3[3]
+    result0[0],
+    result0[1],
+    result0[2],
+    result0[3],
+    result1[0],
+    result1[1],
+    result1[2],
+    result1[3],
+    result2[0],
+    result2[1],
+    result2[2],
+    result2[3],
+    result3[0],
+    result3[1],
+    result3[2],
+    result3[3],
   ];
 }
 ```
@@ -117,19 +131,9 @@ function multiplyMatrices(matrixA, matrixB) {
 この関数の動作を見てみましょう。
 
 ```js
-let someMatrix = [
-  4, 0, 0, 0,
-  0, 3, 0, 0,
-  0, 0, 5, 0,
-  4, 8, 4, 1
-]
+let someMatrix = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1];
 
-let identityMatrix = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1
-];
+let identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
 // someMatrix と同等の新しい配列を返します
 let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
@@ -148,12 +152,7 @@ let x = 50;
 let y = 100;
 let z = 0;
 
-let translationMatrix = [
-    1,    0,    0,   0,
-    0,    1,    0,   0,
-    0,    0,    1,   0,
-    x,    y,    z,   1
-];
+let translationMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, x, y, z, 1];
 ```
 
 3 つの軸に沿った距離を平行移動行列の対応する位置に配置し、3D 空間を移動するために必要な点または行列に掛けます。
@@ -163,7 +162,7 @@ let translationMatrix = [
 行列を使い始める本当に簡単な方法は、CSS {{cssxref("transform-function/matrix3d","matrix3d()")}} {{cssxref("transform")}} を使用することです。 まず、コンテンツを含む単純な {{htmlelement("div")}} を設定します。 スタイルは示しませんが、幅と高さが固定され、ページの中央に配置されます。 `<div>` には transform 用の遷移セットがあるため、何が行われているかを簡単に確認できるように行列がアニメーション化されます。
 
 ```html
-<div id='move-me' class='transformable'>
+<div id="move-me" class="transformable">
   <h2>Move me with a matrix</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
 </div>
@@ -174,11 +173,11 @@ let translationMatrix = [
 ```js
 // 行列の配列から matrix3d スタイルプロパティを作成します
 function matrixArrayToCssMatrix(array) {
-  return 'matrix3d(' + array.join(',') + ')';
+  return "matrix3d(" + array.join(",") + ")";
 }
 
 // DOM 要素を取得します
-let moveMe = document.getElementById('move-me');
+let moveMe = document.getElementById("move-me");
 
 // 次のような結果を返します: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1);"
 let matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
@@ -200,14 +199,9 @@ moveMe.style.transform = matrix3dRule;
 ```js
 let w = 1.5; // width  (x)
 let h = 0.7; // height (y)
-let d = 1;   // depth  (z)
+let d = 1; // depth  (z)
 
-let scaleMatrix = [
-    w,    0,    0,   0,
-    0,    h,    0,   0,
-    0,    0,    d,   0,
-    0,    0,    0,   1
-];
+let scaleMatrix = [w, 0, 0, 0, 0, h, 0, 0, 0, 0, d, 0, 0, 0, 0, 1];
 ```
 
 [JSFiddle で観る](https://jsfiddle.net/fndd6e1b)
@@ -232,7 +226,7 @@ let rotationInRadians = Math.PI / 3;
 
 let transformedPoint = [
   Math.cos(rotationInRadians) * distance,
-  Math.sin(rotationInRadians) * distance
+  Math.sin(rotationInRadians) * distance,
 ];
 ```
 
@@ -249,10 +243,22 @@ let a = Math.PI * 0.3; // ラジアンでの回転量
 
 // Z 軸を中心に回転
 let rotateZMatrix = [
-  cos(a), -sin(a),    0,    0,
-  sin(a),  cos(a),    0,    0,
-       0,       0,    1,    0,
-       0,       0,    0,    1
+  cos(a),
+  -sin(a),
+  0,
+  0,
+  sin(a),
+  cos(a),
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
 ];
 ```
 
@@ -264,30 +270,15 @@ let rotateZMatrix = [
 
 ```js
 function rotateAroundXAxis(a) {
-  return [
-       1,       0,        0,     0,
-       0,  cos(a),  -sin(a),     0,
-       0,  sin(a),   cos(a),     0,
-       0,       0,        0,     1
-  ];
+  return [1, 0, 0, 0, 0, cos(a), -sin(a), 0, 0, sin(a), cos(a), 0, 0, 0, 0, 1];
 }
 
 function rotateAroundYAxis(a) {
-  return [
-     cos(a),   0, sin(a),   0,
-          0,   1,      0,   0,
-    -sin(a),   0, cos(a),   0,
-          0,   0,      0,   1
-  ];
+  return [cos(a), 0, sin(a), 0, 0, 1, 0, 0, -sin(a), 0, cos(a), 0, 0, 0, 0, 1];
 }
 
 function rotateAroundZAxis(a) {
-  return [
-    cos(a), -sin(a),    0,    0,
-    sin(a),  cos(a),    0,    0,
-         0,       0,    1,    0,
-         0,       0,    0,    1
-  ];
+  return [cos(a), -sin(a), 0, 0, sin(a), cos(a), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 }
 ```
 
@@ -311,9 +302,9 @@ function rotateAroundZAxis(a) {
 
 ```js
 let transformMatrix = MDN.multiplyArrayOfMatrices([
-  rotateAroundZAxis(Math.PI * 0.5),    // ステップ 3: 90度回転
-  translate(0, 200, 0),                // ステップ 2: 100ピクセル下に移動
-  scale(0.8, 0.8, 0.8),                // ステップ 1: 縮小
+  rotateAroundZAxis(Math.PI * 0.5), // ステップ 3: 90度回転
+  translate(0, 200, 0), // ステップ 2: 100ピクセル下に移動
+  scale(0.8, 0.8, 0.8), // ステップ 1: 縮小
 ]);
 ```
 
@@ -325,12 +316,12 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
 
 ```js
 let transformMatrix = MDN.multiplyArrayOfMatrices([
-  scale(1.25, 1.25, 1.25),             // ステップ 6: 縮小を元に戻す
-  translate(0, -200, 0),               // ステップ 5: 移動を元に戻す
-  rotateAroundZAxis(-Math.PI * 0.5),   // ステップ 4: 回転を元に戻す
-  rotateAroundZAxis(Math.PI * 0.5),    // ステップ 3: 90度回転
-  translate(0, 200, 0),                // ステップ 2: 100ピクセル下に移動
-  scale(0.8, 0.8, 0.8),                // ステップ 1: 縮小
+  scale(1.25, 1.25, 1.25), // ステップ 6: 縮小を元に戻す
+  translate(0, -200, 0), // ステップ 5: 移動を元に戻す
+  rotateAroundZAxis(-Math.PI * 0.5), // ステップ 4: 回転を元に戻す
+  rotateAroundZAxis(Math.PI * 0.5), // ステップ 3: 90度回転
+  translate(0, 200, 0), // ステップ 2: 100ピクセル下に移動
+  scale(0.8, 0.8, 0.8), // ステップ 1: 縮小
 ]);
 ```
 

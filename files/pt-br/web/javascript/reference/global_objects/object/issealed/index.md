@@ -42,14 +42,14 @@ Object.isSealed(empty); // === true
 
 // O mesmo não é verdadeiro em um objeto "não vazio",
 // a não ser que todas as suas propriedades sejam "não configuráveis".
-var hasProp = { fee: 'fie foe fum' };
+var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
 // Mas torne-os todos "não configuráveis"
 // e o objeto se tornará selado.
-Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+Object.defineProperty(hasProp, "fee", {
+  configurable: false,
 });
 Object.isSealed(hasProp); // === true
 
@@ -71,7 +71,11 @@ var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false
 // ('p' continua "escrevível")
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 Object.isFrozen(s3); // === true
 // (somente a configurabilidade importa nos assessores de propriedade)
 ```
@@ -90,10 +94,10 @@ Object.isSealed(1);
 
 ## Especificações
 
-| Especificação                                                                            | Estado                       | Comentário                                           |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.11', 'Object.isSealed')}}             | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}     | {{Spec2('ES6')}}         |                                                      |
+| Especificação                                                      | Estado               | Comentário                                           |
+| ------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.11', 'Object.isSealed')}}         | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

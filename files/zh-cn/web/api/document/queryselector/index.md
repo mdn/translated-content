@@ -26,7 +26,7 @@ element = document.querySelector(selectors);
 
 表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。
 
-如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
+如果你需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
 
 ### 异常
 
@@ -48,15 +48,15 @@ CSS 伪类不会返回任何元素，见 [Selectors API](https://www.w3.org/TR/s
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar')               // "#fooar"
-  document.querySelector('#foo\bar')    // 不匹配任何元素
+  console.log("#foo\bar"); // "#fooar"
+  document.querySelector("#foo\bar"); // 不匹配任何元素
 
-  console.log('#foo\\bar')              // "#foo\bar"
-  console.log('#foo\\\\bar')            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar') // 匹配第一个 div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // 匹配第一个 div
 
-  document.querySelector('#foo:bar')    // 不匹配任何元素
-  document.querySelector('#foo\\:bar')  // 匹配第二个 div
+  document.querySelector("#foo:bar"); // 不匹配任何元素
+  document.querySelector("#foo\\:bar"); // 匹配第二个 div
 </script>
 ```
 

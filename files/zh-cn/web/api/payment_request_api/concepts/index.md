@@ -59,9 +59,9 @@ slug: Web/API/Payment_Request_API/Concepts
 具体的认证方式由交易处理机决定，也完全可以省去这种认证。最终，网站或应用唯一要做的就是就是获取商家的认证密钥并传输给 {{domxref("MerchantValidationEvent.complete", "complete()")}} 事件的方法。
 
 ```js
-paymentRequest.onmerchantvalidation = function(event) {
+paymentRequest.onmerchantvalidation = function (event) {
   event.complete(fetchValidationData(event.validationURL));
-}
+};
 ```
 
 在这个例子中，由`fetchValidationData()`方法加载由`validationURL`提供的认证信息。要注意到的是，这个方法必须由商家服务器转发，因为通常情况下，客户端不会主动访问用于认证的 URL。

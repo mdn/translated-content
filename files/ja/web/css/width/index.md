@@ -126,8 +126,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
@@ -144,7 +144,7 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
   width: min-content;
 }

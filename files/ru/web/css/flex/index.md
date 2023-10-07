@@ -1,7 +1,6 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
 
 {{CSSRef}}
@@ -80,15 +79,15 @@ flex: unset;
 
 ```html
 <div id="flex-container">
-    <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-    <div class="raw-item" id="raw">Raw box</div>
+  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+  <div class="raw-item" id="raw">Raw box</div>
 </div>
 ```
 
 ```js hidden
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```

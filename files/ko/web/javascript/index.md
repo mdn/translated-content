@@ -9,7 +9,7 @@ l10n:
 
 **JavaScript** (**JS**)는 가벼운, 인터프리터 혹은 [just-in-time](https://ko.wikipedia.org/wiki/JIT_%EC%BB%B4%ED%8C%8C%EC%9D%BC) 컴파일 프로그래밍 언어로, {{Glossary("First-class Function", "일급 함수")}}를 지원합니다. 웹 페이지를 위한 스크립트 언어로 잘 알려져 있지만, {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/), [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html)처럼 [많은 비 브라우저 환경](https://en.wikipedia.org/wiki/JavaScript#Other_usage)에서도 사용하고 있습니다. JavaScript는 {{Glossary("Prototype-based programming", "프로토타입 기반")}}, 다중 패러다임, [단일 스레드](/ko/docs/Glossary/Thread), [동적](/ko/docs/Glossary/Dynamic_typing) 언어로, 객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다.
 
-JavaScript의 동적 기능에는 런타임 객체 구성, 변수 매개변수 목록, 함수 변수, ([`eval`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 통한) 동적 스크립트 생성, ([`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 및 [`Object` 유틸리티](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#정적_메서드)를 통한) 객체 검사 그리고 소스 코드 복구(JavaScript 함수는 소스 텍스트를 저장하고 [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)을 통해 다시 찾을 수 있습니다.)가 있습니다.
+JavaScript의 동적 기능에는 런타임 객체 구성, 변수 매개변수 목록, 함수 변수, ([`eval`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 통한) 동적 스크립트 생성, ([`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 및 [`Object` 유틸리티](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#정적_메서드)를 통한) 객체 검사 그리고 소스 코드 복구(JavaScript 함수는 소스 텍스트를 저장하고 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)을 통해 다시 찾을 수 있습니다.)가 있습니다.
 
 이 섹션은 JavaScript 언어 자체를 다루며 웹 페이지 또는 다른 사용 환경에 대해 다루지 않습니다. 웹 페이지의 특정 {{Glossary("API","API")}}에 대한 정보를 알고 싶다면, [웹 API](/ko/docs/Web/API)와 {{Glossary("DOM")}}을 참고하시기 바랍니다.
 

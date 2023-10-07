@@ -12,11 +12,11 @@ O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de 
 ## Contexto de uso
 
 | [Content categories](/pt-BR/HTML/Content_categories) | [flow content](/pt-BR/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content), [Labelable](/pt-BR/HTML/Content_categories#form-labelable) [Form-associated content](/pt-BR/HTML/Content_categories#form-associated) |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido                                                             | [Phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content), mas nenhum elemento `meter` descendente.                                                                                                                                                                                                                                                                                    |
-| Tag omission                                                                   | Nenhuma, ambas as tags iniciais e finais são obrigatórias.                                                                                                                                                                                                                                                                                                                                                                                  |
-| Elementos pais permitidos                                                      | Qualquer elemento que aceite phrasing content.                                                                                                                                                                                                                                                                                                                                                                                              |
-| Documento normativo                                                            | [HTML5, section 4.10.8](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element)                                                                                                                                                                                                                                                                                                              |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido                                   | [Phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content), mas nenhum elemento `meter` descendente.                                                                                                                                                          |
+| Tag omission                                         | Nenhuma, ambas as tags iniciais e finais são obrigatórias.                                                                                                                                                                                                             |
+| Elementos pais permitidos                            | Qualquer elemento que aceite phrasing content.                                                                                                                                                                                                                         |
+| Documento normativo                                  | [HTML5, section 4.10.8](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element)                                                                                                                                         |
 
 ## Atributos
 
@@ -42,7 +42,9 @@ Como todos os elementos HTML, esse elemento suporta [attributes](/pt-BR/HTML/Glo
 ### Exemplo simples
 
 ```html
-<p>Aqueça o forno para <meter min="200" max="500" value="350">350 graus</meter>.</p>
+<p>
+  Aqueça o forno para <meter min="200" max="500" value="350">350 graus</meter>.
+</p>
 ```
 
 No Google Chrome, o medidor aparece como:
@@ -54,7 +56,9 @@ No Google Chrome, o medidor aparece como:
 Note que nesse exemplo o atributo **min** foi omitido; isso é permitido, pois ele irá ser, por padrão, 0.
 
 ```html
-<p>Ele recebeu <meter low="69" high="80" max="100" value="84">B</meter> no exame.</p>
+<p>
+  Ele recebeu <meter low="69" high="80" max="100" value="84">B</meter> no exame.
+</p>
 ```
 
 No Google Chrome, o medidor aparece como:

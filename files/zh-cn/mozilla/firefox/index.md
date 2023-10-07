@@ -16,7 +16,7 @@ Firefox 是一个开源项目，许多代码都是由志愿者社群提供的。
 - Firefox 开发者指南
   - : 我们的[开发者指南](https://firefox-source-docs.mozilla.org/contributing/index.html)提供了关于获取 Firefox 源代码，在 Linux、macOS 和 Windows 中构建源代码，在代码中找到方向，以及为项目作贡献的详细说明。
 - Firefox 插件指引
-  - : [附件组件指南](zh-CN/docs/Mozilla/Add-ons)提供了开发和部署 Firefox 附加组件的指引。
+  - : [附件组件指南](/zh-CN/docs/Mozilla/Add-ons)提供了开发和部署 Firefox 附加组件的指引。
 - 面向开发者的发布说明
   - : 在[面向开发者的发布说明](/zh-CN/docs/Mozilla/Firefox/Releases)中了解每一个 Firefox 新版本为网站开发者与拓展开发者带来的新功能。
 

@@ -1,0 +1,98 @@
+{
+  "extends": "../../.markdownlint.jsonc",
+  "search-replace": {
+    "rules": [
+      {
+        "name": "curly-double-quotes-open",
+        "message": "Don't use curly double quotes",
+        "searchPattern": "/“/g",
+        "replace": "「",
+        "searchScope": "text"
+      },
+      {
+        "name": "curly-double-quotes-close",
+        "message": "Don't use curly double quotes",
+        "searchPattern": "/”/g",
+        "replace": "」",
+        "searchScope": "text"
+      },
+      {
+        "name": "curly-single-quotes-open",
+        "message": "Don't use curly single quotes",
+        "searchPattern": "/‘/g",
+        "replace": "『",
+        "searchScope": "text"
+      },
+      {
+        "name": "curly-single-quotes-close",
+        "message": "Don't use curly single quotes",
+        "searchPattern": "/’/g",
+        "replace": "』",
+        "searchScope": "text"
+      },
+      {
+        "name": "nbsp",
+        "message": "Don't use no-break spaces",
+        "searchPattern": "/ /g",
+        "replace": " ",
+        "searchScope": "all"
+      },
+      {
+        "name": "double-em-dash",
+        "message": "Don't use '--'. Use double em-dash (——) instead",
+        "search": " -- ",
+        "replace": "——",
+        "searchScope": "text"
+      },
+      {
+        "name": "relative-link",
+        "message": "Internal links should start with '/'",
+        "searchPattern": "/([\\(\"])([\\w\\-]+)\\/docs/g",
+        "replace": "$1/$2/docs",
+        "searchScope": "text"
+      },
+      {
+        "name": "relative-link-path",
+        "message": "Don't use relative paths",
+        "search": "](..",
+        "searchScope": "text"
+      },
+      {
+        "name": "trailing-spaces",
+        "message": "Avoid trailing spaces",
+        "searchPattern": "/  +$/gm",
+        "replace": "",
+        "searchScope": "all"
+      },
+      {
+        "name": "double-spaces",
+        "message": "Avoid double spaces",
+        "searchPattern": "/([^\\s>])  ([^\\s|])/g",
+        "replace": "$1 $2",
+        "searchScope": "text"
+      },
+      {
+        "name": "stuck-definition",
+        "message": "Character is stuck to definition description marker",
+        "searchPattern": "/- :(\\w)/g",
+        "replace": "- : $1",
+        "searchScope": "text"
+      },
+      {
+        "name": "fqdn-moz-links",
+        "message": "Don't use developer.mozilla.org for links, except for blog posts",
+        "searchPattern": "/\\]\\(https:\\/\\/developer.mozilla.org\\/(?!en-US\\/blog\\/)/g",
+        "replace": "](/",
+        "searchScope": "text"
+      }
+      // XXX Many instances still found in translated content
+      // {
+      //   "name": "localhost-links",
+      //   "message": "Don't use localhost for links",
+      //   "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+      //   "replace": "](/",
+      //   "searchScope": "text"
+      // }
+    ]
+  }
+}

@@ -38,43 +38,29 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 
 var vertexNormals = [
   // Front
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
   // Back
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
+  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
   // Top
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
   // Bottom
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
+  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
   // Right
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
   // Left
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0
+  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(vertexNormals),
+  gl.STATIC_DRAW,
+);
 ```
 
 现在我们应该对此非常熟悉了；创建新的 buffer，将它和 gl.ARRAR_BUFFER 绑定在一起，然后通过调用 bufferData() 把我们的顶点法线数组一起传入。
@@ -94,7 +80,11 @@ gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
 var nUniform = gl.getUniformLocation(shaderProgram, "uNormalMatrix");
-gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten()));
+gl.uniformMatrix4fv(
+  nUniform,
+  false,
+  new WebGLFloatArray(normalMatrix.flatten()),
+);
 ```
 
 ## 更新着色器

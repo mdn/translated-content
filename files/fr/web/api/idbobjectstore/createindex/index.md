@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
-translation_of: Web/API/IDBObjectStore/createIndex
 ---
 
 {{ APIRef("IndexedDB") }}
@@ -57,7 +56,7 @@ objectStore.createIndex(nomIndex, nomCle, parametresIndexOptionnel);
               opérations de tri effectuées sur les données via des intervalle de clé
               obéirons aux règles locales de tri (voir
               <a
-                href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting"
+                href="/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting"
                 >trie dans localisation courante</a
               >, en). Vous pouvez spécifier sa valeur de trois façons différentes:
             </p>
@@ -89,7 +88,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
 - `InvalidStateError`
   - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet n'est pas en {{domxref("IDBTransaction.mode","mode")}} `versionchange`.
 - `TransactionInactiveError`
-  - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
+  - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.
     [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165) ).
 - `ConstraintError`
   - : Cette {{domxref("DOMException","exeption")}} si un index avec le même nom (case sensible) existe déjà sur le magasin d'objet.
@@ -107,13 +106,13 @@ var db;
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Gère l'échec de l'ouverture de la base
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>La base de donnée n\'as pas peut être ouverte.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>La base de donnée n'as pas peut être ouverte.</li>";
 };
 
 // Gère le succès de l'ouverture de la base
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>La base de données est ouverte.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>La base de données est ouverte.</li>";
 
   //La connexion est affcté à la variable db.
   db = request.result;
@@ -125,11 +124,11 @@ DBOpenRequest.onsuccess = function(event) {
 // Ce gestionnaire d'événement nécessite un nouveau numéro de version de la basse de données.
 // Si la base n'existe pas un nouveau numéro de version est généré par la méthode d'ouverture de connexion window.indexDB.open .
 
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Erreur de chargement de la base de données.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Erreur de chargement de la base de données.</li>";
   };
 
   // L'Accès au magasin d'objet "toDoList" de la base de donnée

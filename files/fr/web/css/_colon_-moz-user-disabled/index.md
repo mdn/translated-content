@@ -1,12 +1,6 @@
 ---
-title: ':-moz-user-disabled'
+title: ":-moz-user-disabled"
 slug: Web/CSS/:-moz-user-disabled
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-user-disabled
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -18,7 +12,8 @@ Ce sélecteur est destiné principalement à une utilisation par les développeu
 ## Syntaxe
 
 ```css
-:-moz-user-disabled
+:-moz-user-disabled {
+}
 ```
 
 ## Exemples

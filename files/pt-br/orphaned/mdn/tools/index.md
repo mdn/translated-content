@@ -1,7 +1,6 @@
 ---
 title: Ferramentas do MDN
 slug: orphaned/MDN/Tools
-original_slug: MDN/Tools
 ---
 
 {{MDNSidebar}}

@@ -1,15 +1,6 @@
 ---
 title: Définir une méthode
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-tags:
-  - ECMAScript 2015
-  - Fonctions
-  - JavaScript
-  - Object
-  - Reference
-  - Syntaxe
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Reference/Fonctions/Définition_de_méthode
 ---
 
 {{JsSidebar("Functions")}}
@@ -47,12 +38,12 @@ Le code suivant :
 
 ```js
 var obj = {
-  toto: function() {
+  toto: function () {
     /* du code */
   },
-  truc: function() {
+  truc: function () {
     /* du code */
-  }
+  },
 };
 ```
 
@@ -65,7 +56,7 @@ var obj = {
   },
   truc() {
     /* du code */
-  }
+  },
 };
 ```
 
@@ -79,20 +70,18 @@ var obj = {
 ```js
 // Notation utilisant une propriété nommée (avant-ES2015)
 var obj2 = {
-  g: function*() {
+  g: function* () {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // La même définition, en utilisant la notation raccourcie
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -109,7 +98,7 @@ console.log(it.next().value); // 1
 var obj3 = {
   f: async function () {
     await une_promesse;
-  }
+  },
 };
 
 // Ici, on obtient le même résultat
@@ -117,7 +106,7 @@ var obj3 = {
 var obj3 = {
   async f() {
     await une_promesse;
-  }
+  },
 };
 ```
 
@@ -131,17 +120,17 @@ var obj4 = {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 
 // Le code équivalent avec la
 // notation raccourcie
 var obj4 = {
-  async* f() {
+  async *f() {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 ```
 
@@ -153,12 +142,12 @@ Les définitions de méthodes ne sont pas des constructeurs et si on tente de le
 var obj = {
   méthode() {},
 };
-new obj.méthode; // TypeError: obj.méthode is not a constructor
+new obj.méthode(); // TypeError: obj.méthode is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g is not a constructuer (changé avec ES2016)
+new obj.g(); // TypeError: obj.g is not a constructuer (changé avec ES2016)
 ```
 
 ## Exemples
@@ -167,8 +156,10 @@ new obj.g; // TypeError: obj.g is not a constructuer (changé avec ES2016)
 
 ```js
 var obj = {
-  a : "toto",
-  b(){ return this.a; }
+  a: "toto",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "toto"
 ```
@@ -179,9 +170,15 @@ Cette notation raccourcie peut également être utilisée avec des noms de propr
 
 ```js
 var bar = {
-  toto0 : function (){return 0;},
-  toto1(){return 1;},
-  ["toto" + 2](){return 2;},
+  toto0: function () {
+    return 0;
+  },
+  toto1() {
+    return 1;
+  },
+  ["toto" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.toto0()); // 0

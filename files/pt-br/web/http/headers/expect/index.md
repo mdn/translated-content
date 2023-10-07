@@ -60,8 +60,8 @@ O servidor checa os cabeçalhos da requisição e responde com uma resposta {{HT
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                      | Título                                                        |
+| ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

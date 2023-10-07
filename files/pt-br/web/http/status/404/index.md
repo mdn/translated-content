@@ -29,8 +29,8 @@ Para um exemplo de uma página 404 personalizada, veja [MDN's 404 page](/pt-BR/4
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                              | Título                                                        |
+| ------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "404 Not Found" , "6.5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
@@ -40,4 +40,4 @@ Para um exemplo de uma página 404 personalizada, veja [MDN's 404 page](/pt-BR/4
 ## Veja também
 
 - {{HTTPStatus(410)}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://pt.wikipedia.org/wiki/HTTP_404)

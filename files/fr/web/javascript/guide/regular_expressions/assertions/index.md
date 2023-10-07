@@ -1,13 +1,6 @@
 ---
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
-tags:
-  - Assertions
-  - Guide
-  - JavaScript
-  - RegExp
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
-original_slug: Web/JavaScript/Guide/Expressions_régulières/Assertions
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -101,10 +94,10 @@ Les assertions indiquent les conditions selon lesquelles il est possible d'avoir
 ```js
 let regex = /Premier(?= test)/g;
 
-console.log('Premier test'.match(regex)); // [ 'Premier' ]
-console.log('Premier truc'.match(regex)); // null
+console.log("Premier test".match(regex)); // [ 'Premier' ]
+console.log("Premier truc".match(regex)); // null
 console.log("Voici le Premier test de l'année.".match(regex)); // [ 'Premier' ]
-console.log('Voici le Premier truc du mois.'.match(regex)); // null
+console.log("Voici le Premier truc du mois.".match(regex)); // null
 ```
 
 ### Assertion avant négative
@@ -112,7 +105,7 @@ console.log('Voici le Premier truc du mois.'.match(regex)); // null
 L'expression rationnelle `/\d+(?!\.)/` permettra de rechercher plusieurs chiffres si ceux-ci ne sont pas suivis d'un point décimal. Ainsi, `/\d+(?!\.)/.exec('3.141')` trouvera la sous-chaîne "141" mais pas "3."
 
 ```js
-console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 ```
 
 ### Signification différente de `'?!'` entre les assertions et les intervalles
@@ -120,20 +113,23 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 La combinaison de caractères `?!` a un sens différent entre les [assertions](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Assertions) `/x(?!y)/` et les [intervalles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Groupes_et_intervalles) `[^?!]`.
 
 ```js
-let orangePasCitron = "Voulez-vous avoir une orange? Oui, je ne veux pas avoir de citron!";
+let orangePasCitron =
+  "Voulez-vous avoir une orange? Oui, je ne veux pas avoir de citron!";
 
-let choixPasCitron = /[^?!]+avoir(?! un citron)[^?!]+[?!]/gi
+let choixPasCitron = /[^?!]+avoir(?! un citron)[^?!]+[?!]/gi;
 console.log(orangePasCitron.match(choixPasCitron)); // [ 'Voulez-vous avoir une orange?' ]
 
-let choixPasOrange = /[^?!]+avoir(?! une orange)[^?!]+[?!]/gi
+let choixPasOrange = /[^?!]+avoir(?! une orange)[^?!]+[?!]/gi;
 console.log(orangePasCitron.match(choixPasOrange)); // [ 'Oui, je ne veux pas avoir de citron!' ]
 ```
 
 ### Assertion arrière (_lookbehind_)
 
 ```js
-let oranges = ['espèce orange A ', 'sorte orange B', 'espèce orange C',];
+let oranges = ["espèce orange A ", "sorte orange B", "espèce orange C"];
 
-let especesOranges = oranges.filter( fruit => fruit.match(/(?<=espèce )orange/));
+let especesOranges = oranges.filter((fruit) =>
+  fruit.match(/(?<=espèce )orange/),
+);
 console.log(especesOranges); // [ 'espèce orange A ', 'espèce orange C' ]
 ```

@@ -1,7 +1,6 @@
 ---
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
-original_slug: MDN/Contribute/Localize
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
@@ -34,7 +33,7 @@ l10n:
 ### 日本語 (ja)
 
 - ディスカッション: [Slack (#translation channel)](https://mozillajp.slack.com/), [GitHub (mozilla-japan)](https://github.com/mozilla-japan/translation), [Google Group (Mozilla.translations.ja)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
-- 現在の貢献者: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
+- 現在の管理者: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
 ### 韓国語 (ko)
 
@@ -44,7 +43,7 @@ l10n:
 ### ロシア語 (ru)
 
 - ディスカッション: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- 現在の貢献者: [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- 現在の貢献者: [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
 
 ### スペイン語 (es)
 

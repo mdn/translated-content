@@ -1,13 +1,6 @@
 ---
 title: <use>
 slug: Web/SVG/Element/use
-tags:
-  - SVG
-  - SVG Графика
-  - Ссылка
-  - Элемент
-translation_of: Web/SVG/Element/use
-original_slug: Web/SVG/Элемент/use
 ---
 
 {{SVGRef}}
@@ -15,14 +8,18 @@ original_slug: Web/SVG/Элемент/use
 Элемент **`<use>`** берёт элементы из SVG-документа и дублирует их где-то ещё.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/>
-  <use href="#myCircle" x="10" fill="blue"/>
-  <use href="#myCircle" x="20" fill="white" stroke="red"/>
+  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
+  <use href="#myCircle" x="10" fill="blue" />
+  <use href="#myCircle" x="20" fill="white" stroke="red" />
   <!--
   В данном случае атрибут stroke="red" будет игнорироваться, так как
   ранее он был задан непосредственно для фигуры круга с id "myCircle".
@@ -91,9 +88,9 @@ html,body,svg { height:100% }
 
 ## Спецификации
 
-| Specification                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| Specification                                                   | Status              | Comment            |
+| --------------------------------------------------------------- | ------------------- | ------------------ |
+| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}   | {{Spec2('SVG2')}}   |                    |
 | {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Браузерная совместимость

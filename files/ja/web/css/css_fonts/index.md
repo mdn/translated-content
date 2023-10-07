@@ -1,6 +1,6 @@
 ---
 title: CSS フォント
-slug: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 ---
 
 {{CSSRef}}
@@ -25,10 +25,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out onna antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out onna antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 結果は以下のようになります。

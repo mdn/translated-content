@@ -2,6 +2,7 @@
 title: webkitAudioContext에서 이주하기
 slug: Web/API/Web_Audio_API/Migrating_from_webkitAudioContext
 ---
+
 Web Audio API는 현 상태에 이르기까지 많은 반복을 거쳤습니다. 이것은 처음에 WebKit에서 구현되었고, 이것의 낡은 부분들의 일부는 그것들이 명세에서 대체되는 동안 즉시 제거되지 않았는데, 이는 많은 사이트들이 비호환되는 코드를 사용하는 것으로 이어졌습니다. 이 글에서, 우리는 Web Audio API가 WebKit에서 처음 구현된 이후로의 Web Audio API에서의 차이를 다루고 현대 Web Audio API를 사용하기 위해 어떻게 코드를 업데이트해야 되는지를 다룹니다.
 
 Web Audio 표준은 [WebKit](https://webkit.org/)에서 처음 구현되었고, 이 구현은 API의 [명세](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html)에서의 작업과 동시에 개발되었습니다. 명세가 진화하고 변화가 만들어짐에 따라, 낡은 구현 부분들 중 일부는 이전 호환성의 이유에 기인해 WebKit (그리고 Blink) 구현에서 제거되지 않았습니다.
@@ -79,7 +80,7 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
-xhr.onload = function() {
+xhr.onload = function () {
   var decodedBuffer = context.createBuffer(xhr.response, false);
   if (decodedBuffer) {
     // 디코딩은 성공적이었습니다, 오디오 버퍼로 무언가 유용한 걸 하십시오
@@ -96,12 +97,16 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
-xhr.onload = function() {
-  context.decodeAudioData(xhr.response, function onSuccess(decodedBuffer) {
-    // 디코딩은 성공적이었습니다, 오디오 버퍼로 무언가 유용한 걸 하십시오
-  }, function onFailure() {
-    alert("오디오 버퍼 디코딩 실패");
-  });
+xhr.onload = function () {
+  context.decodeAudioData(
+    xhr.response,
+    function onSuccess(decodedBuffer) {
+      // 디코딩은 성공적이었습니다, 오디오 버퍼로 무언가 유용한 걸 하십시오
+    },
+    function onFailure() {
+      alert("오디오 버퍼 디코딩 실패");
+    },
+  );
 };
 ```
 
@@ -112,15 +117,15 @@ xhr.onload = function() {
 {{domxref("AudioParam")}} 인터페이스의 `setTargetValueAtTime()` 메서드는 `setTargetAtTime()`으로 이름이 바뀌었습니다. 이것은 또한 API의 이해성을 개선하기 위한 단순한 개명이고, 메서드의 의미는 동일합니다. 만약 여러분의 코드가 `setTargetValueAtTime()`를 사용하고 있다면, `setTargetAtTime()`으로 이름을 바꿀 수 있습니다. 예를 들자면, 만약 우리가 다음과 같은 코드를 가지고 있다면:
 
 ```js
-  var gainNode = context.createGain();
-  gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
+var gainNode = context.createGain();
+gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
 ```
 
 다음과 같이, 여러분은 메서드의 이름을 바꿀 수 있고, 표준을 따를 수 있습니다:
 
 ```js
-  var gainNode = context.createGain();
-  gainNode.gain.setTargetAtTime(0.0, 10.0, 1.0);
+var gainNode = context.createGain();
+gainNode.gain.setTargetAtTime(0.0, 10.0, 1.0);
 ```
 
 ## 변경된 열거형 값들
@@ -134,21 +139,21 @@ xhr.onload = function() {
 ```js
 // 오래된 webkitAudioContext 코드:
 var osc = context.createOscillator();
-osc.type = osc.SINE;     // sine 파형
-osc.type = osc.SQUARE;   // square 파형
+osc.type = osc.SINE; // sine 파형
+osc.type = osc.SQUARE; // square 파형
 osc.type = osc.SAWTOOTH; // sawtooth 파형
 osc.type = osc.TRIANGLE; // triangle 파형
 osc.setWaveTable(table);
-var isCustom = (osc.type == osc.CUSTOM); // isCustom은 true일 것입니다
+var isCustom = osc.type == osc.CUSTOM; // isCustom은 true일 것입니다
 
 // 새로운 표준 AudioContext 코드:
 var osc = context.createOscillator();
-osc.type = "sine";       // sine 파형
-osc.type = "square";     // square 파형
-osc.type = "sawtooth";   // sawtooth 파형
-osc.type = "triangle";   // triangle 파형
-osc.setPeriodicWave(table);  // 참고: setWaveTable은 setPeriodicWave로 이름이 바뀌었습니다!
-var isCustom = (osc.type == "custom"); // isCustom은 true일 것입니다
+osc.type = "sine"; // sine 파형
+osc.type = "square"; // square 파형
+osc.type = "sawtooth"; // sawtooth 파형
+osc.type = "triangle"; // triangle 파형
+osc.setPeriodicWave(table); // 참고: setWaveTable은 setPeriodicWave로 이름이 바뀌었습니다!
+var isCustom = osc.type == "custom"; // isCustom은 true일 것입니다
 ```
 
 ### BiquadFilterNode.type
@@ -158,25 +163,25 @@ var isCustom = (osc.type == "custom"); // isCustom은 true일 것입니다
 ```js
 // 오래된 webkitAudioContext 코드:
 var filter = context.createBiquadFilter();
-filter.type = filter.LOWPASS;   // lowpass 필터
-filter.type = filter.HIGHPASS;  // highpass 필터
-filter.type = filter.BANDPASS;  // bandpass 필터
-filter.type = filter.LOWSHELF;  // lowshelf 필터
+filter.type = filter.LOWPASS; // lowpass 필터
+filter.type = filter.HIGHPASS; // highpass 필터
+filter.type = filter.BANDPASS; // bandpass 필터
+filter.type = filter.LOWSHELF; // lowshelf 필터
 filter.type = filter.HIGHSHELF; // highshelf 필터
-filter.type = filter.PEAKING;   // peaking 필터
-filter.type = filter.NOTCH;     // notch 필터
-filter.type = filter.ALLPASS;   // allpass 필터
+filter.type = filter.PEAKING; // peaking 필터
+filter.type = filter.NOTCH; // notch 필터
+filter.type = filter.ALLPASS; // allpass 필터
 
 // 새로운 표준 AudioContext 코드:
 var filter = context.createBiquadFilter();
-filter.type = "lowpass";        // lowpass 필터
-filter.type = "highpass";       // highpass 필터
-filter.type = "bandpass";       // bandpass 필터
-filter.type = "lowshelf";       // lowshelf 필터
-filter.type = "highshelf";      // highshelf 필터
-filter.type = "peaking";        // peaking 필터
-filter.type = "notch";          // notch 필터
-filter.type = "allpass";        // allpass 필터
+filter.type = "lowpass"; // lowpass 필터
+filter.type = "highpass"; // highpass 필터
+filter.type = "bandpass"; // bandpass 필터
+filter.type = "lowshelf"; // lowshelf 필터
+filter.type = "highshelf"; // highshelf 필터
+filter.type = "peaking"; // peaking 필터
+filter.type = "notch"; // notch 필터
+filter.type = "allpass"; // allpass 필터
 ```
 
 ### PannerNode.panningModel
@@ -186,13 +191,13 @@ filter.type = "allpass";        // allpass 필터
 ```js
 // 오래된 webkitAudioContext 코드:
 var panner = context.createPanner();
-panner.panningModel = panner.EQUALPOWER;  // equalpower 패닝
-panner.panningModel = panner.HRTF;        // HRTF 패닝
+panner.panningModel = panner.EQUALPOWER; // equalpower 패닝
+panner.panningModel = panner.HRTF; // HRTF 패닝
 
 // New standard AudioContext code:
 var panner = context.createPanner();
-panner.panningModel = "equalpower";       // equalpower 패닝
-panner.panningModel = "HRTF";             // HRTF 패닝
+panner.panningModel = "equalpower"; // equalpower 패닝
+panner.panningModel = "HRTF"; // HRTF 패닝
 ```
 
 ### PannerNode.distanceModel
@@ -202,15 +207,15 @@ panner.panningModel = "HRTF";             // HRTF 패닝
 ```js
 // 오래된 webkitAudioContext 코드:
 var panner = context.createPanner();
-panner.distanceModel = panner.LINEAR_DISTANCE;      // linear distance 모델
-panner.distanceModel = panner.INVERSE_DISTANCE;     // inverse distance 모델
+panner.distanceModel = panner.LINEAR_DISTANCE; // linear distance 모델
+panner.distanceModel = panner.INVERSE_DISTANCE; // inverse distance 모델
 panner.distanceModel = panner.EXPONENTIAL_DISTANCE; // exponential distance 모델
 
 // 새로운 표준 AudioContext 코드:
 var panner = context.createPanner();
-panner.distanceModel = "linear";                    // linear distance 모델
-panner.distanceModel = "inverse";                   // inverse distance 모델
-panner.distanceModel = "exponential";               // exponential distance 모델
+panner.distanceModel = "linear"; // linear distance 모델
+panner.distanceModel = "inverse"; // inverse distance 모델
+panner.distanceModel = "exponential"; // exponential distance 모델
 ```
 
 ## Gain 제어는 이것만의 노드 유형으로 이동됨
@@ -292,7 +297,7 @@ source.loop = true;
 // 오래된 webkitAudioContext 코드:
 var src = context.createBufferSource();
 // 얼마 후...
-var isFinished = (src.playbackState == src.FINISHED_STATE);
+var isFinished = src.playbackState == src.FINISHED_STATE;
 
 // 새로운 AudioContext 코드:
 var src = context.createBufferSource();
@@ -312,44 +317,44 @@ src.onended = endedHandler;
 이 코드처럼, {{domxref("AudioContext")}}의 `activeSourceCount` 특성을 사용하는 코드:
 
 ```js
-  var src0 = context.createBufferSource();
-  var src1 = context.createBufferSource();
-  // 버퍼와 다른 매개변수들을 설정합니다...
-  src0.start(0);
-  src1.start(0);
-  // 얼마 후...
-  console.log(context.activeSourceCount);
+var src0 = context.createBufferSource();
+var src1 = context.createBufferSource();
+// 버퍼와 다른 매개변수들을 설정합니다...
+src0.start(0);
+src1.start(0);
+// 얼마 후...
+console.log(context.activeSourceCount);
 ```
 
 다음과 같이 재작성될 수 있습니다:
 
 ```js
-  // 재생되고 있는 소스 노드를 추적할 배열:
-  var sources = [];
-  // 소스를 시작할 때, 이것을 배열의 끝에 넣고,
-  // AudioBufferSourceNode가 끝에 도달했을 때
-  // 이것이 확실히 제거되도록 이벤트 처리기를 설정합니다.
-  // 첫번째 매개변수는 시작할 AudioBufferSourceNode이고,
-  // 다른 매개변수들은 AudioBufferSourceNode의 |start()|에의 매개변수입니다.
-  function startSource() {
-    var src = arguments[0];
-    var startArgs = Array.prototype.slice.call(arguments, 1);
-    src.onended = function() {
-      sources.splice(sources.indexOf(src), 1);
-    }
-    sources.push(src);
-    src.start.apply(src, startArgs);
-  }
-  function activeSources() {
-    return sources.length;
-  }
-  var src0 = context.createBufferSource();
-  var src0 = context.createBufferSource();
-  // 버퍼와 다른 매개변수들을 설정합니다...
-  startSource(src0, 0);
-  startSource(src1, 0);
-  // 얼마 후, 소스의 수를 확인합니다...
-  console.log(activeSources());
+// 재생되고 있는 소스 노드를 추적할 배열:
+var sources = [];
+// 소스를 시작할 때, 이것을 배열의 끝에 넣고,
+// AudioBufferSourceNode가 끝에 도달했을 때
+// 이것이 확실히 제거되도록 이벤트 처리기를 설정합니다.
+// 첫번째 매개변수는 시작할 AudioBufferSourceNode이고,
+// 다른 매개변수들은 AudioBufferSourceNode의 |start()|에의 매개변수입니다.
+function startSource() {
+  var src = arguments[0];
+  var startArgs = Array.prototype.slice.call(arguments, 1);
+  src.onended = function () {
+    sources.splice(sources.indexOf(src), 1);
+  };
+  sources.push(src);
+  src.start.apply(src, startArgs);
+}
+function activeSources() {
+  return sources.length;
+}
+var src0 = context.createBufferSource();
+var src0 = context.createBufferSource();
+// 버퍼와 다른 매개변수들을 설정합니다...
+startSource(src0, 0);
+startSource(src1, 0);
+// 얼마 후, 소스의 수를 확인합니다...
+console.log(activeSources());
 ```
 
 ## WaveTable의 재명명

@@ -1,15 +1,8 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -34,10 +27,10 @@ str.lastIndexOf(searchValue[, fromIndex])
 Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке `stringName` равен `stringName.length - 1`.
 
 ```js
-'канал'.lastIndexOf('а');     // вернёт 3
-'канал'.lastIndexOf('а', 2);  // вернёт 1
-'канал'.lastIndexOf('а', 0);  // вернёт -1
-'канал'.lastIndexOf('ч');     // вернёт -1
+"канал".lastIndexOf("а"); // вернёт 3
+"канал".lastIndexOf("а", 2); // вернёт 1
+"канал".lastIndexOf("а", 0); // вернёт -1
+"канал".lastIndexOf("ч"); // вернёт -1
 ```
 
 ### Регистрозависимость
@@ -45,7 +38,7 @@ str.lastIndexOf(searchValue[, fromIndex])
 Метод `lastIndexOf()` является регистрозависимым. Например, следующее выражение вернёт -1:
 
 ```js
-'Синий кит, касатка'.lastIndexOf('синий'); // вернёт -1
+"Синий кит, касатка".lastIndexOf("синий"); // вернёт -1
 ```
 
 ## Примеры
@@ -55,16 +48,28 @@ str.lastIndexOf(searchValue[, fromIndex])
 В следующем примере используются методы {{jsxref("String.prototype.indexOf()", "indexOf()")}} и `lastIndexOf()` для нахождения значений в строке `"Дивный новый мир"`.
 
 ```js
-var anyString = 'Дивный новый мир';
+var anyString = "Дивный новый мир";
 
-console.log('Индекс первого вхождения «й» с начала строки равен ' + anyString.indexOf('й'));
+console.log(
+  "Индекс первого вхождения «й» с начала строки равен " +
+    anyString.indexOf("й"),
+);
 // Отобразит 5
-console.log('Индекс первого вхождения «й» с конца строки равен ' + anyString.lastIndexOf('й'));
+console.log(
+  "Индекс первого вхождения «й» с конца строки равен " +
+    anyString.lastIndexOf("й"),
+);
 // Отобразит 11
 
-console.log('Индекс вхождения «новый» с начала строки равен ' + anyString.indexOf('новый'));
+console.log(
+  "Индекс вхождения «новый» с начала строки равен " +
+    anyString.indexOf("новый"),
+);
 // Отобразит 7
-console.log('Индекс вхождения «новый» с конца строки равен ' + anyString.lastIndexOf('новый'));
+console.log(
+  "Индекс вхождения «новый» с конца строки равен " +
+    anyString.lastIndexOf("новый"),
+);
 // Отобразит 7
 ```
 

@@ -1,15 +1,6 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCodePoint
 ---
 
 {{JSRef}}
@@ -46,19 +37,19 @@ Une chaîne de caractères créée à partir de la séquence de codets indiquée
 ### Utiliser `fromCodePoint()`
 
 ```js
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // "\u0404"
+String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
+String.fromCodePoint(194564); // "\uD87E\uDC04"
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
 
-String.fromCodePoint('_');      // RangeError
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
 ### Comparaison avec `fromCharCode()`
@@ -66,14 +57,14 @@ String.fromCodePoint(NaN);      // RangeError
 La méthode {{jsxref("String.fromCharCode()")}} ne peut pas renvoyer les caractères de l'intervalle 0x010000 à 0X10FFFF avec un seul codet, il est nécessaire de lui fournir la paire décomposée (_surrogate pair_) pour obtenr un tel caractère :
 
 ```js
-String.fromCharCode(0xD83C, 0xDF03); // émoji « nuit étoilée »
-String.fromCharCode(55356, 57091);   // équivalent en notation décimale
+String.fromCharCode(0xd83c, 0xdf03); // émoji « nuit étoilée »
+String.fromCharCode(55356, 57091); // équivalent en notation décimale
 ```
 
 `String.fromCodePoint()`, en revanche, peut renvoyer les caractères qui s'expriment sur plus d'un codet de 16 bits grâce à leur codet « simple » :
 
 ```js
-String.fromCodePoint(0x1F303); // ou 127747 en notation décimale
+String.fromCodePoint(0x1f303); // ou 127747 en notation décimale
 ```
 
 ## Spécifications

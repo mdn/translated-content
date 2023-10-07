@@ -1,13 +1,6 @@
 ---
 title: inset-inline
 slug: Web/CSS/inset-inline
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/inset-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

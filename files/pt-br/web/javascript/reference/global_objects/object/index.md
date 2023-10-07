@@ -134,11 +134,11 @@ var o = new Object(Boolean());
 
 ## Especificações
 
-| Especificações                                                               | Status                       | Comentário                                                                                        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0.                                                |
-| {{SpecName('ES5.1', '#sec-15.2', 'Object')}}                 | {{Spec2('ES5.1')}}     | ------------------------------------------------                                                  |
-| {{SpecName('ES6', '#sec-object-objects', 'Object')}}         | {{Spec2('ES6')}}         | Adicionado `Object.assign`, `Object.getOwnPropertySymbols`, `Object.setPrototypeOf` e `Object.is` |
+| Especificações                                           | Status               | Comentário                                                                                        |
+| -------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                      | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0.                                                |
+| {{SpecName('ES5.1', '#sec-15.2', 'Object')}}             | {{Spec2('ES5.1')}}   | ------------------------------------------------                                                  |
+| {{SpecName('ES6', '#sec-object-objects', 'Object')}}     | {{Spec2('ES6')}}     | Adicionado `Object.assign`, `Object.getOwnPropertySymbols`, `Object.setPrototypeOf` e `Object.is` |
 | {{SpecName('ESDraft', '#sec-object-objects', 'Object')}} | {{Spec2('ESDraft')}} | Adicionado `Object.entries`, `Object.values` e `Object.getOwnPropertyDescriptors`.                |
 
 ## Compatibilidade

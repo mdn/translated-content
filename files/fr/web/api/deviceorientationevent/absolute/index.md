@@ -1,9 +1,6 @@
 ---
 title: DeviceOrientationEvent.absolute
 slug: Web/API/DeviceOrientationEvent/absolute
-translation_of: Web/API/DeviceOrientationEvent/absolute
-original_slug: Web/API/DeviceOrientationEvent.absolute
-browser-compat: api.DeviceOrientationEvent.absolute
 ---
 
 {{APIRef("Device Orientation Events")}}

@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
-translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
 {{jsSidebar("Errors")}}
@@ -21,7 +20,7 @@ SyntaxError: missing : after property id
 При создании объекта с помощью [инициализатора объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer), двоеточие (`:`) разделяет ключи и значения свойств объекта.
 
 ```js
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 ```
 
 ## Примеры
@@ -38,12 +37,12 @@ var obj = { propertyKey = 'value' };
 Корректно будет использовать двоеточие или квадратные скобки для назначения нового свойства после того, как объект уже был создан.
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 
 // or alternatively
 
-var obj = { };
-obj['propertyKey'] = 'value';
+var obj = {};
+obj["propertyKey"] = "value";
 ```
 
 ### Пустые свойства
@@ -73,7 +72,7 @@ var obj = { 'b'+'ar': 'foo' };
 Поместите выражение в скобки `[]`:
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+var obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## Смотрите также

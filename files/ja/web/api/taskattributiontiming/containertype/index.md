@@ -1,26 +1,23 @@
 ---
-title: TaskAttributionTiming.containerType
+title: "TaskAttributionTiming: containerType プロパティ"
+short-title: containerType
 slug: Web/API/TaskAttributionTiming/containerType
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-{{domxref("TaskAttributionTiming")}} インターフェイスの **`containerType`** 読み取り専用プロパティは、フレームコンテナのタイプ（`iframe`、`embed`、`object` のいずれか）を返します。
+**`containerType`** は {{domxref("TaskAttributionTiming")}} インターフェイスの読み取り専用プロパティで、フレームコンテナーの修理（`iframe`、`embed`、`object` のいずれか）を返します。
 
-## 構文
+## 値
 
-```
-var containerType = TaskAttributionTiming.containerType;
-```
+文字列で、コンテナーの種類（`iframe`、`embed`、`object` のいずれか）が入ります。種類が特定できなかった場合は、 `window` が返されます。
 
-### 値
-
-コンテナのタイプ（`iframe`、`embed`、`object` のいずれか）を含む {{domxref("DOMString")}} です。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.TaskAttributionTiming.containerType")}}
+{{Compat}}

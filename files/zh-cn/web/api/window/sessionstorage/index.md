@@ -21,13 +21,13 @@ slug: Web/API/Window/sessionStorage
 
 ```js
 // 保存数据到 sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // 从 sessionStorage 获取数据
-let data = sessionStorage.getItem('key');
+let data = sessionStorage.getItem("key");
 
 // 从 sessionStorage 删除保存的数据
-sessionStorage.removeItem('key');
+sessionStorage.removeItem("key");
 
 // 从 sessionStorage 删除所有保存的数据
 sessionStorage.clear();
@@ -42,7 +42,7 @@ sessionStorage.clear();
 下面的代码访问当前域名的 session {{domxref("Storage")}} 对象，并使用 {{domxref("Storage.setItem()")}} 访问往里面添加一个数据条目。
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 下面的示例会自动保存一个文本输入框的内容，如果浏览器因偶然因素被刷新了，文本输入框里面的内容会被恢复，因此写入的内容不会丢失。
@@ -59,7 +59,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // 监听文本输入框的 change 事件
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // 保存结果到 sessionStorage 对象中
   sessionStorage.setItem("autosave", field.value);
 });

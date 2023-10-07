@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 3: Uso de modelos'
+title: "Tutorial Django Parte 3: Uso de modelos"
 slug: Learn/Server-side/Django/Models
 ---
 
@@ -101,7 +101,10 @@ En las secciones de abajo exploraremos cada una de las características interior
 Un modelo puede tener un número arbitrario de campos, de cualquier tipo. Cada uno representa una columna de datos que queremos guardar en nuestras tablas de la base de datos. Cada registro de la base de datos (fila) consistirá en uno de cada posible valor del campo. Echemos un vistazo al ejemplo visto arriba:
 
 ```js
-my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
+my_field_name = models.CharField(
+  (max_length = 20),
+  (help_text = "Enter field documentation"),
+);
 ```
 
 Nuestro ejemplo de arriba tiene un único campo llamado `my_field_name`, de tipo `models.CharField` — lo que significa que este campo contendrá una cadena de caracteres alfanuméricos. Los tipos de campo son asignados usando clases específicas, que determinan el tipo de registro que se usa para guardar el dato en la base, junto con un criterio de evaluación que se usará cuando se reciban los valores de un formulario HTML (es decir, qué constituye un valor válido). Los tipos de campo pueden también tomar argumentos que especifican además cómo se guarda o cómo se puede usar. En este caso le damos a nuestro campo dos argumentos:

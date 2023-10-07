@@ -27,7 +27,7 @@ Neste caso, a variável "arg" redeclara o argumento.
 
 ```js example-bad
 function f(arg) {
-  let arg = 'foo';
+  let arg = "foo";
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
@@ -37,17 +37,17 @@ Se você quiser mudar o valor de "arg" no corpo da função, você pode fazer, m
 
 ```js example-good
 function f(arg) {
-  arg = 'foo';
+  arg = "foo";
 }
 
 function f(arg) {
-  let bar = 'foo';
+  let bar = "foo";
 }
 ```
 
 ## Notas de compatibilidade
 
-- Antes do Firefox 49, isto foi lançado como um {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- Antes do Firefox 49, isto foi lançado como um {{jsxref("TypeError")}} ([Erro do Firefox 1275240](https://bugzil.la/1275240)).
 
 ## Veja também
 

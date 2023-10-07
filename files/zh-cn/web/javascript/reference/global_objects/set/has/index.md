@@ -32,14 +32,14 @@ has(value)
 const mySet = new Set();
 mySet.add("foo");
 
-console.log(mySet.has("foo"));  // true
-console.log(mySet.has("bar"));  // false
+console.log(mySet.has("foo")); // true
+console.log(mySet.has("bar")); // false
 
 const set1 = new Set();
 const obj1 = { key1: 1 };
 set1.add(obj1);
 
-console.log(set1.has(obj1));        // true
+console.log(set1.has(obj1)); // true
 console.log(set1.has({ key1: 1 })); // false, 因为它们是不同的对象引用
 console.log(set1.add({ key1: 1 })); // 现在 set1 包含 2 个条目
 ```

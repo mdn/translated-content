@@ -1,7 +1,7 @@
 ---
 title: MDN Web Docs におけるプルリクエストのエチケットとプロセス
 slug: MDN/Community/MDN_content/Pull_requests
-i10n:
+l10n:
   sourceCommit: 6d83d1a87aa6480f4ef5aae29ee50cfe6a8d47a2
 ---
 

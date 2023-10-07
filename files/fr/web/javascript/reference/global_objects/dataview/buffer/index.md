@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
-tags:
-  - DataView
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/buffer
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/buffer
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ L'accesseur **`buffer`** est une propriété représentant l'objet {{jsxref("Arr
 ## Syntaxe
 
 ```js
-dataview.buffer
+dataview.buffer;
 ```
 
 ## Description

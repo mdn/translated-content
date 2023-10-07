@@ -1,17 +1,6 @@
 ---
 title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisitRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
 
 {{AddonSidebar()}}
@@ -25,9 +14,9 @@ Lancé lorsqu'une page est complètement supprimée de l'historique du navigateu
 ## Syntaxe
 
 ```js
-browser.history.onVisitRemoved.addListener(listener)
-browser.history.onVisitRemoved.removeListener(listener)
-browser.history.onVisitRemoved.hasListener(listener)
+browser.history.onVisitRemoved.addListener(listener);
+browser.history.onVisitRemoved.removeListener(listener);
+browser.history.onVisitRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:

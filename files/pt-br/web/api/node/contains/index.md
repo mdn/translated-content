@@ -26,19 +26,19 @@ Esta função verifica se um elemento está no corpo da página. As `contains` i
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 
 - `node` é o nó que desejamos verificar se está no `<body>`.
 
-## Browser compatibility
+## Especificações
 
-{{Compat("api.Node.contains")}}
+{{Specifications}}
 
-## Especificação
+## Compatibilidade com navegadores
 
-- [DOM Level 4: contains](https://www.w3.org/TR/domcore/#dom-node-contains)
+{{Compat}}
 
 ## Ver também
 

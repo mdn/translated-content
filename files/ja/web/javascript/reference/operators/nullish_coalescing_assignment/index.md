@@ -1,7 +1,6 @@
 ---
 title: Null 合体代入 (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
-original_slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -13,7 +12,7 @@ Null 合体代入 (`x ??= y`) 演算子は、`x` が {{Glossary("nullish")}} (`n
 ## 構文
 
 ```js
-expr1 ??= expr2
+expr1 ??= expr2;
 ```
 
 ## 解説

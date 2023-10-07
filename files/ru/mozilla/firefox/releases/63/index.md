@@ -1,12 +1,6 @@
 ---
 title: Firefox 63 для разработчиков
 slug: Mozilla/Firefox/Releases/63
-tags:
-  - '63'
-  - Firefox
-  - Mozilla
-  - Выпуск
-translation_of: Mozilla/Firefox/Releases/63
 ---
 
 {{FirefoxSidebar}}
@@ -21,7 +15,7 @@ translation_of: Mozilla/Firefox/Releases/63
 - Включён по умолчанию [инспектор поддержи доступности](/ru/docs/Tools/Accessibility_inspector) ({{bug(1482454)}}).
 - При наведении курсора на объект в [инспекторе поддержки доступности](/ru/docs/Tools/Accessibility_inspector), [элемент будет подсвечен](/ru/docs/Tools/Accessibility_inspector#Highlighting_of_UI_items), а его роль и имя показаны в информационной панели на странице ({{bug(1473030)}}).
 - Командная строка [веб-консоли](/ru/docs/Tools/Web_Console) теперь находится не внизу окна, а прямо после вывода консоли ({{bug(1136299)}}).
-- Если адрес принадлежит домену, о котором известно, что он отслеживает пользователей, [сетевой монитор](/ru/docs/Tools/Network_Monitor) покажет специальный значок перед этой ссылкой — см. {{SectionOnPage("/ru/docs/Tools/Network_Monitor", "Значки безопасности")}} ({{bug(1333994)}}).
+- Если адрес принадлежит домену, о котором известно, что он отслеживает пользователей, [сетевой монитор](/ru/docs/Tools/Network_Monitor) покажет специальный значок перед этой ссылкой — см. [Значки безопасности](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-monitor-request-list-security-icons) ({{bug(1333994)}}).
 - Настройка `devtools.aboutdebugging.showSystemAddons` отныне по умолчанию имеет значение `false`, что означает — системные дополнения не будут показаны на странице `about:debugging`. Значение этой настройки можно изменить на странице `about:config` ({{bug(1425347)}}).
 - Упрощена панель инструментов [режима адаптивного дизайна](/ru/docs/Tools/Responsive_Design_Mode), кроме того, добавлена возможность выровнять область просмотра по левому краю.
 - Для пользовательских элементов инспектор теперь показывает [ссылку на определение класса](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Custom_element_definition) ({{bug(1443923)}}).
@@ -87,7 +81,7 @@ _Без изменений._
 - В целях совместимости добавлена поддержка нестандартного свойства {{DOMxRef("Event.returnValue")}} ({{bug(1452569)}}).
 - Теперь, когда свойство {{DOMxRef("Window.event")}} стало стандартным, оно реализовано в Firefox в целях совместимости ({{bug(218415)}}), но из-за проблем совместимости (см. {{bug(1479964)}}) включено лишь в «ночных» выпусках. Его поддержкой управляет настройка `dom.window.event.enabled` ({{bug(1493869)}}).
 - Для паритета с Edge и Chrome свойство {{DOMxRef("NavigatorID.platform", "navigator.platform")}} отныне возвращает `"Win32"` даже в 64-разрядных операционных системах Windows ({{bug(1472618)}}).
-- Раньше, ссылки, открывающие новые окна с `rel="noopener"`, и {{DOMxRef("Window.open()")}} с [`noopener`](/en-US/docs/Web/API/Window/open#noopener) приводили к тому, что у окна были отключены все свойства и разработчику приходилось включать необходимые ему стандартные свойства. Отныне такие окна будут иметь все те же свойства, что и любое другое окно, а разработчику следует отключать нежелательные ({{bug(1419960)}}).
+- Раньше, ссылки, открывающие новые окна с `rel="noopener"`, и {{DOMxRef("Window.open()")}} с [`noopener`](/ru/docs/Web/API/Window/open#noopener) приводили к тому, что у окна были отключены все свойства и разработчику приходилось включать необходимые ему стандартные свойства. Отныне такие окна будут иметь все те же свойства, что и любое другое окно, а разработчику следует отключать нежелательные ({{bug(1419960)}}).
 
 #### События DOM
 
@@ -184,7 +178,7 @@ _Без изменений._
 #### Темы
 
 - Цвет текста по умолчанию для значков {{WebExtAPIRef("browserAction")}} теперь автоматически становится чёрным или белым, чтобы достичь максимального контраста с фоном ({{bug(1474110)}}).
-- Свойства `accentcolor` и `textcolor` ключа [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) теперь необязательны ({{bug(1413144)}}).
+- Свойства `accentcolor` и `textcolor` ключа [`theme`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) теперь необязательны ({{bug(1413144)}}).
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} и {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} позволяют получать и настраивать цвет текста значков {{WebExtAPIRef("browserAction")}} ({{bug(1424620)}}).
 - Объект `colors` ключа `theme` теперь поддерживает свойства `ntp_text` (для указания цвета текста в новой вкладке) и `ntp_background` (для указания цвета фона) ({{bug(1347204)}}).
 - Темы получили возможность настраивать цвет боковых панелей, например, боковой панели закладок ({{bug(1418602)}}). Соответствующие свойства:

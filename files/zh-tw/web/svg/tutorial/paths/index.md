@@ -1,8 +1,9 @@
 ---
 title: 路徑
 slug: Web/SVG/Tutorial/Paths
-original_slug: Web/SVG/Tutorial/路径
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 

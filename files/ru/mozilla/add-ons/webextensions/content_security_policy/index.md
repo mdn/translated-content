@@ -1,12 +1,8 @@
 ---
 title: Политика защиты содержимого
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
-tags:
-  - Web-расширение
-  - Безопасность
-  - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
+
 {{AddonSidebar}}
 
 Политика защиты содержимого (англ. Content Security Policy) автоматически применяется ко всем расширениям, разработанным с использованием WebExtension API. Она ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, и препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
@@ -18,15 +14,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 Так же как веб-сайты, расширения могут загружать контент из различных источников. Например, всплывающее окно расширения определяется HTML документом, и может подключать JavaScript и CSS файлы из различных источников, точно так же, как и нормальная веб-страница:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <!-- Некоторый HTML контент -->
 
     <!--
@@ -42,7 +37,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
     <!-- Include my popup's own script-->
     <script src="popup.js"></script>
   </body>
-
 </html>
 ```
 
@@ -70,7 +64,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 Используя изначальную политику защиты содержимого, вы можете загружать только локальные к расширению [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы. Например, рассмотрите эту строку из документа расширения:
 
 ```html
- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 ```
 
 Она не будет загружать запрашиваемый ресурс, и вы не сможете найти ни один ожидаемый от ресурса объект. К этой ситуации существует два решения:
@@ -99,7 +93,9 @@ var f = new Function("console.log('foo');");
 Изначальная политика защиты содержимого не позволяет выполнять JavaScript-код, встраиваемый в HTML теги. Это запрещает как выполнение JavaScript-кода вложенного прямо в `<script>` тег, так и выполнение вписанных в атрибут обработчиков событий, означая, что следующий код так же не будет работать:
 
 ```html
-<script>console.log("foo");</script>
+<script>
+  console.log("foo");
+</script>
 ```
 
 ```html

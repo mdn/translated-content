@@ -1,8 +1,8 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-translation_of: Web/API/SubtleCrypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 Интерфейс **`SubtileCrypto`** представляет набор криптографических примитивов. Экземпляр **`SubtileCrypto`** доступен как {{domxref("Crypto.subtle")}}, в контексте window ({{domxref("Window.crypto")}}).
@@ -42,9 +42,7 @@ _Интерфейс не наследует и не определяет соб�
 
 ## Specifications
 
-| Specification                                                                                        | Status                                   | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

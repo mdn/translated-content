@@ -1,8 +1,6 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-translation_of: Web/Security/Same-origin_policy
-original_slug: Web/Security/Same_origin_policy_for_JavaScript
 ---
 
 La same-origin policy restreint la manière dont un document ou un script chargé depuis une origine peut interagir avec une autre ressource chargée depuis une autre origine.

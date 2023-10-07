@@ -1,5 +1,5 @@
 ---
-title: '<article>: 記事コンテンツ要素'
+title: "<article>: 記事コンテンツ要素"
 slug: Web/HTML/Element/article
 l10n:
   sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161

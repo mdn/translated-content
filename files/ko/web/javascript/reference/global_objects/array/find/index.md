@@ -1,94 +1,102 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}
 
-**`find()`** 메서드는 주어진 판별 함수를 만족하는 **첫 번째 요소**의 **값**을 반환합니다. 그런 요소가 없다면 {{jsxref("undefined")}}를 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`find()`** 메서드는 제공된 배열에서 제공된 테스트 함수를 만족하는 첫 번째 요소를 반환합니다. 테스트 함수를 만족하는 값이 없으면 {{jsxref("undefined")}}가 반환됩니다.
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+- 배열에서 찾은 요소의 **인덱스**가 필요한 경우, {{jsxref("Array/findIndex", "findIndex()")}}를 사용하세요.
+- **값의 인덱스**를 찾아야 하는 경우, {{jsxref("Array/indexOf", "indexOf()")}}를 사용하세요. ({{jsxref("Array/findIndex", "findIndex()")}}와 유사하지만, 테스트 함수를 사용하는 것 대신 각 요소가 값과 동일한지 확인합니다.)
+- 배열에 값이 **존재**하는지 찾아야 하는 경우, {{jsxref("Array/includes", "includes()")}}를 사용하세요.
+  이 역시 테스트 함수를 사용하는 것 대신 각 요소가 값과 동일한지 확인합니다.
+- 제공된 테스트 함수를 만족하는 요소가 있는지 찾아야 하는 경우, {{jsxref("Array/some", "some()")}}을 사용하세요.
 
-찾은 요소의 값 대신 **인덱스**를 반환하는 {{jsxref("Array.findIndex", "findIndex()")}} 메서드도 살펴보세요.
-
-배열 요소의 위치를 찾고자 하는 경우에는 {{jsxref("Array.prototype.indexOf()")}}를 사용하세요.
-
-배열 요소가 해당 배열에 존재하는지 확인하고자 하는 경우에는 {{jsxref("Array.prototype.indexOf()")}} 또는 {{jsxref("Array.prototype.includes()")}}를 사용세요.
+{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
 
 ## 구문
 
-```js
-    arr.find(callback[, thisArg])
+```js-nolint
+find(callbackFn)
+find(callbackFn, thisArg)
 ```
 
 ### 매개변수
 
 - `callback`
-  - : 배열의 각 값에 대해 실행할 함수. 아래의 세 인자를 받습니다.
+  - : 배열의 각 요소에 대해 실행할 함수입니다. 일치하는 요소를 찾았으면 [참](/ko/docs/Glossary/Truthy) 값을 반환하고, 그렇지 않으면 [거짓](/ko/docs/Glossary/Falsy) 값을 반환해야 합니다. 함수는 다음 인수를 사용하여 호출됩니다.
     - `element`
-      - : 콜백함수에서 처리할 현재 요소.
-    - `index`{{optional_inline}}
-      - : 콜백함수에서 처리할 현재 요소의 인덱스.
-    - `array`{{optional_inline}}
-      - : `find` 함수를 호출한 배열.
-- `thisArg`
-  - : 선택 항목. 콜백이 호출될 때 `this`로 사용할 객체.
+      - : 배열에서 현재 처리되고 있는 요소.
+    - `index`
+      - : 배열에서 현재 처리되고 있는 요소의 인덱스.
+    - `array`
+      - : `find()`가 호출된 배열.
+- `thisArg` {{optional_inline}}
+  - : `callbackFn`을 실행할 때 `this`로 사용할 값입니다. [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드)를 참조하세요.
 
 ### 반환 값
 
-주어진 판별 함수를 만족하는 **첫 번째 요소**의 **값**. 그 외에는 {{jsxref("undefined")}}.
+제공된 테스트 함수를 만족하는 배열의 첫 번째 요소입니다. 테스트 함수를 만족하는 요소가 없으면, {{jsxref("undefined")}}가 반환됩니다.
 
 ## 설명
 
-`find` 메서드는 `callback` 함수가 참을 반환 할 때까지 해당 배열의 각 요소에 대해서 `callback` 함수를 실행합니다. 만약 어느 요소를 찾았다면 `find` 메서드는 해당 요소의 값을 즉시 반환하고, 그렇지 않았다면 {{jsxref("undefined")}}를 반환합니다. `callback`은 `0` 부터 `length - 1` 까지 배열의 모든 인덱스에 대해 호출되며, 값이 지정되지 않은 요소도 포함하여 모든 인덱스에 대해 호출됩니다. 따라서, 희소 배열 (sparse arrays)의 경우에는 값이 지정된 요소만 탐색하는 다른 메소드에 비해 더 비효율적입니다.
+`find()` 메서드는 [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드)입니다. 이 메서드는 `callbackFn`이 [참](/ko/docs/Glossary/Truthy) 값을 반환할 때까지, 오름차순 인덱스로 순서로 배열의 각 요소에 대해 제공된 `callbackFn` 함수를 한 번씩 호출합니다. 그런 다음 `find()`는 해당 요소를 반환하고 배열 순회를 중지합니다. `callbackFn`이 [참](/ko/docs/Glossary/Truthy) 값을 반환하지 않으면, `find()`는 {{jsxref("undefined")}}를 반환합니다.
 
-`callback`은 다음의 세가지 인자를 가지고 호출됩니다: 요소의 값, 요소의 인덱스, 순회의 대상이 되는 배열.
+`callbackFn`은 값이 할당된 인덱스뿐만 아니라 배열의 모든 인덱스에 대해 호출됩니다. [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯은 `undefined`와 동일하게 동작합니다.
 
-`thisArg` 파라미터가 주어진 경우에는 제공되었다면 `thisArg`가 `callback`안에서 `this`로 사용되고, 그렇지 않은 경우 {{jsxref("undefined")}} 가 `this`로 사용됩니다.
+`find()`는 호출되는 배열을 변경하지 않지만, `callbackFn`으로 제공된 함수는 변경할 수 있습니다. 그러나 배열의 length는 `callbackFn`을 처음 호출하기 전에 저장된다는 점에 유의하세요. 따라서,
 
-`find`는 호출의 대상이 된 배열을 변경(mutate)하지 않습니다.
+- `callbackFn`은 `find()` 호출이 시작되었을 때 배열의 초기 length 값을 초과하여 추가된 요소는 방문하지 않습니다.
+- 이미 방문한 인덱스를 변경해도 `callbackFn`이 해당 인덱스에 대해 다시 호출되지 않습니다.
+- 배열의 아직 방문하지 않은 기존 요소가 `callbackFn`에 의해 변경되는 경우, `callbackFn`에 전달된 값은 해당 요소가 방문될 당시의 값이 됩니다. [삭제된](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 `undefined`가 있는것 처럼 방문됩니다.
 
-`find`가 처리할 배열 요소의 범위는 첫 `callback`이 호출되기 전에 먼저 결정됩니다. `find`메서드가 실행 된 이후에 배열에 추가된 요소들에 대해서는 `callback`이 호출되지 않습니다. 아직 `callback`이 호출되지 않았던 배열 요소가 `callback`에 의해서 변경된 경우, `find`가 해당 요소의 인덱스를 방문할 때의 값으로 `callback`함수에 전달될 것입니다. 즉, 삭제된 요소에도 `callback`이 호출됩니다.
+> **경고:** 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
+
+`find()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
 ## 예제
 
-### 속성 중 하나를 사용하여 배열에서 객체 찾기
-
-```js
-var inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
-];
-
-function findCherries(fruit) {
-    return fruit.name === 'cherries';
-}
-
-console.log(inventory.find(findCherries)); // { name: 'cherries', quantity: 5 }
-```
-
-#### ES2015 화살표 함수 사용하기
+### 배열에서 속성 중 하나로 객체 찾기
 
 ```js
 const inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find(fruit => fruit.name === 'cherries');
+function isCherries(fruit) {
+  return fruit.name === "cherries";
+}
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(inventory.find(isCherries));
+// { name: 'cherries', quantity: 5 }
+```
+
+#### 화살표 함수 및 구조 분해 사용
+
+```js
+const inventory = [
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+];
+
+const result = inventory.find(({ name }) => name === "cherries");
+
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
 ### 배열에서 소수 찾기
 
-다음 예제에서는 배열의 요소 중 소수인 요소를 찾습니다(소수가 없는 경우에는 {{jsxref("undefined")}}를 반환).
+다음 예제는 배열의 요소 중 소수인 요소를 찾습니다(소수가 없는 경우에는 {{jsxref("undefined")}}를 반환합니다.).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -97,88 +105,67 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+console.log([4, 6, 8, 12].find(isPrime)); // undefined, 소수 없음
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
-### 탐색 중 삭제된 배열 요소
+### 희소 배열에서 find() 사용하기
 
-다음 예제에서는 삭제되어 존재하지 않는 배열의 요소에도 `callback`이 호출되어 해당 시점의 값이 `callback`에 전달되는 것을 보여줍니다.
+희소 배열의 빈 슬롯은 `undefined`와 동일하게 동작합니다.
 
 ```js
-// Declare array with no element at index 2, 3 and 4
-var a = [0,1,,,,5,6];
+// 2, 3, 4 인덱스에 요소가 없는 배열로 선언
+const array = [0, 1, , , , 5, 6];
 
-// Shows all indexes, not just those that have been assigned values
-a.find(function(value, index) {
-  console.log('Visited index ' + index + ' with value ' + value);
+// 값이 있는 요소만이 아닌 모든 인덱스를 표시합니다.
+array.find((value, index) => {
+  console.log("방문 인덱스:", index, "값:", value);
 });
-// Shows all indexes, including deleted
-  a.find(function(value, index) {
-  // Delete element 5 on first iteration
-  if (index == 0) {
-    console.log('Deleting a[5] with value ' + a[5]);
-    delete a[5];
+// 방문 인덱스: 0 값: 0
+// 방문 인덱스: 1 값: 1
+// 방문 인덱스: 2 값: undefined
+// 방문 인덱스: 3 값: undefined
+// 방문 인덱스: 4 값: undefined
+// 방문 인덱스: 5 값: 5
+// 방문 인덱스: 6 값: 6
+
+// 삭제된 요소를 포함한 모든 인덱스를 표시합니다.
+array.find((value, index) => {
+  // 첫 번째 순회에서 요소 5 삭제
+  if (index === 0) {
+    console.log(array[5], "값인 array[5] 삭제");
+    delete array[5];
   }
-  // Element 5 is still visited even though deleted
-  console.log('Visited index ' + index + ' with value ' + value);
+  // 삭제된 요소 5를 포함하여 모든 인덱스를 방문합니다.
+  console.log("방문 인덱스:", index, "값:", value);
 });
+// 5 값인 array[5] 삭제
+// 방문 인덱스: 0 값: 0
+// 방문 인덱스: 1 값: 1
+// 방문 인덱스: 2 값: undefined
+// 방문 인덱스: 3 값: undefined
+// 방문 인덱스: 4 값: undefined
+// 방문 인덱스: 5 값: undefined
+// 방문 인덱스: 6 값: 6
 ```
 
-## 폴리필
+### 배열이 아닌 객체에서 find() 호출하기
 
-`find`는 ECMAScript 2015 명세에 추가됐으므로 어떤 표준 구현체에서는 사용지 못할 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 `find`를 지원하지 않는 환경에서도 사용할 수 있습니다.
+`find()` 메서드는 `this`의 `length` 속성을 읽은 다음 키가 `length`보다 작은 음수가 아닌 정수인 각 속성에 접근합니다.
 
 ```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.find
-if (!Array.prototype.find) {
-  Object.defineProperty(Array.prototype, 'find', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
-
-      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
-      }
-
-      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
-      var thisArg = arguments[1];
-
-      // 5. Let k be 0.
-      var k = 0;
-
-      // 6. Repeat, while k < len
-      while (k < len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kValue be ? Get(O, Pk).
-        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
-        // d. If testResult is true, return kValue.
-        var kValue = o[k];
-        if (predicate.call(thisArg, kValue, k, o)) {
-          return kValue;
-        }
-        // e. Increase k by 1.
-        k++;
-      }
-
-      // 7. Return undefined.
-      return undefined;
-    },
-    configurable: true,
-    writable: true
-  });
-}
+const arrayLike = {
+  length: 3,
+  "-1": 0.1, // -1 < 0 이므로 find()에서 무시됩니다.
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+// 7.3
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -188,7 +175,14 @@ if (!Array.prototype.find) {
 
 ## 같이 보기
 
-- {{jsxref("Array.prototype.findIndex()")}} – 찾기 이후 인덱스 반환
-- {{jsxref("Array.prototype.includes()")}} – 배열에 어떤 값이 존재하는지 검사
-- {{jsxref("Array.prototype.filter()")}} – 매칭되는 모든 요소 찾기
-- {{jsxref("Array.prototype.every()")}} – 모든 요소에 대해서 검사
+- [`core-js`의 `Array.prototype.find` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.find()")}}

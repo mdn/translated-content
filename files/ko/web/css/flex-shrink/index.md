@@ -2,6 +2,7 @@
 title: flex-shrink
 slug: Web/CSS/flex-shrink
 ---
+
 {{CSSRef}}
 
 **`flex-shrink`** [CSS](/ko/docs/CSS) property는 `flex-item` 요소의 `flex-shrink` 값을 설정하는 속성입니다. 만약 `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 flex-shrink 속성을 사용하는데, 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 **축소**됩니다.
@@ -59,7 +60,7 @@ The `flex-shrink` property is specified as a single [`<number>`](#number).
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {

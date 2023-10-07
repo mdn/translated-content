@@ -13,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 
 ```js
 var removing = browser.tabs.remove(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### パラメータ

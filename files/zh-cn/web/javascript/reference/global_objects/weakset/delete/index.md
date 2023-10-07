@@ -32,10 +32,10 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // 返回 false。因为找不到要删除的 obj
+ws.delete(obj); // 返回 false。因为找不到要删除的 obj
 ws.delete(window); // 返回 true。成功地移除了元素
 
-ws.has(window);    // 返回 false。因为 WeakSet 中已经不存在 window 对象
+ws.has(window); // 返回 false。因为 WeakSet 中已经不存在 window 对象
 ```
 
 ## 规范

@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.complete
+title: "HTMLImageElement: complete プロパティ"
+short-title: complete
 slug: Web/API/HTMLImageElement/complete
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -50,13 +53,13 @@ async function lightBox(url) {
   lightboxControlsElem.disabled = false;
 }
 
-/* ... */
+// …
 
 function fixRedEyeCommand() {
   if (lightboxElem.style.display === "block" && lightboxImgElem.complete) {
     fixRedEye(lightboxImgElem);
   } else {
-    /* 画像が完全に読み込まれるまで、開始することはできません。 */
+    /* 画像が完全に読み込まれるまで開始することはできない */
   }
 }
 ```

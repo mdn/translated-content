@@ -34,32 +34,32 @@ Mozilla extensions for use by JS-implemented event targets to implement on prope
 ### Simple implementation of EventTarget
 
 ```js
-var EventTarget = function() {
+var EventTarget = function () {
   this.listeners = {};
 };
 
 EventTarget.prototype.listeners = null;
-EventTarget.prototype.addEventListener = function(type, callback) {
+EventTarget.prototype.addEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
     this.listeners[type] = [];
   }
   this.listeners[type].push(callback);
 };
 
-EventTarget.prototype.removeEventListener = function(type, callback) {
+EventTarget.prototype.removeEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
     return;
   }
   var stack = this.listeners[type];
   for (var i = 0, l = stack.length; i < l; i++) {
-    if (stack[i] === callback){
+    if (stack[i] === callback) {
       stack.splice(i, 1);
       return;
     }
   }
 };
 
-EventTarget.prototype.dispatchEvent = function(event) {
+EventTarget.prototype.dispatchEvent = function (event) {
   if (!(event.type in this.listeners)) {
     return true;
   }

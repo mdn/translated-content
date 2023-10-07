@@ -1,12 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -56,17 +50,25 @@ _Дескриптор свойства_ — это запись с некото�
 ```js
 var o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 // d равен { configurable: true, enumerable: true, get: /*функция геттера*/, set: undefined }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 // d равен { configurable: true, enumerable: true, value: 42, writable: true }
 
 o = {};
-Object.defineProperty(o, 'baz', { value: 8675309, writable: false, enumerable: false });
-d = Object.getOwnPropertyDescriptor(o, 'baz');
+Object.defineProperty(o, "baz", {
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
+d = Object.getOwnPropertyDescriptor(o, "baz");
 // d равен { value: 8675309, writable: false, enumerable: false, configurable: false }
 ```
 
@@ -84,10 +86,10 @@ TypeError: "foo" is not an object  // код ES5
 
 ## Спецификации
 
-| Спецификация                                                                                                                 | Статус                   | Комментарии                                              |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                             | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ES6')}}     |                                                          |
+| Спецификация                                                                                   | Статус             | Комментарии                                              |
+| ---------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                      | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ES6')}}   |                                                          |
 
 ## Совместимость с браузерами
 

@@ -25,8 +25,8 @@ xhrInstance.abort();
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
 
 xhr.send();

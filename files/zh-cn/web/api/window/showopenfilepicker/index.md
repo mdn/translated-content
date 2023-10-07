@@ -88,5 +88,5 @@ async function getFile() {
 
 ## 参见
 
-- [File System Access API](/zh-CN/docs/Web/API/File_System_Access_API)
-- [File System Access API：简化对本地文件的访问](https://web.dev/file-system-access/)
+- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
+- [文件系统访问 API：简化对本地文件的访问](https://web.dev/file-system-access/)

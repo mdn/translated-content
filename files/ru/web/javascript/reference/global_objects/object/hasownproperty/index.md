@@ -1,15 +1,8 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка
@@ -39,16 +32,16 @@ obj.hasOwnProperty(prop)
 
 ```js
 o = new Object();
-o.prop = 'существует';
+o.prop = "существует";
 
 function changeO() {
   o.newprop = o.prop;
   delete o.prop;
 }
 
-o.hasOwnProperty('prop');   // вернёт true
+o.hasOwnProperty("prop"); // вернёт true
 changeO();
-o.hasOwnProperty('prop');   // вернёт false
+o.hasOwnProperty("prop"); // вернёт false
 ```
 
 ### Пример: собственные и унаследованные свойства
@@ -57,10 +50,10 @@ o.hasOwnProperty('prop');   // вернёт false
 
 ```js
 o = new Object();
-o.prop = 'существует';
-o.hasOwnProperty('prop');             // вернёт true
-o.hasOwnProperty('toString');         // вернёт false
-o.hasOwnProperty('hasOwnProperty');   // вернёт false
+o.prop = "существует";
+o.hasOwnProperty("prop"); // вернёт true
+o.hasOwnProperty("toString"); // вернёт false
+o.hasOwnProperty("hasOwnProperty"); // вернёт false
 ```
 
 ### Пример: обход свойств объекта
@@ -69,14 +62,13 @@ o.hasOwnProperty('hasOwnProperty');   // вернёт false
 
 ```js
 var buz = {
-  fog: 'stack'
+  fog: "stack",
 };
 
 for (var name in buz) {
   if (buz.hasOwnProperty(name)) {
-    alert('это точно туман (' + name + '). Значение: ' + buz[name]);
-  }
-  else {
+    alert("это точно туман (" + name + "). Значение: " + buz[name]);
+  } else {
     alert(name); // toString или что-то ещё
   }
 }
@@ -88,19 +80,19 @@ JavaScript не защищает имя свойства `hasOwnProperty`; та�
 
 ```js
 var foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  bar: 'Тут драконы'
+  bar: "Тут драконы",
 };
 
-foo.hasOwnProperty('bar'); // всегда возвращает false
+foo.hasOwnProperty("bar"); // всегда возвращает false
 
 // Используем метод hasOwnProperty другого объекта и вызываем его с передачей foo в качестве this
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // Также для этих целей можно использовать свойство hasOwnProperty из прототипа Object
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Обратите внимание, что в последнем случае новые объекты не создаются.

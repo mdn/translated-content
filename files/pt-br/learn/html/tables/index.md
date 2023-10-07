@@ -1,7 +1,6 @@
 ---
 title: Tabelas em HTML
 slug: Learn/HTML/Tables
-original_slug: Aprender/HTML/Tables
 ---
 
 {{LearnSidebar}}

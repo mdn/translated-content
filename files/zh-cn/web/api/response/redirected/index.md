@@ -26,18 +26,20 @@ var isRedirected = Response.redirected;
 检测某个响应是否来自一个重定向的请求就如同检测 {{domxref("Response")}} 对象中这个标识一样容易。在下面的代码中，当 fetch 操作引起了重定向，一段文本信息会被插入到元素中。但需要注意的是，这不像下面 [禁用重定向](#禁用重定向) 所描述的当重定向不合法时全部阻止的行为一样安全。
 
 ```js
-fetch("awesome-picture.jpg").then(function(response) {
-  let elem = document.getElementById("warning-message-box");
-  if (response.redirected) {
-    elem.innerHTML = "Unexpected redirect";
-  } else {
-    elem.innerHTML = "";
-  }
-  return response.blob();
-}).then(function(imageBlob) {
-  let imgObjectURL = URL.createObjectURL(imageBlob);
-  document.getElementById("img-element-id").src = imgObjectURL;
-});
+fetch("awesome-picture.jpg")
+  .then(function (response) {
+    let elem = document.getElementById("warning-message-box");
+    if (response.redirected) {
+      elem.innerHTML = "Unexpected redirect";
+    } else {
+      elem.innerHTML = "";
+    }
+    return response.blob();
+  })
+  .then(function (imageBlob) {
+    let imgObjectURL = URL.createObjectURL(imageBlob);
+    document.getElementById("img-element-id").src = imgObjectURL;
+  });
 ```
 
 ### 禁用重定向
@@ -45,12 +47,14 @@ fetch("awesome-picture.jpg").then(function(response) {
 由于使用 **`redirected`** 过滤重定向会允许虚假的重定向，你应该像下面的例子这样，当调用 {{domxref("GlobalFetch.fetch", "fetch()")}} 时在 `init` 参数中设置重定向模式为 `"error"` :
 
 ```js
-fetch("awesome-picture.jpg", { redirect: "error" }).then(function(response) {
-  return response.blob();
-}).then(function(imageBlob) {
-  let imgObjectURL = URL.createObjectURL(imageBlob);
-  document.getElementById("img-element-id").src = imgObjectURL;
-});
+fetch("awesome-picture.jpg", { redirect: "error" })
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (imageBlob) {
+    let imgObjectURL = URL.createObjectURL(imageBlob);
+    document.getElementById("img-element-id").src = imgObjectURL;
+  });
 ```
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-translation_of: Web/CSS/border-bottom
 ---
 
 {{CSSRef}}
@@ -68,9 +67,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the bottom side.
-</div>
+<div>This box has a border on the bottom side.</div>
 ```
 
 #### CSS
@@ -92,11 +89,11 @@ div {
 
 ## Specifications
 
-| Specification                                                                                        | Status                                   | Comment                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Specification                                                               | Status                        | Comment                                                                                                         |
+| --------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS3 Backgrounds', '#propdef-border-bottom', 'border-bottom')}} | {{Spec2('CSS3 Backgrounds')}} | No direct changes, though the modification of values for the {{cssxref("border-bottom-color")}} do apply to it. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}}     | {{Spec2('CSS2.1')}}                 | No significant changes.                                                                                                   |
-| {{SpecName('CSS1', '#border-bottom', 'border-bottom')}}                             | {{Spec2('CSS1')}}                 | Initial definition                                                                                                        |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}}   | {{Spec2('CSS2.1')}}           | No significant changes.                                                                                         |
+| {{SpecName('CSS1', '#border-bottom', 'border-bottom')}}                     | {{Spec2('CSS1')}}             | Initial definition                                                                                              |
 
 ## Browser compatibility
 
@@ -104,6 +101,6 @@ div {
 
 ## See also
 
-- [`border`](/en-US/docs/Web/CSS/border)
-- [`border-block`](/en-US/docs/Web/CSS/border-block)
-- [`outline`](/en-US/docs/Web/CSS/outline)
+- [`border`](/ru/docs/Web/CSS/border)
+- [`border-block`](/ru/docs/Web/CSS/border-block)
+- [`outline`](/ru/docs/Web/CSS/outline)

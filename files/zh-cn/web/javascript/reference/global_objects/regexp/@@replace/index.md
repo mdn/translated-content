@@ -33,9 +33,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 如果匹配模式也是{{jsxref("RegExp")}}对象，这个方法在 {{jsxref("String.prototype.replace()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
 该方法是为了在 RegExp 子类中自定义匹配的替换模式。
@@ -50,9 +50,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 
 ```js
 var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+var str = "2016-01-01";
+var newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### 在子类中使用 @@replace
@@ -75,9 +75,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+var re = new MyRegExp("\\d", "", 3);
+var str = "01234567";
+var newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 

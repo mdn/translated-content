@@ -22,9 +22,7 @@ autocomplete="off"
 可以为整个表单设置或为表单中某个输入元素单独设置：
 
 ```html
-<form method="post" action="/form" autocomplete="off">
-[…]
-</form>
+<form method="post" action="/form" autocomplete="off">[…]</form>
 ```
 
 ```html
@@ -32,7 +30,7 @@ autocomplete="off"
   […]
   <div>
     <label for="cc">信用卡：</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```

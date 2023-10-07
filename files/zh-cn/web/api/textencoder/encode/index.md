@@ -26,12 +26,12 @@ encode(string)
 
 ```html
 <p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result: </p>
+<p class="result">Encoded result:</p>
 ```
 
 ```js
-const sourcePara = document.querySelector('.source');
-const resultPara = document.querySelector('.result');
+const sourcePara = document.querySelector(".source");
+const resultPara = document.querySelector(".result");
 const string = sourcePara.textContent;
 
 const textEncoder = new TextEncoder();

@@ -22,9 +22,7 @@ autocomplete="off"
 これは、フォーム全体、またはフォーム内の特定の入力要素に対して行うことができます。
 
 ```html
-<form method="post" action="/form" autocomplete="off">
-[…]
-</form>
+<form method="post" action="/form" autocomplete="off">[…]</form>
 ```
 
 ```html
@@ -32,7 +30,7 @@ autocomplete="off"
   […]
   <div>
     <label for="cc">クレジットカード番号:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```

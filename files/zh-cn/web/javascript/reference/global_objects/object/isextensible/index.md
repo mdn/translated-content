@@ -3,61 +3,63 @@ title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
-## 概述
+**`Object.isExtensible()`** 静态方法判断一个对象是否是可扩展的（是否可以在它上面添加新的属性）。
 
-**`Object.isExtensible()`** 方法判断一个对象是否是可扩展的（是否可以在它上面添加新的属性）。
+{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 Object.isExtensible(obj)
 ```
 
 ### 参数
 
-- obj
-  - : 需要检测的对象
+- `obj`
+  - : 要检查的对象。
 
 ### 返回值
 
-表示给定对象是否可扩展的一个 [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Boolean)。
+指示给定对象是否可扩展的一个{{jsxref("Boolean", "布尔值", "", 1)}}。
 
 ## 描述
 
-默认情况下，对象是可扩展的：即可以为他们添加新的属性。以及它们的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 属性可以被更改。{{jsxref("Object.preventExtensions")}}，{{jsxref("Object.seal")}} 或 {{jsxref("Object.freeze")}} 方法都可以标记一个对象为不可扩展（non-extensible）。
+默认情况下，对象是可扩展的：可以向它们添加新属性，并且它们的 `[[Prototype]]` 可以被重新赋值。可以使用 {{jsxref("Object.preventExtensions()")}}、{{jsxref("Object.seal()")}}、{{jsxref("Object.freeze()")}} 或 {{jsxref("Reflect.preventExtensions()")}} 中的任一方法将对象标记为不可扩展。
 
 ## 示例
 
+### 使用 Object.isExtensible
+
 ```js
-// 新对象默认是可扩展的。
-var empty = {};
-Object.isExtensible(empty); // === true
+// 新对象是可拓展的。
+const empty = {};
+Object.isExtensible(empty); // true
 
-// ...可以变的不可扩展。
+// 它们可以变为不可拓展的
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
-// 密封对象是不可扩展的。
-var sealed = Object.seal({});
-Object.isExtensible(sealed); // === false
+// 根据定义，密封对象是不可拓展的。
+const sealed = Object.seal({});
+Object.isExtensible(sealed); // false
 
-// 冻结对象也是不可扩展。
-var frozen = Object.freeze({});
-Object.isExtensible(frozen); // === false
+// 根据定义，冻结对象同样也是不可拓展的。
+const frozen = Object.freeze({});
+Object.isExtensible(frozen); // false
 ```
 
-## 注意
+### 非对象参数
 
-在 ES5 中，如果参数不是一个对象类型，将抛出一个 {{jsxref("TypeError")}} 异常。在 ES6 中，non-object 参数将被视为一个不可扩展的普通对象，因此会返回 false。
+在 ES5 中，如果参数不是一个对象（即基本类型），将抛出 {{jsxref("TypeError")}}。在 ES2015 中，如果传入的参数不是一个对象，那么它将返回 `false` 而不会报错，因为按照定义，原始类型是不可变的。
 
-```plain
+```js
 Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isExtensible(1);
-// false                         (ES6 code)
+// false                         (ES2015 code)
 ```
 
 ## 规范
@@ -68,10 +70,11 @@ Object.isExtensible(1);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- **{{jsxref("Object.preventExtensions")}}**
-- {{jsxref("Object.seal")}}
-- {{jsxref("Object.isSealed")}}
-- {{jsxref("Object.freeze")}}
-- {{jsxref("Object.isFrozen")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Reflect.isExtensible()")}}

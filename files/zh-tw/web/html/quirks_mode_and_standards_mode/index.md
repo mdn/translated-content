@@ -14,7 +14,7 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 對 [HTML](/zh-TW/docs/Web/HTML) 文件來說，瀏覽器使用文件開頭的 DOCTYPE 來決定用怪異模式處理或標準模式處理。為了確保頁面使用標準模式，請確認你的頁面，如同本範例一樣擁有 DOCTYPE：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />

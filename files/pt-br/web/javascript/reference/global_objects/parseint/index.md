@@ -117,28 +117,27 @@ Muitas implementações não adotaram este comportamento a partir de 2013, e por
 
 ```js
 filterInt = function (value) {
-  if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## Especificações
 
-| Especificação                                                                    | Status                   | Comentário        |
-| -------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| ECMAScript 1st Edition.                                                          | Padrão                   | Definição inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}             | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ES6')}}     |                   |
+| Especificação                                                 | Status             | Comentário        |
+| ------------------------------------------------------------- | ------------------ | ----------------- |
+| ECMAScript 1st Edition.                                       | Padrão             | Definição inicial |
+| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}            | {{Spec2('ES5.1')}} |                   |
+| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ES6')}}   |                   |
 
 ## Compatibilidade com navegadores
 

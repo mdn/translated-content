@@ -5,7 +5,7 @@ slug: Web/CSS/contain-intrinsic-width
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`contain-intrinsic-width`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_Containment#尺寸局限)时浏览器用于布局的元素宽度。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`contain-intrinsic-width`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素宽度。
 
 ## 语法
 

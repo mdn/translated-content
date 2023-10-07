@@ -70,19 +70,16 @@ var s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
 
-
 // 使用字符串
-Int16Array.from('123');
+Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 
-
 // 使用箭头函数对数组元素进行映射
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 
-
 // 生成一个数字序列
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 
@@ -92,43 +89,44 @@ Uint8Array.from({length: 5}, (v, k) => k);
 
 ```js
 if (!Int8Array.__proto__.from) {
-    (function () {
-        Int8Array.__proto__.from = function (obj, func, thisObj) {
+  (function () {
+    Int8Array.__proto__.from = function (obj, func, thisObj) {
+      var typedArrayClass = Int8Array.__proto__;
+      if (typeof this !== "function") {
+        throw new TypeError("# is not a constructor");
+      }
+      if (this.__proto__ !== typedArrayClass) {
+        throw new TypeError("this is not a typed array.");
+      }
 
-            var typedArrayClass = Int8Array.__proto__;
-            if(typeof this !== 'function') {
-                throw new TypeError('# is not a constructor');
-            }
-            if (this.__proto__ !== typedArrayClass) {
-                throw new TypeError('this is not a typed array.');
-            }
+      func =
+        func ||
+        function (elem) {
+          return elem;
+        };
 
-            func = func || function (elem) {
-                    return elem;
-                };
+      if (typeof func !== "function") {
+        throw new TypeError("specified argument is not a function");
+      }
 
-            if (typeof func !== 'function') {
-                throw new TypeError('specified argument is not a function');
-            }
+      obj = Object(obj);
+      if (!obj["length"]) {
+        return new this(0);
+      }
+      var copy_data = [];
+      for (var i = 0; i < obj.length; i++) {
+        copy_data.push(obj[i]);
+      }
 
-            obj = Object(obj);
-            if (!obj['length']) {
-                return new this(0);
-            }
-            var copy_data = [];
-            for(var i = 0; i < obj.length; i++) {
-                copy_data.push(obj[i]);
-            }
+      copy_data = copy_data.map(func, thisObj);
 
-            copy_data = copy_data.map(func, thisObj);
-
-            var typed_array = new this(copy_data.length);
-            for(var i = 0; i < typed_array.length; i++) {
-                typed_array[i] = copy_data[i];
-            }
-            return typed_array;
-        }
-    })();
+      var typed_array = new this(copy_data.length);
+      for (var i = 0; i < typed_array.length; i++) {
+        typed_array[i] = copy_data[i];
+      }
+      return typed_array;
+    };
+  })();
 }
 ```
 

@@ -30,15 +30,15 @@ pc = new EventSource(url, configuration);
 ## 示例
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+var evtSource = new EventSource("sse.php");
+var eventList = document.querySelector("ul");
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 > **备注：** 你可以在 GitHub 查看完整示例 — 请查看 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)

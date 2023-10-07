@@ -1,7 +1,8 @@
 ---
-title: HTMLAreaElement.origin
+title: "HTMLAreaElement: origin プロパティ"
 slug: Web/API/HTMLAreaElement/origin
-original_slug: Web/API/HTMLHyperlinkElementUtils/origin
+l10n:
+  sourceCommit: e241a72ec49dc748d4970dde8e947b29f3e9fd2f
 ---
 
 {{APIRef("HTML DOM")}}

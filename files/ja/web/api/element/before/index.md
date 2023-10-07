@@ -1,23 +1,31 @@
 ---
-title: Element.before()
+title: "Element: before() メソッド"
+short-title: before()
 slug: Web/API/Element/before
-original_slug: Web/API/ChildNode/before
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.before()`** は一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトを、この `Element` の親の子リストの中、この `Element` の直前に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。
+**`Element.before()`** は一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `Element` の親の子リストの中、この `Element` の直前に挿入します。文字列は {{domxref("Text")}} ノードと等価なノードとして挿入されます。
 
 ## 構文
 
-```js
-before(... nodes)
+```js-nolint
+before(param1)
+before(param1, param2)
+before(param1, param2, /* … ,*/ paramN)
 ```
 
 ### 引数
 
-- `nodes`
-  - : 挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。
+- `param1`, …, `paramN`
+  - : 挿入する一連の {{domxref("Node")}} オブジェクトまたは文字列です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 

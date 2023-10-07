@@ -1,16 +1,6 @@
 ---
 title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeHistory
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 ---
 
 {{AddonSidebar()}}
@@ -28,8 +18,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeHistory(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -62,11 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeHistory(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeHistory({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tous les enregistrements des pages visitées :
@@ -80,8 +70,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeHistory({}).
-then(onRemoved, onError);
+browser.browsingData.removeHistory({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

@@ -1,5 +1,5 @@
 ---
-title: 'カスタムプロパティ (--*): CSS 変数'
+title: "カスタムプロパティ (--*): CSS 変数"
 slug: Web/CSS/--*
 l10n:
   sourceCommit: 8318078e0cf65cd4d56e80376c03019dcb292dc1
@@ -35,16 +35,10 @@ l10n:
 ### HTML
 
 ```html
-<p id="firstParagraph">
-  この段落は青色の背景で黄色のテキストとなります。
-</p>
-<p id="secondParagraph">
-  この段落は黄色の背景で青色のテキストとなります。
-</p>
+<p id="firstParagraph">この段落は青色の背景で黄色のテキストとなります。</p>
+<p id="secondParagraph">この段落は黄色の背景で青色のテキストとなります。</p>
 <div id="container">
-  <p id="thirdParagraph">
-    この段落は緑色の背景で黄色のテキストとなります。
-  </p>
+  <p id="thirdParagraph">この段落は緑色の背景で黄色のテキストとなります。</p>
 </div>
 ```
 

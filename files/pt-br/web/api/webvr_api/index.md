@@ -59,13 +59,11 @@ Você pode encontrar uma série de exemplos nesses repositórios Github:
 
 ## Especificações
 
-| Specificação                 | Status                   | Comentario         |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR')}} | {{Spec2('WebVR')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## Veja Também
 

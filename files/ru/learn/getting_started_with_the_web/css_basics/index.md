@@ -1,17 +1,6 @@
 ---
 title: Основы CSS
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
-  - Styling
-  - Web
-  - Веб
-  - Новичку
-  - Обучение
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
@@ -34,9 +23,9 @@ p {
 
 1. Откройте ваш файл `index.html` и вставьте следующую строку куда-нибудь в шапку, между `<head>` и `</head>` тегами:
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   ```
 
 2. Сохраните `index.html` и загрузите его в вашем браузере. Вы должны увидеть что-то вроде этого:
 
@@ -80,7 +69,9 @@ p {
 Вы также можете выбрать несколько элементов разного типа и применить единый набор правил для всех из них. Добавьте несколько селекторов, разделённых запятыми. Например:
 
 ```css
-p,li,h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -105,38 +96,42 @@ p,li,h1 {
 
 1. Прежде всего, вернитесь и найдите [вывод из Google Fonts](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like), который вы уже где-то сохранили. Добавьте элемент {{htmlelement("link")}} где-нибудь внутри шапки вашего `index.html` (снова, в любом месте между тегами `<head>` и `</head>`). Это будет выглядеть примерно так:
 
-    ```html
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    ```
+   ```html
+   <link
+     href="http://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet"
+     type="text/css" />
+   ```
 
-    Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans вместе с вашей страницей и позволяет вам применять их к вашим HTML-элементам используя свою собственную таблицу стилей.
+   Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans вместе с вашей страницей и позволяет вам применять их к вашим HTML-элементам используя свою собственную таблицу стилей.
 
 2. Затем, удалите существующее правило в вашем `style.css` файле. Это был хороший тест, но красный текст, на самом деле, не очень хорошо выглядит.
 3. Добавьте следующие строки в нужное место, заменив строку `placeholder` актуальной `font-family` строкой, которую вы получили из Google Fonts. (`font-family` просто означает, какой шрифт(ы) вы хотите использовать для вашего текста). Это правило устанавливает глобальный базовый шрифт и размер шрифта для всей страницы (поскольку `<html>` является родительским элементом для всей страницы, и все элементы внутри него наследуют такой же `font-size` и `font-family`):
 
-    ```css
-    html {
-      font-size: 10px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
-      font-family: placeholder: здесь должно быть имя шрифта из Google fonts
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
+     font-family: placeholder: здесь должно быть имя шрифта из Google fonts
+   }
+   ```
 
-    > **Примечание:** Все в CSS документе между `/*` и `*/` является **CSS комментарием**, который браузер игнорирует при исполнении кода. Это место, где вы можете написать полезные заметки о том, что вы делаете.
+   > **Примечание:** Все в CSS документе между `/*` и `*/` является **CSS комментарием**, который браузер игнорирует при исполнении кода. Это место, где вы можете написать полезные заметки о том, что вы делаете.
 
 4. Теперь мы установим размер шрифта для элементов, содержащих текст внутри HTML тела ({{htmlelement("h1")}}, {{htmlelement("li")}}, и {{htmlelement("p")}}). Мы также отцентрируем текст нашего заголовка и установим некоторую высоту строки и расстояние между буквами в теле документа, чтобы сделать его немного более удобным для чтения:
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 Вы можете настроить значения `px` так, как вам нравится, чтобы ваш дизайн выглядел так, как вы хотите, но, в общем, ваш дизайн должен выглядеть вот так:
 
@@ -170,7 +165,7 @@ p,li,h1 {
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -182,7 +177,7 @@ html {
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -202,7 +197,7 @@ body {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```

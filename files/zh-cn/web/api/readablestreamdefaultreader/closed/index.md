@@ -17,8 +17,8 @@ slug: Web/API/ReadableStreamDefaultReader/closed
 
 ```js
 reader.closed.then(() => {
-  console.log('reader closed');
-})
+  console.log("reader closed");
+});
 ```
 
 ## 规范

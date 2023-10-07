@@ -15,8 +15,8 @@ a que el usuario cierre el cuadro de diálogo.
 ## Sintaxis
 
 ```js
-alert()
-alert(message)
+alert();
+alert(message);
 ```
 
 ### Parámetros

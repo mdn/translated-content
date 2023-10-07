@@ -42,12 +42,20 @@ Este elemento implementa la interfaz de [`SVGAnimateElement`](/es/docs/Web/DOM/S
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120" viewBox="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="100" height="100">
-    <animate attributeType="XML" attributeName="x" from="-100" to="120"
-        dur="10s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="x"
+      from="-100"
+      to="120"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```

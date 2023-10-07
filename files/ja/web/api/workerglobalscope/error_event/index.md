@@ -1,5 +1,5 @@
 ---
-title: 'WorkerGlobalScope: error イベント'
+title: "WorkerGlobalScope: error イベント"
 slug: Web/API/WorkerGlobalScope/error_event
 l10n:
   sourceCommit: e713a02caebc813b7b3c422d15baa9693c4bfd02
@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -29,15 +29,15 @@ onerror = (event) => { };
 
 ```js
 self.onerror = () => {
-  console.log('There is an error inside your worker!');
-}
+  console.log("There is an error inside your worker!");
+};
 ```
 
 同じスニペットで、 `addEventListener()` を使用したものです。
 
 ```js
-self.addEventListener('error', () => {
-  console.log('There is an error inside your worker!');
+self.addEventListener("error", () => {
+  console.log("There is an error inside your worker!");
 });
 ```
 

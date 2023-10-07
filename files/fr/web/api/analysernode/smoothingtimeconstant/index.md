@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
-translation_of: Web/API/AnalyserNode/smoothingTimeConstant
 ---
 
 {{ APIRef("Web Audio API") }}

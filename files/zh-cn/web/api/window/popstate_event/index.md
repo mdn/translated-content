@@ -24,16 +24,21 @@ window.onpopstate = funcRef;
 假如当前网页地址为 `http://example.com/example.html`，则运行下述代码将触发警告对话框：
 
 ```js
-window.onpopstate = function(event) {
-  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+window.onpopstate = function (event) {
+  alert(
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
+  );
 };
 
-history.pushState({page: 1}, "title 1", "?page=1");
-history.pushState({page: 2}, "title 2", "?page=2");
-history.replaceState({page: 3}, "title 3", "?page=3");
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
 history.back(); // 弹出 "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // 弹出 "location: http://example.com/example.html, state: null
-history.go(2);  // 弹出 "location: http://example.com/example.html?page=3, state: {"page":3}
+history.go(2); // 弹出 "location: http://example.com/example.html?page=3, state: {"page":3}
 ```
 
 注意，即便是没有关联 `state` 对象的原始的历史条目（比如 `http://example.com/example.html`），`popstate` 事件也仍会在我们第二次调用 `history.back()`，激活这一历史条目后触发。

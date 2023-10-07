@@ -2,6 +2,7 @@
 title: 201 Created
 slug: Web/HTTP/Status/201
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`201 Created`** 는 요청이 성공적으로 처리되었으며, 자원이 생성되었음을 나타내는 성공 상태 응답 코드입니다.

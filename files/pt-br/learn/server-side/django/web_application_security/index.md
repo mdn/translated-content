@@ -13,11 +13,11 @@ Proteger dados do usuário é uma parte essencial de qualquer projeto de website
       <th scope="row">Pré-requisitos:</th>
       <td>
         Ler o tópico "<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps/Website_security"
           >Website security</a
         >" de Programação Server-side. Conclua os tópicos do tutorial Django
         tutorial até (e incluindo) pelos menos
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabalhando com formulários</a
         >.
       </td>
@@ -54,10 +54,10 @@ O sistema de _templates_ do Django protege você da maioria dos ataques XSS [esc
 2. Abra o site em seu navegador local e faça login em sua conta de superusuário.
 3. Navegue até a página de criação do autor (que deve estar na URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Digite os nomes e os detalhes de data para um novo usuário, e então acrescente o seguinte texto no campo Last Name :
-    `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](author_create_form_alert_xss.png)
+   `<script>alert('Test alert');</script>`.
+   ![Author Form XSS test](author_create_form_alert_xss.png)
 
-    > **Nota:** Este é um script inofensivo que, se executado, exibirá uma caixa de alerta em seu navegador. Se o alerta é exibido quando você submeter o registro então o site está vulnerável a ameaças XSS.
+   > **Nota:** Este é um script inofensivo que, se executado, exibirá uma caixa de alerta em seu navegador. Se o alerta é exibido quando você submeter o registro então o site está vulnerável a ameaças XSS.
 
 5. Pressione **Submit** para salvar o registro.
 6. Quando você salvar o autor, ele será exibido como mostrado abaixo. Por causa das proteções XSS o `alert()` não deve ser executado. Em vez disso o script é exibido como texto simples.![Author detail view XSS test](author_detail_alert_xss.png)
@@ -65,7 +65,10 @@ O sistema de _templates_ do Django protege você da maioria dos ataques XSS [esc
 Se você visualizar o código fonte da página HTML, poderá ver que os carcteres perigosos para as tags de script foram trasnformadoes em seus equivalentes de código de escape inofensivos (ex. `>` agora é `&gt;`)
 
 ```html
-<h1>Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David (Boonie) </h1>
+<h1>
+  Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David
+  (Boonie)
+</h1>
 ```
 
 Usar templates Django protege você contra a maioria dos ataques de XSS. No entanto, é possível desativar esta proteção, e a proteção não é automaticamente aplicada a todas as tags que normalmente não seriam preenchidas pela entrada do usuário (por exemplo, o `help_text` em um campo de formulário normalmente não é preechido pelo usuário, então Django não escapa esses valores).
@@ -82,19 +85,56 @@ Para fazer isso, eles podem criar um arquivo HTML como o abaixo, que contém um 
 
 ```html
 <html>
-<body onload='document.EvilForm.submit()'>
-
-<form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'>
-  <table>
-    <tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" maxlength="100" name="first_name" type="text" value="Mad" required /></td></tr>
-    <tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" maxlength="100" name="last_name" type="text" value="Man" required /></td></tr>
-    <tr><th><label for="id_date_of_birth">Date of birth:</label></th><td><input id="id_date_of_birth" name="date_of_birth" type="text" /></td></tr>
-    <tr><th><label for="id_date_of_death">Died:</label></th><td><input id="id_date_of_death" name="date_of_death" type="text" value="12/10/2016" /></td></tr>
-  </table>
-  <input type="submit" value="Submit" />
-</form>
-
-</body>
+  <body onload="document.EvilForm.submit()">
+    <form
+      action="http://127.0.0.1:8000/catalog/author/create/"
+      method="post"
+      name="EvilForm">
+      <table>
+        <tr>
+          <th><label for="id_first_name">First name:</label></th>
+          <td>
+            <input
+              id="id_first_name"
+              maxlength="100"
+              name="first_name"
+              type="text"
+              value="Mad"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_last_name">Last name:</label></th>
+          <td>
+            <input
+              id="id_last_name"
+              maxlength="100"
+              name="last_name"
+              type="text"
+              value="Man"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_birth">Date of birth:</label></th>
+          <td>
+            <input id="id_date_of_birth" name="date_of_birth" type="text" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_death">Died:</label></th>
+          <td>
+            <input
+              id="id_date_of_death"
+              name="date_of_death"
+              type="text"
+              value="12/10/2016" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -103,7 +143,10 @@ Execute o servidor web de desenvolvimento e faça login com a conta de superusu�
 A forma como a proteção é habilitada é incluindo a tag de template `{% csrf_token %}` em sua definição de formulário. Esse token é então renderizado em seu HTML como mostrado abaixo com um valor que é específico para o usuário no navegador atual.
 
 ```html
-<input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' />
+<input
+  type="hidden"
+  name="csrfmiddlewaretoken"
+  value="0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW" />
 ```
 
 Django gera uma chave específica de usuário/navegador e irá rejeitar formulários que não contenham o campo, ou que contenham um valor de campo incorreto para o usuário/navegador.

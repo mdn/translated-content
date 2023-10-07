@@ -1,7 +1,6 @@
 ---
 title: Регулярные выражения
 slug: Web/JavaScript/Guide/Regular_expressions
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -20,7 +19,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
   Литералы регулярных выражений вызывают предварительную компиляцию регулярного выражения при анализе скрипта. Если ваше регулярное выражение постоянно, то пользуйтесь им, чтобы увеличить производительность.
 
-- Вызывая функцию конструктор объекта [`RegExp`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp), например:
+- Вызывая функцию конструктор объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp), например:
 
   ```js
   var re = new RegExp("ab+c");
@@ -741,8 +740,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 Экранирование пользовательского ввода, соответствующего буквенной строке внутри регулярного выражения, может быть достигнуто простой заменой:
 
 ```js
-function escapeRegExp(string){
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 ```
 
@@ -760,14 +759,14 @@ function escapeRegExp(string){
 
 Регулярные выражения используются в методах `test` и `exec` объекта `RegExp` и с методами `match`, `replace`, `search`, и `split` объекта `String`. Эти методы подробно объясняются в [Справочнике JavaScript](/ru/docs/JavaScript/Reference)
 
-| Метод                                                                       | Описание                                                                                                                                             |
-| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
-| [`test`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
-| [`match`](/en-US/docs/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
-| [`search`](/en-US/docs/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
-| [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
-| [`split`](/en-US/docs/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
+| Метод                                                                    | Описание                                                                                                                                             |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
+| [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
+| [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
+| [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
+| [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
+| [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
 
 Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами `test` или `search`; а чтобы получить больше информации пользуйтесь методами `exec` или `match` (хотя эти методы работают медленнее). Если вы пользуетесь `exec` или `match` и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта `RegExp` регулярного выражения. Если совпадений нет, метод `exec` вернёт `null` (который сконвертируется в `false`).
 
@@ -991,21 +990,21 @@ var bySurnameList = [];
 output.push("---------- After Split by Regular Expression");
 
 var i, len;
-for (i = 0, len = nameList.length; i < len; i++){
+for (i = 0, len = nameList.length; i < len; i++) {
   output.push(nameList[i]);
   bySurnameList[i] = nameList[i].replace(pattern, "$2, $1");
 }
 
 // Display the new array.
 output.push("---------- Names Reversed");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
 // Sort by last name, then display the sorted array.
 bySurnameList.sort();
 output.push("---------- Sorted");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
@@ -1025,27 +1024,31 @@ console.log(output.join("\n"));
 Событие "Изменить" активируется, когда пользователь подтвердит ввод значения регулярного выражения, нажав клавишу "Enter".
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <script type="text/javascript">
       var re = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/;
-      function testInfo(phoneInput){
+      function testInfo(phoneInput) {
         var OK = re.exec(phoneInput.value);
         if (!OK)
           window.alert(RegExp.input + " isn't a phone number with area code!");
-        else
-          window.alert("Thanks, your phone number is " + OK[0]);
+        else window.alert("Thanks, your phone number is " + OK[0]);
       }
     </script>
   </head>
   <body>
-    <p>Enter your phone number (with area code) and then click "Check".
-        <br>The expected format is like ###-###-####.</p>
+    <p>
+      Enter your phone number (with area code) and then click "Check". <br />The
+      expected format is like ###-###-####.
+    </p>
     <form action="#">
-      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+      <input id="phone" /><button
+        onclick="testInfo(document.getElementById('phone'));">
+        Check
+      </button>
     </form>
   </body>
 </html>

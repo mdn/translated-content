@@ -1,16 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - Domain
-  - HTML DOM
-  - Property
-  - Same Origin
-  - Same Origin Policy
-  - iframe
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}
@@ -44,7 +34,7 @@ document.domain = string;
 
 ### Getting the domain
 
-For the URI `http://developer.mozilla.org/en-US/docs/Web`, this example sets `currentDomain` to the string "`developer.mozilla.org`".
+For the URI `http://developer.mozilla.org/ru/docs/Web`, this example sets `currentDomain` to the string "`developer.mozilla.org`".
 
 ```
 var currentDomain = document.domain;
@@ -75,10 +65,7 @@ Mozilla отличает свойство `document.domain`, которое ни
 
 ## Спецификации
 
-| **Спецификация**                                                                                                                 | **Статус**                       | **Комментарий** |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------- |
-| {{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML WHATWG')}} |                 |
-| {{SpecName('HTML 5.2','browsers.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML 5.2')}}     |                 |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

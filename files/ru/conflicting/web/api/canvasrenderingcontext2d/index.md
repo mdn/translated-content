@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.currentTransform
 slug: conflicting/Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Property
-translation_of: Web/API/CanvasRenderingContext2D/currentTransform
 original_slug: Web/API/CanvasRenderingContext2D/currentTransform
 ---
 

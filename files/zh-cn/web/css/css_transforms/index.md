@@ -1,6 +1,6 @@
 ---
 title: CSS Transforms
-slug: Web/CSS/CSS_Transforms
+slug: Web/CSS/CSS_transforms
 ---
 
 {{CSSRef}}
@@ -21,7 +21,7 @@ slug: Web/CSS/CSS_Transforms
 
 ## 使用指南
 
-- [CSS transforms 使用](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS transforms 使用](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : 循序渐进的教程，教你如何使用 CSS 对进行元素变形处理。
 
 ## 规范

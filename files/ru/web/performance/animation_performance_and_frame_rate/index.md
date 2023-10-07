@@ -1,15 +1,6 @@
 ---
 title: Производительность анимации и частота кадров
 slug: Web/Performance/Animation_performance_and_frame_rate
-tags:
-  - CSS animation
-  - Developer Tools
-  - Web Performance
-  - Анимация
-  - Производительность
-  - инструменты
-translation_of: Web/Performance/Animation_performance_and_frame_rate
-original_slug: Web/Performance/Производительность_анимации
 ---
 
 Анимация в Вебе может быть сделана с помощью {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, включая {{htmlelement('canvas')}} и {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, анимированных GIF и даже с помощью анимированных PNG и других типов изображений. Производительность CSS-анимации может отличаться от одного CSS-свойства к другому, а попытка анимировать некоторые "дорогие" CSS-свойства может привести к зависаниям ({{glossary('jank')}}), даже несмотря на то, что браузер борется за то, чтобы смягчить частоту смены кадров {{glossary('frame rate')}}.
@@ -52,17 +43,17 @@ original_slug: Web/Performance/Производительность_анимац
 
 На всех этапах рендеринга изменение некоторых свойств является более затратным, других - менее:
 
-| Тип свойства                                                                                                                                                       | Стоимость                                                                                                                                                                                                                                                                | Примеры                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Свойства, затрагивающие геометрию или позицию элемента, запускают **весь** процесс заново: новое вычисление стилей, layout и перерисовку.                          | ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout.png) ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png)             | [`left`](/en-US/docs/Web/CSS/left) [`max-width`](/en-US/docs/Web/CSS/max-width) [`border-width`](/en-US/docs/Web/CSS/border-width) [`margin-left`](/en-US/docs/Web/CSS/margin-left) [`font-size`](/en-US/docs/Web/CSS/font-size) |
-| Свойства, не затрагивающие геометрию и позиционирование элементов, но не лежащие в отдельном слое, запускают только вычисление стилей и перерисовку, но не Layout. | ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png) ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png)       | [`color`](/en-US/docs/Web/CSS/color)                                                                                                                                                                                             |
-| Свойства, которые рендерятся в отдельном слое не запускают даже repaint, так как результат обновления обрабатывается на этапе композиции.                          | ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png) ![](/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint-faint.png) | [`transform`](/en-US/docs/Web/CSS/transform) [`opacity`](/en-US/docs/Web/CSS/opacity)                                                                                                                                            |
+| Тип свойства                                                                                                                                                       | Стоимость                                                                                                                                                                                                                                                       | Примеры                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Свойства, затрагивающие геометрию или позицию элемента, запускают **весь** процесс заново: новое вычисление стилей, layout и перерисовку.                          | ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/layout.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png)             | [`left`](/ru/docs/Web/CSS/left) [`max-width`](/ru/docs/Web/CSS/max-width) [`border-width`](/ru/docs/Web/CSS/border-width) [`margin-left`](/ru/docs/Web/CSS/margin-left) [`font-size`](/ru/docs/Web/CSS/font-size) |
+| Свойства, не затрагивающие геометрию и позиционирование элементов, но не лежащие в отдельном слое, запускают только вычисление стилей и перерисовку, но не Layout. | ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png)       | [`color`](/ru/docs/Web/CSS/color)                                                                                                                                                                                 |
+| Свойства, которые рендерятся в отдельном слое не запускают даже repaint, так как результат обновления обрабатывается на этапе композиции.                          | ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/paint-faint.png) | [`transform`](/ru/docs/Web/CSS/transform) [`opacity`](/ru/docs/Web/CSS/opacity)                                                                                                                                   |
 
 > **Примечание:** На Веб-сайте [CSS Triggers](http://csstriggers.com/) хорошо показано, какие CSS-свойства вызывают те или иные этапы обновления в разных браузерах.
 
 ## Пример: margin против transform
 
-В этом разделе мы увидим, как инструмент [Waterfall](/ru/docs/Tools/Performance/Waterfall) может указать на разницу между анимацией [`margin`](/en-US/docs/Web/CSS/margin) и [`transform`](/en-US/docs/Web/CSS/transform).
+В этом разделе мы увидим, как инструмент [Waterfall](/ru/docs/Tools/Performance/Waterfall) может указать на разницу между анимацией [`margin`](/ru/docs/Web/CSS/margin) и [`transform`](/ru/docs/Web/CSS/transform).
 
 Задумка этого сценария не в том, чтобы убедить вас, что анимация через `margin` - это всегда плохая идея. Сценарий нужен, чтобы продемонстрировать, как инструменты могут помочь вам понять работу браузера и как вы можете применить эти знания для оптимизации.
 
@@ -70,7 +61,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 ![](css-animations-demo.png)На экране всего два контрола: кнопка "start / stop" для запуска и остановки анимации и радио-кнопки для выбора свойства, с помощью которого происходит анимация: `margin`, или `transform`.
 
-Так же на странице есть некоторое количество элементов со свойствами [`linear-gradient`](/en-US/docs/Web/CSS/linear-gradient) и [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) Мы обращаем внимание именно на эти два свойства, так как они относительно дорогие.
+Так же на странице есть некоторое количество элементов со свойствами [`linear-gradient`](/ru/docs/Web/CSS/linear-gradient) и [`box-shadow`](/ru/docs/Web/CSS/box-shadow) Мы обращаем внимание именно на эти два свойства, так как они относительно дорогие.
 
 Так же существует видео-версия анализа и оптимизации этой страницы.
 
@@ -108,7 +99,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 Из таблицы видно, что особый урон производительности наносит перерисовка Paint (зелёные полосы). Например, выделенный этап Paint занял 13.11мс. Учитывая, что весь бюджет рендеринга - 16.7мс, неудивительно, что мы увидели падения fps.
 
-Вы можете поэкспериментировать с некоторыми свойствами. Например, попробуйте убрать box-shadow с помощью инспектора страницы ([Page / Element Inspector](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)), замерьте производительность и посмотрите, как это отразилось на производительности. Затраты на Paint уменьшатся значительно. Но они все ещё есть. Мы ещё вернёмся к этому вопросу позже, когда будем изучать использование [`transform`](/en-US/docs/Web/CSS/transform) вместо [`margin`](/en-US/docs/Web/CSS/margin). Вы увидите, что от затрат на этот этап можно избавиться полностью.
+Вы можете поэкспериментировать с некоторыми свойствами. Например, попробуйте убрать box-shadow с помощью инспектора страницы ([Page / Element Inspector](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)), замерьте производительность и посмотрите, как это отразилось на производительности. Затраты на Paint уменьшатся значительно. Но они все ещё есть. Мы ещё вернёмся к этому вопросу позже, когда будем изучать использование [`transform`](/ru/docs/Web/CSS/transform) вместо [`margin`](/ru/docs/Web/CSS/margin). Вы увидите, что от затрат на этот этап можно избавиться полностью.
 
 ### Анимация свойства transform
 

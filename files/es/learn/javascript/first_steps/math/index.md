@@ -1,7 +1,6 @@
 ---
 title: Matemáticas básicas en JavaScript — números y operadores
 slug: Learn/JavaScript/First_steps/Math
-original_slug: Learn/JavaScript/First_steps/Matemáticas
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
@@ -38,7 +37,7 @@ La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes 
 
 > **Nota:** En realidad, JavaScript tiene un segundo tipo de número, {{Glossary("BigInt")}}, que se utiliza para números enteros muy, muy grandes. Pero para los propósitos de este curso, solo nos preocuparemos por los valores numéricos.
 
-### Para mí, todo son números.
+### Para mí, todo son números
 
 Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), o utiliza la sencilla consola integrada que verás abajo si lo prefieres.
 
@@ -46,22 +45,22 @@ Juguemos un poco con algunos números para ponernos al día con la sintaxis bás
 
 1. Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
 
-    ```js
-    var myInt = 5;
-    var myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   var myInt = 5;
+   var myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. Los valores numéricos están escritos sin comillas - Trata de declarar e inicializar un par de variables más que contengan números antes de continuar.
 3. Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    Obtendrás `"number"` en ambos casos — esto hace las cosas mucho más fáciles que si diferentes números tuvieran difetentes tipos, y tuvimos que lidiar con ellos de diferentes maneras. Uf !
+   Obtendrás `"number"` en ambos casos — esto hace las cosas mucho más fáciles que si diferentes números tuvieran difetentes tipos, y tuvimos que lidiar con ellos de diferentes maneras. Uf !
 
 ## Operadores Aritméticos
 
@@ -81,28 +80,28 @@ Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustarí
 
 1. Primero, trata entrando un ejemplo simple por tu cuenta, como
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
 
-    ```js
-    var num1 = 10;
-    var num2 = 50;
-    9 * num1;
-    num2 / num1;
-    ```
+   ```js
+   var num1 = 10;
+   var num2 = 50;
+   9 * num1;
+   num2 / num1;
+   ```
 
 3. Por último, trate entrando algunas expresiones complejas, como:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Es posible que parte de este último conjunto de sumas no te dé el resultado que esperabas; La siguiente sección bien podría dar la respuesta del por qué.
 
@@ -181,7 +180,7 @@ x = y; // x ahora contiene el mismo valor de y... 4
 
 Pero hay algunos tipos más complejos, que proporcionan atajos útiles para mantener tu código más ordenado y más eficiente. Los más comunes se enumeran a continuación.:
 
-| Operador | Nombre                    | Propósito                                                                                               | Ejemplo         | Atajo de     |
+| Operador | Nombre                    | Propósito                                                                                               | Ejemplo           | Atajo de             |
 | -------- | ------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------- | -------------------- |
 | `+=`     | Adición asignación        | Suma el valor de la derecha al valor de la variable de la izquierda y returna el nuevo valor            | `x = 3; x += 4;`  | `x = 3; x = x + 4;`  |
 | `-=`     | Resta asignación          | Resta el valor de la derecha, del valor de la variable de la izquierda y retorna el nuevo valor.        | `x = 6; x -= 3;`  | `x = 6; x = x - 3;`  |
@@ -249,18 +248,18 @@ Veremos cómo codificar dicha lógica cuando veamos declaraciones condicionales 
 ```
 
 ```js
-var btn = document.querySelector('button');
-var txt = document.querySelector('p');
+var btn = document.querySelector("button");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Iniciar máquina') {
-    btn.textContent = 'Detener máquina';
-    txt.textContent = 'La máquina se inició!';
+  if (btn.textContent === "Iniciar máquina") {
+    btn.textContent = "Detener máquina";
+    txt.textContent = "La máquina se inició!";
   } else {
-    btn.textContent = 'Iniciar máquina';
-    txt.textContent = 'La máquina se detuvo.';
+    btn.textContent = "Iniciar máquina";
+    txt.textContent = "La máquina se detuvo.";
   }
 }
 ```

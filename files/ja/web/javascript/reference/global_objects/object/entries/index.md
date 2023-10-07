@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 ## 構文
 
 ```js
-Object.entries(obj)
+Object.entries(obj);
 ```
 
 ### 引数
@@ -40,12 +40,11 @@ Object.entries(obj)
 
 ```js
 if (!Object.entries) {
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+  Object.entries = function (obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
     return resArray;
   };
@@ -57,24 +56,33 @@ if (!Object.entries) {
 ## 例
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // 配列風オブジェクト
-const obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // ランダムなキー順序を持つ配列風オブジェクト
-const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(anObj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // 列挙可能でないプロパティ getFoo がある
-const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
-myObj.foo = 'bar';
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+    },
+  },
+);
+myObj.foo = "bar";
 console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 // オブジェクトでない引数はオブジェクトへと型強制されます
-console.log(Object.entries('foo')); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
 // プリミティブにはプロパティがないため、文字列を除くすべてのプリミティブ型に対して空の配列を返します (上記の例を参照)
 console.log(Object.entries(100)); // [ ]
@@ -96,7 +104,7 @@ Object.entries(obj).forEach(([key, value]) => {
 {{jsxref("Map", "new Map()")}} コンストラクターは `entries` による反復処理に対応しています。`Object.entries` を使うと、{{jsxref("Object")}} から {{jsxref("Map")}} へと簡単に変換できます。
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 const map = new Map(Object.entries(obj));
 console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 ```
@@ -106,7 +114,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
 ```
 

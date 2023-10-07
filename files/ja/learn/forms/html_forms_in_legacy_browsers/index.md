@@ -30,7 +30,7 @@ HTML5 で追加された入力型は、劣化の仕方が高度に予測可能�
 ```html
 <label for="myColor">
   Pick a color
-  <input type="color" id="myColor" name="color">
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -71,7 +71,7 @@ HTML フォームでボタンを定義する方法は 2 つあります。
 {{HTMLElement("input")}} 要素は、要素セレクターを使用して CSS を適用したい場合に少し難しくなることがあります。
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 すべての input から境界線を削除する場合、ボタンについてのみ既定の外見に戻すことができるでしょうか？
@@ -80,7 +80,7 @@ HTML フォームでボタンを定義する方法は 2 つあります。
 input {
   /* この規則は、input 要素で定義するボタンを含む、境界線を持つ入力型の
   既定のレンダリングを無効にします */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* これでは既定のレンダリングを復元できません */
@@ -161,18 +161,18 @@ CSS や JavaScript は素晴らしい技術ですが、古いブラウザーで�
 ```js
 Modernizr.load({
   // ブラウザーがフォーム検証 API に対応しているかを確認します
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // ブラウザーが対応していない場合は、以下のポリフィルを読み込みます
-  nope : form-validation-API-polyfill.js,
+  nope: form_validation_API_polyfill.js,
 
   // どの場合でも、API に依存するコアアプリのファイルを読み込みます
-  both : app.js,
+  both: app.js,
 
   // 両方のファイルを読み込んだら、アプリを初期化するためにこの関数を呼び出します
-  complete : function () {
+  complete: function () {
     app.init();
-  }
+  },
 });
 ```
 

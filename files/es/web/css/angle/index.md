@@ -22,10 +22,10 @@ Aun cuando todas las unidades representan lo mismo para el valor `0`, la unidad 
 
 ## Ejemplos
 
-| ![Angle90.png](angle90.png)           | Ángulo recto: `90deg = 100grad = 0.25turn ≈ 1.5708rad`                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| ![Angle180.png](angle180.png)         | Ángulo llano: `180deg = 200grad = 0.5turn ≈ 3.1416rad`                                   |
-| ![AngleMinus90.png](angleminus90.png) | Ángulo recto (hacia la izquierda): `-90deg = -100grad = -0.25turn ≈ -1.5708rad`            |
+| ![Angle90.png](angle90.png)           | Ángulo recto: `90deg = 100grad = 0.25turn ≈ 1.5708rad`                                         |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| ![Angle180.png](angle180.png)         | Ángulo llano: `180deg = 200grad = 0.5turn ≈ 3.1416rad`                                         |
+| ![AngleMinus90.png](angleminus90.png) | Ángulo recto (hacia la izquierda): `-90deg = -100grad = -0.25turn ≈ -1.5708rad`                |
 | ![Angle0.png](angle0.png)             | Ángulo nulo: `0deg = 0grad = 0turn = 0rad` <br><br> Nota: `0` no es un valor de ángulo válido. |
 
 ## Especificaciones

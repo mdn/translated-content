@@ -1,7 +1,6 @@
 ---
 title: <nobr>
 slug: Web/HTML/Element/nobr
-original_slug: Web/HTML/Elemento/nobr
 ---
 
 {{non-standard_header}}

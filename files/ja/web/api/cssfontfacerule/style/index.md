@@ -28,7 +28,7 @@ l10n:
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-  console.log(myRules[0].style); //a CSSStyleDeclaration
+console.log(myRules[0].style); //a CSSStyleDeclaration
 ```
 
 ## 仕様書

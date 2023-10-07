@@ -1,7 +1,6 @@
 ---
 title: 스타일과 색 적용하기
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
@@ -102,8 +101,8 @@ draw();
 ```js
 // 외곽선과 채움 스타일에 투명 적용
 
-ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
-ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 ```
 
 `rgba()` 함수는 `rgb()` 함수와 비슷하지만, 인자가 하나 더 있습니다. 마지막 인자는 투명도 값을 설정하는 인자입니다. 올바른 범위는 0.0(완전히 투명)에서 1.0(완전히 불투명)입니다.
@@ -408,11 +407,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="text" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="text" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -420,7 +421,9 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
@@ -437,7 +440,7 @@ draw();
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
@@ -486,8 +489,8 @@ var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 
 ```js
 var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, 'white');
-lineargradient.addColorStop(1, 'black');
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 ### `createLinearGradient` 예제
@@ -496,18 +499,18 @@ lineargradient.addColorStop(1, 'black');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 그레이디언트를 생성한다
   var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
   var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
 
   // 외곽선과 채움 스타일에 그레이디언트를 적용한다
   ctx.fillStyle = lingrad;
@@ -516,7 +519,6 @@ function draw() {
   // 도형을 그린다
   ctx.fillRect(10, 10, 130, 130);
   ctx.strokeRect(50, 50, 50, 50);
-
 }
 ```
 
@@ -540,38 +542,38 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 그라디언트를 생성한다
-  var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+  var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1,159,98,0)");
 
-  var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+  var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255,1,136,0)");
 
-  var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+  var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0,201,255,0)");
 
-  var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+  var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228,199,0,0)");
 
   // 도형을 그린다
   ctx.fillStyle = radgrad4;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad3;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad2;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
 }
 ```
 
@@ -611,8 +613,8 @@ draw();
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img, 'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
 > **참고:** `drawImage ()` 메서드와 마찬가지로 이 메소드를 호출하기 전에 이미지가 로드되었는지 확인해야합니다. 그렇지 않으면 패턴이 잘못 그려 질 수 있습니다.
@@ -623,19 +625,17 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 패턴으로 사용할 이미지 오브젝트를 생성한다
   var img = new Image();
-  img.src = 'canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // 패턴을 생성한다
-    var ptrn = ctx.createPattern(img,'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
-    ctx.fillRect(0,0,150,150);
-
-  }
+    ctx.fillRect(0, 0, 150, 150);
+  };
 }
 ```
 
@@ -678,7 +678,7 @@ The result looks like this:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
@@ -718,11 +718,11 @@ In this example we are using the `evenodd` rule.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill('evenodd');
+  ctx.fill("evenodd");
 }
 ```
 

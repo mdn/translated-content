@@ -1,44 +1,41 @@
 ---
-title: 'Element: focus イベント'
+title: "Element: focus イベント"
+short-title: focus
 slug: Web/API/Element/focus_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
-**`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。このイベントと {{domxref("Element/focusin_event", "focusin")}} との違いは、 `focusin` がバブリングするのに対し `focus` はしないことです。
+**`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。このイベントはバブリングしませんが、その後に発生する関連する {{domxref("Element/focusin_event", "focusin")}} イベントはバブリングします。
 
-`focus` の反対は {{domxref("Element/blur_event", "blur")}} です。
+`focus` の反対は {{domxref("Element/blur_event", "blur")}} であり、これは要素がフォーカスを失ったときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">同期 / 非同期</th>
-      <td>同期</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>はい</td>
-    </tr>
-  </tbody>
-</table>
+`focus` イベントはキャンセル不可です。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("focus", (event) => {});
+
+onfocus = (event) => {};
+```
+
+## イベント型
+
+{{domxref("FocusEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("UIEvent")}} および間接的に {{domxref("Event")}} から継承したプロパティもあります_。
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : もしあれば、フォーカスを受け取った要素。
 
 ## 例
 
@@ -48,8 +45,14 @@ slug: Web/API/Element/focus_event
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>
+    テキストを入力:
+    <input type="text" placeholder="テキストを入力" />
+  </label>
+  <label>
+    パスワード:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -58,12 +61,12 @@ slug: Web/API/Element/focus_event
 ```js
 const password = document.querySelector('input[type="password"]');
 
-password.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';
+password.addEventListener("focus", (event) => {
+  event.target.style.background = "pink";
 });
 
-password.addEventListener('blur', (event) => {
-  event.target.style.background = '';
+password.addEventListener("blur", (event) => {
+  event.target.style.background = "";
 });
 ```
 
@@ -73,29 +76,43 @@ password.addEventListener('blur', (event) => {
 
 ### イベント委譲
 
-このイベントのイベント委譲を実装する方法は二つあります。 {{domxref("Element/focusin_event", "focusin")}} イベントを使用するか、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の `useCapture` 引数に `true` を設定するかです。
+このイベントのイベント委譲を実装する方法は 2 つあります。 {{domxref("Element/focusin_event", "focusin")}} イベントを使用するか、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の `useCapture` 引数に `true` を設定するかです。
 
 #### HTML
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>
+    テキストを入力:
+    <input type="text" placeholder="テキストを入力" />
+  </label>
+  <label>
+    パスワード:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';
-}, true);
+form.addEventListener(
+  "focus",
+  (event) => {
+    event.target.style.background = "pink";
+  },
+  true,
+);
 
-form.addEventListener('blur', (event) => {
-  event.target.style.background = '';
-}, true);
+form.addEventListener(
+  "blur",
+  (event) => {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 #### 結果
@@ -112,6 +129,7 @@ form.addEventListener('blur', (event) => {
 
 ## 関連情報
 
+- {{domxref("HTMLElement.focus()")}} メソッド
 - 関連イベント: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
 - `Window` を対象としたこのイベント: {{domxref("Window/focus_event", "focus")}} イベント
 - [Focusing: focus/blur](https://javascript.info/focus-blur)

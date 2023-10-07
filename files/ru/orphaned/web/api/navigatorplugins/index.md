@@ -1,8 +1,6 @@
 ---
 title: NavigatorPlugins
 slug: orphaned/Web/API/NavigatorPlugins
-translation_of: Web/API/NavigatorPlugins
-original_slug: Web/API/NavigatorPlugins
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

@@ -53,11 +53,11 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `delete`
   - : Exclui o conteúdo da seleção atual.
 - `enableAbsolutePositionEditor`
-  - : Habilita ou desabilita a garra que permite mover elementos absolutamente posicionados. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ({{bug(1449564)}})
+  - : Habilita ou desabilita a garra que permite mover elementos absolutamente posicionados. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ([Erro do Firefox 1449564](https://bugzil.la/1449564))
 - `enableInlineTableEditing`
-  - : Ativa ou desativa os controles de inserção e exclusão de linhas / colunas da tabela. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ({{bug(1449564)}}).
+  - : Ativa ou desativa os controles de inserção e exclusão de linhas / colunas da tabela. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ([Erro do Firefox 1449564](https://bugzil.la/1449564)).
 - `enableObjectResizing`
-  - : Ativa ou desativa as alças de redimensionamento em imagens, tabelas e elementos absolutamente posicionados e outros objetos redimensionáveis. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ({{bug(1449564)}}).
+  - : Ativa ou desativa as alças de redimensionamento em imagens, tabelas e elementos absolutamente posicionados e outros objetos redimensionáveis. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ([Erro do Firefox 1449564](https://bugzil.la/1449564)).
 - `fontName`
   - : Altera o nome da fonte para a seleção ou no ponto de inserção. Isso requer uma string com o nome da fonte (como `"Arial"`) como argumento.
 - `fontSize`

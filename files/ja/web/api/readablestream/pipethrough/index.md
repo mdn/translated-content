@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.pipeThrough()
+title: "ReadableStream: pipeThrough() メソッド"
+short-title: pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
@@ -65,14 +66,14 @@ pipeThrough(transformStream, options)
 次に、読み取り可能なストリームのコンテンツをログに記録し、`pipeThrough()` を使用して、グレースケールバージョンのストリームを作成する新しい関数に送信し、新しいストリームのコンテンツもログに記録します。
 
 ```js
-// 元の画像をフェッチ
-fetch('png-logo.png')
-// その body を ReadableStream として取得
-.then((response) => response.body)
-.then((rs) => logReadableStream('Fetch Response Stream', rs))
-// 元の画像からグレースケール PNG ストリームを作成
-.then((body) => body.pipeThrough(new PNGTransformStream()))
-.then((rs) => logReadableStream('PNG Chunk Stream', rs))
+// 元の画像を取得
+fetch("png-logo.png")
+  // その body を ReadableStream として取得
+  .then((response) => response.body)
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
+  // 元の画像からグレースケール PNG ストリームを作成
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 ## 仕様書
@@ -82,3 +83,8 @@ fetch('png-logo.png')
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
+- [パイプチェーン](/ja/docs/Web/API/Streams_API/Using_readable_streams#パイプチェーン)

@@ -18,16 +18,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ```js
 class MyArray {
   static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance)
+    return Array.isArray(instance);
   }
 }
 console.log([] instanceof MyArray); // true
 ```
 
 ```js
-function MyArray() { }
+function MyArray() {}
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function(instance) { return Array.isArray(instance); }
+  value: function (instance) {
+    return Array.isArray(instance);
+  },
 });
 console.log([] instanceof MyArray); // true
 ```

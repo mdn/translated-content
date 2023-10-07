@@ -33,9 +33,9 @@ element.insertAdjacentHTML(posição, texto);
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
@@ -48,23 +48,21 @@ foo
 // Estrutura inicial:
 // <div id="one">one</div>
 
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // Neste ponto, a nova estrutura é:
 // <div id="one">one</div>
 // <div id="two">two</div>
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('DOM Parsing', '#insertadjacenthtml()', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |         |
+{{Specifications}}
 
-## Compatibilidade de Navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## Veja também
 

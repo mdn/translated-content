@@ -1,11 +1,6 @@
 ---
 title: prefer_related_applications
 slug: Web/Manifest/prefer_related_applications
-tags:
-  - Manifest
-  - Web
-  - prefer_related_applications
-translation_of: Web/Manifest/prefer_related_applications
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
@@ -41,12 +36,10 @@ translation_of: Web/Manifest/prefer_related_applications
 "prefer_related_applications": true
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                                                                                | Status                       | Comment             | Feedback                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#prefer_related_applications-member', 'prefer_related_applications')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

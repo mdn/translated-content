@@ -8,7 +8,7 @@ slug: Glossary/Type_coercion
 ## 例
 
 ```js
-const value1 = '5';
+const value1 = "5";
 const value2 = 9;
 let sum = value1 + value2;
 
@@ -25,9 +25,9 @@ sum = Number(value1) + value2;
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Type", "型")}}
-    2. {{Glossary("Type conversion", "型変換")}}
+   1. {{Glossary("Type", "型")}}
+   2. {{Glossary("Type conversion", "型変換")}}
 
 2. Wikipedia の記事
 
-    1. [型変換](https://ja.wikipedia.org/wiki/型変換)
+   1. [型変換](https://ja.wikipedia.org/wiki/型変換)

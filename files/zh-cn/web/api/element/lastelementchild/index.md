@@ -19,15 +19,15 @@ var element = node.lastElementChild;
 
 ```html
 <ul id="foo">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-var foo = document.getElementById('foo');
-// yields: Third  (3)
-console.log(foo.lastElementChild.textContent);
+  const list = document.getElementById("list");
+  console.log(list.lastElementChild.textContent);
+  // 输出 "Third (3)"
 </script>
 ```
 
@@ -37,22 +37,26 @@ console.log(foo.lastElementChild.textContent);
 // Overwrites native 'lastElementChild' prototype.
 // Adds Document & DocumentFragment support for IE9 & Safari.
 // Returns array instead of HTMLCollection.
-;(function(constructor) {
-    if (constructor &&
-        constructor.prototype &&
-        constructor.prototype.lastElementChild == null) {
-        Object.defineProperty(constructor.prototype, 'lastElementChild', {
-            get: function() {
-                var node, nodes = this.childNodes, i = nodes.length - 1;
-                while (node = nodes[i--]) {
-                    if (node.nodeType === 1) {
-                        return node;
-                    }
-                }
-                return null;
-            }
-        });
-    }
+(function (constructor) {
+  if (
+    constructor &&
+    constructor.prototype &&
+    constructor.prototype.lastElementChild == null
+  ) {
+    Object.defineProperty(constructor.prototype, "lastElementChild", {
+      get: function () {
+        var node,
+          nodes = this.childNodes,
+          i = nodes.length - 1;
+        while ((node = nodes[i--])) {
+          if (node.nodeType === 1) {
+            return node;
+          }
+        }
+        return null;
+      },
+    });
+  }
 })(window.Node || window.Element);
 ```
 

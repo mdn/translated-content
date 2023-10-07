@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-  - unobserve
-translation_of: Web/API/IntersectionObserver/unobserve
 ---
 
 {{APIRef("Intersection Observer API")}}

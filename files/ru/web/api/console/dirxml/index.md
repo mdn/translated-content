@@ -1,7 +1,6 @@
 ---
 title: Console.dirxml()
 slug: Web/API/console/dirxml
-translation_of: Web/API/Console/dirxml
 ---
 
 {{APIRef("Console API")}}

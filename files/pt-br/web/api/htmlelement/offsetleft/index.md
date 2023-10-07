@@ -55,15 +55,13 @@ Esse exemplo mostra uma frase 'longa' envolvida por uma div com uma borda azul, 
 </script>
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetLeft")}}
+{{Compat}}
 
 ## Veja também
 

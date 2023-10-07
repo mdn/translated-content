@@ -12,7 +12,7 @@ slug: Web/API/MediaStreamTrack/muted
 ## 구문
 
 ```js
-const mutedFlag = track.muted
+const mutedFlag = track.muted;
 ```
 
 ### 값

@@ -1,7 +1,6 @@
 ---
 title: Использование Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 
 [Fetch API](/ru/docs/Web/API/Fetch_API) предоставляет интерфейс JavaScript для работы с запросами и ответами HTTP. Он также предоставляет глобальный метод {{domxref("GlobalFetch.fetch","fetch()")}}, который позволяет легко и логично получать ресурсы по сети асинхронно.
@@ -41,28 +40,27 @@ Fetch-запросы контролируются посредством дир�
 
 ```js
 // Пример отправки POST запроса:
-async function postData(url = '', data = {}) {
+async function postData(url = "", data = {}) {
   // Default options are marked with *
   const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *client
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *client
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
   });
   return await response.json(); // parses JSON response into native JavaScript objects
 }
 
-postData('https://example.com/answer', { answer: 42 })
-  .then((data) => {
-    console.log(data); // JSON data parsed by `response.json()` call
-  });
+postData("https://example.com/answer", { answer: 42 }).then((data) => {
+  console.log(data); // JSON data parsed by `response.json()` call
+});
 ```
 
 С подробным описанием функции и полным списком параметров вы можете ознакомиться на странице {{domxref("GlobalFetch.fetch","fetch()")}}.
@@ -72,9 +70,9 @@ postData('https://example.com/answer', { answer: 42 })
 Чтобы браузеры могли отправлять запрос с учётными данными (даже для cross-origin запросов), добавьте `credentials: 'include'` в объект `init`, передаваемый вами в метод `fetch()`:
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include'
-})
+fetch("https://example.com", {
+  credentials: "include",
+});
 ```
 
 Если вы хотите отправлять запрос с учётными данными только если URL принадлежит одному источнику (origin) что и вызывающий его скрипт, добавьте credentials: 'same-origin'.
@@ -82,17 +80,17 @@ fetch('https://example.com', {
 ```js
 // Вызывающий скрипт принадлежит источнику 'https://example.com'
 
-fetch('https://example.com', {
-credentials: 'same-origin'
-})
+fetch("https://example.com", {
+  credentials: "same-origin",
+});
 ```
 
 Напротив, чтобы быть уверенным, что учётные данные не передаются с запросом, используйте credentials: 'omit':
 
 ```js
-fetch('https://example.com', {
-credentials: 'omit'
-})
+fetch("https://example.com", {
+  credentials: "omit",
+});
 ```
 
 ## Отправка данных в формате JSON
@@ -100,21 +98,21 @@ credentials: 'omit'
 При помощи {{domxref("GlobalFetch.fetch","fetch()")}} можно отправлять POST-запросы в формате JSON.
 
 ```js
-const url = 'https://example.com/profile';
-const data = { username: 'example' };
+const url = "https://example.com/profile";
+const data = { username: "example" };
 
 try {
-const response = await fetch(url, {
-method: 'POST', // или 'PUT'
-body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
-headers: {
-'Content-Type': 'application/json'
-}
-});
-const json = await response.json();
-console.log('Успех:', JSON.stringify(json));
+  const response = await fetch(url, {
+    method: "POST", // или 'PUT'
+    body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const json = await response.json();
+  console.log("Успех:", JSON.stringify(json));
 } catch (error) {
-console.error('Ошибка:', error);
+  console.error("Ошибка:", error);
 }
 ```
 
@@ -126,18 +124,18 @@ console.error('Ошибка:', error);
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
 try {
-const response = await fetch('https://example.com/profile/avatar', {
-method: 'PUT',
-body: formData
-});
-const result = await response.json();
-console.log('Успех:', JSON.stringify(result));
+  const response = await fetch("https://example.com/profile/avatar", {
+    method: "PUT",
+    body: formData,
+  });
+  const result = await response.json();
+  console.log("Успех:", JSON.stringify(result));
 } catch (error) {
-console.error('Ошибка:', error);
+  console.error("Ошибка:", error);
 }
 ```
 
@@ -149,20 +147,20 @@ console.error('Ошибка:', error);
 const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
 
-formData.append('title', 'Мой отпуск в Вегасе');
+formData.append("title", "Мой отпуск в Вегасе");
 for (let i = 0; i < photos.files.length; i++) {
-formData.append('photos', photos.files[i]);
+  formData.append("photos", photos.files[i]);
 }
 
 try {
-const response = await fetch('https://example.com/posts', {
-method: 'POST',
-body: formData
-});
-const result = await response.json();
-console.log('Успех:', JSON.stringify(result));
+  const response = await fetch("https://example.com/posts", {
+    method: "POST",
+    body: formData,
+  });
+  const result = await response.json();
+  console.log("Успех:", JSON.stringify(result));
 } catch (error) {
-console.error('Ошибка:', error);
+  console.error("Ошибка:", error);
 }
 ```
 
@@ -172,39 +170,39 @@ console.error('Ошибка:', error);
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-const utf8Decoder = new TextDecoder("utf-8");
-let response = await fetch(fileURL);
-let reader = response.body.getReader();
-let {value: chunk, done: readerDone} = await reader.read();
-chunk = chunk ? utf8Decoder.decode(chunk) : "";
+  const utf8Decoder = new TextDecoder("utf-8");
+  let response = await fetch(fileURL);
+  let reader = response.body.getReader();
+  let { value: chunk, done: readerDone } = await reader.read();
+  chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
-let re = /\n|\r|\r\n/gm;
-let startIndex = 0;
-let result;
+  let re = /\n|\r|\r\n/gm;
+  let startIndex = 0;
+  let result;
 
-for (;;) {
-let result = re.exec(chunk);
-if (!result) {
-if (readerDone) {
-break;
-}
-let remainder = chunk.substr(startIndex);
-({value: chunk, done: readerDone} = await reader.read());
-chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
-startIndex = re.lastIndex = 0;
-continue;
-}
-yield chunk.substring(startIndex, result.index);
-startIndex = re.lastIndex;
-}
-if (startIndex < chunk.length) {
-//последняя строка не имеет символа перевода строки в конце
-yield chunk.substr(startIndex);
-}
+  for (;;) {
+    let result = re.exec(chunk);
+    if (!result) {
+      if (readerDone) {
+        break;
+      }
+      let remainder = chunk.substr(startIndex);
+      ({ value: chunk, done: readerDone } = await reader.read());
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      startIndex = re.lastIndex = 0;
+      continue;
+    }
+    yield chunk.substring(startIndex, result.index);
+    startIndex = re.lastIndex;
+  }
+  if (startIndex < chunk.length) {
+    //последняя строка не имеет символа перевода строки в конце
+    yield chunk.substr(startIndex);
+  }
 }
 
 for await (let line of makeTextFileLineIterator(urlOfFile)) {
-processLine(line);
+  processLine(line);
 }
 ```
 
@@ -214,15 +212,15 @@ processLine(line);
 
 ```js
 try {
-const response = await fetch('flowers.jpg');
-if (!response.ok) {
-throw new Error('Ответ сети был не ok.');
-}
-const myBlob = await response.blob();
-const objectURL = URL.createObjectURL(myBlob);
-myImage.src = objectURL;
+  const response = await fetch("flowers.jpg");
+  if (!response.ok) {
+    throw new Error("Ответ сети был не ok.");
+  }
+  const myBlob = await response.blob();
+  const objectURL = URL.createObjectURL(myBlob);
+  myImage.src = objectURL;
 } catch (error) {
-console.log('Возникла проблема с вашим fetch запросом: ', error.message);
+  console.log("Возникла проблема с вашим fetch запросом: ", error.message);
 }
 ```
 
@@ -234,13 +232,13 @@ console.log('Возникла проблема с вашим fetch запрос�
 const myHeaders = new Headers();
 
 const myInit = {
-method: 'GET',
-headers: myHeaders,
-mode: 'cors',
-cache: 'default'
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 const response = await fetch(myRequest);
 const myBlob = await response.blob();
 const objectURL = URL.createObjectURL(myBlob);
@@ -262,20 +260,20 @@ const anotherRequest = new Request(myRequest, myInit);
 Интерфейс {{domxref("Headers")}} позволяет вам создать ваш собственный объект заголовков через конструктор {{domxref("Headers.Headers","Headers()")}}. Объект заголовков - простая мультикарта имён-значений:
 
 ```js
-const content = 'Hello World';
+const content = "Hello World";
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/plain');
-myHeaders.append('Content-Length', content.length.toString());
-myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+myHeaders.append("Content-Type", "text/plain");
+myHeaders.append("Content-Length", content.length.toString());
+myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
 ```
 
 То же может быть достигнуто путём передачи массива массивов или литерального объекта конструктору:
 
 ```js
 const myHeaders = new Headers({
-'Content-Type': 'text/plain',
-'Content-Length': content.length.toString(),
-'X-Custom-Header': 'ProcessThisImmediately'
+  "Content-Type": "text/plain",
+  "Content-Length": content.length.toString(),
+  "X-Custom-Header": "ProcessThisImmediately",
 });
 ```
 
@@ -301,9 +299,9 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]
 ```js
 const myResponse = Response.error();
 try {
-myResponse.headers.set('Origin', 'http://mybank.com');
+  myResponse.headers.set("Origin", "http://mybank.com");
 } catch (e) {
-console.log('Не могу притвориться банком!');
+  console.log("Не могу притвориться банком!");
 }
 ```
 
@@ -311,15 +309,15 @@ console.log('Не могу притвориться банком!');
 
 ```js
 try {
-const response = await fetch(myRequest);
-const contentType = response.headers.get('content-type');
-if (!contentType || !contentType.includes('application/json')) {
-throw new TypeError("Ой, мы не получили JSON!");
-}
-const json = await response.json();
-/_ Дальнейшая обработка JSON _/
+  const response = await fetch(myRequest);
+  const contentType = response.headers.get("content-type");
+  if (!contentType || !contentType.includes("application/json")) {
+    throw new TypeError("Ой, мы не получили JSON!");
+  }
+  const json = await response.json();
+  /_ Дальнейшая обработка JSON _/;
 } catch (error) {
-console.log(error);
+  console.log(error);
 }
 ```
 
@@ -331,7 +329,7 @@ console.log(error);
 
 none: по умолчанию.request: защита объекта заголовков, полученного по запросу ({{domxref("Request.headers")}}).request-no-cors: защита объекта заголовков, полученного по запросу созданного с {{domxref("Request.mode")}} no-cors.response: защита Headers полученных от ответа ({{domxref("Response.headers")}}).immutable: в основном, используется в ServiceWorkers; делает объект заголовков read-only.
 
-Примечание: вы не можете добавить или установить request защищаемые Headers’ заголовок Content-Length. Аналогично, вставка Set-Cookie в заголовок ответа недопустимо: ServiceWorkers не допускают установки cookies через синтезированные ответы.
+Примечание: вы не можете добавить или установить request защищаемые Headers' заголовок Content-Length. Аналогично, вставка Set-Cookie в заголовок ответа недопустимо: ServiceWorkers не допускают установки cookies через синтезированные ответы.
 
 Объекты ответа
 
@@ -346,13 +344,13 @@ none: по умолчанию.request: защита объекта заголо�
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', function(event) {
-// ServiceWorker перехватывает fetch
-event.respondWith(
-new Response(myBody, {
-headers: { 'Content-Type': 'text/plain' }
-})
-);
+addEventListener("fetch", function (event) {
+  // ServiceWorker перехватывает fetch
+  event.respondWith(
+    new Response(myBody, {
+      headers: { "Content-Type": "text/plain" },
+    }),
+  );
 });
 ```
 
@@ -375,10 +373,10 @@ headers: { 'Content-Type': 'text/plain' }
 В запросе можно установить параметры для отправки тела запроса:
 
 ```js
-const form = new FormData(document.getElementById('login-form'));
-fetch('/login', {
-method: 'POST',
-body: form
+const form = new FormData(document.getElementById("login-form"));
+fetch("/login", {
+  method: "POST",
+  body: form,
 });
 ```
 
@@ -390,9 +388,9 @@ body: form
 
 ```js
 if (self.fetch) {
-// запустить мой fetch запрос здесь
+  // запустить мой fetch запрос здесь
 } else {
-// Сделать что-то с XMLHttpRequest?
+  // Сделать что-то с XMLHttpRequest?
 }
 ```
 

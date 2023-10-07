@@ -23,7 +23,9 @@ const hugeString = BigInt("9007199254740991");
 const hugeHex = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
+const hugeBin = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111",
+);
 // ↪ 9007199254740991n
 ```
 
@@ -34,14 +36,14 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 使用 `typeof` 测试时， `BigInt` 对象返回 "bigint" ：
 
 ```js
-typeof 1n === 'bigint'; // true
-typeof BigInt('1') === 'bigint'; // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 使用 `Object` 包装后， `BigInt` 被认为是一个普通 "object" ：
 
 ```js
-typeof Object(1n) === 'object'; // true
+typeof Object(1n) === "object"; // true
 ```
 
 ### 运算
@@ -91,29 +93,29 @@ const rounded = 5n / 2n;
 `BigInt` 和 {{jsxref("Global_Objects/Number", "Number")}} 不是严格相等的，但是宽松相等的。
 
 ```js
-0n === 0
+0n === 0;
 // ↪ false
 
-0n == 0
+0n == 0;
 // ↪ true
 ```
 
 {{jsxref("Global_Objects/Number", "Number")}} 和 `BigInt` 可以进行比较。
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
@@ -134,7 +136,7 @@ mixed.sort();
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
-o === o // true
+o === o; // true
 ```
 
 ### 条件
@@ -143,29 +145,29 @@ o === o // true
 
 ```js
 if (0n) {
-  console.log('Hello from the if!');
+  console.log("Hello from the if!");
 } else {
-  console.log('Hello from the else!');
+  console.log("Hello from the else!");
 }
 
 // ↪ "Hello from the else!"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
@@ -205,7 +207,9 @@ Boolean(12n)
 对任何 `BigInt` 值使用 {{jsxref("JSON.stringify()")}} 都会引发 `TypeError`，因为默认情况下 `BigInt` 值不会在 `JSON` 中序列化。但是，如果需要，可以实现 `toJSON` 方法：
 
 ```js
-BigInt.prototype.toJSON = function() { return this.toString(); }
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
 ```
 
 `JSON.stringify` 现在生成如下字符串，而不是抛出异常：
@@ -243,7 +247,7 @@ function nthPrime(nth) {
   return prime;
 }
 
-nthPrime(20n)
+nthPrime(20n);
 // ↪ 73n
 ```
 

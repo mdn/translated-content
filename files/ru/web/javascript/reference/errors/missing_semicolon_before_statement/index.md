@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-tags:
-  - JavaScript
-  - SyntaxError
-  - ru
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
 
 {{jsSidebar("Errors")}}
@@ -34,14 +28,14 @@ SyntaxError: missing ; before statement (Firefox)
 
 Эта ошибка может легко возникнуть, если не экранировать строку правильным образом, из-за чего JavaScript будет рассматривать это место как конец строки. Например:
 
-```js example-bad
+```js-nolint example-bad
 var foo = 'Tom's bar';
 // SyntaxError: missing ; before statement
 ```
 
 Можно использовать двойные кавычки или экранировать апостроф:
 
-```js example-good
+```js-nolint example-good
 var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
 ```
@@ -62,10 +56,10 @@ var array[0] = 'всем'; // SyntaxError missing ; before statement
 
 ```js example-good
 var obj = {};
-obj.foo = 'привет';
+obj.foo = "привет";
 
 var array = [];
-array[0] = 'всем';
+array[0] = "всем";
 ```
 
 ### Неправильные ключевые слова
@@ -81,9 +75,9 @@ def print(info){
 Вместо `def` используйте `function`:
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## Смотрите также

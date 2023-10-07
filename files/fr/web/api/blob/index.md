@@ -1,11 +1,6 @@
 ---
 title: Blob
 slug: Web/API/Blob
-tags:
-  - API
-  - Référence(2)
-  - WebAPI
-translation_of: Web/API/Blob
 ---
 
 {{APIRef("File API")}}
@@ -48,8 +43,10 @@ Les API qui acceptent des objets `Blob` sont également listées sur la document
 Le constructeur {{domxref("Blob.Blob", "Blob()")}} permet de créer des blobs à partir d'autres objets. Par exemple, on peut construire un blob à partir d'une chaîne de caractères :
 
 ```js
-var debug = {coucou: "monde"};
-var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});
+var debug = { coucou: "monde" };
+var blob = new Blob([JSON.stringify(debug, null, 2)], {
+  type: "application/json",
+});
 ```
 
 ### Créer une URL de données vers un tableau typé
@@ -58,7 +55,7 @@ var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'
 var typedArray = GetTheTypedArraySomehow();
 
 // On ajoute un type MIME pertinent
-var blob = new Blob([typedArray], {type: 'application/octet-binary'});
+var blob = new Blob([typedArray], { type: "application/octet-binary" });
 var url = URL.createObjectURL(blob);
 
 // url ressemblera à :
@@ -75,9 +72,9 @@ La seule façon de lire le contenu d'un blob est d'utiliser un objet {{domxref("
 
 ```js
 var reader = new FileReader();
-reader.addEventListener("loadend", function() {
-   // reader.result contient le contenu du
-   // blob sous la forme d'un tableau typé
+reader.addEventListener("loadend", function () {
+  // reader.result contient le contenu du
+  // blob sous la forme d'un tableau typé
 });
 reader.readAsArrayBuffer(blob);
 ```

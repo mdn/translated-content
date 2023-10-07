@@ -8,33 +8,35 @@ Las **Líneas de Cuadrícula** se crean cuando defines las {{glossary("tracks", 
 En el siguiente ejemplo hay una cuadrícula con tres pistas de columna y dos pistas de filas. Esto nos da **4 Líneas de Columnas** y **3 Líneas de Fila**.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -59,29 +61,31 @@ Al crear una cuadrícula usted puede ubicar los elementos dentro de ésta, usand
 En el siguiente ejemplo, el elemento está posicionado desde la línea de columna 1 hasta la línea de columna 3 y desde la línea de fila 1 hasta la línea de fila 3.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="item">Item</div>
+  <div class="item">Item</div>
 </div>
 ```
 
@@ -106,29 +110,31 @@ color: #d9480f;
 Las líneas creadas _en la cuadrícula explícita_, pueden ser nombradas, asignándoles un nombre dentro de corchetes antes o después de la información del tamaño de pistas. Así podemos utlizar estos nombres como referencia para cada línea en vez de utilizar los números de línea.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="item">Item</div>
+  <div class="item">Item</div>
 </div>
 ```
 

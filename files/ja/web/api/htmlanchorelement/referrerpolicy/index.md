@@ -1,6 +1,8 @@
 ---
-title: HTMLAnchorElement.referrerPolicy
+title: "HTMLAnchorElement: referrerPolicy プロパティ"
 slug: Web/API/HTMLAnchorElement/referrerPolicy
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
@@ -33,13 +35,13 @@ slug: Web/API/HTMLAnchorElement/referrerPolicy
 ## 例
 
 ```js
-var elt = document.createElement("a");
-var linkText = document.createTextNode("My link");
+const elt = document.createElement("a");
+const linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
 elt.href = "https://developer.mozilla.org/en-US/";
 elt.referrerPolicy = "no-referrer";
 
-var div = document.getElementById("divAround");
+const div = document.getElementById("divAround");
 div.appendChild(elt); // クリックしても、リンクはリファラーのヘッダーを送信しません。
 ```
 

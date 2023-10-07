@@ -1,7 +1,6 @@
 ---
-title: 'Pon a prueba tus habilidades: texto HTML avanzado'
+title: "Pon a prueba tus habilidades: texto HTML avanzado"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
-original_slug: Learn/HTML/Introduccion_a_HTML/Test_your_skills:_Advanced_HTML_text
 ---
 
 {{learnsidebar}}
@@ -46,7 +45,7 @@ Si desea que se evalúe su trabajo, o está atascado y desea pedir ayuda:
 1. Pon tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o utilizar los archivos de punto de inicio vinculados en las secciones anteriores.
 2. Escriba una publicación solicitando evaluación y / o ayuda en el [MDN Discourse forum Categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
 
-    - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de texto avanzado HTML 1".
-    - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, p. Ej. si está atascado y necesita ayuda, o quiere una evaluación.
-    - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor que se puede compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para entrar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
-    - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que desea ayuda.
+   - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de texto avanzado HTML 1".
+   - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, p. Ej. si está atascado y necesita ayuda, o quiere una evaluación.
+   - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor que se puede compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para entrar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
+   - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que desea ayuda.

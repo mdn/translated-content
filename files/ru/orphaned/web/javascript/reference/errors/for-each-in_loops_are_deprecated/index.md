@@ -1,10 +1,6 @@
 ---
-title: 'Предупреждение: циклы JavaScript 1.6 for-each-in устарели'
+title: "Предупреждение: циклы JavaScript 1.6 for-each-in устарели"
 slug: orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
-tags:
-  - Устаревшие циклы
-translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
-original_slug: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 ---
 
 {{jsSidebar("Errors")}}

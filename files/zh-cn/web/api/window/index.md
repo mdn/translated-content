@@ -342,8 +342,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
   - : 当窗口、文档及其资源即将被卸载时，触发该事件。
-- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : 当文档被完全加载和解析时触发该事件，不需要等待样式表、图像和子框架完成加载。
 - {{domxref("Window/load_event", "load")}}
   - : 当整个页面加载完毕时触发该事件，包括所有依赖资源，如样式表图片。
 - {{domxref("Window/unload_event", "unload")}}
@@ -380,13 +378,13 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 ### 渐变事件
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)被取消时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)被取消时，触发该事件。
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)完成时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成时，触发该事件。
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)首次创建时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)首次创建时，触发该事件。
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)真正开始时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)真正开始时，触发该事件。
 
 ### 已废弃事件
 

@@ -1,16 +1,20 @@
 ---
 title: XRReferenceSpaceEvent
 slug: Web/API/XRReferenceSpaceEvent
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-[WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRReferenceSpaceEvent`** インターフェイスは、{{domxref("XRReferenceSpace")}} に送信されるイベントを表します。 現在、この型を使用するイベントは {{domxref("XRReferenceSpace.reset_event", "reset")}} イベントのみです。
+[WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) の **`XRReferenceSpaceEvent`** インターフェイスは、{{domxref("XRReferenceSpace")}} に送信されるイベントを表します。今のところ、この型を使用するイベントは {{domxref("XRReferenceSpace.reset_event", "reset")}} イベントのみです。
+
+{{InheritanceDiagram}}
 
 ## コンストラクター
 
 - {{domxref("XRReferenceSpaceEvent.XRReferenceSpaceEvent", "XRReferenceSpaceEvent()")}}
-  - : 指定されたタイプで、指定された {{domxref("XRReferenceSpaceEventInit")}} ディクショナリーの値を使用して構成された新しい `XRReferenceSpaceEvent` を返します。
+  - : 指定された種類と構成による新しい `XRReferenceSpaceEvent` を返します。
 
 ## プロパティ
 
@@ -23,17 +27,17 @@ _親インターフェイスである {{domxref("Event")}} で使用可能なプ
 
 ## メソッド
 
-_`XRReferenceSpaceEvent` はメソッドを定義しませんが、親インターフェイスである {{domxref("Event")}} のメソッドを継承します。_
+_`XRReferenceSpaceEvent` はメソッドを定義しませんが、親インターフェイスである {{domxref("Event")}} のメソッドを継承しています。_
 
-## イベントタイプ
+## イベント型
 
 - {{domxref("XRReferenceSpace.reset_event", "reset")}}
-  - : `reset` イベントは、不連続、再較正、またはデバイスのリセットによってネイティブの原点が変更されたときに参照空間に送信されます。 これは、アプリが保存されている変換、位置/向き情報などを更新したり、必要に応じて再計算できるように参照の空間の原点に基づいてキャッシュされた値をダンプする機会です。
+  - : `reset` イベントは、不連続、再較正、または機器のリセットによってネイティブの原点が変更されたときに参照空間に送信されます。 これは、アプリが保存されている変換、位置/向き情報などを更新したり、必要に応じて再計算できるように参照の空間の原点に基づいてキャッシュされた値をダンプする機会です。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpaceEvent")}}
+{{Compat}}

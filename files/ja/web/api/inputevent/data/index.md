@@ -26,10 +26,10 @@ l10n:
 ```
 
 ```js
-const editable = document.querySelector('input');
-const result = document.querySelector('.result');
+const editable = document.querySelector("input");
+const result = document.querySelector(".result");
 
-editable.addEventListener('input', (e) => {
+editable.addEventListener("input", (e) => {
   result.textContent = `入力テキスト: ${e.data}`;
 });
 ```

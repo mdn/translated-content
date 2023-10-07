@@ -29,7 +29,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 ### 無効な場合
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = "my string";
 // 次の行は strict モードでない場合は何もしません。
@@ -41,7 +41,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 このような場所で[プリミティブ](/ja/docs/Glossary/Primitive)値を使用しないようにコードを修正するか、 {{jsxref("Object")}} と同等のオブジェクトを生成して問題を修正するかします。
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = new String("my string");
 foo.bar = {};

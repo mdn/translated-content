@@ -8,7 +8,7 @@ Una codificación define cómo se traducen los bytes a texto y viceversa. Una se
 Por ejemplo, en HTML normalmente especificamos que la codificiación va a ser UTF-8 con la siguiente linea:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 Con esto te aseguras de que usando caracteres propios de cualquier lenguaje humano en tu documento HTML, se mostrarán de forma legible.

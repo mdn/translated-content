@@ -23,11 +23,11 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
             >파일 작업</a
           >
           에 대한 기본 지식, HTML 기본 사항 (<a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML"
             >HTML 소개</a
           >
           학습) 및 , CSS 작동 방식 이해 (<a
-            href="/en-US/docs/Learn/CSS/First_steps"
+            href="/ko/docs/Learn/CSS/First_steps"
             >CSS 첫 번째 단계</a
           >
           학습)
@@ -63,7 +63,7 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 overflow 문제에 대해 우리는 무엇을 할 수 있습니까?
 
-[이전 수업](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) 에서 배운 것처럼 일반적인 기술은 이미지의 {{cssxref("max-width")}} 를 100% 로 만드는 것입니다. 이렇게하면 이미지가 박스보다 작지만 커질 수 없습니다. 이 기술은 [`<video>`](/en-US/docs/Web/HTML/Element/video) 또는 [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) 과 같은 다른 대체 요소와 함께 작동합니다.
+[이전 수업](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) 에서 배운 것처럼 일반적인 기술은 이미지의 {{cssxref("max-width")}} 를 100% 로 만드는 것입니다. 이렇게하면 이미지가 박스보다 작지만 커질 수 없습니다. 이 기술은 [`<video>`](/ko/docs/Web/HTML/Element/video) 또는 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) 과 같은 다른 대체 요소와 함께 작동합니다.
 
 **위 예에서 `<img>` 요소에 `max-width: 100%` 를 추가하십시오. 작은 이미지는 변경되지 않지만, 큰 이미지는 박스에 맞게 작아집니다.**
 
@@ -104,7 +104,7 @@ img {
 
 CSS 로 스타일링 할 때, 양식 요소는 까다로운 문제가 될 수 있으며 [웹 양식 모듈](/ko/docs/Learn/Forms) 에는 약식 요소의 까다로운 측면에 대한 자세한 안내서가 포함되어 있습니다. 이 기사에서 강조할 가치가 있는 몇 가지 기본 사항이 있습니다.
 
-[`<input>`](/en-US/docs/Web/HTML/Element/input) 요소를 통해 많은 양식 컨트롤이 페이지에 추가됩니다 — 텍스트 입력과 같은 간단한 양식 필드를 정의하고 색상 및 날짜 선택자와 같은 HTML5 에 추가된 보다 복잡한 필드를 통해 정의합니다. 여러줄로 된 텍스트 입력을 위한 [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) 와 같은 일부 추가 요소와 [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) 및 [`<legend>`](/en-US/docs/Web/HTML/Element/legend) 와 같은 양식의 일부를 포함하고 레이블을 지정하는 데 사용되는 요소가 있습니다.
+[`<input>`](/ko/docs/Web/HTML/Element/input) 요소를 통해 많은 양식 컨트롤이 페이지에 추가됩니다 — 텍스트 입력과 같은 간단한 양식 필드를 정의하고 색상 및 날짜 선택자와 같은 HTML5 에 추가된 보다 복잡한 필드를 통해 정의합니다. 여러줄로 된 텍스트 입력을 위한 [`<textarea>`](/ko/docs/Web/HTML/Element/textarea) 와 같은 일부 추가 요소와 [`<fieldset>`](/ko/docs/Web/HTML/Element/fieldset) 및 [`<legend>`](/ko/docs/Web/HTML/Element/legend) 와 같은 양식의 일부를 포함하고 레이블을 지정하는 데 사용되는 요소가 있습니다.
 
 HTML5 에는 또한 웹 개발자가 어떤 필드가 필요한지, 심지어 입력해야하는 콘텐츠 유형을 표시할 수 있는 속성이 포함되어 있습니다. 사용자가 예기치 않은 것을 입력하거나 필수 필드를 비워두면, 브라우저에 오류 메시지가 표시될 수 있습니다. 다른 브라우저는 이러한 항목에 대해 얼마나 많은 스타일과 사용자 정의가 허용되는지에 일관성이 없습니다.
 
@@ -118,7 +118,7 @@ HTML5 에는 또한 웹 개발자가 어떤 필드가 필요한지, 심지어 �
 
 > **경고:** **중요** 양식 요소의 스타일을 변경할 때 양식 요소임을 사용자에게 확실히 알 수 있도록 주의해야 합니다. 테두리와 배경이 없는 양식 입력을 작성할 수 있습니다. 이 입력 양식은 주변 내용과 거의 구분할 수 없습니다. 이로 인해 인식하고 채우기가 매우 어려워집니다.
 
-이 과정의 HTML 부분에서 [양식 스타일](/en-US/docs/Learn/Forms/Styling_web_forms) 에 대한 강의에서 설명한대로, 보다 복잡한 입력 유형 중 많은 부분이 운영체제에서 렌더링되며 스타일에 액세스할 수 없습니다. 따라서 항상 방문자마다 양식이 크게 달라지고 여러 브라우저에서 복잡한 양식을 테스트한다고 가정해야합니다.
+이 과정의 HTML 부분에서 [양식 스타일](/ko/docs/Learn/Forms/Styling_web_forms) 에 대한 강의에서 설명한대로, 보다 복잡한 입력 유형 중 많은 부분이 운영체제에서 렌더링되며 스타일에 액세스할 수 없습니다. 따라서 항상 방문자마다 양식이 크게 달라지고 여러 브라우저에서 복잡한 양식을 테스트한다고 가정해야합니다.
 
 ### 상속 과 양식 요소
 
@@ -129,8 +129,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -173,7 +173,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 textarea {
@@ -185,8 +186,8 @@ textarea {
 
 스타일링 양식에 대한 자세한 내용은 이 안내의 HTML 섹션에 있는 두 기사를 살펴보십시오.
 
-- [웹 양식 스타일링](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [고급 양식 스타일링](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [웹 양식 스타일링](/ko/docs/Learn/Forms/Styling_web_forms)
+- [고급 양식 스타일링](/ko/docs/Learn/Forms/Advanced_form_styling)
 
 ## 요약
 

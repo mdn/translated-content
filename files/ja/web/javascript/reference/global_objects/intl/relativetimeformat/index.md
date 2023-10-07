@@ -38,9 +38,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 // 明示的に渡された既定値を使って
 // ロケールの相対時間を生成します
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // 負数の値 (-1) を使った相対時間のフォーマット

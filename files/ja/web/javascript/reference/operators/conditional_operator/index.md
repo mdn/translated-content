@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ## 構文
 
 ```js
-condition ? exprIfTrue : exprIfFalse
+condition ? exprIfTrue : exprIfFalse;
 ```
 
 ### 引数
@@ -34,7 +34,7 @@ condition ? exprIfTrue : exprIfFalse
 
 ```js
 var age = 26;
-var beverage = (age >= 21) ? "ビール" : "ジュース";
+var beverage = age >= 21 ? "ビール" : "ジュース";
 console.log(beverage); // "ビール"
 ```
 
@@ -43,13 +43,13 @@ console.log(beverage); // "ビール"
 よくある使い方の一つに、 `null` になる可能性がある値を扱うというものがあります。
 
 ```js
-let greeting = person => {
-    let name = person ? person.name : `お客さん`
-    return `やあ、${name}`
-}
+let greeting = (person) => {
+  let name = person ? person.name : `お客さん`;
+  return `やあ、${name}`;
+};
 
-console.log(greeting({name: `アリス`})); // "やあ、アリス"
-console.log(greeting(null));             // "やあ、お客さん"
+console.log(greeting({ name: `アリス` })); // "やあ、アリス"
+console.log(greeting(null)); // "やあ、お客さん"
 ```
 
 ### 条件の連鎖

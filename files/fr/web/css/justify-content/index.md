@@ -1,12 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - flexbox
-translation_of: Web/CSS/justify-content
 ---
 
 {{CSSRef}}
@@ -23,13 +17,13 @@ L'alignement est appliqué après que les longueurs et les marges automatiques o
 
 ```css
 /* Alignement « géométrique » */
-justify-content: center;     /* Éléments groupés au centre */
-justify-content: start;      /* Éléments groupés au début */
-justify-content: end;        /* Éléments groupés à la fin */
+justify-content: center; /* Éléments groupés au centre */
+justify-content: start; /* Éléments groupés au début */
+justify-content: end; /* Éléments groupés à la fin */
 justify-content: flex-start; /* Éléments flexibles groupés au début */
-justify-content: flex-end;   /* Éléments flexibles groupés à la fin */
-justify-content: left;       /* Éléments groupés à gauche */
-justify-content: right;      /* Éléments groupés à droite */
+justify-content: flex-end; /* Éléments flexibles groupés à la fin */
+justify-content: left; /* Éléments groupés à gauche */
+justify-content: right; /* Éléments groupés à droite */
 
 /* Alignement par rapport à la ligne de base */
 /* justify-content ne prend pas de valeurs relatives à la ligne de base */
@@ -42,15 +36,15 @@ justify-content: space-between; /* Les éléments sont répartis équitablement
                                    Le bord du premier est aligné sur le
                                    début du conteneur et la fin du dernier
                                    est alignée sur la fin du conteneur */
-justify-content: space-around;  /* Les éléments sont répartis équitablement
+justify-content: space-around; /* Les éléments sont répartis équitablement
                                    À chaque extrémité, entre le bord du
                                    conteneur et le premier/dernier élément
                                    on a la moitié de l'espace appliqué entre
                                    chaque élément */
-justify-content: space-evenly;  /* Les éléments sont répartis équitablement
+justify-content: space-evenly; /* Les éléments sont répartis équitablement
                                    Tous les éléments sont séparés par le même
                                    espace */
-justify-content: stretch;       /* Les éléments sont répartis équitablement et
+justify-content: stretch; /* Les éléments sont répartis équitablement et
                                    les éléments dimensionnés avec 'auto' sont
                                    étirés afin de remplir le conteneur */
 
@@ -151,8 +145,7 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 

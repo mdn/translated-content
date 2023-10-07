@@ -28,7 +28,7 @@ getMonth()
 以下の 2 行目の文は、{{jsxref("Date")}} オブジェクトである `xmas95` の値に基づき、変数 `month` に 11 という値を代入します。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const month = xmas95.getMonth();
 
 console.log(month); // 11
@@ -37,10 +37,10 @@ console.log(month); // 11
 > **メモ:** 必要に応じて、月の完全な名前（例えば `January` ）は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#options_の使用) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
-> const options = { month: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> const options = { month: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // December
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Dezember
 > ```
 

@@ -1,9 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Элемент
-translation_of: Web/HTML/Element/map
 ---
 
 {{HTMLSidebar}}
@@ -15,10 +12,10 @@ translation_of: Web/HTML/Element/map
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), явный контент.                                                                  |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                  | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                   |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                        |
 | Допустимые родители                                    | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
 | Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                                                        |
-| DOM-интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
+| DOM-интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                              |
 
 ## Атрибуты
 
@@ -31,10 +28,10 @@ translation_of: Web/HTML/Element/map
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html" />
+  <area shape="circle" coords="275,75,75" href="right.html" />
 </map>
-<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic" />
 ```
 
 ## Живой пример

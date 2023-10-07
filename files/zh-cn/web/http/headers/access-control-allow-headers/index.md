@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 
 如果请求中含有 {{HTTPHeader("Access-Control-Request-Headers")}} 字段，那么这个首部是必要的。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

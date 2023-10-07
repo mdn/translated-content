@@ -1,5 +1,5 @@
 ---
-title: '<big>: Elemento para deixar o texto maio'
+title: "<big>: Elemento para deixar o texto maio"
 slug: Web/HTML/Element/big
 ---
 
@@ -23,8 +23,8 @@ Este elemento usa o comando `<big>` para aumentar o tamanho do texto. O elemento
 
 ```html
 <p>
-  Este é o primeiro texto. <big>Este texto usa big
-para ficar com a aparência maior.</big>
+  Este é o primeiro texto.
+  <big>Este texto usa big para ficar com a aparência maior.</big>
 </p>
 ```
 
@@ -48,8 +48,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 
 ```html
 <p>
-  This is the first sentence. <span class="bigger">This whole
-  sentence is in bigger letters.</span>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
 ```
 

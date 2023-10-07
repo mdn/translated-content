@@ -1,7 +1,6 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp
 ---
 
 {{JSRef}}
@@ -23,8 +22,8 @@ Las siguientes tres expresiones crean el mismo objeto de expresión regular:
 
 ```js
 let er = /ab+c/i; // notación literal
-let er = new RegExp('ab+c', 'i') // constructor con patrón de cadena como primer argumento
-let er = new RegExp(/ab+c/, 'i') // constructor con expresión regular literal como primer argumento (a partir de ECMAScript 6)
+let er = new RegExp("ab+c", "i"); // constructor con patrón de cadena como primer argumento
+let er = new RegExp(/ab+c/, "i"); // constructor con expresión regular literal como primer argumento (a partir de ECMAScript 6)
 ```
 
 La notación literal da como resultado la compilación de la expresión regular cuando se evalúa la expresión. Utiliza la notación literal cuando la expresión regular permanecerá constante. Por ejemplo, si usas notación literal para construir una expresión regular usada en un bucle, la expresión regular no se volverá a compilar en cada iteración.
@@ -40,8 +39,8 @@ Cuando se utiliza la función constructora, las reglas de escape de cadenas norm
 Por ejemplo, los siguientes son equivalentes:
 
 ```js
-let er = /\w+/
-let er = new RegExp('\\w+')
+let er = /\w+/;
+let er = new RegExp("\\w+");
 ```
 
 ### Propiedades de expresiones regulares similares a Perl
@@ -109,10 +108,10 @@ El siguiente script usa el método {{JSxRef("String.prototype.replace()", "repla
 En el texto de reemplazo, el script usa `$1` y `$2` para indicar los resultados de los correspondientes paréntesis coincidentes en el patrón de expresión regular.
 
 ```js
-let er = /(\w+)\s(\w+)/
-let str = 'John Smith'
-let newstr = str.replace(er, '$2, $1')
-console.log(newstr)
+let er = /(\w+)\s(\w+)/;
+let str = "John Smith";
+let newstr = str.replace(er, "$2, $1");
+console.log(newstr);
 ```
 
 Esto muestra `"Smith, John"`.
@@ -122,9 +121,9 @@ Esto muestra `"Smith, John"`.
 El final de línea predeterminado varía según la plataforma (Unix, Windows, etc.). La división de líneas proporcionada en este ejemplo funciona en todas las plataformas.
 
 ```js
-let texto = 'Un poco de texto\ny un poco más\r\ny aún\reste es el final'
-let lineas = texto.split(/\r\n|\r|\n/)
-console.log(lineas) // logs [ 'Un poco de texto', 'y un poco más', 'y aún', 'este es el final' ]
+let texto = "Un poco de texto\ny un poco más\r\ny aún\reste es el final";
+let lineas = texto.split(/\r\n|\r|\n/);
+console.log(lineas); // logs [ 'Un poco de texto', 'y un poco más', 'y aún', 'este es el final' ]
 ```
 
 Ten en cuenta que el orden de los patrones en la expresión regular es importante.
@@ -132,7 +131,7 @@ Ten en cuenta que el orden de los patrones en la expresión regular es important
 ### Usar expresiones regulares en varias líneas
 
 ```js
-let s = '¡Por favor, sí\nhazme el día!'
+let s = "¡Por favor, sí\nhazme el día!";
 
 s.match(/sí.*día/);
 // Devuelve null
@@ -146,14 +145,14 @@ s.match(/sí[^]*día/);
 La bandera {{JSxRef("Objetos_globales/RegExp/sticky", "sticky")}} indica que la expresión regular realiza una coincidencia permanente en la cadena de destino al intentar hacer coincidir a partir de {{JSxRef("RegExp.prototype.lastIndex")}}.
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+let str = "#foo#";
+let regex = /foo/y;
 
-regex.lastIndex = 1
-regex.test(str)      // true
-regex.lastIndex = 5
-regex.test(str)      // false (lastIndex se tiene en cuenta con una bandera pegajosa)
-regex.lastIndex      // 0 (restablecer después de un error de coincidencia)
+regex.lastIndex = 1;
+regex.test(str); // true
+regex.lastIndex = 5;
+regex.test(str); // false (lastIndex se tiene en cuenta con una bandera pegajosa)
+regex.lastIndex; // 0 (restablecer después de un error de coincidencia)
 ```
 
 ### La diferencia entre la bandera pegajosa y la bandera global
@@ -162,7 +161,7 @@ Con la bandera pegajosa `y`, la siguiente coincidencia tiene que ocurrir en la p
 
 ```js
 er = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "Y er.lastIndex", er.lastIndex);
+while ((r = re.exec("123 456"))) console.log(r, "Y er.lastIndex", er.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND er.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND er.lastIndex 2
@@ -181,16 +180,16 @@ Para hacer coincidir caracteres de otros idiomas como Cirílico o Hebreo, usa `\
 Este ejemplo demuestra cómo se pueden separar los caracteres Unicode de una palabra.
 
 ```js
-let texto = 'Образец texto на русском языке'
-let regex = /[\u0400-\u04FF]+/g
+let texto = "Образец texto на русском языке";
+let regex = /[\u0400-\u04FF]+/g;
 
-let match = regex.exec(text)
-console.log(match[0])        // registra 'Образец'
-console.log(regex.lastIndex) // registra '7'
+let match = regex.exec(text);
+console.log(match[0]); // registra 'Образец'
+console.log(regex.lastIndex); // registra '7'
 
-let match2 = regex.exec(texto)
-console.log(match2[0])       // registra 'на' [no registró 'texto']
-console.log(regex.lastIndex) // registra '15'
+let match2 = regex.exec(texto);
+console.log(match2[0]); // registra 'на' [no registró 'texto']
+console.log(regex.lastIndex); // registra '15'
 
 // y así sucesivamente
 ```
@@ -200,8 +199,8 @@ La función {{JSxRef("Guide/Regular_Expressions/Unicode_Property_Escapes", "Esca
 ### Extraer el nombre de subdominio de la URL
 
 ```js
-let url = 'http://xxx.dominio.com'
-console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
+let url = "http://xxx.dominio.com";
+console.log(/[^.]+/.exec(url)[0].substr(7)); // registra 'xxx'
 ```
 
 > **Nota:** En lugar de utilizar expresiones regulares para analizar las URL, normalmente es mejor utilizar el analizador de URL integrado en los navegadores mediante la [API URL](/es/docs/Web/API/URL_API).
@@ -220,13 +219,13 @@ A partir de Firefox 34, en el caso de un grupo de captura con cuantificadores qu
 
 ```js
 // Firefox 33 o anterior
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'grupo: " + group + "'");
 });
 // 'grupo: '
 
 // Firefox 34 o más reciente
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'grupo: " + group + "'");
 });
 // 'grupo: undefined'

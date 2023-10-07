@@ -1,15 +1,6 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -21,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 ## Синтаксис
 
 ```js
-Object.getOwnPropertyNames(obj)
+Object.getOwnPropertyNames(obj);
 ```
 
 ### Параметры
@@ -42,16 +33,16 @@ Object.getOwnPropertyNames(obj)
 ### Пример: использование `Object.getOwnPropertyNames()`
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort()); // напечатает '0,1,2,length'
 
 // Массивоподобный объект
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort()); // напечатает '0,1,2'
 
 // Печать имён и значений свойств с помощью Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-  console.log(val + ' -> ' + obj[val]);
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
+  console.log(val + " -> " + obj[val]);
 });
 // напечатает
 // 0 -> a
@@ -59,12 +50,17 @@ Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
 // 2 -> c
 
 // Не перечисляемое свойство
-var my_obj = Object.create({}, {
-  getFoo: {
-    value: function() { return this.foo; },
-    enumerable: false
-  }
-});
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+      enumerable: false,
+    },
+  },
+);
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort()); // напечатает 'foo,getFoo'
@@ -76,19 +72,19 @@ console.log(Object.getOwnPropertyNames(my_obj).sort()); // напечатает 
 
 ```js
 function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function() {};
+ParentClass.prototype.inheritedMethod = function () {};
 
 function ChildClass() {
   this.prop = 5;
-  this.method = function() {};
+  this.method = function () {};
 }
-ChildClass.prototype = new ParentClass;
-ChildClass.prototype.prototypeMethod = function() {};
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
 
 alert(
   Object.getOwnPropertyNames(
-    new ChildClass() // ['prop', 'method']
-  )
+    new ChildClass(), // ['prop', 'method']
+  ),
 );
 ```
 
@@ -100,7 +96,7 @@ alert(
 var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
+var nonenum_only = enum_and_nonenum.filter(function (key) {
   var indexInEnum = enum_only.indexOf(key);
   if (indexInEnum == -1) {
     // если ключ не найден в массиве enum_only, значит ключ является не перечисляемым

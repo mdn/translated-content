@@ -1,7 +1,6 @@
 ---
 title: Gamut
 slug: Glossary/Gamut
-translation_of: Glossary/Gamut
 l10n:
   sourceCommit: 841204421a73fe3062521c274632649e8d460bdf
 ---

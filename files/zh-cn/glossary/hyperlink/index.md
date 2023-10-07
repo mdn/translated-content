@@ -3,6 +3,8 @@ title: Hyperlink（超链接）
 slug: Glossary/Hyperlink
 ---
 
+{{GlossarySidebar}}
+
 超链接将网页或其他数据连接起来。在 HTML 中，{{HTMLElement("a")}} 标签定义了网页中的某处（例如一段文本或一张图片）到其他网页（也可能是本网页）的另一处的超链接。
 
 ## 深入了解

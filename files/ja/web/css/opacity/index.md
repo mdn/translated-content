@@ -81,7 +81,11 @@ background: rgba(0, 0, 0, 0.4);
 #### CSS
 
 ```css
-div { background-color: yellow; font-weight: bold; font-size: 130%; }
+div {
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 130%;
+}
 .light {
   opacity: 0.2; /* Barely see the text over the background */
 }
@@ -105,9 +109,12 @@ div { background-color: yellow; font-weight: bold; font-size: 130%; }
 
 ```html
 <div class="wrapper">
-  <img src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
-  alt="MDN Dino" width="128" height="146"
-  class="opacity">
+  <img
+    src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
+    alt="MDN Dino"
+    width="128"
+    height="146"
+    class="opacity" />
 </div>
 ```
 
@@ -126,8 +133,11 @@ img.opacity:hover {
   width: 200px;
   height: 160px;
   background-color: #f03cc3;
-  background-image: linear-gradient(90deg, transparent 50%,
-  rgba(255,255,255,.5) 50%);
+  background-image: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(255, 255, 255, 0.5) 50%
+  );
   background-size: 20px 20px;
 }
 ```

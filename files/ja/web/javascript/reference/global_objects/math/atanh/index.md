@@ -35,12 +35,12 @@ Math.atanh(x)
 ### Math.atanh() の使用
 
 ```js
-Math.atanh(-2);  // NaN
-Math.atanh(-1);  // -Infinity
-Math.atanh(0);   // 0
+Math.atanh(-2); // NaN
+Math.atanh(-1); // -Infinity
+Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1);   // Infinity
-Math.atanh(2);   // NaN
+Math.atanh(1); // Infinity
+Math.atanh(2); // NaN
 ```
 
 １よりも大きな値もしくは -1 よりも小さな値に対しては、 {{jsxref("NaN")}} が返されます。
@@ -50,9 +50,11 @@ Math.atanh(2);   // NaN
 <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>に対して、 <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math> になり、次の関数でエミュレートできます。
 
 ```js
-Math.atanh = Math.atanh || function(x) {
-  return Math.log((1+x)/(1-x)) / 2;
-};
+Math.atanh =
+  Math.atanh ||
+  function (x) {
+    return Math.log((1 + x) / (1 - x)) / 2;
+  };
 ```
 
 ## 仕様書

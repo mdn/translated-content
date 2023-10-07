@@ -1,8 +1,6 @@
 ---
 title: API fichier système
 slug: Web/API/File_and_Directory_Entries_API
-translation_of: Web/API/File_and_Directory_Entries_API
-original_slug: Web/API/API_fichier_systeme
 ---
 
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header()}}

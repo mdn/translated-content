@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
 
 {{JSRef}}
@@ -32,9 +31,9 @@ regexp[Symbol.split](str[, limit])
 Этот метод вызывает {{jsxref("String.prototype.split()")}}, если аргумент `separator` объект {{jsxref("RegExp")}}. Для примера, два данных выражения возвращают одинаковый результат.
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 Этот метод существует для кастомизации поведения (разбиения) подкласса `RegExp`.
@@ -49,9 +48,9 @@ regexp[Symbol.split](str[, limit])
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.split](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### Использование `@@split` в подклассах
@@ -62,21 +61,21 @@ console.log(result);  // ["2016", "01", "02"]
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     var result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x => "(" + x + ")");
+    return result.map((x) => "(" + x + ")");
   }
 }
 
-var re = new MyRegExp('-');
-var str = '2016-01-02';
+var re = new MyRegExp("-");
+var str = "2016-01-02";
 var result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
 
 ## Specifications
 
-| Specification                                                                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| Specification                                                                         | Status               | Comment             |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Browser compatibility

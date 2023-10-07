@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.referrerPolicy
+title: "HTMLIFrameElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -28,10 +29,11 @@ l10n:
 - `strict-origin-when-cross-origin` (default)
   - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
 - `unsafe-url`
+
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。
 
   > **メモ:** このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します
-    この設定の影響を慎重に検討してください。
+  > この設定の影響を慎重に検討してください。
 
 ## 例
 

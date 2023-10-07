@@ -1,8 +1,6 @@
 ---
 title: Поддержка SVG 1.1 в Firefox
 slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
-translation_of: Web/SVG/SVG_1.1_Support_in_Firefox
-original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
 ---
 
 Основные примеры синтаксиса и использования SVG вы можете найти в [наборе тестов W3C SVG](https://www.w3.org/Graphics/SVG/Test/20061213/).

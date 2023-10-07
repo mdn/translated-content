@@ -16,9 +16,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ### 独自のエラーを発生させる
 
 ```js
-var e = new Error('Malformed input'); // e.name は 'Error'
+var e = new Error("Malformed input"); // e.name は 'Error'
 
-e.name = 'ParseError';
+e.name = "ParseError";
 throw e;
 // e.toString() would return 'ParseError: Malformed input'
 ```

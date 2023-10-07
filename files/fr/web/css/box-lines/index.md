@@ -1,8 +1,6 @@
 ---
 title: box-lines
 slug: Web/CSS/box-lines
-translation_of: Web/CSS/box-lines
-browser-compat: css.properties.box-lines
 ---
 
 {{CSSRef}}{{Non-standard_header}}

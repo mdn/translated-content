@@ -1,12 +1,8 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Предупреждение:** Выполнение кода JavaScript с текстовой строки - это невероятный риск для безопасности. Злоумышленнику слишком легко запустить какой угодно код, когда вы используете `eval()`. Смотрите [Никогда не используйте eval()!](#Не_используйте_eval_без_необходимости), ниже.
@@ -42,7 +38,7 @@ eval(string)
 
 ```js
 eval(new String("2 + 2")); // возвращает объект типа String, содержащий "2 + 2"
-eval("2 + 2");             // возвращает 4
+eval("2 + 2"); // возвращает 4
 ```
 
 Это ограничение легко обойти при помощи `toString()`.
@@ -56,8 +52,9 @@ eval(expression.toString());
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval("x + y"));  // Прямой вызов, использует локальную области видимости, результат - 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // Прямой вызов, использует локальную области видимости, результат - 6
   var geval = eval;
   console.log(geval("x + y")); // Непрямой вызов, использует глобальную область видимости, бросит ReferenceError, т.к. `x` - не определён
 }
@@ -77,17 +74,17 @@ function test() {
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  // возвращает "a" или "b"
+var propname = getPropName(); // возвращает "a" или "b"
 
-eval( "var result = obj." + propname );
+eval("var result = obj." + propname);
 ```
 
 Однако, `eval()` здесь не нужен. По факту, использование здесь его удивляет. Вместо него используйте [доступ к свойствам](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), который быстрее и безопаснее:
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  // возвращает "a" или "b"
-var result = obj[ propname ];  //  obj[ "a" ] то же, что и obj.a
+var propname = getPropName(); // возвращает "a" или "b"
+var result = obj[propname]; //  obj[ "a" ] то же, что и obj.a
 ```
 
 ### Используйте функции вместо исполнения фрагментов кода
@@ -129,7 +126,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // возвращает 42
-eval(z);           // вернёт 42
+eval(z); // вернёт 42
 ```
 
 ### Использование `eval` для исполнения строки, содержащей операторы JavaScript
@@ -150,12 +147,12 @@ console.log("z is ", eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // вернёт 2
+var b = eval(str); // вернёт 2
 
 console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // вернёт 3
+b = eval(str); // вернёт 3
 
 console.log("b is : " + b);
 ```
@@ -163,10 +160,10 @@ console.log("b is : " + b);
 ### `eval` как строковое определение функции, включающее "(" и ")" как префикс и суффикс
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // вернёт undefined
-var fct2 = eval(fctStr2)  // вернёт функцию
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // вернёт undefined
+var fct2 = eval(fctStr2); // вернёт функцию
 ```
 
 ## Спецификации

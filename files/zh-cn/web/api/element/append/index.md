@@ -63,7 +63,7 @@ console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
 ```js
 var parent = document.createElement("div");
 
-with(parent) {
+with (parent) {
   append("foo");
 }
 // ReferenceError: append is not defined
@@ -77,10 +77,10 @@ with(parent) {
 // Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
 (function (arr) {
   arr.forEach(function (item) {
-    if (item.hasOwnProperty('append')) {
+    if (item.hasOwnProperty("append")) {
       return;
     }
-    Object.defineProperty(item, 'append', {
+    Object.defineProperty(item, "append", {
       configurable: true,
       enumerable: true,
       writable: true,
@@ -90,11 +90,13 @@ with(parent) {
 
         argArr.forEach(function (argItem) {
           var isNode = argItem instanceof Node;
-          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+          docFrag.appendChild(
+            isNode ? argItem : document.createTextNode(String(argItem)),
+          );
         });
 
         this.appendChild(docFrag);
-      }
+      },
     });
   });
 })([Element.prototype, Document.prototype, DocumentFragment.prototype]);

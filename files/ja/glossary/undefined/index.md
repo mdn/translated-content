@@ -10,7 +10,7 @@ slug: Glossary/Undefined
 ```js
 var x; //値を代入しない変数
 
-console.log("x's value is", x) //ログ："x's value is undefined"
+console.log("x's value is", x); //ログ："x's value is undefined"
 ```
 
 ## 関連情報

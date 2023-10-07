@@ -1,7 +1,6 @@
 ---
 title: Hacer que las PWAs trabajen desconectadas con servicio workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
-original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
@@ -106,10 +105,10 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(cacheName).then((cache) => {
       console.log(
-        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación"
+        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación",
       );
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -150,14 +149,14 @@ self.addEventListener("fetch", (e) => {
         fetch(e.request).then((response) => {
           return caches.open(cacheName).then((cache) => {
             console.log(
-              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url
+              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url,
             );
             cache.put(e.request, response.clone());
             return response;
           });
         })
       );
-    })
+    }),
   );
 });
 ```
@@ -187,7 +186,7 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open("js13kPWA-v2").then((cache) => {
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -207,9 +206,9 @@ self.addEventListener("activate", (e) => {
           if (key !== cacheName) {
             return caches.delete(key);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 ```

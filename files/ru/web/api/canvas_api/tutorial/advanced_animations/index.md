@@ -1,7 +1,6 @@
 ---
 title: Расширенные анимации
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
@@ -19,21 +18,21 @@ translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 Как обычно, нам нужен контекст рисования. Чтобы нарисовать шар, мы создадим объект `ball`, который содержит свойства и метод `draw()` , чтобы нарисовать его на `canvas`.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 var ball = {
   x: 100,
   y: 100,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 ball.draw();
@@ -46,8 +45,8 @@ ball.draw();
 Теперь, когда у нас есть шар, мы готовы добавить базовую анимацию, как мы узнали из последней [главы](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations) этого урока. Опять же, {{domxref("window.requestAnimationFrame()")}} помогает нам контролировать анимацию. Мяч перемещается, добавляя вектор скорости в положение. Для каждого кадра мы также {{domxref("CanvasRenderingContext2D.clearRect", "очищаем", "", 1)}} холст, чтобы удалить старые круги из предыдущих кадров.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -56,29 +55,29 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -107,8 +106,8 @@ if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -117,39 +116,37 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -163,8 +160,8 @@ ball.draw();
 Чтобы сделать движение более реальным, вы можете играть со скоростью, например так:
 
 ```js
-ball.vy *= .99;
-ball.vy += .25;
+ball.vy *= 0.99;
+ball.vy += 0.25;
 ```
 
 Это замедляет вертикальную скорость каждого кадра, так что мяч будет просто отскакивать от пола в конце.
@@ -174,8 +171,8 @@ ball.vy += .25;
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -184,41 +181,39 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -232,7 +227,7 @@ ball.draw();
 До сих пор мы использовали метод {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}, когда очищали предыдущий кадр. Если заменить этот метод на {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} с полу-прозрачным стилем, можно легко создать эффект скольжения.
 
 ```js
-ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -241,8 +236,8 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -251,42 +246,40 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -297,15 +290,15 @@ ball.draw();
 
 ## Добавление управления мышью
 
-Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove). Событие [`click`](/en-US/docs/Web/Events/click) отпускает мяч и позволяет ему снова прыгать.
+Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/ru/docs/Web/Reference/Events/mousemove). Событие [`click`](/ru/docs/Web/Events/click) отпускает мяч и позволяет ему снова прыгать.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 var running = false;
 
@@ -315,19 +308,19 @@ var ball = {
   vx: 5,
   vy: 1,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function clear() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function draw() {
@@ -346,7 +339,7 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener("mousemove", function (e) {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -355,14 +348,14 @@ canvas.addEventListener('mousemove', function(e) {
   }
 });
 
-canvas.addEventListener('click', function(e) {
+canvas.addEventListener("click", function (e) {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
   running = false;
 });

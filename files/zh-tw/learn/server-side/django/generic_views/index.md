@@ -68,7 +68,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為“ the_model_name_list”），以訪問書本列表。
+就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為「 the_model_name_list」），以訪問書本列表。
 
 > **備註：** This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
 
@@ -423,7 +423,7 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 {% endfor %}
 ```
 
-需要這方法是因為我們僅在“一”那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在“多”那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為“reverse lookup”供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
+需要這方法是因為我們僅在「一」那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在「多」那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為「reverse lookup」供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
 
 > **備註：** 在這我們使用 `all()` 取得所有紀錄 (預設)，你無法直接在 template 做是因為你無法指定引數到 function，但你可用 `filter()` 方法取得一個紀錄的子集 。
 >

@@ -32,36 +32,36 @@ slug: Web/API/Storage
 这里我们通过调用 `localStorage` 来访问一个 `Storage` 对象。首先，使用 `!localStorage.getItem('bgcolor')` 测试本地存储中是否包含该数据项。如果包含，则运行 `setStyles()` 函数，该函数使用 `localStorage.getItem()` 来获取数据项，并使用这些值更新页面样式。如果不包含，我们运行另一个函数 `populateStorage()`，该函数使用 `localStorage.setItem()` 设置数据项，然后运行 `setStyles()`。
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
 }
 
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
 
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem("bgcolor");
+  const currentFont = localStorage.getItem("font");
+  const currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
-> **备注：** 要运行完整的例子，可查看 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)。
+> **备注：** 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

@@ -1,8 +1,6 @@
 ---
 title: WindowBase64.btoa()
 slug: Web/API/btoa
-translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 
 {{APIRef("HTML DOM")}}
@@ -38,28 +36,28 @@ var decodedData = window.atob(encodedData); // decode the string
 
 ```js
 function utf8_to_b64(str) {
-    return window.btoa(unescape(encodeURIComponent(str)));
+  return window.btoa(unescape(encodeURIComponent(str)));
 }
 
 function b64_to_utf8(str) {
-    return decodeURIComponent(escape(window.atob(str)));
+  return decodeURIComponent(escape(window.atob(str)));
 }
 
 // Usage:
-utf8_to_b64('✓ à la mode'); // JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ==
-b64_to_utf8('JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ=='); // "✓ à la mode"
+utf8_to_b64("✓ à la mode"); // JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ==
+b64_to_utf8("JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ=="); // "✓ à la mode"
 
-utf8_to_b64('I \u2661 Unicode!'); // SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ==
-b64_to_utf8('SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=='); // "I ♡ Unicode!"
+utf8_to_b64("I \u2661 Unicode!"); // SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ==
+b64_to_utf8("SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=="); // "I ♡ Unicode!"
 ```
 
-Более правильный и производительный способ - это конвертировать [`DOMString`](/ru/docs/Web/API/DOMString) в UTF-8 строку передав [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays). Как это сделать узнать можно здесь** [в этом параграфе](</ru/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)**.
+Более правильный и производительный способ - это конвертировать [`DOMString`](/ru/docs/Web/API/DOMString) в UTF-8 строку передав [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays). Как это сделать узнать можно здесь **[в этом параграфе](</ru/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)**.
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

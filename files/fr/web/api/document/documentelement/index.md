@@ -1,14 +1,6 @@
 ---
 title: document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - API
-  - DOM
-  - Noeud
-  - Propriétés
-  - Racine
-  - Reference
-translation_of: Web/API/Document/documentElement
 ---
 
 {{ ApiRef("DOM") }}

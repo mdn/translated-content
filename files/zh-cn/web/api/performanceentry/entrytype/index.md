@@ -17,13 +17,13 @@ var type = entry.entryType;
 
 返回值取决于 `PerformanceEntry` 对象的 subtype，entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性，具体如下表所示。
 
-| Value                 | Subtype                                                                                                    | Type of name property            | Description of name property                                                                                                    |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}         | The document's address.                                                                                                         |
-| `resource`            | {{domxref('PerformanceResourceTiming')}}                                                       | {{domxref("URL")}}         | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.                        |
-| `mark`                | {{domxref('PerformanceMark')}}                                                                   | {{domxref("DOMString")}} | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.        |
-| `measure`             | {{domxref('PerformanceMeasure')}}                                                               | {{domxref("DOMString")}} | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
-| `paint`               | {{domxref('PerformancePaintTiming')}}                                                           | {{domxref("DOMString")}} | Either `'first-paint'` or `'first-contentful-paint'`.                                                                           |
+| Value                 | Subtype                                                                           | Type of name property    | Description of name property                                                                                  |
+| --------------------- | --------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}       | The document's address.                                                                                       |
+| `resource`            | {{domxref('PerformanceResourceTiming')}}                                          | {{domxref("URL")}}       | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.      |
+| `mark`                | {{domxref('PerformanceMark')}}                                                    | {{domxref("DOMString")}} | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.      |
+| `measure`             | {{domxref('PerformanceMeasure')}}                                                 | {{domxref("DOMString")}} | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
+| `paint`               | {{domxref('PerformancePaintTiming')}}                                             | {{domxref("DOMString")}} | Either `'first-paint'` or `'first-contentful-paint'`.                                                         |
 
 ## 范例
 
@@ -31,7 +31,6 @@ var type = entry.entryType;
 
 ```js
 function run_PerformanceEntry() {
-
   // check for feature support before continuing
   if (performance.mark === undefined) {
     console.log("performance.mark not supported");
@@ -52,11 +51,10 @@ function run_PerformanceEntry() {
   //entriesNamedBegin[0].name
   //    "begin"
 
-  for (var i=0; i < entriesNamedBegin.length; i++) {
-      var typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
+  for (var i = 0; i < entriesNamedBegin.length; i++) {
+    var typeOfEntry = entriesNamedBegin[i].entryType;
+    console.log("Entry is type: " + typeOfEntry);
   }
-
 }
 ```
 

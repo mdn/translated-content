@@ -67,7 +67,9 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>由于所有的面都是部分透明的，所以背面（2、4、5）可以透过前面（1、3、6）看到。</p>
+      <p>
+        由于所有的面都是部分透明的，所以背面（2、4、5）可以透过前面（1、3、6）看到。
+      </p>
     </td>
     <td>
       <div class="container">
@@ -161,8 +163,10 @@ backface-visibility: unset;
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -184,4 +188,4 @@ th, p, td {
 
 ## 参见
 
-- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

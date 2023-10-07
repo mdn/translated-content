@@ -42,34 +42,32 @@ MathML における最上位の要素は `<math>` です。有効な MathML の�
 ### HTML5 表記
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>MathML in HTML5</title>
   </head>
   <body>
-
-  <math>
-    <mrow>
+    <math>
       <mrow>
+        <mrow>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mo>=</mo>
         <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
+          <mi>c</mi>
           <mn>2</mn>
         </msup>
       </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
+    </math>
   </body>
 </html>
 ```

@@ -26,8 +26,8 @@ O operador instanceof testa a presença da função construtora no prototype do 
 
 ```js
 // definindo construtores
-function C(){}
-function D(){}
+function C() {}
+function D() {}
 
 var o = new C();
 
@@ -38,7 +38,7 @@ o instanceof C;
 o instanceof D;
 
 o instanceof Object; // true, porque:
-C.prototype instanceof Object // true
+C.prototype instanceof Object; // true
 
 C.prototype = {};
 var o2 = new C();
@@ -73,24 +73,24 @@ However, objects created with the object literal notation are an exception here:
 
 ```js
 var simpleStr = "This is a simple string";
-var myString  = new String();
-var newStr    = new String("String created with constructor");
-var myDate    = new Date();
-var myObj     = {};
+var myString = new String();
+var newStr = new String("String created with constructor");
+var myDate = new Date();
+var myObj = {};
 
 simpleStr instanceof String; // returns false, checks the prototype chain, finds undefined
-myString  instanceof String; // returns true
-newStr    instanceof String; // returns true
-myString  instanceof Object; // returns true
+myString instanceof String; // returns true
+newStr instanceof String; // returns true
+myString instanceof Object; // returns true
 
-myObj instanceof Object;    // returns true, despite an undefined prototype
-({})  instanceof Object;    // returns true, same case as above
+myObj instanceof Object; // returns true, despite an undefined prototype
+({}) instanceof Object; // returns true, same case as above
 
-myString instanceof Date;   // returns false
+myString instanceof Date; // returns false
 
-myDate instanceof Date;     // returns true
-myDate instanceof Object;   // returns true
-myDate instanceof String;   // returns false
+myDate instanceof Date; // returns true
+myDate instanceof Object; // returns true
+myDate instanceof String; // returns false
 ```
 
 ### Demonstrating that `mycar` is of type `Car` and type `Object`
@@ -104,17 +104,17 @@ function Car(make, model, year) {
   this.year = year;
 }
 var mycar = new Car("Honda", "Accord", 1998);
-var a = mycar instanceof Car;    // retorna true
+var a = mycar instanceof Car; // retorna true
 var b = mycar instanceof Object; // retorna true
 ```
 
 ## Especificações
 
-| Especificação                                                                                    | Status                   | Comentário                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                          | Standard                 | Definição inicial. Implementada no JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-11.8.6', 'The instanceof operator')}}             | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ES6')}}     |                                                   |
+| Especificação                                                            | Status             | Comentário                                        |
+| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------- |
+| ECMAScript 1st Edition.                                                  | Standard           | Definição inicial. Implementada no JavaScript 1.4 |
+| {{SpecName('ES5.1', '#sec-11.8.6', 'The instanceof operator')}}          | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com navegadores
 

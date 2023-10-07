@@ -1,6 +1,9 @@
 ---
-title: DOMTokenList.add()
+title: "DOMTokenList: add() メソッド"
+short-title: add()
 slug: Web/API/DOMTokenList/add
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,10 +12,10 @@ slug: Web/API/DOMTokenList/add
 
 ## 構文
 
-```js
-add(token0);
-add(token0, token1);
-add(token0, token1, /* ... ,*/ tokenN)
+```js-nolint
+add(token0)
+add(token0, token1)
+add(token0, token1, /* … ,*/ tokenN)
 ```
 
 ## 引数
@@ -27,9 +30,9 @@ add(token0, token1, /* ... ,*/ tokenN)
 ### 例外
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 引数のうちの 1 つが空文字列であった場合
+  - : 引数のうちの 1 つが空文字列であった場合に発生します。
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : トークンに ASCII ホワイトスペースが含まれていた場合
+  - : トークンに ASCII ホワイトスペースが含まれていた場合に発生します。
 
 ## 例
 

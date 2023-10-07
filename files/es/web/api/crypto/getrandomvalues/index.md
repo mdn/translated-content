@@ -1,7 +1,6 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-original_slug: Web/API/Crypto/getRandomValues
 l10n:
   sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---

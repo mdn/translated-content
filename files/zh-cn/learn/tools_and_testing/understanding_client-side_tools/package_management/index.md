@@ -47,9 +47,9 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 - 找到所有包正确的 Javascript 文件
 - 对它们进行检查以确保没有任何已知的漏洞
 - 下载它们井将它们放在项目的正确位置
-- 编写代码，将包引入你的项目并使用它们（这通常使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)完成， 这是另一个值得深入了解的主题）。
+- 编写代码，将包引入你的项目并使用它们（这通常使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)完成，这是另一个值得深入了解的主题）。
 - 对所有包子依赖项——可能有数十个或数百个，执行上述相同的操作。
-- 如果你想删除这些软件包， 则需要再次手动删除所有文件。
+- 如果你想删除这些软件包，则需要再次手动删除所有文件。
 
 此外，软件包管理器处理重复的依赖项（这在前端开发中非常重要和常见）。
 
@@ -157,7 +157,7 @@ Parcel 希望有一个 `index.html` 和一个 `index.js` 文件进行处理，�
 现在，我们需要在我们的工作目录中添加一个 `index.html` 文件。在你的测试目录中创建 `index.html`，并写入以下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

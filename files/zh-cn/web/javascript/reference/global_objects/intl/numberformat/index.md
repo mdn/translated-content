@@ -53,23 +53,23 @@ console.log(new Intl.NumberFormat().format(number));
 const number = 123456.789;
 
 // 德语使用逗号（,）作为小数点，使用句号（.）作为千位分隔符
-console.log(new Intl.NumberFormat('de-DE').format(number));
+console.log(new Intl.NumberFormat("de-DE").format(number));
 // → 123.456,789
 
 // 大多数阿拉伯语国家使用阿拉伯语数字
-console.log(new Intl.NumberFormat('ar-EG').format(number));
+console.log(new Intl.NumberFormat("ar-EG").format(number));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // India uses thousands/lakh/crore separators
-console.log(new Intl.NumberFormat('en-IN').format(number));
+console.log(new Intl.NumberFormat("en-IN").format(number));
 // → 1,23,456.789
 
 // 通过编号系统中的 nu 扩展键请求，例如：中文十进制数字
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
 // → 一二三,四五六.七八九
 
 //当请求的语言不被支持，例如巴里，包含一个回滚语言印尼，这时候就会使用印尼语
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 // → 123.456,789
 ```
 
@@ -81,29 +81,45 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 const number = 123456.789;
 
 // 要求货币格式
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
 // 123.456,79 €
 
 // 日元不使用小数位
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
 // ￥123,457
 
 // 限制三位有效数字
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
 // 1,23,000
 
 // 带有单位的格式化
-console.log(new Intl.NumberFormat('pt-PT', {
-  style: 'unit',
-  unit: 'kilometer-per-hour'
-}).format(50));
+console.log(
+  new Intl.NumberFormat("pt-PT", {
+    style: "unit",
+    unit: "kilometer-per-hour",
+  }).format(50),
+);
 // 50 km/h
 
-console.log((16).toLocaleString('en-GB', {
-  style: 'unit',
-  unit: 'liter',
-  unitDisplay: 'long',
-}));
+console.log(
+  (16).toLocaleString("en-GB", {
+    style: "unit",
+    unit: "liter",
+    unitDisplay: "long",
+  }),
+);
 // 16 litres
 ```
 

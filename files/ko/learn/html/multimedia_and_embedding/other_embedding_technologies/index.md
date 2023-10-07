@@ -8,6 +8,7 @@ l10n:
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 이제 웹 페이지에 이미지와 비디오, 오디오를 추가하는 방법을 이해하셨을 겁니다. 이 시점에서 옆으로 한발 비켜서서, 웹 페이지에 다양한 형태의 콘텐츠를 넣을 수 있는 {{htmlelement("iframe")}} 요소와 {{htmlelement("embed")}} 요소, {{htmlelement("object")}} 요소를 살펴보겠습니다. `<iframe>` 요소는 다른 웹 페이지를 삽입하기 위해, 다른 두 요소는 PDF 파일과 같은 외부 자원을 웹 페이지에 추가하기 위해 사용합니다.
+
 <table>
   <tbody>
     <tr>
@@ -72,7 +73,8 @@ l10n:
 
 <h2>편집 가능한 코드</h2>
 <p class="a11y-label">
-  코드 영역에서 포커스를 움직이기 위해서는 ESC 키를 누르세요 (Tab 키를 누르면 탭 문자가 입력됩니다).
+  코드 영역에서 포커스를 움직이기 위해서는 ESC 키를 누르세요 (Tab 키를 누르면 탭
+  문자가 입력됩니다).
 </p>
 
 <textarea
@@ -109,10 +111,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -120,38 +122,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-const htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
+const htmlSolution =
+  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 let solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -164,7 +167,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -175,10 +181,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -206,15 +212,13 @@ textarea.onkeyup = function(){
 </head>
 <body>
   <iframe
-    src="https://developer.mozilla.org/en-US/docs/Glossary"
+    src="https://developer.mozilla.org/ko/docs/Glossary"
     width="100%"
     height="500"
     allowfullscreen
     sandbox>
     <p>
-      <a href="/en-US/docs/Glossary">
-        iframes을 지원하지 않는 브라우저용 링크
-      </a>
+      <a href="/ko/docs/Glossary"> iframes을 지원하지 않는 브라우저용 링크 </a>
     </p>
   </iframe>
 </body>
@@ -232,15 +236,15 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 - [`border: none`](/ko/docs/Web/CSS/border)
   - : 이를 적용하면, `<iframe>` 은 테두리 없이 표시됩니다. 적용하지 않으면 브라우저는 `<iframe>`을 기본적으로 테두리가 있는 상태로 표시하는데, 일반적으로 바람직하지는 않습니다.
-- {{htmlattrxref('allowfullscreen','iframe')}}
+- [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : 이를 설정하면, `<iframe>`에서 [Fullscreen API](/ko/docs/Web/API/Fullscreen_API)를 통해 전제화면 모드를 실행할 수 있습니다. Fullscreen API는 본문에서 다루는 범위를 넘어선 내용입니다.
-- {{htmlattrxref('src','iframe')}}
+- [`src`](/ko/docs/Web/HTML/Element/iframe#src)
   - : {{htmlelement("video")}}/{{htmlelement("img")}}와 마찬가지로 삽입될 문서의 URL 경로를 저장합니다.
-- {{htmlattrxref('width','iframe')}} 와 {{htmlattrxref('height','iframe')}}
+- [`width`](/ko/docs/Web/HTML/Element/iframe#width) 와 [`height`](/ko/docs/Web/HTML/Element/iframe#height)
   - : iframe 요소에 원하는 너비와 높이를 설정할 수 있습니다.
 - 대체 콘텐츠
   - : {{htmlelement("video")}} 요소와 같이 유사한 다른 요소들과 마찬가지로, `<iframe></iframe>` 여닫는 태그 사이에 대체 콘텐츠를 추가하여 브라우저가 `<iframe>`을 지원하지 않는 경우 대체 콘텐츠를 표시할 수 있습니다. 위 예시에서는 해당 페이지로 이동하는 링크를 추가하였습니다. 요즘 `<iframe>`을 지원하지 않는 브라우저를 마주칠 일은 거의 없겠지만요.
-- {{htmlattrxref('sandbox','iframe')}}
+- [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox)
   - : IE 10 이상에서 지원되는`<iframe>`의 다른 기능보다 이 특성은 상대적으로 최신 브라우저에서 작동하며 높은 보안 설정을 요구합니다. 이에 대해서는 다음 내용에서 다룰 예정입니다.
 
 > **참고:** 속도를 향상하기 위해 메인 콘텐츠가 완전히 로딩된 이후에 JavaScript로 iframe의 src 특성을 설정하는 편이 좋습니다. 웹 페이지를 더 빠르게 이용할 수 있고 {{glossary("SEO")}} 측정 시 중요한 지표인 웹 페이지 로딩 시간을 단축할 수 있습니다.
@@ -253,7 +257,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 > **참고:** [클릭재킹](/ko/docs/Glossary/Clickjacking)은 iframe 공격 방식의 하나입니다. 눈에 보이지 않는 iframe을 여러분의 웹 문서에 삽입하거나, 해커들의 악성 웹사이트에 여러분의 웹페이지를 삽입하여 사용자들의 활동을 빼돌립니다. 이는 사용자들을 잘못된 행동으로 유도하거나 민감한 데이터를 훔쳐내는 일반적인 기술입니다.
 
-우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/en-US/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
+우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
 
 #### 필요한 경우에만 삽입하세요
 
@@ -280,7 +284,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 샌드박스를 적용하지 않은 콘텐츠는 JavaScript를 실행하거나, 폼을 제출하거나, 새 창을 띄우는 등의 작업을 할 수 있습니다. 이전 예시에서 보았듯 기본적으로 `sandbox` 특성을 파라미터 없이 사용하여 가능한 모든 제약을 부과해야 합니다.
 
-꼭 필요한 경우 `sandbox=""` 특성값 안에 하나씩 권한을 부여할 수 있습니다. {{htmlattrxref('sandbox','iframe')}} 항목을 참고하여 사용할 수 있는 옵션을 살펴보세요. 한 가지 명심하셔야 할 점은 절대로 `sandbox` 특성에 `allow-scripts`와 `allow-same-origin` 옵션을 동시에 적용하면 안 된다는 점입니다. 두 옵션을 동시에 적용하면 삽입된 콘텐츠는 스크립트 실행을 방지하는 [동일 출처 정책](/ko/docs/Glossary/Same-origin_policy)을 우회하여 샌드박스 특성을 해제하는 JavaScript를 사용할 수 있게 됩니다.
+꼭 필요한 경우 `sandbox=""` 특성값 안에 하나씩 권한을 부여할 수 있습니다. [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox) 항목을 참고하여 사용할 수 있는 옵션을 살펴보세요. 한 가지 명심하셔야 할 점은 절대로 `sandbox` 특성에 `allow-scripts`와 `allow-same-origin` 옵션을 동시에 적용하면 안 된다는 점입니다. 두 옵션을 동시에 적용하면 삽입된 콘텐츠는 스크립트 실행을 방지하는 [동일 출처 정책](/ko/docs/Glossary/Same-origin_policy)을 우회하여 샌드박스 특성을 해제하는 JavaScript를 사용할 수 있게 됩니다.
 
 > **참고:** 공격자들이 사용자를 속여 `iframe` 외부에서 직접 악성 콘텐츠로 접근하게 한다면 샌드박스는 이를 보호할 수 없습니다. 만약 사용자가 생성한 콘텐츠 등 악의적인 콘텐츠일 가능성이 있는 경우, 여러분의 웹사이트와 다른 {{glossary("domain")}}에서 메인 사이트로 제공하도록 하세요.
 
@@ -311,25 +315,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>삽입된 콘텐츠의 {{glossary("URL")}}</td>
-      <td>{{htmlattrxref('src','embed')}}</td>
-      <td>{{htmlattrxref('data','object')}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         삽입된 콘텐츠의 정확한 {{glossary("MIME type", 'media type')}}
       </td>
-      <td>{{htmlattrxref('type','embed')}}</td>
-      <td>{{htmlattrxref('type','object')}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         플러그인이 제어하는 박스의 높이와 너비(CSS 픽셀단위)
       </td>
       <td>
-        {{htmlattrxref('height','embed')}}<br />{{htmlattrxref('width','embed')}}
+        <a href="/ko/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
-        {{htmlattrxref('height','object')}}<br />{{htmlattrxref('width','object')}}
+        <a href="/ko/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

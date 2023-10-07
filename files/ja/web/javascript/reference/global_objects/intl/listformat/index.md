@@ -37,15 +37,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 次の例は、英語を使用したリストフォーマッターの作成方法です。
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus or Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
 // > Motorcycle Bus Car
 ```
 
@@ -54,8 +64,13 @@ const list = ['Motorcycle', 'Bus', 'Car'];
 次の例では、整形済みの部分を返すリストフォーマッターを生成する方法を示します。
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
+const list = ["Motorcycle", "Bus", "Car"];
+console.log(
+  new Intl.ListFormat("en-GB", {
+    style: "long",
+    type: "conjunction",
+  }).formatToParts(list),
+);
 
 // [ { "type": "element", "value": "Motorcycle" },
 //   { "type": "literal", "value": ", " },

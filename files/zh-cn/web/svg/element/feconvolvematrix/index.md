@@ -97,7 +97,7 @@ SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/fil
 
 ## DOM 接口
 
-该元素实现了[`SVGFEConvolveMatrixElement`](/zh-CN/DOM/SVGFEConvolveMatrixElement)接口。
+该元素实现了 [`SVGFEConvolveMatrixElement`](/zh-CN/DOM/SVGFEConvolveMatrixElement) 接口。
 
 ## 参见
 

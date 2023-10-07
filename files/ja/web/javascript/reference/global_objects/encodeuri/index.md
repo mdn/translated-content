@@ -50,7 +50,7 @@ http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+ha
 
 ```js
 var set1 = ";,/?:@&=+$#"; // 予約文字
-var set2 = "-_.!~*'()";   // 予約されていない記号
+var set2 = "-_.!~*'()"; // 予約されていない記号
 var set3 = "ABC abc 123"; // 英数字 + 空白
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
@@ -70,13 +70,13 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (空白は %20 にエ�
 
 ```js
 // サロゲートペアは OK
-console.log(encodeURI('\uD800\uDFFF'));
+console.log(encodeURI("\uD800\uDFFF"));
 
 // 上位サロゲートのみだと "URIError: malformed URI sequence" エラーが発生
-console.log(encodeURI('\uD800'));
+console.log(encodeURI("\uD800"));
 
 // 下位サロゲートのみだと "URIError: malformed URI sequence" エラーが発生
-console.log(encodeURI('\uDFFF'));
+console.log(encodeURI("\uDFFF"));
 ```
 
 ### IPv6 のエンコード
@@ -85,7 +85,7 @@ console.log(encodeURI('\uDFFF'));
 
 ```js
 function fixedEncodeURI(str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 ```
 

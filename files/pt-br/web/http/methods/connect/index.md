@@ -50,7 +50,7 @@ CONNECT www.exemplo.com:443 HTTP/1.1
 
 Alguns servidores de proxy podem precisar de autoridade para criar um túnel. Veja mais no header {{HTTPHeader("Proxy-Authorization")}}
 
-```html
+```http
 CONNECT server.exemplo.com:80 HTTP/1.1
 Host: server.exemplo.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
@@ -58,8 +58,8 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## Especificações
 
-| Especificação                                    | Título                                                       |
-| ------------------------------------------------ | ------------------------------------------------------------ |
+| Especificação                       | Título                                                       |
+| ----------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e conteúdo |
 
 ## Compatibilidade com navegadores

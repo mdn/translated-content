@@ -56,8 +56,8 @@ Content-Range: bytes 4590-7999/8000
 
 ## Especificações
 
-| Especificação                                                | Título                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------ |
+| Especificação                                  | Título                                                 |
+| ---------------------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores

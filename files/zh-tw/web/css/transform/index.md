@@ -9,7 +9,7 @@ slug: Web/CSS/transform
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
+如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
 
 > **警告：** 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Element/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Element/colgroup)。
 
@@ -67,7 +67,7 @@ transform: unset;
 
 改變尺寸和伸縮的動畫會影響網頁普遍的可使用性，因為它們可能促發一些頭痛的問題。如果你想要在網頁中提供這樣的功能，最好在網頁中放上給使用者關閉這些功能的控制開關。
 
-另外也可考慮使用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 這個媒體功能來寫一個在系統設定端的[媒體詢問](/zh-TW/docs/Web/CSS/Media_Queries)，讓使用者在減少了動畫偏好之後可以關閉該使用者網頁的動畫功能。
+另外也可考慮使用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 這個媒體功能來寫一個在系統設定端的[媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)，讓使用者在減少了動畫偏好之後可以關閉該使用者網頁的動畫功能。
 
 瞭解更多:
 

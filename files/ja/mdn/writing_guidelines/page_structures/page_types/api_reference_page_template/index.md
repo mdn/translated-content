@@ -1,7 +1,6 @@
 ---
 title: API リファレンスページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
-original_slug: MDN/Structures/Page_types/API_reference_page_template
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
@@ -35,7 +34,7 @@ MDN Web Docs のページにおけるページの先頭部分は、以下の一�
 >   - : `page-type` キーは、 Web/API のインターフェイスでは常に `web-api-interface` です。
 > - **status**
 >   - : （適切な）技術の状態のキーを入れてください。
-[**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
+>     [**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
 > - **browser-compat**
 >
 >   - : プレースホルダーの値 `path.to.feature.NameOfTheMethod` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるこのメソッドのクエリー文字列に置き換えてください。
@@ -152,7 +151,7 @@ _親インターフェイスである {{DOMxRef("NameOfParentInterface")}} か�
 > ## 例
 >
 > この API の例については、[fetch() のページ](https://example.org)を参照してください。
->
+> ```
 
 ## 仕様書
 

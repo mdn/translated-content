@@ -1,8 +1,6 @@
 ---
 title: 418 I'm a teapot (je suis une théière)
 slug: Web/HTTP/Status/418
-translation_of: Web/HTTP/Status/418
-browser-compat: http.status.418
 ---
 
 {{HTTPSidebar}}

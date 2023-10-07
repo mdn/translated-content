@@ -24,7 +24,7 @@ Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"�
 
 這篇文章會展示怎樣創建一個網站的"框架"，在這個框架的基礎上,你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates)（我們會在接下來的文章裡討論）。
 
-搭建 “框架” 的過程很直接:
+搭建 「框架」 的過程很直接:
 
 1. 使用 `django-admin`工具創建工程的文件夾，基本的文件模板和工程管理腳本（**manage.py**）。
 2. 用 **manage.py** 創建一個或多個*應用*。
@@ -116,7 +116,7 @@ locallibrary/
 
 除上面所說的文件外，我們還有：
 
-- 一個*migration*文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
+- 一個*migration*文件夾，用來存放 「migrations」 ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
 - **\_\_init\_\_.py** —一個空文件，Django/Python 會將這個文件作為[Python 套件包](https://docs.python.org/3/tutorial/modules.html#packages)並允許你在項目的其他部分使用它。
 
 > **備註：** 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。
@@ -203,7 +203,7 @@ urlpatterns = [
 ]
 ```
 
-URL 映射通過`urlpatterns` 變量管理，它是一個`path()`函數的 Python 列表。每個`path()`函數，要么將 URL 式樣(URL pattern)關聯到特定視圖( _specific view)_，當模式匹配時將會顯示，要么關聯到某個 URL 式樣列表的測試代碼。(第二種情況下，URL 式樣是目標模型裡的“基本 URL”). `urlpatterns` 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到`admin.site.urls`。這個函數，包含了 Administration 應用自己的 URL 映射定義。
+URL 映射通過`urlpatterns` 變量管理，它是一個`path()`函數的 Python 列表。每個`path()`函數，要么將 URL 式樣(URL pattern)關聯到特定視圖( _specific view)_，當模式匹配時將會顯示，要么關聯到某個 URL 式樣列表的測試代碼。(第二種情況下，URL 式樣是目標模型裡的「基本 URL」). `urlpatterns` 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到`admin.site.urls`。這個函數，包含了 Administration 應用自己的 URL 映射定義。
 
 > **備註：** `path()`中的路由是一個字符串，用於定義要匹配的 URL 模式。該字符串可能包括一個命名變量（在尖括號中），例如`'catalog/<id>/'`。此模式將匹配 **/catalog/any_chars** 等 URL，並將 any_chars 作為參數名稱為`id` 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式
 

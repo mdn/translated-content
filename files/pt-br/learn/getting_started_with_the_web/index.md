@@ -1,7 +1,6 @@
 ---
 title: Introdução à Web
 slug: Learn/Getting_started_with_the_web
-original_slug: Aprender/Getting_started_with_the_web
 ---
 
 {{LearnSidebar}}

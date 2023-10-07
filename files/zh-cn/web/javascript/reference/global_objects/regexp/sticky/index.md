@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ### 使用带 sticky 标志的正则表达式
 
 ```js
-var str = '#foo#';
+var str = "#foo#";
 var regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -43,11 +43,11 @@ regex.lastIndex; // 0（匹配失败后重置）
 ```js
 var regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test("..foo");   // false - 索引 2 不是字符串的开始
+regex.test("..foo"); // false - 索引 2 不是字符串的开始
 
 var regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test("..foo");  // false - 索引 2 不是字符串或行的开始
+regex2.test("..foo"); // false - 索引 2 不是字符串或行的开始
 regex2.lastIndex = 2;
 regex2.test(".\nfoo"); // true - 索引 2 是行的开始
 ```

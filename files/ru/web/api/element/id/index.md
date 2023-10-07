@@ -1,14 +1,8 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Reference
-translation_of: Web/API/Element/id
 ---
+
 {{ ApiRef("DOM") }}Свойство **`id`** представляет идентификатор элемента, отражая глобальный атрибут **[id](/ru/docs/Web/HTML/Global_attributes/id)**.
 
 Если значение **`id`** не пустое, то оно должно быть уникально в документе.
@@ -31,13 +25,9 @@ _`idStr`_ - идентификатор элемента
 
 ## Спецификации
 
-| Спецификации                                                                     | Статус                           | Комментарий                                        |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}             | {{Spec2('DOM WHATWG')}} | Нет изменений от {{SpecName('DOM2 HTML')}}. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}     | {{Spec2('DOM2 HTML')}}     | Нет отличий от {{SpecName('DOM1')}}.       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}} | {{Spec2('DOM1')}}         | Изначальное определение.                           |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

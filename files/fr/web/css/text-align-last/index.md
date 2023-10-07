@@ -1,11 +1,6 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-align-last
 ---
 
 {{CSSRef}}

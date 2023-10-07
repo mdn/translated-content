@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
-translation_of: Web/API/WebGLRenderingContext/getShaderInfoLog
 ---
 
 {{APIRef("WebGL")}}

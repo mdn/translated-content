@@ -1,6 +1,9 @@
 ---
-title: Element.clientHeight
+title: "Element: clientHeight プロパティ"
+short-title: clientHeight
 slug: Web/API/Element/clientHeight
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -13,17 +16,13 @@ slug: Web/API/Element/clientHeight
 
 > **メモ:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
-## 構文
+## 値
 
-```js
-var intElemClientHeight = element.clientHeight;
-```
-
-`intElemClientHeight` は `element` の `clientHeight` をピクセル単位で表す整数値です。 `clientHeight` プロパティは読み取り専用です。
+数値です。
 
 ## 例
 
-![](dimensions-client.png)
+![clientHeight プロパティが高さとパディングを考慮して要素の内側の高さを決定する方法です。](dimensions-client.png)
 
 ## 仕様書
 

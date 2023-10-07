@@ -40,20 +40,20 @@ O método `toLocaleLowerCase()` retorna o valor da string convertida em minúscu
 ### Usando `toLocaleLowerCase()`
 
 ```js
-'ALFABETO'.toLocaleLowerCase(); // 'alfabeto'
+"ALFABETO".toLocaleLowerCase(); // 'alfabeto'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+let locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}     |
+| Especificação                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}      |
 | {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} |
 
 ## Compatibilidade com navegadores

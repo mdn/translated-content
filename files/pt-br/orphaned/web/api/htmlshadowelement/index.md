@@ -1,7 +1,6 @@
 ---
 title: HTMLShadowElement
 slug: orphaned/Web/API/HTMLShadowElement
-original_slug: Web/API/HTMLShadowElement
 ---
 
 {{ APIRef("Web Components") }}
@@ -21,9 +20,7 @@ _Esta interface herda os métodos do {{domxref("HTMLElement")}}._
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -1,12 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - CSS
-  - Propriétés
-  - Reference
-  - Transformations CSS
-translation_of: Web/CSS/perspective
 ---
 
 {{CSSRef}}
@@ -63,10 +57,8 @@ perspective: unset;
 <table>
   <tbody>
     <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
+      <th><code>perspective: 250px;</code></th>
+      <th><code>perspective: 350px;</code></th>
     </tr>
     <tr>
       <td>
@@ -95,10 +87,8 @@ perspective: unset;
       </td>
     </tr>
     <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
+      <th><code>perspective: 500px;</code></th>
+      <th><code>perspective: 650px;</code></th>
     </tr>
     <tr>
       <td>
@@ -135,86 +125,88 @@ perspective: unset;
 ```css
 /* Des classes pour les différentes valeurs */
 .pers250 {
-    perspective: 250px;
+  perspective: 250px;
 }
 .pers350 {
-    perspective: 350px;
+  perspective: 350px;
 }
 .pers500 {
-    perspective: 500px;
+  perspective: 500px;
 }
 .pers650 {
-    perspective: 650px;
+  perspective: 650px;
 }
 
 /* On définit le div pour le conteneur, */
 /* le cube, ainsi qu'une face générique */
- .container {
-   width: 200px;
-   height: 200px;
-   margin: 75px 0 0 75px;
-   border: none;
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 75px 0 0 75px;
+  border: none;
 }
 
 .cube {
-   width: 100%;
-   height: 100%;
-   backface-visibility: visible;
-   perspective-origin: 150% 150%;
-   transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  backface-visibility: visible;
+  perspective-origin: 150% 150%;
+  transform-style: preserve-3d;
 }
 
 .face {
-   display: block;
-   position: absolute;
-   width: 100px;
-   height: 100px;
-   border: none;
-   line-height: 100px;
-   font-family: sans-serif;
-   font-size: 60px;
-   color: white;
-   text-align: center;
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: none;
+  line-height: 100px;
+  font-family: sans-serif;
+  font-size: 60px;
+  color: white;
+  text-align: center;
 }
 
 /* On définit chaque face en fonction de sa direction */
- .front {
-   background: rgba(0, 0, 0, 0.3);
-   transform: translateZ(50px);
+.front {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateZ(50px);
 }
 
 .back {
-   background: rgba(0, 255, 0, 1);
-   color: black;
-   transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 255, 0, 1);
+  color: black;
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-   background: rgba(196, 0, 0, 0.7);
-   transform: rotateY(90deg) translateZ(50px);
+  background: rgba(196, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-   background: rgba(0, 0, 196, 0.7);
-   transform: rotateY(-90deg) translateZ(50px);
+  background: rgba(0, 0, 196, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-   background: rgba(196, 196, 0, 0.7);
-   transform: rotateX(90deg) translateZ(50px);
+  background: rgba(196, 196, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-   background: rgba(196, 0, 196, 0.7);
-   transform: rotateX(-90deg) translateZ(50px);
+  background: rgba(196, 0, 196, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
 }
 
 /* On améliore légèrement le tableau */
-th, p, td {
-   background-color: #EEEEEE;
-   padding: 10px;
-   font-family: sans-serif;
-   text-align: left;
+th,
+p,
+td {
+  background-color: #eeeeee;
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: left;
 }
 ```
 

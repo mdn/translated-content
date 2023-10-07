@@ -96,28 +96,28 @@ JSON.stringify(value, replacer, space)
 ### JSON.stringify の使用
 
 ```js
-JSON.stringify({});                    // '{}'
-JSON.stringify(true);                  // 'true'
-JSON.stringify('foo');                 // '"foo"'
-JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
-JSON.stringify({ x: 5 });              // '{"x":5}'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
-JSON.stringify([new Number(3), new String('false'), new Boolean(false)]);
+JSON.stringify([new Number(3), new String("false"), new Boolean(false)]);
 // '[3,"false",false]'
 
 // 文字列がキーとなった配列要素は列挙可能ではなく、JSON では意味をなさない
-let a = ['foo', 'bar'];
-a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
+let a = ["foo", "bar"];
+a["baz"] = "quux"; // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'
 
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] });
 // '{"x":[10,null,null,null]}'
 
 // 標準データ構造
@@ -125,7 +125,7 @@ JSON.stringify([
   new Set([1]),
   new Map([[1, 2]]),
   new WeakSet([{ a: 1 }]),
-  new WeakMap([[{a: 1 }, 2]]),
+  new WeakMap([[{ a: 1 }, 2]]),
 ]);
 // '[{},{},{},{}]'
 
@@ -146,8 +146,8 @@ JSON.stringify([new Float32Array([1]), new Float64Array([1])]);
 JSON.stringify({
   x: 5,
   y: 6,
-  toJSON(){
-   return this.x + this.y;
+  toJSON() {
+    return this.x + this.y;
   },
 });
 // '11'
@@ -169,8 +169,8 @@ JSON.stringify({ [Symbol.for("foo")]: "foo" }, (k, v) => {
 // 列挙可能でないプロパティ:
 JSON.stringify(
   Object.create(null, {
-    x: { value: 'x', enumerable: false },
-    y: { value: 'y', enumerable: true },
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
   }),
 );
 // '{"y":"y"}'
@@ -230,7 +230,7 @@ console.log(JSON.stringify({ "": 1, b: 2 }, replacer)); // "{"b":2}"
 `replacer` が配列である場合、その配列の値は結果の JSON 文字列に含めるプロパティの名前を示します。
 
 ```js
-JSON.stringify(foo, ['week', 'month']);
+JSON.stringify(foo, ["week", "month"]);
 // '{"week":45,"month":7}', "week" と "month" プロパティだけが保持される
 ```
 
@@ -239,7 +239,7 @@ JSON.stringify(foo, ['week', 'month']);
 出力をスペース 1 個でインデントします。
 
 ```js
-console.log(JSON.stringify({ a: 2 }, null, ' '));
+console.log(JSON.stringify({ a: 2 }, null, " "));
 /*
 '{
  "a": 2
@@ -252,7 +252,7 @@ console.log(JSON.stringify({ a: 2 }, null, ' '));
 <!-- markdownlint-disable MD010 -->
 
 ```js
-console.log(JSON.stringify({ uno: 1, dos: 2 }, null, '\t'));
+console.log(JSON.stringify({ uno: 1, dos: 2 }, null, "\t"));
 // 以下の文字列を返します:
 /*
 {
@@ -276,14 +276,12 @@ console.log(JSON.stringify({ uno: 1, dos: 2 }, null, '\t'));
 
 ```js
 var obj = {
-    data: 'data',
+  data: "data",
 
-    toJSON (key) {
-        if (key)
-            return `Now I am a nested object under key '${key}'`;
-        else
-            return this;
-    }
+  toJSON(key) {
+    if (key) return `Now I am a nested object under key '${key}'`;
+    else return this;
+  },
 };
 
 JSON.stringify(obj);
@@ -292,7 +290,7 @@ JSON.stringify(obj);
 JSON.stringify({ obj }); // Shorthand property names (ES2015).
 // '{"obj":"Now I am a nested object under key 'obj'"}'
 
-JSON.stringify([ obj ]);
+JSON.stringify([obj]);
 // '["Now I am a nested object under key '0'"]'
 ```
 
@@ -319,24 +317,24 @@ JSON.stringify(circularReference);
 したがって、古い JavaScript エンジンとの互換性が必要な場合は、`JSON.stringify` から返された文字列を JavaScript の文字列に代入するために、直接 `eval` や `new Function` に渡したり、[JSONP](https://ja.wikipedia.org/wiki/JSONP) URL の一部として用いたりするのは危険です。次のユーティリティを使用することができます。
 
 ```js
-function jsFriendlyJSONStringify (s) {
-    return JSON.stringify(s).
-        replace(/\u2028/g, '\\u2028').
-        replace(/\u2029/g, '\\u2029');
+function jsFriendlyJSONStringify(s) {
+  return JSON.stringify(s)
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
 }
 
 var s = {
-    a: String.fromCharCode(0x2028),
-    b: String.fromCharCode(0x2029)
+  a: String.fromCharCode(0x2028),
+  b: String.fromCharCode(0x2029),
 };
 try {
-    eval('(' + JSON.stringify(s) + ')');
+  eval("(" + JSON.stringify(s) + ")");
 } catch (e) {
-    console.log(e); // "SyntaxError: unterminated string literal"
+  console.log(e); // "SyntaxError: unterminated string literal"
 }
 
 // catch する必要はない
-eval('(' + jsFriendlyJSONStringify(s) + ')');
+eval("(" + jsFriendlyJSONStringify(s) + ")");
 
 // Firefox での console.log はコンソールにログ出力をする場合
 //   Unicode エスケープを解除するので、alert を使う
@@ -346,11 +344,11 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 > **メモ:** 配列以外のオブジェクトのプロパティでは、特定の順番で文字列化されることは保証されていません。文字列化された同じオブジェクトの中でプロパティの順番に依存しないようにしてください。
 
 ```js
-var a = JSON.stringify({ foo: "bar", baz: "quux" })
+var a = JSON.stringify({ foo: "bar", baz: "quux" });
 //'{"foo":"bar","baz":"quux"}'
-var b = JSON.stringify({ baz: "quux", foo: "bar" })
+var b = JSON.stringify({ baz: "quux", foo: "bar" });
 //'{"baz":"quux","foo":"bar"}'
-console.log(a !== b) // true
+console.log(a !== b); // true
 
 // 一部の記憶関数は JSON.stringify を使用して引数をシリアライズしており、
 // 上記のような同じオブジェクトに出会った時にキャッチし損ねることがあります
@@ -363,23 +361,23 @@ console.log(a !== b) // true
 ```js
 // JSON の一例を作成
 var session = {
-  'screens': [],
-  'state': true
+  screens: [],
+  state: true,
 };
-session.screens.push({ 'name': 'screenA', 'width': 450, 'height': 250 });
-session.screens.push({ 'name': 'screenB', 'width': 650, 'height': 350 });
-session.screens.push({ 'name': 'screenC', 'width': 750, 'height': 120 });
-session.screens.push({ 'name': 'screenD', 'width': 250, 'height': 60 });
-session.screens.push({ 'name': 'screenE', 'width': 390, 'height': 120 });
-session.screens.push({ 'name': 'screenF', 'width': 1240, 'height': 650 });
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // JSON.stringify() で JSON 文字列に変換してから
 // session の名前で localStorage に保存
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // JSON.stringify() で生成されて localStorage に保存された文字列を
 // 再び JSON オブジェクトに変換する方法の例
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+var restoredSession = JSON.parse(localStorage.getItem("session"));
 
 // ここで変数 restoredSession には localStorage に保存されていた
 // オブジェクトが入っている

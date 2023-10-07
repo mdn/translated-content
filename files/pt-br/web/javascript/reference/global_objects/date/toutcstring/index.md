@@ -42,15 +42,13 @@ Antes do ECMAScript 2018, o formato do valor de retorno variava de acordo com a 
 ### Usando `toUTCString()`
 
 ```js
-let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+let today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
 let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

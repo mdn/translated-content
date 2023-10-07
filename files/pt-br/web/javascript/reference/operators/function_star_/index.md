@@ -31,16 +31,16 @@ Uma expressão `function*` é muito similar e tem quase a mesma sintaxe que a {{
 O exemplo a seguir define uma função generator e atribui à variável `x`. A função faz um yield do quadrado do seu argumento:
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
 ## Especificações
 
-| Especificação                                            | Situação                     | Comentário         |
-| -------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'function*')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                             | Situação             | Comentário         |
+| ----------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#', 'function*')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

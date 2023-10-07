@@ -1,7 +1,6 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-translation_of: Web/CSS/display-box
 ---
 
 {{CSSRef}}

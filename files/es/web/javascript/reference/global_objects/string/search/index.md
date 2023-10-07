@@ -1,7 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/search
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -39,9 +38,9 @@ El siguiente ejemplo imprime un mensaje dependiendo de cuál sea el resultado de
 function testinput(re, str) {
   var midstring;
   if (str.search(re) != -1) {
-    midstring = ' contains ';
+    midstring = " contains ";
   } else {
-    midstring = ' does not contain ';
+    midstring = " does not contain ";
   }
   console.log(str + midstring + re);
 }

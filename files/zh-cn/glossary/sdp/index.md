@@ -3,6 +3,8 @@ title: SDP
 slug: Glossary/SDP
 ---
 
+{{GlossarySidebar}}
+
 **SDP** (Session Description {{glossary("Protocol")}}) 是一个描述{{Glossary("P2P","peer-to-peer")}} 连接的标准。SDP 包含音视频的：编解码 ({{Glossary("codec")}}),源地址，和时间信息。
 
 下面是一个典型的 SDP 信息示例：

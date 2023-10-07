@@ -93,8 +93,12 @@ animation-fill-mode: unset;
 }
 
 @keyframes grow {
-  0% { font-size: 0; }
-  100% { font-size: 40px; }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 
 .demo:hover .grows {

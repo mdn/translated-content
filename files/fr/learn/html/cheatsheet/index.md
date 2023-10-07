@@ -1,13 +1,6 @@
 ---
 title: Cheatsheet HTML
 slug: Learn/HTML/Cheatsheet
-tags:
-  - Cheatsheet
-  - HTML
-  - Intermediate
-  - Learn
-translation_of: Learn/HTML/Cheatsheet
-original_slug: Apprendre/HTML/Cheatsheet
 ---
 
 Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Element) ainsi que différents [tutoriels HTML détaillés](/fr/Apprendre/HTML/Comment). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.

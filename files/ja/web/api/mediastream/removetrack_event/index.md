@@ -1,5 +1,5 @@
 ---
-title: 'MediaStream: removetrack イベント'
+title: "MediaStream: removetrack イベント"
 slug: Web/API/MediaStream/removetrack_event
 ---
 
@@ -14,9 +14,9 @@ slug: Web/API/MediaStream/removetrack_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('removetrack', event => { });
+addEventListener("removetrack", (event) => {});
 
-onremovetrack = event => { };
+onremovetrack = (event) => {};
 ```
 
 ## イベント型
@@ -39,7 +39,7 @@ _親インターフェイスである {{domxref("Event")}} から継承したプ
 ```js
 let stream = new MediaStream();
 
-stream.addEventListener('removetrack', (event) => {
+stream.addEventListener("removetrack", (event) => {
   console.log(`${event.track.kind} track removed`);
 });
 ```

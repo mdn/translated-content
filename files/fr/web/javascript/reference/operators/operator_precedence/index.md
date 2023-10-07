@@ -1,13 +1,6 @@
 ---
 title: Précédence des opérateurs
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
-  - precedence
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
-original_slug: Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs
 ---
 
 {{jsSidebar("Operators")}}
@@ -37,10 +30,10 @@ avec le résultat attendu que `a` et `b` obtiennent la même valeur de 5. C'est 
 ## Exemples
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // renvoie true
 
-3 > 2 > 1
+3 > 2 > 1;
 // renvoie false car 3 > 2 vaut true et que true > 1 vaut false
 // En ajoutant des parenthèses, on y voit plus clair (3 > 2) > 1
 ```

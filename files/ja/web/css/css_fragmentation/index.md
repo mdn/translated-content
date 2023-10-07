@@ -1,6 +1,6 @@
 ---
 title: CSS 断片化
-slug: Web/CSS/CSS_Fragmentation
+slug: Web/CSS/CSS_fragmentation
 ---
 
 {{CSSRef}}

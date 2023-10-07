@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 
 {{JSRef}}
@@ -40,7 +39,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 
 ## Описание
 
-Смотрите {{jsxref("Array.prototype.map()")}} для детального описания callback функции. Метод `flatMap` идентичен методу [`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) с последующим вызовом [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth 1.
+Смотрите {{jsxref("Array.prototype.map()")}} для детального описания callback функции. Метод `flatMap` идентичен методу [`map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) с последующим вызовом [`flat`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth 1.
 
 ## Примеры
 
@@ -49,14 +48,14 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ```js
 let arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // выравнивается только один уровень
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -67,10 +66,10 @@ arr1.flatMap(x => [[x * 2]]);
 ```js
 let arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x => x.split(" "));
+arr1.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
+arr1.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 
@@ -84,7 +83,7 @@ arr1.flatMap(x => x.split(" "));
 
 ```js
 var arr1 = [1, 2, 3, 4];
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // is equivalent to
 arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 // [2, 4, 6, 8]
@@ -100,7 +99,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 {{Compat}}
 
-## См так же:
+## См так же
 
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}

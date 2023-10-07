@@ -14,8 +14,8 @@ slug: Web/API/Document/importNode
 ## 構文
 
 ```js
-importNode(externalNode)
-importNode(externalNode, deep)
+importNode(externalNode);
+importNode(externalNode, deep);
 ```
 
 ### 引数
@@ -38,7 +38,7 @@ importNode(externalNode, deep)
 ## 例
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);

@@ -34,13 +34,17 @@ Você também pode usar a abordagem de embrulhar o conteúdo inteiro de um scrip
 Da mesma forma, para invocar strict mode para uma função, coloque _exatamente_ a declaração `"use strict";` (ou `'use strict';`) no corpo da função antes de qualquer outra declaração.
 
 ```js
-function strict(){
+function strict() {
   // Sintaxe strict mode a nível de função
-  'use strict';
-  function nested() { return "E eu também!"; }
+  "use strict";
+  function nested() {
+    return "E eu também!";
+  }
   return "Oi! Eu sou uma função strict mode!  " + nested();
 }
-function notStrict() { return "Eu não sou strict."; }
+function notStrict() {
+  return "Eu não sou strict.";
+}
 ```
 
 ## Mudanças no strict mode
@@ -55,9 +59,9 @@ Primeiro, o strict mode impossibilita criar variáveis globais acidentalmente. E
 
 ```js
 "use strict";
-                     // Assumindo que uma variável global variavelErrada existe
+// Assumindo que uma variável global variavelErrada existe
 variavellErrada = 17; // esta linha lança ReferenceError por conta do
-                     // erro de digitação da variável
+// erro de digitação da variável
 ```
 
 Segundo, strict mode faz com que atribuições que outrora falhariam silenciosamente lançar uma exceção. Por exemplo, `NaN` é uma variável global não-atribuível. Em código normal, atribuir a `NaN` não faz nada; o desenvolvedor não recebe qualquer resposta de falha. No strict mode, atribuir a `NaN` lança uma exceção. Qualquer atribuição que falha silenciosamente em código normal (atribuir a uma propriedade não-atribuível, atribuir a uma propriedade getter-only, atribuir a uma propriedade de um objeto [não-extensível](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lançarão exceções em strict mode:
@@ -71,7 +75,11 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // lança TypeError
 
 // Atribuir a uma propriedade getter-only
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // lança TypeError
 
 // Atribuir a uma nova propriedade de um objeto não-extensível
@@ -89,7 +97,7 @@ delete Object.prototype; // lança TypeError
 
 Quarto, strict mode anterior ao Gecko 34 requer que todas as propriedades nomeadas em um objeto literal sejam únicas. Código normal pode duplicar nomes de propriedades, sendo que a última ocorrência determina o valor da propriedade. Mas como apenas o último faz algo, a duplicação é meramente um vetor de bugs, se o código for modificado para mudar o valor da propriedade por outro meio que não modificando a última instância. Nomes de propriedades duplicados são erro de sintaxe em strict mode:
 
-> **Nota:** Não é mais o caso no ECMAScript 6 ({{bug(1041128)}}).
+> **Nota:** Não é mais o caso no ECMAScript 6 ([Erro do Firefox 1041128](https://bugzil.la/1041128)).
 
 ```js
 "use strict";
@@ -99,7 +107,8 @@ var o = { p: 1, p: 2 }; // !!! erro de sintaxe
 Quinto, strict mode exige que nomes de parâmetros de função sejam únicos. Em código normal, o último argumento duplicado esconde argumentos anteriores com nome semelhante. Estes argumentos anteriores continuam disponíveis através de `arguments[i]`**,** portanto não são completamente inacessíveis. Entretanto, esta ocultação faz pouco sentido e provavelmente é indesejável (pode esconder um erro de digitação, por exemplo), então em strict mode nomes de argumentos duplicados são erro de sintaxe:
 
 ```js
-function sum(a, a, c){ // !!! erro de sintaxe
+function sum(a, a, c) {
+  // !!! erro de sintaxe
   "use strict";
   return a + b + c; // errado se este código executasse
 }
@@ -115,21 +124,21 @@ Novos desenvolvedores algumas vezes acham que um prefixo zero não tem significa
 
 ```js
 "use strict";
-var sum = 015 + // !!! erro de sintaxe
-          197 +
-          142;
+var sum =
+  015 + // !!! erro de sintaxe
+  197 +
+  142;
 ```
 
 Sétimo, strict mode em ECMAScript 6 proíbe definir propriedades em valores {{Glossary("Primitive", "primitivos")}}. Sem strict mode, definir uma propriedade é simplesmente ignorado; com strict mode, no entanto, um {{jsxref("TypeError")}} é lançado.
 
 ```js
-(function() {
-"use strict";
+(function () {
+  "use strict";
 
-false.true = "";             // TypeError
-(14).navegandoPara = "casa"; // TypeError
-"com".voce = "distante";     // TypeError
-
+  false.true = ""; // TypeError
+  (14).navegandoPara = "casa"; // TypeError
+  "com".voce = "distante"; // TypeError
 })();
 ```
 
@@ -142,8 +151,8 @@ Primeiro, strict mode proíbe `with`. O problema com `with` é que qualquer nome
 ```js
 "use strict";
 var x = 17;
-with (obj) // !!! erro de sintaxe
-{
+with (obj) {
+  // !!! erro de sintaxe
   // Se isto não fosse strict mode, isso seria var x ou obj.x?
   // No geral, é impossível saber sem executar o código, então
   // o nome não pode ser otimizado.
@@ -165,18 +174,18 @@ console.assert(evalX === 42);
 Relacionadamente, se a função `eval` for invocada por uma expressão da forma `eval(...)` em código strict mode, o código será avaliado como código strict mode. O código pode invocar strict code explicitamente, mas não é necessário.
 
 ```js
-function strict1(str){
+function strict1(str) {
   "use strict";
   return eval(str); // str será tratado como código strict mode
 }
-function strict2(f, str){
+function strict2(f, str) {
   "use strict";
   return f(str); // não é eval(...): str é strict se e
-                 // somente se invocar strict mode
+  // somente se invocar strict mode
 }
-function nonstrict(str){
+function nonstrict(str) {
   return eval(str); // str é strict se e somente se
-                    // invocar strict mode
+  // invocar strict mode
 }
 
 strict1("'Código strict mode!'");
@@ -211,19 +220,20 @@ Primeiro, os nomes `eval` e `arguments` não podem ser vinculados ou atribuídos
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
 Segundo, código strict mode não faz _alias_ para propriedades de objetos `arguments` criados dentro de si. Em código normal dentro de uma função cujo primeiro argumento é `arg`, definir `arg` também define `arguments[0]`, e vice-versa (a menos que nenhum argumento seja fornecido ou `arguments[0]` seja deletado). Objetos `arguments` para funções strict mode armazenam os argumentos originais quando a função é invocada. `arguments[i]` não rastreia o valor do argumento nomeado correspondente, nem um argumento nomeado rastreia o valor do `arguments[i]` correspondente.
 
 ```js
-function f(a){
+function f(a) {
   "use strict";
   a = 42;
   return [a, arguments[0]];
@@ -237,7 +247,9 @@ Terceiro, `arguments.callee` não é mais suportado. Em código normal, `argumen
 
 ```js
 "use strict";
-var f = function() { return arguments.callee; };
+var f = function () {
+  return arguments.callee;
+};
 f(); // lança TypeError
 ```
 
@@ -249,7 +261,9 @@ Primeiro, o valor passado como `this` para uma função em strict mode não é f
 
 ```js
 "use strict";
-function fun() { return this; }
+function fun() {
+  return this;
+}
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
@@ -262,14 +276,12 @@ Isso significa, além de outras coisas, que em navegadores não é mais possíve
 Segundo, em strict mode não é mais possível "caminhar" a pilha JavaScript via extensões do ECMAScript comumente implementadas. Em código normal com essas extensões, quando uma funçao `fun` está no meio de ser chamada, `fun.caller` é a função que chamou `fun` mais recentemente, e `fun.arguments` é o `arguments` para aquela invocação de `fun`. Ambas as extensões são problemáticas para JavaScript "seguro" porque permitem que código "seguro" acesse funções "privilegiadas" e seus argumentos (potencialmente inseguros). Se `fun` estiver em strict mode, tanto `fun.caller` quando `fun.arguments` são propriedades não-deletáveis que lançam exceção quando definidas ou recuperadas:
 
 ```js
-function restrita()
-{
+function restrita() {
   "use strict";
-  restrita.caller;    // lança TypeError
+  restrita.caller; // lança TypeError
   restrita.arguments; // lança TypeError
 }
-function invocadorPrivilegiado()
-{
+function invocadorPrivilegiado() {
   return restrita();
 }
 invocadorPrivilegiado();
@@ -279,8 +291,7 @@ Terceiro, `arguments` para funções strict mode não oferecem mais acesso às v
 
 ```js
 "use strict";
-function fun(a, b)
-{
+function fun(a, b) {
   "use strict";
   var v = 12;
   return arguments.caller; // lança TypeError
@@ -295,18 +306,21 @@ Versões futuras do ECMAScript provavelmente introduzirão nova sintaxe, e o str
 Primeiro, no strict mode, uma pequena lista de identificadores tornam-se palavras-chave reservadas. Estas palavras são `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static` e `yield`. Em strict mode, portanto, você não pode nomear ou usar variáveis ou argumentos com esses nomes.
 
 ```js
-function package(protected){ // !!!
+function package(protected) {
+  // !!!
   "use strict";
   var implements; // !!!
 
-  interface: // !!!
-  while (true){
+  // !!!
+  interface: while (true) {
     break interface; // !!!
   }
 
-  function private() { } // !!!
+  function private() {} // !!!
 }
-function fun(static) { 'use strict'; } // !!!
+function fun(static) {
+  "use strict";
+} // !!!
 ```
 
 Duas ressalvas específicas à Mozilla: primeiro, se seu código for JavaScript 1.7 ou superior (por exemplo em código chrome ou usando o `<script type="">` correto) e for strict mode, `let` e `yield` têm a funcionaldade que eles tiveram desde que essas palavras-chave foram introduzidas pela primeira vez. Mas código strict mode na web, carregado com `<script src="">` ou `<script>...</script>`, não serão capazes de usar `let`/`yield` como identificadores. Segundo, enquanto o ES5 reserva incondicionalmente as palavras `class`, `enum`, `export`, `extends`, `import` e `super`, a Mozilla reservava-as apenas em strict mode antes do Firefox 5.
@@ -315,18 +329,19 @@ Segundo, [strict mode proíbe declaração de funções fora do nível superior 
 
 ```js
 "use strict";
-if (true){
-  function f() { } // !!! erro de sintaxe
+if (true) {
+  function f() {} // !!! erro de sintaxe
   f();
 }
 
-for (var i = 0; i < 5; i++){
-  function f2() { } // !!! erro de sintaxe
+for (var i = 0; i < 5; i++) {
+  function f2() {} // !!! erro de sintaxe
   f2();
 }
 
-function baz(){ // correto
-  function eit() { } // erro de sintaxe
+function baz() {
+  // correto
+  function eit() {} // erro de sintaxe
 }
 ```
 
@@ -338,11 +353,11 @@ Os principais navegadores agora implementam strict mode. Entretanto, não depend
 
 ## Especificações
 
-| Especificação                                                                                | Status                       | Comentário                                                                                                                      |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}}                 | {{Spec2('ES5.1')}}     | Definição inicial. Veja também: [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/5.1/#sec-C) |
-| {{SpecName('ES6', '#sec-strict-mode-code', 'Strict Mode Code')}}         | {{Spec2('ES6')}}         | [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)         |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}} | {{Spec2('ESDraft')}} | [Strict mode restriction and exceptions](https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript)                         |
+| Especificação                                                        | Status               | Comentário                                                                                                                       |
+| -------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}}             | {{Spec2('ES5.1')}}   | Definição inicial. Veja também: [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/5.1/#sec-C) |
+| {{SpecName('ES6', '#sec-strict-mode-code', 'Strict Mode Code')}}     | {{Spec2('ES6')}}     | [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)         |
+| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}} | {{Spec2('ESDraft')}} | [Strict mode restriction and exceptions](https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript)                          |
 
 ## Veja também
 

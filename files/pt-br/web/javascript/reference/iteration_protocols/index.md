@@ -75,10 +75,12 @@ Um objeto é um iterador quando implementa um método **`next()`** com a semânt
 >
 > ```js
 > var myIterator = {
->     next: function() {
->         // ...
->     },
->     [Symbol.iterator]: function() { return this }
+>   next: function () {
+>     // ...
+>   },
+>   [Symbol.iterator]: function () {
+>     return this;
+>   },
 > };
 > ```
 
@@ -87,25 +89,25 @@ Um objeto é um iterador quando implementa um método **`next()`** com a semânt
 Uma {{jsxref("String")}} é um exemplo de um objeto iterable built-in:
 
 ```js
-var someString = 'hi';
-typeof someString[Symbol.iterator];          // "function"
+var someString = "hi";
+typeof someString[Symbol.iterator]; // "function"
 ```
 
 [O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) de uma string retorna as posições dos caracteres de uma string um por um:
 
 ```js
 var iterator = someString[Symbol.iterator]();
-iterator + '';                               // "[object String Iterator]"
+iterator + ""; // "[object String Iterator]"
 
-iterator.next();                             // { value: "h", done: false }
-iterator.next();                             // { value: "i", done: false }
-iterator.next();                             // { value: undefined, done: true }
+iterator.next(); // { value: "h", done: false }
+iterator.next(); // { value: "i", done: false }
+iterator.next(); // { value: undefined, done: true }
 ```
 
 Alguns construtores built-in, como _[spread syntax](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax)_, usam o mesmo protocolo de iteração interiormente:
 
 ```js
-[...someString]                              // ["h", "i"]
+[...someString]; // ["h", "i"]
 ```
 
 Podemos redefinir o comportamento de iteração fornecendo nosso próprio `@@iterator`:
@@ -131,8 +133,8 @@ someString[Symbol.iterator] = function() {
 Observe como redefinir `@@iterator` afeta o comportamento built-in que faz uso do protocolo de iteração:
 
 ```js
-[...someString];                             // ["bye"]
-someString + '';                             // "hi"
+[...someString]; // ["bye"]
+someString + ""; // "hi"
 ```
 
 ## Exemplos de Iteráveis
@@ -338,9 +340,9 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                          | Status               | Comentário         |
+| ------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Veja também

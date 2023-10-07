@@ -1,8 +1,8 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-translation_of: Web/CSS/line-height
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/css) **`line-height`** устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В [незамещаемых](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.
@@ -60,10 +60,24 @@ line-height: unset;
 ```css
 /* All rules below have the same resultant line height */
 
-div { line-height: 1.2;   font-size: 10pt; }   /* number */
-div { line-height: 1.2em; font-size: 10pt; }   /* length */
-div { line-height: 120%;  font-size: 10pt; }   /* percentage */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+} /* number */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+} /* length */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+} /* percentage */
+div {
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
+} /* font shorthand */
 ```
 
 It is often more convenient to set `line-height` by using the {{cssxref("font")}} shorthand as shown above, but this requires the `font-family` property to be specified as well.
@@ -101,12 +115,12 @@ h1 {
 
 ```html
 <div class="box green">
- <h1>Avoid unexpected results by using unitless line-height.</h1>
+  <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 
 <div class="box red">
- <h1>Avoid unexpected results by using unitless line-height.</h1>
+  <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 
@@ -120,11 +134,11 @@ h1 {
 
 ## Specifications
 
-| Specification                                                                                    | Status                                   | Comment                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------ |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}         | {{Spec2('CSS3 Transitions')}} | Defines `line-height` as animatable. |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}                 | No change.                           |
-| {{SpecName('CSS1', '#line-height', 'line-height')}}                             | {{Spec2('CSS1')}}                 | Initial definition.                  |
+| Specification                                                             | Status                        | Comment                              |
+| ------------------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}        | {{Spec2('CSS3 Transitions')}} | Defines `line-height` as animatable. |
+| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}           | No change.                           |
+| {{SpecName('CSS1', '#line-height', 'line-height')}}                       | {{Spec2('CSS1')}}             | Initial definition.                  |
 
 {{cssinfo}}
 

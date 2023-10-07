@@ -1,8 +1,6 @@
 ---
-title: '-moz-image-rect'
+title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
-translation_of: Web/CSS/-moz-image-rect
-browser-compat: css.types.-moz-image-rect
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -17,7 +15,7 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ### Valeurs
 
-- [`url()`](/fr/docs/Web/CSS/url())
+- [`url()`](</fr/docs/Web/CSS/url()>)
   - : L'URI de l'image dont on veut obtenir une portion.
 - `top`
   - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
@@ -96,15 +94,19 @@ Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessin
 
 ```js
 function rotate() {
-  var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  var prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // Récupérer le style du dernier élément, puis faire tourner les images
 
-  for (var i=1; i<=4; i++) {
+  for (var i = 1; i <= 4; i++) {
     var curId = "box" + i;
 
     // Décaler les images d'arrière-plan
-    var curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    var curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }

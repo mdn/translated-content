@@ -92,11 +92,11 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 The HTML of `signup.html` looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...

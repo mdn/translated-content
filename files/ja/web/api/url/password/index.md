@@ -1,42 +1,40 @@
 ---
-title: URL.password
+title: "URL: password プロパティ"
+short-title: password
 slug: Web/API/URL/password
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} インターフェイスの **`password`** プロパティは、ドメイン名の前に指定されたパスワードを含む {{domxref("USVString")}} です。
+**`password`** は {{domxref("URL")}} インターフェイスのプロパティで、ドメイン名の前に指定されたパスワードの入った文字列です。
 
-最初に [`username`](/ja/docs/Web/API/URL/username) プロパティを設定せずに設定しようとすると、静かに失敗します。
+先に {{domxref("URL.username", "username")}} プロパティを設定せずに設定しようとすると、暗黙の裡に失敗します。
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-```
-string = object.password;
-object.password = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
-var result = url.password; // 戻り値: "flabada"
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/ja/docs/Web/API/URL/password",
+);
+console.log(url.password); // "flabada" とログ出力
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.password")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

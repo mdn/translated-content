@@ -59,46 +59,50 @@ Object.isFrozen(oneProp); // === true
 
 // 書き込み不可であるが設定変更可能なプロパティを持つ、
 // 拡張不可のオブジェクトは、凍結されていません
-var nonWritable = { e: 'plep' };
+var nonWritable = { e: "plep" };
 Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, 'e', {
-  writable: false
+Object.defineProperty(nonWritable, "e", {
+  writable: false,
 }); // 書き込み不可にします
 Object.isFrozen(nonWritable); // === false
 
 // プロパティを設定変更不可にすると、
 // オブジェクトは凍結されます
-Object.defineProperty(nonWritable, 'e', {
-  configurable: false
+Object.defineProperty(nonWritable, "e", {
+  configurable: false,
 }); // 設定変更不可にします
 Object.isFrozen(nonWritable); // === true
 
 // 設定変更不可であるが書き込み可能なプロパティを持つ、
 // 拡張不可のオブジェクトは、やはり凍結されていません
-var nonConfigurable = { release: 'the kraken!' };
+var nonConfigurable = { release: "the kraken!" };
 Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, 'release', {
-  configurable: false
+Object.defineProperty(nonConfigurable, "release", {
+  configurable: false,
 });
 Object.isFrozen(nonConfigurable); // === false
 
 // プロパティを書き込み不可にすると、オブジェクトは
 // 凍結されます
-Object.defineProperty(nonConfigurable, 'release', {
-  writable: false
+Object.defineProperty(nonConfigurable, "release", {
+  writable: false,
 });
 Object.isFrozen(nonConfigurable); // === true
 
 // 設定変更可能なアクセサープロパティを持つ拡張不可の
 // オブジェクトは、凍結されていません
-var accessor = { get food() { return 'yum'; } };
+var accessor = {
+  get food() {
+    return "yum";
+  },
+};
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
 // ...しかしプロパティを設定変更不可にすると、
 // オブジェクトは凍結されます
-Object.defineProperty(accessor, 'food', {
-  configurable: false
+Object.defineProperty(accessor, "food", {
+  configurable: false,
 });
 Object.isFrozen(accessor); // === true
 

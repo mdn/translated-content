@@ -13,5 +13,5 @@ Los programas son {{glossary("Compile", "compilados")}} primero una única vez a
 
 ### Conocimientos generales
 
-- [Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)) en Wikipedia
-- {{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+- [Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)>) en Wikipedia
+- {{QuickLinksWithSubpages("/es/docs/Glossary")}}

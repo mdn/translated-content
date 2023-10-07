@@ -213,11 +213,11 @@ An assignment operator assigns a value to its left operand based on the value of
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                   | Comment                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                                          | Standard                 | Definição inicial.                                                                                               |
-| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                                 | {{Spec2('ES5.1')}} |                                                                                                                  |
-| {{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} | {{Spec2('ES6')}}     | Novo: Spread operator, destructuring assignment, `super` keyword, Array comprehensions, Generator comprehensions |
+| Specification                                                                                   | Status             | Comment                                                                                                          |
+| ----------------------------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                         | Standard           | Definição inicial.                                                                                               |
+| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                 | {{Spec2('ES5.1')}} |                                                                                                                  |
+| {{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} | {{Spec2('ES6')}}   | Novo: Spread operator, destructuring assignment, `super` keyword, Array comprehensions, Generator comprehensions |
 
 ## Veja também
 

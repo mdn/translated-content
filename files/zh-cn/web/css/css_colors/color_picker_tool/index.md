@@ -1,6 +1,6 @@
 ---
 title: 色彩选择工具
-slug: Web/CSS/CSS_Colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_picker_tool
 ---
 
 {{CSSRef}}
@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_Colors/Color_picker_tool
 
 更多关于颜色的使用，参见：
 
-- [通过 CSS 将颜色应用到 HTML 元素上](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [通过 CSS 将颜色应用到 HTML 元素上](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 - [基础文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
 - [通过 CSS 编辑边框样式](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 - [通过 CSS 改变背景样式](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

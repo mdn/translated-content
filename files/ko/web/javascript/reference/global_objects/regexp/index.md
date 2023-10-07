@@ -21,9 +21,9 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 다음의 세 표현식은 모두 같은 정규 표현식을 생성합니다.
 
 ```js
-/ab+c/i
-new RegExp(/ab+c/, 'i') // 리터럴
-new RegExp('ab+c', 'i') // 생성자
+/ab+c/i;
+new RegExp(/ab+c/, "i"); // 리터럴
+new RegExp("ab+c", "i"); // 생성자
 ```
 
 리터럴 표기법은 표현식을 평가할 때 정규 표현식을 컴파일합니다. 정규 표현식이 변하지 않으면 리터럴 표기법을 사용하세요. 예를 들어, 반복문 안에서 사용할 정규 표현식을 리터럴 표기법으로 생성하면 정규 표현식을 매번 다시 컴파일하지 않습니다.
@@ -39,8 +39,8 @@ ECMAScript 6부터는 `new RegExp(/ab+c/, 'i')`처럼, 첫 매개변수가 `RegE
 예를 들어 다음 두 줄은 동일한 정규 표현식을 생성합니다.
 
 ```js
-let re = /\w+/
-let re = new RegExp('\\w+')
+let re = /\w+/;
+let re = new RegExp("\\w+");
 ```
 
 ### Perl 형태의 `RegExp` 속성
@@ -108,10 +108,10 @@ let re = new RegExp('\\w+')
 대치 문자열에는 `$1`과 `$2`를 사용하여 정규 표현식 패턴의 각 괄호에 일치한 결과를 받아옵니다.
 
 ```js
-let re = /(\w+)\s(\w+)/
-let str = 'John Smith'
-let newstr = str.replace(re, '$2, $1')
-console.log(newstr)
+let re = /(\w+)\s(\w+)/;
+let str = "John Smith";
+let newstr = str.replace(re, "$2, $1");
+console.log(newstr);
 ```
 
 실행 결과는 `"Smith, John"`입니다.
@@ -121,9 +121,9 @@ console.log(newstr)
 기본 줄 바꿈 문자는 플랫폼(Unix, Windows 등)마다 다릅니다. 아래의 분할 스크립트는 모든 플랫폼의 줄 바꿈을 인식합니다.
 
 ```js
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+let text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
+let lines = text.split(/\r\n|\r|\n/);
+console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 정규 표현식 패턴의 순서를 바꾸면 작동하지 않을 수 있습니다.
@@ -131,7 +131,7 @@ console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is t
 ### 여러 줄에서 정규 표현식 사용하기
 
 ```js
-let s = 'Please yes\nmake my day!'
+let s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -145,14 +145,14 @@ s.match(/yes[^]*day/);
 {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} 플래그는 해당 정규 표현식이 접착 판별, 즉 {{jsxref("RegExp.prototype.lastIndex")}}에서 시작하는 일치만 확인하도록 할 수 있습니다.
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+let str = "#foo#";
+let regex = /foo/y;
 
-regex.lastIndex = 1
-regex.test(str)      // true
-regex.lastIndex = 5
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.lastIndex = 1;
+regex.test(str); // true
+regex.lastIndex = 5;
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### 접착과 전역 플래그의 차이
@@ -161,7 +161,8 @@ regex.lastIndex      // 0 (reset after match failure)
 
 ```js
 re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
+while ((r = re.exec("123 456")))
+  console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
@@ -178,16 +179,16 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 러시아어나 히브리어와 같은 다른 언어의 문자까지 일치하려면 `\uhhhh`(이때 hhhh는 해당 문자의 16진법 Unicode 값) 문법을 사용하세요. 아래 예제에서는 문자열에서 Unicode 문자를 추출합니다.
 
 ```js
-let text = 'Образец text на русском языке'
-let regex = /[\u0400-\u04FF]+/g
+let text = "Образец text на русском языке";
+let regex = /[\u0400-\u04FF]+/g;
 
-let match = regex.exec(text)
-console.log(match[0])        // logs 'Образец'
-console.log(regex.lastIndex) // logs '7'
+let match = regex.exec(text);
+console.log(match[0]); // logs 'Образец'
+console.log(regex.lastIndex); // logs '7'
 
-let match2 = regex.exec(text)
-console.log(match2[0])       // logs 'на' [did not log 'text']
-console.log(regex.lastIndex) // logs '15'
+let match2 = regex.exec(text);
+console.log(match2[0]); // logs 'на' [did not log 'text']
+console.log(regex.lastIndex); // logs '15'
 
 // and so on
 ```
@@ -197,8 +198,8 @@ console.log(regex.lastIndex) // logs '15'
 ### URL에서 서브도메인 추출하기
 
 ```js
-let url = 'http://xxx.domain.com'
-console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
+let url = "http://xxx.domain.com";
+console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
 ```
 
 > **참고:** 이 때는 정규표현식보단 [URL API](/ko/docs/Web/API/URL_API)를 통해 브라우저에 내장된 URL 구문 분석기를 사용하는 것이 좋습니다.

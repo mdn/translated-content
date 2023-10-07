@@ -39,9 +39,9 @@ Object.getPrototypeOf(obj) === proto; // true
 ES5 では引数 _obj_ がオブジェクトではない場合 {{jsxref("TypeError")}} が発生します。しかし ES2015 では対応する {{jsxref("Object")}} に変換されてから処理されます。
 
 ```js
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // String.prototype                  (ES2015 code)
 ```
 

@@ -1,11 +1,6 @@
 ---
 title: short_name
 slug: Web/Manifest/short_name
-tags:
-  - Manifest
-  - Web
-  - short-name
-translation_of: Web/Manifest/short_name
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
@@ -27,7 +22,7 @@ translation_of: Web/Manifest/short_name
   </tbody>
 </table>
 
-Элемент `short_name` -- это строка, которая определяет название веб-приложения показываемое пользователю, если для отображения [`name`](./name) не достаточно места (например, в качестве надписи под иконкой приложения на экране телефона). `short_name` может отображаться слева-направо или справе-налево, в зависимости от значений элементов манифеста [`dir`](./dir) and [`lang`](./lang).
+Элемент `short_name` — это строка, которая определяет название веб-приложения показываемое пользователю, если для отображения [`name`](./name) не достаточно места (например, в качестве надписи под иконкой приложения на экране телефона). `short_name` может отображаться слева-направо или справе-налево, в зависимости от значений элементов манифеста [`dir`](./dir) and [`lang`](./lang).
 
 ## Примеры
 
@@ -47,12 +42,10 @@ translation_of: Web/Manifest/short_name
 "short_name": "رائع"
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                                    | Status                       | Comment             | Feedback                                                                         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#short_name-member', 'short_name')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

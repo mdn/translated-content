@@ -1,14 +1,6 @@
 ---
 title: Использование атрибута aria-label
 slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-tags:
-  - ARIA
-  - HTML
-  - aria-label
-  - Клиент
-  - доступность
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
 
 Атрибут [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) создаёт текстовую метку текущего элемента в случае отсутствия видимого текста описания элемента. Если есть видимый текст, обозначающий элемент, используйте вместо этого [aria-labelledby](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute").

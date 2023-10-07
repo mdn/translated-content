@@ -1,7 +1,6 @@
 ---
 title: shadow DOM 사용하기
 slug: Web/API/Web_components/Using_shadow_DOM
-original_slug: Web/Web_Components/Using_shadow_DOM
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -15,17 +14,22 @@ original_slug: Web/Web_Components/Using_shadow_DOM
 이 문서는 여러분이 이미 [DOM (Document Object Model)](/ko/docs/Web/API/Document_Object_Model/Introduction)의 개념에 익숙하다고 가정합니다. DOM이란 마크업 문서에서 나타나는 여러 가지 요소들과 텍스트 문자열을 나타내는 연결된 노드들의 트리같은 구조입니다 (웹 문서의 경우 보통 HTML 문서). 예제로서, 다음의 HTML fragment를 고려해 보세요.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -55,8 +59,8 @@ shadow DOM이 어떤 방법으로든 새로운 것이 아니라는 것에 주목
 {{domxref("Element.attachShadow()")}} 메서드를 사용하여 어떠한 요소에든 shadow root을 부착할 수 있습니다. 이 메서드는 매개변수로 하나의 옵션을 포함하는 옵션 객체를 취합니다. 그 옵션이란 `mode` 이며, `open` 혹은 `closed` 의 값을 가집니다.
 
 ```js
-let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});
+let shadow = elementRef.attachShadow({ mode: "open" });
+let shadow = elementRef.attachShadow({ mode: "closed" });
 ```
 
 `open` 은 메인 페이지 맥락에서 작성된 JavaScript를 사용하여 shadow DOM에 접근할 수 있음을 의미합니다. 예를 들자면 {{domxref("Element.shadowRoot")}} 속성을 사용하여 접근할 수 있습니다.
@@ -72,13 +76,13 @@ let myShadowDom = myCustomElem.shadowRoot;
 만약 shadow DOM을 사용자 정의 요소에 사용자 정의 요소 생성자의 일부로써 부착한다면 (단연코 shadow DOM의 가장 유용한 적용), 다음과 같이 할 것입니다.
 
 ```js
-let shadow = this.attachShadow({mode: 'open'});
+let shadow = this.attachShadow({ mode: "open" });
 ```
 
 shadow DOM을 요소에 부착했을 때, shadow DOM을 조작하는 것은 단지 통상적인 DOM 조작에 사용되는 것과 같은 DOM API를 사용하는 것의 문제입니다.
 
 ```js
-let para = document.createElement('p');
+let para = document.createElement("p");
 shadow.appendChild(para);
 // 등등
 ```
@@ -108,7 +112,7 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // shadow root을 생성합니다
-let shadow = this.attachShadow({mode: 'open'});
+let shadow = this.attachShadow({ mode: "open" });
 ```
 
 ### shadow DOM 구조를 생성합니다
@@ -117,26 +121,26 @@ let shadow = this.attachShadow({mode: 'open'});
 
 ```js
 // span들을 생성합니다
-let wrapper = document.createElement('span');
-wrapper.setAttribute('class', 'wrapper');
-let icon = document.createElement('span');
-icon.setAttribute('class', 'icon');
-icon.setAttribute('tabindex', 0);
-let info = document.createElement('span');
-info.setAttribute('class', 'info');
+let wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+let icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+let info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // 특성의 내용을 취하고 그것을 info span 내부에 넣습니다
-let text = this.getAttribute('data-text');
+let text = this.getAttribute("data-text");
 info.textContent = text;
 
 // 아이콘을 삽입합니다
 let imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-let img = document.createElement('img');
+let img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 ```
@@ -147,7 +151,7 @@ icon.appendChild(img);
 
 ```js
 // shadow DOM에 적용할 몇 가지 CSS를 생성합니다
-let style = document.createElement('style');
+let style = document.createElement("style");
 
 style.textContent = `
 .wrapper {
@@ -197,13 +201,15 @@ wrapper.appendChild(info);
 
 ```js
 // 새로운 요소를 정의합니다
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+                                    numbers on the back of your card."></popup-info>
 ```
 
 ### 내부 스타일 대 외부 스타일
@@ -214,9 +220,9 @@ customElements.define('popup-info', PopUpInfo);
 
 ```js
 // 외부 스타일을 shadow dom에 적용합니다
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 생성된 요소를 shadow dom에 적용합니다
 shadow.appendChild(linkElem);

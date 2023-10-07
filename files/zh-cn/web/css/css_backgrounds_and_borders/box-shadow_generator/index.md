@@ -1,6 +1,6 @@
 ---
 title: Box-shadow 生成器
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 ---
 
 {{CSSRef}}
@@ -31,7 +31,7 @@ Box-shadow 生成器可以向一个元素上添加一至多个 box shadow。
 
 ## 参见
 
-- [Border-image 生成器](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator)
+- [Border-image 生成器](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
   - : 该交互性工具可以让你可视化地创建边框图片（{{cssxref("border-image")}} 属性）。
-- [Border-radius 生成器](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
+- [Border-radius 生成器](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
   - : 该交互性工具可以让你可视化地创建圆角（{{cssxref("border-radius")}} 属性）。

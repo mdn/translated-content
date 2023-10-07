@@ -1,11 +1,6 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:active
 ---
 
 {{CSSRef}}
@@ -37,21 +32,32 @@ La mise en forme associée peut être surchargée par les autres pseudo-classes 
 #### CSS
 
 ```css
-a:link { color: blue; }          /* Liens non visités */
-a:visited { color: purple; }     /* Liens visités */
-a:hover { background: yellow; }  /* Liens survolés */
-a:active { color: red; }         /* Liens actifs */
+a:link {
+  color: blue;
+} /* Liens non visités */
+a:visited {
+  color: purple;
+} /* Liens visités */
+a:hover {
+  background: yellow;
+} /* Liens survolés */
+a:active {
+  color: red;
+} /* Liens actifs */
 
-p:active { background: #eee; }   /* Paragraphes actifs */
+p:active {
+  background: #eee;
+} /* Paragraphes actifs */
 ```
 
 #### HTML
 
 ```html
-<p>Ce paragraphe contient un lien :
+<p>
+  Ce paragraphe contient un lien :
   <a href="#">Ce lien devient rouge quand vous cliquez dessus.</a>
-  Le paragraphe sera sur un fond gris quand vous cliquerez dessus
-  ou sur le lien.
+  Le paragraphe sera sur un fond gris quand vous cliquerez dessus ou sur le
+  lien.
 </p>
 ```
 
@@ -78,7 +84,9 @@ form button {
 ```html
 <form>
   <label for="mon-button">Un bouton :</label>
-  <button id="mon-button" type="button">Cliquez sur moi ou sur mon libellé !</button>
+  <button id="mon-button" type="button">
+    Cliquez sur moi ou sur mon libellé !
+  </button>
 </form>
 ```
 

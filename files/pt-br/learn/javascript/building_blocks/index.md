@@ -1,7 +1,6 @@
 ---
 title: Elementos construtivos do Javascript
 slug: Learn/JavaScript/Building_blocks
-original_slug: Aprender/JavaScript/Elementos_construtivos
 ---
 
 {{LearnSidebar}}

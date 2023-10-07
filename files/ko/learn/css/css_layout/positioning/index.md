@@ -1,7 +1,6 @@
 ---
 title: 위치잡기
 slug: Learn/CSS/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/위치잡기
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
@@ -16,7 +15,7 @@ original_slug: Learn/CSS/CSS_layout/위치잡기
         HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>
@@ -43,7 +42,7 @@ HTML 요소에 적용될 수 있는 여러 가지 유형의 위치잡기가 존�
 이를 입증한다거나, 이어질 섹션에서 다룰 예제를 설정하려면 먼저 HTML상에 두 번째 {{htmlelement("p")}} 요소에 `positioned`라는 클래스를 추가하십시오:
 
 ```html
-<p class="positioned"> ... </p>
+<p class="positioned">...</p>
 ```
 
 이제 다음과 같은 규칙을 당신의 CSS 하단에 추가하십시요:
@@ -85,13 +84,31 @@ left: 30px;
 ```html hidden
 <h1>상대 위치잡기</h1>
 
-<p>나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에 자리합니다.</p>
+<p>
+  나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에
+  자리합니다.
+</p>
 
-<p class="positioned">기본적으로 우리는 부모 요소의 너비 100%에 걸쳐 있습니다. 우리의 총 너비와 총 높이는 우리의 콘텐츠 + 패딩 + 테두리 너비 및 높이입니다.</p>
+<p class="positioned">
+  기본적으로 우리는 부모 요소의 너비 100%에 걸쳐 있습니다. 우리의 총 너비와 총
+  높이는 우리의 콘텐츠 + 패딩 + 테두리 너비 및 높이입니다.
+</p>
 
-<p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
+<p>
+  우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로
+  구분됩니다. 두게의 여백이 아니라.
+</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
+<p>
+  인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은
+  라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게
+  됩니다. 인라인 요소가 대열이탈할 경우
+  <span
+    >(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로
+    접혀들어갑니다.)</span
+  >, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는
+  것처럼: <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -139,13 +156,31 @@ position: absolute;
 ```html hidden
 <h1>절대 위치잡기</h1>
 
-<p>나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에 자리합니다.</p>
+<p>
+  나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에
+  자리합니다.
+</p>
 
-<p class="positioned">기본적으로 우리는 부모 요소의 너비 100%에 걸쳐 있습니다. 우리의 총 너비와 총 높이는 우리의 콘텐츠 + 패딩 + 테두리 너비 및 높이입니다.</p>
+<p class="positioned">
+  기본적으로 우리는 부모 요소의 너비 100%에 걸쳐 있습니다. 우리의 총 너비와 총
+  높이는 우리의 콘텐츠 + 패딩 + 테두리 너비 및 높이입니다.
+</p>
 
-<p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
+<p>
+  우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로
+  구분됩니다. 두게의 여백이 아니라.
+</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
+<p>
+  인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은
+  라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게
+  됩니다. 인라인 요소가 대열이탈할 경우
+  <span
+    >(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로
+    접혀들어갑니다.)</span
+  >, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는
+  것처럼: <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -203,13 +238,31 @@ position: relative;
 ```html hidden
 <h1>위치잡기 상황</h1>
 
-<p>나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에 자리합니다.</p>
+<p>
+  나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에
+  자리합니다.
+</p>
 
-<p class="positioned">이제 나는 <code>&lt;html&gt;</code> 요소가 아닌 <code>&lt;body&gt;</code> 요소를 기준으로 비례하여 절대적 위치잡기합니다.</p>
+<p class="positioned">
+  이제 나는 <code>&lt;html&gt;</code> 요소가 아닌
+  <code>&lt;body&gt;</code> 요소를 기준으로 비례하여 절대적 위치잡기합니다.
+</p>
 
-<p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
+<p>
+  우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로
+  구분됩니다. 두게의 여백이 아니라.
+</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
+<p>
+  인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은
+  라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게
+  됩니다. 인라인 요소가 대열이탈할 경우
+  <span
+    >(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로
+    접혀들어갑니다.)</span
+  >, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는
+  것처럼: <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -277,13 +330,31 @@ z-index: 1;
 ```html hidden
 <h1>z-인덱스</h1>
 
-<p>나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에 자리합니다.</p>
+<p>
+  나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에
+  자리합니다.
+</p>
 
-<p class="positioned">이제 나는 <code>&lt;html&gt;</code> 요소가 아닌 <code>&lt;body&gt;</code> 요소를 기준으로 비례하여 절대적 위치잡기합니다.</p>
+<p class="positioned">
+  이제 나는 <code>&lt;html&gt;</code> 요소가 아닌
+  <code>&lt;body&gt;</code> 요소를 기준으로 비례하여 절대적 위치잡기합니다.
+</p>
 
-<p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
+<p>
+  우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로
+  구분됩니다. 두게의 여백이 아니라.
+</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
+<p>
+  인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은
+  라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게
+  됩니다. 인라인 요소가 대열이탈할 경우
+  <span
+    >(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로
+    접혀들어갑니다.)</span
+  >, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는
+  것처럼: <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -371,13 +442,28 @@ p:nth-of-type(1) {
 ```html hidden
 <h1>고정 위치잡기</h1>
 
-<p>나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에 자리합니다.</p>
+<p>
+  나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에
+  자리합니다.
+</p>
 
 <p class="positioned">나는 더 이상 특별한 위치를 차지하지 않습니다...</p>
 
-<p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
+<p>
+  우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로
+  구분됩니다. 두게의 여백이 아니라.
+</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
+<p>
+  인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은
+  라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게
+  됩니다. 인라인 요소가 대열이탈할 경우
+  <span
+    >(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로
+    접혀들어갑니다.)</span
+  >, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는
+  것처럼: <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -424,13 +510,41 @@ p:nth-of-type(1) {
 ```html hidden
 <h1>흡착 위치잡기</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">흡착</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -440,8 +554,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -464,31 +578,31 @@ body {
 <h1>흡착 위치잡기</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 
@@ -528,31 +642,31 @@ dt {
 <h1>흡착 위치잡기</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 

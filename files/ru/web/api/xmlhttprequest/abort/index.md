@@ -1,17 +1,8 @@
 ---
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HttpRequest
-  - XHR
-  - XMLHttpRequest
-  - Отмена
-  - метод
-translation_of: Web/API/XMLHttpRequest/abort
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Метод **XMLHttpRequest.abort()** прерывает уже отправленный запрос. Когда запрос прерывается, то его свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} устанавливается в `UNSENT` (0), а {{domxref("XMLHttpRequest.status", "status")}} в 0.
@@ -34,8 +25,8 @@ XMLHttpRequest.abort()
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
 
 xhr.send();
