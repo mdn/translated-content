@@ -1,35 +1,54 @@
 ---
 title: Chargement progressif
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+
+{{PWASidebar}}
 
 Dans les articles précédents, nous avons abordé les APIs qui nous aident à faire de notre exemple [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) une Progressive Web App: [Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [Manifestes Web](/fr/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications et Push](/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progessivement ses ressources.
 
-## Première visualisation signifiante
+## Première visualisation significative
 
-Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
+Il est important de fournir quelque chose de pertinent à l'utilisateur le plus rapidement possible — plus il attend que la page se charge, plus il y a de chances qu'il quitte la page avant d'attendre que tout soit terminé. Nous devrions être en mesure de leur montrer au moins la vue de base de la page qu'ils souhaitent voir, avec des espaces réservés aux endroits où le contenu sera éventuellement chargé.
 
-Ceci peut être réalisé grâce au chargement progressif — également appelé [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading). Tout ceci consiste en retardant autant que possible le plus de ressources que possible (HTML, CSS, JavaScript), et ne charger immédiatement que celles qui sont réellement nécessaire pour la toute première expérience.
+Cela peut être réalisé par le chargement progressif — également connu sous le nom de [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading). Il s'agit de différer le chargement d'autant de ressources que possible (HTML, CSS, JavaScript) et de ne charger que celles qui sont réellement nécessaires à la toute première expérience sur la page.
 
-## Mise en paquet versus éclatement
+## Regroupement ou fractionnement
 
-De nombreux visiteurs ne naviguerons pas sur la totalité des pages d'un site web bien que l'approche habituelle consiste à mettre dans un paquet toutes les fonctionnalités que nous avons dans un seul gros fichier. Un fichier `bundle.js` peut peser plusieurs megaoctets et un unique paquet `style.css` peut tout contenir, depuis les définitions de base des structures CSS à tous les styles possibles de toutes les versions d'un site: mobile, tablette, ordinateur de bureau, pour l'impression, etc.
+De nombreux visiteurs ne parcourront pas toutes les pages d'un site web, mais l'approche habituelle consiste à regrouper toutes les fonctionnalités dans un seul gros fichier. Un fichier `bundle.js` peut peser plusieurs mégaoctets et un unique paquet `style.css` peut tout contenir, depuis les définitions de base des structures CSS à tous les styles possibles pour chaque version d'un site&nbsp;: mobile, tablette, ordinateur de bureau, pour l'impression, etc.
 
-Il est plus rapide de télécharger toutes les informations sous la forme d'un unique fichier plutôt que beaucoup de petits, mais si l'utilisateur n'a pas besoin de tout au tout début, nous pourrions ne télécharger que ce qui est crucial puis gérer les autres ressources quand elles sont nécessaires.
+Il est plus rapide de télécharger toutes les informations sous la forme d'un unique fichier plutôt que beaucoup de petits, mais si l'utilisateur n'a pas besoin de tout au tout début, nous pourrions ne télécharger que ce qui est crucial puis gérer les autres ressources losqu'elles sont nécessaires.
 
-## Render-blocking resources
+## Ressources bloquant le rendu
 
-Créer des paquets est un problème car le navigateur doit charger le HTML, le CSS et le JavaScript avant qu'il ne puisse afficher le rendu du résultat à l'écran. Pendant les quelques secondes séparant l'accès l'initial au site web et la fin du téléchargement, l'utilisateur voit une page blanche ce qui est une mauvaise expérience.
+Créer des paquets est un problème, car le navigateur doit charger le HTML, le CSS et le JavaScript avant qu'il ne puisse afficher le rendu du résultat à l'écran. Pendant les quelques secondes séparant l'accès l'initial au site web et la fin du téléchargement, l'utilisateur voit une page blanche ce qui est une mauvaise expérience.
 
-Pour corriger ça, nous pouvons, par exemple, ajouter `defer` aux fichiers JavaScript:
+Pour corriger cela nous pouvons, par exemple, ajouter `defer` aux fichiers JavaScript&nbsp;:
 
 ```html
 <script src="app.js" defer></script>
 ```
 
-Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
+Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML.
+
+Une autre technique consiste à charger les modules JavaScript à l'aide d'une [importation dynamique](/fr/docs/Web/JavaScript/Reference/Operators/import) uniquement lorsque cela est nécessaire.
+
+Par exemple, si un site web dispose d'un bouton de recherche, nous pouvons charger le JavaScript pour la fonction de recherche après que l'utilisateur a cliqué sur le bouton de recherche&nbsp;:
+
+```js
+document.getElementById("open-search").addEventListener("click", async () => {
+  const searchModule = await import("/modules/search.js");
+  searchModule.loadAutoComplete();
+});
+```
+
+Une fois que l'utilisateur a cliqué sur le bouton, le gestionnaire de clics asynchrone est appelé. La fonction attend que le module soit chargé, puis appelle la fonction `loadAutoComplete()` exportée par ce module. Le module `search.js` n'est donc téléchargé, analysé et exécuté qu'au moment de l'interaction.
+
+Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
 
 ```html
 <link rel="stylesheet" href="style.css" />
@@ -42,13 +61,13 @@ Dans notre application de démonstration js13kPWA, le CSS est suffisamment simpl
 
 ## Images
 
-En plus du JavaScript et du CSS, les sites web contiendront certainement un certain nombre d'images. Quand vous incluez des éléments {{htmlelement("img")}} dans votre HTML, chaque image référencée est alors recherchée et téléchargée lors de l'accès initial au site web. Il n'est pas inhabituel d'avoir des mégaoctets de données d'images à télécharger avant d'annoncer que le site est prêt, mais ceci, une nouvelle fois, crée une mauvaise perception de performance. Nous n'avons pas besoin de toutes les images dans la meilleure qualité possible au tout début de la consultation du site.
+En plus du JavaScript et du CSS, les sites web contiendront certainement un certain nombre d'images. Quand vous incluez des éléments [`<img>`](/fr/docs/Web/HTML/Element/img) dans votre HTML, chaque image référencée est alors recherchée et téléchargée lors de l'accès initial au site web. Il n'est pas inhabituel d'avoir des mégaoctets de données d'images à télécharger avant d'annoncer que le site est prêt, mais ceci crée une nouvelle fois une mauvaise perception de performance. Nous n'avons pas besoin de toutes les images dans la meilleure qualité possible au tout début de la consultation du site.
 
 Ceci peut être optimisé. Tout d'abord, vous devriez utiliser des outils ou des services tels que [TinyPNG](https://tinypng.com/) qui réduit la taille de fichier de vos images sans trop en altérer la qualité. Si vous avez dépassé ce stade, vous pouvez alors commencer à penser à optimiser le chargement des images en utilisant JavaScript. Nous expliquerons cela plus loin.
 
 ### Image conteneur
 
-Plutôt que d'avoir toutes les captures d'écran des jeux référencés dans les attributs `src` des éléments `<img>`, ce qui forcera le navigateur à les télécharger automatiquement, nous pouvons le faire de manière sélective via JavaScript. L'application js13kPWA utilise à la place une image conteneur qui est petite et légère tandis que les chemins d'accès définitifs vers les images cibles sont stockées dans les attributs `data-src`:
+Plutôt que d'avoir toutes les captures d'écran des jeux référencés dans les attributs `src` des éléments `<img>`, ce qui forcera le navigateur à les télécharger automatiquement, nous pouvons le faire de manière sélective via JavaScript. L'application js13kPWA utilise à la place une image conteneur qui est petite et légère tandis que les chemins d'accès définitifs vers les images cibles sont stockées dans les attributs `data-src`&nbsp;:
 
 ```html
 <img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
@@ -58,7 +77,7 @@ Ces images seront téléchargées via JavaScript _après_ que le site aura fini 
 
 ### Chargement via JavaScript
 
-Le fichier `app.js` traite les attributs `data-src` comme ceci:
+Le fichier `app.js` traite les attributs `data-src` comme ceci&nbsp;:
 
 ```js
 let imagesToLoad = document.querySelectorAll("img[data-src]");
@@ -70,7 +89,7 @@ const loadImages = (image) => {
 };
 ```
 
-La variable `imagesToLoad` contient des références à toutes les images, tandis que la fonction `loadImages` déplace le chemin d'accès de `data-src` à `src`. Quand toutes les images sont effectivement téléchargées, nous supprimons leur attribut `data-src` attendu qu'ls ne sont désormais plus nécessaires. Ensuite, nous bouclons sur chacune des images et nous la chargeons:
+La variable `imagesToLoad` contient des références à toutes les images, tandis que la fonction `loadImages` déplace le chemin d'accès de `data-src` à `src`. Quand toutes les images sont effectivement téléchargées, nous supprimons leur attribut `data-src`, car il n'est plus nécessaire. Ensuite, nous bouclons sur chacune des images et nous la chargeons&nbsp;:
 
 ```js
 imagesToLoad.forEach((img) => {
@@ -82,9 +101,9 @@ imagesToLoad.forEach((img) => {
 
 Pour rendre le processus visuellement plus attractif, le conteneur est flouté via CSS.
 
-![Screenshot of placeholder images in the js13kPWA app.](js13kpwa-placeholders.png)
+![Capture d'écran des images de remplacement dans l'application js13kPWA.](js13kpwa-placeholders.png)
 
-Nous générons les images avec un flou au début si bien qu'une transition vers la version précise peut être réalkisée:
+Nous générons les images avec un flou au début si bien qu'une transition vers la version précise peut être réalisée&nbsp;:
 
 ```css
 article img[data-src] {
@@ -97,13 +116,25 @@ article img {
 }
 ```
 
-Ceci supprimera l'effet de flou en une demie seconde, ce qui paraît assez bien pour l'effet de "chargement".
+L'effet de flou est ainsi supprimé en une demi-seconde, ce qui semble suffisant pour l'effet de «&nbsp;chargement&nbsp;».
 
 ## Chargement à la demande
 
-Le mécanisme de chargement des images présenté dans la section précédente fonctionne correctement — il charge les imges après que la structure HTML a été générée et applique un joli effet de transition au processus. Le problème est qu'il télécharge toujours _toutes_ les images en une fois, même si l'utilisateur ne verra que les deux ou trois premières au chargement de la page.
+Le mécanisme de chargement des images présenté dans la section précédente fonctionne correctement — il charge les images après que la structure HTML a été générée et applique un joli effet de transition au processus. Le problème est qu'il télécharge toujours _toutes_ les images en une fois, même si l'utilisateur ne verra que les deux ou trois premières au chargement de la page.
 
-Ce problème peut être résolu avec la nouvelle [API Intersection Observer](/fr/docs/Web/API/Intersection_Observer_API) — en l'utilisant, nous pouvons nous assurer que les images ne seront téléchargées que lorsqu'elles apparaissent dans le viewport.
+Ce problème peut être résolu en ne chargeant les images que lorsqu'elles sont nécessaires&nbsp;: c'est ce qu'on appelle le <i lang="en">lazy loading</i> ou chargement différé. Le [chargement différé](/fr/docs/Web/Performance/Lazy_loading) est une technique qui permet de charger les images uniquement lorsqu'elles apparaissent dans la fenêtre de visualisation. Il existe plusieurs façons d'indiquer au navigateur de charger les images de façon discontinue.
+
+### L'attribut de chargement sur \<img>
+
+La manière la plus simple de demander au navigateur de charger en différé n'implique pas l'utilisation de JavaScript. Vous ajoutez l'attribut [`loading`](/fr/docs/Web/HTML/Element/img#loading) à un élément [`<img>`](/fr/docs/Web/HTML/Element/img) avec la valeur `lazy`, et le navigateur saura qu'il ne doit charger cette image qu'en cas de besoin.
+
+```html
+<img
+  src="data/img/placeholder.png"
+  data-src="data/img/SLUG.jpg"
+  alt="NAME"
+  loading="lazy" />
+```
 
 ### Intersection Observer
 
@@ -131,15 +162,15 @@ if ("IntersectionObserver" in window) {
 }
 ```
 
-Si l'objet {{domxref("IntersectionObserver")}} est pris en charge, l'application en crée une nouvelle instance. La fonction passée en paramètre gère le cas où un ou plusieurs objets ont une intersection avec l'observer (i.e. apparaît à l'intérieur du viewport). Nous pouvons itérer sur chaque cas et réagir en conséquence — quand l'image est visible, nous chargeons l'image correcte et nous arrêtons de l'observer vu que nous n'avons désormais plus le faire.
+Si l'objet [`IntersectionObserver`](/fr/docs/Web/API/Intersection_Observer_API) est pris en charge, l'application en crée une nouvelle instance. La fonction passée en paramètre gère le cas où un ou plusieurs objets ont une intersection avec l'observer (ex&nbsp;: apparaît à l'intérieur du viewport). Nous pouvons itérer sur chaque cas et réagir en conséquence — quand l'image est visible, nous chargeons l'image correcte et nous arrêtons de l'observer vu que nous n'avons désormais plus besoin de le faire.
 
-Répétons notre avertissement précédent concernant l'amélioration progressive — le code est écrit de telle sorte que l'application fonctionnera que l'Intersection Observer soit pris en charge ou pas. S'il ne l'est pas, nous chargeons simplement les images en utilisant une approche plus basique présentée précédemment.
+Reprenons notre mention précédente de l'amélioration progressive — le code est écrit de manière à ce que l'application fonctionne, qu'Intersection Observer soit pris en charge ou non. S'il ne l'est pas, nous chargeons simplement les images en utilisant l'approche plus basique décrite plus haut.
 
 ## Améliorations
 
-Rappelez-vous qu'il y a de nombreuses façons d'optimiser les temps de chargement et cet exemple explore seulement l'une d'elles. Vous pourriez essayer de blinder davantage votre application en lui permettant de fonctionner sans JavaScript — soit en utilisant {{htmlelement("noscript")}} pour afficher l'image avec le `src` final déjà renseigné ou en enrobant les balises `<img>` avec des éléments {{htmlelement("a")}} pointant vers les images cibles de telle sorte que l'utilisateur puisse cliquer pour y accéder quand il le souhaite.
+Rappelez-vous qu'il existe de nombreuses façons d'optimiser les temps de chargement, et que cet exemple n'explore qu'une seule de ces approches. Vous pouvez essayer de rendre vos applications plus résistantes en les faisant fonctionner sans JavaScript — soit en utilisant [`<noscript>`](/fr/docs/Web/HTML/Element/noscript) pour afficher l'image avec le `src` final déjà renseigné ou en enrobant les balises `<img>` avec des éléments [`<a>`](/fr/docs/Web/HTML/Element/a) pointant vers les images cibles de telle sorte que l'utilisateur puisse cliquer pour y accéder quand il le souhaite.
 
-Nous ne le ferons pas car l'application elle-même dépend de JavaScript — sans lui, la liste des jeux ne sera même pas chargée et le code du Service Worker ne s'exécutera pas.
+Nous ne le ferons pas, car l'application elle-même dépend de JavaScript — sans lui, la liste des jeux ne sera même pas chargée et le code du Service Worker ne s'exécutera pas.
 
 Nous pourrions réécrire le processus de chargement pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
 
@@ -151,10 +182,10 @@ Rappelez-vous de ce que nous avons dit concernant l'approche d'amélioration pro
 
 ## Dernières réflexions
 
-C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA](/fr/docs/Web/Progressive_web_apps/App_structure), [la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
+C'est tout pour cette série de tutoriels — nous avons parcouru le [code source de l'application d'exemple js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et découvert la [structure des PWA](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [la disponibilité hors connexion avec les Service Workers](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [les PWA installables](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), et enfin les [notifications](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push).
 
-N'hésitez pas à faire des essais avec le code, à améliorer votre application existante avec des des fonctionnalités PWA ou à bâtir quelque chose d'entièrement nouveau de vous même. Les PWAs amènent un énorme avantage sur les applications web classiques.
+Dans cet article, nous avons examiné le concept de chargement progressif, y compris un exemple intéressant qui utilise l'[API Intersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+N'hésitez pas à expérimenter avec le code, à améliorer votre application existante avec des fonctionnalités PWA ou à créer quelque chose d'entièrement nouveau. Les PWA offrent un avantage considérable par rapport aux applications web classiques.
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
