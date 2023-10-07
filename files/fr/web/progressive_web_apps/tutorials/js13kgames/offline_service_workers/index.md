@@ -205,7 +205,7 @@ self.addEventListener("activate", (e) => {
 });
 ```
 
-Ceci nous assure que nous avons seulement les fichiers dont nous avons besoin dans le cache, de telle sorte que nous ne laissions pas de déchets derrière nous; l'[espace de cache disponible dans le navigateur est limité](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria), c'est donc une bonne idée de nettoyer derrière nous.
+Ceci nous assure que nous avons seulement les fichiers dont nous avons besoin dans le cache, de telle sorte que nous ne laissions pas de déchets derrière nous; l'[espace de cache disponible dans le navigateur est limité](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria), c'est donc une bonne idée de nettoyer derrière nous.
 
 ## Autres cas d'usage
 

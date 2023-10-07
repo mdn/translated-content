@@ -19,10 +19,10 @@ Pour en savoir plus, consultez [Rendre les PWA installables](/fr/docs/Web/Progre
 
 Pour rendre notre exemple d'application installable, les éléments suivants sont nécessaires&nbsp;:
 
-- Un manifeste de l'application web, avec les [bons champs renseignés](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#Manifest).
+- Un manifeste de l'application web, avec les [bons champs renseignés](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#manifest).
 - Le site web à servir depuis un domaine sécurisé (HTTPS).
 - Un icone représentant l'application sur l'appareil.
-- Un [service worker](fr/docs/Web/API/Service_Worker_API) enregistré pour permettre à l'application de fonctionner en mode hors connexion.
+- Un [service worker](/fr/docs/Web/API/Service_Worker_API) enregistré pour permettre à l'application de fonctionner en mode hors connexion.
 
 ### Le fichier manifeste
 
