@@ -32,9 +32,7 @@ var minutes = today.getUTCMinutes();
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

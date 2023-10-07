@@ -153,10 +153,7 @@ if (!Array.prototype.indexOf) {
 
 ## Especificações
 
-| Especificação                                                                  | Status             | Comentários                                       |
-| ------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}             | {{Spec2('ES5.1')}} | Definição inicial implementada no Javascript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
