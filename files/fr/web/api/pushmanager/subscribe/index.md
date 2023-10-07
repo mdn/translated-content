@@ -14,7 +14,7 @@ Elle renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Pr
 
 ## Syntaxe
 
-```js
+```js-nolint
 subscribe(options)
 ```
 

@@ -14,7 +14,7 @@ Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Prom
 
 ## Syntaxe
 
-```js
+```js-nolint
 getSubscription()
 ```
 

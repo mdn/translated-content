@@ -14,7 +14,7 @@ La méthode **`permissionState()`** de l'interface [`PushManager`](/fr/docs/Web/
 
 ## Syntaxe
 
-```js
+```js-nolint
 permissionState()
 permissionState(options)
 ```
