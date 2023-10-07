@@ -18,7 +18,7 @@ Como você sabe de seu estudo de HTML, os elementos podem ter atributos que forn
           >software básico instalado</a
         >, conhecimentos básicos de
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/pt-BR/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalhando com arquivos</a
         >, Basico de HTML (Estude
         <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
