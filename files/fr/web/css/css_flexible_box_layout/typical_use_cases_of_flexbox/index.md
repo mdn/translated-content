@@ -1,6 +1,8 @@
 ---
 title: Cas d'utilisation classiques de flexbox
-slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
+slug: Web/CSS/CSS_flexible_box_layout/
+l10n:
+  sourceCommit: 39065429ffa608d6b486d599ce2ac9f156a32bd3
 ---
 
 {{CSSRef}}
