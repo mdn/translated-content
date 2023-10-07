@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - LinkError
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
 {{WebAssemblySidebar}}
@@ -19,7 +10,7 @@ Le constructeur **`WebAssembly.LinkError()`** permet de créer un nouvel objet W
 ## Syntaxe
 
 ```js
-new WebAssembly.LinkError(message, nomFichier, numeroLigne)
+new WebAssembly.LinkError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -65,16 +56,16 @@ Dans le fragment de code qui suit, on crée un nouvelle instance de `LinkError` 
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.LinkError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // renvoie la pile d'appels
-                                          // à l'origine de l'erreur
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // renvoie la pile d'appels
+  // à l'origine de l'erreur
 }
 ```
 

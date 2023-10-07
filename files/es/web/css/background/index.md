@@ -65,11 +65,11 @@ La sintaxis de cada capa es la siguiente:
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
 ```
 
 ### CSS
@@ -80,7 +80,7 @@ La sintaxis de cada capa es la siguiente:
 }
 
 .topbanner {
-  background: url("starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00d repeat-y fixed;
 }
 ```
 

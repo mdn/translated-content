@@ -43,14 +43,13 @@ var intervalID = setInterval(code, [delay]);
 下面例子演示了 `setInterval()` 的基本语法。
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+var intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 
-function myCallback(a, b)
-{
- // Your code here
- // Parameters are purely optional.
- console.log(a);
- console.log(b);
+function myCallback(a, b) {
+  // Your code here
+  // Parameters are purely optional.
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -104,7 +103,7 @@ function flashText() {
 function stopTextColor() {
   clearInterval(nIntervId);
   // release our intervalID from the variable
-  nIntervId = null; 
+  nIntervId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);
@@ -126,10 +125,10 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 被 `setInterval()` 调用的代码在与调用它的函数不同的上下文中运行。因此，被调用函数的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字被设置为了 `windows`（或 `global`）对象，而不是调用 `setTimeout` 时的 `this`。请看以下的示例（它使用 `setTimeout()` 代替了 `setInterval()`——但两种定时器都具有这一的问题）：
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
@@ -171,11 +170,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 在这些场景下，应首选递归调用 `setTimeout()` 的模式：
 
 ```js
-(function loop(){
-   setTimeout(function() {
-      // Your logic here
+(function loop() {
+  setTimeout(function () {
+    // Your logic here
 
-      loop();
+    loop();
   }, delay);
 })();
 ```

@@ -8,7 +8,6 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 | Tipo        | `Object` |
 | ----------- | -------- |
 | Obligatorio | No       |
-| Ejemplo     | <pre lang="json">"icons": {<br>  "48": "icon.png",<br>  "96": "icon@2x.png"<br>}</pre> |
 
 La propiedad `icons` especifica los iconos de tu extensión. Esos iconos se usarán para representar la extensión en componentes como el Administrador de complementos.
 
@@ -29,7 +28,7 @@ Las propiedades del objeto `icons` especifican el tamaño del icono en px, los v
   "48": "icon.png",
   "96": "icon@2x.png"
 }
-````
+```
 
 ## SVG
 
@@ -37,18 +36,18 @@ Puede usar SVG y el navegador escalará su icono adecuadamente. Sin embargo, hay
 
 1. Necesitas especificar un viewBox en la imagen. E.g.:
 
-    ```html
-    <svg viewBox="0 0 48 48" width="48" height="48" ...
-    ```
+   ```html
+   <svg viewBox="0 0 48 48" width="48" height="48" ...
+   ```
 
 2. Aunque puedes usar un archivo, todavía necesitas especificar varios tamaños del icono en tu manifiesto. E.g.:
 
-    ```json
-    "icons": {
-      "48": "icon.svg",
-      "96": "icon.svg"
-    }
-    ```
+   ```json
+   "icons": {
+     "48": "icon.svg",
+     "96": "icon.svg"
+   }
+   ```
 
 > **Nota:** Si está usando un programa como Inkscape para crear SVG, puede que quiera guardarlo como un "SVG simple". Firefox podría confundirse con varios espacios de nombres especiales y no mostrar su icono.
 

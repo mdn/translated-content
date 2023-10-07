@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.submit()
+title: "HTMLFormElement: submit() メソッド"
+short-title: submit()
 slug: Web/API/HTMLFormElement/submit
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 5fac53260a89952ac6679314e0f1c4692ca956e2
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,7 +17,7 @@ l10n:
 
 {{domxref("HTMLFormElement.requestSubmit()")}} メソッドはフォームの送信ボタン ({{HtmlElement("button")}}) を使用にするのと同じで、これらの相違点はありません。
 
-フォームコントロール（送信ボタンなど）に `name` または `id` が `submit` のものがある場合、このメソッドはフォームの送信メソッドをマスクします。
+フォームコントロール（送信ボタンなど）に `name` または `id` が `submit` のものがある場合、`submit` メソッドがマスクされます。`myForm.submit();` を呼び出そうとすると "submit is not a function" のエラーが発生します。この場合、`submit` が `name` または `id` が `submit` であるコントロールを参照しているからです。
 
 {{HtmlElement("input")}} で type="submit" の属性を持つものは **`HTMLFormElement.submit()`** ではフォームと一緒に送信されませんが、本来の HTML フォームの送信で行う場合は送信されます。
 

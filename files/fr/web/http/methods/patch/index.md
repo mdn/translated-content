@@ -1,8 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-translation_of: Web/HTTP/Methods/PATCH
-original_slug: Web/HTTP/Méthode/PATCH
 ---
 
 La **méthode `PATCH` d'une requête HTTP** applique des modifications partielles à une ressource.

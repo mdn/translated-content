@@ -1,16 +1,6 @@
 ---
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorkers
-  - match
-translation_of: Web/API/CacheStorage/match
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -26,7 +16,7 @@ Les objets `Cache` sont cherchés par ordre de création.
 ## Syntaxe
 
 ```js
-caches.match(request,{options}).then(function(response) {
+caches.match(request, { options }).then(function (response) {
   // faire quelque-chose avec la requête et la réponse
 });
 ```
@@ -57,28 +47,32 @@ Cet exemple est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) 
 3. Si ceci échoue (e.g., parce que le réseau est inactif), retourner une réponse de secours.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    // caches.match() always resolves
-    // but in case of success response will have value
-    if (response !== undefined) {
-      return response;
-    } else {
-      return fetch(event.request).then(function (response) {
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
-        let responseClone = response.clone();
-
-        caches.open('v1').then(function (cache) {
-          cache.put(event.request, responseClone);
-        });
+self.addEventListener("fetch", function (event) {
+  event.respondWith(
+    caches.match(event.request).then(function (response) {
+      // caches.match() always resolves
+      // but in case of success response will have value
+      if (response !== undefined) {
         return response;
-      }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
-    }
-  }));
+      } else {
+        return fetch(event.request)
+          .then(function (response) {
+            // response may be used only once
+            // we need to save clone to put one copy in cache
+            // and serve second one
+            let responseClone = response.clone();
+
+            caches.open("v1").then(function (cache) {
+              cache.put(event.request, responseClone);
+            });
+            return response;
+          })
+          .catch(function () {
+            return caches.match("/sw-test/gallery/myLittleVader.jpg");
+          });
+      }
+    }),
+  );
 });
 ```
 

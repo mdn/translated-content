@@ -1,9 +1,6 @@
 ---
-title: >-
-  TypeError: cannot use 'in' operator to search for 'x' in 'y'(не удаётся
-  использовать 'in' оператор поиска для 'x' в 'y')
+title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'(не удаётся использовать 'in' оператор поиска для 'x' в 'y')"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
 
 {{jsSidebar("Errors")}}
@@ -68,7 +65,7 @@ var foo = { baz: "bar" };
 Будьте осторожны при использовании оператора для поиска {{jsxref("Array")}} объекты. the `in` оператор проверяет номер индекса, а не его значение.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```

@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 <h2 id="Example">例</h2>
 
-この例では、3 つの背景が重なっています。Firefox のロゴ、泡の画像、そして [linear-gradient](/ja/docs/Web/CSS/gradient/linear-gradient()) です。
+この例では、3 つの背景が重なっています。Firefox のロゴ、泡の画像、そして [linear-gradient](</ja/docs/Web/CSS/gradient/linear-gradient()>) です。
 
 ### HTML
 
@@ -33,15 +33,12 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png),
-      url(bubbles.png),
-      linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat,
-      no-repeat,
-      no-repeat;
-  background-position: bottom right,
-      left,
-      right;
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left,
+    right;
 }
 ```
 

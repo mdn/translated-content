@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 ---
 
 {{JSRef("Objetos_globales", "Function")}}
@@ -49,19 +48,22 @@ Puedes utilizar `apply` para encadenar {{jsxref("Operators/new", "constructors")
 
 ```js
 Function.prototype.construct = function (aArgs) {
-    var fConstructor = this, fNewConstr = function () { fConstructor.apply(this, aArgs); };
-    fNewConstr.prototype = fConstructor.prototype;
-    return new fNewConstr();
+  var fConstructor = this,
+    fNewConstr = function () {
+      fConstructor.apply(this, aArgs);
+    };
+  fNewConstr.prototype = fConstructor.prototype;
+  return new fNewConstr();
 };
 ```
 
 Ejemplo de uso:
 
 ```js
-function MyConstructor () {
-    for (var nProp = 0; nProp < arguments.length; nProp++) {
-        this["property" + nProp] = arguments[nProp];
-    }
+function MyConstructor() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
+    this["property" + nProp] = arguments[nProp];
+  }
 }
 
 var myArray = [4, "Hello world!", false];
@@ -83,17 +85,18 @@ El uso inteligente de **`apply`** permite utilizar funciones built-in para algun
 var numbers = [5, 6, 2, 3, 7];
 
 /* using Math.min/Math.max apply */
-var max = Math.max.apply(null, numbers); /* This about equal to Math.max(numbers[0], ...) or Math.max(5, 6, ..) */
+var max = Math.max.apply(
+  null,
+  numbers,
+); /* This about equal to Math.max(numbers[0], ...) or Math.max(5, 6, ..) */
 var min = Math.min.apply(null, numbers);
 
 /* vs. simple loop based algorithm */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max)
-    max = numbers[i];
-  if (numbers[i] < min)
-    min = numbers[i];
+  if (numbers[i] > max) max = numbers[i];
+  if (numbers[i] < min) min = numbers[i];
 }
 ```
 
@@ -123,16 +126,16 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 ```js
 var originalfoo = someobject.foo;
-someobject.foo = function() {
+someobject.foo = function () {
   // Haz algo antes de llamar a la función
   console.log(arguments);
   // Llama a la función como la hubieras llamado normalmente
   originalfoo.apply(this, arguments);
   // Aquí, ejecuta algo después
-}
+};
 ```
 
-Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos` [event]..., `como los que se usan en el [Devtools Inspector](/es/docs/Tools/Page_Inspector#Developer_API))
+Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos`[event]...,`como los que se usan en el [Devtools Inspector](/es/docs/Tools/Page_Inspector#Developer_API))
 
 ## Especificaciones
 

@@ -49,8 +49,8 @@ Via: 1.0 fred, 1.1 p.example.net
 
 ## Especificações
 
-| Especificação                            | Título                                                             |
-| ---------------------------------------- | ------------------------------------------------------------------ |
+| Especificação                   | Título                                                             |
+| ------------------------------- | ------------------------------------------------------------------ |
 | {{RFC("7230", "Via", "5.7.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores

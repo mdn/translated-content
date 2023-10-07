@@ -33,8 +33,8 @@ Uma expressão de função (_function expression_) é muito similar e tem quase 
 O exemplo a seguir define uma função sem nome e a atribui a x. A função retorna o quadrado de seu argumento:
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
@@ -44,22 +44,21 @@ Se você quer se referir à função atual dentro do corpo da função, você te
 
 ```js
 var math = {
-  'factorial': function factorial(n) {
-    if (n <= 1)
-      return 1;
+  factorial: function factorial(n) {
+    if (n <= 1) return 1;
     return n * factorial(n - 1);
-  }
+  },
 };
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentários                                        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| Especificação                                                                | Status               | Comentários                                        |
+| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-13', 'Function definition')}}                             | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.5. |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES3', '#sec-13', 'Function definition')}}                        | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.5. |
 
 ## Compatibilidade com navegadores
 

@@ -264,14 +264,14 @@ ls | wc -l
 
 もう少し複雑なことを見てみましょう。
 
-最初に、MDN の「fetch」ページ `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド (URL からコンテンツを要求するために使用できる) を使用してコンテンツを取得します。
+最初に、MDN の「fetch」ページ `https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド (URL からコンテンツを要求するために使用できる) を使用してコンテンツを取得します。
 やってみよう:
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+curl https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-ページが ([/Web/API/fetch](/en-US/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
+ページが ([/Web/API/fetch](/ja/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
 `-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
 
 また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、ターミナルに送信されるすべてのロケーションリダイレクトを出力します。(「 location」という単語を含むすべての行を返すように `grep` に依頼します)。
@@ -279,7 +279,7 @@ curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/
 以下を実行してみてください (最終ページに到達する前にリダイレクトが 1 つだけあることがわかります)。
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+curl https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
 ```
 
 出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。
@@ -294,7 +294,7 @@ location: /en-US/docs/Web/API/fetch
 これを実行してみてください:
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+curl https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
 ```
 
 最終的な出力は次のようになります:
@@ -390,7 +390,7 @@ Stdin is read if it is piped to Prettier and no files are given.
 たとえそれが長くても、少なくとも使用法情報に目を通すことは常に価値があります。
 ツールがどのように使用されることを意図しているかをよりよく理解するのに役立ちます。
 
-> **メモ:** 最初に Prettier をローカルにインストールしていない場合、`npx prettier` を実行すると、_そのコマンドだけ_で、Prettier の最新バージョンがダウンロードされて実行されます。
+> **メモ:** 最初に Prettier をローカルにインストールしていない場合、`npx prettier` を実行すると、*そのコマンドだけ*で、Prettier の最新バージョンがダウンロードされて実行されます。
 > 素晴らしいと思われるかもしれませんが、Prettier の新しいバージョンでは出力がわずかに変更される場合があります。
 > ローカルにインストールして、フォーマットに使用している Prettier のバージョンを変更する準備が整うまで修正します。
 

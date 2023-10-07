@@ -1,8 +1,6 @@
 ---
 title: Définir la taille des éléments en CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
-translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
-original_slug: Apprendre/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}Dans les différentes leçons vues jusqu'à présent vous avez rencontré de nombreuses manières de dimensionner les éléments sur une page en utilisant CSS. Comprendre le dimensionnement des différentes caractéristiques de votre design est important. Cette leçon résumera les diverses méthodes pour appliquer une taille via CSS et définira également quelques termes au sujet du dimensionnement qui vous aideront dans le futur.

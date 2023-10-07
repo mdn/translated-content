@@ -1,21 +1,12 @@
 ---
-title: 'Évaluation: dépannage d''accessibilité'
+title: "Évaluation: dépannage d'accessibilité"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Accessibilité
-  - Apprendre
-  - CSS
-  - Débutant
-  - HTML
-  - JavaScript
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
-original_slug: Apprendre/a11y/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-Dans l’évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d’accessibilité que vous devez diagnostiquer et résoudre.
+Dans l'évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d'accessibilité que vous devez diagnostiquer et résoudre.
 
 <table class="standard-table">
   <tbody>
@@ -76,12 +67,12 @@ Les images sont actuellement inaccessibles aux utilisateurs de lecteur d'écran.
 
 ### Les formulaires
 
-1. L'élément `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d’écran? ?
+1. L'élément `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d'écran? ?
 2. Les deux éléments `<input>` du formulaire de commentaire ont des étiquettes de texte visibles, mais ils ne sont pas associés sans ambiguïté à leurs étiquettes. Comment y parvenir? Notez que vous devrez également mettre à jour certaines règles CSS.
 
 ### Le contrôle afficher / masquer les commentaires
 
-Le bouton de commande afficher / masquer les commentaires n’est pas actuellement accessible au clavier. Pouvez-vous le rendre accessible au clavier, à la fois en termes de focalisation à l'aide de la touche de tabulation et d'activation à l'aide de la touche de retour?
+Le bouton de commande afficher / masquer les commentaires n'est pas actuellement accessible au clavier. Pouvez-vous le rendre accessible au clavier, à la fois en termes de focalisation à l'aide de la touche de tabulation et d'activation à l'aide de la touche de retour?
 
 ### La table
 
@@ -89,7 +80,7 @@ Le tableau de données (data table ) n'est pas très accessible actuellement. Il
 
 ### Autres considérations?
 
-Pouvez-vous énumérer deux autres idées d’amélioration qui rendraient le site Web plus accessible?
+Pouvez-vous énumérer deux autres idées d'amélioration qui rendraient le site Web plus accessible?
 
 ## Évaluation
 

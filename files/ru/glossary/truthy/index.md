@@ -1,10 +1,6 @@
 ---
 title: Истинноподобное значение
 slug: Glossary/Truthy
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
 ---
 
 В {{Glossary("JavaScript")}} **истинноподобное (truthy)** значение — это значение, рассматривающиеся как `true` в {{Glossary("Boolean", "булевом")}} контексте. К истинноподобным значениям относятся все значения кроме {{Glossary("Falsy", "ложноподобных")}} значений. То есть все значения **истинноподобны** кроме `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined` и `NaN`.
@@ -31,7 +27,7 @@ if (-Infinity)
 
 ### Оператор логического И, &&
 
-Если первый операнд истинноподобен, то [оператор логического И](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) вернёт второй операнд:
+Если первый операнд истинноподобен, то [оператор логического И](/ru/docs/Web/JavaScript/Reference/Operators/Logical_AND) вернёт второй операнд:
 
 ```js
 true && "dog"

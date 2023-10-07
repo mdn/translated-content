@@ -31,9 +31,14 @@ slug: Games/Techniques/3D_collision_detection
 
 ```js
 function isPointInsideAABB(point, box) {
-  return (point.x >= box.minX && point.x <= box.maxX) &&
-         (point.y >= box.minY && point.y <= box.maxY) &&
-         (point.z >= box.minY && point.z <= box.maxZ);
+  return (
+    point.x >= box.minX &&
+    point.x <= box.maxX &&
+    point.y >= box.minY &&
+    point.y <= box.maxY &&
+    point.z >= box.minY &&
+    point.z <= box.maxZ
+  );
 }
 ```
 
@@ -51,9 +56,14 @@ function isPointInsideAABB(point, box) {
 
 ```js
 function intersect(a, b) {
-  return (a.minX <= b.maxX && a.maxX >= b.minX) &&
-         (a.minY <= b.maxY && a.maxY >= b.minY) &&
-         (a.minZ <= b.maxZ && a.maxZ >= b.minZ);
+  return (
+    a.minX <= b.maxX &&
+    a.maxX >= b.minX &&
+    a.minY <= b.maxY &&
+    a.maxY >= b.minY &&
+    a.minZ <= b.maxZ &&
+    a.maxZ >= b.minZ
+  );
 }
 ```
 
@@ -76,9 +86,11 @@ function intersect(a, b) {
 ```js
 function isPointInsideSphere(point, sphere) {
   // we are using multiplications because is faster than calling Math.pow
-  var distance = Math.sqrt((point.x - sphere.x) * (point.x - sphere.x) +
-                           (point.y - sphere.y) * (point.y - sphere.y) +
-                           (point.z - sphere.z) * (point.z - sphere.z));
+  var distance = Math.sqrt(
+    (point.x - sphere.x) * (point.x - sphere.x) +
+      (point.y - sphere.y) * (point.y - sphere.y) +
+      (point.z - sphere.z) * (point.z - sphere.z),
+  );
   return distance < sphere.radius;
 }
 ```
@@ -123,9 +135,11 @@ function intersect(sphere, box) {
   var z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
 
   // this is the same as isPointInsideSphere
-  var distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
-                           (y - sphere.y) * (y - sphere.y) +
-                           (z - sphere.z) * (z - sphere.z));
+  var distance = Math.sqrt(
+    (x - sphere.x) * (x - sphere.x) +
+      (y - sphere.y) * (y - sphere.y) +
+      (z - sphere.z) * (z - sphere.z),
+  );
 
   return distance < sphere.radius;
 }

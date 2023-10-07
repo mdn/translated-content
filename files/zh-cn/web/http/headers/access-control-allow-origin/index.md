@@ -35,6 +35,7 @@ Access-Control-Allow-Origin: null
 - `<origin>`
   - : 指定一个来源（只能指定一个）。如果服务器支持多个来源的客户端，其必须以与指定客户端匹配的来源来响应请求。
 - `null`
+
   - : 指定来源为“null”。
 
     > **备注：** `null` [不应该被使用](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null)：“返回 `Access-Control-Allow-Origin: "null"` 似乎是安全的，但任何使用非分级协议（如 `data:` 或 `file:`）的资源和沙盒文件的 Origin 的序列化都被定义为‘null’。许多用户代理将授予这类文件对带有 `Access-Control-Allow-Origin: "null"` 头的响应的访问权，而且任何源都可以用 `null` 源创建一个恶意文件。因此，应该避免将 ACAO 标头设置为‘null’值。”

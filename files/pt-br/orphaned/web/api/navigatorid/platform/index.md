@@ -1,7 +1,6 @@
 ---
 title: NavigatorID.platform
 slug: orphaned/Web/API/NavigatorID/platform
-original_slug: Web/API/NavigatorID/platform
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -34,9 +33,7 @@ No Firefox, a preferência `general.platform.override` pode ser usada para sobre
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-navigator-platform', 'NavigatorID.platform')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade
 

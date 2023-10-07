@@ -1,120 +1,136 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
+l10n:
+  sourceCommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include [`click`](/es/docs/Web/Reference/Events/click), [`dblclick`](/es/docs/Web/Reference/Events/dblclick), [`mouseup`](/es/docs/Web/Reference/Events/mouseup), [`mousedown`](/es/docs/Web/Reference/Events/mousedown).
+La interfaz **`MouseEvent`** representa eventos que ocurren debido a que el usuario interactúa con un dispositivo señalador (como un mouse).
+Los eventos comunes que usan esta interfaz incluyen {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}}.
 
-`MouseEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}. Though the {{domxref("MouseEvent.initMouseEvent()")}} method is kept for backward compatibility, creating of a `MouseEvent` object should be done using the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor.
+`MouseEvent` deriva de {{domxref("UIEvent")}}, que a su vez deriva de {{domxref("Event")}}.
+Aunque el método {{domxref("MouseEvent.initMouseEvent()")}} se mantiene por compatibilidad con versiones anteriores, la creación de un objeto `MouseEvent` se debe realizar mediante el constructor {{domxref("MouseEvent.MouseEvent", "MouseEvent()" )}}.
 
-Several more specific events derivate from `MouseEvent`: {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.
+Varios eventos más específicos se basan en `MouseEvent`, incluidos {{domxref("WheelEvent")}}, {{domxref("DragEvent")}} y {{domxref("PointerEvent")}}.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
-  - : Creates a `MouseEvent` object.
+  - : Crea un objeto `MouseEvent`.
 
-## Properties
+## Propiedades estáticas
 
-_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Fuerza mínima necesaria para un clic normal.
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Fuerza mínima necesaria para un clic de fuerza.
 
-- {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
+## Propiedades de instancia
 
-  - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
+_Esta interfaz también hereda propiedades de sus padres, {{domxref("UIEvent")}} y {{domxref("Event")}}._
 
-- {{domxref("MouseEvent.button")}} {{readonlyinline}}
-  - : The button number that was pressed when the mouse event was fired.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
-  - : The buttons being pressed when the mouse event was fired
-- {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
-- {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
-- {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
+  - : Devuelve `true` si la tecla <kbd>alt</kbd> estaba presionada cuando se activó el evento del mouse.
+- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+  - : El número de botón que se presionó (si corresponde) cuando se activó el evento del mouse.
+- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+  - : Los botones que se presionaron (si los hay) cuando se activó el evento del mouse.
+- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
+  - : La coordenada X del puntero del mouse en coordenadas locales (contenido DOM).
+- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
+  - : La coordenada Y del puntero del mouse en coordenadas locales (contenido DOM).
+- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
+  - : Devuelve `true` si la tecla <kbd>control</kbd> estaba presionada cuando se activó el evento del mouse.
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : Devuelve la coordenada horizontal del evento relativa a la capa actual.
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : Devuelve la coordenada vertical del evento relativa a la capa actual.
+- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
+  - : Devuelve `true` si la tecla <kbd>meta</kbd> estaba presionada cuando se activó el evento del mouse.
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
+  - : La coordenada X del puntero del mouse en relación con la posición del último evento {{domxref("Element/mousemove_event", "mousemove")}}.
+- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
+  - : La coordenada Y del puntero del mouse en relación con la posición del último evento {{domxref("Element/mousemove_event", "mousemove")}}.
+- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
+  - : La coordenada X del puntero del mouse en relación con la posición del borde del relleno del nodo de destino.
+- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
+  - : La coordenada Y del puntero del mouse en relación con la posición del borde del relleno del nodo de destino.
+- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
+  - : La coordenada X del puntero del mouse en relación con todo el documento.
+- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
+  - : La coordenada Y del puntero del mouse en relación con todo el documento.
+- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+  - : El objetivo secundario del evento, si lo hay.
+- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
+  - : La coordenada X del puntero del mouse en coordenadas globales (pantalla).
+- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
+  - : La coordenada Y del puntero del mouse en coordenadas globales (pantalla).
+- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
+  - : Devuelve `true` si la tecla <kbd>shift</kbd> estaba presionada cuando se activó el evento del mouse.
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : El tipo de dispositivo que generó el evento (una de las constantes `MOZ_SOURCE_*`).
+    Esto le permite, por ejemplo, determinar si un evento de mouse fue generado por un mouse real o por un evento táctil (lo que podría afectar el grado de precisión con el que interpreta las coordenadas asociadas con el evento).
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : La cantidad de presión aplicada al hacer clic.
+- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
+  - : Alias para {{domxref("MouseEvent.clientX")}}.
+- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
+  - : Alias para {{domxref("MouseEvent.clientY")}}.
 
-  - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
+## Métodos de instancia
 
-- {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
-
-  - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
-
-- {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last [`mousemove`](/es/docs/Web/Reference/Events/mousemove) event.
-- {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last [`mousemove`](/es/docs/Web/Reference/Events/mousemove) event.
-- {{domxref("MouseEvent.region")}} {{readonlyinline}}
-  - : Returns the id of the hit region affected by the event. If no hit region is affected, `null` is returned.
-- {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
-  - : The secondary target for the event, if there is one.
-- {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer in global (screen) coordinates.
-- {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer in global (screen) coordinates.
-- {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
-
-  - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
-
-- {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
-  - : The button being pressed when the mouse event was fired.
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure).
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
-
-  - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants listed below). This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event). The possible values are:
-
-    | Constant name                    | Value | Desription                                                 |
-    | -------------------------------- | ----- | ---------------------------------------------------------- |
-    | `MouseEvent.MOZ_SOURCE_UNKNOWN`  | 0     | The input device is unknown.                               |
-    | `MouseEvent.MOZ_SOURCE_MOUSE`    | 1     | The event was generated by a mouse (or mouse-like device). |
-    | `MouseEvent.MOZ_SOURCE_PEN`      | 2     | The event was generated by a pen on a tablet.              |
-    | `MouseEvent.MOZ_SOURCE_ERASER`   | 3     | The event was generated by an eraser on a tablet.          |
-    | `MouseEvent.MOZ_SOURCE_CURSOR`   | 4     | The event was generated by a cursor.                       |
-    | `MouseEvent.MOZ_SOURCE_TOUCH`    | 5     | The event was generated on a touch interface.              |
-    | `MouseEvent.MOZ_SOURCE_KEYBOARD` | 6     | The event was generated by a keyboard.                     |
-
-## Methods
-
-_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+_Esta interfaz también hereda métodos de sus padres, {{domxref("UIEvent")}} y {{domxref("Event")}}._
 
 - {{domxref("MouseEvent.getModifierState()")}}
-  - : Returns the current state of the specified modifier key. See the {{domxref("KeyboardEvent.getModifierState")}}() for details.
+  - : Devuelve el estado actual de la tecla modificadora especificada. Consulte {{domxref("KeyboardEvent.getModifierState", "KeyboardEvent.getModifierState()")}} para obtener más información.
 - {{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}
-  - : Initializes the value of a `MouseEvent` created. If the event has already being dispatched, this method does nothing.
+  - : Inicializa el valor de un `MouseEvent` creado. Si el evento ya se envió, este método no hace nada.
 
-## Example
+## Ejemplo
 
-This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods.
+Este ejemplo demuestra la simulación de un clic (generando mediante programación un evento de clic) en una casilla de verificación usando métodos DOM.
+El estado del evento (cancelado o no) se determina luego con el valor de retorno del método {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}}.
+
+### HTML
+
+```html
+<p>
+  <label><input type="checkbox" id="checkbox" /> Comprobado</label>
+</p>
+<p>
+  <button id="button">
+    Haga clic en mí para enviar un MouseEvent a la casilla de verificación
+  </button>
+</p>
+```
+
+### JavaScript
 
 ```js
 function simulateClick() {
-  var evt = new MouseEvent("click", {
+  // Obtener el elemento para enviar un evento de clic
+  const cb = document.getElementById("checkbox");
+
+  // Crear un MouseEvent de clic artificial
+  let evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
     view: window,
   });
-  var cb = document.getElementById("checkbox"); //element to click on
-  var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
-    // A handler called preventDefault
-    alert("canceled");
-  } else {
-    // None of the handlers called preventDefault
-    alert("not canceled");
-  }
+
+  // Enviar el evento al elemento de la casilla de verificación
+  cb.dispatchEvent(evt);
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
-```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label>
-<p><button id="button">Click me</button>
-```
+### Resultado
 
-Click on the button to see how the sample works:
-
-{{ EmbedLiveSample('Example', '', '', '') }}
+{{EmbedLiveSample('Ejemplo')}}
 
 ## Especificaciones
 
@@ -124,6 +140,7 @@ Click on the button to see how the sample works:
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- Its direct parent, {{domxref("UIEvent")}}.
+- Su padre directo, {{domxref("UIEvent")}}
+- {{domxref("PointerEvent")}}: Para eventos de puntero avanzados, incluido multitáctil

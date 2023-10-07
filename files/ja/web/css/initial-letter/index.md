@@ -12,9 +12,9 @@ slug: Web/CSS/initial-letter
 initial-letter: normal;
 
 /* 数値 */
-initial-letter: 1.5;    /* 頭文字が1.5行分を占める */
-initial-letter: 3.0;    /* 頭文字が3行分を占める */
-initial-letter: 3.0 2;  /* 頭文字が3行分を占め、
+initial-letter: 1.5; /* 頭文字が1.5行分を占める */
+initial-letter: 3; /* 頭文字が3行分を占める */
+initial-letter: 3 2; /* 頭文字が3行分を占め、
                            2行分下がる */
 
 /* グローバル値 */
@@ -70,8 +70,8 @@ initial-letter: unset;
 }
 
 .three::first-letter {
-  -webkit-initial-letter: 3.0;
-  initial-letter: 3.0;
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
 }
 ```
 

@@ -39,17 +39,17 @@ return number * number;
 
 ```js
 function myFunc(theObject) {
-  theObject.make = 'Toyota';
+  theObject.make = "Toyota";
 }
 
-var mycar = {make: 'Honda', model: 'Accord', year: 1998};
+var mycar = { make: "Honda", model: "Accord", year: 1998 };
 var x, y;
 
 x = mycar.make; // x は "Honda" という値になる
 
 myFunc(mycar);
 y = mycar.make; // y は "Toyota" という値になる
-                // (プロパティが関数で変更されている)
+// (プロパティが関数で変更されている)
 ```
 
 ### 関数式
@@ -59,16 +59,20 @@ y = mycar.make; // y は "Toyota" という値になる
 このような関数は**無名** (anonymous) にすることができます。名前をつけなくてもよいのです。例えば、関数 `square` は次のように定義することができます。
 
 ```js
-const square = function(number) { return number * number }
-var x = square(4) // x の値は 16 となる
+const square = function (number) {
+  return number * number;
+};
+var x = square(4); // x の値は 16 となる
 ```
 
 ただし、関数式には名前を指定することもできます。名前を指定することで、関数が自分自身を参照することができ、また、デバッガーのスタックトレースで関数を特定しやすくなります。
 
 ```js
-const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
-console.log(factorial(3))
+console.log(factorial(3));
 ```
 
 関数式は、ある関数を別の関数の引数として渡すときに便利です。次の例では、第 1 引数に関数を、第 2 引数に配列を受け取るべき `map` 関数を示しています。
@@ -77,8 +81,7 @@ console.log(factorial(3))
 function map(f, a) {
   let result = []; // 新しい配列を作成
   let i; // 変数の宣言
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
 ```
@@ -89,15 +92,14 @@ function map(f, a) {
 function map(f, a) {
   let result = []; // 新しい配列を作成
   let i; // 変数の宣言
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
-const f = function(x) {
-   return x * x * x;
-}
+const f = function (x) {
+  return x * x * x;
+};
 let numbers = [0, 1, 2, 5, 10];
-let cube = map(f,numbers);
+let cube = map(f, numbers);
 console.log(cube);
 ```
 
@@ -108,15 +110,15 @@ JavaScript では、条件に基づいて関数を定義することもできま
 ```js
 var myFunc;
 if (num === 0) {
-  myFunc = function(theObject) {
-    theObject.make = 'Toyota';
-  }
+  myFunc = function (theObject) {
+    theObject.make = "Toyota";
+  };
 }
 ```
 
 これまで説明してきた関数の定義に加えて、{{jsxref("Function")}} コンストラクターを、{{jsxref("Global_Objects/eval", "eval()")}} のような文字列からの関数作成に用いることができます。
 
-**メソッド**は、オブジェクトのプロパティである関数のことです。オブジェクトとメソッドについて詳しくは、「[オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)」の章をご覧ください。
+**メソッド**は、オブジェクトのプロパティである関数のことです。オブジェクトとメソッドについて詳しくは、「[オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects)」の章をご覧ください。
 
 ## 関数の呼び出し
 
@@ -135,7 +137,9 @@ square(5);
 ```js
 console.log(square(5));
 /* ... */
-function square(n) { return n * n }
+function square(n) {
+  return n * n;
+}
 ```
 
 関数のスコープは自身が宣言された関数内、あるいは最上位で宣言されたのであればプログラム全体になります。
@@ -145,23 +149,21 @@ function square(n) { return n * n }
 > これは、関数の巻き上げが*関数式*ではなく*関数宣言*でしか機能しないことを意味しています。
 >
 > ```js example-bad
-> console.log(square)    // square は初期値が undefined の状態で巻き上げられています。
-> console.log(square(5)) // Uncaught TypeError: square is not a function
-> const square = function(n) {
+> console.log(square); // square は初期値が undefined の状態で巻き上げられています。
+> console.log(square(5)); // Uncaught TypeError: square is not a function
+> const square = function (n) {
 >   return n * n;
-> }
+> };
 > ```
 
-関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)の章で定義) は、オブジェクトを引数にとる関数の例です。
+関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)の章で定義) は、オブジェクトを引数にとる関数の例です。
 
 関数はその関数自身を呼び出すこともできます。例えば、ここに階乗を計算する関数を示します。
 
 ```js
 function factorial(n) {
-  if ((n === 0) || (n === 1))
-    return 1;
-  else
-    return (n * factorial(n - 1));
+  if (n === 0 || n === 1) return 1;
+  else return n * factorial(n - 1);
 }
 ```
 
@@ -189,8 +191,8 @@ e = factorial(5); // e の値は 120 となる
 ```js
 // 以下の変数はグローバルスコープで定義
 var num1 = 20,
-    num2 = 3,
-    name = 'Chamakh';
+  num2 = 3,
+  name = "Chamakh";
 
 // この関数はグローバルスコープで定義
 function multiply() {
@@ -202,10 +204,10 @@ multiply(); // 60 を返す
 // 入れ子になっている関数の例
 function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function add() {
-    return name + ' scored ' + (num1 + num2);
+    return name + " scored " + (num1 + num2);
   }
 
   return add();
@@ -228,8 +230,8 @@ getScore(); // "Chamakh scored 5" を返す
 
 ```js
 var foo = function bar() {
-   // ここには文が来る
-}
+  // ここには文が来る
+};
 ```
 
 関数本体の中で、以下のものはすべて同様の意味となります。
@@ -244,9 +246,10 @@ var foo = function bar() {
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" がループ条件
-   // 何らかの処理を行う
-   x++;
+while (x < 10) {
+  // "x < 10" がループ条件
+  // 何らかの処理を行う
+  x++;
 }
 ```
 
@@ -254,8 +257,10 @@ while (x < 10) { // "x < 10" がループ条件
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" が終了条件  ("!(x < 10)" と同等)
+  if (x >= 10) {
+    // "x >= 10" が終了条件  ("!(x < 10)" と同等)
     return;
+  }
   // 何らかの処理を行う
   loop(x + 1); // 再帰呼び出し
 }
@@ -266,8 +271,9 @@ loop(0);
 
 ```js
 function walkTree(node) {
-  if (node == null) //
+  if (node == null) {
     return;
+  }
   // ノードに対し処理を行う
   for (var i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
@@ -283,11 +289,10 @@ function walkTree(node) {
 
 ```js
 function foo(i) {
-  if (i < 0)
-    return;
-  console.log('begin: ' + i);
+  if (i < 0) return;
+  console.log("begin: " + i);
   foo(i - 1);
-  console.log('end: ' + i);
+  console.log("end: " + i);
 }
 foo(3);
 
@@ -340,7 +345,7 @@ function outside(x) {
   return inside;
 }
 fn_inside = outside(3); // 渡されたものに 3 を加算する関数を取得する、と
-                        // 考えてください。
+// 考えてください。
 result = fn_inside(5); // 8 を返す
 
 result1 = outside(3)(5); // 8 を返す
@@ -414,66 +419,69 @@ outside()(10); // 10 ではなく 20 を返す
 また、内側の関数は外側の関数のスコープにアクセスできることから、もし内側の関数が外側の関数よりも長く生存できた場合、外側の関数内で定義された変数や関数は外側の関数よりも長く残る可能性があります。クロージャは、内側の関数が何かしらの形で外側の関数のスコープ外のどこかで使用可能になった場合に作られます。
 
 ```js
-var pet = function(name) {   // 外側の関数は変数 "name" を定義
-  var getName = function() {
-    return name;             // 内側の関数は外側の関数の変数 "name" にアクセス可能
-  }
-  return getName;            // 内側の関数を返すことで、外側の関数に公開する
-}
-myPet = pet('Vivie');
+var pet = function (name) {
+  // 外側の関数は変数 "name" を定義
+  var getName = function () {
+    return name; // 内側の関数は外側の関数の変数 "name" にアクセス可能
+  };
+  return getName; // 内側の関数を返すことで、外側の関数に公開する
+};
+myPet = pet("Vivie");
 
-myPet();                     // "Vivie" を返す
+myPet(); // "Vivie" を返す
 ```
 
 上記のコードより複雑なコードにすることもできます。外側の関数の内部にある変数を操作するメソッドを含む、オブジェクトを返すことができます。
 
 ```js
-var createPet = function(name) {
+var createPet = function (name) {
   var sex;
 
   return {
-    setName: function(newName) {
+    setName: function (newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName: function () {
       return name;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
-        newSex.toLowerCase() === 'female')) {
+    setSex: function (newSex) {
+      if (
+        typeof newSex === "string" &&
+        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
+};
 
-var pet = createPet('Vivie');
-pet.getName();                  // Vivie
+var pet = createPet("Vivie");
+pet.getName(); // Vivie
 
-pet.setName('Oliver');
-pet.setSex('male');
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+pet.setName("Oliver");
+pet.setSex("male");
+pet.getSex(); // male
+pet.getName(); // Oliver
 ```
 
 上記の例で、外側の関数の変数 `name` は内側の関数からアクセスでき、また内側の関数を通さずに内側の変数へアクセスする他の方法はありません。内側の関数の内部変数は、内側の関数の安全な保存領域として振る舞います。それらは内側の関数と連動するデータを、「永続的」かつ「安全に」保持します。関数は変数を割り当てる必要さえなく、また名前を持つ必要もありません。
 
 ```js
-var getCode = (function() {
-  var apiCode = '0]Eal(eh&2';    // 外側の関数が変更できないようにしたいコード
+var getCode = (function () {
+  var apiCode = "0]Eal(eh&2"; // 外側の関数が変更できないようにしたいコード
 
-  return function() {
+  return function () {
     return apiCode;
   };
 })();
 
-getCode();    // シークレットコードを返す
+getCode(); // シークレットコードを返す
 ```
 
 > **メモ:** クロージャを使用する際に注意すべき落とし穴がいくつかあります。
@@ -481,13 +489,15 @@ getCode();    // シークレットコードを返す
 > 取り囲まれている関数で外部スコープの変数と同じ名前の変数を定義した場合、外部スコープにある変数を再び参照する方法がなくなります。 (プログラムが内部スコープを終了するまで、内部スコープ変数は外部変数を「上書き」します。)
 >
 > ```js example-bad
-> var createPet = function(name) {  // 外側の関数で "name" という変数を定義します。
+> var createPet = function (name) {
+>   // 外側の関数で "name" という変数を定義します。
 >   return {
->     setName: function(name) {    // 内側の関数も "name" という変数を定義します
->       name = name;               // 外側の関数で定義した "name" へどのようにしてアクセスするのか？
->     }
->   }
-> }
+>     setName: function (name) {
+>       // 内側の関数も "name" という変数を定義します
+>       name = name; // 外側の関数で定義した "name" へどのようにしてアクセスするのか？
+>     },
+>   };
+> };
 > ```
 
 ## arguments オブジェクトの使用
@@ -495,7 +505,7 @@ getCode();    // シークレットコードを返す
 関数の引数 (argument) は、配列風オブジェクトで管理されます。関数内では、次のようにして渡された引数を指定することができます。
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 ここで `i` は引数の順序を表す数で、 `0` から始まります。関数に渡された第 1 引数は `arguments[0]` となります。引数の総数は `arguments.length` で表されます。
@@ -506,13 +516,13 @@ arguments[i]
 
 ```js
 function myConcat(separator) {
-   var result = ''; // リストを初期化する
-   var i;
-   // 引数について繰り返し
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
+  var result = ""; // リストを初期化する
+  var i;
+  // 引数について繰り返し
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
 }
 ```
 
@@ -520,13 +530,13 @@ function myConcat(separator) {
 
 ```js
 // "red, orange, blue, " を返す
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // "elephant; giraffe; lion; cheetah; " を返す
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // "sage. basil. oregano. pepper. parsley. " を返す
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
 > **メモ:** 変数 `arguments` は「配列風の変数」であり、配列ではありません。添字が数値であることと `length` プロパティがあることで、配列風となってはいます。しかし、配列操作のメソッドのすべてを持っているわけではありません。
@@ -549,7 +559,7 @@ JavaScript では、関数の引数は既定で `undefined` となります。�
 
 ```js
 function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
   return a * b;
 }
@@ -579,7 +589,7 @@ multiply(5); // 5
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
@@ -597,18 +607,15 @@ console.log(arr); // [2, 4, 6]
 関数パターンによっては、短縮形の関数がうってつけです。比較してみましょう。
 
 ```js
-var a = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s) { return s.length; });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 
 console.log(a2); // logs [8, 6, 7, 9]
 
-var a3 = a.map(s => s.length);
+var a3 = a.map((s) => s.length);
 
 console.log(a3); // logs [8, 6, 7, 9]
 ```
@@ -638,7 +645,7 @@ ECMAScript 3/5 では、`this` の値をアクセス可能な別の値に割り�
 ```js
 function Person() {
   var self = this; // `self` の代わりに `that` を選ぶ人もいます。
-                   // どちらか一方を選び、そちらだけを使うようにしましょう。
+  // どちらか一方を選び、そちらだけを使うようにしましょう。
   self.age = 0;
 
   setInterval(function growUp() {

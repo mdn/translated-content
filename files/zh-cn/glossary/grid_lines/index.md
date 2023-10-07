@@ -3,38 +3,42 @@ title: Grid Lines
 slug: Glossary/Grid_Lines
 ---
 
+{{GlossarySidebar}}
+
 使用[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建**网格线**。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。
 
 ## 示例
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -59,29 +63,31 @@ slug: Glossary/Grid_Lines
 创建一个网格后，可以通过网格线编号将项目放置到该网格上。在下面的例子中，项目定位从列线 1 到列线 3，从行线 1 到行线 3。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="item">Item</div>
+  <div class="item">Item</div>
 </div>
 ```
 
@@ -106,29 +112,31 @@ slug: Glossary/Grid_Lines
 在显式网格中创建的网格线可以被命名，在轨道大小信息之前或之后的方括号中命名。当放置一个项目时，你可以使用这些名称代替编号，如下所示。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="item">Item</div>
+  <div class="item">Item</div>
 </div>
 ```
 

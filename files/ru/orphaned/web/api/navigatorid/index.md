@@ -1,8 +1,6 @@
 ---
 title: NavigatorID
 slug: orphaned/Web/API/NavigatorID
-translation_of: Web/API/NavigatorID
-original_slug: Web/API/NavigatorID
 ---
 
 {{APIRef("HTML DOM")}}

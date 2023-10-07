@@ -1,8 +1,6 @@
 ---
 title: Модель визуального форматирования
 slug: Web/CSS/Visual_formatting_model
-translation_of: Web/CSS/Visual_formatting_model
-original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
 
 {{CSSRef}}
@@ -50,7 +48,11 @@ _Модель визуального форматирования_ CSS - это 
 Возьмём следующий HTML код (со стилями по умолчанию, то есть элементы {{ HTMLElement("div") }} и {{ HTMLElement("p") }} имеют значение `display:block` :
 
 ```html
-<div>Some inline text <p>followed by a paragraph</p> followed by more inline text.</div>
+<div>
+  Some inline text
+  <p>followed by a paragraph</p>
+  followed by more inline text.
+</div>
 ```
 
 Здесь создались два анонимных блока: один для текста перед параграфом (`Some inline text`), и второй для текста после параграфа (`followed by more inline text.`). И у нас получилась вот такая структура:
@@ -59,7 +61,7 @@ _Модель визуального форматирования_ CSS - это 
 
 Выглядеть это будет так:
 
-```html
+```html-nolint
 Some inline text
 followed by a paragraph
 followed by more inline text.
@@ -76,7 +78,10 @@ followed by more inline text.
 Возьмём следующий HTML код, где установим для элемента {{ HTMLElement("p") }} значение `display:inline` и для элемента {{ HTMLElement("span") }} значение `display:block` :
 
 ```html
-<p>Some <em>inline</em> text <span>followed by a paragraph</span> followed by more inline text.</p>
+<p>
+  Some <em>inline</em> text <span>followed by a paragraph</span> followed by
+  more inline text.
+</p>
 ```
 
 Создадутся два анонимных блок-бокса, один для текста перед элементом span (`Some inline text`) и один для текста после него (`followed by more inline text`), и у нас получится вот такая структура:
@@ -86,9 +91,7 @@ followed by more inline text.
 Выглядеть она будет так:
 
 ```html
-Some inline text
-followed by a paragraph
-followed by more inline text.
+Some inline text followed by a paragraph followed by more inline text.
 ```
 
 ### Элементы инлайн-уровня и инлайн-боксы
@@ -108,12 +111,12 @@ followed by more inline text.
 > ```html
 > <style>
 >   span {
->     display:inline; /* default value*/
+>     display: inline; /* default value*/
 >   }
 > </style>
 > <div style="width:20em;">
->    The text in the span <span>can be split in several
->    lines as it</span> is an inline box.
+>   The text in the span <span>can be split in several lines as it</span> is an
+>   inline box.
 > </div>
 > ```
 
@@ -124,12 +127,12 @@ The text in the span can be split into several lines as it is an inline box.
 ```html
 <style>
   span {
-    display:inline-block;
+    display: inline-block;
   }
 </style>
 <div style="width:20em;">
-   The text in the span <span>cannot be split in several
-   lines as it</span> is an inline-block box.
+  The text in the span <span>cannot be split in several lines as it</span> is an
+  inline-block box.
 </div>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: 能力と制約と設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
-original_slug: Web/API/Media_Streams_API/Constraints
 l10n:
   sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
@@ -187,7 +186,11 @@ function whichCamera(track) {
 
 ```html hidden
 <p>
-  メディアの制約を試してください！ 左側の編集ボックスで映像トラックと音声トラックの制約セットを編集し、[制約の適用] ボタンをクリックして試してください。 ブラウザーが選択して使用している実際の設定は、右側のボックスに表示されます。 そのすべての下に、動画自体が表示されます。
+  メディアの制約を試してください！
+  左側の編集ボックスで映像トラックと音声トラックの制約セットを編集し、[制約の適用]
+  ボタンをクリックして試してください。
+  ブラウザーが選択して使用している実際の設定は、右側のボックスに表示されます。
+  そのすべての下に、動画自体が表示されます。
 </p>
 <p>[開始] ボタンをクリックして開始します。</p>
 
@@ -227,7 +230,10 @@ function whichCamera(track) {
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -433,7 +439,7 @@ document.getElementById("startButton").addEventListener(
   () => {
     startVideo();
   },
-  false
+  false,
 );
 ```
 
@@ -476,7 +482,7 @@ document.getElementById("applyButton").addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 
@@ -554,7 +560,7 @@ function log(msg) {
 
 function handleError(reason) {
   log(
-    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`
+    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`,
   );
 }
 ```

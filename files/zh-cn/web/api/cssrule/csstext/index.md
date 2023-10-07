@@ -17,7 +17,9 @@ string = cssRule.cssText
 
 ```html
 <style>
-body { background-color: darkblue; }
+  body {
+    background-color: darkblue;
+  }
 </style>
 <script>
   var stylesheet = document.styleSheets[0];

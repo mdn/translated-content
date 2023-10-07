@@ -36,9 +36,9 @@ new VRDisplayEvent(type, options)
 ## 例
 
 ```js
-const myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent("custom", {
   display: vrDisplay,
-  reason: 'Custom reason'
+  reason: "Custom reason",
 });
 ```
 

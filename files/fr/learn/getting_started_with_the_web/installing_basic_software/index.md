@@ -1,16 +1,6 @@
 ---
 title: Installation des outils de base
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Apprendre
-  - Débutant
-  - Navigateurs
-  - Outils
-  - Setup
-  - Web
-  - Éditeurs de texte
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
-original_slug: Apprendre/Commencer_avec_le_web/Installation_outils_de_base
 ---
 
 {{LearnSidebar}}

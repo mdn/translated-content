@@ -35,8 +35,8 @@ Math.cosh(x)
 ### Math.cosh() の使用
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -45,18 +45,22 @@ Math.cosh(-1); // 1.5430806348152437
 これは {{jsxref("Math.exp()")}} 関数を使用して次のようにエミュレートできます。
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    return (Math.exp(x) + Math.exp(-x)) / 2;
+  };
 ```
 
 または {{jsxref("Math.exp()")}} 関数を一度だけ呼び出すようにすると、次のようになります。
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  var y = Math.exp(x);
-  return (y + 1 / y) / 2;
-};
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y + 1 / y) / 2;
+  };
 ```
 
 ## 仕様書

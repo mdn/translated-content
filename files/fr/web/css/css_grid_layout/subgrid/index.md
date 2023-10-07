@@ -1,12 +1,6 @@
 ---
 title: Subgrid
 slug: Web/CSS/CSS_grid_layout/Subgrid
-tags:
-  - CSS
-  - Guide
-  - grid
-  - subgrid
-translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 ---
 
 {{CSSRef}}

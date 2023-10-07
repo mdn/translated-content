@@ -16,9 +16,11 @@ function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
-var popup = function(content) { console.log(content); };
+var popup = function (content) {
+  console.log(content);
+};
 
-popup.displayName = 'Show Popup';
+popup.displayName = "Show Popup";
 
 console.log(popup.displayName); // "Show Popup"
 ```
@@ -27,14 +29,18 @@ Você pode definir uma função com uma nome de exibição em um {{jsxref("Funct
 
 ```js
 var object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.displayName = 'someMethod';
+object.someMethod.displayName = "someMethod";
 
 console.log(object.someMethod.displayName); // logs "someMethod"
 
-try { someMethod } catch(e) { console.log(e); }
+try {
+  someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: someMethod is not defined
 ```
 
@@ -43,14 +49,14 @@ Você pode mudar dinamicamente o`displayName` de uma função:
 ```js
 var object = {
   // anonymous
-  someMethod: function(value) {
-    arguments.callee.displayName = 'someMethod (' + value + ')';
-  }
+  someMethod: function (value) {
+    arguments.callee.displayName = "someMethod (" + value + ")";
+  },
 };
 
 console.log(object.someMethod.displayName); // "undefined"
 
-object.someMethod('123')
+object.someMethod("123");
 console.log(object.someMethod.displayName); // "someMethod (123)"
 ```
 
@@ -61,8 +67,8 @@ Geralmente, é preferida por consoles e perfis em vez de {{jsxref("Function.name
 Entrando com o seguinte em um console, isso deverá mostrar algo como "`function My Function()`":
 
 ```js
-var a = function() {};
-a.displayName = 'My Function';
+var a = function () {};
+a.displayName = "My Function";
 
 a; // "function My Function()"
 ```

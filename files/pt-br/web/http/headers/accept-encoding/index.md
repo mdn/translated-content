@@ -74,8 +74,8 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                               | Título                                                        |
+| ------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Accept-Encoding", "5.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
 ## Compatibilidade com navegadores

@@ -1,14 +1,6 @@
 ---
 title: Масштабирование
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - Phaser
-  - Начинающий
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen")}}
@@ -23,9 +15,9 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 
 ```js
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
 ```
 
@@ -44,7 +36,7 @@ function preload() {
 Мы также можем сделать фон нашего элемента {{htmlelement("canvas")}} таким, каким захотим, чтобы он не оставался постоянно чёрным. Объект `stage` имеет свойство `backgroundColor` для этого. Мы можем изменить значение, используя синтаксис CSS для цветов. Добавьте эту строку после трёх, недавно добавленных:
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## Сравните свой код

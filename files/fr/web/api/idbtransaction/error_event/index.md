@@ -1,18 +1,11 @@
 ---
 title: IDBDatabase.onerror
 slug: Web/API/IDBTransaction/error_event
-tags:
-  - API
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBDatabase/onerror
-original_slug: Web/API/IDBDatabase/onerror
 ---
 
 {{APIRef("IndexedDB")}}
 
-Le gestionnaire d'événement **`onerror`**, rattaché à l'interface `IDBDatabase`, s’exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.
+Le gestionnaire d'événement **`onerror`**, rattaché à l'interface `IDBDatabase`, s'exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.
 
 {{AvailableInWorkers}}
 
@@ -27,15 +20,15 @@ db.onerror = function() { ... }
 Dans cet exemple, on illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objet et les deux gestionnaires d'événements `onerror` et `onabort` afin de gérer les cas d'échec de la connexion.
 
 ```js
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function() {
-    note.innerHTML += '<li>Erreur du chargement de la base de données.</li>';
+  db.onerror = function () {
+    note.innerHTML += "<li>Erreur du chargement de la base de données.</li>";
   };
 
-  db.onabort = function() {
-    note.innerHTML += '<li>L\'ouverture de la connexion à été annulé!</li>';
+  db.onabort = function () {
+    note.innerHTML += "<li>L'ouverture de la connexion à été annulé!</li>";
   };
 
   // Ajoute un magasin d'objet à la base de données
@@ -52,7 +45,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Le magasin d\'objets à été ajouté.</li>';
+  note.innerHTML += "<li>Le magasin d'objets à été ajouté.</li>";
 };
 ```
 

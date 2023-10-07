@@ -3,6 +3,8 @@ title: 字元編碼
 slug: Glossary/Character_encoding
 ---
 
+{{GlossarySidebar}}
+
 字元編碼提供了一套編碼系統，使不同的電腦系統或編譯環境可以存在並處理存在於其他語言當中的特殊字元。
 
 例如在 HTML 中，我們通常使用以下程式碼來宣告一個 UTF-8 的字元編碼:

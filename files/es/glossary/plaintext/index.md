@@ -1,7 +1,6 @@
 ---
 title: Texto Simple
 slug: Glossary/Plaintext
-original_slug: Glossary/TextoSimple
 ---
 
 Texto simple se refiere a la información que se está utilizando como entrada para un {{Glossary("algorithm", "algoritmo")}} de {{Glossary("encryption","cifrado")}}, o para el {{Glossary("ciphertext", "texto cifrado")}} que se ha descifrado.

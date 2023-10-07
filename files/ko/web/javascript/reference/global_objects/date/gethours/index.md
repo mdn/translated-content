@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ## 구문
 
 ```js
-    dateObj.getHours()
+dateObj.getHours();
 ```
 
 ### 반환 값
@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 아래의 두 번째 명령문은 {{jsxref("Date")}} 객체 `Xmas95` 날짜의 시를 `hours` 변수에 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var hours = Xmas95.getHours();
 
 console.log(hours); // 23

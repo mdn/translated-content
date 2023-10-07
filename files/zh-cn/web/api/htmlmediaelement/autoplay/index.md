@@ -30,7 +30,7 @@ slug: Web/API/HTMLMediaElement/autoplay
 ...
 
 ```js
-Xxx.xxx()
+Xxx.xxx();
 ```
 
 ## 规范

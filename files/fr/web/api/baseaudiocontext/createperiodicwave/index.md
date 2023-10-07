@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Méthode
-  - Web Audio API
-  - createPeriodicWave
-translation_of: Web/API/BaseAudioContext/createPeriodicWave
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -56,7 +46,9 @@ imag[0] = 0;
 réel[1] = 1;
 imag[1] = 0;
 
-var onde = contexteAudio.createPeriodicWave(réel, imag, {disableNormalization: true});
+var onde = contexteAudio.createPeriodicWave(réel, imag, {
+  disableNormalization: true,
+});
 
 oscillateur.setPeriodicWave(wave);
 

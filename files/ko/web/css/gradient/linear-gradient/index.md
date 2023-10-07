@@ -41,14 +41,17 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### 값들
 
 - `<side-or-corner>`
+
   - : 그라데이션의 시작 지점의 위치. 이 값이 지정될 때에는 `to`라는 값과 함께 최대 2개의 키워드를 가질 수 있습니다. 한 경우는 `left`와 `right` 값을 통해 수평선을 의미하는 방식이고, 다른 경우는 `top`과 `bottom`을 이용해 수직선을 의미하는 방식입니다. 각 키워드의 순서는 중요하지 않습니다. 만약 이 값이 명시되지 않으면, 기본적으로 `to bottom`이 지정됩니다.
 
     `to top`, `to bottom`, `to left`, 그리고 `to right`은 각각 각도 `0deg`, `180deg`, `270deg`, `90deg`과 동일합니다. 다른 값의 경우는 각도 그 자체로 해석됩니다.
 
 - {{CSSxRef("&lt;angle&gt;")}}
+
   - : 그라데이션 선 방향의 각도. `0deg`은 `to top`과 동일한 의미를 가지며 값이 증가할수록 시계 방향으로 회전합니다.
 
 - `<linear-color-stop>`
+
   - : {{CSSxRef("&lt;color&gt;")}} 값의 색 중지점으로, 하나 혹은 두 개의 중지 위치에 대한 값이 뒤따라옵니다. 중지 위치에 대한 값은 그라데이션의 축을 따라 정해지는 {{CSSxRef("&lt;percentage&gt;")}} 혹은 {{CSSxRef("&lt;length&gt;")}} 값 입니다.
 
 - `<color-hint>`

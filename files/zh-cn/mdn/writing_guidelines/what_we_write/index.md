@@ -90,7 +90,7 @@ MDN Web 文档的不当主题示例包括：
 - 不在 Web 上公开且特定于某一个浏览器的技术
 - 和 Web 不相关的技术
 - 终端用户文档。例如，对于 Mozilla 产品，此类文档属于 [Mozilla 支持站点](https://support.mozilla.org)。
-- 自链接或自推广外部链接。在添加外部链接之前，请查看我们的[撰写指南](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links)中的相关信息。
+- 自链接或自推广外部链接。在添加外部链接之前，请查看我们的[撰写指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide#外部链接)中的相关信息。
 
 ### 我们何时删除文档
 

@@ -35,24 +35,30 @@ Internamente chamamos `Promise.prototype.then` sobre o objeto que é chamando pa
 
 ```js
 // Sobrescrevendo o techo original de  Promise.prototype.then/catch adicionando alguns logs
-(function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+(function (Promise) {
+  var originalThen = Promise.prototype.then;
+  var originalCatch = Promise.prototype.catch;
 
-    Promise.prototype.then = function(){
-        console.log('> > > > > > chamando .then em %o com argumentos: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.log('> > > > > > chamando .catch em %o com argumentos: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
-
+  Promise.prototype.then = function () {
+    console.log(
+      "> > > > > > chamando .then em %o com argumentos: %o",
+      this,
+      arguments,
+    );
+    return originalThen.apply(this, arguments);
+  };
+  Promise.prototype.catch = function () {
+    console.log(
+      "> > > > > > chamando .catch em %o com argumentos: %o",
+      this,
+      arguments,
+    );
+    return originalCatch.apply(this, arguments);
+  };
 })(this.Promise);
 
-
 // chamando um catch em uma Promise já resolvida.
-Promise.resolve().catch(function XXX(){});
+Promise.resolve().catch(function XXX() {});
 
 // logs:
 // > > > > > > chamando .catch na Promise{} com os argumentos: Arguments{1} [0: function XXX()]
@@ -68,39 +74,49 @@ O método `catch` pode ser útil para manipulação de erros na composição da 
 ### Usando o método `catch`
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-  resolve('Sucesso');
+var p1 = new Promise(function (resolve, reject) {
+  resolve("Sucesso");
 });
 
-p1.then(function(value) {
+p1.then(function (value) {
   console.log(value); // "Sucesso!"
-  throw 'Ah, não!';
-}).catch(function(e) {
-  console.log(e); // "Ah, não!"
-}).then(function(){
-  console.log('Após um catch, a sequencia é restaurada');
-}, function () {
-  console.log('Não engatilhado devido ao catch');
-});
+  throw "Ah, não!";
+})
+  .catch(function (e) {
+    console.log(e); // "Ah, não!"
+  })
+  .then(
+    function () {
+      console.log("Após um catch, a sequencia é restaurada");
+    },
+    function () {
+      console.log("Não engatilhado devido ao catch");
+    },
+  );
 
 // O seguinte se comporta da mesma maneira que o anterior
-p1.then(function(value) {
+p1.then(function (value) {
   console.log(value); // "Sucesso!"
-  return Promise.reject('Ah, não!');
-}).catch(function(e) {
-  console.log(e); // "Ah, não!"
-}).then(function(){
-  console.log('Após um catch, a sequencia é restaurada');
-}, function () {
-  console.log('Não engatilhado devido ao catch');
-});
+  return Promise.reject("Ah, não!");
+})
+  .catch(function (e) {
+    console.log(e); // "Ah, não!"
+  })
+  .then(
+    function () {
+      console.log("Após um catch, a sequencia é restaurada");
+    },
+    function () {
+      console.log("Não engatilhado devido ao catch");
+    },
+  );
 ```
 
 ## Especificações
 
-| Especificação                                                                                                | Status                       | Comentário                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES6', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. |
+| Especificação                                                                      | Status               | Comentário                              |
+| ---------------------------------------------------------------------------------- | -------------------- | --------------------------------------- |
+| {{SpecName('ES6', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}     | {{Spec2('ES6')}}     | Initial definition in an ECMA standard. |
 | {{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ESDraft')}} |                                         |
 
 ## Compatibilidade com navegadores

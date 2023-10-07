@@ -1,10 +1,6 @@
 ---
 title: clearInterval()
 slug: Web/API/clearInterval
-page-type: web-api-global-function
-translation_of: Web/API/clearInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
-browser-compat: api.clearInterval
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +10,7 @@ La méthode globale **`clearInterval()`** permet d'annuler une action répétée
 ## Syntaxe
 
 ```js
-clearInterval(intervalID)
+clearInterval(intervalID);
 ```
 
 ### Paramètres

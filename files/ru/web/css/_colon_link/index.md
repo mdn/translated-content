@@ -1,9 +1,6 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:link
 ---
 
 {{ CSSRef() }}
@@ -19,19 +16,23 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:link`
 ## Примеры
 
 ```css
-a:link {color: slategray;}
-.external:link {background-color: lightblue;}
+a:link {
+  color: slategray;
+}
+.external:link {
+  background-color: lightblue;
+}
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                                   | Комментарий                                                                       |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-link', ':link') }} | {{ Spec2('HTML WHATWG') }}     |                                                                                   |
-| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                         | {{ Spec2('CSS4 Selectors') }} | Без изменений.                                                                    |
-| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                         | {{ Spec2('CSS3 Selectors') }} | Без изменений                                                                     |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}             | Появилось ограничение применять только для элемента {{ HTMLElement("a") }}. |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}                 | {{ Spec2('CSS1') }}                 | Изначальное определение.                                                          |
+| Спецификация                                                           | Статус                        | Комментарий                                                                 |
+| ---------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', 'scripting.html#selector-link', ':link') }} | {{ Spec2('HTML WHATWG') }}    |                                                                             |
+| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS4 Selectors') }} | Без изменений.                                                              |
+| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS3 Selectors') }} | Без изменений                                                               |
+| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}         | Появилось ограничение применять только для элемента {{ HTMLElement("a") }}. |
+| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}              | {{ Spec2('CSS1') }}           | Изначальное определение.                                                    |
 
 ## Поддержка браузерами
 

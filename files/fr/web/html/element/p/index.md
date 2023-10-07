@@ -1,12 +1,6 @@
 ---
-title: '<p> : l''élément paragraphe'
+title: "<p> : l'élément paragraphe"
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/p
 ---
 
 {{HTMLSidebar}}
@@ -31,15 +25,12 @@ Cet élément, comme les autres éléments HTML, inclut [les attributs universel
 
 ```html
 <p>
-  Premier paragraphe du texte.
-  J'aime les licornes beaucoup
-  beaucoup beaucoup.
+  Premier paragraphe du texte. J'aime les licornes beaucoup beaucoup beaucoup.
 </p>
 
 <p>
-  Deuxième paragraphe du texte.
-  Et si j'en avais une apprivoisée
-  je serais très contente.
+  Deuxième paragraphe du texte. Et si j'en avais une apprivoisée je serais très
+  contente.
 </p>
 ```
 

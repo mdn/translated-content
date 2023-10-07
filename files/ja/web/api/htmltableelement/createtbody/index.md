@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.createTBody()
+title: "HTMLTableElement: createTBody() メソッド"
+short-title: createTBody()
 slug: Web/API/HTMLTableElement/createTBody
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,9 +14,13 @@ slug: Web/API/HTMLTableElement/createTBody
 
 ## 構文
 
-```js
-table.createTBody();
+```js-nolint
+createTBody()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -23,7 +30,7 @@ table.createTBody();
 
 ```js
 let mybody = mytable.createTBody();
-// mybody == mytable.tBodies.item(mytable.tBodies.length - 1) は真になります
+// mybody === mytable.tBodies.item(mytable.tBodies.length - 1) は真になります
 ```
 
 ## 仕様書

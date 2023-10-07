@@ -42,32 +42,32 @@ Reflect.get(target, propertyKey[, receiver])
 
 ```js
 // オブジェクト
-let obj = { x: 1, y: 2 }
-Reflect.get(obj, 'x')  // 1
+let obj = { x: 1, y: 2 };
+Reflect.get(obj, "x"); // 1
 
 // 配列
-Reflect.get(['zero', 'one'], 1)  // "one"
+Reflect.get(["zero", "one"], 1); // "one"
 
 // Proxy with a get handler
-let x = {p: 1};
+let x = { p: 1 };
 
 let obj = new Proxy(x, {
   get(t, k, r) {
-    return k + 'bar'
-  }
-})
-Reflect.get(obj, 'foo')  // "foobar"
+    return k + "bar";
+  },
+});
+Reflect.get(obj, "foo"); // "foobar"
 
 //Proxy with get handler and receiver
-let x = {p: 1, foo: 2};
-let y = {foo: 3};
+let x = { p: 1, foo: 2 };
+let y = { foo: 3 };
 
 let obj = new Proxy(x, {
   get(t, prop, receiver) {
-    return receiver[prop] + 'bar'
-  }
-})
-Reflect.get(obj, 'foo', y) // "3bar"
+    return receiver[prop] + "bar";
+  },
+});
+Reflect.get(obj, "foo", y); // "3bar"
 ```
 
 ## 仕様書

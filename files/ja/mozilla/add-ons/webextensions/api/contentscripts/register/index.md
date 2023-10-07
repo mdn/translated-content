@@ -15,8 +15,8 @@ manifest.json 内の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/
 
 ```js
 var registering = browser.contentScripts.register(
-  contentScriptOptions       // object
-)
+  contentScriptOptions, // object
+);
 ```
 
 ### パラメーター
@@ -65,16 +65,15 @@ var registering = browser.contentScripts.register(
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '<h1>このページは書き換えられました<h1>'";
+const defaultCode =
+  "document.body.innerHTML = '<h1>このページは書き換えられました<h1>'";
 
 async function register(hosts, code) {
-
   return await browser.contentScripts.register({
     matches: [hosts],
-    js: [{code}],
-    runAt: "document_idle"
+    js: [{ code }],
+    runAt: "document_idle",
   });
-
 }
 
 var registered = register(defaultHosts, defaultCode);
@@ -84,10 +83,10 @@ var registered = register(defaultHosts, defaultCode);
 
 ```js
 const scriptObj = await browser.contentScripts.register({
-  "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["<all_urls>"],
-  "allFrames": true,
-  "runAt": "document_start"
+  js: [{ file: "/content_scripts/example.js" }],
+  matches: ["<all_urls>"],
+  allFrames: true,
+  runAt: "document_start",
 });
 ```
 

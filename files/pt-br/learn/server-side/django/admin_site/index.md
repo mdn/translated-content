@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 4: Django admin site'
+title: "Tutorial Django Parte 4: Django admin site"
 slug: Learn/Server-side/Django/Admin_site
 ---
 
@@ -13,7 +13,7 @@ Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn/Server
       <th scope="row">Pré-requisitos:</th>
       <td>
         Primeiro complete:
-        <a href="/en-US/docs/Learn/Server-side/Django/Models"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Models"
           >Tutorial Django Parte 3: Usando modelos</a
         >.
       </td>

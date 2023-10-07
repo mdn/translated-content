@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t delete non-configurable array element'
+title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 ---
 
@@ -32,8 +32,8 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 ```js example-bad
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0});
-Object.defineProperty(arr, 1, {value: "1"});
+Object.defineProperty(arr, 0, { value: 0 });
+Object.defineProperty(arr, 1, { value: "1" });
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
@@ -43,8 +43,8 @@ arr.length = 1;
 
 ```js example-good
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0, configurable: true});
-Object.defineProperty(arr, 1, {value: "1", configurable: true});
+Object.defineProperty(arr, 0, { value: 0, configurable: true });
+Object.defineProperty(arr, 1, { value: "1", configurable: true });
 
 arr.length = 1;
 ```
@@ -54,7 +54,7 @@ arr.length = 1;
 {{jsxref("Object.seal()")}} 函数会将数组中现存的所有元素标记为不可配置。
 
 ```js example-bad
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -64,7 +64,7 @@ arr.length = 1;
 （为了解决上述问题，）或者是移除 {{jsxref("Object.seal()")}} 调用，或者将数组拷贝一份。在拷贝数组的情况下，缩短备份数组的长度并不会修改原始数组的长度。
 
 ```js example-good
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 // Copy the initial array to shorten the copy

@@ -1,7 +1,6 @@
 ---
 title: O que é um nome de domínio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 Nesse artigo examinaremos nomes de domínios: o que são, como são estruturados, e como conseguir um.
@@ -63,7 +62,7 @@ Cada uma dessas partes fornece informações específicas sobre todo o domain na
 
 #### Quem possui um nome de domínio?
 
-Você não pode “comprar um nome de domínio”. Você paga pelo direito de usar um nome de domínio por um ano ou mais. Você pode renovar seu direito, e sua renovação tem prioridade sobre as aplicações de outras pessoas. Mas você nunca possui o nome de domínio.
+Você não pode "comprar um nome de domínio". Você paga pelo direito de usar um nome de domínio por um ano ou mais. Você pode renovar seu direito, e sua renovação tem prioridade sobre as aplicações de outras pessoas. Mas você nunca possui o nome de domínio.
 
 As empresas chamadas registradoras usam registros de nome de domínio para acompanhar as informações técnicas e administrativas que conectam você a seu nome de domínio.
 
@@ -73,7 +72,7 @@ As empresas chamadas registradoras usam registros de nome de domínio para acomp
 
 Para descobrir se um determinado domain name está disponível,
 
-- Ir até um site registrador de nome de domínio. A maioria deles fornece um serviço “whois” que diz se seu nome de domínio está disponível.
+- Ir até um site registrador de nome de domínio. A maioria deles fornece um serviço "whois" que diz se seu nome de domínio está disponível.
 - Alternativamente, se você usa um sistema com shell embutido nele, digite um comnaod `whois` nele, como mostrado aqui para `mozilla.org`:
 
 ```
@@ -117,7 +116,7 @@ Como você pode ver, o domínio não existe no banco de dados `whois` (neste mom
 O processo é bastante simples:
 
 1. Ir para o site de um registrador.
-2. Geralmente há um apelo chamativo “Obeter um domain name” call to action. Clique nele.
+2. Geralmente há um apelo chamativo "Obeter um domain name" call to action. Clique nele.
 3. Preencher o formulário com todos os detalhes requeridos. Certifique-se especialmente de que você não digitou incorretamente o domain name desejado. Uma vez pago, é tarde demais!
 4. O registrador informará quando o domain name estiver registrado corretamente. Dentro de algumas horas, todos os servidores de DNS receberão suas informações de DNS.
 

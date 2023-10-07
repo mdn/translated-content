@@ -1,7 +1,6 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 ---
 
 {{JSRef}}
@@ -37,12 +36,12 @@ Este método se ha añadido a la especificación ECMAScript 2015 y podría no es
 
 ```js
 if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+  Object.defineProperty(String.prototype, "startsWith", {
+    value: function (search, rawPos) {
+      var pos = rawPos > 0 ? rawPos | 0 : 0;
+      return this.substring(pos, pos + search.length) === search;
+    },
+  });
 }
 ```
 
@@ -54,11 +53,11 @@ Un _polyfill_ más robusto (totalmente compatible con la especificación ES2015)
 
 ```js
 //startswith
-var str = 'Ser, o no ser. ¡Esa es la cuestión!';
+var str = "Ser, o no ser. ¡Esa es la cuestión!";
 
-console.log(str.startsWith('Ser'));           // true
-console.log(str.startsWith('no ser'));        // false
-console.log(str.startsWith('Esa es la', 16)); // true
+console.log(str.startsWith("Ser")); // true
+console.log(str.startsWith("no ser")); // false
+console.log(str.startsWith("Esa es la", 16)); // true
 ```
 
 ## Especificaciones

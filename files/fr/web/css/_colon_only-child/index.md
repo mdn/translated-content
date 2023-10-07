@@ -1,11 +1,6 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:only-child
 ---
 
 {{CSSRef}}
@@ -34,7 +29,7 @@ p:only-child {
 
 ```css
 span:only-child {
-  color:red;
+  color: red;
 }
 ```
 
@@ -42,21 +37,12 @@ span:only-child {
 
 ```html
 <div>
-  <span>
-    Ce span est l'unique enfant
-    de son parent
-  </span>
+  <span> Ce span est l'unique enfant de son parent </span>
 </div>
 
 <div>
-  <span>
-    Ce span est l'un des deux
-    enfants de son parent
-  </span>
-  <span>
-    Ce span est l'un des deux
-    enfants de son parent
-  </span>
+  <span> Ce span est l'un des deux enfants de son parent </span>
+  <span> Ce span est l'un des deux enfants de son parent </span>
 </div>
 ```
 
@@ -70,7 +56,7 @@ span:only-child {
 
 ```css
 li li {
-  list-style-type : disc;
+  list-style-type: disc;
 }
 
 li:only-child {
@@ -84,18 +70,21 @@ li:only-child {
 
 ```html
 <ol>
-  <li>Premier
+  <li>
+    Premier
     <ul>
       <li>Ceci est l'unique élément enfant</li>
     </ul>
   </li>
-  <li>Deuxième
+  <li>
+    Deuxième
     <ul>
       <li>Cette liste a deux éléments</li>
       <li>Cette liste a deux éléments</li>
     </ul>
   </li>
-  <li>Troisième
+  <li>
+    Troisième
     <ul>
       <li>Cette liste a trois éléments</li>
       <li>Cette liste a trois éléments</li>

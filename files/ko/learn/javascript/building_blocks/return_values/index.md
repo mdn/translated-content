@@ -13,9 +13,9 @@ slug: Learn/JavaScript/Building_blocks/Return_values
       <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a
+        <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions"
           >함수 — 코드 재사용</a
         >.
       </td>
@@ -34,8 +34,8 @@ slug: Learn/JavaScript/Building_blocks/Return_values
 (이 시리즈의 [지난 문서](/ko/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions)에서 본) 익숙한 예제로 돌아가 봅시다.
 
 ```js
-let myText = 'The weather is cold';
-let newString = myText.replace('cold', 'warm');
+let myText = "The weather is cold";
+let newString = myText.replace("cold", "warm");
 console.log(newString); // Should print "The weather is warm"
 // replace() 문자열 함수는 문자열을 취해서,
 // 부분열(substring)을 다른 것으로 바꾸고,
@@ -64,7 +64,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -113,49 +113,59 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 1. 우선, GitHub에서 [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) 파일을 다운받으세요. 이것은 텍스트 {{htmlelement("input")}} 필드와 단락을 포함하고 있는 단순한 HTML 페이지입니다. 또한 {{htmlelement("script")}} 요소가 있는데, 두 HTML 요소에 대한 참조를 두 변수에 저장해 놓았습니다. 이 작은 페이지는 숫자를 텍스트 박스에 입력할 수 있게 하고, 그것에 관련된 다른 숫자들을 아래의 단락에 표시할 것입니다.
 2. 몇몇 유용한 함수들을 이 `<script>` 요소에 추가합시다. 두 줄의 [JavaScript](/ko/docs/Web/JavaScript) 아래에, 다음의 함수 정의를 추가하세요.
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      if (num < 0) return undefined;
-      if (num == 0) return 1;
-      let x = num - 1;
-      while (x > 1) {
-        num *= x;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     if (num < 0) return undefined;
+     if (num == 0) return 1;
+     let x = num - 1;
+     while (x > 1) {
+       num *= x;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    `squared()` 와 `cubed()` 함수는 분명합니다 — 이 함수들은 매개변수로 주어진 숫자의 제곱과 세제곱을 반환합니다. `factorial()` 함수는 주어진 숫자의 [팩토리얼](https://ko.wikipedia.org/wiki/%EA%B3%84%EC%8A%B9)을 반환합니다.
+   `squared()` 와 `cubed()` 함수는 분명합니다 — 이 함수들은 매개변수로 주어진 숫자의 제곱과 세제곱을 반환합니다. `factorial()` 함수는 주어진 숫자의 [팩토리얼](https://ko.wikipedia.org/wiki/%EA%B3%84%EC%8A%B9)을 반환합니다.
 
 3. 다음으로, 우리는 텍스트 인풋에 입력된 숫자에 대한 정보를 출력할 방법을 포함할 것입니다. 다음의 이벤트 핸들러를 존재하는 함수들 아래에 입력해 보세요:
 
-    ```js
-    input.onchange = function() {
-      const num = parseFloat(input.value);
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.onchange = function () {
+     const num = parseFloat(input.value);
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent =
+         num +
+         " squared is " +
+         squared(num) +
+         ". " +
+         num +
+         " cubed is " +
+         cubed(num) +
+         ". " +
+         num +
+         " factorial is " +
+         factorial(num) +
+         ".";
+     }
+   };
+   ```
 
-    여기서 우리는 `onchange` 이벤트 핸들러를 만들었습니다. 이것은 `change` 이벤트가 언제든지 텍스트 인풋에서 발생(fire)되었을 때 실행됩니다 — 즉, 새로운 값이 텍스트 `input`에 입력되고, 제출되었을 때 (예: 값을 입력하고, <kbd>Tab</kbd>이나 <kbd>Return</kbd>을 눌러 그리고서 인풋에서 포커스를 옮겼을 때). 익명 함수가 실행되었을 때, `input` 내의 값은 `num` 상수에 저장됩니다.
+   여기서 우리는 `onchange` 이벤트 핸들러를 만들었습니다. 이것은 `change` 이벤트가 언제든지 텍스트 인풋에서 발생(fire)되었을 때 실행됩니다 — 즉, 새로운 값이 텍스트 `input`에 입력되고, 제출되었을 때 (예: 값을 입력하고, <kbd>Tab</kbd>이나 <kbd>Return</kbd>을 눌러 그리고서 인풋에서 포커스를 옮겼을 때). 익명 함수가 실행되었을 때, `input` 내의 값은 `num` 상수에 저장됩니다.
 
-    다음으로, 우리는 조건문 테스트를 합니다. 만약 입력된 값이 숫자가 아니라면, 오류 메시지가 단락에 출력됩니다. 이 테스트는 표현식(expression) `isNaN(num)`이 `true`를 반환하는지를 살핍니다. [`isNaN()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 함수는 `num` 값이 숫자가 아닌지를 검사합니다 — 만약 그렇다면, 이것은 `true`를 반환하고, 아니라면, `false`를 반환합니다.
+   다음으로, 우리는 조건문 테스트를 합니다. 만약 입력된 값이 숫자가 아니라면, 오류 메시지가 단락에 출력됩니다. 이 테스트는 표현식(expression) `isNaN(num)`이 `true`를 반환하는지를 살핍니다. [`isNaN()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 함수는 `num` 값이 숫자가 아닌지를 검사합니다 — 만약 그렇다면, 이것은 `true`를 반환하고, 아니라면, `false`를 반환합니다.
 
-    만약 검사가 `false`를 반환했다면, `num` 값은 숫자입니다. 그러므로, 문장이 그 숫자의 제곱, 세제곱, 그리고 팩토리얼을 서술하는 단락 요소 내부에 출력됩니다. 문장은 `squared()`, `cubed()`, 그리고 `factorial()` 함수를 요구된 값을 계산하기 위해 호출합니다.
+   만약 검사가 `false`를 반환했다면, `num` 값은 숫자입니다. 그러므로, 문장이 그 숫자의 제곱, 세제곱, 그리고 팩토리얼을 서술하는 단락 요소 내부에 출력됩니다. 문장은 `squared()`, `cubed()`, 그리고 `factorial()` 함수를 요구된 값을 계산하기 위해 호출합니다.
 
 4. 코드를 저장하고, 브라우저에서 로드한 후, 시도해 보세요.
 

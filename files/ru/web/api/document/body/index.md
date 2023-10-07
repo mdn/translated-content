@@ -1,13 +1,8 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-tags:
-  - API
-  - BODY
-  - Document
-  - frameset
-translation_of: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает узел {{HTMLElement("body")}} или {{HTMLElement("frameset")}} текущей страницы, или **`null`** если таких элементов не существует.
@@ -40,13 +35,7 @@ alert(document.body.id); // "newBodyElement"
 
 ## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарии           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG','dom.html#dom-document-body','Document.body')}} | {{Spec2('HTML WHATWG')}} |                       |
-| {{SpecName('HTML5.1','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5.1')}}     |                       |
-| {{SpecName('HTML5 W3C','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5 W3C')}}     |                       |
-| {{SpecName('DOM2 HTML','html.html#ID-56360201','Document.body')}}         | {{Spec2('DOM2 HTML')}}     |                       |
-| {{SpecName('DOM1','level-one-html.html#attribute-body','Document.body')}} | {{Spec2('DOM1')}}         | Исходное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

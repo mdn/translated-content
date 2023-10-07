@@ -1,7 +1,6 @@
 ---
 title: 段のスタイル付け
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
-original_slug: Web/CSS/CSS_Columns/Styling_Columns
 ---
 
 {{CSSRef}}
@@ -16,7 +15,7 @@ original_slug: Web/CSS/CSS_Columns/Styling_Columns
 
 段同士の間隔 (段間) は、 `column-gap` プロパティで制御されます。このプロパティはもともと段組みレイアウト仕様書で定義されていました。しかし、現在は[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)仕様書で定義され、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)などの他の仕様書におけるボックス同士の間隔と統合されました。
 
-段組みにおける `column-gap` の初期値は `1em` です。つまり、段同士は互いに接しません。他のレイアウト方法では、 `column-gap` の初期値は 0 です。キーワード値 “normal” を使用した場合、間隔は 1em に設定されます。
+段組みにおける `column-gap` の初期値は `1em` です。つまり、段同士は互いに接しません。他のレイアウト方法では、 `column-gap` の初期値は 0 です。キーワード値 "normal" を使用した場合、間隔は 1em に設定されます。
 
 段間は `column-gap` の値として任意の単位を使用して変更することができます。以下の例では、 `column-gap` は 40px に設定されます。
 

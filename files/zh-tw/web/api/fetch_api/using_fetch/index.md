@@ -159,7 +159,7 @@ fetch("flowers.jpg")
   .catch(function (error) {
     console.log(
       "There has been a problem with your fetch operation: ",
-      error.message
+      error.message,
     );
   });
 ```
@@ -281,7 +281,7 @@ Possible guard values are:
 - `response`: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).
 - `immutable`: Mostly used for ServiceWorkers; renders a headers object read-only.
 
-> **備註：** You may not append or set a `request` guarded Headers’ `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
+> **備註：** You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
 
 ## Response objects
 
@@ -303,7 +303,7 @@ addEventListener("fetch", function (event) {
   event.respondWith(
     new Response(myBody, {
       headers: { "Content-Type": "text/plain" },
-    })
+    }),
   );
 });
 ```
@@ -356,18 +356,6 @@ if (self.fetch) {
   // do something with XMLHttpRequest?
 }
 ```
-
-## Polyfill
-
-在不支援 Fetch 的瀏覽器, 可改用 [Fetch Polyfill](https://github.com/github/fetch) 來重新支持缺少的 fetch 功能。
-
-## 技術指標
-
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
 
 ## 參見
 

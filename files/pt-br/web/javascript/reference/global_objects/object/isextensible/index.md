@@ -62,10 +62,10 @@ Object.isExtensible(1);
 
 ## Especificações
 
-| Especificações                                                                                       | Status                       | Comentário                                           |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}                 | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}         | {{Spec2('ES6')}}         |                                                      |
+| Especificações                                                             | Status               | Comentário                                           |
+| -------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}             | {{Spec2('ES5.1')}}   | Initial definition. Implemented in JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

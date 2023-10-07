@@ -25,9 +25,9 @@ Vacío.
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
-xhr.open(method,url,true);
+  method = "GET",
+  url = "https://developer.mozilla.org/";
+xhr.open(method, url, true);
 
 xhr.send();
 

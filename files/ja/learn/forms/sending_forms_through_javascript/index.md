@@ -56,10 +56,10 @@ HTML フォームは [HTTP](/ja/docs/Web/HTTP) リクエストを宣言的に送
 JavaScript はこうです。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function sendData(data) {
-  console.log('Sending data');
+  console.log("Sending data");
 
   const XHR = new XMLHttpRequest();
 
@@ -67,36 +67,38 @@ function sendData(data) {
 
   // data オブジェクトを、URL エンコードしたキーと値のペアの配列に変換します
   for (const [name, value] of Object.entries(data)) {
-    urlEncodedDataPairs.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
+    urlEncodedDataPairs.push(
+      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
+    );
   }
 
- // キーと値のペアをひとつの文字列に連結して、ウェブブラウザーのフォーム送信方式に
- // 合うよう、エンコードされた空白をプラス記号に置き換えます。
-  const urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+  // キーと値のペアをひとつの文字列に連結して、ウェブブラウザーのフォーム送信方式に
+  // 合うよう、エンコードされた空白をプラス記号に置き換えます。
+  const urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
 
   // データが正常に送信された場合に行うことを定義します
-  XHR.addEventListener('load', (event) => {
-    alert('Yeah! Data sent and response loaded.');
+  XHR.addEventListener("load", (event) => {
+    alert("Yeah! Data sent and response loaded.");
   });
 
   // エラーが発生した場合に行うことを定義します
-  XHR.addEventListener('error', (event) => {
-    alert('Oops! Something went wrong.');
+  XHR.addEventListener("error", (event) => {
+    alert("Oops! Something went wrong.");
   });
 
   // リクエストをセットアップします
-  XHR.open('POST', 'https://example.com/cors.php');
+  XHR.open("POST", "https://example.com/cors.php");
 
   // フォームデータの POST リクエストを扱うために必要な HTTP ヘッダを追加します
-  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // 最後に、データを送信します
   XHR.send(urlEncodedData);
 }
 
-btn.addEventListener('click', () => {
-  sendData({ test: 'ok' });
-})
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
+});
 ```
 
 そして、結果は以下のとおりです。
@@ -122,7 +124,7 @@ HTTP リクエストを手作業で作成するのは大変なことです。幸
 HTML のサンプルはおわかりでしょう。JavaScript はこうです。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function sendData(data) {
   const XHR = new XMLHttpRequest();
@@ -134,24 +136,24 @@ function sendData(data) {
   }
 
   // データが正常に送信された場合に行うことを定義します
-  XHR.addEventListener('load', (event) => {
-    alert('Yeah! Data sent and response loaded.');
+  XHR.addEventListener("load", (event) => {
+    alert("Yeah! Data sent and response loaded.");
   });
 
   // エラーが発生した場合に行うことを定義します
-  XHR.addEventListener('error', (event) => {
-    alert('Oops! Something went wrong.');
+  XHR.addEventListener("error", (event) => {
+    alert("Oops! Something went wrong.");
   });
 
   // リクエストをセットアップします
-  XHR.open('POST', 'https://example.com/cors.php');
+  XHR.open("POST", "https://example.com/cors.php");
 
   // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
   XHR.send(FD);
 }
 
-btn.addEventListener('click', () => {
-  sendData({ test: 'ok' });
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
 });
 ```
 
@@ -168,8 +170,8 @@ HTML の部分はかなり典型的です。
 ```html
 <form id="myForm">
   <label for="myName">Send me your name:</label>
-  <input id="myName" name="name" value="John">
-  <input type="submit" value="Send Me!">
+  <input id="myName" name="name" value="John" />
+  <input type="submit" value="Send Me!" />
 </form>
 ```
 
@@ -190,7 +192,7 @@ window.addEventListener("load", () => {
 
     // エラーが発生した場合に行うことを定義します
     XHR.addEventListener("error", (event) => {
-      alert('Oops! Something went wrong.');
+      alert("Oops! Something went wrong.");
     });
 
     // リクエストをセットアップします
@@ -232,11 +234,11 @@ window.addEventListener("load", () => {
 <form id="theForm">
   <p>
     <label for="theText">text data:</label>
-    <input id="theText" name="myText" value="Some text data" type="text">
+    <input id="theText" name="myText" value="Some text data" type="text" />
   </p>
   <p>
     <label for="theFile">file data:</label>
-    <input id="theFile" name="myFile" type="file">
+    <input id="theFile" name="myFile" type="file" />
   </p>
   <button>Send Me!</button>
 </form>
@@ -247,8 +249,7 @@ window.addEventListener("load", () => {
 ```js
 // DOM ノードにアクセスしたいため、
 // ページをロードしたときにスクリプトを初期化します。
-window.addEventListener('load', () => {
-
+window.addEventListener("load", () => {
   // この変数は、フォームデータを格納するために使用します。
   const text = document.getElementById("theText");
   const file = {
@@ -304,19 +305,20 @@ window.addEventListener('load', () => {
       data += `--${boundary}\r\n`;
 
       // フォームデータを記述します
-      data += 'content-disposition: form-data; '
-      // フォームデータの名前を定義します
-            + `name="${file.dom.name}"; `
-      // 実際のファイル名を与えます
-            + `filename="${file.dom.files[0].name}"\r\n`;
+      data +=
+        "content-disposition: form-data; " +
+        // フォームデータの名前を定義します
+        `name="${file.dom.name}"; ` +
+        // 実際のファイル名を与えます
+        `filename="${file.dom.files[0].name}"\r\n`;
       // ファイルの MIME タイプを与えます
       data += `Content-Type: ${file.dom.files[0].type}\r\n`;
 
       // メタデータとデータの間に空行を置きます
-      data += '\r\n';
+      data += "\r\n";
 
       // リクエストの本体にバイナリーデータを置きます
-      data += file.binary + '\r\n';
+      data += file.binary + "\r\n";
     }
 
     // テキストデータの場合はシンプルです。
@@ -326,7 +328,7 @@ window.addEventListener('load', () => {
     // フォームデータであることと、データの名前を示します。
     data += `content-disposition: form-data; name="${text.name}"\r\n`;
     // メタデータとデータの間に空行を置きます
-    data += '\r\n';
+    data += "\r\n";
 
     // リクエストの本体にテキストデータを置きます。
     data += text.value + "\r\n";
@@ -335,30 +337,33 @@ window.addEventListener('load', () => {
     data += `--${boundary}--`;
 
     // データが正常に送信された場合に行うことを定義します
-    XHR.addEventListener('load', (event) => {
-      alert('Yeah! Data sent and response loaded.');
+    XHR.addEventListener("load", (event) => {
+      alert("Yeah! Data sent and response loaded.");
     });
 
     // エラーが発生した場合に行うことを定義します
-    XHR.addEventListener('error', (event) => {
-      alert('Oops! Something went wrong.');
+    XHR.addEventListener("error", (event) => {
+      alert("Oops! Something went wrong.");
     });
 
     // リクエストをセットアップします
-    XHR.open('POST', 'https://example.com/cors.php');
+    XHR.open("POST", "https://example.com/cors.php");
 
     // マルチパートのフォームデータの POST リクエストを扱うために必要な HTTP ヘッダーを追加します。
-    XHR.setRequestHeader('Content-Type', `multipart/form-data; boundary=${boundary}`);
+    XHR.setRequestHeader(
+      "Content-Type",
+      `multipart/form-data; boundary=${boundary}`,
+    );
 
     // データの送信
     XHR.send(data);
   }
 
   // フォーム要素を取得
-  const form = document.getElementById('theForm');
+  const form = document.getElementById("theForm");
 
   // 'submit' イベントのハンドラーを追加
-  form.addEventListener('submit', (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
     sendData();
   });

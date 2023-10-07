@@ -8,24 +8,24 @@ slug: Web/JavaScript/Reference/Template_literals
 テンプレートリテラルはバッククォート (`` ` ``) で区切られたリテラルで、*substitution*と呼ばれる埋め込み式が利用できます。
 
 タグなし*テンプレートリテラルは文字列となるため、文字列の補間に便利です（エスケープされていない改行が許されるため、複数行の文字列も可能です）。
-タグつき*テンプレートリテラルは、リテラルから任意のテキストセグメントの配列と、任意の置換の値を引数として関数（*タグ関数*）を呼び出します。これは、 [DSL](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E) に便利です。
+タグつき*テンプレートリテラルは、リテラルから任意のテキストセグメントの配列と、任意の置換の値を引数として関数（_タグ関数_）を呼び出します。これは、 [DSL](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E) に便利です。
 
-テンプレートリテラルは非公式に「*テンプレート文字列*」と呼ばれることもありますが、文字列リテラルではないので、文字列リテラルが使えるところならばどこでも使えるわけではありません。また、タグ付けされたテンプレートリテラルが文字列になるとは限りません。何を作成するかはタグ関数次第です（もし何か作成するのであれば）。
+テンプレートリテラルは非公式に「_テンプレート文字列_」と呼ばれることもありますが、文字列リテラルではないので、文字列リテラルが使えるところならばどこでも使えるわけではありません。また、タグ付けされたテンプレートリテラルが文字列になるとは限りません。何を作成するかはタグ関数次第です（もし何か作成するのであれば）。
 
 ## 構文
 
 ```js
 // タグなし。これらは文字列を生成します。
-`string text`
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
 // タグを付けると、関数 "example" を最初の引数にテンプレート、
 // 後続の引数に置換値を指定して呼び出します。
-example`string text ${expression} string text`
+example`string text ${expression} string text`;
 ```
 
 ## 解説
@@ -39,7 +39,7 @@ example`string text ${expression} string text`
 テンプレートリテラル内でバッククォート文字をエスケープするには、バッククォート文字の前にバックスラッシュ (`\`) を置きます。
 
 ```js
-`\`` === '`' // --> true
+`\`` === "`"; // --> true
 ```
 
 ### 複数行の文字列
@@ -49,8 +49,7 @@ example`string text ${expression} string text`
 通常の文字列を使う場合は、複数行の文字列を得るために次のような構文を使用する必要があります。
 
 ```js
-console.log('string text line 1\n' +
-'string text line 2');
+console.log("string text line 1\n" + "string text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -71,7 +70,7 @@ string text line 2`);
 ```js
 let a = 5;
 let b = 10;
-console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
+console.log("Fifteen is " + (a + b) + " and\nnot " + (2 * a + b) + ".");
 // "Fifteen is 15 and
 // not 20."
 ```
@@ -96,24 +95,28 @@ not ${2 * a + b}.`);
 ES5 の場合:
 
 ```js
-let classes = 'header';
-classes += (isLargeScreen() ?
-  '' : item.isCollapsed ?
-    ' icon-expander' : ' icon-collapser');
+let classes = "header";
+classes += isLargeScreen()
+  ? ""
+  : item.isCollapsed
+  ? " icon-expander"
+  : " icon-collapser";
 ```
 
 ES2015 で入れ子なしのテンプレートリテラルの場合:
 
 ```js
-const classes = `header ${ isLargeScreen() ? '' :
-  (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
+const classes = `header ${
+  isLargeScreen() ? "" : item.isCollapsed ? "icon-expander" : "icon-collapser"
+}`;
 ```
 
 ES2015 で入れ子にしたテンプレートリテラルの場合:
 
 ```js
-const classes = `header ${ isLargeScreen() ? '' :
-  `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
+const classes = `header ${
+  isLargeScreen() ? "" : `icon-${item.isCollapsed ? "expander" : "collapser"}`
+}`;
 ```
 
 ### タグ付きテンプレート
@@ -127,7 +130,7 @@ const classes = `header ${ isLargeScreen() ? '' :
 タグに使用される関数の名前は、自由に指定できます。
 
 ```js
-let person = 'Mike';
+let person = "Mike";
 let age = 28;
 
 function myTag(strings, personExp, ageExp) {
@@ -136,17 +139,17 @@ function myTag(strings, personExp, ageExp) {
   let str2 = strings[2]; // "."
 
   let ageStr;
-  if (ageExp > 99){
-    ageStr = 'centenarian';
+  if (ageExp > 99) {
+    ageStr = "centenarian";
   } else {
-    ageStr = 'youngster';
+    ageStr = "youngster";
   }
 
   // テンプレートリテラルを用いて組み立てた文字列を返すこともできます
   return `${str0}${personExp}${str1}${ageStr}${str2}`;
 }
 
-let output = myTag`That ${ person } is a ${ age }.`;
+let output = myTag`That ${person} is a ${age}.`;
 
 console.log(output);
 // That Mike is a youngster.
@@ -156,29 +159,29 @@ console.log(output);
 
 ```js
 function template(strings, ...keys) {
-  return (function(...values) {
+  return function (...values) {
     let dict = values[values.length - 1] || {};
     let result = [strings[0]];
-    keys.forEach(function(key, i) {
+    keys.forEach(function (key, i) {
       let value = Number.isInteger(key) ? values[key] : dict[key];
       result.push(value, strings[i + 1]);
     });
-    return result.join('');
-  });
+    return result.join("");
+  };
 }
 
 let t1Closure = template`${0}${1}${0}!`;
 //let t1Closure = template(["","","","!"],0,1,0);
-t1Closure('Y', 'A');                      // "YAY!"
+t1Closure("Y", "A"); // "YAY!"
 
-let t2Closure = template`${0} ${'foo'}!`;
+let t2Closure = template`${0} ${"foo"}!`;
 //let t2Closure = template([""," ","!"],0,"foo");
-t2Closure('Hello', {foo: 'World'}); // "Hello World!"
+t2Closure("Hello", { foo: "World" }); // "Hello World!"
 
-let t3Closure = template`I'm ${'name'}. I'm almost ${'age'} years old.`;
+let t3Closure = template`I'm ${"name"}. I'm almost ${"age"} years old.`;
 //let t3Closure = template(["I'm ", ". I'm almost ", " years old."], "name", "age");
-t3Closure('foo', {name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
-t3Closure({name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
+t3Closure("foo", { name: "MDN", age: 30 }); //"I'm MDN. I'm almost 30 years old."
+t3Closure({ name: "MDN", age: 30 }); //"I'm MDN. I'm almost 30 years old."
 ```
 
 ### 加工前の文字列
@@ -198,13 +201,13 @@ tag`string text line 1 \n string text line 2`;
 加えて、 {{jsxref("String.raw()")}} メソッドがあり、既定のテンプレート関数のように文字列を連結した形で加工前の文字列を生成することができます。
 
 ```js
-let str = String.raw`Hi\n${2+3}!`;
+let str = String.raw`Hi\n${2 + 3}!`;
 // "Hi\\n5!"
 
 str.length;
 // 6
 
-Array.from(str).join(',');
+Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
@@ -222,7 +225,7 @@ ECMAScript 2016 時点では、タグ付きテンプレートの以下のエス�
 このルールのもとでは、下に示す例のようなタグ付きテンプレートが問題となります。なぜなら、 ECMAScript の文法に従ってこのテキストを解釈しようとすると、パーサーは Unicode の有効のエスケープシーケンスを探そうとするも、不正な構文が検出されてしまうからです。
 
 ```js
-latex`\unicode`
+latex`\unicode`;
 // 古い ECMAScript バージョン (ES2016 以前) では、以下のような例外が投げられる
 // SyntaxError: malformed Unicode character escape sequence
 ```
@@ -235,10 +238,10 @@ latex`\unicode`
 
 ```js
 function latex(str) {
-  return { "cooked": str[0], "raw": str.raw[0] }
+  return { cooked: str[0], raw: str.raw[0] };
 }
 
-latex`\unicode`
+latex`\unicode`;
 
 // { cooked: undefined, raw: "\\unicode" }
 ```

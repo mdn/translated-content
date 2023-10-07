@@ -3,6 +3,8 @@ title: Gutters
 slug: Glossary/Gutters
 ---
 
+{{GlossarySidebar}}
+
 **网格间距**是网格轨道之间的间距，可以通过 {{cssxref("grid-column-gap")}}，{{cssxref("grid-row-gap")}} 或者 {{cssxref("grid-gap")}} 在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中创建。
 
 在下面的例子中，由一个三列两行的网格。它的列轨道之间有 20px 的间距，行轨道之间有 20px 的间距。
@@ -10,27 +12,29 @@ slug: Glossary/Gutters
 ## 示例
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #fff8f8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #fff8f8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1.2fr);
+  grid-template-columns: repeat(3, 1.2fr);
   grid-auto-rows: 45%;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -39,11 +43,11 @@ slug: Glossary/Gutters
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 

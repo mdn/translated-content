@@ -1,7 +1,6 @@
 ---
 title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-original_slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -13,20 +12,22 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
 アイテムに配置情報を与えない場合は、アイテムはグリッド上に配置され、各グリッドセルに 1 つずつ配置されます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -61,30 +62,32 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
 しかし、`grid-auto-rows` プロパティを使用することで、これらの行の大きさを制御することができます。例えば、すべての作成された行を 100 ピクセルの高さにするには、次のように使います。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -104,36 +107,35 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
 {{cssxref("minmax()")}} を {{cssxref("grid-auto-rows")}} の値に使用すると、最小サイズでありながら、コンテンツの高さに合わせて成長する行を作成することができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-     <div>One</div>
-     <div>Two</div>
-     <div>Three</div>
-     <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
-     <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>
+    Four <br />This cell <br />Has extra <br />content. <br />Max is auto
+    <br />so the row expands.
+  </div>
+  <div>Five</div>
 </div>
 ```
 
@@ -153,33 +155,35 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
 また、トラックリストを渡すこともでき、これは繰り返されます。次のトラックリストでは、最初の暗黙の行トラックを 100 ピクセル、2 番目を `200px` として作成します。これは、暗黙のグリッドに内容物が追加される限り、継続されます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -202,42 +206,44 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-rows: repeat(3, 200px);
-    gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px 100px;
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px 100px;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -256,37 +262,39 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 グリッドはまず、位置を指定したアイテムを配置します。以下の例では、 12 個のグリッドアイテムがあります。アイテム 2 とアイテム 5 は、グリッド上にラインベースで配置されています。これらのアイテムが配置されると、他のアイテムが自動的にスペースに配置されるのがわかります。自動配置されたアイテムは、 DOM順に配置されたアイテムの前に配置され、前に配置されたアイテムの位置より後に開始されることはありません。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -297,13 +305,13 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
   grid-auto-rows: 100px;
   gap: 10px;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 ```
 
@@ -316,36 +324,38 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 自動配置されたアイテムの場合、トラックに収まらないアイテムに遭遇すると、アイテムが収まる空間を見つけるまで次々と行を移動するため、グリッドに隙間ができてしまいます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -356,18 +366,18 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
   grid-auto-rows: 100px;
   gap: 10px;
 }
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 ```
 
@@ -382,52 +392,54 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 グリッドの中を移動すると、以前のように隙間ができますが、以前の隙間に収まるアイテムを見つけると、それを拾って DOM 順から外し、隙間に配置します。グリッド内の他の順序変更と同様に、これは論理的な順序を変更するものではありません。例えば、タブの順序は文書の順序に従います。グリッドレイアウトの潜在的なアクセシビリティの問題については、後のガイドで見ていきますが、視覚的な順序と表示の順序の間に断絶を設ける場合には注意が必要です。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
 ```css
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 .wrapper {
   display: grid;
@@ -465,28 +477,30 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 自動配置は、論理的な順序を持つインターフェイスアイテムを配置する際にも役立ちます。その例が次の例の定義リストです。定義リストはスタイル付けするのに興味深い課題です。平坦であり、 `dt` と `dd` のアイテムのグループを包むものが何もないためです。この例では、自動配置でアイテムを配置していますが、列 1 では `dt`、列 2 では `dd` で始まるクラスを用意しています。これにより、用語がいくつあっても、片方に用語、片方に定義を配置することができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <dl>
-       <dt>哺乳類</dt>
-       <dd>猫</dd>
-       <dd>犬</dd>
-       <dd>鼠</dd>
-       <dt>魚類</dt>
-       <dd>グッピー</dd>
-       <dt>鳥類</dt>
-       <dd>ハクセキレイ</dd>
-       <dd>フクロウ</dd>
-   </dl>
+  <dl>
+    <dt>哺乳類</dt>
+    <dd>猫</dd>
+    <dd>犬</dd>
+    <dd>鼠</dd>
+    <dt>魚類</dt>
+    <dd>グッピー</dd>
+    <dt>鳥類</dt>
+    <dd>ハクセキレイ</dd>
+    <dd>フクロウ</dd>
+  </dl>
 </div>
 ```
 
@@ -503,13 +517,13 @@ dt {
   font-weight: bold;
 }
 dd {
-   grid-column: 2;
- }
+  grid-column: 2;
+}
 ```
 
 {{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}
 
-<h2 id="What_can’t_we_do_with_auto-placement_yet">auto-placement では（まだ）できないこと</h2>
+<h2 id="What_can't_we_do_with_auto-placement_yet">auto-placement では（まだ）できないこと</h2>
 
 よく疑問に思うことがいくつかあります。現在のところ、グリッドのすべてのセルにアイテムを配置するようなことはできません。前回の「グリッド上の名前付きライン」のガイドをご覧になった方は、関連する問題をすでに思い浮かべているかもしれません。 CSSWG の GitHub リポジトリに[これに関する問題提起](https://github.com/w3c/csswg-drafts/issues/796)がありますので、自分の用途を追加してみてはいかがでしょうか。
 

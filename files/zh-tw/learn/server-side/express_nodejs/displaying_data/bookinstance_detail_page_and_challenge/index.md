@@ -1,7 +1,6 @@
 ---
 title: 書本實例詳情頁面與自我挑戰
-slug: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 
 ## 書本實例詳情頁面

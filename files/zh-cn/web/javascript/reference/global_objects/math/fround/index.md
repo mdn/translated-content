@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 
 ## 语法
 
-```js
+```js-nolint
 Math.fround(doubleFloat)
 ```
 
@@ -60,20 +60,20 @@ Math.fround(2 ** 150); // Infinity
 如果参数无法转换成数字，或者为 {{jsxref("NaN")}}（`NaN`），`Math.fround()` 会返回 `NaN`：
 
 ```js
-Math.fround('abc'); // NaN
+Math.fround("abc"); // NaN
 Math.fround(NaN); // NaN
 ```
 
 在某些精度不高的场合下，可以通过将二个浮点数转换成 32 位浮点数进行比较，以解决 64 位浮点数比较结果不正确的问题：
 
 ```js
-0.1 + 0.2 == 0.3;    //false
+0.1 + 0.2 == 0.3; //false
 
 function equal(v1, v2) {
-    return Math.fround(v1) == Math.fround(v2);
+  return Math.fround(v1) == Math.fround(v2);
 }
 
-equal(0.1 + 0.2, 0.3);   //true
+equal(0.1 + 0.2, 0.3); //true
 ```
 
 ## Polyfill
@@ -81,11 +81,13 @@ equal(0.1 + 0.2, 0.3);   //true
 下面的函数可以模拟这个 API，前提是浏览器必须已经支持 {{jsxref("Float32Array")}}：
 
 ```js
-Math.fround = Math.fround || (function (array) {
-  return function(x) {
-    return array[0] = x, array[0];
-  };
-})(new Float32Array(1));
+Math.fround =
+  Math.fround ||
+  (function (array) {
+    return function (x) {
+      return (array[0] = x), array[0];
+    };
+  })(new Float32Array(1));
 ```
 
 ## 规范

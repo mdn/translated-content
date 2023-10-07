@@ -1,8 +1,6 @@
 ---
 title: Intl.Segmenter.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
-browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
 
 {{JSRef}}
@@ -14,8 +12,8 @@ La méthode **`Intl.Segmenter.supportedLocalesOf()`** renvoie un tableau contena
 ## Syntaxe
 
 ```js
-supportedLocalesOf(locales)
-supportedLocalesOf(locales, options)
+supportedLocalesOf(locales);
+supportedLocalesOf(locales, options);
 ```
 
 ### Paramètres
@@ -42,9 +40,9 @@ Un tableau de chaînes de caractères représentant le sous-ensemble de locales 
 Soit un environnement d'exécution qui prend en charge l'indonésien et l'allemand mais pas le balinais pour la segmentation, `supportedLocalesOf` renvoie les balises de langue indonésienne et allemande inchangées, même si la collation `pinyin` n'est pas pertinente pour la segmentation indonésienne et qu'un dialecte allemand pour l'Indonésie a peu de chances d'être pris en charge. On notera que l'exemple utilise l'algorithme "`lookup`" et que "`best fit`" aurait pu décider que l'indonésien est une correspondance valable pour le balinais, car la plupart des personnes qui parlent balinais comprennent aussi l'indonésien. En utilisant l'algorithme `"best fit"`, on aurait donc pu avoir la balise balinaise dans les résultats.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

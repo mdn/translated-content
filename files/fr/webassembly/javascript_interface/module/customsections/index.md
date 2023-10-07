@@ -1,17 +1,6 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Module
-  - Méthode
-  - Object
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
 ---
 
 {{WebAssemblySidebar}}
@@ -58,14 +47,15 @@ Dans l'exemple qui suit (tiré de [ce fichier source](https://github.com/mdn/web
 On faut aussi une vérification sur `WebAssembly.Module.customSections` pour vérifier si celle-ci contient une section personnalisée `"name"` dont on vérifie si la longueur est supérieure à 0. Ce module contenant une section `name`, les appels à `console.log()` sont exécutés et montrent que le tableau renvoyé par la méthode contient des objets {{domxref("ArrayBuffer")}}.
 
 ```js
-WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
-.then(function(mod) {
-  var nameSections = WebAssembly.Module.customSections(mod, "name");
-  if (nameSections.length != 0) {
-    console.log("Le module contient une section nommée");
-    console.log(nameSections[0]);
-  };
-});
+WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then(
+  function (mod) {
+    var nameSections = WebAssembly.Module.customSections(mod, "name");
+    if (nameSections.length != 0) {
+      console.log("Le module contient une section nommée");
+      console.log(nameSections[0]);
+    }
+  },
+);
 ```
 
 ## Spécifications

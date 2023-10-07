@@ -242,9 +242,9 @@ L'attribut `defaultChecked` dans la balise `<input/ >` indique à React de coche
 
 L'attribut `htmlFor` correspond à l'attribut `for` utilisé en HTML. Il n'est pas possible d'utiliser `for` comme attribut en JSX, car `for` est un mot réservé en JavaScript, React utilise donc `htmlFor` à la place.
 
->**Note :** Pour utiliser des valeurs booléennes (`true` and `false`) dans les attributs JSX, vous devez les mettre entre accolades. Si vous écrivez `defaultChecked="true"`, la valeur de `defaultChecked` sera `"true"`&nbsp;: une chaine de caractère. Souvenez-vous, ce qui est écrit en JSX est interprété comme du JavaScript, pas comme du HTML&nbsp;!
+> **Note :** Pour utiliser des valeurs booléennes (`true` and `false`) dans les attributs JSX, vous devez les mettre entre accolades. Si vous écrivez `defaultChecked="true"`, la valeur de `defaultChecked` sera `"true"`&nbsp;: une chaine de caractère. Souvenez-vous, ce qui est écrit en JSX est interprété comme du JavaScript, pas comme du HTML&nbsp;!
 
->**Note :** L'attribut `aria-pressed` utilisé dans notre exemple de code précédent vaut `"true"` parce que `aria-pressed` n'est pas un véritable attribut booléen comme `checked`.
+> **Note :** L'attribut `aria-pressed` utilisé dans notre exemple de code précédent vaut `"true"` parce que `aria-pressed` n'est pas un véritable attribut booléen comme `checked`.
 
 ### Implémenter la mise en forme
 
@@ -310,7 +310,9 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -403,7 +405,9 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

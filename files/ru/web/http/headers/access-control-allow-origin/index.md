@@ -1,9 +1,8 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 Заголовок ответа **`Access-Control-Allow-Origin`** показывает, может ли ответ сервера быть доступен коду, отправляющему запрос с данного источника {{glossary("origin")}}.
@@ -68,8 +67,8 @@ Vary: Origin
 
 ## Спецификации
 
-| Спецификации                                                                                                         | Статус                   | Комментарий            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------- |
+| Спецификации                                                                             | Статус             | Комментарий            |
+| ---------------------------------------------------------------------------------------- | ------------------ | ---------------------- |
 | {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Начальное определение. |
 
 ## Совместимость с браузерами

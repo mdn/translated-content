@@ -20,13 +20,15 @@ species 访问器属性允许子类覆盖对象的默认构造函数。
 ```js
 class MyArray extends Array {
   // 覆盖 species 到父级的 Array 构造函数上
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## 规范

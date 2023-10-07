@@ -21,7 +21,7 @@ audio.loop = true;
 ## 示例
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 obj.loop = true; // true
 ```
 

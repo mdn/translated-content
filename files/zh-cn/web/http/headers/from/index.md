@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/From
 
 > **警告：** 不可以将 From 首部用于访问控制或者身份验证。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

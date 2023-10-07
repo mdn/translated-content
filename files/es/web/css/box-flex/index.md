@@ -1,7 +1,6 @@
 ---
-title: '-moz-box-flex'
+title: "-moz-box-flex"
 slug: Web/CSS/box-flex
-original_slug: Web/CSS/-moz-box-flex
 ---
 
 {{CSSRef}}
@@ -45,7 +44,7 @@ Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` espe
 ## Ejemplos
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Ejemplo de -moz-box-flex</title>
@@ -57,13 +56,13 @@ Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` espe
         width: 100%;
       }
       div.example > p:nth-child(1) {
-        -moz-box-flex: 1;       /* Mozilla */
-        -webkit-box-flex: 1;    /* WebKit */
+        -moz-box-flex: 1; /* Mozilla */
+        -webkit-box-flex: 1; /* WebKit */
         border: 1px solid black;
       }
       div.example > p:nth-child(2) {
-        -moz-box-flex: 0;       /* Mozilla */
-        -webkit-box-flex: 0;    /* WebKit */
+        -moz-box-flex: 0; /* Mozilla */
+        -webkit-box-flex: 0; /* WebKit */
         border: 1px solid black;
       }
     </style>

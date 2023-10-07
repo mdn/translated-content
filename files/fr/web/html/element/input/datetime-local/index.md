@@ -1,8 +1,6 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-translation_of: Web/HTML/Element/input/datetime-local
-browser-compat: html.elements.input.input-datetime-local
 ---
 
 {{HTMLSidebar}}
@@ -50,7 +48,11 @@ Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui repr�
 
 ```html
 <label for="party">Veuillez saisir une date et une heure pour la fête :</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30" />
 ```
 
 {{EmbedLiveSample('', 600, 60)}}
@@ -63,7 +65,7 @@ En JavaScript, Il est également possible de définir la valeur de la date utili
 
 ```js
 let dateControl = document.querySelector('input[type="datetime-local"]');
-dateControl.value = '2017-06-01T08:30';
+dateControl.value = "2017-06-01T08:30";
 ```
 
 Plusieurs méthodes, fournies par JavaScript (cf. [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)), peuvent être utilisées afin de convertir des informations numériques en une telle chaîne de caractères (par exemple la méthode [`Date.toISOString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)).
@@ -108,8 +110,10 @@ Dans sa forme la plus simple, `<input type="datetime-local">` peut s'utiliser av
 
 ```html
 <form>
-  <label for="party">Veuillez choisir une date et une heure pour la fête :</label>
-  <input id="party" type="datetime-local" name="partydate">
+  <label for="party"
+    >Veuillez choisir une date et une heure pour la fête :</label
+  >
+  <input id="party" type="datetime-local" name="partydate" />
 </form>
 ```
 
@@ -121,8 +125,15 @@ Les attributs `min` et `max` permettent de restreindre la fenêtre de dates qu'i
 
 ```html
 <form>
-  <label for="party">Veuillez choisir une date et une heure pour la fête :</label>
-  <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
+  <label for="party"
+    >Veuillez choisir une date et une heure pour la fête :</label
+  >
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2017-06-01T08:30"
+    max="2017-06-30T16:30" />
 </form>
 ```
 
@@ -146,7 +157,7 @@ Les champs `datetime-local` ne permettent pas d'indiquer le fuseau horaire de la
 Ainsi, si vous créez un système où l'utilisatrice ou l'utilisateur est déjà connecté et que le fuseau horaire est déjà connu, celui-ci peut être fourni via un champ de type [`hidden`](/fr/docs/Web/HTML/Element/Input/hidden). Par exemple&nbsp;:
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
 Sinon, on peut proposer la sélection d'un fuseau horaire grâce à un élément [`<select>`](/fr/docs/Web/HTML/Element/select)&nbsp;:
@@ -174,12 +185,21 @@ Prenons un exemple avec des dates mini/maxi et le champ obligatoire&nbsp;:
 ```html
 <form>
   <div>
-    <label for="party">Veuillez choisir une date et une heure pour la fête (obligatoire, entre le 1er juin, 8h30 et le 30 juin, 16h30) :</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
+    <label for="party"
+      >Veuillez choisir une date et une heure pour la fête (obligatoire, entre
+      le 1er juin, 8h30 et le 30 juin, 16h30) :</label
+    >
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Réserver !">
+    <input type="submit" value="Réserver !" />
   </div>
 </form>
 ```
@@ -202,13 +222,13 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-  content: '✖';
+input:invalid + span:after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span:after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -237,16 +257,24 @@ Une façon de contourner ce problème est de placer un attribut `pattern` dans l
 ```html
 <form>
   <div>
-    <label for="party">Veuillez choisir une date et une heure pour la fête (obligatoire, entre le 1er juin, 8h30 et le 30 juin, 16h30) :</label>
-    <input id="party" type="datetime-local" name="partydate"
-          min="2017-06-01T08:30" max="2017-06-30T16:30"
-          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <label for="party"
+      >Veuillez choisir une date et une heure pour la fête (obligatoire, entre
+      le 1er juin, 8h30 et le 30 juin, 16h30) :</label
+    >
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Réserver !">
+    <input type="submit" value="Réserver !" />
   </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 </form>
 ```
 
@@ -268,7 +296,7 @@ input:invalid + span {
 }
 
 input:invalid + span:after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -278,7 +306,7 @@ input:valid + span {
 }
 
 input:valid + span:after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -297,17 +325,20 @@ Voici le fragment de code HTML utilisé&nbsp;:
 ```html
 <form>
   <div class="nativeDateTimePicker">
-    <label for="party">Veuillez sélectionner une date et une heure pour la fête :</label>
-    <input type="datetime-local" id="party" name="bday">
+    <label for="party"
+      >Veuillez sélectionner une date et une heure pour la fête :</label
+    >
+    <input type="datetime-local" id="party" name="bday" />
     <span class="validity"></span>
   </div>
-  <p class="fallbackLabel">Veuillez sélectionner une date et une heure pour la fête :</p>
+  <p class="fallbackLabel">
+    Veuillez sélectionner une date et une heure pour la fête :
+  </p>
   <div class="fallbackDateTimePicker">
     <div>
       <span>
         <label for="day">Jour :</label>
-        <select id="day" name="day">
-        </select>
+        <select id="day" name="day"></select>
       </span>
       <span>
         <label for="month">Mois :</label>
@@ -328,20 +359,17 @@ Voici le fragment de code HTML utilisé&nbsp;:
       </span>
       <span>
         <label for="year">Année :</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
     <div>
       <span>
         <label for="hour">Heure :</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute :</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -364,15 +392,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -381,37 +409,37 @@ Une partie intéressante du code est celle où on détecte la prise en charge de
 
 ```js
 // On définit les différentes variables
-let nativePicker = document.querySelector('.nativeDateTimePicker');
-let fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-let fallbackLabel = document.querySelector('.fallbackLabel');
+let nativePicker = document.querySelector(".nativeDateTimePicker");
+let fallbackPicker = document.querySelector(".fallbackDateTimePicker");
+let fallbackLabel = document.querySelector(".fallbackLabel");
 
-let yearSelect = document.querySelector('#year');
-let monthSelect = document.querySelector('#month');
-let daySelect = document.querySelector('#day');
-let hourSelect = document.querySelector('#hour');
-let minuteSelect = document.querySelector('#minute');
+let yearSelect = document.querySelector("#year");
+let monthSelect = document.querySelector("#month");
+let daySelect = document.querySelector("#day");
+let hourSelect = document.querySelector("#hour");
+let minuteSelect = document.querySelector("#minute");
 
 // Initialement, on masque le sélecteur non-natif
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // On teste si l'élément <input type="date">
 // se transforme en <input type="text">
-let test = document.createElement('input');
+let test = document.createElement("input");
 
 try {
-  test.type = 'datetime-local';
+  test.type = "datetime-local";
 } catch (e) {
   console.log(e.description);
 }
 // Si c'est le cas, cela signifie que l'élément
 // n'est pas pris en charge et
-if(test.type === 'text') {
+if (test.type === "text") {
   // On masque le sélecteur natif et on affiche
   // le sélecteur avec les <select>
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // On affiche les jours, années, heures
   // et minutes de façon dynamique
@@ -424,7 +452,7 @@ if(test.type === 'text') {
 function populateDays(month) {
   // On supprime les éléments <option> pour l'élément
   // <select> des jours afin de pouvoir ajouter les prochains
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
@@ -433,22 +461,35 @@ function populateDays(month) {
   let dayNum;
 
   // 31 ou 30 jours ?
-  if(month === 'Janvier' || month === 'Mars' || month === 'Mai' || month === 'Juillet' || month === 'Août' || month === 'Octobre' || month === 'Décembre') {
+  if (
+    month === "Janvier" ||
+    month === "Mars" ||
+    month === "Mai" ||
+    month === "Juillet" ||
+    month === "Août" ||
+    month === "Octobre" ||
+    month === "Décembre"
+  ) {
     dayNum = 31;
-  } else if(month === 'Avril' || month === 'Juin' || month === 'Septembre' || month === 'Novembre') {
+  } else if (
+    month === "Avril" ||
+    month === "Juin" ||
+    month === "Septembre" ||
+    month === "Novembre"
+  ) {
     dayNum = 30;
   } else {
-  // Si le mois est février, on calcule si l'année est bissextile
+    // Si le mois est février, on calcule si l'année est bissextile
     let year = yearSelect.value;
     let leap = new Date(year, 1, 29).getMonth() == 1;
-    leap ? dayNum = 29 : dayNum = 28;
+    leap ? (dayNum = 29) : (dayNum = 28);
   }
 
   // on ajoute le bon nombre de jours dans autant
   // d'éléments <option> pour l'élément <select>
   // pour la journée
-  for(let i = 1; i <= dayNum; i++) {
-    let option = document.createElement('option');
+  for (let i = 1; i <= dayNum; i++) {
+    let option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -456,21 +497,21 @@ function populateDays(month) {
   // Si le jour précédent a déjà été défini on utilise
   // la valeur de ce jour pour daySelect afin d'éviter de
   // réinitialiser le jour lorsqu'on change l'année
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // Si le jour précédent correspond au dernier jour d'un mois
     // et que le mois sélectionné possède moins de jours (par
     // exemple en février)
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -484,9 +525,9 @@ function populateYears() {
   // On affiche l'année courante et les 100 années
   // précédentes pour l'élément <select> destiné à
   // stocker l'année
-  for(let i = 0; i <= 100; i++) {
-    let option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    let option = document.createElement("option");
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
@@ -494,9 +535,9 @@ function populateYears() {
 function populateHours() {
   // on crée 24 valeurs pour l'élément <select>
   // associé aux heures
-  for(let i = 0; i <= 23; i++) {
-    let option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 23; i++) {
+    let option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     hourSelect.appendChild(option);
   }
 }
@@ -504,22 +545,22 @@ function populateHours() {
 function populateMinutes() {
   // On crée 60 valeurs pour l'élément <select>
   // associé aux minutes
-  for(let i = 0; i <= 59; i++) {
-    let option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 59; i++) {
+    let option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     minuteSelect.appendChild(option);
   }
 }
 
 // Lorsque la valeur du mois ou de l'année est modifiée
 // on relance populateDays()
-yearSelect.onchange = function() {
+yearSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
-monthSelect.onchange = function() {
+monthSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
 // On conserve le jour sélectionné
 let previousDay;
@@ -527,9 +568,9 @@ let previousDay;
 // On met à jour la journée utilisée précédemment
 // (voir la fin de populateDays() pour voir où
 // est utilisée cette valeur)
-daySelect.onchange = function() {
+daySelect.onchange = function () {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.

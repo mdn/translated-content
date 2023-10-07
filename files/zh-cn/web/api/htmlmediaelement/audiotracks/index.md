@@ -22,7 +22,7 @@ AudioTrackList 对象 表示音频/视频的可用音频轨道
 以 audio 标签为例
 
 ```html
-<audio id='audio'></audio>
+<audio id="audio"></audio>
 ```
 
 调用

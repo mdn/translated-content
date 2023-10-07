@@ -32,13 +32,13 @@ Veja também [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteratio
 Podemos fazer nosso próprio iterável dessa forma:
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando [computed property](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
@@ -75,8 +75,8 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
+| Especificação                                                      |
+| ------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}} |
 
 ## Compatibilidade com navegadores

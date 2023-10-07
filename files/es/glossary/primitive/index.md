@@ -1,7 +1,6 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-original_slug: Glossary/Primitivo
 ---
 
 En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn/JavaScript/Objects/Inheritance).

@@ -54,23 +54,23 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
 4. ### 关系特性
 
-    - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-    - [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-    - [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-    - [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-    - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-    - [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-    - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-    - [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-    - [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-    - [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-    - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-    - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-    - [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-    - [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-    - [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-    - [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-    - [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+   - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+   - [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
+   - [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+   - [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
+   - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+   - [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+   - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)
+   - [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+   - [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+   - [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
+   - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+   - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+   - [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+   - [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
+   - [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+   - [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
+   - [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
 
 ## 全局 ARIA 特性
 
@@ -117,6 +117,6 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
 1. [**WAI-ARIA 属性**](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

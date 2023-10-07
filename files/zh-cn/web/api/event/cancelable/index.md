@@ -28,7 +28,7 @@ slug: Web/API/Event/cancelable
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // The event can be canceled, so we do so.
     event.preventDefault();
   } else {
@@ -39,7 +39,7 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventScrollWheel);
+document.addEventListener("wheel", preventScrollWheel);
 ```
 
 ## 规范

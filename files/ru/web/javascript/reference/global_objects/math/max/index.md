@@ -1,12 +1,6 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -39,9 +33,9 @@ Math.max([value1[, value2[, ...]]])
 ### Пример: использование метода `Math.max()`
 
 ```js
-Math.max(10, 20);   //  20
+Math.max(10, 20); //  20
 Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20
+Math.max(-10, 20); //  20
 ```
 
 #### Нахождение максимального элемента в массиве

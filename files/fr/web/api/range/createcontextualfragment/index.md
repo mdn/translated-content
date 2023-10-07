@@ -1,15 +1,14 @@
 ---
 title: Range.createContextualFragment()
 slug: Web/API/Range/createContextualFragment
-translation_of: Web/API/Range/createContextualFragment
 ---
 
-La méthode **`Range.createContextualFragment()`** retourne un {{domxref("DocumentFragment")}} en invoquant l’algorithme d’analyse de fragment HTML ou l’algorithme d’analyse de fragment XML, avec le début du `range` (le _parent_ du nœud sélectionné) comme nœud de contexte. L’algorithme d’analyse de fragment HTML est utilisé si le `range` appartient à un `Document` dont le bit «&nbsp;HTMLness&nbsp;» est défini. Dans le cas du HTML, si le nœud de contexte est censé être `html`, pour des raisons historiques l’algorithme d’analyse de fragment est invoqué avec `body` pour contexte à la place.
+La méthode **`Range.createContextualFragment()`** retourne un {{domxref("DocumentFragment")}} en invoquant l'algorithme d'analyse de fragment HTML ou l'algorithme d'analyse de fragment XML, avec le début du `range` (le _parent_ du nœud sélectionné) comme nœud de contexte. L'algorithme d'analyse de fragment HTML est utilisé si le `range` appartient à un `Document` dont le bit «&nbsp;HTMLness&nbsp;» est défini. Dans le cas du HTML, si le nœud de contexte est censé être `html`, pour des raisons historiques l'algorithme d'analyse de fragment est invoqué avec `body` pour contexte à la place.
 
 ## Syntaxe
 
 ```js
-documentFragment = range.createContextualFragment( chaineHTML )
+documentFragment = range.createContextualFragment(chaineHTML);
 ```
 
 ### Paramètres

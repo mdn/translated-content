@@ -3,6 +3,8 @@ title: 幂等
 slug: Glossary/Idempotent
 ---
 
+{{GlossarySidebar}}
+
 一个 HTTP 方法是**幂等**的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下， {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} ， {{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 等方法都是**幂等**的，而 {{HTTPMethod("POST")}} 方法不是。所有的 {{glossary("safe")}} 方法也都是幂等的。
 
 幂等性只与后端服务器的实际状态有关，而每一次请求接收到的状态码不一定相同。例如，第一次调用 {{HTTPMethod("DELETE")}} 方法有可能返回 {{HTTPStatus("200")}} ，但是后续的请求可能会返回 {{HTTPStatus("404")}} 。 {{HTTPMethod("DELETE")}} 的言外之意是，开发者不应该使用 `DELETE` 法实现具有删除最后条目功能的 RESTful API。

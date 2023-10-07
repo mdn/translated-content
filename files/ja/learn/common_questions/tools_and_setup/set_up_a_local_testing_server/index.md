@@ -1,7 +1,6 @@
 ---
 title: ローカルにテスト用サーバーを用意するには？
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 この記事では、マシン上に簡単なローカルテストサーバーを設定する方法と、その使い方の基本について説明します。
@@ -49,41 +48,41 @@ original_slug: Learn/Common_questions/set_up_a_local_testing_server
 
 1. Python をインストールします。 Linux または Mac OS X を使用している場合は、既にシステム上で使用可能になっているはずです。 Windows ユーザーの方は、 Python ホームページからインストーラーを入手し、インストーラーの指示に従ってインストールすることができます。
 
-    - [python.org](https://www.python.org/) に進みます
-    - ダウンロードセクションの下で、 Python "3.xxx" のリンクをクリックします
-    - ページ下部の _Windows Installer_ を選択してダウンロードします
-    - ダウンロードしたら、実行します
-    - インストーラーの最初のページで、 "Add Python 3.xxx to PATH" チェックボックスをオンにします
-    - [インストール]をクリックし、インストールが完了したら[閉じる]をクリックします
+   - [python.org](https://www.python.org/) に進みます
+   - ダウンロードセクションの下で、 Python "3.xxx" のリンクをクリックします
+   - ページ下部の _Windows Installer_ を選択してダウンロードします
+   - ダウンロードしたら、実行します
+   - インストーラーの最初のページで、 "Add Python 3.xxx to PATH" チェックボックスをオンにします
+   - [インストール]をクリックし、インストールが完了したら[閉じる]をクリックします
 
 2. コマンドプロンプト (Windows)/ターミナル (OS X/Linux) を開きます。 Python がインストールされていることを確認するには、次のコマンドを入力してください。
 
-    ```bash
-    python -V
-    # If the above fails, try:
-    python3 -V
-    # Or, if the "py" command is available, try:
-    py -V
-    ```
+   ```bash
+   python -V
+   # If the above fails, try:
+   python3 -V
+   # Or, if the "py" command is available, try:
+   py -V
+   ```
 
 3. これによりバージョン番号が返されます。 OK の場合は、`cd` コマンドを使用してサンプルが入っているディレクトリーに移動します
 
-    ```bash
-    # include the directory name to enter it, for example
-    cd Desktop
-    # use two dots to jump up one directory level if you need to
-    cd ..
-    ```
+   ```bash
+   # include the directory name to enter it, for example
+   cd Desktop
+   # use two dots to jump up one directory level if you need to
+   cd ..
+   ```
 
 4. そのディレクトリーにあるサーバーを起動するコマンドを入力します。
 
-    ```bash
-    # If Python version returned above is 3.X
-    # On Windows, try "python -m http.server" or "py -3 -m http.server"
-    python3 -m http.server
-    # If Python version returned above is 2.X
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   # If Python version returned above is 3.X
+   # On Windows, try "python -m http.server" or "py -3 -m http.server"
+   python3 -m http.server
+   # If Python version returned above is 2.X
+   python -m SimpleHTTPServer
+   ```
 
 5. 既定では、これはローカルウェブサーバー上のディレクトリーの内容を 8000 番ポート上で実行します。このサーバーにアクセスするには、ウェブブラウザーで `localhost:8000` の URL に移動します。ここにディレクトリーの内容が表示されるので、実行する HTML ファイルをクリックしてください。
 

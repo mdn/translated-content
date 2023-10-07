@@ -62,7 +62,7 @@ var roots = numbers.map(Math.sqrt);
 
 ```js
 var numbers = new Uint8Array([1, 4, 9]);
-var doubles = numbers.map(function(num) {
+var doubles = numbers.map(function (num) {
   return num * 2;
 });
 // doubles is now Uint8Array [2, 8, 18]

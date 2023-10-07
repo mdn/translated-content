@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onbeforeunload
 slug: conflicting/Web/API/Window/beforeunload_event
-translation_of: Web/API/WindowEventHandlers/onbeforeunload
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
 
@@ -42,13 +41,7 @@ window.onbeforeunload = function(e) {
 
 ## Спецификации
 
-Событие было первоначально добавлено Microsoft в Internet Explorer 4 и стандартизовано в HTML5 спецификации.
-
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |         |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -1,8 +1,6 @@
 ---
 title: WebAssembly.Table
 slug: WebAssembly/JavaScript_interface/Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
 {{WebAssemblySidebar}}
@@ -13,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 
 ## Конструктор
 
-- [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+- [`WebAssembly.Table()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
   - : Создаёт новый объект `Table`.
 
 ## Экземпляры `Table`
@@ -41,10 +39,10 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 Следующий пример (смотри [исходный код](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) и [живую версию](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) table2.html) создаёт новый экземпляр WebAssembly Table с 2 элементами. После этого выводит длину таблицы и содержимое первых двух элементов (полученных через {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} чтобы показать что длина равняется 2 и элементы равны {{jsxref("null")}}.
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
-console.log(tbl.length);  // "2"
-console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+console.log(tbl.length); // "2"
+console.log(tbl.get(0)); // "null"
+console.log(tbl.get(1)); // "null"
 ```
 
 После этого мы создаём объект импорта содержащий таблицу:
@@ -52,20 +50,21 @@ console.log(tbl.get(1));  // "null"
 ```js
 var importObj = {
   js: {
-    tbl: tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 
 После этого, мы создаём экземпляр модуля wasm (table2.wasm) используя метод {{jsxref("WebAssembly.instantiateStreaming()")}}. Модуль table2.wasm содержит две функции, одна возвращает 42, а вторая - 83) и сохраняет эти функции под индексами 0 и 1 в импортированную таблицу (смотри [текстовую версию](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Таким образом, после создания wasm-модуля, таблица имеет туже длину, но элементы таблицы стали [функциями экспортированными из WebAssembly](/ru/docs/WebAssembly/Exported_functions) которые можно вызывать из JS.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
-.then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
-});
+WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+  function (obj) {
+    console.log(tbl.length);
+    console.log(tbl.get(0)());
+    console.log(tbl.get(1)());
+  },
+);
 ```
 
 Заметьте что понадобилось добавить второй оператор вызова функции чтобы вызвать функцию возвращённую из талицы (т.е. `get(0)()` вместо `get(0)`) .

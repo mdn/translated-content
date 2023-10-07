@@ -1,7 +1,6 @@
 ---
 title: Navigator.battery
 slug: Web/API/Navigator/getBattery
-original_slug: Web/API/Navigator/battery
 ---
 
 {{ ApiRef("Battery API") }}

@@ -1,7 +1,6 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-translation_of: Web/CSS/backface-visibility
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -63,9 +62,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        Since all faces are partially transparent,
-        the back faces (2, 4, 5) are visible
-        through the front faces (1, 3, 6).
+        Since all faces are partially transparent, the back faces (2, 4, 5) are
+        visible through the front faces (1, 3, 6).
       </p>
     </td>
     <td>
@@ -79,10 +77,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        The three back faces (2, 4, 5) are
-        hidden.
-      </p>
+      <p>The three back faces (2, 4, 5) are hidden.</p>
     </td>
   </tr>
 </table>
@@ -163,8 +158,10 @@ backface-visibility: unset;
 }
 
 /* Сделает стол немного лучше */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -178,8 +175,8 @@ th, p, td {
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                                   | Комментарий                 |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
+| Спецификация                                                                            | Статус                        | Комментарий                 |
+| --------------------------------------------------------------------------------------- | ----------------------------- | --------------------------- |
 | {{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}} | {{Spec2('CSS Transforms 2')}} | Первоначальное определение. |
 
 {{cssinfo}}

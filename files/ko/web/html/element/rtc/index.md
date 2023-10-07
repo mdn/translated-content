@@ -1,5 +1,5 @@
 ---
-title: '<rtc>: 루비 텍스트 콘테이너 요소'
+title: "<rtc>: 루비 텍스트 콘테이너 요소"
 slug: Web/HTML/Element/rtc
 ---
 
@@ -59,9 +59,7 @@ slug: Web/HTML/Element/rtc
 <div class="info">
   <ruby>
     <rbc>
-      <rb>馬</rb><rt>마</rt>
-      <rb>來</rb><rt>래</rt>
-      <rb>西</rb><rt>서</rt>
+      <rb>馬</rb><rt>마</rt> <rb>來</rb><rt>래</rt> <rb>西</rb><rt>서</rt>
       <rb>亞</rb><rt>아</rt>
     </rbc>
     <rtc>말레이시아</rtc>

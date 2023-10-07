@@ -1,13 +1,8 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Сводка
@@ -33,11 +28,11 @@ JavaScript вызывает метод `toString` автоматически в 
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                         | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                           | Статус             | Комментарии                                            |
+| -------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                  | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

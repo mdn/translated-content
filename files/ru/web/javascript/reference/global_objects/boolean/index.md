@@ -1,14 +1,8 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef()}}
 
 Объект **`Boolean`** является объектом-обёрткой над примитивом логического типа.
@@ -51,17 +45,17 @@ if (x) {
 Не используйте объект `Boolean` для преобразования нелогического значения в логическое значение. Вместо этого используйте `Boolean` в качестве функции:
 
 ```js
-var x = Boolean(expression);     // предпочтительно
+var x = Boolean(expression); // предпочтительно
 var x = new Boolean(expression); // не используйте
 ```
 
 Если вы определите любой объект, включая объект `Boolean` со значением `false`, в качестве начального значения объекта `Boolean`, новый объект `Boolean` будет иметь значение `true`.
 
 ```js
-var myFalse = new Boolean(false);    // начальное значение равно false
-var g = new Boolean(myFalse);        // начальное значение равно true
-var myString = new String('Привет'); // строковый объект
-var s = new Boolean(myString);       // начальное значение равно true
+var myFalse = new Boolean(false); // начальное значение равно false
+var g = new Boolean(myFalse); // начальное значение равно true
+var myString = new String("Привет"); // строковый объект
+var s = new Boolean(myString); // начальное значение равно true
 ```
 
 Не используйте объект `Boolean` вместо примитива логического типа.
@@ -97,7 +91,7 @@ var s = new Boolean(myString);       // начальное значение ра
 var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
+var bEmptyString = new Boolean("");
 var bfalse = new Boolean(false);
 ```
 
@@ -105,9 +99,9 @@ var bfalse = new Boolean(false);
 
 ```js
 var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Су Лин');
+var btrueString = new Boolean("true");
+var bfalseString = new Boolean("false");
+var bSuLin = new Boolean("Су Лин");
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 ```

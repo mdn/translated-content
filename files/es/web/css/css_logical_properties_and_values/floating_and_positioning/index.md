@@ -1,7 +1,6 @@
 ---
 title: Propiedades lógicas para flotantes y posicionamiento
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
-original_slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 ---
 
 {{CSSRef}}
@@ -12,26 +11,26 @@ La [especificación de Propiedades y Valores Lógicos](https://drafts.csswg.org/
 
 La tabla a continuación detalla las propiedades y valores discutidos en esta guía junto con sus asignaciones físicas. Estas, asumen un modo de escritura ({{cssxref("writing-mode")}}), con una dirección de izquierda a derecha (left-to-right).
 
-| Propiedad o valor lógico                     | Propiedad o valor lógico                |
-| -------------------------------------------- | --------------------------------------- |
-| {{cssxref("float")}}: inline-start   | {{cssxref("float")}}: left      |
-| {{cssxref("float")}}: inline-end     | {{cssxref("float")}}: right     |
-| {{cssxref("clear")}}: inline-start   | {{cssxref("clear")}}: left      |
-| {{cssxref("clear")}}: inline-end     | {{cssxref("clear")}}: right     |
-| {{cssxref("inset-inline-start")}} | {{cssxref("left")}}                |
-| {{cssxref("inset-inline-end")}}     | {{cssxref("right")}}            |
-| {{cssxref("inset-block-start")}} | {{cssxref("top")}}                |
+| Propiedad o valor lógico           | Propiedad o valor lógico         |
+| ---------------------------------- | -------------------------------- |
+| {{cssxref("float")}}: inline-start | {{cssxref("float")}}: left       |
+| {{cssxref("float")}}: inline-end   | {{cssxref("float")}}: right      |
+| {{cssxref("clear")}}: inline-start | {{cssxref("clear")}}: left       |
+| {{cssxref("clear")}}: inline-end   | {{cssxref("clear")}}: right      |
+| {{cssxref("inset-inline-start")}}  | {{cssxref("left")}}              |
+| {{cssxref("inset-inline-end")}}    | {{cssxref("right")}}             |
+| {{cssxref("inset-block-start")}}   | {{cssxref("top")}}               |
 | {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}            |
-| {{cssxref("text-align")}}: start      | {{cssxref("text-align")}}: left  |
-| {{cssxref("text-align")}}: end        | {{cssxref("text-align")}}: right |
+| {{cssxref("text-align")}}: start   | {{cssxref("text-align")}}: left  |
+| {{cssxref("text-align")}}: end     | {{cssxref("text-align")}}: right |
 
 Además de estas propiedades asignadas, hay algunas propiedades abreviadas adicionales que son posibles al poder abordar las dimensiones de bloque y en línea. Estos no tienen mapeo a las propiedades físicas.
 
-| Propiedad lógica                     | Propósito                                                                                      |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Propiedad lógica            | Propósito                                                                                      |
+| --------------------------- | ---------------------------------------------------------------------------------------------- |
 | {{cssxref("inset-inline")}} | Establece los dos valores de inserción anteriores para la dimensión en línea simultáneamente.  |
-| {{cssxref("inset-block")}} | Establece los dos valores de inserción anteriores para la dimensión de bloque simultáneamente. |
-| {{cssxref("inset")}}         | Establece los cuatro valores de inserción simultáneamente.                                     |
+| {{cssxref("inset-block")}}  | Establece los dos valores de inserción anteriores para la dimensión de bloque simultáneamente. |
+| {{cssxref("inset")}}        | Establece los cuatro valores de inserción simultáneamente.                                     |
 
 ## Flotante y ejemplo claro
 

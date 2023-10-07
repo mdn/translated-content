@@ -5,94 +5,132 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 
 {{JSRef}}
 
-**`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否可枚举。
+**`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否是对象的[可枚举自有](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)属性。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}
+{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
 
 ## 语法
 
-```plain
-obj.propertyIsEnumerable(prop)
+```js-nolint
+propertyIsEnumerable(prop)
 ```
 
 ### 参数
 
 - `prop`
-  - : 需要测试的属性名。
+  - : 需要测试的属性名，可以是字符串或 {{jsxref("Symbol")}}。
 
 ### 返回值
 
-用来表示指定的属性名是否可枚举的{{jsxref("Boolean", "布尔值")}}。
+一个布尔值，指示指定的属性是否可枚举并且是对象自有的属性。
 
 ## 描述
 
-每个对象都有一个 `propertyIsEnumerable` 方法。此方法可以确定对象中指定的属性是否可以被 {{jsxref("Statements/for...in", "for...in")}} 循环枚举，但是通过原型链继承的属性除外。如果对象没有指定的属性，则此方法返回 `false`。
+所有继承自 `Object.prototype`（即除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外的所有对象）都继承了 `propertyIsEnumerable()` 方法。该方法判断指定的属性（字符串或 symbol 值）是否是对象的可枚举自有属性。如果对象没有指定的属性，则该方法返回 `false`。
+
+此方法等价于 [`Object.getOwnPropertyDescriptor(obj, prop)?.enumerable ?? false`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)。
 
 ## 示例
 
-### `propertyIsEnumerable` 方法的基本用法
+### 使用 propertyIsEnumerable()
 
-下面的例子演示了 `propertyIsEnumerable` 方法在普通对象和数组上的基本用法：
+以下示例演示了在对象和数组上使用 `propertyIsEnumerable()`。
 
 ```js
-var o = {};
-var a = [];
-o.prop = 'is enumerable';
-a[0] = 'is enumerable';
+const o = {};
+const a = [];
+o.prop = "是可枚举的";
+a[0] = "是可枚举的";
 
-o.propertyIsEnumerable('prop'); // 返回 true
-a.propertyIsEnumerable(0);      // 返回 true
+o.propertyIsEnumerable("prop"); // true
+a.propertyIsEnumerable(0); // true
 ```
 
 ### 用户自定义对象和内置对象
 
-下面的例子演示了用户自定义对象和内置对象上属性可枚举性的区别。
+大多数内置属性默认情况下是不可枚举的，而用户创建的对象属性通常是可枚举的，除非明确指定为不可枚举。
 
 ```js
-var a = ['is enumerable'];
+const a = ["是可枚举的"];
 
-a.propertyIsEnumerable(0);        // 返回 true
-a.propertyIsEnumerable('length'); // 返回 false
+a.propertyIsEnumerable(0); // true
+a.propertyIsEnumerable("length"); // false
 
-Math.propertyIsEnumerable('random'); // 返回 false
-this.propertyIsEnumerable('Math');   // 返回 false
+Math.propertyIsEnumerable("random"); // false
+globalThis.propertyIsEnumerable("Math"); // false
 ```
 
-### 自身属性和继承属性
+### 自有属性和继承属性
+
+只有可枚举自有属性会令 `propertyIsEnumerable()` 返回 `true`，尽管 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环会访问所有可枚举属性，包括继承的属性。
 
 ```js
-var a = [];
-a.propertyIsEnumerable('constructor'); // 返回 false
+const o1 = {
+  enumerableInherited: "是可枚举的",
+};
+Object.defineProperty(o1, "nonEnumerableInherited", {
+  value: "是不可枚举的",
+  enumerable: false,
+});
+const o2 = {
+  // o1 是 o2 的原型
+  __proto__: o1,
+  enumerableOwn: "是可枚举的",
+};
+Object.defineProperty(o2, "nonEnumerableOwn", {
+  value: "是不可枚举的",
+  enumerable: false,
+});
 
-function firstConstructor() {
-  this.property = 'is not enumerable';
-}
+o2.propertyIsEnumerable("enumerableInherited"); // false
+o2.propertyIsEnumerable("nonEnumerableInherited"); // false
+o2.propertyIsEnumerable("enumerableOwn"); // true
+o2.propertyIsEnumerable("nonEnumerableOwn"); // false
+```
 
-firstConstructor.prototype.firstMethod = function() {};
+### 测试 Symbol 属性
 
-function secondConstructor() {
-  this.method = function method() { return 'is enumerable'; };
-}
+`propertyIsEnumerable()` 也支持 {{jsxref("Symbol")}} 属性。请注意，大多数枚举方法只访问字符串属性；当使用 {{jsxref("Object.assign()")}} 或[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)时，symbol 属性的可枚举性才有用。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
-secondConstructor.prototype = new firstConstructor;
-secondConstructor.prototype.constructor = secondConstructor;
+```js
+const sym = Symbol("可枚举的");
+const sym2 = Symbol("不可枚举的");
+const o = {
+  [sym]: "是可枚举的",
+};
+Object.defineProperty(o, sym2, {
+  value: "是不可枚举的",
+  enumerable: false,
+});
 
-var o = new secondConstructor();
-o.arbitraryProperty = 'is enumerable';
+o.propertyIsEnumerable(sym); // true
+o.propertyIsEnumerable(sym2); // false
+```
 
-o.propertyIsEnumerable('arbitraryProperty'); // 返回 true
-o.propertyIsEnumerable('method');            // 返回 true
-o.propertyIsEnumerable('property');          // 返回 false
+### 在 null 原型对象上使用
 
-o.property = 'is enumerable';
+由于 `null` 原型对象不从 `Object.prototype` 继承，它们不会继承 `propertyIsEnumerable()` 方法。你必须使用该对象作为 `this` 来调用 `Object.prototype.propertyIsEnumerable`。
 
-o.propertyIsEnumerable('property');          // 返回 true
+```js
+const o = {
+  __proto__: null,
+  enumerableOwn: "是可枚举的",
+};
 
-// 之所以这些会返回 false，是因为，在原型链上 propertyIsEnumerable 不被考虑
-// (尽管最后两个在 for-in 循环中可以被循环出来)。
-o.propertyIsEnumerable('prototype');   // 返回 false (根据 JS 1.8.1/FF3.6)
-o.propertyIsEnumerable('constructor'); // 返回 false
-o.propertyIsEnumerable('firstMethod'); // 返回 false
+o.propertyIsEnumerable("enumerableOwn"); // TypeError: o.propertyIsEnumerable is not a function
+Object.prototype.propertyIsEnumerable.call(o, "enumerableOwn"); // true
+```
+
+或者，你也可以使用 {{jsxref("Object.getOwnPropertyDescriptor()")}}，它也有助于区分不存在的属性和实际上不可枚举的属性。
+
+```js
+const o = {
+  __proto__: null,
+  enumerableOwn: "是可枚举的",
+};
+
+Object.getOwnPropertyDescriptor(o, "enumerableOwn")?.enumerable; // true
+Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
 ```
 
 ## 规范
@@ -103,9 +141,9 @@ o.propertyIsEnumerable('firstMethod'); // 返回 false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [属性的可枚举性和所有权](/zh-CN/docs/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

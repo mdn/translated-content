@@ -63,7 +63,7 @@ slug: Web/API/AudioNode/channelCountMode
 
 ```js
 var oscillator = audioCtx.createOscillator();
-oscillator.channelCountMode = 'explicit';
+oscillator.channelCountMode = "explicit";
 ```
 
 ### 값
@@ -83,7 +83,7 @@ var gainNode = audioCtx.createGain();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-oscillator.channelCountMode = 'explicit';
+oscillator.channelCountMode = "explicit";
 ```
 
 ## 명세서

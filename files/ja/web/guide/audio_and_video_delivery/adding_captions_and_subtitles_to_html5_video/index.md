@@ -45,11 +45,24 @@ As mentioned above, we need to make use of the new HTML5 `<track>` element to ad
 
 ```html
 <video id="video" controls preload="metadata">
-   <source src="video/sintel-short.mp4" type="video/mp4">
-   <source src="video/sintel-short.webm" type="video/webm">
-   <track label="English" kind="subtitles" srclang="en" src="captions/vtt/sintel-en.vtt" default>
-   <track label="Deutsch" kind="subtitles" srclang="de" src="captions/vtt/sintel-de.vtt">
-   <track label="Español" kind="subtitles" srclang="es" src="captions/vtt/sintel-es.vtt">
+  <source src="video/sintel-short.mp4" type="video/mp4" />
+  <source src="video/sintel-short.webm" type="video/webm" />
+  <track
+    label="English"
+    kind="subtitles"
+    srclang="en"
+    src="captions/vtt/sintel-en.vtt"
+    default />
+  <track
+    label="Deutsch"
+    kind="subtitles"
+    srclang="de"
+    src="captions/vtt/sintel-de.vtt" />
+  <track
+    label="Español"
+    kind="subtitles"
+    srclang="es"
+    src="captions/vtt/sintel-es.vtt" />
 </video>
 ```
 
@@ -65,18 +78,18 @@ In addition to adding the `<track>` elements, we have also added a new button to
 
 ```html
 <div id="video-controls" class="controls" data-state="hidden">
-   <button id="playpause" type="button" data-state="play">Play/Pause</button>
-   <button id="stop" type="button" data-state="stop">Stop</button>
-   <div class="progress">
-      <progress id="progress" value="0" min="0">
-         <span id="progress-bar"></span>
-      </progress>
-   </div>
-   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-   <button id="volinc" type="button" data-state="volup">Vol+</button>
-   <button id="voldec" type="button" data-state="voldown">Vol-</button>
-   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
-   <button id="subtitles" type="button" data-state="subtitles">CC</button>
+  <button id="playpause" type="button" data-state="play">Play/Pause</button>
+  <button id="stop" type="button" data-state="stop">Stop</button>
+  <div class="progress">
+    <progress id="progress" value="0" min="0">
+      <span id="progress-bar"></span>
+    </progress>
+  </div>
+  <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+  <button id="volinc" type="button" data-state="volup">Vol+</button>
+  <button id="voldec" type="button" data-state="voldown">Vol-</button>
+  <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+  <button id="subtitles" type="button" data-state="subtitles">CC</button>
 </div>
 ```
 
@@ -88,14 +101,14 @@ No image is used for the captions button, so it is simply styled as:
 
 ```css
 .controls button[data-state="subtitles"] {
-    height:85%;
-    text-indent:0;
-    font-size:16px;
-    font-size:1rem;
-    font-weight:bold;
-    color:#666;
-    background:#000;
-    border-radius:2px;
+  height: 85%;
+  text-indent: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  background: #000;
+  border-radius: 2px;
 }
 ```
 
@@ -112,14 +125,14 @@ Browsers do vary as to what they support, so we will be attempting to bring a mo
 As with all the other buttons, one of the first things we need to do is store a handle to the subtitles' button:
 
 ```js
-var subtitles = document.getElementById('subtitles');
+var subtitles = document.getElementById("subtitles");
 ```
 
 We also initially turn off all subtitles, in case the browser turns any of them on by default:
 
 ```js
 for (var i = 0; i < video.textTracks.length; i++) {
-   video.textTracks[i].mode = 'hidden';
+  video.textTracks[i].mode = "hidden";
 }
 ```
 
@@ -138,14 +151,20 @@ All we need to do is to go through the video's `textTracks`, reading their prope
 ```js
 var subtitlesMenu;
 if (video.textTracks) {
-   var df = document.createDocumentFragment();
-   var subtitlesMenu = df.appendChild(document.createElement('ul'));
-   subtitlesMenu.className = 'subtitles-menu';
-   subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
-   for (var i = 0; i < video.textTracks.length; i++) {
-      subtitlesMenu.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
-   }
-   videoContainer.appendChild(subtitlesMenu);
+  var df = document.createDocumentFragment();
+  var subtitlesMenu = df.appendChild(document.createElement("ul"));
+  subtitlesMenu.className = "subtitles-menu";
+  subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
+  for (var i = 0; i < video.textTracks.length; i++) {
+    subtitlesMenu.appendChild(
+      createMenuItem(
+        "subtitles-" + video.textTracks[i].language,
+        video.textTracks[i].language,
+        video.textTracks[i].label,
+      ),
+    );
+  }
+  videoContainer.appendChild(subtitlesMenu);
 }
 ```
 
@@ -155,37 +174,36 @@ The creation of each list item and button is done by the `createMenuItem()` func
 
 ```js
 var subtitleMenuButtons = [];
-var createMenuItem = function(id, lang, label) {
-   var listItem = document.createElement('li');
-   var button = listItem.appendChild(document.createElement('button'));
-   button.setAttribute('id', id);
-   button.className = 'subtitles-button';
-   if (lang.length > 0) button.setAttribute('lang', lang);
-   button.value = label;
-   button.setAttribute('data-state', 'inactive');
-   button.appendChild(document.createTextNode(label));
-   button.addEventListener('click', function(e) {
-      // Set all buttons to inactive
-      subtitleMenuButtons.map(function(v, i, a) {
-         subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
-      });
-      // Find the language to activate
-      var lang = this.getAttribute('lang');
-      for (var i = 0; i < video.textTracks.length; i++) {
-         // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
-         if (video.textTracks[i].language == lang) {
-            video.textTracks[i].mode = 'showing';
-            this.setAttribute('data-state', 'active');
-         }
-         else {
-            video.textTracks[i].mode = 'hidden';
-         }
+var createMenuItem = function (id, lang, label) {
+  var listItem = document.createElement("li");
+  var button = listItem.appendChild(document.createElement("button"));
+  button.setAttribute("id", id);
+  button.className = "subtitles-button";
+  if (lang.length > 0) button.setAttribute("lang", lang);
+  button.value = label;
+  button.setAttribute("data-state", "inactive");
+  button.appendChild(document.createTextNode(label));
+  button.addEventListener("click", function (e) {
+    // Set all buttons to inactive
+    subtitleMenuButtons.map(function (v, i, a) {
+      subtitleMenuButtons[i].setAttribute("data-state", "inactive");
+    });
+    // Find the language to activate
+    var lang = this.getAttribute("lang");
+    for (var i = 0; i < video.textTracks.length; i++) {
+      // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
+      if (video.textTracks[i].language == lang) {
+        video.textTracks[i].mode = "showing";
+        this.setAttribute("data-state", "active");
+      } else {
+        video.textTracks[i].mode = "hidden";
       }
-      subtitlesMenu.style.display = 'none';
-   });
-   subtitleMenuButtons.push(button);
-   return listItem;
-}
+    }
+    subtitlesMenu.style.display = "none";
+  });
+  subtitleMenuButtons.push(button);
+  return listItem;
+};
 ```
 
 This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by simply setting the required subtlte's `mode` attribute to `showing`, and setting the others to `hidden`.
@@ -195,10 +213,11 @@ Once the menu is built, it is then inserted into the DOM at the bottom of the vi
 Initially the menu is hidden by default, so an event listener needs to be added to our subtitles button to toggle it:
 
 ```js
-subtitles.addEventListener('click', function(e) {
-   if (subtitlesMenu) {
-      subtitlesMenu.style.display = (subtitlesMenu.style.display == 'block' ? 'none' : 'block');
-   }
+subtitles.addEventListener("click", function (e) {
+  if (subtitlesMenu) {
+    subtitlesMenu.style.display =
+      subtitlesMenu.style.display == "block" ? "none" : "block";
+  }
 });
 ```
 
@@ -208,31 +227,31 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 ```css
 .subtitles-menu {
-    display:none;
-    position:absolute;
-    bottom:14.8%;
-    right:20px;
-    background:#666;
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    width:100px;
-    padding:10px;
+  display: none;
+  position: absolute;
+  bottom: 14.8%;
+  right: 20px;
+  background: #666;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  padding: 10px;
 }
 
 .subtitles-menu li {
-    padding:0;
-    text-align:center;
+  padding: 0;
+  text-align: center;
 }
 
 .subtitles-menu li button {
-    border:none;
-    background:#000;
-    color:#fff;
-    cursor:pointer;
-    width:90%;
-    padding:2px 5px;
-    border-radius:2px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  width: 90%;
+  padding: 2px 5px;
+  border-radius: 2px;
 }
 ```
 
@@ -256,7 +275,7 @@ For example, to change the text colour of the text track cues you can write:
 
 ```css
 ::cue {
-   color:#ccc;
+  color: #ccc;
 }
 ```
 
@@ -271,9 +290,9 @@ If the WebVTT file uses [voice spans](http://dev.w3.org/html5/webvtt/#dfn-webvtt
 Then this specific 'voice' will be stylable like so:
 
 ```css
-::cue(v[voice='Test']) {
-   color:#fff;
-   background:#0095dd;
+::cue(v[voice="Test"]) {
+  color: #fff;
+  background: #0095dd;
 }
 ```
 

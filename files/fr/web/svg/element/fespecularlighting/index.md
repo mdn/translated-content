@@ -1,12 +1,6 @@
 ---
 title: <feSpecularLighting>
 slug: Web/SVG/Element/feSpecularLighting
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-  - SVG Light Source
-translation_of: Web/SVG/Element/feSpecularLighting
 ---
 
 {{SVGRef}}

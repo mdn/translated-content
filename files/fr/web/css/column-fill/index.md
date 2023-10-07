@@ -1,11 +1,6 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/column-fill
 ---
 
 {{CSSRef}}
@@ -54,7 +49,7 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 ```css
 .exemple {
   border: 10px solid #000000;
-  column-count:3;
+  column-count: 3;
   column-fill: balance;
 }
 ```
@@ -63,16 +58,12 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 
 ```html
 <p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc
-  jamais plus vieille que je ne le suis maintenant ?
-  D’un côté cela aura ses avantages, ne jamais être
-  une vieille femme. Mais alors avoir toujours des
-  leçons à apprendre ! Oh, je n’aimerais pas cela du
-  tout. »
-  « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ?
-  Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »
+  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
+  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
+  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
+  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
+  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
+  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
 </p>
 ```
 

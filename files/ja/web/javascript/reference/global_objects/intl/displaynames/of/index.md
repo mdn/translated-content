@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 ## 構文
 
 ```js
-of(code)
+of(code);
 ```
 
 ### 引数
@@ -25,7 +25,7 @@ of(code)
 
     - type が "region" である場合、コードは [ISO-3166 地域の 2 文字コード](https://www.iso.org/iso-3166-country-codes.html)または [three digits UN M49 Geographic Regions](https://unstats.un.org/unsd/methodology/m49/) である必要があります。
     - type が "script" である場合、コードは [ISO-15924 文字体系の 4 文字コード](https://unicode.org/iso15924/iso15924-codes.html)である必要があります。
-    - type が "language" である場合、コードは _languageCode_ \["-" _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ ) の形である必要があり、これは [UTS 35's Unicode Language and Locale Identifiers grammar](https://unicode.org/reports/tr35/#Unicode_language_identifier) の unicode_language_id の構文です。 _languageCode_ は 2 文字の ISO 639-1 言語コードまたは 3 文字の ISO 639-2 言語コードです。
+    - type が "language" である場合、コードは _languageCode_ \["-" _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ ) の形である必要があり、これは [UTS 35's Unicode Language and Locale Identifiers grammar](https://unicode.org/reports/tr35/#Unicode_language_identifier) の unicode\_language\_id の構文です。 _languageCode_ は 2 文字の ISO 639-1 言語コードまたは 3 文字の ISO 639-2 言語コードです。
     - type が "currency" である場合、コードは [3 文字の ISO 4217 通貨コード](https://www.iso.org/iso-4217-currency-codes.html)である必要があります。
 
 ### 返値
@@ -37,14 +37,14 @@ of(code)
 ### of メソッドの使用
 
 ```js
-let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
-regionNames.of('419'); // "Latin America"
+let regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+regionNames.of("419"); // "Latin America"
 
-let languageNames = new Intl.DisplayNames(['en'], {type: 'language'});
-languageNames.of('fr'); // "French"
+let languageNames = new Intl.DisplayNames(["en"], { type: "language" });
+languageNames.of("fr"); // "French"
 
-let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
-currencyNames.of('EUR'); // "Euro"
+let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
+currencyNames.of("EUR"); // "Euro"
 ```
 
 ## 仕様書

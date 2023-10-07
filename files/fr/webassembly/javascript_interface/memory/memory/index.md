@@ -1,9 +1,6 @@
 ---
 title: Constructeur WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory/Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
-browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
 
 {{WebAssemblySidebar}}
@@ -15,7 +12,7 @@ Une mémoire créée par du code JavaScript ou WebAssembly sera accessible et mo
 ## Syntaxe
 
 ```js
-new WebAssembly.Memory(descripteurMemoire)
+new WebAssembly.Memory(descripteurMemoire);
 ```
 
 ### Paramètres
@@ -45,14 +42,15 @@ new WebAssembly.Memory(descripteurMemoire)
 Il existe deux façons d'obtenir un objet `WebAssembly.Memory`. La première consiste à la construire depuis du code JavaScript. Dans l'exemple qui suit, on crée une nouvelle instance d'un objet `Memory` WebAssembly avec une taille initiale de 10 pages (640Ko) et une taille maximale de 100 pages (6,4Mo). Sa propriété [`buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) renverra un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
 La deuxième méthode pour obtenir un objet `WebAssembly.Memory` consiste à l'exporter depuis un module WebAssembly. Dans l'exemple suivant (voir [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub pour le code source, ainsi que [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère et on instancie le bytecode chargé memory.wasm avec la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) tout en important la mémoire créée à la ligne précédente. On stocke ensuite certaines valeurs dans cette mémoire et on exporte une fonction qu'on utilise pour additionner certaines des valeurs.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i < 10; i++) {
     i32[i] = i;
@@ -67,7 +65,11 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 Par défaut, les mémoires WebAssembly ne sont pas partagées. On peut créer une [mémoire partagée](/fr/docs/WebAssembly/Understanding_the_text_format) en passant `shared: true` dans l'objet d'initialisation du constructeur&nbsp;:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+let memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true,
+});
 ```
 
 La propriété `buffer` de l'objet mémoire correspondant renverra alors un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).

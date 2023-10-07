@@ -1,7 +1,6 @@
 ---
 title: Sintaxe
 slug: Web/CSS/Syntax
-original_slug: Web/CSS/sintaxe
 ---
 
 O Objetivo básico da linguagem de folhas de estilo em cascata ([CSS](/pt-BR/CSS)) é permitir que um motor do navegador pinte elementos na página com características específicas como cores, posições, ou decorações. A sintaxe _CSS_ reflete estes objetivos e seus blocos de contrução básicos são:
@@ -29,7 +28,7 @@ Esses blocos são chamados de **blocos de declaração** e as declarações dent
 
 ![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
 
-> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#attr-style).
+> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#style).
 
 ## Regras CSS
 

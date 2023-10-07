@@ -43,8 +43,8 @@ var formData = new FormData(); // Currently empty
 使用 {{domxref("FormData.set")}} 设置键/值：
 
 ```js
-formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("username", "Chris");
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 ## 规范

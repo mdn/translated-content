@@ -1,7 +1,6 @@
 ---
 title: API Console
 slug: Web/API/Console_API
-translation_of: Web/API/Console_API
 ---
 
 {{DefaultAPISidebar("Console API")}}
@@ -26,10 +25,10 @@ La méthode la plus couramment utilisée est [`console.log()`](/fr/docs/Web/API/
 ## Exemples
 
 ```js
-let maChaine = 'Hello world'
+let maChaine = "Hello world";
 
 // Affiche "Hello world" dans la console
-console.log(maChaine)
+console.log(maChaine);
 ```
 
 Consultez [la page de référence de la console](/fr/docs/Web/API/Console#exemples_dutilisation) pour plus d'exemples.

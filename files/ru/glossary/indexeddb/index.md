@@ -1,15 +1,8 @@
 ---
 title: IndexedDB
 slug: Glossary/IndexedDB
-tags:
-  - API
-  - CodingScripting
-  - Database
-  - Glossary
-  - Sql
-translation_of: Glossary/IndexedDB
-original_slug: Глоссарий/IndexedDB
 ---
+
 IndexedDB это Web {{glossary("API")}} интерфейс, который позволяет хранить большие данные внутри браузера. Также используется индексирование для поддержания высоко-производительного поиска по данным. Подобно {{glossary("SQL")}}-основанным [RDBMS](https://ru.wikipedia.org/?oldid=105906743), IndexedDB это транзакционная система базы данных. Но в отличие от [RDBMS](https://ru.wikipedia.org/?oldid=105906743), которая для хранения использует таблицы с фиксированными колонками, IndexedDB использует {{glossary("JavaScript")}} объекты.
 
 ## Смотрите также

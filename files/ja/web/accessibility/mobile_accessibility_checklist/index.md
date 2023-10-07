@@ -52,9 +52,9 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
   ```html
   <h1>最上位の見出し</h1>
-    <h2>副見出し</h2>
-    <h2>別の副見出し</h2>
-      <h3>下位の見出し</h3>
+  <h2>副見出し</h2>
+  <h2>別の副見出し</h2>
+  <h3>下位の見出し</h3>
   ```
 
 - `banner`、`complementary`、`contentinfo`、`main`、`navigation`、`search` のような [ARIA のランドマークロール](https://www.w3.org/TR/wai-aria/#landmark_roles)（英語）は、アプリやドキュメントの構造を説明するために使用**するべきです**（SHOULD）。

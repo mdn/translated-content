@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Object
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 ---
 

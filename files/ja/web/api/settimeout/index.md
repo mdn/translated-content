@@ -1,7 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 l10n:
   sourceCommit: c09b8e9dd0022a33cf84355704ca281d6a5f29f5
 ---
@@ -35,7 +34,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
     なお、どちらの場合も、実際の遅延が想定より長くなることがあります。後述する[遅延が指定値より長い理由](#遅延が指定値より長い理由)をご覧ください。
 
-     また、値が数値でない場合、暗黙のうちに[型強制](/ja/docs/Glossary/Type_coercion)が行われ、数値に変換されることにも注意してください。これは予期しない、驚くべき結果につながる可能性があります。例として、[delay の値が数値でない場合は暗黙に数値に強制される](#delay_の値が数値でない場合は暗黙に数値に強制される)を参照してください。
+    また、値が数値でない場合、暗黙のうちに[型強制](/ja/docs/Glossary/Type_coercion)が行われ、数値に変換されることにも注意してください。これは予期しない、驚くべき結果につながる可能性があります。例として、[delay の値が数値でない場合は暗黙に数値に強制される](#delay_の値が数値でない場合は暗黙に数値に強制される)を参照してください。
 
 - `param1`, …, `paramN` {{optional_inline}}
 
@@ -60,7 +59,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```js example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, "1000")
+}, "1000");
 ```
 
 しかし、多くの場合、暗黙の型強制は予期しない、驚くべき結果をもたらす可能性があります。例えば、以下のコードを実行すると、文字列 `"1 second"` は最終的に数字 `0` に強制され、その結果、コードは遅延ゼロで直ちに実行されます。
@@ -68,7 +67,7 @@ setTimeout(() => {
 ```js example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, "1 second")
+}, "1 second");
 ```
 
 したがって、 _delay_ の値には文字列を使用せず、常に数字を使用してください。
@@ -76,7 +75,7 @@ setTimeout(() => {
 ```js example-good
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, 1000)
+}, 1000);
 ```
 
 ### 非同期関数の動作
@@ -87,15 +86,21 @@ setTimeout(() => {
 以下の例をご覧ください。
 
 ```js
-  setTimeout(() => {console.log("this is the first message")}, 5000);
-  setTimeout(() => {console.log("this is the second message")}, 3000);
-  setTimeout(() => {console.log("this is the third message")}, 1000);
+setTimeout(() => {
+  console.log("this is the first message");
+}, 5000);
+setTimeout(() => {
+  console.log("this is the second message");
+}, 3000);
+setTimeout(() => {
+  console.log("this is the third message");
+}, 1000);
 
-  // 出力:
+// 出力:
 
-  // this is the third message
-  // this is the second message
-  // this is the first message
+// this is the third message
+// this is the second message
+// this is the first message
 ```
 
 最初の関数は、 2 番目の関数を呼び出す前に 5 秒間の「間」を作らないことに注意してください。その代わり、 1 番目の関数が呼び出されますが、実行されるまで 5 秒間待機します。 1 番目の関数が実行を待っている間に 2 番目の関数が呼び出され、 2 番目の関数が実行される前に 3 秒の待ち時間が適用されます。 1 番目の関数も 2 番目の関数もタイマーが終了していないので、 3 番目の関数が呼び出され、先に実行を完了します。その後、 2 番目の関数が続きます。そして、最後に 1 番目の関数のタイマーが終了した後、 1 番目の関数が実行されます。
@@ -111,7 +116,7 @@ setTimeout(() => {
 以下の例をご覧ください。
 
 ```js
-const myArray = ['zero', 'one', 'two'];
+const myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
@@ -123,8 +128,8 @@ myArray.myMethod(1); // "one" と表示
 `myMethod` を呼び出したときに、呼び出しによって `this` が `myArray` に設定されますので、関数内で `this[sProperty]` は `myArray[sProperty]` と等価です。しかし、以下のコードでは動作が異なります。
 
 ```js
-setTimeout(myArray.myMethod, 1.0*1000); // "[object Window]" と 1 秒後に表示
-setTimeout(myArray.myMethod, 1.5*1000, '1'); // "undefined" と 1.5 秒後に表示
+setTimeout(myArray.myMethod, 1.0 * 1000); // "[object Window]" と 1 秒後に表示
+setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // "undefined" と 1.5 秒後に表示
 ```
 
 `myArray.myMethod` 関数を `setTimeout` に渡しており、関数が呼び出されると `this` が前のように設定されず、既定の `window` オブジェクトになります。
@@ -132,8 +137,8 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // "undefined" と 1.5 秒後に表
 Array の {{jsxref("Array.forEach()", "forEach()")}} や {{jsxref("Array.reduce()", "reduce()")}} などのメソッドにあるような、`thisArg` を `setTimeout` に渡すオプションもありません。また以下のように、`this` を設定するために `call` を使用する方法も動作しません。
 
 ```js
-setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // エラー
-setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // 同じエラー
+setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // エラー
+setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // 同じエラー
 ```
 
 #### 解決策
@@ -147,15 +152,19 @@ setTimeout(function () {
   myArray.myMethod();
 }, 2.0 * 1000); // "zero,one,two" と 2 秒後に表示
 setTimeout(function () {
-  myArray.myMethod('1');
+  myArray.myMethod("1");
 }, 2.5 * 1000); // "one" と 2.5 秒後に表示
 ```
 
 代わりにアロー関数も使用することができます。
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0 * 1000); // "zero,one,two" と 2 秒後に表示
-setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // "one" と 2.5 秒後に表示
+setTimeout(() => {
+  myArray.myMethod();
+}, 2.0 * 1000); // "zero,one,two" と 2 秒後に表示
+setTimeout(() => {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // "one" と 2.5 秒後に表示
 ```
 
 ##### bind() の使用
@@ -163,15 +172,15 @@ setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // "one" と 2.5 秒後�
 他に、 {{jsxref("Function.bind()", "bind()")}} を使用して `this` の値をその関数のすべての呼び出しに設定することができます。
 
 ```js
-const myArray = ['zero', 'one', 'two'];
-const myBoundMethod = (function (sProperty) {
-    console.log(arguments.length > 0 ? this[sProperty] : this);
-}).bind(myArray);
+const myArray = ["zero", "one", "two"];
+const myBoundMethod = function (sProperty) {
+  console.log(arguments.length > 0 ? this[sProperty] : this);
+}.bind(myArray);
 
 myBoundMethod(); // "zero,one,two" と表示。関数内で 'this' が myArray に結び付けられているため。
 myBoundMethod(1); // "one" と表示
-setTimeout(myBoundMethod, 1.0*1000); // こちらも結びつけがあるため "zero,one,two" と 1 秒後に表示
-setTimeout(myBoundMethod, 1.5*1000, "1"); // "one" と 1.5 秒後に表示
+setTimeout(myBoundMethod, 1.0 * 1000); // こちらも結びつけがあるため "zero,one,two" と 1 秒後に表示
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // "one" と 1.5 秒後に表示
 ```
 
 ### 文字列リテラルの使用
@@ -186,7 +195,7 @@ setTimeout("console.log('Hello World!');", 500);
 ```js example-good
 // こうすればよい
 setTimeout(() => {
-  console.log('Hello World!');
+  console.log("Hello World!");
 }, 500);
 ```
 
@@ -244,7 +253,9 @@ function pad(number) {
 function logline(now) {
   // log the last timestamp, the new timestamp, and the difference
   const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${now - last}`;
+  newLine.textContent = `${pad(last)}         ${pad(now)}          ${
+    now - last
+  }`;
   document.getElementById("log").appendChild(newLine);
   last = now;
 }
@@ -277,10 +288,10 @@ Firefox は、トラッキングスクリプトとして認識されたスクリ
 
 ```js
 function foo() {
-  console.log('foo has been called');
+  console.log("foo has been called");
 }
 setTimeout(foo, 0);
-console.log('After setTimeout');
+console.log("After setTimeout");
 ```
 
 このコードは、コンソールへ以下のように出力します。
@@ -325,12 +336,12 @@ Internet Explorer、Chrome、Safari、Firefox を含むブラウザーは、内�
 let timeoutID;
 
 function setOutput(outputContent) {
-  document.querySelector('#output').textContent = outputContent;
+  document.querySelector("#output").textContent = outputContent;
 }
 
 function delayedMessage() {
-  setOutput('');
-  timeoutID = setTimeout(setOutput, 2*1000, '本当に遅い！');
+  setOutput("");
+  timeoutID = setTimeout(setOutput, 2 * 1000, "本当に遅い！");
 }
 
 function clearMessage() {

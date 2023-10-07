@@ -1,11 +1,6 @@
 ---
 title: Valeurs et unités CSS
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/CSS_Values_and_Units
-original_slug: Web/CSS/Valeurs_et_unités_CSS
 ---
 
 {{CSSRef}}
@@ -133,8 +128,8 @@ Les unités de longueur relative permettent d'exprimer une distance relative à 
 | `em`   | La taille (corps) de police de l'élément                                                                                                           |
 | `ex`   | La hauteur d'un x avec la police utilisée par l'élément                                                                                            |
 | `cap`  | La hauteur d'une majuscule nominale avec la police utilisée par l'élément                                                                          |
-| `ch`   | La largeur moyenne d'un glyphe étroit et de l'espace alentour pour la police utilisée par l'élément (le glyphe concerné étant “0” (ZERO, U+0030)). |
-| `ic`   | La largeur moyenne d'un glyphe large et de l'espace alentour pour la police utilisée par l'élément (exemple de glyphe “水” ).                      |
+| `ch`   | La largeur moyenne d'un glyphe étroit et de l'espace alentour pour la police utilisée par l'élément (le glyphe concerné étant "0" (ZERO, U+0030)). |
+| `ic`   | La largeur moyenne d'un glyphe large et de l'espace alentour pour la police utilisée par l'élément (exemple de glyphe "水" ).                      |
 | `rem`  | La taille (corps) de police de l'élément racine                                                                                                    |
 | `lh`   | La hauteur de la ligne de l'élément                                                                                                                |
 | `rlh`  | La hauteur de la ligne de l'élément racine                                                                                                         |

@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@match
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues
 ## Syntaxe
 
 ```js
-regexp[Symbol.match](str)
+regexp[Symbol.match](str);
 ```
 
 ### Paramètres
@@ -38,9 +29,9 @@ Un tableau ({{jsxref("Array")}}) qui contient les résultats des correspondances
 Cette méthode est appelée de façon interne lorsqu'on utilise {{jsxref("String.prototype.match()")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
 
 ```js
-'abc'.match(/a/);
+"abc".match(/a/);
 
-/a/[Symbol.match]('abc');
+/a/[Symbol.match]("abc");
 ```
 
 Cette méthode existe afin de permettre d'adapter le comportement de la recherche des correspondances pour les sous-classes de `RegExp`.
@@ -53,9 +44,9 @@ Cette méthode peut être utilisée comme {{jsxref("String.prototype.match()")}}
 
 ```js
 var re = /[0-9]+/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var résultat = re[Symbol.match](str);
-console.log(résultat);  // ["2016", "01", "02"]
+console.log(résultat); // ["2016", "01", "02"]
 ```
 
 ### Utilisation de `@@match` avec une sous-classe
@@ -70,13 +61,13 @@ class MaRegExp extends RegExp {
     return {
       group(n) {
         return résultat[n];
-      }
+      },
     };
   }
 }
 
-var re = new MaRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
-var str = '2016-01-02';
+var re = new MaRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+var str = "2016-01-02";
 var résultat = str.match(re); // String.prototype.match appelle re[@@match].
 console.log(résultat.group(1)); // 2016
 console.log(résultat.group(2)); // 01

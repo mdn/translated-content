@@ -1,14 +1,6 @@
 ---
 title: Управление документами
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-tags:
-  - API
-  - DOM
-  - Изучение
-  - Навигатор
-  - Новичок
-  - Окно
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -40,17 +32,22 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 Мы создали простую страницу примера в [dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Попробуйте открыть это в своём браузере - это очень простая страница, содержащая элемент {{htmlelement("section")}}, внутри которого вы можете найти изображение и абзац со ссылкой внутри. Исходный код HTML выглядит так:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -81,21 +78,21 @@ DOM, с другой стороны, выглядит так:
 2. Добавьте элемент `<script></script>` чуть выше закрывающего тега `</body>`.
 3. Чтобы управлять элементом внутри DOM, вам сначала нужно выбрать его и сохранить ссылку на него внутри переменной. Внутри вашего скриптового элемента добавьте следующую строку:
 
-    ```js
-    let link = document.querySelector('a');
-    ```
+   ```js
+   let link = document.querySelector("a");
+   ```
 
 4. Теперь у нас есть ссылка на элемент, хранящаяся в переменной, мы можем начать её манипулировать с использованием доступных ему свойств и методов (они определены на таких интерфейсах, как {{domxref("HTMLAnchorElement")}} в случае {{htmlelement ("a")}}, его более общий родительский интерфейс {{domxref ("HTMLElement")}} и {{domxref("Node")}} - который представляет все узлы в DOM). Прежде всего, давайте изменим текст внутри ссылки, обновив значение свойства {{domxref("Node.textContent")}}. Добавьте следующую строку ниже предыдущей:
 
-    ```js
-    link.textContent = 'Mozilla Developer Network';
-    ```
+   ```js
+   link.textContent = "Mozilla Developer Network";
+   ```
 
 5. Мы также должны изменить URL-адрес, на который указывает ссылка, чтобы он не попадал в неправильное место при нажатии. Добавьте следующую строку, опять внизу:
 
-    ```js
-    link.href = 'https://developer.mozilla.org';
-    ```
+   ```js
+   link.href = "https://developer.mozilla.org";
+   ```
 
 Обратите внимание, что, как и во многих вещах в JavaScript, существует множество способов выбора элемента и хранения ссылки на него в переменной. {{domxref("Document.querySelector()")}} - рекомендуемый современный подход, который считается удобным, потому что он позволяет вам выбирать элементы с помощью селекторов CSS. Вышеупомянутый запрос `querySelector()` будет соответствовать первому элементу {{htmlelement("a")}}, который появляется в документе. Если вы хотите совместить и делать что-то с несколькими элементами, вы можете использовать {{domxref ("Document.querySelectorAll()")}}, который соответствует каждому элементу документа, который соответствует селектору и сохраняет ссылки на них в массиве [массива](/ru/docs/Learn/JavaScript/First_steps/Arrays)-подобном объекте, называемом NodeList.
 
@@ -112,35 +109,37 @@ DOM, с другой стороны, выглядит так:
 
 1. Возвращаясь к текущему примеру, давайте начнём с захвата ссылки на наш элемент {{htmlelement("section")}} - добавьте следующий код внизу существующего скрипта (сделайте то же самое с другими строками):
 
-    ```js
-    let sect = document.querySelector('section');
-    ```
+   ```js
+   let sect = document.querySelector("section");
+   ```
 
 2. Теперь давайте создадим новый абзац, используя {{domxref("Document.createElement()")}} и передадим ему текстовое содержимое так же, как и раньше:
 
-    ```js
-    let para = document.createElement('p');
-    para.textContent = 'We hope you enjoyed the ride.';
-    ```
+   ```js
+   let para = document.createElement("p");
+   para.textContent = "We hope you enjoyed the ride.";
+   ```
 
 3. Теперь вы можете добавить новый абзац в конце раздела, используя {{domxref("Node.appendChild()")}}:
 
-    ```js
-    sect.appendChild(para);
-    ```
+   ```js
+   sect.appendChild(para);
+   ```
 
 4. Наконец, для этой части, давайте добавим текстовый узел в абзац, где находится ссылка, чтобы оформить предложение красиво. Сначала мы создадим текстовый узел, используя {{domxref("Document.createTextNode()")}}:
 
-    ```js
-    let text = document.createTextNode(' — the premier source for web development knowledge.');
-    ```
+   ```js
+   let text = document.createTextNode(
+     " — the premier source for web development knowledge.",
+   );
+   ```
 
 5. Теперь мы возьмём ссылку на абзац, в котором находится ссылка, и добавим к нему текстовый узел:
 
-    ```js
-    let linkPara = document.querySelector('p');
-    linkPara.appendChild(text);
-    ```
+   ```js
+   let linkPara = document.querySelector("p");
+   linkPara.appendChild(text);
+   ```
 
 Это большая часть того, что вам нужно для добавления узлов в DOM - вы будете использовать эти методы при построении динамических интерфейсов (мы рассмотрим некоторые примеры позже).
 
@@ -180,19 +179,22 @@ linkPara.parentNode.removeChild(linkPara);
 
 1. В качестве примера попробуйте добавить эти строки в наш текущий пример:
 
-    ```js
-    para.style.color = 'white';
-    para.style.backgroundColor = 'black';
-    para.style.padding = '10px';
-    para.style.width = '250px';
-    para.style.textAlign = 'center';
-    ```
+   ```js
+   para.style.color = "white";
+   para.style.backgroundColor = "black";
+   para.style.padding = "10px";
+   para.style.width = "250px";
+   para.style.textAlign = "center";
+   ```
 
 2. Перезагрузите страницу, и вы увидите, что стили были применены к абзацу. Если вы посмотрите на этот параграф в инспекторе [Page Inspector/DOM inspector](/ru/docs/Tools/Page_Inspector) вашего браузера, вы увидите, что эти строки действительно добавляют встроенные стили в документ:
 
-    ```html
-    <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
-    ```
+   ```html
+   <p
+     style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
+     We hope you enjoyed the ride.
+   </p>
+   ```
 
 > **Примечание:** Примечание: Обратите внимание на то, как версии свойств JavaScript стилей CSS пишутся в нижнем регистре верблюжьего стиля (lower camel case), в то время как версии свойств стилей CSS используют дефисы (например, `backgroundColor` и `background-color`). Убедитесь, что вы не перепутали их, иначе это не сработает.
 
@@ -201,23 +203,23 @@ linkPara.parentNode.removeChild(linkPara);
 1. Удалите предыдущие пять строк, добавленных в JavaScript.
 2. Добавьте в свой HTML-код следующее: {{htmlelement("head")}}:
 
-    ```
-    <style>
-    .highlight {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      width: 250px;
-      text-align: center;
-    }
-    </style>
-    ```
+   ```
+   <style>
+   .highlight {
+     color: white;
+     background-color: black;
+     padding: 10px;
+     width: 250px;
+     text-align: center;
+   }
+   </style>
+   ```
 
 3. Теперь мы перейдём к очень полезному методу для общего манипулирования HTML - {{domxref("Element.setAttribute()")}} - это принимает два аргумента, атрибут, который вы хотите установить для элемента, и значение, которое вы хотите для его установки. В этом случае мы укажем имя класса выделения в нашем абзаце:
 
-    ```js
-    para.setAttribute('class', 'highlight');
-    ```
+   ```js
+   para.setAttribute("class", "highlight");
+   ```
 
 4. Обновите свою страницу, и вы не увидите изменений - CSS по-прежнему применяется к абзацу, но на этот раз, предоставив ему класс, который выбран нашим правилом CSS, а не как встроенные стили CSS.
 
@@ -239,30 +241,30 @@ linkPara.parentNode.removeChild(linkPara);
 
 1. Прежде всего, давайте возьмём ссылку на div, а затем возьмём ширину и высоту окна просмотра (внутреннее окно, где отображается ваш документ) и сохраните их в переменных - эти два значения удобно содержатся в {{domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}. Добавьте следующие строки внутри существующего элемента {{htmlelement("script")}}:
 
-    ```js
-    let div = document.querySelector('div');
-    let WIDTH = window.innerWidth;
-    let HEIGHT = window.innerHeight;
-    ```
+   ```js
+   let div = document.querySelector("div");
+   let WIDTH = window.innerWidth;
+   let HEIGHT = window.innerHeight;
+   ```
 
 2. Затем мы динамически изменяем ширину и высоту div, равную ширине окна просмотра. Добавьте следующие две строки ниже своих первых:
 
-    ```js
-    div.style.width = WIDTH + 'px';
-    div.style.height = HEIGHT + 'px';
-    ```
+   ```js
+   div.style.width = WIDTH + "px";
+   div.style.height = HEIGHT + "px";
+   ```
 
 3. Сохраните и попробуйте обновить браузер - теперь вы должны увидеть, что div становится таким же большим, как ваш видовой экран, независимо от того, какой размер экрана вы используете. Если теперь вы попытаетесь изменить размер окна, чтобы увеличить его, вы увидите, что div остаётся одного размера - мы устанавливаем его только один раз.
 4. Как насчёт того, чтобы мы использовали событие, чтобы размер div изменялся при изменении размера окна? Объект {{domxref("Window")}} имеет событие, имеющееся на нем с именем resize, которое запускается каждый раз при изменении размера окна - давайте обратимся к нему через обработчик событий {{domxref("Window.onresize")}} и повторяйте наш размерный код каждый раз, когда он изменяется. Добавьте нижеследующую часть кода:
 
-    ```js
-    window.onresize = function() {
-      WIDTH = window.innerWidth;
-      HEIGHT = window.innerHeight;
-      div.style.width = WIDTH + 'px';
-      div.style.height = HEIGHT + 'px';
-    }
-    ```
+   ```js
+   window.onresize = function () {
+     WIDTH = window.innerWidth;
+     HEIGHT = window.innerHeight;
+     div.style.width = WIDTH + "px";
+     div.style.height = HEIGHT + "px";
+   };
+   ```
 
 > **Примечание:** . Если у вас возникла проблема, посмотрите на наш [законченный пример изменения размера окна](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
 
@@ -290,7 +292,7 @@ linkPara.parentNode.removeChild(linkPara);
 8. Установите текстовое содержимое диапазона на значение входного элемента, которое вы сохранили ранее, и текстовое содержимое кнопки «Удалить».
 9. Добавить элемент списка в качестве дочернего списка.
 10. Прикрепите обработчик события к кнопке удаления, чтобы при щелчке удалял весь элемент списка, внутри которого он находится.
-11. Наконец, используйте метод [`focus()`](/en-US/docs/Web/API/HTMLElement/focus), чтобы сфокусировать входной элемент, готовый для входа в следующий элемент списка покупок.
+11. Наконец, используйте метод [`focus()`](/ru/docs/Web/API/HTMLElement/focus), чтобы сфокусировать входной элемент, готовый для входа в следующий элемент списка покупок.
 
 > **Примечание:** Примечание: Если у вас возникла действительно сложная проблема, взгляните на наши примеры [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 

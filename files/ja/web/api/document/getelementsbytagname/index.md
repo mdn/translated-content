@@ -25,61 +25,62 @@ var elements = document.getElementsByTagName(name);
 ボタンをクリックすると `getElementsByTagName()` を使用して、特定の親 (文書自体または 2 つの {{HTMLElement("div")}} 要素の何れかに囲まれたもの) の子孫の段落要素を数えます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>getElementsByTagName example</title>
-  <script>
-    function getAllParaElems() {
-      var allParas = document.getElementsByTagName('p');
-      var num = allParas.length;
-      alert('この文書には ' + num + ' 個の段落があります');
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>getElementsByTagName example</title>
+    <script>
+      function getAllParaElems() {
+        var allParas = document.getElementsByTagName("p");
+        var num = allParas.length;
+        alert("この文書には " + num + " 個の段落があります");
+      }
 
-    function div1ParaElems() {
-      var div1 = document.getElementById('div1');
-      var div1Paras = div1.getElementsByTagName('p');
-      var num = div1Paras.length;
-      alert('#div1 には ' + num + ' 個の段落があります');
-    }
+      function div1ParaElems() {
+        var div1 = document.getElementById("div1");
+        var div1Paras = div1.getElementsByTagName("p");
+        var num = div1Paras.length;
+        alert("#div1 には " + num + " 個の段落があります");
+      }
 
-    function div2ParaElems() {
-      var div2 = document.getElementById('div2');
-      var div2Paras = div2.getElementsByTagName('p');
-      var num = div2Paras.length;
-      alert('#div2 には' + num + ' 個の段落があります');
-    }
-  </script>
-</head>
-<body style="border: solid green 3px">
-  <p>Some outer text</p>
-  <p>Some outer text</p>
+      function div2ParaElems() {
+        var div2 = document.getElementById("div2");
+        var div2Paras = div2.getElementsByTagName("p");
+        var num = div2Paras.length;
+        alert("#div2 には" + num + " 個の段落があります");
+      }
+    </script>
+  </head>
+  <body style="border: solid green 3px">
+    <p>Some outer text</p>
+    <p>Some outer text</p>
 
-  <div id="div1" style="border: solid blue 3px">
-    <p>Some div1 text</p>
-    <p>Some div1 text</p>
-    <p>Some div1 text</p>
+    <div id="div1" style="border: solid blue 3px">
+      <p>Some div1 text</p>
+      <p>Some div1 text</p>
+      <p>Some div1 text</p>
 
-    <div id="div2" style="border: solid red 3px">
-      <p>Some div2 text</p>
-      <p>Some div2 text</p>
+      <div id="div2" style="border: solid red 3px">
+        <p>Some div2 text</p>
+        <p>Some div2 text</p>
+      </div>
     </div>
-  </div>
 
-  <p>Some outer text</p>
-  <p>Some outer text</p>
+    <p>Some outer text</p>
+    <p>Some outer text</p>
 
-  <button onclick="getAllParaElems();">
-    文書内のすべての p 要素を表示</button><br />
+    <button onclick="getAllParaElems();">文書内のすべての p 要素を表示</button
+    ><br />
 
-  <button onclick="div1ParaElems();">
-    div1 要素内のすべての p 要素を表示</button><br />
+    <button onclick="div1ParaElems();">
+      div1 要素内のすべての p 要素を表示</button
+    ><br />
 
-  <button onclick="div2ParaElems();">
-    div2 要素内のすべての p 要素を表示</button>
-
-</body>
+    <button onclick="div2ParaElems();">
+      div2 要素内のすべての p 要素を表示
+    </button>
+  </body>
 </html>
 ```
 

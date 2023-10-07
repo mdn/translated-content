@@ -1,13 +1,6 @@
 ---
 title: Cas d'utilisation classiques de flexbox
 slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-tags:
-  - CSS
-  - Guide
-  - Intermediate
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 ---
 
 {{CSSRef}}
@@ -107,7 +100,7 @@ On peut également permettre aux deux côtés de grandir/rétrécir proportionne
 }
 ```
 
-On pourrait aussi utiliser différents coefficients {{cssxref("flex-grow")}} pour chaque côté. Utiliser `flex: 1` pour le côté avec l'image et `flex: 3` pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base `flex-basis`  `0` et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de `flex-grow`. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
+On pourrait aussi utiliser différents coefficients {{cssxref("flex-grow")}} pour chaque côté. Utiliser `flex: 1` pour le côté avec l'image et `flex: 3` pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base `flex-basis` `0` et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de `flex-grow`. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
 
 ```css
 .media .content {

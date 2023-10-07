@@ -1,16 +1,6 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorkers
-  - open
-translation_of: Web/API/CacheStorage/open
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -24,7 +14,7 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr
 ## Syntaxe
 
 ```js
-caches.open(cacheName).then(function(cache) {
+caches.open(cacheName).then(function (cache) {
   // faire quelque-chose avec le cache
 });
 ```

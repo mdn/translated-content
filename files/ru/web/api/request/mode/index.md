@@ -1,7 +1,6 @@
 ---
 title: Request.mode
 slug: Web/API/Request/mode
-translation_of: Web/API/Request/mode
 ---
 
 {{APIRef("Fetch")}}
@@ -31,14 +30,14 @@ var myMode = request.mode;
 
 Например, когда объект `Request` создаётся с помощью конструктора {{domxref("Request.Request")}}, свойство `mode` этого `Request` будет иметь значение `cors`.
 
-Однако, запросы созданные не конструктором {{domxref("Request.Request")}}, будут использовать режим `no-cors`. Например, для встроенных ресурсов, где запрос инициируется из разметки, если отсутствует атрибут [`crossorigin`](/en-US/docs/Web/HTML/CORS_settings_attributes), то запрос в большинстве случаев будет выполнен в режиме `no-cors` — то есть для элементов {{HTMLElement("link")}} или {{HTMLElement("script")}} (кроме использования с модулями), или {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, или {{HTMLElement("iframe")}}.
+Однако, запросы созданные не конструктором {{domxref("Request.Request")}}, будут использовать режим `no-cors`. Например, для встроенных ресурсов, где запрос инициируется из разметки, если отсутствует атрибут [`crossorigin`](/ru/docs/Web/HTML/CORS_settings_attributes), то запрос в большинстве случаев будет выполнен в режиме `no-cors` — то есть для элементов {{HTMLElement("link")}} или {{HTMLElement("script")}} (кроме использования с модулями), или {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, или {{HTMLElement("iframe")}}.
 
 ## Пример
 
 В этой части кода создаётся новый запрос (для взятия файла картинки) через конструктор {{domxref("Request.Request()")}}, затем полученный режим сохраняется в переменной:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myMode = myRequest.mode; // вернёт "cors" по умолчанию
 ```
 

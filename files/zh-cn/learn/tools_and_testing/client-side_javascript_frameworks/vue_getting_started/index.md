@@ -139,14 +139,14 @@ yarn global add @vue/cli
 对于 `App.vue`，我们的默认导出将组件的名称设置为 `App` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此你需要将其导入并注册到使用它们的每个组件文件中。这对于拆包/摇树优化（tree shaking）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
   components: {
     // 可以在这里本地注册组件。
     HelloWorld,
-  }
+  },
 };
 ```
 
@@ -206,7 +206,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 

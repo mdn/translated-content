@@ -1,5 +1,5 @@
 ---
-title: '<h1>-<h6> : les éléments de titre de section'
+title: "<h1>-<h6> : les éléments de titre de section"
 slug: Web/HTML/Element/Heading_Elements
 l10n:
   sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16

@@ -65,7 +65,8 @@ l10n:
 
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> フォント
+  <li id="mb1_menu1" tabindex="-1">
+    フォント
     <ul id="fontMenu" title="フォント" tabindex="-1">
       <li id="sans-serif" tabindex="-1">サンセリフ</li>
       <li id="serif" tabindex="-1">セリフ</li>
@@ -73,14 +74,16 @@ l10n:
       <li id="fantasy" tabindex="-1">ファンタジー</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> スタイル
+  <li id="mb1_menu2" tabindex="-1">
+    スタイル
     <ul id="styleMenu" title="スタイル" tabindex="-1">
       <li id="italic" tabindex="-1">斜体</li>
       <li id="bold" tabindex="-1">太字</li>
       <li id="underline" tabindex="-1">下線</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> 位置揃え
+  <li id="mb1_menu3" tabindex="-1">
+    位置揃え
     <ul id="justificationMenu" title="位置揃え" tabindex="-1">
       <li id="left" tabindex="-1">左</li>
       <li id="center" tabindex="-1">中央</li>

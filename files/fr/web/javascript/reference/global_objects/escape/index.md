@@ -1,11 +1,6 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-tags:
-  - Deprecated
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/escape
-original_slug: Web/JavaScript/Reference/Objets_globaux/escape
 ---
 
 {{jsSidebar("Objects")}}
@@ -22,7 +17,7 @@ La fonction **`escape()`** permet de renvoyer une nouvelle chaîne de caractère
 ## Syntaxe
 
 ```js
-escape(str)
+escape(str);
 ```
 
 ### Paramètres
@@ -43,12 +38,12 @@ La forme hexadécimale des caractères dont la valeur du codet est inférieure �
 ## Exemples
 
 ```js
-escape("abc123");     // "abc123"
-escape("äöü");        // "%E4%F6%FC"
-escape("ć");          // "%u0107"
+escape("abc123"); // "abc123"
+escape("äöü"); // "%E4%F6%FC"
+escape("ć"); // "%u0107"
 
 // caractères spéciaux
-escape("@*_+-./");    // "@*_+-./"
+escape("@*_+-./"); // "@*_+-./"
 ```
 
 ## Spécifications

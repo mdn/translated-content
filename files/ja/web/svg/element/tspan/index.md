@@ -8,14 +8,23 @@ slug: Web/SVG/Element/tspan
 SVG の **`<tspan>`** 要素は、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の `<tspan>` 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text  { font: italic 12px serif; }
-    tspan { font: bold 10px sans-serif; fill: red; }
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
   </style>
 
   <text x="10" y="30" class="small">

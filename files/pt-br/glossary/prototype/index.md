@@ -1,7 +1,6 @@
 ---
 title: Prototype
 slug: Glossary/Prototype
-original_slug: Glossario/Prototype
 ---
 
 A prototype é um modelo que exibe a aparência e o comportamento de um aplicativo ou produto no início do ciclo de vida do desenvolvimento.
@@ -12,4 +11,4 @@ See [Inheritance and the prototype chain](/pt-BR/docs/Web/JavaScript/Inheritance
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Software Prototyping")}} on Wikipedia
+- [Software Prototyping](https://en.wikipedia.org/wiki/Software_Prototyping) on Wikipedia

@@ -1,7 +1,6 @@
 ---
 title: window.matchMedia
 slug: Web/API/Window/matchMedia
-translation_of: Web/API/Window/matchMedia
 ---
 
 {{ApiRef}}
@@ -11,7 +10,7 @@ Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats 
 ## Syntaxe
 
 ```js
-mql = window.matchMedia(mediaQueryString)
+mql = window.matchMedia(mediaQueryString);
 ```
 
 Ici, `mediaQueryString` est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.

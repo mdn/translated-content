@@ -1,8 +1,6 @@
 ---
 title: Element.createShadowRoot()
 slug: Web/API/Element/shadowRoot
-translation_of: Web/API/Element/createShadowRoot
-original_slug: Web/API/Element/createShadowRoot
 ---
 
 {{deprecated_header()}}

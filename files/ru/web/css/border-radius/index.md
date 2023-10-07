@@ -1,12 +1,6 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS-свойство
-  - Скругление
-  - Углы
-translation_of: Web/CSS/border-radius
 ---
 
 {{CSSRef}}
@@ -66,7 +60,7 @@ border-radius: unset;
 ### Значения
 
 | _radius_                    | ![all-corner.png](/@api/deki/files/6138/=all-corner.png)                       | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус скругления для всех углов элемента. Может быть указано только одно значение (или одна пара).                    |
-| --------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| --------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _top-left-and-bottom-right_ | ![top-left-bottom-right.png](/@api/deki/files/6141/=top-left-bottom-right.png) | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего левого и нижнего правого угла элемента. Следует использовать синтаксис с двумя значениями.         |
 | _top-right-and-bottom-left_ | ![top-right-bottom-left.png](/@api/deki/files/6143/=top-right-bottom-left.png) | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего правого и нижнего левого угла элемента. Можно использовать синтаксис с двумя или тремя значениями. |
 | _top-left_                  | ![top-left.png](/@api/deki/files/6142/=top-left.png)                           | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для левого верхнего угла элемента. Можно использовать синтаксис с тремя и четырьмя значениями.                  |
@@ -85,20 +79,20 @@ border-radius: unset;
 border-radius: 1em/5em;
 
 /* ... эквивалентно этому: */
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
 border-radius: 4px 3px 6px / 2px 4px;
 
 /* ... эквивалентно этому: */
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ### Формальный синтаксис
@@ -108,39 +102,46 @@ border-bottom-left-radius:  3px 4px;
 ## Примеры
 
 ```html hidden
-  <pre id="example-1">
+<pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
+  </pre
+>
+<pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  </pre>
-  <pre id="example-3">
+  </pre
+>
+<pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
+  </pre
+>
+<pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  </pre>
-  <pre id="example-5">
+  </pre
+>
+<pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  </pre>
-  <pre id="example-6">
+  </pre
+>
+<pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
+  </pre
+>
+<pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  </pre>
+  </pre
+>
 ```
 
 ```css hidden
@@ -204,8 +205,8 @@ pre#example-7 {
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                                   | Комментарий             |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
+| Спецификация                                                          | Статус                          | Комментарий             |
+| --------------------------------------------------------------------- | ------------------------------- | ----------------------- |
 | {{ SpecName('CSS3 Backgrounds', '#border-radius', 'border-radius') }} | {{ Spec2('CSS3 Backgrounds') }} | Изначальное определение |
 
 {{cssinfo}}

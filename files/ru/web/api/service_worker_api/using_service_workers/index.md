@@ -1,9 +1,6 @@
 ---
 title: Использование Service Worker
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-tags:
-  - основы ServiceWorker Workers руководство
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
@@ -63,7 +60,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 try {
   const value = myFunction();
   console.log(value);
-} catch(err) {
+} catch (err) {
   console.log(err);
 }
 ```
@@ -71,11 +68,13 @@ try {
 #### async
 
 ```js
-myFunction().then((value) => {
-  console.log(value);
-}).catch((err) => {
-  console.log(err);
-});
+myFunction()
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 В первом примере код, идущий за вызовом функции `myFunction()`, будет ждать завершения вызова и возврата значения. Во втором примере `myFunction()` возвращает промис для `value`, в этом случае, последующий код сможет выполняться, не дожидаясь завершения основной работы функции. Когда промис разрешится, код, переданный методу `then`, будет выполнен асинхронно.
@@ -90,24 +89,28 @@ myFunction().then((value) => {
 const imgLoad = (url) => {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
+    request.open("GET", url);
+    request.responseType = "blob";
 
     request.onload = () => {
       if (request.status == 200) {
         resolve(request.response);
       } else {
-        reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
+        reject(
+          Error(
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
+        );
       }
     };
 
     request.onerror = () => {
-      reject(Error('There was a network error.'));
+      reject(Error("There was a network error."));
     };
 
     request.send();
   });
-}
+};
 ```
 
 Мы возвращаем новый промис, созданный конструктором `Promise()`, который в качестве аргумента принимает функцию с параметрами `resolve` и `reject`. Где-то внутри функции мы должны определить случаи, при которых промис должен быть разрешён или отклонён, — в нашем случае, в зависимости от того, вернулся ли статус 200 ОК или нет, будут вызваны `resolve` в случае успеха или `reject` при неудаче. Последующее содержимое этой функции — вполне стандартное XHR-наполнение, поэтому на данный момент не стоит о нем волноваться.
@@ -115,16 +118,19 @@ const imgLoad = (url) => {
 Вызывая функцию `imgLoad()`, мы ожидаемо передаём в качестве параметра url изображения, которое хотим загрузить, но далее код немного отличается:
 
 ```js
-let body = document.querySelector('body');
+let body = document.querySelector("body");
 let myImage = new Image();
 
-imgLoad('myLittleVader.jpg').then((response) => {
-  var imageURL = window.URL.createObjectURL(response);
-  myImage.src = imageURL;
-  body.appendChild(myImage);
-}, (Error) => {
-  console.log(Error);
-});
+imgLoad("myLittleVader.jpg").then(
+  (response) => {
+    var imageURL = window.URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  (Error) => {
+    console.log(Error);
+  },
+);
 ```
 
 После вызова функции мы "цепляем" к ней вызов промис-метода `then()`, которому в качестве параметров передаём две функции - первая будет вызвана в случае выполнения промиса, созданного вызовом функции `imgLoad()`, вторая функция будет вызвана в случае отклонения этого промиса. В случае выполнения мы показываем изображение в элементе `myImage`, который прикрепляем к body (аргументом является `request.response`, помещённый в промис-методе `resolve`); в случае отклонения промиса в консоли будет отображено сообщение об ошибке.
@@ -134,7 +140,7 @@ imgLoad('myLittleVader.jpg').then((response) => {
 > **Примечание:** вы можете также объединять вызов нескольких промис-методов в одну цепочку, как в этом примере:
 > `myPromise().then(success, failure).then(success).catch(failure);`
 
-> **Примечание:** вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald’s) [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
+> **Примечание:** вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald's) [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
 
 ## Демонстрация Service Workers
 
@@ -157,15 +163,17 @@ imgLoad('myLittleVader.jpg').then((response) => {
 Ниже представлен первый блок кода файла app.js. Это точка входа в Service Worker.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
-  .then((reg) => {
-    // регистрация сработала
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch((error) => {
-    // регистрация прошла неудачно
-    console.log('Registration failed with ' + error);
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("./sw-test/sw.js", { scope: "./sw-test/" })
+    .then((reg) => {
+      // регистрация сработала
+      console.log("Registration succeeded. Scope is " + reg.scope);
+    })
+    .catch((error) => {
+      // регистрация прошла неудачно
+      console.log("Registration failed with " + error);
+    });
 }
 ```
 
@@ -210,22 +218,22 @@ if ('serviceWorker' in navigator) {
 Давайте начнём этот раздел посмотрев на фрагмент кода ниже — это [первый блок кода, который вы увидите в нашем сервис-воркере](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L17):
 
 ```js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
+    caches.open("v1").then((cache) => {
       return cache.addAll([
-        './sw-test/',
-        './sw-test/index.html',
-        './sw-test/style.css',
-        './sw-test/app.js',
-        './sw-test/image-list.js',
-        './sw-test/star-wars-logo.jpg',
-        './sw-test/gallery/',
-        './sw-test/gallery/bountyHunters.jpg',
-        './sw-test/gallery/myLittleVader.jpg',
-        './sw-test/gallery/snowTroopers.jpg'
+        "./sw-test/",
+        "./sw-test/index.html",
+        "./sw-test/style.css",
+        "./sw-test/app.js",
+        "./sw-test/image-list.js",
+        "./sw-test/star-wars-logo.jpg",
+        "./sw-test/gallery/",
+        "./sw-test/gallery/bountyHunters.jpg",
+        "./sw-test/gallery/myLittleVader.jpg",
+        "./sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```
@@ -250,20 +258,19 @@ self.addEventListener('install', (event) => {
 Вы можете подключить к сервис-воркеру обработчик события `fetch` и внутри него на объекте события вызвать метод `respondWith()`, чтобы заменить ответы и показать собственную "магию".
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
+self.addEventListener("fetch", (event) => {
+  event
+    .respondWith
     // магия происходит здесь
-  );
+    ();
 });
 ```
 
 Для начала, на каждый сетевой запрос мы можем отдать в ответ ресурс, чей url соответствует запросу:
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-  );
+self.addEventListener("fetch", (event) => {
+  event.respondWith(caches.match(event.request));
 });
 ```
 
@@ -273,38 +280,41 @@ self.addEventListener('fetch', (event) => {
 
 1. Конструктор `{{domxref("Response.Response","Response()")}}` позволяет вам создавать собственные ответы. В данном случае, мы всего лишь возвращаем простую текстовую строку:
 
-    ```js
-    new Response('Hello from your friendly neighbourhood service worker!');
-    ```
+   ```js
+   new Response("Hello from your friendly neighbourhood service worker!");
+   ```
 
-    В этом более сложном объекте Response показано, как вы можете передать набор заголовков в свой ответ, эмулируя стандартный HTTP-ответ. Здесь мы просто сообщаем браузеру, чем является содержимое ответа:
+   В этом более сложном объекте Response показано, как вы можете передать набор заголовков в свой ответ, эмулируя стандартный HTTP-ответ. Здесь мы просто сообщаем браузеру, чем является содержимое ответа:
 
-    ```js
-    new Response('<p>Hello from your friendly neighbourhood service worker!</p>', {
-      headers: { 'Content-Type': 'text/html' }
-    });
-    ```
+   ```js
+   new Response(
+     "<p>Hello from your friendly neighbourhood service worker!</p>",
+     {
+       headers: { "Content-Type": "text/html" },
+     },
+   );
+   ```
 
 2. Если совпадение не было найдено в кеше, вы можете попросить браузер {{domxref("GlobalFetch.fetch","загрузить")}} тот же ресурс, чтобы получить новый файл через обычную сеть, если она доступна:
 
-    ```js
-    fetch(event.request);
-    ```
+   ```js
+   fetch(event.request);
+   ```
 
 3. Если информация, соответствующая запросу, в кеше не найдена, а также сеть не доступна, то вы можете просто ответить на запрос какой-либо страницей по умолчанию, которая хранится в кеше, используя {{domxref("CacheStorage.match","match()")}}:
 
-    ```js
-    caches.match('./fallback.html');
-    ```
+   ```js
+   caches.match("./fallback.html");
+   ```
 
 4. Вы можете получить больше информации о каждом запросе, используя для этого свойства объекта {{domxref("Request")}}, который можно получить как свойство объекта {{domxref("FetchEvent")}}:
 
-    ```js
-    event.request.url
-    event.request.method
-    event.request.headers
-    event.request.body
-    ```
+   ```js
+   event.request.url;
+   event.request.method;
+   event.request.headers;
+   event.request.body;
+   ```
 
 ## Восстановление неудачных запросов
 
@@ -313,11 +323,11 @@ self.addEventListener('fetch', (event) => {
 К счастью, сервис-воркеры имеют структуру основанную на промисах, что делает тривиальной такую обработку и предоставляет большое количество способов успешно обработать запрос:
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request);
-    })
+    }),
   );
 });
 ```
@@ -327,16 +337,19 @@ self.addEventListener('fetch', (event) => {
 Если же мы были достаточно умны, то мы не стали бы просто возвращать сетевой запрос, а сохранили бы его результат в кеше, чтобы иметь возможность получить его в офлайн-режиме. В случае с нашим демо-приложением "Star Wars gallery", это означает, что, если в галерею будет добавлено ещё одно изображение, то оно будет получено и сохранено в кеше:
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        return caches.open('v1').then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
-    })
+      return (
+        resp ||
+        fetch(event.request).then((response) => {
+          return caches.open("v1").then((cache) => {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -348,20 +361,26 @@ self.addEventListener('fetch', (event) => {
 У нас все ещё остаётся единственная проблема - если на какой-либо запрос в кеше не будет найдено соответствие, и в этот момент сеть не доступна, то наш запрос завершится неудачно. Давайте реализуем запасной вариант по умолчанию, при котором пользователь, в описанном случае, будет получать хоть что-нибудь:
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        let responseClone = response.clone();
-        caches.open('v1').then((cache) => {
-          cache.put(event.request, responseClone);
-        });
+    caches
+      .match(event.request)
+      .then((resp) => {
+        return (
+          resp ||
+          fetch(event.request).then((response) => {
+            let responseClone = response.clone();
+            caches.open("v1").then((cache) => {
+              cache.put(event.request, responseClone);
+            });
 
-        return response;
-      });
-    }).catch(() => {
-      return caches.match('./sw-test/gallery/myLittleVader.jpg');
-    })
+            return response;
+          })
+        );
+      })
+      .catch(() => {
+        return caches.match("./sw-test/gallery/myLittleVader.jpg");
+      }),
   );
 });
 ```
@@ -405,17 +424,19 @@ self.addEventListener('install', (event) => {
 Promise, переданный в `waitUntil()`, заблокирует другие события до своего завершения, поэтому можно быть уверенным, что процесс очистки закончится раньше, чем выполнится первое событие `fetch` на основе нового кеша.
 
 ```js
-self.addEventListener('activate', (event) => {
-  var cacheKeeplist = ['v2'];
+self.addEventListener("activate", (event) => {
+  var cacheKeeplist = ["v2"];
 
   event.waitUntil(
     caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cacheKeeplist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+      return Promise.all(
+        keyList.map((key) => {
+          if (cacheKeeplist.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        }),
+      );
+    }),
   );
 });
 ```

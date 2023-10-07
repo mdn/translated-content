@@ -1,8 +1,8 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
-translation_of: Mozilla/Firefox/Releases/31
 ---
+
 {{FirefoxSidebar}}
 
 Хотите помочь документировать Firefox 31? См. [список багов, требующих описания](http://beta.elchi3.de/doctracker/#list=fx&version=31.0), и беритесь за дело!
@@ -58,7 +58,7 @@ translation_of: Mozilla/Firefox/Releases/31
 ### MathML
 
 - Частичная реализация [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), раздел 6.3.6 ({{Bug(407059)}}). Подробнее см. [шрифты для Mozilla-всякого движка MathML](/ru/docs/Mozilla/MathML_Project/Fonts) и [MathML torture test](/ru/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
-- Псевдоэлемент ` :``:-moz-math-stretchy ` удалён ({{Bug(1000879)}}).
+- Псевдоэлемент `::-moz-math-stretchy` удалён ({{Bug(1000879)}}).
 - Если они доступны, юникодовские математические буквенно-цифровые символы используются для полужирных, курсивных и полужирно-курсивных mathvariants ({{Bug(930504)}}).
 
 ### SVG

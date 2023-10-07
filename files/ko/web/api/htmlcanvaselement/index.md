@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`** 인터페이스는 \<canvas> 요소의 레이아웃이나 프레젠테이션을 조작하는 여러 프로퍼티와 메서드들을 제공합니다. 또한 `HTMLCanvasElement` 인터페이스는 {{domxref("HTMLElement")}} 인터페이스의 여러 프로퍼티와 메서드들을 상속받습니다.
@@ -11,11 +12,11 @@ slug: Web/API/HTMLCanvasElement
 _부모객체인 _{{domxref("HTMLElement")}} 로*부터 프로퍼티를 상속받음.*
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 {{htmlattrxref("height", "canvas")}}를 반영하는 양의 정수이며, CSS의 픽셀값으로 해석되어집니다. 속성값이 주어지지 않거나, 음수와 같이 올바르지 않은 값이 주어진 경우에는 기본 값인 150이 사용됩니다.
+  - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 [`height`](/ko/docs/Web/HTML/Element/canvas#height)를 반영하는 양의 정수이며, CSS의 픽셀값으로 해석되어집니다. 속성값이 주어지지 않거나, 음수와 같이 올바르지 않은 값이 주어진 경우에는 기본 값인 150이 사용됩니다.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 {{htmlattrxref("moz-opaque", "canvas")}}를 반영하는 {{jsxref("Boolean")}} 객체입니다. 이는 `<canvas>`에게 반투명이 인자로 사용될지에 대한 여부를 알려줍니다. 만약 반투명 요소가 없다면, `<canvas>`의 성능이 최적화될 수 있습니다.
+  - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 [`moz-opaque`](/ko/docs/Web/HTML/Element/canvas#moz-opaque)를 반영하는 {{jsxref("Boolean")}} 객체입니다. 이는 `<canvas>`에게 반투명이 인자로 사용될지에 대한 여부를 알려줍니다. 만약 반투명 요소가 없다면, `<canvas>`의 성능이 최적화될 수 있습니다.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 {{htmlattrxref("width", "canvas")}}를 반영하는 양의 정수이며, CSS의 픽셀값으로 해석되어집니다. 속성값이 주어지지 않거나, 음수와 같이 올바르지 않은 값이 주어진 경우에는 기본 값인 300이 사용됩니다.
+  - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 [`width`](/ko/docs/Web/HTML/Element/canvas#width)를 반영하는 양의 정수이며, CSS의 픽셀값으로 해석되어집니다. 속성값이 주어지지 않거나, 음수와 같이 올바르지 않은 값이 주어진 경우에는 기본 값인 300이 사용됩니다.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
   - : 는 페이지가 프린트 되는 경우 호출되는 함수입니다. 사용자는 해당 객체에 특정 자바스크립트 함수를 등록함으로써, 만약 프린터가 사용되는 경우 `<canvas>`를 더욱 고해상도로 다시 그리게 할 수 있습니다. 기본적으로 null 값을 갖습니다. [다음의 블로그 글을 참조하세요.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 

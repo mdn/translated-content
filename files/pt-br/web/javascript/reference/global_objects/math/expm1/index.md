@@ -33,9 +33,11 @@ Porque `expm1()` é um método estático de is `Math`, você sempre o usurá com
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
-  return Math.exp(x) - 1;
-};
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## Examples
@@ -44,14 +46,14 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## Specifications
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
+| Specification                                            |
+| -------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
 
 ## Compatibilidade com navegadores

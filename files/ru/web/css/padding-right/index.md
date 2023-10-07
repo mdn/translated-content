@@ -1,10 +1,6 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - CSS-свойство
-translation_of: Web/CSS/padding-right
 ---
 
 {{CSSRef}}
@@ -46,18 +42,22 @@ padding-right: unset;
 ## Examples
 
 ```css
-.content { padding-right: 5%; }
-.sidebox { padding-right: 10px; }
+.content {
+  padding-right: 5%;
+}
+.sidebox {
+  padding-right: 10px;
+}
 ```
 
 ## Specifications
 
-| Specification                                                                                    | Status                                   | Comment                                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-right') }}                 | {{ Spec2('CSS3 Box') }}         | Без изменений.                                        |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-right') }}     | {{ Spec2('CSS3 Transitions') }} | Определяет `padding-right`, как анимируемое свойство. |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right') }} | {{ Spec2('CSS2.1') }}             | Без изменений.                                        |
-| {{ Specname('CSS1', '#padding-right', 'padding-right') }}                     | {{ Spec2('CSS1') }}                 | Исходное определение.                                 |
+| Specification                                                            | Status                          | Comment                                               |
+| ------------------------------------------------------------------------ | ------------------------------- | ----------------------------------------------------- |
+| {{ SpecName('CSS3 Box', '#the-padding', 'padding-right') }}              | {{ Spec2('CSS3 Box') }}         | Без изменений.                                        |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-right') }}   | {{ Spec2('CSS3 Transitions') }} | Определяет `padding-right`, как анимируемое свойство. |
+| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right') }} | {{ Spec2('CSS2.1') }}           | Без изменений.                                        |
+| {{ Specname('CSS1', '#padding-right', 'padding-right') }}                | {{ Spec2('CSS1') }}             | Исходное определение.                                 |
 
 ## Browser compatibility
 

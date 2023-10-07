@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onmouseup
 slug: conflicting/Web/API/Element/mouseup_event
-translation_of: Web/API/GlobalEventHandlers/onmouseup
 original_slug: Web/API/GlobalEventHandlers/onmouseup
 ---
 

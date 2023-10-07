@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 
 ## 语法
 
-```js
+```js-nolint
 isFinite(testValue)
 ```
 
@@ -29,15 +29,14 @@ isFinite 是全局的方法，不与任何对象有关系。
 ## 示例
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true，在更强壮的 Number.isFinite(null) 中将会得到 false
+isFinite(0); // true
+isFinite(2e64); // true，在更强壮的 Number.isFinite(null) 中将会得到 false
 
-
-isFinite("0");       // true，在更强壮的 Number.isFinite('0') 中将会得到 false
+isFinite("0"); // true，在更强壮的 Number.isFinite('0') 中将会得到 false
 ```
 
 ## 规范

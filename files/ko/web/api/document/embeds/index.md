@@ -12,7 +12,7 @@ slug: Web/API/Document/embeds
 ### Syntax
 
 ```js
-nodeList = document.embeds
+nodeList = document.embeds;
 ```
 
 ### 명세서

@@ -42,7 +42,7 @@ appendChild(aChild)
     - 現在のノードが {{domxref("Text")}} であり、親ノードが {{domxref("Document")}} になる場合。
     - 現在のノードが {{domxref("DocumentType")}} であり、その親が {{domxref("Document")}} にならない場合。 _doctype_ は常に _document_ の直下になければならないからです。
     - このノードの親が {{domxref("Document")}} で `aChild` が {{domxref("DocumentFragment")}} であり、複数の {{domxref("Element")}} の子、または {{domxref("Text")}} の子がある場合。
-    -`aChild` を挿入すると {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
+    - `aChild` を挿入すると {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
 
 ## 解説
 

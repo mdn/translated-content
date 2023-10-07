@@ -46,7 +46,7 @@ Há dois modos de criar um objeto `RegExp`: uma notação literal e um construto
 
 ```js
 /ab+c/i;
-new RegExp('ab+c', 'i');
+new RegExp("ab+c", "i");
 ```
 
 A notação literal compila a expressão regular em tempo de execução. Use a notação literal quando a expressão regular permanecerá constante. Por exemplo, se você usar a notação literal para construir a expressão regular usada em um _loop_, a expressão regular não será recompilada a cada iteração
@@ -59,7 +59,7 @@ Quando se usa a função construtora, as regras de escapar em uma string (preced
 
 ```js
 var re = /\w+/;
-var re = new RegExp('\\w+');
+var re = new RegExp("\\w+");
 ```
 
 ## Significado dos caracteres especiais nas expressões regulares
@@ -696,8 +696,8 @@ O seguinte script usa o método {{jsxref("String.prototype.replace()", "replace(
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 ```
 
@@ -708,9 +708,9 @@ Isto retornará "Smith, John".
 O final de linha padrão depende da plataforma utilizada (Unix, Windows, etc.). A divisão(_split_) de linha fornecida neste exemplo funciona com todas as plataformas.
 
 ```js
-var text = 'Um texto\nE mais um pouco\r\nE ainda mais\rEsse é o fim';
+var text = "Um texto\nE mais um pouco\r\nE ainda mais\rEsse é o fim";
 var lines = text.split(/\r\n|\r|\n/);
-console.log(lines) // prints [ 'Um texto', 'E mais um pouco', 'E ainda mais', 'Esse é o fim' ]
+console.log(lines); // prints [ 'Um texto', 'E mais um pouco', 'E ainda mais', 'Esse é o fim' ]
 ```
 
 Note que a ordem dos padrões na expressão regular importa.
@@ -718,7 +718,7 @@ Note que a ordem dos padrões na expressão regular importa.
 ### Exemplo: Usando expressão regular sobre múltiplas linhas
 
 ```js
-var s = 'Please yes\nmake my day!';
+var s = "Please yes\nmake my day!";
 s.match(/yes.*day/);
 // Retorna null
 s.match(/yes[^]*day/);
@@ -730,15 +730,15 @@ s.match(/yes[^]*day/);
 Este exemplo mostra como utilizar a sticky flag em expressões regulares.
 
 ```js
-var text = 'First line\nSecond line';
+var text = "First line\nSecond line";
 var regex = /(\S+) line\n?/y;
 
 var match = regex.exec(text);
-console.log(match[1]);        // prints 'First'
+console.log(match[1]); // prints 'First'
 console.log(regex.lastIndex); // prints '11'
 
 var match2 = regex.exec(text);
-console.log(match2[1]);       // prints 'Second'
+console.log(match2[1]); // prints 'Second'
 console.log(regex.lastIndex); // prints '22'
 
 var match3 = regex.exec(text);
@@ -749,8 +749,12 @@ One can test at run-time whether o sticky flag é supported, using `try { … } 
 
 ```js
 var supports_sticky;
-try { RegExp('', 'y'); supports_sticky = true; }
-catch(e) { supports_sticky = false; }
+try {
+  RegExp("", "y");
+  supports_sticky = true;
+} catch (e) {
+  supports_sticky = false;
+}
 console.log(supports_sticky); // prints 'true'
 ```
 
@@ -759,15 +763,15 @@ console.log(supports_sticky); // prints 'true'
 As mentioned above, `\w` ou `\W` only corresponde ASCII based caracteres; por exemplo, "a" to "z", "A" to "Z", "0" to "9" e "\_". To match caracteres from other languages such como Cyrillic ou Hebrew, use `\uhhhh`, onde "hhhh" é o caractere's Unicode valor em hexadecimal. This exemplo demonstrates how one can separate out Unicode caracteres from uma palavra.
 
 ```js
-var text = 'Образец text на русском языке';
+var text = "Образец text на русском языке";
 var regex = /[\u0400-\u04FF]+/g;
 
 var match = regex.exec(text);
-console.log(match[0]);        // prints 'Образец'
+console.log(match[0]); // prints 'Образец'
 console.log(regex.lastIndex); // prints '7'
 
 var match2 = regex.exec(text);
-console.log(match2[0]);       // prints 'на' [não print 'text']
+console.log(match2[0]); // prints 'на' [não print 'text']
 console.log(regex.lastIndex); // prints '15'
 
 // e assim vai
@@ -778,17 +782,17 @@ Here's an external resource para getting o complete Unicode block range para dif
 ### Exemplo: Extracting subdomain name from URL
 
 ```js
-var url = 'http://xxx.domain.com';
+var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 ```
 
 ## Especificações
 
-| Specification                                                                                    | Status                   | Comment                                            |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                          | Standard                 | Initial definition. Implemented em JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.10', 'RegExp')}}                                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp-regular-expression-objects', 'RegExp')}} | {{Spec2('ES6')}}     |                                                    |
+| Specification                                                           | Status             | Comment                                            |
+| ----------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                                 | Standard           | Initial definition. Implemented em JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.10', 'RegExp')}}                           | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-regexp-regular-expression-objects', 'RegExp')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

@@ -1,7 +1,6 @@
 ---
-title: 'Document: pointerlockchange event'
+title: "Document: pointerlockchange event"
 slug: Web/API/Document/pointerlockchange_event
-original_slug: Web/API/Element/pointerlockchange_event
 ---
 
 {{APIRef}}
@@ -36,8 +35,8 @@ original_slug: Web/API/Element/pointerlockchange_event
 使用 `addEventListener()`:
 
 ```js
-document.addEventListener('pointerlockchange', (event) => {
-  console.log('Pointer lock changed');
+document.addEventListener("pointerlockchange", (event) => {
+  console.log("Pointer lock changed");
 });
 ```
 
@@ -45,7 +44,7 @@ document.addEventListener('pointerlockchange', (event) => {
 
 ```js
 document.onpointerlockchange = (event) => {
-  console.log('Pointer lock changed');
+  console.log("Pointer lock changed");
 };
 ```
 

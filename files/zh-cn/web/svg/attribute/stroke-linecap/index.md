@@ -20,24 +20,40 @@ slug: Web/SVG/Attribute/stroke-linecap
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120"
-     viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="120"
+  height="120"
+  viewPort="0 0 120 120"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <line
+    stroke-linecap="butt"
+    x1="30"
+    y1="30"
+    x2="30"
+    y2="90"
+    stroke="black"
+    stroke-width="20" />
 
-    <line stroke-linecap="butt"
-          x1="30" y1="30" x2="30" y2="90"
-          stroke="black" stroke-width="20"/>
+  <line
+    stroke-linecap="round"
+    x1="60"
+    y1="30"
+    x2="60"
+    y2="90"
+    stroke="black"
+    stroke-width="20" />
 
-    <line stroke-linecap="round"
-          x1="60" y1="30" x2="60" y2="90"
-          stroke="black" stroke-width="20"/>
+  <line
+    stroke-linecap="square"
+    x1="90"
+    y1="30"
+    x2="90"
+    y2="90"
+    stroke="black"
+    stroke-width="20" />
 
-    <line stroke-linecap="square"
-          x1="90" y1="30" x2="90" y2="90"
-          stroke="black" stroke-width="20"/>
-
-    <path d="M30,30 L30,90 M60,30 L60,90 M90,30 L90,90"
-          stroke="white" />
+  <path d="M30,30 L30,90 M60,30 L60,90 M90,30 L90,90" stroke="white" />
 </svg>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Polyfill
 slug: Glossary/Polyfill
-original_slug: Glossario/Polyfill
 ---
 
 Um polyfill é um pedaço de código (geralmente JavaScript na Web) usado para fornecer funcionalidades modernas em navegadores mais antigos que não o suportam nativamente.

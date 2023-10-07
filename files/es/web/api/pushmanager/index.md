@@ -1,65 +1,63 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
+l10n:
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
-The `PushManager` interface of the [Push API](/es/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
+La interfaz **`PushManager`** de la [API Push](/es/docs/Web/API/Push_API) proporciona una forma de recibir notificaciones de servidores de terceros, así como solicitar URL para notificaciones push.
 
-This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushManager")}} property.
+Se accede a esta interfaz a través de la propiedad {{domxref("ServiceWorkerRegistration.pushManager")}}.
 
-> **Nota:** This interface replaces functionality previously offered by the obsolete {{domxref("PushRegistrationManager")}} interface.
+## Propiedades estáticas
 
-## Properties
+- [`PushManager.supportedContentEncodings`](/es/docs/Web/API/PushManager/supportedContentEncodings_static)
+  - : Devuelve una matriz de codificaciones de contenido admitidas que se pueden usar para cifrar la carga útil de un mensaje push.
 
-_None._
-
-## Methods
+## Métodos de instancia
 
 - {{domxref("PushManager.getSubscription()")}}
-  - : Retrieves an existing push subscription. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.
+  - : Recupera una suscripción push existente. Devuelve un objeto {{jsxref("Promise")}} que se resuelve en un objeto {{domxref("PushSubscription")}} que contiene detalles de una suscripción existente. Si no existe una suscripción existente, esto se resuelve en un valor `null`.
 - {{domxref("PushManager.permissionState()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to the permission state of the current {{domxref("PushManager")}}, which will be one of `'granted'`, `'denied'`, or `'default'`.
+  - : Devuelve un {{jsxref("Promise")}} que resuelve el estado de permiso del {{domxref("PushManager")}} actual, que será `'granted'`, `'denied'` o `'prompt'`.
 - {{domxref("PushManager.subscribe()")}}
-  - : Subscribes to a push service. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of a push subscription. A new push subscription is created if the current service worker does not have an existing subscription.
+  - : Se suscribe a un servicio push. Devuelve un objeto {{jsxref("Promise")}} que se resuelve en un objeto {{domxref("PushSubscription")}} que contiene detalles de una suscripción push. Se crea una nueva suscripción push si el trabajador del servicio actual no tiene una suscripción existente.
 
-### Deprecated methods
+### Métodos obsoletos
 
 - {{domxref("PushManager.hasPermission()")}} {{deprecated_inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves to the `PushPermissionStatus` of the requesting webapp, which will be one of `granted`, `denied`, or `default`. Replaced by {{domxref("PushManager.permissionState()")}}.
+  - : Devuelve un {{jsxref("Promise")}} que se resuelve en `PushPermissionStatus` de la aplicación web solicitante, que será `granted`, `denied` o `default`. Reemplazado por {{domxref("PushManager.permissionState()")}}.
 - {{domxref("PushManager.register()")}} {{deprecated_inline}}
-  - : Subscribes to a push subscription. Replaced by {{domxref("PushManager.subscribe()")}}.
+  - : Se suscribe a una suscripción push. Reemplazado por {{domxref("PushManager.subscribe()")}}.
 - {{domxref("PushManager.registrations()")}} {{deprecated_inline}}
-  - : Retrieves existing push subscriptions. Replaced by {{domxref("PushManager.getSubscription()")}}.
+  - : Recupera suscripciones push existentes. Reemplazado por {{domxref("PushManager.getSubscription()")}}.
 - {{domxref("PushManager.unregister()")}} {{deprecated_inline}}
-  - : Unregisters and deletes a specified subscription endpoint. In the updated API, a subscription is unregistered by calling the {{domxref("PushSubscription.unsubscribe()")}} method.
+  - : Anula el registro y elimina un extremo de suscripción especificado. En la API actualizada, se anula el registro de una suscripción llamando al método {{domxref("PushSubscription.unsubscribe()")}}.
 
 ## Example
 
 ```js
-this.onpush = function(event) {
+this.onpush = (event) => {
   console.log(event.data);
-  // From here we can write the data to IndexedDB, send it to any open
-  // windows, display a notification, etc.
-}
+  // Desde aquí podemos escribir los datos en una IndexedDB, enviarlos
+  // a cualquier ventana abierta, mostrar una notificación, etc.
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
-        console.log(pushSubscription.subscriptionId);
+      (pushSubscription) => {
         console.log(pushSubscription.endpoint);
-        // The push subscription details needed by the application
-        // server are now available, and can be sent to it using,
-        // for example, an XMLHttpRequest.
-      }, function(error) {
-        // During development it often helps to log errors to the
-        // console. In a production environment it might make sense to
-        // also report information about errors back to the
-        // application server.
-        console.log(error);
-      }
+        // Los detalles de suscripción push que necesita el servidor
+        // de aplicaciones ahora están disponibles y se pueden enviar
+        // mediante, por ejemplo, XMLHttpRequest.
+      },
+      (error) => {
+        console.error(error);
+      },
     );
   });
 ```
@@ -72,8 +70,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- [Using the Push API](/es/docs/Web/API/Push_API/Using_the_Push_API)
-- [Push API](/es/docs/Web/API/Push_API)
-- [Service Worker API](/es/docs/Web/API/Service_Worker_API)
+- [API Push](/es/docs/Web/API/Push_API)
+- [API de Trabajador de Servicio](/es/docs/Web/API/Service_Worker_API)

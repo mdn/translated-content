@@ -1,13 +1,6 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_VALUE
 ---
 
 {{JSRef}}
@@ -28,9 +21,9 @@ Le code suivant teste si le produit de deux nombres est inférieur ou égal à `
 
 ```js
 if (num1 * num2 <= Number.MAX_VALUE) {
-   func1();
+  func1();
 } else {
-   func2();
+  func2();
 }
 ```
 

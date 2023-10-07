@@ -13,7 +13,7 @@ slug: Web/API/EventSource
 
 一旦连接开启，来自服务端传入的消息会以事件的形式分发至你代码中。如果接收消息中有一个 event 字段，触发的事件与 event 字段的值相同。如果不存在 event 字段，则将触发通用的 {{domxref("EventSource/message_event", "message")}} 事件。
 
-与 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 不同的是，服务器发送事件是单向的。数据信息只能从服务端到发送到客户端（如用户的浏览器）。当不需要以消息形式将数据从客户端发送到服务器时，这使它们成为绝佳的选择。例如，对于处理社交媒体状态更新，新闻提要或将数据传递到[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)机制（如 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 或 [web 存储](/zh-CN/docs/Web/API/Web_Storage_API)）之类的，`EventSource` 无疑是一个有效方案。
+与 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 不同的是，服务器发送事件是单向的。数据消息只能从服务端到发送到客户端（如用户的浏览器）。这使其成为不需要从客户端往服务器发送消息的情况下的最佳选择。例如，对于处理如社交媒体状态更新、消息来源（news feed）或将数据传递到[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)机制（如 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 或 [web 存储](/zh-CN/docs/Web/API/Web_Storage_API)）之类的，`EventSource` 无疑是一个有效方案。
 
 > **警告：** 当**不使用 HTTP/2** 时，服务器发送事件（SSE）受到打开连接数的限制，这个限制是*对于浏览器*的，并且设置为非常低的数字（6），打开多个选项卡时可能会特别痛苦。在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中，这个问题已被标记为“不会修复”。这个限制是每个浏览器和域名的，这意味着你可以在所有标签页中打开 6 个 SSE 连接到 `www.example1.com`，以及另外 6 个 SSE 连接到 `www.example2.com`（来源：[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。当使用 HTTP/2 时，最大并发 *HTTP 流*的数量是由服务器和客户端协商的（默认为 100）。
 

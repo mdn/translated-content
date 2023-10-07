@@ -12,11 +12,11 @@ slug: Web/CSS/text-emphasis-style
 text-emphasis-style: none; /* 圏点なし */
 
 /* <string> 値 */
-text-emphasis-style: 'x';
-text-emphasis-style: '点';
-text-emphasis-style: '\25B2';
-text-emphasis-style: '*';
-text-emphasis-style: 'foo'; /* 使用するべきではない。計算されるか 'f' のみが表示される */
+text-emphasis-style: "x";
+text-emphasis-style: "点";
+text-emphasis-style: "\25B2";
+text-emphasis-style: "*";
+text-emphasis-style: "foo"; /* 使用するべきではない。計算されるか 'f' のみが表示される */
 
 /* キーワード値 */
 text-emphasis-style: filled;

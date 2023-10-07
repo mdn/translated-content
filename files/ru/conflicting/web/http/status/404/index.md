@@ -1,7 +1,6 @@
 ---
-title: '404'
+title: "404"
 slug: conflicting/Web/HTTP/Status/404
-translation_of: Glossary/404
 original_slug: Glossary/404
 ---
 Ошибка 404 — код стандартного ответа, означающий, что {{Glossary("Server", "сервер")}} не может найти запрашиваемый ресурс.

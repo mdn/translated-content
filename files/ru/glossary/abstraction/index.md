@@ -1,15 +1,8 @@
 ---
 title: Абстракция
 slug: Glossary/Abstraction
-tags:
-  - Абстракция
-  - Программирование
-  - Написание скриптов
-  - Глоссарий
-  - Язык программирования
-translation_of: Glossary/Abstraction
-original_slug: Глоссарий/Abstraction
 ---
+
 Абстракция в {{Glossary("computer programming", "программировании")}} — это способ снизить сложность и повысить эффективность проектирования и реализации программного обеспечения за счёт сокрытия технической сложности за более простым {{Glossary("API")}}.
 
 ## Преимущества абстракции
@@ -23,21 +16,21 @@ original_slug: Глоссарий/Abstraction
 
 ```js
 class ImplementAbstraction {
-    // метод присваивает значения внутренним свойствам
-    set(x, y) {
-      this.a = x;
-      this.b = y;
-    }
-
-    display() {
-      console.log('a = ' + this.a);
-      console.log('b = ' + this.b);
-    }
+  // метод присваивает значения внутренним свойствам
+  set(x, y) {
+    this.a = x;
+    this.b = y;
   }
 
-  const obj = new ImplementAbstraction();
-  obj.set(10, 20);
-  obj.display();
-  // a = 10
-  // b = 20
+  display() {
+    console.log("a = " + this.a);
+    console.log("b = " + this.b);
+  }
+}
+
+const obj = new ImplementAbstraction();
+obj.set(10, 20);
+obj.display();
+// a = 10
+// b = 20
 ```

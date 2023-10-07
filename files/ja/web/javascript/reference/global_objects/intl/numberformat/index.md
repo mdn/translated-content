@@ -49,24 +49,24 @@ console.log(new Intl.NumberFormat().format(number));
 var number = 123456.789;
 
 // ドイツではカンマを小数、ピリオドを千単位の区切りに用います
-console.log(new Intl.NumberFormat('de-DE').format(number));
+console.log(new Intl.NumberFormat("de-DE").format(number));
 // → 123.456,789
 
 // ほとんどのアラビア語圏ではアラビア数字を用います
-console.log(new Intl.NumberFormat('ar-EG').format(number));
+console.log(new Intl.NumberFormat("ar-EG").format(number));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // インドでは thousands/lakh/crore 区切りが用いられます
-console.log(new Intl.NumberFormat('en-IN').format(number));
+console.log(new Intl.NumberFormat("en-IN").format(number));
 // → 1,23,456.789
 
 // nu 拡張キーにより漢数字などの番号方式が使えます
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
 // → 一二三,四五六.七八九
 
 // バリ語のようにサポートされないかもしれない言語を用いる場合は
 // フォールバック言語を含めます。次の例ではインドネシア語です。
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 // → 123.456,789
 ```
 
@@ -78,32 +78,48 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 var number = 123456.789;
 
 // 通貨フォーマットを用います
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
 // → 123.456,79 €
 
 // 日本円には小数点以下がありません
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
 // → ￥123,457
 
 // 有効数字を3桁に狭めます
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
 // → 1,23,000
 ```
 
 ### style と unit の使用
 
 ```js
-console.log(new Intl.NumberFormat("pt-PT",  {
-    style: 'unit',
-    unit: "mile-per-hour"
-}).format(50));
+console.log(
+  new Intl.NumberFormat("pt-PT", {
+    style: "unit",
+    unit: "mile-per-hour",
+  }).format(50),
+);
 // → 50 mi/h
 
-console.log((16).toLocaleString('en-GB', {
+console.log(
+  (16).toLocaleString("en-GB", {
     style: "unit",
     unit: "liter",
-    unitDisplay: "long"
-}));
+    unitDisplay: "long",
+  }),
+);
 // → 16 litres
 ```
 

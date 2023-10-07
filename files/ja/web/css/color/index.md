@@ -34,7 +34,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* <hsl()> 値 */
@@ -42,7 +42,7 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* グローバル値 */
@@ -86,17 +86,35 @@ color: unset;
 以下の例はすべて、要素のテキストを赤色にします。
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% 透過 */
-p { color: #ff000080; }
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: #ff000080;
+}
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## 仕様書

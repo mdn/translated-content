@@ -1,9 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-translation_of: Web/CSS/transform-function/translate()
-original_slug: Web/CSS/transform-function/translate()
-browser-compat: css.types.transform-function.translate
 ---
 
 {{CSSRef}}
@@ -120,7 +117,8 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Équivalent à : translateX(10px) ou translate(10px, 0) */
+  /* Équivalent à : translateX(10px) ou translate(10px, 0) */
+  transform: translate(10px);
   background-color: pink;
 }
 ```

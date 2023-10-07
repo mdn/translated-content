@@ -1,5 +1,5 @@
 ---
-title: '::first-letter (:first-letter)'
+title: "::first-letter (:first-letter)"
 slug: Web/CSS/::first-letter
 ---
 
@@ -50,10 +50,16 @@ p::first-letter {
 
 ```html
 <h2>My heading</h2>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est.
+</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
 ```
 
 #### CSS
@@ -87,7 +93,10 @@ h2 + p::first-letter {
 #### HTML
 
 ```html
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
 <p>-The beginning of a special punctuation mark.</p>
 <p>_The beginning of a special punctuation mark.</p>
 <p>"The beginning of a special punctuation mark.</p>

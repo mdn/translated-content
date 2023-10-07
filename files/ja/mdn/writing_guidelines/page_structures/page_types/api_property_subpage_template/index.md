@@ -1,7 +1,6 @@
 ---
 title: API プロパティサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
-original_slug: MDN/Structures/Page_types/API_property_subpage_template
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
@@ -33,7 +32,7 @@ l10n:
 > - **title**
 >   - : タイトルの見出しは、ページの最上部に表示されます。
 >     書式は _インターフェイス名_**.**_プロパティ名_ です。
->     例えば、 [VRDisplay](/ja/docs/Web/API/VRDisplay) インターフェイスの [capabilities](/ja/docs/Web/API/VRDisplay/capabilities) プロパティには *VRDisplay.capabilities* というタイトルを付けます。
+>     例えば、 [VRDisplay](/ja/docs/Web/API/VRDisplay) インターフェイスの [capabilities](/ja/docs/Web/API/VRDisplay/capabilities) プロパティには _VRDisplay.capabilities_ というタイトルを付けます。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/インターフェイス名/プロパティ名` のような形式になります。
@@ -41,7 +40,7 @@ l10n:
 >   - : `page-type` キーは、 Web/API プロパティでは `web-api-instance-property` （インスタンスプロパティの場合）または `web-api-static-property` （静的プロパティの場合）です。
 > - **status**
 >   - : （適切な）技術の状態のキーを入れてください。
-[**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
+>     [**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
 > - **browser-compat**
 >
 >   - : プレースホルダーの値 `path.to.feature.NameOfTheProperty` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるプロパティのクエリー文字列に置き換えてください。

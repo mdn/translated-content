@@ -61,12 +61,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､
 // 失敗した時に動作します｡
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>データベースの読み込みに失敗しました。</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>データベースの読み込みに失敗しました。</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>データベースを初期化しました。</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>データベースを初期化しました。</li>";
 
   // データベースを開いた結果を保存します｡
   db = DBOpenRequest.result;

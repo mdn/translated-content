@@ -1,13 +1,6 @@
 ---
 title: element.nodeName
 slug: Web/API/Node/nodeName
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Nom
-  - Propriété
-translation_of: Web/API/Node/nodeName
 ---
 
 {{APIRef("DOM")}}
@@ -16,20 +9,20 @@ La propriété en lecture seule **`Node.nodeName`** renvoie le nom du nœud cour
 
 Les valeurs retournées pour les différents types de noeuds sont :
 
-| Interface                                        | Valeur nodeName                                                       |
-| ------------------------------------------------ | --------------------------------------------------------------------- |
-| {{domxref("Attr")}}                         | La valeur de {{domxref("Attr.name")}}                         |
-| {{domxref("CDATASection")}}             | `"#cdata-section"`                                                    |
-| {{domxref("Comment")}}                     | `"#comment"`                                                          |
-| {{domxref("Document")}}                 | `"#document"`                                                         |
-| {{domxref("DocumentFragment")}}         | `"#document-fragment"`                                                |
-| {{domxref("DocumentType")}}             | La valeur de {{domxref("DocumentType.name")}}             |
-| {{domxref("Element")}}                     | La valeur de {{domxref("Element.tagName")}}                 |
-| {{domxref("Entity")}}                     | Le nom de l'entité                                                    |
-| {{domxref("EntityReference")}}         | Le nom de la référence d'entité                                       |
-| {{domxref("Notation")}}                 | Le nom de notation                                                    |
+| Interface                            | Valeur nodeName                                          |
+| ------------------------------------ | -------------------------------------------------------- |
+| {{domxref("Attr")}}                  | La valeur de {{domxref("Attr.name")}}                    |
+| {{domxref("CDATASection")}}          | `"#cdata-section"`                                       |
+| {{domxref("Comment")}}               | `"#comment"`                                             |
+| {{domxref("Document")}}              | `"#document"`                                            |
+| {{domxref("DocumentFragment")}}      | `"#document-fragment"`                                   |
+| {{domxref("DocumentType")}}          | La valeur de {{domxref("DocumentType.name")}}            |
+| {{domxref("Element")}}               | La valeur de {{domxref("Element.tagName")}}              |
+| {{domxref("Entity")}}                | Le nom de l'entité                                       |
+| {{domxref("EntityReference")}}       | Le nom de la référence d'entité                          |
+| {{domxref("Notation")}}              | Le nom de notation                                       |
 | {{domxref("ProcessingInstruction")}} | La valeur de {{domxref("ProcessingInstruction.target")}} |
-| {{domxref("Text")}}                         | `"#text"`                                                             |
+| {{domxref("Text")}}                  | `"#text"`                                                |
 
 ## Syntaxe
 
@@ -43,7 +36,7 @@ Avec le balisage suivant&nbsp;:
 
 ```html
 <div id="d1">hello world</div>
-<input type="text" id="t"/>
+<input type="text" id="t" />
 ```
 
 et le script suivant&nbsp;:

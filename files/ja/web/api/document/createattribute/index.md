@@ -12,7 +12,7 @@ slug: Web/API/Document/createAttribute
 ## 構文
 
 ```js
-createAttribute(name)
+createAttribute(name);
 ```
 
 ### 引数

@@ -1,6 +1,8 @@
 ---
-title: '<template>: コンテンツテンプレート要素'
+title: "<template>: コンテンツテンプレート要素"
 slug: Web/HTML/Element/template
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -9,58 +11,13 @@ slug: Web/HTML/Element/template
 
 テンプレートは、文書内に格納されたコンテンツの断片として考えてください。ページの読み込み時にパーサーが **`<template>`** 要素の内容を処理している間、その内容の有効性のみが検証されます。しかし、要素の内容は描画されません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>制限なし</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
-        を受け付けるすべての要素。また、 <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTemplateElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 属性
 
-この要素には、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+`<template>` 要素が対応している標準的な属性は、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみです。
 
-ただし、 {{domxref("HTMLTemplateElement")}} の {{domxref("HTMLTemplateElement.content", "content")}} プロパティは、読み取り専用の {{domxref("DocumentFragment")}} で、テンプレートが表現する DOM サブツリーを保持しています。なお、 {{domxref("HTMLTemplateElement.content", "content")}} の値を直接使用すると予想外の動作につながる可能性があります。下記の [DocumentFragment の落とし穴の回避](#documentfragment_の落とし穴の回避)の節を参照してください。
+Chromium ベースのブラウザーでは、`<template>` 要素は標準外の [`shadowrootmode` 属性](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax) にも、実験的な ["Declarative Shadow DOM"](https://developer.chrome.com/articles/declarative-shadow-dom/) 提案の一部として対応しています。対応しているブラウザーでは、`<template>` 要素が `shadowrootmode` 属性を持っていることが HTML パーサーによって検出され、直ちに親要素のシャドウルートとして適用されます。`shadowrootmode` は `open` と `closed` のどちらかの値を取ります。これらは {{domxref("Element.attachShadow()")}} の `mode` オプションの `open` と `closed` の値に相当します。
+
+また、対応する {{domxref("HTMLTemplateElement")}} インターフェイスは標準で {{domxref("HTMLTemplateElement.content", "content")}} プロパティを持ち（同等のコンテンツ/マークアップ属性はなく）、読み取り専用の {{domxref("DocumentFragment")}} で、テンプレートが表現する DOM サブツリーを保持しています。なお、{{domxref("HTMLTemplateElement.content", "content")}} プロパティの値を直接使用すると予想外の動作につながる可能性があります。詳しくは、下記の [DocumentFragment の落とし穴の回避](#documentfragment_の落とし穴の回避)の節を参照してください。
 
 ## 例
 
@@ -94,29 +51,27 @@ slug: Web/HTML/Element/template
 ```js
 // templete 要素の content 属性の有無を確認することで、
 // ブラウザーが HTML の template 要素に対応しているかテストします。
-if ('content' in document.createElement('template')) {
+if ("content" in document.createElement("template")) {
+  // 既存の HTML tbody と template の行を使って
+  // table をインスタンス生成します。
+  const tbody = document.querySelector("tbody");
+  const template = document.querySelector("#productrow");
 
-    // 既存の HTML tbody と template の行を使って
-    // table をインスタンス生成します。
-    var tbody = document.querySelector("tbody");
-    var template = document.querySelector('#productrow');
+  // 新しい行を複製して表に挿入します。
+  const clone = template.content.cloneNode(true);
+  let td = clone.querySelectorAll("td");
+  td[0].textContent = "1235646565";
+  td[1].textContent = "Stuff";
 
-    // 新しい行を複製して表に挿入します。
-    var clone = template.content.cloneNode(true);
-    var td = clone.querySelectorAll("td");
-    td[0].textContent = "1235646565";
-    td[1].textContent = "Stuff";
+  tbody.appendChild(clone);
 
-    tbody.appendChild(clone);
+  // 新しい行を複製して表に挿入します。
+  const clone2 = template.content.cloneNode(true);
+  td = clone2.querySelectorAll("td");
+  td[0].textContent = "0384928528";
+  td[1].textContent = "Acme Kidney Beans 2";
 
-    // 新しい行を複製して表に挿入します。
-    var clone2 = template.content.cloneNode(true);
-    td = clone2.querySelectorAll("td");
-    td[0].textContent = "0384928528";
-    td[1].textContent = "Acme Kidney Beans 2";
-
-    tbody.appendChild(clone2);
-
+  tbody.appendChild(clone2);
 } else {
   // HTML の template 要素に対応していないので
   // 表に行を追加するほかの方法を探します。
@@ -177,6 +132,55 @@ container.appendChild(secondClone);
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>制限なし</td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
+        を受け付けるすべての要素。また、 <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTemplateElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -187,5 +191,5 @@ container.appendChild(secondClone);
 
 ## 関連情報
 
-- ウェブコンポーネント: {{HTMLElement("slot")}} (および過去の {{HTMLElement("shadow")}})
-- [テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)
+- ウェブコンポーネント: {{HTMLElement("slot")}} （および過去の `<shadow>`）
+- [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)

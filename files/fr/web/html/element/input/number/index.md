@@ -1,8 +1,6 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
-translation_of: Web/HTML/Element/input/number
-browser-compat: html.elements.input.input-number
 ---
 
 {{HTMLSidebar}}
@@ -45,7 +43,7 @@ Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémente
 Un nombre qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)&nbsp;:
 
 ```html
-<input id="number" type="number" value="42">
+<input id="number" type="number" value="42" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -111,7 +109,7 @@ Dans sa forme la plus simple, on peut implémenter un contrôle de saisie numér
 
 ```html
 <label for="ticketNum">Nombre de tickets à acheter :</label>
-<input id="ticketNum" type="number" name="ticketNum" value="0">
+<input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -127,7 +125,7 @@ Il est parfois utile de fournir une indication quant à la valeur qui devrait ê
 Dans l'exemple qui suit, on utilise un élément `<input>` de type `number` avec le texte indicatif `Multiple de 10`. Vous pouvez noter la façon dont le texte disparaît/réapparaît à selon la présence ou l'absence de valeur dans le champ.
 
 ```html
-<input type="number" placeholder="Multiple de 10">
+<input type="number" placeholder="Multiple de 10" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -137,7 +135,7 @@ Dans l'exemple qui suit, on utilise un élément `<input>` de type `number` avec
 Par défaut, les curseurs fournis pour incrémenter/décrémenter la valeur utilisent un pas de 1. Ce comportement par défaut peut être changé en utilisant l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step) dont la valeur représente le pas d'incrémentation. Dans l'exemple qui suit et parce que le texte informatif indique "Multiple de 10", on utilise un pas de 10 grâce à l'attribut `step`&nbsp;:
 
 ```html
-<input type="number" placeholder="Multiple de 10" step="10">
+<input type="number" placeholder="Multiple de 10" step="10" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -149,7 +147,7 @@ Dans cet exemple, on peut voir que les curseurs permettent d'augmenter ou de ré
 Les attributs `min` et `max` peuvent être employés afin d'indiquer les bornes de l'intervalle dans lequel doit se situer la valeur. Par exemple, avec le fragment HTML suivant, on indique que le minimum vaut 0 et que le maximum vaut 100&nbsp;:
 
 ```html
-<input type="number" placeholder="Multiple de 10" step="10" min="0" max="100">
+<input type="number" placeholder="Multiple de 10" step="10" min="0" max="100" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -161,7 +159,7 @@ Dans cet exemple, les curseurs ne permettent pas de dépasser 100 ou de saisir u
 Par défaut, l'incrément d'un tel contrôle vaut 1 et si on saisit la valeur `1.0`, elle sera considérée invalide. Si on souhaite pouvoir saisir une valeur qui contient une partie décimale, on pourra utiliser l'attribut `step` (par exemple, on pourra utiliser `step="0.01"` pour autoriser des nombres avec deux chiffres après la virgule)&nbsp;:
 
 ```html
-<input type="number" placeholder="1.0" step="0.01" min="0" max="10">
+<input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -175,7 +173,13 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `number` ne 
 Par exemple, si on souhaite réduire la largeur du contrôle, car il ne permet que de saisir un nombre à trois chiffres, on ajoute un identifiant sur l'élément et on réduit le texte indicatif afin qu'il ne soit pas tronqué&nbsp;:
 
 ```html
-<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
+<input
+  type="number"
+  placeholder="x10"
+  step="10"
+  min="0"
+  max="100"
+  id="number" />
 ```
 
 On ajoute ensuite une déclaration CSS dans la feuille de style pour l'élément avec un identifiant `number`&nbsp;:
@@ -195,15 +199,15 @@ Le résultat ressemblera à&nbsp;:
 Il est possible de fournir une liste d'options par défaut parmi lesquelles l'utilisatrice ou l'utilisateur pourra choisir. Pour cela, on renseignera l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) dont la valeur est l'identifiant (attribut `id`) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) contenant autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) que de valeurs suggérées. La valeur de l'attribut `value` de chaque élément `<option>` sera utilisée comme suggestion pour la saisie dans le contrôle.
 
 ```html
-<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers">
+<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
 <span class="validity"></span>
 
 <datalist id="defaultNumbers">
-  <option value="10045678">
-  <option value="103421">
-  <option value="11111111">
-  <option value="12345678">
-  <option value="12999922">
+  <option value="10045678"></option>
+  <option value="103421"></option>
+  <option value="11111111"></option>
+  <option value="12345678"></option>
+  <option value="12999922"></option>
 </datalist>
 ```
 
@@ -224,11 +228,18 @@ L'exemple suivant illustre l'ensemble de ces fonctionnalités et quelques règle
 <form>
   <div>
     <label for="balloons">Quantité de ballons à commander (par 10) :</label>
-    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
+    <input
+      id="balloons"
+      type="number"
+      name="balloons"
+      step="10"
+      min="0"
+      max="100"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -244,13 +255,13 @@ div {
   margin-bottom: 10px;
 }
 
-input:invalid+span:after {
-  content: '✖';
+input:invalid + span:after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span:after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -275,23 +286,33 @@ Dans l'exemple suivant, on crée un formulaire qui permet de saisir la taille d'
 <form>
   <div class="metersInputGroup">
     <label for="meters">Saisir votre taille — en mètres :</label>
-    <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="p. ex. 1.78" required>
+    <input
+      id="meters"
+      type="number"
+      name="meters"
+      step="0.01"
+      min="0"
+      placeholder="p. ex. 1.78"
+      required />
     <span class="validity"></span>
   </div>
   <div class="feetInputGroup" style="display: none;">
     <span>Saisir votre taille — </span>
     <label for="feet">pieds :</label>
-    <input id="feet" type="number" name="feet" min="0" step="1">
+    <input id="feet" type="number" name="feet" min="0" step="1" />
     <span class="validity"></span>
     <label for="inches">pouces :</label>
-    <input id="inches" type="number" name="inches" min="0" max="11" step="1">
+    <input id="inches" type="number" name="inches" min="0" max="11" step="1" />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="button" class="meters" value="Saisir la taille en pieds/pouces">
+    <input
+      type="button"
+      class="meters"
+      value="Saisir la taille en pieds/pouces" />
   </div>
   <div>
-    <input type="submit" value="Envoyer">
+    <input type="submit" value="Envoyer" />
   </div>
 </form>
 ```
@@ -316,15 +337,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -332,39 +353,39 @@ input:valid+span:after {
 Enfin, voici le code JavaScript utilisé&nbsp;:
 
 ```js
-let metersInputGroup = document.querySelector('.metersInputGroup');
-let feetInputGroup = document.querySelector('.feetInputGroup');
-let metersInput = document.querySelector('#meters');
-let feetInput = document.querySelector('#feet');
-let inchesInput = document.querySelector('#inches');
+let metersInputGroup = document.querySelector(".metersInputGroup");
+let feetInputGroup = document.querySelector(".feetInputGroup");
+let metersInput = document.querySelector("#meters");
+let feetInput = document.querySelector("#feet");
+let inchesInput = document.querySelector("#inches");
 let switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', function() {
-  if(switchBtn.getAttribute('class') === 'meters') {
-    switchBtn.setAttribute('class', 'feet');
-    switchBtn.value = 'Saisir la taille en mètres';
+switchBtn.addEventListener("click", function () {
+  if (switchBtn.getAttribute("class") === "meters") {
+    switchBtn.setAttribute("class", "feet");
+    switchBtn.value = "Saisir la taille en mètres";
 
-    metersInputGroup.style.display = 'none';
-    feetInputGroup.style.display = 'block';
+    metersInputGroup.style.display = "none";
+    feetInputGroup.style.display = "block";
 
-    feetInput.setAttribute('required', '');
-    inchesInput.setAttribute('required', '');
-    metersInput.removeAttribute('required');
+    feetInput.setAttribute("required", "");
+    inchesInput.setAttribute("required", "");
+    metersInput.removeAttribute("required");
 
-    metersInput.value = '';
+    metersInput.value = "";
   } else {
-    switchBtn.setAttribute('class', 'meters');
-    switchBtn.value = 'Saisir la taille en pieds';
+    switchBtn.setAttribute("class", "meters");
+    switchBtn.value = "Saisir la taille en pieds";
 
-    metersInputGroup.style.display = 'block';
-    feetInputGroup.style.display = 'none';
+    metersInputGroup.style.display = "block";
+    feetInputGroup.style.display = "none";
 
-    feetInput.removeAttribute('required');
-    inchesInput.removeAttribute('required');
-    metersInput.setAttribute('required', '');
+    feetInput.removeAttribute("required");
+    inchesInput.removeAttribute("required");
+    metersInput.setAttribute("required", "");
 
-    feetInput.value = '';
-    inchesInput.value = '';
+    feetInput.value = "";
+    inchesInput.value = "";
   }
 });
 ```

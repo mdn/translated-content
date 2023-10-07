@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 ---
 
@@ -33,7 +33,8 @@ a:active {
 #### HTML
 
 ```html
-<p>この段落にはリンクが含まれています。
+<p>
+  この段落にはリンクが含まれています。
   <a href="#">このリンクはクリックすると赤色になります。</a>
   この段落は段落やリンクをクリックすると灰色になります。
 </p>
@@ -42,12 +43,22 @@ a:active {
 #### CSS
 
 ```css
-a:link { color: blue; }          /* 未訪問リンク */
-a:visited { color: purple; }     /* 訪問済みリンク */
-a:hover { background: yellow; }  /* ホバー時 */
-a:active { color: red; }         /* アクティブなリンク */
+a:link {
+  color: blue;
+} /* 未訪問リンク */
+a:visited {
+  color: purple;
+} /* 訪問済みリンク */
+a:hover {
+  background: yellow;
+} /* ホバー時 */
+a:active {
+  color: red;
+} /* アクティブなリンク */
 
-p:active { background: #eee; }   /* アクティブな段落 */
+p:active {
+  background: #eee;
+} /* アクティブな段落 */
 ```
 
 #### 結果
@@ -61,7 +72,9 @@ p:active { background: #eee; }   /* アクティブな段落 */
 ```html
 <form>
   <label for="my-button">ボタン: </label>
-  <button id="my-button" type="button">ここかラベルをクリックしてみてください。</button>
+  <button id="my-button" type="button">
+    ここかラベルをクリックしてみてください。
+  </button>
 </form>
 ```
 

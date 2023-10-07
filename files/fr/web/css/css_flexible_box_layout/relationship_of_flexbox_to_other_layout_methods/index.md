@@ -1,16 +1,6 @@
 ---
 title: Les liens entre flexbox et les autres méthodes de disposition
-slug: >-
-  Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
-tags:
-  - CSS
-  - Guide
-  - display
-  - flexbox
-  - grid
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres_dispositions
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
 
 {{CSSRef}}
@@ -29,7 +19,7 @@ Ces propriétés d'alignement sont actuellement détaillées dans les spécifica
 
 > « Note : Bien que les propriétés d'alignement soient définies dans le module CSS _Box Alignment_ [CSS-ALIGN-3](https://www.w3.org/TR/css-align-3/), le module _Flexible Box Layout_ reproduit les définitions des propriétés qui sont ici pertinentes afin de ne pas créer de dépendance normative qui ralentirait l'avancement de la spécification. Ces propriétés s'appliquent uniquement à la disposition flexible jusqu'à ce que _CSS Box Alignment Level 3_ soit terminé et définisse leurs effets pour les autres modes de disposition. De plus, toute nouvelle valeur qui apparaîtra dans le module _Box Alignment_ s'appliquera également à la disposition en boîtes flexibles. Autrement dit, le module _Box Alignment_, lorsqu'il sera complet, remplacera les définitions énoncées ici. »
 
-Dans un prochain article de ce guide ([Aligner les éléments d'un conteneur flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)), nous verrons dans le détail comment les propriétés du module d'alignement des boîtes s'appliquent aux éléments flexibles.
+Dans un prochain article de ce guide ([Aligner les éléments d'un conteneur flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)), nous verrons dans le détail comment les propriétés du module d'alignement des boîtes s'appliquent aux éléments flexibles.
 
 ### Les propriétés d'espacement (_gap_)
 

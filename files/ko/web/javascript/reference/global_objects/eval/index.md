@@ -2,6 +2,7 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 ---
+
 {{jsSidebar("Objects")}}
 
 > **경고:** **주의:** 문자열로부터 **`eval()`**을 실행하는 것은 엄청나게 위험합니다. **`eval()`**을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
@@ -13,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 ## 구문
 
 ```js
-    eval(string)
+eval(string);
 ```
 
 ### 매개변수
@@ -37,26 +38,27 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 ```js
 eval(new String("2 + 2")); // "2 + 2"를 포함한 String 객체를 반환
-eval("2 + 2");             // 4를 반환
+eval("2 + 2"); // 4를 반환
 ```
 
 `toString()`을 사용하는 일반적인 방식으로 제약을 피할 수 있습니다.
 
 ```js
 var expression = new String("2 + 2");
-eval(expression.toString());            // 4를 반환
+eval(expression.toString()); // 4를 반환
 ```
 
 `eval`을 직접 호출하지 않고 참조를 통해 _간접적으로_ 사용한다면 [ECMAScript 5부터는](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 `eval()`로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.
 
 ```js
-    function test() {
-      var x = 2, y = 4;
-      console.log(eval('x + y'));  // 직접 호출, 지역 범위 사용, 결과값은 6
-      var geval = eval; // eval을 전역 범위로 호출하는 것과 같음
-      console.log(geval('x + y')); // 간접 호출, 전역 범위 사용, `x`가 정의되지 않았으므로 ReferenceError 발생
-      (0, eval)('x + y'); // 다른 방식으로 간접 호출
-    }
+function test() {
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // 직접 호출, 지역 범위 사용, 결과값은 6
+  var geval = eval; // eval을 전역 범위로 호출하는 것과 같음
+  console.log(geval("x + y")); // 간접 호출, 전역 범위 사용, `x`가 정의되지 않았으므로 ReferenceError 발생
+  (0, eval)("x + y"); // 다른 방식으로 간접 호출
+}
 ```
 
 ## `eval`을 절대 사용하지 말 것!
@@ -70,37 +72,39 @@ eval(expression.toString());            // 4를 반환
 `eval`을 사용하는 나쁜 코드:
 
 ```js
-function looseJsonParse(obj){
-    return eval(obj);
+function looseJsonParse(obj) {
+  return eval(obj);
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 `eval`이 없는 코드:
 
 ```js
-function looseJsonParse(obj){
-    return Function('"use strict";return (' + obj + ')')();
+function looseJsonParse(obj) {
+  return Function('"use strict";return (' + obj + ")")();
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 위의 두 코드는 얼핏 보면 같은 방식으로 실행되는 것처럼 보이지만, `eval`이 있는 코드가 훨씬 느립니다. 평가되는 객체의 `c: new Date()`를 주목하세요. `eval`이 없는 함수의 경우 이 객체는 전역 범위에서 평가되기 때문에 브라우저에서는 `Date`를 같은 이름의 지역 변수가 아니라 `window.Date`로 취급할 수 있습니다. 그러나 `eval()`을 사용하는 코드에서는 아래와 같은 경우도 존재할 수 있기 때문에 `Date`를 이렇게 취급할 수 없습니다.
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function looseJsonParse(obj){
-    return eval(obj);
+function looseJsonParse(obj) {
+  return eval(obj);
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 그러므로 `eval()`이 있는 코드의 경우 브라우저는 `Date()`라는 지역 변수의 존재를 확인하기 위해 무거운 변수명 탐색을 수행해야 하며, 이는 `Function()`과 비교하면 매우 느립니다.
@@ -108,17 +112,21 @@ console.log(looseJsonParse(
 만약 위의 상황에서 실제로 새로 선언한 `Date` 함수를 `Function()`에서 실행해야 하는 상황을 생각해 봅시다. 이렇게 되면 `eval()`로 돌아가야 할까요? 물론 아닙니다. 아래의 접근을 시도해 보세요.
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj){
-    return Function('"use strict";return (' + obj + ')')()(
-        Date
-    );
+function runCodeWithDateFunction(obj) {
+  return Function('"use strict";return (' + obj + ")")()(Date);
 }
-console.log(runCodeWithDateFunction(
-   "function(Date){ return Date(5) }"
-))
+console.log(runCodeWithDateFunction("function(Date){ return Date(5) }"));
 ```
 
 위 코드는 삼중 중첩 함수를 사용하기 때문에 매우 비효율적으로 보일 수 있지만, 이 방법의 이점을 우선 살펴봅시다.
@@ -134,8 +142,13 @@ console.log(runCodeWithDateFunction(
 마지막으로 코드 최소화의 측면에서 살펴보면, 위와 같이 `Function()`을 사용했을 때는 아래의 최소화된 코드와 같이 함수의 인자 이름 역시 짧게 줄일 수 있으므로 runCodeWithDateFunction에 전달하는 코드 문자열을 더욱 효율적으로 줄일 수 있습니다.
 
 ```js
-console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
-return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7||0]}));
+console.log(
+  Function('"use strict";return(function(a){return a(5)})')()(function (a) {
+    return "Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(
+      " ",
+    )[a % 7 || 0];
+  }),
+);
 ```
 
 자주 쓰이는 용례에 대해서는 `eval()`이나 `Function()`보다 안전하고 빠른 대안도 존재합니다.
@@ -146,58 +159,58 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  // "a" 또는 "b"를 반환
+var propname = getPropName(); // "a" 또는 "b"를 반환
 
-eval( "var result = obj." + propname );
+eval("var result = obj." + propname);
 ```
 
 그러나 여기에서 `eval()`을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)를 사용하여야 합니다.
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  // "a" 또는 "b"를 반환
-var result = obj[ propname ];  //  obj[ "a" ]는 obj.a와 동일함
+var propname = getPropName(); // "a" 또는 "b"를 반환
+var result = obj[propname]; //  obj[ "a" ]는 obj.a와 동일함
 ```
 
 이 방법으로 더 깊은 속성에도 접근할 수 있습니다. `eval()`을 사용한다면 다음과 같을 것입니다.
 
 ```js
-    var obj = {a: {b: {c: 0}}};
-    var propPath = getPropPath();  // "a.b.c"를 반환한다고 가정
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // "a.b.c"를 반환한다고 가정
 
-    eval( 'var result = obj.' + propPath );
+eval("var result = obj." + propPath);
 ```
 
 여기서 `eval()`의 사용을 피하려면 속성 경로를 [`split`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split)한 다음 순서대로 접근할 수도 있습니다.
 
 ```js
-    function getDescendantProp(obj, desc) {
-      var arr = desc.split('.');
-      while (arr.length) {
-        obj = obj[arr.shift()];
-      }
-      return obj;
-    }
+function getDescendantProp(obj, desc) {
+  var arr = desc.split(".");
+  while (arr.length) {
+    obj = obj[arr.shift()];
+  }
+  return obj;
+}
 
-    var obj = {a: {b: {c: 0}}};
-    var propPath = getPropPath();  // "a.b.c"를 반환한다고 가정
-    var result = getDescendantProp(obj, propPath);
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // "a.b.c"를 반환한다고 가정
+var result = getDescendantProp(obj, propPath);
 ```
 
 속성에 값을 대입하는 것도 비슷하게 할 수 있습니다.
 
 ```js
-    function setDescendantProp(obj, desc, value) {
-      var arr = desc.split('.');
-      while (arr.length > 1) {
-        obj = obj[arr.shift()];
-      }
-      return obj[arr[0]] = value;
-    }
+function setDescendantProp(obj, desc, value) {
+  var arr = desc.split(".");
+  while (arr.length > 1) {
+    obj = obj[arr.shift()];
+  }
+  return (obj[arr[0]] = value);
+}
 
-    var obj = {a: {b: {c: 0}}};
-    var propPath = getPropPath();  // "a.b.c"를 반환한다고 가정
-    var result = setDescendantProp(obj, propPath, 1);  // test.a.b.c의 값은 1로 지정됨
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // "a.b.c"를 반환한다고 가정
+var result = setDescendantProp(obj, propPath, 1); // test.a.b.c의 값은 1로 지정됨
 ```
 
 ### 단편적인 코드 수행 대신 함수 사용하기
@@ -239,7 +252,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // 42를 반환
-eval(z);           // 42를 반환
+eval(z); // 42를 반환
 ```
 
 ### `eval`을 사용해서 JavaScript 코드 문자열 평가하기
@@ -256,10 +269,10 @@ console.log("z is ", eval(str));
 여러 값을 정의할 경우 마지막 값을 반환합니다.
 
 ```js
-    var x = 5;
-    var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
+var x = 5;
+var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
 
-    console.log('x is ', eval(str)); // z는 42, x는 420
+console.log("x is ", eval(str)); // z는 42, x는 420
 ```
 
 ### 마지막 표현식이 수행된다
@@ -269,12 +282,12 @@ console.log("z is ", eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // 2를 반환
+var b = eval(str); // 2를 반환
 
 console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // 3을 반환
+b = eval(str); // 3을 반환
 
 console.log("b is : " + b);
 ```
@@ -282,10 +295,10 @@ console.log("b is : " + b);
 ### 함수 정의 문자열로서의 `eval` 은 앞뒤를 "("와 ")"로 감싸야 한다
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // undefined를 반환
-var fct2 = eval(fctStr2)  // 함수를 반환
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // undefined를 반환
+var fct2 = eval(fctStr2); // 함수를 반환
 ```
 
 ## 브라우저 호환성

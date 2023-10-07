@@ -1,8 +1,6 @@
 ---
 title: CSS grids, logical values and writing modes
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
 
 В этих руководствах я уже затронул важную особенность grid layout: поддержка различных режимов записи, встроенных в спецификацию. В этом руководстве мы рассмотрим эту особенность grid и других современных методов компоновки, немного узнав о режимах записи и логических и физических свойствах, когда мы это делаем.
@@ -62,24 +60,28 @@ CSS полон **физических** слов позиционировани�
 - `sideways-rl`
 - `sideways-lr`
 
-Значение `horizontal-tb` является значением по умолчанию для текста в Интернете. Это направление, в котором вы читаете это руководство. Другие свойства изменят способ передачи текста в нашем документе, соответствующий различным режимам записи, найденным по всему миру. Опять же, для получения полной информации об этом см. [Jen’s article](https://24ways.org/2016/css-writing-modes/). В качестве простого примера у меня есть два параграфа ниже. Первый использует по умолчанию `horizontal-tb`, а второй использует `vertical-rl`. В тексте режима все ещё выполняется влево-вправо, однако направление текста вертикально - встроенный текст теперь проходит вниз по странице, сверху вниз.
+Значение `horizontal-tb` является значением по умолчанию для текста в Интернете. Это направление, в котором вы читаете это руководство. Другие свойства изменят способ передачи текста в нашем документе, соответствующий различным режимам записи, найденным по всему миру. Опять же, для получения полной информации об этом см. [Jen's article](https://24ways.org/2016/css-writing-modes/). В качестве простого примера у меня есть два параграфа ниже. Первый использует по умолчанию `horizontal-tb`, а второй использует `vertical-rl`. В тексте режима все ещё выполняется влево-вправо, однако направление текста вертикально - встроенный текст теперь проходит вниз по странице, сверху вниз.
 
 ```css hidden
 .wrapper > p {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    margin: 1em;
-    color: #d9480f;
-    max-width: 300px;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  margin: 1em;
+  color: #d9480f;
+  max-width: 300px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <p style="writing-mode: horizontal-tb">I have writing mode set to the default <code>horizontal-tb</code></p>
-  <p style="writing-mode: vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
+  <p style="writing-mode: horizontal-tb">
+    I have writing mode set to the default <code>horizontal-tb</code>
+  </p>
+  <p style="writing-mode: vertical-rl">
+    I have writing mode set to <code>vertical-rl</code>
+  </p>
 </div>
 ```
 
@@ -92,20 +94,22 @@ CSS полон **физических** слов позиционировани�
 В моем следующем примере сетка имеет три столбца и две строки. Это означает, что на оси блока есть три дорожки. В режиме записи по умолчанию сетка автоматически помещает элементы, начинающиеся в верхнем левом углу, перемещаясь вправо, заполняя три ячейки на встроенной оси. Затем он переходит на следующую строку, создавая новый дорожку Row и заполняя больше элементов:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -133,20 +137,22 @@ CSS полон **физических** слов позиционировани�
 Если мы добавим `writing-mode: vertical-lr` в контейнер сетки, мы увидим, что блок и встроенная ось теперь работают в другом направлении. Ось блока или столбца теперь проходит через страницу слева направо, Inline запускается вниз по странице, создавая строки сверху вниз.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -181,20 +187,22 @@ CSS полон **физических** слов позиционировани�
 В следующем примере я использую выравнивание для выравнивания элементов внутри сетки, которая настроена на `writing-mode: vertical-lr`. `start` и `end` свойства работают точно так же, как в режиме записи по умолчанию, и остаются логичными в том смысле, что использование левого и правого, верхнего и нижнего уровней для выравнивания элементов не будет выполнено. Это происходит, когда мы перевернули сетку сбоку, например:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -208,21 +216,21 @@ CSS полон **физических** слов позиционировани�
 }
 
 .item1 {
-    grid-column: 1 / 4;
-    align-self: start;
+  grid-column: 1 / 4;
+  align-self: start;
 }
 
 .item2 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-    align-self: start;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  align-self: start;
 }
 
 .item3 {
-    grid-column: 3;
-    grid-row: 2 / 4;
-    align-self: end;
-    justify-self: end;
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: end;
+  justify-self: end;
 }
 ```
 
@@ -253,20 +261,22 @@ CSS полон **физических** слов позиционировани�
 - Item 3 starts at column line 1, охватывая строку столбца 3.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -278,23 +288,23 @@ CSS полон **физических** слов позиционировани�
   grid-gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('writing_5', '500', '330') }}
@@ -302,20 +312,22 @@ CSS полон **физических** слов позиционировани�
 Если теперь добавить свойство {{cssxref ("direction")}} со значением `rtl` в контейнер сетки, строка 1 станет правой частью сетки, а строка -1 - слева.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -328,23 +340,23 @@ CSS полон **физических** слов позиционировани�
   grid-gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('writing_6', '500', '330') }}
@@ -377,41 +389,59 @@ CSS полон **физических** слов позиционировани�
 
 ```css
 .wrapper {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr auto;
-    font: 1em Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr auto;
+  font:
+    1em Helvetica,
+    Arial,
+    sans-serif;
 }
 .wrapper nav {
-    writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .wrapper ul {
-    list-style: none;
-    margin: 0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 .wrapper a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="content">
-            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+  <div class="content">
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
 
-<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Link 1</a></li>
-                <li><a href="">Link 2</a></li>
-                <li><a href="">Link 3</a></li>
-            </ul>
-        </nav>
-    </div>
+    <p>
+      Nori grape silver beet broccoli kombu beet greens fava bean potato
+      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
+      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
+      chicory celtuce parsley jícama salsify.
+    </p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Link 1</a></li>
+      <li><a href="">Link 2</a></li>
+      <li><a href="">Link 3</a></li>
+    </ul>
+  </nav>
+</div>
 ```
 
 {{ EmbedLiveSample('writing_7', '500', '330') }}

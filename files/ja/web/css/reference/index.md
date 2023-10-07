@@ -108,7 +108,7 @@ div.menu-bar li:hover > ul {
 - [アットルール](/ja/docs/Web/CSS/At-rule)
 - [カスケード](/ja/docs/Web/CSS/Cascade)
 - [コメント](/ja/docs/Web/CSS/Comments)
-- [記述子](</ja/docs/Glossary/CSS_Descriptor>)
+- [記述子](/ja/docs/Glossary/CSS_Descriptor)
 - [継承](/ja/docs/Web/CSS/inheritance)
 - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
 - [優先度](/ja/docs/Web/CSS/Specificity)

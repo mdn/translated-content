@@ -1,8 +1,6 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-translation_of: Web/API/Element/querySelectorAll
-browser-compat: api.Element.querySelectorAll
 ---
 
 {{APIRef("DOM")}}
@@ -78,7 +76,7 @@ Sinon, vous pouvez simplement utiliser la notation de tableau standard pour acc�
 ```js
 let highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -96,8 +94,7 @@ Considérons ce code HTML, avec ses trois blocs [`<div>`](/fr/docs/Web/HTML/Elem
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -105,8 +102,8 @@ Considérons ce code HTML, avec ses trois blocs [`<div>`](/fr/docs/Web/HTML/Elem
 ### JavaScript
 
 ```js
-let select = document.querySelector('.select');
-let inner = select.querySelectorAll('.outer .inner');
+let select = document.querySelector(".select");
+let inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, pas 0 !
 ```
 
@@ -115,8 +112,8 @@ Dans cet exemple, en sélectionnant `.outer .inner` dans le contexte `<div>` ave
 La pseudo-classe [`:scope`](/fr/docs/Web/CSS/:scope) restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base&nbsp;:
 
 ```js
-let select = document.querySelector('.select');
-let inner = select.querySelectorAll(':scope .outer .inner');
+let select = document.querySelector(".select");
+let inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 

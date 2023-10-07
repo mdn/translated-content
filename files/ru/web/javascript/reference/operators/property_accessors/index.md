@@ -1,7 +1,6 @@
 ---
 title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_accessors
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 
 {{jsSidebar("Operators")}}
@@ -48,7 +47,7 @@ console.log(object.1);   // SyntaxError
 Здесь метод с именем `createElement` считывается с объекта `document` и вызывается.
 
 ```js
-document.createElement('pre')
+document.createElement("pre");
 ```
 
 Если вы хотите вызвать метод на численном литерале, не имеющий части с экспонентой или точки, отделяющей дробную часть, нужно ставить пробел перед точкой, являющейся частью обращения к этому методу, чтобы интерпретатор не посчитал, что это точка отделяет дробную часть числа (или использовать другие способы этого избежать).
@@ -75,20 +74,20 @@ document.createElement('pre')
 В записи `object[property_name]`, _`property_name` -_ это выражение, вычисляющееся в строку или [символ](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Symbol). Это может быть любая строка, не обязательно действительный идентификатор, например `'1foo'`, '`!bar!'` или даже `' '` (пробел).
 
 ```js
-const variable = object[property_name]
-object[property_name] = value
+const variable = object[property_name];
+object[property_name] = value;
 ```
 
 Пример, аналогичный примеру в предыдущем пункте:
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 Пробел перед скобкой допускается:
 
 ```js
-document ['createElement']('pre')
+document["createElement"]("pre");
 ```
 
 ### Имена свойств
@@ -96,19 +95,19 @@ document ['createElement']('pre')
 Имена свойств могут быть строками или [символами](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Symbol). Любое другое значение приводится к строке. Следующий код выводит `'value'`, поскольку число `1` приводится к строке `'1'`.
 
 ```js
-const object = {}
-object['1'] = 'value'
-console.log(object[1])
+const object = {};
+object["1"] = "value";
+console.log(object[1]);
 ```
 
 Этот пример также выводит `'value',` так как и `foo`, и bar приводятся к одной и той же строке.
 
 ```js
-const foo = {unique_prop: 1}
-const bar = {unique_prop: 2}
-const object = {}
+const foo = { unique_prop: 1 };
+const bar = { unique_prop: 2 };
+const object = {};
 
-object[foo] = 'value';
+object[foo] = "value";
 console.log(object[bar]);
 ```
 
@@ -116,7 +115,7 @@ console.log(object[bar]);
 
 ### Привязка методов
 
-Метод не привязан к содержащему его объекту. Это значит, что значение `this` в методах объекта не всегда указывает на него. Вместо этого, `this` "передаётся" при вызове метода. Смотрите подробнее [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
+Метод не привязан к содержащему его объекту. Это значит, что значение `this` в методах объекта не всегда указывает на него. Вместо этого, `this` "передаётся" при вызове метода. Смотрите подробнее [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
 
 ## Примеры
 
@@ -127,7 +126,7 @@ console.log(object[bar]);
 Например, следующий синтаксис можно часто увидеть в скриптах.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 Функция `eval()` очень медленная и её использования следует избегать, когда это возможно. Кроме того, строка `strFormControl` при таком использовании обязаны содержать действительный идентификатор, что не является обязательным для `id` полей формы, то есть, например, поле с id 1 не получится получить такой записью. Лучше вместо этого использовать скобочную запись:
@@ -138,11 +137,11 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                   | Комментарий              |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ES6')}}     |                          |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}                 | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                 | {{Spec2('ES1')}}     | Изначальное определение. |
+| Спецификация                                                         | Статус             | Комментарий              |
+| -------------------------------------------------------------------- | ------------------ | ------------------------ |
+| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ES6')}}   |                          |
+| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}           | {{Spec2('ES5.1')}} |                          |
+| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}             | {{Spec2('ES1')}}   | Изначальное определение. |
 
 ## Поддержка браузерами
 

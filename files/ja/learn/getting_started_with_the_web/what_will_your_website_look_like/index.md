@@ -2,7 +2,7 @@
 title: ウェブサイトをどんな外見にするか
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 l10n:
-  sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
+  sourceCommit: 1724e23bc76b136266b75afa6b45bfd708ee69a5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
@@ -41,7 +41,7 @@ l10n:
 
 ### テーマカラー
 
-色を選ぶときは、[色選択ツール](/ja/docs/Web/CSS/CSS_Colors/Color_picker_tool)へ行き、好みの色を見つけましょう。色をクリックすると、 `#660066` のような 6 桁の奇妙なコードが出てきます。これは*ヘキサコード*（16 進コード）と呼ばれ、選んだ色を表します。今はどこか安全なところにコピーしておきましょう。
+色を選ぶときは、[色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker_tool)へ行き、好みの色を見つけましょう。色をクリックすると、 `#660066` のような 6 桁の奇妙なコードが出てきます。これは*ヘキサコード*（16 進コード）と呼ばれ、選んだ色を表します。今はどこか安全なところにコピーしておきましょう。
 
 ![MDN Docs ウェブサイトのカラーピッカーツールで、RGB、HSL、HEX の色を利用できます](color-picker.png)
 
@@ -54,16 +54,21 @@ l10n:
 
 ![Google 画像検索での検索語句の検索結果](updated-google-images.png)
 
-なお、ウェブ上のほとんどの画像には、 Google 画像検索にあるものも含め、著作権があります。あなたが著作権を侵害してしまう可能性を減らすために、 Google のライセンスフィルターを使うと良いでしょう。 \[ツール] ボタンをクリックすると、 \[ライセンス] オプションが下に表示されます。「クリエイティブ・コモンズ ライセンス」などの選択肢を選択してください。
+なお、ウェブ上のほとんどの画像には、 Google 画像検索にあるものも含め、著作権があります。あなたが著作権を侵害してし舞うことを防ぐために、 Google のライセンスフィルターを使うと良いでしょう。 \[ツール] ボタンをクリックすると、 \[ライセンス] オプションが下に表示されます。「クリエイティブ・コモンズ ライセンス」などの選択肢を選択してください。
 
 ![Google 画像検索でクリエイティブ・コモンズ ライセンスの画像を取得するための検索結果のフィルタリング](updated-google-images-licensing.png)
 
 ### フォント
 
-フォントを選ぶには次のようにします。
+画像と同様に、多くのフォントはライセンスで保護されており、サイト内で自由に使用することはできません。[Google フォント](https://developers.google.com/fonts)は、Google が自分自身で所有するウェブサービスであり、たくさんのフォントにアクセスすることができます。
 
-1. [Google Fonts](https://fonts.google.com/) へ行き、好きなフォントを探します。
-2. Google が提供するコードの行をテキストエディターにコピーし、後で保存します。
-3. Google Fonts を使用する際の詳細については、[このページ](https://developers.google.com/fonts/docs/getting_started)を参照してください。
+フォントが見つかったら、そのフォントを使用する方法は大きく分けて 2 つあります。
+
+1. Google のサーバーからフォントを読み込むために、コードに参照を追加する。
+2. 自分のシステムにフォントファイルをダウンロードし、フォントをホスティングし、ウェブサイトのコードでホスティングしたコピーを使用する。
+
+> **メモ:** Google フォントでホスティングされているフォントを提供すると、フォントサービスがユーザーの IP アドレスを公開するため、EU のデータプライバシー規則である [GDPR](https://gdpr.eu/what-is-gdpr) に抵触する可能性があります。これが問題になりそうな場合は、2 つ目の選択肢を選んでください。
+
+また、Arial、Times New Roman、Courier New などの[セーフウェブフォント](https://web.mit.edu/jmorzins/www/fonts.html)を使用することもできます。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}

@@ -33,12 +33,12 @@ Math.acos(x)
 ### 示例：使用 `Math.acos`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 对于小于 -1 或大于 1 的值，`Math.acos` 返回 `NaN`。

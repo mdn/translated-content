@@ -33,14 +33,14 @@ set(key, value)
 ### set() の使用
 
 ```js
-let myMap = new Map()
+let myMap = new Map();
 
 // マップに新しい要素を追加する
-myMap.set('bar', 'foo');
-myMap.set(1, 'foobar');
+myMap.set("bar", "foo");
+myMap.set(1, "foobar");
 
 // マップにある要素を更新する
-myMap.set('bar', 'baz');
+myMap.set("bar", "baz");
 ```
 
 ### set() のメソッドチェーンの使用
@@ -49,9 +49,7 @@ myMap.set('bar', 'baz');
 
 ```js
 // チェーンを使用してマップに新しい要素を追加する
-myMap.set('bar', 'foo')
-  .set(1, 'foobar')
-  .set(2, 'baz');
+myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ```
 
 ## 仕様書

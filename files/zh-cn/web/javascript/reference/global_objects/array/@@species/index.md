@@ -67,7 +67,7 @@ Array[Symbol.species]; // [Function: Array]
 
 ### 派生对象中的 species
 
-在自定义 `Array` 子类的实例中（例如 `MyArray`），`MyArray` 的 species 是 `MyArray` 构造函数。不过，您可能想要重写这个方法，以便在派生类方法中返回父级 `Array` 对象：
+在自定义 `Array` 子类的实例中（例如 `MyArray`），`MyArray` 的 species 是 `MyArray` 构造函数。不过，你可能想要重写这个方法，以便在派生类方法中返回父级 `Array` 对象：
 
 ```js
 class MyArray extends Array {

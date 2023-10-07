@@ -1,17 +1,19 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
 ---
 
 {{CSSRef}}
 
-CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
+CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
 
 ```css
 /* Selects an h1 heading with a
 paragraph element that immediately follows
 the h1 and applies the style to h1 */
-h1:has(+ p) { margin-bottom: 0; }
+h1:has(+ p) {
+  margin-bottom: 0;
+}
 ```
 
 `:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
@@ -40,12 +42,18 @@ h1:has(+ p) { margin-bottom: 0; }
 <section>
   <article>
     <h1>Morning Times</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -54,9 +62,9 @@ h1:has(+ p) { margin-bottom: 0; }
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -64,19 +72,21 @@ article {
   width: 40%;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.2em;
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 ```
 
 ```css
-h1, h2 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2 {
+  margin: 0 0 1rem 0;
 }
 
 h1:has(+ h2) {
@@ -101,13 +111,19 @@ h1:has(+ h2) {
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
     <h3>8:00 am</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -116,9 +132,9 @@ h1:has(+ h2) {
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -131,7 +147,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 
@@ -142,8 +158,10 @@ h3 {
 ```
 
 ```css
-h1, h2, h3 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem 0;
 }
 
 :is(h1, h2, h3):has(+ :is(h2, h3, h4)) {
@@ -176,7 +194,7 @@ h1, h2, h3 {
 ## 参见
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not)
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - [CSS 组合符](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
 - [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)

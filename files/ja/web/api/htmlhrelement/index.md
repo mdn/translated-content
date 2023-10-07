@@ -1,11 +1,13 @@
 ---
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLHRElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスの他に） {{HTMLElement("hr")}} 要素を操作するための特別なプロパティを提供します。
+**`HTMLHRElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスの他に） {{HTMLElement("hr")}} 要素を操作するための特別なプロパティを提供します。
 
 {{InheritanceDiagram}}
 
@@ -26,7 +28,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 
 ## メソッド
 
-_独自のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_独自のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

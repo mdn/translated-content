@@ -11,16 +11,16 @@ Esse objeto está disponível pela propriedade `dataTransfer` de todos os evento
 
 ## Visão geral das propriedades
 
-| Propriedades                                                                                                                                                 | Tipo                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`files`](#files.28.29)                                                 | {{ domxref("FileList") }}                                                                                       |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} | {{ domxref("Node") }}                                                                                           |
-| [`mozUserCancelled`](#mozUserCancelled)                                                                          | [`Boolean`](/pt-BR/JavaScript/Reference/Global_Objects/Boolean) |
-| [`types`](#types.28.29)                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)                                |
+| Propriedades                                                      | Tipo                                                               |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
+| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                          |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
+| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                    |
+| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                              |
+| [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/pt-BR/JavaScript/Reference/Global_Objects/Boolean)    |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)               |
 
 ## Visão geral dos métodos
 

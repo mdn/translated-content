@@ -1,7 +1,6 @@
 ---
 title: 101 Switching Protocol
 slug: Web/HTTP/Status/101
-translation_of: Web/HTTP/Status/101
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 のためのウェブアプリケーションの更新
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-original_slug: Updating_web_applications_for_Firefox_3
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
@@ -67,6 +66,8 @@ content mypackage location/ contentaccessible=yes
 > **メモ:** Firefox 2 では `contentaccessible` フラグが認識されない (フラグを含む行全体が無視されてしまう) ことから、アドオンを Firefox 2 と Firefox 3 の両方に対応させたい場合は、以下のように指定します。```
 > content mypackage location/
 > content mypackage location/ contentaccessible=yes
+>
+> ```
 >
 > ```
 

@@ -1,8 +1,6 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-browser-compat: css.properties.background-attachment
-translation_of: Web/CSS/background-attachment
 ---
 
 {{CSSRef}}
@@ -62,10 +60,9 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
 </p>
 ```
 
@@ -91,19 +88,17 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
-
-  Suddenly she came upon a little three-legged table, all made of solid
-  glass; there was nothing on it except a tiny golden key, and Alice's
-  first thought was that it might belong to one of the doors of the hall;
-  but, alas! either the locks were too large, or the key was too small,
-  but at any rate it would not open any of them. However, on the second
-  time round, she came upon a low curtain she had not noticed before, and
-  behind it was a little door about fifteen inches high: she tried the
-  little golden key in the lock, and to her great delight it fitted!
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
+  Suddenly she came upon a little three-legged table, all made of solid glass;
+  there was nothing on it except a tiny golden key, and Alice's first thought
+  was that it might belong to one of the doors of the hall; but, alas! either
+  the locks were too large, or the key was too small, but at any rate it would
+  not open any of them. However, on the second time round, she came upon a low
+  curtain she had not noticed before, and behind it was a little door about
+  fifteen inches high: she tried the little golden key in the lock, and to her
+  great delight it fitted!
 </p>
 ```
 

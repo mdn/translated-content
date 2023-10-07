@@ -22,7 +22,7 @@ l10n:
 基本的なフェッチリクエストは、本当に簡単に設定できます。以下のコードを見てください。
 
 ```js
-fetch('http://example.com/movies.json')
+fetch("http://example.com/movies.json")
   .then((response) => response.json())
   .then((data) => console.log(data));
 ```
@@ -43,28 +43,27 @@ fetch('http://example.com/movies.json')
 
 ```js
 // POST メソッドの実装の例
-async function postData(url = '', data = {}) {
+async function postData(url = "", data = {}) {
   // 既定のオプションには * が付いています
   const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data) // 本体のデータ型は "Content-Type" ヘッダーと一致させる必要があります
-  })
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // 本体のデータ型は "Content-Type" ヘッダーと一致させる必要があります
+  });
   return response.json(); // JSON のレスポンスをネイティブの JavaScript オブジェクトに解釈
 }
 
-postData('https://example.com/answer', { answer: 42 })
-  .then((data) => {
-    console.log(data); // `data.json()` の呼び出しで解釈された JSON データ
-  });
+postData("https://example.com/answer", { answer: 42 }).then((data) => {
+  console.log(data); // `data.json()` の呼び出しで解釈された JSON データ
+});
 ```
 
 なお、 `mode: "no-cors"` はリクエスト中の限られたヘッダーにしか許可されていません。
@@ -79,8 +78,8 @@ postData('https://example.com/answer', { answer: 42 })
 ブラウザーに資格情報のついたリクエストを送るようにするには、同一オリジンの場合もオリジン間の呼び出しの場合も、 `credentials: 'include'` を `init` オブジェクトに追加して `fetch()` メソッドに渡してください。
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include'
+fetch("https://example.com", {
+  credentials: "include",
 });
 ```
 
@@ -93,17 +92,17 @@ fetch('https://example.com', {
 ```js
 // オリジン 'https://example.com' で呼び出すスクリプトです。
 
-fetch('https://example.com', {
-  credentials: 'same-origin'
+fetch("https://example.com", {
+  credentials: "same-origin",
 });
 ```
 
 ブラウザーがリクエストに資格情報を含めないことを保証するには、代わりに `credentials: 'omit'` を使用してください。
 
 ```js
-fetch('https://example.com', {
-  credentials: 'omit'
-})
+fetch("https://example.com", {
+  credentials: "omit",
+});
 ```
 
 ## JSON データのアップロード
@@ -111,21 +110,21 @@ fetch('https://example.com', {
 {{domxref("fetch()")}} を使って JSON エンコードしたデータを POST します。
 
 ```js
-const data = { username: 'example' };
+const data = { username: "example" };
 
-fetch('https://example.com/profile', {
-  method: 'POST', // or 'PUT'
+fetch("https://example.com/profile", {
+  method: "POST", // or 'PUT'
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
   body: JSON.stringify(data),
 })
   .then((response) => response.json())
   .then((data) => {
-    console.log('Success:', data);
+    console.log("Success:", data);
   })
   .catch((error) => {
-    console.error('Error:', error);
+    console.error("Error:", error);
   });
 ```
 
@@ -137,19 +136,19 @@ fetch('https://example.com/profile', {
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-fetch('https://example.com/profile/avatar', {
-  method: 'PUT',
-  body: formData
+fetch("https://example.com/profile/avatar", {
+  method: "PUT",
+  body: formData,
 })
   .then((response) => response.json())
   .then((result) => {
-    console.log('Success:', result);
+    console.log("Success:", result);
   })
   .catch((error) => {
-    console.error('Error:', error);
+    console.error("Error:", error);
   });
 ```
 
@@ -161,23 +160,23 @@ fetch('https://example.com/profile/avatar', {
 const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
 
-formData.append('title', 'My Vegas Vacation');
+formData.append("title", "My Vegas Vacation");
 let i = 0;
 for (const photo of photos.files) {
   formData.append(`photos_${i}`, photo);
   i++;
 }
 
-fetch('https://example.com/posts', {
-  method: 'POST',
+fetch("https://example.com/posts", {
+  method: "POST",
   body: formData,
 })
   .then((response) => response.json())
   .then((result) => {
-    console.log('Success:', result);
+    console.log("Success:", result);
   })
   .catch((error) => {
-    console.error('Error:', error);
+    console.error("Error:", error);
   });
 ```
 
@@ -187,11 +186,11 @@ fetch('https://example.com/posts', {
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder('utf-8');
+  const utf8Decoder = new TextDecoder("utf-8");
   const response = await fetch(fileURL);
   const reader = response.body.getReader();
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : '';
+  chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
   const re = /\n|\r|\r\n/gm;
   let startIndex = 0;
@@ -203,7 +202,7 @@ async function* makeTextFileLineIterator(fileURL) {
       if (readerDone) break;
       let remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }
@@ -231,10 +230,10 @@ run();
 {{domxref("fetch()")}} のプロミスは、ネットワークエラーに遭遇したりサーバー側の CORS の設定（通常はアクセス権の問題など）が間違っていたりすると、 {{jsxref("TypeError")}} で拒否されます。例えば、 404 はネットワークエラーにはなりません。 `fetch()` が成功したかどうかを正確に判定するには、プロミスが解決された後で、 {{domxref("Response.ok")}} プロパティが true になっているかを確認してください。次のようなコードになるでしょう。
 
 ```js
-fetch('flowers.jpg')
+fetch("flowers.jpg")
   .then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not OK');
+      throw new Error("Network response was not OK");
     }
     return response.blob();
   })
@@ -242,7 +241,7 @@ fetch('flowers.jpg')
     myImage.src = URL.createObjectURL(myBlob);
   })
   .catch((error) => {
-    console.error('There has been a problem with your fetch operation:', error);
+    console.error("There has been a problem with your fetch operation:", error);
   });
 ```
 
@@ -253,11 +252,11 @@ fetch('flowers.jpg')
 ```js
 const myHeaders = new Headers();
 
-const myRequest = new Request('flowers.jpg', {
-  method: 'GET',
+const myRequest = new Request("flowers.jpg", {
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 });
 
 fetch(myRequest)
@@ -284,36 +283,36 @@ const anotherRequest = new Request(myRequest, myInit);
 {{domxref("Headers")}} インターフェイスでは、 {{domxref("Headers.Headers","Headers()")}} コンストラクターを使用して、ヘッダーオブジェクトを作成することができます。ヘッダーオブジェクトは、シンプルな複数の名前と値のマップです。
 
 ```js
-const content = 'Hello World';
+const content = "Hello World";
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/plain');
-myHeaders.append('Content-Length', content.length.toString());
-myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+myHeaders.append("Content-Type", "text/plain");
+myHeaders.append("Content-Length", content.length.toString());
+myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
 ```
 
 コンストラクターに配列の配列またはオブジェクトリテラルを渡すことで、同じことが実現できます。
 
 ```js
 const myHeaders = new Headers({
-  'Content-Type': 'text/plain',
-  'Content-Length': content.length.toString(),
-  'X-Custom-Header': 'ProcessThisImmediately'
+  "Content-Type": "text/plain",
+  "Content-Length": content.length.toString(),
+  "X-Custom-Header": "ProcessThisImmediately",
 });
 ```
 
 ヘッダーの中身を見たり、検索することができます。
 
 ```js
-console.log(myHeaders.has('Content-Type')); // true
-console.log(myHeaders.has('Set-Cookie')); // false
-myHeaders.set('Content-Type', 'text/html');
-myHeaders.append('X-Custom-Header', 'AnotherValue');
+console.log(myHeaders.has("Content-Type")); // true
+console.log(myHeaders.has("Set-Cookie")); // false
+myHeaders.set("Content-Type", "text/html");
+myHeaders.append("X-Custom-Header", "AnotherValue");
 
-console.log(myHeaders.get('Content-Length')); // 11
-console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
+console.log(myHeaders.get("Content-Length")); // 11
+console.log(myHeaders.get("X-Custom-Header")); // ['ProcessThisImmediately', 'AnotherValue']
 
-myHeaders.delete('X-Custom-Header');
-console.log(myHeaders.get('X-Custom-Header')); // null
+myHeaders.delete("X-Custom-Header");
+console.log(myHeaders.get("X-Custom-Header")); // null
 ```
 
 いくつかの操作は{{domxref("Service_Worker_API","サービスワーカー", "", 1)}}でしか役立ちませんが、ヘッダーを操作するためのより良い API を提供しています。
@@ -323,7 +322,7 @@ Headers のメソッドはすべて、有効な HTTP ヘッダーではない名
 ```js
 const myResponse = Response.error();
 try {
-  myResponse.headers.set('Origin', 'http://mybank.com');
+  myResponse.headers.set("Origin", "http://mybank.com");
 } catch (e) {
   console.log("銀行のふりをしないで下さい！");
 }
@@ -334,14 +333,14 @@ try {
 ```js
 fetch(myRequest)
   .then((response) => {
-     const contentType = response.headers.get('content-type');
-     if (!contentType || !contentType.includes('application/json')) {
-       throw new TypeError("Oops, we haven't got JSON!");
-     }
-     return response.json();
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new TypeError("Oops, we haven't got JSON!");
+    }
+    return response.json();
   })
   .then((data) => {
-      /* process your data further */
+    /* process your data further */
   })
   .catch((error) => console.error(error));
 ```
@@ -375,12 +374,12 @@ Response オブジェクトは JavaScript で動的に作ることもできま�
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', (event) => {
+addEventListener("fetch", (event) => {
   // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {
-      headers: { 'Content-Type': 'text/plain' }
-    })
+      headers: { "Content-Type": "text/plain" },
+    }),
   );
 });
 ```
@@ -415,10 +414,10 @@ addEventListener('fetch', (event) => {
 リクエスト本体は、 body 引数を渡すことによって設定することができます。
 
 ```js
-const form = new FormData(document.getElementById('login-form'));
-fetch('/login', {
-  method: 'POST',
-  body: form
+const form = new FormData(document.getElementById("login-form"));
+fetch("/login", {
+  method: "POST",
+  body: form,
 });
 ```
 

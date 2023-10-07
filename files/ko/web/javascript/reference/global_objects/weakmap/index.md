@@ -175,7 +175,7 @@ class Thing {
   static #counter = 0;
   #hidden;
   constructor() {
-    this.someProperty = 'foo';
+    this.someProperty = "foo";
     this.#hidden = ++Thing.#counter;
   }
   showPublic() {

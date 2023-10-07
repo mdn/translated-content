@@ -23,9 +23,9 @@ Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS
 
 1. Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   ```
 
 2. Guarda el archivo `index.html` y cárgalo en tu navegador. Debes ver algo como esto:
 
@@ -69,7 +69,9 @@ p {
 También puedes seleccionar varios elementos y aplicar una sola regla a todos ellos. Incluye varios selectores separados por comas (,). Por ejemplo:
 
 ```css
-p,li,h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -78,8 +80,8 @@ p,li,h1 {
 
 Existen muchos tipos diferentes de selectores. Antes, solo viste los **selectores de elementos**, los cuales seleccionan todos los elementos de un tipo dado en los documentos HTML. Sin embargo puedes hacer selecciones más específicas que esas. En seguida están algunos de los tipos de selectores más comunes:
 
-| Nombre del selector                                                      | Qué selecciona                                                                                                             | Ejemplo                                                                       |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Nombre del selector                                                      | Qué selecciona                                                                                                             | Ejemplo                                                                           |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Selector de elemento (llamado algunas veces selector de etiqueta o tipo) | Todos los elementos HTML del tipo especificado.                                                                            | `p`<br> Selecciona `<p>`                                                          |
 | Selector de identificación (ID)                                          | El elemento en la página con el ID especificado (en una página HTML dada, solo se permite un único elemento por ID).       | `#mi-id`<br> Selecciona `<p id="mi-id">` y `<a id="mi-id">`                       |
 | Selector de clase                                                        | Los elementos en la página con la clase especificada (una clase puede aparecer varias veces en una página).                | `.mi-clase`<br> Selecciona `<p class="mi-clase">` y `<a class="mi-clase">`        |
@@ -94,36 +96,40 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
 
 1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
 
-    ```html
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link
+     href="https://fonts.googleapis.com/css2?family=Open+Sans"
+     rel="stylesheet"
+     type="text/css" />
+   ```
 
 2. Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
 3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
 
-    ```css
-    html {
-      font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
-      font-family: "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
+     font-family: "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
+   }
+   ```
 
-    > **Nota:** se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
+   > **Nota:** se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
 
 4. Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 Puedes ajustar estos valores en px para lograr que tu diseño luzca como desees, pero por lo general tu diseño debe verse así:
 
@@ -157,7 +163,7 @@ Bien, ¡continúa y agrega más código CSS a la página! Sigue añadiendo estas
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -169,7 +175,7 @@ Esta regla asigna un color de fondo a la página entera. Puedes cambiar el códi
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -189,7 +195,7 @@ Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Elemen
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```

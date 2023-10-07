@@ -137,13 +137,30 @@ position: unset;
 ```html
 <h1>Absolute positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 #### CSS
@@ -191,22 +208,30 @@ span {
 ```html
 <div class="outer">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <div class="box" id="one">One</div>
 </div>
@@ -250,7 +275,10 @@ span {
 粘着位置指定は、相対位置指定と固定位置指定を組み合わせたものです。粘着位置指定された要素は、指定したしきい値に達するまでは相対位置指定として、しきい値に達したら固定位置指定として扱われます。例えば・・・
 
 ```css
-#one { position: sticky; top: 10px; }
+#one {
+  position: sticky;
+  top: 10px;
+}
 ```
 
 例えば上記のスタイルは、ビューポートをスクロールして要素の位置が上端から 10px より小さくなるまでは、相対位置指定の要素としてふるまいます。それ以降はしきい値を超えるほどビューポートのスクロールを戻すまで、上端から 10px で固定位置指定になります。
@@ -302,16 +330,19 @@ span {
 }
 
 dl > div {
-  background: #FFF;
+  background: #fff;
   padding: 24px 0 0 0;
 }
 
 dt {
-  background: #B8C1C8;
-  border-bottom: 1px solid #989EA4;
-  border-top: 1px solid #717D85;
-  color: #FFF;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -320,14 +351,17 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
 }
 ```
 

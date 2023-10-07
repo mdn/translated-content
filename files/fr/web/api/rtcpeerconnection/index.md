@@ -1,8 +1,6 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
-browser-compat: api.RTCPeerConnection
 ---
 
 {{APIRef('WebRTC')}}

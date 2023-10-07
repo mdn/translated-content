@@ -1,11 +1,6 @@
 ---
 title: SGML
 slug: Glossary/SGML
-tags:
-  - SGML
-  - Глоссарий
-translation_of: Glossary/SGML
-original_slug: Глоссарий/SGML
 ---
 
 Стандартный обобщённый язык разметки (**SGML**) это спецификация {{Glossary("ISO")}} для определения декларативных языков разметки.

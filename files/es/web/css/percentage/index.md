@@ -1,7 +1,6 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-original_slug: Web/CSS/porcentaje
 ---
 
 {{CSSRef}}
@@ -24,8 +23,12 @@ Los valores del tipo de dato `<porcentaje>` de CSS pueden ser interpolados en or
 
 ```html
 <div style="background-color:#0000FF;">
-  <div style="width:50%;margin-left:20%;background-color:#00FF00;">Width: 50%, Left margin: 20%</div>
-  <div style="width:30%;margin-left:60%;background-color:#FF0000;">Width: 30%, Left margin: 60%</div>
+  <div style="width:50%;margin-left:20%;background-color:#00FF00;">
+    Width: 50%, Left margin: 20%
+  </div>
+  <div style="width:30%;margin-left:60%;background-color:#FF0000;">
+    Width: 30%, Left margin: 60%
+  </div>
 </div>
 ```
 

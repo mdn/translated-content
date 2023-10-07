@@ -1,13 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/contenteditable
-original_slug: Web/HTML/Attributs_universels/contenteditable
 ---
 
 {{HTMLSidebar("Global_attributes")}}

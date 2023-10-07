@@ -1,17 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML5
-  - Web
-  - Веб
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/aside
 ---
 
 {{HTMLSidebar}}
@@ -23,7 +12,7 @@ translation_of: Web/HTML/Element/aside
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                                                                |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                                                                                                                                                                |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                     |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Допустимые родители                                              | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<aside>` не должен быть потомком элемента {{HTMLElement("address")}}.                                                                                                                                                                                        |
 | Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/note_role">note</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code> |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                  |

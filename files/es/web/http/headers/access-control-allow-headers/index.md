@@ -11,9 +11,9 @@ Los {{glossary("simple header", "encabezados simples")}}, {{HTTPHeader("Accept")
 
 Este encabezado es necesario si la solicitud tiene un encabezado {{HTTPHeader("Access-Control-Request-Headers")}}.
 
-| Tipo de encabezado                                                                               | {{Glossary("Response header", "Encabezado de respuesta")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}} | no                                                                           |
+| Tipo de encabezado                                                      | {{Glossary("Response header", "Encabezado de respuesta")}} |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------- |
+| {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}} | no                                                         |
 
 ## Sintaxis
 

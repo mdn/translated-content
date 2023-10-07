@@ -1,15 +1,6 @@
 ---
 title: Tutoriel SVG
 slug: Web/SVG/Tutorial
-tags:
-  - Intermediate
-  - NeedsContent
-  - NeedsHelp
-  - NeedsUpdate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial
-original_slug: Web/SVG/Tutoriel
 ---
 
 [SVG](/fr/docs/Web/SVG), pour Scalable Vector Graphics (ou encore Graphismes vectoriels redimensionnables), est un langage basé sur le [XML](/fr/docs/Web/XML) du W3C qui permet de définir des éléments graphiques avec des balises. Ce langage est plus ou moins implémenté dans Firefox, Opera, les navigateurs à base de Webkit, Internet Explorer et les autres navigateurs Web.

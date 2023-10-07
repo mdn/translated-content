@@ -36,11 +36,11 @@ Esse método permite determinar se uma string começa ou não com outra string. 
 
 ```js
 //startswith
-let str = 'Ser ou não ser, eis a questão.';
+let str = "Ser ou não ser, eis a questão.";
 
-console.log(str.startsWith('Ser'))          // true
-console.log(str.startsWith('não ser'))      // false
-console.log(str.startsWith('não ser', 7))  // true
+console.log(str.startsWith("Ser")); // true
+console.log(str.startsWith("não ser")); // false
+console.log(str.startsWith("não ser", 7)); // true
 ```
 
 ## Polyfill
@@ -62,8 +62,8 @@ Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas
 
 ## Especificações
 
-| Especificação                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                              |
+| ------------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
 
 ## Navegadores compatíveis

@@ -247,7 +247,7 @@ document.addEventListener(
     f.style.left = ev.clientX - 25 + "px";
     f.style.top = ev.clientY - 25 + "px";
   },
-  false
+  false,
 );
 ```
 
@@ -286,7 +286,7 @@ p {
 搭配上面範例的 HTML 程式碼並不複雜：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>CSS Transition Demo</title>

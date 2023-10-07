@@ -1,14 +1,6 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - Référence(2)
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -53,7 +45,7 @@ new RegExp(pattern, flags)
 
 ```js
 /ab+c/i;
-new RegExp('ab+c', 'i');
+new RegExp("ab+c", "i");
 ```
 
 Литеральная запись обеспечивает компиляцию регулярного выражения при вычислении выражения. Используйте литеральную запись если регулярное выражение будет неизменным. Например, если вы используете литеральную запись для конструирования регулярного выражения, используемого в цикле, регулярное выражение не будет перекомпилироваться на каждой итерации.
@@ -64,7 +56,7 @@ new RegExp('ab+c', 'i');
 
 ```js
 var re = /\w+/;
-var re = new RegExp('\\w+');
+var re = new RegExp("\\w+");
 ```
 
 ## Значение специальных символов в регулярных выражениях
@@ -740,14 +732,14 @@ var re = new RegExp('\\w+');
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 
 // пример с русскими буквами
 var re = /([а-яё]+)\s([а-яё]+)/i;
-var str = 'Джон Смит';
-var newstr = str.replace(re, '$2, $1');
+var str = "Джон Смит";
+var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 ```
 
@@ -758,7 +750,7 @@ console.log(newstr);
 Символы конца строки различаются на различных платформах (Unix, Windows и так далее). Разбиение строк из этого примера работает на всех платформах.
 
 ```js
-var text = 'Некоторый текст\nЕщё текст\r\nИ ещё\rЭто конец';
+var text = "Некоторый текст\nЕщё текст\r\nИ ещё\rЭто конец";
 var lines = text.split(/\r\n|\r|\n/);
 console.log(lines); // выведет [ 'Некоторый текст', 'Ещё текст', 'И ещё', 'Это конец' ]
 ```
@@ -768,7 +760,7 @@ console.log(lines); // выведет [ 'Некоторый текст', 'Ещё
 ### Пример: использование регулярных выражений на нескольких строках
 
 ```js
-var s = 'Please yes\nmake my day!';
+var s = "Please yes\nmake my day!";
 s.match(/yes.*day/);
 // Вернёт null
 s.match(/yes[^]*day/);
@@ -780,15 +772,15 @@ s.match(/yes[^]*day/);
 Этот пример демонстрирует, как можно использовать флаг «липучести» регулярных выражений для сопоставления с отдельными строками многострочного ввода.
 
 ```js
-var text = 'Первая строка\nВторая строка';
+var text = "Первая строка\nВторая строка";
 var regex = /(\S+) строка\n?/y;
 
 var match = regex.exec(text);
-console.log(match[1]);        // напечатает 'Первая'
+console.log(match[1]); // напечатает 'Первая'
 console.log(regex.lastIndex); // напечатает '14'
 
 var match2 = regex.exec(text);
-console.log(match2[1]);       // напечатает 'Вторая'
+console.log(match2[1]); // напечатает 'Вторая'
 console.log(regex.lastIndex); // напечатает '27'
 
 var match3 = regex.exec(text);
@@ -799,8 +791,12 @@ console.log(match3 === null); // напечатает 'true'
 
 ```js
 var supports_sticky;
-try { RegExp('', 'y'); supports_sticky = true; }
-catch(e) { supports_sticky = false; }
+try {
+  RegExp("", "y");
+  supports_sticky = true;
+} catch (e) {
+  supports_sticky = false;
+}
 console.log(supports_sticky); // напечатает 'true'
 ```
 
@@ -809,15 +805,15 @@ console.log(supports_sticky); // напечатает 'true'
 Как уже сказано выше, символьные классы `\w` и `\W` сопоставляются только с базовыми символами ASCII; то есть, с символами от «a» до «z», от «A» до «Z», от «0» до «9» и символом «\_». Для сопоставления с символами из других языков, например, с кириллическими или иврита, используйте форму `\uhhhh`, где «hhhh» — это значение символа Юникода, записанное в шестнадцатеричной форме. Этот пример демонстрирует, как можно выделить символы Юникода, составляющие слова.
 
 ```js
-var text = 'Образец text на русском языке';
+var text = "Образец text на русском языке";
 var regex = /[\u0400-\u04FF]+/g;
 
 var match = regex.exec(text);
-console.log(match[0]);        // напечатает 'Образец'
+console.log(match[0]); // напечатает 'Образец'
 console.log(regex.lastIndex); // напечатает '7'
 
 var match2 = regex.exec(text);
-console.log(match2[0]);       // напечатает 'на' [не 'text']
+console.log(match2[0]); // напечатает 'на' [не 'text']
 console.log(regex.lastIndex); // напечатает '15'
 
 // и так далее
@@ -828,7 +824,7 @@ console.log(regex.lastIndex); // напечатает '15'
 ### Пример: извлечение имени поддомена из URL
 
 ```js
-var url = 'http://xxx.domain.com';
+var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 ```
 
@@ -846,12 +842,12 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 
 ```js
 // Firefox 33 или более ранние
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 }); // 'group:'
 
 // Firefox 34 или более новые
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 }); // 'group:undefined'
 ```

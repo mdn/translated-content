@@ -1,14 +1,6 @@
 ---
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/baseName
 ---
 
 {{JSRef}}
@@ -48,7 +40,7 @@ console.log(japan.baseName); // Prints out "ja-JP"
 // Input string indicates language as Dutch and region as Belgium,
 
 // but options object overrides the region and sets it to the Netherlands
-let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
+let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
 
 console.log(dutch.baseName); // Prints out "nl-Latn-NL"
 ```

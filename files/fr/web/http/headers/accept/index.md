@@ -1,12 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Entête HTTP
-  - Entête de Requête
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/Accept
 ---
 
 {{HTTPSidebar}}

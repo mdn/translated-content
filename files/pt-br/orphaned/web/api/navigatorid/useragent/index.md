@@ -1,7 +1,6 @@
 ---
 title: NavigatorID.userAgent
 slug: orphaned/Web/API/NavigatorID/userAgent
-original_slug: Web/API/NavigatorID/userAgent
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -46,9 +45,7 @@ alert(window.navigator.userAgent)
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-navigator-useragent', 'NavigatorID.userAgent')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade
 

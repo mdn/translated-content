@@ -23,7 +23,7 @@ Un {{domxref("USVString")}}.
 ## Ejemplos
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
+var url = new URL("https://mydomain.com:80/svn/Repos/");
 var result = url.port; // Devuelve:'80'
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: isNaN
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-original_slug: Web/JavaScript/Referencia/Objetos_globales/isNaN
 ---
 
 {{jsSidebar("Objects")}}
@@ -36,10 +35,10 @@ Esta función es útil ya que el valor {{jsxref("Objetos_globales/NaN", "NaN")}}
 ### Ejemplos
 
 ```js
-isNaN(NaN) //devuelve true
-isNaN("string") //devuelve true
-isNaN("12") //devuelve false
-isNaN(12) //devuelve false
+isNaN(NaN); //devuelve true
+isNaN("string"); //devuelve true
+isNaN("12"); //devuelve false
+isNaN(12); //devuelve false
 ```
 
 ## Especificaciones

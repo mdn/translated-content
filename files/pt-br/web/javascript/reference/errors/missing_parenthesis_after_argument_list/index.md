@@ -1,7 +1,6 @@
 ---
 title: Erro de sintaxe falta ) depois da lista de argumentos
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-original_slug: Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento
 ---
 
 {{jsSidebar("Errors")}}
@@ -36,6 +35,6 @@ console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
-## Veja também:
+## Veja também
 
 - [Funções](/pt-BR/docs/Web/JavaScript/Guide/Functions)

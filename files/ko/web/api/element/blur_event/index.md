@@ -1,10 +1,9 @@
 ---
 title: blur
 slug: Web/API/Element/blur_event
-original_slug: Web/Events/blur
 ---
 
-`blur` 이벤트는 엘리먼트의 포커스가 해제되었을때 발생합니다. 이 이벤트와 [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) 이벤트의 가장 다른점은 [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) 은 이벤트 버블링이 발생합니다.
+`blur` 이벤트는 엘리먼트의 포커스가 해제되었을때 발생합니다. 이 이벤트와 [`focusout`](/ko/docs/Mozilla_event_reference/focusout) 이벤트의 가장 다른점은 [`focusout`](/ko/docs/Mozilla_event_reference/focusout) 은 이벤트 버블링이 발생합니다.
 
 ## General info
 
@@ -25,24 +24,24 @@ original_slug: Web/Events/blur
 
 ## Properties
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| Property                           | Type                                     | Description                                |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## 이벤트 위임
 
-이 이벤트에 이벤트 위임을 적용하는 방법은 두가지가 있습니다 : 브라우저가 지원한다면 `focusout` 이벤트를 사용하거나, [`addEventListener`](/en-US/docs/DOM/element.addEventListener)의 "useCapture" 파라미터를 `true`로 설정하세요:
+이 이벤트에 이벤트 위임을 적용하는 방법은 두가지가 있습니다 : 브라우저가 지원한다면 `focusout` 이벤트를 사용하거나, [`addEventListener`](/ko/docs/DOM/element.addEventListener)의 "useCapture" 파라미터를 `true`로 설정하세요:
 
 ### HTML Content
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -50,12 +49,20 @@ original_slug: Web/Events/blur
 
 ```js
 var form = document.getElementById("form");
-form.addEventListener("focus", function( event ) {
-  event.target.style.background = "pink";
-}, true);
-form.addEventListener("blur", function( event ) {
-  event.target.style.background = "";
-}, true);
+form.addEventListener(
+  "focus",
+  function (event) {
+    event.target.style.background = "pink";
+  },
+  true,
+);
+form.addEventListener(
+  "blur",
+  function (event) {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 #### 결과

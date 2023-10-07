@@ -28,7 +28,7 @@ slug: Learn/HTML/Introduction_to_HTML
 - [텍스트 조작 고급기법](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
   - : HTML에는 텍스트를 조작하기 위한 많은 요소들이 있습니다. [이](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 글에는 다 담을 수는 없습니다. 이 글에서는 잘 알려지진 않았지만 알아두면 굉장히 유용한 요소들을 살펴보겠습니다. 인용구, 설명 목록, 소스 코드 혹은 관련 텍스트, 위첨자, 아래첨자, 연락 정보 등을 마크업 하는 방법을 알아보겠습니다.
 - [문서와 웹사이트 구조](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-  - : ‘문단’이나 ‘이미지’와 같은 페이지의 부분을 정의하는 것처럼, HTML은 ‘헤더’, ‘네비게이션 메뉴’, ‘주요 내용 컬럼’과 같은 웹사이트의 영역을 정의하는데도 사용됩니다. 이 글에서는 기본 웹사이트 구조를 설계하는 법을 살펴보고, 이 구조를 표현하기 위해 HTML로 직접 작성해 보겠습니다.
+  - : '문단'이나 '이미지'와 같은 페이지의 부분을 정의하는 것처럼, HTML은 '헤더', '네비게이션 메뉴', '주요 내용 컬럼'과 같은 웹사이트의 영역을 정의하는데도 사용됩니다. 이 글에서는 기본 웹사이트 구조를 설계하는 법을 살펴보고, 이 구조를 표현하기 위해 HTML로 직접 작성해 보겠습니다.
 - [HTML 디버깅](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
   - : HTML 작성은 잘 되었는데, 무언가 잘못되었고, 작업을 할 수 없다면 코드에서 에러가 발생하는 부분은 어디일까요? 이 글은 이런 상황에 도움을 줄 수 있는 도구들을 소개합니다.
 
@@ -37,7 +37,7 @@ slug: Learn/HTML/Introduction_to_HTML
 다음의 평가들은 위의 가이드에 있는 HTML 기본을 얼마나 이해하고 있는지 테스트 합니다.
 
 - [마크업](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-  - : 우리는 모두 편지 쓰는 법을 금방 배우게 됩니다. 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 여러분이 마크업 하는 것을 평가합니다.
+  - : 우리는 모두 글자를 쓰는 법을 금방 배우게 됩니다. 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 여러분이 마크업 하는 것을 평가합니다.
 - [페이지 콘텐츠 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : 이 평가는 헤더, 푸터, 네비게이션 메뉴, 주요 콘텐츠, 사이드바를 담고 있는 간단한 웹 페이지의 구조를 HTML로 작성하는 능력을 테스트합니다.
 

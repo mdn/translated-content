@@ -1,13 +1,6 @@
 ---
 title: Console.time()
 slug: Web/API/console/time
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - console
-translation_of: Web/API/Console/time
 ---
 
 {{APIRef("Console API")}}
@@ -29,11 +22,9 @@ console.time(label);
 - `label`
   - : Название нового таймера. Оно однозначно идентифицирует таймер. Используйте то же самое название таймера, когда вызываете {{ domxref("console.timeEnd()") }} для остановки и отображения времени выполнения таймера.
 
-## Документация
+## Спецификации
 
-| Specification                                                            | Status                           | Comment                    |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------------- |
-| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Первоначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -1,7 +1,6 @@
 ---
 title: 미디어 쿼리
 slug: Web/CSS/CSS_media_queries
-original_slug: Web/CSS/Media_Queries
 ---
 
 {{CSSRef}}
@@ -16,9 +15,9 @@ original_slug: Web/CSS/Media_Queries
 
 [HTML](/ko/docs/Web/HTML)에서 미디어 쿼리는 다양한 요소에 적용될 수 있습니다.:
 
-- {{HTMLElement("link")}} 요소의 {{htmlattrxref("media", "link")}} 속성에서는, 링크된 리소스 (일반적으로 CSS)가 적용되어야하는 미디어를 정의합니다.
-- {{HTMLElement("source")}} 요소의 {{htmlattrxref("media", "source")}} 속성에서는, 해당 소스가 적용되어야하는 미디어를 정의합니다. (이건 {{HTMLElement("picture")}} 요소 안에서만 유효합니다.)
-- {{HTMLElement("style")}} 요소의 {{htmlattrxref("media", "style")}} 속성에서는, 스타일이 적용되어야하는 미디어를 정의합니다.
+- {{HTMLElement("link")}} 요소의 [`media`](/ko/docs/Web/HTML/Element/link#media) 속성에서는, 링크된 리소스 (일반적으로 CSS)가 적용되어야하는 미디어를 정의합니다.
+- {{HTMLElement("source")}} 요소의 [`media`](/ko/docs/Web/HTML/Element/source#media) 속성에서는, 해당 소스가 적용되어야하는 미디어를 정의합니다. (이건 {{HTMLElement("picture")}} 요소 안에서만 유효합니다.)
+- {{HTMLElement("style")}} 요소의 [`media`](/ko/docs/Web/HTML/Element/style#media) 속성에서는, 스타일이 적용되어야하는 미디어를 정의합니다.
 
 ### JavaScript에서의 미디어 쿼리
 

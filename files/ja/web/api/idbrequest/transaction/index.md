@@ -25,7 +25,9 @@ l10n:
 const title = "Walk dog";
 
 // 通常通りトランザクションを開始します
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // 指定の title をタイトルとして持つ TO-DO リストのオブジェクトを取得します
 const objectStoreTitleRequest = objectStore.get(title);
@@ -41,7 +43,9 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // この要求が由来するトランザクションを記録します
-  console.log(`この要求が由来するトランザクションは ${updateTitleRequest.transaction} です`);
+  console.log(
+    `この要求が由来するトランザクションは ${updateTitleRequest.transaction} です`,
+  );
 
   // 新しい要求が成功したら、また displayData() 関数を
   // 実行し、表示を更新します
@@ -54,7 +58,7 @@ objectStoreTitleRequest.onsuccess = () => {
 この例では、**`transaction`** プロパティをバージョンの更新中に既存のオブジェクトストアへアクセスするのに使う方法を示します。
 
 ```js
-const openRequest = indexedDB.open('db', 2);
+const openRequest = indexedDB.open("db", 2);
 console.log(openRequest.transaction); // "null" が記録されるはずです
 
 openRequest.onupgradeneeded = (event) => {
@@ -62,12 +66,12 @@ openRequest.onupgradeneeded = (event) => {
   const db = openRequest.result;
   if (event.oldVersion < 1) {
     // 新規データベースなので、オブジェクトストア "books" を作成します。
-    db.createObjectStore('books');
+    db.createObjectStore("books");
   }
   if (event.oldVersion < 2) {
     // v1 データベースからの更新です。オブジェクトストア "books" の "title" にインデックスを追加します。
-    const bookStore = openRequest.transaction.objectStore('books');
-    bookStore.createIndex('by_title', 'title');
+    const bookStore = openRequest.transaction.objectStore("books");
+    bookStore.createIndex("by_title", "title");
   }
 };
 

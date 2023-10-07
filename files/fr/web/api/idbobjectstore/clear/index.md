@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
-translation_of: Web/API/IDBObjectStore/clear
 ---
 
 {{ APIRef("IndexedDB") }}
@@ -29,7 +28,7 @@ Une {{domxref("IDBRequest","requête")}}.
 - `ReadOnlyError`
   - : Cette {{domxref("DOMException","exception")}} est levé si la transaction associé à cette requête est en {{domxref("IDBTransaction.mode","mode")}} lecture seule.
 - `TransactionInactiveError`
-  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
+  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.
 
 ## Exemple
 
@@ -41,8 +40,8 @@ La méthode **`clear()`** de l'accès au magasin d'objet fait une {{domxref("IDB
 //Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Connexion établie.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Connexion établie.</li>";
 
   //Affecte la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -56,13 +55,17 @@ function clearData() {
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // en cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction complété : modification de la base de données terminée.</li>";
   };
 
   // en cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function(event) {
-     note.innerHTML += '<li>Transaction en échec à cause de l\'erreur : ' + transaction.error + '</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction en échec à cause de l'erreur : " +
+      transaction.error +
+      "</li>";
   };
 
   // ouvre l'accès au un magasin "toDoList" de la transaction
@@ -71,11 +74,11 @@ function clearData() {
   // Vide le magasin d'objet
   var objectStoreRequest = objectStore.clear();
 
-  objectStoreRequest.onsuccess = function(event) {
-  // rapporte le succès du nettoyage
-  note.innerHTML += '<li>Enregistrements effacées.</li>';
+  objectStoreRequest.onsuccess = function (event) {
+    // rapporte le succès du nettoyage
+    note.innerHTML += "<li>Enregistrements effacées.</li>";
   };
-};
+}
 ```
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

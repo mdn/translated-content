@@ -15,9 +15,10 @@ Podemos utilizar un código similar para usar, como fuente para las texturas, ot
 
 El primer paso es añadir el HTML para crear el elemento {{ HTMLElement("video") }} que usaremos para obtener los fotogramas de video:
 
-```js
+```html
 <video id="video">
-  Parece ser que tu navegador no soporta el elemento HTML5. <code>&lt;video&gt;</code>
+  Parece ser que tu navegador no soporta el elemento HTML5.
+  <code>&lt;video&gt;</code>
 </video>
 ```
 
@@ -93,8 +94,14 @@ La función updateTexture() quedaría así; Aquí es donde se realiza el trabajo
 function updateTexture() {
   gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,
-        gl.UNSIGNED_BYTE, videoElement);
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    0,
+    gl.RGBA,
+    gl.RGBA,
+    gl.UNSIGNED_BYTE,
+    videoElement,
+  );
 }
 ```
 

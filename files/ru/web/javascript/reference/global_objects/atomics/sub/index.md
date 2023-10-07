@@ -1,7 +1,6 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
 
 {{JSRef}}
@@ -46,8 +45,8 @@ Atomics.load(ta, 0); // 36
 
 ## Спецификации
 
-| Specification                                                                | Status                       | Comment                       |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| Specification                                              | Status               | Comment                       |
+| ---------------------------------------------------------- | -------------------- | ----------------------------- |
 | {{SpecName('ESDraft', '#sec-atomics.sub', 'Atomics.sub')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
 
 ## Поддержка браузерами

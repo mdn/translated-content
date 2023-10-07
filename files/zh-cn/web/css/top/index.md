@@ -7,7 +7,7 @@ slug: Web/CSS/top
 
 **`top`**[样式](/zh-CN/docs/Web/CSS)属性定义了定位元素的上外边距边界与其包含块上边界之间的偏移，非定位元素设置此属性无效。
 
-```plain
+```css
 /* <length> values */
 top: 3px;
 top: 2.4em;

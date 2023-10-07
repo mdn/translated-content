@@ -1,12 +1,6 @@
 ---
 title: CSS Namespaces
 slug: Web/CSS/CSS_namespaces
-tags:
-  - Aperçu
-  - CSS
-  - CSS Namespaces
-  - Reference
-translation_of: Web/CSS/CSS_Namespaces
 ---
 
 {{CSSRef}}

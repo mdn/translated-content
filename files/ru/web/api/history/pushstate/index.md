@@ -1,13 +1,8 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - HTML DOM
-  - Web
-  - метод
-translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("DOM")}}
 
 В [HTML](/ru/docs/Web/HTML) документе метод **`history.pushState()`** добавляет новое состояние в историю браузера

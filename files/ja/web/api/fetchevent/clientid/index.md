@@ -18,7 +18,7 @@ l10n:
 ## 例
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   console.log(event.clientId);
 });
 ```

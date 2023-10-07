@@ -72,27 +72,27 @@ This example shows how to create a data channel and set up handlers for the {{DO
 
 var pc = new RTCPeerConnection(options);
 var channel = pc.createDataChannel("chat");
-channel.onopen = function(event) {
-  channel.send('Hi you!');
-}
-channel.onmessage = function(event) {
+channel.onopen = function (event) {
+  channel.send("Hi you!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ```js
 // Answerer side
 
 var pc = new RTCPeerConnection(options);
-pc.ondatachannel = function(event) {
+pc.ondatachannel = function (event) {
   var channel = event.channel;
-﻿  channel.onopen = function(event) {
-    channel.send('Hi back!');
-  }
-  channel.onmessage = function(event) {
+  channel.onopen = function (event) {
+    channel.send("Hi back!");
+  };
+  channel.onmessage = function (event) {
     console.log(event.data);
-  }
-}
+  };
+};
 ```
 
 Alternatively, more symmetrical out-of-band negotiation can be used, using an agreed-upon id (0 here):
@@ -101,13 +101,13 @@ Alternatively, more symmetrical out-of-band negotiation can be used, using an ag
 // Both sides
 
 var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
-channel.onopen = function(event) {
-  channel.send('Hi!');
-}
-channel.onmessage = function(event) {
+var channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
+channel.onopen = function (event) {
+  channel.send("Hi!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 For a more thorough example showing how the connection and channel are established, see [A simple RTCDataChannel sample](/zh-CN/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample).

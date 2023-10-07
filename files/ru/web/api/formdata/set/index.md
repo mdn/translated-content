@@ -1,7 +1,6 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
-translation_of: Web/API/FormData/set
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -43,17 +42,15 @@ var formData = new FormData(); // Сейчас пустой
 Вы можете установить для него пару ключ/значение, используя {{domxref("FormData.set")}}:
 
 ```js
-formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("username", "Chris");
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

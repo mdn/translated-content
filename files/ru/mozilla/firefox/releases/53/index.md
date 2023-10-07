@@ -1,8 +1,8 @@
 ---
 title: Firefox 53 для разработчиков
 slug: Mozilla/Firefox/Releases/53
-translation_of: Mozilla/Firefox/Releases/53
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 53 был выпущен 19 апреля 2017. В этой статье перечислены основные изменения, которые полезны не только для веб-разработчиков, но и разработчиков Firefox и Gecko, а также разработчикам дополнений.
@@ -40,7 +40,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 ### JavaScript
 
 - ECMAScript 2015 семантика для {{jsxref ( "Function.name")}} свойства были реализованы. Это включает в себя выведенные имена на анонимные функции ( `var foo = function() {}`) ({{bug (883377)}}).
-- ECMAScript 2015 семантика для закрытия итераторы были реализованы. Это влияет на [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)цикл, например ({{bug(1147371)}}).
+- ECMAScript 2015 семантика для закрытия итераторы были реализованы. Это влияет на [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)цикл, например ({{bug(1147371)}}).
 - [Шаблон Буквальное предложение Revision](https://tc39.github.io/proposal-template-literal-revision/) , что [снимает ограничения избежать последовательностей на помеченных литералах шаблона](/ru/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals_and_escape_sequences) было реализовано ({{bug(1317375)}}).
 - Нестандартные [Струнные дженерики](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#String_generic_methods) теперь представьте предупреждение устаревания в консоли. Не используйте их больше, они будут удалены в будущем! ({{bug (1319926)}}).
 - Статическое `length` свойство {{jsxref ( "TypedArray")}} объектов было изменено с 3 до 0 в соответствии с ES2016 ({{bug (1317306)}}).
@@ -59,7 +59,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### DOM
 
-- {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„“, а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ({{bug (1310483)}}).
+- {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„", а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ({{bug (1310483)}}).
 - {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ({{bug( "1330678")}}).
 - {{Domxref ( "Selection.setBaseAndExtent ()")}} метод [API выбора](/ru/docs/Web/API/Selection_API) теперь реализован (см {{bug (1321623)}}).
 - ["Fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) дополнение `file` типа {{HTMLElement ( "вход")}} `values` была реализована в Gecko, давая его соотношение с другими браузерами (см {{bug (1274596)}}).
@@ -142,16 +142,16 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 Новые API:
 
-- [`browsingData`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-- [`identity`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity)
-- [`contextualIdentities`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
+- [`browsingData`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
+- [`identity`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/identity)
+- [`contextualIdentities`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
 
 Усовершенствованные API:
 
-- [`storage.sync`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
-- `page_action`, `browser_action`, `password`, `tab` [Типы контекстов](/en-US/Add-ons/WebExtensions/API/contextMenus/ContextType) в[`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
-- [`webRequest.onBeforeRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) теперь поддерживает `requestBody`
-- [`tabs.insertCSS`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)теперь поддерживает `cssOrigin`, что позволяет вставлять таблицы стилей пользователя.
+- [`storage.sync`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
+- `page_action`, `browser_action`, `password`, `tab` [Типы контекстов](/en-US/Add-ons/WebExtensions/API/contextMenus/ContextType) в[`contextMenus`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
+- [`webRequest.onBeforeRequest`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) теперь поддерживает `requestBody`
+- [`tabs.insertCSS`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)теперь поддерживает `cssOrigin`, что позволяет вставлять таблицы стилей пользователя.
 
 ### модули JavaScript-код
 

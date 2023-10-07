@@ -21,7 +21,6 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -37,7 +36,6 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -57,7 +55,7 @@ These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies)
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -87,7 +85,6 @@ button/
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -101,7 +98,6 @@ button/
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -114,21 +110,20 @@ button/
 现在我们要创建弹出菜单。新建名为 "popup" 的文件夹，然后在文件夹内创建"choose_page.html" 文件，该文件内容如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
 
-<body>
-  <div class="page-choice">developer.mozilla.org</div>
-  <div class="page-choice">support.mozilla.org</div>
-  <div class="page-choice">addons.mozilla.org</div>
-  <script src="choose_page.js"></script>
-</body>
-
+  <body>
+    <div class="page-choice">developer.mozilla.org</div>
+    <div class="page-choice">support.mozilla.org</div>
+    <div class="page-choice">addons.mozilla.org</div>
+    <script src="choose_page.js"></script>
+  </body>
 </html>
 ```
 
@@ -137,7 +132,8 @@ button/
 在 "popup" 文件夹下，创建名为 "choose_page.css" 的文件，内容如下：
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -150,7 +146,7 @@ html, body {
 }
 
 .page-choice:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 ```
 
@@ -159,16 +155,15 @@ html, body {
 接着，在 "popup" 文件夹下，创建名为 "choose_page.js" 的文件，内容如下：
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
 
   var chosenPage = "https://" + e.target.textContent;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
-
 });
 ```
 

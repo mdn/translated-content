@@ -1,7 +1,6 @@
 ---
 title: Response.error()
 slug: Web/API/Response/error_static
-original_slug: Web/API/Response/error
 ---
 
 {{APIRef("Fetch")}}

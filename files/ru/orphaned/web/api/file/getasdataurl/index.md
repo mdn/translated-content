@@ -1,13 +1,6 @@
 ---
 title: File.getAsDataURL()
 slug: orphaned/Web/API/File/getAsDataURL
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-translation_of: Web/API/File/getAsDataURL
-original_slug: Web/API/File/getAsDataURL
 ---
 
 {{APIRef("File API") }} {{non-standard_header}} {{deprecated_header(7.0)}}

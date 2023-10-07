@@ -32,7 +32,7 @@ wm.set(window, "foo");
 
 wm.delete(window); // 返回 true，表示删除成功。
 
-wm.has(window);    // 返回 false，因为 window 对象已经被删除了。
+wm.has(window); // 返回 false，因为 window 对象已经被删除了。
 ```
 
 ## 规范

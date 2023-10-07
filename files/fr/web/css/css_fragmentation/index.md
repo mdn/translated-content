@@ -1,13 +1,6 @@
 ---
 title: CSS Fragmentation
 slug: Web/CSS/CSS_fragmentation
-tags:
-  - Aperçu
-  - CSS
-  - CSS Fragmentation
-  - NeedsContent
-  - Reference
-translation_of: Web/CSS/CSS_Fragmentation
 ---
 
 {{cssref}}

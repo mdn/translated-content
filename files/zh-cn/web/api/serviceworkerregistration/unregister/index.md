@@ -29,18 +29,21 @@ Promise 返回一个 bool 值表示 service worker 是否被取消注册。
 下面的简单例子中注册了一个 service worker，然后立即取消了：
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
-    // registration worked
-    console.log('Registration succeeded.');
-    registration.unregister().then(function(boolean) {
-      // if boolean = true, unregister is successful
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw-test/sw.js", { scope: "sw-test" })
+    .then(function (registration) {
+      // registration worked
+      console.log("Registration succeeded.");
+      registration.unregister().then(function (boolean) {
+        // if boolean = true, unregister is successful
+      });
+    })
+    .catch(function (error) {
+      // registration failed
+      console.log("Registration failed with " + error);
     });
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-};
+}
 ```
 
 ## 规范

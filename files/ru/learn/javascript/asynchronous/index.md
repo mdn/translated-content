@@ -1,23 +1,6 @@
 ---
 title: Асинхронный JavaScript
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
-  - Асинхронность
-  - асинхронное программирование
-translation_of: Learn/JavaScript/Asynchronous
 ---
 
 {{LearnSidebar}}
@@ -34,13 +17,13 @@ translation_of: Learn/JavaScript/Asynchronous
 
 ## Руководства
 
-- [Введение в асинхронный JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Введение в асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
   - : В этой статье мы кратко расскажем о различиях между синхронным и асинхронным программированием, проблемах, связанных с синхронным JavaScript-ом, и взглянем на различные техники асинхронного программирования, с которыми вы столкнётесь. Покажем как эти техники помогают решать проблемы синхронного JavaScript.
-- [Обработка асинхронных операций с помощью Промисов](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Обработка асинхронных операций с помощью Промисов](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
   - : Расскажем о промисах и том, как использовать API на их основе, а также объясним как работает функция с <code>async</code> и оператор <code>await</code>.
-- [Реализация API на основе Промисов](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Реализация API на основе Промисов](/ru/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
   - : Статья о том, как реализовать собственный API на основе промисов.
-- [Введение в воркеры](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Введение в воркеры](/ru/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
   - : Воркеры позволяют запускать код в отдельном потоке и не блокировать основной поток, чтобы код в нём оставался отзывчивым. В статье мы перепишем «тяжелую» синхронную функцию с использованием воркера.
 
 ## Смотрите также

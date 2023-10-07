@@ -1,7 +1,6 @@
 ---
 title: JavaScript 类型化数组
 slug: Web/JavaScript/Guide/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
@@ -26,19 +25,19 @@ original_slug: Web/JavaScript/Typed_arrays
 
 类型化数组视图具有自描述性的名字和所有常用的数值类型像 `Int8`、`Uint32`、`Float64` 等等。有一种特殊类型的数组 `Uint8ClampedArray`。它仅操作 0 到 255 之间的数值。例如，这对于 [Canvas 数据处理](/zh-CN/docs/Web/API/ImageData)非常有用。
 
-| 类型                                     | 值范围                               | 字节数 | 描述                                              | 对应的 Web IDL 类型    | 等效的 C 类型                     |
-| ---------------------------------------- | ----------------------------------- | ----- | ------------------------------------------------ | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128~127                                     | 1     | 8 位有符号整数（补码）                              | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}        | 0~255                                        | 1     | 8 位无符号整数                                     | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0~255                                        | 1     | 8 位无符号整数（值会被裁剪）                         | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}        | -32768~32767                                 | 2     | 16 位有符号整数（补码）                             | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}       | 0~65535                                      | 2     | 16 位无符号整数                                    | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}        | -2147483648~2147483647                       | 4     | 32 位有符号整数（补码）                             | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}       | 0~4294967295                                 | 4     | 32 位无符号整数                                    | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}      | `-3.4E38`~`3.4E38` 以及 `1.2E-38`（最小正数）  | 4     | 32 位 IEEE 浮点数（7 位有效数字，例如 `1.123456`）    | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}      | `-1.8E308`~`1.8E308` 以及 `5E-324`（最小正数） | 8     | 64 位 IEEE 浮点数（16 位有效数字，例如 `1.123...15`） | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup>~2<sup>63</sup> - 1           | 8     | 64 位有符号整数（补码）                             | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}    | 0~2<sup>64</sup> - 1                         | 8     | 64 位无符号整数                                    | `bigint`              | `uint64_t (unsigned long long)` |
+| 类型                            | 值范围                                         | 字节数 | 描述                                                  | 对应的 Web IDL 类型   | 等效的 C 类型                   |
+| ------------------------------- | ---------------------------------------------- | ------ | ----------------------------------------------------- | --------------------- | ------------------------------- |
+| {{jsxref("Int8Array")}}         | -128~127                                       | 1      | 8 位有符号整数（补码）                                | `byte`                | `int8_t`                        |
+| {{jsxref("Uint8Array")}}        | 0~255                                          | 1      | 8 位无符号整数                                        | `octet`               | `uint8_t`                       |
+| {{jsxref("Uint8ClampedArray")}} | 0~255                                          | 1      | 8 位无符号整数（值会被裁剪）                          | `octet`               | `uint8_t`                       |
+| {{jsxref("Int16Array")}}        | -32768~32767                                   | 2      | 16 位有符号整数（补码）                               | `short`               | `int16_t`                       |
+| {{jsxref("Uint16Array")}}       | 0~65535                                        | 2      | 16 位无符号整数                                       | `unsigned short`      | `uint16_t`                      |
+| {{jsxref("Int32Array")}}        | -2147483648~2147483647                         | 4      | 32 位有符号整数（补码）                               | `long`                | `int32_t`                       |
+| {{jsxref("Uint32Array")}}       | 0~4294967295                                   | 4      | 32 位无符号整数                                       | `unsigned long`       | `uint32_t`                      |
+| {{jsxref("Float32Array")}}      | `-3.4E38`~`3.4E38` 以及 `1.2E-38`（最小正数）  | 4      | 32 位 IEEE 浮点数（7 位有效数字，例如 `1.123456`）    | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}      | `-1.8E308`~`1.8E308` 以及 `5E-324`（最小正数） | 8      | 64 位 IEEE 浮点数（16 位有效数字，例如 `1.123...15`） | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup>~2<sup>63</sup> - 1             | 8      | 64 位有符号整数（补码）                               | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}    | 0~2<sup>64</sup> - 1                           | 8      | 64 位无符号整数                                       | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### DataView
 

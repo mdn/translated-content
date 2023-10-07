@@ -1,8 +1,6 @@
 ---
 title: Написание клиентских приложений с помощью веб-сокетов
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
 
 Веб-сокеты - технология, которая позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через веб-сокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.
@@ -56,7 +54,10 @@ WebSocket WebSocket(
 Этот простой пример создаёт новый WebSocket, подключаемый к серверу `ws://www.example.com/socketserver`. В данном примере в конструктор сокета в качестве дополнительного параметра передаётся пользовательский протокол "protocolOne", хотя эта часть может быть опущена.
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 После выполнения функции, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
@@ -64,7 +65,10 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocol
 Если нужно открыть соединение, поддерживающее несколько протоколов, можно передать массив протоколов:
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Когда соединение установлено (что соответствует, `readyState` `OPEN`), `exampleSocket.protocol` сообщит, какой протокол выбрал сервер.
@@ -102,8 +106,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Отправьте объект в виде JSON строки.
@@ -121,7 +125,7 @@ WebSockets — это API, управляемый событиями; когда
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### Получение и интерпретация JSON объектов
@@ -135,30 +139,38 @@ exampleSocket.onmessage = function (event) {
 Код обрабатывающий эти входящие сообщения, может выглядеть так:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

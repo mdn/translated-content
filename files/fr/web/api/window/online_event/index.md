@@ -1,13 +1,6 @@
 ---
-title: 'Window: online event'
+title: "Window: online event"
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - Evènement
-  - Online
-  - Reference
-  - Window
-translation_of: Web/API/Window/online_event
 ---
 
 {{APIRef}}
@@ -43,8 +36,8 @@ L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché 
 
 ```js
 // addEventListener version
-window.addEventListener('online', (event) => {
-    console.log("Vous êtes maintenant connecté au réseau.");
+window.addEventListener("online", (event) => {
+  console.log("Vous êtes maintenant connecté au réseau.");
 });
 
 // ononline version

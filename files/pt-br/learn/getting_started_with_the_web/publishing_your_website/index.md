@@ -1,7 +1,6 @@
 ---
 title: Publicando seu site
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Aprender/Getting_started_with_the_web/Publicando_seu_site
 ---
 
 {{LearnSidebar}}
@@ -66,7 +65,7 @@ Agora vamos mostrar como publicar seu site facilmente por meio das páginas do G
 4. ![](github-create-repo.png)
 5. Arraste e solte o conteúdo da pasta do site no seu repositório e clique em _Commit changes_ (confirmar alterações).
 
-    > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
+   > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
 
 6. Navegue em seu navegador até _username_.github.io para ver seu site online. Por exemplo, para o usuário _chrisdavidmills_, vá para [_chrisdavidmills_.github.io](http://chrisdavidmills.github.io/).
 

@@ -1,18 +1,6 @@
 ---
 title: Autoriser les images et canevas provenant d'autres origines
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - CORS
-  - Canvas
-  - HTML
-  - Image
-  - Reference
-  - Security
-  - Storage
-  - data
-translation_of: Web/HTML/CORS_enabled_image
-original_slug: Web/HTML/Images_avec_le_contrôle_d_accès_HTTP
 ---
 
 HTML permet d'utiliser l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/Img#attr-crossorigin) sur les images. Utilisé avec un en-tête [CORS](/fr/docs/Glossary/CORS) adéquat, les images définies par [`<img>`](/fr/docs/Web/HTML/Element/Img) provenant d'origines étrangères pourront être utilisées au sein d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme si elles avaient été chargées depuis l'origine courante.
@@ -72,9 +60,10 @@ Voici le code qui démarre le téléchargement (déclenché par exemple lorsque 
 
 ```js
 function startDownload() {
-  let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageURL =
+    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
@@ -102,8 +91,7 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
+  } catch (err) {
     console.log("Error: " + err);
   }
 }

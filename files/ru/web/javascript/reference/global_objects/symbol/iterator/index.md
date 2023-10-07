@@ -1,12 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Свойство
-  - Символы
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 
 {{JSRef}}
@@ -36,13 +30,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 Мы можем создавать собственные итерируемые объекты, подобно следующему коду:
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 ### Плохо оформленные итераторы

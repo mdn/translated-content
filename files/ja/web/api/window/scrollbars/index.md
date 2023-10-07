@@ -21,22 +21,24 @@ objRef = window.scrollbars
 
 ```html
 <DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8" />
+      <title>様々な DOM テスト</title>
 
-<script>
-// 存在するウィンドウのバーの状態を変更します
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.scrollbars.visible = !window.scrollbars.visible;
-</script>
-
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
-</html>
+      <script>
+        // 存在するウィンドウのバーの状態を変更します
+        netscape.security.PrivilegeManager.enablePrivilege(
+          "UniversalBrowserWrite",
+        );
+        window.scrollbars.visible = !window.scrollbars.visible;
+      </script>
+    </head>
+    <body>
+      <p>様々な DOM テスト</p>
+    </body>
+  </html></DOCTYPE
+>
 ```
 
 ## 仕様

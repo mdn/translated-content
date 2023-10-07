@@ -17,8 +17,8 @@ Tenemos a nuestra pelota azul pintada en la pantalla, pero sin hacer nada — Es
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 

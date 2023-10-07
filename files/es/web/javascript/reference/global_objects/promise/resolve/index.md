@@ -1,7 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/resolve
 ---
 
 {{JSRef}}
@@ -38,18 +37,21 @@ La función estática `Promise.resolve` retorna una `Promise` que es resuelta.
 ### Utilizando el método estático `Promise.resolve`
 
 ```js
-Promise.resolve('Éxito').then(function(value) {
-  console.log(value); // "Éxito"
-}, function(value) {
-  // no es llamada
-});
+Promise.resolve("Éxito").then(
+  function (value) {
+    console.log(value); // "Éxito"
+  },
+  function (value) {
+    // no es llamada
+  },
+);
 ```
 
 ### Resolviendo un arreglo
 
 ```js
-var p = Promise.resolve([1,2,3]);
-p.then(function(v) {
+var p = Promise.resolve([1, 2, 3]);
+p.then(function (v) {
   console.log(v[0]); // 1
 });
 ```
@@ -59,10 +61,10 @@ p.then(function(v) {
 ```js
 var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
-cast.then(function(value) {
-  console.log('valor: ' + value);
+cast.then(function (value) {
+  console.log("valor: " + value);
 });
-console.log('original === cast ? ' + (original === cast));
+console.log("original === cast ? " + (original === cast));
 
 // registros, en orden:
 // original === cast ? true
@@ -76,43 +78,58 @@ El orden invertido de los registros se debe al hecho de que los _handler_ `then`
 ```js
 // Resolviendo un objeto thenable
 var p1 = Promise.resolve({
-  then: function(onFulfill, onReject) { onFulfill('¡Completada!'); }
+  then: function (onFulfill, onReject) {
+    onFulfill("¡Completada!");
+  },
 });
-console.log(p1 instanceof Promise) // true, objeto convertido en una Promise
-j
-p1.then(function(v) {
+console.log(p1 instanceof Promise); // true, objeto convertido en una Promise
+j;
+p1.then(
+  function (v) {
     console.log(v); // "¡Completada!"
-  }, function(e) {
+  },
+  function (e) {
     // no es llamada
-});
+  },
+);
 
 // Thenable arroja antes del callback
 // Rechaza la Promise
-var thenable = { then: function(resolve) {
-  throw new TypeError('Arrojando');
-  resolve('Resolviendo');
-}};
+var thenable = {
+  then: function (resolve) {
+    throw new TypeError("Arrojando");
+    resolve("Resolviendo");
+  },
+};
 
 var p2 = Promise.resolve(thenable);
-p2.then(function(v) {
-  // no es llamada
-}, function(e) {
-  console.log(e); // TypeError: Arrojando
-});
+p2.then(
+  function (v) {
+    // no es llamada
+  },
+  function (e) {
+    console.log(e); // TypeError: Arrojando
+  },
+);
 
 // Thenable arroja después del callback
 // Resuelve la Promise
-var thenable = { then: function(resolve) {
-  resolve('Resolviendo');
-  throw new TypeError('Arrojando');
-}};
+var thenable = {
+  then: function (resolve) {
+    resolve("Resolviendo");
+    throw new TypeError("Arrojando");
+  },
+};
 
 var p3 = Promise.resolve(thenable);
-p3.then(function(v) {
-  console.log(v); // "Resolviendo"
-}, function(e) {
-  // no es llamada
-});
+p3.then(
+  function (v) {
+    console.log(v); // "Resolviendo"
+  },
+  function (e) {
+    // no es llamada
+  },
+);
 ```
 
 ## Especificaciones

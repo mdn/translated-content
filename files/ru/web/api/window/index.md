@@ -1,8 +1,8 @@
 ---
 title: Window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
+
 {{APIRef}}
 
 Объект `window` представляет собой окно, содержащее DOM документ; свойство `document` указывает на [DOM document](/ru/docs/DOM/document), загруженный в данном окне. Окно текущего документа может быть получено с помощью свойства {{Domxref("document.defaultView")}}.

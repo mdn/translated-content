@@ -111,7 +111,7 @@ const kvArray = [
   { key: 3, value: 30 },
 ];
 
-const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
+const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
 
 // フォーマットされた配列の内容は [{1: 10}, {2: 20}, {3: 30}]となる
 
@@ -139,7 +139,7 @@ const doubles = numbers.map((num) => num * 2);
 
 ```js
 const map = Array.prototype.map;
-const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
+const charCodes = map.call("Hello World", (x) => x.charCodeAt(0));
 
 // a の内容は [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100] となる
 ```
@@ -151,7 +151,7 @@ const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
 この場合、画面に選択されているすべての `option` の値を返します。
 
 ```js
-const elems = document.querySelectorAll('select option:checked');
+const elems = document.querySelectorAll("select option:checked");
 const values = Array.prototype.map.call(elems, ({ value }) => value);
 ```
 
@@ -166,7 +166,7 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 まずこの例をご覧ください。
 
 ```js
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 ```
 
 返値は `[1, 2, 3]` となりそうですが、実際には `[1, NaN, NaN]` となります。
@@ -183,9 +183,9 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 
 ```js
 // parseInt(string, radix) -> map(parseInt(value, index))
-/*  first iteration  (index is 0): */ parseInt("1", 0);  // 1
-/*  second iteration (index is 1): */ parseInt("2", 1);  // NaN
-/*  third iteration  (index is 2): */ parseInt("3", 2);  // NaN
+/*  first iteration  (index is 0): */ parseInt("1", 0); // 1
+/*  second iteration (index is 1): */ parseInt("2", 1); // NaN
+/*  third iteration  (index is 2): */ parseInt("3", 2); // NaN
 ```
 
 解決策を考えてみましょう。
@@ -193,26 +193,26 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 ```js
 const returnInt = (element) => parseInt(element, 10);
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // 期待した通り、数値の配列が返る。
 
 // アロー関数構文を使って、より簡潔に上記と同じ結果を得ることが出来ます。
-['1', '2', '3'].map((str) => parseInt(str)); // [1, 2, 3]
+["1", "2", "3"].map((str) => parseInt(str)); // [1, 2, 3]
 
 // ちなみにこの命題ではもっと簡単に同じ結果を得る方法があります。
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 
 // parseInt() とは違って、 Number() は float または (解決した) 指数表現を返します。
-['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 
 // 比較のために、上記の配列に parseInt() を用いると次のようになります。
-['1.1', '2.2e2', '3e300'].map((str) => parseInt(str)); // [1, 2, 3]
+["1.1", "2.2e2", "3e300"].map((str) => parseInt(str)); // [1, 2, 3]
 ```
 
 {{jsxref("parseInt")}} を引数として呼び出された map メソッドの代替出力の 1 つは、次のように実行されます。
 
 ```js
-const strings = ['10', '10', '10'];
+const strings = ["10", "10", "10"];
 const numbers = strings.map(parseInt);
 
 console.log(numbers);
@@ -229,7 +229,7 @@ const filteredNumbers = numbers.map((num, index) => {
   if (index < 3) {
     return num;
   }
-})
+});
 // index は 0 から始まるので、 filterNumbers は 1,2,3 および undefined になります。
 // filteredNumbers は [1, 2, undefined, undefined]
 // numbers は [1, 2, 3, 4] のまま

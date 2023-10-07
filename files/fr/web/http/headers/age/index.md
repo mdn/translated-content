@@ -1,7 +1,6 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-translation_of: Web/HTTP/Headers/Age
 ---
 
 {{HTTPSidebar}}

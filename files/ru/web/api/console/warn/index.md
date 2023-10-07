@@ -1,7 +1,6 @@
 ---
 title: Console.warn()
 slug: Web/API/console/warn
-translation_of: Web/API/Console/warn
 ---
 
 {{APIRef("Console API")}}Выводит предупреждение в веб-консоль.

@@ -18,7 +18,7 @@ slug: Web/API/Navigator/serviceWorker
 此代码检查浏览器是否支持 service worker。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Supported!
 }
 ```

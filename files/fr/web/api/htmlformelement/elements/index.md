@@ -1,9 +1,6 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
-translation_of: Web/API/HTMLFormElement/elements
-page-type: web-api-instance-property
-browser-compat: api.HTMLFormElement.elements
 ---
 
 {{APIRef("HTML DOM")}}
@@ -42,16 +39,16 @@ Dans cet exemple, on voit comment obtenir la liste des contrôles d'un formulair
 
 ```html
 <form id="mon-formulaire">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 
 ```js
-const inputs = document.getElementById('mon-formulaire').elements;
+const inputs = document.getElementById("mon-formulaire").elements;
 const inputByIndex = inputs[0];
-const inputByName = inputs['username'];
+const inputByName = inputs["username"];
 ```
 
 ### Accéder aux contrôles du formulaire
@@ -59,11 +56,11 @@ const inputByName = inputs['username'];
 Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`"text"`](/fr/docs/Web/HTML/Element/Input/text) afin de pouvoir modifier leur valeur.
 
 ```js
-const inputs = document.getElementById('mon-formulaire').elements;
+const inputs = document.getElementById("mon-formulaire").elements;
 
 // On parcourt les contrôles du formulaire
 for (let i = 0; i < inputs.length; i++) {
-  if (inputs[i].nodeName === 'INPUT' && inputs[i].type === 'text') {
+  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
     // On met à jour le champ texte
     inputs[i].value.toLocaleUpperCase();
   }
@@ -73,12 +70,12 @@ for (let i = 0; i < inputs.length; i++) {
 ### Désactiver des contrôles de formulaire
 
 ```js
-const inputs = document.getElementById('mon-formulaire').elements;
+const inputs = document.getElementById("mon-formulaire").elements;
 
 // On parcourt les contrôles du formulaire
 for (let i = 0; i < inputs.length; i++) {
   // On les désactive tous
-  inputs[i].setAttribute('disabled', '');
+  inputs[i].setAttribute("disabled", "");
 }
 ```
 

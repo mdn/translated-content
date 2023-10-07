@@ -1,9 +1,6 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt
-browser-compat: javascript.builtins.BigInt
 ---
 
 {{JSRef}}
@@ -20,16 +17,18 @@ const plusGrandEntier = 9007199254740991n;
 const grandNombre = BigInt(9007199254740991);
 // ↪ 9007199254740991n
 
-const grandNombreEnChaîne = BigInt('9007199254740991');
+const grandNombreEnChaîne = BigInt("9007199254740991");
 // ↪ 9007199254740991n
 
-const grandeNombreHexa = BigInt('0x1fffffffffffff');
+const grandeNombreHexa = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const grandNombreOctal = BigInt('0o377777777777777777');
+const grandNombreOctal = BigInt("0o377777777777777777");
 // ↪ 9007199254740991n
 
-const grandeNombreBinaire = BigInt('0b11111111111111111111111111111111111111111111111111111');
+const grandeNombreBinaire = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111",
+);
 // ↪ 9007199254740991n
 ```
 
@@ -40,14 +39,14 @@ Les objets `BigInt` sont semblables aux objets [`Number`](/fr/docs/Web/JavaScrip
 Lorsqu'on utilise `typeof` sur une valeur `BigInt`, cet opérateur renverra `"bigint"`&nbsp;:
 
 ```js
-typeof 1n === 'bigint';           // true
-typeof BigInt('1') === 'bigint';  // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 Lorsqu'on «&nbsp;enveloppe&nbsp;» la valeur primitive dans un objet, on aura alors un type `"object"` (comme pour les autres valeurs primitives lorsqu'on les enveloppe dans le constructeur objet)&nbsp;:
 
 ```js
-typeof Object(1n) === 'object'; // true
+typeof Object(1n) === "object"; // true
 ```
 
 ### Opérateurs
@@ -113,19 +112,19 @@ Un objet `BigInt` n'est pas strictement égal à [`Number`](/fr/docs/Web/JavaScr
 On peut toutefois comparer des objets [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) et `BigInt`&nbsp;:
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
@@ -139,23 +138,23 @@ mixed.sort();
 // ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
 
 mixed.sort((a, b) => a - b);
-// ne fonctionnera pas car la soustraction ne 
+// ne fonctionnera pas car la soustraction ne
 // fonctionne pas sur des types mixtes
 // TypeError: can't convert BigInt value to Number value
 
 // On peut trier avec un comparateur numérique approprié
-mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0));
+mixed.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
 // ↪ [ -12n, 0, 0n, 4n, 4, 6, 10 ]
 ```
 
 On notera que les comparaisons entre les valeurs `BigInt` et les mêmes valeurs, passées dans le constructeur `Object()`, ne seront pas équivalentes au sens strict&nbsp;:
 
 ```js
-0n === Object(0n);          // false
-Object(0n) === Object(0n);  // false
+0n === Object(0n); // false
+Object(0n) === Object(0n); // false
 
 const o = Object(0n);
-o === o;                    // true
+o === o; // true
 ```
 
 ### Opérations conditionnelles
@@ -164,29 +163,29 @@ Une valeur `BigInt` se comporte comme une valeur [`Number`](/fr/docs/Web/JavaScr
 
 ```js
 if (0n) {
-  console.log('Nous voici dans le if !');
+  console.log("Nous voici dans le if !");
 } else {
-  console.log('Et nous voilà dans le else !');
+  console.log("Et nous voilà dans le else !");
 }
 
 // ↪ "Et nous voilà dans le else !"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
@@ -230,7 +229,7 @@ L'utilisation de [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_O
 
 ```js
 function remplacement(cle, valeur) {
-  if (cle === 'big') {
+  if (cle === "big") {
     return valeur.toString();
   }
   return valeur;
@@ -238,7 +237,7 @@ function remplacement(cle, valeur) {
 
 const donnee = {
   number: 1,
-  big: BigInt('18014398509481982'),
+  big: BigInt("18014398509481982"),
 };
 const chaine = JSON.stringify(donnee, remplacement);
 
@@ -250,7 +249,7 @@ Si vous avez des données JSON contenant des valeurs dont vous savez qu'il s'agi
 
 ```js
 function reviver(cle, value) {
-  if (cle === 'big') {
+  if (cle === "big") {
     return BigInt(value);
   }
   return value;

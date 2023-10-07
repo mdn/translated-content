@@ -34,23 +34,28 @@ Object.keys(obj)
 
 ```js
 // 単純な配列
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
 // オブジェクトのような配列
-const obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj)); // console: ['0', '1', '2']
 
 // キーの順序がランダムなオブジェクトのような配列
-const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(anObj)); // console: ['2', '7', '100']
 
 // getFoo は列挙可能ではないプロパティ
-const myObj = Object.create({}, {
-  getFoo: {
-    value: function () { return this.foo; }
-  }
-});
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 ```
@@ -65,9 +70,9 @@ ES2015 以降では、オブジェクトでない引数はオブジェクトへ�
 
 ```js
 // In ES5
-Object.keys('foo');  // TypeError: "foo" is not an object
+Object.keys("foo"); // TypeError: "foo" is not an object
 
-Object.keys('foo');
+Object.keys("foo");
 // ["0", "1", "2"]                   (ES2015 code)
 ```
 
@@ -76,29 +81,34 @@ Object.keys('foo');
 `Object.keys` にネイティブに対応していない環境向けに互換性を確保するには、以下のコード部品をコピーしてください。
 
 ```js
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+// From https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
-  Object.keys = (function() {
-    'use strict';
+  Object.keys = (function () {
+    "use strict";
     var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
+      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
+      dontEnums = [
+        "toString",
+        "toLocaleString",
+        "valueOf",
+        "hasOwnProperty",
+        "isPrototypeOf",
+        "propertyIsEnumerable",
+        "constructor",
+      ],
+      dontEnumsLength = dontEnums.length;
 
-    return function(obj) {
-      if (typeof obj !== 'function' && (typeof obj !== 'object' || obj === null)) {
-        throw new TypeError('Object.keys called on non-object');
+    return function (obj) {
+      if (
+        typeof obj !== "function" &&
+        (typeof obj !== "object" || obj === null)
+      ) {
+        throw new TypeError("Object.keys called on non-object");
       }
 
-      var result = [], prop, i;
+      var result = [],
+        prop,
+        i;
 
       for (prop in obj) {
         if (hasOwnProperty.call(obj, prop)) {
@@ -115,7 +125,7 @@ if (!Object.keys) {
       }
       return result;
     };
-  }());
+  })();
 }
 ```
 

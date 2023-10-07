@@ -21,7 +21,7 @@ lab(52.2345% 40.1645 59.9971 / .5)
 
 - `lab(L a b [/ A])`
 
-  - : `L` indique la luminosité [CIE](https://fr.wikipedia.org/wiki/Commission_internationale_de_l%27%C3%A9clairage) sous la forme d'un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) compris entre `0%`, pour le noir, et `100%`, pour le blanc.
+  - : `L` indique la luminosité [CIE](https://fr.wikipedia.org/wiki/Commission_internationale_de_l%27éclairage) sous la forme d'un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) compris entre `0%`, pour le noir, et `100%`, pour le blanc.
 
     Le deuxième argument, `a`, indique la distance sur l'axe `a` de l'espace de couleur Lab.
 

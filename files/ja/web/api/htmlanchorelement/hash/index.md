@@ -1,7 +1,6 @@
 ---
 title: "HTMLAnchorElement: hash プロパティ"
 slug: Web/API/HTMLAnchorElement/hash
-original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
@@ -23,14 +22,14 @@ l10n:
 この HTML があったとします。
 
 ```html
-<a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples">Examples</a>
+<a id="myAnchor" href="/ja/docs/HTMLAnchorElement#例">例</a>
 ```
 
 このようにすると、アンカーのハッシュを取得することができます。
 
 ```js
 const anchor = document.getElementById("myAnchor");
-anchor.hash; // returns '#Examples'
+anchor.hash; // returns '#例'
 ```
 
 ## 仕様書

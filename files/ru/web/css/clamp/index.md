@@ -1,8 +1,6 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-translation_of: Web/CSS/clamp()
-original_slug: Web/CSS/clamp()
 ---
 
 {{CSSRef}}
@@ -62,14 +60,15 @@ _Максимальное значение_ – наибольшее значе�
 `clamp()` позволяет вам установить размер шрифта, который изменяется в зависимости от ширины области видимости, но не уменьшается ниже и не увеличивается выше заданного размера. Она имеет тот же эффект, что и в [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/), но в одну строку и без использования медиавыражений.
 
 ```css
-p { font-size: clamp(1rem, 2.5vw, 1.5rem); }
+p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
 ```
 
 ```html
 <p>
-If 2.5vw is less than 1rem, the font-size will be 1rem.
-If 2.5vw is greater than 1.5rem, the font-size will be 1.5rem.
-Otherwise, it will be 2.5vw.
+  If 2.5vw is less than 1rem, the font-size will be 1rem. If 2.5vw is greater
+  than 1.5rem, the font-size will be 1.5rem. Otherwise, it will be 2.5vw.
 </p>
 ```
 
@@ -81,8 +80,8 @@ TBD
 
 ## Specifications
 
-| Specification                                                                | Status                           | Comment             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| Specification                                            | Status                   | Comment             |
+| -------------------------------------------------------- | ------------------------ | ------------------- |
 | {{SpecName("CSS4 Values", "#calc-notation", "clamp()")}} | {{Spec2('CSS4 Values')}} | Initial definition. |
 
 ## Browser compatibility

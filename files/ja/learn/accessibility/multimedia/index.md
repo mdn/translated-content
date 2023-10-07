@@ -26,8 +26,9 @@ slug: Learn/Accessibility/Multimedia
 例えば:
 
 ```html
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 ```
 
 ## アクセシブルなオーディオとビデオコントロール
@@ -40,17 +41,23 @@ HTML5 の video と audio インスタンスは、ビルトインのコントロ
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML5 video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -84,9 +91,12 @@ main.js というファイルを新規作成し、同じディレクトリーに
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -106,17 +116,17 @@ main.js というファイルを新規作成し、同じディレクトリーに
 まずはそれぞれのコントロールの設定を保持しておく必要があります。JavaScript ファイルの先頭に次のコードを追加してください:
 
 ```js
-const playPauseBtn = document.querySelector('.playpause');
-const stopBtn = document.querySelector('.stop');
-const wdBtn = document.querySelector('.rwd');
-const fwdBtn = document.querySelector('.fwd');
-const timeLabel = document.querySelector('.time');
+const playPauseBtn = document.querySelector(".playpause");
+const stopBtn = document.querySelector(".stop");
+const wdBtn = document.querySelector(".rwd");
+const fwdBtn = document.querySelector(".fwd");
+const timeLabel = document.querySelector(".time");
 ```
 
 次に、video/audio プレイヤー自身の参照を取得する必要があります。次の行を先ほどのコードの下に加えてください:
 
 ```js
-const player = document.querySelector('video');
+const player = document.querySelector("video");
 ```
 
 これは {{domxref("HTMLMediaElement")}} オブジェクトへの参照を保持します。このオブジェクトは、私たちのボタンに機能を紐づけるために使用可能ないくつかの便利なプロパティやメソッドを持っています。
@@ -124,7 +134,7 @@ const player = document.querySelector('video');
 私たちのボタンの機能を作る前に、カスタムコンロールの邪魔にならないようネイティブコントロールを削除しましょう。JavaScript の下に次のコードを追加してください:
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 最初から controls 属性を含めないようにするのではなく、わざわざこのようにするのには理由があります。もし JavaScript コードが何らかの理由で失敗しても、ユーザーは利用可能な何かしらのコントロールを使うことができるのです。
@@ -134,13 +144,13 @@ player.removeAttribute('controls');
 最初に、再生/一時停止ボタンをセットアップしましょう。次のように、再生と一時停止をシンプルな条件によって切り替えることで、この機能を実現できます。これをあなたのコードの下に追加しましょう:
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = function () {
+  if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -148,10 +158,10 @@ playPauseBtn.onclick = function() {
 次に、ストップボタンを制御する次のコードを下に追加しましょう:
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = function () {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
@@ -160,16 +170,16 @@ stopBtn.onclick = function() {
 続いて、巻き戻しと早送りボタンです。次のブロックをあなたのコードの下に追加してください:
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = function () {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = function () {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -181,19 +191,19 @@ fwdBtn.onclick = function() {
 最後に、再生時間を表示するために次の内容をコードの最後に追加します:
 
 ```js
-player.ontimeupdate = function() {
+player.ontimeupdate = function () {
   let minutes = Math.floor(player.currentTime / 60);
   let seconds = Math.floor(player.currentTime - minutes * 60);
   let minuteValue;
   let secondValue;
 
-  if (minutes<10) {
+  if (minutes < 10) {
     minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
-  if (seconds<10) {
+  if (seconds < 10) {
     secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
@@ -296,9 +306,9 @@ HTML のメディア再生と共に表示させるためには、次のことを
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

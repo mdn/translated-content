@@ -12,9 +12,9 @@ slug: Web/JavaScript/Data_structures
 JavaScript 是弱型別，也能說是動態的程式語言。這代表你不必特別宣告變數的型別。程式在運作時，型別會自動轉換。這也代表你可以以不同的型別使用同一個變數。
 
 ```js
-var foo = 42;    // foo 目前是數字
-var foo = 'bar'; // foo 目前是字串
-var foo = true;  // foo 目前是布林值
+var foo = 42; // foo 目前是數字
+var foo = "bar"; // foo 目前是字串
+var foo = true; // foo 目前是布林值
 ```
 
 ## 資料型別

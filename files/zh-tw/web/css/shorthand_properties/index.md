@@ -77,7 +77,9 @@ font-family: Arial, sans-serif;
 可以簡寫成這樣：
 
 ```css
-font: italic bold 0.8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 簡化定義的效果完全等同於未簡化前的屬性效果，加上 `font-variant: normal`、`font-size-adjust: none` (CSS2.0 / CSS3) 及 `font-stretch: normal` (CSS3) 等屬性。

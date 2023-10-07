@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.hostname
 slug: Web/API/HTMLAnchorElement/hostname
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/hostname
-original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
 
 {{ApiRef("URL API")}}
@@ -25,7 +17,7 @@ object.hostname = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.hostname">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.hostname">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.hostname; // Вернёт: 'developer.mozilla.org'
 ```

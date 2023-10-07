@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: alert ロール'
+title: "ARIA: alert ロール"
 slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
 
@@ -18,7 +18,9 @@ slug: Web/Accessibility/ARIA/Roles/alert_role
 アラートをトリガーする最も基本的な方法は、デフォルトで `display: none;` を持つ要素に `role="alert"` を追加することです。 CSS や JavaScript で [`display`](/ja/docs/Web/CSS/CSS_Display) の値を変更すると、自動的にスクリーンリーダーがコンテンツを読み上げるようになります。
 
 ```html
-<p role="alert" style="display: none;">要素が表示されるとアラートがトリガーされます。</p>
+<p role="alert" style="display: none;">
+  要素が表示されるとアラートがトリガーされます。
+</p>
 ```
 
 CSS だけでアラートをトリガーすることは可能ですが、ブラウザやスクリーンリーダーのサポートが増え、イベントハンドラやフォームの検証などのより大きなユーザーインタラクションの一部として、より適切な場合が多いため、JavaScript を使用する方がよいでしょう。 JavaScript を使用すると、開発者はアラートの追加と削除を適切に制御できます。
@@ -29,11 +31,11 @@ CSS だけでアラートをトリガーすることは可能ですが、ブラ�
 ```
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', triggerAlert);
+const btn = document.querySelector("button");
+btn.addEventListener("click", triggerAlert);
 
 function triggerAlert() {
-  var alertEl = document.querySelector('.alert');
+  var alertEl = document.querySelector(".alert");
   alertEl.setAttribute("role", "alert");
 }
 ```

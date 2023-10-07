@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 
 ## 语法
 
-```js
-dateObj.getSeconds()
+```js-nolint
+getSeconds()
 ```
 
 ### 参数

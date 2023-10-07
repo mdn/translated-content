@@ -21,8 +21,8 @@ slug: Web/API/WebGLRenderbuffer
 ### 创建一个 render buffer 对象
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createRenderbuffer();
 ```
 

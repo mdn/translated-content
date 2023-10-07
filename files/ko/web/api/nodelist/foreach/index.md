@@ -47,12 +47,9 @@ node.appendChild(kid3);
 
 var list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(currentValue + ", " + currentIndex + ", " + this);
+}, "myThisArg");
 ```
 
 결과는 다음과 같습니다.
@@ -69,12 +66,12 @@ list.forEach(
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
 }
 ```
 
@@ -82,7 +79,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = Array.prototype.forEach;
+  NodeList.prototype.forEach = Array.prototype.forEach;
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
-translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
 
 {{APIRef}}
@@ -45,11 +44,11 @@ Il ne s'agit que d'un extrait de code simple qui utilise la méthode `strokeText
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.strokeText('Hello world', 50, 100);
+ctx.font = "48px serif";
+ctx.strokeText("Hello world", 50, 100);
 ```
 
 Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas:
@@ -64,7 +63,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea>
+ctx.strokeText("Hello world", 50, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -80,14 +80,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

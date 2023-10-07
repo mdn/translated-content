@@ -40,32 +40,32 @@ Una {{domxref("NodeList")}} _no viva_ que contenga un objeto {{domxref("Element"
 Para obtener una {{domxref("NodeList")}} de todos los elementos {{HTMLElement("p")}} en el documento:
 
 ```js
-var matches = document.querySelectorAll('p');
+var matches = document.querySelectorAll("p");
 ```
 
 Este ejemplo devuelve una lista de todos los elementos {{HTMLElement("div")}} del documento con una clase "`nota`" o "`alerta`":
 
 ```js
-var matches = document.querySelectorAll('div.nota, div.alerta');
+var matches = document.querySelectorAll("div.nota, div.alerta");
 ```
 
 Aquí, se obtiene una lista de elementos `<p>` cuyo elemento padre inmediato es un {{domxref("div")}} con la clase `"highlighted"` y que está ubicado dentro de un contenedor cuyo ID es `"test"`.
 
 ```js
-var container = document.querySelector('#test');
-var matches = container.querySelectorAll('div.highlighted > p');
+var container = document.querySelector("#test");
+var matches = container.querySelectorAll("div.highlighted > p");
 ```
 
 Este ejemplo usa un [selector de atributos](/es/docs/Web/CSS/Selectores_atributo) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
 
 ```js
-var matches = document.querySelectorAll('iframe[data-src]');
+var matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Aquí, un selector de atributo se utiliza para devolver una lista de los elementos de una lista cuyo ID es `"userlist"` que tiene un atributo `"data-active"` cuyo valor es `"1"`:
 
 ```js
-var container = document.querySelector('#userlist');
+var container = document.querySelector("#userlist");
 var matches = container.querySelectorAll('li[data-active="1"]');
 ```
 
@@ -76,9 +76,9 @@ Una vez que se devuelve la {{domxref("NodeList")}} de los elementos que coincide
 En cualquier caso, se puede simplemente utilizar la notación estándar de los arrays para acceder al contenido de la lista. Se puede usar cualquier sentencia de iteración, como por ejemplo:
 
 ```js
-var highlightedItems = userList.querySelectorAll('.highlighted');
+var highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -94,8 +94,7 @@ Considere este HTML, con sus tres bloques anidados {{HTMLElement("div")}}.
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -103,8 +102,8 @@ Considere este HTML, con sus tres bloques anidados {{HTMLElement("div")}}.
 ### JavaScript
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, not 0!
 ```
 
@@ -113,8 +112,8 @@ En este ejemplo, cuando se selecciona `".outer .inner"` en el contexto el `<div>
 La pseudo-clase {{cssxref(":scope")}} recupera el comportamiento esperado, encontrando coincidencias sólo en selectores descendientes del elemento base:
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 

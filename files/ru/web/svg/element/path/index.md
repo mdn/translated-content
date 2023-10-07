@@ -1,24 +1,28 @@
 ---
 title: <path>
 slug: Web/SVG/Element/path
-translation_of: Web/SVG/Element/path
-original_slug: Web/SVG/Элемент/path
 ---
+
 {{SVGRef}}
 
 Элемент **`<path>`** является общим элементом для описания фигуры. Все базовые фигуры могут быть созданы с помощью элемента path.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10,30
+  <path
+    d="M 10,30
            A 20,20 0,0,1 50,30
            A 20,20 0,0,1 90,30
            Q 90,60 50,90
-           Q 10,60 10,30 z"/>
+           Q 10,60 10,30 z" />
 </svg>
 ```
 

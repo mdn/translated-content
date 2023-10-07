@@ -22,7 +22,7 @@ Novo objeto `Iterator`.
 ### Usando `[@@iterator]()`
 
 ```js
-var str = 'A\uD835\uDC68';
+var str = "A\uD835\uDC68";
 
 var strIter = str[Symbol.iterator]();
 
@@ -33,7 +33,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ### Usando `[@@iterator]()` com `for..of`
 
 ```js
-var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+var str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
 
 for (var v of str) {
   console.log(v);
@@ -48,9 +48,9 @@ for (var v of str) {
 
 ## Especificações
 
-|                                                                                                                              | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+|                                                                                               | Status               | Comment            |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

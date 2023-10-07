@@ -1,10 +1,6 @@
 ---
 title: Explorer un tableau HTML avec des interfaces DOM et JavaScript
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-translation_of: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
 
 ## Introduction
@@ -18,7 +14,7 @@ Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondam
 ### Contenu HTML
 
 ```html
-<input type="button" value="Generate a table." onclick="generate_table()">
+<input type="button" value="Generate a table." onclick="generate_table()" />
 ```
 
 ### Contenu JavaScript
@@ -42,7 +38,9 @@ function generate_table() {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       var cell = document.createElement("td");
-      var cellText = document.createTextNode("cell in row "+i+", column "+j);
+      var cellText = document.createTextNode(
+        "cell in row " + i + ", column " + j,
+      );
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -74,33 +72,33 @@ Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud 
 
 1. On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
 
-    ```js
-    cell.appendChild(texte);
-    ```
+   ```js
+   cell.appendChild(texte);
+   ```
 
 2. Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
 
-    ```js
-    row.appendChild(cell);
-    ```
+   ```js
+   row.appendChild(cell);
+   ```
 
 3. Puis chaque \<tr> à son parent \<tbody> avec
 
-    ```js
-    tablebody.appendChild(row);
-    ```
+   ```js
+   tablebody.appendChild(row);
+   ```
 
 4. Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
 
-    ```js
-    table.appendChild(tablebody);
-    ```
+   ```js
+   table.appendChild(tablebody);
+   ```
 
 5. Enfin, \<table> est rattaché à \<body> avec
 
-    ```js
-    body.appendChild(table);
-    ```
+   ```js
+   body.appendChild(table);
+   ```
 
 Souvenez-vous de cette technique, vous l'utiliserez souvent en programmant pour le DOM W3C. On crée d'abord les éléments du haut vers le bas, puis on attache les enfants aux parents dans l'ordre inverse.
 
@@ -109,8 +107,14 @@ Voici l'HTML généré par ce code JavaScript&nbsp;:
 ```html
 ...
 <table border="2">
-<tr><td>la cellule est ligne 0 colonne 0</td><td>la cellule est ligne 0 colonne 1</td></tr>
-<tr><td>la cellule est ligne 1 colonne 0</td><td>la cellule est ligne 1 colonne 1</td></tr>
+  <tr>
+    <td>la cellule est ligne 0 colonne 0</td>
+    <td>la cellule est ligne 0 colonne 1</td>
+  </tr>
+  <tr>
+    <td>la cellule est ligne 1 colonne 0</td>
+    <td>la cellule est ligne 1 colonne 1</td>
+  </tr>
 </table>
 ...
 ```
@@ -129,7 +133,10 @@ Vous pouvez construire ce tableau ainsi que ses éléments enfants internes en u
 
 ```html
 <body>
-  <input type="button" value="Set paragraph background color" onclick="set_background()">
+  <input
+    type="button"
+    value="Set paragraph background color"
+    onclick="set_background()" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -158,23 +165,23 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
 
 1. On récupère d'abord une liste de tous les éléments body avec
 
-    ```js
-    myBody = document.getElementsByTagName("body")[0]
-    ```
+   ```js
+   myBody = document.getElementsByTagName("body")[0];
+   ```
 
-    Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `[0]`.
+   Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `[0]`.
 
 2. Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
 
-    ```js
-    myBodyElements = myBody.getElementsByTagName("p");
-    ```
+   ```js
+   myBodyElements = myBody.getElementsByTagName("p");
+   ```
 
 3. Pour finir on prend le deuxième élément de la liste des éléments p avec
 
-    ```js
-    myP = myBodyElements[1];
-    ```
+   ```js
+   myP = myBodyElements[1];
+   ```
 
 ![](sample2a2.jpg)
 
@@ -319,10 +326,10 @@ myrow = mytablebody.getElementsByTagName("tr")[1];
 mycel = myrow.getElementsByTagName("td")[1];
 
 // premier élément du noeud liste des enfants de mycel
-myceltext=mycel.childNodes[0];
+myceltext = mycel.childNodes[0];
 
 //  contenu de currenttext est le contenu des données de myceltext
-currenttext=document.createTextNode(myceltext.data);
+currenttext = document.createTextNode(myceltext.data);
 mybody.appendChild(currenttext);
 ```
 
@@ -340,35 +347,34 @@ Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez défini
 
 ```html
 <html>
-<body onload="start()">
-</body>
-<script>
+  <body onload="start()"></body>
+  <script>
     function start() {
-        var body  = document.getElementsByTagName("body")[0];
-        table     = document.createElement("table");
-        tablebody = document.createElement("tbody");
+      var body = document.getElementsByTagName("body")[0];
+      table = document.createElement("table");
+      tablebody = document.createElement("tbody");
 
-        for(var j = 0; j < 2; j++) {
-            row = document.createElement("tr");
-            for(var i = 0; i < 2; i++) {
-                cell = document.createElement("td");
-                text = document.createTextNode("la cellule est&nbsp;:" + i + j);
-                cell.appendChild(text);
-                row.appendChild(cell);
-                // change la couleur de fond de la cellule
-                // si la colonne est 0. Si la colonne est 1, cache la cellule
-                if (i == 0) {
-                    cell.style.background = "rgb(255,0,0)";
-                } else {
-                    cell.style.display = "none";
-                }
-            }
-            tablebody.appendChild(row);
+      for (var j = 0; j < 2; j++) {
+        row = document.createElement("tr");
+        for (var i = 0; i < 2; i++) {
+          cell = document.createElement("td");
+          text = document.createTextNode("la cellule est&nbsp;:" + i + j);
+          cell.appendChild(text);
+          row.appendChild(cell);
+          // change la couleur de fond de la cellule
+          // si la colonne est 0. Si la colonne est 1, cache la cellule
+          if (i == 0) {
+            cell.style.background = "rgb(255,0,0)";
+          } else {
+            cell.style.display = "none";
+          }
         }
-        table.appendChild(tablebody);
-        body.appendChild(table);
+        tablebody.appendChild(row);
+      }
+      table.appendChild(tablebody);
+      body.appendChild(table);
     }
-</script>
+  </script>
 </html>
 ```
 

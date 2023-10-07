@@ -1,12 +1,11 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
-Ранее в этом уроке мы узнали о [сетке холста](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) и **координатном пространстве**. До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
+Ранее в этом уроке мы узнали о [сетке холста](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) и **координатном пространстве**. До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
 
 ## Сохранение и восстановление состояния
 
@@ -31,24 +30,24 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // рисуем прямоугольник с настройками по умолчанию
-  ctx.save();                     // сохраняем состояние
+  ctx.fillRect(0, 0, 150, 150); // рисуем прямоугольник с настройками по умолчанию
+  ctx.save(); // сохраняем состояние
 
-  ctx.fillStyle = '#09F';         // вносим изменения в настройки
+  ctx.fillStyle = "#09F"; // вносим изменения в настройки
   ctx.fillRect(15, 15, 120, 120); // рисуем прямоугольник с новыми настройками
-  ctx.save();                     // сохраняем состояние
+  ctx.save(); // сохраняем состояние
 
-  ctx.fillStyle = '#FFF';         // вносим изменения в настройки
+  ctx.fillStyle = "#FFF"; // вносим изменения в настройки
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // рисуем прямоугольник с новыми настройками
+  ctx.fillRect(30, 30, 90, 90); // рисуем прямоугольник с новыми настройками
 
-  ctx.restore();                  // возвращаемся к предыдущим настройкам
-  ctx.fillRect(45, 45, 60, 60);   // рисуем прямоугольник с восстановленными настройками
+  ctx.restore(); // возвращаемся к предыдущим настройкам
+  ctx.fillRect(45, 45, 60, 60); // рисуем прямоугольник с восстановленными настройками
 
-  ctx.restore();                  // возвращаемся к начальным настройкам
-  ctx.fillRect(60, 60, 30, 30);   // рисуем прямоугольник с изначальными настройками
+  ctx.restore(); // возвращаемся к начальным настройкам
+  ctx.fillRect(60, 60, 30, 30); // рисуем прямоугольник с изначальными настройками
 }
 ```
 
@@ -85,11 +84,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -125,32 +124,32 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // left rectangles, rotate from canvas origin
   ctx.save();
   // blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // right rectangles, rotate from rectangle center
   // draw blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // translate to rectangle center
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // rotate
   ctx.translate(-200, -80); // translate back
 
   // draw grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -184,7 +183,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // рисуем масштабированный прямоугольник.
   ctx.save();
@@ -194,8 +193,8 @@ function draw() {
 
   // размещаем текст, отражённый по горизонтали
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -217,7 +216,7 @@ draw();
 
   - : Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-    If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
+    If any of the arguments are [`Infinity`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
 
 Параметры функции:
 
@@ -242,21 +241,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```

@@ -1,7 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-original_slug: Web/CSS/transform-function/rotate()
 ---
 
 {{CSSRef}}
@@ -22,7 +21,7 @@ rotate(a)
 
 - _a_
   - : {{ cssxref("&lt;angle&gt;") }} で、回転する角度を表します。回転方向は書字方向に依存します。
-      左書きの文脈では、正の角度は時計回りの回転を、負の角度は反時計回りの回転を表します。右書きの文脈では 正の角度は反時計回りの回転を、負の角度は時計回りの回転を表します。
+    左書きの文脈では、正の角度は時計回りの回転を、負の角度は反時計回りの回転を表します。右書きの文脈では 正の角度は反時計回りの回転を、負の角度は時計回りの回転を表します。
 
 <table class="standard-table">
   <thead>
@@ -278,4 +277,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d())
+- [`rotate3d()`](</ja/docs/Web/CSS/transform-function/rotate3d()>)

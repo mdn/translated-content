@@ -1,7 +1,6 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Permissions-Policy
-original_slug: Web/HTTP/Headers/Feature-Policy
 ---
 
 {{HTTPSidebar}}
@@ -109,9 +108,7 @@ Especificando a palavra-chave `'none'` para a lista de origem, as funcionalidade
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                               | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName("Feature Policy","#permissions-policy-http-header-field","Permissions-Policy")}} | {{Spec2("Feature Policy")}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

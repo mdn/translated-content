@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: プログレッシブウェブアプリの構造
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-original_slug: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
@@ -64,38 +63,55 @@ Streams API を使用すると、開発者はサーバーからのデータス�
 HTML の観点から見ると、アプリシェルは content セクション以外のすべてのものです。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>js13kGames A-Frame entries</title>
-  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-  <meta name="author" content="end3r">
-  <meta name="theme-color" content="#B12A34">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="icons/icon-512.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="js13kpwa.webmanifest">
-  <script src="data/games.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-<header>
-  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-  <h1>js13kGames A-Frame entries</h1>
-  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-  <button id="notifications">Request dummy notifications</button>
-  <section id="content">
-    // コンテンツはここに動的に挿入されます
-  </section>
-</main>
-<footer>
-  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames A-Frame entries</title>
+    <meta
+      name="description"
+      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="http://js13kgames.com"
+          ><img src="img/js13kgames.png" alt="js13kGames"
+        /></a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames A-Frame entries</h1>
+      <p class="description">
+        List of games submitted to the
+        <a href="http://js13kgames.com/aframe">A-Frame category</a> in the
+        <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
+        You can
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
+          >fork js13kPWA on GitHub</a
+        >
+        to check its source code.
+      </p>
+      <button id="notifications">Request dummy notifications</button>
+      <section id="content">// コンテンツはここに動的に挿入されます</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2018, created and maintained by
+        <a href="http://end3r.com">Andrzej Mazur</a> from
+        <a href="http://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 
@@ -112,7 +128,8 @@ CSS も可能な限りわかりやすくなっています。 つまり、 {{css
 `app.js` ファイルは、次の記事で詳しく調べることをいくつか行います。 まず最初に、次のテンプレートに基づいてコンテンツを生成します。
 
 ```js
-var template = "<article>\n\
+var template =
+  "<article>\n\
     <img src='data/img/SLUG.jpg' alt='NAME'>\n\
     <h3>#POS. NAME</h3>\n\
     <ul>\n\
@@ -123,39 +140,40 @@ var template = "<article>\n\
     <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>\n\
     </ul>\n\
 </article>";
-var content = '';
-for(var i=0; i<games.length; i++) {
-    var entry = template.replace(/POS/g,(i+1))
-        .replace(/SLUG/g,games[i].slug)
-        .replace(/NAME/g,games[i].name)
-        .replace(/AUTHOR/g,games[i].author)
-        .replace(/TWITTER/g,games[i].twitter)
-        .replace(/WEBSITE/g,games[i].website)
-        .replace(/GITHUB/g,games[i].github);
-    entry = entry.replace('<a href=\'http:///\'></a>','-');
-    content += entry;
-};
-document.getElementById('content').innerHTML = content;
+var content = "";
+for (var i = 0; i < games.length; i++) {
+  var entry = template
+    .replace(/POS/g, i + 1)
+    .replace(/SLUG/g, games[i].slug)
+    .replace(/NAME/g, games[i].name)
+    .replace(/AUTHOR/g, games[i].author)
+    .replace(/TWITTER/g, games[i].twitter)
+    .replace(/WEBSITE/g, games[i].website)
+    .replace(/GITHUB/g, games[i].github);
+  entry = entry.replace("<a href='http:///'></a>", "-");
+  content += entry;
+}
+document.getElementById("content").innerHTML = content;
 ```
 
 次に、サービスワーカーを登録します。
 
 ```js
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+}
 ```
 
 次のコードブロックは、ボタンがクリックされたときに通知の許可を要求します。
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -163,16 +181,16 @@ button.addEventListener('click', function(e) {
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Created by '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Created by " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -181,36 +199,36 @@ function randomNotification() {
 すばやく見る最後のファイルはサービスワーカーです: `sw.js` — それは最初に `games.js` ファイルからデータをインポートします。
 
 ```js
-self.importScripts('data/games.js');
+self.importScripts("data/games.js");
 ```
 
 次に、アプリシェルとコンテンツの両方から、キャッシュされるすべてのファイルのリストを作成します。
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 var gamesImages = [];
-for(var i=0; i<games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+for (var i = 0; i < games.length; i++) {
+  gamesImages.push("data/img/" + games[i].slug + ".jpg");
 }
 var contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -218,13 +236,13 @@ var contentToCache = appShellFiles.concat(gamesImages);
 次のブロックはサービスワーカーをインストールし、上記のリストに含まれるすべてのファイルを実際にキャッシュします。
 
 ```js
-self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+self.addEventListener("install", function (e) {
+  console.log("[Service Worker] Install");
   e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[Service Worker] Caching all: app shell and content');
+    caches.open(cacheName).then(function (cache) {
+      console.log("[Service Worker] Caching all: app shell and content");
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -232,18 +250,23 @@ self.addEventListener('install', function(e) {
 最後に、サービスワーカーは、キャッシュからコンテンツが利用できる場合はそれをキャッシュから取得し、オフライン機能を提供します。
 
 ```js
-self.addEventListener('fetch', function(e) {
+self.addEventListener("fetch", function (e) {
   e.respondWith(
-    caches.match(e.request).then(function(r) {
-      console.log('[Service Worker] Fetching resource: '+e.request.url);
-      return r || fetch(e.request).then(function(response) {
-        return caches.open(cacheName).then(function(cache) {
-          console.log('[Service Worker] Caching new resource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
+    caches.match(e.request).then(function (r) {
+      console.log("[Service Worker] Fetching resource: " + e.request.url);
+      return (
+        r ||
+        fetch(e.request).then(function (response) {
+          return caches.open(cacheName).then(function (cache) {
+            console.log(
+              "[Service Worker] Caching new resource: " + e.request.url,
+            );
+            cache.put(e.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -254,31 +277,31 @@ self.addEventListener('fetch', function(e) {
 
 ```js
 var games = [
-    {
-        slug: 'lost-in-cyberspace',
-        name: 'Lost in Cyberspace',
-        author: 'Zosia and Bartek',
-        twitter: 'bartaz',
-        website: '',
-        github: 'github.com/bartaz/lost-in-cyberspace'
-    },
-    {
-        slug: 'vernissage',
-        name: 'Vernissage',
-        author: 'Platane',
-        twitter: 'platane_',
-        website: 'github.com/Platane',
-        github: 'github.com/Platane/js13k-2017'
-    },
-// ...
-    {
-        slug: 'emma-3d',
-        name: 'Emma-3D',
-        author: 'Prateek Roushan',
-        twitter: '',
-        website: '',
-        github: 'github.com/coderprateek/Emma-3D'
-    }
+  {
+    slug: "lost-in-cyberspace",
+    name: "Lost in Cyberspace",
+    author: "Zosia and Bartek",
+    twitter: "bartaz",
+    website: "",
+    github: "github.com/bartaz/lost-in-cyberspace",
+  },
+  {
+    slug: "vernissage",
+    name: "Vernissage",
+    author: "Platane",
+    twitter: "platane_",
+    website: "github.com/Platane",
+    github: "github.com/Platane/js13k-2017",
+  },
+  // ...
+  {
+    slug: "emma-3d",
+    name: "Emma-3D",
+    author: "Prateek Roushan",
+    twitter: "",
+    website: "",
+    github: "github.com/coderprateek/Emma-3D",
+  },
 ];
 ```
 

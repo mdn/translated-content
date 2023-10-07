@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 {{jsxref("Object")}} 实例的 **`__proto__`** 访问器属性暴露了此对象的 [`[[Prototype]]`](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)（一个对象或 {{jsxref("Operators/null", "null")}}）。
 
-`__proto__` 属性还可以在对象字面量定义中使用，作为创建对象时设置对象 `[[Prototype]]` 的一种替代方法，而不是使用 {{JSxRef("Object.create()")}}。请参见：[对象初始化/字面语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。该语法已经标准化，并且在实现中得到了优化，与 `Object.prototype.__proto__` 相当不同。
+`__proto__` 属性还可以在对象字面量定义中使用，作为创建对象时设置对象 `[[Prototype]]` 的一种替代方法，而不是使用 {{JSxRef("Object.create()")}}。请参见：[对象初始化/字面量语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。该语法已经标准化，并且在实现中得到了优化，与 `Object.prototype.__proto__` 相当不同。
 
 ## 语法
 

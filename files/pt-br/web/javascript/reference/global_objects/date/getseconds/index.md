@@ -26,7 +26,7 @@ The second statement below assigns the value 30 to the variable `seconds`, based
 No exemplo a seguir, a segunda linha atribui o valor 30 à variável `seconds`, baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var seconds = Xmas95.getSeconds();
 
 console.log(seconds); // 30
@@ -34,11 +34,11 @@ console.log(seconds); // 30
 
 ## Espeficicações
 
-| Specification                                                                                                        | Status                       | Comment                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}         | {{Spec2('ES6')}}         |                                                    |
+| Specification                                                                          | Status               | Comment                                            |
+| -------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                    | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}                   | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

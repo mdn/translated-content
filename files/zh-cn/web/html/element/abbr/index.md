@@ -114,8 +114,7 @@ abbr {
 #### HTML
 
 ```html
-<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big
-time.</p>
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.</p>
 ```
 
 #### 结果
@@ -129,14 +128,16 @@ time.</p>
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> is a markup language used to create the semantics and structure
-of a web page.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> is a
+  markup language used to create the semantics and structure of a web page.
+</p>
 
-<p>A <dfn id="spec">Specification</dfn>
-(<abbr title="Specification">spec</abbr>) is a document that outlines
-in detail how a technology or API is intended to function and how it is
-accessed.</p>
+<p>
+  A <dfn id="spec">Specification</dfn> (<abbr title="Specification">spec</abbr>)
+  is a document that outlines in detail how a technology or API is intended to
+  function and how it is accessed.
+</p>
 ```
 
 #### 结果
@@ -152,7 +153,10 @@ accessed.</p>
 #### Example
 
 ```html
-<p>JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight data-interchange format.</p>
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
+  data-interchange format.
+</p>
 ```
 
 这对于不熟悉内容中讨论的术语或概念的人，对语言不熟悉的人以及具有认知问题的人特别有用。

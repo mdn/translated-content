@@ -26,7 +26,7 @@ ctx.canvas;
 ```js
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-ctx.canvas // HTMLCanvasElement
+ctx.canvas; // HTMLCanvasElement
 ```
 
 ## 规范描述

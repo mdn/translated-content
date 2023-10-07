@@ -1,17 +1,6 @@
 ---
 title: 2D игра на Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - Phaser
-  - Игры
-  - Начинающий
-  - Руководство
-  - туториал
-translation_of: Games/Tutorials/2D_breakout_game_Phaser
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 ---
 
 {{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}

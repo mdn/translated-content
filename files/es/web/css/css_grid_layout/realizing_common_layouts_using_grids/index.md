@@ -1,7 +1,6 @@
 ---
 title: Realizing common layouts using CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 Para completar este conjunto de guías de CSS Grid Layout, voy a recorrer algunos diseños diferentes, que demuestran algunas de las diferentes técnicas que puede utilizar al diseñar con grid layout. Vamos a ver un ejemplo usando [grid-template-areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) un típico sistema de cuadrícula flexible de 12 columnas, y también un listado de productos usando el emplazamiento automático. Como puedes ver en este conjunto de ejemplos, a menudo hay más de una manera de lograr el resultado que deseas con el diseño de cuadrícula. Escoge el método que encuentres más útil para los problemas que estás resolviendo y los diseños que necesitas implementar.
@@ -17,45 +16,55 @@ Voy a crear este layout usando la propiedad _named template areas_ que aprendimo
 Mi marcado consiste en un container con elementos en su interior para el header, footer, contenido principal, navegación, sidebar, y un bloque para poner anuncios./p>
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content">
-            <h1>Área principal del artículo</h1>
-            <p>En este diseño, las áreas se muestran en el orden en que están escritas en las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos columnas, y luego a uno de tres columnas mediante la redefinición de la rejilla y la colocación de los elementos en ella.</p>
-        </article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Área principal del artículo</h1>
+    <p>
+      En este diseño, las áreas se muestran en el orden en que están escritas en
+      las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos
+      columnas, y luego a uno de tres columnas mediante la redefinición de la
+      rejilla y la colocación de los elementos en ella.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
 </div>
 ```
 
@@ -129,11 +138,11 @@ Ahora puedo añadir un punto de ruptura final para pasar a un diseño de tres co
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -153,7 +162,10 @@ Si has estado trabajando con uno de los muchos frameworks o sistemas de cuadríc
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -176,9 +188,13 @@ Para demostrar cómo funciona este sistema de rejilla tengo 4 ítems hijos dentr
 ```html
 <div class="wrapper">
   <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+  <div class="item2">
+    Start column line 6, span 4 column tracks. 2 row tracks.
+  </div>
   <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+  <div class="item4">
+    Start at column line 3, span to the end of the grid (-1).
+  </div>
 </div>
 ```
 
@@ -189,7 +205,7 @@ Entonces puedo ponerlos en la rejilla usando los nombres de las líneas, y la pa
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -217,44 +233,56 @@ Existen algunas diferencias clave sobre cómo funciona un diseño de cuadrícula
 Para ver cómo funciona este método de diseño en la práctica, podemos crear el mismo diseño que creamos con {{cssxref("grid-template-areas")}}, esta vez utilizando el sistema de cuadrícula de 12 columnas. Comienzo con el mismo marcado que el utilizado para el ejemplo de áreas de plantillas de cuadrícula.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content"><h1>Área principal del artículo</h1>
-        <p>En este diseño, las áreas se muestran en el orden en que están escritas en las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos columnas, y luego a uno de tres columnas mediante la redefinición de la rejilla y la colocación de los elementos en ella.</p></article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
-    </div>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Área principal del artículo</h1>
+    <p>
+      En este diseño, las áreas se muestran en el orden en que están escritas en
+      las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos
+      columnas, y luego a uno de tres columnas mediante la redefinición de la
+      rejilla y la colocación de los elementos en ella.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
+</div>
 ```
 
 Entonces puedo configurar nuestra cuadrícula, como en el ejemplo del diseño de 12 columnas de arriba.
@@ -283,7 +311,6 @@ El panel de anuncios se encuentra debajo de la barra lateral, por lo que comienz
 
 ```css
 @media (min-width: 500px) {
-
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -292,7 +319,8 @@ El panel de anuncios se encuentra debajo de la barra lateral, por lo que comienz
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -352,50 +380,61 @@ El marcado de mi anuncio es una lista no ordenada de artículos. Cada elemento c
     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
   </li>
-   <li>
-     <h2>Item Dos</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Tres</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p>
-     <p>Este tiene más texto que los demás.</p>
-     <p>Un poquito más</p>
-     <p>¿Podríamos hacer algo diferente con él?</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-    <li>
-     <h2>Item Cuatro</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-     <li>
-     <h2>Item Cinco</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-      <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
+  <li>
+    <h2>Item Dos</h2>
+    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Tres</h2>
+    <div class="body">
+      <p>El contenido de este ítem-lista va aquí.</p>
+      <p>Este tiene más texto que los demás.</p>
+      <p>Un poquito más</p>
+      <p>¿Podríamos hacer algo diferente con él?</p>
+    </div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
+  <li>
+    <h2>Item Cuatro</h2>
+    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
+  <li>
+    <h2>Item Cinco</h2>
+    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 Vamos a crear una cuadrícula con un número flexible de columnas flexibles. Quiero que nunca sean más pequeñas que 200 píxeles, y que luego compartan el espacio restante disponible por igual, de modo que siempre obtengamos pistas de columna de igual ancho. Esto lo logramos con la función `minmax()` en nuestra notación repeat para el dimensionamiento de pistas.
@@ -406,7 +445,7 @@ Vamos a crear una cuadrícula con un número flexible de columnas flexibles. Qui
   margin: 2em;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -451,50 +490,61 @@ Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-f
     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
   </li>
-   <li>
-     <h2>Item Dos</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Tres</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p>
-     <p>Este tiene más texto que los demás.</p>
-     <p>Un poquito más</p>
-     <p>¿Podríamos hacer algo diferente con él?</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-    <li>
-     <h2>Item Cuatro</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-     <li>
-     <h2>Item Cinco</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-      <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
+  <li>
+    <h2>Item Dos</h2>
+    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Tres</h2>
+    <div class="body">
+      <p>El contenido de este ítem-lista va aquí.</p>
+      <p>Este tiene más texto que los demás.</p>
+      <p>Un poquito más</p>
+      <p>¿Podríamos hacer algo diferente con él?</p>
+    </div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
+  <li>
+    <h2>Item Cuatro</h2>
+    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
+  <li>
+    <h2>Item Cinco</h2>
+    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
+    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -520,7 +570,7 @@ Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-f
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;

@@ -1,16 +1,6 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -43,8 +33,8 @@ Math.log1p(x)
 ### Пример: использование метода `Math.log1p()`
 
 ```js
-Math.log1p(1);  // 0.6931471805599453
-Math.log1p(0);  // 0
+Math.log1p(1); // 0.6931471805599453
+Math.log1p(0); // 0
 Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN
 ```
@@ -54,9 +44,11 @@ Math.log1p(-2); // NaN
 Этот метод может эмулироваться следующим способом:
 
 ```js
-Math.log1p = Math.log1p || function(x) {
-  return Math.log(1 + x);
-};
+Math.log1p =
+  Math.log1p ||
+  function (x) {
+    return Math.log(1 + x);
+  };
 ```
 
 ## Спецификации

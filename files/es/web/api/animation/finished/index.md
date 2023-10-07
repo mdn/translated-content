@@ -1,7 +1,6 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
-original_slug: Web/API/Animation/terminado
 ---
 
 {{ APIRef("Web Animations") }}
@@ -26,16 +25,12 @@ El siguiente código espera a que todas las animaciones que se ejecutan en el el
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map(function (animation) {
+    return animation.finished;
+  }),
+).then(function () {
+  return elem.remove();
+});
 ```
 
 ## Especificaciones

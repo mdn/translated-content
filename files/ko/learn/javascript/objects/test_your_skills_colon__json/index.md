@@ -1,8 +1,8 @@
 ---
-title: '얼마나 이해했는지 확인해보자: JSON'
+title: "얼마나 이해했는지 확인해보자: JSON"
 slug: Learn/JavaScript/Objects/Test_your_skills:_JSON
-original_slug: Learn/JavaScript/Objects/얼마나_이해했는지_확인해보자:_JSON
 ---
+
 {{learnsidebar}}
 
 이 테스트의 목표는 [JSON으로 작업하기](/ko/docs/Learn/JavaScript/Objects/JSON)를 잘 이해했는지 평가해보는 것입니다.
@@ -41,7 +41,7 @@ original_slug: Learn/JavaScript/Objects/얼마나_이해했는지_확인해보�
 
 1. [MDN 학습 토론 카테고리](https://discourse.mozilla.org/c/mdn/learn/250)에 평가 또는 도움을 요청하는 글을 작성하세요. 글에는 다음 사항이 포함되어야 합니다 :
 
-    - "Assessment wanted for JSON skill test (JSON 기술 테스트에 대한 평가를 요청드립니다)" 와 같은 제목을 사용하세요.
-    - 이미 시도해보았거나, 원하는 것(예를 들어, 막혀서 도움이 필요하다거나 평가가 필요하다는 것과 같은)에 대한 세부사항을 기입해주세요.
-    - 작성한 코드를 삽입하세요.
-    - 실제 작업 또는 평가 페이지에 대한 링크를 삽입하세요. 그래야 도움받고자 하는 질문을 확인할 수 있습니다.
+   - "Assessment wanted for JSON skill test (JSON 기술 테스트에 대한 평가를 요청드립니다)" 와 같은 제목을 사용하세요.
+   - 이미 시도해보았거나, 원하는 것(예를 들어, 막혀서 도움이 필요하다거나 평가가 필요하다는 것과 같은)에 대한 세부사항을 기입해주세요.
+   - 작성한 코드를 삽입하세요.
+   - 실제 작업 또는 평가 페이지에 대한 링크를 삽입하세요. 그래야 도움받고자 하는 질문을 확인할 수 있습니다.

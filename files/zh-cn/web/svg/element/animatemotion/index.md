@@ -12,7 +12,14 @@ slug: Web/SVG/Element/animateMotion
 ## 示例
 
 ```css
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```xml

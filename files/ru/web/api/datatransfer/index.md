@@ -1,10 +1,8 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-tags:
-  - API
-translation_of: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML DOM")}}
 
 Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/En/DragDrop/Drag_and_Drop)
@@ -13,16 +11,16 @@ translation_of: Web/API/DataTransfer
 
 ## Список свойств
 
-| Свойство                                                          | Тип                                                                |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                          |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                    |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                              |
-| [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean)       |
-| [`types`](#types.28.29)                                           | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)               |
+| Свойство                                                          | Тип                                                             |
+| ----------------------------------------------------------------- | --------------------------------------------------------------- |
+| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
+| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                       |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
+| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                 |
+| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                           |
+| [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean)    |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/ru/docs/Web/API/DOMStringList)               |
 
 ## Список методов
 

@@ -22,14 +22,14 @@ GLSL 中有三种类型的“变量”或者说数据存储类型。每一种类
 ```js
 // init colors
 const vertexColors = [
-  vec4(0.0, 0.0, 0.0, 1.0),  // black
-  vec4(1.0, 0.0, 0.0, 1.0),  // red
-  vec4(1.0, 1.0, 0.0, 1.0),  // yellow
-  vec4(0.0, 1.0, 0.0, 1.0),  // green
-  vec4(0.0, 0.0, 0.0, 1.0),  // black
-  vec4(1.0, 0.0, 0.0, 1.0),  // red
-  vec4(1.0, 1.0, 0.0, 1.0),  // yellow
-  vec4(0.0, 1.0, 0.0, 1.0),  // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
 ];
 const cBuffer = gl.createBuffer();
 ```

@@ -1,7 +1,6 @@
 ---
 title: Tutoriales
 slug: Web/Tutorials
-original_slug: Web/Tutoriales
 ---
 
 Los enlaces de esta página llevan a una gran variedad de tutoriales y material de formación. Tanto si estás en tus comienzos, aprendiendo lo básico, como si eres un veterano en desarrollo web, aquí puedes encontrar recursos que te ayuden a lograr mejores prácticas.

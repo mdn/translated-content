@@ -127,7 +127,9 @@ CSS でブロックボックスを構成するには、次のものがありま�
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

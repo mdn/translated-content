@@ -1,7 +1,6 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-original_slug: Web/CSS/repeat()
 ---
 
 {{CSSRef}}
@@ -63,9 +62,9 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
   - : `auto-fill` と同様に動作しますが、グリッドアイテムを配置した後、空の繰り返しトラックが折りたたまれる点が異なります。空のトラックとは、フロー内のグリッドアイテムが配置されていない、またはそれをまたいで配置されているものがないトラックのことです。 (これは、すべてのトラックが空の場合、すべてのトラックが折りたたまれる結果になる可能性があります。)
 
- 折り畳まれたトラックは、 `0px`　の固定トラックサイジング機能を1つ持っているものとして扱われ、その左右の溝も折り畳まれます。
+折り畳まれたトラックは、 `0px`　の固定トラックサイジング機能を1つ持っているものとして扱われ、その左右の溝も折り畳まれます。
 
- 自動反復トラックの数を見つけるために、ユーザーエージェントは、ゼロによる除算を避けるために、トラックの寸法をユーザーエージェントが指定した値 (例えば `1px`) に切り下げます。
+自動反復トラックの数を見つけるために、ユーザーエージェントは、ゼロによる除算を避けるために、トラックの寸法をユーザーエージェントが指定した値 (例えば `1px`) に切り下げます。
 
 ## 例
 
@@ -75,21 +74,11 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ```html
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>Inflexible item of 100 pixels width.</div>
 </div>
 ```
 

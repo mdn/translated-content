@@ -119,10 +119,10 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                        | Título                                                        |
+| ------------------------------------ | ------------------------------------------------------------- |
 | {{RFC(7231, "User-Agent", "5.5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC(2616, "User-Agent", "14.43")}} | Hypertext Transfer Protocol -- HTTP/1.1                       |
+| {{RFC(2616, "User-Agent", "14.43")}} | Hypertext Transfer Protocol — HTTP/1.1                        |
 
 ## Compatibilidade com navegadores
 

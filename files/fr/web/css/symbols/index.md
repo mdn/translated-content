@@ -1,12 +1,6 @@
 ---
 title: symbols()
 slug: Web/CSS/symbols
-tags:
-  - CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/symbols()
-original_slug: Web/CSS/symbols()
 ---
 
 {{CSSRef}}

@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-position-x'
+title: "-webkit-mask-position-x"
 slug: Web/CSS/-webkit-mask-position-x
 ---
 
@@ -28,7 +28,10 @@ La propiedad CSS `-webkit-mask-position-x` CSS establece la posición horizontal
 -webkit-mask-position-x: -1cm;
 
 /* Múltiples valores */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* Valores globales */
 -webkit-mask-position-x: inherit;

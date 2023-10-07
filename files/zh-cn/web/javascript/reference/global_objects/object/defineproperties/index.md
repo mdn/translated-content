@@ -21,7 +21,7 @@ Object.defineProperties(obj, props)
   - : 在其上定义或修改属性的对象。
 - `props`
 
-  - : 一个对象，其中每个键表示要定义或修改的属性的名称，每个值是描述该属性的对象。在 `props` 中的每个值必须是且只能是数据描述符或访问器描述符之一；它们不能同时存在（有关详细信息，请参见{{jsxref("Object.defineProperty()")}}）。
+  - : 一个对象，其中每个键表示要定义或修改的属性的名称，每个值是描述该属性的对象。在 `props` 中的每个值必须是且只能是数据描述符或访问器描述符之一；不能同时为两者（更多详细信息，请参见{{jsxref("Object.defineProperty()")}}）。
 
     数据描述符和访问器描述符可以包含以下可选键：
 
@@ -42,7 +42,7 @@ Object.defineProperties(obj, props)
     - `get`
       - : 作为该属性的 getter 函数，如果没有 getter 则为 {{jsxref("undefined")}}。函数返回值将被用作属性的值。**默认为 {{jsxref("undefined")}}。**
     - `set`
-      - : 作为属性的 setter 函数，如果没有 setter 则为 {{jsxref("undefined")}}。函数将仅接受参数赋值给该属性的新值。**默认为 {{jsxref("undefined")}}。**
+      - : 作为该属性的 setter 函数，如果没有 setter 则为 {{jsxref("undefined")}}。该函数将只接收一个参数，即被分配给属性的新值。**默认为 {{jsxref("undefined")}}。**
 
     如果一个属性描述符没有 `value`、`writable`、`get`、`set` 键中的任何一个，那么它被视为一个数据描述符。如果一个属性描述符同时具有 `value` 或 `writable` 和 `get` 或 `set` 键中的任意一个组合，就会抛出异常。
 

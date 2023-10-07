@@ -1,7 +1,6 @@
 ---
-title: 'ErrorDeSintaxis: Caracter ilegal'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-original_slug: Web/JavaScript/Reference/Errors/caracter_ilegal
 ---
 
 {{jsSidebar("Errors")}}
@@ -22,7 +21,7 @@ ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
 
 ## ¿Qué salió mal?
 
-Hay un componente léxico inválido o inesperado que no pertenece a su posición en el código. Utilice un editor que soporte el resaltado de sintaxis y que revise cuidadosamente su código contra discrepancias como un signo menos (` - `) contra un guion (` – `) o comillas simples (` " `) contra comillas no estándar (` “ `).
+Hay un componente léxico inválido o inesperado que no pertenece a su posición en el código. Utilice un editor que soporte el resaltado de sintaxis y que revise cuidadosamente su código contra discrepancias como un signo menos (`-`) contra un guion (`–`) o comillas simples (`"`) contra comillas no estándar (`“`).
 
 ## Ejemplos
 
@@ -61,7 +60,7 @@ var colors = ['#000', #333', '#666'];
 Agregue la comilla olvidada para `'#333'`.
 
 ```js example-good
-var colors = ['#000', '#333', '#666'];
+var colors = ["#000", "#333", "#666"];
 ```
 
 ### Caracteres escondidos

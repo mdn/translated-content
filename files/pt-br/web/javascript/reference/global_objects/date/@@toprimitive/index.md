@@ -35,21 +35,19 @@ O JavaScript chama o método `[@@toPrimitive]()` para converter um objeto para u
 const testDate = new Date(1590757517834);
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
-testDate[Symbol.toPrimitive]('string');
+testDate[Symbol.toPrimitive]("string");
 // Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
-testDate[Symbol.toPrimitive]('number');
+testDate[Symbol.toPrimitive]("number");
 // Returns "1590757517834"
 
-testDate[Symbol.toPrimitive]('default');
+testDate[Symbol.toPrimitive]("default");
 // Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

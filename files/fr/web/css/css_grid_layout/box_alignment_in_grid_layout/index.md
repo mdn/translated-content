@@ -1,8 +1,6 @@
 ---
 title: L'alignement des boîtes avec les grilles CSS
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -44,7 +42,9 @@ Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la pro
 - `last baseline`
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -108,7 +108,9 @@ La propriété {{cssxref("align-items")}} définit en fait la valeur de la propr
 Dans le prochain exemple, on utilise la propriété `align-self` afin d'illustrer les différentes valeurs pour l'alignement. La première zone illustre le comportement par défaut pour `align-self` : l'objet est étiré. Le deuxième objet utilise la valeur `start`, le troisième utilise `end` et le quatrième utilise `center`.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -190,7 +192,9 @@ Juste après, on voit le même exemple qu'avec {{cssxref("align-items")}} où on
 Là encore, la valeur par défaut `stretch` pour les objets qui n'ont pas de ratio intrinsèque. Cela signifie que, par défaut, les objets de la grille couvriront l'ensemble de la zone de grille sur laquelle ils sont placés. Dans l'exemple qui suit, le premier objet illustre cet alignement par défaut.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -260,7 +264,9 @@ La propriété {{CSSxRef("place-items")}} est une propriété raccourcie qui syn
 En combinant les propriétés `align-*` et `justify-*`, on peut facilement centrer un objet sur sa zone de grille.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -296,7 +302,7 @@ En combinant les propriétés `align-*` et `justify-*`, on peut facilement centr
 
 ```html
 <div class="wrapper">
- <div class="item1">Objet 1</div>
+  <div class="item1">Objet 1</div>
 </div>
 ```
 
@@ -329,7 +335,9 @@ La propriété `align-content` s'applique sur le conteneur de la grille car elle
 ### Alignement par défaut
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -350,7 +358,7 @@ La propriété `align-content` s'applique sur le conteneur de la grille car elle
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -389,7 +397,9 @@ La propriété `align-content` s'applique sur le conteneur de la grille car elle
 Si on ajoute `align-content` avec la valeur `end` sur le conteneur, les pistes seront déplacées à la fin du conteneur selon l'axe des colonnes.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -410,7 +420,7 @@ Si on ajoute `align-content` avec la valeur `end` sur le conteneur, les pistes s
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -450,7 +460,9 @@ Si on ajoute `align-content` avec la valeur `end` sur le conteneur, les pistes s
 Pour cette propriété, on peut également utiliser des valeurs qu'on manipule avec les boîtes flexibles : `space-between`, `space-around` et `space-evenly` qui permettent de répartir l'espace. Si on utilise {{cssxref("align-content")}} avec `space-between` pour notre exemple, on voit alors que les éléments sont espacés de façon équitable.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -471,7 +483,7 @@ Pour cette propriété, on peut également utiliser des valeurs qu'on manipule a
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -519,7 +531,9 @@ Sur l'axe des lignes, on peut utiliser {{cssxref("justify-content")}} de la mêm
 Avec le même exemple, on utilise {{cssxref("justify-content")}} avec la valeur `space-around`. Là encore, les pistes qui s'étalent sur plus d'une colonne gagnent en largeur.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -540,7 +554,7 @@ Avec le même exemple, on utilise {{cssxref("justify-content")}} avec la valeur 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -583,7 +597,9 @@ Pour aligner les objets dans une zone, on peut également utiliser des marges au
 Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec `auto`. On peut alors voir le contenu poussé à droite de la zone (la marge à gauche occupant le plus d'espace possible).
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -604,7 +620,7 @@ Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec `au
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;

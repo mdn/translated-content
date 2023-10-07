@@ -1,14 +1,6 @@
 ---
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
-tags:
-  - API
-  - Experimental
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MouseEvent/offsetX
 ---
 
 {{APIRef("DOM Events")}}{{SeeCompatTable}}

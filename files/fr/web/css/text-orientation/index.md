@@ -1,12 +1,6 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-orientation
 ---
 
 {{CSSRef}}

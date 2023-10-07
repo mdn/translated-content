@@ -1,7 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
 ---
 
 {{CSSRef}}
@@ -38,19 +37,19 @@ vertical-align: unset;
 
 ```html hidden
 <p>
-top:<img style="vertical-align:top" src="star.png"/>
-middle:<img style="vertical-align:middle" src="star.png"/>
-bottom:<img style="vertical-align:bottom" src="star.png"/>
-super:<img style="vertical-align:super" src="star.png"/>
-sub:<img style="vertical-align:sub" src="star.png"/>
+  top: <img style="vertical-align: top" src="star.png" /><br />
+  middle: <img style="vertical-align: middle" src="star.png" /><br />
+  bottom: <img style="vertical-align: bottom" src="star.png" /><br />
+  super: <img style="vertical-align: super" src="star.png" /><br />
+  sub: <img style="vertical-align: sub" src="star.png" /><br />
 </p>
 <p>
-text-top:<img style="vertical-align:text-top" src="star.png"/>
-text-bottom:<img  style="vertical-align:text-bottom" src="star.png"/>
-0.2em:<img style="vertical-align:0.2em" src="star.png"/>
--1em:<img  style="vertical-align:-1em" src="star.png"/>
-20%:<img style="vertical-align:20%" src="star.png"/>
--100%:<img  style="vertical-align:-100%" src="star.png"/>
+  text-top: <img style="vertical-align: text-top" src="star.png" /><br />
+  text-bottom: <img style="vertical-align: text-bottom" src="star.png" /><br />
+  0.2em: <img style="vertical-align: 0.2em" src="star.png" /><br />
+  -1em: <img style="vertical-align: -1em" src="star.png" /><br />
+  20%: <img style="vertical-align: 20%" src="star.png" /><br />
+  -100%: <img style="vertical-align: -100%" src="star.png" /><br />
 </p>
 ```
 
@@ -65,7 +64,7 @@ img {
 
 p {
   height: 3em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-family: monospace;
   text-decoration: underline overline;
   margin-left: auto;
@@ -86,8 +85,16 @@ p {
     <td style="vertical-align: middle">middle</td>
     <td style="vertical-align: bottom">bottom</td>
     <td>
-      <p>Существует теория, которая утверждает, что если однажды кто-нибудь доподлинно выяснит, что такое и для чего нужна Вселенная, она тотчас же исчезнет, и вместо неё появится нечто ещё более причудливое и необъяснимое.</p>
-<p>Существует и другая теория, согласно которой это уже случилось.</p>
+      <p>
+        Существует теория, которая утверждает, что если однажды кто-нибудь
+        доподлинно выяснит, что такое и для чего нужна Вселенная, она тотчас же
+        исчезнет, и вместо неё появится нечто ещё более причудливое и
+        необъяснимое.
+      </p>
+      <p>Существует и другая теория, согласно которой это уже случилось.</p>
+    </td>
+  </tr>
+</table>
 ```
 
 ```css hidden
@@ -97,7 +104,9 @@ table {
   width: 80%;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
@@ -173,18 +182,39 @@ td {
 ### HTML
 
 ```html
-<div>Изображение <img src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по умолчанию.</div>
-<div>Изображение <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по верхнему краю.</div>
-<div>Изображение <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по нижнему краю.</div>
-<div>Изображение <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по центру.</div>
+<div>
+  Изображение <img src="frame_image.svg" alt="link" width="32" height="32" /> с
+  выравниванием по умолчанию.
+</div>
+<div>
+  Изображение
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> с
+  выравниванием по верхнему краю.
+</div>
+<div>
+  Изображение
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  с выравниванием по нижнему краю.
+</div>
+<div>
+  Изображение
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  с выравниванием по центру.
+</div>
 ```
 
 ### CSS
 
 ```css
-img.top { vertical-align: text-top; }
-img.bottom { vertical-align: text-bottom; }
-img.middle { vertical-align: middle; }
+img.top {
+  vertical-align: text-top;
+}
+img.bottom {
+  vertical-align: text-bottom;
+}
+img.middle {
+  vertical-align: middle;
+}
 ```
 
 ### Результат

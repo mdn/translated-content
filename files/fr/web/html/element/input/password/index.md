@@ -1,8 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
-translation_of: Web/HTML/Element/input/password
-browser-compat: html.elements.input.input-password
 ---
 
 {{HTMLSidebar}}
@@ -108,7 +106,7 @@ Voici un exemple simple illustrant un contrôle de saisie d'un mot de passe qui 
 
 ```html
 <label for="userPassword">Mot de passe :</label>
-<input id="userPassword" type="password">
+<input id="userPassword" type="password" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -128,7 +126,7 @@ Afin de permettre au gestionnaire de mots de passe de saisir automatiquement le 
 
 ```html
 <label for="userPassword">Mot de passe :</label>
-<input id="userPassword" type="password" autocomplete="current-password">
+<input id="userPassword" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -139,7 +137,7 @@ Pour indiquer à l'utilisatrice ou l'utilisateur que le mot de passe est obligat
 
 ```html
 <label for="userPassword">Mot de passe :</label>
-<input id="userPassword" type="password" required>
+<input id="userPassword" type="password" required />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -150,7 +148,7 @@ Si votre application utilise un autre mode de saisie que le mode par défaut, l'
 
 ```html
 <label for="pin">PIN :</label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -161,8 +159,13 @@ Les attributs [`minlength`](/fr/docs/Web/HTML/Element/Input#attr-minlength) et [
 
 ```html
 <label for="pin">PIN :</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -175,16 +178,16 @@ Il est possible d'utiliser la méthode [`select()`](/fr/docs/Web/API/HTMLInputEl
 
 ```html
 <label for="userPassword">Mot de passe :</label>
-<input id="userPassword" type="password" size="12">
+<input id="userPassword" type="password" size="12" />
 <button id="selectAll">Sélectionner tout</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function(event) {
+document.getElementById("selectAll").onclick = function (event) {
   document.getElementById("userPassword").select();
-}
+};
 ```
 
 #### Résultat
@@ -201,9 +204,12 @@ Dans cet exemple, il n'est possible de saisir qu'une valeur qui contient entre 4
 
 ```html
 <label for="hexId">Identifiant Hexa :</label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="Veuillez saisir un identifiant avec 4 à 8 chiffres hexadécimaux."
-       autocomplete="nouveau-mot-de-passe">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Veuillez saisir un identifiant avec 4 à 8 chiffres hexadécimaux."
+  autocomplete="nouveau-mot-de-passe" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -222,10 +228,16 @@ Dans l'exemple qui suit, on construit un formulaire avec un mot de passe qui doi
 
 ```html
 <label for="ssn">SSN :</label>
-<input type="password" id="ssn" inputmode="number" minlength="9" maxlength="12"
-    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="ssn"
+  inputmode="number"
+  minlength="9"
+  maxlength="12"
+  pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+  required
+  autocomplete="off" />
+<br />
 <label for="ssn">Valeur :</label>
 <span id="current"></span>
 ```

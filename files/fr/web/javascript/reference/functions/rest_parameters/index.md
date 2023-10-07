@@ -1,13 +1,6 @@
 ---
 title: Paramètres du reste (Rest parameters)
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
-original_slug: Web/JavaScript/Reference/Fonctions/paramètres_du_reste
 ---
 
 {{jsSidebar("Functions")}}
@@ -56,7 +49,7 @@ Ces paramètres ont été introduits afin de réduire le code passe-partout souv
 
 ```js
 // Avant les paramètres du reste, on observait souvent ce style de code :
-function f(a, b){
+function f(a, b) {
   var args = Array.prototype.slice.call(arguments, f.length);
   // ou encore
   var args = [].slice.call(arguments);
@@ -85,8 +78,8 @@ function f(...[a, b, c]) {
   return a + b + c;
 }
 
-f(1);          // NaN (b et c valent undefined)
-f(1, 2, 3);    // 6
+f(1); // NaN (b et c valent undefined)
+f(1, 2, 3); // 6
 f(1, 2, 3, 4); // 6, le dernier paramètre n'est pas décomposé
 ```
 
@@ -94,7 +87,7 @@ Vous pouvez également accéder aux éléments des paramètres du reste :
 
 ```js
 function fun1(...lesArguments) {
-    console.log("valeur", lesArguments[0][0]);
+  console.log("valeur", lesArguments[0][0]);
 }
 
 fun1([5, 2], [5, 4]); // 5
@@ -143,7 +136,7 @@ function fun1(...lesArguments) {
   console.log(lesArguments.length);
 }
 
-fun1();  // 0
+fun1(); // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
 ```
@@ -169,7 +162,7 @@ function trierParamRest(...lesArguments) {
   return argumentsTriés;
 }
 
-console.log(trierParamRest(5,3,7,1)); // shows 1,3,5,7
+console.log(trierParamRest(5, 3, 7, 1)); // shows 1,3,5,7
 
 function trierArguments() {
   var argumentsTriés = arguments.sort();
@@ -177,7 +170,7 @@ function trierArguments() {
 }
 
 // renvoie une exception TypeError: arguments.sort n'est pas une function
-console.log(trierArguments(5,3,7,1));
+console.log(trierArguments(5, 3, 7, 1));
 ```
 
 Pour utiliser les méthodes propres aux instances d'`Array` sur l'objet `arguments`, il est nécessaire de le convertir.

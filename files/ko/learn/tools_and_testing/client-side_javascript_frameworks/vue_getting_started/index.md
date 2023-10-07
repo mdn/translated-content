@@ -46,17 +46,17 @@ Vue는 애플리케이션에 Vue를 점진적으로 통합시킬 수 있도록 �
 
 ## 설치하기
 
-기존 사이트에서 Vue를 사용하려면 아래 [`<script>`](/en-US/docs/Web/HTML/Element/script) 요소 중 하나를 페이지에 추가하면 됩니다. 이 한 줄을 추가하는 것만으로 기존의 사이트에서 Vue를 사용할 수 있습니다. Vue가 자칭 '프로그레시브 프레임워크'임을 강조하는 이유가 바로 이것입니다. JQuery 등의 라이브러리를 사용하는 기존 프로젝트를 Vue로 마이그레이션하려고 할 때 아주 좋은 옵션입니다. 이 방식으로 속성, 커스텀 컴포넌트, 데이터 관리 등 수많은 Vue의 핵심 기능을 사용할 수 있게 됩니다.
+기존 사이트에서 Vue를 사용하려면 아래 [`<script>`](/ko/docs/Web/HTML/Element/script) 요소 중 하나를 페이지에 추가하면 됩니다. 이 한 줄을 추가하는 것만으로 기존의 사이트에서 Vue를 사용할 수 있습니다. Vue가 자칭 '프로그레시브 프레임워크'임을 강조하는 이유가 바로 이것입니다. JQuery 등의 라이브러리를 사용하는 기존 프로젝트를 Vue로 마이그레이션하려고 할 때 아주 좋은 옵션입니다. 이 방식으로 속성, 커스텀 컴포넌트, 데이터 관리 등 수많은 Vue의 핵심 기능을 사용할 수 있게 됩니다.
 
 - 개발 스크립트 (최적화되지 않음. 콘솔 경고 포함. 개발용으로 좋음.)
 
-  ```html
+  ```vue
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   ```
 
 - 상용 스크립트 (최적화 버전. 콘솔 경고 최소화. 업데이트로 인해 사이트가 영향을 받지 않도록 버전 번호를 명시하는 것이 좋다.)
 
-  ```html
+  ```vue
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   ```
 
@@ -91,43 +91,43 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
 1. 터미널에서 `cd <디렉토리>`를 입력해 샘플 앱을 만들 위치로 이동하고, `vue create moz-todo-vue`를 실행하세요.
 2. 방향키와
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    를 사용해 "Manually select features" 옵션을 선택하세요.
+   를 사용해 "Manually select features" 옵션을 선택하세요.
 
 3. 첫 번째 메뉴에서 프로젝트에 포함하고 싶은 기능들을 선택할 수 있습니다. "Babel"과 "Linter / Formatter"가 선택되어 있나요? 선택되어 있지 않다면 방향키와 스페이스바를 사용해 선택해주세요. 그리고
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    를 누릅니다.
+   를 누릅니다.
 
 4. 다음으로 linter / formatter 구성을 선택하겠습니다. "Eslint with error prevention only"로 이동하고 다시
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    를 눌러주세요. 흔히 생기는 에러를 잡는데 도움을 주면서도 너무 엄격하지는 않은 옵션을 선택했습니다.
+   를 눌러주세요. 흔히 생기는 에러를 잡는데 도움을 주면서도 너무 엄격하지는 않은 옵션을 선택했습니다.
 
 5. 다음은 자동 lint를 어떤 방식으로 하고 싶은지 묻는 메세지가 표시될 것입니다. "Lint on save"를 선택하세요. 우리가 프로젝트 내부의 파일을 저장할 때 에러를 체크하라는 의미입니다. 이제
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    를 누르세요.
+   를 누르세요.
 
 6. 이제 구성 파일을 어떻게 관리할지 선택해야 합니다. "In dedicated config files" 옵션을 선택하면 ESLint와 같은 것들의 구성 설정을 그들의 전용 파일에 넣게 됩니다. "In package.json" 옵션의 경우, 모든 구성 설정을 앱의 `package.json` 파일에 넣습니다. 우선 지금은 "In dedicated config files" 옵션을 선택하고
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    를 누릅시다.
+   를 누릅시다.
 
 7. 마지막으로, 지금까지 설정한 내용을 다음에 다시 사용하고 싶은지(현재 설정을 사전 설정 목록에 추가하고 싶은지) 묻는 메세지가 표시됩니다. 이 부분은 여러분이 하고 싶은대로 하시면 돼요. 만약 이 설정을 다음에도 다시 사용하고 싶다면
 
-    <kbd>y</kbd>
+   <kbd>y</kbd>
 
-    를, 아니라면
+   를, 아니라면
 
-    <kbd>n</kbd>
+   <kbd>n</kbd>
 
-    을 누르세요.
+   을 누르세요.
 
 이제 CLI가 우리의 프로젝트를 위한 발판을 만들기 시작하고 우리의 앱을 위한 모든 디펜던시를 설치할 것입니다.
 
@@ -181,14 +181,14 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
 `App.vue`를 살펴보면, 현재 default export 오브젝트는 컴포넌트 이름을 `app`으로 설정하고 `components` 속성에 `HelloWorld` 컴포넌트를 등록합니다. 이런 식으로 컴포넌트를 등록하면 로컬 컴포넌트가 됩니다. 이렇게 로컬로 등록된 컴포넌트는 이 컴포넌트를 등록한 상위 컴포넌트 내부에서만 사용할 수 있으므로, 각각의 컴포넌트 파일에서 필요한 컴포넌트를 임포트하고 등록해야 합니다. 앱의 모든 페이지가 모든 컴포넌트를 사용하는 것은 아니기 때문에, 번들 분할/트리 쉐이킹에 유용한 기능입니다.
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     //You can register components locally here.
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
@@ -218,24 +218,24 @@ INFO  Starting development server...
   To create a production build, run npm run build.
 ```
 
-브라우저 탭을 열고 위의 “local” 주소로 (위 내용처럼 `http://localhost:8080`이거나 설정에 따라 다를 수 있음) 이동해보면, 아래 사진과 같은 앱이 나타날 것입니다. 환영 메시지, Vue 문서 링크, 우리가 선택한 CLI 플러그인 링크, 기타 유용한 Vue 커뮤니티와 생태계 링크 등이 표시되고 있습니다.
+브라우저 탭을 열고 위의 "local" 주소로 (위 내용처럼 `http://localhost:8080`이거나 설정에 따라 다를 수 있음) 이동해보면, 아래 사진과 같은 앱이 나타날 것입니다. 환영 메시지, Vue 문서 링크, 우리가 선택한 CLI 플러그인 링크, 기타 유용한 Vue 커뮤니티와 생태계 링크 등이 표시되고 있습니다.
 
 ![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## 약간의 변경 사항 적용하기
 
-일단 Vue 로고를 제거합시다. `App.vue` 파일을 열고, 템플릿 섹션에서 [`<img>`](/en-US/docs/Web/HTML/Element/img) 요소를 지워보세요.
+일단 Vue 로고를 제거합시다. `App.vue` 파일을 열고, 템플릿 섹션에서 [`<img>`](/ko/docs/Web/HTML/Element/img) 요소를 지워보세요.
 
-```html
-<img alt="Vue logo" src="./assets/logo.png">
+```vue
+<img alt="Vue logo" src="./assets/logo.png" />
 ```
 
 서버가 아직 실행중이라면, 거의 즉시 로고가 제거되는 것을 확인할 수 있을 것입니다. 템플릿 섹션에서 `HelloWorld` 컴포넌트도 삭제해봅시다.
 
 가장 먼저 아래 라인을 지워주세요.
 
-```html
-<HelloWorld msg="Welcome to Your Vue.js App"/>
+```vue
+<HelloWorld msg="Welcome to Your Vue.js App" />
 ```
 
 이제 `App.vue` 파일을 저장해보면 `HelloWorld` 컴포넌트를 등록했으나 사용하지 않았다는 에러가 발생할 것입니다. 해당 컴포넌트를 임포트하고 등록하는 코드 역시 지워야 합니다.
@@ -243,12 +243,12 @@ INFO  Starting development server...
 이제 아래 라인도 삭제해보세요.
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 
@@ -256,7 +256,7 @@ components: {
 
 그럼 이제 `<div id="app">` 안에 `<h1>` 요소를 추가해보세요. 우리는 todo list 앱을 만들 거니까, 헤더 텍스트를 "To-Do List"라고 작성해봅시다.
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>To-Do List</h1>

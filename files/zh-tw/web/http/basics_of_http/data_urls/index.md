@@ -1,7 +1,6 @@
 ---
 title: data URIs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}
@@ -121,4 +120,4 @@ The `data` scheme is supported by Opera 7.20 and above, as well as Safari and Ko
 
 ## 資源
 
-- [RFC 2397](http://tools.ietf.org/html/rfc2397) -- The "data" URL scheme"
+- [RFC 2397](http://tools.ietf.org/html/rfc2397) — The "data" URL scheme"

@@ -53,8 +53,9 @@ WebGL で使用されるすべての 4x4 変換行列は、16 要素の {{domxre
 
 ```js
 let transform = new XRRigidTransform(
-                      {x: 0, y: 0.5, z: 0.5},
-                      {x: 0, y: -0.5, z: -0.5, w: 1});
+  { x: 0, y: 0.5, z: 0.5 },
+  { x: 0, y: -0.5, z: -0.5, w: 1 },
+);
 drawGLObject("magic-lamp", transform.matrix);
 ```
 

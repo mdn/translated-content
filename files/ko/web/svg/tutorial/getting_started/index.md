@@ -32,9 +32,9 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 1. SVG 루트 요소(Element)부터 시작합니다.
 
-    - DTD기반의 SVG유효성 검사는 해결할 수 있는 것보다 많은 문제를 야기하기 때문에 (X)HTML로 알려진 Doctype 선언은 사용하지 않습니다.
-    - 다른 유형의 유효성 검사를 위해 SVG버전을 식별하려면 항상 version과 baseProfile 속성(Attribute)을 사용해야 합니다.
-    - XML 특수언어(dialect)로서 SVG는 (xmlsn 속성에서) 항상 네임 스페이스(namespace)를 올바르게 바인딩 해야합니다. 자세한 내용은[네임 스페이스 충돌 과정](/ko/docs/Web/SVG/Namespaces_Crash_Course) 페이지를 참조하십시오.
+   - DTD기반의 SVG유효성 검사는 해결할 수 있는 것보다 많은 문제를 야기하기 때문에 (X)HTML로 알려진 Doctype 선언은 사용하지 않습니다.
+   - 다른 유형의 유효성 검사를 위해 SVG버전을 식별하려면 항상 version과 baseProfile 속성(Attribute)을 사용해야 합니다.
+   - XML 특수언어(dialect)로서 SVG는 (xmlsn 속성에서) 항상 네임 스페이스(namespace)를 올바르게 바인딩 해야합니다. 자세한 내용은[네임 스페이스 충돌 과정](/ko/docs/Web/SVG/Namespaces_Crash_Course) 페이지를 참조하십시오.
 
 2. 전체 이미지 영역을 포함하는 사각형 \<rect />을 그려 배경을 빨간색으로 설정합니다.
 3. 빨간색 직사각형의 중앙에 반경 80px의 녹색 원 \<circle />이 그려집니다

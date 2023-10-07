@@ -41,20 +41,21 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 1. 将你之前选择的图片复制到你的 `images` 文件夹。
 2. 打开你的 `index.html` 文件，并准确地将以下代码插入该文件中。当下不要对其感到困惑——我们将在本系列的后面更详细地研究这些结构。
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>My test page</title>
-      </head>
-      <body>
-        <img src="" alt="My test image">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>My test page</title>
+     </head>
+     <body>
+       <img src="" alt="My test image" />
+     </body>
+   </html>
+   ```
 
-3. 该行代码 `<img src="" alt="My test image">` 用于向页面中插入图片。我们需要告知 HTML 图片的位置。这张图片位于 *images* 目录下，与 `index.html` 处于同一目录。为了从 `index.html` 访问到我们的图像，我们需要的文件路径是 `images/your-image-filename`。例如，这里的图像叫做 `firefox-icon.png`，那么文件路径就是 `images/firefox-icon.png`。
+3. 该行代码 `<img src="" alt="My test image">` 用于向页面中插入图片。我们需要告知 HTML 图片的位置。这张图片位于 _images_ 目录下，与 `index.html` 处于同一目录。为了从 `index.html` 访问到我们的图像，我们需要的文件路径是 `images/your-image-filename`。例如，这里的图像叫做 `firefox-icon.png`，那么文件路径就是 `images/firefox-icon.png`。
 4. 在 HTML 代码 `src=""` 的双引号之间插入文件路径。
 5. 保存 HTML 文件，然后使用浏览器打开（双击该文件）。你应该看到新网页显示了新的图像！
 

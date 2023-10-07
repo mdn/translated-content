@@ -1,13 +1,6 @@
 ---
 title: IDBTransaction.abort()
 slug: Web/API/IDBTransaction/abort
-tags:
-  - API
-  - IDBTransaction
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBTransaction/abort
 ---
 
 {{APIRef("IndexedDB")}}

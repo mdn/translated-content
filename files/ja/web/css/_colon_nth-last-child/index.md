@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child()'
+title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -92,12 +92,12 @@ table {
 }
 
 /* 最後から 3 つの要素を選択 */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* 後ろから 2 番目から最初までの要素を選択 */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -138,7 +138,7 @@ tr:nth-last-child(2) {
 ```css
 /* 3 つ以上のリスト項目がある場合、
    すべてにスタイル付けする */
-li:nth-last-child(n+3),
+li:nth-last-child(n + 3),
 li:nth-last-child(3) ~ li {
   color: red;
 }

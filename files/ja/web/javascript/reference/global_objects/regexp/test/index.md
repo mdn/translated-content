@@ -39,7 +39,7 @@ regexObj.test(str)
 "`hello`" が文字列の先頭近くに含まれているかを真偽値で確認する簡単な例です。
 
 ```js
-const str = 'hello world!';
+const str = "hello world!";
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -51,9 +51,9 @@ console.log(result); // true
 function testInput(re, str) {
   let midstring;
   if (re.test(str)) {
-    midstring = 'contains';
+    midstring = "contains";
   } else {
-    midstring = 'does not contain';
+    midstring = "does not contain";
   }
   console.log(`${str} ${midstring} ${re.source}`);
 }
@@ -75,16 +75,16 @@ function testInput(re, str) {
 const regex = /foo/g; // "global" フラグを設定
 
 // regex.lastIndex は 0 です。
-regex.test('foo')     // true
+regex.test("foo"); // true
 
 // regex.lastIndex は 3 です。
-regex.test('foo')     // false
+regex.test("foo"); // false
 
 // regex.lastIndex は 0 です。
-regex.test('barfoo')  // true
+regex.test("barfoo"); // true
 
 // regex.lastIndex は 6 です。
-regex.test('foobar')  //false
+regex.test("foobar"); //false
 
 // regex.lastIndex は 0 です。
 // (...以下略)

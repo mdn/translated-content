@@ -63,11 +63,10 @@ checkiandj: while (i < 4) {
   i += 1;
 
   checkj: while (j > 4) {
-    console.log("j: "+ j);
+    console.log("j: " + j);
     j -= 1;
 
-    if ((j % 2) == 0)
-      continue checkj;
+    if (j % 2 == 0) continue checkj;
     console.log(j + " is odd.");
   }
   console.log("i = " + i);
@@ -78,41 +77,41 @@ checkiandj: while (i < 4) {
 Output:
 
 ```js
-"i: 0"
+"i: 0";
 
 // start checkj
-"j: 8"
-"7 is odd."
-"j: 7"
-"j: 6"
-"5 is odd."
-"j: 5"
+"j: 8";
+"7 is odd.";
+"j: 7";
+"j: 6";
+"5 is odd.";
+"j: 5";
 // end checkj
 
-"i = 1"
-"j = 4"
+"i = 1";
+"j = 4";
 
-"i: 1"
-"i = 2"
-"j = 4"
+"i: 1";
+"i = 2";
+"j = 4";
 
-"i: 2"
-"i = 3"
-"j = 4"
+"i: 2";
+"i = 3";
+"j = 4";
 
-"i: 3"
-"i = 4"
-"j = 4"
+"i: 3";
+"i = 4";
+"j = 4";
 ```
 
 ## Especificações
 
-| Especificação                                                                                    | Status                       | Comentários                           |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
-| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Definição inicial. Versão sem rótulo. |
-| {{SpecName('ES3')}}                                                                         | {{Spec2('ES3')}}         | Versão rotulada adicionada.           |
-| {{SpecName('ES5.1', '#sec-12.7', 'Continue statement')}}                     | {{Spec2('ES5.1')}}     |                                       |
-| {{SpecName('ES6', '#sec-continue-statement', 'Continue statement')}}     | {{Spec2('ES6')}}         |                                       |
+| Especificação                                                            | Status               | Comentários                           |
+| ------------------------------------------------------------------------ | -------------------- | ------------------------------------- |
+| {{SpecName('ES1')}}                                                      | {{Spec2('ES1')}}     | Definição inicial. Versão sem rótulo. |
+| {{SpecName('ES3')}}                                                      | {{Spec2('ES3')}}     | Versão rotulada adicionada.           |
+| {{SpecName('ES5.1', '#sec-12.7', 'Continue statement')}}                 | {{Spec2('ES5.1')}}   |                                       |
+| {{SpecName('ES6', '#sec-continue-statement', 'Continue statement')}}     | {{Spec2('ES6')}}     |                                       |
 | {{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}} | {{Spec2('ESDraft')}} |                                       |
 
 ## Compatibilidade com navegadores

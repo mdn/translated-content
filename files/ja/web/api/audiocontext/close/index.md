@@ -28,13 +28,13 @@ void で完了する{{jsxref("Promise")}}。
 次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。stop ボタンをクリックすると、`close()`が呼ばれます。プロミスに成功すると、リセットされ最初の状態に戻ります。
 
 ```js
-stopBtn.onclick = function() {
-  audioCtx.close().then(function() {
-    startBtn.removeAttribute('disabled');
-    susresBtn.setAttribute('disabled','disabled');
-    stopBtn.setAttribute('disabled','disabled');
+stopBtn.onclick = function () {
+  audioCtx.close().then(function () {
+    startBtn.removeAttribute("disabled");
+    susresBtn.setAttribute("disabled", "disabled");
+    stopBtn.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ## 仕様

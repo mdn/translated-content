@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 

@@ -1,20 +1,6 @@
 ---
 title: Селекторы CSS
 slug: Learn/CSS/Building_blocks/Selectors
-tags:
-  - Attribute
-  - Beginner
-  - CSS
-  - Learn
-  - Pseudo-class
-  - Pseudo-element
-  - id
-  - Обучение
-  - Псевдоэлемент
-  - псевдокласс
-  - селектор
-translation_of: Learn/CSS/Building_blocks/Selectors
-original_slug: Learn/CSS/Building_blocks/Селекторы
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
@@ -51,7 +37,7 @@ h1 {
 
 А могу написать короче — просто отделив селекторы запятыми:
 
-```css
+```css-nolint
 h1, .special {
   color: blue;
 }
@@ -87,7 +73,8 @@ h1 {
 Но если мы объединим селекторы, правило не применится ни к `h1`, ни к классу: оно считается недействительным.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -101,19 +88,22 @@ h1, ..special {
 К этой группе относятся селекторы HTML-элементов, таких как `<h1>`.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 К группе относятся и селекторы классов:
 
 ```css
-.box { }
+.box {
+}
 ```
 
 или селекторы идентификаторов (ID):
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Селекторы атрибутов
@@ -121,13 +111,16 @@ h1 { }
 Эта группа селекторов позволяет выбирать селекторы, основываясь на _наличии_ у них конкретного атрибута элемента:
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 или основываясь на _значении_ атрибута:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Псевдоклассы, псевдоэлементы
@@ -135,13 +128,15 @@ a[href="https://example.com"] { }
 К этой группе относятся псевдоклассы, которые стилизуют определённое состояние элемента. Псевдокласс `:hover`, например, применяет правило, только если на элемент наведён курсор мыши
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 К группе ещё относятся псевдоэлементы, которые выбирают определённую часть элемента (вместо целого элемента). Например, `::first-line` всегда выбирает первую строку внутри элемента (абзаца `<p>` в нашем случае), действуя, как если бы тег `<span>` оборачивал первую строку, а затем был стилизован.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Комбинаторы
@@ -149,7 +144,8 @@ p::first-line { }
 И последняя группа селекторов: она позволяет объединять селекторы, чтобы было легче находить конкретные элементы внутри документа. В следующем примере мы отыскали дочерний элемент `<article>` с помощью комбинатора дочерних элементов (`>`):
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## Продолжение
@@ -181,10 +177,10 @@ article > p { }
 1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [CSS-селекторы](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Селекторы по типу, классу и идентификатору](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Селекторы атрибутов](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Псевдоклассы, псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Комбинации селекторов](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Селекторы по типу, классу и идентификатору](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Селекторы атрибутов](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Псевдоклассы, псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Комбинации селекторов](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [Блоки в CSS](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

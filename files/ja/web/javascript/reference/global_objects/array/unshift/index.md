@@ -14,9 +14,9 @@ l10n:
 ## 構文
 
 ```js
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0);
+unshift(element0, element1);
+unshift(element0, element1, /* … ,*/ elementN);
 ```
 
 ### 引数
@@ -64,16 +64,16 @@ console.log(arr);
 ```js
 const arr = [1, 2];
 
-arr.unshift(0);               // 呼び出しの返値は 3、新しい配列の長さ
+arr.unshift(0); // 呼び出しの返値は 3、新しい配列の長さ
 // arr is [0, 1, 2]
 
-arr.unshift(-2, -1);          // 新しい配列の長さは 5
+arr.unshift(-2, -1); // 新しい配列の長さは 5
 // arr is [-2, -1, 0, 1, 2]
 
-arr.unshift([-4, -3]);        // 新しい配列の長さは 6
+arr.unshift([-4, -3]); // 新しい配列の長さは 6
 // arr is [[-4, -3], -2, -1, 0, 1, 2]
 
-arr.unshift([-7, -6], [-5]);  // 新しい配列の長さは 8
+arr.unshift([-7, -6], [-5]); // 新しい配列の長さは 8
 // arr is [ [-7, -6], [-5], [-4, -3], -2, -1, 0, 1, 2 ]
 ```
 

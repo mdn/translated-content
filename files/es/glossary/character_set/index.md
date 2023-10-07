@@ -1,7 +1,6 @@
 ---
 title: Conjunto de caracteres
 slug: Glossary/Character_set
-original_slug: Glossary/conjunto_de_caracteres
 ---
 
 Un **conjunto de caracteres** es un sistema de codificación para que las computadoras sepan cómo reconocer un {{Glossary("Character", "caracter")}}, incluidas letras, números, signos de puntuación y espacios en blanco.

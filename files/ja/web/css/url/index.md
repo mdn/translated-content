@@ -1,7 +1,6 @@
 ---
 title: url()
 slug: Web/CSS/url
-original_slug: Web/CSS/url()
 l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
@@ -77,7 +76,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
         URL を引用符なしで書く場合は、バックスラッシュを (`\`) を URL に含まれる括弧、ホワイトスペース文字、単一引用符 (`'`)、二重引用符 (`"`) の前に使用してください。
 
     - パス
-      - : [SVG 図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)の ID への参照 -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` -- パスとして図形の形状を使用します。
+      - : [SVG 図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)の ID への参照 — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` — パスとして図形の形状を使用します。
 
 - `<url-modifier>` {{Experimental_Inline}}
   - : 将来的に `url()` 関数は、URL 文字列の意味を変更する修飾子、識別子、関数記法の指定に対応するかもしれません。これはまだ対応されておらず、仕様書では完全には定義されていません。

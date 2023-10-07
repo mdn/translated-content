@@ -40,7 +40,7 @@ Data channel의 수동협상을 위해서 우선 {{domxref("RTCPeerConnection")}
 
 ```js
 let dataChannel = pc.createDataChannel("MyApp Channel", {
-  negotiated: true
+  negotiated: true,
 });
 
 dataChannel.addEventListener("open", (event) => {

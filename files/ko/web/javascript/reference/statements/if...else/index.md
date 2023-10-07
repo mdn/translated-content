@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Statements/if...else
   - : 참 또는 거짓으로 평가되는 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#표현식)입니다.
 - `statement1`
   - : 조건이 참으로 평가될 경우 실행되는 문입니다.
-    중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우 ({ ... })[블럭](/en-US/docs/Web/JavaScript/Reference/Statements/block) 구문 으로 그룹화 하고 실행하지 않으려면 [빈](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) 구문을 사용합니다.
+    중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우 ({ ... })[블럭](/ko/docs/Web/JavaScript/Reference/Statements/block) 구문 으로 그룹화 하고 실행하지 않으려면 [빈](/ko/docs/Web/JavaScript/Reference/Statements/Empty) 구문을 사용합니다.
 - `statement2`
   - : 이 구문은 조건이 거짓일경우 다른 조항이 있을 때 실행되는 구문입니다. 블록 문과 if문의 중첩을 호함한 모든문이 될 수 있습니다.
 
@@ -61,11 +61,11 @@ slug: Web/JavaScript/Reference/Statements/if...else
 있는 코드안에서 사용하면 더욱 좋습니다.
 
 ```js
-    if (조건) {
-       명령문들1
-    } else {
-       명령문들2
-    }
+if (조건) {
+  명령문들1;
+} else {
+  명령문들2;
+}
 ```
 
 원시 불리언 값인 true (참) 과 false (거짓) 을 불리언 객체의 truthiness (참으로 보이는 것) 과 falsiness (거짓으로 보이는 것)으로 혼동하면 안된다. false, undefined, null, 0, NaN, 또는 빈 스트링 ("") 이 아닌 모든 값, 그리고 false 값인 불리언 객체를 포함하는 모든 객체는 조건으로 사용될 때 [truthy](/ko/docs/Glossary/Truthy) 로 간주된다. 예:
@@ -81,10 +81,10 @@ if (b) // 이 조건은 참으로 보이는 것 (truthy) 이다.
 
 ```js
 if (cipher_char === from_char) {
-   result = result + to_char;
-   x++;
+  result = result + to_char;
+  x++;
 } else {
-   result = result + clear_char;
+  result = result + clear_char;
 }
 ```
 
@@ -94,11 +94,8 @@ if (cipher_char === from_char) {
 
 ```js
 if (x > 5) {
-
 } else if (x > 50) {
-
 } else {
-
 }
 ```
 
@@ -107,9 +104,9 @@ if (x > 5) {
 조건식을 단순하게 지정하는 것은 좋지 않습니다.
 왜냐하면, 코드를 흘깃 보면 값을 지정한것을 평등한것으로 혼동할 수 있기 때문입니다. 예를들어, 다음코드를 사용하지 마세요:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
-   /* do the right thing */
+  /* do the right thing */
 }
 ```
 
@@ -117,7 +114,7 @@ if (x = y) {
 
 ```js example-good
 if ((x = y)) {
-   /* do the right thing */
+  /* do the right thing */
 }
 ```
 

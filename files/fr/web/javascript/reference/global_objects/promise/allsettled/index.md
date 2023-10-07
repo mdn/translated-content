@@ -1,13 +1,6 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-tags:
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/allSettled
 ---
 
 {{JSRef}}

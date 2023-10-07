@@ -1,7 +1,6 @@
 ---
 title: ウェブサイトを作るのにどんなソフトウェアが必要？
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 <div class="summary">

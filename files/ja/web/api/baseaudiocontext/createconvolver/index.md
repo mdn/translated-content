@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
-original_slug: Web/API/AudioContext/createConvolver
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -13,7 +12,7 @@ original_slug: Web/API/AudioContext/createConvolver
 ## 構文
 
 ```js
-createConvolver()
+createConvolver();
 ```
 
 ### 引数

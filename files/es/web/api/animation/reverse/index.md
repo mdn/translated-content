@@ -26,26 +26,26 @@ Ningun.
 En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia(`aliceChange`) sea reproducida al revés, lo que la hace más pequeña. Esto se hace estableciendo el {{ domxref("Animation.playbackRate") }} de `aliceChange` en `-1` de esta forma:
 
 ```js
-var shrinkAlice = function() {
+var shrinkAlice = function () {
   // reproduce la animación de Alicia al revés.
   aliceChange.playbackRate = -1;
   aliceChange.play();
 
   // reproduce la animación de la botella.
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 Pero también se podría haber hecho lamando a `reverse()` en `aliceChange` así:
 
 ```js
-var shrinkAlice = function() {
+var shrinkAlice = function () {
   // reproduce la animación de Alicia al revés.
   aliceChange.reverse();
 
   // reproduce la animación de la botella.
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 ## Especificaciones

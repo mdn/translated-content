@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -48,11 +41,11 @@ myVar = x.toString(); // присваивает переменной myVar зн�
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.2', 'Date.prototype.toLocaleTimeString')}}     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                   | Статус             | Комментарии                                            |
+| ------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                        | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.2', 'Date.prototype.toLocaleTimeString')}}    | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

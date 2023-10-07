@@ -1,12 +1,6 @@
 ---
 title: element.removeAttributeNode
 slug: Web/API/Element/removeAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/removeAttributeNode
 ---
 
 {{ APIRef("DOM") }}
@@ -16,7 +10,7 @@ translation_of: Web/API/Element/removeAttributeNode
 ## Syntaxe
 
 ```js
-removedAttr =element.removeAttributeNode(attributeNode)
+removedAttr = element.removeAttributeNode(attributeNode);
 ```
 
 - `attributeNode` est le nœud `Attr` à enlever.
@@ -24,7 +18,7 @@ removedAttr =element.removeAttributeNode(attributeNode)
 
 ## Exemple
 
-```html
+```js
 // <div id="top" align="center" />
 var d = document.getElementById("top");
 var d_align = d.getAttributeNode("align");

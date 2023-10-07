@@ -1,12 +1,6 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
-original_slug: Web/JavaScript/Reference/Instructions/break
 ---
 
 {{jsSidebar("Statements")}}
@@ -38,15 +32,15 @@ La fonction qui suit utilise une instruction `break` qui interrompt la boucle {{
 
 ```js
 function testBreak(x) {
-   var i = 0;
+  var i = 0;
 
-   while (i < 6) {
-      if (i == 3) {
-         break;
-      }
-      i += 1;
-   }
-   return i * x;
+  while (i < 6) {
+    if (i == 3) {
+      break;
+    }
+    i += 1;
+  }
+  return i * x;
 }
 ```
 
@@ -56,14 +50,13 @@ Dans le code suivant, on utilise les instructions `break` avec des blocs étique
 
 ```js
 bloc_externe: {
-
   bloc_interne: {
-    console.log ('1');
-    break bloc_externe;  // interrompt bloc_externe ET bloc_interne
-    console.log (':-('); // ignoré
+    console.log("1");
+    break bloc_externe; // interrompt bloc_externe ET bloc_interne
+    console.log(":-("); // ignoré
   }
 
-  console.log ('2');     // ignoré
+  console.log("2"); // ignoré
 }
 ```
 

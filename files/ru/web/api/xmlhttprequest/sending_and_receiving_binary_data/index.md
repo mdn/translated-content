@@ -1,7 +1,6 @@
 ---
 title: Отправка и получение бинарных данных
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
-translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
 
 ## Получение бинарных данных используя JavaScript arrays
@@ -35,8 +34,8 @@ var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "arraybuffer";
 
-oReq.onload = function(oEvent) {
-  var blob = new Blob([oReq.response], {type: "image/png"});
+oReq.onload = function (oEvent) {
+  var blob = new Blob([oReq.response], { type: "image/png" });
   // ...
 };
 
@@ -50,7 +49,7 @@ var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "blob";
 
-oReq.onload = function(oEvent) {
+oReq.onload = function (oEvent) {
   var blob = oReq.response;
   // ...
 };
@@ -65,11 +64,11 @@ oReq.send();
 ```js
 function load_binary_resource(url) {
   var req = new XMLHttpRequest();
-  req.open('GET', url, false);
+  req.open("GET", url, false);
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType('text\/plain; charset=x-user-defined');
+  req.overrideMimeType("text/plain; charset=x-user-defined");
   req.send(null);
-  if (req.status != 200) return '';
+  if (req.status != 200) return "";
   return req.responseText;
 }
 ```
@@ -109,7 +108,7 @@ oReq.onload = function (oEvent) {
   // Uploaded.
 };
 
-var blob = new Blob(['abc123'], {type: 'text/plain'});
+var blob = new Blob(["abc123"], { type: "text/plain" });
 
 oReq.send(blob);
 ```
@@ -122,11 +121,11 @@ oReq.send(blob);
 var myArray = new ArrayBuffer(512);
 var longInt8View = new Uint8Array(myArray);
 
-for (var i=0; i< longInt8View.length; i++) {
+for (var i = 0; i < longInt8View.length; i++) {
   longInt8View[i] = i % 255;
 }
 
-var xhr = new XMLHttpRequest;
+var xhr = new XMLHttpRequest();
 xhr.open("POST", url, false);
 xhr.send(myArray);
 ```
@@ -161,23 +160,27 @@ req.sendAsBinary(aBody);
 
 ```js
 // Создание потока из файла.
-var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
-                       .createInstance(Components.interfaces.nsIFileInputStream);
+var stream = Components.classes[
+  "@mozilla.org/network/file-input-stream;1"
+].createInstance(Components.interfaces.nsIFileInputStream);
 stream.init(file, 0x04 | 0x08, 0644, 0x04); // file is an nsIFile instance
 
 // Попытка опредедения типа MIME для файла
-var mimeType = "text\/plain";
+var mimeType = "text/plain";
 try {
-  var mimeService = Components.classes["@mozilla.org/mime;1"]
-          .getService(Components.interfaces.nsIMIMEService);
+  var mimeService = Components.classes["@mozilla.org/mime;1"].getService(
+    Components.interfaces.nsIMIMEService,
+  );
   mimeType = mimeService.getTypeFromFile(file); // file is an nsIFile instance
+} catch (oEvent) {
+  /* в случае ошибки просто использовать text/plain */
 }
-catch (oEvent) { /* в случае ошибки просто использовать text/plain */ }
 
 // Отправка
-var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
-                    .createInstance(Components.interfaces.nsIXMLHttpRequest);
-req.open('PUT', url, false); /* синхронный вызов! */
-req.setRequestHeader('Content-Type', mimeType);
+var req = Components.classes[
+  "@mozilla.org/xmlextras/xmlhttprequest;1"
+].createInstance(Components.interfaces.nsIXMLHttpRequest);
+req.open("PUT", url, false); /* синхронный вызов! */
+req.setRequestHeader("Content-Type", mimeType);
 req.send(stream);
 ```

@@ -1,10 +1,6 @@
 ---
 title: when
 slug: Web/XSLT/Element/when
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/when
-original_slug: Web/XSLT/when
 ---
 
 {{ XsltRef() }}

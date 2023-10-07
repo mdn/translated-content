@@ -29,10 +29,10 @@ slug: Web/API/PerformanceObserver
 
 ```js
 function perf_observer(list, observer) {
-   // Process the "measure" event
+  // Process the "measure" event
 }
 var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## 仕様書

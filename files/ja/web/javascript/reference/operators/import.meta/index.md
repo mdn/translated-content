@@ -1,7 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}
@@ -44,7 +43,7 @@ console.log(import.meta); // { url: "file:///home/user/my-module.js" }
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 
@@ -52,17 +51,17 @@ import './index.mjs?someURLInfo=5';
 
 ```js
 // index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 ファイルが別のファイルをインポートする場合も同様です。
 
 ```js
 // index.mjs
-import './index2.mjs?someURLInfo=5';
+import "./index2.mjs?someURLInfo=5";
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 メモ: 後者の例のように Node.js はクエリパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリパラメータを持つ URL を `node --experimental-modules index.mjs?someURLInfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。

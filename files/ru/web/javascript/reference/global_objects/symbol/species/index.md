@@ -1,14 +1,8 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Свойство
-  - Символы
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
+
 {{JSRef}}
 
 **`Symbol.species`** **—** известный символ, позволяющий определить конструктор, использующийся для создания порождённых объектов.
@@ -26,20 +20,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ```js
 class MyArray extends Array {
   // Перегружаем species для использования родительского конструктора Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                       | Комментарий              |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------ |
-| {{SpecName('ES6', '#sec-symbol.species', 'Symbol.species')}}     | {{Spec2('ES6')}}         | Изначальное определение. |
+| Спецификация                                                     | Статус               | Комментарий              |
+| ---------------------------------------------------------------- | -------------------- | ------------------------ |
+| {{SpecName('ES6', '#sec-symbol.species', 'Symbol.species')}}     | {{Spec2('ES6')}}     | Изначальное определение. |
 | {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ESDraft')}} |                          |
 
 ## Поддержка браузерами

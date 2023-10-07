@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 
 {{WebAssemblySidebar}}
@@ -25,7 +17,7 @@ La fonction **`WebAssembly.instantiate()`** permet de compiler et d'instancier d
 ### Première forme : utiliser le _bytecode_ WebAssembly
 
 ```js
-Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
+WebAssembly.instantiate(bufferSource, importObject);
 ```
 
 #### Paramètres
@@ -50,7 +42,7 @@ Une promesse qui est résoluee en un objet qui contient deux champs :
 ### Seconde forme : utiliser une instance d'un module
 
 ```js
-Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
+WebAssembly.instantiate(module, importObject);
 ```
 
 #### Paramètres
@@ -80,19 +72,16 @@ Après avoir récupéré le _bytecode_ WebAssembly grâce à `fetch()`, on compi
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Note :** Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub ([ainsi que la démonstration associée](https://mdn.github.io/webassembly-examples/js-api-examples/)) qui contient un exemple analogue et qui utilise la fonction utilitaire [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1).
@@ -104,9 +93,8 @@ Dans l'exemple qui suit (tiré du fichier [`index-compile.html`](https://github.
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
 );
 ```
 
@@ -115,17 +103,17 @@ Dans le _worker_ (cf. [`wasm_worker.js`](https://github.com/mdn/webassembly-exam
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module reçu depuis le thread principal');
+onmessage = function (e) {
+  console.log("module reçu depuis le thread principal");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

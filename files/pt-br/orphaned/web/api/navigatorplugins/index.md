@@ -1,7 +1,6 @@
 ---
 title: NavigatorPlugins
 slug: orphaned/Web/API/NavigatorPlugins
-original_slug: Web/API/NavigatorPlugins
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -24,9 +23,7 @@ A interface NavigatorPlugins* `NavigatorPlugins`* não herda nenhum método.
 
 ## Especificações
 
-| Especificação                                                                                | Estado                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegador compativeis
 

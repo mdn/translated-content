@@ -43,7 +43,7 @@ A função seguinte toma como argumento um objeto. O laço for...in iterage sobr
 
 ```js
 //Objeto
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 //Para prop (propriedade) in obj (objeto) faça
 for (var prop in obj) {
@@ -60,7 +60,7 @@ for (var prop in obj) {
 A função seguinte ilustra o uso de {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: as propriedades herdadas não são exibidas.
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
   this.color = "red";
@@ -71,7 +71,7 @@ ColoredTriangle.prototype = triangle;
 var obj = new ColoredTriangle();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log("obj." + prop + " = " + obj[prop]);
   }
 }
@@ -82,13 +82,13 @@ for (var prop in obj) {
 
 ## Specificações
 
-| Specificação                                                                                                 | Status                       | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
+| Specificação                                                                       | Status               | Comentário        |
+| ---------------------------------------------------------------------------------- | -------------------- | ----------------- |
 | {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}}     | {{Spec2('ES6')}}         |                   |
-| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                                 | {{Spec2('ES5.1')}}     |                   |
-| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                                 | {{Spec2('ES3')}}         |                   |
-| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                                 | {{Spec2('ES1')}}         | Definição inicial |
+| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}}     | {{Spec2('ES6')}}     |                   |
+| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                         | {{Spec2('ES5.1')}}   |                   |
+| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                           | {{Spec2('ES3')}}     |                   |
+| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                           | {{Spec2('ES1')}}     | Definição inicial |
 
 ## Compatibilidade com navegadores
 

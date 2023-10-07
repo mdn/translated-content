@@ -22,7 +22,7 @@ l10n:
 
 このノードの子を含む生きた {{domxref("NodeList")}} です。
 
-> **メモ:** `childNodes` を複数回呼び出しても、*同じ* {{domxref("NodeList")}} が返されます。
+> **メモ:** `childNodes` を複数回呼び出しても、_同じ_ {{domxref("NodeList")}} が返されます。
 
 ## 例
 

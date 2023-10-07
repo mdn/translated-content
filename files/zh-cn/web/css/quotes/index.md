@@ -14,8 +14,8 @@ slug: Web/CSS/quotes
 quotes: none;
 
 /* <string> values */
-quotes: "«" "»";           /* Set open-quote and close-quote to the French quotation marks */
-quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
+quotes: "«" "»"; /* Set open-quote and close-quote to the French quotation marks */
+quotes: "«" "»" "‹" "›"; /* Set two levels of quotation marks */
 
 /* Global values */
 quotes: inherit;
@@ -71,19 +71,26 @@ q:after {
 ```html
 <div lang="fr">
   <q>Ceci est une citation française.</q>
-<div>
-<hr>
-<div lang="ru">
-  <q>Это русская цитата</q>
-<div>
-<hr>
-<div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
-<div>
-<hr>
-<div lang="en">
-  <q>This is an English quote.</q>
-<div>
+  <div>
+    <hr />
+    <div lang="ru">
+      <q>Это русская цитата</q>
+      <div>
+        <hr />
+        <div lang="de">
+          <q>Dies ist ein deutsches Zitat</q>
+          <div>
+            <hr />
+            <div lang="en">
+              <q>This is an English quote.</q>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 #### CSS

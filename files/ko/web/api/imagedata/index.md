@@ -2,6 +2,7 @@
 title: ImageData
 slug: Web/API/ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 **`ImageData`** 인터페이스는 {{HTMLElement("canvas")}} 엘리먼트 영역의 기저의 픽셀데이터를 나타냅니다{{domxref("ImageData.ImageData", "ImageData()")}}생성자나 canvas객체에 연결된 {{domxref("CanvasRenderingContext2D")}}객체의 {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}나 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}메소드로 생성할 수 있습니다. **ImageData**는 {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}의 인자로 전달할 수 있으며, 이를 통해 canvas의 일부로 반영할 수 있습니다.

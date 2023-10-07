@@ -1,7 +1,6 @@
 ---
 title: XML 파싱 및 직렬화
 slug: Web/Guide/Parsing_and_serializing_XML
-original_slug: Web/Guide/XML_파싱_및_직렬화
 ---
 
 웹 상에서 XML을 파싱하고 직렬화할 때 사용할 수 있는 객체는 다음과 같습니다.
@@ -22,7 +21,11 @@ var sMyString = '<a id="a"><b id="b">hey!</b></a>';
 var oParser = new DOMParser();
 var oDOM = oParser.parseFromString(sMyString, "text/xml");
 // 루트 요소의 이름, 또는 에러 메시지를 출력합니다.
-dump(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oDOM.documentElement.nodeName);
+dump(
+  oDOM.documentElement.nodeName == "parsererror"
+    ? "error while parsing"
+    : oDOM.documentElement.nodeName,
+);
 ```
 
 ### 자바스크립트 객체 트리를 시작점으로 하여 XML 문서를 생성(JXON)
@@ -37,12 +40,12 @@ dump(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oD
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.onload = function() {
+xhr.onload = function () {
   dump(xhr.responseXML.documentElement.nodeName);
-}
-xhr.onerror = function() {
+};
+xhr.onerror = function () {
   dump("Error while getting XML.");
-}
+};
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";
 xhr.send();
@@ -68,14 +71,15 @@ var sXML = oSerializer.serializeToString(doc);
 `new XMLSerializer()` 생성자는 JS XPCOM 컴포넌트(혹은 [JS module](/en/JavaScript_code_modules)) 내에서는 사용이 불가능합니다. 대신, 다음과 같은 코드를 작성하세요.
 
 ```js
-var oSerializer = Components.classes["@mozilla.org/xmlextras/xmlserializer;1"]
-                            .createInstance(Components.interfaces.nsIDOMSerializer);
+var oSerializer = Components.classes[
+  "@mozilla.org/xmlextras/xmlserializer;1"
+].createInstance(Components.interfaces.nsIDOMSerializer);
 var sXML = oSerializer.serializeToString(doc);
 ```
 
 #### DOM 트리를 문자열로 "예쁘게(pretty)" 직렬화
 
-`XMLSerializer와` [E4X](/en/E4X)를 사용하면 DOM 트리를 [예쁘게 출력(pretty print](http://en.wikipedia.org/wiki/Pretty-print)) 할 수 있습니다. 우선, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글을 참고하여 DOM 트리를 생성합니다. 혹은 {{ domxref("XMLHttpRequest") }}를 통해 DOM 트리를 뽑아내는 방법도 있습니다. 아래 코드에서 변수 `doc`는 DOM 트리를 가지고 있습니다.
+`XMLSerializer와` [E4X](/en/E4X)를 사용하면 DOM 트리를 [예쁘게 출력(pretty print](http://en.wikipedia.org/wiki/Pretty-print) 할 수 있습니다. 우선, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글을 참고하여 DOM 트리를 생성합니다. 혹은 {{ domxref("XMLHttpRequest") }}를 통해 DOM 트리를 뽑아내는 방법도 있습니다. 아래 코드에서 변수 `doc`는 DOM 트리를 가지고 있습니다.
 
 ```js
 var oSerializer = new XMLSerializer();
@@ -107,13 +111,17 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [모질라에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O)를 참조하세요.
 
 ```js
-var oFOStream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
-var oFile = Components.classes["@mozilla.org/file/directory_service;1"].getService(Components.interfaces.nsIProperties).get("ProfD", Components.interfaces.nsILocalFile); // get profile folder
+var oFOStream = Components.classes[
+  "@mozilla.org/network/file-output-stream;1"
+].createInstance(Components.interfaces.nsIFileOutputStream);
+var oFile = Components.classes["@mozilla.org/file/directory_service;1"]
+  .getService(Components.interfaces.nsIProperties)
+  .get("ProfD", Components.interfaces.nsILocalFile); // get profile folder
 oFile.append("extensions"); // extensions sub-directory
 oFile.append("{5872365E-67D1-4AFD-9480-FD293BEBD20D}"); // GUID of your extension
 oFile.append("myXMLFile.xml"); // filename
 oFOStream.init(oFile, 0x02 | 0x08 | 0x20, 0664, 0); // write, create, truncate
-(new XMLSerializer()).serializeToStream(doc, oFOStream, ""); // rememeber, doc is the DOM tree
+new XMLSerializer().serializeToStream(doc, oFOStream, ""); // rememeber, doc is the DOM tree
 oFOStream.close();
 ```
 

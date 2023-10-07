@@ -1,20 +1,6 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - Boîtes
-  - CSS
-  - Mocèle de Boîte CSS
-  - Propriété CSS
-  - Reference
-  - border-box
-  - box-sizing
-  - content-box
-  - height
-  - modèle de boîte
-  - size
-  - width
-translation_of: Web/CSS/box-sizing
 ---
 
 {{CSSRef}}
@@ -101,7 +87,7 @@ div {
 
 ```html
 <div class="content-box">Content box</div>
-<br>
+<br />
 <div class="border-box">Border box</div>
 ```
 

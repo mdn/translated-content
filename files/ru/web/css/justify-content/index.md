@@ -1,11 +1,8 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - justify-content
-translation_of: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`justify-content`** определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль {{Glossary("Main Axis", "главной оси")}} flex контейнера, или вдоль строчной оси grid контейнера.
@@ -20,13 +17,13 @@ translation_of: Web/CSS/justify-content
 
 ```css
 /* Позиционное выравнивание */
-justify-content: center;     /* Выравнивание элементов по центру */
-justify-content: start;      /* Выравнивание элементов в начале */
-justify-content: end;        /* Выравнивание элементов в конце */
+justify-content: center; /* Выравнивание элементов по центру */
+justify-content: start; /* Выравнивание элементов в начале */
+justify-content: end; /* Выравнивание элементов в конце */
 justify-content: flex-start; /* Выравнивание флекс-элементов с начала */
-justify-content: flex-end;   /* Выравнивание флекс-элементов с конца */
-justify-content: left;       /* Выравнивание элементов по левому краю */
-justify-content: right;      /* Выравнивание элементов по правому краю */
+justify-content: flex-end; /* Выравнивание флекс-элементов с конца */
+justify-content: left; /* Выравнивание элементов по левому краю */
+justify-content: right; /* Выравнивание элементов по правому краю */
 
 /* Выравнивание относительно осевой линии */
 justify-content: baseline;
@@ -36,13 +33,13 @@ justify-content: last baseline;
 /* Распределённое выравнивание */
 justify-content: space-between; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Первый элемент вначале, последний в конце */
-justify-content: space-around;  /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: space-around; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Все элементы имеют полноразмерное пространство
 
                                    с обоих концов */
-justify-content: space-evenly;  /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: space-evenly; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Все элементы имеют равное пространство вокруг */
-justify-content: stretch;       /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: stretch; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Все элементы имеют "авто-размер", чтобы соответствовать
 
                                    контейнеру */
@@ -77,7 +74,7 @@ justify-content: unset;
   - : Элементы располагаются на своих обычных позициях, так как будто свойство `justify-content` не задано. Этот параметр ведёт себя как `stretch` в grid и flex контейнерах.
 - `baseline first baseline`
   `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `space-between`
   - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Первый элемент прижат к началу контейнера по главной оси, а последний - к концу.
@@ -143,8 +140,7 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 

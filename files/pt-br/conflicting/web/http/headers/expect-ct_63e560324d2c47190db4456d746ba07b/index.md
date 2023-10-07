@@ -1,7 +1,6 @@
 ---
 title: Public-Key-Pins-Report-Only
 slug: conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
-original_slug: Web/HTTP/Headers/Public-Key-Pins-Report-Only
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}

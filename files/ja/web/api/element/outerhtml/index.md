@@ -1,6 +1,9 @@
 ---
-title: Element.outerHTML
+title: "Element: outerHTML プロパティ"
+short-title: outerHTML
 slug: Web/API/Element/outerHTML
+l10n:
+  sourceCommit: 5b9279d31d51c6ee0478dbe072b994caa7270543
 ---
 
 {{APIRef("DOM")}}
@@ -9,17 +12,9 @@ slug: Web/API/Element/outerHTML
 
 要素の内容のみの HTML 表現を取得する場合や、要素の内容を置き換える場合であれば、代わりに {{domxref("Element.innerHTML", "innerHTML")}} プロパティを使用してください。
 
-## 構文
+## 値
 
-```js
-var content = element.outerHTML;
-
-element.outerHTML = htmlString;
-```
-
-### 値
-
-`outerHTML` の値を読み取ると、 `element` およびその子孫を HTML にシリアライズしたものを含む {{domxref("DOMString")}} が返されます。 `outerHTML` の値を設定すると、その要素とそのすべての子孫を、指定された `htmlString` を解釈して構築された新しい DOM ツリーで置き換えます。
+`outerHTML` の値を読み取ると、 `element` およびその子孫を HTML にシリアライズしたものを含む文字列が返されます。 `outerHTML` の値を設定すると、その要素とそのすべての子孫を、指定された `htmlString` を解釈して構築された新しい DOM ツリーで置き換えます。
 
 ### 例外
 
@@ -30,7 +25,7 @@ element.outerHTML = htmlString;
 
 ## 例
 
-要素の `outerHTML` プロパティの値を得る例を示します。
+### 要素の outerHTML プロパティから値を取得
 
 ### HTML
 
@@ -44,14 +39,14 @@ element.outerHTML = htmlString;
 ### Javascript
 
 ```js
-var d = document.getElementById("d");
+const d = document.getElementById("d");
 console.log(d.outerHTML);
 
 // 文字列 '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
 // がコンソールウィンドウに書き出されます。
 ```
 
-次の例では、 `outerHTML` プロパティに値を設定し、ノードを置換します。
+### outerHTML プロパティへ設置することでノードを置き換え
 
 ### HTML
 
@@ -64,8 +59,8 @@ console.log(d.outerHTML);
 ### Javascript
 
 ```js
-var container = document.getElementById("container");
-var d = document.getElementById("d");
+const container = document.getElementById("container");
+const d = document.getElementById("d");
 
 console.log(container.firstElementChild.nodeName); // "DIV" と出力
 
@@ -79,18 +74,18 @@ console.log(container.firstElementChild.nodeName); // "P" と出力
 
 ## メモ
 
-要素が親要素を持たない場合、その `outerHTML` プロパティに値を設定してもその要素や子孫は変更されません。多くのブラウザーでは例外も発生します。以下に例を示します。
+要素が親ノードを持たない場合、その `outerHTML` プロパティに値を設定してもその要素や子孫は変更されません。以下に例を示します。
 
 ```js
-var div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+const div = document.createElement("div");
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 
 また、文書の中で要素が置換された場合も、 `outerHTML` プロパティが設定された変数は、引き続きオリジナルの要素への参照を保持しています。
 
 ```js
-var p = document.getElementsByTagName("p")[0];
+const p = document.querySelector("p");
 console.log(p.nodeName); // shows: "P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
@@ -99,7 +94,7 @@ console.log(p.nodeName); // still "P";
 返値には HTML エスケープされた属性が入ります。
 
 ```js
-var anc = document.createElement("a");
+const anc = document.createElement("a");
 anc.href = "https://developer.mozilla.org?a=b&c=d";
 console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a=b&amp;c=d'></a>"
 ```

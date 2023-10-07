@@ -20,15 +20,15 @@ Você não pode alterar essa propriedade diretamente.
 ### Usando `ignoreCase`
 
 ```js
-var regex = new RegExp('foo', 'i');
+var regex = new RegExp("foo", "i");
 
 console.log(regex.ignoreCase); // true
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                                  |
+| ---------------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} |
 
 ## Compatibilidade com navegadores

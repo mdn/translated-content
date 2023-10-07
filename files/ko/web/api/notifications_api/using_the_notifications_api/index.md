@@ -1,7 +1,6 @@
 ---
 title: 알림 API 사용하기
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-original_slug: WebAPI/Using_Web_Notifications
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -44,7 +43,7 @@ original_slug: WebAPI/Using_Web_Notifications
 아직 알림 표시 권한이 허용되지 않았다면 애플리케이션은 {{domxref("Notification.requestPermission()")}} 메서드를 사용하여 사용자에게 권한을 요청할 필요가 있습니다. 간단하게는 아래와 같이 넣습니다.
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -72,29 +71,31 @@ function askNotificationPermission() {
   // 권한을 실제로 요구하는 함수
   function handlePermission(permission) {
     // 사용자의 응답에 관계 없이 크롬이 정보를 저장할 수 있도록 함
-    if(!('permission' in Notification)) {
+    if (!("permission" in Notification)) {
       Notification.permission = permission;
     }
 
     // 사용자 응답에 따라 단추를 보이거나 숨기도록 설정
-    if(Notification.permission === 'denied' || Notification.permission === 'default') {
-      notificationBtn.style.display = 'block';
+    if (
+      Notification.permission === "denied" ||
+      Notification.permission === "default"
+    ) {
+      notificationBtn.style.display = "block";
     } else {
-      notificationBtn.style.display = 'none';
+      notificationBtn.style.display = "none";
     }
   }
 
   // 브라우저가 알림을 지원하는지 확인
-  if (!('Notification' in window)) {
+  if (!("Notification" in window)) {
     console.log("이 브라우저는 알림을 지원하지 않습니다.");
   } else {
-    if(checkNotificationPromise()) {
-      Notification.requestPermission()
-      .then((permission) => {
+    if (checkNotificationPromise()) {
+      Notification.requestPermission().then((permission) => {
         handlePermission(permission);
-      })
+      });
     } else {
-      Notification.requestPermission(function(permission) {
+      Notification.requestPermission(function (permission) {
         handlePermission(permission);
       });
     }
@@ -114,14 +115,14 @@ function askNotificationPermission() {
 
 ```js
 function checkNotificationPromise() {
-    try {
-      Notification.requestPermission().then();
-    } catch(e) {
-      return false;
-    }
-
-    return true;
+  try {
+    Notification.requestPermission().then();
+  } catch (e) {
+    return false;
   }
+
+  return true;
+}
 ```
 
 기본적으로 `requestPermission()`에 `.then()` 메서드가 있는지 알아보는 것입니다. 맞다면 계속 진행하고 `true`를 반환합니다. 실패라면 `catch() {}` 블록에서 `false`를 반환합니다.
@@ -133,9 +134,9 @@ function checkNotificationPromise() {
 예를 들어 할일 목록 예시에서 아래 코드로 필요시 알림을 만듭니다(`createNotification()` 함수에서 찾을 수 있음).
 
 ```js
-var img = '/to-do-notifications/img/icon-128.png';
+var img = "/to-do-notifications/img/icon-128.png";
 var text = '아! "' + title + '" 작업 기한이 만료됐습니다.';
-var notification = new Notification('할 일 목록', { body: text, icon: img });
+var notification = new Notification("할 일 목록", { body: text, icon: img });
 ```
 
 ## 알림 닫기
@@ -180,7 +181,7 @@ setTimeout(notification.close.bind(notification), 4000);
 다수의 알림을 아래 방법으로 처리할 수 있습니다.
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // 처음에는 알림 권한이 있는지 확인함
   // 없으면 권한 요구
   if (Notification && Notification.permission !== "granted") {
@@ -191,9 +192,9 @@ window.addEventListener('load', function () {
     });
   }
 
-  var button = document.getElementsByTagName('button')[0];
+  var button = document.getElementsByTagName("button")[0];
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // 사용자가 알림을 받는 데 동의한 경우
     // 알림 10개를 보내본다
     if (Notification && Notification.permission === "granted") {
@@ -201,7 +202,7 @@ window.addEventListener('load', function () {
       // 어떤 브라우저(파이어폭스 등)는 일정 시간 동안 알림이 너무 많은 경우 차단하기 때문에 인터벌 사용.
       var interval = window.setInterval(function () {
         // 태그 덕분에 "안녕! 9" 알림만 보여야 함
-        var n = new Notification("안녕! " + i, {tag: '알림너무많음'});
+        var n = new Notification("안녕! " + i, { tag: "알림너무많음" });
         if (i++ == 9) {
           window.clearInterval(interval);
         }
@@ -219,7 +220,7 @@ window.addEventListener('load', function () {
           // 어떤 브라우저(파이어폭스 등)는 일정 시간 동안 알림이 너무 많은 경우 차단하기 때문에 인터벌 사용.
           var interval = window.setInterval(function () {
             // 태그 덕분에 "안녕! 9" 알림만 보여야 함
-            var n = new Notification("안녕! " + i, {tag: '알림너무많음'});
+            var n = new Notification("안녕! " + i, { tag: "알림너무많음" });
             if (i++ == 9) {
               window.clearInterval(interval);
             }

@@ -1,7 +1,6 @@
 ---
 title: Базовые концепции CSS Scroll Snap
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
-translation_of: Web/CSS/CSS_Scroll_Snap/Basic_concepts
 ---
 
 {{CSSRef}}

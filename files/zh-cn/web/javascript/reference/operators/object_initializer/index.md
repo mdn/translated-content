@@ -234,7 +234,7 @@ const mergedObj = { ...obj1, ...obj2 };
 
 请注意，`__proto__` 键是标准化的语法，与非标准且性能不佳的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器不同。它在创建对象时设置了 `[[Prototype]]`，类似于 {{jsxref("Object.create")}}——而不是变更原型链。
 
-```js
+```js-nolint
 const obj1 = {};
 console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 

@@ -1,7 +1,6 @@
 ---
 title: BiquadFilterNode.frequency
 slug: Web/API/BiquadFilterNode/frequency
-translation_of: Web/API/BiquadFilterNode/frequency
 ---
 
 {{ APIRef("Web Audio API") }}

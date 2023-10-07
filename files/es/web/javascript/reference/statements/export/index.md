@@ -1,7 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-original_slug: Web/JavaScript/Referencia/Sentencias/export
 ---
 
 {{jsSidebar("Statements")}}
@@ -51,7 +50,7 @@ Existen dos tipos diferentes de exportación , **nombrada** y **por defecto**. S
 - Exports por defecto (function):
 
   ```js
-  export default function() {}
+  export default function () {}
   ```
 
 - Exports por defecto (class):
@@ -67,7 +66,7 @@ Pero un export por defecto puede ser importado con cualquier nombre, por ejemplo
 ```js
 export default k = 12; // en el archivo test.js
 
-import m from './test' // notese que tenemos la libertad de usar import m en lugar de import k, porque k era el export por defecto
+import m from "./test"; // notese que tenemos la libertad de usar import m en lugar de import k, porque k era el export por defecto
 
 console.log(m); // escribirá 12
 ```
@@ -83,7 +82,7 @@ export * from …;
 Si necesita exportar por defecto, escriba lo siguiente en su lugar:
 
 ```js
-import mod from 'mod';
+import mod from "mod";
 export default mod;
 ```
 
@@ -100,14 +99,14 @@ function cube(x) {
 }
 const foo = Math.PI + Math.SQRT2;
 var graph = {
-    options:{
-        color:'white',
-        thickness:'2px'
-    },
-    draw: function(){
-        console.log('From graph draw function');
-    }
-}
+  options: {
+    color: "white",
+    thickness: "2px",
+  },
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 export { cube, foo, graph };
 ```
 
@@ -119,14 +118,14 @@ De esta forma, en otro script, podemos tener:
 //open the page in a httpserver,otherwise there will be a CORS policy error.
 //script demo.js
 
-import { cube, foo, graph } from 'my-module';
+import { cube, foo, graph } from "my-module";
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 ### Usando el export por defecto
@@ -143,7 +142,7 @@ export default function cube(x) {
 De esta forma la importación de un export default será sumamemte sencilla:
 
 ```js
-import cube from 'my-module';
+import cube from "my-module";
 console.log(cube(3)); // 27
 ```
 

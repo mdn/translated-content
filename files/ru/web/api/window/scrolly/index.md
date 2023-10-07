@@ -1,7 +1,6 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-translation_of: Web/API/Window/scrollY
 ---
 
 {{APIRef("CSSOM View")}}
@@ -27,7 +26,7 @@ var y = window.scrollY
 ```js
 // проверить и перейти ко второй странице
 if (window.scrollY) {
-  window.scroll(0, 0);  // Обнулите позицию пролистывания на левый верхний угол документа.
+  window.scroll(0, 0); // Обнулите позицию пролистывания на левый верхний угол документа.
 }
 
 window.scrollByPages(1);
@@ -47,17 +46,23 @@ window.pageYOffset == window.scrollY; // всегда верно
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
 ## Спецификации
 
-| Спецификации                                                                                 | Статус                           | Комментарий |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

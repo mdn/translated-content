@@ -1,16 +1,6 @@
 ---
 title: Initiation à la mise en forme du texte
 slug: Learn/CSS/Styling_text/Fundamentals
-tags:
-  - Alignement
-  - CSS
-  - Débutant
-  - Guide
-  - Polices de caractères
-  - Style
-  - Texte
-translation_of: Learn/CSS/Styling_text/Fundamentals
-original_slug: Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
@@ -62,13 +52,14 @@ Passons directement aux propriétés pour le style des polices. Dans cet exemple
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 > **Note :** (NdT : Extrait et traduction _approximative_ de la chanson _Tommy the Cat_ du groupe [Primus)](<https://fr.wikipedia.org/wiki/Primus_(groupe)>)
@@ -79,7 +70,7 @@ Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/cs
 
 La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
 
-`color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Couleurs), par exemple :
+`color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Couleurs), par exemple :
 
 ```css
 p {
@@ -94,13 +85,14 @@ Les paragraphes seront en rouge, au lieu d'être de couleur noire, couleur par d
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 #### Résultat
@@ -186,13 +178,14 @@ p {
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 #### Résultat
@@ -201,7 +194,7 @@ occasions, comme maintenant.</p>
 
 ### Taille de la police de caractères
 
-Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
+Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
 
 - `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
@@ -213,8 +206,10 @@ Les choses deviennent plus difficiles lorsque vous commencez à modifier la tail
 
 ```html
 <!-- font-size vaut 16px pour la base du document -->
-<article> <!-- Si font-size vaut 1.5em -->
-  <p>Mon paragraphe</p> <!-- Comment calculer une hauteur de fonte de 20px ? -->
+<article>
+  <!-- Si font-size vaut 1.5em -->
+  <p>Mon paragraphe</p>
+  <!-- Comment calculer une hauteur de fonte de 20px ? -->
 </article>
 ```
 
@@ -231,13 +226,14 @@ Notre nouveau résultat ressemble à :
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 ```css
@@ -302,13 +298,14 @@ Notre nouveau résultat ressemble à :
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 ```css hidden
@@ -358,10 +355,11 @@ Les 4 propriétés sont les suivantes :
 Vous pouvez appliquer plusieurs ombres à un même texte, en mettant plusieurs valeurs d'ombrage séparées par une virgule, par exemple :
 
 ```css
-text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(0,0,0,0.5),
-             4px 4px 5px rgba(0,0,0,0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 Si nous l'appliquons à l'élément {{htmlelement ("h1")}} de notre exemple Tommy le Chat, nous nous obtenons :
@@ -371,38 +369,40 @@ Si nous l'appliquons à l'élément {{htmlelement ("h1")}} de notre exemple Tomm
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 ```css hidden
 html {
   font-size: 10px;
-    }
+}
 
 h1 {
-  font-size:26px;
+  font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
-   }
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
+}
 
 h1 + p {
   font-weight: bold;
-       }
+}
 
 p {
-  font-size:14px;
+  font-size: 14px;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-  }
+}
 ```
 
 #### Résultat
@@ -431,13 +431,14 @@ Si nous appliquons `text-align: center;` à l'élément {{htmlelement("h1")}} de
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 ```css
@@ -448,10 +449,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -485,13 +487,14 @@ En appliquant cette règle à l'élément {{htmlelement("p")}} de l'exemple, nou
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 ```css hidden
@@ -502,10 +505,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -542,13 +546,14 @@ p::first-line {
 
 <p>Je m'en souviens comme mon dernier repas...</p>
 
-<p>Dit Tommy le Chat en jetant la tête en arrière pour dégager
-ce corps étranger qui s'était niché au fond de sa redoutable gueule.
-Beaucoup de rats bien gras trépassèrent dans la ruelle en regardant l'étoile
-brillant au fond du canon de cet extraordinaire rôdeur en quête de proie.
-Un véritable miracle de la nature ce prédateur urbain — Tommy le Chat
-avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
-occasions, comme maintenant.</p>
+<p>
+  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
+  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
+  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
+  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
+  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
+  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+</p>
 ```
 
 ```css hidden
@@ -559,10 +564,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -632,7 +638,10 @@ Une barre oblique doit être placée entre les propriétés {{cssxref("font-size
 Un exemple complet ressemblerait à ceci :
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Apprentissage actif : jouer avec les styles du texte
@@ -642,20 +651,37 @@ Dans cette session d'apprentissage actif, nous n'avons pas d'exercice spécifiqu
 Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton de même nom.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie du HTML</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea
+  >
 
   <h2>Zone de saisie de la CSS</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+p {
 
-  }</textarea>
+  }</textarea
+  >
 
   <h2>Zone de rendu</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Réinitialiser"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -668,8 +694,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -677,7 +703,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

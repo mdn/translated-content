@@ -25,8 +25,8 @@ Connection: Upgrade
 
 ## Especificaciones
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                                       | Title                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Vea también

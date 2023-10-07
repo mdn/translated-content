@@ -1,7 +1,6 @@
 ---
 title: 约束验证
 slug: Web/HTML/Constraint_validation
-original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
 {{HTMLSidebar}}
@@ -23,10 +22,10 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中的固有约束有：
 
-| Input 类型                                                         | 约束描述                                                                                                                                           | 相关违约                                                                    |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn/Common_questions/What_is_a_URL) 地址。    | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
-| [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| Input 类型                                                         | 约束描述                                                                                                                       | 相关违约                                                                    |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn/Common_questions/What_is_a_URL) 地址。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。       | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
 
 对于这两种输入类型，如果设置了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
 
@@ -251,6 +250,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 - 通过提交表单本身。
 
 调用 `checkValidity()` 也被称为约束的*静态*验证，调用 `reportValidity()` 也被称为约束的*交互*认证。
+
 > **备注：**
 >
 > - 如果 {{ HTMLElement("form") }} 元素上设置了 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性，则不发生约束验证交互。

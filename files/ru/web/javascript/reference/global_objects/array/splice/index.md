@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -44,8 +37,8 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 ### Удаляет 0 элементов по индексу 2 и вставляет "drum"
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(2, 0, 'drum');
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
+var removed = myFish.splice(2, 0, "drum");
 
 // myFish равен ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed равен [], ничего не удалено
@@ -54,7 +47,7 @@ var removed = myFish.splice(2, 0, 'drum');
 ### Удаляет 1 элемент по индексу 3
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 var removed = myFish.splice(3, 1);
 
 // removed равен ["mandarin"]
@@ -64,8 +57,8 @@ var removed = myFish.splice(3, 1);
 ### Удаляет 1 элемент по индексу 2 и вставляет "trumpet"
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
-var removed = myFish.splice(2, 1, 'trumpet');
+var myFish = ["angel", "clown", "drum", "sturgeon"];
+var removed = myFish.splice(2, 1, "trumpet");
 
 // myFish равен ["angel", "clown", "trumpet", "sturgeon"]
 // removed равен ["drum"]
@@ -74,8 +67,8 @@ var removed = myFish.splice(2, 1, 'trumpet');
 ### Удаляет 2 элемента начиная с индекса 0 и вставляет "parrot", "anemone" и "blue"
 
 ```js
-var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
-var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+var myFish = ["angel", "clown", "trumpet", "sturgeon"];
+var removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
 // myFish равен ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed равен ["angel", "clown"]
@@ -84,7 +77,7 @@ var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 ### Удаляет 2 элемента начиная с индекса 2
 
 ```js
-var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+var myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish равен ["parrot", "anemone", "sturgeon"]
@@ -94,7 +87,7 @@ var removed = myFish.splice(myFish.length - 3, 2);
 ### Удаляет 1 элемент по индексу -2
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(-2, 1);
 
 // myFish равен ["angel", "clown", "sturgeon"]
@@ -104,7 +97,7 @@ var removed = myFish.splice(-2, 1);
 ### Удаляет все элементы после индекса 2 (включительно)
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(2);
 
 // myFish равен ["angel", "clown"]

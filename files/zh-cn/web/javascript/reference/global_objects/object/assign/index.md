@@ -30,7 +30,7 @@ Object.assign(target, ...sources)
 
 如果目标对象与源对象具有相同的{{jsxref("Object/keys", "键（属性名）", "", 1)}}，则目标对象中的属性将被源对象中的属性覆盖，后面的源对象的属性将类似地覆盖前面的源对象的同名属性。
 
-`Object.assign()` 方法只会拷贝源对象*可枚举的*的*自有属性*到目标对象。该方法在源对象上使用 `[[Get]]`，在目标对象上使用 `[[Set]]`，因此它会调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它对属性进行*赋值*，而不仅仅是复制或定义新的属性。如果要合并的源对象包含 getter，这可能使其不适合将新属性合并到原型中。
+`Object.assign()` 方法只会拷贝源对象*可枚举的*的*自有属性*到目标对象。该方法在源对象上使用 `[[Get]]`，在目标对象上使用 `[[Set]]`，因此它会调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它对属性进行*赋值*，而不仅仅是复制或定义新的属性。如果合并源对象包含 getter 的新属性到原型中，则可能不适合使用此方法。
 
 如果要将属性定义（包括它们的可枚举性）复制到原型中，则应改用 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}} 方法。
 
@@ -90,7 +90,7 @@ const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }，目标对象本身发生了变化
+console.log(o1); // { a: 1, b: 2, c: 3 }，目标对象本身发生了变化
 ```
 
 ### 合并具有相同属性的对象
@@ -110,14 +110,14 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 
 ```js
 const o1 = { a: 1 };
-const o2 = { [Symbol('foo')]: 2 };
+const o2 = { [Symbol("foo")]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
 Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 ```
 
-### 原型链上的属性和不可枚举属性不能被复制
+### 原型链上的属性和不可枚举的属性不能被复制
 
 ```js
 const obj = Object.create(
@@ -141,10 +141,10 @@ console.log(copy); // { baz: 3 }
 ### 基本类型会被封装为对象
 
 ```js
-const v1 = 'abc';
+const v1 = "abc";
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol('foo');
+const v4 = Symbol("foo");
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // 基本类型将被封装，null 和 undefined 将被忽略。

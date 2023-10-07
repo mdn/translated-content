@@ -1,7 +1,6 @@
 ---
 title: Смежные селекторы
 slug: Web/CSS/Adjacent_sibling_combinator
-translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
 
 {{CSSRef("Selectors")}}
@@ -43,8 +42,8 @@ img + span.caption {
 сработает только на тех тегах span, для которых задан класс caption:
 
 ```html
-<img src="photo1.jpg"><span class="caption">Первая фотка</span>
-<img src="photo2.jpg"><span class="caption">Вторая</span>
+<img src="photo1.jpg" /><span class="caption">Первая фотка</span>
+<img src="photo2.jpg" /><span class="caption">Вторая</span>
 ```
 
 ## Спецификации

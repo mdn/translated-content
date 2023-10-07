@@ -1,17 +1,11 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/padding
 ---
 
 {{CSSRef}}
 
-La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
+La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 
 {{EmbedInteractiveExample("pages/css/padding.html")}}
 

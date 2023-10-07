@@ -48,9 +48,9 @@ new Intl.RelativeTimeFormat([locales[, options]])
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // 負の値 (-1) を使った相対時間のフォーマット

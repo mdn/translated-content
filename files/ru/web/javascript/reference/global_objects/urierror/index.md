@@ -1,14 +1,8 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
 ## Сводка
@@ -59,15 +53,15 @@ new URIError([message[, fileName[, lineNumber]]])
 
 ```js
 try {
-  decodeURIComponent('%');
+  decodeURIComponent("%");
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message);             // "malformed URI sequence" - неверный формат последовательности URI
-  console.log(e.name);                // "URIError"
-  console.log(e.fileName);            // "Scratchpad/1"
-  console.log(e.lineNumber);          // 2
-  console.log(e.columnNumber);        // 2
-  console.log(e.stack);               // "@Scratchpad/2:2:3\n"
+  console.log(e.message); // "malformed URI sequence" - неверный формат последовательности URI
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -75,25 +69,25 @@ try {
 
 ```js
 try {
-  throw new URIError('Привет', 'someFile.js', 10);
+  throw new URIError("Привет", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message);             // "Привет"
-  console.log(e.name);                // "URIError"
-  console.log(e.fileName);            // "someFile.js"
-  console.log(e.lineNumber);          // 10
-  console.log(e.columnNumber);        // 0
-  console.log(e.stack);               // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Привет"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарии              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------ |
-| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.11.6.6', 'URIError')}}                                                     | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-urierror', 'URIError')}} | {{Spec2('ES6')}}     |                          |
+| Спецификация                                                                              | Статус             | Комментарии              |
+| ----------------------------------------------------------------------------------------- | ------------------ | ------------------------ |
+| ECMAScript 3-е издание.                                                                   | Стандарт           | Изначальное определение. |
+| {{SpecName('ES5.1', '#sec-15.11.6.6', 'URIError')}}                                       | {{Spec2('ES5.1')}} |                          |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-urierror', 'URIError')}} | {{Spec2('ES6')}}   |                          |
 
 ## Совместимость с браузерами
 

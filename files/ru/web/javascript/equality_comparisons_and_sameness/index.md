@@ -1,11 +1,6 @@
 ---
 title: Операторы сравнения
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Равенство
-  - Сравнение
-  - Средний
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -206,7 +201,7 @@ _Равенство одинаковых величин и нулей_ отли�
 
 ## Спецификации для равенства, строгого равенства и равенства одинаковых величин
 
-В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) находится в секции [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) находится в секции [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 
 ### Как понимать все эти способы сравнения?
 
@@ -249,7 +244,7 @@ _Равенство одинаковых величин и нулей_ отли�
 
 Вот неполный список встроенных методов и операторов, при использовании которых, различие между `-0` и `+0` может оказаться важным для вашего кода:
 
-- [`-` (unary negation)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [`-` (unary negation)](/ru/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
   - : Рассмотрим следующий пример:
 
@@ -263,14 +258,14 @@ _Равенство одинаковых величин и нулей_ отли�
   - : In some cases, it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [`~`](/ru/docs/Web/JavaScript/Reference/Operators), [`<<`](/ru/docs/Web/JavaScript/Reference/Operators), [`>>`](/ru/docs/Web/JavaScript/Reference/Operators)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
 Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

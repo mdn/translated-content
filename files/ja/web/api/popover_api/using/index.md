@@ -17,7 +17,7 @@ l10n:
 <div id="mypopover" popover>ポップオーバーコンテンツ</div>
 ```
 
-> **メモ:** 値なしで `popover` 属性をしている津尾、 `popover="auto"` を設定するのと同じになります。
+> **メモ:** 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
 
 この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、いくつかの制御ボタンを追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することすることにより、ポップオーバー制御ボタンに設定することができます。
 

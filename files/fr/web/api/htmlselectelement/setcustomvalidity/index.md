@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
-translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -16,7 +15,7 @@ ElmSelectionne.setCustomValidity(message);
 
 ### Paramètres
 
-- *message* est le {{domxref("DOMString")}} contenant le message d'erreur.
+- _message_ est le {{domxref("DOMString")}} contenant le message d'erreur.
 
 ## Spécifications
 

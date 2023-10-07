@@ -1,14 +1,6 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/byteLength
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ L'accesseur **`byteLength`** est une propriété représentant la longueur d'un 
 ## Syntaxe
 
 ```js
-arraybuffer.byteLength
+arraybuffer.byteLength;
 ```
 
 ## Description

@@ -1,5 +1,5 @@
 ---
-title: '<center>: O elemento de texto centralizado (obsoleto)'
+title: "<center>: O elemento de texto centralizado (obsoleto)"
 slug: Web/HTML/Element/center
 ---
 
@@ -14,8 +14,10 @@ Este elemento implementa a interface {{domxref("HTMLElement")}}.
 ## Exemplo 1
 
 ```html
-<center>Esse texto vai ficar centralizado.
-<p>Este parágrafo também.</p></center>
+<center>
+  Esse texto vai ficar centralizado.
+  <p>Este parágrafo também.</p>
+</center>
 ```
 
 O efeito da centralização vai acontecer até onde o elemento `center` for fechado.
@@ -23,8 +25,10 @@ O efeito da centralização vai acontecer até onde o elemento `center` for fech
 ## Exemplo 2 (Alternativa CSS)
 
 ```html
-<div style="text-align:center">Esse texto vai ficar centralizado.
-<p>Este parágrafo também.</p></div>
+<div style="text-align:center">
+  Esse texto vai ficar centralizado.
+  <p>Este parágrafo também.</p>
+</div>
 ```
 
 Isso acontece por os textos que sofreram as alterações estão dentro dos elementos que foi aplicado a propriedade.
@@ -32,8 +36,10 @@ Isso acontece por os textos que sofreram as alterações estão dentro dos eleme
 ## Exemplo 3 (Alternativa CSS)
 
 ```html
-<p style="text-align:center">Essa linha vai ficar centralizada.<br>
-E esta linha também.</p>
+<p style="text-align:center">
+  Essa linha vai ficar centralizada.<br />
+  E esta linha também.
+</p>
 ```
 
 ## Nota

@@ -207,8 +207,8 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 ```js
 var today = new Date();
-var birthday = new Date('December 17, 1995 03:24:00');
-var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date("December 17, 1995 03:24:00");
+var birthday = new Date("1995-12-17T03:24:00");
 var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
@@ -221,9 +221,9 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // 已弃用的方法，同样将 98 映射为 1998
-date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
-date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
 ### 计算经过的时间
@@ -254,12 +254,12 @@ var elapsed = end.getTime() - start.getTime(); // 运行时间的毫秒值
 
 ```js
 // to test a function and get back its return
-function printElapsedTime (fTest) {
-    var nStartTime = Date.now(),
-        vReturn = fTest(),
-        nEndTime = Date.now();
-    alert("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
-    return vReturn;
+function printElapsedTime(fTest) {
+  var nStartTime = Date.now(),
+    vReturn = fTest(),
+    nEndTime = Date.now();
+  alert("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
+  return vReturn;
 }
 yourFunctionReturn = printElapsedTime(yourFunction);
 ```

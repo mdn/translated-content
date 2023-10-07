@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Reference
-  - RuntimeError
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 
 {{WebAssemblySidebar}}
@@ -19,7 +10,7 @@ Le constructeur **`WebAssembly.RuntimeError()`** permet de créer un nouvel obje
 ## Syntaxe
 
 ```js
-new WebAssembly.RuntimeError(message, nomFichier, numeroLigne)
+new WebAssembly.RuntimeError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -65,16 +56,16 @@ Dans le fragment de code qui suit, on crée une instance de `RuntimeError` et on
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.RuntimeError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof RuntimeError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "RuntimeError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // renvoie la pile d'appels
-                                           // à l'origine de l'erreur
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // renvoie la pile d'appels
+  // à l'origine de l'erreur
 }
 ```
 

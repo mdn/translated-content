@@ -26,20 +26,20 @@ Onde
 Este exemplo retorna uma lista de todos os elementos `p` no corpo do HTML:
 
 ```js
-var matches = document.body.querySelectorAll('p');
+var matches = document.body.querySelectorAll("p");
 ```
 
 Este exemplo retorna uma lista de elementos `p` que estejam contidos em outro elemento, o qual é uma `div` que tem a classe 'highlighted':
 
 ```js
-var el = document.querySelector('#test');
-var matches = el.querySelectorAll('div.highlighted > p');
+var el = document.querySelector("#test");
+var matches = el.querySelectorAll("div.highlighted > p");
 ```
 
 Este exemplo retorna uma lista de elementos `iframe` que contenham um atributo **data** 'src':
 
 ```js
-var matches = el.querySelectorAll('iframe[data-src]');
+var matches = el.querySelectorAll("iframe[data-src]");
 ```
 
 ## Notas
@@ -52,13 +52,13 @@ A _string_ passada como argumento para `querySelectorAll` deve seguir a sintaxe 
 
 Lembre-se que o valor retornado é uma NodeList, então não é recomendado o uso de recursões for...in, nem de nenhum método de _array_. Se realmente houver a necessidade de usar métodos de uma _array,_ então o NodeList deve ser convertido em uma _array_ antes de ser usado.
 
-## Compatibilidade com navegadores
-
-{{Compat("api.Element.querySelectorAll")}}
-
 ## Especificações
 
-- [Selectors API](https://www.w3.org/TR/selectors-api/)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

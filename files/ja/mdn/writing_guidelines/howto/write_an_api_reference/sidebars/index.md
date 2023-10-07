@@ -1,7 +1,6 @@
 ---
 title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
@@ -75,21 +74,21 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
 1. `"overview"` — 値は配列で、 API 概要ページがあればその中にスラッグを含めます。
    "Fetch API" の場合、 [https://developer.mozilla.org/ja/docs/Web/API/Fetch_API](/ja/docs/Web/API/Fetch_API) へのリンクが生成されます。
 2. `"interfaces"` — 値は配列で、その API の一部を構成するすべてのインターフェイスをリストアップする必要があります。
-    "Response" の場合は [https://developer.mozilla.org/ja/docs/Web/API/Response](/ja/docs/Web/API/Response) へのリンクが生成されます。
+   "Response" の場合は [https://developer.mozilla.org/ja/docs/Web/API/Response](/ja/docs/Web/API/Response) へのリンクが生成されます。
 3. `"methods"` — 値は、 {{domxref("Navigator")}} や {{domxref("Window")}} で生成されたインスタンス化メソッドなど、仕様が他の API に関連付けられたインターフェイスに追加するメソッドを含む配列です。
-    膨大な数のメソッドがある場合は、最も人気のあるものだけをリストアップするか、リストの先頭に置くことを検討するとよいでしょう。
-    "fetch()" を実行すると [https://developer.mozilla.org/ja/docs/Web/API/fetch](/ja/docs/Web/API/fetch) へのリンクが張られます。
-    同じ API が所有するインターフェイスのメンバーであるメソッドを重複してリストアップしないようにしましょう。
+   膨大な数のメソッドがある場合は、最も人気のあるものだけをリストアップするか、リストの先頭に置くことを検討するとよいでしょう。
+   "fetch()" を実行すると [https://developer.mozilla.org/ja/docs/Web/API/fetch](/ja/docs/Web/API/fetch) へのリンクが張られます。
+   同じ API が所有するインターフェイスのメンバーであるメソッドを重複してリストアップしないようにしましょう。
 4. `"properties"` — 値は、 API に関連付けられたすべてのプロパティを含む配列です。
-    これには API 仕様で定義されているインターフェイスのメンバーであるプロパティや、API が他のインターフェイス上で定義しているプロパティを含めることができます。
-    膨大な数のプロパティがある場合は、最も人気のあるものだけをリストアップするか、リストの先頭に配置することを検討するとよいでしょう。
-    "Headers.append" を実行すると、 [https://developer.mozilla.org/ja/docs/Web/API/Headers/append](/ja/docs/Web/API/Headers/append) へのリンクが生成されます。
+   これには API 仕様で定義されているインターフェイスのメンバーであるプロパティや、API が他のインターフェイス上で定義しているプロパティを含めることができます。
+   膨大な数のプロパティがある場合は、最も人気のあるものだけをリストアップするか、リストの先頭に配置することを検討するとよいでしょう。
+   "Headers.append" を実行すると、 [https://developer.mozilla.org/ja/docs/Web/API/Headers/append](/ja/docs/Web/API/Headers/append) へのリンクが生成されます。
 5. `"events"` — 値は、 API の仕様やその他の場所で定義されている API に関連するすべてのイベントを含む配列です。
-    膨大な数のイベントがある場合は、最も人気のあるものだけをリストアップするか、リストの先頭に置くことを検討するとよいでしょう。
-    "animationstart" を実行すると、 [https://developer.mozilla.org/ja/docs/Web/Events/animationstart](/ja/docs/Web/API/Element/animationstart_event) へのリンクが生成されます。
+   膨大な数のイベントがある場合は、最も人気のあるものだけをリストアップするか、リストの先頭に置くことを検討するとよいでしょう。
+   "animationstart" を実行すると、 [https://developer.mozilla.org/ja/docs/Web/Events/animationstart](/ja/docs/Web/API/Element/animationstart_event) へのリンクが生成されます。
 6. `"guides"` — 値は、API の使用方法を説明するガイドへのリンクを定義する1つ以上のオブジェクトを含む配列です。
-    各オブジェクトは、ガイド記事を指す部分的な URL を含む "url" と、リンクのリンクテストを定義する "title" の2つのサブメンバーを含みます。
-    例として、次のようなオブジェクトがあります。
+   各オブジェクトは、ガイド記事を指す部分的な URL を含む "url" と、リンクのリンクテストを定義する "title" の2つのサブメンバーを含みます。
+   例として、次のようなオブジェクトがあります。
 
    ```json
    {
@@ -98,18 +97,18 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
    }
    ```
 
-    "Detecting device orientation" というタイトルのリンクを生成し、 [https://developer.mozilla.org/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation) を指すようにします。
+   "Detecting device orientation" というタイトルのリンクを生成し、 [https://developer.mozilla.org/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation) を指すようにします。
 
 7. `"dictionaries"` — API の一部であるすべての辞書を一覧にした文字列の配列。
-    一般的に、特別な意味がある場合や、複数のページから参照する必要がある場合を除き、複数のプロパティやメソッドで使用される辞書のみをここにリストアップすべきです。
-    "CryptoKeyPair" は [https://developer.mozilla.org/ja/docs/Web/API/CryptoKeyPair](/ja/docs/Web/API/CryptoKeyPair) へのリンクを生成します。
+   一般的に、特別な意味がある場合や、複数のページから参照する必要がある場合を除き、複数のプロパティやメソッドで使用される辞書のみをここにリストアップすべきです。
+   "CryptoKeyPair" は [https://developer.mozilla.org/ja/docs/Web/API/CryptoKeyPair](/ja/docs/Web/API/CryptoKeyPair) へのリンクを生成します。
    > **メモ:** MDN は、辞書を別個に文書化することをやめつつあります。
    > 可能な限り、これらは使用される場所でオブジェクトとして記述するようになりました。
 8. `"types"` — API で定義されている型定義子と列挙型の配列。リストを短くするために、特別に重要なものや複数のページから参照されるものだけをリストアップすることもできます。
    > **メモ:** MDN は型定義子を個別に文書化することをやめつつあります。
    > 可能な限り、これらが使用されている箇所で値として記述されるようになりました。
 9. `"callbacks"` — 値は、その API で定義されているすべてのコールバック型のリストを含む配列です。コールバック型を含む API であっても、このグループを使用する必要はないと思われるかもしれません。
-    コールバック型を含む API でも、このグループを全く使用する必要がないと感じるかもしれません。なぜなら、コールバック型は個別にドキュメント化しても意味がないことが多いからです。
+   コールバック型を含む API でも、このグループを全く使用する必要がないと感じるかもしれません。なぜなら、コールバック型は個別にドキュメント化しても意味がないことが多いからです。
 
 ## サイドバーで使用されるタグ
 

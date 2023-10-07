@@ -2,6 +2,7 @@
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 다음의 링크들은 당신의 자바스크립트 코드가 정상적으로 작동할 수 있게 고쳐야되는 흔한 문제들의 해결책을 제시한다.
@@ -37,8 +38,8 @@ slug: Learn/JavaScript/Howto
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 위 코드는 호출하지 않는 이상 아무것도 하지 않습니다.
@@ -69,9 +70,9 @@ const myNumber = 0;
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## 기본 정의

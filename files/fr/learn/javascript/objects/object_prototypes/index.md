@@ -1,8 +1,6 @@
 ---
 title: Prototypes Objet
 slug: Learn/JavaScript/Objects/Object_prototypes
-translation_of: Learn/JavaScript/Objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Prototypes_Objet
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
@@ -28,7 +26,7 @@ Les prototypes sont un mécanisme au sein de JavaScript qui permettent aux objet
 
 ## Un langage basé sur des prototypes&nbsp;?
 
-JavaScript est souvent décrit comme un langage basé sur les prototypes, chaque objet pouvant avoir un **prototype objet** d'où il hérite des méthodes et des attributs. Un prototype peut lui aussi avoir son prototype objet duquel il héritera des méthodes et des attributs et ainsi de suite. On parle alors de chaîne de prototypage (ou *prototype chain* en anglais). Cela permet d'expliquer pourquoi différents objets possèdent des attributs et des méthodes définis à partir d'autres objets.
+JavaScript est souvent décrit comme un langage basé sur les prototypes, chaque objet pouvant avoir un **prototype objet** d'où il hérite des méthodes et des attributs. Un prototype peut lui aussi avoir son prototype objet duquel il héritera des méthodes et des attributs et ainsi de suite. On parle alors de chaîne de prototypage (ou _prototype chain_ en anglais). Cela permet d'expliquer pourquoi différents objets possèdent des attributs et des méthodes définis à partir d'autres objets.
 
 En réalité, les méthodes et attributs sont définis dans l'attribut `prototype`, la fonction constructrice de l'objet et non pas dans les instances des objets elles-mêmes.
 
@@ -46,16 +44,14 @@ Dans cet exemple, nous avons défini un constructeur comme suit&nbsp;:
 
 ```js
 function Personne(prenom, nom, age, genre, interets) {
-
   // Définitions des propriétés et méthodes
-
-};
+}
 ```
 
 Nous avons ensuite instancié des objets comme ceci&nbsp;:
 
 ```js
-let personne1 = new Personne('Bob', 'Smith', 32, 'homme', ['musique', 'ski']);
+let personne1 = new Personne("Bob", "Smith", 32, "homme", ["musique", "ski"]);
 ```
 
 Si vous entrez «&nbsp;`personne1`&nbsp;» dans votre console JavaScript, vous devriez voir que le navigateur essaie de faire de l'auto-complétion avec les attributs de cet objet.
@@ -69,7 +65,7 @@ Dans cette liste vous verrez les membres définis au niveau du constructeur de `
 Que peut-il bien se passer lorsque l'on tente d'appeler une méthode définie pour `Object` en l'appliquant à `Personne`&nbsp;? Par exemple&nbsp;:
 
 ```js
-personne1.valueOf()
+personne1.valueOf();
 ```
 
 Cette méthode renvoie simplement la valeur de l'objet pour lequel elle est appelée. Vous pouvez essayer dans votre console&nbsp;! Lorsque l'on effectue cet appel, il se produit les choses suivantes&nbsp;:
@@ -96,22 +92,22 @@ Ainsi [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_O
 
 1. Vous pouvez vérifier les attributs du prototype en reprenant l'exemple précédent et en entrant le code suivant dans la console JavaScript&nbsp;:
 
-    ```js
-    Personne.prototype
-    ```
+   ```js
+   Personne.prototype;
+   ```
 
 2. Il n'y a pas grand-chose renvoyé par le navigateur. En même temps, nous n'avons rien défini dans l'attribut prototype de notre constructeur, et par défaut l'attribut prototype d'un constructeur est toujours vide. Voyons ce que renvoie le code suivant&nbsp;:
 
-    ```js
-    Object.prototype
-    ```
+   ```js
+   Object.prototype;
+   ```
 
 On observe que plusieurs méthodes sont définies au niveau de l'attribut `prototype` d'`Object`, qui seront alors disponibles pour les objets qui héritent d'`Object`, comme nous l'avons vu plus haut.
 
 Vous verrez qu'il existe plein d'exemples de chaine de prototypage dans JavaScript. Vous pouvez essayer de trouver les méthodes et les attributs définis dans les attributs `prototype` des objets globaux comme [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), et `Array`. Chacun de ces objets possède des éléments au sein de leur attribut prototype. Dès lors que l'on crée une chaine de caractères, comme celle-ci&nbsp;:
 
 ```js
-let maChaine = 'Ceci est ma chaine de caractères.';
+let maChaine = "Ceci est ma chaine de caractères.";
 ```
 
 `maChaine` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
@@ -124,15 +120,15 @@ Nous avons vu précédemment que la méthode [`Object.create()`](/fr/docs/Web/Ja
 
 1. Par exemple, vous pouvez essayer le code suivant dans la console JavaScript&nbsp;:
 
-    ```js
-    let personne2 = Object.create(personne1);
-    ```
+   ```js
+   let personne2 = Object.create(personne1);
+   ```
 
 2. En réalité `create()` se contente de créer un nouvel objet à partir d'un prototype spécifique. Dans cet exemple, `personne2` est créé à partir de `personne1` qui agit en tant que prototype. Vous pouvez le vérifier via&nbsp;:
 
-    ```js
-    person2.__proto__
-    ```
+   ```js
+   person2.__proto__;
+   ```
 
 Cela renverra l'objet `personne1`.
 
@@ -142,41 +138,47 @@ Chaque fonction possède un attribut prototype dont la valeur est un objet conte
 
 1. Par exemple, vous pouvez tester le code suivant&nbsp;:
 
-    ```js
-    personne1.constructor
-    personne2.constructor
-    ```
+   ```js
+   personne1.constructor;
+   personne2.constructor;
+   ```
 
-    Chaque commande devrait renvoyer le constructeur `Personne()` étant donné qu'il a permis d'instancier ces objets.
+   Chaque commande devrait renvoyer le constructeur `Personne()` étant donné qu'il a permis d'instancier ces objets.
 
-    Une astuce qui peut s'avérer utile est d'ajouter des parenthèses à la fin de l'attribut `constructor` pour le transformer en méthode. Après tout, le constructeur est une fonction que l'on peut appeler si besoin. Il faut juste utiliser le mot-clé `new` pour signifier que l'on souhaite construire un objet.
+   Une astuce qui peut s'avérer utile est d'ajouter des parenthèses à la fin de l'attribut `constructor` pour le transformer en méthode. Après tout, le constructeur est une fonction que l'on peut appeler si besoin. Il faut juste utiliser le mot-clé `new` pour signifier que l'on souhaite construire un objet.
 
 2. Par exemple&nbsp;:
 
-    ```js
-    let personne3 = new personne1.constructor('Karen', 'Stephenson', 26, 'femme', ['jouer de la batterie', 'escalade']);
-    ```
+   ```js
+   let personne3 = new personne1.constructor(
+     "Karen",
+     "Stephenson",
+     26,
+     "femme",
+     ["jouer de la batterie", "escalade"],
+   );
+   ```
 
 3. Vous pouvez désormais essayer d'accéder aux propriétés de personne3&nbsp;:
 
-    ```js
-    personne3.prenom
-    personne3.age
-    personne3.bio()
-    ```
+   ```js
+   personne3.prenom;
+   personne3.age;
+   personne3.bio();
+   ```
 
 Ça fonctionne bien. A priori, ce n'est pas la manière la plus simple de créer un objet et vous n'aurez pas à l'utiliser souvent. En revanche, ça peut vous débloquer quand vous devez créer une nouvelle instance et que vous ne disposez pas facilement du constructeur d'origine.
 
 L'attribut [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) possède d'autres intérêts. Par exemple, si vous disposez du nom d'une instance objet vous pouvez utiliser le code suivant pour renvoyer le nom de son constructeur&nbsp;:
 
 ```js
-instanceName.constructor.name
+instanceName.constructor.name;
 ```
 
 Vous pouvez essayer&nbsp;:
 
 ```js
-personne1.constructor.name
+personne1.constructor.name;
 ```
 
 ## Modifions les prototypes
@@ -185,17 +187,17 @@ Voyons au travers d'un exemple comment modifier l'attribut `prototype` d'un cons
 
 1. Revenons à notre exemple [oojs-class-further-exercises.html](https://sphinxknight.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises) et faisons une copie locale du [code source](https://github.com/SphinxKnight/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). En dessous du JavaScript existant, vous pouvez ajouter le code suivant, ce qui aura pour effet d'ajouter une nouvelle méthode à l'attribut `prototype` du constructeur&nbsp;:
 
-    ```js
-    Personne.prototype.aurevoir = function() {
-      alert(this.nom.prenom + ' est sorti. Au revoir !');
-    }
-    ```
+   ```js
+   Personne.prototype.aurevoir = function () {
+     alert(this.nom.prenom + " est sorti. Au revoir !");
+   };
+   ```
 
 2. Enregistrez vos modifications et chargez la page dans votre navigateur. Vous pouvez ensuite entrer le code suivant dans la console&nbsp;:
 
-    ```js
-    personne1.aurevoir();
-    ```
+   ```js
+   personne1.aurevoir();
+   ```
 
 Vous devriez voir une fenêtre s'afficher avec un message contenant le nom de la personne. Cette fonctionalité est utile, mais là où ça devient plus intéressant c'est que la chaine de prototypage a été mise à jour dynamiquement, rendant automatiquement cette méthode disponible à l'ensemble des instances existantes.
 
@@ -203,16 +205,18 @@ Revoyons en détail ce qui s'est passé&nbsp;: tout d'abord, nous avons défini 
 
 ```js
 function Personne(prenom, famille, age, genre, interets) {
-
   // définition des attributs et des méthodes
-
-};
-
-let personne1 = new Personne('Tammi', 'Smith', 32, 'neutre', ['musique', 'ski', 'kickboxing']);
-
-Personne.prototype.aurevoir = function() {
-  alert(this.nom.prenom + ' est sorti. Au revoir !');
 }
+
+let personne1 = new Personne("Tammi", "Smith", 32, "neutre", [
+  "musique",
+  "ski",
+  "kickboxing",
+]);
+
+Personne.prototype.aurevoir = function () {
+  alert(this.nom.prenom + " est sorti. Au revoir !");
+};
 ```
 
 Même si nous l'avons déclaré après, la méthode `aurevoir()` est disponible pour l'instance `personne1`. Son existence a mis à jour dynamiquement les méthodes de l'instance. Cela démontre ce que nous expliquions plus haut au sujet de la chaine de prototypage&nbsp;: le navigateur la parcourt de manière ascendante. Ainsi, il est possible de trouver directement les méthodes qui n'ont pas été définies au niveau de l'instance, plutôt que de les recopier au sein de l'instance. Cela nous permet de bénéficier d'un système extensible de manière simple et élégante.
@@ -220,13 +224,13 @@ Même si nous l'avons déclaré après, la méthode `aurevoir()` est disponible 
 Vous verrez peu d'attributs définis au sein de l'attribut `prototype`, pour la simple et bonne raison que c'est assez peu pratique. Vous pourriez avoir&nbsp;:
 
 ```js
-Personne.prototype.nomComplet = 'Bob Smith';
+Personne.prototype.nomComplet = "Bob Smith";
 ```
 
 Mais ce n'est pas très pratique, étant donné qu'une personne ne sera peut-être pas appelée de cette manière. Il est plus cohérent de construire le nom entier en combinant le nom et le prénom&nbsp;:
 
 ```js
-Personne.prototype.nomComplet = this.nom.prenom + ' ' + this.nom.famille;
+Personne.prototype.nomComplet = this.nom.prenom + " " + this.nom.famille;
 ```
 
 Ça ne fonctionnera toujours pas. En effet, `this` aura une portée globale et ne sera pas dans le contexte de la fonction. En appelant cet attribut, nous aurions alors `undefined undefined`. Dans les exemples précédents sur le prototype, nous arrivions à obtenir quelque chose de fonctionnel puisque nous étions au sein d'une méthode, qui sera utilisée par l'instance. Il est donc possible de définir des attributs invariables au niveau du prototype mais de manière générale, il est préférable de les définir au sein du constructeur.

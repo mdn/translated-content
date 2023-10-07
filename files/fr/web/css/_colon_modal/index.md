@@ -1,5 +1,5 @@
 ---
-title: ':modal'
+title: ":modal"
 slug: Web/CSS/:modal
 l10n:
   sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
@@ -32,14 +32,17 @@ Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lors
 <!-- Boîte de dialogue contextuelle simple contenant un formulaire -->
 <dialog id="favDialog">
   <form method="dialog">
-    <p><label>Animal préféré :
-      <select>
-        <option></option>
-        <option>Crevette en saumure</option>
-        <option>Panda rouge</option>
-        <option>Singe-araignée</option>
-      </select>
-    </label></p>
+    <p>
+      <label
+        >Animal préféré :
+        <select>
+          <option></option>
+          <option>Crevette en saumure</option>
+          <option>Panda rouge</option>
+          <option>Singe-araignée</option>
+        </select>
+      </label>
+    </p>
     <menu>
       <button value="cancel">Annuler</button>
       <button id="confirmBtn" value="default">Confirmer</button>
@@ -65,34 +68,37 @@ Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lors
 ```
 
 ```js hidden
-const updateButton = document.getElementById('updateDetails');
-const favDialog = document.getElementById('favDialog');
-const outputBox = document.querySelector('output');
-const selectEl = favDialog.querySelector('select');
-const confirmBtn = favDialog.querySelector('#confirmBtn');
+const updateButton = document.getElementById("updateDetails");
+const favDialog = document.getElementById("favDialog");
+const outputBox = document.querySelector("output");
+const selectEl = favDialog.querySelector("select");
+const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // Si un navigaeur ne prend pas en charge, on masque le contenu
 // de la boîte de dialogue par défaut.
-if (typeof favDialog.showModal !== 'function') {
+if (typeof favDialog.showModal !== "function") {
   favDialog.hidden = true;
   /* un script alternatif pour les navigateurs historiques.
-  */
+   */
 }
 // Le bouton "Mettre à jour les détails" ouvre <dialog> en modal
-updateButton.addEventListener('click', () => {
+updateButton.addEventListener("click", () => {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    outputBox.value = "Désolé, l'API <dialog> n'est pas prise en charge par ce navigateur.";
+    outputBox.value =
+      "Désolé, l'API <dialog> n'est pas prise en charge par ce navigateur.";
   }
 });
 // Le champ "Animal préféré" définit la valeur du bouton d'envoi
-selectEl.addEventListener('change', (e) => {
+selectEl.addEventListener("change", (e) => {
   confirmBtn.value = selectEl.value;
 });
 // Le bouton "Confirmer" du formulaire déclenche la fermeture de la boîte avec [method="dialog"]
-favDialog.addEventListener('close', () => {
-  outputBox.value = `Bouton ${favDialog.returnValue} cliqué - ${(new Date()).toString()}`;
+favDialog.addEventListener("close", () => {
+  outputBox.value = `Bouton ${
+    favDialog.returnValue
+  } cliqué - ${new Date().toString()}`;
 });
 ```
 

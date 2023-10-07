@@ -1,13 +1,6 @@
 ---
 title: Sélecteurs de voisins généraux
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/General_sibling_combinator
-original_slug: Web/CSS/Sélecteurs_de_voisins_généraux
 ---
 
 {{CSSRef("Selectors")}}

@@ -10,7 +10,7 @@ slug: Web/API/Node/ownerDocument
 ## Syntax
 
 ```js
-document = element.ownerDocument
+document = element.ownerDocument;
 ```
 
 - `document` 는 element 의 부모 [`document`](/ko/docs/DOM/document) 객체입니다.

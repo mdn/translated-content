@@ -45,36 +45,36 @@ A ultima versão do ECMAScript (ES6) contém A função {{jsxref("Number.isNaN()
 A polyfill for `isNaN` would be (the polyfill leverages the unique never-equal-to-itself characteristic of `NaN`):
 
 ```js
-var isNaN = function(value) {
-    var n = Number(value);
-    return n !== n;
+var isNaN = function (value) {
+  var n = Number(value);
+  return n !== n;
 };
 ```
 
 ## Exemplos
 
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
 // strings
-isNaN("37");      // false: "37" is converted to the number 37 which is not NaN
-isNaN("37.37");   // false: "37.37" is converted to the number 37.37 which is not NaN
-isNaN("");        // false: the empty string is converted to 0 which is not NaN
-isNaN(" ");       // false: a string with spaces is converted to 0 which is not NaN
+isNaN("37"); // false: "37" is converted to the number 37 which is not NaN
+isNaN("37.37"); // false: "37.37" is converted to the number 37.37 which is not NaN
+isNaN(""); // false: the empty string is converted to 0 which is not NaN
+isNaN(" "); // false: a string with spaces is converted to 0 which is not NaN
 
 // dates
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
+isNaN(new Date()); // false
+isNaN(new Date().toString()); // true
 
 // Esse é um falso positivo e é a razão para isNaN não seja totalmente confiável.
-isNaN("blabla")   // true: "blabla" é convertido para número.
-                  // A análise desse número falha e retorna NaN como resultado.
+isNaN("blabla"); // true: "blabla" é convertido para número.
+// A análise desse número falha e retorna NaN como resultado.
 ```
 
 ### Useful special-case behavior
@@ -85,8 +85,8 @@ You can use this, for example, to test whether an argument to a function is arit
 
 ## Specifications
 
-| Specification                                                            |
-| ------------------------------------------------------------------------ |
+| Specification                                         |
+| ----------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} |
 
 ## Compatibilidade com navegadores

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 
 {{JSRef}}
 
-{{jsxref("String")}} 值的 **`isWellFormed()`** 方法返回一个表示该字符串是否包含[单独的代理项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)的布尔值。
+{{jsxref("String")}} 值的 **`isWellFormed()`** 方法返回一个表示该字符串是否包含[单独代理项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)的布尔值。
 
 ## 语法
 
@@ -15,13 +15,13 @@ isWellFormed()
 
 ### 返回值
 
-如果字符串不包含单独的代理项，返回 `true`，否则返回 `false`。
+如果字符串不包含单独代理项，返回 `true`，否则返回 `false`。
 
 ## 描述
 
-JavaScript 中的字符串是 UTF-16 编码的。UTF-16 编码中有*代理对*的概念，这一概念在 [UTF-16 字符、Unicode 码位和字素簇（grapheme clusters）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)部分有详细介绍。
+JavaScript 中的字符串是 UTF-16 编码的。UTF-16 编码中有*代理对*的概念，这一概念在 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)部分有详细介绍。
 
-`isWellFormed()` 让你能够测试一个字符串是否是格式正确的（即不包含单独的代理项）。由于引擎能够直接访问字符串的内部表示，与自定义实现相比 `isWellFormed()` 更高效。如果你需要将字符串转换为格式正确的字符串，可以使用 {{jsxref("String/toWellFormed", "toWellFormed()")}} 方法。`isWellFormed()` 让你可以对格式正确和格式错误的字符串进行不同的处理，比如抛出一个错误或将其标记为无效。
+`isWellFormed()` 让你能够测试一个字符串是否是格式正确的（即不包含单独代理项）。由于引擎能够直接访问字符串的内部表示，与自定义实现相比 `isWellFormed()` 更高效。如果你需要将字符串转换为格式正确的字符串，可以使用 {{jsxref("String/toWellFormed", "toWellFormed()")}} 方法。`isWellFormed()` 让你可以对格式正确和格式错误的字符串进行不同的处理，比如抛出一个错误或将其标记为无效。
 
 ## 示例
 
@@ -29,10 +29,10 @@ JavaScript 中的字符串是 UTF-16 编码的。UTF-16 编码中有*代理对*�
 
 ```js
 const strings = [
-  // 单独的高位代理
+  // 单独的前导代理
   "ab\uD800",
   "ab\uD800c",
-  // 单独的低位代理
+  // 单独的后尾代理
   "\uDFFFab",
   "c\uDFFFab",
   // 格式正确
@@ -43,7 +43,7 @@ const strings = [
 for (const str of strings) {
   console.log(str.isWellFormed());
 }
-// 输出:
+// 输出：
 // false
 // false
 // false

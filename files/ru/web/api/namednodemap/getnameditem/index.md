@@ -1,7 +1,6 @@
 ---
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
-translation_of: Web/API/NamedNodeMap/getNamedItem
 ---
 
 {{APIRef("DOM")}}

@@ -1,8 +1,6 @@
 ---
 title: Flexbox
 slug: Glossary/Flexbox
-translation_of: Glossary/Flexbox
-original_slug: Глоссарий/Flexbox
 ---
 
 Flexbox это общепринятый термин для [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/), модели разметки для отображения элементов в одном измерении - в виде строки или столбца.

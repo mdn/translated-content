@@ -45,14 +45,14 @@ Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建�
 下面的代码通过构造函数 {{domxref("Worker.Worker", "Worker()")}} 创建了一个 {{domxref("Worker")}} 对象。
 
 ```js
-var myWorker = new Worker('worker.js');
-var first = document.querySelector('#number1');
-var second = document.querySelector('#number2');
+var myWorker = new Worker("worker.js");
+var first = document.querySelector("#number1");
+var second = document.querySelector("#number2");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 完整的示例，请查阅 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).

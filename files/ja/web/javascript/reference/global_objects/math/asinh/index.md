@@ -35,8 +35,8 @@ Math.asinh(x)
 ### Math.asinh() の使用
 
 ```js
-Math.asinh(1);  // 0.881373587019543
-Math.asinh(0);  // 0
+Math.asinh(1); // 0.881373587019543
+Math.asinh(0); // 0
 ```
 
 ## ポリフィル
@@ -44,19 +44,25 @@ Math.asinh(0);  // 0
 `Math.asinh` は、次の関数でエミュレートできます。
 
 ```js
-if (!Math.asinh) Math.asinh = function(x) {
-    var absX = Math.abs(x), w
-    if (absX < 3.725290298461914e-9) // |x| < 2^-28
-        return x
-    if (absX > 268435456) // |x| > 2^28
-        w = Math.log(absX) + Math.LN2
-    else if (absX > 2) // 2^28 >= |x| > 2
-        w = Math.log(2 * absX + 1 / (Math.sqrt(x * x + 1) + absX))
+if (!Math.asinh)
+  Math.asinh = function (x) {
+    var absX = Math.abs(x),
+      w;
+    if (absX < 3.725290298461914e-9)
+      // |x| < 2^-28
+      return x;
+    if (absX > 268435456)
+      // |x| > 2^28
+      w = Math.log(absX) + Math.LN2;
+    else if (absX > 2)
+      // 2^28 >= |x| > 2
+      w = Math.log(2 * absX + 1 / (Math.sqrt(x * x + 1) + absX));
     else
-        var t = x * x, w = Math.log1p(absX + t / (1 + Math.sqrt(1 + t)))
+      var t = x * x,
+        w = Math.log1p(absX + t / (1 + Math.sqrt(1 + t)));
 
-    return x > 0 ? w : -w
-}
+    return x > 0 ? w : -w;
+  };
 ```
 
 `Math.log1p` にもポリフィルを適用する必要があるかもしれません。詳しくは [Math.log1p](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p) を参照してください。

@@ -1,12 +1,6 @@
 ---
 title: ООП
 slug: Glossary/OOP
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/OOP
-original_slug: Глоссарий/OOP
 ---
 
 **ООП** (**О**бъектно-**О**риентированное **П**рограммирование) это подход в программировании, согласно которому, данные инкапсулированы внутри **{{glossary("object","объектов")}}**, а сам объект существует как составная часть целого.

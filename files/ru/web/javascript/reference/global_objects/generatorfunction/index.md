@@ -1,7 +1,6 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 `Обратите внимание, что GeneratorFunction` - это не глобальный объект. Он может быть получен при выполнении следующего кода.
 
 ```js
-Object.getPrototypeOf(function*(){}).constructor
+Object.getPrototypeOf(function* () {}).constructor;
 ```
 
 ## Синтаксис
@@ -59,17 +58,17 @@ Invoking the `GeneratorFunction` constructor as a function (without using the `n
 ### Creating a generator function from a `GeneratorFunction` constructor
 
 ```js
-var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
-var g = new GeneratorFunction('a', 'yield a * 2');
+var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
+var g = new GeneratorFunction("a", "yield a * 2");
 var iterator = g(10);
 console.log(iterator.next().value); // 20
 ```
 
 ## Specifications
 
-| Specification                                                                                            | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Specification                                                                  | Status               | Comment             |
+| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-generatorfunction-objects', 'GeneratorFunction')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Browser compatibility

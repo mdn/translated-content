@@ -22,9 +22,9 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ### 示例：使用 `ignoreCase`
 
 ```js
-var regex = new RegExp("foo", "i")
+var regex = new RegExp("foo", "i");
 
-console.log(regex.ignoreCase) // true
+console.log(regex.ignoreCase); // true
 ```
 
 ## 规范

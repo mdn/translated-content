@@ -1,12 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/place-items
 ---
 
 {{CSSRef}}
@@ -96,7 +90,7 @@ place-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: center; /* Cette valeur peut être modifiée dans l'exemple */
   background-color: #8c8c8c;
@@ -209,15 +203,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.placeItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

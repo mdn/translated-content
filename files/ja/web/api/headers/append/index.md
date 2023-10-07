@@ -41,16 +41,16 @@ const myHeaders = new Headers(); // 現在は空
 `append()` を使用してヘッダーを追加することができます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // 'image/jpeg' を返します。
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // 'image/jpeg' を返します。
 ```
 
 指定されたヘッダーがすでに存在する場合、`append()` はその値を指定された値に変更します。指定したヘッダーが既に存在し、複数の値を受け入れられる場合、`append()` は新しい値を値の集合の最後に追加します。
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // 'deflate, gzip' を返します。
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // 'deflate, gzip' を返します。
 ```
 
 古い値を新しい値で上書きするには、 {{domxref("Headers.set")}} を使います。

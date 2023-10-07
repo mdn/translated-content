@@ -1,12 +1,6 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/box-flex
 ---
 
 {{CSSRef}}{{Non-standard_header}}

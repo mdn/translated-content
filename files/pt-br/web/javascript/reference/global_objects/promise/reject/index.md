@@ -27,24 +27,30 @@ O método estático `Promise.reject` retorna uma `Promise` que é rejeitada. Par
 ### Usando o método estático Promise.reject()
 
 ```js
-Promise.reject("Testando reject estático").then(function(motivo) {
-  // não executado
-}, function(motivo) {
-  console.log(motivo); // "Testando reject estático"
-});
+Promise.reject("Testando reject estático").then(
+  function (motivo) {
+    // não executado
+  },
+  function (motivo) {
+    console.log(motivo); // "Testando reject estático"
+  },
+);
 
-Promise.reject(new Error("falha")).then(function(erro) {
-  // não executado
-}, function(erro) {
-  console.log(erro); // Stacktrace
-});
+Promise.reject(new Error("falha")).then(
+  function (erro) {
+    // não executado
+  },
+  function (erro) {
+    console.log(erro); // Stacktrace
+  },
+);
 ```
 
 ## Especificações
 
-| Especificação                                                                        | Situação                     | Comentário                           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------ |
-| {{SpecName('ES6', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES6')}}         | Definição inicial em um padrão ECMA. |
+| Especificação                                                    | Situação             | Comentário                           |
+| ---------------------------------------------------------------- | -------------------- | ------------------------------------ |
+| {{SpecName('ES6', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES6')}}     | Definição inicial em um padrão ECMA. |
 | {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                      |
 
 ## Compatibilidade com navegadores

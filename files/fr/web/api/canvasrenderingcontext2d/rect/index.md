@@ -1,12 +1,11 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
-translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
 
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)_ et de dimensions *width* et *height*. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
+La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)_ et de dimensions _width_ et _height_. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
 
 ## Syntaxe
 
@@ -40,8 +39,8 @@ Ceci est un simple bout de code qui utilise la méthode `rect` pour dessiner un 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 ```
@@ -58,7 +57,8 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -74,14 +74,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

@@ -9,9 +9,9 @@ The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパテ�
 
 ```css
 /* <length> 値 */
-margin-block: 10px 20px;  /* 絶対的な長さ */
-margin-block: 1em 2em;   /* テキストの大きさに対する相対値 */
-margin-block: 5% 2%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block: 10px 20px; /* 絶対的な長さ */
+margin-block: 1em 2em; /* テキストの大きさに対する相対値 */
+margin-block: 5% 2%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 margin-block: 10px; /* 先頭と末尾の両方を設定 */
 
 /* キーワード値 */

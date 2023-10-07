@@ -40,7 +40,7 @@ dateObj.setSeconds(secondsValue)
 
 ```js
 var theBigDay = new Date();
-theBigDay.setSeconds(30)
+theBigDay.setSeconds(30);
 ```
 
 ## 规范

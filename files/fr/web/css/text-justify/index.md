@@ -1,11 +1,6 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-justify
 ---
 
 {{CSSRef}}
@@ -48,11 +43,36 @@ La propriété `text-justify` peut être définie grâce à l'un des mots-clés 
 ## Exemples
 
 ```html
-<p class="none"><code>text-justify: none</code> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="auto"><code>text-justify: auto</code> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="dist"><code>text-justify: distribute</code> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="word"><code>text-justify: inter-word</code> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="char"><code>text-justify: inter-character</code> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+<p class="none">
+  <code>text-justify: none</code> — Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
+  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
+  justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="auto">
+  <code>text-justify: auto</code> — Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
+  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
+  justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="dist">
+  <code>text-justify: distribute</code> — Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
+  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
+  consequat justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="word">
+  <code>text-justify: inter-word</code> — Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
+  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
+  consequat justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="char">
+  <code>text-justify: inter-character</code> — Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
+  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
+  consequat justo id, feugiat leo. Cras eu elementum dui.
+</p>
 ```
 
 ```css

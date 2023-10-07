@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.decode()
+title: "HTMLImageElement: decode() メソッド"
+short-title: decode()
 slug: Web/API/HTMLImageElement/decode
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +14,7 @@ slug: Web/API/HTMLImageElement/decode
 
 ## 構文
 
-```js
+```js-nolint
 decode()
 ```
 
@@ -30,22 +33,23 @@ decode()
 
 ## 使用上の注意
 
-`decode()` の潜在的な使用例の一つです。非常に大きな画像を読み込む場合（例えばオンラインのフォトアルバムで）、最初は低解像度のサムネイル画像を表示し、その後、新しい {{domxref("HTMLImageElement")}} をインスタンス化してそのソースにフル解像度画像の URL を設定し、 `decode()` を使ってプロミスを取得し、フル解像度画像が使えるようになったときに解決することによって、画像をフル解像度画像と交換することが可能です。その際、低解像度の画像を、現在利用可能なフル解像度の画像に置き換えることができます。
+`decode()` の潜在的な使用例の一つです。非常に大きな画像を読み込む場合（例えばオンラインのフォトアルバムで）、最初は低解像度のサムネイル画像を表示し、その後、新しい {{domxref("HTMLImageElement")}} をインスタンス化してそのソースにフル解像度画像の URL を設定し、`decode()` を使ってプロミスを取得し、フル解像度画像が使えるようになったときに解決することによって、画像をフル解像度画像と交換することが可能です。その際、低解像度の画像を、現在利用可能なフル解像度の画像に置き換えることができます。
 
 ## 例
 
-次の例では、 `decode()` メソッドを使って、画像が DOM に追加されるタイミングを制御しています。 {{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントハンドラーで画像を DOM に追加し、 {{domxref("GlobalEventHandlers.onload", "img.onload")}} イベントのハンドラでエラーを処理するなどの方法で、画像を追加することになります。
+次の例では、 `decode()` メソッドを使って、画像が DOM に追加されるタイミングを制御しています。 {{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントハンドラーで画像を DOM に追加し、 {{domxref("HTMLImageElement.load_event", "img.onload")}} イベントのハンドラでエラーを処理するなどの方法で、画像を追加することになります。
 
 ```js
 const img = new Image();
-img.src = 'nebula.jpg';
-img.decode()
-.then(() => {
-  document.body.appendChild(img);
-})
-.catch((encodingError) => {
-  // エラー時に何かをする。
-})
+img.src = "nebula.jpg";
+img
+  .decode()
+  .then(() => {
+    document.body.appendChild(img);
+  })
+  .catch((encodingError) => {
+    // エラー時に何かをする。
+  });
 ```
 
 ## 仕様書

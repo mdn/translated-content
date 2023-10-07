@@ -1,7 +1,6 @@
 ---
-title: '-moz-box-pack'
+title: "-moz-box-pack"
 slug: Web/CSS/box-pack
-original_slug: Web/CSS/-moz-box-pack
 ---
 
 {{CSSRef}}
@@ -73,8 +72,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* Dispone a los hijos en el fondo de la caja */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end; /* Mozilla */
+  -webkit-box-pack: end; /* WebKit */
 }
 
 div.example p {
@@ -86,7 +85,10 @@ div.example p {
 
 ```html
 <div class="example">
-  <p>Será el segundo empezando desde el fondo de div.example y centrado horizontalmente.</p>
+  <p>
+    Será el segundo empezando desde el fondo de div.example y centrado
+    horizontalmente.
+  </p>
   <p>Estaré en el fondo de div.example y centrado horizontalmente.</p>
 </div>
 ```

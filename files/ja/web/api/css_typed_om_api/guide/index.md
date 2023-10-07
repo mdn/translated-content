@@ -25,7 +25,7 @@ CSS 型付きオブジェクトモデル APIを使用すると、要素に影響
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -36,10 +36,10 @@ JavaScript を追加してスタイルのないリンクを取得し、`computed
 
 ```js
 // 要素を取得する
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // 注目する <dl> を取得する
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // computedStyleMap() ですべてのスタイルの計算値を取得する
 const defaultComputedStyles = myElement.computedStyleMap();
@@ -47,12 +47,12 @@ const defaultComputedStyles = myElement.computedStyleMap();
 // すべてのプロパティと値のマップを繰り返し、それぞれに<dt>と<dd>を追加する。
 for (const [prop, val] of defaultComputedStyles) {
   // プロパティ
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(prop));
   stylesList.appendChild(cssProperty);
 
   // 値
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(val));
   stylesList.appendChild(cssValue);
 }
@@ -87,32 +87,32 @@ a {
 
 ```html hidden
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
 
 ```js
 // 要素を取得する
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // 注目する <dl> を取得する
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // computedStyleMap() ですべてのスタイルの計算値を取得する
 const allComputedStyles = myElement.computedStyleMap();
 
 // 注目するプロパティの配列
-const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
+const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
 
 // 注目するプロパティを反復処理する
 for (const value of ofInterest) {
   // プロパティ
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(value));
   stylesList.appendChild(cssProperty);
   // 値
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(allComputedStyles.get(value)));
   stylesList.appendChild(cssValue);
 }
@@ -152,29 +152,37 @@ CSS 型付きオブジェクトモデルの威力は、値が単位から分離�
 
 ```js
 // 調べたい要素を得る
-const myElement = document.querySelector('p');
+const myElement = document.querySelector("p");
 
 // 出力先の表を取得する
-const stylesTable = document.querySelector('#regurgitation');
+const stylesTable = document.querySelector("#regurgitation");
 
 // computedStyleMap() ですべてのスタイルの計算値を取得する
 const allComputedStyles = myElement.computedStyleMap();
 
 // 注目するプロパティの配列
-const ofInterest = ['padding-top', 'margin-bottom', 'font-size', 'font-stretch',
-     'animation-duration', 'animation-iteration-count', 'width', 'height'];
+const ofInterest = [
+  "padding-top",
+  "margin-bottom",
+  "font-size",
+  "font-stretch",
+  "animation-duration",
+  "animation-iteration-count",
+  "width",
+  "height",
+];
 // 注目するプロパティを反復処理
 for (const value of ofInterest) {
   // create a row
-  const row = document.createElement('tr');
+  const row = document.createElement("tr");
 
   // プロパティ名を追加
-  const cssProperty = document.createElement('td');
+  const cssProperty = document.createElement("td");
   cssProperty.appendChild(document.createTextNode(value));
   row.appendChild(cssProperty);
 
   // 単位のない値
-  const cssValue = document.createElement('td');
+  const cssValue = document.createElement("td");
   // 長い小数値は小数点以下第 1 位に縮小
   let propVal = allComputedStyles.get(value).value;
   propVal = propVal % 1 ? propVal.toFixed(1) : propVal;
@@ -182,8 +190,10 @@ for (const value of ofInterest) {
   row.appendChild(cssValue);
 
   // 単位の種類
-  const cssUnit = document.createElement('td');
-  cssUnit.appendChild(document.createTextNode(allComputedStyles.get(value).unit));
+  const cssUnit = document.createElement("td");
+  cssUnit.appendChild(
+    document.createTextNode(allComputedStyles.get(value).unit),
+  );
   row.appendChild(cssUnit);
 
   // 表に行を追加
@@ -195,16 +205,16 @@ for (const value of ofInterest) {
 
 未対応のブラウザーをお使いの向けに、上記の出力結果を示しておきます。
 
-| プロパティ                                             | 値 | 単位        |
-| ---------------------------------------------------- | ----- | ----------- |
-| {{cssxref("padding-top")}}                 | 0     | `px`        |
-| {{cssxref("margin-bottom")}}                 | 16    | `px`        |
-| {{cssxref("font-size")}}                     | 16    | `px`        |
-| {{cssxref("font-stretch")}}                 | 100   | `%`         |
-| {{cssxref("animation-duration")}}         | 0     | `px`        |
-| {{cssxref("animation-iteration-count")}} | 1     | _number_    |
-| {{cssxref("width")}}                         | auto  | _undefined_ |
-| {{cssxref("height")}}                         | auto  | _undefined_ |
+| プロパティ                               | 値   | 単位        |
+| ---------------------------------------- | ---- | ----------- |
+| {{cssxref("padding-top")}}               | 0    | `px`        |
+| {{cssxref("margin-bottom")}}             | 16   | `px`        |
+| {{cssxref("font-size")}}                 | 16   | `px`        |
+| {{cssxref("font-stretch")}}              | 100  | `%`         |
+| {{cssxref("animation-duration")}}        | 0    | `px`        |
+| {{cssxref("animation-iteration-count")}} | 1    | _number_    |
+| {{cssxref("width")}}                     | auto | _undefined_ |
+| {{cssxref("height")}}                    | auto | _undefined_ |
 
 返される {{cssxref('&lt;length&gt;')}} の単位は `px` で、{{cssxref('&lt;percentage&gt;')}} の単位は `percent` で、{{cssxref('&lt;time&gt;')}} の単位は `s` （秒）、単位なしの {{cssxref('&lt;number&gt;')}} の単位は `number` となっていることが分かると思います。
 
@@ -236,21 +246,22 @@ for (const value of ofInterest) {
 
 ```css
 :root {
-    --mainColor: hsl(198, 43%, 42%);
-    --black: hsl(0, 0%, 16%);
-    --white: hsl(0,0%,97%);
-    --unit: 1.2rem;
+  --mainColor: hsl(198, 43%, 42%);
+  --black: hsl(0, 0%, 16%);
+  --white: hsl(0, 0%, 97%);
+  --unit: 1.2rem;
 }
 
 button {
   --mainColor: hsl(198, 100%, 66%);
   display: inline-block;
-  padding: var(--unit) calc(var(--unit)*2);
+  padding: var(--unit) calc(var(--unit) * 2);
   width: calc(30% + 20px);
   background: no-repeat 5% center url(magicwand.png) var(--mainColor);
   border: 4px solid var(--mainColor);
   border-radius: 2px;
-  font-size: calc(var(--unit)*2); color: var(--white);
+  font-size: calc(var(--unit) * 2);
+  color: var(--white);
   cursor: pointer;
   transform: scale(0.95);
 }
@@ -264,37 +275,37 @@ button {
 
 ```js hidden
 // get the element
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = button.computedStyleMap();
 
 // CSSMathSum Example
-let btnWidth = allComputedStyles.get('width')
+let btnWidth = allComputedStyles.get("width");
 
 console.log(btnWidth); // CSSMathSum
 console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
 console.log(btnWidth.operator); // 'sum'
 
 // CSSTransformValue
-let transform = allComputedStyles.get('transform');
+let transform = allComputedStyles.get("transform");
 
-console.log(transform);        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
+console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log(transform.length); // 1
-console.log(transform[0]);     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D);   // true
+console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
+console.log(transform.is2D); // true
 
 // CSSImageValue
-let bgImage = allComputedStyles.get('background-image');
+let bgImage = allComputedStyles.get("background-image");
 
-console.log(bgImage);             // CSSImageValue
+console.log(bgImage); // CSSImageValue
 console.log(bgImage.toString()); // url("magicwand.png")
 
 // CSSUnparsedValue
-let unit = allComputedStyles.get('--unit');
+let unit = allComputedStyles.get("--unit");
 
 console.log(unit);
 
@@ -307,7 +318,7 @@ console.log(parsedUnit.value);
 次の JavaScript で `StylePropertyMapReadOnly` を取得します。
 
 ```js
-const allComputedStyles = document.querySelector('button').computedStyleMap();
+const allComputedStyles = document.querySelector("button").computedStyleMap();
 ```
 
 以下の例では、 `allComputedStyles` を参照しています。
@@ -318,9 +329,9 @@ const allComputedStyles = document.querySelector('button').computedStyleMap();
 
 ```js
 // CSSUnparsedValue
-const unit = allComputedStyles.get('--unit');
+const unit = allComputedStyles.get("--unit");
 
-console.log(unit);    // CSSUnparsedValue {0: " 1.2rem", length: 1}
+console.log(unit); // CSSUnparsedValue {0: " 1.2rem", length: 1}
 console.log(unit[0]); // " 1.2rem"
 ```
 
@@ -328,9 +339,9 @@ console.log(unit[0]); // " 1.2rem"
 
 ```js
 const parsedUnit = CSSNumericValue.parse(unit);
-console.log(parsedUnit);        // CSSUnitValue {value: 1.2, unit: "rem"}
-console.log(parsedUnit.unit);   // "rem"
-console.log(parsedUnit.value);  // 1.2
+console.log(parsedUnit); // CSSUnitValue {value: 1.2, unit: "rem"}
+console.log(parsedUnit.unit); // "rem"
+console.log(parsedUnit.value); // 1.2
 ```
 
 ### CSSMathSum
@@ -342,11 +353,11 @@ console.log(parsedUnit.value);  // 1.2
 {{domxref('CSSMathValue.operator')}} の値は `sum` です。
 
 ```js
-const btnWidth = allComputedStyles.get('width');
+const btnWidth = allComputedStyles.get("width");
 
-console.log(btnWidth);             // CSSMathSum
-console.log(btnWidth.values);      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log(btnWidth.operator);    // 'sum'
+console.log(btnWidth); // CSSMathSum
+console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log(btnWidth.operator); // 'sum'
 ```
 
 ### CSSTransformValue に CSSScale を付ける
@@ -354,15 +365,15 @@ console.log(btnWidth.operator);    // 'sum'
 また、 [`display: inline-block;`](/ja/docs/Web/CSS/CSS_Display) により座標変換もできるようになります。私たちの CSS では、 `transform: scale(0.95);` が {{cssxref('transform')}} 関数です。
 
 ```js
-const transform = allComputedStyles.get('transform');
+const transform = allComputedStyles.get("transform");
 
-console.log(transform);        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
+console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log(transform.length); // 1
-console.log(transform[0]);     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D);   // true
+console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
+console.log(transform.is2D); // true
 ```
 
 `transform` プロパティを `get()` すると、 {{domxref('CSSTransformValue')}} を取得します。 `length` プロパティで座標変換関数の長さ（数）を問い合わせることができます。
@@ -376,10 +387,10 @@ console.log(transform.is2D);   // true
 ボタンの背景画像は、魔法の杖の 1 種類です。
 
 ```js
-const bgImage = allComputedStyles.get('background-image');
+const bgImage = allComputedStyles.get("background-image");
 
-console.log(bgImage);             // CSSImageValue
-console.log(bgImage.toString());  // url("magicwand.png")
+console.log(bgImage); // CSSImageValue
+console.log(bgImage.toString()); // url("magicwand.png")
 ```
 
 `'background-image'` を `get()` すると、 {{domxref('CSSImageValue')}} が返されます。 CSS の {{cssxref('background')}} 一括指定プロパティを使っていますが、継承された {{domxref('Object.prototype.toString()')}} メソッドは、画像 `'url("magicwand.png")'` のみを返していることが分かります。

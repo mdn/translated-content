@@ -77,14 +77,14 @@ console.log(x); // logs 1
 
 ```js
 function foo() {
+  {
+    var a = "var";
     {
-        var a = 'var';
-        {
-            let a = 'let';
-            console.log(a);  // let
-        }
+      let a = "let";
+      console.log(a); // let
     }
-    console.log(a);  // var
+  }
+  console.log(a); // var
 }
 foo();
 ```

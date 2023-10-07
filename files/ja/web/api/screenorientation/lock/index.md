@@ -76,37 +76,39 @@ lock(orientation)
 const log = document.getElementById("log");
 
 // 固定ボタン: 画面の向きをもう一方の向き (90 度回転させた向き) に固定します
-const rotate_btn = document.querySelector('#lock_button');
-rotate_btn.addEventListener('click', () => {
-  log.textContent+=`固定ボタンが押されました\n`;
+const rotate_btn = document.querySelector("#lock_button");
+rotate_btn.addEventListener("click", () => {
+  log.textContent += `固定ボタンが押されました\n`;
 
-  const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
-  screen.orientation.lock(oppositeOrientation)
+  const oppositeOrientation = screen.orientation.type.startsWith("portrait")
+    ? "landscape"
+    : "portrait";
+  screen.orientation
+    .lock(oppositeOrientation)
     .then(() => {
-      log.textContent = `${oppositeOrientation} に固定しました\n`
-      }
-    )
+      log.textContent = `${oppositeOrientation} に固定しました\n`;
+    })
     .catch((error) => {
       log.textContent += `${error}\n`;
     });
 });
 
 // 固定解除ボタン: (固定されていれば) 画面の向きの固定を解除します
-const unlock_btn = document.querySelector('#unlock_button');
-unlock_btn.addEventListener('click', () => {
-  log.textContent+='固定解除ボタンが押されました\n';
+const unlock_btn = document.querySelector("#unlock_button");
+unlock_btn.addEventListener("click", () => {
+  log.textContent += "固定解除ボタンが押されました\n";
   screen.orientation.unlock();
-} );
+});
 
 // フルスクリーンボタン: 例をフルスクリーンにします
-const fullscreen_btn = document.querySelector('#fullscreen_button');
-fullscreen_btn.addEventListener('click', () => {
-  log.textContent+='フルスクリーンボタンが押されました\n';
+const fullscreen_btn = document.querySelector("#fullscreen_button");
+fullscreen_btn.addEventListener("click", () => {
+  log.textContent += "フルスクリーンボタンが押されました\n";
   const container = document.querySelector("#example_container");
   container.requestFullscreen().catch((error) => {
-      log.textContent += `${error}\n`
+    log.textContent += `${error}\n`;
   });
-} );
+});
 ```
 
 この例を試すには、まずフルスクリーンボタンを押してください。例がフルスクリーンになったら、固定ボタンを押すと向きを切り替えることができ、固定解除ボタンを押すと自然な向きに戻すことができます。

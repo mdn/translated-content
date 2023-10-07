@@ -66,7 +66,7 @@ slug: Web/API/Storage_API
 特定のオリジンのクォータと使用量の推定値を決定するには、{{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} メソッドを使用します。このメソッドは、解決すると、これらの数値を含む {{domxref("StorageEstimate")}} を受け取るという Promise を返します。例えば次のようにです。
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota は見積もりクォータです
   // estimate.usage は見積もり使用バイト数です
 });

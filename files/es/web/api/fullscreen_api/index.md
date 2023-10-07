@@ -50,7 +50,7 @@ Cuando el modo de pantalla completa sea invocado exitosamente, el documento que 
 
 ### Cuando la solicitud de pantalla completa falla
 
-No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo {{ HTMLAttrXRef("allowfullscreen", "iframe") }} para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
+No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen) para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
 
 > **Nota:** Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.
 
@@ -84,11 +84,15 @@ En este ejemplo, se presenta un video en una página web. Presionando la tecla <
 Cuando la página se carga, este código se ejecuta para establecer un evento para cuando se presione la tecla <kbd>Enter</kbd>.
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Cambiando entre modo de pantalla completa y modo de ventana
@@ -98,7 +102,7 @@ Este código es llamado cuando el usuario presiona la tecla <kbd>Enter</kbd>, co
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -115,14 +119,14 @@ Si el modo de pantalla completa está activado (`fullscreenElement` no es `null`
 
 De momento, no todos los navegadores están implementando la versión sin prefijo de la API. Aquí está la tabla que resume los prefijos y diferencias de nombres entre ellos:
 
-| Estándar                                                 | Blink (Chrome y Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
-| -------------------------------------------------------- | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
-| {{domxref("Document.fullscreen")}}             | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
-| {{domxref("Document.fullscreenEnabled")}} | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
-| {{domxref("Document.fullscreenElement")}} | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
+| Estándar                                   | Blink (Chrome y Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
+| ------------------------------------------ | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
+| {{domxref("Document.fullscreen")}}         | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
+| {{domxref("Document.fullscreenEnabled")}}  | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
+| {{domxref("Document.fullscreenElement")}}  | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
 | {{domxref("Document.onfullscreenchange")}} | `onwebkitfullscreenchange`  | `onmozfullscreenchange`  | `onmsfullscreenchange`  | `onwebkitfullscreenchange`  | `onwebkitfullscreenchange`  |
-| {{domxref("Document.onfullscreenerror")}} | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `onmsfullscreenerror`   | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
-| {{domxref("Document.exitFullscreen()")}}     | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
+| {{domxref("Document.onfullscreenerror")}}  | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `onmsfullscreenerror`   | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
+| {{domxref("Document.exitFullscreen()")}}   | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
 | {{domxref("Element.requestFullscreen()")}} | `webkitRequestFullscreen()` | `mozRequestFullScreen()` | `msRequestFullscreen()` | `webkitRequestFullscreen()` | `webkitRequestFullscreen()` |
 
 ## Especificaciones
@@ -140,4 +144,4 @@ De momento, no todos los navegadores están implementando la versión sin prefij
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)

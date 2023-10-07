@@ -21,19 +21,26 @@ slug: Web/API/ResizeObserverEntry/borderBoxSize
 ## 例
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.borderBoxSize && entry.borderBoxSize.length > 0) {
-      entry.target.style.borderRadius = Math.min(100, (entry.borderBoxSize[0].inlineSize/10) +
-                                                      (entry.borderBoxSize[0].blockSize/10)) + 'px';
+    if (entry.borderBoxSize && entry.borderBoxSize.length > 0) {
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.borderBoxSize[0].inlineSize / 10 +
+            entry.borderBoxSize[0].blockSize / 10,
+        ) + "px";
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## 仕様書

@@ -22,8 +22,8 @@ e.toString()
 {{jsxref("Error")}} オブジェクトは、すべてのオブジェクトに継承される {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。その意味は、次のようなものです ({{jsxref("Object")}} と {{jsxref("String")}} は元の値を持つと仮定します)。
 
 ```js
-Error.prototype.toString = function() {
-  'use strict';
+Error.prototype.toString = function () {
+  "use strict";
 
   var obj = Object(this);
   if (obj !== this) {
@@ -31,19 +31,19 @@ Error.prototype.toString = function() {
   }
 
   var name = this.name;
-  name = (name === undefined) ? 'Error' : String(name);
+  name = name === undefined ? "Error" : String(name);
 
   var msg = this.message;
-  msg = (msg === undefined) ? '' : String(msg);
+  msg = msg === undefined ? "" : String(msg);
 
-  if (name === '') {
+  if (name === "") {
     return msg;
   }
-  if (msg === '') {
+  if (msg === "") {
     return name;
   }
 
-  return name + ': ' + msg;
+  return name + ": " + msg;
 };
 ```
 
@@ -52,19 +52,19 @@ Error.prototype.toString = function() {
 ### toString() の使用
 
 ```js
-var e = new Error('fatal error');
+var e = new Error("fatal error");
 console.log(e.toString()); // 'Error: fatal error'
 
 e.name = undefined;
 console.log(e.toString()); // 'Error: fatal error'
 
-e.name = '';
+e.name = "";
 console.log(e.toString()); // 'fatal error'
 
 e.message = undefined;
 console.log(e.toString()); // ''
 
-e.name = 'hello';
+e.name = "hello";
 console.log(e.toString()); // 'hello'
 ```
 

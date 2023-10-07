@@ -69,7 +69,7 @@ grid-auto-flow: unset;
   <option value="column">column</option>
   <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox">
+<input id="dense" type="checkbox" />
 <label for="dense">dense</label>
 ```
 
@@ -82,7 +82,7 @@ grid-auto-flow: unset;
   display: grid;
   gap: 10px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* or 'row', 'row dense', 'column dense' */
+  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
 }
 
 #item1 {
@@ -122,10 +122,10 @@ function changeGridAutoFlow() {
   grid.style.gridAutoFlow = gridAutoFlow;
 }
 
-const selectElem = document.querySelector('select');
-const inputElem = document.querySelector('input');
-selectElem.addEventListener('change', changeGridAutoFlow);
-inputElem.addEventListener('change', changeGridAutoFlow);
+const selectElem = document.querySelector("select");
+const inputElem = document.querySelector("input");
+selectElem.addEventListener("change", changeGridAutoFlow);
+inputElem.addEventListener("change", changeGridAutoFlow);
 ```
 
 #### 結果

@@ -82,14 +82,16 @@ Digamos que você tem um [`<form>`](/pt-BR/docs/Web/HTML/Element/form) para envi
 ```html
 <form action="/mandar-pagamento" method="post">
   <p>
-    <label>Para quem você quer enviar o dinheiro?
-      <input type="text" name="destinatario">
+    <label
+      >Para quem você quer enviar o dinheiro?
+      <input type="text" name="destinatario" />
     </label>
   </p>
 
   <p>
-    <label>Quanto?
-      <input type="number" name="quantidade">
+    <label
+      >Quanto?
+      <input type="number" name="quantidade" />
     </label>
   </p>
 
@@ -114,8 +116,8 @@ Content-Location: /meus-recibos/38
 
 ## Especificações
 
-| Especificação                                                | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                                  | Título                                                        |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

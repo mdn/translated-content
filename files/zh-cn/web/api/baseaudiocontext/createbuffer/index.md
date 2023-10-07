@@ -57,9 +57,9 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -68,19 +68,23 @@ var channels = 2;
 // 创建一个 采样率与音频环境 (AudioContext) 相同的 时长 2 秒的 音频片段。
 var frameCount = audioCtx.sampleRate * 2.0;
 
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = function () {
   // 使用白噪声填充;
   // 就是 -1.0 到 1.0 之间的随机数
   for (var channel = 0; channel < channels; channel++) {
-   // 这允许我们读取实际音频片段 (AudioBuffer) 中包含的数据
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // 这允许我们读取实际音频片段 (AudioBuffer) 中包含的数据
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // 获取一个 音频片段源节点 (AudioBufferSourceNode)。
@@ -93,7 +97,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // 开始播放声源
   source.start();
-}
+};
 ```
 
 ## 规范

@@ -20,14 +20,18 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 你可以用这个方法模拟 [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 事件：
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  function (e) {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // webglcontextlost 事件被触发。
 ```

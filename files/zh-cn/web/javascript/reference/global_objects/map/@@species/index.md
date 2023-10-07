@@ -1,7 +1,6 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
 
 {{JSRef}}
@@ -31,7 +30,9 @@ In a derived collection object (e.g. your custom map `MyMap`), the `MyMap` speci
 ```js
 class MyMap extends Map {
   // 重写覆盖 MyMap species to the parent Map constructor
-  static get [Symbol.species]() { return Map; }
+  static get [Symbol.species]() {
+    return Map;
+  }
 }
 ```
 

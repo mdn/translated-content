@@ -1,18 +1,6 @@
 ---
 title: Ajouter des fonctionnalités à notre exercice des balles rebondissantes
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Apprentissage
-  - CodingScripting
-  - Débutant
-  - Evaluation
-  - JavaScript
-  - OOJS
-  - Objet
-  - Orienté objet
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: >-
-  Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -113,17 +101,17 @@ Cette méthode ajoute un écouteur d'évènement `onkeydown` à l'objet `window`
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if (e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if (e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if (e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if (e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 Quand une touche est enfoncée, la propriété [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.
@@ -153,22 +141,22 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
 1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
 2. Dans votre fichier CSS, ajouter les règlesz suivantes:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. Dans votre JavaScript, effectuez les modifications suivante :
 
-    - Créez une variable qui contiendra la référence vers le paragraphe.
-    - Stocker et afficher le nombre de balle présentent à l'écran.
-    - Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.
-    - Décrementez le compteur à chaque fois qu'une balle est détruite par le viseur.
+   - Créez une variable qui contiendra la référence vers le paragraphe.
+   - Stocker et afficher le nombre de balle présentent à l'écran.
+   - Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.
+   - Décrementez le compteur à chaque fois qu'une balle est détruite par le viseur.
 
 ## Conseils et astuces
 

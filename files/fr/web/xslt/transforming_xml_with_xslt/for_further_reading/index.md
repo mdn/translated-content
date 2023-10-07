@@ -27,7 +27,7 @@ l10n:
   - **Nombre de pages**&nbsp;: 473 pages
   - **Éditeur**&nbsp;: O'Reilly Media&nbsp;; 1<sup>re</sup> édition (15 août 2001)
   - **ISBN**&nbsp;: 0596000537
-    - Doug Tidwell est un développeur senior chez IBM et un *évangéliste* reconnu des technologies XML en général. Il est l'auteur de plusieurs articles et tutoriels concernant divers aspects de XML sur l'exhaustif site web développeur d'IBM. Ce livre est moins complet que celui de Michael Kay, mais il couvre correctement les bases, et offre quelques exemples intéressants.
+    - Doug Tidwell est un développeur senior chez IBM et un _évangéliste_ reconnu des technologies XML en général. Il est l'auteur de plusieurs articles et tutoriels concernant divers aspects de XML sur l'exhaustif site web développeur d'IBM. Ce livre est moins complet que celui de Michael Kay, mais il couvre correctement les bases, et offre quelques exemples intéressants.
 
 <https://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
 

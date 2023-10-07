@@ -35,18 +35,21 @@ CSRF (XSRF とも呼ぶ) は、関連するクラスの攻撃です。攻撃者�
 Wikipedia には、CSRF の良い例が記載されています。この状況では、誰かが (例えば、フィルタリングされていないチャットやフォーラムで) 実際には画像ではない画像を含むが、その代わりに、それは本当にお金を引き出すためにあなたの銀行のサーバーへのリクエストです。
 
 ```html
-<img src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 さて、あなたが銀行口座にログインしていて、クッキーがまだ有効であれば (他の検証はありません)、この画像を含む HTML を読み込むとすぐに送金されます。POST リクエストを必要とするエンドポイントでは、ページが読み込まれたときにプログラム的に \<form> の送信をトリガーすることができます (おそらく不可視の \<iframe> で)。
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
-  <input type="hidden" name="account" value="bob">
-  <input type="hidden" name="amount" value="1000000">
-  <input type="hidden" name="for" value="mallory">
+  <input type="hidden" name="account" value="bob" />
+  <input type="hidden" name="amount" value="1000000" />
+  <input type="hidden" name="for" value="mallory" />
 </form>
-<script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
+</script>
 ```
 
 これを防ぐためには、いくつかのテクニックがあります。

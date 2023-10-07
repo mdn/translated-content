@@ -1,7 +1,6 @@
 ---
 title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
@@ -44,19 +43,19 @@ OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에�
 function Person(first, last, age, gender, interests) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
   this.interests = interests;
-};
+}
 ```
 
 메소드는 _전부_ 아래처럼 prototype에 정의되어 있습니다:
 
 ```js
-Person.prototype.greeting = function() {
-  alert('Hi! I\'m ' + this.name.first + '.');
+Person.prototype.greeting = function () {
+  alert("Hi! I'm " + this.name.first + ".");
 };
 ```
 
@@ -91,7 +90,7 @@ Teacher()의 생성자는 `Person()`을 상속받았으므로 같은 매개변�
 function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
@@ -120,7 +119,7 @@ function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
-  this.color = 'blue';
+  this.color = "blue";
 }
 ```
 
@@ -132,18 +131,18 @@ function BlueGlassBrick() {
 
 1. 기존 코드에 아래 코드를 추가하세요:
 
-    ```js
-    Teacher.prototype = Object.create(Person.prototype);
-    ```
+   ```js
+   Teacher.prototype = Object.create(Person.prototype);
+   ```
 
-    구원 투수 [`create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create)의 등판입니다. 새 객체를 생성하여 `Teacher.prototype`으로 할당했죠. 새 객체는 `Person.prototype` 객체를 자신의 프로토타입으로 가지고 있으므로 `Person.prototype`에 정의된 모든 메소드를 사용할 수 있습니다.
+   구원 투수 [`create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create)의 등판입니다. 새 객체를 생성하여 `Teacher.prototype`으로 할당했죠. 새 객체는 `Person.prototype` 객체를 자신의 프로토타입으로 가지고 있으므로 `Person.prototype`에 정의된 모든 메소드를 사용할 수 있습니다.
 
 2. 넘어가기 전에 한가지 더 해야 합니다. 마지막 줄을 추가하고 나면 `Teacher.prototype`의 `constructor` 속성이 Person()으로 되어 있습니다. `Teacher.prototype`에 `Person.prototype`을 상속받은 객체를 할당했기 때문이죠. 코드를 저장한 뒤 브라우저로 불러와서 Teacher.prototype.constructor 구문의 반환 값을 확인해 보세요.
 3. 문제의 소지가 있으므로 고쳐야 됩니다. 소스에 아래 코드를 추가하세요:
 
-    ```js
-    Teacher.prototype.constructor = Teacher;
-    ```
+   ```js
+   Teacher.prototype.constructor = Teacher;
+   ```
 
 4. 저장하고 다시 브라우저에서 불러오면 의도한대로 `Teacher.prototype.constructor`가 `Teacher()`를 반환합니다. 게다가 `Person()`도 상속받았죠!
 
@@ -154,18 +153,36 @@ function BlueGlassBrick() {
 가장 간단한 방법은 Teacher()의 프로토타입에 정의합니다. — 아래 코드를 추가하세요:
 
 ```js
-Teacher.prototype.greeting = function() {
+Teacher.prototype.greeting = function () {
   var prefix;
 
-  if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
-    prefix = 'Mr.';
-  } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
-    prefix = 'Mrs.';
+  if (
+    this.gender === "male" ||
+    this.gender === "Male" ||
+    this.gender === "m" ||
+    this.gender === "M"
+  ) {
+    prefix = "Mr.";
+  } else if (
+    this.gender === "female" ||
+    this.gender === "Female" ||
+    this.gender === "f" ||
+    this.gender === "F"
+  ) {
+    prefix = "Mrs.";
   } else {
-    prefix = 'Mx.';
+    prefix = "Mx.";
   }
 
-  alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+  alert(
+    "Hello. My name is " +
+      prefix +
+      " " +
+      this.name.last +
+      ", and I teach " +
+      this.subject +
+      ".",
+  );
 };
 ```
 
@@ -176,7 +193,14 @@ Teacher.prototype.greeting = function() {
 소스를 환성했으니 아래 코드를 통해 새 `Teacher()` 인스턴스를 생성해 봅시다(아니면 인자를 원하는 값으로 변경하시거나요):
 
 ```js
-var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+var teacher1 = new Teacher(
+  "Dave",
+  "Griffiths",
+  31,
+  "male",
+  ["football", "cookery"],
+  "mathematics",
+);
 ```
 
 저장한 코드를 다시 불러와서 아래처럼 `teacher1`의 속성과 메소드를 확인해 봅시다:

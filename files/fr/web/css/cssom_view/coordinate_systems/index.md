@@ -1,13 +1,6 @@
 ---
 title: Systèmes de coordonnées
 slug: Web/CSS/CSSOM_view/Coordinate_systems
-tags:
-  - CSS
-  - CSSOM
-  - Coordonnées
-  - Guide
-translation_of: Web/CSS/CSSOM_View/Coordinate_systems
-original_slug: Web/CSS/CSSOM_View/Systèmes_de_coordonnées
 ---
 
 {{cssref}}

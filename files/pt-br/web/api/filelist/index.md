@@ -20,7 +20,7 @@ Todo elemento `<input>` possui um array `files` que permite o acesso aos seus ar
 O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto [`File`](/pt-BR/docs/DOM/File):
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## Visão geral dos métodos
@@ -69,50 +69,49 @@ var file;
 
 // percorre os arquivos
 for (var i = 0; i < files.length; i++) {
+  // obtém o item
+  file = files.item(i);
+  // ou
+  file = files[i];
 
-    // obtém o item
-    file = files.item(i);
-    // ou
-    file = files[i];
-
-    alert(file.name);
+  alert(file.name);
 }
 ```
 
 A seguir, um exemplo completo.
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
+  <head> </head>
 
-<head>
-</head>
+  <body>
+    <!--multiple é definido para que múltiplos arquivos possam ser selecionados-->
 
-<body>
-<!--multiple é definido para que múltiplos arquivos possam ser selecionados-->
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-<input id="myfiles" multiple type="file">
+  <script>
+    var puxarArquivos = function () {
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
 
-</body>
-
-<script>
-var puxarArquivos = function() {
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-
-    for (var i = 0; i < files.length; i++) {
+      for (var i = 0; i < files.length; i++) {
         var file = files[i];
         alert(file.name);
-    }
-}
+      }
+    };
 
-// seta o 'onchange' do elemento input para chamar a função puxarArquivos
-document.querySelector("#myfiles").onchange = puxarArquivos;
-</script>
-
+    // seta o 'onchange' do elemento input para chamar a função puxarArquivos
+    document.querySelector("#myfiles").onchange = puxarArquivos;
+  </script>
 </html>
 ```
 
-## Especificação
+## Especificações
 
-- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (inglês)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

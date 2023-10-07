@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/pop
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`pop()`** supprime le **dernier** élément d'un tableau et retour
 ## Syntaxe
 
 ```js
-arr.pop()
+arr.pop();
 ```
 
 ### Valeur de retour
@@ -49,7 +41,7 @@ var mesPoissons = ["angel", "clown", "mandarin", "sturgeon"];
 var popped = mesPoissons.pop();
 
 console.table(mesPoissons); // angel, clown, madarin
-console.log(popped);        // sturgeon
+console.log(popped); // sturgeon
 ```
 
 ### Utiliser `apply()` ou `call()` sur les objets semblables aux tableaux
@@ -57,11 +49,17 @@ console.log(popped);        // sturgeon
 Le code suivant crée un objet `mesPoissons` semblable à un tableau, qui contient 4 propriétés indexées avec des nombres et une propriété `length`. On utilise la méthode {{jsxref("Function.call()")}} pour invoquer `pop()` sur cet objet :
 
 ```js
-var mesPoissons = {0: 'angel', 1: 'clown', 2: 'mandarin', 3: 'sturgeon', length: 4};
+var mesPoissons = {
+  0: "angel",
+  1: "clown",
+  2: "mandarin",
+  3: "sturgeon",
+  length: 4,
+};
 
 var popped = Array.prototype.pop.call(mesPoissons); // on aurait pu utiliser apply()
 console.log(mesPoissons); // {0: 'angel', 1: 'clown', 2: 'mandarin', length: 3}
-console.log(popped);      // 'sturgeon'
+console.log(popped); // 'sturgeon'
 ```
 
 ## Spécifications

@@ -13,13 +13,13 @@ slug: Web/CSS/@property/initial-value
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: true;
   initial-value: #c0ffee;
 }
@@ -47,7 +47,7 @@ slug: Web/CSS/@property/initial-value
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -57,10 +57,10 @@ slug: Web/CSS/@property/initial-value
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

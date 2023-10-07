@@ -1,19 +1,16 @@
 ---
-title: GeolocationCoordinates.altitudeAccuracy
+title: "GeolocationCoordinates: altitudeAccuracy プロパティ"
+short-title: altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.altitudeAccuracy`** は読み取り専用のプロパティで、厳密な正の `double` 値で、信頼度 95% の `altitude` の精度をメートル単位で表します。実装が高度の計測に対応していない場合、この値は `null` になります。
 
-## 構文
-
-```js
-let altAcc = geolocationCoordinatesInstance.altitudeAccuracy
-```
-
-### 値
+## 値
 
 正の `double` 値で、信頼度 95% の `altitude` の精度をメートル単位で表します。
 

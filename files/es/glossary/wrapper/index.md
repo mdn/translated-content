@@ -15,7 +15,7 @@ Por ejemplo, las librerías SDK de AWS son un ejemplo de wrappers.
 
 <section id="Quick_links">
  <ol>
-  <li><a href="es/docs/Glossary">MDN Web Docs Glossary</a>
+  <li><a href="/es/docs/Glossary">MDN Web Docs Glossary</a>
    <ol>
     <li>{{Glossary("API")}}</li>
     <li>{{Glossary("Class")}}</li>

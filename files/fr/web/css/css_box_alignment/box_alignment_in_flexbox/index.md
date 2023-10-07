@@ -1,12 +1,6 @@
 ---
 title: L'alignement des boîtes avec Flexbox
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
-tags:
-  - CSS
-  - Guide
-  - flexbox
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
-original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_Flexbox
 ---
 
 {{CSSRef}}

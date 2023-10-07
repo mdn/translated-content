@@ -67,7 +67,7 @@ browser.cookies.onChanged.addListener(function (changeInfo) {
       "\n * Cause: " +
       changeInfo.cause +
       "\n * Removed: " +
-      changeInfo.removed
+      changeInfo.removed,
   );
 });
 ```

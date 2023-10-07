@@ -1,12 +1,6 @@
 ---
 title: GestureEvent
 slug: Web/API/GestureEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Interface
-translation_of: Web/API/GestureEvent
 ---
 
 {{APIRef("DOM Events")}}
@@ -55,9 +49,9 @@ _Ne fait partie d'aucune spécification._ Apple a une [description dans la bibli
 ## Voir aussi
 
 - {{domxref("MSGestureEvent")}}
--[`MSGestureStart`](/fr/docs/Web/API/Element/MSGestureStart_event)
--[`MSGestureEnd`](/fr/docs/Web/API/Element/MSGestureEnd_event)
--[`MSGestureTap`](/fr/docs/Web/API/Element/MSGestureTap_event)
--[`MSGestureHold`](/fr/docs/Web/API/Element/MSGestureHold_event)
--[`MSGestureChange`](/fr/docs/Web/API/Element/MSGestureChange_event)
--[`MSInertiaStart`](/fr/docs/Web/API/Element/MSInertiaStart_event)
+- [`MSGestureStart`](/fr/docs/Web/API/Element/MSGestureStart_event)
+- [`MSGestureEnd`](/fr/docs/Web/API/Element/MSGestureEnd_event)
+- [`MSGestureTap`](/fr/docs/Web/API/Element/MSGestureTap_event)
+- [`MSGestureHold`](/fr/docs/Web/API/Element/MSGestureHold_event)
+- [`MSGestureChange`](/fr/docs/Web/API/Element/MSGestureChange_event)
+- [`MSInertiaStart`](/fr/docs/Web/API/Element/MSInertiaStart_event)

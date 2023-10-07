@@ -1,9 +1,6 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
-translation_of: Web/CSS/filter-function/sepia()
-original_slug: Web/CSS/filter-function/sepia()
-browser-compat: css.types.filter-function.sepia
 ---
 
 {{cssref}}
@@ -44,12 +41,12 @@ sepia(100%);  /* Complètement sépia */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
+  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)

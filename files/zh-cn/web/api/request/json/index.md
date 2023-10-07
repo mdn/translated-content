@@ -11,7 +11,7 @@ slug: Web/API/Request/json
 
 ## 语法
 
-```js
+```js-nolint
 json()
 ```
 
@@ -26,14 +26,14 @@ json()
 ## 示例
 
 ```js
-const obj = {hello: 'world'};
+const obj = { hello: "world" };
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: JSON.stringify(obj)
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: JSON.stringify(obj),
+});
 
-request.json().then(function(data) {
+request.json().then(function (data) {
   // do something with the data sent in the request
 });
 ```

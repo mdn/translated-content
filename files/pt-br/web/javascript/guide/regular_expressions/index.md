@@ -787,14 +787,14 @@ Para encontrar uma substring sem que a correspondência seja relembrada, dentro 
 
 Expressões Regulares são usadas com os metodos `test` e `exec` do objeto `RegExp`e com os metodos `match`, `replace`, `search`, e `split` do objeto `String`. Estes metodos são explicados em detalhe em [JavaScript Reference](/pt-BR/docs/JavaScript/Reference).
 
-| Metodo                                                                                                                                      | Descrição                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/exec)          | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
-| [`test`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/test)          | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
-| [`match`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/match)       | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
-| [`search`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/search)    | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
+| Metodo                                                                      | Descrição                                                                                                                                                      |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`exec`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
+| [`test`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
+| [`match`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/match)     | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
+| [`search`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/search)   | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
 | [`replace`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/replace) | Um método `String` que executa uma pesquisa por uma correspondência em uma string, e substitui a substring correspondênte por uma substring de substituição.   |
-| [`split`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/split)       | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
+| [`split`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/split)     | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
 
 Quando você quer saber se um padrão é encontrado em uma string, use o método `test` ou `search`; para mais informações (mas execução mais lenta) use o método `exec` ou `match`. Se você usar `exec` ou `match` e se houver correspondência, estes métodos retornam um array e atualizam as propriedades do objeto da expressão regular associada e também do objeto da expressão regular predfinada `RegExp`. Se não houver corespondência, o método `exec` retorna `null` (convertido para `false`).
 
@@ -1012,21 +1012,21 @@ var bySurnameList = [];
 output.push("---------- Após Separar pela Expressão Regular");
 
 var i, len;
-for (i = 0, len = nameList.length; i < len; i++){
+for (i = 0, len = nameList.length; i < len; i++) {
   output.push(nameList[i]);
   bySurnameList[i] = nameList[i].replace(pattern, "$2, $1");
 }
 
 // Exibe a nova matriz.
 output.push("---------- Nomes Invertidos");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
 // Classifica pelo sobrenome e exibe a matriz classificada.
 bySurnameList.sort();
 output.push("---------- Ordenado");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
@@ -1044,27 +1044,33 @@ A expressão regular procura por zero ou uma ocorrência de parênteses de abert
 Com o evento Change ativo, quando o usuário pressionar Enter, o valor será capturado por RegExp.input.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <script type="text/javascript">
       var re = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/;
-      function testInfo(phoneInput){
+      function testInfo(phoneInput) {
         var OK = re.exec(phoneInput.value);
         if (!OK)
-          window.alert(RegExp.input + " Não é um número de telefone com código de área!");
-        else
-          window.alert("Obrigado, o seu número de telefone é " + OK[0]);
+          window.alert(
+            RegExp.input + " Não é um número de telefone com código de área!",
+          );
+        else window.alert("Obrigado, o seu número de telefone é " + OK[0]);
       }
     </script>
   </head>
   <body>
-    <p>Informe o seu número de telefone (com código de área) e então clique em "Check".
-        <br>O formato esperado é ###-###-####.</p>
+    <p>
+      Informe o seu número de telefone (com código de área) e então clique em
+      "Check". <br />O formato esperado é ###-###-####.
+    </p>
     <form action="#">
-      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+      <input id="phone" /><button
+        onclick="testInfo(document.getElementById('phone'));">
+        Check
+      </button>
     </form>
   </body>
 </html>

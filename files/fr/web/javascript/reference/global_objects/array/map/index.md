@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/map
 ---
 
 {{JSRef}}
@@ -53,7 +43,7 @@ Lorsqu'on utilise `map`, la fonction `callback` fournie en argument est exécut�
 
 > **Attention :** `map()` construit un nouveau tableau. Si on utilise cette méthode sans utiliser le résultat, mieux vaudra utiliser [`forEach`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of). Pour mieux décider si `map()` est adéquat, regardez si vous utilisez la valeur de retour et/ou si vous renvoyez une valeur avec la fonction `callback` : si ce n'est pas le cas, il ne faut pas utiliser `map()`.
 
-Si le paramètre `thisArg` est utilisé, il sera utilisé en tant que `this` par la fonction `callback` lorsqu'elle sera appelée. S'il n'est pas utilisé, ce sera la valeur {{jsxref("undefined")}} qui sera utilisée pour définir `this`. La valeur `this` finalement prise en compte par la fonction `callback` est définie [selon les règles usuelles qui déterminent la valeur `this` observée par une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si le paramètre `thisArg` est utilisé, il sera utilisé en tant que `this` par la fonction `callback` lorsqu'elle sera appelée. S'il n'est pas utilisé, ce sera la valeur {{jsxref("undefined")}} qui sera utilisée pour définir `this`. La valeur `this` finalement prise en compte par la fonction `callback` est définie [selon les règles usuelles qui déterminent la valeur `this` observée par une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
 
 `map` ne modifie pas le tableau sur lequel elle est appelée (bien que la fonction `callback`, si elle est appelée, puisse modifier le tableau).
 
@@ -78,7 +68,7 @@ Ici, on illustre le fonctionnement de `map` avec une fonction à un argument. Ce
 
 ```js
 var nombres = [1, 4, 9];
-var doubles = nombres.map(function(num) {
+var doubles = nombres.map(function (num) {
   return num * 2;
 });
 // doubles vaut désormais [2, 8, 18].
@@ -90,8 +80,12 @@ var doubles = nombres.map(function(num) {
 Dans le code qui suit, on utilise un tableau d'objets pour créer un autre tableau contenant de nouveaux objets dans un autre format :
 
 ```js
-var tableauOrig = [{clé:1, valeur:10}, {clé:2, valeur:20}, {clé:3, valeur: 30}];
-var tableauFormaté = tableauOrig.map(obj => {
+var tableauOrig = [
+  { clé: 1, valeur: 10 },
+  { clé: 2, valeur: 20 },
+  { clé: 3, valeur: 30 },
+];
+var tableauFormaté = tableauOrig.map((obj) => {
   var rObj = {};
   rObj[obj.clé] = obj.valeur;
   return rObj;
@@ -110,7 +104,9 @@ Dans cet exemple, on voit comment utiliser la fonction `map` sur une chaîne de 
 
 ```js
 var map = Array.prototype.map;
-var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
+var a = map.call("Hello World", function (x) {
+  return x.charCodeAt(0);
+});
 // a vaut désormais [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -119,8 +115,8 @@ var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
 Dans cet exemple, on illustre comment utiliser la méthode map de façon générique, sur un tableau d'objets collectés grâce à `querySelectorAll` :
 
 ```js
-var elems = document.querySelectorAll('select option:checked');
-var values = Array.prototype.map.call(elems, function(obj) {
+var elems = document.querySelectorAll("select option:checked");
+var values = Array.prototype.map.call(elems, function (obj) {
   return obj.value;
 });
 ```
@@ -135,7 +131,7 @@ Il est fréquent d'utiliser la fonction `callback` avec un seul argument (l'él�
 
 ```js
 // Si on utilise :
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // On s'attend à obtenir [1, 2, 3]
 // Le résultat qu'on obtient est en fait [1, NaN, NaN]
 
@@ -152,10 +148,10 @@ function returnInt(element) {
   return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // Le résultat qu'on obtient avec la fonction auxiliaire
 
-['1', '2', '3'].map(parseInt);  // [1, NaN, NaN]
+["1", "2", "3"].map(parseInt); // [1, NaN, NaN]
 // car map passe trois argument à la fonction et que parseInt
 // considère le second argument comme base.
 // En détails :
@@ -163,16 +159,15 @@ function returnInt(element) {
 // Deuxième élément :  "2" à l'indice 1 : parseInt("2",1); donne NaN
 // Troisième élément : "3" à l'indice 2 : parseInt("3",2); donne NaN
 
-
 // Formulation équivalente plus concise avec
 // une fonction fléchée
-['1', '2', '3'].map( str => parseInt(str));
+["1", "2", "3"].map((str) => parseInt(str));
 
 // Une autre méthode, plus simple
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 // à la différence de parseInt, cela fonctionnera pour les
 // nombres décimaux ou en notation exponentielle
-['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 ```
 
 ## Spécifications

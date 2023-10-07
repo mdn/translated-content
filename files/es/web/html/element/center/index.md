@@ -1,7 +1,6 @@
 ---
 title: <center> (obsoleto)
 slug: Web/HTML/Element/center
-original_slug: Web/HTML/Elemento/center
 ---
 
 {{Deprecated_Header}}

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
 {{WebAssemblySidebar}}
@@ -30,13 +29,14 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 다음 예제 (validate.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html) 참조 및 [see it live](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html))는 .wasm 모듈을 가져 와서 형식화 된 배열로 변환합니다. 그런 다음 `validate()` 메서드를 사용하여 모듈이 유효한지 확인합니다.
 
 ```js
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
-  console.log("The given bytes are "
-    + (valid ? "" : "not ") + "a valid wasm module");
-});
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then(function (bytes) {
+    var valid = WebAssembly.validate(bytes);
+    console.log(
+      "The given bytes are " + (valid ? "" : "not ") + "a valid wasm module",
+    );
+  });
 ```
 
 ## 명세서

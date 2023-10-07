@@ -15,8 +15,8 @@ O código de resposta de status de redirecionamento do HyperText Transfer Protoc
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                              | Título                                                        |
+| ------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "303 See Other" , "6.4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

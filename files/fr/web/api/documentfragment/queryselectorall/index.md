@@ -1,13 +1,6 @@
 ---
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - fragment
-translation_of: Web/API/DocumentFragment/querySelectorAll
 ---
 
 {{ApiRef("DOM")}}

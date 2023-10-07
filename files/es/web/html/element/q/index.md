@@ -1,7 +1,6 @@
 ---
-title: '<q>: El elemento de cita en línea'
+title: "<q>: El elemento de cita en línea"
 slug: Web/HTML/Element/q
-original_slug: Web/HTML/Elemento/q
 ---
 
 {{HTMLSidebar}}
@@ -75,16 +74,18 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("cite")}}
+- `cite`
   - : El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.
 
 ## Ejemplo
 
 ```html
-<p>Conforme al sitio web de Mozilla,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  fue lanzado en 2004 y se convirtió en un gran éxito.</q></p>
+<p>
+  Conforme al sitio web de Mozilla,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 fue lanzado en 2004 y se convirtió en un gran éxito.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('Ejemplo')}}

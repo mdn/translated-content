@@ -1,7 +1,6 @@
 ---
 title: CSS グリッドレイアウトとプログレッシブエンハンスメント
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
 
 {{CSSRef}}
@@ -32,7 +31,7 @@ IE 版では、`-ms-grid-column-span` と `-ms-grid-row-span` の新しい仕様
 人気のツール _[Autoprefixer](https://github.com/postcss/autoprefixer)_ が更新され、`-ms-` バージョンのグリッドに対応しました。既定ではグリッドの接頭辞は無効ですが、`grid: true` オプションで有効にすることができます。
 
 ```js
-autoprefixer({ grid: 'autoplace' })
+autoprefixer({ grid: "autoplace" });
 ```
 
 グリッドの接頭辞は既定では無効になっています。なぜなら、接頭辞をつけることができないプロパティがあるからです。
@@ -47,46 +46,52 @@ autoprefixer({ grid: 'autoplace' })
 
 ### 浮動要素
 
-私たちは通常、段組みレイアウトを作成するために[浮動要素](/ja/docs/Learn/CSS/CSS_layout/Floats)を使用してきました。対応しているブラウザーでグリッドアイテムでもあるアイテムを浮動させた場合、そのアイテムには浮動が適用されなくなります。実際には、*グリッドアイテムが優先されます*。以下の例では、単純なメディアオブジェクトがあります。非対応のブラウザーでは {{cssxref("float")}} を使用していますが、CSS グリッドで実装されている配置プロパティを使用するために、コンテナーをグリッドコンテナーとして定義しています。
+私たちは通常、段組みレイアウトを作成するために[浮動要素](/ja/docs/Learn/CSS/CSS_layout/Floats)を使用してきました。対応しているブラウザーでグリッドアイテムでもあるアイテムを浮動させた場合、そのアイテムには浮動が適用されなくなります。実際には、_グリッドアイテムが優先されます_。以下の例では、単純なメディアオブジェクトがあります。非対応のブラウザーでは {{cssxref("float")}} を使用していますが、CSS グリッドで実装されている配置プロパティを使用するために、コンテナーをグリッドコンテナーとして定義しています。
 
 {{cssxref("float")}} は適用されなくなり、CSS ボックス配置のプロパティである {{cssxref("align-self")}} を使用して、コンテンツをコンテナーの末尾に配置することができます。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 .media::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 .media .image {
-    float: left;
-    width: 150px;
-    margin-right: 20px;
+  float: left;
+  width: 150px;
+  margin-right: 20px;
 }
 .media .text {
-    padding: 10px;
-    align-self: end;
+  padding: 10px;
+  align-self: end;
 }
 ```
 
 ```html
 <div class="media">
-    <div class="image"><img src="https://via.placeholder.com/150x150" alt="placeholder"></div>
-    <div class="text">これは、メディアオブジェクトの例です。古いブラウザーには浮動、新しいブラウザーにはグリッドを使用しています。</div>
+  <div class="image">
+    <img src="https://via.placeholder.com/150x150" alt="placeholder" />
+  </div>
+  <div class="text">
+    これは、メディアオブジェクトの例です。古いブラウザーには浮動、新しいブラウザーにはグリッドを使用しています。
+  </div>
 </div>
 ```
 
@@ -105,60 +110,68 @@ img {
 次の例では、浮動させたカードを用意しました。カードに{{cssxref("width")}}を与え、{{cssxref("float")}}としています。カードの間に隙間を作るために、アイテムに{{cssxref("margin")}}を使用し、コンテナには負のマージンを使用しています。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 600px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .wrapper li {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper ul {
-    overflow: hidden;
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  overflow: hidden;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 .wrapper li {
-    float: left;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  float: left;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <ul>
-        <li class="card"><h2>One</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Two</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Three</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Four</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Five</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Six</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-    </ul>
+  <ul>
+    <li class="card">
+      <h2>One</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Two</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Three</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Four</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Five</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Six</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -182,9 +195,9 @@ img {
 
 ```css
 @supports (display: grid) {
-    .wrapper {
-        /* ここでグリッド対応ブラウザーのために何かをする。 */
-    }
+  .wrapper {
+    /* ここでグリッド対応ブラウザーのために何かをする。 */
+  }
 }
 ```
 
@@ -193,74 +206,82 @@ img {
 ここでは、 `@supports` ルールを使って、 `display: grid` に対応しているかどうかをチェックします。そして {{HTMLElement("ul")}} にグリッドコードを記述し、 width と {{cssxref("min-height")}} を {{HTMLElement("li")}} に設定して `auto` にしています。また、マージンと負のマージンを削除し、間隔を {{cssxref("gap")}} プロパティで置き換えています。これにより、ボックスの最後の行に最終マージンが発生しなくなりました。これで、 1 枚のカードに他のカードよりも多くのコンテンツがある場合でも、レイアウトが機能するようになりました。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 600px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .wrapper li {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper ul {
-    overflow: hidden;
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  overflow: hidden;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 .wrapper li {
-    float: left;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  float: left;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 @supports (display: grid) {
-    .wrapper ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin: 0;
-    }
-    .wrapper li {
-        width: auto;
-        min-height: auto;
-        margin: 0;
-    }
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0;
+  }
+  .wrapper li {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
 }
 ```
 
 ```html
 <div class="wrapper">
-    <ul>
-        <li class="card"><h2>One</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Two</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Three</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Four</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Five</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card"><h2>Six</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-    </ul>
+  <ul>
+    <li class="card">
+      <h2>One</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Two</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Three</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Four</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Five</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Six</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -273,81 +294,83 @@ img {
 ここでも機能クエリーを使って `display: inline-block` を使ったレイアウトを上書きすることができますが、すべてを上書きする必要もありません。 `inline-block` に設定されたアイテムはグリッドアイテムになるので、 `inline-block` の動作は適用されなくなります。 `inline-block` の表示モードのときにアイテムに {{cssxref("vertical-align")}} プロパティを使っていましたが、このプロパティはグリッドアイテムには適用されないので、アイテムがグリッドアイテムになると無視されます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 600px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .wrapper li {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper ul {
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 
 .wrapper li {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 @supports (display: grid) {
-    .wrapper ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin: 0;
-    }
-    .wrapper li {
-        width: auto;
-        margin: 0;
-    }
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0;
+  }
+  .wrapper li {
+    width: auto;
+    margin: 0;
+  }
 }
 ```
 
 ```html
 <div class="wrapper">
-    <ul>
-        <li class="card">
-            <h2>One</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Two</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Three</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Four</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Five</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Six</h2>
-            <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-    </ul>
+  <ul>
+    <li class="card">
+      <h2>One</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Two</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Three</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Four</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Five</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+    <li class="card">
+      <h2>Six</h2>
+      <p>CSS グリッドを使って古い方法を上書きできます。</p>
+    </li>
+  </ul>
 </div>
 ```
 

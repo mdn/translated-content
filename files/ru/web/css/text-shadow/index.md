@@ -1,11 +1,11 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-translation_of: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
-CSS-свойство **`text-shadow`** добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам [`decorations`](/en-US/docs/Web/CSS/text-decoration). Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.
+CSS-свойство **`text-shadow`** добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам [`decorations`](/ru/docs/Web/CSS/text-decoration). Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.
 
 {{EmbedInteractiveExample("pages/css/text-shadow.html")}}
 
@@ -66,9 +66,10 @@ text-shadow: unset;
 ```
 
 ```html
-<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="red-text-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Простая_тень', '660px', '90px')}}
@@ -77,25 +78,31 @@ text-shadow: unset;
 
 ```css
 .white-text-with-blue-shadow {
-  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
   color: white;
-  font: 1.5em Georgia, serif;
+  font:
+    1.5em Georgia,
+    serif;
 }
 ```
 
 ```html
-<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="white-text-with-blue-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Множественные_тени', '660px', '170px')}}
 
 ## Спецификации
 
-| Specification                                                                            | Status                                       | Comment                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}} | {{Spec2('CSS3 Transitions')}}     | Определяет `text-shadow` как анимируемую.                                                                                                                                                                                                                                                                                                   |
+| Specification                                                       | Status                            | Comment                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}}  | {{Spec2('CSS3 Transitions')}}     | Определяет `text-shadow` как анимируемую.                                                                                                                                                                                                                                                                                                   |
 | {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}} | {{Spec2('CSS3 Text Decoration')}} | Свойство CSS `text-shadow` было [ошибочно определено в CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) и удалено из CSS2 (Level 1). Спецификация The CSS Text Module Level 3 исправила синтаксис. Позже оно было перемещено в [CSS Text Decoration Module Level 3](https://www.w3.org/TR/css-text-decor-3/). |
 
 {{cssinfo}}

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/find
 ---
 
 {{JSRef}}
@@ -57,13 +56,13 @@ El método `find` no transforma el array desde el cual es llamado, pero la funci
 
 ```js
 const inventario = [
-    {nombre: 'manzanas', cantidad: 2},
-    {nombre: 'bananas', cantidad: 0},
-    {nombre: 'cerezas', cantidad: 5}
+  { nombre: "manzanas", cantidad: 2 },
+  { nombre: "bananas", cantidad: 0 },
+  { nombre: "cerezas", cantidad: 5 },
 ];
 
 function esCereza(fruta) {
-    return fruta.nombre === 'cerezas';
+  return fruta.nombre === "cerezas";
 }
 
 console.log(inventario.find(esCereza));
@@ -74,12 +73,12 @@ console.log(inventario.find(esCereza));
 
 ```js
 const inventario = [
-    {nombre: 'manzanas', cantidad: 2},
-    {nombre: 'bananas', cantidad: 0},
-    {nombre: 'cerezas', cantidad: 5}
+  { nombre: "manzanas", cantidad: 2 },
+  { nombre: "bananas", cantidad: 0 },
+  { nombre: "cerezas", cantidad: 5 },
 ];
 
-const resultado = inventario.find( fruta => fruta.nombre === 'cerezas' );
+const resultado = inventario.find((fruta) => fruta.nombre === "cerezas");
 
 console.log(resultado); // { nombre: 'cerezas', cantidad: 5 }
 ```
@@ -107,23 +106,22 @@ Los siguientes ejemplos muestran cómo elementos no existentes o eliminados son 
 
 ```js
 // Declarar un array sin elementos en los índices 2, 3 y 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Muestra todos los índices, no sólo aquellos que tienen valores asignados
-array.find(function(value, index) {
-  console.log('Visited index ' + index + ' with value ' + value);
+array.find(function (value, index) {
+  console.log("Visited index " + index + " with value " + value);
 });
 
 // Mostrar todos los índices, incluyendo los eliminados
-array.find(function(value, index) {
-
+array.find(function (value, index) {
   // Eliminar el elemento 5 en la primera iteración
   if (index == 0) {
-    console.log('Deleting array[5] with value ' + array[5]);
+    console.log("Deleting array[5] with value " + array[5]);
     delete array[5];
   }
   // El elemento 5 se visita aun habiendo sido eliminado
-  console.log('Visited index ' + index + ' with value ' + value);
+  console.log("Visited index " + index + " with value " + value);
 });
 // expected output:
 // Deleting array[5] with value 5
@@ -143,9 +141,9 @@ Este método ha sido añadido a la espeficicación ECMAScript 2015 y puede no es
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.find
 if (!Array.prototype.find) {
-  Object.defineProperty(Array.prototype, 'find', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
+  Object.defineProperty(Array.prototype, "find", {
+    value: function (predicate) {
+      // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -156,8 +154,8 @@ if (!Array.prototype.find) {
       var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
+      if (typeof predicate !== "function") {
+        throw new TypeError("predicate must be a function");
       }
 
       // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -184,7 +182,7 @@ if (!Array.prototype.find) {
       return undefined;
     },
     configurable: true,
-    writable: true
+    writable: true,
   });
 }
 ```

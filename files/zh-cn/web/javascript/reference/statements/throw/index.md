@@ -24,8 +24,8 @@ throw expression;
 
 ```js
 throw "Error2"; // 抛出了一个值为字符串的异常
-throw 42;       // 抛出了一个值为整数 42 的异常
-throw true;     // 抛出了一个值为 true 的异常
+throw 42; // 抛出了一个值为整数 42 的异常
+throw true; // 抛出了一个值为 true 的异常
 ```
 
 注意`throw`语句同样受到[自动分号插入（ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)）机制的控制，在`throw`关键字和值之间不允许有行终止符。
@@ -38,27 +38,39 @@ throw true;     // 抛出了一个值为 true 的异常
 
 ```js
 function UserException(message) {
-   this.message = message;
-   this.name = "UserException";
+  this.message = message;
+  this.name = "UserException";
 }
 function getMonthName(mo) {
-   mo = mo-1; // 调整月份数字到数组索引 (1=Jan, 12=Dec)
-   var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
-      "Aug", "Sep", "Oct", "Nov", "Dec"];
-   if (months[mo] !== undefined) {
-      return months[mo];
-   } else {
-      throw new UserException("InvalidMonthNo");
-   }
+  mo = mo - 1; // 调整月份数字到数组索引 (1=Jan, 12=Dec)
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  if (months[mo] !== undefined) {
+    return months[mo];
+  } else {
+    throw new UserException("InvalidMonthNo");
+  }
 }
 
 try {
-   // statements to try
-   var myMonth = 15; // 15 超出边界并引发异常
-   var monthName = getMonthName(myMonth);
+  // statements to try
+  var myMonth = 15; // 15 超出边界并引发异常
+  var monthName = getMonthName(myMonth);
 } catch (e) {
-   var monthName = "unknown";
-   console.log(e.message, e.name); // 传递异常对象到错误处理
+  var monthName = "unknown";
+  console.log(e.message, e.name); // 传递异常对象到错误处理
 }
 ```
 
@@ -80,28 +92,28 @@ try {
  */
 
 function ZipCode(zip) {
-   zip = new String(zip);
-   pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-   if (pattern.test(zip)) {
-      // zip code value will be the first match in the string
-      this.value = zip.match(pattern)[0];
-      this.valueOf = function() {
-         return this.value
-      };
-      this.toString = function() {
-         return String(this.value)
-      };
-   } else {
-      throw new ZipCodeFormatException(zip);
-   }
+  zip = new String(zip);
+  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+  if (pattern.test(zip)) {
+    // zip code value will be the first match in the string
+    this.value = zip.match(pattern)[0];
+    this.valueOf = function () {
+      return this.value;
+    };
+    this.toString = function () {
+      return String(this.value);
+    };
+  } else {
+    throw new ZipCodeFormatException(zip);
+  }
 }
 
 function ZipCodeFormatException(value) {
-   this.value = value;
-   this.message = "不是正确的邮政编码";
-   this.toString = function() {
-      return this.value + this.message
-   };
+  this.value = value;
+  this.message = "不是正确的邮政编码";
+  this.toString = function () {
+    return this.value + this.message;
+  };
 }
 
 /*
@@ -112,23 +124,23 @@ const ZIPCODE_INVALID = -1;
 const ZIPCODE_UNKNOWN_ERROR = -2;
 
 function verifyZipCode(z) {
-   try {
-      z = new ZipCode(z);
-   } catch (e) {
-      if (e instanceof ZipCodeFormatException) {
-         return ZIPCODE_INVALID;
-      } else {
-         return ZIPCODE_UNKNOWN_ERROR;
-      }
-   }
-   return z;
+  try {
+    z = new ZipCode(z);
+  } catch (e) {
+    if (e instanceof ZipCodeFormatException) {
+      return ZIPCODE_INVALID;
+    } else {
+      return ZIPCODE_UNKNOWN_ERROR;
+    }
+  }
+  return z;
 }
 
-a = verifyZipCode(95060);         // 返回 95060
-b = verifyZipCode(9560);          // 返回 -1
-c = verifyZipCode("a");           // 返回 -1
-d = verifyZipCode("95060");       // 返回 95060
-e = verifyZipCode("95060 1234");  // 返回 95060 1234
+a = verifyZipCode(95060); // 返回 95060
+b = verifyZipCode(9560); // 返回 -1
+c = verifyZipCode("a"); // 返回 -1
+d = verifyZipCode("95060"); // 返回 95060
+e = verifyZipCode("95060 1234"); // 返回 95060 1234
 ```
 
 ### 重新抛出异常
@@ -137,14 +149,14 @@ e = verifyZipCode("95060 1234");  // 返回 95060 1234
 
 ```js
 try {
-   throw n; // 抛出一个数值异常
+  throw n; // 抛出一个数值异常
 } catch (e) {
-   if (e <= 50) {
-      // 异常在 1-50 之间时，直接处理
-   } else {
-      // 异常无法处理，重新抛出
-      throw e;
-   }
+  if (e <= 50) {
+    // 异常在 1-50 之间时，直接处理
+  } else {
+    // 异常无法处理，重新抛出
+    throw e;
+  }
 }
 ```
 

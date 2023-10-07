@@ -37,11 +37,11 @@ offsetReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(originOffset);
 シーンを最初に作成するときに、3D 世界内でのユーザーの位置を設定する必要がある場合があります。 `getOffsetReferenceSpace()` を使用してこれを行うことができます。
 
 ```js
-xrSession.requestReferenceSpace("local")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(startPosition, {x:0, y:0, z:1.0, w: 1.0}));
+    new XRRigidTransform(startPosition, { x: 0, y: 0, z: 1.0, w: 1.0 }),
+  );
   xrSession.requestAnimationFrame(drawFrame);
 });
 ```
@@ -57,7 +57,9 @@ WebXR が直接サポートしている入力コントロールは、すべて�
 まず、{{domxref("Element.mousemove_event", "mousemove")}} イベントのイベントハンドラーを追加します。 これは、マウスの右ボタンが押されている場合に回転を実行するコードを呼び出します。 {{domxref("Element.oncontextmenu", "oncontextmenu")}} イベントで {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出すことにより、このイベントが無視されるように設定していることにも注意してください。 これにより、右クリックによってコンテキストメニューがブラウザーに表示されなくなります。
 
 ```js
-canvas.oncontextmenu = (event) => { event.preventDefault(); };
+canvas.oncontextmenu = (event) => {
+  event.preventDefault();
+};
 canvas.addEventListener("mousemove", (event) => {
   if (event.buttons & 2) {
     rotateViewBy(event.movementX, event.movementY);
@@ -97,9 +99,15 @@ function applyMouseMovement(refSpace) {
   quat.rotateX(inverseOrientation, inverseOrientation, -mousePitch);
   quat.rotateY(inverseOrientation, inverseOrientation, -mouseYaw);
 
-  let newTransform = new XRRigidTransform({x: 0, y:  0, z: 0},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: 0, y: 0, z: 0 },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
 
   return refSpace.getOffsetReferenceSpace(newTransform);
 }

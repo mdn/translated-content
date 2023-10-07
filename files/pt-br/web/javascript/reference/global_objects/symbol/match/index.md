@@ -22,7 +22,7 @@ Essa função também é usada para identificar se um objeto tem o comportamento
 O seguinte código vai lançar um {{jsxref("TypeError")}}:
 
 ```js
-'/bar/'.startsWith(/bar/);
+"/bar/".startsWith(/bar/);
 
 // Lança um TypeError, como /bar/ é uma expressão regular
 // não Symbol.match não é modificado.
@@ -33,14 +33,14 @@ Entretanto, se você configurar `Symbol.match` para `false`, a verificação `is
 ```js
 var re = /foo/;
 re[Symbol.match] = false;
-'/foo/'.startsWith(re); // true
-'/baz/'.endsWith(re);   // false
+"/foo/".startsWith(re); // true
+"/baz/".endsWith(re); // false
 ```
 
 ## Especificações
 
-| Especificação                                                                    |
-| -------------------------------------------------------------------------------- |
+| Especificação                                                |
+| ------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} |
 
 ## Compatibilidade com navegadores

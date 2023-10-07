@@ -1,11 +1,6 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
-tags:
-  - API
-  - DOM
-  - Propriété
-translation_of: Web/API/HTMLElement/outerText
 ---
 
 {{APIRef("DOM")}}

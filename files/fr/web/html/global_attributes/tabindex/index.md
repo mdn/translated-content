@@ -1,13 +1,6 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/tabindex
-original_slug: Web/HTML/Attributs_universels/tabindex
 ---
 
 {{HTMLSidebar("Global_attributes")}}

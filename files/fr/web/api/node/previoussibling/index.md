@@ -1,12 +1,6 @@
 ---
 title: element.previousSibling
 slug: Web/API/Node/previousSibling
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/previousSibling
 ---
 
 {{APIRef("DOM")}}

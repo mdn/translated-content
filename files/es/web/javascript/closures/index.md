@@ -1,7 +1,6 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-original_slug: Web/JavaScript/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -14,9 +13,10 @@ Consideremos el siguiente ejemplo:
 
 ```js
 function iniciar() {
-  var nombre = "Mozilla";  // La variable nombre es una variable local creada por iniciar.
-  function mostrarNombre() {  // La función mostrarNombre es una función interna, una clausura.
-    alert(nombre);  // Usa una variable declarada en la función externa.
+  var nombre = "Mozilla"; // La variable nombre es una variable local creada por iniciar.
+  function mostrarNombre() {
+    // La función mostrarNombre es una función interna, una clausura.
+    alert(nombre); // Usa una variable declarada en la función externa.
   }
   mostrarNombre();
 }
@@ -63,7 +63,7 @@ Considera el siguiente ejemplo:
 
 ```js
 function makeFunc() {
-  const name = 'Mozilla';
+  const name = "Mozilla";
   function displayName() {
     console.log(name);
   }
@@ -145,9 +145,9 @@ const size16 = makeSizer(16);
 `size12`, `size14` y `size16` ahora son funciones que cambian el tamaño del texto de `body` a 12, 14 y 16 pixels, respectivamente. Podemos conectarlos a botones (en este caso enlaces) de la siguiente forma:
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -321,7 +321,7 @@ let x = 5;
 export const getX = () => x;
 export const setX = (val) => {
   x = val;
-}
+};
 ```
 
 En este ejemplo, el módulo exporta un par de funciones _getter-setter_, que se cierran sobre la variable `x` del módulo. Incluso cuando `x` no es directamente accesible desde otros módulos, se puede leer y escribir con las funciones.
@@ -341,7 +341,7 @@ Los _closures_ también pueden cerrarse sobre valores importados, que se conside
 export let x = 1;
 export const setX = (val) => {
   x = val;
-}
+};
 ```
 
 ```js
@@ -373,14 +373,14 @@ Antes de la introducción de la palabra clave [`let`](/es/docs/JavaScript/Refere
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Tu dirección de correo electronico' },
-    { id: 'name', help: 'Tu nombre completo' },
-    { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
+    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "name", help: "Tu nombre completo" },
+    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -406,7 +406,7 @@ En este caso, una solución es utilizar más _closures_: concretamente añadiend
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
@@ -417,9 +417,9 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Tu dirección de correo electronico' },
-    { id: 'name', help: 'Tu nombre completo' },
-    { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
+    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "name", help: "Tu nombre completo" },
+    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -439,14 +439,14 @@ Otra forma de escribir lo anterior es utilizando _closures_ anónimos:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Tu dirección de correo electronico' },
-    { id: 'name', help: 'Tu nombre completo' },
-    { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
+    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "name", help: "Tu nombre completo" },
+    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -466,14 +466,14 @@ Si no quires usar más _closures_, puedes optar por usar la palabra clave [`let`
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   const helpText = [
-    { id: 'email', help: 'Tu dirección de correo electronico' },
-    { id: 'name', help: 'Tu nombre completo' },
-    { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
+    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "name", help: "Tu nombre completo" },
+    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -493,14 +493,14 @@ Otra alternativa podría ser utilizar `forEach()` para iterar sobre el array `he
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Tu dirección de correo electronico' },
-    { id: 'name', help: 'Tu nombre completo' },
-    { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
+    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "name", help: "Tu nombre completo" },
+    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
   ];
 
   helpText.forEach(function (text) {

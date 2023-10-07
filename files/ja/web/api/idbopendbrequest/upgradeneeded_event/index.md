@@ -1,5 +1,5 @@
 ---
-title: 'IDBOpenDBRequest: upgradeneeded イベント'
+title: "IDBOpenDBRequest: upgradeneeded イベント"
 slug: Web/API/IDBOpenDBRequest/upgradeneeded_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('upgradeneeded', (event) => { });
+addEventListener("upgradeneeded", (event) => {});
 
-onupgradeneeded = (event) => { };
+onupgradeneeded = (event) => {};
 ```
 
 ## イベント型
@@ -42,21 +42,23 @@ _親の {{domxref("Event")}} インターフェイスからもプロパティを
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open('toDoList', 4);
+const dBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-dBOpenRequest.addEventListener('upgradeneeded', (event) => {
+dBOpenRequest.addEventListener("upgradeneeded", (event) => {
   const db = event.target.result;
   console.log(`バージョン ${db.version} に更新します`);
 
   // このデータベース用の objectStore を作ります
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 });
 ```
 
@@ -64,21 +66,23 @@ dBOpenRequest.addEventListener('upgradeneeded', (event) => {
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open('toDoList', 4);
+const dBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
   console.log(`バージョン ${db.version} に更新します`);
 
   // このデータベース用の objectStore を作ります
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 ```
 

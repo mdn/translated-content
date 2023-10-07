@@ -1,11 +1,6 @@
 ---
 title: Commencer avec WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-tags:
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL")}}[WebGL](http://www.khronos.org/webgl/) permet à un contenu web d'utiliser l'API basée sur [OpenGL ES](http://www.khronos.org/opengles/) 2.0 pour effectuer un rendu 2D et 3D dans un [canvas](/fr/HTML/Canvas) dans les navigateurs qui le supportent, sans utilisation d'un module complémentaire. Les programmes WebGL sont constitués de code de contrôle écrit en JavaScript, et le code d'ombrage (GLSL) est exécuté dans l'Unité de Traitement Graphique (GPU) de l'ordinateur. Les éléments WebGL peuvent être mélangés avec d'autres éléments HTML, et composés d'autres parties de la page ou de l'arrière-plan de la page.
@@ -41,20 +36,22 @@ function main() {
 
   // Continuer seulement si WebGL est disponible et fonctionnel
   if (!gl) {
-    alert("Impossible d'initialiser WebGL. Votre navigateur ou votre machine peut ne pas le supporter.");
+    alert(
+      "Impossible d'initialiser WebGL. Votre navigateur ou votre machine peut ne pas le supporter.",
+    );
     return;
   }
 
   // Définir la couleur d'effacement comme étant le noir, complètement opaque
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   // Effacer le tampon de couleur avec la couleur d'effacement spécifiée
-  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 }
 ```
 
 La première chose que nous faisons ici est d'obtenir une référence au canvas, en l'affectant à une variable dénommée `canvas`.
 
-Une fois que nous avons le canvas, nous essayons de lui obtenir un [WebGLRenderingContext](/fr-FR/docs/Web/API/WebGLRenderingContext), en appelant [getContext](/fr-FR/docs/Web/API/HTMLCanvasElement/getContext) et en lui passant la chaîne `"webgl"`. Si le navigateur ne supporte pas WebGL, `getContext` retournera `null`, auquel cas nous afficherons un message pour l'utilisateur, et nous sortirons.
+Une fois que nous avons le canvas, nous essayons de lui obtenir un [WebGLRenderingContext](/fr/docs/Web/API/WebGLRenderingContext), en appelant [getContext](/fr/docs/Web/API/HTMLCanvasElement/getContext) et en lui passant la chaîne `"webgl"`. Si le navigateur ne supporte pas WebGL, `getContext` retournera `null`, auquel cas nous afficherons un message pour l'utilisateur, et nous sortirons.
 
 Si le contexte est initialisé avec succès, la variable `gl` sera notre référence à celui-ci. Dans ce cas, nous définissons la couleur d'effacement comme étant le noir, et nous effaçons le contexte avec cette couleur (redessin du canvas avec la couleur d'arrière-plan).
 

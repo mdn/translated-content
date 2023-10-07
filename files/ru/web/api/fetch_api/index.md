@@ -1,16 +1,6 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Fetch
-  - Response
-  - XMLHttpRequest
-  - request
-  - Главная
-  - Справка
-  - Экспериментальная
-translation_of: Web/API/Fetch_API
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
@@ -63,13 +53,11 @@ Fetch обеспечивает обобщённое определение об�
 
 ## Спецификации
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Fetch")}} | {{Spec2("Fetch")}} | Initial definition |
+{{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## Смотрите также
 

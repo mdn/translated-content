@@ -1,7 +1,6 @@
 ---
-title: ':any'
+title: ":any"
 slug: Web/CSS/:is
-original_slug: Web/CSS/:any
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -29,18 +28,54 @@ Por ejemplo, el siguiente CSS:
 
 ```css
 /* Listas desordenadas a tres (o más) niveles de profundidad que usarán viñeta de cuadrado */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
@@ -59,7 +94,9 @@ Puede ser reemplazado con:
 Sin embargo, no se debe usar lo siguiente: (Véase [la sección de rendimiento](#Issues_with_performance_and_specificity) abajo.)
 
 ```css
-:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) :-moz-any(ul, menu, dir) {
+:-moz-any(ol, ul, menu, dir)
+  :-moz-any(ol, ul, menu, dir)
+  :-moz-any(ul, menu, dir) {
   list-style-type: square;
 }
 ```
@@ -76,14 +113,29 @@ h1 {
   font-size: 30px;
 }
 /* Nivel 1 */
-section h1, article h1, aside h1, nav h1 {
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
 /* Nivelo 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1, {
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
 /* Level 3 */
@@ -103,13 +155,15 @@ h1 {
 }
 /* Nivel 2 */
 :-moz-any(section, article, aside, nav)
-:-moz-any(section, article, aside, nav) h1 {
+  :-moz-any(section, article, aside, nav)
+  h1 {
   font-size: 20px;
 }
 /* Nivel 3 */
 :-moz-any(section, article, aside, nav)
-:-moz-any(section, article, aside, nav)
-:-moz-any(section, article, aside, nav) h1 {
+  :-moz-any(section, article, aside, nav)
+  :-moz-any(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```
@@ -121,19 +175,24 @@ h1 {
 Por ejemplo
 
 ```css
-.a > :-moz-any(.b, .c)
+.a> : -moz-any(.b, .c) {
+}
 ```
 
 es más lento que:
 
 ```css
-.a > .b, .a > .c
+.a > .b,
+.a > .c {
+}
 ```
 
 y lo siguiente es rápido:
 
 ```css
-:-moz-any(.a, .d) > .b, :-moz-any(.a, .d) > .c
+:-moz-any(.a, .d) > .b,
+:-moz-any(.a, .d) > .c {
+}
 ```
 
 ## Especificaciones

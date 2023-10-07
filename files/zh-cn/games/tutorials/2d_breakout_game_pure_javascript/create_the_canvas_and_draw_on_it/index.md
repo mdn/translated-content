@@ -1,7 +1,6 @@
 ---
 title: 创建、绘制画布
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
@@ -17,25 +16,30 @@ slug: >-
 HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个 HTML 的 canvas 标签中。你可以选择一款你最喜欢的文本编辑器，创建一个 HTML 文件，保存到你理想的位置，名称为 index.html。并添加以下代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-     * { padding: 0; margin: 0; }
-     canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
- // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -68,7 +72,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -83,7 +87,7 @@ ctx.closePath();
 
 ctx.fillStyle 属性的值看起来和之前不大一样。这是因为它与 CSS 一样，颜色可以指定为十六进制值也可以指定为 rgba() 函数，或者任何其他可用的颜色值函数。
 
-当然我们也可以不使用 ctx.fill() 函数来填充图形和颜色，用 ctx.stroke() 函数来绘制定义图形的路径。试着将这段代码添加到您的 JavaScript:
+当然我们也可以不使用 ctx.fill() 函数来填充图形和颜色，用 ctx.stroke() 函数来绘制定义图形的路径。试着将这段代码添加到你的 JavaScript:
 
 ```js
 ctx.beginPath();

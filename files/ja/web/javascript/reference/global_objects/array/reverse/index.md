@@ -7,19 +7,19 @@ l10n:
 
 {{JSRef}}
 
-**`reverse()`** メソッドは、配列の要素を[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
+**`reverse()`** メソッドは、配列の要素を [in-place(その場)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
 ## 構文
 
 ```js
-reverse()
+reverse();
 ```
 
 ### 返値
 
-元の配列を反転されたものへの参照です。なお、配列は[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)で反転され、コピーは作られません。
+元の配列を反転されたものへの参照です。なお、配列は [in-place(その場)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転され、コピーは作られません。
 
 ## 解説
 
@@ -46,7 +46,7 @@ console.log(items); // [3, 2, 1]
 次の例は、3 つの要素と length プロパティを含む配列風オブジェクト `obj` を作成し、その配列風オブジェクトを反転させます。`reverse()` の呼び出しは、反転した配列風オブジェクト `obj` への参照を返します。
 
 ```js
-const obj = {0: 1, 1: 2, 2: 3, length: 3};
+const obj = { 0: 1, 1: 2, 2: 3, length: 3 };
 console.log(obj); // {0: 1, 1: 2, 2: 3, length: 3}
 
 Array.prototype.reverse.call(obj); //apply() を使用するのと同じ構文

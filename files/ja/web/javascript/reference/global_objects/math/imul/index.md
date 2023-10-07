@@ -39,9 +39,9 @@ var product = Math.imul(a, b);
 ### Math.imul() の使用
 
 ```js
-Math.imul(2, 4);          // 8
-Math.imul(-1, 8);         // -8
-Math.imul(-2, -2);        // 4
+Math.imul(2, 4); // 8
+Math.imul(-1, 8); // -8
+Math.imul(-2, -2); // 4
 Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
 ```
@@ -51,33 +51,35 @@ Math.imul(0xfffffffe, 5); // -10
 これは次の関数でエミュレートすることができます。
 
 ```js
-if (!Math.imul) Math.imul = function(a, b) {
-  var aHi = (a >>> 16) & 0xffff;
-  var aLo = a & 0xffff;
-  var bHi = (b >>> 16) & 0xffff;
-  var bLo = b & 0xffff;
-  // the shift by 0 fixes the sign on the high part
-  // the final |0 converts the unsigned value into a signed value
-  return ((aLo * bLo) + (((aHi * bLo + aLo * bHi) << 16) >>> 0) | 0);
-};
+if (!Math.imul)
+  Math.imul = function (a, b) {
+    var aHi = (a >>> 16) & 0xffff;
+    var aLo = a & 0xffff;
+    var bHi = (b >>> 16) & 0xffff;
+    var bLo = b & 0xffff;
+    // the shift by 0 fixes the sign on the high part
+    // the final |0 converts the unsigned value into a signed value
+    return (aLo * bLo + (((aHi * bLo + aLo * bHi) << 16) >>> 0)) | 0;
+  };
 ```
 
 しかし、このポリフィルが使われるであろうブラウザーは、 JavaScript の内部整数型で最適化されておらず、すべての数値に浮動小数点を使用している可能性が高いため、次の関数の方が性能が高くなります。
 
 ```js
-if (!Math.imul) Math.imul = function(opA, opB) {
-  opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
-  // floating points give us 53 bits of precision to work with plus 1 sign bit
-  // automatically handled for our convienence:
-  // 1. 0x003fffff /*opA & 0x000fffff*/ * 0x7fffffff /*opB*/ = 0x1fffff7fc00001
-  //    0x1fffff7fc00001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
-  var result = (opA & 0x003fffff) * opB;
-  // 2. We can remove an integer coersion from the statement above because:
-  //    0x1fffff7fc00001 + 0xffc00000 = 0x1fffffff800001
-  //    0x1fffffff800001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
-  if (opA & 0xffc00000 /*!== 0*/) result += (opA & 0xffc00000) * opB |0;
-  return result |0;
-};
+if (!Math.imul)
+  Math.imul = function (opA, opB) {
+    opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
+    // floating points give us 53 bits of precision to work with plus 1 sign bit
+    // automatically handled for our convienence:
+    // 1. 0x003fffff /*opA & 0x000fffff*/ * 0x7fffffff /*opB*/ = 0x1fffff7fc00001
+    //    0x1fffff7fc00001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
+    var result = (opA & 0x003fffff) * opB;
+    // 2. We can remove an integer coersion from the statement above because:
+    //    0x1fffff7fc00001 + 0xffc00000 = 0x1fffffff800001
+    //    0x1fffffff800001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
+    if (opA & 0xffc00000 /*!== 0*/) result += ((opA & 0xffc00000) * opB) | 0;
+    return result | 0;
+  };
 ```
 
 ## 仕様書

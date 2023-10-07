@@ -33,7 +33,7 @@ l10n:
 ```js
 // 自動再生を無効化（推奨）
 // false が既定値です
-document.querySelector('#video').autoplay = false;
+document.querySelector("#video").autoplay = false;
 ```
 
 ## 仕様書

@@ -1,7 +1,6 @@
 ---
 title: 段階変数用のCSSカスタムプロパティ
 slug: Web/CSS/CSS_cascading_variables
-original_slug: Web/CSS/CSS_Variables
 ---
 
 {{cssref}}

@@ -1,7 +1,6 @@
 ---
 title: 下線の色が相違している
 slug: orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
-original_slug: Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 ---
 
 ## 概要

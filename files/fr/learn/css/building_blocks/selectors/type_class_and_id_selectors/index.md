@@ -1,8 +1,6 @@
 ---
 title: Sélecteurs de type, de classe et d'ID
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-original_slug: Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_de_type_classe_ID
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
@@ -59,17 +57,15 @@ On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier l
 
 ```css
 article :first-child {
-
 }
 ```
 
-On peut néanmoins confondre ce sélecteur avec `article:first-child` ciblant les éléments `<article>`  qui sont le premier descendant d'un élément.
+On peut néanmoins confondre ce sélecteur avec `article:first-child` ciblant les éléments `<article>` qui sont le premier descendant d'un élément.
 
-Pour éviter cette confusion, on peut ajouter le sélecteur universel `*` à `:first-child`, le fonctionnement de ce dernier sera plus clair : il cible *tout* élément premier descendant d'un élément `<article>` :
+Pour éviter cette confusion, on peut ajouter le sélecteur universel `*` à `:first-child`, le fonctionnement de ce dernier sera plus clair : il cible _tout_ élément premier descendant d'un élément `<article>` :
 
 ```css
 article *:first-child {
-
 }
 ```
 

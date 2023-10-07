@@ -1,7 +1,6 @@
 ---
 title: Assíncrono
 slug: Glossary/Asynchronous
-original_slug: Glossario/Assincrono
 ---
 
 **Assíncrono** refere-se a um ambiente de comunicação onde cada parte recebe e processa mensagens quando for conveniente ou possível em vez de imediatamente.

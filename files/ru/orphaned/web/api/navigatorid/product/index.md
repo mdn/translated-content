@@ -1,8 +1,6 @@
 ---
 title: NavigatorID.product
 slug: orphaned/Web/API/NavigatorID/product
-translation_of: Web/API/NavigatorID/product
-original_slug: Web/API/NavigatorID/product
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}

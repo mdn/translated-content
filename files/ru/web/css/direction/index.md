@@ -1,7 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-translation_of: Web/CSS/direction
 ---
 
 {{CSSRef}}
@@ -60,10 +59,10 @@ blockquote {
 
 ## Specifications
 
-| Specification                                                                    | Status                                   | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| Specification                                                 | Status                          | Comment             |
+| ------------------------------------------------------------- | ------------------------------- | ------------------- |
 | {{SpecName('CSS3 Writing Modes', '#direction', 'direction')}} | {{Spec2('CSS3 Writing Modes')}} | No change.          |
-| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}                 | Initial definition. |
+| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}             | Initial definition. |
 
 ## Browser compatibility
 

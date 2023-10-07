@@ -28,9 +28,9 @@ regexp[Symbol.search](str)
 这个方法在 {{jsxref("String.prototype.search()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
-'abc'.search(/a/);
+"abc".search(/a/);
 
-/a/[Symbol.search]('abc');
+/a/[Symbol.search]("abc");
 ```
 
 这个方法为自定义 `RegExp` 子类中的匹配行为而存在。
@@ -43,9 +43,9 @@ regexp[Symbol.search](str)
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.search](str);
-console.log(result);  // 4
+console.log(result); // 4
 ```
 
 ### 在子类中使用`@@search`
@@ -55,7 +55,7 @@ console.log(result);  // 4
 ```js
 class MyRegExp extends RegExp {
   constructor(str) {
-    super(str)
+    super(str);
     this.pattern = str;
   }
   [Symbol.search](str) {
@@ -63,8 +63,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('a+b');
-var str = 'ab a+b';
+var re = new MyRegExp("a+b");
+var str = "ab a+b";
 var result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
 ```

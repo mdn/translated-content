@@ -1,12 +1,6 @@
 ---
 title: Accesseurs de propriétés
 slug: Web/JavaScript/Reference/Operators/Property_accessors
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
-original_slug: Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres
 ---
 
 {{jsSidebar("Operators")}}
@@ -18,8 +12,8 @@ Les **accesseurs de propriété** permettent de fournir un accès aux propriét�
 ## Syntaxe
 
 ```js
-objet.propriété
-objet["propriété"]
+objet.propriété;
+objet["propriété"];
 ```
 
 ## Description
@@ -38,7 +32,7 @@ objet.propriété = définir;
 `propriété` doit être un identifiant JavaScript valide, c'est-à-dire une séquence de caractères alphanumériques, soulignés («&nbsp;`_`&nbsp;») et signes dollar («&nbsp;`$`&nbsp;»), qui ne peut commencer par un nombre. Par exemple, `objet.$1` est valide, mais `objet.1` ne l'est pas.
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 Ici, la méthode `createElement` est obtenue depuis l'objet `document` et est appelée.
@@ -46,14 +40,13 @@ Ici, la méthode `createElement` est obtenue depuis l'objet `document` et est ap
 Si on utilise une méthode pour un littéral numérique et que celui-ci ne possède pas de point décimal ni d'exposant lié à la notation scientifique, il faudra laisser un ou plusieurs blancs afin que l'appel soit bien interprété comme un appel de méthode plutôt que comme un séparateur décimal :
 
 ```js
-77 .toExponential();
+(77).toExponential();
 // ou
-77
-.toExponential();
+(77).toExponential();
 // ou, mieux pour la lisibilité
 (77).toExponential();
 // ou encore
-77.0.toExponential();
+(77.0).toExponential();
 // 77. correspond à 77.0 et là il n'y a aucun doute
 ```
 
@@ -69,20 +62,20 @@ objet[nom_de_propriété] = définir;
 #### Exemple
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 Cette ligne fait exactement la même chose que l'exemple précédent.
 
 ### Noms de propriétés
 
-Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](/fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
+Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
 
 #### Exemples
 
 ```js
 var objet = {};
-objet['1'] = 'valeur';
+objet["1"] = "valeur";
 console.log(objet[1]);
 ```
 
@@ -107,7 +100,7 @@ Pour plus d'informations, consultez la page sur [l'opérateur `this` et les liai
 Les nouveaux venus en JavaScript font souvent l'erreur d'utiliser {{jsxref("eval", "eval()")}} alors que la notation avec crochets pourrait être utilisée. Par exemple, la syntaxe suivante est utilisée dans de nombreux scripts.
 
 ```js
-x = eval('document.formulaire.' + controle + '.value');
+x = eval("document.formulaire." + controle + ".value");
 ```
 
 `eval` est lente et insécurisée et devrait être évitée dès que possible. Il est préférable d'utiliser la notation avec crochets&nbsp;:

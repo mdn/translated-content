@@ -52,8 +52,12 @@ padding-left: unset;
 ### 使用“px”单位和百分比设置 padding-left 的样例
 
 ```css
-.content { padding-left: 5%; }
-.sidebox { padding-left: 10px; }
+.content {
+  padding-left: 5%;
+}
+.sidebox {
+  padding-left: 10px;
+}
 ```
 
 ## 规范

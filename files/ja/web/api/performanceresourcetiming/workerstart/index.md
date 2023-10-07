@@ -35,7 +35,7 @@ const observer = new PerformanceObserver((list) => {
     const workerProcessingTime = entry.fetchStart - entry.workerStart;
     if (workerProcessingTime > 0) {
       console.log(
-        `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+        `${entry.name}: Worker processing time: ${workerProcessingTime}ms`,
       );
     }
   });
@@ -52,7 +52,7 @@ resources.forEach((entry) => {
   const workerProcessingTime = entry.fetchStart - entry.workerStart;
   if (workerProcessingTime > 0) {
     console.log(
-      `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+      `${entry.name}: Worker processing time: ${workerProcessingTime}ms`,
     );
   }
 });

@@ -2,6 +2,7 @@
 title: HTMLDocument
 slug: Web/API/HTMLDocument
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDocument`**은 일반적인 (XML) 문서에서 기본적으로 존재하지 않는 특별한 프로퍼티와 메소드에 접근을 제공하는 DOM의 추상 인터페이스입니다. 특히 HTML 문서와 엘리먼트에 관련된 기능을 추가해줍니다.

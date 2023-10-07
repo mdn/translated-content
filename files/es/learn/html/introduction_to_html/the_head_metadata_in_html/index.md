@@ -1,7 +1,6 @@
 ---
 title: ¿Qué hay en la cabecera? Metadatos en HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-original_slug: Learn/HTML/Introduccion_a_HTML/Metados_en
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -34,7 +33,7 @@ El elemento {{Glossary("Head", "head")}} de un documento HTML es la parte que no
 Vamos a revisar el [documento HTML que se revisó en el artículo anterior](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -73,14 +72,14 @@ Ya hemos visto el elemento {{htmlelement("title")}} en acción — se puede usar
 
 2. Ahora abre el archivo en tu navegador. Deberías ver algo como esto:
 
-   ![Una sencilla página web con el título configurado a \<title> element, y el \<h1> configurado a \<h1> element.](title-example.png)
+   ![Una sencilla página web con el título configurado a 'title' element, y el 'h1' configurado a 'h1' element.](title-example.png)
    Ahora debería quedar claro dónde aparece el contenido de `<h1>` y dónde aparece el contenido de `<title>`.
 
 3. También podrías probar a abrir el código en tu editor de código, editar el contenido de estos elementos y luego actualizar la página en tu navegador. Juega un poco con ello.
 
 El contenido del elemento `<title>` también se usa de otras formas. Por ejemplo, si intentas marcar la página como favorita (**Marcadores → Marcar esta página**, o el icono en forma de estrella de Firefox), verás que el nombre que se sugiere para el marcado es el contenido del elemento `<title>`.
 
-![Se está marcando una página web en Firefox; el nombre del marcador se ha completado automáticamente con el contenido del elemento \<title>](bookmark-example.png)
+![Se está marcando una página web en Firefox; el nombre del marcador se ha completado automáticamente con el contenido del elemento 'title'](bookmark-example.png)
 
 El contenido de `<title>` también se usa en el resultado de las búsquedas, como verás a continuación.
 
@@ -127,8 +126,7 @@ Dos de esos metadatos que resultan útiles de incluir en tu página definen al a
   name="description"
   content="El área de aprendizaje de MDN pretende
 proporcionar a los recién llegados a la web todo lo que deben
-saber para empezar a desarrollar páginas web y aplicaciones web."
-/>
+saber para empezar a desarrollar páginas web y aplicaciones web." />
 ```
 
 Especificar un autor resulta ventajoso por diversos motivos: es útil saber quién escribió la página para poder ponerte en contacto con el autor si tienes preguntas sobre el contenido. Algunos sistemas de gestión de contenido tienen herramientas para extraer automáticamente la información del autor de la página y ponerla a disposición para tales fines.
@@ -154,8 +152,7 @@ La descripción también se usa en las páginas de resultados del motor de búsq
      content="The Mozilla Developer
      Network (MDN) proporciona información sobre tecnologías
      de código abierto que incluyen HTML, CSS y APIs tanto para sitios web como para aplicaciones HTML5.
-     También documenta productos Mozilla como el sistema operativo Firefox."
-   />
+     También documenta productos Mozilla como el sistema operativo Firefox." />
    ```
 
 4. Ahora busca "Mozilla Developer Network" en tu motor de búsqueda favorito (nosotros hemos utilizado Google). Observarás que efectivamente merece la pena que tener el contenido de la descripción `<meta>` y el elemento `<title>` que se utiliza en la búsqueda.
@@ -175,14 +172,12 @@ Por ejemplo, [Open Graph Data](http://ogp.me/) es un protocolo de metadatos que 
 ```html
 <meta
   property="og:image"
-  content="https://developer.mozilla.org/mdn-social-share.png"
-/>
+  content="https://developer.mozilla.org/mdn-social-share.png" />
 <meta
   property="og:description"
   content="The Mozilla Developer Network (MDN) proporciona información
 sobre tecnologías Open Web, incluidas HTML, CSS y APIs para ambos sitios web
-y aplicaciones HTML5. También documenta productos Mozilla, como el sistema operativo Firefox."
-/>
+y aplicaciones HTML5. También documenta productos Mozilla, como el sistema operativo Firefox." />
 <meta property="og:title" content="Mozilla Developer Network" />
 ```
 
@@ -222,30 +217,25 @@ Hoy día hay un montón de otros tipos de iconos a tener presentes. Por ejemplo,
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png"
-/>
+  href="https://developer.mozilla.org/static/img/favicon144.png" />
 <!-- iPhone con pantalla de alta resolución: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png"
-/>
+  href="https://developer.mozilla.org/static/img/favicon114.png" />
 <!-- iPad de primera y segunda generación: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png"
-/>
+  href="https://developer.mozilla.org/static/img/favicon72.png" />
 <!-- Dispositivos iPhone sin pantalla Retina, iPod Touch y Android 2.1+: -->
 <link
   rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png"
-/>
+  href="https://developer.mozilla.org/static/img/favicon57.png" />
 <!-- favicon básico -->
 <link
   rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png"
-/>
+  href="https://developer.mozilla.org/static/img/favicon32.png" />
 ```
 
 Los comentarios explican para qué se usa cada icono (estos elementos abarcan situaciones como aportar un buen icono de alta resolución para usarlo cuando la página web se guarda en la página de inicio de un iPad).

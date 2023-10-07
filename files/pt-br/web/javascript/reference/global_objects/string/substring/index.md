@@ -47,19 +47,19 @@ O seguinte exemplo usa `substring()` para mostrar caracteres da palavra 'Mozilla
 var anyString = "Mozilla";
 
 // Mostra "Moz"
-console.log(anyString.substring(0,3));
-console.log(anyString.substring(3,0));
+console.log(anyString.substring(0, 3));
+console.log(anyString.substring(3, 0));
 
 // Mostra "lla"
-console.log(anyString.substring(4,7));
-console.log(anyString.substring(7,4));
+console.log(anyString.substring(4, 7));
+console.log(anyString.substring(7, 4));
 
 // Mostra "Mozill"
-console.log(anyString.substring(0,6));
+console.log(anyString.substring(0, 6));
 
 // Mostra "Mozilla"
-console.log(anyString.substring(0,7));
-console.log(anyString.substring(0,10));
+console.log(anyString.substring(0, 7));
+console.log(anyString.substring(0, 10));
 ```
 
 ### Usando `substring()` com `length`
@@ -68,13 +68,13 @@ O exemplo a seguir usa o método `substring()` e a propriedade {{jsxref ("String
 
 ```js
 // Mostra 'illa', os últimos 4 caracteres
-let anyString = 'Mozilla'
-let anyString4 = anyString.substring(anyString.length - 4)
+let anyString = "Mozilla";
+let anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);
 
 // Mostra 'zilla', os últimos 5 caracteres
-let anyString = 'Mozilla'
-let anyString5 = anyString.substring(anyString.length - 5)
+let anyString = "Mozilla";
+let anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
 ```
 
@@ -87,9 +87,9 @@ Os argumentos de `substring()` representam os índices inicial e final, enquanto
 Além disso, `substr()` é considerado um **recurso legacy no ECMAScript** e pode ser removido em versões futuras, portanto, é melhor evitar usá-lo, se possível.
 
 ```js
-let text = 'Mozilla'
-console.log(text.substring(2,5))  // retorna "zil"
-console.log(text.substr(2,3))     // retorna "zil"
+let text = "Mozilla";
+console.log(text.substring(2, 5)); // retorna "zil"
+console.log(text.substr(2, 3)); // retorna "zil"
 ```
 
 ### Diferenças entre `substring()` e `slice()`
@@ -99,23 +99,23 @@ Os métodos `substring()` e {{jsxref("String.slice", "slice()")}} são quase id�
 O método `substring()` troca seus dois argumentos se `indexStart` for maior que `indexEnd`, o que significa que uma string ainda será retornada. O método {{jsxref("String.slice", "slice()")}} retorna uma string vazia caso o mesmo ocorra.
 
 ```js
-let text = 'Mozilla'
-console.log(text.substring(5, 2))  // retorna "zil"
-console.log(text.slice(5, 2))      // retorna ""
+let text = "Mozilla";
+console.log(text.substring(5, 2)); // retorna "zil"
+console.log(text.slice(5, 2)); // retorna ""
 ```
 
 Se um ou ambos os argumentos forem negativos ou `NaN`, o método `substring()` os tratará como se fossem `0`.
 
 ```js
-console.log(text.substring(-5, 2))  // retorna "Mo"
-console.log(text.substring(-5, -2)) // retorna ""
+console.log(text.substring(-5, 2)); // retorna "Mo"
+console.log(text.substring(-5, -2)); // retorna ""
 ```
 
 `slice()` também trata os argumentos `NaN` como `0`, mas quando recebe valores negativos, ele conta regressivamente a partir do final da string para encontrar os índices.
 
 ```js
-console.log(text.slice(-5, 2))   // retorna ""
-console.log(text.slice(-5, -2))  // retorna "zil"
+console.log(text.slice(-5, 2)); // retorna ""
+console.log(text.slice(-5, -2)); // retorna "zil"
 ```
 
 Veja a página {{jsxref("String.slice", "slice()")}} para mais exemplos com números negativos.
@@ -126,10 +126,13 @@ O seguinte exemplo substitui uma substring dentro de uma string. Ela irá substi
 
 ```js
 function replaceString(oldS, newS, fullS) {
-// Substitui oldS por newS na string fullS
+  // Substitui oldS por newS na string fullS
   for (var i = 0; i < fullS.length; i++) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
-     fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
+      fullS =
+        fullS.substring(0, i) +
+        newS +
+        fullS.substring(i + oldS.length, fullS.length);
     }
   }
   return fullS;
@@ -138,10 +141,10 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-Note que isto pode resultar em um loop infinito se `oldS` for um substring de `newS` -- por exemplo, se você tentou substituir "`World`" com "`OtherWorld`". O melhor método para substituir strings é o seguinte:
+Note que isto pode resultar em um loop infinito se `oldS` for um substring de `newS` — por exemplo, se você tentou substituir "`World`" com "`OtherWorld`". O melhor método para substituir strings é o seguinte:
 
 ```js
-function replaceString(oldS, newS,fullS){
+function replaceString(oldS, newS, fullS) {
   return fullS.split(oldS).join(newS);
 }
 ```
@@ -150,11 +153,11 @@ O código acima serve como um exemplo para operações com substring. Se você p
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                   | Comentário                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------ |
-| ECMAScript 1st Edition.                                                                                          | Standard                 | Implementado no JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}                     | {{Spec2('ES5.1')}} |                                |
-| {{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}} | {{Spec2('ES6')}}     |                                |
+| Especificação                                                                        | Status             | Comentário                     |
+| ------------------------------------------------------------------------------------ | ------------------ | ------------------------------ |
+| ECMAScript 1st Edition.                                                              | Standard           | Implementado no JavaScript 1.0 |
+| {{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}                | {{Spec2('ES5.1')}} |                                |
+| {{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}} | {{Spec2('ES6')}}   |                                |
 
 ## Navegadores compatíveis
 

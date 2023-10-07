@@ -1,7 +1,6 @@
 ---
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
-browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
 {{JSRef}} {{SeeCompatTable}}
@@ -18,7 +17,7 @@ Elle peut également être utilisée pour construire des interfaces utilisateur 
 ## Syntaxe
 
 ```js
-Intl.supportedValuesOf(cle)
+Intl.supportedValuesOf(cle);
 ```
 
 ### Paramètres
@@ -42,7 +41,7 @@ Un tableau trié, contenant des chaînes de caractères uniques indiquant les va
 On peut vérifier que la méthode est prise en charge en la comparant à `undefined`&nbsp;:
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') { 
+if (typeof Intl.supportedValuesOf !== "undefined") {
   // la méthode est prise en charge
 }
 ```
@@ -52,8 +51,8 @@ if (typeof Intl.supportedValuesOf !== 'undefined') {
 Pour obtenir les valeurs prises en charge pour les représentations calendaires, on pourra appeler la méthode avec la clé `"calendar"` et parcourir le tableau obtenu&nbsp;:
 
 ```js
-Intl.supportedValuesOf("calendar").forEach(function(calendar) {
-   // "buddhist", "chinese", "coptic", "dangi", ...
+Intl.supportedValuesOf("calendar").forEach(function (calendar) {
+  // "buddhist", "chinese", "coptic", "dangi", ...
 });
 ```
 
@@ -62,24 +61,24 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
 Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
 
 ```js
-Intl.supportedValuesOf("collation").forEach(function(collation) {
-   // "big5han", "compat", "dict", "emoji", ...
+Intl.supportedValuesOf("collation").forEach(function (collation) {
+  // "big5han", "compat", "dict", "emoji", ...
 });
 
-Intl.supportedValuesOf("currency").forEach(function(currency) {
-   // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
+Intl.supportedValuesOf("currency").forEach(function (currency) {
+  // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
 });
 
-Intl.supportedValuesOf("numberingSystem").forEach(function(numberingSystem) {
-   // "adlm", "ahom", "arab", "arabext", "bali", ...
+Intl.supportedValuesOf("numberingSystem").forEach(function (numberingSystem) {
+  // "adlm", "ahom", "arab", "arabext", "bali", ...
 });
 
-Intl.supportedValuesOf("timeZone").forEach(function(timeZone) {
-   // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
+Intl.supportedValuesOf("timeZone").forEach(function (timeZone) {
+  // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
 });
 
-Intl.supportedValuesOf("unit").forEach(function(unit) {
-   // "acre", "bit", "byte", "celsius", "centimeter", ...
+Intl.supportedValuesOf("unit").forEach(function (unit) {
+  // "acre", "bit", "byte", "celsius", "centimeter", ...
 });
 ```
 

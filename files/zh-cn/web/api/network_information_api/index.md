@@ -27,12 +27,12 @@ let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
   console.log(
-    `设备的网络连接从 ${type} 变为了 ${navigator.connection.effectiveType}`
+    `设备的网络连接从 ${type} 变为了 ${navigator.connection.effectiveType}`,
   );
   type = navigator.connection.effectiveType;
 }
 
-connection.addEventListener('change', updateConnectionStatus);
+connection.addEventListener("change", updateConnectionStatus);
 ```
 
 ### 预加载大型资源

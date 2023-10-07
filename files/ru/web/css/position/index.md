@@ -1,7 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-translation_of: Web/CSS/position
 ---
 
 {{CSSRef}}Свойство {{cssxref('','CSS')}} **`position`** указывает, как элемент позиционируется в документе. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционированных элементов.{{EmbedInteractiveExample("pages/css/position.html")}}
@@ -85,10 +84,28 @@ translation_of: Web/CSS/position
 
 ```html
 <h1>Абсолютное позиционирование</h1>
-<p>Я базовый элемент уровня блока. Мои соседи сидят на новых строках ниже меня.</p>
-<p class="positioned">По умолчанию моя ширина 100% ширины родителя и я достиг такого же высокого уровня, как и весь дочерний контент. Наша общая ширина и высота - это наш контент+заполнение+ширина/высота границы.</p>
-<p>Мы отделены нашей маржой. Из-за развала края мы отделены шириной одного из наших полей, а не обоих.</p>
-<p>встроенные элементы <span>как этот</span> и <span>вот этот</span> будут сидеть в одной строке друг с другом и соседними текстовыми узлами, если в ней есть место. Переполнение встроенных элементов <span>перейдёт на новую строку, если это возможно, - как содержимое этого текста</span>, или просто перейдёт к новой строке, а если нет, то встанет, как это изображение:<img src="long.jpg"></p>
+<p>
+  Я базовый элемент уровня блока. Мои соседи сидят на новых строках ниже меня.
+</p>
+<p class="positioned">
+  По умолчанию моя ширина 100% ширины родителя и я достиг такого же высокого
+  уровня, как и весь дочерний контент. Наша общая ширина и высота - это наш
+  контент+заполнение+ширина/высота границы.
+</p>
+<p>
+  Мы отделены нашей маржой. Из-за развала края мы отделены шириной одного из
+  наших полей, а не обоих.
+</p>
+<p>
+  встроенные элементы <span>как этот</span> и <span>вот этот</span> будут сидеть
+  в одной строке друг с другом и соседними текстовыми узлами, если в ней есть
+  место. Переполнение встроенных элементов
+  <span
+    >перейдёт на новую строку, если это возможно, - как содержимое этого
+    текста</span
+  >, или просто перейдёт к новой строке, а если нет, то встанет, как это
+  изображение:<img src="long.jpg" />
+</p>
 ```
 
 ```css
@@ -128,32 +145,44 @@ span {
 ```html
 <div class="outer">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim.
-    Sed velit augue, pretium a sem aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id maximus erat aliquet.
-    Sed sagittis porta libero sed condimentum. Aliquam finibus lectus nec ante congue rutrum.
-    Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus. </p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
+  </p>
   <div class="box" id="one">One</div>
 </div>
 ```
@@ -188,7 +217,10 @@ span {
 Липкое позиционирование можно рассматривать как гибрид относительного и фиксированного позиционирования. Липкий позиционированный элемент обрабатывается как относительно позиционированный до тех пор, пока он не пересечёт заданный порог, после чего он будет считаться фиксированным, пока не достигнет границы его родителя. Например...
 
 ```css
-#one { position: sticky; top: 10px; }
+#one {
+  position: sticky;
+  top: 10px;
+}
 ```
 
 ... позиционирует элемент с id "one" относительно до тех пор, пока видовой экран не будет прокручен таким образом, чтобы элемент был меньше 10 пикселей от вершины. Помимо этого порога элемент будет зафиксирован на 10 пикселей сверху.
@@ -245,11 +277,14 @@ dl {
 }
 
 dt {
-  background: #B8C1C8;
-  border-bottom: 1px solid #989EA4;
-  border-top: 1px solid #717D85;
-  color: #FFF;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -258,14 +293,17 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
 }
 ```
 
@@ -284,10 +322,10 @@ dd + dd {
 
 ## Характеристики
 
-| Спецификация                                                                             | Статус                                   | Коммент                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------ |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                                      |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Добавляет значение свойства `sticky` |
+| Спецификация                                                        | Статус                        | Коммент                              |
+| ------------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
+| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}           |                                      |
+| {{SpecName('CSS3 Positioning','#position-property','position')}}    | {{Spec2('CSS3 Positioning')}} | Добавляет значение свойства `sticky` |
 
 ## Совместимость с браузером
 

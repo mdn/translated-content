@@ -1,8 +1,8 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-translation_of: Web/API/Storage/getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 Если в метод `getItem()` интерфейса {{domxref("Storage")}} передать ключ в качестве параметра, то метод вернёт значение, лежащее в хранилище по указанному ключу.
@@ -28,17 +28,17 @@ var aValue = storage.getItem(название Ключа);
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 

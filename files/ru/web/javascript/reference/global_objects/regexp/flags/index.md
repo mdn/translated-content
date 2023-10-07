@@ -1,18 +1,6 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Référence(2)
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -30,19 +18,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ### Пример: использование свойства `flags`
 
 ```js
-/foo/ig.flags;   // "gi"
-/bar/myu.flags;  // "muy"
+/foo/gi.flags; // "gi"
+/bar/muy.flags; // "muy"
 ```
 
 ## Полифил
 
 ```js
 if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, 'flags', {
+  Object.defineProperty(RegExp.prototype, "flags", {
     configurable: true,
-    get: function() {
+    get: function () {
       return this.toString().match(/[gimuy]*$/)[0];
-    }
+    },
   });
 }
 ```

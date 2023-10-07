@@ -2,6 +2,7 @@
 title: 부가 기능들
 slug: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}
 
 애드온들은 개발자들에게 Firefox의 기능을 변형하거나 확장하게 해 줍니다. 그것들은 표준 웹 기술인 JavaScript, HTML, CSS 또는 몇가지 전용 JavaScript API들을 사용하여 만들어집니다. 이러한 것들 사이에서, 애드온은 다음과 같은 일들을 할 수 있습니다 :
@@ -22,7 +23,7 @@ Firefox 애드온을 개발하는데 있어서는 현재 몇가지 툴셋들이 
 
 - [웹확장기능(WebExtensions)](/en-US/Add-ons/WebExtensions)
   - 웹확장기능(WebExtensions)은 Firefox 애드온의 미래 입니다. 이것은 크로스브라우져(cross-browser)간에 사용될 수 있도록 디자인 되었습니다.
-  FireFox에서 이용할 수 있도록 만들어진 웹확장기능(WebExtensions)은 대부분 약간의 수정을 거치면 Chrome, Edge, 그리고 Opera에서 동작합니다. 이것은 또한 멀티프로세스 Firefox에서도 완전하게 작동합니다. [현재 API가 지원하는 Firefox 와 다른 브라우져를 확인하세요.](/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 우리는 개발자가 원하는 API들을 지속적으로 디자인하고 구현할 것입니다.대부분의 웹확장기능(WebExtensions) API는 안드로이드용 Firefox에서도 사용 가능합니다. [더알아보기](/en-US/Add-ons/WebExtensions)
+    Firefox에서 이용할 수 있도록 만들어진 웹확장기능(WebExtensions)은 대부분 약간의 수정을 거치면 Chrome, Edge, 그리고 Opera에서 동작합니다. 이것은 또한 멀티프로세스 Firefox에서도 완전하게 작동합니다. [현재 API가 지원하는 Firefox 와 다른 브라우져를 확인하세요.](/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 우리는 개발자가 원하는 API들을 지속적으로 디자인하고 구현할 것입니다.대부분의 웹확장기능(WebExtensions) API는 안드로이드용 Firefox에서도 사용 가능합니다. [더알아보기](/en-US/Add-ons/WebExtensions)
 - [애드온 SDK](/en-US/Add-ons/SDK)
   - 애드온 SDK는 Firefox 애드온 개발을 위한 API를 제공하며, 이것은 개발, 테스트, 패키징을 위한 도구입니다. 당신은 [안드로이드용 Firefox를 위한 애드온 SDK 확장기능](/en-US/Add-ons/SDK/Tutorials/Mobile_development)도 사용할 수 있습니다. 우리는 당신이 [high-level API](/en-US/Add-ons/SDK/High-Level_APIs)들만을 사용할 것을 권장합니다. 이것은 당신이 웹확장기능(WebExtensions)으로 마이그레이션 하는 여행 길을 더 쉽게 해 줄 것입니다. [더알아보기](/en-US/Add-ons/SDK)
 

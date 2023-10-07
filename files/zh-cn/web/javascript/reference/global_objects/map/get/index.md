@@ -30,10 +30,10 @@ get(key)
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-console.log(myMap.get('bar')); // 返回 "foo"
-console.log(myMap.get('baz')); // 返回 undefined
+console.log(myMap.get("bar")); // 返回 "foo"
+console.log(myMap.get("baz")); // 返回 undefined
 ```
 
 ### 使用 get() 检索对对象的引用
@@ -41,12 +41,12 @@ console.log(myMap.get('baz')); // 返回 undefined
 ```js
 const arr = [];
 const myMap = new Map();
-myMap.set('bar', arr);
+myMap.set("bar", arr);
 
-myMap.get('bar').push('foo');
+myMap.get("bar").push("foo");
 
 console.log(arr); // ["foo"]
-console.log(myMap.get('bar')); // ["foo"]
+console.log(myMap.get("bar")); // ["foo"]
 ```
 
 注意，持有原始对象引用的映射实际上意味着对象不能被垃圾回收，这可能会导致意外的内存问题。如果你希望存储在映射中的对象具有与原始对象相同的生命周期，请考虑使用 {{jsxref("WeakMap")}}。

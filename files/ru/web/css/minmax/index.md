@@ -1,8 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-translation_of: Web/CSS/minmax()
-original_slug: Web/CSS/minmax()
 ---
 
 **`minmax()`** это [CSS](/ru/docs/Web/CSS) функция, определяющая диапазон размеров, который больше или равен _min_ и меньше или равен _max_. Используется в [CSS Grids](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes).
@@ -49,7 +47,7 @@ minmax(auto, 300px)
 - {{cssxref("&lt;percentage&gt;")}}
   - : A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the `<percentage>` must be treated as `auto`. The {{glossary("user agent")}} may adjust the intrinsic size contributions of the track to the size of the grid container and increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - {{cssxref("&lt;flex&gt;")}}
-  - : A non-negative dimension with the unit `fr` specifying the track’s flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
+  - : A non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
 - `max-content`
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
 - `min-content`
@@ -88,15 +86,11 @@ minmax(auto, 300px)
 ```html
 <div id="container">
   <div>
-    Item as wide as the content,<br/>
+    Item as wide as the content,<br />
     but at most 300 pixels.
   </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>Item with flexible width but a minimum of 200 pixels.</div>
+  <div>Inflexible item of 150 pixels width.</div>
 </div>
 ```
 

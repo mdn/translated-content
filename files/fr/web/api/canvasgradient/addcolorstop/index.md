@@ -1,13 +1,6 @@
 ---
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
-tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Méthode
-  - Reference
-translation_of: Web/API/CanvasGradient/addColorStop
 ---
 
 {{APIRef("Canvas API")}}
@@ -42,12 +35,12 @@ Il s'agit seulement d'un simple fragment de code qui utilise la méthode `addCol
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 var degrade = ctx.createLinearGradient(0, 0, 200, 0);
-degrade.addColorStop(0, 'green');
-degrade.addColorStop(1, 'white');
+degrade.addColorStop(0, "green");
+degrade.addColorStop(1, "white");
 ctx.fillStyle = degrade;
 ctx.fillRect(10, 10, 200, 100);
 ```
@@ -67,7 +60,8 @@ var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea>
+ctx.fillRect(10,10,200,100);</textarea
+>
 ```
 
 ```js hidden
@@ -83,14 +77,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

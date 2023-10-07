@@ -1,19 +1,6 @@
 ---
 title: Premiers pas en JavaScript
 slug: Learn/JavaScript/First_steps
-tags:
-  - Article
-  - Auto-évaluation
-  - Chaînes de caractères
-  - Débutant
-  - Guide
-  - JavaScript
-  - Module
-  - Nombres
-  - Opérateurs
-  - Tableaux
-  - Variables
-translation_of: Learn/JavaScript/First_steps
 ---
 
 {{LearnSidebar}}
@@ -24,9 +11,9 @@ Dans notre premier module consacré à JavaScript, nous allons tout d'abord rép
 
 Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
 
-- [Commencer avec le Web](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
+- [Commencer avec le Web](/fr/Apprendre/HTML/Introduction_à_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
 - [Introduction au langage HTML](/fr/docs/Web/Guide/HTML/Introduction).
-- [Introduction au langage CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS).
+- [Introduction au langage CSS](/fr/Apprendre/CSS/Introduction_à_CSS).
 
 > **Note :** Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 

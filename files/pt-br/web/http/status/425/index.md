@@ -15,8 +15,8 @@ O status HTTP **`425 Too Early`** indica que o servidor não quer correr o risco
 
 ## Especificações
 
-| Especificação                                            | Título                   |
-| -------------------------------------------------------- | ------------------------ |
+| Especificação                             | Título                   |
+| ----------------------------------------- | ------------------------ |
 | {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
 
 ## Compatibilidade com navegadores

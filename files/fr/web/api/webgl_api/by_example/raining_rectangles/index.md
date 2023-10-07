@@ -1,15 +1,6 @@
 ---
 title: Une pluie de rectangle
 slug: Web/API/WebGL_API/By_example/Raining_rectangles
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Raining_rectangles
-original_slug: Web/API/WebGL_API/By_example/Une_pluie_de_rectangle
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}
@@ -27,33 +18,34 @@ Dans cet exemple, on combine l'applique de couleurs unis dans le tampon de dessi
 De plus, cet exmple illustre comment intégrer des fonctions WebGL dans une boucle de jeu. La boucle de jeu est responsable du dessin pour l'animation, de la gestion des entrées utilisateur et de la réactivité de l'ensemble. Voici comment la boucle de jeu est implémentée avec des `setTimeout`.
 
 ```html hidden
-<p>Vous en avez attrapé
-<strong>0</strong>.
-  Vous en avez loupé
-<strong>0</strong>.</p>
-<canvas>Il semblerait que votre
-    navigateur ne supporte pas l'élément
-    HTML5 canvas.</canvas>
+<p>
+  Vous en avez attrapé <strong>0</strong>. Vous en avez loupé
+  <strong>0</strong>.
+</p>
+<canvas
+  >Il semblerait que votre navigateur ne supporte pas l'élément HTML5
+  canvas.</canvas
+>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -156,17 +148,17 @@ function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  var gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     var paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Échec de l'obtention du contexte."
-      + " WebGL. Votre navigateur ne supporte peut-être pas "
-      + " WebGL.";
+    paragraph.innerHTML =
+      "Échec de l'obtention du contexte." +
+      " WebGL. Votre navigateur ne supporte peut-être pas " +
+      " WebGL.";
     return null;
   }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;

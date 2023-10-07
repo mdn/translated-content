@@ -1,7 +1,6 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-translation_of: Web/CSS/margin-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -14,9 +13,9 @@ translation_of: Web/CSS/margin-inline-end
 
 ```css
 /* <length> values */
-margin-inline-end: 10px;   /* An absolute length */
-margin-inline-end: 1em;    /* relative to the text size */
-margin-inline-end: 5%;     /* relative to the nearest block container's width */
+margin-inline-end: 10px; /* An absolute length */
+margin-inline-end: 1em; /* relative to the text size */
+margin-inline-end: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-inline-end: auto;
@@ -69,8 +68,8 @@ div {
 
 ## Specification
 
-| Specification                                                                                                            | Status                                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
+| Specification                                                                             | Status                              | Comment            |
+| ----------------------------------------------------------------------------------------- | ----------------------------------- | ------------------ |
 | {{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
 
 ## Browser compatibility

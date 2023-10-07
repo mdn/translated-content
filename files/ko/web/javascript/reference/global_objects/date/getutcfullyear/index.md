@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ## Syntax
 
 ```js
-    dateObj.getUTCFullYear()
+dateObj.getUTCFullYear();
 ```
 
 ### Return value

@@ -1,19 +1,6 @@
 ---
-title: 'Руководство часть 7: Сессии'
+title: "Руководство часть 7: Сессии"
 slug: Learn/Server-side/Django/Sessions
-tags:
-  - django
-  - Django
-  - Для начинающих
-  - Изучение
-  - Питон
-  - Руководство
-  - Серверная сторона
-  - Статья
-  - применение сессий
-  - сессии
-translation_of: Learn/Server-side/Django/Sessions
-original_slug: Learn/Server-side/Django/Сессии
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
@@ -141,18 +128,21 @@ def index(request):
 
 Для показа значения переменной, из следующего фрагмента добавьте нижнюю строчку кода в ваш шаблон главной страницы сайта (**/locallibrary/catalog/templates/index.html**), в его нижний раздел "Dynamic content":
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
 <ul>
-<li><strong>Books:</strong> \{{ num_books }}</li>
-<li><strong>Copies:</strong> \{{ num_instances }}</li>
-<li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-<li><strong>Authors:</strong> \{{ num_authors }}</li>
+  <li><strong>Books:</strong> \{{ num_books }}</li>
+  <li><strong>Copies:</strong> \{{ num_instances }}</li>
+  <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
+  <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
 ```
 
 Сохраните ваши изменения и перезапустите сервер. Данное значение должно изменяться всякий раз, когда вы обновляете страницу.

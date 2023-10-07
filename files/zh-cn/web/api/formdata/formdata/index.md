@@ -11,8 +11,8 @@ slug: Web/API/FormData/FormData
 
 ## 语法
 
-```js
-var formData = new FormData(form)
+```js-nolint
+new FormData(form)
 ```
 
 ### 参数
@@ -31,7 +31,7 @@ var formData = new FormData(); // 当前为空
 你可以使用{{domxref("FormData.append")}}来添加键/值对到表单里面；
 
 ```js
-formData.append('username', 'Chris');
+formData.append("username", "Chris");
 ```
 
 或者你可以使用可选的 `form` 参数来创建一个带预置数据的 FormData 对象：
@@ -40,24 +40,24 @@ formData.append('username', 'Chris');
 <form id="myForm" name="myForm">
   <div>
     <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" />
   </div>
   <div>
     <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc">
+    <input type="text" id="useracc" name="useracc" />
   </div>
   <div>
     <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile">
+    <input type="file" id="userfile" name="userfile" />
   </div>
-<input type="submit" value="Submit!">
+  <input type="submit" value="Submit!" />
 </form>
 ```
 
 > **备注：** 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
 
 ```js
-var myForm = document.getElementById('myForm');
+var myForm = document.getElementById("myForm");
 formData = new FormData(myForm);
 ```
 

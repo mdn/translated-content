@@ -32,7 +32,7 @@ add(value)
 const mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // 可以链式调用
+mySet.add(5).add("some text"); // 可以链式调用
 
 console.log(mySet);
 // Set [1, 5, "some text"]

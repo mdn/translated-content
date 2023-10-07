@@ -1,7 +1,6 @@
 ---
 title: Feed content access API
 slug: orphaned/Feed_content_access_API
-original_slug: Feed_content_access_API
 ---
 
 [Firefox 2](/ja/Firefox_2) と Thunderbird 2 は拡張製作者に RSS と Atom フィードへのアクセスを簡単にする一連のインターフェースを導入します。

@@ -1,7 +1,6 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
-translation_of: Web/API/Cache/add
 ---
 
 {{APIRef("Service Workers API")}}
@@ -11,10 +10,10 @@ translation_of: Web/API/Cache/add
 ```js
 fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('bad response status');
+    throw new TypeError("bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 Для более сложных операций, вам нужно использовать {{domxref("Cache.put","Cache.put()")}}.
@@ -49,11 +48,11 @@ cache.add(request).then(function() {
 Этот блок кода ожидает старта события {{domxref("InstallEvent")}} , а затем запускает {{domxref("ExtendableEvent.waitUntil","waitUntil")}} для обработки процесса установки приложения. Этот процесс состоит из вызова {{domxref("CacheStorage.open")}} для создания нового кеша, и использования {{domxref("Cache.add")}} для добавления ресурсов в этот кеш.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.add('/sw-test/index.html');
-    })
+    caches.open("v1").then(function (cache) {
+      return cache.add("/sw-test/index.html");
+    }),
   );
 });
 ```

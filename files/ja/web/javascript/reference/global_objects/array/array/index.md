@@ -12,11 +12,11 @@ l10n:
 ## 構文
 
 ```js
-new Array(element0, element1, /* … ,*/ elementN)
-new Array(arrayLength)
+new Array(element0, element1, /* … ,*/ elementN);
+new Array(arrayLength);
 
-Array(element0, element1, /* … ,*/ elementN)
-Array(arrayLength)
+Array(element0, element1, /* … ,*/ elementN);
+Array(arrayLength);
 ```
 
 > **メモ:** `Array()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出せます。どちらも新しい `Array` のインスタンスを生成します。
@@ -40,10 +40,10 @@ Array(arrayLength)
 配列は[リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#配列リテラル)記法を使用して生成することができます。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
+const fruits = ["りんご", "バナナ"];
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "りんご"
+console.log(fruits[0]); // "りんご"
 ```
 
 ### 単一の引数を持つ Array コンストラクター
@@ -54,7 +54,7 @@ console.log(fruits[0]);     // "りんご"
 const fruits = new Array(2);
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // undefined
+console.log(fruits[0]); // undefined
 ```
 
 ### 複数の引数を持つ Array コンストラクター
@@ -62,10 +62,10 @@ console.log(fruits[0]);     // undefined
 2 つ以上の引数がコンストラクターに渡された場合、与えられた要素を持つ新しい {{jsxref("Array")}} が生成されます。
 
 ```js
-const fruits = new Array('りんご', 'バナナ');
+const fruits = new Array("りんご", "バナナ");
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "りんご"
+console.log(fruits[0]); // "りんご"
 ```
 
 ## 仕様書

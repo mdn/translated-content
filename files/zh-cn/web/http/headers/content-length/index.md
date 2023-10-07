@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Content-Length
 
 **`Content-Length`** 是一个实体消息首部，用来指明发送给接收方的消息主体的大小，即用十进制数字表示的八位元组的数目。
 
-| Header type                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Entity header")}} |
+| ------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                           |
 
 ## 语法
 

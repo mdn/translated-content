@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ## 구문
 
 ```js
-object.valueOf()
+object.valueOf();
 ```
 
 ### 반환 값
@@ -36,7 +36,9 @@ JavaScript는 객체를 원시 값으로 변환할 때 `valueOf` 메서드를 �
 `MyNumberType`이라는 객체 형태가 존재하고, 이 객체의 `valueOf` 메서드를 만들고 싶다고 가정하겠습니다. 다음의 코드는 객체의 `valueOf` 메서드에 사용자 정의 함수를 할당합니다.
 
 ```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+MyNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 위의 코드가 활성화된 상태에서 어떤 `MyNumberType` 객체를 원시 값으로 표현해야 하면 JavaScript가 자동으로 저 함수를 실행합니다.
@@ -44,7 +46,7 @@ MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 이 객체의 `valueOf` 메서드는 보통 JavaScript가 호출하겠지만 다음처럼 직접 호출할 수도 있습니다.
 
 ```js
-myNumberType.valueOf()
+myNumberType.valueOf();
 ```
 
 > **참고:** 문자열 문맥에서 객체-문자열 변환은 {{jsxref("Object.toString", "toString()")}} 메서드를 사용하며, {{jsxref("String")}} 객체의 `valueOf`를 사용해 원시 문자열로 변환하는 것과는 다릅니다. 모든 객체는, 비록 결과가 "`[object type]`" 뿐이라도 문자열 변환 기능을 가지고 있습니다. 그러나 대다수의 객체는 숫자, 불리언, 함수 등으로 변환되지 않습니다.
@@ -55,11 +57,11 @@ myNumberType.valueOf()
 
 ```js
 function MyNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
 var myObj = new MyNumberType(4);
@@ -69,21 +71,21 @@ myObj + 3; // 7
 ### 단항 더하기 사용하기
 
 ```js
-    +"5" // 5 (string to number)
-    +"" // 0 (string to number)
-    +"1 + 2" // NaN (doesn't evaluate)
-    +new Date() // same as (new Date()).getTime()
-    +"foo" // NaN (string to number)
-    +{} // NaN
-    +[] // 0 (toString() returns an empty string list)
-    +[1] // 1
-    +[1,2] // NaN
-    +new Set([1]) // NaN
-    +BigInt(1) // Uncaught TypeError: Cannot convert a BigInt value to a number
-    +undefined // NaN
-    +null // 0
-    +true // 1
-    +false // 0
++"5"; // 5 (string to number)
++""; // 0 (string to number)
++"1 + 2"; // NaN (doesn't evaluate)
++new Date(); // same as (new Date()).getTime()
++"foo"; // NaN (string to number)
++{}; // NaN
++[]; // 0 (toString() returns an empty string list)
++[1]; // 1
++[1, 2]; // NaN
++new Set([1]); // NaN
++BigInt(1); // Uncaught TypeError: Cannot convert a BigInt value to a number
++undefined; // NaN
++null; // 0
++true; // 1
++false; // 0
 ```
 
 ## 명세

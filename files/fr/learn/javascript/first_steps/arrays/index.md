@@ -1,22 +1,6 @@
 ---
 title: Les tableaux
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - Arrays
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Join
-  - Learn
-  - Pop
-  - Push
-  - l10n:priority
-  - shift
-  - split
-  - unshift
-translation_of: Learn/JavaScript/First_steps/Arrays
-original_slug: Learn/JavaScript/First_steps/tableaux
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
@@ -51,10 +35,10 @@ Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, 
 Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés ou utiliser la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -62,7 +46,7 @@ Comme précédemment, initions‑nous aux bases pratiques des tableaux en entran
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -96,64 +80,59 @@ Comme précédemment, initions‑nous aux bases pratiques des tableaux en entran
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -166,17 +145,17 @@ On définit les valeurs d'un tableau par une liste d'éléments entre crochets d
 
 1. Disons que nous voulons mettre une liste d'achats dans un tableau — nous devons opérer comme suit. Entrez les lignes ci‑après dans la console&nbsp;:
 
-    ```js
-    let shopping = ['pain', 'lait', 'fromage', 'houmous', 'nouilles'];
-    shopping;
-    ```
+   ```js
+   let shopping = ["pain", "lait", "fromage", "houmous", "nouilles"];
+   shopping;
+   ```
 
 2. Dans ce cas, chaque élément du tableau est une chaîne, mais gardez en tête que vous pouvez stocker n'importe quel élément dans un tableau — chaîne, nombre, objet, autre variable et même d'autres tableaux. Vous pouvez également mélanger et assortir les types d'articles — il n'est pas obligatoire que ce soient tous des nombres, des chaînes, etc. Essayez ceci&nbsp;:
 
    ```js
-    let sequence = [1, 1, 2, 3, 5, 8, 13];
-    let random = ['arbre', 795, [0, 1, 2]];
-    ```
+   let sequence = [1, 1, 2, 3, 5, 8, 13];
+   let random = ["arbre", 795, [0, 1, 2]];
+   ```
 
 3. Créez donc quelques tableaux de votre cru avant de continuer.
 
@@ -186,26 +165,26 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
 
 1. Entrez ceci dans la console&nbsp;:
 
-    ```js
-    shopping[0];
-    // renvoie "pain"
-    ```
+   ```js
+   shopping[0];
+   // renvoie "pain"
+   ```
 
 2. Vous pouvez aussi modifier un élément dans un tableau en donnant simplement une nouvelle valeur à l'élément. Essayez ceci&nbsp;:
 
-    ```js
-    shopping[0] = 'crème de sésame';
-    shopping;
-    // shopping renvoie maintenant [ "crème de sésame", "lait", "fromage", "houmous", "nouilles" ]
-    ```
+   ```js
+   shopping[0] = "crème de sésame";
+   shopping;
+   // shopping renvoie maintenant [ "crème de sésame", "lait", "fromage", "houmous", "nouilles" ]
+   ```
 
-    > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
+   > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
 
 3. Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
 
    ```js
-    random[2][2];
-    ```
+   random[2][2];
+   ```
 
 4. Poursuivez et faites quelques autres modifications dans les exemples de tableaux avant de poursuivre.
 
@@ -245,97 +224,104 @@ Souvent, vous serez confronté à des données brutes contenues dans une longue 
 
 1. Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console&nbsp;:
 
-    ```js
-    let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    ```
+   ```js
+   let myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+   ```
 
 2. Scindons‑la à chaque virgule&nbsp;:
 
-    ```js
-    let myArray = myData.split(',');
-    myArray;
-    ```
+   ```js
+   let myArray = myData.split(",");
+   myArray;
+   ```
 
 3. Pour terminer, trouvons la taille du nouveau tableau et retrouvons quelques‑uns de ses éléments&nbsp;:
 
-    ```js
-    myArray.length;
-    myArray[0]; // le premier élément du tableau
-    myArray[1]; // le deuxième élément du tableau
-    myArray[myArray.length-1]; // le dernier élément du tableau
-    ```
+   ```js
+   myArray.length;
+   myArray[0]; // le premier élément du tableau
+   myArray[1]; // le deuxième élément du tableau
+   myArray[myArray.length - 1]; // le dernier élément du tableau
+   ```
 
 4. Vous pouvez également faire le contraire avec la méthode {{jsxref("Array.prototype.join()","join()")}}. Essayons&nbsp;:
 
-    ```js
-    let myNewString = myArray.join(',');
-    myNewString;
-    ```
+   ```js
+   let myNewString = myArray.join(",");
+   myNewString;
+   ```
 
 5. Une autre façon de convertir un tableau en chaîne consiste à se servir de la méthode {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` est plus simple au plan des arguments que `join()`, car elle ne prend pas de paramètre, mais elle est plus limitée. Avec `join()` vous pouvez diversifier les séparateurs (essayez de lancer la commande du point 4 avec un caractère autre que la virgule).
 
-    ```js
-    let dogNames = ["Rocket","Flash","Bella","Slugger"];
-    dogNames.toString(); //Rocket,Flash,Bella,Slugger
-    ```
+   ```js
+   let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
+   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   ```
 
 ### Ajout et suppression d'éléments de tableau
 
 Nous n'avons pas encore parlé d'ajout et de suppression d'éléments de tableau — allons‑y. Nous utiliserons le tableau `myArray` dont nous nous sommes servis à la fin de la dernière section. Si vous n'avez pas entré les commandes de cette section dans la console, il est nécessaire de créer d'abord le tableau&nbsp;:
 
 ```js
-let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
+let myArray = [
+  "Manchester",
+  "London",
+  "Liverpool",
+  "Birmingham",
+  "Leeds",
+  "Carlisle",
+];
 ```
 
 Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous pouvez respectivement utiliser {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}}.
 
 1. Voyons `push()` d'abord — notez que vous devez mettre en paramètre les éléments que vous souhaitez ajouter à la fin du tableau. Essayez ceci&nbsp;:
 
-    ```js
-    myArray.push('Cardiff');
-    myArray;
-    myArray.push('Bradford', 'Brighton');
-    myArray;
-    ```
+   ```js
+   myArray.push("Cardiff");
+   myArray;
+   myArray.push("Bradford", "Brighton");
+   myArray;
+   ```
 
 2. La taille du tableau modifié est renvoyée quand l'appel de la méthode est terminé. Si vous voulez enregistrer la taille du nouveau tableau dans une variable, vous pouvez écrire quelque chose comme ceci&nbsp;:
 
-    ```js
-    let newLength = myArray.push('Bristol');
-    myArray;
-    newLength;
-    ```
+   ```js
+   let newLength = myArray.push("Bristol");
+   myArray;
+   newLength;
+   ```
 
 3. Supprimer le dernier élément de la liste est très simple&nbsp;: il suffit de lancer `pop()` sur celle‑ci. Essayez&nbsp;:
 
-    ```js
-    myArray.pop();
-    ```
+   ```js
+   myArray.pop();
+   ```
 
 4. L'élément supprimé est renvoyé à la fin de l'appel de la méthode. Également :
 
-    ```js
-    let removedItem = myArray.pop();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.pop();
+   myArray;
+   removedItem;
+   ```
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} et {{jsxref("Array.prototype.shift()","shift()")}} fonctionnent exactement de la même manière, excepté qu'il travaillent sur la tête du tableau au lieu de la queue.
 
 1. D'abord `unshift()` — essayez&nbsp;:
 
-    ```js
-    myArray.unshift('Edinburgh');
-    myArray;
-    ```
+   ```js
+   myArray.unshift("Edinburgh");
+   myArray;
+   ```
 
 2. Maintenant `shift()` — essayez&nbsp;!
 
-    ```js
-    let removedItem = myArray.shift();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.shift();
+   myArray;
+   removedItem;
+   ```
 
 ## Activité&nbsp;: affichons les produits
 
@@ -351,13 +337,9 @@ Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 370px;">
@@ -390,35 +372,36 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n                \'Socks:5.99\',\n                \'T-shirt:14.99\',\n                \'Trousers:31.99\',\n                \'Shoes:23.99\'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n                'Socks:5.99',\n                'T-shirt:14.99',\n                'Trousers:31.99',\n                'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(':');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + ' — $' + price;\n\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Activité_affichons_les_produits', '100%', 600) }}
@@ -434,17 +417,13 @@ Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ic
 Pour terminer l'application, il vous faut&nbsp;:
 
 1. Ajouter une ligne sous le commentaire `// number 1` pour ajouter la valeur qui vient d'être saisie dans la boîte au début du tableau. Cette valeur est récupérée avec `searchInput.value`.
-2. Ajouter une ligne sous le commentaire `// number 2`  pour supprimer la valeur en fin de liste du tableau.
+2. Ajouter une ligne sous le commentaire `// number 2` pour supprimer la valeur en fin de liste du tableau.
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>Search</button>
 
-<input type="text"><button>Search</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 370px;">
@@ -487,35 +466,36 @@ searchBtn.onclick = function() {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n    myHistory.unshift(searchInput.value);\n\n    list.innerHTML = \'\';\n\n    for(var i = 0; i < myHistory.length; i++) {\n      itemText = myHistory[i];\n      var listItem = document.createElement(\'li\');\n      listItem.textContent = itemText;\n      list.appendChild(listItem);\n    }\n\n    if(myHistory.length >= 5) {\n      myHistory.pop();\n    }\n\n    searchInput.value = \'\';\n    searchInput.focus();\n  }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n    myHistory.unshift(searchInput.value);\n\n    list.innerHTML = '';\n\n    for(var i = 0; i < myHistory.length; i++) {\n      itemText = myHistory[i];\n      var listItem = document.createElement('li');\n      listItem.textContent = itemText;\n      list.appendChild(listItem);\n    }\n\n    if(myHistory.length >= 5) {\n      myHistory.pop();\n    }\n\n    searchInput.value = '';\n    searchInput.focus();\n  }\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('Activité_Top_5_des_recherches', '100%', 600) }}

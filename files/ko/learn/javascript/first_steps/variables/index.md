@@ -33,12 +33,12 @@ slug: Learn/JavaScript/First_steps/Variables
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
-}
+button.onclick = function () {
+  let name = prompt("What is your name?");
+  alert("Hello " + name + ", nice to see you!");
+};
 ```
 
 {{ EmbedLiveSample('What_is_a_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
@@ -48,18 +48,18 @@ button.onclick = function() {
 왜 변수가 유용한 지 이해하려면, 변수를 사용하지 않고 이 예제를 작성하는 방법에 대해 생각해 봅시다. 그러면 아마 이런 식으로 끝날 것입니다.
 
 ```js example-bad
-let name = prompt('What is your name?');
+let name = prompt("What is your name?");
 
-if (name === 'Adam') {
-  alert('Hello Adam, nice to see you!');
-} else if (name === 'Alan') {
-  alert('Hello Alan, nice to see you!');
-} else if (name === 'Bella') {
-  alert('Hello Bella, nice to see you!');
-} else if (name === 'Bianca') {
-  alert('Hello Bianca, nice to see you!');
-} else if (name === 'Chris') {
-  alert('Hello Chris, nice to see you!');
+if (name === "Adam") {
+  alert("Hello Adam, nice to see you!");
+} else if (name === "Alan") {
+  alert("Hello Alan, nice to see you!");
+} else if (name === "Bella") {
+  alert("Hello Bella, nice to see you!");
+} else if (name === "Bianca") {
+  alert("Hello Bianca, nice to see you!");
+} else if (name === "Chris") {
+  alert("Hello Chris, nice to see you!");
 }
 
 // ... and so on ...
@@ -87,10 +87,10 @@ var myAge;
 여기서 우리는 myName과 myAge라는 두 개의 변수를 생성합니다. 웹 브라우저의 콘솔 또는 아래 콘솔에서 두행을 입력해 보십시오 (원하는 경우, [콘솔](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)을 별도의 탭이나 창에서 열 수 있음). 그 후, 자신이 명명한 변수를 만들어 보십시오.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -98,7 +98,7 @@ var myAge;
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -132,61 +132,56 @@ var myAge;
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
+  </head>
+  <body></body>
 
-</head>
-<body>
+  <script>
+    var geval = eval;
+    function createInput() {
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-</body>
-
-<script>
-var geval = eval;
-function createInput() {
-var inputDiv = document.createElement('div');
-var inputPara = document.createElement('p');
-var inputForm = document.createElement('input');
-
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
-</script>
+  </script>
 </html>
 ```
 
@@ -214,7 +209,7 @@ scoobyDoo;
 변수를 선언한 후에는 값으로 초기화 할 수 있습니다. 변수 이름 다음에 등호(`=`)와 그 뒤에 부여 할 값을 입력하여 이 작업을 수행 할 수 있습니다.
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -228,7 +223,7 @@ myAge;
 다음과 같이 변수를 선언하고 동시에 초기화 할 수 있습니다.
 
 ```js
-var myName = 'Chris';
+var myName = "Chris";
 ```
 
 아마도 변수의 선언과 초기화를 두줄로 나누어 하는것 보다 더 빠르기 때문에 대부분 이러한 방식을 자주 사용 하게 될 겁니다.
@@ -236,14 +231,14 @@ var myName = 'Chris';
 > **참고:**
 >
 > 여러 줄 문자열로 JavaScript 프로그램을 작성할 때(write a multiline JavaScript), 변수를 선언하기 전에 해당 변수의 값을 초기화 할 수 있습니다. 이것이 가능한 이유는 JavaScript 에서 일반적으로 변수 선언문이 다른 코드 보다 먼저 실행되기 때문인데, 이 동작을 **호이스팅**이라고 합니다.
-> 자세한 내용은 [var 호이스팅](/ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting)) 문서를 참고하세요.
+> 자세한 내용은 [var 호이스팅](</ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting)>) 문서를 참고하세요.
 
 ## 변수의 재지정
 
 변수에 값이 할당되면 다른 값을 지정하여 해당 값을 업데이트 할 수 있습니다. 콘솔에 다음 행을 입력해 보세요.
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -256,14 +251,14 @@ myAge = 40;
 - 변수 이름의 시작부분에 숫자를 사용하지 마세요. 허용되지 않으며 오류가 발생합니다.
 - 안전한 명명법은 소위 ["lower camel case"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms)(소문자 낙타 문법) 입니다. 여러 단어를 하나로 묶고 첫 단어의 시작은 소문자를 사용하며 그다음 단어의 시작은 대문자로 사용합니다. 우리는 지금까지 이 문서에서 변수 이름에 이 방법을 사용해 왔습니다.
 - 포함된 데이터를 쉽게 이해 할 수 있게 변수 이름을 직관적으로 부여 합니다. 단일 문자 / 숫자 또는 긴 구절을 사용하지 마세요.변수 이름을 직관적으로 만들어, 포함된 데이터를 표현 할 수 있습니다.
-- 변수는 대소문자를 구분 합니다. - `myage` 와 `myAge`  는 다른 변수 입니다.
+- 변수는 대소문자를 구분 합니다. - `myage` 와 `myAge` 는 다른 변수 입니다.
 - 마지막으로 JavaScript 예약어를 변수 이름으로 사용하면 안됩니다. (예약어란 JavaScript의 실제 구문을 구성하는 단어를 의미 합니다.) 따라서 변수 이름으로 `var`, `function`, `let`, `for` 와 같은 단어를 사용 할 수 없습니다. 브라우저는 이러한 단어를 다른 코드 아이템(예약어)로 인식하므로 오류가 발생 합니다.
 
 > **참고:** 다음 [Lexical grammar — keywords](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 링크에서 예약어의 목록을 확인 할 수 있습니다.
 
 바람직한 변수 이름의 예:
 
-```js example-good
+```js-nolint example-good
 age
 myAge
 init
@@ -275,7 +270,7 @@ audio2
 
 바람직하지 않은 변수 이름의 예:
 
-```js example-bad
+```js-nolint example-bad
 1
 a
 _12
@@ -308,7 +303,7 @@ var myAge = 17;
 문자열은 텍스트의 조각입니다. 변수에 문자열 값을 대입할 때, 작은따옴표(')나 큰따옴표(")로 묶어야 합니다. 그렇지 않으면 JavaScript는 다른 변수 이름으로 해석하게 됩니다.
 
 ```js
-var dolphinGoodbye = 'So long and thanks for all the fish';
+var dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### 불리언(Booleans)
@@ -332,8 +327,8 @@ var test = 6 < 3;
 배열은 대괄호로 묶이고 쉼표로 구분 된 여러 값을 포함하는 단일 객체입니다. 다음 코드를 콘솔에 입력해 보세요.
 
 ```js
-var myNameArray = ['Chris', 'Bob', 'Jim'];
-var myNumberArray = [10,15,40];
+var myNameArray = ["Chris", "Bob", "Jim"];
+var myNumberArray = [10, 15, 40];
 ```
 
 이러한 배열이 정의되면 다음과 같은 구문을 사용하여 개별 값에 접근 할 수 있습니다. 다음 코드를 입력해 보세요.
@@ -354,13 +349,13 @@ myNumberArray[2]; // should return 40
 콘솔에 다음 코드를 입력해 보세요.
 
 ```js
-var dog = { name : 'Spot', breed : 'Dalmatian' };
+var dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 객체에 저장된 정보를 검색하기 위해서는 아래 구문을 사용합니다.
 
 ```js
-dog.name
+dog.name;
 ```
 
 지금은 객체에 대해 더 자세하게 보지 않을 것입니다. - 앞으로 모듈에 있는 객체에 대해 더 많이 배울 수 있습니다.
@@ -372,16 +367,16 @@ JavaScript는 "느슨한 유형의 언어(loosely typed language)" 입니다. �
 예를 들어, 변수를 선언하고 그 변수의 값을 따옴표로 묶은 값을 지정하면 브라우저는 변수의 값을 문자열로 인식합니다.
 
 ```js
-var myString = 'Hello';
+var myString = "Hello";
 ```
 
 따옴표 안에 숫자가 포함되어 있어도 여전히 문자열로 인식되므로 주의해야 합니다:
 
 ```js
-var myNumber = '500'; // oops, this is still a string
-typeof(myNumber);
+var myNumber = "500"; // oops, this is still a string
+typeof myNumber;
 myNumber = 500; // much better — now this is a number
-typeof(myNumber)
+typeof myNumber;
 ```
 
 위의 네 줄의 코드를 하나씩 콘솔에 입력하여 결과가 무엇인지 확인해 보세요.(주석은 입력하지 마세요.) 여기에서 `typeof()` 라는 특수 함수를 사용하고 있음을 알 수 있습니다. - 이 함수는 입력한 변수의 데이터 유형을 반환합니다. 위의 코드에서 처음으로 호출될 때, `myNumber` 변수에는 `'500'` 라는 문자열이 포함되어 있으므로 `string` 을 반환해야 합니다. 두 번째는 어떤 값을 반환하는지 확인해 보세요.

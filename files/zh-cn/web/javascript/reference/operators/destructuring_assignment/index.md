@@ -80,7 +80,10 @@ const { a, b } = obj;
 
 ```js
 const obj = { a: 1, b: { c: 2 } };
-const { a, b: { c: d } } = obj;
+const {
+  a,
+  b: { c: d },
+} = obj;
 // Two variables are bound: `a` and `d`
 ```
 
@@ -89,7 +92,9 @@ const { a, b: { c: d } } = obj;
 ```js
 const obj = { a: 1, b: { c: 2 } };
 const { a } = obj; // a is constant
-let { b: { c: d } } = obj; // d is re-assignable
+let {
+  b: { c: d },
+} = obj; // d is re-assignable
 ```
 
 在赋值模式中，模式不以关键字开头。每个解构属性都被赋值给一个赋值目标——这个赋值目标可以事先用 `var` 或 `let` 声明，也可以是另一个对象的属性——一般来说，可以是任何可以出现在赋值表达式左侧的东西。
@@ -152,7 +157,7 @@ console.log(others2); // [2, 3]
 
 剩余属性必须是模式中的最后一个，并且不能有尾随逗号。
 
-```js example-bad
+```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
@@ -176,7 +181,7 @@ const [a, ...b,] = [1, 2, 3];
 #### 基本变量赋值
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
@@ -186,16 +191,16 @@ console.log(green); // "three"
 
 #### 解构比源更多的元素
 
-在从赋值语句右侧指定的长度为 *N* 的数组解构的数组中，如果赋值语句左侧指定的变量数量大于 *N*，则只有前 *N* 个变量被赋值。其余变量的值将是未定义。
+在从赋值语句右侧指定的长度为 _N_ 的数组解构的数组中，如果赋值语句左侧指定的变量数量大于 _N_，则只有前 _N_ 个变量被赋值。其余变量的值将是未定义。
 
 ```js
-const foo = ['one', 'two'];
+const foo = ["one", "two"];
 
 const [red, yellow, green, blue] = foo;
 console.log(red); // "one"
 console.log(yellow); // "two"
 console.log(green); // undefined
-console.log(blue);  //undefined
+console.log(blue); //undefined
 ```
 
 #### 交换变量
@@ -253,7 +258,7 @@ console.log(c); // 1
 你也可以忽略全部返回值：
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 #### 使用绑定模式作为剩余属性
@@ -307,7 +312,9 @@ function parseProtocol(url) {
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/zh-CN/docs/Web/JavaScript'));
+console.log(
+  parseProtocol("https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"),
+);
 // "https"
 ```
 
@@ -316,7 +323,10 @@ console.log(parseProtocol('https://developer.mozilla.org/zh-CN/docs/Web/JavaScri
 数组解构调用右侧的[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。因此，任何可迭代对象（不一定是数组）都可以解构。
 
 ```js
-const [a, b] = new Map([[1, 2], [3, 4]]);
+const [a, b] = new Map([
+  [1, 2],
+  [3, 4],
+]);
 console.log(a, b); // [1, 2] [3, 4]
 ```
 
@@ -337,8 +347,8 @@ const obj = {
       console.log(v);
       yield v;
     }
-  }
-}
+  },
+};
 const [a, b] = obj; // Only logs 0 and 1
 ```
 
@@ -351,8 +361,8 @@ const obj = {
       console.log(v);
       yield v;
     }
-  }
-}
+  },
+};
 const [a, b, ...rest] = obj; // Logs 0 1 2 3
 console.log(rest); // [2, 3] (an array)
 ```
@@ -410,10 +420,10 @@ console.log(bb); // 5
 ```js
 const user = {
   id: 42,
-  displayName: 'jdoe',
+  displayName: "jdoe",
   fullName: {
-    firstName: 'Jane',
-    lastName: 'Doe',
+    firstName: "Jane",
+    lastName: "Doe",
   },
 };
 ```
@@ -445,7 +455,7 @@ function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
-console.log(whois(user));  // "jdoe is Jane"
+console.log(whois(user)); // "jdoe is Jane"
 ```
 
 #### 设置函数参数的默认值
@@ -455,7 +465,11 @@ console.log(whois(user));  // "jdoe is Jane"
 下面我们展示了一个默认大小为 `big`的函数，默认坐标为 `x: 0, y: 0`，默认半径为 25。
 
 ```js
-function drawChart({ size = 'big', coords = { x: 0, y: 0 }, radius = 25 } = {}) {
+function drawChart({
+  size = "big",
+  coords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, coords, radius);
   // do some chart drawing
 }
@@ -470,36 +484,36 @@ drawChart({
 
 你也可以在没有该默认值的情况下编写该函数。但是，如果你省略该默认值，该函数将在调用时寻找至少一个参数来提供，而在当前形式下，你可以在不提供任何参数的情况下调用 `drawChart()`。否则，你至少需要提供一个空对象字面量。
 
-有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
+有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
 
 #### 解构嵌套对象和数组
 
 ```js
 const metadata = {
-  title: 'Scratchpad',
+  title: "Scratchpad",
   translations: [
     {
-      locale: 'de',
+      locale: "de",
       localization_tags: [],
-      last_edit: '2014-04-14T08:43:37',
-      url: '/de/docs/Tools/Scratchpad',
-      title: 'JavaScript-Umgebung'
-    }
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
   ],
-  url: '/en-US/docs/Tools/Scratchpad'
+  url: "/zh-CN/docs/Tools/Scratchpad",
 };
 
 let {
   title: englishTitle, // rename
   translations: [
     {
-       title: localeTitle, // rename
+      title: localeTitle, // rename
     },
   ],
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 #### For of 迭代和解构
@@ -507,26 +521,29 @@ console.log(localeTitle);  // "JavaScript-Umgebung"
 ```js
 const people = [
   {
-    name: 'Mike Smith',
+    name: "Mike Smith",
     family: {
-      mother: 'Jane Smith',
-      father: 'Harry Smith',
-      sister: 'Samantha Smith',
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith",
     },
     age: 35,
   },
   {
-    name: 'Tom Jones',
+    name: "Tom Jones",
     family: {
-      mother: 'Norah Jones',
-      father: 'Richard Jones',
-      brother: 'Howard Jones',
+      mother: "Norah Jones",
+      father: "Richard Jones",
+      brother: "Howard Jones",
     },
     age: 25,
-  }
+  },
 ];
 
-for (const { name: n, family: { father: f } } of people) {
+for (const {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log(`Name: ${n}, Father: ${f}`);
 }
 
@@ -539,8 +556,8 @@ for (const { name: n, family: { father: f } } of people) {
 计算属性名，如[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#计算属性名)，可以被解构。
 
 ```js
-const key = 'z';
-const { [key]: foo } = { z: 'bar' };
+const key = "z";
+const { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
 ```
@@ -550,8 +567,8 @@ console.log(foo); // "bar"
 通过提供有效的替代标识符，解构可以与不是有效的 JavaScript [标识符](/zh-CN/docs/Glossary/Identifier)的属性名称一起使用。
 
 ```js
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
 ```
@@ -584,12 +601,12 @@ const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 
 ```js
 const props = [
-  { id: 1, name: 'Fizz'},
-  { id: 2, name: 'Buzz'},
-  { id: 3, name: 'FizzBuzz'}
+  { id: 1, name: "Fizz" },
+  { id: 2, name: "Buzz" },
+  { id: 3, name: "FizzBuzz" },
 ];
 
-const [,, { name }] = props;
+const [, , { name }] = props;
 
 console.log(name); // "FizzBuzz"
 ```
@@ -600,9 +617,9 @@ console.log(name); // "FizzBuzz"
 
 ```js
 const obj = {
-  self: '123',
+  self: "123",
   __proto__: {
-    prot: '456',
+    prot: "456",
   },
 };
 const { self, prot } = obj;

@@ -1,7 +1,6 @@
 ---
 title: Usa CSS para resolver problemas comunes
 slug: Learn/CSS/Howto
-original_slug: Learn/CSS/Sábercomo
 ---
 
 {{LearnSidebar}}

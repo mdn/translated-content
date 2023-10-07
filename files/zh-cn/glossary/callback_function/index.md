@@ -3,17 +3,19 @@ title: 回调函数
 slug: Glossary/Callback_function
 ---
 
+{{GlossarySidebar}}
+
 被作为实参传入另一函数，并在该外部函数内被调用，用以来完成某些任务的函数，称为回调函数。
 
 例如：
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  alert("Hello " + name);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Please enter your name.');
+  var name = prompt("Please enter your name.");
   callback(name);
 }
 

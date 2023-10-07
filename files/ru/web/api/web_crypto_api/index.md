@@ -1,10 +1,8 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
-tags:
-  - API
-translation_of: Web/API/Web_Crypto_API
 ---
+
 {{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}
 
 **Web Crypto API** – интерфейс, позволяющий использовать криптографические примитивы для построения систем, манипулировать, хранить секретные ключи без необходимости делать доступными базовые биты ключа для JavaScript.

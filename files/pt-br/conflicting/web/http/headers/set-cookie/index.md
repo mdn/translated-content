@@ -1,7 +1,6 @@
 ---
 title: Set-Cookie2
 slug: conflicting/Web/HTTP/Headers/Set-Cookie
-original_slug: Web/HTTP/Headers/Set-Cookie2
 ---
 
 {{HTTPSidebar}}

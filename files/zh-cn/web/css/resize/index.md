@@ -91,7 +91,8 @@ textarea {
 ```html
 <div class="resizable">
   <p class="resizable">
-    此段落可在各个方向上调整尺寸，这是因为在此元素上 CSS `resize` 属性设置为 `both`。
+    此段落可在各个方向上调整尺寸，这是因为在此元素上 CSS `resize` 属性设置为
+    `both`。
   </p>
 </div>
 ```

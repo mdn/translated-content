@@ -50,7 +50,7 @@ const foo = new Foo();
 const bar = new Bar();
 const baz = new Baz();
 
-// 原型链:
+// 原型链：
 // foo: Foo --> Object
 // bar: Bar --> Foo --> Object
 // baz: Baz --> Bar --> Foo --> Object

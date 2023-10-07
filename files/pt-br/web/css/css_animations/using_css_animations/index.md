@@ -1,7 +1,6 @@
 ---
 title: Usando animações CSS
 slug: Web/CSS/CSS_animations/Using_CSS_animations
-original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
 ---
 
 {{SeeCompatTable}}{{CSSRef}}
@@ -64,7 +63,7 @@ p {
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
@@ -78,15 +77,15 @@ O estilo para o elemento {{ HTMLElement("p") }} aqui especifica que a animação
 
 Se quiséssemos quaisquer estilização customizada no elemento {{ HTMLElement("p") }} para aparecer em navegadores que não suportam animações CSS, incluiríamos aqui também; no entanto, nesse caso não queremos nenhuma estilização customizada a não ser o efeito da animação.
 
-Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. Neste caso, utilizamos apenas dois keyframes. O primeiro ocorre no progresso de 0% (ou seja, o primeiro keyframe da animação, através do pseudônimo from). Nesta etapa, configuramos a margem esquerda do elemento para ser 100% - quer dizer, como a margem está à esquerda e com valor 100%, o elemento irá se deslocar para o seu limite, ou seja, para a parte direita – e sua largura será de 300%, ou seja, 3 vezes a largura do seu tamanho original. Isto faz com que o elemento, em seu primeiro frame da animação, seja “empurrado” para fora do limite da parte direita da janela do navegador.
+Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. Neste caso, utilizamos apenas dois keyframes. O primeiro ocorre no progresso de 0% (ou seja, o primeiro keyframe da animação, através do pseudônimo from). Nesta etapa, configuramos a margem esquerda do elemento para ser 100% - quer dizer, como a margem está à esquerda e com valor 100%, o elemento irá se deslocar para o seu limite, ou seja, para a parte direita – e sua largura será de 300%, ou seja, 3 vezes a largura do seu tamanho original. Isto faz com que o elemento, em seu primeiro frame da animação, seja "empurrado" para fora do limite da parte direita da janela do navegador.
 
 O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o último keyframe da animação, através do pseudônimo to). A margem esquerda está com valor de 0% e a largura do elemento está com valor de 100%. Isto resulta na animação do elemento {{ HTMLElement("p") }}, que entra gradativamente na área de conteúdo até atingir uma margem esquerda de 0%.
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -127,9 +126,9 @@ p {
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -167,9 +166,9 @@ Adicionando ao código existente:
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -204,9 +203,9 @@ p {
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -214,7 +213,7 @@ ela com uma voz lânguida e sonolenta.
 
 ### Usando eventos de animação
 
-Você pode ter controle adicional sobre animações -- como também informações úteis sobre elas -- através do uso de eventos de animação. Esses eventos, representados pelo objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , podem ser usados para detectar quando animações iniciam, terminam, e começam uma nova iteração. Cada evento inclui o tempo no qual ele ocorreu como também o nome da animação que lançou o evento.
+Você pode ter controle adicional sobre animações — como também informações úteis sobre elas — através do uso de eventos de animação. Esses eventos, representados pelo objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , podem ser usados para detectar quando animações iniciam, terminam, e começam uma nova iteração. Cada evento inclui o tempo no qual ele ocorreu como também o nome da animação que lançou o evento.
 
 Nós vamos modificar o exemplo de deslizamento de texto para gerar alguma informação sobre cada evento de animação quando ele ocorrer, para que possamos perceber como eles funcionam.
 
@@ -240,38 +239,38 @@ Nós começamos criando o CSS para a animação. Essa animação vai durar por 3
 
 @-moz-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
 @-webkit-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -299,7 +298,7 @@ Os eventos são entregues à função `listener()`, a qual é mostrada abaixo.
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -332,11 +331,13 @@ Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pa
 ```html
 <h1 id="watchme">Veja-me mover</h1>
 <p>
-  Este exemplo mostra como usar animações CSS para fazer o elemento <code>h1</code>
+  Este exemplo mostra como usar animações CSS para fazer o elemento
+  <code>h1</code>
   se mover pela página
 </p>
 <p>
-  Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.
+  Além disso, emitimos algum texto sempre que um evento de animação dispara,
+  para que você possa vê-los em ação.
 </p>
 <ul id="output"></ul>
 ```

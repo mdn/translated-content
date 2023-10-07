@@ -14,9 +14,9 @@ l10n:
 ## 構文
 
 ```js
-slice()
-slice(start)
-slice(start, end)
+slice();
+slice(start);
+slice(start, end);
 ```
 
 ### 引数
@@ -59,7 +59,7 @@ slice(start, end)
 ### 既存の配列の一部を返す
 
 ```js
-const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -72,24 +72,28 @@ const citrus = fruits.slice(1, 3);
 
 ```js
 // slice を使って、myCar から newCar を生成する。
-const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
-const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+const myHonda = {
+  color: "red",
+  wheels: 4,
+  engine: { cylinders: 4, size: 2.2 },
+};
+const myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 const newCar = myCar.slice(0, 2);
 
 // myCar, newCar と両方の要素から参照されている myHonda の color の
 //  値を書きだす。
-console.log('myCar = ', myCar);
-console.log('newCar = ', newCar);
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log("myCar = ", myCar);
+console.log("newCar = ", newCar);
+console.log("myCar[0].color = ", myCar[0].color);
+console.log("newCar[0].color = ", newCar[0].color);
 
 // myHonda の色を変える。
-myHonda.color = 'purple';
-console.log('The new color of my Honda is ', myHonda.color);
+myHonda.color = "purple";
+console.log("The new color of my Honda is ", myHonda.color);
 
 // 両方の要素から参照されている myHonda の color を書き出す。
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log("myCar[0].color = ", myCar[0].color);
+console.log("newCar[0].color = ", newCar[0].color);
 ```
 
 このスクリプトの出力は次の様になります。

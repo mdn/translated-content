@@ -35,18 +35,22 @@ Math.sinh(x)
 これは {{jsxref("Math.exp()")}} 関数を使用して次のようにエミュレートできます。
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  return (Math.exp(x) - Math.exp(-x)) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    return (Math.exp(x) - Math.exp(-x)) / 2;
+  };
 ```
 
 または {{jsxref("Math.exp()")}} 関数を一度だけ呼び出すようにすると、次のようになります。
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  var y = Math.exp(x);
-  return (y - 1 / y) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y - 1 / y) / 2;
+  };
 ```
 
 ## 例

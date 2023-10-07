@@ -19,7 +19,7 @@ object.hash = string;
 ## Examples
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.href#youhou"> element be in the document
+// Let's an <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/HTMLHyperlinkElementUtils.href#youhou"> element be in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.hash; // Returns:'#youhou'
 ```

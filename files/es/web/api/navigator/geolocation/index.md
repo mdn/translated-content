@@ -1,7 +1,6 @@
 ---
 title: window.navigator.geolocation
 slug: Web/API/Navigator/geolocation
-original_slug: Web/API/NavigatorGeolocation/geolocation
 ---
 
 {{APIRef("Geolocation API")}}

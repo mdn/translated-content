@@ -1,12 +1,6 @@
 ---
 title: Inégalité (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.inequality
 ---
 
 {{jsSidebar("Operators")}}
@@ -18,7 +12,7 @@ L'opérateur d'inégalité (`!=`) vérifie si ses deux opérandes ne sont pas é
 ## Syntaxe
 
 ```js
-x != y
+x != y;
 ```
 
 ## Description
@@ -26,8 +20,8 @@ x != y
 L'opérateur d'inégalité vérifie si ses deux opérandes ne sont pas égaux. Il s'agit de la négation de [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality) et les deux lignes suivantes fourniront donc toujours le même résultat :
 
 ```js
-x != y
-!(x == y)
+x != y;
+!(x == y);
 ```
 
 Pour plus de détails sur l'algorithme de comparaison utilisé, voir [la page relative à l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality).
@@ -49,39 +43,39 @@ Si cette conversion implicite n'est pas souhaitable et qu'on souhaite considére
 ### Comparaison sans conversion de types
 
 ```js
-1 != 2;              // true
-"hello" != "hola";   // true
+1 != 2; // true
+"hello" != "hola"; // true
 
-1 != 1;              // false
-"hello" != "hello";  // false
+1 != 1; // false
+"hello" != "hello"; // false
 ```
 
 ### Comparaison avec conversion de types
 
 ```js
-"1" !=  1;            // false
-1 != "1";             // false
-0 != false;           // false
-0 != null;            // true
-0 != undefined;       // true
-0 != !!null;          // false, voir la documentation pour !!
-0 != !!undefined;     // false, voir la documentation pour !!
-null != undefined;    // false
+"1" != 1; // false
+1 != "1"; // false
+0 != false; // false
+0 != null; // true
+0 != undefined; // true
+0 != !!null; // false, voir la documentation pour !!
+0 != !!undefined; // false, voir la documentation pour !!
+null != undefined; // false
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 != 3;         // false
-number1 != number2;   // true
+number1 != 3; // false
+number1 != number2; // true
 ```
 
 ### Comparaison d'objets
 
 ```js
-const objet1 = {"clé": "valeur"}
-const objet2 = {"clé": "valeur"};
+const objet1 = { clé: "valeur" };
+const objet2 = { clé: "valeur" };
 
-objet1 != objet2 // true
-objet2 != objet2 // false
+objet1 != objet2; // true
+objet2 != objet2; // false
 ```
 
 ## Spécifications

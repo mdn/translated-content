@@ -1,7 +1,6 @@
 ---
 title: Enumerabilidad y posesión de propiedades
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-original_slug: Web/JavaScript/enumeracion_y_propietario_de_propiedades
 ---
 
 {{JsSidebar("Más")}}
@@ -18,14 +17,14 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
 
       - : **Propia del Objeto**
 
-        | Enumerable                                                                                                                                                                                               | No enumerable                                                                                                                                                                                                                                          | Enumerable y no enumerable                                                                   |
-        | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+        | Enumerable                                                                                                                                           | No enumerable                                                                                                                                                                                      | Enumerable y no enumerable                                           |
+        | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
         | {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}{{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} | {{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} — filtrado para excluir enumerables mediante {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} |
 
         **Propia del Objeto y su cadena prototipo**
 
-        | Enumerable                         | No enumerable                      | Enumerable y no enumerable                   |
-        | ---------------------------------- | ---------------------------------- | -------------------------------------------- |
+        | Enumerable                         | No enumerable                      | Enumerable y no enumerable       |
+        | ---------------------------------- | ---------------------------------- | -------------------------------- |
         | No disponible sin código adicional | No disponible sin código adicional | {{jsxref("Operators/in", "in")}} |
 
         **Solo en cadena prototipo**
@@ -36,8 +35,8 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
 
       - : **Propia del Objeto**
 
-        | Enumerable                                                                                                                                                                                                                                                                                   | No enumerable                                                                                                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                                                                           |
-        | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | Enumerable                                                                                                                                                                                                              | No enumerable                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                       |
+        | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
         | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
 
         **Propia del Objeto y su cadena prototipo**
@@ -52,14 +51,14 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
 
       - : **Propia del Objeto**
 
-        | Enumerable                                                                                                                                                                                                                                                                                   | No enumerable                                                                                                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                                                                           |
-        | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | Enumerable                                                                                                                                                                                                              | No enumerable                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                       |
+        | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
         | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
 
         **Propia del Objeto y su cadena prototipo**
 
-        | Enumerable                                                                        | No enumerable                      | Enumerable y no enumerable         |
-        | --------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------- |
+        | Enumerable                                                        | No enumerable                      | Enumerable y no enumerable         |
+        | ----------------------------------------------------------------- | ---------------------------------- | ---------------------------------- |
         | {{jsxref("Statements/for...in", "for..in")}}(no incluye símbolos) | No disponible sin código adicional | No disponible sin código adicional |
 
         **Solo en cadena prototipo**
@@ -75,66 +74,86 @@ Ten en cuenta que este no es el algoritmo más eficiente para todos los casos, p
 
 ```js
 var SimplePropertyRetriever = {
-    getOwnEnumerables: function(obj) {
-        return this._getPropertyNames(obj, true, false, this._enumerable);
-         // O podrías usar for..in filtrado con hasOwnProperty o simplemente esto: return Object.keys(obj);
-    },
-    getOwnNonenumerables: function(obj) {
-        return this._getPropertyNames(obj, true, false, this._notEnumerable);
-    },
-    getOwnEnumerablesAndNonenumerables: function(obj) {
-        return this._getPropertyNames(obj, true, false, this._enumerableAndNotEnumerable);
-        // O simplemente usa: return Object.getOwnPropertyNames(obj);
-    },
-    getPrototypeEnumerables: function(obj) {
-        return this._getPropertyNames(obj, false, true, this._enumerable);
-    },
-    getPrototypeNonenumerables: function(obj) {
-        return this._getPropertyNames(obj, false, true, this._notEnumerable);
-    },
-    getPrototypeEnumerablesAndNonenumerables: function(obj) {
-        return this._getPropertyNames(obj, false, true, this._enumerableAndNotEnumerable);
-    },
-    getOwnAndPrototypeEnumerables: function(obj) {
-        return this._getPropertyNames(obj, true, true, this._enumerable);
-        // O podrías usar "for..in" sin filtrar
-    },
-    getOwnAndPrototypeNonenumerables: function(obj) {
-        return this._getPropertyNames(obj, true, true, this._notEnumerable);
-    },
-    getOwnAndPrototypeEnumerablesAndNonenumerables: function(obj) {
-        return this._getPropertyNames(obj, true, true, this._enumerableAndNotEnumerable);
-    },
-    // Retrollamada del supervisor de propiedad estática privada
-    _enumerable: function(obj, prop) {
-        return obj.propertyIsEnumerable(prop);
-    },
-    _notEnumerable: function(obj, prop) {
-        return !obj.propertyIsEnumerable(prop);
-    },
-    _enumerableAndNotEnumerable: function(obj, prop) {
-        return true;
-    },
-    // Inspirado en http://stackoverflow.com/a/8024294/271577
-    _getPropertyNames: function getAllPropertyNames(obj, iterateSelfBool, iteratePrototypeBool, includePropCb) {
-        var props = [];
+  getOwnEnumerables: function (obj) {
+    return this._getPropertyNames(obj, true, false, this._enumerable);
+    // O podrías usar for..in filtrado con hasOwnProperty o simplemente esto: return Object.keys(obj);
+  },
+  getOwnNonenumerables: function (obj) {
+    return this._getPropertyNames(obj, true, false, this._notEnumerable);
+  },
+  getOwnEnumerablesAndNonenumerables: function (obj) {
+    return this._getPropertyNames(
+      obj,
+      true,
+      false,
+      this._enumerableAndNotEnumerable,
+    );
+    // O simplemente usa: return Object.getOwnPropertyNames(obj);
+  },
+  getPrototypeEnumerables: function (obj) {
+    return this._getPropertyNames(obj, false, true, this._enumerable);
+  },
+  getPrototypeNonenumerables: function (obj) {
+    return this._getPropertyNames(obj, false, true, this._notEnumerable);
+  },
+  getPrototypeEnumerablesAndNonenumerables: function (obj) {
+    return this._getPropertyNames(
+      obj,
+      false,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
+  },
+  getOwnAndPrototypeEnumerables: function (obj) {
+    return this._getPropertyNames(obj, true, true, this._enumerable);
+    // O podrías usar "for..in" sin filtrar
+  },
+  getOwnAndPrototypeNonenumerables: function (obj) {
+    return this._getPropertyNames(obj, true, true, this._notEnumerable);
+  },
+  getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
+    return this._getPropertyNames(
+      obj,
+      true,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
+  },
+  // Retrollamada del supervisor de propiedad estática privada
+  _enumerable: function (obj, prop) {
+    return obj.propertyIsEnumerable(prop);
+  },
+  _notEnumerable: function (obj, prop) {
+    return !obj.propertyIsEnumerable(prop);
+  },
+  _enumerableAndNotEnumerable: function (obj, prop) {
+    return true;
+  },
+  // Inspirado en http://stackoverflow.com/a/8024294/271577
+  _getPropertyNames: function getAllPropertyNames(
+    obj,
+    iterateSelfBool,
+    iteratePrototypeBool,
+    includePropCb,
+  ) {
+    var props = [];
 
-        do {
-            if (iterateSelfBool) {
-                Object.getOwnPropertyNames(obj).forEach(function(prop) {
-                    if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
-                        props.push(prop);
-                    }
-                });
-            }
-            if (!iteratePrototypeBool) {
-                break;
-            }
-            iterateSelfBool = true;
-        } while (obj = Object.getPrototypeOf(obj));
+    do {
+      if (iterateSelfBool) {
+        Object.getOwnPropertyNames(obj).forEach(function (prop) {
+          if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
+            props.push(prop);
+          }
+        });
+      }
+      if (!iteratePrototypeBool) {
+        break;
+      }
+      iterateSelfBool = true;
+    } while ((obj = Object.getPrototypeOf(obj)));
 
-        return props;
-    }
+    return props;
+  },
 };
 ```
 

@@ -71,7 +71,7 @@ const xArray = window.frames[window.frames.length - 1].Array;
 const arr = new xArray(1, 2, 3); // [1, 2, 3]
 
 // 正确检查 Array
-Array.isArray(arr);  // true
+Array.isArray(arr); // true
 // arr 的原型是 xArray.prototype，它是一个不同于 Array.prototype 的对象
 arr instanceof Array; // false
 ```

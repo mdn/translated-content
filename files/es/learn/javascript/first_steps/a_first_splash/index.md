@@ -28,111 +28,117 @@ Teniendo esto en mente, veamos el ejemplo que vamos a construir en este artícul
 En este artículo vamos a mostrarte cómo construir el juego que puedes ver abajo:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Juego adivina el número</title>
     <style>
-        html {
-            font-family: sans-serif;
-        }
+      html {
+        font-family: sans-serif;
+      }
 
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
 
-        .lastResult {
-            color: white;
-            padding: 3px;
-        }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Juego adivina el número</h1>
-    <p>Hemos seleccionado un número aleatorio entre 1 y 100. Fíjate si lo puedes adivinar en 10 turnos o menos. Vamos a decirte si tu número es más alto o más bajo.</p>
-    <div class="form"> <label for="guessField">Adivina el numero: </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="Enviar respuesta" class="guessSubmit"> </div>
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+    <p>
+      Hemos seleccionado un número aleatorio entre 1 y 100. Fíjate si lo puedes
+      adivinar en 10 turnos o menos. Vamos a decirte si tu número es más alto o
+      más bajo.
+    </p>
+    <div class="form">
+      <label for="guessField">Adivina el numero: </label
+      ><input type="text" id="guessField" class="guessField" />
+      <input type="submit" value="Enviar respuesta" class="guessSubmit" />
     </div>
-<script>
-    // Tu código JavaScript va aquí
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    const guesses = document.querySelector('.guesses');
-    const lastResult = document.querySelector('.lastResult');
-    const lowOrHi = document.querySelector('.lowOrHi');
-    const guessSubmit = document.querySelector('.guessSubmit');
-    const guessField = document.querySelector('.guessField');
-    let guessCount = 1;
-    let resetButton;
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+    <script>
+      // Tu código JavaScript va aquí
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      const guesses = document.querySelector(".guesses");
+      const lastResult = document.querySelector(".lastResult");
+      const lowOrHi = document.querySelector(".lowOrHi");
+      const guessSubmit = document.querySelector(".guessSubmit");
+      const guessField = document.querySelector(".guessField");
+      let guessCount = 1;
+      let resetButton;
 
-    function checkGuess() {
-      let userGuess = Number(guessField.value);
-      if (guessCount === 1) {
-        guesses.textContent = 'Intentos anteriores: ';
-      }
-
-      guesses.textContent += userGuess + ' ';
-
-      if (userGuess === randomNumber) {
-        lastResult.textContent = '¡Felicidades! ¡Lo adivinaste!';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else if (guessCount === 10) {
-        lastResult.textContent = '!!!Fin del juego!!!';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else {
-        lastResult.textContent = '¡Incorrecto!';
-        lastResult.style.backgroundColor = 'red';
-        if(userGuess < randomNumber) {
-          lowOrHi.textContent = '¡El número es muy bajo!' ;
-        } else if(userGuess > randomNumber) {
-          lowOrHi.textContent = '¡El número es muy grande!';
+      function checkGuess() {
+        let userGuess = Number(guessField.value);
+        if (guessCount === 1) {
+          guesses.textContent = "Intentos anteriores: ";
         }
+
+        guesses.textContent += userGuess + " ";
+
+        if (userGuess === randomNumber) {
+          lastResult.textContent = "¡Felicidades! ¡Lo adivinaste!";
+          lastResult.style.backgroundColor = "green";
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else if (guessCount === 10) {
+          lastResult.textContent = "!!!Fin del juego!!!";
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else {
+          lastResult.textContent = "¡Incorrecto!";
+          lastResult.style.backgroundColor = "red";
+          if (userGuess < randomNumber) {
+            lowOrHi.textContent = "¡El número es muy bajo!";
+          } else if (userGuess > randomNumber) {
+            lowOrHi.textContent = "¡El número es muy grande!";
+          }
+        }
+
+        guessCount++;
+        guessField.value = "";
       }
 
-      guessCount++;
-      guessField.value = '';
-    }
+      guessSubmit.addEventListener("click", checkGuess);
 
-    guessSubmit.addEventListener('click', checkGuess);
-
-    function setGameOver() {
-      guessField.disabled = true;
-      guessSubmit.disabled = true;
-      resetButton = document.createElement('button');
-      resetButton.textContent = 'Iniciar nuevo juego';
-      document.body.append(resetButton);
-      resetButton.addEventListener('click', resetGame);
-    }
-
-    function resetGame() {
-      guessCount = 1;
-      const resetParas = document.querySelectorAll('.resultParas p');
-      for(let i = 0 ; i < resetParas.length ; i++) {
-        resetParas[i].textContent = '';
+      function setGameOver() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        resetButton = document.createElement("button");
+        resetButton.textContent = "Iniciar nuevo juego";
+        document.body.append(resetButton);
+        resetButton.addEventListener("click", resetGame);
       }
 
-      resetButton.parentNode.removeChild(resetButton);
-      guessField.disabled = false;
-      guessSubmit.disabled = false;
-      guessField.value = '';
-      guessField.focus();
-      lastResult.style.backgroundColor = 'white';
-      randomNumber = Math.floor(Math.random() * 100) + 1;
-    }
-</script>
+      function resetGame() {
+        guessCount = 1;
+        const resetParas = document.querySelectorAll(".resultParas p");
+        for (let i = 0; i < resetParas.length; i++) {
+          resetParas[i].textContent = "";
+        }
 
-</body>
+        resetButton.parentNode.removeChild(resetButton);
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = "";
+        guessField.focus();
+        lastResult.style.backgroundColor = "white";
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -153,21 +159,21 @@ Al observar este resumen, lo primero que podemos hacer es comenzar a desglosar e
 5. A continuación, comprobar si el número es correcto.
 6. Si es correcto:
 
-    1. Mostrar un mensaje de felicitaciones.
-    2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
-    3. Mostrar un control que permita al jugador volver a empezar el juego.
+   1. Mostrar un mensaje de felicitaciones.
+   2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
+   3. Mostrar un control que permita al jugador volver a empezar el juego.
 
 7. Si es incorrecto y al jugador todavía le quedan intentos:
 
-    1. Decirle al jugador que ha fallado.
-    2. Dejar que el jugador lo intente de nuevo.
-    3. Incrementa el número de intentos en 1.
+   1. Decirle al jugador que ha fallado.
+   2. Dejar que el jugador lo intente de nuevo.
+   3. Incrementa el número de intentos en 1.
 
 8. Si el jugador falla y no le quedan turnos:
 
-    1. Decirle al jugador que el juego se ha terminado.
-    2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
-    3. Mostrar un control que permita al jugador volver a empezar el juego.
+   1. Decirle al jugador que el juego se ha terminado.
+   2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
+   3. Mostrar un control que permita al jugador volver a empezar el juego.
 
 9. Una vez que el juego se reinicia, asegúrate de que la lógica del juego y la IU (interfaz de usuario) se restablezcan por completo, luego vuelve al paso 1.
 
@@ -181,9 +187,7 @@ El lugar donde agregaremos todo nuestro código es dentro del elemento {{htmlele
 
 ```html
 <script>
-
   // Tu JavaScript va aquí
-
 </script>
 ```
 
@@ -194,12 +198,12 @@ Empecemos. En primer lugar, agrega las siguientes líneas dentro de tu elemento 
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
 
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
@@ -225,8 +229,9 @@ En nuestro ejemplo:
 - Las siguientes dos constantes almacenan referencias a la entrada de texto y al botón "Enviar" del formulario, y se utilizan para controlar las respuestas del jugador más adelante.
 
   ```html
-  <label for="guessField">Adivina el número: </label><input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Enviar respuesta" class="guessSubmit">
+  <label for="guessField">Adivina el número: </label
+  ><input type="text" id="guessField" class="guessField" />
+  <input type="submit" value="Enviar respuesta" class="guessSubmit" />
   ```
 
 - Nuestras dos variables finales almacenan un conteo de intentos desde 1 (que se usa para tener un registro de cuántos intentos ha hecho el jugador), y una referencia al botón de reinicio que aún no existe (pero que lo hará más adelante).
@@ -239,7 +244,7 @@ A continuación, agrega lo siguiente debajo de tu código JavaScript anterior:
 
 ```js
 function checkGuess() {
-  alert('Soy un marcador de posición');
+  alert("Soy un marcador de posición");
 }
 ```
 
@@ -275,34 +280,34 @@ Primero veamos los operadores aritméticos, por ejemplo:
 También puedes usar el operador `+` para unir cadenas de texto (en programación, esto se llama _concatenación_). Intenta ingresar las siguientes líneas, una por una:
 
 ```js
-let name = 'Bingo';
+let name = "Bingo";
 name;
-let hello = ' dice hola!';
+let hello = " dice hola!";
 hello;
-let greeting = '¡' + name + hello;
+let greeting = "¡" + name + hello;
 greeting;
 ```
 
 También disponemos de algunos atajos de operadores, llamados [operadores de asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment_Operators) mejorada. Por ejemplo, si quieres simplemente agregar una nueva cadena de texto a una existente y devolver el resultado, puedes hacer esto:
 
 ```js
-name += ' dice hola!';
+name += " dice hola!";
 ```
 
 Esto es equivalente a
 
 ```js
-name = name + ' dice hola!';
+name = name + " dice hola!";
 ```
 
 Cuando ejecutamos pruebas de verdadero/falso (por ejemplo, dentro de condicionales — consulta [abajo](#conditionals)) usamos [operadores de comparación](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators). Por ejemplo:
 
-| Operador | Descripción                                   | Ejemplo                                                                                                                    |
-| -------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Operador | Descripción                                   | Ejemplo                                                                                                                                     |
+| -------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `===`    | Igualdad estricta (¿es exactamente lo mismo?) | <pre lang="js">5 === 2 + 4 // false<br>'Chris' === 'Bob' // false<br>5 === 2 + 3 // true<br>2 === '2' // false; número versus cadena </pre> |
 | `!==`    | No igual (¿no es lo mismo?)                   | <pre lang="js">5 !== 2 + 4 // true<br>'Chris' !== 'Bob' // true<br>5 !== 2 + 3 // false<br>2 !== '2' // true; número versus cadena </pre>   |
-| `<`      | Menor que                                     | <pre lang="js">6 < 10 // true<br>20 < 10 // false </pre>                                                                              |
-| `>`      | Mayor que                                     | <pre lang="js">6 > 10 // false<br>20 > 10 // true </pre>                                                                              |
+| `<`      | Menor que                                     | <pre lang="js">6 < 10 // true<br>20 < 10 // false </pre>                                                                                    |
+| `>`      | Mayor que                                     | <pre lang="js">6 > 10 // false<br>20 > 10 // true </pre>                                                                                    |
 
 ### Condicionales
 
@@ -314,30 +319,30 @@ En este punto, reemplaza su función `checkGuess()` actual con esta versión:
 function checkGuess() {
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Intentos anteriores: ';
+    guesses.textContent = "Intentos anteriores: ";
   }
-  guesses.textContent += userGuess + ' ';
+  guesses.textContent += userGuess + " ";
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = '¡Felicidades! ¡Lo adivinaste!';
-    lastResult.style.backgroundColor = 'green';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "¡Felicidades! ¡Lo adivinaste!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '¡¡¡Fin del juego!!!';
+    lastResult.textContent = "¡¡¡Fin del juego!!!";
     setGameOver();
   } else {
-    lastResult.textContent = '¡Incorrecto!';
-    lastResult.style.backgroundColor = 'red';
-    if(userGuess < randomNumber) {
-      lowOrHi.textContent = '¡El número es muy bajo!';
-    } else if(userGuess > randomNumber) {
-      lowOrHi.textContent = '¡El número es muy grande!';
+    lastResult.textContent = "¡Incorrecto!";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "¡El número es muy bajo!";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "¡El número es muy grande!";
     }
   }
 
   guessCount++;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 }
 ```
@@ -348,7 +353,7 @@ Esto es un montón de código — ¡uf! Repasemos cada sección y expliquemos lo
 - A continuación, encontramos nuestro primer bloque de código condicional (líneas 3-5 arriba). Un bloque de código condicional te permite ejecutar código de manera selectiva, dependiendo de si una determinada condición es verdadera o no. Se parece un poco a una función, pero no lo es. La forma más simple de bloque condicional comienza con la palabra clave `if`, luego algunos paréntesis, luego unas llaves. Dentro del paréntesis incluimos una prueba. Si la prueba devuelve `true`, ejecutamos el código dentro de las llaves. Si no, no lo hacemos y pasamos al siguiente segmento del código. En este caso, la prueba está verificando si la variable `guessCount` es igual a `1` (es decir, si este es el primer intento del jugador o no):
 
   ```js
-  guessCount === 1
+  guessCount === 1;
   ```
 
   Si es así, hacemos que el contenido del texto del párrafo de intentos sea igual a "`Intentos previos:`". Si no, no lo hacemos.
@@ -369,7 +374,7 @@ A estas alturas, hemos implementado correctamente la función `checkGuess()`, pe
 Agrega la siguiente línea debajo de tu función `checkGuess()`:
 
 ```js
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
 Aquí estamos agregando un escucha de eventos al botón `guessSubmit`. Este es un método toma dos valores de entrada (llamados _argumentos_) — el tipo de evento que queremos escuchar (en este caso, `click`) como una cadena, y el código que queremos ejecutar cuando ocurra el evento (en este caso la función `checkGuess()`). Ten en cuenta que no es necesario especificar los paréntesis al escribirlo dentro de {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
@@ -384,10 +389,10 @@ Agreguemos la función `setGameOver()` al final de nuestro código y luego repas
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  resetButton = document.createElement('button');
-  resetButton.textContent = 'Iniciar nuevo juego';
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Iniciar nuevo juego";
   document.body.append(resetButton);
-  resetButton.addEventListener('click', resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
@@ -401,19 +406,19 @@ function setGameOver() {
 function resetGame() {
   guessCount = 1;
 
-  const resetParas = document.querySelectorAll('.resultParas p');
-  for (let i = 0 ; i < resetParas.length ; i++) {
-    resetParas[i].textContent = '';
+  const resetParas = document.querySelectorAll(".resultParas p");
+  for (let i = 0; i < resetParas.length; i++) {
+    resetParas[i].textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
 
   guessField.disabled = false;
   guessSubmit.disabled = false;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  lastResult.style.backgroundColor = "white";
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
@@ -439,7 +444,9 @@ Una parte del código anterior que debemos examinar detalladamente es el bucle [
 Para empezar, de nuevo ve a tu [consola JavaScript de las herramientas para desarrolladores del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) e introduce lo siguiente:
 
 ```js
-for (let i = 1 ; i < 21 ; i++) { console.log(i) }
+for (let i = 1; i < 21; i++) {
+  console.log(i);
+}
 ```
 
 ¿Que sucedió? Los números `1` a `20` se imprimieron en tu consola. Esto se debió al bucle. Un bucle `for` toma tres valores (argumentos) de entrada:
@@ -451,15 +458,15 @@ for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 Ahora veamos el ciclo en nuestro juego de adivinan el número — lo siguiente está dentro de la función `resetGame()`:
 
 ```js
-const resetParas = document.querySelectorAll('.resultParas p');
-for (let i = 0 ; i < resetParas.length ; i++) {
-  resetParas[i].textContent = '';
+const resetParas = document.querySelectorAll(".resultParas p");
+for (let i = 0; i < resetParas.length; i++) {
+  resetParas[i].textContent = "";
 }
 ```
 
 Este código crea una variable que contiene una lista de todos los párrafos dentro de `<div class="resultParas">` usando el método {{domxref("document.querySelectorAll", "querySelectorAll()")}}, luego recorre cada uno de ellos, eliminando el texto contenido a su paso.
 
-### Una pequeña explicación sobre objetos.
+### Una pequeña explicación sobre objetos
 
 Agreguemos una mejora final más antes de entrar en esta explicación. Agrega la siguiente línea justo debajo de la línea `let resetButton;` cerca de la parte superior de tu JavaScript, luego guarda tu archivo:
 
@@ -474,7 +481,7 @@ Analicemos lo que está sucediendo aquí con un poco más de detalle. En JavaScr
 En este caso particular, primero creamos una constante `guessField` que almacena una referencia al campo de texto del formulario en nuestro HTML — la siguiente línea se puede encontrar entre nuestras declaraciones cerca de la parte superior del código:
 
 ```js
-const guessField = document.querySelector('.guessField');
+const guessField = document.querySelector(".guessField");
 ```
 
 Para obtener esta referencia, usamos el método {{domxref("document.querySelector", "querySelector()")}} del objeto {{domxref("document")}}. `querySelector()` toma un parámetro — un [selector CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors) que selecciona el elemento del que deseas una referencia.
@@ -496,39 +503,39 @@ Juguemos un poco con algunos objetos del navegador.
 3. Escribe `guessField` y la consola te mostrará que la variable contiene un elemento {{htmlelement("input")}}. También notarás que la consola te ayuda completando automáticamente los nombres de los objetos que existen dentro del entorno de ejecución, ¡incluidas tus variables!
 4. Ahora escribe lo siguiente:
 
-    ```js
-    guessField.value = 'Hola';
-    ```
+   ```js
+   guessField.value = "Hola";
+   ```
 
-    La propiedad `value` representa el valor actual ingresado en el campo de texto. Verás que al ingresar este comando, ¡hemos cambiado este valor!
+   La propiedad `value` representa el valor actual ingresado en el campo de texto. Verás que al ingresar este comando, ¡hemos cambiado este valor!
 
 5. Ahora intenta escribir `guesses` en la consola y presiona Intro. La consola te muestra que la variable contiene un elemento {{htmlelement("p")}}.
 6. Ahora intenta ingresar la siguiente línea:
 
-    ```js
-    guesses.value
-    ```
+   ```js
+   guesses.value;
+   ```
 
-    El navegador devuelve `undefined`, porque los párrafos no tienen la propiedad `value`.
+   El navegador devuelve `undefined`, porque los párrafos no tienen la propiedad `value`.
 
 7. Para cambiar el texto dentro de un párrafo, necesitas la propiedad {{domxref("Node.textContent", "textContent")}} en su lugar. Prueba esto:
 
-    ```js
-    guesses.textContent = '¿Dónde está mi párrafo?';
-    ```
+   ```js
+   guesses.textContent = "¿Dónde está mi párrafo?";
+   ```
 
 8. Ahora, solo por diversión. Intenta ingresar las siguientes líneas, una por una:
 
-    ```js
-    guesses.style.backgroundColor = 'yellow';
-    guesses.style.fontSize = '200%';
-    guesses.style.padding = '10px';
-    guesses.style.boxShadow = '3px 3px 6px black';
-    ```
+   ```js
+   guesses.style.backgroundColor = "yellow";
+   guesses.style.fontSize = "200%";
+   guesses.style.padding = "10px";
+   guesses.style.boxShadow = "3px 3px 6px black";
+   ```
 
-    Cada elemento de una página tiene una propiedad `style`, que a su vez contiene un objeto cuyas propiedades contienen todos los estilos CSS en línea aplicados a ese elemento. Esto nos permite establecer dinámicamente nuevos estilos CSS en elementos utilizando JavaScript.
+   Cada elemento de una página tiene una propiedad `style`, que a su vez contiene un objeto cuyas propiedades contienen todos los estilos CSS en línea aplicados a ese elemento. Esto nos permite establecer dinámicamente nuevos estilos CSS en elementos utilizando JavaScript.
 
-## Terminamos por ahora...
+## Terminamos por ahora
 
 Así que eso es todo para construir el ejemplo. Llegaste al final, ¡bien hecho! Prueba tu código final, o [juega con nuestra versión final aquí](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si no puedes hacer que el ejemplo funcione, compáralo con el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 

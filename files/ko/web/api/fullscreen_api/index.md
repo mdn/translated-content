@@ -1,7 +1,6 @@
 ---
 title: Using fullscreen mode
 slug: Web/API/Fullscreen_API
-original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -101,11 +100,15 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 페이지가 로드되면, 이 코드가 실행되어 <kbd>Enter</kbd> 키 를 주시하는 이벤트 리스너를 설정합니다.
 
 ```js
-document.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keypress",
+  function (e) {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Toggling full-screen mode
@@ -144,4 +147,4 @@ full-screen mode가 이미 활성화 된 경우(`fullscreenElement` 가 `null`�
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen)

@@ -34,8 +34,8 @@ Float64Array
 `species` 属性返回默认的构造器函数，对于给定的[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)对象，它是类型化数组构造器之一：
 
 ```js
-Int8Array[Symbol.species];    // function Int8Array()
-Uint8Array[Symbol.species];   // function Uint8Array()
+Int8Array[Symbol.species]; // function Int8Array()
+Uint8Array[Symbol.species]; // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
 ```
 
@@ -44,7 +44,9 @@ Float32Array[Symbol.species]; // function Float32Array()
 ```js
 class MyTypedArray extends Uint8Array {
   // 将 MyTypedArray species 覆盖为 Uint8Array 基类构造器
-  static get [Symbol.species]() { return Uint8Array; }
+  static get [Symbol.species]() {
+    return Uint8Array;
+  }
 }
 ```
 

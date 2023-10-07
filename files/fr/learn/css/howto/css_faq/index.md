@@ -1,13 +1,6 @@
 ---
 title: Questions fréquentes en CSS
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Débutant
-  - Exemple
-  - Guide
-translation_of: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/CSS_questions_frequentes
 ---
 
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
@@ -24,21 +17,16 @@ Les navigateurs basés sur Gecko ont un troisième mode [Presque Standard](/fr/d
 Voici une liste des `DOCTYPE` les plus couramment utilisés, qui déclencheront les modes Standard et Presque Standard des navigateurs :
 
 ```html
-<!DOCTYPE html> /* Ceci est le doctype HTML5. Étant donné que chaque
-                   navigateur moderne utilise un parseur HTML5, c'est le
-                   doctype recommandé. */
+<!-- Ceci est le doctype HTML5. Étant donné que chaque navigateur moderne utilise un parseur HTML5, c'est le doctype recommandé. -->
+<!doctype html>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"https://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"https://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Pourquoi mon CSS, qui est valide, n'est pas affiché du tout ?
@@ -73,13 +61,16 @@ Il est possible d'assigner aux éléments HTML de multiples classes en les lista
 
 ```html
 <style type="text/css">
-.news { background: black; color: white; }
-.today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-... content of today's news ...
-</div>
+<div class="news today">... content of today's news ...</div>
 ```
 
 Si la même propriété est déclarée dans les deux règles, le conflit est résolu de la manière suivante : premièrement selon la règle de spécificité, ensuite selon l'ordre de déclaration du CSS. L'ordre des classes dans l'attribut `class` n'est pas pris en compte.
@@ -107,8 +98,9 @@ La manière dont les styles CSS sont appliqués aux éléments HTML dépend auss
 <!-- Le texte de l'annonce est en noir
      mais le nom de l'entreprise est
      en rouge gras -->
-<div class="news"> (Reuters)
-   <span class="corpName">General Electric</span>
+<div class="news">
+  (Reuters)
+  <span class="corpName">General Electric</span>
   (GE.NYS) announced on Thursday...
 </div>
 ```
@@ -137,7 +129,7 @@ Pour les feuilles de style CSS, **l'ordre est important**. Si vous définissez u
 ```html
 <!-- La plupart du texte est en gras sauf "GE",
      qui est en rouge et sans graisse -->
-<div id="stockTicker"> NYS: <span class="stockSymbol">GE</span> +1.0 ... </div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 Pour éviter ce type d'erreur, le mieux consiste à ne définir les règles qu'une seule fois pour un sélecteur donné et à grouper toutes les règles appartenant à ce sélecteur.
@@ -162,9 +154,7 @@ Les propriétés raccourcies sont un bon outil pour définir les règles CSS car
 ```html
 <div id="stockTicker">
   NYS:
-  <span class="stockSymbol">
-    GE
-  </span>
+  <span class="stockSymbol"> GE </span>
   +1.0 ...
 </div>
 ```
@@ -205,9 +195,7 @@ body * {
 <div id="section">
   NYS:
   <span class="corpName">
-    <span class="stockUp">
-      GE
-    </span>
+    <span class="stockUp"> GE </span>
   </span>
   +1.0 ...
 </div>

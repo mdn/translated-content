@@ -5,15 +5,11 @@ slug: Web/API/PerformanceTiming/domContentLoadedEventStart
 
 {{APIRef("Navigation Timing")}}
 
-## 概要
+**`PerformanceTiming.domContentLoadedEventStart`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为解析器发出 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件之前，即所有的需要被运行的脚本已经被解析之时的 Unix 毫秒时间戳。
 
-**`PerformanceTiming.domContentLoadedEventStart`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为解析器发出 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) 事件之前，即所有的需要被运行的脚本已经被解析之时的 Unix 毫秒时间戳。
+## 值
 
-## 语法
-
-```plain
-time = performanceTiming.domContentLoadedEventStart;
-```
+一个 `unsigned long long` 值。
 
 ## 规范
 

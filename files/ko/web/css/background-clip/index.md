@@ -2,13 +2,12 @@
 title: background-clip
 slug: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`background-clip`** 속성은 요소의 배경이 테두리, 안쪽 여백, 콘텐츠 상자 중 어디까지 차지할 지 지정합니다.
 
 {{EmbedInteractiveExample("pages/css/background-clip.html")}}
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 요소가 {{cssxref("background-image")}} 또는 {{cssxref("background-color")}}를 가지지 않으면, `background-clip`은 ({{cssxref("border-style")}} 또는 {{cssxref("border-image")}} 등으로 인해) 테두리에 투명하거나 반투명한 부분이 존재하는 경우에만 시각적 차이가 발생합니다. 그렇지 않은 경우 테두리가 차이점을 가립니다.
 
@@ -52,8 +51,12 @@ background-clip: unset;
 
 ```html
 <p class="border-box">The background extends behind the border.</p>
-<p class="padding-box">The background extends to the inside edge of the border.</p>
-<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="padding-box">
+  The background extends to the inside edge of the border.
+</p>
+<p class="content-box">
+  The background extends only to the edge of the content box.
+</p>
 <p class="text">The background is clipped to the foreground text.</p>
 ```
 
@@ -61,7 +64,7 @@ background-clip: unset;
 
 ```css
 p {
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -70,14 +73,20 @@ p {
   text-decoration: underline;
 }
 
-.border-box { background-clip: border-box; }
-.padding-box { background-clip: padding-box; }
-.content-box { background-clip: content-box; }
+.border-box {
+  background-clip: border-box;
+}
+.padding-box {
+  background-clip: padding-box;
+}
+.content-box {
+  background-clip: content-box;
+}
 
 .text {
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0,0,0,.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
-i10n:
+l10n:
   sourceCommit: 6c498a447fb5e776a67af7f9801a3aa407fc4d1c
 ---
 
@@ -22,7 +22,7 @@ i10n:
 ## 構文
 
 ```js
-profileEnd(profileName)
+profileEnd(profileName);
 ```
 
 ### 引数

@@ -40,17 +40,17 @@ Comme les chaînes de caractères JavaScript sont encodées sur 16 bits, pour la
 ```js example-bad
 // unescape() et escape() sont dépréciées, à éviter !
 
-function utf8_to_b64( str ) {
-  return window.btoa(unescape(encodeURIComponent( str )));
+function utf8_to_b64(str) {
+  return window.btoa(unescape(encodeURIComponent(str)));
 }
 
-function b64_to_utf8( str ) {
-  return decodeURIComponent(escape(window.atob( str )));
+function b64_to_utf8(str) {
+  return decodeURIComponent(escape(window.atob(str)));
 }
 
 // Utilisation :
-utf8_to_b64('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
+b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
 ```
 
 Cette solution a été proposée dans un article de [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
@@ -156,7 +156,7 @@ function base64EncArr(aBytes) {
         uint6ToB64((nUint24 >>> 18) & 63),
         uint6ToB64((nUint24 >>> 12) & 63),
         uint6ToB64((nUint24 >>> 6) & 63),
-        uint6ToB64(nUint24 & 63)
+        uint6ToB64(nUint24 & 63),
       );
       nUint24 = 0;
     }
@@ -205,7 +205,7 @@ function UTF8ArrToStr(aBytes) {
         : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* deux octets */
         ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
         : /* nPart < 127 ? */ /* un octet */
-          nPart
+          nPart,
     );
   }
   return sView;
@@ -312,10 +312,14 @@ Ces fonctions permettent de créer des objets [`Uint8Array`](/fr/docs/Web/JavaSc
 
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
-var monTableau = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==");
+var monTableau = base64DecToArr(
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
+);
 
 // "Base 64 \u2014 Mozilla Developer Network"
-var monBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer;
+var monBuffer = base64DecToArr(
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
+).buffer;
 
 alert(monBuffer.byteLength);
 ```

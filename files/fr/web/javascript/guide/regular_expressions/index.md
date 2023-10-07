@@ -1,13 +1,6 @@
 ---
 title: Expressions rationnelles
 slug: Web/JavaScript/Guide/Regular_expressions
-tags:
-  - Guide
-  - Intermédiaire
-  - JavaScript
-  - RegExp
-translation_of: Web/JavaScript/Guide/Regular_Expressions
-original_slug: Web/JavaScript/Guide/Expressions_régulières
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}
@@ -21,16 +14,16 @@ Il est possible de construire une expression rationnelle de deux façons :
 - Utiliser un littéral d'expression régulière, qui correspond à un motif contenu entre deux barres obliques, par exemple :
 
   ```js
-    var re = /ab+c/;
-    ```
+  var re = /ab+c/;
+  ```
 
   Lorsque les littéraux d'expression régulière sont utilisés, l'expression est compilée lors du chargement du script. Il est préférable d'utiliser cette méthode lorsque l'expression régulière reste constante, afin d'avoir de meilleurs performances.
 
 - Appeler le constructeur de l'objet {{jsxref("RegExp")}}, par exemple :
 
   ```js
-    var re = new RegExp("ab+c");
-    ```
+  var re = new RegExp("ab+c");
+  ```
 
   Avec cette méthode, l'expression rationnelle est compilée lors de l'exécution. On utilisera cette méthode lorsque le motif utilisé est variable ou provient d'une autre source (par exemple une interaction utilisateur).
 
@@ -629,7 +622,7 @@ La tableau qui suit fournit une liste complète des caractères spéciaux pouvan
 Afin d'échapper les informations saisies par l'utilisateur et de traîter les chaînes de caractères pour les utiliser au sein d'un expression régulière correspondante, il est possible d'utiliser le remplacement suivant :
 
 ```js
-function escapeRegExp(string){
+function escapeRegExp(string) {
   // $& correspond à la chaîne correspondante
   // dans son intégralité
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -654,15 +647,15 @@ Pour qu'une partie de la chaîne de caractère corresponde mais que la correspon
 
 Les expresssions régulières sont utilisées avec les méthodes `test` et `exec` de l'objet `RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
-| Méthode                                                  | Description                                                                                                                                                                                        |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec")}}             | Une méthode de l'objet `RegExp` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
-| {{jsxref("RegExp.test", "test")}}             | Une méthode de l'objet `RegExp` testant la présence d'une correspondance dans une chaîne de caractères. Elle renvoie true ou false.                                                                |
-| {{jsxref("String.match", "match")}}         | Une méthode de l'objet `String` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
+| Méthode                                   | Description                                                                                                                                                                                        |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec")}}         | Une méthode de l'objet `RegExp` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
+| {{jsxref("RegExp.test", "test")}}         | Une méthode de l'objet `RegExp` testant la présence d'une correspondance dans une chaîne de caractères. Elle renvoie true ou false.                                                                |
+| {{jsxref("String.match", "match")}}       | Une méthode de l'objet `String` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
 | {{jsxref("String.matchAll", "matchAll")}} | Une méthode de l'objet `String` qui renvoie un itérateur contenant l'ensemble des correspondances, y compris les groupes capturants.                                                               |
-| {{jsxref("String.search", "search")}}         | Une méthode de l'objet `String` qui teste la présence d'une correspondance dans une chaîne de correspondance. Elle renvoie la position de la correspondance ou -1 s'il n'y en a pas.               |
-| {{jsxref("String.replace", "replace")}}     | Une méthode de l'objet `String` qui recherche une correspondance dans une chaîne de caractères et qui remplace la correspondance par une chaîne de substitution.                                   |
-| {{jsxref("String.split", "split")}}         | Une méthode de l'objet `String` qui utilise une expression régulière ou une chaîne de caractères pour découper une chaîne de caractères en un tableau comprenant les fragments résultants.         |
+| {{jsxref("String.search", "search")}}     | Une méthode de l'objet `String` qui teste la présence d'une correspondance dans une chaîne de correspondance. Elle renvoie la position de la correspondance ou -1 s'il n'y en a pas.               |
+| {{jsxref("String.replace", "replace")}}   | Une méthode de l'objet `String` qui recherche une correspondance dans une chaîne de caractères et qui remplace la correspondance par une chaîne de substitution.                                   |
+| {{jsxref("String.split", "split")}}       | Une méthode de l'objet `String` qui utilise une expression régulière ou une chaîne de caractères pour découper une chaîne de caractères en un tableau comprenant les fragments résultants.         |
 
 Pour savoir si un motif est présent au sein d'une chaîne de caractères, utiliser les méthodes `test` ou `search`. Pour obtenir plus d'informations (moins rapidement) on utilisera les méthodes `exec` ou `match`. Si on utilise `exec` ou `match` et qu'une correspondance est trouvée, ces méthodes renverront un tableau et mettront à jour des propriétés de l'objet global `RegExp` et aussi de l'instance de `RegExp` associée à l'expression rationnelle. Si aucune correspondance n'est trouvée, la méthode `exec` renverra `null` (qui est automatiquement converti à `false` lors d'un test conditionnel).
 
@@ -796,13 +789,13 @@ Cela affichera "toto, Titi".
 
 Les expressions rationnelles peuvent être utilisées avec des marqueurs optionnels permettant des recherches globales et/ou ne respectant pas la casse. Ces marqueurs peuvent être utilisés séparement ou ensemble, quel que soit l'ordre. Ils font partie de l'expression régulière.
 
-| Drapeau (_Flag_) | Description                                                                                                                                                                                                      |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`              | Recherche globale                                                                                                                                                                                                |
-| `i`              | Recherche ne respectant pas la casse                                                                                                                                                                             |
-| `m`              | Recherche sur plusieurs lignes                                                                                                                                                                                   |
-| `s`              | Le point peut correspondre aux caractères de saut de ligne.                                                                                                                                                      |
-| `u`              | Unicode. Le motif de recherche est interprété comme une séquence de codets Unicode.                                                                                                                              |
+| Drapeau (_Flag_) | Description                                                                                                                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `g`              | Recherche globale                                                                                                                                                                                    |
+| `i`              | Recherche ne respectant pas la casse                                                                                                                                                                 |
+| `m`              | Recherche sur plusieurs lignes                                                                                                                                                                       |
+| `s`              | Le point peut correspondre aux caractères de saut de ligne.                                                                                                                                          |
+| `u`              | Unicode. Le motif de recherche est interprété comme une séquence de codets Unicode.                                                                                                                  |
 | `y`              | Effectue une recherche qui « adhère », en partant de la position courante de la chaîne de caractères sur laquelle la recherche est effectuée. Voir la page sur {{jsxref("RegExp.sticky","sticky")}}. |
 
 Pour utiliser un marqueur avec une expression régulière, on utilisera la syntaxe suivante :
@@ -893,21 +886,21 @@ var listeParNomFamille = [];
 output.push("---------- Après découpage avec l'expression régulière");
 
 var i, len;
-for (i = 0, len = listeNoms.length; i < len; i++){
+for (i = 0, len = listeNoms.length; i < len; i++) {
   output.push(listeNoms[i]);
   listeParNomFamille[i] = listeNoms[i].replace(motif, "$2, $1");
 }
 
 // Afficher le nouveau tableau
 output.push("---------- Noms et prénoms inversés");
-for (i = 0, len = listeParNomFamille.length; i < len; i++){
+for (i = 0, len = listeParNomFamille.length; i < len; i++) {
   output.push(listeParNomFamille[i]);
 }
 
 // Trier par le nom de famille puis afficher le tableau trié
 listeParNomFamille.sort();
 output.push("---------- Triée");
-for (i = 0, len = listeParNomFamille.length; i < len; i++){
+for (i = 0, len = listeParNomFamille.length; i < len; i++) {
   output.push(listeParNomFamille[i]);
 }
 
@@ -947,27 +940,34 @@ signifie qu'on a deux chiffres suivi du premier groupe qui est celui qui défini
 L'événement `Change`, provoqué quand l'utilisateur appuie sur Entrée, renseigne la valeur `RegExp.input`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <script type="text/javascript">
       var re = /(?:\d{2}|\+\d{2}[ ]\d)([- ])\d{2}\1\d{2}\1\d{2}\1\d{2}/;
-      function testInfo(phoneInput){
+      function testInfo(phoneInput) {
         var OK = re.exec(phoneInput.value);
         if (!OK)
-          window.alert(phone.input + " n'est pas un numéro de téléphone valide!");
-        else
-          window.alert("Merci, votre numéro est : " + OK[0]);
+          window.alert(
+            phone.input + " n'est pas un numéro de téléphone valide!",
+          );
+        else window.alert("Merci, votre numéro est : " + OK[0]);
       }
     </script>
   </head>
   <body>
-    <p>Saisissez votre numéro de téléphone (avec indicatif) puis cliquez sur "Vérifier".
-        <br>Le format attendu est ## ## ## ## ## ou +## # ## ## ## ##.</p>
+    <p>
+      Saisissez votre numéro de téléphone (avec indicatif) puis cliquez sur
+      "Vérifier". <br />Le format attendu est ## ## ## ## ## ou +## # ## ## ##
+      ##.
+    </p>
     <form action="#">
-      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Vérifier</button>
+      <input id="phone" /><button
+        onclick="testInfo(document.getElementById('phone'));">
+        Vérifier
+      </button>
     </form>
   </body>
 </html>

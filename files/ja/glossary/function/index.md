@@ -24,7 +24,7 @@ slug: Glossary/Function
 
 ```js
 // 関数宣言
-function foo() {};
+function foo() {}
 // 名前付き関数式
 (function bar() {});
 // アロー関数
@@ -34,16 +34,16 @@ const foo = () => {};
 **内部関数** は、ほかの関数内に書かれた関数です (この例では `square`)。**外部関数** は、関数を含む関数です (この例では `addSquares`):
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
-};
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
 // アロー関数を使う
-const addSquares = (a,b) => {
-   const square = x => x*x;
-   return square(a) + square(b);
+const addSquares = (a, b) => {
+  const square = (x) => x * x;
+  return square(a) + square(b);
 };
 ```
 
@@ -51,15 +51,13 @@ const addSquares = (a,b) => {
 
 ```js
 function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
-};
+  if (x >= 10) return;
+  loop(x + 1);
+}
 // アロー関数を使う
-const loop = x => {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+const loop = (x) => {
+  if (x >= 10) return;
+  loop(x + 1);
 };
 ```
 
@@ -76,14 +74,14 @@ function foo() {
 
 // 名前付きまたは無名の関数式は即時実行できます。
 (function foo() {
-    console.log("Hello Foo");
-}());
-
-(function food() {
-    console.log("Hello Food");
+  console.log("Hello Foo");
 })();
 
-(() => console.log('hello world'))();
+(function food() {
+  console.log("Hello Food");
+})();
+
+(() => console.log("hello world"))();
 ```
 
 IIFE の詳細を知りたい方は、次の Wikipedia のページを確認してください: [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)

@@ -31,19 +31,19 @@ myStorage = window.localStorage;
 아래 코드는 현재 도메인의 로컬 {{domxref("Storage")}} 객체에 접근한 후, {{domxref("Storage.setItem()")}}을 사용해 항목 하나를 추가합니다.
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 위에서 추가한 `localStorage` 항목을 읽는 법은 다음과 같습니다.
 
 ```js
-const cat = localStorage.getItem('myCat');
+const cat = localStorage.getItem("myCat");
 ```
 
 그리고 제거는 아래와 같습니다.
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 `localStorage` 항목의 전체 제거 구문입니다.

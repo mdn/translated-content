@@ -22,7 +22,7 @@ const href = url.toJSON()
 ## 例子
 
 ```
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL("https://developer.mozilla.org/zh-CN/docs/Web/API/URL/toString");
 url.toJSON(); // 应该以字符串形式返回 URL
 ```
 

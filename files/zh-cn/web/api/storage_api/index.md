@@ -66,7 +66,7 @@ User agents may use any method they choose to determine the size of origins' quo
 To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives a {{domxref("StorageEstimate")}} that contains these figures. For example:
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota 是估得的配额
   // estimate.usage 是估得的使用量，单位为 byte 比特
 });

@@ -39,41 +39,45 @@ Os exemplos descritos escrito aqui deve ser tomado em conjunto para obter um mel
 O exemplo a seguir usa o valor padrão de`scope` (ao omití-lo). O service worker neste caso irá controlar`example.com/index.html` bem como páginas abaixo, como `example.com/product/description.html`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Registra um service worker hospeadado na raiz do
   // site usando o escopo padrão
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    console.log('Service worker  registrado com sucesso:', registration);
-  }).catch(function(error) {
-    console.log('Falha ao Registrar o Service Worker:', error);
-  });
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(function (registration) {
+      console.log("Service worker  registrado com sucesso:", registration);
+    })
+    .catch(function (error) {
+      console.log("Falha ao Registrar o Service Worker:", error);
+    });
 } else {
-  console.log('Service workers não suportado!');
+  console.log("Service workers não suportado!");
 }
 ```
 
 O código a seguir, se incluído em uma página na raiz de um site, seria aplicado exatamente às mesmas páginas, como no exemplo acima. Lembre-se de que o escopo, quando incluído, usa a localização da página como base. Alternativamente, se esse código foi incluído em uma página `example.com/product/description.html`, o escopo de`'./'` significa que o escopo que o service worker seria aplicado somente aos recursos de`example.com/product`. Se precisassemos de registrar um service worker em `example.com/product/description.html` aplicado a todoo `example.com`, deixaríamos o escopo acima.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Registre um service worker hospeado na raiz do
   // site usando um escopo mais restritivo.
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
-    console.log('Service worker registrado com sucesso:', registration);
-  }).catch(function(error) {
-    console.log('Service worker falhou ao registrar:', error);
-  });
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "./" })
+    .then(function (registration) {
+      console.log("Service worker registrado com sucesso:", registration);
+    })
+    .catch(function (error) {
+      console.log("Service worker falhou ao registrar:", error);
+    });
 } else {
-  console.log('Service workers não é suportado pelo navegador!.');
+  console.log("Service workers não é suportado pelo navegador!.");
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                               | Comentário          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ServiceWorkerContainer.register")}}
+{{Compat}}

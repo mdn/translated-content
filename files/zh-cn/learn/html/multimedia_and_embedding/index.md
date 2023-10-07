@@ -29,9 +29,9 @@ slug: Learn/HTML/Multimedia_and_embedding
   - : 有一些其他类型的多媒体要考虑，但是从简单的 {{htmlelement("img")}} 元素开始是符合逻辑的，它常常被用来在网页中嵌入一个简单的图片。在这篇文章中，我们要看看怎样更深入的使用它，包括基础知识，使用 {{htmlelement("figure")}} 来为图片增加说明，以及怎样把它关联到 CSS 背景图片。
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : 接下来，我们将看看怎样在我们的页面上用 HTML5 的 {{htmlelement("video")}} 和{{htmlelement("audio")}} 元素来嵌入视频和音频；包括基础知识，向不同的浏览器提供不同文件格式的访问方式，增加标题和副标题，以及增加对过时的浏览器的兼容。
-- [从 \<object> 到 \<iframe>——其他嵌入技术](/zh_CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [从 \<object> 到 \<iframe>——其他嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
   - : 在这一节，我们将来了解一些另辟蹊径的内容，看一组元素，它们可以让你在页面中嵌入许多不同类型的内容： {{htmlelement("iframe")}}, {{htmlelement("embed")}} 和 {{htmlelement("object")}} 元素。 `<iframe>` 用来嵌入其他网页，而另外两者可以帮助你嵌入 PDF, SVG, 甚至是 Flash——一种逐渐退出历史舞台的技术，不过也许你还是能时不时的看到它。
-- [在页面中添加矢量图像](/zh_CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [在页面中添加矢量图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
   - : 矢量图像在一些特定场景中非常有用。不同于常见的格式，比如 PNG/JPG, 它们不会在放大的时候变得扭曲或者显示出像素格——它们可以在缩放时保持光滑。本文将为你介绍什么是矢量图像，以及如何在网页中添加流行的 {{glossary("SVG")}} 格式图像。
 - [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
   - : 现在有许多不同的设备类型能够浏览网络——从手机到台式电脑——在现代网络世界中掌握的一个基本概念就是响应式设计。这是指创建可以自动更改其功能以适应不同屏幕尺寸，分辨率等的网页。稍后将在 CSS 模块中详细介绍这一点，但是现在我们将看看 HTML 可用于创建响应式图像的工具，包括 {{htmlelement("picture")}} 元素。

@@ -40,8 +40,13 @@ widows: unset;
 ```html
 <div>
   <p>Este es el primer paragrafo que contiene algun texto.</p>
-  <p>Este es el segundo paragrafo que contiene algún texto mayor que el primero. Es usado para desmostrar como trabaja widows.</p>
-  <p>Este es el tercer paragrafo. Es un poco mas extenso en texto que el primero.</p>
+  <p>
+    Este es el segundo paragrafo que contiene algún texto mayor que el primero.
+    Es usado para desmostrar como trabaja widows.
+  </p>
+  <p>
+    Este es el tercer paragrafo. Es un poco mas extenso en texto que el primero.
+  </p>
 </div>
 ```
 

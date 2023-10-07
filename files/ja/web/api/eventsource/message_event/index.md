@@ -1,7 +1,6 @@
 ---
-title: 'EventSource: message イベント'
+title: "EventSource: message イベント"
 slug: Web/API/EventSource/message_event
-original_slug: Web/API/EventSource/onmessage
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
@@ -17,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## イベント型
@@ -48,10 +47,10 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 この基本的な例では、サーバーからイベントを受け取るために `EventSource` を作成し、 `sse.php` という名前のページがイベントを作成する役割を担っています。
 
 ```js
-const evtSource = new EventSource('sse.php');
-const eventList = document.querySelector('ul');
+const evtSource = new EventSource("sse.php");
+const eventList = document.querySelector("ul");
 
-evtSource.addEventListener('message', (e) => {
+evtSource.addEventListener("message", (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;

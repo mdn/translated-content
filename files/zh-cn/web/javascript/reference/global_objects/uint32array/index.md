@@ -133,7 +133,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Uint32Array(buffer, 0, 4);
 
 // 给定可迭代对象
-var iterable = function*(){ yield* [1, 2, 3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint32 = new Uint32Array(iterable);
 // Uint32Array[1, 2, 3]
 ```

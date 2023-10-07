@@ -1,7 +1,6 @@
 ---
 title: Segurança em aplicação web
 slug: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/First_steps/Seguranca_site
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

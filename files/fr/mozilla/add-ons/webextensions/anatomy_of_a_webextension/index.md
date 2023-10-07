@@ -1,9 +1,6 @@
 ---
 title: Anatomie d'une WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
 {{AddonSidebar}}
@@ -63,10 +60,10 @@ Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une pa
 **background-page.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script type="module" src="background-script.js"></script>
   </head>
 </html>
@@ -82,7 +79,7 @@ Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales ap
 
 #### APIs des WebExtensions
 
-Les scripts d'arrière-plan peuvent utiliser l'une des [APIs des WebExtensions](/fr/Add-ons/WebExtensions/API) dans le script, à condition que leur extension dispose des [permissions](/fr-FR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
+Les scripts d'arrière-plan peuvent utiliser l'une des [APIs des WebExtensions](/fr/Add-ons/WebExtensions/API) dans le script, à condition que leur extension dispose des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
 
 #### Cross-origin access
 
@@ -130,11 +127,11 @@ Contrairement aux scripts de pages normales, ils peuvent :
 - Utiliser un petit sous-ensemble de l'[APIs des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
 - [Echanger des messages avec leurs scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan) et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.
 
-Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard [`window.postMessage()`](/fr-FR/docs/Web/API/Window/postMessage).
+Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
 
 Habituellement, quand nous parlons de scripts de contenu, nous parlons de JavaScript, mais vous pouvez injecter du CSS dans des pages Web en utilisant le même mécanisme.
 
-Voir l'article de [scripts de contenu](/fr-FR/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) pour en savoir plus.
+Voir l'article de [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) pour en savoir plus.
 
 ## Rendre accessible des ressources web
 

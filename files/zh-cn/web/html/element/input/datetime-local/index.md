@@ -66,7 +66,11 @@ slug: Web/HTML/Element/input/datetime-local
 
 ```html
 <label for="party">输入预订宴会的日期和时间：</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('取值', 600, 60) }}
@@ -79,7 +83,7 @@ slug: Web/HTML/Element/input/datetime-local
 
 ```js
 const dateControl = document.querySelector('input[type="datetime-local"]');
-dateControl.value = '2017-06-01T08:30';
+dateControl.value = "2017-06-01T08:30";
 ```
 
 JavaScript 的 {{jsxref("Date")}} 提供了几种用于将数值类型的日期转换为格式化字符串的方法。例如：{{jsxref("Date.toISOString()")}} 方法返回 UTC 时区的日期和时间，带有表示该时区的 `Z` 前缀；删除 `Z` 后将可以提供用于 `datetime-local` input 的格式化的值。
@@ -124,8 +128,8 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 ```html
 <form>
-    <label for="party">输入预订宴会的日期和时间：</label>
-    <input id="party" type="datetime-local" name="partydate">
+  <label for="party">输入预订宴会的日期和时间：</label>
+  <input id="party" type="datetime-local" name="partydate" />
 </form>
 ```
 
@@ -136,10 +140,15 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可选择的日期/时间。在下面的例子中我们设定最小的日期时间 `2017-06-01T08:30` 和最大的日期时间 `2017-06-30T16:30`：
 
 ```html
-  <form>
-    <label for="party">输入预订宴会的日期和时间：</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+<form>
+  <label for="party">输入预订宴会的日期和时间：</label>
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2017-06-01T08:30"
+    max="2017-06-30T16:30" />
+</form>
 ```
 
 {{ EmbedLiveSample('设定日期时间的最大值和最小值', 600, 40) }}
@@ -162,18 +171,18 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 例如，如果你在开发一套系统，某位用户可能已经登录进来，并且已经设置了时区，你可以把时区放在一个 [`hidden`](/zh-CN/docs/Web/HTML/Element/input/hidden) 输入控件里。例如：
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
 另一方面，如果你被要求在用户输入日期时间时提供时区输入，你可以提供给用户一种输入方式，例如 {{htmlelement("select")}} 元素：
 
 ```html
 <select name="timezone" id="timezone">
-    <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
-    <option value="Pacific/Midway">Midway Island, Samoa</option>
-    <option value="Pacific/Honolulu">Hawaii</option>
-    <option value="Pacific/Marquesas">Taiohae</option>
-    <!-- and so on -->
+  <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
+  <option value="Pacific/Midway">Midway Island, Samoa</option>
+  <option value="Pacific/Honolulu">Hawaii</option>
+  <option value="Pacific/Marquesas">Taiohae</option>
+  <!-- and so on -->
 </select>
 ```
 
@@ -189,14 +198,23 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 ```html
 <form>
-    <div>
-        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="Book party!">
-    </div>
+  <div>
+    <label for="party"
+      >Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):</label
+    >
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      required />
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="Book party!" />
+  </div>
 </form>
 ```
 
@@ -208,9 +226,9 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -218,14 +236,14 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span:after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span:after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
@@ -251,16 +269,24 @@ input:valid+span:after {
 ```html
 <form>
   <div>
-    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <label for="party"
+      >Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):</label
+    >
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Book party!">
+    <input type="submit" value="Book party!" />
   </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 </form>
 ```
 
@@ -282,7 +308,7 @@ input:invalid + span {
 }
 
 input:invalid + span:after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -292,7 +318,7 @@ input:valid + span {
 }
 
 input:valid + span:after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -314,14 +340,14 @@ JavaScript 使用双精度浮点数来存储日期（数值），这意味着 Ja
 
 ```html
 <!--midnight of January 1st, 10000: the exact time of Y10K-->
-<input type="datetime-local" value="+010000-01-01T05:00"/>
+<input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
 就是这么简单，你只需要为任意位数的日期编写代码。不要只准备 5 位数的。以下是使用编程方式设置值的 JavaScript 代码：
 
 ```js
 function setValue(element, date) {
-  const isoString = date.toISOString()
+  const isoString = date.toISOString();
   element.value = isoString.substring(0, isoString.indexOf("T") + 6);
 }
 ```
@@ -340,7 +366,7 @@ HTML 代码如下：
 <form>
   <div class="nativeDateTimePicker">
     <label for="party">Choose a date and time for your party:</label>
-    <input type="datetime-local" id="party" name="bday">
+    <input type="datetime-local" id="party" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">Choose a date and time for your party:</p>
@@ -348,8 +374,7 @@ HTML 代码如下：
     <div>
       <span>
         <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
+        <select id="day" name="day"></select>
       </span>
       <span>
         <label for="month">Month:</label>
@@ -370,20 +395,17 @@ HTML 代码如下：
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -406,15 +428,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -423,35 +445,35 @@ input:valid+span:after {
 
 ```js
 // Obtain UI widgets
-const nativePicker = document.querySelector('.nativeDateTimePicker');
-const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDateTimePicker");
+const fallbackPicker = document.querySelector(".fallbackDateTimePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
-const daySelect = document.querySelector('#day');
-const hourSelect = document.querySelector('#hour');
-const minuteSelect = document.querySelector('#minute');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
+const daySelect = document.querySelector("#day");
+const hourSelect = document.querySelector("#hour");
+const minuteSelect = document.querySelector("#minute");
 
 // hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // test whether a new datetime-local input falls back to a text input or not
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'datetime-local';
+  test.type = "datetime-local";
 } catch (e) {
   console.log(e.description);
 }
 
 // if it does, run the code inside the if () {} block
-if (test.type === 'text') {
+if (test.type === "text") {
   // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the days and years dynamically
   // (the months are always the same, therefore hardcoded)
@@ -472,12 +494,22 @@ function populateDays(month) {
   let dayNum;
 
   // 31 or 30 days?
-  if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {
+  if (
+    [
+      "January",
+      "March",
+      "May",
+      "July",
+      "August",
+      "October",
+      "December",
+    ].includes(month)
+  ) {
     dayNum = 31;
-  } else if (['April', 'June', 'September', 'November'].includes(month)) {
+  } else if (["April", "June", "September", "November"].includes(month)) {
     dayNum = 30;
   } else {
-  // If month is February, calculate whether it is a leap year or not
+    // If month is February, calculate whether it is a leap year or not
     const year = yearSelect.value;
     const isLeap = new Date(year, 1, 29).getMonth() === 1;
     dayNum = isLeap ? 29 : 28;
@@ -485,7 +517,7 @@ function populateDays(month) {
 
   // inject the right number of new <option> elements into the day <select>
   for (let i = 1; i <= dayNum; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -521,7 +553,7 @@ function populateYears() {
 
   // Make this year, and the 100 years before it available in the year <select>
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }
@@ -530,8 +562,8 @@ function populateYears() {
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
   for (let i = 0; i <= 23; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
@@ -539,8 +571,8 @@ function populateHours() {
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
@@ -549,11 +581,11 @@ function populateMinutes() {
 // in case the change affected the number of available days
 yearSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 monthSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 //preserve day selection
 let previousDay;
@@ -562,7 +594,7 @@ let previousDay;
 // see end of populateDays() for usage
 daySelect.onchange = () => {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **备注：** 请记住某些年份有 53 个星期（见[**每年的周数**](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。

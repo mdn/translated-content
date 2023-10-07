@@ -89,7 +89,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -209,15 +209,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

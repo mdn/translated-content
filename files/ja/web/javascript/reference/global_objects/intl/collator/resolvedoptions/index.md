@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -39,15 +39,15 @@ resolvedOptions()
 ### resolvedOptions メソッドの使用
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
+var de = new Intl.Collator("de", { sensitivity: "base" });
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;       // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## 仕様書

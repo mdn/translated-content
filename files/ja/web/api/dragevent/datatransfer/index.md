@@ -1,13 +1,16 @@
 ---
-title: DragEvent.dataTransfer
+title: "DragEvent: dataTransfer プロパティ"
+short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DragEvent.dataTransfer`** プロパティは、ドラッグ操作のデータを（{{domxref("DataTransfer")}} オブジェクトとして）保持します。
 
-このプロパティは {{readonlyInline}} です。
+このプロパティは {{ReadOnlyInline}} です。
 
 ## 値
 
@@ -19,13 +22,17 @@ slug: Web/API/DragEvent/dataTransfer
 
 ```js
 function processData(d) {
-   // データを処理...
+  // データを処理...
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
-   // ドラッグ＆ドロップのデータ処理を呼び出す
-   if (ev.dataTransfer !== null) processData(ev.dataTransfer);
- }, false);
+dragTarget.addEventListener(
+  "dragend",
+  (ev) => {
+    // ドラッグ＆ドロップのデータ処理を呼び出す
+    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
+  },
+  false,
+);
 ```
 
 ## 仕様書

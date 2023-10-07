@@ -3,6 +3,8 @@ title: Chrome 浏览器
 slug: Glossary/Google_Chrome
 ---
 
+{{GlossarySidebar}}
+
 Chrome 浏览器是 Google 开发的一个免费网络{{glossary("browser","浏览器")}}。它基于开源项目 [Chromium](https://www.chromium.org/)。[BrowserStack](https://www.browserstack.com/guide/difference-between-chrome-and-chromium#toc5) 中描述了它们之间的主要差异。Chrome 维护使用自己的渲染引擎 {{glossary("Blink")}} 。注意：IOS 版本的 Chrome 使用了 IOS 平台的 WebView，而非 Blink。
 
 ## 参见

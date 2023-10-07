@@ -1,28 +1,23 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 
-{{APIRef ("CSSOM")}}
+{{APIRef("CSSOM")}}
 
 Renvoie la feuille de style qui inclut celle-ci, le cas échéant.
 
 ## Syntaxe
 
 ```js
-ObjRef = stylesheet.parentStyleSheet
+objref = stylesheet.parentStyleSheet;
 ```
 
 ## Exemple
 
 ```js
 // trouve la feuille de style de niveau supérieur
-If (stylesheet.parentStyleSheet) {
-    Feuille = stylesheet.parentStyleSheet;
-} autre {
-    Feuille = feuille de style;
-}
+const sheet = stylesheet.parentStyleSheet ?? stylesheet;
 ```
 
 ## Remarques

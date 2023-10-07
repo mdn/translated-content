@@ -1,8 +1,6 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
-translation_of: Web/HTTP/Status/103
-browser-compat: http.status.103
 ---
 
 {{HTTPSidebar}}

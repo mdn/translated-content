@@ -1,8 +1,6 @@
 ---
 title: API tierces
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -37,7 +35,7 @@ Les API fournies par le navigateur sont construites **dans** le navigateur et on
 ```js
 const audioCtx = new AudioContext();
 // …
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 // …
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
@@ -46,17 +44,22 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 En revanche, les API tierces sont situées sur des serveurs tiers. Pour y accéder avec JavaScript, il faut d'abord se connecter aux fonctionnalités de l'API afin de les rendre disponibles sur la page. Cela implique généralement de charger une bibliothèque JavaScript disponible sur le serveur via un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Pour notre exemple avec MapQuest, voici ce que ça donne&nbsp;:
 
 ```html
-<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<script
+  src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
+  defer></script>
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
 ```
 
 On peut alors utiliser les objets fournis par cette bibliothèque. Par exemple&nbsp;:
 
 ```js
-const map = L.mapquest.map('map', {
+const map = L.mapquest.map("map", {
   center: [53.480759, -2.242631],
-  layers: L.mapquest.tileLayer('map'),
-  zoom: 12
+  layers: L.mapquest.tileLayer("map"),
+  zoom: 12,
 });
 ```
 
@@ -102,7 +105,7 @@ Ajoutons quelques fonctionnalités à cet exemple MapQuest afin d'illustrer le f
 L'API MapQuest permet d'afficher différents types de carte. Localisez la ligne suivante dans votre fichier&nbsp;:
 
 ```js
-layers: L.mapquest.tileLayer('map')
+layers: L.mapquest.tileLayer("map");
 ```
 
 Ici, vous pouvez changer `'map'` en `'hybrid'` afin d'afficher une carte avec un style hybride. Vous pouvez essayer d'autres valeurs comme celles indiquées sur [la page de référence de la méthode `tileLayer()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/).
@@ -118,7 +121,7 @@ map.addControl(L.mapquest.control());
 La méthode [`mapquest.control()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) crée un ensemble complet de contrôles et est placée, par défaut, dans le coin supérieur droit de la carte. Cette position peut être ajustée grâce à un paramètre d'options contenant une propriété `position` dont la valeur est un mot-clé décrivant la position souhaitée. Vous pouvez modifier la ligne de la façon suivante par exemple&nbsp;:
 
 ```js
-  map.addControl(L.mapquest.control({ position: 'bottomright' }));
+map.addControl(L.mapquest.control({ position: "bottomright" }));
 ```
 
 D'autres types de contrôle sont disponibles comme [`mapquest.searchControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-search-control/) et [`mapquest.satelliteControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-satellite-control/). Certains sont avancés et permettent nombreuses choses. N'hésitez pas à en essayer différents pour voir un peu ce que vous pouvez construire.
@@ -130,15 +133,15 @@ Pour ajouter une icône sur un point de la carte, on pourra utiliser la méthode
 ```js
 L.marker([53.480759, -2.242631], {
   icon: L.mapquest.icons.marker({
-    primaryColor: '#22407F',
-    secondaryColor: '#3B5998',
+    primaryColor: "#22407F",
+    secondaryColor: "#3B5998",
     shadow: true,
-    size: 'md',
-    symbol: 'A'
-  })
+    size: "md",
+    symbol: "A",
+  }),
 })
-.bindPopup('Ici se trouve Manchester !')
-.addTo(map);
+  .bindPopup("Ici se trouve Manchester !")
+  .addTo(map);
 ```
 
 Comme on peut le voir ici, sous sa forme la plus simple, la méthode prend deux paramètres&nbsp;:
@@ -186,43 +189,42 @@ Tout d'abord, vous devrez créer une connexion entre l'API et votre application.
 
 1. Localisez la ligne qui suit et remplacez la valeur avec la clé de développement que vous avez obtenu plus tôt&nbsp;:
 
-    ```js
-    const key = 'VOTRE-CLE-D-API';
-    ```
+   ```js
+   const key = "VOTRE-CLE-D-API";
+   ```
 
 2. Ajoutez la ligne suivante sous le commentaire `// Event listeners to control the functionality`. Cette ligne permet d'exécuter la fonction `submitSearch()` lorsque le formulaire est envoyé (quand on presse le bouton).
 
-    ```js
-    searchForm.addEventListener('submit', submitSearch);
-    ```
+   ```js
+   searchForm.addEventListener("submit", submitSearch);
+   ```
 
 3. Sous cette nouvelle ligne, ajoutons les fonctions `submitSearch()` et `fetchResults()`&nbsp;:
 
-    ```js
-    function submitSearch(e) {
-      pageNumber = 0;
-      fetchResults(e);
-    }
+   ```js
+   function submitSearch(e) {
+     pageNumber = 0;
+     fetchResults(e);
+   }
 
-    function fetchResults(e) {
-      // On utilise preventDefault() afin d'éviter
-      // l'envoi vers notre serveur et le rafraîchissement
-      // de la page
-      e.preventDefault();
+   function fetchResults(e) {
+     // On utilise preventDefault() afin d'éviter
+     // l'envoi vers notre serveur et le rafraîchissement
+     // de la page
+     e.preventDefault();
 
-      // On compose l'URL
-      let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
+     // On compose l'URL
+     let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
 
-      if (startDate.value !== '') {
-        url = `${url}&begin_date=${startDate.value}`;
-      };
+     if (startDate.value !== "") {
+       url = `${url}&begin_date=${startDate.value}`;
+     }
 
-      if (endDate.value !== '') {
-        url = `${url}&end_date=${endDate.value}`;
-      };
-
-    }
-    ```
+     if (endDate.value !== "") {
+       url = `${url}&end_date=${endDate.value}`;
+     }
+   }
+   ```
 
 `submitSearch()` réinitialise le nombre de page à 0 puis appelle `fetchResults()`. Cette fonction commence par appeler [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'évènement afin d'empêcher l'envoi du formulaire vers notre serveur (ce qui casserait l'exemple). Ensuite, on assemble la chaîne de caractères qui formera l'URL sur laquelle on fera la requête. Dans cette URL, on commence par mettre les fragments nécessaires à cette démonstration&nbsp;:
 
@@ -253,9 +255,13 @@ Dans la fonction `fetchResults()`, juste avant l'accolade de fin, ajoutez le fra
 ```js
 // On utilise fetch() pour envoyer la requête à l'API
 fetch(url)
-  .then( response => response.json() )
-  .then( json => displayResults(json) )
-  .catch( error => console.error(`Erreur lors de la récupération des données : ${error.message}`) );
+  .then((response) => response.json())
+  .then((json) => displayResults(json))
+  .catch((error) =>
+    console.error(
+      `Erreur lors de la récupération des données : ${error.message}`,
+    ),
+  );
 ```
 
 On envoie la requête en passant la variable `url` comme paramètre à la fonction [`fetch()`](/fr/docs/Web/API/fetch) puis on convertit le corps de la réponse avec la fonction [`json()`](/fr/docs/Web/API/Response/json) puis on passe le JSON ainsi obtenu à la fonction `displayResults()` afin que les données puissent être affichées dans l'interface utilisateur. On intercepte et affiche dans la console les éventuelles erreurs.
@@ -267,39 +273,39 @@ Voyons maintenant comment afficher les données reçues. Dans le fichier contena
 ```js
 function displayResults(json) {
   while (section.firstChild) {
-      section.removeChild(section.firstChild);
+    section.removeChild(section.firstChild);
   }
 
   const articles = json.response.docs;
 
-  if(articles.length === 10) {
-    nav.style.display = 'block';
+  if (articles.length === 10) {
+    nav.style.display = "block";
   } else {
-    nav.style.display = 'none';
+    nav.style.display = "none";
   }
 
-  if(articles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'Aucun résultat reçu.'
+  if (articles.length === 0) {
+    const para = document.createElement("p");
+    para.textContent = "Aucun résultat reçu.";
     section.appendChild(para);
   } else {
-    for(const i = 0; i < articles.length; i++) {
-      const article = document.createElement('article');
-      const heading = document.createElement('h2');
-      const link = document.createElement('a');
-      const img = document.createElement('img');
-      const para1 = document.createElement('p');
-      const keywordPara = document.createElement('p');
-      keywordPara.classList.add('keywords');
+    for (const i = 0; i < articles.length; i++) {
+      const article = document.createElement("article");
+      const heading = document.createElement("h2");
+      const link = document.createElement("a");
+      const img = document.createElement("img");
+      const para1 = document.createElement("p");
+      const keywordPara = document.createElement("p");
+      keywordPara.classList.add("keywords");
 
       console.log(current);
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
       para1.textContent = current.snippet;
-      keywordPara.textContent = 'Mots-clés : ';
+      keywordPara.textContent = "Mots-clés : ";
       for (const keyword of current.keywords) {
-        const span = document.createElement('span');
+        const span = document.createElement("span");
         span.textContent = `${keyword.value} `;
         keywordPara.appendChild(span);
       }
@@ -317,7 +323,7 @@ function displayResults(json) {
       section.appendChild(article);
     }
   }
-};
+}
 ```
 
 Il y a pas mal de code ici. Reprenons étape par étape pour l'expliquer&nbsp;:
@@ -339,32 +345,32 @@ En connaissant cela, on peut écrire une fonction pour gérer la pagination.
 
 1. Après l'appel existant à [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), on ajoute les deux prochaines lignes qui appelleront les fonctions `nextPage()` et `previousPage()` lorsqu'on cliquera sur le bouton correspondant&nbsp;:
 
-    ```js
-    nextBtn.addEventListener('click', nextPage);
-    previousBtn.addEventListener('click', previousPage);
-    ```
+   ```js
+   nextBtn.addEventListener("click", nextPage);
+   previousBtn.addEventListener("click", previousPage);
+   ```
 
 2. À la suite, on définit le corps de ces fonctions&nbsp;:
 
-    ```js
-    function nextPage(e) {
-      pageNumber++;
-      fetchResults(e);
-    };
+   ```js
+   function nextPage(e) {
+     pageNumber++;
+     fetchResults(e);
+   }
 
-    function previousPage(e) {
-      if(pageNumber > 0) {
-        pageNumber--;
-      } else {
-        return;
-      }
-      fetchResults(e);
-    };
-    ```
+   function previousPage(e) {
+     if (pageNumber > 0) {
+       pageNumber--;
+     } else {
+       return;
+     }
+     fetchResults(e);
+   }
+   ```
 
-    La première fonction incrémente la variable `pageNumber` puis exécute à nouveau la fonction `fetchResults()` afin d'afficher les prochains résultats.
+   La première fonction incrémente la variable `pageNumber` puis exécute à nouveau la fonction `fetchResults()` afin d'afficher les prochains résultats.
 
-    La seconde fonction est similaire, mais on prend la précaution de vérifier que `pageNumber` ne vaut pas déjà 0 avant de diminuer sa valeur (si la requête est envoyée avec un paramètre négatif, on pourrait recevoir une erreur). Lorsque `pageNumber` vaut déjà 0, on sort de la fonction avec [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) afin d'éviter de lancer une requête pour rien (si on est déjà sur la première page, pas besoin de recharger les résultats à nouveau).
+   La seconde fonction est similaire, mais on prend la précaution de vérifier que `pageNumber` ne vaut pas déjà 0 avant de diminuer sa valeur (si la requête est envoyée avec un paramètre négatif, on pourrait recevoir une erreur). Lorsque `pageNumber` vaut déjà 0, on sort de la fonction avec [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) afin d'éviter de lancer une requête pour rien (si on est déjà sur la première page, pas besoin de recharger les résultats à nouveau).
 
 > **Note :** Vous pouvez trouver [le code terminé de l'exemple utilisant l'API du NYTimes sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (et aussi [voir le résultat correspondant fonctionner ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
 

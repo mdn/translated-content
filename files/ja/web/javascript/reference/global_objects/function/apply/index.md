@@ -64,7 +64,7 @@ ECMAScript 第 5 版以降では、配列風のオブジェクトも使えます
 `apply` が救ってくれます！
 
 ```js
-const array = ['a', 'b'];
+const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -88,7 +88,7 @@ let max = Math.max.apply(null, numbers);
 let min = Math.min.apply(null, numbers);
 
 // 対して、ループ文を使うとこうなる
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -112,8 +112,7 @@ function minOfArray(arr) {
   let QUANTUM = 32768;
 
   for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
-                                arr.slice(i, Math.min(i+QUANTUM, len)));
+    var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
     min = Math.min(submin, min);
   }
 
@@ -130,7 +129,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 以下に示す例ではグローバルな `construct` という名称の {{jsxref("Function")}} オブジェクトを作成し、引数のリストの代わりに配列風オブジェクトをコンストラクターと共に利用できるようになります。
 
 ```js
-Function.prototype.construct = function(aArgs) {
+Function.prototype.construct = function (aArgs) {
   let oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
@@ -153,10 +152,11 @@ Function.prototype.construct = function(aArgs) {
 > [クロージャ](/ja/docs/Web/JavaScript/Closures)を利用:
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   let fConstructor = this, fNewConstr = function() {
->     fConstructor.apply(this, aArgs);
->   };
+> Function.prototype.construct = function (aArgs) {
+>   let fConstructor = this,
+>     fNewConstr = function () {
+>       fConstructor.apply(this, aArgs);
+>     };
 >   fNewConstr.prototype = fConstructor.prototype;
 >   return new fNewConstr();
 > };
@@ -179,16 +179,16 @@ Function.prototype.construct = function(aArgs) {
 ```js
 function MyConstructor() {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-let myArray = [4, 'Hello world!', false];
+let myArray = [4, "Hello world!", false];
 let myInstance = MyConstructor.construct(myArray);
 
-console.log(myInstance.property1);                // logs 'Hello world!'
+console.log(myInstance.property1); // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor);              // logs 'MyConstructor'
+console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > **メモ:** この非ネイティブな `Function.construct` メソッドはいくつかのネイティブ実装されたコンストラクタ (例えば {{jsxref("Date")}} のような物) と併用できません。このようなケースにおいては {{jsxref("Function.bind")}} メソッドを利用する必要があります。

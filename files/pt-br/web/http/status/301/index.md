@@ -33,8 +33,8 @@ Location: http://www.example.org/index.asp
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                      | Título                                                        |
+| -------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "301 Moved Permanently" , "6.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

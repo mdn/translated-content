@@ -26,8 +26,8 @@ Se o servidor retornar este status de erro, o corpo da mensagem deve conter a a 
 
 ## Especificações
 
-| Especificação                                                    | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                   | Título                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "406 Not Acceptable" , "6.5.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

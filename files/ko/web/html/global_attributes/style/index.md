@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/style
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-style.html","tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 > **참고:** `style` 특성에 의미를 담으면 안됩니다. 페이지의 모든 스타일을 제거하더라도, 그 의미는 옳게 남아있어야 합니다. 보통 `style`을 사용해 불필요한 정보를 숨기기보단 [`hidden`](/ko/docs/Web/HTML/Global_attributes/hidden) 특성을 사용해야 합니다.
 
 ## 명세

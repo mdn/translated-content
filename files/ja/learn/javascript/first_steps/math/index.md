@@ -43,22 +43,22 @@ slug: Learn/JavaScript/First_steps/Math
 
 1. まず、変数を 2 つ宣言して、それぞれ整数と浮動小数点数で初期化してみましょう。そして、変数の名前を入力して、期待通りに値が入っていることを確認してみましょう。
 
-    ```js
-    var myInt = 5;
-    var myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   var myInt = 5;
+   var myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. 数値にはクォーテーションマークが不要です。次に進む前にもう少し変数の宣言と初期化をしてみてください。
 3. さて、それでは上で入力した 2 つの変数が同じデータ型であるか確認してみましょう。JavaScript では、{{jsxref("Operators/typeof", "typeof")}} という演算子を使用することで、データ型を確認することができます。次の 2 行を入力してみましょう。
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    どちらの変数についても `"number"` という文字が戻ってきましたね。もし、別々の数値型が存在しているとすれば、別々に処理しなければならないので、そう考えるととても簡単に思えますよね！
+   どちらの変数についても `"number"` という文字が戻ってきましたね。もし、別々の数値型が存在しているとすれば、別々に処理しなければならないので、そう考えるととても簡単に思えますよね！
 
 ### 便利な Number メソッド
 
@@ -80,7 +80,7 @@ twoDecimalPlaces;
 例えば、これらの命令をコンソールに入力してみてください。
 
 ```js
-let myNumber = '74';
+let myNumber = "74";
 myNumber + 3;
 ```
 
@@ -117,29 +117,29 @@ Number(myNumber) + 3;
 
 1. まずは次のような簡単な例を自分で試してみてください。
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. そして、変数を宣言して初期化し、数を変数に格納します。それから変数を使って計算してみましょう。変数は計算するにあたり、保持している値がそこにあるかのように使えます。例えば次の通り。
 
-    ```js
-    let num1 = 10;
-    let num2 = 50;
-    9 * num1;
-    num1 ** 3;
-    num2 / num1;
-    ```
+   ```js
+   let num1 = 10;
+   let num2 = 50;
+   9 * num1;
+   num1 ** 3;
+   num2 / num1;
+   ```
 
 3. それではさらに難しい計算式を入力してみましょう。
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 最後の例の中に予想した結果と違う答えがありませんでしたか。次の章でなぜそうなったかを説明してみましょう。
 
@@ -286,18 +286,18 @@ x *= y; // x は 12 になる
 ```
 
 ```js
-const btn = document.querySelector('button');
-const txt = document.querySelector('p');
+const btn = document.querySelector("button");
+const txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === '起動する') {
-    btn.textContent = '停止する';
-    txt.textContent = 'マシンが起動しました！';
+  if (btn.textContent === "起動する") {
+    btn.textContent = "停止する";
+    txt.textContent = "マシンが起動しました！";
   } else {
-    btn.textContent = '起動する';
-    txt.textContent = 'マシンは停止中です。';
+    btn.textContent = "起動する";
+    txt.textContent = "マシンは停止中です。";
   }
 }
 ```

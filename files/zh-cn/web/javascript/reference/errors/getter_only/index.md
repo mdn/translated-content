@@ -29,11 +29,11 @@ TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chro
 
 function Archiver() {
   var temperature = null;
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
-    }
+    },
   });
 }
 
@@ -53,18 +53,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();

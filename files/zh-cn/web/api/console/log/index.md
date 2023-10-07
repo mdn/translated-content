@@ -5,7 +5,7 @@ slug: Web/API/console/log
 
 {{APIRef("Console API")}}
 
- **`console.log()`** 方法向 Web 控制台输出一条信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
+**`console.log()`** 方法向 Web 控制台输出一条信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
 
 {{AvailableInWorkers}}
 

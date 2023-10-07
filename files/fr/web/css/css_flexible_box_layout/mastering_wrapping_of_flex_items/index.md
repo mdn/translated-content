@@ -1,17 +1,6 @@
 ---
 title: Maîtriser le passage à la ligne des éléments flexibles
 slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
-tags:
-  - CSS
-  - Grille
-  - Guide
-  - Intermediate
-  - flexbox
-  - grid
-  - wrapping
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-original_slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Maîtriser_passage_à_la_ligne_des_éléments_flexibles
 ---
 
 {{CSSRef}}
@@ -74,7 +63,7 @@ Cette contrainte sera levée lorsque les propriétés de gouttières seront impl
 
 La spécification sur les boîtes flexibles détaille la façon dont un élément flexible est replié lorsqu'on lui applique `visibility: collapse` (voir la documentation de {{cssxref("visibility")}}). La spécification décrit le comportement standard comme suit :
 
-> “Indiquer `visibility:collapse` sur un élément flexible le transforme en un élément flexible replié et produit un effet similaire à l'application de `visibility:collapse` sur une ligne ou colonne de tableau. L'élément flexible replié est intégralement retiré du rendu mais laisse une toise qui permet de conserver la taille de la ligne flexible selon l'axe secondaire. Ainsi, si un conteneur flexible ne possède qu'une ligne flexible, replier ou déplier des éléments flexibles pourra modifier la dimension principale du conteneur mais n'aura aucun effet sur l'axe secondaire et empêchera ainsi le reste de la page d'osciller. Le passage à la ligne est réappliqué après le repliage des éléments et il se peut donc que la dimension secondaire d'un conteneur flexible sur plusieurs lignes puisse évoluer.” - [Éléments repliés](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
+> "Indiquer `visibility:collapse` sur un élément flexible le transforme en un élément flexible replié et produit un effet similaire à l'application de `visibility:collapse` sur une ligne ou colonne de tableau. L'élément flexible replié est intégralement retiré du rendu mais laisse une toise qui permet de conserver la taille de la ligne flexible selon l'axe secondaire. Ainsi, si un conteneur flexible ne possède qu'une ligne flexible, replier ou déplier des éléments flexibles pourra modifier la dimension principale du conteneur mais n'aura aucun effet sur l'axe secondaire et empêchera ainsi le reste de la page d'osciller. Le passage à la ligne est réappliqué après le repliage des éléments et il se peut donc que la dimension secondaire d'un conteneur flexible sur plusieurs lignes puisse évoluer." - [Éléments repliés](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
 
 Ce comportement s'avère utile lorsqu'on souhaite cibler certains éléments flexibles avec JavaScript afin d'afficher/masquer leur contenu. Un des exemples de la spécification illustre un tel scénario.
 

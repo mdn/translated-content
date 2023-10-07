@@ -16,7 +16,7 @@ eventSource.onerror = function
 ## 例子
 
 ```js
-evtSource.onerror = function() {
+evtSource.onerror = function () {
   console.log("EventSource failed.");
 };
 ```

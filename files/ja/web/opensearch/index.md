@@ -1,7 +1,6 @@
 ---
 title: OpenSearch 記述形式
 slug: Web/OpenSearch
-original_slug: Creating_OpenSearch_plugins_for_Firefox
 ---
 
 {{AddonSidebar}}
@@ -81,10 +80,11 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 自動検出に対応するには、それぞれのプラグインの `<link>` 要素をウェブページの `<head>` セクションにします。
 
 ```html
-<link rel="search"
-      type="application/opensearchdescription+xml"
-      title="searchTitle"
-      href="pluginURL">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="searchTitle"
+  href="pluginURL" />
 ```
 
 太字の項目を以下の説明のように置き換えてください。
@@ -97,11 +97,17 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 もしサイトが複数の検索プラグインを提供しているなら、すべてを自動検出させることができます。例を示します。
 
 ```html
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: 著者" href="http://example.com/mysiteauthor.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: 著者"
+  href="http://example.com/mysiteauthor.xml" />
 
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: タイトル" href="http://example.com/mysitetitle.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: タイトル"
+  href="http://example.com/mysitetitle.xml" />
 ```
 
 この方法で、著者とタイトルによる検索を行うプラグインをサイトで提供することができます。

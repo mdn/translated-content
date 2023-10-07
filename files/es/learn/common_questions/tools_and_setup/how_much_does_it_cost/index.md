@@ -1,7 +1,6 @@
 ---
 title: ¿Cuánto cuesta hacer algo en la Web?
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
-original_slug: Learn/Common_questions/How_much_does_it_cost
 ---
 
 Dedicarse a la web no es tan barato como parece. En este artículo discutimos cuánto puedes tener que gastar, y por qué.
@@ -97,9 +96,9 @@ Asegúrese de contar con suficiente {{Glossary("Ancho de banda", "ancho de banda
 
 ### Entendiendo el ancho de banda
 
-Los proveedores de alojamiento te cobran de acuerdo a cuánto {{Glossary("Ancho de banda", "ancho de banda")}} consume tu sitio web. . Esto depende de cuántas personaas, y robots de rastreo Web, accedan a tu contenido durante un tiempo dado, y cuánto espacio en el servidor tu contenido ocupa. Esta es la razón por la cual las personas usualmente almacenan sus videos en servicios dedicadostales como Youtube, Dailymotion, y Vimeo. Por ejemplo, tu proveedor puede tener un plan que incluye hasta varios miles de visitantes por díam por un uso “razonable”. Sea cuidadoso, puesto que puede variar mucho de un servidor de alojamiento a otro. Como regla de oro, reconozca que el servicio de alojamiento confiable, pagado y personal puede costar alrededor de 10 a 15 dólares al mes.
+Los proveedores de alojamiento te cobran de acuerdo a cuánto {{Glossary("Ancho de banda", "ancho de banda")}} consume tu sitio web. . Esto depende de cuántas personaas, y robots de rastreo Web, accedan a tu contenido durante un tiempo dado, y cuánto espacio en el servidor tu contenido ocupa. Esta es la razón por la cual las personas usualmente almacenan sus videos en servicios dedicadostales como Youtube, Dailymotion, y Vimeo. Por ejemplo, tu proveedor puede tener un plan que incluye hasta varios miles de visitantes por díam por un uso "razonable". Sea cuidadoso, puesto que puede variar mucho de un servidor de alojamiento a otro. Como regla de oro, reconozca que el servicio de alojamiento confiable, pagado y personal puede costar alrededor de 10 a 15 dólares al mes.
 
-> **Nota:** Note que que no existe el ancho de banda “ilimitado”. Si consumes una enorme cantidad de ancho de banda, espere pagar una enorme cantidad de dinero.
+> **Nota:** Note que que no existe el ancho de banda "ilimitado". Si consumes una enorme cantidad de ancho de banda, espere pagar una enorme cantidad de dinero.
 
 ### Nombre de dominio
 
@@ -108,7 +107,7 @@ Su nombre de dominio tiene que ser comprado a través de un proveedor de nombres
 - Obligaciones locales: algunos nombres de dominio de primer nivel pertenecientes a países son más costosos, ya que diferentes países establecen precios diferentes.
 - Servicios asociados con un nombre de dominio: algunos registradores proveen protección contra spam ocultando tu dirección postal y corre electrónico detrás de sus propias direcciones: la dirección postal puede ser proveída a cargo del registrador y tu dirección de correo puede ser ocultada detrás del alias de tu registrador.
 
-### Alojamiento de aficionados vs. Alojamiento “empaquetado”
+### Alojamiento de aficionados vs. Alojamiento "empaquetado"
 
 Cuando deseas publicar un sitio web, puedes hacer todo por ti mismo: preparar una base de datos (si es necesaria), Sistema de Gestión de Contenidos, or {{Glossary("CMS")}} (como [Wordpress](http://wordpress.org/), [Dotclear](http://dotclear.org/), [spip](http://www.spip.net/en_rubrique25.html), etc.), subir tus propias plantillas o contenido preeditado.
 

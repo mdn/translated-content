@@ -265,7 +265,6 @@ const regexpFourDigits = /\b\d{4}\b/g;
 // \d{4} は 4 つの数字を示します
 // \b は別の境界を示します（つまり、単語の真ん中でマッチが終わりません）
 
-
 console.table(randomData.match(regexpFourDigits));
 // ['8787', '3512', '8735']
 ```
@@ -273,7 +272,8 @@ console.table(randomData.match(regexpFourDigits));
 ### A から始まる（ラテンアルファベットの）単語を探す
 
 ```js
-const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const aliceExcerpt =
+  "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b は境界を示します（つまり、単語の途中から照合を開始しません）
 // [aA] は a または A の文字を示します
@@ -293,13 +293,14 @@ const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // U+0000 から U+FFFF までの BMP、ただし、U+0020 は空白
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 ### 母音を数える
 
 ```js
-const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const aliceExcerpt =
+  "There was a long silence after this, and Alice could only hear whispers now and then.";
 const regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);

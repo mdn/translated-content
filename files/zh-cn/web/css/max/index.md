@@ -1,7 +1,6 @@
 ---
 title: max()
 slug: Web/CSS/max
-original_slug: Web/CSS/max()
 ---
 
 {{CSSRef}}
@@ -55,7 +54,9 @@ The font-size will at minimum be 2rems, or twice the default size of font for th
 
 ```html
 <h1>This text is always legible, but doesn't change size</h1>
-<h1 class="responsive">This text is always legible, and is responsive, to a point</h1>
+<h1 class="responsive">
+  This text is always legible, and is responsive, to a point
+</h1>
 ```
 
 {{EmbedLiveSample("为字体设定一个最小字号", "100%", "300")}}

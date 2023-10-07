@@ -56,7 +56,7 @@ var p3 = new Promise((resolve, reject) => {
   }, 100);
 });
 
-Promise.all([p1, p2, p3]).then(valores=> {
+Promise.all([p1, p2, p3]).then((valores) => {
   console.log(valores); // [3, 1337, "foo"]
 });
 ```
@@ -65,17 +65,17 @@ Se o iterável conter valores que não são promises, eles serão ignorados, mas
 
 ```js
 // Essa será considerada como se o iterável passado fosse vazio, logo ela será resolvido
-var p = Promise.all([1,2,3]);
+var p = Promise.all([1, 2, 3]);
 // Essa será considerada como se o iterável passado contém apenas a promise resolvida com o valor "444", logo ela é resolvida
-var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
+var p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // Esse será considerada como se o iterável passado contém apenas o valor de rejeição "555" da promise, logo ela é rejeitada
-var p3 = Promise.all([1,2,3, Promise.reject(555)]);
+var p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
 
 // Utilizando setTimeout para executar código depois que a pilha estiver vazia
-setTimeout(function() {
-    console.log(p);
-    console.log(p2);
-    console.log(p3);
+setTimeout(function () {
+  console.log(p);
+  console.log(p2);
+  console.log(p3);
 });
 
 // logs
@@ -97,9 +97,9 @@ var p = Promise.all(arrayPromisesResolvidas);
 console.log(p);
 
 // Utilizando setTimeout para executar código depois que a pilha estiver vazia
-setTimeout(function() {
-    console.log('a pilha está vazia agora');
-    console.log(p);
+setTimeout(function () {
+  console.log("a pilha está vazia agora");
+  console.log(p);
 });
 
 // logs, em ordem:
@@ -114,9 +114,9 @@ A mesma coisa acontece se `Promise.all` for rejeitada:
 var arrayPromisesMisturadas = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(arrayPromisesMisturadas);
 console.log(p);
-setTimeout(function() {
-    console.log('a pilha está vazia agora');
-    console.log(p);
+setTimeout(function () {
+  console.log("a pilha está vazia agora");
+  console.log(p);
 });
 
 // logs
@@ -131,10 +131,10 @@ Mas, `Promise.all` resolve sincromamente **se e somente se** o iterável passado
 var p = Promise.all([]); // será resolvida imediatamente
 var p2 = Promise.all([1337, "oi"]); // um valor que não é uma promise será ignorado, mas a avaliação será feita assíncronamente
 console.log(p);
-console.log(p2)
-setTimeout(function() {
-    console.log('a pilha está vazia agora');
-    console.log(p2);
+console.log(p2);
+setTimeout(function () {
+  console.log("a pilha está vazia agora");
+  console.log(p2);
 });
 
 // logs
@@ -150,30 +150,29 @@ setTimeout(function() {
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('um'), 1000);
+  setTimeout(() => resolve("um"), 1000);
 });
 var p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('dois'), 2000);
+  setTimeout(() => resolve("dois"), 2000);
 });
 var p3 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('três'), 3000);
+  setTimeout(() => resolve("três"), 3000);
 });
 var p4 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('quatro'), 4000);
+  setTimeout(() => resolve("quatro"), 4000);
 });
 var p5 = new Promise((resolve, reject) => {
-  reject(new Error('rejeitada'));
+  reject(new Error("rejeitada"));
 });
-
 
 // Usando .catch:
 Promise.all([p1, p2, p3, p4, p5])
-.then(valores => {
-  console.log(valores);
-})
-.catch(erro => {
-  console.log(erro.message)
-});
+  .then((valores) => {
+    console.log(valores);
+  })
+  .catch((erro) => {
+    console.log(erro.message);
+  });
 
 // No console:
 // "rejeitada"
@@ -183,27 +182,31 @@ Promise.all([p1, p2, p3, p4, p5])
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('p1_resolução_atrasada'), 1000);
+  setTimeout(() => resolve("p1_resolução_atrasada"), 1000);
 });
 
 var p2 = new Promise((resolve, reject) => {
-  reject(new Error('p2_rejeição_imediata'));
+  reject(new Error("p2_rejeição_imediata"));
 });
 
 Promise.all([
-  p1.catch(erro => { return erro }),
-  p2.catch(erro => { return erro }),
-]).then(valores => {
-  console.log(valores[0]) // "p1_resolução_atrasada"
-  console.log(valores[1]) // "Erro: p2_rejeição_imediata"
-})
+  p1.catch((erro) => {
+    return erro;
+  }),
+  p2.catch((erro) => {
+    return erro;
+  }),
+]).then((valores) => {
+  console.log(valores[0]); // "p1_resolução_atrasada"
+  console.log(valores[1]); // "Erro: p2_rejeição_imediata"
+});
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------ |
-| {{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ES2015')}}     | Definição inicial em um padrão ECMA. |
+| Especificação                                              | Status               | Comentário                           |
+| ---------------------------------------------------------- | -------------------- | ------------------------------------ |
+| {{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}}  | {{Spec2('ES2015')}}  | Definição inicial em um padrão ECMA. |
 | {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                      |
 
 ## Compatibilidade com navegadores

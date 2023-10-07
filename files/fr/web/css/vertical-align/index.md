@@ -1,8 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
-browser-compat: css.properties.vertical-align
 ---
 
 {{CSSRef}}
@@ -109,22 +107,39 @@ Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la
 #### HTML
 
 ```html
-<div>Une <img src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement par défaut.</div>
-<div>Une <img class="top" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement en haut du texte.</div>
-<div>Une <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement en bas du texte.</div>
-<div>Une <img class="middle" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement au milieu.</div>
+<div>
+  Une <img src="frame_image.svg" alt="link" width="32" height="32" /> image avec
+  un alignement par défaut.
+</div>
+<div>
+  Une
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement en haut du texte.
+</div>
+<div>
+  Une
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement en bas du texte.
+</div>
+<div>
+  Une
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement au milieu.
+</div>
 ```
 
 #### CSS
 
 ```css
-img.top { vertical-align: text-top; }
-img.bottom { vertical-align: text-bottom; }
-img.middle { vertical-align: middle; }
+img.top {
+  vertical-align: text-top;
+}
+img.bottom {
+  vertical-align: text-bottom;
+}
+img.middle {
+  vertical-align: middle;
+}
 ```
 
 #### Résultat
@@ -137,20 +152,20 @@ img.middle { vertical-align: middle; }
 
 ```html
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+  top: <img style="vertical-align: top" src="star.png" /> middle:
+  <img style="vertical-align: middle" src="star.png" /> bottom:
+  <img style="vertical-align: bottom" src="star.png" /> super:
+  <img style="vertical-align: super" src="star.png" /> sub:
+  <img style="vertical-align: sub" src="star.png" />
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+  text-top: <img style="vertical-align: text-top" src="star.png" /> text-bottom:
+  <img style="vertical-align: text-bottom" src="star.png" /> 0.2em:
+  <img style="vertical-align: 0.2em" src="star.png" /> -1em:
+  <img style="vertical-align: -1em" src="star.png" /> 20%:
+  <img style="vertical-align: 20%" src="star.png" /> -100%:
+  <img style="vertical-align: -100%" src="star.png" />
 </p>
 ```
 
@@ -165,7 +180,7 @@ img {
 
 p {
   height: 3em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-family: monospace;
   text-decoration: underline overline;
   margin-left: auto;
@@ -190,14 +205,17 @@ p {
     <td style="vertical-align: middle">middle</td>
     <td style="vertical-align: bottom">bottom</td>
     <td>
-      <p>Elle voulait savoir si elle grandissait ou rapetissait, et fut
-         tout étonnée de rester la même; franchement, c'est ce qui
-         arrive le plus souvent lorsqu'on mange du gâteau; mais Alice
-         avait tellement pris l'habitude de s'attendre à des choses
-         extraordinaires, que cela lui paraissait ennuyeux et stupide
-         de vivre comme tout le monde.</p>
-      <p>Aussi elle se remit à l'œuvre, et eut bien vite fait
-         disparaître le gâteau.</p>
+      <p>
+        Elle voulait savoir si elle grandissait ou rapetissait, et fut tout
+        étonnée de rester la même; franchement, c'est ce qui arrive le plus
+        souvent lorsqu'on mange du gâteau; mais Alice avait tellement pris
+        l'habitude de s'attendre à des choses extraordinaires, que cela lui
+        paraissait ennuyeux et stupide de vivre comme tout le monde.
+      </p>
+      <p>
+        Aussi elle se remit à l'œuvre, et eut bien vite fait disparaître le
+        gâteau.
+      </p>
     </td>
   </tr>
 </table>
@@ -212,7 +230,9 @@ table {
   width: 80%;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 

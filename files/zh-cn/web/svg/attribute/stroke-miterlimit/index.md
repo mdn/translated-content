@@ -17,11 +17,11 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 
 ## 用法
 
-| 类别   | 外观属性                |
-| ------ | ----------------------- |
+| 类别   | 外观属性                 |
+| ------ | ------------------------ |
 | 值     | \<miterlimit> \| inherit |
-| 初始值 | 4                       |
-| 可动性 | Yes                     |
+| 初始值 | 4                        |
+| 可动性 | Yes                      |
 
 - \<miterlimit>
   - : 对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。\<miterlimit>的值必须是一个大于或等于 1 的[\<number>](/zh-CN/SVG/Content_type#Number)。

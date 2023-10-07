@@ -1,12 +1,6 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-tags:
-  - JavaScript
-  - Reference
-  - URI
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-original_slug: Web/JavaScript/Reference/Objets_globaux/encodeURIComponent
 ---
 
 {{jsSidebar("Objects")}}
@@ -37,9 +31,9 @@ Une nouvelle chaîne de caractères qui représente un composant d'URI obtenu en
 La méthode `encodeURIComponent()` diffère de la méthode `encodeURI()` par rapport aux caractères qui sont encodés :
 
 ```js
-var set1 = ";,/?:@&=+$";  // Caractères réservés
-var set2 = "-_.!~*'()";   // Caractères non-réservés
-var set3 = "#";           // Croisillon
+var set1 = ";,/?:@&=+$"; // Caractères réservés
+var set2 = "-_.!~*'()"; // Caractères non-réservés
+var set3 = "#"; // Croisillon
 var set4 = "ABC abc 123"; // Caractères alphanumériques et espace
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$
@@ -57,13 +51,13 @@ Une exception {{jsxref("URIError")}} sera levée lorsqu'on utilise cette fonctio
 
 ```js
 // la paire de demi-codets : OK
-console.log(encodeURIComponent('\uD800\uDFFF'));
+console.log(encodeURIComponent("\uD800\uDFFF"));
 
 // seul le demi-codet supérieur : "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uD800'));
+console.log(encodeURIComponent("\uD800"));
 
 // seul le demi-codet inférieur : "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uDFFF'));
+console.log(encodeURIComponent("\uDFFF"));
 ```
 
 Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym`" et une seconde (`access`) égale à `admin`.
@@ -73,9 +67,9 @@ Pour [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps
 Pour utiliser une fonction qui respecte la [RFC 3986](https://tools.ietf.org/html/rfc3986), plus stricte (qui réserve les caractères !, ', (, ), et \* même si ces caractères n'ont pas d'usage normalisé), on pourra utiliser la fonction suivante :
 
 ```js
-function fixedEncodeURIComponent (str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16);
+function fixedEncodeURIComponent(str) {
+  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+    return "%" + c.charCodeAt(0).toString(16);
   });
 }
 ```
@@ -85,37 +79,43 @@ function fixedEncodeURIComponent (str) {
 Dans l'exemple qui suit, on utilise une méthode spéciale pour l'encodage afin d'utiliser les paramètres d'en-tête de réponse `Content-Disposition` et `Link` (pour, par exemple, représenter des noms de fichiers en UTF-8) :
 
 ```js
-var nomFichier = 'mon fichier(2).txt';
-var header = "Content-Disposition: attachment; filename*=UTF-8''"
-             + encodeRFC5987ValueChars(nomFichier);
+var nomFichier = "mon fichier(2).txt";
+var header =
+  "Content-Disposition: attachment; filename*=UTF-8''" +
+  encodeRFC5987ValueChars(nomFichier);
 
 console.log(header);
 // affiche "Content-Disposition: attachment; filename*=UTF-8''mon%20fichier%282%29.txt"
 
-
-function encodeRFC5987ValueChars (str) {
-    return encodeURIComponent(str).
-        // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
-        // il n'est donc pas nécessaire l'échapper
-        replace(/['()]/g, escape). // c'est-à-dire %27 %28 %29
-        replace(/\*/g, '%2A').
-            // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
-            // on peut donc bénéficier d'un peu plus de lisibilité : |`^
-            replace(/%(?:7C|60|5E)/g, unescape);
+function encodeRFC5987ValueChars(str) {
+  return (
+    encodeURIComponent(str)
+      // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
+      // il n'est donc pas nécessaire l'échapper
+      .replace(/['()]/g, escape) // c'est-à-dire %27 %28 %29
+      .replace(/\*/g, "%2A")
+      // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
+      // on peut donc bénéficier d'un peu plus de lisibilité : |`^
+      .replace(/%(?:7C|60|5E)/g, unescape)
+  );
 }
 
 // Voici une autre version équivalente
 function encodeRFC5987ValueChars2(str) {
-  return encodeURIComponent(str).
-    // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
-    // il n'est donc pas nécessaire l'échapper
-    replace(/['()*]/g, c => '%' + c.charCodeAt(0).toString(16)). // i.e., %27 %28 %29 %2a
-    // on notera que l'encodage valide pour "*" est %2A et qui faut donc appeler toUpperCase()
-    // pour encoder exactement.
+  return (
+    encodeURIComponent(str)
+      // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
+      // il n'est donc pas nécessaire l'échapper
+      .replace(/['()*]/g, (c) => "%" + c.charCodeAt(0).toString(16)) // i.e., %27 %28 %29 %2a
+      // on notera que l'encodage valide pour "*" est %2A et qui faut donc appeler toUpperCase()
+      // pour encoder exactement.
 
-    // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
-    // on peut donc bénéficier d'un peu plus de lisibilité : |`^
-    replace(/%(7C|60|5E)/g, (str, hex) => String.fromCharCode(parseInt(hex, 16)));
+      // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
+      // on peut donc bénéficier d'un peu plus de lisibilité : |`^
+      .replace(/%(7C|60|5E)/g, (str, hex) =>
+        String.fromCharCode(parseInt(hex, 16)),
+      )
+  );
 }
 ```
 

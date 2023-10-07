@@ -2,6 +2,7 @@
 title: Classes
 slug: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 Class는 객체를 생성하기 위한 템플릿입니다. 클래스는 데이터와 이를 조작하는 코드를 하나로 추상화합니다. 자바스크립트에서 클래스는 프로토타입을 이용해서 만들어졌지만 ES5의 클래스 의미와는 다른 문법과 의미를 가집니다.
@@ -125,11 +126,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance;    // undefined
+p1.distance; // undefined
 p2.displayName; // undefined
-p2.distance;    // undefined
+p2.distance; // undefined
 
-console.log(Point.displayName);      // "Point"
+console.log(Point.displayName); // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -152,7 +153,7 @@ obj.speak(); // the Animal object
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -160,15 +161,15 @@ eat(); // undefined
 위에 작성된 코드를 전통적 방식의 함수기반의 non–strict mode 구문으로 재작성하면, `this` 메서드 호출은 기본적으로 {{Glossary("Global_object", "전역 객체")}}인 초기 `this` 값에 자동으로 바인딩 됩니다. Strict mode에서는 자동 바인딩이 발생하지 않습니다; `this` 값은 전달된 대로 유지됩니다.
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
-}
+};
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;
@@ -271,7 +272,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Mitzie');
+let d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
@@ -280,13 +281,13 @@ subclass에 constructor가 있다면, "this"를 사용하기 전에 가장 먼�
 또한 es5에서 사용되던 전통적인 함수 기반의 클래스를 통하여 확장할 수도 있습니다.
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 
 Animal.prototype.speak = function () {
   console.log(`${this.name} makes a noise.`);
-}
+};
 
 class Dog extends Animal {
   speak() {
@@ -294,7 +295,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Mitzie');
+let d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 
 // 유사한 메서드의 경우, 자식의 메서드가 부모의 메서드보다 우선합니다
@@ -306,7 +307,7 @@ d.speak(); // Mitzie barks.
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  }
+  },
 };
 
 class Dog {
@@ -318,7 +319,7 @@ class Dog {
 // 이 작업을 수행하지 않으면 speak를 호출할 때 TypeError가 발생합니다
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-let d = new Dog('Mitzie');
+let d = new Dog("Mitzie");
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -331,13 +332,15 @@ d.speak(); // Mitzie makes a noise.
 ```js
 class MyArray extends Array {
   // 부모 Array 생성자로 species 덮어쓰기
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## `super` 를 통한 상위 클래스 호출
@@ -362,7 +365,7 @@ class Lion extends Cat {
   }
 }
 
-let l = new Lion('Fuzzy');
+let l = new Lion("Fuzzy");
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
@@ -375,20 +378,22 @@ l.speak();
 슈퍼클래스를 인자로 받고 이 슈퍼클래스를 확장하는 서브클래스를 생성하여 반환하는 함수를 사용하여 ECMAScript에서 믹스-인을 구현할 수 있습니다:
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 위 믹스-인을 사용하는 클래스는 다음과 같이 작성할 수 있습니다:
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## 클래스 재정의

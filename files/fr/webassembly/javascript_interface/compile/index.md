@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
 {{WebAssemblySidebar}}
@@ -18,7 +10,7 @@ La méthode **`WebAssembly.compile()`**, permet de compiler un module ({{jsxref(
 ## Syntaxe
 
 ```js
-Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+WebAssembly.compile(bufferSource);
 ```
 
 ### Paramètres
@@ -42,13 +34,10 @@ Dans l'exemple qui suit, on compile le _bytecode_ `simple.wasm` grâce à la mé
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 > **Note :** Dans la plupart des cas, mieux vaudra utiliser {{jsxref("WebAssembly.compileStreaming()")}} qui est plus efficace que `compile()`.

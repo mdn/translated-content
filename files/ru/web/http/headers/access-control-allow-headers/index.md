@@ -1,13 +1,6 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Заголовок
-  - Справка
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Headers
 ---
 
 {{HTTPSidebar}}
@@ -50,8 +43,8 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарий            |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------- |
+| Спецификация                                                                               | Статус             | Комментарий            |
+| ------------------------------------------------------------------------------------------ | ------------------ | ---------------------- |
 | {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Начальное определение. |
 
 ## Совместимость с браузерами

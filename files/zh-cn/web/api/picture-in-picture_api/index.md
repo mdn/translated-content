@@ -28,7 +28,7 @@ slug: Web/API/Picture-in-Picture_API
 
 ## 属性
 
-*画中画 API 添加了* {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定浮动的视频窗口是否是受支持和可用的、当前画中画模式是否处于激活状态并且哪个视频是浮动的。
+_画中画 API 添加了_ {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定浮动的视频窗口是否是受支持和可用的、当前画中画模式是否处于激活状态并且哪个视频是浮动的。
 
 ### HTMLVideoElement 接口的属性
 
@@ -79,7 +79,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 ```js
 function togglePictureInPicture() {
   if (document.pictureInPictureElement) {
-      document.exitPictureInPicture();
+    document.exitPictureInPicture();
   } else {
     if (document.pictureInPictureEnabled) {
       video.requestPictureInPicture();

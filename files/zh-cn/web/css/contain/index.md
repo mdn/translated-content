@@ -15,7 +15,7 @@ slug: Web/CSS/contain
 
 > **备注：** 为此属性使用 `layout`、`paint`、`strict` 或 `content` 值将创建：
 >
-> 1. 新的[包含区块](/zh-CN/docs/Web/CSS/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `foxed` 的后代元素）。
+> 1. 新的[包含区块](/zh-CN/docs/Web/CSS/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `fixed` 的后代元素）。
 > 2. 新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。
 > 3. 新的[区块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
 
@@ -216,10 +216,16 @@ CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值的作�
 
 ```html
 <!-- 有样式局限 -->
-<span class="open-quote">外<span style="contain: style;"><span class="open-quote">内</span></span></span><span class="close-quote">闭</span>
+<span class="open-quote"
+  >外<span style="contain: style;"
+    ><span class="open-quote">内</span></span
+  ></span
+><span class="close-quote">闭</span>
 <br />
 <!-- 无局限 -->
-<span class="open-quote">外<span><span class="open-quote">内</span></span></span><span class="close-quote">闭</span>
+<span class="open-quote"
+  >外<span><span class="open-quote">内</span></span></span
+><span class="close-quote">闭</span>
 ```
 
 ```css

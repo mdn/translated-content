@@ -1,8 +1,8 @@
 ---
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
-translation_of: Web/API/URLSearchParams/delete
 ---
+
 {{ApiRef("URL API")}}
 
 Метод **`delete()`** интерфейса {{domxref("URLSearchParams")}} удаляет все указанные параметры и все связанные с ним значения из списка найденных параметров.
@@ -27,11 +27,11 @@ Void
 ## Примеры
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2&foo=3');
+let url = new URL("https://example.com?foo=1&bar=2&foo=3");
 let params = new URLSearchParams(url.search.slice(1));
 
 // Удалить параметр foo.
-params.delete('foo'); //Строка запроса теперь: 'bar=2'
+params.delete("foo"); //Строка запроса теперь: 'bar=2'
 ```
 
 ## Спецификация

@@ -2,6 +2,7 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Web Audio API는 웹에서 오디오를 제어하기 위한 강력하고 다양한 기능을 제공합니다. Web Audio API를 이용하면 오디오 소스를 선택할 수 있도록 하거나, 오디오에 이펙트를 추가하거나, 오디오를 시각화하거나, 패닝과 같은 공간 이펙트를 적용시키는 등의 작업이 가능합니다.

@@ -1,7 +1,6 @@
 ---
 title: CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout
 ---
 
 **CSS Grid Layout** отлично подходит для того, чтобы разделить страницу на основные области или определить взаимосвязь размера, позиционирования и уровня между частями контента, состоящего из HTML примитивов.
@@ -13,16 +12,18 @@ translation_of: Web/CSS/CSS_Grid_Layout
 В приведённом ниже примере показана сетка состоящая из трёх колонок, в которой минимальная ширина элементов строки установлена в "100px", а максимальная в "auto". Grid-элементы располагаются в сетке линейно.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233, 171, 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233, 171, 88, 0.5);
   padding: 1em;
   color: #d9480f;
 }
@@ -144,8 +145,8 @@ translation_of: Web/CSS/CSS_Grid_Layout
 
 ## Спецификации
 
-| Specification                        | Status                           | Comment                                                                                   |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------- |
+| Specification              | Status                  | Comment                                                                                   |
+| -------------------------- | ----------------------- | ----------------------------------------------------------------------------------------- |
 | {{SpecName("CSS Grid 3")}} | {{Spec2("CSS Grid 3")}} | Adds [masonry](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout).                          |
 | {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Added [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
-| {{SpecName("CSS3 Grid")}}     | {{Spec2("CSS3 Grid")}}     | Initial definition.                                                                       |
+| {{SpecName("CSS3 Grid")}}  | {{Spec2("CSS3 Grid")}}  | Initial definition.                                                                       |

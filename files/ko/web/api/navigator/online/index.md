@@ -1,7 +1,6 @@
 ---
 title: Online and offline events
 slug: Web/API/Navigator/onLine
-original_slug: Web/API/Navigator/Online_and_offline_events
 ---
 
 In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케이션 1.0 명세](http://www.whatwg.org/specs/web-apps/current-work/)에 기술된 [온라인/오프라인 이벤트](http://www.whatwg.org/specs/web-apps/current-work/#offline)를 구현합니다.
@@ -18,7 +17,7 @@ In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리�
 여러분의 웹 애플리케이션은 특정 문서가 오프라인 자원 캐시에 보관되는 것을 확실하게 할 필요도 있습니다. 이를 위해서는 다음과 같이 `HEAD` 섹션에 `LINK` 요소를 포함합니다.
 
 ```html
-<link rel="offline-resource" href="myresource">
+<link rel="offline-resource" href="myresource" />
 ```
 
 이는 Firefox 3 및 이후 버전에서 HTML을 처리할 때, 참조하는 자원을 오프라인에서 사용할 수 있도록 특별한 오프라인 자원 캐시에 저장하도록 합니다.
@@ -54,33 +53,47 @@ Firefox 2는 윈도우와 리눅스에서 브라우저의 온라인/오프라인
 ```html
 <!doctype html>
 <html>
-<head>
-  <script>
-    function updateOnlineStatus(msg) {
-      var status = document.getElementById("status");
-      var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
-      status.setAttribute("class", condition);
-      var state = document.getElementById("state");
-      state.innerHTML = condition;
-      var log = document.getElementById("log");
-      log.appendChild(document.createTextNode("Event: " + msg + "; status=" + condition + "\n"));
-    }
-    function loaded() {
-      updateOnlineStatus("load");
-      document.body.addEventListener("offline", function () {
-        updateOnlineStatus("offline")
-      }, false);
-      document.body.addEventListener("online", function () {
-        updateOnlineStatus("online")
-      }, false);
-    }
-  </script>
-  <style>...</style>
-</head>
-<body onload="loaded()">
-  <div id="status"><p id="state"></p></div>
-  <div id="log"></div>
-</body>
+  <head>
+    <script>
+      function updateOnlineStatus(msg) {
+        var status = document.getElementById("status");
+        var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+        status.setAttribute("class", condition);
+        var state = document.getElementById("state");
+        state.innerHTML = condition;
+        var log = document.getElementById("log");
+        log.appendChild(
+          document.createTextNode(
+            "Event: " + msg + "; status=" + condition + "\n",
+          ),
+        );
+      }
+      function loaded() {
+        updateOnlineStatus("load");
+        document.body.addEventListener(
+          "offline",
+          function () {
+            updateOnlineStatus("offline");
+          },
+          false,
+        );
+        document.body.addEventListener(
+          "online",
+          function () {
+            updateOnlineStatus("online");
+          },
+          false,
+        );
+      }
+    </script>
+    <style>
+      ...
+    </style>
+  </head>
+  <body onload="loaded()">
+    <div id="status"><p id="state"></p></div>
+    <div id="log"></div>
+  </body>
 </html>
 ```
 

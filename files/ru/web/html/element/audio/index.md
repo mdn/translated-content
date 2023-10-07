@@ -1,23 +1,6 @@
 ---
 title: <audio> - элемент добавления аудио на страницу
 slug: Web/HTML/Element/audio
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML5
-  - Media
-  - Multimedia
-  - Web
-  - Веб
-  - Встраиваемое содержимое
-  - Встроенный контент
-  - Медиа
-  - Справка
-  - Элемент
-  - аудио
-  - мультимедиа
-translation_of: Web/HTML/Element/audio
 ---
 
 {{HTMLSidebar}}

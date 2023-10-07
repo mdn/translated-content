@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
 
 {{JSRef}}
@@ -50,9 +49,9 @@ Los argumentos `locales` y `options` aún no están soportados en todos los nave
 ```js
 function toLocaleTimeStringSoportaLocales() {
   try {
-    new Date().toLocaleTimeString('i');
+    new Date().toLocaleTimeString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -69,24 +68,24 @@ var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles para los EEUU
 
 // El inglés americano usa formato de 12 horas con AM/PM
-console.log(fecha.toLocaleTimeString('en-US'));
+console.log(fecha.toLocaleTimeString("en-US"));
 // → "7:00:00 PM"
 
 // El inglés británico usa formato de 24 horas sin AM/PM
-console.log(date.toLocaleTimeString('en-GB'));
+console.log(date.toLocaleTimeString("en-GB"));
 // → "03:00:00"
 
 // El koreano usa formato de 12 horas con AM/PM
-console.log(date.toLocaleTimeString('ko-KR'));
+console.log(date.toLocaleTimeString("ko-KR"));
 // → "오후 12:00:00"
 
 // En muchos países donde hablan árabe se usan dígitos árabes
-console.log(date.toLocaleTimeString('ar-EG'));
+console.log(date.toLocaleTimeString("ar-EG"));
 // → "٧:٠٠:٠٠ م"
 
 // cuando se pide un idioma que puede no estar disponible, como
 // balinés, incluya un idioma de respaldo, como en este caso, indonesio
-console.log(date.toLocaleTimeString(['ban', 'id']));
+console.log(date.toLocaleTimeString(["ban", "id"]));
 // → "11.00.00"
 ```
 
@@ -98,16 +97,18 @@ Los resultados provistos por `toLocaleTimeString()` pueden ser personalizados us
 var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // una aplicación puede querer usar UTC y visibilizarlo:
-var options = { timeZone: 'UTC', timeZoneName: 'short' };
-console.log(date.toLocaleTimeString('en-US', options));
+var options = { timeZone: "UTC", timeZoneName: "short" };
+console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // algunas veces incluso en EEUU necesitan el tiempo en 24 horas
-console.log(date.toLocaleTimeString('en-US', { hour12: false }));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 
 // mostrar únicamente horas y minutos, use options con la localidad predeterminada - usar un arreglo vacío
-console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+console.log(
+  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+);
 // → "20:01"
 ```
 

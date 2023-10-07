@@ -1,5 +1,5 @@
 ---
-title: ':-moz-handler-disabled'
+title: ":-moz-handler-disabled"
 slug: Web/CSS/:-moz-handler-disabled
 ---
 

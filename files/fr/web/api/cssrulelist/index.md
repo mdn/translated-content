@@ -1,8 +1,6 @@
 ---
 title: CSSRuleList
 slug: Web/API/CSSRuleList
-translation_of: Web/API/CSSRuleList
-browser-compat: api.CSSRuleList
 ---
 
 {{ APIRef("CSSOM") }}

@@ -29,14 +29,14 @@ O índice da última ocorrência referente ao valor especificado em `searchValue
 Os caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`, e o índice do último caractere é `str.length - 1`.
 
 ```js
-'ricardo'.lastIndexOf('r');     // retorna 4
-'ricardo'.lastIndexOf('a', 3);  // retorna 3
-'ricardo'.lastIndexOf('a', 0);  // retorna -1
-'ricardo'.lastIndexOf('x');     // retorna -1
-'ricardo'.lastIndexOf('r', -5); // retorna 0
-'ricardo'.lastIndexOf('r', 0);  // retorna 0
-'ricardo'.lastIndexOf('');      // retorna 7
-'ricardo'.lastIndexOf('', 2);   // retorna 2
+"ricardo".lastIndexOf("r"); // retorna 4
+"ricardo".lastIndexOf("a", 3); // retorna 3
+"ricardo".lastIndexOf("a", 0); // retorna -1
+"ricardo".lastIndexOf("x"); // retorna -1
+"ricardo".lastIndexOf("r", -5); // retorna 0
+"ricardo".lastIndexOf("r", 0); // retorna 0
+"ricardo".lastIndexOf(""); // retorna 7
+"ricardo".lastIndexOf("", 2); // retorna 2
 ```
 
 ### Sensível a maiúsculas e minúsculas
@@ -44,7 +44,7 @@ Os caracteres em uma string são indexados da esquerda para a direita. O índice
 O método `lastIndexOf()` é sensível a letras maiúsculas e minúsculas. Por exemplo, a seguinte expressão retorna `-1`:
 
 ```js
-'Blue Whale, Killer Whale'.lastIndexOf('blue'); // retorna -1
+"Blue Whale, Killer Whale".lastIndexOf("blue"); // retorna -1
 ```
 
 ## Exemplos
@@ -54,22 +54,26 @@ O método `lastIndexOf()` é sensível a letras maiúsculas e minúsculas. Por e
 O seguinte exemplo usa `lastIndexOf()` para localizar valores nas string `"Brave new world"`.
 
 ```js
-var anyString = 'Brave new world';
+var anyString = "Brave new world";
 
-console.log('O índice do primeiro w a partir do final é ' + anyString.lastIndexOf('w'));
+console.log(
+  "O índice do primeiro w a partir do final é " + anyString.lastIndexOf("w"),
+);
 // retorna 10
 
-console.log('O índice de "new" a partir do final é ' + anyString.lastIndexOf('new'));
+console.log(
+  'O índice de "new" a partir do final é ' + anyString.lastIndexOf("new"),
+);
 // retorna 6
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                | Estado                       | Comentários        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}                                 | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}         | {{Spec2('ES6')}}         |                    |
+| Especificação                                                                                | Estado               | Comentários        |
+| -------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES1')}}                                                                          | {{Spec2('ES1')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}                       | {{Spec2('ES5.1')}}   |                    |
+| {{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}     | {{Spec2('ES6')}}     |                    |
 | {{SpecName('ESDraft', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Navegadores compatíveis

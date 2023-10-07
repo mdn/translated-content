@@ -30,10 +30,10 @@ toBlob(callback, type, quality)
   - : 単一の引数として結果の {{domxref("Blob")}} オブジェクトを受け取るコールバック関数です。何らかの理由で画像が作成できなかった場合は `null` が渡されることがあります。
 - `type` {{optional_inline}}
   - : 文字列で、画像形式を表します。
-  既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
+    既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
 - `quality` {{optional_inline}}
   - : `0` から `1` の間の数値であり、作成する画像が可逆圧縮（`image/jpeg` や `image/webp` など）であった場合の画像品質を示します。
-  このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。
+    このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。
 
 ### 返値
 
@@ -76,7 +76,7 @@ canvas.toBlob(
     /* … */
   },
   "image/jpeg",
-  0.95
+  0.95,
 ); // JPEG at 95% quality
 ```
 
@@ -109,7 +109,7 @@ function blobCallback(iconName) {
 canvas.toBlob(
   blobCallback("passThisString"),
   "image/vnd.microsoft.icon",
-  "-moz-parse-options:format=bmp;bpp=32"
+  "-moz-parse-options:format=bmp;bpp=32",
 );
 ```
 
@@ -137,7 +137,7 @@ function blobCallback(iconName) {
       Cu.import("resource://gre/modules/osfile.jsm");
       const writePath = OS.Path.join(
         OS.Constants.Path.desktopDir,
-        `${iconName}.ico`
+        `${iconName}.ico`,
       );
       const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result), {
         tmpPath: `${writePath}.tmp`,
@@ -148,7 +148,7 @@ function blobCallback(iconName) {
         },
         () => {
           console.log("failure writing file");
-        }
+        },
       );
     };
     r.readAsArrayBuffer(b);
@@ -158,7 +158,7 @@ function blobCallback(iconName) {
 canvas.toBlob(
   blobCallback("passThisString"),
   "image/vnd.microsoft.icon",
-  "-moz-parse-options:format=bmp;bpp=32"
+  "-moz-parse-options:format=bmp;bpp=32",
 );
 ```
 

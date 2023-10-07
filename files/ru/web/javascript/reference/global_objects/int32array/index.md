@@ -1,7 +1,6 @@
 ---
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 
 {{JSRef}}
@@ -125,7 +124,7 @@ console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // Из массива (Array)
-var arr = new Int32Array([21,31]);
+var arr = new Int32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Из другого типизированного массива (TypedArray)
@@ -138,17 +137,19 @@ var buffer = new ArrayBuffer(16);
 var z = new Int32Array(buffer, 0, 4);
 
 // Из итерируемого объекта (iterable)
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
 ## Specifications
 
-| Specification                                                                        | Статус                           | Комментарии                                                                                                                    |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                 |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                      |
+| Specification                                                   | Статус                   | Комментарии                                                                                                                    |
+| --------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                 |
+| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. Specified that `new` is required.                                                      |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Int32Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
 
 ## Browser compatibility

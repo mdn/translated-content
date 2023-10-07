@@ -42,21 +42,21 @@ menu real esteja pronto para ser exibido.
   <nav-menu>
     <menu-item>Item 1</menu-item>
     <menu-item>Item 2</menu-item>
-     ...
+    ...
     <menu-item>Item N</menu-item>
   </nav-menu>
 </nav>
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
 // Busca todos os filhos do menu que ainda não foram definidos.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-async function removePlaceholder(){
-  const promises = [...undefinedElements].map(
-    button => customElements.whenDefined(button.localName)
+async function removePlaceholder() {
+  const promises = [...undefinedElements].map((button) =>
+    customElements.whenDefined(button.localName),
   );
 
   // Espere que todos os filhos sejam atualizados

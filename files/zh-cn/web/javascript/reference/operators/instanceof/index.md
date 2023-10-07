@@ -28,19 +28,17 @@ object instanceof constructor
 
 ```js
 // 定义构造函数
-function C(){}
-function D(){}
+function C() {}
+function D() {}
 
 var o = new C();
 
-
 o instanceof C; // true，因为 Object.getPrototypeOf(o) === C.prototype
-
 
 o instanceof D; // false，因为 D.prototype 不在 o 的原型链上
 
 o instanceof Object; // true，因为 Object.prototype.isPrototypeOf(o) 返回 true
-C.prototype instanceof Object // true，同上
+C.prototype instanceof Object; // true，同上
 
 C.prototype = {};
 var o2 = new C();
@@ -77,26 +75,26 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 ```js
 var simpleStr = "This is a simple string";
-var myString  = new String();
-var newStr    = new String("String created with constructor");
-var myDate    = new Date();
-var myObj     = {};
-var myNonObj  = Object.create(null);
+var myString = new String();
+var newStr = new String("String created with constructor");
+var myDate = new Date();
+var myObj = {};
+var myNonObj = Object.create(null);
 
 simpleStr instanceof String; // 返回 false，非对象实例，因此返回 false
-myString  instanceof String; // 返回 true
-newStr    instanceof String; // 返回 true
-myString  instanceof Object; // 返回 true
+myString instanceof String; // 返回 true
+newStr instanceof String; // 返回 true
+myString instanceof Object; // 返回 true
 
-myObj instanceof Object;    // 返回 true，尽管原型没有定义
-({})  instanceof Object;    // 返回 true，同上
+myObj instanceof Object; // 返回 true，尽管原型没有定义
+({}) instanceof Object; // 返回 true，同上
 myNonObj instanceof Object; // 返回 false，一种创建非 Object 实例的对象的方法
 
 myString instanceof Date; //返回 false
 
-myDate instanceof Date;     // 返回 true
-myDate instanceof Object;   // 返回 true
-myDate instanceof String;   // 返回 false
+myDate instanceof Date; // 返回 true
+myDate instanceof Object; // 返回 true
+myDate instanceof String; // 返回 false
 ```
 
 ### 演示 `mycar` 属于 `Car` 类型的同时又属于 `Object` 类型
@@ -110,7 +108,7 @@ function Car(make, model, year) {
   this.year = year;
 }
 var mycar = new Car("Honda", "Accord", 1998);
-var a = mycar instanceof Car;    // 返回 true
+var a = mycar instanceof Car; // 返回 true
 var b = mycar instanceof Object; // 返回 true
 ```
 

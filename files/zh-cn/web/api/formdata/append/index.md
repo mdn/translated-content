@@ -46,15 +46,15 @@ var formData = new FormData(); // Currently empty
 你可以通过 {{domxref("FormData.append")}} 往对象里加入键值对：
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("username", "Chris");
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 跟常规`表单数据一样，你可以使用同一个名称添加多个值` 。例如 (为了与 PHP 命名习惯一致在名称中添加了 \[])：
 
 ```js
-formData.append('userpic[]', myFileInput1.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');
+formData.append("userpic[]", myFileInput1.files[0], "chris1.jpg");
+formData.append("userpic[]", myFileInput2.files[0], "chris2.jpg");
 ```
 
 这项技术使得多文件上传的处理更加简单，因为所得数据结构更有利于循环。

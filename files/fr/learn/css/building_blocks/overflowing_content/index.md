@@ -1,8 +1,6 @@
 ---
 title: Débordements de contenu (overflow)
 slug: Learn/CSS/Building_blocks/Overflowing_content
-translation_of: Learn/CSS/Building_blocks/Overflowing_content
-original_slug: Apprendre/CSS/Building_blocks/Overflowing_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
@@ -20,10 +18,10 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
           >suite logicielle de base installée</a
         >, compétences élémentaires pour
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée
         <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"

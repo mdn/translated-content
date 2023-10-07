@@ -10,10 +10,10 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识、<a
-          href="zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装基础软件</a
         >、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -116,8 +116,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -160,7 +160,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 textarea {
@@ -177,7 +178,7 @@ textarea {
 
 ## 测试你的技能
 
-我们在本文中介绍了很多内容，但是您记住最重要的内容了么？在继续之前，您可以通过一些其他测试来验证您是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
 
 ## 小结
 

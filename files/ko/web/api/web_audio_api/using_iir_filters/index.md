@@ -2,6 +2,7 @@
 title: IIR 필터 사용하기
 slug: Web/API/Web_Audio_API/Using_IIR_filters
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`IIRFilterNode`** 인터페이스는 일반적인 [무한 임펄스 응답](https://en.wikipedia.org/wiki/infinite%20impulse%20response) (IIR) 필터를 구현하는 {{domxref("AudioNode")}} 프로세서입니다; 이 유형의 필터는 음색 제어 장치와 그래픽 이퀄라이저를 구현하는 데 사용될 수 있으며, 필터 응답 파라미터들은 필요하면 조율될 수 있도록 명시될 수 있습니다. 이 글은 어떻게 이것을 구현하는지, 그리고 간단한 예제로 어떻게 이것을 사용하는지를 살펴봅니다.
@@ -80,7 +81,13 @@ function playSourceNode(audioContext, audioBuffer) {
 이 함수는 재생 버튼이 눌러졌을 때 호출됩니다. 재생 버튼 HTML은 다음같이 생겼습니다:
 
 ```html
-<button class="button-play" role="switch" data-playing="false" aria-pressed="false">Play</button>
+<button
+  class="button-play"
+  role="switch"
+  data-playing="false"
+  aria-pressed="false">
+  Play
+</button>
 ```
 
 그리고 `click` 이벤트 리스너는 다음과 같이 시작합니다:
@@ -96,7 +103,13 @@ playButton.addEventListener('click', function() {
 IIR 필터를 켜고 끄는 토글 버튼은 비슷한 방식으로 설정됩니다. 우선, HTML은:
 
 ```html
-<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+<button
+  class="button-filter"
+  role="switch"
+  data-filteron="false"
+  aria-pressed="false"
+  aria-describedby="label"
+  disabled></button>
 ```
 
 필터 버튼의 `click` 핸들러는 그리고 나서 `IIRFilter`를 그래프에 연결하는데, 이는 소스와 목적지 사이입니다:
@@ -129,8 +142,8 @@ let phaseResponseOutput = new Float32Array(totalArrayItems);
 첫번째 배열을 우리가 원하는 반환될 데이터인 주파수 값으로 채웁시다.
 
 ```js
-myFrequencyArray = myFrequencyArray.map(function(item, index) {
-    return Math.pow(1.4, index);
+myFrequencyArray = myFrequencyArray.map(function (item, index) {
+  return Math.pow(1.4, index);
 });
 ```
 
@@ -139,63 +152,68 @@ myFrequencyArray = myFrequencyArray.map(function(item, index) {
 이제 응답 데이터를 얻읍시다:
 
 ```js
-iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
+iirFilter.getFrequencyResponse(
+  myFrequencyArray,
+  magResponseOutput,
+  phaseResponseOutput,
+);
 ```
 
 우리는 이 데이터를 필터 주파수 플롯을 그리기 위해 사용할 수 있습니다. 우리는 2d 캔버스 컨텍스트에서 그렇게 할 것입니다.
 
 ```js
 // 캔버스 요소를 만들고 dom에 추가합니다
-const canvasContainer = document.querySelector('.filter-graph');
-const canvasEl = document.createElement('canvas');
+const canvasContainer = document.querySelector(".filter-graph");
+const canvasEl = document.createElement("canvas");
 canvasContainer.appendChild(canvasEl);
 
 // 2d 컨텍스트를 설정하고 크기를 설정합니다
-const canvasCtx = canvasEl.getContext('2d');
+const canvasCtx = canvasEl.getContext("2d");
 const width = canvasContainer.offsetWidth;
 const height = canvasContainer.offsetHeight;
 canvasEl.width = width;
 canvasEl.height = height;
 
 // 배경을 채울 색상을 설정합니다
-canvasCtx.fillStyle = 'white';
+canvasCtx.fillStyle = "white";
 canvasCtx.fillRect(0, 0, width, height);
 
 // 크기에 맞춰 여백을 설정합니다
-const spacing = width/16;
-const fontSize = Math.floor(spacing/1.5);
+const spacing = width / 16;
+const fontSize = Math.floor(spacing / 1.5);
 
 // 축을 그립니다
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = 'grey';
+canvasCtx.strokeStyle = "grey";
 
 canvasCtx.beginPath();
 canvasCtx.moveTo(spacing, spacing);
-canvasCtx.lineTo(spacing, height-spacing);
-canvasCtx.lineTo(width-spacing, height-spacing);
+canvasCtx.lineTo(spacing, height - spacing);
+canvasCtx.lineTo(width - spacing, height - spacing);
 canvasCtx.stroke();
 
 // 축은 gain(y축)과 주파수(x축)입니다 -> 라벨을 만듭니다
-canvasCtx.font = fontSize+'px sans-serif';
-canvasCtx.fillStyle = 'grey';
-canvasCtx.fillText('1', spacing-fontSize, spacing+fontSize);
-canvasCtx.fillText('g', spacing-fontSize, (height-spacing+fontSize)/2);
-canvasCtx.fillText('0', spacing-fontSize, height-spacing+fontSize);
-canvasCtx.fillText('Hz', width/2, height-spacing+fontSize);
-canvasCtx.fillText('20k', width-spacing, height-spacing+fontSize);
+canvasCtx.font = fontSize + "px sans-serif";
+canvasCtx.fillStyle = "grey";
+canvasCtx.fillText("1", spacing - fontSize, spacing + fontSize);
+canvasCtx.fillText("g", spacing - fontSize, (height - spacing + fontSize) / 2);
+canvasCtx.fillText("0", spacing - fontSize, height - spacing + fontSize);
+canvasCtx.fillText("Hz", width / 2, height - spacing + fontSize);
+canvasCtx.fillText("20k", width - spacing, height - spacing + fontSize);
 
 // 규모 응답 데이터를 순회하고 필터를 그립니다
 
 canvasCtx.beginPath();
 
-for(let i = 0; i < magResponseOutput.length; i++) {
-
-    if (i === 0) {
-        canvasCtx.moveTo(spacing, height-(magResponseOutput[i]*100)-spacing );
-    } else {
-        canvasCtx.lineTo((width/totalArrayItems)*i, height-(magResponseOutput[i]*100)-spacing );
-    }
-
+for (let i = 0; i < magResponseOutput.length; i++) {
+  if (i === 0) {
+    canvasCtx.moveTo(spacing, height - magResponseOutput[i] * 100 - spacing);
+  } else {
+    canvasCtx.lineTo(
+      (width / totalArrayItems) * i,
+      height - magResponseOutput[i] * 100 - spacing,
+    );
+  }
 }
 
 canvasCtx.stroke();

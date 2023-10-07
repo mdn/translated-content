@@ -43,21 +43,21 @@ Observe também que a conversão não é necessariamente um mapeamento de caract
 ### Usando `toLocaleUpperCase()`
 
 ```js
-'alfabeto'.toLocaleUpperCase(); // 'ALFABETO'
+"alfabeto".toLocaleUpperCase(); // 'ALFABETO'
 
-'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+let locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}     |
+| Especificação                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}      |
 | {{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} |
 
 ## Compatibilidade com navegadores

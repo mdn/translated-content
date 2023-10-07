@@ -18,7 +18,10 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 我们在一个圆形的基础上创建上面提到的半圆形：
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -42,14 +45,17 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 遮罩的效果最令人印象深刻的是表现为一个渐变。如果你想要让一个元素淡出，你可以利用遮罩效果实现这一点。
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="white" stop-opacity="0" />
       <stop offset="1" stop-color="white" stop-opacity="1" />
     </linearGradient>
     <mask id="Mask">
-      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  />
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
     </mask>
   </defs>
 
@@ -73,9 +79,21 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 上面的矩形将绘制为半透明。填充和描边还有两个属性是`fill-opacity`和`stroke-opacity`，分别用来控制填充和描边的不透明度。需要注意的是描边将绘制在填充的上面。因此，如果你在一个元素上设置了描边透明度，但它同时设有填充，则描边的一半应用填充色，另一半将应用背景色。
 
 ```html
-<svg  width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    stroke="yellow"
+    stroke-width="40"
+    stroke-opacity=".5"
+    fill="red" />
 </svg>
 ```
 

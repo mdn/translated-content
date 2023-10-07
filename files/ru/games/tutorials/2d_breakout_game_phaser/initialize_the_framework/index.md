@@ -1,16 +1,6 @@
 ---
 title: Инициализация фреймворка
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-tags:
-  - 2D
-  - Canvas
-  - HTML
-  - JavaScript
-  - Phaser
-  - Игры
-  - Руководство
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}
@@ -24,24 +14,31 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 Структура HTML-документа достаточно простая. Игра будет отображаться в элементе {{htmlelement("canvas")}}, который будет сгенерирован фреймворком. Используя свой любимый редактор, создайте новый HTML-документ, сохраните его как `index.html` и добавьте в него следующий код:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>* { padding: 0; margin: 0; }</style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     <script src="js/phaser.min.js"></script>
-</head>
-<body>
-<script>
-    var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-      preload: preload, create: create, update: update
-    });
-    function preload() {}
-    function create() {}
-    function update() {}
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
+        preload: preload,
+        create: create,
+        update: update,
+      });
+      function preload() {}
+      function create() {}
+      function update() {}
+    </script>
+  </body>
 </html>
 ```
 

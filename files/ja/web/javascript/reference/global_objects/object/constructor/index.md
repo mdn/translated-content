@@ -14,20 +14,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 (`Object.create(null)` で生成されたオブジェクトを除いて) すべてのオブジェクトが `constructor` プロパティを持っています。明示的にコンストラクター関数を用いることなく生成されたオブジェクト (オブジェクトリテラルや配列リテラルなど) は、 `constructor` プロパティがそのオブジェクトの基礎オブジェクトのコンストラクター型を指します。
 
 ```js
-let o = {}
-o.constructor === Object // true
+let o = {};
+o.constructor === Object; // true
 
-let o = new Object
-o.constructor === Object // true
+let o = new Object();
+o.constructor === Object; // true
 
-let a = []
-a.constructor === Array // true
+let a = [];
+a.constructor === Array; // true
 
-let a = new Array
-a.constructor === Array // true
+let a = new Array();
+a.constructor === Array; // true
 
-let n = new Number(3)
-n.constructor === Number // true
+let n = new Number(3);
+n.constructor === Number; // true
 ```
 
 ## 例
@@ -38,11 +38,11 @@ n.constructor === Number // true
 
 ```js
 function Tree(name) {
-  this.name = name
+  this.name = name;
 }
 
-let theTree = new Tree('Redwood')
-console.log('theTree.constructor is ' + theTree.constructor)
+let theTree = new Tree("Redwood");
+console.log("theTree.constructor is " + theTree.constructor);
 ```
 
 この例の出力は次のとおりです。
@@ -61,10 +61,10 @@ theTree.constructor is function Tree(name) {
 let val = null;
 val.constructor = 1; //TypeError: val is null
 
-val = 'abc';
+val = "abc";
 val.constructor = Number; //val.constructor === String
 
-val.foo = 'bar'; //暗黙的に String('abc') のインスタンスが生成され、 foo プロパティに代入する
+val.foo = "bar"; //暗黙的に String('abc') のインスタンスが生成され、 foo プロパティに代入する
 val.foo === undefined; //true になる。 String('abc') の新しいインスタンスがこの比較のために生成され、 foo プロパティがないため
 ```
 
@@ -72,14 +72,14 @@ val.foo === undefined; //true になる。 String('abc') の新しいインス�
 
 ```js
 let a = [];
-a.constructor = String
-a.constructor === String // true
-a instanceof String //false
-a instanceof Array //true
+a.constructor = String;
+a.constructor === String; // true
+a instanceof String; //false
+a instanceof Array; //true
 
 a = new Foo();
-a.constructor = 'bar'
-a.constructor === 'bar' // true
+a.constructor = "bar";
+a.constructor === "bar"; // true
 
 //etc.
 ```
@@ -97,15 +97,17 @@ a.constructor === Object; //true
 多くの場合、このプロパティは**関数コンストラクター**としての関数の定義に使用され、将来の **new** およびプロトタイプ継承チェーンでの呼び出しに使われます。
 
 ```js
-function Parent() { /* ... */ }
-Parent.prototype.parentMethod = function parentMethod() {}
+function Parent() {
+  /* ... */
+}
+Parent.prototype.parentMethod = function parentMethod() {};
 
 function Child() {
-   Parent.call(this) // すべてが正しく初期化されていることを確認
+  Parent.call(this); // すべてが正しく初期化されていることを確認
 }
-Child.prototype = Object.create(Parent.prototype) // 子のプロトタイプを親のプロトタイプで再定義
+Child.prototype = Object.create(Parent.prototype); // 子のプロトタイプを親のプロトタイプで再定義
 
-Child.prototype.constructor = Child // 元のコンストラクターとして Child を返す
+Child.prototype.constructor = Child; // 元のコンストラクターとして Child を返す
 ```
 
 しかし、いつこの最後の行を実行する必要があるのでしょうか。残念ながら、正しい答えは、*場合による*ということです。
@@ -115,18 +117,20 @@ Child.prototype.constructor = Child // 元のコンストラクターとして C
 以下の場合を見てみてください。オブジェクトが自分自身を生成するために `create()` メソッドを持っています。
 
 ```js
-function Parent() { /* ... */ }
+function Parent() {
+  /* ... */
+}
 function CreatedConstructor() {
-   Parent.call(this)
+  Parent.call(this);
 }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype)
+CreatedConstructor.prototype = Object.create(Parent.prototype);
 
 CreatedConstructor.prototype.create = function create() {
-  return new this.constructor()
-}
+  return new this.constructor();
+};
 
-new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent
+new CreatedConstructor().create().create(); // TypeError undefined is not a function since constructor === Parent
 ```
 
 上記の例では、コンストラクターが Parent にリンクしているため、例外が発生します。
@@ -134,17 +138,21 @@ new CreatedConstructor().create().create() // TypeError undefined is not a funct
 これを防ぐには、利用しようとしている必要なコンストラクターを代入するだけです。
 
 ```js
-function Parent() { /* ... */ }
-function CreatedConstructor() { /* ... */ }
-
-CreatedConstructor.prototype = Object.create(Parent.prototype)
-CreatedConstructor.prototype.constructor = CreatedConstructor // 将来使用するために正しいコンストラクターを設定
-
-CreatedConstructor.prototype.create = function create() {
-  return new this.constructor()
+function Parent() {
+  /* ... */
+}
+function CreatedConstructor() {
+  /* ... */
 }
 
-new CreatedConstructor().create().create() // とてもよくなった
+CreatedConstructor.prototype = Object.create(Parent.prototype);
+CreatedConstructor.prototype.constructor = CreatedConstructor; // 将来使用するために正しいコンストラクターを設定
+
+CreatedConstructor.prototype.create = function create() {
+  return new this.constructor();
+};
+
+new CreatedConstructor().create().create(); // とてもよくなった
 ```
 
 これで、コンストラクターの変更が有用である理由が明確になりました。
@@ -154,30 +162,31 @@ new CreatedConstructor().create().create() // とてもよくなった
 ```js
 function ParentWithStatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y:0 } // Static member property
+ParentWithStatic.startPosition = { x: 0, y: 0 }; // Static member property
 ParentWithStatic.getStartPosition = function getStartPosition() {
-  return this.startPosition
-}
+  return this.startPosition;
+};
 
 function Child(x, y) {
   this.position = {
     x: x,
-    y: y
-  }
+    y: y,
+  };
 }
 
-Child.prototype = Object.create(ParentWithStatic.prototype)
-Child.prototype.constructor = Child
+Child.prototype = Object.create(ParentWithStatic.prototype);
+Child.prototype.constructor = Child;
 
-Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  let position = this.position
-  let startPosition = this.constructor.getStartPosition() // error undefined is not a function, since the constructor is Child
+Child.prototype.getOffsetByInitialPosition =
+  function getOffsetByInitialPosition() {
+    let position = this.position;
+    let startPosition = this.constructor.getStartPosition(); // error undefined is not a function, since the constructor is Child
 
-  return {
-    offsetX: startPosition.x - position.x,
-    offsetY: startPosition.y - position.y
-  }
-};
+    return {
+      offsetX: startPosition.x - position.x,
+      offsetY: startPosition.y - position.y,
+    };
+  };
 ```
 
 この例を正しく動作させるためには、コンストラクターとして `Parent` を保持するか、静的プロパティを `Child` のコンストラクターに再代入するかする必要があります。

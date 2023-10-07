@@ -1,8 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 Свойство CSS **`width`** устанавливает ширину элемента. По умолчанию она равняется ширине [внутренней области](/ru/docs/Web/CSS/box_model#content), но если {{cssxref("box-sizing")}} имеет значение `border-box`, то она будет равняться ширине [области рамки](/ru/docs/Web/CSS/box_model#border).
@@ -132,8 +132,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit используют нестандартное имя */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit используют нестандартное имя */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
 }
 ```
@@ -149,7 +149,7 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
 }
 ```

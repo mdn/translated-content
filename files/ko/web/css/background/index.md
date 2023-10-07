@@ -94,11 +94,12 @@ background: no-repeat center/80% url("../img/image.png");
 
 ```html
 <p class="topbanner">
-  작은 별<br/>
-  반짝 반짝<br/>
+  작은 별<br />
+  반짝 반짝<br />
   작은 별
 </p>
-<p class="warning">문단 하나<p>
+<p class="warning">문단 하나</p>
+<p></p>
 ```
 
 #### CSS

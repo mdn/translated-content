@@ -1,7 +1,6 @@
 ---
 title: Miga de pan
 slug: Glossary/Breadcrumb
-original_slug: Glossary/miga-de-pan
 ---
 
 Una **miga de pan**, o rastro de migas de pan, es una ayuda a la navegación que se sitúa normalmente entre la cabecera del sitio y el contenido principal y muestra, bien la jerarquía de la página actual en relación con la estructura del sitio desde el nivel superior o bien una lista de los enlaces utilizados para llegar a la página actual en el orden en que se han visitado.

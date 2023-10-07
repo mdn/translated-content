@@ -13,5 +13,5 @@ l10n:
 
 ## 같이 보기
 
-- [비동기(Asynchronous)]({{glossary("Asynchronous")}})
+- [비동기(Asynchronous)](<{{glossary("Asynchronous")}}>)
 - [XMLHttpRequest()](/ko/docs/Web/API/XMLHttpRequest) {{glossary("API")}} 를 활용한 [동기, 비동기 요청](/ko/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)

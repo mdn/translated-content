@@ -11,4 +11,4 @@ slug: Glossary/Crawler
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Search engine", "検索エンジン")}}
+   1. {{Glossary("Search engine", "検索エンジン")}}

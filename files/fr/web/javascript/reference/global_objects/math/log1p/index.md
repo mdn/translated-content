@@ -1,15 +1,6 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log1p
 ---
 
 {{JSRef}}
@@ -23,7 +14,7 @@ La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxre
 ## Syntaxe
 
 ```js
-Math.log1p(x)
+Math.log1p(x);
 ```
 
 ### Paramètres
@@ -46,8 +37,8 @@ Si `x` est strictement inférieur à -1, la valeur renvoyée est {{jsxref("NaN")
 ### Utiliser `Math.log1p()`
 
 ```js
-Math.log1p(1);  // 0.6931471805599453
-Math.log1p(0);  // 0
+Math.log1p(1); // 0.6931471805599453
+Math.log1p(0); // 0
 Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN
 ```
@@ -57,9 +48,11 @@ Math.log1p(-2); // NaN
 Si cette fonction n'est pas disponible, elle peut être définie grâce au code suivant :
 
 ```js
-Math.log1p = Math.log1p || function(x) {
-  return Math.log(1 + x);
-};
+Math.log1p =
+  Math.log1p ||
+  function (x) {
+    return Math.log(1 + x);
+  };
 ```
 
 ## Spécifications

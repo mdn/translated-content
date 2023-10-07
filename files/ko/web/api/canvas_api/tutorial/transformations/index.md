@@ -1,7 +1,6 @@
 ---
 title: 변형 (transformations)
 slug: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/HTML/Canvas/Tutorial/변형
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
@@ -32,24 +31,24 @@ Canvas 상태는 스택(stack)에 쌓입니다. `save()` 메소드가 호출될 
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // 기본 설정으로 사각형을 그리기
-  ctx.save();                  // 기본 상태를 저장하기
+  ctx.fillRect(0, 0, 150, 150); // 기본 설정으로 사각형을 그리기
+  ctx.save(); // 기본 상태를 저장하기
 
-  ctx.fillStyle = '#09F';      // 설정 변경하기
+  ctx.fillStyle = "#09F"; // 설정 변경하기
   ctx.fillRect(15, 15, 120, 120); // 새로운 설정으로 사각형 그리기
 
-  ctx.save();                  // 현재 상태 저장하기
-  ctx.fillStyle = '#FFF';      // 설정 변경하기
+  ctx.save(); // 현재 상태 저장하기
+  ctx.fillStyle = "#FFF"; // 설정 변경하기
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // 새로운 설정으로 사각형 그리기
+  ctx.fillRect(30, 30, 90, 90); // 새로운 설정으로 사각형 그리기
 
-  ctx.restore();               // 이전 상태 복원하기
-  ctx.fillRect(45, 45, 60, 60);   // 복원된 설정으로 사각형 그리기
+  ctx.restore(); // 이전 상태 복원하기
+  ctx.fillRect(45, 45, 60, 60); // 복원된 설정으로 사각형 그리기
 
-  ctx.restore();               // 초기 상태를 복원하기
-  ctx.fillRect(60, 60, 30, 30);   // 복원된 설정으로 사각형 그리기
+  ctx.restore(); // 초기 상태를 복원하기
+  ctx.fillRect(60, 60, 30, 30); // 복원된 설정으로 사각형 그리기
 }
 ```
 
@@ -86,11 +85,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -126,32 +125,32 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 좌측 사각형, canvas 원점에서 회전하기
   ctx.save();
   // 파란 사각형
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // 회색 사각형
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // 우측 사각형, 사각형 중심에서 회전하기
   // 파란 사각형 그리기
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // 사각형 중심으로 이동하기
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // 회전
   ctx.translate(-200, -80); // 예전 위치로 이동하기
 
   // 회색 사각형 그리기
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -185,7 +184,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 간단하지만 확대·축소 비율을 적용한 사각형 그리기
   ctx.save();
@@ -195,8 +194,8 @@ function draw() {
 
   // 수평으로 대칭하기
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -217,7 +216,7 @@ draw();
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
   - : 인수(arguments)에 표시된 행렬을 이용해 현재 변환 행렬을 곱합니다. 변환 행렬은 다음과 같이 작성됩니다. <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-<dl><dd>만일 인수 중에 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>가 있다면, 변환 행렬은 예외 처리하는 메소드 대신에 반드시 infinite로 표시되어야 합니다.</dd></dl>
+<dl><dd>만일 인수 중에 <code><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>가 있다면, 변환 행렬은 예외 처리하는 메소드 대신에 반드시 infinite로 표시되어야 합니다.</dd></dl>
 
 이 function의 매개 변수들은 다음과 같습니다.
 
@@ -242,21 +241,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```

@@ -40,20 +40,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 - `last baseline`
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -104,20 +106,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 下一个示例演示了将 `align-self` 设置为不同的值的对齐效果。第一个区域的 `align-self` 采用默认值即 `stretch`，第二个元素的 `align-self` 的值为 `start`，第三个元素的值为 `end`，第四个元素的值为 `center`。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -186,20 +190,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 默认的对齐方式仍然是 `stretch`，除非元素具有固定宽高比。也就是说在默认情况下，网格元素会覆盖网格区域，除非改变它们的对齐方式。下面的例子中，第一个元素演示了默认的对齐效果：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -258,20 +264,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 通过组合使用 align 和 justify 属性，让元素居于网格区域的正中就变得非常容易了。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -294,7 +302,7 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 
 ```html
 <div class="wrapper">
- <div class="item1">Item 1</div>
+  <div class="item1">Item 1</div>
 </div>
 ```
 
@@ -325,20 +333,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 网格布局中默认的行为是对齐到起点（`start`），所以我们看到网格轨道整体居于网格的左上角，紧挨着起始的网格线：
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -385,20 +395,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 如果把容器中 `align-content` 的值改为 `end`，那么网格轨道整体都会移到贴近块方向轴线的最后一条线：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -446,20 +458,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 也可以为这个属性设置与弹性盒布局方式类似的用于分配空间的值：`space-between`，`space-around` 和 `space-evenly`。比如把 {{cssxref("align-content")}} 的值改为 `space-between`，观察网格元素在空间中是如何摆放的：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -515,20 +529,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 继续利用上面的示例，设置 {{cssxref("justify-content")}} 的值为 `space-around`，那些占据超过一列的元素将因此获得额外的空间：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -579,20 +595,22 @@ CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-
 在下面的例子中，元素 item 1 的左外边距被设置成 `auto`，可以看到内容被推到了区域右侧，因为在为元素的内容分配了空间之后，自动外边距占据了剩余的空间：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 

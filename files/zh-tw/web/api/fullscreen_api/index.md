@@ -97,7 +97,7 @@ document.addEventListener(
       toggleFullScreen();
     }
   },
-  false
+  false,
 );
 ```
 
@@ -122,7 +122,7 @@ function toggleFullScreen() {
       document.documentElement.mozRequestFullScreen();
     } else if (document.documentElement.webkitRequestFullscreen) {
       document.documentElement.webkitRequestFullscreen(
-        Element.ALLOW_KEYBOARD_INPUT
+        Element.ALLOW_KEYBOARD_INPUT,
       );
     }
   } else {

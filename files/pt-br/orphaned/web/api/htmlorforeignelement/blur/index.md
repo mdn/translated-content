@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.blur()
 slug: orphaned/Web/API/HTMLOrForeignElement/blur
-original_slug: Web/API/HTMLOrForeignElement/blur
 ---
 
 {{ APIRef("HTML DOM") }}

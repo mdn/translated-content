@@ -33,12 +33,12 @@ Math.asin(x)
 ### 示例：使用 `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.5707963267948966 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.5707963267948966 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.5707963267948966 (pi/2)
+Math.asin(2); // NaN
 ```
 
 对于小于 -1 或大于 1 的参数值，`Math.asin` 返回 `NaN`。

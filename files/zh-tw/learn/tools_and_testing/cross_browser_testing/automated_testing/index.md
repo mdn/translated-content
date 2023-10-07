@@ -226,7 +226,7 @@ gulp.task("default", []);
          autoprefixer({
            browsers: ["last 5 versions"],
            cascade: false,
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
    });
@@ -263,7 +263,7 @@ gulp.task("default", []);
        .pipe(
          babel({
            presets: ["es2015"],
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
    });

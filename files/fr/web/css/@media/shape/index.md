@@ -1,13 +1,6 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@media/shape
 ---
 
 {{CSSRef}} {{Non-standard_header}}
@@ -65,9 +58,12 @@ Ce fragment de code HTML permettra d'appliquer une feuille de style particulièr
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link
+    media="screen and (shape: rect)"
+    rel="stylesheet"
+    href="rectangle.css" />
+  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 

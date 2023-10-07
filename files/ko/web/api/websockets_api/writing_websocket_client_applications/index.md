@@ -1,8 +1,8 @@
 ---
 title: WebSocket을 이용하여 클라이언트 애플리케이션 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
+
 WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어 주는 기술입니다. 일반적인 웹소켓 클라이언트는 사용자의 브라우저일 것이지만, 그렇다고 해서 이 프로토콜이 플랫폼에 종속적이지는 않습니다.
 
 > **참고:** 우리에게는 작동하는 chat/server 시스템 예제 코드 조각이 있습니다. 이는 우리의 인프라가 WebSocket 예제들을 제대로 호스팅할 수 있는 환경이 되면 공유할 것입니다.
@@ -43,7 +43,10 @@ Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫�
 이 간단한 예제는 새 웹소켓 오브젝트를 생성하여 `ws://www.example.com/socketserver` 서버에 접속하는것을 보여줍니다. 이 예제에서는 커스텀 프로토콜인 "protocolOne" 을 리퀘스트에 같이 지정합니다. (이 프로토콜을 지정하는 부분은 생략될 수 있습니다.)
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 반환된 `exampleSocket` 오브젝트의 `exampleSocket`. `readyState` 값은 `CONNECTING` 입니다. `readyState` 값은 연결이 수립되어 데이터가 전송 가능한 상태가 되면 `OPEN` 으로 변경됩니다.
@@ -51,7 +54,10 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocol
 만약 여러개의 프로토콜을 유연하게 대응할 수 있는 구조를 가지고 있다면, 연결 시에 배열을 통해 프로토콜의 목록을 지정할 수 있습니다.
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 연결이 수립되면(`readyState` 가 `OPEN` 이 되었을 때`), exampleSocket.protocol` 값을 조사하여 서버가 어떤 프로토콜을 선택했는지 알아낼 수 있습니다.
@@ -89,8 +95,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -108,7 +114,7 @@ WebSockets는 event-driven API 입니다; 메세지가 수신되면 "message" �
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### JSON 오브젝트를 받아서 처리하기
@@ -122,30 +128,38 @@ exampleSocket.onmessage = function (event) {
 위의 메세지들을 받아서 처리하는 코드는 아래와 같을 것 입니다.:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

@@ -1,8 +1,6 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-translation_of: Web/SVG/Element/animate
-browser-compat: svg.elements.animate
 ---
 
 {{SVGRef}}
@@ -12,13 +10,23 @@ L'élément SVG **`<animate>`** permet d'animer un attribut d'un élément au fi
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100%; margin:0; padding:0; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <rect width="10" height="10">
-    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+    <animate
+      attributeName="rx"
+      values="0;5;0"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -80,7 +88,7 @@ Veillez à fournir un mécanisme pour suspendre ou désactiver les animations, p
 - [Concevoir des animations web plus sûres, tenant compte de la sensibilité aux mouvements, un article <i lang="en">A List Apart</i> (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [Une introduction aux requêtes média pour la réduction des mouvements sur CSS-Tricks (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Conception adaptative et gestion du mouvement sur le blog WebKit (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Guide MDN pour la compréhension de la règle 2.2 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.2\_%e2%80%94\_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [Guide MDN pour la compréhension de la règle 2.2 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Comprendre le critère de réussite 2.2.2, un guide du W3C pour la compréhension de WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## Spécifications

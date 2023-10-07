@@ -1,7 +1,6 @@
 ---
 title: WindowTimers.clearTimeout()
 slug: Web/API/clearTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
 
 {{APIRef("HTML DOM")}}
@@ -29,26 +28,32 @@ Execute o script abaixo em uma página web e clique na página uma vez. Você ve
 
 ```js
 var alarme = {
-  relembrar: function(aMessage) {
+  relembrar: function (aMessage) {
     alert(aMessage);
     delete this.timeoutID;
   },
 
-  setup: function() {
-    if (typeof this.timeoutID === 'number') {
-        this.cancelar();
+  setup: function () {
+    if (typeof this.timeoutID === "number") {
+      this.cancelar();
     }
 
-    this.timeoutID = window.setTimeout(function(msg) {
+    this.timeoutID = window.setTimeout(
+      function (msg) {
         this.relembrar(msg);
-    }.bind(this), 1000, 'Wake up!');
+      }.bind(this),
+      1000,
+      "Wake up!",
+    );
   },
 
-  cancelar: function() {
+  cancelar: function () {
     window.clearTimeout(this.timeoutID);
-  }
+  },
 };
-window.onclick = function() { alarme.setup() };
+window.onclick = function () {
+  alarme.setup();
+};
 ```
 
 ## Notas
@@ -57,10 +62,7 @@ Passar um _ID_ inválido para `clearTimeout` não causa nenhum efeito (não lan�
 
 ## Especificações
 
-| Especificação                                                                                                                                    | Status                           | Comentário                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'WindowOrWorkerGlobalScope.clearTimeout()')}} | {{Spec2("HTML WHATWG")}} | Método movido para `WindowOrWorkerGlobalScope` . |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'clearTimeout()')}}                                     | {{Spec2('HTML WHATWG')}} |                                                  |
+{{Specifications}}
 
 ## Compatibilidade
 

@@ -1,7 +1,6 @@
 ---
 title: Updating extensions for Firefox 3.1
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
-original_slug: Updating_extensions_for_Firefox_3.1
 ---
 
 この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
@@ -55,12 +54,13 @@ firefox -P testBeta2
 Firefox 3.1 以前は、[Storage API](/ja/Storage) を使って Places データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。
 
 ```js
-var places = Components.classes["@mozilla.org/file/directory_service;1"].
-                        getService(Components.interfaces.nsIProperties).
-                        get("ProfD", Components.interfaces.nsIFile);
+var places = Components.classes["@mozilla.org/file/directory_service;1"]
+  .getService(Components.interfaces.nsIProperties)
+  .get("ProfD", Components.interfaces.nsIFile);
 places.append("places.sqlite");
-var db = Components.classes["@mozilla.org/storage/service;1"].
-                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
+var db = Components.classes["@mozilla.org/storage/service;1"]
+  .getService(Components.interfaces.mozIStorageService)
+  .openDatabase(places);
 ```
 
 これは `places.sqlite` データベースファイルへのパスを自力で作成し、Storage アクセスのためのファイルを開くものでした。
@@ -68,8 +68,9 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 Firefox 3.1 には、Places データベースへアクセスするための便利な方法を提供する、専用のサービスが追加されており、上記の方法は Firefox 3.1 以降では機能しません。
 
 ```js
-var db = Components.classes["@mozilla.org/browser/nav-history-service;1"].
-                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+var db = Components.classes[
+  "@mozilla.org/browser/nav-history-service;1"
+].getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 ```
 
 ## テキストボックスの検索
@@ -95,7 +96,7 @@ JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイ�
 Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。
 
 ```js
-if (typeof(JSON) == "undefined") {
+if (typeof JSON == "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
   JSON.parse = JSON.fromString;
   JSON.stringify = JSON.toString;

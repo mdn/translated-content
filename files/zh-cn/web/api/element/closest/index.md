@@ -32,8 +32,10 @@ var closestElement = targetElement.closest(selectors);
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
+  <div id="div-01">
+    Here is div-01
+    <div id="div-02">
+      Here is div-02
       <div id="div-03">Here is div-03</div>
     </div>
   </div>
@@ -43,7 +45,7 @@ var closestElement = targetElement.closest(selectors);
 ### JavaScript
 
 ```js
-var el = document.getElementById('div-03');
+var el = document.getElementById("div-03");
 
 var r1 = el.closest("#div-02");
 // 返回 id 为 div-02 的那个元素
@@ -64,36 +66,36 @@ var r4 = el.closest(":not(div)");
 
 ```js
 if (!Element.prototype.matches)
-    Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                                Element.prototype.webkitMatchesSelector;
+  Element.prototype.matches =
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.webkitMatchesSelector;
 
 if (!Element.prototype.closest)
-    Element.prototype.closest = function(s) {
-        var el = this;
-        if (!document.documentElement.contains(el)) return null;
-        do {
-            if (el.matches(s)) return el;
-            el = el.parentElement;
-        } while (el !== null);
-        return null;
-    };
+  Element.prototype.closest = function (s) {
+    var el = this;
+    if (!document.documentElement.contains(el)) return null;
+    do {
+      if (el.matches(s)) return el;
+      el = el.parentElement;
+    } while (el !== null);
+    return null;
+  };
 ```
 
 然而，如果你需要兼容到 IE8，那么随后这个 polyfill 将会非常缓慢地运行到结束。并且，IE8 只支持 CSS2.1 的选择器，并且使网页运行非常缓慢。
 
 ```js
 if (window.Element && !Element.prototype.closest) {
-    Element.prototype.closest =
-    function(s) {
-        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i,
-            el = this;
-        do {
-            i = matches.length;
-            while (--i >= 0 && matches.item(i) !== el) {};
-        } while ((i < 0) && (el = el.parentElement));
-        return el;
-    };
+  Element.prototype.closest = function (s) {
+    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+      i,
+      el = this;
+    do {
+      i = matches.length;
+      while (--i >= 0 && matches.item(i) !== el) {}
+    } while (i < 0 && (el = el.parentElement));
+    return el;
+  };
 }
 ```
 

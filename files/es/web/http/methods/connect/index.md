@@ -14,9 +14,9 @@ El método `CONNECT` es un método de salto entre servidores.
 | Contiene cuerpo la petición                               | No  |
 | --------------------------------------------------------- | --- |
 | La respuesta exitosa contiene cuerpo                      | Si  |
-| {{Glossary("Safe")}}                              | No  |
-| {{Glossary("Idempotent")}}                      | No  |
-| {{Glossary("Cacheable")}}                          | No  |
+| {{Glossary("Safe")}}                                      | No  |
+| {{Glossary("Idempotent")}}                                | No  |
+| {{Glossary("Cacheable")}}                                 | No  |
 | Permitido en [formas HTML](/es/docs/Web/Guide/HTML/Forms) | No  |
 
 ## Sintaxis
@@ -29,7 +29,7 @@ CONNECT www.example.com:443 HTTP/1.1
 
 Algunos servidores proxy pueden necesitar autorización para crear tuneles. Consulta el encabezado {{HTTPHeader("Proxy-Authorization")}} .
 
-```html
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=

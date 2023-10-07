@@ -1,7 +1,6 @@
 ---
 title: Origem
 slug: Glossary/Origin
-original_slug: Glossario/Origem
 ---
 
 O conteúdo de **origem** é definido pelo _esquema_ (protocolo), _host_ (domínio), e _porta_ da {{Glossary("URL")}} usada para acessá-lo. Dois objetos tem a mesma origem somente quando o esquema, host, e porta batem.
@@ -23,12 +22,12 @@ Algumas operações são restritas para conteúdos de mesma origem, e essa restr
 
 ## Especificações
 
-| Especificação                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                    | Status                   | Comentário |
+| ------------------------------------------------ | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', '#origin', 'origin')}} | {{Spec2('HTML WHATWG')}} |            |
 
 ## Aprenda mais
 
 Veja [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Glossary")}}

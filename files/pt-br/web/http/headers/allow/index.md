@@ -41,8 +41,8 @@ Allow: GET, POST, HEAD
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                     | Título                                                        |
+| --------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Veja também

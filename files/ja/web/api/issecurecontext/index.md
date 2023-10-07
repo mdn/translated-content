@@ -1,7 +1,6 @@
 ---
 title: isSecureContext
 slug: Web/API/isSecureContext
-original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 l10n:
   sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---

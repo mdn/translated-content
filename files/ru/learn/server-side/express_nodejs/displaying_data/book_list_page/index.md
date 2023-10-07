@@ -1,7 +1,6 @@
 ---
 title: Страница списка книг
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 
 Далее мы реализуем нашу страницу списка книг. На этой странице должен отображаться список всех книг и их авторов в базе данных, причём каждое название книги является гиперссылкой на соответствующую страницу сведений о книге.
@@ -14,16 +13,16 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 
 ```js
 // Display list of all Books.
-exports.book_list = function(req, res, next) {
-
-  Book.find({}, 'title author')
-    .populate('author')
+exports.book_list = function (req, res, next) {
+  Book.find({}, "title author")
+    .populate("author")
     .exec(function (err, list_books) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('book_list', { title: 'Book List', book_list: list_books });
+      res.render("book_list", { title: "Book List", book_list: list_books });
     });
-
 };
 ```
 

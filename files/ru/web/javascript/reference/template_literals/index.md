@@ -1,14 +1,6 @@
 ---
 title: Шаблонные строки
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Строки
-  - Шаблонные строки
-  - Экспериментальный
-translation_of: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Reference/template_strings
 ---
 
 {{JsSidebar("More")}}
@@ -33,7 +25,7 @@ tag `строка текста ${выражение} строка текста`
 Шаблонные литералы заключены в обратные кавычки (\` \`) вместо двойных или одинарных. Они могут содержать подстановки, обозначаемые знаком доллара и фигурными скобками (`${выражение}`). Выражения в подстановках и текст между ними передаются в функцию. По умолчанию функция просто объединяет все части в строку. Если перед строкой есть выражение (здесь это `tag`), то шаблонная строка называется "теговым шаблоном". В этом случае, теговое выражение (обычно функция) вызывается с обработанным шаблонным литералом, который вы можете изменить перед выводом. Для экранирования обратной кавычки в шаблонных литералах указывается обратный слеш **\\**.
 
 ```js
-`\`` === '`' // --> true
+`\`` === "`"; // --> true
 ```
 
 ### Многострочные литералы
@@ -41,8 +33,7 @@ tag `строка текста ${выражение} строка текста`
 Символы новой строки являются частью шаблонных литералов. Используя обычные строки, вставка переноса потребовала бы следующего синтаксиса:
 
 ```js
-console.log('string text line 1\n' +
-'string text line 2');
+console.log("string text line 1\n" + "string text line 2");
 // "string text line 1
 //  string text line 2"
 ```
@@ -63,7 +54,7 @@ string text line 2`);
 ```js
 var a = 5;
 var b = 10;
-console.log('Fifteen is ' + (a + b) + ' and not ' + (2 * a + b) + '.');
+console.log("Fifteen is " + (a + b) + " and not " + (2 * a + b) + ".");
 // "Fifteen is 15 and not 20."
 ```
 
@@ -83,24 +74,28 @@ console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 В ES5:
 
 ```js
-var classes = 'header'
-classes += (isLargeScreen() ?
-   '' : item.isCollapsed ?
-     ' icon-expander' : ' icon-collapser');
+var classes = "header";
+classes += isLargeScreen()
+  ? ""
+  : item.isCollapsed
+  ? " icon-expander"
+  : " icon-collapser";
 ```
 
 В ES2015 с шаблонными литералами без вложения:
 
 ```js
-const classes = `header ${ isLargeScreen() ? '' :
-    (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
+const classes = `header ${
+  isLargeScreen() ? "" : item.isCollapsed ? "icon-expander" : "icon-collapser"
+}`;
 ```
 
 В ES2015 с вложенными шаблонными литералами:
 
 ```js
-const classes = `header ${ isLargeScreen() ? '' :
-`icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
+const classes = `header ${
+  isLargeScreen() ? "" : `icon-${item.isCollapsed ? "expander" : "collapser"}`
+}`;
 ```
 
 ### Теговые шаблоны
@@ -108,7 +103,7 @@ const classes = `header ${ isLargeScreen() ? '' :
 Расширенной формой шаблонных литералов являются _теговые_ шаблоны. Они позволяют разбирать шаблонные литералы с помощью функции. Первый аргумент такой функции содержит массив строковых значений, а остальные содержат выражения из подстановок. В итоге, функция должна вернуть собранную строку (или что-либо совсем иное, как будет показано далее). Имя функции может быть любым.
 
 ```js
-var person = 'Mike';
+var person = "Mike";
 var age = 28;
 
 function myTag(strings, personExp, ageExp) {
@@ -121,17 +116,17 @@ function myTag(strings, personExp, ageExp) {
   // var str2 = strings[2];
 
   var ageStr;
-  if (ageExp > 99){
-    ageStr = 'centenarian';
+  if (ageExp > 99) {
+    ageStr = "centenarian";
   } else {
-    ageStr = 'youngster';
+    ageStr = "youngster";
   }
 
   // Мы даже можем вернуть строку, построенную другим шаблонным литералом
   return `${str0}${personExp}${str1}${ageStr}`;
 }
 
-var output = myTag`That ${ person } is a ${ age }`;
+var output = myTag`That ${person} is a ${age}`;
 
 console.log(output);
 // That Mike is a youngster
@@ -141,21 +136,21 @@ console.log(output);
 
 ```js
 function template(strings, ...keys) {
-  return (function(...values) {
+  return function (...values) {
     var dict = values[values.length - 1] || {};
     var result = [strings[0]];
-    keys.forEach(function(key, i) {
+    keys.forEach(function (key, i) {
       var value = Number.isInteger(key) ? values[key] : dict[key];
       result.push(value, strings[i + 1]);
     });
-    return result.join('');
-  });
+    return result.join("");
+  };
 }
 
 var t1Closure = template`${0}${1}${0}!`;
-t1Closure('Y', 'A');  // "YAY!"
-var t2Closure = template`${0} ${'foo'}!`;
-t2Closure('Hello', {foo: 'World'});  // "Hello World!"
+t1Closure("Y", "A"); // "YAY!"
+var t2Closure = template`${0} ${"foo"}!`;
+t2Closure("Hello", { foo: "World" }); // "Hello World!"
 ```
 
 ### Сырые строки
@@ -175,13 +170,13 @@ tag`string text line 1 \\n string text line 2`;
 Вдобавок, существует метод {{jsxref('String.raw()')}}, возвращающий точно такую же исходную строку, какую вернула бы функция шаблона по умолчанию и строковая конкатенация вместе.
 
 ```js
-var str = String.raw`Hi\n${2+3}!`;
+var str = String.raw`Hi\n${2 + 3}!`;
 // "Hi\n5!"
 
 str.length;
 // 6
 
-str.split('').join(',');
+str.split("").join(",");
 // "H,i,\,n,5,!"
 ```
 
@@ -199,7 +194,7 @@ str.split('').join(',');
 Отсюда вытекает проблема теговых шаблонов: следуя грамматике ECMAScript, анализатор кода, найдя символ `\`, будет искать корректное представление символа Unicode, но может не найти его вовсе. Пример ниже показывает это:
 
 ```js
-latex`\unicode`
+latex`\unicode`;
 // В старых версиях ECMAScript (ES2016 и раньше) выкинет исключение:
 // SyntaxError: malformed Unicode character escape sequence
 ```
@@ -212,10 +207,10 @@ latex`\unicode`
 
 ```js
 function latex(str) {
- return { "cooked": str[0], "raw": str.raw[0] }
+  return { cooked: str[0], raw: str.raw[0] };
 }
 
-latex`\unicode`
+latex`\unicode`;
 
 // { cooked: undefined, raw: "\unicode" }
 ```

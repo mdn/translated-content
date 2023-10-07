@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## Сводка
@@ -29,18 +22,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ### Пример: использование свойства `multiline`
 
 ```js
-var regex = new RegExp('foo', 'm');
+var regex = new RegExp("foo", "m");
 
 console.log(regex.multiline); // true
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                   | Комментарии                                                                                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ECMAScript 3-е издание.                                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `multiline` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
-| {{SpecName('ES5.1', '#sec-15.10.7.4', 'RegExp.prototype.multiline')}}                         | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                                                           |
-| {{SpecName('ES6', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}} | {{Spec2('ES6')}}     | Свойство `multiline` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                                                 |
+| Спецификация                                                                             | Статус             | Комментарии                                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ECMAScript 3-е издание.                                                                  | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `multiline` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
+| {{SpecName('ES5.1', '#sec-15.10.7.4', 'RegExp.prototype.multiline')}}                    | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                             |
+| {{SpecName('ES6', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}} | {{Spec2('ES6')}}   | Свойство `multiline` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                   |
 
 ## Совместимость с браузерами
 

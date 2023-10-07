@@ -23,10 +23,12 @@ slug: Web/API/Range/commonAncestorContainer
 
 ```html
 <ul>
-  <li>Strings
+  <li>
+    Strings
     <ul>
       <li>Cello</li>
-      <li>Violin
+      <li>
+        Violin
         <ul>
           <li>First Chair</li>
           <li>Second Chair</li>
@@ -34,7 +36,8 @@ slug: Web/API/Range/commonAncestorContainer
       </li>
     </ul>
   </li>
-  <li>Woodwinds
+  <li>
+    Woodwinds
     <ul>
       <li>Clarinet</li>
       <li>Oboe</li>
@@ -53,8 +56,12 @@ slug: Web/API/Range/commonAncestorContainer
 }
 
 @keyframes highlight {
-  from { outline: 1px solid #f00f; }
-  to   { outline: 1px solid #f000; }
+  from {
+    outline: 1px solid #f00f;
+  }
+  to {
+    outline: 1px solid #f000;
+  }
 }
 ```
 
@@ -67,10 +74,10 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', e => {
+document.addEventListener("pointerup", (e) => {
   const selection = window.getSelection();
 
-  if (selection.type === 'Range') {
+  if (selection.type === "Range") {
     for (let i = 0; i < selection.rangeCount; i++) {
       const range = selection.getRangeAt(i);
       playAnimation(range.commonAncestorContainer);
@@ -83,9 +90,9 @@ function playAnimation(el) {
     el = el.parentNode;
   }
 
-  el.classList.remove('highlight');
+  el.classList.remove("highlight");
   setTimeout(() => {
-    el.classList.add('highlight');
+    el.classList.add("highlight");
   }, 0);
 }
 ```

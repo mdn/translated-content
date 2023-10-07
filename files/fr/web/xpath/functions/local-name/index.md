@@ -1,10 +1,6 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/local-name
-original_slug: Web/XPath/Fonctions/local-name
 ---
 
 {{ XsltRef() }}

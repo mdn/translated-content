@@ -18,13 +18,13 @@ slug: Mozilla/Firefox/Releases/3/Site_compatibility
 例如，如下：
 
 ```js
-window.addEventListener('load', yourFunction, true);
+window.addEventListener("load", yourFunction, true);
 ```
 
 应该更改为：
 
 ```js
-window.addEventListener('load', yourFunction, false);
+window.addEventListener("load", yourFunction, false);
 ```
 
 事件捕获如何工作的解释，参见 [DOM Level 2 事件捕获](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)

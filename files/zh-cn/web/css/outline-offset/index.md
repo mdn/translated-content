@@ -44,7 +44,7 @@ p {
   outline: dashed thin;
   /* Move the outline 10px away from the border */
   outline-offset: 10px;
-  border:1px solid black;
+  border: 1px solid black;
 }
 ```
 

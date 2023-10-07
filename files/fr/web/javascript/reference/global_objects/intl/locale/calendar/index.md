@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/calendar
 ---
 
 {{JSRef}}
@@ -150,7 +141,7 @@ console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 Le constructeur {{jsxref("Locale", "Intl.Locale")}} peut utiliser un argument optionnel qui est un objet permettant de configurer la locale via différentes extensions dont les calendriers. En utilisant la propriété `calendar` de cet objet, on définit le calendrier qui sera utilisé :
 
 ```js
-let frBuddhist = new Intl.Locale("fr-FR", {calendar: "buddhist"});
+let frBuddhist = new Intl.Locale("fr-FR", { calendar: "buddhist" });
 console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 ```
 

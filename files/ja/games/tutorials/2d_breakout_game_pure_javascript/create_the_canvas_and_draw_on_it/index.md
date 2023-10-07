@@ -1,7 +1,6 @@
 ---
 title: キャンバスを作ってその上に描画する
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
@@ -17,25 +16,30 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canva
 ゲームはすべて {{htmlelement("canvas")}} 要素に描画されるため、 HTML 文書構造は極めて簡潔です。好きなテキストエディターを使って新しい HTML 文書を作成し、適当な場所に `index.html` として保存してください。そして、その HTML 文書に次のコードを追加してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8" />
-  <title>Gamedev Canvas Workshop</title>
-  <style>
-    * { padding: 0; margin: 0; }
-    canvas { background: #eee; display: block; margin: 0 auto; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript のコードはここ
-</script>
-
-</body>
+    <script>
+      // JavaScript のコードはここ
+    </script>
+  </body>
 </html>
 ```
 
@@ -68,7 +72,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();

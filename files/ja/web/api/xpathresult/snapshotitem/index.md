@@ -38,10 +38,16 @@ var node = result.snapshotItem(i);
 
 ```js
 var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+var result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+  null,
+);
 var node = null;
 var tagNames = [];
-for(var i = 0; i < result.snapshotLength; i++) {
+for (var i = 0; i < result.snapshotLength; i++) {
   var node = result.snapshotItem(i);
   tagNames.push(node.localName);
 }

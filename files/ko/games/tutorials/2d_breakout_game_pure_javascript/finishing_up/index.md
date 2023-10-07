@@ -1,7 +1,8 @@
 ---
 title: 개발 마무리
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Finishing_up
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -17,16 +18,16 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 생명을 구현하는 방법은 아주 간단합니다. 먼저 변수를 선언했던 곳과 같은 장소에서 변수를 추가하여 생명 수를 저장합니다.
 
 ```js
-var lives = 3; //남은 생명 수
+let lives = 3;
 ```
 
 남은 생명 수를 표시하는 방법은 점수 카운터가 그려지는 것과 같은 형태입니다. `drawScore()`함수 아래에 다음 기능을 추가하세요.
 
 ```js
 function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText(`Lives: ${lives}`, canvas.width - 65, 20);
 }
 ```
 
@@ -42,17 +43,16 @@ clearInterval(interval); // Needed for Chrome to end game
 
 ```js
 lives--;
-if(!lives) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
-}
-else {
-    x = canvas.width/2;
-    y = canvas.height-30;
-    dx = 2;
-    dy = -2;
-    paddleX = (canvas.width-paddleWidth)/2;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
 }
 ```
 
@@ -71,7 +71,7 @@ drawLives();
 이제 게임 메커니즘과 연결이 되지 않지만, 그것이 렌더링되는 방식에 대해 연구해 봅시다. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}}은 우리가 현재 {{domxref("windowTimers.setInterval()", "setInterval()")}}을 사용하여 구현한 고정된 프레임레이트(fixed framerate)보다 더 낫게 게임을 렌더링합니다. 다음 줄을,
 
 ```js
-var interval = setInterval(draw, 10);
+const interval = setInterval(draw, 10);
 ```
 
 이렇게 대체하세요.
@@ -100,7 +100,7 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **참고:** **Exercise**: 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
+> **참고:** 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
 
 ## 게임 오버 - 마무리!
 

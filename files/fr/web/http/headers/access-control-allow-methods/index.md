@@ -1,12 +1,6 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - entête
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
 {{HTTPSidebar}}

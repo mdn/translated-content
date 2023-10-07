@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ## 구문
 
 ```js
-    bool.valueOf()
+bool.valueOf();
 ```
 
 ### 반환 값

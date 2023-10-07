@@ -2,6 +2,7 @@
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 El constructor DOM **`MutationObserver()`** — parte del interface {{domxref("MutationObserver")}} — crea y devuelve un nuevo objeto **observer** que llamará a la función especificada (callback), cuando tengan lugar cambios sobre el DOM. Estos observadores no se inician inmediatamente; en primer lugar debemos llamar al método {{domxref("MutationObserver.observe", "observe()")}} para establecer qué parte del DOM observar y que tipo de cambios comunicar.
@@ -30,12 +31,12 @@ Este ejemplo crea un nuevo `MutationObserver` configurado para _observar_ a un n
 ```js
 function callback(mutationList, observer) {
   mutationList.forEach((mutation) => {
-    switch(mutation.type) {
-      case 'childList':
+    switch (mutation.type) {
+      case "childList":
         /* Uno o mas hijos han sido añadidos y/o eliminados del árbol;
            vea mutation.addedNodes y mutation.removedNodes */
         break;
-      case 'attributes':
+      case "attributes":
         /* El valor de un atributo en mutation.target ha cambiado;
            El nombre del atributo esta en mutation.attributeName y
            su valor anterior en mutation.oldValue */
@@ -58,8 +59,8 @@ var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true,
-  subtree: true //Omita o ponga false si no quiere controlar los cambios en los hijos
-}
+  subtree: true, //Omita o ponga false si no quiere controlar los cambios en los hijos
+};
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

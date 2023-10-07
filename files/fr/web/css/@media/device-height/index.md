@@ -1,12 +1,6 @@
 ---
 title: device-height
 slug: Web/CSS/@media/device-height
-tags:
-  - CSS
-  - Caractéristique média
-  - Déprécié
-  - Reference
-translation_of: Web/CSS/@media/device-height
 ---
 
 {{CSSRef}}{{deprecated_header}}
@@ -22,7 +16,10 @@ La caractéristique `device-height` est définie comme une longueur (type {{cssx
 Ce fragment HTML applique une feuille de style spécifique pour les appareils dont la hauteur est inférieure à 800 pixels.
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://toto.truc.com/short-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-height: 799px)"
+  href="http://toto.truc.com/short-styles.css" />
 ```
 
 ## Spécifications

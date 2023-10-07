@@ -1,7 +1,6 @@
 ---
 title: Aplicações web e ARIA - Perguntas Frequentes (FAQ)
 slug: conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
-original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 ---
 
 ## O que significa ARIA?

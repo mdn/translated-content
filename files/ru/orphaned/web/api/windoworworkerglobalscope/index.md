@@ -1,19 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope
 slug: orphaned/Web/API/WindowOrWorkerGlobalScope
-tags:
-  - API
-  - DOM
-  - DOM API
-  - NeedsTranslation
-  - Service Worker
-  - TopicStub
-  - Window
-  - WindowOrWorkerGlobalScope
-  - Worker
-  - WorkerGlobalScope
-translation_of: Web/API/WindowOrWorkerGlobalScope
-original_slug: Web/API/WindowOrWorkerGlobalScope
 ---
 
 {{ApiRef()}}

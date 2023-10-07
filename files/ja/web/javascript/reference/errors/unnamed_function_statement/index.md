@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 
@@ -39,17 +39,15 @@ function () {
 代わりに、[function 式](/ja/docs/Web/JavaScript/Reference/Operators/function) (代入) を使用することができます。
 
 ```js example-good
-var greet = function() {
-  return 'Hello world';
+var greet = function () {
+  return "Hello world";
 };
 ```
 
 または、定義するとすぐに実行される [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (即時実行関数式) を定義しようとしているのかもしれません。その場合は、もう少々括弧が必要です。
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### ラベル付けされた関数
@@ -83,7 +81,7 @@ function Greeter() {
 var greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

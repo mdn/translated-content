@@ -13,9 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 
 ```js
 var capturing = browser.tabs.captureVisibleTab(
-  windowId,               // optional integer
-  options                 // optional extensionTypes.ImageDetails
-)
+  windowId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### 引数
@@ -42,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });

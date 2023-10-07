@@ -30,18 +30,18 @@ wm.delete(key);
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 console.log(wm.delete(window)); // Retorna true. Removido com sucesso.
 
-wm.has(window);    // Retorna false. O objeto window não é mais pertecente ao WeakMap.
+wm.has(window); // Retorna false. O objeto window não é mais pertecente ao WeakMap.
 ```
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                       | Comentário        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ES2015')}}     | Definição inicial |
+| Especificação                                                                        | Status               | Comentário        |
+| ------------------------------------------------------------------------------------ | -------------------- | ----------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}  | {{Spec2('ES2015')}}  | Definição inicial |
 | {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatibilidade com navegadores

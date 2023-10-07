@@ -70,12 +70,12 @@ Para realizar uma pesquisa global e substituir, inclua a flag `g` na expressão 
 
 A string substituidora pode incluir o seguinte padrão de substituição especial:
 
-| **Padrão**    | **Insere**                                                                                                                                                                                         |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`          | Insere um "$".                                                                                                                                                                                     |
-| `$&`          | Insere a string casada.                                                                                                                                                                            |
-| `` $` ``      | Insere a porção da string que precede a substring combinada.                                                                                                                                       |
-| `$'`          | Insere a porção da string que segue a substring combinada.                                                                                                                                         |
+| **Padrão**    | **Insere**                                                                                                                                                                          |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`          | Insere um "$".                                                                                                                                                                      |
+| `$&`          | Insere a string casada.                                                                                                                                                             |
+| `` $` ``      | Insere a porção da string que precede a substring combinada.                                                                                                                        |
+| `$'`          | Insere a porção da string que segue a substring combinada.                                                                                                                          |
 | `$n` ou `$nn` | Onde `n` ou `nn` são dígitos decimais, insere a _n_-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
 
 ### Especificando uma função como parâmetro
@@ -84,12 +84,12 @@ Você pode especificar uma função no segundo parâmetro. Neste caso, a funçã
 
 Os parâmetros da função são:
 
-| **Possíveis nomes** | **Valor fornecido**                                                                                                                                                                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `match`             | A substring encontrada. Corresponde ao `$&` acima.                                                                                                                                                                                                                                                           |
+| **Possíveis nomes** | **Valor fornecido**                                                                                                                                                                                                                                                                           |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`             | A substring encontrada. Corresponde ao `$&` acima.                                                                                                                                                                                                                                            |
 | `p1, p2, ...`       | O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função `replace()` {{jsxref("Global_Objects/RegExp", "RegExp")}}. (Corresponde a `$1`, `$2`, etc. acima.) Por exemplo, se `/(\a+)(\b+)/`, for o primeiro parâmetro, `p1` é a combinação para `\a+`, e `p2` para `\b+`. |
-| `offset`            | O offset da string encontrada em relação ao resto da string. Por exemplo, se a string for 'abcd' e a string a ser encontrada for 'bc', então este parâmetro terá o valor 1.                                                                                                                                  |
-| `string`            | A string completa que está sendo examinada.                                                                                                                                                                                                                                                                  |
+| `offset`            | O offset da string encontrada em relação ao resto da string. Por exemplo, se a string for 'abcd' e a string a ser encontrada for 'bc', então este parâmetro terá o valor 1.                                                                                                                   |
+| `string`            | A string completa que está sendo examinada.                                                                                                                                                                                                                                                   |
 
 (O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("Global_Objects/RegExp", "RegExp")}} e de quantas combinações entre parênteses houver).
 
@@ -99,9 +99,9 @@ O exemplo a seguir irá substituir o valor de `newString` para `'abc - 12345 - #
 function replacer(match, p1, p2, p3, offset, string) {
   // p1 não possui digitos,
   // p2 possui dígitos, e p3 não possui alfanuméricos
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(" - ");
 }
-var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+var newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 
 // retorna "abc - 12345 - #$*%"
 ```
@@ -113,8 +113,8 @@ var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 No exemplo a seguir foi definida uma expressão regular com a flag "`i`" (que ignora diferenças entre maiúsculas e minúsculas) no método `replace()`.
 
 ```js
-var str = 'Twas the night before Xmas...';
-var newstr = str.replace(/xmas/i, 'Christmas');
+var str = "Twas the night before Xmas...";
+var newstr = str.replace(/xmas/i, "Christmas");
 
 console.log(newstr);
 // retorna "Twas the night before Christmas..."
@@ -128,8 +128,8 @@ Substituir globalmente, "`g`", só pode ser feito com uma expressão regular. No
 
 ```js
 var re = /maçãs/gi;
-var str = 'As maçãs são redondas. As maçãs são suculentas.';
-var newstr = str.replace(re, 'laranjas');
+var str = "As maçãs são redondas. As maçãs são suculentas.";
+var newstr = str.replace(re, "laranjas");
 
 console.log(newstr);
 // retorna
@@ -142,9 +142,9 @@ O script a seguir troca as palavras na string. Para o texto que vai substituir, 
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
+console.log(newstr); // Smith, John
 ```
 
 ### Usando uma função que modifica os caracteres coincidentes
@@ -156,7 +156,7 @@ A função de substituição aceita a string coincidida como parâmetro e usa el
 ```js
 function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match, offset, string) {
-    return (offset ? '-' : '') + match.toLowerCase();
+    return (offset ? "-" : "") + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }
@@ -167,7 +167,7 @@ Dado o seguinte parâmetro: `styleHyphenFormat('borderTop')`, o valor retornado 
 Como queremos transformar o resultado da coincidencia antes da substituição final, nós devemos usar uma função. Isto força que a transformação seja feita antes da chamada do método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}. Se tivéssemos tentado isto sem a função, o método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} não teria efeito.
 
 ```js
-let newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // não funciona
+let newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // não funciona
 ```
 
 Isso acontece porque `'$&'.toLowerCase()` será executada antes (resultando no mesmo que `'$&'`) em vez de usar os caracteres da string a ser transformada.
@@ -181,7 +181,7 @@ A expressão regular `test` verifica por números que terminem com "`F`". O núm
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return ((p1 - 32) * 5) / 9 + "C";
   }
   var s = String(x);
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
@@ -220,11 +220,15 @@ Um array de objetos. Um `'x'` denota um estado `'on'`, um `'-'` (hífen) denota 
 **Código:**
 
 ```js
-var str = 'x-x_';
+var str = "x-x_";
 var retArr = [];
-str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
-  if (p1) { retArr.push({ on: true, length: p1.length }); }
-  if (p2) { retArr.push({ on: false, length: 1 }); }
+str.replace(/(x_*)|(-)/g, function (match, p1, p2) {
+  if (p1) {
+    retArr.push({ on: true, length: p1.length });
+  }
+  if (p2) {
+    retArr.push({ on: false, length: 1 });
+  }
 });
 
 console.log(retArr);
@@ -234,11 +238,11 @@ O código gera um array de 3 objetos como desejado sem usar uma função de loop
 
 ## Especificações
 
-| Especificação                                                                                                | Status                   | Comentário                                        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                                                      | Standard                 | Defnição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}                     | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}} | {{Spec2('ES6')}}     |                                                   |
+| Especificação                                                                    | Status             | Comentário                                        |
+| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition.                                                          | Standard           | Defnição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}              | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Navegadores compatíveis
 

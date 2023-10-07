@@ -1,15 +1,6 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - Web
-  - XML
-translation_of: Web/MathML
 ---
 
 **Mathematical Markup Language (MathML)** разновидность языка разметки [XML](/ru/docs/XML), предназначенная для построения математических выражений с сохранением их структуры и содержания. Здесь вы найдёте ссылки к документации, примеры и инструменты, которые помогут вам работать с этой мощной технологией. Для быстрого обзора - смотрите [слайды для выставки инноваций на саммите Mozilla 2013](http://fred-wang.github.io/MozSummitMathML/index.html).

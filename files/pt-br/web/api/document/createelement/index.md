@@ -27,14 +27,14 @@ Este código cria uma nova `<div>` e a insere antes do elemento com ID "`div1`".
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Trabalhando com elementos||</title>
-</head>
-<body>
-  <div id="div1">O texto acima foi criado dinamicamente.</div>
-</body>
+  <head>
+    <title>||Trabalhando com elementos||</title>
+  </head>
+  <body>
+    <div id="div1">O texto acima foi criado dinamicamente.</div>
+  </body>
 </html>
 ```
 
@@ -43,7 +43,7 @@ Este código cria uma nova `<div>` e a insere antes do elemento com ID "`div1`".
 ```js
 document.body.onload = adcElemento;
 
-function adcElemento () {
+function adcElemento() {
   // cria um novo elemento div
   // e dá à ele conteúdo
   var divNova = document.createElement("div");

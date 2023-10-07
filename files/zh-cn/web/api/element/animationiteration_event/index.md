@@ -30,21 +30,19 @@ Let's create an animation which automatically pauses at the end of each iteratio
   </div>
 </div>
 
-<div class="button" id="play">
-  Begin Demonstration
-</div>
+<div class="button" id="play">Begin Demonstration</div>
 ```
 
 ### CSS
 
 ```css hidden
 :root {
-  --boxwidth:50px;
+  --boxwidth: 50px;
 }
 
 .main {
   width: 300px;
-  height:300px;
+  height: 300px;
   border: 1px solid black;
 }
 
@@ -59,7 +57,10 @@ Let's create an animation which automatically pauses at the end of each iteratio
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 #text {
@@ -69,10 +70,11 @@ Let's create an animation which automatically pauses at the end of each iteratio
   text-align: center;
   align-self: center;
   color: white;
-  font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
+  font:
+    bold 1.4em "Lucida Grande",
+    "Open Sans",
+    sans-serif;
 }
-
-
 ```
 
 Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the {{cssxref("animation")}} style later to start animating the box.
@@ -83,10 +85,10 @@ Leaving out some bits of the CSS that don't matter for the discussion here, let'
   height: var(--boxwidth);
   left: 0;
   top: 0;
-  border: 1px solid #7788FF;
+  border: 1px solid #7788ff;
   margin: 0;
   position: relative;
-  background-color: #2233FF;
+  background-color: #2233ff;
   display: flex;
   justify-content: center;
   animation: 2s ease-in-out 0s infinite alternate both paused slideBox;
@@ -98,12 +100,12 @@ The animation's keyframes are defined next; they describe an animation which cau
 ```css
 @keyframes slideBox {
   from {
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
   }
   to {
-    left:calc(100% - var(--boxwidth));
-    top:calc(100% - var(--boxwidth))
+    left: calc(100% - var(--boxwidth));
+    top: calc(100% - var(--boxwidth));
   }
 }
 ```
@@ -116,9 +118,10 @@ Some JavaScript code will need to be written to handle the click on the button t
 var box = document.getElementById("box");
 var iterationCounter = 0;
 
-box.onanimationiteration = function(event) {
+box.onanimationiteration = function (event) {
   box.style.animationPlayState = "paused";
-  document.getElementById("play").innerHTML = "Start Iteration #" + (iterationCounter+1);
+  document.getElementById("play").innerHTML =
+    "Start Iteration #" + (iterationCounter + 1);
 };
 ```
 
@@ -129,10 +132,14 @@ The onanimationiteration event handler is then set up. It simply sets the box's 
 Finally, we set up a handler for a click on the button that runs the animation:
 
 ```js
-document.getElementById("play").addEventListener("click", function(event) {
-  box.style.animationPlayState = "running";
-  iterationCounter++;
-}, false);
+document.getElementById("play").addEventListener(
+  "click",
+  function (event) {
+    box.style.animationPlayState = "running";
+    iterationCounter++;
+  },
+  false,
+);
 ```
 
 This sets the box element's {{cssxref("animation-play-state")}} to "running" and increments the iteration counter. That's all there is to it!

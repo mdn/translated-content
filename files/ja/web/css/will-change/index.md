@@ -14,9 +14,9 @@ slug: Web/CSS/will-change
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* <custom-ident> の例 */
-will-change: opacity;          /* <custom-ident> の例 */
-will-change: left, top;        /* 2つの <animateable-feature> の例 */
+will-change: transform; /* <custom-ident> の例 */
+will-change: opacity; /* <custom-ident> の例 */
+will-change: left, top; /* 2つの <animateable-feature> の例 */
 
 /* グローバル値 */
 will-change: inherit;
@@ -73,20 +73,20 @@ will-change: unset;
 これはスクリプトから `will-change` プロパティを適用する方法を示しています。おそらく多くの場合はこのようにします。
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // 要素がホバーされたとき、will-change を設定する
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // アニメーションのキーフレームブロックで
   // 変更されるであろう最適化可能なプロパティ
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

@@ -12,14 +12,13 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 웹 브라우저는 [HTML](/ko/docs/HTML) 페이지를 호환 모드나 표준 모드 중 무엇으로 렌더링할지 결정할 때 문서의 첫 부분에 기술된 DOCTYPE을 참조한다. 웹 페이지를 표준 모드로 렌더링하려고 한다면 다음과 같이 페이지 첫 부분에 DOCTYPE을 기술해야 한다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

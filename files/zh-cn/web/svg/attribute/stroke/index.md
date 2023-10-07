@@ -9,10 +9,10 @@ slug: Web/SVG/Attribute/stroke
 
 ## 用法
 
-| 类别   | 外观属性                              |
-| ------ | ------------------------------------- |
+| 类别   | 外观属性                                  |
+| ------ | ----------------------------------------- |
 | 值     | [\<paint>](/zh-CN/SVG/Content_type#Paint) |
-| 可变性 | 是                                    |
+| 可变性 | 是                                        |
 
 ## 示例
 
@@ -21,8 +21,8 @@ slug: Web/SVG/Attribute/stroke
 ### 示例 1：用 stroke 属性画一条绿色的直线。
 
 ```html
-<svg height="50" width ="300">
-    <path stroke = "green" d="M5 20 1215 0" />
+<svg height="50" width="300">
+  <path stroke="green" d="M5 20 1215 0" />
 </svg>
 ```
 
@@ -30,7 +30,7 @@ slug: Web/SVG/Attribute/stroke
 
 ```html
 <svg height="200" width="200">
-    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill ="black" />
+  <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" />
 </svg>
 ```
 

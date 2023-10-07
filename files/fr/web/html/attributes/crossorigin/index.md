@@ -1,16 +1,6 @@
 ---
-title: 'Attribut HTML : crossorigin'
+title: "Attribut HTML : crossorigin"
 slug: Web/HTML/Attributes/crossorigin
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - HTML
-  - NeedsContent
-  - Reference
-  - Security
-translation_of: Web/HTML/Attributes/crossorigin
-original_slug: Web/HTML/Reglages_des_attributs_CORS
 ---
 
 {{HTMLSidebar}}
@@ -40,7 +30,9 @@ Un mot-clé invalide ou une chaîne de caractères vide seront interprétés com
 On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.com/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur.
 
 ```html
-<script src="https://exemple.com/framework-exemple.js" crossorigin="anonymous"></script>
+<script
+  src="https://exemple.com/framework-exemple.js"
+  crossorigin="anonymous"></script>
 ```
 
 ### Utiliser des informations d'authentification avec un manifeste
@@ -48,7 +40,7 @@ On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin
 La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manifeste](/fr/docs/Web/Manifest) nécessitant des informations d'authentification, y compris lorsque le fichier provient de la même origine :
 
 ```html
-<link rel="manifest" href="/app.manifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.manifest" crossorigin="use-credentials" />
 ```
 
 ## Spécifications

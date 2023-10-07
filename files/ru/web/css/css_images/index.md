@@ -1,10 +1,6 @@
 ---
 title: CSS Images
 slug: Web/CSS/CSS_images
-tags:
-  - CSS Images
-  - CSS руководство
-translation_of: Web/CSS/CSS_Images
 ---
 
 {{CSSRef}}
@@ -42,11 +38,11 @@ translation_of: Web/CSS/CSS_Images
 
 ## Спецификации
 
-| Specification                                                                        | Status                           | Comment                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Images")}}                                                 | {{Spec2("CSS4 Images")}} | Added {{CSSxRef("image-resolution")}}, {{CSSxRef("conic-gradient")}}, and {{CSSxRef("_image", "image()")}}                                  |
-| {{SpecName("CSS3 Images")}}                                                 | {{Spec2("CSS3 Images")}} | Added {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("object-fit")}} and {{CSSxRef("object-position")}} |
-| {{SpecName("Compat", "#css-%3Cimage%3E-type", "CSS Gradients")}} | {{Spec2("Compat")}}         | Standardizes the `-webkit` prefixed gradient value functions                                                                                                                |
-| {{SpecName("CSS3 Values", "#urls", "&lt;url&gt;")}}                 | {{Spec2("CSS3 Values")}} |                                                                                                                                                                             |
-| {{SpecName("CSS2.1", "syndata.html#uri", "&lt;uri&gt;")}}         | {{Spec2("CSS2.1")}}         |                                                                                                                                                                             |
-| {{SpecName("CSS1", "#url", "&lt;url&gt;")}}                             | {{Spec2("CSS1")}}         | Initial definition                                                                                                                                                          |
+| Specification                                                    | Status                   | Comment                                                                                                                              |
+| ---------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName("CSS4 Images")}}                                      | {{Spec2("CSS4 Images")}} | Added {{CSSxRef("image-resolution")}}, {{CSSxRef("conic-gradient")}}, and {{CSSxRef("_image", "image()")}}                           |
+| {{SpecName("CSS3 Images")}}                                      | {{Spec2("CSS3 Images")}} | Added {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("object-fit")}} and {{CSSxRef("object-position")}} |
+| {{SpecName("Compat", "#css-%3Cimage%3E-type", "CSS Gradients")}} | {{Spec2("Compat")}}      | Standardizes the `-webkit` prefixed gradient value functions                                                                         |
+| {{SpecName("CSS3 Values", "#urls", "&lt;url&gt;")}}              | {{Spec2("CSS3 Values")}} |                                                                                                                                      |
+| {{SpecName("CSS2.1", "syndata.html#uri", "&lt;uri&gt;")}}        | {{Spec2("CSS2.1")}}      |                                                                                                                                      |
+| {{SpecName("CSS1", "#url", "&lt;url&gt;")}}                      | {{Spec2("CSS1")}}        | Initial definition                                                                                                                   |

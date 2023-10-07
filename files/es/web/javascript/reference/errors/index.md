@@ -13,7 +13,7 @@ Los errores mostrados en la consola web pueden incluir un link a la pagina debaj
 
 En esta lista, cada pagina esta ordenada por nombre (el tipo de error) y el mensaje (un mensaje de error mas detallado y legible). Juntos,estas dos propiedades proveen un punto de partida hacia el entendimiento y la resolución del problema. Para mas información, ¡Sigue los links abajo!
 
-{{ListSubPages("/en-US/docs/Web/JavaScript/Reference/Errors")}}
+{{ListSubPages("/es/docs/Web/JavaScript/Reference/Errors")}}
 
 ## Ve también
 

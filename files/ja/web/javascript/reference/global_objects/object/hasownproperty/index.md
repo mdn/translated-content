@@ -35,9 +35,9 @@ obj.hasOwnProperty(prop)
 ```js
 o = new Object();
 o.propOne = null;
-o.hasOwnProperty('propOne');   // true を返す
+o.hasOwnProperty("propOne"); // true を返す
 o.propTwo = undefined;
-o.hasOwnProperty('propTwo');   // true を返す
+o.hasOwnProperty("propTwo"); // true を返す
 ```
 
 ## 例
@@ -48,9 +48,9 @@ o.hasOwnProperty('propTwo');   // true を返す
 
 ```js
 o = new Object();
-o.hasOwnProperty('prop');   // false を返す
-o.prop = 'exists';
-o.hasOwnProperty('prop');   // true を返す
+o.hasOwnProperty("prop"); // false を返す
+o.prop = "exists";
+o.hasOwnProperty("prop"); // true を返す
 ```
 
 ### 直接のプロパティと継承されたプロパティ
@@ -59,10 +59,10 @@ o.hasOwnProperty('prop');   // true を返す
 
 ```js
 o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // true を返す
-o.hasOwnProperty('toString');         // false を返す
-o.hasOwnProperty('hasOwnProperty');   // false を返す
+o.prop = "exists";
+o.hasOwnProperty("prop"); // true を返す
+o.hasOwnProperty("toString"); // false を返す
+o.hasOwnProperty("hasOwnProperty"); // false を返す
 ```
 
 ### オブジェクトのプロパティの反復処理
@@ -71,15 +71,13 @@ o.hasOwnProperty('hasOwnProperty');   // false を返す
 
 ```js
 var buz = {
-  fog: 'stack'
+  fog: "stack",
 };
 
 for (var name in buz) {
   if (buz.hasOwnProperty(name)) {
-    console.log('this is fog (' +
-      name + ') for sure. Value: ' + buz[name]);
-  }
-  else {
+    console.log("this is fog (" + name + ") for sure. Value: " + buz[name]);
+  } else {
     console.log(name); // toString or something else
   }
 }
@@ -91,21 +89,21 @@ JavaScript は `hasOwnProperty` というプロパティ名を保護していま
 
 ```js
 var foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  bar: 'Here be dragons'
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // 常に false を返す
+foo.hasOwnProperty("bar"); // 常に false を返す
 
 // 別な Object の hasOwnProperty 使用して、
 // this を foo に設定して呼び出す
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // この目的では、 Object プロトタイプの hasOwnProperty プロパティを
 // 使用することもできます。
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 なお、後者の場合は新しくオブジェクトを生成しません。

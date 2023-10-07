@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale.prototype.hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/hourCycle
 ---
 
 {{JSRef}}

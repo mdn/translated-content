@@ -1,7 +1,6 @@
 ---
 title: counter()
 slug: Web/CSS/counter
-original_slug: Web/CSS/counter()
 ---
 
 {{CSSRef}}
@@ -59,8 +58,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -90,8 +89,11 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 
@@ -114,4 +116,4 @@ li::after {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- CSS の [`counters()`](/ja/docs/Web/CSS/counters()) 関数
+- CSS の [`counters()`](</ja/docs/Web/CSS/counters()>) 関数

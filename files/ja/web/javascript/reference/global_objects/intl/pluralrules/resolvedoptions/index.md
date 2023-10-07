@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -40,15 +40,15 @@ resolvedOptions()
 ### resolvedOptions() メソッドの使用
 
 ```js
-var de = new Intl.PluralRules('de-DE');
+var de = new Intl.PluralRules("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
+usedOptions.locale; // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // Array [ "one", "other" ]
-usedOptions.type;                  // "cardinal"
+usedOptions.minimumIntegerDigits; // 1
+usedOptions.pluralCategories; // Array [ "one", "other" ]
+usedOptions.type; // "cardinal"
 ```
 
 ## 仕様書

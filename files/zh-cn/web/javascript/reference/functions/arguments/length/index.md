@@ -24,7 +24,7 @@ arguments.length 表示的是实际上向函数传入了多少个参数，这个
 这个例中，我们定义了一个可以相加任意个数字的函数。
 
 ```js
-function adder(base, /*, n2, ... */) {
+function adder(base /*, n2, ... */) {
   base = Number(base);
   for (var i = 0; i < arguments.length; i++) {
     base += Number(arguments[i]);

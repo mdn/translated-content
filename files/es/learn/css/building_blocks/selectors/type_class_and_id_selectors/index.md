@@ -1,7 +1,6 @@
 ---
 title: Selectores de tipo, clase e ID
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_tipo_clase_e_ID
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
@@ -59,7 +58,6 @@ Uno de los usos del selector universal es facilitar la legibilidad de los select
 
 ```css
 article :first-child {
-
 }
 ```
 
@@ -69,7 +67,6 @@ Para evitar esta confusión podemos añadir al selector `:first-child` el select
 
 ```css
 article *:first-child {
-
 }
 ```
 

@@ -36,19 +36,20 @@ var source = audioCtx.createMediaStreamSource(stream);
 ```js
 // プレフィックスが必要な場合を考慮して、getUserMediaはブラウザのバージョンごとに分ける
 
-navigator.getUserMedia = (navigator.getUserMedia ||
-                          navigator.webkitGetUserMedia ||
-                          navigator.mozGetUserMedia ||
-                          navigator.msGetUserMedia);
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia ||
+  navigator.msGetUserMedia;
 
 // 他の変数を定義する
 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var video = document.querySelector('video');
-var myScript = document.querySelector('script');
-var range = document.querySelector('input');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var video = document.querySelector("video");
+var myScript = document.querySelector("script");
+var range = document.querySelector("input");
 
 // マウスポインタのY座標と、画面の高さを格納する変数を定義する
 var CurY;
@@ -59,52 +60,51 @@ var HEIGHT = window.innerHeight;
 // 映像はvideo要素に出力する
 
 if (navigator.getUserMedia) {
-   console.log('getUserMedia supported.');
-   navigator.getUserMedia (
-      // 制約: このアプリで音声と映像を有効にする
-      {
-         audio: true,
-         video: true
-      },
+  console.log("getUserMedia supported.");
+  navigator.getUserMedia(
+    // 制約: このアプリで音声と映像を有効にする
+    {
+      audio: true,
+      video: true,
+    },
 
-      // 成功時のコールバック
-      function(stream) {
-         video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
-         video.onloadedmetadata = function(e) {
-            video.play();
-            video.muted = 'true';
-         };
+    // 成功時のコールバック
+    function (stream) {
+      video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+        video.muted = "true";
+      };
 
-         // MediaStreamAudioSourceNodeを生成し、それにHTMLMediaElementを渡す
-         var source = audioCtx.createMediaStreamSource(stream);
+      // MediaStreamAudioSourceNodeを生成し、それにHTMLMediaElementを渡す
+      var source = audioCtx.createMediaStreamSource(stream);
 
-          // 二次フィルターを生成する
-          var biquadFilter = audioCtx.createBiquadFilter();
-          biquadFilter.type = "lowshelf";
-          biquadFilter.frequency.value = 1000;
-          biquadFilter.gain.value = range.value;
+      // 二次フィルターを生成する
+      var biquadFilter = audioCtx.createBiquadFilter();
+      biquadFilter.type = "lowshelf";
+      biquadFilter.frequency.value = 1000;
+      biquadFilter.gain.value = range.value;
 
-          // AudioBufferSourceNodeをgainNodeに、そしてgainNodeをdestinationに接続する
-          // これでマウスを動かすことで音楽のボリュームを調整することができる
-          source.connect(biquadFilter);
-          biquadFilter.connect(audioCtx.destination);
+      // AudioBufferSourceNodeをgainNodeに、そしてgainNodeをdestinationに接続する
+      // これでマウスを動かすことで音楽のボリュームを調整することができる
+      source.connect(biquadFilter);
+      biquadFilter.connect(audioCtx.destination);
 
-          // マウスが動いたとき新しい座標を得る
-          // そして増幅量を更新する
+      // マウスが動いたとき新しい座標を得る
+      // そして増幅量を更新する
 
-          range.oninput = function() {
-              biquadFilter.gain.value = range.value;
-          }
+      range.oninput = function () {
+        biquadFilter.gain.value = range.value;
+      };
+    },
 
-      },
-
-      // エラー時のフィードバック
-      function(err) {
-         console.log('The following gUM error occured: ' + err);
-      }
-   );
+    // エラー時のフィードバック
+    function (err) {
+      console.log("The following gUM error occured: " + err);
+    },
+  );
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.log("getUserMedia not supported on your browser!");
 }
 
 // pre要素にスクリプトを書き出す

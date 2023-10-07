@@ -1,5 +1,5 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
 ---
 
@@ -32,7 +32,7 @@ elemento:first-child { estilos }
 
 ```css
 span:first-child {
-    background-color: lime;
+  background-color: lime;
 }
 ```
 
@@ -55,11 +55,11 @@ span:first-child {
 #### CSS
 
 ```css
-li{
-  color:red;
+li {
+  color: red;
 }
-li:first-child{
-  color:green;
+li:first-child {
+  color: green;
 }
 ```
 
@@ -69,10 +69,7 @@ li:first-child{
 
 ## Especificações
 
-| Especificação                                                                                    | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child') }} | {{ Spec2('CSS4 Selectors') }} | Sem mudança.       |
-| {{ SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial. |
+{{Specifications}}
 
 ## Browsers compatíveis
 

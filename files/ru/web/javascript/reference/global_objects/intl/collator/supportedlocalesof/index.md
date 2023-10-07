@@ -1,12 +1,6 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-tags:
-  - Collator
-  - Internationalization
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 ---
 
 {{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
@@ -43,16 +37,16 @@ Intl.Collator.supportedLocalesOf(locales[, options])
 Предполагая, что среда выполнения поддерживает индонезийское и немецкое, но на балийское сравнение строк, метод `supportedLocalesOf` вернёт неизменными индонезийскую и немецкую языковые метки, даже несмотря на то, что сортировка `pinyin` не используется с индонезийским языком и вряд ли будет поддерживаться в немецком языке для Индонезии. Обратите внимание на используемую здесь спецификацию алгоритма `"lookup"` — сопоставление `"best fit"` может решить, что индонезийский язык является адекватным сопоставлением с балийским, поскольку большинство людей, говорящих на балийском, также понимают индонезийский, и поэтому может возвратиться ещё и языковая метка балийского языка.
 
 ```js
-var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-var options = { localeMatcher: 'lookup' };
-console.log(Intl.Collator.supportedLocalesOf(locales, options).join(', '));
+var locales = ["ban", "id-u-co-pinyin", "de-ID"];
+var options = { localeMatcher: "lookup" };
+console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                           | Комментарии              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| Спецификация                                                                  | Статус                  | Комментарии              |
+| ----------------------------------------------------------------------------- | ----------------------- | ------------------------ |
 | {{SpecName('ES Int 1.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
 
 ## Совместимость с браузерами

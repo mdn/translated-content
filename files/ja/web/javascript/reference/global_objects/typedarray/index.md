@@ -19,19 +19,19 @@ l10n:
 
 ### TypedArray オブジェクト
 
-| 型                                       | 値の範囲                        | サイズ (バイト数) | 説明                                                                          | Web IDL 型            | 同等の C 型                     |
-| ---------------------------------------- | ------------------------------- | ----------------- | ----------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128 から 127                 | 1                 | 8 ビット長、2 の補数方式の符号付き整数値                                      | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}        | 0 から 255                    | 1                 | 8 ビット長、符号なし整数値                                                    | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 から 255                    | 1                 | 8 ビット長、符号なし整数値 (切り詰め)                                         | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}        | -32768 から 32767             | 2                 | 16 ビット長、2 の補数方式の符号付き整数値                                     | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}       | 0 から 65535                  | 2                 | 16 ビット長、符号なし整数値                                                   | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}        | -2147483648 から 2147483647   | 4                 | 32 ビット長、2 の補数方式の符号付き整数値                                     | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}       | 0 から 4294967295             | 4                 | 32 ビット長、符号なし整数値                                                   | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}      | `-3.4E38` から `3.4E38` および `1.2E-38` （最小の正の数）  | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.234567`)`1.2`×`10-38 から 3.4`×`1038`   | 4                 | 32 ビット長 IEEE 方式浮動小数点数 (有効桁数 7 桁、例えば `1.234567`)         | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}      | `-1.8E308` から `1.8E308` および `5E-324` （最小の正の数） | 8                 | 64 ビット長 IEEE 方式浮動小数点数 (有効桁数 16 桁、例えば`1.23456789012345`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1               | 8                 | 64 ビット長、2 の補数方式の符号付き整数値                                     | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                  | 8                 | 64 ビット長、符号なし整数値                                                   | `bigint`              | `uint64_t (unsigned long long)` |
+| 型                              | 値の範囲                                                   | サイズ (バイト数) | 説明                                                                                                   | Web IDL 型            | 同等の C 型                                                          |
+| ------------------------------- | ---------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------ | --------------------- | -------------------------------------------------------------------- | -------------------- | ------- |
+| {{jsxref("Int8Array")}}         | -128 から 127                                              | 1                 | 8 ビット長、2 の補数方式の符号付き整数値                                                               | `byte`                | `int8_t`                                                             |
+| {{jsxref("Uint8Array")}}        | 0 から 255                                                 | 1                 | 8 ビット長、符号なし整数値                                                                             | `octet`               | `uint8_t`                                                            |
+| {{jsxref("Uint8ClampedArray")}} | 0 から 255                                                 | 1                 | 8 ビット長、符号なし整数値 (切り詰め)                                                                  | `octet`               | `uint8_t`                                                            |
+| {{jsxref("Int16Array")}}        | -32768 から 32767                                          | 2                 | 16 ビット長、2 の補数方式の符号付き整数値                                                              | `short`               | `int16_t`                                                            |
+| {{jsxref("Uint16Array")}}       | 0 から 65535                                               | 2                 | 16 ビット長、符号なし整数値                                                                            | `unsigned short`      | `uint16_t`                                                           |
+| {{jsxref("Int32Array")}}        | -2147483648 から 2147483647                                | 4                 | 32 ビット長、2 の補数方式の符号付き整数値                                                              | `long`                | `int32_t`                                                            |
+| {{jsxref("Uint32Array")}}       | 0 から 4294967295                                          | 4                 | 32 ビット長、符号なし整数値                                                                            | `unsigned long`       | `uint32_t`                                                           |
+| {{jsxref("Float32Array")}}      | `-3.4E38` から `3.4E38` および `1.2E-38` （最小の正の数）  | 4                 | 32-bit IEEE floating point number (7 significant digits e.g., `1.234567`)`1.2`×`10-38 から 3.4`×`1038` | 4                     | 32 ビット長 IEEE 方式浮動小数点数 (有効桁数 7 桁、例えば `1.234567`) | `unrestricted float` | `float` |
+| {{jsxref("Float64Array")}}      | `-1.8E308` から `1.8E308` および `5E-324` （最小の正の数） | 8                 | 64 ビット長 IEEE 方式浮動小数点数 (有効桁数 16 桁、例えば`1.23456789012345`)                           | `unrestricted double` | `double`                                                             |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                      | 8                 | 64 ビット長、2 の補数方式の符号付き整数値                                                              | `bigint`              | `int64_t (signed long long)`                                         |
+| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                    | 8                 | 64 ビット長、符号なし整数値                                                                            | `bigint`              | `uint64_t (unsigned long long)`                                      |
 
 ### サイズ変更可能なバッファー表示時の動作について
 
@@ -60,7 +60,7 @@ const float32 = new Float32Array(buffer, 0, 2);
 
 console.log(float32.byteLength); // 8
 console.log(float32.length); // 2
-console.log(float32[0]) // 0（初期値）
+console.log(float32[0]); // 0（初期値）
 
 buffer.resize(12);
 

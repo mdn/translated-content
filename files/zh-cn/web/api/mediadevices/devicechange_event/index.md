@@ -20,12 +20,12 @@ slug: Web/API/MediaDevices/devicechange_event
 
 ## 属性
 
-| Property                              | Type                                 | Description                         |
-| ------------------------------------- | ------------------------------------ | ----------------------------------- |
+| Property                        | Type                       | Description                         |
+| ------------------------------- | -------------------------- | ----------------------------------- |
 | `target`{{readonlyinline}}      | {{domxref("EventTarget")}} | 事件对象 (位于 DOM 树最上面的元素). |
-| `type` {{readonlyinline}}       | {{domxref("DOMString")}}     | 事件类型。                          |
-| `bubbles` {{readonlyinline}}    | {{domxref("Boolean")}}         | 是否冒泡                            |
-| `cancelable` {{readonlyinline}} | {{domxref("Boolean")}}         | 是否可被取消                        |
+| `type` {{readonlyinline}}       | {{domxref("DOMString")}}   | 事件类型。                          |
+| `bubbles` {{readonlyinline}}    | {{domxref("Boolean")}}     | 是否冒泡                            |
+| `cancelable` {{readonlyinline}} | {{domxref("Boolean")}}     | 是否可被取消                        |
 
 ## 相关事件
 

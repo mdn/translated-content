@@ -1,19 +1,6 @@
 ---
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Déprécié
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Performance
-  - PerformanceNavigation
-  - Reference
-  - Timing
-translation_of: Web/API/PerformanceNavigation
 ---
 
 {{APIRef("Navigation Timing")}}

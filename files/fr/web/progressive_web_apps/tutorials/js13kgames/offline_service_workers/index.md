@@ -1,15 +1,6 @@
 ---
 title: Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
-tags:
-  - PWA
-  - Progressive web app
-  - Service Workers
-  - hors-ligne
-  - js13kGames
-  - progressive
-translation_of: Web/Progressive_web_apps/Offline_Service_workers
-original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
@@ -47,9 +38,9 @@ Commençons par regarder le code qui enregistre un nouveau Service Worker, dans 
 **NOTE** : Nous utilisons la syntaxe des **fonctions flèchées** pour l'implémentation du Service Worker
 
 ```js
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./pwa-examples/js13kpwa/sw.js");
+}
 ```
 
 Si l'API service worker est prise en charge dans le navigateur, il est enregistré pour le site en utilisant la méthode {{domxref("ServiceWorkerContainer.register()")}}. Son contenu se trouve dans le fichier sw\.js et peut être exécuté une fois que l'enregistrement a réussi. C'est la seule partie de code du Service Worker qui se trouve dans le fichier app.js. Tout le reste spécifique au Service Worker se trouve dans le fichier sw\.js .
@@ -63,8 +54,8 @@ Une fois que l'enregistrement a été réalisé, le fichier sw\.js est automatiq
 L'API nous permet d'ajouter des intercepteurs d'événements ou _event listeners_ pour les événements clef qui nous intéressent — le premier est l'événement `install`:
 
 ```js
-self.addEventListener('install', (e) => {
-    console.log('[Service Worker] Installation');
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Installation");
 });
 ```
 
@@ -73,26 +64,26 @@ Dans le listener `install`, nous pouvons initialiser le cache et y ajouter des f
 D'abord, une variable pour enregistrer le nom du cache est créée, les fichiers de l'app shell sont listés dans un tableau.
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 ```
 
@@ -100,8 +91,8 @@ Ensuite, les liens vers les images à charger en même temps que le contenu du f
 
 ```js
 var gamesImages = [];
-for(var i=0; i<games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+for (var i = 0; i < games.length; i++) {
+  gamesImages.push("data/img/" + games[i].slug + ".jpg");
 }
 var contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -109,13 +100,15 @@ var contentToCache = appShellFiles.concat(gamesImages);
 Ensuite, nous pouvons gérer l'événement `install` lui-même:
 
 ```js
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Installation');
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Installation");
   e.waitUntil(
     caches.open(cacheName).then((cache) => {
-          console.log('[Service Worker] Mise en cache globale: app shell et contenu');
+      console.log(
+        "[Service Worker] Mise en cache globale: app shell et contenu",
+      );
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -137,8 +130,8 @@ Il y a également un événement `activate` qui est utilisé de la même façon 
 Nous avons également un événement `fetch` à notre disposition et qui est déclenché à chaque fois qu'une requête HTTP est émise par notre app. Ceci est très utile car ça nous permet d'intercepter des requêtes et d'y répondre de façon personnalisée. Voic un exemple d'utilisation simpliste:
 
 ```js
-self.addEventListener('fetch', (e) => {
-    console.log('[Service Worker] Ressource récupérée '+e.request.url);
+self.addEventListener("fetch", (e) => {
+  console.log("[Service Worker] Ressource récupérée " + e.request.url);
 });
 ```
 
@@ -147,18 +140,26 @@ La réponse peut être ce que nous voulons: le fichier demandé, sa copie mise e
 Dans notre app d'exemple, nous servons le contenu à partir du cache plutôt qu'à partir du réseau tant que la ressource se trouve effectivement dans le cache. Nous faisons ceci que l'app soit en mode connecté ou déconnecté. Si le fichier n'est pas dans le cache, l'app commence par l'y ajouter avant de le servir:
 
 ```js
-self.addEventListener('fetch', (e) => {
+self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((r) => {
-          console.log('[Service Worker] Récupération de la ressource: '+e.request.url);
-      return r || fetch(e.request).then((response) => {
-                return caches.open(cacheName).then((cache) => {
-          console.log('[Service Worker] Mise en cache de la nouvelle ressource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
+      console.log(
+        "[Service Worker] Récupération de la ressource: " + e.request.url,
+      );
+      return (
+        r ||
+        fetch(e.request).then((response) => {
+          return caches.open(cacheName).then((cache) => {
+            console.log(
+              "[Service Worker] Mise en cache de la nouvelle ressource: " +
+                e.request.url,
+            );
+            cache.put(e.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -174,21 +175,21 @@ La méthode {{domxref("FetchEvent.respondWith")}} prend le contrôle — c'est l
 Il reste un point à couvrir: comment mettre à jour un Service Worker quand une nouvelle version de l'application contenant de nouveaux éléments est disponible ? Le numéro de version dans le nom du cache est la clef de l'énigme:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 ```
 
 Quand ceci est mis à jour en v2, nous pouvons alors ajouter tous nos fichiers (en incluant nos nouveaux fichiers) dans un nouveau cache:
 
 ```js
-contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+contentToCache.push("/pwa-examples/js13kpwa/icons/icon-32.png");
 
 // ...
 
-self.addEventListener('install', (e) => {
+self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open('js13kPWA-v2').then((cache) => {
+    caches.open("js13kPWA-v2").then((cache) => {
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -200,15 +201,17 @@ Un nouveau service worker est installé en arrière plan et le précédent (v1) 
 Vous vous rappelez l'événement `activate` que nous avons éludé ? Il peut être utilisé pour vider l'ancien cache dont nous n'avons désormais plus besoin:
 
 ```js
-self.addEventListener('activate', (e) => {
+self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then((keyList) => {
-          return Promise.all(keyList.map((key) => {
-        if(cacheName.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+      return Promise.all(
+        keyList.map((key) => {
+          if (cacheName.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        }),
+      );
+    }),
   );
 });
 ```
@@ -227,4 +230,4 @@ Les Service Workers sont également utilisés pour gérer les [push notification
 
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

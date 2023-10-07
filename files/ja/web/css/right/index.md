@@ -59,7 +59,7 @@ right: unset;
 - `position` が `sticky` に設定されている場合、 `right` プロパティは要素がビューポート内にある場合は `position` が `relative` であるかのように、外の場合は `position` が `fixed` の場合と同様に動作します。
 - `position` が `static` に設定されている場合、 `right` プロパティは*効果がありません*。
 
-{{cssxref("left")}} と `right` の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。もし要素が両方を満たすように伸びることができない場合 -- 例えば `width` が宣言されている場合 -- 要素の位置は*過剰制約*になります。このような場合、コンテナーが左書きの場合は `left` の値が優先され、コンテナーが右書きの場合は `right` の値が優先されます。
+{{cssxref("left")}} と `right` の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。もし要素が両方を満たすように伸びることができない場合 — 例えば `width` が宣言されている場合 — 要素の位置は*過剰制約*になります。このような場合、コンテナーが左書きの場合は `left` の値が優先され、コンテナーが右書きの場合は `right` の値が優先されます。
 
 ## 公式定義
 
@@ -86,7 +86,7 @@ right: unset;
 #relative {
   width: 100px;
   height: 100px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
   top: 20px;
   left: 20px;
@@ -95,7 +95,7 @@ right: unset;
 #absolute {
   width: 100px;
   height: 100px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
   position: absolute;
   bottom: 10px;
   right: 20px;
@@ -113,9 +113,10 @@ right: unset;
 #### HTML
 
 ```html
-<div id="parent">Parent
-    <div id="noWidth">No width</div>
-    <div id="width">width: 100px</div>
+<div id="parent">
+  Parent
+  <div id="noWidth">No width</div>
+  <div id="width">width: 100px</div>
 </div>
 ```
 
@@ -123,18 +124,18 @@ right: unset;
 
 ```css
 div {
-  outline: 1px solid #CCCCCC;
+  outline: 1px solid #cccccc;
 }
 #parent {
   width: 200px;
   height: 200px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
 }
 /* declare both a left and a right */
 #width,
 #noWidth {
-  background-color: #C2FFD7;
+  background-color: #c2ffd7;
   position: absolute;
   left: 0;
   right: 0;

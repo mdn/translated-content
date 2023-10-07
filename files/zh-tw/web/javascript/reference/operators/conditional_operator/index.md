@@ -32,7 +32,7 @@ condition ? exprIfTrue : exprIfFalse
 
 ```js
 var age = 26;
-var beverage = (age >= 21) ? "Beer" : "Juice";
+var beverage = age >= 21 ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 ```
 
@@ -40,12 +40,12 @@ console.log(beverage); // "Beer"
 
 ```js
 function greeting(person) {
-    var name = person ? person.name : "stranger";
-    return "Howdy, " + name;
+  var name = person ? person.name : "stranger";
+  return "Howdy, " + name;
 }
 
-console.log(greeting({name: 'Alice'}));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### 條件鏈

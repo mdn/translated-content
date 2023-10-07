@@ -1,7 +1,6 @@
 ---
 title: 開始開發我們的 Angular 待辦事項應用程式
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

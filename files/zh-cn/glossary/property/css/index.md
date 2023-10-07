@@ -3,6 +3,8 @@ title: 属性（CSS）
 slug: Glossary/Property/CSS
 ---
 
+{{GlossarySidebar}}
+
 **CSS 属性**是一种特征（如颜色），其相关值定义了浏览器应如何显示该元素的一个方面。
 
 以下是 CSS 规则的示例：

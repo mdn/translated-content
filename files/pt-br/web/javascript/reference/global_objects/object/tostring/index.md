@@ -14,7 +14,7 @@ O método `toString()` retorna uma string representando o objeto.
 ## Sintaxe
 
 ```js
-obj.toString()
+obj.toString();
 ```
 
 ## Descrição
@@ -23,7 +23,7 @@ Todo objeto possui um método `toString()` que é chamado automaticamente quando
 
 ```js
 var o = new Object();
-o.toString();           // retorna [object Object]
+o.toString(); // retorna [object Object]
 ```
 
 > **Nota:** Starting in JavaScript 1.8.5 `toString()` called on {{jsxref("Global_Objects/null", "null")}} returns `[object Null]`, and {{jsxref("Global_Objects/undefined", "undefined")}} returns `[object Undefined]`, as defined in the 5th Edition of ECMAScript and a subsequent Errata. See [Using toString to detect object type](#example:_using_tostring_to_detect_object_type).
@@ -44,7 +44,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+theDog = new Dog("Gabby", "Lab", "chocolate", "female");
 ```
 
 Se você chamar o método `toString()` neste objeto, ele retornará o valor original herdado de {{jsxref("Global_Objects/Object", "Object")}}:
@@ -57,9 +57,17 @@ O código abaixo cria e faz com que `dogToString()` sobrescreva o `toString()` o
 
 ```js
 Dog.prototype.toString = function dogToString() {
-  var ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
+  var ret =
+    "Dog " +
+    this.name +
+    " is a " +
+    this.sex +
+    " " +
+    this.color +
+    " " +
+    this.breed;
   return ret;
-}
+};
 ```
 
 Usando este código, toda vez que `theDog` for usado em um texto (string), JavaScript automaticamente chamará a função `dogToString()`, a qual retornará:
@@ -75,13 +83,13 @@ Dog Gabby is a female chocolate Lab
 ```js
 var toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Since JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
 ## Especificações

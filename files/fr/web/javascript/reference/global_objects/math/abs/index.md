@@ -1,13 +1,6 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/abs
 ---
 
 {{JSRef}}
@@ -44,16 +37,16 @@ La valeur absolue du nombre passé en argument.
 Si la méthode est utilisée avec une chaîne de caractères non numérique, avec un tableau à plus d'un élément, sans paramètre ou avec {{jsxref("undefined")}}, la valeur retournée sera {{jsxref("NaN")}}. Si elle est utilisée avec {{jsxref("null")}}, la fonction renverra 0.
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
 Math.abs("string"); // NaN
-Math.abs();         // NaN
+Math.abs(); // NaN
 ```
 
 ## Spécifications

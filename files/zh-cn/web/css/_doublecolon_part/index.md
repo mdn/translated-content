@@ -1,5 +1,5 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
 ---
 
@@ -23,18 +23,20 @@ custom-element::part(foo) {
 
 ```html
 <template id="tabbed-custom-element">
-<style type="text/css">
-*, ::before, ::after {
-  box-sizing: border-box;
-  padding: 1rem;
-}
-:host {
-  display: flex;
-}
-</style>
-<div part="tab active">Tab 1</div>
-<div part="tab">Tab 2</div>
-<div part="tab">Tab 3</div>
+  <style type="text/css">
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+    :host {
+      display: flex;
+    }
+  </style>
+  <div part="tab active">Tab 1</div>
+  <div part="tab">Tab 2</div>
+  <div part="tab">Tab 3</div>
 </template>
 
 <tabbed-custom-element></tabbed-custom-element>
@@ -74,13 +76,16 @@ tabbed-custom-element::part(active) {
 
 ```js
 let template = document.querySelector("#tabbed-custom-element");
-globalThis.customElements.define(template.id, class extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(template.content);
-  }
-});
+globalThis.customElements.define(
+  template.id,
+  class extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.appendChild(template.content);
+    }
+  },
+);
 ```
 
 ### 结果

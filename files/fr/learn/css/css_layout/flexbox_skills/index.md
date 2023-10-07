@@ -1,8 +1,6 @@
 ---
-title: 'Testez vos compétences : Flexbox'
+title: "Testez vos compétences : Flexbox"
 slug: Learn/CSS/CSS_layout/Flexbox_skills
-translation_of: Learn/CSS/CSS_layout/Flexbox_skills
-original_slug: Apprendre/CSS/CSS_layout/Flexbox_skills
 ---
 
 {{LearnSidebar}}
@@ -72,7 +70,7 @@ Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de
 1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
 2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn) et ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Incluez dans votre message&nbsp;:
 
-    - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
-    - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
-    - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-    - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+   - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
+   - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
+   - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
+   - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.

@@ -1,14 +1,18 @@
 ---
-title: '<image>: 画像要素'
+title: "<image>: 画像要素"
 slug: Web/HTML/Element/image
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
-**`<image>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("img")}} 要素の古く、対応が不十分な前身です。
+**`<image>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("img")}} 要素の古く、対応が不十分な前身です。
 **使用しないでください**。
 
-ブラウザーによっては、これを自動的に {{HTMLElement("img")}} 要素に変換しようとし、 [`src`](/ja/docs/Web/HTML/Element/img#src) 属性も指定されていれば成功することがあります。
+ブラウザーによっては、これを自動的に {{HTMLElement("img")}} 要素に変換しようとし、[`src`](/ja/docs/Web/HTML/Element/img#src) 属性も指定されていれば成功することがあります。
+
+<!-- ## Technical summary -->
 
 ## 仕様書
 

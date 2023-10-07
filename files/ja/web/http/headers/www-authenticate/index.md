@@ -10,7 +10,7 @@ HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへ
 > **メモ:** このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用することができます。
 > それぞれの「チャレンジ」には、サーバーが対応している方式と、その方式型に定義されている追加引数が記載されています。
 
-[HTTP 認証]((/ja/docs/Web/HTTP/Authentication))を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
+[HTTP 認証](/ja/docs/Web/HTTP/Authentication)を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
 
 1 つの `WWW-Authenticate` ヘッダーには複数のチャレンジが許され、1 つのレスポンスには複数の `WWW-Authenticate` ヘッダーが許されます。
 サーバーは、他のレスポンスメッセージに `WWW-Authenticate` ヘッダーを含めることで、資格情報を提供することがレスポンスに影響を与える可能性があることを示すこともできます。
@@ -55,8 +55,8 @@ WWW-Authenticate: <auth-scheme> realm=<realm>
 WWW-Authenticate: <auth-scheme> token68
 WWW-Authenticate: <auth-scheme> auth-param1=token1, ..., auth-paramN=auth-paramN-token
 WWW-Authenticate: <auth-scheme> realm=<realm> token68
-WWW-Authenticate: <auth-scheme> realm=<realm> token68 auth-param1=auth-param1-token , ..., auth-paramN=auth-paramN-token 
-WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token 
+WWW-Authenticate: <auth-scheme> realm=<realm> token68 auth-param1=auth-param1-token , ..., auth-paramN=auth-paramN-token
+WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
@@ -71,9 +71,11 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ## ディレクティブ
 
 - `<auth-scheme>`
+
   - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)です。有名なものとしては、 [`Basic`](/ja/docs/Web/HTTP/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります (大文字小文字の区別なし)。
 
     > **メモ:** 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)を参照してください。
+
 - **realm=**\<realm> {{optional_inline}}
   - : 保護領域を説明する文字列です。
     realm によってサーバーが保護する領域を分割することができ (そのような分割を許可しているスキームが対応している場合)、どの特定のユーザー名/パスワードが必要であるかをユーザーに通知します。
@@ -91,17 +93,17 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
   - : 上記通りです。
 - **`charset="UTF-8"`** {{optional_inline}}
   - : ユーザー名とパスワードを送信するときのサーバーが優先するエンコード方式をクライアントに伝えます。
-      文字列 "UTF-8" だけが許可されており、大文字小文字の区別はありません。
-      これは realm 文字列のエンコード方式とは関係がありません。
+    文字列 "UTF-8" だけが許可されており、大文字小文字の区別はありません。
+    これは realm 文字列のエンコード方式とは関係がありません。
 
 ### Digest
 
 - **`<realm>`** {{optional_inline}}
   - : 使用するユーザー名/パスワードを示す文字列です。
-      少なくともホスト名を含める必要がありますが、アクセス権を持つユーザーやグループを示す場合もあります。
+    少なくともホスト名を含める必要がありますが、アクセス権を持つユーザーやグループを示す場合もあります。
 - **`domain`** {{optional_inline}}
   - : 引用符を付け、空白で区切った URL 接頭辞のリストで、この資格情報を使用するすべての場所を定義します。
-      このキーが指定されていない場合、この資格情報はウェブルート以下のどこでも使用できます。
+    このキーが指定されていない場合、この資格情報はウェブルート以下のどこでも使用できます。
 - **`nonce`**
   - : サーバーが指定する引用符の付いた文字列で、特定の資格情報が有効とみなされる期間を制御するためにサーバーが使用できます。
     これは、401 レスポンスが行われるたびに一意に生成されなければならず、さらに頻繁に再生成される可能性があります (たとえば、ダイジェストを 1 回だけ使用できるようにするなど)。
@@ -112,19 +114,19 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     これはクライアントには不透明です。サーバーは Base64 または 16 進数のデータを含めることを推奨します。
 - **`stale`** {{optional_inline}}
   - : 大文字小文字を区別しないフラグで、クライアントからの前回のリクエストが、使用された `nonce` が古すぎる (stale) ために拒否されたことを示します。
-      これが `true` であれば、新しい `nonce` で暗号化された同じユーザー名/パスワードを使ってリクエストを再試行できます。
-      それ以外の値の場合は、ユーザー名/パスワードが無効なので、ユーザーに再度リクエストする必要があります。
-- **`algorithm`**   {{optional_inline}}
+    これが `true` であれば、新しい `nonce` で暗号化された同じユーザー名/パスワードを使ってリクエストを再試行できます。
+    それ以外の値の場合は、ユーザー名/パスワードが無効なので、ユーザーに再度リクエストする必要があります。
+- **`algorithm`** {{optional_inline}}
   - : ダイジェストの生成に使用するアルゴリズムです。
-      セッション以外での有効な値は `"MD5"` (指定されていない場合の既定値)、`"SHA-256"`、`"SHA-512"` です。
-      セッションで有効な値は `"MD5-sess"`、`"SHA-256-sess"`、`"SHA-512-sess"` です。
+    セッション以外での有効な値は `"MD5"` (指定されていない場合の既定値)、`"SHA-256"`、`"SHA-512"` です。
+    セッションで有効な値は `"MD5-sess"`、`"SHA-256-sess"`、`"SHA-512-sess"` です。
 - **`qop`**
   - : 引用符の付いた文字列で、サーバーが対応している保護の品質を示します。これは必ず指定しなければならず、認識できないオプションは無視されます。
     - `"auth"`: 認証
     - `"auth-int"`: 完全性保護付きの認証
 - **`charset="UTF-8"`** {{optional_inline}}
   - : ユーザー名とパスワードを送信する際に、サーバーが優先するエンコード方式をクライアントに伝えます。
-      大文字小文字を区別しない文字列 "UTF-8" のみが許可されます。
+    大文字小文字を区別しない文字列 "UTF-8" のみが許可されます。
 - **`userhash`** {{optional_inline}}
   - : サーバーが `"true"` を指定することで、ユーザー名のハッシュ化に対応していることを示すことができます (既定値は `"false"` です)。
 

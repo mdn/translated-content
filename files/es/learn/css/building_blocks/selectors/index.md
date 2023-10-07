@@ -1,7 +1,6 @@
 ---
 title: Selectores CSS
 slug: Learn/CSS/Building_blocks/Selectors
-original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
@@ -61,7 +60,8 @@ h1 {
 También los podrías combinar en una lista de selectores, separándolos con una coma.
 
 ```css
-h1, .special {
+h1,
+.special {
   color: blue;
 }
 ```
@@ -96,7 +96,8 @@ h1 {
 Sin embargo, si se combinan, toda la regla se considera no válida y no se aplicará estilo ni a `h1` ni a la clase.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -110,19 +111,22 @@ Hay diferentes agrupaciones de selectores, y conocer qué tipo de selector neces
 Este grupo incluye selectores que delimitan un elemento HTML, como por ejemplo un `<h1>`.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 También incluye selectores que delimitan una clase:
 
 ```css
-.box { }
+.box {
+}
 ```
 
 o un ID:
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Selectores de atributo
@@ -130,13 +134,16 @@ o un ID:
 Este grupo de selectores te proporciona diferentes formas de seleccionar elementos según la presencia de un atributo determinado en un elemento:
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 O incluso hacer una selección basada en la presencia de un atributo que tiene un valor particular asignado:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Las pseudoclases y los pseudoelementos
@@ -144,13 +151,15 @@ a[href="https://example.com"] { }
 Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase `:hover`, por ejemplo, selecciona un elemento solo cuando se le pasa el ratón por encima.
 
 ```css
-a: hover {}
+a: hover {
+}
 ```
 
 También incluye pseudoelementos, que seleccionan una parte determinada de un elemento en vez del elemento en sí. Por ejemplo, `::first-line` siempre selecciona la primera línea del texto que se encuentra dentro de un elemento (`<p>`, en el ejemplo siguiente), y actúa como si un elemento `<span>` hubiera delimitado la primera línea, seleccionado y aplicado estilo.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Combinadores
@@ -158,7 +167,8 @@ p::first-line { }
 El último grupo de selectores combina otros selectores con el fin de delimitar elementos de nuestros documentos. El ejemplo siguiente selecciona los párrafos que son hijos directos del elemento `<article>` utilizando el operador de combinación hijo (`>`):
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## Próximos pasos

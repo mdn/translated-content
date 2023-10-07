@@ -1,7 +1,6 @@
 ---
 title: OOP
 slug: Glossary/OOP
-original_slug: Glossario/OOP
 ---
 
 **OOP** (Object-Oriented Programming) é uma abordagem na programação em qual os dados são encapsulados em **{{glossary("object","objects")}}** e o proprio objeto é operado, em vez de suas partes componentes.
@@ -12,5 +11,5 @@ original_slug: Glossario/OOP
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Object-oriented programming")}} no Wikipedia
+- [Object-oriented programming](https://pt.wikipedia.org/wiki/Programação_orientada_a_objetos) no Wikipedia
 - [Introduction to object-oriented JavaScript](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)

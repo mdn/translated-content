@@ -52,8 +52,11 @@ new Intl.Segmenter(locales, options)
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // 8，文本将会分割为 '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

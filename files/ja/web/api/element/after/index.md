@@ -1,22 +1,31 @@
 ---
-title: Element.after()
+title: "Element: after() メソッド"
+short-title: after()
 slug: Web/API/Element/after
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.after()`** は、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの `Element` の親の子リストの、 `Element` の直後に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。
+**`Element.after()`** は、一連の {{domxref("Node")}} オブジェクトまたは文字列をこの `Element` の親の子リストの、 `Element` の直後に挿入します。文字列は {{domxref("Text")}} ノードと等価なノードとして挿入されます。
 
 ## 構文
 
-```js
-after(... nodes)
+```js-nolint
+after(node1)
+after(node1, node2)
+after(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### 引数
 
-- `nodes`
-  - : 挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。
+- `node1`, …, `nodeN`
+  - : 挿入する一連の {{domxref("Node")}} オブジェクトまたは文字列です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 

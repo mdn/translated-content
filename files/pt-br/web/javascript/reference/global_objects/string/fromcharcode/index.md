@@ -35,7 +35,7 @@ Como `fromCharCode()` é um método estático de {{jsxref("String")}}, você sem
 O seguinte exemplo retorna a string "ABC".
 
 ```js
-String.fromCharCode(65, 66, 67);  // retorna "ABC"
+String.fromCharCode(65, 66, 67); // retorna "ABC"
 ```
 
 ## Fazendo-o funcionar com valores maiores
@@ -44,11 +44,11 @@ Embora os valores Unicode mais comuns possam ser representados com um número de
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}     | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                               | Status               | Comentário                                         |
+| --------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

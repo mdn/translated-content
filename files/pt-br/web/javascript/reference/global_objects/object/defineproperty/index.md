@@ -70,33 +70,33 @@ Tenha em mente que estes atributos não são necessariamente as propriedades do 
 var obj = {};
 var descriptor = Object.create(null); // não herdar propriedades
 // não enumerável, não configurável, não gravável por padrão
-descriptor.value = 'static';
-Object.defineProperty(obj, 'key', descriptor);
+descriptor.value = "static";
+Object.defineProperty(obj, "key", descriptor);
 
 // declarando explicitamente
-Object.defineProperty(obj, 'key', {
-  enumerable: false,   // não enumerável
+Object.defineProperty(obj, "key", {
+  enumerable: false, // não enumerável
   configurable: false, // não configurável
-  writable: false,     // não gravável
-  value: 'static'
+  writable: false, // não gravável
+  value: "static",
 });
 
 // reciclando um mesmo objeto
 function withValue(value) {
-  var d = withValue.d || (
-    withValue.d = {
+  var d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: null
-    }
-  );
+      value: null,
+    });
   d.value = value;
   return d;
 }
 
 // ... e ...
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // se o método freeze estiver disponível, prevenir as propriedades
 // (value, get, set, enumerable, writable, configurable) de serem
@@ -119,11 +119,11 @@ var o = {}; // Criar um novo objeto
 
 // Exemplo de propriedade de objeto inserida através
 // de defineProperty com descritor do tipo dado
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // A propriedade 'a' existe no objeto com valor 37
 
@@ -131,11 +131,15 @@ Object.defineProperty(o, 'a', {
 // de defineProperty com descritor do tipo assessor
 var bValue = 38;
 
-Object.defineProperty(o, 'b', {
-  get: function() { return bValue; },
-  set: function(newValue) { bValue = newValue; },
+Object.defineProperty(o, "b", {
+  get: function () {
+    return bValue;
+  },
+  set: function (newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 
 o.b; // 38
@@ -144,9 +148,11 @@ o.b; // 38
 // menos que o.b seja redefinido
 
 // Você não pode combinar ambos os tipos:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get: function() { return 0xdeadbeef; }
+  get: function () {
+    return 0xdeadbeef;
+  },
 });
 // lança um TypeError: value existe apenas em descritores
 // de dado, get existe apenas em descritores de assessor
@@ -165,15 +171,15 @@ Quando o atributo `writable` de uma propriedade é definido como `false`, a prop
 ```js
 var o = {}; // Cria um novo objeto
 
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
-  writable: false
+  writable: false,
 });
 
 console.log(o.a); // escreve 37
 
 o.a = 25; // Nenhum erro é lançado (no modo strict seria
-          // lançado mesmo que o valor fosse o mesmo)
+// lançado mesmo que o valor fosse o mesmo)
 
 console.log(o.a); // escreve 37. A atribuição não teve efeito.
 ```
@@ -187,22 +193,22 @@ O atributo `enumerable` de uma propriedade define se ela deve ser exibida em uma
 ```js
 var o = {};
 
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
-  enumerable: true
+  enumerable: true,
 });
 
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   value: 2,
-  enumerable: false
+  enumerable: false,
 });
 
-Object.defineProperty(o, 'c', {
-  value: 3
+Object.defineProperty(o, "c", {
+  value: 3,
 }); // o valor padrão para enumerable é false
 
 o.d = 4; // o valor padrão para enumerable é true quando
-         // a propriedade é criada em uma atribuição
+// a propriedade é criada em uma atribuição
 
 for (var i in o) {
   console.log(i);
@@ -211,9 +217,9 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
 ```
 
 #### O atributo configurable
@@ -223,30 +229,34 @@ O atributo `configurable` controla ao mesmo se uma propriedade pode ser deletada
 ```js
 var o = {};
 
-Object.defineProperty(o, 'a', {
-  get: function() { return 1; },
-  configurable: false
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+  configurable: false,
 });
 
-Object.defineProperty(o, 'a', {
-  configurable: true
+Object.defineProperty(o, "a", {
+  configurable: true,
 }); // lança um TypeError
 
-Object.defineProperty(o, 'a', {
-  enumerable: true
+Object.defineProperty(o, "a", {
+  enumerable: true,
 }); // lança um TypeError
 
-Object.defineProperty(o, 'a', {
-  set: function() {}
+Object.defineProperty(o, "a", {
+  set: function () {},
 }); // lança um TypeError (o atributo set já estava definido)
 
-Object.defineProperty(o, 'a', {
-  get: function() { return 1; }
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
 }); // lança um TypeError
-    // (mesmo o novo get fazendo exatamente a mesma coisa)
+// (mesmo o novo get fazendo exatamente a mesma coisa)
 
-Object.defineProperty(o, 'a', {
-  value: 12
+Object.defineProperty(o, "a", {
+  value: 12,
 }); // lança um TypeError
 
 console.log(o.a); // escreve 1
@@ -266,22 +276,22 @@ var o = {};
 o.a = 1;
 
 // é equivalente a:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
 // Por outro lado,
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 
 // é equivalente a:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -294,18 +304,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();
@@ -319,21 +331,22 @@ Neste exemplo, um getter sempre retorna o mesmo valor.
 
 ```js
 var pattern = {
-    get: function () {
-        return 'Eu sempre retorno esta string, ' +
-               'não importa o que você atribuiu';
-    },
-    set: function () {
-        this.myname = 'esta string é meu nome';
-    }
+  get: function () {
+    return (
+      "Eu sempre retorno esta string, " + "não importa o que você atribuiu"
+    );
+  },
+  set: function () {
+    this.myname = "esta string é meu nome";
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, "myproperty", pattern);
 }
 
 var instance = new TestDefineSetAndGet();
-instance.myproperty = 'test';
+instance.myproperty = "test";
 
 console.log(instance.myproperty);
 // Eu sempre retorno esta string, não importa o que você atribuiu
@@ -409,10 +422,10 @@ console.log(myclass.prototype.y); // 1
 
 ## Especificações
 
-| Especificação                                                                                            | Status                       | Comentários                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                     | {{Spec2('ES5.1')}}     | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}     | {{Spec2('ES6')}}         |                                                      |
+| Especificação                                                                  | Status               | Comentários                                          |
+| ------------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                | {{Spec2('ES5.1')}}   | Definição inicial. Implementada no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

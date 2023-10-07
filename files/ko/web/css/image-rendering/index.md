@@ -2,6 +2,7 @@
 title: image-rendering
 slug: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}
 
 **`image-rendering`** [CSS](/ko/docs/Web/CSS) 프로퍼티는 브라우저의 이미지 스케일링 방식에 대한 힌트를 제공합니다. 이 프로퍼티는 엘리먼트 자신에게 적용시킵니다. 스케일링(크기변경)이 안 된 이미지에게는 적용되지 않습니다.
@@ -45,23 +46,24 @@ image-rendering: unset;
 ```css
 /* applies to GIF and PNG images; avoids blurry edges */
 
-img[src$=".gif"], img[src$=".png"] {
-                   image-rendering: -moz-crisp-edges;         /* Firefox */
-                   image-rendering:   -o-crisp-edges;         /* Opera */
-                   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-                   image-rendering: crisp-edges;
-                   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-                 }
+img[src$=".gif"],
+img[src$=".png"] {
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
 ```
 
 ```css
 div {
-        background: url(chessboard.gif) no-repeat 50% 50%;
-        image-rendering: -moz-crisp-edges;         /* Firefox */
-        image-rendering:   -o-crisp-edges;         /* Opera */
-        image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-        image-rendering: crisp-edges;
-        -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  background: url(chessboard.gif) no-repeat 50% 50%;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 ```
 
@@ -69,7 +71,7 @@ div {
 
 ### Live Examples
 
-#### image-rendering: auto;
+#### image-rendering: auto
 
 78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 

@@ -3,6 +3,8 @@ title: Fork
 slug: Glossary/Fork
 ---
 
+{{GlossarySidebar}}
+
 “派生”（Fork）是在某一时刻对现有的软件项目进行复制，并在项目加上某人的修改。基本上，如果原软件的许可证允许，你就可以复制软件的代码，开发自己的版本，附加上自己的补充，这就是一个 Fork。
 
 Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github 平台的贡献模式，Fork 是现在比较流行的术语。
@@ -17,7 +19,7 @@ Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github
 
 - 基本知识
 
-  - [Fork](https://zh.wikipedia.org/wiki/Fork_(software_development)) on Wikipedia
+  - [Fork](<https://zh.wikipedia.org/wiki/Fork_(software_development)>) on Wikipedia
   - [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (fork as in a Git context)
 
 - [MDN 术语表](/zh-CN/docs/Glossary)

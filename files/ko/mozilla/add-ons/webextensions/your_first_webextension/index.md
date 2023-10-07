@@ -2,6 +2,7 @@
 title: Your first extension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 이 글에서 우리는 "mozilla.org"와 그 하위 도메인 페이지에서 불러온 페이지에 붉은 테두리를 추가하는 확장 기능을 만들게 됩니다. 이를 통해 어떻게 Firefox를 위한 확장 기능을 만들 수 있는지 알아보고자 합니다.
@@ -26,7 +27,6 @@ cd borderify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -43,7 +43,6 @@ cd borderify
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 

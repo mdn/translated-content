@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: region ロール'
+title: "ARIA: region ロール"
 slug: Web/Accessibility/ARIA/Roles/region_role
 ---
 
@@ -40,7 +40,11 @@ slug: Web/Accessibility/ARIA/Roles/region_role
 
 ```html
 <div role="region" aria-labelledby="region-heading">
-  <h2 id="region-heading">この見出しの <code>id</code> 属性は、このリージョンがアクセス可能な名前を持つのに役立ちます</h2>
+  <h2 id="region-heading">
+    この見出しの
+    <code>id</code>
+    属性は、このリージョンがアクセス可能な名前を持つのに役立ちます
+  </h2>
   <!-- リージョンのコンテンツ -->
 </div>
 ```
@@ -63,7 +67,9 @@ slug: Web/Accessibility/ARIA/Roles/region_role
 
 ```html
 <div role="region" aria-labelledby="use-discretion">
-  <h3 id="use-discretion">慎重に <code>region</code> ロールを使用してください</h3>
+  <h3 id="use-discretion">
+    慎重に <code>region</code> ロールを使用してください
+  </h3>
   <!-- コンテンツ -->
 </div>
 

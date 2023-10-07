@@ -1,12 +1,6 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - CSS Позиционирование
-  - CSS-свойство
-  - Справка
-translation_of: Web/CSS/bottom
 ---
 
 {{CSSRef}}
@@ -70,7 +64,10 @@ bottom: unset;
 
 ```html
 <h2>Эксперимент</h2>
-<p>Здесь<br>мы<br>набираем<br>побольше<br>высоты<br>для<br>вящей<br>наглядности<br>нашего<br>скромного,<br>но<br>очень<br>убедительного<br>эксперимента.<br>- Вот.</p>
+<p>
+  Здесь<br />мы<br />набираем<br />побольше<br />высоты<br />для<br />вящей<br />наглядности<br />нашего<br />скромного,<br />но<br />очень<br />убедительного<br />эксперимента.<br />-
+  Вот.
+</p>
 <div class="fixed"><p>Я фиксирован</p></div>
 <div class="absolute"><p>Я абсолютен</p></div>
 ```
@@ -86,7 +83,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.4);
+  background: rgba(55, 55, 55, 0.4);
   border: 1px solid blue;
 }
 
@@ -109,11 +106,11 @@ div {
 
 ## Характеристики
 
-| Спецификация                                                                         | Статус                                   | Коммент                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}     | {{Spec2('CSS3 Transitions')}} | Определяет дно как анимацию.                      |
-| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}     | {{Spec2('CSS3 Positioning')}} | Добавляет поведение для липкого позиционирования. |
-| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}                 | Исходное определение.                             |
+| Спецификация                                                     | Статус                        | Коммент                                           |
+| ---------------------------------------------------------------- | ----------------------------- | ------------------------------------------------- |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}    | {{Spec2('CSS3 Transitions')}} | Определяет дно как анимацию.                      |
+| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}    | {{Spec2('CSS3 Positioning')}} | Добавляет поведение для липкого позиционирования. |
+| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}           | Исходное определение.                             |
 
 {{cssinfo}}
 

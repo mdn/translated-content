@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMinutes
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'ap
 ## Syntaxe
 
 ```js
-dateObj.getMinutes()
+dateObj.getMinutes();
 ```
 
 ### Valeur de retour

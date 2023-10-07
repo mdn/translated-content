@@ -39,23 +39,23 @@ Flexbox は、アイテムを列方向や行方向など一次元に並べて表
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Cross Axis", "交差軸")}}
-    2. {{Glossary("Flex")}}
-    3. {{Glossary("Flex Container", "フレックスコンテナー")}}
-    4. {{Glossary("Flex Item", "フレックスアイテム")}}
-    5. {{Glossary("Grid", "グリッド")}}
+   1. {{Glossary("Cross Axis", "交差軸")}}
+   2. {{Glossary("Flex")}}
+   3. {{Glossary("Flex Container", "フレックスコンテナー")}}
+   4. {{Glossary("Flex Item", "フレックスアイテム")}}
+   5. {{Glossary("Grid", "グリッド")}}
 
 2. 関連する CSS プロパティ
 
-    1. {{cssxref("align-content")}}
-    2. {{cssxref("align-items")}}
-    3. {{cssxref("align-self")}}
-    4. {{cssxref("flex")}}
-    5. {{cssxref("flex-basis")}}
-    6. {{cssxref("flex-direction")}}
-    7. {{cssxref("flex-flow")}}
-    8. {{cssxref("flex-grow")}}
-    9. {{cssxref("flex-shrink")}}
-    10. {{cssxref("flex-wrap")}}
-    11. {{cssxref("justify-content")}}
-    12. {{cssxref("order")}}
+   1. {{cssxref("align-content")}}
+   2. {{cssxref("align-items")}}
+   3. {{cssxref("align-self")}}
+   4. {{cssxref("flex")}}
+   5. {{cssxref("flex-basis")}}
+   6. {{cssxref("flex-direction")}}
+   7. {{cssxref("flex-flow")}}
+   8. {{cssxref("flex-grow")}}
+   9. {{cssxref("flex-shrink")}}
+   10. {{cssxref("flex-wrap")}}
+   11. {{cssxref("justify-content")}}
+   12. {{cssxref("order")}}

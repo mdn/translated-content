@@ -35,8 +35,8 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 下面的示例定义了一个未命名的生成器函数并把它赋值给`x`。函数产出它的传入参数的平方：
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 

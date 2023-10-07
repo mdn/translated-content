@@ -1,5 +1,5 @@
 ---
-title: 'HTMLVideoElement: enterpictureinpicture event'
+title: "HTMLVideoElement: enterpictureinpicture event"
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 ---
 
@@ -14,9 +14,9 @@ slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('enterpictureinpicture', event => { });
+addEventListener("enterpictureinpicture", (event) => {});
 
-onenterpictureinpicture = event => { };
+onenterpictureinpicture = (event) => {};
 ```
 
 ## 事件类型

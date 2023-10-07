@@ -9,7 +9,7 @@ slug: Web/API/HTMLFormElement/requestSubmit
 
 ## 语法
 
-```js
+```js-nolint
 requestSubmit()
 requestSubmit(submitter)
 ```

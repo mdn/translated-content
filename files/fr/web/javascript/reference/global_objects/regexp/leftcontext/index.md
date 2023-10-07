@@ -1,14 +1,6 @@
 ---
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/leftContext
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -18,13 +10,13 @@ La propriété non-standard **`leftContext`** est une propriété statique acces
 ## Syntaxe
 
 ```js
-RegExp.leftContext
-RegExp['$`']
+RegExp.leftContext;
+RegExp["$`"];
 ```
 
 ## Description
 
-La propriété `leftContext` est une propriété statique, elle n'est donc pas distincte entre les différents objets représentants les expressions rationnelles. Il faut donc toujours utiliser la syntaxe `RegExp.leftContext` ou `` RegExp['$`']. ``
+La propriété `leftContext` est une propriété statique, elle n'est donc pas distincte entre les différents objets représentants les expressions rationnelles. Il faut donc toujours utiliser la syntaxe `RegExp.leftContext` ou ``RegExp['$`'].``
 
 La valeur de la propriété `leftContext` n'est accessible uniquement qu'en lecture. Elle est modifiée par le moteur à chaque fois qu'une nouvelle correspondance est trouvée.
 
@@ -36,7 +28,7 @@ L'alias ne peut pas être utilisé avec la notation utilisant le point (`` RegEx
 var re = /monde/g;
 re.test("coucou monde !");
 RegExp.leftContext; // "coucou "
-RegExp['$`'];       // "coucou "
+RegExp["$`"]; // "coucou "
 ```
 
 ## Spécifications

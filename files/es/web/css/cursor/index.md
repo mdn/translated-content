@@ -198,8 +198,8 @@ cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
 #### Extended Gecko CSS values
 
-| CSS name                                        | Description                                                                                                                   | Deprecation |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| CSS name                                         | Description                                                                                                                   | Deprecation |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | [`-moz-alias`](/es/CSS/-moz-alias)               | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
 | [`-moz-cell`](/es/CSS/-moz-cell)                 | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
 | [`-moz-context-menu`](/es/CSS/-moz-context-menu) | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |

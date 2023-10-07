@@ -1,13 +1,6 @@
 ---
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
-tags:
-  - API
-  - Glisser Déposer
-  - HTML DOM
-  - Propriété
-  - References
-translation_of: Web/API/DataTransfer/files
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

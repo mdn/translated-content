@@ -1,15 +1,6 @@
 ---
 title: Expressions et opérateurs
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Landing page
-  - Operators
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators
-original_slug: Web/JavaScript/Reference/Opérateurs
-browser-compat: javascript.operators
 ---
 
 {{jsSidebar("Operators")}}

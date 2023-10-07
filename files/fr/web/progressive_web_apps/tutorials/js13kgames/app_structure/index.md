@@ -1,8 +1,6 @@
 ---
 title: Structure d'une Progressive web app
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-translation_of: Web/Progressive_web_apps/App_structure
-original_slug: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
@@ -39,7 +37,7 @@ Le site web se comporte comme une application native, offrant une interaction in
 Il est important de se rappeler les avantages des PWA et de les garder à l'esprit lorsqu'on conçoit l'application. L'approche app shell permet aux sites web d'être :
 
 - Accessible par un lien: Même s'il se comporte comme une application native, il reste un site web - vous pouvez cliquer sur les liens d'une page et envoyer une URL à quelqu'un si vous voulez le partager.
-- Progressive: Commencer avec un "bon vieux site web basic” et ajouter progressivement de nouvelles fonctionnalités tout en se rappelant de détecter si elles sont disponibles dans le navigateur et de gérer proprement toute erreur qui pourrait survenir si la prise en charge n'est pas disponible. Par exemple, un mode déconnecté possible grâce aux service workers n'est qu'une caractéristique bonus qui améliore l'expérience sur le site web, mais ce dernier reste totalement fonctionnel sans elle.
+- Progressive: Commencer avec un "bon vieux site web basic" et ajouter progressivement de nouvelles fonctionnalités tout en se rappelant de détecter si elles sont disponibles dans le navigateur et de gérer proprement toute erreur qui pourrait survenir si la prise en charge n'est pas disponible. Par exemple, un mode déconnecté possible grâce aux service workers n'est qu'une caractéristique bonus qui améliore l'expérience sur le site web, mais ce dernier reste totalement fonctionnel sans elle.
 - Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que [les tags meta viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), [les reqêtes media CSS](/fr/docs/Web/CSS/Media_Queries/Using_media_queries), [les Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et les [Grid CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Approche différente : les streams
@@ -65,38 +63,55 @@ La structure du site web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/
 Du point de vue HTML, l'app shell est tout ce qui est à l'extérieur de la section content:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>js13kGames A-Frame entries</title>
-  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-  <meta name="author" content="end3r">
-  <meta name="theme-color" content="#B12A34">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="icons/icon-512.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="js13kpwa.webmanifest">
-  <script src="data/games.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-<header>
-  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-  <h1>js13kGames A-Frame entries</h1>
-  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-  <button id="notifications">Request dummy notifications</button>
-  <section id="content">
-    // Le contenu est inséré ici
-  </section>
-</main>
-<footer>
-  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames A-Frame entries</title>
+    <meta
+      name="description"
+      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="http://js13kgames.com"
+          ><img src="img/js13kgames.png" alt="js13kGames"
+        /></a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames A-Frame entries</h1>
+      <p class="description">
+        List of games submitted to the
+        <a href="http://js13kgames.com/aframe">A-Frame category</a> in the
+        <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
+        You can
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
+          >fork js13kPWA on GitHub</a
+        >
+        to check its source code.
+      </p>
+      <button id="notifications">Request dummy notifications</button>
+      <section id="content">// Le contenu est inséré ici</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2018, created and maintained by
+        <a href="http://end3r.com">Andrzej Mazur</a> from
+        <a href="http://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 
@@ -113,7 +128,8 @@ Le CSS est également aussi linéaire que possible: il utilise {{cssxref("@font-
 Le fichier app.js file exécute plusieurs choses que nous regarderons de plus près dans les prochains articles. Avant tout, il génère le contenu à l'aide de ce template:
 
 ```js
-var template = "<article>\n\
+var template =
+  "<article>\n\
     <img src='data/img/SLUG.jpg' alt='NAME'>\n\
     <h3>#POS. NAME</h3>\n\
     <ul>\n\
@@ -124,39 +140,40 @@ var template = "<article>\n\
     <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>\n\
     </ul>\n\
 </article>";
-var content = '';
-for(var i=0; i<games.length; i++) {
-    var entry = template.replace(/POS/g,(i+1))
-        .replace(/SLUG/g,games[i].slug)
-        .replace(/NAME/g,games[i].name)
-        .replace(/AUTHOR/g,games[i].author)
-        .replace(/TWITTER/g,games[i].twitter)
-        .replace(/WEBSITE/g,games[i].website)
-        .replace(/GITHUB/g,games[i].github);
-    entry = entry.replace('<a href=\'http:///\'></a>','-');
-    content += entry;
-};
-document.getElementById('content').innerHTML = content;
+var content = "";
+for (var i = 0; i < games.length; i++) {
+  var entry = template
+    .replace(/POS/g, i + 1)
+    .replace(/SLUG/g, games[i].slug)
+    .replace(/NAME/g, games[i].name)
+    .replace(/AUTHOR/g, games[i].author)
+    .replace(/TWITTER/g, games[i].twitter)
+    .replace(/WEBSITE/g, games[i].website)
+    .replace(/GITHUB/g, games[i].github);
+  entry = entry.replace("<a href='http:///'></a>", "-");
+  content += entry;
+}
+document.getElementById("content").innerHTML = content;
 ```
 
 Ensuite, il enregistre un service worker:
 
 ```js
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+}
 ```
 
 Le bloc de code suivant demande la permission d'émettre des notifications quand un bouton est cliqué:
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -164,16 +181,16 @@ Le dernier bloc crée des notifications qui affichent un élément choisi au has
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Created by '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Created by " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -182,36 +199,36 @@ function randomNotification() {
 Le dernier fichier que nous allons rapidement regarder est le service worker: sw\.js — il importe d'abord les données du fichier games.js:
 
 ```js
-self.importScripts('data/games.js');
+self.importScripts("data/games.js");
 ```
 
 Ensuite, il crée une liste de tous les fichiers à mettre en cache, à la fois à partir de l'app shell et du contenu:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 var gamesImages = [];
-for(var i=0; i<games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+for (var i = 0; i < games.length; i++) {
+  gamesImages.push("data/img/" + games[i].slug + ".jpg");
 }
 var contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -219,13 +236,13 @@ var contentToCache = appShellFiles.concat(gamesImages);
 Le bloc suivant définit la phase d'initialisation de notre service worker lors de laquelle tous les fichiers contenus dans la liste précédente sont effectivement mis en cache:
 
 ```js
-self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+self.addEventListener("install", function (e) {
+  console.log("[Service Worker] Install");
   e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[Service Worker] Caching all: app shell and content');
+    caches.open(cacheName).then(function (cache) {
+      console.log("[Service Worker] Caching all: app shell and content");
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -233,18 +250,23 @@ self.addEventListener('install', function(e) {
 Finalement, nous définissons ici le gestionnaire de l'événement fetch du service worker afin qu'il récupère le contenu du cache s'il y est disponible, offrant un fonctionnement hors connexion:
 
 ```js
-self.addEventListener('fetch', function(e) {
+self.addEventListener("fetch", function (e) {
   e.respondWith(
-    caches.match(e.request).then(function(r) {
-      console.log('[Service Worker] Fetching resource: '+e.request.url);
-      return r || fetch(e.request).then(function(response) {
-        return caches.open(cacheName).then(function(cache) {
-          console.log('[Service Worker] Caching new resource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
+    caches.match(e.request).then(function (r) {
+      console.log("[Service Worker] Fetching resource: " + e.request.url);
+      return (
+        r ||
+        fetch(e.request).then(function (response) {
+          return caches.open(cacheName).then(function (cache) {
+            console.log(
+              "[Service Worker] Caching new resource: " + e.request.url,
+            );
+            cache.put(e.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -255,31 +277,31 @@ Les données des jeux sont présentes dans le dossier data sous la forme d'un ob
 
 ```js
 var games = [
-    {
-        slug: 'lost-in-cyberspace',
-        name: 'Lost in Cyberspace',
-        author: 'Zosia and Bartek',
-        twitter: 'bartaz',
-        website: '',
-        github: 'github.com/bartaz/lost-in-cyberspace'
-    },
-    {
-        slug: 'vernissage',
-        name: 'Vernissage',
-        author: 'Platane',
-        twitter: 'platane_',
-        website: 'github.com/Platane',
-        github: 'github.com/Platane/js13k-2017'
-    },
-// ...
-    {
-        slug: 'emma-3d',
-        name: 'Emma-3D',
-        author: 'Prateek Roushan',
-        twitter: '',
-        website: '',
-        github: 'github.com/coderprateek/Emma-3D'
-    }
+  {
+    slug: "lost-in-cyberspace",
+    name: "Lost in Cyberspace",
+    author: "Zosia and Bartek",
+    twitter: "bartaz",
+    website: "",
+    github: "github.com/bartaz/lost-in-cyberspace",
+  },
+  {
+    slug: "vernissage",
+    name: "Vernissage",
+    author: "Platane",
+    twitter: "platane_",
+    website: "github.com/Platane",
+    github: "github.com/Platane/js13k-2017",
+  },
+  // ...
+  {
+    slug: "emma-3d",
+    name: "Emma-3D",
+    author: "Prateek Roushan",
+    twitter: "",
+    website: "",
+    github: "github.com/coderprateek/Emma-3D",
+  },
 ];
 ```
 
@@ -291,4 +313,4 @@ Dans le prochain article, nous regarderons plus en détail comment l'app shell e
 
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

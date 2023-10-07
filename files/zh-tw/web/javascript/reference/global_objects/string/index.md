@@ -38,21 +38,21 @@ String(thing)
 
 除了常規的、可印出來的字元，特殊字元也可以被跳脫符號來表示編碼。
 
-| 代碼                     | 輸出                                          |
-| ------------------------ | --------------------------------------------- |
-| `\0`                     | 空字元                                        |
-| `\'`                     | 單引號                                        |
-| `\"`                     | 雙引號                                        |
-| `\\`                     | 反斜線                                        |
-| `\n`                     | 斷行                                          |
-| `\r`                     | 回車                                          |
-| `\v`                     | 垂直制表                                      |
-| `\t`                     | 制表                                          |
-| `\b`                     | 退格                                          |
-| `\f`                     | 饋頁                                          |
-| `\uXXXX`                 | unicode 代碼                                  |
+| 代碼                     | 輸出                                 |
+| ------------------------ | ------------------------------------ |
+| `\0`                     | 空字元                               |
+| `\'`                     | 單引號                               |
+| `\"`                     | 雙引號                               |
+| `\\`                     | 反斜線                               |
+| `\n`                     | 斷行                                 |
+| `\r`                     | 回車                                 |
+| `\v`                     | 垂直制表                             |
+| `\t`                     | 制表                                 |
+| `\b`                     | 退格                                 |
+| `\f`                     | 饋頁                                 |
+| `\uXXXX`                 | unicode 代碼                         |
 | `\u{X}` ... `\u{XXXXXX}` | unicode 代碼 {{experimental_inline}} |
-| `\xXX`                   | Latin-1 字元                                  |
+| `\xXX`                   | Latin-1 字元                         |
 
 > **備註：** 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
 
@@ -63,15 +63,17 @@ String(thing)
 你可以用 [+](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#字串運算子) 運算子附加多個字串在一起，像是這樣：
 
 ```js
-let longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable.";
+let longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
-或者，你可以在每一行尾端用反斜線字元("\\")表示字串會繼續被顯示在下一列。 你必須要確定在反斜線後面沒有任何空白或其他字元，甚至是縮排；否則這個方法將失效。 這個形式看起來像這樣：
+或者，你可以在每一行尾端用反斜線字元（"\\"）表示字串會繼續被顯示在下一列。 你必須要確定在反斜線後面沒有任何空白或其他字元，甚至是縮排；否則這個方法將失效。 這個形式看起來像這樣：
 
-```plain
-let longString = "This is a very long string which needs \
+```js
+let longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.";
 ```
@@ -87,13 +89,13 @@ otherwise my code is unreadable.";
 有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：
 
 ```js
-return 'cat'.charAt(1); // 回傳 "a"
+return "cat".charAt(1); // 回傳 "a"
 ```
 
 另一個(在 ECMAScript 5 中被提到)方法是將字串當作一個類似陣列的物件，直接存取字串中對應的數值索引。
 
 ```js
-return 'cat'[1]; // 回傳 "a"
+return "cat"[1]; // 回傳 "a"
 ```
 
 對於存取字元使用的括號表達式，沒辦法去刪除或指派一個值給這些屬性。 這些屬性既非可寫的，也非可設定的。(參見 {{jsxref("Object.defineProperty")}})
@@ -105,12 +107,11 @@ C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScr
 ```js
 var a = "a";
 var b = "b";
-if (a < b) // true
+if (a < b)
+  // true
   print(a + " 小於 " + b);
-else if (a > b)
-  print(a + " 大於 " + b);
-else
-  print(a + " 和 " + b + " 相等");
+else if (a > b) print(a + " 大於 " + b);
+else print(a + " 和 " + b + " 相等");
 ```
 
 這樣類似的結果，也能使用繼承 `String` 實體的 {{jsxref("String.localeCompare", "localeCompare")}} 方法來實現。
@@ -126,16 +127,16 @@ var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // 印出 "string"
-console.log(typeof s_obj);  // 印出 "object"
+console.log(typeof s_obj); // 印出 "object"
 ```
 
 字串原始型別和 `String` 物件也會在使用 {{jsxref("Global_Objects/eval", "eval")}} 時給出不同的結果。 原始型別傳進 `eval` 會被視為原始代碼；`String` 物件則會回傳，且被視作是其他物件。舉個例子：
 
 ```js
-s1 = "2 + 2";               // 建立一個字串原始型別
-s2 = new String("2 + 2");   // 建立一個字串物件
-console.log(eval(s1));      // 回傳數字 4
-console.log(eval(s2));      // 回傳字串 "2 + 2"
+s1 = "2 + 2"; // 建立一個字串原始型別
+s2 = new String("2 + 2"); // 建立一個字串物件
+console.log(eval(s1)); // 回傳數字 4
+console.log(eval(s2)); // 回傳字串 "2 + 2"
 ```
 
 因為一些原因，程式碼也許在遇到 `String` 物件時，但需要的卻是字串原始型別；儘管如此，通常作者們不需要擔心它的差異。
@@ -166,7 +167,7 @@ The `String` instance methods are also available in Firefox as of JavaScript 1.6
 
 ```js
 var num = 15;
-alert(String.replace(num, /5/, '2'));
+alert(String.replace(num, /5/, "2"));
 ```
 
 [Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
@@ -178,32 +179,50 @@ The following is a shim to provide support to non-supporting browsers:
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
 (function () {
-    'use strict';
+  "use strict";
 
-    var i,
-        // We could also build the array of methods with the following, but the
-        //   getOwnPropertyNames() method is non-shimable:
-        // Object.getOwnPropertyNames(String).filter(function (methodName)
-        //  {return typeof String[methodName] === 'function'});
-        methods = [
-            'quote', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
-            'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
-            'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase',
-            'toLocaleUpperCase', 'localeCompare', 'match', 'search',
-            'replace', 'split', 'substr', 'concat', 'slice'
-        ],
-        methodCount = methods.length,
-        assignStringGeneric = function (methodName) {
-            var method = String.prototype[methodName];
-            String[methodName] = function (arg1) {
-                return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
-            };
-        };
+  var i,
+    // We could also build the array of methods with the following, but the
+    //   getOwnPropertyNames() method is non-shimable:
+    // Object.getOwnPropertyNames(String).filter(function (methodName)
+    //  {return typeof String[methodName] === 'function'});
+    methods = [
+      "quote",
+      "substring",
+      "toLowerCase",
+      "toUpperCase",
+      "charAt",
+      "charCodeAt",
+      "indexOf",
+      "lastIndexOf",
+      "startsWith",
+      "endsWith",
+      "trim",
+      "trimLeft",
+      "trimRight",
+      "toLocaleLowerCase",
+      "toLocaleUpperCase",
+      "localeCompare",
+      "match",
+      "search",
+      "replace",
+      "split",
+      "substr",
+      "concat",
+      "slice",
+    ],
+    methodCount = methods.length,
+    assignStringGeneric = function (methodName) {
+      var method = String.prototype[methodName];
+      String[methodName] = function (arg1) {
+        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+      };
+    };
 
-    for (i = 0; i < methodCount; i++) {
-        assignStringGeneric(methods[i]);
-    }
-}());
+  for (i = 0; i < methodCount; i++) {
+    assignStringGeneric(methods[i]);
+  }
+})();
 ```
 
 ## `String` instances

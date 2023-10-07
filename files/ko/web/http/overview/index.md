@@ -9,7 +9,7 @@ slug: Web/HTTP/Overview
 
 ![웹 문서는 다른 리소스들의 구성](fetching_a_page.png)
 
-클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적인 메시지 교환에 의해 통신합니다. 보통 브라우저인 클라이언트에 의해 전송되는 메시지를 요청(*requests*)이라고 부르며, 그에 대해 서버에서 응답으로 전송되는 메시지를 응답(*responses*)이라고 부릅니다.
+클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적인 메시지 교환에 의해 통신합니다. 보통 브라우저인 클라이언트에 의해 전송되는 메시지를 요청(_requests_)이라고 부르며, 그에 대해 서버에서 응답으로 전송되는 메시지를 응답(_responses_)이라고 부릅니다.
 
 ![TCP(전송 계층) 및 IP(네트워크 계층) 위 및 표시 계층 아래의 응용 계층 프로토콜로서의 HTTP.](http-layers.png)
 
@@ -83,15 +83,19 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
 다음은 HTTP 사용하여 제어 가능한 일반적인 기능 목록입니다.
 
 - **[캐시](/ko/docs/Web/HTTP/Caching)**
+
   - HTTP로 문서가 캐시되는 방식을 제어할 수 있습니다. 서버는 캐시 대상과 기간을 프록시와 클라이언트에 지시할 수 있고 클라이언트는 저장된 문서를 무시하라고 중간 캐시 프록시에게 지시할 수 있습니다.
 
 - **`origin` 제약사항을 완화하기**
+
   - 스누핑과 다른 프라이버시 침해를 막기 위해, 브라우저는 웹 사이트 간의 엄격한 분리를 강제합니다. **동일한 origin**으로부터 온 페이지만이 웹 페이지의 전체 정보에 접근할 수 있죠. 그런 제약 사항은 서버에 부담이 되지만, HTTP 헤더를 통해 그것을 완화시킬 수 있습니다. 그런 덕분에 문서는 다른 도메인으로부터 전달된 정보를 패치워크할 수 있습니다(그렇게 하려면 어떤 경우에 보안과 관련된 사항이 있을 수도 있습니다).
 
 - **인증**
+
   - 어떤 페이지들은 보호되어 오로지 특정 사용자만이 그것에 접근할 수도 있습니다. 기본 인증은 HTTP를 통해 {{HTTPHeader("WWW-Authenticate")}} 또는 유사한 헤더를 사용해 제공되거나, [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)를 사용해 특정 세션을 설정하여 이루어질 수도 있습니다.
 
 - **[프록시와 터널링](/ko/docs/Web/HTTP/Proxy_servers_and_tunneling)**
+
   - 서버 혹은 클라이언트 혹은 그 둘 모두는 종종 인트라넷에 위치하며 다른 개체들에게 그들의 실제 주소를 숨기기도 합니다. HTTP 요청은 네트워크 장벽을 가로지르기 위해 프록시를 통해 나가게 되죠. 모든 프록시가 HTTP 프록시는 아닙니다. 예를 들면 SOCKS 프로토콜은 좀 더 저수준에서 동작합니다. FTP와 같은 다른 프로토콜도 이 프록시를 통해 처리될 수 있습니다.
 
 - **세션**
@@ -104,26 +108,26 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
 1. TCP 연결을 엽니다. TCP 연결은 요청을 보내거나(혹은 여러 개의 요청) 응답을 받는데 사용됩니다. 클라이언트는 새 연결을 열거나, 기존 연결을 재사용하거나, 서버에 대한 여러 TCP 연결을 열 수 있습니다.
 2. HTTP 메시지를 전송합니다. HTTP 메시지(HTTP/2 이전)는 인간이 읽을 수 있습니다. HTTP/2에서는 이런 간단한 메시지가 프레임 속으로 캡슐화되어 직접 읽는게 불가능하지만 원칙은 동일합니다.
 
-    ```html
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: fr
-    ```
+   ```http
+   GET / HTTP/1.1
+   Host: developer.mozilla.org
+   Accept-Language: fr
+   ```
 
 3. 서버에 의해 전송된 응답을 읽어들입니다
 
-    ```html
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+   ```http
+   HTTP/1.1 200 OK
+   Date: Sat, 09 Oct 2010 14:28:02 GMT
+   Server: Apache
+   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+   ETag: "51142bc1-7449-479b075b2891b"
+   Accept-Ranges: bytes
+   Content-Length: 29769
+   Content-Type: text/html
 
-    <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
-    ```
+   <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
+   ```
 
 4. 연결을 닫거나 다른 요청들을 위해 재사용합니다.
 

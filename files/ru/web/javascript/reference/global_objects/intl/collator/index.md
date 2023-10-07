@@ -1,12 +1,8 @@
 ---
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
-tags:
-  - Collator
-  - Internationalization
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
+
 {{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
 
 ## Сводка
@@ -92,9 +88,9 @@ Intl.Collator.call(this[, locales[, options]])
 Следующий пример демонстрирует различные потенциальные результаты для строки, находящейся до, после или на том же самом уровне, что и другая строка:
 
 ```js
-console.log(new Intl.Collator().compare('a', 'c')); // → отрицательное значение
-console.log(new Intl.Collator().compare('c', 'a')); // → положительное значение
-console.log(new Intl.Collator().compare('a', 'a')); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // → отрицательное значение
+console.log(new Intl.Collator().compare("c", "a")); // → положительное значение
+console.log(new Intl.Collator().compare("a", "a")); // → 0
 ```
 
 Обратите внимание, что результат, показанный в коде выше, может сильно различаться в зависимости от браузера и его версии. Происходит это потому, что возвращаемые значения зависят от реализации. То есть, спецификация требует только чтобы при следовании строки до значение было отрицательным, а после — положительным.
@@ -105,11 +101,11 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 ```js
 // В немецком буква ä идёт рядом с буквой a
-console.log(new Intl.Collator('de').compare('ä', 'z'));
+console.log(new Intl.Collator("de").compare("ä", "z"));
 // → отрицательное значение
 
 // В шведском буква ä следует после буквы z
-console.log(new Intl.Collator('sv').compare('ä', 'z'));
+console.log(new Intl.Collator("sv").compare("ä", "z"));
 // → положительное значение
 ```
 
@@ -119,18 +115,18 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 
 ```js
 // В немецком буква a является базовой для буквы ä
-console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
+console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
 // → 0
 
 // В шведском буквы ä и a являются двумя разными базовыми буквами
-console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'));
+console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
 // → положительное значение
 ```
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус                           | Комментарии              |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| Спецификация                                             | Статус                  | Комментарии              |
+| -------------------------------------------------------- | ----------------------- | ------------------------ |
 | {{SpecName('ES Int 1.0', '#sec-10.1', 'Intl.Collator')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
 
 ## Совместимость с браузерами

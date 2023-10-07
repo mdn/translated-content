@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.destination
 slug: Web/API/BaseAudioContext/destination
-original_slug: Web/API/AudioContext/destination
 ---
 
 {{ APIRef("Web Audio API") }}

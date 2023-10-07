@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: article ロール'
+title: "ARIA: article ロール"
 slug: Web/Accessibility/ARIA/Roles/article_role
 ---
 
@@ -7,12 +7,12 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 
 ```html
 <div role="article">
-<h2>この断片の見出し</h2>
-<p>この断片の段落。</p>
-<p>別の段落。</p>
-... 記事とインタラクションしたり、共有したり等するためのコントロール ...
+  <h2>この断片の見出し</h2>
+  <p>この断片の段落。</p>
+  <p>別の段落。</p>
+  ... 記事とインタラクションしたり、共有したり等するためのコントロール ...
 </div>
-<div role="article"> ... </div>
+<div role="article">...</div>
 ```
 
 この例では、同じように構成され、関連している 2 つの記事を 1 ページに並べて表示しています。
@@ -23,12 +23,12 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 
 ```html
 <article>
-<h2>この断片の見出し</h2>
-<p>この断片の段落。</p>
-<p>別の段落。</p>
-... 記事とインタラクションしたり、共有したり等するためのコントロール ...
+  <h2>この断片の見出し</h2>
+  <p>この断片の段落。</p>
+  <p>別の段落。</p>
+  ... 記事とインタラクションしたり、共有したり等するためのコントロール ...
 </article>
-<article> ... </article>
+<article>...</article>
 ```
 
 ## 説明

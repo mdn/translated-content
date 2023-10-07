@@ -46,14 +46,11 @@ Veja também as [extensões para a interface de Gamepad](/pt-BR/docs/Web/API/Gam
 
 ## Especificações
 
-| Especificações                                                                   | Estatus                                  | Comentários                                                                      |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Veja também
 

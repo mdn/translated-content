@@ -1,15 +1,6 @@
 ---
 title: Компьютерное программирование
 slug: Glossary/Computer_Programming
-tags:
-  - Beginner
-  - Computer Programming
-  - Glossary
-  - Начинающим
-  - компьютерное программирование
-  - языки программирования
-translation_of: Glossary/Computer_Programming
-original_slug: Глоссарий/Computer_Programming
 ---
 
 Компьютерное программирование - это процесс составления и организации набора инструкций. Они говорят компьютерной программе, что делать на языке, понятном компьютеру. Эти инструкции представлены в виде множества различных языков, таких как C++, Java, JavaScript, HTML, Python, Ruby и Rust.

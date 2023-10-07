@@ -11,10 +11,8 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 ## 语法
 
-译者：下列语法是 MDN 上已知的最简单的之一。
-
-```plain
- ( )
+```js-nolint
+(expression)
 ```
 
 ## 说明
@@ -25,22 +23,21 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 下面的代码展示了加法运算先于乘法运算的情况。
 
-```js
-var a = 1;
-var b = 2;
-var c = 3;
+```js-nolint
+const a = 1;
+const b = 2;
+const c = 3;
 
-// default precedence
-a + b * c     // 7
-// evaluated by default like this
-a + (b * c)   // 7
+// 默认优先级
+a + b * c; // 7
+// 默认运算顺序同下
+a + (b * c); // 7
 
-// now overriding precedence
-// addition before multiplication
-(a + b) * c   // 9
+// 现在优先考虑乘法之前的加法
+(a + b) * c; // 9
 
-// which is equivalent to
-a * c + b * c // 9
+// 这相当于
+a * c + b * c; // 9
 ```
 
 ## 规范
@@ -51,7 +48,7 @@ a * c + b * c // 9
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}

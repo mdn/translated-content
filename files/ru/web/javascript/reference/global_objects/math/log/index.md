@@ -1,13 +1,8 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -39,8 +34,8 @@ Math.log(x)
 
 ```js
 Math.log(-1); // NaN, выход за пределы диапазона
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
@@ -58,11 +53,11 @@ function getBaseLog(x, y) {
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                        | Статус             | Комментарии                                            |
+| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                             | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}     | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}    | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

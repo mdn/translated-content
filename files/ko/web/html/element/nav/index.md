@@ -1,5 +1,5 @@
 ---
-title: '<nav>: 탐색 구획 요소'
+title: "<nav>: 탐색 구획 요소"
 slug: Web/HTML/Element/nav
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/nav
 **HTML `<nav>` 요소**는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.
 
 {{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>

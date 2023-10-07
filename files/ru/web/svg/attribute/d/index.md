@@ -1,7 +1,6 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
-translation_of: Web/SVG/Attribute/d
 ---
 
 {{SVGRef}}
@@ -13,12 +12,18 @@ translation_of: Web/SVG/Attribute/d
 Три элемента используют этот атрибут: {{SVGElement("path")}}, {{SVGElement("glyph")}}, и {{SVGElement("missing-glyph")}}
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path
+    fill="none"
+    stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -91,18 +96,24 @@ _MoveTo_ инструкции можно рассматривать как со�
 
 | Команда | Параметры     | Примечания                                                                                                                                                                                                                                                          |
 | ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| M       | (`x`, `y`)+   | Движение начала следующего под-пути к координатам `x`, `y`. Любая последующая координатная пара(ы) интерпретируется как параметр(ы) для неявных абсолютных команд LineTo(L) (см. Ниже). Формула: Pn = {`x`, `y`}                                                     |
+| M       | (`x`, `y`)+   | Движение начала следующего под-пути к координатам `x`, `y`. Любая последующая координатная пара(ы) интерпретируется как параметр(ы) для неявных абсолютных команд LineTo(L) (см. Ниже). Формула: Pn = {`x`, `y`}                                                    |
 | m       | (`dx`, `dy`)+ | Перемещает начало следующего подпути, сдвинув последнюю известную позицию пути на `dx` вдоль оси `x` и на `dy` вдоль оси `y`. Любая последующая пара координат считается неявной относительной командой LineTo (`l`) (см. ниже) Формула: Pn= {xo + `dx`, yo + `dy`} |
 
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path
+    fill="none"
+    stroke="red"
     d="M 10,10 h 10
        m  0,10 h 10
        m  0,10 h 10
@@ -125,7 +136,7 @@ _LineTo_ инструкции проводят прямую линию от _cur
 
 | Command | Parameters    | Notes                                                                                                                                                                                                                                                                                                                                                                   |
 | ------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| L       | (`x`, `y`)+   | Рисует линию из _текущей точки в конечную точку определённую_ `x`, `y`. Любая последующая пара(ы) координат интерпретируется как параметр(ы) для неявной абсолютной команд(ы) LineTo (`L`). Формула: Po' = Pn = {`x`, `y`}                                                                                                                                               |
+| L       | (`x`, `y`)+   | Рисует линию из _текущей точки в конечную точку определённую_ `x`, `y`. Любая последующая пара(ы) координат интерпретируется как параметр(ы) для неявной абсолютной команд(ы) LineTo (`L`). Формула: Po' = Pn = {`x`, `y`}                                                                                                                                              |
 | l       | (`dx`, `dy`)+ | Draw a line from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All usubsequente pair of coordinates are considered implicite relative LineTo (`l`) command (_see below_). |
 | H       | `x`+          | Draw a horizontal line from the current point to the new `x` coordinate (_y coordinate stay unchanged_). The current point get its x coordinate updated for the next command. All subsequente value are considered an implicite absolute horizontal LineTo (`H`) command.                                                                                               |
 | h       | `dx`+         | Draw a horizontal line from the current point to a point shift by `dx` along the the x-axis (_y coordinate stay unchanged_). The current point get its X coordinate updated by `dx` for the next command. All subsequente value are considered an implicite relative horizontal LineTo (`h`) command.                                                                   |
@@ -135,21 +146,29 @@ _LineTo_ инструкции проводят прямую линию от _cur
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- LineTo commands in absolute coordinates -->
-  <path fill="none" stroke="red"
-        d="M 10,10
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,10
            L 90,90
            V 10
            H 50" />
 
   <!-- LineTo commands in relative coordinates -->
-  <path fill="none" stroke="red"
-        d="M 110,10
+  <path
+    fill="none"
+    stroke="red"
+    d="M 110,10
            l 80,80
            v -80
            h -40" />
@@ -162,55 +181,70 @@ html,body,svg { height:100% }
 
 _Cubic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)_ are smooth curve definitions using four points: A starting point, a end point, and two control points to define the curvature.
 
-| Command | Parameters                             | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C       | (`x1`, `y1`, `x2`, `y2`, `x`, `y`)+       | Draw a Bézier curve from the current point to the coordinate `x`, `y`. `x1`, `y1` are the coordinates of the control point at the begining of the curve where `x2`, `y2` are the coordinates of the controle point at the end of the curve. The coordinate `x`, `y` become the new current point for the next command. All subsequente triplets of coordinates are considered implicite absolute cubic Bézier curve (`C`) command.                                                                                                                                                                                                                                                                                                                                                                               |
-| c       | (`dx1`, `dy1`, `dx2`, `dy2`, `dx`, `dy`)+ | Draw a Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx1`, `dy1` are the coordinates of the control point at the beginning of the curve relative to the starting point of the curve and `dx2`, `dy2` are the coordinates of the controle point at the end of the curve relative to the starting point of the curve. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente triplets of coordinates are considered implicite relative cubic Bézier curve (`c`) command.                                                                                                                                                               |
-| S       | (`x2`, `y2`, `x`, `y`)+                  | Draw a smooth Bézier curve from the current point to the coordinate `x`, `y`. `x2`, `y2` are the coordinates of the controle point at the end of the curve. The controle point at the begining of the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The coordinate `x`, `y` become the new current point for the next command. All subsequente duo of coordinates are considered implicite absolute smooth cubic Bézier curve (`S`) command.                                                                                                                                                                    |
-| s       | (`dx2`, `dy2`, `dx`, `dy`)+              | Draw a smooth Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx2`, `dy2` are the coordinates of the controle point at the end of the curve relative to the starting point of the curve. The controle point at the begining of the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente duo of coordinates are considered implicite relative smooth cubic Bézier curve (`s`) command. |
+| Command | Parameters                                | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C       | (`x1`, `y1`, `x2`, `y2`, `x`, `y`)+       | Draw a Bézier curve from the current point to the coordinate `x`, `y`. `x1`, `y1` are the coordinates of the control point at the begining of the curve where `x2`, `y2` are the coordinates of the controle point at the end of the curve. The coordinate `x`, `y` become the new current point for the next command. All subsequente triplets of coordinates are considered implicite absolute cubic Bézier curve (`C`) command.                                                                                                                                                                                                                                                                                                                                                                            |
+| c       | (`dx1`, `dy1`, `dx2`, `dy2`, `dx`, `dy`)+ | Draw a Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx1`, `dy1` are the coordinates of the control point at the beginning of the curve relative to the starting point of the curve and `dx2`, `dy2` are the coordinates of the controle point at the end of the curve relative to the starting point of the curve. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente triplets of coordinates are considered implicite relative cubic Bézier curve (`c`) command.                                                                                                                                                              |
+| S       | (`x2`, `y2`, `x`, `y`)+                   | Draw a smooth Bézier curve from the current point to the coordinate `x`, `y`. `x2`, `y2` are the coordinates of the controle point at the end of the curve. The controle point at the begining of the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The coordinate `x`, `y` become the new current point for the next command. All subsequente duo of coordinates are considered implicite absolute smooth cubic Bézier curve (`S`) command.                                                                                                                                                                  |
+| s       | (`dx2`, `dy2`, `dx`, `dy`)+               | Draw a smooth Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx2`, `dy2` are the coordinates of the controle point at the end of the curve relative to the starting point of the curve. The controle point at the begining of the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente duo of coordinates are considered implicite relative smooth cubic Bézier curve (`s`) command. |
 
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Quadratic Bézier curve with absolute coordinate -->
-  <path fill="none" stroke="red"
-        d="M 10,90
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,90
            C 30,90 25,10 50,10
            S 70,90 90,90" />
 
   <!-- Quadratic Bézier curve with relative coordinate -->
-  <path fill="none" stroke="red"
-        d="M 110,90
+  <path
+    fill="none"
+    stroke="red"
+    d="M 110,90
            c 20,0 15,-80 40,-80
            s 20,80 40,80" />
 
   <!-- Highlight the curve vertex and control points -->
   <g id="ControlPoints">
-
     <!-- First cubic command control points -->
     <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
-    <circle cx="30" cy="90" r="1.5"/>
+    <circle cx="30" cy="90" r="1.5" />
 
     <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
-    <circle cx="25" cy="10" r="1.5"/>
+    <circle cx="25" cy="10" r="1.5" />
 
     <!-- Second smooth command control points (the first one is implicite) -->
-    <line x1="50" y1="10" x2="75" y2="10" stroke="lightgrey" stroke-dasharray="2" />
-    <circle cx="75" cy="10" r="1.5" fill="lightgrey"/>
+    <line
+      x1="50"
+      y1="10"
+      x2="75"
+      y2="10"
+      stroke="lightgrey"
+      stroke-dasharray="2" />
+    <circle cx="75" cy="10" r="1.5" fill="lightgrey" />
 
     <line x1="90" y1="90" x2="70" y2="90" stroke="lightgrey" />
     <circle cx="70" cy="90" r="1.5" />
 
     <!-- curve vertex points -->
-    <circle cx="10" cy="90" r="1.5"/>
-    <circle cx="50" cy="10" r="1.5"/>
-    <circle cx="90" cy="90" r="1.5"/>
+    <circle cx="10" cy="90" r="1.5" />
+    <circle cx="50" cy="10" r="1.5" />
+    <circle cx="90" cy="90" r="1.5" />
   </g>
   <use xlink:href="#ControlPoints" x="100" />
 </svg>
@@ -222,25 +256,33 @@ html,body,svg { height:100% }
 
 _Quadratic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)_ are smooth curve definitions using three points: A starting point, a end point, and a control point to define the curvature.
 
-| Command | Parameters                | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Q       | (`x1`, `y1`, `x`, `y`)+     | Draw a Bézier curve from the current point to the coordinate `x`, `y`. `x1`, `y1` are the coordinates of the control point for the curve. The coordinate `x`, `y` become the new current point for the next command. All subsequente duo of coordinates are considered implicite absolute quadratic Bézier curve (`Q`) command.                                                                                                                                                                                                                                                                                                                                    |
-| q       | (`dx1`, `dy1`, `dx`, `dy`)+ | Draw a Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx1`, `dy1` are the coordinates of the control point for the curve relative to the starting point of the curve. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente duo of coordinates are considered implicite relative quadratic Bézier curve (`q`) command.                                                                                                                                                                 |
-| T       | (`x`, `y`)+                | Draw a smooth Bézier curve from the current point to the coordinate `x`, `y`. The controle point for the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The coordinate `x`, `y` become the new current point for the next command. All subsequente coordinates are considered implicite absolute smooth quadratic Bézier curve (`T`) command.                                                                                                                      |
-| t       | (`dx`, `dy`)+              | Draw a smooth Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. The controle point for the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente coordinates are considered implicite relative smooth quadratic Bézier curve (`t`) command. |
+| Command | Parameters                  | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Q       | (`x1`, `y1`, `x`, `y`)+     | Draw a Bézier curve from the current point to the coordinate `x`, `y`. `x1`, `y1` are the coordinates of the control point for the curve. The coordinate `x`, `y` become the new current point for the next command. All subsequente duo of coordinates are considered implicite absolute quadratic Bézier curve (`Q`) command.                                                                                                                                                                                                                                                                                                                                 |
+| q       | (`dx1`, `dy1`, `dx`, `dy`)+ | Draw a Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx1`, `dy1` are the coordinates of the control point for the curve relative to the starting point of the curve. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente duo of coordinates are considered implicite relative quadratic Bézier curve (`q`) command.                                                                                                                                                                |
+| T       | (`x`, `y`)+                 | Draw a smooth Bézier curve from the current point to the coordinate `x`, `y`. The controle point for the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The coordinate `x`, `y` become the new current point for the next command. All subsequente coordinates are considered implicite absolute smooth quadratic Bézier curve (`T`) command.                                                                                                                    |
+| t       | (`dx`, `dy`)+               | Draw a smooth Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. The controle point for the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente coordinates are considered implicite relative smooth quadratic Bézier curve (`t`) command. |
 
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Quadratic Bézier curve with implicite repetition -->
-  <path fill="none" stroke="red"
-        d="M 10,50
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,50
            Q 25,25 40,50
            t 30,0 30,0 30,0 30,0 30,0" />
 
@@ -250,23 +292,31 @@ html,body,svg { height:100% }
     <circle cx="25" cy="25" r="1.5" />
 
     <!-- curve vertex points -->
-    <circle cx="10" cy="50" r="1.5"/>
-    <circle cx="40" cy="50" r="1.5"/>
+    <circle cx="10" cy="50" r="1.5" />
+    <circle cx="40" cy="50" r="1.5" />
 
     <g id="SmoothQuadraticDown">
-      <polyline points="40,50 55,75 70,50" stroke="rgba(0,0,0,.2)" stroke-dasharray="2" fill="none" />
+      <polyline
+        points="40,50 55,75 70,50"
+        stroke="rgba(0,0,0,.2)"
+        stroke-dasharray="2"
+        fill="none" />
       <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
       <circle cx="70" cy="50" r="1.5" />
     </g>
 
     <g id="SmoothQuadraticUp">
-      <polyline points="70,50 85,25 100,50" stroke="rgba(0,0,0,.2)" stroke-dasharray="2" fill="none" />
+      <polyline
+        points="70,50 85,25 100,50"
+        stroke="rgba(0,0,0,.2)"
+        stroke-dasharray="2"
+        fill="none" />
       <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
       <circle cx="100" cy="50" r="1.5" />
     </g>
 
     <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp"   x="60" />
+    <use xlink:href="#SmoothQuadraticUp" x="60" />
     <use xlink:href="#SmoothQuadraticDown" x="120" />
   </g>
 </svg>
@@ -383,27 +433,38 @@ _Elliptical arc curves_ are curves define as a portion of an ellipse. It is some
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-
   <!-- The influence of the arc flags on which arc is drawn -->
-  <path fill="none" stroke="red"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="red"
+    d="M 6,10
            A 6 4 10 1 0 14,10" />
 
-  <path fill="none" stroke="lime"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="lime"
+    d="M 6,10
            A 6 4 10 1 1 14,10" />
 
-  <path fill="none" stroke="purple"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="purple"
+    d="M 6,10
            A 6 4 10 0 1 14,10" />
 
-  <path fill="none" stroke="pink"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="pink"
+    d="M 6,10
            A 6 4 10 0 0 14,10" />
 </svg>
 ```
@@ -423,34 +484,40 @@ _ClosePath_ instructions draw a straight line from the current position, to the 
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
-
   <!--
   An open shape with the last point of
   the path different than the first one
   -->
-  <path stroke="red"
-        d="M 5,1
+  <path
+    stroke="red"
+    d="M 5,1
            l -4,8 8,0" />
 
   <!--
   An open shape with the last point of
   the path matching the first one
   -->
-  <path stroke="red"
-        d="M 15,1
+  <path
+    stroke="red"
+    d="M 15,1
            l -4,8 8,0 -4,-8" />
 
   <!--
   An closed shape with the last point of
   the path different than the first one
   -->
-  <path stroke="red"
-        d="M 25,1
+  <path
+    stroke="red"
+    d="M 25,1
            l -4,8 8,0
            z" />
 </svg>
@@ -460,8 +527,8 @@ html,body,svg { height:100% }
 
 ## Specification
 
-| Specification                                                                        | Status                   | Comment                                                |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| {{SpecName("SVG2", "paths.html#DProperty", "d")}}                     | {{Spec2("SVG2")}} | Definition for `<path>`                                |
+| Specification                                                    | Status              | Comment                                                |
+| ---------------------------------------------------------------- | ------------------- | ------------------------------------------------------ |
+| {{SpecName("SVG2", "paths.html#DProperty", "d")}}                | {{Spec2("SVG2")}}   | Definition for `<path>`                                |
 | {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}} | {{Spec2("SVG1.1")}} | Initial definition for `<glyph>` and `<missing-glyph>` |
-| {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}                 | {{Spec2("SVG1.1")}} | Initial definition for `<path>`                        |
+| {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}             | {{Spec2("SVG1.1")}} | Initial definition for `<path>`                        |

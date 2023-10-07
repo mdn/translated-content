@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
 ---
 
@@ -61,7 +61,8 @@ p:last-child {
 <ul>
   <li>Artículo 1</li>
   <li>Artículo 2</li>
-  <li>Artículo 3
+  <li>
+    Artículo 3
     <ul>
       <li>Artículo 3.1</li>
       <li>Artículo 3.2</li>

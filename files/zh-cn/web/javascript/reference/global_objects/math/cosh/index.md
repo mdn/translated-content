@@ -29,8 +29,8 @@ Math.cosh(x)
 ### 使用 `Math.cosh()`
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -39,18 +39,22 @@ Math.cosh(-1); // 1.5430806348152437
 可通过 {{jsxref("Math.exp()")}} 函数模拟实现：
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    return (Math.exp(x) + Math.exp(-x)) / 2;
+  };
 ```
 
 或只调用一次 {{jsxref("Math.exp()")}} 函数：
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  var y = Math.exp(x);
-  return (y + 1 / y) / 2;
-};
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y + 1 / y) / 2;
+  };
 ```
 
 ## 规范

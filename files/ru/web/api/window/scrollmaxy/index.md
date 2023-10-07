@@ -1,13 +1,8 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
-tags:
-  - API
-  - HTML DOM
-  - Window
-  - Свойство
-translation_of: Web/API/Window/scrollMaxY
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 Свойство **`Window.scrollMaxY`** возвращает максимальное число пикселей по вертикали, доступных для прокрутки в документе. Только для чтения.
@@ -26,7 +21,7 @@ yMax = window.scrollMaxY
 // Пролистать в самый низ
 var maxY = window.scrollMaxY;
 
-window.scrollTo(0,maxY);
+window.scrollTo(0, maxY);
 ```
 
 ## Примечания

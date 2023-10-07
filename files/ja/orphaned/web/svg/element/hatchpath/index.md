@@ -1,7 +1,6 @@
 ---
 title: <hatchpath>
 slug: orphaned/Web/SVG/Element/hatchpath
-original_slug: Web/SVG/Element/hatchpath
 ---
 
 {{SVGRef}}{{SeeCompatTable}}

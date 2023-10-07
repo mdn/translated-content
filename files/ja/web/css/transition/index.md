@@ -37,7 +37,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* 2 つのプロパティへの適用 */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* 変化するすべてのプロパティへの適用 */
 transition: all 0.5s ease-out;

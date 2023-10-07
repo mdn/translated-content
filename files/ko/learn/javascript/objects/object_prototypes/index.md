@@ -52,18 +52,17 @@ JavaScript에서는 객체 인스턴스와 프로토타입 간에 연결(많은 
 
 ```js
 function Person(first, last, age, gender, interests) {
-
   // 속성과 메소드 정의
   this.first = first;
   this.last = last;
-//...
+  //...
 }
 ```
 
 그리고 인스턴스도 하나 만들었구요:
 
 ```js
-var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+var person1 = new Person("Bob", "Smith", 32, "male", ["music", "skiing"]);
 ```
 
 Javascript 콘솔에서 "person1."을 치게 되면 브라우저는 아래처럼 해당 객체의 멤버 이름을 자동 완성 팝업으로 보여줄 것입니다:
@@ -78,7 +77,7 @@ Javascript 콘솔에서 "person1."을 치게 되면 브라우저는 아래처럼
 아래 처럼 말이죠:
 
 ```js
-person1.valueOf()
+person1.valueOf();
 ```
 
 이 메소드는 호출된 객체의 값을 단순 반환합니다. — 직접 실행해 보세요! 이때 일어나는 일은 아래와 같습니다:
@@ -107,22 +106,22 @@ So [`Object.prototype.watch()`](/ko/docs/Web/JavaScript/Reference/Global_Objects
 
 1. prototype 속성을 직접 확인해 볼 수 있습니다. — 예제로 돌아가서 Javascript console에 아래 코드를 타이핑 해 보세요:
 
-    ```js
-    Person.prototype
-    ```
+   ```js
+   Person.prototype;
+   ```
 
 2. 출력되는 것이 별로 많지 않을 겁니다 — 아직 이 커스텀 생성자 프로토타입에 아무것도 정의하지 않았거든요! 기본적으로 생성자의 프로토타입은 비어있습니다. 이번에는 아래 코드를 실행해 봅시다:
 
-    ```js
-    Object.prototype
-    ```
+   ```js
+   Object.prototype;
+   ```
 
 위의 예제에서 확인했듯이 `Object`를 상속받은 객체에서 사용 가능한 수 많은 메소드들이 `Object`의 `prototype` 속성에 정의되어 있음을 알 수 있습니다.
 
 Javascript 전반에 걸쳐 프로토타입 체인 상속이 어떻게 구성되어 있는지 확인할 수 있습니다 — 전역 객체인 [`String`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number), [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)의 프로토타입에 정의된 메소드와 속성들을 체크해 보세요. 이 프로토타입 객체들에는 이미 많은 수의 메소드가 정의되어 있으며 이는 아래처럼 문자열 객체를 생성 했을 때:
 
 ```js
-var myString = 'This is my string.';
+var myString = "This is my string.";
 ```
 
 `myString` 인스턴스가 생성되는 즉시 [`split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace)등의 문자열을 위한 유용한 메소드들을 사용할 수 있는 이유입니다.
@@ -135,15 +134,15 @@ var myString = 'This is my string.';
 
 1. 예를 들어서 이전 예제에서 아래 코드를 Javascript console에서 실행했었다면:
 
-    ```js
-    var person2 = Object.create(person1);
-    ```
+   ```js
+   var person2 = Object.create(person1);
+   ```
 
 2. `create()` 메소드가 실제로 하는 일은 주어진 객체를 프로토타입 객체로 삼아 새로운 객체를 생성합니다. 여기서 person2는 person1을 프로토타입 객체로 삼습니다. 아래 코드를 실행하여 이를 확인할 수 있습니다:
 
-    ```js
-    person2.__proto__
-    ```
+   ```js
+   person2.__proto__;
+   ```
 
 콘솔 상에는 person1이 출력됩니다.
 
@@ -153,41 +152,44 @@ var myString = 'This is my string.';
 
 1. 예를 들어 아래 코드를 콘솔에서 실행해 보세요:
 
-    ```js
-    person1.constructor
-    person2.constructor
-    ```
+   ```js
+   person1.constructor;
+   person2.constructor;
+   ```
 
-    두 구문 모두 `Person()` 생성자 함수를 반환할 것입니다.
+   두 구문 모두 `Person()` 생성자 함수를 반환할 것입니다.
 
-    `constructor` 속성에 괄호를 붙이고 실행하여(인자가 필요하면 전달하구요) 새 인스턴스를 생성하는 트릭이 있습니다. 어쨌든 생성자도 함수의 일종이므로 괄호를 붙이면 실행할 수 있습니다; new 키워드를 통해 실행하면 함수를 인스턴스를 생성하기 위한 생성자로 사용할 수 있죠.
+   `constructor` 속성에 괄호를 붙이고 실행하여(인자가 필요하면 전달하구요) 새 인스턴스를 생성하는 트릭이 있습니다. 어쨌든 생성자도 함수의 일종이므로 괄호를 붙이면 실행할 수 있습니다; new 키워드를 통해 실행하면 함수를 인스턴스를 생성하기 위한 생성자로 사용할 수 있죠.
 
 2. 아래 코드를 실행해 보세요:
 
-    ```js
-    var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
-    ```
+   ```js
+   var person3 = new person1.constructor("Karen", "Stephenson", 26, "female", [
+     "playing drums",
+     "mountain climbing",
+   ]);
+   ```
 
 3. 새로 생성된 객체를 테스트 해보세요, 아래처럼요:
 
-    ```js
-    person3.name.first
-    person3.age
-    person3.bio()
-    ```
+   ```js
+   person3.name.first;
+   person3.age;
+   person3.bio();
+   ```
 
 잘 동작함을 알 수 있습니다. 이런 방식을 자주 사용할 필요는 없지만 실행 도중 명시적인 생성자 함수를 예측할 수 없는 상황에서 인스턴스를 생성해야 하거나 하는 경우 유용하게 사용할 수 있는 방법입니다.
 
 [`constructor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 속성은 여러 사용법이 있습니다. 예를 들어 인스턴스의 생성자 이름이 필요한 경우 아래의 코드로 알아낼 수 있습니다:
 
 ```js
-instanceName.constructor.name
+instanceName.constructor.name;
 ```
 
 아래 코드도 시험해 보세요:
 
 ```js
-person1.constructor.name
+person1.constructor.name;
 ```
 
 > **참고:** `constructor.name` 는 변경이 가능하므로(상속이나 바인딩, 전처리, 트랜스파일러 등에 의해) 복잡한 로직에 적용하기 위해서는 [`instanceof`](/ko/docs/Web/JavaScript/Reference/Operators/instanceof) 연산자를 사용하세요.
@@ -198,17 +200,17 @@ person1.constructor.name
 
 1. [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 예제로 돌아가서 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)를 다운 받으세요. 기존 코드에 아래 샘플 코드를 추가하여 `prototype` 속성에 새 메소드를 추가하세요:
 
-    ```js
-    Person.prototype.farewell = function() {
-      alert(this.name.first + ' has left the building. Bye for now!');
-    };
-    ```
+   ```js
+   Person.prototype.farewell = function () {
+     alert(this.name.first + " has left the building. Bye for now!");
+   };
+   ```
 
 2. 저장한 코드를 브라우저로 실행하고 콘솔에서 아래 코드를 실행해 보세요.
 
-    ```js
-    person1.farewell();
-    ```
+   ```js
+   person1.farewell();
+   ```
 
 생성자에서 지정했던 person의 name이 alert 창으로 출력되는 것을 확인할 수 있습니다. 매우 유용한 기능이지만 중요한 점은 prototype에 새 메소드를 추가하는 순간 동일한 생성자로 생성된 모든 객체에서 추가된 메소드를 바로 사용할 수 있다는 점입니다.
 
@@ -216,15 +218,17 @@ person1.constructor.name
 
 ```js
 function Person(first, last, age, gender, interests) {
-
   // 속성과 메소드 정의
-
 }
 
-var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
+var person1 = new Person("Tammi", "Smith", 32, "neutral", [
+  "music",
+  "skiing",
+  "kickboxing",
+]);
 
-Person.prototype.farewell = function() {
-  alert(this.name.first + ' has left the building. Bye for now!');
+Person.prototype.farewell = function () {
+  alert(this.name.first + " has left the building. Bye for now!");
 };
 ```
 
@@ -235,13 +239,13 @@ Person.prototype.farewell = function() {
 prototype에 속성을 정의하는 경우는 별로 본 적이 없을겁니다. 왜냐면 별로 좋은 방법이 아니거든요. 속성을 추가할 때 아래와 같이 할 수 있습니다:
 
 ```js
-Person.prototype.fullName = 'Bob Smith';
+Person.prototype.fullName = "Bob Smith";
 ```
 
 사람들이 항상 밥 스미스로 부르지 않을 수 있으니 별로 좋은 방법 같지는 않아 보입니다. `fullname`을 `name.first`와 `name.last`로 나누어 보죠:
 
 ```js
-Person.prototype.fullName = this.name.first + ' ' + this.name.last;
+Person.prototype.fullName = this.name.first + " " + this.name.last;
 ```
 
 이 경우 `this`는 함수 범위가 아닌 전역 범위를 가리키므로 코드가 의도대로 동작하지 않습니다. 이대로 실행해도 `undefined undefined`만 볼 수 있죠. 윗 절에서 프로토타입에 정의한 메소드 내에서는 정상적으로 동작하는데 이는 코드가 함수 범위 내에 있으며 객체의 멤버 함수로써 동작하기에 객체 범위로 전환되었기 때문입니다. 따라서 프로토타입에 상수(한 번 할당하면 변하지 않는 값)를 정의하는 것은 가능하지만 일반적으로 생성자에서 정의하는 것이 낫습니다.

@@ -1,7 +1,6 @@
 ---
 title: Unix time (UNIX 時間)
 slug: Glossary/Unix_time
-original_slug: Web/API/DOMTimeStamp
 l10n:
   sourceCommit: af32ed24e243178cd060769b7c707afcc271f9f6
 ---

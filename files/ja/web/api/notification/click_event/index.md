@@ -1,7 +1,6 @@
 ---
-title: 'Notification: click イベント'
+title: "Notification: click イベント"
 slug: Web/API/Notification/click_event
-original_slug: Web/API/Notification/onclick
 l10n:
   sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
@@ -17,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('click', (event) => { });
+addEventListener("click", (event) => {});
 
-onclick = (event) => { };
+onclick = (event) => {};
 ```
 
 ## イベント型
@@ -33,8 +32,8 @@ onclick = (event) => { };
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open('http://www.mozilla.org', '_blank');
-}
+  window.open("http://www.mozilla.org", "_blank");
+};
 ```
 
 ## 仕様書

@@ -1,16 +1,6 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -64,14 +54,14 @@ Object.defineProperties(obj, props)
 
 ```js
 Object.defineProperties(obj, {
-  'property1': {
+  property1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  'property2': {
-    value: 'Hello',
-    writable: false
-  }
+  property2: {
+    value: "Hello",
+    writable: false,
+  },
   // и т.д.
 });
 ```
@@ -89,52 +79,52 @@ function defineProperties(obj, properties) {
 
     function isCallable(v) {
       // NB: изменить при необходимости считать вызываемым что-то ещё, кроме функций.
-      return typeof v === 'function';
+      return typeof v === "function";
     }
 
-    if (typeof desc !== 'object' || desc === null) {
-      throw new TypeError('bad desc');
+    if (typeof desc !== "object" || desc === null) {
+      throw new TypeError("bad desc");
     }
 
     var d = {};
 
-    if (hasProperty(desc, 'enumerable')) {
+    if (hasProperty(desc, "enumerable")) {
       d.enumerable = !!obj.enumerable;
     }
-    if (hasProperty(desc, 'configurable')) {
+    if (hasProperty(desc, "configurable")) {
       d.configurable = !!obj.configurable;
     }
-    if (hasProperty(desc, 'value')) {
+    if (hasProperty(desc, "value")) {
       d.value = obj.value;
     }
-    if (hasProperty(desc, 'writable')) {
+    if (hasProperty(desc, "writable")) {
       d.writable = !!desc.writable;
     }
-    if (hasProperty(desc, 'get')) {
+    if (hasProperty(desc, "get")) {
       var g = desc.get;
 
-      if (!isCallable(g) && g !== 'undefined') {
-        throw new TypeError('bad get');
+      if (!isCallable(g) && g !== "undefined") {
+        throw new TypeError("bad get");
       }
       d.get = g;
     }
-    if (hasProperty(desc, 'set')) {
+    if (hasProperty(desc, "set")) {
       var s = desc.set;
-      if (!isCallable(s) && s !== 'undefined') {
-        throw new TypeError('bad set');
+      if (!isCallable(s) && s !== "undefined") {
+        throw new TypeError("bad set");
       }
       d.set = s;
     }
 
-    if (('get' in d || 'set' in d) && ('value' in d || 'writable' in d)) {
-      throw new TypeError('identity-confused descriptor');
+    if (("get" in d || "set" in d) && ("value" in d || "writable" in d)) {
+      throw new TypeError("identity-confused descriptor");
     }
 
     return d;
   }
 
-  if (typeof obj !== 'object' || obj === null) {
-    throw new TypeError('bad obj');
+  if (typeof obj !== "object" || obj === null) {
+    throw new TypeError("bad obj");
   }
 
   properties = Object(properties);

@@ -1,11 +1,6 @@
 ---
 title: Функции первого класса
 slug: Glossary/First-class_Function
-tags:
-  - Glossary
-  - Глоссарий
-translation_of: Glossary/First-class_Function
-original_slug: Глоссарий/First-class_Function
 ---
 
 Если язык программирования имеет функции первого класса, то значит они трактуются как объекты, то есть могут быть переданы другим функциям и их можно вернуть из функций. Так же их можно присваивать переменным.

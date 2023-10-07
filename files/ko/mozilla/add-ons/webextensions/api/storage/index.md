@@ -2,6 +2,7 @@
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
+
 {{AddonSidebar}}
 
 웹확장이 데이터를 저장하고, 확인하고, 저장된 항목의 변화를 감시할 수 있도록 해 준다.
@@ -17,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 각 웹확장은 자신만의 저장소를 따로 가진다. which can be split into different types of storage.
 
-이 API는 {{domxref("Window.localStorage")}}와 비슷하지만, 확장 코드가 확장 관련 데이터를 저장하는데 `Window.localStorage`를 사용하지 말 것을 권장한다. 사적이 이유로 사용자가 방문 기록이나 데이터를 지우는 다양한 상황에서 확장이 localStorage API로 저장된 데이터는 지워지지만, [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API로 저장한 데이터는 정확하게 유지된다.
+이 API는 {{domxref("Window.localStorage")}}와 비슷하지만, 확장 코드가 확장 관련 데이터를 저장하는데 `Window.localStorage`를 사용하지 말 것을 권장한다. 사적이 이유로 사용자가 방문 기록이나 데이터를 지우는 다양한 상황에서 확장이 localStorage API로 저장된 데이터는 지워지지만, [`storage.local`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API로 저장한 데이터는 정확하게 유지된다.
 
 ## 자료형
 

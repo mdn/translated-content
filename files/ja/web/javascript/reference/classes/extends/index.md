@@ -35,7 +35,7 @@ class Square extends Polygon {
     super(length, length);
     // 注: 派生クラスでは、 'this' を使う前に super() を
     // 呼び出さなくてはなりません。さもないと参照エラーになります。
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -50,10 +50,24 @@ class Square extends Polygon {
 
 ```js
 class myDate extends Date {
-
   getFormattedDate() {
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```

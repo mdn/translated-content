@@ -42,10 +42,10 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 
 ## Especificações
 
-| Especificação                                                            | Status   | Comentários       |
-| ------------------------------------------------------------------------ | -------- | ----------------- |
+| Especificação                                          | Status   | Comentários       |
+| ------------------------------------------------------ | -------- | ----------------- |
 | {{RFC(8288, "Link Serialisation in HTTP Headers", 3)}} | IETF RFC |                   |
-| {{RFC(5988, "The Link Header Field", 5)}}                 | IETF RFC | Definição inicial |
+| {{RFC(5988, "The Link Header Field", 5)}}              | IETF RFC | Definição inicial |
 
 ## Compatibilidade com navegadores
 

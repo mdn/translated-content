@@ -1,13 +1,6 @@
 ---
 title: counter()
 slug: Web/CSS/counter
-tags:
-  - CSS
-  - Compteur CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/counter()
-original_slug: Web/CSS/counter()
 ---
 
 {{CSSRef}}
@@ -67,8 +60,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -100,8 +93,11 @@ li {
 }
 
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 

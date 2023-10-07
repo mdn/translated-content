@@ -1,7 +1,6 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/values
 ---
 
 {{JSRef}}
@@ -32,24 +31,33 @@ El método `Object.values()` devuelve un array cuyos elementos son valores de pr
 ## Ejemplos
 
 ```js
-var obj = { foo: 'bar', baz: 42 };
+var obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // array como objeto
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.values(obj)); // ['a', 'b', 'c']
 
 // array como objeto con una ordenación aleatoria de las claves
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.values(an_obj)); // ['b', 'c', 'a']
 
 // getFoo no es una propiedade enumerable, por lo que como se observa, no se devuelve
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
+my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 
 // parámetros que no son Objetos se fuerzan a que se comporten como tal
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+console.log(Object.values("foo")); // ['f', 'o', 'o']
 ```
 
 ## Polyfill

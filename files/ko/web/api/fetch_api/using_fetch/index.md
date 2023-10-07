@@ -37,25 +37,25 @@ async function logJSONData() {
 
 ```js
 // POST 메서드 구현 예제
-async function postData(url = '', data = {}) {
+async function postData(url = "", data = {}) {
   // 옵션 기본 값은 *로 강조
   const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE 등
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+    method: "POST", // *GET, POST, PUT, DELETE 등
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify(data), // body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 함
   });
   return response.json(); // JSON 응답을 네이티브 JavaScript 객체로 파싱
 }
 
-postData('https://example.com/answer', { answer: 42 }).then((data) => {
+postData("https://example.com/answer", { answer: 42 }).then((data) => {
   console.log(data); // JSON 데이터가 `data.json()` 호출에 의해 파싱됨
 });
 ```
@@ -99,8 +99,8 @@ abortBtn.addEventListener("click", () => {
 브라우저가 요청을 전송할 때 자격 증명을 포함하도록 하려면 `fetch()` 메서드에 전달하는 `init` 객체에 `credential: 'include'`를 추가하세요. 동일 출처와 교차 출처 요청 모두에 사용할 수 있습니다.
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include',
+fetch("https://example.com", {
+  credentials: "include",
 });
 ```
 
@@ -113,16 +113,16 @@ fetch('https://example.com', {
 ```js
 // 스크립트의 출처도 'https://example.com'
 
-fetch('https://example.com', {
-  credentials: 'same-origin',
+fetch("https://example.com", {
+  credentials: "same-origin",
 });
 ```
 
 브라우저가 요청에서 자격 증명을 전송하지 않도록 하려면 `credentials: 'omit'`을 사용하세요.
 
 ```js
-fetch('https://example.com', {
-  credentials: 'omit',
+fetch("https://example.com", {
+  credentials: "omit",
 });
 ```
 
@@ -215,11 +215,11 @@ uploadMultiple(formData);
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder('utf-8');
+  const utf8Decoder = new TextDecoder("utf-8");
   const response = await fetch(fileURL);
   const reader = response.body.getReader();
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : '';
+  chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
   const re = /\n|\r|\r\n/gm;
   let startIndex = 0;
@@ -233,7 +233,7 @@ async function* makeTextFileLineIterator(fileURL) {
       }
       let remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }
@@ -319,36 +319,36 @@ const anotherRequest = new Request(myRequest, myInit);
 {{domxref("Headers")}} 인터페이스의 {{domxref("Headers.Headers", "Headers()")}} 생성자를 사용해서 자신만의 헤더 객체를 생성할 수 있습니다. 헤더 객체는 이름과 값을 연결하는 간단한 맵입니다.
 
 ```js
-const content = 'Hello World';
+const content = "Hello World";
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/plain');
-myHeaders.append('Content-Length', content.length.toString());
-myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+myHeaders.append("Content-Type", "text/plain");
+myHeaders.append("Content-Length", content.length.toString());
+myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
 ```
 
 생성자에 2차원 배열이나 객체 리터럴을 전달하는 것으로도 같은 결과를 얻을 수 있습니다.
 
 ```js
 const myHeaders = new Headers({
-  'Content-Type': 'text/plain',
-  'Content-Length': content.length.toString(),
-  'X-Custom-Header': 'ProcessThisImmediately',
+  "Content-Type": "text/plain",
+  "Content-Length": content.length.toString(),
+  "X-Custom-Header": "ProcessThisImmediately",
 });
 ```
 
 헤더의 내용은 아래와 같이 가져올 수 있습니다.
 
 ```js
-console.log(myHeaders.has('Content-Type')); // true
-console.log(myHeaders.has('Set-Cookie')); // false
-myHeaders.set('Content-Type', 'text/html');
-myHeaders.append('X-Custom-Header', 'AnotherValue');
+console.log(myHeaders.has("Content-Type")); // true
+console.log(myHeaders.has("Set-Cookie")); // false
+myHeaders.set("Content-Type", "text/html");
+myHeaders.append("X-Custom-Header", "AnotherValue");
 
-console.log(myHeaders.get('Content-Length')); // 11
-console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
+console.log(myHeaders.get("Content-Length")); // 11
+console.log(myHeaders.get("X-Custom-Header")); // ['ProcessThisImmediately', 'AnotherValue']
 
-myHeaders.delete('X-Custom-Header');
-console.log(myHeaders.get('X-Custom-Header')); // null
+myHeaders.delete("X-Custom-Header");
+console.log(myHeaders.get("X-Custom-Header")); // null
 ```
 
 헤더 객체의 몇몇 작업은 [서비스 워커](/ko/docs/Web/API/Service_Worker_API)에서나 유용하지만, 그래도 훨씬 편한 API를 통해서 헤더를 조작할 수 있습니다.
@@ -358,9 +358,9 @@ console.log(myHeaders.get('X-Custom-Header')); // null
 ```js
 const myResponse = Response.error();
 try {
-  myResponse.headers.set('Origin', 'http://mybank.com');
+  myResponse.headers.set("Origin", "http://mybank.com");
 } catch (e) {
-  console.log('은행인 척 할 수 없어요!');
+  console.log("은행인 척 할 수 없어요!");
 }
 ```
 
@@ -411,12 +411,12 @@ async function fetchJSON(request) {
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', function (event) {
+addEventListener("fetch", function (event) {
   // fetch를 가로채는 ServiceWorker
   event.respondWith(
     new Response(myBody, {
-      headers: { 'Content-Type': 'text/plain' },
-    })
+      headers: { "Content-Type": "text/plain" },
+    }),
   );
 });
 ```
@@ -451,9 +451,9 @@ addEventListener('fetch', function (event) {
 요청 본문은 `body` 속성을 설정하는 것으로 추가할 수 있습니다.
 
 ```js
-const form = new FormData(document.getElementById('login-form'));
-fetch('/login', {
-  method: 'POST',
+const form = new FormData(document.getElementById("login-form"));
+fetch("/login", {
+  method: "POST",
   body: form,
 });
 ```
@@ -471,14 +471,6 @@ if (window.fetch) {
   // XMLHttpRequest 사용하기?
 }
 ```
-
-## 명세서
-
-{{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}
 
 ## 같이 보기
 

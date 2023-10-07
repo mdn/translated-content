@@ -29,12 +29,15 @@ l10n:
 
 ```js
 function logMovement(event) {
-  log.insertAdjacentHTML('afterbegin', `移動量: ${event.movementX}, ${event.movementY}<br>`);
-  while (log.childNodes.length > 128) log.lastChild.remove()
+  log.insertAdjacentHTML(
+    "afterbegin",
+    `移動量: ${event.movementX}, ${event.movementY}<br>`,
+  );
+  while (log.childNodes.length > 128) log.lastChild.remove();
 }
 
-const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);
+const log = document.getElementById("log");
+document.addEventListener("mousemove", logMovement);
 ```
 
 ### 結果

@@ -1,8 +1,6 @@
 ---
 title: Viewport
 slug: Glossary/Viewport
-translation_of: Glossary/Viewport
-original_slug: Глоссарий/Viewport
 ---
 
 Viewport - это видимая пользователю область веб-страницы, то, что может увидеть пользователь, не прибегая к прокрутке.
@@ -15,7 +13,7 @@ Meta-тег **viewport** сообщает браузеру о том, как и�
 **Пример**:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 ### Атрибуты метатега viewport
@@ -65,7 +63,7 @@ Meta-тег **HandheldFriendly** определяет оптимизирован
 **Пример**:
 
 ```html
-<meta name="HandheldFriendly" content="true">
+<meta name="HandheldFriendly" content="true" />
 ```
 
 Meta-тег **MobileOptimized** (<http://goo.gl/ZpLjZz>) задаёт ширину области просмотра в мобильных браузеров IE Mobile или Pocket IE. Является аналогом атрибута **width** в meta-теге **viewport**.
@@ -74,9 +72,9 @@ Meta-тег **MobileOptimized** (<http://goo.gl/ZpLjZz>) задаёт ширин
 
 ```html
 <!-- фиксированная ширина в 320 пикселей -->
-<meta name="MobileOptimized" content="320">
+<meta name="MobileOptimized" content="320" />
 <!-- ширина страницы в соответствии с размером экрана, аналог device-width -->
-<meta name="MobileOptimized" content="width">
+<meta name="MobileOptimized" content="width" />
 ```
 
 Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позволяет странице работать в полноэкранном режиме, актуален для мобильных устройств Apple.
@@ -84,7 +82,7 @@ Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позво
 **Пример**:
 
 ```html
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
 ```
 
 ## Рекомендованный набор метатегов
@@ -92,10 +90,10 @@ Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позво
 Используемый мной набор meta-тегов для сайтов с адаптивным дизайном, заточенным под мобильные устройства:
 
 ```html
-<meta name='viewport' content='width=device-width,initial-scale=1'/>
-<meta content='true' name='HandheldFriendly'/>
-<meta content='width' name='MobileOptimized'/>
-<meta content='yes' name='apple-mobile-web-app-capable'/>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta content="true" name="HandheldFriendly" />
+<meta content="width" name="MobileOptimized" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
 ```
 
 ## Читать больше

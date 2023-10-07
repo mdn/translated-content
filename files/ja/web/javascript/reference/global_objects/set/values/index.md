@@ -1,37 +1,41 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`values()`** メソッドは、新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは `Set` オブジェクトの各要素の値を挿入順に返します。
-
-> **メモ:** **`keys()`** メソッドは（{{jsxref("Map")}} オブジェクトと似せるため）このメソッドに対するエイリアスになっています。まったく同じように動作し、 `Set` の各要素の**値**を返します。
+**`values()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これはこの集合のそれぞれの要素をの値を挿入順に返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 values()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-新しいイテレーターオブジェクトで、この `Set` オブジェクト内のそれぞれの要素の値を返します。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 例
 
 ### values() の使用
 
 ```js
-var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+const mySet = new Set();
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
-var setIter = mySet.values();
+const setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
@@ -49,3 +53,4 @@ console.log(setIter.next().value); // "baz"
 ## 関連情報
 
 - {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}

@@ -979,8 +979,9 @@ A cor da linha (uma div preenchida com cor) se adapta à cor de sua propriedade 
 
 ```html
 <div style="color:darkred">
-A cor deste texto é a mesma da linha:  <div style="background:currentcolor; height:1px"></div>
- Mais algum texto.
+  A cor deste texto é a mesma da linha:
+  <div style="background:currentcolor; height:1px"></div>
+  Mais algum texto.
 </div>
 ```
 
@@ -990,8 +991,9 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 ```html
 <div style="color:blue; border-bottom: 1px dashed currentcolor;">
-A cor deste texto é a mesma da linha:  <div style="background:currentcolor; height:1px"></div>
- Mais algum texto.
+  A cor deste texto é a mesma da linha:
+  <div style="background:currentcolor; height:1px"></div>
+  Mais algum texto.
 </div>
 ```
 
@@ -1003,9 +1005,9 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
+- [Hexadecimal notation](/pt-BR/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
   - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
+- [`rgb()`](/pt-BR/docs/Web/CSS/color_value/rgb) or [`rgba()`](/pt-BR/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ```plain
@@ -1042,7 +1044,7 @@ Colors can also be defined via hue, saturation, and lightness, or HSL, by using 
 
 Saturation and lightness are represented as percentages.
 `100%` is full **saturation**, and `0%` is a shade of grey.
-`100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is “normal.”
+`100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
 
 ```css
 hsl(0,  100%,50%)    /* red */
@@ -1087,9 +1089,9 @@ hsl(240 100% 50% / 5%) /* 5% opaque blue with percentage value for alpha */
 
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
+- [Hexadecimal notation](/pt-BR/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
   - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
+- [`rgb()`](/pt-BR/docs/Web/CSS/color_value/rgb) or [`rgba()`](/pt-BR/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ```css
@@ -1291,12 +1293,12 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
 ## Specificações
 
-| Specificação                                                                                     | Estado                           | Comentário                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS4 Colors')}} | Added `rebeccapurple`, four- (`#RGBA`) and eight-digit (`#RRGGBBAA`) hexadecimal notations, `rgba()` and `hsla()` as aliases of `rgb()` and `hsl()` (both with identical parameter syntax), space-separated function parameters rather than commas, percentages for alpha values, and angles for the hue component in `hsl()` colors. |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS3 Colors')}} | Deprecated system-colors; added SVG colors; added `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                                    |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}         | Added the `orange` color and the system-colors.                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                         | {{Spec2('CSS1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                   |
+| Specificação                                                            | Estado                   | Comentário                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}             | {{Spec2('CSS4 Colors')}} | Added `rebeccapurple`, four- (`#RGBA`) and eight-digit (`#RRGGBBAA`) hexadecimal notations, `rgba()` and `hsla()` as aliases of `rgb()` and `hsl()` (both with identical parameter syntax), space-separated function parameters rather than commas, percentages for alpha values, and angles for the hue component in `hsl()` colors. |
+| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}             | {{Spec2('CSS3 Colors')}} | Deprecated system-colors; added SVG colors; added `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                                    |
+| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}      | Added the `orange` color and the system-colors.                                                                                                                                                                                                                                                                                       |
+| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                   | {{Spec2('CSS1')}}        | Initial definition.                                                                                                                                                                                                                                                                                                                   |
 
 ## Compatibilidade com navegadores
 

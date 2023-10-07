@@ -33,7 +33,7 @@ const myMap = new Map();
 myMap.set("bar", "foo");
 
 console.log(myMap.delete("bar")); // 返回 true。成功地移除元素
-console.log(myMap.has("bar"));    // 返回 false。"bar" 元素将不再存在于 Map 实例中
+console.log(myMap.has("bar")); // 返回 false。"bar" 元素将不再存在于 Map 实例中
 ```
 
 ## 规范

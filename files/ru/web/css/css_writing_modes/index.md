@@ -1,10 +1,6 @@
 ---
 title: Режимы письма CSS
 slug: Web/CSS/CSS_writing_modes
-tags:
-  - CSS
-  - Режимы письма
-translation_of: Web/CSS/CSS_Writing_Modes
 ---
 
 {{CSSRef}}
@@ -29,8 +25,8 @@ translation_of: Web/CSS/CSS_Writing_Modes
 
 ## Спецификации
 
-| Specification                                    | Status                                   | Comment            |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Writing Modes')}}     | {{Spec2('CSS3 Writing Modes')}} |                    |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                 |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                 | Initial definition |
+| Specification                       | Status                          | Comment            |
+| ----------------------------------- | ------------------------------- | ------------------ |
+| {{SpecName('CSS3 Writing Modes')}}  | {{Spec2('CSS3 Writing Modes')}} |                    |
+| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}             |                    |
+| {{SpecName('CSS1')}}                | {{Spec2('CSS1')}}               | Initial definition |

@@ -1,8 +1,6 @@
 ---
-title: 'CSP : style-src-elem'
+title: "CSP : style-src-elem"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
-translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
-browser-compat: http.headers.csp.Content-Security-Policy.style-src-elem
 ---
 
 {{HTTPSidebar}}

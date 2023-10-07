@@ -1,8 +1,6 @@
 ---
 title: CSS Ruby Layout
 slug: Web/CSS/CSS_ruby_layout
-translation_of: Web/CSS/CSS_Ruby
-original_slug: Web/CSS/CSS_Ruby
 ---
 
 {{CSSRef}}
@@ -22,6 +20,6 @@ _None._
 
 ## Specifications
 
-| Specification                    | Status                       | Comment            |
-| -------------------------------- | ---------------------------- | ------------------ |
+| Specification             | Status                 | Comment            |
+| ------------------------- | ---------------------- | ------------------ |
 | {{SpecName('CSS3 Ruby')}} | {{Spec2('CSS3 Ruby')}} | Initial definition |

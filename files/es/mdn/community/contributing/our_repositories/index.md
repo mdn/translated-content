@@ -1,7 +1,6 @@
 ---
 title: Repositorios de documentación web de MDN
 slug: MDN/Community/Contributing/Our_repositories
-page-type: mdn-community-guide
 ---
 
 {{MDNSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: IDBRequest.error
 slug: Web/API/IDBRequest/error
-tags:
-  - API
-  - Error
-  - IDBRequest
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBRequest/error
 ---
 
 {{APIRef("IndexedDB")}}
@@ -48,12 +40,14 @@ On dispose également d'une fonction `onerror` qui permet d'indiquer l'erreur qu
 var title = "Walk dog";
 
 // On ouvre une transaction
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // On récupère la liste de tâches avec ce titre
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // On récupère l'objet du résultat
   var data = objectStoreTitleRequest.result;
 
@@ -67,15 +61,18 @@ objectStoreTitleRequest.onsuccess = function() {
   // Lorsque la requête est réussie, on utilise à nouveau
   // la fonction the displayData() pour mettre à jour
   // l'affichage
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };
 
-objectStoreTitleRequest.onerror = function() {
+objectStoreTitleRequest.onerror = function () {
   // S'il se produit une erreur pendant la requête
   // on l'enregistre
-  console.log("Il y a eu une erreur pour la récupération des données : " + objectStoreTitleRequest.error);
+  console.log(
+    "Il y a eu une erreur pour la récupération des données : " +
+      objectStoreTitleRequest.error,
+  );
 };
 ```
 

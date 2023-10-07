@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/createTexture
 ---
 
 {{APIRef("WebGL")}}
@@ -31,13 +23,13 @@ Un objet {{domxref("WebGLTexture")}} auquel des images peuvent être liées.
 
 ## Exemples
 
-Voir aussi le [tutoriel WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial) sur l'[Utilisation de textures en WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+Voir aussi le [tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) sur l'[Utilisation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 ### Création d'une texture
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var texture = gl.createTexture();
 ```
 

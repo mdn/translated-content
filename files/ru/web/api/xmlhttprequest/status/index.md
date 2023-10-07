@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-tags:
-  - API
-  - Error
-  - Property
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
-  - result
-  - status
-translation_of: Web/API/XMLHttpRequest/status
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -22,18 +12,18 @@ translation_of: Web/API/XMLHttpRequest/status
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest;
-console.log('UNSENT: ', xhr.status);
+var xhr = new XMLHttpRequest();
+console.log("UNSENT: ", xhr.status);
 
-xhr.open('GET', '/server');
-console.log('OPENED: ', xhr.status);
+xhr.open("GET", "/server");
+console.log("OPENED: ", xhr.status);
 
 xhr.onprogress = function () {
-  console.log('LOADING: ', xhr.status);
+  console.log("LOADING: ", xhr.status);
 };
 
 xhr.onload = function () {
-  console.log('DONE: ', xhr.status);
+  console.log("DONE: ", xhr.status);
 };
 
 xhr.send();

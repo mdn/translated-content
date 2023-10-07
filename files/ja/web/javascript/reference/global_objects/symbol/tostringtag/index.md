@@ -14,19 +14,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ### 既定のタグ
 
 ```js
-Object.prototype.toString.call('foo');     // "[object String]"
-Object.prototype.toString.call([1, 2]);    // "[object Array]"
-Object.prototype.toString.call(3);         // "[object Number]"
-Object.prototype.toString.call(true);      // "[object Boolean]"
+Object.prototype.toString.call("foo"); // "[object String]"
+Object.prototype.toString.call([1, 2]); // "[object Array]"
+Object.prototype.toString.call(3); // "[object Number]"
+Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null);      // "[object Null]"
+Object.prototype.toString.call(null); // "[object Null]"
 // ... and more
 ```
 
 ### 組込み toStringTag シンボル
 
 ```js
-Object.prototype.toString.call(new Map());       // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
@@ -49,7 +49,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 ```js
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 
@@ -61,9 +61,9 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 [WebIDL の仕様変更](https://github.com/whatwg/webidl/pull/357)が 2020 年半ばに行われた関係で、ブラウザーはすべての DOM プロトタイプオブジェクトに `Symbol.toStringTag` プロパティを追加するようになりました。例えば、{{domxref("HTMLButtonElement")}} の `Symbol.toStringTag` プロパティにアクセスするには次のようにします。
 
 ```js
-let test = document.createElement('button');
+let test = document.createElement("button");
 test.toString(); // Returns [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Returns HTMLButtonElement
+test[Symbol.toStringTag]; // Returns HTMLButtonElement
 ```
 
 ## 仕様書

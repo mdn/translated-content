@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/proto
 ---
 
 > **Advertencia:** Cambiar la propiedad `[[Prototype]]` de un objeto es, por como los navegadores modernos optimizan las propiedades de acceso, una operación muy lenta en **_todos_** los navegadores y motores JavaScript. Los efectos en el rendimiento de alterar la herencia son muchos y delicados, y no se limita simplemente al tiempo que necesita la asignación `obj.__proto__ = ...` sentencia, sin embargo afecta a **_cualquier_** código que tiene acceso a **_cualquier_** objeto cuya propiedad `[[Prototype]]` ha sido alterada, por lo que se debe de tener mucho cuidado.Si el rendimiento en tu aplicación es necesario, deberías evitar modificar la propiedad `[[Prototype]]` de un objeto. En su lugar, crea un objecto nuevo con la propiedad `[[Prototype]]` deseada usando {{jsxref("Object.create()")}}.

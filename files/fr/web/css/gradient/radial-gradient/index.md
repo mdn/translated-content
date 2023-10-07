@@ -1,8 +1,6 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-translation_of: Web/CSS/gradient/radial-gradient
-browser-compat: css.types.image.gradient.radial-gradient
 ---
 
 {{CSSRef}}
@@ -29,20 +27,22 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
 - `<ending-shape>`
   - : La forme du contour du dégradé. Elle vaut soit `circle` (la forme du dégradé sera un cercle de rayon constant) ou `ellipse` (la forme est une ellipse alignée sur les axes). La valeur par défaut est `ellipse`.
 - `<size>`
+
   - : La taille du contour du dégradé. La valeur par défaut est `farthest-corner`. Cette taille peut être définie explicitement ou décrite par un mot-clé. Pour les définitions des mots-clés qui suivent, on considèrera que les bords de la boîte du dégradé s'étendent indéfiniment dans les deux directions (plutôt que d'être finies).
 
     Les dégradés circulaires et elliptiques prennent en charge les mots-clés suivants pour `<size>`&nbsp;:
 
-    | Mot-clé           | Description                                                                                                                                                                     |
-    | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | Mot-clé           | Description                                                                                                                                                                                        |
+    | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | `closest-side`    | La forme du contour du dégradé touche le côté de la boîte le plus proche du centre (pour les cercles) ou touche les côtés horizontaux et verticaux les plus proches du centre (pour les ellipses). |
-    | `closest-corner`  | La forme du contour du dégradé est dimensionnée afin de toucher exactement le coin de la boîte le plus proche du centre.                                                                    |
-    | `farthest-side`   | Cette valeur fonctionne de façon semblable à `closest-side`, sauf que ce seront les côtés les plus éloignés qui seront utilisés.                            |
-    | `farthest-corner` | La valeur par défaut. Cette valeur fonctionne de façon semblable à `closest-corner`, sauf que ce sera le coin le plus éloigné du centre qui sera utilisé.                                                |
+    | `closest-corner`  | La forme du contour du dégradé est dimensionnée afin de toucher exactement le coin de la boîte le plus proche du centre.                                                                           |
+    | `farthest-side`   | Cette valeur fonctionne de façon semblable à `closest-side`, sauf que ce seront les côtés les plus éloignés qui seront utilisés.                                                                   |
+    | `farthest-corner` | La valeur par défaut. Cette valeur fonctionne de façon semblable à `closest-corner`, sauf que ce sera le coin le plus éloigné du centre qui sera utilisé.                                          |
 
     Si `<ending-shape>` est définie avec `circle`, la taille pourra être fournie explicitement avec une valeur [`<length>`](/fr/docs/Web/CSS/length), qui indique le rayon du cercle (les valeurs négatives sont invalides).
 
     Si `<ending-shape>` est définie avec `ellipse` (ou que cette valeur est omise), la taille pourra être indiquée explicitement avec une valeur [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) dont les deux composantes fournissent une taille d'ellipse explicite (la première représentant le rayon horizontal et la seconde le rayon vertical). Les valeurs exprimées en pourcentages sont alors relatives à la dimension correspondante de la boîte du dégradé. Les valeurs négatives sont invalides.
+
 - `<linear-color-stop>`
   - : Une valeur d'arrêt de couleur, composée d'une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions d'arrêt optionnelles (définies par une valeur [`<percentage>`](/fr/docs/Web/CSS/percentage) ou [`<length>`](/fr/docs/Web/CSS/length) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur de `0`, représentera le centre du dégradé&nbsp;; la valeur `100%` représentera l'intersection de la forme du contour avec la ligne d'évolution du dégradé. Les valeurs de pourcentages intermédiaire sont positionnées linéairement le long du dégradé. Inclure deux fois la même position pour deux arrêts différents revient à créer une rupture franche entre les deux couleurs.
 - `<color-hint>`
@@ -112,8 +112,11 @@ Les arrêts de couleurs sont positionnés selon une ligne virtuelle qui part du 
 
 ```css
 .radial-gradient {
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f35 0%, #43e 100%);
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 0%,
+    #43e 100%
+  );
 }
 ```
 

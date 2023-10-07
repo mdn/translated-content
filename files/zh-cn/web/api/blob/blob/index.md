@@ -25,7 +25,7 @@ var aBlob = new Blob( array, options );
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // 一个包含 DOMString 的数组
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // 得到 blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // 得到 blob
 ```
 
 ## 标准

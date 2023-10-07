@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -53,9 +45,9 @@ console.log(date.toLocaleTimeString());
 ```js
 function toLocaleTimeStringSupportsLocales() {
   try {
-    new Date().toLocaleTimeString('i');
+    new Date().toLocaleTimeString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -72,24 +64,24 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles для локали США
 
 // В американском английском используется 12-часовой формат времени
-console.log(date.toLocaleTimeString('en-US'));
+console.log(date.toLocaleTimeString("en-US"));
 // → "7:00:00 PM"
 
 // В британском английском используется 24-часовой формат времени
-console.log(date.toLocaleTimeString('en-GB'));
+console.log(date.toLocaleTimeString("en-GB"));
 // → "03:00:00"
 
 // В корейском используется 12-часовой формат времени
-console.log(date.toLocaleTimeString('ko-KR'));
+console.log(date.toLocaleTimeString("ko-KR"));
 // → "오후 12:00:00"
 
 // В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(date.toLocaleTimeString('ar-EG'));
+console.log(date.toLocaleTimeString("ar-EG"));
 // → "٧:٠٠:٠٠ م"
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(date.toLocaleTimeString(['ban', 'id']));
+console.log(date.toLocaleTimeString(["ban", "id"]));
 // → "11.00.00"
 ```
 
@@ -101,12 +93,12 @@ console.log(date.toLocaleTimeString(['ban', 'id']));
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Приложение может захотеть использовать UTC и показать это
-const options = { timeZone: 'UTC', timeZoneName: 'short' };
-console.log(date.toLocaleTimeString('en-US', options));
+const options = { timeZone: "UTC", timeZoneName: "short" };
+console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // Иногда даже в США нужен 24-х часовой формат времени
-console.log(date.toLocaleTimeString('en-US', { hour12: false }));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 ```
 
@@ -116,12 +108,12 @@ console.log(date.toLocaleTimeString('en-US', { hour12: false }));
 
 ## Спецификации
 
-| Спецификация                                                                                                                 | Статус                           | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                                                                      | Стандарт                         | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                         | {{Spec2('ES5.1')}}         |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}} | {{Spec2('ES6')}}             |                                                        |
-| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleDateString')}}                     | {{Spec2('ES Int 1.0')}} | Определяет аргументы `locales` и `options`.            |
+| Спецификация                                                                                   | Статус                  | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------ |
+| ECMAScript 3-е издание.                                                                        | Стандарт                | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                    | {{Spec2('ES5.1')}}      |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}} | {{Spec2('ES6')}}        |                                                        |
+| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleDateString')}}                 | {{Spec2('ES Int 1.0')}} | Определяет аргументы `locales` и `options`.            |
 
 ## Совместимость с браузерами
 

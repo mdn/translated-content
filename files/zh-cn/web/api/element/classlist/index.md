@@ -18,8 +18,8 @@ slug: Web/API/Element/classList
 ## 示例
 
 ```js
-const div = document.createElement('div');
-div.className = 'foo';
+const div = document.createElement("div");
+div.className = "foo";
 
 // 初始状态：<div class="foo"></div>
 console.log(div.outerHTML);
@@ -35,7 +35,7 @@ console.log(div.outerHTML);
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 console.log(div.classList.contains("foo"));
 

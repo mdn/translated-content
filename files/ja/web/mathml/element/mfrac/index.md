@@ -28,9 +28,9 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 - `linethickness`
   - : 分数の水平線の太さ。既定値は `medium` で、`thin`、`thick` や、それ以外の [length 値](/ja/docs/CSS/length) が取り得ます。
 - `mathbackground`
-  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)を使用できます。
+  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。
 - `mathcolor`
-  - : 数式自体 (テキストと分数線) の色を設定するために使われます。`#rgb`、`#rrggbb` のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)を使用できます。
+  - : 数式自体 (テキストと分数線) の色を設定するために使われます。`#rgb`、`#rrggbb` のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。
 - `numalign` {{deprecated_inline}}
   - : 分数の上に分子をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
     この属性は、非推奨で将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/text-align) を使用してください。
@@ -44,14 +44,14 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 ```html
 <math>
   <mfrac bevelled="true">
-     <mfrac>
-        <mi> a </mi>
-        <mi> b </mi>
-     </mfrac>
-     <mfrac>
-        <mi> c </mi>
-        <mi> d </mi>
-     </mfrac>
+    <mfrac>
+      <mi> a </mi>
+      <mi> b </mi>
+    </mfrac>
+    <mfrac>
+      <mi> c </mi>
+      <mi> d </mi>
+    </mfrac>
   </mfrac>
 </math>
 ```

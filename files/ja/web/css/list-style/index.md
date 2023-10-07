@@ -26,7 +26,7 @@ slug: Web/CSS/list-style
 list-style: square;
 
 /* image */
-list-style: url('../img/shape.png');
+list-style: url("../img/shape.png");
 
 /* position */
 list-style: inside;
@@ -35,7 +35,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/shape.png') outside;
+list-style: lower-roman url("../img/shape.png") outside;
 
 /* キーワード値 */
 list-style: none;
@@ -81,13 +81,15 @@ ul li::before {
 もう一つは、 list-style プロパティに url の値を適用する方法です。
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* こうします */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```

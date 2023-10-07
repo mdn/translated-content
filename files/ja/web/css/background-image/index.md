@@ -24,9 +24,11 @@ slug: Web/CSS/background-image
 複数の背景画像を指定するには、複数の値をカンマで区切って指定してください。
 
 ```css
-background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('catfront.png');
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
 
 /* グローバル値 */
 background-image: inherit;
@@ -67,13 +69,9 @@ background-image: unset;
 
 ```html
 <div>
-  <p class="catsandstars">
-    This paragraph is full of cats<br />and stars.
-  </p>
+  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">
-    Here are more cats for you.<br />Look at them!
-  </p>
+  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```
@@ -83,20 +81,17 @@ background-image: unset;
 ```css
 p {
   font-size: 1.5em;
-  color: #FE7F88;
+  color: #fe7f88;
   background-image: none;
   background-color: transparent;
 }
 
 div {
-  background-image:
-      url("mdn_logo_only_color.png");
+  background-image: url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
-  background-image:
-      url("startransparent.gif"),
-      url("catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```

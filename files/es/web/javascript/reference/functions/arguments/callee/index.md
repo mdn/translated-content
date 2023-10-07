@@ -1,7 +1,6 @@
 ---
 title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-original_slug: Web/JavaScript/Referencia/Funciones/arguments/callee
 ---
 
 {{jsSidebar("Functions")}}
@@ -28,12 +27,11 @@ El siguiente ejemplo define una función, la cuál, en cada turno, define y devu
 
 ```js
 function makeFactorialFunc() {
-   alert('making a factorial function!');
-   return function(x) {
-      if (x <= 1)
-         return 1;
-      return x * arguments.callee(x - 1);
-   };
+  alert("making a factorial function!");
+  return function (x) {
+    if (x <= 1) return 1;
+    return x * arguments.callee(x - 1);
+  };
 }
 
 var result = makeFactorialFunc()(5); // returns 120 (5 * 4 * 3 * 2 * 1)

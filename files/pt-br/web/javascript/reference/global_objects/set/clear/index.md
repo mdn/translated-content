@@ -22,20 +22,20 @@ var mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
-mySet.size;       // 2
+mySet.size; // 2
 mySet.has("foo"); // true
 
 mySet.clear();
 
-mySet.size;       // 0
-mySet.has("bar")  // false
+mySet.size; // 0
+mySet.has("bar"); // false
 ```
 
 ## Especificações
 
-| Especificações                                                                                       | Status                       | Comentário          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.clear', 'Set.prototype.clear')}}         | {{Spec2('ES6')}}         | Definições iniciais |
+| Especificações                                                             | Status               | Comentário          |
+| -------------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-set.prototype.clear', 'Set.prototype.clear')}}     | {{Spec2('ES6')}}     | Definições iniciais |
 | {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

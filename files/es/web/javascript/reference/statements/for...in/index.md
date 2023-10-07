@@ -1,7 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
 
 {{jsSidebar("Statements")}}
@@ -61,7 +60,7 @@ Es posible que se utilice de forma más práctica con fines de depuración, ya q
 El siguiente bucle `for...in` itera sobre todas las propiedades enumerables que no son símbolos del objeto y registra una cadena de los nombres de propiedad y sus valores.
 
 ```js
-var obj = {a: 1, b: 2, c: 3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -78,10 +77,10 @@ for (const prop in obj) {
 La siguiente función ilustra el uso de {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} — las propiedades heredadas no se muestran.
 
 ```js
-var triangle = {a: 1, b: 2, c: 3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
-  this.color = 'red';
+  this.color = "red";
 }
 
 ColoredTriangle.prototype = triangle;

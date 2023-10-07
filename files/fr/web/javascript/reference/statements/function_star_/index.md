@@ -1,16 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Generator
-  - Instruction
-  - Iterator
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/function*
-original_slug: Web/JavaScript/Reference/Instructions/function*
 ---
 
 {{jsSidebar("Statements")}}
@@ -53,7 +43,7 @@ On peut utiliser une instruction `return` dans un générateur. Lorsque cette in
 ### Exemple simple
 
 ```js
-function* creerID(){
+function* creerID() {
   var index = 0;
   while (true) {
     yield index++;
@@ -82,9 +72,9 @@ var gen = logGenerator();
 // le premier appel à next exécute la fonction depuis son
 // début jusqu'au premier yield rencontré
 gen.next();
-gen.next('bretzel');    // bretzel
-gen.next('california'); // california
-gen.next('mayonnaise'); // mayonnaise
+gen.next("bretzel"); // bretzel
+gen.next("california"); // california
+gen.next("mayonnaise"); // mayonnaise
 ```
 
 ### Exemple utilisant yield\*
@@ -95,7 +85,7 @@ function* autreGenerateur(i) {
   yield i + 2;
   yield i + 3;
 }
-function* generateur(i){
+function* generateur(i) {
   yield i;
   yield* autreGenerateur(i);
   yield i + 10;
@@ -130,11 +120,11 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 const monObj = {
-  *generator () {
+  *generator() {
     yield "a";
     yield "b";
-  }
-}
+  },
+};
 
 const gen = monObj.generator();
 
@@ -147,28 +137,28 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Toto {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
   }
 }
 
 const monObj = {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield "a";
     yield "b";
-  }
-}
+  },
+};
 
-console.log(Array.from(new Toto)); // [1, 2]
-console.log(Array.from(monObj));   // [ "a", "b"]
+console.log(Array.from(new Toto())); // [1, 2]
+console.log(Array.from(monObj)); // [ "a", "b"]
 ```
 
 ### Les générateurs ne sont pas constructibles
 
 ```js example-bad
 function* f() {}
-var obj = new f; // lève une TypeError: f n'est pas un constructeur
+var obj = new f(); // lève une TypeError: f n'est pas un constructeur
 ```
 
 ### Générateur défini avec une expression
@@ -204,6 +194,6 @@ console.log(truc.next()); // {value: 10, done: false}
 - D'autres ressources disponibles sur le Web :
 
   - [Regenerator](https://facebook.github.io/regenerator/) un compilateur permettant de traduire des générateurs ES2015 en du code JavaScript basé sur ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s) (vidéo en anglais)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s) (vidéo en anglais)
   - [Task.js](https://github.com/mozilla/task.js)
   - [Itérer de façon asynchrone sur des générateurs](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)

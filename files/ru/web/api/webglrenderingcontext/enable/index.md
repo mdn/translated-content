@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
-translation_of: Web/API/WebGLRenderingContext/enable
 ---
 
 {{APIRef("WebGL")}}
@@ -20,17 +19,17 @@ void gl.enable(cap);
 
   - : A {{domxref("GLenum")}} specifying which WebGL capability to enable. Possible values:
 
-    | Константа                     | Описание                                                                                                                                                        |
-    | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.BLEND`                    | Активирует смешение значений цветов вычисленного фрагмента. Смотри {{domxref("WebGLRenderingContext.blendFunc()")}}.                            |
-    | `gl.CULL_FACE`                | Активирует отбраковку полигонов. Смотри {{domxref("WebGLRenderingContext.cullFace()")}}.                                                       |
-    | `gl.DEPTH_TEST`               | Активирует сравнения глубин и обновления для буфера глубины. Смотри {{domxref("WebGLRenderingContext.depthFunc()")}}.                           |
-    | `gl.DITHER`                   | Activates dithering of color components before they get written to the color buffer.                                                                            |
-    | `gl.POLYGON_OFFSET_FILL`      | Activates adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                    |
-    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Activates the computation of a temporary coverage value determined by the alpha value.                                                                          |
-    | `gl.SAMPLE_COVERAGE`          | Activates ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.       |
+    | Константа                     | Описание                                                                                                                                          |
+    | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.BLEND`                    | Активирует смешение значений цветов вычисленного фрагмента. Смотри {{domxref("WebGLRenderingContext.blendFunc()")}}.                              |
+    | `gl.CULL_FACE`                | Активирует отбраковку полигонов. Смотри {{domxref("WebGLRenderingContext.cullFace()")}}.                                                          |
+    | `gl.DEPTH_TEST`               | Активирует сравнения глубин и обновления для буфера глубины. Смотри {{domxref("WebGLRenderingContext.depthFunc()")}}.                             |
+    | `gl.DITHER`                   | Activates dithering of color components before they get written to the color buffer.                                                              |
+    | `gl.POLYGON_OFFSET_FILL`      | Activates adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                      |
+    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Activates the computation of a temporary coverage value determined by the alpha value.                                                            |
+    | `gl.SAMPLE_COVERAGE`          | Activates ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.            |
     | `gl.SCISSOR_TEST`             | Activates the scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
-    | `gl.STENCIL_TEST`             | Activates stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                          |
+    | `gl.STENCIL_TEST`             | Activates stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                              |
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
@@ -57,11 +56,7 @@ gl.isEnabled(gl.DITHER);
 
 ## Specifications
 
-| Specification                                                                    | Status                               | Comment                            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "enable")}}                         | {{Spec2('WebGL')}}             | Initial definition for WebGL.      |
-| {{SpecName('OpenGL ES 2.0', "glEnable.xml", "glEnable")}}     | {{Spec2('OpenGL ES 2.0')}} | Man page of the OpenGL ES 2.0 API. |
-| {{SpecName('OpenGL ES 3.0', "glEnable.xhtml", "glEnable")}} | {{Spec2('OpenGL ES 3.0')}} | Man page of the OpenGL ES 3.0 API. |
+{{Specifications}}
 
 ## Browser compatibility
 

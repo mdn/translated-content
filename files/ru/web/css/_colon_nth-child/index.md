@@ -1,13 +1,6 @@
 ---
-title: ':nth-child'
+title: ":nth-child"
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:nth-child
 ---
 
 {{CSSRef}}
@@ -68,8 +61,10 @@ translation_of: Web/CSS/:nth-child
 #### HTML
 
 ```html
-<h3><code>span:nth-child(2n+1)</code>, БЕЗ элемента
-   <code>&lt;em&gt;</code> в группе элементов-потомков.</h3>
+<h3>
+  <code>span:nth-child(2n+1)</code>, БЕЗ элемента <code>&lt;em&gt;</code> в
+  группе элементов-потомков.
+</h3>
 <p>Элементы 1, 3, 5 и 7 будут выбраны.</p>
 <div class="first">
   <span>Span 1!</span>
@@ -81,13 +76,17 @@ translation_of: Web/CSS/:nth-child
   <span>Span 7!</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-child(2n+1)</code>, С элементом
-   <code>&lt;em&gt;</code> в группе элементов-потомков.</h3>
-<p>Элементы 1, 5 и 7 будут выбраны.<br>
-   3 используется в подсчёте потому что это элемент-потомок,
-   но он не выбран потому что он не <code>&lt;span&gt;</code>.</p>
+<h3>
+  <code>span:nth-child(2n+1)</code>, С элементом <code>&lt;em&gt;</code> в
+  группе элементов-потомков.
+</h3>
+<p>
+  Элементы 1, 5 и 7 будут выбраны.<br />
+  3 используется в подсчёте потому что это элемент-потомок, но он не выбран
+  потому что он не <code>&lt;span&gt;</code>.
+</p>
 <div class="second">
   <span>Span!</span>
   <span>Span</span>
@@ -99,14 +98,19 @@ translation_of: Web/CSS/:nth-child
   <span>Span</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-of-type(2n+1)</code>, С элементом
-   <code>&lt;em&gt;</code> в группе элементов-потомков.</h3>
-<p>Элементы 1, 4, 6 и 8 будут выбраны.<br>
-   3 не используется в подсчёте и не выбран, потому что это <code>&lt;em&gt;</code>,
-   но не <code>&lt;span&gt;</code>, а <code>nth-of-type</code> выбирает только
-   потомков этого типа. Элемент <code>&lt;em&gt;</code> полностью пропускается и игнорируется.</p>
+<h3>
+  <code>span:nth-of-type(2n+1)</code>, С элементом <code>&lt;em&gt;</code> в
+  группе элементов-потомков.
+</h3>
+<p>
+  Элементы 1, 4, 6 и 8 будут выбраны.<br />
+  3 не используется в подсчёте и не выбран, потому что это
+  <code>&lt;em&gt;</code>, но не <code>&lt;span&gt;</code>, а
+  <code>nth-of-type</code> выбирает только потомков этого типа. Элемент
+  <code>&lt;em&gt;</code> полностью пропускается и игнорируется.
+</p>
 <div class="third">
   <span>Span!</span>
   <span>Span</span>
@@ -134,9 +138,9 @@ div em {
   margin-bottom: 3px;
 }
 
-.first span:nth-child(2n+1),
-.second span:nth-child(2n+1),
-.third span:nth-of-type(2n+1) {
+.first span:nth-child(2n + 1),
+.second span:nth-child(2n + 1),
+.third span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```

@@ -1,8 +1,6 @@
 ---
 title: Créer de belles boîtes
-slug: Learn/CSS/Howto/create_fancy_boxes
-translation_of: Learn/CSS/Howto/create_fancy_boxes
-original_slug: Apprendre/CSS/Comment/Créer_de_belles_boîtes
+slug: Learn/CSS/Howto/Create_fancy_boxes
 ---
 
 Les boîtes CSS sont des blocs de base pour la construction des pages web. Créer des boîtes agréables à regarder est un défi complexe et intéressant. C'est un défi intéressant parce qu'on peut implémenter une idée de concept, de design, grâce à du code qui fonctionne. C'est un défi complexe car CSS possède à la fois plein de contraintes et de libertés. Dans cet article, nous allons voir de quoi il en retourne en dessinant quelques belles boîtes.
@@ -42,26 +40,26 @@ Voici un exemple à la fois simple et sympa. La propriété {{cssxref("border-ra
 .joli {
   /* Mieux vaut centrer le texte dans un
      cercle. */
-  text-align : center;
+  text-align: center;
 
   /* On fait attention à ce que le texte
      ne touche pas la bordure. On placera
      donc le texte avec un remplissage, ce
      qui donnera une meilleure impression
      pour le cercle. */
-  padding : 1em;
+  padding: 1em;
 
   /* La bordure marquera le cercle. On
      pourrait également utiliser un arrière-
      plan car celui-ci aurait été contenu
      par border-radius */
-  border : 0.5em solid black;
+  border: 0.5em solid black;
 
   /* Assurons-nous que la boîte soit carrée
      pour obtenir un cercle bien rond plutôt
      qu'une ellipse ;) */
-  width  : 4em;
-  height : 4em;
+  width: 4em;
+  height: 4em;
 
   /* Enfin, transformons le carré en cercle */
   border-radius: 100%;
@@ -89,14 +87,14 @@ Passons à la manipulation :
 
 ```css
 .joli {
-  padding : 1em;
+  padding: 1em;
   width: 100%;
   height: 200px;
   box-sizing: border-box;
 
   /* La couche la plus basse sera
      peinte avec un gris clair uni */
-  background-color: #E4E4D9;
+  background-color: #e4e4d9;
 
   /* Ensuite on applique des gradients
      linéaires les uns sur les autres
@@ -104,18 +102,28 @@ Passons à la manipulation :
      Comme vous pouvez le voir, les gradients
      sont considérés et manipulés comme des
      images */
-  background-image: linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
+  background-image: linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%), linear-gradient(
+      175deg,
+      rgba(0, 0, 0, 0) 90%,
+      #b4b07f 90%
+    ), linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 85%, #c5a68e 85%), linear-gradient(
+      85deg,
+      rgba(0, 0, 0, 0) 89%,
+      #c5a68e 89%
+    ), linear-gradient(175deg, rgba(0, 0, 0, 0) 80%, #ba9499 80%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 86%, #ba9499 86%), linear-gradient(
+      175deg,
+      rgba(0, 0, 0, 0) 75%,
+      #9f8fa4 75%
+    ), linear-gradient(85deg, rgba(0, 0, 0, 0) 83%, #9f8fa4 83%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 70%, #74a6ae 70%), linear-gradient(85deg, rgba(
+          0,
+          0,
+          0,
+          0
+        ) 80%, #74a6ae 80%);
 }
 ```
 
@@ -142,17 +150,17 @@ Voici un exemple qui illustre comment transformer la boîte en nuage :
   /* On utilise la même astuce que pour
      cercles vus avant */
   box-sizing: border-box;
-  width     : 150px;
-  height    : 150px;
-  padding   : 80px 1em 0 1em;
+  width: 150px;
+  height: 150px;
+  padding: 80px 1em 0 1em;
 
   /* On fait de la place pour les « oreilles »
      du nuage */
-  margin    : 0 100px;
+  margin: 0 100px;
 
   position: relative;
 
-  background-color: #A4C9CF;
+  background-color: #a4c9cf;
 
   /* Enfin, le cercle n'est pas tout à fait complet
      car on veut que la base soit plate.
@@ -169,29 +177,29 @@ Voici un exemple qui illustre comment transformer la boîte en nuage :
   /* Cette déclaration est nécessaire pour afficher
      les pseudo-éléments même si leur valeur est la
      chaîne vide */
-  content: '';
+  content: "";
 
   /* On positionne les pseudo-éléments à droite et à
      gauche de la boîte mais toujours en bas */
   position: absolute;
-  bottom  : 0;
+  bottom: 0;
 
   /* On s'assure que les pseudo-éléments passent sous
      le contenu qu'il y aurait. */
-  z-index : -1;
+  z-index: -1;
 
-  background-color: #A4C9CF;
+  background-color: #a4c9cf;
   border-radius: 100%;
 }
 
 .joli::before {
   /* Voici la taille pour l'oreille gauche
      du nuage */
-  width  : 125px;
-  height : 125px;
+  width: 125px;
+  height: 125px;
 
   /* On la décale un peu à gauche */
-  left    : -80px;
+  left: -80px;
 
   /* Pour que le bas du nuage reste droit, il
      faut s'assurer que le coin en bas à gauche
@@ -201,13 +209,13 @@ Voici un exemple qui illustre comment transformer la boîte en nuage :
 
 .joli::after {
   /* Voici la taille pour l'oreille droite */
-  width  : 100px;
-  height : 100px;
+  width: 100px;
+  height: 100px;
 
   /* On la décale un peu à droite */
-  right   : -60px;
+  right: -60px;
 
- /* Pour que le bas du nuage reste droit, il
+  /* Pour que le bas du nuage reste droit, il
     faut s'assurer que le coin en bas à droite
     soit bien un angle droit. */
   border-bottom-left-radius: 0;
@@ -221,8 +229,14 @@ Voici un exemple qui illustre comment transformer la boîte en nuage :
 Pour prendre un exemple plus concret d'utilisation des pseudo-éléments : la mise en forme des éléments HTML {{HTMLElement('blockquote')}}. Prenons un exemple avec un fragment HTML différent, qui nous permettra en outre d'aborder les aspects de localisation :
 
 ```html
-<blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-<blockquote lang="fr">L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. <i>Pierre Desproges</i></blockquote>
+<blockquote>
+  People who think they know everything are a great annoyance to those of us who
+  do. <i>Isaac Asimov</i>
+</blockquote>
+<blockquote lang="fr">
+  L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase.
+  <i>Pierre Desproges</i>
+</blockquote>
 ```
 
 Voici la feuille de style que nous allons utiliser :
@@ -230,46 +244,50 @@ Voici la feuille de style que nous allons utiliser :
 ```css
 blockquote {
   min-height: 5em;
-  padding   : 1em 4em;
-  font      : 1em/150% sans-serif;
-  position  : relative;
+  padding: 1em 4em;
+  font: 1em/150% sans-serif;
+  position: relative;
   background-color: lightgoldenrodyellow;
 }
 
 blockquote::before,
 blockquote::after {
   position: absolute;
-  height  : 3rem;
-  font    : 6rem/100% Georgia, "Times New Roman", Times, serif;
+  height: 3rem;
+  font:
+    6rem/100% Georgia,
+    "Times New Roman",
+    Times,
+    serif;
 }
 
 blockquote::before {
-  content: '“';
-  top    : 0.3rem;
-  left   : 0.9rem;
+  content: "“";
+  top: 0.3rem;
+  left: 0.9rem;
 }
 
 blockquote::after {
-  content: '”';
-  bottom : 0.3rem;
-  right  : 0.8rem;
+  content: "”";
+  bottom: 0.3rem;
+  right: 0.8rem;
 }
 
 blockquote:lang(fr)::before {
-  content: '«';
-  top    : -1.5rem;
-  left   : 0.5rem;
+  content: "«";
+  top: -1.5rem;
+  left: 0.5rem;
 }
 
 blockquote:lang(fr)::after {
-  content: '»';
-  bottom : 2.6rem;
-  right  : 0.5rem
+  content: "»";
+  bottom: 2.6rem;
+  right: 0.5rem;
 }
 
 blockquote i {
-  display   : block;
-  font-size : 0.8em;
+  display: block;
+  font-size: 0.8em;
   margin-top: 1rem;
   text-style: italic;
   text-align: right;
@@ -291,7 +309,7 @@ Nous allons ici créer un effet d'ombre portée. La propriété {{cssxref("box-s
 ```css
 .joli {
   position: relative;
-  background-color: #FFC;
+  background-color: #ffc;
   padding: 2rem;
   text-align: center;
   max-width: 200px;
@@ -300,12 +318,12 @@ Nous allons ici créer un effet d'ombre portée. La propriété {{cssxref("box-s
 .joli::before {
   content: "";
 
-  position : absolute;
-  z-index  : -1;
-  bottom   : 15px;
-  right    : 5px;
-  width    : 50%;
-  top      : 80%;
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  right: 5px;
+  width: 50%;
+  top: 80%;
   max-width: 200px;
 
   box-shadow: 0px 13px 10px black;

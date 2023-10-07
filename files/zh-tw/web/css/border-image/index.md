@@ -1,7 +1,6 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-original_slug: Web/CSS/border-image/border-image
 ---
 
 {{CSSRef}}

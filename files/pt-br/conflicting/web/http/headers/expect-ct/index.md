@@ -1,7 +1,6 @@
 ---
 title: Public-Key-Pins
 slug: conflicting/Web/HTTP/Headers/Expect-CT
-original_slug: Web/HTTP/Headers/Public-Key-Pins
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}

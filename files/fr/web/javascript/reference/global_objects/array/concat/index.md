@@ -1,9 +1,6 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/concat
-browser-compat: javascript.builtins.Array.concat
 ---
 
 {{JSRef}}
@@ -38,7 +35,7 @@ La méthode `concat` ne modifie pas `this` ni aucun des tableaux passés en para
 
 - Pour les références à des objets (et non les objets eux-mêmes)&nbsp;: `concat` copie ces références dans le nouveau tableau. Le tableau original et le nouveau tableau feront référence au même objet. C'est-à-dire que si un objet référencé est modifié, ces changements seront visibles tant dans le nouveau que dans les tableaux originaux.
 
-- Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number))&nbsp;: `concat` copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir [Les types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es#Les_types_de_donn%C3%A9es)).
+- Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number))&nbsp;: `concat` copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir [Les types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données#Les_types_de_données)).
 
 > **Note :** La concaténation n'affectera pas les tableaux originaux. Par la suite, toute opération sur le nouveau tableau n'aura aucun effet sur les tableaux d'origine, et vice versa.
 
@@ -77,7 +74,7 @@ console.table(nums);
 Le code qui suit ajoute trois valeurs à un tableau&nbsp;:
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const alpha = ["a", "b", "c"];
 
 const alphanumerique = alpha.concat(1, [2, 3]);
 

@@ -1,14 +1,6 @@
 ---
 title: PerformanceNavigationTiming.toJSON()
 slug: Web/API/PerformanceNavigationTiming/toJSON
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming/toJSON
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}

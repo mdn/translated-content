@@ -76,7 +76,7 @@ console.log(sum);
 
 ### 在稀疏数组上使用 forEach()
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
@@ -142,7 +142,7 @@ class Counter {
     this.count = 0;
   }
   add(array) {
-    // 只有函数表达式才有自己的 this 绑定 
+    // 只有函数表达式才有自己的 this 绑定
     array.forEach(function countEntry(entry) {
       this.sum += entry;
       ++this.count;
@@ -214,7 +214,7 @@ const flatten = (arr) => {
     }
   });
   return result;
-}
+};
 
 // 用例
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];

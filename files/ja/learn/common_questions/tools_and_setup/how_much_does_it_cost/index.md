@@ -1,7 +1,6 @@
 ---
 title: ウェブ上で何かをするためにどれくらいコストがかかる？
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
-original_slug: Learn/Common_questions/How_much_does_it_cost
 ---
 
 ウェブに関わることは、見た目ほど安いものではありません。この記事では、あなたがどれくらいの費用を負担しなければならないか、またその理由について説明します。

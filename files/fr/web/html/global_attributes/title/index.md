@@ -1,13 +1,6 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/title
-original_slug: Web/HTML/Attributs_universels/title
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -35,8 +28,11 @@ Un attribut `title` peut contenir plusieurs lignes. Chaque caractère `U+000A LI
 ```html
 <p>
   Les sauts de ligne au sein d'un attribut title doivent être pris en compte :
-  <abbr title="Ceci est un
-  titre sur plusieurs lignes">Exemple</abbr>.
+  <abbr
+    title="Ceci est un
+  titre sur plusieurs lignes"
+    >Exemple</abbr
+  >.
 </p>
 ```
 
@@ -54,7 +50,10 @@ Si cet attribut est défini avec la chaîne vide, cela signifie que le titre pro
 
 ```html
 <div title="Une bubulle">
-  <p>Si vous survolez cet élément, il y aura une bulle d'information "Une bubulle".</p>
+  <p>
+    Si vous survolez cet élément, il y aura une bulle d'information "Une
+    bubulle".
+  </p>
   <p title="">Et au-dessus de celui-ci, aucune info.</p>
 </div>
 ```

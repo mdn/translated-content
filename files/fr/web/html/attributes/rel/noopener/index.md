@@ -1,9 +1,6 @@
 ---
-title: 'Types de liens : noopener'
+title: "Types de liens : noopener"
 slug: Web/HTML/Attributes/rel/noopener
-translation_of: Web/HTML/Link_types/noopener
-original_slug: Web/HTML/Link_types/noopener
-browser-compat: html.elements.a.rel.noopener
 ---
 
 Le mot-clé **`noopener`** de l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur d'ouvrir la ressource cible sans que le nouveau contexte de navigation ne reçoive d'accès au document précédent (le moteur ne définit alors pas {{DOMxRef("Window.opener")}} sur le nouveau contexte, sa valeur sera `null`).

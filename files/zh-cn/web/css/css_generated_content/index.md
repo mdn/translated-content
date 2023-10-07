@@ -17,7 +17,3 @@ slug: Web/CSS/CSS_generated_content
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}

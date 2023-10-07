@@ -1,7 +1,6 @@
 ---
 title: Eventos de toque
 slug: Web/API/Touch_events
-original_slug: DOM/Touch_events
 ---
 
 Con el fin de proporcionar soporte de calidad para usuarios de interfaces táctiles, los eventos táctiles dan la posibilidad de interpretar la actividad de los dedos en pantallas táctiles o trackpads.
@@ -61,11 +60,11 @@ function handleStart(evt) {
   var ctx = el.getContext("2d");
   var touches = evt.changedTouches;
 
-  for (var i=0; i<touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     ongoingTouches.push(touches[i]);
     var color = colorForTouch(touches[i]);
     ctx.fillStyle = color;
-    ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
+    ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
 }
 ```
@@ -87,7 +86,7 @@ function handleMove(evt) {
 
   ctx.lineWidth = 4;
 
-  for (var i=0; i<touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     var color = colorForTouch(touches[i]);
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
@@ -97,7 +96,7 @@ function handleMove(evt) {
     ctx.lineTo(touches[i].pageX, touches[i].pageY);
     ctx.closePath();
     ctx.stroke();
-    ongoingTouches.splice(idx, 1, touches[i]);  // swap in the new touch record
+    ongoingTouches.splice(idx, 1, touches[i]); // swap in the new touch record
   }
 }
 ```
@@ -121,7 +120,7 @@ function handleEnd(evt) {
 
   ctx.lineWidth = 4;
 
-  for (var i=0; i<touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     var color = colorForTouch(touches[i]);
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
@@ -129,7 +128,7 @@ function handleEnd(evt) {
     ctx.beginPath();
     ctx.moveTo(ongoingTouches[i].pageX, ongoingTouches[i].pageY);
     ctx.lineTo(touches[i].pageX, touches[i].pageY);
-    ongoingTouches.splice(i, 1);  // remove it; we're done
+    ongoingTouches.splice(i, 1); // remove it; we're done
   }
 }
 ```
@@ -145,8 +144,8 @@ function handleCancel(evt) {
   evt.preventDefault();
   var touches = evt.changedTouches;
 
-  for (var i=0; i<touches.length; i++) {
-    ongoingTouches.splice(i, 1);  // remove it; we're done
+  for (var i = 0; i < touches.length; i++) {
+    ongoingTouches.splice(i, 1); // remove it; we're done
   }
 }
 ```
@@ -177,14 +176,14 @@ La función `ongoingTouchIndexById()` abajo explora mediante la matriz `ongoingT
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i=0; i<ongoingTouches.length; i++) {
+  for (var i = 0; i < ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isExtensible
 ---
 
 {{JSRef}}

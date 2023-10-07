@@ -27,7 +27,7 @@ slug: Web/API/Event/cancelable
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // 이벤트를 취소할 수 있으므로 취소함
     event.preventDefault();
   } else {
@@ -38,7 +38,7 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventScrollWheel);
+document.addEventListener("wheel", preventScrollWheel);
 ```
 
 ## 명세

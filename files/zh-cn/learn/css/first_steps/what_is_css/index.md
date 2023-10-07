@@ -10,7 +10,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -57,8 +57,8 @@ CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特�
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -72,12 +72,12 @@ h1 {
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

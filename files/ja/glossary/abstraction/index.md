@@ -23,8 +23,8 @@ class ImplementAbstraction {
   }
 
   display() {
-    console.log('a = ' + this.a);
-    console.log('b = ' + this.b);
+    console.log("a = " + this.a);
+    console.log("b = " + this.b);
   }
 }
 
@@ -39,4 +39,4 @@ obj.display();
 
 ### 基礎知識
 
-- Wikipedia 上の記事 「[抽象化_(計算機科学)](https://ja.wikipedia.org/wiki/抽象化_(計算機科学))」
+- Wikipedia 上の記事 「[抽象化\_(計算機科学)](<https://ja.wikipedia.org/wiki/抽象化_(計算機科学)>)」

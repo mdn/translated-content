@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log
 ## 문법
 
 ```js
-    Math.log(x)
+Math.log(x);
 ```
 
 ### 인자
@@ -40,8 +40,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log
 
 ```js
 Math.log(-1); // NaN, 정의범위 초과
-Math.log(0);  // -Infinity, 무한
-Math.log(1);  // 0
+Math.log(0); // -Infinity, 무한
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 

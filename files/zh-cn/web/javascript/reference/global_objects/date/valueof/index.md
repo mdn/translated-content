@@ -33,7 +33,7 @@ dateObj.valueOf()
 
 ```js
 var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // assigns -424713600000 to myVar
+var myVar = x.valueOf(); // assigns -424713600000 to myVar
 ```
 
 ## 规范

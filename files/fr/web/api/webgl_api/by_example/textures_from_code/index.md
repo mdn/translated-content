@@ -1,15 +1,6 @@
 ---
 title: Générer des textures avec du code
 slug: Web/API/WebGL_API/By_example/Textures_from_code
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Textures_from_code
-original_slug: Web/API/WebGL_API/By_example/Générer_des_textures_avec_du_code
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}
@@ -23,57 +14,60 @@ Dans cet article, on illustre simplement comment générer des textures procédu
 Il est possible d'appliquer des textures en effectuant des calculs pour chaque pixel du fragment de _shader_.
 
 ```html hidden
-<p>Génération d'une texture à partir de code. Simple demonstration
-    de la génération de textures procédurale</p>
-<canvas>Il semblerait que votre navigateur ne supporte
-    pas l'élément canvas.</canvas>
+<p>
+  Génération d'une texture à partir de code. Simple demonstration de la
+  génération de textures procédurale
+</p>
+<canvas
+  >Il semblerait que votre navigateur ne supporte pas l'élément canvas.</canvas
+>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```html
 <script type="x-shader/x-vertex" id="vertex-shader">
-#version 100
-precision highp float;
-void main() {
-  gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
-  gl_PointSize = 128.0;
-}
+  #version 100
+  precision highp float;
+  void main() {
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+    gl_PointSize = 128.0;
+  }
 </script>
 ```
 
 ```html
 <script type="x-shader/x-fragment" id="fragment-shader">
-#version 100
-precision mediump float;
-// On définit une variation radiale (à partir du centre)
-void main() {
-  vec2 fragmentPosition = 2.0*gl_PointCoord - 1.0;
-  float distance = length(fragmentPosition);
-  float distanceSqrd = distance * distance;
-  gl_FragColor = vec4(
-    0.2/distanceSqrd,
-    0.1/distanceSqrd,
-    0.0, 1.0 );
-}
+  #version 100
+  precision mediump float;
+  // On définit une variation radiale (à partir du centre)
+  void main() {
+    vec2 fragmentPosition = 2.0*gl_PointCoord - 1.0;
+    float distance = length(fragmentPosition);
+    float distanceSqrd = distance * distance;
+    gl_FragColor = vec4(
+      0.2/distanceSqrd,
+      0.1/distanceSqrd,
+      0.0, 1.0 );
+  }
 </script>
 ```
 
@@ -82,22 +76,20 @@ void main() {
 ```
 
 ```js
-"use strict"
+"use strict";
 window.addEventListener("load", setupWebGL, false);
-var gl,
-  program;
-function setupWebGL (evt) {
+var gl, program;
+function setupWebGL(evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext()))
-    return;
+  if (!(gl = getRenderingContext())) return;
 
   var source = document.querySelector("#vertex-shader").innerHTML;
   var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader,source);
+  gl.shaderSource(vertexShader, source);
   gl.compileShader(vertexShader);
-  source = document.querySelector("#fragment-shader").innerHTML
+  source = document.querySelector("#fragment-shader").innerHTML;
   var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader,source);
+  gl.shaderSource(fragmentShader, source);
   gl.compileShader(fragmentShader);
   program = gl.createProgram();
   gl.attachShader(program, vertexShader);
@@ -111,8 +103,9 @@ function setupWebGL (evt) {
     var linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
     document.querySelector("p").innerHTML =
-      "La liaison du programme de shader a échoué. "
-      + "Journal d'erreur : " + linkErrLog;
+      "La liaison du programme de shader a échoué. " +
+      "Journal d'erreur : " +
+      linkErrLog;
     return;
   }
   initializeAttributes();
@@ -131,11 +124,9 @@ function initializeAttributes() {
 }
 
 function cleanup() {
-gl.useProgram(null);
-if (buffer)
-  gl.deleteBuffer(buffer);
-if (program)
-  gl.deleteProgram(program);
+  gl.useProgram(null);
+  if (buffer) gl.deleteBuffer(buffer);
+  if (program) gl.deleteProgram(program);
 }
 ```
 

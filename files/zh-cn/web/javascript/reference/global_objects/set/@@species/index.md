@@ -28,7 +28,9 @@ Set[Symbol.species]; // function Set()
 ```js
 class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
-  static get [Symbol.species]() { return Set; }
+  static get [Symbol.species]() {
+    return Set;
+  }
 }
 ```
 

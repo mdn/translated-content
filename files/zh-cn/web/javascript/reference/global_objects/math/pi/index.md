@@ -24,11 +24,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/PI
 下面的函数使用 Math.PI 计算给定半径的圆周长：
 
 ```js
-function calculateCircumference (radius) {
+function calculateCircumference(radius) {
   return 2 * Math.PI * radius;
 }
 
-calculateCircumference(1);  // 6.283185307179586
+calculateCircumference(1); // 6.283185307179586
 ```
 
 ## 规范

@@ -58,9 +58,9 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
   ```html
   <h1>Top level heading</h1>
-    <h2>Secondary heading</h2>
-    <h2>Another secondary heading</h2>
-      <h3>Low level heading</h3>
+  <h2>Secondary heading</h2>
+  <h2>Another secondary heading</h2>
+  <h3>Low level heading</h3>
   ```
 
 - 应使用 [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.

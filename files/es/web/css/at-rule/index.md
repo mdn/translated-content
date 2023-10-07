@@ -20,7 +20,6 @@ Hay varias reglas-at, designadas por sus identificadores, cada una con sintaxis 
   - {{cssxref("@page")}} — Describe los cambios en la disposición de la página que serán aplicados al imprimir el documento.
   - {{cssxref("@font-face")}} — Describe la configuración de fuentes externas que se descargarán.
   - {{cssxref("@keyframes")}} {{experimental_inline}} — Describe la configuración de pasos intermedios en una secuencia de animación CSS.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — Describe los aspectos del viewport para dispositivos de pantalla pequeña. _(actualmente en Borrador)_
   - {{cssxref("@counter-style")}} — Define estilos de contador específicos que no son parte de los conjuntos de estilos predeterminados. _(en estado de Recomendación Candidata, pero sólo implementada en Gekko al momento de esta publicación)_
   - {{cssxref("@font-feature-values")}} (junto con `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` y `@character-variant`)
     — Define nombres comunes para la propiedad {{cssxref("font-variant-alternates")}}. _(en estado de Recomendación Candidata, pero sólo implementada en Gekko al momento de esta publicación)_

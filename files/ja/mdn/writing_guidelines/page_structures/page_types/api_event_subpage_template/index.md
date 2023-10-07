@@ -1,7 +1,6 @@
 ---
 title: API イベントサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
-original_slug: MDN/Structures/Page_types/API_event_subpage_template
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
@@ -41,7 +40,7 @@ l10n:
 >   - : `page-type` キーは、 Web/API イベントでは常に `web-api-event` です。
 > - **status**
 >   - : （適切な）技術の状態のキーを入れてください。
-[**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
+>     [**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
 > - **browser-compat**
 >
 >   - : プレースホルダーの値 `path.to.feature.NameOfTheEvent_event` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるイベントのクエリー文字列に置き換えてください。

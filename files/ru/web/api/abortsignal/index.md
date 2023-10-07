@@ -1,8 +1,8 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-translation_of: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortSignal`** интерфейс представляет собой объект сигнала, который позволяет вам общаться с DOM запросом (например, Fetch) и прервать его при необходимости с помощью объекта {{domxref("AbortController")}}.

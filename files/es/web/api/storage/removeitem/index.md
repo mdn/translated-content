@@ -28,11 +28,11 @@ La siguiente función crea 3 elementos dentro del almacenamiento local y despué
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
@@ -40,11 +40,11 @@ De la misma manera se podría manipular el almacenamiento de sesión:
 
 ```js
 function populateSessionStorage() {
-  sessionStorage.setItem('bgcolor', 'red');
-  sessionStorage.setItem('font', 'Helvetica');
-  sessionStorage.setItem('image', 'myCat.png');
+  sessionStorage.setItem("bgcolor", "red");
+  sessionStorage.setItem("font", "Helvetica");
+  sessionStorage.setItem("image", "myCat.png");
 
-  sessionStorage.removeItem('image');
+  sessionStorage.removeItem("image");
 }
 ```
 

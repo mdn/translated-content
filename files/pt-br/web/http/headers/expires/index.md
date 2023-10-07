@@ -49,8 +49,8 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
+| Especificação                     | Título                                          |
+| --------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## Compatibilidade com navegadores

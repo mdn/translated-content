@@ -16,7 +16,7 @@ class ClassWithPrivateField {
 
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 
@@ -26,7 +26,7 @@ class ClassWithPrivateStaticField {
 
 class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 ```
@@ -112,13 +112,15 @@ class BaseClassWithPrivateStaticField {
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField { };
+class SubClass extends BaseClassWithPrivateStaticField {}
 
 let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e};
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
 console.log(error instanceof TypeError);
 // true
@@ -136,7 +138,7 @@ console.log(error);
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world';
+    return "hello world";
   }
 
   getPrivateMessage() {
@@ -163,7 +165,7 @@ class ClassWithPrivateAccessor {
   }
 
   constructor() {
-    this.#decoratedMessage = 'hello world';
+    this.#decoratedMessage = "hello world";
     console.log(this.#decoratedMessage);
   }
 }

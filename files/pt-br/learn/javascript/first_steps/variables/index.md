@@ -1,7 +1,6 @@
 ---
 title: Armazenando as informações que você precisa — Variáveis
 slug: Learn/JavaScript/First_steps/Variables
-original_slug: Learn/JavaScript/First_steps/Variáveis
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -27,12 +26,12 @@ Uma variável é um container para um valor, como um número que podemos usar em
 ```
 
 ```js
-var button = document.querySelector('button');
+var button = document.querySelector("button");
 
-button.onclick = function() {
-  var nome = prompt('Qual é o seu nome?');
-  alert('Olá ' + nome + ', é um prazer te ver!');
-}
+button.onclick = function () {
+  var nome = prompt("Qual é o seu nome?");
+  alert("Olá " + nome + ", é um prazer te ver!");
+};
 ```
 
 {{ EmbedLiveSample('O_que_é_uma_variável', '100%', 50, "", "", "hide-codepen-jsfiddle" ) }}
@@ -102,7 +101,7 @@ scoobyDoo;
 Uma vez que você declarou uma variável, você pode inicializá-la com um valor. Você faz isso digitando o nome da variável, seguido do sinal de igual (`=`) e o valor que deseja atribuir a ela. Por exemplo:
 
 ```js
-meuNome = 'Chris';
+meuNome = "Chris";
 minhaIdade = 37;
 ```
 
@@ -116,7 +115,7 @@ minhaIdade;
 Você pode declarar e inicializar uma variável ao mesmo tempo, assim:
 
 ```js
-var meuNome = 'Chris';
+var meuNome = "Chris";
 ```
 
 Isso provavelmente é como irá fazer na maioria das vezes, já que é mais rápido do que fazer as duas ações em duas linhas separadas.
@@ -132,7 +131,7 @@ Algumas diferenças simples são explicadas abaixo. Não abordaremos todas as di
 Para começar, se você escrever um programa JavaScript de várias linhas que declare e inicialize uma variável, poderá realmente declarar uma variável com `var` depois de inicializá-la e ainda funcionará. Por exemplo:
 
 ```js
-meuNome = 'Chris';
+meuNome = "Chris";
 
 function logNome() {
   console.log(meuNome);
@@ -152,22 +151,22 @@ Hoisting não funciona mais com `let`. Se mudássemos de `var` para `let` no exe
 E depois, ao usar `var`, você pode declarar a mesma variável quantas vezes quiser, mas com `let` você não consegue. Isso pode funcionar:
 
 ```js
-var meuNome = 'Chris';
-var meuNome = 'Bob';
+var meuNome = "Chris";
+var meuNome = "Bob";
 ```
 
 Mas isso geraria um erro na segunda linha:
 
 ```js
-let meuNome = 'Chris';
-let meuNome = 'Bob';
+let meuNome = "Chris";
+let meuNome = "Bob";
 ```
 
 Você precisaria fazer assim:
 
 ```js
-let meuNome = 'Chris';
-meuNome = 'Bob';
+let meuNome = "Chris";
+meuNome = "Bob";
 ```
 
 Novamente, essa é uma decisão sensata da linguagem. Não há razão para redeclarar variáveis — isso apenas torna as coisas mais confusas.
@@ -179,7 +178,7 @@ Por esses motivos e mais, recomendamos que você use `let` o máximo possível e
 Uma vez que uma tenha um valor atribuido, você pode atualizar esse valor simplesmente dando a ela um valor diferente. Tente inserir as seguintes linhas no seu console:
 
 ```js
-meuNome = 'Bob';
+meuNome = "Bob";
 minhaIdade = 40;
 ```
 
@@ -244,7 +243,7 @@ var minhaIdade = 17;
 _Strings_ são sequências de texto. Quando você dá a uma variável um valor em texto (_string_), você precisa envolver o texto em aspas simples ou duplas; caso contrário, o JavaScript vai tentar interpretá-lo como sendo outro nome de variável.
 
 ```js
-var despedidaGolfinho = 'Até logo e obrigado por todos os peixes!';
+var despedidaGolfinho = "Até logo e obrigado por todos os peixes!";
 ```
 
 ### _Booleans_ (boleanos)
@@ -268,8 +267,8 @@ Esse exemplo está usando o operador "menor que" (`<`) para testar se 6 é menor
 Um array é um único objeto que contém valores múltiplos inseridos entre colchetes e separados por vírgulas. Tente inserir as seguintes linhas de código no seu console:
 
 ```js
-var meuNomeArray = ['Chris', 'Bob', 'Jim'];
-var meuNumeroArray = [10,15,40];
+var meuNomeArray = ["Chris", "Bob", "Jim"];
+var meuNumeroArray = [10, 15, 40];
 ```
 
 Uma vez que esses arrays estejam definidos, você pode acessar cada um de seus valores através de sua localização dentro do array. Tente essas linhas:
@@ -290,13 +289,13 @@ Em programação, um objeto é uma estrutura de código que representa um objeto
 Tente inserir a seguinte linha em seu console:
 
 ```js
-var cachorro = { nome : 'Totó', raca : 'Dálmata' };
+var cachorro = { nome: "Totó", raca: "Dálmata" };
 ```
 
 Para obter a informação armazenada no objeto, você pode usar a seguinte sintaxe:
 
 ```js
-cachorro.nome
+cachorro.nome;
 ```
 
 Nós não iremos ver mais sobre objetos por agora — você pode aprender mais sobre eles em um artigo futuro.
@@ -308,16 +307,16 @@ JavaScript é uma "dynamically typed language", o que significa que, diferente d
 Por exemplo, se você declarar uma variável e dar a ela um valor encapsulado em aspas, o navegador irá tratar a variável como sendo uma _string_ (cadeia de texto):
 
 ```js
-var minhaString = 'Olá';
+var minhaString = "Olá";
 ```
 
 Irá continuar sendo uma _string_, mesmo que dentro das apas contenha um número, então seja cuidadoso:
 
 ```js
-var meuNumero = '500'; // opa, isso continua sendo uma string
-typeof(meuNumero);
+var meuNumero = "500"; // opa, isso continua sendo uma string
+typeof meuNumero;
 meuNumero = 500; // bem melhor — agora isso é um número
-typeof(meuNumero);
+typeof meuNumero;
 ```
 
 Tente inserir as quatro linhas acima em seu console uma por uma, e veja quais são os resultados. Você notará que estamos usando uma função especial chamada `typeof()` — ela irá retornar o tipo de dado da variável que você passar. Da primeira vez que for executada, deve retornar `string`, como naquele ponto a variável `meuNumero` contém uma _string_, `'500'`. Dê uma olhada e veja o que é retornado da segunda vez que você a utilizar.

@@ -1,13 +1,6 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-tags:
-  - Error
-  - InternalError
-  - JavaScript
-  - Non-standard
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
 
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}

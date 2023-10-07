@@ -1,10 +1,6 @@
 ---
 title: Document.documentURIObject
 slug: orphaned/Web/API/Document/documentURIObject
-tags:
-  - свойства DOM
-translation_of: Web/API/Document/documentURIObject
-original_slug: Web/API/Document/documentURIObject
 ---
 
 {{ ApiRef("DOM") }}

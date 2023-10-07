@@ -40,9 +40,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 ## 静态方法
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
+
   - : 一个非标准的 V8 函数，用于在 Error 实例上创建 {{JSxRef("Error.prototype.stack", "stack")}} 属性。
 
 - `Error.stackTraceLimit` {{non-standard_inline}}
+
   - : 一个非标准的 V8 数值属性，用于限制错误堆栈跟踪中包含堆栈帧数量。
 
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
@@ -78,9 +80,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 
 ```js
 try {
-  throw new Error('Whoops!')
+  throw new Error("Whoops!");
 } catch (e) {
-  console.error(e.name + ': ' + e.message)
+  console.error(e.name + ": " + e.message);
 }
 ```
 
@@ -90,15 +92,14 @@ try {
 
 ```js
 try {
-  foo.bar()
+  foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   }
   // ... etc
-
   else {
     // If none of our cases matched leave the Error unhandled
     throw e;
@@ -119,23 +120,23 @@ function doWork() {
   try {
     doFailSomeWay();
   } catch (err) {
-    throw new Error('Failed in some way', { cause: err });
+    throw new Error("Failed in some way", { cause: err });
   }
   try {
     doFailAnotherWay();
   } catch (err) {
-    throw new Error('Failed in another way', { cause: err });
+    throw new Error("Failed in another way", { cause: err });
   }
 }
 
 try {
   doWork();
 } catch (err) {
-  switch(err.message) {
-    case 'Failed in some way':
+  switch (err.message) {
+    case "Failed in some way":
       handleFailSomeWay(err.cause);
       break;
-    case 'Failed in another way':
+    case "Failed in another way":
       handleFailAnotherWay(err.cause);
       break;
   }
@@ -169,7 +170,7 @@ class MyError extends Error {
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
@@ -178,7 +179,7 @@ class CustomError extends Error {
       Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError';
+    this.name = "CustomError";
     // Custom debugging information
     this.foo = foo;
     this.date = new Date();
@@ -186,12 +187,12 @@ class CustomError extends Error {
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e) {
-  console.error(e.name);    // CustomError
-  console.error(e.foo);     // baz
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
   console.error(e.message); // bazMessage
-  console.error(e.stack);   // stacktrace
+  console.error(e.stack); // stacktrace
 }
 ```
 
@@ -214,11 +215,11 @@ Object.setPrototypeOf(CustomError.prototype, Error.prototype);
 
 Object.setPrototypeOf(CustomError, Error);
 
-CustomError.prototype.name = 'CustomError';
+CustomError.prototype.name = "CustomError";
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e) {
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage

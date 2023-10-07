@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/User-Agent
 
 > **备注：** 请阅读[使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 
@@ -40,8 +40,8 @@ User-Agent: Mozilla/<version> (<system-information>) <platform> (<platform-detai
 
 **Mozilla/5.0 (_platform_; rv:_geckoversion_) Gecko/_geckotrail_ Firefox/_firefoxversion_**
 
-- ***Mozilla/5.0** *是一个通用标记符号，用来表示与 Mozilla 兼容，这几乎是现代浏览器的标配。
-- **_platform_** 用来说明浏览器所运行的原生系统平台（例如 Windows、Mac、Linux 或 Android），以及是否运行在手机上。搭载 Firefox OS 的手机仅简单地使用了 "Mobile" 这个字符串；因为 web 本身就是平台。注意 ***platform** *可能会包含多个使用 "; " 隔开的标记符号。参见下文获取更多的细节信息及示例。
+- **_Mozilla/5.0_** 是一个通用标记符号，用来表示与 Mozilla 兼容，这几乎是现代浏览器的标配。
+- **_platform_** 用来说明浏览器所运行的原生系统平台（例如 Windows、Mac、Linux 或 Android），以及是否运行在手机上。搭载 Firefox OS 的手机仅简单地使用了 "Mobile" 这个字符串；因为 web 本身就是平台。注意 **_platform_** 可能会包含多个使用 "; " 隔开的标记符号。参见下文获取更多的细节信息及示例。
 - **rv:_geckoversion_** 表示 Gecko 的发布版本号（例如 "17.0"）。在近期发布的版本中，**_geckoversion_** 表示的值与 **_firefoxversion_ **相同。
 - **_Gecko/geckotrail_** 表示该浏览器基于 Gecko 渲染引擎。
 - 在桌面浏览器中，_**geckotrail**_ 是固定的字符串 "20100101" 。

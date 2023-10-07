@@ -1,7 +1,6 @@
 ---
 title: Основные понятия Flexbox
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
 
 {{CSSRef}}
@@ -141,7 +140,7 @@ The flex-grow property can be used to distribute space in proportion. If we give
 
 Where the `flex-grow` property deals with adding space in the main axis, the `flex-shrink` property controls how it is taken away. If we do not have enough space in the container to lay out our items and `flex-shrink` is set to a positive integer the item can become smaller than the `flex-basis`. As with `flex-grow` different values can be assigned in order to cause one item to shrink faster than others — an item with a higher value set for `flex-shrink` will shrink faster than its siblings that have lower values.
 
-The minimum size of the item will be taken into account while working out the actual amount of shrinkage that will happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior. We’ll therefore take a more detailed look at how this algorithm works in the article Controlling Ratios of items along the main axis.
+The minimum size of the item will be taken into account while working out the actual amount of shrinkage that will happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior. We'll therefore take a more detailed look at how this algorithm works in the article Controlling Ratios of items along the main axis.
 
 > **Примечание:** Note that these values for `flex-grow` and `flex-shrink` are proportions. Typically if we had all of our items set to flex: `1 1 200px` and then wanted one item to grow at twice the rate, we would set that item to flex: `2 1 200px`. However you could use flex: `10 1 200px` and flex: `20 1 200px` if you wanted.
 

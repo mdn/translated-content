@@ -19,17 +19,11 @@ _Essa interface não possui métodos, mas herda métodos de: {{DOMxRef("HTMLElem
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comentário                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}} | {{Spec2('HTML WHATWG')}} |                                                                                                                                  |
-| {{SpecName('HTML5.3', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.3')}}     |                                                                                                                                  |
-| {{SpecName('HTML5.2', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.2')}}     |                                                                                                                                  |
-| {{SpecName('HTML5.1', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.1')}}     |                                                                                                                                  |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}} | {{Spec2('HTML5 W3C')}}     | A definição inicial, como {{HTMLElement("span")}} foi associada a um {{DOMxRef("HTMLElement")}}} antes disso. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLSpanElement")}}
+{{Compat}}
 
 ## Veja também
 

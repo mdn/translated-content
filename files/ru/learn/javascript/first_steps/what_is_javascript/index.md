@@ -1,8 +1,6 @@
 ---
 title: Что такое JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
-original_slug: Learn/JavaScript/Первые_шаги/What_is_JavaScript
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}
@@ -35,18 +33,18 @@ JavaScript это язык, который позволяет вам приме�
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 ```
 
@@ -173,31 +171,29 @@ JavaScript применяется к вашей HTML странице точно
 2. Откройте этот файл в вашем браузере и в вашем текстовом редакторе. Вы увидите, что HTML создаёт простую веб-страницу с активной кнопкой.
 3. Затем, перейдите в текстовый редактор и добавьте следующие строки перед закрывающим тегом `</head>`:
 
-    ```html
-    <script>
-
-      // здесь будет JavaScript
-
-    </script>
-    ```
+   ```html
+   <script>
+     // здесь будет JavaScript
+   </script>
+   ```
 
 4. Теперь добавим JavaScript внутрь элемента {{htmlelement("script")}}, чтобы сделать страницу более интересной — добавьте следующий код ниже строки "// здесь будет JavaScript":
 
-    ```js
-    document.addEventListener("DOMContentLoaded", function() {
-      function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = 'You clicked the button!';
-        document.body.appendChild(para);
-      }
+   ```js
+   document.addEventListener("DOMContentLoaded", function () {
+     function createParagraph() {
+       let para = document.createElement("p");
+       para.textContent = "You clicked the button!";
+       document.body.appendChild(para);
+     }
 
-      const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
-      for(let i = 0; i < buttons.length ; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-      }
-    });
-    ```
+     for (let i = 0; i < buttons.length; i++) {
+       buttons[i].addEventListener("click", createParagraph);
+     }
+   });
+   ```
 
 5. Сохраните файл и обновите страницу в браузере — теперь вы должны увидеть, что при нажатии на кнопку создаётся новый абзац и помещается ниже.
 
@@ -212,25 +208,25 @@ JavaScript применяется к вашей HTML странице точно
 1. Сначала, создайте новый файл в той же папке, что и ваш файл-пример HTML. Назовите его `script.js` — убедитесь, что у имени файла расширение .js, так как оно распознается, как JavaScript.
 2. Замените ваш текущий элемент {{htmlelement("script")}} на следующий:
 
-    ```html
-    <script src="script.js" defer></script>
-    ```
+   ```html
+   <script src="script.js" defer></script>
+   ```
 
 3. Внутри `script.js` добавьте следующий скрипт:
 
-    ```js
-    function createParagraph() {
-      let para = document.createElement('p');
-      para.textContent = 'You clicked the button!';
-      document.body.appendChild(para);
-    }
+   ```js
+   function createParagraph() {
+     let para = document.createElement("p");
+     para.textContent = "You clicked the button!";
+     document.body.appendChild(para);
+   }
 
-    const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
-    for(let i = 0; i < buttons.length ; i++) {
-      buttons[i].addEventListener('click', createParagraph);
-    }
-    ```
+   for (let i = 0; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", createParagraph);
+   }
+   ```
 
 4. Сохраните и обновите страницу в браузере, и вы увидите то же самое! Все работает точно так же, но теперь у нас есть JavaScript во внешнем файле. Это, как правило, хорошо с точки зрения организации кода и его повторного использования в нескольких HTML файлах. Кроме того, HTML легче читать без огромных кусков кода, который скапливается в нем.
 
@@ -242,8 +238,8 @@ JavaScript применяется к вашей HTML странице точно
 
 ```js example-bad
 function createParagraph() {
-  var para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  var para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -263,10 +259,10 @@ function createParagraph() {
 Использование чистой JavaScript конструкции, позволит вам выбрать все кнопки, используя одну команду. Код, который можно использовали для этой цели, выглядит следующим образом:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 
@@ -303,8 +299,8 @@ for(let i = 0; i < buttons.length ; i++) {
 // Функция: создаёт новый параграф и добавляет его вниз тела HTML.
 
 function createParagraph() {
-  var para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  var para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -315,10 +311,10 @@ function createParagraph() {
   При нажатии любой кнопки, будет выполняться функция createParagraph().
 */
 
-var buttons = document.querySelectorAll('button');
+var buttons = document.querySelectorAll("button");
 
-for (var i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 

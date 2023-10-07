@@ -15,7 +15,7 @@ slug: Mozilla/Firefox/Releases/96
 
 ### CSS
 
-- [CSS の色の値](/ja/docs/Web/CSS/color_value) として使用する [`hwb()`](/ja/docs/Web/CSS/color_value/hwb()) 関数を実装しました。`hwb()` 関数表記は、色相・白さ・黒さで表現した色を表します。省略可能なアルファ値は、色の透明度を表します ([Firefox バグ 1352755](https://bugzil.la/1352755))。
+- [CSS の色の値](/ja/docs/Web/CSS/color_value) として使用する [`hwb()`](</ja/docs/Web/CSS/color_value/hwb()>) 関数を実装しました。`hwb()` 関数表記は、色相・白さ・黒さで表現した色を表します。省略可能なアルファ値は、色の透明度を表します ([Firefox バグ 1352755](https://bugzil.la/1352755))。
 
 - Firefox で {{CSSxRef("color-scheme")}} プロパティをサポートしました。これは、要素がどの配色で快適に表示できるかを示すことができます。一般的なオプションは "ライト" と "ダーク"、または "昼間モード" と "夜間モード" です ([Firefox バグ 1576289](https://bugzil.la/1576289))。
 

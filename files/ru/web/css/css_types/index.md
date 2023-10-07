@@ -1,7 +1,6 @@
 ---
 title: CSS basic data types
 slug: Web/CSS/CSS_Types
-translation_of: Web/CSS/CSS_Types
 ---
 
 {{CssRef}}
@@ -38,7 +37,7 @@ translation_of: Web/CSS/CSS_Types
 
 ## Спецификация
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                 | Status                     | Comment             |
+| ----------------------------- | -------------------------- | ------------------- |
 | {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
 | {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Initial definition. |

@@ -3,6 +3,8 @@ title: Grid Cell
 slug: Glossary/Grid_Cell
 ---
 
+{{GlossarySidebar}}
+
 在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中，**网络单元格**是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
 
 ![Diagram showing an individual cell on the grid.](1_grid_cell.png)
@@ -14,38 +16,40 @@ slug: Glossary/Grid_Cell
 ## 示例
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 

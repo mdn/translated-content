@@ -1,14 +1,6 @@
 ---
 title: Disposition en colonnes
 slug: Web/CSS/Layout_cookbook/Column_layouts
-tags:
-  - CSS
-  - Guide
-  - Multi-col
-  - flexbox
-  - grid
-translation_of: Web/CSS/Layout_cookbook/Column_layouts
-original_slug: Web/CSS/Layout_cookbook/Disposition_en_colonnes
 ---
 
 {{CSSRef}}

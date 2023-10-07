@@ -13,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 
 ```js
 var querying = browser.tabs.query(
-  queryInfo             // object
-)
+  queryInfo, // object
+);
 ```
 
 ### パラメータ
@@ -102,7 +102,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(logTabs, onError);
 ```
 
@@ -120,7 +120,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true, active: true});
+var querying = browser.tabs.query({ currentWindow: true, active: true });
 querying.then(logTabs, onError);
 ```
 
@@ -138,7 +138,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
+var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
 querying.then(logTabs, onError);
 ```
 
@@ -157,7 +157,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "moz-extension://*/*"});
+var querying = browser.tabs.query({ url: "moz-extension://*/*" });
 querying.then(logTabs, onError);
 ```
 
@@ -176,7 +176,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: browser.extension.getURL("*")});
+var querying = browser.tabs.query({ url: browser.extension.getURL("*") });
 querying.then(logTabs, onError);
 ```
 
