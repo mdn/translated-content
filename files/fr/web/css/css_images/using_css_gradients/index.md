@@ -125,7 +125,7 @@ div {
 
 L'angle est spécifié entre une ligne verticale et la ligne de dégradé, dans le sens des aiguilles d'une montre. Autrement dit, `0deg` crée un dégradé vertical de bas en haut, tandis que `90deg` génère un dégradé horizontal de la gauche vers la droite. Les valeurs négatives font progresser l'angle dans le sens inverse des aiguilles d'une montre&nbsp;:
 
-![](linear_red_angles.png)
+![Quatre carrés indiquant les angles avec les dégradés correspondants dessinés sur chaque. On y voit que le carré avec 0 degré a un dégradé du rouge vers le blanc de bas en haut, celui avec 90 degrés de gauche à droite, celui 180 degrés de haut en bas et celui de -90 degrés de droite à gauche.](linear_red_angles.png)
 
 ## Créer des effets et manipuler les couleurs
 
@@ -396,7 +396,7 @@ Les dégradés radiaux sont similaires aux dégradés linéaires mais permettent
 
 ### Un dégradé radial simple
 
-De la même façon qu'avec les dégradés linéaires, il suffit de deux couleurs pour créer un dégradé radial.
+De la même façon qu'avec les dégradés linéaires, il suffit de deux couleurs pour créer un dégradé radial. Par défaut, le centre du degradé se situe à la position 50% 50% et le dégradé a la forme d'une ellipse qui correspond aux proportions de sa boîte englobante&nbsp;:
 
 ```html hidden
 <div class="radial-simple"></div>
@@ -868,6 +868,33 @@ div {
           63,
           0.25
         ) 5px, rgba(143, 77, 63, 0.25) 10px);
+
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0 50px,
+      rgba(255, 127, 0, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(255, 127, 0, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(255, 206, 0, 0.25) 116px 166px
+    ), repeating-linear-gradient(
+      0deg,
+      transparent 0 50px,
+      rgba(255, 127, 0, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(255, 127, 0, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(255, 206, 0, 0.25) 116px 166px
+    ), repeating-linear-gradient(
+      -45deg,
+      transparent 0 5px,
+      rgba(143, 77, 63, 0.25) 5px 10px
+    ), repeating-linear-gradient(45deg, transparent 0 5px, rgba(
+          143,
+          77,
+          63,
+          0.25
+        ) 5px 10px);
 }
 ```
 
@@ -961,4 +988,5 @@ div {
   - [`background-image`](/fr/docs/Web/CSS/background-image)
 
 - [Une bibliothèque de motifs de dégradés CSS, créée par Lea Verou](https://lea.verou.me/css3patterns/)
+- [Une bibliothèque de motifs de dégragés, par Estelle Weyl](https://standardista.com/cssgradients/)
 - [Un générateur de dégradé CSS](https://cssgenerator.org/gradient-css-generator.html)
