@@ -514,6 +514,7 @@
 /ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label
 /ko/docs/Web/Accessibility/ARIA/forms	/ko/docs/Web/Accessibility/ARIA
 /ko/docs/Web/CSS/@viewport	/ko/docs/Web/CSS
+/ko/docs/Web/CSS/Adjacent_sibling_combinator	/ko/docs/Web/CSS/Next-sibling_combinator
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_backgrounds_and_borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -562,6 +563,7 @@
 /ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
 /ko/docs/Web/CSS/Compositing_and_Blending	/ko/docs/Web/CSS/CSS_compositing_and_blending
 /ko/docs/Web/CSS/Filter_Effects	/ko/docs/Web/CSS/CSS_filter_effects
+/ko/docs/Web/CSS/General_sibling_combinator	/ko/docs/Web/CSS/Subsequent-sibling_combinator
 /ko/docs/Web/CSS/Getting_Started	/en-US/docs/Learn/CSS/First_steps
 /ko/docs/Web/CSS/Getting_Started/Color	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /ko/docs/Web/CSS/Getting_Started/Content	/ko/docs/Learn/CSS/Howto/Generated_content
@@ -604,7 +606,7 @@
 /ko/docs/Web/CSS/시작하기/색상	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /ko/docs/Web/CSS/시작하기/설렉터	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Web/CSS/시작하기/왜_CSS를_사용하나	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ko/docs/Web/CSS/인접_형제_선택자	/ko/docs/Web/CSS/Adjacent_sibling_combinator
+/ko/docs/Web/CSS/인접_형제_선택자	/ko/docs/Web/CSS/Next-sibling_combinator
 /ko/docs/Web/Events/DOMContentLoaded	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/Events/abort	/ko/docs/Web/API/HTMLMediaElement/abort_event
 /ko/docs/Web/Events/blur	/ko/docs/Web/API/Element/blur_event
