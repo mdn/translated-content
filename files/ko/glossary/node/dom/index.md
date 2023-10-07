@@ -12,4 +12,4 @@ l10n:
 ## 같이 보기
 
 - WHATWG 명세의 [노드 트리](https://dom.spec.whatwg.org/#concept-node)
-- [노드](/en-US/docs/Web/API/Node) 객체
+- [노드](/ko/docs/Web/API/Node) 객체
