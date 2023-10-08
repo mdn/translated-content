@@ -486,7 +486,7 @@ if (window.fetch) {
 
 La spécification de `fetch()` diffère de `jQuery.ajax()`&nbsp;:
 
-- La promesse renvoyée par `fetch()` ne lèvera pas d'exception en cas d'erreurs HTTP, même si le statut de la réponse HTTP est 404 ou 500. Dès que le serveur répond avec les en-têtes, la promesse sera bien résolue (la propriété [`Response.ok`](/fr/docs/Web/API/Response/API/ok) étant fixée à `false` si le statut de la réponse est en dehors de l'intervalle [200, 299]). La promesse sera uniquement rompue s'il y a une erreur réseau ou tout autre évènement qui a empêché sa complétion.
+- La promesse renvoyée par `fetch()` ne lèvera pas d'exception en cas d'erreurs HTTP, même si le statut de la réponse HTTP est 404 ou 500. Dès que le serveur répond avec les en-têtes, la promesse sera bien résolue (la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) étant fixée à `false` si le statut de la réponse est en dehors de l'intervalle [200, 299]). La promesse sera uniquement rompue s'il y a une erreur réseau ou tout autre évènement qui a empêché sa complétion.
 - À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/fetch#credentials) valant `include`, `fetch()`&nbsp;:
   - N'enverra pas de cookies pour les requêtes vers d'autres origines
   - N'écrira pas de cookies provenant de réponses d'autres origines
