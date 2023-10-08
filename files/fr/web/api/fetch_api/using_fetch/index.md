@@ -406,11 +406,11 @@ Nous l'avons vu ci-avant, ce sont des instances de [`Response`](/fr/docs/Web/API
 
 Les propriétés les plus fréquemment utilisées pour ces objets `Response` sont&nbsp;:
 
-- [`Response.status`](/fr/docs/Web/API/Response/API/status)
+- [`Response.status`](/fr/docs/Web/API/Response/status)
   - : Un entier contenant le code de statut HTTP de la réponse (la valeur par défaut est 200).
-- [`Response.statusText`](/fr/docs/Web/API/Response/API/statusText)
+- [`Response.statusText`](/fr/docs/Web/API/Response/statusText)
   - : Une chaîne de caractères qui contient le message du code de statut HTTP (la valeur par défaut est la chaîne vide `""`). On notera que HTTP/2 [ne prend pas en charge](https://fetch.spec.whatwg.org/#concept-response-status-message) les messages de statut.
-- [`Response.ok`](/fr/docs/Web/API/Response/API/ok)
+- [`Response.ok`](/fr/docs/Web/API/Response/ok)
   - : Nous avons vu cette propriété plus tôt dans cet article&nbsp;: il s'agit d'un raccourci pour vérifier que le statut appartient à l'intervalle 200-299. Cette propriété est une valeur booléenne.
 
 On peut également créer des réponses artificiellement en JavaScript. Cela n'est généralement utile qu'au sein des [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), lorsqu'on fournit une réponse sur mesure à une requête reçue en utilisant la méthode [`respondWith()`](/fr/docs/Web/API/FetchEvent/respondWith)&nbsp;:
