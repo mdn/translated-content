@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 
 {{JSRef}}
 
-{{jsxref("Map")}} 的 **`delete()`** 方法从该 map 中删除指定键的元素。
+{{jsxref("Map")}} 实例的 **`delete()`** 方法从该 map 中删除指定键的元素。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 

@@ -36,7 +36,7 @@ console.log(myMap.get("bar")); // 返回 "foo"
 console.log(myMap.get("baz")); // 返回 undefined
 ```
 
-### 使用 get() 检索对对象的引用
+### 使用 get() 获取对对象的引用
 
 ```js
 const arr = [];
