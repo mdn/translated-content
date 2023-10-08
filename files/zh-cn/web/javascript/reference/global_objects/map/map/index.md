@@ -19,7 +19,7 @@ new Map(iterable)
 ### 参数
 
 - `iterable` {{optional_inline}}
-  - : 一个元素是键值对的{{jsxref("Array", "数组")}}或其他[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) 对象。（例如，包含两个元素的数组，如 `[[1，'one']，[2， 'two']]`。）每个键值对都被添加到新的 `Map` 中。
+  - : 一个元素是键值对的{{jsxref("Array", "数组", "", 1)}}或其他[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)对象。（例如，包含两个元素的数组，如 `[[1，'one'], [2， 'two']]`。）每个键值对都被添加到新的 `Map` 中。
 
 ## 示例
 
