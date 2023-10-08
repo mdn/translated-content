@@ -60,9 +60,9 @@ l10n:
 
 ## События
 
-Слушайте эти события используя [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) или назначая слушатель события свойству `oneventname`.
+Слушайте эти события используя [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) или назначая слушатель события свойству `oneventname`.
 
-- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event)
+- [`progress`](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event)
 
   - : Срабатывает при изменении любого из следующих свойств:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},

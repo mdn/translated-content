@@ -82,10 +82,7 @@ No polyfill acima, nenhuma coerção de tipo extra é necessária para tornar nu
 
 ## Especificações
 
-| Especificação                                          | Status               | Comentário         |
-| ------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

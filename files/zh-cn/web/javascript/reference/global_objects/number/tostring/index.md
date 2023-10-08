@@ -40,7 +40,7 @@ toString(radix)
 
 `0` 和 `-0` 都以 `"0"` 作为其字符串表示。{{jsxref("Infinity")}} 返回 `"Infinity"`，而 {{jsxref("NaN")}} 返回 `"NaN"`。
 
-如果该数字不是一个整数，则使用小数点 `.` 来分隔小数部分。如果基数为 10，并且数字的大小（忽略符号）大于或等于 10<sup>21</sup> 或小于 10<sup>-6</sup>，则使用[科学计数法](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#指数)。在这种情况下，返回的字符串总是显式地指定了指数的符号。
+如果该数字不是一个整数，则使用小数点 `.` 来分隔小数部分。如果基数为 10，并且数字的大小（忽略符号）大于或等于 10<sup>21</sup> 或小于 10<sup>-6</sup>，则使用[科学计数法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#指数)。在这种情况下，返回的字符串总是显式地指定了指数的符号。
 
 ```js
 console.log((10 ** 21.5).toString()); // "3.1622776601683794e+21"

@@ -47,9 +47,7 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 2
 
 ## Especificações
 
-| Especificação                                                                      |
-| ---------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

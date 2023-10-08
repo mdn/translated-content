@@ -59,10 +59,7 @@ Math.atanh =
 
 ## Especificações
 
-| Specification                                            | Status               | Comment            |
-| -------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-math.atanh', 'Math.atanh')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
