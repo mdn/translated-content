@@ -40,11 +40,7 @@ null == undefined; // verdadeiro
 
 ## Especificações
 
-| Especificação                                        | Status             | Comentários       |
-| ---------------------------------------------------- | ------------------ | ----------------- |
-| ECMAScript 1st Edition.                              | Standard           | Definição inicial |
-| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}}   | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-null-value', 'null value')}} | {{Spec2('ES6')}}   |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

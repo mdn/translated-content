@@ -514,11 +514,7 @@ The full path of the URL will be displayed over the mouse, and the screen will b
 
 ## Specifications
 
-| Specification                                                | Status                 | Comment |
-| ------------------------------------------------------------ | ---------------------- | ------- |
-| {{ SpecName('CSS3 UI', '#text-overflow', 'text-overflow') }} | {{ Spec2('CSS3 UI') }} |         |
-
-A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

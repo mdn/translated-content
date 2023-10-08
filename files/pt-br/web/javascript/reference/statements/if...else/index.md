@@ -110,13 +110,7 @@ if ((x = y)) {
 
 ## Especificações
 
-| Especificação                                                | Status               | Comentário        |
-| ------------------------------------------------------------ | -------------------- | ----------------- |
-| {{SpecName('ESDraft', '#sec-if-statement', 'if statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-if-statement', 'if statement')}}     | {{Spec2('ES6')}}     |                   |
-| {{SpecName('ES5.1', '#sec-12.5', 'if statement')}}           | {{Spec2('ES5.1')}}   |                   |
-| {{SpecName('ES3', '#sec-12.5', 'if statement')}}             | {{Spec2('ES3')}}     |                   |
-| {{SpecName('ES1', '#sec-12.5', 'if statement')}}             | {{Spec2('ES1')}}     | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
