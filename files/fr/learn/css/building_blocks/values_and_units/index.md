@@ -255,7 +255,7 @@ Dans les différents exemples qui précèdent, on a vu des endroits où les mots
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 
-## Functions
+## Fonctions
 
 Les dernières valeurs que nous verrons ici sont les fonctions. En programmation, une fonction est une section de code réutilisable qui peut être exécutée plusieurs fois afin de réaliser une tâche de façon répétitive avec le minimum effort de la part du développeur ou de l'ordinateur. Les fonctions sont généralement associées à des langages comme JavaScript, Python ou C++ mais elles existent en CSS également pour être utilisées comme valeurs de propriétés. En fait, nous avons déjà vu des fonctions dans la section à propos des couleurs&nbsp;: `rgb()`, `hsl()`, etc. La valeur utilisée pour récupérer une image à partir d'un fichier, `url()` est également une fonction.
 
