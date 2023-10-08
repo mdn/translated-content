@@ -21,7 +21,7 @@ Map[Symbol.species]
 
 `@@species` 访问器属性返回 `Map` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
 
-> **请注意：** 目前所有 `Map` 方法均未使用此属性。
+> **备注：** 目前所有 `Map` 方法均未使用此属性。
 
 ## 示例
 
@@ -30,7 +30,7 @@ Map[Symbol.species]
 `@@species` 属性返回默认构造函数，即 `Map` 的构造函数。
 
 ```js
-Map[Symbol.species]; // function Map()
+Map[Symbol.species]; // 函数 Map()
 ```
 
 ### 派生对象的 species
