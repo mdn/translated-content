@@ -18,7 +18,7 @@ l10n:
 | `3g`           | 270ms                                               | 700 Kbps      | 이 네트워크는 고해상도 이미지, 오디오, SD 비디오 등 대용량 리소스를 전송하는 데 적합합니다. |
 | `4g`           | 0ms                                                 | ∞             | 이 네트워크는 HD 비디오, 실시간 비디오 등에 적합합니다.                                     |
 
-[유효타입](/ko/docs/Web/API/NetworkInformation/effectiveType)은 [네트워크 정보 API](/ko/docs/Web/API/Network_Information_API)의 속성으로, [navigator.connection](/en-US/docs/Web/API/Navigator/connection) 객체를 통해 JavaScript에 노출됩니다. 유효 연결 타입을 보려면, 지원 브라우저의 개발자 도구 콘솔을 열고 다음을 입력하세요.
+[유효타입](/ko/docs/Web/API/NetworkInformation/effectiveType)은 [네트워크 정보 API](/ko/docs/Web/API/Network_Information_API)의 속성으로, [navigator.connection](/ko/docs/Web/API/Navigator/connection) 객체를 통해 JavaScript에 노출됩니다. 유효 연결 타입을 보려면, 지원 브라우저의 개발자 도구 콘솔을 열고 다음을 입력하세요.
 
 ```js
 navigator.connection.effectiveType;
