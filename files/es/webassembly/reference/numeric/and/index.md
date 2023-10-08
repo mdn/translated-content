@@ -5,7 +5,7 @@ slug: WebAssembly/Reference/Numeric/AND
 
 {{WebAssemblySidebar}}
 
-Las instrucciones **`and`** son usadas para realizar operaciones bit a bit de tipo  AND, similares al operador **`&`** en otros lenguajes.
+Las instrucciones **`and`** son usadas para realizar operaciones bit a bit de tipo AND, similares al operador **`&`** en otros lenguajes.
 
 {{EmbedInteractiveExample("pages/wat/and.html", "tabbed-taller")}}
 
@@ -24,6 +24,6 @@ i32.and
 ```
 
 | Instrucción | Código binario de operación|
-| ----------- | ------------- |
-| `i32.and`   | `0x71`        |
-| `i64.and`   | `0x83`        |
+| ----------- | -------------------------- |
+| `i32.and`   | `0x71`                     |
+| `i64.and`   | `0x83`                     |
