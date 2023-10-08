@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9a272d3d84d344df6beb8ccfd5fe78131bb01f2e
 ---
 
-<!-- markdownlint-disable MD033 MD028 -->
-
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists",
 "Learn/CSS/Styling_text")}}
 
@@ -15,6 +13,8 @@ l10n:
 как жирность, начертание и семейство, сокращённое свойство font, выравнивание
 текста и другие эффекты, а также рассмотрим межстрочный и межбуквенный
 интервалы.
+
+<!-- markdownlint-disable MD033 MD028 -->
 
 <table>
   <tbody>
