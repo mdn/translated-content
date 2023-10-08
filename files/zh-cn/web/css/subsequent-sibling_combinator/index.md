@@ -1,6 +1,7 @@
 ---
 title: 通用兄弟选择器
-slug: Web/CSS/General_sibling_combinator
+slug: Web/CSS/Subsequent-sibling_combinator
+original_slug: Web/CSS/General_sibling_combinator
 ---
 
 {{CSSRef}}
