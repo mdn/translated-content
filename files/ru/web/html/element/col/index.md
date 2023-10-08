@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-Элемент **`<col>`** [HTML](/en-US/docs/Web/HTML) определяет столбец в таблице и используется для определения общей семантики для всех общих ячеек. Обычно он находится внутри элемента {{HTMLElement("colgroup")}}.
+Элемент **`<col>`** [HTML](/ru/docs/Web/HTML) определяет столбец в таблице и используется для определения общей семантики для всех общих ячеек. Обычно он находится внутри элемента {{HTMLElement("colgroup")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
 
@@ -15,7 +15,7 @@ l10n:
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru-RU/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `span`
   - : Этот атрибут содержит целое положительное число, указывающее количество последовательных столбцов, которые заполняет элемент `<col>`. Если он отсутствует, то его значение по умолчанию равно "1".
@@ -26,7 +26,7 @@ l10n:
 
 - `align` {{deprecated_inline}}
 
-  - : Этот атрибут [enumerated](/en-US/docs/Glossary/Enumerated) указывает, как будет обрабатываться выравнивание содержимого ячейки каждого столбца по горизонтали. Возможными значениями являются:
+  - : Этот атрибут [enumerated](/ru/docs/Glossary/Enumerated) указывает, как будет обрабатываться выравнивание содержимого ячейки каждого столбца по горизонтали. Возможными значениями являются:
 
     - `left`, выравнивание содержимого по левому краю ячейки
     - `center`, выравнивание содержимого по центру ячейки
@@ -43,7 +43,7 @@ l10n:
 
 - `bgcolor` {{Deprecated_inline}}
 
-  - : Задний фон таблицы. Это [6-значный шестнадцатеричный RGB-код](/en-US/docs/Web/CSS/hex-color) с префиксом "#`. Также можно использовать одно из предопределенных [цветовых ключевых слов](/en-US/docs/Web/CSS/color_value#named_colors).
+  - : Задний фон таблицы. Это [6-значный шестнадцатеричный RGB-код](/ru/docs/Web/CSS/hex-color) с префиксом "#`. Также можно использовать одно из предопределенных [цветовых ключевых слов](/ru/docs/Web/CSS/color_value#named_colors).
 
   Чтобы добиться аналогичного эффекта, используйте свойство CSS {{cssref("background-color")}}.
 
@@ -79,7 +79,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ru/docs/Web/Guide/HTML/Content_categories"
           >Content categories</a
         >
       </th>

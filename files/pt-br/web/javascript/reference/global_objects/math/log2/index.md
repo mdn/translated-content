@@ -58,10 +58,7 @@ Math.log2 =
 
 ## Especificações
 
-| Especificação                                          | Status               | Comentário          |
-| ------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

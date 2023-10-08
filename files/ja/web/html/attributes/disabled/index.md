@@ -1,15 +1,21 @@
 ---
 title: "HTML 属性: disabled"
 slug: Web/HTML/Attributes/disabled
+l10n:
+  sourceCommit: a9323bfa9a5c937633786a29124fd308bfa8d29d
 ---
 
 {{HTMLSidebar}}
 
 **`disabled`** は論理属性で、存在する場合、その要素は変更不可、フォーカス不可、フォームへの送信不可となります。ユーザーはそのコントロールやフォームコントロールの子孫を編集したり、フォーカスしたりすることができません。
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-disabled.html", "tabbed-standard")}}
+
+## 概要
+
 フォームコントロールに `disabled` 属性が指定された場合、その要素とフォームコントロールの子孫は制約検証が行われません。多くの場合、ブラウザーはそのようなコントロールをグレーアウトし、マウスクリックやフォーカス関連のイベントなどの閲覧イベントを受け取りません。
 
-`disabled` 属性は、 {{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("input")}} が対応しています。
+`disabled` 属性は、 {{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("input")}} が対応しています。
 
 論理属性の disabled は、ユーザーがコントロールやその子孫のコントロールと対話できないことを示します。この属性が指定されていない場合、コントロールは、例えば `fieldset` のような包含要素からその設定を継承します。 `disabled` 属性が設定されている包含要素がなく、コントロール自体がこの属性を持っていない場合、コントロールは有効になります。 {{ HTMLElement("optgroup") }}上で宣言された場合、 select は（特に無効化されていない限り）操作可能になりますが、オプショングループの項目はどれも選択不可能になります。
 
@@ -70,7 +76,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 <p>
   <label
-    >選択してください
+    >選択してください:
     <select>
       <optgroup label="Group 1">
         <option>Option 1.1</option>
@@ -92,7 +98,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 <fieldset disabled>
   <legend>無効なフィールドセット</legend>
   <p>
-    <label>名前: <input type="name" name="radio" value="通常" /> 通常 </label>
+    <label> 名前: <input type="name" name="radio" value="通常" /> 通常 </label>
   </p>
   <p>
     <label>数値: <input type="number" /></label>
@@ -100,7 +106,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 300)}}
+{{EmbedLiveSample('Examples', 500, 450)}}
 
 ## 仕様書
 

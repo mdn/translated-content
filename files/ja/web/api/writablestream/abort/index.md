@@ -1,8 +1,9 @@
 ---
-title: WritableStream.abort()
+title: "WritableStream: abort() メソッド"
+short-title: abort()
 slug: Web/API/WritableStream/abort
 l10n:
-  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -17,12 +18,12 @@ abort(reason)
 
 ### 引数
 
-- reason
+- `reason`
   - : 人間が読むことのできる文字列で、中止した理由を提供します。
 
 ### 返値
 
-{{jsxref("Promise")}} です。 `reason` 引数で指定された値で満たされます。
+{{jsxref("Promise")}} です。 `reason` 引数で指定された値で履行されます。
 
 ### 例外
 

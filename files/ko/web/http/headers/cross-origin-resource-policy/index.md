@@ -48,6 +48,6 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## 같이 보기
 
-- [교차 출처 리소스 정책(CORP) 설명자](/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy)
+- [교차 출처 리소스 정책(CORP) 설명자](/ko/docs/Web/HTTP/Cross-Origin_Resource_Policy)
 - [교차 출처 리소스 정책 배포 고려하기](https://resourcepolicy.fyi/)
 - {{httpheader("Access-Control-Allow-Origin")}}

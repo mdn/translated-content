@@ -704,7 +704,8 @@
 /pt-BR/docs/Web/CSS/CSS_Reference	/pt-BR/docs/Web/CSS/Reference
 /pt-BR/docs/Web/CSS/CSS_Reference/mix-blend-mode	/pt-BR/docs/Web/CSS/mix-blend-mode
 /pt-BR/docs/Web/CSS/CSS_Tipos	/pt-BR/docs/Web/CSS/CSS_Types
-/pt-BR/docs/Web/CSS/General_sibling_selectors	/pt-BR/docs/Web/CSS/General_sibling_combinator
+/pt-BR/docs/Web/CSS/General_sibling_combinator	/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator
+/pt-BR/docs/Web/CSS/General_sibling_selectors	/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator
 /pt-BR/docs/Web/CSS/Getting_Started/JavaScript	/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /pt-BR/docs/Web/CSS/Getting_Started/Lists	/pt-BR/docs/Learn/CSS/Styling_text/Styling_lists
 /pt-BR/docs/Web/CSS/Media_Queries	/pt-BR/docs/Web/CSS/CSS_media_queries

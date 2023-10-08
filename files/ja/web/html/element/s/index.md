@@ -1,11 +1,13 @@
 ---
-title: <s>
+title: "<s>: 取り消し要素"
 slug: Web/HTML/Element/s
+l10n:
+  sourceCommit: fb6eaff788d19ad4013d57db0084f7c4f8e15a91
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<s>` 要素**は取り消し線を引いた文字列を表示します。 `<s>` 要素はすでに適切または正確ではなくなった事柄を表現します。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。
+**`<s>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストを取り消し線または打ち消し線つきで描画します。`<s>` 要素はすでに適切または正確ではなくなった事柄を表現するために使用してください。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。
 
 {{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
 
@@ -13,7 +15,7 @@ slug: Web/HTML/Element/s
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
@@ -67,23 +69,26 @@ slug: Web/HTML/Element/s
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-> **メモ:** **実装におけるメモ:** Gecko 1.9.2 以前はこの要素に {{domxref("HTMLSpanElement")}} インターフェイスを実装しています。
-
 ## 例
 
-```html
-<s>本日のおすすめ: サーモンカルパッチョ</s> 売り切れ<br />
-<span style="text-decoration:line-through;"
-  >本日のおすすめ: サーモンカルパッチョ</span
->
-売り切れ
+```css
+.sold-out {
+  text-decoration: line-through;
+}
 ```
+
+```html
+<s>本日のおすすめ: サーモン</s> 売り切れ<br />
+<span class="sold-out">本日のおすすめ: サーモン</span> 売り切れ
+```
+
+### 結果
 
 {{EmbedLiveSample("Examples")}}
 
 ## アクセシビリティの考慮
 
-`s` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("content")}} プロパティを、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素と共に使うことでアナウンスさせることができます。
+`s` 要素が存在することは、多くのスクリーンリーダー技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("content")}} プロパティを、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素と共に使うことでアナウンスさせることができます。
 
 ```css
 s::before,
@@ -106,10 +111,10 @@ s::after {
 }
 ```
 
-読み上げソフトを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが取り消しされていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
+スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが取り消しされていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 仕様書
 
@@ -117,10 +122,10 @@ s::after {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{HTMLElement("strike")}} 要素は、 {{HTMLElement("s")}} 要素の分身でしたが、廃止されており、もうウェブサイトで使用するべきではありません。
+- {{HTMLElement("strike")}} 要素は、{{HTMLElement("s")}} 要素の分身でしたが、廃止されており、もうウェブサイトで使用するべきではありません。
 - {{HTMLElement("del")}} 要素は、データが*削除された*場合に代わりに使用するべきものです。
-- CSS の {{cssxref("text-decoration-line")}} プロパティは、 {{HTMLElement("s")}} 要素の以前の視覚効果を実現します。
+- CSS の {{cssxref("text-decoration-line")}} プロパティは、{{HTMLElement("s")}} 要素の以前の視覚効果を実現します。

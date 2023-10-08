@@ -32,10 +32,7 @@ Como todos os outros elementos do HTML, este elemento tem os atributos globais, 
 
 ## Especificações
 
-| Specification                                                                           | Status                   | Comment |
-| --------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}        | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
