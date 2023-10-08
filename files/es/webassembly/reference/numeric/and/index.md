@@ -23,7 +23,7 @@ i32.and
 (00000001)
 ```
 
-| Instrucción | Código binario de operación|
-| ----------- | -------------------------- |
-| `i32.and`   | `0x71`                     |
-| `i64.and`   | `0x83`                     |
+| Instrucción | Código binario de operación |
+| ----------- | --------------------------- |
+| `i32.and`   | `0x71`                      |
+| `i64.and`   | `0x83`                      |
