@@ -59,7 +59,7 @@ slug: Web/CSS/At-rule
 
 ## 使用 CSS 嵌套来嵌套 @layer
 
-[级联层](/zh-CN/docs/Web/CSS/@layer)可以嵌套以[创建嵌套层](/zh-CN/docs/Web/CSS/@layer#nesting_layers)。它们用 `.`（点）连接。这也可以使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules#nesting_cascade_layers_layer)来实现。
+[级联层](/zh-CN/docs/Web/CSS/@layer)可以嵌套以[创建嵌套层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。它们用 `.`（点）连接。这也可以使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules#嵌套级联层（layer）)来实现。
 
 ## 索引
 
@@ -103,4 +103,4 @@ slug: Web/CSS/At-rule
   - [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-  - [CSS nesting module](/zh-CN/docs/Web/CSS/CSS_nesting)
+  - [CSS 嵌套模块](/zh-CN/docs/Web/CSS/CSS_nesting)
