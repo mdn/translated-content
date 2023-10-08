@@ -41,9 +41,7 @@ console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 
 ## Especificações
 
-| Specification                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

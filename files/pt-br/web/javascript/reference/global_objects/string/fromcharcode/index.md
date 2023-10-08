@@ -44,12 +44,7 @@ Embora os valores Unicode mais comuns possam ser representados com um número de
 
 ## Especificações
 
-| Especificação                                                               | Status               | Comentário                                         |
-| --------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

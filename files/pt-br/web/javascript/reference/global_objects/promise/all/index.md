@@ -204,10 +204,7 @@ Promise.all([
 
 ## Especificações
 
-| Especificação                                              | Status               | Comentário                           |
-| ---------------------------------------------------------- | -------------------- | ------------------------------------ |
-| {{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}}  | {{Spec2('ES2015')}}  | Definição inicial em um padrão ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
