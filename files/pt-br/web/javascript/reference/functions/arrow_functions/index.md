@@ -377,10 +377,7 @@ setTimeout( () => {
 
 ## Especificações
 
-| Especificação                                                                            | Status               | Comentário         |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

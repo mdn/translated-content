@@ -91,9 +91,7 @@ function fixedEncodeURI(str) {
 
 ## Especificações
 
-| Especificação                                              |
-| ---------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

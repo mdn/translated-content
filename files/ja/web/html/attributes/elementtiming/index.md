@@ -2,12 +2,16 @@
 title: "HTML 属性: elementtiming"
 slug: Web/HTML/Attributes/elementtiming
 l10n:
-  sourceCommit: bb7e3c7303746408072ddf4cc646e28d7e14214a
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
-**`elementtiming`** 属性は、要素が{{domxref("Element Timing API", "要素タイミング API", "", 1)}} による追跡のためのフラグを立てていることを示すために使用されます。この属性は {{htmlelement("img")}}、 {{SVGElement("svg")}} の中の {{SVGElement("image")}} 要素、 {{htmlelement("video")}} 要素のポスター画像、 {{cssxref("background-image")}} がある要素、及び {{htmlelement("p")}} などテキストノードを持つ要素に対して適用することができます。
+**`elementtiming`** 属性は、ある要素が {{domxref("PerformanceObserver")}} オブジェクトで `"element"` 型を使用したものによる追跡のためのフラグを立てていることを示すために使用されます。詳細は、 {{domxref("PerformanceElementTiming")}} インターフェイスを参照してください。
+
+この属性は {{htmlelement("img")}}、 {{SVGElement("svg")}} の中の {{SVGElement("image")}} 要素、 {{htmlelement("video")}} 要素のポスター画像、 {{cssxref("background-image")}} がある要素、及び {{htmlelement("p")}} などテキストノードを持つ要素に対して適用することができます。
+
+DOM では、この属性は {{domxref("Element.elementTiming")}} として反映されます。
 
 ## 使用方法
 
@@ -34,4 +38,5 @@ l10n:
 
 ## 関連情報
 
-- [Custom metrics](https://web.dev/custom-metrics/)
+- {{domxref("PerformanceElementTiming")}}
+- {{domxref("Element.elementTiming")}}

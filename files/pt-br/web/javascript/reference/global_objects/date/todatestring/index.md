@@ -32,12 +32,7 @@ console.log(d.toDateString()); // exibe Wed Jul 28 1993 no log
 
 ## Especificações
 
-| Especificação                                                                              | Situação             | Comentário         |
-| ------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES3')}}                                                                        | {{Spec2('ES3')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.9.5.3', 'Date.prototype.toDateString')}}                      | {{Spec2('ES5.1')}}   |                    |
-| {{SpecName('ES6', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}}     | {{Spec2('ES6')}}     |                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

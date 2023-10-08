@@ -229,12 +229,7 @@ display.addEventListener("change", function (evt) {
 
 ## Especificações
 
-| Especificação                                                             | Status                          | Comentário                                      |
-| ------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} | Atualização para últimas definições de sintaxe. |
-| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}       | {{Spec2('CSS3 Flexbox')}}       | Definição inicial                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

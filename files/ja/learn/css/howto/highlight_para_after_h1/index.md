@@ -2,7 +2,7 @@
 title: 見出しの直後に来た段落を強調表示するには
 slug: Learn/CSS/Howto/Highlight_para_after_h1
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
 ---
 
 {{LearnSidebar}}
@@ -15,7 +15,7 @@ l10n:
 
 ## 隣接兄弟結合子
 
-CSS の [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors) のグループには、複数のセレクターを組み合わせて選択することから**結合子**と呼ばれるものが存在します。この例では、[隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator)を使用することにします。この結合子は、ある要素が他の要素の隣にあることを基準に選択します。HTML は {{htmlelement("Heading_Elements", "h1")}} の後に {{htmlelement("p")}} が続いています。`<p>` は `<h1>` の隣接する兄弟要素なので、`h1 + p` で選択することができます。
+CSS の [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors) のグループには、複数のセレクターを組み合わせて選択することから**結合子**と呼ばれるものが存在します。この例では、[隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator)を使用することにします。この結合子は、ある要素が他の要素の隣にあることを基準に選択します。HTML は {{htmlelement("Heading_Elements", "h1")}} の後に {{htmlelement("p")}} が続いています。`<p>` は `<h1>` の隣接する兄弟要素なので、`h1 + p` で選択することができます。
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_h1_plus_para.html", '100%', 800)}}
 

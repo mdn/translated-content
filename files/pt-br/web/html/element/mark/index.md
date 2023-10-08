@@ -34,10 +34,7 @@ Este elemento inclue apenas [atributos Globais](/pt-BR/docs/HTML/Global_attribut
 
 ## Especificações
 
-| Especificações                                                                            | Status                   | Comentários |
-| ----------------------------------------------------------------------------------------- | ------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'the-mark-element.html#the-mark-element', '&lt;mark&gt;')}}       | {{Spec2('HTML5 W3C')}}   |             |
+{{Specifications}}
 
 ## Compatibilidade
 

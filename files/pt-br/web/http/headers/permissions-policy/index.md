@@ -108,9 +108,7 @@ Especificando a palavra-chave `'none'` para a lista de origem, as funcionalidade
 
 ## Especificações
 
-| Especificação                                                                               | Status                      | Comentário |
-| ------------------------------------------------------------------------------------------- | --------------------------- | ---------- |
-| {{SpecName("Feature Policy","#permissions-policy-http-header-field","Permissions-Policy")}} | {{Spec2("Feature Policy")}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

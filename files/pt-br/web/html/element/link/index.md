@@ -17,15 +17,15 @@ O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("as")}}
+- `as`
   - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
-- {{htmlattrdef("charset")}}
+- `charset`
 
   - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
 
     > **Nota:** Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : Este atributo enumerado indica se a busca da imagem relacionada deve ser feita usando CORS ou não. I-magens de CORS habilitado podem ser reutilizadas no elemento {{HTMLElement("canvas")}} sem ser conta-minado. Os valores permitidos são:
 
@@ -36,7 +36,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/Web/HTML/CORS_settings_attributes) for additional information.
 
-- {{htmlattrdef("disabled")}} {{Non-standard_inline}}
+- `disabled` {{Non-standard_inline}}
 
   - : Este atributo é usado para desativa uma relação com o link. Em conjunto com o script, esse atributo poderia ser usado para ligar e desligar várias relações com stylesheets.
 
@@ -47,11 +47,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > - If the `disabled` attribute has been added directly to the element on the page, do not include the {{HTMLElement("link")}} element instead;
     > - Set the `disabled` **property** of the `StyleSheet` DOM object via scripting.
 
-- {{htmlattrdef("href")}}
+- `href`
   - : Esse atributo especifica a [URL](/pt-BR/docs/URIs_and_URLs) do recurso vinculado. Uma URL pode ser absolute or relative.
-- {{htmlattrdef("hreflang")}}
+- `hreflang`
   - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](http://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos [`href`](/pt-BR/docs/Web/HTML/Element/a#href) estiverem presentes.
-- {{htmlattrdef("media")}}
+- `media`
 
   - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/CSS/Media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
 
@@ -59,17 +59,17 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     >
     > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/CSS/Media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
-- {{htmlattrdef("methods")}} {{Non-standard_inline}}
+- `methods` {{Non-standard_inline}}
   - : The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4. See [Methods Property (MSDN)](http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
-- {{htmlattrdef("rel")}}
+- `rel`
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the [link types values](/pt-BR/docs/Web/HTML/Link_types). The most common use of this attribute is to specify a link to an external style sheet: the **rel** attribute is set to `stylesheet`, and the **href** attribute is set to the URL of an external style sheet to format the page. WebTV also supports the use of the value `next` for **rel** to preload the next page in a document series.
-- {{htmlattrdef("rev")}}
+- `rev`
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](/pt-BR/docs/Web/HTML/Element/link#href) attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel).
 
     > **Nota:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) contains the icon [link types value](/pt-BR/docs/Web/HTML/Link_types). It may have the following values:
 
@@ -79,9 +79,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > **Nota:** Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry.
     > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
-- {{htmlattrdef("target")}}{{Non-standard_inline}}
+- `target`{{Non-standard_inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
-- {{htmlattrdef("type")}}
+- `type`
   - : This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on. The common use of this attribute is to define the type of style sheet linked and the most common current value is **text/css**, which indicates a Cascading Style Sheet format.
 
 ## Exemplos
@@ -140,11 +140,7 @@ Você pode determinar quando um stylesheet foi carregado observando um `load` ev
 
 ## Especificações
 
-| Specification                                                                        | Status                   | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}       | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}   |         |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                 | {{Spec2('HTML4.01')}}    |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
