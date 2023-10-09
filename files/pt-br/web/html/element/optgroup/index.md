@@ -19,9 +19,9 @@ Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opç�
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Se este atributo booleano for definido, nenhum dos itens neste **optgroup** poderá ser selecionado. Muitos navegadores marcam como cinza e não permitem que o elemento receba nenhum evento de navegação, como cliques do mouse ou foco.
-- {{htmlattrdef("label")}}
+- `label`
   - : É o nome do optgroup, é o que os navegadores irão exibir como rótulo. Este atributo é obrigatório se o elemento for usado.
 
 ## Exemplo
@@ -49,11 +49,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificação                                                                                   | Status                   | Comentário |
-| ----------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-optgroup-element', '&lt;optgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}}                | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;optgroup&gt;')}}                      | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

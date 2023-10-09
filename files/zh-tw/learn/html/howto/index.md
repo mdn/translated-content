@@ -45,7 +45,7 @@ HTML 專攻於為文件提供語義資訊，因此 HTML 可以提供使用者更
 
 HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本使內容呈現更具互動性。
 
-- [如何在網頁中使用 CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
+- [如何在網頁中使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works#將_css_套用至_dom)
 - [如何在網頁中使用 JavaScript](/zh-TW/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### 嵌入內容

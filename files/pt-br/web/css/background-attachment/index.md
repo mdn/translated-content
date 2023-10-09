@@ -99,11 +99,7 @@ p {
 
 ## Especificações
 
-| Especificação                                                                                | Status                        | Comentário                                                                                      |
-| -------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}      | {{Spec2('CSS3 Backgrounds')}} | The shorthand property has been extended to support multiple backgrounds and the `local` value. |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}} | {{Spec2('CSS2.1')}}           | Mudança não significativa.                                                                      |
-| {{SpecName('CSS1', '#background-attachment', 'background-attachment')}}                      | {{Spec2('CSS1')}}             | Mudança não significativa                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

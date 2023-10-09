@@ -130,9 +130,7 @@ Isso dará o seguinte resultado:
 
 ## Especificações
 
-| Especificação                                                   | Status                 | Comentário         |
-| --------------------------------------------------------------- | ---------------------- | ------------------ |
-| {{SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align')}} | {{Spec2('CSS3 Ruby')}} | Definição inicital |
+{{Specifications}}
 
 ## Compatilibade de Navegador
 

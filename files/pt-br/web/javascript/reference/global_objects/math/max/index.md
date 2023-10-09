@@ -73,11 +73,7 @@ Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o res
 
 ## Especificações
 
-| Especificação                                         | Status             | Comentário          |
-| ----------------------------------------------------- | ------------------ | ------------------- |
-| ECMAScript 1st Edition. Implemented in JavaScript 1.0 | Standard           | Initial definition. |
-| {{SpecName('ES6', '#sec-15.8.2.11', 'Math.max')}}     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-math.max', 'Math.max')}}      | {{Spec2('ES6')}}   |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

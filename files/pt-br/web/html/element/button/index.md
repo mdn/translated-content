@@ -19,21 +19,21 @@ O **Elemento HTML _`<button>`_** representa um botão clicável.
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : Esse atributo booleano permite-o especificar que o botão possuirá o foco de entrada assim que a página carrega, a menos que o usuário sobrecreva esse comportamento digitanto um controle diferente. Apenas um elemento de um documento associado a um formulário pode ter esse atributo específico.
-- {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+- `autocomplete` {{non-standard_inline}}
   - : O uso desse atributo em um {{HTMLElement("button")}} não está padronizado nem dentro das especificações do Firefox. Por padrão, diferente de outros navegadores, o [Firefox persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} nas páginas carregadas. Definir o valor desse atributo para `off` (ex: `autocomplete="off"`) desabilita esse recurso. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
-- {{htmlattrdef("disabled")}}
+- `disabled`
 
   - : Esse atributo booleano indica que o usuário não poderá interagir com o botão. Se esse atributo não for especificado, o botão herdará a configuração do elemento que o contém, por exemplo {{HTMLElement("fieldset")}}, se não existir nenhum elemento com o atributo **disabled** definido, então o botão estará habilitado.
 
     Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) para controlar esse recurso.
 
-- {{htmlattrdef("form")}}
+- `form`
   - : O elemento de formulário que o botão está associado (é o _formulário proprietário_). O valor do atributo deve ser o atributo **id** de um elemento {{HTMLElement("form")}} no mesmo documento. Se esse atributo não for especificado, o elemento `<button>` deve ser descendente de um elemento de formulário. Esse atributo permite que você coloque elementos `<button>` em qualquer lugar do documento, não apenas como descendente de seus elementos {{HTMLElement("form")}}.
-- {{htmlattrdef("formaction")}}
+- `formaction`
   - : A URI de um programa que processa a informação submetida pelo botão. Se especificado, ele sobrescreve o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário proprietário do botão.
-- {{htmlattrdef("formenctype")}}
+- `formenctype`
 
   - : Se o botão é um botão de envio, esse atributo especifica o tipo de conteúdo que é usado para enviar o formulário para o servidor; Possíveis valores são:
 
@@ -43,7 +43,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     Se esse atributo fro especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário proprietário do botão.
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : Se o botão for um botão de envio, esse atributo especifica o método HTTP que o navegador usará para enviar o formulário. Possíveis valores são:
 
@@ -52,9 +52,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     Se especificado, esse atributo sobrescreve o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário proprietário do botão.
 
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
   - : Se o botão é um botão de envio, esse atributo Booleano especifica que o formulário não é para ser validado quando submetido. Se esse atributo for especificado, ele sobrescreve o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário proprietário do botão.
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
 
   - : Se o botão é um botão de envio, esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Esse é um nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo, uma aba, janela ou quadro embutido). Se esse atributo é especificado, ele sobrescreve o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário proprietário do botão. As seguintes palavras-chaves possuem significados especiais:
 
@@ -63,9 +63,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não há nenhum pai, essa opção passa a ser o mesmo que `_self`.
     - `_top`: Carrega a resposta para o contexto de navegação no nível superior (ou seja, o contexto de navegação é um ancestral do atual e não possui nenhum pai). Se não possui nenhum pai, essa opção passa a agir da mesma forma que `_self`.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : O nome do botão que é enviado com os dados do formulário.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : O tipo de botão. O possíveis valores são:
 
@@ -73,7 +73,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `reset`: O botão restaura todos os controles para seus valores iniciais.
     - `button`: O botão não possui comportamento padrão. Ele pode ter scripts do lado do cliente associado com os eventos do elemento, no qual são acionados quando o evento ocorrer.
 
-- {{htmlattrdef("value")}}
+- `value`
   - : O valor inicial do botão.
 
 ## Notas
@@ -92,11 +92,7 @@ Note que esse botão possui CSS aplicado.
 
 ## Especificações
 
-| Especificações                                                                              | Status                   | Comentário |
-| ------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-button-element', '&lt;button&gt;')}}                | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

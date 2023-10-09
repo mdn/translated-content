@@ -63,12 +63,7 @@ try {
 
 ## Especificações
 
-| Especificação                                                                                   | Status               | Comentário                                                                        |
-| ----------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}     | Definição inicial.                                                                |
-| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                            | {{Spec2('ES5.1')}}   | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}     | {{Spec2('ES6')}}     | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

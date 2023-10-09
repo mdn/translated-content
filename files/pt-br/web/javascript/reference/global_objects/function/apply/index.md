@@ -146,11 +146,7 @@ Esse método é especialmente útil quando você quer fazer debug de eventos, ou
 
 ## Especificações
 
-| Especificação                                                                    | Status             | Comentário                                         |
-| -------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 3º Edição.                                                            | Padrão             | Definição inicial, implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}               | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -657,7 +657,7 @@ Object.setPrototypeOf(obj, anotherObj);
 
 ### \_\_proto\_\_ 접근자를 사용하는 방법
 
-모든 객체는 [`Object.prototype.__proto__`](//docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 설정자를 상속하며, 이는 기존 객체의 `[[Prototype]]`을 설정하는 데 사용할 수 있습니다(`__proto__` 키가 객체에서 재정의되지 않은 경우).
+모든 객체는 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 설정자를 상속하며, 이는 기존 객체의 `[[Prototype]]`을 설정하는 데 사용할 수 있습니다(`__proto__` 키가 객체에서 재정의되지 않은 경우).
 
 > **경고:** `Object.prototype.__proto__` 접근자는 **비표준**이며 더 이상 사용되지 않습니다. 대신 거의 항상 `Object.setPrototypeOf`를 사용해야 합니다.
 

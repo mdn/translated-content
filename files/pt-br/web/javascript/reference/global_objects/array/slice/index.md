@@ -194,12 +194,7 @@ Embora os objetos de host (como objetos DOM) não sejam obrigados pela especific
 
 ## Especificações
 
-| Especificação                                                                  | Status               | Comentário                                         |
-| ------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}               | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3')}}                                                            | {{Spec2('ES3')}}     | Definição inicial. Implementada no JavaScript 1.2. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

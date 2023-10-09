@@ -165,13 +165,7 @@ p.minblue {
 
 ## Especificações
 
-| Especificação                                                         | Status                        | Comentários                                                                                                         |
-| --------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-width-and-height-properties', 'width')}} | {{Spec2('CSS3 Box')}}         | Adicionadas as palavras-chave `max-content`, `min-content`, `available`, `fit-content`, `border-box`, `content-box` |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}          | {{Spec2('CSS3 Transitions')}} | Lista a largura como animável.                                                                                      |
-| {{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}}    | {{Spec2('CSS2.1')}}           | Determina em qual elemento vai ser aplicado.                                                                        |
-| {{SpecName('CSS1', '#width', 'width')}}                               | {{Spec2('CSS1')}}             | Definição inicial                                                                                                   |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}        | {{Spec2('CSS3 Sizing')}}      | Adiciona novas palavras-chave para largura e altura.                                                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

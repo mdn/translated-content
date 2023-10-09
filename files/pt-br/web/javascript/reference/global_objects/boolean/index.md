@@ -108,11 +108,7 @@ var bObjProto = new Boolean({});
 
 ## Especificações
 
-| Especificação                                          | Status             | Comentário                                          |
-| ------------------------------------------------------ | ------------------ | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}   | Definição inicial. Implementado no Java Script 1.0. |
-| {{SpecName('ES5.1', '#sec-15.6', 'Boolean')}}          | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-boolean-objects', 'Boolean')}} | {{Spec2('ES6')}}   |                                                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
