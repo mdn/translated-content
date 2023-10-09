@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**{{Glossary("CSP")}} 탐색 지시문 (Navigation directive)** 는 예를 들어, {{HTTPHeader("Content-Security-Policy")}} 헤더에 사용되며 사용자가 탐색하거나 양식을 제출할 수 있는 위치를 제어합니다.
+**{{Glossary("CSP")}} 탐색 지시문 (Navigation directive)** 는 {{HTTPHeader("Content-Security-Policy")}} 헤더에 사용되며, 예를 들어 사용자가 탐색하거나 양식을 제출할 수 있는 위치를 제어합니다.
 
 탐색 지시문은 {{CSP("default-src")}} 지시문으로 대체되지 않습니다.
 
