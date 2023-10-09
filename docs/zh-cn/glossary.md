@@ -26,10 +26,11 @@
 
 ### HTML
 
-| 英文词汇        | 翻译     | 备注 | 引用来源                                                                    |
-| --------------- | -------- | ---- | --------------------------------------------------------------------------- |
-| light dismiss   | 轻触关闭 |      | https://github.com/mdn/translated-content/pull/13609#discussion_r1222377850 |
-| Living Standard | 动态标准 |      | https://github.com/mdn/translated-content/pull/13406#discussion_r1206197135 |
+| 英文词汇        | 翻译     | 备注 | 引用来源                                                                     |
+| --------------- | -------- | ---- | ---------------------------------------------------------------------------- |
+| light dismiss   | 轻触关闭 |      | https://github.com/mdn/translated-content/pull/13609#discussion_r1222377850  |
+| Living Standard | 动态标准 |      | https://github.com/mdn/translated-content/pull/13406#discussion_r1206197135  |
+| jank            | 卡顿     |      | https://github.com/mdn/translated-content/pull/16039#issuecomment-1737565821 |
 
 ### HTTP
 
