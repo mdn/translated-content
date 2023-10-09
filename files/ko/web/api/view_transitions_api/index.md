@@ -61,7 +61,7 @@ function updateView(event) {
 뷰 전환이 어떻게 작동하는지 살펴보겠습니다.
 
 1. {{domxref("Document.startViewTransition()", "document.startViewTransition()")}}이 호출되면, API는 현재 페이지의 스크린샷을 찍습니다.
-2. 그런 다음 `startViewTransition()`에 전단될 콜백(이 경우, `displayNewImage`)이 호출되어 DOM이 변경됩니다. 콜백이 성공적으로 실행되면 {{domxref("ViewTransition.updateCallbackDone")}} 프로미스가 이행되어 DOM 업데이트에 응답할 수 있습니다.
+2. 그런 다음 `startViewTransition()`에 전달된 콜백(이 경우, `displayNewImage`)이 호출되어 DOM이 변경됩니다. 콜백이 성공적으로 실행되면 {{domxref("ViewTransition.updateCallbackDone")}} 프로미스가 이행되어 DOM 업데이트에 응답할 수 있습니다.
 3. API는 페이지의 새 상태를 실시간 표현으로 캡처합니다.
 4. API는 다음과 같은 구조로 의사 요소 트리를 구성합니다.
 
