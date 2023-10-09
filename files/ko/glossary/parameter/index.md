@@ -9,7 +9,7 @@ l10n:
 
 매개변수는 {{Glossary("function", "함수")}}에 전달되는 이름이 있는 변수입니다. 매개변수를 의미하는 변수는 {{Glossary("argument","인자")}}를 함수로 가져오는 데 사용됩니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.
 
 ```js
 function example(parameter) {
