@@ -17,9 +17,9 @@ o elemento HTML progress (\<progress>) é usado para visualizar o progresso de u
 
 Como todos os outros elementos HTML, este elemento tem os atributos globais [(global attributes](https://developer-new.mozilla.org/en/HTML/Global_attributes))
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : Este atributo descreve quanto trabalho é demandado pela tarefa indicada pelo elemento progress.
-- {{ htmlattrdef("value") }}
+- `value`
   - : Este atributo especifica quanto da tarefa foi concluído. Se este não existir, a barra de progresso é indeterminada; isso indica que uma atividade está em progresso sem previsão de quanto tempo é esperado para que seja concluída.
 
 Você pode usar a propriedade {{ cssxref("orient") }} para especificar se a barra de progresso deve ser renderizada horizontalmente (padrão) ou verticalmente. A pseudo-classe {{ cssxref(":indeterminate") }} pode ser associada a barras de progresso indeterminadas.
