@@ -87,7 +87,7 @@ p {
 
 #### Результат
 
-{{EmbedLiveSample('Example', 600, 580)}}
+{{EmbedLiveSample('Примеры', 600, 580)}}
 
 ## Спецификации
 
