@@ -15,7 +15,7 @@ l10n:
 
 `pattern` 属性は {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} の入力型の属性です。
 
-`pattern` 属性は、[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過させるために、入力の {{htmlattrxref("value")}} が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、[正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されているものと同じものです。正規表現をコンパイルする際に `'u'` フラグが指定されるので、パターンが ASCII ではなく Unicode コードポイントの並びとして扱われるようになります。パターンテキストの周りには、スラッシュを指定してはいけません。
+`pattern` 属性は、[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Element/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、[正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されているものと同じものです。正規表現をコンパイルする際に `'u'` フラグが指定されるので、パターンが ASCII ではなく Unicode コードポイントの並びとして扱われるようになります。パターンテキストの周りには、スラッシュを指定してはいけません。
 
 パターンが指定されていないか無効な場合、正規表現は適用されず、この属性は無視されます。
 
@@ -85,7 +85,7 @@ input:invalid {
 
 ### パターンの指定
 
-{{htmlattrxref("pattern", "input")}} 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)を参照してください）。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)を参照してください）。
 
 以下の例では、値を 4-8 文字に制限し、小文字のみを含むことを要求しています。
 
