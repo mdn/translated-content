@@ -21,7 +21,7 @@ entries()
 
 ### 返回值
 
-一个新的[可迭代的迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 示例
 
