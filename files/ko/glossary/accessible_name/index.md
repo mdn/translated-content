@@ -1,5 +1,5 @@
 ---
-title: Accessible name
+title: 접근 가능한 이름 (Accessible name)
 slug: Glossary/Accessible_name
 l10n:
   sourceCommit: 371bd494d2580e7f4f45f1934cfe8335bd3cc80e
