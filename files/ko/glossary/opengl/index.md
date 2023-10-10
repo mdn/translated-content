@@ -1,5 +1,5 @@
 ---
-title: 오픈 그래픽 라이브러리 (OpenGL)
+title: OpenGL
 slug: Glossary/OpenGL
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
