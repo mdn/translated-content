@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**그리드 열(Grid Column)**은 [CSS 그리드 레이아웃](/en-US/docs/Web/CSS/CSS_grid_layout)의 수직 트랙이며 두 수직 그리드 선 사이의 공간입니다. 이것은 {{cssxref("grid-template-columns")}} 속성이나 약식 {{cssxref("grid")}} 또는 {{cssxref("grid-template")}} 속성으로 정의됩니다.
+**그리드 열(Grid Column)**은 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)의 수직 트랙이며 두 수직 그리드 선 사이의 공간입니다. 이것은 {{cssxref("grid-template-columns")}} 속성이나 약식 {{cssxref("grid")}} 또는 {{cssxref("grid-template")}} 속성으로 정의됩니다.
 
 또한, 요소가 '명시적 그리드'에서 생성된 열 외부에 배치되면 '암시적 그리드'에 열이 생성될 수 있습니다. 이러한 열은 기본적으로 크기가 자동으로 조정되거나, {{cssxref("grid-auto-columns")}} 속성으로 지정된 크기를 가질 수 있습니다.
 
