@@ -1,54 +1,112 @@
 ---
 title: Основы стилизирования текста и шрифта
 slug: Learn/CSS/Styling_text/Fundamentals
+l10n:
+  sourceCommit: 9a272d3d84d344df6beb8ccfd5fe78131bb01f2e
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists",
+"Learn/CSS/Styling_text")}}
 
-В данной статье мы начнём путь к овладению стилизацией текста при помощи {{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие как толщина, начертание, семейство, стенография, выравнивание текста и другие эффекты, а также рассмотрим междустрочный и межбуквенный интервалы.
+В данной статье мы начнём путь к овладению стилизацией текста при помощи
+{{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие
+как жирность, начертание и семейство, сокращённое свойство font, выравнивание
+текста и другие эффекты, а также рассмотрим межстрочный и межбуквенный
+интервалы.
 
-| Необходимые знания: | Базовые компьютерные знания, Основы HTML (раздел [Введение в HTML](/ru/docs/Learn/HTML/Введение_в_HTML)), основы CSS (раздел [Введение в CSS](/ru/docs/Learn/CSS/First_steps)). |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:             | Изучить основные свойства и техники, необходимые для стилизации текста на веб-страницах.                                                                                        |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Необходимые знания:</th>
+      <td>
+        Базовая компьютерная грамотность, основы HTML(изучите
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Введение в HTML</a
+        >), основы CSS (изучите
+        <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Задача:</th>
+      <td>
+    Изучить фундаментальные свойства и техники стилизации текста на
+    веб-страницах.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Что участвует в стилизации текста в CSS?
 
-Как вы уже проверили в своей работе с HTML и CSS, текст внутри элемента выкладывается в поле содержимого элемента. Он начинается в левом верхнем углу области содержимого (или в правом верхнем углу, в случае содержимого языка RTL) и течёт к концу строки. Как только он достигает конца, он переходит к следующей строке и продолжает, затем к следующей строке, пока все содержимое не будет помещено в коробку. Текстовое содержимое эффективно ведёт себя как ряд встроенных элементов, размещённых на соседних строках и не создающих разрывы строк до тех пор, пока не будет достигнут конец строки, или если вы не принудите разрыв строки вручную с помощью элемента {{htmlelement("br")}}.
+Как вы уже проверили в своей работе с HTML и CSS, текст внутри элемента
+выкладывается в поле содержимого элемента. Он начинается в левом верхнем углу
+области содержимого (или в правом верхнем углу, в случае содержимого языка RTL)
+и течёт к концу строки. Как только он достигает конца, он переходит к следующей
+строке, и т. д., пока все содержимое не будет помещено в элемент. Текстовое
+содержимое эффективно ведёт себя как ряд inline-элементов, размещённых на
+соседних строках и не создающих разрывы строк до тех пор, пока не будет
+достигнут конец строки, или если вы не сделаете разрыв строки принудительно с
+помощью элемента {{htmlelement("br")}}.
 
-> **Примечание:** если приведённый выше абзац оставляет вас в замешательстве, то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, чтобы освежить теорию модели коробки, прежде чем продолжить.
+> **Примечание:** Приведённый выше абзац оставляет вас в замешательстве?
+> Вернитесь и просмотрите нашу статью о
+> [блочной модели](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), чтобы
+> освежить теорию, прежде чем продолжить.
 
-Свойства CSS, используемые для стилизации текста, обычно делятся на две категории, которые мы рассмотрим отдельно в этой статье:
+Свойства CSS, используемые для стилизации текста, обычно делятся на две
+категории, которые мы рассмотрим отдельно в этой статье:
 
-- **Font styles**: Свойства, влияющие на шрифт, применяемый к тексту, влияющие на то, какой шрифт применяется, насколько он велик, является ли он полужирным, курсивным и т. д.
-- **Text layout styles**: Свойства, влияющие на интервал и другие особенности компоновки текста, позволяющие манипулировать, например, пространством между строками и буквами, а также тем, как текст выравнивается в поле содержимого.
+- **Стили шрифта**: Свойства, влияющие на шрифт, применяемый к тексту,
+  влияющие на то, какой шрифт применяется, насколько он велик, является ли он
+  полужирным, курсивным и т. д.
+- **Стили текстового макета**: Свойства, влияющие на интервал и другие
+  особенности компоновки текста, позволяющие манипулировать, например,
+  пространством между строками и буквами, а также тем, как текст выравнивается
+  в блоке.
 
-> **Примечание:** имейте в виду, что текст внутри элемента все затронуты как одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста, если вы не обернёте их в соответствующий элемент (например, {{htmlelement ("span")}} или {{htmlelement ("strong")}}), или использовать текстовый псевдоэлемент, такой как ::first-letter (выделяет первую букву текста элемента),:: first-line (выделяет первую строку текста элемента) или ::selection (выделяет текст, выделенный в данный момент курсором.)
+> **Примечание:** Имейте в виду, что весь текст внутри элемента затронут как
+> одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста,
+> пока вы не обернёте их в соответствующий элемент (например,
+> {{htmlelement("span")}} или {{htmlelement("strong")}}), или не примените
+> текстовый псевдоэлемент, такой как
+> [::first-letter](/en-US/docs/Web/CSS/::first-letter) (выделяет первую букву
+> текста элемента), [::first-line](/en-US/docs/Web/CSS/::first-line) (выделяет
+> первую строку текста элемента), или
+> [::selection](/en-US/docs/Web/CSS/::selection) (выделяет текст, выделенный в
+> данный момент курсором).
 
 ## Шрифты
 
-Давайте сразу перейдём к рассмотрению свойств для стилизации шрифтов. В этом примере мы применим некоторые различные свойства CSS к одному и тому же образцу HTML, который выглядит следующим образом:
+Давайте сразу перейдём к рассмотрению свойств для стилизации шрифтов. В этом
+примере мы применим некоторые свойства CSS к образцу HTML, который выглядит
+следующим образом:
 
 ```html
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
-You can find the [finished example on GitHub](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+Вы можете посмотреть [завершённый пример на GitHub](http://mdn.github.io/learning-area/css/styling-text/fundamentals/)
+(смотрите также [исходный код](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html)).
 
-### Color
+### Цвет
 
-The {{cssxref("color")}} property sets the color of the foreground content of the selected elements (which is usually the text, but can also include a couple of other things, such as an underline or overline placed on text using the {{cssxref("text-decoration")}} property).
+Свойство {{cssxref("color")}} определяет цвет переднего плана контента (обычно у
+текста, но этот цвет также может быть применён к некоторым другим вещам, таким
+как линия подчёркивания и зачёркивания, определяемая свойством
+{{cssxref("text-decoration")}}).
 
-`color` can accept any [CSS color unit](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors), for example:
+`color` принимает любое [значение цвета CSS](/en-US/docs/Learn/CSS/
+Building_blocks/Values_and_units#colors), например:
 
 ```css
 p {
@@ -56,74 +114,229 @@ p {
 }
 ```
 
-This will cause the paragraphs to become red, rather than the standard browser default black, like so:
+Это изменит цвет абзацев по умолчанию(чёрный) на красный:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
 {{ EmbedLiveSample('Color', '100%', 230) }}
 
-### Font families
+### Семейства шрифтов
 
-To set a different font on your text, you use the {{cssxref("font-family")}} property — this allows you to specify a font (or list of fonts) for the browser to apply to the selected elements. The browser will only apply a font if it is available on the machine the website is being accessed on; if not, it will just use a browser [default font](#default_fonts). A simple example looks like so:
+Для выбора шрифта используйте свойство {{cssxref("font-family")}} — оно
+определяет шрифт или список шрифтов, которые браузер применит к элементам.
+Браузер применит [шрифт по умолчанию](#шрифты-по-умолчанию), если на устройстве,
+с которого просматривается веб-сайт, нет шрифта, который вы определили в CSS.
+Пример:
 
 ```css
 p {
-  font-family: arial;
+  font-family: Arial;
 }
 ```
 
-This would make all paragraphs on a page adopt the arial font, which is found on any computer.
+Это применит шрифт Arial(который есть на любом компьютере) ко всем абзацам.
 
-#### Web safe fonts
+#### Безопасные веб-шрифты
 
-Speaking of font availability, there are only a certain number of fonts that are generally available across all systems and can therefore be used without much worry. These are the so-called **web safe fonts**.
+Говоря о доступности шрифтов, есть шрифты, которые обычно доступны на всех
+системах. Они называются **безопасные веб-шрифты**, и вы можете использовать
+их без особого беспокойства.
 
-Most of the time, as web developers we want to have more specific control over the fonts used to display our text content. The problem is to find a way to know which font is available on the computer used to see our web pages. There is no way to know this in every case, but the web safe fonts are known to be available on nearly all instances of the most used operating systems (Windows, macOS, the most common Linux distributions, Android, and iOS).
+Долгое время разработчики хотели большего контроля над шрифтами, которые
+отображают текстовый контент. Узнать, какие шрифты доступны на устройстве
+пользователя, было проблемой. Нет способа узнать это в абсолютно каждом случае,
+но безопасные веб-шрифты доступны на большинстве ОС (Windows, macOS,
+распространённые дистрибутивы Linux, Android, iOS).
 
-The list of actual web safe fonts will change as operating systems evolve, but it's reasonable to consider the following fonts web safe, at least for now (many of them have been popularized thanks to the Microsoft _[Core fonts for the Web](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web)_ initiative in the late 90s and early 2000s):
+Актуальный список безопасных шрифтов будет изменятся с развитием операционных
+систем, но, по крайней мере сейчас, принято считать эти шрифты безопасными
+(Microsoft своей _[Core fonts for the Web](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web)_
+инициативой распространила многие из них):
 
-| Name            | Generic type | Notes                                                                                                                                                                                                                                             |
-| --------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Arial           | sans-serif   | It's often considered best practice to also add _Helvetica_ as a preferred alternative to _Arial_ as, although their font faces are almost identical, _Helvetica_ is considered to have a nicer shape, even if _Arial_ is more broadly available. |
-| Courier New     | monospace    | Some OSes have an alternative (possibly older) version of the _Courier New_ font called _Courier_. It's considered best practice to use both with _Courier New_ as the preferred alternative.                                                     |
-| Georgia         | serif        |                                                                                                                                                                                                                                                   |
-| Times New Roman | serif        | Some OSes have an alternative (possibly older) version of the _Times New Roman_ font called _Times_. It's considered best practice to use both with _Times New Roman_ as the preferred alternative.                                               |
-| Trebuchet MS    | sans-serif   | You should be careful with using this font — it isn't widely available on mobile OSes.                                                                                                                                                            |
-| Verdana         | sans-serif   |                                                                                                                                                                                                                                                   |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Название</th>
+      <th scope="col">Общий тип</th>
+      <th scope="col">Примечания</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Arial</td>
+      <td>Без засечек</td>
+      <td>
+        Часто шрифт <em>Helvetica</em> добавляется как предпочитаемая
+        альтернатива шрифту <em>Arial</em>, хотя шрифты почти идентичны,
+        считается, что <em>Helvetica</em> имеет более красивую форму, даже если
+        <em>Arial</em> более распространён.
+      </td>
+    </tr>
+    <tr>
+      <td>Courier New</td>
+      <td>Моноширинный</td>
+      <td>
+        Некоторые системы имеют альтернативную (возможно, более старую) версию
+        <em>Courier New</em> под названием <em>Courier</em>. Принято указывать
+        оба шрифта, предпочитая <em>Courier New</em>.
+      </td>
+    </tr>
+    <tr>
+      <td>Georgia</td>
+      <td>С засечками</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Times New Roman</td>
+      <td>С засечками</td>
+      <td>
+        Некоторые системы имеют альтернативную (возможно, более старую) версию
+        <em>Times New Roman</em> под названием <em>Times</em>. Принято указывать
+        оба шрифта, предпочитая <em>Times New Roman</em>.
+      </td>
+    </tr>
+    <tr>
+      <td>Trebuchet MS</td>
+      <td>Без засечек</td>
+      <td>
+        Используйте с осторожностью — у шрифта плохая поддержка на мобильных ОС.
+      </td>
+    </tr>
+    <tr>
+      <td>Verdana</td>
+      <td>Без засечек</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
-> **Примечание:** Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
+> **Примечание:** Среди разных ресурсов,
+> [cssfontstack.com](http://www.cssfontstack.com/) предоставляет список
+> безопасных шрифтов, доступных на Windows и macOS, который поможет вам выбрать
+> безопасный шрифт.
 
-> **Примечание:** There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
+> **Примечание:** Есть способ загрузить кастомный шрифт вместе со страницей,
+> чтобы настроить использование шрифтов так, как вы хотите: **веб-шрифты**. Это
+> слегка сложнее и будет позже рассмотрено в
+> [отдельной статье](/ru/docs/Learn/CSS/Styling_text/Web_fonts) этого модуля.
 
-#### Default fonts
+#### Шрифты по умолчанию
 
-CSS defines five generic names for fonts: `serif`, `sans-serif`, `monospace`, `cursive` and `fantasy`. Those are very generic and the exact font face used when using those generic names is up to each browser and can vary for each operating system they are running on. It represents a _worst case scenario_ where the browser will try to do its best to provide at least a font that looks appropriate. `serif`, `sans-serif` and `monospace` are quite predictable and should provide something reasonable. On the other hand, `cursive` and `fantasy` are less predictable and we recommend using them very carefully, testing as you go.
+CSS определяет 5 общих названий шрифтов: `serif`, `sans-serif`, `monospace`,
+`cursive` и `fantasy`. Они очень общие и конкретный шрифт, который будет
+использован браузером при использовании этих значений может отличаться на разных
+ОС и браузерах. Они определяют _наихудший сценарий_, при котором браузер будет
+использовать хотя бы похожий шрифт. `serif`, `sans-serif` и `monospace`
+предсказуемы и предоставляют разумную альтернативу. `cursive` и `fantasy` менее
+предсказуемы. Их нужно использовать с осторожностью и тестировать в процессе
+разработки.
 
-The five names are defined as follows:
+Эти значения определены следующим образом:
 
-| Term         | Definition                                                                                                           | Example             |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `serif`      | Fonts that have serifs (the flourishes and other small details you see at the ends of the strokes in some typefaces) | My big red elephant |
-| `sans-serif` | Fonts that don't have serifs.                                                                                        | My big red elephant |
-| `monospace`  | Fonts where every character has the same width, typically used in code listings.                                     | My big red elephant |
-| `cursive`    | Fonts that are intended to emulate handwriting, with flowing, connected strokes.                                     | My big red elephant |
-| `fantasy`    | Fonts that are intended to be decorative.                                                                            | My big red elephant |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Тип шрифта</th>
+      <th scope="col">Определение</th>
+      <th scope="col">Пример</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>serif</code></td>
+      <td>
+        С засечками (завитки и другие мелкие детали на конце штрихов в
+        некоторых шрифтах).
+      </td>
+      <td id="serif-example">
+        <pre class="brush: html hidden">Мой большой красный слон</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: serif;
+}</pre
+        >
+        {{EmbedLiveSample("serif-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>sans-serif</code></td>
+      <td>Без засечек.</td>
+      <td id="sans-serif-example">
+        <pre class="brush: html hidden">Мой большой красный слон</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: sans-serif;
+}</pre
+        >
+        {{EmbedLiveSample("sans-serif-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>monospace</code></td>
+      <td>
+        Моноширинный: в шрифте все символы одной ширины, обычно используется
+        для написания кода.
+      </td>
+      <td id="monospace-example">
+        <pre class="brush: html hidden">Мой большой красный слон</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: monospace;
+}</pre
+        >
+        {{EmbedLiveSample("monospace-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>cursive</code></td>
+      <td>
+        Шрифт похож на рукописное письмо, штрихи соединённые и плавные.
+      </td>
+      <td id="cursive-example">
+        <pre class="brush: html hidden">Мой большой красный слон</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: cursive;
+}</pre
+        >
+        {{EmbedLiveSample("cursive-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>fantasy</code></td>
+      <td>Декоративный шрифт.</td>
+      <td id="fantasy-example">
+        <pre class="brush: html hidden">Мой большой красный слон</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: fantasy;
+}</pre
+        >
+        {{EmbedLiveSample("fantasy-example", 100, 60)}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-#### Font stacks
+#### Стеки шрифтов
 
-Since you can't guarantee the availability of the fonts you want to use on your webpages (even a web font _could_ fail for some reason), you can supply a **font stack** so that the browser has multiple fonts it can choose from. This simply involves a `font-family` value consisting of multiple font names separated by commas, e.g.
+Пока вы не можете гарантировать доступность шрифтов на странице (даже веб-шрифт
+_может_ не быть применён по некоторым причинам), вы можете использовать **стек
+шрифтов**, чтобы браузер имел несколько шрифтов, из которых он может выбирать.
+Просто укажите в значении свойства `font-family` несколько названий шрифтов
+через запятую. Пример:
 
 ```css
 p {
@@ -131,15 +344,32 @@ p {
 }
 ```
 
-In such a case, the browser starts at the beginning of the list and looks to see if that font is available on the machine. If it is, it applies that font to the selected elements. If not, it moves on to the next font, and so on.
+Браузер начнёт с первого шрифта в списке и проверит его наличие на устройстве.
+Если браузер найдёт шрифт, он применит его к элементам HTML, в противном случае
+браузер попытается применить следующий шрифт и т. д.
 
-It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasise this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
+Хорошей идеей будет указать в конце списка общее имя шрифта. Тогда если ни один
+из перечисленных шрифтов не будет доступен, браузер применит хотя бы похожий
+шрифт. Подчеркнём этот момент: абзацы по умолчанию используют шрифт с засечками
+— обычно Times New Roman — плохой вариант, если вы хотите шрифт без засечек!
 
-> **Примечание:** Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> **Примечание:** Во избежание ошибок, имена шрифтов с пробелами, знаками
+> препинания(кроме дефиса) и цифрами, такие как `Trebuchet MS`, рекомендуется
+> брать в кавычки.
 
-#### A font-family example
+> **Предупреждение:** Всегда пишите в кавычках имя шрифта, которое может быть
+> ошибочно интерпретировано как общее имя шрифта или ключевое слово CSS. Хотя
+> имена шрифтов могут быть включены в ваш CSS как {{cssxref("custom-ident")}} или
+> {{cssxref("string")}}, имена, совпадающие со значениями свойств CSS, такими как
+> `initial` и `inherit`, или с общими именами шрифтов, такими как `sans-serif` или
+> `fantasy`, должны быть в кавычках, иначе имя шрифта будет некорректно
+> интерпретировано. При использовании общих имён шрифтов — `serif`, `sans-serif`,
+> `monospace`, `cursive`, и `fantasy`, а также других глобальных ключевых слов
+> CSS, пишите их БЕЗ кавычек.
 
-Let's add to our previous example, giving the paragraphs a sans-serif font:
+#### Пример добавления семейства шрифтов
+
+Давайте применим шрифт без засечек к абзацам из предыдущего примера:
 
 ```css
 p {
@@ -148,133 +378,139 @@ p {
 }
 ```
 
-This gives us the following result:
+Результат:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
 {{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
 
-### Font size
+### Размер шрифта
 
-In our previous module's [CSS values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)), however the most common units you'll use to size text are:
+В нашей статье из предыдущего модуля
+[Значения свойств CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units) мы
+рассматривали единицы измерения длины и размера. Размер шрифта (определяется
+свойством {{cssxref("font-size")}}) может принимать значения в большинстве этих
+единиц(и не только, например в[процентах](/en-US/docs/Learn/CSS/Building_blocks/
+Values_and_units#percentages)), чаще всего используются следующие единицы:
 
-- `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
-- `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
-- `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, although if you want to support really old browsers, you might struggle — `rem` is not supported in Internet Explorer 8 and below.
+- `px` (пиксели): высота в пикселях. Это абсолютная единица измерения —
+  финальное вычисленное значение почти всегда одинаково.
+- `em`: 1 `em` равен размеру шрифта родительского элемента (конкретнее, ширине
+  заглавной M внутри родителя). Это может быть сложно использовать, если у вас
+  много вложенных элементов с разными размерами шрифта, но эта задача выполнима,
+  как вы увидите ниже. К чему беспокоится? Сложности в начале использования
+  естественны, но потом вы будете использовать `em` для изменения размера всего,
+  не только текста. Вы можете использовать `em` для всего сайта, что упростит
+  обслуживание.
+- `rem`: это похоже на `em`, но 1 `rem` равен размеру шрифта корневого
+  элемента({{htmlelement("html")}}), а не родителя. Это упрощает вашу работу с
+  этой единицей, но старые браузеры, такие как Internet Explorer 8 и ниже, не
+  поддерживают `rem`.
 
-The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the `font-size` of which is set to 16`px` as standard across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of 16 `px`. Other elements may have different default sizes, for example an {{htmlelement("h1")}} element has a size of 2 `em` set by default, so it will have a final size of 32 `px`.
+`font-size` наследуется от родительского элемента. Всё начинается с корневого
+элемента документа — {{htmlelement("html")}}, `font-size` которого — `16px` по
+умолчанию во всех браузерах. Любой абзац(или любой другой элемент, которому
+браузер не назначает другой размер) внутри корневого элемента будет иметь размер
+шрифта `16px`. Другие элементы могут иметь другой размер шрифта, например,
+{{htmlelement("Heading_Elements", "h1")}} имеет размер `2em` по умолчанию,
+поэтому его размер в итоге будет `32px`.
 
-Things become more tricky when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element in your page, and set its `font-size` to 1.5 `em` (which would compute to 24 `px` final size), and then wanted the paragraphs inside the `<article>` elements to have a computed font size of 20 `px`, what `em` value would you use?
+Всё усложняется, если вы будете назначать размер шрифта для вложенных элементов.
+Например, у вас есть {{htmlelement("article")}} на странице, и его `font-size` —
+1.5 `em`, что приведёт к финальному размеру в 24 `px`, затем вы захотите
+добавить внутрь несколько абзацев с финальным размером в 20 `px`, какое же
+значение указать для этого в `em`?
 
 ```html
-<!-- document base font-size is 16px -->
+<!-- По умолчанию размер —  16px -->
 <article>
-  <!-- If my font-size is 1.5em -->
+  <!-- Если размер article — 1.5em -->
   <p>My paragraph</p>
-  <!-- How do I compute to 20px font-size? -->
+  <!-- То как получить 20px для элементов p? -->
 </article>
 ```
 
-You would need to set its `em` value to 20/24, or 0.83333333 `em`. The maths can be complicated, so you need to be careful about how you style things. It is best to use `rem` where you can, to keep things simple, and avoid setting the `font-size` of container elements where possible.
+Установите `em` значение как 20/24, или 0.83333333 `em`. Эти вычисления могут
+быть сложными, поэтому вам нужно аккуратно стилизовать ваши элементы. Лучше
+использовать `rem`, где возможно, чтобы упростить ваш код, а также не
+устанавливать `font-size`, где это возможно.
 
-#### A simple sizing example
+### Стиль и жирность шрифта, трансформации и декорации
 
-When sizing your text, it is usually a good idea to set the base `font-size` of the document to 10 `px`, so that then the maths is a lot easier to work out — required `(r)em` values are then the pixel font size divided by 10, not 16. After doing that, you can easily size the different types of text in your document to what you want. It is a good idea to list all your `font-size` rulesets in a designated area in your stylesheet, so they are easy to find.
+CSS предоставляет 4 общих свойства для изменения визуального веса(акцента)
+текста:
 
-Our new result is like so:
+- {{cssxref("font-style")}}: Включает и выключает наклонный стиль шрифта.
+  Свойство принимает следующие значения(вы, скорее всего, редко будете
+  использовать их):
 
-```html hidden
-<h1>Tommy the cat</h1>
+  - `normal`: Применяет стандартный стиль шрифта(наклон отключён).
+  - `italic`: Применяет наклонную версию шрифта, если она доступна; если нет,
+    работает как значение `oblique`.
+  - `oblique`: Имитирует наклон, наклоняя обычную версию шрифта.
 
-<p>Well I remember it as though it were a meal ago...</p>
+- {{cssxref("font-weight")}}: Устанавливает жирность текста. Доступно много
+  значений, если доступно много вариантов шрифта(такие как _-light_, _-normal_,
+  _-bold_, _-extrabold_, _-black_, и т. д.), но в реальности вы будете, скорее
+  всего, использовать лишь `normal` и `bold`:
 
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
+  - `normal`, `bold`: Нормальный и полужирный шрифт.
+  - `lighter`, `bolder`: Устанавливает жирность на шаг больше или меньше, чем у
+    родителя.
+  - `100`–`900`: Числовые значения, обеспечивают больший контроль, чем ключевые
+    слова.
 
-```css
-html {
-  font-size: 10px;
-}
+- {{cssxref("text-transform")}}: Трансформирует текст. Доступные значения:
 
-h1 {
-  font-size: 5rem;
-}
+  - `none`: Без трансформации.
+  - `uppercase`: Переводит весь текст в верхний регистр.
+  - `lowercase`: Переводит весь текст в нижний регистр.
+  - `capitalize`: Все слова с заглавной буквы.
+  - `full-width`: Все глифы записываются в квадрат фиксированной ширины. Это
+    похоже на моноширинный шрифт и позволяет выравнивать, например, латинские
+    символы вместе с глифами азиатских языков(например, корейского).
 
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-}
-```
+- {{cssxref("text-decoration")}}: Применяет текстовые декорации
+  (часто используется для отключения подчёркивания у ссылок, которое по умолчанию
+  включено). Список значений:
 
-{{ EmbedLiveSample('A_simple_sizing_example', '100%', 260) }}
+  - `none`: Отключает любые декорации, включённые ранее.
+  - `underline`: Подчёркивает текст.
+  - `overline`: Рисует линию над текстом.
+  - `line-through`: Зачёркивает текст.
 
-### Font style, font weight, text transform, and text decoration
+{{cssxref("text-decoration")}} может одновременно принимать несколько значений,
+например, `text-decoration: underline overline`. {{cssxref("text-decoration")}}
+— сокращённый вариант {{cssxref("text-decoration-line")}},
+{{cssxref("text-decoration-style")}}, и {{cssxref("text-decoration-color")}}. Вы
+можете комбинировать значения свойства для получения интересных эффектов,
+например: `text-decoration: line-through red wavy`.
 
-CSS provides four common properties to alter the visual weight/emphasis of text:
-
-- {{cssxref("font-style")}}: Used to turn italic text on and off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
-
-  - `normal`: Sets the text to the normal font (turns existing italics off.)
-  - `italic`: Sets the text to use the _italic version of the font_ if available; if not available, it will simulate italics with oblique instead.
-  - `oblique`: Sets the text to use a simulated version of an italic font, created by slanting the normal version.
-
-- {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
-
-  - `normal`, `bold`: Normal and **bold** font weight
-  - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
-  - `100`–`900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
-
-- {{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
-
-  - `none`: Prevents any transformation.
-  - `uppercase`: Transforms all text to capitals.
-  - `lowercase`: Transforms all text to lower case.
-  - `capitalize`: Transforms all words to have the first letter capitalized.
-  - `full-width`: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of e.g. Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).
-
-- {{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.) Available values are:
-
-  - `none`: Unsets any text decorations already present.
-  - `underline`: **Underlines the text**.
-  - `overline`: Gives the text an overline.
-  - `line-through`: Puts a ~~strikethrough over the text~~.
-
-  You should note that {{cssxref("text-decoration")}} can accept multiple values at once, if you want to add multiple decorations simultaneously, for example `text-decoration: underline overline`. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example `text-decoration: line-through red wavy`.
-
-Let's look at adding a couple of these properties to our example:
-
-Our new result is like so:
+Давайте добавим несколько этих свойств в наш пример:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
@@ -299,46 +535,61 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}
+{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration',
+'100%', 260) }}
 
-### Text drop shadows
+### Тени для текста
 
-You can apply drop shadows to your text using the {{cssxref("text-shadow")}} property. This takes up to four values, as shown in the example below:
+{{cssxref("text-shadow")}} определяет тени для текста. Принимает до четырёх
+значений, пример:
 
 ```css
 text-shadow: 4px 4px 5px red;
 ```
 
-The four properties are as follows:
+Значения обозначают следующее:
 
-1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
-2. The vertical offset of the shadow from the original text; behaves basically just like the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
-3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). If not included, it defaults to `black`.
+1. Горизонтальное смещение тени относительно текста — принимает большинство
+   [единиц измерения CSS](/en-US/docs/Learn/CSS/Building_blocks/
+   Values_and_units#length_and_size), чаще всего используется `px`; положительные
+   значения двигают тень вправо, а отрицательные — влево. Это значение обязательно.
+2. Вертикальное смещение относительно текста; обычно ведёт себя как
+   горизонтальное смещение, но двигает тень вверх/вниз. Обязательно должно быть
+   указано.
+3. Радиус размытия — чем больше значение, тем больше размытие тени. По умолчанию
+   0(отключено). Принимает большинство [единиц измерения CSS](/en-US/docs/Learn/
+   CSS/Building_blocks/Values_and_units#length_and_size).
+4. Цвет тени, принимает любой [цвет CSS](/en-US/docs/Learn/CSS/Building_blocks/
+   Values_and_units#colors), цвет по умолчанию — [`currentcolor`](/en-US/docs/Web/
+   CSS/color_value#currentcolor_keyword), то есть цвет из свойства
+   [`color`](/en-US/docs/Web/CSS/color).
 
-#### Multiple shadows
+#### Несколько теней
 
-You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:
+Можно добавить несколько теней через запятую:
 
 ```css
-text-shadow:
-  1px 1px 1px red,
-  2px 2px 1px red;
+h1 {
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
+}
 ```
 
-If we applied this to the {{htmlelement("h1")}} element in our Tommy the cat example, we'd end up with this:
+Мы получим такой результат, если добавим эти стили к
+{{htmlelement("Heading_Elements", "h1")}} в нашем примере:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
@@ -350,9 +601,6 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
 }
 
 h1 + p {
@@ -366,40 +614,49 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Hidden_example1', '100%', 260) }}
+{{ EmbedLiveSample('Multiple_shadows', '100%', 260) }}
 
-> **Примечание:** You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> **Примечание:** Больше интересных примеров с `text-shadow` в статье Sitepoint
+> [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
 
-## Text layout
+## Текстовый макет
 
-With basic font properties out the way, let's now have a look at properties we can use to affect text layout.
+После базовых свойств шрифта, давайте взглянем на свойства текстового макета.
 
-### Text alignment
+### Выравнивание текста
 
-The {{cssxref("text-align")}} property is used to control how text is aligned within its containing content box. The available values are as follows, and work in pretty much the same way as they do in a regular word processor application:
+Свойство {{cssxref("text-align")}} контролирует выравнивание текста внутри
+блока. Принимает следующие значения, которые работают также, как в обычном
+текстовом процессоре:
 
-- `left`: Left-justifies the text.
-- `right`: Right-justifies the text.
-- `center`: Centers the text.
-- `justify`: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully — it can look terrible, especially when applied to a paragraph with lots of long words in it. If you are going to use this, you should also think about using something else along with it, such as {{cssxref("hyphens")}}, to break some of the longer words across lines.
+- `left`: Выравнивание по левому краю.
+- `right`: Выравнивание по правому краю.
+- `center`: Выравнивание по центру.
+- `justify`: Растягивает текст, увеличивая расстояние между словами, из-за чего
+  ширина строк становится одинаковой. Используйте аккуратно — это может плохо
+  выглядеть, особенно если это применить к абзацу, в котором много длинных слов.
+  Если вы всё-таки хотите использовать это значение, подумайте, что можно
+  использовать вместе с ним, например, {{cssxref("hyphens")}} для переноса
+  некоторых длинных слов.
 
-If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example, we'd end up with this:
+Давайте применим `text-align: center;` к
+{{htmlelement("Heading_Elements", "h1")}}:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
-```css hidden
+```css
 html {
   font-size: 10px;
 }
@@ -426,31 +683,40 @@ p {
 
 {{ EmbedLiveSample('Text_alignment', '100%', 260) }}
 
-### Line height
+### Высота строки
 
-The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 – 2 (double spaced.) So to set our lines of text to 1.6 times the height of the font, you'd use this:
+Свойство {{cssxref("line-height")}} определяет высоту каждой строки текста и
+может принимать большинство [единиц измерения CSS](/en-US/docs/Learn/CSS/
+Building_blocks/Values_and_units#length_and_size), но также может принимать
+просто число без единицы измерения, в таком случае высота строки — произведение
+{{cssxref("font-size")}} и числа в `line-height`(этот вариант считается лучшим).
+Обычно основной текст лучше читается и выглядит, когда между строками есть
+некоторое пространство; рекомендуемые значения: 1.5 – 2. Исходя из этого, мы
+можем установить высоту строки в 1.6 раза больше высоты шрифта:
 
 ```css
-line-height: 1.6;
+p {
+  line-height: 1.6;
+}
 ```
 
-Applying this to the {{htmlelement("p")}} elements in our example would give us this result:
+Применим это к {{htmlelement("p")}} в нашем примере:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
-```css hidden
+```css
 html {
   font-size: 10px;
 }
@@ -476,13 +742,19 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Hidden_example2', '100%', 300) }}
+{{ EmbedLiveSample('Line_height', '100%', 300) }}
 
-### Letter and word spacing
+### Расстояние между буквами и словами
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
+Свойства {{cssxref("letter-spacing")}} и {{cssxref("word-spacing")}} помогут
+установить вам межбуквенный и межсловный интервалы соответственно. Вы не будете
+использовать их очень часто, но можете придать с помощью них определённый
+внешний вид или улучшить читаемость слишком плотного шрифта. Принимают
+большинство [единиц измерения](/en-US/docs/Learn/CSS/Building_blocks/
+Values_and_units#length_and_size).
 
-So as an example, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our example:
+Мы можем применить эти свойства для первой строки каждого элемента
+{{htmlelement("p")}}:
 
 ```css
 p::first-line {
@@ -491,23 +763,23 @@ p::first-line {
 }
 ```
 
-Let's add some to our example, like so:
+Теперь добавим это в наш пример:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Кот Томми</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Хорошо, я помню, как будто это была еда назад...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Сказал Томми кот, когда он отшатнулся, чтобы очистить все посторонние
+  предметы, возможно, проникшие в его могучее горло. Многие толстые крысы с
+  аллеи встретились со смертью, когда смотрели в упор на ствол этой машины.
+  Поистине этот городской хищник является чудом природы. Кот Томми мог много
+  чего рассказать, но это был редкий случай, как этот, который он сделал.
 </p>
 ```
 
-```css hidden
+```css
 html {
   font-size: 10px;
 }
@@ -526,11 +798,6 @@ h1 + p {
   font-weight: bold;
 }
 
-p::first-line {
-  letter-spacing: 4px;
-  word-spacing: 4px;
-}
-
 p {
   font-size: 1.5rem;
   color: red;
@@ -542,49 +809,79 @@ p {
 
 {{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}
 
-### Other properties worth looking at
+### Другие свойства, достойные вашего внимания
 
-The above properties give you an idea of how to start styling text on a webpage, but there are many more properties you could use. We just wanted to cover the most important ones here. Once you've become used to using the above, you should also explore the following:
+Вышеупомянутые свойства помогут вам начать стилизовать текст на веб-странице,
+но кроме них есть ещё много свойств, которые вы можете использовать. Мы здесь
+лишь хотели рассказать вам о наиболее важных из них. Когда вы научитесь их
+использовать, попробуйте также следующие свойства:
 
-Font styles:
+Стили шрифта:
 
-- {{cssxref("font-variant")}}: Switch between small caps and normal font alternatives.
-- {{cssxref("font-kerning")}}: Switch font kerning options on and off.
-- {{cssxref("font-feature-settings")}}: Switch various [OpenType](https://en.wikipedia.org/wiki/OpenType) font features on and off.
-- {{cssxref("font-variant-alternates")}}: Control the use of alternate glyphs for a given font-face.
-- {{cssxref("font-variant-caps")}}: Control the use of alternate capital glyphs.
-- {{cssxref("font-variant-east-asian")}}: Control the usage of alternate glyphs for East Asian scripts, like Japanese and Chinese.
-- {{cssxref("font-variant-ligatures")}}: Control which ligatures and contextual forms are used in text.
-- {{cssxref("font-variant-numeric")}}: Control the usage of alternate glyphs for numbers, fractions, and ordinal markers.
-- {{cssxref("font-variant-position")}}: Control the usage of alternate glyphs of smaller sizes positioned as superscript or subscript.
-- {{cssxref("font-size-adjust")}}: Adjust the visual size of the font independently of its actual font size.
-- {{cssxref("font-stretch")}}: Switch between possible alternative stretched versions of a given font.
-- {{cssxref("text-underline-position")}}: Specify the position of underlines set using the `text-decoration-line` property `underline` value.
-- {{cssxref("text-rendering")}}: Try to perform some text rendering optimization.
+- {{cssxref("font-variant")}}: Переключает между вариантами одного шрифта,
+  также можно включить отображение строчных букв как уменьшенных заглавных.
+- {{cssxref("font-kerning")}}: Включает и выключает кернинг шрифта.
+- {{cssxref("font-feature-settings")}}: Включает и выключает опции формата
+  [OpenType](https://en.wikipedia.org/wiki/OpenType).
+- {{cssxref("font-variant-alternates")}}: Управляет альтернативными глифами для
+  вашего шрифта.
+- {{cssxref("font-variant-caps")}}: Использование альтернативных заглавных
+  символов.
+- {{cssxref("font-variant-east-asian")}}: Управляет альтернативными глифами для
+  восточноазиатских языков.
+- {{cssxref("font-variant-ligatures")}}: Управляет контекстными формами и
+  лигатурами.
+- {{cssxref("font-variant-numeric")}}: Альтернативные глифы для порядковых
+  маркеров, чисел, дробей.
+- {{cssxref("font-variant-position")}}: Задаёт верхний или нижний индекс.
+- {{cssxref("font-size-adjust")}}: Настраивает визуальный размер шрифта
+  независимо от его фактического размера.
+- {{cssxref("font-stretch")}}: Переключает между доступными альтернативными
+  растянутыми версиями шрифта.
+- {{cssxref("text-underline-position")}}: Указывает позицию линии подчёркивания,
+  заданную при помощи свойства `text-decoration-line` со значением `underline`.
+- {{cssxref("text-rendering")}}: Пытается оптимизировать рендеринг текста.
 
-Text layout styles:
+Стили текстового макета:
 
-- {{cssxref("text-indent")}}: Specify how much horizontal space should be left before the beginning of the first line of the text content.
-- {{cssxref("text-overflow")}}: Define how overflowed content that is not displayed is signaled to users.
-- {{cssxref("white-space")}}: Define how whitespace and associated line breaks inside the element are handled.
-- {{cssxref("word-break")}}: Specify whether to break lines within words.
-- {{cssxref("direction")}}: Define the text direction (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
-- {{cssxref("hyphens")}}: Switch on and off hyphenation for supported languages.
-- {{cssxref("line-break")}}: Relax or strengthen line breaking for Asian languages.
-- {{cssxref("text-align-last")}}: Define how the last line of a block or a line, right before a forced line break, is aligned.
-- {{cssxref("text-orientation")}}: Define the orientation of the text in a line.
-- {{cssxref("overflow-wrap")}}: Specify whether or not the browser may break lines within words in order to prevent overflow.
-- {{cssxref("writing-mode")}}: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.
+- {{cssxref("text-indent")}}: Задаёт горизонтальный отступ для первой строки
+  текста.
+- {{cssxref("text-overflow")}}: Определяет, как сообщить пользователям о
+  контенте, выходящем за пределы блока и не отображаемом из-за этого.
+- {{cssxref("white-space")}}: Определяет обработку пробелов и связанных с ними
+  переносов строк.
+- {{cssxref("word-break")}}: Определяет, может ли браузер вставлять точку
+  переноса строки внутри слов.
+- {{cssxref("direction")}}: Управляет направлением текста(зависит от языка и
+  обычно лучше позволить HTML обрабатывать эту часть, так как она привязана к
+  текстовому контенту).
+- {{cssxref("hyphens")}}: Включает и отключает перенос для поддерживаемых
+  языков.
+- {{cssxref("line-break")}}: Ослабляет или усиливает перенос слов для азиатских
+  языков.
+- {{cssxref("text-align-last")}}: Выравнивает последнюю строку блока или строку,
+  стоящую прямо перед принудительным разрывом строки.
+- {{cssxref("text-orientation")}}: Определяет ориентацию текста в строке.
+- {{cssxref("overflow-wrap")}}: Указывает, может ли браузер разрывать строки
+  внутри слов для предотвращения переполнения.
+- {{cssxref("writing-mode")}}: Определяет, как строки будут располагаться:
+  вертикально или горизонтально, а также направление потока строк.
 
-## Font shorthand
+## Сокращённое свойство font
 
-Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.
+Много свойств шрифта могут быть установлены через сокращённое свойство
+{{cssxref("font")}}. Они записываются в следующем порядке:
+{{cssxref("font-style")}}, {{cssxref("font-variant")}},
+{{cssxref("font-weight")}}, {{cssxref("font-stretch")}},
+{{cssxref("font-size")}}, {{cssxref("line-height")}}, и
+{{cssxref("font-family")}}.
 
-Among all those properties, only `font-size` and `font-family` are required when using the `font` shorthand property.
+Только `font-size` и `font-family` обязательны в сокращённом свойстве `font`.
 
-A forward slash has to be put in between the {{cssxref("font-size")}} and {{cssxref("line-height")}} properties.
+Между {{cssxref("font-size")}} и {{cssxref("line-height")}} должна стоять косая
+черта.
 
-A full example would look like this:
+Полный пример использования свойства:
 
 ```css
 font:
@@ -593,11 +890,14 @@ font:
   sans-serif;
 ```
 
-## Active learning: Playing with styling text
 
-In this active learning session, we don't have any specific exercises for you to do: we'd just like you to have a good play with some font/text layout properties, and see what you can produce! You can either do this using offline HTML/CSS files, or enter your code into the live editable example below.
+## Активное обучение: играем со стилями текста
 
-If you make a mistake, you can always reset it using the _Reset_ button.
+В этом уроке нет конкретных упражнений, стилизуйте текст как хотите. Можете
+редактировать файлы HTML и CSS офлайн или печатать код в интерактивном
+редакторе ниже:
+
+Ошиблись? Воспользуйтесь кнопкой сброса(_Reset_).
 
 ```html hidden
 <div
@@ -608,7 +908,7 @@ If you make a mistake, you can always reset it using the _Reset_ button.
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>Some sample text for your delight</p>
+  <p>Some sample text for your delight</p>
   </textarea>
 
   <h2>CSS Input</h2>
@@ -616,9 +916,9 @@ If you make a mistake, you can always reset it using the _Reset_ button.
     id="code"
     class="css-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-p {
+    p {
 
-}
+    }
 </textarea
   >
 
@@ -664,24 +964,12 @@ cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 800) }}
+{{ EmbedLiveSample('Active_learning_Playing_with_styling_text', 700, 800) }}
 
-## Test your skills!
+## Заключение
 
-You've reached the end of this article, and already did some skill testing in our Active Learning section, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
-
-This assessment tests all the knowledge discussed in this module, so you might want to read the other articles before moving on to it.
-
-## Summary
-
-We hoped you enjoyed playing with text in this article! The next article will give you all you need to know about styling HTML lists.
+Мы надеемся, что вам понравилось играть с текстом в этой статье! Следующая
+статья даст вам все необходимые знания о [стилизации HTML-списков](/en-US/docs/
+Learn/CSS/Styling_text/Styling_lists).
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ru/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
