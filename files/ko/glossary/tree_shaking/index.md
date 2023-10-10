@@ -15,5 +15,5 @@ l10n:
 
 ## 같이 보기
 
-- Axel Rauschmayer의 책 "JS 살펴보기: 모듈"의 ["번들링 과정에서 데드 코드 제거의 이점"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling)
+- Axel Rauschmayer의 책 "JS 살펴보기: 모듈"의 ["번들링 과정에서 죽은 코드 제거의 이점"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling)
 - [웹팩으로 트리세이킹 구현하기](https://webpack.js.org/guides/tree-shaking/)
