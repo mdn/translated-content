@@ -1,5 +1,5 @@
 ---
-title: 교환 가능한 이미지 파일 형식 (Exchangeable Image File Format, EXIF)
+title: EXIF
 slug: Glossary/EXIF
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
