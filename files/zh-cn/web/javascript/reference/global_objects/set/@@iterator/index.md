@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 
 {{JSRef}}
 
-{{jsxref("Set")}} 实例的 **`[@@iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Set` 对象被大多数期望可迭代对象的语法所消费，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个 [set 迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成 set 的值。
+{{jsxref("Set")}} 实例的 **`[@@iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Set` 对象被大多数期望可迭代对象的语法所消费，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[集合迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成集合的值。
 
 该属性的初始值与 {{jsxref("Set.prototype.values()")}} 属性的初始值是同一个函数对象。
 
@@ -23,7 +23,7 @@ set[Symbol.iterator]()
 
 ### 返回值
 
-与 {{jsxref("Set.prototype.values()")}} 返回值相同：一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成 set 的值。
+与 {{jsxref("Set.prototype.values()")}} 返回值相同：一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成集合的值。
 
 ## 示例
 
