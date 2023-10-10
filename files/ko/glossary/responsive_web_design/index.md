@@ -2,7 +2,7 @@
 title: 반응형 웹 디자인 (Responsive web design)
 slug: Glossary/Responsive_web_design
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 6888996a81e3293cfa10590d74d8a47c221ad90f
 ---
 
 {{GlossarySidebar}}
