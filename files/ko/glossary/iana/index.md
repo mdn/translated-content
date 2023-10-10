@@ -1,5 +1,5 @@
 ---
-title: 인터넷 할당 번호 기관 (IANA)
+title: IANA
 slug: Glossary/IANA
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
