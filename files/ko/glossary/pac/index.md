@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**프록시 자동 구성 파일 (Proxy Auto-Configuration file, PAC file)** 은 요청 (HTTP, HTTPS 및 FTP 포함)이 대상으로 직접 이동해야 하는지 또는 프록시 서버를 통해 전달되어야 하는지를 결정하기 위해 브라우저에서 사용되는 `FindProxyForURL()` 함수가 포함된 파일입니다.
+**프록시 자동 구성 파일 (Proxy Auto-Configuration file, PAC file)** 은 요청(HTTP, HTTPS 및 FTP 포함)이 대상으로 직접 이동해야 하는지 또는 프록시 서버를 통해 전달되어야 하는지를 결정하기 위해 브라우저에서 사용되는 `FindProxyForURL()` 함수가 포함된 파일입니다.
 
 ```js
 function FindProxyForURL(url, host) {
