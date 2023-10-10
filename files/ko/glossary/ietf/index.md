@@ -1,5 +1,5 @@
 ---
-title: 국제 인터넷 표준화 기구 (IETF)
+title: IETF
 slug: Glossary/IETF
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
