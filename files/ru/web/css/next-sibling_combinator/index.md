@@ -1,6 +1,7 @@
 ---
 title: Смежные селекторы
-slug: Web/CSS/Adjacent_sibling_combinator
+slug: Web/CSS/Next-sibling_combinator
+original_slug: Web/CSS/Adjacent_sibling_combinator
 ---
 
 {{CSSRef("Selectors")}}
