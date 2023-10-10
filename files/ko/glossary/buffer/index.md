@@ -1,5 +1,5 @@
 ---
-title: 버퍼
+title: 버퍼 (Buffer)
 slug: Glossary/Buffer
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
