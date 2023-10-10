@@ -2,7 +2,7 @@
 title: C/C++ 모듈을 웹어셈블리로 컴파일하기
 slug: WebAssembly/C_to_Wasm
 l10n:
-  sourceCommit: 13080fe407c8bbba19b5d6876b4706ca59c136b4
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{WebAssemblySidebar}}
