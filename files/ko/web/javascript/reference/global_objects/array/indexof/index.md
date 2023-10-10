@@ -38,7 +38,7 @@ indexOf(searchElement, fromIndex)
 
 `indexOf()` 메서드는 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯을 건너뜁니다.
 
-`indexOf()` 메서드는 [범용](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
+`indexOf()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
 ## 예제
 
