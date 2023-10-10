@@ -45,5 +45,5 @@ Location: http://www.example.org/index.asp
 
 ## 같이 보기
 
-- {{HTTPStatus("308")}} `Permanent Redirect`, 사용된 메소드가 절대 변경되지 않는 이 상태 코드와 동일합니다.
+- {{HTTPStatus("308")}} `Permanent Redirect`, 사용된 메서드가 절대 변경되지 않는 이 상태 코드와 동일합니다.
 - {{HTTPStatus("302")}} `Found`, 임시 리다이렉트
