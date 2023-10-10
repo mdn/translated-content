@@ -1,5 +1,5 @@
 ---
-title: 네트워크 뉴스 전송 프로토콜 (NNTP)
+title: NNTP
 slug: Glossary/NNTP
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
