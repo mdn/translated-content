@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**쉐도우 트리 (Shadow tree)** 는 최상위 [노드](/en-US/docs/Glossary/Node/DOM)가 **쉐도우 루트(shadow root)** 인 {{Glossary("DOM")}} 노드의 숨겨진 집합입니다. 쉐도우 루트는 **쉐도우 DOM(shadow DOM)** 의 최상위 노드이며 일반 문서의 DOM 트리의 일부가 아닙니다.
+**쉐도우 트리 (Shadow tree)** 는 최상위 [노드](/ko/docs/Glossary/Node/DOM)가 **쉐도우 루트(shadow root)** 인 {{Glossary("DOM")}} 노드의 숨겨진 집합입니다. 쉐도우 루트는 **쉐도우 DOM(shadow DOM)** 의 최상위 노드이며 일반 문서의 DOM 트리의 일부가 아닙니다.
 
 쉐도우 루트는 **호스트** 라고 하는 특정 DOM 노드를 통해 다른 노드 트리에 연결됩니다. 이 호스트는 다른 쉐도우 트리의 일부일 수 있습니다. 쉐도우 루트 호스트의 노드 트리를 **라이트 트리(light tree)** 라고도 합니다.
 
