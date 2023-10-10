@@ -21,4 +21,4 @@ l10n:
 - 완료되지 않은 토큰을 작성하지 마세요. `<script>document.write("<div></div");</script>`는 잘못되었습니다.
 - 캐리지 리턴으로 글 작성을 마무리하지 마세요. `<script>document.write("Hello World!\r");</script>`는 잘못되었습니다. `<script>document.write("Hello World!\n");</script>`는 사용해도 괜찮습니다.
 - 균형잡힌 태그를 작성하면 쓰기 불균형을 만드는 방식으로 다른 태그가 추론될 수 있습니다. 예, `head` 요소 내부의 `<script>document.write("<div></div>");</script>`는 불균형한 `<script>document.write("</head><body><div></div>");</script>`로 해석됩니다.
-- 테이블의 일부를 포맷하지 마세요. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>`는 잘못되었습니다.
+- 테이블의 일부를 서식화하지 마세요. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>`는 잘못되었습니다.
