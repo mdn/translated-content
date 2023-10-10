@@ -36,7 +36,7 @@ indexOf(searchElement, fromIndex)
 
 `indexOf()` 메서드는 [엄격한 동등성](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)을 사용하여 배열의 요소와 `searchElement`를 비교합니다(`===` 연산자가 사용하는 것과 동일한 알고리즘). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) 값은 절대 동일하게 비교되지 않으므로, `searchElement`가 `NaN`인 경우 `indexOf()`는 항상 `-1`을 반환합니다.
 
-`indexOf()` 메서드는 [희소 배열](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯을 건너뜁니다.
+`indexOf()` 메서드는 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯을 건너뜁니다.
 
 `indexOf()` 메서드는 [범용](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
