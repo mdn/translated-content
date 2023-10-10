@@ -1,5 +1,5 @@
 ---
-title: Binding
+title: 바인딩 (Binding)
 slug: Glossary/Binding
 l10n:
   sourceCommit: 1c4869cdb1a9a9c3cafba87a2cd9469591f7aa47
