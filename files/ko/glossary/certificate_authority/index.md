@@ -1,5 +1,5 @@
 ---
-title: 인증 기관
+title: 인증 기관 (Certificate authority)
 slug: Glossary/Certificate_authority
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-인증 기관 (CA)은 {{Glossary("Digital certificate", "디지털 인증서")}}와 관련 {{Glossary("Key", "공개 키")}}에 {{Glossary("Signature/Security", "서명")}}하여 포함된 정보와 키가 정확하다고 주장하는 기관입니다.
+인증 기관 (Certificate authority, CA)은 {{Glossary("Digital certificate", "디지털 인증서")}}와 관련 {{Glossary("Key", "키")}}에 {{Glossary("Signature/Security", "서명")}}하여 포함된 정보와 키가 정확하다고 주장하는 기관입니다.
 
 웹사이트 디지털 인증서의 경우, 이 정보에는 최소한 디지털 인증서를 요청한 조직의 이름(예, Mozilla Corporation), 해당 사이트 (e.g., mozilla.org) 및 인증 기관이 포함됩니다.
 
