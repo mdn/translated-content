@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 
 {{JSRef}}
 
-{{jsxref("Set")}} 实例的 **`delete()`** 方法从该 set 中删除指定值，如果该值在 set 中。
+{{jsxref("Set")}} 实例的 **`delete()`** 方法从该集合中删除指定值，如果该值在集合中。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 

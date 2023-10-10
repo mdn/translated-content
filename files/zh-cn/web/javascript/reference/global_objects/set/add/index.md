@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 {{JSRef}}
 
-{{jsxref("Set")}} 实例的 **`add()`** 方法会在该 set 中插入一个具有指定值的新元素，如果该 `Set` 对象中没有具有相同值的元素。
+{{jsxref("Set")}} 实例的 **`add()`** 方法会在该集合中插入一个具有指定值的新元素，如果该 `Set` 对象中没有具有相同值的元素。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
