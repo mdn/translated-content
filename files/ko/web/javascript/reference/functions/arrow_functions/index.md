@@ -1,16 +1,16 @@
 ---
-title: 화살표 함수
+title: 화살표 함수 표현식
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 l10n:
-  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
+  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
 {{jsSidebar("Functions")}}
 
 화살표 함수 표현식(**화살표 함수 expression**)은 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)에 대한 간결한 대안으로, 약간의 의미적 차이와 의도적인 사용상의 제한을 가지고 있습니다.
 
-- 화살표 함수에는 자체 {{glossary("binding", "bindings")}}이 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)에 없으며, [`arguments`](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 또는 [`super`](/ko/docs/Web/JavaScript/Reference/Operators/super)로 사용해야 하며, [methods](/ko/docs/Glossary/Method)로 사용하면 안 됩니다.
-- 화살표 함수는 [constructors](/ko/docs/Glossary/Constructor)로 사용할 수 없습니다. [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출하면 {{jsxref("TypeError")}}가 반환됩니다. [`new.target`](/ko/docs/Web/JavaScript/Reference/Operators/new.target) 키워드에 대한 액세스 권한도 없습니다.
+- 화살표 함수에는 자체 {{Glossary("binding", "바인딩")}}이 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)에 없으며, [`인수`](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 또는 [`super`](/ko/docs/Web/JavaScript/Reference/Operators/super)로 사용해야 하며, [메서드](/ko/docs/Glossary/Method)로 사용하면 안 됩니다.
+- 화살표 함수는 [생성자](/ko/docs/Glossary/Constructor)로 사용할 수 없습니다. [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출하면 {{jsxref("TypeError")}}가 반환됩니다. [`new.target`](/ko/docs/Web/JavaScript/Reference/Operators/new.target) 키워드에 대한 액세스 권한도 없습니다.
 - 화살표 함수는 함수 내부에서 [`yield`](/ko/docs/Web/JavaScript/Reference/Operators/yield)를 사용할 수 없으며 제너레이터 함수로 생성할 수 없습니다.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
@@ -207,7 +207,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-[class](/ko/docs/Web/JavaScript/Reference/Classes)의 내부에는 `this`가 있으므로, 화살표 함수는 [class fields](/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields)가 클래스의 `this` 컨텍스트 위에 닫힐 때 작동합니다. 그러면 화살표 함수 내부의 `this`가 인스턴스 (또는 [static fields](/ko/docs/Web/JavaScript/Reference/Classes/static)의 경우 클래스 자체)를 올바르게 가리키게 됩니다. 그러나 함수 자체의 바인딩이 아닌 [클로저](/ko/docs/Web/JavaScript/Closures)이므로 실행 컨텍스트에 따라 `this`의 값이 변경되지 않습니다.
+[클래스](/ko/docs/Web/JavaScript/Reference/Classes)의 내부에는 `this`가 있으므로, 화살표 함수는 [클래스 필드](/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields)가 클래스의 `this` 컨텍스트 위에 닫힐 때 작동합니다. 그러면 화살표 함수 내부의 `this`가 인스턴스 (또는 [정적 필드](/ko/docs/Web/JavaScript/Reference/Classes/static)의 경우 클래스 자체)를 올바르게 가리키게 됩니다. 그러나 함수 자체의 바인딩이 아닌 [클로저](/ko/docs/Web/JavaScript/Closures)이므로 실행 컨텍스트에 따라 `this`의 값이 변경되지 않습니다.
 
 ```js
 class C {
