@@ -1,5 +1,5 @@
 ---
-title: CIA (Confidentiality, Integrity, Availability) (기밀성, 무결성, 가용성)
+title: CIA
 slug: Glossary/CIA
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
