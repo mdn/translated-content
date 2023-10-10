@@ -23,7 +23,7 @@ indexOf(searchElement, fromIndex)
 - `searchElement`
   - : 배열에서 위치를 찾을 요소입니다.
 - `fromIndex` {{optional_inline}}
-  - : 검색을 시작할 0 기반 인덱스로, [정수로 변환됩니다](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환).
+  - : 검색을 시작할 0 기반 인덱스로, [정수로 변환됩니다](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환).
     - 음수 인덱스는 배열의 끝부터 거꾸로 셉니다. 즉, `fromIndex < 0`이면, `fromIndex + array.length`가 사용됩니다. 그러나, 이 경우에도 배열은 여전히 앞에서 뒤로 검색됩니다.
     - `fromIndex < -array.length`이거나 `fromIndex`가 생략되면, `0`이 사용되어 전체 배열이 검색됩니다.
     - `fromIndex >= array.length` 이면, 배열은 검색되지 않고 `-1`이 반환됩니다.
@@ -34,7 +34,7 @@ indexOf(searchElement, fromIndex)
 
 ## 설명
 
-`indexOf()` 메서드는 [엄격한 동등성](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)을 사용하여 배열의 요소와 `searchElement`를 비교합니다(`===` 연산자가 사용하는 것과 동일한 알고리즘). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) 값은 절대 동일하게 비교되지 않으므로, `searchElement`가 `NaN`인 경우 `indexOf()`는 항상 `-1`을 반환합니다.
+`indexOf()` 메서드는 [엄격한 동등성](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)을 사용하여 배열의 요소와 `searchElement`를 비교합니다(`===` 연산자가 사용하는 것과 동일한 알고리즘). [`NaN`](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN) 값은 절대 동일하게 비교되지 않으므로, `searchElement`가 `NaN`인 경우 `indexOf()`는 항상 `-1`을 반환합니다.
 
 `indexOf()` 메서드는 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯을 건너뜁니다.
 
@@ -134,7 +134,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## 같이 보기
 
 - [`core-js`의 `Array.prototype.indexOf` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
-- [인덱스 기반 컬렉션](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}
