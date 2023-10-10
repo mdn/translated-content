@@ -1,5 +1,5 @@
 ---
-title: 넷스케이프 내비게이터 (Netscape Navigator)
+title: 넷스케이프 네비게이터 (Netscape Navigator)
 slug: Glossary/Netscape_Navigator
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
