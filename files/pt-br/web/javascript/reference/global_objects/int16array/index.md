@@ -146,11 +146,7 @@ var int16 = new Int16Array(iterable);
 
 ## Especificações
 
-| Especificação                                                   | Status                   | Comentário                                                                                                             |
-| --------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 2015.                                                                                      |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Definição inicial em um padrão ECMA. Especificado `new` como requerido.                                                |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 mudou o construtor `Int16Array` para usar a operação `ToIndex` e permitir construtores sem argumentos. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

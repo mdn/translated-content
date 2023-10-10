@@ -47,9 +47,7 @@ testDate[Symbol.toPrimitive]("default");
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

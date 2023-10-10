@@ -207,13 +207,7 @@ p {
 
 ## Especificações
 
-| Specification                                                             | Status                              | Comment                                               |
-| ------------------------------------------------------------------------- | ----------------------------------- | ----------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Adds the values `inline-start` and `inline-end`       |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}              | {{Spec2('CSS2.1')}}                 | No significant changes, though details are clarified. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                   | {{Spec2('CSS1')}}                   | Initial definition                                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidade dos browsers
 

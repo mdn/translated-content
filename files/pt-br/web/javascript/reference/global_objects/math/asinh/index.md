@@ -59,10 +59,7 @@ Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à co
 
 ## Especificações
 
-| Specification                                            | Status               | Comment             |
-| -------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

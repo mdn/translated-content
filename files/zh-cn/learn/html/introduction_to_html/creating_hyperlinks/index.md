@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
        <td>熟悉基本 HTML（包含在<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>中），HTML 文本格式（包含在 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理基础</a>中）。</td>
     </tr>
     <tr>

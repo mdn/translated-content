@@ -6547,10 +6547,6 @@
     "modified": "2020-10-15T21:43:18.021Z",
     "contributors": ["SJW", "angelf", "MilkSnake"]
   },
-  "Web/CSS/Adjacent_sibling_combinator": {
-    "modified": "2019-03-23T22:39:30.908Z",
-    "contributors": ["alkaithil"]
-  },
   "Web/CSS/At-rule": {
     "modified": "2019-03-23T22:29:55.371Z",
     "contributors": ["Legioinvicta", "israel-munoz"]
@@ -6865,10 +6861,6 @@
     "modified": "2019-03-23T23:13:24.480Z",
     "contributors": ["ExE-Boss", "Makiber"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2019-03-23T22:39:33.429Z",
-    "contributors": ["alkaithil"]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-10-15T21:52:30.474Z",
     "contributors": ["lajaso", "israel-munoz"]
@@ -6888,6 +6880,10 @@
   "Web/CSS/Mozilla_Extensions": {
     "modified": "2019-03-23T23:21:23.902Z",
     "contributors": ["ExE-Boss", "Sebastianz", "teoli", "jota1410"]
+  },
+  "Web/CSS/Next-sibling_combinator": {
+    "modified": "2019-03-23T22:39:30.908Z",
+    "contributors": ["alkaithil"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2020-02-22T08:04:35.419Z",
@@ -6943,6 +6939,10 @@
       "padrecedano",
       "Remohir"
     ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2019-03-23T22:39:33.429Z",
+    "contributors": ["alkaithil"]
   },
   "Web/CSS/Syntax": {
     "modified": "2020-09-29T20:54:10.526Z",

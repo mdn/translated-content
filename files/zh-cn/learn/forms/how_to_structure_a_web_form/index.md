@@ -10,7 +10,7 @@ slug: Learn/Forms/How_to_structure_a_web_form
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机能力，和基本的
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a

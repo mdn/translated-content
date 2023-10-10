@@ -108,11 +108,7 @@ Math.ceil10(-59, 1); // -50
 
 ## Especificações
 
-| Specification                                         | Status             | Comment             |
-| ----------------------------------------------------- | ------------------ | ------------------- |
-| ECMAScript 1st Edition. Implemented in JavaScript 1.0 | Standard           | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.8.2.9', 'Math.floor')}}  | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-math.floor', 'Math.floor')}}  | {{Spec2('ES6')}}   |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -39,10 +39,7 @@ li:last-child {
 
 ## Especificações
 
-| Especificação                                                  | Status                        | Comentário         |
-| -------------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{ SpecName('CSS4 Selectors', '#last-child', ':last-child') }} | {{ Spec2('CSS4 Selectors') }} | Sem mudança.       |
-| {{ SpecName('CSS3 Selectors', '#last-child', ':last-child') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade de navegadores
 

@@ -50,7 +50,7 @@ httpRequest.open("GET", "http://www.example.org/some.file", true);
 httpRequest.send();
 ```
 
-- `open()` 的第一個參數是 HTTP request 的方法，也就是從 GET、POST、HEAD 等伺服器支援的方法中擇一使用。為遵循 HTTP 標準，請記得這些方法都是大寫，否則有的瀏覽器（如 Firefox）不會處理這些請求。其他可用的 HTTP request 方法的列表請參考 [W3C 規格書](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)。
+- `open()` 的第一個參數是 HTTP request 的方法，也就是從 GET、POST、HEAD 等伺服器支援的方法中擇一使用。為遵循 HTTP 標準，請記得這些方法都是大寫，否則有的瀏覽器（如 Firefox）不會處理這些請求。其他可用的 HTTP request 方法的列表請參考 [W3C 規格書](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)。
 - 第二個參數是請求頁面的 URL。基於安全考量，你不能叫用同網域以外的網頁。如果網域不同，則叫用 `open()` 時會出現「權限不足，拒絕存取」那類的錯誤。常見的錯誤多為在 domain.tld 的網站下呼叫 www\.domain.tld 中的網頁，僅是一點點差別都不行。
 - 第三個參數決定此 request 是否不同步進行，如果設定為 `TRUE` 則即使伺服器尚未傳回資料也會繼續執行其餘的程式，這也就是 AJAX 中第一個 A 代表的意義。
 
@@ -97,7 +97,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 - 3（資訊交換中）
 - 4（一切完成）
 
-接下來要檢查伺服器傳回的 HTTP 狀態碼。所有狀態碼列表可於 [W3C 網站](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)上查到，但我們要管的是 `200 OK` 這種狀態。
+接下來要檢查伺服器傳回的 HTTP 狀態碼。所有狀態碼列表可於 [W3C 網站](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)上查到，但我們要管的是 `200 OK` 這種狀態。
 
 ```js
 if (httpRequest.status === 200) {
@@ -160,13 +160,13 @@ if (httpRequest.status === 200) {
 - 接著發出 request，而後會將主導權交給 `onreadystatechange` 指定的 `alertContents()` 函式
 - `alertContents()` 檢查回應是否正常，而後以 `alert()` 將 `test.html` 的內容列出
 
-你可以[由此測試本例](http://www.w3clubs.com/mozdev/httprequest_test.html)，也可以參考[測試檔案](http://www.w3clubs.com/mozdev/test.html)。
+你可以[由此測試本例](https://www.w3clubs.com/mozdev/httprequest_test.html)，也可以參考[測試檔案](https://www.w3clubs.com/mozdev/test.html)。
 
 > **備註：** 如果你傳送一個要求到一段代碼，而這段代碼將回應 XML 而非靜態的 HTML 檔，那則必須要設定一個可以在 IE 中運作的 header。如果我們不設定 header `Content-Type: application/xml`，IE 將會在我們試圖運作的 XML 項目行下，回應一個 「Object Expected」 的錯誤。
 
-> **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[bypassing the cache](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)）
+> **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[bypassing the cache](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache)）
 
-> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
+> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
 
 In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 
@@ -213,9 +213,9 @@ var root_node = xmldoc.getElementsByTagName("root").item(0);
 alert(root_node.firstChild.data);
 ```
 
-這樣一來我們便可取得 `responseXML` 所傳回的 `XMLDocument` 物件，而後以 DOM 方法取用 XML 文件的內容。你可以參考 [`test.xml` 的原始碼](http://www.w3clubs.com/mozdev/test.xml)以及修改過後的[測試程式](http://www.w3clubs.com/mozdev/httprequest_test_xml.html)。
+這樣一來我們便可取得 `responseXML` 所傳回的 `XMLDocument` 物件，而後以 DOM 方法取用 XML 文件的內容。你可以參考 [`test.xml` 的原始碼](https://www.w3clubs.com/mozdev/test.xml)以及修改過後的[測試程式](https://www.w3clubs.com/mozdev/httprequest_test_xml.html)。
 
-關於 DOM 方法，請參考 [Mozilla DOM](http://www.mozilla.org/docs/dom/) 文件。
+關於 DOM 方法，請參考 [Mozilla DOM](https://www.mozilla.org/docs/dom/) 文件。
 
 ### Step 5 – Working with data
 
@@ -292,7 +292,7 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/zh-
   - : {{domxref("XMLHttpRequest")}} 是 Ajax 的核心。這篇文章將解釋如何使用一些 Ajax 技術，例如：
     - [分析及處理伺服器回應](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#處理回應)
     - [監視請求進度](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#監視進度)
-    - [提交表單與上傳二進制檔案](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#提交表單與上傳檔案)——使用*單純的* Ajax，或使用 [`FormData`](/zh-TW/docs/DOM/XMLHttpRequest/FormData) 物件
+    - [提交表單與上傳二進制檔案](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#提交表單與上傳檔案)——使用*單純的* Ajax，或使用 [`FormData`](/zh-TW/docs/Web/API/FormData) 物件
     - 在 [Web worker](/zh-TW/docs/Web/API/Worker) 中使用 Ajax
 - [_Pure-Ajax_ navigation example](/zh-TW/docs/Web/API/History_API/Example)
   - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.

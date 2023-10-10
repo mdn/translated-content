@@ -2,10 +2,10 @@
 title: 書き込み可能なストリームの使用
 slug: Web/API/Streams_API/Using_writable_streams
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 JavaScript 開発者として、プログラムでストリームにデータを書き込むことはとても便利です。この記事では、[ストリーム API](/ja/docs/Web/API/Streams_API) の書き込み可能なストリームの機能について説明します。
 

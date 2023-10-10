@@ -49,11 +49,7 @@ function getTanDeg(deg) {
 
 ## Especificações
 
-| Especificação                                          | Estado             | Comentário         |
-| ------------------------------------------------------ | ------------------ | ------------------ |
-| ECMAScript 1st Edition. Implementado em JavaScript 1.0 | Padrão             | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.8.2.18', 'Math.tan')}}    | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-math.tan', 'Math.tan')}}       | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

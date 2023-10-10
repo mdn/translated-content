@@ -44,11 +44,7 @@ Palavras-chave são exibidas com o estilo padrão do elemento \<b>, provavelment
 
 ## Especificações
 
-| Especificaçoes                                                                      | Estado                   | Comentário |
-| ----------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-b-element', '&lt;b&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-b-element', '&lt;b&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}             | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Navegadores Compatíveis
 

@@ -56,11 +56,11 @@ slug: Web/HTML/Element/pre
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-- {{htmlattrdef("cols")}} {{non-standard_inline}} {{deprecated_inline}}
+- `cols` {{non-standard_inline}} {{deprecated_inline}}
   - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of [`width`](/ko/docs/Web/HTML/Element/pre#width). To achieve such an effect, use CSS styling instead.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.
-- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+- `wrap` {{non-standard_inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.
 
 ## 예제

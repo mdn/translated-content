@@ -1,36 +1,31 @@
 ---
-title: PushSubscription.endpoint
+title: "PushSubscription: endpoint プロパティ"
+short-title: endpoint
 slug: Web/API/PushSubscription/endpoint
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェイスの **`endpoint`** 読み取り専用プロパティは、プッシュサブスクリプションに関連するエンドポイントを含む {{domxref("USVString")}} を返します。
+**`endpoint`** は {{domxref("PushSubscription")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションに関連するエンドポイントの入った文字列を返します。
 
-エンドポイントは、プッシュサービスに加入している特定のサービスワーカーにプッシュメッセージを送信するために使用するプッシュサーバーへのカスタム URL エンドポイントの形式をとります。このため、他者がこれをハイジャックしてプッシュ機能を乱用しないように、エンドポイントを秘匿する方が良いです。
+エンドポイントはカスタム URL の形式を取り、プッシュサービスに加入している特定のサービスワーカーにプッシュメッセージを送信するために使用するプッシュサーバーを指します。このため、他者がこれをハイジャックしてプッシュ機能を乱用しないように、エンドポイントは秘匿しておくことが大切です。
 
-## 構文
+## 値
 
-```js-nolint
-var myEnd = pushSubscription.endpoint;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function (reg) {
-  reg.pushManager
-    .subscribe({ userVisibleOnly: true })
-    .then(function (subscription) {
-      console.log(subscription.endpoint);
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.subscribe({ userVisibleOnly: true }).then((subscription) => {
+    console.log(subscription.endpoint);
 
-      // この時点で、サブスクリプションエンドポイントをサーバーに送信し、
-      // 保存した後、後でプッシュメッセージを送信するために使用します。
-    });
+    // この時点で、サブスクリプションエンドポイントをサーバーに送信し、
+    // 保存した後、後でプッシュメッセージを送信するために使用します。
+  });
 });
 ```
 
@@ -40,9 +35,4 @@ navigator.serviceWorker.ready.then(function (reg) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushSubscription.endpoint")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
-- [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
+{{Compat}}

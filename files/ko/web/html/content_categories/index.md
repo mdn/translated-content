@@ -34,8 +34,8 @@ slug: Web/HTML/Content_categories
 특정 조건을 만족하는 경우 플로우 콘텐츠에 속하는 요소도 있습니다.
 
 - {{HTMLElement("area")}}는 {{HTMLElement("map")}} 요소의 자손인 경우.
-- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#attr-itemprop) 특성을 가지고 있는 경우..
-- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#attr-itemprop) 특성을 가지고 있는 경우.
+- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
+- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
 - {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Element/style#scoped) 특성을 가지고 있는 경우.
 
 ### 구획 콘텐츠
@@ -68,9 +68,9 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("area")}}, {{HTMLElement("map")}}의 자손인 경우.
 - {{HTMLElement("del")}}, 구문 콘텐츠만 포함하는 경우.
 - {{HTMLElement("ins")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 속성을 가지고 있는 경우.
 - {{HTMLElement("map")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 속성을 가지고 있는 경우.
 
 ### 내장 콘텐츠
 

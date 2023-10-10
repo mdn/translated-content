@@ -38,11 +38,7 @@ console.log(day); // 25
 
 ## Especificações
 
-| Especificação                                                                | Status             | Comentário                                         |
-| ---------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                      | Standard           | Definição inicial. Implementado em JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.9.5.14', 'Date.prototype.getDate')}}            | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getdate', 'Date.prototype.getDate')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
