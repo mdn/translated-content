@@ -7,9 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-HTTP 메시지 **페이로드 본문(payload body)** 은 {{HTTPHeader("Transfer-Encoding", "전송 인코딩")}}이 적용되기 이전에 HTTP 메시지 본문 (있는 경우)으로 전송되는 데이터의 '정보' ('페이로드') 부분입니다.
-
-전송 인코딩을 사용하지 않으면, '페이로드 본문(payload body)'와 '메시지 본문(message body)'은 동일합니다!
+HTTP 메시지 **페이로드 본문(payload body)** 은 {{HTTPHeader("Transfer-Encoding", "전송 인코딩")}}이 적용되기 이전에 HTTP 메시지 본문(있는 경우)으로 전송되는 데이터의 '정보'('페이로드') 부분입니다. 전송 인코딩을 사용하지 않으면, '페이로드 본문(payload body)'와 '메시지 본문(message body)'은 동일합니다!
 
 예를 들어, 이 응답의 메시지 본문에는 페이로드 본문인 "Mozilla Developer Network"만 포함되어 있습니다.
 
