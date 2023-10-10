@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-CIA (기밀성, 무결성, 가용성) (CIA 트라이어드 또는 AIC 트라이어드라고도 함)는 정보 보안에 대한 조직의 정책을 안내하는 모델입니다.
+CIA (기밀성 Confidentiality, 무결성 Integrity, 가용성 Availability) (CIA triad 또는 AIC triad라고 함)는 정보 보안에 대한 조직의 정책을 안내하는 모델입니다.
 
 ## 같이 보기
 
