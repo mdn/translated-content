@@ -1,5 +1,5 @@
 ---
-title: 도메인 네임 시스템 (Domain Name System, DNS)
+title: DNS
 slug: Glossary/DNS
 l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
