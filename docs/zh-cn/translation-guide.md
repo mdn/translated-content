@@ -33,8 +33,8 @@ browser-compat: api.atob
 最终在简体中文文档中呈现的元数据如下所示：
 
 ```yaml
-title: Fetch API
-slug: Web/API/Fetch_API
+title: atob() 全局函数
+slug: Web/API/atob
 ```
 
 ## 翻译标题和 ID
