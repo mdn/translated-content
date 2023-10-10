@@ -1,5 +1,5 @@
 ---
-title: 국제 표준화 기구 (ISO)
+title: ISO
 slug: Glossary/ISO
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
