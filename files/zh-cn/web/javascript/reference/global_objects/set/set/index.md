@@ -1,5 +1,5 @@
 ---
-title: Set() constructor
+title: Set() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
