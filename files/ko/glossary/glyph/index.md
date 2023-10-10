@@ -1,5 +1,5 @@
 ---
-title: 글자의 모양 (Glyph, 글리프)
+title: Glyph
 slug: Glossary/Glyph
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
