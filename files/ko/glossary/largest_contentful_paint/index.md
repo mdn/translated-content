@@ -1,5 +1,5 @@
 ---
-title: 최대 콘텐츠풀 페인트 (Largest contentful paint, LCP)
+title: LCP
 slug: Glossary/Largest_contentful_paint
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
