@@ -13,4 +13,4 @@ l10n:
 
 ## 같이 보기
 
-- 위키백과의 [넷스케이프 내비게이터](https://en.wikipedia.org/wiki/Netscape_Navigator)
+- 위키백과의 [넷스케이프 네비게이터](https://en.wikipedia.org/wiki/Netscape_Navigator)
