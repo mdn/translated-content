@@ -1,5 +1,5 @@
 ---
-title: 국제 인터넷 주소 관리 기구 (ICANN)
+title: ICANN
 slug: Glossary/ICANN
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
