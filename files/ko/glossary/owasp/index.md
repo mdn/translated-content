@@ -1,5 +1,5 @@
 ---
-title: 오픈 웹 애플리케이션 보안 프로젝트(Open Web Application Security Project, OWASP)
+title: OWASP
 slug: Glossary/OWASP
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
