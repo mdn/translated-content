@@ -64,7 +64,7 @@ Este ejemplo usa tres clases, una por cada posible configuración de la propieda
     <p lang="es" class="manual">Una extrema&shy;damente larga palabra</p>
   </li>
   <li><code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
-    <p lang="enes class="auto">Una extrema&shy;damente larga palabra</p>
+    <p lang="es" class="auto">Una extrema&shy;damente larga palabra</p>
   </li>
 </ul>
 ```
