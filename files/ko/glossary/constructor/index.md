@@ -24,7 +24,7 @@ JavaScript에서 클래스의 생성자를 호출하려면, `new` 연산자를 �
 ```js
 function Default() {}
 
-// 지역 변수 defaultReference에 할당된 기본 객체의 새로운 ㅊ마조
+// 지역 변수 defaultReference에 할당된 기본 객체의 새로운 참조
 const defaultReference = new Default();
 ```
 
