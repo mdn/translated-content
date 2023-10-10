@@ -21,7 +21,7 @@ l10n:
 
 텍스트 콘텐츠 섹션과 같은 많은 요소에는 접근 가능한 이름이 필요하지 않습니다. 모든 컨트롤에는 접근 가능한 이름이 있어야 합니다. 정보를 전달하고 순전히 표현용이 아닌 모든 이미지도 마찬가지입니다.
 
-보조 기술은 요소의 역할과 함께 접근 가능한 이름인 접근성 이름 속성을 사용자에게 제공합니다. 많은 요소에는 접근 가능한 이름이 필요하지 않지만, 일부 콘텐츠 [역할](/ko/docs/Web/Accessibility/ARIA/Roles)에는 접근 가능한 이름이 있으면 이점을 얻을 수 있습니다. 예를 들어, [`tabpanel`](/ko/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)은 사용자가 [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) 역할을 사용하여 관련 요소를 활성화한 후에 나타나는 콘텐츠 부분입니다. 이 역할은 {{HTMLElement("div")}} 요소와 같이 필요한 이름이 없는 요소에 설정할 수 있습니다. `tab`은 컨트롤이며, 접근 가능한 이름이 있어야 합니다. `tabpanel`은 `tab`의 하위(콘텐츠 부분)입니다. `tabpanel`에 `aria-labelledby`를 추가하는 것이 가장 좋습니다.
+보조 기술은 요소의 역할과 함께 접근 가능한 이름인 접근성 이름 속성을 사용자에게 제공합니다. 많은 요소에는 접근 가능한 이름이 필요하지 않지만, 일부 콘텐츠 [역할](/ko/docs/Web/Accessibility/ARIA/Roles)에는 접근 가능한 이름이 있으면 이점을 얻을 수 있습니다. 예를 들어, [`tabpanel`](/ko/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)은 사용자가 [`tab`](/ko/docs/Web/Accessibility/ARIA/Roles/tab_role) 역할을 사용하여 관련 요소를 활성화한 후에 나타나는 콘텐츠 부분입니다. 이 역할은 {{HTMLElement("div")}} 요소와 같이 필요한 이름이 없는 요소에 설정할 수 있습니다. `tab`은 컨트롤이며, 접근 가능한 이름이 있어야 합니다. `tabpanel`은 `tab`의 하위(콘텐츠 부분)입니다. `tabpanel`에 `aria-labelledby`를 추가하는 것이 가장 좋습니다.
 
 ## 같이 보기
 
