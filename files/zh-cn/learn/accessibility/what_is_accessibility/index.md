@@ -10,7 +10,7 @@ slug: Learn/Accessibility/What_is_accessibility
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>基本的计算机知识，对 HTML 和 CSS 的基本理解。</td>
     </tr>
     <tr>

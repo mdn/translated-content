@@ -70,7 +70,7 @@ Other usage notes:
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
 
-- {{HTMLAttrDef("as")}}
+- `as`
 
   - : `<link>` 요소에 `rel="preload"` 또는 `rel="prefetch"` 특성을 지정했을 때만 사용합니다. `as` 특성은 `&#x3C;link>` 요소가 불러오는 콘텐츠의 유형을 지정합니다. 요청 매칭, 올바른 콘텐츠 보안 정책의 적용, 올바른 {{HTTPHeader("Accept")}} 요청 헤더 적용에 필요합니다. 이에 더해, `rel="preload"`는 `as` 특성을 사용해 요청 우선순위를 매깁니다. 다음 표는 특성의 유효한 값과, 해당 값이 적용되는 요소 또는 리소스를 나열합니다.
 
@@ -150,7 +150,7 @@ Other usage notes:
         </tbody>
       </table>
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 열거형 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_Enabled_Image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
   - `anonymous`
@@ -159,17 +159,17 @@ Other usage notes:
 
   `crossorigin` 특성이 존재하지 않으면 리소스를 {{Glossary("CORS")}} 요청 없이 가져오므로 리소스의 오염 없이는 사용이 불가능합니다. 유효하지 않은 값은 **anonymous**를 지정한 것으로 간주합니다. [CORS 설정 특성](/ko/docs/Web/HTML/Attributes/crossorigin) 문서에서 더 자세한 정보를 알아보세요.
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
 
   - : `rel="stylesheet"`에 한정하여, `disabled` 불리언 특성은 스타일시트를 불러와서 문서에 적용할지 나타냅니다. HTML을 불러오는 시점에 `disabled`를 지정한 경우 스타일시트는 페이지 로딩 시점에 불러오지 않습니다. 이후에 `disabled` 특성이 `false`로 바뀌거나 아예 제거될 때는 불러옵니다.
 
     DOM에서 `disabled` 속성을 지정하면 문서의 {{domxref("document.styleSheets")}} 리스트에서 스타일시트를 제거합니다.
 
-- {{HTMLAttrDef("href")}}
+- `href`
   - : 연결할 리소스의 {{glossary("URL")}}입니다. 절대와 상대 URL 모두 가능합니다.
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : 연결할 리소스가 사용하는 언어입니다. 오직 제안하는 용도로만 사용합니다. 가능한 값은 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](/ko/docs/Web/HTML/Element/link#href) 특성이 존재할 때만 사용하세요.
-- {{HTMLAttrDef("importance")}} {{Experimental_Inline}}
+- `importance` {{Experimental_Inline}}
 
   - : 리소스의 상대적인 중요도입니다. 가능한 값은 다음과 같습니다.
 
@@ -181,9 +181,9 @@ Other usage notes:
 
   > **참고:** `importance` 특성은 `<link>` 요소가 `rel="preload"` 또는 `rel="prefetch"`를 가지고 있어야 사용할 수 있습니다.
 
-- {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
+- `integrity` {{Experimental_Inline}}
   - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/ko/docs/Web/Security/Subresource_Integrity).
-- {{htmlattrdef("media")}}
+- `media`
 
   - : 연결된 리소스를 적용할 미디어를 명시합니다. 값으로는 반드시 미디어 유형이나 미디어 쿼리를 사용해야 합니다. `media` 특성은 사용자 에이전트가 현재 장치에 맞춰 최적의 스타일시트를 선택하도록 할 수 있으므로 주로 외부 스타일시트를 연결할 때 유용합니다.
 
@@ -192,7 +192,7 @@ Other usage notes:
     > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/ko/docs/Web/CSS/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의[media queries](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)든 사용할 수 있습니다.
     > - [CSS3 Media Queries](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로HTML 4에 정의되어 있는제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기바랍니다.
 
-- {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
+- `referrerpolicy` {{Experimental_Inline}}
 
   - : A string indicating which referrer to use when fetching the resource:
 
@@ -202,9 +202,9 @@ Other usage notes:
     - `origin-when-cross-origin` means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
-- {{htmlattrdef("rel")}}
+- `rel`
   - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Link_types)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
-- {{HTMLAttrDef("sizes")}}
+- `sizes`
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the [`rel()`](/ko/docs/Web/HTML/Element/link#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`. It may have the following values:
 
@@ -213,29 +213,29 @@ Other usage notes:
 
     > **Note:** Most icon formats are only able to store one single icon; therefore most of the time the [`sizes()`](/ko/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry. MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
-- {{htmlattrdef("title")}}
+- `title`
   - : The `title` attribute has special semantics on the `&#x3C;link>` element. When used on a `&#x3C;link rel="stylesheet">` it defines a [preferred or an alternate stylesheet](/ko/docs/Web/CSS/Alternative_style_sheets). Incorrectly using it may [cause the stylesheet to be ignored](/ko/docs/Correctly_Using_Titles_With_External_Stylesheets).
-- {{htmlattrdef("type")}}
+- `type`
   - : 이 특성은 링크된 콘텐츠의 타입을 정의하는데 사용됩니다. 특성의 값은** text/html**, **text/css**와 같은 MIME 타입이여야합니다. 이 특성은 링크된 스타일시트의 타입을 지정하는데 쓰이는것이 보통이며, text/css 값이 가장 흔합니다.
 
 ### 비표준 특성
 
-- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}}
+- `methods` {{Non-standard_Inline}}
   - : The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
-- {{HTMLAttrDef("prefetch")}} {{Non-standard_Inline}} {{secureContext_inline}}
+- `prefetch` {{Non-standard_Inline}} {{secureContext_inline}}
   - : This attribute identifies a resource that might be required by the next navigation and that the user agent should retrieve it. This allows the user agent to respond faster when the resource is requested in the future.
-- {{HTMLAttrDef("target")}} {{Non-standard_Inline}}
+- `target` {{Non-standard_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
 ### 폐기된 특성
 
-- {{HTMLAttrDef("charset")}} {{deprecated_inline}}
+- `charset` {{deprecated_inline}}
 
   - : This attribute defines the character encoding of the linked resource. The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}. The default value is `iso-8859-1`.
 
     > **Note:** To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.
 
-- {{HTMLAttrDef("rev")}} {{deprecated_inline}}
+- `rev` {{deprecated_inline}}
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](/ko/docs/Web/HTML/Element/link#href) attribute. The attribute thus defines the reverse relationship compared to the value of the `rel` attribute. [Link type values](/ko/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for [`rel`](/ko/docs/Web/HTML/Element/link#rel).
   - :

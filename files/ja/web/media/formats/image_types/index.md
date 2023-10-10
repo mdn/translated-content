@@ -801,7 +801,7 @@ JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) 仕様書が、私たちが 
     <tr>
       <th scope="row">圧縮</th>
       <td>
-        非可逆圧縮です。[離散コサイン変換](https://ja.wikipedia.org/wiki/離散コサイン変換)に基づいています。
+        非可逆圧縮です。<a href="https://ja.wikipedia.org/wiki/離散コサイン変換">離散コサイン変換</a>に基づいています。
       </td>
     </tr>
     <tr>

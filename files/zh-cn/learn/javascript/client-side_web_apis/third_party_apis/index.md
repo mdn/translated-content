@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         JavaScript 基础知识 (see
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps">first steps</a>,
@@ -25,7 +25,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>学习了解第三方 API 的运作方式，以及如何运用它们来提高你的网站性能</td>
     </tr>
   </tbody>

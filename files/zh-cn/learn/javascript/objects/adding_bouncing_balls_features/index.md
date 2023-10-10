@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>请确保完整学习本章所有内容后再开始测验。</td>
     </tr>
     <tr>

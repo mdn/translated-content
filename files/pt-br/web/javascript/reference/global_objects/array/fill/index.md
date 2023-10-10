@@ -96,9 +96,7 @@ if (!Array.prototype.fill) {
 
 ## Especificações
 
-| Especificação                                                            | Status           | Comentário         |
-| ------------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

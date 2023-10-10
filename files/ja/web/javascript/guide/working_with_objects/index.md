@@ -30,7 +30,7 @@ myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-上記の例は、**[オブジェクト初期化子](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Object_initializers)**を使用して作成することもできます。オブジェクト初期化子は、中括弧 (`{}`) で囲まれたオブジェクトのプロパティ名と関連する値の 0 個以上のペアをカンマで区切ったリストです。
+上記の例は、**[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)**を使用して作成することもできます。オブジェクト初期化子は、中括弧 (`{}`) で囲まれたオブジェクトのプロパティ名と関連する値の 0 個以上のペアをカンマで区切ったリストです。
 
 ```js
 var myCar = {

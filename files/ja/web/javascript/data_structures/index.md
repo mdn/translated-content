@@ -74,7 +74,7 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 
 論理型 ({{jsxref("Boolean")}}) は論理の状態を表すもので、 `true` と `false` の 2 つの値があります。
 
-論理値は通常、[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) などの条件操作に用いられます。
+論理値は通常、[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) などの条件操作に用いられます。
 
 ### 数値型
 

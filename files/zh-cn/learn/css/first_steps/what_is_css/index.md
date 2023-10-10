@@ -10,7 +10,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"

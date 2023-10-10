@@ -10,7 +10,7 @@ slug: Learn/JavaScript/First_steps/Strings
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机读写能力，对 HTML 和 CSS 的基本理解，对 JavaScript 的理解。
       </td>

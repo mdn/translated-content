@@ -46,9 +46,7 @@ navigator.doNotTrack; // "0" or "1"
 
 ## Especificações
 
-| Especificação                                                                      | Status                | Comentários        |
-| ---------------------------------------------------------------------------------- | --------------------- | ------------------ |
-| {{SpecName('Tracking','#dnt-header-field', 'DNT Header Field for HTTP Requests')}} | {{Spec2("Tracking")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -53,11 +53,7 @@ Math.pow(-7, 1 / 3); // NaN
 
 ## Especificações
 
-| Especificação                                       | Status             | Comentário                                         |
-| --------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                 | {{Spec2('ES1')}}   | Definição Inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}} | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}    | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

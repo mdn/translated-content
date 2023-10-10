@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/contextmenu
 
 {{HTMLSidebar("Global_attributes")}}
 
-> **경고:** [contextmenu 특성은 폐기되었으며](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu), 모든 브라우저에서 제거될 것입니다.
+> **경고:** [contextmenu 특성은 폐기되었으며](https://html.spec.whatwg.org/multipage/obsolete.html#contextmenu), 모든 브라우저에서 제거될 것입니다.
 
 **`contextmenu`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 이 요소의 컨텍스트 메뉴로 사용될 {{HTMLElement("menu")}}의 [`id`](/ko/docs/Web/HTML/Global_attributes/id)입니다.
 

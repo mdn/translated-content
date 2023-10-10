@@ -22,7 +22,7 @@ slug: Learn/Server-side/Django/Home_page
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         了解如何创建简单的 URL 映射和视图（没有数据编码在 URL
         中）以及如何从模型中获取数据并创建模版。

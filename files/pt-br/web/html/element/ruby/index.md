@@ -35,10 +35,7 @@ Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_
 
 ## Especificações
 
-| Especificação                                                                             | Status                   | Comentário |
-| ----------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

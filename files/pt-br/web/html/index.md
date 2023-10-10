@@ -45,7 +45,7 @@ Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Aprender/HTML) apresenta vário
 ## Tópicos avançados
 
 - [Habilitando Imagem CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image)
-  - : O atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#attr-crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
+  - : O atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
 - [Configuração de atributos CORS](/pt-BR/docs/Web/HTML/CORS_settings_attributes)
   - : Alguns elementos em HTML que suportam [CORS](/pt-BR/docs/HTTP/Access_control_CORS), como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo `crossorigin` (a propriedade `crossOrigin`), que permite configurar as requisições CORS para os dados recebidos pelo elemento.
 - [Gerenciamento de foco em HTML](/pt-BR/docs/Web/HTML/Focus_management_in_HTML)

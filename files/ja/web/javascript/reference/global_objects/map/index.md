@@ -125,7 +125,7 @@ l10n:
         では反復処理を行うのに、いくつかの形でキーの一覧を取得して、そのうえで反復処理を行う必要があります。
         <p>
           <code>Object</code> は <a
-            href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol"
+            href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル"
             >反復処理プロトコル</a
           >を実装していないので、オブジェクトを JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of"
             >for...of</a
