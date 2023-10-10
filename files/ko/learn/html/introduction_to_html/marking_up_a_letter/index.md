@@ -5,7 +5,9 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}우리는 모두 글자를 쓰는 법을 금방 배우게 됩니다. 이 페이지에서 텍스트를 꾸미고 조작하는 것을 테스트 해 볼 수 있는 유용한 예제들이 있습니다. 이 장에서는 하이퍼링크와 HTML {{htmlelement("head")}} 요소뿐만이 아니라, 주어진 글을 HTML 기본/혹은 고급 텍스트 포맷팅 방식에 맞춰 다듬는 연습을 할 예정입니다.
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+
+우리는 모두 글자를 쓰는 법을 금방 배우게 됩니다. 이 페이지에서 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 이 장에서는 하이퍼링크와 HTML {{htmlelement("head")}} 요소뿐만이 아니라, 주어진 글을 HTML 기본/혹은 고급 텍스트 포맷팅 방식에 맞춰 다듬는 연습을 할 예정입니다.
 
 <table class="learn-box standard-table">
   <tbody>
