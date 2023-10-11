@@ -100,11 +100,7 @@ a[href="http://example.com"]
 
 ## Характеристики
 
-| Спецификация                                                                    | Статус              | Коммент |
-| ------------------------------------------------------------------------------- | ------------------- | ------- |
-| {{SpecName('SVG1.1', 'interact.html#PointerEventsProperty', 'pointer-events')}} | {{Spec2('SVG1.1')}} |         |
-
-Это расширение для элементов HTML, хоть и присутствует в ранних версиях CSS Basic User Module Interface Level 3, было перенесено на [level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
+{{Specifications}}
 
 ## Совместимость браузера
 

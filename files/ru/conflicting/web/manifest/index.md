@@ -49,9 +49,7 @@ original_slug: Web/Manifest/dir
 
 ## Specification
 
-| Specification                                                | Status                       | Comment             | Feedback                                                                         |
-| ------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#dir-member', 'dir')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
 ## Browser compatibility
 

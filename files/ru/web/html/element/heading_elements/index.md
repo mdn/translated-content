@@ -164,11 +164,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 ## Характеристики
 
-| Характеристика                                                                                                                                                     | Статус                   | Комментарий |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}   | {{Spec2('HTML5 W3C')}}   |             |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                               | {{Spec2('HTML4.01')}}    |             |
+{{Specifications}}
 
 ## Совместимость с браузером
 
