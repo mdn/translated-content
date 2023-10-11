@@ -1,7 +1,7 @@
 ---
 title: "AudioContext: resume() メソッド"
-slug: Web/API/AudioContext/resume
 short-title: resume()
+slug: Web/API/AudioContext/resume
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
