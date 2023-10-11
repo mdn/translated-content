@@ -10,9 +10,7 @@ original_slug: Web/API/USVString
 
 ## Спецификации
 
-| Спецификация                                                             | Статус                   | Комментарий         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("WebIDL", "#idl-USVString", "USVString")}} | {{Spec2("WebIDL")}} | Initial definition. |
+{{Specifications}}
 
 ## Смотрите также
 

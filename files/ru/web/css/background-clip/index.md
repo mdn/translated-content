@@ -91,10 +91,7 @@ p {
 
 ## Спецификации
 
-| Спецификация                                                                | Статус                        | Комментарий                 |
-| --------------------------------------------------------------------------- | ----------------------------- | --------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} | Первоначальное определение. |
-| {{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}     | {{Spec2('CSS4 Backgrounds')}} | Добавляет значение `text`.  |
+{{Specifications}}
 
 {{cssinfo}}
 

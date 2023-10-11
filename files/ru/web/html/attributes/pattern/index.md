@@ -140,11 +140,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Specifications
 
-| Specification                                                             | Status                   | Comment |
-| ------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
-| {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## Browser compatibility
 
