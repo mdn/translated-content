@@ -210,7 +210,8 @@ CSS 属性页面模板在[此处](https://developer.mozilla.org/zh-CN/docs/MDN/W
 - `effort: small`、`effort: medium`、`effort: large`：一些贡献者喜欢根据修复错误所需的时间和精力来搜索错误。因此，如果可能的话，你应该尝试提供所需精力的估计。
 - `good first issue`：如果议题的修复非常简单，并且修复议题将为刚开始熟悉贡献流程的初学者提供良好的练习，请在议题上设置此标签。
 - `help wanted`：如果议题需要来自了解或熟悉该主题的人的帮助，请设置此标签。这是一个流行的标签，一些贡献者使用它来搜索他们熟悉或精通的开源项目中的议题。
-- `broken link internal`、`broken link external`：如果议题涉及到指向内部或外部页面的损坏链接，请设置适当的标签。
+- `broken link external`：如果议题涉及到指向内部或外部页面的损坏链接，请设置此标签。
+- `document not written`：如果议题涉及尚未编写的必要文档（通常是因为有链接指向该文档），请设置此标签。
 - `needs content update`：如果另一个仓库中的议题的修复需要在 `mdn/content` 仓库中进行等效的修复，请设置此标签。
 
   > **备注：** 在分类过程完成后，请删除 `needs triage` 标签。
