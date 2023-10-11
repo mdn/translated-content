@@ -92,7 +92,7 @@ h4 {
 </div>
 ```
 
-{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/float') }}
+{{EmbedLiveSample('','400','180')}}
 
 ### Como `floats` são posicionados
 
