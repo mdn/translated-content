@@ -308,10 +308,7 @@ draw();
 
 ## Спецификации
 
-| Specification                                                                                       | Status                   | Comments |
-| --------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}   | {{Spec2('HTML5 W3C')}}   |          |
+{{Specifications}}
 
 ## Browser compatibility
 

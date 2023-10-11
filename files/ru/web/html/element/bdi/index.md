@@ -37,10 +37,7 @@ This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
 ## Specifications
 
-| Specification                                                                           | Status                   | Comment |
-| --------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}        | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## Browser compatibility
 
