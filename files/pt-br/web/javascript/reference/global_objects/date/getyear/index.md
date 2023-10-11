@@ -78,11 +78,7 @@ var year = Xmas.getYear(); // returns 95
 
 ## Especificações
 
-| **Especificação**                                                            | Status             | **Comentário**                                                                           |
-| ---------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------- |
-| ECMAScript 1st Edition.                                                      | Standard           | Definição inicial. Implementado em JavaScript 1.3.                                       |
-| {{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}                | {{Spec2('ES5.1')}} | Definido em (informativo) compatibilidade annex.                                         |
-| {{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}} | {{Spec2('ES6')}}   | Definido em (normativo) annex para funcionalidades adicionais para futuros browsers web. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

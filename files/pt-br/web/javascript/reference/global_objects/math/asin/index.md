@@ -47,12 +47,7 @@ Para valores menores que -1 ou maiores que 1, `Math.asin()` retorna {{jsxref("Na
 
 ## Especificações
 
-| Specification                                          | Status               | Comment                                            |
-| ------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}    | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

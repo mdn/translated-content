@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-{{domxref("ReadableStream")}}、または `Response` オブジェクトが[構築](/ja/docs/Web/API/Response/Response)時に [`body`](/ja/docs/Web/API/Response/Response#body) プロパティが null であった場合、あるいは [HTTP レスポンス](/ja/docs/Web/HTTP/Messages#http_responses)に[本体](/ja/docs/Web/HTTP/Messages#body_2)がなかった場合には [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
+{{domxref("ReadableStream")}}、または `Response` オブジェクトが[構築](/ja/docs/Web/API/Response/Response)時に [`body`](/ja/docs/Web/API/Response/Response#body) プロパティが null であった場合、あるいは [HTTP レスポンス](/ja/docs/Web/HTTP/Messages#http_レスポンス)に[本体](/ja/docs/Web/HTTP/Messages#本体_2)がなかった場合には [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
 
 ストリームは[読み取り可能なバイトストリーム](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)で、 {{domxref("ReadableStreamBYOBReader")}} を用いたゼロコピー移譲に対応しています。
 

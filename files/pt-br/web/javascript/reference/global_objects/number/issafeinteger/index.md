@@ -64,10 +64,7 @@ Number.isSafeInteger =
 
 ## Especificações
 
-| Especificação                                                                | Status               | Coméntario        |
-| ---------------------------------------------------------------------------- | -------------------- | ----------------- |
-| {{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}  | {{Spec2('ES2015')}}  | Definição inicial |
-| {{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

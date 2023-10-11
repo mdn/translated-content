@@ -150,10 +150,7 @@ if (!window.JSON) {
 
 ## Especificações
 
-| Especificação                                   | Status             | Comentário |
-| ----------------------------------------------- | ------------------ | ---------- |
-| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}     | {{Spec2('ES5.1')}} |            |
-| {{SpecName('ES6', '#sec-json-object', 'JSON')}} | {{Spec2('ES6')}}   |            |
+{{Specifications}}
 
 ## Navegador compatível
 

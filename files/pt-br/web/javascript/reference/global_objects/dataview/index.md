@@ -115,11 +115,7 @@ dv.getInt16(1); //42
 
 ## Especificações
 
-| Especificação                                                    | Status                   | Comentário                         |
-| ---------------------------------------------------------------- | ------------------------ | ---------------------------------- |
-| {{SpecName('Typed Array')}}                                      | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6      |
-| {{SpecName('ES6', '#sec-dataview-constructor', 'DataView')}}     | {{Spec2('ES6')}}         | Definição inicial no ECMA standard |
-| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView')}} | {{Spec2('ESDraft')}}     |                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
