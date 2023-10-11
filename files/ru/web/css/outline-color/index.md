@@ -52,7 +52,7 @@ outline-color: unset;
 Коэффициент контрастности цвета определяется путём сравнения значений светлоты цвета текста и фона. Согласно [руководству по обеспечению доступности веб-контента (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)), коэффициент контрастности должен быть 4,5:1 для обычного текста, и 3:1 для крупного текста, например, заголовков. Под крупным текстом понимается размер от 18,66px с [полужирным начертанием](/ru/docs/Web/CSS/font-weight) или более крупный, либо от 24px и крупнее.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Формальное определение
@@ -103,4 +103,4 @@ p {
 - {{cssxref("outline-width")}}
 - Тип данных {{cssxref("&lt;color&gt;")}}
 - Другие, относящиеся к цвету свойства: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

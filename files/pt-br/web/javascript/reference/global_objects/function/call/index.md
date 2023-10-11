@@ -105,11 +105,7 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
 
 ## Especificações
 
-| Especificações                                                                 | Status             | Comentário                                         |
-| ------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                            | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}              | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

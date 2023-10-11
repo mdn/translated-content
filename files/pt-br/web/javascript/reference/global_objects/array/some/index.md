@@ -106,10 +106,7 @@ if (!Array.prototype.some) {
 
 ## Especificações
 
-| Specification                                                            | Status             | Comment                                            |
-| ------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}          | {{Spec2('ES5.1')}} | Definição inicial. Implementada em JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

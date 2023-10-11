@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/development_environment
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>会打开终端 / 命令行。会为开发用操作系统安装软件包。</td>
     </tr>
     <tr>

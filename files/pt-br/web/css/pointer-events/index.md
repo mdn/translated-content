@@ -98,11 +98,7 @@ Esta propriedade pode também ser usada para alcançar melhores taxas de quadros
 
 ## Especificações
 
-| Especificações                                                                  | Status              | Comentário |
-| ------------------------------------------------------------------------------- | ------------------- | ---------- |
-| {{SpecName('SVG1.1', 'interact.html#PointerEventsProperty', 'pointer-events')}} | {{Spec2('SVG1.1')}} |            |
-
-Se extende para elementos HTML, embora presente nos primeiros rascunhos do Módulo Básico de Interface do Usuário do CSS nivel 3, foi empurrado para o [nível 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
+{{Specifications}}
 
 ## Compatibilidade do navegador
 

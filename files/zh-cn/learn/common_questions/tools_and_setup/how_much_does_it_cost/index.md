@@ -24,7 +24,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>评估创建一个网站的完整流程，计算每个步骤的花费。</td>
     </tr>
   </tbody>

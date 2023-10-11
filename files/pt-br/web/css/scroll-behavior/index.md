@@ -99,9 +99,7 @@ scroll-page {
 
 ## Especificações
 
-| Especificações                                                            | Status                  | Comentário             |
-| ------------------------------------------------------------------------- | ----------------------- | ---------------------- |
-| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Especificações inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegador
 

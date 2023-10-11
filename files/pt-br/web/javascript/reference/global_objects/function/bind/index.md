@@ -234,10 +234,7 @@ Se você escolher utilizar esta implementação parcial, **você não deve confi
 
 ## Especificações
 
-| Especificação                                                                  | Status             | Comentário                                           |
-| ------------------------------------------------------------------------------ | ------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}              | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ES6')}}   |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

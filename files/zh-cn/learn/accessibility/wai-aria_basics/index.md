@@ -19,7 +19,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         进一步了解
         WAI-ARIA，明白他如何提供有效的语义，以便接下来在有需要的时候提供无障碍优化。

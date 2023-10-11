@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 ## 解説
 
-グループ化演算子は、式または部分式の周りに括弧のペアで構成され、通常の[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)を上書きし、より低い優先順位の式をより高い優先順位の式の前に評価できるようにします。その名の通り、括弧の中にあるものをグループ化します。
+グループ化演算子は、式または部分式の周りに括弧のペアで構成され、通常の[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を上書きし、より低い優先順位の式をより高い優先順位の式の前に評価できるようにします。その名の通り、括弧の中にあるものをグループ化します。
 
 ## 例
 
@@ -62,6 +62,6 @@ a() * (b() + c());
 
 ## 関連情報
 
-- [演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

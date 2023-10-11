@@ -34,9 +34,7 @@ console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

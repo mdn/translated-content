@@ -67,7 +67,7 @@ O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substitui
 
 Os atributos desse elemento incluem os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : Direção de texto neste elemento. Os valores possíveis são:
 
@@ -92,11 +92,7 @@ A especificação HTML 4 não especificam eventos para este elemento; eles foram
 
 ## Especificações
 
-| Especificação                                                                        | Status                   | Comentário |
-| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-bdo-element', '&lt;bdo&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdo-element', '&lt;bdo&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'dirlang.html#h-8.2.4', '&lt;bdo&gt;')}}                      | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

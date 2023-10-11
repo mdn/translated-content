@@ -20,6 +20,4 @@ _None._
 
 ## Specifications
 
-| Specification             | Status                 | Comment            |
-| ------------------------- | ---------------------- | ------------------ |
-| {{SpecName('CSS3 Ruby')}} | {{Spec2('CSS3 Ruby')}} | Initial definition |
+{{Specifications}}

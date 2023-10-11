@@ -21,21 +21,21 @@ Não há limitação para a profundidade e a imbricação das listas definidas c
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("compact")}} {{Deprecated_inline}}
+- `compact` {{Deprecated_inline}}
 
   - : Este atributo boleano sugere que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > **Nota:** Não utilize este atributo, pois ele se tornou obsoleto. O elemento {{HTMLElement("ol")}} deve ser estilizado usando [CSS](/pt-BR/docs/CSS). Para dar um efeito semelhante ao do atributo compacto, a propriedade [CSS](/pt-BR/docs/CSS) {{cssxref("line-height")}} pode ser utilizada com o valor de 80%.
 
-- {{htmlattrdef("reversed")}}
+- `reversed`
   - : Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.
-- {{htmlattrdef("start")}}
+- `start`
 
   - : Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize \<ol start="3">.
 
     > **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.
 
-- {{htmlattrdef("type")}}
+- `type`
 
   - : Indica o tipo de numeração:
 
@@ -139,11 +139,7 @@ A saída HTML acima será:
 
 ## Especificações
 
-| Especificação                                                                         | Situação                 | Observação |
-| ------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-ol-element', '&lt;ol&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}} | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidede em navegadores
 

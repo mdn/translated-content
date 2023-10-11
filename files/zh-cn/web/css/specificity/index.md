@@ -5,7 +5,7 @@ slug: Web/CSS/Specificity
 
 {{CSSRef}}
 
-浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/CSS/CSS_Reference#Selectors)组成的匹配规则。
+浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/docs/Web/CSS/Reference#选择器)组成的匹配规则。
 
 ## 优先级是如何计算的？
 
@@ -15,21 +15,21 @@ slug: Web/CSS/Specificity
 
 当同一个元素有多个声明的时候，优先级才会有意义。因为每一个直接作用于元素的 CSS 规则总是会接管/覆盖（take over）该元素从祖先元素继承而来的规则。
 
-> **备注：** 文档树中元素的接近度（[Proximity of elements](/zh-CN/docs/Web/CSS/Specificity#%E6%97%A0%E8%A7%86DOM%E6%A0%91%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB)）对优先级没有影响。
+> **备注：** 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
 
 ### 选择器类型
 
 下面列表中，选择器类型的优先级是递增的：
 
 1. [类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
-2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) (例如，`.example`)，属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
+2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors)（例如，`.example`），属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
 3. [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
 
-**通配选择符**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择符**（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/zh-CN/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
+**通配选择器**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择器**（combinator）（{{CSSxRef("Next-sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}、{{CSSxRef("Subsequent-sibling_combinator", "~")}}、[" "](/zh-CN/docs/Web/CSS/Descendant_combinator)、{{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
-你可以访问 ["Specificity" in "Cascade and inheritance"](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2) 或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
+你可以访问[层叠与继承中的“优先级”](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
-给元素添加的**内联样式** (例如，`style="font-weight:bold"`) 总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
+给元素添加的**内联样式**（例如，`style="font-weight:bold"`）总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
 
 ### `!important` 例外规则
 

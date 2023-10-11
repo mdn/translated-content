@@ -11,13 +11,13 @@ slug: Learn/Server-side/Django/development_environment
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         知道如何在你开发所用的计算机操作系统中，打开终端/命令行和安装软件包。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>在你的计算机中运行 Django（1.10）开发环境。</td>
     </tr>
   </tbody>

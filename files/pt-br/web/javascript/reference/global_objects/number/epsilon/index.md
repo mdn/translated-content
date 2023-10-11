@@ -36,9 +36,7 @@ equal = Math.abs(x - y + z) < Number.EPSILON;
 
 ## Especificações
 
-| Especificação                                                    |
-| ---------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
