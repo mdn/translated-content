@@ -1,7 +1,6 @@
 ---
 title: SVG の背景の拡大縮小
 slug: Web/CSS/Scaling_of_SVG_backgrounds
-page-type: guide
 l10n:
   sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
 ---
