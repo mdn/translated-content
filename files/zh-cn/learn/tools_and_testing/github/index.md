@@ -54,9 +54,9 @@ slug: Learn/Tools_and_testing/GitHub
 ## 还可以看看
 
 - [Understanding the GitHub flow【理解 GitHub 流程】](https://docs.github.com/get-started/quickstart/github-flow)
-- [Git command list【指令列表】](https://git-scm.com/docs)
+- [Git command list【Git 指令列表】](https://git-scm.com/docs)
 - [Mastering markdown【掌握 Markdown 格式】](https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) （在网页上、评论区常用的格式以及 `.md` 文件所使用的格式，GitHub 中的介绍文件 (readme.md) 即用这种格式书写）。
 - [Getting Started with GitHub Pages【入门 Github Pages】](https://docs.github.com/pages/quickstart) （如何在 GitHub 上发布示例和网站）。
 - [Learn Git branching【学习 Git 的分支结构】](https://learngitbranching.js.org/)
-- [Flight rules for Git【Git 中的飞行法则】](https://github.com/k88hudson/git-flight-rules) （在 Git 中实现特定功能的非常有用的方法介绍纲要，包括如何在出错时纠错等）。
+- [Flight rules for Git【Git 的飞行法则】](https://github.com/k88hudson/git-flight-rules) （在 Git 中实现特定功能的非常有用的方法介绍纲要，包括如何在出错时纠错等）。
 - [Dangit, git! 【#网络和谐#，Git !】](https://dangitgit.com/)（另一个十分有用的方法介绍纲要，特别是在出错的时候进行纠正的方法）。
