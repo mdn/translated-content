@@ -59,7 +59,7 @@ HTML 요소 클래스의 전체 상속은 다음과 같습니다.
 
 ![Hierarchy of interfaces for HTML elements](html-dom-hierarchy.svg)
 
-따라서 모든 요소는 모든 상위 요소의 속성과 메서드를 상속합니다. 예를 들어, DOM에서 {{domxref("HTMLAnchorElement")}} 유형의 객체로 표시되는 {{HTMLElement("a")}} 요소를 생각해 봅시다. 그러면 이 요소에는 해당 클래스의 문서에 설명된 앵커 관련 속성 및 메서드뿐만 아니라 {{domxref("HTMLElement")}} 및 {{domxref("Element")}}, {{domxref("Node")}}, 마지막으로 {{domxref("EventTarget")}}에서 정의한 속성 및 메서드도 포함됩니다.
+이와 같이 모든 요소는 모든 상위 요소의 속성과 메서드를 상속합니다. 예를 들어, DOM에서 {{domxref("HTMLAnchorElement")}} 유형의 객체로 표시되는 {{HTMLElement("a")}} 요소를 생각해 봅시다. 그러면 이 요소에는 해당 클래스의 문서에 설명된 앵커 관련 속성 및 메서드뿐만 아니라 {{domxref("HTMLElement")}} 및 {{domxref("Element")}}, {{domxref("Node")}}, 마지막으로 {{domxref("EventTarget")}}에서 정의한 속성 및 메서드도 포함됩니다.
 
 각 레벨은 요소의 유용성에 대한 핵심적인 측면을 정의합니다. `Node`에서 요소는 요소가 다른 요소에 의해 포함될 수 있고, 요소 자체가 다른 요소를 포함할 수 있는 기능을 둘러싼 개념을 상속받습니다. 특히 중요한 것은 마우스 클릭, 재생 및 일시 정지 이벤트 등과 같은 이벤트를 수신하고 처리하는 기능인 `EventTarget`에서 상속함으로써 얻을 수 있는 기능입니다.
 
