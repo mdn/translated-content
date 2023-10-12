@@ -32,7 +32,7 @@ limited-quirks 및 no-quirks 모드는 이전에 각각 "almost-standards" 모�
 
 HTML문서의 시작 부분에 DOCTYPE을 넣어야 합니다. 주석이나 XML 선언과 같이 DOCTYPE 앞에 무엇이든 있으면 Internet Expolorer 9 이상에서는 quirks모드가 트리거 됩니다.
 
-<!DOCTYPE html>의 유일한 목적은 limited-quirks 모드를 활성화하는 것입니다. 이전 버전의 HTML 표준 DOCTYPE은 추가적인 의미를 제공했지만, 어떤 브라우저도 렌더링 모드 전환 이외의 다른 용도로 DOCTYPE을 사용한 적이 없습니다.
+<!DOCTYPE html>의 유일한 목적은 no-quirks 모드를 활성화하는 것입니다. 이전 버전의 HTML 표준 DOCTYPE은 추가적인 의미를 제공했지만, 어떤 브라우저도 렌더링 모드 전환 이외의 다른 용도로 DOCTYPE을 사용한 적이 없습니다.
 
 [브라우저가 다양한 모드를 선택하는 시기](http://hsivonen.iki.fi/doctype/)에 대한 자세한 설명도 참조하세요.
 
