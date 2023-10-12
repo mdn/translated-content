@@ -1,6 +1,6 @@
 ---
 title: JavaScript 性能优化
-page-type: learn-module-chapter
+slug: Learn/Performance/JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
