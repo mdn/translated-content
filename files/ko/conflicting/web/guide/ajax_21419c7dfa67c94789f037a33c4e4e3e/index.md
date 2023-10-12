@@ -23,7 +23,7 @@ JavaScript를 이용하여 서버로 보내는 [HTTP](/ko/docs/Web/HTTP) request
 ```js
 // 구버전을 위한 호환성 코드입니다. 더 이상 이렇게 작성하지 않아도 됩니다.
 var httpRequest;
-if (window.XMLHttpRequest) { // 모질라, 사파리, IE7+ ...
+if (window.XMLHttpRequest) { // Mozilla, 사파리, IE7+ ...
     httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 6 이하
     httpRequest = new ActiveXObject("Microsoft.XMLHTTP");

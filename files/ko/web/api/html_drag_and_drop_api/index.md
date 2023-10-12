@@ -48,7 +48,7 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 ### Gecko 한정 인터페이스
 
-모질라와 파이어폭스는 표준 드래그 앤 드롭 모델에서 제공하지 않는 몇가지 기능들을 추가로 제공합니다. 여러 개의 아이템을 동시에 드래그하거나 파일과 같이 문자열이 아닌 데이터를 드래그 하기 위한 여러 편리한 기능을 제공합니다. 더 많은 정보를 찾아보기 위해, [Dragging and Dropping Multiple Items](/ko/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)을 보십시오. 덧붙여, 모든 Gecko 한정 프로퍼티나 Gecko 한정 메소드를 찾아보기 위해 {{domxref("DataTransfer")}} 참조 페이지도 보시기 바랍니다.
+Mozilla와 파이어폭스는 표준 드래그 앤 드롭 모델에서 제공하지 않는 몇가지 기능들을 추가로 제공합니다. 여러 개의 아이템을 동시에 드래그하거나 파일과 같이 문자열이 아닌 데이터를 드래그 하기 위한 여러 편리한 기능을 제공합니다. 더 많은 정보를 찾아보기 위해, [Dragging and Dropping Multiple Items](/ko/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)을 보십시오. 덧붙여, 모든 Gecko 한정 프로퍼티나 Gecko 한정 메소드를 찾아보기 위해 {{domxref("DataTransfer")}} 참조 페이지도 보시기 바랍니다.
 
 ## 기본
 
