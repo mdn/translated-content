@@ -1,13 +1,13 @@
 ---
-title: "ReadableStream: from() 静态方法"
+title: ReadableStream：from() 静态方法
 slug: Web/API/ReadableStream/from_static
 ---
 
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
-**`ReadableStream.from()`** 静态方法从提供的可迭代或异步迭代对象返回一个 {{domxref("ReadableStream")}}。
+**`ReadableStream.from()`** 静态方法从提供的可迭代或异步可迭代对象返回一个 {{domxref("ReadableStream")}}。
 
-该方法可以用于将可迭代或异步迭代对象包裹为可读流，包括数组、集合、promise 数组、异步生成器、`ReadableStream`、Node.js 可读流等等。
+该方法可以用于将可迭代或异步可迭代对象包装为可读流，包括数组、集合、promise 数组、异步生成器、`ReadableStream`、Node.js 可读流，等等。
 
 ## 语法
 
@@ -27,13 +27,13 @@ ReadableStream.from(anyIterable)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果传入的参数不是可迭代对象或者异步可迭代对象（没有实现 `@@iterator` 或 `@@asyncIterator` 方法），则抛出。如果在迭代期间，下一跳的结果不是对象或者 promise 不能解析为对象，则也会抛出。
+  - : 如果传入的参数不是可迭代对象或者异步可迭代对象（未定义 `@@iterator` 或 `@@asyncIterator` 方法），则抛出。如果在迭代期间，下一步的结果不是对象或者 promise 不能兑现对象，则也会抛出。
 
 ## 示例
 
-### 转换一个异步迭代器到可读流
+### 将异步迭代器转换为可读流
 
-这个在线示例演示了你如何将一个异步可迭代对象转换到一个 `ReadableStream`，然后如何消费这个流。
+这个在线示例演示了你如何将一个异步可迭代对象转换为 `ReadableStream`，然后如何消费这个流。
 
 #### HTML
 
@@ -58,11 +58,11 @@ function log(text) {
 
 ```js
 if (!ReadableStream.from) {
-  log("ReadableStream.from() is not supported");
+  log("不支持 ReadableStream.from()");
 }
 ```
 
-异步迭代对象是一个匿名生成器函数，当它被调用三次时，它会产生 1、2 和 3 的值。该函数被传递给 `ReadableStream.from()`，以创建 `ReadableStream`。
+异步可迭代对象是一个匿名生成器函数，当它被调用三次时，它会产生值 1、2 和 3。该函数被传递给 `ReadableStream.from()`，以创建 `ReadableStream`。
 
 ```js
 // 定义异步的迭代器
@@ -76,12 +76,12 @@ const asyncIterator = (async function* () {
 const myReadableStream = ReadableStream.from(asyncIterator);
 ```
 
-[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)示范了几种方式去消费流。以下使用 `for ...await` 循环的代码，因为这个方法是最简单的。循环的每个迭代都会记录来自流的当前分块。
+[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)示范了几种方式去消费流。以下使用 `for ...await` 循环的代码，因为这个方法是最简单的。循环的每次迭代都会记录来自流的当前分块。
 
 ```js
 consumeStream(myReadableStream);
 
-// 异步的迭代 ReadableStream
+// 异步迭代 ReadableStream
 async function consumeStream(readableStream) {
   for await (const chunk of myReadableStream) {
     // 使用每个分块做一些事情
@@ -93,11 +93,11 @@ async function consumeStream(readableStream) {
 
 #### 结果
 
-消费流的输出如下所示（如果 `ReadableStream.from()` 是支持的）。
+消费流的输出如下所示（如果支持 `ReadableStream.from()`）。
 
-{{EmbedLiveSample("转换一个异步迭代器到可读流","100%", "80")}}
+{{EmbedLiveSample("将异步迭代器转换为可读流","100%", "80")}}
 
-### 转换一个 Array 到 ReadableStream
+### 将数组转换为 ReadableStream
 
 该示例演示了如何将 `Array` 转换为 `ReadableStream`。
 
@@ -112,7 +112,7 @@ function log(text) {
 }
 
 if (!ReadableStream.from) {
-  log("ReadableStream.from() is not supported");
+  log("不支持 ReadableStream.from()");
 }
 ```
 
@@ -131,7 +131,7 @@ const myReadableStream = ReadableStream.from(vegetables);
 ```js hidden
 consumeStream(myReadableStream);
 
-// 异步的迭代 ReadableStream
+// 异步迭代 ReadableStream
 async function consumeStream(readableStream) {
   for await (const chunk of myReadableStream) {
     // 使用每个分块做一些事情
@@ -145,9 +145,9 @@ async function consumeStream(readableStream) {
 
 #### 结果
 
-展示以下的输出内容。
+输出如下所示。
 
-{{EmbedLiveSample("转换一个 Array 到 ReadableStream","100%", "100")}}
+{{EmbedLiveSample("将数组转换为 ReadableStream","100%", "100")}}
 
 ## 规范
 
