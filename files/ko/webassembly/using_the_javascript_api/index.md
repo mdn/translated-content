@@ -1,5 +1,5 @@
 ---
-title: 웹어셈블리의 자바스크립트 API 사용하기
+title: 웹어셈블리의 JavaScript API 사용하기
 slug: WebAssembly/Using_the_JavaScript_API
 ---
 

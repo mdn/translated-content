@@ -42,7 +42,7 @@ l10n:
 
 키프레임의 %를 꼭 순서대로 나열하지 않더라도, %의 순서대로 처리됩니다.
 
-자바스크립트는 `@keyframes` @규칙을 CSS 오브젝트 모델 인터페이스인 {{domxref("CSSKeyframesRule")}}를 통해서 접근할 수 있습니다.
+JavaScript는 `@keyframes` @규칙을 CSS 오브젝트 모델 인터페이스인 {{domxref("CSSKeyframesRule")}}를 통해서 접근할 수 있습니다.
 
 ### 유효한 키프레임 리스트
 

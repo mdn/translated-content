@@ -31,7 +31,7 @@ DOM Level 1 Core에 대해서 설명하기 위한 용어에 대한 설명입니�
 
 ## What does the DOM Level 1 Core let me do?
 
-The W3C DOM Level 1은 컨텐츠 트리를 웹 페이지 **개발자가 원하는 어떤 방식으로든** 바꿀 수 있게 합니다. 백지 상태에서 HTML 문서를 제작할 수 있을 만큼 강력합니다. 또한 스크립트 언어를 통해 언제 어디서든 HTML 문서를 개발자가 조작할 수 있도록 합니다. 자바스크립트를 통해서 개발자는 동적으로 DOM을 가장 쉽게 변경할 수 있습니다. 자바스크립트는 전역 객체의 `document` 객체를 통해 오래된 브라우저가 접근했던 그 방식대로, HTML 문서에 접근 가능합니다, 이 `document` 객체는 the W3C's DOM Level 1 spec의 [Document interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document) 가 적용되어 있습니다.
+The W3C DOM Level 1은 컨텐츠 트리를 웹 페이지 **개발자가 원하는 어떤 방식으로든** 바꿀 수 있게 합니다. 백지 상태에서 HTML 문서를 제작할 수 있을 만큼 강력합니다. 또한 스크립트 언어를 통해 언제 어디서든 HTML 문서를 개발자가 조작할 수 있도록 합니다. JavaScript를 통해서 개발자는 동적으로 DOM을 가장 쉽게 변경할 수 있습니다. JavaScript는 전역 객체의 `document` 객체를 통해 오래된 브라우저가 접근했던 그 방식대로, HTML 문서에 접근 가능합니다, 이 `document` 객체는 the W3C's DOM Level 1 spec의 [Document interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document) 가 적용되어 있습니다.
 
 ## A simple example
 

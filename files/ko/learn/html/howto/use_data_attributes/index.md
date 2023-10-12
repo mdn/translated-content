@@ -60,7 +60,7 @@ article[data-columns="4"] {
 
 [이 JSBin 예시](http://jsbin.com/ujiday/2/edit)에서 이들이 함께 작동하는 것을 볼 수 있습니다.
 
-데이터 속성들은 게임 점수와 같이 계속 변하는 정보도 저장할 수 있습니다. CSS선택자와 자바스크립트 접근을 이용해서 display 규칙을 사용하지 않고도 훌륭한 효과를 만들 수도 있습니다. 생성된 content와 CSS transition의 예시를 보려면 [이 screencast](http://www.youtube.com/watch?v=On_WyUB1gOk) 를 확인하세요. ([JSBin 예시](http://jsbin.com/atawaz/3/edit)).
+데이터 속성들은 게임 점수와 같이 계속 변하는 정보도 저장할 수 있습니다. CSS선택자와 JavaScript 접근을 이용해서 display 규칙을 사용하지 않고도 훌륭한 효과를 만들 수도 있습니다. 생성된 content와 CSS transition의 예시를 보려면 [이 screencast](http://www.youtube.com/watch?v=On_WyUB1gOk) 를 확인하세요. ([JSBin 예시](http://jsbin.com/atawaz/3/edit)).
 
 데이터 값은 문자열입니다. 스타일을 적용하려면 숫자 값은 선택자에 따옴표 안에 써주어야 합니다.
 
@@ -72,7 +72,7 @@ article[data-columns="4"] {
 
 하지만 이 때문에, 커스텀 요소와 관련된 메타 데이터를 위해서는 훌륭한 해결책입니다.
 
-Firefox 49.0.2(아마도 이전/이후의 버전)에서는,1022 데이터를 초과하는 데이터 속성은 자바스크립트(EcmaScript 4)가 읽지 못할 것입니다.
+Firefox 49.0.2(아마도 이전/이후의 버전)에서는,1022 데이터를 초과하는 데이터 속성은 JavaScript(EcmaScript 4)가 읽지 못할 것입니다.
 
 ## 더 알아보기
 

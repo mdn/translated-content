@@ -173,7 +173,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-여기서 우리는 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 를 통해 JSON 오브젝트를 자바스크립트 오브젝트로 변환합니다. 그 다음 콘텐츠에 따라 분기하고 처리하는 로직을 가집니다.
+여기서 우리는 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 를 통해 JSON 오브젝트를 JavaScript 오브젝트로 변환합니다. 그 다음 콘텐츠에 따라 분기하고 처리하는 로직을 가집니다.
 
 ### Text data format
 
