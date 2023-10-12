@@ -1,7 +1,6 @@
 ---
 title: PeerJS によるインターネット接続電話の構築
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
-page-type: guide
 l10n:
   sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
