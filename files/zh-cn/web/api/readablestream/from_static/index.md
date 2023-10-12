@@ -72,7 +72,7 @@ const asyncIterator = (async function* () {
   yield 3;
 })();
 
-// 从异步迭代器创建 ReadableStream
+// 从该迭代器创建 ReadableStream
 const myReadableStream = ReadableStream.from(asyncIterator);
 ```
 
