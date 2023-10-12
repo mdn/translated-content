@@ -107,7 +107,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 알다시피, 웹사이트를 보기 위해 웹 브라우저가 필요합니다. 개인적인 사용을 위한 [수 십개](http://en.wikipedia.org/wiki/List_of_web_browsers)의 브라우저 선택권이 있습니다. 그러나, 웹 사이트를 개발할 때, 대부분의 사람들이 당신의 사이트를 잘 이용하기 위해서는 다음의 주요 브라우저에서 테스트해야합니다.
 
-- [Mozilla Firefox(파이어폭스)](https://www.mozilla.org/en-US/firefox/new/)
+- [Mozilla Firefox(Firefox)](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome(크롬)](https://www.google.fr/chrome/browser/)
 - [Microsoft Internet Explorer(인터넷 익스플로러)](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari(사파리)](http://www.apple.com/safari/)

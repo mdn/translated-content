@@ -13,7 +13,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 ## Browser support
 
-파이어폭스 65+ 와 크롬 42+ 에서 Fetch Body 객체를 스트림으로서 사용 할수 있고, custom readable 스트림을 만들수 있습니다. 현재 [Pipe chains](/ko/docs/Web/API/Streams_API/Concepts#Pipe_chains)의 경우 오직 크롬에서만 지원하고 있고 그 기능은 변경될 수 있습니다.
+Firefox 65+ 와 크롬 42+ 에서 Fetch Body 객체를 스트림으로서 사용 할수 있고, custom readable 스트림을 만들수 있습니다. 현재 [Pipe chains](/ko/docs/Web/API/Streams_API/Concepts#Pipe_chains)의 경우 오직 크롬에서만 지원하고 있고 그 기능은 변경될 수 있습니다.
 
 ## Finding some examples
 

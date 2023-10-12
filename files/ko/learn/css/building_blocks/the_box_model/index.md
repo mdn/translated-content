@@ -180,7 +180,7 @@ html {
 
 ### 브라우저 개발자도구를 사용해 박스 모델 보기
 
-[브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. 파이어폭스의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
+[브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. Firefox의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
 
 ![FireFox의 DevTools를 이용한 박스 모델 검사](box-model-devtools.png)
 

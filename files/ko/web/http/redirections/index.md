@@ -180,7 +180,7 @@ IIS에서는, 리다이렉션 구성을 위해 [`<httpRedirect>`](https://www.ii
 
 대부분의 경우, 이런 문제는 서버 측 문제이며 서버가 이를 감지할 수 없다면, {{HTTPStatus("500")}} `Internal Server Error`를 회신할 것입니다. 서버 구성을 수정한 직후에 그런 오류를 보게 된다면, 그것은 리다이렉션 루프일 가능성이 큽니다.
 
-때로는, 서버가 그것을 감지하지 않을 때도 있을 겁니다: 전체적인 그림을 모르는 몇 개의 서버에 리다이렉션 루프가 행해지기 때문입니다. 이런 경우, 브라우저가 이를 감지하고 오류 메시지를 보여줄 것입니다. 파이어폭스는 다음과 같이 디스플레이하게 됩니다:
+때로는, 서버가 그것을 감지하지 않을 때도 있을 겁니다: 전체적인 그림을 모르는 몇 개의 서버에 리다이렉션 루프가 행해지기 때문입니다. 이런 경우, 브라우저가 이를 감지하고 오류 메시지를 보여줄 것입니다. Firefox는 다음과 같이 디스플레이하게 됩니다:
 
 <pre class="bz_comment_text notranslate" id="comment_text_0">Firefox has detected that the server is redirecting the request for this address in a way that will never complete.</pre>
 

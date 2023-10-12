@@ -75,7 +75,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 ### `Secure`과 `HttpOnly` 쿠키
 
-Secure 쿠키는 HTTPS 프로토콜 상에서 암호화된(encrypted ) 요청일 경우에만 전송됩니다. 하지만 `Secure`일지라도 민감한 정보는 절대 쿠키에 저장되면 안됩니다, 본질적으로 안전하지 않고 이 플래그가 당신에게 실질적인 보안(real protection)를 제공하지 않기 때문입니다. 크롬52 혹은 파이어폭스52로 시작한다면, 안전하지 않은 사이트(`http:`) 는 쿠키에 `Secure` 설정을 지시할 수 없습니다.
+Secure 쿠키는 HTTPS 프로토콜 상에서 암호화된(encrypted ) 요청일 경우에만 전송됩니다. 하지만 `Secure`일지라도 민감한 정보는 절대 쿠키에 저장되면 안됩니다, 본질적으로 안전하지 않고 이 플래그가 당신에게 실질적인 보안(real protection)를 제공하지 않기 때문입니다. 크롬52 혹은 Firefox52로 시작한다면, 안전하지 않은 사이트(`http:`) 는 쿠키에 `Secure` 설정을 지시할 수 없습니다.
 
 Cross-site 스크립팅 ({{Glossary("XSS")}}) 공격을 방지하기 위해, `HttpOnly`쿠키는 JavaScript의 {{domxref("Document.cookie")}} API에 접근할 수 없습니다; 그들은 서버에게 전송되기만 합니다. 예를 들어, 서버 쪽에서 지속되고 있는 세션의 쿠키는 JavaScript를 사용할 필요성이 없기 때문에 `HttpOnly`플래그가 설정될 것입니다.
 

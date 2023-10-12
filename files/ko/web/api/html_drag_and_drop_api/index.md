@@ -5,7 +5,7 @@ slug: Web/API/HTML_Drag_and_Drop_API
 
 {{DefaultAPISidebar("HTML 드래그 앤 드롭 API")}}
 
-HTML 드래그 앤 드롭 인터페이스는 파이어폭스와 다른 브라우저에서 어플리케이션이 드래그 앤 드롭 기능을 사용하게 해줍니다. 이 기능을 이용해 사용자는 _draggable_ 요소를 마우스로 선택해 _droppable_ 요소로 드래그하고, 마우스 버튼에서 손을 뗌으로써 요소를 드롭할 수 있습니다. 드래그하는 동안 draggable 요소는 반투명한 채로 마우스 포인터를 따라다닙니다.
+HTML 드래그 앤 드롭 인터페이스는 Firefox와 다른 브라우저에서 어플리케이션이 드래그 앤 드롭 기능을 사용하게 해줍니다. 이 기능을 이용해 사용자는 _draggable_ 요소를 마우스로 선택해 _droppable_ 요소로 드래그하고, 마우스 버튼에서 손을 뗌으로써 요소를 드롭할 수 있습니다. 드래그하는 동안 draggable 요소는 반투명한 채로 마우스 포인터를 따라다닙니다.
 
 웹 사이트나 확장 기능, XUL 어플리케이션을 위해, 다양한 요소를 draggable 요소로 만들 수 있고, 이벤트에 대한 draggable 요소의 반응들을 만들어내거나 droppable 요소를 자유자재로 만들 수 있습니다.
 
@@ -34,7 +34,7 @@ HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxr
 
 HTML 드래그와 드롭 인터페이스는 {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {{domxref("DataTransferItem")}}, {{domxref("DataTransferItemList")}} 입니다.
 
-{{domxref("DataTransfer")}} 객체는 드래그 형태나 드래그 데이터 (하나 이상의 아이템), 각 드래그 아이템의 종류 (MIME 종류) 와 같은 드래그 이벤트의 상태를 담고 있습니다. {{domxref("DataTransfer")}} 는 또한 드래그 데이터에 아이템을 추가하거나 제거하는 메소드를 가지고 있습니다. The {{domxref("DragEvent")}} 와 {{domxref("DataTransfer")}} 인터페이스만 있으면 어플리케이션에 HTML 드래그 앤 드롭 기능을 추가할 수 있습니다. 참고로 파이어폭스는 {{domxref("DataTransfer")}}에 [Gecko-specific extensions](#gecko_specific_interfaces) 와 같은 파이어폭스에서만 동작하는 추가적인 확장을 제공합니다.
+{{domxref("DataTransfer")}} 객체는 드래그 형태나 드래그 데이터 (하나 이상의 아이템), 각 드래그 아이템의 종류 (MIME 종류) 와 같은 드래그 이벤트의 상태를 담고 있습니다. {{domxref("DataTransfer")}} 는 또한 드래그 데이터에 아이템을 추가하거나 제거하는 메소드를 가지고 있습니다. The {{domxref("DragEvent")}} 와 {{domxref("DataTransfer")}} 인터페이스만 있으면 어플리케이션에 HTML 드래그 앤 드롭 기능을 추가할 수 있습니다. 참고로 Firefox는 {{domxref("DataTransfer")}}에 [Gecko-specific extensions](#gecko_specific_interfaces) 와 같은 Firefox에서만 동작하는 추가적인 확장을 제공합니다.
 
 {{domxref("DataTransfer")}}는 {{domxref("DataTransferItem")}}의 {{domxref("DataTransferItemList","목록")}} 인 {{domxref("DataTransfer.items","items")}} 프로퍼티를 가지고 있습니다. 각 {{domxref("DataTransferItem")}} 는 하나의 드래그 아이템을 나타내고 각 아이템은 데이터의 종류 (`string` 혹은 `file`) 를 나타내는 {{domxref("DataTransferItem.kind","kind")}} 프로퍼티와 데이터 아이템의 종류 (MIME 종류) 를 나타내는 {{domxref("DataTransferItem.type","type")}} 프로퍼티를 가집니다. {{domxref("DataTransferItem")}}은 드래그 아이템의 데이터를 가져오는 메소드를 제공합니다.
 
@@ -48,7 +48,7 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 ### Gecko 한정 인터페이스
 
-Mozilla와 파이어폭스는 표준 드래그 앤 드롭 모델에서 제공하지 않는 몇가지 기능들을 추가로 제공합니다. 여러 개의 아이템을 동시에 드래그하거나 파일과 같이 문자열이 아닌 데이터를 드래그 하기 위한 여러 편리한 기능을 제공합니다. 더 많은 정보를 찾아보기 위해, [Dragging and Dropping Multiple Items](/ko/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)을 보십시오. 덧붙여, 모든 Gecko 한정 프로퍼티나 Gecko 한정 메소드를 찾아보기 위해 {{domxref("DataTransfer")}} 참조 페이지도 보시기 바랍니다.
+Mozilla와 Firefox는 표준 드래그 앤 드롭 모델에서 제공하지 않는 몇가지 기능들을 추가로 제공합니다. 여러 개의 아이템을 동시에 드래그하거나 파일과 같이 문자열이 아닌 데이터를 드래그 하기 위한 여러 편리한 기능을 제공합니다. 더 많은 정보를 찾아보기 위해, [Dragging and Dropping Multiple Items](/ko/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)을 보십시오. 덧붙여, 모든 Gecko 한정 프로퍼티나 Gecko 한정 메소드를 찾아보기 위해 {{domxref("DataTransfer")}} 참조 페이지도 보시기 바랍니다.
 
 ## 기본
 
@@ -228,7 +228,7 @@ function dragstart_handler(ev) {
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- 파일 드래그 앤 드롭; 파이어폭스 전용: <http://jsfiddle.net/9C2EF/>
+- 파일 드래그 앤 드롭; Firefox 전용: <http://jsfiddle.net/9C2EF/>
 - 파일 드래그 앤 드롭; 모든 브라우저: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ## 명세서
