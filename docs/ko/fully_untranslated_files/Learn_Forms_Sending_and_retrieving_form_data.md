@@ -9,7 +9,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 
 ### 클라이언트/서버 구조
 
-웹은 간단히 말하면 클라이언트(Firefox, 크롬, 사파리, IE 등)는 서버(아파치, Nginx, IIS, 톰켓 등)로 HTTP프로토콜을 사용해 요청을 하는 클라이언트/서버 구조를 기본으로 작동된다. 서버 응답은 요청과 똑같은 프로토콜을 사용한다.
+웹은 간단히 말하면 클라이언트(Firefox, 크롬, Safari, IE 등)는 서버(아파치, Nginx, IIS, 톰켓 등)로 HTTP프로토콜을 사용해 요청을 하는 클라이언트/서버 구조를 기본으로 작동된다. 서버 응답은 요청과 똑같은 프로토콜을 사용한다.
 
 ![A basic schema of the Web client/server architecture](/files/4291/client-server.png)
 

@@ -35,7 +35,7 @@ localStorage를 사용하려면 먼저 현재 브라우징 세션에서 지원�
 
 ### 사용 가능 검사
 
-localStorage를 지원하는 브라우저는 windows 객체에 localStorage라는 property가 존재 합니다. 그러나 여러 가지 이유로 인해 예외가 발생할 수 있습니다. 존재한다 해도 다양한 브라우저가 localStorage를 비활성화하는 설정을 제공하기 때문에 localStorage가 실제로 사용 가능하다는 보장은 없습니다. 따라서 브라우저가 localStorage를 지원한다고 해도 스크립트에서 사용 하지 못 할 수도 있습니다. 예를 들어 사파리 브라우저의 사생활 보호 모드에서 할당량이 0 인 빈 localStorage 개체를 제공하므로 효과적으로 사용할 수 없게 만듭니다. 이때 QuotaExceededError를 얻을 수도 있습니다. 이는 사용가능한 저장공간을 모두 소모 했다는 의미로, localStorage를 사용할 수 없음을 뜻합니다. 이러한 시나리오를 고려하여 사용가능 여부를 검사하여야 합니다.
+localStorage를 지원하는 브라우저는 windows 객체에 localStorage라는 property가 존재 합니다. 그러나 여러 가지 이유로 인해 예외가 발생할 수 있습니다. 존재한다 해도 다양한 브라우저가 localStorage를 비활성화하는 설정을 제공하기 때문에 localStorage가 실제로 사용 가능하다는 보장은 없습니다. 따라서 브라우저가 localStorage를 지원한다고 해도 스크립트에서 사용 하지 못 할 수도 있습니다. 예를 들어 Safari 브라우저의 사생활 보호 모드에서 할당량이 0 인 빈 localStorage 개체를 제공하므로 효과적으로 사용할 수 없게 만듭니다. 이때 QuotaExceededError를 얻을 수도 있습니다. 이는 사용가능한 저장공간을 모두 소모 했다는 의미로, localStorage를 사용할 수 없음을 뜻합니다. 이러한 시나리오를 고려하여 사용가능 여부를 검사하여야 합니다.
 
 다음은 localStorage가 지원되고 사용 가능한지 여부를 감지하는 함수입니다.
 
