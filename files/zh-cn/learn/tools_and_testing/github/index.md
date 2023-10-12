@@ -38,25 +38,25 @@ slug: Learn/Tools_and_testing/GitHub
 
 先提醒一下这些链接将会带你去访问一些外部资源。我们最终将致力于开发我们专属的 Git 和 GitHub 教程，但现在，这些资料将会带你轻松入门。
 
-- [Hello World【欢迎来到新世界】 (来自 GitHub)](https://docs.github.com/zh/get-started/quickstart/hello-world)
+- [欢迎来到新世界 (来自 GitHub)](https://docs.github.com/zh/get-started/quickstart/hello-world)
   - : 这里是开始使用 GitHub 的正大门，在这里你可以学到 Git 的基础操作，例如：创建**储存库 (Repository)** 和**分支 (Brunch)** 、**确认提交 (commit)** 以及打开和合并**拉取请求** (open/merge **Pull Request**)。
-- [Git Handbook【使用手册】 (来自 GitHub)](https://docs.github.com/zh/get-started/using-git/about-git)
+- [Git 使用手册 (来自 GitHub)](https://docs.github.com/zh/get-started/using-git/about-git)
   - : 这个 Git 使用手册就稍微更深入一点了，它解释了什么是**版本控制系统**、什么是**储存库** **(Repository)** 、 **GitHub 模型**如何运行、 **Git 指令**和示例等。
-- [Forking Projects【复刻项目】 (来自 GitHub)](https://docs.github.com/zh/get-started/quickstart/contributing-to-projects)
+- [复刻项目 (来自 GitHub)](https://docs.github.com/zh/get-started/quickstart/contributing-to-projects)
   - : 当你想要对别人的代码做出贡献时，**复刻**（**fork**，即服务端代码仓库复制）是必不可少的步骤。这个链接将告诉你如何操作。
-- [About Pull Requests【关于拉取请求】 (来自 GitHub)](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [关于拉取请求 (来自 GitHub)](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   - : 这是一个管理拉取请求的有用的指南：你所修改的代码需要通过拉取请求来让项目的管理者决定是否采纳。
-- [Mastering issues【处理问题】 (来自 GitHub)](https://docs.github.com/zh/issues/tracking-your-work-with-issues/about-issues)
+- [处理问题 (来自 GitHub)](https://docs.github.com/zh/issues/tracking-your-work-with-issues/about-issues)
   - : **问题区** (**Issues**) 就像是一个关于你这个 GitHub 项目的论坛，在这里人们可以提问题和报告错误，你可以管理更新（例如给人们分配需要解决的问题、澄清问题以及告知问题已经解决）。这篇文章会让你知道所需要的一些关于问题区的知识。
 
-> **备注：** 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) 和 [Dangit, git!](https://dangitgit.com/) 这样的网站来寻找答案。
+> **备注：** 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 [Git 的飞行法则](https://github.com/k88hudson/git-flight-rules) 和 [Dangit, git!](https://dangitgit.com/) 这样的网站来寻找答案。
 
 ## 还可以看看
 
-- [Understanding the GitHub flow【理解 GitHub 流程】](https://docs.github.com/zh/get-started/quickstart/github-flow)
-- [Git command list【Git 指令列表】](https://git-scm.com/docs)
-- [Mastering markdown【掌握 Markdown 格式】](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) （在网页上、评论区常用的格式以及 `.md` 文件所使用的格式，GitHub 中的介绍文件 (readme.md) 即用这种格式书写）。
-- [Getting Started with GitHub Pages【入门 Github Pages】](https://docs.github.com/zh/pages/quickstart) （如何在 GitHub 上发布示例和网站）。
-- [Learn Git branching【学习 Git 的分支结构】](https://learngitbranching.js.org/)
-- [Flight rules for Git【Git 的飞行法则】](https://github.com/k88hudson/git-flight-rules) （在 Git 中实现特定功能的非常有用的方法介绍纲要，包括如何在出错时纠错等）。
-- [Dangit, git! 【#网络和谐#，Git !】](https://dangitgit.com/)（另一个十分有用的方法介绍纲要，特别是在出错的时候进行纠正的方法）。
+- [理解 GitHub 流程](https://docs.github.com/zh/get-started/quickstart/github-flow)
+- [Git 指令列表](https://git-scm.com/docs)
+- [掌握 Markdown 格式](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) （在网页上、评论区常用的格式以及 `.md` 文件所使用的格式，GitHub 中的介绍文件 (readme.md) 即用这种格式书写）。
+- [入门 Github Pages](https://docs.github.com/zh/pages/quickstart) （如何在 GitHub 上发布示例和网站）。
+- [学习 Git 的分支结构](https://learngitbranching.js.org/)
+- [Git 的飞行法则](https://github.com/k88hudson/git-flight-rules) （在 Git 中实现特定功能的非常有用的方法介绍纲要，包括如何在出错时纠错等）。
+- [Dangit, git!](https://dangitgit.com/)（另一个十分有用的方法介绍纲要，特别是在出错的时候进行纠正的方法）。
