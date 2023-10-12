@@ -1,6 +1,5 @@
 ---
 title: JavaScript 性能优化
-slug: Learn/Performance/JavaScript
 page-type: learn-module-chapter
 ---
 
