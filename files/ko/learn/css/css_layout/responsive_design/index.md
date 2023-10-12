@@ -227,7 +227,7 @@ h1 {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-이 [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) 메타 태그는 모바일 브라우저에 뷰포트의 너비를 기기 너비로 설정하고 문서의 크기를 의도한 크기의 100%로 조정하여 문서를 모바일에 최적화된 크기로 표시해야 함을 알려줍니다.
+이 [viewport](/ko/docs/Web/HTML/Viewport_meta_tag) 메타 태그는 모바일 브라우저에 뷰포트의 너비를 기기 너비로 설정하고 문서의 크기를 의도한 크기의 100%로 조정하여 문서를 모바일에 최적화된 크기로 표시해야 함을 알려줍니다.
 
 이것이 왜 필요한가요? 모바일 브라우저는 뷰포트 너비에 대해 거짓말을 하는 경향이 있기 때문입니다.
 

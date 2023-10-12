@@ -1,6 +1,8 @@
 ---
 title: grid
 slug: Web/CSS/grid
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
@@ -54,6 +56,7 @@ grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 grid: inherit;
 grid: initial;
 grid: revert;
+grid: revert-layer;
 grid: unset;
 ```
 
@@ -130,5 +133,5 @@ grid: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: [CSS グリッドでの行ベースの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#グリッド定義の一括指定)
+- グリッドレイアウトガイド: [CSS グリッドでの行ベースの配置](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

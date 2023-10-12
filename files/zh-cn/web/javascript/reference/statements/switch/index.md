@@ -190,7 +190,7 @@ switch (foo) {
 
 ### `switch` 语句内的块级作用域
 
-随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
+随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下你可能需要使用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
 
 以这段代码为例：
 

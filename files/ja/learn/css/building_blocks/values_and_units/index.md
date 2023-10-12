@@ -302,7 +302,7 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Values and unit](/ja/docs/Learn/CSS/Building_blocks/Values_tasks) を見てください。
 

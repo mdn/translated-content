@@ -85,7 +85,7 @@ function updateProgress(percentComplete) {
 
 同样重要的是要承认一些依赖辅助技术的人不愿意升级他们的软件，因为害怕失去与他们的计算机和浏览器交互的能力。因此，尽可能[使用语义化的 HTML 元素](/zh-CN/docs/Learn/Accessibility/HTML)很重要，因为语义 HTML 对辅助技术的支持要好得多。
 
-使用实际辅助技术测试您编写的 ARIA 也很重要。就像浏览器模拟器和模拟器不是测试完全支持的有效解决方案一样，代理辅助技术解决方案不足以完全保证功能。
+使用实际辅助技术测试你编写的 ARIA 也很重要。就像浏览器模拟器和模拟器不是测试完全支持的有效解决方案一样，代理辅助技术解决方案不足以完全保证功能。
 
 ## 参考
 
@@ -104,7 +104,7 @@ function updateProgress(percentComplete) {
 ## 脚本小部件的 ARIA
 
 - [编写可通过键盘导航的 JavaScript 小部件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : {{HTMLElement("input")}}、{{HTMLElement("button")}} 等内置元素具有内置键盘辅助功能。如果您使用 {{HTMLElement("div")}} 和 ARIA 来“伪造”这些，则必须确保您的小部件可通过键盘访问。
+  - : {{HTMLElement("input")}}、{{HTMLElement("button")}} 等内置元素具有内置键盘辅助功能。如果你使用 {{HTMLElement("div")}} 和 ARIA 来“伪造”这些，则必须确保你的小部件可通过键盘访问。
 - [实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : 实时区域向屏幕阅读器提供有关如何处理页面内容更改的建议。
 

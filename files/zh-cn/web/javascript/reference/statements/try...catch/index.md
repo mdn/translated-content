@@ -129,7 +129,7 @@ function isValidJSON(text) {
 
 `finally`块包含的语句在`try`块和`catch`之后，`try..catch..finally`块后的语句之前执行。请注意，无论是否抛出异常`finally`子句都会执行。此外，如果抛出异常，即使没有`catch`子句处理异常，`finally`子句中的语句也会执行。
 
-以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许您访问文件）。如果文件打开时抛出异常，则`finally`子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在`try`或`catch block`显式返回时执行。
+以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许你访问文件）。如果文件打开时抛出异常，则`finally`子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在`try`或`catch block`显式返回时执行。
 
 ```js
 openMyFile();

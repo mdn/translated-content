@@ -130,7 +130,7 @@ player:focus .controls {
 ```
 
 - 我们从设置为`hidden`的自定义控件{{cssxref("visibility")}}开始。稍后在我们的 JavaScript 中，我们将控件设置为 `visible`, 并且从`<video>` 元素中移除`controls` 属性。这是因为，如果 JavaScript 由于某种原因没有加载，用户依然可以使用原生的控件播放视频。
-- 默认情况下，我们将控件的`opacity`设置为 0.5 {{cssxref("opacity")}}，这样当您尝试观看视频时，它们就不会分散注意力。只有当您将鼠标悬停/聚焦在播放器上时，控件才会完全不透明。
+- 默认情况下，我们将控件的`opacity`设置为 0.5 {{cssxref("opacity")}}，这样当你尝试观看视频时，它们就不会分散注意力。只有当你将鼠标悬停/聚焦在播放器上时，控件才会完全不透明。
 - 我们使用 Flexbox({{cssxref("display")}}: flex) 布置控制栏内的按钮，以简化操作。
 
 接下来，让我们看看我们的按钮图标：
@@ -165,7 +165,7 @@ button:before {
 - 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
 - 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
 
-图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为您不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及您可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
+图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为你不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及你可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
 
 最后让我们来看看进度条的 CSS:
 
@@ -242,13 +242,13 @@ button:before {
 
 让我们实现或许是最重要的控制——播放/暂停按钮。
 
-1. 首先，将以下内容添加到您代码的底部，以便于在单击播放按钮时调用 `playPauseMedia()`函数：
+1. 首先，将以下内容添加到你代码的底部，以便于在单击播放按钮时调用 `playPauseMedia()`函数：
 
    ```js
    play.addEventListener("click", playPauseMedia);
    ```
 
-2. 现在定义 `playPauseMedia()` 函数——再次添加以下内容到您代码底部：
+2. 现在定义 `playPauseMedia()` 函数——再次添加以下内容到你代码底部：
 
    ```js
    function playPauseMedia() {
@@ -289,11 +289,11 @@ button:before {
 
    在 HTMLMediaElement API 中没有 `stop()` 方法——等效的办法是先用 `pause()` 暂停视频，然后设置{{domxref("HTMLMediaElement.currentTime","currentTime")}} 属性为 0。设置 `currentTime` 的值（单位：秒）将会立刻使视频跳到该位置。
 
-   之后要做的事是把显示的图标设置成“播放”图标。无论视频使暂停还是正在播放，您都希望它随后可以播放。
+   之后要做的事是把显示的图标设置成“播放”图标。无论视频使暂停还是正在播放，你都希望它随后可以播放。
 
 #### 探索快进和快退
 
-有许多方法可以实现快退和快进功能;在这里，我们向您展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
+有许多方法可以实现快退和快进功能;在这里，我们向你展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
 
 1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
 
@@ -339,7 +339,7 @@ button:before {
    }
    ```
 
-   您会注意到，首先我们初始化两个变量 - intervalFwd 和 intervalRwd - 您将在后面发现它们的用途。
+   你会注意到，首先我们初始化两个变量 - intervalFwd 和 intervalRwd - 你将在后面发现它们的用途。
 
    让我们逐步浏览`mediaBackward()`（`mediaForward()`的功能性完全相同，但效果相反）：
 
@@ -379,7 +379,7 @@ button:before {
 
 #### 更新已用时间
 
-我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event)事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event)事件时更新时间显示。此事件触发的频率取决于你的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 在代码下方添加`addEventListener（）`行：
 
@@ -429,7 +429,7 @@ function setTime() {
 
 #### 修复播放和暂停
 
-还有一个问题需要修复。如果在快退或快进功能激活时按下播放/暂停或停止按钮，它们就不起作用。我们如何修复它以便取消`rwd / fwd`按钮功能并按照您的预期播放/停止视频？这很容易解决。
+还有一个问题需要修复。如果在快退或快进功能激活时按下播放/暂停或停止按钮，它们就不起作用。我们如何修复它以便取消`rwd / fwd`按钮功能并按照你的预期播放/停止视频？这很容易解决。
 
 首先，在`stopMedia（）`函数中添加以下行 ––任何地方都可以：
 
@@ -442,9 +442,9 @@ clearInterval(intervalFwd);
 
 现在再次添加相同的行（上面的四行）到`playPauseMedia（）`函数的最开头（就在`if`语句的开始之前）。
 
-此时，您可以删除`windBackward（）`和`windForward（）`函数中的等效行，因为该函数已在`stopMedia（）`函数中实现。
+此时，你可以删除`windBackward（）`和`windForward（）`函数中的等效行，因为该函数已在`stopMedia（）`函数中实现。
 
-> **备注：** 您还可以通过创建运行这些行的单独函数来进一步提高代码的效率，然后在需要的任何地方调用它，而不是在代码中多次重复这些行。但是我们会把这些留给你自己。
+> **备注：** 你还可以通过创建运行这些行的单独函数来进一步提高代码的效率，然后在需要的任何地方调用它，而不是在代码中多次重复这些行。但是我们会把这些留给你自己。
 
 ## 小结
 
@@ -453,8 +453,8 @@ clearInterval(intervalFwd);
 以下是一些有关如何增强我们构建的现有示例的建议：
 
 1. 如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。你能弄清楚如何更改示例以使其显示小时数吗？
-2. 由于 `<audio>` 元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于 `<audio>` 元素。试着这样做。
-3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，您可以通过[`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
+2. 由于 `<audio>` 元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此你可以轻松地将此播放器用于 `<audio>` 元素。试着这样做。
+3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，你可以通过[`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
 
    ```js
    document.onclick = function (e) {

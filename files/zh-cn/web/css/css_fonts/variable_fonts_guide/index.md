@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
 **可变字体（Variable fonts）**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。你只需通过 CSS 与一行{{cssxref("@font-face")}}引用，即可获取包含在这个单一文件中的各种字体变体。本文将介绍如何在 Web 中使用可变字体。
 
-> **警告：** 为了能够在您的操作系统上正确地使用可变字体，请确定您的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果您的操作系统没有升级到最新版，您将无法在网页和 Firefox Developer Tools 中使用可变字体。
+> **警告：** 为了能够在你的操作系统上正确地使用可变字体，请确定你的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果你的操作系统没有升级到最新版，你将无法在网页和 Firefox Developer Tools 中使用可变字体。
 
 ## 可变字体：何谓与何异
 
@@ -27,9 +27,9 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
 #### 关于字体系列，字重和变体的说明
 
-您可能注意到，我们一直在讨论为每种权重和样式 (即粗体，斜体以及斜体加粗) 创建特定的字体文件，而不是依赖于浏览器来合成它们。这样做的原因，是大多数字体对于粗体和斜体都有非常特殊的设计，它们通常包含完全不同的字符 (例如，小写字母的“a”和“g”在斜体中常常是完全不同的)。在使用非可变字体时，为了最准确地反映字体设计，避免浏览器之间的差异以及它们如何合成或不合成不同的样式，在需要的地方加载特定的字体文件会更为准确。
+你可能注意到，我们一直在讨论为每种权重和样式 (即粗体，斜体以及斜体加粗) 创建特定的字体文件，而不是依赖于浏览器来合成它们。这样做的原因，是大多数字体对于粗体和斜体都有非常特殊的设计，它们通常包含完全不同的字符 (例如，小写字母的“a”和“g”在斜体中常常是完全不同的)。在使用非可变字体时，为了最准确地反映字体设计，避免浏览器之间的差异以及它们如何合成或不合成不同的样式，在需要的地方加载特定的字体文件会更为准确。
 
-您可能还会发现一些可变字体分为两个文件：一个用于正体及其所有变体，另一个包含斜体变体。有时这样做是为了在不需要或不使用斜体的情况下减小整体文件大小。在所有情况下，仍然可以通过通用的 {{cssxref("font-family")}} 名称链接它们，以便您可以使用相同的 font-family 和相应的 {{cssxref("font-style")}} 来调用它们。
+你可能还会发现一些可变字体分为两个文件：一个用于正体及其所有变体，另一个包含斜体变体。有时这样做是为了在不需要或不使用斜体的情况下减小整体文件大小。在所有情况下，仍然可以通过通用的 {{cssxref("font-family")}} 名称链接它们，以便你可以使用相同的 font-family 和相应的 {{cssxref("font-style")}} 来调用它们。
 
 ## 介绍“可变轴” (variation axis)
 
@@ -37,8 +37,8 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
 如规范中所定义，存在两种变形轴，**注册轴**和**自定义轴**：
 
-- 注册轴最为常见，常见到制定规范的作者认为有必要进行标准化。目前注册的五个轴是字重，宽度，倾斜度，斜体和光学尺寸。W3C 已经将它们映射到现有的 CSS 属性，并在一个案例中引入了一个新的属性，您将在下面看到。
-- 自定义轴实际上是无限的：字体设计师可以定义和界定他们喜欢的任何轴，并且只需要给它一个四个字母的标签以在字体文件格式本身中识别它。您可以在 CSS 中使用这些四个字母的标签来指定沿该变化轴的点，您也将在下面的代码示例中看到。
+- 注册轴最为常见，常见到制定规范的作者认为有必要进行标准化。目前注册的五个轴是字重，宽度，倾斜度，斜体和光学尺寸。W3C 已经将它们映射到现有的 CSS 属性，并在一个案例中引入了一个新的属性，你将在下面看到。
+- 自定义轴实际上是无限的：字体设计师可以定义和界定他们喜欢的任何轴，并且只需要给它一个四个字母的标签以在字体文件格式本身中识别它。你可以在 CSS 中使用这些四个字母的标签来指定沿该变化轴的点，你也将在下面的代码示例中看到。
 
 ### 注册轴和现有的 CSS 属性
 
@@ -56,7 +56,7 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
    `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
 
-2. 如果您使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。您可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
+2. 如果你使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。你可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
 
 ### 字重
 
@@ -130,7 +130,7 @@ font-variation-settings: "slnt" 14;
 
 光学尺寸值通常旨在根据 `font-size`自动应用，但也可以使用较低级别的 `font-variation-settings` 语法进行操作。
 
-创建了一个在 CSS 中中支持可变字体的新属性 {{cssxref("font-optical-sizing")}} 。使用 `font-optical-sizing` 时，唯一允许的值是 `auto` 或 `none` - 因此该属性仅允许打开或关闭光学尺寸。但是，当使用 `font-variation-settings: 'opsz' <num>`时，您可以使用数值。在大多数情况下，您可能希望将 `font-size`（正在渲染的类型的物理大小）与 `opsz` 值（使用 `auto`时应用光学尺寸的方式）进行匹配。提供了特定值，以便在必要时（为了易认性，美观或其他原因）可以应用特定值来覆盖默认值。
+创建了一个在 CSS 中中支持可变字体的新属性 {{cssxref("font-optical-sizing")}} 。使用 `font-optical-sizing` 时，唯一允许的值是 `auto` 或 `none` - 因此该属性仅允许打开或关闭光学尺寸。但是，当使用 `font-variation-settings: 'opsz' <num>`时，你可以使用数值。在大多数情况下，你可能希望将 `font-size`（正在渲染的类型的物理大小）与 `opsz` 值（使用 `auto`时应用光学尺寸的方式）进行匹配。提供了特定值，以便在必要时（为了易认性，美观或其他原因）可以应用特定值来覆盖默认值。
 
 ```css
 font-optical-sizing: auto;
@@ -173,9 +173,9 @@ font-variation-settings: "GRAD" 88;
 }
 ```
 
-> **备注：** 并非所有浏览器都实现了字体格式的完整语法，因此请仔细测试。如果您将字体格式设置为仅文件格式，而不是格式变体（即 `woff2` 而不是 `woff2-variations`），那么支持可变字体的所有浏览器仍将渲染它们，但如果可能，最好使用正确的语法。
+> **备注：** 并非所有浏览器都实现了字体格式的完整语法，因此请仔细测试。如果你将字体格式设置为仅文件格式，而不是格式变体（即 `woff2` 而不是 `woff2-variations`），那么支持可变字体的所有浏览器仍将渲染它们，但如果可能，最好使用正确的语法。
 
-> **备注：** 如果使用适当的属性（即 `font-weight`或 `font-stretch`），提供 `font-weight`， `font-stretch`和 `font-style`的值范围将使浏览器不会尝试渲染超出该范围的轴，但不会阻止您通过 `font-variation-settings` 使用无效值，因此请小心使用。
+> **备注：** 如果使用适当的属性（即 `font-weight`或 `font-stretch`），提供 `font-weight`， `font-stretch`和 `font-style`的值范围将使浏览器不会尝试渲染超出该范围的轴，但不会阻止你通过 `font-variation-settings` 使用无效值，因此请小心使用。
 
 ## 使用旧版本浏览器
 
@@ -205,7 +205,7 @@ h1 {
 - [W3C Github issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com) （通过简单的拖拽告诉您字体可以做什么的网站）
+- [Wakamai Fondue](https://wakamaifondue.com) （通过简单的拖拽告诉你字体可以做什么的网站）
 - [Axis Praxis](https://www.axis-praxis.org) （独创的可变字体排版试验网站）
 - [V-Fonts.com](https://v-fonts.com) （可变字体目录网站）
 - [Font Playground](https://play.typedetail.com) （另一个拥有独特用户界面的可变字体排版试验网站）

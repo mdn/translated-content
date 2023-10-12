@@ -375,11 +375,11 @@
 /ko/docs/SVG:Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG_In_HTML_Introduction	/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ko/docs/The_Importance_of_Correct_HTML_Commenting	/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/conflicting/Web/API/XSLTProcessor
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
 /ko/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/ko/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ko/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ko/docs/Tools/Accessibility_inspector	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html
@@ -408,7 +408,7 @@
 /ko/docs/Using_JSON_in_Firefox	/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ko/docs/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
 /ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/Web/CSS/cursor
-/ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+/ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/API/XSLTProcessor
 /ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/CSSOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
@@ -514,6 +514,7 @@
 /ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label
 /ko/docs/Web/Accessibility/ARIA/forms	/ko/docs/Web/Accessibility/ARIA
 /ko/docs/Web/CSS/@viewport	/ko/docs/Web/CSS
+/ko/docs/Web/CSS/Adjacent_sibling_combinator	/ko/docs/Web/CSS/Next-sibling_combinator
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_backgrounds_and_borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -562,6 +563,7 @@
 /ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
 /ko/docs/Web/CSS/Compositing_and_Blending	/ko/docs/Web/CSS/CSS_compositing_and_blending
 /ko/docs/Web/CSS/Filter_Effects	/ko/docs/Web/CSS/CSS_filter_effects
+/ko/docs/Web/CSS/General_sibling_combinator	/ko/docs/Web/CSS/Subsequent-sibling_combinator
 /ko/docs/Web/CSS/Getting_Started	/en-US/docs/Learn/CSS/First_steps
 /ko/docs/Web/CSS/Getting_Started/Color	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /ko/docs/Web/CSS/Getting_Started/Content	/ko/docs/Learn/CSS/Howto/Generated_content
@@ -604,7 +606,7 @@
 /ko/docs/Web/CSS/시작하기/색상	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /ko/docs/Web/CSS/시작하기/설렉터	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Web/CSS/시작하기/왜_CSS를_사용하나	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ko/docs/Web/CSS/인접_형제_선택자	/ko/docs/Web/CSS/Adjacent_sibling_combinator
+/ko/docs/Web/CSS/인접_형제_선택자	/ko/docs/Web/CSS/Next-sibling_combinator
 /ko/docs/Web/Events/DOMContentLoaded	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/Events/abort	/ko/docs/Web/API/HTMLMediaElement/abort_event
 /ko/docs/Web/Events/blur	/ko/docs/Web/API/Element/blur_event
@@ -800,9 +802,13 @@
 /ko/docs/Web/XPath/Axes/self	/ko/docs/Web/XPath/Axes#self
 /ko/docs/Web/XSLT/Elements	/ko/docs/Web/XSLT/Element
 /ko/docs/Web/XSLT/Elements/element	/ko/docs/Web/XSLT/Element/element
-/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
-/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
+/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/conflicting/Web/API/XSLTProcessor
+/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
+/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/API/XSLTProcessor
+/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko	/ko/docs/conflicting/Web/API/XSLTProcessor
+/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction	/ko/docs/conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4
+/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters	/ko/docs/conflicting/Web/API/XSLTProcessor_7eb90412a7159e9ebdecfc78996d1ac5
 /ko/docs/Web/XSLT/apply-imports	/ko/docs/Web/XSLT/Element/apply-imports
 /ko/docs/Web/XSLT/apply-templates	/ko/docs/Web/XSLT/Element/apply-templates
 /ko/docs/Web/XSLT/attribute	/ko/docs/Web/XSLT/Element/attribute

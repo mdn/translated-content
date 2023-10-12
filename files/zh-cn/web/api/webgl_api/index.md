@@ -99,21 +99,21 @@ WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingCon
 
 ## 指南和教程
 
-下面，您将找到各种指南，以帮助您学习 WebGL 概念和教程，提供分步课程和示例。
+下面，你将找到各种指南，以帮助你学习 WebGL 概念和教程，提供分步课程和示例。
 
 ### 指南
 
 - [WebGL 中的数据](/zh-CN/docs/Web/API/WebGL_API/Data)
   - : 编写 WebGL 代码时使用的变量，缓冲区和其他类型数据的指南。
 - [WebGL 最佳实践](/zh-CN/docs/Web/API/WebGL_API/WebGL_best_practices)
-  - : 提示和建议，以帮助您提高 WebGL 内容的质量，性能和可靠性。
+  - : 提示和建议，以帮助你提高 WebGL 内容的质量，性能和可靠性。
 - [使用扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)
   - : WebGL 扩展的使用指南。
 
 ### 教程
 
 - [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
-  - : WebGL 核心概念的初学者指南。如果您以前没有 WebGL 的经验，那么这是一个很好的起点。
+  - : WebGL 核心概念的初学者指南。如果你以前没有 WebGL 的经验，那么这是一个很好的起点。
 
 ### 示例
 
@@ -170,7 +170,7 @@ WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingCon
 开始使用 Gecko 10.0，在测试中，这里有两个参数可以让你来控制 WebGL 性能：
 
 - `webgl.min_capability_mode`
-  - : 一个以布尔值存储的属性。当它的值为`True`时，将会启用最小性能模式。当这个模式启用时，WebGL 将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保您的 WebGL 代码能够在性能的设备和浏览器上正确运行。它的默认值是`False`。
+  - : 一个以布尔值存储的属性。当它的值为`True`时，将会启用最小性能模式。当这个模式启用时，WebGL 将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保你的 WebGL 代码能够在性能的设备和浏览器上正确运行。它的默认值是`False`。
 - `webgl.disable_extensions`
   - : 一个以布尔值存储的属性。当它的值为`True`时，会禁用所有的 WebGL 拓展。它的默认值是`False`。
 

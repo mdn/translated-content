@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Introduction
 
 - 对互联网和万维网（{{Glossary("WWW")}}）有基本的认识。
 - 熟悉超文本标记语言（{{Glossary("HTML")}}）。
-- 一些编程经验。如果您初识编程，请先试着看看主页列出的有关 [JavaScript](/zh-CN/docs/Web/JavaScript) 的教程。
+- 一些编程经验。如果你初识编程，请先试着看看主页列出的有关 [JavaScript](/zh-CN/docs/Web/JavaScript) 的教程。
 
 ## 去哪里获取有关 JavaScript 的信息？
 
@@ -64,7 +64,7 @@ ECMA-262 标准也通过了 国际标准化组织（[ISO](http://www.iso.ch/)）
 
 ### JavaScript 文献 和 ECMAScript 规范
 
-ECMAScript 规范是实现 ECMAScript 的一组需求;如果您想在 ECMAScript 实现或引擎 (如 Firefox 中的 SpiderMonkey 或 Chrome 中的 V8) 中实现符合标准的语言特性，那么它是非常有用的。
+ECMAScript 规范是实现 ECMAScript 的一组需求;如果你想在 ECMAScript 实现或引擎 (如 Firefox 中的 SpiderMonkey 或 Chrome 中的 V8) 中实现符合标准的语言特性，那么它是非常有用的。
 
 ECMAScript 文档不是用来帮助脚本程序员的;使用 JavaScript 文档获取关于编写脚本的信息。
 

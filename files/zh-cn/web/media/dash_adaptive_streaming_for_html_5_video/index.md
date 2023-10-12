@@ -13,7 +13,7 @@ Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [�
 
 ## 使用 DASH - 服务端
 
-首先，您需要将 WebM 视频转换为带有不同比特率的随附视频文件的 DASH 清单。根据您的需求，启动从 [ffmpeg.org](http://www.ffmpeg.org) 的 ffmpeg 程序，就可以使用 libvpx 和 libbvorbis 支持的 WebM 视频和音频（版本 2.5 以上，3.2.5 版本已通过测试）。
+首先，你需要将 WebM 视频转换为带有不同比特率的随附视频文件的 DASH 清单。根据你的需求，启动从 [ffmpeg.org](http://www.ffmpeg.org) 的 ffmpeg 程序，就可以使用 libvpx 和 libbvorbis 支持的 WebM 视频和音频（版本 2.5 以上，3.2.5 版本已通过测试）。
 
 ### 1. 使用现有的 WebM 文件创建一个音频文件和多个视频文件。
 
@@ -76,11 +76,11 @@ ffmpeg \
 
 `-map` 参数对应输入文件的顺序（每个文件只对应一个参数）。`-adaptation_sets` 参数将它们分配给适配集；例如，以上命令创建一个包含 0,1,2,3 的视频集（0），而另一个（1）仅仅包含视频流 4 和音频流。
 
-将清单和相关的视频文件放在 Web 服务器或 CDN 上。DASH 通过 HTTP 来完成，因此只要您的 HTTP 服务器支持字节范围请求，并且 DASH 设置为使用 mimetype="application/dash+xml" 来支持 .mpd 文件即可。
+将清单和相关的视频文件放在 Web 服务器或 CDN 上。DASH 通过 HTTP 来完成，因此只要你的 HTTP 服务器支持字节范围请求，并且 DASH 设置为使用 mimetype="application/dash+xml" 来支持 .mpd 文件即可。
 
 ## 使用 DASH-客户端
 
-您将需要修改网页，使其首先指向 DASH 清单，而不是直接指向特定的视频文件：
+你将需要修改网页，使其首先指向 DASH 清单，而不是直接指向特定的视频文件：
 
 ```html
 <video>
@@ -90,7 +90,7 @@ ffmpeg \
 </video>
 ```
 
-如果浏览器支持 DASH，则您的视频现在将自适应地流式传输。
+如果浏览器支持 DASH，则你的视频现在将自适应地流式传输。
 
 ## Links
 

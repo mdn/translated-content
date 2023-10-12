@@ -10,7 +10,7 @@ slug: Learn/CSS/CSS_layout/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         对 HTML 有一些基本的了解 (学习“<a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -84,7 +84,7 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 在 css 中实现页面布局的主要方法是设定`display`属性的值。此属性允许我们更改默认的显示方式。正常流中的所有内容都有一个`display`的值，用作元素的默认行为方式。例如，英文段落显示在一个段落的下面，这是因为它们的样式是`display:block`。如果在段落中的某个文本周围创建链接，则该链接将与文本的其余部分保持内联，并且不会打断到新行。这是因为{{htmlelement("a")}}元素默认为`display:inline`。
 
-您可以更改此默认显示行为。例如，{{htmlelement("li")}}元素默认为`display:block`，这意味着在我们的英文文档中，列表项显示为一个在另一个之下。如果我们将显示值更改为`inline`，它们现在将显示在彼此旁边，就像单词在句子中所做的那样。事实上，您可以更改任何元素的`display`值，这意味着您可以根据它们的语义选择 html 元素，而不必关心它们的外观。他们的样子是你可以改变的。
+你可以更改此默认显示行为。例如，{{htmlelement("li")}}元素默认为`display:block`，这意味着在我们的英文文档中，列表项显示为一个在另一个之下。如果我们将显示值更改为`inline`，它们现在将显示在彼此旁边，就像单词在句子中所做的那样。事实上，你可以更改任何元素的`display`值，这意味着你可以根据它们的语义选择 html 元素，而不必关心它们的外观。他们的样子是你可以改变的。
 
 除了可以通过将一些内容从`block`转换为`inline`（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以`display`值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是 `display: flex` 和 `display: grid`。
 
@@ -324,7 +324,7 @@ p {
 
 {{ EmbedLiveSample('浮动', '100%', 600) }}
 
-> **备注：** CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果您想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
+> **备注：** CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果你想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
 
 ## 定位技术
 
@@ -773,6 +773,6 @@ body {
 
 ## 总结
 
-本文提供了关于您应该了解的所有布局技术的简要概述。阅读更多关于每一项技术的信息！
+本文提供了关于你应该了解的所有布局技术的简要概述。阅读更多关于每一项技术的信息！
 
 {{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}

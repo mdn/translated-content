@@ -120,11 +120,7 @@ p.withRedBoxes {
 
 ## Specifications
 
-| Specification                                                  | Status                | Comment                                                                                                                                                 |
-| -------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                    | {{Spec2('CSS3 Box')}} | Lots of new values, not all clearly defined yet. Any differences in behavior unrelated to new features are expected to be unintentional; please report. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}} | {{Spec2('CSS2.1')}}   | No change.                                                                                                                                              |
-| {{SpecName('CSS1', '#float', 'float')}}                        | {{Spec2('CSS1')}}     | Initial definition.                                                                                                                                     |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -5,7 +5,7 @@ slug: Web/API/PromiseRejectionEvent/promise
 
 {{APIRef("HTML DOM") }}
 
-{{domxref("PromiseRejectionEvent")}}事件对象的 **`promise`** 属性是只读的，表明 Promise 被 reject 的原因。您可以通过检查{{domxref("PromiseRejectionEvent.reason")}}来了解 Promise 为什么被 reject。
+{{domxref("PromiseRejectionEvent")}}事件对象的 **`promise`** 属性是只读的，表明 Promise 被 reject 的原因。你可以通过检查{{domxref("PromiseRejectionEvent.reason")}}来了解 Promise 为什么被 reject。
 
 ## Syntax
 

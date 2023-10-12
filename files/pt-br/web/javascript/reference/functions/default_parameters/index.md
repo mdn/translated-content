@@ -198,9 +198,7 @@ f(); // 6
 
 ## Especificações
 
-| Especificação                                                            | Status           | Comentário         |
-| ------------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES6')}} | Definição Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

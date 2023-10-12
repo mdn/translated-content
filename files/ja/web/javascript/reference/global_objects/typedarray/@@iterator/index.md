@@ -25,7 +25,7 @@ typedArray[Symbol.iterator]()
 
 ### for...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はめったにないことに注意してください。`@@iterator` メソッドの存在により、型付き配列は[反復可能] (/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)となり、 `for...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレータを取得します。
+このメソッドを直接呼び出す必要はめったにないことに注意してください。`@@iterator` メソッドの存在により、型付き配列は[反復可能] (/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)となり、 `for...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレータを取得します。
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);

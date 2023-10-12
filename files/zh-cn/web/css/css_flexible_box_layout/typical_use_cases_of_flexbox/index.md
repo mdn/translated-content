@@ -69,7 +69,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 
 这种模式随处可见，用于评论、以及其他需要显示图片和描述的地方。使用 flexbox 可以允许包含图片的媒体对象部分从图片中获取其尺寸调整信息，并对媒体对象的主体进行弹性布局，以占用剩余空间。
 
-在下面的实例中，您可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到`flex-start`，然后为`.content` flex 元素设置为`flex: 1`。与上面的列布局卡片模式一样，启用`flex: 1`表示此部分卡片可以延伸。
+在下面的实例中，你可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到`flex-start`，然后为`.content` flex 元素设置为`flex: 1`。与上面的列布局卡片模式一样，启用`flex: 1`表示此部分卡片可以延伸。
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}
 

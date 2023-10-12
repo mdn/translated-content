@@ -10,7 +10,7 @@ slug: Learn/Forms/How_to_structure_a_web_form
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机能力，和基本的
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
@@ -26,19 +26,19 @@ slug: Learn/Forms/How_to_structure_a_web_form
   </tbody>
 </table>
 
-HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和无障碍。
+HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;你可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和无障碍。
 
 ## \<form> 元素
 
-{{HTMLElement("form")}} 元素按照一定的格式定义了表单和确定表单行为的属性。当您想要创建一个 HTML 表单时，都必须从这个元素开始，然后把所有内容都放在里面。许多辅助技术或浏览器插件可以发现{{HTMLElement("form")}}元素并实现特殊的钩子，使它们更易于使用。
+{{HTMLElement("form")}} 元素按照一定的格式定义了表单和确定表单行为的属性。当你想要创建一个 HTML 表单时，都必须从这个元素开始，然后把所有内容都放在里面。许多辅助技术或浏览器插件可以发现{{HTMLElement("form")}}元素并实现特殊的钩子，使它们更易于使用。
 
 我们早在之前的文章中就遇见过它了。
 
 > **备注：** 严格禁止在一个表单内嵌套另一个表单。嵌套会使表单的行为不可预知，而这取决于正在使用的浏览器。
 
-请注意，在{{HTMLElement("form")}}元素之外使用表单小部件是可以的，但是如果您这样做了，那么表单小部件与任何表单都没有任何关系。这样的小部件可以在表单之外使用，但是您应该对于这些小部件有特别的计划，因为它们自己什么也不做。您将不得不使用 JavaScript 定制他们的行为。
+请注意，在{{HTMLElement("form")}}元素之外使用表单小部件是可以的，但是如果你这样做了，那么表单小部件与任何表单都没有任何关系。这样的小部件可以在表单之外使用，但是你应该对于这些小部件有特别的计划，因为它们自己什么也不做。你将不得不使用 JavaScript 定制他们的行为。
 
-> **备注：** HTML5 在 HTML 表单元素中引入`form`属性。它让您显式地将元素与表单绑定在一起，即使元素不在{{ HTMLElement("form") }}中。不幸的是，就目前而言，跨浏览器对这个特性的实现还不足以使用。
+> **备注：** HTML5 在 HTML 表单元素中引入`form`属性。它让你显式地将元素与表单绑定在一起，即使元素不在{{ HTMLElement("form") }}中。不幸的是，就目前而言，跨浏览器对这个特性的实现还不足以使用。
 
 ## \<fieldset> 和 \<legend> 元素
 
@@ -72,7 +72,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 当阅读上述表格时，屏幕阅读器将会读第一个小部件“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。
 
-本例中的用例是最重要的。每当您有一组单选按钮时，您应该将它们嵌套在{{HTMLElement("fieldset")}}元素中。还有其他用例，一般来说，{{HTMLElement("fieldset")}}元素也可以用来对表单进行分段。理想情况下，长表单应该在拆分为多个页面，但是如果表单很长，却必须在单个页面上，那么将以不同的关联关系划分的分段，分别放在不同的 fieldset 里，可以提高可用性。
+本例中的用例是最重要的。每当你有一组单选按钮时，你应该将它们嵌套在{{HTMLElement("fieldset")}}元素中。还有其他用例，一般来说，{{HTMLElement("fieldset")}}元素也可以用来对表单进行分段。理想情况下，长表单应该在拆分为多个页面，但是如果表单很长，却必须在单个页面上，那么将以不同的关联关系划分的分段，分别放在不同的 fieldset 里，可以提高可用性。
 
 因为它对辅助技术的影响， {{HTMLElement("fieldset")}} 元素是构建可访问表单的关键元素之一。无论如何，你有责任不去滥用它。如果可能，每次构建表单时，尝试侦听[屏幕阅读器](https://www.nvaccess.org/download/)如何解释它。如果听起来很奇怪，试着改进表单结构。
 
@@ -121,7 +121,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 ### 多个标签
 
-严格地说，您可以在一个小部件上放置多个标签，但是这不是一个好主意，因为一些辅助技术可能难以处理它们。在多个标签的情况下，您应该将一个小部件和它的标签嵌套在一个{{HTMLElement("label")}}元素中。
+严格地说，你可以在一个小部件上放置多个标签，但是这不是一个好主意，因为一些辅助技术可能难以处理它们。在多个标签的情况下，你应该将一个小部件和它的标签嵌套在一个{{HTMLElement("label")}}元素中。
 
 让我们考虑下面这个例子：
 
@@ -159,13 +159,13 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 > **备注：** 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 
-> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果您有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
+> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
 
 ## 用于表单的通用 HTML 结构
 
-除了特定于 HTML 表单的结构之外，还应该记住表单同样是 HTML。这意味着您可以使用 HTML 的所有强大功能来构造一个 HTML 表单。
+除了特定于 HTML 表单的结构之外，还应该记住表单同样是 HTML。这意味着你可以使用 HTML 的所有强大功能来构造一个 HTML 表单。
 
-正如您在示例中可以看到的，用{{HTMLElement("div")}}元素包装标签和它的小部件是很常见的做法。{{HTMLElement("p")}}元素也经常被使用，HTML 列表也是如此（后者在构造多个复选框或单选按钮时最为常见）。
+正如你在示例中可以看到的，用{{HTMLElement("div")}}元素包装标签和它的小部件是很常见的做法。{{HTMLElement("p")}}元素也经常被使用，HTML 列表也是如此（后者在构造多个复选框或单选按钮时最为常见）。
 
 除了{{HTMLElement("fieldset")}}元素之外，使用 HTML 标题（例如，{{htmlelement("h1")}}、{{htmlelement("h2")}}）和分段（如{{htmlelement("section")}}）来构造一个复杂的表单也是一种常见的做法。
 
@@ -175,7 +175,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 ### 自主学习：构建一个表单结构
 
-让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
+让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多你可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)）中，你将了解它们是如何工作的。现在，当你遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
 1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css)的本地副本。
 2. 首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。
@@ -201,7 +201,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
    </p>
    ```
 
-5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
+5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，你将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到你的表单中：
 
    ```html
    <section>
@@ -292,13 +292,13 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
    <p><button type="submit">Validate the payment</button></p>
    ```
 
-您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
+你可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
 
 {{EmbedLiveSample("自主学习：构建一个表单结构","100%",620)}}
 
 ## 总结
 
-现在，您已经具备了正确地构造 HTML 表单所需的所有知识;下一篇文章将深入介绍各种不同类型的表单小部件，您将希望从用户那里收集信息。
+现在，你已经具备了正确地构造 HTML 表单所需的所有知识;下一篇文章将深入介绍各种不同类型的表单小部件，你将希望从用户那里收集信息。
 
 ## 参见
 

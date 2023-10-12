@@ -1,16 +1,19 @@
 ---
-title: NDEFReader.scan()
+title: "NDEFReader: scan() メソッド"
+short-title: scan()
 slug: Web/API/NDEFReader/scan
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取りを開始したときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
+`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取り操作がスケジュールされたときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
 ## 構文
 
-```js
-var readerPromise = NDEFReader.scan(options);
+```js-nolint
+scan(options)
 ```
 
 ### 引数
@@ -19,7 +22,8 @@ var readerPromise = NDEFReader.scan(options);
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `signal` — {{DOMxRef("AbortSignal")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
+    - `signal`
+      - : {{DOMxRef("AbortSignal")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
 
 ### 返値
 

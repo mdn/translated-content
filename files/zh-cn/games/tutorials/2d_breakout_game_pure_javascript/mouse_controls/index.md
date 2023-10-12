@@ -38,7 +38,7 @@ function mouseMoveHandler(e) {
 
 ## 比较你的代码
 
-以下是我们的示例代码，以便与您进行比较：
+以下是我们的示例代码，以便与你进行比较：
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 

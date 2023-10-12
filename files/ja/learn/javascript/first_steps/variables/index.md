@@ -417,9 +417,9 @@ _可能であれば `const` を使用し、必要ならば `let` を使用する
 
 つまり、宣言時に変数を初期化でき、後で再代入する必要がない場合は、その変数を定数にします。
 
-## スキルをテストしよう
+## スキルテスト
 
-この記事の最後に到達しましたが、最も大事な情報を覚えていますか？移動する前に、情報を取得したかのテストを見ることができます — [Test your skills: variables](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: variables](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables) を見てください。
 
 ## まとめ
 

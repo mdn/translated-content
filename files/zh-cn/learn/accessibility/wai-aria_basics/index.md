@@ -19,7 +19,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         进一步了解
         WAI-ARIA，明白他如何提供有效的语义，以便接下来在有需要的时候提供无障碍优化。
@@ -84,7 +84,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 1. 文章到现在，可以看得出浏览器端对于无障碍的支持做的很好。 [caniuse.com](http://caniuse.com/#feat=wai-aria) 这一网站显示全球浏览器支持 WAI-ARIA 的比率达到了 88%。
 2. 屏幕阅读器支持无障碍特性反而没达到这个水平，但是主流的屏幕阅读器做到了。你可以通过查看 Powermapper 来了解支持级别 [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) 。
 
-我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA 功能。我们没有提到的任何支持细节，您可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。
+我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA 功能。我们没有提到的任何支持细节，你可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。
 
 > **备注：** 一些 JavaScript 库支持 WAI-ARIA，意味着生成 UI 界面时，例如复杂的表单控件，他们会添加 ARIA 属性来优化它的无障碍特性。如果你再找一些第三方 JavaScript 解决方案来进行快速的 UI 开发，当你做选择的时候，必须重视 UI 小部件的无障碍。一个良好的例子就是 jQuery UI (请看 [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/) 还有 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)。
 
@@ -251,7 +251,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 正如上下文中其他几处讨论的，HTML 在无障碍方面的关键优势之一是按钮，表单控件和链接等功能的内置键盘无障碍。平时你可以使用 Tab 键在控件之间移动，使用 Enter / Return 键选择或激活控件，偶尔也可以根据需要使用其他控件（例如上下光标在`<select>` 框中的选项之间移动）。
 
-但是在一些时候，你最终还是得编写代码去使用非语义元素作为按钮（或其他类型的控件），或者使用可聚焦控件来达到错误的目的。您可能正在尝试修复一些您之前的错误代码，或者您可能正在构建某种需要它的复杂小部件。
+但是在一些时候，你最终还是得编写代码去使用非语义元素作为按钮（或其他类型的控件），或者使用可聚焦控件来达到错误的目的。你可能正在尝试修复一些你之前的错误代码，或者你可能正在构建某种需要它的复杂小部件。
 
 在让不可聚焦代码可聚焦这一方面，WAI-ARIA 用一些新的值来扩展了`tabindex` 的属性：
 
@@ -267,7 +267,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 #### 表单验证和错误显示
 
-首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)）。在本节的最后，我们展示了当您尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
+首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)）。在本节的最后，我们展示了当你尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -414,7 +414,7 @@ function toggleMusician(bool) {
 - [`aria-selected`](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) — 定义了 tab 当前正在被选中。和 tabs 被用户选中不同，这种值一般是由 JavaScript 修改。
 - [`aria-hidden`](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden) — 对屏幕阅读器隐藏一些元素，和 tabs 被用户选中不同，这种值一般是由 JavaScript 修改。
 - `tabindex="0"` — 当我们删除链接时，我们需要为列表项提供此属性，以便为其提供键盘焦点。（为没有 tabindex 特性的元素也提供 tabindex 特性）
-- [`aria-setsize`](https://www.w3.org/TR/wai-aria-1.1/#aria-setsize) — 此属性允许您指定屏幕阅读器元素是某个系列的一部分，以及该系列具有多少项。
+- [`aria-setsize`](https://www.w3.org/TR/wai-aria-1.1/#aria-setsize) — 此属性允许你指定屏幕阅读器元素是某个系列的一部分，以及该系列具有多少项。
 - [`aria-posinset`](https://www.w3.org/TR/wai-aria-1.1/#aria-posinset) — 这个属性允许你设置一个元素在一个系列中的位置，随着 `aria-setsize`，他告诉屏幕阅读器（用于设置文件目录树视图）足够的信息去告诉你现在在 item "1 of 3" 位置等。大部分情况下，浏览器是可以从 DOM 层次结构中推断出这些信息，但它肯定有助于提供更多线索。
 
 在我们的测试中，这个新结构确实有助于改善整体情况。这些选项卡现在被识别为选项卡（例如，屏幕阅读器说出「选项卡」），所选选项卡由“选择”表示，并使用选项卡名称读出，屏幕阅读器还会告诉你当前所在的选项卡编号。此外，由于`aria-hidden` 设置（只有非隐藏的选项卡有 `aria-hidden="false"` 设置），非隐藏内容是唯一可以向下导航的内容，这意味着所选内容更容易找到。

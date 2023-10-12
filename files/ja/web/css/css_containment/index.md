@@ -93,7 +93,7 @@ article {
 }
 ```
 
-名前に反して、スタイルの封じ込めは、 [Shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) で得られるようにスタイルを封じ込めるわけではありません。主な使用例は、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
+名前に反して、スタイルの封じ込めは、 [Shadow DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) で得られるようにスタイルを封じ込めるわけではありません。主な使用例は、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
 
 `contain: style` を使用すると、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティがそのサブツリーにのみ限定された新しいカウンターを作成することを保証します。
 

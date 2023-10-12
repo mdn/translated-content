@@ -202,10 +202,7 @@ Na versão descomprimida, o programa cai no bloco-verdade e grava o log _'foo' i
 
 ## Especificações
 
-| Specification                                                   | Status               | Comment            |
-| --------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-name', 'name')}}                     | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-function-instances-name', 'name')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

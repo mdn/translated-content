@@ -288,17 +288,17 @@ A melhor maneira de lidar com datas nos formulários de um modo entre navegadore
 
 Beside the attributes listed below, this element can have any of the [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
+- `mozactionhint` {{non-standard_inline}}
   - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`; these automatically get mapped to the appropriate string (and are case-insensitive).
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the **autofocus** attribute, which is a Boolean. It cannot be applied if the **type** attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control).
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) on disabled controls. Also, a disabled control's value isn't submitted with the form.
-- {{htmlattrdef("form")}}
+- `form`
   - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
-- {{htmlattrdef("formaction")}}
+- `formaction`
   - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the [`action`](/pt-BR/docs/Web/HTML/Element/form#action) attribute of the element's form owner.
-- {{htmlattrdef("formenctype")}}
+- `formenctype`
 
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
 
@@ -308,7 +308,7 @@ Beside the attributes listed below, this element can have any of the [global att
 
     If this attribute is specified, it overrides the [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
 
@@ -317,9 +317,9 @@ Beside the attributes listed below, this element can have any of the [global att
 
     If specified, this attribute overrides the [`method`](/pt-BR/docs/Web/HTML/Element/form#method) attribute of the element's form owner.
 
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
   - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) attribute of the element's form owner.
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
 
   - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/pt-BR/docs/Web/HTML/Element/form#target) attribute of the elements's form owner. The following keywords have special meanings:
 
@@ -328,7 +328,7 @@ Beside the attributes listed below, this element can have any of the [global att
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
-- {{htmlattrdef("inputmode")}}
+- `inputmode`
 
   - : A hint to the browser for which keyboard to display. This attribute applies when the value of the **type** attribute is text, password, email, or url. Possible values are:
 
@@ -344,28 +344,28 @@ Beside the attributes listed below, this element can have any of the [global att
     - `email`: Email input. Use \<input type="email"> if possible instead.
     - `url`: URL input. Use \<input type="url"> if possible instead.
 
-- {{htmlattrdef("list")}}
+- `list`
   - : Identifies a list of pre-defined options to suggest to the user. The value must be the **id** of a {{HTMLElement("datalist")}} element in the same document. The browser displays only options that are valid values for this input element.
-- {{htmlattrdef("max")}}
+- `max`
   - : The maximum value for this item, which must not be less than its minimum (**min** attribute) value.
-- {{htmlattrdef("min")}}
+- `min`
   - : The minimum value for this item, which must not be greater than its maximum (**max** attribute) value.
-- {{htmlattrdef("name")}}
+- `name`
   - : The name of the control, which is submitted with the form data.
-- {{htmlattrdef("readonly")}}
+- `readonly`
   - : This Boolean attribute indicates that the user cannot modify the value of the control.
-- {{htmlattrdef("required")}}
+- `required`
   - : This attribute specifies that the user must fill in a value before submitting a form. It cannot be used when the **type** attribute is `hidden`, `image`, or a button type (`submit`, `reset`, or `button`). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.
-- {{htmlattrdef("selectionDirection")}}
+- `selectionDirection`
   - : The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.
-- {{htmlattrdef("spellcheck")}}
+- `spellcheck`
   - : Setting the value of this attribute to `true` indicates that the element needs to have its spelling and grammar checked. The value `default` indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value. The value `false` indicates that the element should not be checked.
-- {{htmlattrdef("step")}}
+- `step`
   - : Works with the **min** and **max** attributes to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this attribute is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
-- {{htmlattrdef("value")}}
+- `value`
   - : The initial value of the control. This attribute is optional.
     Note that when reloading the page, Gecko and IE [will ignore the value specified in the HTML source](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186), if the value was changed before the reload.
-- {{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}
+- `x-moz-errormessage` {{non-standard_inline}}
   - : This Mozilla extension allows you to specify the error message to display when a field doesn't successfully validate.
 
 ## Examples

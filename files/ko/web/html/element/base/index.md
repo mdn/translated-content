@@ -59,9 +59,9 @@ slug: Web/HTML/Element/base
 
 > **경고:** 다음 특성 중 하나라도 지정한 경우, 상대 URL을 특성에 사용한 모든 요소보다 `<base>`가 앞에 위치해야 합니다.
 
-- {{htmlattrdef("href")}}
+- `href`
   - : 문서 내 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있습니다.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : `target` 속성을 명시하지 않은 {{htmlelement("a")}}, {{htmlelement("area")}}, 또는 {{htmlelement("form")}} 요소가 탐색을 유발했을 때, 그 결과를 보여줄 기본 {{glossary("browsing context", "브라우징 맥락")}}. **키워드**나 **저작자 정의 이름**으로 지정합니다.
 

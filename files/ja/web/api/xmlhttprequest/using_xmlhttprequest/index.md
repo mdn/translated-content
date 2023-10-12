@@ -448,9 +448,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label
-            >First name:
-            <input type="text" name="firstname" /> </label
+          <label>First name: <input type="text" name="firstname" /></label
           ><br />
           <label
             >Last name:

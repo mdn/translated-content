@@ -43,7 +43,7 @@ _这个元素继承了 {{domxref("HTMLElement")}} 的属性。_
 - {{domxref("HTMLFormElement.item()")}}
   - : Gets the item in the `elements` collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.
 - {{domxref("HTMLFormElement.namedItem()")}}
-  - : 从元素集合中获取 `name` 或者 `id` 与指定名称匹配的项，没有匹配项则返回 null。您也可以像调用数组那样用圆括号或方括号来指定名称，而不必显式地调用这个方法。
+  - : 从元素集合中获取 `name` 或者 `id` 与指定名称匹配的项，没有匹配项则返回 null。你也可以像调用数组那样用圆括号或方括号来指定名称，而不必显式地调用这个方法。
 - {{domxref("HTMLFormElement.submit()")}}
   - : Submits the form to the server.
 - {{domxref("HTMLFormElement.reset()")}}

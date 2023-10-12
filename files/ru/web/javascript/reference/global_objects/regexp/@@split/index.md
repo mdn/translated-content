@@ -73,10 +73,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## Specifications
 
-| Specification                                                                         | Status               | Comment             |
-| ------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

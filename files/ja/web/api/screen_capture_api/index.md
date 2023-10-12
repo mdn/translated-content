@@ -14,9 +14,8 @@ slug: Web/API/Screen_Capture_API
 画面から動画をキャプチャするには、 `getDisplayMedia()` を `Media` `navigator.mediaDevices` のインスタンス上で呼び出してください。
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(
-  displayMediaOptions,
-);
+captureStream =
+  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
 {{jsxref("Promise")}} が `getDisplayMedia()` から返され、これはキャプチャされたメディアをストリーミングする {{domxref("MediaStream")}} で解決します。

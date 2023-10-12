@@ -33,12 +33,7 @@ calcularCircunferencia(1); // 6.283185307179586
 
 ## Especificações
 
-| Specification                                      | Status               | Comment                                            |
-| -------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                | {{Spec2('ES1')}}     | Definiçao inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}  | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-math.pi', 'Math.PI')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

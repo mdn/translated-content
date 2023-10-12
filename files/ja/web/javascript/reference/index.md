@@ -2,7 +2,7 @@
 title: JavaScript リファレンス
 slug: Web/JavaScript/Reference
 l10n:
-  sourceCommit: b8e4922dacc3ce43e239f7984b61493568e93f59
+  sourceCommit: ab19b16083a8cafc5b060ac3de05a426b226e245
 ---
 
 {{JsSidebar}}
@@ -106,6 +106,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### 制御の抽象化
 
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncGeneratorFunction")}}
@@ -121,15 +123,16 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 ### 国際化
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.DurationFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}
 
 ## 文
 
@@ -172,6 +175,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 - {{jsxref("Statements/Empty", "空文", "", 1)}}
 - {{jsxref("Statements/block", "ブロック", "", 1)}}
+- {{jsxref("Statements/Expression_statement", "式文", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
@@ -270,7 +274,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### 条件 (三項) 演算子
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### 代入演算子
 
@@ -303,7 +307,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### カンマ演算子
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## 関数
 

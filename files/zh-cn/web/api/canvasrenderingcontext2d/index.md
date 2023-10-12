@@ -24,7 +24,7 @@ const canvas = document.getElementById("my-house");
 const ctx = canvas.getContext("2d");
 ```
 
-有了上下文，您就可以绘制任何喜欢的东西。此代码绘制了一个房子：
+有了上下文，你就可以绘制任何喜欢的东西。此代码绘制了一个房子：
 
 ```js
 // Set line width

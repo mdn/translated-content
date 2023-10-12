@@ -374,11 +374,7 @@ Note that in the `if` test, a reference to `noFunc` is used—there are no brack
 
 ## Especificações
 
-| Specification                                                            | Status             | Comment                                                                        |
-| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------------------------------ |
-| ECMAScript 1st Edition.                                                  | Standard           | Initial definition. Implemented in JavaScript 1.0                              |
-| {{SpecName('ES5.1', '#sec-13', 'Function Definition')}}                  | {{Spec2('ES5.1')}} |                                                                                |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ES6')}}   | New: Arrow functions, Generator functions, default parameters, rest parameters |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         掌握计算机基础知识。了解
         <a href="/zh-CN/docs/Learn/Server-side">服务器端编程</a>，特别是
@@ -316,7 +316,7 @@ app.use("/wiki", wiki);
 npm install morgan
 ```
 
-然后，您可以对 *Express 应用对象*调用 `use()` 将该中间件添加到栈：
+然后，你可以对 *Express 应用对象*调用 `use()` 将该中间件添加到栈：
 
 ```js
 const express = require('express');

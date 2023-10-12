@@ -101,9 +101,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 ## Specifications
 
-| Specification                                                                 | Status                      | Comment             |
-| ----------------------------------------------------------------------------- | --------------------------- | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

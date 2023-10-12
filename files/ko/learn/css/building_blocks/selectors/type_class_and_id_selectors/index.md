@@ -56,7 +56,7 @@ l10n:
 
 ### 범용 선택자를 사용하여 선택자를 더 쉽게 읽을 수 있도록 만들기
 
-범용 선택자의 한 가지 용도는 선택자를 더 읽기 쉽게 만들고 수행하는 작업의 측면에서 더 명확하게 만드는 것입니다. 예를 들어, 직계 자식을 포함하여 부모의 첫 번째 자식인 `<article>` 요소의 자손 요소를 선택하고 굵게 표시하려면, {{cssxref(":first-child")}} 의사 클래스를 사용할 수 있습니다. 이것에 대해서는 `<article>` 요소 선택자와 함께 하위 선택자로 [의사 클래스와 의사 요소](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)에 대한 강의에서 자세히 알아볼 것입니다.
+범용 선택자의 한 가지 용도는 선택자를 더 읽기 쉽게 만들고 수행하는 작업의 측면에서 더 명확하게 만드는 것입니다. 예를 들어, 직계 자식을 포함하여 부모의 첫 번째 자식인 `<article>` 요소의 자손 요소를 선택하고 굵게 표시하려면, {{cssxref(":first-child")}} 의사 클래스를 사용할 수 있습니다. 이것에 대해서는 `<article>` 요소 선택자와 함께 하위 선택자로 [의사 클래스와 의사 요소](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)에 대한 강의에서 자세히 알아볼 것입니다.
 
 ```css
 article :first-child {

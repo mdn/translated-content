@@ -102,7 +102,7 @@ Linux 是一个高度分化的平台，下面给出了几个常见的例子。
 
 ### 具有设备特征的 User Agent 值
 
-尽管 Mozilla **强烈反对**，然而一些手机制造商仍然会在其设备的 User Agent 值中包含标明设备 ID 的字段。在这种情况下，Firefox OS 的 User Agent 会与上表中所示的具有设备特征 (Device-specific) 的字符串保持一致，其中**_nnnn;_**代表设备制造商的设备代码（参见[引导](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)）。其中一些是以下几个形式： "**NexusOne;**"，"**ZTEOpen;**"，"**Open C;**"（另请注意，同样不鼓励在其中加入空格）。我们提供这些信息以辅助您设定 User Agent 判断逻辑，但 Mozilla 不鼓励从 User Agent 值中检测设备 ID。
+尽管 Mozilla **强烈反对**，然而一些手机制造商仍然会在其设备的 User Agent 值中包含标明设备 ID 的字段。在这种情况下，Firefox OS 的 User Agent 会与上表中所示的具有设备特征 (Device-specific) 的字符串保持一致，其中**_nnnn;_**代表设备制造商的设备代码（参见[引导](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)）。其中一些是以下几个形式： "**NexusOne;**"，"**ZTEOpen;**"，"**Open C;**"（另请注意，同样不鼓励在其中加入空格）。我们提供这些信息以辅助你设定 User Agent 判断逻辑，但 Mozilla 不鼓励从 User Agent 值中检测设备 ID。
 
 这里有一个可以检测所有移动设备的 JavaScript 正则表达式，包含那些 UA 字符串中包含设备 id 的设备：
 

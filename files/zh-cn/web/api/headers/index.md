@@ -5,7 +5,9 @@ slug: Web/API/Headers
 
 {{ APIRef("Fetch") }}
 
-[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 **Headers** 接口允许您对 HTTP 请求和响应头执行各种操作。这些操作包括检索，设置，添加和删除。一个 Headers 对象具有关联的头列表，它最初为空，由零个或多个键值对组成。你可以使用 {{domxref("Headers.append","append()")}} 方法添加 之类的方法添加到此 (参见 [示例](#示例))。在该接口的所有方法中，标题名称由不区分大小写的字节序列匹配。
+[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 **Headers** 接口允许你对 HTTP 请求和响应头执行各种操作。这些操作包括检索，设置，添加和删除。
+
+一个 Headers 对象具有关联的标头列表，它最初为空，由零个或多个键值对组成。你可以使用类似于 {{domxref("Headers.append","append()")}} 这样的方法添加（参见[示例](#示例)）到这个对象中。在该接口的所有方法中，标头名称由不区分大小写的字节序列匹配。
 
 出于安全考虑，某些头只能由用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。
 
@@ -15,7 +17,7 @@ slug: Web/API/Headers
 
 一个实现了`Headers` 的对象可以直接用于 {{jsxref("Statements/for...of", "for...of")}} 结构中，而不是 {{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` 等价于 `for (var p of myHeaders.entries())`.
 
-> **备注：** 您可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)参考找到更多关于可用 headers 的信息。
+> **备注：** 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)参考找到更多关于可用 headers 的信息。
 
 ## 构造函数
 
@@ -43,7 +45,7 @@ slug: Web/API/Headers
 
 > **备注：** 值得注意的是，在 header 已存在或者有多个值的状态下{{domxref("Headers.set()")}} 和 {{domxref("Headers.append()")}}的使用有如下区别，{{domxref("Headers.set()")}} 将会用新的值覆盖已存在的值，但是{{domxref("Headers.append()")}}会将新的值添加到已存在的值的队列末尾。请参相关词条内的示例代码。
 
-> **备注：** 如果您尝试传入名称不是[有效的 HTTP 头名称](https://fetch.spec.whatwg.org/#concept-header-name)的引用，则所有 Headers 方法都将引发 `TypeError` 。如果头部有一个不变的{{Glossary("Guard")}}，则变异操作将会抛出一个 `TypeError` 。在其他任何失败的情况下，他们默默地失败。
+> **备注：** 如果你尝试传入名称不是[有效的 HTTP 标头名称](https://fetch.spec.whatwg.org/#concept-header-name)的引用，则所有 Headers 方法都将引发 `TypeError`。如果标头具有不可变的 {{Glossary("Guard")}}，则突变操作会引发 `TypeError`。在任何其他失败情况下，它们都会无声地失败。
 
 ### Obsolete methods
 

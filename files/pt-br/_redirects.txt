@@ -481,7 +481,7 @@
 /pt-BR/docs/SVG/Element/svg	/pt-BR/docs/Web/SVG/Element/svg
 /pt-BR/docs/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Security/CSP/Utilizando_Politicas_De_Seguranca_De_Conteudo	/pt-BR/docs/Web/HTTP/CSP
-/pt-BR/docs/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/pt-BR/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
+/pt-BR/docs/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/pt-BR/docs/Web/API/XSLTProcessor
 /pt-BR/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /pt-BR/docs/Tools/3D_View	https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html
 /pt-BR/docs/Tools/Browser_Console	https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html
@@ -704,7 +704,8 @@
 /pt-BR/docs/Web/CSS/CSS_Reference	/pt-BR/docs/Web/CSS/Reference
 /pt-BR/docs/Web/CSS/CSS_Reference/mix-blend-mode	/pt-BR/docs/Web/CSS/mix-blend-mode
 /pt-BR/docs/Web/CSS/CSS_Tipos	/pt-BR/docs/Web/CSS/CSS_Types
-/pt-BR/docs/Web/CSS/General_sibling_selectors	/pt-BR/docs/Web/CSS/General_sibling_combinator
+/pt-BR/docs/Web/CSS/General_sibling_combinator	/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator
+/pt-BR/docs/Web/CSS/General_sibling_selectors	/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator
 /pt-BR/docs/Web/CSS/Getting_Started/JavaScript	/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /pt-BR/docs/Web/CSS/Getting_Started/Lists	/pt-BR/docs/Learn/CSS/Styling_text/Styling_lists
 /pt-BR/docs/Web/CSS/Media_Queries	/pt-BR/docs/Web/CSS/CSS_media_queries
@@ -911,6 +912,7 @@
 /pt-BR/docs/Web/Web_Components	/pt-BR/docs/Web/API/Web_components
 /pt-BR/docs/Web/Web_Components/Usando_custom_elements	/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 /pt-BR/docs/Web/Web_Components/Using_custom_elements	/pt-BR/docs/Web/API/Web_components/Using_custom_elements
+/pt-BR/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example	/pt-BR/docs/Web/API/XSLTProcessor
 /pt-BR/docs/WebAPI/Battery_Status	/pt-BR/docs/Web/API/Battery_Status_API
 /pt-BR/docs/WebAPI/Network_Information	/pt-BR/docs/Web/API/Network_Information_API
 /pt-BR/docs/WebAssembly/Entendendo_o_formato_textual_do_WebAssembly	/pt-BR/docs/WebAssembly/Understanding_the_text_format

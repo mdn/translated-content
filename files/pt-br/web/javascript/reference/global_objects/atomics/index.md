@@ -47,9 +47,7 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 
 ## Especificações
 
-| Especificações                                             | Status                     | Comentário         |
-| ---------------------------------------------------------- | -------------------------- | ------------------ |
-| {{SpecName('Shared Memory', '#AtomicsObject', 'Atomics')}} | {{Spec2('Shared Memory')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

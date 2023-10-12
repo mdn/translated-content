@@ -5,7 +5,7 @@ slug: Web/CSS/Specificity
 
 {{CSSRef}}
 
-浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/CSS/CSS_Reference#Selectors)组成的匹配规则。
+浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/docs/Web/CSS/Reference#选择器)组成的匹配规则。
 
 ## 优先级是如何计算的？
 
@@ -15,21 +15,21 @@ slug: Web/CSS/Specificity
 
 当同一个元素有多个声明的时候，优先级才会有意义。因为每一个直接作用于元素的 CSS 规则总是会接管/覆盖（take over）该元素从祖先元素继承而来的规则。
 
-> **备注：** 文档树中元素的接近度（[Proximity of elements](/zh-CN/docs/Web/CSS/Specificity#%E6%97%A0%E8%A7%86DOM%E6%A0%91%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB)）对优先级没有影响。
+> **备注：** 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
 
 ### 选择器类型
 
 下面列表中，选择器类型的优先级是递增的：
 
 1. [类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
-2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) (例如，`.example`)，属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
+2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors)（例如，`.example`），属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
 3. [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
 
-**通配选择符**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择符**（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/zh-CN/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
+**通配选择器**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择器**（combinator）（{{CSSxRef("Next-sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}、{{CSSxRef("Subsequent-sibling_combinator", "~")}}、[" "](/zh-CN/docs/Web/CSS/Descendant_combinator)、{{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
-您可以访问 ["Specificity" in "Cascade and inheritance"](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2) 或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
+你可以访问[层叠与继承中的“优先级”](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
-给元素添加的**内联样式** (例如，`style="font-weight:bold"`) 总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
+给元素添加的**内联样式**（例如，`style="font-weight:bold"`）总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
 
 ### `!important` 例外规则
 
@@ -44,7 +44,7 @@ slug: Web/CSS/Specificity
 - **与其使用** **`!important`**，你可以：
 
 1. 更好地利用 CSS 级联属性
-2. 使用更具体的规则。在您选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
+2. 使用更具体的规则。在你选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
 
    ```html
    <div id="test">
@@ -66,7 +66,7 @@ slug: Web/CSS/Specificity
 
    无论 css 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
 
-3. 对于（2）的一种特殊情况，当您无其他要指定的内容时，请复制简单的选择器以增加特异性。
+3. 对于（2）的一种特殊情况，当你无其他要指定的内容时，请复制简单的选择器以增加特异性。
 
    ```css
    #myId#myId span {
@@ -83,7 +83,7 @@ slug: Web/CSS/Specificity
 
 你的网站上有一个设定了全站样式的 CSS 文件，同时你（或是你同事）写了一些很差的内联样式。
 
-全局的 CSS 文件会在全局范围内设置网站的外观，而直接在各个元素上定义的内联样式可能会覆盖您的全局 CSS 文件。内联样式和 !important 都被认为是非常不好的做法，但是有时你可以在 CSS 文件里用 !important 去覆盖内联样式。
+全局的 CSS 文件会在全局范围内设置网站的外观，而直接在各个元素上定义的内联样式可能会覆盖你的全局 CSS 文件。内联样式和 !important 都被认为是非常不好的做法，但是有时你可以在 CSS 文件里用 !important 去覆盖内联样式。
 
 在这种情况下，你就可以在你全局的 CSS 文件中写一些 `!important` 的样式来覆盖掉那些直接写在元素上的行内样式。
 

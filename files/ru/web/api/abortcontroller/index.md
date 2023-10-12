@@ -17,7 +17,7 @@ slug: Web/API/AbortController
 ## Свойства
 
 - {{domxref("AbortController.signal")}} {{readonlyInline}}
-  - : Возвращает экземпляр {{domxref("AbortSignal")}}, который может быть использован для коммуникаций/останова DOM запросов.
+  - : Возвращает экземпляр {{domxref("AbortSignal")}}, который может быть использован для коммуникаций/остановки DOM запросов.
 
 ## Методы
 

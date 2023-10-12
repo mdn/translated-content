@@ -31,7 +31,7 @@ _从它的父类{{domxref("ExtendableEvent")}}继承方法。_
 
 该代码片段来自 [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (请参阅 [prefetch running live](https://googlechrome.github.io/samples/service-worker/prefetch/))。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil(any value)")}}，并延迟将{{domxref("ServiceWorkerRegistration.installing")}} worker 视为已安装的，直到传递的 promise 被成功地 resolve。当所有资源已经获取并缓存，或者有任何异常发生时，promise 才会 resolve。
 
-该代码片段也展示了服务工作线程使用的缓存版本控制的最佳实践。虽然此示例只有一个缓存，但您可以将此方法用于多个缓存。代码将缓存的速记标识映射到特定的版本化缓存名称。
+该代码片段也展示了服务工作线程使用的缓存版本控制的最佳实践。虽然此示例只有一个缓存，但你可以将此方法用于多个缓存。代码将缓存的速记标识映射到特定的版本化缓存名称。
 
 > **备注：** service worker 的注册日志记录在 Chrome 浏览器中可以通过访问 chrome://serviceworker-internals 查看。
 

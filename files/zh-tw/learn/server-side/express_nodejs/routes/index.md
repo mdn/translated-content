@@ -30,7 +30,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 
 ## 概覽
 
-在[上一篇教程文章](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)中，我們定義了 Mongoose 模型，以與數據庫互動，並使用（獨立）腳本創建一些初始庫記錄。現在我們可以編寫代碼，向用戶展示這些信息。我們需要做的第一件事，是確定我們希望能夠在頁面中顯示哪些信息，然後定義適當的 URL，以返回這些資源。然後我們將需要創建路由（URL 處理程序）和視圖（模板）來顯示這些頁面。
+在[上一篇教程文章](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)中，我們定義了 Mongoose 模型，以與數據庫互動，並使用（獨立）腳本創建一些初始庫記錄。現在我們可以編寫代碼，向用戶展示這些信息。我們需要做的第一件事，是確定我們希望能夠在頁面中顯示哪些信息，然後定義適當的 URL，以返回這些資源。然後我們將需要創建路由（URL 處理程序）和視圖（模板）來顯示這些頁面。
 
 下圖是作為處理 HTTP 請求/響應時，需要實現的主要數據流和事項的提醒。除了視圖和路線之外，圖表還顯示「控制器」 — 實際處理請求的函數，那些與路由請求分開的代碼。
 
@@ -134,7 +134,7 @@ router.post("/about", function (req, res) {
 - \* :端點在放置\*字符的地方，可以代換為任意字符串。例如。`'ab\*cd'`的路由路徑，將匹配端點`abcd`, `abXcd`, `abSOMErandomTEXTcd`等。
 - () :將一組字符進行匹配，以執行上面三個操作。例如。`'/ab(cd)?e'`，表示以？號對（cd）進行匹配-它會匹配`abe`和`abcde`。（譯註：即（cd）必須為 0 個或 1 個。若為 0，匹配`abe`。若為 1，匹配`abcde`）
 
-路由路徑也可以是[JavaScript 正則表達式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。例如，下面的路由路徑將與鯰魚`catfish` 和角鯊魚`dogfish`相匹配，但不包括鯰魚`catflap`、鯰魚頭`catfishhead`等。請注意，正則表達式的路徑使用正則表達式語法（它不像以前那樣，是帶引號的字符串）。
+路由路徑也可以是[JavaScript 正則表達式](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)。例如，下面的路由路徑將與鯰魚`catfish` 和角鯊魚`dogfish`相匹配，但不包括鯰魚`catflap`、鯰魚頭`catfishhead`等。請注意，正則表達式的路徑使用正則表達式語法（它不像以前那樣，是帶引號的字符串）。
 
 ```js
 app.get(/.*fish$/, function (req, res) {
