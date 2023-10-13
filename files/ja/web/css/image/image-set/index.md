@@ -89,7 +89,7 @@ image-set(
 
 ブラウザーは支援技術に対して、背景画像についての特別な情報を何も提供しません。これは主に読み上げソフトにとって重要であり、読み上げソフトは背景画像が存在することをアナウンスせず、したがってユーザーには何も伝えられません。もし画像がページ全体の目的を理解するのに重要な情報を含んでいる場合は、文書中に意味的に記述するようにしてください。
 
-- [MDN WCAG を理解する, ガイドライン 1.1 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN WCAG を理解する, ガイドライン 1.1 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 仕様書
