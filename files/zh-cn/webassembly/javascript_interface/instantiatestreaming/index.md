@@ -7,7 +7,7 @@ slug: WebAssembly/JavaScript_interface/instantiateStreaming
 
 **`WebAssembly.instantiateStreaming()`** 函数直接从流式底层源编译并实例化 WebAssembly 模块。这是加载 Wasm 代码的最有效、最优化的方式。
 
-> **备注：** 具有严格的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)的网页可能会阻止 WebAssembly 模块的编译和执行。请参阅 [script-src CSP](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 以了解更多允许 WebAssembly 编译和执行的信息。
+> **备注：** 具有严格的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)的网页可能会阻止 WebAssembly 模块的编译和执行。请参阅 [script-src CSP](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 以了解更多有关允许 WebAssembly 编译和执行的信息。
 
 ## 语法
 
@@ -37,7 +37,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 
 ## 示例
 
-下面的示例（在 GitHub 上查看 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) 示例，并且也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从基础源传输一个 Wasm 模块，然后进行编译和实例化，Promise 会兑现 `ResultObject`。因为 `instantiateStreaming()` 函数接受兑现后返回 [`Response`](/zh-CN/docs/Web/API/Response) 对象的 Promise，你可以直接传递一个 [`fetch()`](/zh-CN/docs/Web/API/fetch) 调用，它会在兑现后将 response 传递给该函数。
+下面的示例（在 GitHub 上查看 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) 示例，也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从基础源传输一个 Wasm 模块，然后进行编译和实例化，Promise 会兑现 `ResultObject`。因为 `instantiateStreaming()` 函数接受兑现后返回 [`Response`](/zh-CN/docs/Web/API/Response) 对象的 Promise，你可以直接传递一个 [`fetch()`](/zh-CN/docs/Web/API/fetch) 调用，它会在兑现后将 response 传递给该函数。
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
