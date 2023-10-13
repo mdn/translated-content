@@ -562,7 +562,7 @@ text-shadow: 4px 4px 5px red;
 4. Цвет тени, принимает любой [цвет CSS](/en-US/docs/Learn/CSS/Building_blocks/
    Values_and_units#colors), цвет по умолчанию — [`currentcolor`](/en-US/docs/Web/
    CSS/color_value#currentcolor_keyword), то есть цвет из свойства
-   [`color`](/en-US/docs/Web/CSS/color).
+   [`color`](/ru/docs/Web/CSS/color).
 
 #### Несколько теней
 
