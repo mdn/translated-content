@@ -20,7 +20,7 @@ l10n:
       <th scope="row">Необходимые знания:</th>
       <td>
         Базовая компьютерная грамотность, основы HTML(изучите
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ru/docs/Learn/HTML/Introduction_to_HTML"
           >Введение в HTML</a
         >), основы CSS (изучите
         <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>).
