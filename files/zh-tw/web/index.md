@@ -20,14 +20,14 @@ slug: Web
 
 - [JavaScript](/zh-TW/docs/Web/JavaScript)
   - : JavaScript 是在瀏覽器中執行的程式語言，你可以用它來增進網站或網路程式的互動性、及其他動態功能。
-- [Web APIs](/zh-TW/docs/Web/Reference/API)
-  - : 提供了能擴展網路腳本化能力的每個 API 的參考資訊，包含了 [DOM](/zh-TW/docs/DOM) 及所有相關的 API 及介面，能用於製作網站內容與應用程式。[Web API 介面參考](/zh-TW/docs/Web/API) - 以字母順序排序的所有介面資訊
-    - [WebAPI](/zh-TW/docs/WebAPI) 列出裝置 API 及其他益於開發應用程式時的 API
+- [Web APIs](/zh-TW/docs/Web/API)
+  - : 提供了能擴展網路腳本化能力的每個 API 的參考資訊，包含了 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) 及所有相關的 API 及介面，能用於製作網站內容與應用程式。[Web API 介面參考](/zh-TW/docs/Web/API)——以字母順序排序的所有介面資訊
+    - [WebAPI](/zh-TW/docs/Web/API) 列出裝置 API 及其他益於開發應用程式時的 API
     - [事件參考](/zh-TW/docs/Web/Events) 列出可以用來追蹤和回應在網頁或網路程式中所發生的有趣事情的所有事件。
 
 ### 圖像
 
-- [SVG](/zh-TW/docs/SVG)
+- [SVG](/zh-TW/docs/Web/SVG)
   - : 可縮放向量圖形（Scalable Vector Graphics）使你能夠使用一組向量（線條）與形狀來描述圖片，在顯示時可提供無關大小的零失真的平滑縮放。
 - [WebGL](/zh-TW/docs/Web/WebGL)
   - : WebGL 導入一系列近似 OpenGL ES 2.0 標準的 API，可用於 HTML {{HTMLElement("canvas")}} 元件中，將 3D 圖像帶進網路。
@@ -38,7 +38,7 @@ slug: Web
   - : 跟多媒體相關的 API 及文件連結清單。
 - [網路媒體科技概觀](/zh-TW/docs/Web/Media/Overview)
   - : 網路科技及提供影音撥放、操作與錄製的 APIs 概觀。如果你不知道該使用哪一個 API，可以從這裡開始。
-- [影像擷取及串流 API](/zh-TW/docs/Web/API/Media_Streams_API)
+- [影像擷取及串流 API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API)
   - : 提供本地或是網路上媒體串流，錄製及操作的 API 參考資料。包含使用本地相機及麥克風擷取影片，音檔和靜態影像。
 
 ### 其他

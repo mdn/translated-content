@@ -19,4 +19,4 @@ slug: Glossary/Regular_expression
 
 ### 技術參考
 
-- [在 JavaScript 編寫正規表示式](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [在 JavaScript 編寫正規表示式](/zh-TW/docs/Web/JavaScript/Guide/Regular_expressions)

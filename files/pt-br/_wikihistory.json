@@ -4149,6 +4149,10 @@
     "modified": "2019-03-23T22:27:06.677Z",
     "contributors": ["trestini"]
   },
+  "Web/API/XSLTProcessor": {
+    "modified": "2019-03-23T23:03:40.500Z",
+    "contributors": ["EduardoRedressa"]
+  },
   "Web/API/atob": {
     "modified": "2020-10-15T21:46:04.009Z",
     "contributors": ["mateusvelleda", "joaoricardo_rm"]
@@ -4724,10 +4728,6 @@
     "modified": "2020-10-15T22:27:46.661Z",
     "contributors": ["maxsixth"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2019-03-23T22:12:07.654Z",
-    "contributors": ["ExE-Boss", "dineiar", "interaminense"]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2019-03-23T22:30:10.383Z",
     "contributors": ["fcard"]
@@ -4788,6 +4788,10 @@
       "teoli",
       "fvargaspf@gmail.com"
     ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2019-03-23T22:12:07.654Z",
+    "contributors": ["ExE-Boss", "dineiar", "interaminense"]
   },
   "Web/CSS/Syntax": {
     "modified": "2019-03-18T20:58:06.000Z",
@@ -10327,10 +10331,6 @@
       "teoli",
       "MatCAlv"
     ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example": {
-    "modified": "2019-03-23T23:03:40.500Z",
-    "contributors": ["EduardoRedressa"]
   },
   "WebAssembly": {
     "modified": "2019-03-23T22:13:27.780Z",

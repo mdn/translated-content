@@ -3,6 +3,8 @@ title: 什么是域名？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文中我们讨论了域名是什么，域名是如何被构建的，以及如何获得一个域名。
 
 <table class="learn-box standard-table">
@@ -33,7 +35,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 
 ## 自主学习
 
-_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)]。_
+_还没有可用的资料。[请考虑贡献一个](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## 深入探索
 
@@ -147,6 +149,6 @@ DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都�
 
 好了，我们讲了许多有关的步骤和结构。接下来。
 
-- 如果你想亲自实践，现在最好开始深入设计和探索 [对一个网页的剖析](/zh-CN/docs/Learn/Common_questions/Common_web_layouts).
-- 关于建站需要的花销这类问题的讨论也是有价值的。请参考 [建站需要花费多少钱](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost).
-- 或者在维基百科上阅读更多关于 [域名](http://en.wikipedia.org/wiki/Domain_name) .
+- 如果你想亲自实践，现在最好开始深入设计和探索 [对一个网页的剖析](/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)。
+- 关于建站需要的花销这类问题的讨论也是有价值的。请参考 [建站需要花费多少钱](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)。
+- 或者在维基百科上阅读更多关于 [域名](http://en.wikipedia.org/wiki/Domain_name)。

@@ -10,7 +10,7 @@ CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上�
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"

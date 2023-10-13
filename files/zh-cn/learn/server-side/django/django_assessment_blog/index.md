@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>在尝试此评估之前，你应该已经完成了本模块中的所有文章。</td>
     </tr>
     <tr>

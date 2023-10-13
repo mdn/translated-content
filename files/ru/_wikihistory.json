@@ -8255,16 +8255,6 @@
     "modified": "2019-03-23T22:37:58.837Z",
     "contributors": ["andreww2012"]
   },
-  "Web/CSS/Adjacent_sibling_combinator": {
-    "modified": "2019-03-23T22:45:33.275Z",
-    "contributors": [
-      "ExE-Boss",
-      "Demitrius",
-      "jswisher",
-      "BychekRU",
-      "Limitrof"
-    ]
-  },
   "Web/CSS/At-rule": {
     "modified": "2019-11-07T14:56:39.596Z",
     "contributors": ["sashakrauzer", "JokerHD"]
@@ -8619,17 +8609,6 @@
     "modified": "2019-03-23T22:45:17.695Z",
     "contributors": ["ExE-Boss", "irakliykech", "BychekRU"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2019-04-05T06:48:43.727Z",
-    "contributors": [
-      "babtshe",
-      "ExE-Boss",
-      "irakliykech",
-      "mea612",
-      "gwer",
-      "BychekRU"
-    ]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2019-03-23T23:13:48.018Z",
     "contributors": ["bezik", "BychekRU", "bilazikboy"]
@@ -8657,6 +8636,16 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T23:09:42.012Z",
     "contributors": ["idoru", "BychekRU", "ldone"]
+  },
+  "Web/CSS/Next-sibling_combinator": {
+    "modified": "2019-03-23T22:45:33.275Z",
+    "contributors": [
+      "ExE-Boss",
+      "Demitrius",
+      "jswisher",
+      "BychekRU",
+      "Limitrof"
+    ]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2019-03-23T22:51:08.664Z",
@@ -8710,6 +8699,17 @@
       "hellpirat",
       "Hydrock",
       "102"
+    ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2019-04-05T06:48:43.727Z",
+    "contributors": [
+      "babtshe",
+      "ExE-Boss",
+      "irakliykech",
+      "mea612",
+      "gwer",
+      "BychekRU"
     ]
   },
   "Web/CSS/Syntax": {

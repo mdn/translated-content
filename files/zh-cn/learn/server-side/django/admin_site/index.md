@@ -19,7 +19,7 @@ slug: Learn/Server-side/Django/Admin_site
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         <p>
           了解关于管理站点的优点与缺点，并且可以使用它为我们模型创建一些记录。

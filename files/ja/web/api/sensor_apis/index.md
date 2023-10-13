@@ -67,7 +67,9 @@ try {
   // 生成時のエラーを処理する
   if (error.name === "SecurityError") {
     // 前述の Permissions Policy に関するメモを参照
-    console.log("センサーの生成が Permissions Policy によりブロックされました。");
+    console.log(
+      "センサーの生成が Permissions Policy によりブロックされました。",
+    );
   } else if (error.name === "ReferenceError") {
     console.log("このユーザーエージェントはセンサーに対応していません。");
   } else {
@@ -151,7 +153,7 @@ magSensor.start();
 - {{domxref('LinearAccelerationSensor')}} {{securecontext_inline}}
   - : デバイスの 3 軸それぞれにかかっている加速度を、重力の影響を除いて提供します。
 - {{domxref('Magnetometer')}} {{securecontext_inline}}
-  - : デバイスのプライマリ磁気センサーで検出される磁場の情報を提供します。
+  - : デバイスのプライマリー磁気センサーで検出される磁場の情報を提供します。
 - {{domxref('OrientationSensor')}} {{securecontext_inline}}
   - : {{domxref('AbsoluteOrientationSensor')}} のベースクラスです。このインターフェイスを直接用いることはできませんが、継承するインターフェイスがアクセスするプロパティとメソッドを提供します。
 - {{domxref('RelativeOrientationSensor')}} {{securecontext_inline}}

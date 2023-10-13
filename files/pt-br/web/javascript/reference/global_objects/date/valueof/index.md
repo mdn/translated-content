@@ -38,9 +38,7 @@ var myVar = x.valueOf(); // atribui -424713600000 to myVar
 
 ## Especificações
 
-| Especificação                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

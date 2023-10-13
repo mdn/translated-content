@@ -35,11 +35,7 @@ function adder(base /*, n2, ... */) {
 
 ## Спецификации
 
-| Specification                                                                    | Status             | Comment                                           |
-| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                          | Standard           | Initial definition. Implemented in JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                           | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Поддержка браузерами
 

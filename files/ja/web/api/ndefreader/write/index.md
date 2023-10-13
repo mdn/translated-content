@@ -1,28 +1,30 @@
 ---
-title: NDEFReader.write()
+title: "NDEFReader: write() メソッド"
+short-title: write()
 slug: Web/API/NDEFReader/write
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 `write()` は {{DOMxRef("NDEFReader")}} インターフェイスのプロパティで、タグに NDEF メッセージを書き込むことを試みます。 {{jsxref("Promise")}} を返し、これはタグにメッセージが書き込まれると解決し、ハードウェアや権限のエラーが発生すると拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
 ## 構文
 
-```js
-NDEFReader.write(message);
-NDEFReader.write(message, options);
+```js-nolint
+write(message)
+write(message, options)
 ```
 
 ### 引数
 
 - `message`
 
-  - : 書き込まれるメッセージで、 {{DOMxRef("DOMString")}},
-    {{DOMxRef("BufferSource")}}, レコードの配列の何れかです。レコードには以下のメンバーがあります。
+  - : 書き込まれるメッセージで、文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、レコードの配列のいずれかです。レコードには以下のメンバーがあります。
 
     - `data` {{optional_inline}}
-      - : 転送されるデータが入ります。文字列、{{domxref("BufferSource")}}、ネストしたレコードの配列の何れかです。
+      - : 通信されるデータで、文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、ネストされたレコードの配列のいずれかです。
     - `encoding` {{optional_inline}}
       - : 文字列で、このレコードのエンコーディングを指定します。
     - `id` {{optional_inline}}
@@ -54,8 +56,10 @@ NDEFReader.write(message, options);
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `overwrite` — 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
-    - `signal` — オプションの {{DOMxRef("AbortSignal")}} で、現在の書き込み操作をキャンセルすることができます。
+    - `overwrite`
+      - : 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
+    - `signal` {{optional_inline}}
+      - : オプションの {{DOMxRef("AbortSignal")}} で、現在の書き込み操作をキャンセルすることができます。
 
 ### 返値
 
@@ -80,7 +84,7 @@ NDEFReader.write(message, options);
 
 ### テキスト文字列の書き込み
 
-以下の例では、 {{DOMxRef("DOMString")}} を NFC タグへ書き込み、発生するエラーを処理する方法を示します。
+以下の例では、文字列を NFC タグへ書き込み、発生するエラーを処理する方法を示します。
 
 ```js
 const ndef = new NDEFReader();

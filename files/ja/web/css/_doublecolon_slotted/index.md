@@ -5,9 +5,9 @@ slug: Web/CSS/::slotted
 
 {{ CSSRef }}
 
-**`::slotted()`** は [CSS](/ja/docs/Web/CSS) の [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください)。
+**`::slotted()`** は [CSS](/ja/docs/Web/CSS) の [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)をご覧ください)。
 
-これは [shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
+これは [shadow DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
 
 ```css
 /* スロット内に配置された任意の要素を選択 */
@@ -96,4 +96,4 @@ customElements.define(
 
 ## 関連情報
 
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

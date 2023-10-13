@@ -1,8 +1,9 @@
 ---
-title: Navigator.mediaSession
+title: "Navigator: mediaSession プロパティ"
+short-title: mediaSession
 slug: Web/API/Navigator/mediaSession
 l10n:
-  sourceCommit: f3976b4130f066a6114aeb9617924cdcb0f994ce
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef}}

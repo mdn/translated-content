@@ -1,6 +1,8 @@
 ---
 title: JavaScript에 발 담그기
 slug: Learn/JavaScript/First_steps/A_first_splash
+l10n:
+  sourceCommit: eab7a9c4c0d4251829e19500fa94865f9b5f56c7
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
@@ -26,9 +28,7 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 시작하기 전에, 우리의 기대 목표를 먼저 확실하게 짚고 넘어가겠습니다. 이 글을 끝낸 뒤에도, 함께 따라서 작성한 코드를 이해하지 못할 수 있습니다. 그래도 괜찮습니다. 이 시간은 JavaScript의 기능들이 함께 어떻게 동작하는지, JavaScript 코드를 작성하는 게 어떤 느낌인지 알려드리기 위한 시간일 뿐입니다. 여기에서 사용한 기능들은 이후의 다른 여러 글에서 자세하게 짚어볼 테니, 지금 당장은 굳이 모두 이해하려고 애쓰지 마세요.
 
-> **참고:**
->
-> 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
+> **참고:** 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
 
 ## 프로그래머처럼 사고하기
 
@@ -81,13 +81,13 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 ### 초기 설정
 
-자습서를 시작하기 전에 [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) 파일의 로컬 복사본을 만들어 주세요([실행 결과 미리보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). 저장한 파일을 텍스트 에디터와 웹 브라우저에서 각자 열어주세요. 지금 당장은 헤딩과 게임 플레이 방법을 알려주는 문단, 숫자를 입력할 양식을 볼 수는 있지만 아무런 동작도 하지 않을 겁니다.
+자습서를 시작하기 전에 [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) 파일의 로컬 복사본을 만들어 주세요([실행 결과 미리보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). 저장한 파일을 텍스트 에디터와 웹 브라우저에서 각자 열어주세요. 현재로서는 간단한 제목, 안내 문단, 추측을 입력할 수 있는 양식이 표시되지만, 이 양식은 현재 아무 기능도 수행하지 않습니다.
 
 우리가 코드를 추가할 부분은 HTML의 아래쪽, {{htmlelement("script")}} 요소 안입니다.
 
 ```html
 <script>
-  // Your JavaScript goes here
+  // 자바스크립트 코드는 여기에 추가하면 됩니다.
 </script>
 ```
 
@@ -120,7 +120,7 @@ let resetButton;
 코드를 자세히 살펴보겠습니다.
 
 - 첫 번째 변수 `randomNumber`에는 수학 알고리즘을 통해 1부터 100 사이의 무작위 수를 할당합니다.
-- 그다음 세 개의 상수는 HTML의 결과 문단을 가리키는 참조를 저장해서, 나중에 문단에 텍스트를 삽입할 때 사용합니다. (세 문단이 모두 한 `<div>` 요소 안에 배치된 것을 확인해보세요. 이 `<div>`는 게임을 초기화할 때 세 문단을 모두 선택하기 위해 사용합니다)
+- 그다음 세 개의 상수는 HTML의 결과 문단을 가리키는 참조를 저장해서, 나중에 문단에 텍스트를 삽입할 때 사용합니다. 세 문단이 모두 한 `<div>` 요소 안에 배치된 것을 확인해보세요. 이 `<div>`는 게임을 초기화할 때 세 문단을 모두 선택하기 위해 사용합니다.
 
   ```html
   <div class="resultParas">
@@ -140,9 +140,7 @@ let resetButton;
 
 - 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-> **참고:**
->
-> [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
+> **참고:** [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
@@ -164,11 +162,9 @@ function checkGuess() {
 checkGuess();
 ```
 
-키보드의 <kbd>Return</kbd>(<kbd>Enter</kbd>) 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
+키보드의 <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-> **참고:**
->
-> [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
+> **참고:** [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 
@@ -185,29 +181,18 @@ JavaScript에서는 연산자로 참/거짓 판별, 수학 계산, 문자열 연
 | `*`    | 곱하기 | `3 * 7`   |
 | `/`    | 나누기 | `10 / 5`  |
 
-`+` 연산자는 텍스트 문자열을 합칠 때(프로그래밍에서는 문자열 연결, 결합 등으로 부릅니다)도 사용할 수 있습니다. 아래 코드를 한 줄씩 콘솔에 입력해 보세요.
+[복합 할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#할당_연산자)라고 하는 바로 가기 연산자도 사용할 수 있습니다. 예를 들어 기존 번호에 새 번호를 추가하고 결과를 반환하려는 경우 이렇게 할 수 있습니다.
 
 ```js
-const name = "Bingo";
-name;
-const hello = " says hello!";
-hello;
-const greeting = name + hello;
-greeting;
-```
-
-복합 [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#할당_연산자)라고 부르기도 하는 단축 연산자도 있습니다. 예를 들어, 새로운 텍스트 문자열을 기존 문자열에 연결하고 그 결과를 반환하려면 아래처럼 `+=` 연산자를 사용할 수 있습니다.
-
-```js
-let name1 = "Bingo";
-name1 += " says hello!";
+let number1 = 1;
+number1 += 2;
 ```
 
 위 코드의 결과는 아래와 동일합니다.
 
 ```js
-let name2 = "Bingo";
-name2 = name2 + " says hello!";
+let number2 = 1;
+number2 = number2 + 2;
 ```
 
 [조건](#조건)으로 사용하기 위한 참/거짓 판별에는 [비교 연산자](/ko/docs/Web/JavaScript/Reference/Operators#비교_연산자)를 사용합니다.
@@ -221,7 +206,7 @@ name2 = name2 + " says hello!";
     </tr>
     <tr>
       <td><code>===</code></td>
-      <td>엄격 일치 (정확히 같은가?)</td>
+      <td>엄격한 일치 (정확히 같은가?)</td>
       <td>
         <pre class="brush: js">
 5 === 2 + 4 // false
@@ -267,6 +252,28 @@ name2 = name2 + " says hello!";
     </tr>
   </thead>
 </table>
+
+### 텍스트 문자열
+
+문자열은 텍스트를 표현하는 데 사용됩니다. 이미 문자열 변수를 살펴본 바 있습니다. 다음 코드에서 `"I am a placeholder"`는 문자열입니다.
+
+```js
+function checkGuess() {
+  alert("I am a placeholder");
+}
+```
+
+큰따옴표(`"`) 또는 작은따옴표(`'`)를 사용하여 문자열을 선언할 수 있지만, 단일 문자열 선언의 시작과 끝에 동일한 형식을 사용해야 합니다. 예를 들어 `"I am a placeholder'`라고 작성할 수 없습니다.
+
+백틱(`` ` ``)을 사용하여 문자열을 선언할 수도 있습니다. 이렇게 선언된 문자열을 *템플릿 리터럴*이라고 하며 몇 가지 특별한 속성이 있습니다. 특히 다른 변수나 표현식을 포함할 수 있습니다.
+
+```js
+const name = "Mahalia";
+
+const greeting = `Hello ${name}`;
+```
+
+이를 통해 문자열을 결합하는 메커니즘을 사용할 수 있습니다.
 
 ### 조건
 
@@ -356,7 +363,7 @@ function setGameOver() {
 }
 ```
 
-- 첫 두 줄은 텍스트 입력 칸과 제출 버튼의 `disabled` 속성을 `true`로 설정해서 비활성화합니다. 비활성화하지 않으면 게임이 끝난 뒤에도 플레이어가 정답을 추가로 입력해서 게임을 망가뜨릴 수도 있어서 필요한 과정입니다.
+- 첫 두 줄은 텍스트 입력 칸과 제출 버튼의 disabled 속성을 `true`로 설정해서 비활성화합니다. 비활성화하지 않으면 게임이 끝난 뒤에도 플레이어가 정답을 추가로 입력해서 게임을 망가뜨릴 수도 있어서 필요한 과정입니다.
 - 그 뒤의 세 줄은 새로운 {{htmlelement("button")}} 요소를 생성하고 텍스트 레이블을 "Start new game"으로 설정해서 우리의 기존 HTML 아래에 추가합니다.
 - 마지막 줄은 위에서 추가한 새 버튼에 이벤트 수신기를 부착해서, 그 버튼을 클릭하면 `resetGame()`이라는 함수를 호출하도록 합니다.
 
@@ -473,7 +480,7 @@ guessField.focus();
 4. 이제 콘솔에 아래 코드를 입력하세요.
 
    ```js
-   guessField.value = "Hello";
+   guessField.value = 2;
    ```
 
    `value` 속성은 입력 칸에 현재 입력된 값을 나타내는 속성입니다. 위의 명령을 실행하면, 입력 칸에 입력된 텍스트가 바뀌게 되죠!

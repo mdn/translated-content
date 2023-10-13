@@ -57,7 +57,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 
 - [`:last-child`](/zh-CN/docs/Web/CSS/:last-child)
 - [`:only-child`](/zh-CN/docs/Web/CSS/:only-child)
-- [`:invalid`](/zh-Cn/docs/Web/CSS/:invalid)
+- [`:invalid`](/zh-CN/docs/Web/CSS/:invalid)
 
 ### 用户行为伪类
 

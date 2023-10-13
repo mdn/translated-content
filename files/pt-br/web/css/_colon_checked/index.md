@@ -156,13 +156,7 @@ Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escond
 
 ## Especificações
 
-| Especificação                                                  | Estatus                       | Comentários                                          |
-| -------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}    | Sem mudanças.                                        |
-| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}   | {{ Spec2('HTML5 W3C') }}      | Define a semântica sobre o HTML.                     |
-| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}       | {{ Spec2('CSS4 Selectors') }} | Sem mudanças.                                        |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked') }} | {{ Spec2('CSS3 Basic UI') }}  | Link para Seletores nível 3                          |
-| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}       | {{ Spec2('CSS3 Selectors') }} | Define a pseudo-classe, mas não associação semântica |
+{{Specifications}}
 
 ## Compatibilidade de navegadores
 

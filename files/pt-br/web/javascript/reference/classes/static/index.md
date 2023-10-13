@@ -96,9 +96,7 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 
 ## Especificações
 
-| Especificação                                                         | Status              | Comentário         |
-| --------------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

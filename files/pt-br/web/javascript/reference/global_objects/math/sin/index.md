@@ -43,12 +43,7 @@ Math.sin(Math.PI / 2); // 1
 
 ## Especificações
 
-| Specification                                        | Status               | Comment                                            |
-| ---------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                  | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}}  | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

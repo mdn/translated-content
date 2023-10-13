@@ -10,7 +10,7 @@ slug: Learn/CSS/CSS_layout/Introduction
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         对 HTML 有一些基本的了解 (学习“<a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

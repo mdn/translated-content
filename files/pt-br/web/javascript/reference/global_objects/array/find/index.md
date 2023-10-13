@@ -134,9 +134,7 @@ if (!Array.prototype.find) {
 
 ## Especificações
 
-| Especificação                                                            | Status           | Comentário         |
-| ------------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

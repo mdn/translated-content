@@ -58,10 +58,7 @@ ul li::marker {
 
 ## Specifications
 
-| Specification                                                      | Status                            | Comment                |
-| ------------------------------------------------------------------ | --------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | No significant change. |
-| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}           | {{Spec2('CSS3 Lists')}}           | Initial definition.    |
+{{Specifications}}
 
 ## Browser compatibility
 

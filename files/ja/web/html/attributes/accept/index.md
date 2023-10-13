@@ -1,11 +1,19 @@
 ---
 title: "HTML 属性: accept"
 slug: Web/HTML/Attributes/accept
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
-**`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。 accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 HTML5 で削除され、 {{HTMLElement("input/file", "file")}} に変更されました。
+**`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
+
+## 概要
+
+accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 HTML5 で削除され、 {{HTMLElement("input/file", "file")}} に変更されました。
 
 与えられたファイル種別は複数の方法で識別される可能性があるため、特定の種別のファイルが必要な場合には、型指定子の完全なセットを提供したり、ワイルドカードを使用して任意の形式の型が許容されることを示したりすると便利です。
 
@@ -49,7 +57,7 @@ slug: Web/HTML/Attributes/accept
 </p>
 ```
 
-{{EmbedLiveSample('simple_example', '100%', 200)}}
+{{EmbedLiveSample('Examples', '100%', 200)}}
 
 なお、最後の例では複数の画像を選択することができます。詳しくは [`multiple`](multiple) 属性を参照してください。
 
@@ -95,7 +103,7 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **メモ:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> **メモ:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
 
@@ -109,7 +117,7 @@ div {
 
 - `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付ける。
 - `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付ける。
-- `accept="image/*"` — `image/*` MIME タイプで任意のファイルを受け付ける (また、多くのモバイル端末では、これを使用するとユーザーにカメラで写真を撮影させることができる。)
+- `accept="image/*"` — `image/*` MIME タイプで任意のファイルを受け付ける（また、多くのモバイル端末では、これを使用するとユーザーにカメラで写真を撮影させることができる。）
 - `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — MS Word 文書と思しきすべてのファイルを受け付ける。
 
 もっと完全な例を見てみましょう。
@@ -148,5 +156,5 @@ div {
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Using_files_from_web_applications)
-- [File API](/ja/docs/Web/API/File)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [ファイル API](/ja/docs/Web/API/File)

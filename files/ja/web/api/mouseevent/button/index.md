@@ -45,23 +45,23 @@ l10n:
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-button.addEventListener('mouseup', (e) => {
-  let log = document.querySelector('#log');
+let button = document.querySelector("#button");
+button.addEventListener("mouseup", (e) => {
+  let log = document.querySelector("#log");
   switch (e.button) {
     case 0:
-      log.textContent = '左ボタンがクリックされました。';
+      log.textContent = "左ボタンがクリックされました。";
       break;
     case 1:
-      log.textContent = '中央ボタンがクリックされました。';
+      log.textContent = "中央ボタンがクリックされました。";
       break;
     case 2:
-      log.textContent = '右ボタンがクリックされました。';
+      log.textContent = "右ボタンがクリックされました。";
       break;
     default:
       log.textContent = `不明なボタンコード: ${e.button}`;
   }
-}
+});
 ```
 
 ### 結果

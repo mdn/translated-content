@@ -134,11 +134,7 @@ try {
 
 ## Especificações
 
-| Especificação                                      | Status             | Comentário                                         |
-| -------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                | {{Spec2('ES1')}}   | Definição inicial. Implementada no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.11', 'Error')}}       | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-error-objects', 'Error')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -22,7 +22,7 @@
 /zh-CN/docs/CSS/@document	/zh-CN/docs/Web/CSS/@document
 /zh-CN/docs/CSS/@font-face	/zh-CN/docs/Web/CSS/@font-face
 /zh-CN/docs/CSS/@supports	/zh-CN/docs/Web/CSS/@supports
-/zh-CN/docs/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator
+/zh-CN/docs/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/At-rule
 /zh-CN/docs/CSS/Attribute_selectors	/zh-CN/docs/Web/CSS/Attribute_selectors
 /zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
@@ -36,7 +36,7 @@
 /zh-CN/docs/CSS/Comments	/zh-CN/docs/Web/CSS/Comments
 /zh-CN/docs/CSS/Common_CSS_Questions	/zh-CN/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-CN/docs/CSS/Descendant_selectors	/zh-CN/docs/Web/CSS/Descendant_combinator
-/zh-CN/docs/CSS/General_sibling_selectors	/zh-CN/docs/Web/CSS/General_sibling_combinator
+/zh-CN/docs/CSS/General_sibling_selectors	/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator
 /zh-CN/docs/CSS/Getting_Started/Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
 /zh-CN/docs/CSS/ID_selectors	/zh-CN/docs/Web/CSS/ID_selectors
 /zh-CN/docs/CSS/Media	/zh-CN/docs/Web/API/CSSMediaRule
@@ -2015,7 +2015,8 @@
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
 /zh-CN/docs/Web/CSS/@viewport	/zh-CN/docs/Web/CSS
-/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator
+/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator	/zh-CN/docs/Web/CSS/Next-sibling_combinator
+/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/Containing_block
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
@@ -2078,7 +2079,8 @@
 /zh-CN/docs/Web/CSS/Child_selectors	/zh-CN/docs/Web/CSS/Child_combinator
 /zh-CN/docs/Web/CSS/Common_CSS_Questions	/zh-CN/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-CN/docs/Web/CSS/Descendant_selectors	/zh-CN/docs/Web/CSS/Descendant_combinator
-/zh-CN/docs/Web/CSS/General_sibling_selectors	/zh-CN/docs/Web/CSS/General_sibling_combinator
+/zh-CN/docs/Web/CSS/General_sibling_combinator	/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator
+/zh-CN/docs/Web/CSS/General_sibling_selectors	/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator
 /zh-CN/docs/Web/CSS/Layout_cookbook/卡片	/zh-CN/docs/Web/CSS/Layout_cookbook/Card
 /zh-CN/docs/Web/CSS/Layout_cookbook/媒体对象	/zh-CN/docs/Web/CSS/Layout_cookbook/Media_objects
 /zh-CN/docs/Web/CSS/Media_Queries	/zh-CN/docs/Web/CSS/CSS_media_queries
