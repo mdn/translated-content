@@ -23,7 +23,7 @@ l10n:
         <a href="/ru/docs/Learn/HTML/Introduction_to_HTML"
           >Введение в HTML</a
         >), основы CSS (изучите
-        <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>).
+        <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).
       </td>
     </tr>
     <tr>
