@@ -2,7 +2,7 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 l10n:
-  sourcmmit: b7ca46c94631967ecd9ce0fe36579be334a01275
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}

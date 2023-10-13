@@ -74,11 +74,7 @@ body {
 
 ## Спецификации
 
-Пока CSSWG не опубликует свой собственный вариант, спецификация может быть найдена только[на Github в репозитории WICG](https://wicg.github.io/overscroll-behavior/).
-
-| Specification                                                                              | Status                           | Comment |
-| ------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('Overscroll Behavior')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 
