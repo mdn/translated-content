@@ -3,7 +3,7 @@
   "*.md": [
     "markdownlint-cli2 --fix",
     "node ./scripts/check-url-locale.js --fix",
-    "autocorrect --lint",
+    "autocorrect --fix",
     "prettier --write"
   ]
 }
