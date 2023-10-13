@@ -69,8 +69,8 @@ l10n:
 > пока вы не обернёте их в соответствующий элемент (например,
 > {{htmlelement("span")}} или {{htmlelement("strong")}}), или не примените
 > текстовый псевдоэлемент, такой как
-> [::first-letter](/en-US/docs/Web/CSS/::first-letter) (выделяет первую букву
-> текста элемента), [::first-line](/en-US/docs/Web/CSS/::first-line) (выделяет
+> [::first-letter](/ru/docs/Web/CSS/::first-letter) (выделяет первую букву
+> текста элемента), [::first-line](/ru/docs/Web/CSS/::first-line) (выделяет
 > первую строку текста элемента), или
 > [::selection](/en-US/docs/Web/CSS/::selection) (выделяет текст, выделенный в
 > данный момент курсором).
