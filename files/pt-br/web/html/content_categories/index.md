@@ -11,7 +11,7 @@ Há três tipos de categorias de conteúdo:
 - Categorias de conteúdo relacionado, as quais decrevem regras comuns de conteúdo para elementos relacioados;
 - Categorias de conteúdo específico, as quais descrevem categorias raras compartilhadas somente por poucos elementos, às vezes apenas em um contexto específico.
 
-[![Content_categories_venn.png](content_categories_venn.png?size=webview)](content_categories_venn.png)
+[![Content_categories_venn.png](content_categories_venn.png)](content_categories_venn.png)
 
 ## Principais categorias de conteúdo
 

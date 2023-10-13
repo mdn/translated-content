@@ -47,7 +47,7 @@ rotate3d(x, y, z, a)
       <td colspan="1">
         <a href="transform-functions-rotate3d_cart.png"
           ><img
-            src="transform-functions-rotate3d_cart.png?size=webview"
+            src="transform-functions-rotate3d_cart.png"
             style="height: 47px; width: 510px" /></a
         ><math>
           <mfenced
@@ -92,7 +92,7 @@ rotate3d(x, y, z, a)
       <td colspan="1">
         <a href="transform-functions-rotate3d_hom4.png"
           ><img
-            src="transform-functions-rotate3d_hom4.png?size=webview"
+            src="transform-functions-rotate3d_hom4.png"
             style="height: 61px; width: 522px"
         /></a>
       </td>
