@@ -72,7 +72,7 @@ l10n:
 > [::first-letter](/ru/docs/Web/CSS/::first-letter) (выделяет первую букву
 > текста элемента), [::first-line](/ru/docs/Web/CSS/::first-line) (выделяет
 > первую строку текста элемента), или
-> [::selection](/en-US/docs/Web/CSS/::selection) (выделяет текст, выделенный в
+> [::selection](/ru/docs/Web/CSS/::selection) (выделяет текст, выделенный в
 > данный момент курсором).
 
 ## Шрифты
