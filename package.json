@@ -16,10 +16,10 @@
   "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json(c)?\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && yarn autocorrect --fix files docs && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json(c)?\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && prettier -c \"**/*.md\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && yarn autocorrect --lint files docs && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky install"
   },
