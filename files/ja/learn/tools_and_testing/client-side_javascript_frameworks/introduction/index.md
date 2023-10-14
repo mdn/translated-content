@@ -232,17 +232,17 @@ Vanilla Javascript と同様に、フレームワークは学習に時間がか�
 
 フレームワークが問題の原因ではありません。優先順位を間違えると、アプリケーションは壊れやすく、肥大化し、アクセスできなくなる可能性があります。ただし、フレームワークにより、開発者としての優先順位がさらに高まります。複雑なウェブアプリを作成することを優先する場合、それは簡単です。ただし、優先順位によってパフォーマンスとアクセシビリティが慎重に守られていない場合、フレームワークによって脆弱性、肥大化、アクセス不能性が増幅されてしまいます。フレームワークによって強化された現代の開発者の優先順位は、多くの場所で Web の構造を逆転させています。 現在のウェブでは、堅牢なコンテンツ優先のドキュメントネットワークの代わりに、 JavaScript が優先され、ユーザーエクスペリエンスが最後に配置されることが多くなっています。
 
-## Accessibility on a framework-driven web
+## フレームワーク主導のウェブでのアクセシビリティ
 
-Let's build on what we said in the previous section, and talk a bit more about accessibility. Making user interfaces accessible always requires some thought and effort, and frameworks can complicate that process. You often have to employ advanced framework APIs to access native browser features like ARIA [live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) or focus management.
+前のセクションで述べたことを踏まえて、アクセシビリティについてもう少し詳しく説明しましょう。ユーザーインターフェイスをアクセスしやすくするには、常にある程度の思考と努力が必要ですが、フレームワークによってそのプロセスが複雑になる場合があります。 ARIA [ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) やフォーカス管理などのネイティブブラウザー機能にアクセスするには、多くの場合、高度なフレームワーク API を使用する必要があります。
 
-In some cases, framework applications create accessibility barriers that do not exist for traditional websites. The biggest example of this is in client-side routing, as mentioned earlier.
+場合によっては、フレームワークアプリケーションによって、従来のウェブサイトには存在しないアクセシビリティの障壁が生じることがあります。この最大の例は、前述したように、クライアント側のルーティングです。
 
-With traditional (server-side) routing, navigating the web has predictable results. The browser knows to set focus to the top of the page and assistive technologies will announce the title of the page. These things happen every time you navigate to a new page.
+従来の (サーバー側) ルーティングでは、ウェブをナビゲートすると予測可能な結果が得られます。ブラウザはページの上部にフォーカスを設定することを認識し、支援技術がページのタイトルをアナウンスします。これらのことは、新しいページに移動するたびに発生します。
 
-With client-side routing, your browser is not loading new web pages, so it doesn't know that it should automatically adjust focus or announce a new page title. Framework authors have devoted immense time and labor to writing JavaScript that recreates these features, and even then, no framework has done so perfectly.
+クライアント側ルーティングでは、ブラウザは新しいウェブページを読み込まないため、フォーカスを自動的に調整したり、新しいページタイトルをアナウンスしたりする必要があることを認識しません。 フレームワークの作成者は、これらの機能を再現する JavaScript の作成に膨大な時間と労力を費やしてきましたが、それでも、これほど完璧に実行できるフレームワークはありませんでした。
 
-The upshot is that you should consider accessibility from the very start of _every_ web project, but bear in mind that abstracted codebases that use frameworks are more likely to suffer from major accessibility issues if you don't.
+結論としては、 _すべての_ ウェブプロジェクトの最初からアクセシビリティを考慮する必要がありますが、そうしないと、フレームワークを使用する抽象化されたコードベースで重大なアクセシビリティの問題が発生する可能性が高くなることに留意してください。
 
 ## How to choose a framework
 
