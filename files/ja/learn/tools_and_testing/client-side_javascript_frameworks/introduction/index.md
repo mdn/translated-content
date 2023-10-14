@@ -1,29 +1,28 @@
 ---
-title: Introduction to client-side frameworks
+title: クライアント側フレームワークの概要 
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-page-type: learn-module-chapter
+l10n:
+  sourceCommit: 7c7473588e7fb487df574c64307b11a3ecd55cd1
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
+JavaScript とフレームワークの簡単な歴史を見て、フレームワークがなぜ存在するのか、そしてそれが私たちに何をもたらすのか、学習するフレームワークの選択をどのように考え始めるか、そしてクライアント側フレームワークの代替手段は何があるのかをこの分野の一般的な概要からフレームワークの考察を始めます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        <a href="/ja/docs/Learn/HTML">HTML</a>、
+        <a href="/ja/docs/Learn/CSS">CSS</a>、
+        <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的:</th>
       <td>
-        To understand how client-side JavaScript frameworks came to exist, what
-        problems they solve, what alternatives there are, and how to go about
-        choosing one.
+        クライアントサイド JavaScript フレームワークがどのようにして存在するようになったのかを理解するには、 それによって解決される問題、どのような代替案があるのか​​、どのように対処すべきか 一つを選ぶこと。
       </td>
     </tr>
   </tbody>
