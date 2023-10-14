@@ -44,9 +44,9 @@ JavaScript フレームワークは、あなたが毎日使用するウェブサ
 
 ### Ember
 
-[Ember](https://emberjs.com/) was initially released in December 2011 as a continuation of work that started in the [SproutCore](https://en.wikipedia.org/wiki/SproutCore) project. It is an older framework that has fewer users than more modern alternatives such as React and Vue, but it still enjoys a fair amount of popularity due to its stability, community support, and some clever coding principles.
+[Ember](https://emberjs.com/) は、 [SproutCore](https://en.wikipedia.org/wiki/SproutCore) プロジェクトで開始された作業の継続として、2011 年 12 月に最初にリリースされました。 これは古いフレームワークであり、React や Vue などの最新の代替フレームに比べてユーザー数は少ないですが、その安定性、コミュニティ サポート、いくつかの賢いコーディング原則により、依然としてかなりの人気を誇っています。
 
-[Start learning Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+[Ember の学習を開始する](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
 
 ### Angular
 
