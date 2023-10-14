@@ -200,15 +200,15 @@ Vue のおかげで、 UI を構築するために独自の関数を作成する
 
 ほとんどの主要なフレームワークは、開発者がユーザーインターフェイスのさまざまな部分を _コンポーネント_ 、つまり相互に通信できる保守可能で再利用可能なコードの塊に抽象化することを推奨しています。特定のコンポーネントに関連するすべてのコードは 1 つのファイル (またはいくつかの特定のファイル) に保存できるため、開発者はそのコンポーネントに変更を加えるためにどこに行けばよいかを正確に知ることができます。 Vanilla Javascript アプリでは、これを効率的かつスケーラブルな方法で実現するには、独自の規則セットを作成する必要があります。 多くの JavaScript 開発者は、自分のデバイスに任せると、UI の一部に関連するすべてのコードが 1 つのファイル全体に、または別のファイル全体に分散されてしまう可能性があります。
 
-### Routing
+### ルーティング
 
-The most essential feature of the web is that it allows users to navigate from one page to another – it is, after all, a network of interlinked documents. When you follow a link on this very website, your browser communicates with a server and fetches new content to display for you. As it does so, the URL in your address bar changes. You can save this new URL and come back to the page later on, or share it with others so they can easily find the same page. Your browser remembers your navigation history and allows you to navigate back and forth, too. This is called **server-side routing**.
+ウェブの最も重要な機能は、ユーザーがあるページから別のページに移動できることです。ウェブは結局のところ、相互リンクされたドキュメントのネットワークです。このウェブサイト上のリンクをたどると、ブラウザがサーバーと通信し、表示する新しいコンテンツを取得します。 そうすると、アドレスバーの URL が変わります。この新しい URL を保存して、後でそのページに戻ったり、他のユーザーと共有して同じページを簡単に見つけたりすることができます。ブラウザーはナビゲーション履歴を記憶しており、前後に移動することもできます。これは **サーバー側ルーティング** と呼ばれます。
 
-Modern web applications typically do not fetch and render new HTML files — they load a single HTML shell, and continually update the DOM inside it (referred to as **single page apps**, or **SPAs**) without navigating users to new addresses on the web. Each new pseudo-webpage is usually called a _view_, and by default, no routing is done.
+最新の Web アプリケーションは通常、新しい HTML ファイルを取得してレンダリングしません。ユーザーをウェブ上の新しいアドレスに誘導することなく、単一の HTML シェルをロードし、その中の DOM (**シングル ページ アプリ**、または **SPA** と呼ばれます) を継続的に更新します。新しい疑似ウェブページは通常、_ビュー_ と呼ばれ、デフォルトではルーティングは行われません。
 
-When an SPA is complex enough, and renders enough unique views, it's important to bring routing functionality into your application. People are used to being able to link to specific pages in an application, travel forward and backward in their navigation history, etc., and their experience suffers when these standard web features are broken. When routing is handled by a client application in this fashion, it is aptly called **client-side routing**.
+SPA が十分に複雑で、十分な独自のビューをレンダリングする場合、アプリケーションにルーティング機能を組み込むことが重要です。人々は、アプリケーション内の特定のページにリンクしたり、ナビゲーション履歴を前後に移動したりできることに慣れていますが、これらの標準的なウェブ機能が壊れるとエクスペリエンスが低下します。この方法でクライアントアプリケーションによってルーティングが処理される場合、それは適切にも **クライアント側ルーティング** と呼ばれます。
 
-It's _possible_ to make a router using the native capabilities of JavaScript and the browser, but popular, actively developed frameworks have companion libraries that make routing a more intuitive part of the development process.
+JavaScript とブラウザーのネイティブ機能を使用してルーターを作成することは _可能_ ですが、人気があり積極的に開発されているフレームワークには、ルーティングを開発プロセスのより直感的な部分にする付属ライブラリがあります。
 
 ## Things to consider when using frameworks
 
