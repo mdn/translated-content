@@ -271,13 +271,13 @@ Vanilla Javascript と同様に、フレームワークは学習に時間がか�
 
 コミュニティの規模はアクセスしやすい数字と直接相関しないため、これはおそらく測定するのが最も難しい指標です。プロジェクトの GitHub スターの数や週ごとの npm ダウンロードを確認して人気を知ることができますが、いくつかのフォーラムを検索したり、他の開発者に相談したりするのが最善の場合もあります。コミュニティの規模だけでなく、コミュニティがどれほど歓迎的で包括的であるか、利用可能なドキュメントがどれほど優れているかも重要です。
 
-### Opinions on the web
+### ウェブ上の意見
 
-Don't just take our word on this matter — there are discussions all over the web. The Wikimedia Foundation recently chose to use Vue for its front-end, and posted a [request for comments (RFC) on framework adoption](https://phabricator.wikimedia.org/T241180). Eric Gardner, the author of the RFC, took time to outline the needs of the Wikimedia project and why certain frameworks were good choices for the team. This RFC serves as a great example of the kind of research you should do for yourself when planning to use a front-end framework.
+この問題については、私たちの言葉をそのまま鵜呑みにしないでください。ウェブ上では議論が行われています。 ウィキメディア財団は最近、フロントエンドに Vue を使用することを選択し、[フレームワークの採用に関するコメント要求 (RFC)](https://phabricator.wikimedia.org/T241180) を投稿しました。 RFC の著者である Eric Gardner は、時間をかけてウィキメディアプロジェクトのニーズと、特定のフレームワークがチームにとって良い選択である理由を概説しました。この RFC は、フロントエンドフレームワークの使用を計画するときに自分で行うべき調査の優れた例として役立ちます。
 
-The [State of JavaScript survey](https://stateofjs.com/) is a helpful collection of feedback from JavaScript developers. It covers many topics related to JavaScript, including data about both the use of frameworks and developer sentiment toward them. Currently, there are several years of data available, allowing you to get a sense of a framework's popularity.
+[JavaScript の現状調査アンケート](https://stateofjs.com/) は、 JavaScript 開発者からの有益なフィードバックを集めたものです。フレームワークの使用とフレームワークに対する開発者の感情の両方に関するデータなど、 JavaScript に関連する多くのトピックをカバーしています。現在、数年分のデータが入手可能であり、フレームワークの人気を把握することができます。
 
-The Vue team has [exhaustively compared Vue to other popular frameworks](https://v2.vuejs.org/v2/guide/comparison.html). There may be some bias in this comparison (which they note), but it's a valuable resource nonetheless.
+Vue チームは [Vue を他の一般的なフレームワークと徹底的に比較](https://v2.vuejs.org/v2/guide/comparison.html)しました。この比較には多少の偏りがあるかもしれません (彼らはそれを指摘しています) が、それでも貴重な情報源です。
 
 ## Alternatives to client-side frameworks
 
