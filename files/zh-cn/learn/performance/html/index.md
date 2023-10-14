@@ -260,11 +260,11 @@ pElem.addEventListener("click", () => {
 
 > **备注：** 你还可以使用 `rel="preload"` 预加载 CSS 和 JavaScript 文件。
 
-> **备注：** 还有其他 [`rel`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/rel) 值，也旨在加速页面加载的各个方面：`dns-prefetch`、`preconnect`、`modulepreload`、`prefetch` 和 `prerender`。请访问链接页面，了解它们的作用。
+> **备注：** 还有其他 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 值，也旨在加速页面加载的各个方面：`dns-prefetch`、`preconnect`、`modulepreload`、`prefetch` 和 `prerender`。请访问链接页面，了解它们的作用。
 
 {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 
 ## 参见
 
-- [从服务器获取数据](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [操作文档](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
