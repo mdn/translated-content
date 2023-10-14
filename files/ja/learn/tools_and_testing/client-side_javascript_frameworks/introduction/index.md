@@ -210,9 +210,9 @@ SPA が十分に複雑で、十分な独自のビューをレンダリングす�
 
 JavaScript とブラウザーのネイティブ機能を使用してルーターを作成することは _可能_ ですが、人気があり積極的に開発されているフレームワークには、ルーティングを開発プロセスのより直感的な部分にする付属ライブラリがあります。
 
-## Things to consider when using frameworks
+## フレームワークを使用する際の考慮事項
 
-Being an effective web developer means using the most appropriate tools for the job. JavaScript frameworks make front-end application development easy, but they are not a silver bullet that will solve all problems. This section talks about some of the things you should consider when using frameworks. Bear in mind that you might not need a framework at all — beware that you don't end up using a framework just for the sake of it.
+有能なウェブ開発者になるには、仕事に最適なツールを使用する必要があります。 JavaScript フレームワークはフロントエンドアプリケーションの開発を容易にしますが、すべての問題を解決する特効薬ではありません。このセクションでは、フレームワークを使用する際に考慮すべき点について説明します。フレームワークがまったく必要ない場合もあることを念頭に置いてください。フレームワークを目的だけで使用することのないように注意してください。
 
 ### Familiarity with the tool
 
