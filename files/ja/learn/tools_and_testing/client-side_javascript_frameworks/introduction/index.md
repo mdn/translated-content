@@ -218,9 +218,9 @@ JavaScript とブラウザーのネイティブ機能を使用してルーター
 
 Vanilla Javascript と同様に、フレームワークは学習に時間がかかり、癖があります。プロジェクトにフレームワークを使用することを決定する前に、そのフレームワークが自分にとって不利になるのではなく、自分にとって役立つように、その機能を十分に学習する時間を確保し、チームメイトもそのフレームワークに慣れているかどうかを確認してください。
 
-### Overengineering
+### オーバーエンジニアリング
 
-If your web development project is a personal portfolio with a few pages, and those pages have little or no interactive capability, a framework (and all of its JavaScript) may not be necessary at all. That said, frameworks are not monolithic, and some of them are better suited to small projects than others. In an article for Smashing Magazine, Sarah Drasner writes about how [Vue can replace jQuery](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/) as a tool for making small portions of a webpage interactive.
+もしあなたのウェブ開発プロジェクトが数ページの個人的なポートフォリオで、それらのページにインタラクティブな機能がほとんどない、もしくは全くないのであれば、フレームワーク（とその JavaScript のすべて）は全く必要ないかもしれません。とはいえ、フレームワークは一枚岩ではないし、小規模なプロジェクトに適したものもある。 Smashing Magazine の記事で、 Sarah Drasner は、ウェブページの小さな部分をインタラクティブにするツールとして、[ Vue が jQuery を置き換えることができる](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/)ということを書いている。
 
 ### Larger code base and abstraction
 
