@@ -84,9 +84,9 @@ React は、 [JSX](https://react.dev/learn/writing-markup-with-jsx) として知
 
 この問題の難しさは、To Do リスト アプリの _1_ つの機能、つまりタスクのリストのレンダリングだけを見て調べることができます。
 
-## The verbosity of DOM changes
+## DOM の変更の冗長性
 
-Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is an array of objects structured like this:
+HTML 要素を構築し、適切なタイミングでブラウザーにレンダリングするには、驚くほどの量のコードが必要です。状態が次のように構造化されたオブジェクトの配列であるとします。
 
 ```js
 const state = [
@@ -97,7 +97,7 @@ const state = [
 ];
 ```
 
-How do we show one of those tasks to our users? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Element/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Element/ul)). How do we make it? That could look something like this:
+それらのタスクの 1 つをユーザーにどのように表示すればよいでしょうか? 各タスクをリスト項目として表現したいとします。つまり、(順序なしリスト要素 [`<ul>`](/ja/docs/Web) 内の) HTML [`<li>`](/ja/docs/Web/HTML/Element/li) 要素です。どうやって作るのでしょうか？それは次のようになります。
 
 ```js
 function buildTodoItemEl(id, name) {
@@ -115,9 +115,9 @@ function buildTodoItemEl(id, name) {
 }
 ```
 
-Here, we use the [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) method to make our `<li>`, and several more lines of code to create the properties and children it needs.
+ここでは、 [`document.createElement()`](/ja/docs/Web/API/Document/createElement) メソッドを使用して `<li>` を作成し、さらに数行のコードで必要なプロパティと子を作成しています。
 
-The tenth line of the previous snippet references another build function: `buildDeleteButtonEl()`. It follows a similar pattern to the one we used to build a list item element:
+前のスニペットの 10 行目は、別のビルド関数 `buildDeleteButtonEl()` を参照しています。これは、リスト項目要素を構築するために使用したパターンと同様のパターンに従います。
 
 ```js
 function buildDeleteButtonEl(id) {
@@ -131,7 +131,7 @@ function buildDeleteButtonEl(id) {
 }
 ```
 
-This button doesn't do anything yet, but it will later once we decide to implement our delete feature. The code that will render our items on the page might read something like this:
+このボタンはまだ何も実行しませんが、削除機能の実装を決定すると後で実行されます。ページ上に項目をレンダリングするコードは次のようになります。
 
 ```js
 function renderTodoList() {
@@ -148,22 +148,22 @@ function renderTodoList() {
 }
 ```
 
-We've now got well over thirty lines of code dedicated _just_ to the UI – _just_ to render something in the DOM – and at no point do we add classes that we could use later to style our list-items!
+これで、UI 専用のコードが 30 行を _はるかに_ 超えています。つまり、DOM 内で _何かを_ レンダリングするためだけに、後でリスト項目のスタイルを設定するために使用できるクラスを追加する必要はありません。
 
-Working directly with the DOM, as in this example, requires understanding many things about how the DOM works: how to make elements; how to change their properties; how to put elements inside of each other; how to get them on the page. None of this code actually handles user interactions, or addresses adding or deleting a task. If we add those features, we have to remember to update our UI at the right time and in the right way.
+DOM を直接操作して、この例のように要素の作り方、プロパティを変更する方法、要素を互いの内側に配置する方法、ページ上にそれらを表示する方法など DOM の仕組みについて多くのことを理解する必要があります。このコードは実際にユーザー操作を処理したり、タスクの追加や削除に対処したりするものはありません。これらの機能を追加する場合は、適切なタイミングで適切な方法で UI を更新することを忘れないでください。
 
-JavaScript frameworks were created to make this kind of work a lot easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
+JavaScript フレームワークは、この種の作業をはるかに簡単にするために作成されました。 JavaScript フレームワークは、より良い _開発者体験_ を提供するために存在します。これらは JavaScript にまったく新しい機能をもたらすわけではありません。これらにより、JavaScript の機能に簡単にアクセスできるようになり、今日のウェブに合わせて構築できるようになります。
 
-If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/mxmason/pen/XWbPNmw), which also allows users to add and delete new tasks.
+このセクションのコード サンプルの動作を確認したい場合は、[ CodePen 上のアプリの動作バージョン](https://codepen.io/mxmason/pen/XWbPNmw) をチェックアウトしてください。これにより、ユーザーは次の機能を追加したり、 新しいタスクを削除します。
 
-Read more about the JavaScript used in this section:
+このセクションで使用される JavaScript について詳しくは、以下をご覧ください。
 
-- [`document.createElement()`](/en-US/docs/Web/API/Document/createElement)
-- [`document.createTextNode()`](/en-US/docs/Web/API/Document/createTextNode)
-- [`document.createDocumentFragment()`](/en-US/docs/Web/API/Document/createDocumentFragment)
-- [`eventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)
-- [`node.appendChild()`](/en-US/docs/Web/API/Node/appendChild)
-- [`node.removeChild()`](/en-US/docs/Web/API/Node/removeChild)
+- [`document.createElement()`](/ja/docs/Web/API/Document/createElement)
+- [`document.createTextNode()`](/ja/docs/Web/API/Document/createTextNode)
+- [`document.createDocumentFragment()`](/ja/docs/Web/API/Document/createDocumentFragment)
+- [`eventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener)
+- [`node.appendChild()`](/ja/docs/Web/API/Node/appendChild)
+- [`node.removeChild()`](/ja/docs/Web/API/Node/removeChild)
 
 ## Another way to build UIs
 
