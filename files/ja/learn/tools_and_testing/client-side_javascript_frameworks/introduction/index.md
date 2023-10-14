@@ -50,11 +50,11 @@ JavaScript フレームワークは、あなたが毎日使用するウェブサ
 
 ### Angular
 
-[Angular](https://angular.io) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://angularjs.org/). Angular was officially released on the 14th of September 2016.
+[Angular](https://angular.io) は、Google の Angular チームと個人および企業のコミュニティが主導するオープンソースのウェブアプリケーションフレームワークです。 これは、 [AngularJS](https://angularjs.org/) を構築したのと同じチームによる完全な書き直しです。 Angular は 2016 年 9 月 14 日に正式にリリースされました。
 
-Angular is a component-based framework which uses declarative HTML templates. At build time, transparently to developers, the framework's compiler translates the templates to optimized JavaScript instructions. Angular uses [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript that we'll look at in a little more detail in the next chapter.
+Angular は、宣言型 HTML テンプレートを使用するコンポーネントベースのフレームワークです。 ビルド時に、開発者に対して透過的に、フレームワークのコンパイラーがテンプレートを最適化された JavaScript 命令に変換します。 Angular は、JavaScript のスーパーセットである [TypeScript](https://www.typescriptlang.org/) を使用します。これについては、次の章でもう少し詳しく説明します。
 
-[Start learning Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+[Angularr の学習を開始する](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
 ### Vue
 
