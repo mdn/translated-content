@@ -293,13 +293,13 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 
 一般的な例としては、 [Wordpress](https://wordpress.com/) 、 [Joomla](https://www.joomla.org/) 、 [Drupal](https://www.drupal.org/) などがあります。
 
-### Server-side rendering
+### サーバーサイドレンダリング
 
-**Server-side rendering** (**SSR**) is an application architecture in which it is the _server_'s job to render a single-page application. This is the opposite of _client-side rendering_, which is the most common and most straightforward way to build a JavaScript application. Server-side rendering is easier on the client's device because you're only sending a rendered HTML file to them, but it can be difficult to set up compared to a client-side-rendered application.
+**サーバーサイドレンダリング** (**SSR: Server-side rendering**) は、単一ページアプリケーションをレンダリングするのが _サーバー_ の仕事であるアプリケーションアーキテクチャです。これは、JavaScript アプリケーションを構築する最も一般的で最も簡単な方法である _クライアントサイドレンダリング_ の逆です。サーバーサイドレンダリングは、レンダリングされた HTML ファイルをクライアントのデバイスに送信するだけなので、クライアントのデバイスでは簡単ですが、クライアント側でレンダリングされるアプリケーションに比べてセットアップが難しい場合があります。
 
-All of the frameworks covered in this module support server-side rendering as well as client-side rendering. Check out [Next.js](https://nextjs.org/) for React, [Nuxt.js](https://nuxtjs.org/) for Vue (yes, it is confusing, and no, these projects are not related!), [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) for Ember, and [Angular Universal](https://angular.io/guide/universal) for Angular.
+このモジュールで説明されているフレームワークはすべて、クライアントサイドのレンダリングだけでなくサーバーサイドのレンダリングもサポートしています。 React については [Next.js](https://nextjs.org/) 、Vue については [Nuxt.js](https://nuxtjs.org/)(はい、わかりにくいです、いいえ、これらのプロジェクトは 関係ありません!)、 Ember の場合は [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot)、 Angular の場合は [Angular Universal](https://angular.io/guide/universal) をチェックしてください。
 
-> **Note:** Some SSR solutions are written and maintained by the community, whereas some are "official" solutions provided by the framework's maintainer.
+> **メモ:** SSR ソリューションの中にはコミュニティによって作成および保守されているものもありますが、フレームワークの保守者によって提供される「公式」ソリューションもあります。
 
 ### Static site generators
 
