@@ -66,13 +66,13 @@ Vue は、[AngularJS](https://angularjs.org/) と同様に、独自のコード�
 
 ### React
 
-Facebook released [React](https://react.dev/) in 2013. By this point, it had already been using React to solve many of its problems internally. Technically, React itself is _not_ a framework; it's a library for rendering UI components. React is used in combination with _other_ libraries to make applications — React and [React Native](https://reactnative.dev/) enable developers to make mobile applications; React and [ReactDOM](https://react.dev/reference/react-dom) enable them to make web applications, etc.
+Facebook は 2013 年に [React](https://react.dev/) をリリースしました。この時点で、Facebook はすでに React を使用して社内の問題の多くを解決していました。 技術的には、React 自体はフレームワークではありません。 これは UI コンポーネントをレンダリングするためのライブラリです。 React は、アプリケーションを作成するために他のライブラリと組み合わせて使用されます。 React と [React Native](https://reactnative.dev/) を使用すると、開発者はモバイル アプリケーションを作成できます。 React と [ReactDOM](https://react.dev/reference/react-dom) を使用すると、ウェブアプリケーションなどを作成できます。
 
-Because React and ReactDOM are so often used together, React is colloquially understood as a JavaScript framework. As you read through this module, we will be working with that colloquial understanding.
+React と ReactDOM は一緒に使用されることが多いため、React は口語的に JavaScript フレームワークとして理解されています。 このモジュールを読み進めるにつれて、その口語的な理解に基づいて作業していきます。
 
-React extends JavaScript with HTML-like syntax, known as [JSX](https://react.dev/learn/writing-markup-with-jsx).
+React は、 [JSX](https://react.dev/learn/writing-markup-with-jsx) として知られる HTML のような構文で JavaScript を拡張します。
 
-[Start learning React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+[React の学習を開始する](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 
 ## Why do frameworks exist?
 
