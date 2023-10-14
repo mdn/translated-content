@@ -244,28 +244,28 @@ Vanilla Javascript と同様に、フレームワークは学習に時間がか�
 
 結論としては、 _すべての_ ウェブプロジェクトの最初からアクセシビリティを考慮する必要がありますが、そうしないと、フレームワークを使用する抽象化されたコードベースで重大なアクセシビリティの問題が発生する可能性が高くなることに留意してください。
 
-## How to choose a framework
+## フレームワークの選び方
 
-Each of the frameworks discussed in this module takes different approaches to web application development. Each is regularly improving or changing, and each has its pros and cons. Choosing the right framework is a team- and project-dependent process, and you should do your own research to uncover what suits your needs. That said, we've identified a few questions you can ask in order to research your options more effectively:
+このモジュールで説明する各フレームワークは、ウェブアプリケーション開発に対して異なるアプローチを取ります。それぞれが定期的に改善されたり変化したりしており、それぞれに長所と短所があります。適切なフレームワークを選択することは、チームとプロジェクトに依存するプロセスであり、何があなたのニーズに合っているかを明らかにするために、あなた自身で調査する必要があります。とはいえ、選択肢をより効果的に調査するために、いくつかの質問を挙げてみました
 
-1. What browsers does the framework support?
-2. What domain-specific languages does the framework utilize?
-3. Does the framework have a strong community and good docs (and other support) available?
+1. フレームワークはどのブラウザをサポートしていますか？
+2. フレームワークではどのようなドメイン固有言語が使用されますか？
+3. このフレームワークには強力なコミュニティがあり、優れたドキュメント (およびその他のサポート) が利用可能ですか？
 
-The table in this section provides a glanceable summary of the current _browser support_ offered by each framework, as well as the **domain-specific languages** with which it can be used.
+このセクションの表は、各フレームワークが現在提供している _ブラウザのサポート_ と、**ドメイン固有言語**を一目でわかるようにまとめたものです。
 
-Broadly, {{Glossary("DSL/Domain_specific_language", "domain-specific languages (DSLs)")}} are programming languages relevant in specific areas of software development. In the context of frameworks, DSLs are variations on JavaScript or HTML that make it easier to develop with that framework. Crucially, none of the frameworks _require_ a developer to use a specific DSL, but they have almost all been designed with a specific DSL in mind. Choosing not to employ a framework's preferred DSL will mean you miss out on features that would otherwise improve your developer experience.
+大まかに言うと、{{Glossary("DSL/Domain_specific_language", "ドメイン固有言語（DSL）")}}は、ソフトウェア開発の特定の分野に関連するプログラミング言語です。フレームワークの文脈では、 DSL は JavaScript や HTML のバリエーションで、そのフレームワークでの開発を容易にします。重要なことは、どのフレームワークも特定の DSL を使うことを開発者に _要求_ しませんが、ほとんどすべてのフレームワークが特定の DSL を念頭に置いて設計されているということです。フレームワークが推奨する DSL を使わないという選択は、そうでなければ開発者のエクスペリエンスを向上させる機能を逃してしまうことを意味します。
 
-You should seriously consider the support matrix and DSLs of a framework when making a choice for any new project. Mismatched browser support can be a barrier to your users; mismatched DSL support can be a barrier to you and your teammates.
+新しいプロジェクトを選択するときは、フレームワークのサポートマトリックスと DSL を真剣に検討する必要があります。ブラウザのサポートが一致しないと、ユーザーの障害となる可能性があります。 DSL サポートが一致しないと、あなたとあなたのチームメイトにとって障害となる可能性があります。
 
 | Framework | Browser support                     | Preferred DSL | Supported DSLs         | Citation                                                                        |
 | --------- | ----------------------------------- | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
-| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.io/guide/browser-support)                       |
-| React     | Modern                              | JSX           | JSX; TypeScript        | [official docs](https://react.dev/reference/react-dom/client#browser-support)   |
-| Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [official docs](https://cli.vuejs.org/guide/browser-compatibility.html)         |
-| Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [official docs](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
+| Angular   | モダン                              | TypeScript    | HTML-based; TypeScript | [公式ドキュメント](https://angular.io/guide/browser-support)                       |
+| React     | モダン                              | JSX           | JSX; TypeScript        | [公式ドキュメント](https://react.dev/reference/react-dom/client#browser-support)   |
+| Vue       | モダン (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [公式ドキュメント](https://cli.vuejs.org/guide/browser-compatibility.html)         |
+| Ember     | モダン (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [公式ドキュメント](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
 
-> **Note:** DSLs we've described as "HTML-based" do not have official names. They are not really true DSLs, but they are non-standard HTML, so we believe they are worth highlighting.
+> **メモ:** 「HTML-based」と説明した DSL には正式な名前がありません。これらは実際には真の DSL ではありませんが、非標準の HTML であるため、強調する価値があると考えられます。
 
 ### Does the framework have a strong community?
 
