@@ -287,11 +287,11 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 - サーバーサイドレンダリング
 - 静的サイトジェネレーター
 
-### Content management systems
+### コンテンツ管理システム
 
-**Content-management systems** (**CMSes**) are any tools that allow a user to create content for the web without directly writing code themselves. They're a good solution for large projects, especially projects that require input from content writers who have limited coding ability, or for programmers who want to save time. They do, however, require a significant amount of time to set up, and utilizing a CMS means that you surrender at least some measure of control over the final output of your website. For example: if your chosen CMS doesn't author accessible content by default, it's often difficult to improve this.
+**コンテンツ管理システム** (**CMS: Content-management systems**) は、ユーザーが自分で直接コードを書かずにウェブ用のコンテンツを作成できるツールのことです。大規模なプロジェクト、特にコーディング能力に乏しいコンテンツ・ライターからのインプットを必要とするプロジェクトや時間を節約したいプログラマーにとっては良いソリューションです。しかし CMS のセットアップにはかなりの時間を要し、 CMS を利用するということは、少なくともウェブサイトの最終的なアウトプットをコントロールする手段を放棄することを意味します。例えば、選択したCMSがデフォルトでアクセシブルなコンテンツを作成しない場合、これを改善するのは難しいことが多いです。
 
-Popular examples include [Wordpress](https://wordpress.com/), [Joomla](https://www.joomla.org/), and [Drupal](https://www.drupal.org/).
+一般的な例としては、 [Wordpress](https://wordpress.com/) 、 [Joomla](https://www.joomla.org/) 、 [Drupal](https://www.drupal.org/) などがあります。
 
 ### Server-side rendering
 
