@@ -267,9 +267,9 @@ Vanilla Javascript と同様に、フレームワークは学習に時間がか�
 
 > **メモ:** 「HTML-based」と説明した DSL には正式な名前がありません。これらは実際には真の DSL ではありませんが、非標準の HTML であるため、強調する価値があると考えられます。
 
-### Does the framework have a strong community?
+### フレームワークには強力なコミュニティがありますか？
 
-This is perhaps the hardest metric to measure because community size does not correlate directly to easy-to-access numbers. You can check a project's number of GitHub stars or weekly npm downloads to get an idea of its popularity, but sometimes the best thing to do is search a few forums or talk to other developers. It is not just about the community's size, but also how welcoming and inclusive it is, and how good the available documentation is.
+コミュニティの規模はアクセスしやすい数字と直接相関しないため、これはおそらく測定するのが最も難しい指標です。プロジェクトの GitHub スターの数や週ごとの npm ダウンロードを確認して人気を知ることができますが、いくつかのフォーラムを検索したり、他の開発者に相談したりするのが最善の場合もあります。コミュニティの規模だけでなく、コミュニティがどれほど歓迎的で包括的であるか、利用可能なドキュメントがどれほど優れているかも重要です。
 
 ### Opinions on the web
 
