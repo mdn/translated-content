@@ -78,7 +78,7 @@ input {
   width: calc(100% - 1em);
 }
 
-#formbox {
+#form-box {
   width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
@@ -89,7 +89,7 @@ input {
 
 ```html
 <form>
-  <div id="formBox">
+  <div id="form-box">
     <label>뭔가 입력해 보세요.</label>
     <input type="text" />
   </div>

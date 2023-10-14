@@ -11,12 +11,7 @@ Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para
 
 ## Especificações
 
-| Specification                                                                                | Status                       | Comment                                                        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------- |
-| {{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}                     | {{Spec2('WebIDL')}}     | Reformulação da definição para remover alguns casos estranhos. |
-| {{SpecName('DOM3 Core', 'core.html#DOMString', 'DOMString')}}             | {{Spec2('DOM3 Core')}} | Nenhuma mudança da {{SpecName('DOM2 Core')}}            |
-| {{SpecName('DOM2 Core', 'core.html#ID-C74D1578', 'DOMString')}}         | {{Spec2('DOM2 Core')}} | Nenhuma mudança da {{SpecName('DOM1')}}                |
-| {{SpecName('DOM1', 'level-one-core.html#ID-C74D1578', 'DOMString')}} | {{Spec2('DOM1')}}     | Definição inicial.                                             |
+{{Specifications}}
 
 ## Veja também
 

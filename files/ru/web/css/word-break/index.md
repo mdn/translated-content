@@ -108,9 +108,7 @@ word-break: unset;
 
 ## Спецификации
 
-| Specification                                                   | Status                 | Comment            |
-| --------------------------------------------------------------- | ---------------------- | ------------------ |
-| {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Initial definition |
+{{Specifications}}
 
 {{cssinfo}}
 

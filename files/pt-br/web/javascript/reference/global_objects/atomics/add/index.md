@@ -44,9 +44,7 @@ Atomics.load(ta, 0); // 12
 
 ## Especificações
 
-| Especificação                                              | Status               | Comentário                   |
-| ---------------------------------------------------------- | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.add', 'Atomics.add')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

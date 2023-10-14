@@ -64,10 +64,7 @@ Math.sinh =
 
 ## Especificações
 
-| Especificação                                          | Status               | Comentário         |
-| ------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

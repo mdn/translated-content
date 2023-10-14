@@ -61,8 +61,6 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPHeader("Content-Type")}}（需要注意额外的限制）
   - {{HTTPHeader("Range")}}（只允许[简单的范围标头值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
-> **备注：** Firefox 还没有将 `Range` 实现为安全的请求标头。参见 [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981)。
-
 - {{HTTPHeader("Content-Type")}} 标头所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
 
   - `text/plain`

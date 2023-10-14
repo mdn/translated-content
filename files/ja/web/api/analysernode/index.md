@@ -1,150 +1,152 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
+l10n:
+  sourceCommit: 2c9f6f0688db9b4437f998321044fdd22afed546
 ---
 
 {{APIRef("Web Audio API")}}
 
-**`AnalyserNode`** インタフェースはリアルタイム時間領域/周波数領域分析情報を表現します。{{domxref("AudioNode")}}は、入力から出力の流れにおいて audio stream そのものは変えず、データ加工や音声の可視化をすることができます。
+**`AnalyserNode`** インターフェイスはリアルタイム時間領域/周波数領域分析情報を表現します。 {{domxref("AudioNode")}} は、入力から出力の流れにおいて音声ストリームそのものは変えず、データ加工や音声の可視化をすることができます。
 
-１つの`AnalyzerNode`は必ず１つの入力と出力を持ちます。出力先がなくても AnalyzerNode は問題ありません。
+1 つの `AnalyserNode` は必ず 1 つの入力と出力を持ちます。出力先がなくてもこのノードは問題ありません。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
+![音声ストリームを変更することなく、ノードは FFT を使用して、それに関連する周波数と時刻のデータを取得することができます。](fttaudiodata_en.svg)
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Number of inputs</th>
+      <th scope="row">入力の数</th>
       <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row">Number of outputs</th>
-      <td><code>1</code> (but may be left unconnected)</td>
+      <th scope="row">出力の数</th>
+      <td><code>1</code> （ただし未接続のままになる）</td>
     </tr>
     <tr>
-      <th scope="row">Channel count mode</th>
-      <td><code>"explicit"</code></td>
+      <th scope="row">チャンネル数モード</th>
+      <td><code>"max"</code></td>
     </tr>
     <tr>
-      <th scope="row">Channel count</th>
-      <td><code>1</code></td>
+      <th scope="row">チャンネル数</th>
+      <td><code>2</code></td>
     </tr>
     <tr>
-      <th scope="row">Channel interpretation</th>
+      <th scope="row">チャンネルの解釈</th>
       <td><code>"speakers"</code></td>
     </tr>
   </tbody>
 </table>
 
-## Inheritance
+## コンストラクター
 
-このインタフェースは以下のインタフェースと継承関係にあります。:
+- {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
+  - : `AnalyserNode` オブジェクトの新しいインスタンスを生成します。
 
-{{InheritanceDiagram}}
+## インスタンスプロパティ
 
-## Properties
-
-_以下は、{{domxref("AudioNode")}}からプロパティを継承する_.
+_親である {{domxref("AudioNode")}} から継承したプロパティもあります_。
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : 符号なしの long 型の値で FFT（[高速フーリエ変換](http://en.wikipedia.org/wiki/Fast_Fourier_transform)）において周波数領域を決定するために使われているサイズを表している。
-- {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
-  - : 符号なしの long 型で FFT（高速フーリエ変換）のサイズの半分の値。一般的に音声再生時の可視化に用いられる。
+  - : 符号なし long 型の値で、 FFT（[高速フーリエ変換](http://en.wikipedia.org/wiki/Fast_Fourier_transform)）において周波数領域を決定するために使われているサイズを表します。
+- {{domxref("AnalyserNode.frequencyBinCount")}} {{ReadOnlyInline}}
+  - : 符号なし long 型の値で、 FFT のサイズの半分の値。一般的に音声再生時の可視化に用いられます。
 - {{domxref("AnalyserNode.minDecibels")}}
-  - : unsigned byte 型値へ変換する FFT 分析データのスケーリング時の最小のパワー値を表す double 型の値である。一般的に、この値は、getByteFrequencyData()の使用時の結果の範囲の最小値として明記される。
+  - : double 型の値で、 unsigned byte 型の値へ変換する FFT 分析データのスケーリング時の最小のパワー値を表します。一般的に、この値は、 `getByteFrequencyData()` の使用時の結果の範囲の最小値を指定します。
 - {{domxref("AnalyserNode.maxDecibels")}}
-  - : unsigned byte 型値へ変換する FFT 分析データのスケーリング時の最大のパワー値を表す double 型の値である。一般的に、この値は、getByteFrequencyData()の使用時の結果の範囲の最大値として明記される。
+  - : double 型の値で、 unsigned byte 型の値へ変換する FFT 分析データのスケーリング時の最大のパワー値を表します。一般的に、この値は、 `getByteFrequencyData()` の使用時の結果の範囲の最大値を指定します。
 - {{domxref("AnalyserNode.smoothingTimeConstant")}}
-  - : 分析フレームの平均間隔を表す double 型の値で、使用例として時間的にスペクトルを平滑化させるのに用いられる。
+  - : double 型の値で、分析フレームの平均間隔を表します。基本的に、時間的にスペクトルを平滑化させるのに用いられます。
 
-## Methods
+## インスタンスメソッド
 
-_{{domxref("AudioNode")}}からメソッドを継承する_.
+_親である {{domxref("AudioNode")}} から継承したメソッドもあります_。
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : 周波数データを引数として渡された Float32Array 配列へコピーする。
-
-<!---->
-
+  - : 現在の周波数データを、引数として渡された {{jsxref("Float32Array")}} 配列へコピーします。
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : 周波数データを引数として渡された Uint8Array 配列(unsigned byte 配列)へコピーする。
-
-<!---->
-
+  - : 現在の周波数データを、引数として渡された {{jsxref("Uint8Array")}} 配列（unsigned byte 配列）へコピーします。
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : 音声波形データを引数として渡された Float32Array 配列へコピーする。
+  - : 現在の波形または時間領域データを、渡された {{jsxref("Float32Array")}} 配列へコピーします。
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : 音声波形データを引数として渡された Uint8Array 配列(unsigned byte 配列)へコピーする。
+  - : 現在の波形または時間領域データを、引数として渡された {{jsxref("Uint8Array")}} 配列（unsigned byte 配列）へコピーします。
 
-## Examples
+## 例
 
-> **メモ:** オーディオヴィジュアライゼーションのための Web Audio API を使ったヴィジュアライゼーションガイドを御覧ください。
+> **メモ:** 音声の視覚化を作成するための詳細は、[ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)のガイドを参照してください。
 
-### Basic usage
+### 基本的な使い方
 
-以下の例では、AudioContext から１つの AnalyserNode を作成しており、requestAnimationFrame と\<canvas>へ繰り返し時間波形データを繰り返し集め現入力を"オシロスコープスタイル"で出力し描画している。
-
-より多くのサンプルは 我々の [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) デモにご覧頂けます。 (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+次の例では、 {{domxref("AudioContext")}} で `AnalyserNode` を作成し、 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} と {{htmlelement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
+より完全な応用例/情報については、 [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) のデモを調べてください（関連するコードは [app.js の 108-193 行目](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-  ...
+// …
 
+const analyser = audioCtx.createAnalyser();
 analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
+
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
+
+// Connect the source to be analysed
+source.connect(analyser);
+
+// Get a canvas defined with ID "oscilloscope"
+const canvas = document.getElementById("oscilloscope");
+const canvasCtx = canvas.getContext("2d");
 
 // draw an oscilloscope of the current audio source
 
 function draw() {
+  requestAnimationFrame(draw);
 
-      drawVisual = requestAnimationFrame(draw);
+  analyser.getByteTimeDomainData(dataArray);
 
-      analyser.getByteTimeDomainData(dataArray);
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.beginPath();
 
-      canvasCtx.beginPath();
+  const sliceWidth = (canvas.width * 1.0) / bufferLength;
+  let x = 0;
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+  for (let i = 0; i < bufferLength; i++) {
+    const v = dataArray[i] / 128.0;
+    const y = (v * canvas.height) / 2;
 
-      for(var i = 0; i < bufferLength; i++) {
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+    x += sliceWidth;
+  }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
+  canvasCtx.stroke();
+}
 
-        x += sliceWidth;
-      }
-
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
+draw();
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

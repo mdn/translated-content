@@ -60,6 +60,7 @@ jobs:
       - name: Lint Markdown files
         run: |
           yarn markdownlint-cli2 --fix "**/${{ matrix.lang }}/**/*.md"
+          node ./scripts/check-url-locale.js --fix "files/${{ matrix.lang }}"
           yarn prettier -w "**/${{ matrix.lang }}/**/*.md"
           cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
 

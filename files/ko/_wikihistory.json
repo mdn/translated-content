@@ -4861,10 +4861,6 @@
     "modified": "2020-10-15T21:39:41.961Z",
     "contributors": ["alattalatta", "fscholz", "epicsaga"]
   },
-  "Web/CSS/Adjacent_sibling_combinator": {
-    "modified": "2020-10-15T21:53:17.801Z",
-    "contributors": ["alattalatta", "neatnet"]
-  },
   "Web/CSS/Alternative_style_sheets": {
     "modified": "2019-03-23T23:52:49.065Z",
     "contributors": ["teoli", "Suguni"]
@@ -5247,10 +5243,6 @@
     "modified": "2020-10-15T22:25:55.745Z",
     "contributors": ["alattalatta"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2020-10-15T22:25:59.669Z",
-    "contributors": ["alattalatta"]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-10-15T22:16:17.946Z",
     "contributors": ["alattalatta"]
@@ -5262,6 +5254,10 @@
   "Web/CSS/Layout_mode": {
     "modified": "2020-08-05T01:05:50.434Z",
     "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/Next-sibling_combinator": {
+    "modified": "2020-10-15T21:53:17.801Z",
+    "contributors": ["alattalatta", "neatnet"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2020-08-13T04:55:02.947Z",
@@ -5306,6 +5302,10 @@
   "Web/CSS/Specificity": {
     "modified": "2020-03-13T15:56:02.613Z",
     "contributors": ["EatChangmyeong", "alattalatta", "Netaras"]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2020-10-15T22:25:59.669Z",
+    "contributors": ["alattalatta"]
   },
   "Web/CSS/Syntax": {
     "modified": "2020-08-04T07:19:16.823Z",

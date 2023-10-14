@@ -1,6 +1,9 @@
 ---
-title: Event.preventDefault()
+title: "Event: preventDefault() メソッド"
+short-title: preventDefault()
 slug: Web/API/Event/preventDefault
+l10n:
+  sourceCommit: 32b07aa5b6ac4799a88e7b87a4d8333643ab6427
 ---
 
 {{apiref("DOM")}}
@@ -13,8 +16,8 @@ slug: Web/API/Event/preventDefault
 
 ## 構文
 
-```js
-event.preventDefault();
+```js-nolint
+event.preventDefault()
 ```
 
 ## 例
@@ -26,15 +29,15 @@ event.preventDefault();
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener(
-  "click",
-  function (event) {
-    document.getElementById("output-box").innerHTML +=
-      "ごめん！ <code>preventDefault()</code> がチェックさせません！<br>";
-    event.preventDefault();
-  },
-  false,
-);
+const checkbox = document.querySelector("#id-checkbox");
+
+checkbox.addEventListener("click", checkboxClick, false);
+
+function checkboxClick(event) {
+  let warn = "preventDefault() がこのチェックを妨害しています。<br>";
+  document.getElementById("output-box").innerHTML += warn;
+  event.preventDefault();
+}
 ```
 
 #### HTML
@@ -60,14 +63,15 @@ document.querySelector("#id-checkbox").addEventListener(
 
 #### HTML
 
-こちらがフォームです。
+下の HTML フォームはユーザーの入力をキャプチャします。
+キー入力にしか興味がないので、`autocomplete` を無効にして、ブラウザーがキャッシュした値で入力フィールドを埋めるのを防いでいます。
 
 ```html
 <div class="container">
   <p>名前を小文字のみで入力してください。</p>
 
   <form>
-    <input type="text" id="my-textbox" />
+    <input type="text" id="my-textbox" autocomplete="off" />
   </form>
 </div>
 ```
@@ -89,29 +93,24 @@ document.querySelector("#id-checkbox").addEventListener(
 
 #### JavaScript
 
-そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keypress_event", "keypress")}} イベントを待ち受けします。
+そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keydown_event", "keydown")}} イベントを待ち受けします。
 
 ```js
-var myTextbox = document.getElementById("my-textbox");
-myTextbox.addEventListener("keypress", checkName, false);
+const myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keydown", checkName, false);
 ```
 
 `checkName()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
 
 ```js
 function checkName(evt) {
-  var charCode = evt.charCode;
-  if (charCode != 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      displayWarning(
-        "小文字のみを使用してください。" +
-          "\n" +
-          "charCode: " +
-          charCode +
-          "\n",
-      );
-    }
+  const key = evt.key;
+  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!lowerCaseAlphabet.includes(key)) {
+    evt.preventDefault();
+    displayWarning(
+      "小文字のみを使用してください。\n" + `押されたキー: ${key}\n`,
+    );
   }
 }
 ```
@@ -119,21 +118,21 @@ function checkName(evt) {
 `displayWarning()` 関数は、問題発生の通知を表示します。これはエレガントな関数ではありませんが、この例の目的には十分です。
 
 ```js
-var warningTimeout;
-var warningBox = document.createElement("div");
+let warningTimeout;
+const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
   warningBox.innerHTML = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
     // insert warningBox after myTextbox
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function () {
+  warningTimeout = setTimeout(() => {
     warningBox.parentNode.removeChild(warningBox);
     warningTimeout = -1;
   }, 2000);

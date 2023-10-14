@@ -93,9 +93,7 @@ Object.getPrototypeOf(nullExtends.prototype); // null
 
 ## Especificações
 
-| Especificação                                            | Status           | Comentário         |
-| -------------------------------------------------------- | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-class-definitions', 'extends')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

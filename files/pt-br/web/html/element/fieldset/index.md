@@ -60,11 +60,11 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
-- {{htmlattrdef("form")}}
+- `form`
   - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
-- {{htmlattrdef("name")}}
+- `name`
 
   - : O nome associado com o grupo.
 
@@ -371,12 +371,7 @@ O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 
 ## Especificações
 
-| Especificação                                                                      | Status                   | Comentário                                                      |
-| ---------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento fieldset                                  |
-| {{SpecName('HTML WHATWG', 'rendering.html#the-fieldset-and-legend-elements')}}     | {{Spec2('HTML WHATWG')}} | Padrão sugerido de renderização dos elementos fieldset e legend |
-| {{SpecName('HTML5 W3C', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}   | {{Spec2('HTML5 W3C')}}   |                                                                 |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}        | {{Spec2('HTML4.01')}}    | Definição inicial                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
