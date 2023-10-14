@@ -1,5 +1,5 @@
 ---
-title: クライアント側フレームワークの概要 
+title: クライアントサイドフレームワークの概要 
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 l10n:
   sourceCommit: 7c7473588e7fb487df574c64307b11a3ecd55cd1
