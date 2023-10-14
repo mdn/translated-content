@@ -165,11 +165,11 @@ JavaScript フレームワークは、この種の作業をはるかに簡単に
 - [`node.appendChild()`](/ja/docs/Web/API/Node/appendChild)
 - [`node.removeChild()`](/ja/docs/Web/API/Node/removeChild)
 
-## Another way to build UIs
+## UI を構築する別の方法
 
-Every JavaScript framework offers a way to write user interfaces more _declaratively_. That is, they allow you to write code that describes how your UI should look, and the framework makes it happen in the DOM behind the scenes.
+すべての JavaScript フレームワークは、ユーザーインターフェイスをより _宣言的に_ 記述する方法を提供します。 つまり、UI がどのように見えるべきかを記述するコードを作成でき、フレームワークはそれを舞台裏の DOM で実行します。
 
-The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance. By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
+新しい DOM 要素を繰り返し構築する標準的な JavaScript のアプローチは、一見しただけでは理解するのが困難でした。 対照的に、次のコードブロックは、Vue を使用してタスクのリストを記述する方法を示しています。
 
 ```html
 <ul>
@@ -180,11 +180,11 @@ The vanilla JavaScript approach to building out new DOM elements in repetition w
 </ul>
 ```
 
-That's it. This snippet reduces approximately thirty-two lines of code down to six lines. If the curly braces and `v-` attributes here are unfamiliar to you, that's okay; you'll learn about Vue-specific syntax later on in the module. The thing to take away here is that this code looks like the UI it represents, whereas the vanilla JavaScript code does not.
+これだけです。このスニペットにより、約 32 行のコードが 6 行に減ります。 ここでの中括弧と `v-` 属性に馴染みがなくても大丈夫です。 Vue 固有の構文については、モジュールの後半で学習します。ここで理解すべきことは、このコードはそれが表す UI に似ているのに対し、 Vanilla Javascript コードはそうではないということです。
 
-Thanks to Vue, we didn't have to write our own functions for building the UI; the framework will handle that for us in an optimized, efficient way. Our only role here was to describe to Vue what each item should look like. Developers who are familiar with Vue can quickly work out what is going on when they join our project. Vue is not alone in this: using a framework improves team as well as individual efficiency.
+Vue のおかげで、 UI を構築するために独自の関数を作成する必要がなくなりました。フレームワークは、最適化された効率的な方法でそれを処理します。ここでの私たちの唯一の役割は、各項目がどのように見えるべきかを Vue に記述することでした。 Vue に精通している開発者は、プロジェクトに参加すると何が起こっているのかをすぐに理解できます。これは Vue だけではありません。フレームワークを使用すると、チームだけでなく個人の効率も向上します。
 
-It's possible to do things _similar_ to this in vanilla JavaScript. [Template literal strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) make it easy to write strings of HTML that represent what the final element would look like. That might be a useful idea for something as simple as our to-do list application, but it's not maintainable for large applications that manage thousands of records of data, and could render just as many unique elements in a user interface.
+これと _似たようなこと_ を Vanilla Javascript でも実現できます。[テンプレートリテラル文字列](/ja/docs/Web/JavaScript/Reference/Template_literals) を使用すると、最終的な要素がどのようになるかを表す HTML の文字列を簡単に作成できます。これは、To Do リストアプリケーションのような単純なものには便利なアイデアかもしれませんが、数千のデータレコードを管理し、ユーザーインターフェイスに同じ数の固有の要素をレンダリングする可能性がある大規模なアプリケーションでは維持できません。
 
 ## Other things frameworks give us
 
