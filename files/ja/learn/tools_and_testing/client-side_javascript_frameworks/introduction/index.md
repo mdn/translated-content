@@ -58,11 +58,11 @@ Angular は、宣言型 HTML テンプレートを使用するコンポーネン
 
 ### Vue
 
-After working on and learning from the original [AngularJS](https://angularjs.org/) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
+オリジナルの [AngularJS](https://angularjs.org/)プロジェクトに取り組み、そこから学んだエヴァン・ユーは、2014年に [Vue](https://vuejs.org/) をリリースしました。Vueはビッグ4の中では最も歴史が浅いが、最近人気が急上昇しています。
 
-Vue, like [AngularJS](https://angularjs.org/), extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
+Vue は、[AngularJS](https://angularjs.org/) と同様に、独自のコードの一部で HTML を拡張します。 それとは別に、主に最新の標準 JavaScript に依存しています。
 
-[Start learning Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+[Vue の学習を開始する](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
 
 ### React
 
