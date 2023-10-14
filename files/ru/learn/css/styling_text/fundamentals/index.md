@@ -1,8 +1,6 @@
 ---
 title: Основы стилизирования текста и шрифта
 slug: Learn/CSS/Styling_text/Fundamentals
-l10n:
-  sourceCommit: 9a272d3d84d344df6beb8ccfd5fe78131bb01f2e
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists",
