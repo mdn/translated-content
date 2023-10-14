@@ -38,9 +38,9 @@ JavaScript とフレームワークの簡単な歴史を見て、フレームワ
 
 JavaScript フレームワークは、あなたが毎日使用するウェブサイトの多くを含む、現代のウェブ上の優れたソフトウェアの多くを強化しています。 現在この記事を読んでいる MDN Web Docs は、React/ReactDOM フレームワークを使用してフロントエンドを強化します。
 
-## What frameworks are out there?
+## どのようなフレームワークがあるのでしょうか?
 
-There are many frameworks out there, but currently the "big four" are considered to be the following.
+さまざまなフレームワークが存在しますが、現在「ビッグ 4 」は次のとおりであると考えられています。
 
 ### Ember
 
