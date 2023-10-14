@@ -196,9 +196,9 @@ Vue のおかげで、 UI を構築するために独自の関数を作成する
 
 > **メモ:** ウェブツールのコンセプトについてもっと詳しく知りたい方は、[クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)をご覧ください。
 
-### Compartmentalization
+### コンパートメント化
 
-Most major frameworks encourage developers to abstract the different parts of their user interfaces into _components_ — maintainable, reusable chunks of code that can communicate with one another. All the code related to a given component can live in one file (or a couple of specific files) so that you as a developer know exactly where to go to make changes to that component. In a vanilla JavaScript app, you'd have to create your own set of conventions to achieve this in an efficient, scalable way. Many JavaScript developers, if left to their own devices, could end up with all the code related to one part of the UI being spread out all over a file — or in another file altogether.
+ほとんどの主要なフレームワークは、開発者がユーザーインターフェイスのさまざまな部分を _コンポーネント_ 、つまり相互に通信できる保守可能で再利用可能なコードの塊に抽象化することを推奨しています。特定のコンポーネントに関連するすべてのコードは 1 つのファイル (またはいくつかの特定のファイル) に保存できるため、開発者はそのコンポーネントに変更を加えるためにどこに行けばよいかを正確に知ることができます。 Vanilla Javascript アプリでは、これを効率的かつスケーラブルな方法で実現するには、独自の規則セットを作成する必要があります。 多くの JavaScript 開発者は、自分のデバイスに任せると、UI の一部に関連するすべてのコードが 1 つのファイル全体に、または別のファイル全体に分散されてしまう可能性があります。
 
 ### Routing
 
