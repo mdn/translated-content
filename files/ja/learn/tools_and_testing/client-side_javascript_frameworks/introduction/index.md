@@ -74,15 +74,15 @@ React は、 [JSX](https://react.dev/learn/writing-markup-with-jsx) として知
 
 [React の学習を開始する](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 
-## Why do frameworks exist?
+## 何故フレームワークが存在するのでしょうか? 
 
-We've discussed the environment that inspired the creation of frameworks, but not really _why_ developers felt the need to make them. Exploring the why requires first examining the challenges of software development.
+フレームワークの作成にインスピレーションを与えた環境について説明しましたが、実際には、開発者がフレームワークを作成する必要性を _なぜ_ 感じたのかというと、そうではありません。 その理由を探るには、まずソフトウェア開発の課題を検討する必要があります。
 
-Consider a common kind of application: A to-do list creator, which we'll look at implementing using a variety of frameworks in future chapters. This application should allow users to do things like render a list of tasks, add a new task, and delete a task; and it must do this while reliably tracking and updating the data underlying the application. In software development, this underlying data is known as state.
+一般的な種類のアプリケーション、To-Do リスト作成ツールを考えてみましょう。これについては、今後の章でさまざまなフレームワークを使用して実装する方法を見ていきます。このアプリケーションでは、ユーザーがタスクのリストの表示、新しいタスクの追加、タスクの削除などを実行できるようにする必要があります。 そして、アプリケーションの基礎となるデータを確実に追跡および更新しながらこれを実行する必要があります。ソフトウェア開発では、この基礎となるデータは状態として知られています。
 
-Each of our goals is theoretically simple in isolation. We can iterate over the data to render it; we can add to an object to make a new task; we can use an identifier to find, edit, or delete a task. When we remember that the application has to let the user do _all_ of these things through the browser, some cracks start to show. **The real problem is this: every time we change our application's state, we need to update the UI to match.**
+私達のそれぞれの目標は、理論的には単独では単純です。データを反復処理してレンダリングできます。オブジェクトに追加して新しいタスクを作成できます。識別子を使用してタスクを検索、編集、削除できます。アプリケーションではユーザーがこれら _すべて_ をブラウザ経由で実行できるようにする必要があることを思い出すと、いくつかの課題が見え始めます。**本当の問題は、アプリケーションの状態を変更するたびに、それに合わせて UI を更新する必要があるということです。**
 
-We can examine the difficulty of this problem by looking at just _one_ feature of our to-do list app: rendering a list of tasks.
+この問題の難しさは、To Do リスト アプリの _1_ つの機能、つまりタスクのリストのレンダリングだけを見て調べることができます。
 
 ## The verbosity of DOM changes
 
