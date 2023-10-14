@@ -311,10 +311,10 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 
 静的サイト ジェネレーター全体について詳しく知りたい場合は、Tatiana Mac の [Eleventy の初心者ガイド](https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/) を参照してください。 シリーズの最初の記事では、静的サイト ジェネレーターとは何か、そしてそれが Web コンテンツを公開する他の手段とどのように関連するのかについて説明します。
 
-## Summary
+## まとめ
 
-And that brings us to the end of our introduction to frameworks — we've not taught you any code yet, but hopefully we've given you a useful background on why you'd use frameworks in the first place and how to go about choosing one, and made you excited to learn more and get stuck in!
+これで、フレームワークの紹介は終わりになります。まだコードを教えていませんが、そもそもフレームワークを使用する理由と、フレームワークの選択方法について有益な背景を提供できたことを願っています。 1 つ目は、もっと学びたい、夢中になってみたいという気持ちが高まりました。
 
-Our next article goes down to a lower level, looking at the specific kinds of features frameworks tend to offer, and why they work as they do.
+次の記事では、より低いレベルまで掘り下げて、フレームワークが提供する傾向にある特定の種類の機能と、フレームワークがなぜそのように機能するのかを見ていきます。
 
 {{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
