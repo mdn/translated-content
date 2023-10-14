@@ -1,79 +1,88 @@
 ---
 title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
+l10n:
+  sourceCommit: 402d8cd44691881e55bf214a7c0cb02bcb817305
 ---
 
 {{LearnSidebar}}
 
-正如在[前面的文章](/zh-CN/docs/HTML/Forms/Sending_and_retrieving_form_data)中讲到的，HTML 表单可以声明式地发送一个 HTTP 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求。本文探讨如何做到这一点。
+HTML 表单可以声明式地发送一个 [HTTP](/zh-CN/docs/Web/HTTP) 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求（例如通过 `XMLHttpRequest`）。本文对这些方法进行了探讨。
 
 ## 表单不总是表单
 
-在渐进式 Web 应用中，使用 [HTML 表单](/zh-CN/docs/Learn/Forms)而不是文字表单让人们来填写变得越来越普遍了——越来越多的开发人员正致力于控制传输数据。
+在渐进式 Web 应用、单页应用和基于框架的应用中，通常会使用 [HTML 表单](/zh-CN/docs/Learn/Forms)来发送数据，而不会在收到响应数据时加载新文档。让我们先来谈谈为什么这需要一种不同的方法。
 
 ### 获得整体界面的控制
 
-标准的 HTML 表单提交会加载数据要发送到的 URL，这意味着浏览器窗口以整页加载进行导航。可以通过隐藏闪烁和网络滞后来避免整页加载以提供更平滑的体验。
+如前一篇文章所述，标准 HTML 表单提交会加载发送数据的 URL，这意味着浏览器窗口会以全页面加载的方式进行导航。避免全页面加载可以避免网络延迟和可能出现的视觉问题（如闪烁），从而提供更流畅的体验。
 
-许多现代用户界面只使用 HTML 表单来收集用户的输入。当用户尝试发送数据时，应用程序将在后台采取控制并且异步地传输数据，只更新 UI 中需要更改的部分。
+许多现代用户界面只使用 HTML 表单来收集用户输入，而不是用于数据提交。当用户尝试发送数据时，应用程序会控制并在后台异步传输数据，只更新用户界面中需要更改的部分。
 
-异步地发送任何数据被称为 [AJAX](/zh-CN/docs/Web/Guide/AJAX)，它代表“**异步 JavaScript 和 XML**”（Asynchronous JavaScript And XML）。
+异步发送任意数据一般称为 [AJAX](/zh-CN/docs/Web/Guide/AJAX)，它代表“**异步 JavaScript 和 XML**”。
 
 ### 表单提交和 AJAX 请求之间的区别？
 
-{{domxref("XMLHttpRequest")}}（XHR）DOM 对象可以构造 HTTP 请求、发送它们，并获取请求结果。创建之初，{{domxref("XMLHttpRequest")}} 被设计用于将 [XML](/zh-CN/docs/Web/XML) 作为传输数据的格式获取和发送。不过，如今 [JSON](/zh-CN/docs/Glossary/JSON) 已经取代了 XML。但是 XML 和 JSON 都不适合对表单数据请求编码。表单数据（`application/x-www-form-urlencoded`）由 URL 编码的键/值对列表组成。为了传输二进制数据，HTTP 请求被重新整合成 `multipart/form-data` 形式。
+{{domxref("XMLHttpRequest")}}（XHR）DOM 对象可以构建 HTTP 请求、发送请求并获取结果。从历史上看，{{domxref("XMLHttpRequest")}} 是为获取和发送 [XML](/zh-CN/docs/Web/XML) 作为交换格式而设计的，后来这种格式被 [JSON](/zh-CN/docs/Glossary/JSON) 所取代。但是，XML 和 JSON 都不适合表单数据请求编码。表单数据（`application/x-www-form-urlencoded`）由键/值对的 URL 编码列表组成。为了传输二进制数据，HTTP 请求被重塑为 `multipart/form-data`。
 
-AJAX 技术主要依靠 {{domxref("XMLHttpRequest")}} (XHR) DOM 对象。它
+> **备注：** 如今 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 常用于取代 XHR——它是 XHR 的更现代、更新的版本，工作原理类似，但有一些优点。你在本文中看到的大部分 XHR 代码都可以换成 Fetch。
 
-> **备注：** 如今 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 常用于取代 XHR——它是 XHR 的更现代、更新的版本，其工作原理类似，但具有一些有点。你将在本文中看到的大多数 XHR 代码都可以替换为 Fetch。
+如果你控制了前端（在浏览器中执行的代码）和后端（在服务器上执行的代码），就可以发送 JSON/XML，并随心所欲地处理它们。
 
-如果你控制前端（在浏览器中执行的代码）和后端（在服务器上执行的代码），则可以发送 JSON/XML 并根据需要处理它们。
+但如果要使用第三方服务，就需要按照服务要求的格式发送数据。
 
-但是，如果你想使用第三方服务，你就需要根据服务要求的格式发送数据。
-
-那么如何发送这样的数据呢？下面介绍了你需要使用的不同技术。
+那么我们应该如何发送这些数据呢？下面将介绍所需要的不同技术。
 
 ## 发送表单数据
 
-一共有三种方式来发送表单数据：包括两种传统的方法和一种利用 {{domxref("XMLHttpRequest/FormData","formData")}} 对象的新方法。让我们仔细看一下：
+一共有三种方式来发送表单数据：
 
-### 构建 XMLHttpRequest
+- 手工构建 `XMLHttpRequest`。
+- 使用独立的 `FormData` 对象。
+- 使用绑定到 `<form>` 元素的 `FormData`。
 
-{{domxref("XMLHttpRequest")}} 是进行 HTTP 请求的最安全和最可靠的方式。要使用 {{domxref("XMLHttpRequest")}} 发送表单数据，请通过对其进行 URL 编码来准备数据，并遵守表单数据请求的具体细节。
+让我们仔细看一下。
 
-让我们重建之前的这个例子：
+### 手工构建 XMLHttpRequest
+
+{{domxref("XMLHttpRequest")}} 是进行 HTTP 请求的最安全可靠的方式。要使用 {{domxref("XMLHttpRequest")}} 发送表单数据，请通过 URL 编码准备数据，并遵守表单数据请求的具体规定。
+
+让我们看个示例：
 
 ```html
-<button type="button" onclick="sendData({test:'ok'})">点击我！</button>
+<button>点我！</button>
 ```
 
-正如你所看到的，HTML 实际上没什么改变。不过，JavaScript 变得截然不同了：
+这是 JavaScript 代码部分：
 
 ```js
-function sendData(data) {
-  var XHR = new XMLHttpRequest();
-  var urlEncodedData = "";
-  var urlEncodedDataPairs = [];
-  var name;
+const btn = document.querySelector("button");
 
-  // 将数据对象转换为URL编码的键/值对数组。
-  for (name in data) {
+function sendData(data) {
+  console.log("Sending data");
+
+  const XHR = new XMLHttpRequest();
+
+  const urlEncodedDataPairs = [];
+
+  // 将数据对象转换为 URL 编码的键/值对数组。
+  for (const [name, value] of Object.entries(data)) {
     urlEncodedDataPairs.push(
-      encodeURIComponent(name) + "=" + encodeURIComponent(data[name]),
+      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
     );
   }
 
-  // 将配对合并为单个字符串，并将所有%编码的空格替换为
+  // 将配对合并为单个字符串，并将所有 % 编码的空格替换为
   // “+”字符；匹配浏览器表单提交的行为。
-  urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
+  const urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
 
   // 定义成功数据提交时发生的情况
-  XHR.addEventListener("load", function (event) {
+  XHR.addEventListener("load", (event) => {
     alert("耶！已发送数据并加载响应。");
   });
 
   // 定义错误提示
-  XHR.addEventListener("error", function (event) {
+  XHR.addEventListener("error", (event) => {
     alert("哎呀！出问题了。");
   });
 
@@ -86,47 +95,53 @@ function sendData(data) {
   // 最后，发送我们的数据。
   XHR.send(urlEncodedData);
 }
+
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
+});
 ```
 
-在线演示：
+这里是实时演示效果：
 
 {{EmbedLiveSample("构建_xmlhttprequest", "100%", 50)}}
 
-> **备注：** 当你想要往第三方网站传输数据时，使用{{domxref("XMLHttpRequest")}}会受到同源策略的影响。如果你需要执行跨域请求，你需要熟悉一下[CORS 和 HTTP 访问控制](/zh-CN/docs/HTTP/Access_control_CORS).
+> **备注：** 当你想要往第三方网站传输数据时，使用 {{domxref("XMLHttpRequest")}} 会受到{{glossary('same-origin policy', '同源策略')}}的影响。如果你需要执行跨源请求，你需要熟悉一下 [CORS 和 HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)。
 
-### 使用 XMLHttpRequest 和 the FormData object（表单数据对象）
+### 使用 XMLHttpRequest 和 FormData 对象
 
-手动建立一个 HTTP 请求非常困难。幸运的是，最近的 [XMLHttpRequest 规范](http://www.w3.org/TR/XMLHttpRequest/)提供了一种方便简单的方法 — 利用{{domxref("XMLHttpRequest/FormData","FormData")}}对象来处理表单数据请求。
+手动建立一个 HTTP 请求非常困难。幸运的是，[XMLHttpRequest 规范](https://www.w3.org/TR/XMLHttpRequest/)提供了一种方便简单的方法——利用 {{domxref("FormData","FormData")}} 对象来处理表单数据请求。
 
-{{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是“只写”的，这意味着你可以更改它们，但不能检索其内容。
+{{domxref("FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。
 
-使用这个对象在[Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
+该对象的使用详见[使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)，下面是两个示例：
 
 #### 使用一个独立的 FormData 对象
 
 ```html
-<button type="button" onclick="sendData({test:'ok'})">点我！</button>
+<button>点我！</button>
 ```
 
-你应该会觉得那个 HTML 示例很熟悉。
+你应该会觉得那个 HTML 示例很熟悉，现在来展示 JavaScript 代码：
 
 ```js
+const btn = document.querySelector("button");
+
 function sendData(data) {
-  var XHR = new XMLHttpRequest();
-  var FD = new FormData();
+  const XHR = new XMLHttpRequest();
+  const FD = new FormData();
 
   // 把我们的数据添加到这个 FormData 对象中
-  for (name in data) {
-    FD.append(name, data[name]);
+  for (const [name, value] of Object.entries(data)) {
+    FD.append(name, value);
   }
 
   // 定义数据成功发送并返回后执行的操作
-  XHR.addEventListener("load", function (event) {
-    alert("Yeah! 已发送数据并加载响应。");
+  XHR.addEventListener("load", (event) => {
+    alert("耶！已发送数据并加载响应。");
   });
 
   // 定义发生错误时执行的操作
-  XHR.addEventListener("error", function (event) {
+  XHR.addEventListener("error", (event) => {
     alert("Oops! 出错了。");
   });
 
@@ -136,22 +151,26 @@ function sendData(data) {
   // 发送这个 formData 对象，HTTP 请求头会自动设置
   XHR.send(FD);
 }
+
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
+});
 ```
 
-在线演示：
+这里是实时演示效果：
 
 {{EmbedLiveSample("使用一个独立的_FormData_对象", "100%", 50)}}
 
 #### 使用绑定到表单元素上的 FormData
 
-你也可以把一个 `FormData` 对象绑定到一个 {{HTMLElement("form")}} 元素上。这会创建一个代表表单中包含元素的 `FormData` 。
+你也可以把一个 `FormData` 对象绑定到一个 {{HTMLElement("form")}} 元素上。这会创建一个 `FormData` 对象，表示表单中包含的数据。
 
 这段 HTML 是典型的情况：
 
 ```html
 <form id="myForm">
   <label for="myName">告诉我你的名字：</label>
-  <input id="myName" name="name" value="John" />
+  <input id="myName" name="name" value="小明" />
   <input type="submit" value="提交" />
 </form>
 ```
@@ -159,20 +178,20 @@ function sendData(data) {
 但是 JavaScript 接管了这个表单：
 
 ```js
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   function sendData() {
-    var XHR = new XMLHttpRequest();
+    const XHR = new XMLHttpRequest();
 
     // 我们把这个 FormData 和表单元素绑定在一起。
-    var FD = new FormData(form);
+    const FD = new FormData(form);
 
-    // 我们定义了数据成功发送时会发生的事。
-    XHR.addEventListener("load", function (event) {
+    // 我们定义了数据成功发送时会发生的事件
+    XHR.addEventListener("load", (event) => {
       alert(event.target.responseText);
     });
 
-    // 我们定义了失败的情形下会发生的事
-    XHR.addEventListener("error", function (event) {
+    // 我们定义了失败的情形下会发生的事件
+    XHR.addEventListener("error", (event) => {
       alert("哎呀！出了一些问题。");
     });
 
@@ -183,11 +202,11 @@ window.addEventListener("load", function () {
     XHR.send(FD);
   }
 
-  // 我们需要获取表单元素
-  var form = document.getElementById("myForm");
+  // 获取表单元素
+  const form = document.getElementById("myForm");
 
-  // ...然后接管表单的提交事件
-  form.addEventListener("submit", function (event) {
+  // 接管表单的 submit 事件
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     sendData();
@@ -195,115 +214,54 @@ window.addEventListener("load", function () {
 });
 ```
 
-在线演示：
+这里是实时演示效果：
 
 {{EmbedLiveSample("使用绑定到表单元素上的_FormData", "100%", 50)}}
 
-你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
-
-### 在隐藏的 iframe 中构建 DOM
-
-最古老的异步发送表单数据方法是用 DOM API 构建表单，然后将其数据发送到隐藏的 {{HTMLElement("iframe")}}。要获得提交的结果，请获取{{HTMLElement("iframe")}}的内容。
-
-> **警告：** 不要使用这项技术。有第三方服务的安全风险，因为它会使你暴露在 [脚本注入攻击](http://en.wikipedia.org/wiki/Cross-site_scripting) 中。如果你使用 HTTPS，它会影响 [同源策略](/zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript), 这可以使 {{HTMLElement("iframe")}} 内容无法访问。然而，该方法可能是你需要支持很古老的浏览器的唯一选择。
-
-下面是个简单的例子：
-
-```html
-<button onclick="sendData({test:'ok'})">点击我！</button>
-```
-
-所有操作都在下面这段脚本里：
-
-```js
-// 首先创建一个用来发送数据的 iframe.
-var iframe = document.createElement("iframe");
-iframe.name = "myTarget";
-
-// 然后，将 iframe 附加到主文档
-window.addEventListener("load", function () {
-  iframe.style.display = "none";
-  document.body.appendChild(iframe);
-});
-
-// 下面这个函数是真正用来发送数据的。
-// 它只有一个参数，一个由键值对填充的对象。
-function sendData(data) {
-  var name,
-    form = document.createElement("form"),
-    node = document.createElement("input");
-
-  // 定义响应时发生的事件
-  iframe.addEventListener("load", function () {
-    alert("Yeah! Data sent.");
-  });
-
-  form.action = "http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi";
-  form.target = iframe.name;
-
-  for (name in data) {
-    node.name = name;
-    node.value = data[name].toString();
-    form.appendChild(node.cloneNode());
-  }
-
-  // 表单元素需要附加到主文档中，才可以被发送。
-  form.style.display = "none";
-  document.body.appendChild(form);
-
-  form.submit();
-
-  // 表单提交后，就可以删除这个表单，不影响下次的数据发送。
-  document.body.removeChild(form);
-}
-```
-
-在线演示：
-
-{{EmbedLiveSample("在隐藏的 iframe 中构建 DOM", "100%", 50)}}
+你甚至可以通过使用表单的 {{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理它们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
 
 ## 处理二进制数据
 
-如果你使用一个含有 `<input type="file">` 组件的表格的 {{domxref("XMLHttpRequest/FormData","FormData")}} 对象，传给代码的数据会被自动处理。但是要手动发送二进制数据的话，还有额外的工作要做。
+如果你使用一个含有 `<input type="file">` 组件的 {{domxref("FormData","FormData")}} 表单对象，数据会被自动处理。但是要手动发送二进制数据的话，还有额外的工作要做。
 
-在现代网络上，二进制数据有很多来源：例如{{domxref("FileReader")}} API、{{domxref("HTMLCanvasElement","Canvas")}} API、[WebRTC](/zh-CN/docs/WebRTC/navigator.getUserMedia) API，等等。不幸的是，一些过时的浏览器无法访问二进制数据，或是需要非常复杂的工作环境。这些遗留问题已经超出了本文的涵盖范围。如果你想了解更多关于 `FileReader` API 的知识，参阅：[如何在 web 应用程序中使用文件](/zh-CN/docs/Using_files_from_web_applications)。
+在现代网络上，二进制数据有很多来源：例如 {{domxref("FileReader")}}、{{domxref("HTMLCanvasElement","Canvas")}}、[WebRTC](/zh-CN/docs/Web/API/Navigator/getUserMedia)，等等。不幸的是，一些过时的浏览器无法访问二进制数据，或是需要非常复杂的工作环境。这些遗留问题已经超出了本文的涵盖范围。如果你想了解更多关于 `FileReader` API 的知识，参见[如何在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)。
 
-在 {{domxref("XMLHttpRequest/FormData","formData")}} 的帮助下，发送二进制数据非常简单，使用 `append()` 方法就可以了。如果你必须手动进行，那确实会有一些棘手。
+发送二进制数据最简单的方法是使用 {{domxref("FormData", "FormData")}} 的 `append()` 方法，如上图所示。如果必须手工操作，就比较麻烦了。
 
-在下面的例子中，我们使用了{{domxref("FileReader")}} API 来访问二进制数据，然后手动构建多重表单数据请求：
+在下面的例子中，我们使用了{{domxref("FileReader")}} API 来访问二进制数据，然后手动构建多部分表单数据请求：
 
 ```html
 <form id="myForm">
   <p>
-    <label for="i1">文本数据：</label>
-    <input id="i1" name="myText" value="一些文本数据" />
+    <label for="theText">文本数据：</label>
+    <input id="theText" name="myText" value="一些文本数据" type="text" />
   </p>
   <p>
-    <label for="i2">文件数据：</label>
-    <input id="i2" name="myFile" type="file" />
+    <label for="theFile">文件数据：</label>
+    <input id="theFile" name="myFile" type="file" />
   </p>
   <button>提交！</button>
 </form>
 ```
 
-如你所见，这个 HTML 只是一个标准的 `<form>`。没有什么神奇的事情发生。“魔法”都在 JavaScript 里：
+如你所见，这个 HTML 只是一个标准的 `<form>`，没有什么神奇的事情。“魔法”都在 JavaScript 里：
 
 ```js
 // 因为我们想获取 DOM 节点，
 // 我们在页面加载时初始化我们的脚本。
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   // 这些变量用于存储表单数据
-  var text = document.getElementById("i1");
-  var file = {
-    dom: document.getElementById("i2"),
+  const text = document.getElementById("theText");
+  const file = {
+    dom: document.getElementById("theFile"),
     binary: null,
   };
 
   // 使用 FileReader API 获取文件内容
-  var reader = new FileReader();
+  const reader = new FileReader();
 
   // 因为 FileReader 是异步的，会在完成读取文件时存储结果
-  reader.addEventListener("load", function () {
+  reader.addEventListener("load", () => {
     file.binary = reader.result;
   });
 
@@ -313,7 +271,7 @@ window.addEventListener("load", function () {
   }
 
   // 如果没有被选择，一旦用户选择了它，就读取文件。
-  file.dom.addEventListener("change", function () {
+  file.dom.addEventListener("change", () => {
     if (reader.readyState === FileReader.LOADING) {
       reader.abort();
     }
@@ -330,34 +288,30 @@ window.addEventListener("load", function () {
       return;
     }
 
-    // 要构建我们的多重表单数据请求，
+    // 要构建我们的多部分表单数据请求，
     // 我们需要一个 XMLHttpRequest 实例
-    var XHR = new XMLHttpRequest();
+    const XHR = new XMLHttpRequest();
 
     // 我们需要一个分隔符来定义请求的每一部分。
-    var boundary = "blob";
+    const boundary = "blob";
 
     // 将我们的主体请求存储于一个字符串中
-    var data = "";
+    let data = "";
 
     // 所以，如果用户已经选择了一个文件
     if (file.dom.files[0]) {
       // 在请求体中开始新的一部分
-      data += "--" + boundary + "\r\n";
+      data += `--${boundary}\r\n`;
 
       // 把它描述成表单数据
       data +=
         "content-disposition: form-data; " +
         // 定义表单数据的名称
-        'name="' +
-        file.dom.name +
-        '"; ' +
+        `name="${file.dom.name}"; ` +
         // 提供文件的真实名字
-        'filename="' +
-        file.dom.files[0].name +
-        '"\r\n';
+        `filename="${file.dom.files[0].name}"\r\n`;
       // 和文件的 MIME 类型
-      data += "Content-Type: " + file.dom.files[0].type + "\r\n";
+      data += `Content-Type: ${file.dom.files[0].type}\r\n`;
 
       // 元数据和数据之间有一条空行。
       data += "\r\n";
@@ -368,10 +322,10 @@ window.addEventListener("load", function () {
 
     // 文本数据更简单一些
     // 在主体请求中开始一个新的部分
-    data += "--" + boundary + "\r\n";
+    data += `--${boundary}\r\n`;
 
-    // 声明它是表单数据，并命名它
-    data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
+    // 假设这是表单数据，并命名它
+    data += `content-disposition: form-data; name="${text.name}"\r\n`;
     // 元数据和数据之间有一条空行。
     data += "\r\n";
 
@@ -379,11 +333,11 @@ window.addEventListener("load", function () {
     data += text.value + "\r\n";
 
     // 一旦完成，“关闭”主体请求
-    data += "--" + boundary + "--";
+    data += `--${boundary}--`;
 
     // 定义成功提交数据执行的语句
-    XHR.addEventListener("load", function (event) {
-      alert("✌！数据已发送且响应已加载。");
+    XHR.addEventListener("load", (event) => {
+      alert("耶！已发送数据并加载响应。");
     });
 
     // 定义发生错误时做的事
@@ -394,35 +348,53 @@ window.addEventListener("load", function () {
     // 建立请求
     XHR.open("POST", "https://example.com/cors.php");
 
-    // 添加需要的 HTTP 头部来处理多重表单数据 POST 请求
+    // 添加需要的 HTTP 头部来处理多部分表单数据 POST 请求
     XHR.setRequestHeader(
       "Content-Type",
-      "multipart/form-data; boundary=" + boundary,
+      `multipart/form-data; boundary=${boundary}`,
     );
 
     // 最后，发送数据。
     XHR.send(data);
   }
 
-  // 访问表单…
-  var form = document.getElementById("myForm");
+  // 获取表单元素
+  const form = document.getElementById("theForm");
 
-  // …接管提交事件
-  form.addEventListener("submit", function (event) {
+  // 添加 submit 事件处理器
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
     sendData();
   });
 });
 ```
 
-在线演示：
+这里是实时演示效果：
 
 {{EmbedLiveSample("处理二进制数据", "100%", 150)}}
 
 ## 总结
 
-取决于不同的浏览器，通过 JavaScript 发送数据可能会很简单，也可能会很困难。{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是通用的答案，所以请毫不犹豫的在旧浏览器上通过 polyfill 使用它：
+取决于不同的浏览器和正在处理数据的类型，通过 JavaScript 发送数据可能会很简单，也可能会很困难。{{domxref("FormData","FormData")}} 对象是通用的答案，所以请毫不犹豫地在旧浏览器上通过 [polyfill](https://github.com/jimmywarting/FormData) 使用它：
 
-- 此 [gist](https://gist.github.com/3120320) 通过 {{domxref("Using_web_workers","Web Worker")}} polyfill 了 `FormData`。
-- [HTML5-formdata](https://github.com/francois2metz/html5-formdata) 试图 polyfill `FormData` 对象，但是它需要 [File API](http://www.w3.org/TR/FileAPI/)
-- 这个 [polyfill](https://github.com/jimmywarting/FormData) 提供了 FormData 所有的大部分新方法（entries, keys, values, 以及对 `for...of` 的支持）
+## 参见
+
+### 学习路径
+
+- [你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构建 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 输入（input）类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 更进一步
+
+- **使用 JavaScript 发送表单**
+- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [旧式浏览器的 HTML 表单](/zh-CN/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [进一步为 HTML 表单添加样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

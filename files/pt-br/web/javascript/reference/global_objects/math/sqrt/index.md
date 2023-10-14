@@ -45,11 +45,7 @@ Math.sqrt(-1); // NaN
 
 ## Especificações
 
-| Especificação                                        | Status             | Comentário                                         |
-| ---------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                  | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}} | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}   | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

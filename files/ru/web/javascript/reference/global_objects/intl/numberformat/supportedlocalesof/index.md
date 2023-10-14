@@ -45,9 +45,7 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 
 ## Спецификации
 
-| Спецификация                                                                      | Статус                  | Комментарии              |
-| --------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
