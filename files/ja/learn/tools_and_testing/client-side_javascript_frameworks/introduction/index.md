@@ -214,9 +214,9 @@ JavaScript とブラウザーのネイティブ機能を使用してルーター
 
 有能なウェブ開発者になるには、仕事に最適なツールを使用する必要があります。 JavaScript フレームワークはフロントエンドアプリケーションの開発を容易にしますが、すべての問題を解決する特効薬ではありません。このセクションでは、フレームワークを使用する際に考慮すべき点について説明します。フレームワークがまったく必要ない場合もあることを念頭に置いてください。フレームワークを目的だけで使用することのないように注意してください。
 
-### Familiarity with the tool
+### ツールに精通している
 
-Just like vanilla JavaScript, frameworks take time to learn and have their quirks. Before you decide to use a framework for a project, be sure you have time to learn enough of its features for it to be useful to you rather than it working against you, and be sure that your teammates are comfortable with it as well.
+Vanilla Javascript と同様に、フレームワークは学習に時間がかかり、癖があります。プロジェクトにフレームワークを使用することを決定する前に、そのフレームワークが自分にとって不利になるのではなく、自分にとって役立つように、その機能を十分に学習する時間を確保し、チームメイトもそのフレームワークに慣れているかどうかを確認してください。
 
 ### Overengineering
 
