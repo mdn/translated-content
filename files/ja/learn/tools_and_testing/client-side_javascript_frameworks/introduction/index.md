@@ -28,15 +28,15 @@ JavaScript とフレームワークの簡単な歴史を見て、フレームワ
   </tbody>
 </table>
 
-## A brief history
+## 簡単な歴史
 
-When JavaScript debuted in 1996, it added occasional interactivity and excitement to a web that was, up until then, composed of static documents. The web became not just a place to _read things_, but to _do things_. JavaScript's popularity steadily increased. Developers who worked with JavaScript wrote tools to solve the problems they faced, and packaged them into reusable packages called **libraries**, so they could share their solutions with others. This shared ecosystem of libraries helped shape the growth of the web.
+1996 年に JavaScript が登場すると、それまで静的なドキュメントで構成されていた Web に、偶発的な話題と興奮が加わりました。 ウェブは単に _ものを読む_ だけではなく、 _何かをする_ ための場所になりました。 JavaScript の人気は着実に高まりました。 JavaScript を扱う開発者は、直面した問題を解決するためのツールを作成し、**ライブラリー**と呼ばれる再利用可能なパッケージにパッケージ化して、他のユーザーとソリューションを共有できるようにしました。 このライブラリーの共有エコシステムは、ウェブの成長を形作るのに役立ちました。
 
-Now, JavaScript is an essential part of the web, [used on 98% of all websites](https://w3techs.com/technologies/details/cp-javascript), and the web is an essential part of modern life. Users write papers, manage their budgets, stream music, watch movies, and communicate with others over great distances instantaneously, with text, audio, or video chat. The web allows us to do things that used to be possible only in native applications installed on our computers. These modern, complex, interactive websites are often referred to as **web applications**.
+現在、 JavaScript はウェブに不可欠な部分であり、[すべてのウェブサイトの 98% で使用されており](https://w3techs.com/technologies/details/cp-javascript)、ウェブは現代生活に不可欠な部分です。 ユーザーは論文を書いたり、予算を管理したり、音楽をストリーミングしたり、映画を鑑賞したり、テキスト、音声、またはビデオチャットを使って遠距離の他のユーザーと瞬時にコミュニケーションしたりできます。ウェブを使用すると、これまでコンピューターにインストールされたネイティブアプリケーションでのみ可能であったことが実行できるようになります。これらの最新の複雑でインタラクティブなウェブサイトは、**ウェブアプリケーション**と呼ばれることがよくあります。
 
-The advent of modern JavaScript frameworks has made it much easier to build highly dynamic, interactive applications. A **framework** is a library that offers opinions about how software gets built. These opinions allow for predictability and homogeneity in an application; predictability allows the software to scale to an enormous size and still be maintainable; predictability and maintainability are essential for the health and longevity of software.
+最新の JavaScript フレームワークの出現により、非常に動的でインタラクティブなアプリケーションの構築がはるかに簡単になりました。**フレームワーク** は、ソフトウェアの構築方法についての意見を提供するライブラリです。これらの意見により、アプリケーションの予測可能性と均一性が可能になります。予測可能性により、ソフトウェアを巨大なサイズに拡張しながらも保守可能になります。予測可能性と保守性は、ソフトウェアの健全性と寿命にとって不可欠です。
 
-JavaScript frameworks power much of the impressive software on the modern web – including many of the websites you likely use every day. MDN Web Docs, which you are currently reading this on, uses the React/ReactDOM framework to power its front end.
+JavaScript フレームワークは、あなたが毎日使用するウェブサイトの多くを含む、現代のウェブ上の優れたソフトウェアの多くを強化しています。 現在この記事を読んでいる MDN Web Docs は、React/ReactDOM フレームワークを使用してフロントエンドを強化します。
 
 ## What frameworks are out there?
 
