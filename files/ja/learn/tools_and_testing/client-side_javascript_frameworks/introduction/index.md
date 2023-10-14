@@ -186,9 +186,9 @@ Vue のおかげで、 UI を構築するために独自の関数を作成する
 
 これと _似たようなこと_ を Vanilla Javascript でも実現できます。[テンプレートリテラル文字列](/ja/docs/Web/JavaScript/Reference/Template_literals) を使用すると、最終的な要素がどのようになるかを表す HTML の文字列を簡単に作成できます。これは、To Do リストアプリケーションのような単純なものには便利なアイデアかもしれませんが、数千のデータレコードを管理し、ユーザーインターフェイスに同じ数の固有の要素をレンダリングする可能性がある大規模なアプリケーションでは維持できません。
 
-## Other things frameworks give us
+## フレームワークが私たちに与えてくれるその他のこと
 
-Let's look at some of the other advantages offered by frameworks. As we've alluded to before, the advantages of frameworks are achievable in vanilla JavaScript, but using a framework takes away all of the cognitive load of having to solve these problems yourself.
+フレームワークが提供する他の利点を見てみましょう。前にも述べたように、フレームワークの利点は Vanilla Javascript でも実現可能ですが、フレームワークを使うことで、これらの問題を自分で解決しなければならないという認知的な負荷をすべて取り除くことができます。
 
 ### Tooling
 
