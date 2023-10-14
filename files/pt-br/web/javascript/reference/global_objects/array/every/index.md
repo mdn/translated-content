@@ -142,10 +142,7 @@ if (!Array.prototype.every) {
 
 ## Especificações
 
-| Especificação                                                              | Status             | Comentário                                         |
-| -------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}           | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

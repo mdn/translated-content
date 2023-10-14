@@ -88,13 +88,7 @@ a:visited {
 
 ## Especificações
 
-| Especificações                                                               | Status                        | Comentário                                                                                                                                                            |
-| ---------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited') }} | {{ Spec2('HTML WHATWG') }}    |                                                                                                                                                                       |
-| {{ SpecName('CSS4 Selectors', '#link', ':visited') }}                        | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                                                                                                                                          |
-| {{ SpecName('CSS3 Selectors', '#link', ':visited') }}                        | {{ Spec2('CSS3 Selectors') }} | Sem mudança.                                                                                                                                                          |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited') }}    | {{ Spec2('CSS2.1') }}         | Eleva a restrição para aplicar apenas :visited ao elemento {{HTMLElement ("a")}}. Permite que os navegadores restrinjam seu comportamento por motivos de privacidade. |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':visited') }}                 | {{ Spec2('CSS1') }}           | Definição inicial.                                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

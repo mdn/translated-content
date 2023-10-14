@@ -21,7 +21,7 @@ Base64 인코딩 체계는 일반적으로 ASCII 텍스트만 처리할 수 있�
 
 - [MIME](https://en.wikipedia.org/wiki/MIME)를 통한 이메일
 - [XML](/ko/docs/Web/XML)에 복잡한 데이터 저장
-- [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)에 포함될 수 있도록 바이너리 데이터를 인코딩
+- [`data:` URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)에 포함될 수 있도록 바이너리 데이터를 인코딩
 
 ## 인코딩된 크기 증가
 

@@ -4728,10 +4728,6 @@
     "modified": "2020-10-15T22:27:46.661Z",
     "contributors": ["maxsixth"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2019-03-23T22:12:07.654Z",
-    "contributors": ["ExE-Boss", "dineiar", "interaminense"]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2019-03-23T22:30:10.383Z",
     "contributors": ["fcard"]
@@ -4792,6 +4788,10 @@
       "teoli",
       "fvargaspf@gmail.com"
     ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2019-03-23T22:12:07.654Z",
+    "contributors": ["ExE-Boss", "dineiar", "interaminense"]
   },
   "Web/CSS/Syntax": {
     "modified": "2019-03-18T20:58:06.000Z",

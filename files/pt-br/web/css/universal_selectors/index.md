@@ -72,11 +72,7 @@ O asterisco é opcional para seletores simples. Por exemplo, `*.atencao` e `.ate
 
 ## Especificações
 
-| Especificação                                                                   | Status                      | Comentário                                                                                                                        |
-| ------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#the-universal-selector', 'Seletor universal')}}  | {{Spec2('CSS4 Selectors')}} | Sem mudanças                                                                                                                      |
-| {{SpecName('CSS3 Selectors', '#universal-selector', 'Seletor universal')}}      | {{Spec2('CSS3 Selectors')}} | Define o comportamente de acordo com os namespaces e adiciona uma sugestão de que é possivel omitir o seletor em pseudo-elementos |
-| {{SpecName('CSS2.1', 'selector.html#universal-selector', 'Seletor universal')}} | {{Spec2('CSS2.1')}}         | Definição inicial                                                                                                                 |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

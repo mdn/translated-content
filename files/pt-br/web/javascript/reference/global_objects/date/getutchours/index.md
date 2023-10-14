@@ -30,9 +30,7 @@ var hours = today.getUTCHours();
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutchours', 'Date.prototype.getUTCHours')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

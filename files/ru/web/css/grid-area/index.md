@@ -100,9 +100,7 @@ grid-area: unset;
 
 ## Specifications
 
-| Specification                                                | Status                 | Comment            |
-| ------------------------------------------------------------ | ---------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-area", "grid-area")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

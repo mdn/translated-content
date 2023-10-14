@@ -55,9 +55,7 @@ Em adição tendo o cabeçalho `Server-Timing` de métricas aparecendo nas ferra
 
 ## Especificações
 
-| Especificação                                                                                 | Status                     | Título             |
-| --------------------------------------------------------------------------------------------- | -------------------------- | ------------------ |
-| {{SpecName('Server Timing','#the-server-timing-header-field', 'Server-Timing Header Field')}} | {{Spec2("Server Timing")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

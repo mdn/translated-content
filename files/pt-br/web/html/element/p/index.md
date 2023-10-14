@@ -123,11 +123,7 @@ p {
 
 ## Especificações
 
-| Specification                                                                 | Status                   | Comment                                                        |
-| ----------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}      | {{Spec2('HTML WHATWG')}} | Nenhuma alteração desde a última w3c {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}   | Atributo `align` está obsoleto                                 |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}             | {{Spec2('HTML4.01')}}    | Definição inicial                                              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

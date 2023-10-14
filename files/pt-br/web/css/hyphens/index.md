@@ -98,9 +98,7 @@ p.auto {
 
 ## Especificações
 
-| Especificação                                             | Condição               | Comentário         |
-| --------------------------------------------------------- | ---------------------- | ------------------ |
-| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

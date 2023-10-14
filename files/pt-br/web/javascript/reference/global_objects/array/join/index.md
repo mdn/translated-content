@@ -51,12 +51,7 @@ f(1, "a", true);
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comentário                                         |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                          | {{Spec2('ES1')}}     | Definição inicial. Implementado em JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.5', 'Array.prototype.join')}}               | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.join', 'Array.prototype.join')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.join', 'Array.prototype.join')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -16,10 +16,10 @@
   "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json(c)?\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json(c)?\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky install"
   },
@@ -29,14 +29,17 @@
   "dependencies": {
     "cld": "^2.9.0",
     "fdir": "^6.1.0",
+    "front-matter": "^4.0.2",
     "fs-extra": "^11.1.1",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^13.0.2",
     "markdownlint-cli2": "0.10.0",
     "markdownlint-rule-search-replace": "1.2.0",
+    "mdast-util-from-markdown": "^2.0.0",
     "ora": "^7.0.1",
     "prettier": "3.0.3",
+    "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
   }
 }
