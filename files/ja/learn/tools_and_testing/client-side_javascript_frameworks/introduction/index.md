@@ -190,11 +190,11 @@ Vue のおかげで、 UI を構築するために独自の関数を作成する
 
 フレームワークが提供する他の利点を見てみましょう。前にも述べたように、フレームワークの利点は Vanilla Javascript でも実現可能ですが、フレームワークを使うことで、これらの問題を自分で解決しなければならないという認知的な負荷をすべて取り除くことができます。
 
-### Tooling
+### ツール
 
-Because each of the frameworks in this module have a large, active community, each framework's ecosystem provides tooling that improves the developer experience. These tools make it easy to add things like testing (to ensure that your application behaves as it should) or linting (to ensure that your code is error-free and stylistically consistent).
+このモジュールに含まれるフレームワークはそれぞれ大規模で活発なコミュニティを持っているので、それぞれのフレームワークのエコシステムは開発者の経験を向上させるツールを提供します。これらのツールによって、テスト (アプリケーションがあるべきように動作することを保証する) や lint (コードがエラーフリーでスタイルが一貫していることを保証する) のようなものを簡単に追加できます。
 
-> **Note:** If you want to find out more details about web tooling concepts, check out our [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview).
+> **メモ:** ウェブツールのコンセプトについてもっと詳しく知りたい方は、[クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)をご覧ください。
 
 ### Compartmentalization
 
