@@ -279,13 +279,13 @@ Vanilla Javascript と同様に、フレームワークは学習に時間がか�
 
 Vue チームは [Vue を他の一般的なフレームワークと徹底的に比較](https://v2.vuejs.org/v2/guide/comparison.html)しました。この比較には多少の偏りがあるかもしれません (彼らはそれを指摘しています) が、それでも貴重な情報源です。
 
-## Alternatives to client-side frameworks
+## クライアント側フレームワークの代替
 
-If you're looking for tools to expedite the web development process, and you know your project isn't going to require intensive client-side JavaScript, you could reach for one of a handful of other solutions for building the web:
+ウェブ開発プロセスを迅速化するツールを探していて、プロジェクトで集中的なクライアント側 JavaScript が必要ないことがわかっている場合は、ウェブを構築するための他のいくつかのソリューションのいずれかを利用できます。
 
-- A content management system
-- Server-side rendering
-- A static site generator
+- コンテンツ管理システム
+- サーバーサイドレンダリング
+- 静的サイトジェネレーター
 
 ### Content management systems
 
