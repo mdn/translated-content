@@ -11,21 +11,14 @@ CSS 屬性 `border-image` 可以讓你在元素的邊框上擺上圖片。這讓
 
 瀏覽器會顯示 `border-image` 指定的圖片而不是 {{ cssxref("border-style") }} 給的邊框樣式，但是若它的取值是 `none` 或是因某些理由無法顯示該圖片，瀏覽器就會顯示邊框樣式。`border-image` 會畫一個額外的背景圖片在原來 {{ cssxref("background-image") }} 指定的背景圖片之上。
 
-- {{ Xref_cssinitial }}：{{ Cssxref("none") }}
-- 對象：所有除了 {{cssxref("border-collapse")}} 是 `collapse` 的表格元素
-
-- {{ Xref_cssinherited() }}：否
-- 媒體：{{ Xref_cssvisual() }}
-- {{ Xref_csscomputed() }}：任何 URI 變為絕對，任何 \<長度> 變為絕對，其他如同所指定
-
-### 語法
+## 語法
 
 ```
 none |
   [ <圖片> [ <數字> | <百分比> ]{1,4} [/ <邊框寬度>{1,4}]? ] && [ stretch | repeat | round ]{0,2}
 ```
 
-### 取值
+## 取值
 
 - none
   - : 不顯示圖片，使用邊框樣式。
@@ -58,7 +51,15 @@ none |
     **`repeat`** 直接鋪擺該圖片。
     第一個關鍵字的對象是頂邊，中間跟底邊的圖片，而第二個關鍵字的對象是左邊跟右邊的邊框。如果第二個不存在，則沿用第一個關鍵字的設定。如果兩者皆不存在，預設值為 `stretch`。
 
-### 範例
+## 形式定義
+
+{{cssinfo}}
+
+## 形式語法
+
+{{csssyntax}}
+
+## 範例
 
 \[這裡還需要一些活範例]
 
@@ -76,10 +77,10 @@ none |
  div     { -moz-border-image: url(bgimage.png) 0; }
 ```
 
-### 規範
+## 規範
 
 {{Specifications}}
 
-### 瀏覽器兼容性
+## 瀏覽器兼容性
 
 {{Compat}}
