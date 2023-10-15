@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/protocol
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.protocol`** 属性是一个表示 URL 协议方案的字符串，包括结尾的 `':'`。
+**`HTMLAnchorElement.protocol`** 属性是一个表示 URL 协议方案的字符串，包含结尾的 `':'`。
 
 ## 值
 
