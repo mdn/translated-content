@@ -5,7 +5,7 @@ slug: Web/API/Location/protocol
 
 {{ApiRef("Location")}}
 
-{{domxref("Location")}} 接口的 **`protocol`** 属性是一个表示 URL 协议方案的字符串，包括结尾的 `':'`。
+{{domxref("Location")}} 接口的 **`protocol`** 属性是一个表示 URL 协议方案的字符串，包含结尾的 `':'`。
 
 ## 值
 
