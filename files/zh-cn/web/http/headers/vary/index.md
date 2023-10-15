@@ -13,10 +13,10 @@ slug: Web/HTTP/Headers/Vary
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
-      <td>{{Glossary("Response header","响应标头")}}</td>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name","禁止修改的标头")}}</th>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
       <td>否</td>
     </tr>
   </tbody>
