@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Vary
 
 {{HTTPSidebar}}
 
-**`Vary`** HTTP 响应标头描述了除方法和 URL 之外影响响应内容的请求消息。大多数情况下，这用于在使用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation) 时创建缓存键。
+**`Vary`** HTTP 响应标头描述了除方法和 URL 之外影响响应内容的请求消息。大多数情况下，这用于在使用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)时创建缓存键。
 
 给定 URL 的所有响应都应使用相同的 `Vary` 标头值，包括 {{HTTPStatus("304")}} `Not Modified` 响应和“默认”响应。
 
