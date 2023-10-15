@@ -5,17 +5,17 @@ slug: Web/JavaScript/Guide/Using_classes
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
-JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes) 来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。
+JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建实例。
 
-在许多其他语言中，_类_（或构造函数）与 _对象_（或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 函数都可用作构造函数——你可以用 `new` 来调用一个构造函数以创建出一个新的对象。
+在许多其他语言中，_类_（或构造函数）与*对象*（或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 纯函数都可用作构造函数——你可以用 `new` 运算符来调用一个构造函数以创建出一个新的对象。
 
-本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 指南。
+本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)指南。
 
 本章节假定你已熟悉 JavaScript 并能使用常规的对象。
 
 ## 类的概述
 
-如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对 [这个](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates) 很熟悉：
+如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对[这个](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)很熟悉：
 
 ```js
 const bigDay = new Date(2019, 6, 19);
@@ -25,10 +25,10 @@ if (bigDay.getTime() < Date.now()) {
 }
 ```
 
-在第一行，我们创建了一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类的实例，并将其命名为 `bigDay`。在第二行，我们在 `bigDay` 实例上调用了 [方法](/zh-CN/docs/Glossary/Method) [`toLocaleDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString)，并返回了一个字符串。接下来，我们对比了两个数字：一个来自于方法 [`getTime()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) 的返回值，另个一来自于对 `Date` _本身_ 的直接调用，就像 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。
+在第一行，我们创建了一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类的实例，并将其命名为 `bigDay`。在第二行，我们在 `bigDay` 实例上调用了 [`toLocaleDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) [方法](/zh-CN/docs/Glossary/Method)，并返回了一个字符串。接下来，我们对比了两个数字：一个来自于方法 [`getTime()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) 的返回值，另个一来自于对 `Date` 类*本身*的直接调用，本例为 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。
 `Date` 是一个 JavaScript 的内建类。从这个例子中，我们可以得到一些关于类的基本概念：
 
-- 类通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符创建对象。
+- 类通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符创建对象。
 - 每个对象都有一些属性（数据或方法），这些属性是由类添加的。
 - 类本身也有一些属性（数据或方法），这些属性通常用于与实例进行交互。
 
@@ -40,7 +40,7 @@ if (bigDay.getTime() < Date.now()) {
 
 ## 声明一个类
 
-类通常通过 _类声明_ 来创建。
+类通常通过*类声明*来创建。
 
 ```js
 class MyClass {
@@ -70,7 +70,7 @@ class MyClass {
   }
   // 静态块
   static {
-    // 静态初始代码
+    // 静态初始化代码
   }
   // 字段、方法、静态字段、静态方法、静态块都可以使用私有形式
   #myPrivateField = "bar";
@@ -93,7 +93,7 @@ MyClass.prototype.myMethod = function () {
 };
 
 (function () {
-  // 静态初始代码
+  // 静态初始化代码
 })();
 ```
 
@@ -101,7 +101,7 @@ MyClass.prototype.myMethod = function () {
 
 ### 构造一个类
 
-在声明一个类之后，你可以使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来创建它的实例。
+在声明一个类之后，你可以使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符来创建它的实例。
 
 ```js
 const myInstance = new MyClass();
@@ -112,20 +112,20 @@ myInstance.myMethod();
 典型函数构造器可以使用 `new` 来构造，也可以不使用 `new` 来调用。然而，对于类的调用则必须使用 `new`，否则会导致错误。
 
 ```js
-const myInstance = MyClass(); // TypeError：不能在没有 'new' 的情况下调用类构造函数 MyClass
+const myInstance = MyClass(); // TypeError: Class constructor MyClass cannot be invoked without 'new'
 ```
 
 ### 类声明提升
 
-与函数声明不同，类声明并不会被 [提升](/zh-CN/docs/Glossary/Hoisting) （或者，在某些解释器中，可以被提升，但是有暂时性死区的限制），这意味着你不能在声明之前使用类。
+与函数声明不同，类声明并不会被[提升](/zh-CN/docs/Glossary/Hoisting)（或者，在某些解释器中，可以被提升，但是有暂时性死区的限制），这意味着你不能在声明之前使用类。
 
 ```js
-new MyClass(); // ReferenceError：无法在初始化之前访问 MyClass
+new MyClass(); // ReferenceError: Cannot access 'MyClass' before initialization
 
 class MyClass {}
 ```
 
-该行为类似于使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 声明的变量。
+该行为与使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 声明变量类似。
 
 ### 类表达式
 
@@ -143,12 +143,12 @@ const MyClass = class {
 const MyClass = class MyClassLongerName {
   // 类体。这里 MyClass 和 MyClassLongerName 指向同一个类
 };
-new MyClassLongerName(); // ReferenceError：MyClassLongerName 未定义
+new MyClassLongerName(); // ReferenceError: MyClassLongerName is not defined
 ```
 
 ## 构造函数
 
-类最重要的工作之一就是作为对象的“工厂”。例如，当我们使用 `Date` 构造函数时，我们期望它给我们一个新的对象，这个对象代表了我们传入的日期数据，而且我们可以使用该实例所暴露的其他方法来操作它。在类中，实例的创建是通过 [构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor) 来完成的。
+类最重要的工作之一就是作为对象的“工厂”。例如，当我们使用 `Date` 构造函数时，我们期望它给我们一个新的对象，这个对象代表了我们传入的日期数据，而且我们可以使用该实例所暴露的其他方法来操作它。在类中，实例的创建是通过[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)来完成的。
 
 例如，我们创建一个名为 `Color` 的类，它代表了一个特定的颜色。用户通过传入一个 [RGB](/zh-CN/docs/Glossary/RGB) 三元组来创建颜色。
 
@@ -185,7 +185,7 @@ function createColor(r, g, b) {
 }
 ```
 
-构造函数的语法与普通函数完全相同——这意味着你可以使用其他语法，例如 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)：
+构造函数的语法与普通函数完全相同——这意味着你可以使用其他语法，例如[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)：
 
 ```js
 class Color {
@@ -208,7 +208,7 @@ console.log(red === anotherRed); // false
 
 在类的构造函数里，`this` 的值指向新创建的实例。你可以赋予它新的属性，或者读取已有的属性（尤其是方法——我们将在下一节中介绍）。
 
-`this` 的值将自动作为 `new` 的结果返回。不建议从构造函数中返回任何值——因为如果你返回一个非原始类型的值，它将成为 `new` 表达式的值，而 `this` 的值将被丢弃。你可以在 [new 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new#description) 的描述中阅读更多关于 `new` 的内容。
+`this` 的值将自动作为 `new` 的结果返回。不建议从构造函数中返回任何值——因为如果你返回一个非原始类型的值，它将成为 `new` 表达式的值，而 `this` 的值将被丢弃。你可以在 new 运算符的[描述](/zh-CN/docs/Web/JavaScript/Reference/Operators/new#描述)中阅读更多关于 `new` 的内容。
 
 ```js
 class MyClass {
@@ -225,7 +225,7 @@ console.log(new MyClass().myField); // undefined
 
 如果一个类只有构造函数，那么它与一个只创建普通对象的 `createX` 工厂函数并没有太大的区别。然而，类的强大之处在于它们可以作为“模板”，自动将方法分配给实例。
 
-例如，对于 `Date` 实例，你可以用一系列方法来获取日期的不同部分，例如 [年份](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear)、[月份](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)、[星期几](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) 等等。你也可以通过 `setX` 方法来设置这些值，例如 [`setFullYear`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear)。
+例如，对于 `Date` 实例，你可以用一系列方法来获取日期的不同部分，例如[年份](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear)、[月份](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)、[星期几](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay)等等。你也可以通过 `setX` 方法来设置这些值，例如 [`setFullYear`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear)。
 
 对于我们的 `Color` 类，我们可以添加一个方法来获取红色值：
 
@@ -262,7 +262,7 @@ class Color {
 console.log(new Color().getRed === new Color().getRed); // false
 ```
 
-与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在 _哪里_ ——它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在*哪里*——它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
 相似的，我们也可以添加一个 `setRed` 方法来设置红色值：
 
@@ -320,9 +320,9 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0; 不再是 255，因为 HSL 模型下纯红色的 H 分量为 0
 ```
 
-用户对 `values` 数组代表 RGB 值的假设不再成立，这可能会打破他们的代码逻辑。因此，如果你是一个类的实现者，你应该隐藏实例的内部数据结构，以保持 API 的简洁性，并防止在你做了一些“无害的重构”时，用户代码不至于崩溃。在类中，这是通过 [_私有字段_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields) 来实现的。
+用户对 `values` 数组代表 RGB 值的假设不再成立，这可能会打破他们的代码逻辑。因此，如果你是一个类的实现者，你应该隐藏实例的内部数据结构，以保持 API 的简洁性，并防止在你做了一些“无害的重构”时，用户代码不至于崩溃。在类中，这是通过[_私有字段_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)来实现的。
 
-私有字段是以 `#`（井号）开头的标识符。井号是这个字段名的必要部分，这也就意味着私有字段永远不会与公共属性发生命名冲突。为了在类中的任何地方引用一个私有字段，你必须在类体中 _声明_ 它（你不能在类体外部创建私有字段）。除此之外，私有字段与普通属性几乎是等价的。
+私有字段是以 `#`（井号）开头的标识符。井号是这个字段名的必要部分，这也就意味着私有字段永远不会与公共属性发生命名冲突。为了在类中的任何地方引用一个私有字段，你必须在类体中*声明*它（你不能在类体外部创建私有字段）。除此之外，私有字段与普通属性几乎是等价的。
 
 ```js
 class Color {
@@ -346,12 +346,12 @@ console.log(red.getRed()); // 255
 在类外访问私有字段会导致语法错误，且该错误可以在早期被捕获（早期语法错误）。因为 `#privateField` 是一个特殊语法，所以解释器可以在执行代码之前做一些静态分析，找到所有访问私有字段的地方。
 
 ```js-nolint example-bad
-console.log(red.#values); // SyntaxError: 私有字段 `#values` 必须在封闭类内声明
+console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
 
 > **注意：** 在 Chrome 控制台中运行的代码可以在类外访问私有字段，JavaScript 为了方便调试而仅在 DevTools 中放宽了这一限制。
 
-JavaScrip 中的私有字段是 _硬私有_ 的：如果类没有实现暴露这些私有字段的方法，也就没有任何机制可以从类外访问它们。这意味着你可以对类的私有字段做任何重构，只要暴露的方法的行为保持不变即可。
+JavaScript 中的私有字段是*硬私有*的：如果类没有实现暴露这些私有字段的方法，也就没有任何机制可以从类外访问它们。这意味着你可以对类的私有字段做任何重构，只要暴露的方法的行为保持不变即可。
 
 在我们将 `values` 字段私有化之后，我们可以在 `getRed` 和 `setRed` 方法中添加一些逻辑，而不仅仅是简单信息传递。例如，我们可以在 `setRed` 中添加一个检查逻辑，以确保它是一个有效的 R 值：
 
@@ -366,7 +366,7 @@ class Color {
   }
   setRed(value) {
     if (value < 0 || value > 255) {
-      throw new RangeError("Invalid R value");
+      throw new RangeError("无效的 R 值");
     }
     this.#values[0] = value;
   }
@@ -422,17 +422,17 @@ class Color {
 ```js-nolint example-bad
 class BadIdeas {
   #firstName;
-  #firstName; // syntax error occurs here
+  #firstName; // 这里会发生语法错误
   #lastName;
   constructor() {
-    delete this.#lastName; // also a syntax error
+    delete this.#lastName; // 也会发生语法错误
   }
 }
 ```
 
-方法，[getters 与 setters](#accessor-fields) 也可以是私有的。当你需要类内部做一些复杂的事情，但是不希望代码的其他部分调用时，它们就很有用。
+方法、[getter 与 setter](#getter_字段) 也可以是私有的。当你需要类内部做一些复杂的事情，但是不希望代码的其他部分调用时，它们就很有用。
 
-例如，想象一下创建 [HTML 自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) 时，当点击、触摸等事件被激活时可能会做一些有点复杂的事情。此外，当元素被点击时发生的有点复杂的事情应该限制在这个类中，因为程序的其他部分（或者不应该）永远不会访问它。
+例如，想象一下创建 [HTML 自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)时，当点击、触摸等事件被激活时可能会做一些有点复杂的事情。此外，当元素被点击时发生的有点复杂的事情应该限制在这个类中，因为程序的其他部分（或者不应该）永远不会访问它。
 
 ```js
 class Counter extends HTMLElement {
@@ -466,7 +466,7 @@ customElements.define("num-counter", Counter);
 
 ## getter 字段
 
-`color.getRed()` 和 `color.setRed()` 允许我们读取和写入颜色的红色值。如果你熟悉像 Java 这样的语言，你会对这种模式非常熟悉。然而，在 JavaScript 中，使用方法来简单地访问属性仍然有些不便。_getter 字段_ 允许我们像访问“实际属性”一样操作某些东西。
+`color.getRed()` 和 `color.setRed()` 允许我们读取和写入颜色的红色值。如果你熟悉像 Java 这样的语言，你会对这种模式非常熟悉。然而，在 JavaScript 中，使用方法来简单地访问属性仍然有些不便。*getter 字段*允许我们像访问“实际属性”一样操作某些东西。
 
 ```js
 class Color {
@@ -505,7 +505,7 @@ red.red = 0;
 console.log(red.red); // 255
 ```
 
-在 [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下，`red.red = 0` 这一行将抛出类型错误："Cannot set property red of #\<Color> which has only a getter"。在非严格模式下，赋值将被静默忽略。
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，`red.red = 0` 这一行将抛出类型错误：“Cannot set property red of #\<Color> which has only a getter”。在非严格模式下，赋值将被静默忽略。
 
 ## 公共字段
 
@@ -535,7 +535,7 @@ class MyClass {
 
 > **注意：** 一个好的习惯是给工具方法一个前缀（这也称作“命名空间”）。例如，除了旧的、没有前缀的 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 方法之外，JavaScript 后来还添加了带有前缀的 [`Number.parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) 方法，以表明它是用于处理数字的。
 
-[_静态属性_](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 是一组在类本身上定义的属性，而不是在类的实例上定义的属性。这些特性包括：
+[_静态属性_](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)是一组在类本身上定义的特性，而不是在类的实例上定义的特性。这些特性包括：
 
 - 静态方法
 - 静态字段
@@ -563,7 +563,7 @@ Color.isValid(1000, 0, 0); // false
 console.log(new Color(0, 0, 0).isValid); // undefined
 ```
 
-有一个特殊结构叫做 [_静态初始化块_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)，它是一个在类第一次加载时运行的代码块。
+有一个特殊结构叫做[_静态初始化块_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)，它是一个在类第一次加载时运行的代码块。
 
 ```js
 class MyClass {
@@ -579,7 +579,7 @@ console.log(MyClass.myStaticProperty); // 'foo'
 
 ## 扩展与继承
 
-类的一个关键特性（除了私有字段）是 _继承_，这意味着一个对象可以“借用”另一个对象的大部分行为，同时覆盖或增强某些部分的逻辑。
+类的一个关键特性（除了私有字段）是*继承*，这意味着一个对象可以“借用”另一个对象的大部分行为，同时覆盖或增强某些部分的逻辑。
 
 例如，假定我们需要为 `Color` 类引入透明度支持。我们可能会尝试添加一个新的字段来表示它的透明度：
 
@@ -603,7 +603,7 @@ class Color {
 
 然而，这意味着每个实例——即使是大多数不透明的实例（那些 alpha 值为 1 的实例）——都必须有额外的 alpha 值，这并不是很优雅。此外，如果特性继续增长，我们的 `Color` 类将变得非常臃肿且难以维护。
 
-所以，在面向对象编程中，我们更愿意创建一个 _派生类_。派生类可以访问父类的所有公共属性。在 JavaScript 中，派生类是通过 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 子句声明的，它指示它扩展自哪个类。
+所以，在面向对象编程中，我们更愿意创建一个*派生类*。派生类可以访问父类的所有公共属性。在 JavaScript 中，派生类是通过 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 子句声明的，它指示它扩展自哪个类。
 
 ```js
 class ColorWithAlpha extends Color {
@@ -624,7 +624,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) ，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this` —— JavaScript 会阻止你访问未初始化的 `this`。
+有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this` —— JavaScript 会阻止你访问未初始化的 `this`。
 
 在父类完成对 `this` 的修改后，派生类才可以对其进行自己的逻辑。这里我们添加了一个名为 `#alpha` 的私有字段，并提供了一对 getter/setter 来与之交互。
 
@@ -684,17 +684,17 @@ class ColorWithAlpha extends Color {
 console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 ```
 
-派生类无权访问父类的私有字段——这是 JavaScript 私有字段的一个关键特性（“硬私有”）。私有字段的有效范围被严格限制在类体内，所以 _任何_ 外部代码都无权访问。
+派生类无权访问父类的私有字段——这是 JavaScript 私有字段的一个关键特性（“硬私有”）。私有字段的有效范围被严格限制在类体内，所以*任何*外部代码都无权访问。
 
 ```js-nolint example-bad
 class ColorWithAlpha extends Color {
   log() {
-    console.log(this.#values); // SyntaxError：私有字段 '#values' 必须在封闭类中声明
+    console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
   }
 }
 ```
 
-一个类只能至多扩展自一个父类。这可以防止多重继承中的问题，例如 [菱形问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)。然而，由于 JavaScript 的动态性，仍然可以通过类组合和 [mixins](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#mix-ins) 来实现多重继承的效果。
+一个类只能至多扩展自一个父类。这可以防止多重继承中的问题，例如[菱形问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)。然而，由于 JavaScript 的动态性，仍然可以通过类组合和 [mixin](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#mix-ins) 来实现多重继承的效果。
 
 派生类的实例同时也是父类的实例，可用 [`instancesof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 运算符来验证。
 
@@ -706,11 +706,11 @@ console.log(color instanceof ColorWithAlpha); // true
 
 ## 为什么用类？
 
-本指南到目前为止一直很实用：我们专注于 _如何_ 使用类，但有一个问题尚未解答：_为什么_ 要使用类？答案是：视情况而定。
+本指南到目前为止一直很实用：我们专注于*如何*使用类，但有一个问题尚未解答：*为什么*要使用类？答案是：视情况而定。
 
-类引入了一种 _范式_，或者说是一种组织代码的方式。类是面向对象编程的基础，而面向对象编程是建立在诸如 [继承](<https://zh.wikipedia.org/wiki/%E7%BB%A7%E6%89%BF_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)>) 和 [多态](<https://zh.wikipedia.org/wiki/%E5%A4%9A%E6%80%81_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)>)（特别是 _子类型多态_）等概念之上的。然而，许多人在哲学上反对某些面向对象编程的做法，因此不使用类。
+类引入了一种*范式*，或者说是一种组织代码的方式。类是面向对象编程的基础，而面向对象编程是建立在诸如[继承](<https://zh.wikipedia.org/wiki/继承_(计算机科学)>)和[多态](<https://zh.wikipedia.org/wiki/继承_(计算机科学)>)（特别是*子类型多态*）等概念之上的。然而，许多人在哲学上反对某些面向对象编程的做法，因此不使用类。
 
-例如，`Date` 对象的一个令人厌恶的特性是它是 _可变的_。
+例如，`Date` 对象的一个令人厌恶的特性是它是*可变的*。
 
 ```js
 function incrementDay(date) {
@@ -729,9 +729,9 @@ console.log(date); // 2019-06-20
 
 ![一个典型 OOP 继承树，有五个类和三个层级](figure8.1.png)
 
-然而，如果我们只能继承自一个父类，我们又很难清楚地描述这种继承关系。一种常见的情况是，我们想要同时拥有来自多个类的行为。在 Java 中，我们可以利用接口；在 JavaScript 中，我们是用 mixins 来解决的。但归根结底，仍不是很方便。
+然而，如果我们只能继承自一个父类，我们又很难清楚地描述这种继承关系。一种常见的情况是，我们想要同时拥有来自多个类的行为。在 Java 中，我们可以利用接口；在 JavaScript 中，我们是用 mixin 来解决的。但归根结底，仍不是很方便。
 
-往好的方面想，类是一种非常强大的工具，我们可以利用它提高我们组织代码的层次。例如，如若没有 `Color` 类，我们可能需要创建一堆的工具函数：
+往好的方面想，类是一种非常强大的工具，我们可以利用它提高我们组织代码的层次。例如，如若没有 `Color` 类，我们可能需要创建一堆工具函数：
 
 ```js
 function isRed(color) {
