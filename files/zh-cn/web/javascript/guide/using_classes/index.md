@@ -7,15 +7,15 @@ slug: Web/JavaScript/Guide/Using_classes
 
 JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes) 来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。
 
-在许多其他语言中，_类_ （或构造函数）与 _对象_ （或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 函数都可用作构造函数——你可以用 `new` 来调用一个构造函数以创建出一个新的对象。
+在许多其他语言中，_类_（或构造函数）与 _对象_（或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 函数都可用作构造函数——你可以用 `new` 来调用一个构造函数以创建出一个新的对象。
 
-本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 指南.
+本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 指南。
 
 本章节假定你已熟悉 JavaScript 并能使用常规的对象。
 
 ## 类的概述
 
-如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对 [这个](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates) 很熟悉:
+如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对 [这个](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates) 很熟悉：
 
 ```js
 const bigDay = new Date(2019, 6, 19);
@@ -317,7 +317,7 @@ class Color {
 }
 
 const red = new Color(255, 0, 0);
-console.log(red.values[0]); // 0; 不再是 255，因为HSL模型下纯红色的 H 分量为 0
+console.log(red.values[0]); // 0; 不再是 255，因为 HSL 模型下纯红色的 H 分量为 0
 ```
 
 用户对 `values` 数组代表 RGB 值的假设不再成立，这可能会打破他们的代码逻辑。因此，如果你是一个类的实现者，你应该隐藏实例的内部数据结构，以保持 API 的简洁性，并防止在你做了一些“无害的重构”时，用户代码不至于崩溃。在类中，这是通过 [_私有字段_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields) 来实现的。
@@ -533,7 +533,7 @@ class MyClass {
 
 在上面的 `Date` 例子中，我们还遇到了 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now) 方法，它返回当前日期。这个方法不属于任何日期实例——它属于类本身。然而，它被放在 `Date` 类上，而不是作为全局的 `DateNow()` 函数，因为它在处理日期实例时最有用。
 
-> **注意：** 一个好的习惯是给工具方法一个前缀（这也称作 “命名空间”）。例如，除了旧的、没有前缀的 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 方法之外，JavaScript 后来还添加了带有前缀的 [`Number.parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) 方法，以表明它是用于处理数字的。
+> **注意：** 一个好的习惯是给工具方法一个前缀（这也称作“命名空间”）。例如，除了旧的、没有前缀的 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 方法之外，JavaScript 后来还添加了带有前缀的 [`Number.parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) 方法，以表明它是用于处理数字的。
 
 [_静态属性_](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 是一组在类本身上定义的属性，而不是在类的实例上定义的属性。这些特性包括：
 
