@@ -27,7 +27,7 @@ onvisibilitychange = (event) => {};
 
 该事件不包括文档的更新的可见性状态，但是你可以从文档的 {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。
 
-当用户导航到新页面、切换标签页、关闭标签页、最小化或关闭浏览器，或者在移动设备上从浏览器切换到不同的应用程序时，该事件就会触发，其 ·visibilityState` 为 `hidden`。过渡到 `hidden` 是页面能可靠观察到的最后一个事件，因此开发人员应将其视为用户会话的可能结束（例如，用于[发送分析数据](/zh-CN/docs/Web/API/Navigator/sendBeacon)）。
+当用户导航到新页面、切换标签页、关闭标签页、最小化或关闭浏览器，或者在移动设备上从浏览器切换到不同的应用程序时，该事件就会触发，其 `visibilityState` 为 `hidden`。过渡到 `hidden` 是页面能可靠观察到的最后一个事件，因此开发人员应将其视为用户会话的可能结束（例如，用于[发送分析数据](/zh-CN/docs/Web/API/Navigator/sendBeacon)）。
 
 向 `hidden` 过渡也是页面停止用户界面更新和停止用户不想在后台运行的任何任务的好时机。
 
@@ -73,7 +73,6 @@ document.onvisibilitychange = () => {
 - {{domxref("Document.visibilityState")}}
 - [使用页面可见性，不丢失用户和应用程序状态](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)详细解释了为什么应该使用 `visibilitychange`，而不是 `beforeunload`/`unload`。
 - [页面生命周期 API](https://developer.chrome.com/blog/page-lifecycle-api/) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指导。
-
 
 ## 相关链接
 
