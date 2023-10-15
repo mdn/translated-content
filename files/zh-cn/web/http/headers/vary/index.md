@@ -46,7 +46,7 @@ Vary: <header-name>, <header-name>, ...
 
 ### 兼容性备注
 
-- [小心使用 Vary – Vary 标头在 IE6-9 的问题](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [小心使用 Vary – Vary 标头在 IE6-9 的问题](https://docs.microsoft.com/archive/blogs/ieinternals/vary-with-care)
 
 ## 参见
 
