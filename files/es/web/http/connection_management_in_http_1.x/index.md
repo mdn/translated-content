@@ -1,4 +1,4 @@
----
+---archivos/es/web/http/connection_management_in_http_1.x/index.md
 title: Gestión de la conexión en  HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
