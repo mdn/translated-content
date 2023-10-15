@@ -5,9 +5,9 @@ slug: Web/JavaScript/Guide/Using_classes
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
-JavaScript 是一个基于原型的语言 —— 一个对象的行为取决于它自身的属性及其原型的属性。对 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes) 来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。
+JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes) 来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。
 
-在许多其他语言中，_类_ （或构造函数）与 _对象_ （或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象 —— 所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 函数都可用作构造函数 —— 你可以用 `new` 来调用一个构造函数以创建出一个新的对象。
+在许多其他语言中，_类_ （或构造函数）与 _对象_ （或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 函数都可用作构造函数——你可以用 `new` 来调用一个构造函数以创建出一个新的对象。
 
 本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 指南.
 
@@ -185,7 +185,7 @@ function createColor(r, g, b) {
 }
 ```
 
-构造函数的语法与普通函数完全相同 —— 这意味着你可以使用其他语法，例如 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)：
+构造函数的语法与普通函数完全相同——这意味着你可以使用其他语法，例如 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)：
 
 ```js
 class Color {
@@ -206,9 +206,9 @@ const anotherRed = new Color(255, 0, 0);
 console.log(red === anotherRed); // false
 ```
 
-在类的构造函数里，`this` 的值指向新创建的实例。你可以赋予它新的属性，或者读取已有的属性（尤其是方法 —— 我们将在下一节中介绍）。
+在类的构造函数里，`this` 的值指向新创建的实例。你可以赋予它新的属性，或者读取已有的属性（尤其是方法——我们将在下一节中介绍）。
 
-`this` 的值将自动作为 `new` 的结果返回。不建议从构造函数中返回任何值 —— 因为如果你返回一个非基本类型的值，它将成为 `new` 表达式的值，而 `this` 的值将被丢弃。你可以在 [new 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new#description) 的描述中阅读更多关于 `new` 的内容。
+`this` 的值将自动作为 `new` 的结果返回。不建议从构造函数中返回任何值——因为如果你返回一个非原始类型的值，它将成为 `new` 表达式的值，而 `this` 的值将被丢弃。你可以在 [new 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new#description) 的描述中阅读更多关于 `new` 的内容。
 
 ```js
 class MyClass {
@@ -262,7 +262,7 @@ class Color {
 console.log(new Color().getRed === new Color().getRed); // false
 ```
 
-与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在 _哪里_ —— 它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在 _哪里_ ——它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
 相似的，我们也可以添加一个 `setRed` 方法来设置红色值：
 
@@ -486,7 +486,7 @@ red.red = 0;
 console.log(red.red); // 0
 ```
 
-这就像是对象有了一个 `red` 属性 —— 但实际上，实例上并没有这样的属性！实例只有两个方法，分别以 `get` 和 `set` 为前缀，而这使得我们可以像操作属性一样操作它们。
+这就像是对象有了一个 `red` 属性——但实际上，实例上并没有这样的属性！实例只有两个方法，分别以 `get` 和 `set` 为前缀，而这使得我们可以像操作属性一样操作它们。
 
 如果一个字段仅有一个 getter 而没有 setter，它将是只读的。
 
@@ -531,7 +531,7 @@ class MyClass {
 
 ## 静态属性
 
-在上面的 `Date` 例子中，我们还遇到了 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now) 方法，它返回当前日期。这个方法不属于任何日期实例 —— 它属于类本身。然而，它被放在 `Date` 类上，而不是作为全局的 `DateNow()` 函数，因为它在处理日期实例时最有用。
+在上面的 `Date` 例子中，我们还遇到了 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now) 方法，它返回当前日期。这个方法不属于任何日期实例——它属于类本身。然而，它被放在 `Date` 类上，而不是作为全局的 `DateNow()` 函数，因为它在处理日期实例时最有用。
 
 > **注意：** 一个好的习惯是给工具方法一个前缀（这也称作 “命名空间”）。例如，除了旧的、没有前缀的 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 方法之外，JavaScript 后来还添加了带有前缀的 [`Number.parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) 方法，以表明它是用于处理数字的。
 
@@ -601,7 +601,7 @@ class Color {
 }
 ```
 
-然而，这意味着每个实例 —— 即使是大多数不透明的实例（那些 alpha 值为 1 的实例） —— 都必须有额外的 alpha 值，这并不是很优雅。此外，如果特性继续增长，我们的 `Color` 类将变得非常臃肿且难以维护。
+然而，这意味着每个实例——即使是大多数不透明的实例（那些 alpha 值为 1 的实例）——都必须有额外的 alpha 值，这并不是很优雅。此外，如果特性继续增长，我们的 `Color` 类将变得非常臃肿且难以维护。
 
 所以，在面向对象编程中，我们更愿意创建一个 _派生类_。派生类可以访问父类的所有公共属性。在 JavaScript 中，派生类是通过 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 子句声明的，它指示它扩展自哪个类。
 
@@ -624,7 +624,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) ，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this` —— 这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this` —— JavaScript 会阻止你访问未初始化的 `this`。
+有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) ，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this` —— JavaScript 会阻止你访问未初始化的 `this`。
 
 在父类完成对 `this` 的修改后，派生类才可以对其进行自己的逻辑。这里我们添加了一个名为 `#alpha` 的私有字段，并提供了一对 getter/setter 来与之交互。
 
@@ -684,7 +684,7 @@ class ColorWithAlpha extends Color {
 console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 ```
 
-派生类无权访问父类的私有字段 —— 这是 JavaScript 私有字段的一个关键特性（“硬私有”）。私有字段的有效范围被严格限制在类体内，所以 _任何_ 外部代码都无权访问。
+派生类无权访问父类的私有字段——这是 JavaScript 私有字段的一个关键特性（“硬私有”）。私有字段的有效范围被严格限制在类体内，所以 _任何_ 外部代码都无权访问。
 
 ```js-nolint example-bad
 class ColorWithAlpha extends Color {
@@ -723,7 +723,7 @@ console.log(newDay); // 2019-06-20
 console.log(date); // 2019-06-20
 ```
 
-可变性与内部状态是面向对象编程的重要方面，但通常会使代码难以理解 —— 因为任何看似无害的操作都可能产生意想不到的副作用，并改变程序中其他部分的行为。
+可变性与内部状态是面向对象编程的重要方面，但通常会使代码难以理解——因为任何看似无害的操作都可能产生意想不到的副作用，并改变程序中其他部分的行为。
 
 为了代码的可重复利用，我们通常会求助于扩展类，但这也会导致类的层次结构与继承关系变得复杂。
 
