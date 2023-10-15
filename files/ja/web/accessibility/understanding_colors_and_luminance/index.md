@@ -98,7 +98,7 @@ sRGB の値を直接パーセントで設定するには、 0% をオフ（黒�
 
 次の例は "HSL" を示しています。"HSL" は _Hue, Saturation, Lightness_ の略です。 HSL の色値は、 RGB 値よりも直感的であると多くの人に考えられています。設定から生成される色はまだ sRGB 色空間ですが、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) は多くの人にとって直感的な構文です。色相は角度として調整され、色相を調整するためにノブや円形のコントロールを使用してユーザーインターフェイスを作成するのは簡単です。HSL 色は輝度ではなく明るさであることに注意してください。
 
-最後の例は "HWB" を示しています。"HWB" は_Hue, Whiteness, Blackness_の略です。 `rgba()` や `hsla()` とは異なり、 [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) は古い `a` つきの構文がなく、カンマ区切りの値にも対応していません。 `hsl()` と `hwb()` の両方とも、最初の値は [`<number>`](/ja/docs/Web/CSS/number) または [`<angle>`](/ja/docs/Web/CSS/angle) になります。単位がない場合、値は `deg` 度として解釈されます。
+最後の例は "HWB" を示しています。"HWB" は _Hue, Whiteness, Blackness_ の略です。 `rgba()` や `hsla()` とは異なり、 [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) は古い `a` つきの構文がなく、カンマ区切りの値にも対応していません。 `hsl()` と `hwb()` の両方とも、最初の値は [`<number>`](/ja/docs/Web/CSS/number) または [`<angle>`](/ja/docs/Web/CSS/angle) になります。単位がない場合、値は `deg` 度として解釈されます。
 
 ### 変換
 
