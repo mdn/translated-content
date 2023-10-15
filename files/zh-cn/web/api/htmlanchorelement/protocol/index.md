@@ -13,10 +13,10 @@ slug: Web/API/HTMLAnchorElement/protocol
 
 ## 示例
 
-### 从 a 标签的链接中获取协议
+### 从锚点元素的链接中获取协议
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 元素在文档中
+// <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素在文档中
 const anchor = document.getElementById("myAnchor");
 anchor.protocol; // 返回 'https:'
 ```
