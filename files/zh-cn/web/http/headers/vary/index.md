@@ -52,4 +52,4 @@ Vary: <header-name>, <header-name>, ...
 
 - [理解 Vary 标头 - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [使用 Vary 标头的最佳实践 – fastly.com](https://www.fastly.com/blog/best-practices-using-vary-header)
-- [内容协商](/en-US/docs/Web/HTTP/Content_negotiation)
+- [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
