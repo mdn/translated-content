@@ -26,7 +26,7 @@ l10n:
 
   - : MathML 要素の書字方向を示す[列挙](/ja/docs/Glossary/Enumerated)属性。取ることができるのは以下の値です。
 
-    - `ltr` は_left to right_ を意味しており、左から右へ数式を表示するために使用します（例：イギリスやモロッコスタイル）
+    - `ltr` は _left to right_ を意味しており、左から右へ数式を表示するために使用します（例：イギリスやモロッコスタイル）
     - `rtl` は _right to left_ を意味しており、右から左に数式を表示するために使用します（例：マグレブやマッハレックスタイル）
 
 - [`displaystyle`](/ja/docs/Web/MathML/Global_attributes/displaystyle):
