@@ -7,7 +7,7 @@ l10n:
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Table()`** 是一个代表了 WebAssembly Table 的 JavaScript 包装对象，具有类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
+**`WebAssembly.Table`** 是代表 WebAssembly Table 的 JavaScript 包装对象，具有类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
 
 > **备注：** Table 对象目前只能存储函数引用，不过在将来可能会被扩展。
 
