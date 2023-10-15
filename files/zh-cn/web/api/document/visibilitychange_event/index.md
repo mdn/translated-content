@@ -73,8 +73,3 @@ document.onvisibilitychange = () => {
 - {{domxref("Document.visibilityState")}}
 - [使用页面可见性，不丢失用户和应用程序状态](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)详细解释了为什么应该使用 `visibilitychange`，而不是 `beforeunload`/`unload`。
 - [页面生命周期 API](https://developer.chrome.com/blog/page-lifecycle-api/) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指导。
-
-## 相关链接
-
-- [使用页面可见性 API](/zh-CN/docs/DOM/Using_the_Page_Visibility_API)
-- {{domxref("Document.visibilityState")}}
