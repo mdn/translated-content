@@ -16,7 +16,7 @@ JavaScript とフレームワークの簡単な歴史を見て、フレームワ
       <td>
         <a href="/ja/docs/Learn/HTML">HTML</a>、
         <a href="/ja/docs/Learn/CSS">CSS</a>、
-        <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
+        <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること。
       </td>
     </tr>
     <tr>
