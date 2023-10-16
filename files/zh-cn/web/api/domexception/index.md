@@ -7,7 +7,7 @@ slug: Web/API/DOMException
 
 **`DOMException`** 接口代表调用方法或访问 Web API 属性时发生的不正常事件（被称为**异常**，**exception**）。这就是 Web API 中描述错误条件的方式。
 
-每个异常都有一个名称 **name**，一个采用驼峰命名法的简短字符串，用于描述识别错误或异常情况。
+每个异常都有一个**名称**（name），一个采用驼峰命名法的简短字符串，用于描述识别错误或异常情况。
 
 `DOMException` 是一个{{Glossary("Serializable object","可序列化对象")}}，因此可以使用 {{domxref("structuredClone()")}} 克隆，或使用 {{domxref("Worker.postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间复制。
 
@@ -19,7 +19,7 @@ slug: Web/API/DOMException
 ## 实例属性
 
 - {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
-  - : 返回任意一个历史错误代码常量，如果不匹配则返回 `0`。
+  - : 返回任意一个遗留错误代码常量，如果不匹配则返回 `0`。
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
   - : 返回一个字符串，代表与给定的[错误名称](#错误名称)有关的信息或描述。
 - {{domxref("DOMException.name")}} {{readOnlyInline}}
@@ -40,7 +40,7 @@ slug: Web/API/DOMException
 - `IndexSizeError`
   - : 索引不在允许的范围内。例如，这可以被 {{ domxref("Range") }} 对象抛出。（遗留代码值：`1`，遗留常量名称：`INDEX_SIZE_ERR`）
 - `HierarchyRequestError`
-  - : 节点树层次结构有误。（遗留代码值：`3` ，遗留常量名称：`HIERARCHY_REQUEST_ERR`）
+  - : 节点树层次结构有误。（遗留代码值：`3`，遗留常量名称：`HIERARCHY_REQUEST_ERR`）
 - `WrongDocumentError`
   - : 对象在错误的 {{ domxref("Document") }} 中。（遗留代码值：`4`，遗留常量名称：`WRONG_DOCUMENT_ERR`）
 - `InvalidCharacterError`
