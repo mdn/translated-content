@@ -33,7 +33,7 @@ Dans l'exemple qui suit, on affiche les éléments en utilisant leur taille natu
 
 On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés [`flex`](/fr/docs/Web/CSS/flex) afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis).
 
-Si on souhaite que tous les éléments de la barre aient la même largeur, on utilisera `flex: auto` qui correspond à la notation raccourcie de `flex: 1 1 auto` — tous les objets grandissent et rétrécissent de la même façon à partir d'une taille de base automatique. Cela signifie que le plus grand élément occupera plus d'espace.
+Si on souhaite que tous les éléments de la barre aient la même largeur, on utilisera `flex: auto` qui correspond à la notation raccourcie de `flex: 1 1 auto`&nbsp;: tous les objets grandissent et rétrécissent de la même façon à partir d'une taille de base automatique. Cela signifie que le plus grand élément occupera plus d'espace.
 
 Dans l'exemple qui suit, vous pouvez modifier `flex: auto` pour utiliser `flex: 1` qui correspond à la notation raccourcie de `flex: 1 1 0` et qui permet d'avoir la même largeur pour chaque élément, car la base (`flex-basis`) vaut 0 et permet de répartir l'intégralité de l'espace de façon équitable.
 
@@ -42,8 +42,6 @@ Dans l'exemple qui suit, vous pouvez modifier `flex: auto` pour utiliser `flex: 
 ## La navigation séparée
 
 Une autre façon d'aligner les éléments le long de l'axe principal consiste à utiliser des marges automatiques. Cela permet d'obtenir une barre où une partie des éléments sont alignés à gauche alors qu'un second groupe est aligné à droite. Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans [Utiliser les marges automatiques pour l'alignement sur l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#utiliser_les_marges_automatiques_pour_aligner_sur_l'axe_principal).
-
-Les éléments sont alignés le long de l'axe principal avec `flex-start`, ce qui correspond au comportement initial (par défaut) des boîtes flexibles, et on affecte une marge automatique à gauche pour les éléments qu'on souhaite aligner à droite. Dans le code de l'exemple, vous pouvez déplacer la classe pour l'appliquer sur un autre élément afin de voir comment la césure se déplace.
 
 Les éléments sont alignés sur l'axe principal avec `flex-start` car c'est le comportement initial de flexbox. La propriété [`gap`](/fr/docs/Web/CSS/gap) a été utilisée pour créer des espaces entre les éléments. Nous alignons le dernier élément sur la droite en lui attribuant une marge gauche automatique. Vous pouvez déplacer la classe d'un élément à l'autre pour modifier l'emplacement de la séparation.
 
@@ -71,7 +69,7 @@ On peut résoudre ce problème avec les boîtes flexibles. Pour commencer, on tr
 
 ## Les objets média
 
-Un objet média est un motif classique en _design_ web. Dans ce motif, on a une image ou un autre média d'un côté et le texte associé à droite. Idéalement, on souhaite pouvoir inverser les deux composants et déplacer l'image à droite.
+Un objet média est un motif classique en conception web. Dans ce motif, on a une image ou un autre média d'un côté et le texte associé à droite. Idéalement, on souhaite pouvoir inverser les deux composants et déplacer l'image à droite.
 
 On peut voir ce motif utilisé avec les commentaires, les endroits où on affiche des images et leur description. Avec les boîtes flexibles, on peut dimensionner l'objet média en fonction des dimensions de l'image et occuper le reste de l'espace avec le contenu textuel.
 
@@ -139,4 +137,4 @@ De tels motifs facilitent la création d'une bibliothèque d'éléments de formu
 
 En explorant les motifs de ce guide, nous avons vu certaines des meilleures façons d'utiliser les boîtes flexibles pour obtenir le résultat souhaité. La plupart du temps, plusieurs choix s'offrent à nous. Mélanger des éléments qui peuvent s'étirer avec d'autres qui ne le peuvent pas, utiliser la taille du contenu comme point de départ ou encore permettre aux boîtes flexibles de gérer tout l'espace.
 
-Pensez à la meilleure façon de présenter le contenu dont vous disposez puis voyez comment les boîtes flexibles ou les autres méthodes de disposition peuvent vous aider à obtenir cette présentation.
+Pensez à la meilleure façon de présenter le contenu dont vous disposez, puis voyez comment les boîtes flexibles ou les autres méthodes de disposition peuvent vous aider à obtenir cette présentation.
