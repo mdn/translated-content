@@ -168,11 +168,7 @@ Output para esse exemplo:
 
 ## Especificações
 
-| Especificação                                                    | Status             | Comentário                                        |
-| ---------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 3ª Edição                                             | Standard           | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}          | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

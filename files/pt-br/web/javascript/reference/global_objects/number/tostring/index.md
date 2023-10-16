@@ -56,11 +56,7 @@ console.log((-0xff).toString(2)); // displays '-11111111'
 
 ## Especificações
 
-| Especificação                                                                      | Status             | Comentários                                        |
-| ---------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1ª edição.                                                              | Standard           | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}                | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

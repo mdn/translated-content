@@ -70,9 +70,7 @@ console.log(e.toString()); // 'hello'
 
 ## Especificações
 
-| Especificação                                                                        |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

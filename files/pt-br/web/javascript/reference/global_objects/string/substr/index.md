@@ -87,12 +87,7 @@ if ("ab".substr(-1) != "b") {
 
 ## Especificações
 
-| Specification                                                                      | Status               | Comment                                                                                |
-| ---------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                | {{Spec2('ES3')}}     | Defined in the (informative) Compatibility Annex B. Implemented in JavaScript 1.0.     |
-| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                     | {{Spec2('ES5.1')}}   | Defined in the (informative) Compatibility Annex B                                     |
-| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}     | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
-| {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

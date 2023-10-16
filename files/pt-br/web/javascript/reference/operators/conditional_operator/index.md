@@ -91,11 +91,7 @@ location.assign(url); // "stop.html"
 
 ## Especificações
 
-| Especificações                                                           | Status             | Comentários                                       |
-| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                  | Standard           | Definição inicial. Implementado em JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}          | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -108,15 +108,7 @@ Quando se formata um grande número de datas, é aconselhável criar um objeto {
 
 ## Especificações
 
-| Especificação                                                                                               | Status                    | Comentário                                         |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}          | Definição inicial, Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                                 | {{Spec2('ES5.1')}}        |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}              | {{Spec2('ES6')}}          |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}          | {{Spec2('ESDraft')}}      |                                                    |
-| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                              | {{Spec2('ES Int 1.0')}}   | Define os argumentos `locales` e `options`.        |
-| {{SpecName('ES Int 2.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                              | {{Spec2('ES Int 2.0')}}   |                                                    |
-| {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleTimeString', 'Date.prototype.toLocaleTimeString')}} | {{Spec2('ES Int Draft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

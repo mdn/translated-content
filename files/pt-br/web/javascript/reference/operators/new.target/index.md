@@ -74,10 +74,7 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 ## Especificações
 
-| Specification                                                                          | Status               | Comment            |
-| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -157,11 +157,7 @@ console.log(
 
 ## Especificações
 
-| Especificação                                                              | Status                    | Comentário         |
-| -------------------------------------------------------------------------- | ------------------------- | ------------------ |
-| {{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}               | {{Spec2('ES Int 1.0')}}   | Definição inicial. |
-| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}               | {{Spec2('ES Int 2.0')}}   |                    |
-| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} | {{Spec2('ES Int Draft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

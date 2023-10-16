@@ -204,12 +204,7 @@ span {
 
 ## Specifications
 
-| Specification                                                       | Status                        | Comment                            |
-| ------------------------------------------------------------------- | ----------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}          | {{Spec2('CSS3 Fonts')}}       | No change.                         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}    | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}           | No change.                         |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                     | {{Spec2('CSS1')}}             | Initial definition.                |
+{{Specifications}}
 
 {{cssinfo}}
 

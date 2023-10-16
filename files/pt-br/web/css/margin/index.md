@@ -122,12 +122,7 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ## Especificações
 
-| Especificação                                                    | Status                          | Comentário                               |
-| ---------------------------------------------------------------- | ------------------------------- | ---------------------------------------- |
-| {{ SpecName('CSS3 Box', '#margin', 'margin') }}                  | {{ Spec2('CSS3 Box') }}         | Nenhuma mudança significativa.           |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'margin') }}  | {{ Spec2('CSS3 Transitions') }} | Define `margin` como animável.           |
-| {{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }} | {{ Spec2('CSS2.1') }}           | Remove seu efeito em elementos _inline_. |
-| {{ SpecName('CSS1', '#margin', 'margin') }}                      | {{ Spec2('CSS1') }}             | Definição inicial.                       |
+{{Specifications}}
 
 {{cssinfo}}
 

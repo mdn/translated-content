@@ -76,9 +76,7 @@ console.log(object2);
 
 ## Especificações
 
-| Especificação                                                            | Status               | Comentário                             |
-| ------------------------------------------------------------------------ | -------------------- | -------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | {{Spec2('ESDraft')}} | Initial definition in ECMAScript 2019. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

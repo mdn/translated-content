@@ -59,11 +59,7 @@ This element's attributes include the [global attributes](/ru/docs/Web/HTML/Glob
 
 ## Specifications
 
-| Specification                                                                   | Status                   | Comment                                                               |
-| ------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}      | {{Spec2('HTML WHATWG')}} | Definition of the `<hr>` element                                      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}   |                                                                       |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}          | {{Spec2('HTML4.01')}}    | The `align`, `noshade`, `size`, and `width` attributes are deprecated |
+{{Specifications}}
 
 ## Browser compatibility
 

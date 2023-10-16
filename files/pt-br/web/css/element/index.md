@@ -49,7 +49,7 @@ Esse exemplo usa uma {{HTMLElement("div")}} escondida como _background_. O eleme
 
 A {{HTMLElement("div")}} com ID "myBackground1" é usada como _background_, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".
 
-![example1.png](/@api/deki/files/4624/=example1.png)
+![example1.png](example1.png)
 
 ### Um exemplo ainda mais bizarro
 
@@ -64,13 +64,11 @@ Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _backgr
 </div>
 ```
 
-![example2.png](/@api/deki/files/4625/=example2.png)
+![example2.png](example2.png)
 
 ## Especificações
 
-| Especificação                                                                                        | Estatus                  | Comentário                      |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------- |
-| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Actualmente adiado para o CSS4. |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 

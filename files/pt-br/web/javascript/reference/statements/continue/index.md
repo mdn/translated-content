@@ -106,13 +106,7 @@ Output:
 
 ## Especificações
 
-| Especificação                                                            | Status               | Comentários                           |
-| ------------------------------------------------------------------------ | -------------------- | ------------------------------------- |
-| {{SpecName('ES1')}}                                                      | {{Spec2('ES1')}}     | Definição inicial. Versão sem rótulo. |
-| {{SpecName('ES3')}}                                                      | {{Spec2('ES3')}}     | Versão rotulada adicionada.           |
-| {{SpecName('ES5.1', '#sec-12.7', 'Continue statement')}}                 | {{Spec2('ES5.1')}}   |                                       |
-| {{SpecName('ES6', '#sec-continue-statement', 'Continue statement')}}     | {{Spec2('ES6')}}     |                                       |
-| {{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}} | {{Spec2('ESDraft')}} |                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

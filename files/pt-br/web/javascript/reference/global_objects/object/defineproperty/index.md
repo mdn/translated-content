@@ -422,11 +422,7 @@ console.log(myclass.prototype.y); // 1
 
 ## Especificações
 
-| Especificação                                                                  | Status               | Comentários                                          |
-| ------------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                | {{Spec2('ES5.1')}}   | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

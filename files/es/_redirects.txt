@@ -1804,6 +1804,7 @@
 /es/docs/Web/CSS/:not()	/es/docs/Web/CSS/:not
 /es/docs/Web/CSS/@media/altura	/es/docs/Web/CSS/@media/height
 /es/docs/Web/CSS/@media/resolución	/es/docs/Web/CSS/@media/resolution
+/es/docs/Web/CSS/Adjacent_sibling_combinator	/es/docs/Web/CSS/Next-sibling_combinator
 /es/docs/Web/CSS/CSS_Animations/Detectar_soporte_de_animación_CSS	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_animations/Using_CSS_animations
@@ -1860,6 +1861,7 @@
 /es/docs/Web/CSS/Descendant_selectors	/es/docs/Web/CSS/Descendant_combinator
 /es/docs/Web/CSS/Elemento_reemplazo	/es/docs/Web/CSS/Replaced_element
 /es/docs/Web/CSS/Especificidad	/es/docs/Web/CSS/Specificity
+/es/docs/Web/CSS/General_sibling_combinator	/es/docs/Web/CSS/Subsequent-sibling_combinator
 /es/docs/Web/CSS/Gradiente	/es/docs/Web/CSS/gradient
 /es/docs/Web/CSS/Herramientas	/es/docs/conflicting/Web/CSS
 /es/docs/Web/CSS/Introducción/Content	/es/docs/Learn/CSS/Howto/Generated_content
@@ -1876,8 +1878,8 @@
 /es/docs/Web/CSS/Selectores_CSS	/es/docs/Web/CSS/CSS_selectors
 /es/docs/Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selectores	/es/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /es/docs/Web/CSS/Selectores_atributo	/es/docs/Web/CSS/Attribute_selectors
-/es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Adjacent_sibling_combinator
-/es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/General_sibling_combinator
+/es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Next-sibling_combinator
+/es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/Subsequent-sibling_combinator
 /es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/Value_definition_syntax
 /es/docs/Web/CSS/Texto_CSS	/es/docs/Web/CSS/CSS_text
 /es/docs/Web/CSS/Tools	/es/docs/conflicting/Web/CSS

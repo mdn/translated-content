@@ -38,11 +38,7 @@ console.log(weekday); // 1
 
 ## Especificações
 
-| **Especificação**                                                          | Status             | **Comentário**                                     |
-| -------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                    | Standard           | Definição inicial. Implementado em JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

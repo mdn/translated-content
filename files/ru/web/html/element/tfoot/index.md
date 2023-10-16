@@ -56,7 +56,7 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
 
 ## DOM интерфейс
 
-Этот элемент реализует интерфейс [`HTMLTableSectionElement`](/en/docs/Web/API/HTMLTableSectionElement).
+Этот элемент реализует интерфейс [`HTMLTableSectionElement`](/ru/docs/Web/API/HTMLTableSectionElement).
 
 ## Примеры
 

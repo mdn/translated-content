@@ -19,9 +19,9 @@ O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por 
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("href")}}
+- `href`
   - : O URL de base para ser usado em todo o documento para endereços URL relativos.Se este atributo for especificado, este elemento deve vir antes de quaisquer outros elementos com atributos cujos valores são URLs.Endereços (URLs) absolutos e relativos são permitidos (mas ver seção nota abaixo).
-- {{htmlattrdef("target")}}
+- `target`
   - : Esse elemento é uma palavra-chave que indica o local padrão para exibir o resultado quando os hiperlinks causarem navegações, por elementos que não têm referência alvo explícita. Em HTML5, é um nome ou palavra-chave para um contexto de navegação. (por exemplo, guia, janela, ou frame incorporada). As seguintes formas têm significados específicos:
 - \_self: Coloca i resultado no mesmo quadro HTML4 ou contexto de navegação, caso HTML5, como o atual. Este valor é o padrão se o atributo não for especificado.
 - \_blank: Coloca o resultado em uma nova janela HTML4 ou janela no contexto de navegação HTML5.
@@ -37,11 +37,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificações                                                                  | Estado                   | Comentários |
-| ------------------------------------------------------------------------------- | ------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}}  | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML5 W3C')}}   |             |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}            | {{Spec2('HTML4.01')}}    |             |
+{{Specifications}}
 
 ## Navegadores Compatíveis
 

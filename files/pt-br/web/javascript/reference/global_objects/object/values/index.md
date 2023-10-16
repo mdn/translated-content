@@ -64,9 +64,7 @@ console.log(Object.values("foo")); // ['f', 'o', 'o']
 
 ## Especificações
 
-| Especificações                                                 | Situação             | Comentário          |
-| -------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

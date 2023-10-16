@@ -78,13 +78,7 @@ with (Math) {
 
 ## Especificações
 
-| Especificação                                                    | Situação             | Comentário                      |
-| ---------------------------------------------------------------- | -------------------- | ------------------------------- |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                 |
-| {{SpecName('ES6', '#sec-with-statement', 'with statement')}}     | {{Spec2('ES6')}}     |                                 |
-| {{SpecName('ES5.1', '#sec-12.10', 'with statement')}}            | {{Spec2('ES5.1')}}   | Agora proibido no modo estrito. |
-| {{SpecName('ES3', '#sec-12.10', 'with statement')}}              | {{Spec2('ES3')}}     |                                 |
-| {{SpecName('ES1', '#sec-12.10', 'with statement')}}              | {{Spec2('ES1')}}     | Definição inicial               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

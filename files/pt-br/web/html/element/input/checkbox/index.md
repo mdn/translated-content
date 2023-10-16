@@ -193,7 +193,7 @@ Portanto, neste caso, o `indeterminate`estado é usado para afirmar que a coleta
 
 ## Validação
 
-As caixas de seleção suportam [validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/pt-BR/docs/Web/HTML/Element/input#attr-required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/pt-BR/docs/Web/API/ValidityState/valueMissing) será `true`.
+As caixas de seleção suportam [validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/pt-BR/docs/Web/HTML/Element/input#required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/pt-BR/docs/Web/API/ValidityState/valueMissing) será `true`.
 
 ## Exemplos
 
@@ -290,11 +290,7 @@ otherCheckbox.onchange = function () {
 
 ## Especificações
 
-| Especificação                                                                                                             | Status                    | Comente |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------- |
-|                                                                                                                           |                           |         |
-| {{SpecName ('HTML WHATWG', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}} | {{Spec2 ('HTML WHATWG')}} |         |
-| {{SpecName ('HTML5 W3C', 'forms.html # checkbox-state- (tipo = caixa de seleção)', '&lt;input type = "checkbox"&gt;')}}   | {{Spec2 ('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

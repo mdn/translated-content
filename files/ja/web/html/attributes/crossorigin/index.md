@@ -1,20 +1,22 @@
 ---
 title: "HTML 属性: crossorigin"
 slug: Web/HTML/Attributes/crossorigin
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
-**`crossorigin`** 属性は、 {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }} の各要素で有効であり、 [CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
+**`crossorigin`** 属性は、{{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("video")}} の各要素で有効です。[CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
 
 メディア要素の `crossorigin` コンテンツ属性は CORS 設定属性です。
 
-これらの属性は列挙型で、以下の値を取ることができます。
+これらの属性は[列挙型](/ja/docs/Glossary/Enumerated)で、以下の値を取ることができます。
 
 - `anonymous`
   - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'same-origin'` に設定されます。宛先が同一オリジンでない限り、クッキー、クライアントサイド SSL 証明書、HTTP 認証による**ユーザー資格情報**の交換は行われません。
 - `use-credentials`
-  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'include'` に設定され、**ユーザー資格情報**は常に含まれます。
+  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'include'` に設定され、**ユーザー資格情報**が常に含まれます。
 - `""`
   - : `crossorigin` または `crossorigin=""` のように属性に空の値を設定すると、 `anonymous` と同じになります。
 
@@ -37,7 +39,7 @@ slug: Web/HTML/Attributes/crossorigin
     <tr>
       <td><code>script</code></td>
       <td>
-        {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} によるエラーログへのアクセスが制限されます。
+        {{domxref('Window.error_event', 'window.onerror')}} によるエラーログへのアクセスが制限されます。
       </td>
     </tr>
     <tr>

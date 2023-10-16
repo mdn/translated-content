@@ -39,9 +39,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 
 ## Спецификации
 
-| Спецификация                                                                               | Статус             | Комментарий           |
-| ------------------------------------------------------------------------------------------ | ------------------ | --------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Начальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

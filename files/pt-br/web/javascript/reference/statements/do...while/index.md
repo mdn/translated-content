@@ -50,11 +50,7 @@ document.getElementById("exemplo").innerHTML = resultado;
 
 ## Especificações
 
-| Specification                                                        | Status             | Comment                                           |
-| -------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                              | Standard           | Initial definition. Implemented in JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.6.1', 'do-while statement')}}           | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-do-while-statement', 'do-while statement')}} | {{Spec2('ES6')}}   | Trailing ; is now optional.                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

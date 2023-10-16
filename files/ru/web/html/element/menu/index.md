@@ -130,10 +130,7 @@ div {
 
 ## Specifications
 
-| Specification                                                                         | Status                   | Comment                                                 |
-| ------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | No change from latest snapshot, {{SpecName("HTML5.3")}} |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     |                                                         |
+{{Specifications}}
 
 ## Browser compatibility
 
