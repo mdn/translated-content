@@ -415,7 +415,7 @@ class Color {
 }
 ```
 
-> **备注：** 请记住，`#` 是一种特殊的标识符语法，你不能像字符串一样使用该字段名。即便 `"#values" in anotherColor` 会查找一个名为 `"#values"` 的属性，而不是一个私有字段。
+> **备注：** 请记住，`#` 是一种特殊的标识符语法，你不能像字符串一样使用该字段名。`"#values" in anotherColor` 会查找一个名为 `"#values"` 的属性，而不是一个私有字段。
 
 有一些限制在使用私有字段时需要注意：在单个类中，相同的名称不能声明两次，且它们不能被删除。这两种情况都会导致早期语法错误。
 
@@ -594,7 +594,7 @@ class Color {
   }
   set alpha(value) {
     if (value < 0 || value > 1) {
-      throw new RangeError("Alpha value must be between 0 and 1");
+      throw new RangeError("Alpha 值必须在 0 与 1 之间");
     }
     this.#values[3] = value;
   }
@@ -617,7 +617,7 @@ class ColorWithAlpha extends Color {
   }
   set alpha(value) {
     if (value < 0 || value > 1) {
-      throw new RangeError("Alpha value must be between 0 and 1");
+      throw new RangeError("Alpha 值必须在 0 与 1 之间");
     }
     this.#alpha = value;
   }
