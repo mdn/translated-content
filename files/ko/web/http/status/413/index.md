@@ -15,7 +15,7 @@ RFC 9110 이전에는 이 상태 코드 이름이 `Payload Too Large`였습니�
 413 Content Too Large
 ```
 
-## 정의
+## 명세서
 
 {{Specifications}}
 
