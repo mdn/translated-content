@@ -49,7 +49,7 @@ Se ignorará en navegadores que no admitan `:unsupported` incluso si admiten `:v
 La pseudoclase `:is()` puede simplificar enormemente sus selectores CSS. Por ejemplo, tome el siguiente CSS:
 
 ```css
-/* Las listas desordenadas de 3 (o más) niveles usan un cuadrado */
+/* Las listas desordenadas de 3 (o más) niveles usan una viñeta cuadrada */
 ol ol ul,
 ol ul ul,
 ol menu ul,
