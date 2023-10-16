@@ -58,7 +58,7 @@ Angular は、宣言型 HTML テンプレートを使用するコンポーネン
 
 ### Vue
 
-オリジナルの [AngularJS](https://angularjs.org/)プロジェクトに取り組み、そこから学んだエヴァン・ユーは、2014年に [Vue](https://vuejs.org/) をリリースしました。Vueはビッグ4の中では最も歴史が浅いが、最近人気が急上昇しています。
+オリジナルの [AngularJS](https://angularjs.org/) プロジェクトに取り組み、そこから学んだエヴァン・ユーは、2014年に [Vue](https://vuejs.org/) をリリースしました。 Vue はビッグ 4 の中では最も歴史が浅いが、最近人気が急上昇しています。
 
 Vue は、 [AngularJS](https://angularjs.org/) と同様に、独自のコードの一部で HTML を拡張します。それとは別に、主に最新の標準 JavaScript に依存しています。
 
