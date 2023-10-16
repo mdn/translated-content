@@ -1,5 +1,5 @@
 ---
-title: "location: protocol property"
+title: location：protocol 属性
 slug: Web/API/Location/protocol
 ---
 
