@@ -69,12 +69,7 @@ bloco_2:{
 
 ## Especificações
 
-| Especificação                                                  | Status             | Comentário                                    |
-| -------------------------------------------------------------- | ------------------ | --------------------------------------------- |
-| ECMAScript 1st Edition                                         | Standard           | Definição inicial. Versão sem o uso do label. |
-| ECMAScript 3rd Edition                                         | Standard           | Versão com label adicionada.                  |
-| {{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}          | {{Spec2('ES5.1')}} |                                               |
-| {{SpecName('ES6', '#sec-break-statement', 'Break statement')}} | {{Spec2('ES6')}}   |                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -46,9 +46,7 @@ class Quadrado extends Poligono {
 
 ## Especificações
 
-| Especificação                                                      | Status           | Comentário         |
-| ------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES6')}} | definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

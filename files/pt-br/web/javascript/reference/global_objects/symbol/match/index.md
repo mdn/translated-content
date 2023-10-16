@@ -39,9 +39,7 @@ re[Symbol.match] = false;
 
 ## Especificações
 
-| Especificação                                                |
-| ------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
