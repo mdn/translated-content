@@ -46,9 +46,7 @@ document.getElementById("#oIdDoElemento").style.fontSize = "2em";
 
 ## Especificações
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

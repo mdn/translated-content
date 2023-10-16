@@ -48,10 +48,7 @@ Promise.reject(new Error("falha")).then(
 
 ## Especificações
 
-| Especificação                                                    | Situação             | Comentário                           |
-| ---------------------------------------------------------------- | -------------------- | ------------------------------------ |
-| {{SpecName('ES6', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES6')}}     | Definição inicial em um padrão ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
