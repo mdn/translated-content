@@ -97,7 +97,7 @@ MyClass.prototype.myMethod = function () {
 })();
 ```
 
-> **注意：** 私有字段和方法是类中的新特性，在函数构造器中并没有与之等价的语法。
+> **备注：** 私有字段和方法是类中的新特性，在函数构造器中并没有与之等价的语法。
 
 ### 构造一个类
 
@@ -349,7 +349,7 @@ console.log(red.getRed()); // 255
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
 
-> **注意：** 在 Chrome 控制台中运行的代码可以在类外访问私有字段，JavaScript 为了方便调试而仅在 DevTools 中放宽了这一限制。
+> **备注：** 在 Chrome 控制台中运行的代码可以在类外访问私有字段，JavaScript 为了方便调试而仅在 DevTools 中放宽了这一限制。
 
 JavaScript 中的私有字段是*硬私有*的：如果类没有实现暴露这些私有字段的方法，也就没有任何机制可以从类外访问它们。这意味着你可以对类的私有字段做任何重构，只要暴露的方法的行为保持不变即可。
 
@@ -415,7 +415,7 @@ class Color {
 }
 ```
 
-> **注意：** 请记住，`#` 是一种特殊的标识符语法，你不能像字符串一样使用该字段名。即便 `"#values" in anotherColor` 会查找一个名为 `"#values"` 的属性，而不是一个私有字段。
+> **备注：** 请记住，`#` 是一种特殊的标识符语法，你不能像字符串一样使用该字段名。即便 `"#values" in anotherColor` 会查找一个名为 `"#values"` 的属性，而不是一个私有字段。
 
 有一些限制在使用私有字段时需要注意：在单个类中，相同的名称不能声明两次，且它们不能被删除。这两种情况都会导致早期语法错误。
 
@@ -533,7 +533,7 @@ class MyClass {
 
 在上面的 `Date` 例子中，我们还遇到了 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now) 方法，它返回当前日期。这个方法不属于任何日期实例——它属于类本身。然而，它被放在 `Date` 类上，而不是作为全局的 `DateNow()` 函数，因为它在处理日期实例时最有用。
 
-> **注意：** 一个好的习惯是给工具方法一个前缀（这也称作“命名空间”）。例如，除了旧的、没有前缀的 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 方法之外，JavaScript 后来还添加了带有前缀的 [`Number.parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) 方法，以表明它是用于处理数字的。
+> **备注：** 一个好的习惯是给工具方法一个前缀（这也称作“命名空间”）。例如，除了旧的、没有前缀的 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 方法之外，JavaScript 后来还添加了带有前缀的 [`Number.parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) 方法，以表明它是用于处理数字的。
 
 [_静态属性_](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)是一组在类本身上定义的特性，而不是在类的实例上定义的特性。这些特性包括：
 
