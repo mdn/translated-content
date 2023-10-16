@@ -14,7 +14,7 @@ slug: Web/API/Location/protocol
 ## 示例
 
 ```js
-// 让我们在文档中加入一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/Location.protocol"> 元素
+// 在文档中加入一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/Location.protocol"> 元素
 const anchor = document.getElementById("myAnchor");
 const result = anchor.protocol; // 返回：'https:'
 ```
