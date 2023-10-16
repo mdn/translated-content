@@ -173,9 +173,7 @@ obj[Object(sym)]; // still 1
 
 ## Especificações
 
-| Specification                                           | Status              | Comment            |
-| ------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-symbol-objects', 'Symbol')}} | {{Spec2('ES2015')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

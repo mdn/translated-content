@@ -259,10 +259,7 @@ console.log(
 
 ## Especificações
 
-| Specification                                                                      | Status               | Comment            |
-| ---------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

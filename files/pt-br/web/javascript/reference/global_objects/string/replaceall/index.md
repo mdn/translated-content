@@ -100,9 +100,7 @@ Já o código abaixo vai funcionar:
 
 ## Especificações
 
-| Especificação                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

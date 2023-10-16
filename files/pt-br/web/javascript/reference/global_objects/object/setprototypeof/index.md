@@ -172,10 +172,7 @@ george(); // 'Hello guys!!'
 
 ## Especificações
 
-| Especificação                                                                 | Situação             | Comentário         |
-| ----------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -69,12 +69,7 @@ console.log(
 
 ## Especificações
 
-| Especificação                                                                                | Estado               | Comentários        |
-| -------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                                          | {{Spec2('ES1')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}                       | {{Spec2('ES5.1')}}   |                    |
-| {{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}     | {{Spec2('ES6')}}     |                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
