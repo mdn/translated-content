@@ -8,9 +8,9 @@ l10n:
 
 {{ApiRef("Push API")}}
 
-La méthode **`subscribe()`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) permet de s'abonner à un service de push.
+La méthode **`subscribe()`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) permet de s'abonner à un service push.
 
-Elle renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant les détails d'un abonnement à un service de push. Un nouvel abonnement est créé si le travailleur de service actuel n'a pas d'abonnement existant.
+Elle renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant les détails d'un abonnement à un service de push. Un nouvel abonnement est créé si le <i lang="en">service worker</i> actuel n'a pas d'abonnement existant.
 
 ## Syntaxe
 
@@ -25,15 +25,15 @@ subscribe(options)
   - : Un objet contenant des paramètres de configuration optionnels. Il peut avoir les propriétés suivantes&nbsp;:
 
     - `userVisibleOnly`
-      - : Un booléen indiquant que l'abonnement push renvoyé ne sera utilisé que pour les messages dont l'effet est rendu visible à l'utilisateur.
+      - : Un booléen indiquant que l'abonnement push renvoyé ne sera utilisé que pour les messages dont l'effet est visible pour l'utilisatrice ou l'utilisateur.
     - `applicationServerKey`
-      - : Une chaîne encodée en Base64 ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant une clé publique [ECDSA](https://fr.wikipedia.org/wiki/Elliptic_curve_digital_signature_algorithm) P-256 que le serveur push utilisera pour authentifier votre serveur d'application. Si vous le spécifiez, tous les messages provenant de votre serveur d'application doivent utiliser le schéma d'authentification [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) et inclure un JWT signé avec la clé privée correspondante. Cette clé **_N'EST PAS_** la même clé ECDH que celle que vous utilisez pour chiffrer les données. Pour plus d'informations, voir «&nbsp;[Utiliser VAPID avec WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)&nbsp;».
+      - : Une chaîne encodée en Base64 ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant une clé publique [ECDSA](https://fr.wikipedia.org/wiki/Elliptic_curve_digital_signature_algorithm) P-256 que le serveur push utilisera pour authentifier votre serveur d'application. Si vous le spécifiez, tous les messages provenant de votre serveur d'application doivent utiliser le schéma d'authentification [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) et inclure un JWT signé avec la clé privée correspondante. Cette clé **_n'est pas_** la même clé ECDH que celle que vous utilisez pour chiffrer les données. Pour plus d'informations, voir «&nbsp;[Utiliser VAPID avec WebPush (en anglais)](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)&nbsp;».
 
     > **Note :** Ce paramètre est nécessaire dans certains navigateurs comme Chrome et Edge.
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription).
+Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription).
 
 ## Exemples
 
@@ -70,9 +70,9 @@ navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
 });
 ```
 
-### Répondre aux gestes de l'utilisateur
+### Répondre aux actions de l'utilisatrice ou de l'utilisateur
 
-Les appels `subscribe()` doivent être effectués en réponse à un geste de l'utilisateur, tel qu'un clic sur un bouton, par exemple&nbsp;:
+Les appels `subscribe()` doivent être effectués en réponse à une action de l'utilisatrice ou de l'utilisateur, tel qu'un clic sur un bouton, par exemple&nbsp;:
 
 ```js
 btn.addEventListener("click", () => {
@@ -84,7 +84,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-Il ne s'agit pas d'une bonne pratique — vous ne devriez pas inonder les utilisateurs avec des notifications qu'ils n'ont pas acceptées — mais à l'avenir, les navigateurs interdiront explicitement les notifications qui ne sont pas déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
+Il ne s'agit pas que d'une bonne pratique&nbsp;: vous ne devriez pas inonder les utilisateurs avec des notifications qu'ils n'ont pas acceptées. À l'avenir, les navigateurs interdiront explicitement les notifications qui ne sont pas déclenchées en réponse à une action explicite de l'utilisatrice ou de l'utilisateur. Firefox fonctionne ainsi depuis la version 72, par exemple.
 
 ## Spécifications
 

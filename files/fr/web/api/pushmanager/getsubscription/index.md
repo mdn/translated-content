@@ -10,7 +10,7 @@ l10n:
 
 La méthode **`PushManager.getSubscription()`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) récupère un abonnement push existant.
 
-Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui renvoie à un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant les détails d'un abonnement existant. S'il n'y a pas d'abonnement existant, cette promesse renvoie une valeur `null`.
+Elle renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui renvoie à un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant les détails d'un abonnement existant. S'il n'y a pas d'abonnement existant, cette promesse renvoie une valeur `null`.
 
 ## Syntaxe
 
@@ -24,11 +24,11 @@ Aucun.
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) ou `null`.
+Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) ou `null`.
 
 ## Exemples
 
-Cet extrait de code est tiré d'un [exemple de messagerie et de notification push](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). (Aucune démo n'est disponible).
+Cet extrait de code est tiré d'un [exemple de messagerie et de notification push](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
 
 ```js
 // Nous avons besoin de l'enregistrement du service worker pour vérifier

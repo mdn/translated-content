@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Push API")}}
 
-La propriété statique en lecture seule **`supportedContentEncodings`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) renvoie un tableau des encodages de contenu pris en charge qui peuvent être utilisés pour chiffrer la charge utile d'un message push.
+La propriété statique en lecture seule **`supportedContentEncodings`**, rattachée à l'interface [`PushManager`](/fr/docs/Web/API/PushManager), renvoie un tableau des encodages de contenu pris en charge et qui peuvent être utilisés pour chiffrer la charge utile d'un message push.
 
 ## Valeur
 
