@@ -16,7 +16,7 @@ slug: Web/API/HTMLAnchorElement/protocol
 ### 从锚点元素的链接中获取协议
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素在文档中
+// 文档中有一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素
 const anchor = document.getElementById("myAnchor");
 anchor.protocol; // 返回 'https:'
 ```
