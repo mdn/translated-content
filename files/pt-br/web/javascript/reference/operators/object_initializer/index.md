@@ -267,12 +267,7 @@ A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject *
 
 ## Especificações
 
-| Specification                                                            | Status               | Comment                                                                                                                                  |
-| ------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                      | {{Spec2('ES1')}}     | Definição inicial.                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}               | {{Spec2('ES5.1')}}   | [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) e [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) adicionados. |
-| {{SpecName('ES6', '#sec-object-initializer', 'Object Initializer')}}     | {{Spec2('ES6')}}     | Abreviações de nomes em propriedades/métodos e nomes de propriedados computados foram adicionados.                                       |
-| {{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ESDraft')}} |                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

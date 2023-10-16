@@ -85,10 +85,7 @@ wm1.has(o1); // false
 
 ## Especificações
 
-| Especificações                                             | Status               | Comentário         |
-| ---------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -194,13 +194,7 @@ Embora as correções posicionadas e fixadas no Firefox 3.5 não permitam que o 
 
 ## Specifications
 
-| Specification                                                            | Status                            | Comment                                                      |
-| ------------------------------------------------------------------------ | --------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}}  | {{Spec2('CSS4 Pseudo-Elements')}} | No significant changes to the previous specification.        |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}           | {{Spec2("CSS3 Transitions")}}     | Allows transitions on properties defined on pseudo-elements. |
-| {{Specname("CSS3 Animations", "", "")}}                                  | {{Spec2("CSS3 Animations")}}      | Allows animations on properties defined on pseudo-elements.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}               | {{Spec2('CSS3 Selectors')}}       | Introduces the two-colon syntax.                             |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}               | Initial definition, using the one-colon syntax               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

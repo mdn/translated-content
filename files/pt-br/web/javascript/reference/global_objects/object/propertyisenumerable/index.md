@@ -100,9 +100,7 @@ o.propertyIsEnumerable("firstMethod"); // returns false
 
 ## Especificações
 
-| Specification                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

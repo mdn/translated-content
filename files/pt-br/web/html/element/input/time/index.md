@@ -474,9 +474,7 @@ minuteSelect.onchange = setMinutesToZero;
 
 ## Specifications
 
-| Specification                                                                                 | Status                   | Comments |
-| --------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#time-state-(type=time)', '&lt;input type="time"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

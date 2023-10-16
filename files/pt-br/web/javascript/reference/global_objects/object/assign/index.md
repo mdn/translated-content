@@ -200,9 +200,7 @@ if (!Object.assign) {
 
 ## Especificações
 
-| Specification                                                 | Status              | Comment           |
-| ------------------------------------------------------------- | ------------------- | ----------------- |
-| {{SpecName('ES2015', '#sec-object.assign', 'Object.assign')}} | {{Spec2('ES2015')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

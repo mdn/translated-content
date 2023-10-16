@@ -9,7 +9,7 @@ slug: Web/CSS/text-overflow
 
 A propriedade `text-overflow` do [CSS](/pt-BR/CSS) determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.
 
-![text-overflow.png](/@api/deki/files/5846/=text-overflow.png)
+![text-overflow.png](text-overflow.png)
 
 O corte acontece na borda da caixa; para cortar no limite de caracteres de uma string personalizada, pode-se usar (`''`).
 
@@ -116,7 +116,7 @@ p {
         <img
           alt="t-o_clip.png"
           class="default internal"
-          src="/@api/deki/files/6056/=t-o_clip.png"
+          src="t-o_clip.png"
         />
       </td>
       <td style="direction: ltr">
@@ -137,7 +137,7 @@ p {
         <img
           alt="t-o_clip_rtl.png"
           class="default internal"
-          src="/@api/deki/files/6057/=t-o_clip_rtl.png"
+          src="t-o_clip_rtl.png"
         />
       </td>
       <td style="direction: rtl">
@@ -514,11 +514,7 @@ The full path of the URL will be displayed over the mouse, and the screen will b
 
 ## Specifications
 
-| Specification                                                | Status                 | Comment |
-| ------------------------------------------------------------ | ---------------------- | ------- |
-| {{ SpecName('CSS3 UI', '#text-overflow', 'text-overflow') }} | {{ Spec2('CSS3 UI') }} |         |
-
-A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
