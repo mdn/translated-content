@@ -60,7 +60,7 @@ Elle est à rapprocher des propriétés [`padding-block-start`](/fr/docs/Web/CSS
 
 ```html
 <div>
-  <p class="exemple">Texte d'exemple et Lorem et IP sum</p>
+  <p class="exemple">Texte d'exemple</p>
 </div>
 ```
 
