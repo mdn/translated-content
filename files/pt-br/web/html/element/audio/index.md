@@ -21,23 +21,23 @@ Você pode utilizar recursos avançados da API de áudio — que são específic
 
 Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
-- {{ htmlattrdef("autoplay") }}
+- `autoplay`
   - : Um atributo Booleano; se especificado (mesmo se o valor for "false"!), o áudio iniciará automaticamente assim que possível sem parar de carregar os dados.
-- {{ htmlattrdef("autobuffer") }}
+- `autobuffer`
   - : Um atributo Booleano; se especificado, o audio será baixado automaticamente, mesmo se não está configurado para reprodução automática. Isto continua até que o cache de mídia esteja cheio, ou até que o o arquivo de áudio completo tenha sido baixado, o que vier primeiro. Isto deve ser utilizado apenas quando é esperado que o usuário escolherá tocar o áudio; por exemplo, se o usuário navegou para a página utilizando um link "Reproduzir". Este atributo foi removido no Gecko 2.0 em razão do atributo `preload`.
-- {{ htmlattrdef("buffered") }}
+- `buffered`
   - : Um atributo que pode ser lido para determinar os intervalos do áudio que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.
-- {{ htmlattrdef("controls") }}
+- `controls`
   - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir ao usuário controlar a reprodução do áudio, incluindo volume, navegação, e pausa/continuação da reprodução.
-- {{ htmlattrdef("loop") }}
+- `loop`
   - : Um atributo Booleano; se especificado, ao chegar no fim do áudio, ele voltará automaticamente para o começo.
-- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ non-standard_inline() }}
+- `mozCurrentSampleOffset` {{ non-standard_inline() }}
   - : The offset, specified as the number of samples since the beginning of the audio stream, at which the audio is currently playing.
-- {{ htmlattrdef("muted") }}
+- `muted`
   - : Um atributo Booleano que indica se o áudio será inicializado silenciado.
-- {{ htmlattrdef("played") }}
+- `played`
   - : Um objeto {{ domxref("TimeRanges") }}indicando que todo o áudio foi reproduzido.
-- {{ htmlattrdef("preload") }}
+- `preload`
 
   - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
 
@@ -52,7 +52,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
     >
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
-- {{ htmlattrdef("src") }}
+- `src`
   - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/pt-BR/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.

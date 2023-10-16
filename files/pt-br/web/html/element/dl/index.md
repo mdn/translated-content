@@ -19,7 +19,7 @@ O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos 
 
 Como todo elemento HTML, ele fornece os [attributos globais](/pt-BR/HTML/Global_attributes).
 
-- {{ htmlattrdef("compact") }} {{ Non-standard_inline() }}
+- `compact` {{ Non-standard_inline() }}
   - : Obriga a definição da descrição aparecer na mesma linha que a definição do termo. Funciona apenas no Internet Explorer.
 
 ## Exemplos
