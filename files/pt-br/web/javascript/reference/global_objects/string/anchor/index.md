@@ -43,9 +43,7 @@ irá retornar o seguinte código HTML:
 
 ## Especificações
 
-| Specification                                                                      |
-| ---------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.anchor', 'String.prototype.anchor')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

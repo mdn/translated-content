@@ -125,10 +125,7 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## Especificações
 
-| Especificação                                                                                         |
-| ----------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}      |
-| {{SpecName('ES Int Draft', '#sup-String.prototype.localeCompare', 'String.prototype.localeCompare')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

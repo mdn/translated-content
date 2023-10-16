@@ -87,9 +87,7 @@ let frNumber = testNumber.toLocaleString("fr");
 
 ## Especificações
 
-| Especificação                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
