@@ -40,11 +40,11 @@ Este elemento implementa a interface HTMLProgressElement.
 
 No Mac OS X, o progresso resultante deve aparecer assim:
 
-![progress-1.png](/@api/deki/files/4946/=progress-1.png)
+![progress-1.png](progress-1.png)
 
 No Windows, o progresso resultante deve aparecer assim:
 
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
+![progress-firefox.JPG](progress-firefox.jpg)
 
 ### Exemplos adicionais
 
