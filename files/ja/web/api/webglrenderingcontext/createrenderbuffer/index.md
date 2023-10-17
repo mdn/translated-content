@@ -8,7 +8,7 @@ browser-compat: api.WebGLRenderingContext.createRenderbuffer
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createRenderbuffer()`** メソッドは、
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createRenderbuffer()`** メソッドは、
 {{domxref("WebGLRenderbuffer")}}
 オブジェクトを作成し、初期化します。
 
