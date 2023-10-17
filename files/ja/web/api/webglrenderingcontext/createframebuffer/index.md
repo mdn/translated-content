@@ -2,8 +2,6 @@
 title: WebGLRenderingContext.createFramebuffer()
 short-title: createFramebuffer()
 slug: Web/API/WebGLRenderingContext/createFramebuffer
-page-type: web-api-instance-method
-browser-compat: api.WebGLRenderingContext.createFramebuffer
 ---
 
 {{APIRef("WebGL")}}
