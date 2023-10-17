@@ -81,7 +81,7 @@ var matches = el.querySelectorAll("iframe[data-src]");
 
 - [选择器 API](http://www.w3.org/TR/selectors-api/)
 
-## 相关链接
+## 参见
 
 - {{Domxref("Element.querySelector")}}
 - [`document.querySelectorAll`](/zh-CN/docs/Web/API/Document.querySelectorAll)
