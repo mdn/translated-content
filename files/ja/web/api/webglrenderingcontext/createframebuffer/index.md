@@ -1,5 +1,5 @@
 ---
-title: "WebGLRenderingContext.createFramebuffer()"
+title: WebGLRenderingContext.createFramebuffer()
 short-title: createFramebuffer()
 slug: Web/API/WebGLRenderingContext/createFramebuffer
 page-type: web-api-instance-method
