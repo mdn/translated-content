@@ -167,7 +167,6 @@ table-layout: fixed;
   - `{{htmlelement('head')}}`
 
     - `{{htmlelement('link')}}`
-  
       CSS 文件用来修饰页面外观。在调试维护中把不相关的 CSS 拆分在不同文件中，且尽量减少文件的数量可以提高性能。
 
     - `{{htmlelement('script')}}`
