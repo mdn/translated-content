@@ -76,8 +76,8 @@ Le contenu de la page résultant ressemble à ceci:
 - Les sélecteurs composites
   - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list) `A, B`
 - Les combinateurs
-  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [Sélecteurs d'enfant direct](/fr/docs/Web/CSS/Child_combinator) `A > B`
   - [Sélecteurs de descendants](/fr/docs/Web/CSS/Descendant_combinator) `A B`
 - Pseudo

@@ -1,7 +1,6 @@
 ---
 title: Sélecteurs de voisins généraux
 slug: Web/CSS/Subsequent-sibling_combinator
-original_slug: Web/CSS/General_sibling_combinator
 ---
 
 {{CSSRef("Selectors")}}
