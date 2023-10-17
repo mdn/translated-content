@@ -6,7 +6,7 @@ slug: Web/API/WebGLRenderingContext/createFramebuffer
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createFramebuffer()`** メソッドは、
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createFramebuffer()`** メソッドは、
 {{domxref("WebGLFramebuffer")}}
 を作成し、初期化します。
 
