@@ -116,10 +116,7 @@ A `media` element cannot have more than one `track` with the same `kind`, `srcla
 
 ## Specifications
 
-| Specification                                                                           | Status                   | Comment            |
-| --------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG','embedded-content.html#the-track-element','track element')}}   | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName("HTML5 W3C", "embedded-content-0.html#the-track-element", "track element")}} | {{Spec2("HTML5 W3C")}}   | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

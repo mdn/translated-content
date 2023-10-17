@@ -57,11 +57,7 @@ function testinput(re, str) {
 
 ## Specificações
 
-| Specificações                                                    | Status             | Comentário                                         |
-| ---------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                              | {{Spec2('ES3')}}   | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

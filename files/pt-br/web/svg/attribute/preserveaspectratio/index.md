@@ -489,8 +489,4 @@ For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling
 
 ## Specification
 
-| Specification                                                                                      | Status                   | Comment            |
-| -------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}} | {{Spec2('Filters 1.0')}} |                    |
-| {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}            | {{Spec2("SVG2")}}        |                    |
-| {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}          | {{Spec2("SVG1.1")}}      | Initial definition |
+{{Specifications}}

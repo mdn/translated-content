@@ -229,12 +229,9 @@ for (let i of iterable) {
 }
 ```
 
-### Especificações
+## Especificações
 
-| Especificação                                                                      | Status               | Comentário          |
-| ---------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}     | Definition Inicial. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -32,9 +32,7 @@ Para cada objeto no array retornado, existe uma string `status`. Se o status for
 
 ## Especificaçṍes
 
-| Specification                                                                               | Status               | Comment |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`Promise.allSettled()` (TC39 Stage 4 Draft)](https://tc39.es/proposal-promise-allSettled/) | {{Spec2('ESDraft')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

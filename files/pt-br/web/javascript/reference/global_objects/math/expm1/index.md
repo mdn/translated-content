@@ -52,9 +52,7 @@ Math.expm1(1); // 1.718281828459045
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

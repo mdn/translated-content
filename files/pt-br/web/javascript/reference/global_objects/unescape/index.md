@@ -36,12 +36,7 @@ unescape("%u0107"); // "ć"
 
 ## Specifications
 
-| Specification                                               | Status               | Comment                                                                               |
-| ----------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}            | {{Spec2('ES1')}}     | Definição Inicial.                                                                    |
-| {{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}             | {{Spec2('ES5.1')}}   | Definido na compatibilidade Annex B                                                   |
-| {{SpecName('ES6', '#sec-unescape-string', 'unescape')}}     | {{Spec2('ES6')}}     | Difinito na (normativa) Annex B Para novidades adicionais do ECMAScript para browsers |
-| {{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}} | {{Spec2('ESDraft')}} | Difinito na (normativa) Annex B Para novidades adicionais do ECMAScript para browsers |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -71,10 +71,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Specifications
 
-| Specification                                                            | Status                        | Comment            |
-| ------------------------------------------------------------------------ | ----------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}   | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}           | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

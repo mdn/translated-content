@@ -66,10 +66,7 @@ Basic rendering of a PNG image in SVG:
 
 ## Specifications
 
-| Specification                                                       | Status              | Comment                              |
-| ------------------------------------------------------------------- | ------------------- | ------------------------------------ |
-| {{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG2')}}   | Allows omitting `height` and `width` |
-| {{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

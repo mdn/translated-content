@@ -54,11 +54,7 @@ Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado p
 
 ## Specificações
 
-| Specificação                                                   | Status             | Comentário                                        |
-| -------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 1                                                   | Standard           | Initial definition. Implemented in JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-11.4.2', 'The void Operator')}}      | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-void-operator', 'The void Operator')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

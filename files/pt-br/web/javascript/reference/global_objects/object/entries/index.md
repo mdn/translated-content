@@ -85,9 +85,7 @@ Para incluir suporte ao `Object.entries` em ambientes mais antigos, você pode a
 
 ## Especificaçōes
 
-| Especificação                                                    | Status               | Comentário         |
-| ---------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

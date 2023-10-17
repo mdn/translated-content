@@ -193,10 +193,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `minimum-scale` | um numero positivo entre `0.0` e `10.0`                 | define o valor mínimo do zoom; deve ser menor ou igual ao `maximum-scale` ou o comportamento sera indeterminado                                                           |
       | `user-scalable` | um valor booleano (`yes` ou `no`)                       | se setado `no`, o usuário não poderá usar zoom na página. o valor padrão é `yes`.                                                                                         |
 
-      | Specification                                                                 | Status                   | Comment                                             |
-      | ----------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-      | {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Non-normatively describes the Viewport META element |
-
       > **Nota:**
       >
       > - Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.

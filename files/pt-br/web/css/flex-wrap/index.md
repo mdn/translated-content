@@ -122,9 +122,7 @@ Os seguintes valores são aceitos :
 
 ## Especificação
 
-| Especificação                                                      | Status                      | Comentário |
-| ------------------------------------------------------------------ | --------------------------- | ---------- |
-| {{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

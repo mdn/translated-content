@@ -170,10 +170,7 @@ Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte 
 
 ## Especificação
 
-| Especificação                                                     | Status                          | Comentário                              |
-| ----------------------------------------------------------------- | ------------------------------- | --------------------------------------- |
-| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Definição inicial                       |
-| {{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS4 Writing Modes")}} | Adicionar `sideways-lr` e `sideways-rl` |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

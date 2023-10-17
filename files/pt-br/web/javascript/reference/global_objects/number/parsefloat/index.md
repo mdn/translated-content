@@ -37,9 +37,7 @@ Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exe
 
 ## Especificação
 
-| Especificação                                                      | Situação         | Comentários        |
-| ------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade dos Navegadores
 

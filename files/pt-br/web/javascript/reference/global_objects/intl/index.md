@@ -57,11 +57,7 @@ One property is supported by all language sensitive constructors and functions: 
 
 ## Specifications
 
-| Specification                                        | Status                    | Comment                                            |
-| ---------------------------------------------------- | ------------------------- | -------------------------------------------------- |
-| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}}   | Initial definition.                                |
-| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}}   |                                                    |
-| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Added Intl.getCanonicalLocales in the 4th edition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

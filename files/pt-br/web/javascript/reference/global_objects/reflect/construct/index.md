@@ -114,10 +114,7 @@ d.getFullYear(); // 1776
 
 ## Specifications
 
-| Specification                                                          | Status               | Comment             |
-| ---------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-reflect.construct', 'Reflect.construct')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

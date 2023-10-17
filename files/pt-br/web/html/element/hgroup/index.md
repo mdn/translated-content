@@ -109,9 +109,9 @@ Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido p
 </hgroup>
 ```
 
-| Specification                                                                      | Status                   | Comment |
-| ---------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+## Especificações
+
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

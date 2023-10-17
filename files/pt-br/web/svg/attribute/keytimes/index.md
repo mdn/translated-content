@@ -77,10 +77,7 @@ If the duration of the animation is indefinite, any `keyTimes` specification wil
 
 ## Specifications
 
-| Specification                                                        | Status                        | Comment            |
-| -------------------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#KeyTimesAttribute", "keyTimes")}}   | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#KeyTimesAttribute", "keyTimes")}} | {{Spec2("SVG1.1")}}           | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

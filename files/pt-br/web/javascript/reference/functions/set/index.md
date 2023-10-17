@@ -99,11 +99,7 @@ console.log(obj.baz); // "baz"
 
 ## Expecificações
 
-| Specification                                                            | Status               | Comment                        |
-| ------------------------------------------------------------------------ | -------------------- | ------------------------------ |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}               | {{Spec2('ES5.1')}}   | Initial definition.            |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}     | Added computed property names. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

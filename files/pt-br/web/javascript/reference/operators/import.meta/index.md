@@ -70,10 +70,7 @@ Nesse arquivo específico, o argumento passado pode ser complementar para ser us
 
 ## Especifícações
 
-| Especifícação                                                                             |
-| ----------------------------------------------------------------------------------------- |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta)                    |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

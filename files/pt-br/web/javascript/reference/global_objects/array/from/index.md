@@ -177,9 +177,7 @@ Array.from({ length: 5 }, (v, k) => k);
 
 ## Especificação
 
-| Specification                                        | Status           | Comment             |
-| ---------------------------------------------------- | ---------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.from', 'Array.from')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

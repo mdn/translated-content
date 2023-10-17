@@ -49,9 +49,7 @@ FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsges
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário |
-| -------------------------------------------------------------------- | ------------------------ | ---------- |
-| [CSS Text Level 3](http://dev.w3.org/csswg/css3-text/#overflow-wrap) | {{ Spec2('CSS3 Text') }} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

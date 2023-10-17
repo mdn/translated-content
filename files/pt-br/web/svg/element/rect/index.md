@@ -74,10 +74,7 @@ svg {
 
 ## Specifications
 
-| Specification                                                     | Status              | Comment            |
-| ----------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('SVG2', 'shapes.html#RectElement', '&lt;rect&gt;')}}   | {{Spec2('SVG2')}}   |                    |
-| {{SpecName('SVG1.1', 'shapes.html#RectElement', '&lt;rect&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

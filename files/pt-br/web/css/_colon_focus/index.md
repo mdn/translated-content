@@ -40,12 +40,7 @@ elemento:focus { ... }
 
 ## Especificação
 
-| Especificação                                                                         | Estado                      | Comentário                  |
-| ------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                | {{Spec2('HTML WHATWG')}}    | Define a semântica no HTML. |
-| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                             | {{Spec2('CSS4 Selectors')}} | Nenhuma modificação.        |
-| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}} | {{Spec2('CSS3 Selectors')}} | Nenhuma modificação.        |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}              | {{Spec2('CSS2.1')}}         | Definição inicial.          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

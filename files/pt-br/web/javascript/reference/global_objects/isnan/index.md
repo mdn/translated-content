@@ -85,9 +85,7 @@ You can use this, for example, to test whether an argument to a function is arit
 
 ## Specifications
 
-| Specification                                         |
-| ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
