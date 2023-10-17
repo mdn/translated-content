@@ -19,7 +19,7 @@ slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 
 通过消除不必要的空白和注释（通常称为压缩）以及将内联脚本和 CSS 移至外部文件来减少页面大小，可以提高下载性能，而无需对页面结构进行其他改动。
 
-诸如 [HTML Tidy](https://www.html-tidy.org) 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其他工具则可以通过重新格式化源代码来“压缩” JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。
+诸如 [HTML Tidy](https://www.html-tidy.org) 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其他工具则可以通过重新格式化源代码来“压缩”JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。
 
 ### 最小化文件数量
 
