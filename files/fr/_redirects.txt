@@ -442,7 +442,7 @@
 /fr/docs/CSS/Sélecteurs_d'attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/CSS/Sélecteurs_de_classe	/fr/docs/Web/CSS/Class_selectors
 /fr/docs/CSS/Sélecteurs_de_type	/fr/docs/Web/CSS/Type_selectors
-/fr/docs/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/General_sibling_combinator
+/fr/docs/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/CSS/Sélecteurs_descendant	/fr/docs/Web/CSS/Descendant_combinator
 /fr/docs/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
@@ -4247,7 +4247,8 @@
 /fr/docs/Web/CSS/@viewport/width	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/@viewport/zoom	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/A_Propos_Du_Bloc_Conteneur	/fr/docs/Web/CSS/Containing_block
-/fr/docs/Web/CSS/Adjacent_sibling_selectors	/fr/docs/Web/CSS/Adjacent_sibling_combinator
+/fr/docs/Web/CSS/Adjacent_sibling_combinator	/fr/docs/Web/CSS/Next-sibling_combinator
+/fr/docs/Web/CSS/Adjacent_sibling_selectors	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Affichage_CSS	/fr/docs/Web/CSS/CSS_display
 /fr/docs/Web/CSS/Alias	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/Animations_CSS	/fr/docs/Web/CSS/CSS_animations
@@ -4396,7 +4397,7 @@
 /fr/docs/Web/CSS/Colonnes_CSS/Utiliser_une_disposition_multi-colonnes	/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /fr/docs/Web/CSS/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /fr/docs/Web/CSS/Combinateur_colonne	/fr/docs/Web/CSS/Column_combinator
-/fr/docs/Web/CSS/Combinateur_de_voisin_direct	/fr/docs/Web/CSS/Adjacent_sibling_combinator
+/fr/docs/Web/CSS/Combinateur_de_voisin_direct	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Compartimentation_CSS	/fr/docs/Web/CSS/CSS_containment
 /fr/docs/Web/CSS/Compositing_and_Blending	/fr/docs/Web/CSS/CSS_compositing_and_blending
 /fr/docs/Web/CSS/Comprendre_z-index	/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
@@ -4443,6 +4444,7 @@
 /fr/docs/Web/CSS/Filters_Effects	/fr/docs/Web/CSS/CSS_filter_effects
 /fr/docs/Web/CSS/Fonds_multiples	/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /fr/docs/Web/CSS/Fusion_des_marges	/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
+/fr/docs/Web/CSS/General_sibling_combinator	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/Web/CSS/Héritage	/fr/docs/Web/CSS/Inheritance
 /fr/docs/Web/CSS/Implémentation_des_Brouillons_CSS	/fr/docs/Web/CSS/Mozilla_Extensions
 /fr/docs/Web/CSS/Jeux_de_caractères_CSS	/fr/docs/Web/CSS/CSS_charsets
@@ -4499,7 +4501,7 @@
 /fr/docs/Web/CSS/Spécificité	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /fr/docs/Web/CSS/Syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs	/fr/docs/Web/CSS/Value_definition_syntax
-/fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Adjacent_sibling_combinator
+/fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Comparison_with_XPath	/fr/docs/Web/XPath/Comparison_with_CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
@@ -4507,7 +4509,7 @@
 /fr/docs/Web/CSS/Sélecteurs_d_attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/Web/CSS/Sélecteurs_de_classe	/fr/docs/Web/CSS/Class_selectors
 /fr/docs/Web/CSS/Sélecteurs_de_type	/fr/docs/Web/CSS/Type_selectors
-/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/General_sibling_combinator
+/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/Web/CSS/Sélecteurs_descendant	/fr/docs/Web/CSS/Descendant_combinator
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
