@@ -66,7 +66,7 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -163,14 +163,14 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
       <td style="background: #ffa500"></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="129">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="129"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Module Level 3</a></td>
       <td style="background: #f0f8ff"></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
@@ -945,7 +945,7 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td><a href="https://drafts.csswg.org/css-color/">CSS Color Module Level 4</a></td>
       <td style="background: #639"></td>
       <td style="text-align: center"><code>rebeccapurple</code></td>
       <td><code>#663399</code></td>
