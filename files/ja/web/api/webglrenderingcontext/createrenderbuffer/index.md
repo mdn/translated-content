@@ -2,8 +2,6 @@
 title: WebGLRenderingContext.createRenderbuffer()
 short-title: createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
-page-type: web-api-instance-method
-browser-compat: api.WebGLRenderingContext.createRenderbuffer
 ---
 
 {{APIRef("WebGL")}}
