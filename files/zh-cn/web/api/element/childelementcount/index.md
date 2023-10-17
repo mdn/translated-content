@@ -91,7 +91,7 @@ if (foo.childElementCount > 0) {
 
 [childElementCount (W3C)](http://www.w3.org/TR/2008/WD-ElementTraversal-20080303/#attribute-childElementCount)
 
-## 相关链接
+## 参见
 
 - [`children`](/zh-CN/DOM/Element.children)
 - [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)

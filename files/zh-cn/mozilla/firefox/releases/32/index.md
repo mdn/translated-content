@@ -120,7 +120,7 @@ A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_
 
 - The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
 
-## 相关链接
+## 参见
 
 - [Site Compatibility for Firefox 32](/zh-CN/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
 
