@@ -105,7 +105,7 @@ dir dir dir {
 Puedes reemplazarlo con:
 
 ```css
-/* Las listas desordenadas de 3 (o más) niveles usan un cuadrado */
+/* Las listas desordenadas de 3 (o más) niveles usan una viñeta cuadrada */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
 }
