@@ -1,6 +1,8 @@
 ---
 title: overflow-x
 slug: Web/CSS/overflow-x
+l10n:
+  sourceCommit: f89df1bb60b0d71d3e41bf5b1c0d8cb4eac45a27
 ---
 
 {{CSSRef}}
@@ -27,7 +29,7 @@ overflow-x: revert-layer;
 overflow-x: unset;
 ```
 
-`overflow-y` 属性可指定为下列 {{CSSXref("overflow_value", "&lt;overflow&gt;")}} 关键字值之一。
+`overflow-x` 属性可指定为下列 {{CSSXref("overflow_value", "&lt;overflow&gt;")}} 关键字值之一。
 
 当 {{cssxref("overflow-y")}} 的值为 `hidden`、`scroll` 或者 `auto`，而 `overflow-x` 属性的值为 `visible`（默认值）时，该值会被隐式地计算为 `auto`。
 

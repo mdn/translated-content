@@ -1,6 +1,8 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
+l10n:
+  sourceCommit: f89df1bb60b0d71d3e41bf5b1c0d8cb4eac45a27
 ---
 
 {{CSSRef}}
@@ -63,21 +65,21 @@ overflow-y: unset;
 ```html
 <ul>
   <li>
-    <code>overflow-y:hidden</code>——隐藏溢出到盒子外的内容
+    <code>overflow-y:hidden</code>——在盒外隐藏文本
     <div id="div1">
       歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
     </div>
   </li>
 
   <li>
-    <code>overflow-y:scroll</code>——总是显示滚动条
+    <code>overflow-y:scroll</code>——总是添加滚动条
     <div id="div2">
       歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
     </div>
   </li>
 
   <li>
-    <code>overflow-y:visible</code>——显示溢出到盒子外的内容 needed
+    <code>overflow-y:visible</code>——必要时在盒外显示文本
     <div id="div3">
       歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
     </div>
@@ -97,7 +99,7 @@ overflow-y: unset;
 ```css
 div {
   border: 1px solid black;
-  width: 250px;
+  width: 350px;
   height: 100px;
 }
 
@@ -111,7 +113,7 @@ div {
 }
 #div3 {
   overflow-y: visible;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 }
 #div4 {
   overflow-y: auto;
