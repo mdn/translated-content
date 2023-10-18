@@ -1,5 +1,5 @@
 ---
-title: Structure d'une Progressive web app
+title: Structure d'une application web progressive
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
@@ -9,15 +9,15 @@ l10n:
 
 {{PWASidebar}}
 
-Dans cet article, nous analyserons l'application [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), pourquoi elle est construite de cette façon et quels avantages cela apporte.
+Dans cet article, nous analyserons l'application [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), verrons pourquoi elle est construite de cette façon et les avantages que cela apporte.
 
-La structure du site web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est plutôt simple&nbsp;: elle consiste en un simple fichier HTML ([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) avec un style CSS basique ([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)) et quelques images, scripts et polices de caractères. La structure du répertoire ressemble à ceci&nbsp;:
+La structure du site web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est plutôt simple&nbsp;: elle consiste en un simple fichier HTML ([`index.html`](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) avec un style CSS basique ([`style.css`](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)) et quelques images, scripts et polices de caractères. La structure du répertoire ressemble à ceci&nbsp;:
 
 ![Structure des dossiers de js13kPWA.](js13kpwa-directory.png)
 
 ### Le HTML
 
-Du point de vue HTML, l'app shell est tout ce qui est tout ce qui se trouve en dehors de la section de contenu :
+Du point de vue HTML, le squelette de l'application est formé par tout ce qui se trouve en dehors de l'élément [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
 
 ```html
 <!doctype html>
@@ -74,9 +74,9 @@ Du point de vue HTML, l'app shell est tout ce qui est tout ce qui se trouve en d
 </html>
 ```
 
-La section [`<head>`](/fr/docs/Web/HTML/Element/head) contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et `app.js` — c'est là où notre application JavaScript est initialisée. Le [`<body>`](/fr/docs/Web/HTML/Element/body) est divisé en trois avec [`<header>`](/fr/docs/Web/HTML/Element/header) (contenant les images liées), [`<main>`](/fr/docs/Web/HTML/Element/main) la page (avec le titre, la description et un emplacement pour le contenu) et [`<footer>`](/fr/docs/Web/HTML/Element/footer) (le copyright et les liens).
+La section [`<head>`](/fr/docs/Web/HTML/Element/head) contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et `app.js`, là où notre application JavaScript est initialisée. Le [corps (`<body>`)](/fr/docs/Web/HTML/Element/body) est divisé en trois avec [`<header>`](/fr/docs/Web/HTML/Element/header) (contenant les images liées), [`<main>`](/fr/docs/Web/HTML/Element/main) la page (avec le titre, la description et un emplacement pour le contenu) et [`<footer>`](/fr/docs/Web/HTML/Element/footer) (le copyright et les liens).
 
-Le seul travail de l'application est de lister toutes les entrées _A-Frame_ de la compétition js13kGames 2017. Comme vous pouvez le voir, c'est un site web en une page tout ce qu'il y a de plus ordinaire — le but est d'avoir quelque chose de simple afin que nous puissions nous concentrer sur l'implémentation des réelles fonctionnalités PWA.
+Le seul travail de l'application est de lister toutes les entrées _A-Frame_ de la compétition js13kGames 2017. Comme vous pouvez le voir, c'est un site web sur une page, tout ce qu'il y a de plus ordinaire. Le but est d'avoir une base simple, afin que nous puissions nous concentrer sur l'implémentation des fonctionnalités relatives aux PWA.
 
 ### Le CSS
 
@@ -93,9 +93,9 @@ const template = `<article>
   <ul>
     <li><span>Author:</span> <strong>AUTHOR</strong></li>
     <li><span>Twitter:</span> <a href='https://twitter.com/TWITTER'>@TWITTER</a></li>
-    <li><span>Website:</span> <a href='http://WEBSITE/'>WEBSITE</a></li>
+    <li><span>Website:</span> <a href='https://WEBSITE/'>WEBSITE</a></li>
     <li><span>GitHub:</span> <a href='https://GITHUB'>GITHUB</a></li>
-    <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>
+    <li><span>More:</span> <a href='https://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>
   </ul>
 </article>`;
 let content = "";
@@ -108,13 +108,13 @@ for (let i = 0; i < games.length; i++) {
     .replace(/TWITTER/g, games[i].twitter)
     .replace(/WEBSITE/g, games[i].website)
     .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace("<a href='http:///'></a>", "-");
+  entry = entry.replace("<a href='https:///'></a>", "-");
   content += entry;
 }
 document.getElementById("content").innerHTML = content;
 ```
 
-Ensuite, il enregistre un service worker&nbsp;:
+Ensuite, il enregistre un <i lang="en">service worker</i>&nbsp;:
 
 ```js
 if ("serviceWorker" in navigator) {
@@ -122,7 +122,7 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-Le bloc de code suivant demande la permission d'émettre des notifications quand un bouton est cliqué&nbsp;:
+Le bloc de code suivant demande la permission d'émettre des notifications quand on clique sur un bouton&nbsp;:
 
 ```js
 const button = document.getElementById("notifications");
@@ -154,13 +154,13 @@ function randomNotification() {
 
 ### Le service worker
 
-Le dernier fichier que nous allons rapidement regarder est le service worker&nbsp;: `sw.js` — il importe d'abord les données du fichier `games.js`&nbsp;:
+Le dernier fichier que nous allons rapidement regarder est le <i lang="en">service worker</i>&nbsp;: `sw.js`. Celui-ci importe d'abord les données du fichier `games.js`&nbsp;:
 
 ```js
 self.importScripts("data/games.js");
 ```
 
-Ensuite, il crée une liste de tous les fichiers à mettre en cache, à la fois à partir de l'app shell et son contenu&nbsp;:
+Ensuite, il crée une liste de tous les fichiers à mettre en cache, qu'il s'agisse du squelette de l'application ou de son contenu&nbsp;:
 
 ```js
 const cacheName = "js13kPWA-v1";
@@ -191,7 +191,7 @@ for (let i = 0; i < games.length; i++) {
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
 
-Le bloc suivant installe le service worker, qui met ensuite en cache tous les fichiers contenus dans la liste ci-dessus&nbsp;:
+Le bloc suivant installe le <i lang="en">service worker</i>, qui met ensuite en cache tous les fichiers contenus dans la liste ci-dessus&nbsp;:
 
 ```js
 self.addEventListener("install", (e) => {
@@ -206,7 +206,7 @@ self.addEventListener("install", (e) => {
 });
 ```
 
-Enfin, le service worker récupère le contenu du cache, s'il y est disponible, offrant ainsi une fonctionnalité hors ligne&nbsp;:
+Enfin, le <i lang="en">service worker</i> récupère le contenu du cache, s'il y est disponible, offrant ainsi un fonctionnement hors ligne&nbsp;:
 
 ```js
 self.addEventListener("fetch", (e) => {
@@ -229,7 +229,7 @@ self.addEventListener("fetch", (e) => {
 
 ### Les données JavaScript
 
-Les données des jeux sont présentes dans le dossier nommé `data` sous la forme d'un objet JavaScript ([games.js](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js))&nbsp;:
+Les données des jeux sont présentes dans le dossier nommé `data` sous la forme d'un objet JavaScript (dans le fichier [`games.js`](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js))&nbsp;:
 
 ```js
 const games = [
@@ -261,10 +261,10 @@ const games = [
 ];
 ```
 
-Chaque entrée possède sa propre image dans le dossier `data/img`. Ceci est notre contenu, chargé dans la section de contenu via JavaScript.
+Chaque entrée possède sa propre image dans le dossier `data/img`. Voici donc notre contenu qui sera chargé dans la section de contenu de la page via JavaScript.
 
 ## Pour la suite
 
-Dans le prochain article, nous regarderons plus en détail comment l'app shell et le contenu sont mis en cache pour une utilisation en mode déconnecté grâce au service worker.
+Dans le prochain article, nous regarderons plus en détail comment le squelette de l'application et le contenu sont mis en cache avec un <i lang="en">service worker</i> pour que le site fonctionne en mode déconnecté.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
