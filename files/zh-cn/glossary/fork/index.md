@@ -13,7 +13,7 @@ Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github
 
 - [Fork](<https://zh.wikipedia.org/wiki/Fork_(software_development)>) on Wikipedia
 - [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (fork as in a Git context)
-- 各种“知名的” fork
+- 各种“知名的”fork
 
   - [Linux distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
   - [Node.js and io.js (which have been merged together back)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
