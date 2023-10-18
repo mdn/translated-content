@@ -16,8 +16,8 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
         <a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >已安装基本软件</a
-        >，以及基本的
-        <a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        >，以及基本的<a
+          href="/zh-CN/docs/Learn/Getting_started_with_the_web"
           >客户端 Web 技术知识</a
         >。
       </td>
@@ -45,19 +45,19 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 - 嵌入内容的交付：通常是嵌入在 {{htmlelement("iframe")}} 元素中的内容。将内容加载到 `<iframe>` 中可能会显著影响性能，因此应该仔细考虑。
 - 资源加载顺序：为了最大化感知性能和实际性能，HTML 应该首先按照在页面上出现的顺序加载。然后，你可以利用各种特性来影响资源加载顺序以获得更好的性能。例如，你可以提前预加载关键的 CSS 和字体，但将非关键的 JavaScript 推迟到稍后加载。
 
-> **备注：**简化 HTML 结构和对源代码进行[缩小化](https://zh.wikipedia.org/wiki/%E5%8F%8D%E7%BC%A9%E5%B0%8F%E6%96%87%E4%BB%B6)可以加快渲染和下载速度是有道理的。然而，与图像和视频相比，HTML 文件大小微不足道，而且现代浏览器的渲染速度非常快。如果你的 HTML 源代码非常庞大且复杂，导致渲染和下载性能受到影响，那么你可能存在更大的问题，并且应该考虑简化和拆分内容。
+> **备注：** 简化 HTML 结构和对源代码进行[缩小化](https://zh.wikipedia.org/wiki/極簡化)可以加快渲染和下载速度是有道理的。然而，与图像和视频相比，HTML 文件大小微不足道，而且现代浏览器的渲染速度非常快。如果你的 HTML 源代码非常庞大且复杂，导致渲染和下载性能受到影响，那么你可能存在更大的问题，并且应该考虑简化和拆分内容。
 
 ## 响应式处理替代元素
 
-[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)彻底改变了在不同设备上处理网页内容布局的方式。它的一个关键优势是可以动态切换根据不同的屏幕尺寸优化后的布局，例如宽屏布局与窄屏（移动设备）布局之间的切换。它还可以根据其他设备属性，如分辨率或偏好的明亮或暗色调方案，来处理内容的动态切换。
+[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)彻底改变了在不同设备上处理网页内容布局的方式。它的一个关键优势是可以动态切换根据不同的屏幕尺寸优化后的布局，例如宽屏布局与窄屏（移动设备）布局之间的切换。它还可以根据其他设备属性，如分辨率或亮色或暗色配色方案的偏好，来处理内容的动态切换。
 
 所谓的“移动优先”技术可以确保默认布局适用于小屏幕设备，因此移动设备只需下载适合其屏幕的图像，无需下载更大的桌面图像，以此提高性能。然而，由于这是通过 CSS 中的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)来控制的，因此它只能对在 CSS 中加载的图像的性能产生积极影响。
 
-在下面的章节中，我们将总结如何实现响应式的替代元素。你可以在[视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)和[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南中找到更多关于这些实现的详细信息。
+在下面的小节中，我们将总结如何实现响应式的替代元素。你可以在[视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)和[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南中找到更多关于这些实现的详细信息。
 
 ### 通过 srcset 提供不同的图像分辨率
 
-为了根据设备的分辨率和视口大小提供相同图像的不同分辨率版本，你可以利用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 这两个属性。
+要根据设备的分辨率和视口大小提供相同图像的不同分辨率版本，你可以利用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 这两个属性。
 
 以下示例为不同屏幕宽度提供了不同尺寸的图像：
 
@@ -67,7 +67,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
   sizes="(max-width: 600px) 480px,
          800px"
   src="800w.jpg"
-  alt="家庭肖像" />
+  alt="家庭照" />
 ```
 
 `srcset` 提供源图像的固有尺寸以及它们的文件名，而 `sizes` 在每种情况下提供媒体查询和需要填充的图像槽宽度。然后，浏览器根据每个槽位决定加载哪些图像。例如，如果屏幕宽度小于等于 `600px`，那么 `max-width: 600px` 为真，因此需要填充的槽位是 `480px`。在这种情况下，浏览器很可能选择加载 480w.jpg 文件（480px 宽的图像）。这有助于性能提升，因为浏览器不会加载比所需更大的图像。
@@ -78,10 +78,10 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 <img
   srcset="320w.jpg, 480w.jpg 1.5x, 640w.jpg 2x"
   src="640w.jpg"
-  alt="家庭肖像" />
+  alt="家庭照" />
 ```
 
-`1.5x`、`2x` 等是相对分辨率指示器。如果图像的样式设置为 320px 宽度（例如在 CSS 中使用 `width: 320px`），则如果设备分辨率较低（每个 CSS 像素对应一个设备像素），浏览器将加载 `320w.jpg`，如果设备分辨率较高（每个 CSS 像素对应两个或更多设备像素），则加载 `640w.jpg`。
+`1.5x`、`2x` 等是相对分辨率指示器。如果图像的样式设置为 320px 宽（例如在 CSS 中使用 `width: 320px`），则如果设备分辨率较低（每个 CSS 像素对应一个设备像素），浏览器将加载 `320w.jpg`，如果设备分辨率较高（每个 CSS 像素对应两个或更多设备像素），则加载 `640w.jpg`。
 
 在这两种情况下，`src` 属性在浏览器不支持 `src`/`srcset` 的情况下提供了默认图像。
 
@@ -138,7 +138,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 <img src="800w.jpg" alt="家庭合照" loading="lazy" />
 ```
 
-详细信息请参见 web.dev 上的[浏览器级 web 图像懒加载](https://web.dev/browser-level-image-lazy-loading/)。
+详细信息请参见 web.dev 上的[浏览器级 web 图像懒加载](https://web.dev/articles/browser-level-image-lazy-loading)。
 
 你还可以使用 `preload` 属性来对视频内容进行延迟加载。例如：
 
@@ -151,7 +151,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 将 `preload` 的值设置为 `none` 告诉浏览器在用户决定播放视频之前不要预加载任何视频数据，这对性能显然是有益的。相反，它只会显示由 `poster` 属性指示的图像。不同的浏览器具有不同的默认视频加载行为，因此最好明确指定。
 
-详细信息请参见 web.dev 上的[视频懒加载](https://web.dev/lazy-loading-video/)。
+详细信息请参见 web.dev 上的[视频懒加载](https://web.dev/articles/lazy-loading-video)。
 
 ## 处理嵌入内容
 
@@ -162,7 +162,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 嵌入内容最常用的方式是使用 `<iframe>` 元素，尽管还存在其他不太常用的嵌入元素，如 `<object>` 和 `<embed>`。在本节中，我们将重点关注 `<iframe>`。
 
-使用 `<iframe>` 方面的最重要也是最关键的建议是：“除非你非常必要，否则不要使用嵌入式 `<iframe>`”。如果你要创建一个包含多个不同信息窗格的页面，你可能会觉得把它们分成单独的页面并加载到不同的 `<iframe>` 中是有组织性的。但是，这样做会带来一些性能和其他方面的问题：
+使用 `<iframe>` 方面的最重要也是最关键的建议是：“除非非常必要，否则不要使用嵌入式 `<iframe>`”。如果你要创建一个包含多个不同信息窗格的页面，你可能会觉得把它们分成单独的页面并加载到不同的 `<iframe>` 中是有组织性的。但是，这样做会带来一些性能和其他方面的问题：
 
 - 将内容加载到 `<iframe>` 中比将内容作为同一直接页面的一部分加载要消耗资源得多——不仅需要额外的 HTTP 请求来加载内容，而且浏览器还需要为每个 `<iframe>` 创建一个单独的页面实例。每个 `<iframe>` 实际上是嵌入在顶级网页中的一个独立网页实例。
 - 接上一点，你还需要为每个不同的 `<iframe>` 分别处理任何 CSS 样式或 JavaScript 操作（除非嵌入的页面来自同一源），这变得更加复杂。你无法使用应用于顶级页面的 CSS 和 JavaScript 来定位嵌入的内容，反之亦然。这是一项合理的安全措施，是 Web 的基本原则。想象一下，如果第三方嵌入的内容可以任意在其嵌入的任何页面上运行脚本，那么你可能会遇到的问题！
@@ -172,7 +172,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 > **备注：** 如果你掌控内容并且内容相对简单，你可以考虑使用在 `src` 属性中以 base-64 编码的内容填充 `<iframe>`，甚至可以将原始 HTML 插入到 `srcdoc` 属性中（有关更多信息，请参见 [Iframe 性能第二部分：好消息](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429)）。
 
-如果必须使用 `<iframe>`，请谨慎使用。
+如果必须使用 `<iframe>`，请保持谨慎。
 
 #### 懒加载 iframe
 
@@ -183,7 +183,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 </iframe>
 ```
 
-详情请参阅[是时候懒加载屏外 iframe 了！](https://web.dev/iframe-lazy-loading/)。
+详情请参阅[是时候延迟加载屏外 iframe 了！](https://web.dev/articles/iframe-lazy-loading)。
 
 ## 处理资源加载顺序
 
@@ -195,7 +195,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 4. 稍后，浏览器根据应用于它的 CSS 来确定每个 HTML 元素应该如何进行样式化。
 5. 将经过样式化的结果绘制到屏幕上。
 
-> **注意：** 这只是一个非常简单的叙述，但可以让你了解发生的事情。
+> **备注：** 这只是一个非常简单的叙述，但可以让你了解发生的事情。
 
 多种 HTML 特性允许你修改资源加载方式以提高性能。现在我们将探讨其中一些功能。
 
@@ -227,7 +227,7 @@ pElem.addEventListener("click", () => {
 <script src="index.js"></script>
 ```
 
-如果我们将这个 `<script>` 元素放在 `<p>` 元素之前（例如，在 {{htmlelement("head")}} 元素中），页面会抛出错误（例如，Chrome 报告到控制台上的错误为 "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')"）。这是因为脚本依赖于 `<p>` 元素才能正常工作，但在解析脚本时，`<p>` 元素在页面上并不存在。它尚未被呈现。
+如果我们将这个 `<script>` 元素放在 `<p>` 元素之前（例如，在 {{htmlelement("head")}} 元素中），页面会抛出错误（例如，Chrome 报告到控制台上的错误为“Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')”）。这是因为脚本依赖于 `<p>` 元素才能正常工作，但在解析脚本时，`<p>` 元素在页面上并不存在。它尚未被渲染。
 
 要解决上述问题，可以将 `<script>` 元素放在 `<p>` 元素之后（例如放在文档主体的末尾），或者在适当的事件处理程序中运行代码（例如，在 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 上运行，其在 DOM 完全解析后触发）。
 
@@ -237,11 +237,11 @@ pElem.addEventListener("click", () => {
 <script async src="index.js"></script>
 ```
 
-这会使脚本获取与 DOM 解析并行进行，因此它会在相同的时间准备好，不会阻塞呈现，从而提高性能。
+这会使脚本获取与 DOM 解析并行进行，因此它会在相同的时间准备好，不会阻塞渲染，从而提高性能。
 
-> **注意：** 还有另一个属性 `defer`，它会使脚本在文档解析完成之后、`DOMContentLoaded` 事件触发之前执行。这与 `async` 有类似的效果。
+> **备注：** 还有另一个属性 `defer`，它会使脚本在文档解析完成之后、`DOMContentLoaded` 事件触发之前执行。这与 `async` 有类似的效果。
 
-处理 JavaScript 加载的另一个技巧是将脚本拆分为代码模块，并在需要时加载每个部分，而不是将所有代码放入一个巨大的脚本并在开头加载。这可以通过使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules) 来实现。阅读链接的文章以获取详细指南。
+处理 JavaScript 加载的另一个技巧是将脚本拆分为代码模块，并在需要时加载每个部分，而不是将所有代码放入一个巨大的脚本并在开头加载。这可以通过使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)来实现。阅读链接的文章以获取详细指南。
 
 ### 使用 rel="preload" 预加载内容
 
@@ -256,7 +256,7 @@ pElem.addEventListener("click", () => {
 有关使用 `rel="preload"` 的详细信息，请参阅以下文章：
 
 - [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload)
-- [预加载关键资源以提高加载速度](https://web.dev/preload-critical-assets/) web.dev（2020）
+- [预加载关键资源以提高加载速度](https://web.dev/articles/preload-critical-assets) web.dev（2020）
 
 > **备注：** 你还可以使用 `rel="preload"` 预加载 CSS 和 JavaScript 文件。
 
