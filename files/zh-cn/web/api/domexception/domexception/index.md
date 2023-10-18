@@ -68,4 +68,4 @@ button.onclick = () => {
 
 ## 参见
 
-- [`core-js`]() 中一个可用的 [`DOMException` 构造函数的 polyfill](https://github.com/zloirock/core-js#domexception)
+- [`core-js`](https://github.com/zloirock/core-js) 中一个可用的 [`DOMException` 构造函数的 polyfill](https://github.com/zloirock/core-js#domexception)
