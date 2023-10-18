@@ -23,7 +23,7 @@ O operador de agrupamento consiste em um par de parênteses em volta de uma expr
 
 Ignorando multiplicação e divisão primeiro, então adição e substração para avarliar adição primeiramente.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
@@ -43,11 +43,7 @@ a * c + b * c; // 9
 
 ## Especificações
 
-| Specification                                                          | Status             | Comment                                            |
-| ---------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                | Standard           | Primeira definição. Implementado no JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}          | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade
 

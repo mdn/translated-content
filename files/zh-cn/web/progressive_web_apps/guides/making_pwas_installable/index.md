@@ -1,205 +1,151 @@
 ---
-title: 添加到主屏幕
+title: 制作可安装的 PWA
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 ---
 
-添加到主屏幕（Add to Home Screen，简称 A2HS）是现代智能手机浏览器中的一项功能，使开发人员可以轻松便捷地将自己喜欢的 Web 应用程序（或网站）的快捷方式添加到主屏幕中，以便用户随后可以通过单击访问它。本指南说明了 A2HS 的使用方式，以及作为开发人员为使用户能利用 A2HS 所需做的事情。
+{{PWASidebar}}
 
-## 为什么选择 A2HS？
+PWA 的一个定义特征是它可以安装在设备上，然后以平台特定的应用程序的形式出现在用户面前，成为用户设备的一个永久功能，用户可以像启动其他任何应用程序一样直接从操作系统启动它。
 
-A2HS 被认为是渐进式 [Web 应用程序](/zh-CN/docs/Web/Progressive_web_apps)哲学的一部分——为 Web 应用程序提供与原生应用程序相同的用户体验优势，因此它们可以在当今的生态系统战争中竞争。这部分是通过访问主屏幕上的应用程序图标来访问应用程序，然后将其整齐地显示在自己的窗口中的简单手势。A2HS 使这成为可能。
+我们可以将其总结如下：
 
-## 哪些浏览器支持 A2HS？
+- PWA 可以从平台的应用商店或直接从 web 安装。
+- PWA 可以像特定平台的应用一样安装，并可以自定义安装过程。
+- 一旦安装，PWA 就会在设备上获得一个应用图标，与特定平台的应用程序一起。
+- 一旦安装，PWA 可以作为一个独立的应用程序启动，而不是在浏览器中的一个网站。
 
-Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 从 32 版开始支持，Firefox for Android 从 [58 版](/zh-CN/docs/Mozilla/Firefox/Releases/58) 开始支持。
+我们将在本指南中讨论每个特性。首先，我们将讨论 web 应用程序要想可以被安装必须满足的条件。
 
-## 如何使用？
+## 可安装性
 
-我们已经编写了一个非常简单的示例网站（[观看我们的在线演示](https://mdn.github.io/pwa-examples/a2hs/)，并[查看源代码](https://github.com/mdn/pwa-examples/tree/main/a2hs)），该网站虽然功能不多，但是实现 A2HS 所必须的代码都有包含，Service Worker 也使其可以脱机使用。这个示例展示了一系列的狐狸图片。
+对于 web 应用程序来说，要想被安装，它需要满足一些技术要求。我们可以将这些看作是一个 web 应用程序成为 PWA 的最低要求。
 
-如果您有适用于 Android 的 Firefox，使用它打开我们的示例：`https://mdn.github.io/pwa-examples/a2hs/`。你将会看到狐狸图片，但更重要的是，你将会看到一个带有加号（+）的“主页”图标——这是为具有必要功能的任何站点显示的“添加到主屏幕”图标。
+### web 应用清单
 
-![地址栏的“添加到主屏幕”图标](add-to-home-screen-icon.png)
+web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在设备上显示和表现。对于一个 web 应用程序来说，要成为一个 PWA，它必须是可安装的，而要成为可安装的，它必须包含一个清单。
 
-点击此按钮将显示一个确认横幅，按下大大的“添加到主屏幕”按钮即可将应用添加到主屏幕。（注意：在 Android 8 及更高版本中，将首先显示系统级的“添加到主屏幕”权限对话框。）
+这个清单是通过应用程序的 HTML 中的 {{HTMLElement("link")}} 元素引入的：
 
-![确认横幅](fx-a2hs-banner.png)
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <!-- ... -->
+  </head>
+  <body></body>
+</html>
+```
 
-使用 Mobile Chrome 的体验则略有不同；加载我们的网站后，您会看到一个弹出安装横幅，询问您是否要将此应用添加到主屏幕。
+如果 PWA 有多个页面，每个页面都必须以以下方式引用清单。
 
-![Mobile Chrome 上的 A2HS 提示](chrome-a2hs-banner.png)
+清单包含一个单独的 JSON 对象，其中包含一些定义 PWA 外观或行为的成员集合。以下一个相当简单的清单，只包含两个成员：`"name"` 和 `"icons"`。
 
-> **备注：** 您可以在“[Web App 安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)”一文中找到有关 Chrome 安装横幅的更多信息。
-
-如果您选择不将其添加到主屏幕，则可以稍后使用 Chrome 主菜单中的添加到主屏幕图标添加。
-
-无论使用哪种浏览器，当您选择将应用程序添加到主屏幕时，您都会看到它与短标题一起出现，就像原生应用程序一样。
-
-![桌面上的 PWA 图标](a2hs-on-home-screen.png)
-
-点按此图标可以将其打开，但是作为全屏应用程序，您将不再看到其周围的浏览器用户界面。
-
-## 如何使应用程序支持 A2HS？
-
-要将您的应用添加到主屏幕，它需要满足以下条件：
-
-- 应用通过 HTTPS 提供服务——Web 正朝着更加安全的方向发展，包括 A2HS 在内的许多现代 Web 技术都将仅工作在安全的环境中。
-- 从 HTML 头链接具有正确字段的 manifest 文件。
-- 有合适的图标可显示在主屏幕上。
-- Chrome 浏览器还要求该应用程序注册一个 Service Worker（这样在离线状态下就也可以运行）。
-
-### Manifest
-
-Web manifest 以标准 JSON 格式编写，应放置在应用程序目录中的某个位置（最好是在根目录中），名称为 `somefilename.webmanifest`（这里我们将其命名为 `manifest.webmanifest`）。它包含多个字段，这些字段定义有关 Web 应用程序及其行为的某些信息。
-
-> **备注：** .webmanifest 扩展名是在规范的“[媒体类型注册](https://w3c.github.io/manifest/#media-type-registration)”部分中指定的，但通常浏览器也支持带有其他适当扩展名的清单，例如 .json。
-
-A2HS 所需的字段如下：
-
-- `background_color`：指定在某些应用程序上下文中使用的背景色。与 A2HS 最相关的一个是在点击主屏幕上的应用程序图标并首次开始加载时显示的初始屏幕（目前仅在通过 Chrome 将应用添加到主屏幕时显示）。
-- `display`：指定应如何显示应用。为了使它看起来像一个应用程序而非网页，这里应该填写像是 `fullscreen` （根本不显示任何 UI）或 `standalone`（与前者非常相似，但是状态栏这样的系统级 UI 元素可能是可见的）的值。
-- `icons`：指定在不同位置（例如，在任务切换器上或更重要的是在主屏幕上）表示应用程序时浏览器使用的图标。我们的演示中仅包含一个。
-- `name`/`short_name`：这些字段提供了在不同位置表示应用程序时要显示的应用程序名称。`name` 提供完整的应用名称。`short_name` 则是当没有足够的空间显示全名时，提供的缩写名称。如果您的应用程序名称特别长，建议您同时提供两者。
-- `start_url`：提供启动添加到主屏幕应用程序时应加载的资源的路径。请注意，这必须是一个相对 manifest 指向网站主页的相对路径。另请注意，Chrome 需要这条字段才能显示安装标语，而 Firefox 即使没有这条字段也会显示用于添加到主屏的含加号的主页图标。
-
-我们的示例应用程序的 manifest 如下所示：
-
-```js
+```json
 {
-  "background_color": "purple",
-  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
-  "display": "fullscreen",
+  "name": "我的 PWA",
   "icons": [
     {
-      "src": "icon/fox-icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
-  ],
-  "name": "Awesome fox pictures",
-  "short_name": "Foxes",
-  "start_url": "/pwa-examples/a2hs/index.html"
+  ]
 }
 ```
 
-### 合适的图标
+#### 必需的清单成员
 
-如以上 manifest 所示，我们包括一个 192 x 192 像素的图标，供我们的应用使用。您可以根据需要添加更多尺寸；Android 将为每个不同的用例选择最合适的尺寸。您还可以决定添加不同类型的图标，以便设备可以使用他们能够使用的最佳图标（例如，Chrome 已经支持 WebP 格式）。
+基于 Chromium 的浏览器，包括 Google Chrome、Samsung Internet 和 Microsoft Edge，要求清单包含以下成员：
 
-请注意，每个图标对象中的 `type` 成员都指定了该图标的 MIME 类型，因此浏览器可以快速读取该图标的类型，并在不支持此类型时将其忽略并采用其他图标。
+- [`name`](/zh-CN/docs/Web/Manifest/name)
+- [`icons`](/zh-CN/docs/Web/Manifest/icons)
+- [`start_url`](/zh-CN/docs/Web/Manifest/start_url)
+- [`display`](/zh-CN/docs/Web/Manifest/display) 和/或 [`display_override`](/zh-CN/docs/Web/Manifest/display_override)
 
-在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Google Play 图标设计规范](https://developer.android.google.cn/distribute/google-play/resources/icon-design-specifications)）。
+有关每个成员的完整描述，请参阅 [Web 应用清单参考文档](/zh-CN/docs/Web/Manifest)。
 
-### 将 HTML 链接到 manifest
+### 安全上下文
 
-要完成 manifest 的设置，您需要从应用程序主页的 HTML 中引用它：
+要使 Web 应用程序可安装，它必须在[安全上下文](/zh-CN/docs/Web/Progressive_web_apps)中提供。通常意味着它必须通过 HTTPS 提供。本地资源，如 localhost、`127.0.0.1` 和 `file://` 也被视为安全。
 
-```html
-<link rel="manifest" href="manifest.webmanifest" />
-```
+### Service worker
 
-一旦有了 manifest 声明，支持 A2HS 的浏览器就会知道在哪里查找它。
+要使 Web 应用程序可安装，它必须包括一个 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
 
-## A2HS 不提供什么？
+## 从应用商店安装
 
-请记住，将应用程序添加到主屏幕时，它只会使该应用程序易于访问，而不会将应用程序的资料和数据下载到您的设备上，也不会使该应用程序脱机使用或类似的操作。为了使应用离线运行，你必须使用 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 来离线存储资源，如果需要，还可以使用 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 来存储其数据。
+用户希望在其平台的应用商店中找到应用程序，例如 Google Play 商店或 Apple Store。
 
-在示例应用程序中，我们仅使用了一个 service worker 来存储所有必需的文件。service worker 使用[`index.js`](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js) 文件中的最终的代码块在网站上注册。然后，我们使用 [Cache API](/zh-CN/docs/Web/API/Cache) 缓存网站的所有资产，并使用 [sw.js](https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js) 文件中的代码从缓存而不是网络中为它们提供服务。
+如果你的应用符合可安装的先决条件，你可以将其打包并通过应用商店进行分发。该过程针对每个应用商店有所不同：
 
-## 桌面上的\_A2HS
+- [如何将 PWA 发布到 Google Play 商店](https://chromeos.dev/en/publish/pwa-in-play)
+- [如何将 PWA 发布到 Microsoft Store](https://learn.microsoft.com/zh-cn/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
+- [如何将 PWA 发布到 Meta Quest Store](https://developer.oculus.com/documentation/web/pwa-submit-app/)
 
-虽然 PWA 最初旨在改善移动操作系统上的用户体验，但也有人推进在桌面端安装 PWA 的进程。
+[PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) 是一个工具，可简化将 PWA 打包和发布到各种应用商店的过程。它支持 Google Play 商店、Microsoft Store、Meta Quest Store 和 iOS App Store。
 
-> **注意：** 在撰写本文时，仅在较新版本的 Chrome 支持以下功能（在 Windows 上默认支持，在 macOS 则需开启 #enable-desktop-pwas 标志）。
+如果你已将应用添加到应用商店，用户可以像使用特定于平台的应用一样从商店安装它。
 
-### 添加安装按钮
+## 通过 Web 进行安装
 
-为了使 PWA 可在桌面上安装，我们首先在文档中添加了一个按钮，以允许用户进行安装—桌面应用程序不会自动提供此按钮，并且需要通过用户手势来触发安装：
+当用户访问浏览器确定可安装的网页时，用户将有机会安装它。这意味着你可以将你的 PWA 作为一个网站进行分发，使其可以通过 Web 搜索找到，也可以在应用商店中分发，以便用户可以在那里找到它。
 
-```html
-<button class="add-button">Add to home screen</button>
-```
+这是 PWA 可以同时提供两种最佳体验的绝佳示例。这也是渐进增强与 PWA 结合的良好示例：如果用户在不能安装它的浏览器中在 Web 上遇到你的 PWA，他们可以像使用普通网站一样使用它。
 
-然后，我们给它一些简单的样式：
+从 Web 安装 PWA 的用户界面在不同的浏览器和平台上会有所不同。例如，当用户导航到网页时，浏览器可能在 URL 栏中包含一个“安装”图标：
 
-```css
-.add-button {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-}
-```
+![Chrome URL 栏显示 PWA 安装图标](pwa-install.png)
 
-### 用于处理安装的\_JavaScript
+当用户选择该图标时，浏览器会显示一个提示框询问他们是否要安装 PWA，如果他们接受，PWA 将被安装。
 
-在 [`index.js` 文件](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js)的底部，我们添加了一些 JavaScript 代码来处理安装。首先，我们声明一个 `deferredPrompt` 变量（我们将在后面解释），获得对安装按钮的引用，并初始设置为 `display: none`：
+该提示框显示的是 PWA 的名称和图标，取自 渐进式 Web 应用清单的 [`name`](/zh-CN/docs/Web/Manifest/name) 和 [`icons`](/zh-CN/docs/Web/Manifest/icons) 成员。
 
-```js
-let deferredPrompt;
-const addBtn = document.querySelector(".add-button");
-addBtn.style.display = "none";
-```
+### 浏览器支持
 
-我们最初隐藏该按钮是因为 PWA 必须满足 A2HS 标准才会安装。条件满足时，支持的浏览器将触发 `beforeinstallprompt` 事件。然后，我们可以使用以下处理程序来处理安装：
+通过 Web 安装 PWA 的支持因浏览器和平台而异。
 
-```js
-window.addEventListener("beforeinstallprompt", (e) => {
-  // 防止 Chrome 67 及更早版本自动显示安装提示
-  e.preventDefault();
-  // 稍后再触发此事件
-  deferredPrompt = e;
-  // 更新 UI 以提醒用户可以将 App 安装到桌面
-  addBtn.style.display = "block";
+在桌面上：
 
-  addBtn.addEventListener("click", (e) => {
-    // 隐藏显示 A2HS 按钮的界面
-    addBtn.style.display = "none";
-    // 显示安装提示
-    deferredPrompt.prompt();
-    // 等待用户反馈
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === "accepted") {
-        console.log("User accepted the A2HS prompt");
-      } else {
-        console.log("User dismissed the A2HS prompt");
-      }
-      deferredPrompt = null;
-    });
-  });
-});
-```
+- Firefox 和 Safari 不支持在任何桌面操作系统上安装 PWA。
+- Chrome 和 Edge 支持在 Linux、Windows、macOS 和 Chromebook 上安装 PWA。
 
-所以我们在这里：
+在移动设备上：
 
-- 调用 {{domxref("Event.preventDefault()")}} 以防止 Chrome 67 及更早版本自动调用安装提示（此行为在 Chrome 68 已更改）。
-- 将事件对象存储在 `deferredPrompt` 变量中，以便以后可以用于执行实际安装。
-- 将按钮设置为 `display: block`，以便它出现在 UI 中供用户点击。
-- 设置按钮的 `click` 处理程序。
+- 在 Android、Firefox、Chrome、Edge、Opera 和 Samsung Internet Browser 上都支持安装 PWA。
 
-点击处理程序包含以下步骤：
+- 在 iOS 16.3 及更早版本上，PWA 只能通过 Safari 安装。
 
-- 通过 `display: none` 再次隐藏按钮—安装应用程序后将不再需要它。
-- 使用 `beforeinstallprompt` 事件对象（存储在 `deferredPrompt` 中）上可用的 `prompt()` 方法触发显示安装提示。
-- 使用 `userChoice` 属性响应用户与提示的交互，该属性再次在 `beforeinstallprompt` 事件对象上可用。
-- 将 `deferredPrompt` 设置为 null，因为不再需要它。
+- 在 iOS 16.4 及更高版本上，PWA 可以通过 Safari、Chrome、Edge、Firefox 和 Orion 的分享菜单安装。
 
-于是，点击按钮后安装提示就会消失。
+### 触发安装提示
 
-![应用安装提示](chrome-desktop-a2hs-banner.png)
+PWA 可以提供自己的页面内用户界面，供用户打开安装提示，而不是依赖浏览器默认提供的用户界面。这使得 PWA 可以提供一些上下文和用户安装 PWA 的理由，并有助于使安装用户流程更易于发现。
 
-如果用户选择安装，则将安装该应用程序（可作为独立的桌面应用程序使用），并且不再显示“安装”按钮（如果已经安装了该应用程序，则将不再触发 `onbeforeinstallprompt` 事件）。当您打开应用程序时，它将显示在其自己的窗口中：
+这种技术依赖于 [`beforeinstallprompt`](/zh-CN/docs/Web/API/Window/beforeinstallprompt_event) 事件，该事件在全局的 [`Window`](/zh-CN/docs/Web/API/Window) 对象上触发，一旦浏览器确定 PWA 可以安装。此事件具有一个 [`prompt()`](/zh-CN/docs/Web/API/BeforeInstallPromptEvent/prompt) 方法，用于显示安装提示。因此，PWA 可以：
 
-![安装后的应用界面](a2hs-installed-desktop.png)
+- 添加自己的“安装”按钮
+- 监听 `beforeinstallprompt` 事件
+- 通过调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 取消事件的默认行为
+- 在自己的“安装”按钮的事件处理程序中，调用 [`prompt()`](/zh-CN/docs/Web/API/BeforeInstallPromptEvent/prompt)。
 
-如果用户选择“取消”，则应用程序的状态将返回到单击按钮之前的状态。
+这在 iOS 上不受支持。
 
-> **备注：** 本部分的代码主要来自 Pete LaPage 的[应用安装横幅/添加到主屏幕](https://developers.google.com/web/fundamentals/app-install-banners/)。
+### 自定义安装提示
 
-## 其他
+默认情况下，安装提示中包含 PWA 的名称和图标。如果你为 [`description`](/zh-CN/docs/Web/Manifest/description) 和 [`screenshots`](/zh-CN/docs/Web/Manifest/screenshots) 这两个渐进式 Web 应用清单的成员提供值，则仅限于 Android，在安装提示中将显示这些值，为用户提供额外的上下文和安装 PWA 的动机。
 
-- [渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)
-- [Service Worker 接口](/zh-CN/docs/Web/API/Service_Worker_API)
-- [Web manifest 参考](/zh-CN/docs/Web/Manifest)
-- [应用安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)
+下面的屏幕截图显示了在运行在 Android 上的 Google Chrome 上的 [PWAmp 演示](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp)的安装提示的外观：
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}
+![Android 上的 PWAmp 安装提示](pwamp-install-prompt-android.png)
+
+## 启动应用
+
+一旦安装了 PWA，它的图标将显示在设备上，与用户安装的其他应用程序一起显示，并且点击图标将启动应用程序。
+
+你可以使用应用清单的成员 [`display`](/zh-CN/docs/Web/Manifest/display) 来控制 PWA 的*显示模式*，即 PWA 启动时的外观。具体而言：
+
+- `"standalone"` 表示 PWA 应该看起来和感觉上像特定于平台的应用程序，没有浏览器的用户界面元素。
+- `"browser"` 表示 PWA 应该作为一个新的浏览器标签页或窗口打开，就像普通网站一样。
+
+如果浏览器不支持给定的显示模式，`display` 将会根据预定义的顺序回退到支持的显示模式。[`display_override`](/zh-CN/docs/Web/Manifest/display_override) 允许你重新定义回退顺序。

@@ -52,7 +52,7 @@ slug: Learn/Accessibility/HTML
 
 让我们来继续学习 HTML 语义化实现细则。
 
-> **备注：** 在本地计算机上设置屏幕阅读器是一个不错的主意，因此您可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。
+> **备注：** 在本地计算机上设置屏幕阅读器是一个不错的主意，因此你可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。
 
 ## 良好的语义
 
@@ -96,12 +96,12 @@ slug: Learn/Accessibility/HTML
 </p>
 ```
 
-我们已经准备了一个更长的文本版本，供您试用于屏幕阅读器（请查看 [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)）。如果您尝试在此过程中导航，您将看到这非常容易导航：
+我们已经准备了一个更长的文本版本，供你试用于屏幕阅读器（请查看 [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)）。如果你尝试在此过程中导航，你将看到这非常容易导航：
 
-1. 屏幕阅读器会在您浏览内容时读取每个标题，通知您标题是什么，段落是什么等。
+1. 屏幕阅读器会在你浏览内容时读取每个标题，通知你标题是什么，段落是什么等。
 2. 它在每个元素之后停止，让你以任何适合你的速度前进。
 3. 你可以在许多屏幕阅读器中跳到下一个/上一个标题。
-4. 你还可以在许多屏幕阅读器中显示所有标题的列表，使您可以像使用便利的目录一样使用它们以查找特定内容。
+4. 你还可以在许多屏幕阅读器中显示所有标题的列表，使你可以像使用便利的目录一样使用它们以查找特定内容。
 
 人们有时会使用表现性 HTML 和换行符来编写标题，段落等，如下所示：
 
@@ -205,11 +205,11 @@ the last one.
 </table>
 ```
 
-如果您尝试使用屏幕阅读器浏览此内容，它可能会告诉您需要查看一个表格（尽管某些屏幕阅读器可以猜测表格布局和数据表格之间的区别）。然后，您可能（取决于您使用的屏幕阅读器）必须需要进入到表格对象中，并单独地查看表格的内容，然后再次离开表格，以继续浏览其他内容。
+如果你尝试使用屏幕阅读器浏览此内容，它可能会告诉你需要查看一个表格（尽管某些屏幕阅读器可以猜测表格布局和数据表格之间的区别）。然后，你可能（取决于你使用的屏幕阅读器）必须需要进入到表格对象中，并单独地查看表格的内容，然后再次离开表格，以继续浏览其他内容。
 
 用表格布局网页是过去旧时代的遗迹 - 在“CSS”在浏览器中并不普遍被支持时，它们是有意义的，但是它们会为屏幕阅读器用户造成混淆，并且由于许多其他原因变得很糟糕（滥用表格，可能因此需要更多的标记，使设计更不灵活）。不要这样做！
 
-您可以通过将您之前的体验与 [更现代的网站结构示例](http://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/) 进行比较，来验证这些声明，该示例如下所示：
+你可以通过将你之前的体验与 [更现代的网站结构示例](http://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/) 进行比较，来验证这些声明，该示例如下所示：
 
 ```html
 <header>
@@ -243,17 +243,17 @@ the last one.
 </footer>
 ```
 
-如果您使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。
+如果你使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。
 
-创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅[此内容部分](/zh-CN/docs/Web/HTML/Element#Content_sectioning)）——你只能使用嵌套的 {{htmlelement("div")}} 元素创建布局，但最好使用适当的分段元素包裹您的主导航（{{htmlelement("nav")}}），`footer`（{{htmlelement("footer")}}），重复内容单元（{{htmlelement("article")}}）等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
+创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅[此内容部分](/zh-CN/docs/Web/HTML/Element#Content_sectioning)）——你只能使用嵌套的 {{htmlelement("div")}} 元素创建布局，但最好使用适当的分段元素包裹你的主导航（{{htmlelement("nav")}}），`footer`（{{htmlelement("footer")}}），重复内容单元（{{htmlelement("article")}}）等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
 
-> **备注：** 除了您的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 您可以随时将它放在您想要使用 CSS 的位置，但是您应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
+> **备注：** 除了你的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 你可以随时将它放在你想要使用 CSS 的位置，但是你应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
 
 ### UI 控制
 
 通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本无障碍问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 无障碍的其他方面。
 
-UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
+UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。你可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，你应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便你可以确定当前哪些元素获得焦点。
 
 ![](button-focused-unfocused.png)
 
@@ -261,7 +261,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 > **备注：** 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#使用键盘)获取更多详细信息。
 
-实际上，您只需使用适当的元素即可免费获得此功能，例如，
+实际上，你只需使用适当的元素即可免费获得此功能，例如，
 
 ```html
 <h1>Links</h1>
@@ -306,7 +306,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 这意味着适当地使用链接，按钮，表单元素和标签（包括表单控件的 `{{htmlelement("label")}}` 元素）。
 
-然而，人们有时候会用 HTML 做奇怪的事情。例如，您有时会看到使用 `{{htmlelement("div")}}` 标记的按钮，例如：
+然而，人们有时候会用 HTML 做奇怪的事情。例如，你有时会看到使用 `{{htmlelement("div")}}` 标记的按钮，例如：
 
 ```html
 <div data-message="This is from the first button">Click me!</div>
@@ -318,7 +318,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 #### 重新建立键盘的无障碍
 
-重新添加这些优点需要一些工作（您可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
+重新添加这些优点需要一些工作（你可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
 
 ```html
 <div data-message="This is from the first button" tabindex="0">Click me!</div>
@@ -348,7 +348,7 @@ document.onkeydown = function (e) {
 
 我们使用`document.activeElement.onclick（）`运行存储在按钮的 onclick 处理函数中的函数。 `activeElement` 为我们提供了当前关注页面的元素。
 
-> **备注：** 您应该记住，只有通过事件处理程序属性（例如 onclick）设置原始事件处理程序，此技巧才会起作用。 `addEventListener` 将不起作用。
+> **备注：** 你应该记住，只有通过事件处理程序属性（例如 onclick）设置原始事件处理程序，此技巧才会起作用。 `addEventListener` 将不起作用。
 
 这对于重新构建功能而言是一个额外的麻烦。而且这肯定会带来其他问题。使用正确的元素处理正确的工作是非常重要的。
 
@@ -360,7 +360,7 @@ document.onkeydown = function (e) {
 
 ![](voiceover-formcontrols.png)
 
-确保您的标签在上下文中有意义，可以单独阅读，也可以在他们所在的段落的上下文中进行阅读。例如，下面显示了良好链接文本的示例：
+确保你的标签在上下文中有意义，可以单独阅读，也可以在他们所在的段落的上下文中进行阅读。例如，下面显示了良好链接文本的示例：
 
 ```html
 <p>
@@ -378,15 +378,15 @@ document.onkeydown = function (e) {
 </p>
 ```
 
-> **备注：** 您可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。您还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
+> **备注：** 你可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
 
-表单标签也很重要，可以让您了解您需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
+表单标签也很重要，可以让你了解你需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
 ```html example-bad
 Fill in your name: <input type="text" id="name" name="name" />
 ```
 
-但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
+但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果你使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
 
 以下是一个更好的例子：
 
@@ -401,9 +401,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 ![](voiceover-good-form-label.png)
 
-作为额外的好处，在大多数将标签与表单输入相关联的浏览器中，您可以单击标签来 选择/激活 表单元素。这给输入一个更大的可选中区域，使其更容易选择。
+作为额外的好处，在大多数将标签与表单输入相关联的浏览器中，你可以单击标签来 选择/激活 表单元素。这给输入一个更大的可选中区域，使其更容易选择。
 
-> **备注：** 您可以在 [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) 和 [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html) 中看到一些好的和不好的表单示例。
+> **备注：** 你可以在 [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) 和 [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html) 中看到一些好的和不好的表单示例。
 
 ## 可访问的表格
 
@@ -436,9 +436,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 但是这有问题 - 屏幕阅读器用户无法将行或列作为数据分组关联在一起。要做到这一点，你需要知道标题行是什么，以及它们是否在行，列等标题上。这只能在上面的表中以可视化方式完成（参见 [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html) ，并自己尝试这个例子）。
 
-现在看看我们的 [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) - 您可以在这里看到一些辅助工具（accessibility aids）：
+现在看看我们的 [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) - 你可以在这里看到一些辅助工具（accessibility aids）：
 
-- 表头使用 `{{htmlelement("th")}}` 元素定义 - 您还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
+- 表头使用 `{{htmlelement("th")}}` 元素定义 - 你还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。
 
 > **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced) 文章。
@@ -481,7 +481,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 > **备注：** 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
-如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
+如果你确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 
 ![](title-attribute.png)
 
@@ -493,7 +493,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 <p id="dino-label">The Mozilla red Tyrannosaurus ...</p>
 ```
 
-在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
+在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
 
 > **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 
@@ -530,14 +530,14 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 </h3>
 ```
 
-可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像”等类似的语句）。
+可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，你会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像”等类似的语句）。
 
-使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，您应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
+使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，你应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
 
 > **备注：** 如果可能的话，你应该使用 CSS 来显示只有装饰的图像。
 
 ## 总结
 
-您现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及无障碍如何受其好坏影响。
+你现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及无障碍如何受其好坏影响。
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

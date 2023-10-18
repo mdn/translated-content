@@ -48,14 +48,14 @@ Veja {{jsxref("Array.prototype.map()")}} para uma detalhada descrição da funç
 ```js
 var arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 //  Só o primeiro nível
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -66,10 +66,10 @@ Vamos gerar uma lista de palavras a partir de uma lista de sentenças.
 ```js
 let arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x=>x.split(" "));
+arr1.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
+arr1.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 
@@ -81,7 +81,7 @@ Perceba, o comprimento da lista de saída pode ser diferente do comprimento da l
 
 ```js
 var arr1 = [1, 2, 3, 4];
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // é equivalente a
 arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 // [ 2, 4, 6, 8 ]

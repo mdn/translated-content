@@ -35,9 +35,9 @@ Porque `tanh()` es un metodo estatico de `Math`, siempre se usa como `Math.tanh(
 ### Usando `Math.tanh()`
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## Polyfill
@@ -45,10 +45,13 @@ Math.tanh(1);        // 0.7615941559557649
 Esto puede ser emulado con ayuda de {{jsxref("Math.exp()")}} funcion:
 
 ```js
-Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    var a = Math.exp(+x),
+      b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
+  };
 ```
 
 ## Especificaciones

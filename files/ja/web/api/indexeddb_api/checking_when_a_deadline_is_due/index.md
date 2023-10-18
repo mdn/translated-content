@@ -117,11 +117,11 @@ function checkDeadlines() {
 まず、空の `Date` オブジェクトを作成して、現在の日付と時刻を取得します。簡単でしょう？ここからは少し複雑な話になります。
 
 ```js
-  const minuteCheck  = now.getMinutes();
-  const hourCheck    = now.getHours();
-  const dayCheck     = now.getDate();
-  const monthCheck   = now.getMonth();
-  const yearCheck    = now.getFullYear();
+const minuteCheck = now.getMinutes();
+const hourCheck = now.getHours();
+const dayCheck = now.getDate();
+const monthCheck = now.getMonth();
+const yearCheck = now.getFullYear();
 ```
 
 `Date` オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは `getDate()` が必要、 `getDay()` は曜日を 1-7 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (`getFullYear()` が必要、`getYear()` は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。
@@ -139,40 +139,39 @@ function checkDeadlines() {
 次にもう一つ、 IndexedDB の `objectStore` を生成し、 `openCursor()` メソッドを使用してカーソルを開きます。これは基本的に IndexedDB がストア内のすべての項目を反復処理する方法です。そして、カーソル内に有効な項目が残っている限り、カーソル内のすべての項目をループします。
 
 ```js
-      switch (cursor.value.month) {
-        case "January":
-          monthNumber = 0;
-          break;
-        case "February":
-          monthNumber = 1;
-          break;
+switch (cursor.value.month) {
+  case "January":
+    monthNumber = 0;
+    break;
+  case "February":
+    monthNumber = 1;
+    break;
 
-        // other lines removed from listing for brevity
+  // other lines removed from listing for brevity
 
-        case "December":
-          monthNumber = 11;
-          break;
-        default:
-          alert('Incorrect month entered in database.');
-      }
+  case "December":
+    monthNumber = 11;
+    break;
+  default:
+    alert("Incorrect month entered in database.");
+}
 ```
 
 まず最初に行うことは、データベースに保存されている月名を、 JavaScript が理解できる月の数値に変換することです。前に見たように、 JavaScript の Date オブジェクトは月の値を 0 から 11 までの数値として生成します。
 
 ```js
-      if (
-        Number(cursor.value.hours) === hourCheck &&
-        Number(cursor.value.minutes) === minuteCheck &&
-        Number(cursor.value.day) === dayCheck &&
-        monthNumber === monthCheck &&
-        cursor.value.year === yearCheck &&
-        notified === "no"
-      ) {
-
-        // If the numbers all do match, run the createNotification()
-        // function to create a system notification
-        createNotification(cursor.value.taskTitle);
-      }
+if (
+  Number(cursor.value.hours) === hourCheck &&
+  Number(cursor.value.minutes) === minuteCheck &&
+  Number(cursor.value.day) === dayCheck &&
+  monthNumber === monthCheck &&
+  cursor.value.year === yearCheck &&
+  notified === "no"
+) {
+  // If the numbers all do match, run the createNotification()
+  // function to create a system notification
+  createNotification(cursor.value.taskTitle);
+}
 ```
 
 IndexedDB に格納された値と照合したい現在の時刻と日付の部分がすべて組み立てられたので、いよいよチェックを実行します。ユーザーに期限切れを知らせる何らかの通知を行う前に、すべての値が一致している必要があります。

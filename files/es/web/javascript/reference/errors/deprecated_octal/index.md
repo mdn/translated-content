@@ -37,7 +37,7 @@ Tenga en cuenta que las literales octales y las secuencias de escape octal está
 
 Utilice el cero inicialmente seguido de la letra "o";
 
-```js example-good
+```js-nolint example-good
 0O755;
 0o644;
 ```

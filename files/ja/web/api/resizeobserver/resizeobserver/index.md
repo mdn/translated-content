@@ -10,12 +10,13 @@ slug: Web/API/ResizeObserver/ResizeObserver
 ## 構文
 
 ```js
-new ResizeObserver(callback)
+new ResizeObserver(callback);
 ```
 
 ### 引数
 
 - `callback`
+
   - : 監視中のものに寸法の変更が発生するたびに呼び出される関数です。この関数は 2 つの引数で呼び出されます。
 
     - `entries`
@@ -39,23 +40,28 @@ new ResizeObserver(callback)
 次のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを表示](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) の例から取ったものです。
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
+    if (entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
+        h1Elem.style.fontSize =
+          Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200) + "rem";
+        pElem.style.fontSize =
+          Math.max(1, entry.contentBoxSize[0].inlineSize / 600) + "rem";
       } else {
         // legacy path
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+        h1Elem.style.fontSize =
+          Math.max(1.5, entry.contentBoxSize.inlineSize / 200) + "rem";
+        pElem.style.fontSize =
+          Math.max(1, entry.contentBoxSize.inlineSize / 600) + "rem";
       }
     } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
+      h1Elem.style.fontSize =
+        Math.max(1.5, entry.contentRect.width / 200) + "rem";
+      pElem.style.fontSize = Math.max(1, entry.contentRect.width / 600) + "rem";
     }
   }
-  console.log('Size changed');
+  console.log("Size changed");
 });
 
 resizeObserver.observe(divElem);

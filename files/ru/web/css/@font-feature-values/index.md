@@ -2,6 +2,7 @@
 title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [правило](/ru/docs/Web/CSS/At-rule) **`@font-feature-values`** позволяет использовать общее имя в свойстве {{cssxref("font-variant-alternates")}} для функций, которые по разному активируются в OpenType. Это может помочь упростить ваш CSS при использовании нескольких шрифтов.

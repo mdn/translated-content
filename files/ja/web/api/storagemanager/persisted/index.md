@@ -25,11 +25,13 @@ navigator.storage.persisted().then(function(persistent) { ... })
 
 ```js
 if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function(persistent) {
+  navigator.storage.persisted().then(function (persistent) {
     if (persistent)
       console.log("明示的なユーザー操作以外では、ストレージは消去されません。");
     else
-      console.log("ストレージは UA によってストレージの圧力により消去されるかもしれません。");
+      console.log(
+        "ストレージは UA によってストレージの圧力により消去されるかもしれません。",
+      );
   });
 ```
 

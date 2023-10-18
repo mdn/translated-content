@@ -58,9 +58,9 @@ start の反対側の端は _end_ となります。
 ```css
 .example {
   /* bottom-to-top layout */
-  -moz-box-direction: reverse;      /* Mozilla */
-  -webkit-box-direction: reverse;   /* WebKit */
-  box-direction: reverse;           /* 仕様書通り */
+  -moz-box-direction: reverse; /* Mozilla */
+  -webkit-box-direction: reverse; /* WebKit */
+  box-direction: reverse; /* 仕様書通り */
 }
 ```
 

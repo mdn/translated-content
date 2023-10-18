@@ -2,6 +2,7 @@
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
+
 {{JSRef}}
 
 The **`endsWith()`** 메서드를 사용하여 어떤 문자열에서 특정 문자열로 끝나는지를 확인할 수 있으며, 그 결과를 `true` 혹은 `false`로 반환한다.
@@ -32,11 +33,11 @@ str.endsWith(searchString[, length])
 ### `endsWith()` 사용하기
 
 ```js
-var str = 'To be, or not to be, that is the question.';
+var str = "To be, or not to be, that is the question.";
 
-console.log(str.endsWith('question.')); // true
-console.log(str.endsWith('to be'));     // false
-console.log(str.endsWith('to be', 19)); // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("to be")); // false
+console.log(str.endsWith("to be", 19)); // true
 ```
 
 ## Polyfill
@@ -45,14 +46,19 @@ console.log(str.endsWith('to be', 19)); // true
 
 ```js
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
-      var subjectString = this.toString();
-      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
-        position = subjectString.length;
-      }
-      position -= searchString.length;
-      var lastIndex = subjectString.indexOf(searchString, position);
-      return lastIndex !== -1 && lastIndex === position;
+  String.prototype.endsWith = function (searchString, position) {
+    var subjectString = this.toString();
+    if (
+      typeof position !== "number" ||
+      !isFinite(position) ||
+      Math.floor(position) !== position ||
+      position > subjectString.length
+    ) {
+      position = subjectString.length;
+    }
+    position -= searchString.length;
+    var lastIndex = subjectString.indexOf(searchString, position);
+    return lastIndex !== -1 && lastIndex === position;
   };
 }
 ```

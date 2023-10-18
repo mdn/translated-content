@@ -40,13 +40,13 @@ while (условие);
 ### JavaScript
 
 ```js
-var result = '';
+var result = "";
 var i = 0;
 do {
-   i += 1;
-   result += i + ' ';
+  i += 1;
+  result += i + " ";
 } while (i > 0 && i < 5); // Несмотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
-document.getElementById('example').innerHTML = result;
+document.getElementById("example").innerHTML = result;
 ```
 
 ### Результат

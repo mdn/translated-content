@@ -157,18 +157,18 @@ function onLoad() {
 ```js
 function setupXRButton() {
   if (navigator.xr.isSessionSupported) {
-    navigator.xr.isSessionSupported(SESSION_TYPE)
-    .then((supported) => {
+    navigator.xr.isSessionSupported(SESSION_TYPE).then((supported) => {
       xrButton.disabled = !supported;
     });
   } else {
-    navigator.xr.supportsSession(SESSION_TYPE)
-    .then(() => {
-      xrButton.disabled = false;
-    })
-    .catch(() => {
-      xrButton.disabled = true;
-    });
+    navigator.xr
+      .supportsSession(SESSION_TYPE)
+      .then(() => {
+        xrButton.disabled = false;
+      })
+      .catch(() => {
+        xrButton.disabled = true;
+      });
   }
 }
 ```
@@ -180,8 +180,7 @@ WebXR セッションは、ボタンの {{domxref("Element.click_event", "click"
 ```js
 async function onXRButtonClick(event) {
   if (!xrSession) {
-    navigator.xr.requestSession(SESSION_TYPE)
-    .then(sessionStarted);
+    navigator.xr.requestSession(SESSION_TYPE).then(sessionStarted);
   } else {
     await xrSession.end();
 
@@ -215,7 +214,9 @@ function sessionStarted(session) {
 
   if (allowMouseRotation) {
     canvas.addEventListener("pointermove", handlePointerMove);
-    canvas.addEventListener("contextmenu", (event) => { event.preventDefault(); });
+    canvas.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
   }
 
   if (allowKeyboardMotion) {
@@ -227,23 +228,29 @@ function sessionStarted(session) {
   programInfo = {
     program: shaderProgram,
     attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-      vertexNormal: gl.getAttribLocation(shaderProgram, 'aVertexNormal'),
-      textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
+      vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+      vertexNormal: gl.getAttribLocation(shaderProgram, "aVertexNormal"),
+      textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
     },
     uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-      normalMatrix: gl.getUniformLocation(shaderProgram, 'uNormalMatrix'),
-      uSampler: gl.getUniformLocation(shaderProgram, 'uSampler')
+      projectionMatrix: gl.getUniformLocation(
+        shaderProgram,
+        "uProjectionMatrix",
+      ),
+      modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+      normalMatrix: gl.getUniformLocation(shaderProgram, "uNormalMatrix"),
+      uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
     },
   };
 
   buffers = initBuffers(gl);
-  texture = loadTexture(gl, 'https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244');
+  texture = loadTexture(
+    gl,
+    "https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244",
+  );
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   if (SESSION_TYPE == "immersive-vr") {
@@ -256,10 +263,10 @@ function sessionStarted(session) {
 
   vec3.copy(cubeOrientation, viewerStartOrientation);
 
-  xrSession.requestReferenceSpace(refSpaceType)
-  .then((refSpace) => {
+  xrSession.requestReferenceSpace(refSpaceType).then((refSpace) => {
     xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-          new XRRigidTransform(viewerStartPosition, cubeOrientation));
+      new XRRigidTransform(viewerStartPosition, cubeOrientation),
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
   });
 
@@ -315,7 +322,7 @@ function sessionEnded() {
 
 ```js
 function handleKeyDown(event) {
-  switch(event.key) {
+  switch (event.key) {
     case "w":
     case "W":
       verticalDistance -= MOVE_DISTANCE;
@@ -437,11 +444,11 @@ function drawFrame(time, frame) {
     LogGLError("bindFrameBuffer");
 
     gl.clearColor(0, 0, 0, 1.0);
-    gl.clearDepth(1.0);                 // Clear everything
+    gl.clearDepth(1.0); // Clear everything
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     LogGLError("glClear");
 
-    const deltaTime = (time - lastFrameTime) * 0.001;  // Convert to seconds
+    const deltaTime = (time - lastFrameTime) * 0.001; // Convert to seconds
     lastFrameTime = time;
 
     for (let view of pose.views) {
@@ -472,8 +479,13 @@ function drawFrame(time, frame) {
 
 ```js
 function applyViewerControls(refSpace) {
-  if (!mouseYaw && !mousePitch && !axialDistance &&
-      !transverseDistance && !verticalDistance) {
+  if (
+    !mouseYaw &&
+    !mousePitch &&
+    !axialDistance &&
+    !transverseDistance &&
+    !verticalDistance
+  ) {
     return refSpace;
   }
 
@@ -481,11 +493,15 @@ function applyViewerControls(refSpace) {
   quat.rotateX(inverseOrientation, inverseOrientation, -mousePitch);
   quat.rotateY(inverseOrientation, inverseOrientation, -mouseYaw);
 
-  let newTransform = new XRRigidTransform({x: transverseDistance,
-                                           y: verticalDistance,
-                                           z: axialDistance},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: transverseDistance, y: verticalDistance, z: axialDistance },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
   return refSpace.getOffsetReferenceSpace(newTransform);
@@ -509,26 +525,35 @@ const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();
 
 function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
-  const xRotationForTime = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-  const yRotationForTime = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-  const zRotationForTime = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+  const xRotationForTime =
+    xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+  const yRotationForTime =
+    yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+  const zRotationForTime =
+    zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 
-  gl.enable(gl.DEPTH_TEST);           // Enable depth testing
-  gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+  gl.enable(gl.DEPTH_TEST); // Enable depth testing
+  gl.depthFunc(gl.LEQUAL); // Near things obscure far things
 
   if (enableRotation) {
-    mat4.rotate(cubeMatrix,  // destination matrix
-                cubeMatrix,  // matrix to rotate
-                zRotationForTime,     // amount to rotate in radians
-                [0, 0, 1]);       // axis to rotate around (Z)
-    mat4.rotate(cubeMatrix,  // destination matrix
-                cubeMatrix,  // matrix to rotate
-                yRotationForTime, // amount to rotate in radians
-                [0, 1, 0]);       // axis to rotate around (Y)
-    mat4.rotate(cubeMatrix,  // destination matrix
-                cubeMatrix,  // matrix to rotate
-                xRotationForTime, // amount to rotate in radians
-                [1, 0, 0]);       // axis to rotate around (X)
+    mat4.rotate(
+      cubeMatrix, // destination matrix
+      cubeMatrix, // matrix to rotate
+      zRotationForTime, // amount to rotate in radians
+      [0, 0, 1],
+    ); // axis to rotate around (Z)
+    mat4.rotate(
+      cubeMatrix, // destination matrix
+      cubeMatrix, // matrix to rotate
+      yRotationForTime, // amount to rotate in radians
+      [0, 1, 0],
+    ); // axis to rotate around (Y)
+    mat4.rotate(
+      cubeMatrix, // destination matrix
+      cubeMatrix, // matrix to rotate
+      xRotationForTime, // amount to rotate in radians
+      [1, 0, 0],
+    ); // axis to rotate around (X)
   }
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, cubeMatrix);
@@ -548,14 +573,14 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
     const offset = 0;
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexPosition,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexPosition);
+      programInfo.attribLocations.vertexPosition,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
 
   {
@@ -566,14 +591,14 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
     const offset = 0;
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.textureCoord,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.textureCoord);
+      programInfo.attribLocations.textureCoord,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
   }
 
   {
@@ -584,31 +609,34 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
     const offset = 0;
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.normal);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexNormal,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexNormal);
+      programInfo.attribLocations.vertexNormal,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
   }
 
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
   gl.useProgram(programInfo.program);
 
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.projectionMatrix,
-      false,
-      view.projectionMatrix);
+    programInfo.uniformLocations.projectionMatrix,
+    false,
+    view.projectionMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.modelViewMatrix,
-      false,
-      modelViewMatrix);
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.normalMatrix,
-      false,
-      normalMatrix);
+    programInfo.uniformLocations.normalMatrix,
+    false,
+    normalMatrix,
+  );
   gl.activeTexture(gl.TEXTURE0);
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
@@ -641,12 +669,13 @@ function displayMatrix(mat, rowLength, target) {
 
   if (mat && rowLength && rowLength <= mat.length) {
     let numRows = mat.length / rowLength;
-    outHTML = "<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
+    outHTML =
+      "<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
 
-    for (let y=0; y<numRows; y++) {
+    for (let y = 0; y < numRows; y++) {
       outHTML += "<mtr>\n";
-      for (let x=0; x<rowLength; x++) {
-        outHTML += `<mtd><mn>${mat[(x*rowLength) + y].toFixed(2)}</mn></mtd>\n`;
+      for (let x = 0; x < rowLength; x++) {
+        outHTML += `<mtd><mn>${mat[x * rowLength + y].toFixed(2)}</mn></mtd>\n`;
       }
       outHTML += "</mtr>\n";
     }

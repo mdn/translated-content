@@ -131,7 +131,7 @@ div#until-found-box {
 const untilFound = document.querySelector("#until-found-box");
 untilFound.addEventListener(
   "beforematch",
-  () => (untilFound.textContent = "正体がバレた!")
+  () => (untilFound.textContent = "正体がバレた!"),
 );
 ```
 

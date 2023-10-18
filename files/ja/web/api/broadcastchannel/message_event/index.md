@@ -54,28 +54,31 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ```css hidden
 body {
-     border: 1px solid black;
-     padding: .5rem;
-     height: 150px;
-     font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 150px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 
 textarea {
-    padding: .2rem;
+  padding: 0.2rem;
 }
 
-label, br {
-    margin: .5rem 0;
+label,
+br {
+  margin: 0.5rem 0;
 }
 
 button {
-    vertical-align: top;
-    height: 1.5rem;
+  vertical-align: top;
+  height: 1.5rem;
 }
 ```
 
@@ -98,15 +101,17 @@ broadcastMessageButton.addEventListener("click", () => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans",
-    sans-serif; margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
@@ -126,15 +131,17 @@ channel.addEventListener("message", (event) => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 

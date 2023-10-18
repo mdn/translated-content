@@ -43,7 +43,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // 配列から
-var arr = new Uint8ClampedArray([21,31]);
+var arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // 他の型付き配列から
@@ -56,7 +56,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```

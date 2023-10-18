@@ -56,7 +56,7 @@ p_list = doc.getElementsByTagName("para")
 </body>
 ```
 
-由于一般不建议将页面的结构（用 HTML 编写）和对 DOM 的操作（用 JavaScript编写）混在一起，所以 JavaScript 部分将在这里分组，并与 HTML 分开。
+由于一般不建议将页面的结构（用 HTML 编写）和对 DOM 的操作（用 JavaScript 编写）混在一起，所以 JavaScript 部分将在这里分组，并与 HTML 分开。
 
 例如，以下函数创建了一个新的 {{HTMLElement("Heading_Elements", "h1")}} 元素，向该元素添加文本，然后将其添加到文档的树中：
 

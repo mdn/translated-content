@@ -28,6 +28,6 @@ slug: Learn/JavaScript/Client-side_web_APIs
 - [Drawing graphics](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
   - : 브라우저에는 [SVG](/ko/docs/Web/SVG) (Scalable Vector Graphics) 언어부터 HTML {{htmlelement ( "canvas")}} 요소 ([The Canvas API](/ko/docs/Web/API/Canvas_API) 및 [WebGL](/ko/docs/Web/API/WebGL_API) 참조)를 그리는 데 필요한 API에 이르기까지 매우 강력한 그래픽 프로그래밍 도구가 포함되어 있습니다. 여기서는 Canvas API에 대한 소개와 더 많은 정보를 얻을 수있는 추가 자료를 제공합니다.
 - [Video and audio APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-  - : HTML5에는 문서 ({{htmlelement ( "video")}} 및 {{htmlelement ( "audio")}}에 미디어를 포함하기위한 요소가 포함되어 있으며 재생, 탐색 등을 제어하는 자체 API가 제공됩니다. 이문서에서는 사용자 커스텀 재생 컨트롤 만들기와 같은 일반적인 작업을 수행하는 방법을 보여줍니다.
+  - : HTML5에는 문서 {{htmlelement("video")}} 및 {{htmlelement("audio")}}에 미디어를 포함하기위한 요소가 포함되어 있으며 재생, 탐색 등을 제어하는 자체 API가 제공됩니다. 이문서에서는 사용자 커스텀 재생 컨트롤 만들기와 같은 일반적인 작업을 수행하는 방법을 보여줍니다.
 - [Client-side storage](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
   - : 최신 웹 브라우저에는 웹 사이트와 관련된 데이터를 저장하고 필요할 때 검색하여 장기간 데이터를 유지하고 오프라인으로 사이트를 저장하는 등 다양한 기술을 사용할 수 있습니다. 이 기사에서는 이러한 작업 방식에 대한 기본적인 내용을 설명합니다.

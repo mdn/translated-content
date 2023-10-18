@@ -25,8 +25,10 @@ slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" is the exit condition
+  if (x >= 10) {
+    // "x >= 10" is the exit condition
     return;
+  }
   // do stuff
   loop(x + 1); // the recursive call
 }
@@ -37,8 +39,7 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // do stuff
   loop(x + 1);
 }

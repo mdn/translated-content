@@ -56,7 +56,7 @@ slug: Web/HTTP/Headers
 - {{HTTPHeader("Expires")}}
   - : 响应被视为过时的日期/时间。
 - {{HTTPHeader("Pragma")}}
-  - : 特定于实现的标头可能会在请求-响应链（request-response chain）的任何地方产生各种影响。用于向后兼容 `Cache-Control` 标头尚不存在的 HTTP/1.0 缓存。
+  - : 特定于实现的标头可能会在请求—响应链（request-response chain）的任何地方产生各种影响。用于向后兼容 `Cache-Control` 标头尚不存在的 HTTP/1.0 缓存。
 - {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : 关于可能出现的问题的一般警告信息。
 
@@ -280,7 +280,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制允许用户代理能够为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-  - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI 。
+  - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI。
 - {{HTTPHeader("Expect-CT")}}
   - : 允许网站选择报告和/或执行证书透明度要求，这可以让你注意到该网站使用了欺诈性证书。当站点启用 Expect-CT 标头时，他们将请求 Chrome 检查该站点的任何证书是否出现在公共证书透明度日志中。
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
@@ -313,7 +313,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Sec-Fetch-Mode")}}
   - : 它是一个请求标头，向服务器指示请求的模式。它是一个结构化标头（Structured Header），其值是一个标记，可能的值有 `cors`、`navigate`、`no-cors`、`same-origin` 和 `websocket`。
 - {{HTTPHeader("Sec-Fetch-User")}}
-  - : 它是一个请求标头，指示导航请求是否由用户激活触发。它是一个结构化标头（Structured Header），其值为布尔值，因此可能的值为 `?0` 表示 false，`?1` 表示true。
+  - : 它是一个请求标头，指示导航请求是否由用户激活触发。它是一个结构化标头（Structured Header），其值为布尔值，因此可能的值为 `?0` 表示 false，`?1` 表示 true。
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : 它是一个请求标头，指示请求到服务器的目的地。它是一个结构化标头（Structured Header），其值为具有可能值的标记 `audio`、`audioworklet`、`document`、`embed`、`empty`、`font`、`image`、`manifest`、`object`、`paintworklet`、`report`、`script`、`serviceworker`、`sharedworker`、`style`、`track`、`video`、`worker` 和 `xslt`。
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
@@ -379,7 +379,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) 标头字段标识要包含在签名中的响应标头字段的有序列表。
 - {{HTTPHeader("Server-Timing")}}
-  - : 传达给定请求-响应周期的一个或多个指标和描述。
+  - : 传达给定请求—响应周期的一个或多个指标和描述。
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : 用于通过[在 Service Worker 脚本的响应中](https://w3c.github.io/ServiceWorker/#service-worker-script-response)包含此标头来删除[路径限制](https://w3c.github.io/ServiceWorker/#path-restriction)。
 - {{HTTPHeader("SourceMap")}}

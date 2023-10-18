@@ -45,7 +45,7 @@ target.removeEventListener(type, listener[, useCapture]);
 
 ## Примечания
 
-Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.
+Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} в процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.
 
 Вызов `removeEventListener()` с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в `EventTarget`, не имеет никакого эффекта.
 

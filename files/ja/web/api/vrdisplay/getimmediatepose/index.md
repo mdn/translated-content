@@ -12,7 +12,7 @@ slug: Web/API/VRDisplay/getImmediatePose
 ## 構文
 
 ```js
-getImmediatePose()
+getImmediatePose();
 ```
 
 ### 引数

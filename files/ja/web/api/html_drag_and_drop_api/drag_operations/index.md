@@ -33,7 +33,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 const draggableElement = document.querySelector('p[draggable="true"]');
 
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -54,7 +54,7 @@ draggableElement.addEventListener("dragstart", (event) =>
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -307,7 +307,7 @@ function doDrop(event) {
     "text/plain",
   ];
   const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type)
+    supportedTypes.includes(type),
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);

@@ -14,18 +14,18 @@ La propiedad **lineNumber** contiene el número de linea en el archivo que arroj
 ### Utilizando `lineNumber`
 
 ```js
-var e = new Error('No fue posible analizar el dato introducido');
+var e = new Error("No fue posible analizar el dato introducido");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### Ejemplo alternativo utilizando el evento '`error'`
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineno); // 5
 });
-var e = new Error('No fue posible analizar el dato introducido');
+var e = new Error("No fue posible analizar el dato introducido");
 throw e;
 ```
 

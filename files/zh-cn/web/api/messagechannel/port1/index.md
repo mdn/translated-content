@@ -21,7 +21,7 @@ channel.port1;
 
 ## 示例
 
-在以下代码块中，您可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新通道。当 {{HTMLElement("iframe")}} 加载完毕，我们使用 {{domxref("MessagePort.postMessage")}} 方法把一条消息和 {{domxref("MessageChannel.port2")}} 传递给 {{HTMLElement("iframe")}}。handleMessage 处理程序将会从 \<iframe> 中（使用 {{domxref("MessagePort.onmessage")}} 监听事件）接收到信息，将数据其放入一个段落。handleMessage 方法关联到 port1 用于监听收到的消息。
+在以下代码块中，你可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新通道。当 {{HTMLElement("iframe")}} 加载完毕，我们使用 {{domxref("MessagePort.postMessage")}} 方法把一条消息和 {{domxref("MessageChannel.port2")}} 传递给 {{HTMLElement("iframe")}}。handleMessage 处理程序将会从 \<iframe> 中（使用 {{domxref("MessagePort.onmessage")}} 监听事件）接收到信息，将数据其放入一个段落。handleMessage 方法关联到 port1 用于监听收到的消息。
 
 ```js
 var channel = new MessageChannel();

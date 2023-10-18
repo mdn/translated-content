@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 72e6429af2f0ad138223623fb2c86087a008d4dd
 ---
 
-{{Glossary("JavaScript")}} において、**プリミティブ** (primitive、プリミティブ値、プリミティブデータ型) は{{Glossary("object","オブジェクト")}}でなく、{{glossary("method","メソッド")}}を持たないデータのことです。 6 種類のプリミティブデータ型があります。
+{{Glossary("JavaScript")}} において、**プリミティブ** (primitive、プリミティブ値、プリミティブデータ型) は{{Glossary("object","オブジェクト")}}でなく、{{glossary("method","メソッド")}}を持たないデータのことです。 7 種類のプリミティブデータ型があります。
 
 - {{Glossary("string","文字列")}}
 - {{Glossary("number","数値")}}
@@ -34,4 +34,4 @@ l10n:
   - {{Glossary("boolean")}}
   - {{Glossary("null")}}
   - {{Glossary("undefined")}}
-  - [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+  - [symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)

@@ -10,7 +10,7 @@ slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ## 構文
 
 ```js
-new DOMRectReadOnly(x, y, width, height)
+new DOMRectReadOnly(x, y, width, height);
 ```
 
 ### 引数
@@ -18,6 +18,7 @@ new DOMRectReadOnly(x, y, width, height)
 - _x_
   - : `DOMRectReadOnly` の原点の `x` 座標です。
 - _y_
+
   - : `DOMRectReadOnly` の原点の `y` 座標です。
 
 - _width_
@@ -30,7 +31,7 @@ new DOMRectReadOnly(x, y, width, height)
 新しい `DOMPoint` を作成するには、次のようなコード行を実行します。
 
 ```js
-const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100)
+const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100);
 // 'myDOMRect' をコンソールで実行すると、次の行が返ります。
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```

@@ -131,15 +131,15 @@ Relative length units (相対的な長さの単位) は、何かとの比較に�
     </tr>
     <tr>
       <td><code>svw, svh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
     </tr>
     <tr>
       <td><code>lvw, lvh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
     </tr>
     <tr>
       <td><code>dvw, dvh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
     </tr>
   </tbody>
 </table>
@@ -302,7 +302,7 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Values and unit](/ja/docs/Learn/CSS/Building_blocks/Values_tasks) を見てください。
 

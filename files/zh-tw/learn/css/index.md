@@ -11,7 +11,7 @@ slug: Learn/CSS
 
 我們整理了一門課程，包含了你實現目標需要的所有基礎知識。
 
-[開始](/docs/Learn/Front-end_web_developer)
+[開始](/zh-TW/docs/Learn/Front-end_web_developer)
 
 ## 先備知識
 
@@ -34,7 +34,7 @@ slug: Learn/CSS
 - [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps)
   - : CSS（階層式樣式表）用來設定網頁的樣式及佈局，例如：改變文字的字體、顏色、大小及間距以及拆分為多欄，或是增加動畫或裝飾性的效果。這個單元提供一個溫和的路徑，讓您逐漸熟悉 CSS 的基礎概念，包含它的運作方式，語法是什麼樣子，以及如何開始在 HTML 裡添加樣式。
 - [CSS 的組成](/zh-TW/docs/Learn/CSS/Building_blocks)
-  - : 這個單元接續在 [CSS 入門](/zh_TW/docs/Learn/CSS/First_steps)之後，現在已經熟悉了這門語言的語法，並有了一些基本的使用經驗，是時候再深入一些。這個單元關注於疊加（cascade）和繼承（inheritance）規則、所有可用的選擇器類型、單位、尺寸、背景與邊框的樣式、除錯，以及其它更多的。這裡的目的是在進入更進階的主題，像是[文字樣式](/zh_TW/docs/Learn/CSS/Styling_text)及 [CSS 佈局](/zh_TW/docs/Learn/CSS/CSS_layout)之前，給您一個足以寫出合格 CSS 的工具包並幫助您了解所有的基礎理論。
+  - : 這個單元接續在 [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps)之後，現在已經熟悉了這門語言的語法，並有了一些基本的使用經驗，是時候再深入一些。這個單元關注於疊加（cascade）和繼承（inheritance）規則、所有可用的選擇器類型、單位、尺寸、背景與邊框的樣式、除錯，以及其它更多的。這裡的目的是在進入更進階的主題，像是[文字樣式](/zh-TW/docs/Learn/CSS/Styling_text)及 [CSS 佈局](/zh-TW/docs/Learn/CSS/CSS_layout)之前，給您一個足以寫出合格 CSS 的工具包並幫助您了解所有的基礎理論。
 - [裝飾文字](/zh-TW/docs/Learn/CSS/Styling_text)
   - : 在含蓋了 CSS 語言基本的部分之後，下一個帶給您的 CSS 主題會專注於文字樣式的裝飾上，您將最常用 CSS 作的事情之一。在這裡，我們文字樣式的基礎，包括設定字體、粗細、斜體、行距與字距、陰影與其它的文字效果。整個單元圍繞於在您的頁面上套用選擇的字體，以及對清單和連結進行樣式調整。
 - [CSS 的布局](/zh-TW/docs/Learn/CSS/CSS_layout)

@@ -14,7 +14,7 @@ JavaScript에서 **함수의 `this` 키워드**는 다른 언어와 조금 다�
 ## 구문
 
 ```js
-    this
+this;
 ```
 
 ### 값
@@ -33,8 +33,8 @@ a = 37;
 console.log(window.a); // 37
 
 this.b = "MDN";
-console.log(window.b)  // "MDN"
-console.log(b)         // "MDN"
+console.log(window.b); // "MDN"
+console.log(b); // "MDN"
 ```
 
 > **노트:** global {{jsxref("globalThis")}} 프로퍼티를 사용하여 코드가 실행중인 현재 컨텍스트와 관계없이 항상 전역 객체를 얻을 수 있습니다.
@@ -62,7 +62,7 @@ f1() === global; // true
 반면에 엄격 모드에서 `this` 값은 실행 문맥에 진입하며 설정되는 값을 유지하므로 다음 예시에서 보여지는 것 처럼 `this`는 `undefined`로 남아있습니다.
 
 ```js
-function f2(){
+function f2() {
   "use strict"; // 엄격 모드 참고
   return this;
 }
@@ -78,17 +78,17 @@ f2() === undefined; // true
 
 ```js
 // call 또는 apply의 첫 번째 인자로 객체가 전달될 수 있으며 this가 그 객체에 묶임
-var obj = {a: 'Custom'};
+var obj = { a: "Custom" };
 
 // 변수를 선언하고 변수에 프로퍼티로 전역 window를 할당
-var a = 'Global';
+var a = "Global";
 
 function whatsThis() {
-  return this.a;  // 함수 호출 방식에 따라 값이 달라짐
+  return this.a; // 함수 호출 방식에 따라 값이 달라짐
 }
 
-whatsThis();          // this는 'Global'. 함수 내에서 설정되지 않았으므로 global/window 객체로 초기값을 설정한다.
-whatsThis.call(obj);  // this는 'Custom'. 함수 내에서 obj로 설정한다.
+whatsThis(); // this는 'Global'. 함수 내에서 설정되지 않았으므로 global/window 객체로 초기값을 설정한다.
+whatsThis.call(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 whatsThis.apply(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 ```
 
@@ -99,7 +99,7 @@ function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+var o = { a: 1, b: 3 };
 
 // 첫 번째 인자는 'this'로 사용할 객체이고,
 // 이어지는 인자들은 함수 호출에서 인수로 전달된다.
@@ -117,8 +117,8 @@ function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
-bar.call(7);     // [object Number]
-bar.call('foo'); // [object String]
+bar.call(7); // [object Number]
+bar.call("foo"); // [object String]
 bar.call(undefined); // [object global]
 ```
 
@@ -131,13 +131,13 @@ function f() {
   return this.a;
 }
 
-var g = f.bind({a: 'azerty'});
+var g = f.bind({ a: "azerty" });
 console.log(g()); // azerty
 
-var h = g.bind({a: 'yoo'}); // bind는 한 번만 동작함!
+var h = g.bind({ a: "yoo" }); // bind는 한 번만 동작함!
 console.log(h()); // azerty
 
-var o = {a: 37, f: f, g: g, h: h};
+var o = { a: 37, f: f, g: g, h: h };
 console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
 ```
 
@@ -147,7 +147,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
 
 ```js
 var globalObject = this;
-var foo = (() => this);
+var foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
@@ -155,7 +155,7 @@ console.log(foo() === globalObject); // true
 
 ```js
 // 객체로서 메서드 호출
-var obj = {func: foo};
+var obj = { func: foo };
 console.log(obj.func() === globalObject); // true
 
 // call을 사용한 this 설정 시도
@@ -174,10 +174,10 @@ console.log(foo() === globalObject); // true
 // this는 감싸진 함수의 this로 영구적으로 묶입니다.
 // bar의 값은 호출에서 설정될 수 있으며, 이는 반환된 함수의 값을 설정하는 것입니다.
 var obj = {
-  bar: function() {
-    var x = (() => this);
+  bar: function () {
+    var x = () => this;
     return x;
-  }
+  },
 };
 
 // obj의 메소드로써 bar를 호출하고, this를 obj로 설정
@@ -206,9 +206,9 @@ console.log(fn2()() == window); // true
 ```js
 var o = {
   prop: 37,
-  f: function() {
+  f: function () {
     return this.prop;
-  }
+  },
 };
 
 console.log(o.f()); // 37
@@ -217,7 +217,7 @@ console.log(o.f()); // 37
 이 행동이 함수가 정의된 방법이나 위치에 전혀 영향을 받지 않는 것에 유의해라. 이전 예제에서, `o` 의 정의 중 `f` 함수를 구성원으로 내부에 정의 하였다. 그러나, 간단하게 함수를 먼저 정의하고 나중에 `o.f`를 추가할 수 있다. 이렇게 하면 동일한 동작 결과 이다 :
 
 ```js
-var o = {prop: 37};
+var o = { prop: 37 };
 
 function independent() {
   return this.prop;
@@ -233,7 +233,7 @@ console.log(o.f()); // logs 37
 마찬가지로, 이 `this` 바인딩은 가장 즉각으로 멤버 대상에 영향을 받는다. 다음 예제에서, 함수를 실행할 때, 객체 `o.b`의 메소드 `g` 로서 호출한다. 이것이 실행되는 동안, 함수 내부의 `this`는 `o.b`를 나타낸다. 객체는 그 자신이 `o`의 멤버 중 하나라는 사실은 중요하지 않다. 가장 즉각적인 참조가 중요한 것이다.
 
 ```js
-o.b = {g: independent, prop: 42};
+o.b = { g: independent, prop: 42 };
 console.log(o.b.g()); // logs 42
 ```
 
@@ -243,7 +243,9 @@ console.log(o.b.g()); // logs 42
 
 ```js
 var o = {
-  f:function() { return this.a + this.b; }
+  f: function () {
+    return this.a + this.b;
+  },
 };
 var p = Object.create(o);
 p.a = 1;
@@ -269,11 +271,14 @@ var o = {
   c: 3,
   get average() {
     return (this.a + this.b + this.c) / 3;
-  }
+  },
 };
 
-Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+Object.defineProperty(o, "sum", {
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.average, o.sum); // 2, 6
 ```
@@ -311,10 +316,9 @@ function C() {
 var o = new C();
 console.log(o.a); // 37
 
-
 function C2() {
   this.a = 37;
-  return {a: 38};
+  return { a: 38 };
 }
 
 o = new C2();
@@ -332,16 +336,16 @@ function bluify(e) {
   console.log(this === e.currentTarget);
   // currentTarget과 target이 같은 객체면 true
   console.log(this === e.target);
-  this.style.backgroundColor = '#A5D9F3';
+  this.style.backgroundColor = "#A5D9F3";
 }
 
 // 문서 내 모든 요소의 목록
-var elements = document.getElementsByTagName('*');
+var elements = document.getElementsByTagName("*");
 
 // 어떤 요소를 클릭하면 파랗게 변하도록
 // bluify를 클릭 처리기로 등록
 for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', bluify, false);
+  elements[i].addEventListener("click", bluify, false);
 }
 ```
 
@@ -350,9 +354,7 @@ for (var i = 0; i < elements.length; i++) {
 코드를 인라인 이벤트 처리기로 사용하면 `this`는 처리기를 배치한 DOM 요소로 설정됩니다.
 
 ```js
-<button onclick="alert(this.tagName.toLowerCase());">
-  this 표시
-</button>
+<button onclick="alert(this.tagName.toLowerCase());">this 표시</button>
 ```
 
 위의 경고창은 `button`을 보여줍니다. 다만 바깥쪽 코드만 `this`를 이런 방식으로 설정합니다.

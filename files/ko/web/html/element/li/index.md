@@ -9,8 +9,6 @@ slug: Web/HTML/Element/li
 
 {{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -63,13 +61,13 @@ slug: Web/HTML/Element/li
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : {{HTMLElement("ol")}} 요소 내부에서 항목의 현재 서수 값을 나타내는 정수. 리스트가 로마 숫자나 문자로 표시되더라도 이 특성에는 숫자만 넣을수 있습니다. `value`를 지정한 항목을 뒤따르는 다른 항목은 이 값에서부터 번호를 매깁니다. `value` 속성은 비정렬 목록({{HTMLElement("ul")}})과 메뉴({{HTMLElement("menu")}})에서는 아무 의미가 없습니다.
 
     > **참고:** HTML4에서는 `value`의 사용을 중단했지만 HTML5에서 다시 도입했습니다.
 
-- {{htmlattrdef("type")}} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : 넘버링 타입을 나타내는 문자.
 

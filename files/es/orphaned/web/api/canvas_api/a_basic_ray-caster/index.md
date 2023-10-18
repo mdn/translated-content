@@ -1,6 +1,7 @@
 ---
 title: A basic ray-caster
 slug: orphaned/Web/API/Canvas_API/A_basic_ray-caster
+original_slug: Web/API/Canvas_API/A_basic_ray-caster
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

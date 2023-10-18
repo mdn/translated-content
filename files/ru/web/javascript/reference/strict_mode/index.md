@@ -37,10 +37,14 @@ var v = "Привет! Я скрипт в строгом режиме!";
 function strict() {
   // Строгий режим на уровне функции
   "use strict";
-  function nested() { return "И я тоже!"; }
+  function nested() {
+    return "И я тоже!";
+  }
   return "Привет! Я функция в строгом режиме! " + nested();
 }
-function notStrict() { return "Я не strict."; }
+function notStrict() {
+  return "Я не strict.";
+}
 ```
 
 ### Строгий режим для модулей
@@ -66,9 +70,9 @@ export default strict;
 
 ```js
 "use strict";
-                      // Предполагая, что не существует глобальной переменной
+// Предполагая, что не существует глобальной переменной
 mistypeVaraible = 17; // mistypedVaraible, эта строка выбросит ReferenceError
-                      // из-за опечатки в имени переменной
+// из-за опечатки в имени переменной
 ```
 
 Во-вторых, строгий режим заставляет присваивания, которые всё равно завершились бы неудачей, выбрасывать исключения. Например, `NaN` — глобальная переменная, защищённая от записи. В обычном режиме присваивание `NaN` значения ничего не делает; разработчик не получает никакого сообщения об ошибке. В строгом режиме присваивание `NaN` значения выбрасывает исключение. Любое присваивание, которое в обычном режиме завершается неудачей (присваивание значения свойству, защищённому от записи; присваивание значения свойству, доступному только на чтение; присваивание нового свойства [нерасширяемому](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) объекту), в строгом режиме выбросит исключение:
@@ -86,7 +90,11 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // выдаст TypeError
 
 // Присваивание значения свойству, доступному только для чтения
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // выдаст TypeError
 
 // Задание нового свойства нерасширяемому объекту
@@ -114,7 +122,8 @@ var o = { p: 1, p: 2 }; // !!! синтаксическая ошибка
 В-пятых, строгий режим требует, чтобы имена аргументов в объявлении функций встречались только один раз. В обычном коде последний повторённый аргумент скрывает предыдущие аргументы с таким же именем. Эти предыдущие аргументы всё ещё доступны через `arguments[i]`, так что они не полностью потеряны. Тем не менее, такое сокрытие несёт в себе мало смысла и, скорее всего, не имеет под собой цели (например, может скрывать опечатку), поэтому в строгом режиме дублирование имён аргументов является синтаксической ошибкой:
 
 ```js
-function sum(a, a, c) { // !!! синтаксическая ошибка
+function sum(a, a, c) {
+  // !!! синтаксическая ошибка
   "use strict";
   return a + a + c; // ошибка, если код был запущен
 }
@@ -130,9 +139,10 @@ var a = 0o10; // ES2015: Восмеричное
 
 ```js
 "use strict";
-var sum = 015 + // !!! синтаксическая ошибка
-          197 +
-          142;
+var sum =
+  015 + // !!! синтаксическая ошибка
+  197 +
+  142;
 
 var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
@@ -160,7 +170,8 @@ false.true = '';         // TypeError
 ```js
 "use strict";
 var x = 17;
-with (obj) { // !!! синтаксическая ошибка
+with (obj) {
+  // !!! синтаксическая ошибка
   // Если код не в строгом режиме, то будет ли x ссылаться на переменную var x, или
   // на свойство obj.x? Предугадать без запуска кода невозможно,
   // следовательно такой код не может быть эффективно оптимизирован.
@@ -189,11 +200,11 @@ function strict1(str) {
 function strict2(f, str) {
   "use strict";
   return f(str); // не eval(...): str выполнится в строгом режиме только в том
-                 // случае, если в нем содержится вызов строгого режима
+  // случае, если в нем содержится вызов строгого режима
 }
 function nonstrict(str) {
   return eval(str); // str выполнится в строгом режиме только в том
-                    // случае, если в нем содержится вызов строгого режима
+  // случае, если в нем содержится вызов строгого режима
 }
 strict1("'Строгий режим!'");
 strict1("'use strict'; 'Строгий режим!'");
@@ -208,12 +219,12 @@ nonstrict("'use strict'; 'Строгий режим!'");
 В-третьих, строгий режим запрещает удаление простых имён. `delete name` в строгом режиме является синтаксической ошибкой:
 
 ```js
-'use strict';
+"use strict";
 
 var x;
 delete x; // !!! синтаксическая ошибка
 
-eval('var y; delete y;'); // !!! синтаксическая ошибка
+eval("var y; delete y;"); // !!! синтаксическая ошибка
 ```
 
 ### Упрощение `eval` и `arguments`
@@ -227,12 +238,13 @@ eval('var y; delete y;'); // !!! синтаксическая ошибка
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
@@ -253,7 +265,9 @@ console.assert(pair[1] === 17);
 
 ```js
 "use strict";
-var f = function() { return arguments.callee; };
+var f = function () {
+  return arguments.callee;
+};
 f(); // выдаст TypeError
 ```
 
@@ -265,7 +279,9 @@ f(); // выдаст TypeError
 
 ```js
 "use strict";
-function fun() { return this; }
+function fun() {
+  return this;
+}
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
@@ -279,7 +295,7 @@ console.assert(fun.bind(true)() === true);
 function restricted() {
   "use strict";
 
-  restricted.caller;    // выдаст TypeError
+  restricted.caller; // выдаст TypeError
   restricted.arguments; // выдаст TypeError
 }
 function privilegedInvoker() {
@@ -308,18 +324,21 @@ fun(1, 2); // не выводит v (или a, или b)
 Во-первых, в строгом режиме зарезервирован для использования следующий список ключевых слов: `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static` и `yield`. В строгом режиме, следовательно, вы не можете задействовать эти слова для именования или обращения к переменным или аргументам.
 
 ```js
-function package(protected) { // !!!
+function package(protected) {
+  // !!!
   "use strict";
   var implements; // !!!
 
-  interface: // !!!
-  while (true) {
+  // !!!
+  interface: while (true) {
     break interface; // !!!
   }
 
-  function private() { } // !!!
+  function private() {} // !!!
 }
-function fun(static) { 'use strict'; } // !!!
+function fun(static) {
+  "use strict";
+} // !!!
 ```
 
 Два замечания, специфичных для Mozilla: Первое, если ваш код создан на JavaScript 1.7 или выше (например, chrome code, или тег `<script type="">` заполнен правильно), и применён строгий режим, то `let` и `yield` имеют ту же функциональность, которая у них была изначально, когда они только появились. Однако в веб, в строгом коде загруженном через `<script src="">` или `<script>...</script>`, нельзя будет использовать `let`/`yield` в качестве идентификаторов. Второе, в то время как ES5 зарезервировал слова `class`, `enum`, `export`, `extends`, `import` и `super` для любого режима, в Firefox 5 Mozilla они были зарезервированы намного раньше и лишь для строгого режима.
@@ -329,15 +348,16 @@ function fun(static) { 'use strict'; } // !!!
 ```js
 "use strict";
 if (true) {
-  function f() { } // !!! синтаксическая ошибка
+  function f() {} // !!! синтаксическая ошибка
   f();
 }
 for (var i = 0; i < 5; i++) {
-  function f2() { } // !!! синтаксическая ошибка
+  function f2() {} // !!! синтаксическая ошибка
   f2();
 }
-function baz() { // верно
-  function eit() { } // тоже верно
+function baz() {
+  // верно
+  function eit() {} // тоже верно
 }
 ```
 

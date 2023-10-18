@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('canplaythrough', (event) => { });
+addEventListener("canplaythrough", (event) => {});
 
-oncanplaythrough = (event) => { };
+oncanplaythrough = (event) => {};
 ```
 
 ## イベント型
@@ -37,7 +37,8 @@ const video = document.querySelector('video');
 video.addEventListener('canplaythrough', (event) =&gt; {
   console.log('バッファリングを止めることなく、' +
       '動画全体を再生できると思います。');
-});</pre>
+});
+```
 
 `oncanplaythrough` イベントハンドラープロパティを使用する場合:
 

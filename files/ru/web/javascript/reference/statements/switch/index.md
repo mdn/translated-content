@@ -2,6 +2,7 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Сводка
@@ -85,20 +86,20 @@ console.log("Is there anything else you'd like?");
 ```js
 var foo = 0;
 switch (foo) {
-    case -1:
-        console.log('negative 1');
-        break;
-    case 0: // foo равно 0, случай соответствует выражению и эти инструкции будут выполнены
-        console.log(0)
-        // ПРИМЕЧАНИЕ: здесь могла находиться забытая инструкция break
-    case 1: // В случае 'case 0:' не было break, инструкции данного случая также будут выполнены
-        console.log(1);
-        break; // В конце расположен break, поэтому выполнение не перейдёт к случаю 'case 2:'
-    case 2:
-        console.log(2);
-        break;
-    default:
-        console.log('default');
+  case -1:
+    console.log("negative 1");
+    break;
+  case 0: // foo равно 0, случай соответствует выражению и эти инструкции будут выполнены
+    console.log(0);
+  // ПРИМЕЧАНИЕ: здесь могла находиться забытая инструкция break
+  case 1: // В случае 'case 0:' не было break, инструкции данного случая также будут выполнены
+    console.log(1);
+    break; // В конце расположен break, поэтому выполнение не перейдёт к случаю 'case 2:'
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
 }
 ```
 
@@ -113,17 +114,17 @@ switch (foo) {
 Это пример `case` с одной операцией, где четыре разных значения отрабатывают одинаково.
 
 ```js
-var Animal = 'Giraffe';
+var Animal = "Giraffe";
 switch (Animal) {
-  case 'Cow':
-  case 'Giraffe':
-  case 'Dog':
-  case 'Pig':
-    console.log('This animal is not extinct.');
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal is not extinct.");
     break;
-  case 'Dinosaur':
+  case "Dinosaur":
   default:
-    console.log('This animal is extinct.');
+    console.log("This animal is extinct.");
 }
 ```
 
@@ -137,41 +138,41 @@ switch (Animal) {
 
 ```js
 var foo = 1;
-var output = 'Output: ';
+var output = "Output: ";
 switch (foo) {
   case 0:
-    output += 'So ';
+    output += "So ";
   case 1:
-    output += 'What ';
-    output += 'Is ';
+    output += "What ";
+    output += "Is ";
   case 2:
-    output += 'Your ';
+    output += "Your ";
   case 3:
-    output += 'Name';
+    output += "Name";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Please pick a number from 0 to 5!');
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
 Вывод этого примера:
 
-| Значение                                                              | Лог                               |
-| --------------------------------------------------------------------- | --------------------------------- |
+| Значение                                              | Лог                               |
+| ----------------------------------------------------- | --------------------------------- |
 | `foo` is `NaN` or not `1`, `2`, `3`, `4`, `5`, or `0` | Please pick a number from 0 to 5! |
-| `0`                                                                 | Output: So What Is Your Name?     |
-| `1`                                                                 | Output: What Is Your Name?        |
-| `2`                                                                 | Output: Your Name?                |
-| `3`                                                                 | Output: Name?                     |
-| `4`                                                                 | Output: ?                         |
-| `5`                                                                 | Output: !                         |
+| `0`                                                   | Output: So What Is Your Name?     |
+| `1`                                                   | Output: What Is Your Name?        |
+| `2`                                                   | Output: Your Name?                |
+| `3`                                                   | Output: Name?                     |
+| `4`                                                   | Output: ?                         |
+| `5`                                                   | Output: !                         |
 
 ## Спецификации
 

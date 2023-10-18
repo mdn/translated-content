@@ -31,7 +31,7 @@ console.log('PI: ' Math.PI);
 You can correct the `log` call by adding the "`+`" operator:
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 

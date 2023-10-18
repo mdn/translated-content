@@ -30,10 +30,10 @@ El elemento asociado con la llave específica en el objeto WeakMap. Si la llave 
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Devuelve "foo".
-wm.get('baz');  // Devuelve undefined.
+wm.get("baz"); // Devuelve undefined.
 ```
 
 ## Especificaciones

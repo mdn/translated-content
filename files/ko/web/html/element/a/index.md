@@ -5,7 +5,7 @@ slug: Web/HTML/Element/a
 
 {{HTMLSidebar}}
 
-**HTML `<a>` 요소**(앵커 요소)는 {{htmlattrxref("href", "a")}} 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
+**HTML `<a>` 요소**(앵커 요소)는 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -13,7 +13,7 @@ slug: Web/HTML/Element/a
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("download")}}
+- `download`
 
   - : 링크로 이동하는 대신 사용자에게 URL을 저장할지 물어봅니다. 값을 지정할 수도 있고, 지정하지 않을 수도 있습니다.
 
@@ -29,7 +29,7 @@ slug: Web/HTML/Element/a
     >
     > - `Content-Disposition`의 `filename`이 `download`와 다를 땐 헤더가 우선권을 가집니다. (`Content-Disposition: inline`일 때, Firefox는 헤더를 우선하고 Chrome은 `download`를 우선합니다.)
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : 하이퍼링크가 가리키는 URL. 링크는 HTTP 기반 URL일 필요는 없고, 브라우저가 지원하는 모든 URL 스킴을 사용할 수 있습니다.
 
@@ -39,15 +39,15 @@ slug: Web/HTML/Element/a
     - `mailto:` URL을 사용하는 이메일 주소
     - 웹 브라우저는 다른 URL 스킴을 지원하지 않지만, 웹사이트는 {{domxref("Navigator.registerProtocolHandler()")}}를 통해 지원할 수 있습니다.
 
-- {{htmlattrdef("hreflang")}}
+- `hreflang`
   - : 링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없습니다. 가능한 값은 [전역 `lang` 특성](/ko/docs/Web/HTML/Global_attributes/lang)과 동일합니다.
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : 하나의 스페이스로 구분하는 URL 목록. 링크를 클릭해 따라갈 경우, 브라우저가 URL 각각에 {{HTTPMethod("POST")}} 요청을 전송합니다. 대개 추적 용도로 사용합니다.
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
   - : URL을 가져올 때 사용할 리퍼러. {{httpheader("Referrer-Policy")}} 문서에서 가능한 값과 효과를 확인하세요.
-- {{htmlattrdef("rel")}}
+- `rel`
   - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Link_types) 목록.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : 링크한 URL을 표시할 위치. 가능한 값은 브라우징 맥락으로, 즉 탭, 창, `<iframe>`의 이름이나 특정 키워드입니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
 
@@ -60,7 +60,7 @@ slug: Web/HTML/Element/a
 
     > **참고:** 최근의 브라우저(Firefox 79+ 등)에서는 target="\_blank"를 지정하면 `rel="noopener"`를 적용한 것과 같은 동작을 합니다.
 
-- {{htmlattrdef("type")}}
+- `type`
   - : 링크 URL의 {{Glossary("MIME type")}}에 대한 힌트. 특별한 내장 기능은 없습니다.
 
 ## 속성
@@ -232,7 +232,7 @@ a {
 
 ### `download` 특성으로 `<canvas>`를 PNG로 저장하기
 
-{{htmlattrxref("download", "a")}} 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
+[`download`](/ko/docs/Web/HTML/Element/a#download) 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
 
 #### 저장 링크를 가진 그림판 예제
 
@@ -357,7 +357,7 @@ document
 <a href="2017-annual-report.ppt">2017 연간 보고서 (PowerPoint)</a>
 ```
 
-아이콘을 사용해 링크의 행동을 강조할 땐 {{HTMLAttrxRef("alt", "img", "대체 텍스트", 1)}}를 꼭 지정하세요.
+아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 지정하세요.
 
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">

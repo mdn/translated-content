@@ -155,7 +155,7 @@ extern {
 
 你可能会疑惑这个函数是什么，你的疑惑可能是正确的：这是 [the `alert` function provided by JavaScript](/zh-CN/docs/Web/API/Window/alert)！我们将在下一节中调用这个函数。
 
-当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为您设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
+当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为你设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
 
 #### 编写能够在 JavaScript 中调用的 Rust 函数
 
@@ -267,7 +267,7 @@ cd site
 }
 ```
 
-请注意，您需要在依赖项部分的 `@` 之后填写自己的用户名。
+请注意，你需要在依赖项部分的 `@` 之后填写自己的用户名。
 
 接下来，我们需要配置 Webpack。创建 `webpack.config.js` 并输入：
 
@@ -307,7 +307,7 @@ js.then((js) => {
 });
 ```
 
-请注意，您需要再次填写您的 npm 用户名。
+请注意，你需要再次填写你的 npm 用户名。
 
 这将从`node_modules`文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用`greet`函数，并传入字符串“WebAssembly”参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。
 

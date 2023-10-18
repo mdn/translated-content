@@ -60,7 +60,7 @@ _親インターフェイスである {{domxref("BaseAudioContext")}} からの�
 // オンラインとオフラインのオーディオコンテキストを定義
 
 const audioCtx = new AudioContext();
-const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -70,9 +70,9 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
@@ -83,22 +83,25 @@ function getData() {
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then((renderedBuffer) => {
-        console.log('Rendering completed successfully');
-        const song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then((renderedBuffer) => {
+          console.log("Rendering completed successfully");
+          const song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = () => {
-          song.start();
-        }
-      }).catch((err) => {
+          play.onclick = () => {
+            song.start();
+          };
+        })
+        .catch((err) => {
           console.error(`Rendering failed: ${err}`);
           // 注意: OfflineAudioContext の startRendering が二回以上呼び出されるとプロミスは拒否されます。
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

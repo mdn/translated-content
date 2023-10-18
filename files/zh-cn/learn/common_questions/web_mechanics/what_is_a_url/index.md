@@ -3,6 +3,8 @@ title: 什么是 URL？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 本文讨论了统一资源定位符 (URL)，并解释了他们是什么，以及如何被构建的。
 
 <table class="learn-box standard-table">
@@ -36,7 +38,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 
 ## 自主学习
 
-_还没有可用的资料。[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
+_还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## 深入探索
 
@@ -50,7 +52,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/
 https://developer.mozilla.org/zh-CN/search?q=URL
 ```
 
-您可以将上面的这些网址输进您的浏览器地址栏来告诉浏览器加载相关联的页面（或资源）。
+你可以将上面的这些网址输进你的浏览器地址栏来告诉浏览器加载相关联的页面（或资源）。
 
 一个 URL 由不同的部分组成，其中一些是必须的，而另一些是可选的。让我们以下面这个 URL 为例看看其中最重要的部分：
 
@@ -108,7 +110,7 @@ https://developer.mozilla.org/zh-CN/search?q=URL
 
 我们上面看到的是一个绝对的 URL，但也有一个叫做相对 URL 的东西。我们来看看这个区别意味着什么呢？
 
-URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏览器的地址栏中，网址没有任何上下文，因此您必须提供一个完整的（或绝对的）URL，就像我们上面看到的一样。您不需要包括协议（浏览器默认使用 HTTP）或端口（仅当目标 Web 服务器使用某些异常端口时才需要），但 URL 的所有其他部分都是必需的。
+URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏览器的地址栏中，网址没有任何上下文，因此你必须提供一个完整的（或绝对的）URL，就像我们上面看到的一样。你不需要包括协议（浏览器默认使用 HTTP）或端口（仅当目标 Web 服务器使用某些异常端口时才需要），但 URL 的所有其他部分都是必需的。
 
 当文档中使用 URL 时，例如 HTML 页面中的内容有所不同。因为浏览器已经有文档自己的 URL，它可以使用这些信息来填写该文档中可用的任何 URL 的缺失部分。我们可以通过仅查看 URL 的路径部分来区分绝对 URL 和相对 URL。**如果 URL 的路径部分以“/”字符开头，则浏览器将从服务器的顶部根目录获取该资源，而不引用当前文档给出的上下文**。
 
@@ -173,7 +175,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 尽管 URL 具有非常的技术性，但 URL 表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是 Web 的核心，因此建立所谓的 _[semantic URLs](http://en.wikipedia.org/wiki/Semantic_URL)_ 被认为是最佳实践。语义 URL 使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。
 
-语言语义当然与电脑无关。您可能经常看到看起来像随机字符混搭的网址。但创建人类可读的 URL 有很多优点：
+语言语义当然与电脑无关。你可能经常看到看起来像随机字符混搭的网址。但创建人类可读的 URL 有很多优点：
 
 - 操作它们更容易
 - 它根据用户在哪里，他们在做什么，他们正在阅读或在网络上进行互动来澄清用户的情况。
@@ -181,4 +183,4 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 ## 下一步
 
-- [理解域名](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)
+- [理解域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

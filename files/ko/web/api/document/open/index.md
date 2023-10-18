@@ -44,12 +44,6 @@ document.close();
 
 Firefox 및 Internet Explorer 에서는 기존까지 모든 요소 뿐 만 아니라 자바스크립트 변수까지 제거했었다. 하지만 현재 그런 경우는 없다.document non-spec'ed parameters to document.open
 
-### Gecko 특정 참고사항
-
-Starting with Gecko 1.9, this method is subject to the same same-origin policy as other properties, and does not work if doing so would change the document's origin.
-
-Starting with Gecko 1.9.2, `document.open()` uses the [principal](/ko/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en/wrappedJSObject). See [Security check basics](/en/Security_check_basics) for more about principals.
-
 ## document.open()의 인자 3개
 
 잘 사용하지 않지만, `document.open()` 메소드는 3 개의 인자를 받을 수 있으며, 호출할 경우 {{domxref("Window.open()")}} 메소드와 동일하게 동작한다(`Window.open()` 메소드 참고).

@@ -20,8 +20,8 @@ slug: Web/HTML/Constraint_validation
 
 Внутренние ограничения атрибута [`type`](/ru/docs/Web/HTML/Element/input#type):
 
-| Тип input                                                          | Описание ограничения                                                                                                                                  | Связанное нарушение                                                                   |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Тип input                                                       | Описание ограничения                                                                                                                                  | Связанное нарушение                                                                   |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [`<input type="URL">`](/ru/docs/Web/HTML/Element/input/url)     | Значение должно быть [URL-адресом](/ru/docs/Learn/Common_questions/What_is_a_URL), как указано в [URL Living Standard](https://url.spec.whatwg.org/). | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
 | [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email) | Значение должно быть синтаксически правильным email-адресом, который обычно имеет формат `username@hostname.tld`.                                     | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
 
@@ -299,16 +299,16 @@ slug: Web/HTML/Constraint_validation
 
 ```html
 <form>
-    <label for="ZIP">ZIP : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">Country : </label>
-    <select id="Country">
-      <option value="ch">Switzerland</option>
-      <option value="fr">France</option>
-      <option value="de">Germany</option>
-      <option value="nl">The Netherlands</option>
-    </select>
-    <input type="submit" value="Validate">
+  <label for="ZIP">ZIP : </label>
+  <input type="text" id="ZIP" />
+  <label for="Country">Country : </label>
+  <select id="Country">
+    <option value="ch">Switzerland</option>
+    <option value="fr">France</option>
+    <option value="de">Germany</option>
+    <option value="nl">The Netherlands</option>
+  </select>
+  <input type="submit" value="Validate" />
 </form>
 ```
 
@@ -322,11 +322,22 @@ slug: Web/HTML/Constraint_validation
 function checkZIP() {
   // Для каждой страны определяем шаблон, которому должен следовать почтовый индекс
   var constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
-    nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+    ch: [
+      "^(CH-)?\\d{4}$",
+      "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950",
+    ],
+    fr: [
+      "^(F-)?\\d{5}$",
+      "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012",
+    ],
+    de: [
+      "^(D-)?\\d{5}$",
+      "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345",
+    ],
+    nl: [
+      "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
+      "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS",
+    ],
   };
 
   // Прочитать id страны
@@ -337,14 +348,13 @@ function checkZIP() {
 
   // Создать валидатор ограничения
   var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  console.log(constraint);
 
   // Валидировать индекс
   if (constraint.test(ZIPField.value)) {
     // Индекс соответствует ограничению, мы используем ConstraintAPI, чтобы сообщить об этом
     ZIPField.setCustomValidity("");
-  }
-  else {
+  } else {
     // Индекс не соответствует ограничению , мы используем ConstraintAPI, чтобы
     // показать сообщение, описывающее формат, требуемый для данной страны
     ZIPField.setCustomValidity(constraints[country][1]);
@@ -356,9 +366,9 @@ function checkZIP() {
 
 ```js
 window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
-}
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
+};
 ```
 
 Вы можете посмотреть [живой пример](/@api/deki/files/4744/=constraint.html) валидации индекса.
@@ -371,7 +381,7 @@ window.onload = function () {
 
 ```html
 <label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS">
+<input type="file" id="FS" />
 ```
 
 Она отображает:
@@ -387,10 +397,11 @@ function checkFileSize() {
 
   // Если выбран хотя бы один файл
   if (files.length > 0) {
-     if (files[0].size > 75 * 1024) { // Проверить ограничение
-       FS.setCustomValidity("Размер файла не должен превышать 75 kB");
-       return;
-     }
+    if (files[0].size > 75 * 1024) {
+      // Проверить ограничение
+      FS.setCustomValidity("Размер файла не должен превышать 75 kB");
+      return;
+    }
   }
   // Если нарушения ограничений нет
   FS.setCustomValidity("");
@@ -402,7 +413,7 @@ function checkFileSize() {
 ```js
 window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
-}
+};
 ```
 
 [Живой пример](/@api/deki/files/4745/=fileconstraint.html) валидации ограничения размера файла.

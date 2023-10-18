@@ -201,44 +201,50 @@ _Этот интерфейс также наследует свойства от
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
-'use strict';
+  <head>
+    <script>
+      "use strict";
 
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          const keyName = event.key;
 
-  if (keyName === 'Control') {
-    // not alert when only Control key is pressed.
-    return;
-  }
+          if (keyName === "Control") {
+            // not alert when only Control key is pressed.
+            return;
+          }
 
-  if (event.ctrlKey) {
-    // Хотя event.key это не 'Control' (например, нажата клавиша 'a'),
-    // то всё же event.ctrlKey может быть true, если ударживается клавиша Ctrl.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
-}, false);
+          if (event.ctrlKey) {
+            // Хотя event.key это не 'Control' (например, нажата клавиша 'a'),
+            // то всё же event.ctrlKey может быть true, если ударживается клавиша Ctrl.
+            alert(`Combination of ctrlKey + ${keyName}`);
+          } else {
+            alert(`Key pressed ${keyName}`);
+          }
+        },
+        false,
+      );
 
-document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+      document.addEventListener(
+        "keyup",
+        (event) => {
+          const keyName = event.key;
 
-  // Как только пользователь отпустит клавишу Ctrl, то она больше не будет активной.
-  // Поэтому event.ctrlKey = false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
-}, false);
+          // Как только пользователь отпустит клавишу Ctrl, то она больше не будет активной.
+          // Поэтому event.ctrlKey = false.
+          if (keyName === "Control") {
+            alert("Control key was released");
+          }
+        },
+        false,
+      );
+    </script>
+  </head>
 
-</script>
-</head>
-
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

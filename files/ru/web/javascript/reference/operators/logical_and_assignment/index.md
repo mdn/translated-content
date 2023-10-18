@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ## Синтаксис
 
 ```js
-expr1 &&= expr2
+expr1 &&= expr2;
 ```
 
 ## Описание

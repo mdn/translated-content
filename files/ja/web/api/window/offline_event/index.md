@@ -14,8 +14,8 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('offline', (event) => { });
-onoffline = (event) => { };
+addEventListener("offline", (event) => {});
+onoffline = (event) => {};
 ```
 
 ## イベント型
@@ -34,8 +34,8 @@ onoffline = (event) => { };
 
 ```js
 // addEventListener 版
-window.addEventListener('offline', (event) => {
-    console.log("The network connection has been lost.");
+window.addEventListener("offline", (event) => {
+  console.log("The network connection has been lost.");
 });
 
 // onoffline 版

@@ -26,15 +26,19 @@ try {
 ```
 
 - `try_statements`
+
   - : Инструкции для выполнения.
 
 - `catch_statements_1`, `catch_statements_2`
+
   - : Инструкции, которые будут выполнены, если произойдёт ошибка в блоке `try`.
 
 - `exception_var_1`, `exception_var_2`
+
   - : Идентификатор для хранения объекта ошибки, который впоследствии используется в блоке `catch`
 
 - `condition_1`
+
   - : Условное выражение.
 
 - `finally_statements`
@@ -62,11 +66,10 @@ try {
 
 ```js
 try {
-   throw 'myException'; // создание исключения
-}
-catch (e) {
-   // инструкции для обработки ошибок
-   logMyErrors(e); // передать объект исключения обработчику ошибок
+  throw "myException"; // создание исключения
+} catch (e) {
+  // инструкции для обработки ошибок
+  logMyErrors(e); // передать объект исключения обработчику ошибок
 }
 ```
 
@@ -98,7 +101,7 @@ try {
 ```js
 try {
   myRoutine();
-} catch(e) {
+} catch (e) {
   if (e instanceof RangeError) {
     // обработка известного исключения, с которым
     // понятно, что делать
@@ -158,35 +161,35 @@ function expensiveCalculations() {
 
 function maybeThrowError() {
   // Функция, которая может выбросить исключение
-  if(Math.random() > 0.5) throw new Error()
+  if (Math.random() > 0.5) throw new Error();
 }
 
 try {
   // Теперь при прокрутке страницы будут происходить
   // сложные вычисления, что сильно скажется на
   // производительности
-  window.addEventListener('scroll', expensiveCalculations)
-  maybeThrowError()
+  window.addEventListener("scroll", expensiveCalculations);
+  maybeThrowError();
 } catch {
   // Если функция maybeThrowError выбросит исключения,
   // управление сразу перейдёт в блок catch и
   // сложные вычисления продолжат выполняться до
   // перезагрузки страницы
-  maybeThrowError()
+  maybeThrowError();
 }
-window.removeEventListener('scroll', expensiveCalculations)
+window.removeEventListener("scroll", expensiveCalculations);
 ```
 
 В этом примере, если функция `maybeThrowError` выбросит исключение внутри блока `try`, управление перейдёт в блок `catch`. Если и в блоке `catch` эта функция тоже выбросит исключение, то выполнение кода прервётся, и обработчик события не будет снят, пока пользователь не перезагрузит страницу, что плохо скажется на скорости работы. Для того, чтобы избежать таких ситуаций, следует использовать блок `finally`:
 
 ```js
 try {
-  window.addEventListener('scroll', expensiveCalculations)
-  maybeThrowError()
+  window.addEventListener("scroll", expensiveCalculations);
+  maybeThrowError();
 } catch {
-  maybeThrowError()
+  maybeThrowError();
 } finally {
-  window.removeEventListener('scroll', expensiveCalculations)
+  window.removeEventListener("scroll", expensiveCalculations);
 }
 ```
 
@@ -195,11 +198,10 @@ try {
 ```js
 openMyFile();
 try {
-   // Сделать что-то с файлом
-   writeMyFile(theData);
-}
-finally {
-   closeMyFile(); // Закрыть файл, что бы ни произошло
+  // Сделать что-то с файлом
+  writeMyFile(theData);
+} finally {
+  closeMyFile(); // Закрыть файл, что бы ни произошло
 }
 ```
 
@@ -212,14 +214,12 @@ finally {
 ```js
 try {
   try {
-    throw new Error('упс');
+    throw new Error("упс");
+  } finally {
+    console.log("finally");
   }
-  finally {
-    console.log('finally');
-  }
-}
-catch (e) {
-  console.error('внешний блок catch', e.message);
+} catch (e) {
+  console.error("внешний блок catch", e.message);
 }
 
 // Вывод:
@@ -232,17 +232,14 @@ catch (e) {
 ```js
 try {
   try {
-    throw new Error('упс');
+    throw new Error("упс");
+  } catch (e) {
+    console.error("внутренний блок catch", e.message);
+  } finally {
+    console.log("finally");
   }
-  catch (e) {
-    console.error('внутренний блок catch', e.message);
-  }
-  finally {
-    console.log('finally');
-  }
-}
-catch (e) {
-  console.error('внешний блок catch', e.message);
+} catch (e) {
+  console.error("внешний блок catch", e.message);
 }
 
 // Output:
@@ -255,18 +252,15 @@ catch (e) {
 ```js
 try {
   try {
-    throw new Error('упс');
-  }
-  catch (e) {
-    console.error('внутренний блок catch', e.message);
+    throw new Error("упс");
+  } catch (e) {
+    console.error("внутренний блок catch", e.message);
     throw e;
+  } finally {
+    console.log("finally");
   }
-  finally {
-    console.log('finally');
-  }
-}
-catch (e) {
-  console.error('внешний блок catch', e.message);
+} catch (e) {
+  console.error("внешний блок catch", e.message);
 }
 
 // Вывод:

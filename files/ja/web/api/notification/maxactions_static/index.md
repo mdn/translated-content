@@ -17,7 +17,9 @@ slug: Web/API/Notification/maxActions_static
 
 ```js
 const maxActions = Notification.maxActions;
-console.log(`This device can display at most ${maxActions} actions on each notification.`);
+console.log(
+  `This device can display at most ${maxActions} actions on each notification.`,
+);
 ```
 
 ## 仕様書

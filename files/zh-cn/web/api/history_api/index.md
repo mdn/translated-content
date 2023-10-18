@@ -45,7 +45,7 @@ window.history.go(1);
 
 类似地，你可以传递参数值 2 并向前移动 2 个页面，等等。
 
-您可以通过查看长度属性的值来确定的历史堆栈中页面的数量：
+你可以通过查看长度属性的值来确定的历史堆栈中页面的数量：
 
 ```js
 let numberOfEntries = window.history.length;

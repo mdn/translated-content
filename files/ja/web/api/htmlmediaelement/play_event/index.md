@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('play', (event) => {});
+addEventListener("play", (event) => {});
 
-onplay = (event) => { };
+onplay = (event) => {};
 ```
 
 ## イベント型
@@ -32,22 +32,26 @@ onplay = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('play', (event) => {
-  console.log('Boolean の paused プロパティは false になりました。 ' +
-  'play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。');
+video.addEventListener("play", (event) => {
+  console.log(
+    "Boolean の paused プロパティは false になりました。 " +
+      "play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
+  );
 });
 ```
 
 `onplay` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplay = (event) => {
-  console.log('Boolean の paused プロパティは false になりました。 ' +
-  'play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。');
+  console.log(
+    "Boolean の paused プロパティは false になりました。 " +
+      "play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
+  );
 };
 ```
 

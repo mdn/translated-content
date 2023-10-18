@@ -9,11 +9,11 @@ slug: Web/HTML/Element/datalist
 
 | [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                            |
+| Допустимое содержимое                                            | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                                     |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                 |
 | Допустимые родители                                              | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
 | Допустимые ARIA-роли                                             | Нет                                                                                                                                                                 |
-| DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                        |
+| DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                                  |
 
 ## Атрибуты
 
@@ -25,12 +25,12 @@ slug: Web/HTML/Element/datalist
 <label for="myBrowser">Choose a browser from this list:</label>
 <input list="browsers" id="myBrowser" name="myBrowser" />
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 

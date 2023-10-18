@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```js
-const obj = document.createElement('audio');
+const obj = document.createElement("audio");
 obj.disableRemotePlayback = true;
 ```
 

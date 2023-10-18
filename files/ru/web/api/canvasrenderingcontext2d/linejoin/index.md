@@ -45,11 +45,11 @@ ctx.lineJoin = "bevel" || "round" || "miter";
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -71,8 +71,8 @@ ctx.stroke();
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round', 'bevel', 'miter'];
+var ctx = document.getElementById("canvas").getContext("2d");
+var lineJoin = ["round", "bevel", "miter"];
 ctx.lineWidth = 10;
 
 for (let i = 0; i < lineJoin.length; i++) {

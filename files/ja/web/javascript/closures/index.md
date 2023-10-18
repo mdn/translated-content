@@ -80,7 +80,7 @@ myFunc();
 
 このコードが動作するということは直感的に理解できないかもしれません。いくつかのプログラミング言語では、関数内部のローカル変数はその関数が実行されている間だけ存在します。一旦 `makeFunc()` の実行が完了したら、name 変数はもう必要とされなくなると考えた方が筋は通っています。ただこのコードが期待したとおりに動くという事は、これは明らかに JavaScript にはあてはまりません。
 
-この理由は、JavaScript の関数はクロージャとなるためです。クロージャは関数とその関数が作られた環境という 2 つのものの組み合わせです。この環境は、クロージャが作られた時点でスコープ内部にあったあらゆる変数によって構成されています。この場合、`myFunc` は `makeFunc` が実行された時に作られた `displayName` 関数のインスタンスへの参照です。`displayName` のインスタンスはレキシカル環境への参照を保持し、そこに `name` 変数が存在します。このため、`makeFunc` が実行された時に、`name` 変数が残っていて "Mozilla" が `alert` に渡されます。
+この理由は、JavaScript の関数はクロージャとなるためです。クロージャは関数とその関数が作られた環境という 2 つのものの組み合わせです。この環境は、クロージャが作られた時点でスコープ内部にあったあらゆる変数によって構成されています。この場合、`myFunc` は `makeFunc` が実行された時に作られた `displayName` 関数のインスタンスへの参照です。`displayName` のインスタンスはレキシカル環境への参照を保持し、そこに `name` 変数が存在します。このため、`makeFunc` が実行された時に、`name` 変数が残っていて "Mozilla" が `console.log` に渡されます。
 
 ここにもう少し面白い例があります。`makeAdder` 関数です。
 
@@ -381,7 +381,7 @@ function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -421,7 +421,7 @@ function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -441,14 +441,14 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -475,7 +475,7 @@ function setupHelp() {
   const helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -502,7 +502,7 @@ function setupHelp() {
   var helpText = [
     { id: "email", help: "あなたの E メールアドレス" },
     { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" }
+    { id: "age", help: "あなたの年齢 (17 歳以上)" },
   ];
 
   helpText.forEach(function (text) {

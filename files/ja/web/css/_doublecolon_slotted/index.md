@@ -5,9 +5,9 @@ slug: Web/CSS/::slotted
 
 {{ CSSRef }}
 
-**`::slotted()`** は [CSS](/ja/docs/Web/CSS) の [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください)。
+**`::slotted()`** は [CSS](/ja/docs/Web/CSS) の [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)をご覧ください)。
 
-これは [shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
+これは [shadow DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
 
 ```css
 /* スロット内に配置された任意の要素を選択 */
@@ -49,26 +49,29 @@ slug: Web/CSS/::slotted
 カスタム要素 — `<person-details>` — は以下のように定義されています。
 
 ```js
-customElements.define('person-details',
+customElements.define(
+  "person-details",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('person-template');
+      let template = document.getElementById("person-template");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement('style');
-      style.textContent = 'div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }' +
-                           'h2 { margin: 0 0 10px; }' +
-                           'ul { margin: 0; }' +
-                           'p { margin: 10px 0; }' +
-                           '::slotted(*) { color: gray; font-family: sans-serif; } ';
+      let style = document.createElement("style");
+      style.textContent =
+        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
+        "h2 { margin: 0 0 10px; }" +
+        "ul { margin: 0; }" +
+        "p { margin: 10px 0; }" +
+        "::slotted(*) { color: gray; font-family: sans-serif; } ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 ```
 
 `style` 要素のコンテンツを埋めると、スロットになるすべての要素を選択し (`::slotted(*)`)、それぞれに異なるフォントと色を与えているのが分かるでしょう。これにより、隣のコンテンツが埋まらなかったスロットよりも目立たせることができます。
@@ -93,4 +96,4 @@ customElements.define('person-details',
 
 ## 関連情報
 
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

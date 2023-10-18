@@ -36,11 +36,7 @@ console.log(
 
 ## Especificações
 
-| Specification                                                            | Status             | Comment                                                      |
-| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------------ |
-| {{SpecName('ES1')}}                                                      | {{Spec2('ES1')}}   | Initial definition. Implemented in JavaScript 1.1.           |
-| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                | {{Spec2('ES5.1')}} |                                                              |
-| {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ES6')}}   | The `configurable` attribute of this property is now `true`. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

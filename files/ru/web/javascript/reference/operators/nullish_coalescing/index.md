@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 ## Синтаксис
 
 ```js
-leftExpr ?? rightExpr
+leftExpr ?? rightExpr;
 ```
 
 ## Примеры
@@ -49,7 +49,7 @@ console.log(valC); // 42
 let foo;
 
 // foo ещё не было присвоено значение, поэтому оно undefined
-let someDummyText = foo || 'Hello!';
+let someDummyText = foo || "Hello!";
 ```
 
 Однако поскольку `||` является логическим оператором, левый операнд был принудительно приведен к булеву значению, игнорируя любое _ложноподобное_ значение (`0`, `''`, `NaN`, `null`, `undefined`). Это может привести к некорректной работе кода, если нужно учитывать такие значения, как `0`, `''`, или `NaN`.
@@ -60,19 +60,19 @@ let text = "";
 
 let qty = count || 42;
 let message = text || "hi!";
-console.log(qty);     // 42, но не 0
+console.log(qty); // 42, но не 0
 console.log(message); // "hi!", но не ""
 ```
 
 Оператор нулевого слияния предотвращает попадание в такую ловушку, возвращая второй операнд, только если первый равен `null` или `undefined` (и не любым другим ложноподобным значением):
 
 ```js
-let myText = ''; // Пустая строка (ложноподобное значение)
+let myText = ""; // Пустая строка (ложноподобное значение)
 
-let notFalsyText = myText || 'Привет, мир';
+let notFalsyText = myText || "Привет, мир";
 console.log(notFalsyText); // Привет, мир
 
-let preservingFalsy = myText ?? 'Привет, сосед';
+let preservingFalsy = myText ?? "Привет, сосед";
 console.log(preservingFalsy); // '' (т.к. myText не ни undefined, ни null)
 ```
 
@@ -81,15 +81,24 @@ console.log(preservingFalsy); // '' (т.к. myText не ни undefined, ни nul
 Так же как при использовании операторов логического И и ИЛИ, правое выражение не вычисляется, если значение в левом выражении не равняется `null` или `undefined`
 
 ```js
-function A() { console.log('вызвана A'); return undefined;}
-function B() { console.log('вызвана B'); return false;}
-function C() { console.log('вызвана C'); return "foo";}
+function A() {
+  console.log("вызвана A");
+  return undefined;
+}
+function B() {
+  console.log("вызвана B");
+  return false;
+}
+function C() {
+  console.log("вызвана C");
+  return "foo";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // в консоли будет будет выведено "вызвана A", после "вызвана C", и затем "foo",
 // т.к. A() возвращает undefined, поэтому оба выражения были вычислены
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // в консоли будет выведено "вызвана B", затем "false",
 // так B() возвращает false (не null или undefined), то
 // правое выражение не вычисляется

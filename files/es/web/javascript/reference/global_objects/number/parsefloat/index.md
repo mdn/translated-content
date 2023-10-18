@@ -12,7 +12,7 @@ El método **`Number.parseFloat()`** analiza un argumento y devuelve un número 
 ## Sintaxis
 
 ```js
-Number.parseFloat(string)
+Number.parseFloat(string);
 ```
 
 ### Parámetros

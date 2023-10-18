@@ -1,6 +1,8 @@
 ---
 title: 캔버스 생성과 그리기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{GamesSidebar}}
@@ -50,8 +52,8 @@ HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} �
 실제로 {{htmlelement("canvas")}}엘리먼트 위에 그래픽을 렌더링하기 위해서는 JavaScript로 참조할 수 있게 만들어야 합니다. 다음 코드를 여러분의 `<script>` 태그 다음에 추가하세요..
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 ```
 
 {{htmlelement("canvas")}} 엘리먼트에 대한 참조를 `canvas` 변수에 저장하였습니다. 그러고 나서는 캔버스에 그리기 위해 실질적으로 사용되는 도구인 2D rendering context를 `ctx` 변수에 저장하고 있습니다.
@@ -103,7 +105,7 @@ ctx.closePath();
 
 JSFiddle에서 라이브로 실행되는 전체 코드입니다.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
 > **참고:** **연습해보기**: 주어진 모양들의 크기와 색상을 변경해보세요.
 

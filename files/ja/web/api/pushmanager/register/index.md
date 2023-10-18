@@ -1,50 +1,58 @@
 ---
-title: PushManager.register()
+title: "PushManager: register() メソッド"
+short-title: register()
 slug: Web/API/PushManager/register
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{deprecated_header}}{{ ApiRef("Push API")}}
+{{deprecated_header}}{{ApiRef("Push API")}}
 
-**`register`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。
+**`register`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。
+
+> **メモ:** このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。
 
 ## 構文
 
 ```js-nolint
-var request = navigator.push.register();
+register()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
-{{domxref("DOMRequest")}} オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
+`DOMRequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
 メソッドの呼び出しに成功したら、リクエストの `result` が端点の URL を表す文字列になります。
 
-> **メモ:** この URL が必要なくなったら、{{domxref("Pushmanager.unregister()")}} を使用して自分自身を掃除してください。
+> **メモ:** この URL が必要なくなったら、 {{domxref("PushManager.unregister()")}} を使用して自分自身を掃除してください。
 
 ## 例
 
 ```js
-var req = navigator.push.register();
+const req = navigator.push.register();
 
-req.onsuccess = function(e) {
-  var endpoint = req.result;
-  debug("New endpoint: " + endpoint );
-}
+req.onsuccess = (e) => {
+  const endpoint = req.result;
+  console.log(`New endpoint: ${endpoint}`);
+};
 
-req.onerror = function(e) {
-  debug("Error getting a new endpoint: " + JSON.stringify(e));
-}
+req.onerror = (e) => {
+  console.error(`Error getting a new endpoint: ${e.error}`);
+};
 ```
 
 ## 仕様書
 
-{{Specifications}}
+この機能はもうどの仕様にも属していません。標準化の予定はなくなりました。
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushManager.register")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

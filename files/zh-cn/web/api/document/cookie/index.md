@@ -328,7 +328,7 @@ Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会�
 
 - 从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
 - 你可以通过更新一个 cookie 的过期时间为 0 来删除一个 cookie。
-- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果您只是需要存储些 "client-only" 的数据，那么郑重建议您使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
+- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果你只是需要存储些 "client-only" 的数据，那么郑重建议你使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
 
 ## 规范
 

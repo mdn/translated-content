@@ -31,7 +31,7 @@ l10n:
     - `off`: ユーザーはフォームを使用するたびにフィールドへ値を明示的に入力しなければならないか、ドキュメントが独自の自動補完を提供します。ブラウザーは入力内容の自動補完を行いません。
     - `on`: ブラウザーはユーザーが以前入力した値を元に、値の自動補完を行うことができます。
 
-     `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
+    `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -108,7 +108,7 @@ textarea {
 
 ### 有効・無効な値のスタイル付け
 
- `<textarea>` の値が有効であるか無効であるかを (例えば `minlength` と `maxlength` の範囲の中に収まっているか外れているか、または `required`)、 {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスを用いて強調表示することができます。例えば以下のように、中の値が有効か無効かでテキストエリアの境界を異なる表示にすることができます。
+`<textarea>` の値が有効であるか無効であるかを (例えば `minlength` と `maxlength` の範囲の中に収まっているか外れているか、または `required`)、 {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスを用いて強調表示することができます。例えば以下のように、中の値が有効か無効かでテキストエリアの境界を異なる表示にすることができます。
 
 ```css
 textarea:invalid {
@@ -127,7 +127,9 @@ textarea:valid {
 以下の例は、行数と列数と既定の内容だけを設定した、とても単純なテキストエリアを表示します。
 
 ```html
-<textarea name="textarea" rows="10" cols="50">ここに何か書いてください</textarea>
+<textarea name="textarea" rows="10" cols="50">
+ここに何か書いてください</textarea
+>
 ```
 
 #### 結果
@@ -139,7 +141,9 @@ textarea:valid {
 この例は文字数の最小値と最大値を、それぞれ 10 と 20 に設定しています。見てみましょう。
 
 ```html
-<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">ここに何か書いてください</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+ここに何か書いてください</textarea
+>
 ```
 
 #### 結果
@@ -174,9 +178,11 @@ textarea:valid {
 
 ```html
 <textarea name="textarea" rows="5" cols="30" disabled>
-disabled のテキストエリアです。</textarea>
+disabled のテキストエリアです。</textarea
+>
 <textarea name="textarea" rows="5" cols="30" readonly>
-readonly のテキストエリアです。</textarea>
+readonly のテキストエリアです。</textarea
+>
 ```
 
 #### 結果

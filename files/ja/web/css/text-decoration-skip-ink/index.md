@@ -36,7 +36,7 @@ text-decoration-skip: unset;
 
   - : ブラウザーは、下線や上線が文字に触れたり近づいたりしないように*必ず*中断を行います。これは、 `auto` の動作が中断を発生させない可能性がある中国語、日本語、韓国語の特定のフォントで有用です。
 
-     !["text-decoration-skip-ink" の例](decoration-skip-ink.png)
+    !["text-decoration-skip-ink" の例](decoration-skip-ink.png)
 
 ## 公式定義
 
@@ -54,7 +54,9 @@ text-decoration-skip: unset;
 <p>You should go on a quest for a cup of coffee.</p>
 <p class="no-skip-ink">Or maybe you'd prefer some tea?</p>
 <p>この文は、 text-decoration-skip-ink: auto の使用例を示しています。</p>
-<p class="skip-ink-all">この文は、 text-decoration-skip-ink: all の使用例を示しています。</p>
+<p class="skip-ink-all">
+  この文は、 text-decoration-skip-ink: all の使用例を示しています。
+</p>
 ```
 
 ### CSS
@@ -70,7 +72,7 @@ p {
   text-decoration-skip-ink: none;
 }
 
-.skip-ink-all{
+.skip-ink-all {
   text-decoration-skip-ink: all;
 }
 ```

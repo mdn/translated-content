@@ -26,7 +26,7 @@ El método `toUpperCase` devuelve el valor de la cadena convertida a mayúsculas
 El siguiente ejemplo muestra la cadena "`ALPHABET`":
 
 ```js
-console.log( "alphabet".toUpperCase() ); // "ALPHABET"
+console.log("alphabet".toUpperCase()); // "ALPHABET"
 ```
 
 ### Vea También

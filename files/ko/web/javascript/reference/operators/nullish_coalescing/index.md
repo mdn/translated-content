@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 ## 문법
 
 ```js
-    leftExpr ?? rightExpr
+leftExpr ?? rightExpr;
 ```
 
 ## 설명
@@ -52,12 +52,12 @@ console.log(message); // "hi!" and not ""
 널 병합 연산자는 첫 번째 연산자가 `null` 또는 `undefined`로 평가될 때만, 두 번째 피연산자를 반환함으로써 이러한 위험을 피한다:
 
 ```js
-let myText = ''; // An empty string (which is also a falsy value)
+let myText = ""; // An empty string (which is also a falsy value)
 
-let notFalsyText = myText || 'Hello world';
+let notFalsyText = myText || "Hello world";
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = myText ?? 'Hi neighborhood';
+let preservingFalsy = myText ?? "Hi neighborhood";
 console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 ```
 
@@ -66,15 +66,24 @@ console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 OR과 AND 같은 논리 연산자들과 마찬가지로, 만약 왼쪽이 `null` 또는 `undefined`가 아님이 판명되면 오른쪽 표현식은 평가되지 않는다.
 
 ```js
-function A() { console.log('A was called'); return undefined;}
-function B() { console.log('B was called'); return false;}
-function C() { console.log('C was called'); return "foo";}
+function A() {
+  console.log("A was called");
+  return undefined;
+}
+function B() {
+  console.log("B was called");
+  return false;
+}
+function C() {
+  console.log("C was called");
+  return "foo";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // logs "A was called" then "C was called" and then "foo"
 // as A() returned undefined so both expressions are evaluated
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // logs "B was called" then "false"
 // as B() returned false (and not null or undefined), the right
 // hand side expression was not evaluated
@@ -92,7 +101,7 @@ true || undefined ?? "foo"; // raises a SyntaxError
 그러나 우선 순위를 명시적으로 나타내기 위해 괄호를 사용하면 가능하다:
 
 ```js
-(null || undefined ) ?? "foo"; // returns "foo"
+(null || undefined) ?? "foo"; // returns "foo"
 ```
 
 ### Optional chaining 연산자(`?.`)와의 관계
@@ -102,7 +111,7 @@ true || undefined ?? "foo"; // raises a SyntaxError
 ```js
 let foo = { someFooProp: "hi" };
 
-console.log(foo.someFooProp?.toUpperCase());  // "HI"
+console.log(foo.someFooProp?.toUpperCase()); // "HI"
 console.log(foo.someBarProp?.toUpperCase()); // undefined
 ```
 
@@ -111,13 +120,13 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 이 예제는 기본 값을 제공하지만 `null` or `undefined` 이외의 값을 를 유지한다.
 
 ```js
-function getMiscObj(){
+function getMiscObj() {
   return {
     aNullProperty: null,
     emptyText: "", // this is not falsy
-    someNumber: 42
+    someNumber: 42,
   };
-};
+}
 
 const miscObj = getMiscObj();
 

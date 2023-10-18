@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('seeking', (event) => {});
+addEventListener("seeking", (event) => {});
 
-onseeking = (event) => { };
+onseeking = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onseeking = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('seeking', (event) => {
-  console.log('動画は新しい位置をシーク中です。');
+video.addEventListener("seeking", (event) => {
+  console.log("動画は新しい位置をシーク中です。");
 });
 ```
 
 `onseeking` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onseeking = (event) => {
-  console.log('動画は新しい位置をシーク中です。');
+  console.log("動画は新しい位置をシーク中です。");
 };
 ```
 

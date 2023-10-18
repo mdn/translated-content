@@ -32,7 +32,7 @@ slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 자바스크립트에서 일반 변수를 삭제하려고 하면 동작하지 않습니다. 그리고 엄격 모드에서는 에러가 발생합니다:
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -47,7 +47,7 @@ delete x;
 변수의 내용을 비우려면 {{jsxref("null")}}을 설정하면 됩니다:
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 

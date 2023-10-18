@@ -5,11 +5,11 @@ slug: Learn/CSS
 
 {{LearnSidebar}}
 
-层叠样式表 — 也就是{{glossary("CSS")}} — 是你在{{glossary("HTML")}}之后应该学习的第二门技术。HTML 用于定义内容的结构和语义，CSS 用于设计风格和布局。比如，您可以使用 CSS 来更改内容的字体、颜色、大小、间距，将内容分为多列，或者添加动画及其他的装饰效果。
+层叠样式表 — 也就是{{glossary("CSS")}} — 是你在{{glossary("HTML")}}之后应该学习的第二门技术。HTML 用于定义内容的结构和语义，CSS 用于设计风格和布局。比如，你可以使用 CSS 来更改内容的字体、颜色、大小、间距，将内容分为多列，或者添加动画及其他的装饰效果。
 
 ## 学习路径
 
-在尝试学习 CSS 之前，您应该了解 HTML 的基础知识。建议你先学习 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块 — 这一模块主要介绍了以下内容：
+在尝试学习 CSS 之前，你应该了解 HTML 的基础知识。建议你先学习 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块 — 这一模块主要介绍了以下内容：
 
 - CSS，从 CSS 模块简介开始
 - 更高级的[HTML 模块](/zh-CN/Learn/HTML#Modules)

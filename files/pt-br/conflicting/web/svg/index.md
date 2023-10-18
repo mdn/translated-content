@@ -1,7 +1,6 @@
 ---
 title: Compatibility sources
 slug: conflicting/Web/SVG
-original_slug: Web/SVG/Compatibility_sources
 ---
 
 As seguintes fontes são usada para as tabelas de compatibilidade no elemento SVG e atributos:

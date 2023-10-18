@@ -30,7 +30,7 @@ dateObj.getDate()
 Вторая инструкция в примере ниже присваивает значение 25 переменной `day` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
 
 ```js
-let date = new Date('December 25, 1995 23:15:30');
+let date = new Date("December 25, 1995 23:15:30");
 let day = date.getDate();
 
 console.log(day); // 25

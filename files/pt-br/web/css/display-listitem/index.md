@@ -13,7 +13,7 @@ Um valor único de `list-item` fará com que o elemento se comporte como um item
 
 `list-item` também pode ser combinado com qualquer {{CSSxRef("&lt;display-outside&gt;")}} palavra-chave e o `flow` ou `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.
 
-> **Nota:**: Nos navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será**`flow`. Se nenhum valor externo for especificado, a caixa principal terá um tipo de exibição externo de`block`.
+> **Nota:**: Nos navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será `flow`. Se nenhum valor externo for especificado, a caixa principal terá um tipo de exibição externo de`block`.
 
 ### Sintaxe formal
 

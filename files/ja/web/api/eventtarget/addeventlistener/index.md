@@ -128,7 +128,7 @@ try {
 someElement.addEventListener(
   "mouseup",
   handleMouseUp,
-  passiveSupported ? { passive: true } : false
+  passiveSupported ? { passive: true } : false,
 );
 ```
 
@@ -254,7 +254,7 @@ el.addEventListener(
   function () {
     modifyText("four");
   },
-  false
+  false,
 );
 ```
 
@@ -297,7 +297,7 @@ el.addEventListener(
   () => {
     modifyText("four");
   },
-  false
+  false,
 );
 ```
 
@@ -436,7 +436,9 @@ function nonePassiveHandler(event) {
 
 ```html
 <button id="example-button">このボタンはクリックされていません。</button>
-<button id="reset-button">このボタンをクリックすると、最初のボタンがリセットされます。</button>
+<button id="reset-button">
+  このボタンをクリックすると、最初のボタンがリセットされます。
+</button>
 ```
 
 #### JavaScript
@@ -634,7 +636,7 @@ myButton.addEventListener(
   "click",
   function () {
     console.log(this); // 期待される値: 'Data'
-  }.bind(someString)
+  }.bind(someString),
 );
 ```
 
@@ -649,12 +651,12 @@ const myButton = document.getElementById("my-button-id");
 let someString = "Data";
 
 myButton.addEventListener("click", () => {
-  console.log(someString);  // 期待される値: 'Data'
+  console.log(someString); // 期待される値: 'Data'
 
-  someString = 'Data Again';
+  someString = "Data Again";
 });
 
-console.log(someString);  // 期待される値: 'Data' (will never output 'Data Again')
+console.log(someString); // 期待される値: 'Data' (will never output 'Data Again')
 ```
 
 > **メモ:** 内側のスコープは外側のスコープにある `const`, `let` 変数にアクセスすることができますが、イベントリスナーの定義後に、同じ外側のスコープ内でこれらの変数にアクセスできるようになることは期待できません。なぜでしょうか？単純に、イベントリスナーが実行される頃には、イベントリスナーが定義されたスコープは既に実行を終了しているからです。
@@ -703,7 +705,7 @@ for (const elt of elts) {
     (e) => {
       // 何かを行う
     },
-    false
+    false,
   );
 }
 
@@ -737,7 +739,7 @@ try {
       get() {
         passiveIfSupported = { passive: true };
       },
-    })
+    }),
   );
 } catch (err) {}
 
@@ -747,7 +749,7 @@ window.addEventListener(
     /* 何かを行う */
     // event.preventDefault(); は使用できない
   },
-  passiveIfSupported
+  passiveIfSupported,
 );
 ```
 

@@ -2,6 +2,7 @@
 title: block-size
 slug: Web/CSS/block-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Свойство **`block-size`** [CSS](/ru/docs/Web/CSS) задаёт горизонтальный и вертикальный размер блока элемента, в зависимости от режима его записи (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от значения свойства {{cssxref("writing-mode")}}.
@@ -51,14 +52,12 @@ block-size: unset;
 ### `HTML`
 
 ```html
-
 <p class="exampleText">Example text</p>
 ```
 
 ### `CSS`
 
 ```css
-
 .exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
@@ -70,8 +69,8 @@ block-size: unset;
 
 ## `Спецификация`
 
-| `Specification`                                                                                                    | `Status`                                           | `Comment`            |
-| ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- | -------------------- |
+| `Specification`                                                                         | `Status`                              | `Comment`            |
+| --------------------------------------------------------------------------------------- | ------------------------------------- | -------------------- |
 | `{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}}` | `{{Spec2("CSS Logical Properties")}}` | `Initial definition` |
 
 ## `Совместимость с браузерами`

@@ -34,9 +34,7 @@ Symbol.for("foo").description; // "foo"
 
 ## Especificações
 
-| Especificação                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName("ESDraft", "#sec-symbol.prototype.description", "get Symbol.prototype.description")}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

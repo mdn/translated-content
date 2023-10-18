@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-toString()
+toString();
 ```
 
 ### 返値
@@ -30,7 +30,7 @@ const arr = [];
 arr.join = 1; // `join` を関数ではないものに再代入
 console.log(arr.toString()); // [object Array] と出力
 
-console.log(Array.prototype.toString.call({ join: () => 1 }));  // 1 と出力
+console.log(Array.prototype.toString.call({ join: () => 1 })); // 1 と出力
 ```
 
 配列を文字列値として表す必要がある場合や、配列が文字列の結合として参照されるとき、 JavaScript は `toString` メソッドを自動的に呼び出します。
@@ -40,7 +40,7 @@ console.log(Array.prototype.toString.call({ join: () => 1 }));  // 1 と出力
 ### toString の使用
 
 ```js
-const array1 = [1, 2, 'a', '1a'];
+const array1 = [1, 2, "a", "1a"];
 
 console.log(array1.toString());
 // 期待される出力: "1,2,a,1a"

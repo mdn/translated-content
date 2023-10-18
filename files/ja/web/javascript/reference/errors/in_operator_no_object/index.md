@@ -67,7 +67,7 @@ var foo = { baz: "bar" };
 `in` 演算子を使用して {{jsxref("Array")}} オブジェクトの中を検索するときは注意してください。 `in` 演算子は添字の数値をチェックするものであり、その位置の値をチェックするのではありません。
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```

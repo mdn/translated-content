@@ -10,7 +10,7 @@ MIME タイプは IETF の {{RFC(6838)}} で定義され、標準化されてい
 
 [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) はすべての公式の MIME タイプを管理しており、[Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) ページで最新の完全なリストを見つけることができます。
 
-> **警告:** ブラウザーは URL を処理する方法を決定するために、*ファイル拡張子ではなく* MIME タイプを使用しますので、ウェブサーバーは正しい MIME タイプをレスポンスの {{HTTPHeader("Content-Type")}} ヘッダーで送信することが重要です。これが正しく構成されていないと、ブラウザーはファイルの中身を誤って解釈し、サイトが正しく動作しなかったり、ダウンロードファイルが誤って扱われたりすることがあります。
+> **警告:** ブラウザーは URL を処理する方法を決定するために、_ファイル拡張子ではなく_ MIME タイプを使用しますので、ウェブサーバーは正しい MIME タイプをレスポンスの {{HTTPHeader("Content-Type")}} ヘッダーで送信することが重要です。これが正しく構成されていないと、ブラウザーはファイルの中身を誤って解釈し、サイトが正しく動作しなかったり、ダウンロードファイルが誤って扱われたりすることがあります。
 
 ## MIME タイプの構造
 
@@ -177,14 +177,14 @@ MIME タイプが `image` であるファイルは、画像データを含んで
 ただし、これは利用可能なすべてのタイプの完全なリストではありません。
 これについては[メディアコンテナー形式](/ja/docs/Web/Media/Formats/Containers)のガイドを参照してください。
 
-| MIME タイプ                                               | 音声または動画のタイプ                                                                                                                                                                     |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MIME タイプ                                             | 音声または動画のタイプ                                                                                                                                                      |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | WAVE コンテナー形式の音声ファイル。 PCM オーディオコーデック (WAVE コーデック "1") はたいていサポートされていますが、他のコーデックのサポートは (あるとしても) 限定的です。 |
-| `audio/webm`                                            | WebM コンテナー形式の音声ファイル。 Vorbis や Opus が WebM 仕様書で公式に対応しているコーデックです。 |
-| `video/webm`                                            | WebM コンテナー形式の、おそらく音声も含む動画ファイル。VP8 や VP9 がもっとも一般的に使用される動画コーデックです。 Vorbis や Opus がもっとも一般的な音声コーデックです。 |
-| `audio/ogg`                                             | Ogg コンテナー形式の音声ファイル。 Vorbis が、このコンテナーでもっとも一般的に使用される音声コーデックです。しかし、 Opus も同様に Ogg で対応しました。 |
-| `video/ogg`                                             | Ogg コンテナー形式の、おそらく音声も含む動画ファイル。通常の動画コーデックは Theora、音声コーデックは Vorbis ですが、 Opus がもっと有名になってきています。 |
-| `application/ogg`                                       | OGG コンテナー形式を使用する音声または動画のファイル。通常の動画コーデックは Theora、音声コーデックは Vorbis です。 |
+| `audio/webm`                                            | WebM コンテナー形式の音声ファイル。 Vorbis や Opus が WebM 仕様書で公式に対応しているコーデックです。                                                                       |
+| `video/webm`                                            | WebM コンテナー形式の、おそらく音声も含む動画ファイル。VP8 や VP9 がもっとも一般的に使用される動画コーデックです。 Vorbis や Opus がもっとも一般的な音声コーデックです。    |
+| `audio/ogg`                                             | Ogg コンテナー形式の音声ファイル。 Vorbis が、このコンテナーでもっとも一般的に使用される音声コーデックです。しかし、 Opus も同様に Ogg で対応しました。                     |
+| `video/ogg`                                             | Ogg コンテナー形式の、おそらく音声も含む動画ファイル。通常の動画コーデックは Theora、音声コーデックは Vorbis ですが、 Opus がもっと有名になってきています。                 |
+| `application/ogg`                                       | OGG コンテナー形式を使用する音声または動画のファイル。通常の動画コーデックは Theora、音声コーデックは Vorbis です。                                                         |
 
 ### multipart/form-data
 
@@ -213,10 +213,15 @@ Content-Disposition: form-data; name="myField"
 以下の `<form>` があったとします。
 
 ```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <label>Name: <input name="myTextField" value="Test"></label>
-  <label><input type="checkbox" name="myCheckBox"> Check</label>
-  <label>Upload file: <input type="file" name="myFile" value="test.txt"></label>
+<form
+  action="http://localhost:8000/"
+  method="post"
+  enctype="multipart/form-data">
+  <label>Name: <input name="myTextField" value="Test" /></label>
+  <label><input type="checkbox" name="myCheckBox" /> Check</label>
+  <label
+    >Upload file: <input type="file" name="myFile" value="test.txt"
+  /></label>
   <button>Send the file</button>
 </form>
 ```

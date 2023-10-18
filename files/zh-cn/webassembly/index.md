@@ -13,7 +13,7 @@ WebAssembly 是一种新的编码方式，可以在现代的网络浏览器中�
 
 WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使用 WebAssembly 的 JavaScript API，你可以把 WebAssembly 模块加载到一个 JavaScript 应用中并且在两者之间共享功能。这允许你在同一个应用中利用 WebAssembly 的性能和威力以及 JavaScript 的表达力和灵活性，即使你可能并不知道如何编写 WebAssembly 代码。
 
-而且，更棒的是，这是通过[W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)开发的一项网络标准，并得到了来自各大主要浏览器厂商的积极参与。
+而且，更棒的是，这是通过 [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) 开发的一项网络标准，并得到了来自各大主要浏览器厂商的积极参与。
 
 ## 指南
 
@@ -22,9 +22,9 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 - [从 C/C++编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)
   - : 当你使用 C/C++编写了代码后，你可以使用诸如 Emscripten 的工具把它编译为.wasm 文件。让我们看看这是如何工作的。
 - [加载运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Loading_and_running)
-  - : 本文介绍如何通过把[Fetch](/zh-CN/docs/Web/API/Fetch_API)或者[XHR](/zh-CN/docs/Web/API/XMLHttpRequest) API 与[WebAssembly JavaScript](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 结合在一起来获取、编译和实例化.wasm 文件。
+  - : 本文介绍如何通过把 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 或者 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest) API 与 [WebAssembly JavaScript](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 结合在一起来获取、编译和实例化.wasm 文件。
 - [缓存编译后的 WebAssembly 模块](/zh-CN/docs/WebAssembly/Caching_modules)
-  - : 就提升应用启动速度而言，在客户端缓存大的 WebAssembly 模块是有用的。本文解释了如何使用[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)来实现这一点。
+  - : 就提升应用启动速度而言，在客户端缓存大的 WebAssembly 模块是有用的。本文解释了如何使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 来实现这一点。
 - [使用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
   - : 当加载了一个.wasm 模块之后，你就想要使用它。在本文中，我们向你展示了如何通过 WebAssembly 的 JavaScript API 来使用 WebAssembly。
 - [导出的 WebAssembly 函数](/zh-CN/docs/WebAssembly/Exported_functions)
@@ -58,7 +58,7 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 ## 示例
 
 - [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
-- 参考我们的[WebAssembly 示例](https://github.com/mdn/webassembly-examples/)库来获取一些其他的例子。
+- 参考我们的 [WebAssembly 示例](https://github.com/mdn/webassembly-examples/)库来获取一些其他的例子。
 
 ## 规范
 

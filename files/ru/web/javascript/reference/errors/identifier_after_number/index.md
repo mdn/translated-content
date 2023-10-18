@@ -1,52 +1,55 @@
 ---
-title: "SyntaxError: identifier starts immediately after numeric literal(идентификатор начинается сразу после числового литерала)"
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
+
+Исключение "identifier starts immediately after numeric literal" возникает, если имя переменной, свойства или функции начинается с цифры. По правилам имя может начинаться только с буквы, подчеркивания (\_) или знака доллара ($).
 
 ## Сообщение
 
-```
-SyntaxError: непредвиденный идентификатор после числового литерала (Edge)
-SyntaxError: идентификатор запускается сразу после числового литерала (Firefox)
-SyntaxError: непредвиденное число (Chrome)
+```plain
+SyntaxError: Unexpected identifier after numeric literal (Edge)
+SyntaxError: identifier starts immediately after numeric literal (Firefox)
+SyntaxError: Unexpected number (Chrome)
 ```
 
 ## Тип ошибки
 
 {{jsxref("SyntaxError")}}
 
-## Что пошло не так?
+## Что не так?
 
-Имена переменных, называемых {{Glossary("Identifier", "identifiers")}} соответствуют определённым правилам, которых должен придерживаться ваш код!
+Имена переменных, а также свойств и функций, называемые {{Glossary("Identifier", "идентификаторами")}}, должны соответствовать определённым правилам.
 
-Идентификатор JavaScript должен начинаться с буквы, символа подчёркивания ( \_ ) или знака доллара ($). Они не могут начать с цифры! Только последующие символы могут быть цифрами (0-9).
+Идентификатор в JavaScript должен начинаться с буквы, символа подчёркивания (\_) или знака доллара ($) и не может начинаться с цифры. Цифрами (0-9) могут быть только второй и следующие символы.
 
 ## Примеры
 
 ### Имена переменных, начинающиеся с числовых литералов
 
-Имена переменных не могут начинаться с чисел в JavaScript. Следующие сбои:
+Имена переменных не могут начинаться с цифер в JavaScript. Следующий код приведёт к ошибкам:
 
-```js example-bad
+```js-nolint example-bad
 var 1life = 'foo';
-// SyntaxError:  идентификатор начинается сразу после числового литерала
+// SyntaxError: identifier starts immediately after numeric literal
 
 var foo = 1life;
-// SyntaxError:  идентификатор начинается сразу после числового литерала
+// SyntaxError: identifier starts immediately after numeric literal
 
 alert(1.foo);
-// SyntaxError:  идентификатор начинается сразу после числового литерала
+// SyntaxError: identifier starts immediately after numeric literal
 ```
 
-Вы можете переназвать вашу переменную чтобы избежать ведущего числа.
+Вы можете переназвать вашу переменную, чтобы избежать ведущего числа.
 
 ```js example-good
-var life1 = 'foo';
+var life1 = "foo";
 var foo = life1;
 ```
 
 ## Смотрите также
 
-- [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Variables](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) in the [JavaScript Guide](/ru/docs/Web/JavaScript/Guide)
+- [Лексический синтаксис](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Грамматика и типы](/ru/docs/Web/JavaScript/Guide/Grammar_and_types)

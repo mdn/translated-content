@@ -19,8 +19,12 @@ cursor: pointer;
 cursor: auto;
 
 /* Usando URL e cordenadas */
-cursor:  url(cursor1.png) 4 12, auto;
-cursor:  url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* Valores globais */
 cursor: inherit;

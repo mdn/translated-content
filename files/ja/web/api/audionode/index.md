@@ -18,7 +18,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
->**メモ:** `AudioNode` はイベントのターゲットになることがあり、そのため {{domxref("EventTarget")}} インターフェイスを実装しています。
+> **メモ:** `AudioNode` はイベントのターゲットになることがあり、そのため {{domxref("EventTarget")}} インターフェイスを実装しています。
 
 ## インスタンスプロパティ
 
@@ -34,7 +34,7 @@ l10n:
   - : このノードの入力と出力の間でチャンネルを対応付ける方法を表す列挙値です。
 - {{domxref("AudioNode.channelInterpretation")}}
   - : チャンネルの意味を表す列挙値です。この意味は、音声の[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)をどのように行うかを決定します。
-      取りうる値は `"speakers"` および `"discrete"` です。
+    取りうる値は `"speakers"` および `"discrete"` です。
 
 ## インスタンスメソッド
 

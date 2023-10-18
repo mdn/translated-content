@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 가능한 값은 다음과 같습니다.
 
 - `true` 또는 빈 문자열은 요소가 편집 가능함을 나타냅니다.

@@ -2,6 +2,7 @@
 title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -32,10 +33,10 @@ Math.log10(x)
 ### Пример: использование метода `Math.log10()`
 
 ```js
-Math.log10(2);      // 0.3010299956639812
-Math.log10(1);      // 0
-Math.log10(0);      // -Infinity
-Math.log10(-2);     // NaN
+Math.log10(2); // 0.3010299956639812
+Math.log10(1); // 0
+Math.log10(0); // -Infinity
+Math.log10(-2); // NaN
 Math.log10(100000); // 5
 ```
 
@@ -44,9 +45,11 @@ Math.log10(100000); // 5
 Этот метод может эмулироваться следующим способом:
 
 ```js
-Math.log10 = Math.log10 || function(x) {
-  return Math.log(x) / Math.LN10;
-};
+Math.log10 =
+  Math.log10 ||
+  function (x) {
+    return Math.log(x) / Math.LN10;
+  };
 ```
 
 ## Спецификации

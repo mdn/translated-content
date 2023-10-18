@@ -2,6 +2,7 @@
 title: POST
 slug: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP-метод `POST`** предназначен для отправки данных на сервер. Тип тела запроса указывается в заголовке {{HTTPHeader("Content-Type")}}.
@@ -69,7 +70,7 @@ POST /index.html
 
 Простая форма запроса, используя стандартный `application/x-www-form-urlencoded` content type:
 
-```html
+```http
 POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -80,7 +81,7 @@ say=Hi&to=Mom
 
 Форма запроса, используя `multipart/form-data` content type:
 
-```
+```http
 POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"

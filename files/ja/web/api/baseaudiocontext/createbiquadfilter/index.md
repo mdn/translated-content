@@ -12,7 +12,7 @@ slug: Web/API/BaseAudioContext/createBiquadFilter
 ## 構文
 
 ```js
-createBiquadFilter()
+createBiquadFilter();
 ```
 
 ### 引数

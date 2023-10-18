@@ -45,10 +45,10 @@ const intersectionObserver = new IntersectionObserver((entries) => {
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Loaded new items');
+  console.log("Loaded new items");
 });
 // 監視を開始
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## 仕様書

@@ -53,7 +53,3 @@ p {
 
    1. [Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) `:`
    2. [Псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) `::`
-
-### Техническая справка
-
-{{SpecName("CSS3 Selectors")}}

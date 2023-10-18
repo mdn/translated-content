@@ -29,17 +29,17 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 
 Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : The alignment of the image with respect to its surrounding context. Use the {{cssxref('vertical-align')}} CSS property.
-- {{htmlattrdef("alt")}}
+- `alt`
 
   - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
 
-- {{htmlattrdef("border")}} {{deprecated_inline}}
+- `border` {{deprecated_inline}}
   - : The width of a border around the image.
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/CORS_Enabled_Image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
@@ -50,23 +50,23 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes) for additional information.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : The height of the image in HTML 5 CSS pixels, or HTML 4 in pixels or as a percentage.
-- {{htmlattrdef("hspace")}} {{deprecated_inline}}
+- `hspace` {{deprecated_inline}}
   - : The number of pixels of white space to insert to the left and right of the image.
-- {{htmlattrdef("ismap")}}
+- `ismap`
 
   - : This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.
 
     > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute.
 
-- {{htmlattrdef("longdesc")}} {{deprecated_inline}}
+- `longdesc` {{deprecated_inline}}
   - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
   - : A name for the element. Use the [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) attribute instead.
-- {{htmlattrdef("src")}}
+- `src`
   - : Image URL, this attribute is obligatory for the `<img>` element. On browsers supporting **srcset**, **src** is ignored if this one is provided.
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : A list of one or more strings separated by commas indicating a set of possible images for the user agent to use. Each string is composed of:
 
@@ -77,15 +77,15 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
     Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor.
     The browser chooses the most adequate image to display at a given point of time.
 
-- {{htmlattrdef("width")}}
+- `width`
   - : The width of the image in pixels or percent.
-- {{htmlattrdef("usemap")}}
+- `usemap`
 
   - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/HTML/Element/map) associated with the element.
 
     > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
 
-- {{htmlattrdef("vspace")}} {{deprecated_inline}}
+- `vspace` {{deprecated_inline}}
   - : The number of pixels of white space to insert above and below the image.
 
 ## Formato de imagens suportadas
@@ -114,8 +114,9 @@ Depending of its type, an _image_ may have an intrinsic dimension, but this is n
 O exemplo a seguir insere uma imagem na página e inclui o texto alternativo para acessibilidade, de forma que ele possa ser lido por programas leitores de tela ou exibido caso a imagem não carregue.
 
 ```html
-<img src="https://developer.mozilla.org/static/img/favicon144.png"
-     alt="MDN logo">
+<img
+  src="https://developer.mozilla.org/static/img/favicon144.png"
+  alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -126,8 +127,9 @@ Esse exemplo mostra como transformar uma imagem em um link. Para isso, insira a 
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="https://developer.mozilla.org/static/img/favicon144.png"
-       alt="Visit the MDN site">
+  <img
+    src="https://developer.mozilla.org/static/img/favicon144.png"
+    alt="Visit the MDN site" />
 </a>
 ```
 
@@ -144,9 +146,10 @@ As imagens exibidas dependerão do tipo de tela.
 **`srcset`** define o conjunto de imagens que nós iremos permitir ao navegador escolher, e qual tamanho cada imagem tem.
 
 ```html
- <img src="mdn-logo-sm.png"
-      alt="MD Logo"
-      srcset="mdn-logo-HD.png 2x, mdn-logo-small.png 15w, mdn-banner-HD.png 100w 2x" />
+<img
+  src="mdn-logo-sm.png"
+  alt="MD Logo"
+  srcset="mdn-logo-HD.png 2x, mdn-logo-small.png 15w, mdn-banner-HD.png 100w 2x" />
 ```
 
 Antes de cada vírgula nós escrevemos:
@@ -164,13 +167,13 @@ O valor do atributo `alt` deve descrever de maneira clara e concisa o conteúdo 
 #### Evite
 
 ```html example-bad
-<img alt="imagem" src="penguin.jpg">
+<img alt="imagem" src="penguin.jpg" />
 ```
 
 #### Prefira
 
 ```html example-good
-<img alt="Um pinguim-saltador-da-rocha em pé numa praia." src="penguin.jpg">
+<img alt="Um pinguim-saltador-da-rocha em pé numa praia." src="penguin.jpg" />
 ```
 
 Quando o atributo `alt` não estiver presente em uma imagem, alguns programas leitores de tela vão narrar o nome do arquivo da imagem em seu lugar, o que pode ser confuso caso o nome do arquivo não seja representativo do conteúdo da imagem.
@@ -193,11 +196,7 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 ## Especificações
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'embedded-content-1.html#the-img-element', '&lt;img&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                     | {{Spec2('HTML4.01')}}     |         |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 

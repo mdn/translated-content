@@ -15,7 +15,7 @@ slug: Web/CSS/border-inline-color
 
 ```css
 border-inline-color: yellow;
-border-inline-color: #F5F6F7;
+border-inline-color: #f5f6f7;
 
 /* グローバル値 */
 border-inline-color: inherit;

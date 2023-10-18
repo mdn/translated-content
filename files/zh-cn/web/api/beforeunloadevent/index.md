@@ -60,7 +60,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## 参见
 
-- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)
 - [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)
 - [`load`](/zh-CN/docs/Web/API/Window/load_event)
 - [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)

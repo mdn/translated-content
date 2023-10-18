@@ -1,6 +1,7 @@
 ---
 title: applet
 slug: orphaned/Web/HTML/Element/applet
+original_slug: Web/HTML/Element/applet
 ---
 
 ### Definición

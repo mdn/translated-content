@@ -35,7 +35,8 @@ l10n:
 
 ```html
 <p>
-  物理学の中でもっとも有名な等式の一つが、 <var>E</var>=<var>m</var><var>c</var><sup>2</sup> です。
+  物理学の中でもっとも有名な等式の一つが、 <var>E</var>=<var>m</var><var>c</var
+  ><sup>2</sup> です。
 </p>
 ```
 

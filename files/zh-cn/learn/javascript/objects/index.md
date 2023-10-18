@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Objects
 
 详细了解 JavaScript 对象之前，你应当已经对 JavaScript 基础有所熟悉。尝试这个模块之前，请通读 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps) 和 [JavaScript 基础要件](/zh-CN/docs/Learn/JavaScript/Building_blocks)
 
-> **备注：** 如果您无法在当前使用的电脑/平板/其他设备上创建自己的文件，可以使用在线编程网站如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)，来试验文章中的（大多数）代码。
+> **备注：** 如果你无法在当前使用的电脑/平板/其他设备上创建自己的文件，可以使用在线编程网站如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)，来试验文章中的（大多数）代码。
 
 ## 指南
 

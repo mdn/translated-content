@@ -38,7 +38,7 @@ document.body.addEventListener("click", hide, false);
 ```
 
 > **メモ:** イベント処理中*だけ* `event.currentTarget` の値は利用可能です。
-> もし {{DOMxRef("console.log()")}} で `event` オブジェクトを変数に格納し、コンソールで `currentTarget` キーを探すと、その値は `null` となります。<br/>
+> もし {{DOMxRef("console.log()")}} で `event` オブジェクトを変数に格納し、コンソールで `currentTarget` キーを探すと、その値は `null` となります
 > `console.log(event.currentTarget)` を使ってコンソールで表示するか、 [`debugger`](/ja/docs/Web/JavaScript/Reference/Statements/debugger) 文を使ってコードの実行を一時停止し、 `event.currentTarget` の値を表示させる必要があります。
 
 ## 仕様書

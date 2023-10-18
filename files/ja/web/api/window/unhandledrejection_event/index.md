@@ -48,7 +48,7 @@ slug: Web/API/Window/unhandledrejection_event
 この例では、処理されなかった Promise の拒否についての情報を単純にコンソールにログ出力します。
 
 ```js
-window.addEventListener("unhandledrejection", event => {
+window.addEventListener("unhandledrejection", (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
 ```
@@ -56,7 +56,7 @@ window.addEventListener("unhandledrejection", event => {
 イベントハンドラープロパティを使用して、イベントリスナーを設定することもできます。
 
 ```js
-window.onunhandledrejection = event => {
+window.onunhandledrejection = (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
 ```
@@ -66,7 +66,7 @@ window.onunhandledrejection = event => {
 ({{Glossary("Node.js")}} など) 多くの環境では、既定では処理されなかった Promise の拒否はコンソールに報告されます。 `unhandledrejection` イベントのハンドラー — と、さらに実行したいその他のタスク — を追加して、 {{domxref("Event.preventDefault()", "preventDefault()")}} を呼び出すことでイベントをキャンセルし、実行時のログ出力コードが扱われるまでバブリングすることを防ぐことができます。 これは `unhandledrejection` がキャンセル可能であるためです。
 
 ```js
-window.addEventListener('unhandledrejection', function (event) {
+window.addEventListener("unhandledrejection", function (event) {
   // ...your code here to handle the unhandled rejection...
 
   // Prevent the default handling (such as outputting the

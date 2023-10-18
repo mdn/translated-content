@@ -7,6 +7,7 @@ on:
     paths:
       - .nvmrc
       - .markdownlint-cli2.jsonc
+      - "**/.markdownlint.jsonc"
       - package.json
       - yarn.lock
       - .github/workflows/markdown-lint.yml
@@ -14,10 +15,12 @@ on:
 
 jobs:
   docs:
+    # do not run on forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3

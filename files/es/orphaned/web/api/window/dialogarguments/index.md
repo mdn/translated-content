@@ -1,6 +1,7 @@
 ---
 title: Window.dialogArguments
 slug: orphaned/Web/API/Window/dialogArguments
+original_slug: Web/API/Window/dialogArguments
 ---
 
 {{APIRef}}

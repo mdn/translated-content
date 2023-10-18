@@ -2,6 +2,7 @@
 title: DataView.prototype.setInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
 ---
+
 {{JSRef}}Метод **`setInt16()`** содержит 16-битное целое (short) значение в байте, смещённым по указанному числу от начала {{jsxref("DataView")}}.{{EmbedInteractiveExample("pages/js/dataview-setint16.html")}}
 
 ## Синтаксис

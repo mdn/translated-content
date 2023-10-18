@@ -13,7 +13,7 @@ slug: Web/CSS/At-rule
 
 ```css
 /* 一般的な構造 */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* 例: ブラウザーに UTF-8 文字セットを使用することを知らせる */
 @charset "utf-8";
@@ -28,8 +28,7 @@ slug: Web/CSS/At-rule
 ### 入れ子
 
 ```css
-@IDENTIFIER (RULE) {
-
+@identifier (RULE) {
 }
 ```
 

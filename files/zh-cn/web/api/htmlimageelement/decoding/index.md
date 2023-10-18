@@ -22,7 +22,7 @@ imgElem.decoding = refStr;
 
 ## Usage notes
 
-`decoding` 属性使您可以控制是否允许浏览器尝试异步加载图像。如果这样做会引起问题，您可指定值为 `sync` 禁止异步加载。异步加载对 {{HTMLElement("img")}} 元素很有用，对屏幕外的图像对象可能会更有用。
+`decoding` 属性使你可以控制是否允许浏览器尝试异步加载图像。如果这样做会引起问题，你可指定值为 `sync` 禁止异步加载。异步加载对 {{HTMLElement("img")}} 元素很有用，对屏幕外的图像对象可能会更有用。
 
 ## Examples
 

@@ -24,7 +24,7 @@ catch(onRejected)
 
 ### 返回值
 
-返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定状态。如果 `onRejected` 方法抛出了一个错误或者返回了一个被拒绝的 promise， 那么这个新的 promise 也会被拒绝；否则它最终会被兑现。
+返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定状态。如果 `onRejected` 方法抛出了一个错误或者返回了一个被拒绝的 promise，那么这个新的 promise 也会被拒绝；否则它最终会被兑现。
 
 ## 描述
 
@@ -53,7 +53,7 @@ catch(onRejected)
 // 对已经解决的 Promise 调用 catch
 Promise.resolve().catch(function XXX() {});
 
-// 输出:
+// 输出：
 // 在 Promise{} 上调用 .catch，参数为：Arguments{1} [0: function XXX()]
 // 在 Promise{} 上调用 .then，参数为：Arguments{2} [0: undefined, 1: function XXX()]
 ```

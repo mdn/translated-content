@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```js
- myStyleSheet.type = 'text/css';
+myStyleSheet.type = "text/css";
 ```
 
 ## 仕様書

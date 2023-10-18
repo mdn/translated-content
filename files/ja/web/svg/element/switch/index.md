@@ -38,19 +38,19 @@ slug: Web/SVG/Element/switch
 
 ```html
 <svg viewBox="0 -20 100 50">
-   <switch>
-      <text systemLanguage="ar">مرحبا</text>
-      <text systemLanguage="de,nl">Hallo!</text>
-      <text systemLanguage="en-us">Howdy!</text>
-      <text systemLanguage="en-gb">Wotcha!</text>
-      <text systemLanguage="en-au">G'day!</text>
-      <text systemLanguage="en">Hello!</text>
-      <text systemLanguage="es">Hola!</text>
-      <text systemLanguage="fr">Bonjour!</text>
-      <text systemLanguage="ja">こんにちは</text>
-      <text systemLanguage="ru">Привет!</text>
-      <text>☺</text>
-   </switch>
+  <switch>
+    <text systemLanguage="ar">مرحبا</text>
+    <text systemLanguage="de,nl">Hallo!</text>
+    <text systemLanguage="en-us">Howdy!</text>
+    <text systemLanguage="en-gb">Wotcha!</text>
+    <text systemLanguage="en-au">G'day!</text>
+    <text systemLanguage="en">Hello!</text>
+    <text systemLanguage="es">Hola!</text>
+    <text systemLanguage="fr">Bonjour!</text>
+    <text systemLanguage="ja">こんにちは</text>
+    <text systemLanguage="ru">Привет!</text>
+    <text>☺</text>
+  </switch>
 </svg>
 ```
 

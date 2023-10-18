@@ -4,6 +4,8 @@ on:
 
 jobs:
   triage:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v4

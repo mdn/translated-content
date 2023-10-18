@@ -44,13 +44,7 @@ Depois de completar a terceira passagem, a condição n < 3 não é mais verdade
 
 ## Especificações
 
-| Specification                                                      | Status               | Comment           |
-| ------------------------------------------------------------------ | -------------------- | ----------------- |
-| {{SpecName('ESDraft', '#sec-while-statement', 'while statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-while-statement', 'while statement')}}     | {{Spec2('ES6')}}     |                   |
-| {{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}            | {{Spec2('ES5.1')}}   |                   |
-| {{SpecName('ES3', '#sec-12.6.2', 'while statement')}}              | {{Spec2('ES3')}}     |                   |
-| {{SpecName('ES1', '#sec-12.6.1', 'while statement')}}              | {{Spec2('ES1')}}     | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

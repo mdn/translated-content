@@ -47,7 +47,7 @@ XMLHttpRequest.responseType = type;
 
 ### 同步 XHR 限制
 
-您不能在同步`XMLHttpRequest` 中更改 `responseType` 的值，除非请求属于 {{DOMxRef("Worker")}}。此限制部分旨在帮助确保同步操作不会用于阻塞浏览器主线程的大型事务，从而阻碍用户体验。
+你不能在同步`XMLHttpRequest` 中更改 `responseType` 的值，除非请求属于 {{DOMxRef("Worker")}}。此限制部分旨在帮助确保同步操作不会用于阻塞浏览器主线程的大型事务，从而阻碍用户体验。
 
 XHR 请求默认是异步的；它们仅通过在调用 {{DOMxRef("XMLHttpRequest.open", "open()")}} 时将 `false` 作为可选`async` 参数的值传递来置于同步模式。
 

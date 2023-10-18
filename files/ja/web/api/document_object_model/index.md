@@ -2,7 +2,7 @@
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
 l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -44,7 +44,6 @@ DOM とは何であるか、どのように文書を表現するのかについ�
 - {{DOMxRef("MutationRecord")}}
 - {{DOMxRef("NamedNodeMap")}}
 - {{DOMxRef("Node")}}
-- {{DOMxRef("NodeFilter")}}
 - {{DOMxRef("NodeIterator")}}
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
@@ -234,7 +233,6 @@ SVG のプロパティと属性の定義で使用されるデータタイプの 
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
 - {{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
 - {{DOMxRef("SVGAnimatedString")}}

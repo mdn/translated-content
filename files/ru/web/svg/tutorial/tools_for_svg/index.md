@@ -2,6 +2,7 @@
 title: Работа с SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 Теперь, когда мы рассмотрели основы SVG, мы рассмотрим некоторые инструменты для работы с SVG файлами.

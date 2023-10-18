@@ -27,24 +27,25 @@ slug: Web/API/MediaTrackSupportedConstraints/frameRate
 let result = document.getElementById("result");
 
 if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
-    result.textContent = "Supported!";
+  result.textContent = "Supported!";
 } else {
-    result.textContent = "Not supported!";
+  result.textContent = "Not supported!";
 }
 ```
 
 ### HTML
 
 ```html
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ### CSS
 
 ```css
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

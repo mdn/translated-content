@@ -1,23 +1,27 @@
 ---
 title: ImageBitmap
 slug: Web/API/ImageBitmap
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("Canvas API")}}
 
-The **`ImageBitmap`** interface represents a bitmap image which can be drawn to a {{HTMLElement("canvas")}} without undue latency. It can be created from a variety of source objects using the {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} factory method. `ImageBitmap` provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
+La interfaz **`ImageBitmap`** representa una imagen de mapa de bits que se puede dibujar en un {{HTMLElement("canvas")}} sin una latencia indebida. Se puede crear a partir de una variedad de objetos de origen utilizando el método de fábrica {{domxref("createImageBitmap()")}}. `ImageBitmap` proporciona una vía asíncrona y eficiente en recursos para preparar texturas para renderizar en WebGL.
 
-## Properties
+`ImageBitmap` es un [objeto transferible](/es/docs/Web/API/Web_Workers_API/Transferable_objects).
 
-- {{domxref("ImageBitmap.height")}} {{readonlyInline}}
-  - : Is an `unsigned` `long` representing the height, in CSS pixels, of the `ImageData`.
-- {{domxref("ImageBitmap.width")}} {{readonlyInline}}
-  - : Is an `unsigned` `long` representing the width, in CSS pixels, of the `ImageData`.
+## Propiedades de instancia
 
-## Methods
+- {{domxref("ImageBitmap.height")}} {{ReadOnlyInline}}
+  - : Un `unsigned long` que representa la altura, en píxeles CSS, de `ImageData`.
+- {{domxref("ImageBitmap.width")}} {{ReadOnlyInline}}
+  - : Un `unsigned long` que representa el ancho, en píxeles CSS, de `ImageData`.
+
+## Métodos de instancia
 
 - {{domxref("ImageBitmap.close()")}}
-  - : Disposes of all graphical resources associated with an `ImageBitmap`.
+  - : Elimina todos los recursos gráficos asociados con un `ImageBitmap`.
 
 ## Especificaciones
 
@@ -27,9 +31,9 @@ The **`ImageBitmap`** interface represents a bitmap image which can be drawn to 
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
+- {{domxref("createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
-- {{domxref("OffScreenCanvas.transferToImageBitmap()")}}
+- {{domxref("OffscreenCanvas.transferToImageBitmap()")}}

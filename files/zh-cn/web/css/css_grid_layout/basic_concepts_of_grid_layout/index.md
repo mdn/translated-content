@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 多个元素可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以 CSS 中的**z-index**属性来控制重叠区域显示的优先级。
 
-Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
+Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助你创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
 
 ## 网格容器
 
@@ -200,7 +200,19 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 
 {{ EmbedLiveSample('fr 单位', '220', '180') }}
 
-在下面的这个例子中，我们创建定义了一个`2fr`轨道和两个`1fr`轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
+### 大小不等
+
+在下面的这个例子中，我们创建定义了一个 `2fr` 轨道和两个 `1fr` 轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
 
 ```css
 .wrapper {
@@ -209,7 +221,41 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+{{ EmbedLiveSample('大小不等', '220', '140') }}
+
+### 混合尺寸
+
 在最后这个例子中，我们混合了绝对尺寸的轨道与分数单位轨道。第一个轨道是 500 像素，这个固定宽度被从可用空间中取走。剩下的空间被分为三份，按比例分配给了两个弹性尺寸轨道。
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
 
 ```css
 .wrapper {
@@ -217,6 +263,28 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
   grid-template-columns: 500px 1fr 2fr;
 }
 ```
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+{{ EmbedLiveSample('混合尺寸', '220', '140') }}
 
 ### 在轨道清单中使用 `repeat()`
 

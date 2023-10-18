@@ -133,7 +133,7 @@ try {
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
@@ -149,8 +149,8 @@ class CustomError extends Error {
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e){
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.log(e.foo); //baz
   console.log(e.message); //bazMessage
   console.log(e.stack); //stacktrace
@@ -178,26 +178,25 @@ CustomError.prototype = Object.create(Error.prototype, {
     value: Error,
     enumerable: false,
     writable: true,
-    configurable: true
-  }
+    configurable: true,
+  },
 });
 
-if (Object.setPrototypeOf){
+if (Object.setPrototypeOf) {
   Object.setPrototypeOf(CustomError, Error);
 } else {
   CustomError.__proto__ = Error;
 }
 
-
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e){
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.log(e.foo); //baz
-  console.log(e.message) ;//bazMessage
+  console.log(e.message); //bazMessage
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -3,16 +3,16 @@ title: "HTMLVideoElement: disablePictureInPicture プロパティ"
 short-title: disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 102d404f408633ad0984965020f290245becf684
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLVideoElement")}} の **`disablePictureInPicture`** プロパティは HTML の属性を反映し、ユーザーえーえじぇんとがピクチャインピクチャ機能をユーザーに提案するか、自動的にリクエストするかを示します。
+{{domxref("HTMLVideoElement")}} の **`disablePictureInPicture`** プロパティは HTML の属性を反映し、ピクチャインピクチャ機能が現在の要素で無効になっているかどうかを示します。
 
 ## 値
 
-論理値で、`true` ならばユーザーエージェントがこの機能をユーザーに提案すべきです。
+論理値で、この要素でピクチャインピクチャ機能が無効な場合に `true` となります。これは、ユーザーエージェントがその機能をユーザーに提案したり、自動的にリクエストしたりしないことを意味しています。
 
 ## 仕様書
 

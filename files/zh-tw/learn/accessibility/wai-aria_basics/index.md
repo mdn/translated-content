@@ -105,7 +105,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 ### 路標/地標
 
-WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)給瀏覽器，讓你可以在必要時添加額外的語意值到你網站上的元素。這第一個主要的領域在為螢幕報讀器提供資訊方面非常有用，讓螢幕報讀器的使用者可以找到常見的頁面元素。我們來看個範例 — [網站-無-角色](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)範例([看實際頁面](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/))有以下的結構：
+WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)給瀏覽器，讓你可以在必要時添加額外的語意值到你網站上的元素。這第一個主要的領域在為螢幕報讀器提供資訊方面非常有用，讓螢幕報讀器的使用者可以找到常見的頁面元素。我們來看個範例 — [網站-無-角色](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)範例([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/))有以下的結構：
 
 ```html
 <header>
@@ -143,7 +143,7 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 
 然而，這裡我們可以做得更好，搜尋表單是一個人們想要找到的很重要的地標，但是它並沒有列在地標選項之中或者被視為顯著的地標，除了在實際輸入而被召喚作為搜尋輸入之外(`<input type="search">`)。另外，有些舊的瀏覽器(大部分是指 IE8)無法辨識 HTML5 元素的語意。
 
-讓我們使用一些 ARIA 特徵來改善它。首先，我們將添加一些角色屬性到我們的 HTML 結構。你可以試著複製我們原始的檔案(參見[index.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html)與[style.css](https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css))，或者瀏覽我們的[網站-aria-角色](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles)範例([看實際頁面](http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/))，其結構如下：
+讓我們使用一些 ARIA 特徵來改善它。首先，我們將添加一些角色屬性到我們的 HTML 結構。你可以試著複製我們原始的檔案(參見[index.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html)與[style.css](https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css))，或者瀏覽我們的[網站-aria-角色](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles)範例([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/))，其結構如下：
 
 ```html
 <header>
@@ -191,7 +191,7 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 
 問題在於現代網頁應用程式通常不只是靜態的文字—他們傾向有很多動態更新的內容，例如透過像[XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest), [Fetch](/zh-TW/docs/Web/API/Fetch_API), 或[DOM APIs](/zh-TW/docs/Web/API/Document_Object_Model)等機制更新的內容而不必重新載入全部的頁面。這些有時稱為即時區塊。
 
-我們來看一個簡單的範例—請看 [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) ([看實際頁面](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。本範例中我們有簡單的隨機引言框：
+我們來看一個簡單的範例—請看 [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。本範例中我們有簡單的隨機引言框：
 
 ```html
 <section>
@@ -237,7 +237,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 `aria-atomic="true"`屬性告訴螢幕報讀器以一個原子單位方式讀出完整的元素內容，而不僅只讀出更新的部分。
 
-> **備註：** 你可以查看完成的範例 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([看實際頁面](http://mdn.github.io/learning-area/accessibility/aria/aria-live.html))。
+> **備註：** 你可以查看完成的範例 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html))。
 
 > **備註：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。
 
@@ -268,7 +268,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 </div>
 ```
 
-- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自動地將其應用的該元素轉換為即時區塊，以利讀出它的改變；它也將語意地辨識其為警告訊息(重要時間/內容脈絡敏感資訊)，而呈現以更好、更無障礙的方式向使用者傳遞警告(模態對話框如 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 具有許多無障礙的問題；請參見 WebAIM 的 [Popup Windows](http://webaim.org/techniques/javascript/other#popups))。
+- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自動地將其應用的該元素轉換為即時區塊，以利讀出它的改變；它也將語意地辨識其為警告訊息(重要時間/內容脈絡敏感資訊)，而呈現以更好、更無障礙的方式向使用者傳遞警告(模態對話框如 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 具有許多無障礙的問題；請參見 WebAIM 的 [Popup Windows](https://webaim.org/techniques/javascript/other#popups))。
 - [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 的 all 值指示螢幕報讀器當它任何改變時讀出錯誤清單的內容—例如當錯誤新增或移除時。這個很有用因為使用者會想知道留著的錯誤是甚麼，而不只有知道清單中甚麼是已經新增或移除。
 
 我們可進一步使用我們的 ARIA，並提供更多的驗證協助。如何指出區塊是否需要在第一個位置，以及年齡的範圍應該多少？
@@ -301,13 +301,13 @@ var intervalID = window.setInterval(showQuote, 10000);
      aria-required="true" />
    ```
 
-> **備註：** 你可以查看完成的範例 [form-validation-updated.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html)。
+> **備註：** 你可以查看完成的範例 [form-validation-updated.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html)。
 
-除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA 也能賦予一些進階的表單標籤技術。我們已經談論過使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 [路標/地標](#路標地標) 章節。如果你想要指定一個非`<label>` 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)。更多細節請參見 [WebAIM's Advanced Form Labeling article](http://webaim.org/techniques/forms/advanced) 。
+除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA 也能賦予一些進階的表單標籤技術。我們已經談論過使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 [路標/地標](#路標地標) 章節。如果你想要指定一個非`<label>` 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)。更多細節請參見 [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced) 。
 
 還有許多其他有用的屬性與狀態，用來指出表單元素的狀態。例如， `aria-disabled="true"` 可用於指出表單區域是處於停用的狀態。許多瀏覽器只會跳過停用的表單區塊，並且甚至不會被螢幕報讀器讀出，但在某些情況下，他們可被感知，所以最好包含此屬性讓螢幕報讀器知道停用的輸入事實上即是停用的狀態。
 
-如果輸入的停用狀態可能產生改變，也最好在發生時指出，以及其結果為何。例如，在我們的 [form-validation-checkbox-disabled.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) 展示中，當核取框被核取時，可以讓另一個表單輸入允許輸入更進一步的資訊。我們已經設置一個隱藏的即時區塊：
+如果輸入的停用狀態可能產生改變，也最好在發生時指出，以及其結果為何。例如，在我們的 [form-validation-checkbox-disabled.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) 展示中，當核取框被核取時，可以讓另一個表單輸入允許輸入更進一步的資訊。我們已經設置一個隱藏的即時區塊：
 
 ```html
 <p class="hidden-alert" aria-live="assertive"></p>
@@ -338,7 +338,7 @@ function toggleMusician(bool) {
 
 本課程我們已經談過幾次按鈕、連結或表單元素(參見 HTML 無障礙文章的 [UI controls](/zh-TW/docs/Learn/Accessibility/HTML#UI_controls) ，以及前述[增強鍵盤無障礙](#增強鍵盤無障礙)的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 `tabindex` 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。
 
-但螢幕報讀器的情況如何呢？他們仍然無法將這些元素視為按鈕。如果我們用螢幕報讀器測試我們的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 範例，我們偽造的按鈕將會用句子如 "Click me!, group"讀出，很顯然地令人困惑。
+但螢幕報讀器的情況如何呢？他們仍然無法將這些元素視為按鈕。如果我們用螢幕報讀器測試我們的 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 範例，我們偽造的按鈕將會用句子如 "Click me!, group"讀出，很顯然地令人困惑。
 
 我們可以使用 WAI-ARIA 角色來修正它。請複製 [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)在本機，並且對每個按鈕`<div>`增加 [`role="button"`](https://www.w3.org/TR/wai-aria-1.1/#button) ，範例如下：
 
@@ -356,11 +356,11 @@ function toggleMusician(bool) {
 
 除了標準 HTML 可用外，還有一堆其他[角色](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)可以辨識非語意的元素結構作為一般的使用者介面特徵，例如 [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree)。你可在 [Deque university code library](https://dequeuniversity.com/library/)中找到很多有用的範例，可給你這些控制措施如何做到無障礙的想法。
 
-我們來看看我們自己的範例，我們回到我們簡單的絕對位置頁籤的介面(參見在我們的 CSS 與 JavaScript 無障礙文章中的 [Hiding things](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) )，你可以找到 [頁籤資訊框範例](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)(看[原始碼](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
+我們來看看我們自己的範例，我們回到我們簡單的絕對位置頁籤的介面(參見在我們的 CSS 與 JavaScript 無障礙文章中的 [Hiding things](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) )，你可以找到 [頁籤資訊框範例](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)(看[原始碼](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
 
 本範例以鍵盤無障礙而言運作正常—你可以開心地在不同的頁籤間跳位，並且選擇他們顯示該頁籤的內容，也相當地容易操作—你可以滾動內容並使用標題來導覽，即使你看不到螢幕上正發生的事情。然而內容是甚麼並非很明顯—螢幕報讀器目前以連結的清單報讀內容，以及有三個標題的內容。這樣無法給你了解內容之間的關係。最好給予使用者更多關於內容結構的線索。
 
-為改善這些，我們創建新的範例版本為 [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html) ([看實際頁面](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html))，我們已經更新頁籤介面的結構如下：
+為改善這些，我們創建新的範例版本為 [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html))，我們已經更新頁籤介面的結構如下：
 
 ```html
 <ul role="tablist">

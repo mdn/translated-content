@@ -47,10 +47,6 @@ X-Forwarded-Host: id42.example-cdn.com
 
 현재 어떠한 표준 명세에도 속하지 않는다. 이 헤더의 표준화 버전은 {{HTTPHeader("Forwarded")}} 입니다.
 
-## 브라우저 호환성
-
-{{Compat}}
-
 ## 함께 참고할 내용
 
 - {{HTTPHeader("Host")}}

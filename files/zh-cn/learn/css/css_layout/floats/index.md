@@ -75,7 +75,7 @@ slug: Learn/CSS/CSS_layout/Floats
 </p>
 ```
 
-现在将以下 CSS 应用到您的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css` 文件——由你选择）：
+现在将以下 CSS 应用到你的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css` 文件——由你选择）：
 
 ```css
 body {
@@ -147,7 +147,7 @@ body {
 }
 ```
 
-现在，如果您保存和刷新，你会看到类似下面的东西：
+现在，如果你保存和刷新，你会看到类似下面的东西：
 
 {{EmbedLiveSample('使盒子浮动起来', '100%', 500)}}
 

@@ -143,11 +143,8 @@ Para um exemplo completo de um web site AJAX, veja: [Exemplo de navegação Ajax
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comentário                                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "browsers.html#history", "History")}} | {{Spec2('HTML WHATWG')}} | Nenhuma alteração do {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#history", "History")}}     | {{Spec2('HTML5 W3C')}}     | Definição inicial                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.History")}}
+{{Compat}}

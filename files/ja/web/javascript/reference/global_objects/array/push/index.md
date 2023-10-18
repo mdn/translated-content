@@ -14,9 +14,9 @@ l10n:
 ## 構文
 
 ```js
-push(element0)
-push(element0, element1)
-push(element0, element1, /* … ,*/ elementN)
+push(element0);
+push(element0, element1);
+push(element0, element1, /* … ,*/ elementN);
 ```
 
 ### 引数
@@ -47,8 +47,8 @@ push(element0, element1, /* … ,*/ elementN)
 以下のコードは 2 つの要素を持つ配列 `sports` を生成し、それに 2 つの要素を追加します。コードの実行後、変数 `total` には 4 が入ります。
 
 ```js
-const sports = ['soccer', 'baseball'];
-const total = sports.push('football', 'swimming');
+const sports = ["soccer", "baseball"];
+const total = sports.push("football", "swimming");
 
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total); // 4
@@ -59,8 +59,8 @@ console.log(total); // 4
 この例では{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", "1")}}を使用して、二番目の配列から最初の配列へすべての要素を挿入します。
 
 ```js
-const vegetables = ['parsnip', 'potato'];
-const moreVegs = ['celery', 'beetroot'];
+const vegetables = ["parsnip", "potato"];
+const moreVegs = ["celery", "beetroot"];
 
 // 1 つ目の配列に 2 つ目の配列をマージさせます
 vegetables.push(...moreVegs);
@@ -81,8 +81,8 @@ const obj = {
   length: 0,
 
   addElem(elem) {
-        // obj.length は、要素が追加されるたびに
-        // 自動的に増加する。
+    // obj.length は、要素が追加されるたびに
+    // 自動的に増加する。
     [].push.call(this, elem);
   },
 };

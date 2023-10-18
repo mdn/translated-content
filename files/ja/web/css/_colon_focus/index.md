@@ -27,8 +27,8 @@ input:focus {
 ### HTML
 
 ```html
-<div><input class="red-input" value="フォーカスで赤くなります。"></div>
-<div><input class="blue-input" value="フォーカスで青くなります。"></div>
+<div><input class="red-input" value="フォーカスで赤くなります。" /></div>
+<div><input class="blue-input" value="フォーカスで青くなります。" /></div>
 ```
 
 ### CSS

@@ -445,14 +445,9 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label
-            >First name:
-            <input type="text" name="firstname" /> </label
-          ><br />
-          <label
-            >Last name:
-            <input type="text" name="lastname" />
-          </label>
+          <label>First name: <input type="text" name="firstname" /></label>
+          <br />
+          <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
           <input type="submit" value="Submit" />

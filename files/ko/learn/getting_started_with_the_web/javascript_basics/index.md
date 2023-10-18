@@ -348,4 +348,4 @@ function setUserName() {
 
 여기서, 우리는 자바스크립트의 겉을 살짝 맛봤습니다. 즐겁게 배우셨고, 더 깊게 학습하고 싶으시다면, [JavaScript 안내서](/ko/docs/Learn/JavaScript) 페이지로 가보세요.
 
-{{PreviousNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website")}}
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

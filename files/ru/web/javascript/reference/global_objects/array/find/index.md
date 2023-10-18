@@ -2,6 +2,7 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
+
 {{JSRef}}
 
 ## Сводка

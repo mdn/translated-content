@@ -18,6 +18,7 @@ const varname1 = value1 [, varname2 = value2 [, varname3 = value3 [, ... [, varn
 ```
 
 - `varnameN`
+
   - : Nombre de la constante. Puede ser un identificador legal.
 
 - `valueN`

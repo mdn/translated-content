@@ -529,123 +529,137 @@ do {
 
 만약 실수했다면, 언제나 예제를 "Reset" 버튼으로 리셋할 수 있습니다. 만약 정말로 막혔다면, 답을 보기 위해 "Show solution"을 누르세요.
 
-<div class="hidden"><h6 id="Active_learning">Active learning</h6><pre class="brush: html notranslate">&#x3C;h2>Live output&#x3C;/h2>
-&#x3C;div class="output" style="height: 410px;overflow: auto;">
+###### Active learning
 
-&#x3C;/div>
+```html hidden
+<h2>Live output</h2>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
-&#x3C;h2>Editable code&#x3C;/h2>
-&#x3C;p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).&#x3C;/p>
-&#x3C;textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-let output = document.querySelector('.output');
+<h2>Editable code</h2>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
+<textarea id="code" class="playable-code" style="height: 300px;width: 95%">
+var output = document.querySelector('.output');
 output.innerHTML = '';
 
-// let i = 10;
+// var i = 10;
 
-// const para = document.createElement('p');
+// var para = document.createElement('p');
 // para.textContent = ;
 // output.appendChild(para);
-&#x3C;/textarea>
+</textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+```
 
-</pre><p class="brush: js"></p><p class="brush: js"></p><p class="brush: js"></p><pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
-}</pre><p class="brush: js"></p><p class="brush: js"></p><p class="brush: js"></p><p class="brush: js"></p><pre class="brush: js notranslate">const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-let code = textarea.value;
-let userEntry = textarea.value;
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+var userEntry = textarea.value;
 
 function updateCode() {
-eval(textarea.value);
+  eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = jsSolution;
-solution.value = 'Show solution';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = "Show solution";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Show solution') {
-textarea.value = solutionEntry;
-solution.value = 'Hide solution';
-} else {
-textarea.value = userEntry;
-solution.value = 'Show solution';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
+    textarea.value = solutionEntry;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Show solution";
+  }
+  updateCode();
 });
 
-let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
-let solutionEntry = jsSolution;
+var jsSolution =
+  "var output = document.querySelector('.output');\noutput.innerHTML = '';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n  para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
+var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-let scrollPos = textarea.scrollTop;
-let caretPos = textarea.selectionStart;
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
 
-let front = (textarea.value).substring(0, caretPos);
-let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
-// We only want to save the state when the user code is being shown,
-// not the solution, so that solution is not saved over the user code
-if(solution.value === 'Show solution') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "Show solution") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
-};</pre><p class="brush: js"></p></div>
+  updateCode();
+};
+```
 
 {{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}
 

@@ -30,11 +30,11 @@ regexObj.toString();
 以下の例は {{jsxref("RegExp")}} オブジェクトの文字列の値を表示します。:
 
 ```js
-var myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // logs '/a+b+c/'
+var myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // logs '/a+b+c/'
 
-var foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // logs '/bar/g'
+var foo = new RegExp("bar", "g");
+console.log(foo.toString()); // logs '/bar/g'
 ```
 
 ### 空の正規表現とエスケープ
@@ -44,8 +44,8 @@ ECMAScript 5 以降では、空の正規表現は "/(?:)/" 文字列を返し、
 ```js
 new RegExp().toString(); // "/(?:)/"
 
-new RegExp('\n').toString() === '/\n/';  // true, prior to ES5
-new RegExp('\n').toString() === '/\\n/'; // true, starting with ES5
+new RegExp("\n").toString() === "/\n/"; // true, prior to ES5
+new RegExp("\n").toString() === "/\\n/"; // true, starting with ES5
 ```
 
 ## 仕様書

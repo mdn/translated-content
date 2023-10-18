@@ -2,6 +2,7 @@
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
+
 {{JSRef}}
 
 **`repeat()`** 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.
@@ -29,14 +30,14 @@ str.repeat(count);
 ## 예제
 
 ```js
-'abc'.repeat(-1);   // RangeError
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
-'abc'.repeat(1/0);  // RangeError
+"abc".repeat(-1); // RangeError
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(1 / 0); // RangeError
 
-({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2);
+({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() is a generic method)
 ```
 
@@ -46,41 +47,43 @@ str.repeat(count);
 
 ```js
 if (!String.prototype.repeat) {
-  String.prototype.repeat = function(count) {
-    'use strict';
+  String.prototype.repeat = function (count) {
+    "use strict";
     if (this == null) {
-      throw new TypeError('can\'t convert ' + this + ' to object');
+      throw new TypeError("can't convert " + this + " to object");
     }
-    var str = '' + this;
+    var str = "" + this;
     count = +count;
     if (count != count) {
       count = 0;
     }
     if (count < 0) {
-      throw new RangeError('repeat count must be non-negative');
+      throw new RangeError("repeat count must be non-negative");
     }
     if (count == Infinity) {
-      throw new RangeError('repeat count must be less than infinity');
+      throw new RangeError("repeat count must be less than infinity");
     }
     count = Math.floor(count);
     if (str.length == 0 || count == 0) {
-      return '';
+      return "";
     }
     // Ensuring count is a 31-bit integer allows us to heavily optimize the
     // main part. But anyway, most current (August 2014) browsers can't handle
     // strings 1 << 28 chars or longer, so:
     if (str.length * count >= 1 << 28) {
-      throw new RangeError('repeat count must not overflow maximum string size');
+      throw new RangeError(
+        "repeat count must not overflow maximum string size",
+      );
     }
     var maxCount = str.length * count;
     count = Math.floor(Math.log(count) / Math.log(2));
     while (count) {
-       str += str;
-       count--;
+      str += str;
+      count--;
     }
     str += str.substring(0, maxCount - str.length);
     return str;
-  }
+  };
 }
 ```
 

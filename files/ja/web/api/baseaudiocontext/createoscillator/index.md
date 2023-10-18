@@ -12,7 +12,7 @@ slug: Web/API/BaseAudioContext/createOscillator
 ## 構文
 
 ```js
-createOscillator()
+createOscillator();
 ```
 
 ### 引数
@@ -34,7 +34,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // オシレーターノードを生成する
 var oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // 値をヘルツで指定
 oscillator.connect(audioCtx.destination);
 oscillator.start();

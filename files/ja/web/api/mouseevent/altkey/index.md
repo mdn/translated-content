@@ -25,15 +25,17 @@ l10n:
 ### HTML
 
 ```html
-<p><code>altKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p>
+  <code>altKey</code> プロパティを試験するためにどこかをクリックしてください。
+</p>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `Alt キーの押下状態: ${e.altKey}`;

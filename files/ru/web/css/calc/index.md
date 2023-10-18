@@ -44,9 +44,9 @@ calc(expression)
 ```css
 .banner {
   position: absolute;
-  left: 5%;                 /* для браузеров не поддерживающих calc() */
+  left: 5%; /* для браузеров не поддерживающих calc() */
   left: calc(40px);
-  width: 90%;               /* для браузеров не поддерживающих calc() */
+  width: 90%; /* для браузеров не поддерживающих calc() */
   width: calc(100% - 80px);
   border: solid black 1px;
   box-shadow: 1px 2px;
@@ -72,12 +72,12 @@ calc(expression)
 input {
   padding: 2px;
   display: block;
-  width: 98%;               /* для браузеров, не поддерживающих calc() */
+  width: 98%; /* для браузеров, не поддерживающих calc() */
   width: calc(100% - 1em);
 }
 
 #formbox {
-  width: 130px;             /* для браузеров, не поддерживающих calc() */
+  width: 130px; /* для браузеров, не поддерживающих calc() */
   width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
@@ -89,8 +89,8 @@ input {
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```

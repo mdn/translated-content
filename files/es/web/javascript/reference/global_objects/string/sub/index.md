@@ -26,16 +26,16 @@ Usa el método `sub` junto para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa los métodos `sub` y `sup` para formatear una cadena:
 
 ```js
-var superText="superscript"
-var subText="subscript"
+var superText = "superscript";
+var subText = "subscript";
 
-console.log("Esto es lo que un " + superText.sup() + " parece.")
-console.log("Esto es lo que un " + subText.sub() + " parece.")
+console.log("Esto es lo que un " + superText.sup() + " parece.");
+console.log("Esto es lo que un " + subText.sub() + " parece.");
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:
 
-```html
+```html-nolint
 Esto es lo que <sup>superscript</sup> parece.
 Esto es lo que <sub>subscript</sub> parece.
 ```

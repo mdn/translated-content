@@ -11,6 +11,6 @@ slug: Glossary/Sloppy_mode
 
 常见的，非严格模式——平时我们会称之为正常模式 (**sloppy mode)，**这并不是一个官方说法，但是你会经常见到如上的一些说法，其意义就是指代非严格模式，即正常模式。
 
-## 相关链接
+## 参见
 
 - "[Strict Mode](http://speakingjs.com/es5/ch07.html#strict_mode)"，第七章 ("JavaScript Syntax")，《Speaking _JavaScript》_

@@ -25,16 +25,16 @@ RangeError: Invalid count value (Chrome)
 ### Неверно
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError
+"abc".repeat(-1); // RangeError
 ```
 
 ### Верно
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## Смотрите также

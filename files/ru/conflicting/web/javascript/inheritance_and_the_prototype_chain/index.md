@@ -1,7 +1,6 @@
 ---
 title: Подробнее об объектной модели
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 

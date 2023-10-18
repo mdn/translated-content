@@ -86,14 +86,16 @@ Content-Location: /my-first-blog-post
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+    <label
+      >Who do you want to send the money to?
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label>How much?
-      <input type="number" name="amount">
+    <label
+      >How much?
+      <input type="number" name="amount" />
     </label>
   </p>
 
@@ -118,8 +120,8 @@ Content-Location: /my-receipts/38
 
 ## 仕様書
 
-| 仕様書                                                       | 題名                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| 仕様書                                         | 題名                                                          |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## ブラウザーの互換性

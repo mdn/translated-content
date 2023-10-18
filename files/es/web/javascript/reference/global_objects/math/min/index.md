@@ -33,7 +33,8 @@ Si al menos uno de los argumentos no puede ser convertido a número, el resultad
 Lo siguiente encuentra el mínimo de `x` e `y` y lo asigna a `z`:
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 

@@ -97,8 +97,8 @@ value2
 
 ## 仕様書
 
-| 仕様書               | 題名                                                                                              |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
+| 仕様書          | 題名                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
 | {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
 | {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |

@@ -60,7 +60,7 @@ function sum(a = 1, b = 2) {
 Si la función debe estar en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode), y todo el script o la función adjunta también está bien que esté en modo estricto, puedes mover la directiva `"use strict"` fuera de la función:
 
 ```js example-good
-'use strict';
+"use strict";
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -81,8 +81,8 @@ var sum = function sum([a, b]) {
 Esta se puede convertir a la siguiente expresión:
 
 ```js example-good
-var sum = (function() {
-  'use strict';
+var sum = (function () {
+  "use strict";
   return function sum([a, b]) {
     return a + b;
   };
@@ -105,7 +105,7 @@ Esta se puede convertir a la siguiente expresión:
 
 ```js example-good
 var callback = (() => {
-  'use strict';
+  "use strict";
   return (...args) => {
     return this.run(args);
   };

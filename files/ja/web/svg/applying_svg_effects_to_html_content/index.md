@@ -14,7 +14,11 @@ SVG をスタイルで指定するには、同一文書内または外部のス�
 SVG 効果を CSS スタイルで適用するには、まず最初に 適用する SVG を参照する CSS スタイルを作る必要があります。
 
 ```html
-<style>p { mask: url(#my-mask); }</style>
+<style>
+  p {
+    mask: url(#my-mask);
+  }
+</style>
 ```
 
 上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Global_attributes/id) によってマスクされます。
@@ -27,11 +31,11 @@ SVG 効果を CSS スタイルで適用するには、まず最初に 適用す�
 <svg height="0">
   <mask id="mask-1">
     <linearGradient id="gradient-1" y2="1">
-      <stop stop-color="white" offset="0"/>
-      <stop stop-opacity="0" offset="1"/>
+      <stop stop-color="white" offset="0" />
+      <stop stop-opacity="0" offset="1" />
     </linearGradient>
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/>
-    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)"/>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white" />
+    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)" />
   </mask>
 </svg>
 ```
@@ -53,14 +57,16 @@ p {
 
 ```html
 <p class="target" style="background:lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <em class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</em>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
+  Ut enim ad minim veniam.
 </p>
 ```
 
@@ -74,22 +80,24 @@ p {
 
 ```html
 <p class="target" style="background:lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <em class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</em>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
+  Ut enim ad minim veniam.
 </p>
 
 <button onclick="toggleRadius()">Toggle radius</button>
 
 <svg height="0">
   <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle"/>
-    <rect x="0.5" y="0.2" width="0.5" height="0.8"/>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
+    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
   </clipPath>
 </svg>
 ```
@@ -112,7 +120,7 @@ SVG にリアルタイムで変更を加えることができ、その変更は 
 ```js
 function toggleRadius() {
   var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
+  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
 }
 ```
 
@@ -124,15 +132,17 @@ function toggleRadius() {
 
 ```html
 <p class="target" style="background: lime;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <pre class="target">lorem</pre>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    <em class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</em>
-    Ut enim ad minim veniam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
+  Ut enim ad minim veniam.
 </p>
 ```
 
@@ -141,7 +151,7 @@ function toggleRadius() {
 ```html
 <svg height="0">
   <filter id="f1">
-    <feGaussianBlur stdDeviation="3"/>
+    <feGaussianBlur stdDeviation="3" />
   </filter>
 </svg>
 ```
@@ -151,10 +161,11 @@ function toggleRadius() {
 ```html
 <svg height="0">
   <filter id="f2">
-    <feColorMatrix values="0.3333 0.3333 0.3333 0 0
-                           0.3333 0.3333 0.3333 0 0
-                           0.3333 0.3333 0.3333 0 0
-                           0      0      0      1 0"/>
+    <feColorMatrix
+      values="0.3333 0.3333 0.3333 0 0
+              0.3333 0.3333 0.3333 0 0
+              0.3333 0.3333 0.3333 0 0
+              0      0      0      1 0" />
   </filter>
 </svg>
 ```
@@ -164,20 +175,29 @@ function toggleRadius() {
 ```html
 <svg height="0">
   <filter id="f3">
-    <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+    <feConvolveMatrix
+      filterRes="100 100"
+      style="color-interpolation-filters:sRGB"
+      order="3"
+      kernelMatrix="0 -1 0   -1 4 -1   0 -1 0"
+      preserveAlpha="true" />
   </filter>
   <filter id="f4">
-    <feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white">
-      <fePointLight x="-5000" y="-10000" z="20000"/>
+    <feSpecularLighting
+      surfaceScale="5"
+      specularConstant="1"
+      specularExponent="10"
+      lighting-color="white">
+      <fePointLight x="-5000" y="-10000" z="20000" />
     </feSpecularLighting>
   </filter>
   <filter id="f5">
-    <feColorMatrix values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
+    <feColorMatrix
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 1 0 0 0"
+      style="color-interpolation-filters:sRGB" />
   </filter>
 </svg>
 ```
@@ -185,12 +205,24 @@ function toggleRadius() {
 5 つのフィルターは、次の CSS を用いて適用できます。
 
 ```css
-p.target { filter:url(#f3); }
-p.target:hover { filter:url(#f5); }
-em.target { filter:url(#f1); }
-em.target:hover { filter:url(#f4); }
-pre.target { filter:url(#f2); }
-pre.target:hover { filter:url(#f3); }
+p.target {
+  filter: url(#f3);
+}
+p.target:hover {
+  filter: url(#f5);
+}
+em.target {
+  filter: url(#f1);
+}
+em.target:hover {
+  filter: url(#f4);
+}
+pre.target {
+  filter: url(#f2);
+}
+pre.target:hover {
+  filter: url(#f3);
+}
 ```
 
 {{EmbedLiveSample('Example_Filtering', 650, 200)}}
@@ -204,7 +236,7 @@ pre.target:hover { filter:url(#f3); }
 <svg height="0">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
     </filter>
   </defs>
 </svg>
@@ -213,7 +245,9 @@ pre.target:hover { filter:url(#f3); }
 SVG と CSS のフィルタは、同じクラス内で適用できます。
 
 ```css
-.blur { filter: url(#wherearemyglasses); }
+.blur {
+  filter: url(#wherearemyglasses);
+}
 ```
 
 {{ EmbedLiveSample('Example_Blurred_Text', 300, 100) }}
@@ -228,7 +262,9 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 
 ```html
 <svg height="60" width="200">
-  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">Example text</text>
+  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">
+    Example text
+  </text>
 </svg>
 ```
 
@@ -239,7 +275,9 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 例えば、CSS が `default.css` という名前のファイルであれば、次のようになります。
 
 ```css
-.target { clip-path: url(resources.svg#c1); }
+.target {
+  clip-path: url(resources.svg#c1);
+}
 ```
 
 これで SVG が `resources.svg` という名前のファイルからインポートされ、クリップパスの ID に `c1` が使用されます。

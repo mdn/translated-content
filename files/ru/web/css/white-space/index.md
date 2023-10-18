@@ -77,8 +77,8 @@ code {
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* текущие браузеры */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* текущие браузеры */
 }
 ```
 

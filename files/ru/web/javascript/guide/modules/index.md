@@ -93,7 +93,7 @@ modules/
 Самый простой способ использовать экспорт — поместить конструкцию `export` перед любыми элементами, которые вы хотите экспортировать из модуля, например:
 
 ```js
-export const name = 'square';
+export const name = "square";
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -103,7 +103,7 @@ export function draw(ctx, length, x, y, color) {
     length: length,
     x: x,
     y: y,
-    color: color
+    color: color,
   };
 }
 ```
@@ -122,7 +122,7 @@ export { name, draw, reportArea, reportPerimeter };
 После того, как вы экспортировали некоторые функции из своего модуля, вам необходимо импортировать их в свой скрипт, чтобы иметь возможность использовать их. Самый простой способ сделать это:
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
 Используйте конструкцию {{JSxRef("Statements/import", "import")}}, за которой следует разделенный запятыми список функций, которые вы хотите импортировать, заключённый в фигурные скобки, за которым следует ключевое слово from, за которым следует путь к файлу модуля — путь относительно корня сайта, который для нашего примера `basic-modules` будет равен `/js-examples/modules/basic-modules`.
@@ -150,10 +150,10 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 Следующий пример можно найти в `main.js`, сразу за строками импорта:
 
 ```js
-let myCanvas = create('myCanvas', document.body, 480, 320);
+let myCanvas = create("myCanvas", document.body, 480, 320);
 let reportList = createReportList(myCanvas.id);
 
-let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
+let square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
 reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
@@ -176,9 +176,7 @@ reportPerimeter(square1.length, reportList);
 Вы также можете встроить скрипт модуля непосредственно в HTML-файл, поместив JavaScript-код внутрь `<script>`-элемента:
 
 ```js
-<script type="module">
-  /* код JavaScript модуля */
-</script>
+<script type="module">/* код JavaScript модуля */</script>
 ```
 
 Скрипт, в который вы импортируете функционал модуля, в основном действует как модуль верхнего уровня.
@@ -224,7 +222,7 @@ export default function(ctx) {
 В нашем файле `main.js` мы импортируем функцию по умолчанию, используя эту строку:
 
 ```js
-import randomSquare from './modules/square.js';
+import randomSquare from "./modules/square.js";
 ```
 
 Снова обратите внимание на отсутствие фигурных скобок.
@@ -232,7 +230,7 @@ import randomSquare from './modules/square.js';
 Вышеупомянутая строка является сокращением для:
 
 ```js
-import {default as randomSquare} from './modules/square.js';
+import { default as randomSquare } from "./modules/square.js";
 ```
 
 > **Примечание:** «as» синтаксис для переименования экспортируемых элементов поясняется ниже в разделе [Переименование импорта и экcпорта](#переименование_импорта_и_экспорта).
@@ -254,13 +252,10 @@ import {default as randomSquare} from './modules/square.js';
 
 ```js
 // внутри module.js
-export {
-  function1 as newFunctionName,
-  function2 as anotherNewFunctionName
-};
+export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
 // внутри main.js
-import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
+import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
@@ -268,8 +263,10 @@ import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
 export { function1, function2 };
 
 // внутри main.js
-import { function1 as newFunctionName,
-         function2 as anotherNewFunctionName } from './modules/module.js';
+import {
+  function1 as newFunctionName,
+  function2 as anotherNewFunctionName,
+} from "./modules/module.js";
 ```
 
 Давайте посмотрим на реальный пример. В нашей [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) директории
@@ -285,9 +282,9 @@ export { name, draw, reportArea, reportPerimeter };
 Если бы в `main.js` при их импорте мы попытались использовать
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/circle.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
 ```
 
 то браузер выдал бы ошибку — "SyntaxError: redeclaration of import name" (Firefox).
@@ -295,35 +292,48 @@ import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
 Вместо этого нам нужно переименовать импорт, чтобы он был уникальным:
 
 ```js
-import { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
+import {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+} from "./modules/square.js";
 
-import { name as circleName,
-         draw as drawCircle,
-         reportArea as reportCircleArea,
-         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
+import {
+  name as circleName,
+  draw as drawCircle,
+  reportArea as reportCircleArea,
+  reportPerimeter as reportCirclePerimeter,
+} from "./modules/circle.js";
 
-import { name as triangleName,
-        draw as drawTriangle,
-        reportArea as reportTriangleArea,
-        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
+import {
+  name as triangleName,
+  draw as drawTriangle,
+  reportArea as reportTriangleArea,
+  reportPerimeter as reportTrianglePerimeter,
+} from "./modules/triangle.js";
 ```
 
 Обратите внимание, что вместо этого вы можете решить проблему в файлах модуля, например.
 
 ```js
 // внутри square.js
-export { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter };
+export {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+};
 ```
 
 ```js
 // внутри main.js
-import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from './modules/square.js';
+import {
+  squareName,
+  drawSquare,
+  reportSquareArea,
+  reportSquarePerimeter,
+} from "./modules/square.js";
 ```
 
 И это сработало бы точно так же.
@@ -337,14 +347,14 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
 Для этого используется следующая синтаксическая форма:
 
 ```js
-import * as Module from './modules/module.js';
+import * as Module from "./modules/module.js";
 ```
 
 Эта конструкция берёт все экспорты, доступные внутри `module.js` и делает их доступными в качестве свойств объекта `Module`, фактически давая ему собственное пространство имен. Так например:
 
 ```js
-Module.function1()
-Module.function2()
+Module.function1();
+Module.function2();
 ```
 
 и т.д.
@@ -360,17 +370,17 @@ export { name, draw, reportArea, reportPerimeter };
 С другой стороны, импорт выглядит так:
 
 ```js
-import * as Canvas from './modules/canvas.js';
+import * as Canvas from "./modules/canvas.js";
 
-import * as Square from './modules/square.js';
-import * as Circle from './modules/circle.js';
-import * as Triangle from './modules/triangle.js';
+import * as Square from "./modules/square.js";
+import * as Circle from "./modules/circle.js";
+import * as Triangle from "./modules/triangle.js";
 ```
 
 В каждом случае теперь вы можете получить доступ к импорту модуля под указанным свойством объекта, например:
 
 ```js
-let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
@@ -407,13 +417,13 @@ export { Square };
 Далее в [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js), мы импортируем его так:
 
 ```js
-import { Square } from './modules/square.js';
+import { Square } from "./modules/square.js";
 ```
 
 А затем используем импортированный класс, чтобы нарисовать наш квадрат:
 
 ```js
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
@@ -426,8 +436,8 @@ square1.reportPerimeter();
 Это возможно с использованием следующего синтаксиса экспорта в родительском модуле:
 
 ```js
-export * from 'x.js'
-export { name } from 'x.js'
+export * from "x.js";
+export { name } from "x.js";
 ```
 
 Для примера посмотрите на нашу директорию [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation).
@@ -456,9 +466,9 @@ export { Square };
 Внутри [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js), мы добавляем следующие строки:
 
 ```js
-export { Square } from './shapes/square.js';
-export { Triangle } from './shapes/triangle.js';
-export { Circle } from './shapes/circle.js';
+export { Square } from "./shapes/square.js";
+export { Triangle } from "./shapes/triangle.js";
+export { Circle } from "./shapes/circle.js";
 ```
 
 Они берут экспорт из отдельных подмодулей и фактически делают их доступными из модуля `shape.js`.
@@ -468,15 +478,15 @@ export { Circle } from './shapes/circle.js';
 Итак, теперь в файле `main.js` мы можем получить доступ ко всем трём классам модулей, заменив:
 
 ```js
-import { Square } from './modules/square.js';
-import { Circle } from './modules/circle.js';
-import { Triangle } from './modules/triangle.js';
+import { Square } from "./modules/square.js";
+import { Circle } from "./modules/circle.js";
+import { Triangle } from "./modules/triangle.js";
 ```
 
 на единственную строку кода:
 
 ```js
-import { Square, Circle, Triangle } from './modules/shapes.js';
+import { Square, Circle, Triangle } from "./modules/shapes.js";
 ```
 
 ## Динамическая загрузка модулей
@@ -489,10 +499,9 @@ import { Square, Circle, Triangle } from './modules/shapes.js';
 Данный вызов возвращает {{JSxRef("Promise")}}, который резолвится объектом модуля (см. [Создание объекта модуля](#Создание_объекта_модуля)), предоставляя вам доступ к экспорту указанного модуля, например:
 
 ```js
-import('./modules/myModule.js')
-  .then((module) => {
-    // делаем что-то с функционалом из импортированного модуля
-  });
+import("./modules/myModule.js").then((module) => {
+  // делаем что-то с функционалом из импортированного модуля
+});
 ```
 
 Давайте посмотрим на пример.
@@ -505,19 +514,26 @@ import('./modules/myModule.js')
 Далее в `main.js` мы взяли ссылку на каждую кнопку, используя вызов [`document.querySelector()`](/ru/docs/Web/API/Document/querySelector):
 
 ```js
-let squareBtn = document.querySelector('.square');
+let squareBtn = document.querySelector(".square");
 ```
 
 Затем мы добавляем обработчик событий на каждую кнопку, чтобы при нажатии соответствующий модуль динамически загружался и использовался для рисования фигуры:
 
 ```js
-squareBtn.addEventListener('click', () => {
-  import('./modules/square.js').then((Module) => {
-    let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+squareBtn.addEventListener("click", () => {
+  import("./modules/square.js").then((Module) => {
+    let square1 = new Module.Square(
+      myCanvas.ctx,
+      myCanvas.listId,
+      50,
+      50,
+      100,
+      "blue",
+    );
     square1.draw();
     square1.reportArea();
     square1.reportPerimeter();
-  })
+  });
 });
 ```
 

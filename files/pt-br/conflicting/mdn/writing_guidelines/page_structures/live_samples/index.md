@@ -1,7 +1,6 @@
 ---
 title: Como criar um exercício de aprendizado interativo
 slug: conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
-original_slug: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
 
 {{MDNSidebar}}

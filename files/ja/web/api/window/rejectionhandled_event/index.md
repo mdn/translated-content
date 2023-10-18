@@ -35,9 +35,13 @@ slug: Web/API/Window/rejectionhandled_event
 `rejectionhandled` イベントを使用して、拒否された Promise を、拒否された理由を添えてコンソールに出力することができます。
 
 ```js
-window.addEventListener("rejectionhandled", event => {
-  console.log("Promise rejected; reason: " + event.reason);
-}, false);
+window.addEventListener(
+  "rejectionhandled",
+  (event) => {
+    console.log("Promise rejected; reason: " + event.reason);
+  },
+  false,
+);
 ```
 
 ## 仕様書

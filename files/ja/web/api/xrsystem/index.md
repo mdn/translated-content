@@ -37,8 +37,7 @@ _`XRSystem` インターフェイスには、親インターフェイスであ�
 ```js
 if (navigator.xr) {
   immersiveButton.addEventListener("click", onButtonClicked);
-  navigator.xr.isSessionSupported('immersive-vr')
-  .then((isSupported) => {
+  navigator.xr.isSessionSupported("immersive-vr").then((isSupported) => {
     if (isSupported) {
       immersiveButton.disabled = false;
     } else {
@@ -49,15 +48,13 @@ if (navigator.xr) {
 
 function onButtonClicked() {
   if (!xrSession) {
-    navigator.xr.requestSession('immersive-vr')
-    .then((session) => {
+    navigator.xr.requestSession("immersive-vr").then((session) => {
       // onSessionStarted() not shown for reasons of brevity and clarity.
       onSessionStarted(session);
     });
   } else {
     // Shut down the already running XRSession
-    xrSession.end()
-    .then(() => {
+    xrSession.end().then(() => {
       // Since there are cases where the end event is not sent, call the handler here as well.
       onSessionEnded();
     });

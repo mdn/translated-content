@@ -9,8 +9,6 @@ slug: Web/HTML/Element/track
 
 {{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -54,9 +52,9 @@ slug: Web/HTML/Element/track
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("default")}}
+- `default`
   - : 사용자 설정이 다른 자막을 가리키지 않는다면 활성화할 기본 트랙을 나타냅니다. 하나의 미디어 요소 당 하나의 `<track>` 요소에만 사용할 수 있습니다.
-- {{htmlattrdef("kind")}}
+- `kind`
 
   - : 텍스트 트랙의 종류. 생략할 경우 `subtitles`로 간주합니다. 유효하지 않은 값을 가진 경우 `metadata`로 간주합니다. (Chrome 52 미만에서는 `subtitles`) 가능한 키워드는 다음과 같습니다.
 
@@ -84,11 +82,11 @@ slug: Web/HTML/Element/track
 
       - 트랙을 스크립트가 사용합니다. 사용자에게 보이지 않습니다.
 
-- {{htmlattrdef("label")}}
+- `label`
   - : 사용자가 읽을 수 있는 형태의 텍스트 트랙 제목. 브라우저에서 사용 가능한 트랙의 이름 목록을 생성할 때 사용합니다.
-- {{htmlattrdef("src")}}
+- `src`
   - : 자막의 주소(`.vtt` 파일). 유효한 {{glossary("URL")}}이어야 합니다. 필수 특성이며, `<track>`의 부모 {{htmlelement("audio")}}/{{htmlelement("video")}} 요소에 [`crossorigin`](/ko/docs/Web/HTML/CORS_settings_attributes) 특성이 없다면 문서와 같은 {{glossary("origin", "출처")}}여야 합니다.
-- {{htmlattrdef("srclang")}}
+- `srclang`
   - : 텍스트 트랙의 언어. 유효한 [IETF 언어 태그](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8)여야 합니다. `kind` 특성이 `subtitle`인 경우 필수 항목입니다.
 
 ## 사용 일람

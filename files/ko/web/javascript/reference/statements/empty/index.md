@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Statements/Empty
 
 ## 구문
 
-```js
-    ;
+```js-nolint
+;
 ```
 
 ## 설명
@@ -27,32 +27,28 @@ empty statement은 JavaScript구문에 하나가 필요할 때 어떤 문도 실
 var arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
+for (i = 0; i < arr.length; arr[i++] = 0 /* empty statement */);
 
-console.log(arr)
+console.log(arr);
 // [0, 0, 0]
 ```
 
 **참고:** 정상적인 세미 콜론을 구분하는 것이 그리 쉽지 않기 때문에, empty statement를 사용할 때는 의도적으로 주석을 달아주는것이 좋습니다. 다음 예 에서는 의도한대로 코드가 동작하지 않을것입니다. 아마도 killTheUniverse()를 if문 안에서 실행하고자 했던것 같습니다.
 
-```js
+```js-nolint example-bad
 if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
 ```
 
 다른 예 : 중괄호 ({})가없는 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 문에서 `three`가 `true`이면 아무 일도 일어나지 않고 `four`를 건너 뛰고 else case의 launchRocket() 함수도 실행되지 않습니다.
 
-```js
-if (one)
-  doOne();
-else if (two)
-  doTwo();
-else if (three)
-  ; // nothing here
+```js-nolint
+if (one) doOne();
+else if (two) doTwo();
+else if (three); // nothing here
 else if (four)
   doFour();
-else
-  launchRocket();
+else launchRocket();
 ```
 
 ## 명세서

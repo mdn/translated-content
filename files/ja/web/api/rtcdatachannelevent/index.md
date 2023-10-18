@@ -33,7 +33,7 @@ pc.ondatachannel = (event) => {
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 データチャンネルを使用する、より完全な別の例は、[単純な RTCDataChannel の例](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)を参照してください。

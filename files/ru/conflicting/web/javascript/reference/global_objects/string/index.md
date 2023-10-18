@@ -1,9 +1,6 @@
 ---
 title: ByteString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Строки
-translation_of: Web/API/ByteString
 original_slug: Web/API/ByteString
 ---
 
@@ -13,9 +10,7 @@ original_slug: Web/API/ByteString
 
 ## Спецификации
 
-| Спецификация                                                             | Статус                   | Комментарии             |
-| ------------------------------------------------------------------------ | ------------------------ | ----------------------- |
-| {{SpecName('WebIDL', '#idl-ByteString', 'ByteString')}} | {{Spec2('WebIDL')}} | Изначальное определение |
+{{Specifications}}
 
 ## Смотрите также
 

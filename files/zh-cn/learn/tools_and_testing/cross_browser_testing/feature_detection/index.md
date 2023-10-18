@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
           href="/zh-CN/docs/Learn/CSS"

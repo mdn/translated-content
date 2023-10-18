@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('open', (event) => { });
+addEventListener("open", (event) => {});
 
-onopen = (event) => { };
+onopen = (event) => {};
 ```
 
 ## イベント型
@@ -28,10 +28,10 @@ onopen = (event) => { };
 ## 例
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 
 // addEventListener version
-evtSource.addEventListener('open', (e) => {
+evtSource.addEventListener("open", (e) => {
   console.log("The connection has been established.");
 });
 

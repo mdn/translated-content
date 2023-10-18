@@ -2,6 +2,7 @@
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка

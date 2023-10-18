@@ -67,7 +67,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGTSpanElement`](/zh-CN/DOM/SVGTSpanElement)接口。
+该元素实现了 [`SVGTSpanElement`](/zh-CN/DOM/SVGTSpanElement) 接口。
 
 ## 浏览器兼容性
 

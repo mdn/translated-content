@@ -28,7 +28,7 @@ El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá 
 
 ```js
 var proto = {};
-var obj= Object.create(proto);
+var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 ```
 

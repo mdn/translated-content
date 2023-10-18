@@ -150,7 +150,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
 ## 捕获媒体流
 
-一旦`getUserMedia`成功创建了媒体流，您可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到[Blob](/zh-CN/docs/Web/API/Blob)。
+一旦`getUserMedia`成功创建了媒体流，你可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到[Blob](/zh-CN/docs/Web/API/Blob)。
 
 ```js
 var mediaRecorder = new MediaRecorder(stream);

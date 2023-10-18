@@ -49,7 +49,7 @@ _No change._
 
 _No change._
 
-## 相关链接
+## 参见
 
 - [Site Compatibility for Firefox 33](/zh-CN/docs/Mozilla/Firefox/Releases/33/Site_Compatibility)
 

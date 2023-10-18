@@ -10,7 +10,7 @@ slug: Web/API/Window/locationbar
 ## 構文
 
 ```js
-objRef = window.locationbar
+objRef = window.locationbar;
 ```
 
 ## 例
@@ -18,20 +18,19 @@ objRef = window.locationbar
 次の HTML の完全な例は、 `locationbar` オブジェクトの `visible` プロパティの使用方法を示しています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>様々な DOM テスト</title>
 
-<script>
-var visible = window.locationbar.visible;
-</script>
-
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
+    <script>
+      var visible = window.locationbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>様々な DOM テスト</p>
+  </body>
 </html>
 ```
 

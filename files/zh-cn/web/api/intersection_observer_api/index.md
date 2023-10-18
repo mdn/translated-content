@@ -29,9 +29,9 @@ Intersection Observer API 允许你配置一个回调函数，当以下情况发
 - 每当目标 (**target**) 元素与设备视窗或者其他指定元素发生交集的时候执行。设备视窗或者其他元素我们称它为根元素或根 (**root**)。
 - Observer 第一次监听目标元素的时候
 
-通常，您需要关注文档最接近的可滚动祖先元素的交集更改，如果元素不是可滚动元素的后代，则默认为设备视窗。如果要观察相对于根 (**root**) 元素的交集，请指定根 (**root**) 元素为`null`。
+通常，你需要关注文档最接近的可滚动祖先元素的交集更改，如果元素不是可滚动元素的后代，则默认为设备视窗。如果要观察相对于根 (**root**) 元素的交集，请指定根 (**root**) 元素为`null`。
 
-无论您是使用视口还是其他元素作为根，API 都以相同的方式工作，只要目标元素的可见性发生变化，就会执行您提供的回调函数，以便它与所需的交叉点交叉。
+无论你是使用视口还是其他元素作为根，API 都以相同的方式工作，只要目标元素的可见性发生变化，就会执行你提供的回调函数，以便它与所需的交叉点交叉。
 
 目标 (**target**) 元素与根 (**root**) 元素之间的交叉度是交叉比 (**intersection ratio**)。这是目标 (**target**) 元素相对于根 (**root**) 的交集百分比的表示，它的取值在 0.0 和 1.0 之间。
 
@@ -53,7 +53,7 @@ let observer = new IntersectionObserver(callback, options);
 
 #### Intersection observer options
 
-传递到 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 构造函数的 `options` 对象，允许您控制观察者的回调函数的被调用时的环境。它有以下字段：
+传递到 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 构造函数的 `options` 对象，允许你控制观察者的回调函数的被调用时的环境。它有以下字段：
 
 - `root`
   - : 指定根 (**root**) 元素，用于检查目标的可见性。必须是目标元素的父级元素。如果未指定或者为`null`，则默认为浏览器视窗。

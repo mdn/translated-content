@@ -2,6 +2,7 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 A interface RTCDataChannel representa um canal de rede que pode ser usado para transferências bidirecionais de dados arbitrários de ponto a ponto. Todo canal de dados está associado a {{domxref("RTCPeerConnection")}}, e cada conexão de pares pode ter até um máximo teórico de 65,534 canais de dados (o limite real pode variar de navegador para navegador).
@@ -29,13 +30,11 @@ dc.onclose = function () {
 
 ## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannel', 'RTCDataChannel') }} | {{ Spec2('WebRTC 1.0') }} | Especificação inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.RTCDataChannel")}}
+{{Compat}}
 
 ## Veja também
 

@@ -52,11 +52,11 @@ HTML 仕様書は {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}
 HTML の仕様では、 {{domxref("Event.returnValue")}} を使用する代わりに {{domxref("Event.preventDefault()")}} メソッドを使用する必要があります。ただし、これはすべてのブラウザーで対応しているわけではありません。
 
 ```js
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener("beforeunload", (event) => {
   // Cancel the event as stated by the standard.
   event.preventDefault();
   // Chrome requires returnValue to be set.
-  event.returnValue = '';
+  event.returnValue = "";
 });
 ```
 

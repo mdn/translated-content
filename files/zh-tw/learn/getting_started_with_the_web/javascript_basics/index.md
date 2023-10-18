@@ -58,7 +58,7 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 接著我們來解釋一下 JavaScript 基本特性，以讓您更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果您可以充分理解這些基礎知識，您就可以撰寫程式來創造無限可能！
 
-> **警告：** 在這篇文章中，請您試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果您想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/Learn/Discover_browser_developer_tools)。
+> **警告：** 在這篇文章中，請您試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果您想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Discover_browser_developer_tools)。
 
 ### 變數（Variables）
 
@@ -310,7 +310,7 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope)）
+> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
 
 ### 事件（Events）
 

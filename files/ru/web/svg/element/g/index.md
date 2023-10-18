@@ -2,6 +2,7 @@
 title: <g>
 slug: Web/SVG/Element/g
 ---
+
 {{SVGRef}}
 
 Элемент g используется для группировки других SVG элементов. Любые преобразования применяемые к g элементу наследуются его дочерними элементами. Также g используется для группировки различных элементов, чтобы позднее можно было сослаться на них с помощью {{SVGElement("use")}}.
@@ -13,14 +14,13 @@ slug: Web/SVG/Element/g
 ## Пример
 
 ```html
-<svg viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg">
-   <g stroke="green" fill="white" stroke-width="5">
-     <circle cx="25" cy="25" r="15"/>
-     <circle cx="40" cy="25" r="15"/>
-     <circle cx="55" cy="25" r="15"/>
-     <circle cx="70" cy="25" r="15"/>
-   </g>
+<svg viewBox="0 0 95 50" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="green" fill="white" stroke-width="5">
+    <circle cx="25" cy="25" r="15" />
+    <circle cx="40" cy="25" r="15" />
+    <circle cx="55" cy="25" r="15" />
+    <circle cx="70" cy="25" r="15" />
+  </g>
 </svg>
 ```
 

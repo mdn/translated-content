@@ -2,12 +2,14 @@
 title: "@document"
 slug: Web/CSS/@document
 ---
+
 {{SeeCompatTable}}
 
 **`@document`** [CSS](/ru/docs/Web/CSS) [at-rule](/ru/docs/Web/CSS/At-rule) ограничивает правила стиля, содержащиеся в нем, на основе URL-адреса документа. Он разработан в основном для пользовательских таблиц стилей, хотя он также может использоваться в авторских таблицах стилей.
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }

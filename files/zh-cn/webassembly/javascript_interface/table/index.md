@@ -1,86 +1,61 @@
 ---
-title: WebAssembly.Table()
+title: WebAssembly.Table
 slug: WebAssembly/JavaScript_interface/Table
+l10n:
+  sourceCommit: a8d2b658b3c9e7a98038712f421b3c7ae2320467
 ---
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Table()`** 构造函数根据给定的大小和元素类型创建一个 Table 对象。
+**`WebAssembly.Table`** 是代表 WebAssembly Table 的 JavaScript 包装对象，具有类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
 
-这是一个包装了 WebAssemble Table 的 Javascript 包装对象，具有类数组结构，存储了多个函数引用。在 Javascript 或者 WebAssemble 中创建 Table 对象可以同时被 Javascript 或 WebAssemble 访问和更改。
+> **备注：** Table 对象目前只能存储函数引用，不过在将来可能会被扩展。
 
-> **备注：** Tables 对象目前只能存储函数引用，不过在将来可能会被扩展。
+## 构造函数
 
-## 语法
+- [`WebAssembly.Table()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/Table)
+  - : 创建一个新的 `Table` 对象。
 
-```plain
-var myTable = new WebAssembly.Table(tableDescriptor);
-```
+### 实例属性
 
-### 参数
-
-- _tableDescriptor_
-
-  - : 该对象具有以下属性：
-
-    - _element_
-      - : 一个表明储存在该 Table 中对象的类型。目前只能是： `"anyfunc"` (函数)。
-    - _initial_
-      - : 该 WebAssembly Table 初始大小。
-    - _maximum_ {{optional_inline}}
-      - : 该 WebAssembly Table 允许扩展到的最大大小。
-
-### 异常
-
-- 如果 `tableDescriptor` 不是对象类型，将会抛出 {{jsxref("TypeError")}} 异常。
-- 如果申明了 `maximum` 属性并且比 `initial` 小，将会抛出 {{jsxref("RangeError")}} 异常。
-
-## `Table` Instance
-
-所有`Table`实例都继承自`Table()`构造函数的[原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype)-可以对其进行修改以影响所有`Table`实例。
-
-### Instance 属性
-
-- `Table.prototype.constructor`
-  - : 返回创建该对象实例的函数。默认情况下，这是{{jsxref("WebAssembly.Table()")}} 的构造函数。
-- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+- [`Table.prototype.length`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/length) {{ReadOnlyInline}}
   - : 返回 Table 的长度，即元素数。
 
-### Instance methods
+### 实例方法
 
-- {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}
-  - : Accessor function — gets the element stored at a given index.
-- {{jsxref("WebAssembly/Table/grow","Table.prototype.grow()")}}
-  - : Increases the size of the Table instance by a specified number of elements.
-- {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
-  - : Sets an element stored at a given index to a given value.
+- [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get)
+  - : 访问器函数——获取给定索引下存储的元素。
+- [`Table.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/grow)
+  - : 将 Table 实例的大小增加指定数量的元素。
+- [`Table.prototype.set()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/set)
+  - : 将存储在给定索引中的元素设置为给定值。
 
 ## 示例
 
-The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.
+### 创建一个新的 WebAssembly Table 实例
+
+下面的示例（见 table2.html [源代码](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html)和[实时版本](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)）创建了一个新的 WebAssembly Table 实例，初始大小为 2 个元素。然后，我们打印出表的长度和两个索引的内容（通过 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 检索），以显示长度为 2，且两个元素均为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ```js
-var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length); // "2"
 console.log(tbl.get(0)); // "null"
 console.log(tbl.get(1)); // "null"
 ```
 
-We then create an import object that contains the table:
+然后，我们创建一个包含 Table 的导入对象：
 
 ```js
-var importObj = {
-  js: {
-    tbl: tbl,
-  },
+const importObj = {
+  js: { tbl },
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method. The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/zh-CN/docs/WebAssembly/Exported_functions) which we can call from JS.
+最后，我们使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming) 方法加载并实例化一个 Wasm 模块（table2.wasm）。table2.wasm 模块包含两个函数（一个返回 42，另一个返回 83），并将这两个函数分别存储到导入 Table 的 0 号和 1 号元素中（参见[文本表示](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat)）。因此，在实例化之后，表的长度仍然是 2，但元素中现在包含了可调用的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，可以通过 JS 调用这些函数。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
-  function (obj) {
+  (obj) => {
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());
@@ -88,9 +63,9 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 );
 ```
 
-Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. `get(0)()` rather than `get(0)`) .
+请注意，必须在访问器末尾包含第二个函数调用操作符，才能实际调用引用函数并记录其中存储的值（例如，要使用 `get(0)()` 而不是 `get(0)`）。
 
-This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the wasm instance too.
+该示例显示，我们通过 JavaScript 创建并访问 Table，但在 Wasm 实例中，同样的 Table 也是可见并可调用的。
 
 ## 规范
 
@@ -100,8 +75,8 @@ This example shows that we're creating and accessing the table from JavaScript, 
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
-- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概述页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

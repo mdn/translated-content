@@ -42,9 +42,7 @@ theBigDay.setYear(2000);
 
 ## Especificações
 
-| Especificação                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setyear', 'Date.prototype.setYear')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

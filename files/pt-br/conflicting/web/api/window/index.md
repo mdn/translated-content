@@ -1,7 +1,6 @@
 ---
 title: window.openDialog
 slug: conflicting/Web/API/Window
-original_slug: Web/API/Window/openDialog
 ---
 
 {{ ApiRef() }}

@@ -104,8 +104,8 @@ function localeCompareSupportsLocales() {
 在不同的语言下 `localeCompare()` 所提供的结果是不一致的。为了能让用户得到正确的比较值，通过使用 `locales` 参数来提供要比较的语言（可能还需要设置某些回退语言）：
 
 ```js
-console.log("ä".localeCompare("z", "de")); // 负值：在德语中， ä 排在 z 之前
-console.log("ä".localeCompare("z", "sv")); // 正值：在瑞典语中， ä 排在 z 之后
+console.log("ä".localeCompare("z", "de")); // 负值：在德语中，ä 排在 z 之前
+console.log("ä".localeCompare("z", "sv")); // 正值：在瑞典语中，ä 排在 z 之后
 ```
 
 ### 使用 options

@@ -79,7 +79,7 @@ console.assert(false, "the word is %s", "foo");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

@@ -18,8 +18,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 `species` 속성은 지정된 [형식화 배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_객체) 객체에 대한 형식화 배열 생성자 중 하나인 기본 생성자 함수를 반환합니다.
 
 ```js
-Int8Array[Symbol.species];    // function Int8Array()
-Uint8Array[Symbol.species];   // function Uint8Array()
+Int8Array[Symbol.species]; // function Int8Array()
+Uint8Array[Symbol.species]; // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
 ```
 
@@ -30,7 +30,9 @@ Float32Array[Symbol.species]; // function Float32Array()
 ```js
 class MyTypedArray extends Uint8Array {
   // Overwrite MyTypedArray species to the parent Uint8Array constructor
-  static get [Symbol.species]() { return Uint8Array; }
+  static get [Symbol.species]() {
+    return Uint8Array;
+  }
 }
 ```
 

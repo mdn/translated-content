@@ -15,13 +15,13 @@ slug: Web/CSS/frequency-percentage
 
 ### calc() での使用
 
-許可されている型として `<frequency-percentage>` が指定されているところでは、これはパーセント値が周期として解決されるので、 [`calc()`](/ja/docs/Web/CSS/calc()) の式で利用することができます。
+許可されている型として `<frequency-percentage>` が指定されているところでは、これはパーセント値が周期として解決されるので、 [`calc()`](</ja/docs/Web/CSS/calc()>) の式で利用することができます。
 
 ## 例
 
 ### 有効なパーセント値
 
-``` plain example-good
+```plain example-good
 90% 正のパーセント値
 +90% 先頭に + が付いた正のパーセント値
 -90% 負のパーセント値 — パーセント値を使用するすべてのプロパティで有効とは限らない
@@ -35,7 +35,7 @@ slug: Web/CSS/frequency-percentage
 
 ### 有効な周波数値
 
-``` plain example-good
+```plain example-good
 12Hz     正の整数
 4.3Hz    整数以外
 14KhZ    単位は大文字小文字の区別がないが、 SI 以外の大文字小文字の使い分けは推奨しない。

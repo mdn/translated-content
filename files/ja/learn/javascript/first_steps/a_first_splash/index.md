@@ -1,142 +1,48 @@
 ---
-title: JavaScriptへの最初のダイブ
+title: JavaScript の最初の一歩
 slug: Learn/JavaScript/First_steps/A_first_splash
+l10n:
+  sourceCommit: eab7a9c4c0d4251829e19500fa94865f9b5f56c7
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
-JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。
+JavaScript の理論や何ができるかを学んだところで、実践的なチュートリアルをガイドすることで、単純な JavaScript プログラムを作成するプロセスがどのようなものなのかを解説します。ここでは単純な「数当てゲーム」を手順を追って作っていきます。
 
-| 前提条件: | 基本的なコンピューターの知識および HTML と CSS への理解、JavaScript とは何かを知っている。 |
-| --------- | ------------------------------------------------------------------------------------------ |
-| 目的:     | 簡単な JavaScript を書いてみて、JavaScript のプログラムを書くために必要な知識を会得する。  |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピューターリテラシー、 HTML と CSS の基本的な理解、 JavaScript とは何かを理解していること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        JavaScript を書く最初の経験をし、少なくとも JavaScript プログラムを書くことの基本的な理解を得ること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-ここでは、JavaScript (とその他のプログラミング言語) がどのように動くのかという高度なコンセプトを紹介したいので、一度ですべての詳細を理解する必要はありません。詳細については続く記事にてご紹介しますので！
+ここでは実に明確な目標を設定したいと思います。この記事の終わりまでに JavaScript を習得することや、あなたに依頼するコードをすべて理解することは期待されていません。その代わりに、 JavaScript の機能がどのように連携して動作するのか、 JavaScript を書くことがどのような感じなのか、そのイメージをつかんでもらいたいと思います。この後の記事で、ここで示した機能をすべてさらに詳しく説明しますので、すぐに理解できなくても心配しないでください。
 
-> **メモ:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。
+> **メモ:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、概念は大体同じです。
 
 ## プログラマーのように考える
 
-プログラミングで一番難しいのは、書き方を覚えることではなく、現実の問題にどう適用するかということです。プログラマーのように考え始める必要があります — それは一般的に、そのプログラムが何をしなければならないかという説明を見て、それを満たすためにコードのどんな機能を用いるかを考え、さらにそれを組み合わせていかなければなりません。
+プログラミングで一番難しいのは、書き方を覚えることではなく、現実の問題にどう適用するかということです。プログラマーのように考え始める必要があります。それは一般的に、そのプログラムが何をしなければならないかという説明を見て、それを満たすためにコードのどんな機能を用いるかを考え、さらにそれを組み合わせていかなければなりません。
 
-これには努力・プログラミング文法の経験・練習に加え、少しの想像力が必要です。たくさんコードを書けばもっと慣れていくでしょう。たったの 5 分で「プログラマー脳」を開発することは約束できませんが、このコースを通じてプログラマーのように考えるたくさんの機会を提供したいと思います。
+これには努力、プログラミング構文の経験、練習に加え、多少の想像力が必要です。たくさんコードを書けばもっと慣れていくでしょう。たったの 5 分で「プログラマー脳」を開発することは約束できませんが、このコースを通じてプログラマーのように考えるたくさんの機会を提供したいと思います。
 
 まずはそれを念頭に置いてから、この記事で作るプログラムの実例を見てみましょう。さらにその後、具体的な手順に落とし込む方法について学習しましょう。
 
-## 例: 数字当てゲーム
+## 例: 数当てゲーム
 
 この記事では、以下に示す簡単なゲームを作る方法を紹介します。
 
-```html hidden
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>数字当てゲーム</title>
-    <style>
-        html {
-            font-family: sans-serif;
-        }
-
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
-
-        .lastResult {
-            color: white;
-            padding: 3px;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>数字当てゲーム</h1>
-    <p>1 から 100 までの数字を当ててみて！10 回以内に当てられるでしょうか。選んだ数字が大きいか小さいかを表示します。</p>
-    <div class="form"> <label for="guessField">予想を入力してください: </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="予想を入力" class="guessSubmit"> </div>
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
-    </div>
-</body>
-<script>
-    // JavaScript はここから
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    const guesses = document.querySelector('.guesses');
-    const lastResult = document.querySelector('.lastResult');
-    const lowOrHi = document.querySelector('.lowOrHi');
-    const guessSubmit = document.querySelector('.guessSubmit');
-    const guessField = document.querySelector('.guessField');
-    let guessCount = 1;
-    let resetButton;
-    function checkGuess() {
-      let userGuess = Number(guessField.value);
-      if (guessCount === 1) {
-        guesses.textContent = '前回の予想: ';
-      }
-
-      guesses.textContent += userGuess + ' ';
-
-      if (userGuess === randomNumber) {
-        lastResult.textContent = 'おめでとう! 正解です!';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else if (guessCount === 10) {
-        lastResult.textContent = '!!!ゲームオーバー!!!';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else {
-        lastResult.textContent = '間違いです!';
-        lastResult.style.backgroundColor = 'red';
-        if(userGuess < randomNumber) {
-          lowOrHi.textContent='今の予想は小さすぎです!もっと大きな数字です。' ;
-        } else if(userGuess > randomNumber) {
-          lowOrHi.textContent = '今の予想は大きすぎです!もっと小さな数字です。';
-        }
-      }
-
-      guessCount++;
-      guessField.value = '';
-    }
-
-    guessSubmit.addEventListener('click', checkGuess);
-
-    function setGameOver() {
-      guessField.disabled = true;
-      guessSubmit.disabled = true;
-      resetButton = document.createElement('button');
-      resetButton.textContent = 'Start new game';
-      document.body.appendChild(resetButton);
-      resetButton.addEventListener('click', resetGame);
-    }
-
-    function resetGame() {
-      guessCount = 1;
-      const resetParas = document.querySelectorAll('.resultParas p');
-      for(let i = 0 ; i < resetParas.length ; i++) {
-        resetParas[i].textContent = '';
-      }
-
-      resetButton.parentNode.removeChild(resetButton);
-      guessField.disabled = false;
-      guessSubmit.disabled = false;
-      guessField.value = '';
-      guessField.focus();
-      lastResult.style.backgroundColor = 'white';
-      randomNumber = Math.floor(Math.random() * 100) + 1;
-    }
-</script>
-
-</body>
-</html>
-```
-
-{{ EmbedLiveSample('Top_hidden_code', '100%', 320, "", "", "hide-codepen-jsfiddle") }}
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game", 900, 300)}}
 
 さあ、ゲームで遊んでみてください。次に進む前にゲームに慣れておきましょう。
 
@@ -171,11 +77,11 @@ JavaScript の理論、そしてそれを使ってできることについて学
 
 9. ゲームがもう一度始まったら、画面とロジックが完全にリセットされるようにして、1.に戻る。
 
-さあ、先に進みましょう。この手順をどのようにコードにするのか見て、JavaScript の機能を探求していきましょう。
+さあ、先に進みましょう。この手順をどのようにコードにするのか見て、 JavaScript の機能を探求していきましょう。
 
-### まず初めに
+### 初期設定
 
-チュートリアルを開始するにあたり、自分のコンピューターに [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) ファイル ([こちらでデモが見られます](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)) をコピーしてください。テキストエディターとブラウザーの両方でそのファイルを開いてください。すると、簡単な見出しと説明の段落、予想を入力するフォームが見えるでしょう。ただし、そのフォームはまだ何もできません。
+チュートリアルを開始するにあたり、自分のコンピューターに [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) ファイル（[こちらでデモが見られます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)）をコピーしてください。テキストエディターとブラウザーの両方でそのファイルを開いてください。すると、簡単な見出しと説明の段落、予想を入力するフォームが見えるでしょう。ただし、そのフォームはまだ何もできません。
 
 コードを入力するのはすべて HTML の一番下にある {{htmlelement("script")}} 要素の中です。
 
@@ -185,7 +91,7 @@ JavaScript の理論、そしてそれを使ってできることについて学
 </script>
 ```
 
-### データを保持する変数を追加する
+### データを格納する変数を追加する
 
 始めましょう。まず、{{htmlelement("script")}} 要素の中に以下の内容を書いてみてください。
 
@@ -203,14 +109,18 @@ let guessCount = 1;
 let resetButton;
 ```
 
-上記のコードはプログラムが使用するデータを保持する変数と定数をセットアップしています。変数とは基本的には値 (数字や文字など) の入れ物です。 `let` (か `var`) キーワードに続いて変数の名前を書くことで、変数を作成します (これらのキーワードの違いは[以降の記事](/ja/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let)で見ます) 。定数は変更しない値を保持するのに、 `const` キーワードといっしょに使います。この場合では、定数をユーザーインターフェイスのパーツへの参照を保存するのに使っていて、一部の内部のテキストは変わるかも知れませんが、参照される HTML 要素は同じままです。
+上記の部分のコードは、プログラムが使用するデータを格納する変数と定数をセットアップしています。
 
-等号記号 ( `=` ) に続いて、与えたい値を書いて、変数や定数に値を代入できます。
+変数とは基本的には値（数字やテキストの文字列など）の名前です。 `let` キーワードに続いて変数の名前を書くことで、変数を作成します。
 
-この例では:
+定数も値に名前を付けるために使用しますが、変数とは異なり、一度設定した値を変更することはできません。この用途では、ユーザーインターフェイスの部品への参照を格納するために定数を使用しています。これらの要素の中のテキストは変わるかもしれませんが、それぞれの定数は常に初期化されたのと同じ HTML 要素を参照しています。定数を作成するには、キーワード `const` の後に定数の名前を続けます。
 
-- 最初の変数 ( `randomNumber` ) には数学的なアルゴリズムにより計算された 1 から 100 までのランダムな数字が代入されます。
-- 続く 3 つの変数 ( `guesses`、`lastResult`、`lowOrHi` ) には、以下に示す HTML の段落の場所がそれぞれに保持されます。後ほど段落に値を追加するために使用します。 (すべて`<div>` 要素内にあり、後にゲーム再開時にリセットするのにすべてを選択するのに使われるのに注意してください):
+変数や定数に値を割り当てるには、等号 (`=`) に続けて与えたい値を指定します。
+
+この例では次のことが行われます。
+
+- 最初の変数 (`randomNumber`) には、数学的なアルゴリズムにより計算された 1 から 100 までのランダムな数字が代入されます。
+- 最初の 3 つの定数は、それぞれ HTML の結果の段落への参照を格納するために作られており、後のコードで段落に値を挿入するために使用されます（それらは `<div>` 要素の中にあることに注意してください。この要素は、後でゲームを再開するときに、 3 つすべてを選択してリセットするために使用します）。
 
   ```html
   <div class="resultParas">
@@ -223,14 +133,14 @@ let resetButton;
 - 次の 2 つの定数にはテキスト入力フォームおよび送信ボタンへの参照が保持され、後で予想の送信をコントロールする際に使用されます。
 
   ```html
-  <label for="guessField">予想を入力してください: </label
-  ><input type="text" id="guessField" class="guessField" />
-  <input type="submit" value="予想を投稿" class="guessSubmit" />
+  <label for="guessField">Enter a guess: </label>
+  <input type="number" id="guessField" class="guessField" />
+  <input type="submit" value="Submit guess" class="guessSubmit" />
   ```
 
-- 最後の 2 つの変数はプレイヤーが予想した回数を記録するため 1 を (プレイヤーが何回予想したかの回数を追跡します) 、そしてまだ存在していない(あとで追加する)リセットボタンへの参照を保持します。
+- 最後の 2 つの変数は、プレイヤーが予想した回数を記録するため 1 を（プレイヤーが何回予想したかの回数を追跡します）、そしてまだ存在していない（あとで追加する）リセットボタンへの参照を保持します。
 
-> **メモ:** 変数や定数についてはこのコースの間に、[次の記事](/ja/docs/user:chrisdavidmills/variables)を始めとして何度も出てきます。
+> **メモ:** 変数や定数についてはこのコースの間、[次の記事](/ja/docs/Learn/JavaScript/First_steps/Variables)を始めとして何度も出てきます。
 
 ### 関数
 
@@ -238,7 +148,7 @@ let resetButton;
 
 ```js
 function checkGuess() {
-  alert("ここはプレースホルダです");
+  alert("I am a placeholder");
 }
 ```
 
@@ -246,7 +156,7 @@ function checkGuess() {
 
 関数を実行したい場合には、関数の名前に続いて括弧を書きます。
 
-それでは試してみましょう。コードを保存してブラウザーを再読み込みしてみてください。[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開いてください。そして次のコードを実行します。
+それでは試してみましょう。コードを保存してブラウザーを再読み込みしてみてください。[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を開いてください。そして次のコードを実行します。
 
 ```js
 checkGuess();
@@ -260,7 +170,7 @@ checkGuess();
 
 JavaScript で演算子を使用して値の確認をしたり、計算したり、文字を結合したりなど、いろいろなことができます。
 
-コードを保存してブラウザーを再読み込みしてみてください。まだ開いていなければ、[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開いて、表の「例」の列に書いてある通りに入力してみましょう。例を一つ入力したら、その都度 <kbd>Return</kbd>/<kbd>Enter</kbd> キーを押してください。結果が表示されるはずです。
+コードを保存してブラウザーを再読み込みしてみてください。まだ開いていなければ、[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を開いて、表の「例」の列に書いてある通りに入力してみましょう。例を一つ入力したら、その都度 <kbd>Return</kbd>/<kbd>Enter</kbd> キーを押してください。結果が表示されるはずです。
 
 まずは算術演算子の例を見てください。
 
@@ -271,30 +181,21 @@ JavaScript で演算子を使用して値の確認をしたり、計算したり
 | `*`    | 乗算 | `3 * 7`   |
 | `/`    | 除算 | `10 / 5`  |
 
-また、 `+` 演算子は 2 つの文字を繋げて一つにするときにも使います。(プログラミングでは文字列を*結合*すると言います。) 下の例も試してみてください。
+[複合代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)と呼ばれるもっと短い書き方もあります。すでにある文字列に、さらに文字を追加した結果を返したい場合などに使います。例えば、
 
 ```js
-let name = "ビンゴさん";
-name;
-let hello = "が、こんにちは！と言っています。";
-hello;
-let greeting = name + hello;
-greeting;
+let number1 = 1;
+number1 += 2;
 ```
 
-累算[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)と呼ばれるもっと短い書き方もあります。すでにある文字列に、さらに文字を追加した結果を返したい場合などに使います。例えば、
+これは次のものと同等です。
 
 ```js
-name += "が、こんにちは！と言っています。";
+let number2 = 1;
+number2 = number2 + 2;
 ```
 
-のように書いたとき、次と同じです:
-
-```js
-name = name + "が、こんにちは！と言っています。";
-```
-
-true/false テスト（例えば条件内 - [below](#conditionals)参照）を実行しているとき、[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)を使用します。例えば：
+true/false テスト（例えば条件内 - [下記](#条件式)参照）を実行しているとき、[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators)を使用します。例えば、
 
 <table class="standard-table">
   <thead>
@@ -352,6 +253,28 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
   </thead>
 </table>
 
+### テキスト文字列
+
+文字列はテキストを表すのに使用します。文字列変数はすでに見てきました。以下のコードでは `"I am a placeholder"` が文字列です。
+
+```js
+function checkGuess() {
+  alert("I am a placeholder");
+}
+```
+
+文字列は二重引用符 (`"`) または一重引用符 (`'`) を用いて宣言することができますが、単一の文字列宣言の先頭と末尾には同じ形式を使用する必要があります: `"I am a placeholder `" と書くことはできません。
+
+バックスティック(`` ` ``)を用いて文字列を宣言することもできます。このように宣言された文字列は「テンプレートリテラル」と呼ばれ、いくつかの特別なプロパティがあります。具体的な性質として、文字列の中に他にも変数や発生した式を埋め込むことができます。
+
+```js
+const name = "Mahalia";
+
+const greeting = `Hello ${name}`;
+```
+
+これは文字列を連結する仕組みを提供します。
+
 ### 条件式
 
 先ほどの `checkGuess()` 関数に話を戻します。当然ですが、ただ単にプレースホルダメッセージを出したいわけではありませんよね。この関数にはプレイヤーの予想が正しいかどうかを調べて適切に返事をすることを望みます。
@@ -360,27 +283,28 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
 
 ```js
 function checkGuess() {
-  let userGuess = Number(guessField.value);
+  const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = "前回の予想: ";
+    guesses.textContent = "Previous guesses:";
   }
-  guesses.textContent += userGuess + " ";
+  guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = "おめでとう! 正解です!";
+    lastResult.textContent = "Congratulations! You got it right!";
     lastResult.style.backgroundColor = "green";
     lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = "!!!ゲームオーバー!!!";
+    lastResult.textContent = "!!!GAME OVER!!!";
+    lowOrHi.textContent = "";
     setGameOver();
   } else {
-    lastResult.textContent = "間違いです!";
+    lastResult.textContent = "Wrong!";
     lastResult.style.backgroundColor = "red";
     if (userGuess < randomNumber) {
-      lowOrHi.textContent = "今の予想は小さすぎです!";
+      lowOrHi.textContent = "Last guess was too low!";
     } else if (userGuess > randomNumber) {
-      lowOrHi.textContent = "今の予想は大きすぎです!";
+      lowOrHi.textContent = "Last guess was too high!";
     }
   }
 
@@ -392,17 +316,17 @@ function checkGuess() {
 
 たくさん書きましたね！各部分に分割して、それぞれの部分を詳細に見て何をしているか説明しましょう。
 
-- 関数の最初の行 (上のコードの 2 行目) で、`userGuess` という変数を宣言して、現在のテキストフィールドに入力された値をセットしています。そして、組み込みの `Number()` 関数を呼び出して、テキストフィールドに入力された値が間違いなく数値であることも確認しています。
-- 次に、初めて条件分岐を伴うコードブロックが出てきます (3 行目～ 5 行目)。条件分岐は、条件の判定結果が真 (true) であるかどうかによって、次に実行するコードが変わります。見た目が少しだけ関数に似ていますが、違うものです。条件分岐の最も単純な書き方は `if` キーワードから始まり、括弧が続き、中括弧が続きます。括弧の中には分岐する条件を書きます。条件が `true` となれば、中括弧の中にあるコードが実行されます。条件が `true` にならなければ、中括弧の次のコードまで移動します。今回の条件は `guessCount` 変数が `1` であるかどうかを判定しています。(つまり、プレイヤーの初回の予想かどうかを判定しているのです。)
+- 関数の最初の行（上のコードの 2 行目）で、`userGuess` という変数を宣言して、現在のテキストフィールドに入力された値をセットしています。そして、組み込みの `Number()` 関数を呼び出して、テキストフィールドに入力された値が間違いなく数値であることも確認しています。この変数は変更しないので、 `const` を使用して宣言します。
+- 次に、初めて条件分岐を伴うコードブロックが出てきます。条件分岐は、条件の判定結果が真 (true) であるかどうかによって、次に実行するコードが変わります。見た目が少しだけ関数に似ていますが、違うものです。条件分岐の最も単純な書き方は `if` キーワードから始まり、括弧が続き、中括弧が続きます。括弧の中には分岐する条件を書きます。条件が `true` となれば、中括弧の中にあるコードが実行されます。条件が `true` にならなければ、中括弧の次のコードまで移動します。今回の条件は `guessCount` 変数が `1` であるかどうかを判定しています。（つまり、プレイヤーの初回の予想かどうかを判定しているのです。）
 
   ```js
   guessCount === 1;
   ```
 
-  もしそうなら、`guesses` 段落 ({{htmlelement("p")}}要素) の内容を "`前回の予想:`" に変更します。違うなら、何もしません。
+  もしそうなら、guesses の段落（{{htmlelement("p")}} 要素）の内容を `Previous guesses:` に変更します。違うなら、何もしません。
 
-- 6 行目では、`guesses` 段落の最後にスペースを付けて、現在の `userGuess` 変数の値を追加しています。なので、予想が表示されるときにはスペースで区切られて表示されます。
-- 次の部分 (8 行目～ 24 行目) には、確認すべきことがいくつかあります。
+- 次に、テンプレートリテラルを使用して、現在の `userGuess` 変数の値を空白と共に `guesses` の段落の末尾に追加しています。
+- 次の部分には、確認すべきことがいくつかあります。
 
   - 最初の `if(){ }` は、プレイヤーの予想が、JavaScript のコードの先頭で設定したランダムな数字を格納した `randomNumber` 変数の値と等しいかどうかを調べています。もし等しければ、プレイヤーは正解し勝ちとなるため、祝福のメッセージを素敵な緑色で表示します。さらに、数字の大小を表示する段落をクリアして、後で説明する `setGameOver()` 関数を実行します。
   - 今度は `else if(){ }` という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。
@@ -412,7 +336,7 @@ function checkGuess() {
 
 ### イベント
 
-ここまでで、`checkGuess()` 関数を上手に実装することができました。しかしまだ何も起きません。なぜなら、まだこの関数を呼び出していないからです。出来れば、"予想を入力"のボタンが押されたときに、この関数が呼ばれるようにしたいです。そのためにはイベントを使います。イベントとは、ボタンが押されたり、ページが読み込まれたり、ビデオを再生したりといったブラウザーで起きることで、それに反応してコードを実行させることができます。イベントが発生したことを聞き取る構成が**イベントリスナー**で、発生したイベントに反応して実行されるコードブロックが**イベントハンドラー**です。
+ここまでで、`checkGuess()` 関数を上手に実装することができました。しかしまだ何も起きません。なぜなら、まだこの関数を呼び出していないからです。出来れば、"予想を入力"のボタンが押されたときに、この関数が呼ばれるようにしたいです。そのためにはイベントを使います。イベントとは、ボタンが押されたり、ページが読み込まれたり、ビデオを再生したりといったブラウザーで起きることで、それに反応してコードを実行させることができます。**イベントリスナー**は特定のイベントを監視し、イベントが発生したことに応答して実行するコードブロックである**イベントハンドラー**を呼び出します。
 
 `checkGuess()` 関数の下に、以下の一文を加えましょう。
 
@@ -433,8 +357,8 @@ function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
-  resetButton.textContent = "新しいゲームを始める";
-  document.body.appendChild(resetButton);
+  resetButton.textContent = "Start new game";
+  document.body.append(resetButton);
   resetButton.addEventListener("click", resetGame);
 }
 ```
@@ -450,8 +374,8 @@ function resetGame() {
   guessCount = 1;
 
   const resetParas = document.querySelectorAll(".resultParas p");
-  for (let i = 0; i < resetParas.length; i++) {
-    resetParas[i].textContent = "";
+  for (const resetPara of resetParas) {
+    resetPara.textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
@@ -470,7 +394,7 @@ function resetGame() {
 ちょっと長めのこのコードブロックは、プレイヤーが次のゲームができるように、ゲームを起動したときの状態に完全にリセットします。
 
 - `guessCount` に 1 を代入して元に戻します。
-- 情報段落のすべてを消去します。
+- 情報の段落のテキストをすべて空にします。 `<div class="resultParas"></div>` 内のすべての段落を選択し、それぞれをループして `textContent` を `''` （空文字列）に設定します。
 - リセットボタンをページから削除します。
 - 入力フォームの要素を使用可能にして、新しい予想が入力できるようにテキストフィールドを空にしてフォーカスを設定します。
 - 最終結果を表示している `lastResult` 段落の背景色を消去します。
@@ -480,36 +404,45 @@ function resetGame() {
 
 この記事では、あと少し説明しなければならない大事な機能が残っています。既に見ているはずですが気づいたでしょうか。
 
-### ループ (繰り返し)
+### ループ（繰り返し）
 
-上のコードでもう少し詳しく説明しなければならないのは、[for](/ja/docs/Web/JavaScript/Reference/Statements/for) ループです。ループはプログラミングにおいてとても重要な概念です。ある条件に達するまで何度も何度もコードを繰り返し実行することができます。
+上のコードでもう少し詳しく説明しなければならないのは、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループです。ループはプログラミングにおいてとても重要な概念です。ある条件に達するまで何度も何度もコードを繰り返し実行することができます。
 
-[ブラウザーの開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools) をもう一度開いて次のコードを入力してみましょう。
+[ブラウザーの開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) をもう一度開いて次のコードを入力してみましょう。
 
 ```js
-for (let i = 1; i < 21; i++) {
-  console.log(i);
+const fruits = ["apples", "bananas", "cherries"];
+for (const fruit of fruits) {
+  console.log(fruit);
 }
 ```
 
-どうでしょうか。`1` から `20` の数字がコンソールに出力されましたね。これが繰り返しです。`for` ループには 3 つの入力値 (引数) が必要です。
+どうなりましたか。 `'apples', 'bananas', 'cherries'` の文字列がコンソールに出力されましたね。
 
-1. **初期値**: 上の例では、`i` を 1 からはじめましたが、どんな数字でもかまいません。さらに言えば、`i` という名前でなくともかまいません。ただし、ループでは短くて覚えやすいため、`i` という変数の名前がよく使われることを覚えておいてください。
-2. **条件**: 上の例では `i < 21` をループが継続する条件としました。つまりループは `i` が 21 未満でなくなるまで継続します。`i` が 21 になったらループの実行が終了します。
-3. **増分**: 上の例では増分を `i++` と指定しています。つまり「`i` に 1 を足し」ます。ループは `i` が 21 になるまで(それは 2.の継続条件で説明しましたね) 、`i` の取りうる値について、それぞれ一度ずつ実行されます。今回の例では繰り返しのコードが実行される度に `i` の値を{{domxref("Console.log", "console.log()")}}を使用してコンソールに出力しています。
+これはループのためです。 `const fruits = ['apples', 'bananas', 'cherries'];` の行は配列を作成します。このモジュールの後半で、[配列の完全ガイド](/ja/docs/Learn/JavaScript/First_steps/Arrays)を読み終えてから作業しますが、とりあえず、配列は項目（この場合は文字列）の集合です。
 
-さて、それでは数字当てゲームに登場したループを見てみましょう。`resetGame()` 関数に以下の記述がありますね。
+`for...of` ループは配列でそれぞれの項目を取得し、それに対して JavaScript を実行する方法を提供します。 `for (const fruit of fruits)`という行は次のような意味です。
+
+1. `fruits` の最初の項目を取得する。
+2. その項目を変数 `fruit` に設定し、中括弧 `{}` の間のコードを実行する。
+3. `fruits` の中の次の項目を取得し、`fruits` の末尾に達するまで 2 を繰り返す。
+
+この場合、中括弧の中のコードは `fruit` をコンソールに書き出しています。
+
+さて、それでは数当てゲームに登場したループを見てみましょう。`resetGame()` 関数に以下の記述がありますね。
 
 ```js
 const resetParas = document.querySelectorAll(".resultParas p");
-for (let i = 0; i < resetParas.length; i++) {
-  resetParas[i].textContent = "";
+for (const resetPara of resetParas) {
+  resetPara.textContent = "";
 }
 ```
 
-このコードは `<div class="resultParas">` に含まれるすべての {{htmlelement("p")}} 要素を {{domxref("Document.querySelectorAll", "querySelectorAll()")}} というメソッドを使用して取得しています。そしてループを使用してその一つ一つの要素の中身を消去しています。
+このコードは `<div class="resultParas">` に含まれるすべての段落を、 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} メソッドを使用して取得しています。そしてループを使用してその一つ一つの要素の中身を消去しています。
 
-### オブジェクトについて(簡単に)
+たとえ `resetPara` が定数であっても、`textContent` のような内部プロパティは変更できることに注意してください。
+
+### オブジェクトについての簡単な説明
 
 オブジェクトについて説明する前に、プログラムに対して最後のちょっとした改良を加えてみましょう。JavaScript の書き出しの方にある `let resetButton;` のすぐ下に、以下の行を追記してファイルを保存します。
 
@@ -527,9 +460,9 @@ guessField.focus();
 const guessField = document.querySelector(".guessField");
 ```
 
-この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)) を受け取ります。
+この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクタ](/ja/docs/Learn/CSS/Building_blocks/Selectors)) を受け取ります。
 
-`guessField` に {{htmlelement("input")}} 要素の参照が得られたので、これでたくさんのプロパティ (基本的にはオブジェクトの内部に保持されている変数のことですが、中には値を変えられないものもあります) とメソッド (基本的にはオブジェクトの内部に保持されている関数のこと) にアクセスできるようになりました。ようやく {{htmlelement("input")}} 要素のメソッドの一つである `focus()` メソッドを使ってテキストフィールドにフォーカスを当てられます。
+`guessField` に {{htmlelement("input")}} 要素の参照が得られたので、これでたくさんのプロパティ（基本的にはオブジェクトの内部に保持されている変数のことですが、中には値を変えられないものもあります）とメソッド（基本的にはオブジェクトの内部に保持されている関数のこと）にアクセスできるようになりました。ようやく input 要素のメソッドの一つである `focus()` メソッドを使ってテキストフィールドにフォーカスを当てられます。
 
 ```js
 guessField.focus();
@@ -542,41 +475,32 @@ guessField.focus();
 少しブラウザーが持っているオブジェクトで遊んでみましょう。
 
 1. まずブラウザーでプログラムを開いてください
-2. 次に[開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を開き、JavaScript コンソールのタブが開いたのを確認します
+2. 次に[開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を開き、 JavaScript コンソールのタブが開いたのを確認します
 3. `guessField` と入力してみてください。するとコンソールに {{htmlelement("input")}} 要素を含む変数が表示されます。また、気づいたと思いますが、コンソールは実行中の環境にある変数名を含んだオブジェクト名を自動的に補完しました!
-4. さらに下のように入力してみてください
+4. さらに下のように入力してみてください。
 
    ```js
-   guessField.value = "Hello";
+   guessField.value = 2;
    ```
 
    `value` プロパティは今のテキストフィールドに入力された値を表しています。コマンドを入力したら、テキストフィールドの値が変わりましたね！
 
-5. さらに続けて `guesses` と入力して&#x20;
-
-   <kbd>Return</kbd>
-
-   /
-
-   <kbd>Enter</kbd>
-
-   &#x20;を押します。{{htmlelement("p")}} 要素を含む変数がコンソールに表示されますね。
-
-6. そして次のコードを入力します
+5. さらに続けて `guesses` と入力してリターンを押してみてください。コンソールには {{htmlelement("p")}} 要素を含む変数が表示されますね。
+6. そして次のコードを入力します。
 
    ```js
    guesses.value;
    ```
 
-   コンソールには `undefined` (未定義) という文字が返ってきましたね。`value` というプロパティは {{htmlelement("p")}} 要素にはないためです。
+   コンソールには `undefined` という文字が返ってきましたね。段落には `value` プロパティがないからです。
 
-7. パラグラフ内のテキストを変えたい場合には、{{domxref("Node.textContent", "textContent")}} プロパティを使用する必要があります。こうしてみます
+7. 段落内のテキストを変えたい場合には、 {{domxref("Node.textContent", "textContent")}} プロパティを使用する必要があります。次のようにしてみてください。
 
    ```js
    guesses.textContent = "Where is my paragraph?";
    ```
 
-8. ちょっと遊んでみましょう。下のコードをひとつづつ入力してみてください。
+8. ちょっと遊んでみましょう。下のコードを一つずつ入力してみてください。
 
    ```js
    guesses.style.backgroundColor = "yellow";
@@ -589,6 +513,6 @@ guessField.focus();
 
 ## ここで一息
 
-これで数字当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。(最後のプログラムは[こちらでも遊べます](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。) もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
+これで数当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。（最後のプログラムは[こちらでも遊べます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。）もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

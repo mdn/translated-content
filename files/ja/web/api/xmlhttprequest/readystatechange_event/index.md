@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('readystatechange', (event) => { })
+addEventListener("readystatechange", (event) => {});
 
-onreadystatechange = (event) => { }
+onreadystatechange = (event) => {};
 ```
 
 ## イベント型

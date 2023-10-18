@@ -10,7 +10,7 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           基本熟悉使用计算机，<a
@@ -33,7 +33,7 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
   </tbody>
 </table>
 
-## 先决条件
+## 前提
 
 你可以使用下面的实时编辑器，或者下载这个[download the starting point](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)在自己的编辑器中进行编辑。这是一个独立的 HTML 文件，在 head 中包含了初始 CSS 样式。你可以将这些 CSS 样式从 HTML 文件中移出，保存为另一个独立文件。你可以选择 CodePen、jsFiddle 或 Glitch 中的任意一个完成这些工作。
 

@@ -18,6 +18,7 @@ cadena.slice(inicioTrozo[, finTrozo])
 ### Parameters
 
 - `inicioTrozo`
+
   - : El índice basado en cero en el cual empieza la extracción. Si es negativo, se trata como `longCadena + inicioTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `inicioTrozo` es `-3` se trata como `longCadena - 3`)
 
 - `finTrozo`
@@ -59,9 +60,9 @@ El siguiente ejemplo usa `slice()` con índices negativos.
 
 ```js
 var cad = "La mañana se nos echa encima.";
-cad.slice(-3);     // retorna 'ma.'
+cad.slice(-3); // retorna 'ma.'
 cad.slice(-3, -1); // retorna 'ma'
-cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+cad.slice(0, -1); // retorna 'La mañana se nos echa encima'
 ```
 
 ## Especificaciones

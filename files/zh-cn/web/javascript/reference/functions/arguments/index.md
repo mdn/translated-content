@@ -23,6 +23,8 @@ arguments[1];
 arguments[2];
 ```
 
+### 通过索引赋值
+
 参数也可以被设置：
 
 ```js
@@ -77,7 +79,7 @@ console.log(typeof arguments[0]); //this will return the typeof individual argum
 
 ### 对参数使用扩展语法
 
-您还可以使用{{jsxref("Array.from()")}}方法或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)将参数转换为真实数组：
+你还可以使用{{jsxref("Array.from()")}}方法或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)将参数转换为真实数组：
 
 ```js
 var args = Array.from(arguments);

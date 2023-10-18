@@ -5,12 +5,12 @@ slug: Learn/JavaScript/First_steps/Strings
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-接下来，我们将把注意力转向文本片段——也就是编程中所说的**字符串**。在本文中，我们将了解在学习 JavaScript 时，您应该了解的关于字符串的所有常见事项，例如创建字符串、在字符串中转义引号，和连接字符串。
+接下来，我们将把注意力转向文本片段——也就是编程中所说的**字符串**。在本文中，我们将了解在学习 JavaScript 时，你应该了解的关于字符串的所有常见事项，例如创建字符串、在字符串中转义引号，和连接字符串。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机读写能力，对 HTML 和 CSS 的基本理解，对 JavaScript 的理解。
       </td>
@@ -28,10 +28,10 @@ slug: Learn/JavaScript/First_steps/Strings
 
 到目前为止，我们在课程中展示的所有程序都涉及到一些字符串操作。
 
-## 字符串 — 基本知识
+## 字符串——基本知识
 
-字符串与数字的处理方式第一眼看上去十分相似，但是当您深入挖掘时，您将会看到一些显著的差异。让我们首先在一个控制台输入一些基本的行来熟悉一下。
-我们在下面提供了一个 (您也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果您愿意使用[浏览器开发人员控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools))。
+字符串与数字的处理方式第一眼看上去十分相似，但是当你深入挖掘时，你将会看到一些显著的差异。让我们首先在一个控制台输入一些基本的行来熟悉一下。
+我们在下面提供了一个（你也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果你愿意使用[浏览器开发人员控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
 
 ```html hidden
 <!doctype html>
@@ -132,7 +132,7 @@ slug: Learn/JavaScript/First_steps/Strings
 </html>
 ```
 
-{{ EmbedLiveSample('字符串 — 基本知识', '100%', 300) }}
+{{ EmbedLiveSample('字符串——基本知识', '100%', 300) }}
 
 ### 创建一个字符串
 
@@ -154,10 +154,10 @@ slug: Learn/JavaScript/First_steps/Strings
    let badString = This is a test';
    ```
 
-   这些行不起作用，因为没有引号的任何文本字符串都被假定为变量名、属性名、保留字或类似。如果浏览器不能找到它，那么将会引发语法错误 (例如:"missing ; before statement")。
-   如果浏览器能够识别字符串从哪里开始，但是不能找到字符串的结尾符，如第二行所示，那么它则会提示这样的错误 (“unterminated string literal”)。如果您写的程序目前也引发这样的错误，那么请你回过头来仔细检查你的代码，看是否漏写了引号。
+   这些行不起作用，因为没有引号的任何文本字符串都被假定为变量名、属性名、保留字或类似。如果浏览器不能找到它，那么将会引发语法错误（例如：“missing ; before statement”）。
+   如果浏览器能够识别字符串从哪里开始，但是不能找到字符串的结尾符，如第二行所示，那么它则会提示这样的错误 (“unterminated string literal”)。如果你写的程序目前也引发这样的错误，那么请你回过头来仔细检查你的代码，看是否漏写了引号。
 
-3. 如果您之前定义了变量字符串，下面的操作将会起作用 — 现在来试一试：
+3. 如果你之前定义了变量字符串，下面的操作将会起作用 — 现在来试一试：
 
    ```js
    let badString = string;
@@ -168,7 +168,7 @@ slug: Learn/JavaScript/First_steps/Strings
 
 ### 单引号和双引号
 
-1. 在 JavaScript 中，您可以选择单引号或双引号来包裹字符串。
+1. 在 JavaScript 中，你可以选择单引号或双引号来包裹字符串。
    下面两种方式都可以：
 
    ```js
@@ -178,14 +178,14 @@ slug: Learn/JavaScript/First_steps/Strings
    dbl;
    ```
 
-2. 两者之间几乎没有什么区别，根据个人偏好来使用。但是，您应该选择一个并坚持使用它，不一致的引号混用代码可能会让人很迷惑，特别是如果您在同一个字符串中使用不同的引号！
+2. 两者之间几乎没有什么区别，根据个人偏好来使用。但是，你应该选择一个并坚持使用它，不一致的引号混用代码可能会让人很迷惑，特别是如果你在同一个字符串中使用不同的引号！
    下面将返回一个错误：
 
    ```js example-bad
    let badQuotes = 'What on earth?";
    ```
 
-3. 浏览器会认为字符串没有被关闭，因为在字符串中您没有使用其他类型的引号。
+3. 浏览器会认为字符串没有被关闭，因为在字符串中你没有使用其他类型的引号。
    例如，这两种情况都是可以的：
 
    ```js
@@ -195,7 +195,7 @@ slug: Learn/JavaScript/First_steps/Strings
    dblSgl;
    ```
 
-4. 但是，您不能在字符串中包含相同的引号，因为它是用来包含它们的。下面将会出现错误，因为它会混淆浏览器和字符串的结束位置：
+4. 但是，你不能在字符串中包含相同的引号，因为它是用来包含它们的。下面将会出现错误，因为它会混淆浏览器和字符串的结束位置：
 
    ```js example-bad
    let bigmouth = 'I've got no right to take my place...';
@@ -241,7 +241,7 @@ bigmouth;
    response;
    ```
 
-> **备注：** 当您在您的代码中输入一个实际的字符串时，用单引号或双引号括起来，它被称为字符串文字。
+> **备注：** 当你在你的代码中输入一个实际的字符串时，用单引号或双引号括起来，它被称为字符串文字。
 
 ### 上下文中的串联
 
@@ -273,7 +273,7 @@ button.onclick = function () {
    "Front " + 242;
    ```
 
-   您可能会认为这会抛出一个错误，但它运行得很好。
+   你可能会认为这会抛出一个错误，但它运行得很好。
    试图将字符串表示为一个数字并不是很讲的通，但是用数字表示一个字符串则不然，因此浏览器很聪明地将数字转换为字符串，并将这两个字符串连接在一起。
 
 2. 你甚至可以用两个数字来这么操作——你可以通过用引号将数字包装成一个字符串。尝试以下方法 (我们使用 typeof 操作符来检查变量是一个数字还是一个字符串):
@@ -283,7 +283,7 @@ button.onclick = function () {
    typeof myDate;
    ```
 
-3. 如果您有一个数值变量，您想要将其转换为字符串，并且不改变其他地方，或者您想将一个字符串转换为一个数字而不改变其其他地方，那么您可以使用以下两个构造：
+3. 如果你有一个数值变量，你想要将其转换为字符串，并且不改变其他地方，或者你想将一个字符串转换为一个数字而不改变其其他地方，那么你可以使用以下两个构造：
 
    - 如果可以的话， {{jsxref("Number")}} 对象将把传递给它的任何东西转换成一个数字。
      试一试：

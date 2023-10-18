@@ -38,7 +38,7 @@ arrName.pop()
 以下のコードは、4 つの要素を含んだ配列 `myFish` を生成し、その後その最後の要素を取り除き、変数に代入しています。
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 const popped = myFish.pop();
 
@@ -53,10 +53,10 @@ console.log(popped); // 'sturgeon'
 
 ```js
 const myFish = {
-  0: 'angel',
-  1: 'clown',
-  2: 'mandarin',
-  3: 'sturgeon',
+  0: "angel",
+  1: "clown",
+  2: "mandarin",
+  3: "sturgeon",
   length: 4,
 };
 
@@ -89,13 +89,13 @@ const collection = {
     // push が返す値を返します。つまり、
     // 取り除かれた要素です。
     return [].pop.call(this);
-  }
-}
+  },
+};
 
 collection.addElements(10, 20, 30);
-console.log(collection.length);  // 3
+console.log(collection.length); // 3
 collection.removeElement();
-console.log(collection.length);  // 2
+console.log(collection.length); // 2
 ```
 
 ## 仕様書

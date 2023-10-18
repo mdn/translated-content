@@ -31,9 +31,7 @@ console.log("football".replace(new CustomReplacer("foo")));
 
 ## Especificações
 
-| Especificação                                                    |
-| ---------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

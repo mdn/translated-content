@@ -23,7 +23,7 @@ l10n:
 | `""`                        | 文字列型     | 空[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)値。`''` や ` `` ` も含みます。                                                                                |
 | {{domxref("document.all")}} | オブジェクト | JavaScript で唯一の偽値のオブジェクトは、組み込みの {{domxref("document.all")}} です。                                                                                     |
 
-`null` および `undefined` は[ヌル値](/en-US/docs/Glossary/Nullish)でもあります。
+`null` および `undefined` は[ヌル値](/ja/docs/Glossary/Nullish)でもあります。
 
 ## 例
 

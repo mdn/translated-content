@@ -2,6 +2,7 @@
 title: a
 slug: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 O elemento **\<a>** do SVG cria um hiperlink para outras páginas da web, arquivos, locais na mesma página, endereços de email ou qualquer outra URL. É muito semelhante ao elemento {{htmlelement ("a")}} do HTML.
@@ -10,21 +11,23 @@ O elemento `<a>` do SVG é um contêiner, o que significa que você pode criar u
 
 ```css hidden
 @namespace svg url(https://www.w3.org/2000/svg);
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <!-- A link around a shape -->
   <a href="/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- A link around a text -->
   <a href="/docs/Web/SVG/Element/text">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```
@@ -37,7 +40,8 @@ html,body,svg { height:100% }
 /* Necessary to select only SVG <a> elements, and not also HTML’s.
    See warning below */
 
-svg|a:link, svg|a:visited {
+svg|a:link,
+svg|a:visited {
   cursor: pointer;
 }
 
@@ -47,7 +51,8 @@ text svg|a {
   text-decoration: underline;
 }
 
-svg|a:hover, svg|a:active {
+svg|a:hover,
+svg|a:active {
   outline: dotted 1px blue;
 }
 ```
@@ -109,10 +114,10 @@ svg|a:hover, svg|a:active {
 
 ## Specifications
 
-| Specification                                                                | Status                   | Comment                                                                         |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}     | {{Spec2("SVG2")}} | Replaced {{SVGAttr("xlink:href")}} attribute by {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}} | {{Spec2("SVG1.1")}} | Initial definition                                                              |
+| Specification                                             | Status              | Comment                                                             |
+| --------------------------------------------------------- | ------------------- | ------------------------------------------------------------------- |
+| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}   | {{Spec2("SVG2")}}   | Replaced {{SVGAttr("xlink:href")}} attribute by {{SVGAttr("href")}} |
+| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}} | {{Spec2("SVG1.1")}} | Initial definition                                                  |
 
 ## Compatibilidade com navegadores
 

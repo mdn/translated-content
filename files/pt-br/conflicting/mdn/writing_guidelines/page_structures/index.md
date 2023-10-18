@@ -1,7 +1,6 @@
 ---
 title: Estruturas dos documentos
 slug: conflicting/MDN/Writing_guidelines/Page_structures
-original_slug: MDN/Structures
 ---
 
 {{MDNSidebar}}

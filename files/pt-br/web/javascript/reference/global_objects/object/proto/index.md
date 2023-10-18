@@ -30,68 +30,60 @@ console.log(shape.__proto__ === circle); // true
 ```
 
 ```js
-var shape = function () {
-};
+var shape = function () {};
 var p = {
-    a: function () {
-        console.log('aaa');
-    }
+  a: function () {
+    console.log("aaa");
+  },
 };
 shape.prototype.__proto__ = p;
 
 var circle = new shape();
 
-circle.a();//aaa
+circle.a(); //aaa
 
-console.log(shape.prototype === circle.__proto__);//true
+console.log(shape.prototype === circle.__proto__); //true
 
 //ou
 
-var shape = function () {
-};
+var shape = function () {};
 var p = {
-    a: function () {
-        console.log('a');
-    }
+  a: function () {
+    console.log("a");
+  },
 };
 
 var circle = new shape();
 circle.__proto__ = p;
 
-
 circle.a(); //  a
 
-console.log(shape.prototype === circle.__proto__);//false
+console.log(shape.prototype === circle.__proto__); //false
 
 //ou
 
-function test() {
-}
+function test() {}
 test.prototype.myname = function () {
-    console.log('myname');
+  console.log("myname");
+};
+var a = new test();
 
-}
-var a = new test()
+console.log(a.__proto__ === test.prototype); //true
 
-console.log(a.__proto__ === test.prototype);//true
-
-a.myname();//myname
-
+a.myname(); //myname
 
 //ou
 
-var fn = function () {
-};
+var fn = function () {};
 fn.prototype.myname = function () {
-    console.log('myname');
-}
+  console.log("myname");
+};
 
 var obj = {
-    __proto__: fn.prototype
+  __proto__: fn.prototype,
 };
 
-
-obj.myname();//myname
+obj.myname(); //myname
 ```
 
 Nota: são dois underscores(underlines), seguidos de cinco caracteres "proto", seguidos por mais dois underscores(underlines).

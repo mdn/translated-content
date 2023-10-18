@@ -49,12 +49,16 @@ parseFloat(string)
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `NaN` を返す `parseFloat`
@@ -62,7 +66,7 @@ parseFloat({ toString: function() { return "3.14" } });
 以下の例は `NaN` を返します。
 
 ```js
-parseFloat('FF2');
+parseFloat("FF2");
 ```
 
 ### `parseFloat` と `BigInt`
@@ -71,7 +75,7 @@ parseFloat('FF2');
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 仕様書

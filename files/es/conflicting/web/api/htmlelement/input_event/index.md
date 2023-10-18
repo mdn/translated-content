@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: conflicting/Web/API/HTMLElement/input_event
+original_slug: Web/API/GlobalEventHandlers/oninput
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -22,14 +23,6 @@ window.addEventListener('input', function (e) {
 
 <input placeholder="Tipee aquí y vea la consola.">
 ```
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
 
 ## Vea también
 

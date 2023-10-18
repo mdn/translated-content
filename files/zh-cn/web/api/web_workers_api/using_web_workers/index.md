@@ -542,12 +542,12 @@ onmessage = (event) => {
 
 ```js
 const queryableFunctions = {
-  // 示例1：得到两个数字的差值：
+  // 示例 1：得到两个数字的差值：
   getDifference(minuend, subtrahend) {
     reply("printStuff", minuend - subtrahend);
   },
 
-  // 示例2：等待三秒
+  // 示例 2：等待三秒
   waitSomeTime() {
     setTimeout(() => {
       reply("doAlert", 3, "seconds");
@@ -640,7 +640,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
     <script>
       // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
 
-      // 过去存在 blob builder，但现在我们使用Blob
+      // 过去存在 blob builder，但现在我们使用 Blob
       const blob = new Blob(
         Array.prototype.map.call(
           document.querySelectorAll("script[type='text\/js-worker']"),

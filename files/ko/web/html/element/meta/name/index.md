@@ -5,7 +5,7 @@ slug: Web/HTML/Element/meta/name
 
 {{HTMLSidebar}}
 
-{{htmlelement("meta")}} 요소는 {{htmlattrxref("name", "meta")}} 특성을 메타데이터 이름으로, {{htmlattrxref("content", "meta")}} 특성을 값으로 하여 문서 메타데이터를 이름-값 쌍의 형태로 제공할 때 사용할 수 있습니다.
+{{htmlelement("meta")}} 요소는 [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성을 메타데이터 이름으로, [`content`](/ko/docs/Web/HTML/Element/meta#content) 특성을 값으로 하여 문서 메타데이터를 이름-값 쌍의 형태로 제공할 때 사용할 수 있습니다.
 
 ### HTML 명세가 정의하는 표준 메타데이터 이름
 
@@ -47,7 +47,7 @@ CSS Color Adjustment 명세는 다음과 같은 메타데이터 이름을 정의
 
   브라우저는 이 정보에 더해 자신과 장치의 사용자 설정을 함께 사용해 배경, 전경, 양식 컨트롤, 스크롤 바 등 대부분의 색상을 결정합니다. `<meta name="color-scheme">`의 주 용도는 문서의 "다크 모드"와 "라이트 모드"중 호환 가능한 조합 및 둘 중 선호하는 쪽을 나타내는 것입니다.
 
-  `color-scheme`과 사용 가능한 {{htmlattrxref("content", "meta")}} 특성의 값은 다음과 같습니다.
+  `color-scheme`과 사용 가능한 [`content`](/ko/docs/Web/HTML/Element/meta#content) 특성의 값은 다음과 같습니다.
 
   - `normal`
     - : 문서가 특별한 색채 조합을 알지 못합니다. 렌더링 시 기본 색상 팔레트를 사용해야 합니다.

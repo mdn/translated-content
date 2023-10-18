@@ -14,11 +14,11 @@ O elemento HTML de Rodapé (\<footer>) representa um rodapé para o seu sectioni
 
 ## Contexto de uso
 
-| Conteúdo permitido         | [Flow content](/pt-BR/docs/HTML/Content_categories#flow_content), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                                |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag             | Nenhuma, ambas as tags de início e fim são obrigatórias.                                                                                                                                                                                                                                                       |
+| Conteúdo permitido         | [Flow content](/pt-BR/docs/HTML/Content_categories#flow_content), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omissão de tag             | Nenhuma, ambas as tags de início e fim são obrigatórias.                                                                                                                                                                                               |
 | Parent Elements permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content). Note-se que um elemento \<footer> não deve ser um descendente de um {{HTMLElement("address")}}, {{HTMLElement("header")}} ou outro elemento `<footer>`. |
-| Documento normativo        | [HTML5, section 4.4.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                                                                           |
+| Documento normativo        | [HTML5, section 4.4.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                   |
 
 ## Atributos
 

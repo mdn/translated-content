@@ -3,14 +3,14 @@ title: 样式化表格
 slug: Learn/CSS/Building_blocks/Styling_tables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 设计一个 HTML 表格不是世界上最迷人的工作，但有时我们必须这样做。本文提供了一个使 HTML 表格看起来不错的指南，其中一些功能在前面的文章中已作详细介绍。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -97,7 +97,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 
 ### 间距和布局
 
-我们需要做的第一件事是整理出空间/布局——默认的表格样式是如此的拥挤！要做到这一点，请将以下 CSS 添加到您的 `style.css` 文件：
+我们需要做的第一件事是整理出空间/布局——默认的表格样式是如此的拥挤！要做到这一点，请将以下 CSS 添加到你的 `style.css` 文件：
 
 ```css
 /* spacing */
@@ -133,11 +133,11 @@ td {
 
 需要注意的最重要的部分如下：
 
-- 在你的表上，给{{cssxref("table-layout")}}属性设置一个为`fixed`的值通常是一个好主意，因为它使表的行为在默认情况下更可预测。通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，您可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了`thead th:nth-child(n)` 选择了四个不同的标题 ({{cssxref(":nth-child")}}) 选择器（“选择第 n 个子元素，它是一个顺序排列的{{htmlelement("th")}}元素，且其父元素是{{htmlelement("thead")}}元素”）并给定了它们的百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。Chris Coyier 在[Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
+- 在你的表上，给{{cssxref("table-layout")}}属性设置一个为`fixed`的值通常是一个好主意，因为它使表的行为在默认情况下更可预测。通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了`thead th:nth-child(n)` 选择了四个不同的标题 ({{cssxref(":nth-child")}}) 选择器（“选择第 n 个子元素，它是一个顺序排列的{{htmlelement("th")}}元素，且其父元素是{{htmlelement("thead")}}元素”）并给定了它们的百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。Chris Coyier 在[Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
 
   我们将它与一个 100% 的{{cssxref("width")}}组合在一起，这意味着该表将填充它放入的任何容器，并且能很好的响应（虽然它仍然需要更多的工作来让它在窄屏宽度上看起来很好）。
 
-- 一个{{cssxref("border-collapse")}}属性的`collapse`值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当您在表元素上设置边框时，它们之间将会有间隔，如下图所示：![](no-border-collapse.png)这看起来不太好 (虽然可能是你想要的样子，谁知道呢？)。使用 `border-collapse: collapse;` ，让边框合为一条，现在看起来好多了：![](border-collapse.png)
+- 一个{{cssxref("border-collapse")}}属性的`collapse`值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当你在表元素上设置边框时，它们之间将会有间隔，如下图所示：![](no-border-collapse.png)这看起来不太好 (虽然可能是你想要的样子，谁知道呢？)。使用 `border-collapse: collapse;` ，让边框合为一条，现在看起来好多了：![](border-collapse.png)
 - 我们在整个表设置了一个{{cssxref("border")}}，这是必要的，因为我们将在表页眉和页脚后面设置一些边框——当你在表格外面没有一个边界而且以空隙结尾的时候，它看起来很奇怪，而且是不连贯的。
 - 我们在{{htmlelement("th")}}和{{htmlelement("td")}}元素上设置了一些{{cssxref("padding")}}——这些元素使数据项有了一些空间，使表看起来更加清晰。
 
@@ -149,9 +149,9 @@ td {
 
 现在我们把类型整理一下。
 
-首先，我们在[Google Fonts](https://www.google.com/fonts)上找到了一种适合于朋克乐队的字体的字体。如果你愿意，你可以去那里找一个不同的。现在，您只需替换我们提供的{{htmlelement("link")}}元素和定制的{{cssxref("font-family")}}声明，并使用 Google 字体提供给您的内容。
+首先，我们在[Google Fonts](https://www.google.com/fonts)上找到了一种适合于朋克乐队的字体的字体。如果你愿意，你可以去那里找一个不同的。现在，你只需替换我们提供的{{htmlelement("link")}}元素和定制的{{cssxref("font-family")}}声明，并使用 Google 字体提供给你的内容。
 
-首先，将下面的{{htmlelement("link")}}元素添加到您的 HTML 头部，就在您现有的 `<link>` 元素之上：
+首先，将下面的{{htmlelement("link")}}元素添加到你的 HTML 头部，就在你现有的 `<link>` 元素之上：
 
 ```html
 <link
@@ -160,7 +160,7 @@ td {
   type="text/css" />
 ```
 
-现在将下面的 CSS 添加到您的`style.css`文件，在之前内容后面添加：
+现在将下面的 CSS 添加到你的`style.css`文件，在之前内容后面添加：
 
 ```css
 /* typography */
@@ -225,11 +225,11 @@ thead th, tfoot th, tfoot td {
 
 我们已经将一个{{cssxref("background-image")}}添加到{{htmlelement("thead")}}和{{htmlelement("tfoot")}}，并将页眉和页脚的所有文本颜色{{cssxref("color")}}更改为白色 (并给它一个{{cssxref("text-shadow")}})，这样它的可读性就更好了。你应该确保你的文字与你的背景形成鲜明的对比，使得它是可读的。
 
-我们还为{{htmlelement("th")}}和 {{htmlelement("td")}}添加了一个线性渐变，在页眉和页脚中添加了一个漂亮的纹理，同时也为这些元素提供了一个明亮的紫色边框。有多个嵌套的元素是很有用的，这样您就可以将样式层叠在一起。是的，我们可以通过设置多组背景图像属性值来在{{htmlelement("thead")}}和 {{htmlelement("tfoot")}}元素上同时使用背景图像和线性渐变，但是我们决定分开使用，因为考虑到不支持多个背景图像或线性渐变的老浏览器。
+我们还为{{htmlelement("th")}}和 {{htmlelement("td")}}添加了一个线性渐变，在页眉和页脚中添加了一个漂亮的纹理，同时也为这些元素提供了一个明亮的紫色边框。有多个嵌套的元素是很有用的，这样你就可以将样式层叠在一起。是的，我们可以通过设置多组背景图像属性值来在{{htmlelement("thead")}}和 {{htmlelement("tfoot")}}元素上同时使用背景图像和线性渐变，但是我们决定分开使用，因为考虑到不支持多个背景图像或线性渐变的老浏览器。
 
 #### 斑马条纹图案
 
-我们想用一个单独的部分来展示如何实现斑马条纹（**zebra stripes**）——通过改变不同数据行的颜色，使表中交替行不同的数据行可以更容易地进行解析和读取。将下面的 CSS 添加到您的 `style.css` 文件底部：
+我们想用一个单独的部分来展示如何实现斑马条纹（**zebra stripes**）——通过改变不同数据行的颜色，使表中交替行不同的数据行可以更容易地进行解析和读取。将下面的 CSS 添加到你的 `style.css` 文件底部：
 
 ```css
 tbody tr:nth-child(odd) {
@@ -249,7 +249,7 @@ table {
 }
 ```
 
-- 您在前面看到了{{cssxref(":nth-child")}}选择器用于选择特定的子元素。它也可以用一个公式作为参数，来选择一个元素序列。公式`2n-1`会选择所有奇数的子元素 (1、3、5 等)，而公式`2n`会选择所有偶数的子元素 (2、4、6 等等)。我们在代码中使用了`odd`和`even`的关键字，这与前面提到的公式作用完全相同。在这里，我们给奇数行和偶数行不同的 (醒目的) 颜色。
+- 你在前面看到了{{cssxref(":nth-child")}}选择器用于选择特定的子元素。它也可以用一个公式作为参数，来选择一个元素序列。公式`2n-1`会选择所有奇数的子元素 (1、3、5 等)，而公式`2n`会选择所有偶数的子元素 (2、4、6 等等)。我们在代码中使用了`odd`和`even`的关键字，这与前面提到的公式作用完全相同。在这里，我们给奇数行和偶数行不同的 (醒目的) 颜色。
 - 我们还为所有的行添加了一个重复的噪点背景色块（一个半透明的`.png`，有一点视觉上的扭曲）来提供一些纹理。
 - 最后，我们给整个表格提供了一个纯的背景颜色，这样浏览器不支持`:nth-child`选择器仍然有它们的正文行的背景。
 
@@ -261,7 +261,7 @@ table {
 
 ### 样式化标题
 
-对我们的表格还有最后一点处理——样式化标题。要做到这一点，请将以下内容添加到您的`style.css` 文件底部：
+对我们的表格还有最后一点处理——样式化标题。要做到这一点，请将以下内容添加到你的`style.css` 文件底部：
 
 ```css
 caption {
@@ -281,18 +281,18 @@ caption {
 
 ## 自主学习：样式化你自己的表格
 
-现在，我们希望您可以使用我们的示例表格 HTML(或者使用您自己的一些！)，并将其样式设计成比我们的表更好的设计和不那么花哨的东西。
+现在，我们希望你可以使用我们的示例表格 HTML(或者使用你自己的一些！)，并将其样式设计成比我们的表更好的设计和不那么花哨的东西。
 
 ## 表格样式小贴士
 
-在继续之前，我们认为我们将为您提供一个快速列表，列出了上面提到的最有用的点：
+在继续之前，我们认为我们将为你提供一个快速列表，列出了上面提到的最有用的点：
 
-- 使您的表格标记尽可能简单，并且保持灵活性，例如使用百分比，这样设计就更有响应性。
+- 使你的表格标记尽可能简单，并且保持灵活性，例如使用百分比，这样设计就更有响应性。
 - 使用 {{cssxref("table-layout")}}`: fixed` 创建更可控的表布局，可以通过在标题{{cssxref("width")}}中设置{{cssxref("width")}}来轻松设置列的宽度。
 - 使用 {{cssxref("border-collapse")}}`: collapse` 使表元素边框合并，生成一个更整洁、更易于控制的外观。
 - 使用{{htmlelement("thead")}}, {{htmlelement("tbody")}}和{{htmlelement("tfoot")}} 将表格分割成逻辑块，并提供额外的应用 CSS 的地方，因此如果需要的话，可以更容易地将样式层叠在一起。
 - 使用斑马线来让其他行更容易阅读。
-- 使用 {{cssxref("text-align")}}直线对齐您的{{htmlelement("th")}}和{{htmlelement("td")}}文本，使内容更整洁、更易于跟随。
+- 使用 {{cssxref("text-align")}}直线对齐你的{{htmlelement("th")}}和{{htmlelement("td")}}文本，使内容更整洁、更易于跟随。
 
 ## 小试牛刀！
 

@@ -11,7 +11,6 @@ slug: Web/CSS/:playing
 
 ```css
 :playing {
-
 }
 ```
 

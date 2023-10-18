@@ -28,7 +28,7 @@ Math.cbrt(x)
 
 该方法为 Math 的静态方法，因此请直接通过 Math.cbrt() 方式调用。
 
-而不是作为您创建的 Math 对象的方法 (Math 不是构造函数)。
+而不是作为你创建的 Math 对象的方法 (Math 不是构造函数)。
 
 cbrt 是 "cube root" 的缩写，意思是立方根。
 

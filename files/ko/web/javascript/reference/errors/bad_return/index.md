@@ -50,12 +50,12 @@ var cheer = function(score) {
 처음 볼 때는 중괄호가 제대로 있는 것처럼 보인다, 하지만 이 코드 조각에는 if 문장 다음에 중괄호가 하나 빠져 있다. 다음처럼 고쳐야 한다:
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
-    return 'Maximum!';
+    return "Maximum!";
   }
   if (score > 100) {
-    return 'Century!';
+    return "Century!";
   }
 };
 ```

@@ -44,7 +44,7 @@ for-in 반복문의 선언부에서 초기화 구문(`i = 0`)을 삭제합니다
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
@@ -56,7 +56,7 @@ for (var i in obj) {
 for...in 반복문은 [배열을 반복하는데에는 사용하지 않습니다](/ko/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in). 배열({{jsxref("Array")}})을 반복하기 위해 `for-in` 반복문 대신에 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하려고 한 적이 있습니까? `for` 반복문은 선언부에서 초기화도 할 수 있습니다:
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+var arr = ["a", "b", "c"];
 
 for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);

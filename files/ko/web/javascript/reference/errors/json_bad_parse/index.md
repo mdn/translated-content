@@ -56,7 +56,7 @@ slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 다음 두 줄은 SyntaxError를 발생시킨다:
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4,]');
+JSON.parse("[1, 2, 3, 4,]");
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -65,7 +65,7 @@ JSON.parse('{"foo": 1,}');
 끝에 오는 콤마를 제거하면 정확하게 JSON으로 파싱한다:
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4]');
+JSON.parse("[1, 2, 3, 4]");
 JSON.parse('{"foo": 1}');
 ```
 

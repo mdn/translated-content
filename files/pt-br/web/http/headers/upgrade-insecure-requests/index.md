@@ -45,9 +45,7 @@ Vary: Upgrade-Insecure-Requests
 
 ## Especificações
 
-| Especificação                                                                         | Status                                 | Comentário          |
-| ------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- |
-| {{specName("Upgrade Insecure Requests", "#preference", "upgrade-insecure-requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

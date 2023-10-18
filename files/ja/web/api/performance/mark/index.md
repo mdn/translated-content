@@ -17,15 +17,17 @@ slug: Web/API/Performance/mark
 
 ```js
 performance.mark(name);
-performance.mark(measureName, markOptions)
+performance.mark(measureName, markOptions);
 ```
 
 ### 引数
 
 - name
+
   - : {{domxref("DOMString")}} で、マークの名前を表します。このメソッドで指定された `name` がすでに {{domxref("PerformanceTiming")}} インターフェイスに存在していた場合は、 {{jsxref("SyntaxError")}} が発生します。
 
 - `markOptions` {{optional_inline}}
+
   - : このマークのためにタイムスタンプと追加のメタデータを指定するためのオブジェクトです。
 
     - `detail`

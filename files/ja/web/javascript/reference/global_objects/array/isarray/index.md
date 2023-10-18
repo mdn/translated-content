@@ -10,16 +10,16 @@ l10n:
 **`Array.isArray()`** メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。
 
 ```js
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
+Array.isArray([1, 2, 3]); // true
+Array.isArray({ foo: 123 }); // false
+Array.isArray("foobar"); // false
+Array.isArray(undefined); // false
 ```
 
 ## 構文
 
 ```js
-Array.isArray(value)
+Array.isArray(value);
 ```
 
 ### 引数
@@ -47,7 +47,7 @@ Array.isArray(value)
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
-Array.isArray(new Array('a', 'b', 'c', 'd'));
+Array.isArray(new Array("a", "b", "c", "d"));
 Array.isArray(new Array(3));
 // あまり知られていないものの Array.prototype は配列です
 Array.isArray(Array.prototype);
@@ -58,7 +58,7 @@ Array.isArray({});
 Array.isArray(null);
 Array.isArray(undefined);
 Array.isArray(17);
-Array.isArray('Array');
+Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32));
@@ -70,13 +70,13 @@ Array.isArray({ __proto__: Array.prototype });
 `Array` のインスタンスをチェックする際、`Array.isArray` は `iframes` で動作するので、`instanceof` よりも推奨されます。
 
 ```js
-const iframe = document.createElement('iframe');
+const iframe = document.createElement("iframe");
 document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
-const arr = new xArray(1,2,3); // [1,2,3]
+xArray = window.frames[window.frames.length - 1].Array;
+const arr = new xArray(1, 2, 3); // [1,2,3]
 
 // 配列を正しくチェックできます
-Array.isArray(arr);  // true
+Array.isArray(arr); // true
 // iframe を介して配列を正しくチェックできません
 arr instanceof Array; // false
 ```

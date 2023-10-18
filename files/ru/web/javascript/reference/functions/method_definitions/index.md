@@ -26,8 +26,8 @@ var obj = {
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -36,7 +36,7 @@ var obj = {
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -47,20 +47,18 @@ var obj = {
 ```js
 // Используя свойство с именем (pre-ES6)
 var obj2 = {
-  g: function*() {
+  g: function* () {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // Тот же объект используя короткий синтаксис
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -76,12 +74,12 @@ console.log(it.next().value); // 1
 var obj = {
   method() {},
 };
-new obj.method; // TypeError: obj.method is not a constructor
+new obj.method(); // TypeError: obj.method is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // Генератор
+new obj.g(); // Генератор
 ```
 
 ## Примеры
@@ -90,8 +88,10 @@ new obj.g; // Генератор
 
 ```js
 var obj = {
-  a : "foo",
-  b(){ return this.a; }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "foo"
 ```
@@ -102,9 +102,15 @@ console.log(obj.b()); // "foo"
 
 ```js
 var bar = {
-  foo0 : function (){return 0;},
-  foo1(){return 1;},
-  ["foo" + 2](){return 2;},
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0

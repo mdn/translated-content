@@ -43,10 +43,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### Sending values to the generator
@@ -55,7 +55,7 @@ In this example, `next` is called with a value. Note that the first call did not
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     var value = yield null;
     console.log(value);
   }

@@ -19,8 +19,8 @@ new URLSearchParams(options)
 ### 参数
 
 - `options` {{optional_inline}}
-  - : 可以是以下之一:
-    - 一个字符串, 这个字符串从 `application/x-www-form-urlencoded` 的格式解析而来。开头的 `'?'` 字符会被忽略。
+  - : 可以是以下之一：
+    - 一个字符串，这个字符串从 `application/x-www-form-urlencoded` 的格式解析而来。开头的 `'?'` 字符会被忽略。
     - 一系列基于字面量的字符串键值对，或者任何对象（例如 {{domxref("FormData")}} 对象），能提供一系列字符串对的[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#迭代器)对象。需要注意，{{domxref("File")}} 将被序列化为 `[object File]`，而不是它们的文件名（就像 `application/x-www-form-urlencoded` 格式中的那样）。
     - 一个由字符串键和字符串值组成的键值对对象。请注意，不支持嵌套。
 

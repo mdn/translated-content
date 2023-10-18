@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Assignment
 ## 構文
 
 ```js
-x = y
+x = y;
 ```
 
 ## 例

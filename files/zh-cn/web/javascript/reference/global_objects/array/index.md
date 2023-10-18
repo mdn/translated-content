@@ -113,8 +113,6 @@ console.log(fruits.length); // 2
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
 - {{jsxref("Array/includes", "includes()")}}
 - {{jsxref("Array/join", "join()")}}
 - {{jsxref("Array/keys", "keys()")}}
@@ -146,8 +144,6 @@ console.log(fruits.length); // 2
 - {{jsxref("Array/toSorted", "toSorted()")}}
 - {{jsxref("Array/toSpliced", "toSpliced()")}}
 - {{jsxref("Array/with", "with()")}}
-
-注意，{{jsxref("Array/group", "group()")}} 和 {{jsxref("Array/groupToMap", "groupToMap()")}} 不使用 `@@species` 为每个组条目创建新数组，而是始终使用普通的 `Array` 构造函数。从概念上讲，它们也不是复制方法。
 
 下表列出了会修改原始数组的方法，以及相应的非修改方法：
 
@@ -204,8 +200,6 @@ method(callbackFn, thisArg)
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
 - {{jsxref("Array/flatMap", "flatMap()")}}
 - {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
 - {{jsxref("Array/map", "map()")}}
 - {{jsxref("Array/some", "some()")}}
 
@@ -328,10 +322,6 @@ f("a", "b"); // 'a+b'
   - : 对调用数组的每个元素调用给定的回调函数，然后将结果展平一层，返回一个新数组。
 - {{jsxref("Array.prototype.forEach()")}}
   - : 对调用数组中的每个元素调用给定的函数。
-- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
-  - : 根据测试函数返回的字符串，将数组的元素分组到一个对象中。
-- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
-  - : 根据测试函数返回的值，将数组的元素分组到 {{jsxref("Map")}} 中。
 - {{jsxref("Array.prototype.includes()")}}
   - : 确定调用数组是否包含一个值，根据情况返回 `true` 或 `false`。
 - {{jsxref("Array.prototype.indexOf()")}}
@@ -702,36 +692,6 @@ console.log(fruits);
 console.log(fruitsAlias);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 ```
-
-### 对数组的元素进行分组
-
-{{jsxref("Array.prototype.group()")}} 方法可用于对数组的元素进行分组，使用测试函数返回指示当前元素组的字符串。
-
-这里我们有一个简单的库存数组，它包含具有 `name` 和 `type` 的 `food` 对象。
-
-```js
-const inventory = [
-  { name: "asparagus", type: "vegetables" },
-  { name: "bananas", type: "fruit" },
-  { name: "goat", type: "meat" },
-  { name: "cherries", type: "fruit" },
-  { name: "fish", type: "meat" },
-];
-```
-
-要使用 `group()`，你需要提供一个回调函数，该回调函数与当前元素、可选的当前索引和数组一起调用，并返回指示元素组的字符串。
-
-下面的例子使用一个箭头函数返回每个数组元素的 `type`（此处使用[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数实参的对象中提取数据)从传递的对象中提取 `type` 元素)。结果是一个对象，其属性以回调返回的唯一字符串命名。为每个属性分配一个数组，其中包含数组中的元素。
-
-```js
-const result = inventory.group(({ type }) => type);
-console.log(result.vegetables);
-// [{ name: "asparagus", type: "vegetables" }]
-```
-
-注意，返回的对象引用*相同*元素作为原数组（而不是{{glossary("deep copy", "深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
-
-如果不能使用字符串作为键，例如，如果要分组的信息与可能更改的对象相关联，那么可以使用 {{jsxref("Array.prototype.groupToMap()")}}。这与 `group` 非常相似，只是它将数组的元素分组到 {{jsxref("Map")}} 中，可以使用任意（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）作为键。
 
 ### 创建二维数组
 

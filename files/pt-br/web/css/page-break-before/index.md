@@ -71,17 +71,17 @@ Por motivos de compatibilidade, `page-break-before` é tratada pelos navegadores
 ```css
 /* avoid page break before the div */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 
 ## Specification
 
-| Specification                                                                                                | Status                                           | Comment                                                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#page', 'recto and verso')}}                     | {{Spec2('CSS Logical Properties')}} | Adds the values `recto` and `verso`.                                               |
-| {{SpecName('CSS3 Paged Media', '#page-break-before', 'page-break-before')}}         | {{Spec2('CSS3 Paged Media')}}         | Extends the element that this property applies to table rows and table row groups. |
-| {{SpecName('CSS2.1', 'page.html#propdef-page-break-before', 'page-break-before')}} | {{Spec2('CSS2.1')}}                         | Initial definition                                                                 |
+| Specification                                                                      | Status                              | Comment                                                                            |
+| ---------------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#page', 'recto and verso')}}                 | {{Spec2('CSS Logical Properties')}} | Adds the values `recto` and `verso`.                                               |
+| {{SpecName('CSS3 Paged Media', '#page-break-before', 'page-break-before')}}        | {{Spec2('CSS3 Paged Media')}}       | Extends the element that this property applies to table rows and table row groups. |
+| {{SpecName('CSS2.1', 'page.html#propdef-page-break-before', 'page-break-before')}} | {{Spec2('CSS2.1')}}                 | Initial definition                                                                 |
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: ime-mode
 slug: orphaned/Web/CSS/ime-mode
+original_slug: Web/CSS/ime-mode
 ---
 
 {{ CSSRef() }}

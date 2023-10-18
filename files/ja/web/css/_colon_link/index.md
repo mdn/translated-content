@@ -31,8 +31,8 @@ a:link {
 ### HTML
 
 ```html
-<a href="#ordinary-target">これは普通のリンクです。</a><br>
-<a href="">このリンクを訪問しました。</a><br>
+<a href="#ordinary-target">これは普通のリンクです。</a><br />
+<a href="">このリンクを訪問しました。</a><br />
 <a>リンクのプレイスホルダー（スタイルの適用なし）</a>
 ```
 

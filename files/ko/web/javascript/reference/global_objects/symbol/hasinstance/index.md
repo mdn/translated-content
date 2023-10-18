@@ -24,11 +24,11 @@ l10n:
 `instanceof` 연산자는 다음 알고리즘을 사용하여 `object instanceof constructor`의 반환 값을 계산합니다.
 
 1. `constructor`에 `@@hasInstance` 메서드가 있는 경우, 첫 번째 인수로 `object`를 사용하여 호출하고 [불리언으로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)된 결과를 반환합니다.
-`constructor`가 객체가 아니거나 `constructor[@@hasInstance]`가 `null`, `undefined`, 함수 중 하나가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
+   `constructor`가 객체가 아니거나 `constructor[@@hasInstance]`가 `null`, `undefined`, 함수 중 하나가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
 
 2. 그렇지 않으면, `constructor`에 `@@hasInstance` 메서드가 없는 경우(`constructor[@@hasInstance]`가 `null` 또는 `undefined`),
-[`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)와 동일한 알고리즘을 사용하여 결과를 결정합니다.
-`constructor`가 함수가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
+   [`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)와 동일한 알고리즘을 사용하여 결과를 결정합니다.
+   `constructor`가 함수가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
 
 모든 함수는 기본적으로 `Function.prototype`을 상속하기 때문에, 대부분의 경우 [`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance) 메서드는 오른쪽이 함수인 경우 `instanceof`의 동작을 지정합니다.
 

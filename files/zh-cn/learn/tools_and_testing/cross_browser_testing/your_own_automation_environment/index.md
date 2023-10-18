@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心知识，对<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
@@ -487,7 +487,10 @@ driver.quit();
    如果你希望从 LambdaTest 平台提取这些结果用于报告，那么你可以通过使用 [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/) 来实现。
 
 5. 现在，如果访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，你会看到你的测试被列出；从这里你可以看到视频、屏幕截图和其他此类数据。
-   [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)你可以检索网络、命令、异常和 Selenium 日志，用于你测试构建中的每个测试。你还会发现你的 Selenium 脚本执行的视频记录。
+
+   [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
+
+   你可以检索网络、命令、异常和 Selenium 日志，用于你测试构建中的每个测试。你还会发现你的 Selenium 脚本执行的视频记录。
 
 > **备注：** LambdaTest 自动测试仪表板上的 _HELP_ 按钮将为你提供大量的信息，帮助你开始使用 LambdaTest 自动化。你也可以关注我们关于[在 Node JS 中运行第一个 Selenium 脚本](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)的文档。
 
@@ -789,7 +792,7 @@ driver.quit();
 
    修改 `.jar` 文件名为你获取的文件名称。
 
-4. 服务会运行在 [`http://localhost:4444/wd/hub`](http://localhost:4444/wd/hub)，你可以去试试看是什么效果。
+4. 服务会运行在 `http://localhost:4444/wd/hub`，你可以去试试看是什么效果。
 
 现在服务器运行起来了，让我们在 selenium 服务器上来创建一个 demo 测试。
 
