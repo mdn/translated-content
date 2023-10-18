@@ -14,7 +14,7 @@ l10n:
 ## 语法
 
 ```css
-/* 关键词值 */
+/* 关键字值 */
 overflow-x: visible;
 overflow-x: hidden;
 overflow-x: clip;
