@@ -306,7 +306,7 @@ async function foo() {
 - {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
   - : 当 Promise 被拒绝，但没有提供 `reject` 函数来处理该 rejection 时，会派发此事件。
 
-上述两种事件（类型为 {{domxref("PromiseRejectionEvent")}}） 都有两个属性，一个是 {{domxref("PromiseRejectionEvent.promise", "promise")}} 属性，该属性指向被驳回的 Promise，另一个是 {{domxref("PromiseRejectionEvent.reason", "reason")}} 属性，该属性用来说明 Promise 被驳回的原因。
+上述两种事件（类型为 {{domxref("PromiseRejectionEvent")}}）都有两个属性，一个是 {{domxref("PromiseRejectionEvent.promise", "promise")}} 属性，该属性指向被驳回的 Promise，另一个是 {{domxref("PromiseRejectionEvent.reason", "reason")}} 属性，该属性用来说明 Promise 被驳回的原因。
 
 因此，我们可以通过以上事件为 Promise 失败时提供补偿处理，也有利于调试 Promise 相关的问题。在每一个上下文中，该处理都是全局的，因此不管源码如何，所有的错误都会在同一个处理函数中被捕捉并处理。
 
