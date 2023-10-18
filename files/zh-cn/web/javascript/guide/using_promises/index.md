@@ -477,19 +477,19 @@ const promise = new Promise((resolve, reject) => {
 });
 
 setTimeout(() => {
-  console.log("新一轮事件循环：Promise（已完成）", promise);
+  console.log("新一轮事件循环：Promise (已完成)", promise);
 }, 0);
 
-console.log("Promise（队列中）", promise);
+console.log("Promise (队列中)", promise);
 ```
 
 上述代码的输出如下：
 
 ```plain
 Promise 执行函数
-Promise（队列中） Promise {<pending>}
+Promise (队列中) Promise {<pending>}
 Promise 回调（.then）
-新一轮事件循环：Promise（已完成） Promise {<fulfilled>}
+新一轮事件循环：Promise (已完成) Promise {<fulfilled>}
 ```
 
 详见[深入：微任务与 Javascript 运行时环境](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)。
