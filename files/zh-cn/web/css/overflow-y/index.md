@@ -136,5 +136,5 @@ div {
 ## 参见
 
 - {{Cssxref("clip")}}、{{Cssxref("display")}}、{{cssxref("text-overflow")}}、{{cssxref("white-space")}}
-- [CSS 概述](/zh-CN/docs/Web/CSS/CSS_overflow)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
 - [CSS 构建：溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)

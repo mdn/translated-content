@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-x`** 设置当内容溢出块级元素的上下两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 简写属性来设置该属性。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-x`** 设置当内容溢出块级元素的左右两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 简写属性来设置该属性。
 
 {{EmbedInteractiveExample("pages/css/overflow-x.html")}}
 
@@ -44,7 +44,7 @@ overflow-x: unset;
 - `scroll`
   - : 如有必要，溢出的内容会被截断以从水平方向适应元素的边距框。无论内容是否发生溢出，浏览器总是显示滚动条。（这可以避免滚动条的显示与消失所导致的元素尺寸不确定的问题。）而打印机可能会打印溢出的内容。
 - `auto`
-  - : 元素边距框中的溢出内容会被截断，且溢出内容可通过滚动以进行浏览。与 `scroll` 关键字值不同的是，用户代理*只在*内容溢出时显示滚动条，默认不会显示滚动条。如果内容可以适应元素的边距框，则看起来与 `visible` 相同，但仍然会创建新的格式化上下文。
+  - : 元素边距框中的溢出内容会被截断，且溢出内容可通过滚动以进行浏览。与 `scroll` 关键字值不同的是，用户代理*只在*内容溢出时显示滚动条，默认不会显示滚动条。如果内容可以适应元素的边距框，则看起来与 `visible` 相同，但仍然会创建新的区块格式化上下文。桌面浏览器会在内容溢出时显示滚动条。
 
 > **备注：** 关键字值 `overlay` 是 `auto` 的一个遗留别名。使用 `overlay` 时，滚动条会绘制在内容上方，而不占用空间。
 
@@ -125,5 +125,5 @@ overflow-x: unset;
 ## 参见
 
 - {{Cssxref("clip")}}、{{Cssxref("display")}}、{{cssxref("text-overflow")}}、{{cssxref("white-space")}}
-- [CSS 概述](/zh-CN/docs/Web/CSS/CSS_overflow)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
 - [CSS 构建：溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
