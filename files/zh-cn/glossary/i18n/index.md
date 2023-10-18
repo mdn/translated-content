@@ -17,17 +17,8 @@ i18n（取自 "internationalization", 共 20 个字母）是让产品或服务�
 - 键盘布局
 - 文字书写顺序
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - [i18n](https://zh.wikipedia.org/wiki/Internationalization_and_localization) on Wikipedia
-
-### 技术参考
-
 - [i18n on W3C](https://www.w3.org/International/questions/qa-i18n.en#Internationalization)
-- [i18n on gala-global.org](https://www.gala-global.org/what-internationalization)
-
-### 学习 i18n
-
 - [i18n material on i18nguy.com](http://www.i18nguy.com/)

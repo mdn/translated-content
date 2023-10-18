@@ -28,13 +28,8 @@ function Default() {}
 var defaultReference = new Default();
 ```
 
-## 了解更多
-
-### 基本常识
+## 参见
 
 - 维基百科上的 [构造函数](https://zh.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29)
-
-### 技术参考
-
 - MDN 上的 [JavaScript 面向对象编程中的构造函数](/zh-CN/docs/Learn/JavaScript/Objects)
 - MDN 上的 [JavaScript 的 New 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
