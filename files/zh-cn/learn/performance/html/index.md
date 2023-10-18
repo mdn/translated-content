@@ -35,7 +35,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 在开始优化 HTML 之前，你应该首先回答的问题是“我需要优化什么？”。下面讨论的一些技巧和技术是适用于几乎任何 Web 项目的良好实践，而其他一些技巧只在特定情况下才需要使用。试图在任何地方应用这些技术可能是不必要的，而且可能是浪费时间的。你应该确定在每个项目中实际需要哪些性能优化。
 
-为此，你需要[测量性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如此链接所示，有几种不同的方式可以测量性能，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方法是学习如何使用内置浏览器的网络和性能工具，以检查加载时间较长且需要优化的页面部分。
+为此，你需要[测量性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如此链接所示，有几种不同的方式可以测量性能，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方法是学习如何使用内置浏览器的[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络监控工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#性能监控工具)工具，以检查加载时间较长且需要优化的页面部分。
 
 ## HTML 性能关键问题
 
