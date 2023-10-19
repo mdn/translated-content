@@ -1,6 +1,8 @@
 ---
 title: 쌓임 맥락
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
+l10n:
+  sourceCommit: 9a06522ff323403f707ddad2cb45e27b53cee41e
 ---
 
 {{CSSRef}}
@@ -9,29 +11,31 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 
 ## 쌓임 맥락
 
-이전 글 [z-index 사용하기](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)에서 보았듯, 특정 요소의 렌더링 순서는 자신의 `z-index` 속성 값에 영향을 받습니다. 이는 그 요소들이 가진 특별한 속성으로 인해 **쌓임 맥락**이 생성되기 때문입니다.
+이전 글 [z-index 사용하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)에서 보았듯, 특정 요소의 렌더링 순서는 자신의 `z-index` 속성 값에 영향을 받습니다. 이는 그 요소들이 가진 특별한 속성으로 인해 **쌓임 맥락**이 생성되기 때문입니다.
 
 쌓임 맥락은, 문서 어디에서나, 다음 조건을 만족하는 요소가 생성합니다.
 
 - 문서의 루트 요소. (`<html>`)
 - {{cssxref("position")}}이 `absolute` 또는 `relative`이고, {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - {{cssxref("position")}}이 `fixed` 또는 `sticky`인 요소. (`sticky`는 모든 모바일 브라우저에서는 해당하지만 구형 데스크톱 브라우저에서는 해당하지 않음)
+- [container queries](/ko/docs/Web/CSS/CSS_container_queries)를 위한 {{cssxref("container-type")}}이 `size` 또는 `inline-size`인 요소.
 - 플렉스({{cssxref("flexbox")}}) 컨테이너의 자식 중 {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - 그리드({{cssxref("grid")}}) 컨테이너의 자식 중 {{cssxref("z-index")}}가 `auto`가 아닌 요소.
-- {{cssxref("opacity")}}가 1보다 작은 요소. ([불투명도 명세](http://www.w3.org/TR/css3-color/#transparency) 참고)
+- {{cssxref("opacity")}}가 1보다 작은 요소. ([불투명도 명세](https://www.w3.org/TR/css3-color/#transparency) 참고)
 - {{cssxref("mix-blend-mode")}}가 `normal`이 아닌 요소.
 - 다음 속성 중 하나라도 `none`이 아닌 값을 가진 요소.
 
   - {{cssxref("transform")}}
   - {{cssxref("filter")}}
+  - {{cssxref("backdrop-filter")}}
   - {{cssxref("perspective")}}
   - {{cssxref("clip-path")}}
   - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
 - {{cssxref("isolation")}}이 `isolate`인 요소.
-- {{cssxref("-webkit-overflow-scrolling")}}이 `touch`인 요소.
 - {{cssxref("will-change")}}의 값으로, 초깃값이 아닐 때 새로운 쌓임 맥락을 생성하는 속성을 지정한 요소.
 - {{cssxref("contain")}}이 `layout`, `paint`, 또는 둘 중 하나를 포함하는 값(`strict`, `content` 등)인 요소.
+- [top layer](/ko/docs/Glossary/Top_layer)에 배치된 요소와 이에 상응하는 {{cssxref("::backdrop")}}. [fullscreen](/ko/docs/Web/API/Fullscreen_API) 및 [popover](/ko/docs/Web/API/Popover_API) 요소들을 예로 들 수 있습니다.
 
 쌓임 맥락 안의 자식 요소는 이전에 설명했던 규칙을 동일하게 사용해 쌓입니다. 중요한 것은, 자식의 `z-index` 값은 부모에게만 의미가 있다는 점입니다. 하나의 쌓임 맥락은 부모 쌓임 맥락 안에서 통째로 하나의 단위로 간주됩니다.
 
