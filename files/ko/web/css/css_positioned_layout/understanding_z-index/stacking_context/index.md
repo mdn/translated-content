@@ -216,10 +216,10 @@ h1 {
 
 ## 같이 보기
 
-- [Stacking without the z-index property](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-- [Stacking with floated blocks](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): How floating elements are handled with stacking.
-- [Using z-index](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
-- [Stacking context example 1](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
-- [Stacking context example 2](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
-- [Stacking context example 3](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level
-
+- [z-index가 없는 경우의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : 기본 쌓임 규칙
+- [floating 엘리먼트의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements) : floating 엘리먼트들은 어떻게 다루어지는가
+- [z-index 적용](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
+- [쌓임 맥락 예제1](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
+- [쌓임 맥락 예제2](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
+- [쌓임 맥락 예제3](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
+- [Top layer](/ko/docs/Glossary/Top_layer)
