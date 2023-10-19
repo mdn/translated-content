@@ -33,6 +33,6 @@ DELETE /idX/delete HTTP/1.1
 
 ## 参见
 
-- HTTP 规范中的 [安全](https://httpwg.org/specs/rfc9110.html#safe.methods) 定义。
+- HTTP 规范中的[安全](https://httpwg.org/specs/rfc9110.html#safe.methods)定义。
 - 安全方法的详细解释：{{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}}
 - 非安全方法的详细解释：{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}}、{{HTTPMethod("POST")}}

@@ -13,4 +13,4 @@ Cookie 用于个性化用户的体验。可能包含用户在访问网站时的�
 
 ## 参见
 
-- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) on Wikipedia
+- 维基百科上的 [HTTP cookie](https://zh.wikipedia.org/wiki/Cookie)

@@ -10,4 +10,4 @@ slug: Glossary/Attribute
 ## 参见
 
 - [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
-- 关于 HTML 的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 的信息
+- 关于 HTML 的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)的信息

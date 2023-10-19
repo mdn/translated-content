@@ -13,5 +13,5 @@ slug: Glossary/Tree_shaking
 
 ## 参见
 
-- ["打包过程中死代码消除的好处"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) 在 Axel Rauschmayer 的书中:“探索 JS:模块”
+- [“打包过程中死代码消除的好处”](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling)，在 Axel Rauschmayer 的书“探索 JS：模块”中
 - [用 webpack 实现 Tree shaking](https://webpack.js.org/guides/tree-shaking/)

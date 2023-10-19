@@ -9,6 +9,6 @@ Blink 是一个开源的浏览器布局引擎，由谷歌作为 Chromium 项目�
 
 ## 参见
 
-- Blink 项目 [主页](https://www.chromium.org/blink)（英文）
+- Blink 项目[主页](https://www.chromium.org/blink)（英文）
 - Wikipedia 上的信息：[Blink](https://en.wikipedia.org/wiki/Blink_%28layout_engine%29)
 - Blink 的 [FAQ](https://www.chromium.org/blink/developer-faq) （英文）

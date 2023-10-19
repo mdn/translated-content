@@ -9,5 +9,5 @@ slug: Glossary/Head
 
 ## 参见
 
-- MDN 里的{{htmlelement("head")}}元素参考
+- MDN 里的 {{htmlelement("head")}} 元素参考
 - MDN 学习区域里的[The HTML \<head>](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)

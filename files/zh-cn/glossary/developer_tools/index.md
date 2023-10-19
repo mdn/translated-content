@@ -15,5 +15,5 @@ slug: Glossary/Developer_Tools
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) on MDN
 - [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
 - [Chrome DevTools](https://developer.chrome.com/devtools) on chrome.com
-- [Safari Developer Tools](https://support.apple.com/en-gb/guide/safari-developer/dev073038698/mac) on apple.com
+- [Safari 开发者工具](https://support.apple.com/zh-cn/guide/safari-developer/dev073038698/mac)（apple.com）
 - [Edge Dev Tools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) on microsoft.com
