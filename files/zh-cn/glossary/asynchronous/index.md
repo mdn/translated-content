@@ -21,9 +21,7 @@ slug: Glossary/Asynchronous
 
     还有许多用来实现异步软件的编程技术。查看文章[Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)来了解它们吧。
 
-## 了解更多
-
-### 技术参考
+## 参见
 
 - [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area) 从服务器获取数据
 - {{glossary("Synchronous")}} 同步
