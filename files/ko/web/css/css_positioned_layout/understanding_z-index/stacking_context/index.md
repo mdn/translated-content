@@ -223,8 +223,3 @@ h1 {
 - [Stacking context example 2](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
 - [Stacking context example 3](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level
 
-## Original Document Information
-
-- Author(s): Paolo Lombardi
-- This article is the English translation of an article I wrote in Italian for [YappY](http://www.yappy.it). I grant the right to share all the content under the [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/).
-- Last Updated Date: July 9, 2005
