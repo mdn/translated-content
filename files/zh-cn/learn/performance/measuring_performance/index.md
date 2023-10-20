@@ -7,9 +7,9 @@ slug: Learn/Performance/Measuring_performance
 
 测量性能提供了一个重要的指标，以帮助你评估应用程序、网站或 web 服务的成功程度。
 
-例如，你可以使用性能指标来确定你的应用程序与竞争对手相比如何表现，或者你可以比较应用程序在各个版本之间的性能。你选择的度量指标应与你的用户、网站和业务目标相关。它们应以一致的方式收集和测量，并以非技术利益相关者可以消费和理解的格式进行分析。
+例如，你可以使用性能指标来确定你的应用程序与竞争对手相比如何表现，或者你可以比较应用程序在各个版本之间的性能。你选择的度量指标应与你的用户、网站和业务目标相关。它们应以一致的方式收集和测量，并以非技术利益相关者可以使用和理解的格式进行分析。
 
-本文介绍了可用于衡量和优化网站性能的 web 性能指标。
+本文介绍了可以用来获取网站性能指标的工具，这些工具可以用来衡量和优化你的网站性能。
 
 <table>
   <tbody>
@@ -37,6 +37,41 @@ slug: Learn/Performance/Measuring_performance
   </tbody>
 </table>
 
+## 性能工具
+
+有几种不同的工具可用于帮助你测量和改进性能。这些工具通常可以分为两类：
+
+- 表明或测量性能的工具，比如 [PageSpeed Insights](https://pagespeed.web.dev/) 或 Firefox 的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)和[性能监视器](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)。这些工具展示了你的网站加载的快慢。它们也指出了你的 Web 应用程序中可以优化的区域。
+- 你可以用来构建自定义性能工具的[性能 API](/zh-CN/docs/Web/API/Performance_API)。
+
+## 通用性能报告工具
+
+像 [PageSpeed Insights](https://pagespeed.web.dev/) 这样的工具可以衡量网站的性能。你可以输入一个 URL，并在几秒钟内获得一份性能报告。报告包含有关你的网站在移动设备和桌面设备上的表现的分数。这是了解你已经做得很好的地方以及可以改进的地方的良好开始。
+
+撰写本文时，MDN 的性能报告摘要看起来类似于以下内容：
+
+![Mozilla 主页的 PageSpeed Insights 报告截图。](pagespeed-insight-mozilla-homepage.png)
+
+性能报告包含有关用户在页面上显示任何内容之前需要等待多长时间、显示页面需要下载多少字节等信息。它还会让你知道测量的值是否被认为是好的或坏的。
+
+[webpagetest.org](https://webpagetest.org) 是另一个可以自动测试你的网站并返回有用指标的工具示例。
+
+尝试现在使用这些工具运行你最喜欢的网站，查看分数如何。
+
+## 网络监视工具
+
+大多数浏览器都有可用的工具，你可以使用这些工具来针对已加载的页面进行运行，以确定它们的性能如何，大多数工具的工作方式都很类似。例如，Firefox 的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)返回有关从网络下载的所有素材的详细信息，以及显示每个下载所花费的时间的时间图。
+
+你还可以查看 [Chrome 的网络监视器文档](https://developer.chrome.com/docs/devtools/network/)
+
+## 性能监视工具
+
+你也可以使用浏览器性能监测工具，比如 [Firefox 性能监测器](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)来测量在执行不同操作时一个 web 应用或网站的用户界面性能。这可以指出可能拖慢你的 web 应用或网站速度的特性。
+
+![开发者工具性能面板显示录制 #1. 的瀑布图](perf-monitor.png)
+
+另见 [Chrome 性能工具文档](https://developer.chrome.com/docs/devtools/performance/)。
+
 ## 性能 API
 
 编写 web 代码时，有大量的 [web API](/zh-CN/docs/web/API) 可用，使你可以创建自己的性能测量工具。
@@ -53,41 +88,8 @@ slug: Learn/Performance/Measuring_performance
 
 虽然本文并没有深入介绍这些 API 的使用，但了解它们的存在是有用的。你还可以参考[导航和计时](/zh-CN/docs/web/Performance/Navigation_and_resource_timings)文章，以获取有关使用性能 web API 的更多示例。
 
-## 工具和指标
-
-有许多不同的工具可用于帮助你提高性能。这些工具通常可以分为两类：
-
-- 指示或测量性能的工具，如 [PageSpeed Insights](https://pagespeed.web.dev/) 或 Firefox 的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)和[性能监视器](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)。这些工具向你展示你的 web 应用程序或网站加载有多快或多慢。它们还指出可以改进以优化你的 web 应用程序的领域。
-- 更新代码以使你的 web 应用程序或网站性能更好的工具。例如，捆绑工具将你的代码打包成单个文件，以减少 HTTP 请求数量，或者缩小器从你的代码中删除所有空白以使文件更小。
-
-在本课程中，我们将讨论这两类工具。除了讨论性能指标，我们还将讨论用于衡量你的网站性能是否在改善的指标。
-
-### 通用性能报告工具
-
-像 [PageSpeed Insights](https://pagespeed.web.dev/) 这样的工具可以衡量网站的性能。你可以输入一个 URL，并在几秒钟内获得一份性能报告。报告包含有关你的网站在移动设备和桌面设备上的表现的分数。这是了解你已经做得很好的地方以及可以改进的地方的良好开始。
-
-撰写本文时，MDN 的性能报告摘要看起来类似于以下内容：
-
-![Mozilla 主页的 PageSpeed Insights 报告截图。](pagespeed-insight-mozilla-homepage.png)
-
-性能报告包含有关用户在页面上显示任何内容之前需要等待多长时间、显示页面需要下载多少字节等信息。它还会让你知道测量的值是否被认为是好的或坏的。
-
-[webpagetest.org](https://webpagetest.org) 是另一个可以自动测试你的网站并返回有用指标的工具示例。
-
-尝试现在运行你最喜欢的网站，使用 webpagetest.org 和 PageSpeed Insights，查看分数如何。
-
-### 网络工具
-
-大多数浏览器都有可用的工具，你可以使用这些工具来针对已加载的页面进行运行，以确定它们的性能如何。例如，Firefox 的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)返回有关从网络下载的所有素材的详细信息，以及显示每个下载所花费的时间的时间图。
-
-![Firefox 网络监视器显示已加载素材列表以及每个素材的加载时间](network-monitor.png)
-
-你还可以使用[性能监视器](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)在执行不同操作时测量 web 应用程序或网站用户界面的性能。这表明了可能会减慢你的 web 应用程序或网站的功能。
-
-![开发者工具性能面板显示录制＃1 的瀑布图。](perf-monitor.png)
-
 ## 结语
 
-本文简要介绍了 web 性能指标，以帮助你了解可以在 web 应用程序或网站上测量的内容。接下来，你将了解感知性能以及一些技术，以减轻或完全掩盖不可避免的性能损失对用户造成的影响。
+本文简要介绍了 web 性能指标，以帮助你了解可以在 web 应用程序或网站上测量的内容。接下来，你将了解如何优化网站上的图片以优化其性能。
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
