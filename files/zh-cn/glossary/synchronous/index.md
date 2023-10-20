@@ -11,9 +11,7 @@ slug: Glossary/Synchronous
 
 许多程序指令也是实时的：例如当输入一个算式时，除非编程人员有意为止，否则环境都会**立即**将结果反馈回来。
 
-## 了解更多
-
-### 技术参考
+## 参见
 
 - {{glossary("Asynchronous")}}
 - 使用了 [XMLHttpRequest()](/zh-CN/docs/Web/API/XMLHttpRequest) {{glossary("API")}} 的[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)

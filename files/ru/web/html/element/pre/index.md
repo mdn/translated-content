@@ -80,11 +80,7 @@ body {
 
 ## Характеристики
 
-| Спецификация                                                                      | Статус                   | Комментарий                                          |
-| --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}      | {{Spec2('HTML WHATWG')}} | No significant change from {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML5 W3C')}}   | No significant change from {{SpecName("HTML4.01")}}  |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}               | {{Spec2('HTML4.01')}}    | Deprecated the `cols` attribute                      |
+{{Specifications}}
 
 ## Совместимость браузера
 

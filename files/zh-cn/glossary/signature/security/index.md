@@ -16,13 +16,7 @@ slug: Glossary/Signature/Security
 
 如果私钥被泄密或收件人被欺骗地给出错误的公钥，系统就会失败。
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - [Digital signature](https://zh.wikipedia.org/wiki/Digital_signature) on Wikipedia
 - See {{glossary("digest")}}, {{glossary("encryption")}}
-
-### 技术参考
-
-- [信息安全基础](/zh-CN/docs/Web/Security/Information_Security_Basics)

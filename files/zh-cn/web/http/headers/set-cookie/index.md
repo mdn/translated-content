@@ -54,7 +54,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : 一个 cookie 开始于一个名称/值对：
 
     - `<cookie-name>` 可以是除了控制字符、空格或制表符之外的任何 US-ASCII 字符。同时不能包含以下分隔字符：`( ) < > @ , ; : \ " / [ ] ? = { }`。
-    - `<cookie-value>` 是可选的，如果存在的话，那么需要包含在双引号里面。支持除了控制字符、{{glossary("Whitespace", "空格")}}、双引号、逗号、分号以及反斜线之外的任意 US-ASCII 字符。
+    - `<cookie-value>` 可以选择包裹在双引号中。支持除了控制字符、{{glossary("Whitespace", "空格")}}、双引号、逗号、分号以及反斜线之外的任意 US-ASCII 字符。
 
     **关于编码**：许多应用会对 cookie 值按照 URL 编码规则进行编码，但是按照 RFC 规范，这不是必须的。不过满足规范中对于 `<cookie-value>` 所允许使用的字符的要求是有用的。
 
