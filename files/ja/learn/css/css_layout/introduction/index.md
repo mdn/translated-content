@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基礎（<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 入門</a
         >で学習）、および CSS の動作の考え方（
         <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>で学習）
