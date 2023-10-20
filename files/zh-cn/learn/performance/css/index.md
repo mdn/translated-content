@@ -68,7 +68,7 @@ slug: Learn/Performance/CSS
 
 - **简化选择器**：人们经常编写比应用所需样式更复杂的选择器。这不仅会增加文件大小，还会增加解析这些选择器的时间。例如：
 
-  ````css
+  ```css
   /* 非常具体的选择器 */
   body div#main-content article.post h2.headline {
     font-size: 24px;
@@ -82,11 +82,9 @@ slug: Learn/Performance/CSS
 
   将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#优先级_2)，以后需要时就很容易覆盖样式。
 
-  ````
-
 - **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
 
-  ````css
+  ```css
   /* 选择 <body> 元素内的所有元素 */
   body * {
     font-size: 14px;
@@ -95,8 +93,6 @@ slug: Learn/Performance/CSS
   ```
 
   请记住，许多属性（例如 {{cssxref("font-size")}}）会从其父元素继承其值，因此你不需要在所有地方应用它们。而且功能强大的工具（如 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)）需要谨慎使用。在所有地方都使用它们可能会导致各种意外行为。
-
-  ````
 
 - **使用 CSS 精灵图减少图像相关的 HTTP 请求**：[CSS 精灵图](https://css-tricks.com/css-sprites/) 是一种技术，它将你希望在站点上使用的多个小图像（例如图标）放入单个图像文件中，然后使用不同的 {{cssxref("background-position")}} 值在不同的位置显示图像的一部分。这可以大大减少获取图像所需的 HTTP 请求数量。
 
