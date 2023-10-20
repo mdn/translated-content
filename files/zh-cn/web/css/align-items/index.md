@@ -94,7 +94,7 @@ align-items: unset;
 #container {
   height: 200px;
   width: 240px;
-  align-items: center; /* 可以在示例中更改 */
+  align-items: center; /* 可以在运行实例中更改 */
   background-color: #8c8c8c;
 }
 
