@@ -12,8 +12,7 @@ slug: Learn/Performance/CSS
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机操作能力，
-        <a
+        基本的计算机操作能力，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >已安装基本软件</a
         >，以及对<a
