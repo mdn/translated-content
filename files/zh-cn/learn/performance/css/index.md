@@ -159,7 +159,7 @@ slug: Learn/Performance/CSS
 
 浏览器可能会在元素实际发生变化之前进行优化设置。这类优化可以通过提前完成可能需要的大量工作，提高页面的响应速度。CSS 的 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性向浏览器提示元素预期的变化方式。
 
-> **备注：**`will-change`应该作为处理现有的性能问题的最后一招。不应该用它来预测性能问题。
+> **备注：**`will-change` 应该作为处理现有的性能问题的最后一招。不应该用它来预测性能问题。
 
 ```css
 .element {
