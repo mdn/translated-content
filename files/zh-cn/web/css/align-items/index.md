@@ -225,7 +225,7 @@ display.addEventListener("change", (evt) => {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", "260px", "290px")}}
+{{EmbedLiveSample("示例", "260px", "290px")}}
 
 ## 规范
 
