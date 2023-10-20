@@ -5,7 +5,7 @@ slug: Web/CSS/align-items
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`align-items`** 属性设置了所有直接子元素的 [align-self](/zh-CN/docs/Web/CSS/align-self) 值作为一个组。在 Flexbox 中，它控制子元素在[交叉轴](/zh-CN/docs/Glossary/Cross_Axis)上的对齐。在 Grid 布局中，它控制了子元素在其[网格区域](/zh-CN/docs/Glossary/Grid_Areas)内的块向轴上的对齐。
+[CSS](/zh-CN/docs/Web/CSS) **`align-items`** 属性设置了所有直接子元素的 {{cssxref("align-self")}} 值作为一个组。在 Flexbox 中，它控制子元素在{{glossary("Cross Axis", "交叉轴")}}上的对齐。在 Grid 布局中，它控制了子元素在其{{glossary("Grid Areas", "网格区域")}}内的块向轴上的对齐。
 
 下面的交互示例演示了使用网格布局的 `align-items` 的一些值。
 
