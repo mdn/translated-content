@@ -32797,16 +32797,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
-    "modified": "2019-03-23T22:08:51.586Z",
-    "contributors": [
-      "lakeinchina",
-      "JinRong.Yang",
-      "zhangchen",
-      "Iwakura-Lain",
-      "blackmomo",
-      "Akimyou"
-    ]
   }
 }
