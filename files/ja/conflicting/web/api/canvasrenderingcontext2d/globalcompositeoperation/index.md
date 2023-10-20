@@ -1,6 +1,7 @@
 ---
 title: 合成の例
-slug: Web/API/Canvas_API/Tutorial/Compositing/Example
+slug: conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+original_slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**`await`** 演算子はプロミス ({{jsxref("Promise")}}) を待ち、履行値を取得するために使用します。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の中、または[module](/ja/docs/Web/JavaScript/Guide/Modules)の最上位でのみ使用することができます。
+**`await`** 演算子はプロミス ({{jsxref("Promise")}}) を待ち、履行値を取得するために使用します。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の中、または[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)の最上位でのみ使用することができます。
 
 ## 構文
 

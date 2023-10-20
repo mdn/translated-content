@@ -3,7 +3,7 @@ title: 関数
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 関数は、 JavaScript の基本的な構成要素のひとつです。 JavaScript の関数は、プロシージャに似ています。 — タスクを実行したり値を計算したりする一連の文ですが、プロシージャが関数として認められるためには、何らかの入力を受け取り、入力と出力の間に何らかの明白な関係がある出力を返す必要があります。関数を使用するには、呼び出したいスコープのどこかで関数を定義する必要があります。
 
@@ -701,4 +701,4 @@ JavaScript には、定義済みの最上位関数がいくつかあります。
 - {{jsxref("Global_Objects/unescape", "unescape()")}}
   - : 非推奨の **`unescape()`** メソッドはある文字列中の 16 進数によるエスケープシーケンスを、それが表す所定の文字に置換した新しい文字列を計算します。エスケープシーケンスは {{jsxref("Global_Objects/escape", "escape")}} といった関数によって提供されているかもしれません。 `unescape()` は非推奨なので、代わりに {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} または {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} を使用してください。
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

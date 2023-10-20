@@ -92,10 +92,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 
 ## Спецификация
 
-| Specification                                                   | Status              | Comment             |
-| --------------------------------------------------------------- | ------------------- | ------------------- |
-| {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.2")}} | No change.          |
-| {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.1")}} | Initial definition. |
+{{Specifications}}
 
 ## Смотреть так же
 

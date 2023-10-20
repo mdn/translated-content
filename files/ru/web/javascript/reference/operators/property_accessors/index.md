@@ -137,11 +137,7 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Спецификации
 
-| Спецификация                                                         | Статус             | Комментарий              |
-| -------------------------------------------------------------------- | ------------------ | ------------------------ |
-| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ES6')}}   |                          |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}           | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}             | {{Spec2('ES1')}}   | Изначальное определение. |
+{{Specifications}}
 
 ## Поддержка браузерами
 
