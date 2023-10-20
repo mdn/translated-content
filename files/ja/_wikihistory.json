@@ -30346,10 +30346,6 @@
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
   },
-  "conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
-    "modified": "2019-03-23T22:48:21.822Z",
-    "contributors": ["dskmori"]
-  },
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": ["mfuji09"]
