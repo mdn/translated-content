@@ -1,30 +1,34 @@
 ---
-title: Comment faire pour que les PWAs relancent les utilisateurs en utilisant des notifications et des messages poussés
+title: Notifications et messages push
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-Avoir la possibilité de mettre en cache le contenu d'une application pour travailler en mode déconnecté est une formidable fonctionnalité. Donner la possibilité à l'utilisateur d'installer l'application web sur son écran d'accueil est encore mieux. Mais plutôt que de s'en remettre seulement aux actions de l'utilisateur, nous pouvons faire plus, en utilisant des messages poussés et des notifications pour le relancer automatiquement et fournir des nouveaux contenus à chaque fois qu'ils sont disponibles.
+{{PWASidebar}}
 
-## Deux APIs, un seul but
+Mettre en cache le contenu d'une application pour travailler en mode déconnecté est une fonctionnalité appréciable, tout comme l'installation d'une application web sur son écran d'accueil. Toutefois, nous pouvons aller plus loin que les utilisations initiées par la personne. En effet, grâce aux messages poussés (<i lang="en">push messages</i>) et aux notifications, nous pouvons informer l'utilisatrice ou l'utilisateur que de nouvelles informations sont disponibles.
 
-L'[API Push](/fr/docs/Web/API/Push_API) et l'[API Notifications](/fr/docs/Web/API/Notifications_API) sont deux APIs distinctes mais elles fonctionnent bien ensemble quand vous souhaitez fournir une fonction de relance dans votre application. Push est utilisée pour délivrer un nouveau contenu à votre application depuis le serveur sans aucune intervention côté client et cette opération est gérée par le service worker de l'application. Les notifications peuvent être utilisées par le service worker pour afficher les nouvelles informations à l'utilisateur, ou, au moins, le prévenir que quelque chose a été mis à jour.
+## Deux API, un seul but
 
-Cela s'exécute hors de la fenêtre du navigateur, juste comme les service workers, si bien que des mises à jour peuvent être poussées et des notifications peuvent être affichées quand la page de l'application n'a pas le focus voire fermée.
+[L'API <i lang="en">Push</i>](/fr/docs/Web/API/Push_API) et [l'API Notifications](/fr/docs/Web/API/Notifications_API) sont deux API distinctes, mais qui fonctionnent bien ensemble pour implémenter une fonctionnalité visant à éveiller l'intérêt de la personne. L'API <i lang="en">Push</i> est utilisée pour délivrer un nouveau contenu à votre application depuis le serveur, sans aucune intervention côté client&nbsp;; cette opération étant gérée par le <i lang="en">service worker</i> de l'application. Les notifications peuvent être utilisées par le <i lang="en">service worker</i> pour afficher les nouvelles informations à l'utilisatrice ou l'utilisateur, ou, du moins, prévenir que quelque chose a été mis à jour.
+
+Tout ceci s'exécute en dehors de la fenêtre du navigateur, tout comme les service workers, de sorte que les mises à jour peuvent être poussées et que des notifications peuvent être affichées lorsque la page de l'application n'a pas le focus, voire quand elle est fermée.
 
 ## Notifications
 
-Commençons avec les notifications — elles peuvent fonctionner sans push, mais sont très utiles quand elles sont combinées avec. Voyons-les de façon isolée pour commencer.
+Commençons avec les notifications. Elles peuvent fonctionner sans message poussé du serveur, même si elles sont très utiles avec ceux-ci. Pour commencer, voyons-les de façon isolée.
 
-### Demande de permission
+### Demander la permission
 
-Pour afficher une notification, nous devons d'abord demander la permission de le faire. Cependant, au lieu de d'afficher la notification immédiatement, une meilleure pratique consiste à n'afficher la fenêtre popup quand l'utilisateur le demande en cliquant sur un bouton:
+Pour afficher une notification, nous devons d'abord demander la permission. Cependant, au lieu d'afficher immédiatement la demande de permission, une bonne pratique consiste à l'afficher uniquement lorsque la personne le demande en cliquant sur un bouton&nbsp;:
 
 ```js
-var button = document.getElementById("notifications");
-button.addEventListener("click", function (e) {
-  Notification.requestPermission().then(function (result) {
+const button = document.getElementById("notifications");
+button.addEventListener("click", () => {
+  Notification.requestPermission().then((result) => {
     if (result === "granted") {
       randomNotification();
     }
@@ -32,103 +36,110 @@ button.addEventListener("click", function (e) {
 });
 ```
 
-Ceci affiche une popup en utilisant le propre service de notification du système d'exploitation:
+Il s'agit d'une fenêtre contextuelle utilisant le service de notification du système d'exploitation&nbsp;:
 
-![Notification of js13kPWA.](js13kpwa-notification.png)
+![Fenêtre modale pour la demande de permission pour les notifications de js13kPWA](js13kpwa-notification.png)
 
-Une fois que l'utilisateur a confirmé qu'il veut recevoir des notifications, l'application peut alors lui afficher. Le résultat de l'action de l'utilisateur peut être default (défault), granted (autorisé) ou denied (interdit). L'option default est choisi quand l'utilisateur n'a pas fait de choix et les deux autres sont sélectionnées selon que l'utilisateur a respectivement cliqué sur oui ou non.
+Une fois que la personne a confirmé qu'elle voulait recevoir des notifications, l'application peut alors les utiliser. Le résultat de cette demande de permission `default` (valeur par défaut), `granted` (autorisé) ou `denied` (interdit). L'option `default` sera utilisée si la personne n'a pas fait de choix, les autres valeurs correspondront au choix effectué.
 
-Si la permission est donnée, elle vaut à la fois pour les notifications et les push.
+Si la permission est donnée, elle vaut à la fois pour les notifications et les messages poussés.
 
 ### Créer une notification
 
-L'application exemple crée une notification en utilisant les données disponibles — un jeu est choisi au hasard et les données associées sont utilisées pour générer le contenu de la notification: le nom du jeu pour le titre, la mention de l'auteur dans le corps du texte et l'image pour l'icone:
+L'application d'exemple crée une notification en utilisant les données disponibles — un jeu est choisi au hasard et les données associées sont utilisées pour générer le contenu de la notification&nbsp;: le nom du jeu pour le titre, la mention de l'auteur dans le corps du texte et l'image pour l'icône&nbsp;:
 
 ```js
 function randomNotification() {
-  var randomItem = Math.floor(Math.random() * games.length);
-  var notifTitle = games[randomItem].name;
-  var notifBody = "Créé par " + games[randomItem].author + ".";
-  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
-  var options = {
+  const randomItem = Math.floor(Math.random() * games.length);
+  const notifTitle = games[randomItem].name;
+  const notifBody = `Created by ${games[randomItem].author}.`;
+  const notifImg = `data/img/${games[randomItem].slug}.jpg`;
+  const options = {
     body: notifBody,
     icon: notifImg,
   };
-  var notif = new Notification(notifTitle, options);
+  new Notification(notifTitle, options);
   setTimeout(randomNotification, 30000);
 }
 ```
 
-Une nouvelle notification est créée au hasard toutes les 30 secondes jusqu'à ce que ça devienne trop pénible et que ce soit désactivé par l'utilisateur (pour une vraie application, les notifications devraient être moins fréquentes et plus utiles). L'avantage de l'API Notifications est qu'elle utilise la fonction de notification du système d'exploitation. Ceci signifie que les notifications peuvent être affichées à l'utilisateur même quand il ne regarde pas l'application et que les notifications ont le même aspect que celles affichées par les applications natives.
+Une nouvelle notification est créée au hasard toutes les 30 secondes, jusqu'à ce que ça devienne trop pénible et que la personne les désactive (pour une vraie application, les notifications devraient être moins fréquentes et plus utiles). L'avantage de l'API Notifications est qu'elle utilise la fonction de notification du système d'exploitation. Ceci signifie que les notifications peuvent être affichées même quand la personne ne regarde pas l'application et qu'elles auront le même aspect que celles affichées par les applications natives.
 
-## Push
+## Messages poussés
 
-Pousser (push) est plus compliqué que de faire des notifications — nous avons besoin de nous abonner à un serveur qui enverra ensuite les données en retour à l'application. Le Service Worker de l'application recevra les données du serveur qui les a poussées et pourra ensuite les afficher en utilisant le système de notifications ou un autre mécanisme si on le souhaite.
+Les messages poussés (<i lang="en">push messages</i> ou <i lang="en">push</i>) sont plus compliqués à mettre en œuvre que les notifications. Nous avons besoin de nous abonner à un serveur qui enverra ensuite les données à l'application. Le <i lang="en">service worker</i> de l'application recevra les données du serveur qui les a poussées et pourra ensuite les afficher en utilisant le système de notifications (ou tout autre mécanisme).
 
-La technologie en est toujours à ses tous débuts — certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification) qui offre une couche de sécurité supplémentaire pour votre application. Vous pouvez étudier les [exemples du Cookbook des Service Workers](https://github.com/mdn/serviceworker-cookbook/push-payload.html), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
+La technologie en est à ses débuts. Certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (<i lang="en">Voluntary Application Identification</i>) qui offre une couche de sécurité supplémentaire. Vous pouvez étudier [les exemples du livre de recettes des <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook/push-payload.html), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
 
-Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
-
-```js
-registration.pushManager.getSubscription().then(/* ... */);
-```
-
-Une fois que l'utilisateur est enrôlé, il peut recevoir des notifications poussées du serveur.
-
-Du côté serveur, le processus tout entier doit être chiffré avec des clefs publique et privée par raison de sécurité — permettre à tout le monde d'envoyer des messages poussés non sécurisés en utilisant votre application serait une terrible idée. Voir la [page de test de chffirement des données web poussées](https://jrconlin.github.io/WebPushDataTestPage/) pour avoir des informations détaillées concernant la sécurisation du serveur. Le serveur enregistre toutes les informations reçues quand un utilisateur s'enregistre si bien que les messages peuvent être envoyés plus tard quand c'est nécessaire.
-
-Pour recevoir des messages poussés, nous pouvons écouter l'événement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event) dans le fichier du Service Worker:
+Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un <i lang="en">service worker</i> (voir les fondamentaux expliqués dans l'article [Fonctionnement hors connexion des PWA grâce aux <i lang="en">service workers</i>](/fr/docs/Web/Apps/Progressive/Offline_Service_workers)). Au sein du <i lang="en">service worker</i>, on peut créer un mécanisme d'abonnement au service push en appelant la méthode [`getSubscription()`](/fr/docs/Web/API/PushManager/getSubscription) de l'interface [`PushManager`](/fr/docs/Web/API/PushManager).
 
 ```js
-self.addEventListener("push", function (e) {
-  /* ... */
+navigator.serviceWorker.register("service-worker.js").then((registration) => {
+  return registration.pushManager.getSubscription().then(/* … */);
 });
 ```
 
-Les données peuvent être récupérées puis affichées immédiatement à l'utilisateur sous forme d'une notification. Ceci, par exemple, peut être utilisé pour rappeler à l'utilisateur quelque chose ou pour l'informer d'un nouveau contenu disponible dans l'application.
+Une fois que la personne est abonnée, elle peut recevoir des notifications poussées par le serveur.
 
-### Exemple de Push
+Côté serveur, le canal de communication doit être chiffré pour des raisons de sécurité&nbsp;: on ne veut pas que n'importe qui puisse intercepter les messages poussés vers l'application. Voir [la page de test de chiffrement pour les données web poussées](https://jrconlin.github.io/WebPushDataTestPage/) pour avoir des informations détaillées concernant la sécurisation du serveur. Le serveur enregistre toutes les informations reçues lorsqu'une personne s'abonne, si bien que les messages peuvent être envoyés plus tard quand c'est nécessaire.
 
-Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) — voir la [démonstration de charge utile poussée](https://github.com/mdn/serviceworker-cookbook/push-payload.html).
+Pour recevoir des messages poussés, nous pouvons écouter l'évènement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event) dans le fichier du <i lang="en">service worker</i>&nbsp;:
 
-Cette démonstration comporte trois fichiers:
+```js
+self.addEventListener("push", (e) => {
+  /* … */
+});
+```
 
-- [index.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/index.js), qui contient le code source de notre application
-- [server.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/server.js), qui contient la partie serveur (écrit en Node.js)
-- [service-worker.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/service-worker.js), qui contient le code spécifique du Service Worker.
+Les données peuvent être récupérées puis affichées immédiatement sous forme d'une notification. On peut ainsi émettre un rappel ou informer d'un nouveau contenu disponible dans l'application.
 
-Explorons tout ceci
+### Exemple d'utilisation de l'API <i lang="en">Push</i>
 
-#### index.js
+L'API <i lang="en">Push</i> nécessite une partie serveur. Nous ne pouvons donc pas l'inclure dans l'exemple js13kPWA, qui est hébergé avec des pages GitHub puisqu'elles ne permettent que de servir des fichiers statiques. Tout ceci est expliqué dans [le livre de recettes des <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook) et notamment [la démonstration de charge utile poussée](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload).
 
-Le fichier `index.js` commence par enregistrer le service worker:
+Cette démonstration comporte trois fichiers&nbsp;:
+
+- [`index.js`](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/index.js)
+  - : Le code source de notre application côté client
+- [`server.js`](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/server.js)
+  - : La logique côté serveur (écrite en Node.js)
+- [`service-worker.js`](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/service-worker.js)
+  - : Le code spécifique du <i lang="en">service worker</i>, chargé côté client.
+
+Explorons tout ceci.
+
+#### `index.js`
+
+Le fichier `index.js` commence par enregistrer le service worker&nbsp;:
 
 ```js
 navigator.serviceWorker
   .register("service-worker.js")
-  .then(function (registration) {
+  .then((registration) => {
     return registration.pushManager
       .getSubscription()
-      .then(async function (registration) {
+      .then(async (subscription) => {
         // partie relative à l'enregistrement
       });
   })
-  .then(function (subscription) {
+  .then((subscription) => {
     // partie relative à l'abonnement
   });
 ```
 
-C'est un petit peu plus compliqué que le service worker que nous avons vu dans la [démonstration de js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/). Dans ce cas particulier, après l'enregistrement, nous utilisons l'objet d'enregistrement pour s'abonner puis utiliser ensuite l'objet d'abonnement résultant pour achever le processus complet.
+Ce fragment de code est légèrement plus compliqué que le <i lang="en">service worker</i> que nous avons vu pour [l'application js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/). Ici, après l'enregistrement, nous utilisons l'objet d'enregistrement pour nous abonner, puis nous utilisons l'objet d'abonnement résultant pour terminer l'ensemble du processus.
 
-Dans la partie enregistrement, le code ressemble à ceci:
+Dans la partie enregistrement, le code ressemble à ceci&nbsp;:
 
 ```js
-if (registration) {
-  return registration;
-}
+async (subscription) => {
+  if (subscription) {
+    return subscription;
+  }
+};
 ```
 
-Si l'utilisateur s'est déjà abonné, nous renvoyons alors l'objet de souscription et accède à la partir de la souscription. Si ce n'est pas le cas, nous initialisation une nouvelle souscription:
+Si la personne s'est déjà abonnée, nous renvoyons l'objet d'abonnement et passons à la partie abonnement. Dans le cas contraire, nous initialisons un nouvel abonnement&nbsp;:
 
 ```js
 const response = await fetch("./vapidPublicKey");
@@ -136,18 +147,18 @@ const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
 
-L'application récupère la clef publique du serveur et convertit la réponse sous forme de texte; puis cette réponse doit être convertie en un tableau de nombre entier non signé (Uint8Array (pour une prise en charge par Chrome). Pour en apprendre davantage sur les clefs VAPID, vous pouvez lire le message de blog [Envoyer des notifications WebPush identitées par VAPID via le service de Push de Mozilla](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/).
+L'application récupère la clef publique du serveur et convertit la réponse sous forme de texte. Cette réponse doit ensuite être convertie en un tableau de nombre entier non signé ([`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)). Pour en apprendre davantage sur les clefs VAPID, vous pouvez lire le billet de blog [Envoyer des notifications WebPush identifiées par VAPID via le service push de Mozilla (en anglais)](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/).
 
-L'application peut maintenant utiliser le {{domxref("PushManager")}} pour abonner le nouvel utilisateur. Il y a deux options passées à la méthode {{domxref("PushManager.subscribe()")}} — la première est `userVisibleOnly: true`, qui signifie que toutes les notifications envoyées à l'utilisateur lui seront visibles et la seconde est `applicationServerKey`, qui contient notre clef VAPID une fois récupérée et convertie avec succès.
+L'application peut maintenant utiliser l'interface [`PushManager`](/fr/docs/Web/API/PushManager) pour abonner la personne. Il y a deux options passées à la méthode [`PushManager.subscribe()`](/fr/docs/Web/API/PushManager/subscribe)&nbsp;: la première est `userVisibleOnly: true`, qui signifie que toutes les notifications envoyées à la personne lui seront visibles et la seconde est `applicationServerKey`, qui contient notre clef VAPID récupérée et convertie.
 
 ```js
-return registration.pushManager.subscribe({
+registration.pushManager.subscribe({
   userVisibleOnly: true,
   applicationServerKey: convertedVapidKey,
 });
 ```
 
-Maintenant, allons voir la partie abonnement — l'application envoie d'abord les détails de l'abonnement au format JSON au serveur en utilisant Fetch.
+Voyons maintenant la partie concernant l'abonnement. L'application envoie d'abord les détails de l'abonnement au format JSON au serveur en utilisant [`fetch()`](/fr/docs/Web/API/fetch).
 
 ```js
 fetch("./register", {
@@ -155,16 +166,14 @@ fetch("./register", {
   headers: {
     "Content-type": "application/json",
   },
-  body: JSON.stringify({
-    subscription: subscription,
-  }),
+  body: JSON.stringify({ subscription }),
 });
 ```
 
-Puis la fonction {{domxref("onclick","GlobalEventHandlers.onclick")}} du bouton _Abonnement_ est définie:
+Puis on définit la fonction [`onclick()`](/fr/docs/Web/API/Element/click_event) du bouton d'abonnement&nbsp;:
 
 ```js
-document.getElementById("doIt").onclick = function () {
+document.getElementById("doIt").onclick = () => {
   const payload = document.getElementById("notification-payload").value;
   const delay = document.getElementById("notification-delay").value;
   const ttl = document.getElementById("notification-ttl").value;
@@ -175,71 +184,77 @@ document.getElementById("doIt").onclick = function () {
       "Content-type": "application/json",
     },
     body: JSON.stringify({
-      subscription: subscription,
-      payload: payload,
-      delay: delay,
-      ttl: ttl,
+      subscription,
+      payload,
+      delay,
+      ttl,
     }),
   });
 };
 ```
 
-Quand le bouton est cliqué, `fetch` demande au serveur d'envoyer la notification avec les paramètres suivants: `payload` est le contenu que la notification doir afficher, `delay` définit un délai en seconde avant que la notification soit affichée et `ttl` indique en seconde le temps que cette notification doit rester disponible sur le serveur.
+Quand on clique sur le bouton, `fetch()` demande au serveur d'envoyer la notification avec les paramètres suivants&nbsp;:
 
-Au tour maintenant du fichier Javascript suivant.
+- `payload`
+  - : Le contenu que la notification doir afficher.
+- `delay`
+  - : Le délai, exprimé en secondes, avant que la notification soit affichée.
+- `ttl`
+  - : La durée, exprimée en secondes, pendant laquelle cette notification doit rester disponible sur le serveur.
 
-#### server.js
+Passons au fichier suivant.
 
-La partie serveur est écrite en Node.js et doit être hébergée à un endroit adapté, sujet qui fera l'objet d'un article qui lui entièrement consacré. Nous ne fournirons ici qu'un aperçu superficiel.
+#### `server.js`
 
-Le [module web-pus](https://www.npmjs.com/package/web-push) est utilisé pour configurer les clefs VAPID keys et éventuellement les générer si elles ne sont pas encore disponibles.
+La partie serveur est écrite en Node.js et doit être hébergée à un endroit adapté. Cet hébergement n'est pas le sujet de cet article et nous ne l'aborderons ici que de façon superficielle.
+
+Le [module npm `web-push`](https://www.npmjs.com/package/web-push) est utilisé pour configurer les clefs VAPID et éventuellement les générer si besoin.
 
 ```js
 const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   console.log(
-    "Vous devez configurer les variables d'environnement " +
-      "VAPID_PUBLIC_KEY et VAPID_PRIVATE_KEY." +
-      "Vous pouvez utiliser celles-ci:",
+    "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
+      "environment variables. You can use the following ones:",
   );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  "https://github.com/mdn/serviceworker-cookbook/",
+  "https://example.com",
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
-Ensuite, un module définit et exporte toutes les routes que l'application doit prendre en charge: obtenir la clef publique VAPID, l'enregistrement puis l'envoi de notifications. Vous pouvez voir comment les variables du fichier `index.js` sont utilisées: `payload`, `delay` et `ttl`.
+Ensuite, un module définit et exporte toutes les routes que l'application doit prendre en charge&nbsp;: obtenir la clef publique VAPID, l'enregistrement puis l'envoi de notifications. Vous pouvez voir l'utilisation des variables émises depuis le fichier `index.js`&nbsp;: `payload`, `delay` et `ttl`.
 
 ```js
-module.exports = function (app, route) {
-  app.get(route + "vapidPublicKey", function (req, res) {
+module.exports = (app, route) => {
+  app.get(`${route}vapidPublicKey`, (req, res) => {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + "register", function (req, res) {
+  app.post(`${route}register`, (req, res) => {
     res.sendStatus(201);
   });
 
-  app.post(route + "sendNotification", function (req, res) {
+  app.post(`${route}sendNotification`, (req, res) => {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
       TTL: req.body.ttl,
     };
 
-    setTimeout(function () {
+    setTimeout(() => {
       webPush
         .sendNotification(subscription, payload, options)
-        .then(function () {
+        .then(() => {
           res.sendStatus(201);
         })
-        .catch(function (error) {
+        .catch((error) => {
           console.log(error);
           res.sendStatus(500);
         });
@@ -248,13 +263,13 @@ module.exports = function (app, route) {
 };
 ```
 
-#### service-worker.js
+#### `service-worker.js`
 
-Le dernier fichier que nous allons regarder est celui du service worker:
+Le dernier fichier que nous allons regarder est celui du <i lang="en">service worker</i>&nbsp;:
 
 ```js
-self.addEventListener("push", function (event) {
-  const payload = event.data ? event.data.text() : "no payload";
+self.addEventListener("push", (event) => {
+  const payload = event.data?.text() ?? "no payload";
   event.waitUntil(
     self.registration.showNotification("ServiceWorker Cookbook", {
       body: payload,
@@ -263,10 +278,8 @@ self.addEventListener("push", function (event) {
 });
 ```
 
-Tout ce qu'il est est d'ajouter une écoute sur l'évènement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event), créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
+Le <i lang="en">service worker</i> ne fait qu'écouter l'évènement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event), où il récupère la charge utile dans une variable (on utilisera une chaîne de caractères par défaut si les données sont vides) puis attend jusqu'à ce que la notification soit affichée sur l'appareil.
 
-N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) si vous voulez savoir comment ils sont gérés — le [code source complet est disponible sur on GitHub](https://github.com/mozilla/serviceworker-cookbook/). Il y a une vaste collection d'exemples fonctionnels démontrant l'usage général ainsi que le push web, les stratégies de mise en cache, la question des performances, le fonctionnement en mode déconnecté et plus encore.
+N'hésitez pas à explorer le reste des exemples du [le livre de recettes des <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook) si vous voulez savoir comment ils sont gérés. Cet ensemble de nombreux exemples illustre les cas d'utilisation généraux des <i lang="en">service workers</i>, les messages poussés, les stratégies de mise en cache, les performances, le fonctionnement hors connexion et bien plus encore.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
-
-{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

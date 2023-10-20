@@ -164,7 +164,7 @@ function addStylesheetRules(decls) {
 
 另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 
-## 相关链接
+## 参见
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
 - [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)

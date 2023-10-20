@@ -63,7 +63,7 @@ slug: Mozilla/Firefox/Releases/22
 - Some panes within the dev tools have switched from [XUL to HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview\.xhtml, not `cssruleview.xul`. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.
 - The stack trace is now shown as a breadcrumb near the top, and the script listing is now at the left panel of the debugger.
 
-## 相关链接
+## 参见
 
 - [Firefox 22 Aurora Release Notes](http://www.mozilla.org/en-US/firefox/22.0a1/auroranotes/)
 - [Site Compatibility for Firefox 22](/zh-CN/docs/Site_Compatibility_for_Firefox_22)

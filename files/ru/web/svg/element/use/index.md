@@ -88,10 +88,7 @@ svg {
 
 ## Спецификации
 
-| Specification                                                   | Status              | Comment            |
-| --------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}   | {{Spec2('SVG2')}}   |                    |
-| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Браузерная совместимость
 
