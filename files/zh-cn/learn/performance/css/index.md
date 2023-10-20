@@ -96,7 +96,7 @@ slug: Learn/Performance/CSS
 
 - **使用 CSS 精灵图减少图像相关的 HTTP 请求**：[CSS 精灵图](https://css-tricks.com/css-sprites/) 是一种技术，它将你希望在站点上使用的多个小图像（例如图标）放入单个图像文件中，然后使用不同的 {{cssxref("background-position")}} 值在不同的位置显示图像的一部分。这可以大大减少获取图像所需的 HTTP 请求数量。
 
-- **预加载重要资源**：你可以使用 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 将{{htmlelement("link")}} 元素转换为预加载器，用于关键资源，包括 CSS 文件、字体和图片：
+- **预加载重要资源**：你可以使用 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 将 {{htmlelement("link")}} 元素转换为预加载器，用于关键资源，包括 CSS 文件、字体和图片：
 
   ```html
   <link rel="preload" href="style.css" as="style" />
@@ -115,7 +115,7 @@ slug: Learn/Performance/CSS
     media="(min-width: 601px)" />
   ```
 
-  使用`preload`，浏览器会尽快获取引用的资源，并将其存储在浏览器缓存中，以便在后续代码中引用时可以更快地使用它们。为了让用户体验尽可能流畅，我们应提前加载页面加载初期用户会遇到的高优先级资源。请注意，你还可以使用 `media` 属性创建响应式的预加载器。
+  使用 `preload`，浏览器会尽快获取引用的资源，并将其存储在浏览器缓存中，以便在后续代码中引用时可以更快地使用它们。为了让用户体验尽可能流畅，我们应提前加载页面加载初期用户会遇到的高优先级资源。请注意，你还可以使用 `media` 属性创建响应式的预加载器。
 
   另请参阅[预加载重要资源以提升加载速度](https://web.dev/preload-critical-assets/)这篇 web.dev 上的文章（2020）。
 
