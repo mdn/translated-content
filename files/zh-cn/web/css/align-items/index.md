@@ -69,7 +69,7 @@ align-items: unset;
   - : 将元素与容器的主轴起点或交叉轴起点对齐，轴起点的方向对应于元素的起始方向。
 - `self-end`
   - : 将元素与容器的主轴末端或交叉轴末端对齐，轴末端的方向对应于元素的结尾方向。
-- `baseline`, `first baseline`, `last baseline`
+- `baseline`、`first baseline`、`last baseline`
   - : 所有 flex 元素都对齐，以使它们的 [flex 容器基线](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) 对齐。距离其交叉轴起点和基线之间最远的元素与行的交叉轴起点对齐。
 - `stretch`
   - : 如果（多个）元素的组合大小小于容器的大小，其中自动调整大小的元素将等量增大，以填满容器，同时这些元素仍然保持其宽高比例的约束。
