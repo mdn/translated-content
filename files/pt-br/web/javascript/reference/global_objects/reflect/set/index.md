@@ -64,10 +64,7 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 
 ## Especificações
 
-| Specification                                              | Status               | Comment            |
-| ---------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-reflect.set', 'Reflect.set')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatilibidade com navegadores
 

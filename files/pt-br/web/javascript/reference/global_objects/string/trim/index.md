@@ -50,10 +50,7 @@ if (!String.prototype.trim) {
 
 ## Especificações
 
-| Specification                                                              | Status             | Comment                                              |
-| -------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}           | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.8.1. |
-| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ES6')}}   |                                                      |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

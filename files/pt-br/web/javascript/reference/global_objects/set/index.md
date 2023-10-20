@@ -228,10 +228,7 @@ meuSet.size; // 5
 
 ## Especificações
 
-| Especificação                                      | Status               | Comentário         |
-| -------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-set-objects', 'Set')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-set-objects', 'Set')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

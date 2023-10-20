@@ -32,10 +32,7 @@ console.log(new MyArray() instanceof MySubArray); // false
 
 ## Especificações
 
-| Specification                                                            | Status               | Comment             |
-| ------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

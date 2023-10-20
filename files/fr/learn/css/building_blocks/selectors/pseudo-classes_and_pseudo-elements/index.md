@@ -35,7 +35,7 @@ Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-élément
   </tbody>
 </table>
 
-## Qu'est ce qu'une pseudo-classe ?
+## Qu'est-ce qu'une pseudo-classe ?
 
 Une pseudo-classe est un sélecteur ciblant des éléments dans un état spécifique, par ex. le premier élément d'un type, ou un élément survolé par le pointeur de la souris. Leur comportement correspond à celui d'une classe, mais qui ne s'appliquerait que partiellement. On gagne ainsi en flexibilité, en éliminant du code inutile. Le résultat est plus facile à maintenir.
 
@@ -70,7 +70,7 @@ Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur interagit ave
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
 
-## Qu'est ce qu'un pseudo-élément ?
+## Qu'est-ce qu'un pseudo-élément ?
 
 Les pseudo-éléments se comportent de manière similaire, même s'ils se comportent comme si vous aviez ajouté un tout nouvel élément HTML dans le balisage, au lieu d'appliquer une classe à des éléments existants. Les pseudo-éléments commencent avec un double deux-points `::`.
 
@@ -127,7 +127,7 @@ L'utilisation des pseudo-éléments `::before` et `::after` avec la propriété 
 
 Dans cet article, nous avons présenté les pseudo-classes et les pseudo-éléments CSS, qui sont des types particuliers de sélecteurs.
 
-Les pseudo-classes vous permettent de cibler un élément lorsqu'il se trouve dans un état particulier, comme si vous aviez ajouté une classe pour cet état au DOM. Les pseudo-éléments agissent comme si vous aviez ajouté un nouvel élément au DOM, et vous permettent de le styliser. Les pseudo-éléments `::before` et `::after` vous permettent d'insérer du contenu dans le document à l'aide de CSS.
+Les pseudo-classes vous permettent de cibler un élément lorsqu'il se trouve dans un état particulier, comme si vous aviez ajouté une classe pour cet état au DOM. Les pseudo-éléments agissent comme si vous aviez ajouté un nouvel élément au DOM, et vous permettent de le styliser. Les pseudo-éléments `::before` et `::after` vous permettent d'insérer du contenu dans le document en utilisant le CSS.
 
 Dans le prochain article, nous aborderons [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators).
 

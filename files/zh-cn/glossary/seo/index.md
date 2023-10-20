@@ -20,12 +20,7 @@ SEO 方法分为三大类：
 - 声望
   - : 当其他已建立的站点链接到你的站点时，你获得最多流量。
 
-## 想知道更多？
-
-### 基本知识
+## 参见
 
 - [SEO](https://zh.wikipedia.org/wiki/SEO) on 维基百科
-
-### 学习 SEO
-
 - [Google Webmaster Central](https://www.google.com/webmasters/)

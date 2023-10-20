@@ -12,7 +12,7 @@ slug: Glossary/CRLF
 
 紧邻的 CR 和 LF（组成 CRLF，`\r\n`，或十六进制 `0x0D0A`）将鼠标移动到下一行行首。（Windows 操作系统默认的文本换行符为 CRLF；Linux 以及 macOS 系统默认使用 LF，早期的 mac os 系统使用 CR 换行。）
 
-## 相关链接
+## 参见
 
 ### General knowledge
 

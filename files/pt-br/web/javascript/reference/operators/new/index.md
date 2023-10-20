@@ -127,13 +127,7 @@ carro2.dono.nome;
 
 ## Especificações
 
-| Specification                                                    | Status               | Comment                                            |
-| ---------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-new-operator', 'The new Operator')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-new-operator', 'The new Operator')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-11.2.2', 'The new Operator')}}         | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3', '#sec-11.2.2', 'The new Operator')}}           | {{Spec2('ES3')}}     |                                                    |
-| {{SpecName('ES1', '#sec-11.2.2', 'The new Operator')}}           | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

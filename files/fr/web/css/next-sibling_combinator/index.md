@@ -1,6 +1,6 @@
 ---
 title: Combinateur de voisin direct
-slug: Web/CSS/Adjacent_sibling_combinator
+slug: Web/CSS/Next-sibling_combinator
 ---
 
 {{CSSRef("Selectors")}}

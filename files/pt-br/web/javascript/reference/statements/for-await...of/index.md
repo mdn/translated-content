@@ -110,9 +110,7 @@ getResponseSize("https://jsonplaceholder.typicode.com/photos");
 
 ## Especificações
 
-| Specification                                                                                                                        | Status               | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------- | ------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
