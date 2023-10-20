@@ -6930,17 +6930,6 @@
       "leegorous"
     ]
   },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-23T22:08:51.586Z",
-    "contributors": [
-      "lakeinchina",
-      "JinRong.Yang",
-      "zhangchen",
-      "Iwakura-Lain",
-      "blackmomo",
-      "Akimyou"
-    ]
-  },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2020-11-20T08:52:01.256Z",
     "contributors": [
@@ -32807,6 +32796,17 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
+    "modified": "2019-03-23T22:08:51.586Z",
+    "contributors": [
+      "lakeinchina",
+      "JinRong.Yang",
+      "zhangchen",
+      "Iwakura-Lain",
+      "blackmomo",
+      "Akimyou"
     ]
   }
 }
