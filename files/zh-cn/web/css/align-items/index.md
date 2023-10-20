@@ -31,7 +31,7 @@ align-items: self-end;
 /* 基线对齐 */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline;
+align-items: last baseline; /* 溢出对齐（仅用于位置对齐） */
 align-items: safe center;
 align-items: unsafe center;
 
@@ -240,5 +240,5 @@ display.addEventListener("change", (evt) => {
 - CSS Flexbox 指南：_[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - CSS Flexbox 指南：_[对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS Grid 指南：_[网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)
 - {{cssxref("align-self")}} 属性
