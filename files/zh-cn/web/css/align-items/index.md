@@ -241,4 +241,4 @@ display.addEventListener("change", (evt) => {
 - CSS Flexbox 指南：_[对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS Grid 指南：_[网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
-- [align-self](/zh-CN/docs/Web/CSS/align-self) 属性
+- {{cssxref("align-self")}} 属性
