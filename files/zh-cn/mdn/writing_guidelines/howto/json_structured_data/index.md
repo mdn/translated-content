@@ -117,6 +117,6 @@ GroupData 正是这样做的：对于每个 API，它列出了接口、属性、
 
 > **警告：** `SpecData.json` 文件已不再维护。规范信息存储在 w3c/browser-spec 和 mdn/browser-compat-data 中列出的特性的 `spec_url` 键中。
 
-`\{{SpecName}}` 和 `\{{Spec2}}` 宏使用 `SpecData.json` 文件。我们不再接受对 `SpecData.json` 文件的任何进一步的贡献；相反，要么尝试使用 `\{{Specifications}}` 宏插入一个规范表格，要么尝试硬编码（好的）链接到规范。请注意，大多数情况下，在*规范*部分之外提及或链接到规范表明 MDN 上未适当记录某些内容。
+`\{{SpecName}}` 和 `\{{Spec2}}` 宏使用 `SpecData.json` 文件。我们不再接受对 `SpecData.json` 文件的任何进一步的贡献；相反，要么尝试使用 `\{{Specifications}}` 宏插入一个规范表格，要么尝试硬编码直接指向规范的链接。请注意，大多数情况下，在*规范*部分之外提及或链接到规范表明 MDN 上未适当记录某些内容。
 
 `SpecData.json` 文件位于 GitHub 上的[这里](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json)。
