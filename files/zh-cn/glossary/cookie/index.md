@@ -11,8 +11,6 @@ Cookie 用于个性化用户的体验。可能包含用户在访问网站时的�
 
 `Cookie 可以在服务器级别设置和修改，使用 Set-Cookie` [HTTP header](/zh-CN/docs/Web/HTTP/Cookies), 或者在 JavaScript 中用 [`document.cookie`](/zh-CN/docs/Web/API/Document/cookie).
 
-## 了解更多
+## 参见
 
-### General Knowledge
-
-- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) on Wikipedia
+- 维基百科上的 [HTTP cookie](https://zh.wikipedia.org/wiki/Cookie)

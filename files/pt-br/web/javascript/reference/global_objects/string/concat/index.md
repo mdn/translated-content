@@ -47,11 +47,7 @@ console.log(hello.concat("Kevin", " tenha um bom dia."));
 
 ## Especificações
 
-| Especificação                                                                  | Status             | Comentários                                        |
-| ------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                            | {{Spec2('ES3')}}   | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}              | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

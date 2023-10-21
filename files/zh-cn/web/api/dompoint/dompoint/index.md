@@ -45,7 +45,7 @@ newTopLeft.y += 100;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}
 - {{domxref("DOMRect")}}

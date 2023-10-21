@@ -88,7 +88,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}

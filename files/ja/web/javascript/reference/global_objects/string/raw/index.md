@@ -2,7 +2,7 @@
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
 {{JSRef}}
@@ -14,7 +14,10 @@ l10n:
 ## 構文
 
 ```js-nolint
-String.raw(strings, ...substitutions)
+String.raw(strings)
+String.raw(strings, sub1)
+String.raw(strings, sub1, sub2)
+String.raw(strings, sub1, sub2, /* …, */ subN)
 
 String.raw`templateString`
 ```
@@ -23,7 +26,7 @@ String.raw`templateString`
 
 - `strings`
   - : 整形式のテンプレートリテラル配列オブジェクト、たとえば `{ raw: ['foo', 'bar', 'baz'] }` などです。文字列の配列風オブジェクトを値として持つ `raw` プロパティを持っているオブジェクトであるべきです。
-- `...substitutions`
+- `sub1`, …, `subN`
   - : 置換される値が入ります。
 - `templateString`
   - : [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)です。オプションでで置換文字列 (`${...}`) を含みます。

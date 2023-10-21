@@ -51,13 +51,13 @@ slug: Web/JavaScript/Guide
         href="/ja/docs/Web/JavaScript/Guide/Functions#function_parameters">仮引数</a><br><a
         href="/ja/docs/Web/JavaScript/Guide/Functions#arrow_functions">アロー関数</a></p>
   </li>
-  <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators">式と演算子</a>
-    <p><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子">代入演算子</a> と <a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#比較演算子">比較演算子</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#算術演算子">算術演算子</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子">ビット演算子</a> と <a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#論理演算子">論理演算子</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#条件（三項）演算子">条件演算子</a></p>
+  <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators">式と演算子</a>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子">代入演算子</a> と <a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#比較演算子">比較演算子</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#算術演算子">算術演算子</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子">ビット演算子</a> と <a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#論理演算子">論理演算子</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#条件（三項）演算子">条件演算子</a></p>
   </li>
   <li><a href="/ja/docs/Web/JavaScript/Guide/Numbers_and_dates">数値と日付</a> <a
       href="/ja/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers">数値リテラル</a>

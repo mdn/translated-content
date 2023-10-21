@@ -40,9 +40,7 @@ console.log("This is what a " + supText.sup() + " looks like.");
 
 ## Especificações
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

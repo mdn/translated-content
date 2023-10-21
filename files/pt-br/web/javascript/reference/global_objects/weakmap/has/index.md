@@ -39,10 +39,7 @@ wm.has("baz"); // retorna false
 
 ## Especificações
 
-| Specification                                                                  | Status               | Comment             |
-| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

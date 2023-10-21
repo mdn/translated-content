@@ -1,6 +1,8 @@
 ---
 title: Boolean (ブーリアン) (JavaScript)
 slug: Glossary/Boolean/JavaScript
+l10n:
+  sourceCommit: 53e776eeb25d24e413d7a404257faebe1b7ce1be
 ---
 
 {{GlossarySidebar}}

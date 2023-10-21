@@ -3,6 +3,8 @@ title: Chaîne de caractères
 slug: Glossary/String
 ---
 
+{{GlossarySidebar}}
+
 Dans les langages de programmation, le terme chaîne de {{Glossary("character","caractères")}} _(String_) est utilisé pour représenter du texte.
 
 En {{Glossary("JavaScript")}}, une chaîne de caractères est l'une des {{Glossary("Primitive", "valeurs primitives")}} et l'objet {{jsxref("String")}} est un {{Glossary("wrapper")}} enveloppant une primitive String.

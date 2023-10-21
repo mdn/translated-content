@@ -9,9 +9,7 @@ slug: Glossary/CSS_preprocessor
 
 要使用 CSS 预处理器，你必须在 web 服务中{{Glossary("服务器")}}安装 CSS 编译工具。
 
-## 了解更多
-
-### 通用知识
+## 参见
 
 这里是一些最流行的 CSS 预处理器：
 

@@ -135,11 +135,7 @@ console.log(bar.next()); // {value: 10, done: false}
 
 ## Especificações
 
-| Especificação                                                               | Status               | Comentário                                                                                                            |
-| --------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}}  | {{Spec2('ES2015')}}  | Definição inicial.                                                                                                    |
-| {{SpecName('ES2016', '#sec-generator-function-definitions', 'function*')}}  | {{Spec2('ES2016')}}  | Mudou para que _generators_ não tenham a armadilha de \[\[Construct]] e irão lançar um erro, quando usados com `new`. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
