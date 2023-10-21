@@ -15,7 +15,7 @@ slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 
 ### 减小页面的大小
 
-目前，页面的大小仍是页面加载性能的最重要因素。
+直至今日，页面的大小仍是页面加载性能的最重要因素。
 
 通过消除不必要的空白和注释（通常称为最小化）以及将内联脚本和 CSS 移至外部文件来减少页面大小，可以提高下载性能，而无需对页面结构进行其他改动。
 
@@ -134,7 +134,7 @@ table-layout: fixed;
 
 ### 对图片使用懒加载
 
-默认情况下，图片是**立即**加载的；也就是说，一旦图片在 HTML 中被处理，就会立即获取并渲染。所有立即加载的图片都会在文档的 {{domxref("Document.load_event", "load")}} 事件发送之前得到渲染。如果改用懒加载图像，浏览器就会暂缓加载图像，直到需要绘制{{Glossary("visual viewport","可视视口")}}时再加载。
+默认情况下，图片是**立即**加载的；也就是说，一旦图片在 HTML 中被处理，就会立即获取并渲染。所有立即加载的图片都会在窗口的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件发送之前得到渲染。如果改用懒加载图像，浏览器就会暂缓加载图像，直到需要绘制{{Glossary("visual viewport","可视视口")}}时再加载。
 
 要将图片标记为“懒加载”，可指定其 [`loading`](/zh-CN/docs/Web/HTML/Element/img#loading) 属性的值为 `lazy`。这样设置后，只有在需要时才会加载图片。
 
