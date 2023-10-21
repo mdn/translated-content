@@ -278,7 +278,7 @@ try {
 }
 ```
 
-在 ECMAScript 2017 标准的 [`async/await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 语法糖中，这种异步代码的对称性得到了极致的体现：
+这种异步代码的对称性在 [`async`/`await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 语法中达到了极致：
 
 ```js
 async function foo() {
@@ -375,21 +375,21 @@ const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 ```
 
-在 ECMAScript 2017 标准中，顺序组合可以通过使用 `async/await` 而变得更简洁：
+顺序组合还可以使用 async/await 更简洁地完成：
 
 ```js
 let result;
 for (const f of [func1, func2, func3]) {
   result = await f(result);
 }
-/* 使用最后的结果（即 result3） */
+/* 使用最后的结果（即 result3）*/
 ```
 
 然而，在你顺序组合 Promise 前，请考虑是否真的有必要——因为它们会阻塞彼此，除非一个 Promise 的执行依赖于另一个 Promise 的结果，否则最好并发运行 Promise。
 
 ## 在旧式回调 API 中创建 Promise
 
-可以通过 Promise 的构造器从零开始创建 {{jsxref("Promise")}}。这种方式（通过构造器的方式）应当只在封装旧 API 的时候用到。
+可以通过 Promise 的构造函数从零开始创建 {{jsxref("Promise")}}。这种方式（通过构造函数的方式）应当只在封装旧 API 的时候用到。
 
 理想状态下，所有的异步函数应该会返回 Promise。但有一些 API 仍然使用旧方式来传入成功（或者失败）的回调。最典型的例子就是 {{domxref("WindowTimers.setTimeout", "setTimeout()")}} 函数：
 
@@ -409,7 +409,7 @@ wait(10 * 1000)
   .catch(failureCallback);
 ```
 
-通常，Promise 的构造器接收一个执行函数 (executor)，我们可以在这个执行函数里手动地解决（resolve）或拒绝（reject）一个 Promise。既然 `setTimeout` 并不会真的执行失败，那么我们可以在这种情况下忽略拒绝的情况。你可以在 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 参考中查看更多关于执行函数的信息。
+通常，Promise 的构造函数接收一个执行函数（executor），我们可以在这个执行函数里手动地解决（resolve）或拒绝（reject）一个 Promise。既然 `setTimeout` 并不会真的执行失败，那么我们可以在这种情况下忽略拒绝的情况。你可以在 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 参考中查看更多关于执行函数的信息。
 
 ## 时序
 
@@ -477,19 +477,19 @@ const promise = new Promise((resolve, reject) => {
 });
 
 setTimeout(() => {
-  console.log("新一轮事件循环：Promise (已完成)", promise);
+  console.log("新一轮事件循环：Promise（已完成）", promise);
 }, 0);
 
-console.log("Promise (队列中)", promise);
+console.log("Promise（队列中）", promise);
 ```
 
 上述代码的输出如下：
 
 ```plain
 Promise 执行函数
-Promise (队列中) Promise {<pending>}
+Promise（队列中） Promise {<pending>}
 Promise 回调（.then）
-新一轮事件循环：Promise (已完成) Promise {<fulfilled>}
+新一轮事件循环：Promise（已完成） Promise {<fulfilled>}
 ```
 
 详见[深入：微任务与 Javascript 运行时环境](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)。
@@ -505,7 +505,7 @@ Promise 回调（.then）
 - {{jsxref("Promise")}}
 - {{jsxref("Statements/async_function", "async function")}}
 - {{jsxref("Operators/await", "await")}}
-- [Promises/A+ specification](https://promisesaplus.com/)
-- [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) on pouchdb.com (2015)
+- [Promises/A+ 规范](https://promisesaplus.com/)
+- [我们遇到了 promise 的问题](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) pouchdb.com（2015）
 
 {{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
