@@ -75,7 +75,6 @@ l10n:
 - `as`
 
   - : `<link>` 요소에 [`rel="preload"`](/ko/docs/Web/HTML/Attributes/rel/preload) 또는 [`rel="modulepreload"`](/ko/docs/Web/HTML/Attributes/rel/modulepreload) 특성을 지정했을 때만 사용합니다. `as` 특성은 `<link>` 요소가 불러오는 콘텐츠의 유형을 지정합니다. 요청 매칭, 올바른 [콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)의 적용, 올바른 {{HTTPHeader("Accept")}} 요청 헤더 적용에 필요합니다.
-  
     이에 더해, `rel="preload"`는 `as` 특성을 사용해 요청 우선순위를 매깁니다. 다음 표는 특성의 유효한 값과, 해당 값이 적용되는 요소 또는 리소스를 나열합니다.
 
      <table class="standard-table">
