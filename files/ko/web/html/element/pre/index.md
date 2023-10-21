@@ -90,7 +90,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 
 {{EmbedLiveSample("예약_문자_이스케이프")}}
 
-## 기술적 요약
+## 기술 요약
 
 <table class="properties">
   <tbody>
