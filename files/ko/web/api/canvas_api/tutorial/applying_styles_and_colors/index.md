@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-[도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.
+[도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게 됩니다.
 
 ## 색상
 
@@ -35,16 +35,18 @@ ctx.fillStyle = "rgba(255, 165, 0, 1)";
 
 이 예제에서 `for` 반복문을 두 번 사용하여 사각형 격자를 그릴 것입니다. 결과는 스크린샷과 같을 것입니다. 결과가 그리 대단한 것은 아닙니다. 각 사각형의 RGB 색상값에서 붉은색과 녹색 값만을 변수 `i`와 `j`를 사용하여 변경합니다. 파란색 채널은 고정된 값입니다. 채널 값들을 변경함으로써, 모든 종류의 팔레트를 생성할 수 있습니다. 단계를 늘리면 Photoshop에서 사용하는 색상 팔레트와 비슷한 모양을 얻을 수 있습니다.
 
-<pre class="brush: js;highlight[5,6]">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 6; i++){
-    for (var j = 0; j &#x3C; 6; j++){
+  for (var i = 0; i < 6; i++){
+    for (var j = 0; j < 6; j++){
       ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
                        Math.floor(255 - 42.5 * j) + ', 0)';
       ctx.fillRect(j*25,i*25,25,25);
     }
   }
-}</pre>
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -62,10 +64,11 @@ draw();
 
 이번 예제는 위에 나온 예제와 비슷하지만, `strokeStyle` 속성을 사용하여 윤곽선의 색을 바꿉니다. 사각형 대신, 원을 그리는 `arc()` 메소드를 사용합니다.
 
-<pre class="brush: js;highlight[5,6]">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 6; i++) {
-    for (var j = 0; j &#x3C; 6; j++) {
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
       ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
                        Math.floor(255 - 42.5 * j) + ')';
       ctx.beginPath();
@@ -73,7 +76,8 @@ draw();
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -129,7 +133,7 @@ function draw() {
   ctx.globalAlpha = 0.2;
 
   // 반투명한 원을 그린다
-  for (var i = 0; i &#x3C; 7; i++){
+  for (var i = 0; i < 7; i++){
     ctx.beginPath();
     ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
     ctx.fill();
@@ -166,9 +170,9 @@ function draw() {
   ctx.fillRect(0,112.5,150,37.5);
 
   // 반투명한 사각형을 그린다
-  for (var i=0;i&#x3C;10;i++){
+  for (var i=0;i<10;i++){
     ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&#x3C;4;j++){
+    for (var j=0;j<4;j++){
       ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
     }
   }
@@ -217,7 +221,7 @@ draw();
 ```js
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 10; i++){
+  for (var i = 0; i < 10; i++){
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
     ctx.moveTo(5 + i * 14, 5);
@@ -284,7 +288,7 @@ function draw() {
 
   // 선을 그린다
   ctx.strokeStyle = 'black';
-  for (var i=0;i&#x3C;lineCap.length;i++){
+  for (var i=0;i<lineCap.length;i++){
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
@@ -327,7 +331,7 @@ function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
-  for (var i=0;i&#x3C;lineJoin.length;i++){
+  for (var i=0;i<lineJoin.length;i++){
     ctx.lineJoin = lineJoin[i];
     ctx.beginPath();
     ctx.moveTo(-5, 5 + i * 40);
@@ -394,7 +398,7 @@ function draw() {
   // 선을 그린다
   ctx.beginPath();
   ctx.moveTo(0,100);
-  for (i=0;i&#x3C;24;i++){
+  for (i=0;i<24;i++){
     var dy = i%2==0 ? 25 : -25 ;
     ctx.lineTo(Math.pow(i,1.5)*2,75+dy);
   }
@@ -639,11 +643,11 @@ function draw() {
 }
 ```
 
-```html
+```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-```js
+```js hidden
 draw();
 ```
 
@@ -714,7 +718,7 @@ draw();
 - `evenodd`
   - : [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) 알고리즘.
 
-In this example we are using the `evenodd` rule.
+이 예제에서는 'evenodd' 규칙을 사용합니다.
 
 ```js
 function draw() {
