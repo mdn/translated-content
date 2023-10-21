@@ -43,7 +43,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
-      console.log(`Got the final result: ${finalResult}`);
+      console.log(`得到最终结果：${finalResult}`);
     }, failureCallback);
   }, failureCallback);
 }, failureCallback);
@@ -60,7 +60,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 `promise2` 不仅表示 `doSomething()` 函数的完成，也代表了你传入的 `successCallback` 或者 `failureCallback` 的完成，这两个函数也可以返回一个 Promise 对象，从而形成另一个异步操作，这样的话，在 `promise2` 上新增的回调函数会排在这个 Promise 对象的后面。
 
-就像这样，每一个 Promise 都代表了链中另一个异步过程的完成。此外，`then` 的参数是可选的，`catch(failureCallback)` 等同于 `then(null, failureCallback)` ——所以如果你的错误处理代码对所有步骤都是一样的，你可以把它附加到链的末尾：
+就像这样，每一个 Promise 都代表了链中另一个异步过程的完成。此外，`then` 的参数是可选的，`catch(failureCallback)` 等同于 `then(null, failureCallback)`——所以如果你的错误处理代码对所有步骤都是一样的，你可以把它附加到链的末尾：
 
 ```js
 doSomething()
@@ -88,7 +88,7 @@ doSomething()
   .catch(failureCallback);
 ```
 
-**注意：** 一定要有返回值，否则，回调将无法获取上一个 Promise 的结果。（如果使用箭头函数，`() => x` 比 `() => { return x; }` 更简洁一些，但后一种保留 `return` 的写法才支持使用多个语句）。如果上一个处理程序启动了一个 Promise 但并没有返回它，那就没有办法再追踪它的状态了，这个 Promise 就是“漂浮”的。
+**注意**：一定要有返回值，否则，回调将无法获取上一个 Promise 的结果。（如果使用箭头函数，`() => x` 比 `() => { return x; }` 更简洁一些，但后一种保留 `return` 的写法才支持使用多个语句）。如果上一个处理程序启动了一个 Promise 但并没有返回它，那就没有办法再追踪它的状态了，这个 Promise 就是“漂浮”的。
 
 ```js example-bad
 doSomething()
@@ -206,7 +206,7 @@ new Promise((resolve, reject) => {
 执行「这个」，无论前面发生了什么
 ```
 
-> **备注：** 并没有输出“执行「这个」”，因为在第一个 `then()` 中的 `throw` 语句导致了一个 rejection。
+> **备注：** 并没有输出“执行「这个」”，因为在第一个 `then()` 中的 `throw` 语句导致其被拒绝。
 
 ### 常见错误
 
@@ -228,7 +228,7 @@ doSomething()
 
 第二个错误是不必要的嵌套。嵌套限制了内部错误处理程序的作用域，如果不是有意为之，可能会导致未捕获的错误。该错误的一个变体是 [Promise 构造函数反模式](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it)，它将一个 Promise 代码片段嵌入了另一个 Promise 构造函数里。
 
-第三个错误是忘记用 `catch` 终止链。在大多数浏览器中，未终止的 Promise 链会导致 Promise 的 rejection 无法被捕获。参见[错误处理](#错误处理)。
+第三个错误是忘记用 `catch` 终止链。在大多数浏览器中，未终止的 Promise 链会导致 Promise 的拒绝事件无法被捕获。参见[错误处理](#错误处理)。
 
 一个好的经验法则是总是返回或终止 Promise 链，并且一旦你得到一个新的 Promise，就立即返回它，最终的链应是扁平化的：
 
@@ -243,7 +243,7 @@ doSomething()
   // 即便上一个 Promise 返回了一个结果，后一个 Promise 也不一定非要使用它。
   // 你可以传入一个不使用前一个结果的处理程序。
   .then((/* 忽略上一个结果 */) => doFourthThing())
-  // 总是使用 catch 终止 Promise 链，以保证任何未处理的 rejection 都能被捕获！
+  // 总是使用 catch 终止 Promise 链，以保证任何未处理的拒绝事件都能被捕获！
   .catch((error) => console.error(error));
 ```
 
@@ -299,18 +299,18 @@ async function foo() {
 
 ### Promise 拒绝事件
 
-当一个 Promise 拒绝事件未被任何处理器处理时，它会冒泡到调用栈的顶部，主机需要将其暴露出来。在 Web 上，当 Promise 被拒绝时，会有下文所述的两个事件之一被派发到全局作用域（通常而言，就是{{domxref("window")}}；如果是在 web worker 中使用的话，就是 {{domxref("Worker")}} 或者其他 worker-based 接口）。这两个事件如下所示：
+当一个 Promise 拒绝事件未被任何处理器处理时，它会冒泡到调用栈的顶部，主机需要将其暴露出来。在 Web 上，当 Promise 被拒绝时，会有下文所述的两个事件之一被派发到全局作用域（通常而言，就是 {{domxref("window")}}；如果是在 web worker 中使用的话，就是 {{domxref("Worker")}} 或者其他基于 worker 的接口）。这两个事件如下所示：
 
 - {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
-  - : 当 Promise 被拒绝、并且在 `reject` 函数处理该 rejection 之后会派发此事件。
+  - : 当 Promise 被拒绝、并且在 `reject` 函数处理该拒绝事件之后会派发此事件。
 - {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
-  - : 当 Promise 被拒绝，但没有提供 `reject` 函数来处理该 rejection 时，会派发此事件。
+  - : 当 Promise 被拒绝，但没有提供 `reject` 函数来处理该拒绝事件时，会派发此事件。
 
-上述两种事件（类型为 {{domxref("PromiseRejectionEvent")}}）都有两个属性，一个是 {{domxref("PromiseRejectionEvent.promise", "promise")}} 属性，该属性指向被驳回的 Promise，另一个是 {{domxref("PromiseRejectionEvent.reason", "reason")}} 属性，该属性用来说明 Promise 被驳回的原因。
+上述两种事件（类型为 {{domxref("PromiseRejectionEvent")}}）都有两个属性，一个是 {{domxref("PromiseRejectionEvent.promise", "promise")}} 属性，该属性指向被拒绝的 Promise，另一个是 {{domxref("PromiseRejectionEvent.reason", "reason")}} 属性，该属性用来说明 Promise 被拒绝的原因。
 
 因此，我们可以通过以上事件为 Promise 失败时提供补偿处理，也有利于调试 Promise 相关的问题。在每一个上下文中，该处理都是全局的，因此不管源码如何，所有的错误都会在同一个处理函数中被捕捉并处理。
 
-在 [Node.js](/zh-CN/docs/Glossary/Node.js) 中，对拒绝事件的处理稍有不同。你可以通过为 Node.js 的 `unhandledRejection` 事件添加处理函数（注意名称的大小写不同）来捕获未处理的拒绝，就像这样：
+在 [Node.js](/zh-CN/docs/Glossary/Node.js) 中，对拒绝事件的处理稍有不同。你可以通过为 Node.js 的 `unhandledRejection` 事件添加处理器（注意名称的大小写不同）来捕获未处理的拒绝，就像这样：
 
 ```js
 process.on("unhandledRejection", (reason, promise) => {
@@ -439,7 +439,7 @@ doSomething(() => {
 console.log(value); // 1 还是 2？
 ```
 
-另一方面，Promise 是一种[控制反转](https://zh.wikipedia.org/wiki/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC)的形式——API 的实现者不控制回调何时被调用。相反，维护回调队列并决定何时调用回调的工作被委托给了 Promise 的实现者，这样一来，API 的使用者和开发者都会自动获得强大的语义保证，包括：
+另一方面，Promise 是一种[控制反转](https://zh.wikipedia.org/wiki/控制反转)的形式——API 的实现者不控制回调何时被调用。相反，维护回调队列并决定何时调用回调的工作被委托给了 Promise 的实现者，这样一来，API 的使用者和开发者都会自动获得强大的语义保证，包括：
 
 - 被添加到 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 的回调永远不会在 JavaScript 事件循环的[当前运行完成](/zh-CN/docs/Web/JavaScript/Event_loop#执行至完成)之前被调用。
 - 即使异步操作已经完成（成功或失败），在这之后通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 添加的回调函数也会被调用。
