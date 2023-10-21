@@ -33,6 +33,7 @@ l10n:
 {{HTMLElement("figure")}}과 {{HTMLElement("figcaption")}}에 더해, [ARIA](/ko/docs/Web/Accessibility/ARIA) `role`과 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 특성을 조합하면 `<pre>`와 사용하면, 미리 서식 지정된 {{Glossary("ASCII")}} 아트를 마치 이미지처럼 표현하면서 `<figcaption>`을 대체 설명으로 사용할 수 있습니다.
 
 ### 예제
+
 ```html
 <figure>
   <pre role="img" aria-label="ASCII COW">
