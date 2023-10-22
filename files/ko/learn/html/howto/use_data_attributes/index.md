@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-HTML은 특정 요소와 연관되어야 하지만, 정의된 의미를 갖지 않는 데이터에 대한 확장성을 고려하여 설계되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Global_attributes#dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성와 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있게 도와줍니다.
+HTML은 특정 요소와 연관되어야 하지만, 정의된 의미를 갖지 않는 데이터에 대한 확장성을 고려하여 설계되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Global_attributes#dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성과 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있게 도와줍니다.
 
 ## HTML 문법
 
