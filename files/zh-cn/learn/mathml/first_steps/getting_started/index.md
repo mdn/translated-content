@@ -185,6 +185,8 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 </ol>
 ```
 
+{{ EmbedLiveSample('Active_learning_nested_expressions', 700, 200, "", "") }}
+
 ## 总结
 
 本文中，我们介绍了如何使用 `<math>` 元素将数学公式插入 HTML 文档中。我们了解了使用 `display="block"` 和不使用它的 `<math>` 元素之间的渲染差异。此外，我们还介绍了几个其他的 MathML 元素：`<mfrac>` 用于表示分数，`<mrow>` 用于分组，以及一些文本元素。在下一篇文章中，我们将进一步分析这些[文本容器](/zh-CN/docs/Learn/MathML/First_steps/Text_containers)。
