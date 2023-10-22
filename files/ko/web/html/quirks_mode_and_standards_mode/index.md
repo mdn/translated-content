@@ -42,7 +42,6 @@ HTML문서의 시작 부분에 DOCTYPE을 넣어야 합니다. 주석이나 XML 
 
 XHTML 같은(XHTML-like) 콘텐트를 `text/html` MIME 타입으로 제공한다면 웹 브라우저는 이를 HTML로 인식하므로, 표준 모드로 렌더링하려면 DOCTYPE을 기술해야 한다.
 
-
 ## 어떤 모드가 사용되었는지 확인하려면 어떻게 해야 하나요?
 
 페이지가 quirks 또는 limited-quirks 모드에서 랜더링 되는 경우 Firefox는 개발자 도구의 콘솔탭에 경고를 기록합니다. 이 경고가 표시되지 않으면 Firefox가 no-quirk 모드를 사용하고 있는것입니다.
