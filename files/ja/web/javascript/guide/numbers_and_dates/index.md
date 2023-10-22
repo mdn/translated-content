@@ -3,7 +3,7 @@ title: 数値と日付
 slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 本章では、JavaScript で数値と日付の計算を実行するのに使われる概念、オブジェクト、関数について紹介します。これには 10 進数、2 進数、16 進数数値を含むそれぞれの基数で表された数値を使用することや、数値の幅広い種類の数学的演算を実行するグローバル {{jsxref("Math")}} オブジェクトの使い方も含みます。
 
@@ -256,4 +256,4 @@ function JSClock() {
 
 最後の条件式は、`hour` が 12 以上の場合、"P.M." を `temp` に追加します。そうでない場合は "A.M." を `temp` に追加します。
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}

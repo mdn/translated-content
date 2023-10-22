@@ -47,9 +47,7 @@ console.log(obj2 + ""); // "true"    -- dica é "default"
 
 ## Especificações
 
-| Especificação                                                            |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

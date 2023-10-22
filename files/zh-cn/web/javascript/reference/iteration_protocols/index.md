@@ -280,7 +280,7 @@ function makeIterator(array) {
   };
 }
 
-const it = makeIterator(["yo", "ya"]);\
+const it = makeIterator(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'

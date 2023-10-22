@@ -39,9 +39,7 @@ console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 
 ## Especificações
 
-| Specification                                                                  |
-| ------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.bold', 'String.prototype.bold')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

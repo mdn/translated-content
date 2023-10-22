@@ -9,6 +9,6 @@ slug: Glossary/ARIA
 
 例如，你可以将 `role="alert"`添加到{{HTMLElement("p")}} {{glossary("tag")}}以通知视力有问题的用户该信息是重要的（否则你可能通过文字颜色传达）。
 
-## 更多
+## 参见
 
 - [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)

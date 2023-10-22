@@ -1,58 +1,56 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
+l10n:
+  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
 ---
 
 {{APIRef("Web Audio API")}}
 
-`AudioContext` インターフェイスは{{domxref("AudioNode")}}によって表現され、一緒にリンクした音声モジュールから作った音声処理グラフを表します。音声コンテキストはコンテキストを含むノードの作成と音声処理もしくはデコードの実行の両方を制御します。コンテキスト内部で全てのことが起こるので、何かをする前に `AudioContext` を作る必要があります。
+`AudioContext` インターフェイスは {{domxref("AudioNode")}} によって表現され、互いにリンクする音声モジュールから作られた音声処理グラフを表します。
+
+音声コンテキストは、それが格納するノードの作成と、音声処理（デコード）の実行の両方を制御します。何らかの処理を行う前に `AudioContext` を作成する必要があります。毎回新しいものを初期化するのではなく、 1 つの AudioContext を作成し、それを再利用することを推奨します。また、 1 つの `AudioContext` を複数の異なるオーディオソースに使用し、同時にパイプラインを使用しても問題ありません。
 
 {{InheritanceDiagram}}
 
-## Constructor
+## コンストラクター
 
 - {{domxref("AudioContext.AudioContext", "AudioContext()")}}
   - : `AudioContext` オブジェクトを新しく作成し、返します。
 
-## プロパティ
+## インスタンスプロパティ
 
-_親インターフェイス{{domxref("BaseAudioContext")}}からプロパティを継承します。_
+_親インターフェイスである {{domxref("BaseAudioContext")}} から継承したプロパティもあります。_
 
-- {{domxref("AudioContext.baseLatency")}} {{readonlyinline}} {{experimental_inline}}
-  - : {{domxref("AudioDestinationNode")}}から音声サブシステムまでの音声を渡す{{domxref("AudioContext")}}によって起きる処理レイテンシーの秒数を返します。
-- {{domxref("AudioContext.outputLatency")}} {{readonlyinline}} {{experimental_inline}}
-  - : 現在の音声コンテキストの出力レイテンシーの見積もりを返します。
+- {{domxref("AudioContext.baseLatency")}} {{ReadOnlyInline}}
+  - : {{domxref("AudioContext")}} が {{domxref("AudioDestinationNode")}} から音声サブシステムに音声を渡す際に発生する処理遅延の秒数を返します。
+- {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
+  - : 現在の音声コンテキストの出力レイテンシーの見積を返します。
 - {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 現在の出力音声デバイスの sink ID を返します。
+  - : 現在の出力音声機器のシンク ID を返します。
 
-## メソッド
+## インスタンスメソッド
 
-親インターフェイス{{domxref("BaseAudioContext")}} からメソッドを継承します。
+_親インターフェイスである {{domxref("BaseAudioContext")}} から継承したメソッドもあります。_
 
 - {{domxref("AudioContext.close()")}}
   - : 任意のシステム音声リソースをリリースするために、音声コンテキストを閉じます。
 - {{domxref("AudioContext.createMediaElementSource()")}}
-  - : {{domxref("HTMLMediaElement")}}と関連付けられた{{domxref("MediaElementAudioSourceNode")}}を生成します。これは{{HTMLElement("video")}}要素もしくは{{HTMLElement("audio")}}要素からの再生や操作をするために使うことができます。
+  - : {{domxref("HTMLMediaElement")}} と関連付けられた {{domxref("MediaElementAudioSourceNode")}} を生成します。これは {{HTMLElement("video")}} 要素もしくは {{HTMLElement("audio")}} 要素からの再生や操作をするために使うことができます。
 - {{domxref("AudioContext.createMediaStreamSource()")}}
-  - : ローカルのコンピューターのマイクもしくは他のソースから来る音声ストリームを表現している{{domxref("MediaStream")}}と関連付けられた{{domxref("MediaStreamAudioSourceNode")}}を生成します。
+  - : ローカルのコンピューターのマイクもしくは他のソースから来る音声ストリームを表現している {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioSourceNode")}} を生成します。
 - {{domxref("AudioContext.createMediaStreamDestination()")}}
-  - : ローカルファイルに保存されたものかその他のコンピューターに送信された音声ストリームを表している{{domxref("MediaStream")}}と関連付けられた{{domxref("MediaStreamAudioDestinationNode")}}を生成します
+  - : ローカルファイルに保存されたものかその他のコンピューターに送信された音声ストリームを表す {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} を生成します。
 - {{domxref("AudioContext.createMediaStreamTrackSource()")}}
-  - : メディアストリームトラックを表している{{domxref("MediaStream")}}と関連づけられた{{domxref("MediaStreamTrackAudioSourceNode")}}を生成します。
+  - : メディアストリームトラックを表す {{domxref("MediaStream")}} と関連づけられた {{domxref("MediaStreamTrackAudioSourceNode")}} を生成します。
 - {{domxref("AudioContext.getOutputTimestamp()")}}
-  - : 二つの関連づけられたコンテキストの音声ストリームの位置の値を含んでいる `AudioTimestamp` オブジェクトを新しく返します。
+  - : 2 つの関連づけられたコンテキストの音声ストリームの位置の値を含む新しい `AudioTimestamp` オブジェクトを返します。
+- {{domxref("AudioContext.resume()")}}
+  - : 前回中断/一時停止した音声コンテキストの時間の進行を再開します。
 - {{domxref("AudioContext.setSinkId()")}} {{Experimental_Inline}}
-  - : この `AudioContext` 用の出力音声デバイスを設定します。
+  - : この `AudioContext` 用の出力音声機器を設定します。
 - {{domxref("AudioContext.suspend()")}}
   - : 一時的に音声ハードウェアアクセスを停止し、プロセスの CPU/バッテリー使用を減らすために、音声コンテキストの時間の進行を中断します。
-
-### 非推奨メソッド
-
-- {{domxref("AudioContext.resume()")}}
-
-  - : あらかじめ中断させられた音声コンテキストの時間の進行を返します。
-
-    注意: `resume()` メソッドはまだ利用することができます。このメソッドは{{domxref("BaseAudioContext")}}インターフェイス({{domxref("BaseAudioContext.resume()")}}を見てください)上で現在定義されています。したがって、{{domxref("AudioContext")}}インターフェイスと{{domxref("OfflineAudioContext")}}インターフェイスの両方でアクセスすることができます。
 
 ## イベント
 
@@ -61,21 +59,14 @@ _親インターフェイス{{domxref("BaseAudioContext")}}からプロパティ
 
 ## 例
 
-基本的な音声コンテキストの作成方法:
+基本的な音声コンテキストの作成方法です。
 
 ```js
-var audioCtx = new AudioContext();
-```
+const audioCtx = new AudioContext();
 
-クロスブラウザー対応版:
-
-```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-
-var oscillatorNode = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
-var finish = audioCtx.destination;
+const oscillatorNode = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
+const finish = audioCtx.destination;
 // etc.
 ```
 
@@ -85,9 +76,9 @@ var finish = audioCtx.destination;
 
 ## ブラウザーの互換性
 
-{{Compat("api.AudioContext")}}
+{{Compat}}
 
 ## 参考
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("OfflineAudioContext")}}

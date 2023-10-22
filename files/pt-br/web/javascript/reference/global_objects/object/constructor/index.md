@@ -118,11 +118,7 @@ function String() {
 
 ## Especificações
 
-| Especificação                                                                            | Status             | Comentário                                         |
-| ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1ª Edição.                                                                    | Padrão             | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                   | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade de Browser
 

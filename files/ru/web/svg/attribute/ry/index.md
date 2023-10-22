@@ -61,8 +61,4 @@ svg {
 
 ## Specifications
 
-| Спецификация                                                          | Статус              | Комментарий                           |
-| --------------------------------------------------------------------- | ------------------- | ------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#RY", "ry")}}                        | {{Spec2("SVG2")}}   | Определяется как свойство геометрии   |
-| {{SpecName("SVG1.1", "shapes.html#EllipseElementRYAttribute", "ry")}} | {{Spec2("SVG1.1")}} | Начальное определение для `<ellipse>` |
-| {{SpecName("SVG1.1", "shapes.html#RectElementRYAttribute", "ry")}}    | {{Spec2("SVG1.1")}} | Начальное определение для `<rect>`    |
+{{Specifications}}

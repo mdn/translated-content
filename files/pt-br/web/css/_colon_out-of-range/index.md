@@ -82,10 +82,7 @@ input:out-of-range + label::after {
 
 ## Specifications
 
-| Specification                                                                        | Status                      | Comment                                                        |
-| ------------------------------------------------------------------------------------ | --------------------------- | -------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}    | Define quando `:out-of-range` se iguala aos elementos em HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}              | {{Spec2('CSS4 Selectors')}} | Definicao inicial.                                             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -3,6 +3,8 @@ title: Adobe Flash
 slug: Glossary/Adobe_Flash
 ---
 
+{{GlossarySidebar}}
+
 _Adobe Flash_ est une technologie obsolescente, développée par Adobe Systems, qui permet de créer des applications internet riches, des graphiques vectoriels et des applications multimédias. Pour utiliser Flash au sein d'un {{Glossary("Browser","navigateur web")}}, vous devez installer le plugin adéquat.
 
 ## Voir aussi

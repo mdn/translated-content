@@ -113,9 +113,7 @@ Usar a propriedade `flex-direction` com o valores de `row-reverse` or `column-re
 
 ## Specifications
 
-| Specification                                                     | Status                    | Comment            |
-| ----------------------------------------------------------------- | ------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
+{{Specifications}}
 
 {{cssinfo}}
 

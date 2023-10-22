@@ -11,12 +11,7 @@ slug: Glossary/Tree_shaking
 
 在现代 JavaScript 应用程序中，我们使用模块打包 (如[webpack](https://webpack.js.org/)或[Rollup](https://github.com/rollup/rollup)) 将多个 JavaScript 文件打包为单个文件时自动删除未引用的代码。这对于准备预备发布代码的工作非常重要，这样可以使最终文件具有简洁的结构和最小化大小。
 
-## 了解更多
+## 参见
 
-#### 常识
-
-- ["捆绑过程中死代码消除的好处"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) 在 Axel Rauschmayer 的书中:“探索 JS:模块”
-
-#### 技术参数资料
-
+- [“打包过程中死代码消除的好处”](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling)，在 Axel Rauschmayer 的书“探索 JS：模块”中
 - [用 webpack 实现 Tree shaking](https://webpack.js.org/guides/tree-shaking/)

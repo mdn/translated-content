@@ -19,7 +19,7 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 Como todos os elementos HTML, esse elemento aceita os [global attributes](/pt-BR/HTML/Global_attributes).
 
-- {{ htmlattrdef("open") }}
+- `open`
   - : Esse atributo Booleano indica se os detalhes serão mostrados para o usuário ao carregar a página. Se omitido os detalhes não serão mostrados.
 
 ## Interface do DOM
