@@ -73,7 +73,8 @@ Voici un exemple simple expliquant cela&nbsp;:
   placés sur la même ligne et les nœuds de texte adjacents, s'il y a de la place
   sur la même ligne. Les débordements des éléments inline
   <span
-    >sont placés sur une nouvelle ligne si possible (comme celle‑ci contenant du texte)</span
+    >sont placés sur une nouvelle ligne si possible (comme celle‑ci contenant du
+    texte)</span
   >, sinon ils sont placés sur une nouvelle ligne, comme cette image&nbsp;:
   <img src="long.jpg" alt="morceau de tissus" />
 </p>
