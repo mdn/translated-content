@@ -7,6 +7,8 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 [도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게 됩니다.
 
+> **참고:** 캔버스 속 내용은 스크린 리더를 사용하는 유저가 접근할 수 없습니다. 만약 캔버스가 순수히 꾸미는 용으로 사용하는 경우, `<canvas>` 시작 태그에 `role="presentation"`을 넣어줘야 합니다. 그렇지 않다면 캔버스 요소에 설명하는 내용을 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성의 값으로 넣거나, 캔버스 태그 안에 대체 내용을 넣어야 합니다. 캔버스 속 내용은 DOM의 일부가 아니지만, 중첩 대체 내용은 일부가 될 수 있습니다.
+
 ## 색상
 
 지금까지는 그리기 메소드만 살펴봤습니다. 도형에 색을 적용하고자 하면, `fillStyle`과 `strokeStyle` 두 가지 중요한 속성을 사용할 수 있습니다.
@@ -600,6 +602,55 @@ draw();
 그레이디언트의 마지막 색 적용 지점에서는 투명도를 적용하였습니다. 투명도가 적용된 지점에서 이전 지점까지의 색 변화를 보기 좋게 만들려면, 두 지점에 똑같은 색을 적용하면 되는데, 이 예제에서는 색의 값을 다른 방식으로 입력하여 헷갈릴 수도 있습니다. 첫번째 그레이디언트에 사용된 `#019F62`와 `rgba(1,159,98,1)`은 같은 색입니다.
 
 {{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
+
+### `createConicGradient` 예제
+
+이 예제에서는 서로 다른 두개의 원뿔 (conic) 그레이디언트를 정의할 것입니다. 원뿔 그레이디언트는 원을 만드는 원형 그레이디언트와 다르게 점을 기준으로 원을 그립니다.
+
+```js
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+
+  // 그레이디언트를 생성한다
+  const conicGrad1 = ctx.createConicGradient(2, 62, 75);
+  conicGrad1.addColorStop(0, "#A7D30C");
+  conicGrad1.addColorStop(1, "#fff");
+
+  const conicGrad2 = ctx.createConicGradient(0, 187, 75);
+  // 도(degree)에서 라디안으로 변환하기 위해 값에 Math.PI/180 를 곱한다
+  conicGrad2.addColorStop(0, "black");
+  conicGrad2.addColorStop(0.25, "black");
+  conicGrad2.addColorStop(0.25, "white");
+  conicGrad2.addColorStop(0.5, "white");
+  conicGrad2.addColorStop(0.5, "black");
+  conicGrad2.addColorStop(0.75, "black");
+  conicGrad2.addColorStop(0.75, "white");
+  conicGrad2.addColorStop(1, "white");
+
+  // 도형을 그린다
+  ctx.fillStyle = conicGrad1;
+  ctx.fillRect(12, 25, 100, 100);
+  ctx.fillStyle = conicGrad2;
+  ctx.fillRect(137, 25, 100, 100);
+}
+```
+
+```html hidden
+<canvas id="canvas" width="250" height="150" role="presentation">
+  원뿔 그레이디언트
+</canvas>
+```
+
+```js hidden
+draw();
+```
+
+첫 번째 그레이디언트는 첫 번째 직사각형의 중앙에 위치하고 시작할 때 녹색 정지점을 끝에서 흰색 정지점으로 이동합니다. 각도는 2 라디안에서 시작하는데, 이는 남동쪽을 가리키는 시작 / 끝선 이기에 눈에 띕니다.
+
+두 번쨰 그레이디언트는 두 번째 사각형의 중앙에 위치합니다. 이 그레이디언트는 회전할 때마다 검은색에서 흰색으로 번갈아 가며 여러 가지 색상을 표현합니다. 이는 체크 효과를 나타나게 됩니다.
+
+{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
+
 
 ## 패턴(Patterns)
 
