@@ -653,7 +653,6 @@ draw();
 
 {{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
 
-
 ## 패턴(Patterns)
 
 이전 페이지의 예제 중 하나에서 일련의 루프를 사용하여 이미지 패턴을 만들었습니다. 그러나 훨씬 간단한 메소드 인 createPattern () 메소드가 있습니다.
