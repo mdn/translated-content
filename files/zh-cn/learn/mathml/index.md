@@ -9,7 +9,7 @@ slug: Learn/MathML
 
 > **警告：** 实际上，MathML 内容是由[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)（例如 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)）或[图形用户界面](https://zh.wikipedia.org/wiki/图形用户界面)生成的。如果你只需要在网页中集成数学公式，可以参考[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面上的提示。
 
-> **提示：**
+> **标注：**
 >
 > #### 想成为前端开发人员吗？
 >
