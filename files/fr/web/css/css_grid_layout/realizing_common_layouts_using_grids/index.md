@@ -637,6 +637,6 @@ La meilleure façon d'apprendre à utiliser les grilles CSS est de continuer à 
 
 - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Apprendre les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [CSS-Tricks&nbsp;:Un guide complet sur les grilles CSS (en anglais)](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [CSS-Tricks&nbsp;: Un guide complet sur les grilles CSS (en anglais)](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Les grilles CSS par l'exemple (en anglais)](https://gridbyexample.com)
 - [Quackit&nbsp;: Exemples de dispositions avec les grilles CSS (en anglais)](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm)
