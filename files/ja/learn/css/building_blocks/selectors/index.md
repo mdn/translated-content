@@ -171,5 +171,5 @@ article > p {
 | [疑似要素セレクター](/ja/docs/Web/CSS/Pseudo-elements)         | `p::first-line { }` | [疑似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#What_is_a_pseudo-element) |
 | [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)           | `article p`         | [子孫結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Descendant_Selector)                           |
 | [子結合子](/ja/docs/Web/CSS/Child_combinator)                  | `article > p`       | [子結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                                |
-| [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [隣接兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                                |
-| [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)  | `h1 ~ p`            | [一般兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                 |
+| [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) | `h1 + p`            | [隣接兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                                |
+| [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)  | `h1 ~ p`            | [一般兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                 |
