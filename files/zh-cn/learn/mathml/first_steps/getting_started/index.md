@@ -18,7 +18,7 @@ slug: Learn/MathML/First_steps/Getting_started
         >，基本的<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >文件操作知识</a
-        >以及 HTML 基础知识（学习<a
+        >以及 HTML 基础知识（学习过 <a
         href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 简介</a
         >。）
@@ -62,7 +62,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 {{ EmbedLiveSample('Inserting_formulas_in_HTML', 700, 100, "", "") }}
 
-> **警告：** 如果你只看到 "1 3" 而不是一个分数，那么你的浏览器可能不支持 MathML。请查看[浏览器兼容性表格](/zh-CN/docs/Web/MathML/Element/math#browser_compatibility)获取进一步的详细信息。
+> **警告：** 如果你只看到“1 3”而不是一个分数，那么你的浏览器可能不支持 MathML。请查看[浏览器兼容性表格](/zh-CN/docs/Web/MathML/Element/math#浏览器兼容性)获取进一步的详细信息。
 
 ### display 属性
 
@@ -89,9 +89,9 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 </html>
 ```
 
-{{ EmbedLiveSample('The_display_attribute', 700, 100, "", "") }}
+{{ EmbedLiveSample('display_属性', 700, 100, "", "") }}
 
-你可能还会注意到一些细微的外观变化：分数的文本和垂直间距变大了一点。没有 `display="block"` 属性，高度会被最小化，以避免干扰周围文本的流畅性。通过 `display="block"` 属性，优先考虑的将是数学公式的易读性。
+你可能还会注意到一些细微的外观变化：分数的文本和垂直间距变大了一点。没有 `display="block"` 属性，高度会被最小化，以避免干扰周围文本的流畅性。使用 `display="block"` 属性时，优先考虑的是数学公式的易读性。
 
 > **备注：** 这对应于 LaTeX 中的*行内*公式（用美元符号 `$...$` 包围）和*展示*公式（用 `\[...\]` 包围）的概念。
 
@@ -111,7 +111,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 </math>
 ```
 
-`<mrow>` 元素是一个通用容器，可以执行类似的布局，但可以放置在 MathML 子树的任何位置。它可以将多个元素组合在一起。例如，下面的分数的分子部分（它的第一个子元素）是“一加一”。
+`<mrow>` 元素是一个通用容器，可以执行类似的布局，但可以放置在 MathML 子树的任何位置。它可以将多个元素组合在一起。例如，下面的分数的分子部分（它的第一个子元素）是“一加二”。
 
 ```html
 <math>
@@ -185,7 +185,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 </ol>
 ```
 
-{{ EmbedLiveSample('Active_learning_nested_expressions', 700, 200, "", "") }}
+{{ EmbedLiveSample('主动练习：内嵌表达式', 700, 200, "", "") }}
 
 ## 总结
 
@@ -195,7 +195,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 ## 参见
 
-- [使用 MathML](/zh-CN/docs/Web/MathML/Authoring#using_mathml)
+- [使用 MathML](/zh-CN/docs/Web/MathML/Authoring#使用_mathml)
 - [`<math>` 元素](/zh-CN/docs/Web/MathML/Element/math)
 - [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Element/mfrac)
 - [`<mrow>` 元素](/zh-CN/docs/Web/MathML/Element/mrow)
