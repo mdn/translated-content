@@ -16,8 +16,7 @@ slug: Learn/Performance/Measuring_performance
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本计算机素养，
-        <a
+        基本计算机素养，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >已安装基本软件</a
         >，以及<a
@@ -61,6 +60,8 @@ slug: Learn/Performance/Measuring_performance
 ## 网络监视工具
 
 大多数浏览器都有可用的工具，你可以使用这些工具来针对已加载的页面进行运行，以确定它们的性能如何，大多数工具的工作方式都很类似。例如，Firefox 的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)返回有关从网络下载的所有素材的详细信息，以及显示每个下载所花费的时间的时间图。
+
+![Firefox 网络监视器显示已加载的素材列表以及每个素材的加载时间](network-monitor.png)
 
 你还可以查看 [Chrome 的网络监视器文档](https://developer.chrome.com/docs/devtools/network/)
 
