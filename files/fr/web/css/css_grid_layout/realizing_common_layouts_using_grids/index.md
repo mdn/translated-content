@@ -11,9 +11,9 @@ Pour clôturer ces différents guides, nous allons maintenant voir différentes 
 
 ## Une disposition adaptative avec une à trois colonnes en utilisant `grid-template-areas`
 
-De nombreux sites web sont construits comme une variation autour de cette disposition avec du contenu, une ou plusieurs barres latérale, un en-tête et un pied de page. Pour que le site soit adaptatif (<i lang="en">responsive</i>), on peut souhaiter avoir une seule colonne pour certaines tailles d'affichage, ajouter une barre latérale lorsqu'on a plus d'espace et enfin, avoir trois colonnes pour les écrans les plus larges.
+De nombreux sites web sont construits comme une variation autour de cette disposition avec du contenu, une ou plusieurs barres latérales, un en-tête et un pied de page. Pour que le site soit adaptatif (<i lang="en">responsive</i>), on peut souhaiter avoir une seule colonne pour certaines tailles d'affichage, ajouter une barre latérale lorsqu'on a plus d'espace et enfin, avoir trois colonnes pour les écrans les plus larges.
 
-![Image de trois dispositions différentées, créées en définissant trois grilles pour pour trois tailles.](11-responsive-areas.png)
+![Image de trois dispositions différentes, créées en définissant trois grilles pour trois tailles.](11-responsive-areas.png)
 
 Ici, on crée une disposition avec des zones nommées comme on a pu le voir _[dans l'article correspondant](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_.
 
@@ -315,7 +315,7 @@ Commençons par le mobile&nbsp;: on souhaite gérer les écrans les plus étroit
 
 Pour la prochaine taille, on veut obtenir une disposition sur deux colonnes. Ici, l'en-tête et la barre de navigation occuperont toute une ligne horizontale, il n'est donc pas nécessaire d'indiquer de positionnement pour eux. La barre latérale commence sur la première ligne verticale intitulée `col-start` et s'étend sur 3 colonnes et commence à partir de la troisième ligne (les deux premières étant occupées par l'en-tête et la barre de navigation).
 
-Le panneau dédié à la publicité est affiché sous la barre latérale et commence à partir de la quatrième ligne. On a ensuite le contenu et le pied de page qui commencent à partir de la quatrième ligne verticales et s'étendent sur 9 pistes pour occuper le reste de la grille.
+Le panneau dédié à la publicité est affiché sous la barre latérale et commence à partir de la quatrième ligne. On a ensuite le contenu et le pied de page qui commencent à partir de la quatrième ligne verticale et s'étendent sur 9 pistes pour occuper le reste de la grille.
 
 ```css
 @media (min-width: 500px) {
@@ -476,7 +476,7 @@ Nous allons créer une grille avec un nombre de colonnes adaptable et chacune de
 }
 ```
 
-Dès qu'on ajoute cette règle, les objets s'organisent sur la grille. Si on change la taille de la fenêtre, le nombre de colonne s'adaptera, sans qu'il soit nécessaire d'ajouter des requêtes média ou de redéfinir la grille.
+Dès qu'on ajoute cette règle, les objets s'organisent sur la grille. Si on change la taille de la fenêtre, le nombre de colonnes s'adaptera, sans qu'il soit nécessaire d'ajouter des requêtes média ou de redéfinir la grille.
 
 On peut ensuite améliorer chacune des boîtes en utilisant les boîtes flexibles. Pour les éléments de la liste, on utilise `display: flex` et `flex-direction` avec la valeur `column`. On ajoute une marge automatique pour la classe `.cta` afin que cette barre soit placée en bas de la boîte.
 
@@ -629,11 +629,11 @@ h2 {
 
 {{EmbedLiveSample('', '800', '900')}}
 
-Cette technique de placement automatiquement peut s'avérer extrêmement utile si vous devez gérer du contenu produit fourni par un CMS, contenant un ensemble d'objets qui se ressemblent et auxquels vous ajoutez une classe lors de la génération en HTML.
+Cette technique de placement automatique peut s'avérer extrêmement utile si vous devez gérer du contenu produit fourni par un CMS, contenant un ensemble d'objets qui se ressemblent et auxquels vous ajoutez une classe lors de la génération en HTML.
 
 ## Approfondir
 
-La meilleure façon d'apprendre à utiliser les grilles CSS est de continuer à construire des exemples comme ceux que nous avons vus ici. Prenez un cas d'utilisation que vous auriez construit avec un _framework_ ou avec un autre mode de disposition et voyez si vous pouvez le construire à l'aide d'une grille. N'oubliez pas de trouver des exemples de disposition encore impossibles à construire avec les méthodes actuelles : prenez différentes sources d'inspiration comme les magazines et affiches. Le modèle de grille offre un nouvel éventail de possibilités et il serait dommage de rester sur nos acquis.
+La meilleure façon d'apprendre à utiliser les grilles CSS est de continuer à construire des exemples comme ceux que nous avons vus ici. Prenez un cas d'utilisation que vous auriez construit avec un _framework_ ou avec un autre mode de disposition et voyez si vous pouvez le construire à l'aide d'une grille. N'oubliez pas de trouver des exemples de disposition encore impossibles à construire avec les méthodes actuelles&nbsp;: prenez différentes sources d'inspiration comme les magazines et affiches. Le modèle de grille offre un nouvel éventail de possibilités et il serait dommage de rester sur nos acquis.
 
 - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Apprendre les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
