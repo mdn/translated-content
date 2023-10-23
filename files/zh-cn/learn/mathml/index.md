@@ -21,7 +21,7 @@ slug: Learn/MathML
 
 在尝试学习 MathML 之前，我们假设你已经具备一些基本的 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 知识。因此，强烈建议你首先熟悉这两种技术。请从以下模块开始：
 
-- [入门指南](/zh-CN/docs/Learn/Getting_started_with_the_web)
+- [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
 - [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)
 
