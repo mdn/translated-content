@@ -24,7 +24,7 @@ JSON.parse(text[, reviver])
 
 ### 返回值
 
-{{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, 或者 `null` 类型，对应给定 JSON 文本的对象/值。
+与给定的 JSON `text` 相对应的 {{jsxref("Object")}}、{{jsxref("Array")}}、string、number、boolean 或者 `null` 值。
 
 ### 异常
 
