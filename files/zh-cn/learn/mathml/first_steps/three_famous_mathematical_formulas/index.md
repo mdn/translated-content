@@ -52,7 +52,7 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
   }
 \]
 
-对于任意 $u_1, \dots, u_n \in \mathbb{C}$ 和 $v_1, \dots, v_n \in \mathbb{C}$，柯西-布尼亚科夫斯基-施瓦茨不等式（Cauchy–Bunyakovsky–Schwarz inequality）可以写成如下形式：
+对于任意 $u_1, \dots, u_n \in \mathbb{C}$ 和 $v_1, \dots, v_n \in \mathbb{C}$，柯西—布尼亚科夫斯基—施瓦茨不等式（Cauchy–Bunyakovsky–Schwarz inequality）可以写成如下形式：
 
 \[
   \left| \sum_{k=1}^n {u_k \bar{v_k}} \right|^2
@@ -101,7 +101,7 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 
     <p>
       对于任意 ??? 和
-      ???，柯西-布尼亚科夫斯基-施瓦茨不等式（Cauchy–Bunyakovsky–Schwarz
+      ???，柯西—布尼亚科夫斯基—施瓦茨不等式（Cauchy–Bunyakovsky–Schwarz
       inequality）可以写成如下形式：???
     </p>
 
