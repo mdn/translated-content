@@ -81,6 +81,7 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 
 要开始这个评估，你可以使用我们通常的 HTML 模板。默认情况下，它使用 UTF-8 编码，在 `<body>` 和 `<math>` 标签上使用特殊的 Web 字体（具有与 LaTeX 输出类似的外观和感觉）。目标是将问号 `???` 替换为实际的 MathML 内容。
 
+```html
 <!doctype html>
 <html lang="zh-CN">
   <head>
@@ -104,6 +105,7 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
     </p>
   </body>
 </html>
+```
 
 ## 提示和技巧
 
