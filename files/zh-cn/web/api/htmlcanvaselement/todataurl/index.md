@@ -26,7 +26,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### 返回值
 
-包含 [data URI](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的{{domxref("DOMString")}}。
+包含 [data URI](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的字符串。
 
 ## 示例
 
