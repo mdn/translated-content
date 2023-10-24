@@ -63,7 +63,7 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
   }
 \]
 
-最后，范德蒙德矩阵（Vandermonde matrix）的行列式可以使用以下表达式计算：
+最后，范德蒙行列式可以使用以下表达式计算：
 
 \[
   \begin{vmatrix}
@@ -95,16 +95,17 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
   </head>
   <body class="htmlmathparagraph">
     <p>
-      要解决三次方程 ???（其中实数 ??? 满足 ???），可以使用卡尔达诺公式（Cardano's formula）：???
+      要解决三次方程 ???（其中实数 ??? 满足
+      ???），可以使用卡尔达诺公式（Cardano's formula）：???
     </p>
 
     <p>
-      对于任意 ??? 和 ???，柯西-布尼亚科夫斯基-施瓦茨不等式（Cauchy–Bunyakovsky–Schwarz inequality）可以写成如下形式：???
+      对于任意 ??? 和
+      ???，柯西-布尼亚科夫斯基-施瓦茨不等式（Cauchy–Bunyakovsky–Schwarz
+      inequality）可以写成如下形式：???
     </p>
 
-    <p>
-      最后，范德蒙德矩阵（Vandermonde matrix）的行列式可以使用以下表达式计算：???
-    </p>
+    <p>最后，范德蒙的行列式可以使用以下表达式计算：???</p>
   </body>
 </html>
 ```
