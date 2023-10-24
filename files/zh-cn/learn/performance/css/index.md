@@ -40,7 +40,7 @@ slug: Learn/Performance/CSS
 
 浏览器有一个固定的渲染流程——只有在布局（layout）完成后才能绘制（paint）页面，而布局的前提是要生成渲染树（render tree），而渲染树的生成则需要 DOM 和 CSSOM 树的配合。
 
-如果先让用户看到一个没有样式的页面，等 CSS 样式解析完后再重绘（repaint），这样的体验会很差。所以，浏览器会等到确定需要 CSS 时才开始渲染。只有在下载完 CSS 并生成 CSS 对象模型 [CSS 对象模型（CSS object model，CSSOM）](/zh-CN/docs/Glossary/CSSOM)之后，浏览器才会绘制页面。
+如果先让用户看到一个没有样式的页面，等 CSS 样式解析完后再重绘（repaint），这样的体验会很差。所以，浏览器会等到确定需要 CSS 时才开始渲染。只有在下载完 CSS 并生成 CSS 对象模型 [CSS 对象模型（CSSOM）](/zh-CN/docs/Glossary/CSSOM)之后，浏览器才会绘制页面。
 
 为了优化 CSSOM 的构建并提高页面性能，你可以根据当前 CSS 的状态执行以下一项或多项操作：
 
@@ -62,7 +62,7 @@ slug: Learn/Performance/CSS
     media="screen and (max-width: 480px)" />
   ```
 
-  上面的示例提供了三组样式——始终会加载的默认样式，只有在打印文档时才会加载的样式，以及仅在窄屏设备上加载的样式。默认情况下，浏览器会假设每个指定的样式表都会阻塞渲染。你可以通过添加包含[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的 `media` 属性来告诉浏览器何时应用样式表。当浏览器看到只需要在特定情况下应用的样式表时，它仍然会下载样式表，但不会阻塞渲染。通过将 CSS 拆分为多个文件，主要的渲染阻塞文件（在本例中为 `styles.css`）会小得多，从而减少渲染阻塞的时间。
+  上面的示例提供了三组样式——始终会加载的默认样式、只有在打印文档时才会加载的样式，以及仅在窄屏设备上加载的样式。默认情况下，浏览器会假设每个指定的样式表都会阻塞渲染。你可以通过添加包含[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的 `media` 属性来告诉浏览器何时应用样式表。当浏览器看到只需要在特定情况下应用的样式表时，它仍然会下载样式表，但不会阻塞渲染。通过将 CSS 拆分为多个文件，主要的渲染阻塞文件（在本例中为 `styles.css`）会小得多，从而减少渲染阻塞的时间。
 
 - **最小化和压缩你的 CSS**：最小化包括在代码进入生产环境后，在文件中删除仅为了人类可读性而存在的所有空格。通过对 CSS 进行最小化，你可以大大减少加载时间。通常，最小化是作为构建过程的一部分进行的（例如，大多数 JavaScript 框架在构建项目准备部署时会对代码进行最小化）。除了最小化之外，还要确保你的站点所在的服务器在提供文件之前对文件使用诸如 gzip 的压缩。
 
@@ -92,7 +92,7 @@ slug: Learn/Performance/CSS
   }
   ```
 
-  请记住，许多属性（例如 {{cssxref("font-size")}}）会从其父元素继承其值，因此你不需要在所有地方应用它们。而且功能强大的工具（如 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)）需要谨慎使用。在所有地方都使用它们可能会导致各种意外行为。
+  请记住，许多属性（例如 {{cssxref("font-size")}}）会从其父元素继承其值，因此你不需要在所有地方应用它们。而且功能强大的工具（如[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)）需要谨慎使用。在所有地方都使用它们可能会导致各种意外行为。
 
 - **使用 CSS 精灵图减少图像相关的 HTTP 请求**：[CSS 精灵图](https://css-tricks.com/css-sprites/) 是一种技术，它将你希望在站点上使用的多个小图像（例如图标）放入单个图像文件中，然后使用不同的 {{cssxref("background-position")}} 值在不同的位置显示图像的一部分。这可以大大减少获取图像所需的 HTTP 请求数量。
 
@@ -129,7 +129,7 @@ slug: Learn/Performance/CSS
 
 ### 选择要进行动画处理的属性
 
-接下来，动画性能在很大程度上取决于你要进行动画处理的属性。某些属性在进行动画处理时会触发[回流（reflow）](/zh-CN/docs/Glossary/Reflow)（进一步也会触发[重绘（repaint）](/zh-CN/docs/Glossary/Repaint)），应该避免使用这些属性。这些属性包括：
+接下来，动画性能在很大程度上取决于你要进行动画处理的属性。某些属性在进行动画处理时会触发[回流](/zh-CN/docs/Glossary/Reflow)（进一步也会触发[重绘](/zh-CN/docs/Glossary/Repaint)），应该避免使用这些属性。这些属性包括：
 
 - 修改元素的尺寸，例如 [`width`](/zh-CN/docs/Web/CSS/width)、[`height`](/zh-CN/docs/Web/CSS/height)、[`border`](/zh-CN/docs/Web/CSS/border) 和 [`padding`](/zh-CN/docs/Web/CSS/padding)。
 - 重新定位元素，例如 [`margin`](/zh-CN/docs/Web/CSS/margin)、[`top`](/zh-CN/docs/Web/CSS/top)、[`bottom`](/zh-CN/docs/Web/CSS/bottom)、[`left`](/zh-CN/docs/Web/CSS/left) 和 [`right`](/zh-CN/docs/Web/CSS/right)。
@@ -140,7 +140,7 @@ slug: Learn/Performance/CSS
 
 如果可以的话，最好对不会引起回流/重绘的属性进行动画处理。这包括：
 
-- [变换（Transforms）](/zh-CN/docs/Web/CSS/CSS_transforms)
+- [变换](/zh-CN/docs/Web/CSS/CSS_transforms)
 - [`opacity`](/zh-CN/docs/Web/CSS/opacity)
 - [`filter`](/zh-CN/docs/Web/CSS/filter)
 
@@ -227,14 +227,14 @@ h3 {
 
 你还可以考虑以下几点：
 
-- 使用 [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect) 与字体提供商建立早期连接。有关详细信息，请参阅[预连接到关键的第三方源](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins)。
+- 使用 [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect) 与字体提供方建立早期连接。有关详细信息，请参阅[预连接到关键的第三方源](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins)。
 - 使用 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 通过 JavaScript 自定义字体加载行为。
 
 ### 只加载所需的字形
 
 在选择用于正文的字体时，很难确定将在其中使用的字形，特别是如果你处理的是用户生成的内容和/或涉及多种语言的内容。
 
-然而，如果你知道你将使用特定的字形集（例如，仅用于标题或特定标点符号字符的字形），你可以限制浏览器需要下载的字形数量。这可以通过创建仅包含所需子集的字体文件来实现，这个过程叫做[子集化（subsetting）](https://fonts.google.com/knowledge/glossary/subsetting)。然后可以使用 `@font-face` 的 [`unicode-range`](/zh-CN/docs/Web/CSS/@font-face/unicode-range) 描述符来指定何时使用你的子集字体。如果页面中没有使用该范围内的任何字符，则不会下载该字体。
+然而，如果你知道你将使用特定的字形集（例如，仅用于标题或特定标点符号字符的字形），你可以限制浏览器需要下载的字形数量。这可以通过创建仅包含所需子集的字体文件来实现，这个过程叫做[子集化](https://fonts.google.com/knowledge/glossary/subsetting)。然后可以使用 `@font-face` 的 [`unicode-range`](/zh-CN/docs/Web/CSS/@font-face/unicode-range) 描述符来指定何时使用你的子集字体。如果页面中没有使用该范围内的任何字符，则不会下载该字体。
 
 ```css
 @font-face {
@@ -287,4 +287,4 @@ article {
 
 - [CSS 动画性能](/zh-CN/docs/Web/Performance/CSS_JavaScript_animation_performance)
 - [字体最佳实践](https://web.dev/font-best-practices/)（来自 web.dev，2022）
-- [content-visibility: 提升渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（来自 web.dev，2022）
+- [content-visibility：提升渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（来自 web.dev，2022）
