@@ -10,7 +10,7 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
     <tr>
       <th scope="row">前提：</th>
       <td>
-        在尝试本评估之前，你应该已经完成本单元中的所有文章，并且对 HTML 基础知识有所了解（请参阅<a 
+        在尝试本评估之前，你应该已经完成本单元中的所有文章，并且对 HTML 基础知识有所了解（请参阅<a
         href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 简介</a
         >）。
@@ -78,6 +78,8 @@ slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 
 \end{document}
 ```
+
+## 起始点
 
 要开始这个评估，你可以使用我们通常的 HTML 模板。默认情况下，它使用 UTF-8 编码，在 `<body>` 和 `<math>` 标签上使用特殊的 Web 字体（具有与 LaTeX 输出类似的外观和感觉）。目标是将问号 `???` 替换为实际的 MathML 内容。
 
