@@ -9,9 +9,9 @@ l10n:
 
 Un **nom accessible** (<i lang="en">accessible name</i> en anglais) est le nom d'un élément d'interface utilisateur&nbsp;; il s'agit du texte associé à un élément HTML qui fournit aux utilisateur·ice·s d'une technologie d'assistance une étiquette pour l'élément en question.
 
-Les noms accessibles indiquent l'objectif ou l'intention de l'élément. Cela aide les utilisateur·ice·s à comprendre à quoi sert l'élément et comment ils peuvent interagir avec lui. En général, les noms accessibles des éléments doivent être propres à une page. Cela permet aux utilisateurs de distinguer un élément des autres et d'identifier l'élément avec lequel ils veulent interagir.
+Les noms accessibles indiquent l'objectif ou l'intention de l'élément. Cela aide les utilisateur·ice·s à comprendre à quoi sert l'élément et comment ils peuvent interagir avec lui. En général, les noms accessibles des éléments doivent être propres à une page. Cela permet aux utilisateur·ice·s de distinguer un élément des autres et d'identifier l'élément avec lequel ils veulent interagir.
 
-En fonction de l'élément et du balisage HTML, la valeur du nom accessible peut être dérivée du contenu visible (par exemple, le texte dans [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption)) ou invisible (par exemple, l'attribut `aria-label` défini sur un élément), ou d'une combinaison des deux. La manière dont le nom accessible d'un élément est déterminé est basée sur [le calcul du nom accessible (en)](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#name_calculation), qui est différent pour chaque élément.
+En fonction de l'élément et du balisage HTML, la valeur du nom accessible peut être dérivée du contenu visible (par exemple, le texte dans [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption)) ou invisible (par exemple, l'attribut `aria-label` défini sur un élément), ou d'une combinaison des deux. La manière dont le nom accessible d'un élément est déterminé est basée sur [le calcul du nom accessible (en anglais)](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#name_calculation), qui est différent pour chaque élément.
 
 Il est préférable d'utiliser du texte visible comme noms accessibles. De nombreux éléments, notamment [`<a>`](/fr/docs/Web/HTML/Element/a), [`<td>`](/fr/docs/Web/HTML/Element/td) et [`<button>`](/fr/docs/Web/HTML/Element/button), tirent leur nom de leur contenu. Par exemple, étant donné `<a href="foo.html">Bar</a>`, le nom accessible est «&nbsp;Bar&nbsp;».
 
@@ -27,7 +27,7 @@ Les technologies d'assistance fourniront à l'utilisateur·ice la propriété de
 
 ## Voir aussi
 
-- [Les Roles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles)
-- [Les Attributs ARIA](/fr/docs/Web/Accessibility/ARIA/Attributes)
+- [Les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles)
+- [Les attributs ARIA](/fr/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessibilité](/fr/docs/Web/Accessibility)
-- [Le Guide sur l'accessibilité](/fr/docs/Learn/Accessibility)
+- [Le guide sur l'accessibilité](/fr/docs/Learn/Accessibility)
