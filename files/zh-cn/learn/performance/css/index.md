@@ -34,7 +34,7 @@ slug: Learn/Performance/CSS
 
 在开始优化 CSS 之前，你应该回答一个问题：“我需要优化什么？”下面讨论的一些技巧和技术是适用于几乎任何 Web 项目的良好实践，然而另一些只在特定情况下需要。试图在所有地方应用这些技术可能是不必要的，而且可能会浪费你的时间。你应该确定每个项目实际上需要哪些性能优化。
 
-为了做到这一点，你需要[测量网站性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如上面的链接所示，有几种不同的测量性能的方法，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，入门的最佳方法是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#network_monitor_tools)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#performance_monitor_tools)工具，以查看页面加载中哪些部分花费了很长时间，并且需要进行优化。
+为了做到这一点，你需要[测量网站性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如上面的链接所示，有几种不同的测量性能的方法，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，入门的最佳方法是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，以查看页面加载中哪些部分花费了很长时间，并且需要进行优化。
 
 ## 优化渲染
 
