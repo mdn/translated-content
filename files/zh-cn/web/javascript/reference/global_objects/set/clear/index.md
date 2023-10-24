@@ -38,7 +38,7 @@ console.log(mySet.has("foo")); // true
 mySet.clear();
 
 console.log(mySet.size); // 0
-console.log(mySet.has("bar")); // false
+console.log(mySet.has("foo")); // false
 ```
 
 ## 规范
