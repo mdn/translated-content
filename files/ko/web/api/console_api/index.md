@@ -13,7 +13,7 @@ l10n:
 
 ## 개념 및 사용법
 
-Console API는 처음에는 대부분 자체 개발 API로 시작되었으며, 브라우저마다 구현 방식이 다르고 일관성이 없었습니다. [콘솔 API 명세](https://console.spec.whatwg.org/)는 일관된 동작을 정의하기 위해 만들어졌으며, 모든 최신 브라우저는 결국 일관된 동작을 구현하기로 했지만, 일부 구현에는 여전히 자체적인 추가 자체 함수가 있습니다. 여기에서 자세히 알아보세요.
+Console API는 처음에는 대부분 자체 개발 API로 시작되었으며, 브라우저마다 구현 방식이 다르고 일관성이 없었습니다. [콘솔 API 명세](https://console.spec.whatwg.org/)는 일관된 동작을 정의하기 위해 만들어졌으며, 모든 최신 브라우저는 결국 일관된 동작을 구현하기로 했지만, 일부 구현에는 여전히 자체적인 추가 함수가 있습니다. 여기에서 자세히 알아보세요.
 
 - [Google Chrome 개발자도구 구현](https://developers.google.com/chrome-developer-tools/docs/console-api)
 - [Safari 개발자도구 구현](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
