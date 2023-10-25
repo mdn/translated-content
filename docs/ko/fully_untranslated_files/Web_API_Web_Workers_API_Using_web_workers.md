@@ -7,7 +7,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 
 ## Web Workers API
 
-Worker는 생성자(예를 들면 {{domxref("Worker.Worker", "Worker()")}})를 사용하여 생성된 객체이며 이름있는 자바스크립트 파일(이 파일은 Worker 스레드에서 실행하는 코드를 가집니다)을 실행합니다. 또한 Worker는 현재의 {{domxref("window")}}와는 다른 글로벌 컨텍스트에서 실행됩니다. 따라서 {{domxref("Worker")}} 내에서 현재의 글로벌 스코프를 접근하기 위해 ({{domxref("window.self","self")}} 대신에) {{domxref("window")}}를 사용해도 오류가 돌아옵니다.
+Worker는 생성자(예를 들면 {{domxref("Worker.Worker", "Worker()")}})를 사용하여 생성된 객체이며 이름있는 JavaScript 파일(이 파일은 Worker 스레드에서 실행하는 코드를 가집니다)을 실행합니다. 또한 Worker는 현재의 {{domxref("window")}}와는 다른 글로벌 컨텍스트에서 실행됩니다. 따라서 {{domxref("Worker")}} 내에서 현재의 글로벌 스코프를 접근하기 위해 ({{domxref("window.self","self")}} 대신에) {{domxref("window")}}를 사용해도 오류가 돌아옵니다.
 
 Worker의 콘텍스트는 Dedicated Workers(한 개의 스크립트가 이용하는 표준적인 Workers)일 경우{{domxref("DedicatedWorkerGlobalScope")}} 객체로 제공됩니다. (Shared Workers의 경우는 {{domxref("SharedWorkerGlobalScope")}}). Dedicated Worker 는 Worker 를 처음에 생성한 스크립트만 액세스 할 수 있습니다. 반면에 Shared Worker는, 복수의 스크립트에서 액세스 할 수 있습니다.
 

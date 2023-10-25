@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Howto
 
 {{LearnSidebar}}
 
-다음의 링크들은 당신의 자바스크립트 코드가 정상적으로 작동할 수 있게 고쳐야되는 흔한 문제들의 해결책을 제시한다.
+다음의 링크들은 당신의 JavaScript 코드가 정상적으로 작동할 수 있게 고쳐야되는 흔한 문제들의 해결책을 제시한다.
 
 ## 초보자들의 흔한 실수들
 
@@ -54,7 +54,7 @@ myFunction();
 
 #### 리턴 문 이후 코드 실행
 
-함수 밖으로 값을 리턴할 때, 자바스크립트 인터프리터가 함수를 완전히 빠져나감을 명심하세요. — 리턴 문 이후에 선언된 코드는 절대로 실행되지 않습니다.
+함수 밖으로 값을 리턴할 때, JavaScript 인터프리터가 함수를 완전히 빠져나감을 명심하세요. — 리턴 문 이후에 선언된 코드는 절대로 실행되지 않습니다.
 
 사실, 몇몇 브라우저들은 (파이어폭스 처럼) 리턴 문 이후에 코드가 있다면 개발자 콘솔에 에러 메세지를 줍니다. 파이어폭스는 "unreachable code after return statement" 라고 알려줍니다.
 
@@ -77,7 +77,7 @@ const myObject = {
 
 ## 기본 정의
 
-- [자바스크립트란 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript#a_high-level_definition)
+- [JavaScript란 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript#a_high-level_definition)
 - [변수는 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/Variables#what_is_a_variable)
 - [문자열은 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/Strings)
 - [배열은 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)

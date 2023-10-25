@@ -19,7 +19,7 @@ slug: Learn/Forms
 5. [데이터 주고 받기](/ko/docs/HTML/Forms/Sending_and_retrieving_form_data)
 6. [데이터 유효성 검사](/ko/docs/HTML/Forms/Data_form_validation)
 7. [사용자 폼 위젯 만드는 방법](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)
-8. [자바스크립트를 통해서 폼 전달 하기](/ko/docs/HTML/Forms/Sending_forms_through_JavaScript)
+8. [JavaScript를 통해서 폼 전달 하기](/ko/docs/HTML/Forms/Sending_forms_through_JavaScript)
 
    1. [FormData 객체 사용](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 

@@ -35,7 +35,7 @@ video {
 }
 ```
 
-이제 자바스크립트 코드를 살펴보겠습니다. `start()` 함수에 비디오 요소에 대한 참조를 가져오는 코드를 추가합니다:
+이제 JavaScript 코드를 살펴보겠습니다. `start()` 함수에 비디오 요소에 대한 참조를 가져오는 코드를 추가합니다:
 
 ```js
 videoElement = document.getElementById("video");
@@ -50,7 +50,7 @@ videoElement.addEventListener("ended", videoDone, true);
 
 비디오 요소의 src 속성으로 비디오 파일의 위치를 지정해서 비디오 로딩을 시작합니다. FIXME (이 글의 작성자의 한 사람인 bjacob에게) : `preload="auto"`를 여기에서 명시하지 않으면 파이어폭스에서는 `canplaythrough` 이벤트가 발생되지 않음. 크롬에서는 `preload="auto"` 지정 여부와 관계없이 비디오 로딩 시작.
 
-> 역자 주 : 예제에 보면 아래와 같이 자바스크립트에서 preload나 src를 명시하지 않고, 위의 역자 주에 있는 것처럼 비디오 태그 내에 속성값으로 기술하고 있으므로, 바로 위 문단과 아래의 코드는 무시해도 좋을 것 같습니다.
+> 역자 주 : 예제에 보면 아래와 같이 JavaScript에서 preload나 src를 명시하지 않고, 위의 역자 주에 있는 것처럼 비디오 태그 내에 속성값으로 기술하고 있으므로, 바로 위 문단과 아래의 코드는 무시해도 좋을 것 같습니다.
 
 ```js
 video.preload = "auto";

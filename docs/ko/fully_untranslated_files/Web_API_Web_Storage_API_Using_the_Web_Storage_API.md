@@ -11,7 +11,7 @@ Web Storage API는 브라우저에서 쿠키를 사용하는 것보다 훨씬 �
 
 ## 기본 컨셉
 
-Storage 객체는 단순한 key-value 저장소이며, 이는 객체와 비슷합니다. 하지만 이 데이터들은 페이지 로딩에도 온전하게 유지됩니다. key와 그 value는 항상 문자열입니다. (만약 정수로 키를 사용할 경우 이는 자동으로 string으로 변경됩니다, 자바스크립트 객체의 동작방식을 생각해보세요) 객체를 사용하듯이 쉽게 값에 접근할 수 있으며, 이 때 {{domxref("Storage.getItem()")}}과 {{domxref("Storage.setItem()")}} 메서드를 사용할 수 있습니다. 아래 세 줄은 (동일한) colorSetting 엔트리에 값을 설정하는 방법입니다.
+Storage 객체는 단순한 key-value 저장소이며, 이는 객체와 비슷합니다. 하지만 이 데이터들은 페이지 로딩에도 온전하게 유지됩니다. key와 그 value는 항상 문자열입니다. (만약 정수로 키를 사용할 경우 이는 자동으로 string으로 변경됩니다, JavaScript 객체의 동작방식을 생각해보세요) 객체를 사용하듯이 쉽게 값에 접근할 수 있으며, 이 때 {{domxref("Storage.getItem()")}}과 {{domxref("Storage.setItem()")}} 메서드를 사용할 수 있습니다. 아래 세 줄은 (동일한) colorSetting 엔트리에 값을 설정하는 방법입니다.
 
 <pre style="white-space: pre;">localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
