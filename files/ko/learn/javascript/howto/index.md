@@ -56,7 +56,7 @@ myFunction();
 
 함수 밖으로 값을 리턴할 때, JavaScript 인터프리터가 함수를 완전히 빠져나감을 명심하세요. — 리턴 문 이후에 선언된 코드는 절대로 실행되지 않습니다.
 
-사실, 몇몇 브라우저들은 (파이어폭스 처럼) 리턴 문 이후에 코드가 있다면 개발자 콘솔에 에러 메세지를 줍니다. 파이어폭스는 "unreachable code after return statement" 라고 알려줍니다.
+사실, 몇몇 브라우저들은 (Firefox 처럼) 리턴 문 이후에 코드가 있다면 개발자 콘솔에 에러 메세지를 줍니다. Firefox는 "unreachable code after return statement" 라고 알려줍니다.
 
 ### 오브젝트 표기 vs 일반적 할당
 

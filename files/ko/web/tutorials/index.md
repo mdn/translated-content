@@ -79,7 +79,7 @@ slug: Web/Tutorials
             >
           </dt>
           <dd>
-            포괄적인 HTML요소에 대한 참조 및 파이어폭스와 다른 부라우저를
+            포괄적인 HTML요소에 대한 참조 및 Firefox와 다른 부라우저를
             지원하는 방법을 알려줍니다.
           </dd>
           <dt>

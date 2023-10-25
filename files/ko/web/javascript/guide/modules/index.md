@@ -134,7 +134,7 @@ reportPerimeter(square1.length, reportList);
 <script type="module" src="main.js"></script>
 ```
 
-기본적으로 모듈 기능을 가져오는 스크립트는 최상위 모듈로 작동합니다. 이를 생략하면 파이어폭스로 예를들면, "SyntaxError: import declarations may only appear at top level of a module"라는 오류를 줍니다.
+기본적으로 모듈 기능을 가져오는 스크립트는 최상위 모듈로 작동합니다. 이를 생략하면 Firefox로 예를들면, "SyntaxError: import declarations may only appear at top level of a module"라는 오류를 줍니다.
 
 `import` 와 `export` 문(statement)은 모듈 내에서만 사용할 수 있습니다. 정규 스크립트가 아닙니다.
 

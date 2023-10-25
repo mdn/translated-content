@@ -525,8 +525,8 @@
 /ko/docs/Web/CSS/CSS_Columns	/ko/docs/Web/CSS/CSS_multicol_layout
 /ko/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ko/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ko/docs/Web/CSS/CSS_Device_Adaptation	/ko/docs/Web/CSS
-/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례	/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
+/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/플렉스박스의_기본_개념	/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/플렉스박스의_대표적인_사용례	/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ko/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ko/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 /ko/docs/Web/CSS/CSS_Flow_Layout/대열과_탈대열	/ko/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 /ko/docs/Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃	/ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow

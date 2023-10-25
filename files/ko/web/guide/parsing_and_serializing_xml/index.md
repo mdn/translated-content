@@ -108,7 +108,7 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 
 먼저, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글에 나와 있는 대로 DOM 트리를 생성하세요. 만약 {{ domxref("XMLHttpRequest") }}를 사용하여 이미 DOM 트리가 존재한다면 이 절의 마지막 부분으로 건너 뛰십시오.
 
-이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [모질라에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O)를 참조하세요.
+이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [Mozilla에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O)를 참조하세요.
 
 ```js
 var oFOStream = Components.classes[
