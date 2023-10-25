@@ -9,7 +9,7 @@ slug: conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 
 ### AJAX란?
 
-AJAX란 비동기 자바스크립트와 XML (**A**synchronous **J**avaScript **A**nd **X**ML)을 말합니다. 간단히 말하면, 서버와 통신하기 위해 [`XMLHttpRequest`](/ko/docs/XMLHttpRequest) 객체를 사용하는 것을 말합니다. JSON, XML, HTML 그리고 일반 텍스트 형식 등을 포함한 다양한 포맷을 주고 받을 수 있습니다. AJAX의 강력한 특징은 페이지 전체를 리프레쉬 하지 않고서도 수행 되는 "비동기성"입니다. 이러한 비동기성을 통해 사용자의 Event가 있으면 전체 페이지가 아닌 일부분만을 업데이트 할 수 있게 해줍니다.
+AJAX란 비동기 JavaScript와 XML (**A**synchronous **J**avaScript **A**nd **X**ML)을 말합니다. 간단히 말하면, 서버와 통신하기 위해 [`XMLHttpRequest`](/ko/docs/XMLHttpRequest) 객체를 사용하는 것을 말합니다. JSON, XML, HTML 그리고 일반 텍스트 형식 등을 포함한 다양한 포맷을 주고 받을 수 있습니다. AJAX의 강력한 특징은 페이지 전체를 리프레쉬 하지 않고서도 수행 되는 "비동기성"입니다. 이러한 비동기성을 통해 사용자의 Event가 있으면 전체 페이지가 아닌 일부분만을 업데이트 할 수 있게 해줍니다.
 
 AJAX의 주요 두가지 특징은 아래의 작업을 할 수 있게 해줍니다.
 
@@ -57,7 +57,7 @@ httpRequest.send(null);
 
 - 첫번째 파라미터는 HTTP 요구 방식(request method) ─ GET, POST, HEAD 중의 하나이거나 당신의 서버에서 지원하는 다른 방식 ─ 입니다. 이 파라미터는 HTTP 표준에 따라 모두 대문자로 표기해야합니다. 그렇지 않으면 (Firefox와 같은) 특정 브라우저는 이 요구를 처리하지 않을 수도 있습니다. HTTP 요구 방식의 보다 자세한 정보는 [W3C 명세](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)를 참고하기 바랍니다.
 - 두번째 파라미터는 요구하고자하는 URL 입니다. 보안상의 이유로 서드 파티 도메인 상의 URL은 기본적으로 호출할 수 없습니다. 요구하는 모든 페이지에 정확한 도메인 네임을 사용하십시오. 그렇지 않으면 `open()` 메소드를 호출할 때 'permission denied' 에러가 발생할 수 있습니다. 일반적인 오류는 당신의 사이트에 `domain.tld` 와 같은 형태로 접근하는 것 입니다. 이러한 경우 `www.domain.tld` 와 같은 형태로 페이지를 요구하기 바랍니다. 만약 다른 도메인으로 요청을 보내고 싶다면 [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Access_control_CORS) 를 참고하기 바랍니다.
-- 세번째 파라미터(생략 가능)는 요구가 비동기식(Asynchronous)으로 수행될 지를 결정합니다. 만약 이 파라미터가 `true`(기본값) 으로 설정된 경우에는 자바스크립트 함수가 지속적으로 수행될 수 있어 서버로부터 응답을 받기 전에도 유저와 페이지의 상호작용이 계속 진행됩니다. 이것이 AJAX 의 첫번째 A (Asynchronous : 비동기성) 입니다.
+- 세번째 파라미터(생략 가능)는 요구가 비동기식(Asynchronous)으로 수행될 지를 결정합니다. 만약 이 파라미터가 `true`(기본값) 으로 설정된 경우에는 JavaScript 함수가 지속적으로 수행될 수 있어 서버로부터 응답을 받기 전에도 유저와 페이지의 상호작용이 계속 진행됩니다. 이것이 AJAX 의 첫번째 A (Asynchronous : 비동기성) 입니다.
 
   - `false`로 설정된 경우 동기적으로 작동합니다. (`send()` 함수에서 서버로부터 응답이 올 때까지 기다림)역자 덧붙임
 
@@ -77,7 +77,7 @@ httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'
 
 ### 2단계 – 서버 응답에 대한 처리
 
-서버로 요청(request)을 보내기 전에, 위(1단계 - HTTP Request 만들기)에서는 서버의 응답을 처리하기 위한 자바스크립트 함수의 이름을 지정했었습니다.
+서버로 요청(request)을 보내기 전에, 위(1단계 - HTTP Request 만들기)에서는 서버의 응답을 처리하기 위한 JavaScript 함수의 이름을 지정했었습니다.
 
 ```js
 httpRequest.onreadystatechange = nameOfTheFunction;
@@ -118,13 +118,13 @@ if (httpRequest.status === 200) {
 이제 요구와 그에 대한 응답에 대한 상태 코드를 검사했으므로, 서버에서 받은 데이터를 통해 원하는 작업을 수행할 수 있다. 그리고 응답 데이터에 접근하기 위한 옵션이 2가지 있습니다.
 
 - `http_request.responseText` – 서버의 응답을 텍스트 문자열로 반환할 것이다.
-- `http_request.responseXML` – 서버의 응답을 `XMLDocument` 객체로 반환하며 당신은 자바스크립트의 DOM 함수들을 통해 이 객체를 다룰 수 있을 것이다.
+- `http_request.responseXML` – 서버의 응답을 `XMLDocument` 객체로 반환하며 당신은 JavaScript의 DOM 함수들을 통해 이 객체를 다룰 수 있을 것이다.
 
 위의 단계는 비동기식 요구(asynchronous request)를 사용했을 경우에 대한 설명입니다(즉, `open()`의 세번째 변수가 생략되었거나 `true` 일 경우). 동기식(Synchronous) 방법을 사용한다면 함수(`nameOfTheFunction`)를 명시할 필요 없이 `send()` 호출에 의해 반환되는 data를 바로 사용 할 수 있습니다. 그러나 이는 스크립트가 `send()`를 호출할 때 멈춰지며 서버의 응답이 완료 될 때까지 기다리기 때문에 나쁜 UX를 제공하게 합니다.
 
 ### 3단계 – 간단한 예제
 
-이제 이들을 한데 모아서 간단한 HTTP Request를 수행해보겠습니다. 우리가 작성할 자바스크립트는 "I'm a test." 라는 문장이 적힌 `test.html` 이라는 HTML 문서를 요청해서 문서의 내용을 파라미터로 `alert()` 함수를 호출할 것입니다. 이 예제는 vanilla Javascript(순수 자바스크립트 - jQuery도 포함되어 있지 않습니다.)로 작성되었습니다. 또한 HTML, XML, PHP 파일들은 같은 경로에 위치되어 있어야 합니다.
+이제 이들을 한데 모아서 간단한 HTTP Request를 수행해보겠습니다. 우리가 작성할 JavaScript는 "I'm a test." 라는 문장이 적힌 `test.html` 이라는 HTML 문서를 요청해서 문서의 내용을 파라미터로 `alert()` 함수를 호출할 것입니다. 이 예제는 vanilla Javascript(순수 JavaScript - jQuery도 포함되어 있지 않습니다.)로 작성되었습니다. 또한 HTML, XML, PHP 파일들은 같은 경로에 위치되어 있어야 합니다.
 
 ```html
 <button id="ajaxButton" type="button">Make a request</button>

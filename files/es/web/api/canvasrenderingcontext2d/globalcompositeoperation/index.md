@@ -1,17 +1,18 @@
 ---
-title: 合成の例
-slug: Web/API/Canvas_API/Tutorial/Compositing/Example
+title: Ejemplo de composición
+slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
+original_slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
 
-このサンプルプログラムは、数々の[合成操作](/ja/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)を紹介するものです。出力結果は次のようになります。
+Este programa de ejemplo muestra una cantidad de [operaciones de composición](/es/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation). La salida se ve así:
 
-{{EmbedLiveSample("Compositing_example", "100%", 7250)}}
+{{EmbedLiveSample("Ejemplo_de_composición", "100%", 7250)}}
 
-<h2 id="Compositing_example">合成の例</h2>
+## Ejemplo de composición
 
-このコードでは、プログラムの残りの部分で使用されるグローバルな値を設定します。
+Este código establece los valores globales utilizados por el resto del programa.
 
 ```js
 var canvas1 = document.createElement("canvas");
@@ -45,50 +46,50 @@ var gco = [
   "luminosity",
 ].reverse();
 var gcoText = [
-  "これが既定の設定です。新たな図形をすでにあるキャンバスの内容の上に描きます。",
-  "新たな図形は、その図形と描画先キャンバスの内容が重なり合う部分のみが描かれます。それ以外の部分は透明になります。",
-  "新たな図形は、その図形と描画先キャンバスの内容と重なり合わない部分のみが描画されます。",
-  "新たな図形は、その図形と描画先キャンバスの内容と重なり合う部分のみが描かれます。",
-  "新たな図形は、描画先キャンバスの内容の背後に描かれます。",
-  "描画先キャンバスの内容は、新たな図形と重なり合う部分だけが残ります。それ以外の部分は透明になります。",
-  "描画先キャンバスの内容は、新たな図形と重なり合わない部分だけが残ります。",
-  "描画先キャンバスの内容は、新たな図形と重なり合う部分だけが残ります。新たな図形は、その背後に描かれます。",
-  "新たな図形と描画先キャンバスの内容が重なる部分は、カラー値が加算されます。",
-  "新たな図形だけが描かれます。",
-  "新たな図形と描画先キャンバスの内容が重なり合う部分は透明になり、それ以外は通常通り描画されます。",
-  "新たな図形のピクセルは、対応する描画先キャンバスのピクセルとカラー値が乗算されます。その結果、各ピクセルのカラーは暗くなります。",
-  "ピクセルを反転し、乗算して、改めて反転します。その結果、各ピクセルのカラーは明るくなります（multiply の逆）。",
-  "multiply と screen を組み合わせます。新たな図形のピクセルより対応する描画先キャンバスのピクセルが、それぞれ暗いときは暗くし、明るければ明るくします。",
-  "両方のレイヤーの暗い方のピクセルを残します。",
-  "両方のレイヤーの明るい方のピクセルを残します。",
-  "下層のレイヤーを、上層のレイヤーの反転値で除算します。",
-  "下層のレイヤーを上層のレイヤーで除算し、それを反転させたものを結果とします。",
-  "multiply と screen を overlay のように組み合わせますが、上層と下層が逆になります。",
-  "hard-light を柔らかくします。純粋な黒と白は、真っ黒や真っ白にはなりません。",
-  "上層のレイヤーから下層のレイヤーを引くか、またはその逆を行い、常に正の値を取得します。",
-  "difference と似ていますが、コントラストを弱めます。",
-  "下層の輝度と彩度を保ち、上層の色相に合わせます。",
-  "下層の輝度と色相を保ち、上層の彩度に合わせます。",
-  "下層の輝度を保ち、上等の色相と彩度に合わせます。",
-  "下層の色相と彩度を保ち、上層の輝度に合わせます。",
+  "Esta es la configuración predeterminada y dibuja nuevas formas sobre el contenido del canvas existente.",
+  "La nueva forma se dibuja solo donde la nueva forma y el canvas de destino se superponen. Todo lo demás se hace transparente.",
+  "La nueva forma se dibuja donde no se superpone al contenido del canvas existente.",
+  "La nueva forma solo se dibuja donde se solapa con el contenido del canvas existente.",
+  "Se dibujan nuevas formas detrás del contenido del canvas existente",
+  "El contenido del canvas existente se conserva donde la nueva forma y el contenido del canvas existente se superponen. Todo lo demás se hace transparente.",
+  "El contenido existente se mantiene donde no se superpone a la nueva forma.",
+  "El canvas existente solo se conserva donde se solapa con la nueva forma. La nueva forma se dibuja detrás del contenido del canvas.",
+  "Donde ambas formas se superponen, el color se determina agregando valores de color.",
+  "Solo se muestra la nueva forma.",
+  "Las formas se hacen transparentes donde ambas se superponen y se dibujan de manera normal en cualquier otro lugar.",
+  "Los píxeles de la capa superior se multiplican con el píxel correspondiente de la capa inferior. El resultado es una imagen más oscura. ",
+  "Los píxeles están invertidos, multiplicados e invertidos nuevamente. Una imagen más clara es el resultado (opuesto a multiplicar).",
+  "Una combinación de multiplicar y pantalla. Las partes oscuras en la capa base se oscurecen y las partes claras se vuelven más claras.",
+  "Conserva los píxeles más oscuros de ambas capas.",
+  "Conserva los píxeles más claros de ambas capas.",
+  "Divide la capa inferior por la capa superior invertida.",
+  "Divide la capa inferior invertida por la capa superior, y luego invierte el resultado.",
+  "Una combinación de multiplicar y pantalla como superposición, pero con la parte superior y la capa inferior intercambiado.",
+  "Una versión más suave de la luz dura. Negro puro o blanco no da como resultado negro o blanco puro.",
+  "Resta la capa inferior de la capa superior o viceversa para obtener siempre un valor positivo.",
+  "Al igual que la diferencia, pero con menor contraste.",
+  "Conserva la luma y el croma de la capa inferior, mientras adopta el tono de la capa superior.",
+  "Conserva la luma y el tono de la capa inferior, mientras adopta el croma de la capa superior.",
+  "Conserva la luma de la capa inferior, mientras adopta el matiz y el croma de la capa superior.",
+  "Conserva el tono y el croma de la capa inferior, mientras adopta la luma de la capa superior.",
 ].reverse();
 var width = 320;
 var height = 340;
 ```
 
-### メインプログラム
+### Programa principal
 
-ページが読み込まれるとき、このコードが実行されてセットアップを行い、例を実行します。
+Cuando se carga la página, este código se ejecuta para configurar y ejecutar el ejemplo:
 
 ```js
 window.onload = function () {
-  // lum in sRGB
+  // lum en sRGB
   var lum = {
     r: 0.33,
     g: 0.33,
     b: 0.33,
   };
-  // resize canvas
+  // redimensionar canvas
   canvas1.width = width;
   canvas1.height = height;
   canvas2.width = width;
@@ -100,7 +101,7 @@ window.onload = function () {
 };
 ```
 
-そして、このコード `runComposite()` が仕事の大部分を処理し、難しい部分は多くのユーティリティ関数に頼っています。
+Y este código, `runComposite()`, maneja la mayor parte del trabajo, dependiendo de una serie de funciones de utilidad para hacer las partes difíciles.
 
 ```js
 function createCanvas() {
@@ -175,9 +176,9 @@ function runComposite() {
 }
 ```
 
-### ユーティリティ関数
+### Funciones de utilidad
 
-このプログラムは、多くのユーティリティ関数に依存しています。
+El programa se basa en una serie de funciones de utilidad.
 
 ```js
 var lightMix = function () {
@@ -209,7 +210,7 @@ var colorSphere = function (element) {
   var ctx = canvas1.getContext("2d");
   var width = 360;
   var halfWidth = width / 2;
-  var rotate = (1 / 360) * Math.PI * 2; // per degree
+  var rotate = (1 / 360) * Math.PI * 2; // por grado
   var offset = 0; // scrollbar offset
   var oleft = -20;
   var otop = -20;

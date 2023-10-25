@@ -3310,6 +3310,10 @@
     "modified": "2020-10-15T22:03:53.553Z",
     "contributors": ["LEUGIM99"]
   },
+  "Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
+    "modified": "2019-03-18T21:36:04.043Z",
+    "contributors": ["lajaso"]
+  },
   "Web/API/CanvasRenderingContext2D/lineCap": {
     "modified": "2020-10-15T22:18:19.205Z",
     "contributors": ["Ricardo_F."]
@@ -3370,10 +3374,6 @@
   "Web/API/Canvas_API/Tutorial/Compositing": {
     "modified": "2020-08-27T21:09:19.590Z",
     "contributors": ["mastertrooper", "stephaniehobson"]
-  },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-18T21:36:04.043Z",
-    "contributors": ["lajaso"]
   },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2019-03-23T23:15:03.361Z",

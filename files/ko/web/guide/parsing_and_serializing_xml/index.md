@@ -28,7 +28,7 @@ dump(
 );
 ```
 
-### 자바스크립트 객체 트리를 시작점으로 하여 XML 문서를 생성(JXON)
+### JavaScript 객체 트리를 시작점으로 하여 XML 문서를 생성(JXON)
 
 [JXON 역(reverse) 알고리즘](/en/JXON#Reverse_Algorithms)을 참고하세요.
 
@@ -100,9 +100,9 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 <content>This is the content</content>
 ```
 
-### DOM 트리를 자바스크립트 객체 트리로 직렬화 (JXON)
+### DOM 트리를 JavaScript 객체 트리로 직렬화 (JXON)
 
-[JXON](/en/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation, 무손실 자바스크립트 XML 객체 표기법)은 XML을 사용하여 자바스크립트 객체를 표현하는 방법입니다. XML 문서의 일부분만 나오게 하고 싶다면, 문서 전체를 JSON으로 변환하지 말고 [XPath](/en/XPath)를 사용하세요! 이 외의 상황이라면 [JSON에 관한 글](/en/JXON)을 참조하세요.
+[JXON](/en/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation, 무손실 JavaScript XML 객체 표기법)은 XML을 사용하여 JavaScript 객체를 표현하는 방법입니다. XML 문서의 일부분만 나오게 하고 싶다면, 문서 전체를 JSON으로 변환하지 말고 [XPath](/en/XPath)를 사용하세요! 이 외의 상황이라면 [JSON에 관한 글](/en/JXON)을 참조하세요.
 
 ### DOM 트리를 파일로 직렬화
 

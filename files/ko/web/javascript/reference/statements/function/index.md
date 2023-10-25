@@ -92,7 +92,7 @@ if (true) {
 
 ### 함수 선언 끌어올리기
 
-자바스크립트에서 함수 선언은 그 선언을 둘러싼 함수의 최상부나 전역 범위(global scope)로 끌어올려집니다.
+JavaScript에서 함수 선언은 그 선언을 둘러싼 함수의 최상부나 전역 범위(global scope)로 끌어올려집니다.
 
 ```js
 hoisted(); // logs "foo"
