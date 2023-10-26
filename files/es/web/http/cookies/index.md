@@ -194,7 +194,6 @@ Hay algunas funciones útiles disponibles para los desarrolladores que desean re
 - Los servidores pueden (y deberían) configurar el atributo SameSite para especificar si se pueden enviar o no cookies de terceros.
 - Las cookies que tienen un estado de partición independiente (CHIPS) les permiten a los desarrolladores habilitar sus cookies en el almacenamiento particionado, con un contenedor de cookies separado por sitio de nivel superior. Esto permite que los usos válidos sin seguimiento de cookies de terceros sigan funcionando en navegadores que no permiten el uso de cookies para el seguimiento de terceros.
 
-
 ## Regulaciones relacionadas a las cookies
 
 La legislación o normativa que cubre el uso de cookies incluye:
