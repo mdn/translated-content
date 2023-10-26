@@ -170,7 +170,7 @@ const normalArray = Array.prototype.slice.call(typedArray);
 
 - [从 Base64 编码的字符串获取 `ArrayBuffer` 或类型化数组](/zh-CN/docs/Glossary/Base64#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [使用类型化数组实现快速的 Canvas 像素操作](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/)
-- [类型化数组：浏览器中的二进制数据](https://web.dev/webgl-typed-arrays/)
+- [类型化数组：浏览器中的二进制数据](https://web.dev/articles/webgl-typed-arrays)
 - [字节序](/zh-CN/docs/Glossary/Endianness)
 
 {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
