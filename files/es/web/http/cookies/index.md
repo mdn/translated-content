@@ -229,4 +229,4 @@ Existen algunas técnicas diseñadas para recrear las cookies después de elimin
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
-- [HTTP cookies en Wikipedia](https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica))
+- [HTTP cookies en Wikipedia](<https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)>)
