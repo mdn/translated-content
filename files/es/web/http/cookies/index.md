@@ -181,41 +181,52 @@ Se presentan aquí algunas técnicas que se deberían usar para evitar que estas
 - Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
 - Para más prevención visita [OWASP CSRF prevention cheat sheet](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>).
 
-## Tracking and privacy
+## Rastreo y privacidad
 
-### Third-party cookies
+### Cookies de terceros
 
-Cookies have a domain associated to them. If this domain is the same as the domain of the page you are on, the cookies is said to be a _first-party cookie_. If the domain is different, it is said to be a _third-party cookie_. While first-party cookies are sent only to the server setting them, a web page may contain images or other components stored on servers in other domains (like ad banners). Cookies that are sent through these third-party components are called third-party cookies and are mainly used for advertising and tracking across the web. See for example the [types of cookies used by Google](https://www.google.com/policies/technologies/types/). Most browsers allow third-party cookies by default, but there are add-ons available to block them (for example, [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger-firefox/) by the [EFF](https://www.eff.org/)).
+Las Cookies tienen un dominio asociado a ellas. Si este dominio es el mismo que el dominio de la página en la que el cliente se encuentra, se llama _cookie de origen_. Si el dominio es distinto, se denomina _cookie de terceros_. Si bien las cookies de origen se envían únicamente al servidor que las configura, una página web puede contener imágenes u otros componentes almacenados en servidores de otros dominios (como publicidad). Las cookies que se envían a través de estos componentes de terceros se utilizan principalmente para publicidad y seguimiento en la web. Por ejemplo, [los tipos de cookies utilizadas por Google](https://www.google.com/policies/technologies/types/).
 
-If you are not disclosing third-party cookies, consumer trust might get harmed if cookie use is discovered. A clear disclosure (such as in a privacy policy) tends to eliminate any negative effects of a cookie discovery. Some countries also have legislation about cookies. See for example Wikipedia's [cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement).
+Un servidor de terceros puede crear un perfil del historial y los hábitos de navegación de un usuario basándose en las cookies que le envía el mismo navegador al acceder a varios sitios. Firefox, de forma predeterminada, bloquea las cookies de terceros que se sabe que contienen rastreadores. Las cookies de terceros (o simplemente las cookies de seguimiento) también pueden bloquearse mediante otras configuraciones o extensiones del navegador. El bloqueo de cookies puede provocar que algunos componentes de terceros (como los widgets de redes sociales) no funcionen según lo previsto.
 
-### Do-Not-Track
+Hay algunas funciones útiles disponibles para los desarrolladores que desean respetar la privacidad del usuario y minimizar el seguimiento de terceros:
 
-There are no legal or technological requirements for its use, but the {{HTTPHeader("DNT")}} header can be used to signal that a web application should disable either its tracking or cross-site user tracking of an individual user. See the {{HTTPHeader("DNT")}} header for more information.
+- Los servidores pueden (y deberían) configurar el atributo SameSite para especificar si se pueden enviar o no cookies de terceros.
+- Las cookies que tienen un estado de partición independiente (CHIPS) les permiten a los desarrolladores habilitar sus cookies en el almacenamiento particionado, con un contenedor de cookies separado por sitio de nivel superior. Esto permite que los usos válidos sin seguimiento de cookies de terceros sigan funcionando en navegadores que no permiten el uso de cookies para el seguimiento de terceros.
 
-### EU cookie directive
 
-Requirements for cookies across the EU are defined in [Directive 2009/136/EC](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136) of the European Parliament and came into effect on 25 May 2011. A directive is not a law by itself, but a requirement for EU member states to put laws in place that meet the requirements of the directive. The actual laws can differ from country to country.
+## Regulaciones relacionadas a las cookies
 
-In short the EU directive means that before somebody can store or retrieve any information from a computer, mobile phone or other device, the user must give informed consent to do so. Many websites have added banners since then to inform the user about the use of cookies.
+La legislación o normativa que cubre el uso de cookies incluye:
 
-For more, see [this Wikipedia section](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) and consult state laws for the latest and most accurate information.
+- El Reglamento General de Privacidad de Datos (RGPD) en la Unión Europea
+- La Directiva sobre la privacidad electrónica en la Unión Europea
+- Ley de Privacidad del Consumidor de California (CCPA)
 
-### Zombie cookies and Evercookies
+Estas regulaciones tienen alcance global. Se aplican a cualquier sitio del internet al que accedan usuarios de estas jurisdicciones (la UE y California, con la salvedad de que la ley de California se aplica sólo a entidades con ingresos brutos superiores a 25 millones de dólares, entre otras cosas).
 
-A more radical approach to cookies are zombie cookies or "Evercookies" which are recreated after their deletion and are intentionally hard to delete forever. They are using the [Web storage API](/es/docs/Web/API/Web_Storage_API), Flash Local Shared Objects and other techniques to recreate themselves whenever the cookie's absence is detected.
+Estas regulaciones incluyen requisitos tales como:
 
-- [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
-- [Zombie cookies on Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)
+- Notificar a los usuarios que el sitio utiliza cookies.
+- Permitir a los usuarios escoger no recibir algunas o todas las cookies.
+- Permitir a los usuarios utilizar la mayor parte del servicio sin recibir cookies.
 
-## See also
+Puede haber otras regulaciones que rijan el uso de cookies en tu ubicación. La carga de conocer y cumplir estas regulaciones recae sobre usted. Hay empresas que ofrecen un código de "banner de cookies" que le ayuda a cumplir con estas normativas.
+
+## Otras formas de almacenar información en el navegador
+
+Otro enfoque para almacenar datos en el navegador es la [API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API). Las propiedades [window.sessionStorage](/es/docs/Web/API/Window/sessionStorage) y [window.localStorage](/es/docs/Web/API/Window/localStorage) corresponden a cookies de sesión y permanentes en duración, pero tienen límites de almacenamiento mayores que las cookies y nunca se envían a un servidor. Se pueden almacenar cantidades de datos más estructuradas y mayores utilizando la [API IndexedDB](/es/docs/Web/API/IndexedDB_API) o una biblioteca construida sobre ella.
+
+Existen algunas técnicas diseñadas para recrear las cookies después de eliminarlas. Se conocen como cookies "zombies". Estas técnicas violan los principios de privacidad y control del usuario, pueden violar las regulaciones de privacidad de datos y podrían exponer a un sitio web que las utilice a responsabilidad legal.
+
+## Véase También
 
 - {{HTTPHeader("Set-Cookie")}}
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecting cookies using the Storage Inspector](/es/docs/Tools/Storage_Inspector)
+- [Inspeccionar cookies usando el Storage Inspector](/es/docs/Tools/Storage_Inspector)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
-- [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
+- [HTTP cookies en Wikipedia](https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica))
