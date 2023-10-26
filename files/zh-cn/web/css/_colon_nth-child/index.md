@@ -95,13 +95,13 @@ li.important:nth-child(-n + 3) {
 </h3>
 <p>第 1、3、5、7 个子节点被选中。</p>
 <div class="first">
-  <span>Span 1！</span>
+  <span>Span 1!</span>
   <span>Span 2</span>
-  <span>Span 3！</span>
+  <span>Span 3!</span>
   <span>Span 4</span>
-  <span>Span 5！</span>
+  <span>Span 5!</span>
   <span>Span 6</span>
-  <span>Span 7！</span>
+  <span>Span 7!</span>
 </div>
 
 <br />
@@ -115,13 +115,13 @@ li.important:nth-child(-n + 3) {
   <code>&lt;span&gt;</code>。
 </p>
 <div class="second">
-  <span>Span！</span>
+  <span>Span!</span>
   <span>Span</span>
   <em>这是一个 `em`。</em>
   <span>Span</span>
-  <span>Span！</span>
+  <span>Span!</span>
   <span>Span</span>
-  <span>Span！</span>
+  <span>Span!</span>
   <span>Span</span>
 </div>
 
@@ -137,14 +137,14 @@ li.important:nth-child(-n + 3) {
   <code>&lt;em&gt;</code> 被完全跳过和忽略。
 </p>
 <div class="third">
-  <span>Span！</span>
+  <span>Span!</span>
   <span>Span</span>
   <em>这是一个 `em`。</em>
-  <span>Span！</span>
+  <span>Span!</span>
   <span>Span</span>
-  <span>Span！</span>
+  <span>Span!</span>
   <span>Span</span>
-  <span>Span！</span>
+  <span>Span!</span>
 </div>
 ```
 
