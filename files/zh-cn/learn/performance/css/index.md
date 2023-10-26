@@ -117,7 +117,7 @@ slug: Learn/Performance/CSS
 
   使用 `preload`，浏览器会尽快获取引用的资源，并将其存储在浏览器缓存中，以便在后续代码中引用时可以更快地使用它们。为了让用户体验尽可能流畅，我们应提前加载页面加载初期用户会遇到的高优先级资源。请注意，你还可以使用 `media` 属性创建响应式的预加载器。
 
-  另请参阅[预加载重要资源以提升加载速度](https://web.dev/preload-critical-assets/)这篇 web.dev 上的文章（2020）。
+  另请参阅[预加载重要资源以提升加载速度](https://web.dev/articles/preload-critical-assets)这篇 web.dev 上的文章（2020）。
 
 ## 处理动画
 
@@ -227,7 +227,7 @@ h3 {
 
 你还可以考虑以下几点：
 
-- 使用 [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect) 与字体提供方建立早期连接。有关详细信息，请参阅[预连接到关键的第三方源](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins)。
+- 使用 [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect) 与字体提供方建立早期连接。有关详细信息，请参阅[预连接到关键的第三方源](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins)。
 - 使用 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 通过 JavaScript 自定义字体加载行为。
 
 ### 只加载所需的字形
@@ -286,5 +286,5 @@ article {
 ## 参见
 
 - [CSS 动画性能](/zh-CN/docs/Web/Performance/CSS_JavaScript_animation_performance)
-- [字体最佳实践](https://web.dev/font-best-practices/)（来自 web.dev，2022）
-- [content-visibility：提升渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（来自 web.dev，2022）
+- [字体最佳实践](https://web.dev/articles/font-best-practices)（来自 web.dev，2022）
+- [content-visibility：提升渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（来自 web.dev，2022）
