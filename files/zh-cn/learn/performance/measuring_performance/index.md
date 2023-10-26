@@ -81,7 +81,7 @@ slug: Learn/Performance/Measuring_performance
 
 ![导航计时 API 可处理的各种处理器（包括 Navigation Timing API 度量）：unload 提示、redirect、unload、应用缓存、DNS、TCP、请求、相应、处理、onLoad，以及 navigationStart、redirectStart、redirectEnd、fetchStart、domainLookupEnd、domainLookupStart、connectStart（secureConnectionStart）、connectEnd、requestStart、responseStart、responseEnd、unloadStart、unloadEnd、domLoading、domInteractive、domContentLoaded、domComplete、loadEventStart、loadEventEnd](navigationtimingapi.jpg)
 
-[性能 API](/zh-CN/docs/Web/API/Performance_API/Performance_API)，它为当前页面提供了访问性能相关信息的能力，包括[性能时间轴 API](/zh-CN/docs/Web/API/Performance_Timeline)、[导航计时 API](/zh-CN/docs/Web/API/Navigation_timing)、[用户计时 API](/zh-CN/docs/Web/API/User_timing) 和[资源计时 API](/zh-CN/docs/Web/API/Resource_timing)。这些接口允许准确测量 JavaScript 任务完成所需的时间。
+[性能 API](/zh-CN/docs/Web/API/Performance_API/Performance_API)，它为当前页面提供了访问性能相关信息的能力，包括[性能时间轴 API](/zh-CN/docs/Web/API/Performance_Timeline)、[导航计时 API](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)、[用户计时 API](/zh-CN/docs/Web/API/Performance_API/User_timing) 和[资源计时 API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)。这些接口允许准确测量 JavaScript 任务完成所需的时间。
 
 [PerformanceEntry](/zh-CN/docs/Web/API/PerformanceEntry) 对象是*性能时间轴*的一部分。*性能条目*可以通过在应用程序的显式点创建性能 _{{domxref("PerformanceMark","mark")}}_ 或 _{{domxref("PerformanceMeasure","measure")}}_（例如，通过调用 {{domxref("Performance.mark","mark()")}} 方法直接创建）。性能条目还可以通过间接方式创建，例如加载图像等资源。
 
