@@ -1,8 +1,7 @@
 ---
 title: 국제화 (internationalization, I18N)
-slug: Glossary/I18N
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+slug: Glossary/Internationalization
+original_slug: Glossary/I18N
 ---
 
 {{GlossarySidebar}}

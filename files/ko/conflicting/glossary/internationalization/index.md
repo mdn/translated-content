@@ -1,8 +1,7 @@
 ---
 title: 국제화 (Internationalization)
-slug: Glossary/Internationalization_and_localization
-l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+slug: conflicting/Glossary/Internationalization
+original_slug: Glossary/Internationalization_and_localization
 ---
 
 {{GlossarySidebar}}
