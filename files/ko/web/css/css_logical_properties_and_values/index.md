@@ -7,23 +7,13 @@ spec-urls: https://drafts.csswg.org/css-logical/
 
 {{CSSRef}}
 
-<!-- The **CSS logical properties and values** module introduces logical properties and values that provide the ability to control layout through logical, rather than physical, direction and dimension mappings. -->
-
 **CSS 논리속성과 값 모듈**은 방향 혹은 차원 매핑와 같은 물리적인 속성이 아닌, 논리적 속성과 값들을 통해서 레이아웃을 변경할 방법을 제공합니다.
-
-<!-- The module also defines logical properties and values for properties previously defined in CSS 2.1. Logical properties define direction‐relative equivalents of their corresponding physical properties. -->
 
 이 모듈은 CSS 2.1. Logical properties define direction‐relative equivalents of their corresponding physical properties에서 정의된 논리 속성과 값들을 재정의합니다.
 
 ### 블록(Block) vs. 인라인(inline)
 
-<!-- Logical properties and values use the abstract terms _block_ and _inline_ to describe the direction in which they flow. The physical meaning of these terms depends on the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes). -->
-
 논리적 속성과 값은 블록(block) 과 인라인(inline)의 추상적인 개념을 사용해서 콘텐츠의 흐름을 설명합니다. 이 개념들의 물리적인 의미는 [writing mode](/ko/docs/Web/CSS/CSS_writing_modes)에 의거합니다.
-
-<!-- The dimension perpendicular to the flow of text within a line, i.e., the vertical dimension in horizontal writing modes, and the horizontal dimension in vertical writing modes. For standard English text, it is the vertical dimension. -->
-
-<!-- The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension. -->
 
 - 블록 차원(Block dimension)
 
@@ -34,15 +24,9 @@ spec-urls: https://drafts.csswg.org/css-logical/
 
 ### 새로운 속성과 값들
 
-<!-- CSS was initially designed with only physical coordinates in its controls. The module defines new flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [properties](/en-US/docs/Glossary/Property/CSS). -->
-
 CSS은 초기에 물리적인 좌표과 활용을 고려해서 설계되었습니다. 이 모듈은 많은 [values](/ko/docs/Web/CSS/CSS_Values_and_Units)들과 [properties](/ko/docs/Glossary/Property/CSS)에 새로운 플로우-상대적인 속성들을 제공합니다.
 
-<!-- Some physical properties now have logical equivalents. Properties that accept physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`). -->
-
 일부 물리적 속성들은 논리 속성으로 표현될 수 있습니다. (`top`, `bottom`, `left`, `right`)의 물리적 값이 적용되는 속성들에 (`block-start`, `block-end`, `inline-start`, `inline-end`)와 같은 플로우-상대적인 값들을 적용할 수 있습니다.
-
-<!-- The transition to logical axes is ongoing and not fully defined by the module; some properties don't yet have logical equivalents. -->
 
 논리 속성으로 표현하는 방식의 전환은 아직 진행되고 있으며 모듈을 통해 완전히 정의되지 않습니다. 모든 속성들은 논리 속성으로 표현하기에는 어려움이 있습니다.
 
