@@ -17,23 +17,23 @@ l10n:
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-> **备注：** 你还可以使用[基于连接的方法来传递消息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)
+> **备注：** 你还可以使用[基于连接的方法来传递消息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。
 
 ## 语法
 
-```js
+```js-nolint
 let sending = browser.runtime.sendMessage(
-  extensionId, // 可选字符串
-  message, // 任何值
-  options, // 可选对象
-);
+  extensionId,             // 可选字符串
+  message,                 // 任何值
+  options,                 // 可选对象
+)
 ```
 
 ### 参数
 
 - `extensionId` {{optional_inline}}
 
-  - : `string`。要将消息发送到的插件的 ID。包含该参数可将消息发送到其他插件。如果接收方使用 manifest.json 中的 [browser_specific_settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键显式设置了 ID，则 `extensionId` 应该具有该值。否则，它应该具有为接收方生成的 ID。
+  - : `string`。要将消息发送到的扩展的 ID。包含该参数可将消息发送到其他扩展。如果接收方使用 manifest.json 中的 [browser_specific_settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键显式设置了 ID，则 `extensionId` 应该设为该值。否则，它应该是为接收方生成的 ID。
 
     如果省略了 `extensionId`，则消息会被发送到你自己的扩展。
 
@@ -45,8 +45,7 @@ let sending = browser.runtime.sendMessage(
 
     - `includeTlsChannelId` {{optional_inline}}
 
-      - : `boolean`。Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
-        是否将 TLS 通道 ID 传递给正在监听连接事件的进程的 {{WebExtAPIRef('runtime.onMessageExternal')}}。
+      - : `boolean`。是否将 TLS 通道 ID 传递给正在监听连接事件的进程的 {{WebExtAPIRef('runtime.onMessageExternal')}}。
 
         只有基于 Chromium 的浏览器支持此选项。
 
@@ -55,15 +54,15 @@ let sending = browser.runtime.sendMessage(
 - **只有 1 个参数**：为要发送的消息，且该消息会在内部传递。
 - **有 2 个参数**：
 
-  - 若第二个参数符合下面的规则，将会被解释为 `(message, options)`，且消息会在内部传递：
+  - 若第二个参数符合下面的规则，则参数将会被解释为 `(message, options)`，且消息会在内部传递：
 
     1. 一个有效的 `options` 对象（也就是说，它是一个仅包含浏览器支持的 `options` 属性的对象）
     2. null
     3. undefined
 
-  - 否则，将会被解释为 `(extensionId, message)`。消息将会给发送给标识为 `extensionId` 的扩展。
+  - 否则，参数将会被解释为 `(extensionId, message)`。消息将会发送给由 `extensionId` 标识的扩展。
 
-- **有 3 个参数**：将会被解释为 `(extensionId, message, options)`。消息将会给发送给标识为 `extensionId` 的扩展。
+- **有 3 个参数**：将会被解释为 `(extensionId, message, options)`。消息将会给发送给由 `extensionId` 标识的扩展。
 
 注意，在 Firefox 55 之前，2 个参数的情况下的规则是不同的。在旧规则下，如果第一个参数是字符串，则将其视为 `extensionId`，第二个参数作为消息。这意味着如果你使用 `("my-message", {})` 这样的参数调用 `sendMessage()`，那么它将向标识为“my-message”的扩展发送空消息。根据新规则，使用这样的参数，将会是在带有一个空的 options 对象的情况下，在内部发送消息“my-message”。
 
