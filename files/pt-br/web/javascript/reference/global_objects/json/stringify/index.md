@@ -175,10 +175,7 @@ console.log(seçãoRestaurada);
 
 ## Especificações
 
-| Especificação                                                | Status             | Comentário                                         |
-| ------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}      | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade em navegadores
 

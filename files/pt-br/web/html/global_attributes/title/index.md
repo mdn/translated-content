@@ -33,12 +33,7 @@ Este exemplo define um título de duas linhas.
 
 ## Especificações
 
-| Specification                                                             | Status                   | Comment                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                           |
-| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}          | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}                                                                                                                                                                 |
-| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}        | {{Spec2('HTML5 W3C')}}   | Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, it is now a true global attribute.                                                                                                                                        |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}        | {{Spec2('HTML4.01')}}    | Supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

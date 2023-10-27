@@ -31,9 +31,7 @@ console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 
 ## Especificações
 
-| Especificação                                                  |
-| -------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

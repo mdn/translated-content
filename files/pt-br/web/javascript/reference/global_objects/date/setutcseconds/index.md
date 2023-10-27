@@ -43,9 +43,7 @@ theBigDay.setUTCSeconds(20);
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcseconds', 'Date.prototype.setUTCSeconds')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

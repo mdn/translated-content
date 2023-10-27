@@ -15,9 +15,7 @@ slug: Glossary/Server
 - 用于文件、域名、邮件、打印机和传真机的局域网服务器。
 - 数据中心的小型机、大型机和超算。
 
-## 了解更多
-
-### 常识
+## 参见
 
 - [服务器介绍](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
 - 维基百科上的 [服务器](https://zh.wikipedia.org/wiki/服务器)

@@ -87,11 +87,7 @@ Object.preventExtensions(1);
 
 ## Especificações
 
-| Specification                                                                        | Status               | Comment                                              |
-| ------------------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}                  | {{Spec2('ES5.1')}}   | Definição inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

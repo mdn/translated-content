@@ -100,9 +100,7 @@ Note que no exemplo acima não tem a instrução `await` na instrução do `retu
 
 ## Especificações
 
-| Especificação                                                                | Situação             | Comentário                   |
-| ---------------------------------------------------------------------------- | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

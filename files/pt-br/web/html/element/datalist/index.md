@@ -40,7 +40,7 @@ Esse elemento implementa a interface [`HTMLDataListElement`](/pt-BR/DOM/HTMLData
 
 Esse código HTML é renderizado assim no Firefox 4:
 
-![datalist.png](/@api/deki/files/4982/=datalist.png)
+![datalist.png](datalist.png)
 
 ## Compatibilidade
 

@@ -58,10 +58,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Especificações
 
-| Especificação                         | Situação             | Comentário         |
-| ------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'Yield')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

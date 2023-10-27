@@ -66,10 +66,7 @@ console.log(iterator.next().value); // 20
 
 ## Specifications
 
-| Specification                                                                  | Status               | Comment             |
-| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generatorfunction-objects', 'GeneratorFunction')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

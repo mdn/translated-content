@@ -3,6 +3,8 @@ title: Nom de domaine
 slug: Glossary/Domain_name
 ---
 
+{{GlossarySidebar}}
+
 Un nom de domaine est l'adresse d'un site web sur l'{{Glossary("Internet")}}. Les noms de domaine sont utilisés dans les {{Glossary("URL","URLs")}} pour identifier le serveur qui héberge une page web particulière. Le nom de domaine consiste en séquence hiérarchique de noms (labels) séparés par des points et terminée par une {{glossary("TLD","extension")}}.
 
 ## Pour en savoir plus

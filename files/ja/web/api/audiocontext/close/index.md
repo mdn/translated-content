@@ -1,35 +1,38 @@
 ---
-title: AudioContext.close()
+title: "AudioContext: close() メソッド"
+short-title: close()
 slug: Web/API/AudioContext/close
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}インターフェースの`close()`メソッドは、オーディオコンテキストを閉じて使っていたシステムのオーディオリソースを全て解放します。
+`close()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、音声コンテキストを閉じて使っていたシステムの音声リソースを全て解放します。
 
-閉じたコンテキストは新しいノードを生成できませんが、音声データのデコードやバッファの生成などは可能です。
-
-この関数は、他の参照も同様に解放されない限り、AudioContext が生成したオブジェクトは自動的には解放しません。しかし、これはオーディオリソースを強制的に解放します。よって、オーディオコンテキストの更なる生成と使用はできなくなり、オーディオコンテキストの時間の流れは止まり、音声データの処理は停止します。
-全ての AudioContext-creation-blocking リソースが解放されたとき、返された{{jsxref("Promise")}}が完了します。このメソッドは{{domxref("OfflineAudioContext")}}で呼ばれたとき`INVALID_STATE_ERR`例外が発生します。
+この関数は、他の参照も同様に解放されない限り、 `AudioContext` が生成したオブジェクトは自動的には解放しません。しかし、これは音声リソースを強制的に解放します。よって、音声コンテキストの更なる生成と使用はできなくなり、音声コンテキストの時間の流れは止まり、音声データの処理は停止します。 `AudioContext` の生成をブロックするリソースがすべて解放されたとき、返された {{jsxref("Promise")}} が解決します。このメソッドは {{domxref("OfflineAudioContext")}} で呼ばれたとき `INVALID_STATE_ERR` 例外が発生します。
 
 ## 構文
 
-```js
-var audioCtx = new AudioContext();
-audioCtx.close().then(function() { ... });
+```js-nolint
+close()
 ```
 
-### 戻り値
+### 引数
 
-void で完了する{{jsxref("Promise")}}。
+なし。
+
+### 返値
+
+{{jsxref('undefined')}} で解決する {{jsxref("Promise")}} です。
 
 ## 例
 
-次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。stop ボタンをクリックすると、`close()`が呼ばれます。プロミスに成功すると、リセットされ最初の状態に戻ります。
+次のスニペットは [AudioContext states デモ](https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html)（[すぐ実行](https://mdn.github.io/webaudio-examples/audiocontext-states/)）から取ったものです。stop ボタンをクリックすると、 `close()` が呼び出されます。プロミスに成功すると、リセットされ最初の状態に戻ります。
 
 ```js
-stopBtn.onclick = function () {
-  audioCtx.close().then(function () {
+stopBtn.onclick = () => {
+  audioCtx.close().then(() => {
     startBtn.removeAttribute("disabled");
     susresBtn.setAttribute("disabled", "disabled");
     stopBtn.setAttribute("disabled", "disabled");
@@ -37,15 +40,15 @@ stopBtn.onclick = function () {
 };
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.AudioContext.close")}}
+{{Compat}}
 
-## 参考
+## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)

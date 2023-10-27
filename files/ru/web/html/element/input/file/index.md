@@ -339,10 +339,7 @@ The example looks like this; have a play:
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

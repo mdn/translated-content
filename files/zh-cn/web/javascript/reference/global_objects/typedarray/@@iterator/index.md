@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 
 @@iterator 的初始值是和 {{jsxref("TypedArray.prototype.values()", "values")}} 属性的初始值相同的对象。
 
+{{EmbedInteractiveExample("pages/js/typedarray-prototype-@@iterator.html")}}
+
 ## 语法
 
 ```plain

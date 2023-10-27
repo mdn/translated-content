@@ -147,11 +147,7 @@ myNamespace.round(1234.5678, -1); // 1230
 
 ## Especificações
 
-| Especificação                                         | Status             | Comentário         |
-| ----------------------------------------------------- | ------------------ | ------------------ |
-| ECMAScript 1ª Edição. Implementado em JavaScript 1.0. | Padrão             | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}} | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}  | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

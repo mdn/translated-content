@@ -9,7 +9,7 @@ slug: Learn/JavaScript/Client-side_web_APIs
 
 ## 선행사항
 
-다음의 문서를 미리 보고 오시는것을 권장합니다. ([First steps](/ko/docs/Learn/JavaScript/First_steps), [Building blocks](/ko/docs/Learn/JavaScript/Building_blocks), and [JavaScript objects](/ko/docs/Learn/JavaScript/Objects)). 이 모듈은 클라이언트 측 JavaScript 예제를 사용하지 않고 유용하게 사용할 수 있기 때문에 간단한 API 사용법을 상당히 많이 사용합니다. 여기에서는 핵심 자바 스크립트 언어에 대한 지식이 있다고 가정하고 일반적인 웹 API를 좀 더 자세하게 살펴보면서 한 단계 올라갑니다. 이번장에서는 심플한 API사용방법을 여럿 보도록 하겠습니다. 이 API들은 client-side 자바스크립트를 만드는데 도움이 많이 될 것입니다.
+다음의 문서를 미리 보고 오시는것을 권장합니다. ([First steps](/ko/docs/Learn/JavaScript/First_steps), [Building blocks](/ko/docs/Learn/JavaScript/Building_blocks), and [JavaScript objects](/ko/docs/Learn/JavaScript/Objects)). 이 모듈은 클라이언트 측 JavaScript 예제를 사용하지 않고 유용하게 사용할 수 있기 때문에 간단한 API 사용법을 상당히 많이 사용합니다. 여기에서는 핵심 자바 스크립트 언어에 대한 지식이 있다고 가정하고 일반적인 웹 API를 좀 더 자세하게 살펴보면서 한 단계 올라갑니다. 이번장에서는 심플한 API사용방법을 여럿 보도록 하겠습니다. 이 API들은 client-side JavaScript를 만드는데 도움이 많이 될 것입니다.
 
 [HTM](/ko/docs/Learn/HTML)과[CSS](/ko/docs/Learn/CSS)에 관한 기본지식이 있으면 좋습니다!
 

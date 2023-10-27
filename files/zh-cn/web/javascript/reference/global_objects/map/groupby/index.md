@@ -3,7 +3,7 @@ title: Map.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 > **备注：** 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.groupToMap()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
 
@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 
 该方法主要用于对与对象相关的元素进行分组，特别是当该对象可能随时间而变化时。如果对象不变，你可以使用字符串表示它，并使用 {{jsxref("Object.groupBy()")}} 分组元素。
 
-<!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
+{{EmbedInteractiveExample("pages/js/map-groupby.html", "shorter")}}
 
 ## 语法
 
