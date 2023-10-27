@@ -12,7 +12,7 @@ l10n:
 
 Dans la section précédente, nous avons écrit le code HTML et CSS de CycleTracker, et ainsi obtenu une version statique de notre application web. Dans cette section, nous écrirons le code JavaScript qui permettra de convertir le HTML statique en une application web fonctionnelle.
 
-Si ce n'est pas déjà fait, téléchargez [le fichier HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) et [le fichier CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css), et enregistrez les sur votre ordinateur avec les noms `index.html` et `styles.css`, respectivement.
+Si ce n'est pas déjà fait, téléchargez [le fichier HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) et [le fichier CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css), et enregistrez-les sur votre ordinateur avec les noms `index.html` et `styles.css`, respectivement.
 
 La dernière ligne du fichier HTML appelle le fichier JavaScript `app.js`. C'est le script que nous allons créer dans ce chapitre. Dans cette leçon, nous allons écrire le code JavaScript exécuté par le navigateur, qui est responsable de la capture des données saisies dans le formulaire, de l'enregistrement local des données et de la complétion de la zone indiquant les cycles précédents.
 
@@ -23,7 +23,7 @@ La dernière ligne du fichier HTML appelle le fichier JavaScript `app.js`. C'est
 Lorsqu'une personne visite la page, nous vérifions s'il existe déjà des données dans le stockage local. À la première visite, il n'y aura pas de données. Lorsqu'une personne sélectionne deux dates et soumet le formulaire pour la première fois, il faut&nbsp;:
 
 1. Créer un titre "`<h2>Cycles antérieurs</h2>`"
-2. Créer une liste non-ordonnée avec un élement [`<ul>`](/fr/docs/Web/HTML/Element/ul)
+2. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
 3. Remplir l'élément `<ul>` avec un seul élément [`<li>`](/fr/docs/Web/HTML/Element/li) qui contient les informations du cycle en question
 4. Sauvegarder les données dans le stockage local
 
@@ -38,10 +38,10 @@ Les personnes ayant déjà utilisé l'application auront des données existantes
 
 1. Récupérer les données enregistrées dans le stockage local
 2. Créer un titre a "`<h2>Cycles antérieurs</h2>`"
-3. Créer une liste non-ordonnée avec un élement [`<ul>`](/fr/docs/Web/HTML/Element/ul)
+3. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
 4. Remplir l'élément `<ul>` avec un élément [`<li>`](/fr/docs/Web/HTML/Element/li) pour chaque cycle menstruel enregistré dans le stockage local.
 
-Cette application a uniquement pour objectif d'enseigner les fondamentaux pour convertir une application web en PWA. Aussi, elle ne contient pas les fonctionnalités nécessaires à une application réelle comme la validation du formulaire, la vérification des erreurs ou encore les fonctionnalités pour éditer ou supprimer un enregistrement. N'hésitez pas à ajouter ces fonctionnalités et à adapter les exemples données pour créer l'application qui correspond à vos objectifs d'apprentissage et à vos besoins.
+Cette application a uniquement pour objectif d'enseigner les fondamentaux pour convertir une application web en PWA. Aussi, elle ne contient pas les fonctionnalités nécessaires à une application réelle comme la validation du formulaire, la vérification des erreurs ou encore les fonctionnalités pour éditer ou supprimer un enregistrement. N'hésitez pas à ajouter ces fonctionnalités et à adapter les exemples donnés pour créer l'application qui correspond à vos objectifs d'apprentissage et à vos besoins.
 
 ## Envoi du formulaire
 
@@ -51,273 +51,299 @@ Le formulaire n'a pas de méthode ou d'action déclarée dans le HTML. À la pla
 
 ```js
 // On crée des constantes pour le formulaire et les contrôles associés
-const newPeriodFormEl = document.getElementsByTagName("form")[0];
-const startDateInputEl = document.getElementById("start-date");
-const endDateInputEl = document.getElementById("end-date");
+const elemFormNouveauCycle = document.getElementsByTagName("form")[0];
+const elemChampDateDebut = document.getElementById("start-date");
+const elemChampDateFin = document.getElementById("end-date");
 
-// Listen to form submissions.
-newPeriodFormEl.addEventListener("submit", (event) => {
-  // Prevent the form from submitting to the server
-  // since everything is client-side.
+// On écoute l'évènement pour l'envoi du formulaire.
+elemFormNouveauCycle.addEventListener("submit", (event) => {
+  // On empêche le formulaire d'être envoyé au serveur
+  // car tout se fait côté client.
   event.preventDefault();
 
-  // Get the start and end dates from the form.
-  const startDate = startDateInputEl.value;
-  const endDate = endDateInputEl.value;
+  // On récupère les dates de début et de fin
+  // à partir du formulaire.
+  const dateDebut = elemChampDateDebut.value;
+  const dateFin = elemChampDateFin.value;
 
-  // Check if the dates are invalid
-  if (checkDatesInvalid(startDate, endDate)) {
-    // If the dates are invalid, exit.
+  // On vérifie si les dates sont invalides
+  if (verifierDatesInvalides(dateDebut, dateFin)) {
+    // Si c'est le cas, on s'arrête là.
     return;
   }
 
-  // Store the new period in our client-side storage.
-  storeNewPeriod(startDate, endDate);
+  // On enregistre le nouveau cycle dans l'espace de stockage
+  // côté client
+  enregistrerNouveauCycle(dateDebut, dateFin);
 
-  // Refresh the UI.
-  renderPastPeriods();
+  // On rafraîchit l'interface.
+  afficherCyclesAnterieurs();
 
-  // Reset the form.
-  newPeriodFormEl.reset();
+  // On réinitialise le formulaire.
+  elemFormNouveauCycle.reset();
 });
 ```
 
-After preventing the form submission with [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault), we:
+Après avoir empêché l'envoi du formulaire au serveur grâce à [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault), on&nbsp;:
 
-1. [Validate user input](#validate_user_input); exiting if invalid,
-2. store the new period by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve_append_sort_and_re-store_data) data in localStorage,
-3. [render the form data](#render_data_to_screen) along with the data of past menstrual cycles and a section header, and
-4. reset the form using the HTMLFormElement [`reset()`](/fr/docs/Web/API/HTMLFormElement/reset) method
+1. [Valide les données saisies](#validation_des_données_saisies) et on quitte la fonction si elles sont invalides,
+2. Enregistre le nouveau cycle en [récupérant, analysant, ajoutant, triant, transformant en texte, puis en triant à nouveau](#récupérer_ajouter_trier_et_réengistrer_les_données) les données dans le stockage local,
+3. [Affiche les données du formulaire](#afficher_les_données_à_lécran) ainsi que celles des cycles menstruels passés avec un titre de section,
+4. Réinitialise le formulaire grâce à la méthode [`HTMLFormElement.reset()`](/fr/docs/Web/API/HTMLFormElement/reset).
 
-### Validate user input
+### Validation des données saisies
 
-We check if the dates are invalid. We do minimal error checking. We make sure neither date is null, which the `required` attribute should prevent from happening. We also check that the start date is not greater than the end date. If there is an error, we clear the form.
+On vérifie si les dates sont invalides de façon minimale. On s'assure qu'aucune date ne vaut `null` (ce qui ne devrait pas avoir lieu grâce à l'attribut HTML `required`). On vérifie aussi si la date de début n'est pas postérieure à la date de fin. S'il y a une erreur, on réinitialise le formulaire.
 
 ```js
-function checkDatesInvalid(startDate, endDate) {
-  // Check that end date is after start date and neither is null.
-  if (!startDate || !endDate || startDate > endDate) {
-    // To make the validation robust we could:
-    // 1. add error messaging based on error type
-    // 2. Alert assistive technology users about the error
-    // 3. move focus to the error location
-    // instead, for now, we clear the dates if either
-    // or both are invalid
-    newPeriodFormEl.reset();
-    // as dates are invalid, we return true
+function verifierDatesInvalides(dateDebut, dateFin) {
+  // On vérifie que la date de fin arrive après la date de début
+  // et qu'aucune n'est nulle.
+  if (!dateDebut || !dateFin || dateDebut > dateFin) {
+    // Pour améliorer la validation, on pourrait :
+    // 1. Ajouter un message d'erreur pour chaque type d'erreur
+    // 2. Transmettre ces erreurs aux outils d'assistance
+    // 3. Déplacer le focus à l'emplacement de l'erreur
+    // Pour notre exemple actuel, on réinitialise simplement
+    // le formulaire si au moins une des dates est invalide
+    elemFormNouveauCycle.reset();
+    // Si les dates sont invalides, on renvoie true
     return true;
   }
-  // else
+  // Sinon
   return false;
 }
 ```
 
-In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to alert assistive technology users to the error.
+Dans une version plus robuste de cette application, il faudrait aussi inclure des messages d'erreur explicatifs pour indiquer où l'erreur se situe. Une application correcte indiquerait l'erreur, puis placerait le focus sur le contrôle de formulaire concerné, tout en utilisant [les régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) pour communiquer ces informations aux outils d'assistance.
 
-## Local storage
+## Stockage local
 
-We are using the [Web Storage API](/fr/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/fr/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
+On utilise [l'API <i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API), et plus précisément [`window.localStorage`](/fr/docs/Web/API/Window/localStorage) pour enregistrer les paires de dates de début et de fin dans un objet JSON en chaîne de caractères dans l'espace de stockage local.
 
-[LocalStorage](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. We're using localStorage to make this simple and client-side only. This means the data will only be stored on one browser on a single device. Clearing the browser data will also lose all locally stored periods. What may seem like a limitation for many applications may be an asset in the case of this application, as menstrual cycle data is personal, and the user of such an app may very rightly be concerned about privacy.
+[Le stockage local (<i lang="en">local storage</i>)](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#stocker_des_données_simples_—_web_storage) a quelques limitations, mais il suffira aux besoins de notre application. Nous utilisons ici le stockage local pour avoir une application et qui fonctionne uniquement côté client. Cela signifie que les données seront uniquement stockées dans un navigateur d'un appareil donné. Toute suppression des données du navigateur entraînera la perte des cycles enregistrés localement. On peut voir ce point comme une limitation ou comme un avantage pour ce cas précis&nbsp;: les données des cycles menstruels sont personnelles et on pourra se soucier de la vie privée et de la diffusion de ces données sur d'autres appareils ou navigateurs.
 
-For a more robust application, other [client side storage](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
+Pour une application plus robuste, on pourra employer d'autres outils [de stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) comme [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) et les <i lang="en">service workers</i> (que nous verrons plus tard) qui ont de meilleures performances.
 
-Limitations of `localStorage` include:
+Parmi les limites de `localStorage`, il y a&nbsp;:
 
-- Limited data storage: `localStorage` is limited to 5MB of data per origin. Our storage needs are much less than that.
-- Stores strings only: `localStorage` stores data as string key and string value pairs. Our start and end dates will be stored as a JSON object parsed as a string. For more complex data, a more robust storage mechanism like IDB would be required.
-- Can cause poor performance: Getting and setting from and to local storage is done synchronously on the main thread. When the main thread is occupied, apps are not responsive and appear frozen. With the limited nature of this app, this blip of bad user experience is negligible.
-- Only available to the main thread: In addition to the performance issues of occupying the main thread, service workers do not have access to the main thread, meaning the service worker can't directly set or get the local storage data.
+- Un stockage limité des données
+  - : `localStorage` est limité à 5Mo de données par origine. Dans notre cas, c'est largement suffisant.
+- Seules des chaînes de caractères peuvent y être stockées
+  - : `localStorage` enregistre des données avec une clé qui est une chaîne de caractères et une valeur correspondante qui est aussi une chaîne de caractères. Nos dates de début et de fin seront enregistrées sous la forme d'un objet JSON passé en chaîne de caractères. Pour des données plus complexes, un mécanisme de stockage plus robuste comme IndexedDB sera plus utile.
+- Un impact sur les performances
+  - : Récupérer ou écrire des données dans le stockage local se fait de façon synchrone et sur le fil d'exécution principal. Lorsque le fil d'exécution principal est occupé, les applications ne répondent pas et apparaissent comme figées. Étant donné la nature élémentaire de cette application, on néglige cet impact.
+- La disponibilité restreinte au fil d'exécution principal
+  - : En complément des problèmes de performance liés à l'exécution sur le <i lang="en">thread</i> principal, les <i lang="en">service workers</i> n'ont pas accès à ce contexte. Autrement dit, un <i lang="en">service worker</i> ne peut pas récupérer ou écrire directement des données dans le stockage local.
 
-#### Retrieve, append, sort, and re-store data
+### Récupérer, ajouter, trier, et réengistrer les données
 
-Because we're using localStorage, which comprises of a single string, we retrieve the JSON string of data from local storage, parse the JSON data (if any), push the new pair of dates to the existing array, sort the dates, parse the JSON object back into a string, and save that string back to `localStorage`.
+En utilisant le stockage local avec une seule chaîne de caractères, on&nbsp;:
 
-This process requires the creation of a few functions:
+1. Récupère les données stockées en JSON
+2. Analyse ces éventuelles données
+3. Ajoute la nouvelle paire de dates au tableau existant
+4. Trie les dates
+5. Convertit de nouveau l'objet en chaîne de caractères
+6. Enregistre cette chaîne de caractères dans `localStorage`.
+
+Pour cela, on crée quelques fonctions&nbsp;:
 
 ```js
-// Add the storage key as an app-wide constant
-const STORAGE_KEY = "period-tracker";
+// On ajoute une clé de stockage comme une constante
+// globale de l'application
+const CLE_STOCKAGE = "period-tracker";
 
-function storeNewPeriod(startDate, endDate) {
-  // Get data from storage.
-  const periods = getAllStoredPeriods();
+function enregistrerNouveauCycle(dateDebut, dateFin) {
+  // On récupère les données du stockage
+  const cycles = recupererCyclesEnregistres();
 
-  // Add the new period objet to the end of the array of period objects.
-  periods.push({ startDate, endDate });
+  // On ajoute à la fin du tableau un objet correspondant
+  // au nouveau cycle.
+  cycles.push({ dateDebut, dateFin });
 
-  // Sort the array so that periods are ordered by start date, from newest
-  // to oldest.
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
+  // On trie le tableau afin que les cycles soient triés
+  // par date de début, du plus récent jusqu'au plus
+  // ancien.
+  cycles.sort((a, b) => {
+    return new Date(b.dateDebut) - new Date(a.dateDebut);
   });
 
-  // Store the updated array back in the storage.
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
+  // On enregistre le tableau mis à jour dans le stockage.
+  window.localStorage.setItem(CLE_STOCKAGE, JSON.stringify(cycles));
 }
 
-function getAllStoredPeriods() {
-  // Get the string of period data from localStorage
-  const data = window.localStorage.getItem(STORAGE_KEY);
+function recupererCyclesEnregistres() {
+  // On récupère la chaîne de caractères qui représente
+  // les données des cycles depuis localStorage
+  const donnees = window.localStorage.getItem(CLE_STOCKAGE);
 
-  // If no periods were stored, default to an empty array
-  // otherwise, return the stored data as parsed JSON
-  const periods = data ? JSON.parse(data) : [];
+  // Si aucun cycle n'était enregistré, on prend un
+  // tableau vide par défaut. Sinon, on renvoie les données
+  // enregistrées après une extraction du format JSON
+  const cycles = donnees ? JSON.parse(donnees) : [];
 
-  return periods;
+  return cycles;
 }
 ```
 
-### Render data to screen
+## Afficher les données à l'écran
 
-The last step of our application is to render the list of past periods to the screen along with a heading.
+La dernière étape de notre application consiste à afficher la liste des cycles antérieurs à l'écran avec un titre.
 
-In our HTML, we added a `<section id="past-periods">` placeholder to contain the heading and list of past periods.
+Dans notre document HTML, on a ajouté un emplacement `<section id="past-periods">` qui servira à contenir ce titre et la liste des cycles antérieurs.
 
-Add the container element to the list of contents at the top of your script.
+Ajoutons cet élément conteneur en haut du script.
 
 ```js
-const pastPeriodContainer = document.getElementById("past-periods");
+const conteneurCyclesAnterieurs = document.getElementById("past-periods");
 ```
 
-We retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create a header and an unordered list. We loop through the past periods, adding list items containing formatted from and to dates.
+On récupère la chaîne de caractères convertie des cycles passés ou un tableau vide. Si le tableau est vide, on sort de la fonction. S'il y a des cycles antérieurs, on réinitialise le contenu du conteneur. On crée ensuite un titre et une liste non-ordonnée, puis on boucle sur les cycles passés et on ajoute un élément de liste pour chacun, avec les dates de début et de fin mises en forme.
 
 ```js
-function renderPastPeriods() {
-  // get the parsed string of periods, or an empty array.
-  const periods = getAllStoredPeriods();
+function afficherCyclesAnterieurs() {
+  // On récupère les données sur les cycles passés
+  // à partir de la chaîne de caractères convertie
+  // ou un tableau vide.
+  const cycles = recupererCyclesEnregistres();
 
-  // exit if there are no periods
-  if (periods.length === 0) {
+  // On sort de la fonction s'il n'y a pas de cycle
+  if (cycles.length === 0) {
     return;
   }
 
-  // Clear the list of past periods, since we're going to re-render it.
-  pastPeriodContainer.innerHTML = "";
+  // On nettoie la liste des cycles antérieurs,
+  // car on va l'afficher complètement à nouveau.
+  conteneurCyclesAnterieurs.innerHTML = "";
 
-  const pastPeriodHeader = document.createElement("h2");
-  pastPeriodHeader.textContent = "Past periods";
+  const titreCyclesAnterieurs = document.createElement("h2");
+  titreCyclesAnterieurs.textContent = "Cycles antérieurs";
 
-  const pastPeriodList = document.createElement("ul");
+  const listeCyclesPasses = document.createElement("ul");
 
-  // Loop over all periods and render them.
-  periods.forEach((period) => {
-    const periodEl = document.createElement("li");
-    periodEl.textContent = `From ${formatDate(
-      period.startDate,
-    )} to ${formatDate(period.endDate)}`;
-    pastPeriodList.appendChild(periodEl);
+  // On parcourt la liste des tous les cycles et on
+  // les affiche.
+  cycles.forEach((period) => {
+    const elementCycle = document.createElement("li");
+    elementCycle.textContent = `Du ${formaterDate(
+      cycle.dateDebut,
+    )} au ${formaterDate(cycle.dateFin)}`;
+    listeCyclesPasses.appendChild(elementCycle);
   });
 
-  pastPeriodContainer.appendChild(pastPeriodHeader);
-  pastPeriodContainer.appendChild(pastPeriodList);
+  conteneurCyclesAnterieurs.appendChild(titreCyclesAnterieurs);
+  conteneurCyclesAnterieurs.appendChild(listeCyclesPasses);
 }
 
-function formatDate(dateString) {
-  // Convert the date string to a Date object.
-  const date = new Date(dateString);
+function formaterDate(chaineDate) {
+  // On convertit la chaîne de caractères
+  // représentant la date en un objet Date.
+  const date = new Date(chaineDate);
 
-  // Format the date into a locale-specific string.
-  // include your locale for better user experience
+  // On formate la date en tenant compte de
+  // la locale pour une meilleure expérience.
   return date.toLocaleDateString("fr", { timeZone: "UTC" });
 }
 ```
 
-## Render past periods on load
+### Afficher les cycles antérieurs au chargement
 
-When the deferred JavaScript runs on page load, we render past periods, if any.
+Lorsque le fichier JavaScript est exécuté après le chargement de la page, on affiche les éventuels cycles antérieurs.
 
 ```js
-// Start the app by rendering the past periods.
-renderPastPeriods();
+// On démarre l'application en affichant les données
+// des cycles antérieurs.
+afficherCyclesAnterieurs();
 ```
 
-## Complete JavaScript
+## Fichier JavaScript complet
 
-Your `app.js` file should look similar to this JavaScript:
+Au final, votre fichier `app.js` devrait ressembler à ce JavaScript&nbsp;:
 
 ```js
-const newPeriodFormEl = document.getElementsByTagName("form")[0];
-const startDateInputEl = document.getElementById("start-date");
-const endDateInputEl = document.getElementById("end-date");
-const pastPeriodContainer = document.getElementById("past-periods");
+const elemFormNouveauCycle = document.getElementsByTagName("form")[0];
+const elemChampDateDebut = document.getElementById("start-date");
+const elemChampDateFin = document.getElementById("end-date");
+const conteneurCyclesAnterieurs = document.getElementById("past-periods");
 
-// Add the storage key as an app-wide constant
-const STORAGE_KEY = "period-tracker";
+// On ajoute une clé de stockage comme une constante
+// globale de l'application
+const CLE_STOCKAGE = "period-tracker";
 
-// Listen to form submissions.
-newPeriodFormEl.addEventListener("submit", (event) => {
+// On écoute l'évènement pour l'envoi du formulaire.
+elemFormNouveauCycle.addEventListener("submit", (event) => {
   event.preventDefault();
-  const startDate = startDateInputEl.value;
-  const endDate = endDateInputEl.value;
-  if (checkDatesInvalid(startDate, endDate)) {
+  const dateDebut = elemChampDateDebut.value;
+  const dateFin = elemChampDateFin.value;
+  if (verifierDatesInvalides(dateDebut, dateFin)) {
     return;
   }
-  storeNewPeriod(startDate, endDate);
-  renderPastPeriods();
-  newPeriodFormEl.reset();
+  enregistrerNouveauCycle(dateDebut, dateFin);
+  afficherCyclesAnterieurs();
+  elemFormNouveauCycle.reset();
 });
 
-function checkDatesInvalid(startDate, endDate) {
-  if (!startDate || !endDate || startDate > endDate) {
-    newPeriodFormEl.reset();
+function verifierDatesInvalides(dateDebut, dateFin) {
+  if (!dateDebut || !dateFin || dateDebut > dateFin) {
+    elemFormNouveauCycle.reset();
     return true;
   }
   return false;
 }
 
-function storeNewPeriod(startDate, endDate) {
-  const periods = getAllStoredPeriods();
-  periods.push({ startDate, endDate });
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
+function enregistrerNouveauCycle(dateDebut, dateFin) {
+  const cycles = recupererCyclesEnregistres();
+  cycles.push({ dateDebut, dateFin });
+  cycles.sort((a, b) => {
+    return new Date(b.dateDebut) - new Date(a.dateDebut);
   });
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
+  window.localStorage.setItem(CLE_STOCKAGE, JSON.stringify(cycles));
 }
 
-function getAllStoredPeriods() {
-  const data = window.localStorage.getItem(STORAGE_KEY);
-  const periods = data ? JSON.parse(data) : [];
-  console.dir(periods);
-  console.log(periods);
-  return periods;
+function recupererCyclesEnregistres() {
+  const data = window.localStorage.getItem(CLE_STOCKAGE);
+  const cycles = data ? JSON.parse(data) : [];
+  console.dir(cycles);
+  console.log(cycles);
+  return cycles;
 }
 
-function renderPastPeriods() {
-  const pastPeriodHeader = document.createElement("h2");
-  const pastPeriodList = document.createElement("ul");
-  const periods = getAllStoredPeriods();
-  if (periods.length === 0) {
+function afficherCyclesAnterieurs() {
+  const titreCyclesAnterieurs = document.createElement("h2");
+  const listeCyclesPasses = document.createElement("ul");
+  const cycles = recupererCyclesEnregistres();
+  if (cycles.length === 0) {
     return;
   }
-  pastPeriodContainer.innerHTML = "";
-  pastPeriodHeader.textContent = "Past periods";
-  periods.forEach((period) => {
-    const periodEl = document.createElement("li");
-    periodEl.textContent = `From ${formatDate(
-      period.startDate,
-    )} to ${formatDate(period.endDate)}`;
-    pastPeriodList.appendChild(periodEl);
+  conteneurCyclesAnterieurs.innerHTML = "";
+  titreCyclesAnterieurs.textContent = "Past cycles";
+  cycles.forEach((cycle) => {
+    const elementCycle = document.createElement("li");
+    elementCycle.textContent = `From ${formaterDate(
+      cycle.dateDebut,
+    )} to ${formaterDate(cycle.dateFin)}`;
+    listeCyclesPasses.appendChild(elementCycle);
   });
 
-  pastPeriodContainer.appendChild(pastPeriodHeader);
-  pastPeriodContainer.appendChild(pastPeriodList);
+  conteneurCyclesAnterieurs.appendChild(titreCyclesAnterieurs);
+  conteneurCyclesAnterieurs.appendChild(listeCyclesPasses);
 }
 
-function formatDate(dateString) {
-  const date = new Date(dateString);
+function formaterDate(chaineDate) {
+  const date = new Date(chaineDate);
   return date.toLocaleDateString("fr", { timeZone: "UTC" });
 }
 
-renderPastPeriods();
+afficherCyclesAnterieurs();
 ```
 
-You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
+Vous pouvez essayer [l'application de suivi menstruel CycleTracker (en anglais)](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) et voir [le code source correspondant (en anglais)](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) sur GitHub. Pour l'instant, l'application est fonctionnelle, mais ce n'est pas encore une PWA.
 
-## Up next
+## Pour la suite
 
-At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert it to a PWA, including the [manifest file](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file), [secure connection](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection), and [service worker](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers).
+Une PWA est essentiellement une application web qui peut être installée et améliorée progressivement pour fonctionner hors-ligne. Maintenant que nous avons une application web fonctionnelle, nous allons ajouter les fonctionnalités nécessaires pour la convertir en PWA&nbsp;: [un manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file), [une connexion sécurisée](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection), et [un <i lang="en">service worker</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers).
 
-Up first, we create the [CycleTracker's manifest file](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file), including the identity, appearance, and iconography for our CycleTracker PWA.
+Pour commencer, nous allons créer [le fichier du manifeste de CycleTracker](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file), qui contiendra l'identité, l'apparence et l'iconographie de notre PWA CycleTracker.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
