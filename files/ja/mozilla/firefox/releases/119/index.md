@@ -51,7 +51,7 @@ l10n:
 
 #### 一般
 
-- 中央または右のマウスボタンを押して `pointerDown` アクションを実行するとき、関連する HTML 要素から発生する `mousedown` イベントの `buttons` プロパティの値が入れ替わってた不具合を修正しました ([Firefox bug 1850086](https://bugzil.la/1850086))。
+- 中央または右のマウスボタンを押して `pointerDown` アクションを実行するとき、関連する HTML 要素から発生する `mousedown` イベントの `buttons` プロパティの値が入れ替わっていた不具合を修正しました ([Firefox bug 1850086](https://bugzil.la/1850086))。
 
 - `pointer` を基準に設定して入力タイプが `wheel` の `scroll` アクションを実行すると、不適切な `invalid argument` エラーが発生していた不具合を修正しました。現在の WebDriver 仕様ではこの組み合わせがサポートされていません ([Firefox bug 1850166](https://bugzil.la/1850166))。
 
@@ -63,7 +63,7 @@ l10n:
 
 - Firefox によって新しいナビゲーションが開始されたときに発生するイベント [`browsingContext.navigationStarted`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-navigationStarted) を追加しました ([Firefox bug 1756595](https://bugzil.la/1756595))。
 
-- 指定したブラウジングコンテキストで JavaScript Realm のライフタイムを監視できるイベント [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) および [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) を追加しました。Realm は基本的に、独自のグローバルオブジェクト (window) を持つ分離された実行環境 (`sandbox`) です ([Firefox bug 1788657](https://bugzil.la/1788657), [Firefox bug 1788659](https://bugzil.la/1788659))。
+- 指定したブラウジングコンテキストで JavaScript Realm のライフタイムを監視できるイベント [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) および [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) を追加しました。Realm は基本的に、独自のグローバルオブジェクト (window) を持つ分離された実行環境 (`sandbox`) です ([Firefox bug 1788657](https://bugzil.la/1788657)、[Firefox bug 1788659](https://bugzil.la/1788659))。
 
 - HTTP 認証のダイアログボックスが表示されたときに、`browsingContext.userPromptOpened` イベントが誤って発生していた不具合を修正しました ([Firefox bug 1853302](https://bugzil.la/1853302))。
 
