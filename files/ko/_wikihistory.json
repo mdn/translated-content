@@ -2171,6 +2171,10 @@
     "modified": "2020-12-04T11:10:43.136Z",
     "contributors": ["chzhclq17"]
   },
+  "Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
+    "modified": "2019-03-18T21:40:09.058Z",
+    "contributors": ["EatChangmyeong"]
+  },
   "Web/API/Canvas_API": {
     "modified": "2020-02-05T06:54:04.340Z",
     "contributors": [
@@ -2225,10 +2229,6 @@
   "Web/API/Canvas_API/Tutorial/Compositing": {
     "modified": "2019-03-23T23:08:47.571Z",
     "contributors": ["EatChangmyeong", "AlwaysOnce"]
-  },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-18T21:40:09.058Z",
-    "contributors": ["EatChangmyeong"]
   },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2019-03-25T03:42:34.299Z",

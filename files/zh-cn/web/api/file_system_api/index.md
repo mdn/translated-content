@@ -220,4 +220,4 @@ onmessage = async (e) => {
 
 ## 参见
 
-- [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)

@@ -684,7 +684,7 @@ BookInstanceSchema.virtual("url").get(function () {
   return "/catalog/bookinstance/" + this._id;
 });
 
-// 导出 BookInstancec 模型
+// 导出 BookInstance 模型
 module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 

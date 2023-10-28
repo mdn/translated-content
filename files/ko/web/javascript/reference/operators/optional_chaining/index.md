@@ -42,7 +42,7 @@ let nestedProp = obj.first && obj.first.second;
 let nestedProp = obj.first?.second;
 ```
 
-`.` 대신에 `?.` 연산자를 사용함으로써, 자바스크립트는 `obj.first.second`에 접근하기 전에 `obj.first`가 `null` 또는 `undefined`가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 `obj.first`가 `null` 또는 `undefined`이라면, 그 표현식은 자동으로 단락되어 `undefined`가 반환된다.
+`.` 대신에 `?.` 연산자를 사용함으로써, JavaScript는 `obj.first.second`에 접근하기 전에 `obj.first`가 `null` 또는 `undefined`가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 `obj.first`가 `null` 또는 `undefined`이라면, 그 표현식은 자동으로 단락되어 `undefined`가 반환된다.
 
 이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일하다.
 

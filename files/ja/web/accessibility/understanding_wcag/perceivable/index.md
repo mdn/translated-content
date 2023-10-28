@@ -82,7 +82,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
         ボタンは簡単です —
         ボタンのテキストがボタンの機能を説明していることを確認してください（例えば、<code>&#x3C;button>画像のアップロード&#x3C;/button></code>）。
         他の UI コントロールの詳細については、<a
-          href="/ja/docs/Learn/Accessibility/HTML#UI_controls"
+          href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
           >UI コントロール</a
         >を参照してください。
       </td>
@@ -219,11 +219,11 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
           <a href="/ja/docs/Learn/Accessibility/HTML"
             >HTML: アクセシビリティの基礎</a
           >全体には、これに関する情報が満載されていますが、特に<a
-            href="/ja/docs/Learn/Accessibility/HTML#Good_semantics"
-            >優れた意味論</a
-          >、<a href="/ja/docs/Learn/Accessibility/HTML#UI_controls"
+            href="/ja/docs/Learn/Accessibility/HTML#良いセマンティクス"
+            >良いセマンティクス</a
+          >、<a href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
             >UI コントロール</a
-          >、<a href="/ja/docs/Learn/Accessibility/HTML#Text_alternatives"
+          >、<a href="/ja/docs/Learn/Accessibility/HTML#代替テキスト"
             >代替テキスト</a
           >を参照するべきです。
         </p>

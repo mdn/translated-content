@@ -6303,10 +6303,6 @@
     "modified": "2019-03-23T22:48:20.415Z",
     "contributors": ["yyss", "micahcarroll"]
   },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-23T22:48:21.822Z",
-    "contributors": ["dskmori"]
-  },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2020-03-20T02:47:38.680Z",
     "contributors": ["hamasaki", "horitaku1124", "yyss", "ethertank"]
