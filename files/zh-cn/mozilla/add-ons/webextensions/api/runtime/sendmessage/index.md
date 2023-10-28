@@ -111,7 +111,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-> **备注：** 对于 Firefox 附加组件，建议使用返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法，而不是使用 `sendResponse()`。
+> **备注：** 对于 Firefox 附加组件，建议使用返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法，而不是使用 `sendResponse()`。使用 Promise 的示例可在 {{WebExtAPIRef('runtime.onMessage')}} 监听器的[“示例”小节](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#示例)中找到。
 
 {{WebExtExamples}}
 
