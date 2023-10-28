@@ -68,7 +68,7 @@ let sending = browser.runtime.sendMessage(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。若接收方发送来响应，Promise 将会兑现为该响应。否则，它将不兑现任何参数。如果连接到扩展时发生了错误，则 Promise 将以一个错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。若接收方发送了响应，Promise 将会兑现为该响应。否则，它将不带任何参数兑现。如果连接到扩展时发生了错误，则 Promise 将以一个错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -104,12 +104,14 @@ window.addEventListener("click", notifyBackgroundPage);
 ```js
 // background-script.js
 function handleMessage(request, sender, sendResponse) {
-  console.log(`A content script sent a message: ${request.greeting}`);
+  console.log(`内容脚本发送了一条消息：${request.greeting}`);
   sendResponse({ response: "来自后台脚本的响应" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
+
+> **备注：** 对于 Firefox 附加组件，建议使用返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法，而不是使用 `sendResponse()`。
 
 {{WebExtExamples}}
 
