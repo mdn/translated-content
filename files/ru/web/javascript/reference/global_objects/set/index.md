@@ -241,14 +241,17 @@ console.log([...new Set(numbers)]);
 ### Связь со строками
 
 ```js
-const text = "Индия";
+// Чувствительность к регистру (будут добавлены "F" и "f")
+const firefoxString1 = "Firefox";
+firefoxString1.length; // 7
+const firefoxSet1 = new Set(firefoxString1); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
+firefoxSet1.size; // 7
 
-const mySet = new Set(text); // Set(5) {'И', 'н', 'д', 'и', 'я'}
-mySet.size; // 5
-
-// чувствительный к регистру и пропускает дубликаты
-new Set("Слово"); // Set(5) { "С", "л", "о", "в", "о"}
-new Set("Слово"); // Set(4) { "С", "л", "о", "в"} // "о" встречается дважды в слове, но в объекте будет только одна
+// Пропуск дубликатов ("f" встречается два раза, но будет добавлена только один раз)
+const firefoxString2 = "firefox";
+firefoxString2.length; // 7
+const firefoxSet2 = new Set(firefoxString2); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+firefoxSet2.size; // 6
 ```
 
 ### Используйте Set для обеспечения уникальности списка значений
