@@ -47,9 +47,7 @@ p {
 
 ## Specifications
 
-| Specification                                                       | Status                  | Comment            |
-| ------------------------------------------------------------------- | ----------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
 ## Browser Compatibility
 

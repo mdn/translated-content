@@ -60,7 +60,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("async")}}
+- `async`
 
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
 
@@ -70,9 +70,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     Veja [Browser compatibility](#browser_compatibility) para notas no suporte do navegador. Veja também [Scripts assíncronos para asm.js](/pt-BR/docs/Games/Techniques/Async_scripts).
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
   - : Elementos `script` passam o mínimo de informação para {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do [CORS](/pt-BR/docs/HTTP_access_control). Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja [CORS settings attributes](/pt-BR/docs/Web/HTML/CORS_settings_attributes) para uma explicação mais detalhada dos argumentos válidos.
-- {{htmlattrdef("defer")}}
+- `defer`
 
   - : Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento {{event("DOMContentLoaded")}}
 
@@ -82,15 +82,15 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     Para conseguir um efeito similar para scripts inseridos dinamicamente use `async=false`. Scripts com o atributo `defer` vão ser executados na ordem em que aparecem no `document`.
 
-- {{htmlattrdef("integrity")}}
+- `integrity`
   - : Contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/pt-BR/docs/Web/Security/Subresource_Integrity).
-- {{htmlattrdef("nomodule")}} {{experimental_inline}}
+- `nomodule` {{experimental_inline}}
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
-- {{htmlattrdef("src")}}
+- `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document. If a `script` element has a `src` attribute specified, it should not have a script embedded inside its tags.
-- {{htmlattrdef("text")}}
+- `text`
   - : Like the `textContent`attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : Indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
@@ -104,9 +104,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ### Atributos obsoletos
 
-- {{htmlattrdef("charset")}} {{Deprecated_inline}}
+- `charset` {{Deprecated_inline}}
   - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". Both it's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
-- {{htmlattrdef("language")}} {{Deprecated_inline}}
+- `language` {{Deprecated_inline}}
   - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## Notas
@@ -127,12 +127,7 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 
 ## Specifications
 
-| Specification                                                                      | Status                             | Comments                      |
-| ---------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2('HTML WHATWG')}}           | Adds the module type          |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}             | {{Spec2('HTML5 W3C')}}             |                               |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}       | {{Spec2('HTML4.01')}}              |                               |
-| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}      | {{Spec2('Subresource Integrity')}} | Adds the integrity attribute. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

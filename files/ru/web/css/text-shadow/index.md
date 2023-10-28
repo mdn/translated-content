@@ -100,10 +100,7 @@ text-shadow: unset;
 
 ## Спецификации
 
-| Specification                                                       | Status                            | Comment                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}}  | {{Spec2('CSS3 Transitions')}}     | Определяет `text-shadow` как анимируемую.                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}} | {{Spec2('CSS3 Text Decoration')}} | Свойство CSS `text-shadow` было [ошибочно определено в CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) и удалено из CSS2 (Level 1). Спецификация The CSS Text Module Level 3 исправила синтаксис. Позже оно было перемещено в [CSS Text Decoration Module Level 3](https://www.w3.org/TR/css-text-decor-3/). |
+{{Specifications}}
 
 {{cssinfo}}
 

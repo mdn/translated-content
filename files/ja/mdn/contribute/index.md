@@ -2,31 +2,32 @@
 title: MDN への協力
 slug: MDN/Contribute
 l10n:
-  sourceCommit: b5b22824e0c66855c55b9e4d275890aa3bec9483
+  sourceCommit: b8f5e2a73b0a410fe5508fc674f1ad463deeffb1
 ---
 
 {{MDNSidebar}}
 
 MDN Web Docs はあなたの協力を必要としています。膨大な数の修正すべき記述ミス、書くべき例、修正すべきバグ、相談相手などあり、その数はこのサイトを使い始める人が増えるにつれて増えています。このページでは、皆さんができることをまとめています。
 
-> **メモ:** 初めて MDN に協力する人は、 [MDN で始めよう](/ja/MDN/Community/Contributing/Getting_started) のガイドで手順を簡単な 4 つのステップで説明しています。都合がいいことに、あなたはすでにステップ 2 の「協力できるものを探す」の段階にいます。
+> **メモ:** 初めて MDN に協力する人は、 [MDN で始めよう](/ja/docs/MDN/Community/Contributing/Getting_started) のガイドで手順を簡単な 4 つのステップで説明しています。都合がいいことに、あなたはすでにステップ 2 の「協力できるものを探す」の段階にいます。
 
 ## 協力するためにできること
 
 MDN に貢献するには、あなたの持つスキルセットや興味に応じて、様々な方法があります。それぞれのタスクには、簡単な説明と、それぞれのタスクにかかるおおよその時間が記載されています。
 
-何をすればよいか分からない人は、いつでも[助けを求めて](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)ください。
+何をすればよいか分からない人は、いつでも[助けを求めて](/ja/docs/MDN/Community/Communication_channels)ください。
 
 ### 主な貢献の種類
 
 この節のリンクは、重要な機能であったり、膨大なバックログを抱えていたりして、コミュニティの支援を最も必要としている特定の協力タスクについて、その方法を説明する詳細なガイドにつながっています。他の方法での協力を検討する前に、これらのタスクへの協力をご検討ください。
 
 <table class="standard-table">
+  <caption>協力のカテゴリー</caption>
   <thead>
     <tr>
       <th scope="col">タスク</th>
       <th scope="col">解説</th>
-      <th scope="col">必要なスキル</th>
+      <th scope="col">必要なスキルセット</th>
     </tr>
   </thead>
   <tbody>
@@ -110,12 +111,6 @@ MDN に貢献するには、あなたの持つスキルセットや興味に応�
 
 ここには、時間の経過とともにタスクを追加していきます。
 
-#### 優先順位
-
-優先度も見ることで、どの作業が最も重要なのかを知ることができます。コンテンツのバグ問題には、重要度を示すために、P0、P1、P2、P3、P4 というラベルを付け始めました。数字が小さいものは、数字が大きいものより高い優先度です。
-
-これらは、 [MDN ドキュメントの優先順位リスト](https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/)に基づいて、通常の MDN バグのトリアージプロセスの中で把握されます。
-
 ### その他の種類の作業
 
 上記の優先事項に興味がわかない場合は、スキルセットごとに分けられた、より一般的な種類のタスクを以下に紹介します。
@@ -133,7 +128,7 @@ MDN に貢献するには、あなたの持つスキルセットや興味に応�
 
 言葉とコードの*両方*に興味があるなら、以下のことに挑戦してみてください。
 
-- [API リファレンスを書いたり更新したりする](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference) (30 分から 2 時間以上)
+- [API リファレンスを書いたり更新したりする](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference) (30 分から 2 時間以上)
 - [なじみのある分野のトピックで新しい記事を書く](https://github.com/mdn/content#adding-a-new-document) (1 時間以上)
 - [リファレンスページのブラウザー互換性データを追加したり更新したりする](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) (30 分から 1 時間)
 

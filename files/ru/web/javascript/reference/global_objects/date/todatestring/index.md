@@ -34,11 +34,7 @@ console.log(d.toDateString()); // напечатает Wed Jul 28 1993
 
 ## Спецификации
 
-| Спецификация                                                                           | Статус             | Комментарии              |
-| -------------------------------------------------------------------------------------- | ------------------ | ------------------------ |
-| ECMAScript 3-е издание.                                                                | Стандарт           | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.9.5.3', 'Date.prototype.toDateString')}}                  | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}} | {{Spec2('ES6')}}   |                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

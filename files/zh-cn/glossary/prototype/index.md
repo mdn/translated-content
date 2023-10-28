@@ -9,8 +9,6 @@ slug: Glossary/Prototype
 
 请参见 [继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - [Software Prototyping](https://zh.wikipedia.org/wiki/Software_Prototyping) 维基百科

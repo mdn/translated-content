@@ -9,7 +9,7 @@ l10n:
 
 Доступное только для чтения свойство **`downloaded`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает количество скачанных байт, изначально `0`.
 
-Когда значение свойства меняется, то у связанного объекта {{domxref("BackgroundFetchRegistration")}} срабатывает событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Когда значение свойства меняется, то у связанного объекта {{domxref("BackgroundFetchRegistration")}} срабатывает событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
 ## Значение
 

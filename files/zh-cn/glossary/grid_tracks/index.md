@@ -58,7 +58,7 @@ slug: Glossary/Grid_Tracks
 
 隐式网格中创建的轨道默认为自动大小，但可以通过 {{cssxref("grid-auto-rows")}} 和 {{cssxref("grid-auto-columns")}} 属性来定义这些轨道的大小。
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

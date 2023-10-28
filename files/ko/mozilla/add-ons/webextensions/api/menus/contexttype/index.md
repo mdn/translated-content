@@ -36,7 +36,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 - selection
   - : 페이지 일부가 선택되었을 때 적용된다.
 - tab
-  - : 탭을 콘텍스트-클릭할 때 적용된다(specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).파이어폭스 63부터, 탭에서 메뉴 항목을 클릭하면 그것이 설사 현재탭이 아니더라도 클릭한 탭에 대해 [activeTab](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 권한이 승인된다.
+  - : 탭을 콘텍스트-클릭할 때 적용된다(specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself). Firefox 63부터, 탭에서 메뉴 항목을 클릭하면 그것이 설사 현재탭이 아니더라도 클릭한 탭에 대해 [activeTab](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 권한이 승인된다.
 - tools_menu
   - : 항목은 브라우저 툴바의 메뉴로 추가된다. 주의해야 할 것은 `menus` 이름공간을 통해 `ContextType`에 접근해야지 `contextMenus` 이름공간으로 하면 안된다.
 - video

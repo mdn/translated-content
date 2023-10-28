@@ -50,9 +50,7 @@ e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). P
 
 ## Especificações
 
-| Especificação                                                      |
-| ------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

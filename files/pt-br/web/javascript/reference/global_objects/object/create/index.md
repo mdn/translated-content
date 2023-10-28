@@ -183,11 +183,7 @@ if (typeof Object.create != "function") {
 
 ## Especificações
 
-| Especificação                                                  | Status               | Comentários                                          |
-| -------------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}        | {{Spec2('ES5.1')}}   | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.create', 'Object.create')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

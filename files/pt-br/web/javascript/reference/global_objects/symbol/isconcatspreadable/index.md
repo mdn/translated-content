@@ -66,9 +66,7 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 
 ## Especificações
 
-| Especificação                                                                          |
-| -------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

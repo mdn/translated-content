@@ -157,11 +157,7 @@ console.log(str.slice(-5, -1)); // retorna "e nó"
 
 ## Especificações
 
-| Specification                                                                | Status             | Comment                                            |
-| ---------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                      | Standard           | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}            | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

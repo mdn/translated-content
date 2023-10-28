@@ -9,7 +9,7 @@ l10n:
 
 Доступное только для чтения свойство **`result`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает строку, которая указывает на то, был фоновый запрос успешным ли неудачным.
 
-Если значение этого свойства поменялось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} наступает событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Если значение этого свойства поменялось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} наступает событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
 ## Значение
 

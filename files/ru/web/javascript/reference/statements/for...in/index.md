@@ -81,12 +81,7 @@ for (var prop in obj) {
 
 ## Спецификации
 
-| Спецификация                                                                   | Статус             | Комментарий             |
-| ------------------------------------------------------------------------------ | ------------------ | ----------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ES6')}}   |                         |
-| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                     | {{Spec2('ES5.1')}} |                         |
-| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                       | {{Spec2('ES3')}}   |                         |
-| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                       | {{Spec2('ES1')}}   | Изначальное определение |
+{{Specifications}}
 
 ## Поддержка браузерами
 

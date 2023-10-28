@@ -3,6 +3,8 @@ title: Agent utilisateur
 slug: Glossary/User_agent
 ---
 
+{{GlossarySidebar}}
+
 Un agent utilisateur est un programme informatique qui représente une personne, par exemple, un {{Glossary("Navigateur","navigateur")}} dans le cadre d'une utilisation sur le {{Glossary("World Wide Web", "Web")}}.
 
 En dehors des navigateurs, un agent utilisateur peut être un aspirateur de sites, un gestionnaire de téléchargements ou toute autre application accédant au Web. Les navigateurs, lorsqu'ils effectuent des requêtes vers un serveur, y intègrent un en-tête {{Glossary("HTTP")}} auto-identifiant `User-Agent` appelé chaîne de caractères user agent (UA). Souvent, cette chaîne identifie le navigateur, son numéro de version ainsi que le système d'exploitation de l'hôte.

@@ -18,7 +18,7 @@ O Elemento HTML \<blockquote> (ou Elemento HTML de citação de bloco) indica qu
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : Uma URL que designa um documento de origem ou mensagem para a informação citada. Este atributo destina-se a apontar para informações explicando o contexto ou a referência para a cotação.
 
 ## Notas

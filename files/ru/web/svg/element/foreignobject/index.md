@@ -89,10 +89,7 @@ svg {
 
 ## Характеристики
 
-| Specification                                                                       | Status              | Comment            |
-| ----------------------------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}}   |                    |
-| {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость браузера
 

@@ -176,7 +176,7 @@ URL을 입력하기 위한 특별한 유형의 필드는 [`type`](/ko/docs/Web/H
 
 슬라이더의 문제점 중 하나는 사용자가 현재 값을 쉽게 볼 수 없다는 것입니다. 이를 해결하기 위해, 우리는 {{HTMLElement("output")}} 요소를 추가하였습니다. 이 요소는 슬라이더의 현재 값을 표시하기 위한 것입니다.
 
-자바스크립트 코드는 슬라이더의 값을 {{HTMLElement("output")}} 요소에 동기화합니다.
+JavaScript 코드는 슬라이더의 값을 {{HTMLElement("output")}} 요소에 동기화합니다.
 
 ```javascript
 const priceInput = document.querySelector("#price");

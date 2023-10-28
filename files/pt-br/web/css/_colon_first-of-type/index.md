@@ -80,10 +80,7 @@ article :first-of-type {
 
 ## Especificações
 
-| Specification                                                             | Status                      | Comment                                                           |
-| ------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Os elementos correspondentes não são necessários para ter um pai. |
-| {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

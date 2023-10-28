@@ -46,9 +46,7 @@ Access-Control-Max-Age: 600
 
 ## Especificações
 
-| Especificação                                                                  | Status             | Comentários         |
-| ------------------------------------------------------------------------------ | ------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-max-age', 'Access-Control-Max-Age')}} | {{Spec2("Fetch")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

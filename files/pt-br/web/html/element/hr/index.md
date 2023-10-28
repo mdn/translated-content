@@ -17,15 +17,15 @@ O **elemento HTML `<hr>`** representa uma quebra temática entre elementos de n�
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `align` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Define a regra de alinhamento na página. Se nenhum valor for especificado, o valor padrão é `left`.
-- {{htmlattrdef("color")}} {{Deprecated_Inline}} {{Non-standard_inline}}
+- `color` {{Deprecated_Inline}} {{Non-standard_inline}}
   - : Denife a regra da cor através do nome da cor ou um valor hexadecimal.
-- {{htmlattrdef("noshade")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `noshade` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Deine a regra para não ter sombreamento.
-- {{htmlattrdef("size")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `size` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Denife a altura, em pixels.
-- {{htmlattrdef("width")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Define a regra de comprimento na página através de um valor em pixel ou porcentagem.
 
 ## Exemplo
@@ -58,12 +58,7 @@ Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, util
 
 ## Especificações
 
-| Especificação                                                                     | Status                   | Comentário                                       |
-| --------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento `hr`                       |
-| {{SpecName('HTML WHATWG', 'rendering.html#the-hr-element-0')}}                    | {{Spec2('HTML WHATWG')}} | Sugestão de renderização padrão do elemento `hr` |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}}   | {{Spec2('HTML5 W3C')}}   |                                                  |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}            | {{Spec2('HTML4.01')}}    |                                                  |
+{{Specifications}}
 
 ## Compatibilidade nos Navegadores
 

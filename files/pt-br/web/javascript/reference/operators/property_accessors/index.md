@@ -115,12 +115,7 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Especificações
 
-| Specification                                                            | Status               | Comment                                            |
-| ------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}               | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                 | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
