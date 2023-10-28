@@ -24,8 +24,7 @@ l10n:
 ### JavaScript
 
 - 反復可能な要素をグループ化するための {{jsxref("Object.groupBy()")}} および {{jsxref("Map.groupBy()")}} 静的メソッドをサポートしました (詳しくは [Firefox bug 1792650](https://bugzil.la/1792650) をご覧ください)。
-- 文字列が適格な Unicode 文字を含んでいる (すなわち、[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) がない) ことを確認できる {{jsxref("String.prototype.isWellFormed()")}} メソッドと、不適格な文字列を適格な Unicode 文字に修正できる {{jsxref("String.prototype.toWellFormed()")}} メソッドをサポートしました 
-  (詳しくは [Firefox bug 1850755](https://bugzil.la/1850755) をご覧ください)。
+- 文字列が適格な Unicode 文字を含んでいる (すなわち、[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) がない) ことを確認できる {{jsxref("String.prototype.isWellFormed()")}} メソッドと、不適格な文字列を適格な Unicode 文字に修正できる {{jsxref("String.prototype.toWellFormed()")}} メソッドをサポートしました (詳しくは [Firefox bug 1850755](https://bugzil.la/1850755) をご覧ください)。
 
 ### SVG
 
