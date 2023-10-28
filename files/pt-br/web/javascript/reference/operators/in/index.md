@@ -93,12 +93,7 @@ O operador `in` retorna `true` para propriedades que estão na cadeida de protó
 
 ## Especificações
 
-| Especificação                                                                | Situação             | Comentário                                         |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES2015', '#sec-relational-operators', 'Relational Operators')}}  | {{Spec2('ES2015')}}  |                                                    |
-| {{SpecName('ES5.1', '#sec-11.8.7', 'The in Operator')}}                      | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3', '#sec-11.8.7', 'The in Operator')}}                        | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.4. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

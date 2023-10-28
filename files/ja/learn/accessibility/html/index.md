@@ -2,7 +2,7 @@
 title: "HTML: アクセシビリティの基礎"
 slug: Learn/Accessibility/HTML
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -258,7 +258,7 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 ### UI コントロール
 
-UI コントロールとは、ウェブ文書内のユーザーが対話する主要な部分を意味します。最も一般的なのは、ボタン、リンク、およびフォーム・コントロールです。この節では、このようなコントロールを作成する際に注意すべき基本的なアクセシビリティの懸念について見ていきます。WAI-ARIAとマルチメディアに関するこの後の記事では、UIアクセシビリティの他の側面について見ていきます。
+UI コントロールとは、ウェブ文書内のユーザーが対話する主要な部分を意味します。最も一般的なのは、ボタン、リンク、およびフォームコントロールです。この節では、このようなコントロールを作成する際に注意すべき基本的なアクセシビリティの懸念について見ていきます。WAI-ARIAとマルチメディアに関するこの後の記事では、UIアクセシビリティの他の側面について見ていきます。
 
 UI コントロールのアクセシビリティに対する一つの重要な側面は、ブラウザーが既定では 、UI コントロールをキーボードで操作できるようにしているということです。このことは、[native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) の例 ([ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) を参照) を用いて試せます。これを新規タブで開いて、タブキーを押してみてください。2、3 回押してみた後には、フォーカス可能な異なる要素の間をタブ・フォーカスが動き回り始めたのだと分かるはずです。どの要素にフォーカスが当たっているのかが分かるように、どのブラウザーでも、フォーカスの当たっている要素には、ハイライトされた既定のスタイルが付与されます (そのスタイルは、異なるブラウザー間では少し差があります)。
 

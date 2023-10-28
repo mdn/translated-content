@@ -11,7 +11,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-> **참고:** 아래에 있는 예제들에서, 답을 알아내기 위해 시도하는 것을 돕기 위해 만약 당신의 코드에 오류가 있으면, 페이지의 결과 패널에 출력될 것입니다 (또는 다운로드 버전의 경우, 브라우저의 자바스크립트 콘솔에 출력될 것입니다).
+> **참고:** 아래에 있는 예제들에서, 답을 알아내기 위해 시도하는 것을 돕기 위해 만약 당신의 코드에 오류가 있으면, 페이지의 결과 패널에 출력될 것입니다 (또는 다운로드 버전의 경우, 브라우저의 JavaScript 콘솔에 출력될 것입니다).
 
 ## 변수 1
 

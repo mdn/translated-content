@@ -13,7 +13,7 @@ O **elemento** **`<a>`** em **HTML** (ou elemento âncora), com o atributo [`hre
 
 Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("download")}}
+- `download`
 
   - : Leva o usuário a salvar a URL em vez de navegar até ela. Pode ser usado com ou sem um valor:
 
@@ -29,7 +29,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     >
     > - Se `Content-Disposition` tiver um diferente `filename` (nome do arquivo) que `download`, o cabeçalho tem prioridade. (Se `Content-Disposition: inline`, Firefox prioriza o cabeçalho enquanto o Chrome escolhe `download`.)
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : A URL para a qual o hiperlink aponta. Links não se restrigem a URLs baseadas no protocolo HTTP — eles podem utilizar qualquer tipo de URL suportado pelos browsers:
 
@@ -39,15 +39,15 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     - Email addresses with(Endereço de email com) `mailto:` URLs
     - Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do [`registerProtocolHandler()`](/pt-BR/docs/Web/API/Navigator/registerProtocolHandler)
 
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/pt-BR/docs/Web/HTML/Global_attributes/lang).
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo `PING` para as URLs. Typically for tracking.
-- {{HTMLAttrDef("referrerpolicy")}}{{Experimental_Inline}}
+- `referrerpolicy`{{Experimental_Inline}}
   - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
-- {{HTMLAttrDef("rel")}}
+- `rel`
   - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Link_types).
-- {{HTMLAttrDef("target")}}
+- `target`
 
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or `<iframe>`). The following keywords have special meanings for where to load the URL:
 
@@ -60,28 +60,28 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
     > **Warning:** **Note:** Linking to another page with `target="_blank"` will run the new page in the same process as your page. If the new page executes JavaScript, your page's performance may suffer. This can also be avoided by using `rel="noreferrer noopener"`.
 
-- {{HTMLAttrDef("type")}}
+- `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Obsolete attributes
 
-- {{HTMLAttrDef("charset")}}
+- `charset`
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}
+- `coords`
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}
+- `name`
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) instead.
 
-- {{HTMLAttrDef("rev")}}
+- `rev`
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}
+- `shape`
 
   - : The shape of the hyperlink's region in an image map.
 
@@ -457,12 +457,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 ## Specifications
 
-| Specification                                                                                         | Status                       | Comment                               |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------- |
-| {{SpecName("Referrer Policy", "#referrer-policy-delivery-referrer-attribute", "referrer attribute")}} | {{Spec2("Referrer Policy")}} | Added the `referrerpolicy` attribute. |
-| {{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                    | {{Spec2("HTML WHATWG")}}     |                                       |
-| {{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                      | {{Spec2("HTML5 W3C")}}       |                                       |
-| {{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}                                     | {{Spec2("HTML4.01")}}        |                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

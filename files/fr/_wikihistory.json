@@ -14953,10 +14953,6 @@
       "FredB"
     ]
   },
-  "Web/CSS/Adjacent_sibling_combinator": {
-    "modified": "2020-10-15T21:46:19.453Z",
-    "contributors": ["SphinxKnight", "builgui", "ffoodd"]
-  },
   "Web/CSS/Alternative_style_sheets": {
     "modified": "2019-04-06T12:15:36.750Z",
     "contributors": ["SphinxKnight", "teoli", "tregagnon", "BenoitL"]
@@ -15663,10 +15659,6 @@
     "modified": "2020-10-15T21:04:29.156Z",
     "contributors": ["SphinxKnight", "eloi-duwer", "yannicka", "teoli", "FredB"]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2020-10-15T21:04:26.332Z",
-    "contributors": ["BrnvrlUoeey", "SphinxKnight", "teoli", "FredB"]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-10-15T21:04:23.373Z",
     "contributors": ["SphinxKnight", "teoli", "louuis", "FredB", "tregagnon"]
@@ -15755,6 +15747,10 @@
       "Goofy"
     ]
   },
+  "Web/CSS/Next-sibling_combinator": {
+    "modified": "2020-10-15T21:46:19.453Z",
+    "contributors": ["SphinxKnight", "builgui", "ffoodd"]
+  },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2019-04-06T13:09:09.164Z",
     "contributors": ["SphinxKnight"]
@@ -15835,6 +15831,10 @@
       "teoli",
       "FredB"
     ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2020-10-15T21:04:26.332Z",
+    "contributors": ["BrnvrlUoeey", "SphinxKnight", "teoli", "FredB"]
   },
   "Web/CSS/Tutorials": {
     "modified": "2019-04-06T13:11:04.601Z",

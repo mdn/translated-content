@@ -38,9 +38,7 @@ console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 
 ## Especificações
 
-| Specification                                                                        |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

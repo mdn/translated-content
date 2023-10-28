@@ -335,13 +335,7 @@ Neste caso, o this da função interior não está definido, portanto ele retorn
 
 ## Especificações
 
-| Especificação                                                    | Estado               | Comentário                                         |
-| ---------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-this-keyword', 'The this keyword')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-this-keyword', 'The this keyword')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-11.1.1', 'The this keyword')}}         | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3', '#sec-11.1.1', 'The this keyword')}}           | {{Spec2('ES3')}}     |                                                    |
-| {{SpecName('ES1', '#sec-11.1.1', 'The this keyword')}}           | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

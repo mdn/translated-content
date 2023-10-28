@@ -56,12 +56,7 @@ console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
 
 ## Especificações
 
-| Especificação                                                                                | Estado               | Comentário                                         |
-| -------------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                          | {{Spec2('ES3')}}     | Definição inicial. Implementada no JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}                       | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -56,10 +56,10 @@ option:checked {
 - `option:checked`
   - : Representa todos os selects na página que estão selecionados
 
-### Usando checkboxes escodindos para amarzenar algum valor booleano
+### Usando checkboxes escodindos para armazenar algum valor booleano
 
 A pseudo-classe `:checked` aplicada em checkboxes escondidos, adicionado ao início de sua página pode
-ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html)).
+ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](expandable-elements.html)).
 
 ```css
 #expand-btn {
@@ -146,23 +146,17 @@ ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por um
 </html>
 ```
 
-{{ EmbedLiveSample('Usando_checkboxes_escodindos_para_amarzenar_algum_valor_booleano', '', '', '', 'Web/CSS/:checked') }}
+{{EmbedLiveSample("Usando_checkboxes_escodindos_para_armazenar_algum_valor_booleano", "auto", 220)}}
 
 ### Usando radioboxes escondidos para armazenar algum valor CSS booleano
 
-Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](/@api/deki/files/6268/=css-checked-gallery.zip) como uma dica.
+Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](css-checked-gallery.zip) como uma dica.
 
-> **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover) sem radioboxes escondidos, veja [essa demostração](/@api/deki/files/6247/=css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover).
+> **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover) sem radioboxes escondidos, veja [essa demostração](css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover).
 
 ## Especificações
 
-| Especificação                                                  | Estatus                       | Comentários                                          |
-| -------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}    | Sem mudanças.                                        |
-| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}   | {{ Spec2('HTML5 W3C') }}      | Define a semântica sobre o HTML.                     |
-| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}       | {{ Spec2('CSS4 Selectors') }} | Sem mudanças.                                        |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked') }} | {{ Spec2('CSS3 Basic UI') }}  | Link para Seletores nível 3                          |
-| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}       | {{ Spec2('CSS3 Selectors') }} | Define a pseudo-classe, mas não associação semântica |
+{{Specifications}}
 
 ## Compatibilidade de navegadores
 

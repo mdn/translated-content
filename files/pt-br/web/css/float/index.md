@@ -92,7 +92,7 @@ h4 {
 </div>
 ```
 
-{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/float') }}
+{{EmbedLiveSample('Exemplos','400','180')}}
 
 ### Como `floats` são posicionados
 
@@ -100,7 +100,7 @@ Como mencionado acima, quando um elemento é flutuado ele é retirado do seu flu
 
 Na imagem abaixo, existem 3 quadrados vermelho. Dois flutuando à esquerda e um flutuando à direita. Observe que o segundo quadrado vermelho à esquerda é posicionado à direita do primeiro. Quadrados adicionais poderiam continuar sendo empilhados à direita até que eles completassem o box, após isso eles iriam para próxima linha.
 
-![](/@api/deki/files/4927/=floats.png)
+![](floats.png)
 
 ### Limpando _floats_
 
@@ -129,12 +129,7 @@ p.withRedBoxes {
 
 ## Especificações
 
-| Especificação                                                             | Situação                            | Comentário                                                                                                                                                           |
-| ------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Adiciona os valores `inline-start` e `inline-end`.                                                                                                                   |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                               | {{Spec2('CSS3 Box')}}               | Muitos valores novos, nem todos claramente definidos ainda. Qualquer diferença em comportamento não relacionado a novas funções são involutárias; por favor informe. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}            | {{Spec2('CSS2.1')}}                 | Sem mudanças                                                                                                                                                         |
-| {{SpecName('CSS1', '#float', 'float')}}                                   | {{Spec2('CSS1')}}                   | Definição inicial                                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

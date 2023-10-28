@@ -106,13 +106,7 @@ div {
 
 ## Характеристики
 
-| Спецификация                                                     | Статус                        | Коммент                                           |
-| ---------------------------------------------------------------- | ----------------------------- | ------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}    | {{Spec2('CSS3 Transitions')}} | Определяет дно как анимацию.                      |
-| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}    | {{Spec2('CSS3 Positioning')}} | Добавляет поведение для липкого позиционирования. |
-| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}           | Исходное определение.                             |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Совместимость с браузером
 

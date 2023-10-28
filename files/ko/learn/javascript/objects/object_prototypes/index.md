@@ -12,7 +12,7 @@ Javascript에서는 객체를 상속하기 위하여 프로토타입이라는 �
     <tr>
       <th scope="row">선수조건:</th>
       <td>
-        컴퓨터 기본지식, HTML과 CSS에 대한 기본적인 이해,자바스크립트에 어느
+        컴퓨터 기본지식, HTML과 CSS에 대한 기본적인 이해,JavaScript에 어느
         정도 익숙할 것 (see
         <a href="/ko/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/ko/docs/Learn/JavaScript/Building_blocks">Building blocks</a

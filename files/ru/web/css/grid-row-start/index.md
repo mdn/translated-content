@@ -122,9 +122,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 ## Specifications
 
-| Specification                                                          | Status                 | Comment            |
-| ---------------------------------------------------------------------- | ---------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-row-start", "grid-row-start")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
+{{Specifications}}
 
 {{cssinfo}}
 

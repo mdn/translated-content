@@ -50,10 +50,7 @@ set1.add({ key1: 1 }); // now set1 contains 2 entries
 
 ## Specifications
 
-| Specification                                                          | Status               | Comment             |
-| ---------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

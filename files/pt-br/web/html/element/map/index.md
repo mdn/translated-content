@@ -17,7 +17,7 @@ O **elemento HTML `<map>`** é usado com os elementos {{HTMLElement ("area")}} p
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{Htmlattrdef ("name")}}
+- `name`
   - : O atributo name dá ao mapa de um nome, de modo que ela possa ser referenciada. O atributo deve estar presente e ter um valor não vazio, sem caracteres de espaço. O valor do atributo name não deve corresponder (independente da caixa) a um valor do atributo name de outro elemento no mesmo documento. Se o id de atributo também for especificado, ambos os atributos devem ter o mesmo valor.
 
 ## Exemplos
@@ -31,11 +31,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificação                                                                              | Estado                    | Comentário |
-| ------------------------------------------------------------------------------------------ | ------------------------- | ---------- |
-| {{SpecName ('HTML WHATWG', 'a-map-element.html # the-map-elemento', '&lt;map&gt;')}}       | {{Spec2 ('HTML WHATWG')}} |            |
-| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # the-map-elemento', '&lt;map&gt;')}} | {{Spec2 ('HTML5 W3C')}}   |            |
-| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;map&gt;')}}               | {{Spec2 ('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

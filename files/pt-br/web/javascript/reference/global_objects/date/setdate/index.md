@@ -48,9 +48,7 @@ theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 
 ## Especificações
 
-| Especificação                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setdate', 'Date.prototype.setDate')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

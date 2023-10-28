@@ -72,13 +72,7 @@ function calc_sales(units_a, units_b, units_c) {
 
 ## Especificações
 
-| Specification                                                                | Status               | Comment                                            |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                      | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3', '#sec-13', 'Function definition')}}                        | {{Spec2('ES3')}}     |                                                    |
-| {{SpecName('ES1', '#sec-13', 'Function definition')}}                        | {{Spec2('ES1')}}     | Definição inicial. Implementado em JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

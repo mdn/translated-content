@@ -11,12 +11,7 @@ original_slug: Web/API/DOMString
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                       | Комментарий                                                       |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}                     | {{Spec2('WebIDL')}}     | Перефразированное описание для удаления странных крайних случаев. |
-| {{SpecName('DOM3 Core', 'core.html#DOMString', 'DOMString')}}             | {{Spec2('DOM3 Core')}} | Не изменилось с {{SpecName('DOM2 Core')}}                  |
-| {{SpecName('DOM2 Core', 'core.html#ID-C74D1578', 'DOMString')}}         | {{Spec2('DOM2 Core')}} | Не изменилось с {{SpecName('DOM1')}}                      |
-| {{SpecName('DOM1', 'level-one-core.html#ID-C74D1578', 'DOMString')}} | {{Spec2('DOM1')}}     | Изначальное определение.                                          |
+{{Specifications}}
 
 ## Смотрите также
 

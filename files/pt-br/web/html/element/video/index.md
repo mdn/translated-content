@@ -21,30 +21,30 @@ Para uma lista de formatos suportados veja [Media formats supported by the audio
 
 Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR/HTML/Global_attributes).
 
-- {{ htmlattrdef("autoplay") }}
+- `autoplay`
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
 > **Nota:** Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
 
-- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }}
+- `autobuffer` {{ Non-standard_inline() }}
 
   - : Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.
 
     > **Note:** **Nota de implementação:** embora parte dos primeiros rascunhos das especificações do HTML5, o atributo `autobuffer` foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, `preload`, para substituir o atributo `autobuffer`, com sintaxe diferente. {{ bug(548523) }}
 
-- {{ htmlattrdef("buffered") }}
+- `buffered`
   - : Um atributo que pode ser lido para determinar os intervalos do vídeo que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.
-- {{ htmlattrdef("controls") }}
+- `controls`
   - : Se esse atributo estiver presente, o Gecko oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação, e pausa/continuação da reprodução.
-- {{ htmlattrdef("height") }}
+- `height`
   - : A altura da área de exibição do vídeo, em pixels de CSS.
-- {{ htmlattrdef("loop") }}
+- `loop`
   - : Um atributo Booleano; se especificado, ao chegar no fim do vídeo, ele voltará automaticamente para o começo.
-- {{ htmlattrdef("muted") }}
+- `muted`
   - : Um atributo Booleano que indica a configuração padrão do áudio contido no vídeo. Se definido, o áudio vai começar mudo. Seu valor padrão é falso, significando que o áudio será reproduzido juntamente com o vídeo.
-- {{ htmlattrdef("played") }}
+- `played`
   - : Um objeto {{ domxref("TimeRanges") }} indicando que todo o vídeo foi reproduzido.
-- {{ htmlattrdef("preload") }}
+- `preload`
 
   - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
 
@@ -59,11 +59,11 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
     >
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
-- {{ htmlattrdef("poster") }}
+- `poster`
   - : Uma URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele. Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível; então o primeiro quadro será exibido como imagem de prévia.
-- {{ htmlattrdef("src") }}
+- `src`
   - : A URL do vídeo a ser incorporado. Isto é opcional; ao invés disso você pode usar o elemento {{ HTMLElement("source") }} dentro do bloco do vídeo para especificar o vídeo a ser incorporado .
-- {{ htmlattrdef("width") }}
+- `width`
   - : A largura da área de exibição do vídeo, em pixels de CSS.
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.

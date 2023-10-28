@@ -44,10 +44,7 @@ slug: Web/CSS/At-rule
 
 ## Характеристики
 
-| Specification                                           | Status                        | Comment                               |
-| ------------------------------------------------------- | ----------------------------- | ------------------------------------- |
-| {{SpecName('CSS3 Conditional')}}                        | {{Spec2('CSS3 Conditional')}} | Начальное определение                 |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}           | Стандартизирует `@-webkit-keyframes`. |
+{{Specifications}}
 
 ## Читайте также
 

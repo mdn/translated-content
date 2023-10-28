@@ -162,12 +162,7 @@ try {
 
 ## Спецификации
 
-| Specification                                                      | Status               | Comment                                           |
-| ------------------------------------------------------------------ | -------------------- | ------------------------------------------------- |
-| {{SpecName('ES3')}}                                                | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}             | {{Spec2('ES5.1')}}   |                                                   |
-| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}     |                                                   |
-| {{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}} | {{Spec2('ESDraft')}} |                                                   |
+{{Specifications}}
 
 ## Поддерживаемые браузеры
 

@@ -51,9 +51,7 @@ window.addEventListener('online', function(e) { console.log('online'); });
 
 ## Especificações
 
-| Especificações                                                                                                   | Status                           | Comentário        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#dom-navigator-online", "navigator.onLine")}} | {{Spec2("HTML WHATWG")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -39,7 +39,7 @@ console.exception(msg [, subst1, ..., substN]);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

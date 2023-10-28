@@ -21,9 +21,9 @@ Para mais artigos sobre canvas, veja [canvas topic page](/pt-BR/HTML/Canvas).
 
 Como qualquer outro elemento HTML, este também tem [global attributes](/pt-BR/HTML/Global_attributes).
 
-- {{ htmlattrdef("width") }}
+- `width`
   - : A largura do espaço em pixels CSS. O padrão é 300.
-- {{ htmlattrdef("height") }}
+- `height`
   - : A altura do espaço em pixels CSS. O padrão é 150.
 
 > **Nota:** The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.

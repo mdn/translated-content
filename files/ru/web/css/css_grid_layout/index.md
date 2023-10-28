@@ -145,8 +145,4 @@ slug: Web/CSS/CSS_grid_layout
 
 ## Спецификации
 
-| Specification              | Status                  | Comment                                                                                   |
-| -------------------------- | ----------------------- | ----------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 3")}} | {{Spec2("CSS Grid 3")}} | Adds [masonry](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout).                          |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Added [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
-| {{SpecName("CSS3 Grid")}}  | {{Spec2("CSS3 Grid")}}  | Initial definition.                                                                       |
+{{Specifications}}

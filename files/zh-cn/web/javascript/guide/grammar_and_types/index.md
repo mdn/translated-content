@@ -507,17 +507,24 @@ console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
 ```
 
-对象属性名字可以是任意字符串，包括空串。如果对象属性名字不是合法的 javascript 标识符，它必须用""包裹。属性的名字不合法，那么便不能用。访问属性值，而是通过类数组标记 ("\[]") 访问和赋值。
+对象属性名字可以是任意字符串，包括空串。如果对象属性名字不是合法的 javascript {{Glossary("Identifier", "标识符")}}，它必须用引号包裹。
 
-```js
-var unusualPropertyNames = {
-  "": "An empty string",
-  "!": "Bang!"
+属性的名字不合法，那么便不能用点（`.`）访问属性值。
+
+```js-nolint example-bad
+const unusualPropertyNames = {
+  '': '空字符串',
+  '!': '砰！'
 }
-console.log(unusualPropertyNames."");   // 语法错误：Unexpected string
-console.log(unusualPropertyNames[""]);  // An empty string
-console.log(unusualPropertyNames.!);    // 语法错误：Unexpected token !
-console.log(unusualPropertyNames["!"]); // Bang!
+console.log(unusualPropertyNames.'');   // SyntaxError: Unexpected string
+console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
+```
+
+而是通过方括号表示法（`[]`）来访问。
+
+```js example-good
+console.log(unusualPropertyNames[""]); // 空字符串
+console.log(unusualPropertyNames["!"]); // 砰！
 ```
 
 #### 增强的对象字面量

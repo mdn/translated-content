@@ -33,9 +33,7 @@ _`lang`_ является строкой, содержащей единстве�
 
 ## Specification
 
-| Specification                                                    | Status                       | Comment             | Feedback                                                                         |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#lang-member', 'lang')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
 ## Browser compatibility
 

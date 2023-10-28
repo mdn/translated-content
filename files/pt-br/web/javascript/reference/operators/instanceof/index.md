@@ -110,11 +110,7 @@ var b = mycar instanceof Object; // retorna true
 
 ## Especificações
 
-| Especificação                                                            | Status             | Comentário                                        |
-| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                  | Standard           | Definição inicial. Implementada no JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-11.8.6', 'The instanceof operator')}}          | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -76,9 +76,7 @@ Promise.race([p5, p6]).then(
 
 ## Especificações
 
-| Especificação                                            | Status           | Comentário                           |
-| -------------------------------------------------------- | ---------------- | ------------------------------------ |
-| {{SpecName('ES6', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ES6')}} | Definição inicial em um padrão ECMA. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

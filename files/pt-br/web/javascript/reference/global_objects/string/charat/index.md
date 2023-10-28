@@ -202,11 +202,7 @@ function fixedCharAt(str, idx) {
 
 ## Especificações
 
-| Especificação                                                                  | Status             | Comentário          |
-| ------------------------------------------------------------------------------ | ------------------ | ------------------- |
-| {{SpecName('ES1')}}                                                            | {{Spec2('ES1')}}   | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}              | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}   |                     |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

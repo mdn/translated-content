@@ -12,27 +12,29 @@
 
 ```yaml
 ---
-title: Fetch API
-slug: Web/API/Fetch_API
-page-type: web-api-overview
-browser-compat: api.fetch
+title: atob() global function
+short-title: atob()
+slug: Web/API/atob
+page-type: web-api-global-function
+browser-compat: api.atob
 ---
 ```
 
 其中：
 
 - `title` 为文档的大标题
+- `short-title` 为显示在侧边栏和面包屑中的短标题
 - `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
 - `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
-- `browser-compat` 为[**浏览器兼容性表**][]对应的宏所使用的元数据。
+- `browser-compat` 为[**浏览器兼容性表**][]对应的宏所使用的元数据
 
-在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
+在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。对于 `short-title`，如果简体中文文档采用的短标题与英文文档相同，则无需添加（仅在使用与英文文档*不同*的短标题时添加该元数据）。
 
 最终在简体中文文档中呈现的元数据如下所示：
 
 ```yaml
-title: Fetch API
-slug: Web/API/Fetch_API
+title: atob() 全局函数
+slug: Web/API/atob
 ```
 
 ## 翻译标题和 ID

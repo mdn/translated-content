@@ -362,10 +362,7 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## Specifications
 
-| Specification                                                                                       | Status                   | Comment            |
-| --------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#number-state-(type=number)', '&lt;input type="number"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#number-state-typenumber', '&lt;input type="number"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

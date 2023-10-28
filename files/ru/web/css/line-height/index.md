@@ -134,11 +134,7 @@ h1 {
 
 ## Specifications
 
-| Specification                                                             | Status                        | Comment                              |
-| ------------------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}        | {{Spec2('CSS3 Transitions')}} | Defines `line-height` as animatable. |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}           | No change.                           |
-| {{SpecName('CSS1', '#line-height', 'line-height')}}                       | {{Spec2('CSS1')}}             | Initial definition.                  |
+{{Specifications}}
 
 {{cssinfo}}
 

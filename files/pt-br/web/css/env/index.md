@@ -103,9 +103,7 @@ A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas 
 
 ## Especificações
 
-| Especificação                                                        | Status                                  | Comentário         |
-| -------------------------------------------------------------------- | --------------------------------------- | ------------------ |
-| {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
