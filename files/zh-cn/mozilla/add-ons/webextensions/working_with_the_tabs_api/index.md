@@ -54,7 +54,7 @@ l10n:
 
 ### 示例
 
-为了了解 {{WebExtAPIRef("tabs.query()")}} 和 {{WebExtAPIRef("tabs.Tab")}} 是如何使用的，让我们来看看 [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例是如何在工具栏弹出按钮中添加 “switch to tabs” 列表的。
+为了了解 {{WebExtAPIRef("tabs.query()")}} 和 {{WebExtAPIRef("tabs.Tab")}} 是如何使用的，让我们来看看 [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例是如何在工具栏弹出按钮中添加“switch to tabs”列表的。
 
 ![选项卡工具栏菜单显示“switch to tap area”](switch_to_tab.png)
 
@@ -497,7 +497,7 @@ browser.tabs.move([tab.id], { index });
     }
     ```
 
-    如果示例可以在标签页上执行操作，`initializePageAction()` 会在使 `pageAction` 可见之前将标签页的 `pageAction`（导航栏）图标和标题设置为使用“关闭” 版本：
+    如果示例可以在标签页上执行操作，`initializePageAction()` 会在使 `pageAction` 可见之前将标签页的 `pageAction`（导航栏）图标和标题设置为使用“关闭”版本：
 
     ```js
     function initializePageAction(tab) {
