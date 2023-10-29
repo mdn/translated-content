@@ -1,9 +1,7 @@
 ---
 title: "File: type プロパティ"
-short-title: type
-slug: Web/API/File/type
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+slug: conflicting/Web/API/Blob/type
+original_slug: Web/API/File/type
 ---
 
 {{APIRef("File API")}}

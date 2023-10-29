@@ -1,8 +1,7 @@
 ---
 title: Internationalization (国際化)
-slug: Glossary/Internationalization_and_localization
-l10n:
-  sourceCommit: 4a43f2f9af30db0721b0150909615f5fe9b041a4
+slug: conflicting/Glossary/Internationalization
+original_slug: Glossary/Internationalization_and_localization
 ---
 
 **国際化** (しばしば 「[i18n](/ja/docs/Glossary/I18N)」と略される) は、ウェブサイトやウェブアプリケーションを、異なる言語、地域的差異、異なる国や地域による技術的要求に対応させます。 国際化はあなたのウェブアプリケーションを構築するプロセスであり、新しい言語や地域をサポートする場合に、さほど多くの技術的努力を必要とせずに幅広い言語や地域に対応化可能です。また、すべてのコンテンツをレイアウトを壊すことなくアプリケーションを翻訳あるいはローカライズするので、ユーザーは機能を閲覧することができます。
