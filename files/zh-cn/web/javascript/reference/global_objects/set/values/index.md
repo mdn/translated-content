@@ -5,9 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/values
 
 {{JSRef}}
 
-**`values()`** 方法返回一个新的[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象按插入顺序包含 `Set` 对象中每个元素的值。
-
-> **备注：** **`keys()`** 方法是该方法的别名（与 {{jsxref("Map")}} 对象相似）。因此这里重定向 `keys()` 页。它的行为完全相同，并返回 `Set` 元素的**值**。
+{{jsxref("Set")}} 实例的 **`values()`** 方法返回一个新的[_集合迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含此集合对象中每个元素的值，按插入顺序排列。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
@@ -17,9 +15,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/values
 values()
 ```
 
+### 参数
+
+无。
+
 ### 返回值
 
-一个新的迭代器对象，按插入顺序包含给定 `Set` 中每个元素的值。
+一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 示例
 

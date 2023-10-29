@@ -99,5 +99,5 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 ## 参见
 
-- [如何创建一个良好的渐进式 Web 应用](https://web.dev/pwa-checklist/)，来自 web.dev（2022）。
+- [如何创建一个良好的渐进式 Web 应用](https://web.dev/articles/pwa-checklist)，来自 web.dev（2022）。
 - [渐进式 Web 应用的最佳实践](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices)，来自 learn.microsoft.com（2023）。
