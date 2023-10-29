@@ -9,7 +9,7 @@ slug: Web/HTTP/Headers/Location
 
 リダイレクトの場合、 HTTP メソッドは元のメソッドとリダイレクトの種類によって、 `Location` で示されたページにアクセスする新しいリクエストを生成するために使用します。
 
-- {{HTTPStatus("303")}} (See Also) レスポンスは常に {{HTTPMethod("GET")}} メソッドを使用するように誘導され、 {{HTTPStatus("307")}} (Temporary Redirect) および {{HTTPStatus("308")}} (Permanent Redirect) は元のリクエストにおいて使用されたメソッドを変更しません。
+- {{HTTPStatus("303")}} (See Other) レスポンスは常に {{HTTPMethod("GET")}} メソッドを使用するように誘導され、 {{HTTPStatus("307")}} (Temporary Redirect) および {{HTTPStatus("308")}} (Permanent Redirect) は元のリクエストにおいて使用されたメソッドを変更しません。
 - {{HTTPStatus("301")}} (Moved Permanently) と {{HTTPStatus("302")}} (Found) は多くの場合はメソッドを変更しませんが、古いユーザーエージェントは変更することがあります (そのため、基本的に結果は不明です)。
 
 これらのステータスコードを持つすべてのレスポンスは、 `Location` ヘッダーを送信します。

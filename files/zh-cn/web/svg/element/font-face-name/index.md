@@ -25,7 +25,7 @@ slug: Web/SVG/Element/font-face-name
 
 ## DOM 接口
 
-该对象实现了[`SVGFontFaceNameElement`](/zh-CN/DOM/SVGFontFaceNameElement)接口。
+该对象实现了 [`SVGFontFaceNameElement`](/zh-CN/DOM/SVGFontFaceNameElement) 接口。
 
 ## 相关内容
 

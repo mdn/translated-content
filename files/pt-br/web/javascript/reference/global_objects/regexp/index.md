@@ -788,11 +788,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 
 ## Especificações
 
-| Specification                                                           | Status             | Comment                                            |
-| ----------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                 | Standard           | Initial definition. Implemented em JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.10', 'RegExp')}}                           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp-regular-expression-objects', 'RegExp')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a>

@@ -45,9 +45,7 @@ alert(window.navigator.userAgent)
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-navigator-useragent', 'NavigatorID.userAgent')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade
 

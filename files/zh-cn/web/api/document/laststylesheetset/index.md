@@ -33,7 +33,7 @@ if (!lastSheetSet) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}

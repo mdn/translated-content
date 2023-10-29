@@ -39,13 +39,13 @@ var creating = browser.tabs.create(
 
       - : `boolean`. 윈도우에서 탭이 선택되는지를 지정한다. 기본값은 `true`.
 
-        > **경고:** 이 속성은 사용이 중단되었다. 파이어폭스에서는 지원하지 않는다. `active`가 대신한다.
+        > **경고:** 이 속성은 사용이 중단되었다. Firefox에서는 지원하지 않는다. `active`가 대신한다.
 
     - `url` {{optional_inline}}
 
       - : `string`. 최초 표시될 URL. 기본값은 새 탭 페이지다.
         URL은 반드시 scheme를 포함해야 한다 (가령은 'http://www.google.com'은 되지만, 'www.google.com'은 안된다).
-        보안상 파이어폭스에서 특권이 있는 URL은 안된다. 그래서 아래와 같은 URL을 주면 실패할 것이다:
+        보안상 Firefox에서 특권이 있는 URL은 안된다. 그래서 아래와 같은 URL을 주면 실패할 것이다:
 
         - chrome: URL
         - javascript: URL

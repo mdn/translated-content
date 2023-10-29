@@ -5,14 +5,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 
 {{JSRef}}
 
-`delete()` 方法用于移除 `Map` 对象中指定的元素。
+{{jsxref("Map")}} 实例的 **`delete()`** 方法从该 map 中删除指定键的元素。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 
 ## 语法
 
 ```js-nolint
-delete(key)
+mapInstance.delete(key)
 ```
 
 ### 参数

@@ -56,7 +56,7 @@ Se a array estiver vazia e o `valorInicial` não tiver sido informado, uma exce�
 
 Se a array possuir somente um elemento (independente da posição) e o `valorInicial` não tiver sido fornecido, ou se `valorInicial` for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de `callback` seja chamada.
 
-É mais seguro provir um `valorInicial`, porque existem até _quatro_ possíveis saídas sem o `valorInicial`, como mostrado no exemplo:
+É mais seguro prover um `valorInicial`, porque existem até _quatro_ possíveis saídas sem o `valorInicial`, como mostrado no exemplo:
 
 ```js
 var maxCallback = (acc, cur) => Math.max(acc.x, cur.x);
@@ -99,7 +99,7 @@ Você também pode usar uma {{jsxref("Functions/Arrow_functions", "Arrow Functio
 [0, 1, 2, 3, 4].reduce((accum, curr) => accum + curr);
 ```
 
-Se você informar um valorInicial como o segundo argumento de reduce, o resultado será:
+Se você informar um `valorInicial` como o segundo argumento de reduce, o resultado será:
 
 ```js
 [0, 1, 2, 3, 4].reduce(function (acumulador, valorAtual, indice, array) {
@@ -141,7 +141,7 @@ var total = [0, 1, 2, 3].reduce(
 
 ### Soma de valores de um objeto de um array
 
-Para resumir os valores contidos em um array, você **deve** fornecer um valorInicial, para que cada item passe por sua função.
+Para resumir os valores contidos em um array, você **deve** fornecer um `valorInicial`, para que cada item passe por sua função.
 
 ```js
 var valorInicial = 0;
@@ -418,10 +418,7 @@ if (!Array.prototype.reduce) {
 
 ## Especificações
 
-| Especificação                                                                | Status             | Comentário                                        |
-| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce')}}            | {{Spec2('ES5.1')}} | Definição inicial. Implemetada no JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

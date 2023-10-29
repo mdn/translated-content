@@ -169,11 +169,7 @@ var fct2 = eval(fctStr2); // return a function
 
 ## Especificações
 
-| Especificação                                  | Status             | Comentário        |
-| ---------------------------------------------- | ------------------ | ----------------- |
-| ECMAScript 1st Edition.                        | Standard           | Definição inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}} | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}   |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

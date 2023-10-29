@@ -140,6 +140,6 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 ```
 
 - d
-  - : 一个点集数列以及其他关于如何绘制路径的信息。请阅读[Paths](/zh-CN/Web/SVG/Tutorial/Paths) 章节以了解更多信息。
+  - : 一个点集数列以及其他关于如何绘制路径的信息。请阅读[路径](/zh-CN/Web/SVG/Tutorial/Paths)章节以了解更多信息。
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

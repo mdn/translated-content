@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get changed files
         env:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Checkout HEAD
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
@@ -61,7 +61,7 @@ jobs:
           git add .
           git commit -m "Code from PR head"
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: ${{ env.DIFF_DOCUMENTS }}
         with:
           repository: mdn/content
@@ -69,7 +69,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -106,11 +106,16 @@ jobs:
 
           echo "Linting front-matter"
           FM_LINT_FAILED=false
-          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json --fix true ${files_to_lint} 2>&1) || FM_LINT_FAILED=true
+          # absolute_paths is needed because front-matter linter is run from mdn/content directory
+          absolute_paths=$(echo "${files_to_lint}" | xargs realpath -e | xargs)
+          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json ${absolute_paths} 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> $GITHUB_ENV
           echo "${FM_LINT_LOG}" >> $GITHUB_ENV
           echo "${EOF}" >> $GITHUB_ENV
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
+
+          echo "Running url locale checker"
+          node ./scripts/check-url-locale.js --fix ${files_to_lint}
 
           echo "Running Prettier"
           yarn prettier -w ${files_to_lint}
@@ -121,6 +126,7 @@ jobs:
 
           # info for troubleshooting
           echo MD_LINT_FAILED=${MD_LINT_FAILED}
+          echo FM_LINT_FAILED=${FM_LINT_FAILED}
           git diff
 
       - name: Setup reviewdog
@@ -157,9 +163,11 @@ jobs:
             -reporter="github-pr-review"
 
       - name: Fail if any issues pending
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
         run: |
           echo -e "\nLogs from markdownlint:"
           echo "${{ env.MD_LINT_LOG }}"
+          echo -e "\nLogs from front-matter linter:"
+          echo "${{ env.FM_LINT_LOG }}"
           echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
           exit 1

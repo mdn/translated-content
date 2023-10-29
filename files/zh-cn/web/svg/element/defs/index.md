@@ -48,7 +48,7 @@ _没有专有属性_
 
 ## DOM 接口
 
-这个元素实现了[`SVGDefsElement`](/zh-CN/DOM/SVGDefsElement) 接口。
+这个元素实现了 [`SVGDefsElement`](/zh-CN/DOM/SVGDefsElement) 接口。
 
 ## 浏览器兼容性
 

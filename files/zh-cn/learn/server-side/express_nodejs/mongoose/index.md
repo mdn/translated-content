@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/mongoose
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Express 教程 2: 创建站点骨架</a
@@ -684,7 +684,7 @@ BookInstanceSchema.virtual("url").get(function () {
   return "/catalog/bookinstance/" + this._id;
 });
 
-// 导出 BookInstancec 模型
+// 导出 BookInstance 模型
 module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 

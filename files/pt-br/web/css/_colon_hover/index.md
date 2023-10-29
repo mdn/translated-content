@@ -73,21 +73,17 @@ para ser aplicada a uma estrutura HTML como a seguinte:
 </div>
 ```
 
-Veja nosso [exemplo de menu dropdown baseado em CSS](/@api/deki/files/6238/=css_dropdown_menu.html) para entender melhor.
+Veja nosso [exemplo de menu dropdown baseado em CSS](css_dropdown_menu.html) para entender melhor.
 
 ### Galeria com imagens full-size e previews
 
-Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](/@api/deki/files/6247/=css-gallery.zip) para uma possível dica.
+Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](css-gallery.zip) para uma possível dica.
 
-> **Nota:** Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](/@api/deki/files/6268/=css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
+> **Nota:** Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
 
 ## Especificações
 
-| Especificação                                                                           | Status                        | Comentário                                    |
-| --------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------- |
-| {{ SpecName('CSS4 Selectors', '#hover', ':hover') }}                                    | {{ Spec2('CSS4 Selectors') }} | Pode ser aplicado a qualquer pseudo-elemento. |
-| {{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }} | {{ Spec2('CSS3 Selectors') }} | Sem mudança significativa.                    |
-| {{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}              | {{ Spec2('CSS2.1') }}         | definição inicial.                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

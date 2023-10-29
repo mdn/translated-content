@@ -153,7 +153,4 @@ svg {
 
 ## Specification
 
-| Specification                                                         | Status              | Comment                                |
-| --------------------------------------------------------------------- | ------------------- | -------------------------------------- |
-| {{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}   | {{Spec2("SVG2")}}   | Definition for shapes and text         |
-| {{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}} | {{Spec2("SVG1.1")}} | Initial definition for shapes and text |
+{{Specifications}}

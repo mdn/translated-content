@@ -30,12 +30,7 @@ var day = today.getUTCDate();
 
 ## Especificações
 
-| Specification                                                                          | Status               | Comment                                            |
-| -------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                    | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.15', 'Date.prototype.getUTCDate')}}                   | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

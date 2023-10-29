@@ -81,10 +81,7 @@ console.log(p.a); // 10
 
 ## Specifications
 
-| Спецификация                                                                                                 | Статус               | Комментарий         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

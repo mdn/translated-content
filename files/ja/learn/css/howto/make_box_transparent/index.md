@@ -2,7 +2,7 @@
 title: ボックスを半透明にするには
 slug: Learn/CSS/Howto/Make_box_transparent
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
 {{LearnSidebar}}
@@ -17,7 +17,7 @@ l10n:
 
 ## 背景色の不透明度のみを変更する場合
 
-多くの場合、背景色を部分的に透過させるだけで、テキストや他の要素は完全に不透明なままにしておきたいでしょう。これを実現するには、[rgba](/ja/docs/Web/CSS/color_value#rgb_color_model) のようなアルファチャンネルを持つ色の値を使用してください。`opacity` と同様に、アルファチャンネルの値を `1` にすると、その色は完全に不透明になります。したがって、`background-color: rgba(0,0,0,.5);` は、背景色を 50% の不透明度に設定します。
+多くの場合、背景色を部分的に透過させるだけで、テキストや他の要素は完全に不透明なままにしておきたいでしょう。これを実現するには、[rgba](/ja/docs/Web/CSS/color_value#rgb_色モデル) のようなアルファチャンネルを持つ色の値を使用してください。`opacity` と同様に、アルファチャンネルの値を `1` にすると、その色は完全に不透明になります。したがって、`background-color: rgba(0,0,0,.5);` は、背景色を 50% の不透明度に設定します。
 
 下記の例で、不透明度とアルファチャンネルの値を変えてみて、ボックスの後ろの背景画像が見える割合を上下させてみてください。
 
@@ -27,4 +27,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_Colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)

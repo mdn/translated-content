@@ -469,10 +469,7 @@ daySelect.onchange = function () {
 
 ## Specifications
 
-| Specification                                                                                 | Status                   | Comments |
-| --------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}}   | {{Spec2('HTML5 W3C')}}   |          |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -15,33 +15,33 @@ O **elemento** **HTML** **\<iframe>** (ou _elemento HTML_ _inline frame_) repres
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : O alinhamento deste elemento em relação ao contexto.
-- {{htmlattrdef("allowfullscreen")}}
+- `allowfullscreen`
   - : Esse atributo pode ser definido como true se o quadro é permitido para ser colocado em modo de tela cheia, chamando seu método de {{domxref("element.mozRequestFullScreen()")}}. Se isto não estiver definido, o elemento não pode ser colocado em modo de tela cheia.
-- {{htmlattrdef("frameborder")}}
+- `frameborder`
   - : O valor 1 (o padrão) pede ao navegador para desenhar uma borda entre este quadro e todos os outros quadros. O valor 0 informa ao navegador para não traçar uma fronteira entre este quadro e outros quadros.
-- {{htmlattrdef("height")}}
+- `height`
   - : Indica a altura do quadro HTML 5 em pixels CSS, ou HTML 4 em pixels ou porcentagem.
-- {{htmlattrdef("longdesc")}}
+- `longdesc`
   - : Uma URI de uma longa descrição do quadro. Devido à má utilização generalizada, isto não é útil para navegadores não-visuais.
-- {{htmlattrdef("marginheight")}}
+- `marginheight`
   - : A quantidade de espaço em pixels entre o conteúdo do quadro e suas margens superior e inferior.
-- {{htmlattrdef("marginwidth")}}
+- `marginwidth`
   - : A quantidade de espaço em pixels entre o conteúdo dos quadros e suas margens direita e esquerda.
-- {{htmlattrdef("mozallowfullscreen")}} {{non-standard_inline}} {{deprecated_inline}}
+- `mozallowfullscreen` {{non-standard_inline}} {{deprecated_inline}}
   - : Use **`allowfullscreen`** ao invés. Em Gecko 9.0 or later, this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.mozRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.
-- {{htmlattrdef("webkitallowfullscreen")}} {{non-standard_inline}} {{deprecated_inline}}
+- `webkitallowfullscreen` {{non-standard_inline}} {{deprecated_inline}}
   - : Use **`allowfullscreen`** ao invés. No Chrome 17 ou mais novo (e talvez mais antigo), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.webkitRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.
-- {{htmlattrdef("mozapp")}} {{non-standard_inline}}
+- `mozapp` {{non-standard_inline}}
   - : For frames hosting an [open web app](/pt-BR/docs/Apps), this specifies the URL of the [app manifest](/pt-BR/docs/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
-- {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
+- `mozbrowser` {{non-standard_inline}}
   - : Indicates that the frame is to appear like a top-level browser window to the embedded content. This means that {{domxref("window.top")}}, {{domxref("window.parent")}}, {{domxref("window.frameElement")}}, etc. will _not_ reflect the frame hierarchy. This allows for a web browser UI to be implemented entirely with web technology, given the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
-- {{htmlattrdef("name")}}
+- `name`
   - : A name for the embedded browsing context (or frame). This can be used as the value of the **`target`** attribute of an {{HTMLElement("a")}} or {{HTMLElement("form")}} element, or the formtarget attribute of an {{HTMLElement("input")}} or {{HTMLElement("button")}} element.
-- {{htmlattrdef("remote")}} {{non-standard_inline}}
+- `remote` {{non-standard_inline}}
   - : Carrega a página do _frame_ em um processo separado.
-- {{htmlattrdef("scrolling")}}
+- `scrolling`
 
   - : Enumerated attribute indicating when the browser should provide a scroll bar (or other scrolling device) for the frame:
 
@@ -49,7 +49,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `yes`: Sempre mostrar uma barra de rolagem.
     - `no`: Nunca mostrar uma barra de rolagem.
 
-- {{htmlattrdef("sandbox")}}
+- `sandbox`
 
   - : If specified as an empty string, this attribute enables extra restrictions on the content that can appear in the inline frame. The value of the attribute can either be an empty string (all the restrictions are applied), or a space-separated list of tokens that lift particular restrictions. Valid tokens are:
 
@@ -66,13 +66,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     > - Sandboxing in general is only of minimal help if the attacker can arrange for the potentially hostile content to be displayed in the user's browser outside a sandboxed `iframe`. It is recommended that such content should be served from a _separate dedicated domain_, to limit the potential damage.
     > - The `sandbox` attribute is not supported in Internet Explorer 9 and earlier versions, or in Opera.
 
-- {{htmlattrdef("seamless")}}
+- `seamless`
   - : This **Boolean attribute** indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the `<iframe>` to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this). In XHTML, attribute minimization is forbidden, and the seamless attribute must be defined as `<iframe seamless="seamless">`.
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the page to embed.
-- {{htmlattrdef("srcdoc")}}
+- `srcdoc`
   - : The content of the page that the embedded context is to contain. This attribute is expected to be used together with the sandbox and seamless attributes. If a browser supports the `srcdoc` attribute, it will override the content specified in the `src` attribute (if present). If a browser does NOT support the `srcdoc` attribute, it will show the file specified in the `src` attribute instead (if present).
-- {{htmlattrdef("width")}}
+- `width`
   - : Indicates the width of the frame HTML 5 in CSS pixels, or HTML 4 in pixels or as a percentage.
 
 ## Scripting
@@ -131,11 +131,7 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ## Especificações
 
-| Especificação                                                                               | Status                   | Comment |
-| ------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-iframe-element', '&lt;iframe&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                    | {{Spec2('HTML4.01')}}    |         |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 

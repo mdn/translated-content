@@ -104,11 +104,11 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 {{cssxref('columns')}} 단축키를 사용하여 최대 열 수와 최소 열 너비를 지정할 수 있습니다. 이렇게 하면 화면 크기가 커짐에 따라 줄 길이가 읽기 힘들 정도로 길어지거나 화면 크기가 작아짐에 따라 너무 좁아지는 것을 방지할 수 있습니다.
 
-### 가변상자
+### 플렉스박스
 
-가변상자에서 가변 항목은 컨테이너의 공간에 따라 항목 사이의 공간을 분배하여 축소 또는 증가합니다. `flex-grow` 및 `flex-shrink` 값을 변경하여 주변에 공간이 많거나 적을 때 항목이 어떻게 동작할지 지정할 수 있습니다.
+플렉스박스에서 플렉스 항목은 컨테이너의 공간에 따라 항목 사이의 공간을 분배하여 축소 또는 증가합니다. `flex-grow` 및 `flex-shrink` 값을 변경하여 주변에 공간이 많거나 적을 때 항목이 어떻게 동작할지 지정할 수 있습니다.
 
-아래 예시에서 플렉스 항목은 레이아웃 항목 [가변상자: 가변 항목의 가변 크기 조정](/ko/docs/Learn/CSS/CSS_layout/Flexbox#가변_항목의_가변_크기_조정)에 설명된 대로 `flex: 1`의 약어를 사용하여 플렉스 컨테이너에서 각각 동일한 공간을 차지합니다.
+아래 예시에서 플렉스 항목은 레이아웃 항목 [플렉스박스: 가변 항목의 가변 크기 조정](/ko/docs/Learn/CSS/CSS_layout/Flexbox#가변_항목의_가변_크기_조정)에 설명된 대로 `flex: 1`의 약어를 사용하여 플렉스 컨테이너에서 각각 동일한 공간을 차지합니다.
 
 ```css
 .container {
@@ -120,7 +120,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 }
 ```
 
-> **참고:** 예를 들어, 가변상자를 사용하여 위의 간단한 반응형 레이아웃을 만들었습니다. 화면이 커지면 중단점을 사용하여 여러 열로 전환하고 {{cssxref('max-width')}}로 메인 콘텐츠의 크기를 제한합니다. [예시](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> **참고:** 예를 들어, 플렉스박스를 사용하여 위의 간단한 반응형 레이아웃을 만들었습니다. 화면이 커지면 중단점을 사용하여 여러 열로 전환하고 {{cssxref('max-width')}}로 메인 콘텐츠의 크기를 제한합니다. [예시](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### CSS 격자
 
@@ -227,7 +227,7 @@ h1 {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-이 [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) 메타 태그는 모바일 브라우저에 뷰포트의 너비를 기기 너비로 설정하고 문서의 크기를 의도한 크기의 100%로 조정하여 문서를 모바일에 최적화된 크기로 표시해야 함을 알려줍니다.
+이 [viewport](/ko/docs/Web/HTML/Viewport_meta_tag) 메타 태그는 모바일 브라우저에 뷰포트의 너비를 기기 너비로 설정하고 문서의 크기를 의도한 크기의 100%로 조정하여 문서를 모바일에 최적화된 크기로 표시해야 함을 알려줍니다.
 
 이것이 왜 필요한가요? 모바일 브라우저는 뷰포트 너비에 대해 거짓말을 하는 경향이 있기 때문입니다.
 

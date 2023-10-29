@@ -108,12 +108,7 @@ console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 
 ## Спецификации
 
-| Спецификация                                                                                   | Статус                  | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                                        | Стандарт                | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                    | {{Spec2('ES5.1')}}      |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}} | {{Spec2('ES6')}}        |                                                        |
-| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleDateString')}}                 | {{Spec2('ES Int 1.0')}} | Определяет аргументы `locales` и `options`.            |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -61,10 +61,7 @@ Math.log1p =
 
 ## Especificações
 
-| Especificação                                            | Status               | Comentário          |
-| -------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.log1p', 'Math.log1p')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

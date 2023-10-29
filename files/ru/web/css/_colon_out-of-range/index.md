@@ -54,10 +54,7 @@ input:out-of-range + label::after {
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                      | Комментарий                                                |
-| ------------------------------------------------------------------------------------ | --------------------------- | ---------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}    | Определяет, когда `:out-of-range` находит элементы в HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}              | {{Spec2('CSS4 Selectors')}} | Изначальное определение.                                   |
+{{Specifications}}
 
 ## Поддержка браузерами
 

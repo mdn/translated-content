@@ -64,7 +64,7 @@ slug: Web/HTML/Element/dialog
 
 > **경고:** `tabindex` 특성을 `<dialog>` 요소에 사용해서는 안됩니다.
 
-- {{htmlattrdef("open")}}
+- `open`
   - : 대화 상자가 활성 상태이며 상호작용할 수 있음을 나타냅니다. `open` 특성이 없을 때 대화 상자가 사용자에게 보여서는 안됩니다.
 
 ## 사용 일람

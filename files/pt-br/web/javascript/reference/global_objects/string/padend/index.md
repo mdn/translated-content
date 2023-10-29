@@ -63,10 +63,7 @@ if (!String.prototype.padEnd) {
 
 ## Especificações
 
-| Especificação                                                                      | Status               | Comentário                            |
-| ---------------------------------------------------------------------------------- | -------------------- | ------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.padend', 'String.prototype.padEnd')}} | {{Spec2('ESDraft')}} | Definição inicial no ECMAScript 2017. |
-| {{SpecName('ES8', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}     | {{Spec2('ES8')}}     |                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

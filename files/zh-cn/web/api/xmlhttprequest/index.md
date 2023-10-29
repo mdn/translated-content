@@ -129,4 +129,4 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
   - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 
-- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/xhr2/)
+- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/articles/xhr2)

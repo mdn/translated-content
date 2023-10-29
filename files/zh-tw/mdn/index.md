@@ -11,7 +11,7 @@ MDN Web Docs 的使命是提供*開發者*在*網站平台*上*輕鬆*建立專�
 
 我們歡迎你的直接協助，非常容易！也不需要擔心「要不要獲得許可」之類的問題。在此同時，請試著了解並融入 [MDN 社群](/zh-TW/docs/MDN/Community)；我們都在這裡協助你！以下文件能作為起步的指引。
 
-- [新手起手式](/zh-TW/docs/MDN/Getting_started)
+- [新手起手式](/zh-TW/docs/MDN/Community/Contributing/Getting_started)
 
   你是 MDN 新人，想要學習該如何開始嗎？就從這起步吧！
 

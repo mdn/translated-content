@@ -39,10 +39,7 @@ if (!Date.now) {
 
 ## Especificações
 
-| Especificação                                      | Status             | Comentário                                        |
-| -------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}} | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.5 |
-| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}   | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

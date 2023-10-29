@@ -41,7 +41,7 @@ if (navigator.onLine) {
 
 Caso o navegador não suporta o exemplo de `navigator.onLine` acima, ele sempre retornará `false`/`undefined`.
 
-Para ver mudanças no estado da rede, use [`addEventListener`](/en-US/docs/DOM/element.addEventListener) para escutar os eventos em `window.online` e `window.offline`, como no exemplo abaixo:
+Para ver mudanças no estado da rede, use [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) para escutar os eventos em `window.online` e `window.offline`, como no exemplo abaixo:
 
 ```js
 window.addEventListener('offline', function(e) { console.log('offline'); });
@@ -51,9 +51,7 @@ window.addEventListener('online', function(e) { console.log('online'); });
 
 ## Especificações
 
-| Especificações                                                                                                   | Status                           | Comentário        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#dom-navigator-online", "navigator.onLine")}} | {{Spec2("HTML WHATWG")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

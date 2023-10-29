@@ -125,7 +125,7 @@ div[data-lang="zh-TW"] {
 
 #### HTML
 
-```
+```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
 <div lang="zh-CN">世界您好！</div>
@@ -139,11 +139,7 @@ div[data-lang="zh-TW"] {
 
 ## Especificações
 
-| Specification                                                                      | Status                      | Comment                                                           |
-| ---------------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}      | {{Spec2('CSS4 Selectors')}} | Adiciona um modificador para a seleção do valor do atributo ASCII |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}      | {{Spec2('CSS3 Selectors')}} |                                                                   |
-| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}         | Definição Inicial                                                 |
+{{Specifications}}
 
 ## Browser compatibilidade
 

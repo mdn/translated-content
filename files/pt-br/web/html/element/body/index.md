@@ -77,70 +77,66 @@ O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML.
 
 Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("alink")}}
+- `alink`
   - : Cor do texto para hyperlinks quando selecionados. Esse método não está em conformidade, utilize a propriedade _{{cssxref("color")}} em conjunto com a pseudo-classe {{cssxref(":active")}}_
-- {{htmlattrdef("background")}}
+- `background`
   - : URI de uma imagem para usar como um papel de parede. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("background")}}._
-- {{htmlattrdef("bgcolor")}}
+- `bgcolor`
   - : Cor de fundo do documento. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("background-color")}}._
-- {{htmlattrdef("bottommargin")}}
+- `bottommargin`
   - : The margin of the bottom of the body. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("margin-bottom")}}._
-- {{htmlattrdef("leftmargin")}}
+- `leftmargin`
   - : The margin of the left of the body. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("margin-left")}}._
-- {{htmlattrdef("link")}}
+- `link`
   - : Cor de textos de links não visitados. Esse método não está em conformidade, utilize o _{{cssxref("color")}} em conjunto com a pseudo-classe {{cssxref(":link")}}_
-- {{htmlattrdef("onafterprint")}}
+- `onafterprint`
   - : Função para chamar depois que o usuário solicitou a impressão do documento.
-- {{htmlattrdef("onbeforeprint")}}
+- `onbeforeprint`
   - : Função para chamar quando o usuário solicita a impressão do documento.
-- {{htmlattrdef("onbeforeunload")}}
+- `onbeforeunload`
   - : Função para chamar quando o documento está prestes a ser descarregado.
-- {{htmlattrdef("onblur")}}
+- `onblur`
   - : Função para chamar quando o documento perde foco.
-- {{htmlattrdef("onerror")}}
+- `onerror`
   - : Função para chamar quando o documento falha ao carregar corretamente.
-- {{htmlattrdef("onfocus")}}
+- `onfocus`
   - : Função para chamar quando o documento recebe foco.
-- {{htmlattrdef("onhashchange")}}
+- `onhashchange`
   - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- `onlanguagechange` {{experimental_inline}}
   - : Function to call when the preferred languages changed.
-- {{htmlattrdef("onload")}}
+- `onload`
   - : Função para chamar quando o documento terminar de carregar
-- {{htmlattrdef("onmessage")}}
+- `onmessage`
   - : Função para chamar quando o documento receber uma mensagem.
-- {{htmlattrdef("onoffline")}}
+- `onoffline`
   - : Função para chamar quando a conexão com a internet falha.
-- {{htmlattrdef("ononline")}}
+- `ononline`
   - : Função para chamar quando a conexão com a internet é restaurada.
-- {{htmlattrdef("onpopstate")}}
+- `onpopstate`
   - : Function to call when the user has navigated session history.
-- {{htmlattrdef("onredo")}}
+- `onredo`
   - : Function to call when the user has moved forward in undo transaction history.
-- {{htmlattrdef("onresize")}}
+- `onresize`
   - : Function to call when the document has been resized.
-- {{htmlattrdef("onstorage")}}
+- `onstorage`
   - : Function to call when the storage area has changed.
-- {{htmlattrdef("onundo")}}
+- `onundo`
   - : Function to call when the user has moved backward in undo transaction history.
-- {{htmlattrdef("onunload")}}
+- `onunload`
   - : Function to call when the document is going away.
-- {{htmlattrdef("rightmargin")}}
+- `rightmargin`
   - : The margin of the right of the body. _This method is non-conforming, use CSS {{cssxref("margin-right")}} property on the element instead._
-- {{htmlattrdef("text")}}
+- `text`
   - : Foreground color of text. _This method is non-conforming, use CSS {{cssxref("color")}} property on the element instead._
-- {{htmlattrdef("topmargin")}}
+- `topmargin`
   - : The margin of the top of the body. _This method is non-conforming, use CSS {{cssxref("margin-top")}} property on the element instead._
-- {{htmlattrdef("vlink")}}
+- `vlink`
   - : Cor do texto para links já visitados. Esse método não está em conformidade, utilize a propriedade _CSS {{cssxref("color")}} em conjunto com a pseudo-classe {{cssxref(":visited")}}._
 
 ## Especificações
 
-| Especificação                                                                 | Status                   | Comentário                                                                                                                                                                                               |
-| ----------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-body-element', '&lt;body&gt;')}} | {{Spec2('HTML WHATWG')}} | Changed the list of non-conforming features.                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}   | {{Spec2('HTML5 W3C')}}   | Obsoleted the formerly deprecated attributes. Defined the behavior of the non-conforming and never standardized `margintop`, `marginleft`, `marginright` and `marginbottom`. Added the `on*` attributes. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}        | {{Spec2('HTML4.01')}}    | Deprecated the `alink`, `background`, `bgcolor`, `link`, `text` and `vlink` attributes.                                                                                                                  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -157,11 +157,7 @@ The output from this HTML looks like this:
 
 ## Specifications
 
-| Specification                                                                         | Status                   | Comment                                                                         |
-| ------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}          | {{Spec2('HTML WHATWG')}} |                                                                                 |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}   | Expanded to include any user input, like voice input and individual keystrokes. |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                   | {{Spec2('HTML4.01')}}    |                                                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

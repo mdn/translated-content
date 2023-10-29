@@ -46,12 +46,7 @@ Para valores menores que -1 ou maiores que than 1, `Math.acos()` o método retor
 
 ## Especificações
 
-| Specification                                          | Status               | Comment                                            |
-| ------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.2', 'Math.acos')}}    | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-math.acos', 'Math.acos')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

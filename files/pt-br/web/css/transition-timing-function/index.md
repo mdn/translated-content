@@ -588,9 +588,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Specifications
 
-| Specification                                                                                            | Status                          | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

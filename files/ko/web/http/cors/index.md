@@ -79,7 +79,7 @@ CORS 실패는 오류의 원인이지만, 보안상의 이유로 JavaScript에�
 >
 > 이 부분은 명세가 아니기 때문에 다른 브라우저에는 이러한 추가 제한 사항이 없습니다.
 
-예를들어, `https://foo.example` 의 웹 컨텐츠가 `https://bar.other` 도메인의 컨텐츠를 호출하길 원합니다. `foo.example`에 배포된 자바스크립트에는 아래와 같은 코드가 사용될 수 있습니다.
+예를들어, `https://foo.example` 의 웹 컨텐츠가 `https://bar.other` 도메인의 컨텐츠를 호출하길 원합니다. `foo.example`에 배포된 JavaScript에는 아래와 같은 코드가 사용될 수 있습니다.
 
 ```
 const xhr = new XMLHttpRequest();
@@ -213,7 +213,7 @@ Content-Type: text/plain
 [Some GZIP'd payload]
 ```
 
-첫 번째 예제의 1 - 10 행은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 preflight request를 나타냅니다. 브라우저는 위의 자바스크립트 코드 스니펫이 사용중인 요청 파라미터를 기반으로 전송해야 합니다. 그렇게 해야 서버가 실제 요청 파라미터로 요청을 보낼 수 있는지 여부에 응답할 수 있습니다. OPTIONS는 서버에서 추가 정보를 판별하는데 사용하는 HTTP/1.1 메서드입니다. 또한 {{Glossary("safe")}} 메서드이기 때문에, 리소스를 변경하는데 사용할 수 없습니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다. (10, 11행)
+첫 번째 예제의 1 - 10 행은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 preflight request를 나타냅니다. 브라우저는 위의 JavaScript 코드 스니펫이 사용중인 요청 파라미터를 기반으로 전송해야 합니다. 그렇게 해야 서버가 실제 요청 파라미터로 요청을 보낼 수 있는지 여부에 응답할 수 있습니다. OPTIONS는 서버에서 추가 정보를 판별하는데 사용하는 HTTP/1.1 메서드입니다. 또한 {{Glossary("safe")}} 메서드이기 때문에, 리소스를 변경하는데 사용할 수 없습니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다. (10, 11행)
 
 ```
 Access-Control-Request-Method: POST
@@ -263,7 +263,7 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 
 {{domxref("XMLHttpRequest")}} 혹은 [Fetch](/ko/docs/Web/API/Fetch_API) 를 사용할 때 CORS 에 의해 드러나는 가장 흥미로운 기능은 "credentialed" requests 입니다. credentialed requests는 [HTTP cookies](/ko/docs/Web/HTTP/Cookies) 와 HTTP Authentication 정보를 인식합니다. 기본적으로 cross-site `XMLHttpRequest` 나 [Fetch](/ko/docs/Web/API/Fetch_API) 호출에서 브라우저는 자격 증명을 보내지 **않습니다.** `XMLHttpRequest` 객체나 {{domxref("Request")}} 생성자가 호출될 때 특정 플래그를 설정해야 합니다.
 
-이 예제에서 원래 `http://foo.example` 에서 불러온 컨텐츠는 쿠키를 설정하는 `http://bar.other` 리소스에 simple GET request를 작성합니다. foo.example의 내용은 다음과 같은 자바스크립트를 포함할 수 있습니다.
+이 예제에서 원래 `http://foo.example` 에서 불러온 컨텐츠는 쿠키를 설정하는 `http://bar.other` 리소스에 simple GET request를 작성합니다. foo.example의 내용은 다음과 같은 JavaScript를 포함할 수 있습니다.
 
 ```
 const invocation = new XMLHttpRequest();

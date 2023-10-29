@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           完成前面所有的教程，包括
