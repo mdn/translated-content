@@ -71,7 +71,7 @@ MIME タイプは大文字と小文字を区別しませんが、伝統的に小
     [（IANA での font 型の登録を見る）](https://www.iana.org/assignments/media-types/media-types.xhtml#font)
 - `image`
   - : 画像またはグラフィックデータで、ビットマップとベクター静止画像の両方を含み、さらに静止画像形式のアニメーション版であるアニメーション {{Glossary("GIF")}} や APNG なども含みます。
-  よく使われるものとしては、 `image/jpeg`, `image/png`, `image/svg+xml` などがあります。
+    よく使われるものとしては、 `image/jpeg`, `image/png`, `image/svg+xml` などがあります。
     [（IANA での image 型の登録を見る）](https://www.iana.org/assignments/media-types/media-types.xhtml#image)
 - `model`
   - : 三次元のオブジェクトやシーンなどのモデルデータです。例えば、 `model/3mf` や `model/vrml` などがあります。
