@@ -6,7 +6,7 @@ l10n:
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
 </section>
 
 ### 概况
