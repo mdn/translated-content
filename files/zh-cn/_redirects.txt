@@ -1483,6 +1483,7 @@
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/Web/API/Blob/size
+/zh-CN/docs/Web/API/File/type	/zh-CN/docs/conflicting/Web/API/Blob/type
 /zh-CN/docs/Web/API/FileException	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/FileReader/onabort	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/Web/API/FileReader/load_event
