@@ -1,8 +1,6 @@
 ---
 title: 102 Processing
 slug: Web/HTTP/Status/102
-page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
