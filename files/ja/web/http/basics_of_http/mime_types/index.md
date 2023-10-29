@@ -78,7 +78,7 @@ MIME タイプは大文字と小文字を区別しませんが、伝統的に小
     [（IANA での model 型の登録を見る）](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
 - `text`
   - : テキストのみのデータで、人間が読むことができるあらゆるコンテンツ、ソースコード、コンマ区切り値 (CSV) 形式のデータのようなテキストデータを含みます。
-  例えば、 `text/plain`, `text/csv`, `text/html` などがあります。
+    例えば、 `text/plain`, `text/csv`, `text/html` などがあります。
     [（IANA での text 型の登録を見る）](https://www.iana.org/assignments/media-types/media-types.xhtml#text)
 - `video`
   - : 動画のデータまたはファイルで、 MP4 movies (`video/mp4`) などがあります。
