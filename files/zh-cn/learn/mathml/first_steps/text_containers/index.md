@@ -314,7 +314,7 @@ document.getElementById("showSolution").addEventListener(
 
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
 
-> **备注：**一个明显的区别是，使用 MathML 的源代码会变得更加冗长。请记住，本教程是关于学习语言本身，但在实践中，MathML 内容通常不会手动编写。要查看更多信息，请参阅[创作 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面。
+> **备注：** 一个明显的区别是，使用 MathML 的源代码会变得更加冗长。请记住，本教程是关于学习语言本身，但在实践中，MathML 内容通常不会手动编写。要查看更多信息，请参阅[创作 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面。
 
 ### 主动学习：可伸缩运算符
 
@@ -453,7 +453,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 </math>
 ```
 
-> **警告：**通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现文本的拉伸效果，前面的示例依赖于[网络字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
+> **警告：** 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现文本的拉伸效果，前面的示例依赖于[网络字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
 
 ## 总结
 
