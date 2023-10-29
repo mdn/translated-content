@@ -1,5 +1,5 @@
 ---
-title: 타입 강제 변환 (Type coercion)
+title: 자동 형변환 (Type coercion)
 slug: Glossary/Type_coercion
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
