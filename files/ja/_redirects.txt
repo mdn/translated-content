@@ -1341,7 +1341,7 @@
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/I18N	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/Index	/ja/docs/Glossary
-/ja/docs/Glossary/Internationalization_and_localization	/ja/docs/conflicting/Glossary/Internationalization
+/ja/docs/Glossary/Internationalization_and_localization	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time

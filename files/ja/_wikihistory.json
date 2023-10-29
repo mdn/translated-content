@@ -30210,10 +30210,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/Internationalization": {
-    "modified": "2020-05-24T08:29:22.994Z",
-    "contributors": ["dskmori", "Potappo", "dukesan"]
-  },
   "conflicting/Glossary/Scroll_container": {
     "modified": "2019-03-18T20:53:07.981Z",
     "contributors": ["mfuji09"]
@@ -30341,10 +30337,6 @@
   "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
-  },
-  "conflicting/Web/API/Blob/type": {
-    "modified": "2020-10-15T22:11:44.472Z",
-    "contributors": ["silverskyvicto", "mfuji09"]
   },
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
