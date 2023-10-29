@@ -2761,7 +2761,7 @@
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
-/ja/docs/Web/API/File/type	/ja/docs/conflicting/Web/API/Blob/type
+/ja/docs/Web/API/File/type	/ja/docs/Web/API/Blob/type
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/Web/API/FileReader/error_event
 /ja/docs/Web/API/FileReader/onload	/ja/docs/Web/API/FileReader/load_event
