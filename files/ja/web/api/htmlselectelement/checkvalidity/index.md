@@ -22,7 +22,7 @@ checkValidity()
 
 ### 返値
 
-なし（{{jsxref("undefined")}}）。
+要素の値に妥当性の問題がなければ `true` を返し、そうでなければ `false` を返します。
 
 ## 仕様書
 
