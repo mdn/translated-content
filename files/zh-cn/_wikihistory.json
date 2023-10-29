@@ -9598,10 +9598,6 @@
     "modified": "2019-03-23T23:33:54.227Z",
     "contributors": ["teoli", "ziyunfei"]
   },
-  "Web/API/File/type": {
-    "modified": "2019-03-23T22:09:04.649Z",
-    "contributors": ["wizardforcel"]
-  },
   "Web/API/File/webkitRelativePath": {
     "modified": "2019-07-25T23:57:11.934Z",
     "contributors": ["dotnetcms_org", "wizardforcel"]
