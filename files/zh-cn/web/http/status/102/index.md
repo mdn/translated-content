@@ -1,0 +1,36 @@
+---
+title: 102 Processing
+slug: Web/HTTP/Status/102
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
+l10n:
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+---
+
+{{HTTPSidebar}}{{deprecated_header}}
+
+
+在 HTTP 协议中，**`102 Processing`** 状态码向客户端表示已收到完整请求，并且服务器正在处理该请求。
+
+仅当服务器预计请求需要很长时间时会发送此状态码，以告知客户端请求尚未终止。
+
+> **注意：** 此状态码已弃用，不应再发送。客户可能仍然接受，但会忽略。
+
+## 状态
+
+```plain
+102 Processing
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus("100")}}
