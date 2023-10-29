@@ -7,15 +7,15 @@ l10n:
 
 {{AddonSidebar}}
 
-选项卡允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。通过使用 Tabs API，你可以使用和操作这些选项卡来创建实用程序，为用户提供使用选项卡或提供扩展功能的新方法。
+标签页（tab）允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。通过使用 Tabs API，你可以使用和操作这些标签页来创建实用程序，为用户提供使用标签页或提供扩展功能的新方法。
 
 在这篇教程文章中，我们将了解如下内容：
 
 - 使用 Tabs API 所需的权限。
 - 使用 {{WebExtAPIRef("tabs.query")}} 发现有关标签及其属性的更多信息。
-- 创建、复制、移动、更新、重新加载和删除选项卡。
+- 创建、复制、移动、更新、重新加载和删除标签页。
 - 操纵标签的缩放大小。
-- 操纵选项卡的 CSS 样式。
+- 操纵标签页的 CSS 样式。
 
 最后，我们来看看应用程序接口提供的一些其他杂项功能。
 
@@ -56,7 +56,7 @@ l10n:
 
 为了了解 {{WebExtAPIRef("tabs.query()")}} 和 {{WebExtAPIRef("tabs.Tab")}} 是如何使用的，让我们来看看 [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例是如何在工具栏弹出按钮中添加“switch to tabs”列表的。
 
-![选项卡工具栏菜单显示“switch to tap area”](switch_to_tab.png)
+![标签页工具栏菜单显示“switch to tap area”](switch_to_tab.png)
 
 - manifest.json
 
@@ -80,7 +80,7 @@ l10n:
     > **备注：**
     >
     > - **`tabs.html` 在 `browser_action` 中被定义为 `default_popup`**。每当用户点击扩展工具栏图标时，它就会显示出来。
-    > - **tabs 包含在权限中**。这是支持选项卡列表功能所必需的，因为扩展会读取选项卡的标题，以便在弹出窗口中显示。
+    > - **tabs 包含在权限中**。这是支持标签页列表功能所必需的，因为扩展会读取标签页的标题，以便在弹出窗口中显示。
 
 - tabs.html
 
@@ -197,7 +197,7 @@ for (const tab of tabs) {
 
 #### 使用活动标签页
 
-另一个相关的示例功能是“警报活动选项卡”信息选项，它可将活动选项卡的所有 {{WebExtAPIRef("tabs.Tab")}} 对象属性转入警报中：
+另一个相关的示例功能是“警报活动标签页”信息选项，它可将活动标签页的所有 {{WebExtAPIRef("tabs.Tab")}} 对象属性转入警报中：
 
 ```js
 else if (e.target.id === "tabs-alertinfo") {
@@ -211,7 +211,7 @@ else if (e.target.id === "tabs-alertinfo") {
 }
 ```
 
-其中，`callOnActiveTab()` 通过在 {{WebExtAPIRef("tabs.Tab")}} 对象中循环查找已设置为活动的项目，从而找到活动的选项卡对象：
+其中，`callOnActiveTab()` 通过在 {{WebExtAPIRef("tabs.Tab")}} 对象中循环查找已设置为活动的项目，从而找到活动的标签页对象：
 
 ```js
 document.addEventListener("click", (e) => {
@@ -263,7 +263,7 @@ document.addEventListener("click", (e) => {
   - : 没有一个功能需要权限才能运行，因此 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件中没有需要突出显示的功能。
 - tabs.html
 
-  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 定义了弹出窗口中显示的“菜单”，其中包括“将活动选项卡移至窗口列表开头”选项，以及一系列由可视分隔符分组的 `<a>` 标记。每个菜单项都有一个 `id` ，`tabs.js` 使用该 `id` 来确定请求的是哪个菜单项。
+  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 定义了弹出窗口中显示的“菜单”，其中包括“将活动标签页移至窗口列表开头”选项，以及一系列由可视分隔符分组的 `<a>` 标记。每个菜单项都有一个 `id` ，`tabs.js` 使用该 `id` 来确定请求的是哪个菜单项。
 
     ```html
     <a href="#" id="tabs-move-beginning">
@@ -300,7 +300,7 @@ document.addEventListener("click", (e) => {
 
     然后，一系列 `if` 语句会查找与点击项目的 `id` 匹配的内容。
 
-    此代码片段用于“将活动选项卡移至窗口列表开头”选项：
+    此代码片段用于“将活动标签页移至窗口列表开头”选项：
 
     ```js
     if (e.target.id === "tabs-move-beginning") {
@@ -317,9 +317,9 @@ document.addEventListener("click", (e) => {
 
     值得注意的是 `console.log()` 的使用。这样就能向[调试器](https://extensionworkshop.com/documentation/develop/debugging/)控制台输出信息，在解决开发过程中发现的问题时非常有用。
 
-    ![调试控制台中移动选项卡功能的控制台日志输出示例](console.png)
+    ![调试控制台中移动标签页功能的控制台日志输出示例](console.png)
 
-    移动代码首先调用 `callOnActiveTab()`，然后再调用 `getCurrentWindowTabs()`，以获取包含活动窗口选项卡的 {{WebExtAPIRef("tabs.Tab")}} 对象。然后在该对象中循环查找并返回活动选项卡对象：
+    移动代码首先调用 `callOnActiveTab()`，然后再调用 `getCurrentWindowTabs()`，以获取包含活动窗口标签页的 {{WebExtAPIRef("tabs.Tab")}} 对象。然后在该对象中循环查找并返回活动标签页对象：
 
     ```js
     function callOnActiveTab(callback) {
@@ -423,7 +423,7 @@ browser.tabs.move([tab.id], { index });
 
 ### 示例
 
-[apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-css) 示例使用这些功能为活动选项卡中的网页添加红色边框。下面是该功能的实际效果：
+[apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-css) 示例使用这些功能为活动标签页中的网页添加红色边框。下面是该功能的实际效果：
 
 {{EmbedYouTube("bcK-GT2Dyhs")}}
 
