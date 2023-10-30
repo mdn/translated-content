@@ -1,6 +1,7 @@
 ---
 title: File.type
-slug: Web/API/File/type
+slug: conflicting/Web/API/Blob/type
+original_slug: Web/API/File/type
 ---
 
 {{APIRef("File API")}}
