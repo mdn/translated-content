@@ -62,7 +62,7 @@ l10n:
 
 기타 사용 일람:
 
-- `<link>` 요소의 [링크 유형](https://html.spec.whatwg.org/multipage/links.html#body-ok)이 **body-ok** 인 경우, {{HTMLElement("head")}} 또는 {{HTMLElement("body")}} 요소에 포함될 수 있습니다. 예를 들어 `stylesheet` 링크 유형은 body-ok 이므로, `<link rel="stylesheet">` 는 body 안에 포함될 수 있습니다. 그러나 이는 좋은 방법은 아닙니다. `<link>` 요소는 body 콘텐츠에서 분리해, `<head>` 안에 포함하는 것이 더 좋습니다.
+- `<link>` 요소의 [링크 유형](https://html.spec.whatwg.org/multipage/links.html#body-ok)이 **body-ok** 인 경우, {{HTMLElement("head")}} 또는 {{HTMLElement("body")}} 요소에 포함될 수 있습니다. 예를 들어 `stylesheet` 링크 유형은 body-ok 이므로, `<link rel="stylesheet">`는 body 안에 포함될 수 있습니다. 그러나 이는 좋은 방법은 아닙니다. `<link>` 요소는 body 콘텐츠에서 분리해, `<head>` 안에 포함하는 것이 더 좋습니다.
 - `<link>`를 사용하여 사이트의 파비콘을 설정하고, 사이트가 보안을 강화하기 위해 콘텐츠 보안 정책(CSP)을 사용하는 경우 해당 정책은 파비콘에도 적용됩니다. 파비콘이 로드되지 않는 문제가 발생한다면 {{HTTPHeader("Content-Security-Policy")}} 헤더의 [`img-src` 지시어](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)가 접근을 막고 있는지 확인하십시오.
 - HTML 및 XHTML 명세서에는 `<link>` 요소에 대한 이벤트 처리기가 정의되어 있으나, 어떻게 사용되는지는 불분명합니다.
 - XHTML 1.0 이하에서, `<link>` 와 같은 {{glossary("void element", "빈 요소")}}는 반드시 `<link />` 처럼 슬래시가 따라와야 합니다.
