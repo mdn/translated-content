@@ -1,5 +1,5 @@
 ---
-title: 무선 펌웨어 업데이트 (OTA)
+title: OTA
 slug: Glossary/OTA
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
